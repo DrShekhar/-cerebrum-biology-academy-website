@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   CheckCircle,
@@ -134,11 +133,8 @@ export default function BiologyDroppersPage() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <RefreshCw className="w-5 h-5 mr-2 text-yellow-300" />
@@ -190,31 +186,24 @@ export default function BiologyDroppersPage() {
                 { label: 'Mock Tests', value: '100+' },
                 { label: 'Avg Improvement', value: '+150' },
               ].map((item, index) => (
-                <motion.div
+                <div
                   key={item.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 animate-fadeInUp"
                 >
                   <div className="text-xl md:text-2xl font-bold text-yellow-300">{item.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{item.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Program Phases */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               12-Month Dropper Program Structure
@@ -222,17 +211,13 @@ export default function BiologyDroppersPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Systematic approach to maximize your NEET score
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {dropperProgram.map((phase, index) => (
-              <motion.div
+              <div
                 key={phase.phase}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-6 border-t-4 border-red-500"
+                className="bg-white rounded-xl shadow-lg p-6 border-t-4 border-red-500 animate-fadeInUp"
               >
                 <div className="text-sm text-red-600 font-semibold mb-1">{phase.duration}</div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">{phase.phase}</h3>
@@ -245,7 +230,7 @@ export default function BiologyDroppersPage() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -254,28 +239,20 @@ export default function BiologyDroppersPage() {
       {/* Success Stories */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Dropper Success Stories
             </h2>
             <p className="text-lg text-gray-600">Real improvements from our dropper students</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {successStories.map((story, index) => (
-              <motion.div
+              <div
                 key={story.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br bg-red-50 rounded-xl p-6 border border-red-100"
+                className="bg-gradient-to-br bg-red-50 rounded-xl p-6 border border-red-100 animate-fadeInUp"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-red-200 rounded-full flex items-center justify-center text-red-700 font-bold text-lg">
@@ -297,7 +274,7 @@ export default function BiologyDroppersPage() {
                     <div className="text-xl font-bold text-green-600">{story.to}</div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -308,18 +285,14 @@ export default function BiologyDroppersPage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {programFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center"
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center animate-fadeInUp"
               >
                 <feature.icon className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
                 <h3 className="font-bold mb-2">{feature.title}</h3>
                 <p className="text-gray-300 text-sm">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -328,31 +301,23 @@ export default function BiologyDroppersPage() {
       {/* FAQs */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Dropper Coaching - FAQs
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-sm"
+                className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp"
               >
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -361,12 +326,8 @@ export default function BiologyDroppersPage() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-red-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Make Your Gap Year Count</h2>
             <p className="text-xl mb-8 opacity-90">
               Join our dropper batch and improve by 100+ marks. Book free counseling today!
@@ -396,7 +357,7 @@ export default function BiologyDroppersPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { Star, ExternalLink, Heart, MessageSquare, Phone } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
@@ -70,11 +69,8 @@ export default function ReviewsPage() {
         {/* Hero Section */}
         <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <div className="flex justify-center mb-6">
               {[1, 2, 3, 4, 5].map((i) => (
                 <Star key={i} className="w-10 h-10 text-yellow-400 fill-yellow-400" />
@@ -88,17 +84,14 @@ export default function ReviewsPage() {
             </p>
 
             <p className="text-gray-400">Share your experience at Cerebrum Biology Academy</p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Main CTA Section */}
       <div className="max-w-4xl mx-auto px-4 -mt-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="bg-white rounded-2xl shadow-2xl p-8 md:p-12"
+        <div
+          className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 animate-fadeInUp"
         >
           {/* Google Review CTA */}
           <div className="text-center mb-10">
@@ -168,16 +161,13 @@ export default function ReviewsPage() {
               <span className="text-blue-700 font-medium">Call & Share Feedback</span>
             </a>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Tips Section */}
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-        >
+        <div
+         className="animate-fadeInUp">
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
             What to Include in Your Review
           </h3>
@@ -207,7 +197,7 @@ export default function ReviewsPage() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Thank You Message */}

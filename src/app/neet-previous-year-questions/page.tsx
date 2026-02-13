@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   CheckCircle,
@@ -240,10 +239,10 @@ export default function NEETPreviousYearQuestionsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
 
-      <motion.div initial="hidden" animate="visible" variants={containerVariants} className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <div initial="hidden" animate="visible" className="min-h-screen bg-gradient-to-b from-slate-50 to-white animate-fadeInUp">
 
         {/* ── Breadcrumb ── */}
-        <motion.nav variants={itemVariants} className="bg-white border-b border-gray-200">
+        <nav className="bg-white border-b border-gray-200 animate-fadeInUp">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <Link href="/" className="text-blue-600 hover:text-blue-700 flex items-center gap-1">
@@ -253,10 +252,10 @@ export default function NEETPreviousYearQuestionsPage() {
               <span className="font-medium text-gray-900">NEET Biology Previous Year Questions</span>
             </div>
           </div>
-        </motion.nav>
+        </nav>
 
         {/* ── Hero Section ── */}
-        <motion.section variants={itemVariants} className="bg-gradient-to-r from-indigo-700 via-purple-700 to-indigo-800 text-white py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-gradient-to-r from-indigo-700 via-purple-700 to-indigo-800 text-white py-16 px-4 sm:px-6 lg:px-8 animate-fadeInUp">
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center gap-2 mb-4">
               <FileText className="w-6 h-6" />
@@ -290,10 +289,10 @@ export default function NEETPreviousYearQuestionsPage() {
               ))}
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* ── Why Solve PYQs ── */}
-        <motion.section variants={itemVariants} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-fadeInUp">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-4">Why NEET PYQs Are Non-Negotiable</h2>
           <p className="text-gray-600 text-center mb-10 max-w-2xl mx-auto">
             Solving previous year questions is the single most effective strategy for NEET Biology preparation. Here is why.
@@ -314,10 +313,10 @@ export default function NEETPreviousYearQuestionsPage() {
               </div>
             ))}
           </div>
-        </motion.section>
+        </section>
 
         {/* ── Year-wise PYQ Cards ── */}
-        <motion.section variants={itemVariants} className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 animate-fadeInUp">
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center gap-3 mb-2">
               <Calendar className="w-7 h-7 text-indigo-600" />
@@ -369,10 +368,10 @@ export default function NEETPreviousYearQuestionsPage() {
               ))}
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* ── Chapter-wise PYQ Distribution ── */}
-        <motion.section variants={itemVariants} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-fadeInUp">
           <div className="flex items-center gap-3 mb-2">
             <BarChart3 className="w-7 h-7 text-indigo-600" />
             <h2 className="text-3xl font-bold text-gray-900">Chapter-wise Question Distribution</h2>
@@ -441,10 +440,10 @@ export default function NEETPreviousYearQuestionsPage() {
               </table>
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* ── How to Use PYQs Effectively ── */}
-        <motion.section variants={itemVariants} className="bg-indigo-50 py-16 px-4 sm:px-6 lg:px-8">
+        <section className="bg-indigo-50 py-16 px-4 sm:px-6 lg:px-8 animate-fadeInUp">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 text-center mb-10">How to Use PYQs Effectively</h2>
             <div className="space-y-6">
@@ -467,10 +466,10 @@ export default function NEETPreviousYearQuestionsPage() {
               ))}
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* ── FAQ Section ── */}
-        <motion.section variants={itemVariants} className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-fadeInUp">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-10">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {[
@@ -506,10 +505,10 @@ export default function NEETPreviousYearQuestionsPage() {
               </details>
             ))}
           </div>
-        </motion.section>
+        </section>
 
         {/* ── CTA Section ── */}
-        <motion.section variants={itemVariants} className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-14 px-4 sm:px-6 lg:px-8">
+        <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-14 px-4 sm:px-6 lg:px-8 animate-fadeInUp">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-3">Struggling with NEET Biology PYQs?</h2>
             <p className="text-indigo-100 text-lg mb-8 max-w-2xl mx-auto">
@@ -537,10 +536,10 @@ export default function NEETPreviousYearQuestionsPage() {
             </div>
             <p className="text-indigo-200 text-sm mt-6">Available Monday-Saturday: 7 AM - 9 PM</p>
           </div>
-        </motion.section>
+        </section>
 
         {/* ── Related Resources ── */}
-        <motion.section variants={itemVariants} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 animate-fadeInUp">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Related NEET Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -558,10 +557,10 @@ export default function NEETPreviousYearQuestionsPage() {
               </Link>
             ))}
           </div>
-        </motion.section>
+        </section>
 
         {/* ── Footer Note ── */}
-        <motion.div variants={itemVariants} className="bg-white border-t border-gray-200 py-8 px-4 sm:px-6 lg:px-8">
+        <div className="bg-white border-t border-gray-200 py-8 px-4 sm:px-6 lg:px-8 animate-fadeInUp">
           <div className="max-w-6xl mx-auto">
             <p className="text-center text-gray-500 text-sm">
               All previous year questions are sourced from officially released NEET papers.
@@ -570,8 +569,8 @@ export default function NEETPreviousYearQuestionsPage() {
               Updated for NEET 2026 preparation.
             </p>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </>
   )
 }

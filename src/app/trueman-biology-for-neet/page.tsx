@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   CheckCircle2,
@@ -100,25 +99,18 @@ export default function TruemanBiologyPage() {
       {/* Hero Section */}
       <section className="relative bg-red-600 text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"
-            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-            transition={{ duration: 8, repeat: Infinity }}
+          <div
+            className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-fadeInUp"
           />
-          <motion.div
-            className="absolute -bottom-40 -left-40 w-96 h-96 bg-rose-400/20 rounded-full blur-3xl"
-            animate={{ scale: [1.2, 1, 1.2], opacity: [0.4, 0.6, 0.4] }}
-            transition={{ duration: 10, repeat: Infinity }}
+          <div
+            className="absolute -bottom-40 -left-40 w-96 h-96 bg-rose-400/20 rounded-full blur-3xl animate-fadeInUp"
           />
         </div>
 
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                 <Star className="w-4 h-4 fill-yellow-300 text-yellow-300" />
                 <span className="text-sm font-medium">Trusted by NEET Toppers</span>
@@ -172,16 +164,13 @@ export default function TruemanBiologyPage() {
                   </Button>
                 </Link>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="hidden md:block"
+            <div
+              className="hidden md:block animate-fadeInUp"
             >
               <BookStackIllustration className="w-full max-w-md mx-auto" />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -189,33 +178,26 @@ export default function TruemanBiologyPage() {
       {/* Features */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Trueman Biology?
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {features.map((feature, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-red-100 hover:border-red-300 transition-colors"
+                className="bg-white rounded-2xl p-6 shadow-lg border border-red-100 hover:border-red-300 transition-colors animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -224,26 +206,19 @@ export default function TruemanBiologyPage() {
       {/* Volume Details */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Two Volumes for Complete Coverage
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {volumes.map((vol, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.2 }}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden"
+                className="bg-white rounded-2xl shadow-lg overflow-hidden animate-fadeInUp"
               >
                 <div
                   className={`bg-gradient-to-r from-${vol.color}-500 to-${vol.color === 'red' ? 'rose' : 'pink'}-500 p-6 text-white`}
@@ -278,7 +253,7 @@ export default function TruemanBiologyPage() {
                     </Button>
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -287,16 +262,13 @@ export default function TruemanBiologyPage() {
       {/* Comparison */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trueman vs Other Biology Books
             </h2>
-          </motion.div>
+          </div>
 
           <div className="max-w-4xl mx-auto overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -332,16 +304,13 @@ export default function TruemanBiologyPage() {
       {/* Related Books */}
       <section className="py-16 bg-gradient-to-br bg-red-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Complete Your Collection
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
@@ -366,13 +335,9 @@ export default function TruemanBiologyPage() {
                 color: 'blue-600',
               },
             ].map((book, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-              >
+               className="animate-fadeInUp">
                 <Link href={book.href}>
                   <div
                     className={`bg-gradient-to-br ${book.color} rounded-xl p-5 text-white text-center hover:shadow-lg transition-shadow`}
@@ -381,7 +346,7 @@ export default function TruemanBiologyPage() {
                     <span className="font-semibold">{book.title}</span>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -390,26 +355,19 @@ export default function TruemanBiologyPage() {
       {/* FAQ Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -427,7 +385,7 @@ export default function TruemanBiologyPage() {
                     <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -436,11 +394,8 @@ export default function TruemanBiologyPage() {
       {/* CTA */}
       <section className="py-16 bg-red-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Need Expert NEET Guidance?</h2>
             <p className="text-white/90 max-w-2xl mx-auto mb-8">
               Join Cerebrum Academy for comprehensive Biology coaching by AIIMS-trained faculty
@@ -457,7 +412,7 @@ export default function TruemanBiologyPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

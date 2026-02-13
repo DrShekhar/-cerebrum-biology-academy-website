@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   CheckCircle,
   BookOpen,
@@ -159,11 +158,8 @@ export default function HomeTuitionBiologyPage() {
       <section className="relative bg-gradient-to-br from-purple-900 via-violet-800 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Home className="w-5 h-5 mr-2 text-yellow-300" />
@@ -216,19 +212,15 @@ export default function HomeTuitionBiologyPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Why Our Online Tuition is Better */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Us Over Local Home Tutors
@@ -236,22 +228,18 @@ export default function HomeTuitionBiologyPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get premium quality education from home without compromising on teaching quality
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {homeTuitionBenefits.map((benefit, index) => (
-              <motion.div
+              <div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <benefit.icon className="w-12 h-12 text-purple-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -260,25 +248,17 @@ export default function HomeTuitionBiologyPage() {
       {/* Comparison Table */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Home Tutor vs Cerebrum Academy
             </h2>
             <p className="text-xl text-gray-600">See the clear advantage</p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="overflow-x-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="overflow-x-auto animate-fadeInUp"
           >
             <table className="w-full border-collapse">
               <thead>
@@ -308,24 +288,20 @@ export default function HomeTuitionBiologyPage() {
                 ))}
               </tbody>
             </table>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* What You Get */}
       <section className="py-20 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Everything Included in Your Home Tuition
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -342,17 +318,13 @@ export default function HomeTuitionBiologyPage() {
               'Board Exam Focus',
               'Motivational Sessions',
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={item}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg p-4 shadow flex items-center"
+                className="bg-white rounded-lg p-4 shadow flex items-center animate-fadeInUp"
               >
                 <CheckCircle className="w-6 h-6 text-purple-600 mr-3 flex-shrink-0" />
                 <span className="text-gray-800 font-medium">{item}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -361,34 +333,26 @@ export default function HomeTuitionBiologyPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg"
+                className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-purple-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -397,12 +361,8 @@ export default function HomeTuitionBiologyPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Upgrade Your Home Tuition Experience Today
             </h2>
@@ -433,7 +393,7 @@ export default function HomeTuitionBiologyPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

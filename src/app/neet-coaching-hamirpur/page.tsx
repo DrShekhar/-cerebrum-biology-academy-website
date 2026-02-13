@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -129,11 +128,8 @@ export default function NEETCoachingHamirpur() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-5xl mx-auto"
+            <div
+              className="text-center max-w-5xl mx-auto animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/20 rounded-full px-4 py-2 mb-6">
                 <School className="w-4 h-4 text-amber-400" />
@@ -181,32 +177,25 @@ export default function NEETCoachingHamirpur() {
                   { number: '650+', label: 'Avg. NEET Score', icon: Target },
                   { number: '45+', label: 'HP Selections', icon: Award },
                 ].map((stat, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4"
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 animate-fadeInUp"
                   >
                     <stat.icon className="w-6 h-6 text-amber-400 mx-auto mb-2" />
                     <div className="text-2xl md:text-3xl font-bold text-white">{stat.number}</div>
                     <div className="text-slate-400 text-sm">{stat.label}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Why Hamirpur Needs Us Section */}
         <section className="py-16 bg-slate-900/50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
+            <div
+              className="max-w-4xl mx-auto animate-fadeInUp"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
                 Why Hamirpur's Brightest{' '}
@@ -268,19 +257,15 @@ export default function NEETCoachingHamirpur() {
                   </ul>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Areas We Serve */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
                 Serving Students Across{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
@@ -293,13 +278,9 @@ export default function NEETCoachingHamirpur() {
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
                 {nearbyAreas.map((area, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: index * 0.05 }}
-                    viewport={{ once: true }}
-                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:border-amber-500/50 transition-all duration-300"
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:border-amber-500/50 transition-all duration-300 animate-fadeInUp"
                   >
                     <div className="flex items-center gap-2 mb-2">
                       <MapPin className="w-4 h-4 text-amber-400" />
@@ -307,22 +288,18 @@ export default function NEETCoachingHamirpur() {
                     </div>
                     <div className="text-sm text-slate-400">{area.students} students enrolled</div>
                     <div className="text-xs text-amber-400 mt-1">{area.distance}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Features Grid */}
         <section className="py-16 bg-slate-900/50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
                 What Sets Us{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
@@ -370,35 +347,27 @@ export default function NEETCoachingHamirpur() {
                       'Complete guidance for HP NEET counselling. Know which college to target.',
                   },
                 ].map((feature, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-amber-500/50 transition-all duration-300"
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-amber-500/50 transition-all duration-300 animate-fadeInUp"
                   >
                     <div className="w-12 h-12 bg-amber-500/20 rounded-xl flex items-center justify-center mb-4">
                       <feature.icon className="w-6 h-6 text-amber-400" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                     <p className="text-slate-400">{feature.description}</p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Local Schools Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
                 Popular Schools in{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
@@ -411,31 +380,23 @@ export default function NEETCoachingHamirpur() {
 
               <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
                 {localSchools.map((school, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: index * 0.03 }}
-                    viewport={{ once: true }}
-                    className="bg-white/5 border border-white/10 rounded-full px-4 py-2 text-slate-300 text-sm hover:border-amber-500/50 hover:text-amber-300 transition-all duration-300"
+                    className="bg-white/5 border border-white/10 rounded-full px-4 py-2 text-slate-300 text-sm hover:border-amber-500/50 hover:text-amber-300 transition-all duration-300 animate-fadeInUp"
                   >
                     {school}
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Medical Colleges Section */}
         <section className="py-16 bg-slate-900/50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
                 Target{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
@@ -491,19 +452,15 @@ export default function NEETCoachingHamirpur() {
                   </tbody>
                 </table>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Cost Comparison */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="max-w-4xl mx-auto"
+            <div
+              className="max-w-4xl mx-auto animate-fadeInUp"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
                 Smart Investment:{' '}
@@ -569,7 +526,7 @@ export default function NEETCoachingHamirpur() {
                   Save <span className="text-green-400">₹4,35,000+</span> and stay in HP's best study environment!
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -579,12 +536,8 @@ export default function NEETCoachingHamirpur() {
         {/* FAQs Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-4">
                 Frequently Asked{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
@@ -597,13 +550,9 @@ export default function NEETCoachingHamirpur() {
 
               <div className="max-w-3xl mx-auto space-y-4">
                 {faqs.map((faq, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
-                    viewport={{ once: true }}
-                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden animate-fadeInUp"
                   >
                     <details className="group">
                       <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
@@ -614,22 +563,18 @@ export default function NEETCoachingHamirpur() {
                       </summary>
                       <div className="px-6 pb-6 text-slate-300">{faq.answer}</div>
                     </details>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Final CTA */}
         <section className="py-20 bg-gradient-to-r from-amber-900/50 to-orange-900/50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center max-w-3xl mx-auto"
+            <div
+              className="text-center max-w-3xl mx-auto animate-fadeInUp"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Excel Beyond{' '}
@@ -662,7 +607,7 @@ export default function NEETCoachingHamirpur() {
               <p className="text-slate-400 mt-6">
                 Join 280+ students from Hamirpur district who chose expert guidance over local coaching
               </p>
-            </motion.div>
+            </div>
           </div>
         </section>
       </main>

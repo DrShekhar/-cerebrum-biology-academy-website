@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Users,
   Trophy,
@@ -195,11 +194,8 @@ export default function NEETCoachingPatiala() {
 
           <div className="mx-auto max-w-7xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-rose-100 px-4 py-2 text-rose-800">
                   <Crown className="h-4 w-4" />
                   <span className="text-sm font-medium">
@@ -249,13 +245,10 @@ export default function NEETCoachingPatiala() {
                     <span>4.9/5 from 280+ Patiala students</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative"
+              <div
+                className="relative animate-fadeInUp"
               >
                 <div className="rounded-2xl bg-white p-8 shadow-xl">
                   <h3 className="mb-6 text-center text-xl font-bold text-gray-900">
@@ -275,7 +268,7 @@ export default function NEETCoachingPatiala() {
                     <p className="text-sm opacity-90">Your hometown medical college awaits!</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -283,11 +276,8 @@ export default function NEETCoachingPatiala() {
         {/* Why Patiala Students Choose Online */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Patiala Families Choose Online NEET Coaching
@@ -295,23 +285,19 @@ export default function NEETCoachingPatiala() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 The Royal City deserves royal-quality NEET preparation
               </p>
-            </motion.div>
+            </div>
 
             <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {whyOnlineForPatiala.map((item, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-start gap-4 rounded-xl border border-red-100 bg-red-50 p-4"
+                  className="flex items-start gap-4 rounded-xl border border-red-100 bg-red-50 p-4 animate-fadeInUp"
                 >
                   <div className="rounded-lg bg-red-100 p-2">
                     <item.icon className="h-5 w-5 text-red-600" />
                   </div>
                   <p className="font-medium text-red-800">{item.problem}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -336,25 +322,18 @@ export default function NEETCoachingPatiala() {
         {/* Patiala Areas We Serve */}
         <section className="bg-rose-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 NEET Coaching for Patiala & Nearby Areas
               </h2>
-            </motion.div>
+            </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {patialaAreas.map((area, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
                   className={`rounded-xl border-2 bg-white p-4 ${
                     area.priority === 'high'
                       ? 'border-rose-300 shadow-lg'
@@ -376,7 +355,7 @@ export default function NEETCoachingPatiala() {
                     <Users className="h-4 w-4" />
                     {area.students} students enrolled
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -385,33 +364,26 @@ export default function NEETCoachingPatiala() {
         {/* Features */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Cerebrum is Best for Patiala Students
               </h2>
-            </motion.div>
+            </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {features.map((feature, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-xl border border-gray-100 bg-white p-6 shadow-lg"
+                  className="rounded-xl border border-gray-100 bg-white p-6 shadow-lg animate-fadeInUp"
                 >
                   <div className="mb-4 inline-flex rounded-lg bg-rose-100 p-3">
                     <feature.icon className="h-6 w-6 text-rose-600" />
                   </div>
                   <h3 className="mb-2 text-xl font-bold text-gray-900">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -420,30 +392,23 @@ export default function NEETCoachingPatiala() {
         {/* Schools Section */}
         <section className="bg-rose-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Trusted by Students from Top Patiala Schools
               </h2>
-            </motion.div>
+            </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {patialaSchools.map((school, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-sm"
+                  className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-sm animate-fadeInUp"
                 >
                   <School className="h-5 w-5 shrink-0 text-rose-600" />
                   <span className="text-sm font-medium text-gray-800">{school}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -452,17 +417,14 @@ export default function NEETCoachingPatiala() {
         {/* Medical Colleges */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Target Medical Colleges for Patiala Students
               </h2>
               <p className="text-lg text-gray-600">GMC Patiala is right in your city!</p>
-            </motion.div>
+            </div>
 
             <div className="overflow-hidden rounded-xl border border-gray-200">
               <table className="w-full">
@@ -525,16 +487,13 @@ export default function NEETCoachingPatiala() {
         {/* Cost Comparison */}
         <section className="bg-rose-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Cost Comparison: Chandigarh vs Online for Patiala Students
               </h2>
-            </motion.div>
+            </div>
 
             <div className="grid gap-8 md:grid-cols-2">
               <div className="rounded-xl border-2 border-red-200 bg-white p-6">
@@ -608,26 +567,19 @@ export default function NEETCoachingPatiala() {
         {/* FAQs */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 FAQs: NEET Coaching in Patiala
               </h2>
-            </motion.div>
+            </div>
 
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="rounded-xl border border-gray-200 bg-white"
+                  className="rounded-xl border border-gray-200 bg-white animate-fadeInUp"
                 >
                   <details className="group">
                     <summary className="flex cursor-pointer items-center justify-between p-6 font-semibold text-gray-900">
@@ -638,7 +590,7 @@ export default function NEETCoachingPatiala() {
                     </summary>
                     <div className="px-6 pb-6 text-gray-600">{faq.answer}</div>
                   </details>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -647,11 +599,8 @@ export default function NEETCoachingPatiala() {
         {/* Final CTA */}
         <section className="bg-gradient-to-r from-rose-600 to-pink-600 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
                 Ready to Join GMC Patiala from Your Hometown?
               </h2>
@@ -677,7 +626,7 @@ export default function NEETCoachingPatiala() {
                   </Button>
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

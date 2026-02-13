@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Stethoscope,
   Users,
@@ -145,11 +144,8 @@ export default function OnlineMedicalCoachingIndiaPage() {
       <section className="relative bg-gradient-to-br from-green-800 via-cyan-800 to-blue-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Stethoscope className="w-5 h-5 mr-2" />
@@ -197,32 +193,25 @@ export default function OnlineMedicalCoachingIndiaPage() {
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {successMetrics.map((metric, index) => (
-                <motion.div
+                <div
                   key={metric.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
                 >
                   <metric.icon className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-2xl font-bold">{metric.value}</div>
                   <div className="text-sm opacity-80">{metric.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Medical Exams Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Medical Entrance Exams We Cover
@@ -230,17 +219,13 @@ export default function OnlineMedicalCoachingIndiaPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive preparation for all major medical entrance examinations in India.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {medicalExams.map((exam, index) => (
-              <motion.div
+              <div
                 key={exam.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-8"
+                className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp"
               >
                 <div className="flex items-center mb-4">
                   <GraduationCap className="w-10 h-10 text-green-600 mr-3" />
@@ -251,7 +236,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
                 </div>
                 <p className="text-gray-500 text-sm mb-3">{exam.fullName}</p>
                 <p className="text-gray-700">{exam.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -260,32 +245,24 @@ export default function OnlineMedicalCoachingIndiaPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Our Medical Coaching?
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
               >
                 <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -294,12 +271,8 @@ export default function OnlineMedicalCoachingIndiaPage() {
       {/* States Coverage Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Pan-India Coverage
@@ -307,20 +280,16 @@ export default function OnlineMedicalCoachingIndiaPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Students from 25+ states trust our online medical coaching.
             </p>
-          </motion.div>
+          </div>
 
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {statesCovered.map((state, index) => (
-              <motion.span
+              <span
                 key={state}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.03 }}
-                viewport={{ once: true }}
-                className="bg-green-100 text-green-700 px-4 py-2 rounded-full font-medium"
+                className="bg-green-100 text-green-700 px-4 py-2 rounded-full font-medium animate-fadeInUp"
               >
                 {state}
-              </motion.span>
+              </span>
             ))}
           </div>
         </div>
@@ -329,34 +298,26 @@ export default function OnlineMedicalCoachingIndiaPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -365,12 +326,8 @@ export default function OnlineMedicalCoachingIndiaPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-blue-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Start Your Journey to MBBS Today
             </h2>
@@ -422,7 +379,7 @@ export default function OnlineMedicalCoachingIndiaPage() {
                 <span>Affordable Fees</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

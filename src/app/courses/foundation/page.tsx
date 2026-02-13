@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle,
   Users,
@@ -254,16 +253,14 @@ export default function FoundationCoursePage() {
     <div className="min-h-screen bg-[#f5f8f5]">
       {/* Floating Contact Buttons */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-        <motion.a
+        <a
           href="tel:+918826444334"
-          className="bg-[#4a5d4a] text-white p-4 rounded-full shadow-lg hover:bg-[#3d4d3d] transition-colors min-w-[48px] min-h-[48px] flex items-center justify-center"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          className="bg-[#4a5d4a] text-white p-4 rounded-full shadow-lg hover:bg-[#3d4d3d] transition-colors min-w-[48px] min-h-[48px] flex items-center justify-center animate-fadeInUp"
           aria-label="Call us at 8826444334"
         >
           <Phone className="w-6 h-6" aria-hidden="true" />
-        </motion.a>
-        <motion.button
+        </a>
+        <button
           onClick={async () => {
             await trackAndOpenWhatsApp({
               source: 'foundation-floating',
@@ -271,13 +268,11 @@ export default function FoundationCoursePage() {
               campaign: 'foundation-course',
             })
           }}
-          className="bg-[#166534] text-white p-4 rounded-full shadow-lg hover:bg-[#14532d] transition-colors cursor-pointer min-w-[48px] min-h-[48px] flex items-center justify-center"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          className="bg-[#166534] text-white p-4 rounded-full shadow-lg hover:bg-[#14532d] transition-colors cursor-pointer min-w-[48px] min-h-[48px] flex items-center justify-center animate-fadeInUp"
           aria-label="Chat with us on WhatsApp"
         >
           <MessageCircle className="w-6 h-6" aria-hidden="true" />
-        </motion.button>
+        </button>
       </div>
 
       {/* Hero Section with Lead Form */}
@@ -289,10 +284,8 @@ export default function FoundationCoursePage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
           {/* Urgency Banner */}
-          <motion.div
-            className="bg-[#4a5d4a] text-white rounded-xl p-3 sm:p-4 mb-6 text-center"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
+            className="bg-[#4a5d4a] text-white rounded-xl p-3 sm:p-4 mb-6 text-center animate-fadeInUp"
           >
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-sm sm:text-base">
               <span className="font-semibold flex items-center">
@@ -307,15 +300,12 @@ export default function FoundationCoursePage() {
               </div>
               <span className="text-[#e8ede8] font-medium">Only {seatsLeft} Seats Left!</span>
             </div>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center bg-[#4a5d4a] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <GraduationCap className="w-4 h-4 mr-2" />
                 For Class 9 & 10 Students
@@ -376,14 +366,11 @@ export default function FoundationCoursePage() {
                   WhatsApp Us
                 </button>
               </div>
-            </motion.div>
+            </div>
 
             {/* Lead Capture Form */}
-            <motion.div
-              className="bg-white rounded-2xl shadow-xl p-6 sm:p-8"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+            <div
+              className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 animate-fadeInUp"
             >
               {!submitSuccess ? (
                 <>
@@ -445,12 +432,10 @@ export default function FoundationCoursePage() {
                       </select>
                     </div>
 
-                    <motion.button
+                    <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4 bg-[#4a5d4a] hover:bg-[#3d4d3d] text-white font-bold text-lg rounded-xl shadow-lg transition-all disabled:opacity-50 flex items-center justify-center gap-2"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                      className="w-full py-4 bg-[#4a5d4a] hover:bg-[#3d4d3d] text-white font-bold text-lg rounded-xl shadow-lg transition-all disabled:opacity-50 flex items-center justify-center gap-2 animate-fadeInUp"
                     >
                       {isSubmitting ? (
                         'Submitting...'
@@ -460,7 +445,7 @@ export default function FoundationCoursePage() {
                           Get Free Study Plan
                         </>
                       )}
-                    </motion.button>
+                    </button>
 
                     <p className="text-xs text-gray-500 text-center">
                       By submitting, you agree to receive calls/messages. No spam!
@@ -482,14 +467,11 @@ export default function FoundationCoursePage() {
                 </>
               ) : (
                 <div className="text-center py-8">
-                  <motion.div
-                    className="bg-[#e8ede8] rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4"
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ type: 'spring' }}
+                  <div
+                    className="bg-[#e8ede8] rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4 animate-fadeInUp"
                   >
                     <CheckCircle className="w-10 h-10 text-[#4a5d4a]" />
-                  </motion.div>
+                  </div>
                   <h3 className="text-2xl font-bold text-[#3d4d3d] mb-2">Thank You!</h3>
                   <p className="text-[#5a6d5a] mb-4">
                     Our counselor will call you within 2 hours with your child's personalized study
@@ -503,7 +485,7 @@ export default function FoundationCoursePage() {
                   </Link>
                 </div>
               )}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -524,13 +506,9 @@ export default function FoundationCoursePage() {
             {freeTools.map((tool, index) => {
               const Icon = tool.icon
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
+                 className="animate-fadeInUp">
                   <Link
                     href={tool.link}
                     className="block bg-[#f5f8f5] hover:bg-[#e8ede8] rounded-xl p-6 text-center transition-all hover:shadow-lg group"
@@ -546,7 +524,7 @@ export default function FoundationCoursePage() {
                       Try Free <ArrowRight className="w-4 h-4 ml-1" />
                     </span>
                   </Link>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -568,11 +546,8 @@ export default function FoundationCoursePage() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-10">
-            <motion.div
-              className="bg-white rounded-xl p-6 shadow-lg"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+            <div
+              className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
             >
               <Laptop className="w-10 h-10 text-[#4a5d4a] mb-4" />
               <h3 className="text-lg font-bold text-[#3d4d3d] mb-2">Live Online Biology Classes</h3>
@@ -580,14 +555,10 @@ export default function FoundationCoursePage() {
                 Interactive online Biology tuition with live doubt clearing. Best online Biology
                 tutor for NEET 2026 preparation with Class 11 &amp; 12 NCERT Biology coverage.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="bg-white rounded-xl p-6 shadow-lg"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
+            <div
+              className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
             >
               <BookOpen className="w-10 h-10 text-[#4a5d4a] mb-4" />
               <h3 className="text-lg font-bold text-[#3d4d3d] mb-2">NCERT Biology for NEET</h3>
@@ -595,14 +566,10 @@ export default function FoundationCoursePage() {
                 Complete NCERT Biology coverage for NEET 2026. Chapter-wise Biology notes and NEET
                 Biology mock tests for Class 11 and Class 12 students.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="bg-white rounded-xl p-6 shadow-lg"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+            <div
+              className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
             >
               <Target className="w-10 h-10 text-[#4a5d4a] mb-4" />
               <h3 className="text-lg font-bold text-[#3d4d3d] mb-2">NEET Biology Coaching</h3>
@@ -610,7 +577,7 @@ export default function FoundationCoursePage() {
                 Expert NEET Biology coaching online with PYQ practice. Human Physiology, Genetics,
                 Plant Physiology and high-weightage chapters covered with NEET pattern questions.
               </p>
-            </motion.div>
+            </div>
           </div>
 
           <div className="bg-white rounded-xl p-6 sm:p-8 shadow-lg">
@@ -651,13 +618,9 @@ export default function FoundationCoursePage() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {successStats.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div className="text-2xl sm:text-3xl font-bold text-[#4a5d4a] mb-2">
                   {stat.number}
@@ -666,7 +629,7 @@ export default function FoundationCoursePage() {
                   {stat.label}
                 </div>
                 <div className="text-xs sm:text-sm text-[#5a6d5a]">{stat.description}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -686,12 +649,9 @@ export default function FoundationCoursePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {ageGroups.map((group, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-[#f5f8f5] rounded-xl p-6 sm:p-8 border-l-4 border-[#4a5d4a]"
-                initial={{ opacity: 0, x: index === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                className="bg-[#f5f8f5] rounded-xl p-6 sm:p-8 border-l-4 border-[#4a5d4a] animate-fadeInUp"
               >
                 <div className="mb-6">
                   <div className="flex justify-between items-start mb-4">
@@ -716,7 +676,7 @@ export default function FoundationCoursePage() {
                 >
                   Book Demo for {group.class} <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -738,18 +698,14 @@ export default function FoundationCoursePage() {
             {uniqueFeatures.map((feature, index) => {
               const Icon = feature.icon
               return (
-                <motion.div
+                <div
                   key={index}
-                  className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
+                  className="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
                 >
                   <Icon className="w-12 h-12 text-[#4a5d4a] mx-auto mb-4" />
                   <h3 className="text-lg font-semibold text-[#3d4d3d] mb-3">{feature.title}</h3>
                   <p className="text-[#5a6d5a] text-sm">{feature.description}</p>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -770,13 +726,9 @@ export default function FoundationCoursePage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {curriculum.map((unit, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-[#f5f8f5] rounded-xl p-6 border-l-4 border-[#4a5d4a]"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                className="bg-[#f5f8f5] rounded-xl p-6 border-l-4 border-[#4a5d4a] animate-fadeInUp"
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-bold text-[#3d4d3d]">{unit.title}</h3>
@@ -797,7 +749,7 @@ export default function FoundationCoursePage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -818,11 +770,8 @@ export default function FoundationCoursePage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <motion.div
-              className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[#4a5d4a]"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+            <div
+              className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[#4a5d4a] animate-fadeInUp"
             >
               <h3 className="text-xl font-bold text-[#3d4d3d] mb-4">
                 Biology Coaching in Gurugram
@@ -844,13 +793,10 @@ export default function FoundationCoursePage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[#4a5d4a]"
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+            <div
+              className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-[#4a5d4a] animate-fadeInUp"
             >
               <h3 className="text-xl font-bold text-[#3d4d3d] mb-4">
                 Biology Tuition in Delhi NCR
@@ -872,7 +818,7 @@ export default function FoundationCoursePage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
 
           <div className="text-center">
@@ -1001,13 +947,9 @@ export default function FoundationCoursePage() {
 
           <div className="space-y-4">
             {foundationFAQs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-white rounded-xl shadow-md overflow-hidden"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-xl shadow-md overflow-hidden animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -1035,7 +977,7 @@ export default function FoundationCoursePage() {
                     <p className="text-[#5a6d5a]">{faq.answer}</p>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
 

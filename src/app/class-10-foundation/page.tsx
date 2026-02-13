@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Target,
@@ -237,11 +236,8 @@ export default function Class10FoundationPage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
                 <BookOpen className="w-5 h-5 mr-2" />
                 Class 10 Biology Foundation Program
@@ -282,26 +278,20 @@ export default function Class10FoundationPage() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {successMetrics.map((metric, index) => (
-                  <motion.div
+                  <div
                     key={metric.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center"
+                    className="text-center animate-fadeInUp"
                   >
                     <metric.icon className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
                     <div className="text-lg font-bold">{metric.label}</div>
                     <div className="text-xs opacity-80">{metric.sublabel}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+            <div
+              className="relative animate-fadeInUp"
             >
               {/* Timeline Highlight */}
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
@@ -361,7 +351,7 @@ export default function Class10FoundationPage() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -369,12 +359,8 @@ export default function Class10FoundationPage() {
       {/* Program Options - Current vs Passed */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Choose Your Starting Point
@@ -383,17 +369,13 @@ export default function Class10FoundationPage() {
               We offer specialized batches for both current Class 10 students and those who have
               completed their boards. Both paths lead to NEET success!
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {programOptions.map((option, index) => (
-              <motion.div
+              <div
                 key={option.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div
                   className={`w-16 h-16 bg-gradient-to-r ${option.color} rounded-lg flex items-center justify-center mb-6`}
@@ -421,7 +403,7 @@ export default function Class10FoundationPage() {
                   <Play className="w-5 h-5 mr-2" />
                   Join This Batch
                 </Button>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -430,12 +412,8 @@ export default function Class10FoundationPage() {
       {/* Learning Features */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Why Class 10 is the Perfect Time to Start
@@ -444,17 +422,13 @@ export default function Class10FoundationPage() {
               Class 10 foundation offers the ideal balance - not too early, not too late. Start your
               NEET journey with confidence and clarity.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {learningFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}
@@ -463,7 +437,7 @@ export default function Class10FoundationPage() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -472,12 +446,8 @@ export default function Class10FoundationPage() {
       {/* Curriculum Coverage */}
       <section className="py-20 bg-green-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Class 10 Biology Syllabus + NEET Foundation
@@ -486,17 +456,13 @@ export default function Class10FoundationPage() {
               Complete NCERT Class 10 Biology coverage aligned with board exams, plus additional
               NEET foundation topics for head start advantage.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {class10Curriculum.map((unit, index) => (
-              <motion.div
+              <div
                 key={unit.unit}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 border border-green-200 shadow-md"
+                className="bg-white rounded-xl p-6 border border-green-200 shadow-md animate-fadeInUp"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex items-start lg:items-center mb-4 lg:mb-0">
@@ -553,16 +519,12 @@ export default function Class10FoundationPage() {
                     </Button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mt-12 animate-fadeInUp"
           >
             <div className="bg-gradient-to-r from-green-100 to-green-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -582,7 +544,7 @@ export default function Class10FoundationPage() {
                 Join Early Bird Batch - Limited Seats!
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -595,12 +557,8 @@ export default function Class10FoundationPage() {
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Start Your NEET Journey at the Perfect Time
             </h2>
@@ -645,7 +603,7 @@ export default function Class10FoundationPage() {
                 <span>NEET 2027 Ready</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

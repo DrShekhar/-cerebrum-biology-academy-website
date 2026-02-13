@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Users,
   Trophy,
@@ -206,11 +205,8 @@ export default function NEETCoachingShimla() {
 
           <div className="mx-auto max-w-7xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-sky-100 px-4 py-2 text-sky-800">
                   <Mountain className="h-4 w-4" />
                   <span className="text-sm font-medium">
@@ -260,13 +256,10 @@ export default function NEETCoachingShimla() {
                     <span>4.9/5 from 180+ HP students</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative"
+              <div
+                className="relative animate-fadeInUp"
               >
                 <div className="rounded-2xl bg-white p-8 shadow-xl">
                   <h3 className="mb-6 text-center text-xl font-bold text-gray-900">
@@ -286,7 +279,7 @@ export default function NEETCoachingShimla() {
                     <p className="text-sm opacity-90">HP&apos;s premier medical college!</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -294,11 +287,8 @@ export default function NEETCoachingShimla() {
         {/* Why Shimla Students Choose Online */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Shimla & HP Students Choose Online NEET Coaching
@@ -306,23 +296,19 @@ export default function NEETCoachingShimla() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Hill station challenges that make online coaching the smart choice
               </p>
-            </motion.div>
+            </div>
 
             <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {whyOnlineForShimla.map((item, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-start gap-4 rounded-xl border border-red-100 bg-red-50 p-4"
+                  className="flex items-start gap-4 rounded-xl border border-red-100 bg-red-50 p-4 animate-fadeInUp"
                 >
                   <div className="rounded-lg bg-red-100 p-2">
                     <item.icon className="h-5 w-5 text-red-600" />
                   </div>
                   <p className="font-medium text-red-800">{item.problem}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -347,11 +333,8 @@ export default function NEETCoachingShimla() {
         {/* Shimla Areas We Serve */}
         <section className="bg-sky-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 NEET Coaching for Shimla & Nearby Areas
@@ -359,16 +342,12 @@ export default function NEETCoachingShimla() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Online classes for students across Shimla district and beyond
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {shimlaAreas.map((area, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
                   className={`rounded-xl border-2 bg-white p-4 ${
                     area.priority === 'high'
                       ? 'border-sky-300 shadow-lg'
@@ -390,7 +369,7 @@ export default function NEETCoachingShimla() {
                     <Users className="h-4 w-4" />
                     {area.students} students enrolled
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -426,11 +405,8 @@ export default function NEETCoachingShimla() {
         {/* Features */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Cerebrum is Best for Shimla Students
@@ -438,24 +414,20 @@ export default function NEETCoachingShimla() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Features designed for hill station NEET aspirants
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {features.map((feature, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-xl border border-gray-100 bg-white p-6 shadow-lg"
+                  className="rounded-xl border border-gray-100 bg-white p-6 shadow-lg animate-fadeInUp"
                 >
                   <div className="mb-4 inline-flex rounded-lg bg-sky-100 p-3">
                     <feature.icon className="h-6 w-6 text-sky-600" />
                   </div>
                   <h3 className="mb-2 text-xl font-bold text-gray-900">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -464,11 +436,8 @@ export default function NEETCoachingShimla() {
         {/* Schools Section */}
         <section className="bg-sky-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Trusted by Students from Top Shimla Schools
@@ -476,21 +445,17 @@ export default function NEETCoachingShimla() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Students from prestigious hill schools choose us
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {shimlaSchools.map((school, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-sm"
+                  className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-sm animate-fadeInUp"
                 >
                   <School className="h-5 w-5 shrink-0 text-sky-600" />
                   <span className="text-sm font-medium text-gray-800">{school}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -499,11 +464,8 @@ export default function NEETCoachingShimla() {
         {/* Medical Colleges */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Target Medical Colleges for Shimla Students
@@ -511,7 +473,7 @@ export default function NEETCoachingShimla() {
               <p className="text-lg text-gray-600">
                 IGMC Shimla is in your city! Plus AIIMS Bilaspur just 90km away.
               </p>
-            </motion.div>
+            </div>
 
             <div className="overflow-hidden rounded-xl border border-gray-200">
               <table className="w-full">
@@ -587,16 +549,13 @@ export default function NEETCoachingShimla() {
         {/* Cost Comparison */}
         <section className="bg-sky-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Cost Comparison: Chandigarh/Delhi vs Online for Shimla Students
               </h2>
-            </motion.div>
+            </div>
 
             <div className="grid gap-8 md:grid-cols-2">
               <div className="rounded-xl border-2 border-red-200 bg-white p-6">
@@ -670,11 +629,8 @@ export default function NEETCoachingShimla() {
         {/* FAQs */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 FAQs: NEET Coaching in Shimla
@@ -682,17 +638,13 @@ export default function NEETCoachingShimla() {
               <p className="text-lg text-gray-600">
                 Common questions from Shimla and Himachal Pradesh students
               </p>
-            </motion.div>
+            </div>
 
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="rounded-xl border border-gray-200 bg-white"
+                  className="rounded-xl border border-gray-200 bg-white animate-fadeInUp"
                 >
                   <details className="group">
                     <summary className="flex cursor-pointer items-center justify-between p-6 font-semibold text-gray-900">
@@ -703,7 +655,7 @@ export default function NEETCoachingShimla() {
                     </summary>
                     <div className="px-6 pb-6 text-gray-600">{faq.answer}</div>
                   </details>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -712,11 +664,8 @@ export default function NEETCoachingShimla() {
         {/* Final CTA */}
         <section className="bg-gradient-to-r from-sky-600 to-cyan-600 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
                 Ready to Join IGMC Shimla from Your Mountain Home?
               </h2>
@@ -747,7 +696,7 @@ export default function NEETCoachingShimla() {
               <p className="mt-6 text-sm text-sky-200">
                 Free counseling session • No obligation • Weather-proof learning guaranteed
               </p>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

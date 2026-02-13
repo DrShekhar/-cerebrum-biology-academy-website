@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import {
   CheckCircle,
   Star,
@@ -271,11 +270,8 @@ export default function NEETCoachingPage() {
         {/* 2. Hero Section */}
         <section className="container mx-auto px-4 pb-16 pt-8 md:pt-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">
                 NEET Coaching 2026
                 <span className="block text-yellow-400 mt-2">Physics | Chemistry | Biology</span>
@@ -316,13 +312,10 @@ export default function NEETCoachingPage() {
                   Chat on WhatsApp
                 </Button>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8"
+            <div
+              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 md:p-8 animate-fadeInUp"
             >
               <h3 className="text-xl font-bold text-white mb-5">Why Cerebrum?</h3>
               <div className="space-y-4">
@@ -367,7 +360,7 @@ export default function NEETCoachingPage() {
                   <div className="bg-yellow-400 h-2.5 rounded-full" style={{ width: '78%' }} />
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>
@@ -384,15 +377,12 @@ export default function NEETCoachingPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {successStats.map((stat) => (
-              <motion.div
+              <div
                 key={stat.label}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <p className={`text-3xl md:text-4xl font-bold ${stat.color}`}>{stat.value}</p>
                 <p className="text-gray-300 text-sm mt-1">{stat.label}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -401,11 +391,8 @@ export default function NEETCoachingPage() {
       {/* 5. Subjects Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
               Complete NEET Syllabus
@@ -417,17 +404,13 @@ export default function NEETCoachingPage() {
               Physics, Chemistry, and Biology — taught by specialized AIIMS & IITians faculties with
               subject-specific strategies for NEET 2026.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {subjects.map((subject, idx) => (
-              <motion.div
+              <div
                 key={subject.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
+                className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-fadeInUp"
               >
                 <div className={cn('p-6', subject.bgColor)}>
                   <div className="flex items-center justify-between mb-3">
@@ -476,7 +459,7 @@ export default function NEETCoachingPage() {
                     {subject.whyItMatters}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -485,11 +468,8 @@ export default function NEETCoachingPage() {
       {/* 6. Interactive Course Selector */}
       <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <span className="inline-block px-4 py-1.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-4">
               Build Your Course
@@ -501,7 +481,7 @@ export default function NEETCoachingPage() {
               Select your preferences below and enquire directly on WhatsApp. Our counselors will
               share exact fees, batch timings, and schedule.
             </p>
-          </motion.div>
+          </div>
 
           <div className="max-w-4xl mx-auto space-y-8">
             {/* Step 1: Class */}
@@ -677,11 +657,8 @@ export default function NEETCoachingPage() {
 
             {/* Step 6: Location (offline only) */}
             {selectedMode === 'offline' && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 flex items-center gap-2">
                   <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs">
                     6
@@ -708,7 +685,7 @@ export default function NEETCoachingPage() {
                     </button>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Summary Card */}
@@ -796,11 +773,8 @@ export default function NEETCoachingPage() {
       {/* 7. Course Features Grid */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What You Get in <span className="text-blue-600">{selectedTierData?.label}</span>
@@ -808,24 +782,20 @@ export default function NEETCoachingPage() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               {selectedTierData?.batchSize} per batch, {selectedTierData?.hours}
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
             {tierFeatures.map((feature, idx) => {
               const icons = [BookOpen, Users, Brain, Target, Award, Shield, Zap, TrendingUp]
               const IconComp = icons[idx % icons.length]
               return (
-                <motion.div
+                <div
                   key={feature}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.05 }}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100"
+                  className="flex items-start gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100 animate-fadeInUp"
                 >
                   <IconComp className="w-5 h-5 text-blue-600 mt-0.5 shrink-0" />
                   <span className="text-gray-700 text-sm">{feature}</span>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -838,11 +808,8 @@ export default function NEETCoachingPage() {
       {/* 9. Competitor Comparison Table */}
       <section className="py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
               Why Choose Us
@@ -850,7 +817,7 @@ export default function NEETCoachingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Cerebrum vs <span className="text-green-600">Competition</span>
             </h2>
-          </motion.div>
+          </div>
 
           <div className="max-w-4xl mx-auto overflow-x-auto">
             <table className="w-full text-sm">
@@ -901,11 +868,8 @@ export default function NEETCoachingPage() {
       {/* 10. Parent CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Parents, We Understand Your Concerns
             </h2>
@@ -946,23 +910,20 @@ export default function NEETCoachingPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* 11. FAQ Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked <span className="text-blue-600">Questions</span>
             </h2>
-          </motion.div>
+          </div>
 
           <div className="max-w-3xl mx-auto space-y-3">
             {faqs.map((faq, idx) => (
@@ -994,11 +955,8 @@ export default function NEETCoachingPage() {
       {/* 12. Final CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Start Your NEET Journey Today
             </h2>
@@ -1030,7 +988,7 @@ export default function NEETCoachingPage() {
             <p className="text-yellow-400 text-sm font-medium">
               New batches starting this month — limited seats available
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 

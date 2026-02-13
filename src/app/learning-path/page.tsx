@@ -3,7 +3,6 @@
 import dynamicImport from 'next/dynamic'
 import { useAuth } from '@/contexts/AuthContext'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { LogIn, UserPlus, Brain } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
@@ -30,10 +29,8 @@ const PersonalizedLearningPath = dynamicImport(
 function AuthRequiredMessage() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center"
+      <div
+        className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp"
       >
         <div className="w-20 h-20 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
           <Brain className="w-10 h-10 text-white" />
@@ -73,7 +70,7 @@ function AuthRequiredMessage() {
             </ul>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

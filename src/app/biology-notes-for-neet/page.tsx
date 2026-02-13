@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   BookOpen,
@@ -595,12 +594,8 @@ function WeightageBar({ value, max = 8 }: { value: number; max?: number }) {
 
 function ChapterCard({ chapter, index }: { chapter: Chapter; index: number }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: index * 0.03 }}
-      className="group bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-blue-300 transition-all duration-300"
+    <div
+      className="group bg-white rounded-xl border border-gray-200 p-5 hover:shadow-lg hover:border-blue-300 transition-all duration-300 animate-fadeInUp"
     >
       <div className="flex items-start justify-between mb-3">
         <div className="flex items-center gap-3">
@@ -642,7 +637,7 @@ function ChapterCard({ chapter, index }: { chapter: Chapter; index: number }) {
           </span>
         )}
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -798,7 +793,7 @@ export default function BiologyNotesForNEETPage() {
             </nav>
 
             <div className="max-w-3xl">
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+              <div className="animate-fadeInUp">
                 <span className="inline-block bg-yellow-400/20 text-yellow-300 text-sm font-semibold px-4 py-1.5 rounded-full mb-4">
                   Updated for NEET 2026 Syllabus
                 </span>
@@ -811,13 +806,10 @@ export default function BiologyNotesForNEETPage() {
                   Each chapter includes diagrams, flowcharts, comparison tables, mnemonics, and previous
                   year question analysis to help you score 340+ in NEET Biology.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="flex flex-wrap gap-3"
+              <div
+                className="flex flex-wrap gap-3 animate-fadeInUp"
               >
                 <a
                   href="#class-12-notes"
@@ -831,7 +823,7 @@ export default function BiologyNotesForNEETPage() {
                 >
                   <BookOpen className="w-5 h-5" /> Browse Class 11 Notes
                 </a>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -848,7 +840,7 @@ export default function BiologyNotesForNEETPage() {
 
         {/* ─── Why These Notes ─── */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
+          <div className="animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-4">
               Why Students Trust Our NEET Biology Notes
             </h2>
@@ -856,7 +848,7 @@ export default function BiologyNotesForNEETPage() {
               These notes are not generic summaries. Each chapter is prepared after analysing 15+ years
               of NEET papers to focus on what actually gets asked.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
@@ -891,20 +883,16 @@ export default function BiologyNotesForNEETPage() {
                 desc: 'Dr. Shekhar brings 15+ years of NEET coaching experience and insight from training 600+ students who cleared NEET.',
               },
             ].map((feature, i) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-shadow"
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-shadow animate-fadeInUp"
               >
                 <div className="w-12 h-12 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{feature.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </section>
@@ -1021,18 +1009,14 @@ export default function BiologyNotesForNEETPage() {
                 desc: 'Use our mnemonics and comparison tables for final-week revision. Focus on high-weightage chapters.',
               },
             ].map((item, i) => (
-              <motion.div
+              <div
                 key={item.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="relative bg-white rounded-xl p-6 border border-gray-200"
+                className="relative bg-white rounded-xl p-6 border border-gray-200 animate-fadeInUp"
               >
                 <div className="text-4xl font-bold text-blue-100 mb-3">{item.step}</div>
                 <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-sm text-gray-600">{item.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </section>
@@ -1047,9 +1031,6 @@ export default function BiologyNotesForNEETPage() {
               {(faqSchema.mainEntity as Array<{ name: string; acceptedAnswer: { text: string } }>).map((faq, i) => (
                 <motion.details
                   key={i}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
                   className="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden"
                 >
                   <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-gray-900 hover:bg-gray-100 transition-colors">

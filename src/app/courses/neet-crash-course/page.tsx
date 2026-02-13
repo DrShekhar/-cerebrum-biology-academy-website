@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import {
   CheckCircle,
   Users,
@@ -270,11 +269,8 @@ export default function NEETCrashCoursePage() {
 
         <div className="relative max-w-7xl mx-auto px-3 sm:px-4 pt-6 sm:pt-10">
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 <Zap className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-yellow-300" />
                 90-Day Intensive Program
@@ -296,16 +292,13 @@ export default function NEETCrashCoursePage() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-6 sm:mb-8">
                 {successStats.map((stat, index) => (
-                  <motion.div
+                  <div
                     key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center bg-white/15 backdrop-blur-sm rounded-lg sm:rounded-xl p-2 sm:p-3"
+                    className="text-center bg-white/15 backdrop-blur-sm rounded-lg sm:rounded-xl p-2 sm:p-3 animate-fadeInUp"
                   >
                     <div className="text-lg sm:text-xl md:text-2xl font-bold">{stat.number}</div>
                     <div className="text-[10px] sm:text-xs text-orange-200">{stat.label}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -337,14 +330,11 @@ export default function NEETCrashCoursePage() {
                   Book FREE Demo Class
                 </Button>
               </div>
-            </motion.div>
+            </div>
 
             {/* Lead Form */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+            <div
+              className="relative animate-fadeInUp"
             >
               <div className="bg-red-700 rounded-t-2xl sm:rounded-t-3xl px-4 py-2 sm:py-3 text-center">
                 <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-bold">
@@ -461,7 +451,7 @@ export default function NEETCrashCoursePage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -469,11 +459,8 @@ export default function NEETCrashCoursePage() {
       {/* Course Features */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <motion.div
-            className="text-center mb-8 sm:mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-8 sm:mb-12 animate-fadeInUp"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               What You Get in Crash Course
@@ -481,17 +468,13 @@ export default function NEETCrashCoursePage() {
             <p className="text-sm sm:text-base md:text-lg text-gray-600">
               Everything you need for final NEET Biology revision
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             {crashCourseFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-orange-50 rounded-xl p-4 sm:p-6 text-center hover:shadow-lg transition-shadow"
+                className="bg-orange-50 rounded-xl p-4 sm:p-6 text-center hover:shadow-lg transition-shadow animate-fadeInUp"
               >
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
                   <feature.icon className="w-6 h-6 sm:w-7 sm:h-7 text-orange-600" />
@@ -500,7 +483,7 @@ export default function NEETCrashCoursePage() {
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -509,11 +492,8 @@ export default function NEETCrashCoursePage() {
       {/* Weekly Plan */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <motion.div
-            className="text-center mb-8 sm:mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-8 sm:mb-12 animate-fadeInUp"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               12-Week Intensive Plan
@@ -521,16 +501,13 @@ export default function NEETCrashCoursePage() {
             <p className="text-sm sm:text-base md:text-lg text-gray-600">
               Structured approach for maximum score improvement
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
             {weeklyPlan.map((phase, index) => (
-              <motion.div
+              <div
                 key={phase.week}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-4 sm:p-6 shadow-lg border-l-4 border-orange-500"
+                className="bg-white rounded-xl p-4 sm:p-6 shadow-lg border-l-4 border-orange-500 animate-fadeInUp"
               >
                 <div className="flex justify-between items-start mb-3 sm:mb-4">
                   <div>
@@ -549,7 +526,7 @@ export default function NEETCrashCoursePage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -620,26 +597,19 @@ export default function NEETCrashCoursePage() {
       {/* FAQ Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-3 sm:px-4">
-          <motion.div
-            className="text-center mb-8 sm:mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-8 sm:mb-12 animate-fadeInUp"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
               Crash Course FAQ
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-3 sm:space-y-4">
             {crashFAQs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6"
+                className="bg-gray-50 rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 animate-fadeInUp"
               >
                 <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-2 flex items-start">
                   <HelpCircle className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-orange-600 flex-shrink-0 mt-0.5" />
@@ -648,7 +618,7 @@ export default function NEETCrashCoursePage() {
                 <p className="text-gray-600 text-xs sm:text-sm md:text-base ml-7 sm:ml-9">
                   {faq.answer}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -657,11 +627,8 @@ export default function NEETCrashCoursePage() {
       {/* Final CTA */}
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               90 Days to NEET Success
             </h2>
@@ -692,7 +659,7 @@ export default function NEETCrashCoursePage() {
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

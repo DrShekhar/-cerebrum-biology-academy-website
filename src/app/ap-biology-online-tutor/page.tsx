@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   GraduationCap,
@@ -323,10 +322,7 @@ const PricingCard = ({
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+    <div
       className={`relative rounded-xl p-6 shadow-lg ${
         tier.popular ? 'border-2 border-green-500 bg-green-50' : 'border border-gray-200 bg-white'
       }`}
@@ -367,7 +363,7 @@ const PricingCard = ({
         <MessageCircle className="h-5 w-5" />
         Get Started
       </button>
-    </motion.div>
+    </div>
   )
 }
 
@@ -392,10 +388,8 @@ export default function APBiologyPage() {
           <div className="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-blue-500 blur-3xl" />
         </div>
         <div className="container relative mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mx-auto max-w-4xl text-center"
+          <div
+            className="mx-auto max-w-4xl text-center animate-fadeInUp"
           >
             <span className="mb-4 inline-block rounded-full bg-green-500/20 px-4 py-2 text-sm font-semibold text-green-400">
               College Board Aligned Curriculum
@@ -422,18 +416,15 @@ export default function APBiologyPage() {
                 View Campbell Chapters
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* AP Biology Exam Overview */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               AP Biology Exam Format
@@ -441,55 +432,40 @@ export default function APBiologyPage() {
             <p className="mx-auto max-w-2xl text-gray-600">
               Understand the exam structure to prepare effectively
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="rounded-xl bg-white p-6 text-center shadow-lg"
+            <div
+              className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
             >
               <div className="mb-4 text-4xl font-bold text-green-600">3 hrs</div>
               <div className="font-semibold text-gray-900">Total Duration</div>
               <p className="mt-2 text-sm text-gray-600">Including breaks</p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="rounded-xl bg-white p-6 text-center shadow-lg"
+            <div
+              className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
             >
               <div className="mb-4 text-4xl font-bold text-blue-600">60</div>
               <div className="font-semibold text-gray-900">Multiple Choice</div>
               <p className="mt-2 text-sm text-gray-600">90 minutes, 50% of score</p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="rounded-xl bg-white p-6 text-center shadow-lg"
+            <div
+              className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
             >
               <div className="mb-4 text-4xl font-bold text-purple-600">6</div>
               <div className="font-semibold text-gray-900">Free Response</div>
               <p className="mt-2 text-sm text-gray-600">90 minutes, 50% of score</p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="rounded-xl bg-white p-6 text-center shadow-lg"
+            <div
+              className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
             >
               <div className="mb-4 text-4xl font-bold text-orange-600">1-5</div>
               <div className="font-semibold text-gray-900">Score Range</div>
               <p className="mt-2 text-sm text-gray-600">5 = Extremely qualified</p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -497,11 +473,8 @@ export default function APBiologyPage() {
       {/* 8 AP Biology Units */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Complete AP Biology Coverage
@@ -509,17 +482,13 @@ export default function APBiologyPage() {
             <p className="mx-auto max-w-2xl text-gray-600">
               All 8 units aligned with Campbell Biology chapters
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {apBiologyUnits.map((unit, index) => (
-              <motion.div
+              <div
                 key={unit.number}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition hover:border-green-300 hover:shadow-xl"
+                className="rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition hover:border-green-300 hover:shadow-xl animate-fadeInUp"
               >
                 <div className="mb-3 flex items-center justify-between">
                   <span className="rounded-full bg-green-100 px-3 py-1 text-sm font-semibold text-green-700">
@@ -537,7 +506,7 @@ export default function APBiologyPage() {
                   ))}
                 </ul>
                 <p className="text-xs text-gray-500">Campbell Ch. {unit.campbellChapters}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -546,11 +515,8 @@ export default function APBiologyPage() {
       {/* Features */}
       <section className="bg-gradient-to-br from-green-50 to-teal-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Why Choose Our AP Biology Tutoring
@@ -558,24 +524,20 @@ export default function APBiologyPage() {
             <p className="mx-auto max-w-2xl text-gray-600">
               Expert guidance to help you score 5 on the AP Biology exam
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
                   <feature.icon className="text-xl text-green-600" />
                 </div>
                 <h3 className="mb-2 text-lg font-bold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -584,11 +546,8 @@ export default function APBiologyPage() {
       {/* Pricing Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               AP Biology Tutoring Packages
@@ -596,7 +555,7 @@ export default function APBiologyPage() {
             <p className="mx-auto max-w-2xl text-gray-600">
               Flexible pricing options for every learning goal
             </p>
-          </motion.div>
+          </div>
 
           {/* Senior Faculty */}
           <div className="mb-12">
@@ -647,11 +606,8 @@ export default function APBiologyPage() {
       {/* FAQs */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Frequently Asked Questions
@@ -659,21 +615,17 @@ export default function APBiologyPage() {
             <p className="mx-auto max-w-2xl text-gray-600">
               Common questions about AP Biology preparation
             </p>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-3 text-lg font-bold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -701,14 +653,11 @@ export default function APBiologyPage() {
       {/* Related Pages */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-8 text-center"
+          <div
+            className="mb-8 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-2xl font-bold text-gray-900">Related Programs</h2>
-          </motion.div>
+          </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
             <Link
@@ -758,11 +707,8 @@ export default function APBiologyPage() {
       {/* Final CTA */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
               Ready to Score 5 on AP Biology?
             </h2>
@@ -777,7 +723,7 @@ export default function APBiologyPage() {
               <MessageCircle className="h-6 w-6" />
               Start AP Biology Prep Today
             </button>
-          </motion.div>
+          </div>
         </div>
       </section>
 

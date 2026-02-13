@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   GraduationCap,
@@ -95,11 +94,8 @@ export default function BotanyClassesPage() {
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto max-w-4xl text-center"
+          <div
+            className="mx-auto max-w-4xl text-center animate-fadeInUp"
           >
             <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <Calendar className="mr-1 inline h-4 w-4" />
@@ -126,30 +122,25 @@ export default function BotanyClassesPage() {
                 Enquire Now
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Batch Types */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Botany Batch Options</h2>
             <p className="text-lg text-gray-600">Choose the batch that suits your preparation</p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-3">
             {batchTypes.map((batch, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-2 text-2xl font-bold text-blue-600">{batch.name}</h3>
                 <div className="mb-4 text-gray-600">
@@ -170,7 +161,7 @@ export default function BotanyClassesPage() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -186,17 +177,14 @@ export default function BotanyClassesPage() {
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Video, value: 'Online + Offline', label: 'Class Modes' },
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 text-center shadow-lg"
+                className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <stat.icon className="mx-auto mb-3 h-10 w-10 text-blue-600" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -205,25 +193,20 @@ export default function BotanyClassesPage() {
       {/* Syllabus */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Botany Class Syllabus</h2>
             <p className="text-lg text-gray-600">Complete NEET botany coverage in our classes</p>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-4xl">
             <div className="rounded-xl bg-white p-6 shadow-lg">
               <div className="grid gap-4 md:grid-cols-2">
                 {botanyTopics.map((topic, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-center justify-between rounded-lg bg-gray-50 p-4"
+                    className="flex items-center justify-between rounded-lg bg-gray-50 p-4 animate-fadeInUp"
                   >
                     <div>
                       <h4 className="font-semibold text-gray-900">{topic.name}</h4>
@@ -232,7 +215,7 @@ export default function BotanyClassesPage() {
                     <span className="rounded-full bg-cyan-100 px-3 py-1 text-sm font-semibold text-cyan-700">
                       {topic.weightage}
                     </span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -243,15 +226,13 @@ export default function BotanyClassesPage() {
       {/* Features */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               What&apos;s Included in Our Botany Classes
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
@@ -286,17 +267,14 @@ export default function BotanyClassesPage() {
                 desc: 'Regular progress reports and performance analytics.',
               },
             ].map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <feature.icon className="mb-4 h-10 w-10 text-blue-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -305,26 +283,21 @@ export default function BotanyClassesPage() {
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -368,7 +341,7 @@ export default function BotanyClassesPage() {
       {/* CTA */}
       <section className="bg-gradient-to-r from-blue-600 to-green-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">Enroll in Botany Classes Today</h2>
             <p className="mb-8 text-xl text-cyan-100">
               New batches starting soon - secure your seat for NEET 2026!
@@ -388,7 +361,7 @@ export default function BotanyClassesPage() {
                 Call: +91 88264 44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

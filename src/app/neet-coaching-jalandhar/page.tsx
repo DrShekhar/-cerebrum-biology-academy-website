@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   MapPin,
   Users,
@@ -195,11 +194,8 @@ export default function NEETCoachingJalandhar() {
 
           <div className="mx-auto max-w-7xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-purple-100 px-4 py-2 text-purple-800">
                   <MapPin className="h-4 w-4" />
                   <span className="text-sm font-medium">
@@ -249,13 +245,10 @@ export default function NEETCoachingJalandhar() {
                     <span>4.9/5 from 350+ Jalandhar students</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative"
+              <div
+                className="relative animate-fadeInUp"
               >
                 <div className="rounded-2xl bg-white p-8 shadow-xl">
                   <h3 className="mb-6 text-center text-xl font-bold text-gray-900">
@@ -275,7 +268,7 @@ export default function NEETCoachingJalandhar() {
                     <p className="text-sm opacity-90">Only 15 seats per batch - Enroll Now</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -283,11 +276,8 @@ export default function NEETCoachingJalandhar() {
         {/* Why Jalandhar Students Choose Online */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Jalandhar Families Are Choosing Online NEET Coaching
@@ -295,23 +285,19 @@ export default function NEETCoachingJalandhar() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 The traditional challenge of NEET preparation in Doaba region
               </p>
-            </motion.div>
+            </div>
 
             <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {whyOnlineForJalandhar.map((item, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-start gap-4 rounded-xl border border-red-100 bg-red-50 p-4"
+                  className="flex items-start gap-4 rounded-xl border border-red-100 bg-red-50 p-4 animate-fadeInUp"
                 >
                   <div className="rounded-lg bg-red-100 p-2">
                     <item.icon className="h-5 w-5 text-red-600" />
                   </div>
                   <p className="font-medium text-red-800">{item.problem}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -336,11 +322,8 @@ export default function NEETCoachingJalandhar() {
         {/* Jalandhar Areas We Serve */}
         <section className="bg-purple-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 NEET Coaching for Jalandhar & Doaba Region
@@ -348,16 +331,12 @@ export default function NEETCoachingJalandhar() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Online classes for students across Jalandhar district and neighboring areas
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {jalandharAreas.map((area, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
                   className={`rounded-xl border-2 bg-white p-4 ${
                     area.priority === 'high'
                       ? 'border-purple-300 shadow-lg'
@@ -379,7 +358,7 @@ export default function NEETCoachingJalandhar() {
                     <Users className="h-4 w-4" />
                     {area.students} students enrolled
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -388,11 +367,8 @@ export default function NEETCoachingJalandhar() {
         {/* Features */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Cerebrum is Best for Jalandhar Students
@@ -400,24 +376,20 @@ export default function NEETCoachingJalandhar() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Features designed for NEET aspirants from Doaba region
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {features.map((feature, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-xl border border-gray-100 bg-white p-6 shadow-lg transition-shadow hover:shadow-xl"
+                  className="rounded-xl border border-gray-100 bg-white p-6 shadow-lg transition-shadow hover:shadow-xl animate-fadeInUp"
                 >
                   <div className="mb-4 inline-flex rounded-lg bg-purple-100 p-3">
                     <feature.icon className="h-6 w-6 text-purple-600" />
                   </div>
                   <h3 className="mb-2 text-xl font-bold text-gray-900">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -426,30 +398,23 @@ export default function NEETCoachingJalandhar() {
         {/* Schools Section */}
         <section className="bg-purple-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Trusted by Students from Top Jalandhar Schools
               </h2>
-            </motion.div>
+            </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {jalandharSchools.map((school, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-sm"
+                  className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-sm animate-fadeInUp"
                 >
                   <School className="h-5 w-5 shrink-0 text-purple-600" />
                   <span className="text-sm font-medium text-gray-800">{school}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -458,16 +423,13 @@ export default function NEETCoachingJalandhar() {
         {/* Medical Colleges */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Target Medical Colleges for Jalandhar Students
               </h2>
-            </motion.div>
+            </div>
 
             <div className="overflow-hidden rounded-xl border border-gray-200">
               <table className="w-full">
@@ -518,16 +480,13 @@ export default function NEETCoachingJalandhar() {
         {/* Cost Comparison */}
         <section className="bg-purple-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Cost Comparison: Chandigarh vs Online for Jalandhar Students
               </h2>
-            </motion.div>
+            </div>
 
             <div className="grid gap-8 md:grid-cols-2">
               <div className="rounded-xl border-2 border-red-200 bg-white p-6">
@@ -601,26 +560,19 @@ export default function NEETCoachingJalandhar() {
         {/* FAQs */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 FAQs: NEET Coaching in Jalandhar
               </h2>
-            </motion.div>
+            </div>
 
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="rounded-xl border border-gray-200 bg-white"
+                  className="rounded-xl border border-gray-200 bg-white animate-fadeInUp"
                 >
                   <details className="group">
                     <summary className="flex cursor-pointer items-center justify-between p-6 font-semibold text-gray-900">
@@ -631,7 +583,7 @@ export default function NEETCoachingJalandhar() {
                     </summary>
                     <div className="px-6 pb-6 text-gray-600">{faq.answer}</div>
                   </details>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -640,11 +592,8 @@ export default function NEETCoachingJalandhar() {
         {/* Final CTA */}
         <section className="bg-gradient-to-r from-purple-600 to-violet-600 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
                 Ready to Start Your NEET Journey from Jalandhar?
               </h2>
@@ -670,7 +619,7 @@ export default function NEETCoachingJalandhar() {
                   </Button>
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

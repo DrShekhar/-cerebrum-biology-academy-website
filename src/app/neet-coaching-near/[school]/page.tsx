@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useParams, notFound } from 'next/navigation'
 import {
@@ -301,11 +300,8 @@ export default function SchoolNEETCoachingPage() {
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <Link
               href="/neet-coaching-near"
@@ -366,35 +362,27 @@ export default function SchoolNEETCoachingPage() {
                 School: {school.timings}
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Batch Timings */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Batch Timings for {school.name} Students
             </h2>
             <p className="text-lg text-gray-600">Designed to fit around your school schedule</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {school.batchTimings.map((batch, index) => (
-              <motion.div
+              <div
                 key={batch.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-green-50 rounded-xl p-6 border border-green-100"
+                className="bg-green-50 rounded-xl p-6 border border-green-100 animate-fadeInUp"
               >
                 <div className="flex items-center mb-4">
                   <Calendar className="w-6 h-6 text-green-600 mr-2" />
@@ -402,7 +390,7 @@ export default function SchoolNEETCoachingPage() {
                 </div>
                 <div className="text-2xl font-bold text-green-600 mb-2">{batch.time}</div>
                 <div className="text-gray-600">{batch.days}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -411,31 +399,23 @@ export default function SchoolNEETCoachingPage() {
       {/* Why Us */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why {school.name} Students Choose Us
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {school.whyUs.map((reason, index) => (
-              <motion.div
+              <div
                 key={reason}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="flex items-center bg-white rounded-lg p-4 shadow-sm"
+                className="flex items-center bg-white rounded-lg p-4 shadow-sm animate-fadeInUp"
               >
                 <CheckCircle className="w-6 h-6 text-green-600 mr-3 flex-shrink-0" />
                 <span className="text-gray-700">{reason}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -444,36 +424,28 @@ export default function SchoolNEETCoachingPage() {
       {/* Testimonial */}
       <section className="py-16 md:py-20 bg-green-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <GraduationCap className="w-16 h-16 mx-auto mb-6 text-yellow-300" />
             <blockquote className="text-xl md:text-2xl italic mb-6">
               "{school.testimonial.text}"
             </blockquote>
             <div className="font-bold text-lg">{school.testimonial.name}</div>
             <div className="text-yellow-300">{school.testimonial.year}</div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Nearby Areas */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Nearby Areas We Cover
             </h2>
-          </motion.div>
+          </div>
 
           <div className="flex flex-wrap gap-4 justify-center">
             {school.nearbyAreas.map((area) => (
@@ -492,12 +464,8 @@ export default function SchoolNEETCoachingPage() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Join Your {school.name} Classmates at Cerebrum
             </h2>
@@ -529,7 +497,7 @@ export default function SchoolNEETCoachingPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

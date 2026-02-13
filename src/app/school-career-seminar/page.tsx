@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
 import Image from 'next/image'
 import {
   GraduationCap,
@@ -485,7 +484,7 @@ Submitted via School Seminar Booking Form`
 
           <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <motion.div {...fadeInUp}>
+              <div {...fadeInUp} className="animate-fadeInUp">
                 <div className="inline-flex items-center px-4 py-2 bg-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6">
                   <Sparkles className="w-4 h-4 mr-2" />
                   100% Free for Schools
@@ -547,13 +546,10 @@ Submitted via School Seminar Booking Form`
                     Pan-India Available
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                className="relative hidden lg:block"
+              <div
+                className="relative hidden lg:block animate-fadeInUp"
               >
                 <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <div className="grid grid-cols-2 gap-4">
@@ -565,7 +561,7 @@ Submitted via School Seminar Booking Form`
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -573,11 +569,8 @@ Submitted via School Seminar Booking Form`
         {/* Why Schools Need Career Seminars */}
         <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 Why Schools Need Career Guidance Seminars
@@ -586,14 +579,11 @@ Submitted via School Seminar Booking Form`
                 Career counselling is no longer optional - it&apos;s mandated by education boards
                 and essential for student success.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-lg border border-green-100"
+              <div
+                className="bg-white rounded-xl p-6 shadow-lg border border-green-100 animate-fadeInUp"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
@@ -609,13 +599,10 @@ Submitted via School Seminar Booking Form`
                   provide career counselling services to students. Our seminars help schools fulfill
                   this compliance requirement.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-lg border border-blue-100"
+              <div
+                className="bg-white rounded-xl p-6 shadow-lg border border-blue-100 animate-fadeInUp"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
@@ -631,7 +618,7 @@ Submitted via School Seminar Booking Form`
                   schools to provide exposure to various career paths including medical sciences for
                   informed decision-making.
                 </p>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -639,11 +626,8 @@ Submitted via School Seminar Booking Form`
         {/* Seminar Types */}
         <section className="py-16 md:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 Our Seminar Programs
@@ -652,17 +636,13 @@ Submitted via School Seminar Booking Form`
                 Choose from our range of tailored programs designed for different audiences and
                 objectives.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-6">
               {seminarTypes.map((seminar, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow animate-fadeInUp"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div
@@ -705,7 +685,7 @@ Submitted via School Seminar Booking Form`
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -714,11 +694,8 @@ Submitted via School Seminar Booking Form`
         {/* Why Choose Cerebrum */}
         <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 Why Schools Choose Cerebrum
@@ -726,24 +703,20 @@ Submitted via School Seminar Booking Form`
               <p className="text-gray-600 max-w-3xl mx-auto">
                 Trusted by 500+ schools across India for quality career guidance
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {whyChooseUs.map((item, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-md border border-gray-100"
+                  className="bg-white rounded-xl p-6 shadow-md border border-gray-100 animate-fadeInUp"
                 >
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                     <item.icon className="w-6 h-6 text-green-700" />
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -822,21 +795,15 @@ Submitted via School Seminar Booking Form`
         {/* Sample Agenda */}
         <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-4xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Sample Agenda</h2>
               <p className="text-gray-600">A typical 3-hour comprehensive session structure</p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-2xl p-6 md:p-8"
+            <div
+              className="bg-gray-50 rounded-2xl p-6 md:p-8 animate-fadeInUp"
             >
               <div className="space-y-4">
                 {sampleAgenda.map((item, index) => (
@@ -854,24 +821,21 @@ Submitted via School Seminar Booking Form`
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Testimonials */}
         <section className="py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                 What Schools Say About Us
               </h2>
               <p className="text-gray-600">Feedback from principals and educators</p>
-            </motion.div>
+            </div>
 
             {/* Featured Testimonials - Optimized */}
             <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -972,11 +936,8 @@ Submitted via School Seminar Booking Form`
         {/* Booking Form Section */}
         <section id="booking-form" className="py-16 md:py-20 bg-white">
           <div className="max-w-4xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <div className="inline-flex items-center px-4 py-2 bg-green-100 rounded-full text-green-800 text-sm font-medium mb-4">
                 <ClipboardList className="w-4 h-4 mr-2" />
@@ -989,14 +950,11 @@ Submitted via School Seminar Booking Form`
                 Fill in the details below and we&apos;ll get in touch to confirm your seminar date.
                 All fields marked with * are required.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.form
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+            <form
               onSubmit={handleFormSubmit}
-              className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200"
+              className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-200 animate-fadeInUp"
             >
               {/* School Information */}
               <div className="mb-8">
@@ -1296,7 +1254,7 @@ Submitted via School Seminar Booking Form`
                   )}
                 </Button>
               </div>
-            </motion.form>
+            </form>
 
             {/* Trust Indicators */}
             <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -1323,11 +1281,8 @@ Submitted via School Seminar Booking Form`
         {/* Final CTA */}
         <section className="py-16 md:py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <School className="w-16 h-16 mx-auto mb-6 text-yellow-400" />
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 Ready to Empower Your Students?
@@ -1365,7 +1320,7 @@ Submitted via School Seminar Booking Form`
               <p className="mt-6 text-sm text-gray-400">
                 Available for schools across Delhi NCR and Pan-India (Online)
               </p>
-            </motion.div>
+            </div>
           </div>
         </section>
       </main>

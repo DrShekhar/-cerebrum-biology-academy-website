@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import {
   Trophy,
@@ -244,11 +243,8 @@ export default function APBiologyTutorPage() {
         <div className="absolute inset-0 bg-indigo-100" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-md px-6 py-3 rounded-full text-sm font-medium mb-6 border border-white/20">
               <Medal className="w-5 h-5 mr-2 text-yellow-300" />
@@ -301,32 +297,25 @@ export default function APBiologyTutorPage() {
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {successStats.map((metric, index) => (
-                <motion.div
+                <div
                   key={metric.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all"
+                  className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all animate-fadeInUp"
                 >
                   <metric.icon className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-2xl font-bold">{metric.value}</div>
                   <div className="text-sm opacity-80">{metric.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* AP Biology Units (College Board Curriculum) */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Complete College Board Curriculum Coverage
@@ -335,17 +324,13 @@ export default function APBiologyTutorPage() {
               We cover all 8 AP Biology units aligned with the College Board Curriculum Framework.
               Master every topic tested on the exam.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {apBiologyUnits.map((unit, index) => (
-              <motion.div
+              <div
                 key={unit.unit}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all border-2 border-blue-100 hover:border-blue-300"
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all border-2 border-blue-100 hover:border-blue-300 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm font-bold text-blue-600 bg-blue-100 px-3 py-1 rounded-full">
@@ -364,7 +349,7 @@ export default function APBiologyTutorPage() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -373,12 +358,8 @@ export default function APBiologyTutorPage() {
       {/* Exam Format Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               AP Biology Exam Format
@@ -386,17 +367,13 @@ export default function APBiologyTutorPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Understand the exam structure and master both sections with our targeted strategies
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {examFormat.map((section, index) => (
-              <motion.div
+              <div
                 key={section.section}
-                initial={{ opacity: 0, x: index === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8 shadow-lg border-2 border-blue-200"
+                className="bg-gray-50 rounded-xl p-8 shadow-lg border-2 border-blue-200 animate-fadeInUp"
               >
                 <h3 className="text-2xl font-bold text-blue-900 mb-4">{section.section}</h3>
 
@@ -435,16 +412,12 @@ export default function APBiologyTutorPage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            className="mt-12 bg-blue-600 text-white rounded-xl p-8 max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+          <div
+            className="mt-12 bg-blue-600 text-white rounded-xl p-8 max-w-4xl mx-auto animate-fadeInUp"
           >
             <h3 className="text-2xl font-bold mb-4 flex items-center">
               <Lightbulb className="w-8 h-8 mr-3 text-yellow-300" />
@@ -456,19 +429,15 @@ export default function APBiologyTutorPage() {
               always guess! FRQs use specific rubrics - we teach you exactly what graders look for.
               Practice makes perfect - our program includes 10+ full-length practice exams.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Score Distribution */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               AP Biology Score Distribution
@@ -476,17 +445,13 @@ export default function APBiologyTutorPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Understanding national score distribution helps you set realistic goals
             </p>
-          </motion.div>
+          </div>
 
           <div className="max-w-4xl mx-auto space-y-6">
             {scoreDistribution.map((item, index) => (
-              <motion.div
+              <div
                 key={item.score}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all"
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all animate-fadeInUp"
               >
                 <div className="flex items-center justify-between flex-wrap gap-4">
                   <div className="flex items-center gap-4">
@@ -509,16 +474,12 @@ export default function APBiologyTutorPage() {
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            className="mt-12 bg-[#4a5d4a] text-white rounded-xl p-8 max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
+          <div
+            className="mt-12 bg-[#4a5d4a] text-white rounded-xl p-8 max-w-4xl mx-auto animate-fadeInUp"
           >
             <h3 className="text-2xl font-bold mb-4 flex items-center">
               <Trophy className="w-8 h-8 mr-3 text-yellow-300" />
@@ -536,19 +497,15 @@ export default function APBiologyTutorPage() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               What Makes Our AP Bio Tutoring Special
@@ -556,24 +513,20 @@ export default function APBiologyTutorPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive preparation beyond just content knowledge
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-all border border-blue-100"
+                className="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-all border border-blue-100 animate-fadeInUp"
               >
                 <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mb-4 shadow-lg">
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -582,12 +535,8 @@ export default function APBiologyTutorPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
@@ -595,24 +544,20 @@ export default function APBiologyTutorPage() {
             <p className="text-xl text-gray-600">
               Everything you need to know about AP Biology preparation
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all border border-gray-100"
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all border border-gray-100 animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-blue-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -621,12 +566,8 @@ export default function APBiologyTutorPage() {
       {/* CTA Section */}
       <section className="py-20 bg-blue-800 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Score 5 on Your AP Biology Exam?
             </h2>
@@ -677,7 +618,7 @@ export default function APBiologyTutorPage() {
                 <span>24/7 Support</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

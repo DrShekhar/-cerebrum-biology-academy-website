@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Video,
@@ -156,11 +155,8 @@ export default function NEETBiologyCoachingPage() {
       <section className="relative bg-gradient-to-br from-green-800 via-green-800 to-cyan-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-5 h-5 mr-2 text-yellow-300" />
@@ -213,19 +209,15 @@ export default function NEETBiologyCoachingPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Our NEET Biology Coaching?
@@ -233,22 +225,18 @@ export default function NEETBiologyCoachingPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               A proven methodology that has helped 1,50,000+ students crack NEET
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -257,28 +245,20 @@ export default function NEETBiologyCoachingPage() {
       {/* Related Pages - NEET Coaching */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Explore NEET Coaching Options
             </h2>
             <p className="text-lg text-gray-600">Find the perfect coaching program for you</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {neetCoachingLinks.map((link, index) => (
-              <motion.div
+              <div
                 key={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <Link
                   href={link.href}
                   className="block bg-green-50 rounded-xl p-6 hover:bg-green-100 transition group"
@@ -293,7 +273,7 @@ export default function NEETBiologyCoachingPage() {
                     <ArrowRight className="w-5 h-5 text-green-600 group-hover:translate-x-1 transition" />
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -302,12 +282,8 @@ export default function NEETBiologyCoachingPage() {
       {/* Online NEET Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-blue-100 px-4 py-2 rounded-full mb-4">
               <Laptop className="w-5 h-5 mr-2 text-blue-600" />
@@ -317,17 +293,13 @@ export default function NEETBiologyCoachingPage() {
               NEET Online Classes
             </h2>
             <p className="text-lg text-gray-600">Learn from anywhere with our online programs</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {onlineNeetLinks.map((link, index) => (
-              <motion.div
+              <div
                 key={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <Link
                   href={link.href}
                   className="block bg-white rounded-xl p-6 shadow hover:shadow-lg transition group"
@@ -338,7 +310,7 @@ export default function NEETBiologyCoachingPage() {
                   </h3>
                   <p className="text-sm text-gray-600 mt-1">{link.desc}</p>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -347,28 +319,20 @@ export default function NEETBiologyCoachingPage() {
       {/* NEET Tools & Resources */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Tools & Resources
             </h2>
             <p className="text-lg text-gray-600">Free tools to help your NEET preparation</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {neetToolsLinks.map((link, index) => (
-              <motion.div
+              <div
                 key={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <Link
                   href={link.href}
                   className="block bg-purple-50 rounded-xl p-6 hover:bg-purple-100 transition group"
@@ -383,7 +347,7 @@ export default function NEETBiologyCoachingPage() {
                     <ArrowRight className="w-5 h-5 text-purple-600 group-hover:translate-x-1 transition" />
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -392,28 +356,20 @@ export default function NEETBiologyCoachingPage() {
       {/* Biology Tutoring Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Biology Tutoring Options
             </h2>
             <p className="text-lg text-gray-600">Personalized biology learning</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {biologyLinks.map((link, index) => (
-              <motion.div
+              <div
                 key={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <Link
                   href={link.href}
                   className="block bg-white rounded-xl p-6 shadow hover:shadow-lg transition group"
@@ -424,7 +380,7 @@ export default function NEETBiologyCoachingPage() {
                   </h3>
                   <p className="text-sm text-gray-600 mt-1">{link.desc}</p>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -433,34 +389,26 @@ export default function NEETBiologyCoachingPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -469,12 +417,8 @@ export default function NEETBiologyCoachingPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your NEET Journey Today</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Book a free demo class and experience our teaching methodology!
@@ -503,7 +447,7 @@ export default function NEETBiologyCoachingPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

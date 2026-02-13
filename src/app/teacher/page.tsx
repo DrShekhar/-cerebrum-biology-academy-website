@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import { useAuth } from '@/contexts/AuthContext'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 import Link from 'next/link'
@@ -179,12 +178,9 @@ export default function TeacherDashboardPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-4">Overview</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {quickStats.map((stat, index) => (
-                <motion.div
+                <div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                >
+                 className="animate-fadeInUp">
                   <Link href={stat.href}>
                     <Card className="hover:shadow-lg transition-shadow cursor-pointer">
                       <CardContent className="p-6">
@@ -200,7 +196,7 @@ export default function TeacherDashboardPage() {
                       </CardContent>
                     </Card>
                   </Link>
-                </motion.div>
+                </div>
               ))}
             </div>
           </section>
@@ -367,7 +363,7 @@ function QuickActionCard({
 }) {
   return (
     <Link href={href}>
-      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+      <div className="animate-fadeInUp">
         <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
           <CardContent className="p-6">
             <div
@@ -379,7 +375,7 @@ function QuickActionCard({
             <p className="text-sm text-gray-600">{description}</p>
           </CardContent>
         </Card>
-      </motion.div>
+      </div>
     </Link>
   )
 }

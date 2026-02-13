@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
-
 export default function OfflinePage() {
   const router = useRouter()
   const [isOnline, setIsOnline] = useState(false)
@@ -40,11 +38,8 @@ export default function OfflinePage() {
   if (isOnline) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center p-4">
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+        <div
+          className="text-center animate-fadeInUp"
         >
           <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mb-6 mx-auto">
             <span className="text-3xl">✅</span>
@@ -52,27 +47,22 @@ export default function OfflinePage() {
           <h1 className="text-2xl font-bold text-gray-800 mb-4">कनेक्शन बहाल हो गया!</h1>
           <p className="text-gray-600 mb-4">Connection Restored! Redirecting...</p>
           <div className="w-8 h-8 border-3 border-green-600 border-t-transparent rounded-full animate-spin mx-auto" />
-        </motion.div>
+        </div>
       </div>
     )
   }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 to-blue-50 flex items-center justify-center p-4">
-      <motion.div
-        className="max-w-md w-full text-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+      <div
+        className="max-w-md w-full text-center animate-fadeInUp"
       >
         {/* Offline Icon */}
-        <motion.div
-          className="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center mb-8 mx-auto"
-          animate={{ scale: [1, 1.1, 1] }}
-          transition={{ duration: 2, repeat: Infinity }}
+        <div
+          className="w-24 h-24 bg-red-100 rounded-full flex items-center justify-center mb-8 mx-auto animate-fadeInUp"
         >
           <span className="text-4xl">📵</span>
-        </motion.div>
+        </div>
 
         {/* Hindi Title */}
         <h1 className="text-3xl font-bold text-gray-800 mb-4">इंटरनेट कनेक्शन नहीं है</h1>
@@ -160,7 +150,7 @@ export default function OfflinePage() {
           </div>
           <div className="mt-1">Automatically checking for connection...</div>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

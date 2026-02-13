@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Trophy,
   Users,
@@ -124,11 +123,8 @@ export default function BestBiologyTeacherClass12ICSEPage() {
       <section className="relative bg-gradient-to-br from-rose-900 via-pink-800 to-purple-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <BookOpen className="w-5 h-5 mr-2 text-yellow-300" />
@@ -195,19 +191,15 @@ export default function BestBiologyTeacherClass12ICSEPage() {
                 <div className="text-sm opacity-80">Per Batch</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Syllabus Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               ISC Class 12 Biology Syllabus
@@ -215,16 +207,12 @@ export default function BestBiologyTeacherClass12ICSEPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Complete ISC syllabus with NCERT integration. High-weightage sections highlighted.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {iscClass12Syllabus.map((section, index) => (
-              <motion.div
+              <div
                 key={section.unit}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className={`rounded-xl p-8 shadow-lg ${
                   section.highlight ? 'bg-rose-50 border-2 border-rose-200' : 'bg-white'
                 }`}
@@ -269,7 +257,7 @@ export default function BestBiologyTeacherClass12ICSEPage() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -278,96 +266,68 @@ export default function BestBiologyTeacherClass12ICSEPage() {
       {/* What You Get Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">What You Get</h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-xl p-8"
+            <div
+              className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
             >
               <Award className="w-12 h-12 text-rose-600 mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">AIIMS Trained Faculty</h3>
               <p className="text-gray-600">
                 Expert guidance from faculty with medical entrance expertise.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-xl p-8"
+            <div
+              className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
             >
               <Target className="w-12 h-12 text-rose-600 mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">ISC + NEET Dual Focus</h3>
               <p className="text-gray-600">
                 Strategic preparation for both ISC boards and NEET entrance.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-xl p-8"
+            <div
+              className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
             >
               <BookOpen className="w-12 h-12 text-rose-600 mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">NCERT Integration</h3>
               <p className="text-gray-600">
                 ISC syllabus supplemented with NCERT for competitive exams.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-xl p-8"
+            <div
+              className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
             >
               <Users className="w-12 h-12 text-rose-600 mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Small Batches</h3>
               <p className="text-gray-600">10-15 students for personalized attention.</p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-xl p-8"
+            <div
+              className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
             >
               <Star className="w-12 h-12 text-rose-600 mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">ISC Pattern Practice</h3>
               <p className="text-gray-600">
                 Extensive ISC board pattern questions and previous year papers.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-xl p-8"
+            <div
+              className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
             >
               <MessageCircle className="w-12 h-12 text-rose-600 mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">24/7 Support</h3>
               <p className="text-gray-600">WhatsApp doubt support especially during exam season.</p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -375,32 +335,24 @@ export default function BestBiologyTeacherClass12ICSEPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">FAQs</h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg"
+                className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-rose-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -409,12 +361,8 @@ export default function BestBiologyTeacherClass12ICSEPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-rose-600 via-indigo-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Excel in ISC Boards and NEET</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Expert coaching for Class 12 ISC Biology. Book your free demo today!
@@ -443,7 +391,7 @@ export default function BestBiologyTeacherClass12ICSEPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

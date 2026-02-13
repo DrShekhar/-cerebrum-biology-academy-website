@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Users,
@@ -100,11 +99,8 @@ export default function NeetOnlinePage() {
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto max-w-4xl text-center"
+          <div
+            className="mx-auto max-w-4xl text-center animate-fadeInUp"
           >
             <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <Wifi className="mr-1 inline h-4 w-4" />
@@ -129,7 +125,7 @@ export default function NeetOnlinePage() {
                 Learn More
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -143,17 +139,14 @@ export default function NeetOnlinePage() {
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Clock, value: '24/7', label: 'Access' },
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 text-center shadow-lg"
+                className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <stat.icon className="mx-auto mb-3 h-10 w-10 text-blue-600" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -162,28 +155,23 @@ export default function NeetOnlinePage() {
       {/* Benefits */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Why Study NEET Online?</h2>
             <p className="text-lg text-gray-600">The smart way to prepare for medical entrance</p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {onlineBenefits.map((benefit, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <benefit.icon className="mb-4 h-10 w-10 text-blue-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -192,30 +180,25 @@ export default function NeetOnlinePage() {
       {/* What We Offer */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">What We Offer</h2>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-4xl">
             <div className="grid gap-4 md:grid-cols-2">
               {whatWeOffer.map((item, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  className="flex items-start gap-3 rounded-lg bg-white p-4 shadow-lg"
+                  className="flex items-start gap-3 rounded-lg bg-white p-4 shadow-lg animate-fadeInUp"
                 >
                   <CheckCircle className="mt-1 h-5 w-5 flex-shrink-0 text-blue-600" />
                   <div>
                     <h4 className="font-semibold text-gray-900">{item.title}</h4>
                     <p className="text-sm text-gray-600">{item.desc}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -225,16 +208,14 @@ export default function NeetOnlinePage() {
       {/* Device Compatibility */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Study on Any Device</h2>
             <p className="text-lg text-gray-600">
               Our platform works seamlessly across all devices
             </p>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl">
             <div className="grid gap-6 md:grid-cols-3">
@@ -243,17 +224,14 @@ export default function NeetOnlinePage() {
                 { icon: Smartphone, name: 'Tablet', desc: 'Great for reading' },
                 { icon: Smartphone, name: 'Mobile', desc: 'Learn on the go' },
               ].map((device, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-xl bg-white p-6 text-center shadow-lg"
+                  className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
                 >
                   <device.icon className="mx-auto mb-4 h-12 w-12 text-blue-600" />
                   <h3 className="mb-1 text-lg font-semibold text-gray-900">{device.name}</h3>
                   <p className="text-gray-600">{device.desc}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -263,26 +241,21 @@ export default function NeetOnlinePage() {
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -326,7 +299,7 @@ export default function NeetOnlinePage() {
       {/* CTA */}
       <section className="bg-gradient-to-r from-blue-600 to-green-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">Start Your NEET Online Journey</h2>
             <p className="mb-8 text-xl text-cyan-100">
               Join thousands of successful NEET aspirants studying online!
@@ -346,7 +319,7 @@ export default function NeetOnlinePage() {
                 Call: +91 88264 44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

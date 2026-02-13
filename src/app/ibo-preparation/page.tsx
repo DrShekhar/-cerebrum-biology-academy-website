@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   Trophy,
   BookOpen,
@@ -294,11 +293,8 @@ export default function IBOPreparationPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl"
+          <div
+            className="max-w-4xl animate-fadeInUp"
           >
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Globe className="w-4 h-4" />
@@ -332,17 +328,15 @@ export default function IBOPreparationPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <button
                 onClick={handleWhatsAppEnquiry}
-                className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg shadow-green-500/25 transition-colors"
+                className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg shadow-green-500/25 transition-colors animate-fadeInUp"
               >
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                 </svg>
                 Start IBO Training
-              </motion.button>
+              </button>
               <Link
                 href="/campbell-biology/"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-medium transition-colors"
@@ -351,34 +345,27 @@ export default function IBOPreparationPage() {
                 Campbell Biology Study Guide
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* IBO Pathway */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Your Path to IBO</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               The journey from national olympiad to international gold medal
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {iboPathway.map((stage, index) => (
-              <motion.div
+              <div
                 key={stage.stage}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="relative"
+                className="relative animate-fadeInUp"
               >
                 <div className="bg-white rounded-2xl p-6 shadow-lg h-full border-2 border-transparent hover:border-yellow-400 transition-colors">
                   <div
@@ -395,7 +382,7 @@ export default function IBOPreparationPage() {
                     <ChevronRight className="w-6 h-6 text-slate-300" />
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -404,11 +391,8 @@ export default function IBOPreparationPage() {
       {/* IBO Syllabus */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               IBO Syllabus Coverage
@@ -417,16 +401,12 @@ export default function IBOPreparationPage() {
               Comprehensive preparation covering all IBO syllabus areas with Campbell Biology as the
               foundation
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {iboSyllabus.map((unit, index) => (
-              <motion.div
+              <div
                 key={unit.category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
                 className={`${unit.bgColor} rounded-2xl p-6 border border-slate-100`}
               >
                 <div className="flex items-start justify-between mb-4">
@@ -444,7 +424,7 @@ export default function IBOPreparationPage() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -453,11 +433,8 @@ export default function IBOPreparationPage() {
       {/* Features Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Choose Our IBO Coaching?
@@ -465,24 +442,20 @@ export default function IBOPreparationPage() {
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Expert training from IBO medalists with proven international success
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-2xl p-6 shadow-lg border border-slate-100 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-yellow-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
                 <p className="text-slate-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -491,26 +464,19 @@ export default function IBOPreparationPage() {
       {/* Pricing Section */}
       <section className="py-16 md:py-24 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">IBO Coaching Plans</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Flexible options for students from all countries preparing for IBO
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {pricingPlans.map((plan, index) => (
-              <motion.div
+              <div
                 key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
                 className={`relative bg-white rounded-2xl p-6 ${plan.popular ? 'ring-2 ring-yellow-400' : ''}`}
               >
                 {plan.popular && (
@@ -542,7 +508,7 @@ export default function IBOPreparationPage() {
                 >
                   {plan.cta}
                 </button>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -551,11 +517,8 @@ export default function IBOPreparationPage() {
       {/* FAQs Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Frequently Asked Questions
@@ -563,17 +526,13 @@ export default function IBOPreparationPage() {
             <p className="text-xl text-slate-600">
               Common questions about IBO and our coaching program
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="border border-slate-200 rounded-xl overflow-hidden"
+                className="border border-slate-200 rounded-xl overflow-hidden animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -589,7 +548,7 @@ export default function IBOPreparationPage() {
                     <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -598,17 +557,14 @@ export default function IBOPreparationPage() {
       {/* Country Olympiads */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
+          <div
+            className="text-center mb-8 animate-fadeInUp"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
               National Olympiad Preparation
             </h2>
             <p className="text-slate-600">First qualify through your national Biology Olympiad</p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {countryOlympiads.map((olympiad) => (
@@ -696,11 +652,8 @@ export default function IBOPreparationPage() {
       {/* Final CTA */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-400 to-yellow-500">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <Award className="w-16 h-16 text-yellow-900 mx-auto mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-yellow-900 mb-6">
               Ready to Compete at the Highest Level?
@@ -709,21 +662,19 @@ export default function IBOPreparationPage() {
               Join the elite group of students preparing for the International Biology Olympiad. Our
               expert faculty will guide you every step of the way.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <button
               onClick={handleWhatsAppEnquiry}
-              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-xl transition-colors"
+              className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-xl transition-colors animate-fadeInUp"
             >
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
               </svg>
               Start Your IBO Journey
-            </motion.button>
+            </button>
             <p className="mt-4 text-yellow-800">
               Free consultation • Personalized study plan • Expert guidance
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 

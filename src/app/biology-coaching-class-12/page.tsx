@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   GraduationCap,
@@ -138,11 +137,8 @@ export default function BiologyClass12Page() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-5 h-5 mr-2 text-yellow-300" />
@@ -194,31 +190,24 @@ export default function BiologyClass12Page() {
                 { label: 'Mock Tests', value: '50+' },
                 { label: 'Fee', value: '₹42,000' },
               ].map((item, index) => (
-                <motion.div
+                <div
                   key={item.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 animate-fadeInUp"
                 >
                   <div className="text-xl md:text-2xl font-bold text-yellow-300">{item.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{item.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Syllabus Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Class 12 NEET Biology Syllabus
@@ -226,17 +215,13 @@ export default function BiologyClass12Page() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               54% of NEET questions come from Class 12 - Master every chapter
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {class12Syllabus.map((unit, index) => (
-              <motion.div
+              <div
                 key={unit.unit}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
               >
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="font-bold text-gray-900 text-lg">{unit.unit}</h3>
@@ -253,7 +238,7 @@ export default function BiologyClass12Page() {
                   ))}
                 </ul>
                 <div className="text-sm text-green-600 font-medium">{unit.questions} in NEET</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -264,18 +249,14 @@ export default function BiologyClass12Page() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {programFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 text-center border border-green-100"
+                className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 text-center border border-green-100 animate-fadeInUp"
               >
                 <feature.icon className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -284,31 +265,23 @@ export default function BiologyClass12Page() {
       {/* FAQs */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Class 12 Biology Coaching - FAQs
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-sm"
+                className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp"
               >
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -317,12 +290,8 @@ export default function BiologyClass12Page() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-blue-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Crack NEET 2026 with Class 12 Biology Mastery
             </h2>
@@ -354,7 +323,7 @@ export default function BiologyClass12Page() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

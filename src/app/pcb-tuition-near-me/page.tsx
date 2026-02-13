@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Users,
   CheckCircle,
@@ -198,11 +197,8 @@ export default function PcbTuitionNearMePage() {
       <section className="relative bg-gradient-to-br from-orange-900 via-yellow-800 to-yellow-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-5 h-5 mr-2 text-yellow-300" />
@@ -255,19 +251,15 @@ export default function PcbTuitionNearMePage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* PCB Subjects Overview */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Complete PCB for NEET (720 Marks)
@@ -275,23 +267,19 @@ export default function PcbTuitionNearMePage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Expert coaching for all three subjects. Biology carries the highest weightage!
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {pcbSubjects.map((subject, index) => (
-              <motion.div
+              <div
                 key={subject.subject}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className={`rounded-xl p-8 border-2 ${subject.color} shadow-lg`}
               >
                 <subject.icon className={`w-16 h-16 ${subject.iconColor} mb-4`} />
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{subject.subject}</h3>
                 <div className="text-3xl font-bold mb-2">{subject.neetMarks} Marks</div>
                 <p className="text-gray-700">{subject.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -300,12 +288,8 @@ export default function PcbTuitionNearMePage() {
       {/* Locations We Serve */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               PCB Tuition Locations
@@ -313,21 +297,17 @@ export default function PcbTuitionNearMePage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Offline centers in Delhi NCR + Online classes for students everywhere
             </p>
-          </motion.div>
+          </div>
 
           <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
             {locations.map((location, index) => (
-              <motion.div
+              <div
                 key={location}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-orange-50 border border-orange-200 rounded-lg px-6 py-3 flex items-center"
+                className="bg-orange-50 border border-orange-200 rounded-lg px-6 py-3 flex items-center animate-fadeInUp"
               >
                 <MapPin className="w-5 h-5 text-orange-600 mr-2" />
                 <span className="text-gray-800 font-medium">{location}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -343,12 +323,8 @@ export default function PcbTuitionNearMePage() {
       {/* Why Our PCB Tuition */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Our PCB Tuition
@@ -356,22 +332,18 @@ export default function PcbTuitionNearMePage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Integrated preparation for all three subjects with expert faculty
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tuitionFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <feature.icon className="w-12 h-12 text-orange-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -380,17 +352,13 @@ export default function PcbTuitionNearMePage() {
       {/* What You Get */}
       <section className="py-20 bg-orange-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Complete PCB Package
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -407,17 +375,13 @@ export default function PcbTuitionNearMePage() {
               'NEET Strategy Sessions',
               'Mentorship Support',
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={item}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg p-4 shadow flex items-center"
+                className="bg-white rounded-lg p-4 shadow flex items-center animate-fadeInUp"
               >
                 <CheckCircle className="w-6 h-6 text-orange-600 mr-3 flex-shrink-0" />
                 <span className="text-gray-800 font-medium">{item}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -426,34 +390,26 @@ export default function PcbTuitionNearMePage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg"
+                className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-orange-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -463,12 +419,8 @@ export default function PcbTuitionNearMePage() {
       {isInDelhiNCR === false && (
         <section className="py-16 bg-gradient-to-br from-orange-50 to-yellow-50">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <div className="inline-flex items-center bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Wifi className="w-4 h-4 mr-2" />
@@ -481,17 +433,13 @@ export default function PcbTuitionNearMePage() {
                 Get the same expert PCB coaching from anywhere in India through our interactive
                 online platform.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {onlineRegions.map((region, index) => (
-                <motion.div
+                <div
                   key={region.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl p-6 shadow-lg border border-orange-100"
+                  className="bg-white rounded-xl p-6 shadow-lg border border-orange-100 animate-fadeInUp"
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-lg flex items-center justify-center">
@@ -519,16 +467,12 @@ export default function PcbTuitionNearMePage() {
                       </span>
                     )}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center mt-10"
+            <div
+              className="text-center mt-10 animate-fadeInUp"
             >
               <a href={getWhatsAppEnquiryUrl(PAGE_KEYWORD, 'Online')}>
                 <Button size="xl" className="bg-orange-600 hover:bg-orange-700 text-white">
@@ -536,7 +480,7 @@ export default function PcbTuitionNearMePage() {
                   Enquire About Online PCB Classes
                 </Button>
               </a>
-            </motion.div>
+            </div>
           </div>
         </section>
       )}
@@ -544,12 +488,8 @@ export default function PcbTuitionNearMePage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-600 via-yellow-600 to-yellow-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your PCB Journey Today</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Complete NEET preparation with expert coaching in Physics, Chemistry & Biology!
@@ -578,7 +518,7 @@ export default function PcbTuitionNearMePage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

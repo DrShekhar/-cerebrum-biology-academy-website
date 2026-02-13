@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Phone,
@@ -151,11 +150,8 @@ export default function NEETCoachingGTBNagar() {
           </div>
 
           <div className="max-w-6xl mx-auto relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
+            <div
+              className="text-center animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
                 <School className="w-4 h-4" />
@@ -186,31 +182,25 @@ export default function NEETCoachingGTBNagar() {
                   Call: 8826-444-334
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Why GTB Nagar Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Study in GTB Nagar?</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 The perfect blend of academics and student life
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-2xl shadow-lg"
+              <div
+                className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp"
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
@@ -226,13 +216,10 @@ export default function NEETCoachingGTBNagar() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-2xl shadow-lg"
+              <div
+                className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp"
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
@@ -269,7 +256,7 @@ export default function NEETCoachingGTBNagar() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -277,33 +264,26 @@ export default function NEETCoachingGTBNagar() {
         {/* Features Section */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 Why Choose Cerebrum in GTB Nagar?
               </h2>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+                  className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow animate-fadeInUp"
                 >
                   <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
                   <p className="text-gray-600 text-sm">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -312,28 +292,21 @@ export default function NEETCoachingGTBNagar() {
         {/* Nearby Areas */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Students from Nearby Areas</h2>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {nearbyAreas.map((area, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="bg-white p-4 rounded-lg shadow-md text-center"
+                  className="bg-white p-4 rounded-lg shadow-md text-center animate-fadeInUp"
                 >
                   <p className="font-medium text-gray-900">{area.name}</p>
                   <p className="text-sm text-green-600">{area.distance}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -342,11 +315,8 @@ export default function NEETCoachingGTBNagar() {
         {/* Testimonial */}
         <section className="py-16 px-4 bg-green-50">
           <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-white p-8 rounded-2xl shadow-lg"
+            <div
+              className="bg-white p-8 rounded-2xl shadow-lg animate-fadeInUp"
             >
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -367,34 +337,28 @@ export default function NEETCoachingGTBNagar() {
                   <p className="text-sm text-gray-500">NEET 2024 - 665/720 | LHMC Delhi</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* FAQ */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">FAQs</h2>
-            </motion.div>
+            </div>
 
             <div className="space-y-4">
               {faqStructuredData.mainEntity.map((faq, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white p-6 rounded-xl shadow-md"
+                  className="bg-white p-6 rounded-xl shadow-md animate-fadeInUp"
                 >
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{faq.name}</h3>
                   <p className="text-gray-600">{faq.acceptedAnswer.text}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -403,11 +367,8 @@ export default function NEETCoachingGTBNagar() {
         {/* CTA */}
         <section className="py-16 px-4 bg-[#4a5d4a] text-white">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey in GTB Nagar</h2>
               <p className="text-green-100 mb-8">
                 Study near DU in Delhi&apos;s best student hub. Book your FREE demo today!
@@ -444,7 +405,7 @@ export default function NEETCoachingGTBNagar() {
                   <span>8826-444-334</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

@@ -16,7 +16,6 @@ import {
   Gift,
   AlertCircle,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 export default function FeesPage() {
@@ -185,29 +184,20 @@ export default function FeesPage() {
       <section className="bg-indigo-500 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
-            <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <h1
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 animate-fadeInUp"
             >
               Fee Structure & Payment Options
-            </motion.h1>
-            <motion.p
-              className="text-base sm:text-lg md:text-xl text-purple-100 max-w-3xl mx-auto mb-6 sm:mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            </h1>
+            <p
+              className="text-base sm:text-lg md:text-xl text-purple-100 max-w-3xl mx-auto mb-6 sm:mb-8 animate-fadeInUp"
             >
               Transparent pricing with flexible payment options. No hidden charges, multiple EMI
               plans, and scholarship opportunities available.
-            </motion.p>
+            </p>
 
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp"
             >
               <Button
                 variant="outline"
@@ -225,7 +215,7 @@ export default function FeesPage() {
                 <Phone className="w-5 h-5 mr-2" />
                 Call +91 88264 44334
               </Button>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -242,14 +232,11 @@ export default function FeesPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {coursePackages.map((course, index) => (
-              <motion.div
+              <div
                 key={course.id}
                 className={`bg-white rounded-3xl shadow-lg p-8 relative cursor-pointer transition-all ${
                   course.popular ? 'ring-2 ring-purple-500 scale-105' : 'hover:shadow-xl'
                 } ${selectedPlan === course.id ? 'ring-2 ring-blue-500' : ''}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 onClick={() => setSelectedPlan(course.id)}
               >
                 {course.popular && (
@@ -299,7 +286,7 @@ export default function FeesPage() {
                 >
                   Select Course
                 </Button>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -314,11 +301,8 @@ export default function FeesPage() {
           </div>
 
           {selectedCourse && (
-            <motion.div
-              className="bg-gray-50 rounded-3xl p-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <div
+              className="bg-gray-50 rounded-3xl p-8 animate-fadeInUp"
             >
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -362,7 +346,7 @@ export default function FeesPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
         </div>
       </section>
@@ -377,12 +361,9 @@ export default function FeesPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {paymentMethods.map((method, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-white rounded-3xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-3xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div
                   className={`w-16 h-16 ${method.color} rounded-full flex items-center justify-center mx-auto mb-6`}
@@ -398,7 +379,7 @@ export default function FeesPage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -414,12 +395,9 @@ export default function FeesPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {scholarships.map((scholarship, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg p-6 text-center border-2 border-gray-100 hover:border-purple-300 transition-colors"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl shadow-lg p-6 text-center border-2 border-gray-100 hover:border-purple-300 transition-colors animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 ${scholarship.color} rounded-full flex items-center justify-center mx-auto mb-4`}
@@ -429,7 +407,7 @@ export default function FeesPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{scholarship.title}</h3>
                 <p className="text-gray-600 text-sm mb-4">{scholarship.description}</p>
                 <div className="text-xl font-bold text-purple-600">{scholarship.discount}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -451,11 +429,8 @@ export default function FeesPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">What's Included in Your Fee</h2>
               <p className="text-xl text-gray-600 mb-8">
                 Comprehensive NEET preparation with everything you need for success
@@ -463,25 +438,19 @@ export default function FeesPage() {
 
               <div className="space-y-4">
                 {includedServices.map((service, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    className="flex items-center"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-center animate-fadeInUp"
                   >
                     <CheckCircle className="w-6 h-6 text-green-600 mr-4 flex-shrink-0" />
                     <span className="text-gray-700 font-medium">{service}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="bg-blue-500 rounded-3xl p-8 text-white"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
+              className="bg-blue-500 rounded-3xl p-8 text-white animate-fadeInUp"
             >
               <h3 className="text-2xl font-bold mb-8">Value for Money</h3>
 
@@ -510,7 +479,7 @@ export default function FeesPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

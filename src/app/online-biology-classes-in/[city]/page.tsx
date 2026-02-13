@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Users,
@@ -135,11 +134,8 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-blue-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl"
+          <div
+            className="max-w-4xl animate-fadeInUp"
           >
             <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <MapPin className="h-4 w-4" />
@@ -165,7 +161,7 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
                 Call: +91 88264 44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -179,17 +175,14 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
               { icon: Video, value: '500+', label: 'Video Hours' },
               { icon: Star, value: '4.9/5', label: 'Student Rating' },
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 text-center shadow-lg"
+                className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <stat.icon className="mx-auto mb-3 h-10 w-10 text-green-600" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -198,10 +191,8 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       {/* Local Challenges */}
       <section className="bg-red-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Challenges {city.name} Students Face with Offline Coaching
@@ -209,20 +200,17 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
             <p className="text-lg text-gray-600">
               Why smart {city.name} NEET aspirants are switching to online
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             {city.localChallenges.map((challenge, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-start gap-4 rounded-xl bg-white p-6 shadow-lg"
+                className="flex items-start gap-4 rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <AlertCircle className="mt-1 h-6 w-6 flex-shrink-0 text-red-500" />
                 <p className="text-gray-700">{challenge}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -231,29 +219,24 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       {/* Why Online Solution */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Why Online Classes Work Better for {city.name}
             </h2>
             <p className="text-lg text-gray-600">The smart solution for {city.state} students</p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2">
             {city.whyOnline.map((reason, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-start gap-4 rounded-xl bg-green-50 p-6 shadow-lg"
+                className="flex items-start gap-4 rounded-xl bg-green-50 p-6 shadow-lg animate-fadeInUp"
               >
                 <CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-green-600" />
                 <p className="text-gray-700">{reason}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -262,29 +245,24 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       {/* Top Schools */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">{city.name} Schools We Serve</h2>
             <p className="text-lg text-gray-600">
               Students from these top {city.name} schools trust us
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-4 md:grid-cols-3">
             {city.topSchools.map((school, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
-                className="flex items-center gap-3 rounded-xl bg-white p-4 shadow-lg"
+                className="flex items-center gap-3 rounded-xl bg-white p-4 shadow-lg animate-fadeInUp"
               >
                 <GraduationCap className="h-6 w-6 text-green-600" />
                 <span className="font-medium text-gray-800">{school}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -293,30 +271,25 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       {/* Online Features */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">What {city.name} Students Get</h2>
             <p className="text-lg text-gray-600">
               Complete online learning ecosystem for NEET success
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {onlineFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <feature.icon className="mb-4 h-10 w-10 text-green-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -325,26 +298,21 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       {/* FAQs */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">FAQs for {city.name} Students</h2>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -375,7 +343,7 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
       {/* CTA */}
       <section className="bg-gradient-to-r from-green-600 to-blue-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">
               Join {city.studentCount} {city.name} Students Learning Online
             </h2>
@@ -398,7 +366,7 @@ export default function CityOnlineBiologyPage({ params }: { params: Promise<{ ci
                 Call: +91 88264 44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

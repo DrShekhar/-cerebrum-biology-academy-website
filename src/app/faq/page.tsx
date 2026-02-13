@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronDown,
   Search,
@@ -444,30 +443,21 @@ export default function FAQPage() {
                           aria-expanded={isOpen}
                         >
                           <span className="font-medium text-gray-900 pr-4">{faq.question}</span>
-                          <motion.div
-                            animate={{ rotate: isOpen ? 180 : 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="flex-shrink-0"
+                          <div
+                            className="flex-shrink-0 animate-fadeInUp"
                           >
                             <ChevronDown className="w-5 h-5 text-gray-500" />
-                          </motion.div>
+                          </div>
                         </button>
-
-                        <AnimatePresence>
-                          {isOpen && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: 'auto', opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.3, ease: 'easeInOut' }}
-                            >
+{isOpen && (
+                            <div
+                             className="animate-fadeInUp">
                               <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
                                 {faq.answer}
                               </div>
-                            </motion.div>
+                            </div>
                           )}
-                        </AnimatePresence>
-                      </div>
+</div>
                     )
                   })}
                 </div>

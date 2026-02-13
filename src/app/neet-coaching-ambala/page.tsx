@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   MapPin,
   Users,
@@ -203,11 +202,8 @@ export default function NEETCoachingAmbala() {
 
           <div className="mx-auto max-w-7xl">
             <div className="grid items-center gap-12 lg:grid-cols-2">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-2 text-amber-800">
                   <MapPin className="h-4 w-4" />
                   <span className="text-sm font-medium">
@@ -258,13 +254,10 @@ export default function NEETCoachingAmbala() {
                     <span>4.9/5 from 250+ Ambala students</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative"
+              <div
+                className="relative animate-fadeInUp"
               >
                 <div className="rounded-2xl bg-white p-8 shadow-xl">
                   <h3 className="mb-6 text-center text-xl font-bold text-gray-900">
@@ -284,7 +277,7 @@ export default function NEETCoachingAmbala() {
                     <p className="text-sm opacity-90">Only 15 seats per batch - Enroll Now</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -292,11 +285,8 @@ export default function NEETCoachingAmbala() {
         {/* Why Ambala Students Choose Online */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Ambala Students Are Choosing Online NEET Coaching
@@ -304,23 +294,19 @@ export default function NEETCoachingAmbala() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 The traditional path of going to Chandigarh for coaching has these challenges
               </p>
-            </motion.div>
+            </div>
 
             <div className="mb-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {whyOnlineForAmbala.map((item, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-start gap-4 rounded-xl border border-red-100 bg-red-50 p-4"
+                  className="flex items-start gap-4 rounded-xl border border-red-100 bg-red-50 p-4 animate-fadeInUp"
                 >
                   <div className="rounded-lg bg-red-100 p-2">
                     <item.icon className="h-5 w-5 text-red-600" />
                   </div>
                   <p className="font-medium text-red-800">{item.problem}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -345,11 +331,8 @@ export default function NEETCoachingAmbala() {
         {/* Ambala Areas We Serve */}
         <section className="bg-amber-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 NEET Coaching for All Ambala Areas
@@ -357,16 +340,12 @@ export default function NEETCoachingAmbala() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Online classes for students across Ambala district - Cantonment, City, and beyond
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {ambalaAreas.map((area, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
                   className={`rounded-xl border-2 bg-white p-4 ${
                     area.priority === 'high'
                       ? 'border-amber-300 shadow-lg'
@@ -388,7 +367,7 @@ export default function NEETCoachingAmbala() {
                     <Users className="h-4 w-4" />
                     {area.students} students enrolled
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -397,11 +376,8 @@ export default function NEETCoachingAmbala() {
         {/* Features */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Why Cerebrum is Best for Ambala Students
@@ -409,24 +385,20 @@ export default function NEETCoachingAmbala() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Features designed specifically for NEET aspirants from Haryana
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {features.map((feature, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-xl border border-gray-100 bg-white p-6 shadow-lg transition-shadow hover:shadow-xl"
+                  className="rounded-xl border border-gray-100 bg-white p-6 shadow-lg transition-shadow hover:shadow-xl animate-fadeInUp"
                 >
                   <div className="mb-4 inline-flex rounded-lg bg-amber-100 p-3">
                     <feature.icon className="h-6 w-6 text-amber-600" />
                   </div>
                   <h3 className="mb-2 text-xl font-bold text-gray-900">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -435,11 +407,8 @@ export default function NEETCoachingAmbala() {
         {/* Schools Section */}
         <section className="bg-amber-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Trusted by Students from Top Ambala Schools
@@ -447,21 +416,17 @@ export default function NEETCoachingAmbala() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Students from these premier Ambala schools are preparing for NEET with us
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {ambalaSchools.map((school, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-sm"
+                  className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-sm animate-fadeInUp"
                 >
                   <School className="h-5 w-5 text-amber-600" />
                   <span className="font-medium text-gray-800">{school}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -470,11 +435,8 @@ export default function NEETCoachingAmbala() {
         {/* Medical Colleges */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Target Medical Colleges for Ambala Students
@@ -482,7 +444,7 @@ export default function NEETCoachingAmbala() {
               <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 Haryana quota gives Ambala students access to these government medical colleges
               </p>
-            </motion.div>
+            </div>
 
             <div className="overflow-hidden rounded-xl border border-gray-200">
               <table className="w-full">
@@ -527,16 +489,13 @@ export default function NEETCoachingAmbala() {
         {/* Cost Comparison */}
         <section className="bg-amber-50 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 Cost Comparison: Chandigarh vs Online for Ambala Students
               </h2>
-            </motion.div>
+            </div>
 
             <div className="grid gap-8 md:grid-cols-2">
               <div className="rounded-xl border-2 border-red-200 bg-white p-6">
@@ -610,11 +569,8 @@ export default function NEETCoachingAmbala() {
         {/* FAQs */}
         <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
                 FAQs: NEET Coaching in Ambala
@@ -622,17 +578,13 @@ export default function NEETCoachingAmbala() {
               <p className="text-lg text-gray-600">
                 Common questions from Ambala students and parents
               </p>
-            </motion.div>
+            </div>
 
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="rounded-xl border border-gray-200 bg-white"
+                  className="rounded-xl border border-gray-200 bg-white animate-fadeInUp"
                 >
                   <details className="group">
                     <summary className="flex cursor-pointer items-center justify-between p-6 font-semibold text-gray-900">
@@ -643,7 +595,7 @@ export default function NEETCoachingAmbala() {
                     </summary>
                     <div className="px-6 pb-6 text-gray-600">{faq.answer}</div>
                   </details>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -652,11 +604,8 @@ export default function NEETCoachingAmbala() {
         {/* Final CTA */}
         <section className="bg-gradient-to-r from-amber-600 to-orange-600 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
                 Ready to Start Your NEET Journey from Ambala?
               </h2>
@@ -686,7 +635,7 @@ export default function NEETCoachingAmbala() {
               <p className="mt-6 text-sm text-amber-200">
                 Free counseling session • No obligation • Get personalized study plan
               </p>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

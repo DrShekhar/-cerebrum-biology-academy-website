@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   GraduationCap,
@@ -80,11 +79,8 @@ export default function BestBotanyTeacherForNeetPage() {
       <section className="relative overflow-hidden bg-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto max-w-4xl text-center"
+          <div
+            className="mx-auto max-w-4xl text-center animate-fadeInUp"
           >
             <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <Trophy className="mr-1 inline h-4 w-4" />
@@ -111,37 +107,32 @@ export default function BestBotanyTeacherForNeetPage() {
                 Contact Us
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Results Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Proven NEET Results</h2>
             <p className="text-lg text-gray-600">Our students consistently excel in NEET Biology</p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-3">
             {achievements.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 text-center shadow-lg"
+                className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <div className="mb-2 text-4xl font-bold text-green-600">{item.year}</div>
                 <div className="mb-1 text-2xl font-semibold text-gray-900">
                   {item.students} Selected
                 </div>
                 <div className="text-gray-600">{item.toppers}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -157,17 +148,14 @@ export default function BestBotanyTeacherForNeetPage() {
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Clock, value: '15+', label: 'Years Teaching NEET' },
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 text-center shadow-lg"
+                className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <stat.icon className="mx-auto mb-3 h-10 w-10 text-green-600" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -176,26 +164,21 @@ export default function BestBotanyTeacherForNeetPage() {
       {/* NEET Botany Breakdown */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">NEET Botany Topic Weightage</h2>
             <p className="text-lg text-gray-600">
               Our expert teaching focuses on high-scoring botany topics
             </p>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-4xl">
             <div className="rounded-xl bg-white p-6 shadow-lg">
               {botanyTopics.map((topic, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="mb-4 last:mb-0"
+                  className="mb-4 last:mb-0 animate-fadeInUp"
                 >
                   <div className="mb-2 flex justify-between">
                     <span className="font-medium text-gray-900">{topic.name}</span>
@@ -204,14 +187,11 @@ export default function BestBotanyTeacherForNeetPage() {
                     </span>
                   </div>
                   <div className="h-3 overflow-hidden rounded-full bg-gray-200">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: topic.percentage }}
-                      transition={{ duration: 1, delay: index * 0.1 }}
+                    <div
                       className={`h-full ${topic.color} rounded-full`}
                     />
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -221,15 +201,13 @@ export default function BestBotanyTeacherForNeetPage() {
       {/* Why Best */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Why We&apos;re the Best for NEET Botany
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
@@ -264,17 +242,14 @@ export default function BestBotanyTeacherForNeetPage() {
                 desc: '10+ years of previous year question analysis for pattern recognition.',
               },
             ].map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <feature.icon className="mb-4 h-10 w-10 text-green-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -283,26 +258,21 @@ export default function BestBotanyTeacherForNeetPage() {
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -346,7 +316,7 @@ export default function BestBotanyTeacherForNeetPage() {
       {/* CTA */}
       <section className="bg-green-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">Learn from the Best Botany Teacher</h2>
             <p className="mb-8 text-xl text-green-100">
               Join 1,50,000+ students who achieved NEET success with our expert botany teaching
@@ -366,7 +336,7 @@ export default function BestBotanyTeacherForNeetPage() {
                 Call: +91 88264 44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

@@ -16,8 +16,6 @@ import {
   Upload,
   CreditCard,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
-
 export default function AdmissionPage() {
   const [selectedCourse, setSelectedCourse] = useState('')
   const [currentStep, setCurrentStep] = useState(1)
@@ -172,11 +170,8 @@ export default function AdmissionPage() {
       {/* Hero Section */}
       <section className="bg-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center animate-fadeInUp"
           >
             <div className="inline-flex items-center space-x-2 bg-green-400 text-green-900 px-4 py-2 rounded-full font-semibold mb-6">
               <CheckCircle className="w-5 h-5" />
@@ -204,24 +199,21 @@ export default function AdmissionPage() {
                 <div className="text-blue-200">Success Rate</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Admission Process */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Admission Process</h2>
             <p className="text-xl text-gray-600">
               Simple 5-step process to secure your seat at Cerebrum Biology Academy
             </p>
-          </motion.div>
+          </div>
 
           <div className="relative">
             {/* Progress Line */}
@@ -229,12 +221,9 @@ export default function AdmissionPage() {
 
             <div className="grid lg:grid-cols-5 gap-8">
               {admissionSteps.map((step, index) => (
-                <motion.div
+                <div
                   key={step.step}
-                  className="text-center relative"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center relative animate-fadeInUp"
                 >
                   <div className="relative z-10 bg-white">
                     <div
@@ -249,7 +238,7 @@ export default function AdmissionPage() {
                     <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
                     <p className="text-gray-600 text-sm">{step.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -259,30 +248,24 @@ export default function AdmissionPage() {
       {/* Course Selection */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Choose Your Course</h2>
             <p className="text-xl text-gray-600">
               Select the course that best fits your current academic level and goals
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {courses.map((course, index) => (
-              <motion.div
+              <div
                 key={course.id}
                 className={`bg-white rounded-2xl p-6 border-2 transition-all duration-300 cursor-pointer ${
                   selectedCourse === course.id
                     ? 'border-blue-600 shadow-lg'
                     : 'border-gray-200 hover:border-blue-300'
                 }`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
                 onClick={() => setSelectedCourse(course.id)}
               >
                 <div className="text-center mb-4">
@@ -301,7 +284,7 @@ export default function AdmissionPage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -310,26 +293,20 @@ export default function AdmissionPage() {
       {/* Eligibility Criteria */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Eligibility Criteria</h2>
             <p className="text-xl text-gray-600">
               Check if you meet the requirements for your preferred course
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {eligibilityCriteria.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-gray-50 rounded-2xl p-6 border border-blue-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-50 rounded-2xl p-6 border border-blue-100 animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{item.course}</h3>
                 <div className="space-y-3">
@@ -340,7 +317,7 @@ export default function AdmissionPage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -349,23 +326,17 @@ export default function AdmissionPage() {
       {/* Required Documents */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Required Documents</h2>
             <p className="text-xl text-gray-600">
               Prepare these documents for a smooth admission process
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="bg-white rounded-2xl shadow-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="bg-white rounded-2xl shadow-lg p-8 animate-fadeInUp"
           >
             <div className="space-y-4">
               {requiredDocuments.map((doc, index) => (
@@ -393,33 +364,27 @@ export default function AdmissionPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Admission Timeline */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Admission Timeline</h2>
             <p className="text-xl text-gray-600">
               Apply early to avail maximum discounts and secure your preferred batch
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {admissionTimeline.map((phase, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 border border-green-100 text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-6 border border-green-100 text-center animate-fadeInUp"
               >
                 <Calendar className="w-12 h-12 text-green-600 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{phase.phase}</h3>
@@ -435,7 +400,7 @@ export default function AdmissionPage() {
                 >
                   {phase.discount}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -444,11 +409,8 @@ export default function AdmissionPage() {
       {/* Application Form CTA */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-4xl font-bold mb-4">Ready to Apply?</h2>
             <p className="text-xl text-blue-100 mb-8">
               Start your application process now and take the first step towards your medical career
@@ -464,7 +426,7 @@ export default function AdmissionPage() {
                 <span>Download Brochure</span>
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

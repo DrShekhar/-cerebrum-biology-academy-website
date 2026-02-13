@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { BookOpen, Download, FileText, Video, Search, Star, Users, Zap, Eye } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
@@ -113,10 +112,8 @@ export default function StudyMaterialsPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center"
+          <div
+            className="text-center animate-fadeInUp"
           >
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
               Study Materials
@@ -139,7 +136,7 @@ export default function StudyMaterialsPage() {
                 Watch Study Guide
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -211,12 +208,9 @@ export default function StudyMaterialsPage() {
           {/* Materials Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-12 md:mb-16">
             {studyMaterials.map((material, index) => (
-              <motion.div
+              <div
                 key={material.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300"
+                className="bg-white rounded-xl sm:rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 animate-fadeInUp"
               >
                 <div className="h-40 sm:h-48 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
                   <FileText className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 text-primary-600 flex-shrink-0" />
@@ -276,16 +270,14 @@ export default function StudyMaterialsPage() {
                     </Button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Call to Action */}
           <div className="text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8 max-w-4xl mx-auto"
+            <div
+              className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8 max-w-4xl mx-auto animate-fadeInUp"
             >
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Need More Personalized Study Materials?
@@ -304,7 +296,7 @@ export default function StudyMaterialsPage() {
                   Book Free Demo
                 </Button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

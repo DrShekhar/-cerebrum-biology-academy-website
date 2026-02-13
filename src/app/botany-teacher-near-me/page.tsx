@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   GraduationCap,
@@ -108,11 +107,8 @@ export default function BotanyTeacherNearMePage() {
       <section className="relative overflow-hidden bg-gradient-to-r from-lime-600 to-green-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto max-w-4xl text-center"
+          <div
+            className="mx-auto max-w-4xl text-center animate-fadeInUp"
           >
             <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <MapPin className="mr-1 inline h-4 w-4" />4 Centers in Delhi NCR + Pan-India Online
@@ -139,33 +135,28 @@ export default function BotanyTeacherNearMePage() {
                 Find Nearest Center
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Offline Centers */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Our Offline Centers</h2>
             <p className="text-lg text-gray-600">
               Expert botany teachers at 4 convenient locations in Delhi NCR
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {offlineCenters.map((center, index) => {
               const style = centerStyles[index % centerStyles.length]
               return (
-                <motion.div
+                <div
                   key={center.locationId}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
                   className={`rounded-xl border ${style.borderColor} ${style.bgColor} p-6 shadow-lg`}
                 >
                   <Building2 className={`mb-4 h-10 w-10 ${style.iconColor}`} />
@@ -190,7 +181,7 @@ export default function BotanyTeacherNearMePage() {
                       Call
                     </a>
                   </div>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -201,10 +192,8 @@ export default function BotanyTeacherNearMePage() {
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="rounded-2xl bg-gradient-to-r from-lime-600 to-green-600 p-8 text-white md:p-12"
+            <div
+              className="rounded-2xl bg-gradient-to-r from-lime-600 to-green-600 p-8 text-white md:p-12 animate-fadeInUp"
             >
               <div className="flex flex-col items-center gap-8 md:flex-row">
                 <div className="flex-1">
@@ -238,7 +227,7 @@ export default function BotanyTeacherNearMePage() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -247,10 +236,8 @@ export default function BotanyTeacherNearMePage() {
       {isInDelhiNCR === false && (
         <section className="py-12">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="mb-8 text-center"
+            <div
+              className="mb-8 text-center animate-fadeInUp"
             >
               <h2 className="mb-3 text-2xl font-bold text-gray-900">
                 Botany Classes Available in Your Region
@@ -258,21 +245,18 @@ export default function BotanyTeacherNearMePage() {
               <p className="text-gray-600">
                 Join students from across India in our online botany coaching program
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-5">
               {onlineRegions.map((region, index) => (
-                <motion.div
+                <div
                   key={region.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-lg border border-lime-200 bg-lime-50 p-4 text-center"
+                  className="rounded-lg border border-lime-200 bg-lime-50 p-4 text-center animate-fadeInUp"
                 >
                   <Wifi className="mx-auto mb-2 h-6 w-6 text-lime-600" />
                   <h3 className="font-semibold text-gray-900">{region.name}</h3>
                   <p className="text-xs text-gray-500">{region.states.slice(0, 3).join(', ')}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -301,17 +285,14 @@ export default function BotanyTeacherNearMePage() {
               { icon: Star, value: '4', label: 'Centers in NCR' },
               { icon: Clock, value: '15+', label: 'Years Experience' },
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 text-center shadow-lg"
+                className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <stat.icon className="mx-auto mb-3 h-10 w-10 text-lime-600" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -320,15 +301,13 @@ export default function BotanyTeacherNearMePage() {
       {/* Why Choose */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Why Choose Our Botany Coaching
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {[
@@ -363,17 +342,14 @@ export default function BotanyTeacherNearMePage() {
                 desc: 'Personalized attention with limited students per batch.',
               },
             ].map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <feature.icon className="mb-4 h-10 w-10 text-lime-600" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -382,26 +358,21 @@ export default function BotanyTeacherNearMePage() {
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -445,7 +416,7 @@ export default function BotanyTeacherNearMePage() {
       {/* CTA */}
       <section className="bg-gradient-to-r from-lime-600 to-green-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">Find Botany Coaching Near You</h2>
             <p className="mb-8 text-xl text-lime-100">
               Visit our nearest center or join online - expert botany teaching awaits!
@@ -465,7 +436,7 @@ export default function BotanyTeacherNearMePage() {
                 Call: +91 88264 44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

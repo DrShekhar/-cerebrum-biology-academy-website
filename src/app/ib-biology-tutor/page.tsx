@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   CheckCircle,
@@ -130,41 +129,36 @@ export default function IBBiologyTutorPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-green-800/20 to-transparent"></div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
+            <div
               initial="hidden"
               animate="visible"
-              variants={staggerContainer}
-              className="text-center"
+              className="text-center animate-fadeInUp"
             >
-              <motion.div
-                variants={fadeInUp}
-                className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white mb-6"
+              <div
+                className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-white mb-6 animate-fadeInUp"
               >
                 <Award className="w-5 h-5" />
                 <span className="text-sm font-semibold">IB Certified Methods</span>
-              </motion.div>
+              </div>
 
-              <motion.h1
-                variants={fadeInUp}
-                className="text-4xl md:text-6xl font-bold text-white mb-6"
+              <h1
+                className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fadeInUp"
               >
                 IB Biology Tutor
                 <br />
                 <span className="text-green-100">HL & SL Expert Tutoring</span>
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                variants={fadeInUp}
-                className="text-xl text-green-50 mb-8 max-w-3xl mx-auto"
+              <p
+                className="text-xl text-green-50 mb-8 max-w-3xl mx-auto animate-fadeInUp"
               >
                 Master the IB Diploma Programme Biology with personalized tutoring from experienced
                 educators. Specialized support for both Higher Level and Standard Level students.
-              </motion.p>
+              </p>
 
               {/* Stats */}
-              <motion.div
-                variants={fadeInUp}
-                className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12"
+              <div
+                className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12 animate-fadeInUp"
               >
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
                   <div className="text-4xl font-bold text-white mb-2">250+</div>
@@ -178,12 +172,11 @@ export default function IBBiologyTutorPage() {
                   <div className="text-4xl font-bold text-white mb-2">100%</div>
                   <div className="text-green-50">IB Certified Methods</div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* CTAs */}
-              <motion.div
-                variants={fadeInUp}
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              <div
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fadeInUp"
               >
                 <Link
                   href="/book-demo"
@@ -205,37 +198,33 @@ export default function IBBiologyTutorPage() {
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp: +91 88264 44334
                 </button>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* HL vs SL Comparison Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="text-center mb-16"
+              className="text-center mb-16 animate-fadeInUp"
             >
-              <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
                 IB Biology: HL vs SL
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-xl text-gray-600 max-w-3xl mx-auto">
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeInUp">
                 Understanding the differences between Higher Level and Standard Level Biology
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Standard Level */}
-              <motion.div
+              <div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
-                variants={scaleIn}
-                className="bg-white rounded-3xl p-8 shadow-xl border-2 border-green-200"
+                className="bg-white rounded-3xl p-8 shadow-xl border-2 border-green-200 animate-fadeInUp"
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="bg-green-100 p-3 rounded-xl">
@@ -288,15 +277,13 @@ export default function IBBiologyTutorPage() {
                     </ul>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Higher Level */}
-              <motion.div
+              <div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true }}
-                variants={scaleIn}
-                className="bg-[#4a5d4a] rounded-3xl p-8 shadow-xl border-2 border-green-500 relative overflow-hidden"
+                className="bg-[#4a5d4a] rounded-3xl p-8 shadow-xl border-2 border-green-500 relative overflow-hidden animate-fadeInUp"
               >
                 <div className="absolute top-4 right-4 bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold">
                   RECOMMENDED
@@ -357,7 +344,7 @@ export default function IBBiologyTutorPage() {
                     </ul>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -365,27 +352,23 @@ export default function IBBiologyTutorPage() {
         {/* Core Topics Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="text-center mb-16"
+              className="text-center mb-16 animate-fadeInUp"
             >
-              <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
                 Core Topics Coverage
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-xl text-gray-600 max-w-3xl mx-auto">
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeInUp">
                 Comprehensive tutoring for all IB Biology core topics (Both HL & SL)
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
 
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeInUp"
             >
               {[
                 {
@@ -430,10 +413,9 @@ export default function IBBiologyTutorPage() {
                   color: 'bg-green-700',
                 },
               ].map((topic, index) => (
-                <motion.div
+                <div
                   key={index}
-                  variants={fadeInUp}
-                  className="group bg-gradient-to-br from-white to-green-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100 hover:border-green-400"
+                  className="group bg-gradient-to-br from-white to-green-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100 hover:border-green-400 animate-fadeInUp"
                 >
                   <div
                     className={`bg-gradient-to-br ${topic.color} w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
@@ -442,43 +424,38 @@ export default function IBBiologyTutorPage() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{topic.title}</h3>
                   <p className="text-gray-600">{topic.description}</p>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Additional HL Topics Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-50">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="text-center mb-16"
+              className="text-center mb-16 animate-fadeInUp"
             >
-              <motion.div
-                variants={fadeInUp}
-                className="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4"
+              <div
+                className="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 animate-fadeInUp"
               >
                 <Star className="w-4 h-4" />
                 HIGHER LEVEL ONLY
-              </motion.div>
-              <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-gray-900 mb-4">
+              </div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
                 Additional HL Topics
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-xl text-gray-600 max-w-3xl mx-auto">
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeInUp">
                 Advanced content exclusively for Higher Level students
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
 
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fadeInUp"
             >
               {[
                 {
@@ -528,10 +505,9 @@ export default function IBBiologyTutorPage() {
                   icon: Brain,
                 },
               ].map((topic, index) => (
-                <motion.div
+                <div
                   key={index}
-                  variants={fadeInUp}
-                  className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-200 hover:border-green-500 transition-all duration-300"
+                  className="bg-white rounded-2xl p-6 shadow-lg border-2 border-green-200 hover:border-green-500 transition-all duration-300 animate-fadeInUp"
                 >
                   <div className="flex items-start gap-4">
                     <div className="bg-[#4a5d4a] w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -549,36 +525,32 @@ export default function IBBiologyTutorPage() {
                       </ul>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Assessment Components Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="text-center mb-16"
+              className="text-center mb-16 animate-fadeInUp"
             >
-              <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
                 Assessment Components
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-xl text-gray-600 max-w-3xl mx-auto">
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeInUp">
                 Master every component of the IB Biology assessment with expert guidance
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
 
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp"
             >
               {[
                 {
@@ -618,10 +590,9 @@ export default function IBBiologyTutorPage() {
                   icon: Microscope,
                 },
               ].map((paper, index) => (
-                <motion.div
+                <div
                   key={index}
-                  variants={scaleIn}
-                  className="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200 hover:border-green-500 transition-all duration-300"
+                  className="bg-green-50 rounded-2xl p-6 shadow-lg border-2 border-green-200 hover:border-green-500 transition-all duration-300 animate-fadeInUp"
                 >
                   <div className="bg-[#4a5d4a] w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                     <paper.icon className="w-6 h-6 text-white" />
@@ -638,29 +609,27 @@ export default function IBBiologyTutorPage() {
                     <p className="text-green-700 font-semibold">{paper.weight}</p>
                   </div>
                   <p className="text-gray-600 text-sm">{paper.description}</p>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* IA Support Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#4a5d4a]">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="text-center mb-16"
+              className="text-center mb-16 animate-fadeInUp"
             >
-              <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-white mb-4">
+              <h2 className="text-4xl font-bold text-white mb-4 animate-fadeInUp">
                 Internal Assessment (IA) Support
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-xl text-green-50 max-w-3xl mx-auto">
+              </h2>
+              <p className="text-xl text-green-50 max-w-3xl mx-auto animate-fadeInUp">
                 Comprehensive guidance to maximize your IA score (20% of final grade)
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
@@ -689,13 +658,11 @@ export default function IBBiologyTutorPage() {
                   features: ['Criteria alignment', 'Academic writing', 'Citation guidance'],
                 },
               ].map((item, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={fadeInUp}
-                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 animate-fadeInUp"
                 >
                   <div className="bg-white/20 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                     <item.icon className="w-6 h-6 text-white" />
@@ -710,7 +677,7 @@ export default function IBBiologyTutorPage() {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -719,27 +686,23 @@ export default function IBBiologyTutorPage() {
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="text-center mb-16"
+              className="text-center mb-16 animate-fadeInUp"
             >
-              <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
                 Why Choose Our IB Biology Tutoring
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-xl text-gray-600 max-w-3xl mx-auto">
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeInUp">
                 Comprehensive support beyond the curriculum
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
 
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fadeInUp"
             >
               {[
                 {
@@ -779,46 +742,41 @@ export default function IBBiologyTutorPage() {
                     'Extensive practice with real IB past papers and examiner-style questions.',
                 },
               ].map((feature, index) => (
-                <motion.div
+                <div
                   key={index}
-                  variants={fadeInUp}
-                  className="bg-green-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100"
+                  className="bg-green-50 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-green-100 animate-fadeInUp"
                 >
                   <div className="bg-[#4a5d4a] w-14 h-14 rounded-xl flex items-center justify-center mb-4">
                     <feature.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* FAQ Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-green-50">
           <div className="max-w-4xl mx-auto">
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="text-center mb-16"
+              className="text-center mb-16 animate-fadeInUp"
             >
-              <motion.h2 variants={fadeInUp} className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp">
                 Frequently Asked Questions
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-xl text-gray-600">
+              </h2>
+              <p className="text-xl text-gray-600 animate-fadeInUp">
                 Everything you need to know about our IB Biology tutoring
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
 
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-              className="space-y-4"
+              className="space-y-4 animate-fadeInUp"
             >
               {[
                 {
@@ -862,41 +820,36 @@ export default function IBBiologyTutorPage() {
                     'Beyond IB exam preparation, we help students develop the scientific thinking and practical skills needed for Biology programs at top universities. This includes guidance on personal statements, interview preparation, and understanding university-level Biology requirements in the UK, US, and other countries.',
                 },
               ].map((faq, index) => (
-                <motion.div
+                <div
                   key={index}
-                  variants={fadeInUp}
-                  className="bg-white rounded-2xl p-6 shadow-lg border border-green-100"
+                  className="bg-white rounded-2xl p-6 shadow-lg border border-green-100 animate-fadeInUp"
                 >
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                   <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#4a5d4a]">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
+            <div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
-              variants={staggerContainer}
-            >
-              <motion.h2
-                variants={fadeInUp}
-                className="text-4xl md:text-5xl font-bold text-white mb-6"
+             className="animate-fadeInUp">
+              <h2
+                className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fadeInUp"
               >
                 Ready to Excel in IB Biology?
-              </motion.h2>
-              <motion.p variants={fadeInUp} className="text-xl text-green-50 mb-8">
+              </h2>
+              <p className="text-xl text-green-50 mb-8 animate-fadeInUp">
                 Join 250+ successful IB Biology students. Book your free demo class today!
-              </motion.p>
+              </p>
 
-              <motion.div
-                variants={fadeInUp}
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
+              <div
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fadeInUp"
               >
                 <Link
                   href="/book-demo"
@@ -918,11 +871,10 @@ export default function IBBiologyTutorPage() {
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp: +91 88264 44334
                 </button>
-              </motion.div>
+              </div>
 
-              <motion.div
-                variants={fadeInUp}
-                className="flex items-center justify-center gap-6 text-green-50"
+              <div
+                className="flex items-center justify-center gap-6 text-green-50 animate-fadeInUp"
               >
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" />
@@ -936,8 +888,8 @@ export default function IBBiologyTutorPage() {
                   <CheckCircle className="w-5 h-5" />
                   <span>95% score 6-7</span>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </section>
       </div>

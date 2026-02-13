@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Target,
@@ -139,11 +138,8 @@ export default function Class11Page() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
                 <BookOpen className="w-5 h-5 mr-2" />
                 Class 11 Biology Program
@@ -182,26 +178,20 @@ export default function Class11Page() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {successMetrics.map((metric, index) => (
-                  <motion.div
+                  <div
                     key={metric.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center"
+                    className="text-center animate-fadeInUp"
                   >
                     <metric.icon className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
                     <div className="text-lg font-bold">{metric.label}</div>
                     <div className="text-xs opacity-80">{metric.sublabel}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+            <div
+              className="relative animate-fadeInUp"
             >
               {/* Success Stories Highlight */}
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
@@ -255,7 +245,7 @@ export default function Class11Page() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -263,12 +253,8 @@ export default function Class11Page() {
       {/* Why Choose Class 11 at Cerebrum */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Why Start Your Journey with Class 11 at Cerebrum?
@@ -277,17 +263,13 @@ export default function Class11Page() {
               Class 11 is the foundation year that determines your success in Class 12 and NEET. Get
               ahead with our proven methodology and expert guidance.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {learningFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}
@@ -296,7 +278,7 @@ export default function Class11Page() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -305,12 +287,8 @@ export default function Class11Page() {
       {/* Complete Curriculum Coverage */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Complete Class 11 Biology Curriculum
@@ -319,17 +297,13 @@ export default function Class11Page() {
               Comprehensive coverage of NCERT syllabus with additional concept building and
               NEET-oriented problem solving for complete mastery.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {class11Curriculum.map((unit, index) => (
-              <motion.div
+              <div
                 key={unit.unit}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-6 border border-blue-100"
+                className="bg-gray-50 rounded-xl p-6 border border-blue-100 animate-fadeInUp"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex items-start lg:items-center mb-4 lg:mb-0">
@@ -376,16 +350,12 @@ export default function Class11Page() {
                     </Button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mt-12 animate-fadeInUp"
           >
             <div className="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -405,19 +375,15 @@ export default function Class11Page() {
                 Start Your Foundation Journey
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Learning Methodology */}
       <section className="py-20 bg-green-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Dr. Shekhar's Proven Teaching Methodology for Class 11
@@ -426,7 +392,7 @@ export default function Class11Page() {
               A systematic approach that makes complex Biology concepts simple and memorable for
               Class 11 students.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
             {[
@@ -455,13 +421,9 @@ export default function Class11Page() {
                 color: 'bg-[#4a5d4a]',
               },
             ].map((method, index) => (
-              <motion.div
+              <div
                 key={method.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="relative"
+                className="relative animate-fadeInUp"
               >
                 <div className="bg-white rounded-xl shadow-lg p-8 h-full">
                   <div
@@ -480,7 +442,7 @@ export default function Class11Page() {
                 {index < 2 && (
                   <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-gray-300 to-gray-400 transform -translate-y-1/2" />
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -495,12 +457,8 @@ export default function Class11Page() {
       {/* Final CTA */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Build Your Biology Foundation?
             </h2>
@@ -545,7 +503,7 @@ export default function Class11Page() {
                 <span>89.2% Above 85% in Boards</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

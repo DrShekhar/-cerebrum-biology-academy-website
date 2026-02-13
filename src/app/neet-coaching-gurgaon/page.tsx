@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Phone,
@@ -252,11 +251,8 @@ export default function NEETCoachingGurgaonPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-4xl mx-auto"
+            <div
+              className="text-center max-w-4xl mx-auto animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
                 <MapPin className="w-5 h-5" />
@@ -288,18 +284,15 @@ export default function NEETCoachingGurgaonPage() {
                   Book Free Demo Class
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Why Gurgaon Students Choose Us */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Why Gurgaon Students Choose Cerebrum Biology Academy
@@ -308,24 +301,20 @@ export default function NEETCoachingGurgaonPage() {
                 Convenient metro connectivity and weekend batches make it easy for Gurgaon students
                 to access quality NEET coaching.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
-                <motion.div
+                <div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
                 >
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-800 mb-2">{feature.title}</h3>
                   <p className="text-gray-600 text-sm">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -334,11 +323,8 @@ export default function NEETCoachingGurgaonPage() {
         {/* Video Testimonials Section */}
         <section className="py-16 bg-gradient-to-br from-blue-50 to-green-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Play className="w-4 h-4 mr-2" />
@@ -351,7 +337,7 @@ export default function NEETCoachingGurgaonPage() {
                 Hear directly from NEET achievers who traveled from DLF Phases, Cyber City, and Golf
                 Course Road to achieve their medical college dreams
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {[
@@ -377,13 +363,9 @@ export default function NEETCoachingGurgaonPage() {
                   percentile: 'Quick Success Story',
                 },
               ].map((video, index) => (
-                <motion.div
+                <div
                   key={video.youtubeId}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 group hover:shadow-2xl transition-all duration-300"
+                  className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 group hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
                 >
                   <div className="relative aspect-video bg-gray-100">
                     <iframe
@@ -403,15 +385,12 @@ export default function NEETCoachingGurgaonPage() {
                     <p className="text-gray-600 text-sm mb-1">{video.achievement}</p>
                     <p className="text-green-700 text-xs font-medium">{video.percentile}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center"
+            <div
+              className="text-center animate-fadeInUp"
             >
               <a
                 href="https://www.youtube.com/@cerebrumbiologyacademy"
@@ -423,18 +402,15 @@ export default function NEETCoachingGurgaonPage() {
                 Watch More Success Stories on YouTube
                 <ExternalLink className="w-5 h-5" />
               </a>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Connectivity from Gurgaon Areas */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Our Gurugram Center - M2K Corporate Park, Sector 51
@@ -443,17 +419,13 @@ export default function NEETCoachingGurgaonPage() {
                 Conveniently located in the heart of Gurugram. Just 10-15 minutes from most
                 localities. Near HUDA City Centre Metro for those using public transport.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {gurgaonAreas.map((area, index) => (
-                <motion.div
+                <div
                   key={area.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="bg-white rounded-lg p-4 shadow-md border border-gray-100"
+                  className="bg-white rounded-lg p-4 shadow-md border border-gray-100 animate-fadeInUp"
                 >
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -465,15 +437,12 @@ export default function NEETCoachingGurgaonPage() {
                       <p className="text-gray-500 text-xs mt-1">{area.description}</p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-8 bg-green-50 rounded-xl p-6 border border-green-200"
+            <div
+              className="mt-8 bg-green-50 rounded-xl p-6 border border-green-200 animate-fadeInUp"
             >
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -492,18 +461,15 @@ export default function NEETCoachingGurgaonPage() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Gurgaon Schools We Serve */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Students from Top Gurgaon Schools
@@ -511,7 +477,7 @@ export default function NEETCoachingGurgaonPage() {
               <p className="text-gray-600 max-w-2xl mx-auto">
                 We proudly serve students from leading schools across Gurgaon
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
@@ -528,17 +494,13 @@ export default function NEETCoachingGurgaonPage() {
                 'DAV Public School',
                 'Ryan International',
               ].map((school, index) => (
-                <motion.div
+                <div
                   key={school}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="bg-white rounded-lg p-4 shadow-md border border-gray-100 flex items-center gap-3"
+                  className="bg-white rounded-lg p-4 shadow-md border border-gray-100 flex items-center gap-3 animate-fadeInUp"
                 >
                   <GraduationCap className="w-5 h-5 text-green-600 flex-shrink-0" />
                   <span className="text-gray-700 font-medium">{school}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -547,11 +509,8 @@ export default function NEETCoachingGurgaonPage() {
         {/* Google Business Profile & Reviews Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Trusted by Gurgaon Families
@@ -560,16 +519,13 @@ export default function NEETCoachingGurgaonPage() {
                 See what students and parents from DLF Phases, Cyber City, and Sohna Road are saying
                 about us
               </p>
-            </motion.div>
+            </div>
 
             {/* Google Rating & Reviews Grid */}
             <div className="grid lg:grid-cols-2 gap-8 mb-12">
               {/* Google Rating Card */}
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100"
+              <div
+                className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp"
               >
                 <div className="flex items-center justify-center mb-6">
                   <img
@@ -611,14 +567,11 @@ export default function NEETCoachingGurgaonPage() {
                     Write a Review
                   </a>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Recent Reviews Highlights */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl p-8 border border-green-100"
+              <div
+                className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl p-8 border border-green-100 animate-fadeInUp"
               >
                 <h3 className="font-bold text-gray-900 text-xl mb-6 flex items-center gap-2">
                   <MessageCircle className="w-6 h-6 text-green-600" />
@@ -666,15 +619,12 @@ export default function NEETCoachingGurgaonPage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Google Maps & Contact Info */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-yellow-50 to-white rounded-2xl shadow-xl overflow-hidden border border-yellow-100"
+            <div
+              className="bg-gradient-to-br from-yellow-50 to-white rounded-2xl shadow-xl overflow-hidden border border-yellow-100 animate-fadeInUp"
             >
               <div className="grid lg:grid-cols-2">
                 {/* Map */}
@@ -777,18 +727,15 @@ export default function NEETCoachingGurgaonPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Enhanced Success Stories from Gurgaon Students */}
         <section className="py-16 bg-gradient-to-br from-purple-50 to-blue-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Trophy className="w-4 h-4 mr-2" />
@@ -801,16 +748,12 @@ export default function NEETCoachingGurgaonPage() {
                 Real students, real scores, real transformations. See how Gurgaon students achieved
                 their NEET dreams with our coaching
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid lg:grid-cols-3 gap-8 mb-10">
               {/* Story 1: Rajat Malhotra */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 hover:shadow-2xl transition-all duration-300"
+              <div
+                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
               >
                 <div className="bg-gradient-to-r from-green-500 to-teal-600 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
@@ -865,15 +808,11 @@ export default function NEETCoachingGurgaonPage() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Story 2: Ananya Verma */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 hover:shadow-2xl transition-all duration-300"
+              <div
+                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
               >
                 <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
@@ -929,15 +868,11 @@ export default function NEETCoachingGurgaonPage() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Story 3: Kabir Khanna */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 hover:shadow-2xl transition-all duration-300"
+              <div
+                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-purple-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
               >
                 <div className="bg-gradient-to-r from-orange-500 to-yellow-500 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
@@ -993,15 +928,12 @@ export default function NEETCoachingGurgaonPage() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Average Improvement Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 max-w-4xl mx-auto"
+            <div
+              className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 max-w-4xl mx-auto animate-fadeInUp"
             >
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -1040,18 +972,15 @@ export default function NEETCoachingGurgaonPage() {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Trust Badges Section */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Award className="w-4 h-4 mr-2" />
@@ -1063,16 +992,12 @@ export default function NEETCoachingGurgaonPage() {
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Your success is our mission. Here&apos;s why Gurgaon students choose us
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {/* Badge 1: Years of Excellence */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group"
+              <div
+                className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Award className="w-8 h-8 text-white" />
@@ -1082,15 +1007,11 @@ export default function NEETCoachingGurgaonPage() {
                 <p className="text-sm text-gray-600">
                   Established NEET coaching institute serving Gurgaon students since 2009
                 </p>
-              </motion.div>
+              </div>
 
               {/* Badge 2: Gurgaon Students */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group"
+              <div
+                className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Users className="w-8 h-8 text-white" />
@@ -1100,15 +1021,11 @@ export default function NEETCoachingGurgaonPage() {
                 <p className="text-sm text-gray-600">
                   Successfully placed in top medical colleges from DLF, Cyber City, Golf Course Road
                 </p>
-              </motion.div>
+              </div>
 
               {/* Badge 3: Google Rating */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="bg-white rounded-2xl shadow-xl p-8 border border-yellow-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group"
+              <div
+                className="bg-white rounded-2xl shadow-xl p-8 border border-yellow-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Star className="w-8 h-8 text-white fill-current" />
@@ -1118,15 +1035,11 @@ export default function NEETCoachingGurgaonPage() {
                 <p className="text-sm text-gray-600">
                   Based on 500+ verified reviews from satisfied students and parents
                 </p>
-              </motion.div>
+              </div>
 
               {/* Badge 4: AIIMS Faculty */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-                className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group"
+              <div
+                className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <GraduationCap className="w-8 h-8 text-white" />
@@ -1136,15 +1049,11 @@ export default function NEETCoachingGurgaonPage() {
                 <p className="text-sm text-gray-600">
                   Expert teachers from AIIMS and top medical colleges with 15+ years experience
                 </p>
-              </motion.div>
+              </div>
 
               {/* Badge 5: Success Rate */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-                className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group"
+              <div
+                className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Trophy className="w-8 h-8 text-white" />
@@ -1154,15 +1063,11 @@ export default function NEETCoachingGurgaonPage() {
                 <p className="text-sm text-gray-600">
                   2024 batch qualification rate - among the highest in NCR region
                 </p>
-              </motion.div>
+              </div>
 
               {/* Badge 6: Local Gurugram Center */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.6 }}
-                className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group"
+              <div
+                className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-teal-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <MapPin className="w-8 h-8 text-white" />
@@ -1172,15 +1077,12 @@ export default function NEETCoachingGurgaonPage() {
                 <p className="text-sm text-gray-600">
                   M2K Corporate Park, Sector 51 - no need to travel to Delhi!
                 </p>
-              </motion.div>
+              </div>
             </div>
 
             {/* Bottom CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-xl"
+            <div
+              className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-xl animate-fadeInUp"
             >
               <h3 className="text-2xl font-bold mb-3">Join 680+ Successful Gurgaon Students</h3>
               <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
@@ -1203,18 +1105,15 @@ export default function NEETCoachingGurgaonPage() {
                   Call: 88264 44334
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Premium Localities Spotlight */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Building2 className="w-4 h-4 mr-2" />
@@ -1227,16 +1126,12 @@ export default function NEETCoachingGurgaonPage() {
                 Students from DLF Phases, Cyber City, and Sohna Road trust Cerebrum for their NEET
                 preparation. See what makes us the preferred choice.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid lg:grid-cols-3 gap-8">
               {/* DLF Phases Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl shadow-xl overflow-hidden border border-blue-100 hover:shadow-2xl transition-all duration-300"
+              <div
+                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl shadow-xl overflow-hidden border border-blue-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
               >
                 <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
@@ -1293,15 +1188,11 @@ export default function NEETCoachingGurgaonPage() {
                     <p className="text-xs text-gray-600 mt-2 font-medium">- Parent, DLF Phase 2</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Cyber City & Golf Course Road Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl overflow-hidden border border-green-100 hover:shadow-2xl transition-all duration-300"
+              <div
+                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl shadow-xl overflow-hidden border border-green-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
               >
                 <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
@@ -1360,15 +1251,11 @@ export default function NEETCoachingGurgaonPage() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Sohna Road & New Gurgaon Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl shadow-xl overflow-hidden border border-orange-100 hover:shadow-2xl transition-all duration-300"
+              <div
+                className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl shadow-xl overflow-hidden border border-orange-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
               >
                 <div className="bg-gradient-to-r from-orange-600 to-yellow-600 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
@@ -1425,15 +1312,12 @@ export default function NEETCoachingGurgaonPage() {
                     <p className="text-xs text-gray-600 mt-2 font-medium">- Meena S., Sohna Road</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Bottom Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-12 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white shadow-2xl"
+            <div
+              className="mt-12 bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 text-white shadow-2xl animate-fadeInUp"
             >
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold mb-2">All Gurgaon Areas Covered</h3>
@@ -1470,7 +1354,7 @@ export default function NEETCoachingGurgaonPage() {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -1483,33 +1367,26 @@ export default function NEETCoachingGurgaonPage() {
         {/* FAQ Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Frequently Asked Questions - NEET Coaching Gurgaon
               </h2>
-            </motion.div>
+            </div>
 
             <div className="max-w-3xl mx-auto space-y-4">
               {faqStructuredData.mainEntity.map((faq, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-lg shadow-md border border-gray-100 p-6"
+                  className="bg-white rounded-lg shadow-md border border-gray-100 p-6 animate-fadeInUp"
                 >
                   <h3 className="font-bold text-gray-800 mb-3 flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     {faq.name}
                   </h3>
                   <p className="text-gray-600 ml-8">{faq.acceptedAnswer.text}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -1518,11 +1395,8 @@ export default function NEETCoachingGurgaonPage() {
         {/* CTA Section */}
         <section className="py-16 bg-[#4a5d4a] text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey from Gurgaon</h2>
               <p className="text-green-100 mb-8 max-w-2xl mx-auto">
                 Join the growing community of successful NEET aspirants from Gurgaon. Book your free
@@ -1543,25 +1417,22 @@ export default function NEETCoachingGurgaonPage() {
                   Call: 8826444334
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Floating WhatsApp Button */}
-        <motion.a
+        <a
           href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20NEET%20Biology%20coaching%20from%20Gurgaon.%20I'd%20like%20to%20know%20more%20about%20weekend%20batches%20and%20metro%20connectivity."
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1, duration: 0.3 }}
-          className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 group"
+          className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 group animate-fadeInUp"
           aria-label="Chat on WhatsApp"
         >
           <MessageCircle className="w-7 h-7 group-hover:scale-110 transition-transform" />
           <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-ping" />
           <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full" />
-        </motion.a>
+        </a>
       </div>
 
       {/* Video Testimonial Schemas for SEO */}

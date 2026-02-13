@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   BookOpen,
@@ -103,11 +102,8 @@ export default function CBSEBiologyPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-green-900 via-teal-800 to-green-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-4xl mx-auto text-center"
+            <div
+              className="max-w-4xl mx-auto text-center animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <GraduationCap className="w-4 h-4" />
@@ -136,7 +132,7 @@ export default function CBSEBiologyPage() {
                   Call Now
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -145,20 +141,16 @@ export default function CBSEBiologyPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {features.map((item, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg text-center"
+                  className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
                 >
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
                     <item.icon className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="font-bold text-sm mb-1">{item.title}</h3>
                   <p className="text-gray-600 text-xs">{item.desc}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -171,11 +163,8 @@ export default function CBSEBiologyPage() {
               CBSE Biology Syllabus Coverage
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
+              <div
+                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
               >
                 <div className="bg-green-600 text-white py-3 px-6">
                   <h3 className="font-bold text-lg flex items-center gap-2">
@@ -193,13 +182,10 @@ export default function CBSEBiologyPage() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
+              <div
+                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
               >
                 <div className="bg-teal-600 text-white py-3 px-6">
                   <h3 className="font-bold text-lg flex items-center gap-2">
@@ -217,7 +203,7 @@ export default function CBSEBiologyPage() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -252,17 +238,13 @@ export default function CBSEBiologyPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl shadow-md p-6"
+                  className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
                 >
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

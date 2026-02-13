@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Phone,
@@ -214,11 +213,8 @@ export default function NEETCoachingDwarkaPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-4xl mx-auto"
+            <div
+              className="text-center max-w-4xl mx-auto animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
                 <MapPin className="w-5 h-5" />
@@ -262,7 +258,7 @@ export default function NEETCoachingDwarkaPage() {
                   Call Now
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -289,11 +285,8 @@ export default function NEETCoachingDwarkaPage() {
         {/* Why Dwarka Students Choose Us */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Why Dwarka Students Choose Cerebrum Biology Academy
@@ -302,24 +295,20 @@ export default function NEETCoachingDwarkaPage() {
                 Convenient Blue Line Metro connectivity and flexible online classes make it easy for Dwarka
                 students to access quality NEET coaching with AIIMS Trained faculty.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
-                <motion.div
+                <div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-800 mb-2">{feature.title}</h3>
                   <p className="text-gray-600 text-sm">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -328,17 +317,14 @@ export default function NEETCoachingDwarkaPage() {
         {/* Free NEET Tools Section */}
         <section className="py-12 bg-gradient-to-br from-indigo-50 to-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-8"
+            <div
+              className="text-center mb-8 animate-fadeInUp"
             >
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                 Free NEET Preparation Tools for Dwarka Students
               </h2>
               <p className="text-gray-600">Boost your preparation with our AI-powered tools - 100% Free</p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
               <Link href="/neet-rank-predictor" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
@@ -363,11 +349,8 @@ export default function NEETCoachingDwarkaPage() {
         {/* Dwarka Sectors Coverage */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 NEET Coaching for All Dwarka Sectors
@@ -375,17 +358,13 @@ export default function NEETCoachingDwarkaPage() {
               <p className="text-gray-600 max-w-2xl mx-auto">
                 We serve students from every sector in Dwarka. Click on your area to learn about specific connectivity and batches.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {dwarkaAreas.map((area, index) => (
-                <motion.div
+                <div
                   key={area.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                >
+                 className="animate-fadeInUp">
                   <Link
                     href={area.link}
                     className="block bg-white rounded-lg p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-blue-200 transition-all"
@@ -402,15 +381,12 @@ export default function NEETCoachingDwarkaPage() {
                       <ArrowRight className="w-4 h-4 text-gray-400 ml-auto" />
                     </div>
                   </Link>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-8 bg-blue-50 rounded-xl p-6 border border-blue-200"
+            <div
+              className="mt-8 bg-blue-50 rounded-xl p-6 border border-blue-200 animate-fadeInUp"
             >
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -431,34 +407,27 @@ export default function NEETCoachingDwarkaPage() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Success Stories */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Success Stories from Dwarka Students
               </h2>
               <p className="text-gray-600">Real results from students across Dwarka sectors</p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {testimonials.map((testimonial, index) => (
-                <motion.div
+                <div
                   key={testimonial.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
                 >
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
@@ -487,7 +456,7 @@ export default function NEETCoachingDwarkaPage() {
                     <p className="text-gray-600 text-sm">{testimonial.school}</p>
                     <p className="text-blue-600 text-xs">{testimonial.location} | {testimonial.college}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -496,11 +465,8 @@ export default function NEETCoachingDwarkaPage() {
         {/* Video Testimonials */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Watch Success Stories from Our Students
@@ -508,7 +474,7 @@ export default function NEETCoachingDwarkaPage() {
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Hear directly from NEET achievers about their journey with Cerebrum Biology Academy
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {[
@@ -531,13 +497,9 @@ export default function NEETCoachingDwarkaPage() {
                   achievement: '6-Month Intensive Program',
                 },
               ].map((video, index) => (
-                <motion.div
+                <div
                   key={video.youtubeId}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100"
+                  className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-fadeInUp"
                 >
                   <div className="relative aspect-video">
                     <iframe
@@ -556,15 +518,12 @@ export default function NEETCoachingDwarkaPage() {
                     <p className="text-green-600 font-semibold text-sm">{video.score}</p>
                     <p className="text-gray-600 text-xs mt-1">{video.achievement}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-center mt-8"
+            <div
+              className="text-center mt-8 animate-fadeInUp"
             >
               <a
                 href="https://www.youtube.com/@cerebrumbiologyacademy"
@@ -576,7 +535,7 @@ export default function NEETCoachingDwarkaPage() {
                 Watch More on YouTube
                 <ExternalLink className="w-4 h-4" />
               </a>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -584,11 +543,8 @@ export default function NEETCoachingDwarkaPage() {
         <section className="py-16 bg-gradient-to-br from-blue-50 to-green-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-center mb-12"
+              <div
+                className="text-center mb-12 animate-fadeInUp"
               >
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
                   Trusted by 847+ Verified Google Reviews
@@ -596,14 +552,11 @@ export default function NEETCoachingDwarkaPage() {
                 <p className="text-gray-600">
                   See what parents and students say about Cerebrum Biology Academy
                 </p>
-              </motion.div>
+              </div>
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-xl p-8 border border-gray-100"
+                <div
+                  className="bg-white rounded-xl shadow-xl p-8 border border-gray-100 animate-fadeInUp"
                 >
                   <div className="text-center">
                     <div className="text-5xl font-bold text-gray-900 mb-2">4.9</div>
@@ -624,13 +577,10 @@ export default function NEETCoachingDwarkaPage() {
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-xl p-6 border border-gray-100"
+                <div
+                  className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 animate-fadeInUp"
                 >
                   <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
                     <MessageCircle className="w-5 h-5 text-green-600" />
@@ -662,7 +612,7 @@ export default function NEETCoachingDwarkaPage() {
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
           </div>
@@ -671,33 +621,26 @@ export default function NEETCoachingDwarkaPage() {
         {/* FAQ Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Frequently Asked Questions - NEET Coaching Dwarka
               </h2>
-            </motion.div>
+            </div>
 
             <div className="max-w-3xl mx-auto space-y-4">
               {faqStructuredData.mainEntity.map((faq, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-lg shadow-md border border-gray-100 p-6"
+                  className="bg-white rounded-lg shadow-md border border-gray-100 p-6 animate-fadeInUp"
                 >
                   <h3 className="font-bold text-gray-800 mb-3 flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     {faq.name}
                   </h3>
                   <p className="text-gray-600 ml-8">{faq.acceptedAnswer.text}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -733,18 +676,14 @@ export default function NEETCoachingDwarkaPage() {
                   color: 'text-purple-600',
                 },
               ].map((badge, index) => (
-                <motion.div
+                <div
                   key={badge.label}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center"
+                  className="text-center animate-fadeInUp"
                 >
                   <badge.icon className={`w-8 h-8 mx-auto mb-2 ${badge.color}`} />
                   <div className="font-bold text-gray-900 text-sm">{badge.label}</div>
                   <div className="text-xs text-gray-600">{badge.sublabel}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -753,11 +692,8 @@ export default function NEETCoachingDwarkaPage() {
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey from Dwarka Today!</h2>
               <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
                 Choose Online Classes for convenience or Hybrid Mode for the best of both. Join the growing community of successful NEET aspirants from Dwarka. Book your free demo class today!
@@ -784,7 +720,7 @@ export default function NEETCoachingDwarkaPage() {
                   Call: 8826444334
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 

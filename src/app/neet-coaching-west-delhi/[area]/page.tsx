@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useParams, notFound } from 'next/navigation'
 import {
@@ -411,11 +410,8 @@ export default function WestDelhiAreaPage() {
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <Link
               href="/neet-coaching-west-delhi"
@@ -482,7 +478,7 @@ export default function WestDelhiAreaPage() {
                 </span>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -490,11 +486,8 @@ export default function WestDelhiAreaPage() {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="bg-gray-50 rounded-xl p-6"
+            <div
+              className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
@@ -510,13 +503,10 @@ export default function WestDelhiAreaPage() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              className="bg-gray-50 rounded-xl p-6"
+            <div
+              className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
@@ -532,13 +522,10 @@ export default function WestDelhiAreaPage() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              className="bg-gray-50 rounded-xl p-6"
+            <div
+              className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center">
@@ -554,7 +541,7 @@ export default function WestDelhiAreaPage() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -562,10 +549,8 @@ export default function WestDelhiAreaPage() {
       {/* Why Cerebrum Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
               Why Students from {area.name} Choose Cerebrum
@@ -573,7 +558,7 @@ export default function WestDelhiAreaPage() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Better results with personalized attention and AIIMS faculty
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -594,29 +579,22 @@ export default function WestDelhiAreaPage() {
                 desc: 'Focus on NEET marks, not attendance',
               },
             ].map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 text-center shadow-sm"
+                className="bg-white rounded-xl p-6 text-center shadow-sm animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="font-semibold text-navy-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* WhatsApp CTA Strip */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="mt-10 bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-6 md:p-8 text-center"
+          <div
+            className="mt-10 bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-6 md:p-8 text-center animate-fadeInUp"
           >
             <p className="text-white/90 text-lg mb-2">Ready to start your NEET preparation?</p>
             <p className="text-white text-xl md:text-2xl font-bold mb-4">
@@ -645,32 +623,27 @@ export default function WestDelhiAreaPage() {
               <MessageCircle className="w-4 h-4 inline mr-1" />
               Average response time: 2 minutes
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Course Options */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
               NEET Courses for {area.name} Students
             </h2>
             <p className="text-gray-600">Choose the program that fits your needs</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {courseOptions.map((course, index) => (
-              <motion.div
+              <div
                 key={course.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-orange-300 transition-colors"
+                className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-orange-300 transition-colors animate-fadeInUp"
               >
                 <h3 className="font-semibold text-xl text-navy-900 mb-2">{course.name}</h3>
                 <div className="flex items-center gap-2 text-gray-600 mb-4">
@@ -691,7 +664,7 @@ export default function WestDelhiAreaPage() {
                     Enquire Now
                   </Button>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -700,14 +673,12 @@ export default function WestDelhiAreaPage() {
       {/* How to Reach */}
       <section className="py-16 bg-navy-900 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">How to Reach from {area.name}</h2>
             <p className="text-gray-300">Easy connectivity via Blue Line Metro</p>
-          </motion.div>
+          </div>
 
           <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur-sm rounded-xl p-8">
             <div className="space-y-6">
@@ -744,7 +715,7 @@ export default function WestDelhiAreaPage() {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-orange-600 to-rose-600">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Start Your NEET Preparation?
             </h2>
@@ -779,7 +750,7 @@ export default function WestDelhiAreaPage() {
               <MessageCircle className="w-4 h-4 inline mr-1" />
               Average response time: 2 minutes
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

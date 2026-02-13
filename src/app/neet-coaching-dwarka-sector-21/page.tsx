@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Phone,
@@ -154,11 +153,8 @@ export default function NEETCoachingDwarkaSector21Page() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-4xl mx-auto"
+            <div
+              className="text-center max-w-4xl mx-auto animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
                 <Plane className="w-5 h-5" />
@@ -202,7 +198,7 @@ export default function NEETCoachingDwarkaSector21Page() {
                   Call Now
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -230,11 +226,8 @@ export default function NEETCoachingDwarkaSector21Page() {
         <section className="py-12 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8 border border-teal-100"
+              <div
+                className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8 border border-teal-100 animate-fadeInUp"
               >
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
                   <Train className="w-8 h-8 text-teal-600" />
@@ -288,7 +281,7 @@ export default function NEETCoachingDwarkaSector21Page() {
                     </ul>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -296,17 +289,14 @@ export default function NEETCoachingDwarkaSector21Page() {
         {/* Free NEET Tools */}
         <section className="py-12 bg-gradient-to-br from-indigo-50 to-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-8"
+            <div
+              className="text-center mb-8 animate-fadeInUp"
             >
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                 Free NEET Tools for Dwarka Sector 21 Students
               </h2>
               <p className="text-gray-600">Boost your NEET preparation with these free tools</p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
               <Link href="/neet-rank-predictor" className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-100">
@@ -331,27 +321,20 @@ export default function NEETCoachingDwarkaSector21Page() {
         {/* Success Stories */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Success Stories from Dwarka Sector 21
               </h2>
               <p className="text-gray-600">Real results from students near IGI Airport area</p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {testimonials.map((testimonial, index) => (
-                <motion.div
+                <div
                   key={testimonial.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
                 >
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
@@ -378,7 +361,7 @@ export default function NEETCoachingDwarkaSector21Page() {
                     <p className="text-gray-600 text-sm">{testimonial.school}</p>
                     <p className="text-teal-600 text-xs">{testimonial.location} | {testimonial.college}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -387,26 +370,19 @@ export default function NEETCoachingDwarkaSector21Page() {
         {/* Nearby Areas */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Also Serving Nearby Areas
               </h2>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-5 gap-4 max-w-4xl mx-auto">
               {nearbyAreas.map((area, index) => (
-                <motion.div
+                <div
                   key={area.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                >
+                 className="animate-fadeInUp">
                   <Link
                     href={area.link}
                     className="block bg-white rounded-lg p-4 shadow-md border border-gray-100 hover:shadow-lg hover:border-teal-200 transition-all text-center"
@@ -415,7 +391,7 @@ export default function NEETCoachingDwarkaSector21Page() {
                     <h3 className="font-semibold text-gray-800 text-sm">{area.name}</h3>
                     <p className="text-teal-600 text-xs">{area.distance}</p>
                   </Link>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -424,33 +400,26 @@ export default function NEETCoachingDwarkaSector21Page() {
         {/* FAQ Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 FAQs - NEET Coaching Dwarka Sector 21
               </h2>
-            </motion.div>
+            </div>
 
             <div className="max-w-3xl mx-auto space-y-4">
               {faqStructuredData.mainEntity.map((faq, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-lg shadow-md border border-gray-100 p-6"
+                  className="bg-white rounded-lg shadow-md border border-gray-100 p-6 animate-fadeInUp"
                 >
                   <h3 className="font-bold text-gray-800 mb-3 flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     {faq.name}
                   </h3>
                   <p className="text-gray-600 ml-8">{faq.acceptedAnswer.text}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -466,18 +435,14 @@ export default function NEETCoachingDwarkaSector21Page() {
                 { icon: Star, label: '4.9 Rating', sublabel: '847+ Reviews', color: 'text-yellow-600' },
                 { icon: GraduationCap, label: 'AIIMS Faculty', sublabel: 'Expert Teachers', color: 'text-purple-600' },
               ].map((badge, index) => (
-                <motion.div
+                <div
                   key={badge.label}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center"
+                  className="text-center animate-fadeInUp"
                 >
                   <badge.icon className={`w-8 h-8 mx-auto mb-2 ${badge.color}`} />
                   <div className="font-bold text-gray-900 text-sm">{badge.label}</div>
                   <div className="text-xs text-gray-600">{badge.sublabel}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -486,11 +451,8 @@ export default function NEETCoachingDwarkaSector21Page() {
         {/* CTA Section */}
         <section className="py-16 bg-gradient-to-br from-teal-600 to-blue-700 text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey from Dwarka Sector 21!</h2>
               <p className="text-teal-100 mb-8 max-w-2xl mx-auto">
                 Join successful NEET aspirants from the IGI Airport area. Book your free demo class today - Online classes recommended!
@@ -510,7 +472,7 @@ export default function NEETCoachingDwarkaSector21Page() {
                   Book Free Demo Class
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 

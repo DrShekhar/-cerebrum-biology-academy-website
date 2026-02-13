@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Target,
@@ -152,11 +151,8 @@ export default function Class12Page() {
 
         <div className="relative max-w-7xl mx-auto px-4 pt-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
                 <BookOpen className="w-5 h-5 mr-2" />
                 Class 12 Biology + NEET Program
@@ -210,26 +206,20 @@ export default function Class12Page() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {successMetrics.map((metric, index) => (
-                  <motion.div
+                  <div
                     key={metric.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center"
+                    className="text-center animate-fadeInUp"
                   >
                     <metric.icon className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
                     <div className="text-lg font-bold">{metric.label}</div>
                     <div className="text-xs opacity-80">{metric.sublabel}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+            <div
+              className="relative animate-fadeInUp"
             >
               {/* NEET 2026 Countdown */}
               <div className="bg-red-600 rounded-3xl p-8 text-center mb-6">
@@ -305,7 +295,7 @@ export default function Class12Page() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -313,12 +303,8 @@ export default function Class12Page() {
       {/* Dual Preparation Strategy */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Master Board Exams + NEET Simultaneously
@@ -327,17 +313,13 @@ export default function Class12Page() {
               Our proven dual preparation strategy ensures you excel in both 12th board exams and
               NEET without compromising on either. Maximum efficiency, maximum results!
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {class12Features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}
@@ -346,7 +328,7 @@ export default function Class12Page() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -355,12 +337,8 @@ export default function Class12Page() {
       {/* Class 12 Biology Curriculum - NEET Focused */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Class 12 Biology - Complete NEET Syllabus
@@ -369,17 +347,13 @@ export default function Class12Page() {
               Master every unit with NEET exam perspective. Each topic covered with depth, previous
               year questions analysis, and advanced problem-solving techniques.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {class12Curriculum.map((unit, index) => (
-              <motion.div
+              <div
                 key={unit.unit}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-r bg-red-50 rounded-xl p-6 border border-red-100"
+                className="bg-gradient-to-r bg-red-50 rounded-xl p-6 border border-red-100 animate-fadeInUp"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex items-start lg:items-center mb-4 lg:mb-0">
@@ -440,16 +414,12 @@ export default function Class12Page() {
                     </Button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mt-12 animate-fadeInUp"
           >
             <div className="bg-gradient-to-r bg-red-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -469,7 +439,7 @@ export default function Class12Page() {
                 Start NEET-Focused Class 12 Prep
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -482,12 +452,8 @@ export default function Class12Page() {
       {/* Final Urgent CTA */}
       <section className="py-20 bg-red-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
               <div className="flex items-center justify-center mb-4">
                 <AlertCircle className="w-8 h-8 mr-3 text-yellow-300" />
@@ -544,7 +510,7 @@ export default function Class12Page() {
                 <span>3,200+ Medical Seats</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

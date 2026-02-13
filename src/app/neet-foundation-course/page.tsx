@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Target,
@@ -322,11 +321,8 @@ export default function NeetFoundationCoursePage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
                 <Rocket className="w-5 h-5 mr-2" />
                 Complete NEET Foundation Program
@@ -367,20 +363,17 @@ export default function NeetFoundationCoursePage() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {successMetrics.map((metric, index) => (
-                  <motion.div
+                  <div
                     key={metric.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
+                    className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 animate-fadeInUp"
                   >
                     <metric.icon className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                     <div className="text-2xl font-bold">{metric.label}</div>
                     <div className="text-sm opacity-80">{metric.sublabel}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -388,12 +381,8 @@ export default function NeetFoundationCoursePage() {
       {/* Why Foundation Course */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Why NEET Foundation Course is the Smart Choice
@@ -402,17 +391,13 @@ export default function NeetFoundationCoursePage() {
               Data-driven insights and proven results showing why early preparation is the key to
               NEET success.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {whyChooseFoundation.map((reason, index) => (
-              <motion.div
+              <div
                 key={reason.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-xl font-bold text-gray-900 flex-1">{reason.title}</h3>
@@ -422,7 +407,7 @@ export default function NeetFoundationCoursePage() {
                   </div>
                 </div>
                 <p className="text-gray-600 leading-relaxed">{reason.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -431,12 +416,8 @@ export default function NeetFoundationCoursePage() {
       {/* Program Features */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               What Makes Our Foundation Program Special
@@ -445,17 +426,13 @@ export default function NeetFoundationCoursePage() {
               Comprehensive features designed specifically for young NEET aspirants starting their
               journey.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {programFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}
@@ -464,7 +441,7 @@ export default function NeetFoundationCoursePage() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -473,12 +450,8 @@ export default function NeetFoundationCoursePage() {
       {/* Program Comparison */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Class 9 vs Class 10 Foundation: Detailed Comparison
@@ -487,14 +460,10 @@ export default function NeetFoundationCoursePage() {
               Choose the program that best fits your child's current academic level and timeline.
               Both paths lead to NEET success!
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="overflow-x-auto"
+          <div
+            className="overflow-x-auto animate-fadeInUp"
           >
             <div className="min-w-full bg-white rounded-xl shadow-lg overflow-hidden">
               <table className="min-w-full divide-y divide-gray-200">
@@ -530,15 +499,11 @@ export default function NeetFoundationCoursePage() {
                 </tbody>
               </table>
             </div>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 mt-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-xl p-8 border-2 border-blue-200"
+            <div
+              className="bg-gray-50 rounded-xl p-8 border-2 border-blue-200 animate-fadeInUp"
             >
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4">
@@ -556,14 +521,10 @@ export default function NeetFoundationCoursePage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-green-50 rounded-xl p-8 border-2 border-green-200"
+            <div
+              className="bg-green-50 rounded-xl p-8 border-2 border-green-200 animate-fadeInUp"
             >
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mr-4">
@@ -581,7 +542,7 @@ export default function NeetFoundationCoursePage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -589,12 +550,8 @@ export default function NeetFoundationCoursePage() {
       {/* Curriculum Journey */}
       <section className="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Your Foundation to NEET Success Journey
@@ -603,17 +560,13 @@ export default function NeetFoundationCoursePage() {
               A carefully designed 3-4 year curriculum that takes your child from basics to NEET
               mastery.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {curriculumHighlights.map((phase, index) => (
-              <motion.div
+              <div
                 key={phase.phase}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-8"
+                className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full flex items-center justify-center mb-6 mx-auto">
                   <phase.icon className="w-8 h-8 text-white" />
@@ -631,7 +584,7 @@ export default function NeetFoundationCoursePage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -646,12 +599,8 @@ export default function NeetFoundationCoursePage() {
       {/* Final CTA */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Start Your Child's NEET Journey the Right Way
             </h2>
@@ -701,7 +650,7 @@ export default function NeetFoundationCoursePage() {
                 <span>Research-Backed Methods</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

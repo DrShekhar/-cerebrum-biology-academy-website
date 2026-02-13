@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Phone,
@@ -236,11 +235,8 @@ export default function NEETBiologyPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-4xl mx-auto"
+            <div
+              className="text-center max-w-4xl mx-auto animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
                 <BookOpen className="w-5 h-5" />
@@ -272,7 +268,7 @@ export default function NEETBiologyPage() {
                   Call: 8826444334
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -303,11 +299,8 @@ export default function NEETBiologyPage() {
         {/* Chapter List by Units */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 NEET Biology Chapters by Unit
@@ -316,17 +309,13 @@ export default function NEETBiologyPage() {
                 Click on any chapter to access detailed study material, important questions, and
                 NEET preparation tips
               </p>
-            </motion.div>
+            </div>
 
             <div className="space-y-8">
               {units.map((unit, unitIndex) => (
-                <motion.div
+                <div
                   key={unit.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: unitIndex * 0.05 }}
-                  className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden"
+                  className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden animate-fadeInUp"
                 >
                   <div className={`p-4 ${unit.color} bg-opacity-50 flex items-center gap-3`}>
                     <div
@@ -358,7 +347,7 @@ export default function NEETBiologyPage() {
                       </Link>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -367,16 +356,13 @@ export default function NEETBiologyPage() {
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Why Study NEET Biology with Cerebrum?
               </h2>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
@@ -393,20 +379,16 @@ export default function NEETBiologyPage() {
                   desc: 'Learn from teachers with 15+ years of NEET coaching experience.',
                 },
               ].map((item, index) => (
-                <motion.div
+                <div
                   key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6 text-center"
+                  className="bg-white rounded-xl shadow-lg p-6 text-center animate-fadeInUp"
                 >
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="font-bold text-gray-800 mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.desc}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -415,11 +397,8 @@ export default function NEETBiologyPage() {
         {/* CTA Section */}
         <section className="py-16 bg-[#4a5d4a] text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl font-bold mb-4">Ready to Master NEET Biology?</h2>
               <p className="text-green-100 mb-8 max-w-2xl mx-auto">
                 Join Cerebrum Biology Academy and get expert guidance for all {totalChapters}{' '}
@@ -439,7 +418,7 @@ export default function NEETBiologyPage() {
                   View All Courses
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

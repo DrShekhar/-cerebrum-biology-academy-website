@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Users,
@@ -104,11 +103,8 @@ export default function InternationalBiologyPage({
       <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-600 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl"
+          <div
+            className="max-w-4xl animate-fadeInUp"
           >
             <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <Globe className="h-4 w-4" />
@@ -137,7 +133,7 @@ export default function InternationalBiologyPage({
                 Call: +91 88264 44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -151,17 +147,14 @@ export default function InternationalBiologyPage({
               { icon: Trophy, value: '95%', label: 'Pass Rate' },
               { icon: Star, value: '4.9/5', label: 'Student Rating' },
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 text-center shadow-lg"
+                className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <stat.icon className="mx-auto mb-3 h-10 w-10 text-indigo-600" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -175,16 +168,13 @@ export default function InternationalBiologyPage({
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
             {curriculum.countries.map((country, index) => (
-              <motion.span
+              <span
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.05 }}
-                className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-md"
+                className="flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-md animate-fadeInUp"
               >
                 <MapPin className="h-4 w-4 text-indigo-600" />
                 {country}
-              </motion.span>
+              </span>
             ))}
           </div>
         </div>
@@ -193,10 +183,8 @@ export default function InternationalBiologyPage({
       {/* NEET Alignment */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mx-auto max-w-4xl text-center"
+          <div
+            className="mx-auto max-w-4xl text-center animate-fadeInUp"
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-green-100 px-6 py-3 text-green-800">
               <Target className="h-5 w-5" />
@@ -204,17 +192,15 @@ export default function InternationalBiologyPage({
             </div>
             <h2 className="mb-4 text-3xl font-bold text-gray-900">NEET Preparation Support</h2>
             <p className="text-lg text-gray-700">{curriculum.neetAlignment}</p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Syllabus Focus */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Our {curriculum.name} Biology Approach
@@ -222,20 +208,17 @@ export default function InternationalBiologyPage({
             <p className="text-lg text-gray-600">
               Comprehensive coverage aligned with {curriculum.examBoard}
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {curriculum.syllabusFocus.map((focus, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-start gap-4 rounded-xl bg-white p-6 shadow-lg"
+                className="flex items-start gap-4 rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <CheckCircle className="mt-1 h-6 w-6 flex-shrink-0 text-green-600" />
                 <p className="text-gray-700">{focus}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -244,25 +227,20 @@ export default function InternationalBiologyPage({
       {/* Topics Covered */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               {curriculum.name} Biology Syllabus
             </h2>
             <p className="text-lg text-gray-600">Complete curriculum coverage</p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-8 md:grid-cols-2">
             {curriculum.topics.map((unitData, unitIndex) => (
-              <motion.div
+              <div
                 key={unitIndex}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: unitIndex * 0.2 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-4 flex items-center gap-2 text-xl font-bold text-indigo-600">
                   <GraduationCap className="h-6 w-6" />
@@ -279,7 +257,7 @@ export default function InternationalBiologyPage({
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -288,10 +266,8 @@ export default function InternationalBiologyPage({
       {/* Unique Features */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               {curriculum.name}-Specific Features
@@ -299,20 +275,17 @@ export default function InternationalBiologyPage({
             <p className="text-lg text-gray-600">
               What makes our {curriculum.name} classes special
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {curriculum.uniqueFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-indigo-50 p-6 shadow-lg"
+                className="rounded-xl bg-indigo-50 p-6 shadow-lg animate-fadeInUp"
               >
                 <Award className="mb-4 h-10 w-10 text-indigo-600" />
                 <p className="font-medium text-gray-800">{feature}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -321,28 +294,23 @@ export default function InternationalBiologyPage({
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               FAQs for {curriculum.name} Students
             </h2>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -385,7 +353,7 @@ export default function InternationalBiologyPage({
       {/* CTA */}
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">
               Join {curriculum.studentCount} {curriculum.name} Students Worldwide
             </h2>
@@ -408,7 +376,7 @@ export default function InternationalBiologyPage({
                 Call: +91 88264 44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

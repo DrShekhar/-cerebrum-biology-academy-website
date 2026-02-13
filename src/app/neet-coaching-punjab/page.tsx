@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   MapPin,
   Users,
@@ -298,11 +297,8 @@ export default function NEETCoachingPunjabPage() {
       <section className="relative bg-gradient-to-br from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
@@ -358,32 +354,29 @@ export default function NEETCoachingPunjabPage() {
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {successMetrics.map((metric, index) => (
-                <motion.div
+                <div
                   key={metric.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
                 >
                   <metric.icon className="w-8 h-8 mx-auto mb-2 text-[#4ade80]" />
                   <div className="text-2xl font-bold">{metric.value}</div>
                   <div className="text-sm opacity-80">{metric.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Why Not Relocate */}
       <section className="py-16 bg-gradient-to-r from-red-50 to-orange-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Relocate to Chandigarh When You Can Study From Home?
             </h2>
             <p className="text-lg text-gray-600">Save Rs 2-3 Lakhs per year with online coaching</p>
-          </motion.div>
+          </div>
 
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-lg">
@@ -421,22 +414,18 @@ export default function NEETCoachingPunjabPage() {
       {/* Punjab Cities */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               NEET Coaching Across Punjab
             </h2>
             <p className="text-lg text-gray-600">760+ students from all major Punjab cities</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {punjabCities.map((city, index) => (
               <Link href={city.url} key={city.name}>
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition-all hover:-translate-y-1 border-2 border-transparent hover:border-[#1e3a5f]"
+                <div
+                  className="bg-gray-50 rounded-xl p-6 hover:shadow-xl transition-all hover:-translate-y-1 border-2 border-transparent hover:border-[#1e3a5f] animate-fadeInUp"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-gray-900">{city.name}</h3>
@@ -451,7 +440,7 @@ export default function NEETCoachingPunjabPage() {
                   <div className="mt-4 flex items-center text-[#1e3a5f] font-medium">
                     View Details <ArrowRight className="w-4 h-4 ml-2" />
                   </div>
-                </motion.div>
+                </div>
               </Link>
             ))}
           </div>
@@ -461,25 +450,21 @@ export default function NEETCoachingPunjabPage() {
       {/* Features */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Punjab Students Choose Online Coaching
             </h2>
-          </motion.div>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg"
+                className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
               >
                 <feature.icon className="w-12 h-12 text-[#1e3a5f] mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -488,22 +473,18 @@ export default function NEETCoachingPunjabPage() {
       {/* Medical Colleges */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Target These Medical Colleges
             </h2>
             <p className="text-lg text-gray-600">Punjab and nearby medical colleges for NEET 2026</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {medicalColleges.map((college, index) => (
-              <motion.div
+              <div
                 key={college.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-6 border-l-4 border-[#1e3a5f]"
+                className="bg-gray-50 rounded-xl p-6 border-l-4 border-[#1e3a5f] animate-fadeInUp"
               >
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{college.name}</h3>
                 <div className="space-y-1 text-sm">
@@ -518,7 +499,7 @@ export default function NEETCoachingPunjabPage() {
                   </p>
                   <p className="text-green-600 text-xs mt-2">{college.note}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -529,20 +510,16 @@ export default function NEETCoachingPunjabPage() {
       {/* FAQs */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               FAQs - NEET Coaching Punjab
             </h2>
-          </motion.div>
+          </div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-md"
+                className="bg-white rounded-xl p-8 shadow-md animate-fadeInUp"
                 itemScope
                 itemType="https://schema.org/Question"
               >
@@ -558,7 +535,7 @@ export default function NEETCoachingPunjabPage() {
                     {faq.answer}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -614,12 +591,8 @@ export default function NEETCoachingPunjabPage() {
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Crack NEET from Punjab?
             </h2>
@@ -657,7 +630,7 @@ export default function NEETCoachingPunjabPage() {
                 +91-88264-44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

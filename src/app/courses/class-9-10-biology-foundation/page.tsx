@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   BookOpen,
@@ -111,11 +110,8 @@ export default function Class910BiologyFoundationPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-indigo-900 via-purple-800 to-indigo-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-4xl mx-auto text-center"
+            <div
+              className="max-w-4xl mx-auto text-center animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <GraduationCap className="w-4 h-4" />
@@ -144,7 +140,7 @@ export default function Class910BiologyFoundationPage() {
                   Call Now
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -153,20 +149,16 @@ export default function Class910BiologyFoundationPage() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {courseHighlights.map((item, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg text-center"
+                  className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
                 >
                   <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-3">
                     <item.icon className="w-6 h-6 text-indigo-600" />
                   </div>
                   <h3 className="font-bold text-sm mb-1">{item.title}</h3>
                   <p className="text-gray-600 text-xs">{item.desc}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -196,20 +188,16 @@ export default function Class910BiologyFoundationPage() {
                   desc: 'Early exposure to biological concepts develops analytical and reasoning skills.',
                 },
               ].map((item, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg"
+                  className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
                 >
                   <div className="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
                     <item.icon className="w-7 h-7 text-indigo-600" />
                   </div>
                   <h3 className="font-bold text-lg mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.desc}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -221,12 +209,9 @@ export default function Class910BiologyFoundationPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Course Curriculum</h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {curriculum.map((item, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, x: idx === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden"
+                  className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
                 >
                   <div className="bg-indigo-600 text-white py-3 px-6">
                     <h3 className="font-bold text-lg flex items-center gap-2">
@@ -244,7 +229,7 @@ export default function Class910BiologyFoundationPage() {
                       ))}
                     </ul>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -280,17 +265,13 @@ export default function Class910BiologyFoundationPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl shadow-md p-6"
+                  className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
                 >
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

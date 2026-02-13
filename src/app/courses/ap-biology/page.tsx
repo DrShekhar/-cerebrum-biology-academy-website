@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Phone,
@@ -96,10 +95,8 @@ export default function APBiologyPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-indigo-800 to-blue-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="max-w-4xl mx-auto text-center"
+            <div
+              className="max-w-4xl mx-auto text-center animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Award className="w-4 h-4" />
@@ -145,7 +142,7 @@ export default function APBiologyPage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -156,11 +153,8 @@ export default function APBiologyPage() {
               AP Biology Exam <span className="text-blue-600">Structure</span>
             </h2>
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-xl p-6"
+              <div
+                className="bg-white rounded-2xl shadow-xl p-6 animate-fadeInUp"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
@@ -185,13 +179,10 @@ export default function APBiologyPage() {
                     <span>Lab-based scenarios</span>
                   </li>
                 </ul>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-xl p-6"
+              <div
+                className="bg-white rounded-2xl shadow-xl p-6 animate-fadeInUp"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center">
@@ -216,7 +207,7 @@ export default function APBiologyPage() {
                     <span>Experimental design & data analysis</span>
                   </li>
                 </ul>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -229,18 +220,14 @@ export default function APBiologyPage() {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
               {examUnits.map((unit, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.05 }}
-                  className="bg-white rounded-xl p-4 shadow-md"
+                  className="bg-white rounded-xl p-4 shadow-md animate-fadeInUp"
                 >
                   <div className="text-xs font-semibold text-blue-600 mb-1">Unit {unit.unit}</div>
                   <div className="font-bold text-gray-900 text-sm mb-1">{unit.name}</div>
                   <div className="text-xs text-gray-500">Exam weight: {unit.weight}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -275,20 +262,16 @@ export default function APBiologyPage() {
                   desc: 'Proven techniques for full-credit answers',
                 },
               ].map((item, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg text-center"
+                  className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
                 >
                   <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-blue-600" />
                   </div>
                   <h3 className="font-bold text-lg mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.desc}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -343,16 +326,13 @@ export default function APBiologyPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((f, i) => (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-md p-6"
+                  className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
                 >
                   <h3 className="font-semibold text-lg mb-2">{f.q}</h3>
                   <p className="text-gray-600">{f.a}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Target,
@@ -207,11 +206,8 @@ export default function DropperPage() {
 
         <div className="relative max-w-7xl mx-auto px-4 pt-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
                 <RefreshCw className="w-5 h-5 mr-2" />
                 NEET Dropper Intensive Program
@@ -280,26 +276,20 @@ export default function DropperPage() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {successMetrics.map((metric, index) => (
-                  <motion.div
+                  <div
                     key={metric.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center"
+                    className="text-center animate-fadeInUp"
                   >
                     <metric.icon className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
                     <div className="text-lg font-bold">{metric.label}</div>
                     <div className="text-xs opacity-80">{metric.sublabel}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+            <div
+              className="relative animate-fadeInUp"
             >
               {/* Dropper Success Stories */}
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
@@ -309,12 +299,9 @@ export default function DropperPage() {
 
                 <div className="space-y-6">
                   {successStories.map((story, index) => (
-                    <motion.div
+                    <div
                       key={story.name}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.2 }}
-                      className="bg-white/10 rounded-lg p-4"
+                      className="bg-white/10 rounded-lg p-4 animate-fadeInUp"
                     >
                       <div className="flex items-center justify-between mb-2">
                         <div className="font-semibold">{story.name}</div>
@@ -326,7 +313,7 @@ export default function DropperPage() {
                       </div>
                       <div className="text-xs opacity-80 mb-2">{story.college}</div>
                       <div className="text-xs opacity-70 italic">"{story.story}"</div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
 
@@ -343,7 +330,7 @@ export default function DropperPage() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -351,12 +338,8 @@ export default function DropperPage() {
       {/* Why Choose Dropper Program */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Why Our Dropper Program is Different
@@ -365,17 +348,13 @@ export default function DropperPage() {
               We understand the unique challenges droppers face. Our specialized program addresses
               your specific needs with proven strategies for second-attempt success.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {dropperAdvantages.map((advantage, index) => (
-              <motion.div
+              <div
                 key={advantage.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 bg-gradient-to-r ${advantage.color} rounded-lg flex items-center justify-center mb-4`}
@@ -384,7 +363,7 @@ export default function DropperPage() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{advantage.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{advantage.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -393,12 +372,8 @@ export default function DropperPage() {
       {/* 10-Month Dropper Program Structure */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Strategic 10-Month Dropper Program
@@ -407,16 +382,12 @@ export default function DropperPage() {
               A scientifically designed program that systematically builds your preparation from
               foundation to mastery, ensuring maximum score improvement.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-8">
             {dropperProgram.map((phase, index) => (
-              <motion.div
+              <div
                 key={phase.phase}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className={`flex flex-col lg:flex-row items-center gap-8 ${
                   index % 2 === 1 ? 'lg:flex-row-reverse' : ''
                 }`}
@@ -522,16 +493,12 @@ export default function DropperPage() {
                     </ul>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            className="text-center mt-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mt-16 animate-fadeInUp"
           >
             <div className="bg-orange-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -551,7 +518,7 @@ export default function DropperPage() {
                 Start Your Transformation
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -564,12 +531,8 @@ export default function DropperPage() {
       {/* Final Motivational CTA */}
       <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-8">
               <div className="flex items-center justify-center mb-6">
                 <Heart className="w-8 h-8 mr-3 text-red-300" />
@@ -631,7 +594,7 @@ export default function DropperPage() {
                 <span>1,800+ Dreams Fulfilled</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

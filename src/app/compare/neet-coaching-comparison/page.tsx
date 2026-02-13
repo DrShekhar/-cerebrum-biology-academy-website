@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   CheckCircle2,
   XCircle,
@@ -136,10 +135,8 @@ export default function NEETCoachingComparisonPage() {
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="max-w-4xl mx-auto text-center"
+            <div
+              className="max-w-4xl mx-auto text-center animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Target className="w-4 h-4" />
@@ -153,7 +150,7 @@ export default function NEETCoachingComparisonPage() {
                 Make an informed decision. Compare batch sizes, faculty qualifications, success
                 rates, and fees across different coaching models.
               </p>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -161,11 +158,8 @@ export default function NEETCoachingComparisonPage() {
         <section className="py-12 md:py-16 -mt-8">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-2xl overflow-hidden"
+              <div
+                className="bg-white rounded-2xl shadow-2xl overflow-hidden animate-fadeInUp"
               >
                 <div className="bg-gradient-to-r from-slate-800 to-slate-700 text-white py-4 px-6">
                   <h2 className="font-bold text-xl text-center">
@@ -216,7 +210,7 @@ export default function NEETCoachingComparisonPage() {
                     </tbody>
                   </table>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -245,20 +239,16 @@ export default function NEETCoachingComparisonPage() {
                   desc: 'Biology is 50% of NEET marks (360/720). Specialized coaching means deeper coverage, more practice questions, and expert-level doubt clearing.',
                 },
               ].map((item, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg"
+                  className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
                 >
                   <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-4">
                     <item.icon className="w-7 h-7 text-green-600" />
                   </div>
                   <h3 className="font-bold text-lg mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.desc}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -292,16 +282,13 @@ export default function NEETCoachingComparisonPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((f, i) => (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-md p-6"
+                  className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
                 >
                   <h3 className="font-semibold text-lg mb-2">{f.q}</h3>
                   <p className="text-gray-600">{f.a}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Trophy,
   Users,
@@ -386,11 +385,8 @@ export default function USABOCoachingPage() {
       <section className="relative bg-[#3d4d3d] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#3d4d3d] via-[#4a5d4a] to-[#3d4d3d]" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Globe className="w-5 h-5 mr-2 text-green-400" />
@@ -450,19 +446,15 @@ export default function USABOCoachingPage() {
                 <div className="text-xs md:text-sm opacity-80">Student Rating</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* USABO Pathway Section */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
               USABO Competition Pathway
@@ -470,17 +462,13 @@ export default function USABOCoachingPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               From Open Exam to representing Team USA at International Biology Olympiad
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
             {usaboPathway.map((stage, index) => (
-              <motion.div
+              <div
                 key={stage.stage}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="relative"
+                className="relative animate-fadeInUp"
               >
                 <div className="bg-[#e8ede8] rounded-lg p-4 border border-[#4a5d4a]/20 h-full">
                   <stage.icon className="w-8 h-8 text-[#3d4d3d] mb-3" />
@@ -494,7 +482,7 @@ export default function USABOCoachingPage() {
                     <ArrowRight className="w-5 h-5 text-[#4a5d4a]" />
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -503,12 +491,8 @@ export default function USABOCoachingPage() {
       {/* Syllabus Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               USABO Syllabus Coverage
@@ -516,17 +500,13 @@ export default function USABOCoachingPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               College-level biology based on Campbell Biology textbook
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {syllabus.map((unit, index) => (
-              <motion.div
+              <div
                 key={unit.unit}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-lg"
+                className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-[#e8ede8] rounded-full flex items-center justify-center">
@@ -545,7 +525,7 @@ export default function USABOCoachingPage() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -554,32 +534,24 @@ export default function USABOCoachingPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Our USABO Coaching
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-[#e8ede8] rounded-xl p-6 md:p-8"
+                className="bg-[#e8ede8] rounded-xl p-6 md:p-8 animate-fadeInUp"
               >
                 <feature.icon className="w-10 h-10 md:w-12 md:h-12 text-[#3d4d3d] mb-3 md:mb-4" />
                 <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-sm md:text-base text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -588,12 +560,8 @@ export default function USABOCoachingPage() {
       {/* Pricing Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Pricing & Programs
@@ -601,7 +569,7 @@ export default function USABOCoachingPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the learning format that works best for you
             </p>
-          </motion.div>
+          </div>
 
           {/* Senior Faculty Pricing */}
           <div className="mb-16">
@@ -619,12 +587,8 @@ export default function USABOCoachingPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {seniorFacultyPricing.map((pkg, index) => (
-                <motion.div
+                <div
                   key={pkg.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
                   className={`bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-4 md:p-6 shadow-lg relative border border-purple-200 ${pkg.popular ? 'ring-2 ring-purple-500' : ''}`}
                 >
                   {pkg.popular && (
@@ -659,7 +623,7 @@ export default function USABOCoachingPage() {
                   >
                     Get Started
                   </button>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -680,12 +644,8 @@ export default function USABOCoachingPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {juniorFacultyPricing.map((pkg, index) => (
-                <motion.div
+                <div
                   key={pkg.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
                   className={`bg-white rounded-xl p-4 md:p-6 shadow-lg relative ${pkg.popular ? 'ring-2 ring-green-500' : ''}`}
                 >
                   {pkg.popular && (
@@ -718,7 +678,7 @@ export default function USABOCoachingPage() {
                   >
                     Get Started
                   </button>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -739,12 +699,8 @@ export default function USABOCoachingPage() {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {batchPricing.map((pkg, index) => (
-                <motion.div
+                <div
                   key={pkg.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
                   className={`bg-gradient-to-br from-teal-50 to-green-50 rounded-xl p-4 md:p-6 shadow-lg relative border border-teal-200 ${pkg.popular ? 'ring-2 ring-teal-500' : ''}`}
                 >
                   {pkg.popular && (
@@ -782,7 +738,7 @@ export default function USABOCoachingPage() {
                   >
                     Join Batch
                   </button>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -792,27 +748,19 @@ export default function USABOCoachingPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-[#e8ede8] rounded-xl p-4 md:p-8 shadow-lg border border-[#4a5d4a]/10"
+                className="bg-[#e8ede8] rounded-xl p-4 md:p-8 shadow-lg border border-[#4a5d4a]/10 animate-fadeInUp"
               >
                 <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 md:mb-4 flex items-start">
                   <MessageCircle className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-[#3d4d3d] flex-shrink-0 mt-0.5" />
@@ -821,7 +769,7 @@ export default function USABOCoachingPage() {
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed ml-7 md:ml-9">
                   {faq.answer}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -830,12 +778,8 @@ export default function USABOCoachingPage() {
       {/* CTA Section */}
       <section className="py-20 bg-[#3d4d3d] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Aim for Team USA at International Biology Olympiad
             </h2>
@@ -859,19 +803,15 @@ export default function USABOCoachingPage() {
                 Chat on WhatsApp
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Parent Guide Callout */}
       <section className="py-12 bg-gradient-to-br from-teal-50 to-green-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-teal-200"
+          <div
+            className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-teal-200 animate-fadeInUp"
           >
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -895,7 +835,7 @@ export default function USABOCoachingPage() {
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

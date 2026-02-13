@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Phone,
@@ -115,11 +114,8 @@ export default function ICSEISCBiologyPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-orange-900 via-red-800 to-orange-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-4xl mx-auto text-center"
+            <div
+              className="max-w-4xl mx-auto text-center animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <GraduationCap className="w-4 h-4" />
@@ -148,7 +144,7 @@ export default function ICSEISCBiologyPage() {
                   Call Now
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -157,13 +153,9 @@ export default function ICSEISCBiologyPage() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {programs.map((program, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl shadow-xl overflow-hidden"
+                  className="bg-white rounded-xl shadow-xl overflow-hidden animate-fadeInUp"
                 >
                   <div className={`bg-gradient-to-r ${program.color} text-white py-4 px-6`}>
                     <h3 className="font-bold text-xl">{program.title}</h3>
@@ -179,7 +171,7 @@ export default function ICSEISCBiologyPage() {
                       ))}
                     </ul>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -190,11 +182,8 @@ export default function ICSEISCBiologyPage() {
           <div className="container mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Syllabus Coverage</h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
+              <div
+                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
               >
                 <div className="bg-orange-600 text-white py-3 px-6">
                   <h3 className="font-bold text-lg flex items-center gap-2">
@@ -212,13 +201,10 @@ export default function ICSEISCBiologyPage() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
+              <div
+                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
               >
                 <div className="bg-red-600 text-white py-3 px-6">
                   <h3 className="font-bold text-lg flex items-center gap-2">
@@ -236,7 +222,7 @@ export default function ICSEISCBiologyPage() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -271,17 +257,13 @@ export default function ICSEISCBiologyPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl shadow-md p-6"
+                  className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
                 >
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

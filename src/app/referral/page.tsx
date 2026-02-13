@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   Gift,
   Copy,
@@ -119,10 +118,8 @@ export default function ReferralPage() {
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
+        <div
+          className="text-center mb-12 animate-fadeInUp"
         >
           <div className="inline-flex items-center justify-center w-20 h-20 bg-indigo-500 rounded-full mb-6">
             <Gift className="w-10 h-10 text-white" />
@@ -134,14 +131,11 @@ export default function ReferralPage() {
             Share your love for learning! Refer friends to Cerebrum Biology Academy and earn rewards
             while they get exclusive discounts.
           </p>
-        </motion.div>
+        </div>
 
         {/* How It Works */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 animate-fadeInUp"
         >
           {[
             {
@@ -173,14 +167,11 @@ export default function ReferralPage() {
               <p className="text-sm text-gray-600">{step.description}</p>
             </Card>
           ))}
-        </motion.div>
+        </div>
 
         {/* Generate or Display Referral Code */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
+        <div
+         className="animate-fadeInUp">
           {showGenerateForm ? (
             <Card className="p-8 max-w-md mx-auto">
               <h2 className="text-xl font-semibold text-gray-900 mb-6 text-center">
@@ -308,14 +299,11 @@ export default function ReferralPage() {
               </div>
             )
           )}
-        </motion.div>
+        </div>
 
         {/* Leaderboard Preview */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mt-12"
+        <div
+          className="mt-12 animate-fadeInUp"
         >
           <Card className="p-6">
             <div className="flex items-center justify-between mb-6">
@@ -362,14 +350,11 @@ export default function ReferralPage() {
               ))}
             </div>
           </Card>
-        </motion.div>
+        </div>
 
         {/* Terms */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="mt-8 text-center text-sm text-gray-500"
+        <div
+          className="mt-8 text-center text-sm text-gray-500 animate-fadeInUp"
         >
           <p>
             By participating, you agree to our{' '}
@@ -382,7 +367,7 @@ export default function ReferralPage() {
             Each referral code can be used up to 10 times. Rewards are credited after the referred
             student completes enrollment.
           </p>
-        </motion.div>
+        </div>
       </div>
     </div>
   )

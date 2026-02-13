@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { Check, MessageCircle, Phone, HelpCircle, TrendingDown, Award, BookOpen } from 'lucide-react'
 import { CONTACT_INFO, getWhatsAppLink, getPhoneLink } from '@/lib/constants/contactInfo'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
@@ -242,11 +241,8 @@ export default function FeesPage() {
       {/* Hero Section */}
       <section className="py-16 md:py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
+          <div
+            className="text-center animate-fadeInUp"
           >
             <div className="inline-block mb-4 px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">
               Starting at Rs 2,500/month
@@ -275,7 +271,7 @@ export default function FeesPage() {
                 Call for Fee Details
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -285,12 +281,8 @@ export default function FeesPage() {
       {/* Fee Comparison vs Competition */}
       <section className="py-16 md:py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
               How We Compare
             </h2>
@@ -300,12 +292,8 @@ export default function FeesPage() {
 
             <div className="grid md:grid-cols-2 gap-6">
               {competitionData.map((item, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
                   className={`p-6 rounded-lg border-2 ${
                     item.highlight
                       ? 'border-emerald-500 bg-emerald-50'
@@ -318,22 +306,18 @@ export default function FeesPage() {
                   <p className={`text-lg font-semibold ${item.highlight ? 'text-emerald-600' : 'text-slate-600'}`}>
                     {item.range}
                   </p>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Detailed Fee Cards */}
       <section className="py-16 md:py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12"
+          <div
+            className="mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
               Fee Structure by Program
@@ -341,26 +325,18 @@ export default function FeesPage() {
             <p className="text-lg text-slate-600 text-center">
               Choose your program and tier. Each comes with full access to our teaching methodology.
             </p>
-          </motion.div>
+          </div>
 
           {programs.map((program, programIndex) => (
-            <motion.div
+            <div
               key={programIndex}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: programIndex * 0.1 }}
-              viewport={{ once: true }}
-              className="mb-16"
+              className="mb-16 animate-fadeInUp"
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-8">{program.name}</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 {program.tiers.map((tier, tierIndex) => (
-                  <motion.div
+                  <div
                     key={tierIndex}
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: tierIndex * 0.1 }}
-                    viewport={{ once: true }}
                     className={`relative rounded-xl border-2 overflow-hidden transition-all duration-300 ${
                       tier.isPopular
                         ? 'border-emerald-500 bg-gradient-to-br from-emerald-50 to-white shadow-lg scale-105 md:scale-100'
@@ -413,10 +389,10 @@ export default function FeesPage() {
                         Enroll Now on WhatsApp
                       </a>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </section>
@@ -424,12 +400,8 @@ export default function FeesPage() {
       {/* What's Included */}
       <section className="py-16 md:py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12"
+          <div
+            className="mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
               What's Included in Every Plan
@@ -437,44 +409,37 @@ export default function FeesPage() {
             <p className="text-lg text-slate-600 text-center">
               From Pursuit to Pinnacle, you get the same quality — just different batch sizes.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={containerVariants}
+          <div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
+            className="grid md:grid-cols-3 gap-8 animate-fadeInUp"
           >
             {whatIncluded.map((item, index) => {
               const IconComponent = item.icon
               return (
-                <motion.div
+                <div
                   key={index}
-                  variants={itemVariants}
-                  className="flex flex-col items-start gap-4 p-6 rounded-lg bg-gradient-to-br from-slate-50 to-white border border-slate-200 hover:shadow-md transition-shadow"
+                  className="flex flex-col items-start gap-4 p-6 rounded-lg bg-gradient-to-br from-slate-50 to-white border border-slate-200 hover:shadow-md transition-shadow animate-fadeInUp"
                 >
                   <div className="p-3 bg-emerald-100 rounded-lg">
                     <IconComponent size={24} className="text-emerald-600" />
                   </div>
                   <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
                   <p className="text-slate-600">{item.description}</p>
-                </motion.div>
+                </div>
               )
             })}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Payment Options */}
       <section className="py-16 md:py-20 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
               Flexible Payment Options
             </h2>
@@ -489,32 +454,24 @@ export default function FeesPage() {
                   description: 'Eligible students get up to 50% off on yearly fees',
                 },
               ].map((option, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="p-6 rounded-lg border-2 border-emerald-200 bg-emerald-50"
+                  className="p-6 rounded-lg border-2 border-emerald-200 bg-emerald-50 animate-fadeInUp"
                 >
                   <h3 className="text-lg font-bold text-slate-900 mb-2">{option.title}</h3>
                   <p className="text-slate-600">{option.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="py-16 md:py-20 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12"
+          <div
+            className="mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
               Frequently Asked Questions
@@ -522,19 +479,16 @@ export default function FeesPage() {
             <p className="text-lg text-slate-600 text-center">
               Have questions about our fees? We've got answers.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={containerVariants}
+          <div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {faqs.map((faq, index) => (
               <motion.details
                 key={index}
-                variants={itemVariants}
                 className="group p-6 rounded-lg border border-slate-200 bg-white hover:border-emerald-300 hover:shadow-md transition-all cursor-pointer"
               >
                 <summary className="flex items-start justify-between font-semibold text-slate-900 cursor-pointer">
@@ -546,19 +500,15 @@ export default function FeesPage() {
                 <p className="mt-4 ml-8 text-slate-600 leading-relaxed">{faq.answer}</p>
               </motion.details>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Final CTA Section */}
       <section className="py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center"
+          <div
+            className="text-center animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
               Have Questions About Fees?
@@ -595,7 +545,7 @@ export default function FeesPage() {
             <p className="mt-8 text-sm text-slate-500">
               Available Monday to Saturday, 9 AM - 7 PM IST
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 

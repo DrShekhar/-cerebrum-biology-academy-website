@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Lock, FileText, ArrowRight, ArrowLeft, Loader2, AlertCircle, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
@@ -187,15 +186,10 @@ export default function OMRCheckerPage() {
           <h1 className="text-3xl font-bold text-gray-900 mb-2">OMR Evaluation Tool</h1>
           <p className="text-gray-600">Check your test answers and get instant results</p>
         </div>
-
-        <AnimatePresence mode="wait">
-          {step === 'password' && (
-            <motion.div
+{step === 'password' && (
+            <div
               key="password"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="max-w-md mx-auto"
+              className="max-w-md mx-auto animate-fadeInUp"
             >
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 <div className="text-center mb-6">
@@ -225,16 +219,13 @@ export default function OMRCheckerPage() {
                   </Button>
                 </form>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {step === 'subject' && (
-            <motion.div
+            <div
               key="subject"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="max-w-2xl mx-auto"
+              className="max-w-2xl mx-auto animate-fadeInUp"
             >
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 <h2 className="text-xl font-semibold text-center mb-6">Select Subject Type</h2>
@@ -253,16 +244,13 @@ export default function OMRCheckerPage() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {step === 'paper' && (
-            <motion.div
+            <div
               key="paper"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="max-w-2xl mx-auto"
+              className="max-w-2xl mx-auto animate-fadeInUp"
             >
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 <button
@@ -331,16 +319,13 @@ export default function OMRCheckerPage() {
                   </div>
                 )}
               </div>
-            </motion.div>
+            </div>
           )}
 
           {step === 'answers' && selectedPaper && (
-            <motion.div
+            <div
               key="answers"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
+             className="animate-fadeInUp">
               <div className="bg-white rounded-2xl shadow-lg p-6 mb-6">
                 <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                   <div>
@@ -496,16 +481,13 @@ export default function OMRCheckerPage() {
                   </Button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {step === 'result' && result && selectedPaper && (
-            <motion.div
+            <div
               key="result"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
+             className="animate-fadeInUp">
               <div className="bg-white rounded-2xl shadow-lg p-6 mb-6">
                 <div className="text-center mb-8">
                   <div
@@ -653,10 +635,9 @@ export default function OMRCheckerPage() {
                   </Button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
     </div>
   )
 }

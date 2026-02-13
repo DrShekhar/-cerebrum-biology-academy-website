@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   MapPin,
   Users,
@@ -417,12 +416,8 @@ export default function NeetCoachingGurugramPage() {
       {/* Gurugram Localities Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               NEET Coaching Across All Gurugram Localities
@@ -431,17 +426,13 @@ export default function NeetCoachingGurugramPage() {
               From DLF Cyber City to New Gurugram - we serve students from every corner of
               Gurugram/Gurgaon. Click on your locality for location-specific information.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
             {gurugramLocalities.map((locality, index) => (
-              <motion.div
+              <div
                 key={locality.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <Link href={`/locations/gurugram/${locality.slug}`}>
                   <div
                     className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer ${
@@ -464,7 +455,7 @@ export default function NeetCoachingGurugramPage() {
                     )}
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -473,12 +464,8 @@ export default function NeetCoachingGurugramPage() {
       {/* Why Gurugram Students Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Gurugram Students Choose Online NEET Coaching
@@ -486,22 +473,18 @@ export default function NeetCoachingGurugramPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Stop the daily Delhi border crossing. Premium education delivered to your doorstep.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {whyGurugram.map((item, index) => (
-              <motion.div
+              <div
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-green-50 rounded-xl p-8 border border-green-100"
+                className="bg-green-50 rounded-xl p-8 border border-green-100 animate-fadeInUp"
               >
                 <item.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -511,16 +494,12 @@ export default function NeetCoachingGurugramPage() {
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
               {premiumSchools.map((school, index) => (
-                <motion.span
+                <span
                   key={school}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="bg-white text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm"
+                  className="bg-white text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm animate-fadeInUp"
                 >
                   {school}
-                </motion.span>
+                </span>
               ))}
             </div>
           </div>
@@ -530,32 +509,24 @@ export default function NeetCoachingGurugramPage() {
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Cerebrum for NEET Coaching in Gurugram?
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg"
+                className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
               >
                 <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -564,12 +535,8 @@ export default function NeetCoachingGurugramPage() {
       {/* Video Testimonials Section - Phase 1 */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Play className="w-4 h-4 mr-2" />
@@ -583,16 +550,12 @@ export default function NeetCoachingGurugramPage() {
               Accessible from all Gurugram areas via online classes - DLF Phases, Golf Course Road,
               Sushant Lok. Every story is authentic, every achievement verified.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {/* Video 1: Sadhna Sirin */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            <div
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp"
             >
               <div className="relative aspect-video">
                 <iframe
@@ -627,15 +590,11 @@ export default function NeetCoachingGurugramPage() {
                   online classes from Sushant Lok."
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Video 2: Abhisek */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            <div
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp"
             >
               <div className="relative aspect-video">
                 <iframe
@@ -670,15 +629,11 @@ export default function NeetCoachingGurugramPage() {
                   Gurugram."
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Video 3: Nishita */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            <div
+              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp"
             >
               <div className="relative aspect-video">
                 <iframe
@@ -713,16 +668,12 @@ export default function NeetCoachingGurugramPage() {
                   online."
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Watch More CTA */}
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center animate-fadeInUp"
           >
             <Link
               href="https://www.youtube.com/@CerebrumBiologyAcademy"
@@ -738,19 +689,15 @@ export default function NeetCoachingGurugramPage() {
               Join students from DLF Phases, Golf Course Road, Sushant Lok, Sector 14-57, and all
               Gurugram areas
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Google Business Profile & Reviews Section - Phase 2 */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trusted by 800+ Gurugram Students & Parents
@@ -759,16 +706,12 @@ export default function NeetCoachingGurugramPage() {
               Read verified reviews from students across DLF Phases, Golf Course Road, Sushant Lok,
               Sector 14-57, and all Gurugram areas
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             {/* Google Rating Card */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="lg:col-span-1"
+            <div
+              className="lg:col-span-1 animate-fadeInUp"
             >
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-xl sticky top-24">
                 <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg mx-auto">
@@ -824,17 +767,13 @@ export default function NeetCoachingGurugramPage() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Review Highlights */}
             <div className="lg:col-span-2 space-y-5">
               {/* Review 1: GD Goenka Student */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              <div
+                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp"
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
@@ -861,15 +800,11 @@ export default function NeetCoachingGurugramPage() {
                   <Trophy className="w-4 h-4 mr-1" />
                   <span className="font-semibold">658/720 NEET 2024 | MAMC Delhi</span>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Review 2: Scottish High Student */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              <div
+                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp"
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
@@ -898,15 +833,11 @@ export default function NeetCoachingGurugramPage() {
                   <Award className="w-4 h-4 mr-1" />
                   <span className="font-semibold">642/720 NEET 2024 | Excellent Faculty</span>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Review 3: Sushant Lok Parent */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              <div
+                className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp"
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
@@ -937,15 +868,11 @@ export default function NeetCoachingGurugramPage() {
                     552→632 Improvement | Government Medical College
                   </span>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Review 4: Golf Course Road Student */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              <div
+                className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp"
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
@@ -972,17 +899,13 @@ export default function NeetCoachingGurugramPage() {
                   <Trophy className="w-4 h-4 mr-1" />
                   <span className="font-semibold">348/360 Biology | Perfect Biology Score</span>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
 
           {/* Online Classes Benefits for Gurugram */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-8 bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8"
+          <div
+            className="grid md:grid-cols-2 gap-8 bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 animate-fadeInUp"
           >
             {/* Google Maps */}
             <div className="rounded-xl overflow-hidden shadow-lg">
@@ -1066,7 +989,7 @@ export default function NeetCoachingGurugramPage() {
                 </Button>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -1074,12 +997,8 @@ export default function NeetCoachingGurugramPage() {
       <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4 mr-2" />
@@ -1092,17 +1011,13 @@ export default function NeetCoachingGurugramPage() {
               Read how our Gurugram students achieved remarkable score improvements and secured top
               government medical colleges through personalized mentoring and strategic preparation
             </p>
-          </motion.div>
+          </div>
 
           {/* 3 Success Story Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {/* Story 1: Arjun Mehta - Purple-pink gradient */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+            <div
+              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group animate-fadeInUp"
             >
               {/* Gradient Header */}
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 text-white">
@@ -1174,15 +1089,11 @@ export default function NeetCoachingGurugramPage() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Story 2: Sneha Kapoor - Red-orange gradient */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+            <div
+              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group animate-fadeInUp"
             >
               {/* Gradient Header */}
               <div className="bg-gradient-to-r from-red-600 to-orange-600 p-6 text-white">
@@ -1254,15 +1165,11 @@ export default function NeetCoachingGurugramPage() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Story 3: Tanvi Sharma - Green-teal gradient */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group"
+            <div
+              className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group animate-fadeInUp"
             >
               {/* Gradient Header */}
               <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6 text-white">
@@ -1335,16 +1242,12 @@ export default function NeetCoachingGurugramPage() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Stats Banner */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 rounded-2xl p-8 text-white shadow-2xl"
+          <div
+            className="bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 rounded-2xl p-8 text-white shadow-2xl animate-fadeInUp"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
               Proven Success Across All Batches
@@ -1384,7 +1287,7 @@ export default function NeetCoachingGurugramPage() {
                 </Button>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -1392,12 +1295,8 @@ export default function NeetCoachingGurugramPage() {
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4">
           {/* Section Header */}
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why 800+ Gurugram Students Trust Cerebrum Biology Academy
@@ -1405,17 +1304,13 @@ export default function NeetCoachingGurugramPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Every credential verified, every promise delivered
             </p>
-          </motion.div>
+          </div>
 
           {/* 6 Trust Badges Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {/* Badge 1: 15+ Years of Excellence */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6"
+            <div
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp"
             >
               <div className="bg-gradient-to-br from-blue-600 to-blue-700 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <Award className="w-10 h-10 text-white" />
@@ -1427,15 +1322,11 @@ export default function NeetCoachingGurugramPage() {
                 helping thousands of students achieve medical college admissions through expert
                 teaching methods.
               </p>
-            </motion.div>
+            </div>
 
             {/* Badge 2: 800+ Gurugram Students */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6"
+            <div
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp"
             >
               <div className="bg-gradient-to-br from-green-600 to-teal-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <Users className="w-10 h-10 text-white" />
@@ -1449,15 +1340,11 @@ export default function NeetCoachingGurugramPage() {
                 City, New Gurugram, and all premium areas trust us for NEET Biology excellence.
                 Proven results across Gurugram.
               </p>
-            </motion.div>
+            </div>
 
             {/* Badge 3: 4.9/5 Google Rating */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6"
+            <div
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp"
             >
               <div className="bg-gradient-to-br from-yellow-500 to-orange-500 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <Star className="w-10 h-10 text-white fill-white" />
@@ -1469,15 +1356,11 @@ export default function NeetCoachingGurugramPage() {
                 teaching quality, study material, doubt resolution, and personalized attention that
                 helped them achieve NEET goals.
               </p>
-            </motion.div>
+            </div>
 
             {/* Badge 4: AIIMS Trained Faculty */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6"
+            <div
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp"
             >
               <div className="bg-gradient-to-br from-purple-600 to-purple-700 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <GraduationCap className="w-10 h-10 text-white" />
@@ -1488,15 +1371,11 @@ export default function NeetCoachingGurugramPage() {
                 Dr. Shekhar C Singh (AIIMS New Delhi Alumnus) leads our team. 15+ years of NEET
                 coaching experience with deep understanding of exam patterns and high-yield topics.
               </p>
-            </motion.div>
+            </div>
 
             {/* Badge 5: 98% Success Rate */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6"
+            <div
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp"
             >
               <div className="bg-gradient-to-br from-green-500 to-emerald-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <Trophy className="w-10 h-10 text-white" />
@@ -1510,15 +1389,11 @@ export default function NeetCoachingGurugramPage() {
                 securing ranks under 2000 AIR and admissions to AIIMS, JIPMER, and top government
                 medical colleges.
               </p>
-            </motion.div>
+            </div>
 
             {/* Badge 6: Live Online Classes */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6"
+            <div
+              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 p-6 animate-fadeInUp"
             >
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-xl flex items-center justify-center mb-4">
                 <Monitor className="w-10 h-10 text-white" />
@@ -1532,16 +1407,12 @@ export default function NeetCoachingGurugramPage() {
                 live doubt clearing, recorded lectures, and same quality as offline coaching.
                 Perfect for DLF, Golf Course Road, Sushant Lok students.
               </p>
-            </motion.div>
+            </div>
           </div>
 
           {/* Bottom CTA Banner */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white text-center shadow-2xl"
+          <div
+            className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white text-center shadow-2xl animate-fadeInUp"
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Join 800+ Successful Gurugram Students
@@ -1566,7 +1437,7 @@ export default function NeetCoachingGurugramPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -1579,12 +1450,8 @@ export default function NeetCoachingGurugramPage() {
       {/* School-Specific NEET Coaching Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               School-Specific NEET Coaching
@@ -1592,7 +1459,7 @@ export default function NeetCoachingGurugramPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We serve students from all major Gurugram schools with batch timings aligned to their schedules
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
@@ -1605,13 +1472,9 @@ export default function NeetCoachingGurugramPage() {
               { name: 'Suncity World School', href: '/biology-classes-suncity-school-gurgaon', students: '35+' },
               { name: 'Manav Rachna School', href: '/biology-classes-manav-rachna-gurgaon', students: '30+' },
             ].map((school, index) => (
-              <motion.div
+              <div
                 key={school.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <Link href={school.href}>
                   <div className="bg-white rounded-xl p-5 shadow-md hover:shadow-xl transition-all hover:-translate-y-1 border border-gray-100">
                     <h3 className="font-bold text-gray-900 mb-1">{school.name}</h3>
@@ -1621,7 +1484,7 @@ export default function NeetCoachingGurugramPage() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -1630,12 +1493,8 @@ export default function NeetCoachingGurugramPage() {
       {/* Board-Specific Coaching Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Board-Specific NEET Coaching
@@ -1643,15 +1502,11 @@ export default function NeetCoachingGurugramPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Specialized programs aligned with your board syllabus for seamless NEET preparation
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Link href="/cbse-neet-coaching-gurugram">
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-blue-100">
                   <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
@@ -1665,14 +1520,10 @@ export default function NeetCoachingGurugramPage() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Link href="/icse-neet-coaching-gurugram">
                 <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-purple-100">
                   <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center mb-4">
@@ -1686,14 +1537,10 @@ export default function NeetCoachingGurugramPage() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Link href="/haryana-board-neet-coaching-gurugram">
                 <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 border border-green-100">
                   <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-4">
@@ -1707,7 +1554,7 @@ export default function NeetCoachingGurugramPage() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -1758,34 +1605,26 @@ export default function NeetCoachingGurugramPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions - NEET Coaching Gurugram
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -1794,12 +1633,8 @@ export default function NeetCoachingGurugramPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Start Your NEET Journey from Gurugram Today
             </h2>
@@ -1851,16 +1686,13 @@ export default function NeetCoachingGurugramPage() {
                 <span>No Delhi Travel</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* WhatsApp Floating Button */}
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
-        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 group"
+      <div
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 group animate-fadeInUp"
       >
         {/* Hover Tooltip */}
         <div className="absolute bottom-full mb-2 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
@@ -1881,7 +1713,7 @@ export default function NeetCoachingGurugramPage() {
           {/* Notification Dot */}
           <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full animate-pulse border-2 border-white" />
         </Link>
-      </motion.div>
+      </div>
 
       {/* Schema Markup for SEO */}
       <LocalBusinessSchema />

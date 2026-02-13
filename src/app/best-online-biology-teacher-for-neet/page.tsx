@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { CheckCircle, Phone, Target, Zap } from 'lucide-react'
@@ -134,11 +133,8 @@ export default function BestOnlineBiologyTeacherNEETPage() {
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
                 <Target className="mr-1 inline h-4 w-4" />
                 NEET 2026/2026 Preparation
@@ -165,12 +161,9 @@ export default function BestOnlineBiologyTeacherNEETPage() {
                   View Results
                 </Link>
               </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative hidden lg:block"
+            </div>
+            <div
+              className="relative hidden lg:block animate-fadeInUp"
             >
               <div className="relative h-[400px] w-full overflow-hidden rounded-2xl shadow-2xl">
                 <Image
@@ -194,7 +187,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -204,17 +197,14 @@ export default function BestOnlineBiologyTeacherNEETPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {neetBiologyStats.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 text-center shadow-lg"
+                className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <div className="text-3xl font-bold text-purple-600">{stat.value}</div>
                 <div className="font-medium text-gray-900">{stat.label}</div>
                 <div className="text-sm text-gray-500">{stat.desc}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -223,26 +213,21 @@ export default function BestOnlineBiologyTeacherNEETPage() {
       {/* Topic Weightage */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">NEET Biology Topic Weightage</h2>
             <p className="text-lg text-gray-600">
               Our teaching focuses on high-weightage topics for maximum marks
             </p>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-4xl">
             <div className="space-y-4">
               {topicWeightage.map((topic, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  className="overflow-hidden rounded-lg bg-white shadow-lg"
+                  className="overflow-hidden rounded-lg bg-white shadow-lg animate-fadeInUp"
                 >
                   <div className="flex items-center justify-between p-4">
                     <div className="flex items-center gap-4">
@@ -267,7 +252,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
                   <div className="h-2 bg-gray-100">
                     <div className={`h-full ${topic.color}`} style={{ width: topic.percentage }} />
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -277,23 +262,18 @@ export default function BestOnlineBiologyTeacherNEETPage() {
       {/* Results */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Our NEET Biology Results</h2>
             <p className="text-lg text-gray-600">Consistent results year after year</p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {neetResults.map((result, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <div className="mb-4 text-center">
                   <span className="rounded-full bg-purple-100 px-4 py-2 text-lg font-bold text-purple-600">
@@ -306,7 +286,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
                   <p className="font-semibold text-green-600">{result.topAir}</p>
                   <p className="text-sm text-gray-500">{result.state}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -315,21 +295,16 @@ export default function BestOnlineBiologyTeacherNEETPage() {
       {/* Batch Options */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Choose Your NEET Batch</h2>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-3">
             {batchOptions.map((batch, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
                 className={`rounded-xl border-t-4 bg-white p-6 shadow-lg ${batch.color}`}
               >
                 <h3 className="mb-2 text-2xl font-bold text-gray-900">{batch.name}</h3>
@@ -348,7 +323,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
                 >
                   Join Now
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -357,7 +332,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
       {/* NRI Students */}
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <Zap className="mx-auto mb-4 h-12 w-12" />
             <h2 className="mb-4 text-3xl font-bold">NRI Students Preparing for NEET?</h2>
             <p className="mx-auto mb-8 max-w-2xl text-indigo-100">
@@ -371,33 +346,28 @@ export default function BestOnlineBiologyTeacherNEETPage() {
             >
               Learn More for NRI Students
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -441,7 +411,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
       {/* CTA */}
       <section className="bg-gradient-to-r from-purple-600 to-indigo-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">Start Your NEET Biology Journey</h2>
             <p className="mb-8 text-xl text-purple-100">
               360 marks await. Master biology with the best online teacher for NEET!
@@ -461,7 +431,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
                 Call: +91 88264 44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

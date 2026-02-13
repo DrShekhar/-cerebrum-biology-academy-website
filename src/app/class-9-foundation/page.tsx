@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Target,
@@ -220,11 +219,8 @@ export default function Class9FoundationPage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
                 <BookOpen className="w-5 h-5 mr-2" />
                 Class 9 Biology Foundation Program
@@ -265,26 +261,20 @@ export default function Class9FoundationPage() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {successMetrics.map((metric, index) => (
-                  <motion.div
+                  <div
                     key={metric.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center"
+                    className="text-center animate-fadeInUp"
                   >
                     <metric.icon className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
                     <div className="text-lg font-bold">{metric.label}</div>
                     <div className="text-xs opacity-80">{metric.sublabel}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+            <div
+              className="relative animate-fadeInUp"
             >
               {/* Early Start Benefits Highlight */}
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
@@ -342,7 +332,7 @@ export default function Class9FoundationPage() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -350,12 +340,8 @@ export default function Class9FoundationPage() {
       {/* Why Start Early Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               The Early Bird Advantage for NEET Success
@@ -364,17 +350,13 @@ export default function Class9FoundationPage() {
               Starting NEET preparation from Class 9 gives you a significant advantage. Here's why
               our Class 9 foundation program is the perfect launchpad for your medical career.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {whyStartEarly.map((benefit, index) => (
-              <motion.div
+              <div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
@@ -385,7 +367,7 @@ export default function Class9FoundationPage() {
                     <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -394,12 +376,8 @@ export default function Class9FoundationPage() {
       {/* Learning Features */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               What Makes Our Class 9 Foundation Program Special?
@@ -408,17 +386,13 @@ export default function Class9FoundationPage() {
               Age-appropriate teaching methodology designed specifically for Class 9 students to
               make biology fun, engaging, and effective.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {learningFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}
@@ -427,7 +401,7 @@ export default function Class9FoundationPage() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -436,12 +410,8 @@ export default function Class9FoundationPage() {
       {/* Curriculum Coverage */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Class 9 Biology Syllabus - NEET Foundation Aligned
@@ -450,17 +420,13 @@ export default function Class9FoundationPage() {
               Complete NCERT Class 9 Biology coverage with additional NEET-oriented concept building
               and problem-solving practice.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {class9Curriculum.map((unit, index) => (
-              <motion.div
+              <div
                 key={unit.unit}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 border border-blue-200 shadow-md"
+                className="bg-white rounded-xl p-6 border border-blue-200 shadow-md animate-fadeInUp"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex items-start lg:items-center mb-4 lg:mb-0">
@@ -497,16 +463,12 @@ export default function Class9FoundationPage() {
                     </Button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mt-12 animate-fadeInUp"
           >
             <div className="bg-gradient-to-r from-purple-100 to-indigo-100 rounded-xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -526,7 +488,7 @@ export default function Class9FoundationPage() {
                 Start Your NEET Journey Early
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -542,12 +504,8 @@ export default function Class9FoundationPage() {
       {/* Final CTA */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Give Your Child the Early Start Advantage
             </h2>
@@ -592,7 +550,7 @@ export default function Class9FoundationPage() {
                 <span>65% Higher Success Rate</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

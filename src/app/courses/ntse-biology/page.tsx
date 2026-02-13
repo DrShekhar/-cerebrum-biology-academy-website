@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Phone,
@@ -92,10 +91,8 @@ export default function NTSEBiologyPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-orange-900 via-amber-800 to-orange-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="max-w-4xl mx-auto text-center"
+            <div
+              className="max-w-4xl mx-auto text-center animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <IndianRupee className="w-4 h-4" />
@@ -141,7 +138,7 @@ export default function NTSEBiologyPage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -153,12 +150,9 @@ export default function NTSEBiologyPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {examStructure.map((section, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-2xl shadow-xl p-6"
+                  className="bg-white rounded-2xl shadow-xl p-6 animate-fadeInUp"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
@@ -177,7 +171,7 @@ export default function NTSEBiologyPage() {
                       </p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -194,18 +188,14 @@ export default function NTSEBiologyPage() {
             </p>
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {satSubjects.map((sub, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg text-center"
+                  className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
                 >
                   <h3 className="font-bold text-lg mb-2">{sub.subject}</h3>
                   <p className="text-3xl font-bold text-orange-600 mb-2">{sub.questions}</p>
                   <p className="text-gray-600 text-sm">{sub.focus}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -224,20 +214,16 @@ export default function NTSEBiologyPage() {
                 { icon: GraduationCap, title: 'Expert Faculty', desc: 'AIIMS qualified teachers' },
                 { icon: BookOpen, title: 'NCERT Focus', desc: 'Strong foundation approach' },
               ].map((item, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg text-center"
+                  className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
                 >
                   <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-orange-600" />
                   </div>
                   <h3 className="font-bold text-lg mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.desc}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -299,16 +285,13 @@ export default function NTSEBiologyPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((f, i) => (
-                <motion.div
+                <div
                   key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-md p-6"
+                  className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
                 >
                   <h3 className="font-semibold text-lg mb-2">{f.q}</h3>
                   <p className="text-gray-600">{f.a}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

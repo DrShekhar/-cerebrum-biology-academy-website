@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle,
   Users,
@@ -310,11 +309,8 @@ export default function NEETDropperPage() {
 
         <div className="relative max-w-7xl mx-auto px-3 sm:px-4 pt-6 sm:pt-10">
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-yellow-400" />
                 #1 NEET Dropper Course for 2026
@@ -336,17 +332,14 @@ export default function NEETDropperPage() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-6 sm:mb-8">
                 {successStats.map((stat, index) => (
-                  <motion.div
+                  <div
                     key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl p-2 sm:p-3"
+                    className="text-center bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl p-2 sm:p-3 animate-fadeInUp"
                   >
                     <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-1 sm:mb-2 text-yellow-400" />
                     <div className="text-lg sm:text-xl md:text-2xl font-bold">{stat.number}</div>
                     <div className="text-[10px] sm:text-xs text-[#e8ede8]">{stat.label}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -388,13 +381,10 @@ export default function NEETDropperPage() {
                   </Button>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+            <div
+              className="relative animate-fadeInUp"
             >
               {/* Urgency Banner */}
               <div className="bg-yellow-500 text-black rounded-t-2xl sm:rounded-t-3xl px-4 py-2 sm:py-3 text-center">
@@ -590,7 +580,7 @@ export default function NEETDropperPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -605,12 +595,8 @@ export default function NEETDropperPage() {
       {/* Why Droppers Choose Us */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <motion.div
-            className="text-center mb-8 sm:mb-12 md:mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
               Why Droppers Choose Cerebrum?
@@ -619,19 +605,15 @@ export default function NEETDropperPage() {
               Specialized features designed specifically for dropper students' unique needs and
               challenges
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {uniqueFeatures.map((feature, index) => {
               const Icon = feature.icon
               return (
-                <motion.div
+                <div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-lg sm:rounded-xl shadow-lg p-3 sm:p-4 md:p-6 hover:shadow-xl transition-shadow text-center"
+                  className="bg-white rounded-lg sm:rounded-xl shadow-lg p-3 sm:p-4 md:p-6 hover:shadow-xl transition-shadow text-center animate-fadeInUp"
                 >
                   <div
                     className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 ${feature.color} rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 md:mb-4 mx-auto`}
@@ -644,7 +626,7 @@ export default function NEETDropperPage() {
                   <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                     {feature.description}
                   </p>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -654,12 +636,8 @@ export default function NEETDropperPage() {
       {/* Phase-wise Plan */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <motion.div
-            className="text-center mb-8 sm:mb-12 md:mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
               Strategic 4-Phase Preparation Plan
@@ -667,7 +645,7 @@ export default function NEETDropperPage() {
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
               Scientifically designed phases for maximum rank improvement
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
             {phasePlan.map((phase, index) => {
@@ -693,12 +671,8 @@ export default function NEETDropperPage() {
               }
 
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
                   className={`rounded-xl p-4 sm:p-6 shadow-lg border-l-4 ${colorClasses[phase.color]}`}
                 >
                   <div className="flex justify-between items-start mb-3 sm:mb-4">
@@ -724,7 +698,7 @@ export default function NEETDropperPage() {
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -734,31 +708,23 @@ export default function NEETDropperPage() {
       {/* Course Features */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <motion.div
-            className="text-center mb-8 sm:mb-12 md:mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
               Complete Dropper Course Features
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {courseFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-[#3d4d3d] mb-2 sm:mb-4" />
                 <p className="text-gray-700 font-medium text-xs sm:text-sm">{feature}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -767,12 +733,8 @@ export default function NEETDropperPage() {
       {/* Pricing Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-[#e8ede8]">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
               Transform Your NEET Journey
             </h2>
@@ -851,7 +813,7 @@ export default function NEETDropperPage() {
                 Psychology counseling sessions FREE!
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -901,12 +863,8 @@ export default function NEETDropperPage() {
       {/* FAQ Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-3 sm:px-4">
-          <motion.div
-            className="text-center mb-8 sm:mb-12 md:mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp"
           >
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
               Dropper Students FAQ
@@ -914,17 +872,13 @@ export default function NEETDropperPage() {
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
               Common questions about NEET dropper preparation answered by experts
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-3 sm:space-y-4">
             {dropperFAQs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg sm:rounded-xl shadow-md p-4 sm:p-5 md:p-6"
+                className="bg-white rounded-lg sm:rounded-xl shadow-md p-4 sm:p-5 md:p-6 animate-fadeInUp"
               >
                 <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-2 sm:mb-3 flex items-start">
                   <HelpCircle className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-[#3d4d3d] flex-shrink-0 mt-0.5" />
@@ -933,7 +887,7 @@ export default function NEETDropperPage() {
                 <p className="text-gray-600 text-xs sm:text-sm md:text-base ml-7 sm:ml-9">
                   {faq.answer}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -948,12 +902,8 @@ export default function NEETDropperPage() {
       {/* Final CTA */}
       <section className="py-12 sm:py-16 md:py-20 bg-[#3d4d3d] text-white">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 md:mb-6">
               Your Second Chance Deserves the Best
             </h2>
@@ -988,7 +938,7 @@ export default function NEETDropperPage() {
             <p className="text-xs sm:text-sm opacity-80">
               New dropper batch starting soon. Only {seatsLeft} seats left!
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 import {
   GraduationCap,
@@ -309,11 +308,8 @@ export default function DrShekharSinghPage() {
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              className="grid md:grid-cols-2 gap-12 items-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <div
+              className="grid md:grid-cols-2 gap-12 items-center animate-fadeInUp"
             >
               <div className="space-y-6">
                 <div className="relative w-64 h-64 mx-auto md:mx-0">
@@ -379,11 +375,8 @@ export default function DrShekharSinghPage() {
               </div>
 
               <div>
-                <motion.div
-                  className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full mb-4"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
+                <div
+                  className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full mb-4 animate-fadeInUp"
                   role="status"
                   aria-label="Position: Director and Chief Educator"
                 >
@@ -391,7 +384,7 @@ export default function DrShekharSinghPage() {
                   <span className="text-white text-sm font-semibold">
                     Director & Chief Educator
                   </span>
-                </motion.div>
+                </div>
 
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight text-gray-900">
                   Dr. Shekhar C Singh
@@ -432,7 +425,7 @@ export default function DrShekharSinghPage() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -441,20 +434,16 @@ export default function DrShekharSinghPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {trustBadges.map((badge, index) => (
-                <motion.div
+                <div
                   key={index}
-                  className="flex items-center gap-3 justify-center"
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  className="flex items-center gap-3 justify-center animate-fadeInUp"
                 >
                   <badge.icon className="w-6 h-6 text-white/80" aria-hidden="true" />
                   <div>
                     <div className="text-white font-semibold text-sm">{badge.label}</div>
                     <div className="text-white/60 text-xs">{badge.description}</div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -466,12 +455,8 @@ export default function DrShekharSinghPage() {
           aria-labelledby="teaching-philosophy-heading"
         >
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-[#e8ede8] rounded-3xl p-8 md:p-12 border border-[#3d4d3d]/10"
+            <div
+              className="bg-[#e8ede8] rounded-3xl p-8 md:p-12 border border-[#3d4d3d]/10 animate-fadeInUp"
             >
               <div className="flex items-start space-x-4 mb-6">
                 <Quote className="w-12 h-12 text-[#3d4d3d] flex-shrink-0" aria-hidden="true" />
@@ -538,7 +523,7 @@ export default function DrShekharSinghPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -548,12 +533,8 @@ export default function DrShekharSinghPage() {
           aria-labelledby="achievements-heading"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Trophy className="w-4 h-4 mr-2" aria-hidden="true" />
@@ -568,17 +549,13 @@ export default function DrShekharSinghPage() {
               <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
                 Over 14 years of transforming NEET aspirants into medical college students
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" role="list">
               {drShekhar.achievements.map((achievement, index) => (
-                <motion.div
+                <div
                   key={index}
-                  className="bg-white rounded-2xl p-6 shadow-lg shadow-[#3d4d3d]/10 border border-[#e8ede8] hover:shadow-xl transition-shadow"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  className="bg-white rounded-2xl p-6 shadow-lg shadow-[#3d4d3d]/10 border border-[#e8ede8] hover:shadow-xl transition-shadow animate-fadeInUp"
                   role="listitem"
                 >
                   <div className="flex items-start space-x-4">
@@ -590,16 +567,12 @@ export default function DrShekharSinghPage() {
                     </div>
                     <p className="text-gray-800 font-medium leading-relaxed">{achievement}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              className="mt-12 bg-[#3d4d3d] rounded-3xl p-8 text-white text-center"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="mt-12 bg-[#3d4d3d] rounded-3xl p-8 text-white text-center animate-fadeInUp"
               role="complementary"
               aria-label="Success rate statistics"
             >
@@ -615,18 +588,14 @@ export default function DrShekharSinghPage() {
                   Consistently outperforming national average by 4x
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         <section className="py-16 bg-white" role="region" aria-labelledby="credentials-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <Shield className="w-4 h-4 mr-2" aria-hidden="true" />
@@ -641,15 +610,11 @@ export default function DrShekharSinghPage() {
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Recognized expertise and proven track record in medical entrance coaching
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <motion.div
-                className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
+              <div
+                className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center animate-fadeInUp"
               >
                 <div className="w-20 h-20 bg-[#3d4d3d] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <GraduationCap className="w-10 h-10 text-white" />
@@ -658,43 +623,31 @@ export default function DrShekharSinghPage() {
                 <p className="text-gray-600">
                   Graduated from India&apos;s premier medical institution
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
+              <div
+                className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center animate-fadeInUp"
               >
                 <div className="w-20 h-20 bg-[#4a5d4a] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Award className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Academic Leadership</h3>
                 <p className="text-gray-600">Former Academic Head at Narayana Group</p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
+              <div
+                className="bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 text-center animate-fadeInUp"
               >
                 <div className="w-20 h-20 bg-[#5a6d5a] rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Trophy className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Top Rank Producer</h3>
                 <p className="text-gray-600">Students consistently rank in top 1000 AIR</p>
-              </motion.div>
+              </div>
             </div>
 
-            <motion.div
-              className="bg-[#e8ede8] rounded-2xl p-8 border border-[#3d4d3d]/10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="bg-[#e8ede8] rounded-2xl p-8 border border-[#3d4d3d]/10 animate-fadeInUp"
             >
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -746,7 +699,7 @@ export default function DrShekharSinghPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -756,12 +709,8 @@ export default function DrShekharSinghPage() {
           aria-labelledby="student-results-heading"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <CheckCircle2 className="w-4 h-4 mr-2" aria-hidden="true" />
@@ -777,17 +726,13 @@ export default function DrShekharSinghPage() {
                 Real students, real results. See how Dr. Shekhar's mentorship transforms NEET
                 aspirations into reality
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {recentResults.map((result, index) => (
-                <motion.div
+                <div
                   key={index}
-                  className="bg-white rounded-xl p-6 shadow-lg shadow-[#3d4d3d]/10 border border-[#e8ede8] hover:shadow-2xl transition-all hover:scale-105"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  className="bg-white rounded-xl p-6 shadow-lg shadow-[#3d4d3d]/10 border border-[#e8ede8] hover:shadow-2xl transition-all hover:scale-105 animate-fadeInUp"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -816,16 +761,12 @@ export default function DrShekharSinghPage() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              className="mt-12 bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="mt-12 bg-white rounded-2xl p-8 border border-[#e8ede8] shadow-lg shadow-[#3d4d3d]/10 animate-fadeInUp"
             >
               <div className="text-center">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -840,18 +781,14 @@ export default function DrShekharSinghPage() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         <section className="py-16 bg-white" role="region" aria-labelledby="testimonials-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Quote className="w-4 h-4 mr-2" aria-hidden="true" />
@@ -867,12 +804,12 @@ export default function DrShekharSinghPage() {
                 Hear directly from students who achieved their NEET dreams under Dr. Shekhar's
                 guidance
               </p>
-            </motion.div>
+            </div>
 
             <div className="relative max-w-5xl mx-auto">
               <div className="overflow-hidden">
-                <motion.div
-                  className="flex transition-transform duration-500 ease-in-out"
+                <div
+                  className="flex transition-transform duration-500 ease-in-out animate-fadeInUp"
                   style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
                 >
                   {testimonials.map((testimonial, index) => (
@@ -915,7 +852,7 @@ export default function DrShekharSinghPage() {
                       </div>
                     </div>
                   ))}
-                </motion.div>
+                </div>
               </div>
 
               <button
@@ -954,12 +891,8 @@ export default function DrShekharSinghPage() {
 
         <section className="py-16 bg-[#e8ede8]" role="region" aria-labelledby="journey-heading">
           <div className="max-w-5xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <div className="inline-flex items-center bg-[#3d4d3d] text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <TrendingUp className="w-4 h-4 mr-2" aria-hidden="true" />
@@ -971,7 +904,7 @@ export default function DrShekharSinghPage() {
               >
                 A Career Dedicated to Education
               </h2>
-            </motion.div>
+            </div>
 
             <div className="space-y-8" role="list">
               {[
@@ -1007,13 +940,9 @@ export default function DrShekharSinghPage() {
                   color: 'bg-[#3d4d3d]',
                 },
               ].map((milestone, index) => (
-                <motion.div
+                <div
                   key={index}
-                  className="relative flex items-start space-x-6"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  className="relative flex items-start space-x-6 animate-fadeInUp"
                   role="listitem"
                 >
                   <div
@@ -1030,7 +959,7 @@ export default function DrShekharSinghPage() {
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{milestone.title}</h3>
                     <p className="text-gray-600">{milestone.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -1042,12 +971,8 @@ export default function DrShekharSinghPage() {
           aria-labelledby="contact-heading"
         >
           <div className="max-w-6xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="text-center mb-12">
                 <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold mb-6">
                   Ready to Start Your NEET Journey?
@@ -1065,12 +990,8 @@ export default function DrShekharSinghPage() {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 mb-12">
-                <motion.div
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  viewport={{ once: true }}
+                <div
+                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all animate-fadeInUp"
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-[#4a5d4a] rounded-xl flex items-center justify-center mr-4">
@@ -1092,14 +1013,10 @@ export default function DrShekharSinghPage() {
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Session
                   </Link>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all"
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
+                <div
+                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all animate-fadeInUp"
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-[#4a5d4a] rounded-xl flex items-center justify-center mr-4">
@@ -1128,7 +1045,7 @@ export default function DrShekharSinghPage() {
                     <MessageCircle className="w-5 h-5 mr-2" />
                     Chat on WhatsApp
                   </button>
-                </motion.div>
+                </div>
               </div>
 
               <div className="text-center mb-8">
@@ -1171,17 +1088,13 @@ export default function DrShekharSinghPage() {
                   <span>Rohini, Gurugram, South Delhi</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {showFloatingCTA && (
-          <motion.div
-            className="fixed bottom-8 right-8 z-50"
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            transition={{ duration: 0.3 }}
+          <div
+            className="fixed bottom-8 right-8 z-50 animate-fadeInUp"
           >
             <Link
               href="/demo-booking"
@@ -1194,7 +1107,7 @@ export default function DrShekharSinghPage() {
                 <span className="text-xs text-green-50">Limited Slots Available</span>
               </div>
             </Link>
-          </motion.div>
+          </div>
         )}
       </div>
     </>

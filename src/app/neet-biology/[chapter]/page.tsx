@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useParams, notFound } from 'next/navigation'
 import {
@@ -423,11 +422,8 @@ export default function ChapterPage() {
               Back to All Chapters
             </Link>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="max-w-4xl"
+            <div
+              className="max-w-4xl animate-fadeInUp"
             >
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-white/20 px-3 py-1 rounded-full text-sm">
@@ -452,7 +448,7 @@ export default function ChapterPage() {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -499,11 +495,8 @@ export default function ChapterPage() {
               {/* Main Content */}
               <div className="lg:col-span-2 space-y-8">
                 {/* Key Topics */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                <div
+                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
                 >
                   <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
                     <BookOpen className="w-5 h-5 text-green-600" />
@@ -517,14 +510,11 @@ export default function ChapterPage() {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
 
                 {/* Important Concepts */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                <div
+                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
                 >
                   <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
                     <Brain className="w-5 h-5 text-green-600" />
@@ -540,14 +530,11 @@ export default function ChapterPage() {
                       </span>
                     ))}
                   </div>
-                </motion.div>
+                </div>
 
                 {/* NEET Tips */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-green-50 to-white rounded-xl shadow-lg p-6 border border-green-100"
+                <div
+                  className="bg-gradient-to-br from-green-50 to-white rounded-xl shadow-lg p-6 border border-green-100 animate-fadeInUp"
                 >
                   <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
                     <Target className="w-5 h-5 text-green-600" />
@@ -563,17 +550,14 @@ export default function ChapterPage() {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               </div>
 
               {/* Sidebar */}
               <div className="space-y-6">
                 {/* CTA Card */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-[#4a5d4a] rounded-xl p-6 text-white"
+                <div
+                  className="bg-[#4a5d4a] rounded-xl p-6 text-white animate-fadeInUp"
                 >
                   <h3 className="font-bold text-lg mb-3">Master {chapter.name}</h3>
                   <p className="text-green-100 text-sm mb-4">
@@ -593,15 +577,12 @@ export default function ChapterPage() {
                     <Phone className="w-4 h-4" />
                     Call: 8826444334
                   </Link>
-                </motion.div>
+                </div>
 
                 {/* Related Chapters */}
                 {chapter.relatedChapters.length > 0 && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                  <div
+                    className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
                   >
                     <h3 className="font-bold text-gray-800 mb-4">Related Chapters</h3>
                     <div className="space-y-2">
@@ -617,15 +598,12 @@ export default function ChapterPage() {
                         </Link>
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
                 )}
 
                 {/* Quick Links */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                <div
+                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
                 >
                   <h3 className="font-bold text-gray-800 mb-4">Quick Links</h3>
                   <div className="space-y-2">
@@ -648,7 +626,7 @@ export default function ChapterPage() {
                       Our Courses
                     </Link>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
           </div>

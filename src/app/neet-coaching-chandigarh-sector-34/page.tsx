@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   MapPin,
   Users,
@@ -252,11 +251,8 @@ export default function NEETCoachingSector34Page() {
       <section className="relative bg-gradient-to-br from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
@@ -311,54 +307,43 @@ export default function NEETCoachingSector34Page() {
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {successMetrics.map((metric, index) => (
-                <motion.div
+                <div
                   key={metric.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
                 >
                   <metric.icon className="w-8 h-8 mx-auto mb-2 text-[#4ade80]" />
                   <div className="text-2xl font-bold">{metric.value}</div>
                   <div className="text-sm opacity-80">{metric.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Problems with Sector 34 Coaching */}
       <section className="py-16 bg-red-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Problems with Sector 34 Coaching Centers
             </h2>
             <p className="text-xl text-gray-600">What students face daily at crowded coaching institutes</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {problemsWithSector34.map((item, index) => (
-              <motion.div
+              <div
                 key={item.problem}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500"
+                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500 animate-fadeInUp"
               >
                 <div className="flex items-start gap-4">
                   <item.icon className="w-8 h-8 text-red-500 flex-shrink-0" />
                   <p className="text-gray-700 font-medium">{item.problem}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -367,34 +352,26 @@ export default function NEETCoachingSector34Page() {
       {/* Cerebrum Solution */}
       <section className="py-16 bg-green-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               The Cerebrum Advantage
             </h2>
             <p className="text-xl text-gray-600">Same quality, better attention, lower fees, no commute</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {cerebrumAdvantages.map((item, index) => (
-              <motion.div
+              <div
                 key={item.point}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-500"
+                className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-500 animate-fadeInUp"
               >
                 <div className="flex items-start gap-4">
                   <item.icon className="w-8 h-8 text-green-500 flex-shrink-0" />
                   <p className="text-gray-700 font-medium">{item.point}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -403,12 +380,8 @@ export default function NEETCoachingSector34Page() {
       {/* Competitor Comparison */}
       <section className="py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Sector 34 Coaching Centers vs Cerebrum
@@ -416,17 +389,13 @@ export default function NEETCoachingSector34Page() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Allen, Aakash, Physics Wallah - all have centers in Sector 34. See how we compare.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             {competitorInfo.map((competitor, index) => (
-              <motion.div
+              <div
                 key={competitor.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-lg"
+                className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{competitor.name}</h3>
                 <div className="space-y-3 text-sm">
@@ -447,17 +416,13 @@ export default function NEETCoachingSector34Page() {
                     <span className="text-red-600">{competitor.issue}</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Cerebrum Comparison Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5a87] rounded-2xl p-8 text-white"
+          <div
+            className="bg-gradient-to-r from-[#1e3a5f] to-[#2d5a87] rounded-2xl p-8 text-white animate-fadeInUp"
           >
             <div className="text-center mb-8">
               <h3 className="text-2xl md:text-3xl font-bold mb-2">Cerebrum Biology Academy</h3>
@@ -485,7 +450,7 @@ export default function NEETCoachingSector34Page() {
                 <div className="text-sm opacity-80">verified rate</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -523,23 +488,19 @@ export default function NEETCoachingSector34Page() {
       {/* Nearby Sectors */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Students from Sectors Near Sector 34
             </h2>
             <p className="text-xl text-gray-600">
               No more commuting to Sector 34 - join from your sector
             </p>
-          </motion.div>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {nearbySectors.map((sector, index) => (
-              <motion.div
+              <div
                 key={sector.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <div
                   className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 ${sector.priority === 'high' ? 'ring-2 ring-[#1e3a5f]' : ''}`}
                 >
@@ -553,7 +514,7 @@ export default function NEETCoachingSector34Page() {
                     {sector.distance} from Sector 34 (saved daily!)
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -562,25 +523,21 @@ export default function NEETCoachingSector34Page() {
       {/* Features */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Us Over Sector 34 Centers
             </h2>
-          </motion.div>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8 shadow-lg"
+                className="bg-gray-50 rounded-xl p-8 shadow-lg animate-fadeInUp"
               >
                 <feature.icon className="w-12 h-12 text-[#1e3a5f] mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -610,27 +567,19 @@ export default function NEETCoachingSector34Page() {
       {/* Cost Comparison */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Save Rs 1-2.5 Lakhs Annually
             </h2>
             <p className="text-xl text-gray-600">Complete cost comparison: Sector 34 vs Cerebrum</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Sector 34 Costs */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-red-50 rounded-2xl p-8"
+            <div
+              className="bg-red-50 rounded-2xl p-8 animate-fadeInUp"
             >
               <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
                 <XCircle className="w-6 h-6 text-red-500 mr-2" />
@@ -658,15 +607,11 @@ export default function NEETCoachingSector34Page() {
                   <span className="font-bold text-red-600">Rs 2-4 Lakhs+</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Cerebrum Costs */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-green-50 rounded-2xl p-8"
+            <div
+              className="bg-green-50 rounded-2xl p-8 animate-fadeInUp"
             >
               <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
                 <CheckCircle className="w-6 h-6 text-green-500 mr-2" />
@@ -694,19 +639,15 @@ export default function NEETCoachingSector34Page() {
                   <span className="font-bold text-green-600">Rs 24K-68K only</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-center mt-8 p-6 bg-[#1e3a5f] rounded-xl text-white"
+          <div
+            className="text-center mt-8 p-6 bg-[#1e3a5f] rounded-xl text-white animate-fadeInUp"
           >
             <div className="text-3xl font-bold mb-2">You Save: Rs 1.2 - 3.5 Lakhs</div>
             <div className="text-white/80">Plus 300-500 hours of commute time for extra study!</div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -715,20 +656,16 @@ export default function NEETCoachingSector34Page() {
       {/* FAQs */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               FAQs - NEET Coaching Sector 34 Chandigarh
             </h2>
-          </motion.div>
+          </div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
                 itemScope
                 itemType="https://schema.org/Question"
               >
@@ -744,7 +681,7 @@ export default function NEETCoachingSector34Page() {
                     {faq.answer}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -753,12 +690,8 @@ export default function NEETCoachingSector34Page() {
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Skip Sector 34 Chaos. Get Better Results.
             </h2>
@@ -796,7 +729,7 @@ export default function NEETCoachingSector34Page() {
                 +91-88264-44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Trophy,
   CheckCircle,
@@ -147,11 +146,8 @@ export default function NTSEOnlineClassesPage() {
       <section className="relative bg-gradient-to-br from-sky-900 via-blue-800 to-cyan-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Wifi className="w-5 h-5 mr-2 text-sky-300" />
@@ -218,19 +214,15 @@ export default function NTSEOnlineClassesPage() {
                 <div className="text-sm opacity-80">Selection Rate</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Online Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Online Learning Features
@@ -238,22 +230,18 @@ export default function NTSEOnlineClassesPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Everything you need for effective NTSE preparation from home
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {onlineFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg"
+                className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
               >
                 <feature.icon className="w-12 h-12 text-sky-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -262,12 +250,8 @@ export default function NTSEOnlineClassesPage() {
       {/* NTSE Syllabus Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Complete NTSE Syllabus Coverage
@@ -275,15 +259,11 @@ export default function NTSEOnlineClassesPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               MAT + SAT comprehensive preparation
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-xl p-8 border border-sky-100"
+            <div
+              className="bg-gradient-to-br from-sky-50 to-blue-50 rounded-xl p-8 border border-sky-100 animate-fadeInUp"
             >
               <Brain className="w-12 h-12 text-sky-600 mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">MAT (Mental Ability Test)</h3>
@@ -295,14 +275,10 @@ export default function NTSEOnlineClassesPage() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-xl p-8 border border-blue-100"
+            <div
+              className="bg-gray-50 rounded-xl p-8 border border-blue-100 animate-fadeInUp"
             >
               <BookOpen className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -316,7 +292,7 @@ export default function NTSEOnlineClassesPage() {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -324,12 +300,8 @@ export default function NTSEOnlineClassesPage() {
       {/* Study Plan Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               8-Month Study Plan
@@ -337,17 +309,13 @@ export default function NTSEOnlineClassesPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Structured preparation timeline for NTSE success
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {studyPlan.map((phase, index) => (
-              <motion.div
+              <div
                 key={phase.phase}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg relative"
+                className="bg-white rounded-xl p-8 shadow-lg relative animate-fadeInUp"
               >
                 <div className="absolute -top-4 left-6">
                   <span className={`${phase.color} px-4 py-2 rounded-full text-sm font-semibold`}>
@@ -357,7 +325,7 @@ export default function NTSEOnlineClassesPage() {
                 <Calendar className="w-10 h-10 text-sky-600 mb-4 mt-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{phase.phase}</h3>
                 <p className="text-gray-600">{phase.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -366,34 +334,26 @@ export default function NTSEOnlineClassesPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-sky-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -402,12 +362,8 @@ export default function NTSEOnlineClassesPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-sky-600 via-blue-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Start Your NTSE Journey Online Today
             </h2>
@@ -438,7 +394,7 @@ export default function NTSEOnlineClassesPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

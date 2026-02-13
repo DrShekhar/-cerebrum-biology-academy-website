@@ -14,7 +14,6 @@ import {
   Phone,
   ArrowRight,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 export default function BrochurePage() {
@@ -108,29 +107,20 @@ export default function BrochurePage() {
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
-            <motion.h1
-              className="text-5xl font-bold mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <h1
+              className="text-5xl font-bold mb-6 animate-fadeInUp"
             >
               Download Course Brochures
-            </motion.h1>
-            <motion.p
-              className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            </h1>
+            <p
+              className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8 animate-fadeInUp"
             >
               Get detailed information about our NEET Biology courses, faculty profiles, success
               stories, and fee structure. Everything you need to make an informed decision.
-            </motion.p>
+            </p>
 
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp"
             >
               <Button
                 variant="outline"
@@ -148,7 +138,7 @@ export default function BrochurePage() {
                 <Download className="w-5 h-5 mr-2" />
                 Download Now
               </Button>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -165,12 +155,9 @@ export default function BrochurePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {brochures.map((brochure, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div className="flex items-start mb-6">
                   <div className="w-16 h-16 bg-indigo-500 rounded-2xl flex items-center justify-center mr-6">
@@ -202,7 +189,7 @@ export default function BrochurePage() {
                     Download
                   </Button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -218,18 +205,12 @@ export default function BrochurePage() {
             </p>
           </div>
 
-          <motion.div
-            className="bg-gray-50 rounded-3xl shadow-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="bg-gray-50 rounded-3xl shadow-lg p-8 animate-fadeInUp"
           >
             {submitted ? (
-              <motion.div
-                className="text-center py-12"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
+              <div
+                className="text-center py-12 animate-fadeInUp"
               >
                 <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">
@@ -241,7 +222,7 @@ export default function BrochurePage() {
                 <div className="bg-green-50 border border-green-200 rounded-2xl p-4 max-w-md mx-auto">
                   <p className="text-green-800 font-medium">Downloads available for 30 days</p>
                 </div>
-              </motion.div>
+              </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
@@ -351,7 +332,7 @@ export default function BrochurePage() {
                 </div>
               </form>
             )}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -369,19 +350,16 @@ export default function BrochurePage() {
 
           <div className="grid md:grid-cols-4 gap-8">
             {highlights.map((highlight, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <highlight.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{highlight.title}</h3>
                 <p className="text-gray-600">{highlight.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

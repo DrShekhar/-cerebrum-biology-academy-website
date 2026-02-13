@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Trophy,
   Users,
@@ -274,11 +273,8 @@ export default function ALevelBiologyTutorPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6 border border-white/20">
               <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
@@ -333,32 +329,25 @@ export default function ALevelBiologyTutorPage() {
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {successMetrics.map((metric, index) => (
-                <motion.div
+                <div
                   key={metric.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"
+                  className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 animate-fadeInUp"
                 >
                   <metric.icon className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-2xl font-bold">{metric.value}</div>
                   <div className="text-sm opacity-80">{metric.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Exam Boards Section */}
       <section className="py-20 bg-gradient-to-b from-white to-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               All A-Level Exam Boards Covered
@@ -366,17 +355,13 @@ export default function ALevelBiologyTutorPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Specialized expertise in Cambridge, Edexcel, AQA, and OCR specifications
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {examBoards.map((board, index) => (
-              <motion.div
+              <div
                 key={board.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl p-8 shadow-xl border-l-4 border-purple-600 hover:shadow-2xl transition"
+                className="bg-white rounded-2xl p-8 shadow-xl border-l-4 border-purple-600 hover:shadow-2xl transition animate-fadeInUp"
               >
                 <div className="flex items-start mb-4">
                   <div className="p-3 bg-purple-100 rounded-lg mr-4">
@@ -398,7 +383,7 @@ export default function ALevelBiologyTutorPage() {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -407,12 +392,8 @@ export default function ALevelBiologyTutorPage() {
       {/* A-Level Topics Coverage */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Complete A-Level Biology Syllabus Coverage
@@ -420,17 +401,13 @@ export default function ALevelBiologyTutorPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Master every topic with targeted teaching and exam board-specific focus
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {aLevelTopics.map((topic, index) => (
-              <motion.div
+              <div
                 key={topic.topic}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 border border-purple-200 hover:border-purple-400 transition"
+                className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 border border-purple-200 hover:border-purple-400 transition animate-fadeInUp"
               >
                 <div className="flex items-start justify-between mb-3">
                   <topic.icon className="w-10 h-10 text-purple-600" />
@@ -458,7 +435,7 @@ export default function ALevelBiologyTutorPage() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -467,12 +444,8 @@ export default function ALevelBiologyTutorPage() {
       {/* AS vs A2 Section */}
       <section className="py-20 bg-gradient-to-br from-purple-50 via-violet-50 to-purple-100">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               AS Level vs A2 Level: Understanding the Pathway
@@ -480,15 +453,11 @@ export default function ALevelBiologyTutorPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Two-year progression from foundation to advanced Biology
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-xl border-t-4 border-purple-500"
+            <div
+              className="bg-white rounded-2xl p-8 shadow-xl border-t-4 border-purple-500 animate-fadeInUp"
             >
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-purple-100 rounded-lg mr-4">
@@ -521,14 +490,10 @@ export default function ALevelBiologyTutorPage() {
                   <div className="text-sm text-gray-600">Exam Papers</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-xl border-t-4 border-violet-600"
+            <div
+              className="bg-white rounded-2xl p-8 shadow-xl border-t-4 border-violet-600 animate-fadeInUp"
             >
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-violet-100 rounded-lg mr-4">
@@ -561,7 +526,7 @@ export default function ALevelBiologyTutorPage() {
                   <div className="text-sm text-gray-600">Exam Papers</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -569,12 +534,8 @@ export default function ALevelBiologyTutorPage() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Beyond Standard Teaching
@@ -582,17 +543,13 @@ export default function ALevelBiologyTutorPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Advanced preparation techniques for A*/A grades
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {aLevelFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-white rounded-xl p-6 shadow-lg hover:shadow-xl transition text-center border border-purple-100"
+                className="bg-gradient-to-br from-purple-50 to-white rounded-xl p-6 shadow-lg hover:shadow-xl transition text-center border border-purple-100 animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -600,7 +557,7 @@ export default function ALevelBiologyTutorPage() {
                 <div className="text-3xl font-bold text-purple-600 mb-2">{feature.stat}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -609,28 +566,20 @@ export default function ALevelBiologyTutorPage() {
       {/* Grade Boundaries */}
       <section className="py-20 bg-gradient-to-br from-purple-900 via-violet-900 to-purple-800 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Understanding Grade Boundaries</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Know exactly what you need for A*/A grades in each exam board
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {gradeBoundaries.map((boundary, index) => (
-              <motion.div
+              <div
                 key={boundary.board}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"
+                className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 animate-fadeInUp"
               >
                 <h3 className="text-2xl font-bold mb-4">{boundary.board}</h3>
                 <div className="grid grid-cols-3 gap-4 mb-4">
@@ -653,7 +602,7 @@ export default function ALevelBiologyTutorPage() {
                     <p className="text-sm opacity-90">{boundary.tips}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -662,12 +611,8 @@ export default function ALevelBiologyTutorPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
@@ -675,24 +620,20 @@ export default function ALevelBiologyTutorPage() {
             <p className="text-xl text-gray-600">
               Everything you need to know about A-Level Biology
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-white rounded-xl p-8 shadow-lg border border-purple-100"
+                className="bg-gradient-to-br from-purple-50 to-white rounded-xl p-8 shadow-lg border border-purple-100 animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-purple-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -701,12 +642,8 @@ export default function ALevelBiologyTutorPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 via-violet-600 to-purple-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Achieve A*/A in A-Level Biology?
             </h2>
@@ -762,7 +699,7 @@ export default function ALevelBiologyTutorPage() {
                 <span>University Prep</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

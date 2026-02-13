@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle,
   XCircle,
@@ -360,10 +359,8 @@ export default function CerebrumVsAakashChandigarhPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl"
+          <div
+            className="max-w-4xl animate-fadeInUp"
           >
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Building className="w-4 h-4" />
@@ -406,16 +403,15 @@ export default function CerebrumVsAakashChandigarhPage() {
                   Book Free Demo Class
                 </Button>
               </Link>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
+              <button
                 onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-6 py-4 rounded-xl font-semibold"
+                className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-6 py-4 rounded-xl font-semibold animate-fadeInUp"
               >
                 <MessageCircle className="w-5 h-5" />
                 Ask Questions on WhatsApp
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -446,11 +442,8 @@ export default function CerebrumVsAakashChandigarhPage() {
       {/* Aakash Centers Overview */}
       <section className="py-12 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
+          <div
+            className="text-center mb-8 animate-fadeInUp"
           >
             <h2 className="text-2xl font-bold text-slate-900 mb-2">
               Aakash Institute has 7 Centers in Chandigarh Tricity
@@ -458,7 +451,7 @@ export default function CerebrumVsAakashChandigarhPage() {
             <p className="text-slate-600">
               Same 100+ batch size across all locations. Cerebrum offers better attention online.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
             {aakashCenters.map((center) => (
@@ -485,11 +478,8 @@ export default function CerebrumVsAakashChandigarhPage() {
       {/* Why Students Switch */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Chandigarh Students Switch from Aakash to Cerebrum
@@ -497,24 +487,20 @@ export default function CerebrumVsAakashChandigarhPage() {
             <p className="text-xl text-slate-600">
               Common challenges across all 7 Aakash centers that bring students to us
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {reasonsToSwitch.map((reason, index) => (
-              <motion.div
+              <div
                 key={reason.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-[#1e3a5f]/10 rounded-xl flex items-center justify-center mb-4">
                   <reason.icon className="w-6 h-6 text-[#1e3a5f]" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{reason.title}</h3>
                 <p className="text-slate-600 text-sm">{reason.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -523,11 +509,8 @@ export default function CerebrumVsAakashChandigarhPage() {
       {/* Detailed Comparison Table */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Cerebrum vs Aakash Chandigarh: Detailed Comparison
@@ -535,7 +518,7 @@ export default function CerebrumVsAakashChandigarhPage() {
             <p className="text-xl text-slate-600">
               Side-by-side comparison for NEET Biology preparation in Chandigarh Tricity
             </p>
-          </motion.div>
+          </div>
 
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -589,11 +572,8 @@ export default function CerebrumVsAakashChandigarhPage() {
       {/* Cost Savings Calculator */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Calculator className="w-4 h-4" />
@@ -605,7 +585,7 @@ export default function CerebrumVsAakashChandigarhPage() {
             <p className="text-xl text-slate-600">
               Even with ANTHE scholarship, see the real cost comparison
             </p>
-          </motion.div>
+          </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -658,14 +638,13 @@ export default function CerebrumVsAakashChandigarhPage() {
             </div>
 
             <div className="mt-8 text-center">
-              <motion.button
-                whileHover={{ scale: 1.02 }}
+              <button
                 onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold"
+                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold animate-fadeInUp"
               >
                 <MessageCircle className="w-5 h-5" />
                 Get Detailed Fee Comparison on WhatsApp
-              </motion.button>
+              </button>
             </div>
           </div>
         </div>
@@ -674,11 +653,8 @@ export default function CerebrumVsAakashChandigarhPage() {
       {/* Success Stories */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-[#1e3a5f] to-[#2d5a87] text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Award className="w-4 h-4" />
@@ -690,17 +666,13 @@ export default function CerebrumVsAakashChandigarhPage() {
             <p className="text-xl text-slate-300">
               Real results from students across different Aakash centers
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {successStories.map((story, index) => (
-              <motion.div
+              <div
                 key={story.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6"
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
@@ -721,7 +693,7 @@ export default function CerebrumVsAakashChandigarhPage() {
                 <div className="bg-yellow-500/20 text-yellow-400 px-3 py-2 rounded-lg text-sm font-medium">
                   {story.improvement}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -731,11 +703,8 @@ export default function CerebrumVsAakashChandigarhPage() {
       <section className="py-16 bg-gradient-to-br from-purple-600 to-[#1e3a5f] text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't Want to Leave Aakash?
                 <br />
@@ -764,13 +733,10 @@ export default function CerebrumVsAakashChandigarhPage() {
                   Try a Free Biology Class <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp"
             >
               <h3 className="text-2xl font-bold mb-6">The Winning Chandigarh Combination</h3>
               <div className="space-y-4">
@@ -799,7 +765,7 @@ export default function CerebrumVsAakashChandigarhPage() {
                   <p className="text-sm text-green-200">Best of both coaching styles</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -807,17 +773,14 @@ export default function CerebrumVsAakashChandigarhPage() {
       {/* Aakash Info Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
               About Aakash Institute Chandigarh
             </h2>
             <p className="text-lg text-slate-600">Fair overview of Aakash's Tricity presence</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl p-8 shadow-lg">
@@ -889,27 +852,20 @@ export default function CerebrumVsAakashChandigarhPage() {
       {/* FAQs */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
+          <div
+            className="text-center mb-8 animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-slate-600">
               Common questions about Cerebrum vs Aakash Chandigarh for NEET Biology
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="bg-white rounded-xl overflow-hidden shadow-sm"
+                className="bg-white rounded-xl overflow-hidden shadow-sm animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -927,7 +883,7 @@ export default function CerebrumVsAakashChandigarhPage() {
                     <p className="text-slate-600">{faq.answer}</p>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -990,14 +946,13 @@ export default function CerebrumVsAakashChandigarhPage() {
                 Book Free Demo Class
               </Button>
             </Link>
-            <motion.button
-              whileHover={{ scale: 1.02 }}
+            <button
               onClick={handleWhatsApp}
-              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-6 py-4 rounded-xl font-semibold"
+              className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white px-6 py-4 rounded-xl font-semibold animate-fadeInUp"
             >
               <MessageCircle className="w-5 h-5" />
               Chat on WhatsApp
-            </motion.button>
+            </button>
             <a href={`tel:${CONTACT_INFO.phone.primary}`}>
               <Button
                 variant="outline"

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { CheckCircle, Phone, ArrowRight, Microscope, Play } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
@@ -131,11 +130,8 @@ export default function BiologyTuitionSouthDelhiPage() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Microscope className="w-5 h-5 mr-2 text-yellow-300" />
@@ -187,19 +183,15 @@ export default function BiologyTuitionSouthDelhiPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Class Options */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Biology Tuition for All Classes
@@ -207,17 +199,13 @@ export default function BiologyTuitionSouthDelhiPage() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Comprehensive biology education from Class 9 to 12 with NEET integration
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {classOptions.map((option, index) => (
-              <motion.div
+              <div
                 key={option.class}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-green-50 rounded-xl overflow-hidden border border-green-100"
+                className="bg-green-50 rounded-xl overflow-hidden border border-green-100 animate-fadeInUp"
               >
                 <div className="bg-[#4a5d4a] text-white p-4">
                   <h3 className="text-xl font-bold">{option.class}</h3>
@@ -237,7 +225,7 @@ export default function BiologyTuitionSouthDelhiPage() {
                     <Button className="w-full bg-green-600 hover:bg-green-700">Enroll Now</Button>
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -246,12 +234,8 @@ export default function BiologyTuitionSouthDelhiPage() {
       {/* Areas We Serve */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Biology Tuition Across South Delhi
@@ -259,17 +243,13 @@ export default function BiologyTuitionSouthDelhiPage() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Find biology classes near your locality - Click your area for details
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {areasList.map((area, index) => (
-              <motion.div
+              <div
                 key={area.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <Link href={`/biology-tuition-south-delhi/${area.slug}`}>
                   <div className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-all border-l-4 border-green-600 hover:border-green-600">
                     <div className="flex items-start justify-between">
@@ -281,7 +261,7 @@ export default function BiologyTuitionSouthDelhiPage() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -290,17 +270,13 @@ export default function BiologyTuitionSouthDelhiPage() {
       {/* Why Choose Us */}
       <section className="py-16 md:py-20 bg-green-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Choose Cerebrum for Biology Tuition?
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-4">
             {[
@@ -315,17 +291,13 @@ export default function BiologyTuitionSouthDelhiPage() {
               'Online + Offline Modes',
               'Affordable Fee Structure',
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={item}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4"
+                className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4 animate-fadeInUp"
               >
                 <CheckCircle className="w-6 h-6 text-yellow-300 mr-3 flex-shrink-0" />
                 <span>{item}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -334,12 +306,8 @@ export default function BiologyTuitionSouthDelhiPage() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Start Your Biology Excellence Journey Today!
             </h2>
@@ -370,7 +338,7 @@ export default function BiologyTuitionSouthDelhiPage() {
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

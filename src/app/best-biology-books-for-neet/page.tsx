@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   ExternalLink,
   Target,
@@ -190,25 +189,18 @@ export default function BestBiologyBooksPage() {
       {/* Hero Section */}
       <section className="relative bg-indigo-600 text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"
-            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-            transition={{ duration: 8, repeat: Infinity }}
+          <div
+            className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-fadeInUp"
           />
-          <motion.div
-            className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl"
-            animate={{ scale: [1.2, 1, 1.2], opacity: [0.4, 0.6, 0.4] }}
-            transition={{ duration: 10, repeat: Infinity }}
+          <div
+            className="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-400/20 rounded-full blur-3xl animate-fadeInUp"
           />
         </div>
 
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                 <Medal className="w-4 h-4 text-yellow-300" />
                 <span className="text-sm font-medium">Complete Guide 2026</span>
@@ -251,16 +243,13 @@ export default function BestBiologyBooksPage() {
                   </Button>
                 </Link>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="hidden md:block"
+            <div
+              className="hidden md:block animate-fadeInUp"
             >
               <BookStackIllustration className="w-full max-w-md mx-auto" />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -281,11 +270,8 @@ export default function BestBiologyBooksPage() {
       {/* Book Rankings */}
       <section id="books" className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Top 6 Biology Books for NEET
@@ -293,18 +279,14 @@ export default function BestBiologyBooksPage() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Ranked by importance and usefulness for NEET 2026 preparation
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6 max-w-4xl mx-auto">
             {books.map((book, idx) => {
               const colors = colorMap[book.color]
               return (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
                   className={`bg-white rounded-2xl shadow-lg border ${colors.border} overflow-hidden hover:shadow-xl transition-shadow`}
                 >
                   <div className="flex flex-col md:flex-row">
@@ -411,7 +393,7 @@ export default function BestBiologyBooksPage() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -421,11 +403,8 @@ export default function BestBiologyBooksPage() {
       {/* Study Plan */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Recommended Study Plan
@@ -433,17 +412,13 @@ export default function BestBiologyBooksPage() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               How to use these books effectively for NEET 2026
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {studyPlan.map((phase, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.2 }}
-                className="bg-white rounded-2xl shadow-lg p-6"
+                className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-xl mb-4">
                   {idx + 1}
@@ -464,7 +439,7 @@ export default function BestBiologyBooksPage() {
                   </div>
                 </div>
                 <p className="text-gray-600 text-sm">{phase.focus}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -473,16 +448,13 @@ export default function BestBiologyBooksPage() {
       {/* Expert Tips */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Expert Tips from AIIMS Faculty
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
@@ -507,20 +479,16 @@ export default function BestBiologyBooksPage() {
                 tip: 'Books alone cannot replace guided learning. Expert faculty can explain concepts that books cannot.',
               },
             ].map((tip, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-gray-50 rounded-2xl p-6 border border-blue-100"
+                className="bg-gray-50 rounded-2xl p-6 border border-blue-100 animate-fadeInUp"
               >
                 <div className="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
                   <tip.icon className="w-5 h-5 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{tip.title}</h3>
                 <p className="text-gray-600 text-sm">{tip.tip}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -529,26 +497,19 @@ export default function BestBiologyBooksPage() {
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, idx) => (
-              <motion.div
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+                className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -566,7 +527,7 @@ export default function BestBiologyBooksPage() {
                     <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -575,11 +536,8 @@ export default function BestBiologyBooksPage() {
       {/* CTA */}
       <section className="py-16 bg-indigo-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Books + Expert Guidance = Success
             </h2>
@@ -598,7 +556,7 @@ export default function BestBiologyBooksPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { useParams, useRouter, notFound } from 'next/navigation'
 import {
   ArrowLeft,
@@ -101,11 +100,8 @@ export default function PlanDetailsPage() {
         {/* Hero Section */}
         <section className={`bg-gradient-to-r ${getSeriesGradient(series)} text-white py-16`}>
           <div className="max-w-7xl mx-auto px-6">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
+            <div
+              className="text-center animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-2 mb-6">
                 <Target className="w-5 h-5" />
@@ -156,7 +152,7 @@ export default function PlanDetailsPage() {
                   <div className="text-white/80 text-sm">Batch Size</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -165,23 +161,17 @@ export default function PlanDetailsPage() {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Features & Benefits */}
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <h3 className="text-3xl font-bold text-gray-900 mb-8">
                   What's Included in Plan {planLetter}
                 </h3>
 
                 <div className="space-y-6">
                   {planDetails.features.map((feature, index) => (
-                    <motion.div
+                    <div
                       key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.1 * index }}
-                      className="flex items-start gap-4 p-4 bg-white/60 backdrop-blur-xl rounded-2xl border border-white/20"
+                      className="flex items-start gap-4 p-4 bg-white/60 backdrop-blur-xl rounded-2xl border border-white/20 animate-fadeInUp"
                     >
                       <div
                         className={`w-8 h-8 ${accent === 'purple' ? 'bg-purple-100' : accent === 'blue' ? 'bg-blue-100' : 'bg-green-100'} rounded-full flex items-center justify-center flex-shrink-0`}
@@ -193,7 +183,7 @@ export default function PlanDetailsPage() {
                       <div>
                         <h4 className="font-semibold text-gray-900">{feature}</h4>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
 
@@ -214,14 +204,11 @@ export default function PlanDetailsPage() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Plan Comparison & Details */}
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <h3 className="text-3xl font-bold text-gray-900 mb-8">Detailed Breakdown</h3>
 
                 <div className="space-y-6">
@@ -307,15 +294,12 @@ export default function PlanDetailsPage() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Action Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="mt-16 text-center"
+            <div
+              className="mt-16 text-center animate-fadeInUp"
             >
               <div
                 className={`bg-gradient-to-r ${getSeriesGradient(series)} rounded-3xl p-12 text-white`}
@@ -346,7 +330,7 @@ export default function PlanDetailsPage() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

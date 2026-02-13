@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Trophy,
   Users,
@@ -261,11 +260,8 @@ export default function ASOBCoachingPage() {
       <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center"
+          <div
+            className="text-center animate-fadeInUp"
           >
             <div className="flex items-center justify-center gap-2 mb-4">
               <MapPin className="h-5 w-5 text-green-500" />
@@ -298,14 +294,11 @@ export default function ASOBCoachingPage() {
                 <ArrowRight className="h-5 w-5 ml-2" />
               </Link>
             </div>
-          </motion.div>
+          </div>
 
           {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16"
+          <div
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 animate-fadeInUp"
           >
             {[
               { value: '40+', label: 'ASOB Medalists Trained' },
@@ -318,7 +311,7 @@ export default function ASOBCoachingPage() {
                 <div className="text-gray-400 text-sm mt-1">{stat.label}</div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -335,13 +328,9 @@ export default function ASOBCoachingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {asobPathway.map((stage, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="relative"
+                className="relative animate-fadeInUp"
               >
                 <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 h-full">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
@@ -360,7 +349,7 @@ export default function ASOBCoachingPage() {
                     <ArrowRight className="h-6 w-6 text-gray-300" />
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -379,13 +368,9 @@ export default function ASOBCoachingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {syllabus.map((unit, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow"
+                className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow animate-fadeInUp"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
@@ -404,7 +389,7 @@ export default function ASOBCoachingPage() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -423,20 +408,16 @@ export default function ASOBCoachingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
+                className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 animate-fadeInUp"
               >
                 <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="h-7 w-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -453,13 +434,9 @@ export default function ASOBCoachingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200"
+                className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200 animate-fadeInUp"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
@@ -482,7 +459,7 @@ export default function ASOBCoachingPage() {
                     <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -499,12 +476,8 @@ export default function ASOBCoachingPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
                 className={`relative rounded-2xl p-8 ${
                   plan.popular
                     ? 'bg-white ring-4 ring-yellow-400'
@@ -558,7 +531,7 @@ export default function ASOBCoachingPage() {
                   <MessageCircle className="h-5 w-5 inline mr-2" />
                   Enquire on WhatsApp
                 </button>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -577,17 +550,13 @@ export default function ASOBCoachingPage() {
           </div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="bg-gray-50 rounded-xl p-6"
+                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -656,16 +625,13 @@ export default function ASOBCoachingPage() {
       </section>
 
       {/* Floating WhatsApp Button */}
-      <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 1, type: 'spring' }}
+      <button
         onClick={() => handleWhatsAppClick('floating-button')}
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110 animate-fadeInUp"
         aria-label="Chat on WhatsApp"
       >
         <MessageCircle className="h-6 w-6" />
-      </motion.button>
+      </button>
 
       {/* JSON-LD Schema */}
       <script

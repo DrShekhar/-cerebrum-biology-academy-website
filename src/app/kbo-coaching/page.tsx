@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   MessageCircle,
   BookOpen,
@@ -322,41 +321,36 @@ export default function KBOCoachingPage() {
         <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-20">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              className="max-w-4xl mx-auto text-center"
+            <div
+              className="max-w-4xl mx-auto text-center animate-fadeInUp"
               initial="initial"
               animate="animate"
-              variants={stagger}
             >
-              <motion.div
-                variants={fadeInUp}
-                className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/20 rounded-full px-4 py-2 mb-6"
+              <div
+                className="inline-flex items-center gap-2 bg-yellow-400/10 border border-yellow-400/20 rounded-full px-4 py-2 mb-6 animate-fadeInUp"
               >
                 <Globe className="w-4 h-4 text-yellow-400" />
                 <span className="text-yellow-400 text-sm font-medium">
                   South Korea&apos;s Biology Olympiad
                 </span>
-              </motion.div>
+              </div>
 
-              <motion.h1
-                variants={fadeInUp}
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+              <h1
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fadeInUp"
               >
                 KBO Coaching Online
                 <span className="block text-yellow-400 mt-2">Korean Biology Olympiad</span>
-              </motion.h1>
+              </h1>
 
-              <motion.p
-                variants={fadeInUp}
-                className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
+              <p
+                className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fadeInUp"
               >
                 Expert coaching to help you excel in the Korean Biology Olympiad and qualify for the
                 International Biology Olympiad (IBO). Join South Korea&apos;s top biology students!
-              </motion.p>
+              </p>
 
-              <motion.div
-                variants={fadeInUp}
-                className="flex flex-col sm:flex-row gap-4 justify-center"
+              <div
+                className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp"
               >
                 <button
                   onClick={() => handleWhatsAppClick('hero-cta')}
@@ -372,11 +366,10 @@ export default function KBOCoachingPage() {
                   <BookOpen className="w-5 h-5" />
                   View Syllabus
                 </Link>
-              </motion.div>
+              </div>
 
-              <motion.div
-                variants={fadeInUp}
-                className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6"
+              <div
+                className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 animate-fadeInUp"
               >
                 {[
                   { value: '200+', label: 'Korean Students' },
@@ -391,8 +384,8 @@ export default function KBOCoachingPage() {
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                   </div>
                 ))}
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -412,13 +405,9 @@ export default function KBOCoachingPage() {
             <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 {pathwayStages.map((stage, index) => (
-                  <motion.div
+                  <div
                     key={stage.stage}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="relative"
+                    className="relative animate-fadeInUp"
                   >
                     <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 h-full">
                       <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mb-4">
@@ -435,7 +424,7 @@ export default function KBOCoachingPage() {
                         <ArrowRight className="w-6 h-6 text-gray-300" />
                       </div>
                     )}
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -457,13 +446,9 @@ export default function KBOCoachingPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {syllabusUnits.map((unit, index) => (
-                <motion.div
+                <div
                   key={unit.unit}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
+                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 animate-fadeInUp"
                 >
                   <div className="text-sm font-semibold text-yellow-600 mb-2">{unit.unit}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{unit.title}</h3>
@@ -475,7 +460,7 @@ export default function KBOCoachingPage() {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -505,20 +490,16 @@ export default function KBOCoachingPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {features.map((feature, index) => (
-                <motion.div
+                <div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
+                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 animate-fadeInUp"
                 >
                   <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-yellow-600" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -538,13 +519,9 @@ export default function KBOCoachingPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {testimonials.map((testimonial, index) => (
-                <motion.div
+                <div
                   key={testimonial.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
+                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 animate-fadeInUp"
                 >
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -559,7 +536,7 @@ export default function KBOCoachingPage() {
                       {testimonial.achievement}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -579,12 +556,8 @@ export default function KBOCoachingPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {pricingPlans.map((plan, index) => (
-                <motion.div
+                <div
                   key={plan.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
                   className={`bg-white rounded-xl p-6 shadow-lg border-2 ${
                     plan.popular ? 'border-yellow-400' : 'border-gray-100'
                   } relative`}
@@ -621,7 +594,7 @@ export default function KBOCoachingPage() {
                   >
                     Get Started
                   </button>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -641,13 +614,9 @@ export default function KBOCoachingPage() {
 
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden"
+                  className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden animate-fadeInUp"
                 >
                   <button
                     onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
@@ -665,7 +634,7 @@ export default function KBOCoachingPage() {
                       <p className="text-gray-600">{faq.answer}</p>
                     </div>
                   )}
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -713,16 +682,13 @@ export default function KBOCoachingPage() {
         </section>
 
         {/* Floating WhatsApp Button */}
-        <motion.button
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 1, type: 'spring' }}
+        <button
           onClick={() => handleWhatsAppClick('floating-button')}
-          className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110"
+          className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all hover:scale-110 animate-fadeInUp"
           aria-label="Chat on WhatsApp"
         >
           <MessageCircle className="w-6 h-6" />
-        </motion.button>
+        </button>
       </main>
     </>
   )

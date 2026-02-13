@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -216,11 +215,8 @@ export default function NEETCoachingNorthDelhiPage() {
       {/* Hero Section */}
       <section className="relative bg-indigo-900 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
+          <div
+            className="max-w-4xl mx-auto text-center animate-fadeInUp"
           >
             <span className="inline-block px-4 py-2 bg-indigo-500/20 text-indigo-300 rounded-full text-sm font-medium mb-6">
               #1 NEET Coaching for North Delhi Students
@@ -249,7 +245,7 @@ export default function NEETCoachingNorthDelhiPage() {
                 </a>
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -258,18 +254,14 @@ export default function NEETCoachingNorthDelhiPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
-              <motion.div
+              <div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-6 rounded-xl bg-gray-50"
+                className="text-center p-6 rounded-xl bg-gray-50 animate-fadeInUp"
               >
                 <stat.icon className="w-8 h-8 mx-auto mb-3 text-indigo-600" />
                 <div className="text-3xl font-bold text-navy-900">{stat.value}</div>
                 <div className="text-gray-600 text-sm">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -278,11 +270,8 @@ export default function NEETCoachingNorthDelhiPage() {
       {/* Areas Grid Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
               NEET Coaching for All North Delhi Localities
@@ -291,17 +280,13 @@ export default function NEETCoachingNorthDelhiPage() {
               We serve students from every corner of North Delhi. Find NEET coaching information for
               your area.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {northDelhiAreas.map((area, index) => (
-              <motion.div
+              <div
                 key={area.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-              >
+               className="animate-fadeInUp">
                 <Link href={`/neet-coaching-north-delhi/${area.slug}`}>
                   <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-indigo-200 h-full">
                     <div className="flex items-start justify-between mb-4">
@@ -345,7 +330,7 @@ export default function NEETCoachingNorthDelhiPage() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -354,11 +339,8 @@ export default function NEETCoachingNorthDelhiPage() {
       {/* Why Choose Us Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
               Why North Delhi Students Choose Cerebrum
@@ -366,24 +348,20 @@ export default function NEETCoachingNorthDelhiPage() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Better than local coaching centers with personalized attention and proven results
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-xl p-6 text-center"
+                className="bg-gray-50 rounded-xl p-6 text-center animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-indigo-600" />
                 </div>
                 <h3 className="font-semibold text-navy-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -392,11 +370,8 @@ export default function NEETCoachingNorthDelhiPage() {
       {/* Testimonials Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
               Success Stories from North Delhi
@@ -404,17 +379,13 @@ export default function NEETCoachingNorthDelhiPage() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Hear from students who made the journey from North Delhi to medical colleges
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-sm"
+                className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp"
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -432,7 +403,7 @@ export default function NEETCoachingNorthDelhiPage() {
                   </div>
                   <div className="text-sm text-gray-600">{testimonial.college}</div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -441,30 +412,23 @@ export default function NEETCoachingNorthDelhiPage() {
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
               FAQs for North Delhi Students
             </h2>
-          </motion.div>
+          </div>
 
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-xl p-6"
+                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
               >
                 <h3 className="font-semibold text-navy-900 mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -492,11 +456,8 @@ export default function NEETCoachingNorthDelhiPage() {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Start Your NEET Journey?
             </h2>
@@ -519,7 +480,7 @@ export default function NEETCoachingNorthDelhiPage() {
                 </a>
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </main>

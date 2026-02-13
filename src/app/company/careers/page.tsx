@@ -23,8 +23,6 @@ import {
   BookOpen,
   Zap,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
-
 export default function CareersPage() {
   const [selectedDepartment, setSelectedDepartment] = useState('all')
   const [applicationForm, setApplicationForm] = useState({
@@ -343,11 +341,8 @@ export default function CareersPage() {
       {/* Hero Section */}
       <section className="bg-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center animate-fadeInUp"
           >
             <h1 className="text-5xl font-bold mb-6">
               Join Our Mission to Shape
@@ -376,56 +371,47 @@ export default function CareersPage() {
                 <div className="text-blue-200">Success Rate</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Company Values */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values & Culture</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We foster an environment where passion meets purpose, and every team member
               contributes to student success.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16">
             {companyValues.map((value, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="text-center p-6 bg-gray-50 rounded-2xl hover:bg-blue-50 transition-colors duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center p-6 bg-gray-50 rounded-2xl hover:bg-blue-50 transition-colors duration-300 animate-fadeInUp"
               >
                 <value.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Work Culture Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {workCulture.map((culture, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-gray-50 p-6 rounded-2xl border border-blue-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-50 p-6 rounded-2xl border border-blue-100 animate-fadeInUp"
               >
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{culture.title}</h3>
                 <p className="text-gray-600 text-sm mb-3">{culture.description}</p>
                 <div className="text-blue-600 font-semibold text-sm">{culture.stats}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -434,17 +420,14 @@ export default function CareersPage() {
       {/* Open Positions */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Open Positions</h2>
             <p className="text-xl text-gray-600">
               Find the perfect role to advance your career and make a meaningful impact
             </p>
-          </motion.div>
+          </div>
 
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -476,12 +459,9 @@ export default function CareersPage() {
           {/* Job Listings */}
           <div className="grid lg:grid-cols-2 gap-8">
             {filteredPositions.map((position, index) => (
-              <motion.div
+              <div
                 key={position.id}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-fadeInUp"
               >
                 <div className="p-8">
                   <div className="flex items-start justify-between mb-4">
@@ -536,7 +516,7 @@ export default function CareersPage() {
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -545,31 +525,25 @@ export default function CareersPage() {
       {/* Benefits & Perks */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Benefits & Perks</h2>
             <p className="text-xl text-gray-600">
               We invest in our team's growth, well-being, and happiness
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-gray-50 p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-shadow duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-50 p-8 rounded-2xl border border-blue-100 hover:shadow-lg transition-shadow duration-300 animate-fadeInUp"
               >
                 <benefit.icon className="w-12 h-12 text-blue-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -578,23 +552,17 @@ export default function CareersPage() {
       {/* Application Form */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Ready to Join Us?</h2>
             <p className="text-xl text-gray-600">
               Submit your application and take the first step towards a rewarding career
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="bg-white rounded-3xl shadow-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
           >
             <form onSubmit={handleApplicationSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
@@ -740,7 +708,7 @@ export default function CareersPage() {
                 <span>Submit Application</span>
               </button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </section>
 

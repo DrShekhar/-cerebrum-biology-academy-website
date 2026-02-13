@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   CheckCircle,
   BookOpen,
@@ -128,11 +127,8 @@ export default function BiologyNeetPreparationPage() {
       <section className="relative bg-gradient-to-br from-green-800 via-green-800 to-green-800 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
@@ -185,19 +181,15 @@ export default function BiologyNeetPreparationPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* NEET Biology Topic Weightage */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               NEET Biology Topic-wise Weightage
@@ -205,17 +197,13 @@ export default function BiologyNeetPreparationPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               90 questions from Biology (45 Botany + 45 Zoology) = 360 marks
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             {neetBiologyBreakdown.map((topic, index) => (
-              <motion.div
+              <div
                 key={topic.topic}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg p-4 shadow flex items-center justify-between"
+                className="bg-white rounded-lg p-4 shadow flex items-center justify-between animate-fadeInUp"
               >
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-3 flex-shrink-0" />
@@ -227,7 +215,7 @@ export default function BiologyNeetPreparationPage() {
                     {topic.percentage}
                   </span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -236,12 +224,8 @@ export default function BiologyNeetPreparationPage() {
       {/* Why Our NEET Preparation */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Our NEET Biology Preparation
@@ -249,22 +233,18 @@ export default function BiologyNeetPreparationPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               The proven path to NEET success with expert guidance
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {preparationFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-green-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-green-50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <feature.icon className="w-12 h-12 text-green-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -273,17 +253,13 @@ export default function BiologyNeetPreparationPage() {
       {/* Complete NEET Package */}
       <section className="py-20 bg-green-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Complete NEET Biology Package
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -304,17 +280,13 @@ export default function BiologyNeetPreparationPage() {
               'Last-Minute Tips',
               'Mentorship Support',
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={item}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.03 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg p-4 shadow flex items-center"
+                className="bg-white rounded-lg p-4 shadow flex items-center animate-fadeInUp"
               >
                 <CheckCircle className="w-6 h-6 text-green-600 mr-3 flex-shrink-0" />
                 <span className="text-gray-800 font-medium">{item}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -323,34 +295,26 @@ export default function BiologyNeetPreparationPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg"
+                className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -359,12 +323,8 @@ export default function BiologyNeetPreparationPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your NEET Journey Today</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Join 1,50,000+ successful students who cracked NEET with our expert Biology preparation!
@@ -393,7 +353,7 @@ export default function BiologyNeetPreparationPage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

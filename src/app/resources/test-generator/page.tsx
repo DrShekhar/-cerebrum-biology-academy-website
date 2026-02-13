@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/Button'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   BookOpen,
   Settings,
@@ -543,28 +542,19 @@ export default function TestGeneratorPage() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto">
-        <AnimatePresence mode="wait">
-          {currentStep === 'class' && (
-            <motion.div
+{currentStep === 'class' && (
+            <div
               key="class-selection"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="py-12"
+              className="py-12 animate-fadeInUp"
             >
               <ClassSelection onClassSelect={handleClassSelect} selectedClass={selectedClass} />
-            </motion.div>
+            </div>
           )}
 
           {currentStep === 'configure' && (
-            <motion.div
+            <div
               key="configuration"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="py-12 px-6"
+              className="py-12 px-6 animate-fadeInUp"
             >
               <div className="grid lg:grid-cols-3 gap-8">
                 {/* Main Configuration Panel */}
@@ -949,17 +939,13 @@ export default function TestGeneratorPage() {
                   )}
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {currentStep === 'preview' && generatedTest && (
-            <motion.div
+            <div
               key="preview"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="py-12 px-6"
+              className="py-12 px-6 animate-fadeInUp"
             >
               <div className="max-w-4xl mx-auto">
                 <div className="bg-white rounded-3xl shadow-lg p-8">
@@ -1023,7 +1009,7 @@ export default function TestGeneratorPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {currentStep === 'test' && generatedTest && (
@@ -1045,8 +1031,7 @@ export default function TestGeneratorPage() {
               onBackToTests={handleResultsClose}
             />
           )}
-        </AnimatePresence>
-      </div>
+</div>
     </div>
   )
 }

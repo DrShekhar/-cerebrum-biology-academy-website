@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
@@ -133,11 +132,8 @@ export default function BestBiologyTeacherOnlinePage() {
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
                 <Award className="mr-1 inline h-4 w-4" />
                 AIIMS-Trained Faculty
@@ -164,12 +160,9 @@ export default function BestBiologyTeacherOnlinePage() {
                   Know More
                 </Link>
               </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative hidden lg:block"
+            </div>
+            <div
+              className="relative hidden lg:block animate-fadeInUp"
             >
               <div className="relative h-[400px] w-full overflow-hidden rounded-2xl shadow-2xl">
                 <Image
@@ -195,7 +188,7 @@ export default function BestBiologyTeacherOnlinePage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -205,17 +198,14 @@ export default function BestBiologyTeacherOnlinePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {teacherCredentials.map((cred, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 text-center shadow-lg"
+                className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <cred.icon className="mx-auto mb-3 h-10 w-10 text-green-600" />
                 <div className="text-2xl font-bold text-gray-900">{cred.title}</div>
                 <div className="text-sm text-gray-600">{cred.desc}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -224,30 +214,25 @@ export default function BestBiologyTeacherOnlinePage() {
       {/* Why Best Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Why We&apos;re Considered the Best Online Biology Teacher
             </h2>
             <p className="text-lg text-gray-600">Numbers that speak for our teaching excellence</p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {whyBestTeacher.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <p className="text-sm font-medium text-green-600">{item.metric}</p>
                 <p className="my-2 text-3xl font-bold text-gray-900">{item.value}</p>
                 <p className="text-gray-600">{item.detail}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -257,7 +242,7 @@ export default function BestBiologyTeacherOnlinePage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}>
+            <div className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-gray-900">Our Teaching Methodology</h2>
               <p className="mb-6 text-gray-600">
                 What makes us the best online biology teacher? Our unique teaching approach that
@@ -274,11 +259,9 @@ export default function BestBiologyTeacherOnlinePage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="relative"
+            </div>
+            <div
+              className="relative animate-fadeInUp"
             >
               <div className="relative h-[400px] w-full overflow-hidden rounded-2xl shadow-xl">
                 <Image
@@ -288,7 +271,7 @@ export default function BestBiologyTeacherOnlinePage() {
                   className="object-cover"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -296,10 +279,8 @@ export default function BestBiologyTeacherOnlinePage() {
       {/* All India Reach */}
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 py-16 text-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-center"
+          <div
+            className="text-center animate-fadeInUp"
           >
             <Globe className="mx-auto mb-4 h-12 w-12" />
             <h2 className="mb-4 text-3xl font-bold">Teaching Students Across India & Abroad</h2>
@@ -327,33 +308,28 @@ export default function BestBiologyTeacherOnlinePage() {
                 </span>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+                className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -397,7 +373,7 @@ export default function BestBiologyTeacherOnlinePage() {
       {/* CTA */}
       <section className="bg-green-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">Experience the Best Biology Teaching Online</h2>
             <p className="mb-8 text-xl text-green-100">
               Book a free demo class and see the difference yourself!
@@ -417,7 +393,7 @@ export default function BestBiologyTeacherOnlinePage() {
                 Call: +91 88264 44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   MapPin,
   Trophy,
@@ -141,10 +140,8 @@ export default function BiologyTutorsNearMePage() {
       {/* Location Prompt Modal */}
       {showLocationPrompt && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white rounded-2xl p-8 max-w-lg w-full shadow-2xl"
+          <div
+            className="bg-white rounded-2xl p-8 max-w-lg w-full shadow-2xl animate-fadeInUp"
           >
             <div className="text-center">
               <MapPin className="w-16 h-16 text-green-600 mx-auto mb-4" />
@@ -171,7 +168,7 @@ export default function BiologyTutorsNearMePage() {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       )}
 
@@ -179,11 +176,8 @@ export default function BiologyTutorsNearMePage() {
       <section className="relative bg-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
@@ -226,7 +220,7 @@ export default function BiologyTutorsNearMePage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -236,12 +230,8 @@ export default function BiologyTutorsNearMePage() {
           {/* Offline Centers for Delhi NCR Users */}
           <section className="py-20 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4">
-              <motion.div
-                className="text-center mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+              <div
+                className="text-center mb-16 animate-fadeInUp"
               >
                 <div className="inline-flex items-center bg-green-100 px-4 py-2 rounded-full text-green-700 font-medium mb-4">
                   <CheckCircle className="w-5 h-5 mr-2" />
@@ -254,17 +244,13 @@ export default function BiologyTutorsNearMePage() {
                   Experience personal mentorship with Dr. Shekhar Singh. Small batches, focused
                   learning, and transformational results.
                 </p>
-              </motion.div>
+              </div>
 
               <div className="grid md:grid-cols-2 gap-8">
                 {offlineCenters.map((center, index) => (
-                  <motion.div
+                  <div
                     key={center.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white rounded-xl p-8 shadow-lg"
+                    className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -312,7 +298,7 @@ export default function BiologyTutorsNearMePage() {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -334,12 +320,8 @@ export default function BiologyTutorsNearMePage() {
           {/* Strong Relocation Pitch for Outside Delhi NCR Users */}
           <section className="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
             <div className="max-w-7xl mx-auto px-4">
-              <motion.div
-                className="text-center mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+              <div
+                className="text-center mb-16 animate-fadeInUp"
               >
                 <div className="inline-flex items-center bg-orange-100 px-4 py-2 rounded-full text-orange-700 font-medium mb-4">
                   <Plane className="w-5 h-5 mr-2" />
@@ -354,22 +336,18 @@ export default function BiologyTutorsNearMePage() {
                   Delhi NCR for 6-12 months and cracked NEET with top ranks. The personal mentorship
                   with Dr. Shekhar Singh makes all the difference.
                 </p>
-              </motion.div>
+              </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                 {relocationBenefits.map((benefit, index) => (
-                  <motion.div
+                  <div
                     key={benefit.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white rounded-xl p-6 shadow-lg text-center"
+                    className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
                   >
                     <benefit.icon className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                     <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
                     <p className="text-gray-600 text-sm">{benefit.description}</p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -380,13 +358,9 @@ export default function BiologyTutorsNearMePage() {
                 </h3>
                 <div className="grid md:grid-cols-3 gap-6">
                   {successStories.map((story, index) => (
-                    <motion.div
+                    <div
                       key={story.name}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="bg-orange-50 rounded-xl p-6"
+                      className="bg-orange-50 rounded-xl p-6 animate-fadeInUp"
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-12 h-12 bg-orange-200 rounded-full flex items-center justify-center">
@@ -398,7 +372,7 @@ export default function BiologyTutorsNearMePage() {
                         </div>
                       </div>
                       <p className="text-gray-700 text-sm italic">&quot;{story.story}&quot;</p>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -420,12 +394,8 @@ export default function BiologyTutorsNearMePage() {
           {/* Online Regions for Non-Delhi Users */}
           <section className="py-20 bg-white">
             <div className="max-w-6xl mx-auto px-4">
-              <motion.div
-                className="text-center mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+              <div
+                className="text-center mb-12 animate-fadeInUp"
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   Can&apos;t Relocate? Join Online from Your Region
@@ -434,17 +404,13 @@ export default function BiologyTutorsNearMePage() {
                   Our online program serves students across India and overseas with region-specific
                   timings.
                 </p>
-              </motion.div>
+              </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 {onlineRegions.map((region, index) => (
-                  <motion.div
+                  <div
                     key={region.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-blue-50 rounded-xl p-6 hover:shadow-lg transition"
+                    className="bg-blue-50 rounded-xl p-6 hover:shadow-lg transition animate-fadeInUp"
                   >
                     <Globe className="w-10 h-10 text-blue-600 mb-4" />
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{region.name}</h3>
@@ -456,7 +422,7 @@ export default function BiologyTutorsNearMePage() {
                       Explore Program
                       <Navigation className="w-4 h-4 ml-1" />
                     </Link>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -521,34 +487,26 @@ export default function BiologyTutorsNearMePage() {
       {/* FAQs Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg"
+                className="bg-white rounded-xl p-8 shadow-lg animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-blue-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -557,12 +515,8 @@ export default function BiologyTutorsNearMePage() {
       {/* CTA Section */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Find the Best Biology Tutor Today
             </h2>
@@ -593,7 +547,7 @@ export default function BiologyTutorsNearMePage() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

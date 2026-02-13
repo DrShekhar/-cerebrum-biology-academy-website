@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Target,
   Clock,
@@ -246,11 +245,8 @@ export default function EarlyNeetPreparationPage() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
                 <Lightbulb className="w-5 h-5 mr-2" />
                 Smart Parents, Successful Students
@@ -290,20 +286,17 @@ export default function EarlyNeetPreparationPage() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {successStats.map((metric, index) => (
-                  <motion.div
+                  <div
                     key={metric.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20"
+                    className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 animate-fadeInUp"
                   >
                     <metric.icon className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                     <div className="text-2xl font-bold">{metric.label}</div>
                     <div className="text-sm opacity-80">{metric.sublabel}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -311,12 +304,8 @@ export default function EarlyNeetPreparationPage() {
       {/* Research & Data Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               The Data Speaks: Early Start = Higher Success
@@ -325,17 +314,13 @@ export default function EarlyNeetPreparationPage() {
               Not just our opinion - backed by research and analysis of thousands of NEET aspirants
               over the years.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6 max-w-4xl mx-auto">
             {researchFindings.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100"
+                className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100 animate-fadeInUp"
               >
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -346,7 +331,7 @@ export default function EarlyNeetPreparationPage() {
                     <p className="text-sm text-gray-600 italic">{item.source}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -355,12 +340,8 @@ export default function EarlyNeetPreparationPage() {
       {/* Benefits of Early Start */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               4 Compelling Reasons to Start NEET Preparation Early
@@ -369,17 +350,13 @@ export default function EarlyNeetPreparationPage() {
               Understanding why early preparation is the smartest investment in your child's medical
               career.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {earlyStartBenefits.map((benefit, index) => (
-              <motion.div
+              <div
                 key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div
@@ -393,7 +370,7 @@ export default function EarlyNeetPreparationPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -402,12 +379,8 @@ export default function EarlyNeetPreparationPage() {
       {/* Program Comparison */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Choose the Right Foundation Program for Your Child
@@ -416,16 +389,12 @@ export default function EarlyNeetPreparationPage() {
               Both programs lead to NEET success. The choice depends on your child's current class
               and readiness level.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {programComparison.map((program, index) => (
-              <motion.div
+              <div
                 key={program.program}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
                 className={`bg-gradient-to-br from-${program.color}-50 to-${program.color}-100 rounded-xl p-8 border-2 border-${program.color}-200 shadow-lg hover:shadow-xl transition-all`}
               >
                 <div className="text-center mb-6">
@@ -469,16 +438,12 @@ export default function EarlyNeetPreparationPage() {
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mt-12 animate-fadeInUp"
           >
             <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-xl p-8 max-w-3xl mx-auto">
               <AlertCircle className="w-12 h-12 mx-auto mb-4 text-purple-600" />
@@ -497,19 +462,15 @@ export default function EarlyNeetPreparationPage() {
                 Book Free Counseling Session
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Parent FAQs */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Common Parent Questions About Early NEET Preparation
@@ -517,24 +478,20 @@ export default function EarlyNeetPreparationPage() {
             <p className="text-xl text-gray-600">
               Addressing your concerns with honest, research-backed answers.
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {parentFAQs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow animate-fadeInUp"
               >
                 <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-start">
                   <AlertCircle className="w-5 h-5 mr-3 text-indigo-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-600 leading-relaxed ml-8">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -546,12 +503,8 @@ export default function EarlyNeetPreparationPage() {
       {/* Final CTA */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Give Your Child the Gift of Early Preparation
             </h2>
@@ -600,7 +553,7 @@ export default function EarlyNeetPreparationPage() {
                 <span>Research-Backed Approach</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

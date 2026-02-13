@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
@@ -222,11 +221,8 @@ export default function BiologyTutorOnlinePage() {
 
           <div className="container relative mx-auto px-4">
             <div className="grid items-center gap-12 md:grid-cols-2">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-medium backdrop-blur-sm">
                   Personalized Learning Experience
                 </span>
@@ -275,13 +271,10 @@ export default function BiologyTutorOnlinePage() {
                     WhatsApp Us
                   </button>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative hidden md:block"
+              <div
+                className="relative hidden md:block animate-fadeInUp"
               >
                 <div className="relative h-[400px] w-full overflow-hidden rounded-2xl shadow-2xl">
                   <Image
@@ -299,7 +292,7 @@ export default function BiologyTutorOnlinePage() {
                     <p className="text-xs text-gray-600">- Priya S., NEET 2024</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -307,11 +300,8 @@ export default function BiologyTutorOnlinePage() {
         {/* Why Online Tuition Section */}
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Why Choose Online Biology Tuition?
@@ -321,22 +311,18 @@ export default function BiologyTutorOnlinePage() {
                 traditional tuition can&apos;t match. Learn from India&apos;s best biology tutor
                 from anywhere.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {tutorFeatures.map((feature, index) => (
-                <motion.div
+                <div
                   key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-xl border border-gray-100 bg-white p-6 shadow-lg transition hover:shadow-xl"
+                  className="rounded-xl border border-gray-100 bg-white p-6 shadow-lg transition hover:shadow-xl animate-fadeInUp"
                 >
                   <div className="mb-4 text-4xl">{feature.icon}</div>
                   <h3 className="mb-2 text-xl font-bold text-gray-900">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -345,11 +331,8 @@ export default function BiologyTutorOnlinePage() {
         {/* Tutoring Options Section */}
         <section className="bg-gradient-to-b from-blue-50 to-white py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Online Biology Tuition Options
@@ -357,16 +340,12 @@ export default function BiologyTutorOnlinePage() {
               <p className="mx-auto max-w-3xl text-lg text-gray-600">
                 Choose the tuition format that works best for your learning style and budget
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-8 md:grid-cols-3">
               {tutoringOptions.map((option, index) => (
-                <motion.div
+                <div
                   key={option.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
                   className={`rounded-2xl bg-white p-8 shadow-xl ${index === 0 ? 'ring-2 ring-blue-500' : ''}`}
                 >
                   {index === 0 && (
@@ -401,7 +380,7 @@ export default function BiologyTutorOnlinePage() {
                   >
                     Start Free Demo
                   </Link>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -410,11 +389,8 @@ export default function BiologyTutorOnlinePage() {
         {/* Comparison Section */}
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Online Biology Tuition vs Home Tutor
@@ -423,13 +399,10 @@ export default function BiologyTutorOnlinePage() {
                 See why more students are choosing online biology tuition over traditional home
                 tutors
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0"
+            <div
+              className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 animate-fadeInUp"
             >
               <table className="w-full min-w-[500px] md:min-w-[600px] rounded-xl bg-white shadow-lg text-sm md:text-base">
                 <thead>
@@ -451,7 +424,7 @@ export default function BiologyTutorOnlinePage() {
                   ))}
                 </tbody>
               </table>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -459,11 +432,8 @@ export default function BiologyTutorOnlinePage() {
         <section className="bg-gradient-to-r from-blue-600 to-blue-600 py-16 text-white">
           <div className="container mx-auto px-4">
             <div className="grid items-center gap-12 md:grid-cols-2">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-medium">
                   For NRI Students
                 </span>
@@ -509,13 +479,10 @@ export default function BiologyTutorOnlinePage() {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="relative"
+              <div
+                className="relative animate-fadeInUp"
               >
                 <div className="relative h-[350px] w-full overflow-hidden rounded-2xl shadow-2xl">
                   <Image
@@ -525,7 +492,7 @@ export default function BiologyTutorOnlinePage() {
                     className="object-cover"
                   />
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -533,11 +500,8 @@ export default function BiologyTutorOnlinePage() {
         {/* FAQ Section */}
         <section className="bg-gray-50 py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Frequently Asked Questions
@@ -545,21 +509,17 @@ export default function BiologyTutorOnlinePage() {
               <p className="mx-auto max-w-3xl text-lg text-gray-600">
                 Common questions about online biology tuition
               </p>
-            </motion.div>
+            </div>
 
             <div className="mx-auto max-w-3xl space-y-4">
               {faqSchema.mainEntity.map((faq, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-xl bg-white p-6 shadow-md"
+                  className="rounded-xl bg-white p-6 shadow-md animate-fadeInUp"
                 >
                   <h3 className="mb-3 text-lg font-bold text-gray-900">{faq.name}</h3>
                   <p className="text-gray-600">{faq.acceptedAnswer.text}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -568,16 +528,13 @@ export default function BiologyTutorOnlinePage() {
         {/* Internal Links Section */}
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div
+              className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Explore More Options
               </h2>
-            </motion.div>
+            </div>
 
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {[
@@ -638,11 +595,8 @@ export default function BiologyTutorOnlinePage() {
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-blue-600 py-16">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
                 Start Your Online Biology Tuition Today
               </h2>
@@ -663,7 +617,7 @@ export default function BiologyTutorOnlinePage() {
                   View Fee Structure
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>
