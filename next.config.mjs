@@ -1216,7 +1216,7 @@ const nextConfig = {
       },
       {
         source: '/biology-classes-biology-tuition-ryan-international',
-        destination: '/biology-tuition-ryan-international',
+        destination: '/biology-classes-rohini',
         permanent: true,
       },
       {
