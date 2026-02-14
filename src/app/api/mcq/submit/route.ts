@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { rateLimit } from '@/lib/rateLimit'
 import {
   calculateXPForAnswer,
   getLevelProgress,
@@ -41,6 +42,21 @@ async function safeDbOperation<T>(
 // POST /api/mcq/submit - Submit an answer
 export async function POST(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 60, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': String(rateLimitResult.limit),
+            'X-RateLimit-Remaining': String(rateLimitResult.remaining),
+            'X-RateLimit-Reset': String(rateLimitResult.reset),
+          },
+        }
+      )
+    }
+
     const body = await request.json()
     const submission: AnswerSubmission & {
       freeUserId?: string
@@ -160,6 +176,20 @@ export async function POST(request: NextRequest) {
         }
       }
 
+      if (!options || options.length === 0) {
+        console.error(
+          `Normalization failed for question ${questionId}: options array is empty or null`
+        )
+        return NextResponse.json(
+          {
+            success: false,
+            error: 'Could not verify answer. Please try again.',
+            data: { normalizationFailed: true },
+          },
+          { status: 500 }
+        )
+      }
+
       // Find the index of the correct answer text in options
       const correctIndex = options.findIndex(
         (opt) => opt.toLowerCase().trim() === correctAnswer.toLowerCase().trim()
@@ -167,6 +197,18 @@ export async function POST(request: NextRequest) {
 
       if (correctIndex !== -1 && correctIndex < 4) {
         normalizedCorrectAnswer = validLetters[correctIndex]
+      } else {
+        console.error(
+          `Normalization failed for question ${questionId}: could not find matching option for correctAnswer "${correctAnswer}" in options [${options.join(', ')}]`
+        )
+        return NextResponse.json(
+          {
+            success: false,
+            error: 'Could not verify answer. Please try again.',
+            data: { normalizationFailed: true },
+          },
+          { status: 500 }
+        )
       }
     }
 

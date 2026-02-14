@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { rateLimit } from '@/lib/rateLimit'
 import type { MCQQuestion, QuestionFilter, QuestionResponse } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
 
@@ -38,6 +39,21 @@ async function safeCommunityQuery<T>(queryFn: () => Promise<T>, defaultValue: T)
 // GET /api/mcq/questions - Fetch questions with filtering
 export async function GET(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 100, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': String(rateLimitResult.limit),
+            'X-RateLimit-Remaining': String(rateLimitResult.remaining),
+            'X-RateLimit-Reset': String(rateLimitResult.reset),
+          },
+        }
+      )
+    }
+
     const { searchParams } = new URL(request.url)
 
     // Handle fetching by specific IDs (for daily challenges)

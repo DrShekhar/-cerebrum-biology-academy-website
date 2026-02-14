@@ -1,9 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { rateLimit } from '@/lib/rateLimit'
 
 // GET /api/mcq/bookmarks - Get user's bookmarked questions
 export async function GET(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 100, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': String(rateLimitResult.limit),
+            'X-RateLimit-Remaining': String(rateLimitResult.remaining),
+            'X-RateLimit-Reset': String(rateLimitResult.reset),
+          },
+        }
+      )
+    }
+
     const { searchParams } = new URL(request.url)
     const freeUserId = searchParams.get('freeUserId')
     const limit = parseInt(searchParams.get('limit') || '20')
@@ -69,6 +85,21 @@ export async function GET(request: NextRequest) {
 // POST /api/mcq/bookmarks - Add a bookmark
 export async function POST(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 100, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': String(rateLimitResult.limit),
+            'X-RateLimit-Remaining': String(rateLimitResult.remaining),
+            'X-RateLimit-Reset': String(rateLimitResult.reset),
+          },
+        }
+      )
+    }
+
     const body = await request.json()
     const { freeUserId, questionId, note } = body
 
@@ -129,6 +160,21 @@ export async function POST(request: NextRequest) {
 // DELETE /api/mcq/bookmarks - Remove a bookmark
 export async function DELETE(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 100, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': String(rateLimitResult.limit),
+            'X-RateLimit-Remaining': String(rateLimitResult.remaining),
+            'X-RateLimit-Reset': String(rateLimitResult.reset),
+          },
+        }
+      )
+    }
+
     const { searchParams } = new URL(request.url)
     const freeUserId = searchParams.get('freeUserId')
     const questionId = searchParams.get('questionId')

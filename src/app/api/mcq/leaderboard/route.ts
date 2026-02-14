@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { rateLimit } from '@/lib/rateLimit'
 import type { LeaderboardPeriod } from '@/generated/prisma'
 import type { Leaderboard, LeaderboardEntry } from '@/lib/mcq/types'
 
@@ -30,6 +31,21 @@ function getEmptyLeaderboard(
 
 export async function GET(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 100, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': String(rateLimitResult.limit),
+            'X-RateLimit-Remaining': String(rateLimitResult.remaining),
+            'X-RateLimit-Reset': String(rateLimitResult.reset),
+          },
+        }
+      )
+    }
+
     const searchParams = request.nextUrl.searchParams
     const period = (searchParams.get('period') || 'WEEKLY') as LeaderboardPeriod
     const freeUserId = searchParams.get('freeUserId')

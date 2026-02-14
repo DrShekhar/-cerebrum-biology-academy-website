@@ -54,7 +54,8 @@ export default function NEETBiologyMCQPage() {
   // Content Source State (new tab-based UI)
   const [contentSource, setContentSource] = useState<ContentSource>('all')
 
-  // NCERT Filter State (simplified - no class filter)
+  // NCERT Filter State
+  const [selectedNcertClass, setSelectedNcertClass] = useState<number | null>(null)
   const [selectedNeetWeightage, setSelectedNeetWeightage] = useState<string | null>(null)
   const [hasDiagramOnly, setHasDiagramOnly] = useState(false)
 
@@ -106,10 +107,11 @@ export default function NEETBiologyMCQPage() {
   const loadAnsweredIdsFromStorage = useCallback(() => {
     try {
       const key = getAnsweredIdsStorageKey()
-      const stored = localStorage.getItem(key)
-      if (stored) {
-        const ids = JSON.parse(stored) as string[]
-        return new Set(ids)
+      const raw = localStorage.getItem(key)
+      if (raw) {
+        const stored = JSON.parse(raw)
+        const ids = Array.isArray(stored) ? stored : stored.ids
+        return new Set<string>(ids)
       }
     } catch (err) {
       console.error('Failed to load answered IDs from storage:', err)
@@ -124,9 +126,16 @@ export default function NEETBiologyMCQPage() {
       const saveTask = () => {
         try {
           const key = getAnsweredIdsStorageKey()
-          localStorage.setItem(key, JSON.stringify(Array.from(ids)))
+          localStorage.setItem(
+            key,
+            JSON.stringify({ ids: Array.from(ids), updatedAt: Date.now() })
+          )
         } catch (err) {
-          console.error('Failed to save answered IDs to storage:', err)
+          if (err instanceof DOMException && err.name === 'QuotaExceededError') {
+            console.error('localStorage quota exceeded, skipping save')
+          } else {
+            console.error('Failed to save answered IDs to storage:', err)
+          }
         }
       }
       // Use requestIdleCallback for better performance, fallback to setTimeout
@@ -138,6 +147,33 @@ export default function NEETBiologyMCQPage() {
     },
     [getAnsweredIdsStorageKey]
   )
+
+  // Cleanup old mcq localStorage entries on mount
+  useEffect(() => {
+    function cleanupOldMcqStorage() {
+      const MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000 // 30 days
+      const now = Date.now()
+      for (let i = localStorage.length - 1; i >= 0; i--) {
+        const key = localStorage.key(i)
+        if (key?.startsWith('mcq_answered_ids_')) {
+          try {
+            const data = JSON.parse(localStorage.getItem(key) || '')
+            if (!Array.isArray(data) && data.updatedAt && now - data.updatedAt > MAX_AGE_MS) {
+              localStorage.removeItem(key)
+            }
+          } catch {
+            /* skip invalid entries */
+          }
+        }
+      }
+    }
+
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(cleanupOldMcqStorage)
+    } else {
+      setTimeout(cleanupOldMcqStorage, 0)
+    }
+  }, [])
 
   // Helper to reorder options so "All of the above" type options are always last (option D)
   const reorderOptionsForAllOfTheAbove = useCallback((question: MCQQuestion): MCQQuestion => {

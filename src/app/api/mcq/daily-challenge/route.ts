@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { rateLimit } from '@/lib/rateLimit'
 import type { DailyChallenge, DailyChallengeResult } from '@/lib/mcq/types'
 import { XP_REWARDS } from '@/lib/mcq/types'
 
@@ -16,6 +17,21 @@ function isTableNotExistError(error: unknown): boolean {
 // GET - Fetch today's daily challenge
 export async function GET(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, { maxRequests: 50, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': String(rateLimitResult.limit),
+            'X-RateLimit-Remaining': String(rateLimitResult.remaining),
+            'X-RateLimit-Reset': String(rateLimitResult.reset),
+          },
+        }
+      )
+    }
+
     const searchParams = request.nextUrl.searchParams
     const freeUserId = searchParams.get('freeUserId')
 
