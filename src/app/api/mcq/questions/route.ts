@@ -69,6 +69,11 @@ export async function GET(request: NextRequest) {
       ncertChapter?: number
       neetWeightage?: string
       hasDiagram?: boolean
+      isOlympiad?: boolean
+      olympiadLevel?: string
+      campbellChapter?: number
+      campbellUnit?: number
+      conceptualDepth?: string
     } = {
       topic: searchParams.get('topic') || undefined,
       chapter: searchParams.get('chapter') || undefined,
@@ -88,6 +93,12 @@ export async function GET(request: NextRequest) {
       neetWeightage: searchParams.get('neetWeightage') || undefined,
       // Diagram filtering
       hasDiagram: searchParams.get('hasDiagram') === 'true' || undefined,
+      // Olympiad filtering
+      isOlympiad: searchParams.get('isOlympiad') === 'true' || undefined,
+      olympiadLevel: searchParams.get('olympiadLevel') || undefined,
+      campbellChapter: searchParams.get('campbellChapter')
+        ? parseInt(searchParams.get('campbellChapter')!)
+        : undefined,
     }
 
     const excludeIdsParam = searchParams.get('excludeIds')
@@ -137,6 +148,16 @@ export async function GET(request: NextRequest) {
       officialWhere.question_diagrams = {
         some: {},
       }
+    }
+    // Olympiad filtering
+    if (filters.isOlympiad) {
+      officialWhere.isOlympiad = true
+    }
+    if (filters.olympiadLevel) {
+      officialWhere.olympiadLevel = filters.olympiadLevel
+    }
+    if (filters.campbellChapter) {
+      officialWhere.campbellChapter = filters.campbellChapter
     }
 
     // Build where clause for community questions
