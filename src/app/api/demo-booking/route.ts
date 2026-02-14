@@ -126,7 +126,7 @@ const rateLimitStoreFallback = new Map<string, { count: number; resetTime: numbe
 const spamDetectionStoreFallback = new Map<string, { submissions: number[]; blocked: boolean }>()
 
 // Helper: Get default counselor for auto-assignment (round-robin or least loaded)
-async function getDefaultCounselorId(tx: typeof prisma): Promise<string> {
+async function getDefaultCounselorId(tx: typeof prisma): Promise<string | null> {
   // Find active counselors ordered by least active leads
   const counselor = await tx.users.findFirst({
     where: {
@@ -148,7 +148,7 @@ async function getDefaultCounselorId(tx: typeof prisma): Promise<string> {
       select: { id: true },
     })
     if (admin) return admin.id
-    throw new Error('No counselor or admin available for lead assignment')
+    return null
   }
 
   return counselor.id
