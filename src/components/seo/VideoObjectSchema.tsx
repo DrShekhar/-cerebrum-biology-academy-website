@@ -104,20 +104,20 @@ export function VideoObjectSchema({
     },
     ...(interactionStatistic && {
       interactionStatistic: [
-        ...(interactionStatistic.watchCount && [
+        ...(interactionStatistic.watchCount ? [
           {
             '@type': 'InteractionCounter',
             interactionType: 'https://schema.org/WatchAction',
             userInteractionCount: interactionStatistic.watchCount,
           },
-        ]),
-        ...(interactionStatistic.likeCount && [
+        ] : []),
+        ...(interactionStatistic.likeCount ? [
           {
             '@type': 'InteractionCounter',
             interactionType: 'https://schema.org/LikeAction',
             userInteractionCount: interactionStatistic.likeCount,
           },
-        ]),
+        ] : []),
       ],
     }),
   }
