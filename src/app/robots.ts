@@ -5,12 +5,12 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: ['/', '/_next/static/'],
+        allow: '/',
         disallow: [
           '/dashboard/',
           '/api/',
           '/auth/',
-          '/_next/image',
+          '/_next/',
           '/admin/',
           '/student/',
           '/analytics/',
@@ -23,8 +23,8 @@ export default function robots(): MetadataRoute.Robots {
           '/boards/',
           '/portal/',
           '/counselor/',
-          // Block CSS deployment files with ?dpl= hashes (150+ crawl waste URLs)
-          '/_next/static/css/',
+          '/manifest.json',
+          '/blog/feed.xml',
           // Block query parameter crawl waste (search, filters, etc.)
           '/blog?',
           '/courses?',
@@ -49,12 +49,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'Googlebot',
         allow: ['/', '/testimonials/', '/video-sitemap.xml'],
-        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/static/css/', '/blog?', '/courses?'],
+        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/', '/manifest.json', '/blog/feed.xml', '/blog?', '/courses?'],
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
-        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/static/css/', '/blog?', '/courses?'],
+        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/', '/manifest.json', '/blog/feed.xml', '/blog?', '/courses?'],
       },
       // AI Search Engine Crawlers - Allow for GEO (Generative Engine Optimization)
       {

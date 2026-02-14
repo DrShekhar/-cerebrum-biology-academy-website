@@ -23,24 +23,36 @@ function BlogLoadingSkeleton() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'NEET Biology Blog | Study Tips & Preparation Strategies',
-  description:
-    'Expert NEET biology preparation tips, study strategies, and educational content by AIIMS faculty. Master biology concepts for medical entrance success.',
-  keywords:
-    'NEET biology blog, medical entrance preparation, biology study tips, NEET strategy, AIIMS faculty guidance',
-  openGraph: {
-    title: 'NEET Biology Blog | Expert Study Tips & Strategies',
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>
+}): Promise<Metadata> {
+  const params = await searchParams
+  const hasQueryParams = Object.keys(params).length > 0
+
+  return {
+    title: 'NEET Biology Blog | Study Tips & Preparation Strategies',
     description:
-      'Master NEET Biology with expert tips, preparation strategies, and study guides by AIIMS faculty.',
-    images: ['/og-image.jpg'],
-  },
-  alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com/blog',
-    types: {
-      'application/rss+xml': '/blog/feed.xml',
+      'Expert NEET biology preparation tips, study strategies, and educational content by AIIMS faculty. Master biology concepts for medical entrance success.',
+    keywords:
+      'NEET biology blog, medical entrance preparation, biology study tips, NEET strategy, AIIMS faculty guidance',
+    openGraph: {
+      title: 'NEET Biology Blog | Expert Study Tips & Strategies',
+      description:
+        'Master NEET Biology with expert tips, preparation strategies, and study guides by AIIMS faculty.',
+      images: ['/og-image.jpg'],
     },
-  },
+    alternates: {
+      canonical: 'https://cerebrumbiologyacademy.com/blog',
+      types: {
+        'application/rss+xml': '/blog/feed.xml',
+      },
+    },
+    ...(hasQueryParams && {
+      robots: { index: false, follow: true },
+    }),
+  }
 }
 
 export default function BlogPage() {
