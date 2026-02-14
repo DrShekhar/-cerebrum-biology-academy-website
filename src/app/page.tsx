@@ -5,6 +5,7 @@ import { HeroSection } from '@/components/layout/HeroSection'
 import { realTestimonials } from '@/data/realTestimonials'
 import { HomePageClient } from '@/components/home/HomePageClient'
 import { SpeakableSchema } from '@/components/seo/SpeakableSchema'
+import { VideoObjectSchema } from '@/components/seo/VideoObjectSchema'
 
 // Loading skeleton component for consistent loading states
 const LoadingSkeleton = ({ height = 'h-96' }: { height?: string }) => (
@@ -77,6 +78,18 @@ export const revalidate = 3600
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      {/* Video Schema for Sadhna Sirin Topper Testimonial */}
+      <VideoObjectSchema
+        name="Sadhna Sirin - Delhi NCR Topper NEET 2023 | Cerebrum Biology Academy"
+        description="Sadhna Sirin shares her NEET 2023 success story, scoring 695 out of 720 marks with guidance from Dr. Shekhar C Singh at Cerebrum Biology Academy. Watch her journey from preparation strategy to becoming Delhi-NCR's top NEET scorer."
+        thumbnailUrl="https://i.ytimg.com/vi/bk6wQCh6b9w/hqdefault.jpg"
+        uploadDate="2023-07-15"
+        duration="PT5M30S"
+        contentUrl="https://www.youtube.com/watch?v=bk6wQCh6b9w"
+        embedUrl="https://www.youtube.com/embed/bk6wQCh6b9w"
+        interactionStatistic={{ watchCount: 5000 }}
+      />
+
       {/* Speakable Schema for Voice Search Optimization */}
       <SpeakableSchema
         headline="Best NEET Biology Coaching Delhi NCR | Cerebrum Academy"
