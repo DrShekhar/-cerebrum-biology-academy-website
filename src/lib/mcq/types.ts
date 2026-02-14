@@ -15,8 +15,22 @@ import type {
 // QUESTION TYPES
 // ============================================
 
+export type QuestionType =
+  | 'MCQ'
+  | 'DIAGRAM'
+  | 'TRUE_FALSE'
+  | 'FILL_BLANK'
+  | 'MULTIPLE_SELECT'
+  | 'MATCH_FOLLOWING'
+  | 'NUMERICAL'
+  | 'ASSERTION_REASON'
+  | 'STATEMENT_BASED'
+  | 'COUNTING_TYPE'
+  | 'SEQUENCE_ORDER'
+
 export interface MCQQuestion {
   id: string
+  type?: QuestionType
   question: string
   options: string[]
   correctAnswer: 'A' | 'B' | 'C' | 'D'
@@ -431,8 +445,12 @@ export interface PaginatedResponse<T> {
 // TOPIC DEFINITIONS (Based on NCERT Biology Syllabus)
 // ============================================
 
-// Main topics based on NCERT Units (10 Units total: 5 from Class 11, 5 from Class 12)
+// Main topics based on NCERT Units
+// Class 9 & 10 foundation topics + Class 11 & 12 NEET topics
 export const BIOLOGY_TOPICS = [
+  // Class 9 & 10 Foundation
+  'Foundation Biology (Class 9)',
+  'Foundation Biology (Class 10)',
   // Class 11 Units
   'Diversity in Living World',
   'Structural Organisation',
@@ -451,6 +469,24 @@ export type BiologyTopic = (typeof BIOLOGY_TOPICS)[number]
 
 // Chapters within each topic/unit (Based on NCERT textbooks)
 export const BIOLOGY_CHAPTERS: Record<BiologyTopic, string[]> = {
+  // Class 9 - Foundation Biology
+  'Foundation Biology (Class 9)': [
+    'The Fundamental Unit of Life',
+    'Tissues',
+    'Diversity in Living Organisms',
+    'Why Do We Fall Ill',
+    'Natural Resources',
+    'Improvement in Food Resources',
+  ],
+  // Class 10 - Foundation Biology
+  'Foundation Biology (Class 10)': [
+    'Life Processes',
+    'Control and Coordination',
+    'How Do Organisms Reproduce',
+    'Heredity and Evolution',
+    'Our Environment',
+    'Sustainable Management of Natural Resources',
+  ],
   // Class 11 - Unit 1: Diversity in Living World
   'Diversity in Living World': [
     'The Living World',

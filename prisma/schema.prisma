@@ -2230,6 +2230,12 @@ model questions {
   ncertFigure               String?
   ncertPage                 Int?
   neetWeightage             String?
+  isOlympiad                Boolean                     @default(false)
+  olympiadLevel             String?
+  campbellChapter           Int?
+  campbellEdition           Int?
+  campbellUnit              Int?
+  conceptualDepth           String?
   mcq_bookmarks             mcq_bookmarks[]
   question_bank_questions   question_bank_questions[]
   question_diagrams         question_diagrams[]
@@ -2245,6 +2251,8 @@ model questions {
   @@index([popularityScore])
   @@index([subject, type])
   @@index([topic, difficulty])
+  @@index([isOlympiad, olympiadLevel])
+  @@index([campbellChapter])
 }
 
 model quiz_message_reactions {
@@ -3949,6 +3957,10 @@ enum QuestionType {
   MULTIPLE_SELECT
   MATCH_FOLLOWING
   NUMERICAL
+  ASSERTION_REASON
+  STATEMENT_BASED
+  COUNTING_TYPE
+  SEQUENCE_ORDER
 }
 
 enum QueueStatus {
