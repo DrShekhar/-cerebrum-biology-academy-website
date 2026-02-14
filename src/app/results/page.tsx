@@ -568,6 +568,29 @@ export default function ResultsPage() {
           </Card>
         </section>
 
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <a href="/testimonials" className="block bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow">
+            <Star className="h-7 w-7 text-yellow-500 mx-auto mb-2" />
+            <h3 className="font-semibold text-gray-900">Student Testimonials</h3>
+            <p className="text-sm text-gray-500 mt-1">Hear from our students</p>
+          </a>
+          <a href="/wall-of-achievers" className="block bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow">
+            <Trophy className="h-7 w-7 text-yellow-600 mx-auto mb-2" />
+            <h3 className="font-semibold text-gray-900">Wall of Achievers</h3>
+            <p className="text-sm text-gray-500 mt-1">Our top NEET scorers</p>
+          </a>
+          <a href="/neet-success-stories" className="block bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow">
+            <TrendingUp className="h-7 w-7 text-green-500 mx-auto mb-2" />
+            <h3 className="font-semibold text-gray-900">NEET Success Stories</h3>
+            <p className="text-sm text-gray-500 mt-1">Inspiring journeys</p>
+          </a>
+          <a href="/best-neet-biology-coaching" className="block bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow">
+            <Award className="h-7 w-7 text-blue-500 mx-auto mb-2" />
+            <h3 className="font-semibold text-gray-900">Best NEET Coaching</h3>
+            <p className="text-sm text-gray-500 mt-1">Why choose us</p>
+          </a>
+        </section>
+
         <section className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 text-center text-white">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
             Ready to Write Your Success Story?

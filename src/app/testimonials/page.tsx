@@ -322,7 +322,7 @@ export default function TestimonialsPage() {
           <div className="text-center mb-12 sm:mb-14 md:mb-16">
             <div
               ref={videoCtaAnim.ref}
-              className={`bg-primary-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto transition-all duration-700 ${
+              className={`bg-blue-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 max-w-4xl mx-auto transition-all duration-700 ${
                 videoCtaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
               }`}
             >
@@ -332,12 +332,54 @@ export default function TestimonialsPage() {
               <p className="text-sm sm:text-base text-gray-600 mb-5 sm:mb-6">
                 Hear directly from our successful students about their journey and experience
               </p>
-              <Button>
-                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM8 14.5V5.5l6 4.5-6 4.5z" />
-                </svg>
-                Watch Success Stories
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <Link href="/testimonials/sadhna-sirin-neet-2023-topper">
+                  <Button>
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM8 14.5V5.5l6 4.5-6 4.5z" />
+                    </svg>
+                    Sadhna Sirin - NEET Topper
+                  </Button>
+                </Link>
+                <Link href="/testimonials/neet-success-story">
+                  <Button variant="outline">
+                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zM8 14.5V5.5l6 4.5-6 4.5z" />
+                    </svg>
+                    More Success Stories
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Related Pages */}
+          <div className="mb-12 sm:mb-14 md:mb-16 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <Link
+                href="/wall-of-achievers"
+                className="block bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow"
+              >
+                <Award className="w-8 h-8 text-yellow-500 mx-auto mb-2" />
+                <h4 className="font-semibold text-gray-900">Wall of Achievers</h4>
+                <p className="text-sm text-gray-500 mt-1">Our top NEET scorers</p>
+              </Link>
+              <Link
+                href="/neet-success-stories"
+                className="block bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow"
+              >
+                <TrendingUp className="w-8 h-8 text-green-500 mx-auto mb-2" />
+                <h4 className="font-semibold text-gray-900">NEET Success Stories</h4>
+                <p className="text-sm text-gray-500 mt-1">Inspiring student journeys</p>
+              </Link>
+              <Link
+                href="/results"
+                className="block bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow"
+              >
+                <Target className="w-8 h-8 text-blue-500 mx-auto mb-2" />
+                <h4 className="font-semibold text-gray-900">Results & Achievements</h4>
+                <p className="text-sm text-gray-500 mt-1">Our track record</p>
+              </Link>
             </div>
           </div>
 

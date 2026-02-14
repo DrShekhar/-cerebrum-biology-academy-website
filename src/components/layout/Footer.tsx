@@ -91,19 +91,19 @@ export const Footer = memo(function Footer() {
   ]
 
   const servicesLinks = [
-    { name: 'NEET Coaching', href: '/neet-coaching' },
-    { name: 'Online Live Classes', href: '/courses' },
+    { name: 'Best NEET Biology Coaching', href: '/best-neet-biology-coaching' },
+    { name: 'Online NEET Biology Coaching', href: '/online-neet-biology-coaching' },
+    { name: 'NEET Coaching Fees', href: '/neet-coaching-fees' },
     { name: 'Book a Demo Class', href: '/demo-booking' },
-    { name: 'NEET Mock Tests', href: '/mock-tests' },
     { name: 'Free Biology MCQ Practice', href: '/neet-biology-mcq' },
     { name: 'Biology Notes for NEET', href: '/biology-notes-for-neet' },
-    { name: 'Study Materials (LMS)', href: '/tests' },
+    { name: 'NEET Previous Year Questions', href: '/neet-previous-year-questions' },
+    { name: 'Online NEET Test Series', href: '/online-neet-test-series' },
+    { name: 'Free Biology Lectures', href: '/free-neet-biology-lectures' },
     { name: 'Free Resources', href: '/free-resources' },
     { name: 'NEET Seminar for Schools', href: '/school-career-seminar' },
     { name: 'Ceri AI', href: '/ai-education-demo' },
-    { name: 'AI Features', href: '/ai-features' },
     { name: 'Mobile App', href: '/mobile-app' },
-    { name: 'International Students', href: '/international' },
   ]
 
   const companyLinks = [
@@ -113,6 +113,8 @@ export const Footer = memo(function Footer() {
     { name: 'Blog', href: '/blog' },
     { name: 'Results', href: '/results' },
     { name: 'Success Stories', href: '/testimonials' },
+    { name: 'Wall of Achievers', href: '/wall-of-achievers' },
+    { name: 'NEET Success Stories', href: '/neet-success-stories' },
     { name: 'Photo Gallery', href: '/gallery' },
     { name: 'Careers', href: '/company/careers' },
   ]
@@ -393,7 +395,7 @@ export const Footer = memo(function Footer() {
           <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <h4 className="font-semibold text-lg mb-4 text-white">{t('services')}</h4>
             <ul className="space-y-2">
-              {servicesLinks.slice(0, 6).map((link) => (
+              {servicesLinks.slice(0, 10).map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -441,7 +443,7 @@ export const Footer = memo(function Footer() {
           <div className="animate-fade-in-up" style={{ animationDelay: '0.45s' }}>
             <h4 className="font-semibold text-lg mb-4 text-white">{t('company')}</h4>
             <ul className="space-y-2 mb-6">
-              {companyLinks.slice(0, 5).map((link) => (
+              {companyLinks.slice(0, 8).map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
