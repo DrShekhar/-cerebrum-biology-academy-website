@@ -93,12 +93,12 @@ async function sendSMSOTP(mobile: string, otp: string): Promise<boolean> {
     const senderId = process.env.MSG91_SENDER_ID || 'CRBMBIO'
 
     // Fallback to mock in development if credentials not configured
-    if (!authKey) {
+    if (!authKey || !templateId) {
       if (process.env.NODE_ENV === 'development') {
         // Mock success in development without logging actual OTP
         return true
       }
-      console.error('MSG91 credentials not configured')
+      console.error('MSG91 SMS credentials not configured')
       return false
     }
 
