@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   description:
     'Book your FREE demo class for NEET Biology coaching by AIIMS faculty. 98% success rate, small batches of 15 students. Call +91 88264 44334.',
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   openGraph: {
     title: 'Free NEET Biology Demo Class',

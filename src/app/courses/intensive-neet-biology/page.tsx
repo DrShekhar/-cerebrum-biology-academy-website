@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     images: ['/api/og?title=Intensive+NEET+Biology&subtitle=Elite+Program+%E2%80%A2+Limited+Seats'],
   },
   robots: {
-    index: false, // Premium course - not indexed publicly
-    follow: false,
+    index: true,
+    follow: true,
   },
 }
 
