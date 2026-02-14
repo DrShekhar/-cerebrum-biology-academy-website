@@ -302,7 +302,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     }
 
     // Update question statistics
-    await prisma.question.update({
+    await prisma.questions.update({
       where: { id: validatedData.questionId },
       data: {
         totalAttempts: { increment: 1 },

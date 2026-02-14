@@ -14,7 +14,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
   try {
     const { postId } = await context.params
 
-    const replies = await prisma.forumReply.findMany({
+    const replies = await prisma.forum_replies.findMany({
       where: { postId },
       orderBy: [{ isAccepted: 'desc' }, { upvotes: 'desc' }, { createdAt: 'asc' }],
     })
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    const newReply = await prisma.forumReply.create({
+    const newReply = await prisma.forum_replies.create({
       data: {
         postId,
         authorName,

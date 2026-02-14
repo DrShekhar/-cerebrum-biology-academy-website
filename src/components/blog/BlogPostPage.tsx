@@ -28,7 +28,6 @@ import { RelatedResources } from './RelatedResources'
 import { BlogComments } from './BlogComments'
 import { BackToTop } from './BackToTop'
 import { parseReadTime } from './utils'
-import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/ArticleSchema'
 import { BlogExitIntentWrapper } from './BlogExitIntentWrapper'
 import { BlogWhatsAppQuery } from './BlogWhatsAppQuery'
 import { BlogNewsletterSignup } from './BlogNewsletterSignup'
@@ -189,30 +188,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
   return (
     <>
-      {/* SEO Schema */}
-      <ArticleSchema
-        title={meta.title}
-        description={meta.excerpt}
-        publishedAt={meta.publishedAt}
-        updatedAt={meta.updatedAt}
-        author={meta.author}
-        featuredImage={meta.featuredImage}
-        url={`https://cerebrumbiologyacademy.com/blog/${meta.slug}`}
-        category={category?.name}
-        tags={meta.tags}
-        readTime={meta.readTime}
-      />
-      <BreadcrumbSchema
-        items={[
-          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
-          { name: 'Blog', url: 'https://cerebrumbiologyacademy.com/blog' },
-          {
-            name: category?.name || 'Article',
-            url: `https://cerebrumbiologyacademy.com/blog?category=${meta.category}`,
-          },
-          { name: meta.title, url: `https://cerebrumbiologyacademy.com/blog/${meta.slug}` },
-        ]}
-      />
+      {/* FAQ Schema (ArticleSchema + BreadcrumbSchema rendered by server page) */}
       {allFaqs.length > 0 && <FAQSchema faqs={allFaqs} pageTitle={meta.title} />}
 
       {/* Reading Progress Bar */}

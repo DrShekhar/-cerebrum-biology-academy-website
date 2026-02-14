@@ -60,7 +60,7 @@ async function verifyTokenReadOnly(bookingId: string, token: string): Promise<bo
   const startTime = Date.now()
   const MIN_RESPONSE_TIME = 100 // Minimum 100ms response time
 
-  const result = await prisma.rescheduleToken.findFirst({
+  const result = await prisma.reschedule_tokens.findFirst({
     where: {
       bookingId,
       token,
@@ -147,7 +147,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Token is now consumed - proceed with update
-    const booking = await prisma.demoBooking.findUnique({
+    const booking = await prisma.demo_bookings.findUnique({
       where: { id: bookingId },
     })
 
@@ -164,7 +164,7 @@ export async function POST(request: NextRequest) {
     const oldTime = booking.preferredTime
 
     // Update booking (token already marked as used)
-    const updatedBooking = await prisma.demoBooking.update({
+    const updatedBooking = await prisma.demo_bookings.update({
       where: { id: bookingId },
       data: {
         preferredDate: newDate,
@@ -232,7 +232,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid or expired reschedule link' }, { status: 401 })
     }
 
-    const booking = await prisma.demoBooking.findUnique({
+    const booking = await prisma.demo_bookings.findUnique({
       where: { id: bookingId },
       select: {
         id: true,
@@ -390,7 +390,7 @@ async function handleGenerateRescheduleLink(request: NextRequest, session: UserS
       return NextResponse.json({ error: 'Valid booking ID required' }, { status: 400 })
     }
 
-    const booking = await prisma.demoBooking.findUnique({
+    const booking = await prisma.demo_bookings.findUnique({
       where: { id: bookingId },
     })
 
@@ -399,7 +399,7 @@ async function handleGenerateRescheduleLink(request: NextRequest, session: UserS
     }
 
     // Check if there's already an active (unused) token
-    const existingToken = await prisma.rescheduleToken.findFirst({
+    const existingToken = await prisma.reschedule_tokens.findFirst({
       where: {
         bookingId,
         used: false,
@@ -422,7 +422,7 @@ async function handleGenerateRescheduleLink(request: NextRequest, session: UserS
     const expiresAt = new Date()
     expiresAt.setDate(expiresAt.getDate() + 7)
 
-    const rescheduleToken = await prisma.rescheduleToken.create({
+    const rescheduleToken = await prisma.reschedule_tokens.create({
       data: {
         bookingId,
         token,

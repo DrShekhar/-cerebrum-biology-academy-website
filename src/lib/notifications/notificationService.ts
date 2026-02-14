@@ -281,7 +281,7 @@ class NotificationService {
     if (!request.leadId) return
 
     try {
-      await prisma.communication.create({
+      await prisma.crm_communications.create({
         data: {
           leadId: request.leadId,
           type: this.getCommunicationType(request.type),

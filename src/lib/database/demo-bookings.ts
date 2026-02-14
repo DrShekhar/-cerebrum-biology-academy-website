@@ -20,7 +20,7 @@ export async function createDemoBooking(data: {
   utmMedium?: string
   utmCampaign?: string
 }) {
-  return prisma.demoBooking.create({
+  return prisma.demo_bookings.create({
     data: {
       userId: data.userId,
       courseId: data.courseId,
@@ -77,7 +77,7 @@ export async function getDemoBookings(options: {
   }
 
   const [bookings, total] = await Promise.all([
-    prisma.demoBooking.findMany({
+    prisma.demo_bookings.findMany({
       where,
       skip,
       take: limit,
@@ -91,7 +91,7 @@ export async function getDemoBookings(options: {
         },
       },
     }),
-    prisma.demoBooking.count({ where }),
+    prisma.demo_bookings.count({ where }),
   ])
 
   return {
@@ -120,7 +120,7 @@ export async function updateDemoBookingStatus(
   if (assignedTo) updateData.assignedTo = assignedTo
   if (status === 'COMPLETED') updateData.demoCompleted = true
 
-  return prisma.demoBooking.update({
+  return prisma.demo_bookings.update({
     where: { id },
     data: updateData,
     include: {
@@ -140,7 +140,7 @@ export async function addDemoBookingCommunication(
     subject?: string
   }
 ) {
-  return prisma.communicationLog.create({
+  return prisma.communication_logs.create({
     data: {
       demoBookingId,
       type: data.type as any,
@@ -165,23 +165,23 @@ export async function getDemoBookingStats(options?: { dateFrom?: Date; dateTo?: 
   // This replaces 6 separate count queries with 3 grouped queries
   const [statusCounts, converted, sourceBreakdown, classDistribution] = await Promise.all([
     // Single query for all status counts
-    prisma.demoBooking.groupBy({
+    prisma.demo_bookings.groupBy({
       by: ['status'],
       where,
       _count: { status: true },
     }),
     // Single query for converted count
-    prisma.demoBooking.count({
+    prisma.demo_bookings.count({
       where: { ...where, convertedToEnrollment: true },
     }),
     // Source breakdown
-    prisma.demoBooking.groupBy({
+    prisma.demo_bookings.groupBy({
       by: ['source'],
       where,
       _count: { source: true },
     }),
     // Class distribution
-    prisma.demoBooking.groupBy({
+    prisma.demo_bookings.groupBy({
       by: ['studentClass'],
       where,
       _count: { studentClass: true },

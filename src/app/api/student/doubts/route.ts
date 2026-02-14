@@ -57,7 +57,7 @@ export async function GET(request: NextRequest) {
     }
 
     const [doubts, total] = await Promise.all([
-      prisma.doubtTickets.findMany({
+      prisma.doubt_tickets.findMany({
         where,
         include: {
           category: {
@@ -111,10 +111,10 @@ export async function GET(request: NextRequest) {
         skip: (page - 1) * limit,
         take: limit,
       }),
-      prisma.doubtTickets.count({ where }),
+      prisma.doubt_tickets.count({ where }),
     ])
 
-    const unreadCount = await prisma.doubtMessages.count({
+    const unreadCount = await prisma.doubt_messages.count({
       where: {
         doubt: {
           studentId: userId,
@@ -201,7 +201,7 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    const doubt = await prisma.doubtTickets.create({
+    const doubt = await prisma.doubt_tickets.create({
       data: {
         studentId: userId,
         subject: validatedData.subject,
@@ -245,7 +245,7 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    const initialMessage = await prisma.doubtMessages.create({
+    const initialMessage = await prisma.doubt_messages.create({
       data: {
         doubtId: doubt.id,
         senderId: userId,

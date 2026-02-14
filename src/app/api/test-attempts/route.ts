@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
       })
 
       if (attemptCount === 1) {
-        await prisma.achievement.create({
+        await prisma.achievements.create({
           data: {
             freeUserId,
             type: 'FIRST_TEST',

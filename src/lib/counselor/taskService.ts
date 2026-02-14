@@ -507,7 +507,7 @@ export class TaskService {
       const twoDaysFromNow = new Date()
       twoDaysFromNow.setDate(twoDaysFromNow.getDate() + 2)
 
-      const expiringOffers = await prisma.offer.findMany({
+      const expiringOffers = await prisma.offers.findMany({
         where: {
           status: 'ACTIVE',
           validUntil: {

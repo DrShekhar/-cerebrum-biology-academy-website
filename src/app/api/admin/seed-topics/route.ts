@@ -1032,7 +1032,7 @@ export async function POST() {
 
     for (const topic of biologyTopics) {
       try {
-        const created = await prisma.biologyTopic.create({
+        const created = await prisma.biology_topics.create({
           data: {
             ...topic,
             isPublished: true,

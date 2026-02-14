@@ -569,7 +569,7 @@ export async function POST(request: NextRequest) {
 
       // Update booking with Zoom meeting details
       if (zoomMeeting) {
-        await prisma.demoBooking.update({
+        await prisma.demo_bookings.update({
           where: { id: demoBooking.id },
           data: {
             zoomMeetingId: String(zoomMeeting.id),
@@ -715,7 +715,7 @@ async function sendImmediateNotifications(bookingData: any) {
 
     // Update booking with notification status
     if (whatsappResult.success || emailResult.success) {
-      await prisma.demoBooking.update({
+      await prisma.demo_bookings.update({
         where: { id: bookingData.id },
         data: {
           notificationsSent: {
@@ -1073,7 +1073,7 @@ async function handleGet(request: NextRequest, _session: UserSession) {
 
     // Fetch from database
     const [bookings, total] = await Promise.all([
-      prisma.demoBooking.findMany({
+      prisma.demo_bookings.findMany({
         where,
         take: limit,
         skip: offset,
@@ -1087,7 +1087,7 @@ async function handleGet(request: NextRequest, _session: UserSession) {
           },
         },
       }),
-      prisma.demoBooking.count({ where }),
+      prisma.demo_bookings.count({ where }),
     ])
 
     return NextResponse.json({
@@ -1156,7 +1156,7 @@ async function handlePut(request: NextRequest, session: UserSession) {
     const validatedUpdates = validationResult.data
 
     // Validate bookingId exists
-    const existingBooking = await prisma.demoBooking.findUnique({
+    const existingBooking = await prisma.demo_bookings.findUnique({
       where: { id: bookingId },
     })
 
@@ -1165,7 +1165,7 @@ async function handlePut(request: NextRequest, session: UserSession) {
     }
 
     // Update booking with validated data only
-    const updatedBooking = await prisma.demoBooking.update({
+    const updatedBooking = await prisma.demo_bookings.update({
       where: { id: bookingId },
       data: {
         ...validatedUpdates,

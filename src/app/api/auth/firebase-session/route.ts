@@ -96,11 +96,15 @@ export async function POST(request: NextRequest) {
       ? phoneNumber
       : `+91${phoneNumber.replace(/\D/g, '').slice(-10)}`
 
+    // Also create the bare 10-digit format for cross-system compatibility
+    // (custom OTP system stores as 10 digits, Firebase stores as +91XXXXXXXXXX)
+    const barePhone = normalizedPhone.replace(/^\+91/, '')
+
     // Action: Check if user exists
     if (action === 'check') {
       const existingUser = await prisma.users.findFirst({
         where: {
-          OR: [{ phone: normalizedPhone }, { firebaseUid: uid }],
+          OR: [{ phone: normalizedPhone }, { phone: barePhone }, { firebaseUid: uid }],
         },
       })
 
@@ -123,10 +127,10 @@ export async function POST(request: NextRequest) {
         )
       }
 
-      // Check if user already exists
+      // Check if user already exists (check both phone formats for cross-system compatibility)
       const existingUser = await prisma.users.findFirst({
         where: {
-          OR: [{ phone: normalizedPhone }, { firebaseUid: uid }],
+          OR: [{ phone: normalizedPhone }, { phone: barePhone }, { firebaseUid: uid }],
         },
       })
 
@@ -195,10 +199,10 @@ export async function POST(request: NextRequest) {
     // Action: Create session (login)
     if (action === 'login') {
 
-      // Find user by phone or Firebase UID
+      // Find user by phone or Firebase UID (check both phone formats)
       let user = await prisma.users.findFirst({
         where: {
-          OR: [{ phone: normalizedPhone }, { firebaseUid: uid }],
+          OR: [{ phone: normalizedPhone }, { phone: barePhone }, { firebaseUid: uid }],
         },
       })
 

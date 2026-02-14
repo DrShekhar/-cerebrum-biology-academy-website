@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
 
     const razorpay = getRazorpayInstance()
 
-    const booking = await prisma.demoBooking.findUnique({
+    const booking = await prisma.demo_bookings.findUnique({
       where: { id: bookingId },
     })
 
@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
 
     const order = await razorpay.orders.create(options)
 
-    await prisma.demoBooking.update({
+    await prisma.demo_bookings.update({
       where: { id: bookingId },
       data: {
         razorpayOrderId: order.id,

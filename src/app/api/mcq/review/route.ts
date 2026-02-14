@@ -7,6 +7,75 @@ import {
   getRecommendedDailyReviews,
   type ReviewSchedule,
 } from '@/lib/mcq/spacedRepetition'
+import type { MCQQuestion } from '@/lib/mcq/types'
+
+// Helper to safely parse question options (JSON or array)
+function safeParseOptions(options: unknown): string[] {
+  if (Array.isArray(options)) return options as string[]
+  if (typeof options === 'string') {
+    try {
+      const parsed = JSON.parse(options)
+      return Array.isArray(parsed) ? parsed : []
+    } catch {
+      return []
+    }
+  }
+  return []
+}
+
+// Transform a raw DB question to MCQQuestion format
+function transformQuestion(q: {
+  id: string
+  question: string
+  options: unknown
+  correctAnswer: string
+  explanation: string | null
+  topic: string
+  subtopic: string | null
+  difficulty: string
+  source: string | null
+  isNcertBased: boolean
+  ncertClass: number | null
+  ncertChapter: number | null
+  ncertChapterName: string | null
+  ncertPage: number | null
+  examYear?: number | null
+}): MCQQuestion | null {
+  const options = safeParseOptions(q.options)
+  if (options.length === 0) return null
+
+  // Normalize correctAnswer to letter format (A, B, C, D)
+  let correctAnswer = q.correctAnswer
+  const validLetters = ['A', 'B', 'C', 'D']
+  if (!validLetters.includes(correctAnswer)) {
+    const correctIndex = options.findIndex(
+      (opt) => opt.toLowerCase().trim() === correctAnswer.toLowerCase().trim()
+    )
+    if (correctIndex !== -1 && correctIndex < 4) {
+      correctAnswer = validLetters[correctIndex]
+    }
+  }
+
+  return {
+    id: q.id,
+    question: q.question,
+    options,
+    correctAnswer: correctAnswer as 'A' | 'B' | 'C' | 'D',
+    explanation: q.explanation || undefined,
+    topic: q.topic || 'General',
+    subtopic: q.subtopic || undefined,
+    difficulty: q.difficulty as MCQQuestion['difficulty'],
+    isPYQ: !!(q as { examYear?: number | null }).examYear,
+    pyqYear: (q as { examYear?: number | null }).examYear || undefined,
+    source: 'official' as const,
+    sourceId: q.id,
+    isNcertBased: q.isNcertBased || false,
+    ncertClass: q.ncertClass || undefined,
+    ncertChapter: q.ncertChapter || undefined,
+    ncertChapterName: q.ncertChapterName || undefined,
+    ncertPage: q.ncertPage || undefined,
+  }
+}
 
 /**
  * GET /api/mcq/review
@@ -43,6 +112,7 @@ export async function GET(request: NextRequest) {
             subtopic: true,
             difficulty: true,
             source: true,
+            examYear: true,
             isNcertBased: true,
             ncertClass: true,
             ncertChapter: true,
@@ -74,7 +144,23 @@ export async function GET(request: NextRequest) {
     })
 
     // Get recommended review count
-    let newQuestions: (typeof dueReviews)[0]['questions'][] = []
+    let newQuestionsRaw: Array<{
+      id: string
+      question: string
+      options: unknown
+      correctAnswer: string
+      explanation: string | null
+      topic: string
+      subtopic: string | null
+      difficulty: string
+      source: string | null
+      examYear: number | null
+      isNcertBased: boolean
+      ncertClass: number | null
+      ncertChapter: number | null
+      ncertChapterName: string | null
+      ncertPage: number | null
+    }> = []
 
     if (includeNew) {
       // Get questions the user hasn't reviewed yet
@@ -86,11 +172,11 @@ export async function GET(request: NextRequest) {
       const reviewedIds = new Set(reviewedQuestionIds.map((r) => r.questionId))
 
       // Get new questions to learn
-      const newQuestionsData = await prisma.questions.findMany({
+      newQuestionsRaw = await prisma.questions.findMany({
         where: {
           id: { notIn: Array.from(reviewedIds) },
           isActive: true,
-          curriculum: 'NEET',
+          isVerified: true,
         },
         select: {
           id: true,
@@ -102,47 +188,35 @@ export async function GET(request: NextRequest) {
           subtopic: true,
           difficulty: true,
           source: true,
+          examYear: true,
           isNcertBased: true,
           ncertClass: true,
           ncertChapter: true,
           ncertChapterName: true,
           ncertPage: true,
         },
-        take: 5, // Max 5 new questions per session
+        take: 5,
         orderBy: { popularityScore: 'desc' },
       })
-
-      newQuestions = newQuestionsData
     }
 
     const { reviews: reviewCount, newQuestions: newCount } = getRecommendedDailyReviews(
       sortedReviews.length,
-      newQuestions.length,
+      newQuestionsRaw.length,
       limit
     )
 
-    // Format response
-    const reviewQuestions = sortedReviews.slice(0, reviewCount).map((r) => ({
-      ...r.questions,
-      reviewData: {
-        easeFactor: r.easeFactor,
-        interval: r.interval,
-        repetitions: r.repetitions,
-        nextReviewAt: r.nextReviewAt,
-        isReview: true,
-      },
-    }))
+    // Transform review questions to MCQQuestion format
+    const reviewQuestions = sortedReviews
+      .slice(0, reviewCount)
+      .map((r) => transformQuestion(r.questions))
+      .filter((q): q is MCQQuestion => q !== null)
 
-    const newQuestionsFormatted = newQuestions.slice(0, newCount).map((q) => ({
-      ...q,
-      reviewData: {
-        easeFactor: 2.5,
-        interval: 0,
-        repetitions: 0,
-        nextReviewAt: now,
-        isReview: false,
-      },
-    }))
+    // Transform new questions to MCQQuestion format
+    const newQuestionsFormatted = newQuestionsRaw
+      .slice(0, newCount)
+      .map((q) => transformQuestion(q))
+      .filter((q): q is MCQQuestion => q !== null)
 
     // Get stats
     const totalScheduled = await prisma.question_review_schedule.count({

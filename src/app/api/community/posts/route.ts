@@ -21,7 +21,7 @@ export async function GET(request: NextRequest) {
       where.type = 'DISCUSSION'
     }
 
-    const posts = await prisma.forumPost.findMany({
+    const posts = await prisma.forum_posts.findMany({
       where,
       include: {
         freeUser: {
@@ -99,7 +99,7 @@ export async function POST(request: NextRequest) {
     const inferredTopic = topic || 'General Discussion'
     const postType = type?.toUpperCase() || 'DISCUSSION'
 
-    const newPost = await prisma.forumPost.create({
+    const newPost = await prisma.forum_posts.create({
       data: {
         freeUserId: userId,
         title: inferredTitle,

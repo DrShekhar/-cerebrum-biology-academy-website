@@ -122,7 +122,7 @@ Happy Learning! 📚`
       // Log notification but don't fail if WhatsApp is not configured
 
       // Create communication log
-      await prisma.communicationLog.create({
+      await prisma.communication_logs.create({
         data: {
           userId: enrollment.userId,
           type: 'ENROLLMENT_CONFIRMATION',
@@ -148,7 +148,7 @@ Happy Learning! 📚`
       )
 
       // Create communication log
-      await prisma.communicationLog.create({
+      await prisma.communication_logs.create({
         data: {
           userId: enrollment.userId,
           type: 'ENROLLMENT_CONFIRMATION',
@@ -170,7 +170,7 @@ Happy Learning! 📚`
       console.error('WhatsApp API error:', apiError)
 
       // Create failed communication log
-      await prisma.communicationLog.create({
+      await prisma.communication_logs.create({
         data: {
           userId: enrollment.userId,
           type: 'ENROLLMENT_CONFIRMATION',

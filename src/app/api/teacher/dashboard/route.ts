@@ -41,7 +41,7 @@ export async function GET(request: NextRequest) {
       }),
 
       // Unanswered doubts for teacher's courses
-      prisma.doubt.count({
+      prisma.doubt_tickets.count({
         where: {
           OR: [{ assignedTeacherId: teacherId }, { status: 'PENDING' }],
           answeredAt: null,
@@ -75,7 +75,7 @@ export async function GET(request: NextRequest) {
       }),
 
       // Recent doubts
-      prisma.doubt.findMany({
+      prisma.doubt_tickets.findMany({
         where: {
           OR: [{ assignedTeacherId: teacherId }, { status: 'PENDING' }],
         },
@@ -87,7 +87,7 @@ export async function GET(request: NextRequest) {
       }),
 
       // Today's sessions
-      prisma.session.findMany({
+      prisma.sessions.findMany({
         where: {
           teacherId,
           scheduledAt: {

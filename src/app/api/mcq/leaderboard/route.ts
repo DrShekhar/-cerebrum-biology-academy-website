@@ -3,8 +3,6 @@ import { prisma } from '@/lib/prisma'
 import type { LeaderboardPeriod } from '@/generated/prisma'
 import type { Leaderboard, LeaderboardEntry } from '@/lib/mcq/types'
 
-export const dynamic = 'force-dynamic'
-
 // Helper to check if table doesn't exist
 function isTableNotExistError(error: unknown): boolean {
   return (

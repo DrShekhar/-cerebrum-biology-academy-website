@@ -79,7 +79,7 @@ async function processDemoReminders() {
   const todayStr = now.toISOString().split('T')[0]
   const tomorrowStr = twentyFiveHoursFromNow.toISOString().split('T')[0]
 
-  const upcomingDemos = await prisma.demoBooking.findMany({
+  const upcomingDemos = await prisma.demo_bookings.findMany({
     where: {
       status: { in: ['PENDING', 'CONFIRMED'] },
       preferredDate: {
@@ -126,7 +126,7 @@ async function processDemoReminders() {
 
         if (success) {
           // Update remindersSent count
-          await prisma.demoBooking.update({
+          await prisma.demo_bookings.update({
             where: { id: demo.id },
             data: {
               remindersSent: demo.remindersSent + 1,

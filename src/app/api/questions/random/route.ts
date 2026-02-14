@@ -273,7 +273,7 @@ export async function GET(request: NextRequest) {
 
     // Get user's answered questions if needed
     const userAnsweredQuestions = !params.includeAnswered
-      ? await prisma.userQuestionResponse
+      ? await prisma.user_question_responses
           .findMany({
             where: {
               ...(user.role === 'STUDENT' ? { userId: user.id } : { freeUserId: user.id }),

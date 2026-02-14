@@ -3,8 +3,6 @@ import { prisma } from '@/lib/prisma'
 import { getLevelProgress, BADGE_DEFINITIONS } from '@/lib/mcq/gamification'
 import type { UserStats } from '@/lib/mcq/types'
 
-export const dynamic = 'force-dynamic'
-
 // Helper to check if a table exists error occurred
 function isTableNotExistError(error: unknown): boolean {
   return (

@@ -77,7 +77,7 @@ async function handleGET(req: NextRequest, session: any) {
 
     // Fetch communications with pagination
     const [communications, total] = await Promise.all([
-      prisma.communication.findMany({
+      prisma.crm_communications.findMany({
         where,
         include: {
           sentBy: {
@@ -94,7 +94,7 @@ async function handleGET(req: NextRequest, session: any) {
         skip,
         take: limit,
       }),
-      prisma.communication.count({ where }),
+      prisma.crm_communications.count({ where }),
     ])
 
     // Calculate pagination metadata

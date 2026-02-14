@@ -12,7 +12,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const userId = session.user.id
     const doubtId = params.id
 
-    const doubt = await prisma.doubtTickets.findUnique({
+    const doubt = await prisma.doubt_tickets.findUnique({
       where: { id: doubtId },
       include: {
         student: {
@@ -89,7 +89,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       )
     }
 
-    await prisma.doubtTickets.update({
+    await prisma.doubt_tickets.update({
       where: { id: doubtId },
       data: {
         viewCount: {
@@ -98,7 +98,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       },
     })
 
-    await prisma.doubtMessages.updateMany({
+    await prisma.doubt_messages.updateMany({
       where: {
         doubtId,
         senderId: {

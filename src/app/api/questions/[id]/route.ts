@@ -248,7 +248,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Update question view count and popularity (async)
-    prisma.question
+    prisma.questions
       .update({
         where: { id },
         data: {

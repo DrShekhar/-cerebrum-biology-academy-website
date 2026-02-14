@@ -58,13 +58,17 @@ export function useBlogViews({
   // Track view on mount if enabled
   useEffect(() => {
     if (trackOnMount && slug && !hasTracked) {
-      // Check sessionStorage to avoid multiple views per session
-      const viewedPosts = JSON.parse(sessionStorage.getItem('blog-viewed-posts') || '[]')
-
-      if (!viewedPosts.includes(slug)) {
-        trackView().then(() => {
-          sessionStorage.setItem('blog-viewed-posts', JSON.stringify([...viewedPosts, slug]))
-        })
+      try {
+        const viewedPosts = JSON.parse(sessionStorage.getItem('blog-viewed-posts') || '[]')
+        if (!viewedPosts.includes(slug)) {
+          trackView().then(() => {
+            try {
+              sessionStorage.setItem('blog-viewed-posts', JSON.stringify([...viewedPosts, slug]))
+            } catch {}
+          })
+        }
+      } catch {
+        trackView()
       }
     }
   }, [slug, trackOnMount, trackView, hasTracked])

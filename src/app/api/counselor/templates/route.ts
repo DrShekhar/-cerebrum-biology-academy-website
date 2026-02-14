@@ -28,7 +28,7 @@ async function handleGET(req: NextRequest, session: any) {
       where.isActive = true
     }
 
-    const templates = await prisma.messageTemplate.findMany({
+    const templates = await prisma.message_templates.findMany({
       where,
       orderBy: [{ usageCount: 'desc' }, { createdAt: 'desc' }],
       include: {
@@ -82,7 +82,7 @@ async function handlePOST(req: NextRequest, session: any) {
       )
     }
 
-    const template = await prisma.messageTemplate.create({
+    const template = await prisma.message_templates.create({
       data: {
         name: validatedData.name,
         type: validatedData.type,

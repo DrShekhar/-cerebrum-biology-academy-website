@@ -25,7 +25,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
     }
 
     // Fetch all messages for this session, ordered by creation time
-    const messages = await prisma.chatHistory.findMany({
+    const messages = await prisma.chat_history.findMany({
       where: {
         sessionId: sessionId,
       },

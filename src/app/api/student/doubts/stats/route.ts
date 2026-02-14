@@ -23,25 +23,25 @@ export async function GET(request: NextRequest) {
       recentDoubts,
       categoryStats,
     ] = await Promise.all([
-      prisma.doubtTickets.count({
+      prisma.doubt_tickets.count({
         where: { studentId: userId },
       }),
-      prisma.doubtTickets.count({
+      prisma.doubt_tickets.count({
         where: { studentId: userId, status: 'OPEN' },
       }),
-      prisma.doubtTickets.count({
+      prisma.doubt_tickets.count({
         where: { studentId: userId, status: 'IN_PROGRESS' },
       }),
-      prisma.doubtTickets.count({
+      prisma.doubt_tickets.count({
         where: { studentId: userId, status: 'ANSWERED' },
       }),
-      prisma.doubtTickets.count({
+      prisma.doubt_tickets.count({
         where: { studentId: userId, status: 'RESOLVED' },
       }),
-      prisma.doubtTickets.count({
+      prisma.doubt_tickets.count({
         where: { studentId: userId, status: 'CLOSED' },
       }),
-      prisma.doubtMessages.count({
+      prisma.doubt_messages.count({
         where: {
           doubt: {
             studentId: userId,
@@ -52,7 +52,7 @@ export async function GET(request: NextRequest) {
           isRead: false,
         },
       }),
-      prisma.doubtTickets.aggregate({
+      prisma.doubt_tickets.aggregate({
         where: {
           studentId: userId,
           responseTime: {
@@ -63,7 +63,7 @@ export async function GET(request: NextRequest) {
           responseTime: true,
         },
       }),
-      prisma.doubtTickets.findMany({
+      prisma.doubt_tickets.findMany({
         where: { studentId: userId },
         select: {
           id: true,
@@ -85,7 +85,7 @@ export async function GET(request: NextRequest) {
         },
         take: 5,
       }),
-      prisma.doubtTickets.groupBy({
+      prisma.doubt_tickets.groupBy({
         by: ['categoryId'],
         where: {
           studentId: userId,
@@ -99,7 +99,7 @@ export async function GET(request: NextRequest) {
       }),
     ])
 
-    const categoryDetails = await prisma.doubtCategories.findMany({
+    const categoryDetails = await prisma.doubt_categories.findMany({
       where: {
         id: {
           in: categoryStats.map((cs) => cs.categoryId).filter(Boolean) as string[],

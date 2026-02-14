@@ -40,7 +40,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
 
     const { id } = await params
 
-    const note = await prisma.student_notes.findFirst({
+    const note = await prisma.notes.findFirst({
       where: {
         id,
         studentId: session.user.id,
@@ -80,7 +80,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
     const body: UpdateNoteData = await request.json()
 
     // Check if note exists and belongs to user
-    const existingNote = await prisma.student_notes.findFirst({
+    const existingNote = await prisma.notes.findFirst({
       where: {
         id,
         studentId: session.user.id,
@@ -129,7 +129,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
     if (body.isArchived !== undefined) updateData.isArchived = body.isArchived
     if (body.metadata !== undefined) updateData.metadata = body.metadata
 
-    const note = await prisma.student_notes.update({
+    const note = await prisma.notes.update({
       where: { id },
       data: updateData,
     })
@@ -168,7 +168,7 @@ export async function DELETE(
     const permanent = searchParams.get('permanent') === 'true'
 
     // Check if note exists and belongs to user
-    const existingNote = await prisma.student_notes.findFirst({
+    const existingNote = await prisma.notes.findFirst({
       where: {
         id,
         studentId: session.user.id,
@@ -181,7 +181,7 @@ export async function DELETE(
 
     if (permanent) {
       // Permanently delete the note
-      await prisma.student_notes.delete({
+      await prisma.notes.delete({
         where: { id },
       })
 
@@ -191,7 +191,7 @@ export async function DELETE(
       })
     } else {
       // Soft delete (archive) the note
-      await prisma.student_notes.update({
+      await prisma.notes.update({
         where: { id },
         data: {
           isArchived: true,

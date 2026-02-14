@@ -57,7 +57,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const referralCode = await prisma.referralCode.findUnique({
+    const referralCode = await prisma.referral_codes.findUnique({
       where: { code: code.toUpperCase().trim() },
     })
 
@@ -138,7 +138,7 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    const referralCode = await prisma.referralCode.findUnique({
+    const referralCode = await prisma.referral_codes.findUnique({
       where: { code: code.toUpperCase().trim() },
     })
 
@@ -150,7 +150,7 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ error: 'Referral code usage limit exceeded' }, { status: 400 })
     }
 
-    const existingRedemption = await prisma.referralRedemption.findFirst({
+    const existingRedemption = await prisma.referral_redemptions.findFirst({
       where: {
         referralCodeId: referralCode.id,
         redeemedByEmail: redeemedByEmail,
@@ -168,11 +168,11 @@ export async function PUT(request: NextRequest) {
     }
 
     await prisma.$transaction([
-      prisma.referralCode.update({
+      prisma.referral_codes.update({
         where: { id: referralCode.id },
         data: { uses: { increment: 1 } },
       }),
-      prisma.referralRedemption.create({
+      prisma.referral_redemptions.create({
         data: {
           referralCodeId: referralCode.id,
           redeemedBy,

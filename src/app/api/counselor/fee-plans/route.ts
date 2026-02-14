@@ -41,7 +41,7 @@ async function handleGET(request: NextRequest, session: any) {
       where.status = status
     }
 
-    const feePlans = await prisma.feePlan.findMany({
+    const feePlans = await prisma.fee_plans.findMany({
       where,
       include: {
         lead: {
@@ -145,7 +145,7 @@ async function handlePOST(request: NextRequest, session: any) {
       )
     }
 
-    const feePlan = await prisma.feePlan.create({
+    const feePlan = await prisma.fee_plans.create({
       data: {
         leadId: validatedData.leadId,
         courseId: validatedData.courseId,

@@ -91,7 +91,7 @@ export async function GET(request: NextRequest) {
     }
 
     const [notes, total] = await Promise.all([
-      prisma.student_notes.findMany({
+      prisma.notes.findMany({
         where: whereClause,
         orderBy,
         take: limit,
@@ -111,11 +111,11 @@ export async function GET(request: NextRequest) {
           createdAt: true,
         },
       }),
-      prisma.student_notes.count({ where: whereClause }),
+      prisma.notes.count({ where: whereClause }),
     ])
 
     // Get stats
-    const stats = await prisma.student_notes.groupBy({
+    const stats = await prisma.notes.groupBy({
       by: ['isFavorite', 'isArchived'],
       where: { studentId: session.user.id },
       _count: true,
@@ -195,7 +195,7 @@ export async function POST(request: NextRequest) {
     // Normalize tags to lowercase
     const normalizedTags = body.tags?.map((t) => t.toLowerCase().trim()) || []
 
-    const note = await prisma.student_notes.create({
+    const note = await prisma.notes.create({
       data: {
         studentId: session.user.id,
         title: body.title,

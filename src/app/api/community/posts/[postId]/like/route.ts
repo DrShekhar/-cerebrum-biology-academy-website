@@ -14,7 +14,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
   try {
     const { postId } = await context.params
 
-    const post = await prisma.forumPost.findUnique({
+    const post = await prisma.forum_posts.findUnique({
       where: { id: postId },
     })
 
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest, context: RouteContext) {
 
     const newUpvotes = post.upvotes + 1
 
-    const updatedPost = await prisma.forumPost.update({
+    const updatedPost = await prisma.forum_posts.update({
       where: { id: postId },
       data: { upvotes: newUpvotes },
     })
@@ -46,7 +46,7 @@ export async function DELETE(request: NextRequest, context: RouteContext) {
   try {
     const { postId } = await context.params
 
-    const post = await prisma.forumPost.findUnique({
+    const post = await prisma.forum_posts.findUnique({
       where: { id: postId },
     })
 
@@ -56,7 +56,7 @@ export async function DELETE(request: NextRequest, context: RouteContext) {
 
     const newUpvotes = Math.max(0, post.upvotes - 1)
 
-    const updatedPost = await prisma.forumPost.update({
+    const updatedPost = await prisma.forum_posts.update({
       where: { id: postId },
       data: { upvotes: newUpvotes },
     })

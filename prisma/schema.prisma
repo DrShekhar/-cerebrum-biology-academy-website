@@ -2248,7 +2248,7 @@ model questions {
 }
 
 model quiz_message_reactions {
-  id            String        @id
+  id            String        @id @default(cuid())
   messageId     String
   participantId String
   emoji         String
@@ -2260,7 +2260,7 @@ model quiz_message_reactions {
 }
 
 model quiz_messages {
-  id                     String                   @id
+  id                     String                   @id @default(cuid())
   sessionId              String
   team                   QuizTeam
   participantId          String
@@ -2276,7 +2276,7 @@ model quiz_messages {
 }
 
 model quiz_participants {
-  id            String          @id
+  id            String          @id @default(cuid())
   sessionId     String
   name          String
   team          QuizTeam?
@@ -2292,7 +2292,7 @@ model quiz_participants {
 }
 
 model quiz_rounds {
-  id            String        @id
+  id            String        @id @default(cuid())
   sessionId     String
   roundNumber   Int
   answeringTeam QuizTeam
@@ -2307,7 +2307,7 @@ model quiz_rounds {
 }
 
 model quiz_sessions {
-  id                   String              @id
+  id                   String              @id @default(cuid())
   roomCode             String              @unique @db.VarChar(6)
   title                String
   format               QuizFormat
@@ -2324,7 +2324,7 @@ model quiz_sessions {
   startedAt            DateTime?
   endedAt              DateTime?
   createdAt            DateTime            @default(now())
-  updatedAt            DateTime
+  updatedAt            DateTime            @updatedAt
   winner               QuizWinner?
   hostToken            String              @db.VarChar(64)
   activeTimerType      String?

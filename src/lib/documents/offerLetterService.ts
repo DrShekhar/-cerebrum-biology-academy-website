@@ -56,7 +56,7 @@ class OfferLetterService {
       }
 
       // Fetch fee plan with installments
-      const feePlan = await prisma.feePlan.findUnique({
+      const feePlan = await prisma.fee_plans.findUnique({
         where: { id: params.feePlanId },
         include: {
           installments: {
@@ -73,7 +73,7 @@ class OfferLetterService {
       }
 
       // Fetch offer details
-      const offer = await prisma.offer.findUnique({
+      const offer = await prisma.offers.findUnique({
         where: { id: params.offerId },
       })
 
@@ -243,7 +243,7 @@ class OfferLetterService {
             },
           },
         }),
-        prisma.feePlan.findUnique({
+        prisma.fee_plans.findUnique({
           where: { id: feePlanId },
           include: {
             installments: {
@@ -251,7 +251,7 @@ class OfferLetterService {
             },
           },
         }),
-        prisma.offer.findUnique({
+        prisma.offers.findUnique({
           where: { id: offerId },
         }),
       ])
@@ -337,8 +337,8 @@ class OfferLetterService {
     try {
       const [lead, feePlan, offer] = await Promise.all([
         prisma.leads.findUnique({ where: { id: leadId } }),
-        prisma.feePlan.findUnique({ where: { id: feePlanId } }),
-        prisma.offer.findUnique({ where: { id: offerId } }),
+        prisma.fee_plans.findUnique({ where: { id: feePlanId } }),
+        prisma.offers.findUnique({ where: { id: offerId } }),
       ])
 
       if (!lead) {

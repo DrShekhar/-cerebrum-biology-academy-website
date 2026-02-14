@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const booking = await prisma.demoBooking.findFirst({
+    const booking = await prisma.demo_bookings.findFirst({
       where: { razorpayOrderId: razorpay_order_id },
     })
 
@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Booking not found for this order' }, { status: 404 })
     }
 
-    const updatedBooking = await prisma.demoBooking.update({
+    const updatedBooking = await prisma.demo_bookings.update({
       where: { id: booking.id },
       data: {
         paymentStatus: 'COMPLETED',
@@ -95,7 +95,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Booking ID required' }, { status: 400 })
     }
 
-    const booking = await prisma.demoBooking.findUnique({
+    const booking = await prisma.demo_bookings.findUnique({
       where: { id: bookingId },
       select: {
         id: true,

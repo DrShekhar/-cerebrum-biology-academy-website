@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Email and name are required' }, { status: 400 })
     }
 
-    const existingCode = await prisma.referralCode.findFirst({
+    const existingCode = await prisma.referral_codes.findFirst({
       where: { userEmail: email },
     })
 
@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
     const maxAttempts = 10
 
     while (attempts < maxAttempts) {
-      const codeExists = await prisma.referralCode.findUnique({
+      const codeExists = await prisma.referral_codes.findUnique({
         where: { code },
       })
 
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const referralCode = await prisma.referralCode.create({
+    const referralCode = await prisma.referral_codes.create({
       data: {
         code,
         userId: userId || null,
@@ -101,7 +101,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ error: 'Email parameter required' }, { status: 400 })
     }
 
-    const referralCode = await prisma.referralCode.findFirst({
+    const referralCode = await prisma.referral_codes.findFirst({
       where: { userEmail: email },
       include: {
         redemptions: {

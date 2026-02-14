@@ -348,7 +348,7 @@ export async function POST(
       })
 
       // Update question statistics
-      await prisma.question.update({
+      await prisma.questions.update({
         where: { id: questionId },
         data: {
           totalAttempts: { increment: 1 },

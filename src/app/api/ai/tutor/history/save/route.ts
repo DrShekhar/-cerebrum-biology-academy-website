@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Save chat message to database
-    const chatHistory = await prisma.chatHistory.create({
+    const chatHistory = await prisma.chat_history.create({
       data: {
         sessionId: validatedData.sessionId,
         userId: validatedData.userId || null,

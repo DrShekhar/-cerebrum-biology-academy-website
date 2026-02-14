@@ -219,7 +219,7 @@ export class TaskScheduler {
     try {
       const prisma = (await import('@/lib/prisma')).default
 
-      const booking = await prisma.demoBooking.findUnique({
+      const booking = await prisma.demo_bookings.findUnique({
         where: { id: bookingId },
       })
 
@@ -241,7 +241,7 @@ export class TaskScheduler {
         logger.info('Reminder call scheduled', { bookingId, phone, message })
       }
 
-      await prisma.demoBooking.update({
+      await prisma.demo_bookings.update({
         where: { id: bookingId },
         data: {
           metadata: {

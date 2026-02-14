@@ -26,7 +26,7 @@ async function handlePATCH(req: NextRequest, session: any) {
     const validatedData = updateTemplateSchema.parse(body)
 
     // Check if template exists and belongs to user
-    const existingTemplate = await prisma.messageTemplate.findFirst({
+    const existingTemplate = await prisma.message_templates.findFirst({
       where: {
         id: templateId,
         createdById: session.userId,
@@ -54,7 +54,7 @@ async function handlePATCH(req: NextRequest, session: any) {
       )
     }
 
-    const updatedTemplate = await prisma.messageTemplate.update({
+    const updatedTemplate = await prisma.message_templates.update({
       where: { id: templateId },
       data: {
         name: validatedData.name,
@@ -99,7 +99,7 @@ async function handleDELETE(req: NextRequest, session: any) {
     const templateId = pathParts[pathParts.length - 1]
 
     // Check if template exists and belongs to user
-    const existingTemplate = await prisma.messageTemplate.findFirst({
+    const existingTemplate = await prisma.message_templates.findFirst({
       where: {
         id: templateId,
         createdById: session.userId,
@@ -116,7 +116,7 @@ async function handleDELETE(req: NextRequest, session: any) {
       )
     }
 
-    await prisma.messageTemplate.delete({
+    await prisma.message_templates.delete({
       where: { id: templateId },
     })
 

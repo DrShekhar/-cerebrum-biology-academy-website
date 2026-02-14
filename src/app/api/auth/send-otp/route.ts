@@ -35,7 +35,7 @@ async function checkRateLimit(mobile: string): Promise<{
 
   try {
     // Check last hour - database timestamps are stored in UTC
-    const recentOtps = await prisma.otpVerification.findMany({
+    const recentOtps = await prisma.otp_verifications.findMany({
       where: {
         mobile: mobile,
         createdAt: {
@@ -254,11 +254,11 @@ export async function POST(request: NextRequest) {
     const expiresAt = Date.now() + 10 * 60 * 1000 // 10 minutes
     const otpId = crypto.randomUUID()
 
-    // Check if user exists for login purpose
+    // Check if user exists for login purpose (check both phone formats)
     if (purpose === 'login') {
       const existingUser = await prisma.users.findFirst({
         where: {
-          phone: mobile,
+          OR: [{ phone: mobile }, { phone: `+91${mobile}` }],
         },
       })
 
@@ -274,7 +274,7 @@ export async function POST(request: NextRequest) {
 
     // Store OTP hash in database (never store plaintext OTP)
     const otpHash = crypto.createHash('sha256').update(otp).digest('hex')
-    await prisma.otpVerification.create({
+    await prisma.otp_verifications.create({
       data: {
         id: otpId,
         mobile,

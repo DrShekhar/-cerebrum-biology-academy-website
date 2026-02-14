@@ -171,6 +171,10 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
 
       const checkData = await checkResponse.json()
 
+      if (!checkResponse.ok) {
+        throw new Error(checkData.error || 'Failed to check user account')
+      }
+
       if (checkData.userExists) {
         // Existing user - create session and redirect
         await createSessionAndRedirect(result.user!)

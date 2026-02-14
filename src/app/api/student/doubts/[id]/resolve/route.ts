@@ -21,7 +21,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
 
     const validatedData = resolveDoubtSchema.parse(body)
 
-    const doubt = await prisma.doubtTickets.findUnique({
+    const doubt = await prisma.doubt_tickets.findUnique({
       where: { id: doubtId },
       select: {
         id: true,
@@ -48,7 +48,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       )
     }
 
-    const updatedDoubt = await prisma.doubtTickets.update({
+    const updatedDoubt = await prisma.doubt_tickets.update({
       where: { id: doubtId },
       data: {
         status: 'RESOLVED',

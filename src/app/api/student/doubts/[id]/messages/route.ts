@@ -22,7 +22,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 
     const validatedData = createMessageSchema.parse(body)
 
-    const doubt = await prisma.doubtTickets.findUnique({
+    const doubt = await prisma.doubt_tickets.findUnique({
       where: { id: doubtId },
       select: {
         id: true,
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       )
     }
 
-    const message = await prisma.doubtMessages.create({
+    const message = await prisma.doubt_messages.create({
       data: {
         doubtId,
         senderId: userId,
@@ -90,7 +90,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
         ? Math.floor((new Date().getTime() - new Date(doubt.createdAt).getTime()) / (1000 * 60))
         : undefined
 
-    await prisma.doubtTickets.update({
+    await prisma.doubt_tickets.update({
       where: { id: doubtId },
       data: {
         status: newStatus,

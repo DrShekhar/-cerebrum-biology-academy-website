@@ -3,8 +3,6 @@ import { prisma } from '@/lib/prisma'
 import type { MCQQuestion, QuestionFilter, QuestionResponse } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
 
-export const dynamic = 'force-dynamic'
-
 // Helper to safely parse question options (JSON or array)
 function safeParseOptions(options: unknown): string[] {
   if (Array.isArray(options)) return options as string[]

@@ -93,7 +93,7 @@ export async function POST(request: NextRequest) {
     } = validationResult.data
 
     // Verify OTP
-    const otpRecord = await prisma.otpVerification.findUnique({
+    const otpRecord = await prisma.otp_verifications.findUnique({
       where: {
         id: otpId,
       },
@@ -111,7 +111,7 @@ export async function POST(request: NextRequest) {
       // Increment failed attempt counter
       if (otpRecord) {
         try {
-          await prisma.otpVerification.update({
+          await prisma.otp_verifications.update({
             where: { id: otpId },
             data: {
               attempts: { increment: 1 },
@@ -146,7 +146,7 @@ export async function POST(request: NextRequest) {
 
     // Mark OTP as verified and then delete to prevent any replay attacks
     // SECURITY (2026-01-28): Double protection - mark as verified then delete
-    await prisma.otpVerification.update({
+    await prisma.otp_verifications.update({
       where: { id: otpId },
       data: {
         verified: true,
@@ -156,7 +156,7 @@ export async function POST(request: NextRequest) {
 
     // Delete the OTP record after successful verification (belt-and-suspenders approach)
     try {
-      await prisma.otpVerification.delete({
+      await prisma.otp_verifications.delete({
         where: { id: otpId },
       })
     } catch (deleteError) {
@@ -178,9 +178,11 @@ export async function POST(request: NextRequest) {
         )
       }
 
-      // Check if user already exists
+      // Check if user already exists (check both phone formats)
       const existingUser = await prisma.users.findFirst({
-        where: { phone: mobile },
+        where: {
+          OR: [{ phone: mobile }, { phone: `+91${mobile}` }],
+        },
       })
 
       if (existingUser) {
@@ -216,12 +218,12 @@ export async function POST(request: NextRequest) {
 
       // Update marketing lead status
       try {
-        const lead = await prisma.marketingLead.findFirst({
+        const lead = await prisma.leads.findFirst({
           where: { mobile: mobile },
         })
 
         if (lead) {
-          await prisma.marketingLead.update({
+          await prisma.leads.update({
             where: { id: lead.id },
             data: {
               name: name,
@@ -235,9 +237,11 @@ export async function POST(request: NextRequest) {
         console.error('Failed to update marketing lead:', leadError)
       }
     } else if (purpose === 'login') {
-      // Get existing user
+      // Get existing user (check both phone formats for cross-system compatibility)
       user = await prisma.users.findFirst({
-        where: { phone: mobile },
+        where: {
+          OR: [{ phone: mobile }, { phone: `+91${mobile}` }],
+        },
       })
 
       if (!user) {

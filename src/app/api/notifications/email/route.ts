@@ -216,7 +216,7 @@ Thank you for choosing Cerebrum Biology Academy!
 
       if (!emailResult.success) {
         // Create failed communication log
-        await prisma.communicationLog.create({
+        await prisma.communication_logs.create({
           data: {
             userId: enrollment.userId,
             type: 'ENROLLMENT_CONFIRMATION',
@@ -239,7 +239,7 @@ Thank you for choosing Cerebrum Biology Academy!
       }
 
       // Create communication log
-      await prisma.communicationLog.create({
+      await prisma.communication_logs.create({
         data: {
           userId: enrollment.userId,
           type: 'ENROLLMENT_CONFIRMATION',
@@ -263,7 +263,7 @@ Thank you for choosing Cerebrum Biology Academy!
       console.error('Email service error:', apiError)
 
       // Create failed communication log
-      await prisma.communicationLog.create({
+      await prisma.communication_logs.create({
         data: {
           userId: enrollment.userId,
           type: 'ENROLLMENT_CONFIRMATION',

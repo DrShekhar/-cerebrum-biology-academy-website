@@ -45,7 +45,7 @@ export async function GET(request: NextRequest) {
     }
 
     const [doubts, total] = await Promise.all([
-      prisma.doubtTickets.findMany({
+      prisma.doubt_tickets.findMany({
         where,
         include: {
           student: {
@@ -90,10 +90,10 @@ export async function GET(request: NextRequest) {
         skip: (page - 1) * limit,
         take: limit,
       }),
-      prisma.doubtTickets.count({ where }),
+      prisma.doubt_tickets.count({ where }),
     ])
 
-    const stats = await prisma.doubtTickets.groupBy({
+    const stats = await prisma.doubt_tickets.groupBy({
       by: ['status'],
       where: {
         OR: [{ instructorId: userId }, { instructorId: null }],

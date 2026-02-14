@@ -2,15 +2,7 @@
 
 import type { IllustrationProps } from './shared'
 
-export function MockTestIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
-    ? {
-        initial: { opacity: 0, scale: 0.95 },
-        animate: { opacity: 1, scale: 1 },
-        transition: { duration: 0.8, ease: 'easeOut' as const },
-      }
-    : {}
+export function MockTestIllustration({ className = '' }: IllustrationProps) {
 
   // Mock test strategy data
   const testSchedule = [
@@ -37,13 +29,12 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
   ]
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       preserveAspectRatio="xMidYMid meet"
-      {...wrapperProps}
     >
       <defs>
         {/* Background gradient */}
@@ -428,25 +419,21 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
       </g>
 
       {/* Floating decorations */}
-      {animate && (
-        <>
-          <circle
-            cx="50"
-            cy="50"
-            r="6"
-            fill="#6366F1"
-            opacity="0.3"
-          />
-          <text
-            x="650"
-            y="60"
-            fontSize="16"
-            opacity="0.5"
-          >
-            📝
-          </text>
-        </>
-      )}
-    </Wrapper>
+      <circle
+        cx="50"
+        cy="50"
+        r="6"
+        fill="#6366F1"
+        opacity="0.3"
+      />
+      <text
+        x="650"
+        y="60"
+        fontSize="16"
+        opacity="0.5"
+      >
+        📝
+      </text>
+    </svg>
   )
 }

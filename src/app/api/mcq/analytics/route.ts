@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { BIOLOGY_TOPICS } from '@/lib/mcq/types'
 
-export const dynamic = 'force-dynamic'
-
 interface TopicStats {
   topic: string
   attempted: number

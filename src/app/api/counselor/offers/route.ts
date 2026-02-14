@@ -34,7 +34,7 @@ async function handleGET(request: NextRequest, session: any) {
       where.status = status
     }
 
-    const offers = await prisma.offer.findMany({
+    const offers = await prisma.offers.findMany({
       where,
       include: {
         lead: {
@@ -105,7 +105,7 @@ async function handlePOST(request: NextRequest, session: any) {
       )
     }
 
-    const existingOffer = await prisma.offer.findUnique({
+    const existingOffer = await prisma.offers.findUnique({
       where: { offerCode: validatedData.offerCode },
     })
 
@@ -119,7 +119,7 @@ async function handlePOST(request: NextRequest, session: any) {
       )
     }
 
-    const offer = await prisma.offer.create({
+    const offer = await prisma.offers.create({
       data: {
         leadId: validatedData.leadId,
         offerCode: validatedData.offerCode,

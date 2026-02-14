@@ -418,7 +418,7 @@ export class AIMessageHandler {
         where: { phone: messageData.from },
       })
 
-      await prisma.communicationLog.create({
+      await prisma.communication_logs.create({
         data: {
           userId: user?.id,
           type: type === 'command' ? 'CUSTOM_MESSAGE' : 'SUPPORT_MESSAGE',

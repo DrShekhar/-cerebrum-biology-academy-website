@@ -146,7 +146,7 @@ export async function POST(request: NextRequest) {
     } = validation.data
 
     // Check if booking exists first (need demo date for token expiration)
-    const booking = await prisma.demoBooking.findUnique({
+    const booking = await prisma.demo_bookings.findUnique({
       where: { id: bookingId },
     })
 
@@ -191,7 +191,7 @@ export async function POST(request: NextRequest) {
 
     // Save feedback
     const existingMetadata = (booking.metadata as any) || {}
-    const updatedBooking = await prisma.demoBooking.update({
+    const updatedBooking = await prisma.demo_bookings.update({
       where: { id: bookingId },
       data: {
         demoRating: rating,
@@ -268,7 +268,7 @@ async function handleGetFeedbackLink(request: NextRequest, _session: UserSession
     }
 
     // Check if booking exists (include preferredDate for expiry calculation)
-    const booking = await prisma.demoBooking.findUnique({
+    const booking = await prisma.demo_bookings.findUnique({
       where: { id: bookingId },
       select: {
         id: true,

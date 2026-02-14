@@ -12,11 +12,11 @@ interface ReportErrorModalProps {
 
 const ERROR_TYPES = [
   { value: 'WRONG_ANSWER', label: 'Wrong Answer Marked' },
-  { value: 'WRONG_EXPLANATION', label: 'Incorrect Explanation' },
+  { value: 'INCOMPLETE', label: 'Incorrect/Incomplete Explanation' },
   { value: 'TYPO', label: 'Typo/Spelling Error' },
   { value: 'AMBIGUOUS', label: 'Ambiguous Question' },
-  { value: 'DUPLICATE', label: 'Duplicate Question' },
-  { value: 'OUTDATED_INFO', label: 'Outdated Information' },
+  { value: 'OTHER', label: 'Duplicate/Other Issue' },
+  { value: 'OUTDATED', label: 'Outdated Information' },
 ] as const
 
 export function ReportErrorModal({

@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import { Suspense } from 'react'
-import nextDynamic from 'next/dynamic'
 import { getAllPosts, getAllCategories } from '@/lib/blog/mdx'
 import { BreadcrumbSchema } from '@/components/seo'
+import { BlogListingPage } from '@/components/blog/BlogListingPage'
 
 // Revalidate every hour — page is statically generated and cached at CDN edge
 export const revalidate = 3600
@@ -10,7 +10,7 @@ export const revalidate = 3600
 // Loading skeleton component
 function BlogLoadingSkeleton() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-navy-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="h-12 bg-gray-200 animate-pulse rounded-lg mb-8 w-1/2" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -22,15 +22,6 @@ function BlogLoadingSkeleton() {
     </div>
   )
 }
-
-// Lazy load the heavy blog listing component
-const BlogListingPage = nextDynamic(
-  () => import('@/components/blog/BlogListingPage').then((mod) => mod.BlogListingPage),
-  {
-    loading: () => <BlogLoadingSkeleton />,
-    ssr: true,
-  }
-)
 
 export const metadata: Metadata = {
   title: 'NEET Biology Blog | Study Tips & Preparation Strategies',

@@ -132,7 +132,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Update booking status to CANCELLED
-    await prisma.demoBooking.update({
+    await prisma.demo_bookings.update({
       where: { id: bookingId },
       data: {
         status: 'CANCELLED',
@@ -253,7 +253,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Verify token without consuming it
-    const tokenRecord = await prisma.rescheduleToken.findFirst({
+    const tokenRecord = await prisma.reschedule_tokens.findFirst({
       where: {
         bookingId,
         token,
@@ -270,7 +270,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Get booking details
-    const booking = await prisma.demoBooking.findUnique({
+    const booking = await prisma.demo_bookings.findUnique({
       where: { id: bookingId },
       select: {
         id: true,

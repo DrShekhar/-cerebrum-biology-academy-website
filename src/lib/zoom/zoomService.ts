@@ -269,7 +269,7 @@ export class ZoomService {
       const dateStr = date.toISOString().split('T')[0]
 
       // Find all active bookings for this date
-      const existingBookings = await prisma.demoBooking.findMany({
+      const existingBookings = await prisma.demo_bookings.findMany({
         where: {
           preferredDate: dateStr,
           status: {

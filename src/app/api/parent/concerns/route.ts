@@ -119,7 +119,7 @@ export async function GET(request: NextRequest) {
       const childName = rel.child.name
 
       // 1. ATTENDANCE CONCERNS
-      const attendanceRecords = await prisma.attendance.findMany({
+      const attendanceRecords = await prisma.student_attendance.findMany({
         where: {
           studentId: childId,
           date: { gte: thirtyDaysAgo },

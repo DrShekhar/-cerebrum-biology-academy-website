@@ -100,10 +100,12 @@ export function BlogListingPage({ posts, categories, stats, popularTags }: BlogL
 
   // Load bookmarks from localStorage
   useEffect(() => {
-    const saved = localStorage.getItem('blog-bookmarks')
-    if (saved) {
-      setBookmarkedPosts(JSON.parse(saved))
-    }
+    try {
+      const saved = localStorage.getItem('blog-bookmarks')
+      if (saved) {
+        setBookmarkedPosts(JSON.parse(saved))
+      }
+    } catch {}
   }, [])
 
   // Sync currentPage with URL when browser back/forward is used or on initial load
@@ -277,7 +279,9 @@ export function BlogListingPage({ posts, categories, stats, popularTags }: BlogL
       ? bookmarkedPosts.filter((s) => s !== slug)
       : [...bookmarkedPosts, slug]
     setBookmarkedPosts(newBookmarks)
-    localStorage.setItem('blog-bookmarks', JSON.stringify(newBookmarks))
+    try {
+      localStorage.setItem('blog-bookmarks', JSON.stringify(newBookmarks))
+    } catch {}
   }
 
   const hasActiveFilters =

@@ -519,7 +519,7 @@ export async function POST(request: NextRequest) {
       notificationSent = sent.success
 
       // Update notification status
-      await prisma.demoBooking.update({
+      await prisma.demo_bookings.update({
         where: { id: demoBooking.id },
         data: {
           notificationsSent: {

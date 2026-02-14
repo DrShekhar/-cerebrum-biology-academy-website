@@ -13,8 +13,6 @@ import {
 import type { AnswerSubmission, AnswerResult, UserStats } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
 
-export const dynamic = 'force-dynamic'
-
 // Helper to check if a table doesn't exist error
 function isTableNotExistError(error: unknown): boolean {
   return (

@@ -20,7 +20,7 @@ export function DiagramQuestion({ diagram, className = '' }: DiagramQuestionProp
   const imageSrc =
     diagramData.fileUrl ||
     (diagramData.svgContent
-      ? `data:image/svg+xml;base64,${Buffer.from(diagramData.svgContent).toString('base64')}`
+      ? `data:image/svg+xml;base64,${btoa(unescape(encodeURIComponent(diagramData.svgContent)))}`
       : null)
 
   if (!imageSrc) {

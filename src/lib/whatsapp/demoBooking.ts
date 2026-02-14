@@ -211,7 +211,7 @@ export class DemoBookingService {
       }
 
       // Create demo booking
-      const demoBooking = await prisma.demoBooking.create({
+      const demoBooking = await prisma.demo_bookings.create({
         data: {
           userId: user.id,
           studentName: studentDetails.name || user.name,
@@ -251,7 +251,7 @@ export class DemoBookingService {
       await this.sessionManager.clearCurrentFlow(phoneNumber)
 
       // Log to communication log
-      await prisma.communicationLog.create({
+      await prisma.communication_logs.create({
         data: {
           userId: user.id,
           demoBookingId: demoBooking.id,
