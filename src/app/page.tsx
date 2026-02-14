@@ -90,6 +90,18 @@ export default function Home() {
         interactionStatistic={{ watchCount: 5000 }}
       />
 
+      {/* Video Schema for Student Success Story */}
+      <VideoObjectSchema
+        name="Student Success Story | NEET Biology Coaching at Cerebrum Biology Academy"
+        description="Watch how students at Cerebrum Biology Academy achieve outstanding NEET results through focused biology coaching by Dr. Shekhar C Singh. Proven methodology with small batch sizes of 15-20 students."
+        thumbnailUrl="https://i.ytimg.com/vi/t5F8RBuHITM/hqdefault.jpg"
+        uploadDate="2024-01-15"
+        duration="PT4M45S"
+        contentUrl="https://www.youtube.com/watch?v=t5F8RBuHITM"
+        embedUrl="https://www.youtube.com/embed/t5F8RBuHITM"
+        interactionStatistic={{ watchCount: 3000 }}
+      />
+
       {/* Speakable Schema for Voice Search Optimization */}
       <SpeakableSchema
         headline="Best NEET Biology Coaching Delhi NCR | Cerebrum Academy"
