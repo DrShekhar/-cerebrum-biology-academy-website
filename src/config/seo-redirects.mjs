@@ -625,12 +625,7 @@ export const seoPageConsolidationRedirects = [
   // ============================================
   {
     source: '/neet-coaching-comparison',
-    destination: '/compare/neet-coaching-comparison',
-    permanent: true,
-  },
-  {
-    source: '/testimonials',
-    destination: '/results',
+    destination: '/best-neet-biology-coaching',
     permanent: true,
   },
 ]
