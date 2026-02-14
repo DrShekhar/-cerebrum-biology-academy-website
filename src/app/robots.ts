@@ -97,6 +97,7 @@ export default function robots(): MetadataRoute.Robots {
       'https://cerebrumbiologyacademy.com/sitemap.xml',
       'https://cerebrumbiologyacademy.com/image-sitemap.xml',
       'https://cerebrumbiologyacademy.com/video-sitemap.xml',
+      'https://cerebrumbiologyacademy.com/priority-pages-sitemap.xml',
     ],
   }
 }
