@@ -543,7 +543,7 @@ export function DetailedPricingSection({ course }: DetailedPricingSectionProps) 
                     Chat as Parent
                   </button>
                   <a
-                    href="/parent-guide"
+                    href="/about"
                     className="inline-flex items-center gap-2 bg-white hover:bg-gray-50 text-gray-700 font-medium py-3 px-5 rounded-lg border border-gray-300 shadow-sm transition-all duration-300"
                   >
                     <Users className="h-5 w-5" />

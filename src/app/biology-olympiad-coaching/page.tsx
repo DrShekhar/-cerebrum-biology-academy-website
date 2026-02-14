@@ -443,13 +443,13 @@ export default function BiologyOlympiadCoachingPage() {
               All Olympiad Preparation
             </Link>
             <Link
-              href="/nso-coaching"
+              href="/courses"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               NSO Coaching
             </Link>
             <Link
-              href="/ntse-coaching"
+              href="/courses"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               NTSE Coaching

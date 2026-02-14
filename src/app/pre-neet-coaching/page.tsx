@@ -401,13 +401,13 @@ export default function PreNEETCoachingPage() {
               NEET Foundation Class 10
             </Link>
             <Link
-              href="/biology-tutor-class-9"
+              href="/biology-tuition-class-9-10"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Class 9 Biology Tutor
             </Link>
             <Link
-              href="/ntse-coaching"
+              href="/courses"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               NTSE Coaching

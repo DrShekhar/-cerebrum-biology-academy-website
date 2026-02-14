@@ -211,7 +211,7 @@ export default function NTSEBiologyPreparationPage() {
                 </Button>
               </Link>
 
-              <Link href="/ntse-coaching">
+              <Link href="/courses">
                 <Button
                   variant="outline"
                   size="xl"
@@ -422,7 +422,7 @@ export default function NTSEBiologyPreparationPage() {
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/ntse-coaching"
+              href="/courses"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               NTSE Coaching

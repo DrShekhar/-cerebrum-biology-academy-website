@@ -408,7 +408,7 @@ export default function NEETUpdatesPage() {
                 Join Cerebrum Biology Academy and get expert guidance for NEET 2025 with 98% success rate.
               </p>
               <Link
-                href="/free-demo"
+                href="/book-free-demo"
                 className="inline-flex items-center gap-2 bg-white text-blue-600 hover:bg-blue-50 font-semibold px-4 py-2 rounded-lg text-sm transition-colors w-full justify-center"
               >
                 Book Free Demo Class

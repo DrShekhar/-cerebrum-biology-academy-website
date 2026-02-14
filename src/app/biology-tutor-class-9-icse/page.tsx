@@ -372,7 +372,7 @@ export default function BiologyTutorClass9ICSEPage() {
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="/biology-tutor-class-9"
+              href="/biology-tuition-class-9-10"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Class 9 Biology Tutor
@@ -384,7 +384,7 @@ export default function BiologyTutorClass9ICSEPage() {
               Class 9 CBSE Biology
             </Link>
             <Link
-              href="/biology-tutor-class-10-icse"
+              href="/biology-tuition-class-9-10"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Class 10 ICSE Biology
