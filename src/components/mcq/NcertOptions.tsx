@@ -6,8 +6,10 @@ interface NcertOptionsProps {
   selectedWeightage: string | null
   hasDiagramOnly: boolean
   diagramCount?: number
+  selectedClass: number | null
   onWeightageChange: (weightage: string | null) => void
   onDiagramOnlyChange: (hasDiagramOnly: boolean) => void
+  onClassChange: (ncertClass: number | null) => void
 }
 
 const weightages = [
@@ -37,12 +39,22 @@ const weightages = [
   },
 ]
 
+const ncertClasses = [
+  { value: null, label: 'All Classes' },
+  { value: 9, label: 'Class 9' },
+  { value: 10, label: 'Class 10' },
+  { value: 11, label: 'Class 11' },
+  { value: 12, label: 'Class 12' },
+]
+
 export function NcertOptions({
   selectedWeightage,
   hasDiagramOnly,
   diagramCount = 248,
+  selectedClass,
   onWeightageChange,
   onDiagramOnlyChange,
+  onClassChange,
 }: NcertOptionsProps) {
   return (
     <div className="bg-gradient-to-br from-sage-50/50 via-stone-50 to-specimen-50/30 rounded-2xl p-5 border border-sage-200/50 space-y-5">
@@ -50,6 +62,36 @@ export function NcertOptions({
       <div className="flex items-center gap-2">
         <span className="text-lg">📖</span>
         <span className="font-semibold text-ink tracking-tight">NCERT Options</span>
+      </div>
+
+      {/* Class Filter */}
+      <div>
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-xs font-semibold uppercase tracking-wider text-stone-600">
+            Class
+          </span>
+          <div className="h-px flex-1 bg-stone-200 border-dashed" />
+        </div>
+        <div className="flex flex-wrap gap-2">
+          {ncertClasses.map((cls) => (
+            <button
+              key={cls.value ?? 'all'}
+              onClick={() => onClassChange(cls.value)}
+              className={`
+                inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border-2
+                transition-all duration-200
+                ${
+                  selectedClass === cls.value
+                    ? 'bg-sage-100 border-sage-500 text-sage-800'
+                    : 'bg-white border-stone-200 text-stone-600 hover:border-sage-300 hover:bg-sage-50'
+                }
+              `}
+            >
+              {selectedClass === cls.value && <Check className="w-3.5 h-3.5" />}
+              {cls.label}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* NEET Weightage Filter */}

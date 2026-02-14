@@ -357,6 +357,7 @@ export default function NEETBiologyMCQPage() {
         if (selectedPYQYear) params.append('pyqYear', selectedPYQYear.toString())
       } else if (contentSource === 'ncert') {
         params.append('isNcertBased', 'true')
+        if (selectedNcertClass) params.append('ncertClass', selectedNcertClass.toString())
         if (selectedNeetWeightage) params.append('neetWeightage', selectedNeetWeightage)
         if (hasDiagramOnly) params.append('hasDiagram', 'true')
       }
@@ -406,6 +407,7 @@ export default function NEETBiologyMCQPage() {
     selectedDifficulty,
     contentSource,
     selectedPYQYear,
+    selectedNcertClass,
     selectedNeetWeightage,
     hasDiagramOnly,
     questionCount,
@@ -682,6 +684,7 @@ export default function NEETBiologyMCQPage() {
     const filterParts = [
       contentSource === 'ncert' ? 'NCERT Based' : null,
       contentSource === 'pyq' ? `PYQ ${selectedPYQYear || 'All Years'}` : null,
+      selectedNcertClass ? `Class ${selectedNcertClass}` : null,
       selectedTopic,
       selectedChapter,
       selectedDifficulty,
@@ -862,8 +865,10 @@ export default function NEETBiologyMCQPage() {
                       selectedWeightage={selectedNeetWeightage}
                       hasDiagramOnly={hasDiagramOnly}
                       diagramCount={248}
+                      selectedClass={selectedNcertClass}
                       onWeightageChange={setSelectedNeetWeightage}
                       onDiagramOnlyChange={setHasDiagramOnly}
+                      onClassChange={setSelectedNcertClass}
                     />
                   )}
 

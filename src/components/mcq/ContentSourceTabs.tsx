@@ -51,7 +51,7 @@ export function ContentSourceTabs({
       label: 'NCERT Based',
       emoji: '📖',
       count: questionCounts.ncert,
-      description: 'Textbook aligned',
+      description: 'Class 9-12 textbook aligned',
     },
     {
       id: 'pyq' as ContentSource,
