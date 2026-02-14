@@ -99,6 +99,10 @@ export async function GET(request: NextRequest) {
       campbellChapter: searchParams.get('campbellChapter')
         ? parseInt(searchParams.get('campbellChapter')!)
         : undefined,
+      campbellUnit: searchParams.get('campbellUnit')
+        ? parseInt(searchParams.get('campbellUnit')!)
+        : undefined,
+      conceptualDepth: searchParams.get('conceptualDepth') || undefined,
     }
 
     const excludeIdsParam = searchParams.get('excludeIds')
@@ -158,6 +162,12 @@ export async function GET(request: NextRequest) {
     }
     if (filters.campbellChapter) {
       officialWhere.campbellChapter = filters.campbellChapter
+    }
+    if (filters.campbellUnit) {
+      officialWhere.campbellUnit = filters.campbellUnit
+    }
+    if (filters.conceptualDepth) {
+      officialWhere.conceptualDepth = filters.conceptualDepth
     }
 
     // Build where clause for community questions

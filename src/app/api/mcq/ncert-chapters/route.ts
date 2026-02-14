@@ -6,7 +6,7 @@ import { rateLimit } from '@/lib/rateLimit'
  * GET /api/mcq/ncert-chapters
  * Returns available NCERT chapters for filtering questions
  * Query params:
- *   - ncertClass: Filter by class (11 or 12)
+ *   - ncertClass: Filter by class (9, 10, 11, or 12)
  */
 export async function GET(request: NextRequest) {
   try {
@@ -74,6 +74,8 @@ export async function GET(request: NextRequest) {
       }))
 
     // Group by class
+    const class9Chapters = chapters.filter((ch) => ch.ncertClass === 9)
+    const class10Chapters = chapters.filter((ch) => ch.ncertClass === 10)
     const class11Chapters = chapters.filter((ch) => ch.ncertClass === 11)
     const class12Chapters = chapters.filter((ch) => ch.ncertClass === 12)
 
@@ -86,12 +88,16 @@ export async function GET(request: NextRequest) {
       success: true,
       data: {
         chapters: {
+          class9: class9Chapters,
+          class10: class10Chapters,
           class11: class11Chapters,
           class12: class12Chapters,
           all: chapters,
         },
         statistics: {
           totalNcertQuestions,
+          class9Questions: class9Chapters.reduce((sum, ch) => sum + ch.questionCount, 0),
+          class10Questions: class10Chapters.reduce((sum, ch) => sum + ch.questionCount, 0),
           class11Questions: class11Chapters.reduce((sum, ch) => sum + ch.questionCount, 0),
           class12Questions: class12Chapters.reduce((sum, ch) => sum + ch.questionCount, 0),
           byWeightage: Object.fromEntries(
@@ -99,7 +105,7 @@ export async function GET(request: NextRequest) {
           ),
         },
         filters: {
-          classes: [11, 12],
+          classes: [9, 10, 11, 12],
           weightages: ['HIGH', 'MEDIUM', 'LOW'],
         },
       },
