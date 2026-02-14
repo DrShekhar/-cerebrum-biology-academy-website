@@ -48,7 +48,7 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: 'Googlebot',
-        allow: '/',
+        allow: ['/', '/testimonials/', '/video-sitemap.xml'],
         disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/static/css/', '/blog?', '/courses?'],
       },
       {
