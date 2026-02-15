@@ -1,0 +1,1449 @@
+{
+  "batch": {
+    "name": "Class 12 - Chapter 8: Human Health and Disease",
+    "version": 1,
+    "source": "neet-class12-ch08",
+    "totalQuestions": 100
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "The pathogen of typhoid fever is:",
+      "options": [
+        "A) Streptococcus pneumoniae",
+        "D) Entamoeba histolytica",
+        "B) Salmonella typhi",
+        "C) Plasmodium vivax"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Typhoid fever is caused by the bacterium Salmonella typhi, which enters the small intestine through contaminated food and water and migrates to other organs through blood.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "typhoid",
+        "salmonella-typhi",
+        "bacterial-diseases"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Widal test is used for the confirmation of which disease?",
+      "options": [
+        "B) AIDS",
+        "A) Malaria",
+        "D) Pneumonia",
+        "C) Typhoid"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Widal test is a serological test used for the diagnosis and confirmation of typhoid fever. It detects antibodies against Salmonella typhi in the patient's serum.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "widal-test",
+        "typhoid",
+        "diagnostic-tests"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Which of the following is the vector for malaria?",
+      "options": [
+        "A) Male Anopheles mosquito",
+        "C) Female Culex mosquito",
+        "D) Female Aedes mosquito",
+        "B) Female Anopheles mosquito"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Malaria is transmitted by the bite of infected female Anopheles mosquitoes. The female mosquito requires a blood meal for egg development and serves as the vector for Plasmodium parasites.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "malaria",
+        "anopheles",
+        "vector-borne-diseases"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "The infective stage of Plasmodium that enters the human body is:",
+      "options": [
+        "D) Gametocyte",
+        "A) Merozoite",
+        "C) Sporozoite",
+        "B) Trophozoite"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sporozoites are the infective stage of Plasmodium that are injected into the human body by the bite of an infected female Anopheles mosquito. They first infect liver cells before entering the erythrocytic cycle.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "malaria",
+        "plasmodium-life-cycle",
+        "sporozoite"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Common cold is caused by:",
+      "options": [
+        "C) Rhinoviruses",
+        "D) Salmonella typhi",
+        "B) Haemophilus influenzae",
+        "A) Streptococcus pneumoniae"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Common cold is caused by Rhinoviruses. It infects the nose and respiratory passage but not the lungs. The virus is transmitted through droplets from coughs or sneezes or through contaminated objects.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "common-cold",
+        "rhinovirus",
+        "viral-diseases"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Elephantiasis is caused by:",
+      "options": [
+        "C) Entamoeba histolytica",
+        "A) Ascaris lumbricoides",
+        "D) Plasmodium falciparum",
+        "B) Wuchereria bancrofti"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Elephantiasis (filariasis) is caused by Wuchereria bancrofti and Wuchereria malayi. These filarial worms live in the lymphatic vessels and block lymph drainage, causing chronic inflammation and swelling of lower limbs.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "elephantiasis",
+        "wuchereria",
+        "helminth-diseases"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Which immunoglobulin is responsible for allergic reactions?",
+      "options": [
+        "A) IgG",
+        "B) IgA",
+        "D) IgE",
+        "C) IgM"
+      ],
+      "correctAnswer": "C",
+      "explanation": "IgE antibodies are responsible for allergic reactions. They are produced in response to allergens and bind to mast cells, causing the release of histamine and serotonin which lead to allergic symptoms.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "allergy",
+        "IgE",
+        "immunoglobulins"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "HIV attacks which type of cells in the human body?",
+      "options": [
+        "D) Red blood cells",
+        "B) Helper T-lymphocytes",
+        "C) Cytotoxic T-lymphocytes",
+        "A) B-lymphocytes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "HIV (Human Immunodeficiency Virus) primarily attacks helper T-lymphocytes (CD4+ T cells), macrophages, and monocytes. The progressive decline in helper T cells leads to immunodeficiency.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "AIDS",
+        "HIV",
+        "T-cells"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Which of the following is a protozoan disease?",
+      "options": [
+        "D) Typhoid",
+        "B) Ringworm",
+        "C) Amoebiasis",
+        "A) Ascariasis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Amoebiasis is caused by the protozoan Entamoeba histolytica. Ascariasis is a helminth disease, ringworm is a fungal disease, and typhoid is a bacterial disease.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amoebiasis",
+        "protozoan-diseases",
+        "entamoeba"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Ringworm in humans is caused by:",
+      "options": [
+        "B) Virus",
+        "D) Nematode",
+        "A) Bacteria",
+        "C) Fungi"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ringworm is caused by fungi belonging to genera Microsporum, Trichophyton, and Epidermophyton. Despite the name, it is not caused by a worm. It appears as dry, scaly lesions on skin, nails, and scalp.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ringworm",
+        "fungal-diseases",
+        "microsporum"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "The__(A)__ cells in our body produce antibodies, while __(B)__ cells are responsible for cell-mediated immunity. Choose the correct pair:",
+      "options": [
+        "A) A-T lymphocytes, B-B lymphocytes",
+        "D) A-Macrophages, B-T lymphocytes",
+        "B) A-B lymphocytes, B-T lymphocytes",
+        "C) A-NK cells, B-B lymphocytes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "B-lymphocytes produce antibodies and are responsible for humoral immunity, while T-lymphocytes are responsible for cell-mediated immunity (CMI). Both are types of lymphocytes derived from bone marrow stem cells.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "B-cells",
+        "T-cells",
+        "immunity"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Pneumonia is caused by which of the following organisms?",
+      "options": [
+        "B) Rhinovirus",
+        "A) Salmonella typhi",
+        "C) Streptococcus pneumoniae and Haemophilus influenzae",
+        "D) Wuchereria bancrofti"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Pneumonia is caused by the bacteria Streptococcus pneumoniae and Haemophilus influenzae. It infects the alveoli of the lungs, filling them with fluid leading to breathing difficulty.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pneumonia",
+        "bacterial-diseases",
+        "streptococcus"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Which substance released by mast cells is responsible for allergic symptoms such as sneezing and watery eyes?",
+      "options": [
+        "A) Interferon",
+        "B) Histamine",
+        "D) Heparin",
+        "C) Collagen"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Histamine and serotonin are released from mast cells in response to allergens binding to IgE antibodies. Histamine causes vasodilation and increased mucus secretion, leading to symptoms like sneezing, watery eyes, and running nose.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "allergy",
+        "histamine",
+        "mast-cells"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Conversion of proto-oncogenes to oncogenes leads to:",
+      "options": [
+        "D) Immunodeficiency",
+        "B) Autoimmune disease",
+        "A) Allergic reaction",
+        "C) Cancer"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Proto-oncogenes are normal genes that control cell growth and differentiation. When mutated or activated abnormally, they become oncogenes that lead to uncontrolled cell division and cancer.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cancer",
+        "oncogenes",
+        "proto-oncogenes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Which drug is obtained from the latex of Papaver somniferum?",
+      "options": [
+        "B) Marijuana",
+        "C) Morphine",
+        "A) Cocaine",
+        "D) LSD"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Morphine is an opioid drug obtained from the latex of the poppy plant Papaver somniferum. Other opioids derived from the same source include heroin (diacetylmorphine) and codeine.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "drug-abuse",
+        "opioids",
+        "morphine"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "ELISA test is based on the principle of:",
+      "options": [
+        "D) Gel electrophoresis",
+        "C) PCR amplification",
+        "A) Antigen-antibody interaction",
+        "B) DNA hybridization"
+      ],
+      "correctAnswer": "C",
+      "explanation": "ELISA (Enzyme Linked Immuno-Sorbent Assay) is based on the principle of antigen-antibody interaction. It is widely used for the detection of HIV infection and other diseases.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ELISA",
+        "AIDS",
+        "diagnostic-tests"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "The__(A)__ is an example of innate immunity barrier, while __(B)__ represents acquired immunity. Choose the correct option:",
+      "options": [
+        "B) A-Vaccination, B-Mucus in nose",
+        "C) A-Skin, B-Vaccination",
+        "D) A-Interferon, B-Lysozyme",
+        "A) A-Antibodies, B-Skin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Skin is a physical barrier that is part of innate (non-specific) immunity. Vaccination provides acquired (adaptive/specific) immunity by stimulating the immune system to produce memory cells against specific pathogens.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "innate-immunity",
+        "acquired-immunity",
+        "vaccination"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "The__(A)__ test is used for confirming AIDS after a positive ELISA test. Choose the correct option:",
+      "options": [
+        "B) Mantoux test",
+        "C) Western blot",
+        "D) PCR",
+        "A) Widal test"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Western blot is the confirmatory test for HIV/AIDS after an initial positive ELISA test. It detects specific HIV proteins and has higher specificity than ELISA.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "AIDS",
+        "western-blot",
+        "diagnostic-tests"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Metastasis is the property of:",
+      "options": [
+        "B) Malignant tumors",
+        "C) Both benign and malignant tumors",
+        "D) Normal cells",
+        "A) Benign tumors"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Metastasis is the property of malignant tumors (cancerous cells) to spread from the primary site to distant organs through blood and lymph. Benign tumors remain confined to their original location and do not show metastasis.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cancer",
+        "metastasis",
+        "malignant-tumors"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Cannabinoids are obtained from:",
+      "options": [
+        "B) Cannabis sativa",
+        "C) Erythroxylum coca",
+        "D) Atropa belladonna",
+        "A) Papaver somniferum"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cannabinoids (marijuana, hashish, charas, ganja) are obtained from the inflorescences of Cannabis sativa. They interact with cannabinoid receptors in the brain and affect cardiovascular system.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "drug-abuse",
+        "cannabinoids",
+        "cannabis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): Innate immunity is non-specific and is present at birth.\nReason (R): Innate immunity includes barriers like skin, mucus, and antimicrobial substances like lysozyme in tears.",
+      "options": [
+        "A) Both A and R are true, and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "B) Both A and R are true, but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Innate immunity is indeed non-specific and present from birth. The reason correctly explains the assertion by listing the physical and chemical barriers (skin, mucus, lysozyme) that constitute innate immunity.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "innate-immunity",
+        "non-specific-defense",
+        "barriers"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): Secondary immune response is faster and stronger than the primary immune response.\nReason (R): Memory B and T cells generated during the primary response enable a rapid and heightened response upon subsequent exposure.",
+      "options": [
+        "B) Both A and R are true, but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true, and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The secondary (anamnestic) immune response is faster and more intense because memory cells formed during the first encounter with the antigen quickly proliferate and mount a stronger response on re-exposure.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "acquired-immunity",
+        "memory-cells",
+        "secondary-response"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): HIV is a retrovirus.\nReason (R): HIV has RNA as its genetic material and possesses the enzyme reverse transcriptase.",
+      "options": [
+        "B) Both A and R are true, but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true, and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "HIV is classified as a retrovirus because it has RNA as its genetic material and uses the enzyme reverse transcriptase to convert its RNA into DNA inside the host cell. This is the defining characteristic of retroviruses.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "AIDS",
+        "HIV",
+        "retrovirus",
+        "reverse-transcriptase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): Colostrum is recommended for newborn infants.\nReason (R): Colostrum contains abundant IgA antibodies that provide passive immunity to the newborn.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "B) Both A and R are true, but R is not the correct explanation of A",
+        "A) Both A and R are true, and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Colostrum, the yellowish fluid produced by the mother during the initial days of lactation, contains IgA antibodies that protect the infant against various pathogens. This is a form of passive immunity.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "passive-immunity",
+        "colostrum",
+        "IgA"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): Benign tumors are not life threatening.\nReason (R): Benign tumors do not show metastasis and remain confined to their site of origin.",
+      "options": [
+        "B) Both A and R are true, but R is not the correct explanation of A",
+        "A) Both A and R are true, and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Benign tumors are generally not life threatening because they do not exhibit metastasis. They remain confined to their original location, do not invade surrounding tissues, and can usually be surgically removed.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cancer",
+        "benign-tumor",
+        "metastasis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): Smoking increases the risk of lung cancer.\nReason (R): Tobacco smoke contains carcinogenic chemicals like benzopyrene that cause mutations in lung cells.",
+      "options": [
+        "B) Both A and R are true, but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true, and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Smoking is a major cause of lung cancer. Tobacco smoke contains over 4000 chemicals, many of which are carcinogenic. Benzopyrene and other polycyclic hydrocarbons damage DNA and activate proto-oncogenes.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cancer",
+        "smoking",
+        "tobacco",
+        "carcinogens"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): Malaria causes recurrent bouts of fever at regular intervals.\nReason (R): The rupture of RBCs releasing merozoites and a toxic substance called haemozoin coincides with the episodes of fever.",
+      "options": [
+        "D) A is false but R is true",
+        "B) Both A and R are true, but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "A) Both A and R are true, and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In malaria, the rupture of infected RBCs releases merozoites along with haemozoin (a toxic substance). This triggers the release of pyrogenic substances that cause the characteristic cyclic high fever with chills.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "malaria",
+        "haemozoin",
+        "fever-cycle"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): Vaccination is based on the principle of immunological memory.\nReason (R): On subsequent exposure to the same pathogen, the immune system mounts a weak and slow response.",
+      "options": [
+        "D) A is false but R is true",
+        "A) Both A and R are true, and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "B) Both A and R are true, but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The assertion is true: vaccination works on the principle of immunological memory. However, the reason is false. On subsequent exposure, the immune system mounts a faster, stronger (not weak and slow) secondary immune response due to memory cells.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "vaccination",
+        "immunological-memory",
+        "secondary-response"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): AIDS patients suffer from many infections and cancers.\nReason (R): HIV destroys helper T-cells, leading to progressive weakening of the immune system.",
+      "options": [
+        "B) Both A and R are true, but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true, and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "AIDS patients become susceptible to opportunistic infections (like Mycobacterium, Toxoplasma) and certain cancers because HIV progressively destroys helper T-cells (CD4+), which are essential for coordinating immune responses.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "AIDS",
+        "HIV",
+        "immunodeficiency",
+        "opportunistic-infections"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): Interferons are produced by virus-infected cells.\nReason (R): Interferons protect non-infected cells from further viral attack.",
+      "options": [
+        "A) Both A and R are true, and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "B) Both A and R are true, but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both statements are true. Virus-infected cells release interferons, and interferons do protect non-infected cells. However, the reason does not explain why virus-infected cells produce interferons (which is a defense mechanism), so R is not the correct explanation of A.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "innate-immunity",
+        "interferon",
+        "viral-defense"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): Cocaine is obtained from Erythroxylum coca and acts as a stimulant.\nReason (R): Cocaine interferes with the transport of the neurotransmitter dopamine.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "B) Both A and R are true, but R is not the correct explanation of A",
+        "A) Both A and R are true, and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cocaine is obtained from the coca plant (Erythroxylum coca). It acts as a powerful stimulant because it interferes with the reuptake of dopamine, causing an accumulation of the neurotransmitter at the synapse, leading to a sense of euphoria.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "drug-abuse",
+        "cocaine",
+        "dopamine"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): Autoimmunity is the result of the immune system attacking self-cells.\nReason (R): Rheumatoid arthritis is an example of autoimmune disease.",
+      "options": [
+        "A) Both A and R are true, and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "B) Both A and R are true, but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both statements are true. Autoimmunity occurs when the immune system fails to distinguish self from non-self and attacks the body's own tissues. Rheumatoid arthritis is indeed an autoimmune disease, but it is merely an example, not an explanation of the mechanism.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "autoimmunity",
+        "rheumatoid-arthritis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): The sexual cycle of Plasmodium takes place inside the mosquito.\nReason (R): The mosquito is the definitive host of Plasmodium.",
+      "options": [
+        "B) Both A and R are true, but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "A) Both A and R are true, and R is the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The sexual cycle (gametogony) of Plasmodium occurs inside the female Anopheles mosquito, making it the definitive host (the organism in which the parasite undergoes sexual reproduction). The reason correctly explains why the mosquito is called the definitive host.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "malaria",
+        "plasmodium-life-cycle",
+        "definitive-host"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Assertion (A): Ascariasis is common in children.\nReason (R): Children are more prone to soil contamination and practice poor hygiene.",
+      "options": [
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "B) Both A and R are true, but R is not the correct explanation of A",
+        "A) Both A and R are true, and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ascariasis, caused by Ascaris lumbricoides, is common in children because they frequently play in soil contaminated with roundworm eggs and have poor hygiene habits, leading to oral ingestion of infective eggs.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "ascariasis",
+        "helminth-diseases",
+        "children"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Which of the following statements is/are correct?\n(i) Typhoid is caused by Salmonella typhi and diagnosed by Widal test.\n(ii) Pneumonia infects the alveoli of the lungs.\n(iii) Common cold is caused by Rhinoviruses and affects the lungs.\n(iv) Malaria is caused by Plasmodium and transmitted by female Culex mosquito.",
+      "options": [
+        "B) (i), (ii) and (iii)",
+        "D) All of the above",
+        "C) (ii), (iii) and (iv)",
+        "A) (i) and (ii) only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statement (i) is correct: typhoid is caused by Salmonella typhi and diagnosed by Widal test. Statement (ii) is correct: pneumonia infects the alveoli. Statement (iii) is wrong: common cold affects the nose and respiratory passage, not the lungs. Statement (iv) is wrong: malaria is transmitted by female Anopheles (not Culex) mosquito.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "bacterial-diseases",
+        "viral-diseases",
+        "malaria"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Consider the following statements about HIV:\n(i) HIV is an enveloped virus with two single-stranded RNA molecules.\n(ii) It has reverse transcriptase enzyme.\n(iii) HIV primarily infects cytotoxic T-cells.\n(iv) It can be transmitted through sharing food.\nHow many of the above statements are correct?",
+      "options": [
+        "A) One",
+        "C) Three",
+        "B) Two",
+        "D) Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statements (i) and (ii) are correct. HIV is an enveloped retrovirus with two copies of ssRNA and reverse transcriptase. Statement (iii) is wrong: HIV primarily infects helper T-cells (CD4+), not cytotoxic T-cells. Statement (iv) is wrong: HIV is not transmitted through casual contact or sharing food.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "AIDS",
+        "HIV",
+        "retrovirus"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Read the following statements and select the correct option:\n(i) Active immunity is slow but has long-lasting memory.\n(ii) Passive immunity provides immediate protection but is short-lived.\n(iii) Vaccination provides passive immunity.\n(iv) Mother's milk provides active immunity to the newborn.",
+      "options": [
+        "A) (i) and (ii) only",
+        "D) All are correct",
+        "B) (i), (ii) and (iii)",
+        "C) (ii) and (iv) only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements (i) and (ii) are correct. Active immunity develops slowly after exposure to antigens but provides long-lasting protection with memory. Passive immunity provides immediate but short-lived protection. Statement (iii) is wrong: vaccination provides active immunity. Statement (iv) is wrong: mother's milk (colostrum with IgA) provides passive immunity.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "active-immunity",
+        "passive-immunity",
+        "vaccination"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Which of the following statements about cancer is/are incorrect?\n(i) Contact inhibition is shown by cancer cells.\n(ii) Benign tumors show metastasis.\n(iii) Oncogenes are genes that promote cell growth and division.\n(iv) Tumor suppressor genes normally inhibit cell division.",
+      "options": [
+        "C) (i) only",
+        "D) (ii) and (iii) only",
+        "A) (i) and (ii) only",
+        "B) (iii) and (iv) only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statement (i) is incorrect: cancer cells lack contact inhibition, which is why they continue to divide uncontrollably. Statement (ii) is incorrect: benign tumors do NOT show metastasis; only malignant tumors do. Statements (iii) and (iv) are correct descriptions of oncogenes and tumor suppressor genes.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cancer",
+        "contact-inhibition",
+        "oncogenes",
+        "tumor-suppressor"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Consider the following statements about drug abuse:\n(i) Opioids bind to specific opioid receptors present in the central nervous system.\n(ii) Cannabinoids are obtained from Erythroxylum coca.\n(iii) Cocaine causes a sense of euphoria by interfering with dopamine transport.\n(iv) Heroin (smack) is chemically diacetylmorphine.\nWhich of the above are correct?",
+      "options": [
+        "D) All of the above",
+        "C) (ii), (iii) and (iv)",
+        "A) (i), (ii) and (iii)",
+        "B) (i), (iii) and (iv)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statements (i), (iii), and (iv) are correct. Opioids bind to opioid receptors in the CNS. Cocaine interferes with dopamine transport. Heroin is diacetylmorphine. Statement (ii) is wrong: cannabinoids are obtained from Cannabis sativa, not Erythroxylum coca (which yields cocaine).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "drug-abuse",
+        "opioids",
+        "cocaine",
+        "cannabinoids"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "How many of the following statements are correct?\n(i) Ascaris lumbricoides is the causative organism of ascariasis.\n(ii) Internal symptoms of ascariasis include fever, anaemia, and blockage of intestinal passage.\n(iii) Amoebiasis is also called amoebic dysentery.\n(iv) Entamoeba histolytica is transmitted by houseflies acting as mechanical carriers.",
+      "options": [
+        "A) One",
+        "D) Four",
+        "B) Two",
+        "C) Three"
+      ],
+      "correctAnswer": "B",
+      "explanation": "All four statements are correct. Ascaris lumbricoides causes ascariasis with symptoms including fever, anaemia, and intestinal blockage. Amoebiasis (caused by Entamoeba histolytica) is also called amoebic dysentery. Houseflies serve as mechanical carriers that transmit the parasite from faeces to food.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ascariasis",
+        "amoebiasis",
+        "helminth-diseases"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Which of the following statements about the life cycle of Plasmodium is/are correct?\n(i) The asexual cycle of Plasmodium occurs in the human body.\n(ii) Sporozoites are formed inside the human liver.\n(iii) Merozoites infect red blood cells.\n(iv) Gametocytes are formed in the human body and fertilization occurs in the mosquito.",
+      "options": [
+        "C) (i), (ii) and (iii)",
+        "B) (i), (iii) and (iv)",
+        "A) (i) and (iii) only",
+        "D) All of the above"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements (i), (iii), and (iv) are correct. The asexual cycle occurs in humans. Merozoites infect RBCs. Gametocytes form in the human body, and fertilization happens in the mosquito. Statement (ii) is wrong: sporozoites are formed in the mosquito's salivary glands, not the human liver. In the liver, sporozoites multiply to form merozoites.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "malaria",
+        "plasmodium-life-cycle",
+        "sporozoite",
+        "merozoite"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Read the following statements:\n(i) Morphine is an effective sedative and painkiller.\n(ii) Smack (heroin) is obtained from the latex of Papaver somniferum.\n(iii) LSD (Lysergic acid diethylamide) is obtained from Cannabis sativa.\n(iv) Barbiturates are commonly used sleeping pills.\nSelect the option with all correct statements:",
+      "options": [
+        "A) (i) and (iii)",
+        "D) All of the above",
+        "C) (ii), (iii) and (iv)",
+        "B) (i), (ii) and (iv)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statements (i), (ii), and (iv) are correct. Morphine is a potent sedative and painkiller. Heroin (smack) is derived from morphine obtained from Papaver somniferum. Barbiturates are commonly used sleeping pills. Statement (iii) is wrong: LSD is obtained from the fungus Claviceps purpurea, not Cannabis sativa.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "drug-abuse",
+        "opioids",
+        "LSD",
+        "barbiturates"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "How many of the following are transmitted by contaminated food and water?\n(i) Typhoid\n(ii) Amoebiasis\n(iii) Ascariasis\n(iv) Malaria\n(v) Elephantiasis",
+      "options": [
+        "A) Two",
+        "D) Five",
+        "B) Three",
+        "C) Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Typhoid (Salmonella typhi), amoebiasis (Entamoeba histolytica), and ascariasis (Ascaris eggs) are transmitted through contaminated food and water. Malaria is transmitted by mosquito bites (female Anopheles), and elephantiasis is also vector-borne (transmitted by mosquitoes).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disease-transmission",
+        "contaminated-water",
+        "food-borne"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Match the diseases in Column I with their causative organisms in Column II:\nColumn I: (P) Typhoid (Q) Pneumonia (R) Malaria (S) Ringworm\nColumn II: (i) Microsporum (ii) Plasmodium (iii) Salmonella typhi (iv) Streptococcus pneumoniae",
+      "options": [
+        "A) P-iii, Q-iv, R-ii, S-i",
+        "D) P-ii, Q-iv, R-iii, S-i",
+        "C) P-iii, Q-i, R-ii, S-iv",
+        "B) P-iv, Q-iii, R-i, S-ii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Typhoid is caused by Salmonella typhi (P-iii). Pneumonia is caused by Streptococcus pneumoniae (Q-iv). Malaria is caused by Plasmodium (R-ii). Ringworm is caused by Microsporum (S-i).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disease-pathogen-matching",
+        "bacterial-diseases",
+        "fungal-diseases"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Match the drugs in Column I with their sources in Column II:\nColumn I: (P) Morphine (Q) Cocaine (R) Marijuana (S) LSD\nColumn II: (i) Cannabis sativa (ii) Erythroxylum coca (iii) Papaver somniferum (iv) Claviceps purpurea",
+      "options": [
+        "A) P-iii, Q-ii, R-i, S-iv",
+        "B) P-ii, Q-iii, R-iv, S-i",
+        "C) P-iv, Q-i, R-ii, S-iii",
+        "D) P-i, Q-iv, R-iii, S-ii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Morphine is obtained from Papaver somniferum (poppy plant). Cocaine is obtained from Erythroxylum coca (coca plant). Marijuana is obtained from Cannabis sativa (hemp plant). LSD is obtained from Claviceps purpurea (ergot fungus).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "drug-abuse",
+        "drug-sources"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Match the type of immunity in Column I with its example in Column II:\nColumn I: (P) Active immunity (Q) Passive immunity (R) Innate immunity (S) Cell-mediated immunity\nColumn II: (i) Skin and mucous membranes (ii) Colostrum (iii) Vaccination (iv) T-lymphocytes",
+      "options": [
+        "C) P-iii, Q-iv, R-ii, S-i",
+        "D) P-iv, Q-i, R-iii, S-ii",
+        "B) P-iii, Q-ii, R-i, S-iv",
+        "A) P-ii, Q-iii, R-iv, S-i"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Active immunity is achieved through vaccination (P-iii). Passive immunity is provided by colostrum containing ready-made antibodies (Q-ii). Innate immunity includes physical barriers like skin and mucous membranes (R-i). Cell-mediated immunity involves T-lymphocytes (S-iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "immunity-types",
+        "vaccination",
+        "colostrum",
+        "T-cells"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Match the diagnostic tests in Column I with the diseases they detect in Column II:\nColumn I: (P) Widal test (Q) ELISA (R) Western blot (S) Biopsy\nColumn II: (i) Cancer confirmation (ii) Typhoid (iii) HIV screening (iv) HIV confirmation",
+      "options": [
+        "C) P-ii, Q-iv, R-iii, S-i",
+        "B) P-iii, Q-ii, R-i, S-iv",
+        "D) P-iv, Q-ii, R-iii, S-i",
+        "A) P-ii, Q-iii, R-iv, S-i"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Widal test is used for diagnosing typhoid (P-ii). ELISA is the screening test for HIV (Q-iii). Western blot is the confirmatory test for HIV (R-iv). Biopsy involves tissue examination and is used for confirming cancer (S-i).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "diagnostic-tests",
+        "widal-test",
+        "ELISA",
+        "western-blot"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Match the diseases in Column I with their vectors/mode of transmission in Column II:\nColumn I: (P) Malaria (Q) Elephantiasis (R) Typhoid (S) Common cold\nColumn II: (i) Contaminated food and water (ii) Droplet infection (iii) Female Anopheles mosquito (iv) Female Culex mosquito",
+      "options": [
+        "B) P-iv, Q-iii, R-ii, S-i",
+        "C) P-iii, Q-iv, R-ii, S-i",
+        "A) P-iii, Q-iv, R-i, S-ii",
+        "D) P-iv, Q-iii, R-i, S-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Malaria is transmitted by female Anopheles mosquito (P-iii). Elephantiasis is transmitted by female Culex mosquito (Q-iv). Typhoid is transmitted through contaminated food and water (R-i). Common cold is transmitted through droplet infection (S-ii).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disease-transmission",
+        "vectors",
+        "mosquito-borne"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Match Column I with Column II regarding cancer:\nColumn I: (P) Carcinoma (Q) Sarcoma (R) Lymphoma (S) Leukemia\nColumn II: (i) Cancer of blood cells (ii) Cancer of epithelial tissues (iii) Cancer of connective tissue (iv) Cancer of lymphatic tissue",
+      "options": [
+        "D) P-iv, Q-iii, R-ii, S-i",
+        "C) P-ii, Q-iv, R-iii, S-i",
+        "B) P-iii, Q-ii, R-i, S-iv",
+        "A) P-ii, Q-iii, R-iv, S-i"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Carcinoma is cancer of epithelial tissues (P-ii). Sarcoma is cancer of connective tissues like bones and cartilage (Q-iii). Lymphoma is cancer of lymphatic tissue (R-iv). Leukemia is cancer of blood/blood-forming cells (S-i).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cancer",
+        "cancer-types",
+        "carcinoma",
+        "leukemia"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "How many of the following are bacterial diseases?\n(a) Typhoid (b) Pneumonia (c) Malaria (d) Common cold (e) Amoebiasis (f) Plague (g) Diphtheria (h) Ringworm",
+      "options": [
+        "D) Five",
+        "C) Four",
+        "A) Two",
+        "B) Three"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The bacterial diseases in the list are: Typhoid (Salmonella typhi), Pneumonia (Streptococcus pneumoniae), Plague (Yersinia pestis), and Diphtheria (Corynebacterium diphtheriae). Malaria is protozoan, common cold is viral, amoebiasis is protozoan, and ringworm is fungal.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "bacterial-diseases",
+        "disease-classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "How many of the following are components of innate immunity?\n(a) Skin (b) Mucus in respiratory tract (c) Acid in stomach (d) Antibodies (e) Tears containing lysozyme (f) Interferons (g) Memory B-cells (h) Neutrophils",
+      "options": [
+        "A) Four",
+        "C) Six",
+        "D) Seven",
+        "B) Five"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Components of innate immunity: Skin (physical barrier), mucus in respiratory tract (physical barrier), acid in stomach (chemical barrier), tears containing lysozyme (chemical barrier), interferons (cytokine barrier), and neutrophils (cellular barrier). Antibodies and memory B-cells are components of acquired/adaptive immunity.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "innate-immunity",
+        "barriers",
+        "non-specific-defense"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "How many of the following are correct modes of HIV transmission?\n(a) Sexual contact with infected person\n(b) Transfusion of contaminated blood\n(c) Sharing injection needles\n(d) Sharing food with infected person\n(e) From infected mother to child through placenta\n(f) Mosquito bites\n(g) Handshake with infected person",
+      "options": [
+        "D) Six",
+        "B) Four",
+        "A) Three",
+        "C) Five"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct modes of HIV transmission are: (a) sexual contact, (b) contaminated blood transfusion, (c) sharing needles, and (e) mother to child through placenta. HIV is NOT transmitted by sharing food, mosquito bites, or handshakes.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "AIDS",
+        "HIV",
+        "disease-transmission"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Arrange the following events of the Plasmodium life cycle in the human body in the correct sequence:\n(i) Merozoites released into blood\n(ii) Sporozoites enter liver cells\n(iii) Rupture of RBCs releases haemozoin\n(iv) Merozoites attack red blood cells\n(v) Sporozoites injected by mosquito bite",
+      "options": [
+        "D) (v) → (ii) → (iv) → (iii) → (i)",
+        "B) (ii) → (v) → (iv) → (i) → (iii)",
+        "A) (v) → (ii) → (i) → (iv) → (iii)",
+        "C) (v) → (iv) → (ii) → (iii) → (i)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The correct sequence is: Sporozoites are injected by mosquito bite (v) → enter liver cells and multiply (ii) → merozoites are released into blood (i) → merozoites attack RBCs (iv) → rupture of RBCs releases haemozoin causing fever (iii).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "malaria",
+        "plasmodium-life-cycle",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Arrange the following events in the replication of HIV in the correct order:\n(i) Integration of viral DNA into host genome\n(ii) Reverse transcription of viral RNA to DNA\n(iii) Binding of HIV to CD4 receptor on helper T-cell\n(iv) Production of new virus particles\n(v) Release of viral RNA into host cell",
+      "options": [
+        "C) (iii) → (ii) → (v) → (iv) → (i)",
+        "D) (v) → (ii) → (iii) → (iv) → (i)",
+        "B) (v) → (iii) → (i) → (ii) → (iv)",
+        "A) (iii) → (v) → (ii) → (i) → (iv)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct sequence of HIV replication: HIV binds to CD4 receptor on helper T-cell (iii) → viral RNA is released into host cell (v) → reverse transcriptase converts viral RNA to DNA (ii) → viral DNA integrates into host genome (i) → new virus particles are produced and released (iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "AIDS",
+        "HIV",
+        "replication-cycle",
+        "reverse-transcriptase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "question": "Arrange the following in the correct sequence of an allergic reaction:\n(i) Symptoms like sneezing, watery eyes appear\n(ii) Allergen enters the body\n(iii) IgE antibodies bind to mast cells\n(iv) Histamine and serotonin are released\n(v) B-cells produce IgE antibodies",
+      "options": [
+        "A) (ii) → (v) → (iii) → (iv) → (i)",
+        "C) (v) → (ii) → (iv) → (iii) → (i)",
+        "D) (iii) → (ii) → (v) → (iv) → (i)",
+        "B) (ii) → (iii) → (v) → (i) → (iv)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct sequence of allergic reaction: Allergen enters the body (ii) → B-cells produce IgE antibodies (v) → IgE antibodies bind to mast cells (iii) → mast cells release histamine and serotonin (iv) → allergic symptoms like sneezing and watery eyes appear (i).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "allergy",
+        "IgE",
+        "histamine",
+        "mast-cells"
+      ],
+      "neetWeightage": "HIGH"
+    }
+  ]
+}
