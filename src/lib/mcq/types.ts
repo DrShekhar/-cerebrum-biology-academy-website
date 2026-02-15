@@ -27,13 +27,18 @@ export type QuestionType =
   | 'STATEMENT_BASED'
   | 'COUNTING_TYPE'
   | 'SEQUENCE_ORDER'
+  | 'MTF'
+  | 'DATA_INTERPRETATION'
+  | 'EXPERIMENTAL_DESIGN'
+
+export type OlympiadLevel = 'NSEB' | 'USABO_OPEN' | 'USABO_SEMI' | 'INBO' | 'BBO' | 'IBO'
 
 export interface MCQQuestion {
   id: string
   type?: QuestionType
   question: string
   options: string[]
-  correctAnswer: 'A' | 'B' | 'C' | 'D'
+  correctAnswer: string
   explanation?: string
   topic: string
   subtopic?: string
@@ -54,6 +59,15 @@ export interface MCQQuestion {
   isNeetImportant?: boolean
   // Diagram fields
   diagrams?: QuestionDiagram[]
+  // Olympiad fields
+  isOlympiad?: boolean
+  olympiadLevel?: OlympiadLevel
+  campbellChapter?: number
+  campbellUnit?: number
+  conceptualDepth?: string
+  sourceTextbook?: string
+  dataContext?: string
+  experimentContext?: string
 }
 
 export interface QuestionDiagram {
@@ -96,14 +110,15 @@ export interface QuestionResponse {
 
 export interface AnswerSubmission {
   questionId: string
-  selectedAnswer: 'A' | 'B' | 'C' | 'D'
+  selectedAnswer: string
   timeSpent: number
   sessionId: string
+  questionType?: QuestionType
 }
 
 export interface AnswerResult {
   isCorrect: boolean
-  correctAnswer: 'A' | 'B' | 'C' | 'D'
+  correctAnswer: string
   explanation?: string
   xpEarned: number
   streakUpdated: boolean
@@ -114,6 +129,16 @@ export interface AnswerResult {
     xpRequired: number
     xpProgress: number
   }
+  partialScore?: number
+  mtfDetails?: MTFAnswerResult
+}
+
+export interface MTFAnswerResult {
+  partialScore: number
+  correctStatements: string
+  userStatements: string
+  correctCount: number
+  totalStatements: number
 }
 
 // ============================================
@@ -195,6 +220,7 @@ export const XP_REWARDS = {
   correctEasy: 5,
   correctMedium: 10,
   correctHard: 15,
+  correctExpert: 25,
   firstAttemptBonus: 5,
   dailyChallengeComplete: 50,
   dailyChallengePerfect: 25,
@@ -202,6 +228,10 @@ export const XP_REWARDS = {
   errorReportAccepted: 50,
   streak7Days: 100,
   streak30Days: 500,
+  mtfFull: 25,
+  mtfThree: 15,
+  mtfTwo: 5,
+  mtfOneOrZero: 0,
 } as const
 
 // ============================================
@@ -295,7 +325,7 @@ export interface SessionConfig {
 export interface QuestionSubmission {
   question: string
   options: string[]
-  correctAnswer: 'A' | 'B' | 'C' | 'D'
+  correctAnswer: string
   explanation: string
   topic: string
   subtopic?: string

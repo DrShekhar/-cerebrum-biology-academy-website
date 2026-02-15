@@ -419,7 +419,7 @@ export default function NEETBiologyMCQPage() {
 
   // Handle answer submission
   const handleAnswer = useCallback(
-    async (selectedAnswer: 'A' | 'B' | 'C' | 'D', timeSpent: number): Promise<AnswerResult> => {
+    async (selectedAnswer: string, timeSpent: number): Promise<AnswerResult> => {
       const question = questions[currentQuestionIndex]
       if (!question) {
         showToast('error', 'Error', 'Question not found. Please try again.', 3000)
@@ -439,6 +439,7 @@ export default function NEETBiologyMCQPage() {
             questionSource: question.source,
             topic: question.topic,
             difficulty: question.difficulty,
+            questionType: question.type,
           }),
         })
 

@@ -8,7 +8,7 @@ import { BookmarkButton } from './BookmarkButton'
 interface MatchFollowingCardProps {
   question: MCQQuestion
   questionNumber: number
-  onAnswer: (answer: 'A' | 'B' | 'C' | 'D', timeSpent: number) => Promise<AnswerResult>
+  onAnswer: (answer: string, timeSpent: number) => Promise<AnswerResult>
   showExplanation?: boolean
   isProtected?: boolean
   onSkip?: () => void

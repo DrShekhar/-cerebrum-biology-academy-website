@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { rateLimit } from '@/lib/rateLimit'
 import {
   calculateXPForAnswer,
+  calculateMTFScore,
   getLevelProgress,
   checkLevelUp,
   updateStreak,
@@ -11,7 +12,7 @@ import {
   calculateAccuracy,
   checkBadgeUnlock,
 } from '@/lib/mcq/gamification'
-import type { AnswerSubmission, AnswerResult, UserStats } from '@/lib/mcq/types'
+import type { AnswerSubmission, AnswerResult, UserStats, QuestionType } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
 
 // Helper to check if a table doesn't exist error
@@ -63,6 +64,7 @@ export async function POST(request: NextRequest) {
       questionSource?: 'official' | 'community'
       topic?: string
       difficulty?: DifficultyLevel
+      questionType?: QuestionType
     } = body
 
     const {
@@ -74,6 +76,7 @@ export async function POST(request: NextRequest) {
       questionSource,
       topic,
       difficulty,
+      questionType,
     } = submission
 
     if (!questionId || !selectedAnswer || !sessionId) {
@@ -131,11 +134,12 @@ export async function POST(request: NextRequest) {
     }
 
     // Normalize correctAnswer to letter format (A, B, C, D)
-    // Some questions store the letter directly, others store the option text
+    // MTF questions use T/F patterns, skip normalization for them
     let normalizedCorrectAnswer = correctAnswer
     const validLetters = ['A', 'B', 'C', 'D']
+    const isMTFType = questionType === 'MTF'
 
-    if (!validLetters.includes(correctAnswer)) {
+    if (!isMTFType && !validLetters.includes(correctAnswer)) {
       // correctAnswer is text, need to find which option it matches
       // First, fetch the question options
       let options: string[] = []
@@ -212,10 +216,29 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    const isCorrect = selectedAnswer === normalizedCorrectAnswer
+    // Branch scoring based on question type
+    const isMTF = questionType === 'MTF'
+    let isCorrect: boolean
+    let xpEarned: number
+    let partialScore: number | undefined
+    let mtfDetails: { partialScore: number; correctStatements: string; userStatements: string; correctCount: number; totalStatements: number } | undefined
 
-    // Calculate XP earned
-    const xpEarned = calculateXPForAnswer(isCorrect, questionDifficulty, true)
+    if (isMTF) {
+      const mtfResult = calculateMTFScore(selectedAnswer, correctAnswer)
+      partialScore = mtfResult.score
+      isCorrect = mtfResult.score >= 0.6
+      xpEarned = mtfResult.xpEarned
+      mtfDetails = {
+        partialScore: mtfResult.score,
+        correctStatements: correctAnswer,
+        userStatements: selectedAnswer,
+        correctCount: mtfResult.correctCount,
+        totalStatements: mtfResult.total,
+      }
+    } else {
+      isCorrect = selectedAnswer === normalizedCorrectAnswer
+      xpEarned = calculateXPForAnswer(isCorrect, questionDifficulty, true)
+    }
 
     // Try to update session stats (graceful failure if table doesn't exist)
     await safeDbOperation(
@@ -392,7 +415,7 @@ export async function POST(request: NextRequest) {
 
     const result: AnswerResult = {
       isCorrect,
-      correctAnswer: normalizedCorrectAnswer as 'A' | 'B' | 'C' | 'D',
+      correctAnswer: isMTF ? correctAnswer : normalizedCorrectAnswer,
       explanation: explanation || undefined,
       xpEarned,
       streakUpdated: !!streakInfo?.streakIncreased,
@@ -411,6 +434,8 @@ export async function POST(request: NextRequest) {
             }))
           : undefined,
       levelUp: levelUpInfo || undefined,
+      partialScore,
+      mtfDetails,
     }
 
     return NextResponse.json({

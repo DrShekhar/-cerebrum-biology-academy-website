@@ -1,11 +1,11 @@
 'use client'
 
 import { useState, useCallback, useEffect, useRef, useTransition } from 'react'
-import { Flag } from 'lucide-react'
+import { Flag, BarChart3 } from 'lucide-react'
 import type { MCQQuestion, AnswerResult } from '@/lib/mcq/types'
 import { BookmarkButton } from './BookmarkButton'
 
-interface AssertionReasonCardProps {
+interface DataInterpretationCardProps {
   question: MCQQuestion
   questionNumber: number
   onAnswer: (answer: string, timeSpent: number) => Promise<AnswerResult>
@@ -18,50 +18,7 @@ interface AssertionReasonCardProps {
 
 const optionLabels = ['A', 'B', 'C', 'D'] as const
 
-const DEFAULT_AR_OPTIONS = [
-  'Both A and R are true and R is the correct explanation of A',
-  'Both A and R are true but R is NOT the correct explanation of A',
-  'A is true but R is false',
-  'A is false but R is true',
-]
-
-function parseAssertionReason(question: MCQQuestion): {
-  assertion: string
-  reason: string
-  choices: string[]
-} {
-  const opts = question.options
-  let assertion = ''
-  let reason = ''
-
-  const text = question.question
-  const arPattern =
-    /Assertion\s*\(A\)\s*[:\-]\s*([\s\S]*?)(?:\n|\r\n?)\s*Reason\s*\(R\)\s*[:\-]\s*([\s\S]*)/i
-  const match = text.match(arPattern)
-
-  if (match) {
-    assertion = match[1].trim()
-    reason = match[2].trim()
-  } else {
-    const parts = text.split(/\n+/)
-    if (parts.length >= 2) {
-      assertion = parts[0].replace(/^Assertion\s*\(A\)\s*[:\-]?\s*/i, '').trim()
-      reason = parts[1].replace(/^Reason\s*\(R\)\s*[:\-]?\s*/i, '').trim()
-    } else {
-      assertion = text
-      reason = ''
-    }
-  }
-
-  const hasAROptions = opts.some(
-    (o) => o.toLowerCase().includes('both a and r') || o.toLowerCase().includes('a is true')
-  )
-  const choices = hasAROptions ? opts : DEFAULT_AR_OPTIONS
-
-  return { assertion, reason, choices }
-}
-
-export function AssertionReasonCard({
+export function DataInterpretationCard({
   question,
   questionNumber,
   onAnswer,
@@ -70,30 +27,41 @@ export function AssertionReasonCard({
   onSkip,
   onReportError,
   freeUserId,
-}: AssertionReasonCardProps) {
-  const [selectedAnswer, setSelectedAnswer] = useState<'A' | 'B' | 'C' | 'D' | null>(null)
+}: DataInterpretationCardProps) {
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
   const [result, setResult] = useState<AnswerResult | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showFullExplanation, setShowFullExplanation] = useState(false)
   const [timeElapsed, setTimeElapsed] = useState(0)
   const startTimeRef = useRef<number>(Date.now())
   const timerRef = useRef<NodeJS.Timeout | null>(null)
-  const [, startTransition] = useTransition()
-
-  const { assertion, reason, choices } = parseAssertionReason(question)
+  const [isPending, startTransition] = useTransition()
 
   const handleOptionClick = useCallback(
-    (option: 'A' | 'B' | 'C' | 'D') => {
+    (option: string) => {
       if (selectedAnswer || isSubmitting) return
+
       const actualTimeSpent = Math.floor((Date.now() - startTimeRef.current) / 1000)
-      if (timerRef.current) clearInterval(timerRef.current)
+
+      if (timerRef.current) {
+        clearInterval(timerRef.current)
+      }
+
       setSelectedAnswer(option)
       setIsSubmitting(true)
+
       startTransition(() => {
         onAnswer(option, actualTimeSpent)
-          .then((answerResult) => setResult(answerResult))
-          .catch(() => setSelectedAnswer(null))
-          .finally(() => setIsSubmitting(false))
+          .then((answerResult) => {
+            setResult(answerResult)
+          })
+          .catch((error) => {
+            console.error('Error submitting answer:', error)
+            setSelectedAnswer(null)
+          })
+          .finally(() => {
+            setIsSubmitting(false)
+          })
       })
     },
     [selectedAnswer, isSubmitting, onAnswer]
@@ -105,18 +73,25 @@ export function AssertionReasonCard({
     setSelectedAnswer(null)
     setResult(null)
     setShowFullExplanation(false)
+
     timerRef.current = setInterval(() => {
-      setTimeElapsed(Math.floor((Date.now() - startTimeRef.current) / 1000))
+      if (!selectedAnswer) {
+        setTimeElapsed(Math.floor((Date.now() - startTimeRef.current) / 1000))
+      }
     }, 1000)
+
     return () => {
-      if (timerRef.current) clearInterval(timerRef.current)
+      if (timerRef.current) {
+        clearInterval(timerRef.current)
+      }
     }
   }, [question.id])
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (selectedAnswer || isSubmitting || e.repeat) return
-      const keyMap: Record<string, 'A' | 'B' | 'C' | 'D'> = {
+
+      const keyMap: Record<string, string> = {
         '1': 'A',
         '2': 'B',
         '3': 'C',
@@ -126,12 +101,14 @@ export function AssertionReasonCard({
         c: 'C',
         d: 'D',
       }
+
       const option = keyMap[e.key.toLowerCase()]
       if (option) {
         e.preventDefault()
         handleOptionClick(option)
       }
     }
+
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [selectedAnswer, isSubmitting, handleOptionClick])
@@ -146,17 +123,20 @@ export function AssertionReasonCard({
     const option = optionLabels[index]
     const baseClasses =
       'flex items-center gap-3 p-3.5 rounded-xl border-2 transition-all duration-200 cursor-pointer'
+
     if (!selectedAnswer) {
       return `${baseClasses} border-stone-200 bg-white hover:border-sage-400 hover:bg-sage-50 hover:shadow-sm`
     }
+
     if (result) {
       if (option === result.correctAnswer) {
-        return `${baseClasses} border-green-600 bg-gradient-to-r from-green-50 to-green-50 shadow-md animate-correct-pulse-botanical`
+        return `${baseClasses} border-green-600 bg-gradient-to-r from-green-50 to-green-50 shadow-md`
       }
       if (option === selectedAnswer && !result.isCorrect) {
-        return `${baseClasses} border-red-500 bg-gradient-to-r from-red-50 to-red-50 shadow-sm animate-shake-wrong`
+        return `${baseClasses} border-red-500 bg-gradient-to-r from-red-50 to-red-50 shadow-sm`
       }
     }
+
     return `${baseClasses} border-stone-200 bg-stone-50 opacity-70 cursor-default`
   }
 
@@ -165,28 +145,35 @@ export function AssertionReasonCard({
       className={`bg-white/95 backdrop-blur-sm rounded-xl shadow-lg border border-stone-200/50 p-4 animate-fade-in-up paper-texture ${isProtected ? 'select-none' : ''}`}
       onContextMenu={isProtected ? (e) => e.preventDefault() : undefined}
       role="article"
-      aria-label={`Question ${questionNumber}`}
+      aria-label={`Data Interpretation Question ${questionNumber}`}
     >
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <span className="flex items-center justify-center w-7 h-7 rounded-full bg-sage-100 text-sage-700 font-bold text-xs font-mono">
             {questionNumber}
           </span>
-          <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-700 flex items-center gap-1">
-            <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
-            Assertion-Reason
+          <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700 flex items-center gap-1">
+            <BarChart3 className="w-3 h-3" />
+            Data Analysis
           </span>
           <span
             className={`px-2 py-0.5 rounded-full text-xs font-medium flex items-center gap-1 ${
               question.difficulty === 'EASY'
                 ? 'bg-green-100 text-green-700'
-                : question.difficulty === 'HARD'
-                  ? 'bg-red-100 text-red-700'
-                  : 'bg-amber-100 text-yellow-700'
+                : question.difficulty === 'EXPERT'
+                  ? 'bg-purple-100 text-purple-700'
+                  : question.difficulty === 'HARD'
+                    ? 'bg-red-100 text-red-700'
+                    : 'bg-amber-100 text-yellow-700'
             }`}
           >
             {question.difficulty}
           </span>
+          {question.isOlympiad && question.olympiadLevel && (
+            <span className="px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 text-xs font-medium">
+              {question.olympiadLevel}
+            </span>
+          )}
         </div>
         <div className="flex items-center gap-2">
           <div
@@ -209,23 +196,37 @@ export function AssertionReasonCard({
         </div>
       </div>
 
-      <div className="mb-4 space-y-3">
-        <div className="p-3 rounded-lg border-l-4 border-indigo-500 bg-indigo-50/50">
-          <p className="text-xs font-semibold text-indigo-600 uppercase tracking-wide mb-1">
-            Assertion (A)
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <span className="inline-flex items-center px-2.5 py-1 rounded-lg bg-sage-50 text-sage-700 text-sm font-medium border border-sage-200/50">
+          {question.topic}
+        </span>
+        {question.sourceTextbook && (
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-medium">
+            📘 {question.sourceTextbook}
+          </span>
+        )}
+      </div>
+
+      {question.dataContext && (
+        <div className="mb-4 p-3 rounded-lg bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200">
+          <div className="flex items-center gap-1.5 mb-1.5">
+            <BarChart3 className="w-3.5 h-3.5 text-blue-600" />
+            <span className="text-xs font-semibold text-blue-700 uppercase tracking-wide">
+              Data / Observations
+            </span>
+          </div>
+          <p className="text-sm text-stone-700 leading-relaxed whitespace-pre-line">
+            {question.dataContext}
           </p>
-          <p className="text-base text-ink leading-relaxed">{assertion}</p>
         </div>
-        <div className="p-3 rounded-lg border-l-4 border-green-500 bg-green-50/50">
-          <p className="text-xs font-semibold text-green-600 uppercase tracking-wide mb-1">
-            Reason (R)
-          </p>
-          <p className="text-base text-ink leading-relaxed">{reason}</p>
-        </div>
+      )}
+
+      <div className="mb-5">
+        <p className="text-lg text-ink leading-relaxed font-medium">{question.question}</p>
       </div>
 
       <div className="space-y-3" role="radiogroup" aria-label="Answer options">
-        {choices.map((option, index) => (
+        {question.options.map((option, index) => (
           <button
             key={index}
             onClick={() => handleOptionClick(optionLabels[index])}
@@ -247,7 +248,7 @@ export function AssertionReasonCard({
             >
               {optionLabels[index]}
             </span>
-            <span className="text-left text-ink text-sm flex-1">{option}</span>
+            <span className="text-left text-ink text-base flex-1">{option}</span>
             {result && optionLabels[index] === result.correctAnswer && (
               <span className="text-green-600 text-lg font-bold">✓</span>
             )}
@@ -260,6 +261,7 @@ export function AssertionReasonCard({
 
       {!selectedAnswer && !isSubmitting && (
         <div className="flex items-center justify-center gap-2 mt-3 text-stone-400">
+          <span className="text-xs">⌨️</span>
           <p className="text-xs">
             Press{' '}
             <kbd className="px-1.5 py-0.5 bg-stone-100 rounded text-stone-600 font-mono text-xs">
@@ -286,34 +288,37 @@ export function AssertionReasonCard({
             <div
               className={`p-4 rounded-xl ${
                 result.isCorrect
-                  ? 'bg-gradient-to-r from-green-50 to-green-50 border-2 border-green-300 animate-correct-pulse-botanical'
-                  : 'bg-gradient-to-r from-red-50 to-red-50 border-2 border-red-300 animate-shake-wrong'
+                  ? 'bg-gradient-to-r from-green-50 to-green-50 border-2 border-green-300'
+                  : 'bg-gradient-to-r from-red-50 to-red-50 border-2 border-red-300'
               }`}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <span className={`text-2xl ${result.isCorrect ? 'animate-confetti-burst' : 'animate-scale-in'}`}>
+                  <span className="text-2xl">
                     {result.isCorrect ? '🎉' : '😔'}
                   </span>
-                  <span className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}>
+                  <span
+                    className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}
+                  >
                     {result.isCorrect ? 'Correct!' : 'Incorrect'}
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="px-3 py-1.5 bg-gradient-to-r from-sage-500 to-sage-700 text-white font-bold text-sm font-mono rounded-full animate-xp-float-botanical shadow-lg">
+                  <span className="px-3 py-1.5 bg-gradient-to-r from-sage-500 to-sage-700 text-white font-bold text-sm font-mono rounded-full shadow-lg">
                     +{result.xpEarned} XP
                   </span>
                   {onReportError && (
                     <button
                       onClick={() => onReportError(question.id)}
                       className="p-1.5 text-stone-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-colors"
-                      title="Report an error with this question"
+                      title="Report an error"
                     >
                       <Flag className="w-4 h-4" />
                     </button>
                   )}
                 </div>
               </div>
+
               {showExplanation && result.explanation && (
                 <div className="mt-2 pt-2 border-t border-stone-200">
                   <p className="text-stone-600 text-xs leading-relaxed">
@@ -329,6 +334,32 @@ export function AssertionReasonCard({
                       {showFullExplanation ? 'Less' : 'More'}
                     </button>
                   )}
+                </div>
+              )}
+
+              {!showExplanation && result.explanation && (
+                <div className="mt-2 pt-2 border-t border-stone-200 flex items-center justify-between">
+                  <p className="text-stone-600 text-xs">
+                    Full explanation available with course enrollment
+                  </p>
+                  <a
+                    href="/demo"
+                    className="px-2.5 py-1 bg-sage-600 text-white text-xs font-medium rounded hover:bg-sage-700 transition-colors flex-shrink-0 ml-2"
+                  >
+                    Unlock Explanations
+                  </a>
+                </div>
+              )}
+
+              {result.streakUpdated && result.newStreak && (
+                <div className="mt-3 flex items-center gap-2 p-2 bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg border border-amber-200">
+                  <span className="text-2xl">🔥</span>
+                  <div>
+                    <span className="font-bold text-yellow-700 text-sm">
+                      {result.newStreak} Day Streak!
+                    </span>
+                    <p className="text-yellow-600 text-xs">Keep it going!</p>
+                  </div>
                 </div>
               )}
             </div>

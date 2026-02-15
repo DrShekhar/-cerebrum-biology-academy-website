@@ -2236,6 +2236,9 @@ model questions {
   campbellEdition           Int?
   campbellUnit              Int?
   conceptualDepth           String?
+  sourceTextbook            String?
+  dataContext               String?
+  experimentContext         String?
   mcq_bookmarks             mcq_bookmarks[]
   question_bank_questions   question_bank_questions[]
   question_diagrams         question_diagrams[]
@@ -3961,6 +3964,9 @@ enum QuestionType {
   STATEMENT_BASED
   COUNTING_TYPE
   SEQUENCE_ORDER
+  MTF
+  DATA_INTERPRETATION
+  EXPERIMENTAL_DESIGN
 }
 
 enum QueueStatus {

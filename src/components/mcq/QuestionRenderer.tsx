@@ -7,11 +7,14 @@ import { StatementBasedCard } from './StatementBasedCard'
 import { MatchFollowingCard } from './MatchFollowingCard'
 import { CountingTypeCard } from './CountingTypeCard'
 import { SequenceOrderCard } from './SequenceOrderCard'
+import { MTFCard } from './MTFCard'
+import { DataInterpretationCard } from './DataInterpretationCard'
+import { ExperimentalDesignCard } from './ExperimentalDesignCard'
 
 interface QuestionRendererProps {
   question: MCQQuestion
   questionNumber: number
-  onAnswer: (answer: 'A' | 'B' | 'C' | 'D', timeSpent: number) => Promise<AnswerResult>
+  onAnswer: (answer: string, timeSpent: number) => Promise<AnswerResult>
   showExplanation?: boolean
   isProtected?: boolean
   onSkip?: () => void
@@ -33,6 +36,12 @@ export default function QuestionRenderer(props: QuestionRendererProps) {
       return <CountingTypeCard {...props} />
     case 'SEQUENCE_ORDER':
       return <SequenceOrderCard {...props} />
+    case 'MTF':
+      return <MTFCard {...props} />
+    case 'DATA_INTERPRETATION':
+      return <DataInterpretationCard {...props} />
+    case 'EXPERIMENTAL_DESIGN':
+      return <ExperimentalDesignCard {...props} />
     default:
       return <QuestionCard {...props} />
   }

@@ -32,6 +32,9 @@ export function calculateXPForAnswer(
     case 'HARD':
       xp = XP_REWARDS.correctHard
       break
+    case 'EXPERT':
+      xp = XP_REWARDS.correctExpert
+      break
     default:
       xp = XP_REWARDS.correctMedium
   }
@@ -41,6 +44,48 @@ export function calculateXPForAnswer(
   }
 
   return xp
+}
+
+export interface MTFScoreResult {
+  score: number
+  correctCount: number
+  total: number
+  xpEarned: number
+}
+
+export function calculateMTFScore(
+  userAnswer: string,
+  correctAnswer: string
+): MTFScoreResult {
+  const total = correctAnswer.length
+  let correctCount = 0
+
+  for (let i = 0; i < total; i++) {
+    if (
+      userAnswer[i]?.toUpperCase() === correctAnswer[i]?.toUpperCase()
+    ) {
+      correctCount++
+    }
+  }
+
+  let score: number
+  let xpEarned: number
+
+  if (correctCount === total) {
+    score = 1.0
+    xpEarned = XP_REWARDS.mtfFull
+  } else if (correctCount === total - 1) {
+    score = 0.6
+    xpEarned = XP_REWARDS.mtfThree
+  } else if (correctCount === total - 2) {
+    score = 0.2
+    xpEarned = XP_REWARDS.mtfTwo
+  } else {
+    score = 0.0
+    xpEarned = XP_REWARDS.mtfOneOrZero
+  }
+
+  return { score, correctCount, total, xpEarned }
 }
 
 export function calculateDailyChallengeXP(

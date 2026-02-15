@@ -220,6 +220,15 @@ export async function GET(request: NextRequest) {
         ncertPage: true,
         neetWeightage: true,
         isNeetImportant: true,
+        // Olympiad fields
+        isOlympiad: true,
+        olympiadLevel: true,
+        campbellChapter: true,
+        campbellUnit: true,
+        conceptualDepth: true,
+        sourceTextbook: true,
+        dataContext: true,
+        experimentContext: true,
         // Diagram relations
         question_diagrams: {
           select: {
@@ -298,7 +307,7 @@ export async function GET(request: NextRequest) {
           type: (q.type as string) || 'MCQ',
           question: q.question,
           options,
-          correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
+          correctAnswer: q.correctAnswer,
           explanation: q.explanation || undefined,
           topic: q.topic || 'General',
           subtopic: undefined,
@@ -319,6 +328,15 @@ export async function GET(request: NextRequest) {
           isNeetImportant: q.isNeetImportant || false,
           // Diagrams
           diagrams: diagrams && diagrams.length > 0 ? diagrams : undefined,
+          // Olympiad fields
+          isOlympiad: q.isOlympiad || false,
+          olympiadLevel: q.olympiadLevel || undefined,
+          campbellChapter: q.campbellChapter || undefined,
+          campbellUnit: q.campbellUnit || undefined,
+          conceptualDepth: q.conceptualDepth || undefined,
+          sourceTextbook: q.sourceTextbook || undefined,
+          dataContext: q.dataContext || undefined,
+          experimentContext: q.experimentContext || undefined,
         }
       })
       .filter((q): q is NonNullable<typeof q> => q !== null)
@@ -331,7 +349,7 @@ export async function GET(request: NextRequest) {
           id: q.id,
           question: q.question,
           options,
-          correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
+          correctAnswer: q.correctAnswer,
           explanation: q.explanation || undefined,
           topic: q.topic,
           subtopic: q.subtopic || undefined,
@@ -462,7 +480,7 @@ async function fetchQuestionsByIds(ids: string[]) {
           type: (q.type as string) || 'MCQ',
           question: q.question,
           options,
-          correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
+          correctAnswer: q.correctAnswer,
           explanation: q.explanation || undefined,
           topic: q.topic || 'General',
           subtopic: undefined,
@@ -484,7 +502,7 @@ async function fetchQuestionsByIds(ids: string[]) {
           id: q.id,
           question: q.question,
           options,
-          correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
+          correctAnswer: q.correctAnswer,
           explanation: q.explanation || undefined,
           topic: q.topic,
           subtopic: q.subtopic || undefined,
