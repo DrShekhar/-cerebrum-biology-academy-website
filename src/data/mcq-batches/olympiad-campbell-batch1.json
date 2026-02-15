@@ -20,21 +20,16 @@
       "campbellUnit": 1,
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
-      "question": "An enzyme catalyzes a reaction with a Km of 5 mM. When substrate concentration is 20 mM, the reaction velocity is measured at 160 µmol/min. What is the approximate Vmax of this enzyme?",
+      "question": "An enzyme catalyzes a reaction with a Km of 5 mM. When substrate concentration is 20 mM, the reaction velocity is measured at 160 \u00b5mol/min. What is the approximate Vmax of this enzyme?",
       "options": [
-        "200 µmol/min",
-        "160 µmol/min",
-        "180 µmol/min",
-        "250 µmol/min"
+        "200 \u00b5mol/min",
+        "180 \u00b5mol/min",
+        "160 \u00b5mol/min",
+        "250 \u00b5mol/min"
       ],
       "correctAnswer": "A",
-      "explanation": "Using the Michaelis-Menten equation: V = Vmax[S]/(Km + [S]). Substituting: 160 = Vmax(20)/(5 + 20) = Vmax(20/25) = 0.8 Vmax. Therefore Vmax = 160/0.8 = 200 µmol/min. At [S] = 4Km, the enzyme is operating at 80% of Vmax. Campbell Ch 8.",
-      "tags": [
-        "enzyme-kinetics",
-        "michaelis-menten",
-        "Km",
-        "Vmax"
-      ]
+      "explanation": "Using the Michaelis-Menten equation: V = Vmax[S]/(Km + [S]). Substituting: 160 = Vmax(20)/(5 + 20) = Vmax(20/25) = 0.8 Vmax. Therefore Vmax = 160/0.8 = 200 \u00b5mol/min. At [S] = 4Km, the enzyme is operating at 80% of Vmax. Campbell Ch 8.",
+      "tags": ["enzyme-kinetics", "michaelis-menten", "Km", "Vmax"]
     },
     {
       "type": "MCQ",
@@ -53,18 +48,13 @@
       "question": "A researcher discovers a novel organic molecule with the molecular formula C6H12O6 that does not rotate plane-polarized light. Which of the following is the most likely explanation?",
       "options": [
         "The molecule is not a sugar",
-        "The molecule is a racemic mixture of D and L enantiomers",
         "The molecule has no chiral carbon atoms",
+        "The molecule is a racemic mixture of D and L enantiomers",
         "The molecule is in an aqueous solution that cancels optical activity"
       ],
-      "correctAnswer": "B",
-      "explanation": "A molecule with the formula C6H12O6 (a hexose sugar) that shows no optical activity is most likely a racemic mixture containing equal amounts of D and L enantiomers, which rotate light equally in opposite directions, producing a net rotation of zero. While option C is theoretically possible, most hexoses do possess chiral centers. Water does not cancel optical activity. Campbell Ch 4.",
-      "tags": [
-        "chirality",
-        "optical-activity",
-        "enantiomers",
-        "stereochemistry"
-      ]
+      "correctAnswer": "C",
+      "explanation": "A molecule with the formula C6H12O6 (a hexose sugar) that shows no optical activity is most likely a racemic mixture containing equal amounts of D and L enantiomers, which rotate light equally in opposite directions, producing a net rotation of zero. While option B is theoretically possible, most hexoses do possess chiral centers. Water does not cancel optical activity. Campbell Ch 4.",
+      "tags": ["chirality", "optical-activity", "enantiomers", "stereochemistry"]
     },
     {
       "type": "MCQ",
@@ -80,21 +70,16 @@
       "campbellUnit": 1,
       "campbellEdition": 12,
       "conceptualDepth": "expert",
-      "question": "A buffer solution has a pKa of 6.8. If the ratio of conjugate base to weak acid [A⁻]/[HA] is 10:1, what is the pH of the solution?",
+      "question": "A buffer solution has a pKa of 6.8. If the ratio of conjugate base to weak acid [A\u207b]/[HA] is 10:1, what is the pH of the solution?",
       "options": [
-        "7.8",
+        "5.8",
         "6.8",
         "8.8",
-        "5.8"
+        "7.8"
       ],
-      "correctAnswer": "A",
-      "explanation": "Using the Henderson-Hasselbalch equation: pH = pKa + log([A⁻]/[HA]). pH = 6.8 + log(10/1) = 6.8 + log(10) = 6.8 + 1 = 7.8. This equation is fundamental to understanding biological buffer systems. When the ratio of conjugate base to acid is 10:1, the pH is exactly one unit above the pKa. Campbell Ch 3.",
-      "tags": [
-        "buffer",
-        "Henderson-Hasselbalch",
-        "pH",
-        "pKa"
-      ]
+      "correctAnswer": "D",
+      "explanation": "Using the Henderson-Hasselbalch equation: pH = pKa + log([A\u207b]/[HA]). pH = 6.8 + log(10/1) = 6.8 + log(10) = 6.8 + 1 = 7.8. This equation is fundamental to understanding biological buffer systems. When the ratio of conjugate base to acid is 10:1, the pH is exactly one unit above the pKa. Campbell Ch 3.",
+      "tags": ["buffer", "Henderson-Hasselbalch", "pH", "pKa"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -112,50 +97,39 @@
       "conceptualDepth": "advanced",
       "question": "Assertion (A): Collagen has an unusually high proportion of glycine and proline residues.\nReason (R): The triple helix structure of collagen requires every third residue to be glycine because only glycine is small enough to fit in the interior of the helix, while proline's rigid ring creates the necessary kinks in each polypeptide chain.",
       "options": [
-        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
-        "A is false but R is true",
-        "Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "A",
       "explanation": "Collagen's Gly-X-Y repeating pattern requires glycine at every third position because its small side chain (just an H atom) fits in the crowded interior where three polypeptide chains wind around each other. Proline and hydroxyproline (often found at X and Y positions) create the rigid turns necessary for the triple helix. Both the assertion and reason are true, and the reason correctly explains why collagen is enriched in these amino acids. Campbell Ch 5.",
-      "tags": [
-        "collagen",
-        "protein-structure",
-        "glycine",
-        "proline",
-        "triple-helix"
-      ]
+      "tags": ["collagen", "protein-structure", "glycine", "proline", "triple-helix"]
     },
     {
       "type": "MCQ",
       "topic": "Chemistry of Life",
-      "chapter": "A Tour of the Cell",
+      "chapter": "An Introduction to Metabolism",
       "ncertClass": 11,
       "difficulty": "HARD",
       "isNcertBased": false,
       "isNeetImportant": false,
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
-      "campbellChapter": 5,
+      "campbellChapter": 8,
       "campbellUnit": 1,
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
       "question": "A competitive inhibitor increases the apparent Km of an enzyme without affecting Vmax. Which of the following best explains this kinetic behavior?",
       "options": [
+        "The inhibitor permanently modifies the enzyme's active site",
         "At saturating substrate concentrations, substrate outcompetes the inhibitor for active site binding, so the same Vmax is achieved but more substrate is needed to reach half-maximal velocity",
         "The inhibitor binds at an allosteric site and reduces catalytic efficiency",
-        "The inhibitor reduces the total amount of functional enzyme in solution",
-        "The inhibitor permanently modifies the enzyme's active site"
+        "The inhibitor reduces the total amount of functional enzyme in solution"
       ],
-      "correctAnswer": "A",
-      "explanation": "A competitive inhibitor competes with substrate for the same active site. At very high substrate concentrations, substrate molecules vastly outnumber inhibitor molecules and effectively displace them, so Vmax remains unchanged. However, at lower substrate concentrations, the inhibitor occupies some active sites, meaning more substrate is needed to achieve half-maximal velocity — hence the apparent Km increases. This is a hallmark of competitive inhibition on Lineweaver-Burk plots. Campbell Ch 8.",
-      "tags": [
-        "competitive-inhibition",
-        "enzyme-kinetics",
-        "Km",
-        "Vmax"
-      ]
+      "correctAnswer": "B",
+      "explanation": "A competitive inhibitor competes with substrate for the same active site. At very high substrate concentrations, substrate molecules vastly outnumber inhibitor molecules and effectively displace them, so Vmax remains unchanged. However, at lower substrate concentrations, the inhibitor occupies some active sites, meaning more substrate is needed to achieve half-maximal velocity, hence the apparent Km increases. This is a hallmark of competitive inhibition on Lineweaver-Burk plots. Campbell Ch 8.",
+      "tags": ["competitive-inhibition", "enzyme-kinetics", "Km", "Vmax"]
     },
     {
       "type": "MCQ",
@@ -173,19 +147,14 @@
       "conceptualDepth": "advanced",
       "question": "A cell is placed in a solution and it is observed that the cell swells initially but then returns to its original size. Which of the following best explains this observation?",
       "options": [
-        "The cell wall provided enough turgor pressure to counteract further water entry",
+        "The solution is isotonic and the cell reached equilibrium",
         "The cell actively transported solutes out to balance osmotic pressure",
         "Aquaporins were deactivated to stop water influx",
-        "The solution is isotonic and the cell reached equilibrium"
+        "The cell wall provided enough turgor pressure to counteract further water entry"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": "This describes a plant cell placed in a hypotonic solution. Water enters by osmosis, causing the cell to swell. However, the rigid cell wall exerts turgor pressure that eventually equals the osmotic pressure difference, preventing further net water entry. The cell becomes turgid but does not burst (unlike animal cells which would lyse). This equilibrium between osmotic pressure and turgor pressure is fundamental to plant cell physiology. Campbell Ch 7.",
-      "tags": [
-        "osmosis",
-        "turgor-pressure",
-        "cell-wall",
-        "membrane"
-      ]
+      "tags": ["osmosis", "turgor-pressure", "cell-wall", "membrane"]
     },
     {
       "type": "MCQ",
@@ -203,19 +172,14 @@
       "conceptualDepth": "expert",
       "question": "In a cell signaling experiment, a researcher treats cells with cholera toxin, which locks a G protein in its GTP-bound active form. Which of the following is the expected cellular response?",
       "options": [
-        "Rapid hydrolysis of GTP preventing signal transduction",
         "Decreased cAMP levels due to permanent inhibition of adenylyl cyclase",
-        "Internalization and degradation of all G protein-coupled receptors",
-        "Constitutive activation of adenylyl cyclase leading to persistently elevated cAMP levels"
+        "Rapid hydrolysis of GTP preventing signal transduction",
+        "Constitutive activation of adenylyl cyclase leading to persistently elevated cAMP levels",
+        "Internalization and degradation of all G protein-coupled receptors"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "C",
       "explanation": "Cholera toxin modifies the Gs alpha subunit by ADP-ribosylation, preventing its intrinsic GTPase activity. This locks the G protein in its active GTP-bound state, causing permanent stimulation of adenylyl cyclase. The result is continuously elevated cAMP levels. In intestinal epithelial cells, this leads to sustained activation of CFTR chloride channels, causing massive water and ion secretion (the mechanism of cholera diarrhea). Campbell Ch 11.",
-      "tags": [
-        "G-protein",
-        "cAMP",
-        "cholera-toxin",
-        "signal-transduction"
-      ]
+      "tags": ["G-protein", "cAMP", "cholera-toxin", "signal-transduction"]
     },
     {
       "type": "MCQ",
@@ -233,19 +197,14 @@
       "conceptualDepth": "advanced",
       "question": "During oxidative phosphorylation, if the inner mitochondrial membrane were made artificially permeable to protons, which of the following would occur?",
       "options": [
-        "NADH would accumulate because it could not be oxidized",
+        "ATP synthesis would increase because more protons would be available",
         "The electron transport chain would stop functioning entirely",
-        "Oxygen consumption would increase but ATP synthesis would decrease dramatically",
-        "ATP synthesis would increase because more protons would be available"
+        "NADH would accumulate because it could not be oxidized",
+        "Oxygen consumption would increase but ATP synthesis would decrease dramatically"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "If the inner mitochondrial membrane becomes freely permeable to protons, the proton gradient (proton-motive force) would be dissipated. ATP synthase requires this gradient to drive ATP synthesis, so ATP production would virtually cease. However, the electron transport chain would actually run faster because the back-pressure of the proton gradient normally slows electron flow. Without this resistance, electrons flow more readily to oxygen, increasing O2 consumption. This is the exact mechanism of chemical uncouplers like DNP (2,4-dinitrophenol). The energy is released as heat rather than stored as ATP. Campbell Ch 9.",
-      "tags": [
-        "oxidative-phosphorylation",
-        "uncoupling",
-        "proton-gradient",
-        "ETC"
-      ]
+      "tags": ["oxidative-phosphorylation", "uncoupling", "proton-gradient", "ETC"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -263,19 +222,14 @@
       "conceptualDepth": "expert",
       "question": "Statement I: Cyclic electron flow produces ATP but not NADPH, and does not release O2.\nStatement II: Cyclic electron flow involves only Photosystem I and uses ferredoxin to redirect electrons back to the cytochrome b6f complex.",
       "options": [
-        "Statement I is correct but Statement II is incorrect",
-        "Statement I is incorrect but Statement II is correct",
+        "Both statements are correct and Statement II explains Statement I",
         "Both statements are correct but Statement II does not explain Statement I",
-        "Both statements are correct and Statement II explains Statement I"
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
       ],
-      "correctAnswer": "D",
-      "explanation": "In cyclic electron flow, electrons from PSI are passed to ferredoxin, but instead of going to NADP+ reductase (as in linear flow), they are redirected back to the cytochrome b6f complex. This creates a proton gradient for ATP synthesis but does not reduce NADP+ to NADPH. Since PSII is not involved, water is not split and no O2 is released. Statement II mechanistically explains why Statement I is true — the cyclic route bypasses both PSII (no water splitting/O2) and NADP+ reductase (no NADPH). Campbell Ch 10.",
-      "tags": [
-        "cyclic-electron-flow",
-        "photosystem-I",
-        "ATP",
-        "photosynthesis"
-      ]
+      "correctAnswer": "A",
+      "explanation": "In cyclic electron flow, electrons from PSI are passed to ferredoxin, but instead of going to NADP+ reductase (as in linear flow), they are redirected back to the cytochrome b6f complex. This creates a proton gradient for ATP synthesis but does not reduce NADP+ to NADPH. Since PSII is not involved, water is not split and no O2 is released. Statement II mechanistically explains why Statement I is true \u2014 the cyclic route bypasses both PSII (no water splitting/O2) and NADP+ reductase (no NADPH). Campbell Ch 10.",
+      "tags": ["cyclic-electron-flow", "photosystem-I", "ATP", "photosynthesis"]
     },
     {
       "type": "MCQ",
@@ -294,18 +248,13 @@
       "question": "A patient is found to have a deficiency in succinate dehydrogenase (Complex II). Which metabolic consequence would be directly observed?",
       "options": [
         "Complete blockage of the citric acid cycle at the citrate synthase step",
+        "Inability to perform glycolysis",
         "Accumulation of succinate and reduced FADH2 production in the citric acid cycle",
-        "Increased production of NADH due to compensatory upregulation",
-        "Inability to perform glycolysis"
+        "Increased production of NADH due to compensatory upregulation"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Succinate dehydrogenase (Complex II) catalyzes the oxidation of succinate to fumarate in the citric acid cycle, simultaneously reducing FAD to FADH2. It is unique among TCA cycle enzymes because it is also an integral component of the electron transport chain (Complex II). A deficiency would cause succinate to accumulate and reduce FADH2 production. The cycle would be impaired at this step, but earlier steps could still partially function. Glycolysis is independent of this enzyme. Campbell Ch 9.",
-      "tags": [
-        "succinate-dehydrogenase",
-        "complex-II",
-        "TCA-cycle",
-        "FADH2"
-      ]
+      "tags": ["succinate-dehydrogenase", "complex-II", "TCA-cycle", "FADH2"]
     },
     {
       "type": "MCQ",
@@ -324,19 +273,13 @@
       "question": "Researchers discover that a specific mutation in the Rb (retinoblastoma) gene leads to constitutive phosphorylation of the Rb protein. What is the most likely consequence for cell cycle regulation?",
       "options": [
         "E2F transcription factors will be constitutively active, promoting uncontrolled entry into S phase",
-        "Apoptosis will be immediately triggered",
+        "The cell will be permanently arrested in G1 phase",
         "Cyclin-dependent kinases will be permanently inhibited",
-        "The cell will be permanently arrested in G1 phase"
+        "Apoptosis will be immediately triggered"
       ],
       "correctAnswer": "A",
-      "explanation": "The Rb protein normally functions as a tumor suppressor by binding and inhibiting E2F transcription factors during G1. When growth signals are present, cyclin D-CDK4/6 complexes phosphorylate Rb, causing it to release E2F, which then activates genes needed for S phase entry. If Rb is constitutively phosphorylated, it can never bind E2F, meaning E2F is always active. This leads to unregulated transcription of S-phase genes and uncontrolled cell proliferation — a hallmark of cancer. This is why Rb is a tumor suppressor. Campbell Ch 12.",
-      "tags": [
-        "cell-cycle",
-        "Rb-protein",
-        "E2F",
-        "tumor-suppressor",
-        "cancer"
-      ]
+      "explanation": "The Rb protein normally functions as a tumor suppressor by binding and inhibiting E2F transcription factors during G1. When growth signals are present, cyclin D-CDK4/6 complexes phosphorylate Rb, causing it to release E2F, which then activates genes needed for S phase entry. If Rb is constitutively phosphorylated, it can never bind E2F, meaning E2F is always active. This leads to unregulated transcription of S-phase genes and uncontrolled cell proliferation. This is why Rb is a tumor suppressor. Campbell Ch 12.",
+      "tags": ["cell-cycle", "Rb-protein", "E2F", "tumor-suppressor", "cancer"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -354,19 +297,14 @@
       "conceptualDepth": "advanced",
       "question": "Column I (Electron Carrier / Complex):\n(A) Complex I (NADH dehydrogenase)\n(B) Complex III (cytochrome bc1)\n(C) Complex IV (cytochrome c oxidase)\n(D) ATP synthase (Complex V)\n\nColumn II (Function):\n(i) Transfers electrons from cytochrome c to O2, the final electron acceptor\n(ii) Oxidizes NADH and transfers electrons to ubiquinone while pumping 4 H+ across the membrane\n(iii) Uses the proton-motive force to catalyze phosphorylation of ADP to ATP\n(iv) Transfers electrons from ubiquinol to cytochrome c via the Q cycle, pumping 4 H+",
       "options": [
+        "A-iv, B-ii, C-iii, D-i",
         "A-ii, B-iv, C-i, D-iii",
-        "A-i, B-iv, C-ii, D-iii",
         "A-ii, B-i, C-iv, D-iii",
-        "A-iv, B-ii, C-iii, D-i"
+        "A-i, B-iv, C-ii, D-iii"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "Complex I (NADH dehydrogenase) oxidizes NADH and passes electrons to ubiquinone (CoQ) while pumping 4 H+ (A-ii). Complex III (cytochrome bc1) uses the Q cycle to transfer electrons from ubiquinol to cytochrome c, pumping 4 H+ (B-iv). Complex IV (cytochrome c oxidase) is the terminal oxidase that transfers electrons to molecular oxygen, forming water (C-i). ATP synthase uses the proton gradient to drive ATP synthesis via the mechanical rotation of its rotor (D-iii). Campbell Ch 9.",
-      "tags": [
-        "ETC",
-        "complexes",
-        "electron-transport",
-        "oxidative-phosphorylation"
-      ]
+      "tags": ["ETC", "complexes", "electron-transport", "oxidative-phosphorylation"]
     },
     {
       "type": "MCQ",
@@ -385,18 +323,13 @@
       "question": "Scaffold proteins in cell signaling pathways serve which primary function?",
       "options": [
         "They act as secondary messengers that amplify signals",
+        "They degrade signaling molecules after transduction is complete",
         "They transport receptors from the cytoplasm to the cell membrane",
-        "They physically bring together multiple kinases in a signaling cascade, increasing efficiency and specificity",
-        "They degrade signaling molecules after transduction is complete"
+        "They physically bring together multiple kinases in a signaling cascade, increasing efficiency and specificity"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "Scaffold proteins are large relay proteins that simultaneously bind multiple signaling kinases in a cascade (for example, in the MAP kinase pathway). By holding these proteins in close proximity, scaffold proteins increase the speed and efficiency of signal relay and prevent cross-talk between different signaling pathways, thereby enhancing specificity. They do not amplify signals like second messengers, nor do they degrade signals or transport receptors. Campbell Ch 11.",
-      "tags": [
-        "scaffold-proteins",
-        "signal-transduction",
-        "MAP-kinase",
-        "specificity"
-      ]
+      "tags": ["scaffold-proteins", "signal-transduction", "MAP-kinase", "specificity"]
     },
     {
       "type": "MCQ",
@@ -414,19 +347,14 @@
       "conceptualDepth": "advanced",
       "question": "In an organism with 2n = 8, how many different combinations of maternal and paternal chromosomes are possible in the gametes produced by independent assortment alone (excluding crossing over)?",
       "options": [
+        "8",
         "16",
-        "64",
         "32",
-        "8"
+        "64"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "The number of possible combinations from independent assortment is 2^n, where n is the haploid number. With 2n = 8, n = 4, so 2^4 = 16 different chromosome combinations are possible in gametes. This calculation assumes no crossing over; when crossing over is included, the actual number of genetically distinct gametes is virtually unlimited. For humans (n = 23), it's 2^23 = approximately 8.4 million combinations. Campbell Ch 13.",
-      "tags": [
-        "meiosis",
-        "independent-assortment",
-        "genetic-variation",
-        "gametes"
-      ]
+      "tags": ["meiosis", "independent-assortment", "genetic-variation", "gametes"]
     },
     {
       "type": "MCQ",
@@ -444,19 +372,14 @@
       "conceptualDepth": "advanced",
       "question": "In a cross between two heterozygous plants (AaBb), the offspring show a phenotypic ratio of 9:3:4 instead of the expected 9:3:3:1. What type of gene interaction best explains this ratio?",
       "options": [
-        "Codominance between the two loci",
         "Complementary gene interaction",
-        "Recessive epistasis, where homozygous recessive at one locus masks the expression of the other locus",
-        "Duplicate gene interaction"
+        "Duplicate gene interaction",
+        "Codominance between the two loci",
+        "Recessive epistasis, where homozygous recessive at one locus masks the expression of the other locus"
       ],
-      "correctAnswer": "C",
-      "explanation": "A 9:3:4 ratio is a modification of the 9:3:3:1 dihybrid ratio where the 3:1 classes for one phenotype merge into a single class (3+1 = 4). This occurs in recessive epistasis: when the bb genotype masks the expression of the A locus, both A_bb (3/16) and aabb (1/16) show the same phenotype, producing the 9:3:4 ratio. A classic example is coat color in Labrador retrievers, where the ee genotype (equivalent to bb) produces yellow regardless of the B locus genotype. Campbell Ch 14.",
-      "tags": [
-        "epistasis",
-        "recessive-epistasis",
-        "dihybrid",
-        "gene-interaction"
-      ]
+      "correctAnswer": "D",
+      "explanation": "A 9:3:4 ratio is a modification of the 9:3:3:1 dihybrid ratio where the 3:1 classes for one phenotype merge into a single class (3+1 = 4). This occurs in recessive epistasis: when the bb genotype masks the expression of the A locus, both A_bb (3/16) and aabb (1/16) show the same phenotype, producing the 9:3:4 ratio. A classic example is coat color in Labrador retrievers, where the ee genotype produces yellow regardless of the B locus genotype. Campbell Ch 14.",
+      "tags": ["epistasis", "recessive-epistasis", "dihybrid", "gene-interaction"]
     },
     {
       "type": "MCQ",
@@ -475,18 +398,13 @@
       "question": "In Drosophila, genes A and B are linked on the same chromosome with a recombination frequency of 12%. Gene C is on the same chromosome with recombination frequencies of 7% with A and 5% with B. What is the most likely gene order?",
       "options": [
         "C - A - B",
-        "A - C - B",
         "A - B - C",
+        "A - C - B",
         "B - A - C"
       ],
-      "correctAnswer": "B",
-      "explanation": "In chromosome mapping, the distances between genes should be additive. A-B = 12%, A-C = 7%, C-B = 5%. Since 7 + 5 = 12, gene C must be between A and B. The order is A - C - B (or equivalently B - C - A). If C were outside A and B, the distances would not add up correctly. This three-point test cross principle is fundamental to genetic mapping. The recombination frequency between the two outer genes approximately equals the sum of frequencies for adjacent intervals. Campbell Ch 15.",
-      "tags": [
-        "gene-mapping",
-        "linkage",
-        "recombination-frequency",
-        "chromosome-mapping"
-      ]
+      "correctAnswer": "C",
+      "explanation": "In chromosome mapping, the distances between genes should be additive. A-B = 12%, A-C = 7%, C-B = 5%. Since 7 + 5 = 12, gene C must be between A and B. The order is A - C - B (or equivalently B - C - A). If C were outside A and B, the distances would not add up correctly. This three-point test cross principle is fundamental to genetic mapping. Campbell Ch 15.",
+      "tags": ["gene-mapping", "linkage", "recombination-frequency", "chromosome-mapping"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -505,18 +423,13 @@
       "question": "Assertion (A): During DNA replication, the leading strand is synthesized continuously while the lagging strand is synthesized in Okazaki fragments.\nReason (R): DNA polymerase III can only synthesize DNA in the 5' to 3' direction, and the two template strands run antiparallel.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
-        "A is true but R is false",
         "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
         "A is false but R is true"
       ],
       "correctAnswer": "A",
-      "explanation": "Because DNA polymerase can only add nucleotides to the 3' end of a growing strand (5' to 3' synthesis), and the two template strands are antiparallel, one strand (leading) has its 3' end pointing toward the replication fork and can be synthesized continuously. The other strand (lagging) has its 3' end pointing away from the fork, so it must be synthesized in short fragments (Okazaki fragments, ~1000-2000 nt in prokaryotes) that are later joined by DNA ligase. The antiparallel nature of DNA directly explains the asymmetric replication. Campbell Ch 16.",
-      "tags": [
-        "DNA-replication",
-        "Okazaki-fragments",
-        "DNA-polymerase",
-        "leading-lagging-strand"
-      ]
+      "explanation": "Because DNA polymerase can only add nucleotides to the 3' end of a growing strand (5' to 3' synthesis), and the two template strands are antiparallel, one strand (leading) has its 3' end pointing toward the replication fork and can be synthesized continuously. The other strand (lagging) has its 3' end pointing away from the fork, so it must be synthesized in short Okazaki fragments that are later joined by DNA ligase. The antiparallel nature of DNA directly explains the asymmetric replication. Campbell Ch 16.",
+      "tags": ["DNA-replication", "Okazaki-fragments", "DNA-polymerase", "leading-lagging-strand"]
     },
     {
       "type": "MCQ",
@@ -532,21 +445,16 @@
       "campbellUnit": 3,
       "campbellEdition": 12,
       "conceptualDepth": "expert",
-      "question": "A pre-mRNA molecule undergoes alternative splicing. The primary transcript contains 5 exons (E1-E5). If the mature mRNA can include any combination of exons as long as E1 is always at the 5' end and E5 is always at the 3' end, what is the maximum number of different mRNA variants possible?",
+      "question": "A pre-mRNA molecule undergoes alternative splicing. The primary transcript contains 5 exons (E1-E5). If the mature mRNA can include any combination of internal exons as long as E1 is always at the 5' end and E5 is always at the 3' end, what is the maximum number of different mRNA variants possible?",
       "options": [
-        "10",
         "6",
         "8",
+        "10",
         "12"
       ],
-      "correctAnswer": "C",
-      "explanation": "E1 and E5 are always present (first and last). The variable exons are E2, E3, and E4 — each can either be included or excluded independently. This gives 2^3 = 8 possible combinations (E1E5, E1E2E5, E1E3E5, E1E4E5, E1E2E3E5, E1E2E4E5, E1E3E4E5, E1E2E3E4E5). Note that the order of exons is fixed — alternative splicing changes which exons are included, not their order. This mechanism allows one gene to produce multiple protein variants (isoforms), greatly expanding the proteome. Campbell Ch 17.",
-      "tags": [
-        "alternative-splicing",
-        "mRNA-processing",
-        "exons",
-        "gene-expression"
-      ]
+      "correctAnswer": "B",
+      "explanation": "E1 and E5 are always present (first and last). The variable exons are E2, E3, and E4 \u2014 each can either be included or excluded independently. This gives 2^3 = 8 possible combinations (E1E5, E1E2E5, E1E3E5, E1E4E5, E1E2E3E5, E1E2E4E5, E1E3E4E5, E1E2E3E4E5). Note that the order of exons is fixed \u2014 alternative splicing changes which exons are included, not their order. This mechanism allows one gene to produce multiple protein variants (isoforms). Campbell Ch 17.",
+      "tags": ["alternative-splicing", "mRNA-processing", "exons", "gene-expression"]
     },
     {
       "type": "MCQ",
@@ -564,19 +472,14 @@
       "conceptualDepth": "advanced",
       "question": "In the lac operon of E. coli, what happens when both glucose and lactose are present in the growth medium?",
       "options": [
+        "The operon is maximally expressed because both the inducer and CAP-cAMP are active",
         "The operon is expressed at a low basal level because glucose keeps cAMP levels low, preventing CAP activation, even though the repressor is inactivated by allolactose",
         "The operon is completely repressed because glucose activates the lac repressor",
-        "The operon alternates between active and repressed states",
-        "The operon is maximally expressed because both the inducer and CAP-cAMP are active"
+        "The operon alternates between active and repressed states"
       ],
-      "correctAnswer": "A",
-      "explanation": "This is catabolite repression (glucose effect). When lactose is present, allolactose binds the lac repressor and inactivates it, removing negative control. However, when glucose is also present, cAMP levels remain low (glucose inhibits adenylyl cyclase). Without sufficient cAMP, the CAP-cAMP complex cannot form and bind the CAP site upstream of the promoter. Since CAP-cAMP is needed for efficient RNA polymerase binding (positive control), transcription occurs only at a low basal level. The bacterium preferentially uses glucose. Full induction requires both lactose (to remove repressor) and absence of glucose (to allow CAP-cAMP activation). Campbell Ch 18.",
-      "tags": [
-        "lac-operon",
-        "catabolite-repression",
-        "CAP-cAMP",
-        "gene-regulation"
-      ]
+      "correctAnswer": "B",
+      "explanation": "This is catabolite repression (glucose effect). When lactose is present, allolactose inactivates the lac repressor, removing negative control. However, when glucose is also present, cAMP levels remain low. Without sufficient cAMP, the CAP-cAMP complex cannot form. Since CAP-cAMP is needed for efficient RNA polymerase binding (positive control), transcription occurs only at a low basal level. Full induction requires both lactose and absence of glucose. Campbell Ch 18.",
+      "tags": ["lac-operon", "catabolite-repression", "CAP-cAMP", "gene-regulation"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -595,19 +498,13 @@
       "question": "Statement I: Retroviruses like HIV use reverse transcriptase to convert their RNA genome into double-stranded DNA, which then integrates into the host genome as a provirus.\nStatement II: The integrated proviral DNA is replicated along with host DNA during cell division and can remain latent for years before producing new viral particles.",
       "options": [
         "Both statements are correct and Statement II explains Statement I",
-        "Statement I is incorrect but Statement II is correct",
         "Statement I is correct but Statement II is incorrect",
-        "Both statements are correct but Statement II does not explain Statement I"
+        "Both statements are correct but Statement II does not explain Statement I",
+        "Statement I is incorrect but Statement II is correct"
       ],
-      "correctAnswer": "D",
-      "explanation": "Both statements are accurate descriptions of retroviral biology. HIV's reverse transcriptase converts ssRNA to dsDNA, and integrase inserts this DNA into the host chromosome (Statement I). The provirus is then replicated with the host genome and can remain latent indefinitely (Statement II). However, Statement II describes what happens after integration — it does not explain why or how the reverse transcription and integration occur. They are sequential events, not cause-and-effect. Campbell Ch 19.",
-      "tags": [
-        "retrovirus",
-        "HIV",
-        "reverse-transcriptase",
-        "provirus",
-        "latency"
-      ]
+      "correctAnswer": "C",
+      "explanation": "Both statements are accurate descriptions of retroviral biology. HIV's reverse transcriptase converts ssRNA to dsDNA, and integrase inserts this DNA into the host chromosome (Statement I). The provirus is then replicated with the host genome and can remain latent indefinitely (Statement II). However, Statement II describes what happens after integration \u2014 it does not explain why or how the reverse transcription and integration occur. They are sequential events, not cause-and-effect. Campbell Ch 19.",
+      "tags": ["retrovirus", "HIV", "reverse-transcriptase", "provirus", "latency"]
     },
     {
       "type": "MCQ",
@@ -623,22 +520,41 @@
       "campbellUnit": 3,
       "campbellEdition": 12,
       "conceptualDepth": "expert",
-      "question": "A researcher performs CRISPR-Cas9 gene editing on a cell line. The guide RNA is designed to target an exon of gene X. After editing, cells are analyzed and found to have a 2-nucleotide insertion at the cut site. What is the most likely effect on gene X expression?",
+      "question": "A researcher performs CRISPR-Cas9 gene editing on a cell line. The guide RNA targets an exon of gene X. After editing, cells have a 2-nucleotide insertion at the cut site. What is the most likely effect on gene X expression?",
       "options": [
         "The gene will produce a truncated but partially functional protein",
-        "A frameshift mutation will likely introduce a premature stop codon, producing a nonfunctional truncated protein or triggering nonsense-mediated mRNA decay",
         "The gene will be completely deleted from the genome",
+        "A frameshift mutation will likely introduce a premature stop codon, producing a nonfunctional truncated protein or triggering nonsense-mediated mRNA decay",
         "The insertion will be corrected by cellular mismatch repair mechanisms"
       ],
-      "correctAnswer": "B",
-      "explanation": "A 2-nucleotide insertion is not a multiple of 3, so it causes a frameshift mutation. This shifts the reading frame for all downstream codons, typically introducing a premature stop codon (PTC) within a short distance. The resulting mRNA may be degraded by nonsense-mediated mRNA decay (NMD) if the PTC is more than 50-55 nucleotides upstream of the last exon-exon junction. If the mRNA escapes NMD, it would produce a truncated, almost certainly nonfunctional protein. This is the standard outcome when CRISPR-Cas9 creates indels (insertions/deletions) via the error-prone NHEJ repair pathway. Campbell Ch 20.",
-      "tags": [
-        "CRISPR-Cas9",
-        "frameshift",
-        "gene-editing",
-        "NMD",
-        "indel"
-      ]
+      "correctAnswer": "C",
+      "explanation": "A 2-nucleotide insertion is not a multiple of 3, so it causes a frameshift mutation. This shifts the reading frame for all downstream codons, typically introducing a premature stop codon (PTC) within a short distance. The resulting mRNA may be degraded by nonsense-mediated mRNA decay (NMD). If the mRNA escapes NMD, it would produce a truncated, nonfunctional protein. This is the standard outcome when CRISPR-Cas9 creates indels via the error-prone NHEJ repair pathway. Campbell Ch 20.",
+      "tags": ["CRISPR-Cas9", "frameshift", "gene-editing", "NMD", "indel"]
+    },
+    {
+      "type": "MCQ",
+      "topic": "Genetics",
+      "chapter": "The Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellChapter": 16,
+      "campbellUnit": 3,
+      "campbellEdition": 12,
+      "conceptualDepth": "expert",
+      "question": "A DNA sample is analyzed and found to contain 28% adenine. What are the percentages of the other three bases?",
+      "options": [
+        "28% thymine, 28% guanine, 16% cytosine",
+        "22% thymine, 28% guanine, 22% cytosine",
+        "28% uracil, 22% guanine, 22% cytosine",
+        "28% thymine, 22% guanine, 22% cytosine"
+      ],
+      "correctAnswer": "D",
+      "explanation": "According to Chargaff's rules for double-stranded DNA: A = T and G = C. If A = 28%, then T = 28%. The remaining bases account for 100% - 28% - 28% = 44%, split equally between G and C: 22% each. This is a direct application of complementary base pairing. Note that this rule applies to double-stranded DNA only. Option C is incorrect because DNA contains thymine, not uracil. Campbell Ch 16.",
+      "tags": ["Chargaffs-rules", "base-pairing", "DNA-structure", "nucleotide-composition"]
     },
     {
       "type": "MCQ",
@@ -657,18 +573,13 @@
       "question": "In a population of 1000 individuals, 160 show the recessive phenotype (aa). Assuming Hardy-Weinberg equilibrium, what is the expected number of heterozygous (Aa) carriers in the population?",
       "options": [
         "320",
-        "480",
+        "360",
         "240",
-        "360"
+        "480"
       ],
-      "correctAnswer": "B",
-      "explanation": "If q² = 160/1000 = 0.16, then q = 0.4 and p = 1 - 0.4 = 0.6. The frequency of heterozygotes is 2pq = 2(0.6)(0.4) = 0.48, or 48%. In a population of 1000, this gives 480 heterozygous individuals. Note that heterozygote frequency is maximized when p = q = 0.5, yielding 2pq = 0.50. Hardy-Weinberg calculations are fundamental to population genetics and Olympiad problems. Campbell Ch 23.",
-      "tags": [
-        "Hardy-Weinberg",
-        "population-genetics",
-        "allele-frequency",
-        "heterozygote"
-      ]
+      "correctAnswer": "D",
+      "explanation": "If q\u00b2 = 160/1000 = 0.16, then q = 0.4 and p = 1 - 0.4 = 0.6. The frequency of heterozygotes is 2pq = 2(0.6)(0.4) = 0.48, or 48%. In a population of 1000, this gives 480 heterozygous individuals. Hardy-Weinberg calculations are fundamental to population genetics and Olympiad problems. Campbell Ch 23.",
+      "tags": ["Hardy-Weinberg", "population-genetics", "allele-frequency", "heterozygote"]
     },
     {
       "type": "MCQ",
@@ -686,19 +597,14 @@
       "conceptualDepth": "advanced",
       "question": "Two closely related species of frogs breed in the same pond. Species A breeds in early spring while Species B breeds in late summer. What type of reproductive isolation is this?",
       "options": [
-        "Temporal isolation",
         "Habitat isolation",
+        "Temporal isolation",
         "Behavioral isolation",
         "Gametic isolation"
       ],
-      "correctAnswer": "A",
-      "explanation": "Temporal (chronological) isolation occurs when two species breed at different times — different times of day, different seasons, or different years. Despite sharing the same habitat (the pond), these frog species cannot interbreed because their breeding periods do not overlap. This is a prezygotic barrier. Other examples include different flowering times in plants (e.g., two Tradescantia species). Habitat isolation would require them to live in different microhabitats, while behavioral isolation involves differences in courtship rituals. Campbell Ch 24.",
-      "tags": [
-        "speciation",
-        "temporal-isolation",
-        "prezygotic-barrier",
-        "reproductive-isolation"
-      ]
+      "correctAnswer": "B",
+      "explanation": "Temporal (chronological) isolation occurs when two species breed at different times. Despite sharing the same habitat (the pond), these frog species cannot interbreed because their breeding periods do not overlap. This is a prezygotic barrier. Habitat isolation would require them to live in different microhabitats, while behavioral isolation involves differences in courtship rituals. Campbell Ch 24.",
+      "tags": ["speciation", "temporal-isolation", "prezygotic-barrier", "reproductive-isolation"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -716,19 +622,14 @@
       "conceptualDepth": "expert",
       "question": "Assertion (A): Genetic drift has a greater effect on allele frequencies in small populations than in large populations.\nReason (R): In small populations, chance events during reproduction can cause large deviations from expected allele frequencies because sampling error is inversely proportional to population size.",
       "options": [
-        "A is true but R is false",
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "B",
-      "explanation": "Genetic drift is the random fluctuation of allele frequencies due to chance events in reproduction. In small populations, each individual represents a larger fraction of the gene pool, so random deviations have a proportionally greater impact. Statistically, the variance in allele frequency change per generation is p(1-p)/(2N), where N is the population size — clearly showing that smaller N produces larger variance (more drift). This is analogous to flipping a coin: with 10 flips you might get 70% heads, but with 10,000 flips you'll be very close to 50%. The bottleneck effect and founder effect are special cases. Campbell Ch 23.",
-      "tags": [
-        "genetic-drift",
-        "population-size",
-        "sampling-error",
-        "allele-frequency"
-      ]
+      "correctAnswer": "A",
+      "explanation": "Genetic drift is the random fluctuation of allele frequencies due to chance events in reproduction. In small populations, each individual represents a larger fraction of the gene pool, so random deviations have a proportionally greater impact. Statistically, the variance in allele frequency change per generation is p(1-p)/(2N), where N is the population size \u2014 smaller N produces larger variance (more drift). Campbell Ch 23.",
+      "tags": ["genetic-drift", "population-size", "sampling-error", "allele-frequency"]
     },
     {
       "type": "MCQ",
@@ -746,49 +647,39 @@
       "conceptualDepth": "advanced",
       "question": "In a phylogenetic analysis, species A and B share a derived character (synapomorphy) not found in species C or the outgroup. However, species B and C share a different character. Which of the following is the most parsimonious interpretation?",
       "options": [
-        "The phylogeny cannot be determined from these data",
+        "B and C are sister taxa",
         "All three species form an unresolved polytomy",
-        "B and C are sister taxa, and the character shared by A and B is ancestral",
-        "A and B are sister taxa, and the character shared by B and C evolved independently (convergent evolution or reversal)"
+        "A and B are sister taxa, and the character shared by B and C evolved independently",
+        "The phylogeny cannot be determined from these data"
       ],
-      "correctAnswer": "D",
-      "explanation": "Synapomorphies (shared derived characters) are the basis for constructing phylogenies using cladistic analysis. Since A and B share a derived character absent in the outgroup and C, parsimony groups A and B as sister taxa. The character shared by B and C must then be explained as either convergent evolution (homoplasy) or a reversal in A. In maximum parsimony analysis, we choose the tree topology that requires the fewest evolutionary changes. One homoplasy (B-C character) is more parsimonious than rejecting the synapomorphy. Campbell Ch 26.",
-      "tags": [
-        "phylogenetics",
-        "synapomorphy",
-        "parsimony",
-        "cladistics"
-      ]
+      "correctAnswer": "C",
+      "explanation": "Synapomorphies (shared derived characters) are the basis for constructing phylogenies using cladistic analysis. Since A and B share a derived character absent in the outgroup and C, parsimony groups A and B as sister taxa. The character shared by B and C must then be explained as either convergent evolution (homoplasy) or a reversal in A. In maximum parsimony, we choose the topology requiring the fewest evolutionary changes. Campbell Ch 26.",
+      "tags": ["phylogenetics", "synapomorphy", "parsimony", "cladistics"]
     },
     {
       "type": "MCQ",
       "topic": "Evolution",
-      "chapter": "The Evolution of Populations",
+      "chapter": "Descent with Modification",
       "ncertClass": 12,
       "difficulty": "HARD",
       "isNcertBased": false,
       "isNeetImportant": false,
       "isOlympiad": true,
-      "olympiadLevel": "IBO",
-      "campbellChapter": 23,
+      "olympiadLevel": "NSEB",
+      "campbellChapter": 22,
       "campbellUnit": 4,
       "campbellEdition": 12,
-      "conceptualDepth": "expert",
-      "question": "In a population in Hardy-Weinberg equilibrium, the frequency of allele A1 is 0.7 and A2 is 0.3. If the fitness values are: A1A1 = 1.0, A1A2 = 1.0, A2A2 = 0.7, what is the expected change in frequency of allele A2 after one generation of selection?",
+      "conceptualDepth": "intermediate",
+      "question": "The forelimbs of bats, whales, cats, and humans all contain the same set of bones despite being used for very different functions. This is an example of:",
       "options": [
-        "There will be no change because heterozygotes have fitness 1.0",
-        "The frequency of A2 will decrease by approximately 0.027",
-        "The frequency of A2 will decrease by approximately 0.009",
-        "The frequency of A2 will increase by approximately 0.009"
+        "Convergent evolution",
+        "Analogous structures",
+        "Homologous structures inherited from a common ancestor and modified for different functions",
+        "Vestigial structures"
       ],
       "correctAnswer": "C",
-      "explanation": "First calculate mean fitness: w̄ = p²w11 + 2pqw12 + q²w22 = (0.49)(1) + (0.42)(1) + (0.09)(0.7) = 0.49 + 0.42 + 0.063 = 0.973. The new frequency of A2: q' = [pq(w12) + q²(w22)] / w̄ = [(0.7)(0.3)(1) + (0.09)(0.7)] / 0.973 = [0.21 + 0.063] / 0.973 = 0.273/0.973 = 0.2806. The change Δq = 0.2806 - 0.3 = -0.0194, approximately -0.009 when using the simplified formula Δq = -spq²/(1 - sq²) where s = 0.3. Selection against the recessive homozygote is slow when the allele is rare but faster at intermediate frequencies. Campbell Ch 23.",
-      "tags": [
-        "natural-selection",
-        "fitness",
-        "allele-frequency-change",
-        "Hardy-Weinberg"
-      ]
+      "explanation": "Homologous structures share a common anatomical origin (inherited from a common tetrapod ancestor) but have been modified by natural selection for different functions: flight (bat), swimming (whale), running (cat), manipulation (human). In contrast, analogous structures serve similar functions but have different evolutionary origins. The presence of identical bones in the same relative positions, despite wildly different functions, strongly argues for common ancestry. Campbell Ch 22.",
+      "tags": ["homologous-structures", "comparative-anatomy", "common-ancestry", "evidence-for-evolution"]
     },
     {
       "type": "MCQ",
@@ -804,21 +695,16 @@
       "campbellUnit": 5,
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
-      "question": "A chemoautotrophic bacterium is discovered at a deep-sea hydrothermal vent. It oxidizes hydrogen sulfide (H2S) and uses the energy to fix CO2. Which of the following correctly describes this organism's metabolic classification?",
+      "question": "A chemoautotrophic bacterium at a deep-sea hydrothermal vent oxidizes H2S and uses the energy to fix CO2. Which metabolic classification is correct?",
       "options": [
-        "Chemoautotroph (chemolithoautotroph) — it derives energy from oxidizing inorganic molecules and uses CO2 as its carbon source",
-        "Chemoheterotroph — it uses chemical energy and organic carbon sources",
-        "Mixotroph — it alternates between autotrophic and heterotrophic modes",
-        "Photoautotroph — it uses light energy to fix carbon"
+        "Photoautotroph",
+        "Chemoheterotroph",
+        "Chemoautotroph (chemolithoautotroph) \u2014 derives energy from oxidizing inorganic molecules and uses CO2 as carbon source",
+        "Mixotroph"
       ],
-      "correctAnswer": "A",
-      "explanation": "This organism obtains energy by oxidizing the inorganic compound H2S (chemolithotrophy) and uses CO2 as its carbon source (autotrophy), making it a chemolithoautotroph. These organisms are the primary producers at hydrothermal vents, forming the base of vent ecosystems without sunlight. The energy from H2S oxidation is used to generate ATP and reducing power (NADH) for the Calvin cycle. This is distinct from photoautotrophs (which use light energy) and chemoheterotrophs (which use organic molecules for both energy and carbon). Campbell Ch 27.",
-      "tags": [
-        "chemoautotroph",
-        "hydrothermal-vent",
-        "prokaryote-metabolism",
-        "H2S-oxidation"
-      ]
+      "correctAnswer": "C",
+      "explanation": "This organism obtains energy by oxidizing the inorganic compound H2S (chemolithotrophy) and uses CO2 as its carbon source (autotrophy), making it a chemolithoautotroph. These organisms are the primary producers at hydrothermal vents, forming the base of vent ecosystems without sunlight. Campbell Ch 27.",
+      "tags": ["chemoautotroph", "hydrothermal-vent", "prokaryote-metabolism", "H2S-oxidation"]
     },
     {
       "type": "MCQ",
@@ -834,22 +720,16 @@
       "campbellUnit": 5,
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
-      "question": "Plasmodium falciparum has a complex life cycle involving both human and mosquito hosts. During which stage of the parasite's life cycle does genetic recombination occur?",
+      "question": "During which stage of Plasmodium falciparum's life cycle does genetic recombination occur?",
       "options": [
-        "During the schizogony (asexual multiplication) stage in human liver cells",
-        "During the ring stage within human erythrocytes",
-        "During the sexual stage in the mosquito gut when male and female gametes fuse and the resulting ookinete undergoes meiosis",
-        "During the merozoite invasion of red blood cells"
+        "During schizogony in human liver cells",
+        "During merozoite invasion of red blood cells",
+        "During the ring stage within erythrocytes",
+        "During the sexual stage in the mosquito gut when gametes fuse and the ookinete undergoes meiosis"
       ],
-      "correctAnswer": "C",
-      "explanation": "Genetic recombination in Plasmodium occurs during the sexual phase in the Anopheles mosquito. Gametocytes taken up in a blood meal develop into male and female gametes in the mosquito gut. Fertilization produces a diploid zygote (ookinete), which undergoes meiosis — this is when crossing over and genetic recombination occur. The resulting haploid sporozoites migrate to the salivary glands. All stages in the human host (liver schizogony, erythrocyte schizogony, ring/trophozoite/schizont stages) are haploid and involve only asexual (mitotic) reproduction. Campbell Ch 28.",
-      "tags": [
-        "Plasmodium",
-        "malaria",
-        "life-cycle",
-        "sexual-reproduction",
-        "recombination"
-      ]
+      "correctAnswer": "D",
+      "explanation": "Genetic recombination in Plasmodium occurs during the sexual phase in the Anopheles mosquito. Gametocytes develop into gametes in the mosquito gut. Fertilization produces a diploid zygote (ookinete), which undergoes meiosis \u2014 this is when crossing over and recombination occur. All stages in the human host are haploid and involve only asexual reproduction. Campbell Ch 28.",
+      "tags": ["Plasmodium", "malaria", "life-cycle", "sexual-reproduction", "recombination"]
     },
     {
       "type": "STATEMENT_BASED",
@@ -869,17 +749,12 @@
       "options": [
         "Statement I is correct but Statement II is incorrect",
         "Statement I is incorrect but Statement II is correct",
-        "Both statements are correct and Statement II explains Statement I",
-        "Both statements are correct but Statement II does not explain Statement I"
+        "Both statements are correct but Statement II does not explain Statement I",
+        "Both statements are correct and Statement II explains Statement I"
       ],
-      "correctAnswer": "C",
-      "explanation": "The alternation of generations shows a clear evolutionary trend: bryophytes have a dominant gametophyte with a dependent sporophyte, ferns have an independent (but small) gametophyte with a dominant sporophyte, and seed plants have a highly reduced gametophyte. Statement II provides valid evolutionary explanations: diploidy masks harmful recessive alleles (heterozygote advantage), and the sporophyte generation in vascular plants developed roots, stems, and leaves with vascular tissue, enabling growth to larger sizes for better light competition and resource acquisition. Campbell Ch 29.",
-      "tags": [
-        "alternation-of-generations",
-        "sporophyte-dominance",
-        "plant-evolution",
-        "bryophytes"
-      ]
+      "correctAnswer": "D",
+      "explanation": "The alternation of generations shows a clear evolutionary trend: bryophytes have a dominant gametophyte, ferns have a dominant sporophyte, and seed plants have a highly reduced gametophyte. Statement II provides valid evolutionary explanations: diploidy masks harmful recessive alleles, and the sporophyte developed vascular tissue enabling larger size and better competition. Campbell Ch 29.",
+      "tags": ["alternation-of-generations", "sporophyte-dominance", "plant-evolution", "bryophytes"]
     },
     {
       "type": "MCQ",
@@ -895,21 +770,16 @@
       "campbellUnit": 5,
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
-      "question": "Mycorrhizal fungi form mutualistic associations with approximately 90% of all plant species. In an experiment, plants grown without mycorrhizal partners in phosphorus-poor soil showed severely stunted growth. What is the primary mechanism by which mycorrhizae enhance plant phosphorus acquisition?",
+      "question": "What is the primary mechanism by which mycorrhizal fungi enhance plant phosphorus acquisition in phosphorus-poor soil?",
       "options": [
         "The fungi convert organic nitrogen into phosphorus compounds",
+        "The extensive network of thin fungal hyphae dramatically increases the soil volume explored for phosphate absorption",
         "Mycorrhizal fungi fix atmospheric phosphorus into bioavailable forms",
-        "The fungal hyphae secrete phosphatase enzymes that solubilize rock phosphate",
-        "The extensive network of thin fungal hyphae dramatically increases the soil volume explored for phosphate absorption far beyond the reach of root hairs alone"
+        "The fungal hyphae secrete phosphatase enzymes that solubilize rock phosphate"
       ],
-      "correctAnswer": "D",
-      "explanation": "Mycorrhizal fungi (both arbuscular and ectomycorrhizae) extend far beyond the root depletion zone through their vast network of thin hyphae (2-10 µm diameter vs. 10-20 µm for root hairs). This increases the effective absorptive surface area by 10-100 fold. Phosphorus is relatively immobile in soil, so extending the absorptive network is critical. While some fungi do secrete phosphatases (option A is partially true), the primary mechanism is the physical exploration of more soil volume. Phosphorus cannot be fixed from the atmosphere (unlike nitrogen), and nitrogen cannot be converted to phosphorus. Campbell Ch 31.",
-      "tags": [
-        "mycorrhizae",
-        "phosphorus",
-        "mutualism",
-        "fungal-hyphae"
-      ]
+      "correctAnswer": "B",
+      "explanation": "Mycorrhizal fungi extend far beyond the root depletion zone through their vast network of thin hyphae (2-10 \u00b5m diameter). This increases the effective absorptive surface area by 10-100 fold. Phosphorus is relatively immobile in soil, so extending the absorptive network is critical. While some fungi do secrete phosphatases, the primary mechanism is physical exploration of more soil volume. Phosphorus cannot be fixed from the atmosphere. Campbell Ch 31.",
+      "tags": ["mycorrhizae", "phosphorus", "mutualism", "fungal-hyphae"]
     },
     {
       "type": "MCQ",
@@ -925,22 +795,16 @@
       "campbellUnit": 5,
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
-      "question": "Which of the following represents the correct phylogenetic relationship among the major animal clades based on current molecular evidence?",
+      "question": "Which represents the correct phylogenetic relationship among major animal clades based on molecular evidence?",
       "options": [
-        "Deuterostomia and Ecdysozoa are sister groups, with Lophotrochozoa as the outgroup",
-        "Lophotrochozoa and Ecdysozoa are sister groups, together forming Protostomia, which is the sister group of Deuterostomia",
+        "Lophotrochozoa and Ecdysozoa are sister groups forming Protostomia, which is sister to Deuterostomia",
+        "Deuterostomia and Ecdysozoa are sister groups",
         "All bilaterians are equally related to cnidarians",
-        "Ecdysozoa (arthropods, nematodes) are more closely related to deuterostomes than to lophotrochozoans"
+        "Ecdysozoa are more closely related to deuterostomes than to lophotrochozoans"
       ],
-      "correctAnswer": "B",
-      "explanation": "Modern molecular phylogenetics divides Bilateria into Deuterostomia and Protostomia. Protostomia is further divided into two major clades: Lophotrochozoa (annelids, molluscs, flatworms, rotifers) and Ecdysozoa (arthropods, nematodes — animals that molt). This replaced the older classification based on body cavity type (acoelomate, pseudocoelomate, coelomate). Notably, this means nematodes are more closely related to arthropods than to the flatworms they superficially resemble. Campbell Ch 32.",
-      "tags": [
-        "animal-phylogeny",
-        "protostomia",
-        "deuterostomia",
-        "ecdysozoa",
-        "lophotrochozoa"
-      ]
+      "correctAnswer": "A",
+      "explanation": "Modern molecular phylogenetics divides Bilateria into Deuterostomia and Protostomia. Protostomia is further divided into Lophotrochozoa (annelids, molluscs, flatworms) and Ecdysozoa (arthropods, nematodes \u2014 animals that molt). This replaced the older classification based on body cavity type. Notably, nematodes are more closely related to arthropods than to flatworms. Campbell Ch 32.",
+      "tags": ["animal-phylogeny", "protostomia", "deuterostomia", "ecdysozoa", "lophotrochozoa"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -958,19 +822,14 @@
       "conceptualDepth": "advanced",
       "question": "Column I (Vertebrate Innovation):\n(A) Four-chambered heart with complete ventricular septum\n(B) Amniotic egg with extraembryonic membranes\n(C) Swim bladder/lungs (homologous structures)\n(D) Jaws derived from modified gill arches\n\nColumn II (Taxonomic Group Where First Appears):\n(i) Gnathostomes (jawed vertebrates)\n(ii) Osteichthyes (bony fishes)\n(iii) Amniotes (reptiles, birds, mammals)\n(iv) Independently in crocodilians, birds, and mammals",
       "options": [
-        "A-iv, B-i, C-iii, D-ii",
-        "A-iv, B-iii, C-ii, D-i",
+        "A-iv, B-ii, C-iii, D-i",
         "A-iii, B-iv, C-i, D-ii",
+        "A-iv, B-iii, C-ii, D-i",
         "A-ii, B-iii, C-iv, D-i"
       ],
-      "correctAnswer": "B",
-      "explanation": "The four-chambered heart evolved independently (convergently) in crocodilians, birds, and mammals (A-iv); it is not present in other reptiles (turtles, lizards, snakes have a three-chambered heart with partial septum). The amniotic egg first appeared in amniotes, freeing vertebrates from water for reproduction (B-iii). Swim bladders and lungs are homologous structures that first appeared in bony fishes (osteichthyes), with lungs being the ancestral condition (C-ii). Jaws evolved from pharyngeal (gill) arches in the first gnathostomes (D-i). Campbell Ch 34.",
-      "tags": [
-        "vertebrate-evolution",
-        "four-chambered-heart",
-        "amniotic-egg",
-        "jaws"
-      ]
+      "correctAnswer": "C",
+      "explanation": "The four-chambered heart evolved independently (convergently) in crocodilians, birds, and mammals (A-iv). The amniotic egg first appeared in amniotes (B-iii). Swim bladders and lungs are homologous structures that first appeared in bony fishes (C-ii). Jaws evolved from pharyngeal arches in the first gnathostomes (D-i). Campbell Ch 34.",
+      "tags": ["vertebrate-evolution", "four-chambered-heart", "amniotic-egg", "jaws"]
     },
     {
       "type": "MCQ",
@@ -988,19 +847,14 @@
       "conceptualDepth": "advanced",
       "question": "According to the cohesion-tension hypothesis, what is the primary driving force for the ascent of xylem sap in tall trees?",
       "options": [
-        "Active pumping of water by living xylem cells using ATP",
+        "Active pumping of water by living xylem cells",
         "Root pressure generated by osmotic uptake of minerals",
-        "Capillary action between water molecules and xylem cell walls",
-        "Negative pressure (tension) generated by transpiration from leaves, transmitted through a continuous column of water held together by cohesion"
+        "Negative pressure (tension) from transpiration, transmitted through a cohesive water column",
+        "Capillary action between water and xylem cell walls"
       ],
-      "correctAnswer": "D",
-      "explanation": "The cohesion-tension hypothesis explains long-distance water transport in xylem. Transpiration from leaf mesophyll cells creates a negative water potential (tension) at the leaf surface. This tension is transmitted through a continuous column of water in the xylem, maintained by cohesion (hydrogen bonds between water molecules) and adhesion (hydrogen bonds between water and xylem cell walls). Root pressure can supplement this in small plants but is insufficient for tall trees. Capillary action alone can only raise water about 1 meter. The mechanism can generate tensions of -2 MPa or more, sufficient to pull water to the tops of the tallest trees (>100 m in coast redwoods). Campbell Ch 36.",
-      "tags": [
-        "cohesion-tension",
-        "transpiration",
-        "xylem-transport",
-        "water-potential"
-      ]
+      "correctAnswer": "C",
+      "explanation": "The cohesion-tension hypothesis explains long-distance water transport. Transpiration creates negative water potential (tension) at the leaf surface, transmitted through a continuous water column held together by cohesion (hydrogen bonds). Root pressure is insufficient for tall trees and capillary action alone can raise water only about 1 meter. Campbell Ch 36.",
+      "tags": ["cohesion-tension", "transpiration", "xylem-transport", "water-potential"]
     },
     {
       "type": "MCQ",
@@ -1016,22 +870,16 @@
       "campbellUnit": 6,
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
-      "question": "A researcher observes that legume plants growing in nitrogen-poor soil are healthy and green, while non-leguminous plants in the same soil show chlorosis. Which process occurring in the legume root nodules best explains this observation?",
+      "question": "Legumes thrive in nitrogen-poor soil where other plants show chlorosis. Which process in legume root nodules explains this?",
       "options": [
-        "The legume absorbs atmospheric N2 directly through stomata",
-        "Mycorrhizal fungi in the nodules convert NO3⁻ to amino acids",
-        "Rhizobium bacteria in root nodules reduce atmospheric N2 to NH3 using nitrogenase, providing the plant with a usable nitrogen source",
+        "The legume absorbs atmospheric N2 through stomata",
+        "Rhizobium bacteria reduce atmospheric N2 to NH3 using nitrogenase, providing usable nitrogen",
+        "Mycorrhizal fungi convert NO3\u207b to amino acids",
         "The legume recycles nitrogen from senescent leaves more efficiently"
       ],
-      "correctAnswer": "C",
-      "explanation": "Legumes form a mutualistic symbiosis with nitrogen-fixing Rhizobium bacteria in specialized root nodules. The bacteria express nitrogenase, which catalyzes the energetically expensive reduction of atmospheric N2 to NH3 (ammonia): N2 + 8H+ + 8e⁻ + 16ATP → 2NH3 + H2 + 16ADP + 16Pi. The ammonia is incorporated into organic molecules. This symbiosis requires leghemoglobin (which gives nodules their pink color) to maintain low O2 levels, since nitrogenase is irreversibly inactivated by oxygen. This is why legumes thrive in nitrogen-poor soils where other plants cannot. Campbell Ch 37.",
-      "tags": [
-        "nitrogen-fixation",
-        "Rhizobium",
-        "nitrogenase",
-        "root-nodules",
-        "legumes"
-      ]
+      "correctAnswer": "B",
+      "explanation": "Legumes form mutualistic symbiosis with nitrogen-fixing Rhizobium bacteria in root nodules. Nitrogenase catalyzes: N2 + 8H+ + 8e\u207b + 16ATP \u2192 2NH3 + H2 + 16ADP + 16Pi. This requires leghemoglobin to maintain low O2 (nitrogenase is oxygen-sensitive). This is why legumes thrive in nitrogen-poor soils. Campbell Ch 37.",
+      "tags": ["nitrogen-fixation", "Rhizobium", "nitrogenase", "root-nodules", "legumes"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1047,21 +895,16 @@
       "campbellUnit": 6,
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
-      "question": "Assertion (A): Phytochrome exists in two interconvertible forms — Pr (absorbs red light, 660 nm) and Pfr (absorbs far-red light, 730 nm), and Pfr is the biologically active form.\nReason (R): In sunlight, the Pr/Pfr ratio reaches a photoequilibrium that favors Pfr because sunlight contains more red than far-red light, and conversion of Pr to Pfr is faster than the reverse.",
+      "question": "Assertion (A): Phytochrome exists in two interconvertible forms \u2014 Pr (absorbs red, 660 nm) and Pfr (absorbs far-red, 730 nm), and Pfr is the biologically active form.\nReason (R): In sunlight, the Pr/Pfr ratio reaches a photoequilibrium favoring Pfr because sunlight contains more red than far-red light.",
       "options": [
-        "A is true but R is false",
-        "A is false but R is true",
         "Both A and R are true and R is the correct explanation of A",
-        "Both A and R are true but R is NOT the correct explanation of A"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
-      "correctAnswer": "D",
-      "explanation": "Both statements are factually correct. Pfr is indeed the biologically active form that triggers responses like seed germination, de-etiolation, and flowering regulation. In sunlight, photoequilibrium favors Pfr formation because red light (which converts Pr to Pfr) is absorbed more efficiently. However, the reason explains why there is more Pfr in sunlight — it does not explain why Pfr is the biologically active form. The biological activity of Pfr is due to its molecular conformation that allows it to interact with downstream signaling components (like PIFs — phytochrome interacting factors), not because of the photoequilibrium ratio. Campbell Ch 39.",
-      "tags": [
-        "phytochrome",
-        "Pr-Pfr",
-        "photomorphogenesis",
-        "plant-signaling"
-      ]
+      "correctAnswer": "B",
+      "explanation": "Both statements are correct. Pfr is the biologically active form, and sunlight does favor Pfr formation. However, the reason explains why there is more Pfr in sunlight \u2014 not why Pfr is biologically active. Pfr's activity comes from its conformation allowing interaction with downstream signaling components (PIF transcription factors), not from its abundance. Campbell Ch 39.",
+      "tags": ["phytochrome", "Pr-Pfr", "photomorphogenesis", "plant-signaling"]
     },
     {
       "type": "MCQ",
@@ -1077,21 +920,16 @@
       "campbellUnit": 6,
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
-      "question": "A cross-section of a woody dicot stem reveals a distinct ring of vascular cambium. To its interior lies secondary xylem, and to its exterior lies secondary phloem. If this tree is girdled (bark and phloem removed in a complete ring), what will be the eventual consequence?",
+      "question": "If a woody dicot tree is girdled (bark and phloem removed in a complete ring), what will be the eventual consequence?",
       "options": [
-        "The roots will die first due to starvation because sugars from photosynthesis cannot be transported downward through phloem",
-        "The tree will be unaffected because xylem can transport both water and sugars",
-        "New phloem will immediately regenerate from the vascular cambium to replace the lost tissue",
-        "The leaves will wilt immediately because water transport through xylem is disrupted"
+        "The leaves will wilt immediately because xylem is disrupted",
+        "New phloem will immediately regenerate from the vascular cambium",
+        "The roots will die first due to starvation because sugars cannot be transported downward through phloem",
+        "The tree will be unaffected because xylem transports both water and sugars"
       ],
-      "correctAnswer": "A",
-      "explanation": "Girdling removes the bark (including phloem and vascular cambium) in a complete ring. Since sugars produced in leaves are transported downward through phloem (source to sink), girdling cuts off the sugar supply to roots. The roots will gradually starve and die. Initially, leaves remain functional because xylem (interior to the cambium) is intact and continues to transport water and minerals upward. In fact, sugar often accumulates above the girdle, causing swelling. Eventually, once roots die, water uptake ceases and the entire tree dies. This classic experiment by Malpighi (1671) demonstrated the function of bark/phloem. Campbell Ch 35-36.",
-      "tags": [
-        "girdling",
-        "phloem-transport",
-        "vascular-cambium",
-        "sugar-translocation"
-      ]
+      "correctAnswer": "C",
+      "explanation": "Girdling removes bark including phloem and vascular cambium. Since sugars travel downward through phloem (source to sink), girdling starves the roots. Xylem remains intact initially so water transport continues and leaves stay functional. Sugar accumulates above the girdle. Eventually roots die, then the whole tree dies. This classic Malpighi experiment demonstrated phloem function. Campbell Ch 35-36.",
+      "tags": ["girdling", "phloem-transport", "vascular-cambium", "sugar-translocation"]
     },
     {
       "type": "MCQ",
@@ -1107,628 +945,16 @@
       "campbellUnit": 6,
       "campbellEdition": 12,
       "conceptualDepth": "expert",
-      "question": "A short-day (long-night) plant requires at least 14 hours of uninterrupted darkness to flower. If a researcher gives the plant 16 hours of darkness but interrupts it with a brief flash of red light at the 8-hour mark, what happens? If the red flash is immediately followed by a far-red flash, what happens?",
+      "question": "A short-day (long-night) plant requires 14 hours of uninterrupted darkness. Given 16 hours of darkness interrupted by a red flash at 8 hours, immediately followed by a far-red flash, what happens?",
       "options": [
-        "Red flash: flowering occurs; Red + far-red flash: no flowering",
-        "Red flash: flowering occurs; Red + far-red flash: flowering occurs",
-        "Red flash: no flowering; Red + far-red flash: no flowering",
-        "Red flash: no flowering; Red + far-red flash: flowering occurs"
-      ],
-      "correctAnswer": "D",
-      "explanation": "Short-day plants actually measure the length of the dark period (they are long-night plants). A brief red light flash during the dark period converts Pr to Pfr, which acts as a signal that the night has been interrupted — this prevents flowering. However, if the red flash is immediately followed by a far-red flash, Pfr is converted back to Pr, effectively canceling the night-break effect — so the plant perceives an uninterrupted long night and flowers normally. This classic experiment demonstrated that phytochrome is the photoreceptor controlling photoperiodism, and the last wavelength received determines the response (photoreversibility). Campbell Ch 39.",
-      "tags": [
-        "photoperiodism",
-        "phytochrome",
-        "night-break",
-        "flowering",
-        "photoreversibility"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Plant Form and Function",
-      "chapter": "Plant Defense",
-      "ncertClass": 11,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "NSEB",
-      "campbellChapter": 39,
-      "campbellUnit": 6,
-      "campbellEdition": 12,
-      "conceptualDepth": "advanced",
-      "question": "When a tobacco plant is infected by tobacco mosaic virus (TMV), it often develops necrotic lesions at the site of infection. This localized cell death prevents viral spread to the rest of the plant. What is this defense mechanism called, and what signal spreads systemic resistance to uninfected parts?",
-      "options": [
-        "Necrosis; abscisic acid triggers defense gene expression throughout the plant",
-        "Apoptosis; ethylene spreads systemic resistance",
-        "Programmed senescence; jasmonic acid activates proteinase inhibitors systemically",
-        "The hypersensitive response (HR); salicylic acid triggers systemic acquired resistance (SAR) in distal tissues"
-      ],
-      "correctAnswer": "D",
-      "explanation": "The hypersensitive response (HR) is a rapid, localized cell death at the infection site that quarantines the pathogen. Cells surrounding the lesion produce antimicrobial compounds (phytoalexins) and reinforce cell walls with lignin. Following HR, salicylic acid (SA) is produced and moves systemically through the plant, triggering systemic acquired resistance (SAR). SAR activates pathogenesis-related (PR) genes throughout the plant, providing broad-spectrum resistance against future infections. This is analogous to the innate immune response in animals. Jasmonic acid is primarily involved in defense against herbivores and wounding. Campbell Ch 39.",
-      "tags": [
-        "hypersensitive-response",
-        "SAR",
-        "salicylic-acid",
-        "plant-immunity",
-        "TMV"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Animal Form and Function",
-      "chapter": "Basic Principles of Animal Form and Function",
-      "ncertClass": 11,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "NSEB",
-      "campbellChapter": 40,
-      "campbellUnit": 7,
-      "campbellEdition": 12,
-      "conceptualDepth": "advanced",
-      "question": "An ectothermic lizard has a metabolic rate that increases with environmental temperature following the Q10 relationship. If its metabolic rate at 20°C is 2 mL O2/hr and Q10 = 2.5, what is its approximate metabolic rate at 30°C?",
-      "options": [
-        "4.0 mL O2/hr",
-        "7.5 mL O2/hr",
-        "5.0 mL O2/hr",
-        "2.5 mL O2/hr"
-      ],
-      "correctAnswer": "C",
-      "explanation": "Q10 is defined as the factor by which a reaction rate increases for every 10°C rise in temperature. Q10 = R(T+10)/R(T). With Q10 = 2.5 and R(20°C) = 2 mL O2/hr, then R(30°C) = 2 × 2.5 = 5.0 mL O2/hr. This relationship is fundamental to understanding ectotherm physiology — their metabolic rate is strongly temperature-dependent, unlike endotherms which maintain relatively constant body temperature and metabolic rate. Most biological Q10 values fall between 2 and 3. Campbell Ch 40.",
-      "tags": [
-        "Q10",
-        "ectotherm",
-        "metabolic-rate",
-        "thermoregulation"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Animal Form and Function",
-      "chapter": "Osmoregulation and Excretion",
-      "ncertClass": 11,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "INBo",
-      "campbellChapter": 44,
-      "campbellUnit": 7,
-      "campbellEdition": 12,
-      "conceptualDepth": "expert",
-      "question": "The loop of Henle in the mammalian kidney establishes a concentration gradient in the medulla through a countercurrent multiplier system. If a drug specifically blocks the Na+/K+/2Cl⁻ cotransporter (NKCC2) in the thick ascending limb, what would be the primary effect on urine production?",
-      "options": [
-        "Large volumes of dilute urine are produced because the medullary osmotic gradient is abolished",
-        "Urine becomes maximally concentrated because the medullary gradient increases",
-        "Urine volume decreases because more water is reabsorbed",
-        "Urine production stops entirely due to failure of glomerular filtration"
-      ],
-      "correctAnswer": "A",
-      "explanation": "The NKCC2 cotransporter in the thick ascending limb actively transports NaCl out of the tubular fluid into the medullary interstitium, creating the hyperosmotic medullary gradient (up to 1200 mOsm/L at the papilla). This segment is impermeable to water, making the tubular fluid progressively more dilute. Blocking NKCC2 (as loop diuretics like furosemide do) prevents NaCl reabsorption, abolishing the medullary concentration gradient. Without this gradient, the collecting duct cannot reabsorb water (even with ADH present), resulting in copious dilute urine — a potent diuretic effect. This is why furosemide is the most powerful clinical diuretic. Campbell Ch 44.",
-      "tags": [
-        "loop-of-Henle",
-        "countercurrent-multiplier",
-        "NKCC2",
-        "diuretics",
-        "osmoregulation"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Animal Form and Function",
-      "chapter": "The Immune System",
-      "ncertClass": 12,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "INBo",
-      "campbellChapter": 43,
-      "campbellUnit": 7,
-      "campbellEdition": 12,
-      "conceptualDepth": "expert",
-      "question": "During clonal selection of B cells, a mature B cell encounters its specific antigen. After activation (with T helper cell costimulation), the B cell proliferates and differentiates into plasma cells and memory cells. What mechanism generates the enormous diversity of antibody specificities (estimated at >10^11 different antibodies) from only about 20,000 human genes?",
-      "options": [
-        "Each antibody gene is inherited separately, giving one gene per antibody specificity",
-        "Reverse transcriptase creates new antibody genes by copying mRNA back into DNA",
-        "V(D)J recombination randomly assembles variable region genes from multiple gene segments, combined with junctional diversity and somatic hypermutation",
-        "Horizontal gene transfer from bacteria provides additional antibody gene diversity"
-      ],
-      "correctAnswer": "C",
-      "explanation": "Antibody diversity is generated through several mechanisms: (1) V(D)J recombination — random selection and joining of V (variable), D (diversity), and J (joining) gene segments from large pools of each (e.g., 40 V, 25 D, 6 J segments for heavy chains); (2) Combinatorial joining of heavy and light chains; (3) Junctional diversity — imprecise joining and addition of random nucleotides (N and P nucleotides) at segment junctions by TdT; (4) Somatic hypermutation — point mutations in the variable region during B cell proliferation in germinal centers, followed by affinity maturation. Together, these mechanisms generate >10^11 unique specificities from a limited genome. RAG1/RAG2 recombinases catalyze V(D)J recombination. Campbell Ch 43.",
-      "tags": [
-        "antibody-diversity",
-        "VDJ-recombination",
-        "somatic-hypermutation",
-        "clonal-selection"
-      ]
-    },
-    {
-      "type": "STATEMENT_BASED",
-      "topic": "Animal Form and Function",
-      "chapter": "Neurons, Synapses, and Signaling",
-      "ncertClass": 11,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "IBO",
-      "campbellChapter": 48,
-      "campbellUnit": 7,
-      "campbellEdition": 12,
-      "conceptualDepth": "expert",
-      "question": "Statement I: During an action potential, the membrane potential rapidly depolarizes from -70 mV to +30 mV due to voltage-gated Na+ channels opening, and then repolarizes to -70 mV due to voltage-gated K+ channels opening and Na+ channel inactivation.\nStatement II: The refractory period that follows an action potential exists because Na+ channels enter an inactivated state that requires membrane repolarization before they can return to the closed (resting) state and be activated again.",
-      "options": [
-        "Statement I is incorrect but Statement II is correct",
-        "Statement I is correct but Statement II is incorrect",
-        "Both statements are correct and Statement II explains Statement I",
-        "Both statements are correct but Statement II does not explain Statement I"
-      ],
-      "correctAnswer": "D",
-      "explanation": "Both statements accurately describe action potential physiology. Statement I correctly describes the ionic basis: Na+ influx causes depolarization, then K+ efflux (through delayed rectifier K+ channels) and Na+ channel inactivation cause repolarization. Statement II correctly describes the molecular basis of the refractory period: Na+ channels have three states (closed/resting, open, inactivated). After opening, they quickly enter the inactivated state (ball-and-chain mechanism) and cannot reopen until the membrane repolarizes, returning them to the closed state. However, Statement II explains the refractory period, not the depolarization-repolarization sequence described in Statement I. They are related but separate phenomena. Campbell Ch 48.",
-      "tags": [
-        "action-potential",
-        "Na-channel",
-        "refractory-period",
-        "voltage-gated-channels"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Animal Form and Function",
-      "chapter": "Hormones and the Endocrine System",
-      "ncertClass": 11,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "NSEB",
-      "campbellChapter": 45,
-      "campbellUnit": 7,
-      "campbellEdition": 12,
-      "conceptualDepth": "advanced",
-      "question": "A patient has a tumor that constitutively secretes ACTH (adrenocorticotropic hormone) from a non-pituitary source. What would be the expected levels of cortisol, CRH (corticotropin-releasing hormone), and normal pituitary ACTH in this patient?",
-      "options": [
-        "High cortisol, low CRH, low pituitary ACTH",
-        "High cortisol, high CRH, low pituitary ACTH",
-        "Low cortisol, high CRH, high pituitary ACTH",
-        "High cortisol, high CRH, high pituitary ACTH"
-      ],
-      "correctAnswer": "A",
-      "explanation": "This is ectopic ACTH syndrome. The tumor secretes ACTH independently of the hypothalamic-pituitary axis, stimulating the adrenal cortex to produce excessive cortisol. High cortisol levels exert strong negative feedback on both the hypothalamus (suppressing CRH secretion) and the anterior pituitary (suppressing normal ACTH secretion). So the patient has: high cortisol (tumor-driven), low CRH (negative feedback), and low pituitary ACTH (negative feedback), while total ACTH is high due to the ectopic source. This is a classic example of how negative feedback loops are disrupted in endocrine pathology. Campbell Ch 45.",
-      "tags": [
-        "HPA-axis",
-        "negative-feedback",
-        "ACTH",
-        "cortisol",
-        "endocrine-pathology"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Animal Form and Function",
-      "chapter": "Animal Reproduction",
-      "ncertClass": 12,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "NSEB",
-      "campbellChapter": 46,
-      "campbellUnit": 7,
-      "campbellEdition": 12,
-      "conceptualDepth": "advanced",
-      "question": "During the menstrual cycle, what hormonal event directly triggers ovulation?",
-      "options": [
-        "A sharp decline in estrogen levels",
-        "A surge in LH (luteinizing hormone) caused by positive feedback from high estrogen levels during the late follicular phase",
-        "An increase in progesterone from the corpus luteum",
-        "A decrease in FSH (follicle-stimulating hormone) levels"
+        "No flowering \u2014 any light interruption permanently breaks the dark period",
+        "Flowering occurs \u2014 far-red converts Pfr back to Pr, canceling the night-break",
+        "No flowering in either scenario",
+        "Flowering occurs \u2014 the plant ignores brief flashes"
       ],
       "correctAnswer": "B",
-      "explanation": "Ovulation is triggered by a dramatic LH surge (and a smaller FSH surge). This occurs because of a switch in estrogen's feedback effect: at low-to-moderate levels, estrogen exerts negative feedback on GnRH/LH secretion, but when estrogen from the dominant follicle reaches a critical high threshold and is sustained for ~36 hours, it switches to positive feedback on the anterior pituitary, causing the LH surge. This LH surge triggers the dominant follicle to complete meiosis I, activates proteolytic enzymes that weaken the follicular wall, and stimulates prostaglandin production — resulting in follicular rupture (ovulation) approximately 24-36 hours after the LH peak. Campbell Ch 46.",
-      "tags": [
-        "ovulation",
-        "LH-surge",
-        "menstrual-cycle",
-        "positive-feedback",
-        "estrogen"
-      ]
-    },
-    {
-      "type": "MATCH_FOLLOWING",
-      "topic": "Animal Form and Function",
-      "chapter": "The Immune System",
-      "ncertClass": 12,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "INBo",
-      "campbellChapter": 43,
-      "campbellUnit": 7,
-      "campbellEdition": 12,
-      "conceptualDepth": "expert",
-      "question": "Column I (Immune Cell Type):\n(A) Cytotoxic T cells (CD8+)\n(B) Helper T cells (CD4+)\n(C) B cells (plasma cells)\n(D) Natural Killer (NK) cells\n\nColumn II (Primary Function):\n(i) Secrete cytokines that activate both B cells and cytotoxic T cells; recognize antigen presented on MHC class II\n(ii) Directly kill virus-infected cells and cancer cells by releasing perforin and granzymes; recognize antigen on MHC class I\n(iii) Produce and secrete antibodies that neutralize pathogens and mark them for destruction\n(iv) Kill virus-infected and tumor cells without prior sensitization; part of innate immunity; detect absence of MHC class I",
-      "options": [
-        "A-iv, B-i, C-iii, D-ii",
-        "A-i, B-ii, C-iv, D-iii",
-        "A-ii, B-i, C-iii, D-iv",
-        "A-ii, B-iii, C-i, D-iv"
-      ],
-      "correctAnswer": "C",
-      "explanation": "Cytotoxic T cells (CD8+) kill infected cells via perforin/granzyme pathway after recognizing antigen on MHC class I (A-ii). Helper T cells (CD4+) are the central coordinators of adaptive immunity, secreting cytokines to activate other immune cells and recognizing antigen on MHC class II (B-i). Plasma cells (differentiated B cells) are the antibody factories of the immune system (C-iii). NK cells are innate immune cells that detect stressed/infected cells by their downregulated MHC I expression ('missing self' hypothesis) and kill without prior antigen exposure (D-iv). Campbell Ch 43.",
-      "tags": [
-        "immune-cells",
-        "MHC",
-        "cytotoxic-T-cells",
-        "helper-T-cells",
-        "NK-cells"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Animal Form and Function",
-      "chapter": "Circulation and Gas Exchange",
-      "ncertClass": 11,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "NSEB",
-      "campbellChapter": 42,
-      "campbellUnit": 7,
-      "campbellEdition": 12,
-      "conceptualDepth": "advanced",
-      "question": "The oxygen-hemoglobin dissociation curve shifts to the right under certain physiological conditions. Which of the following sets of conditions would all cause a rightward shift?",
-      "options": [
-        "Increased pH, increased temperature, decreased CO2",
-        "Decreased pH, increased temperature, increased CO2, increased 2,3-BPG",
-        "Increased pH, decreased temperature, decreased 2,3-BPG",
-        "Decreased temperature, increased 2,3-BPG, decreased CO2"
-      ],
-      "correctAnswer": "B",
-      "explanation": "A rightward shift of the oxygen-hemoglobin dissociation curve (the Bohr effect) means hemoglobin has a lower affinity for O2 and releases it more readily to tissues. This occurs under conditions found in metabolically active tissues: decreased pH (more H+ from CO2 + H2O → H2CO3 → H+ + HCO3⁻), increased temperature (from metabolic heat), increased CO2 (direct allosteric effect and indirect via pH), and increased 2,3-BPG (2,3-bisphosphoglycerate, produced by erythrocytes during anaerobic glycolysis). All four factors in option B promote O2 unloading. The opposite conditions (left shift) promote O2 loading in the lungs. Campbell Ch 42.",
-      "tags": [
-        "Bohr-effect",
-        "hemoglobin",
-        "oxygen-dissociation",
-        "2,3-BPG"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Ecology",
-      "chapter": "Population Ecology",
-      "ncertClass": 12,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "NSEB",
-      "campbellChapter": 53,
-      "campbellUnit": 8,
-      "campbellEdition": 12,
-      "conceptualDepth": "advanced",
-      "question": "A population of deer has a carrying capacity (K) of 500. When the population size (N) is 250, what is the per capita population growth rate according to the logistic growth model, given that the intrinsic rate of increase (rmax) is 0.5 per year?",
-      "options": [
-        "0.25 per year",
-        "0.375 per year",
-        "0.50 per year",
-        "0.125 per year"
-      ],
-      "correctAnswer": "A",
-      "explanation": "The logistic growth equation is dN/dt = rmax × N × (1 - N/K). The per capita growth rate is dN/(N×dt) = rmax × (1 - N/K) = 0.5 × (1 - 250/500) = 0.5 × (1 - 0.5) = 0.5 × 0.5 = 0.25 per year. At N = K/2, the population is at its maximum absolute growth rate (dN/dt), but the per capita rate is exactly half of rmax. As N approaches K, the per capita rate approaches zero. This density-dependent regulation is fundamental to the logistic model. Campbell Ch 53.",
-      "tags": [
-        "logistic-growth",
-        "carrying-capacity",
-        "population-ecology",
-        "per-capita-growth"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Ecology",
-      "chapter": "Community Ecology",
-      "ncertClass": 12,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "NSEB",
-      "campbellChapter": 54,
-      "campbellUnit": 8,
-      "campbellEdition": 12,
-      "conceptualDepth": "advanced",
-      "question": "In a rocky intertidal community, removal of the predatory sea star Pisaster ochraceus leads to a dramatic decrease in species diversity, with mussels (Mytilus) outcompeting and excluding most other species. What ecological concept does this experiment demonstrate?",
-      "options": [
-        "Competitive exclusion principle",
-        "Primary ecological succession",
-        "The intermediate disturbance hypothesis",
-        "The concept of a keystone species — a species whose impact on the community is disproportionately large relative to its abundance"
-      ],
-      "correctAnswer": "D",
-      "explanation": "This is Robert Paine's classic 1966 experiment that defined the keystone species concept. Pisaster, though not particularly abundant, has a disproportionately large effect on community structure by preferentially preying on the dominant competitor (mussels). When removed, mussels monopolize space and outcompete other sessile organisms (barnacles, algae, anemones), reducing diversity from ~15 to ~8 species. A keystone species maintains diversity by preventing competitive exclusion by the dominant competitor. This is distinct from the competitive exclusion principle (which predicts one species wins), primary succession (colonization of bare substrate), and the intermediate disturbance hypothesis (moderate disturbance frequency maximizes diversity). Campbell Ch 54.",
-      "tags": [
-        "keystone-species",
-        "Pisaster",
-        "community-ecology",
-        "species-diversity"
-      ]
-    },
-    {
-      "type": "ASSERTION_REASON",
-      "topic": "Ecology",
-      "chapter": "Ecosystems and Energy",
-      "ncertClass": 12,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "NSEB",
-      "campbellChapter": 55,
-      "campbellUnit": 8,
-      "campbellEdition": 12,
-      "conceptualDepth": "advanced",
-      "question": "Assertion (A): In most ecosystems, the biomass of primary producers is much greater than the biomass of primary consumers, which in turn exceeds that of secondary consumers.\nReason (R): Only about 10% of the energy at one trophic level is converted to biomass at the next trophic level; the rest is lost as heat through cellular respiration.",
-      "options": [
-        "A is true but R is false",
-        "A is false but R is true",
-        "Both A and R are true and R is the correct explanation of A",
-        "Both A and R are true but R is NOT the correct explanation of A"
-      ],
-      "correctAnswer": "C",
-      "explanation": "The 10% rule (Lindeman's efficiency) states that approximately 10% of energy is transferred between trophic levels. At each level, organisms use ~90% of assimilated energy for metabolism (cellular respiration produces ATP but releases heat as a byproduct, per the second law of thermodynamics). Since energy decreases at each trophic level, and biomass roughly correlates with energy, terrestrial ecosystem biomass pyramids are typically upright. The reason directly explains the assertion: the ~90% energy loss at each step means progressively less energy (and thus less biomass) is available to support higher trophic levels. Note: aquatic ecosystems can show inverted biomass pyramids due to rapid producer turnover. Campbell Ch 55.",
-      "tags": [
-        "trophic-levels",
-        "energy-transfer",
-        "10-percent-rule",
-        "biomass-pyramid"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Ecology",
-      "chapter": "Conservation Biology and Global Change",
-      "ncertClass": 12,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "NSEB",
-      "campbellChapter": 56,
-      "campbellUnit": 8,
-      "campbellEdition": 12,
-      "conceptualDepth": "advanced",
-      "question": "According to the species-area curve (S = cA^z), if a habitat is reduced to 10% of its original area, and the z-value for the taxon is 0.3, approximately what percentage of species would be predicted to go extinct?",
-      "options": [
-        "About 50%",
-        "About 90%",
-        "About 10%",
-        "About 30%"
-      ],
-      "correctAnswer": "A",
-      "explanation": "Using S = cA^z: if the area drops to 10% (0.1A), the new species number is S_new = c(0.1A)^z = c × A^z × 0.1^0.3 = S_original × 0.1^0.3. Calculating: 0.1^0.3 = 10^(-0.3) ≈ 0.50. So approximately 50% of the original species would remain, meaning about 50% would be predicted to go extinct. This equation is widely used in conservation biology to predict extinction rates from habitat loss. The z-value typically ranges from 0.1-0.35 for different taxa and island types. Higher z-values (mainland-island) predict more dramatic species losses from habitat reduction. Campbell Ch 56.",
-      "tags": [
-        "species-area-curve",
-        "conservation-biology",
-        "habitat-loss",
-        "extinction"
-      ]
-    },
-    {
-      "type": "STATEMENT_BASED",
-      "topic": "Ecology",
-      "chapter": "Behavioral Ecology",
-      "ncertClass": 12,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "INBo",
-      "campbellChapter": 52,
-      "campbellUnit": 8,
-      "campbellEdition": 12,
-      "conceptualDepth": "expert",
-      "question": "Statement I: Hamilton's rule (rB > C) predicts that altruistic behavior will be favored by natural selection when the benefit to the recipient, weighted by the coefficient of relatedness, exceeds the cost to the altruist.\nStatement II: In eusocial Hymenoptera (ants, bees, wasps), haplodiploidy means that sisters share 75% of their genes, making kin selection a sufficient explanation for worker sterility in all eusocial species.",
-      "options": [
-        "Statement I is correct but Statement II is incorrect",
-        "Both statements are correct but Statement II does not explain Statement I",
-        "Statement I is incorrect but Statement II is correct",
-        "Both statements are correct and Statement II explains Statement I"
-      ],
-      "correctAnswer": "A",
-      "explanation": "Statement I correctly states Hamilton's rule: altruism evolves when rB > C (where r = coefficient of relatedness, B = benefit to recipient, C = cost to altruist). This is the mathematical foundation of kin selection theory. Statement II is partially incorrect: while it's true that haplodiploid sisters share r = 0.75, the haplodiploidy hypothesis has significant problems. Workers are related to brothers by only r = 0.25, so the average relatedness to siblings is (0.75 + 0.25)/2 = 0.50, the same as in diploid organisms. Furthermore, eusociality has evolved in diploid species (termites, naked mole rats), and multiple mating by queens reduces sister-sister relatedness below 0.75. Haplodiploidy alone is insufficient to explain eusociality. Campbell Ch 52.",
-      "tags": [
-        "kin-selection",
-        "Hamiltons-rule",
-        "eusociality",
-        "haplodiploidy",
-        "altruism"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Genetics",
-      "chapter": "The Molecular Basis of Inheritance",
-      "ncertClass": 12,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "IBO",
-      "campbellChapter": 16,
-      "campbellUnit": 3,
-      "campbellEdition": 12,
-      "conceptualDepth": "expert",
-      "question": "A DNA sample is analyzed and found to contain 28% adenine. What are the percentages of the other three bases?",
-      "options": [
-        "28% thymine, 22% guanine, 22% cytosine",
-        "28% thymine, 28% guanine, 16% cytosine",
-        "22% thymine, 28% guanine, 22% cytosine",
-        "28% uracil, 22% guanine, 22% cytosine"
-      ],
-      "correctAnswer": "A",
-      "explanation": "According to Chargaff's rules for double-stranded DNA: A = T and G = C. If A = 28%, then T = 28%. The remaining bases account for 100% - 28% - 28% = 44%, split equally between G and C: 22% each. This is a direct application of complementary base pairing (A-T with 2 hydrogen bonds, G-C with 3 hydrogen bonds). Note that this rule applies to double-stranded DNA only, not to single-stranded DNA or RNA. Option D is incorrect because DNA contains thymine, not uracil. Campbell Ch 16.",
-      "tags": [
-        "Chargaffs-rules",
-        "base-pairing",
-        "DNA-structure",
-        "nucleotide-composition"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Cell Structure and Function",
-      "chapter": "Photosynthesis",
-      "ncertClass": 11,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "IBO",
-      "campbellChapter": 10,
-      "campbellUnit": 2,
-      "campbellEdition": 12,
-      "conceptualDepth": "expert",
-      "question": "In C4 photosynthesis, PEP carboxylase in mesophyll cells fixes CO2 into oxaloacetate. Why does this enzyme not suffer from the same oxygenation problem as RuBisCO?",
-      "options": [
-        "PEP carboxylase is always saturated with CO2, making O2 competition irrelevant",
-        "PEP carboxylase uses HCO3⁻ (bicarbonate) rather than CO2 as its substrate and has no oxygenase activity — O2 cannot compete at the active site",
-        "PEP carboxylase operates in an oxygen-free compartment",
-        "PEP carboxylase has a higher affinity for O2 than for CO2, but the reaction produces a useful product either way"
-      ],
-      "correctAnswer": "B",
-      "explanation": "PEP carboxylase (PEPC) catalyzes: PEP + HCO3⁻ → oxaloacetate + Pi. Critically, it uses bicarbonate (HCO3⁻) as its one-carbon substrate, not gaseous CO2. Oxygen (O2) is structurally different from HCO3⁻ and simply cannot bind to the active site as an alternative substrate. This is unlike RuBisCO, which uses CO2 as a substrate, and O2 can compete for the same active site (leading to photorespiration). Carbonic anhydrase in mesophyll cells converts CO2 to HCO3⁻, ensuring substrate supply. The C4 pathway thus acts as a CO2-concentrating mechanism, delivering high CO2 concentrations to RuBisCO in bundle-sheath cells where photorespiration is minimized. Campbell Ch 10.",
-      "tags": [
-        "C4-photosynthesis",
-        "PEP-carboxylase",
-        "RuBisCO",
-        "photorespiration"
-      ]
-    },
-    {
-      "type": "ASSERTION_REASON",
-      "topic": "Animal Form and Function",
-      "chapter": "Neurons, Synapses, and Signaling",
-      "ncertClass": 11,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "IBO",
-      "campbellChapter": 48,
-      "campbellUnit": 7,
-      "campbellEdition": 12,
-      "conceptualDepth": "expert",
-      "question": "Assertion (A): Myelination of axons dramatically increases the speed of action potential propagation.\nReason (R): In myelinated axons, action potentials propagate by saltatory conduction — the impulse jumps from one node of Ranvier to the next, where voltage-gated Na+ channels are concentrated, rather than propagating continuously along the entire axon membrane.",
-      "options": [
-        "Both A and R are true but R is NOT the correct explanation of A",
-        "Both A and R are true and R is the correct explanation of A",
-        "A is true but R is false",
-        "A is false but R is true"
-      ],
-      "correctAnswer": "B",
-      "explanation": "Myelination increases conduction velocity from about 1-5 m/s (unmyelinated) to 80-120 m/s (myelinated) in vertebrate neurons. The myelin sheath (produced by Schwann cells in PNS, oligodendrocytes in CNS) insulates the axon, preventing ion flow across the membrane. Action potentials can only occur at nodes of Ranvier (gaps ~1 µm between myelin segments), where Na+ channels are densely packed (~1000/µm² vs. ~25/µm² in unmyelinated axons). The depolarization at one node generates enough local current to reach threshold at the next node, causing the impulse to 'jump' (saltatory = Latin saltare, to leap). This is faster and more energy-efficient (fewer ions cross the membrane, less Na+/K+-ATPase work needed). Campbell Ch 48.",
-      "tags": [
-        "myelination",
-        "saltatory-conduction",
-        "nodes-of-Ranvier",
-        "conduction-velocity"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Evolution",
-      "chapter": "Descent with Modification",
-      "ncertClass": 12,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "NSEB",
-      "campbellChapter": 22,
-      "campbellUnit": 4,
-      "campbellEdition": 12,
-      "conceptualDepth": "intermediate",
-      "question": "The forelimbs of bats, whales, cats, and humans all contain the same set of bones (humerus, radius, ulna, carpals, metacarpals, phalanges) despite being used for very different functions. This is an example of:",
-      "options": [
-        "Convergent evolution — similar structures evolved independently due to similar selection pressures",
-        "Homologous structures — similar underlying anatomy inherited from a common ancestor, modified for different functions",
-        "Vestigial structures — remnants of structures that were functional in ancestors",
-        "Analogous structures — structures with similar functions but different evolutionary origins"
-      ],
-      "correctAnswer": "B",
-      "explanation": "Homologous structures share a common anatomical origin (inherited from a common tetrapod ancestor) but have been modified by natural selection for different functions: flight (bat), swimming (whale), running (cat), manipulation (human). This is a powerful line of evidence for descent with modification. In contrast, analogous structures (like wings of insects and birds) serve similar functions but have different evolutionary origins (convergent evolution). The presence of identical bones arranged in the same relative positions, despite wildly different functions, strongly argues for common ancestry rather than independent origin. Campbell Ch 22.",
-      "tags": [
-        "homologous-structures",
-        "comparative-anatomy",
-        "common-ancestry",
-        "evidence-for-evolution"
-      ]
-    },
-    {
-      "type": "MCQ",
-      "topic": "Cell Structure and Function",
-      "chapter": "A Tour of the Cell",
-      "ncertClass": 11,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "NSEB",
-      "campbellChapter": 6,
-      "campbellUnit": 2,
-      "campbellEdition": 12,
-      "conceptualDepth": "intermediate",
-      "question": "The endosymbiont theory proposes that mitochondria and chloroplasts originated from free-living prokaryotes. Which of the following observations does NOT support this theory?",
-      "options": [
-        "Both organelles have double membranes",
-        "Mitochondria and chloroplasts have their own circular DNA",
-        "Mitochondrial ribosomes are 80S, identical to eukaryotic cytoplasmic ribosomes",
-        "Both organelles replicate by binary fission, similar to bacteria"
-      ],
-      "correctAnswer": "C",
-      "explanation": "Mitochondrial ribosomes are 70S (like bacterial ribosomes), NOT 80S (which are the eukaryotic cytoplasmic ribosomes). This similarity to bacterial ribosomes actually supports the endosymbiont theory, so option C is false and does NOT support it — in fact, the actual situation (70S ribosomes) does support it. All other options are genuine evidence: circular DNA without histones (like bacteria), double membranes (inner membrane from the engulfed bacterium, outer from the host's vacuole), and binary fission (bacterial division mechanism). Additional evidence includes size similarity to bacteria, sensitivity to antibiotics that target bacterial ribosomes, and phylogenetic analysis placing mitochondria within alphaproteobacteria. Campbell Ch 6.",
-      "tags": [
-        "endosymbiont-theory",
-        "mitochondria",
-        "chloroplasts",
-        "ribosomes"
-      ]
-    },
-    {
-      "type": "STATEMENT_BASED",
-      "topic": "Genetics",
-      "chapter": "Regulation of Gene Expression",
-      "ncertClass": 12,
-      "difficulty": "HARD",
-      "isNcertBased": false,
-      "isNeetImportant": false,
-      "isOlympiad": true,
-      "olympiadLevel": "IBO",
-      "campbellChapter": 18,
-      "campbellUnit": 3,
-      "campbellEdition": 12,
-      "conceptualDepth": "expert",
-      "question": "Statement I: Epigenetic modifications such as DNA methylation (at CpG dinucleotides) and histone deacetylation generally repress gene transcription without altering the DNA sequence.\nStatement II: These epigenetic marks are erased completely during gametogenesis, ensuring that no epigenetic information is transmitted from parent to offspring.",
-      "options": [
-        "Both statements are correct and Statement II explains Statement I",
-        "Statement I is incorrect but Statement II is correct",
-        "Both statements are correct but Statement II does not explain Statement I",
-        "Statement I is correct but Statement II is incorrect"
-      ],
-      "correctAnswer": "D",
-      "explanation": "Statement I is correct: DNA methylation (addition of CH3 to cytosine in CpG dinucleotides by DNA methyltransferases) and histone deacetylation (by HDACs, which remove acetyl groups, causing chromatin to condense) both repress transcription without changing the underlying DNA sequence. Statement II is incorrect: while extensive epigenetic reprogramming occurs during gametogenesis and early embryogenesis, some epigenetic marks escape erasure. Genomic imprinting is a prime example — certain genes carry parent-of-origin-specific methylation marks that survive reprogramming and are transmitted to offspring. Additionally, some transposable element methylation patterns and even some acquired epigenetic changes can be transgenerationally inherited. Campbell Ch 18.",
-      "tags": [
-        "epigenetics",
-        "DNA-methylation",
-        "histone-modification",
-        "genomic-imprinting"
-      ]
+      "explanation": "Red light converts Pr to Pfr (night-break, preventing flowering). Far-red immediately converts Pfr back to Pr, canceling the interruption. The plant perceives uninterrupted darkness and flowers. This photoreversibility experiment proved phytochrome controls photoperiodism: the last wavelength received determines the response. Campbell Ch 39.",
+      "tags": ["photoperiodism", "phytochrome", "night-break", "flowering", "photoreversibility"]
     },
     {
       "type": "MATCH_FOLLOWING",
@@ -1744,7 +970,7 @@
       "campbellUnit": 6,
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
-      "question": "Column I (Plant Hormone):\n(A) Auxin (IAA)\n(B) Gibberellin (GA)\n(C) Abscisic acid (ABA)\n(D) Ethylene\n\nColumn II (Primary Molecular Mechanism of Action):\n(i) Binds to ETR1 receptor; activates transcription factors via CTR1-EIN2-EIN3 pathway; promotes senescence and fruit ripening\n(ii) Promotes degradation of DELLA proteins (growth repressors) via the ubiquitin-proteasome pathway after binding to GID1 receptor\n(iii) Binds to TIR1 receptor (an F-box protein/SCF ubiquitin ligase), leading to degradation of Aux/IAA repressor proteins and activation of ARF transcription factors\n(iv) Binds to PYR/PYL/RCAR receptors, inhibiting PP2C phosphatases, thereby activating SnRK2 kinases that phosphorylate downstream targets including SLAC1 (triggering stomatal closure)",
+      "question": "Column I (Plant Hormone):\n(A) Auxin (IAA)\n(B) Gibberellin (GA)\n(C) Abscisic acid (ABA)\n(D) Ethylene\n\nColumn II (Mechanism):\n(i) Binds ETR1 receptor; CTR1-EIN2-EIN3 pathway; fruit ripening\n(ii) Degrades DELLA proteins via ubiquitin-proteasome after binding GID1\n(iii) Binds TIR1 (F-box/SCF ubiquitin ligase); degrades Aux/IAA repressors; activates ARF transcription factors\n(iv) Binds PYR/PYL receptors; inhibits PP2C; activates SnRK2 kinases; stomatal closure",
       "options": [
         "A-iii, B-ii, C-iv, D-i",
         "A-ii, B-iii, C-i, D-iv",
@@ -1752,45 +978,408 @@
         "A-iii, B-iv, C-ii, D-i"
       ],
       "correctAnswer": "A",
-      "explanation": "Auxin (IAA) binds to TIR1/AFB receptors (SCF-type ubiquitin ligases), targeting Aux/IAA repressor proteins for proteasomal degradation, thereby freeing ARF transcription factors to activate auxin-responsive genes (A-iii). Gibberellins bind to the GID1 receptor, which then interacts with DELLA proteins (growth repressors), targeting them for ubiquitin-mediated degradation (B-ii). ABA binds PYR/PYL receptors, which inhibit PP2C phosphatases; this allows SnRK2 kinases to activate ion channels like SLAC1, causing K+ efflux and stomatal closure (C-iv). Ethylene binds copper-containing ETR1 receptors; without ethylene, CTR1 represses signaling, but ethylene binding inactivates CTR1, allowing EIN2 and EIN3 to activate ethylene-responsive genes (D-i). Campbell Ch 39.",
-      "tags": [
-        "plant-hormones",
-        "auxin-signaling",
-        "gibberellin",
-        "ABA",
-        "ethylene"
-      ]
+      "explanation": "Auxin binds TIR1, degrading Aux/IAA repressors to free ARF transcription factors (A-iii). Gibberellin binds GID1, targeting DELLA proteins for degradation (B-ii). ABA binds PYR/PYL, inhibiting PP2C, allowing SnRK2 to trigger stomatal closure (C-iv). Ethylene binds ETR1; inactivates CTR1, enabling EIN2/EIN3 signaling for ripening (D-i). Campbell Ch 39.",
+      "tags": ["plant-hormones", "auxin-signaling", "gibberellin", "ABA", "ethylene"]
     },
     {
       "type": "MCQ",
       "topic": "Animal Form and Function",
-      "chapter": "Digestion and Nutrition",
+      "chapter": "Basic Principles of Animal Form and Function",
       "ncertClass": 11,
       "difficulty": "HARD",
       "isNcertBased": false,
       "isNeetImportant": false,
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
-      "campbellChapter": 41,
+      "campbellChapter": 40,
       "campbellUnit": 7,
       "campbellEdition": 12,
-      "conceptualDepth": "intermediate",
-      "question": "Pepsin, the major gastric protease, is secreted as an inactive zymogen (pepsinogen) by chief cells. Which of the following correctly explains the activation mechanism and why it is physiologically important?",
+      "conceptualDepth": "advanced",
+      "question": "An ectothermic lizard has Q10 = 2.5. If metabolic rate at 20\u00b0C is 2 mL O2/hr, what is it at 30\u00b0C?",
       "options": [
-        "Pepsinogen is cleaved by HCl at pH < 2 to form active pepsin, which then autocatalytically activates more pepsinogen; this prevents self-digestion of the gastric glands that produce it",
-        "Pepsinogen is activated by bile salts in the stomach; this ensures fat must be present for protein digestion to occur",
-        "Pepsinogen spontaneously becomes active at body temperature regardless of pH",
-        "Pepsinogen is activated by enterokinase in the duodenum; this delays protein digestion until the small intestine"
+        "4.0 mL O2/hr",
+        "5.0 mL O2/hr",
+        "2.5 mL O2/hr",
+        "7.5 mL O2/hr"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Q10 = R(T+10)/R(T). With Q10 = 2.5 and R(20\u00b0C) = 2, R(30\u00b0C) = 2 \u00d7 2.5 = 5.0 mL O2/hr. This relationship is fundamental to ectotherm physiology. Most biological Q10 values fall between 2 and 3. Campbell Ch 40.",
+      "tags": ["Q10", "ectotherm", "metabolic-rate", "thermoregulation"]
+    },
+    {
+      "type": "MCQ",
+      "topic": "Animal Form and Function",
+      "chapter": "Osmoregulation and Excretion",
+      "ncertClass": 11,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "INBo",
+      "campbellChapter": 44,
+      "campbellUnit": 7,
+      "campbellEdition": 12,
+      "conceptualDepth": "expert",
+      "question": "A drug blocks the NKCC2 cotransporter in the thick ascending limb of the loop of Henle. What is the primary effect?",
+      "options": [
+        "Urine volume decreases",
+        "Urine becomes maximally concentrated",
+        "Large volumes of dilute urine are produced because the medullary osmotic gradient is abolished",
+        "Urine production stops entirely"
+      ],
+      "correctAnswer": "C",
+      "explanation": "NKCC2 actively transports NaCl from tubular fluid into the medullary interstitium, creating the hyperosmotic gradient. Blocking it (as furosemide does) abolishes this gradient. Without it, the collecting duct cannot reabsorb water even with ADH, producing copious dilute urine. This is why furosemide is the most powerful diuretic. Campbell Ch 44.",
+      "tags": ["loop-of-Henle", "countercurrent-multiplier", "NKCC2", "diuretics", "osmoregulation"]
+    },
+    {
+      "type": "MCQ",
+      "topic": "Animal Form and Function",
+      "chapter": "The Immune System",
+      "ncertClass": 12,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "INBo",
+      "campbellChapter": 43,
+      "campbellUnit": 7,
+      "campbellEdition": 12,
+      "conceptualDepth": "expert",
+      "question": "What mechanism generates >10^11 different antibody specificities from only ~20,000 human genes?",
+      "options": [
+        "Each antibody gene is inherited separately",
+        "V(D)J recombination assembles variable regions from multiple gene segments, combined with junctional diversity and somatic hypermutation",
+        "Reverse transcriptase creates new antibody genes",
+        "Horizontal gene transfer from bacteria provides diversity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Antibody diversity comes from: (1) V(D)J recombination \u2014 random joining of V, D, J gene segments; (2) Combinatorial pairing of heavy and light chains; (3) Junctional diversity \u2014 imprecise joining plus random nucleotide addition by TdT; (4) Somatic hypermutation in germinal centers, followed by affinity maturation. RAG1/RAG2 recombinases drive V(D)J recombination. Campbell Ch 43.",
+      "tags": ["antibody-diversity", "VDJ-recombination", "somatic-hypermutation", "clonal-selection"]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Animal Form and Function",
+      "chapter": "Neurons, Synapses, and Signaling",
+      "ncertClass": 11,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellChapter": 48,
+      "campbellUnit": 7,
+      "campbellEdition": 12,
+      "conceptualDepth": "expert",
+      "question": "Statement I: During an action potential, depolarization results from voltage-gated Na+ channel opening, and repolarization from K+ channel opening and Na+ channel inactivation.\nStatement II: The refractory period exists because Na+ channels enter an inactivated state requiring membrane repolarization before returning to the closed (activatable) state.",
+      "options": [
+        "Both statements are correct and Statement II explains Statement I",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct",
+        "Both statements are correct but Statement II does not explain Statement I"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both statements accurately describe action potential physiology. Statement I describes the ionic basis of depolarization and repolarization. Statement II correctly explains the molecular basis of the refractory period (Na+ channels cycle through closed \u2192 open \u2192 inactivated states). However, Statement II explains why there is a refractory period, not why depolarization-repolarization occurs as in Statement I. They are related but separate phenomena. Campbell Ch 48.",
+      "tags": ["action-potential", "Na-channel", "refractory-period", "voltage-gated-channels"]
+    },
+    {
+      "type": "MCQ",
+      "topic": "Animal Form and Function",
+      "chapter": "Hormones and the Endocrine System",
+      "ncertClass": 11,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellChapter": 45,
+      "campbellUnit": 7,
+      "campbellEdition": 12,
+      "conceptualDepth": "advanced",
+      "question": "A non-pituitary tumor constitutively secretes ACTH (ectopic ACTH syndrome). What are the expected levels of cortisol, CRH, and normal pituitary ACTH?",
+      "options": [
+        "High cortisol, high CRH, high pituitary ACTH",
+        "High cortisol, low CRH, low pituitary ACTH",
+        "Low cortisol, high CRH, high pituitary ACTH",
+        "High cortisol, high CRH, low pituitary ACTH"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ectopic ACTH drives excess cortisol production. High cortisol exerts strong negative feedback, suppressing both CRH (hypothalamus) and normal pituitary ACTH. Result: high cortisol (tumor-driven), low CRH, low pituitary ACTH, while total circulating ACTH is high from the ectopic source. Campbell Ch 45.",
+      "tags": ["HPA-axis", "negative-feedback", "ACTH", "cortisol", "endocrine-pathology"]
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Animal Form and Function",
+      "chapter": "Neurons, Synapses, and Signaling",
+      "ncertClass": 11,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellChapter": 48,
+      "campbellUnit": 7,
+      "campbellEdition": 12,
+      "conceptualDepth": "expert",
+      "question": "Assertion (A): Myelination dramatically increases the speed of action potential propagation.\nReason (R): In myelinated axons, action potentials propagate by saltatory conduction, jumping between nodes of Ranvier where voltage-gated Na+ channels are concentrated.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
-      "explanation": "Pepsinogen is secreted by chief cells and activated by the low pH (< 2) environment created by HCl secreted by parietal cells. The acidic conditions cause a conformational change that cleaves a 44-amino-acid inhibitory peptide from pepsinogen, producing active pepsin (optimally active at pH 1.5-2.5). Active pepsin then autocatalytically activates more pepsinogen in a positive feedback loop. The zymogen strategy is critical because it prevents pepsin from digesting the chief cells that produce it. The stomach is protected by a thick mucus-bicarbonate barrier. Enterokinase activates trypsinogen (not pepsinogen) in the duodenum. Campbell Ch 41.",
-      "tags": [
-        "pepsin",
-        "zymogen",
-        "pepsinogen",
-        "gastric-digestion",
-        "autocatalysis"
-      ]
+      "explanation": "Myelination increases conduction velocity from ~1-5 m/s (unmyelinated) to 80-120 m/s. The myelin sheath insulates the axon; action potentials occur only at nodes of Ranvier where Na+ channels are densely packed (~1000/\u00b5m\u00b2). Depolarization at one node reaches threshold at the next, causing the impulse to 'jump' (saltatory = Latin saltare, to leap). This is faster and more energy-efficient. Campbell Ch 48.",
+      "tags": ["myelination", "saltatory-conduction", "nodes-of-Ranvier", "conduction-velocity"]
+    },
+    {
+      "type": "MCQ",
+      "topic": "Animal Form and Function",
+      "chapter": "Circulation and Gas Exchange",
+      "ncertClass": 11,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellChapter": 42,
+      "campbellUnit": 7,
+      "campbellEdition": 12,
+      "conceptualDepth": "advanced",
+      "question": "Which set of conditions would ALL cause a rightward shift of the oxygen-hemoglobin dissociation curve?",
+      "options": [
+        "Increased pH, decreased temperature, decreased 2,3-BPG",
+        "Decreased temperature, increased 2,3-BPG, decreased CO2",
+        "Increased pH, increased temperature, decreased CO2",
+        "Decreased pH, increased temperature, increased CO2, increased 2,3-BPG"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A rightward shift (Bohr effect) reduces hemoglobin O2 affinity. It occurs in metabolically active tissues: decreased pH (more H+), increased temperature, increased CO2 (allosteric effect + pH effect), and increased 2,3-BPG. All four factors in option D promote O2 unloading. The opposite conditions (left shift) promote O2 loading in lungs. Campbell Ch 42.",
+      "tags": ["Bohr-effect", "hemoglobin", "oxygen-dissociation", "2,3-BPG"]
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecology",
+      "chapter": "Population Ecology",
+      "ncertClass": 12,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellChapter": 53,
+      "campbellUnit": 8,
+      "campbellEdition": 12,
+      "conceptualDepth": "advanced",
+      "question": "A deer population has K = 500 and rmax = 0.5/year. At N = 250, what is the per capita growth rate under the logistic model?",
+      "options": [
+        "0.50 per year",
+        "0.125 per year",
+        "0.25 per year",
+        "0.375 per year"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Per capita growth rate = rmax \u00d7 (1 - N/K) = 0.5 \u00d7 (1 - 250/500) = 0.5 \u00d7 0.5 = 0.25/year. At N = K/2, the population has maximum absolute growth rate (dN/dt), but per capita rate is half of rmax. As N approaches K, per capita rate approaches zero. Campbell Ch 53.",
+      "tags": ["logistic-growth", "carrying-capacity", "population-ecology", "per-capita-growth"]
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecology",
+      "chapter": "Community Ecology",
+      "ncertClass": 12,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellChapter": 54,
+      "campbellUnit": 8,
+      "campbellEdition": 12,
+      "conceptualDepth": "advanced",
+      "question": "Removal of predatory sea star Pisaster ochraceus from a rocky intertidal community causes dramatic species diversity decline as mussels outcompete most other species. What concept does this demonstrate?",
+      "options": [
+        "Competitive exclusion principle",
+        "The keystone species concept \u2014 a species with disproportionately large community impact relative to abundance",
+        "Primary ecological succession",
+        "The intermediate disturbance hypothesis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is Paine's classic 1966 experiment defining the keystone species concept. Pisaster, though not particularly abundant, has a disproportionate effect by preferentially preying on the dominant competitor (mussels). Without it, mussels monopolize space, reducing diversity from ~15 to ~8 species. Campbell Ch 54.",
+      "tags": ["keystone-species", "Pisaster", "community-ecology", "species-diversity"]
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecology",
+      "chapter": "Ecosystems and Energy",
+      "ncertClass": 12,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellChapter": 55,
+      "campbellUnit": 8,
+      "campbellEdition": 12,
+      "conceptualDepth": "advanced",
+      "question": "Assertion (A): In most terrestrial ecosystems, biomass decreases at higher trophic levels.\nReason (R): Only about 10% of energy at one trophic level becomes biomass at the next; the rest is lost as heat.",
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The 10% rule (Lindeman's efficiency) means ~90% of energy at each level is lost to respiration (heat). Since biomass correlates with energy, terrestrial biomass pyramids are upright. The reason directly explains the assertion. Note: aquatic ecosystems can have inverted biomass pyramids due to rapid producer turnover. Campbell Ch 55.",
+      "tags": ["trophic-levels", "energy-transfer", "10-percent-rule", "biomass-pyramid"]
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecology",
+      "chapter": "Conservation Biology and Global Change",
+      "ncertClass": 12,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellChapter": 56,
+      "campbellUnit": 8,
+      "campbellEdition": 12,
+      "conceptualDepth": "advanced",
+      "question": "Using the species-area curve (S = cA^z) with z = 0.3, if habitat is reduced to 10% of original area, approximately what percentage of species go extinct?",
+      "options": [
+        "About 10%",
+        "About 30%",
+        "About 90%",
+        "About 50%"
+      ],
+      "correctAnswer": "D",
+      "explanation": "New species = S_original \u00d7 0.1^0.3 = S_original \u00d7 10^(-0.3) \u2248 S_original \u00d7 0.50. About 50% of species remain, so ~50% go extinct. This equation is fundamental to conservation biology. Higher z-values predict more dramatic losses from habitat reduction. Campbell Ch 56.",
+      "tags": ["species-area-curve", "conservation-biology", "habitat-loss", "extinction"]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecology",
+      "chapter": "Behavioral Ecology",
+      "ncertClass": 12,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "INBo",
+      "campbellChapter": 52,
+      "campbellUnit": 8,
+      "campbellEdition": 12,
+      "conceptualDepth": "expert",
+      "question": "Statement I: Hamilton's rule (rB > C) predicts altruistic behavior is favored when benefit to recipient, weighted by relatedness, exceeds cost to altruist.\nStatement II: In eusocial Hymenoptera, haplodiploidy means sisters share 75% of genes, making kin selection alone sufficient to explain worker sterility in all eusocial species.",
+      "options": [
+        "Both statements are correct and Statement II explains Statement I",
+        "Both statements are correct but Statement II does not explain Statement I",
+        "Statement I is correct but Statement II is incorrect",
+        "Statement I is incorrect but Statement II is correct"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statement I correctly states Hamilton's rule. Statement II is partially incorrect: while haplodiploid sisters share r = 0.75, workers are related to brothers by only r = 0.25, giving average sibling relatedness of 0.50 (same as diploid organisms). Eusociality also exists in diploid species (termites, naked mole rats), and multiple queen mating reduces sister-sister relatedness. Haplodiploidy alone cannot explain eusociality. Campbell Ch 52.",
+      "tags": ["kin-selection", "Hamiltons-rule", "eusociality", "haplodiploidy", "altruism"]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Genetics",
+      "chapter": "Regulation of Gene Expression",
+      "ncertClass": 12,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellChapter": 18,
+      "campbellUnit": 3,
+      "campbellEdition": 12,
+      "conceptualDepth": "expert",
+      "question": "Statement I: DNA methylation and histone deacetylation repress gene transcription without altering the DNA sequence.\nStatement II: These epigenetic marks are completely erased during gametogenesis, ensuring no epigenetic information passes from parent to offspring.",
+      "options": [
+        "Both statements are correct",
+        "Statement I is incorrect but Statement II is correct",
+        "Statement I is correct but Statement II is incorrect",
+        "Both statements are incorrect"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statement I is correct: DNA methylation at CpG dinucleotides and histone deacetylation repress transcription without changing DNA sequence. Statement II is incorrect: while extensive epigenetic reprogramming occurs during gametogenesis, some marks survive. Genomic imprinting is a prime example \u2014 parent-of-origin methylation patterns are transmitted to offspring. Some transposable element methylation and acquired epigenetic changes can also be transgenerationally inherited. Campbell Ch 18.",
+      "tags": ["epigenetics", "DNA-methylation", "histone-modification", "genomic-imprinting"]
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Structure and Function",
+      "chapter": "Photosynthesis",
+      "ncertClass": 11,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellChapter": 10,
+      "campbellUnit": 2,
+      "campbellEdition": 12,
+      "conceptualDepth": "expert",
+      "question": "In C4 photosynthesis, why does PEP carboxylase not suffer from oxygenation like RuBisCO?",
+      "options": [
+        "PEP carboxylase operates in an oxygen-free compartment",
+        "PEP carboxylase uses HCO3\u207b (bicarbonate) as substrate, not CO2 \u2014 O2 cannot compete at the active site",
+        "PEP carboxylase is always saturated with CO2",
+        "PEP carboxylase has higher O2 affinity but produces useful products either way"
+      ],
+      "correctAnswer": "B",
+      "explanation": "PEP carboxylase uses bicarbonate (HCO3\u207b), not gaseous CO2. Since HCO3\u207b is structurally very different from O2, oxygen simply cannot compete at the active site. RuBisCO uses CO2, and O2 can compete (causing photorespiration). Carbonic anhydrase converts CO2 to HCO3\u207b in mesophyll cells. The C4 pathway concentrates CO2 for RuBisCO in bundle-sheath cells. Campbell Ch 10.",
+      "tags": ["C4-photosynthesis", "PEP-carboxylase", "RuBisCO", "photorespiration"]
+    },
+    {
+      "type": "MCQ",
+      "topic": "Animal Form and Function",
+      "chapter": "Animal Reproduction",
+      "ncertClass": 12,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellChapter": 46,
+      "campbellUnit": 7,
+      "campbellEdition": 12,
+      "conceptualDepth": "advanced",
+      "question": "What hormonal event directly triggers ovulation during the menstrual cycle?",
+      "options": [
+        "A sharp decline in estrogen levels",
+        "An increase in progesterone from the corpus luteum",
+        "A surge in LH caused by positive feedback from sustained high estrogen during the late follicular phase",
+        "A decrease in FSH levels"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ovulation is triggered by an LH surge. Estrogen switches from negative to positive feedback when it reaches a critical threshold sustained for ~36 hours. The LH surge triggers meiosis I completion, activates proteolytic enzymes weakening the follicular wall, and stimulates prostaglandin production, resulting in follicular rupture ~24-36 hours after the LH peak. Campbell Ch 46.",
+      "tags": ["ovulation", "LH-surge", "menstrual-cycle", "positive-feedback", "estrogen"]
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Animal Form and Function",
+      "chapter": "The Immune System",
+      "ncertClass": 12,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "INBo",
+      "campbellChapter": 43,
+      "campbellUnit": 7,
+      "campbellEdition": 12,
+      "conceptualDepth": "expert",
+      "question": "Column I (Immune Cell):\n(A) Cytotoxic T cell (CD8+)\n(B) Helper T cell (CD4+)\n(C) Plasma cell (B cell)\n(D) NK cell\n\nColumn II (Function):\n(i) Secretes cytokines activating B and T cells; recognizes MHC class II\n(ii) Kills infected cells via perforin/granzymes; recognizes MHC class I\n(iii) Produces and secretes antibodies\n(iv) Kills infected/tumor cells without prior sensitization; detects absent MHC I",
+      "options": [
+        "A-i, B-ii, C-iv, D-iii",
+        "A-iv, B-i, C-iii, D-ii",
+        "A-ii, B-i, C-iii, D-iv",
+        "A-ii, B-iii, C-i, D-iv"
+      ],
+      "correctAnswer": "C",
+      "explanation": "CD8+ T cells kill via perforin/granzyme recognizing MHC I (A-ii). CD4+ T cells secrete cytokines and recognize MHC II (B-i). Plasma cells produce antibodies (C-iii). NK cells are innate, kill without prior sensitization by detecting absent MHC I ('missing self') (D-iv). Campbell Ch 43.",
+      "tags": ["immune-cells", "MHC", "cytotoxic-T-cells", "helper-T-cells", "NK-cells"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1806,21 +1395,66 @@
       "campbellUnit": 5,
       "campbellEdition": 12,
       "conceptualDepth": "advanced",
-      "question": "Assertion (A): Double fertilization is a unique feature of angiosperms in which one sperm fuses with the egg to form a diploid zygote and the other sperm fuses with two polar nuclei to form a triploid endosperm.\nReason (R): The triploid endosperm provides nutrition to the developing embryo, and its formation ensures that energy-rich nutritive tissue develops only when fertilization actually occurs, avoiding wasted resources.",
+      "question": "Assertion (A): Double fertilization is unique to angiosperms \u2014 one sperm fuses with egg (diploid zygote), the other with two polar nuclei (triploid endosperm).\nReason (R): Coupling endosperm formation to fertilization ensures nutritive tissue develops only when fertilization succeeds, conserving resources.",
       "options": [
-        "A is false but R is true",
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
-        "A is true but R is false"
+        "A is true but R is false",
+        "A is false but R is true"
       ],
-      "correctAnswer": "B",
-      "explanation": "Double fertilization is indeed unique to angiosperms (and a few gymnosperms like Ephedra, though with different outcomes). One sperm + egg = diploid zygote (2n); the other sperm + two polar nuclei (each n) = triploid endosperm (3n). The reason correctly explains the adaptive significance: by coupling endosperm development to fertilization, angiosperms avoid investing resources in nutritive tissue unless pollination and fertilization have been successful. In gymnosperms, the female gametophyte (which serves as nutritive tissue) develops before fertilization regardless of whether it occurs, representing a potential waste of resources. This is considered a key evolutionary advantage of angiosperms. Campbell Ch 30.",
-      "tags": [
-        "double-fertilization",
-        "endosperm",
-        "angiosperms",
-        "reproductive-efficiency"
-      ]
+      "correctAnswer": "A",
+      "explanation": "Double fertilization is unique to angiosperms. One sperm + egg = 2n zygote; other sperm + two polar nuclei = 3n endosperm. The reason correctly explains the adaptive value: in gymnosperms, female gametophyte (nutritive tissue) develops regardless of fertilization success, wasting resources. Angiosperms evolved to produce endosperm only after confirmed fertilization. Campbell Ch 30.",
+      "tags": ["double-fertilization", "endosperm", "angiosperms", "reproductive-efficiency"]
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Structure and Function",
+      "chapter": "A Tour of the Cell",
+      "ncertClass": 11,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellChapter": 6,
+      "campbellUnit": 2,
+      "campbellEdition": 12,
+      "conceptualDepth": "intermediate",
+      "question": "Which observation does NOT support the endosymbiont theory for the origin of mitochondria and chloroplasts?",
+      "options": [
+        "Both organelles have their own circular DNA",
+        "Both have double membranes",
+        "Both replicate by binary fission",
+        "Mitochondrial ribosomes are 80S, identical to eukaryotic cytoplasmic ribosomes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Mitochondrial ribosomes are actually 70S (like bacterial ribosomes), NOT 80S. If they were 80S (as this false statement claims), it would NOT support the endosymbiont theory. All other options are genuine evidence: circular DNA (like bacteria), double membranes (inner from engulfed bacterium, outer from host vacuole), and binary fission (bacterial division). Campbell Ch 6.",
+      "tags": ["endosymbiont-theory", "mitochondria", "chloroplasts", "ribosomes"]
+    },
+    {
+      "type": "MCQ",
+      "topic": "Animal Form and Function",
+      "chapter": "Digestion and Nutrition",
+      "ncertClass": 11,
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": false,
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellChapter": 41,
+      "campbellUnit": 7,
+      "campbellEdition": 12,
+      "conceptualDepth": "intermediate",
+      "question": "How is pepsinogen activated and why is the zymogen strategy important?",
+      "options": [
+        "Enterokinase activates it in the duodenum to delay protein digestion",
+        "It spontaneously activates at body temperature",
+        "Bile salts activate it in the stomach",
+        "HCl at pH < 2 cleaves it to pepsin, which autocatalytically activates more pepsinogen; this prevents self-digestion of gastric glands"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Low pH from parietal cell HCl causes conformational change in pepsinogen, cleaving a 44-amino-acid inhibitory peptide to produce active pepsin. Pepsin then autocatalytically activates more pepsinogen (positive feedback). The zymogen strategy prevents self-digestion of chief cells. Enterokinase activates trypsinogen, not pepsinogen. Campbell Ch 41.",
+      "tags": ["pepsin", "zymogen", "pepsinogen", "gastric-digestion", "autocatalysis"]
     },
     {
       "type": "MCQ",
@@ -1836,21 +1470,16 @@
       "campbellUnit": 2,
       "campbellEdition": 12,
       "conceptualDepth": "expert",
-      "question": "The Na+/K+-ATPase pump transports 3 Na+ out and 2 K+ in per ATP hydrolyzed. A cell has an intracellular [Na+] of 15 mM, extracellular [Na+] of 145 mM, intracellular [K+] of 140 mM, and extracellular [K+] of 5 mM. Which statement about this pump is correct?",
+      "question": "The Na+/K+-ATPase transports 3 Na+ out and 2 K+ in per ATP hydrolyzed. Which statement is correct?",
       "options": [
-        "The pump is electrogenic because it exports more positive charges (3 Na+) than it imports (2 K+), contributing to the negative resting membrane potential",
-        "The pump works with the Na+ concentration gradient and against the K+ concentration gradient",
-        "The pump is electrogenic because it moves equal numbers of positive charges in both directions",
-        "The pump directly generates most of the resting membrane potential without the involvement of leak channels"
+        "It moves equal positive charges both ways, so it is electrically neutral",
+        "It directly generates most of the resting membrane potential without leak channels",
+        "It is electrogenic because it exports more positive charges (3 Na+) than it imports (2 K+), contributing to the negative resting potential",
+        "It works with the Na+ gradient and against the K+ gradient only"
       ],
-      "correctAnswer": "A",
-      "explanation": "The Na+/K+-ATPase is electrogenic because it creates a net outward movement of one positive charge per cycle (3 Na+ out minus 2 K+ in = net +1 out). This directly contributes about -5 to -10 mV to the resting membrane potential. However, the pump's major contribution to the membrane potential is indirect: by maintaining the concentration gradients of Na+ and K+, it sets up the conditions for K+ leak channels (and to a lesser extent Na+ leak channels) to generate the resting potential of approximately -70 mV. The pump works against both gradients: Na+ is pumped out against its concentration gradient (15 mM inside vs 145 mM outside), and K+ is pumped in against its gradient (140 mM inside vs 5 mM outside). Campbell Ch 7.",
-      "tags": [
-        "Na-K-ATPase",
-        "electrogenic-pump",
-        "membrane-potential",
-        "active-transport"
-      ]
+      "correctAnswer": "C",
+      "explanation": "The pump creates net outward positive charge (3 out, 2 in = +1 net out), directly contributing ~-5 to -10 mV. Its major contribution is indirect: maintaining concentration gradients that K+ leak channels use to generate the bulk of the resting potential (~-70 mV). The pump works against both gradients (Na+ pumped up its gradient out, K+ pumped up its gradient in). Campbell Ch 7.",
+      "tags": ["Na-K-ATPase", "electrogenic-pump", "membrane-potential", "active-transport"]
     }
   ]
 }

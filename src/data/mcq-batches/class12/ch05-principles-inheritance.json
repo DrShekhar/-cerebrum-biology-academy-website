@@ -2439,12 +2439,12 @@
       "neetWeightage": "HIGH",
       "question": "Which of the following crosses will produce all offspring with the same phenotype?",
       "options": [
-        "All of the above",
-        "TT x tt",
+        "Tt x Tt",
         "Tt x tt",
-        "Tt x Tt"
+        "TT x tt",
+        "All of the above"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "TT x tt produces all Tt offspring, which are all tall (assuming complete dominance). In Tt x Tt, 1/4 will be dwarf. In Tt x tt, 1/2 will be dwarf. Only the cross TT x tt produces phenotypically uniform offspring.",
       "tags": [
         "monohybrid-cross",
