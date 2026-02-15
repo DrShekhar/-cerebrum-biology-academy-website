@@ -1,0 +1,2517 @@
+{
+  "batch": {
+    "name": "Class 12 - Chapter 13: Organisms and Populations",
+    "version": 1,
+    "source": "neet-class12-ch13",
+    "totalQuestions": 100
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Which of the following is the most important abiotic factor that determines the distribution of organisms?",
+      "options": [
+        "B) Water",
+        "D) Soil",
+        "A) Temperature",
+        "C) Light"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Temperature is the most ecologically relevant environmental factor. It affects the kinetics of enzymes and through it the basal metabolism and other physiological functions of the organism. The average temperature on land varies seasonally and decreases progressively from the equator towards the poles.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "abiotic-factors",
+        "temperature",
+        "ecology"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Organisms that can maintain a constant body temperature despite changes in ambient temperature are called:",
+      "options": [
+        "B) Regulators",
+        "A) Conformers",
+        "D) Suspenders",
+        "C) Migrants"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Regulators are organisms that maintain homeostasis by physiological (sometimes behavioural) means. They ensure a constant body temperature (thermoregulation), constant osmotic concentration (osmoregulation), etc. Birds and mammals are classic thermoregulators.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "regulators",
+        "thermoregulation",
+        "homeostasis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Allen's rule states that mammals from colder climates generally have:",
+      "options": [
+        "A) Larger body size",
+        "B) Shorter ears and limbs",
+        "D) More subcutaneous fat only",
+        "C) Longer fur only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allen's rule states that mammals from colder climates generally have shorter ears and limbs to minimise heat loss. This is an adaptation to conserve body heat by reducing the surface area exposed to the cold environment.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "allens-rule",
+        "adaptation",
+        "cold-climate"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "The formula for exponential population growth is:",
+      "options": [
+        "D) dN/dt = r(K-N)",
+        "A) dN/dt = rN(K-N)/K",
+        "C) dN/dt = rN/K",
+        "B) dN/dt = rN"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The exponential growth equation is dN/dt = rN, where N is the population size, r is the intrinsic rate of natural increase, and t is time. This model assumes unlimited resources and produces a J-shaped growth curve.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "exponential-growth",
+        "population-growth",
+        "j-curve"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "In the logistic growth equation dN/dt = rN(K-N)/K, 'K' represents:",
+      "options": [
+        "A) Growth rate",
+        "B) Carrying capacity",
+        "D) Birth rate",
+        "C) Population density"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In the logistic growth equation, K represents the carrying capacity of the habitat. It is the maximum population size that the environment can sustain indefinitely. As N approaches K, the growth rate slows down and eventually reaches zero.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carrying-capacity",
+        "logistic-growth",
+        "s-curve"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Which of the following is an example of mutualism?",
+      "options": [
+        "A) Cuckoo laying eggs in crow's nest",
+        "C) Mycorrhizae associated with plant roots",
+        "D) Barnacles growing on whale's back",
+        "B) Orchid growing on a mango tree"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mycorrhizae are mutualistic associations between fungi and roots of higher plants. The fungi help the plant in the absorption of essential nutrients from the soil while the plant provides the fungi with carbohydrates. Both organisms benefit from this interaction.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "mutualism",
+        "mycorrhizae",
+        "population-interactions"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Gause's competitive exclusion principle states that:",
+      "options": [
+        "D) Predation eliminates competition",
+        "B) Two closely related species competing for the same resources cannot co-exist indefinitely",
+        "A) Two closely related species can coexist indefinitely",
+        "C) Competition always leads to extinction of both species"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Gause's competitive exclusion principle states that two closely related species competing for the same resources cannot co-exist indefinitely and the competitively inferior one will be eliminated eventually. This was demonstrated by Gause using Paramecium species.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "competitive-exclusion",
+        "gause",
+        "competition"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Diapause is a stage of:",
+      "options": [
+        "D) Rapid reproduction",
+        "A) Increased metabolic activity",
+        "C) Active growth during summer",
+        "B) Suspended development under unfavourable conditions"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Diapause is a stage of suspended development in many zooplankton species in lakes and ponds. Under unfavourable conditions, many organisms enter diapause, a phase where growth and metabolic activity are suspended. This is different from hibernation as diapause is genetically programmed.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "diapause",
+        "suspended-development",
+        "adaptation"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "An expanding population has an age pyramid that is:",
+      "options": [
+        "B) Bell-shaped",
+        "A) Inverted",
+        "D) Urn-shaped",
+        "C) Triangular (broad base)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A growing or expanding population has a triangular-shaped age pyramid with a broad base indicating a large proportion of young individuals. This reflects high birth rates and suggests future population growth.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "age-pyramid",
+        "population-attributes",
+        "expanding-population"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Bergmann's rule states that:",
+      "options": [
+        "D) Animals at higher altitudes have more haemoglobin",
+        "A) Mammals in colder climates have shorter appendages",
+        "C) Animals in warmer climates are darker",
+        "B) Mammals in colder climates tend to have larger body size"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Bergmann's rule states that within a polytypic warm-blooded species, the body size increases in colder climates. Larger body size has a smaller surface area to volume ratio, which helps in conserving heat in colder environments.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "bergmanns-rule",
+        "body-size",
+        "cold-adaptation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "The interaction where one species is benefited and the other is neither benefited nor harmed is called:",
+      "options": [
+        "D) Amensalism",
+        "C) Commensalism",
+        "A) Mutualism",
+        "B) Parasitism"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Commensalism is an interaction in which one species benefits and the other is neither harmed nor benefited (+/0 interaction). Examples include orchids growing as epiphytes on mango trees and barnacles growing on the back of whales.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "commensalism",
+        "population-interactions",
+        "ecology"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "The kangaroo rat in North American deserts is able to survive without drinking water because:",
+      "options": [
+        "C) It absorbs water through its skin",
+        "B) It has the ability to concentrate its urine and produce dry faeces",
+        "A) It stores water in its body like a camel",
+        "D) It gets water from dew"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The kangaroo rat in North American deserts survives without drinking water. It meets its water requirements through internal fat oxidation (metabolic water) and has the ability to concentrate its urine to reduce water loss. It also does not use water for temperature regulation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "kangaroo-rat",
+        "desert-adaptation",
+        "water-conservation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "In a population, if the number of births plus immigration is more than the number of deaths plus emigration, the population will:",
+      "options": [
+        "B) Remain stable",
+        "D) Fluctuate",
+        "C) Increase",
+        "A) Decline"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Population size changes based on four factors: natality (births), mortality (deaths), immigration, and emigration. If (B + I) > (D + E), the population density increases. The population equation is Nt+1 = Nt + [(B + I) - (D + E)].",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-density",
+        "natality",
+        "mortality"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Small animals like shrews and hummingbirds are rarely found in polar regions because:",
+      "options": [
+        "B) They have a large surface area relative to volume and lose heat quickly",
+        "C) They cannot withstand high winds",
+        "D) Predators are abundant in polar regions",
+        "A) They cannot find food"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Small animals have a larger surface area relative to their volume. They tend to lose body heat very fast when it is cold outside. Since they have to expend much energy to generate body heat through metabolism, they cannot survive in very cold environments.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "surface-area-volume",
+        "thermoregulation",
+        "polar-regions"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "The interaction in which one species is harmed and the other is neither benefited nor harmed is called:",
+      "options": [
+        "A) Predation",
+        "C) Amensalism",
+        "B) Competition",
+        "D) Parasitism"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Amensalism is an interaction where one species is harmed while the other is unaffected (0/- interaction). For example, Penicillium secretes penicillin that inhibits the growth of certain bacteria, but the bacteria do not affect Penicillium.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amensalism",
+        "population-interactions",
+        "ecology"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Which of the following organisms uses camouflage as a defence mechanism against predators?",
+      "options": [
+        "D) Poison dart frog",
+        "B) Some insects and frogs",
+        "A) Monarch butterfly",
+        "C) Porcupine"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Camouflage (cryptic colouration) is a defence mechanism where prey species blend with their surroundings to avoid detection by predators. Some insects and frogs are cryptically coloured to avoid being detected easily by predators.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "camouflage",
+        "predation",
+        "defence-mechanism"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "The type of population interaction where both species are harmed is:",
+      "options": [
+        "D) Commensalism",
+        "A) Predation",
+        "B) Competition",
+        "C) Parasitism"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Competition is a -/- interaction where both interacting species are harmed. Competition occurs when closely related species compete for the same limited resources such as food, space, or light. Interspecific competition may affect the fitness of both species.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "competition",
+        "population-interactions",
+        "ecology"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Which organism demonstrates brood parasitism?",
+      "options": [
+        "C) Cuckoo",
+        "D) Sea anemone",
+        "B) Cuscuta",
+        "A) Liver fluke"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The cuckoo bird demonstrates brood parasitism. It lays its eggs in the nest of the crow (host). The cuckoo's eggs have evolved to resemble the host's eggs in size and colour to reduce the chances of the host rejecting them.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "brood-parasitism",
+        "cuckoo",
+        "parasitism"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "The Monarch butterfly avoids predation by:",
+      "options": [
+        "C) Mimicking the colour pattern of other species",
+        "A) Camouflage",
+        "D) High speed flight",
+        "B) Being distasteful due to a chemical acquired from the host plant during caterpillar stage"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Monarch butterflies are distasteful to their predators because of a special chemical present in their body. This chemical is acquired during the caterpillar stage when it feeds on a poisonous weed. This is an example of chemical defence against predation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monarch-butterfly",
+        "chemical-defence",
+        "predation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Ophrys (Mediterranean orchid) employs which strategy for pollination?",
+      "options": [
+        "C) Sexual deceit by mimicking female bee",
+        "D) Self-pollination",
+        "B) Water pollination",
+        "A) Wind pollination"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Mediterranean orchid Ophrys employs sexual deceit for pollination. One petal of its flower bears an uncanny resemblance to the female of the bee species in size, colour, and markings. The male bee is attracted and pseudocopulates with the flower, facilitating pollination.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ophrys",
+        "co-evolution",
+        "pollination"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Which of the following is NOT a method of estimating population density?",
+      "options": [
+        "C) Per cent cover method",
+        "A) Quadrat method",
+        "B) Mark-recapture method",
+        "D) Chromatography"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Chromatography is a technique used in biochemistry for separating molecules, not for estimating population density. Quadrat method, mark-recapture method, and per cent cover method are all used for estimating population density in ecological studies.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "population-density",
+        "quadrat",
+        "mark-recapture"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Ecological niche refers to:",
+      "options": [
+        "B) The functional role and position of a species in its ecosystem",
+        "C) The number of individuals in a population",
+        "A) The physical space occupied by an organism",
+        "D) The reproductive capacity of a species"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Ecological niche refers to the functional role and position of a species in its ecosystem. It includes not just the habitat but also the organism's interactions with other species, its feeding habits, and its impact on the environment.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ecological-niche",
+        "habitat",
+        "ecology"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Connell's elegant field experiment showed that the competitive superior barnacle in the intertidal area of Scotland is:",
+      "options": [
+        "C) Daphnia",
+        "B) Balanus",
+        "D) Asterias",
+        "A) Chthamalus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Connell's experiment with barnacles Balanus and Chthamalus showed that Balanus is competitively superior as it can exclude Chthamalus from the intertidal zone. When Balanus was removed, Chthamalus colonised the entire intertidal area, proving competitive exclusion.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "connell",
+        "barnacles",
+        "competitive-exclusion"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Which of the following is a eurythermal organism?",
+      "options": [
+        "D) Arctic cod",
+        "A) Polar bear",
+        "C) Antarctic fish",
+        "B) Humans"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Eurythermal organisms can tolerate and thrive in a wide range of temperatures. Humans are eurythermal as they can survive in diverse temperature conditions. In contrast, stenothermal organisms like polar bears and Antarctic fish can tolerate only a narrow range of temperatures.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "eurythermal",
+        "stenothermal",
+        "tolerance-range"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "r-selected species are characterised by:",
+      "options": [
+        "A) Large body size and long life span",
+        "C) Stable populations near carrying capacity",
+        "D) Low mortality rate and parental care",
+        "B) Small body size, high reproductive rate, and short life span"
+      ],
+      "correctAnswer": "D",
+      "explanation": "r-selected species are characterised by small body size, early maturity, high reproductive rate, short life span, and little parental care. They thrive in unstable environments and produce many offspring. Examples include insects, rodents, and annual plants.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "r-selected",
+        "life-history",
+        "reproductive-strategy"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Hibernation and aestivation are examples of:",
+      "options": [
+        "B) Regulation",
+        "A) Migration",
+        "D) Conforming to environment",
+        "C) Suspension of activity to avoid stress"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hibernation (winter sleep) and aestivation (summer sleep) are examples of organisms suspending their activity to avoid stressful conditions. During these periods, organisms reduce their metabolic activity significantly and enter a state of dormancy.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "hibernation",
+        "aestivation",
+        "dormancy"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "The thick cuticle and sunken stomata in desert plants help in:",
+      "options": [
+        "C) Attracting pollinators",
+        "A) Increasing photosynthesis",
+        "D) Absorbing more CO2",
+        "B) Reducing transpiration and conserving water"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Desert plants have thick cuticle on their leaf surfaces and sunken stomata to minimise water loss through transpiration. These are morphological adaptations to conserve water in arid conditions where water availability is very limited.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "desert-plants",
+        "adaptation",
+        "transpiration"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "At high altitudes, the human body compensates for low oxygen availability by:",
+      "options": [
+        "D) Decreasing heart rate",
+        "B) Increasing RBC production and haemoglobin binding affinity",
+        "A) Decreasing breathing rate",
+        "C) Reducing metabolic rate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "At high altitudes, the body compensates for low oxygen by increasing red blood cell production, increasing breathing rate, and decreasing the binding affinity of haemoglobin (which actually increases oxygen release to tissues). The initial response includes increased RBC production to carry more oxygen.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "altitude-adaptation",
+        "acclimatisation",
+        "haemoglobin"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Calotropis produces highly poisonous cardiac glycosides as a defence against:",
+      "options": [
+        "C) Herbivory",
+        "D) Cold temperature",
+        "B) UV radiation",
+        "A) Drought"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Calotropis produces cardiac glycosides, which are toxic chemicals that make the plant unpalatable and poisonous to herbivores. This is a chemical defence mechanism used by many plants to deter grazing animals from feeding on them.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "calotropis",
+        "chemical-defence",
+        "herbivory"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "A stable population has an age pyramid that is:",
+      "options": [
+        "C) Urn-shaped (inverted triangle)",
+        "B) Bell-shaped",
+        "D) Irregular",
+        "A) Triangular with broad base"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A stable population has a bell-shaped age pyramid where pre-reproductive and reproductive age groups are approximately equal in size. This indicates that birth rate roughly equals death rate and the population size remains stable.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "age-pyramid",
+        "stable-population",
+        "population-attributes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Predation is important in an ecosystem because:",
+      "options": [
+        "A) It eliminates all prey populations",
+        "C) It benefits only the predator",
+        "D) It reduces species diversity",
+        "B) It acts as a conduit for energy transfer, controls prey population, and maintains species diversity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Predation plays important roles in ecosystems: it acts as a conduit for energy transfer across trophic levels, keeps prey populations under control, and helps maintain species diversity in a community by preventing competitive exclusion of weaker species.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "predation",
+        "energy-transfer",
+        "species-diversity"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "The interaction between fig tree and its pollinator wasp is an example of:",
+      "options": [
+        "C) Obligate mutualism",
+        "D) Commensalism",
+        "B) Competition",
+        "A) Parasitism"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The fig tree and its pollinating wasp species show obligate mutualism where neither can complete its life cycle without the other. The wasp pollinates the fig while using the fig fruit for egg-laying and development. Each fig species has its specific wasp pollinator.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fig-wasp",
+        "obligate-mutualism",
+        "co-evolution"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "The intrinsic rate of natural increase (r) is calculated as:",
+      "options": [
+        "C) r = K - N",
+        "B) r = b - d",
+        "D) r = b + d",
+        "A) r = N/t"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The intrinsic rate of natural increase (r) is the difference between the per capita birth rate (b) and the per capita death rate (d). If r > 0, population increases; if r < 0, population decreases; if r = 0, population is stable (zero population growth).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "intrinsic-rate",
+        "birth-rate",
+        "death-rate"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Organisms that have body temperature that varies with ambient temperature are called:",
+      "options": [
+        "D) Endotherms",
+        "C) Regulators",
+        "A) Homeotherms",
+        "B) Poikilotherms"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Poikilotherms (or ectotherms) are organisms whose body temperature varies with the ambient temperature. They do not have the ability to maintain a constant internal body temperature. Examples include reptiles, amphibians, and most invertebrates.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "poikilotherms",
+        "ectotherms",
+        "body-temperature"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Which defence mechanism involves an organism resembling another species that is unpalatable to predators?",
+      "options": [
+        "A) Camouflage",
+        "B) Mimicry",
+        "C) Hibernation",
+        "D) Migration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mimicry is a defence mechanism where a prey species evolves a resemblance to another unpalatable or dangerous species to avoid predation. For example, the Viceroy butterfly mimics the colour pattern of the distasteful Monarch butterfly to gain protection from predators.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "mimicry",
+        "defence-mechanism",
+        "predation"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "In the logistic growth model, the growth rate is maximum when:",
+      "options": [
+        "D) N exceeds K",
+        "B) N = K/2",
+        "A) N = K",
+        "C) N is much less than K"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In the logistic growth model, the population growth rate (dN/dt) is maximum when N = K/2 (half the carrying capacity). At this point, the factor (K-N)/K equals 0.5, and the product rN(K-N)/K is at its peak value.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "logistic-growth",
+        "carrying-capacity",
+        "growth-rate"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Cuscuta is an example of:",
+      "options": [
+        "A) Predator",
+        "C) Endoparasite",
+        "B) Ectoparasite",
+        "D) Stem parasite"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cuscuta (dodder) is a parasitic plant that is a stem parasite. It wraps around the host plant and derives nutrition through haustoria. It is also considered an ectoparasite as it grows on the surface of the host plant.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cuscuta",
+        "parasitism",
+        "stem-parasite"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "The interaction between clownfish and sea anemone is an example of:",
+      "options": [
+        "C) Mutualism",
+        "A) Parasitism",
+        "D) Amensalism",
+        "B) Commensalism"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The interaction between clownfish and sea anemone is mutualism. The clownfish gets protection from predators among the stinging tentacles of the anemone, while the clownfish provides food scraps and drives away fish that feed on the anemone.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "mutualism",
+        "clownfish",
+        "sea-anemone"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Abingdon tortoise became extinct due to the introduction of which alien species on the island?",
+      "options": [
+        "B) Cats",
+        "D) Rats",
+        "C) Goats",
+        "A) Dogs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Abingdon tortoise in Galapagos Islands became extinct within a decade after goats were introduced on the island. The goats competed with the tortoise for food and destroyed the vegetation that the tortoise depended upon.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "abingdon-tortoise",
+        "alien-species",
+        "extinction"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: Conformers are thermoregulators.\nReason: Conformers maintain a constant body temperature irrespective of ambient temperature.",
+      "options": [
+        "D) Both Assertion and Reason are false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both statements are false. Conformers are NOT thermoregulators. Conformers cannot maintain a constant body temperature; their body temperature changes with the ambient temperature. Regulators (not conformers) maintain constant body temperature.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "conformers",
+        "thermoregulation",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: Predators play an important role in maintaining species diversity in a community.\nReason: Predators keep prey populations under control and prevent competitive exclusion.",
+      "options": [
+        "D) Both Assertion and Reason are false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both assertion and reason are true, and the reason correctly explains the assertion. In experiments by Paine, removal of the starfish (predator) from an intertidal community led to competitive exclusion and reduction in species diversity from 15 to 8 species.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "predation",
+        "species-diversity",
+        "paine-experiment"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: The logistic growth model is more realistic than the exponential growth model.\nReason: The logistic model incorporates carrying capacity and limited resources.",
+      "options": [
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false",
+        "C) Assertion is true but Reason is false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both statements are true and the reason correctly explains the assertion. The logistic growth model is more realistic because it accounts for environmental resistance through carrying capacity (K), unlike the exponential model which assumes unlimited resources.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "logistic-growth",
+        "exponential-growth",
+        "carrying-capacity"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: Allen's rule and Bergmann's rule are both related to cold climate adaptations in mammals.\nReason: Allen's rule deals with body size while Bergmann's rule deals with length of appendages.",
+      "options": [
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The assertion is true as both rules describe adaptations to cold climates. However, the reason is false because it reverses the two rules. Allen's rule deals with shorter appendages (ears, limbs) in colder climates, while Bergmann's rule deals with larger body size in colder climates.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "allens-rule",
+        "bergmanns-rule",
+        "cold-adaptation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: Orchid growing on a mango tree is an example of commensalism.\nReason: The orchid gets shelter and sunlight without harming the mango tree.",
+      "options": [
+        "D) Both Assertion and Reason are false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both statements are true and the reason correctly explains the assertion. An epiphytic orchid growing on a mango tree is a classic example of commensalism. The orchid benefits by getting better access to light and air without deriving nutrition from the tree, while the mango tree is neither benefited nor harmed.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "commensalism",
+        "epiphyte",
+        "orchid"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: Parasites have evolved host-specific adaptations.\nReason: Parasites tend to be smaller in size, have high reproductive capacity, and often have reduced sense organs.",
+      "options": [
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false",
+        "D) Both Assertion and Reason are false"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both statements are true. Parasites have evolved host-specific adaptations including loss of unnecessary sense organs, presence of adhesive organs, high reproductive capacity, and smaller size. However, the reason describes general parasite characteristics, not specifically host-specific adaptations.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "parasitism",
+        "host-specificity",
+        "adaptation"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: Desert lizards bask in the sun when their body temperature drops below the comfort zone.\nReason: Desert lizards are endotherms and can generate body heat metabolically.",
+      "options": [
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false",
+        "C) Assertion is true but Reason is false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The assertion is true - desert lizards do bask in the sun to absorb heat and raise their body temperature. However, the reason is false - lizards are ectotherms (not endotherms), meaning they cannot generate sufficient body heat metabolically and rely on external sources of heat.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "desert-lizard",
+        "basking",
+        "ectotherm"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: The population growth rate becomes zero when N equals K in the logistic model.\nReason: When N = K, the term (K-N)/K becomes zero, making dN/dt = 0.",
+      "options": [
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false",
+        "C) Assertion is true but Reason is false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both statements are true and the reason correctly explains the assertion. In the logistic equation dN/dt = rN(K-N)/K, when N = K, the term (K-N)/K = 0/K = 0, making dN/dt = rN x 0 = 0. Hence, population growth stops when the population reaches carrying capacity.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "logistic-growth",
+        "carrying-capacity",
+        "zero-growth"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: Migratory birds fly long distances to avoid harsh winter conditions.\nReason: Migration is an energy-expensive but effective response to temporarily avoid stressful conditions.",
+      "options": [
+        "D) Both Assertion and Reason are false",
+        "C) Assertion is true but Reason is false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both statements are true and the reason correctly explains the assertion. Many organisms including birds migrate to avoid harsh environmental conditions. Though migration requires significant energy expenditure, it is an effective strategy to temporarily escape stressful habitats and return when conditions improve.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "migration",
+        "birds",
+        "stress-response"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: K-selected species have smaller populations that are stable near carrying capacity.\nReason: K-selected species invest more energy in fewer offspring with parental care.",
+      "options": [
+        "C) Assertion is true but Reason is false",
+        "D) Both Assertion and Reason are false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both statements are true and the reason explains the assertion. K-selected species (like elephants, whales) have fewer offspring, extended parental care, longer life spans, and maintain relatively stable populations near the carrying capacity of their environment.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "k-selected",
+        "life-history",
+        "carrying-capacity"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: Stenohaline organisms can tolerate only a narrow range of salinity.\nReason: Euryhaline organisms like salmon can tolerate a wide range of salinity.",
+      "options": [
+        "C) Assertion is true but Reason is false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both statements are true. Stenohaline organisms can tolerate only a narrow range of salinity, while euryhaline organisms like salmon can live in both freshwater and marine environments. However, the reason describes euryhaline organisms and does not explain why stenohaline organisms are restricted.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "stenohaline",
+        "euryhaline",
+        "salinity-tolerance"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: The Mediterranean orchid Ophrys uses sexual deceit for pollination.\nReason: The flower of Ophrys closely resembles the male bee in appearance.",
+      "options": [
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The assertion is true - Ophrys does use sexual deceit for pollination. The reason is false because the flower resembles the FEMALE bee, not the male bee. The male bee is attracted to the flower thinking it is a female, and pseudocopulates with it, facilitating pollination.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ophrys",
+        "sexual-deceit",
+        "co-evolution"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: A declining population has an urn-shaped age pyramid.\nReason: In a declining population, the pre-reproductive group is smaller than the reproductive and post-reproductive groups.",
+      "options": [
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false",
+        "C) Assertion is true but Reason is false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both statements are true and the reason correctly explains the assertion. A declining population has an urn-shaped (inverted) age pyramid where the base (pre-reproductive) is narrower than the middle and top, indicating fewer young individuals being added to the population.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "age-pyramid",
+        "declining-population",
+        "population-attributes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Assertion: Thermoregulation is energetically expensive for small animals.\nReason: Small animals have a larger surface area to volume ratio, causing greater heat loss.",
+      "options": [
+        "C) Assertion is true but Reason is false",
+        "D) Both Assertion and Reason are false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both statements are true and the reason explains the assertion. Small animals have a large surface area relative to their volume. This means they lose body heat faster through their surface, requiring more energy expenditure per unit body mass for thermoregulation compared to larger animals.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "thermoregulation",
+        "surface-area-volume",
+        "energy-cost"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Consider the following statements about population interactions:\nI. In mutualism, both species benefit (+/+)\nII. In commensalism, one species benefits and the other is harmed (+/-)\nIII. In amensalism, one species is harmed and the other is unaffected (0/-)\nIV. In parasitism, both species are harmed (-/-)\nWhich of the above statements are correct?",
+      "options": [
+        "C) II and IV only",
+        "D) I, III and IV",
+        "A) I and III only",
+        "B) I, II and III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statements I and III are correct. Mutualism is +/+ and amensalism is 0/-. Statement II is incorrect because commensalism is +/0 (not +/-). Statement IV is incorrect because parasitism is +/- (not -/-); competition is -/-.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-interactions",
+        "mutualism",
+        "amensalism"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Which of the following statements about population growth is/are correct?\nI. Exponential growth produces a J-shaped curve\nII. Logistic growth produces an S-shaped (sigmoid) curve\nIII. In exponential growth, resources are assumed to be unlimited\nIV. In logistic growth, the population can exceed carrying capacity indefinitely",
+      "options": [
+        "A) I, II and III only",
+        "C) I, II, III and IV",
+        "B) I and II only",
+        "D) II and IV only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements I, II, and III are correct. Exponential growth gives a J-shaped curve and assumes unlimited resources. Logistic growth gives an S-shaped curve. Statement IV is incorrect because in the logistic model, the population stabilises at K and cannot exceed it indefinitely.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-growth",
+        "j-curve",
+        "s-curve"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Which of the following statements about adaptations is INCORRECT?\nI. Some desert plants have thick cuticle and sunken stomata\nII. Opuntia has flattened stems performing photosynthesis\nIII. Desert animals are ureotelic to conserve water\nIV. Many desert plants have deep taproots to access underground water",
+      "options": [
+        "D) IV only",
+        "A) I only",
+        "B) III only",
+        "C) II only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statement III is incorrect. Desert animals tend to be uricotelic (excrete uric acid, not urea) to conserve water. Uric acid requires less water for excretion than urea. Statements I, II, and IV are all correct adaptations of desert organisms.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "desert-adaptation",
+        "uricotelic",
+        "xerophytes"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Read the following statements about abiotic factors:\nI. Temperature decreases progressively from equator to poles\nII. Light is important for photoperiodism in plants\nIII. Soil composition has no effect on plant distribution\nIV. Water availability determines the productivity of terrestrial habitats\nSelect the correct statements:",
+      "options": [
+        "C) I, II, III and IV",
+        "D) II and III only",
+        "A) I, II and IV only",
+        "B) I and II only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statements I, II, and IV are correct. Temperature does decrease from the equator towards the poles. Light is important for photoperiodism. Water availability is a key factor determining productivity. Statement III is incorrect as soil characteristics greatly influence the distribution of plants.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "abiotic-factors",
+        "temperature",
+        "photoperiodism"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Consider the following statements about parasitism:\nI. The parasite benefits at the expense of the host\nII. Parasites have evolved to be host-specific\nIII. Ectoparasites live inside the host body\nIV. The life cycle of many parasites involves one or more intermediate hosts\nWhich statements are correct?",
+      "options": [
+        "C) I, III and IV only",
+        "A) I, II and IV only",
+        "D) All are correct",
+        "B) I, II and III only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements I, II, and IV are correct. Parasites benefit at the expense of the host, they show host-specificity, and many have complex life cycles involving intermediate hosts. Statement III is incorrect because ectoparasites live ON the surface of the host (lice, ticks), not inside. Endoparasites live inside the host body.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "parasitism",
+        "ectoparasite",
+        "endoparasite"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Which of the following statements about defence mechanisms against predation are correct?\nI. Monarch butterfly is distasteful due to chemicals from its host plant\nII. Some plants produce cardiac glycosides as chemical defence\nIII. Thorns in Acacia are morphological defence against herbivory\nIV. Nicotine, caffeine, and quinine are produced by plants to attract pollinators\nSelect the correct option:",
+      "options": [
+        "A) I, II and III only",
+        "D) II and IV only",
+        "C) I, II, III and IV",
+        "B) I and II only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements I, II, and III are correct. The Monarch butterfly acquires toxic chemicals from its food plant. Plants produce cardiac glycosides, thorns, and spines as defences. Statement IV is incorrect because nicotine, caffeine, and quinine are chemical defences against herbivores, not pollinator attractants.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "defence-mechanisms",
+        "chemical-defence",
+        "predation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Consider the following statements:\nI. Population size is denoted by N\nII. Sex ratio is a population attribute\nIII. Birth rate in a population can be expressed per capita\nIV. Age structure is not important in determining population growth\nWhich of the above are correct?",
+      "options": [
+        "D) II and IV only",
+        "B) I, II and III only",
+        "C) I and III only",
+        "A) I, II, III and IV"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements I, II, and III are correct. Population size is denoted by N, sex ratio is a population attribute, and birth rates can be expressed per capita (per individual). Statement IV is incorrect because age structure is crucial in determining population growth trends.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-attributes",
+        "birth-rate",
+        "sex-ratio"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "How many of the following statements are correct about responses of organisms to abiotic stress?\nI. Regulators maintain homeostasis by physiological means\nII. Conformers change their body temperature with ambient conditions\nIII. Migration is a permanent escape from stressful habitats\nIV. Some organisms enter dormancy (hibernation, aestivation) to avoid stress\nV. Suspend activity is seen only in animals, not in plants",
+      "options": [
+        "C) Four",
+        "B) Three",
+        "A) Two",
+        "D) Five"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Three statements (I, II, IV) are correct. Regulators maintain homeostasis. Conformers' body temperature changes with the environment. Some organisms enter dormancy. Statement III is incorrect because migration is a temporary, not permanent, escape. Statement V is incorrect as plants also show dormancy (seeds).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "abiotic-stress",
+        "regulators",
+        "conformers",
+        "dormancy"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Which of the following statements is correct regarding competition?\nI. Interspecific competition occurs between members of the same species\nII. The Abingdon tortoise became extinct due to competition with introduced goats\nIII. Resource partitioning helps competing species co-exist\nIV. MacArthur showed that five warbler species co-existed by behavioural differences in foraging activities",
+      "options": [
+        "C) I and II only",
+        "B) II, III and IV only",
+        "D) III and IV only",
+        "A) I, II, III and IV"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements II, III, and IV are correct. Statement I is incorrect because interspecific competition occurs between members of DIFFERENT species (not the same species; that would be intraspecific competition). Resource partitioning and behavioural differences (as shown by MacArthur's warblers) allow coexistence.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "competition",
+        "resource-partitioning",
+        "macarthur-warblers"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Consider the following statements about the logistic growth equation:\nI. dN/dt = rN(K-N)/K is the Verhulst-Pearl equation\nII. When N is very small compared to K, the growth is nearly exponential\nIII. Growth rate is maximum at N = K\nIV. The S-shaped curve has an initial lag phase\nWhich statements are correct?",
+      "options": [
+        "B) I, II, III and IV",
+        "A) I, II and IV only",
+        "C) I and III only",
+        "D) II and III only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements I, II, and IV are correct. The logistic equation is called the Verhulst-Pearl equation. When N is much less than K, (K-N)/K approaches 1, making growth nearly exponential. The S-curve does have a lag phase. Statement III is incorrect - growth rate is maximum at N = K/2, not at N = K (at N=K, growth rate is zero).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "logistic-growth",
+        "verhulst-pearl",
+        "growth-curve"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Consider the following statements about mutualism:\nI. Lichens represent mutualism between algae and fungi\nII. Mycorrhizae are mutualistic fungal associations with plant roots\nIII. Fig-wasp relationship is facultative mutualism\nIV. Zooxanthellae in coral polyps is a mutualistic relationship\nHow many statements are correct?",
+      "options": [
+        "A) One",
+        "D) Four",
+        "B) Two",
+        "C) Three"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Three statements (I, II, IV) are correct. Lichens (algae + fungi), mycorrhizae (fungi + plant roots), and zooxanthellae in corals are all mutualistic relationships. Statement III is incorrect because the fig-wasp relationship is obligate mutualism (not facultative) - neither can reproduce without the other.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "mutualism",
+        "lichens",
+        "mycorrhizae",
+        "fig-wasp"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Which of the following statements is/are correct?\nI. 99% of animals and nearly all plants are conformers\nII. Thermoregulation is seen in all vertebrates\nIII. Birds and mammals are the only two groups that are regulators\nIV. A few species of fish and reptiles can thermoregulate to a limited extent",
+      "options": [
+        "D) II and III only",
+        "A) I and III only",
+        "C) I, III and IV",
+        "B) I and IV only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statements I, III, and IV are correct. The vast majority of animals and nearly all plants cannot maintain constant internal environment (conformers). Birds and mammals are the primary thermoregulators. A few reptiles and fish show limited thermoregulation. Statement II is incorrect as not all vertebrates thermoregulate (fish, amphibians, reptiles are generally ectotherms).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "conformers",
+        "regulators",
+        "thermoregulation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Consider the following statements about high altitude acclimatisation:\nI. At high altitudes, atmospheric pressure is low\nII. Body compensates low oxygen by increasing RBC production\nIII. Breathing rate decreases at high altitude\nIV. Haemoglobin binding affinity for oxygen decreases\nWhich statements are correct?",
+      "options": [
+        "C) I, II, III and IV",
+        "B) I, II and IV",
+        "A) I and II only",
+        "D) I, III and IV"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statements I and II are correct. At high altitudes, atmospheric pressure is low and the body increases RBC production. Statement III is incorrect - breathing rate increases (not decreases) at high altitude. Statement IV is debatable but in the NCERT context, the primary adaptation mentioned is increased RBC count and haemoglobin content.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "altitude",
+        "acclimatisation",
+        "rbc-production"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Read the following statements:\nI. The per capita birth rate (b) refers to births per individual per unit time\nII. N(t) = N(0)e^(rt) is the integral form of the exponential growth equation\nIII. The value of r can be negative\nIV. When r = 0, the population is in zero population growth\nHow many of the above statements are correct?",
+      "options": [
+        "C) Three",
+        "A) One",
+        "D) Four",
+        "B) Two"
+      ],
+      "correctAnswer": "C",
+      "explanation": "All four statements are correct. Per capita birth rate is births per individual per unit time. N(t) = N(0)e^(rt) is indeed the integral form. The value of r can be negative (deaths exceed births), and when r = 0 (b = d), the population shows zero growth.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "exponential-growth",
+        "birth-rate",
+        "intrinsic-rate"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the population interaction with its symbol:\nColumn I: (P) Mutualism (Q) Predation (R) Competition (S) Amensalism\nColumn II: (i) +/- (ii) -/- (iii) +/+ (iv) 0/-",
+      "options": [
+        "B) P-iii, Q-ii, R-i, S-iv",
+        "D) P-i, Q-iii, R-iv, S-ii",
+        "A) P-iii, Q-i, R-ii, S-iv",
+        "C) P-iv, Q-i, R-ii, S-iii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Mutualism (+/+) matches iii, Predation (+/-) matches i, Competition (-/-) matches ii, and Amensalism (0/-) matches iv. These are the standard symbolic representations of population interactions in ecology.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-interactions",
+        "match-the-following",
+        "ecology"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the adaptation with the organism:\nColumn I: (P) Diapause (Q) Thick cuticle, sunken stomata (R) Basking in sun (S) Migration\nColumn II: (i) Desert plants (ii) Desert lizard (iii) Zooplankton (iv) Siberian crane",
+      "options": [
+        "C) P-i, Q-iii, R-iv, S-ii",
+        "B) P-iv, Q-ii, R-iii, S-i",
+        "A) P-iii, Q-i, R-ii, S-iv",
+        "D) P-ii, Q-iv, R-i, S-iii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Diapause is exhibited by zooplankton (iii). Thick cuticle and sunken stomata are adaptations of desert plants (i). Basking in the sun is a behavioural adaptation of desert lizards (ii). Migration is shown by Siberian cranes (iv) that travel to India during winter.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "adaptation",
+        "diapause",
+        "migration",
+        "desert-plants"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the terms with their definitions:\nColumn I: (P) Eurythermal (Q) Stenothermal (R) Euryhaline (S) Stenohaline\nColumn II: (i) Narrow range of salinity tolerance (ii) Wide range of temperature tolerance (iii) Narrow range of temperature tolerance (iv) Wide range of salinity tolerance",
+      "options": [
+        "D) P-i, Q-iv, R-iii, S-ii",
+        "C) P-iv, Q-i, R-ii, S-iii",
+        "B) P-iii, Q-ii, R-i, S-iv",
+        "A) P-ii, Q-iii, R-iv, S-i"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Eurythermal organisms tolerate a wide range of temperatures (ii). Stenothermal organisms tolerate only a narrow range of temperatures (iii). Euryhaline organisms tolerate a wide range of salinity (iv). Stenohaline organisms tolerate only a narrow range of salinity (i).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "eurythermal",
+        "stenothermal",
+        "euryhaline",
+        "stenohaline"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the example with the type of population interaction:\nColumn I: (P) Orchid on mango tree (Q) Cuckoo in crow's nest (R) Lichen (S) Cattle egret and grazing cattle\nColumn II: (i) Brood parasitism (ii) Commensalism (iii) Mutualism (iv) Commensalism",
+      "options": [
+        "D) P-iv, Q-iii, R-ii, S-i",
+        "A) P-ii, Q-i, R-iii, S-iv",
+        "B) P-iii, Q-ii, R-i, S-iv",
+        "C) P-i, Q-iii, R-iv, S-ii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Orchid on mango tree is commensalism (ii) - orchid benefits, tree unaffected. Cuckoo in crow's nest is brood parasitism (i). Lichen is mutualism (iii) between algae and fungi. Cattle egret and grazing cattle is commensalism (iv) - egret eats insects disturbed by cattle.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-interactions",
+        "commensalism",
+        "parasitism",
+        "mutualism"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the following growth model features:\nColumn I: (P) J-shaped curve (Q) S-shaped curve (R) dN/dt = rN (S) dN/dt = rN(K-N)/K\nColumn II: (i) Logistic growth (ii) Exponential growth (iii) Unlimited resources (iv) Limited resources",
+      "options": [
+        "B) P-i, Q-ii, R-iv, S-iii",
+        "C) P-iii, Q-iv, R-ii, S-i",
+        "A) P-ii, Q-i, R-iii, S-iv",
+        "D) P-iv, Q-iii, R-i, S-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "J-shaped curve is characteristic of exponential growth (ii). S-shaped (sigmoid) curve is characteristic of logistic growth (i). dN/dt = rN is the exponential equation that assumes unlimited resources (iii). dN/dt = rN(K-N)/K is the logistic equation that accounts for limited resources (iv).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "growth-models",
+        "j-curve",
+        "s-curve",
+        "logistic-exponential"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the defence mechanism with the organism:\nColumn I: (P) Camouflage (Q) Mimicry (R) Chemical defence (cardiac glycosides) (S) Thorns and spines\nColumn II: (i) Calotropis (ii) Some insects/frogs (iii) Acacia (iv) Viceroy butterfly",
+      "options": [
+        "B) P-iv, Q-ii, R-iii, S-i",
+        "D) P-iii, Q-i, R-iv, S-ii",
+        "C) P-i, Q-iii, R-ii, S-iv",
+        "A) P-ii, Q-iv, R-i, S-iii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Camouflage (cryptic colouration) is used by some insects and frogs (ii). Mimicry is exhibited by the Viceroy butterfly (iv) which mimics the Monarch butterfly. Chemical defence through cardiac glycosides is found in Calotropis (i). Thorns and spines are found in Acacia (iii).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "defence-mechanisms",
+        "camouflage",
+        "mimicry",
+        "chemical-defence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the following rules/principles with their descriptions:\nColumn I: (P) Allen's rule (Q) Bergmann's rule (R) Gause's principle (S) Competitive exclusion\nColumn II: (i) Larger body in cold climates (ii) Two species cannot coexist on same niche (iii) Shorter appendages in cold climates (iv) Inferior competitor gets eliminated",
+      "options": [
+        "D) P-i, Q-iii, R-ii, S-iv",
+        "B) P-i, Q-iii, R-iv, S-ii",
+        "A) P-iii, Q-i, R-ii, S-iv",
+        "C) P-iii, Q-i, R-iv, S-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Allen's rule - shorter appendages in cold climates (iii). Bergmann's rule - larger body size in cold climates (i). Gause's principle states two species competing for the same resources cannot coexist (ii). Competitive exclusion leads to elimination of the inferior competitor (iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "allens-rule",
+        "bergmanns-rule",
+        "gauses-principle"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the age pyramid shape with the population type:\nColumn I: (P) Broad-based triangular (Q) Bell-shaped (R) Urn-shaped (S) Narrow base, wide top\nColumn II: (i) Stable population (ii) Growing population (iii) Declining population (iv) Declining population",
+      "options": [
+        "A) P-ii, Q-i, R-iii, S-iv",
+        "B) P-i, Q-ii, R-iv, S-iii",
+        "C) P-iii, Q-iv, R-i, S-ii",
+        "D) P-iv, Q-iii, R-ii, S-i"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A broad-based triangular pyramid indicates a growing (expanding) population (ii). A bell-shaped pyramid indicates a stable population (i). An urn-shaped or inverted pyramid indicates a declining population (iii). A narrow base with wide top also indicates a declining population (iv).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "age-pyramid",
+        "population-type",
+        "demography"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the organism with the type of parasite:\nColumn I: (P) Lice on human scalp (Q) Liver fluke in bile duct (R) Cuscuta on host plant (S) Female Anopheles mosquito\nColumn II: (i) Endoparasite (ii) Stem parasite (iii) Ectoparasite (iv) Ectoparasite (blood-feeding)",
+      "options": [
+        "C) P-iv, Q-ii, R-iii, S-i",
+        "D) P-ii, Q-iv, R-i, S-iii",
+        "B) P-i, Q-iii, R-iv, S-ii",
+        "A) P-iii, Q-i, R-ii, S-iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Lice are ectoparasites (iii) living on the skin surface. Liver fluke is an endoparasite (i) living inside the bile duct. Cuscuta is a stem parasite (ii) that wraps around host stems. Female Anopheles mosquito is an ectoparasite (iv) that feeds on blood.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "parasitism",
+        "ectoparasite",
+        "endoparasite",
+        "cuscuta"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the following responses to abiotic stress:\nColumn I: (P) Regulate (Q) Conform (R) Migrate (S) Suspend\nColumn II: (i) Body temperature fluctuates with environment (ii) Maintain constant internal environment (iii) Move to a different habitat temporarily (iv) Enter dormancy/diapause",
+      "options": [
+        "C) P-iii, Q-iv, R-ii, S-i",
+        "B) P-i, Q-ii, R-iv, S-iii",
+        "A) P-ii, Q-i, R-iii, S-iv",
+        "D) P-iv, Q-iii, R-i, S-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Regulators maintain constant internal environment (ii). Conformers allow body conditions to fluctuate with the environment (i). Migrants move temporarily to another habitat (iii). Organisms that suspend activity enter dormancy or diapause (iv).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "regulate",
+        "conform",
+        "migrate",
+        "suspend"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the population equation terms:\nColumn I: (P) N (Q) r (R) K (S) t\nColumn II: (i) Time (ii) Intrinsic rate of natural increase (iii) Carrying capacity (iv) Population size",
+      "options": [
+        "D) P-i, Q-iii, R-ii, S-iv",
+        "B) P-ii, Q-iv, R-i, S-iii",
+        "A) P-iv, Q-ii, R-iii, S-i",
+        "C) P-iii, Q-i, R-iv, S-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "N represents population size (iv), r is the intrinsic rate of natural increase (ii), K is the carrying capacity (iii), and t is time (i). These are the key parameters in both exponential and logistic growth equations.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-equations",
+        "growth-parameters",
+        "ecology"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the r-selected and K-selected species features:\nColumn I: (P) Large litter size (Q) Small litter size with parental care (R) Short life span (S) Long life span\nColumn II: (i) K-selected (ii) r-selected (iii) r-selected (iv) K-selected",
+      "options": [
+        "B) P-i, Q-ii, R-iv, S-iii",
+        "C) P-iii, Q-iv, R-ii, S-i",
+        "A) P-ii, Q-i, R-iii, S-iv",
+        "D) P-iv, Q-iii, R-i, S-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Large litter size is characteristic of r-selected species (ii). Small litter size with parental care characterises K-selected species (i). Short life span is an r-selected trait (iii). Long life span is a K-selected trait (iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "r-selected",
+        "k-selected",
+        "life-history-traits"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the scientist with their contribution:\nColumn I: (P) Gause (Q) Connell (R) MacArthur (S) Paine\nColumn II: (i) Warbler resource partitioning (ii) Competitive exclusion in Paramecium (iii) Barnacle competition experiment (iv) Starfish removal and species diversity",
+      "options": [
+        "D) P-iv, Q-i, R-ii, S-iii",
+        "B) P-iii, Q-ii, R-iv, S-i",
+        "C) P-i, Q-iv, R-iii, S-ii",
+        "A) P-ii, Q-iii, R-i, S-iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Gause demonstrated competitive exclusion using Paramecium species (ii). Connell conducted the barnacle competition experiment (iii). MacArthur showed resource partitioning in warblers (i). Paine showed that removal of starfish (predator) reduces species diversity (iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "gause",
+        "connell",
+        "macarthur",
+        "paine"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Match the desert adaptation with its function:\nColumn I: (P) CAM photosynthesis (Q) Burrowing during day (R) Concentrated urine (S) Fat stored in hump (camel)\nColumn II: (i) Reduces water loss through excretion (ii) Opens stomata at night to reduce water loss (iii) Avoids extreme heat (iv) Metabolic water source",
+      "options": [
+        "D) P-iv, Q-i, R-ii, S-iii",
+        "C) P-i, Q-iv, R-iii, S-ii",
+        "B) P-iii, Q-ii, R-iv, S-i",
+        "A) P-ii, Q-iii, R-i, S-iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "CAM photosynthesis opens stomata only at night, reducing daytime water loss (ii). Burrowing during the day helps avoid extreme heat (iii). Producing concentrated urine minimises water loss through excretion (i). Fat stored in the hump can be metabolised to produce water (iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "desert-adaptation",
+        "cam-photosynthesis",
+        "water-conservation"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "How many of the following are examples of mutualism?\n(a) Mycorrhizae with plant roots\n(b) Lichens (algae and fungi)\n(c) Fig tree and wasp\n(d) Orchid on mango tree\n(e) Zooxanthellae in coral\n(f) Barnacles on whale",
+      "options": [
+        "D) Six",
+        "B) Four",
+        "A) Three",
+        "C) Five"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Four are examples of mutualism: (a) Mycorrhizae - fungi help in nutrient absorption, plant provides carbohydrates; (b) Lichens - algae provides food via photosynthesis, fungi provides shelter; (c) Fig-wasp - obligate mutualism; (e) Zooxanthellae provide food to coral. (d) Orchid on mango is commensalism, (f) Barnacles on whale is commensalism.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "mutualism",
+        "counting-type",
+        "population-interactions"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "How many of the following are abiotic components of the environment?\n(a) Temperature\n(b) Predation\n(c) Water\n(d) Light\n(e) Soil\n(f) Wind\n(g) Competition\n(h) Humidity",
+      "options": [
+        "D) Seven",
+        "C) Six",
+        "B) Five",
+        "A) Four"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Six are abiotic components: (a) Temperature, (c) Water, (d) Light, (e) Soil, (f) Wind, and (h) Humidity. Predation (b) and Competition (g) are biotic (living) interactions, not abiotic factors.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "abiotic-factors",
+        "counting-type",
+        "ecology"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "How many of the following are population attributes?\n(a) Birth rate\n(b) Death rate\n(c) Sex ratio\n(d) Age distribution\n(e) Species richness\n(f) Population density\n(g) Growth rate",
+      "options": [
+        "A) Four",
+        "D) Seven",
+        "B) Five",
+        "C) Six"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Six are population attributes: (a) Birth rate, (b) Death rate, (c) Sex ratio, (d) Age distribution, (f) Population density, and (g) Growth rate. Species richness (e) is a community attribute, not a population attribute.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-attributes",
+        "counting-type",
+        "demography"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "How many of the following are defence mechanisms used by plants against herbivory?\n(a) Thorns (Acacia, cactus)\n(b) Cardiac glycosides (Calotropis)\n(c) Nicotine\n(d) Caffeine\n(e) Quinine\n(f) Strychnine\n(g) Opium",
+      "options": [
+        "B) Five",
+        "C) Six",
+        "A) Four",
+        "D) Seven"
+      ],
+      "correctAnswer": "D",
+      "explanation": "All seven are defence mechanisms against herbivory. Thorns are physical defences. Cardiac glycosides, nicotine, caffeine, quinine, strychnine, and opium are all chemical defences produced by plants. According to NCERT, several plants produce chemicals like nicotine, caffeine, quinine, strychnine, and opium to deter herbivores.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "plant-defence",
+        "chemical-defence",
+        "herbivory"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "How many of the following are characteristics of r-selected species?\n(a) Small body size\n(b) Large number of offspring\n(c) Short life span\n(d) Little or no parental care\n(e) Late reproductive maturity\n(f) High intrinsic rate of increase",
+      "options": [
+        "A) Three",
+        "D) Six",
+        "C) Five",
+        "B) Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Five are characteristics of r-selected species: (a) Small body size, (b) Large number of offspring, (c) Short life span, (d) Little or no parental care, and (f) High intrinsic rate of increase. (e) Late reproductive maturity is incorrect - r-selected species show EARLY reproductive maturity.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "r-selected",
+        "life-history",
+        "counting-type"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "How many of the following interactions have at least one species benefited (+)?\n(a) Mutualism (+/+)\n(b) Predation (+/-)\n(c) Competition (-/-)\n(d) Parasitism (+/-)\n(e) Commensalism (+/0)\n(f) Amensalism (0/-)",
+      "options": [
+        "C) Four",
+        "A) Two",
+        "D) Five",
+        "B) Three"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Four interactions have at least one species benefited: (a) Mutualism - both benefit; (b) Predation - predator benefits; (d) Parasitism - parasite benefits; (e) Commensalism - one species benefits. In competition (-/-) neither benefits, and in amensalism (0/-) one is unaffected and the other is harmed.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-interactions",
+        "counting-type",
+        "benefit"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "How many of the following are correct about the logistic growth model?\n(a) It produces an S-shaped curve\n(b) It incorporates carrying capacity (K)\n(c) Resources are assumed unlimited\n(d) It is also called the Verhulst-Pearl equation\n(e) Growth rate is maximum when N = K/2\n(f) When N = K, growth rate is zero",
+      "options": [
+        "D) Six",
+        "C) Five",
+        "B) Four",
+        "A) Three"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Five statements are correct: (a) It produces S-shaped curve, (b) It incorporates K, (d) It is the Verhulst-Pearl equation, (e) Growth is maximum at N = K/2, and (f) Growth is zero when N = K. Statement (c) is incorrect - in the logistic model, resources are LIMITED (not unlimited; unlimited resources are assumed in exponential growth).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "logistic-growth",
+        "counting-type",
+        "growth-model"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "How many of the following organisms are conformers?\n(a) Frog\n(b) Fish\n(c) Lizard\n(d) Bird\n(e) Snake\n(f) Human\n(g) Earthworm",
+      "options": [
+        "D) Six",
+        "B) Four",
+        "A) Three",
+        "C) Five"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Five are conformers: (a) Frog, (b) Fish (most), (c) Lizard, (e) Snake, and (g) Earthworm. These are ectotherms whose body temperature varies with the ambient temperature. Birds (d) and Humans (f) are regulators (endotherms) that maintain constant body temperature.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "conformers",
+        "ectotherms",
+        "counting-type"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Arrange the following in the correct sequence of organismal responses to environmental stress (from most energy-efficient to most energy-expensive):\n(i) Migrate\n(ii) Conform\n(iii) Suspend activity\n(iv) Regulate",
+      "options": [
+        "C) iii -> ii -> iv -> i",
+        "A) ii -> iii -> i -> iv",
+        "B) iv -> i -> iii -> ii",
+        "D) ii -> iv -> iii -> i"
+      ],
+      "correctAnswer": "B",
+      "explanation": "From most energy-efficient to most expensive: Conforming (ii) requires no energy for homeostasis. Suspending activity (iii) like dormancy is low-cost. Migrating (i) requires significant energy. Regulating (iv) like thermoregulation is the most energetically expensive as it requires continuous metabolic expenditure.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "stress-response",
+        "energy-cost",
+        "sequence"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Arrange the following steps of logistic population growth in correct order:\n(i) Population reaches carrying capacity (K)\n(ii) Growth rate decelerates\n(iii) Lag phase with slow initial growth\n(iv) Exponential growth phase\n(v) Zero population growth at N = K",
+      "options": [
+        "A) iii -> iv -> ii -> i -> v",
+        "B) iv -> iii -> ii -> v -> i",
+        "D) iv -> ii -> iii -> v -> i",
+        "C) iii -> ii -> iv -> i -> v"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The logistic growth curve follows this sequence: Initial lag phase (iii) when population is small, followed by rapid exponential growth phase (iv), then deceleration of growth (ii) as resources become limiting, population reaches carrying capacity (i), and finally zero population growth (v) when N = K.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "logistic-growth",
+        "s-curve",
+        "growth-phases"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Arrange the following levels of biological organisation from lowest to highest:\n(i) Community\n(ii) Population\n(iii) Organism\n(iv) Biome\n(v) Ecosystem",
+      "options": [
+        "B) ii -> iii -> i -> iv -> v",
+        "D) ii -> i -> iii -> iv -> v",
+        "C) iii -> i -> ii -> v -> iv",
+        "A) iii -> ii -> i -> v -> iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct hierarchical sequence from lowest to highest is: Organism (iii) -> Population (ii) -> Community (i) -> Ecosystem (v) -> Biome (iv). An organism forms a population, populations form communities, communities along with abiotic factors form ecosystems, and similar ecosystems form biomes.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "biological-organisation",
+        "hierarchy",
+        "ecology"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Arrange the following in order of decreasing surface area to volume ratio:\n(i) Elephant\n(ii) Mouse\n(iii) Shrew\n(iv) Dog",
+      "options": [
+        "B) i -> iv -> ii -> iii",
+        "C) ii -> iii -> i -> iv",
+        "A) iii -> ii -> iv -> i",
+        "D) iv -> i -> iii -> ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The smaller the animal, the larger its surface area to volume ratio. In decreasing order of surface area to volume ratio: Shrew (iii) is the smallest, then Mouse (ii), then Dog (iv), and Elephant (i) has the lowest ratio. This is why small animals lose heat faster.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "surface-area-volume",
+        "body-size",
+        "thermoregulation"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Arrange the following events in the correct chronological order during competitive exclusion between two Paramecium species (Gause's experiment):\n(i) Both species grow initially\n(ii) One species declines\n(iii) Competitively superior species dominates\n(iv) Inferior species gets eliminated\n(v) Resources become limiting",
+      "options": [
+        "D) iii -> i -> v -> ii -> iv",
+        "C) i -> iii -> v -> iv -> ii",
+        "A) i -> v -> iii -> ii -> iv",
+        "B) v -> i -> ii -> iii -> iv"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In Gause's experiment: Both species initially grow (i) when resources are abundant. As resources become limiting (v), the competitively superior species starts dominating (iii), the inferior species begins to decline (ii), and eventually the inferior species is eliminated (iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "gause",
+        "competitive-exclusion",
+        "paramecium"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Arrange the following factors that affect population density in the correct order of: factors that increase density first, then factors that decrease density:\n(i) Immigration\n(ii) Emigration\n(iii) Natality\n(iv) Mortality",
+      "options": [
+        "C) i -> iii -> ii -> iv",
+        "B) iv -> ii -> iii -> i",
+        "D) ii -> iv -> i -> iii",
+        "A) iii -> i -> iv -> ii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Natality (iii) and Immigration (i) are the two factors that increase population density. Mortality (iv) and Emigration (ii) are the two factors that decrease population density. The population equation is: Nt+1 = Nt + [(B + I) - (D + E)].",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-density",
+        "natality",
+        "mortality",
+        "immigration"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Arrange the following steps of high altitude acclimatisation in correct sequence:\n(i) Increased RBC production\n(ii) Exposure to low atmospheric pressure and low O2\n(iii) Body senses oxygen deficiency\n(iv) Increased breathing rate\n(v) Kidney releases erythropoietin",
+      "options": [
+        "A) ii -> iii -> iv -> v -> i",
+        "C) ii -> iv -> iii -> v -> i",
+        "B) iii -> ii -> iv -> i -> v",
+        "D) iv -> ii -> iii -> i -> v"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct sequence of high altitude acclimatisation: Exposure to low atmospheric pressure and low oxygen (ii), body senses oxygen deficiency (iii), increased breathing rate as immediate response (iv), kidney releases erythropoietin (v), and finally increased RBC production (i) as a long-term adaptation.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "acclimatisation",
+        "altitude",
+        "rbc-production"
+      ],
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

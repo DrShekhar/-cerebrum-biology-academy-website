@@ -1,0 +1,2438 @@
+{
+  "batch": {
+    "name": "Class 12 - Chapter 14: Ecosystem",
+    "version": 1,
+    "source": "neet-class12-ch14",
+    "totalQuestions": 100
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The rate of production of organic matter during photosynthesis is called:",
+      "options": [
+        "C) Secondary Productivity",
+        "A) Net Primary Productivity",
+        "D) Net Ecosystem Productivity",
+        "B) Gross Primary Productivity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Gross Primary Productivity (GPP) is the rate of production of organic matter during photosynthesis. It represents the total amount of energy fixed by all autotrophs in the ecosystem. A considerable amount of GPP is utilised by plants in respiration.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "gpp",
+        "productivity",
+        "photosynthesis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Net Primary Productivity (NPP) is calculated as:",
+      "options": [
+        "B) GPP - Respiration",
+        "C) GPP x Respiration",
+        "D) GPP / Respiration",
+        "A) GPP + Respiration"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Net Primary Productivity (NPP) = GPP - R (respiration). NPP is the available biomass for consumption by heterotrophs (herbivores and decomposers). It represents the energy stored in plant biomass after respiratory losses.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "npp",
+        "gpp",
+        "respiration"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "According to Lindeman's 10% law, the energy transferred from one trophic level to the next is approximately:",
+      "options": [
+        "A) 1%",
+        "B) 5%",
+        "D) 20%",
+        "C) 10%"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Lindeman's 10% law states that only about 10% of the energy at one trophic level is transferred to the next trophic level. The remaining 90% is lost as heat through respiration and in other metabolic processes. This limits food chains to 3-5 trophic levels.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "10-percent-law",
+        "energy-flow",
+        "lindeman"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Which of the following ecological pyramids is always upright?",
+      "options": [
+        "A) Pyramid of numbers",
+        "C) Pyramid of energy",
+        "B) Pyramid of biomass",
+        "D) All pyramids are always upright"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The pyramid of energy is always upright because energy flow follows the second law of thermodynamics. Energy decreases at successive trophic levels as a large amount of energy is lost as heat at each step. It can never be inverted or spindle-shaped.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pyramid-of-energy",
+        "ecological-pyramids",
+        "energy-flow"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The process of breakdown of detritus into smaller particles by detritivores is called:",
+      "options": [
+        "C) Fragmentation",
+        "A) Leaching",
+        "B) Catabolism",
+        "D) Humification"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Fragmentation is the first step in decomposition where detritivores (earthworms, etc.) break down detritus into smaller particles. This increases the surface area for further microbial decomposition through leaching, catabolism, humification, and mineralization.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fragmentation",
+        "decomposition",
+        "detritivores"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The sequential replacement of one community by another in an area over a period of time is called:",
+      "options": [
+        "B) Ecological succession",
+        "C) Climax community",
+        "D) Sere",
+        "A) Stratification"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Ecological succession is the sequential, gradual, and predictable change in the species composition of a community over a period of time. It leads to the establishment of a climax community that is in equilibrium with the environment.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ecological-succession",
+        "community-change",
+        "ecology"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Primary succession occurs on:",
+      "options": [
+        "A) Abandoned farm lands",
+        "B) Burnt forests",
+        "D) Areas after deforestation",
+        "C) Bare rock or newly formed habitats"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Primary succession occurs in areas where no living organisms or soil exist, such as on bare rock, cooled lava, newly formed islands, or glacial moraines. It begins with pioneer species like lichens and is a slow process compared to secondary succession.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "primary-succession",
+        "bare-rock",
+        "pioneer-species"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Succession that starts in a dry habitat is called:",
+      "options": [
+        "B) Xerarch succession",
+        "C) Mesarch succession",
+        "A) Hydrarch succession",
+        "D) Lithosere"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Xerarch succession starts in dry habitats such as bare rock. It proceeds from xeric (dry) conditions to mesic (moderate moisture) conditions. The pioneers in xerarch succession are typically lichens, which help in soil formation by weathering rock.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "xerarch",
+        "dry-habitat",
+        "succession"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The pioneer species in xerarch succession on a bare rock are:",
+      "options": [
+        "B) Grasses",
+        "C) Lichens",
+        "D) Shrubs",
+        "A) Mosses"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lichens are the pioneer species in xerarch succession. They colonise bare rock surfaces and secrete acids that help in weathering the rock to form thin soil. They are crustose lichens that can survive on bare rock surfaces with minimal resources.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lichens",
+        "pioneer-species",
+        "xerarch-succession"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "In an aquatic ecosystem, the pyramid of biomass is:",
+      "options": [
+        "C) Can be inverted",
+        "D) Always spindle-shaped",
+        "B) Always inverted",
+        "A) Always upright"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In an aquatic ecosystem (like the ocean), the pyramid of biomass can be inverted. This is because the producers (phytoplankton) have less standing crop biomass than the consumers at any given time, even though they have higher productivity due to their rapid turnover rate.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pyramid-of-biomass",
+        "aquatic-ecosystem",
+        "inverted-pyramid"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Which nutrient cycle is described as 'gaseous' type?",
+      "options": [
+        "D) Iron cycle",
+        "C) Carbon cycle",
+        "B) Calcium cycle",
+        "A) Phosphorus cycle"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The carbon cycle is a gaseous type of nutrient cycle because the reservoir of carbon is in the atmosphere (as CO2) and in the ocean (as dissolved CO2). The phosphorus cycle is a sedimentary type because its reservoir is in the Earth's crust (rocks).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbon-cycle",
+        "gaseous-cycle",
+        "nutrient-cycling"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The phosphorus cycle is classified as a:",
+      "options": [
+        "A) Gaseous cycle",
+        "C) Atmospheric cycle",
+        "B) Sedimentary cycle",
+        "D) Hydrological cycle"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The phosphorus cycle is a sedimentary type nutrient cycle. The reservoir pool of phosphorus is the rocks and natural phosphate deposits (in the Earth's crust), not the atmosphere. Phosphorus enters the soil through weathering of phosphorus-bearing rocks.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "phosphorus-cycle",
+        "sedimentary-cycle",
+        "nutrient-cycling"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Detritus food chain begins with:",
+      "options": [
+        "D) Carnivores",
+        "C) Dead organic matter",
+        "B) Herbivores",
+        "A) Green plants"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The detritus food chain (DFC) begins with dead organic matter (detritus). Detritivores and decomposers feed on this dead matter. In many ecosystems, a much larger fraction of energy flows through the detritus food chain than through the grazing food chain.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "detritus-food-chain",
+        "dead-organic-matter",
+        "decomposition"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Which of the following is NOT a step of decomposition?",
+      "options": [
+        "D) Humification",
+        "C) Transpiration",
+        "B) Leaching",
+        "A) Fragmentation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Transpiration is a process of water loss from plant leaves and is not a step of decomposition. The steps of decomposition are: Fragmentation, Leaching, Catabolism, Humification, and Mineralization. These collectively convert complex organic matter into simpler inorganic substances.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "decomposition",
+        "transpiration",
+        "humification"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Humification leads to the formation of:",
+      "options": [
+        "A) Minerals",
+        "B) Humus",
+        "D) CO2",
+        "C) Detritus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Humification leads to the accumulation of humus, a dark-coloured amorphous substance. Humus is highly resistant to microbial action and undergoes decomposition at an extremely slow rate. It serves as a nutrient reservoir and improves soil structure.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "humification",
+        "humus",
+        "decomposition"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The standing crop refers to:",
+      "options": [
+        "D) The rate of energy flow",
+        "C) Only the plant biomass",
+        "A) The total productivity of an ecosystem",
+        "B) Each trophic level has a certain mass of living material at a particular time"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Standing crop is the amount of living material (biomass) present at each trophic level at a particular time. It is measured as the mass of living organisms per unit area and is used to construct pyramids of biomass.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "standing-crop",
+        "biomass",
+        "trophic-level"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "In a forest ecosystem, which food chain contributes more energy flow?",
+      "options": [
+        "A) Grazing food chain (GFC)",
+        "D) Neither contributes significantly",
+        "C) Both contribute equally",
+        "B) Detritus food chain (DFC)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In a terrestrial ecosystem like a forest, the detritus food chain (DFC) is the major conduit for energy flow. A large fraction of the NPP goes directly to decomposition rather than being consumed by herbivores. In an aquatic ecosystem, the GFC is more significant.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "detritus-food-chain",
+        "energy-flow",
+        "forest-ecosystem"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The final stable community in ecological succession is called:",
+      "options": [
+        "D) Transitional community",
+        "C) Climax community",
+        "A) Pioneer community",
+        "B) Seral community"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The climax community is the final, stable community in ecological succession that is in near equilibrium with the environment. It has maximum species diversity and biomass, and changes very little until disturbed by a major event.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "climax-community",
+        "succession",
+        "stable-community"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The process by which water-soluble inorganic nutrients go down into the soil horizon and get precipitated as unavailable salts is called:",
+      "options": [
+        "B) Leaching",
+        "C) Mineralization",
+        "A) Fragmentation",
+        "D) Catabolism"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Leaching is the process by which water-soluble inorganic nutrients go down into the soil horizon and get precipitated as unavailable salts. It is the second step of decomposition after fragmentation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "leaching",
+        "decomposition",
+        "soil-nutrients"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Which of the following ecosystems has the highest net primary productivity?",
+      "options": [
+        "A) Open ocean",
+        "D) Temperate grassland",
+        "C) Desert",
+        "B) Tropical rainforest"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Tropical rainforests have the highest net primary productivity among terrestrial ecosystems due to abundant rainfall, warm temperature, high solar radiation, and nutrient-rich soil. They contribute about 22% of the total NPP of the world's ecosystems.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "npp",
+        "tropical-rainforest",
+        "productivity"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Mineralization is the process where:",
+      "options": [
+        "B) Humus is further degraded by microbes to release inorganic nutrients",
+        "D) Plants absorb minerals from soil",
+        "A) Humus is formed from organic matter",
+        "C) Rocks are weathered to release minerals"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Mineralization is the process where humus is further degraded by some microbes and inorganic nutrients are released into the soil. These nutrients (like nitrogen, phosphorus, potassium) become available for plant uptake, completing the nutrient cycle.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "mineralization",
+        "humus",
+        "inorganic-nutrients"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "In the carbon cycle, the major reservoir of carbon is:",
+      "options": [
+        "D) Soil",
+        "A) Atmosphere",
+        "C) Ocean",
+        "B) Living organisms"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The ocean is the major reservoir of carbon, containing about 71% of all carbon on Earth as dissolved carbon dioxide. The atmosphere is the second major reservoir. Carbon cycles through the atmosphere, organisms, oceans, and fossil fuels.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbon-cycle",
+        "ocean",
+        "carbon-reservoir"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Ecosystem services include all EXCEPT:",
+      "options": [
+        "C) Generation of soil",
+        "B) Nutrient cycling",
+        "D) Extinction of species",
+        "A) Purification of air and water"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Extinction of species is not an ecosystem service; it is a loss of biodiversity. Ecosystem services include purification of air and water, nutrient cycling, soil generation, pollination, flood control, carbon sequestration, and many others that sustain life.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ecosystem-services",
+        "biodiversity",
+        "ecology"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Robert Costanza and colleagues estimated the value of ecosystem services provided by the biosphere per year at:",
+      "options": [
+        "A) 13 trillion US dollars",
+        "D) 43 trillion US dollars",
+        "B) 23 trillion US dollars",
+        "C) 33 trillion US dollars"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Robert Costanza and his colleagues estimated that the average value of ecosystem services provided by the biosphere was about 33 trillion US dollars per year. This is nearly twice the value of the global gross national product (GNP) at the time.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ecosystem-services",
+        "costanza",
+        "economic-value"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Hydrarch succession starts in:",
+      "options": [
+        "D) Sandy desert",
+        "B) Aquatic/water body",
+        "C) Rocky substrate",
+        "A) Dry habitat"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hydrarch succession is the succession that starts in a water body (aquatic habitat) and proceeds towards mesic (moderate moisture) conditions. The pioneer species in hydrarch succession are phytoplankton, and succession proceeds through submerged, floating, reed-swamp, and finally terrestrial stages.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "hydrarch",
+        "aquatic-succession",
+        "water-body"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The pyramid of numbers in a parasitic food chain is:",
+      "options": [
+        "C) Spindle-shaped",
+        "B) Inverted",
+        "D) Always the same as pyramid of energy",
+        "A) Upright"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In a parasitic food chain, the pyramid of numbers is inverted. This is because a single large organism (like a tree) may support many parasites, and each parasite may support even more hyperparasites, with numbers increasing at higher trophic levels.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pyramid-of-numbers",
+        "parasitic-food-chain",
+        "inverted"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The rate of decomposition is faster when:",
+      "options": [
+        "B) Detritus is rich in nitrogen and water-soluble sugars",
+        "C) Temperature is very low",
+        "D) Soil is anaerobic",
+        "A) Detritus is rich in lignin and chitin"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Decomposition is faster when detritus is rich in nitrogen and water-soluble sugars (high-quality substrate). Decomposition is slower when detritus is rich in lignin and chitin, which are resistant to microbial breakdown. Warm, moist conditions with aerobic soil accelerate decomposition.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "decomposition-rate",
+        "lignin",
+        "nitrogen-content"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The term 'sere' refers to:",
+      "options": [
+        "D) The transitional period between two communities",
+        "C) Only the pioneer community",
+        "A) The climax community",
+        "B) The entire sequence of communities that successively change in a given area"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A sere is the entire sequence of communities that successively change in a given area from the pioneer stage to the climax stage during ecological succession. Each transitional community in a sere is called a seral stage or seral community.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "sere",
+        "succession",
+        "seral-community"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The amount of CO2 fixation by autotrophs per unit area per unit time is termed as:",
+      "options": [
+        "A) Secondary productivity",
+        "C) Primary productivity",
+        "B) Community productivity",
+        "D) Net productivity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Primary productivity is defined as the amount of biomass or organic matter produced per unit area over a time period by plants during photosynthesis. It is expressed as g/m2/yr or kcal/m2/yr. Primary productivity depends on the plant species, their photosynthetic capacity, and various environmental factors.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "primary-productivity",
+        "co2-fixation",
+        "autotrophs"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Which component of the ecosystem is responsible for the cycling of nutrients?",
+      "options": [
+        "C) Decomposers",
+        "D) Tertiary consumers",
+        "B) Primary consumers",
+        "A) Producers"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Decomposers (fungi and bacteria) are the main agents responsible for nutrient cycling in ecosystems. They break down dead organic matter (detritus) and release inorganic nutrients back into the soil and atmosphere, making them available for producers.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "decomposers",
+        "nutrient-cycling",
+        "ecosystem-function"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Food webs are more realistic representations of feeding relationships than food chains because:",
+      "options": [
+        "C) They show interconnected food chains and multiple feeding relationships",
+        "B) They show only one pathway of energy flow",
+        "D) They always form a pyramid",
+        "A) They are simpler"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Food webs are more realistic than food chains because they represent the complex network of interconnected food chains in an ecosystem. Most organisms feed on multiple food sources and are consumed by multiple predators, creating a web-like structure.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "food-web",
+        "food-chain",
+        "feeding-relationships"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Which of the following factors does NOT affect the rate of decomposition?",
+      "options": [
+        "C) Soil moisture",
+        "B) Temperature",
+        "A) Chemical composition of detritus",
+        "D) Latitude directly"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Latitude does not directly affect decomposition. The rate of decomposition is directly affected by chemical composition of detritus, temperature, soil moisture, soil pH, and oxygen availability. Temperature and moisture are the most important climatic factors affecting decomposition.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "decomposition",
+        "factors",
+        "temperature-moisture"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "During secondary succession, the development of the community proceeds at a faster rate because:",
+      "options": [
+        "B) Soil and seeds are already present",
+        "D) Temperature is higher",
+        "C) There are no competitors",
+        "A) More sunlight is available"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Secondary succession proceeds faster than primary succession because soil, seeds, and other propagules are already present in the area. The site retains nutrients and organic matter from the previous community, providing a better substrate for colonisation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "secondary-succession",
+        "soil",
+        "faster-succession"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "In the phosphorus cycle, the natural reservoir of phosphorus is:",
+      "options": [
+        "C) Water bodies",
+        "A) Atmosphere",
+        "B) Rocks and natural phosphate deposits",
+        "D) Living organisms"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The natural reservoir of phosphorus is rocks and natural phosphate deposits. Phosphorus is released from rocks through weathering and becomes available to organisms through soil and water. Unlike nitrogen and carbon, phosphorus does not have a significant atmospheric component.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "phosphorus-cycle",
+        "rocks",
+        "sedimentary-cycle"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The pyramid of numbers in a grassland ecosystem is:",
+      "options": [
+        "B) Upright",
+        "C) Spindle-shaped",
+        "D) Not definite",
+        "A) Inverted"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In a grassland ecosystem, the pyramid of numbers is upright. There are many grass plants (producers) at the base, fewer herbivores (grasshoppers, rabbits), still fewer secondary consumers (frogs, birds), and fewest top predators (hawks, snakes).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pyramid-of-numbers",
+        "grassland",
+        "upright-pyramid"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Energy flow in an ecosystem is:",
+      "options": [
+        "A) Bidirectional",
+        "B) Unidirectional",
+        "D) Cyclical",
+        "C) Multidirectional"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Energy flow in an ecosystem is unidirectional. Energy enters as solar radiation, is captured by producers, and flows through various trophic levels. At each level, a large amount is lost as heat (respiration). Energy cannot be recycled unlike nutrients.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "energy-flow",
+        "unidirectional",
+        "ecosystem"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The enzymatic degradation of detritus into simpler inorganic substances is called:",
+      "options": [
+        "A) Fragmentation",
+        "D) Humification",
+        "C) Catabolism",
+        "B) Leaching"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Catabolism is the enzymatic process by which bacterial and fungal enzymes degrade detritus into simpler inorganic substances. It is the crucial step in decomposition where complex organic molecules are broken down by microbial enzymes.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "catabolism",
+        "decomposition",
+        "enzymatic-degradation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Secondary productivity is defined as:",
+      "options": [
+        "D) Rate of energy loss through respiration",
+        "A) Rate of production of organic matter by producers",
+        "C) Rate of decomposition",
+        "B) Rate of formation of new organic matter by consumers"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Secondary productivity is the rate of formation of new organic matter by consumers. It is the amount of energy assimilated by consumers (herbivores and carnivores) minus the energy lost through their respiration.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "secondary-productivity",
+        "consumers",
+        "organic-matter"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The pyramid of numbers in a single tree ecosystem (tree -> insects -> birds) is:",
+      "options": [
+        "D) Flat",
+        "C) Spindle-shaped",
+        "A) Upright",
+        "B) Inverted"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In a single tree ecosystem, the pyramid of numbers is inverted (or spindle-shaped). One single tree (producer) supports many herbivorous insects, which in turn support fewer insectivorous birds. The number of organisms increases from producer to primary consumer.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pyramid-of-numbers",
+        "inverted",
+        "tree-ecosystem"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Both hydrarch and xerarch succession lead to:",
+      "options": [
+        "D) Tundra community",
+        "B) Desert community",
+        "C) Mesic community (climax)",
+        "A) Aquatic community"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both hydrarch succession (starting from water) and xerarch succession (starting from dry habitat) converge towards a mesic (moderately moist) community, which is the climax community. Hydrarch becomes progressively drier while xerarch becomes progressively wetter.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "hydrarch",
+        "xerarch",
+        "mesic-community"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: The pyramid of energy is always upright.\nReason: Energy is progressively lost at each successive trophic level due to respiration.",
+      "options": [
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false",
+        "C) Assertion is true but Reason is false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both statements are true and the reason correctly explains the assertion. The pyramid of energy is always upright because energy obeys the laws of thermodynamics. At each trophic level, a significant amount of energy is lost as heat during respiration, so energy decreases at higher levels.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pyramid-of-energy",
+        "energy-loss",
+        "respiration"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: In a lake ecosystem, the pyramid of biomass is inverted.\nReason: The biomass of phytoplankton (producers) is less than that of zooplankton (consumers) at any given time.",
+      "options": [
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both statements are true and the reason explains the assertion. In aquatic ecosystems, the standing crop biomass of producers (phytoplankton) at any given time is less than that of consumers, creating an inverted biomass pyramid. This is because phytoplankton reproduce and are consumed rapidly (high turnover rate).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "inverted-pyramid",
+        "biomass",
+        "aquatic-ecosystem"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: NPP of an ecosystem is always less than GPP.\nReason: A considerable amount of GPP is used by plants themselves in respiration.",
+      "options": [
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both statements are true and the reason correctly explains the assertion. NPP = GPP - R (respiration). Since plants use a significant portion of GPP for their own respiratory needs, the net primary productivity available for consumers is always less than the gross primary productivity.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "npp",
+        "gpp",
+        "respiration"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: Secondary succession is faster than primary succession.\nReason: In secondary succession, soil with seeds and other propagules is already present.",
+      "options": [
+        "D) Both Assertion and Reason are false",
+        "C) Assertion is true but Reason is false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both statements are true and the reason correctly explains the assertion. Secondary succession occurs in areas where a natural community has been disturbed but soil and seeds remain. Since soil formation (the slowest step) is not needed, secondary succession proceeds much faster than primary succession.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "secondary-succession",
+        "primary-succession",
+        "soil"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: The phosphorus cycle does not have a gaseous phase.\nReason: Phosphorus is primarily found in rocks and soil as phosphates.",
+      "options": [
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false",
+        "D) Both Assertion and Reason are false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both statements are true and the reason explains the assertion. The phosphorus cycle is a sedimentary cycle without a significant gaseous phase because phosphorus primarily exists as phosphates in rocks and soil, not in the atmosphere. It cycles through the lithosphere, hydrosphere, and biosphere.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "phosphorus-cycle",
+        "sedimentary",
+        "no-gaseous-phase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: Decomposition is faster in tropical regions compared to temperate regions.\nReason: In tropical regions, warm temperature and high humidity provide optimal conditions for microbial activity.",
+      "options": [
+        "D) Both Assertion and Reason are false",
+        "C) Assertion is true but Reason is false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both statements are true and the reason explains the assertion. Decomposition is faster in warm, moist environments because these conditions promote microbial growth and enzymatic activity. Tropical regions provide optimal temperature and moisture for decomposers.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "decomposition",
+        "tropical",
+        "temperature-moisture"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: Energy flow in an ecosystem is unidirectional.\nReason: The energy captured by autotrophs can flow back to solar input after passing through each trophic level.",
+      "options": [
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false",
+        "D) Both Assertion and Reason are false"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The assertion is true - energy flow in an ecosystem is unidirectional. The reason is false because energy does NOT flow back to solar input. Energy that passes to the next trophic level and the energy that is lost as heat (respiration) cannot be reused by organisms. Unlike nutrients, energy is not recycled.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "energy-flow",
+        "unidirectional",
+        "no-recycling"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: Detritus is rich in lignin and chitin and decomposes slowly.\nReason: Lignin is a complex polymer that is resistant to microbial degradation.",
+      "options": [
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both statements are true and the reason explains the assertion. Detritus rich in lignin or chitin has a slow decomposition rate because lignin is a complex aromatic polymer that is highly resistant to microbial attack. Chitin (in arthropod exoskeletons) is similarly resistant.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lignin",
+        "chitin",
+        "decomposition-rate"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: Lichens are pioneer species in xerarch succession.\nReason: Lichens secrete acids that help in weathering of rock to form soil.",
+      "options": [
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both statements are true and the reason explains why lichens are pioneers. Lichens colonise bare rocks and secrete acids that dissolve and weather the rock surface, creating a thin layer of soil. This soil then allows mosses and other plants to establish, advancing succession.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lichens",
+        "pioneer-species",
+        "rock-weathering"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: Nutrient cycling is also called biogeochemical cycling.\nReason: Nutrients pass through biotic and abiotic components of the ecosystem in a cyclic manner.",
+      "options": [
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false",
+        "C) Assertion is true but Reason is false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both are true and the reason explains the assertion. Nutrient cycling is called biogeochemical cycling because nutrients move cyclically between living organisms (bio), the geological components (geo), and through chemical reactions (chemical) in the ecosystem.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nutrient-cycling",
+        "biogeochemical",
+        "cycling"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: Food chains are generally limited to 3-5 trophic levels.\nReason: At each trophic level, about 90% of energy is lost, leaving very little energy at higher levels.",
+      "options": [
+        "C) Assertion is true but Reason is false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both statements are true and the reason explains the assertion. Since only about 10% of energy transfers to the next trophic level (10% law), the energy available becomes too small to support another trophic level beyond 3-5 levels, limiting food chain length.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "food-chain-length",
+        "10-percent-law",
+        "energy-loss"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: Nutrients are recycled in an ecosystem but energy is not.\nReason: Nutrients cycle between biotic and abiotic components while energy flows unidirectionally and is eventually lost as heat.",
+      "options": [
+        "C) Assertion is true but Reason is false",
+        "D) Both Assertion and Reason are false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both statements are true and the reason explains the assertion. Unlike energy (which flows unidirectionally from sun through trophic levels and is lost as heat), nutrients like carbon, nitrogen, and phosphorus are recycled repeatedly between living organisms and the physical environment.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nutrient-cycling",
+        "energy-flow",
+        "ecosystem-function"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: Humus is resistant to microbial decomposition.\nReason: Humus is a light-coloured crystalline substance that decomposes rapidly.",
+      "options": [
+        "D) Both Assertion and Reason are false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "C) Assertion is true but Reason is false",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The assertion is true - humus is indeed resistant to microbial action and decomposes at an extremely slow rate. The reason is false because humus is a dark-coloured amorphous substance (not light-coloured crystalline) and it decomposes very slowly, not rapidly.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "humus",
+        "decomposition",
+        "dark-amorphous"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Assertion: The carbon cycle is considered a perfect cycle.\nReason: Carbon moves through the atmosphere, organisms, ocean, and fossil fuels in a balanced manner under natural conditions.",
+      "options": [
+        "C) Assertion is true but Reason is false",
+        "A) Both Assertion and Reason are true and Reason is the correct explanation of Assertion",
+        "B) Both Assertion and Reason are true but Reason is NOT the correct explanation of Assertion",
+        "D) Both Assertion and Reason are false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both statements are true and the reason explains the assertion. Under natural conditions, the carbon cycle is nearly perfectly balanced - carbon released through respiration, decomposition, and volcanic activity equals the carbon fixed by photosynthesis, maintaining atmospheric CO2 levels.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbon-cycle",
+        "balanced-cycle",
+        "natural-conditions"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Consider the following statements about decomposition:\nI. Fragmentation is carried out by detritivores like earthworms\nII. Leaching involves dissolution of water-soluble nutrients into soil\nIII. Catabolism is a physical process\nIV. Humification leads to accumulation of dark amorphous humus\nWhich of the above statements are correct?",
+      "options": [
+        "D) II and III only",
+        "B) I, II, III and IV",
+        "A) I, II and IV only",
+        "C) I and IV only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statements I, II, and IV are correct. Fragmentation by detritivores, leaching of soluble nutrients, and humification forming humus are all correct. Statement III is incorrect because catabolism is a biochemical (enzymatic) process, not a physical process. It involves degradation by bacterial and fungal enzymes.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "decomposition",
+        "fragmentation",
+        "humification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Which of the following statements about ecological pyramids are correct?\nI. Pyramid of energy is always upright\nII. Pyramid of biomass can be inverted in aquatic ecosystems\nIII. Pyramid of numbers can be inverted in a tree ecosystem\nIV. Pyramid of energy can be inverted in some ecosystems",
+      "options": [
+        "A) I, II and III only",
+        "B) I and II only",
+        "C) I, II, III and IV",
+        "D) I only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements I, II, and III are correct. The pyramid of energy is always upright. Biomass pyramid can be inverted in aquatic ecosystems. Numbers pyramid can be inverted in tree ecosystems. Statement IV is incorrect - the pyramid of energy can NEVER be inverted as it violates laws of thermodynamics.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ecological-pyramids",
+        "inverted-pyramid",
+        "energy-pyramid"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Read the following statements about ecological succession:\nI. Primary succession starts on bare rock\nII. Secondary succession starts on previously colonised areas\nIII. Xerarch and hydrarch succession lead to different climax communities\nIV. Each transitional community in a sere is called a seral stage\nWhich statements are correct?",
+      "options": [
+        "A) I, II and IV only",
+        "C) I and II only",
+        "D) I, II and III only",
+        "B) I, II, III and IV"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements I, II, and IV are correct. Primary succession starts on bare substrates, secondary succession on previously colonised areas, and transitional communities are called seral stages. Statement III is incorrect because both xerarch and hydrarch succession converge to the SAME mesic climax community.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "succession",
+        "primary",
+        "secondary",
+        "climax"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Consider the following statements about productivity:\nI. Primary productivity depends on plant species and environmental factors\nII. GPP includes the energy used in respiration\nIII. NPP is the available biomass for consumers\nIV. Oceans have highest total NPP due to their large area\nWhich of the above are correct?",
+      "options": [
+        "D) II and IV only",
+        "C) I and III only",
+        "B) I, II, III and IV",
+        "A) I, II and III only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "All four statements are correct. Primary productivity depends on species and environment. GPP includes respiratory losses. NPP is what remains for consumers. Despite low productivity per unit area, oceans contribute the highest total NPP because they cover about 70% of Earth's surface.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "productivity",
+        "gpp",
+        "npp",
+        "ocean"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Which of the following statements about the carbon cycle is INCORRECT?\nI. About 4 x 10^13 kg of carbon is fixed in the biosphere through photosynthesis annually\nII. Fossil fuel burning has no effect on the carbon cycle\nIII. Oceans are the major reservoir of carbon\nIV. Decomposition releases CO2 back to the atmosphere",
+      "options": [
+        "A) I only",
+        "D) IV only",
+        "C) III only",
+        "B) II only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statement II is incorrect. The burning of fossil fuels significantly affects the carbon cycle by releasing large amounts of CO2 that was locked in geological deposits, increasing atmospheric CO2 levels and contributing to global warming. Statements I, III, and IV are all correct.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbon-cycle",
+        "fossil-fuels",
+        "co2"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "How many of the following are abiotic components of an ecosystem?\n(a) Inorganic substances (C, N, CO2, H2O)\n(b) Organic compounds (proteins, carbohydrates, lipids)\n(c) Climatic factors (temperature, light, humidity)\n(d) Producers\n(e) Physical factors (soil, water)",
+      "options": [
+        "C) Four",
+        "D) Five",
+        "B) Three",
+        "A) Two"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Four are abiotic components: (a) Inorganic substances, (b) Organic compounds (humus, etc. in the non-living environment), (c) Climatic factors, and (e) Physical factors. Producers (d) are biotic components (living organisms), not abiotic.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "abiotic-components",
+        "ecosystem-structure",
+        "ecology"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Consider the following about food chains:\nI. Grazing food chain starts with green plants\nII. Detritus food chain starts with dead organic matter\nIII. In a forest, more energy flows through the GFC than DFC\nIV. GFC and DFC are interconnected through consumers\nWhich statements are correct?",
+      "options": [
+        "B) I, II and III only",
+        "D) I and II only",
+        "A) I, II and IV only",
+        "C) I, II, III and IV"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statements I, II, and IV are correct. GFC starts with living plants, DFC with dead organic matter, and they are connected. Statement III is incorrect because in a terrestrial forest ecosystem, MORE energy flows through the DFC than GFC. In aquatic ecosystems, GFC predominates.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "food-chains",
+        "gfc",
+        "dfc",
+        "energy-flow"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Which of the following statements about ecosystem services is/are correct?\nI. Robert Costanza estimated their value at $33 trillion/year\nII. Forest ecosystems provide carbon fixation\nIII. Pollination is an ecosystem service\nIV. Ecosystem services have no economic value",
+      "options": [
+        "C) I, II, III and IV",
+        "A) I, II and III only",
+        "B) I and II only",
+        "D) IV only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements I, II, and III are correct. Costanza estimated ecosystem services at ~$33 trillion/year. Forests fix carbon, and pollination is a crucial service. Statement IV is incorrect - ecosystem services have immense economic value as estimated by Costanza, nearly twice the global GNP.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ecosystem-services",
+        "costanza",
+        "economic-value"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Consider the following statements about nutrient cycling:\nI. The amount of nutrients like carbon, nitrogen is constant in the biosphere\nII. Nutrients are recycled repeatedly between biotic and abiotic components\nIII. There are two types: gaseous and sedimentary\nIV. In gaseous cycles, the reservoir is the lithosphere\nWhich statements are correct?",
+      "options": [
+        "C) II and III only",
+        "A) I, II and III only",
+        "D) I and IV only",
+        "B) I, II, III and IV"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements I, II, and III are correct. The total amount of nutrients remains constant, they cycle between biotic and abiotic components, and there are two types (gaseous and sedimentary). Statement IV is incorrect - in gaseous cycles, the reservoir is the ATMOSPHERE (not lithosphere). In sedimentary cycles, the reservoir is the lithosphere/Earth's crust.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nutrient-cycling",
+        "gaseous-cycle",
+        "sedimentary-cycle"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Read the following statements about succession:\nI. During succession, species diversity increases\nII. Total biomass increases during succession\nIII. Pioneer species are replaced by shade-tolerant species\nIV. In hydrarch succession, the pioneer species are phytoplankton\nHow many are correct?",
+      "options": [
+        "D) Four",
+        "A) One",
+        "C) Three",
+        "B) Two"
+      ],
+      "correctAnswer": "A",
+      "explanation": "All four statements are correct. During succession, species diversity and total biomass increase progressively. Pioneer species are eventually replaced by shade-tolerant climax species. In hydrarch (aquatic) succession, phytoplankton are the first colonisers.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "succession",
+        "species-diversity",
+        "biomass-increase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Which of the following statements about Lindeman's 10% law is/are correct?\nI. Only 10% of energy passes from one trophic level to the next\nII. 90% is lost as heat through respiration\nIII. This limits food chains to 3-5 trophic levels\nIV. This law applies only to terrestrial ecosystems",
+      "options": [
+        "A) I, II and III only",
+        "C) I and III only",
+        "B) I, II, III and IV",
+        "D) I only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements I, II, and III are correct. About 10% energy transfers to the next level, 90% is lost as heat, and this energy limitation restricts food chain length. Statement IV is incorrect - the 10% law applies to ALL ecosystems, both terrestrial and aquatic.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "10-percent-law",
+        "energy-transfer",
+        "food-chain-length"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Consider the following statements:\nI. PAR (Photosynthetically Active Radiation) constitutes about 50% of incident solar radiation\nII. Only 2-10% of PAR is captured by plants\nIII. The annual net primary productivity of the whole biosphere is about 170 billion tons of organic matter\nIV. Of this, more than half comes from terrestrial ecosystems\nHow many of the above statements are correct?",
+      "options": [
+        "B) Two",
+        "A) One",
+        "C) Three",
+        "D) Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Three statements are correct (I, II, III). PAR is about 50% of incident solar radiation. Only 2-10% of PAR is captured. Annual NPP of the biosphere is about 170 billion tons. Statement IV is incorrect - the ocean contributes more than half of the total NPP despite lower per-unit-area productivity, due to its vast area.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "par",
+        "npp",
+        "biosphere-productivity"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Consider the following about phosphorus cycle:\nI. It is a sedimentary cycle\nII. Rock weathering releases phosphorus\nIII. Phosphorus enters the soil and then is absorbed by plants\nIV. Phosphorus has a large atmospheric reservoir\nWhich are correct?",
+      "options": [
+        "B) I, II, III and IV",
+        "A) I, II and III only",
+        "C) I and II only",
+        "D) II and IV only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements I, II, and III are correct. The phosphorus cycle is sedimentary, rocks release phosphorus through weathering, and plants absorb it from soil. Statement IV is incorrect - phosphorus does NOT have a large atmospheric reservoir. Its reservoir is the Earth's crust (rocks), unlike nitrogen or carbon.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "phosphorus-cycle",
+        "sedimentary",
+        "rock-weathering"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Match the decomposition step with its description:\nColumn I: (P) Fragmentation (Q) Leaching (R) Catabolism (S) Humification\nColumn II: (i) Enzymatic degradation of detritus (ii) Formation of dark amorphous humus (iii) Breakdown of detritus into smaller pieces (iv) Water-soluble nutrients move into soil",
+      "options": [
+        "D) P-ii, Q-i, R-iv, S-iii",
+        "A) P-iii, Q-iv, R-i, S-ii",
+        "C) P-i, Q-ii, R-iii, S-iv",
+        "B) P-iv, Q-iii, R-ii, S-i"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Fragmentation (iii) - breaking detritus into smaller particles by detritivores. Leaching (iv) - water-soluble inorganic nutrients go down into soil horizon. Catabolism (i) - enzymatic degradation by bacteria and fungi. Humification (ii) - formation of dark amorphous humus.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "decomposition",
+        "fragmentation",
+        "leaching",
+        "catabolism"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Match the trophic level with the organisms:\nColumn I: (P) T1 (First trophic level) (Q) T2 (Second trophic level) (R) T3 (Third trophic level) (S) T4 (Fourth trophic level)\nColumn II: (i) Secondary consumers (ii) Producers (iii) Tertiary consumers (iv) Primary consumers",
+      "options": [
+        "D) P-iii, Q-i, R-iv, S-ii",
+        "A) P-ii, Q-iv, R-i, S-iii",
+        "C) P-i, Q-iii, R-ii, S-iv",
+        "B) P-iv, Q-ii, R-iii, S-i"
+      ],
+      "correctAnswer": "B",
+      "explanation": "T1 = Producers (ii) - autotrophs that fix energy. T2 = Primary consumers (iv) - herbivores. T3 = Secondary consumers (i) - primary carnivores. T4 = Tertiary consumers (iii) - top carnivores.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "trophic-levels",
+        "producers",
+        "consumers"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Match the type of succession with its starting habitat:\nColumn I: (P) Xerarch succession (Q) Hydrarch succession (R) Primary succession (S) Secondary succession\nColumn II: (i) Previously colonised area (ii) Water body (iii) Bare rock/dry habitat (iv) Area devoid of life and soil",
+      "options": [
+        "D) P-i, Q-iv, R-ii, S-iii",
+        "C) P-iv, Q-i, R-iii, S-ii",
+        "B) P-ii, Q-iii, R-i, S-iv",
+        "A) P-iii, Q-ii, R-iv, S-i"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Xerarch succession starts in dry habitats like bare rock (iii). Hydrarch succession starts in water bodies (ii). Primary succession occurs where no life or soil exists (iv). Secondary succession occurs in previously colonised areas that have been disturbed (i).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "succession-types",
+        "xerarch",
+        "hydrarch"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Match the ecological pyramid with its feature:\nColumn I: (P) Pyramid of numbers (Q) Pyramid of biomass (R) Pyramid of energy (S) Inverted pyramid\nColumn II: (i) Always upright (ii) Inverted in ocean ecosystem (iii) Can be inverted in tree ecosystem (iv) Seen in parasitic food chain (numbers)",
+      "options": [
+        "A) P-iii, Q-ii, R-i, S-iv",
+        "B) P-ii, Q-iii, R-iv, S-i",
+        "C) P-i, Q-iv, R-iii, S-ii",
+        "D) P-iv, Q-i, R-ii, S-iii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pyramid of numbers can be inverted in tree ecosystem (iii). Pyramid of biomass is inverted in ocean/aquatic ecosystem (ii). Pyramid of energy is always upright (i). Inverted pyramid of numbers is seen in parasitic food chain (iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ecological-pyramids",
+        "inverted",
+        "upright"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Match the term with its definition:\nColumn I: (P) GPP (Q) NPP (R) Standing crop (S) PAR\nColumn II: (i) Biomass at a given time (ii) GPP minus respiration (iii) Photosynthetically active radiation (iv) Total photosynthetic production",
+      "options": [
+        "B) P-ii, Q-iv, R-iii, S-i",
+        "D) P-i, Q-iii, R-ii, S-iv",
+        "A) P-iv, Q-ii, R-i, S-iii",
+        "C) P-iii, Q-i, R-iv, S-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "GPP is the total photosynthetic production (iv). NPP is GPP minus respiration (ii). Standing crop is the biomass present at a given time (i). PAR is photosynthetically active radiation (iii), which constitutes about 50% of incident solar radiation.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "gpp",
+        "npp",
+        "standing-crop",
+        "par"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Match the nutrient cycle with its reservoir:\nColumn I: (P) Carbon cycle (Q) Nitrogen cycle (R) Phosphorus cycle (S) Water cycle\nColumn II: (i) Atmosphere (ii) Ocean and atmosphere (iii) Rocks/Earth's crust (iv) Hydrosphere and atmosphere",
+      "options": [
+        "D) P-iv, Q-iii, R-ii, S-i",
+        "C) P-iii, Q-iv, R-i, S-ii",
+        "B) P-i, Q-ii, R-iv, S-iii",
+        "A) P-ii, Q-i, R-iii, S-iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Carbon cycle has its reservoir in the ocean and atmosphere (ii). Nitrogen cycle has its reservoir in the atmosphere (i). Phosphorus cycle has its reservoir in rocks/Earth's crust (iii). Water cycle has its reservoir in the hydrosphere and atmosphere (iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nutrient-cycles",
+        "reservoirs",
+        "carbon",
+        "phosphorus"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Match the pioneer species with the type of succession:\nColumn I: (P) Lichens (Q) Phytoplankton (R) Grasses and herbs (S) Small plants/mosses\nColumn II: (i) Hydrarch succession (ii) Xerarch on bare rock (iii) Secondary succession on abandoned farmland (iv) Xerarch moss stage",
+      "options": [
+        "A) P-ii, Q-i, R-iii, S-iv",
+        "B) P-i, Q-ii, R-iv, S-iii",
+        "D) P-iv, Q-iii, R-ii, S-i",
+        "C) P-iii, Q-iv, R-i, S-ii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Lichens are pioneers on bare rock in xerarch succession (ii). Phytoplankton are pioneers in hydrarch (aquatic) succession (i). Grasses and herbs pioneer secondary succession on abandoned farmland (iii). Small plants and mosses follow lichens in xerarch succession (iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pioneer-species",
+        "succession",
+        "lichens",
+        "phytoplankton"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Match the ecosystem with its primary productivity ranking (highest to lowest):\nColumn I: (P) Tropical rainforest (Q) Open ocean (R) Coral reef (S) Desert\nColumn II: (i) Highest per unit area (ii) Very high per unit area (iii) Low per unit area (iv) Very low per unit area",
+      "options": [
+        "A) P-i, Q-iii, R-ii, S-iv",
+        "B) P-ii, Q-iv, R-i, S-iii",
+        "D) P-iv, Q-ii, R-iii, S-i",
+        "C) P-iii, Q-i, R-iv, S-ii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tropical rainforests have the highest primary productivity per unit area (i). Coral reefs also have very high productivity (ii). Open ocean has low productivity per unit area (iii) but high total productivity due to vast area. Deserts have very low productivity (iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "productivity-ranking",
+        "ecosystems",
+        "npp"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Match the ecosystem service with its category:\nColumn I: (P) Pollination (Q) Carbon fixation (R) Nutrient cycling (S) Aesthetic beauty\nColumn II: (i) Regulatory service (ii) Supporting service (iii) Provisioning service (iv) Cultural service",
+      "options": [
+        "B) P-ii, Q-i, R-iii, S-iv",
+        "C) P-iii, Q-iv, R-i, S-ii",
+        "A) P-i, Q-i, R-ii, S-iv",
+        "D) P-iv, Q-ii, R-i, S-iii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Pollination and carbon fixation are regulatory services (i) that regulate ecological processes. Nutrient cycling is a supporting service (ii) that supports other ecosystem functions. Aesthetic beauty is a cultural service (iv) that provides non-material benefits.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "ecosystem-services",
+        "regulatory",
+        "supporting",
+        "cultural"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Match the food chain type with its features:\nColumn I: (P) Grazing food chain (Q) Detritus food chain (R) Parasitic food chain (S) Saprophytic food chain\nColumn II: (i) Starts with living producers (ii) Starts with dead organic matter (iii) Energy from host to parasite (iv) Decomposers feeding on dead matter",
+      "options": [
+        "B) P-ii, Q-i, R-iv, S-iii",
+        "D) P-iv, Q-iii, R-ii, S-i",
+        "C) P-iii, Q-iv, R-i, S-ii",
+        "A) P-i, Q-ii, R-iii, S-iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Grazing food chain starts with living producers (i). Detritus food chain starts with dead organic matter (ii). Parasitic food chain involves energy flow from host to parasite (iii). Saprophytic chain involves decomposers feeding on dead matter (iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "food-chain-types",
+        "gfc",
+        "dfc",
+        "parasitic"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Match the process in the carbon cycle with its description:\nColumn I: (P) Photosynthesis (Q) Respiration (R) Combustion (S) Decomposition\nColumn II: (i) Releases CO2 from organisms (ii) Fixes atmospheric CO2 (iii) Releases CO2 from fossil fuels (iv) Releases CO2 from dead organic matter",
+      "options": [
+        "C) P-iii, Q-iv, R-ii, S-i",
+        "B) P-i, Q-ii, R-iv, S-iii",
+        "A) P-ii, Q-i, R-iii, S-iv",
+        "D) P-iv, Q-iii, R-i, S-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Photosynthesis fixes atmospheric CO2 into organic matter (ii). Respiration releases CO2 from living organisms (i). Combustion releases CO2 from fossil fuels (iii). Decomposition releases CO2 from dead organic matter (iv).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbon-cycle",
+        "photosynthesis",
+        "respiration",
+        "combustion"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "How many of the following are steps of decomposition?\n(a) Fragmentation\n(b) Leaching\n(c) Catabolism\n(d) Humification\n(e) Mineralization\n(f) Nitrification\n(g) Photolysis",
+      "options": [
+        "D) Six",
+        "B) Four",
+        "C) Five",
+        "A) Three"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Five are steps of decomposition: (a) Fragmentation, (b) Leaching, (c) Catabolism, (d) Humification, and (e) Mineralization. Nitrification (f) is a step in the nitrogen cycle, and Photolysis (g) is the splitting of water in photosynthesis, neither is a step of decomposition.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "decomposition-steps",
+        "counting-type",
+        "ecology"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "How many of the following ecological pyramids can be inverted?\n(a) Pyramid of numbers in grassland\n(b) Pyramid of numbers in a tree ecosystem\n(c) Pyramid of biomass in an ocean\n(d) Pyramid of energy in any ecosystem\n(e) Pyramid of numbers in a parasitic food chain\n(f) Pyramid of biomass in a forest",
+      "options": [
+        "D) Four",
+        "A) One",
+        "B) Two",
+        "C) Three"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Three can be inverted: (b) Pyramid of numbers in a tree ecosystem, (c) Pyramid of biomass in an ocean, and (e) Pyramid of numbers in a parasitic food chain. Grassland numbers pyramid (a) is upright, energy pyramid (d) is NEVER inverted, and forest biomass pyramid (f) is upright.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ecological-pyramids",
+        "inverted",
+        "counting-type"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "How many of the following are ecosystem services?\n(a) Purification of air and water\n(b) Mitigation of droughts and floods\n(c) Nutrient cycling\n(d) Generation of soils\n(e) Pollination of crops\n(f) Biodiversity maintenance\n(g) Carbon sequestration",
+      "options": [
+        "B) Five",
+        "A) Four",
+        "D) Seven",
+        "C) Six"
+      ],
+      "correctAnswer": "C",
+      "explanation": "All seven are ecosystem services. Ecosystems provide purification of air and water, flood mitigation, nutrient cycling, soil generation, crop pollination, biodiversity maintenance, and carbon sequestration. Robert Costanza estimated these services are worth $33 trillion per year.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ecosystem-services",
+        "counting-type",
+        "ecology"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "How many of the following factors favour faster decomposition?\n(a) Warm temperature\n(b) High moisture\n(c) High lignin content in detritus\n(d) Aerobic conditions\n(e) Neutral or slightly acidic pH\n(f) High nitrogen content in detritus\n(g) Low temperature",
+      "options": [
+        "D) Six",
+        "B) Four",
+        "A) Three",
+        "C) Five"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Five factors favour faster decomposition: (a) Warm temperature, (b) High moisture, (d) Aerobic conditions, (e) Neutral/slightly acidic pH, and (f) High nitrogen content. High lignin (c) and low temperature (g) slow down decomposition rather than speeding it up.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "decomposition-factors",
+        "counting-type",
+        "temperature"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "How many of the following processes release CO2 into the atmosphere?\n(a) Photosynthesis\n(b) Respiration\n(c) Decomposition\n(d) Burning of fossil fuels\n(e) Volcanic activity\n(f) Nitrogen fixation",
+      "options": [
+        "B) Three",
+        "D) Five",
+        "C) Four",
+        "A) Two"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Four processes release CO2 into the atmosphere: (b) Respiration, (c) Decomposition, (d) Burning of fossil fuels, and (e) Volcanic activity. Photosynthesis (a) fixes CO2 (removes from atmosphere) and nitrogen fixation (f) does not directly release CO2.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbon-cycle",
+        "co2-release",
+        "counting-type"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "How many of the following are correct about the climax community?\n(a) It is the final stable community in succession\n(b) Species diversity is maximum\n(c) Total biomass is maximum\n(d) It is in equilibrium with the environment\n(e) Net community productivity is high\n(f) It replaces itself until disturbed",
+      "options": [
+        "C) Five",
+        "A) Three",
+        "D) Six",
+        "B) Four"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Five are correct: (a) final stable community, (b) maximum species diversity, (c) maximum total biomass, (d) in equilibrium with environment, (f) self-replacing until disturbed. Statement (e) is incorrect - in climax communities, net community productivity is close to ZERO because total respiration equals total production.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "climax-community",
+        "succession",
+        "counting-type"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "How many of the following are biotic components of an ecosystem?\n(a) Producers (autotrophs)\n(b) Primary consumers (herbivores)\n(c) Secondary consumers (carnivores)\n(d) Decomposers (saprotrophs)\n(e) Inorganic substances\n(f) Detritivores\n(g) Climatic factors",
+      "options": [
+        "A) Three",
+        "C) Five",
+        "D) Six",
+        "B) Four"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Five are biotic components: (a) Producers, (b) Primary consumers, (c) Secondary consumers, (d) Decomposers, and (f) Detritivores. Inorganic substances (e) and climatic factors (g) are abiotic components of the ecosystem.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "biotic-components",
+        "ecosystem-structure",
+        "counting-type"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "How many of the following stages are part of hydrarch succession?\n(a) Phytoplankton stage\n(b) Submerged plant stage\n(c) Floating plant stage\n(d) Reed-swamp stage\n(e) Sedge-meadow stage\n(f) Woodland stage\n(g) Lichen stage",
+      "options": [
+        "C) Six",
+        "A) Four",
+        "D) Seven",
+        "B) Five"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Six stages are part of hydrarch succession: (a) Phytoplankton, (b) Submerged plants, (c) Floating plants, (d) Reed-swamp, (e) Sedge-meadow, and (f) Woodland stages. The lichen stage (g) is part of xerarch succession, not hydrarch succession.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "hydrarch-succession",
+        "stages",
+        "counting-type"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Arrange the steps of decomposition in correct order:\n(i) Humification\n(ii) Fragmentation\n(iii) Mineralization\n(iv) Leaching\n(v) Catabolism",
+      "options": [
+        "B) iv -> ii -> v -> iii -> i",
+        "A) ii -> iv -> v -> i -> iii",
+        "C) ii -> v -> iv -> iii -> i",
+        "D) v -> ii -> iv -> i -> iii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct sequence of decomposition is: Fragmentation (ii) by detritivores -> Leaching (iv) of water-soluble nutrients -> Catabolism (v) by enzymes -> Humification (i) forming humus -> Mineralization (iii) releasing inorganic nutrients from humus.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "decomposition-sequence",
+        "fragmentation",
+        "mineralization"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Arrange the stages of xerarch succession on bare rock in correct order:\n(i) Shrub stage\n(ii) Lichen stage (crustose)\n(iii) Climax forest\n(iv) Moss stage\n(v) Herb stage\n(vi) Tree stage",
+      "options": [
+        "C) ii -> v -> iv -> i -> vi -> iii",
+        "D) v -> ii -> iv -> vi -> i -> iii",
+        "B) iv -> ii -> v -> i -> iii -> vi",
+        "A) ii -> iv -> v -> i -> vi -> iii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct sequence of xerarch succession: Crustose lichens (ii) colonise bare rock -> Mosses (iv) establish on thin soil -> Herbs (v) grow as soil develops -> Shrubs (i) invade -> Trees (vi) establish -> Climax forest (iii) develops as the final stable community.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "xerarch-succession",
+        "stages",
+        "lichen-to-forest"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Arrange the following in the correct order of energy flow in a grazing food chain:\n(i) Secondary consumers\n(ii) Producers\n(iii) Tertiary consumers\n(iv) Primary consumers\n(v) Sun",
+      "options": [
+        "C) v -> iv -> ii -> i -> iii",
+        "B) ii -> v -> iv -> iii -> i",
+        "A) v -> ii -> iv -> i -> iii",
+        "D) ii -> iv -> i -> v -> iii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The correct sequence of energy flow: Sun (v) provides radiant energy -> Producers/autotrophs (ii) fix energy -> Primary consumers/herbivores (iv) eat producers -> Secondary consumers (i) eat herbivores -> Tertiary consumers (iii) are top predators.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "energy-flow",
+        "food-chain",
+        "trophic-levels"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Arrange the stages of hydrarch succession in correct order:\n(i) Reed-swamp stage\n(ii) Phytoplankton stage\n(iii) Climax (forest)\n(iv) Submerged plant stage\n(v) Floating plant stage\n(vi) Sedge-meadow stage",
+      "options": [
+        "C) ii -> v -> iv -> i -> vi -> iii",
+        "D) v -> iv -> ii -> i -> iii -> vi",
+        "B) iv -> ii -> v -> vi -> i -> iii",
+        "A) ii -> iv -> v -> i -> vi -> iii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct sequence of hydrarch succession: Phytoplankton (ii) colonise water -> Submerged plants (iv) establish -> Floating plants (v) develop -> Reed-swamp stage (i) at margins -> Sedge-meadow (vi) forms -> Climax forest (iii) establishes as the final community.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "hydrarch-succession",
+        "stages",
+        "aquatic-to-terrestrial"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Arrange the following ecosystems in decreasing order of net primary productivity per unit area:\n(i) Desert\n(ii) Tropical rainforest\n(iii) Temperate forest\n(iv) Open ocean",
+      "options": [
+        "B) iii -> ii -> i -> iv",
+        "D) iv -> ii -> iii -> i",
+        "C) ii -> iv -> iii -> i",
+        "A) ii -> iii -> iv -> i"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In decreasing order of NPP per unit area: Tropical rainforest (ii) has the highest productivity -> Temperate forest (iii) -> Open ocean (iv) has low per-unit productivity -> Desert (i) has the lowest productivity due to water limitation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "npp-ranking",
+        "ecosystems",
+        "productivity"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Arrange the following steps in the phosphorus cycle:\n(i) Plants absorb phosphate from soil\n(ii) Weathering of phosphorus-bearing rocks\n(iii) Animals obtain phosphorus by eating plants\n(iv) Phosphorus returns to soil through decomposition\n(v) Phosphorus settles in ocean sediments",
+      "options": [
+        "B) i -> ii -> iii -> v -> iv",
+        "A) ii -> i -> iii -> iv -> v",
+        "D) v -> ii -> i -> iii -> iv",
+        "C) ii -> iii -> i -> iv -> v"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The phosphorus cycle: Rocks weather to release phosphorus (ii) -> Plants absorb phosphate ions from soil (i) -> Animals get phosphorus by eating plants (iii) -> Decomposition returns phosphorus to soil (iv) -> Some phosphorus eventually settles in ocean sediments (v).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "phosphorus-cycle",
+        "weathering",
+        "nutrient-cycling"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Arrange the following in the correct order of trophic levels in a pond ecosystem:\n(i) Zooplankton\n(ii) Phytoplankton\n(iii) Large fish (bass)\n(iv) Small fish",
+      "options": [
+        "A) ii -> i -> iv -> iii",
+        "B) i -> ii -> iv -> iii",
+        "C) ii -> iv -> i -> iii",
+        "D) iii -> iv -> i -> ii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In a pond ecosystem: Phytoplankton (ii) are the producers (T1) -> Zooplankton (i) are primary consumers (T2) -> Small fish (iv) are secondary consumers (T3) -> Large fish like bass (iii) are tertiary consumers (T4).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pond-ecosystem",
+        "trophic-levels",
+        "food-chain"
+      ],
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

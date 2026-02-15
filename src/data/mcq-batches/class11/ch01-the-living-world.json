@@ -1,0 +1,2542 @@
+{
+  "batch": {
+    "name": "Class 11 - Chapter 1: The Living World",
+    "version": 1,
+    "source": "neet-class11-ch01",
+    "totalQuestions": 100
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which of the following is a defining property of all living organisms?",
+      "options": [
+        "C) Metabolism",
+        "D) Response to stimuli",
+        "B) Reproduction",
+        "A) Growth"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, metabolism is the defining feature of all living organisms. No non-living object shows metabolism. Growth and reproduction are not defining because non-living objects can also grow (e.g., crystals) and some organisms (mules, worker bees) do not reproduce.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "metabolism",
+        "properties-of-living"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Growth in living organisms is from inside and is termed as:",
+      "options": [
+        "D) Superficial growth",
+        "C) Accretionary growth",
+        "A) Extrinsic growth",
+        "B) Intrinsic growth"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, growth in living organisms is from inside (intrinsic growth). Non-living objects like mountains and boulders grow by accumulation of material on the surface (extrinsic or accretionary growth).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "growth",
+        "properties-of-living"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which of the following organisms cannot reproduce?",
+      "options": [
+        "A) Algae and bryophytes",
+        "D) Worker bees and mules",
+        "B) Amoeba and yeast",
+        "C) Fungi and bacteria"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, many organisms like mules, sterile worker bees, and infertile human couples do not reproduce. Hence reproduction cannot be an all-inclusive defining characteristic of living organisms.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "reproduction"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "The number of known and described species of living organisms on Earth is approximately:",
+      "options": [
+        "B) 1.7-1.8 million",
+        "C) 2.5 million",
+        "D) 5 million",
+        "A) 1.2 million"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, the number of species that are known and described ranges between 1.7-1.8 million. This refers to the biodiversity present on Earth.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "biodiversity",
+        "classification"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Binomial nomenclature was introduced by:",
+      "options": [
+        "D) Theophrastus",
+        "A) John Ray",
+        "C) Aristotle",
+        "B) Carolus Linnaeus"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Carolus Linnaeus introduced the binomial system of nomenclature. As per NCERT, each organism is given a scientific name with two components — the generic name and the specific epithet.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "binomial-nomenclature",
+        "taxonomy",
+        "linnaeus"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "In binomial nomenclature, the correct way to write the scientific name of mango is:",
+      "options": [
+        "D) mangifera Indica",
+        "C) mangifera indica",
+        "B) Mangifera indica",
+        "A) Mangifera Indica"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT rules of binomial nomenclature, the generic name (Mangifera) starts with a capital letter while the specific epithet (indica) starts with a small letter. Both words are italicized when printed.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "binomial-nomenclature",
+        "nomenclature-rules"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "ICBN stands for:",
+      "options": [
+        "C) Indian Code of Botanical Nomenclature",
+        "B) International Congress of Biological Names",
+        "D) International Code of Botanical Nomenclature",
+        "A) International Centre for Biological Nomenclature"
+      ],
+      "correctAnswer": "C",
+      "explanation": "ICBN stands for International Code of Botanical Nomenclature. As per NCERT, scientific names are based on agreed principles and criteria provided by ICBN for plants and ICZN for animals.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nomenclature",
+        "ICBN",
+        "taxonomy"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "A herbarium is:",
+      "options": [
+        "A) A garden with living medicinal plants",
+        "D) A book containing actual account of habitat and distribution of plants",
+        "C) A place where animals are kept in captivity",
+        "B) A storehouse of collected, dried and pressed plant specimens mounted on sheets"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, herbarium is a store house of collected, dried and pressed plant specimens that are mounted on sheets. These sheets are arranged according to a universally accepted system of classification.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids",
+        "herbarium"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which of the following is the correct sequence of taxonomic categories from lower to higher?",
+      "options": [
+        "B) Species → Genus → Order → Family",
+        "A) Species → Order → Genus → Family",
+        "C) Species → Genus → Family → Order",
+        "D) Genus → Species → Family → Order"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the correct taxonomic hierarchy from lower to higher is: Species → Genus → Family → Order → Class → Phylum (Division for plants) → Kingdom.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "taxonomic-categories"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "The term 'systematics' is derived from the Latin word 'systema' which means:",
+      "options": [
+        "D) Naming of organisms",
+        "C) Study of diversity of organisms",
+        "B) Systematic placement of organisms",
+        "A) Classification of organisms"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, systematics is derived from the Latin word 'systema' which means systematic arrangement of organisms. Linnaeus used 'Systema Naturae' as the title of his publication.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "systematics",
+        "taxonomy"
+      ],
+      "neetWeightage": "LOW"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "A taxon is:",
+      "options": [
+        "D) The process of classification",
+        "A) A group of related families",
+        "C) A unit of classification that represents any level of grouping",
+        "B) A group of related species"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, a taxon refers to a unit of classification and represents any level of grouping of organisms based on certain common characteristics. It can be at the level of species, genus, family, order, etc.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomy",
+        "taxon"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "The taxonomic category 'Division' in plants corresponds to which category in animals?",
+      "options": [
+        "D) Kingdom",
+        "B) Order",
+        "C) Phylum",
+        "A) Class"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the term 'Phylum' is used for animals while 'Division' is used for plants. Both represent the same level in the taxonomic hierarchy, placed between Class and Kingdom.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "phylum",
+        "division"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which of the following is the most specific taxonomic category?",
+      "options": [
+        "C) Species",
+        "A) Genus",
+        "D) Order",
+        "B) Family"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, species is the most basic or most specific unit of classification. It is defined as a group of individual organisms with fundamental similarities.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "species",
+        "taxonomic-categories"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Botanical gardens provide which of the following facilities?",
+      "options": [
+        "B) Living plant species for reference and identification",
+        "A) Collection of dried plant specimens only",
+        "D) Only ornamental plant cultivation",
+        "C) Storage of animal specimens"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, botanical gardens have collections of living plants for reference. Each plant is labelled indicating its botanical/scientific name and the family to which it belongs. Famous botanical gardens include Kew (England), Indian Botanical Garden at Howrah.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "taxonomical-aids",
+        "botanical-gardens"
+      ],
+      "neetWeightage": "LOW"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "A monograph is:",
+      "options": [
+        "A) A document containing a list of species found in a particular area",
+        "D) An index to plant names and their synonyms",
+        "C) A book containing actual account of habitat and distribution of plants",
+        "B) A comprehensive account of information on any one taxon"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, monograph contains information on any one taxon. It is a comprehensive and detailed treatment of a particular taxonomic group.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids",
+        "monograph"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which of the following pairs of organisms belong to the same family?",
+      "options": [
+        "A) Potato and wheat",
+        "C) Wheat and mango",
+        "D) Mango and potato",
+        "B) Potato and tomato"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Potato (Solanum tuberosum) and tomato (Solanum lycopersicum) both belong to the family Solanaceae. As per NCERT, a family groups together related genera with less number of similarities compared to genus and species.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "family",
+        "taxonomy",
+        "solanaceae"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Keys used in taxonomy are based on:",
+      "options": [
+        "C) Contrasting characters generally in pairs (couplets)",
+        "A) Similarities only",
+        "B) Differences only",
+        "D) Phylogenetic relationships only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, keys are taxonomic aids used for identification of plants and animals based on contrasting characters generally in a pair called couplet. Each statement in the key is called a lead. Separate taxonomic keys are required for each taxonomic category.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids",
+        "keys",
+        "identification"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "As we go from species towards kingdom in a taxonomic hierarchy, the number of common characteristics:",
+      "options": [
+        "C) Remains same",
+        "B) Decreases",
+        "A) Increases",
+        "D) First increases then decreases"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, as we go higher from species to kingdom, the number of common characteristics decreases. Species within a genus share more characteristics than genera within a family. Lower taxa share more characteristics than higher taxa.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which of the following is NOT a characteristic of living organisms as described in NCERT?",
+      "options": [
+        "B) Interaction with environment",
+        "C) Ability to sense and respond to environment",
+        "A) Self-replication",
+        "D) Locomotion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, the defining properties of living organisms include self-replication, metabolism, interaction with environment, and ability to sense and respond to stimuli (consciousness). Locomotion is not listed as a defining property since plants and many organisms do not show locomotion.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "properties-of-living"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "The term 'Flora' refers to:",
+      "options": [
+        "D) A universal system of naming organisms",
+        "A) A comprehensive account of a single taxon",
+        "C) A list of animal species in a particular area",
+        "B) A list of species of plants in a particular area"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, Flora contains the actual account of habitat and distribution of plants of a given area. These provide the index to the plant species found in a particular area.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids",
+        "flora"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Awareness of surroundings is known as:",
+      "options": [
+        "B) Sensitivity",
+        "D) Responsiveness",
+        "A) Irritability",
+        "C) Consciousness"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, all organisms from prokaryotes to the most complex eukaryotes are able to sense and respond to environmental cues. This awareness is called consciousness. Human beings have self-consciousness, which is an additional feature.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "consciousness"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Linnaeus published his classification system in:",
+      "options": [
+        "A) Species Plantarum",
+        "C) Historia Naturalis",
+        "B) Systema Naturae",
+        "D) Genera Plantarum"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Linnaeus used 'Systema Naturae' as the title of his publication, which contained his systematic classification. As per NCERT, the word systematics is derived from the Latin word 'systema' and Linnaeus used this concept extensively.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "systematics",
+        "linnaeus",
+        "taxonomy"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which of the following is the largest botanical garden in the world?",
+      "options": [
+        "A) Indian Botanical Garden, Howrah",
+        "C) National Botanical Garden, Lucknow",
+        "B) Royal Botanical Garden, Kew (England)",
+        "D) Lloyd Botanical Garden, Darjeeling"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the Royal Botanical Garden, Kew (England) is mentioned as one of the famous botanical gardens. It is the largest in the world. The Indian Botanical Garden at Howrah is also mentioned as an important botanical garden.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "taxonomical-aids",
+        "botanical-gardens"
+      ],
+      "neetWeightage": "LOW"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "In the scientific name Mangifera indica Linn., 'Linn.' refers to:",
+      "options": [
+        "A) The family of mango",
+        "B) The person who discovered the plant",
+        "D) The place where the plant was discovered",
+        "C) The author who first described the species"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, the scientific name must be followed by the name of the author who first described that species. In Mangifera indica Linn., 'Linn.' is the abbreviated name of Linnaeus who first described mango.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "binomial-nomenclature",
+        "nomenclature-rules"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which is the correct hierarchy from lowest to highest for the classification of wheat?",
+      "options": [
+        "D) Triticum → Poaceae → Monocotyledonae → Poales → Angiospermae → Plantae",
+        "B) Triticum → Poales → Poaceae → Monocotyledonae → Angiospermae → Plantae",
+        "A) Triticum → Poaceae → Poales → Monocotyledonae → Angiospermae → Plantae",
+        "C) Poaceae → Triticum → Poales → Monocotyledonae → Angiospermae → Plantae"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the correct taxonomic hierarchy for wheat is: Genus (Triticum) → Family (Poaceae) → Order (Poales) → Class (Monocotyledonae) → Division (Angiospermae) → Kingdom (Plantae).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "wheat-classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "The sum total of all chemical reactions occurring in the body is called:",
+      "options": [
+        "C) Metabolism",
+        "D) Homeostasis",
+        "A) Catabolism",
+        "B) Anabolism"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, all living organisms are made of chemicals. These chemicals are constantly being made and changed into some other biomolecules. These conversions (chemical reactions) are collectively called metabolism.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "metabolism"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which among the following shows growth by cell division throughout life?",
+      "options": [
+        "D) Neither plants nor animals",
+        "C) Both plants and animals",
+        "A) Animals only",
+        "B) Plants only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, in plants, growth by cell division occurs continuously throughout their life span. In animals, growth occurs only up to a certain age, after which cells divide only to replace lost cells.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "growth"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Zoological parks are established for:",
+      "options": [
+        "D) Storage of animal specimens",
+        "A) Commercial exploitation of animals",
+        "B) Protection and conservation of wild animals in captivity",
+        "C) Research on plant taxonomy"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, zoological parks (or zoos) are places where wild animals are kept in protected environments under human care. These enable us to learn about their food habits and behaviour.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "taxonomical-aids",
+        "zoological-parks"
+      ],
+      "neetWeightage": "LOW"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "The biological concept of species was proposed by:",
+      "options": [
+        "A) Carolus Linnaeus",
+        "C) Charles Darwin",
+        "D) John Ray",
+        "B) Ernst Mayr"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ernst Mayr proposed the biological species concept, defining species as groups of actually or potentially interbreeding natural populations that are reproductively isolated from other such groups. NCERT mentions species as a group of individual organisms with fundamental similarities.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "species-concept",
+        "taxonomy"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which of the following is correct about the scientific name when written by hand?",
+      "options": [
+        "A) It should be italicized",
+        "C) It should be written in bold",
+        "D) It should be written in capital letters",
+        "B) It should be underlined separately (genus and species)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, the scientific name when printed is given in italics, and when written by hand, both the genus name and species name have to be underlined separately.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "binomial-nomenclature",
+        "nomenclature-rules"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which of the following has the most number of organisms sharing maximum similar characters?",
+      "options": [
+        "B) Family",
+        "A) Kingdom",
+        "C) Species",
+        "D) Genus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, species is the lowest and most specific category. Organisms belonging to the same species share the maximum number of similar characters. As we move higher in the hierarchy, the number of shared characters decreases.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "species"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "A manual is useful for:",
+      "options": [
+        "B) Identification of names of species found in a particular area",
+        "A) Identification of names of species found in a larger area",
+        "D) Preserving dried plant specimens",
+        "C) Obtaining information about a single taxon"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, manuals are useful in providing information for identification of names of species found in an area. They contain keys for identification and descriptions with other relevant information.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids",
+        "manual"
+      ],
+      "neetWeightage": "LOW"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "A type specimen is:",
+      "options": [
+        "A) Any specimen kept in a museum",
+        "D) A dried plant specimen mounted on a herbarium sheet",
+        "C) A specimen collected from the type locality only",
+        "B) The specimen on which the original description of a new species is based"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A type specimen (holotype) is the original specimen on which the description of a new species is based. It serves as the reference standard for that species name. This concept is fundamental to biological nomenclature as described in NCERT.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "type-specimen",
+        "holotype",
+        "nomenclature"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Museums have collections of preserved plant and animal specimens for study and reference. These specimens are preserved in:",
+      "options": [
+        "D) Water only",
+        "B) Alcohol only",
+        "A) Formalin only",
+        "C) Preservative solutions and as dry specimens"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, museums have collections of preserved plant and animal specimens for study and reference. Specimens are preserved in preservative solutions (like formalin) in containers or jars, and also as dry specimens. Insects are preserved in insect boxes after collection and killing.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "taxonomical-aids",
+        "museums"
+      ],
+      "neetWeightage": "LOW"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "The process of classification involves:",
+      "options": [
+        "D) Collecting specimens only",
+        "B) Identification only",
+        "A) Nomenclature only",
+        "C) Grouping organisms based on shared similarities and differences"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, classification is the process of grouping organisms into categories based on some easily observable characteristics. The organisms are classified on the basis of similarities and differences.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "classification",
+        "taxonomy"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "In a taxonomic key, each statement in the key is called:",
+      "options": [
+        "D) A category",
+        "B) A lead",
+        "A) A couplet",
+        "C) A taxon"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, key is a taxonomic aid used for identification based on contrasting characters in a pair called couplet. Each statement in the key is called a lead.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids",
+        "keys"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Metabolic reactions can occur in isolation outside the body of an organism in a test tube. Such reactions are called:",
+      "options": [
+        "A) In vivo reactions",
+        "C) In vitro reactions",
+        "B) In situ reactions",
+        "D) Ex situ reactions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, isolated metabolic reactions in vitro (in test tubes) are neither living nor non-living. However, the reactions inside the living body are collectively called metabolism, which is a defining feature of life.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "metabolism",
+        "in-vitro"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "The family Convolvulaceae belongs to the order:",
+      "options": [
+        "C) Polymoniales",
+        "D) Primales",
+        "A) Poales",
+        "B) Sapindales"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, the family Convolvulaceae is placed under the order Polymoniales based on shared characteristics. Similarly, family Solanaceae also belongs to the same order Polymoniales.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "order",
+        "family"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which of the following statements about taxonomy is correct?",
+      "options": [
+        "C) Taxonomy is the study of principles and procedures of identification, nomenclature and classification",
+        "D) Taxonomy includes only evolutionary relationships",
+        "B) Taxonomy is the study of naming organisms only",
+        "A) Taxonomy deals only with classification"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, taxonomy is the science dealing with the study of principles and procedures of identification, nomenclature, and classification of organisms. It is not limited to just one of these aspects.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomy",
+        "definition"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): Reproduction cannot be considered as an all-inclusive defining characteristic of living organisms.\nReason (R): Many organisms like mules, sterile worker bees, and infertile human couples do not reproduce.",
+      "options": [
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, both the assertion and reason are true. Reproduction is not an all-inclusive characteristic because organisms like mules, sterile worker bees, and infertile humans cannot reproduce. The reason correctly explains why reproduction fails as a defining characteristic.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "reproduction"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): Growth cannot be taken as a defining property of living organisms.\nReason (R): Non-living objects like mountains, boulders, and sand mounds also grow.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, both statements are true and the reason correctly explains the assertion. Growth alone cannot define living organisms because non-living objects like mountains and boulders also grow (by accumulation of material on the surface).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "growth"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): Metabolism is the defining characteristic of all living organisms.\nReason (R): No non-living object exhibits metabolism.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, metabolism (the sum total of all chemical reactions in the body) is the defining property of living organisms. No non-living object shows metabolism, making the reason the correct explanation for why it qualifies as the defining characteristic.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "metabolism"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): The scientific name of an organism is written in Latin.\nReason (R): Latin was the language of learned people in the past and biological nomenclature adopted it for universality.",
+      "options": [
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, biological names are generally in Latin and are written in italics. This is because Latin was the dominant language of science in historical times, providing universality to nomenclature. The reason correctly explains why Latin is used.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "binomial-nomenclature",
+        "nomenclature-rules"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): A species is the basic unit of taxonomy.\nReason (R): Species is a group of organisms that can interbreed and produce fertile offspring.",
+      "options": [
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both the assertion and reason are true, but the reason is not the correct explanation. Species is the basic unit of taxonomy because it is the lowest and most fundamental unit of classification (the assertion's true basis). The interbreeding criterion is the biological species concept, which is a defining characteristic of species but not the direct reason for it being the basic unit of taxonomy.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "species-concept",
+        "taxonomy"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): Herbarium sheets carry information about the date and place of collection, collector's name, etc.\nReason (R): Herbarium sheets are arranged according to a universally accepted system of classification.",
+      "options": [
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, both statements are true. Herbarium sheets do carry information about date, place of collection, and collector's name. They are also arranged according to a universally accepted classification system. However, the reason does not explain why herbarium sheets carry that particular information — these are two independent facts about herbaria.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids",
+        "herbarium"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): As we go from Kingdom to Species, the number of organisms in a taxon decreases.\nReason (R): Lower taxa have more common characteristics than higher taxa.",
+      "options": [
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, both statements are true. As we move from Kingdom to Species, the criteria for grouping become more specific (more common characteristics required at lower levels), which automatically reduces the number of organisms that qualify. The reason correctly explains the assertion.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): Consciousness is the defining property of living organisms.\nReason (R): Patients in a coma are considered living even though they lack apparent consciousness.",
+      "options": [
+        "D) Both A and R are true but R contradicts A",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, consciousness is indeed listed as a defining property of living organisms. Patients in coma are living despite lacking apparent self-consciousness. Both statements are true, but the reason does not explain the assertion — rather, it appears to present a challenging case. The reason is a factual statement that is true but does not serve as an explanation for why consciousness is a defining property.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "consciousness"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): Taxonomy and systematics are synonymous terms.\nReason (R): Both deal with classification and evolutionary relationships of organisms.",
+      "options": [
+        "D) Both A and R are false",
+        "C) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, taxonomy deals with identification, nomenclature, and classification while systematics takes into account evolutionary relationships in addition to external morphological similarities. They are related but not synonymous, so the assertion is false. The reason is true as both involve classification and relationships.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomy",
+        "systematics"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): In vitro metabolic reactions are considered living.\nReason (R): Metabolic reactions can occur in cell-free systems outside the body of an organism.",
+      "options": [
+        "C) A is false but R is true",
+        "D) Both A and R are false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, isolated metabolic reactions in vitro are neither living nor non-living. The assertion that they are considered living is false. However, the reason is true — metabolic reactions can indeed occur in cell-free systems (in vitro).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "metabolism",
+        "in-vitro"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): The genus Solanum includes both potato and brinjal.\nReason (R): Organisms placed in the same genus share more common features than those placed in the same family.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, both potato (Solanum tuberosum) and brinjal (Solanum melongena) belong to the genus Solanum. The reason is also true — organisms in the same genus share more features than those in the same family. However, the reason does not explain why potato and brinjal are in the same genus specifically.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "genus",
+        "taxonomy",
+        "solanaceae"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): Biodiversity refers to the number and types of organisms present on Earth.\nReason (R): The number of described species is approximately 1.7-1.8 million.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, biodiversity refers to the number and types of organisms present on Earth. The number of described species being 1.7-1.8 million is also true. However, the specific number of species does not explain the definition of biodiversity — it is merely a quantitative fact about it.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "biodiversity",
+        "classification"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): ICZN provides the rules for naming animal species.\nReason (R): ICBN provides the rules for naming plant species.",
+      "options": [
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, both statements are independently true. ICZN (International Code of Zoological Nomenclature) governs animal naming, and ICBN (International Code of Botanical Nomenclature) governs plant naming. Both are true but the reason does not explain the assertion — they are parallel independent facts.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nomenclature",
+        "ICBN",
+        "ICZN"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): Plants continue to grow throughout their life.\nReason (R): Plants have meristematic tissues that retain the capacity to divide.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, in plants, growth by cell division occurs continuously throughout their life span. This is because plants possess meristematic tissues (apical, lateral, intercalary) that retain the capacity to divide indefinitely. The reason correctly explains the assertion.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "growth",
+        "meristems"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Consider the following statements about properties of living organisms:\n(i) Growth is an all-inclusive characteristic of living organisms\n(ii) Metabolism is the defining characteristic of all living organisms\n(iii) Consciousness is absent in lower organisms like prokaryotes\n(iv) Reproduction is not an all-inclusive characteristic of living organisms\nHow many of the above statements are correct?",
+      "options": [
+        "D) Four",
+        "A) One",
+        "C) Three",
+        "B) Two"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statements (ii) and (iv) are correct. As per NCERT: (i) is incorrect because growth is not all-inclusive — non-living things also grow; (ii) is correct — metabolism is the defining feature; (iii) is incorrect — NCERT states that all organisms including prokaryotes have consciousness (ability to sense environment); (iv) is correct — mules and sterile worker bees cannot reproduce.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "properties-of-living"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Consider the following statements about taxonomic categories:\n(i) Species is the most basic unit of classification\n(ii) Genus comprises a group of related species\n(iii) Family has more common features than Order\n(iv) Class includes related orders\n(v) Phylum is used for plants while Division is used for animals\nHow many of the above statements are correct?",
+      "options": [
+        "D) Five",
+        "C) Four",
+        "A) Two",
+        "B) Three"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements (i), (ii), (iii), and (iv) are correct. As per NCERT: (i) Species is the most basic unit; (ii) Genus comprises related species; (iii) Family members share more features than Order members; (iv) Class includes related orders; (v) is incorrect — Phylum is used for animals and Division for plants (reversed in the statement).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "taxonomic-categories"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which of the following statements about binomial nomenclature are correct?\n(i) The generic name begins with a capital letter\n(ii) The specific epithet begins with a capital letter\n(iii) When handwritten, both components are separately underlined\n(iv) The author's name appears after the specific epithet\n(v) The name should be derived from English language only",
+      "options": [
+        "C) (i), (ii), (iii) and (iv)",
+        "A) (i), (ii) and (iii) only",
+        "D) All five statements",
+        "B) (i), (iii) and (iv) only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT: (i) Correct — generic name starts with capital letter; (ii) Incorrect — specific epithet starts with small letter; (iii) Correct — when handwritten, both are separately underlined; (iv) Correct — author's name appears after the specific epithet; (v) Incorrect — names are generally in Latin, not English.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "binomial-nomenclature",
+        "nomenclature-rules"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Consider the following statements about taxonomical aids:\n(i) Herbarium stores dried and pressed plant specimens\n(ii) Botanical gardens have collections of dead preserved plants\n(iii) Museums have collections of preserved specimens for study\n(iv) Zoological parks keep wild animals in protected environments\n(v) Keys are based on similarities rather than contrasting characters\nHow many of the above statements are INCORRECT?",
+      "options": [
+        "A) One",
+        "C) Three",
+        "D) Four",
+        "B) Two"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statements (ii) and (v) are incorrect. As per NCERT: (i) Correct — herbarium stores dried and pressed specimens; (ii) Incorrect — botanical gardens have collections of LIVING plants, not dead ones; (iii) Correct — museums have preserved specimens; (iv) Correct — zoos keep wild animals in protected environments; (v) Incorrect — keys are based on CONTRASTING characters in pairs (couplets), not similarities.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Read the following statements and select the correct option:\n(i) Taxonomy is the study of identification, nomenclature and classification\n(ii) Systematics considers evolutionary relationships\n(iii) Classification is the process of grouping organisms based on similarities\n(iv) Identification is the process of determining the correct name of an organism",
+      "options": [
+        "B) (i), (ii) and (iii) are correct",
+        "C) (i), (ii), (iii) and (iv) are correct",
+        "A) (i) and (ii) are correct",
+        "D) Only (i) is correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT: (i) Correct — taxonomy includes identification, nomenclature, and classification; (ii) Correct — systematics considers evolutionary relationships; (iii) Correct — classification groups organisms based on similarities; (iv) Incorrect — identification is the process of determining the correct taxonomic position or describing an organism, not merely finding its name.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomy",
+        "systematics",
+        "classification"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Consider the following pairs:\n(i) Wheat — Family Poaceae\n(ii) Potato — Family Solanaceae\n(iii) Man — Order Primata\n(iv) Housefly — Phylum Arthropoda\nHow many of the above pairs are correctly matched?",
+      "options": [
+        "D) Four",
+        "A) One",
+        "B) Two",
+        "C) Three"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, all four pairs are correctly matched: (i) Wheat (Triticum aestivum) belongs to family Poaceae; (ii) Potato (Solanum tuberosum) belongs to family Solanaceae; (iii) Man (Homo sapiens) belongs to order Primata; (iv) Housefly (Musca domestica) belongs to phylum Arthropoda.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "classification-examples"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Consider the following statements:\n(i) Unicellular organisms reproduce by cell division (increase in cell number is growth)\n(ii) In multicellular organisms, growth and reproduction are mutually exclusive\n(iii) In plants, growth continues throughout life\n(iv) In animals, growth is limited to a certain age\nWhich of the above statements are correct?",
+      "options": [
+        "D) (i), (ii), (iii) and (iv)",
+        "B) (i), (iii) and (iv) only",
+        "C) (ii), (iii) and (iv) only",
+        "A) (i) and (ii) only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, all four statements are correct: (i) In unicellular organisms, increase in cell number is both growth and reproduction; (ii) In multicellular organisms, these processes are mutually exclusive events; (iii) Plants grow continuously throughout life; (iv) Animals grow up to a certain age only.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "growth",
+        "reproduction"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "How many of the following are characteristics of living organisms as per NCERT?\n(i) Growth\n(ii) Reproduction\n(iii) Metabolism\n(iv) Consciousness\n(v) Ability to sense environment\n(vi) Self-replication\n(vii) Locomotion",
+      "options": [
+        "B) Five",
+        "A) Four",
+        "D) Seven",
+        "C) Six"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, characteristics (i) through (vi) are all mentioned as properties of living organisms — growth, reproduction, metabolism, consciousness, ability to sense environment, and self-replication. Locomotion (vii) is NOT mentioned as a defining characteristic of living organisms since many organisms like plants do not exhibit locomotion.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "properties-of-living"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Consider the following statements about the need for classification:\n(i) There are millions of organisms on Earth requiring systematic study\n(ii) Classification helps in identification of organisms\n(iii) Classification is essential to understand the diversity of life forms\n(iv) Classification hinders the study of organisms by creating artificial groups\nWhich of the above statements are correct?",
+      "options": [
+        "C) (i), (ii), (iii) and (iv)",
+        "A) (i) and (ii) only",
+        "D) (ii) and (iii) only",
+        "B) (i), (ii) and (iii) only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, statements (i), (ii), and (iii) are correct. There are millions of organisms (1.7-1.8 million described), and classification helps in identifying and understanding the diversity of life forms. Statement (iv) is incorrect because classification does not hinder study — it facilitates systematic study of organisms.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "biodiversity",
+        "classification",
+        "need-for-classification"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Read the following statements about 'Fauna':\n(i) It refers to the animal species found in a particular region\n(ii) It is similar to Flora which deals with plant species\n(iii) Fauna includes information about habitat and distribution\n(iv) Fauna is a type of key used for identification\nHow many of the above statements are correct?",
+      "options": [
+        "B) Two",
+        "C) Three",
+        "A) One",
+        "D) Four"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, statements (i), (ii), and (iii) are correct. Fauna refers to animal species of a particular region, similar to Flora which deals with plants. Both provide information on habitat and distribution. Statement (iv) is incorrect — Fauna is not a key; keys are separate taxonomical aids based on contrasting characters.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids",
+        "fauna",
+        "flora"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Consider the following statements:\n(i) Each statement in a taxonomic key is called a lead\n(ii) Contrasting characters in a key are called couplets\n(iii) Separate keys are required for each taxonomic category\n(iv) Keys are only used for plant identification\nWhich of the above statements are correct?",
+      "options": [
+        "C) (i), (ii), (iii) and (iv)",
+        "A) (i), (ii) and (iii) only",
+        "B) (i) and (iii) only",
+        "D) (ii) and (iv) only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT: (i) Correct — each statement in the key is called a lead; (ii) Correct — contrasting characters generally in a pair are called couplets; (iii) Correct — separate keys are needed for each taxonomic category (family, genus, species, etc.); (iv) Incorrect — keys are used for identification of both plants and animals.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids",
+        "keys"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Consider the following statements:\n(i) Solanum tuberosum and Solanum nigrum belong to the same genus\n(ii) Solanum and Petunia belong to the same family (Solanaceae)\n(iii) Family Solanaceae and Convolvulaceae are placed in order Polymoniales\n(iv) Lion (Panthera leo) and leopard (Panthera pardus) belong to the same genus\nHow many of the above statements are correct?",
+      "options": [
+        "B) Two",
+        "C) Three",
+        "A) One",
+        "D) Four"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, all four statements are correct: (i) Both Solanum tuberosum (potato) and Solanum nigrum belong to genus Solanum; (ii) Solanum and Petunia are both in family Solanaceae; (iii) Solanaceae and Convolvulaceae are placed in order Polymoniales; (iv) Lion and leopard share the genus Panthera.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "genus",
+        "family",
+        "order"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "How many of the following taxonomical aids help in studying organisms by maintaining living specimens?\n(i) Herbarium\n(ii) Botanical garden\n(iii) Museum\n(iv) Zoological park\n(v) Keys",
+      "options": [
+        "A) One",
+        "D) Four",
+        "C) Three",
+        "B) Two"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, only botanical gardens and zoological parks maintain LIVING specimens. Herbarium stores dried and pressed specimens, museums have preserved (dead) specimens, and keys are analytical tools based on contrasting characters. So only (ii) and (iv) — two aids — maintain living specimens.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Consider the following statements about growth in organisms:\n(i) Growth in living organisms is by cell division\n(ii) In plants, growth occurs in specific regions only\n(iii) Dead organisms do not grow\n(iv) Non-living objects grow by accumulation of material on the surface\n(v) Increase in body mass is considered as growth\nWhich of the above statements are correct?",
+      "options": [
+        "D) (i), (iv) and (v) only",
+        "C) All five are correct",
+        "A) (i), (iii), (iv) and (v) only",
+        "B) (i), (ii), (iii) and (iv) only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT: (i) Correct — living organisms grow by cell division; (ii) Incorrect — NCERT says plants grow continuously throughout life but doesn't say growth occurs in specific regions only in this chapter context; (iii) Correct — dead organisms do not grow; (iv) Correct — non-living objects grow by accumulation of material on surface; (v) Correct — increase in mass is considered growth.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "growth"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Taxonomical Aid) — Column II (Description)\n(a) Herbarium — (i) Place with living plant collections for reference\n(b) Botanical Garden — (ii) Storehouse of dried, pressed plant specimens\n(c) Museum — (iii) Place where wild animals are kept in captivity\n(d) Zoological Park — (iv) Collections of preserved plant and animal specimens",
+      "options": [
+        "D) a-iv, b-i, c-ii, d-iii",
+        "A) a-ii, b-i, c-iv, d-iii",
+        "C) a-ii, b-i, c-iii, d-iv",
+        "B) a-i, b-ii, c-iii, d-iv"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT: Herbarium (a) is a storehouse of dried, pressed plant specimens (ii); Botanical Garden (b) has living plant collections for reference (i); Museum (c) has preserved plant and animal specimens (iv); Zoological Park (d) is where wild animals are kept in captivity (iii).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Organism) — Column II (Taxonomic Family)\n(a) Wheat — (i) Solanaceae\n(b) Potato — (ii) Poaceae\n(c) Lion — (iii) Hominidae\n(d) Man — (iv) Felidae",
+      "options": [
+        "B) a-i, b-ii, c-iv, d-iii",
+        "D) a-iv, b-iii, c-ii, d-i",
+        "C) a-ii, b-i, c-iii, d-iv",
+        "A) a-ii, b-i, c-iv, d-iii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT: Wheat belongs to family Poaceae (a-ii); Potato belongs to family Solanaceae (b-i); Lion belongs to family Felidae (c-iv); Man belongs to family Hominidae (d-iii).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "family",
+        "classification-examples"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Taxonomic Category) — Column II (Example for wheat classification)\n(a) Genus — (i) Poales\n(b) Family — (ii) Plantae\n(c) Order — (iii) Triticum\n(d) Kingdom — (iv) Poaceae",
+      "options": [
+        "B) a-iv, b-iii, c-ii, d-i",
+        "D) a-ii, b-iv, c-i, d-iii",
+        "C) a-iii, b-i, c-iv, d-ii",
+        "A) a-iii, b-iv, c-i, d-ii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, the classification of wheat: Genus is Triticum (a-iii); Family is Poaceae (b-iv); Order is Poales (c-i); Kingdom is Plantae (d-ii).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "wheat-classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Scientific Name) — Column II (Common Name)\n(a) Mangifera indica — (i) Housefly\n(b) Triticum aestivum — (ii) Human\n(c) Homo sapiens — (iii) Mango\n(d) Musca domestica — (iv) Wheat",
+      "options": [
+        "D) a-ii, b-i, c-iii, d-iv",
+        "C) a-iii, b-iv, c-i, d-ii",
+        "B) a-iv, b-iii, c-ii, d-i",
+        "A) a-iii, b-iv, c-ii, d-i"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT: Mangifera indica is Mango (a-iii); Triticum aestivum is Wheat (b-iv); Homo sapiens is Human (c-ii); Musca domestica is Housefly (d-i).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "binomial-nomenclature",
+        "scientific-names"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Term) — Column II (Definition)\n(a) Flora — (i) Account of any one taxon\n(b) Fauna — (ii) Information for identification in a particular area\n(c) Monograph — (iii) Plant species of a particular area\n(d) Manual — (iv) Animal species of a particular area",
+      "options": [
+        "D) a-i, b-ii, c-iii, d-iv",
+        "B) a-iv, b-iii, c-i, d-ii",
+        "A) a-iii, b-iv, c-i, d-ii",
+        "C) a-iii, b-iv, c-ii, d-i"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT: Flora refers to plant species of an area (a-iii); Fauna refers to animal species of an area (b-iv); Monograph contains account of any one taxon (c-i); Manual provides information for identification in a particular area (d-ii).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids",
+        "flora",
+        "fauna",
+        "monograph",
+        "manual"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Property) — Column II (Limitation as defining characteristic)\n(a) Growth — (i) Mules and worker bees cannot do this\n(b) Reproduction — (ii) Non-living objects like crystals also show this\n(c) Metabolism — (iii) In vitro reactions are neither living nor non-living\n(d) Consciousness — (iv) Patients in coma lack apparent awareness",
+      "options": [
+        "C) a-ii, b-i, c-iv, d-iii",
+        "A) a-ii, b-i, c-iii, d-iv",
+        "D) a-iv, b-iii, c-ii, d-i",
+        "B) a-i, b-ii, c-iii, d-iv"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT: Growth's limitation is that non-living objects like crystals also grow (a-ii); Reproduction's limitation is that mules and worker bees cannot reproduce (b-i); Metabolism's caveat is that in vitro reactions are neither living nor non-living (c-iii); Consciousness is challenged by coma patients lacking awareness (d-iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "properties-of-living"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Taxonomic Category) — Column II (Example for human classification)\n(a) Order — (i) Mammalia\n(b) Class — (ii) Homo\n(c) Genus — (iii) Primata\n(d) Family — (iv) Hominidae",
+      "options": [
+        "C) a-iii, b-i, c-iv, d-ii",
+        "D) a-iv, b-ii, c-i, d-iii",
+        "B) a-i, b-iii, c-ii, d-iv",
+        "A) a-iii, b-i, c-ii, d-iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, for human classification: Order is Primata (a-iii); Class is Mammalia (b-i); Genus is Homo (c-ii); Family is Hominidae (d-iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "human-classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Organism) — Column II (Genus)\n(a) Potato — (i) Panthera\n(b) Tiger — (ii) Solanum\n(c) Dog — (iii) Homo\n(d) Human — (iv) Canis",
+      "options": [
+        "B) a-i, b-ii, c-iv, d-iii",
+        "C) a-ii, b-iv, c-i, d-iii",
+        "D) a-iii, b-i, c-ii, d-iv",
+        "A) a-ii, b-i, c-iv, d-iii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT: Potato belongs to genus Solanum (a-ii); Tiger belongs to genus Panthera (b-i); Dog belongs to genus Canis (c-iv); Human belongs to genus Homo (d-iii).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "genus",
+        "classification-examples"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Nomenclature Code) — Column II (Applicable to)\n(a) ICBN — (i) Animal nomenclature\n(b) ICZN — (ii) Bacterial nomenclature\n(c) ICNB — (iii) Virus nomenclature\n(d) ICTV — (iv) Plant nomenclature",
+      "options": [
+        "A) a-iv, b-i, c-ii, d-iii",
+        "C) a-iv, b-i, c-iii, d-ii",
+        "B) a-i, b-iv, c-ii, d-iii",
+        "D) a-ii, b-iii, c-iv, d-i"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT and standard biology: ICBN (International Code of Botanical Nomenclature) is for plants (a-iv); ICZN (International Code of Zoological Nomenclature) is for animals (b-i); ICNB (International Code of Nomenclature of Bacteria) is for bacteria (c-ii); ICTV (International Committee on Taxonomy of Viruses) is for viruses (d-iii).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nomenclature",
+        "ICBN",
+        "ICZN"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Taxonomic Level) — Column II (Character)\n(a) Species level — (i) Least number of common characters\n(b) Genus level — (ii) Maximum number of common characters\n(c) Family level — (iii) Moderate number of common characters\n(d) Kingdom level — (iv) More common characters than family but less than species",
+      "options": [
+        "D) a-iv, b-iii, c-ii, d-i",
+        "B) a-i, b-ii, c-iii, d-iv",
+        "A) a-ii, b-iv, c-iii, d-i",
+        "C) a-ii, b-iii, c-iv, d-i"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, as we move from species to kingdom, the number of common characters decreases. Species level has maximum common characters (a-ii); Genus has more than family but less than species (b-iv); Family has moderate common characters (c-iii); Kingdom has the least common characters (d-i).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Classification of Housefly) — Column II (Taxonomic Category)\n(a) Musca — (i) Phylum\n(b) Muscidae — (ii) Order\n(c) Diptera — (iii) Genus\n(d) Arthropoda — (iv) Family",
+      "options": [
+        "A) a-iii, b-iv, c-ii, d-i",
+        "C) a-iii, b-iv, c-i, d-ii",
+        "B) a-iv, b-iii, c-ii, d-i",
+        "D) a-ii, b-i, c-iv, d-iii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, for housefly classification: Musca is the Genus (a-iii); Muscidae is the Family (b-iv); Diptera is the Order (c-ii); Arthropoda is the Phylum (d-i).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "housefly-classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Process) — Column II (Description)\n(a) Identification — (i) Giving a standardized name to an organism\n(b) Classification — (ii) Determining the exact position of an organism in taxonomy\n(c) Nomenclature — (iii) Study of evolutionary relationships and classification\n(d) Systematics — (iv) Grouping organisms based on similarities and differences",
+      "options": [
+        "B) a-iv, b-ii, c-i, d-iii",
+        "A) a-ii, b-iv, c-i, d-iii",
+        "C) a-ii, b-iv, c-iii, d-i",
+        "D) a-i, b-iv, c-ii, d-iii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT: Identification means determining the correct position of an organism (a-ii); Classification means grouping organisms based on similarities and differences (b-iv); Nomenclature means giving a standardized name (c-i); Systematics involves evolutionary relationships and classification (d-iii).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomy",
+        "systematics",
+        "classification",
+        "nomenclature"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Organism pair) — Column II (Shared taxonomic level)\n(a) Solanum tuberosum and Solanum nigrum — (i) Same Family\n(b) Solanum and Petunia — (ii) Same Order\n(c) Solanaceae and Convolvulaceae — (iii) Same Genus\n(d) Wheat and Rice — (iv) Same Family",
+      "options": [
+        "B) a-i, b-iii, c-ii, d-iv",
+        "C) a-iii, b-i, c-iv, d-ii",
+        "A) a-iii, b-i, c-ii, d-iv",
+        "D) a-iv, b-ii, c-i, d-iii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT: S. tuberosum and S. nigrum share genus Solanum (a-iii); Solanum and Petunia share family Solanaceae (b-i); Solanaceae and Convolvulaceae share order Polymoniales (c-ii); Wheat and Rice share family Poaceae (d-iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "genus",
+        "family",
+        "order"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Famous Institution) — Column II (Location)\n(a) Royal Botanical Garden, Kew — (i) Kolkata\n(b) Indian Botanical Garden — (ii) Lucknow\n(c) National Botanical Research Institute — (iii) England\n(d) British Museum of Natural History — (iv) London",
+      "options": [
+        "A) a-iii, b-i, c-ii, d-iv",
+        "C) a-iii, b-ii, c-i, d-iv",
+        "B) a-iv, b-i, c-ii, d-iii",
+        "D) a-i, b-iii, c-iv, d-ii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Royal Botanical Garden, Kew is in England (a-iii); Indian Botanical Garden is in Howrah/Kolkata (b-i); National Botanical Research Institute is in Lucknow (c-ii); British Museum of Natural History is in London (d-iv). These are mentioned in NCERT as important taxonomical institutions.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "taxonomical-aids",
+        "botanical-gardens",
+        "museums"
+      ],
+      "neetWeightage": "LOW"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "How many of the following are taxonomical aids mentioned in NCERT?\n(a) Herbarium\n(b) Botanical gardens\n(c) Museums\n(d) Zoological parks\n(e) Keys\n(f) Flora and Fauna\n(g) Monographs and Manuals\n(h) Gene banks",
+      "options": [
+        "D) Eight",
+        "A) Five",
+        "B) Six",
+        "C) Seven"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, seven taxonomical aids are mentioned: (a) Herbarium, (b) Botanical gardens, (c) Museums, (d) Zoological parks, (e) Keys, (f) Flora and Fauna, and (g) Monographs and Manuals. Gene banks (h) are NOT mentioned as taxonomical aids in NCERT Chapter 1.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "How many of the following are characteristics that NCERT considers as defining properties of living organisms?\n(a) Growth\n(b) Reproduction\n(c) Metabolism\n(d) Cellular organization\n(e) Consciousness\n(f) Healing and repair\n(g) Interaction with environment\n(h) Locomotion",
+      "options": [
+        "C) Five",
+        "B) Four",
+        "D) Six",
+        "A) Three"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, five properties are specifically discussed as characteristics of living organisms: (a) Growth, (b) Reproduction, (c) Metabolism, (e) Consciousness, and (g) Interaction with environment. Cellular organization (d), healing and repair (f), and locomotion (h) are not specifically listed as defining properties in this NCERT chapter.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "properties-of-living"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "How many of the following taxonomic categories are obligatory (mandatory) in taxonomic hierarchy?\n(a) Species\n(b) Genus\n(c) Sub-family\n(d) Family\n(e) Order\n(f) Sub-class\n(g) Class\n(h) Phylum/Division\n(i) Kingdom",
+      "options": [
+        "C) Seven",
+        "D) Eight",
+        "A) Five",
+        "B) Six"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, the seven obligatory (mandatory) categories in taxonomic hierarchy are: (a) Species, (b) Genus, (d) Family, (e) Order, (g) Class, (h) Phylum/Division, and (i) Kingdom. Sub-family (c) and Sub-class (f) are intermediate/optional categories.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "taxonomic-categories"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "How many of the following rules apply to binomial nomenclature as per NCERT?\n(a) Generic name begins with a capital letter\n(b) Specific epithet begins with a capital letter\n(c) Biological names are generally in Latin\n(d) When printed, names are in italics\n(e) When handwritten, names are underlined separately\n(f) Name of the author appears after the specific epithet\n(g) Names should be in English",
+      "options": [
+        "A) Three",
+        "B) Four",
+        "C) Five",
+        "D) Six"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Five rules are correct as per NCERT: (a) Generic name starts with capital letter; (c) Names are generally in Latin; (d) Printed names are in italics; (e) Handwritten names are underlined separately; (f) Author's name appears after specific epithet. (b) is incorrect — specific epithet starts with small letter; (g) is incorrect — names are in Latin, not English.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "binomial-nomenclature",
+        "nomenclature-rules"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "How many of the following organisms belong to the same genus Solanum?\n(a) Potato\n(b) Tomato\n(c) Brinjal\n(d) Petunia\n(e) Capsicum\n(f) Solanum nigrum",
+      "options": [
+        "B) Three",
+        "A) Two",
+        "C) Four",
+        "D) Five"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT and standard taxonomy, four organisms belong to genus Solanum: (a) Potato (Solanum tuberosum), (b) Tomato (Solanum lycopersicum), (c) Brinjal (Solanum melongena), and (f) Solanum nigrum. Petunia belongs to a different genus (Petunia), and Capsicum belongs to genus Capsicum, though both are in family Solanaceae.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "genus",
+        "solanaceae",
+        "taxonomy"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "How many of the following statements about growth are correct as per NCERT?\n(a) Growth is increase in mass and number\n(b) Plants show indefinite growth\n(c) Animals show definite growth\n(d) Unicellular organisms grow by cell division\n(e) Non-living objects show intrinsic growth\n(f) Dead organisms do not grow",
+      "options": [
+        "D) Six",
+        "A) Three",
+        "C) Five",
+        "B) Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Five statements are correct as per NCERT: (a) Growth is increase in mass and number; (b) Plants show indefinite/continuous growth; (c) Animals show definite growth up to a certain age; (d) Unicellular organisms grow by cell division; (f) Dead organisms do not grow. Statement (e) is incorrect — non-living objects show EXTRINSIC growth (accumulation on surface), not intrinsic growth.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "growth"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "How many of the following pairs of organisms share the same genus?\n(a) Lion and Tiger\n(b) Dog and Cat\n(c) Potato and Brinjal\n(d) Wheat and Rice\n(e) Man and Gorilla\n(f) Leopard and Lion",
+      "options": [
+        "B) Three",
+        "D) Five",
+        "A) Two",
+        "C) Four"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Three pairs share the same genus: (a) Lion (Panthera leo) and Tiger (Panthera tigris) — genus Panthera; (c) Potato (Solanum tuberosum) and Brinjal (Solanum melongena) — genus Solanum; (f) Leopard (Panthera pardus) and Lion (Panthera leo) — genus Panthera. Dog (Canis) and Cat (Felis) have different genera; Wheat (Triticum) and Rice (Oryza) have different genera; Man (Homo) and Gorilla (Gorilla) have different genera.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "genus",
+        "taxonomy",
+        "classification-examples"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "How many of the following provide information about living specimens?\n(a) Herbarium\n(b) Botanical garden\n(c) Museum\n(d) Zoological park\n(e) Flora\n(f) Monograph\n(g) Keys",
+      "options": [
+        "A) One",
+        "D) Four",
+        "C) Three",
+        "B) Two"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Only two taxonomical aids deal with living specimens: (b) Botanical gardens — which have collections of living plants for reference; and (d) Zoological parks — which keep wild animals alive in protected environments. Herbarium has dried/pressed specimens, museums have preserved specimens, and Flora, Monograph, and Keys are written documents/tools.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Arrange the following taxonomic categories in ascending order (from lowest to highest):\n(i) Family\n(ii) Species\n(iii) Kingdom\n(iv) Genus\n(v) Order\n(vi) Class\n(vii) Phylum",
+      "options": [
+        "A) ii → iv → i → v → vi → vii → iii",
+        "C) ii → i → iv → v → vi → vii → iii",
+        "D) iv → ii → i → v → vi → vii → iii",
+        "B) ii → iv → v → i → vi → vii → iii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, the correct ascending taxonomic hierarchy is: Species (ii) → Genus (iv) → Family (i) → Order (v) → Class (vi) → Phylum (vii) → Kingdom (iii). This is the standard hierarchy from the most specific to the most general.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "taxonomic-categories"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Arrange the following in the correct sequence of taxonomic classification of wheat from genus to kingdom:\n(i) Poales\n(ii) Triticum\n(iii) Plantae\n(iv) Poaceae\n(v) Monocotyledonae\n(vi) Angiospermae",
+      "options": [
+        "C) iv → ii → i → v → vi → iii",
+        "D) ii → iv → v → i → vi → iii",
+        "A) ii → iv → i → v → vi → iii",
+        "B) ii → i → iv → v → vi → iii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the correct sequence for wheat classification from genus to kingdom is: Triticum (Genus) → Poaceae (Family) → Poales (Order) → Monocotyledonae (Class) → Angiospermae (Division) → Plantae (Kingdom).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "wheat-classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Arrange the following in the correct sequence of taxonomic classification of humans from species to kingdom:\n(i) Mammalia\n(ii) Homo sapiens\n(iii) Animalia\n(iv) Chordata\n(v) Primata\n(vi) Hominidae\n(vii) Homo",
+      "options": [
+        "C) ii → vi → vii → v → i → iv → iii",
+        "D) ii → vii → v → vi → i → iv → iii",
+        "A) ii → vii → vi → v → i → iv → iii",
+        "B) vii → ii → vi → v → i → iv → iii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the correct sequence for human classification from species to kingdom is: Homo sapiens (Species) → Homo (Genus) → Hominidae (Family) → Primata (Order) → Mammalia (Class) → Chordata (Phylum) → Animalia (Kingdom).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "human-classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Arrange the following steps in the correct order of studying a newly discovered organism:\n(i) Classification into a group\n(ii) Collection of the specimen\n(iii) Nomenclature (giving a scientific name)\n(iv) Identification of the organism\n(v) Preservation of the specimen",
+      "options": [
+        "A) ii → v → iv → i → iii",
+        "B) ii → iv → i → iii → v",
+        "D) ii → v → iv → iii → i",
+        "C) iv → ii → v → i → iii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct sequence for studying a new organism as per taxonomy is: Collection (ii) → Preservation (v) → Identification (iv) → Classification (i) → Nomenclature (iii). First the specimen is collected and preserved, then identified, classified into an appropriate group, and finally given a scientific name.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomy",
+        "classification",
+        "nomenclature"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Arrange the following taxonomic categories in descending order of the number of organisms they include:\n(i) Species\n(ii) Family\n(iii) Kingdom\n(iv) Genus\n(v) Phylum",
+      "options": [
+        "B) i → iv → ii → v → iii",
+        "A) iii → v → ii → iv → i",
+        "D) v → iii → ii → iv → i",
+        "C) iii → ii → v → iv → i"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, higher taxonomic categories include more organisms. In descending order of number of organisms: Kingdom (iii) includes the most → Phylum (v) → Family (ii) → Genus (iv) → Species (i) includes the fewest. This is because criteria become more specific at lower levels.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "classification"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Arrange the following in the correct sequence of taxonomic classification of housefly from species to phylum:\n(i) Insecta\n(ii) Musca domestica\n(iii) Diptera\n(iv) Muscidae\n(v) Musca\n(vi) Arthropoda",
+      "options": [
+        "B) v → ii → iv → iii → i → vi",
+        "C) ii → iv → v → iii → i → vi",
+        "D) ii → v → iii → iv → i → vi",
+        "A) ii → v → iv → iii → i → vi"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, the correct sequence for housefly classification from species to phylum is: Musca domestica (Species) → Musca (Genus) → Muscidae (Family) → Diptera (Order) → Insecta (Class) → Arthropoda (Phylum).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "housefly-classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Arrange the following taxonomic levels in the order of increasing number of common characteristics among their members:\n(i) Order\n(ii) Class\n(iii) Genus\n(iv) Species\n(v) Family",
+      "options": [
+        "C) i → ii → iii → v → iv",
+        "B) iv → iii → v → i → ii",
+        "A) ii → i → v → iii → iv",
+        "D) ii → i → iii → v → iv"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, as we go from higher to lower categories, common characteristics increase. In order of increasing common characteristics: Class (ii) has fewest → Order (i) → Family (v) → Genus (iii) → Species (iv) has most common characteristics among its members.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Which of the following pairs belongs to the same order Polymoniales?",
+      "options": [
+        "A) Poaceae and Muscidae",
+        "B) Felidae and Hominidae",
+        "C) Poaceae and Solanaceae",
+        "D) Solanaceae and Convolvulaceae"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, family Solanaceae and family Convolvulaceae both belong to the order Polymoniales. Poaceae belongs to order Poales. Muscidae, Felidae, and Hominidae are animal families belonging to different orders.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "order",
+        "family"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Assertion (A): Human beings have self-consciousness.\nReason (R): All living organisms, from prokaryotes to complex eukaryotes, can sense and respond to environmental cues.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, both statements are true. Human beings possess self-consciousness, which is an additional feature beyond basic consciousness. All organisms from prokaryotes to eukaryotes can sense their environment. However, the reason (general consciousness in all organisms) does not explain why humans specifically have self-consciousness.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "what-is-living",
+        "consciousness",
+        "self-consciousness"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Consider the following statements about herbarium:\n(i) Herbarium sheets are arranged according to a universally accepted system of classification\n(ii) Herbarium specimens carry labels with information about date of collection, place of collection, and collector's name\n(iii) Herbarium contains living plant specimens\n(iv) Herbarium is useful for taxonomic studies\n(v) Each herbarium sheet has a single pressed plant specimen\nHow many of the above statements are correct?",
+      "options": [
+        "C) Four",
+        "A) Two",
+        "B) Three",
+        "D) Five"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements (i), (ii), (iv), and (v) are correct. As per NCERT: (i) Herbarium sheets are systematically arranged; (ii) They carry information labels; (iii) is INCORRECT — herbarium has dried and pressed specimens, not living ones (botanical gardens have living specimens); (iv) They are useful for taxonomic study; (v) Each sheet carries one pressed specimen.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomical-aids",
+        "herbarium"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "The Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "question": "Match Column I with Column II:\nColumn I (Organism) — Column II (Phylum/Division)\n(a) Wheat — (i) Chordata\n(b) Housefly — (ii) Angiospermae\n(c) Man — (iii) Arthropoda\n(d) Mango — (iv) Chordata",
+      "options": [
+        "A) a-ii, b-iii, c-iv, d-ii",
+        "D) a-ii, b-iii, c-i, d-iv",
+        "C) a-ii, b-iii, c-i, d-ii",
+        "B) a-iii, b-ii, c-iv, d-i"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT: Wheat is an angiosperm (Division Angiospermae) (a-ii); Housefly belongs to Phylum Arthropoda (b-iii); Man belongs to Phylum Chordata (c-i); Mango is also an angiosperm (Division Angiospermae) (d-ii). Note that both Wheat and Mango share the same Division.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "taxonomic-hierarchy",
+        "phylum",
+        "division"
+      ],
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

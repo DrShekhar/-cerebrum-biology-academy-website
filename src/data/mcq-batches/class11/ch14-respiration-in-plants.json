@@ -1,0 +1,2489 @@
+{
+  "batch": {
+    "name": "Class 11 - Chapter 14: Respiration in Plants",
+    "version": 1,
+    "source": "neet-class11-ch14",
+    "totalQuestions": 100
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The complete oxidation of one molecule of glucose yields a net gain of how many ATP molecules in a eukaryotic cell?",
+      "options": [
+        "B) 38",
+        "A) 36",
+        "D) 34",
+        "C) 30"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Complete aerobic oxidation of one glucose molecule yields a net gain of 38 ATP molecules (assuming NADH from glycolysis uses the malate-aspartate shuttle yielding 3 ATP each). Some references cite 36 ATP when the glycerol phosphate shuttle is used.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ATP yield",
+        "aerobic respiration",
+        "respiratory balance sheet"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Glycolysis occurs in which part of the cell?",
+      "options": [
+        "B) Cytoplasm",
+        "A) Mitochondrial matrix",
+        "D) Nucleus",
+        "C) Endoplasmic reticulum"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Glycolysis (EMP pathway) takes place in the cytoplasm of the cell. It does not require any membrane-bound organelle and occurs in both aerobic and anaerobic organisms.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "EMP pathway",
+        "cell location"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The respiratory quotient (RQ) of carbohydrates is:",
+      "options": [
+        "C) Equal to 1",
+        "B) More than 1",
+        "D) Zero",
+        "A) Less than 1"
+      ],
+      "correctAnswer": "A",
+      "explanation": "RQ = CO2 evolved / O2 consumed. For carbohydrates like glucose (C6H12O6 + 6O2 → 6CO2 + 6H2O), RQ = 6CO2/6O2 = 1.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "respiratory quotient",
+        "RQ",
+        "carbohydrates"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which of the following is the first stable product of glycolysis?",
+      "options": [
+        "B) Glucose-6-phosphate",
+        "A) Pyruvic acid",
+        "C) Fructose-6-phosphate",
+        "D) 3-phosphoglyceric acid"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The first step of glycolysis involves phosphorylation of glucose to glucose-6-phosphate by the enzyme hexokinase, using one ATP. Glucose-6-phosphate is the first stable product formed.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "glucose-6-phosphate",
+        "hexokinase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The end product of glycolysis is:",
+      "options": [
+        "A) Acetyl CoA",
+        "D) CO2 and H2O",
+        "B) Citric acid",
+        "C) Pyruvic acid"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Glycolysis involves the breakdown of glucose (6C) into two molecules of pyruvic acid (3C each). Pyruvic acid is the end product of glycolysis.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "pyruvic acid",
+        "end product"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "In alcoholic fermentation, pyruvic acid is first decarboxylated to form:",
+      "options": [
+        "C) Lactic acid",
+        "B) Acetaldehyde",
+        "A) Ethanol",
+        "D) Acetic acid"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In alcoholic fermentation, pyruvic acid is first decarboxylated to acetaldehyde by pyruvate decarboxylase, releasing CO2. Acetaldehyde is then reduced to ethanol by alcohol dehydrogenase.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fermentation",
+        "alcoholic fermentation",
+        "acetaldehyde"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "How many molecules of CO2 are released during the TCA cycle from two molecules of acetyl CoA?",
+      "options": [
+        "B) 4",
+        "D) 8",
+        "A) 2",
+        "C) 6"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Each turn of the TCA cycle releases 2 molecules of CO2 (one during isocitrate → α-ketoglutarate and one during α-ketoglutarate → succinyl CoA). For 2 acetyl CoA molecules, 4 CO2 are released.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "TCA cycle",
+        "Krebs cycle",
+        "CO2 release"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The terminal electron acceptor in the electron transport chain is:",
+      "options": [
+        "D) Molecular oxygen",
+        "C) Cytochrome c",
+        "B) FAD",
+        "A) NAD+"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Molecular oxygen (O2) is the terminal or final electron acceptor in the electron transport chain. It accepts electrons and combines with H+ ions to form water.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS",
+        "electron transport",
+        "terminal electron acceptor"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which enzyme catalyzes the conversion of pyruvic acid to acetyl CoA?",
+      "options": [
+        "B) Pyruvate dehydrogenase",
+        "D) Pyruvate decarboxylase",
+        "C) Pyruvate carboxylase",
+        "A) Pyruvate kinase"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pyruvate dehydrogenase complex catalyzes the oxidative decarboxylation of pyruvic acid to acetyl CoA, releasing CO2 and producing NADH. This is a link reaction between glycolysis and the TCA cycle.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pyruvate dehydrogenase",
+        "acetyl CoA",
+        "link reaction"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The inner mitochondrial membrane is the site of:",
+      "options": [
+        "C) Electron transport chain",
+        "B) Krebs cycle",
+        "D) Fermentation",
+        "A) Glycolysis"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The electron transport chain (ETS) and oxidative phosphorylation take place on the inner mitochondrial membrane. The complexes of ETS are embedded in this membrane.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS",
+        "inner mitochondrial membrane",
+        "oxidative phosphorylation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "RQ value for fats is:",
+      "options": [
+        "A) Unity",
+        "D) Less than one",
+        "B) Zero",
+        "C) More than one"
+      ],
+      "correctAnswer": "B",
+      "explanation": "RQ for fats is less than one (approximately 0.7 for tripalmitin). Fats are more reduced than carbohydrates, so they require more oxygen for complete oxidation, making the denominator larger.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "respiratory quotient",
+        "RQ",
+        "fats"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which of the following is NOT a product of the Krebs cycle per turn?",
+      "options": [
+        "A) 3 NADH",
+        "D) 2 GTP",
+        "C) 1 GTP",
+        "B) 1 FADH2"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Per turn of the Krebs cycle, the products are: 3 NADH, 1 FADH2, 1 GTP (substrate-level phosphorylation), and 2 CO2. Only 1 GTP is produced per turn, not 2.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Krebs cycle",
+        "products",
+        "GTP"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Oxidative phosphorylation refers to:",
+      "options": [
+        "A) Phosphorylation of glucose during glycolysis",
+        "B) Phosphorylation of ADP to ATP coupled with electron transport",
+        "D) Phosphorylation of fructose-6-phosphate",
+        "C) Phosphorylation of succinyl CoA to succinate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Oxidative phosphorylation is the synthesis of ATP from ADP and inorganic phosphate, coupled to the transfer of electrons from NADH or FADH2 to molecular oxygen through the electron transport chain.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "oxidative phosphorylation",
+        "ATP synthesis",
+        "ETS"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The enzyme that catalyzes the first step of the TCA cycle is:",
+      "options": [
+        "D) Succinyl CoA synthetase",
+        "A) Aconitase",
+        "B) Citrate synthase",
+        "C) Isocitrate dehydrogenase"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Citrate synthase catalyzes the condensation of acetyl CoA with oxaloacetate (OAA) to form citrate (a 6-carbon compound), which is the first step of the TCA cycle.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "TCA cycle",
+        "citrate synthase",
+        "first step"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Lactic acid fermentation occurs in:",
+      "options": [
+        "D) Chloroplasts",
+        "A) Yeast",
+        "C) All plants",
+        "B) Lactobacillus and animal muscle cells"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Lactic acid fermentation occurs in certain bacteria like Lactobacillus and in animal skeletal muscle cells during vigorous exercise when oxygen supply is inadequate.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fermentation",
+        "lactic acid",
+        "Lactobacillus"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The net gain of ATP during glycolysis from one molecule of glucose is:",
+      "options": [
+        "C) 8 ATP",
+        "D) 6 ATP",
+        "A) 4 ATP",
+        "B) 2 ATP"
+      ],
+      "correctAnswer": "D",
+      "explanation": "During glycolysis, 4 ATP are produced by substrate-level phosphorylation but 2 ATP are consumed in the preparatory phase. So the net gain is 4 - 2 = 2 ATP per glucose molecule.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "ATP yield",
+        "substrate level phosphorylation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which complex of the ETS is also known as NADH dehydrogenase?",
+      "options": [
+        "B) Complex III",
+        "D) Complex IV",
+        "A) Complex II",
+        "C) Complex I"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Complex I of the electron transport system is NADH dehydrogenase. It accepts electrons from NADH and transfers them to ubiquinone (coenzyme Q).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS",
+        "Complex I",
+        "NADH dehydrogenase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The chemiosmotic hypothesis was proposed by:",
+      "options": [
+        "A) Hans Krebs",
+        "C) Gustav Embden",
+        "D) Louis Pasteur",
+        "B) Peter Mitchell"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The chemiosmotic hypothesis was proposed by Peter Mitchell in 1961. It explains ATP synthesis by the flow of protons down an electrochemical gradient through ATP synthase (Complex V).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "chemiosmotic hypothesis",
+        "Peter Mitchell",
+        "ATP synthase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Substrate level phosphorylation occurs during:",
+      "options": [
+        "C) Krebs cycle only",
+        "B) ETS only",
+        "D) Glycolysis only",
+        "A) Glycolysis and Krebs cycle"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Substrate-level phosphorylation occurs during both glycolysis (producing 4 ATP gross) and the Krebs cycle (producing 1 GTP per turn which is equivalent to 1 ATP). In ETS, ATP is formed by oxidative phosphorylation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "substrate level phosphorylation",
+        "glycolysis",
+        "Krebs cycle"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "In the ETS, FADH2 donates its electrons to:",
+      "options": [
+        "B) Complex II",
+        "D) Complex IV",
+        "C) Complex III",
+        "A) Complex I"
+      ],
+      "correctAnswer": "A",
+      "explanation": "FADH2 donates its electrons to Complex II (succinate dehydrogenase), which then transfers them to ubiquinone. FADH2 bypasses Complex I, which is why it yields only 2 ATP instead of 3.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS",
+        "FADH2",
+        "Complex II"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The RQ value for organic acids like malic acid is:",
+      "options": [
+        "A) Less than 1",
+        "C) Greater than 1",
+        "B) Equal to 1",
+        "D) Zero"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Organic acids like malic acid are already partially oxidized, so they require less oxygen for complete oxidation. Hence, more CO2 is evolved relative to O2 consumed, giving an RQ greater than 1 (RQ of malic acid = 1.33).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "respiratory quotient",
+        "RQ",
+        "organic acids"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The TCA cycle takes place in:",
+      "options": [
+        "D) Outer mitochondrial membrane",
+        "A) Cytoplasm",
+        "C) Mitochondrial matrix",
+        "B) Inner mitochondrial membrane"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The TCA cycle (Krebs cycle) takes place in the mitochondrial matrix, except for succinate dehydrogenase (Complex II) which is located on the inner mitochondrial membrane.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "TCA cycle",
+        "mitochondrial matrix",
+        "location"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which of the following is the mobile electron carrier that shuttles electrons between Complex III and Complex IV?",
+      "options": [
+        "B) Cytochrome c",
+        "A) Ubiquinone",
+        "D) FADH2",
+        "C) NADH"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cytochrome c is a small protein that acts as a mobile electron carrier, transferring electrons from Complex III (cytochrome bc1 complex) to Complex IV (cytochrome c oxidase). Ubiquinone shuttles between Complex I/II and Complex III.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS",
+        "cytochrome c",
+        "mobile carrier"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "During aerobic respiration, one molecule of NADH produces how many ATP molecules through oxidative phosphorylation?",
+      "options": [
+        "C) 3",
+        "D) 4",
+        "A) 1",
+        "B) 2"
+      ],
+      "correctAnswer": "A",
+      "explanation": "One NADH molecule donates electrons at Complex I and produces 3 ATP molecules through oxidative phosphorylation as protons are pumped at Complexes I, III, and IV.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "NADH",
+        "ATP yield",
+        "oxidative phosphorylation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which step of glycolysis is catalyzed by phosphofructokinase?",
+      "options": [
+        "A) Glucose → Glucose-6-phosphate",
+        "B) Fructose-6-phosphate → Fructose-1,6-bisphosphate",
+        "C) 1,3-bisphosphoglycerate → 3-phosphoglycerate",
+        "D) PEP → Pyruvate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Phosphofructokinase (PFK) catalyzes the phosphorylation of fructose-6-phosphate to fructose-1,6-bisphosphate using ATP. This is the rate-limiting step and major regulatory point of glycolysis.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "phosphofructokinase",
+        "rate limiting step"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Respiration is considered an amphibolic pathway because:",
+      "options": [
+        "C) It requires both oxygen and carbon dioxide",
+        "B) It involves both anabolic and catabolic reactions",
+        "A) It occurs in both plants and animals",
+        "D) It occurs in both cytoplasm and mitochondria"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Respiration is an amphibolic pathway because it is both catabolic (breaks down glucose to release energy) and anabolic (provides intermediates for biosynthetic pathways, e.g., acetyl CoA for fatty acid synthesis, OAA for amino acid synthesis).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amphibolic pathway",
+        "anabolic",
+        "catabolic"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Cyanide inhibits which complex of the electron transport chain?",
+      "options": [
+        "D) Complex IV",
+        "A) Complex I",
+        "C) Complex III",
+        "B) Complex II"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cyanide is a potent inhibitor of Complex IV (cytochrome c oxidase). It binds to the iron in cytochrome a3, blocking the transfer of electrons to oxygen and halting the entire ETS.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS",
+        "cyanide",
+        "Complex IV",
+        "inhibitor"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The number of ATP molecules produced by substrate-level phosphorylation during complete oxidation of one glucose molecule is:",
+      "options": [
+        "D) 8",
+        "C) 6",
+        "A) 2",
+        "B) 4"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Substrate-level phosphorylation produces: 2 net ATP in glycolysis + 2 GTP (= 2 ATP) in the Krebs cycle (one per turn, two turns per glucose) = total 4 ATP by substrate-level phosphorylation.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "substrate level phosphorylation",
+        "ATP counting",
+        "respiratory balance sheet"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which of the following is a 5-carbon compound in the Krebs cycle?",
+      "options": [
+        "B) Succinate",
+        "C) α-ketoglutarate",
+        "D) Oxaloacetate",
+        "A) Citrate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "α-ketoglutarate is a 5-carbon compound in the Krebs cycle. It is formed from isocitrate by oxidative decarboxylation catalyzed by isocitrate dehydrogenase. Citrate is 6C, succinate is 4C, and OAA is 4C.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Krebs cycle",
+        "alpha-ketoglutarate",
+        "5-carbon compound"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The glycolysis pathway is also known as:",
+      "options": [
+        "D) Calvin cycle",
+        "C) EMP pathway",
+        "B) HMP pathway",
+        "A) TCA pathway"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Glycolysis is also known as the EMP pathway (Embden-Meyerhof-Parnas pathway), named after the scientists who discovered it. It involves the breakdown of glucose into two molecules of pyruvic acid.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "EMP pathway",
+        "nomenclature"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "During Krebs cycle, FADH2 is produced when:",
+      "options": [
+        "A) Citrate is converted to isocitrate",
+        "C) Malate is converted to oxaloacetate",
+        "B) Succinate is converted to fumarate",
+        "D) α-ketoglutarate is converted to succinyl CoA"
+      ],
+      "correctAnswer": "C",
+      "explanation": "FADH2 is produced when succinate is oxidized to fumarate by succinate dehydrogenase (Complex II). This is the only step in the TCA cycle that produces FADH2 and the only enzyme of the TCA cycle located on the inner mitochondrial membrane.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Krebs cycle",
+        "FADH2",
+        "succinate dehydrogenase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "F0-F1 particles (ATP synthase) are located on the:",
+      "options": [
+        "D) Mitochondrial matrix",
+        "B) Inner mitochondrial membrane",
+        "C) Cytoplasm",
+        "A) Outer mitochondrial membrane"
+      ],
+      "correctAnswer": "B",
+      "explanation": "F0-F1 particles (ATP synthase or Complex V) are located on the inner mitochondrial membrane. F0 is the transmembrane channel and F1 is the headpiece that projects into the mitochondrial matrix where ATP synthesis occurs.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ATP synthase",
+        "F0-F1 particles",
+        "inner mitochondrial membrane"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The total number of NADH molecules produced from one glucose molecule during complete aerobic respiration is:",
+      "options": [
+        "B) 10",
+        "C) 12",
+        "D) 6",
+        "A) 8"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Total NADH produced per glucose: 2 NADH in glycolysis + 2 NADH in pyruvate decarboxylation (link reaction) + 6 NADH in 2 turns of Krebs cycle (3 NADH per turn) = 10 NADH total.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "NADH",
+        "ATP counting",
+        "respiratory balance sheet"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Fermentation produces a net gain of:",
+      "options": [
+        "D) 0 ATP",
+        "A) 36 ATP",
+        "C) 2 ATP",
+        "B) 4 ATP"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Fermentation (both alcoholic and lactic acid) produces a net gain of only 2 ATP molecules per glucose through substrate-level phosphorylation in glycolysis. No additional ATP is produced after glycolysis in fermentation.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fermentation",
+        "ATP yield",
+        "anaerobic respiration"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which of the following is the correct sequence in the electron transport chain?",
+      "options": [
+        "B) Complex I → Ubiquinone → Complex III → Cytochrome c → Complex IV",
+        "A) Complex I → Complex III → Ubiquinone → Complex IV",
+        "C) Complex I → Cytochrome c → Complex III → Complex IV",
+        "D) Complex II → Complex I → Complex III → Complex IV"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct sequence of electron transport is: Complex I (NADH dehydrogenase) → Ubiquinone (CoQ) → Complex III (cytochrome bc1) → Cytochrome c → Complex IV (cytochrome c oxidase) → O2.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS",
+        "electron transport sequence",
+        "complexes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Glycolysis is common to both aerobic and anaerobic respiration because:",
+      "options": [
+        "B) It does not require oxygen",
+        "D) It produces CO2",
+        "C) It takes place in mitochondria",
+        "A) It requires oxygen"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Glycolysis does not require oxygen and takes place in the cytoplasm. It is the common pathway for both aerobic and anaerobic respiration. The fate of pyruvate differs depending on the availability of oxygen.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "aerobic",
+        "anaerobic"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "In the Krebs cycle, which of the following conversions involves substrate-level phosphorylation?",
+      "options": [
+        "D) Malate → Oxaloacetate",
+        "B) Succinyl CoA → Succinate",
+        "A) Isocitrate → α-ketoglutarate",
+        "C) Succinate → Fumarate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The conversion of succinyl CoA to succinate, catalyzed by succinyl CoA synthetase, is the only step in the Krebs cycle where substrate-level phosphorylation occurs, producing 1 GTP (equivalent to 1 ATP).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Krebs cycle",
+        "substrate level phosphorylation",
+        "succinyl CoA"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "During glycolysis, the splitting of fructose-1,6-bisphosphate yields:",
+      "options": [
+        "C) Two molecules of DHAP",
+        "A) Two molecules of G3P (glyceraldehyde-3-phosphate)",
+        "B) One molecule of G3P and one molecule of DHAP",
+        "D) Two molecules of pyruvate"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Fructose-1,6-bisphosphate is split by aldolase into one molecule of glyceraldehyde-3-phosphate (G3P) and one molecule of dihydroxyacetone phosphate (DHAP). DHAP is then isomerized to G3P.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "aldolase",
+        "DHAP",
+        "G3P"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which of the following is the correct RQ value for proteins?",
+      "options": [
+        "C) Approximately 0.7",
+        "D) Greater than 1.0",
+        "B) Approximately 0.8",
+        "A) Exactly 1.0"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The RQ for proteins is approximately 0.8. Since proteins contain carbon, hydrogen, oxygen, and nitrogen, they have a different ratio of these elements compared to carbohydrates and fats.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "respiratory quotient",
+        "RQ",
+        "proteins"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): Glycolysis occurs in both aerobic and anaerobic organisms.\nReason (R): Glycolysis requires molecular oxygen for its reactions.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The assertion is true - glycolysis is common to both aerobic and anaerobic respiration. However, the reason is false because glycolysis does NOT require molecular oxygen; it is an anaerobic process occurring in the cytoplasm.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "aerobic",
+        "anaerobic"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): FADH2 produces fewer ATP molecules than NADH in the electron transport chain.\nReason (R): FADH2 donates its electrons to Complex II, bypassing Complex I, resulting in fewer protons being pumped across the inner mitochondrial membrane.",
+      "options": [
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both statements are true and R correctly explains A. FADH2 donates electrons to Complex II (succinate dehydrogenase) and bypasses Complex I, so protons are pumped only at Complexes III and IV (not at I), yielding 2 ATP instead of 3 ATP per FADH2.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "FADH2",
+        "NADH",
+        "ATP yield",
+        "ETS"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): The RQ of fats is less than one.\nReason (R): Fats are more reduced than carbohydrates and require more oxygen for their complete oxidation.",
+      "options": [
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both A and R are true and R correctly explains A. Fats have a higher proportion of hydrogen atoms and are more reduced than carbohydrates. They require more O2 per CO2 released, making the RQ less than 1 (approximately 0.7).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "respiratory quotient",
+        "RQ",
+        "fats"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): Fermentation is more efficient than aerobic respiration.\nReason (R): Fermentation produces only 2 ATP molecules per glucose molecule.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The assertion is false - fermentation is LESS efficient than aerobic respiration. The reason is true - fermentation produces only 2 ATP per glucose while aerobic respiration produces 36-38 ATP. Since A is false and R is true, the answer is D.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fermentation",
+        "efficiency",
+        "ATP yield"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): Pyruvate dehydrogenase is called a link reaction enzyme.\nReason (R): It connects glycolysis (in the cytoplasm) with the Krebs cycle (in the mitochondrial matrix) by converting pyruvate to acetyl CoA.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both A and R are true and R correctly explains A. Pyruvate dehydrogenase catalyzes the oxidative decarboxylation of pyruvate to acetyl CoA inside the mitochondrial matrix, linking glycolysis to the TCA cycle.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pyruvate dehydrogenase",
+        "link reaction",
+        "acetyl CoA"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): The Krebs cycle is also known as the citric acid cycle.\nReason (R): The first product formed in the Krebs cycle is citric acid (citrate), a 6-carbon tricarboxylic acid.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both statements are true and R correctly explains A. The Krebs cycle is named the citric acid cycle because citric acid (citrate, 6C) is the first product, formed by condensation of acetyl CoA (2C) with oxaloacetate (4C) by citrate synthase.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Krebs cycle",
+        "citric acid cycle",
+        "citrate"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): Respiration is an amphibolic pathway.\nReason (R): The intermediates of the respiratory pathway can be used for both breakdown and synthesis of biomolecules.",
+      "options": [
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both are true and R correctly explains A. Respiration is amphibolic because its intermediates serve dual purposes - catabolic (energy release) and anabolic (biosynthesis). For example, acetyl CoA is used for fatty acid synthesis, and OAA for amino acid synthesis.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amphibolic pathway",
+        "anabolic",
+        "catabolic"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): The inner mitochondrial membrane is permeable to protons (H+ ions).\nReason (R): ATP synthase facilitates the passage of protons back into the matrix.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) Both A and R are false",
+        "C) A is false but R is true"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The assertion is false - the inner mitochondrial membrane is impermeable to protons, which is essential for maintaining the proton gradient. The reason is true - ATP synthase (F0-F1 complex) is the specific channel that allows protons to flow back into the matrix, driving ATP synthesis.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "chemiosmotic hypothesis",
+        "inner mitochondrial membrane",
+        "ATP synthase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): Alcoholic fermentation is carried out by yeast.\nReason (R): In alcoholic fermentation, pyruvic acid is directly reduced to ethanol.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Assertion is true - yeast (Saccharomyces cerevisiae) carries out alcoholic fermentation. Reason is false - pyruvic acid is NOT directly reduced to ethanol. First, pyruvate is decarboxylated to acetaldehyde (by pyruvate decarboxylase), and then acetaldehyde is reduced to ethanol (by alcohol dehydrogenase).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "alcoholic fermentation",
+        "yeast",
+        "acetaldehyde"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): Succinate dehydrogenase is the only membrane-bound enzyme of the TCA cycle.\nReason (R): Succinate dehydrogenase is a component of Complex II of the electron transport chain.",
+      "options": [
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both statements are true and R correctly explains A. Succinate dehydrogenase is located on the inner mitochondrial membrane as part of Complex II of the ETS, making it the only TCA cycle enzyme that is membrane-bound. All other TCA cycle enzymes are in the mitochondrial matrix.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "succinate dehydrogenase",
+        "Complex II",
+        "TCA cycle"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): In the absence of oxygen, the TCA cycle and ETS cannot function.\nReason (R): Oxygen is the final electron acceptor in the ETS, and without it, NADH and FADH2 cannot be reoxidized.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both are true and R correctly explains A. Without O2 as the terminal electron acceptor, electrons cannot flow through the ETS, NADH and FADH2 accumulate and cannot be reoxidized to NAD+ and FAD, which are required for the TCA cycle to continue.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "oxygen",
+        "TCA cycle",
+        "ETS",
+        "terminal electron acceptor"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): During the link reaction, CO2 is released but no ATP is directly produced.\nReason (R): Pyruvate dehydrogenase catalyzes oxidative decarboxylation of pyruvate, producing acetyl CoA, CO2, and NADH.",
+      "options": [
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both are true and R correctly explains A. The link reaction (pyruvate → acetyl CoA) releases CO2 and produces NADH but does not directly produce ATP by substrate-level phosphorylation. The NADH produced later yields ATP through oxidative phosphorylation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "link reaction",
+        "pyruvate dehydrogenase",
+        "CO2"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): Hexokinase is an irreversible enzyme of glycolysis.\nReason (R): Hexokinase phosphorylates glucose to glucose-6-phosphate and this reaction is thermodynamically favorable.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both are true and R explains A. Hexokinase catalyzes the irreversible phosphorylation of glucose to glucose-6-phosphate using ATP. The large negative free energy change makes this reaction essentially irreversible under cellular conditions.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "glycolysis",
+        "hexokinase",
+        "irreversible"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Assertion (A): Protons accumulate in the intermembrane space of mitochondria during electron transport.\nReason (R): Complexes I, III, and IV pump protons from the matrix to the intermembrane space.",
+      "options": [
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both are true and R correctly explains A. As electrons pass through Complexes I, III, and IV, protons (H+) are actively pumped from the mitochondrial matrix to the intermembrane space, creating an electrochemical gradient (proton motive force) that drives ATP synthesis.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "proton gradient",
+        "ETS",
+        "chemiosmotic hypothesis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Consider the following statements about glycolysis:\nI. It occurs in the cytoplasm.\nII. It requires oxygen.\nIII. It produces 2 NADH per glucose molecule.\nIV. It produces a net gain of 4 ATP per glucose.\nWhich of the above statements are correct?",
+      "options": [
+        "D) II and IV only",
+        "B) I, III, and IV",
+        "A) I and III only",
+        "C) I, II, and III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statement I is correct (glycolysis occurs in cytoplasm). Statement II is incorrect (glycolysis is anaerobic). Statement III is correct (2 NADH are produced per glucose). Statement IV is incorrect (net gain is 2 ATP, not 4; gross is 4 but 2 are consumed).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "statement based",
+        "NADH",
+        "ATP"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Consider the following statements about the Krebs cycle:\nI. It occurs in the mitochondrial matrix.\nII. It produces 2 CO2 per turn.\nIII. It produces 4 NADH per turn.\nIV. GTP is produced by substrate-level phosphorylation.\nWhich of the above statements are correct?",
+      "options": [
+        "A) I, II, and IV only",
+        "D) I, III, and IV only",
+        "C) I and II only",
+        "B) I, II, III, and IV"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statement I is correct (TCA cycle occurs in mitochondrial matrix). Statement II is correct (2 CO2 per turn). Statement III is incorrect (3 NADH per turn, not 4). Statement IV is correct (1 GTP by substrate-level phosphorylation at succinyl CoA → succinate step).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Krebs cycle",
+        "statement based",
+        "products"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which of the following statements about the electron transport chain is/are correct?\nI. It is located on the inner mitochondrial membrane.\nII. Complex II does not pump protons.\nIII. Water is formed at Complex III.\nIV. Ubiquinone is a mobile electron carrier.",
+      "options": [
+        "C) I, II, III, and IV",
+        "D) I, III, and IV only",
+        "B) I and IV only",
+        "A) I, II, and IV only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statement I is correct (ETS on inner mitochondrial membrane). Statement II is correct (Complex II transfers electrons but does not pump protons). Statement III is incorrect (water is formed at Complex IV, not III). Statement IV is correct (ubiquinone/CoQ is a mobile carrier between Complex I/II and Complex III).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS",
+        "statement based",
+        "complexes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Read the following statements and select the correct option:\nI. In anaerobic respiration, the final product is always ethanol.\nII. Lactic acid fermentation does not release CO2.\nIII. Alcoholic fermentation releases CO2.\nIV. Both types of fermentation produce a net of 2 ATP.",
+      "options": [
+        "D) III and IV only",
+        "C) I and III only",
+        "A) I, II, III, and IV",
+        "B) II, III, and IV only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statement I is incorrect (anaerobic respiration can produce ethanol or lactic acid depending on the organism). Statement II is correct (lactic acid fermentation does not release CO2). Statement III is correct (alcoholic fermentation releases CO2). Statement IV is correct (both types produce a net of 2 ATP via glycolysis).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fermentation",
+        "statement based",
+        "alcoholic",
+        "lactic acid"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Consider the following statements about ATP synthase:\nI. It is also called Complex V.\nII. F1 is the membrane-embedded portion.\nIII. F0 is the channel through which protons pass.\nIV. It synthesizes ATP using the proton motive force.\nWhich of the above are correct?",
+      "options": [
+        "A) I, II, and IV",
+        "C) I, II, III, and IV",
+        "B) I, III, and IV",
+        "D) II and III only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statement I is correct (ATP synthase is Complex V). Statement II is incorrect (F0 is the membrane-embedded portion, not F1; F1 is the headpiece projecting into the matrix). Statement III is correct (F0 is the proton channel). Statement IV is correct (ATP is synthesized using proton motive force).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ATP synthase",
+        "F0-F1",
+        "chemiosmotic hypothesis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which of the following statements about respiratory quotient (RQ) is/are correct?\nI. RQ for carbohydrates is 1.\nII. RQ for fats is greater than 1.\nIII. RQ for organic acids can be greater than 1.\nIV. RQ is the ratio of CO2 evolved to O2 consumed.",
+      "options": [
+        "C) I and IV only",
+        "D) I, II, and IV only",
+        "A) I, III, and IV only",
+        "B) I, II, III, and IV"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statement I is correct (RQ for carbohydrates = 1). Statement II is incorrect (RQ for fats is LESS than 1, approximately 0.7). Statement III is correct (organic acids like malic acid have RQ > 1). Statement IV is correct (RQ = CO2 evolved / O2 consumed).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "respiratory quotient",
+        "RQ",
+        "statement based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "How many of the following statements are correct about the link reaction?\nI. It occurs in the mitochondrial matrix.\nII. It produces acetyl CoA, CO2, and NADH.\nIII. It is catalyzed by pyruvate dehydrogenase complex.\nIV. It is reversible in nature.",
+      "options": [
+        "B) Two",
+        "D) Four",
+        "A) One",
+        "C) Three"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statements I, II, and III are correct. The link reaction occurs in the mitochondrial matrix, produces acetyl CoA + CO2 + NADH, and is catalyzed by pyruvate dehydrogenase complex. Statement IV is incorrect - the link reaction is irreversible.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "link reaction",
+        "pyruvate dehydrogenase",
+        "statement based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Select the correct statements about the respiratory balance sheet:\nI. Glycolysis produces 2 NADH.\nII. Link reaction produces 2 NADH (for one glucose).\nIII. Krebs cycle produces 6 NADH (for one glucose).\nIV. Total FADH2 produced per glucose is 4.",
+      "options": [
+        "D) II and III only",
+        "A) I, II, and III only",
+        "C) I, II, III, and IV",
+        "B) I and II only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements I, II, and III are correct. Glycolysis produces 2 NADH, link reaction produces 2 NADH (1 per pyruvate, 2 pyruvates per glucose), and Krebs cycle produces 6 NADH (3 per turn, 2 turns per glucose). Statement IV is incorrect - total FADH2 is 2 (1 per turn of Krebs cycle, 2 turns per glucose).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "respiratory balance sheet",
+        "NADH",
+        "FADH2",
+        "ATP counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Consider the following statements about amphibolic pathways:\nI. Fatty acids can be broken down to acetyl CoA which enters the TCA cycle.\nII. Amino acids can enter the respiratory pathway after deamination.\nIII. Respiratory intermediates are used only for catabolism.\nIV. OAA can be used to synthesize certain amino acids.",
+      "options": [
+        "A) I, II, and IV only",
+        "D) III and IV only",
+        "B) I, II, III, and IV",
+        "C) I and II only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements I, II, and IV are correct. Fatty acids break down to acetyl CoA, amino acids enter respiration after deamination, and OAA is used for amino acid synthesis. Statement III is incorrect - respiratory intermediates serve both catabolism and anabolism (hence amphibolic).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amphibolic pathway",
+        "statement based",
+        "catabolism",
+        "anabolism"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which of the following statements about the preparatory phase of glycolysis is/are correct?\nI. 2 ATP molecules are consumed.\nII. Glucose is phosphorylated twice.\nIII. Fructose-1,6-bisphosphate is split into two 3-carbon molecules.\nIV. NADH is produced in this phase.",
+      "options": [
+        "D) I, III, and IV only",
+        "B) I, II, III, and IV",
+        "C) I and II only",
+        "A) I, II, and III only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statements I, II, and III are correct. In the preparatory phase, 2 ATP are consumed (hexokinase and PFK steps), glucose is phosphorylated twice, and fructose-1,6-bisphosphate is split into G3P and DHAP. Statement IV is incorrect - NADH is produced in the payoff phase, not the preparatory phase.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "preparatory phase",
+        "statement based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Consider the following statements:\nI. Complex IV is also called cytochrome c oxidase.\nII. Complex III is also called cytochrome bc1 complex.\nIII. Complex I accepts electrons from FADH2.\nIV. Protons are not pumped at Complex II.\nHow many of the above statements are correct?",
+      "options": [
+        "B) Two",
+        "C) Three",
+        "A) One",
+        "D) Four"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements I, II, and IV are correct. Complex IV is cytochrome c oxidase, Complex III is cytochrome bc1 complex, and Complex II does not pump protons. Statement III is incorrect - Complex I accepts electrons from NADH, not FADH2 (FADH2 donates to Complex II).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS",
+        "complexes",
+        "statement based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Read the following statements about cellular respiration and identify the incorrect one:\nI. Glycolysis is common to both aerobic and anaerobic respiration.\nII. In aerobic respiration, the final electron acceptor is oxygen.\nIII. The Krebs cycle can function in the absence of oxygen.\nIV. Pyruvate enters mitochondria for aerobic oxidation.",
+      "options": [
+        "A) I only",
+        "B) III only",
+        "C) II only",
+        "D) IV only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statement III is incorrect. The Krebs cycle cannot function in the absence of oxygen because the NADH and FADH2 produced need to be reoxidized through the ETS, which requires oxygen as the terminal electron acceptor. Statements I, II, and IV are all correct.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cellular respiration",
+        "statement based",
+        "Krebs cycle",
+        "oxygen"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Consider the following statements regarding oxidative phosphorylation:\nI. It requires an intact inner mitochondrial membrane.\nII. It is driven by the proton gradient across the inner mitochondrial membrane.\nIII. DNP (2,4-dinitrophenol) is an uncoupler of oxidative phosphorylation.\nIV. Substrate-level phosphorylation and oxidative phosphorylation are the same process.",
+      "options": [
+        "A) I, II, and III only",
+        "B) I and II only",
+        "C) I, II, III, and IV",
+        "D) II and IV only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements I, II, and III are correct. Oxidative phosphorylation requires an intact membrane for the proton gradient, is driven by this gradient, and DNP uncouples it by dissipating the gradient. Statement IV is incorrect - they are fundamentally different processes.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "oxidative phosphorylation",
+        "uncouplers",
+        "DNP"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Which of the following statements about the chemiosmotic hypothesis is/are correct?\nI. It was proposed by Peter Mitchell.\nII. The proton gradient is established across the outer mitochondrial membrane.\nIII. ATP synthesis is driven by proton motive force.\nIV. F1 subunit of ATP synthase has the catalytic site for ATP synthesis.",
+      "options": [
+        "A) I, III, and IV only",
+        "C) I and III only",
+        "D) I, II, and IV only",
+        "B) I, II, III, and IV"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements I, III, and IV are correct. Peter Mitchell proposed the hypothesis, ATP is synthesized by proton motive force, and F1 has the catalytic site. Statement II is incorrect - the proton gradient is across the inner mitochondrial membrane, not the outer membrane.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "chemiosmotic hypothesis",
+        "Peter Mitchell",
+        "ATP synthase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the following ETS complexes with their names:\nColumn I (Complex) → Column II (Name)\n(a) Complex I → (i) Cytochrome c oxidase\n(b) Complex II → (ii) Cytochrome bc1 complex\n(c) Complex III → (iii) NADH dehydrogenase\n(d) Complex IV → (iv) Succinate dehydrogenase",
+      "options": [
+        "B) a-iv, b-iii, c-i, d-ii",
+        "A) a-iii, b-iv, c-ii, d-i",
+        "C) a-iii, b-ii, c-iv, d-i",
+        "D) a-i, b-iv, c-ii, d-iii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Complex I = NADH dehydrogenase (a-iii), Complex II = Succinate dehydrogenase (b-iv), Complex III = Cytochrome bc1 complex (c-ii), Complex IV = Cytochrome c oxidase (d-i).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS",
+        "complexes",
+        "match the following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the following substrates with their RQ values:\nColumn I (Substrate) → Column II (RQ)\n(a) Carbohydrates → (i) 0.7\n(b) Fats → (ii) Greater than 1\n(c) Proteins → (iii) 1.0\n(d) Organic acids → (iv) 0.8",
+      "options": [
+        "A) a-iii, b-i, c-iv, d-ii",
+        "B) a-i, b-iii, c-ii, d-iv",
+        "D) a-ii, b-i, c-iv, d-iii",
+        "C) a-iii, b-iv, c-i, d-ii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Carbohydrates have RQ = 1.0 (a-iii), Fats have RQ ≈ 0.7 (b-i), Proteins have RQ ≈ 0.8 (c-iv), Organic acids have RQ > 1 (d-ii, e.g., malic acid RQ = 1.33).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "respiratory quotient",
+        "RQ",
+        "match the following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the following enzymes with their reactions in the Krebs cycle:\nColumn I (Enzyme) → Column II (Reaction)\n(a) Citrate synthase → (i) Succinate → Fumarate\n(b) Isocitrate dehydrogenase → (ii) Acetyl CoA + OAA → Citrate\n(c) Succinate dehydrogenase → (iii) Malate → OAA\n(d) Malate dehydrogenase → (iv) Isocitrate → α-ketoglutarate",
+      "options": [
+        "B) a-iv, b-ii, c-iii, d-i",
+        "A) a-ii, b-iv, c-i, d-iii",
+        "D) a-iii, b-iv, c-i, d-ii",
+        "C) a-ii, b-i, c-iv, d-iii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Citrate synthase catalyzes Acetyl CoA + OAA → Citrate (a-ii). Isocitrate dehydrogenase catalyzes Isocitrate → α-ketoglutarate (b-iv). Succinate dehydrogenase catalyzes Succinate → Fumarate (c-i). Malate dehydrogenase catalyzes Malate → OAA (d-iii).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Krebs cycle",
+        "enzymes",
+        "match the following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the following processes with their cellular locations:\nColumn I (Process) → Column II (Location)\n(a) Glycolysis → (i) Inner mitochondrial membrane\n(b) Krebs cycle → (ii) Cytoplasm\n(c) ETS → (iii) Mitochondrial matrix\n(d) Oxidative decarboxylation of pyruvate → (iv) Mitochondrial matrix",
+      "options": [
+        "D) a-i, b-iii, c-ii, d-iv",
+        "B) a-iii, b-ii, c-i, d-iv",
+        "C) a-ii, b-iv, c-iii, d-i",
+        "A) a-ii, b-iii, c-i, d-iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Glycolysis occurs in the cytoplasm (a-ii). Krebs cycle occurs in the mitochondrial matrix (b-iii). ETS is on the inner mitochondrial membrane (c-i). Oxidative decarboxylation of pyruvate occurs in the mitochondrial matrix (d-iv).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cellular location",
+        "match the following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the following products with the stages of aerobic respiration:\nColumn I (Product/molecule) → Column II (Stage)\n(a) 2 ATP (net) + 2 NADH → (i) ETS and oxidative phosphorylation\n(b) 2 NADH + 2 CO2 → (ii) Glycolysis\n(c) 6 NADH + 2 FADH2 + 2 GTP → (iii) Link reaction\n(d) 34 ATP → (iv) Krebs cycle",
+      "options": [
+        "A) a-ii, b-iii, c-iv, d-i",
+        "C) a-ii, b-iv, c-iii, d-i",
+        "B) a-iii, b-ii, c-iv, d-i",
+        "D) a-i, b-ii, c-iii, d-iv"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Glycolysis produces 2 net ATP + 2 NADH (a-ii). Link reaction produces 2 NADH + 2 CO2 (b-iii). Krebs cycle produces 6 NADH + 2 FADH2 + 2 GTP (c-iv). ETS and oxidative phosphorylation produce 34 ATP from the NADH and FADH2 (d-i).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "respiratory balance sheet",
+        "match the following",
+        "ATP counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the following Krebs cycle intermediates with their carbon numbers:\nColumn I (Intermediate) → Column II (Carbon atoms)\n(a) Citrate → (i) 5C\n(b) α-ketoglutarate → (ii) 4C\n(c) Succinate → (iii) 6C\n(d) Oxaloacetate → (iv) 4C",
+      "options": [
+        "D) a-ii, b-i, c-iii, d-iv",
+        "C) a-iii, b-ii, c-i, d-iv",
+        "B) a-i, b-iii, c-iv, d-ii",
+        "A) a-iii, b-i, c-ii, d-iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Citrate has 6 carbons (a-iii). α-ketoglutarate has 5 carbons (b-i). Succinate has 4 carbons (c-ii). Oxaloacetate has 4 carbons (d-iv).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Krebs cycle",
+        "carbon atoms",
+        "intermediates"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the following glycolysis enzymes with their substrates:\nColumn I (Enzyme) → Column II (Substrate)\n(a) Hexokinase → (i) Fructose-6-phosphate\n(b) Phosphofructokinase → (ii) PEP\n(c) Pyruvate kinase → (iii) Glucose\n(d) Aldolase → (iv) Fructose-1,6-bisphosphate",
+      "options": [
+        "D) a-iii, b-iv, c-i, d-ii",
+        "C) a-iv, b-i, c-ii, d-iii",
+        "A) a-iii, b-i, c-ii, d-iv",
+        "B) a-i, b-iii, c-iv, d-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Hexokinase acts on glucose (a-iii). Phosphofructokinase acts on fructose-6-phosphate (b-i). Pyruvate kinase acts on PEP (phosphoenolpyruvate) (c-ii). Aldolase acts on fructose-1,6-bisphosphate (d-iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "enzymes",
+        "match the following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the following types of fermentation with their end products:\nColumn I (Type) → Column II (End product)\n(a) Alcoholic fermentation → (i) Lactic acid\n(b) Lactic acid fermentation → (ii) Ethanol + CO2\n(c) Aerobic respiration → (iii) Pyruvic acid\n(d) Glycolysis → (iv) CO2 + H2O",
+      "options": [
+        "B) a-i, b-ii, c-iii, d-iv",
+        "D) a-iii, b-i, c-iv, d-ii",
+        "A) a-ii, b-i, c-iv, d-iii",
+        "C) a-ii, b-iv, c-i, d-iii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Alcoholic fermentation produces ethanol + CO2 (a-ii). Lactic acid fermentation produces lactic acid (b-i). Aerobic respiration produces CO2 + H2O (c-iv). Glycolysis produces pyruvic acid (d-iii).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fermentation",
+        "end products",
+        "match the following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the following scientists with their contributions:\nColumn I (Scientist) → Column II (Contribution)\n(a) Hans Krebs → (i) Chemiosmotic hypothesis\n(b) Peter Mitchell → (ii) EMP pathway\n(c) Embden, Meyerhof, Parnas → (iii) TCA cycle\n(d) Louis Pasteur → (iv) Fermentation studies",
+      "options": [
+        "B) a-ii, b-iii, c-i, d-iv",
+        "D) a-i, b-iii, c-iv, d-ii",
+        "C) a-iii, b-iv, c-ii, d-i",
+        "A) a-iii, b-i, c-ii, d-iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hans Krebs discovered the TCA/Krebs cycle (a-iii). Peter Mitchell proposed the chemiosmotic hypothesis (b-i). Embden, Meyerhof, and Parnas elucidated glycolysis/EMP pathway (c-ii). Louis Pasteur studied fermentation (d-iv).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "scientists",
+        "contributions",
+        "match the following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the NADH/FADH2 source with the ATP yield per glucose molecule:\nColumn I (Source) → Column II (ATP equivalents)\n(a) 2 NADH from glycolysis → (i) 18 ATP\n(b) 2 NADH from link reaction → (ii) 4 ATP\n(c) 6 NADH from Krebs cycle → (iii) 6 ATP\n(d) 2 FADH2 from Krebs cycle → (iv) 6 ATP",
+      "options": [
+        "B) a-iv, b-iii, c-i, d-ii",
+        "D) a-ii, b-iv, c-i, d-iii",
+        "A) a-iii, b-iv, c-i, d-ii",
+        "C) a-iii, b-i, c-iv, d-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "2 NADH from glycolysis = 2 x 3 = 6 ATP (a-iii, using malate-aspartate shuttle). 2 NADH from link reaction = 2 x 3 = 6 ATP (b-iv). 6 NADH from Krebs cycle = 6 x 3 = 18 ATP (c-i). 2 FADH2 from Krebs cycle = 2 x 2 = 4 ATP (d-ii).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ATP counting",
+        "respiratory balance sheet",
+        "match the following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the following inhibitors with the ETS complexes they inhibit:\nColumn I (Inhibitor) → Column II (Target)\n(a) Rotenone → (i) Complex III\n(b) Antimycin A → (ii) ATP synthase\n(c) Cyanide → (iii) Complex I\n(d) Oligomycin → (iv) Complex IV",
+      "options": [
+        "A) a-iii, b-i, c-iv, d-ii",
+        "C) a-iii, b-iv, c-i, d-ii",
+        "D) a-iv, b-i, c-iii, d-ii",
+        "B) a-i, b-iii, c-iv, d-ii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Rotenone inhibits Complex I (a-iii). Antimycin A inhibits Complex III (b-i). Cyanide inhibits Complex IV (c-iv). Oligomycin inhibits ATP synthase/Complex V (d-ii).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS inhibitors",
+        "complexes",
+        "match the following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the following Krebs cycle reactions with the type of product formed:\nColumn I (Reaction) → Column II (Product type)\n(a) Isocitrate → α-ketoglutarate → (i) FADH2\n(b) α-ketoglutarate → Succinyl CoA → (ii) GTP\n(c) Succinyl CoA → Succinate → (iii) NADH + CO2\n(d) Succinate → Fumarate → (iv) NADH + CO2",
+      "options": [
+        "C) a-i, b-iv, c-ii, d-iii",
+        "D) a-iii, b-i, c-ii, d-iv",
+        "A) a-iii, b-iv, c-ii, d-i",
+        "B) a-iv, b-iii, c-i, d-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Isocitrate → α-ketoglutarate produces NADH + CO2 (a-iii, oxidative decarboxylation). α-ketoglutarate → Succinyl CoA produces NADH + CO2 (b-iv, oxidative decarboxylation). Succinyl CoA → Succinate produces GTP (c-ii, substrate-level phosphorylation). Succinate → Fumarate produces FADH2 (d-i).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Krebs cycle",
+        "reactions",
+        "products",
+        "match the following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Match the following coenzymes/carriers with their roles:\nColumn I (Carrier) → Column II (Role)\n(a) NAD+ → (i) Mobile electron carrier between Complex I/II and III\n(b) FAD → (ii) Proton channel in ATP synthase\n(c) Ubiquinone (CoQ) → (iii) Electron acceptor in dehydrogenation reactions\n(d) F0 subunit → (iv) Electron acceptor in succinate dehydrogenase reaction",
+      "options": [
+        "B) a-iv, b-iii, c-ii, d-i",
+        "A) a-iii, b-iv, c-i, d-ii",
+        "C) a-iii, b-i, c-iv, d-ii",
+        "D) a-i, b-iv, c-iii, d-ii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "NAD+ accepts electrons in various dehydrogenation reactions (a-iii). FAD is the electron acceptor specifically in the succinate dehydrogenase reaction (b-iv). Ubiquinone is the mobile carrier between Complex I/II and Complex III (c-i). F0 subunit is the proton channel in ATP synthase (d-ii).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "coenzymes",
+        "electron carriers",
+        "match the following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "How many CO2 molecules are released during the complete oxidation of one molecule of glucose in aerobic respiration?",
+      "options": [
+        "A) 2",
+        "C) 6",
+        "B) 4",
+        "D) 8"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Total CO2 released per glucose: 2 CO2 in link reaction (1 per pyruvate) + 4 CO2 in Krebs cycle (2 per turn, 2 turns) = 6 CO2 total. No CO2 is released during glycolysis or ETS.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "CO2 release",
+        "counting",
+        "aerobic respiration"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "How many ATP molecules are produced by oxidative phosphorylation from the NADH and FADH2 generated during the Krebs cycle alone (for one glucose molecule)?",
+      "options": [
+        "C) 24",
+        "D) 20",
+        "A) 18",
+        "B) 22"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Per glucose (2 turns of Krebs cycle): 6 NADH x 3 ATP = 18 ATP + 2 FADH2 x 2 ATP = 4 ATP. Total from Krebs cycle NADH and FADH2 = 18 + 4 = 22 ATP by oxidative phosphorylation.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ATP counting",
+        "Krebs cycle",
+        "oxidative phosphorylation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "How many total FADH2 molecules are produced during the complete aerobic oxidation of one molecule of glucose?",
+      "options": [
+        "D) 6",
+        "C) 4",
+        "A) 1",
+        "B) 2"
+      ],
+      "correctAnswer": "D",
+      "explanation": "FADH2 is produced only in the Krebs cycle, during the oxidation of succinate to fumarate by succinate dehydrogenase. Since the Krebs cycle turns twice per glucose molecule, 2 FADH2 are produced in total.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "FADH2",
+        "counting",
+        "respiratory balance sheet"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "How many decarboxylation reactions occur during one complete turn of the Krebs cycle?",
+      "options": [
+        "D) 4",
+        "C) 3",
+        "A) 1",
+        "B) 2"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Two decarboxylation reactions occur per turn of the Krebs cycle: (1) Isocitrate → α-ketoglutarate (by isocitrate dehydrogenase) and (2) α-ketoglutarate → succinyl CoA (by α-ketoglutarate dehydrogenase). Both release one CO2 each.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Krebs cycle",
+        "decarboxylation",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "How many steps (reactions) are there in glycolysis?",
+      "options": [
+        "A) 8",
+        "B) 9",
+        "C) 10",
+        "D) 12"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Glycolysis (EMP pathway) consists of 10 enzymatic steps. The first 5 steps constitute the preparatory (energy investment) phase and the last 5 steps constitute the payoff (energy generation) phase.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "steps",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "How many molecules of water are consumed during one turn of the Krebs cycle?",
+      "options": [
+        "D) 4",
+        "B) 2",
+        "A) 1",
+        "C) 3"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Two molecules of water are consumed per turn of the Krebs cycle: one in the citrate synthase reaction (condensation of acetyl CoA with OAA) and one in the fumarase reaction (hydration of fumarate to malate).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "Krebs cycle",
+        "water",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "How many ETS complexes are involved in proton pumping across the inner mitochondrial membrane?",
+      "options": [
+        "B) 3",
+        "A) 2",
+        "C) 4",
+        "D) 5"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Three ETS complexes pump protons (H+) from the mitochondrial matrix to the intermembrane space: Complex I (NADH dehydrogenase), Complex III (cytochrome bc1), and Complex IV (cytochrome c oxidase). Complex II does not pump protons.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS",
+        "proton pumping",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "During glycolysis, how many ATP molecules are consumed in the preparatory phase (energy investment phase)?",
+      "options": [
+        "C) 3",
+        "A) 1",
+        "B) 2",
+        "D) 4"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In the preparatory phase of glycolysis, 2 ATP molecules are consumed: one by hexokinase (glucose → glucose-6-phosphate) and one by phosphofructokinase (fructose-6-phosphate → fructose-1,6-bisphosphate).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "ATP consumption",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Arrange the following Krebs cycle intermediates in the correct sequence:\n(i) α-ketoglutarate\n(ii) Citrate\n(iii) Succinate\n(iv) Oxaloacetate",
+      "options": [
+        "D) ii → iii → i → iv",
+        "B) ii → i → iii → iv",
+        "C) iv → i → ii → iii",
+        "A) iv → ii → i → iii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct sequence starting from citrate in the Krebs cycle is: Citrate (ii) → Isocitrate → α-ketoglutarate (i) → Succinyl CoA → Succinate (iii) → Fumarate → Malate → Oxaloacetate (iv). So the order is ii → i → iii → iv.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Krebs cycle",
+        "sequence",
+        "intermediates"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Arrange the following events of aerobic respiration in the correct order:\n(i) Krebs cycle\n(ii) Glycolysis\n(iii) Oxidative phosphorylation\n(iv) Oxidative decarboxylation of pyruvate",
+      "options": [
+        "B) ii → i → iv → iii",
+        "D) ii → iii → iv → i",
+        "C) iv → ii → i → iii",
+        "A) ii → iv → i → iii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct sequence of aerobic respiration is: Glycolysis (ii) → Oxidative decarboxylation of pyruvate/Link reaction (iv) → Krebs cycle (i) → Oxidative phosphorylation/ETS (iii).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "aerobic respiration",
+        "sequence",
+        "stages"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Arrange the following electron carriers of the ETS in the correct order of electron flow:\n(i) Cytochrome c\n(ii) Complex I\n(iii) Complex IV\n(iv) Ubiquinone\n(v) Complex III",
+      "options": [
+        "C) iv → ii → v → iii → i",
+        "B) ii → v → iv → i → iii",
+        "A) ii → iv → v → i → iii",
+        "D) ii → iv → i → v → iii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The correct sequence of electron flow in ETS is: Complex I (NADH dehydrogenase) (ii) → Ubiquinone/CoQ (iv) → Complex III (cytochrome bc1) (v) → Cytochrome c (i) → Complex IV (cytochrome c oxidase) (iii) → O2.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ETS",
+        "electron flow",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Arrange the following glycolysis intermediates in the correct order:\n(i) Fructose-1,6-bisphosphate\n(ii) Glucose-6-phosphate\n(iii) Phosphoenolpyruvate (PEP)\n(iv) 3-phosphoglyceric acid (3-PGA)",
+      "options": [
+        "C) ii → i → iii → iv",
+        "B) i → ii → iii → iv",
+        "A) ii → i → iv → iii",
+        "D) i → ii → iv → iii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The correct order in glycolysis is: Glucose → Glucose-6-phosphate (ii) → Fructose-6-phosphate → Fructose-1,6-bisphosphate (i) → G3P/DHAP → 1,3-BPG → 3-phosphoglyceric acid (iv) → 2-PGA → PEP (iii) → Pyruvate.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "intermediates",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Arrange the following steps of alcoholic fermentation in the correct sequence:\n(i) Acetaldehyde is reduced to ethanol\n(ii) Glucose is broken down to pyruvate\n(iii) Pyruvate is decarboxylated to acetaldehyde\n(iv) NADH is oxidized to NAD+",
+      "options": [
+        "B) ii → iii → iv → i",
+        "C) i → ii → iii → iv",
+        "D) ii → iv → iii → i",
+        "A) ii → iii → i → iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct sequence is: Glucose → Pyruvate via glycolysis (ii) → Pyruvate decarboxylated to acetaldehyde + CO2 (iii) → Acetaldehyde reduced to ethanol (i) using NADH → NAD+ is regenerated (iv). Steps i and iv occur simultaneously.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "alcoholic fermentation",
+        "sequence",
+        "steps"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Arrange the following events of the chemiosmotic hypothesis in correct order:\n(i) ATP is synthesized by ATP synthase\n(ii) Electrons flow through the ETS complexes\n(iii) Protons flow back through F0 channel\n(iv) Protons accumulate in the intermembrane space",
+      "options": [
+        "D) iv → iii → ii → i",
+        "C) ii → iii → iv → i",
+        "A) ii → iv → iii → i",
+        "B) iv → ii → iii → i"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The correct sequence is: Electrons flow through ETS complexes (ii) → Protons are pumped to and accumulate in intermembrane space (iv) → Protons flow back through F0 channel down the concentration gradient (iii) → ATP is synthesized by ATP synthase using the proton motive force (i).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "chemiosmotic hypothesis",
+        "sequence",
+        "ATP synthesis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Arrange the following Krebs cycle reactions in correct order starting from acetyl CoA:\n(i) Succinyl CoA → Succinate\n(ii) Acetyl CoA + OAA → Citrate\n(iii) Isocitrate → α-ketoglutarate\n(iv) Fumarate → Malate",
+      "options": [
+        "B) iii → ii → i → iv",
+        "A) ii → iii → i → iv",
+        "D) ii → iii → iv → i",
+        "C) ii → i → iii → iv"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct order starting from acetyl CoA is: Acetyl CoA + OAA → Citrate (ii) → Citrate → Isocitrate → α-ketoglutarate (iii) → α-ketoglutarate → Succinyl CoA → Succinate (i) → Succinate → Fumarate → Malate (iv) → OAA.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Krebs cycle",
+        "sequence",
+        "reactions"
+      ],
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

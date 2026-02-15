@@ -1,0 +1,1411 @@
+{
+  "batch": {
+    "name": "Class 11 - Chapter 2: Biological Classification",
+    "version": 1,
+    "source": "neet-class11-ch02",
+    "totalQuestions": 100
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Who proposed the Five Kingdom Classification?",
+      "options": [
+        "C) Copeland",
+        "A) Linnaeus",
+        "B) Whittaker",
+        "D) Haeckel"
+      ],
+      "correctAnswer": "C",
+      "explanation": "R.H. Whittaker (1969) proposed the Five Kingdom Classification based on cell structure, body organisation, mode of nutrition, reproduction, and phylogenetic relationships. As per NCERT, the five kingdoms are Monera, Protista, Fungi, Plantae, and Animalia.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "five-kingdom",
+        "whittaker",
+        "classification-history"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Which of the following criteria was NOT used by Whittaker for his five kingdom classification?",
+      "options": [
+        "C) Habitat",
+        "A) Cell structure",
+        "D) Body organisation",
+        "B) Mode of nutrition"
+      ],
+      "correctAnswer": "A",
+      "explanation": "According to NCERT, Whittaker used cell structure, body organisation, mode of nutrition, reproduction, and phylogenetic relationships as criteria. Habitat was not one of the criteria used by Whittaker for his classification system.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "five-kingdom",
+        "whittaker",
+        "classification-criteria"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Methanogens belong to which group?",
+      "options": [
+        "A) Eubacteria",
+        "B) Archaebacteria",
+        "C) Cyanobacteria",
+        "D) Dinoflagellates"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, methanogens are present in the gut of several ruminant animals such as cows and buffaloes, and they are responsible for the production of methane (biogas). Methanogens belong to Archaebacteria, which live in harsh habitats.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monera",
+        "archaebacteria",
+        "methanogens"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "The cell wall of which organism is composed of chitin?",
+      "options": [
+        "C) Fungi",
+        "B) Plants",
+        "A) Bacteria",
+        "D) Protista"
+      ],
+      "correctAnswer": "A",
+      "explanation": "According to NCERT, in fungi the cell wall is composed of chitin, a complex polysaccharide. In contrast, plant cell walls are made of cellulose and bacterial cell walls contain peptidoglycan (murein).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "chitin",
+        "cell-wall"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Which of the following is called 'red tide'?",
+      "options": [
+        "C) Dinoflagellates",
+        "B) Chrysophytes",
+        "D) Slime moulds",
+        "A) Euglenoids"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, red tides are caused by rapid multiplication of red dinoflagellates such as Gonyaulax. The red colour of the sea is due to the large population of these organisms, which may even release toxins that can kill marine animals.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protista",
+        "dinoflagellates",
+        "red-tide"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Mycoplasma differs from other bacteria in lacking:",
+      "options": [
+        "C) Ribosomes",
+        "D) Cell membrane",
+        "B) Cell wall",
+        "A) DNA"
+      ],
+      "correctAnswer": "C",
+      "explanation": "According to NCERT, mycoplasmas are organisms that completely lack a cell wall. They are the smallest living cells known and can survive without oxygen. They are pathogenic in animals and plants.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monera",
+        "mycoplasma",
+        "cell-wall"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Lichens are a symbiotic association between:",
+      "options": [
+        "B) Algae and fungi",
+        "A) Algae and bacteria",
+        "C) Fungi and bryophytes",
+        "D) Bacteria and fungi"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, lichens are symbiotic associations between algae and fungi. The algal component is known as phycobiont and the fungal component as mycobiont. Algae prepare food and fungi provide shelter and absorb nutrients.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lichens",
+        "symbiosis",
+        "algae",
+        "fungi"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Viroids differ from viruses in having:",
+      "options": [
+        "D) Protein coat without nucleic acid",
+        "A) DNA only without protein coat",
+        "B) RNA only without protein coat",
+        "C) Both DNA and RNA"
+      ],
+      "correctAnswer": "C",
+      "explanation": "According to NCERT, viroids are smaller than viruses and were discovered by T.O. Diener in 1971. They are free RNA molecules without a protein coat, causing diseases like potato spindle tuber disease. Viruses have either DNA or RNA enclosed in a protein coat.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "viroids",
+        "viruses",
+        "RNA"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Cyanobacteria are also referred to as:",
+      "options": [
+        "A) Golden algae",
+        "D) Red algae",
+        "C) Brown algae",
+        "B) Blue-green algae"
+      ],
+      "correctAnswer": "D",
+      "explanation": "According to NCERT, cyanobacteria are also referred to as blue-green algae. They are photosynthetic autotrophs that have chlorophyll a similar to green plants. Some, like Nostoc and Anabaena, can fix atmospheric nitrogen in specialised cells called heterocysts.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monera",
+        "cyanobacteria",
+        "blue-green-algae"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Deuteromycetes are also known as:",
+      "options": [
+        "D) Bread moulds",
+        "C) Imperfect fungi",
+        "B) Sac fungi",
+        "A) Club fungi"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, Deuteromycetes are commonly known as imperfect fungi because only the asexual or vegetative phases of these fungi are known. Once the sexual stage of a member is discovered, it is moved to either Ascomycetes or Basidiomycetes.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "deuteromycetes",
+        "imperfect-fungi"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Which of the following organisms forms zoospores during asexual reproduction?",
+      "options": [
+        "C) Albugo",
+        "B) Penicillium",
+        "D) Agaricus",
+        "A) Mucor"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, Phycomycetes (which includes Albugo) reproduce asexually by zoospores (motile) or by aplanospores (non-motile). Mucor and Penicillium belong to different fungal classes and Agaricus is a basidiomycete.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "phycomycetes",
+        "zoospores",
+        "albugo"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "The fruiting body of Agaricus is called:",
+      "options": [
+        "A) Ascus",
+        "C) Cleistothecium",
+        "B) Basidiocarp",
+        "D) Perithecium"
+      ],
+      "correctAnswer": "C",
+      "explanation": "According to NCERT, basidiomycetes like Agaricus produce fruiting bodies called basidiocarps. The basidiocarps bear basidia on which basidiospores are produced exogenously. Ascus is the spore-bearing structure of ascomycetes.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "basidiomycetes",
+        "agaricus",
+        "basidiocarp"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Chrysophytes include:",
+      "options": [
+        "A) Diatoms and golden algae",
+        "C) Slime moulds and protozoans",
+        "D) Trypanosoma and Plasmodium",
+        "B) Dinoflagellates and euglenoids"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, chrysophytes include diatoms and golden algae (desmids). They are found in fresh water as well as marine environments. Diatoms have cell walls forming two thin overlapping shells that fit together like a soap box.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protista",
+        "chrysophytes",
+        "diatoms"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Prions are composed of:",
+      "options": [
+        "D) Lipoproteins",
+        "B) Only DNA",
+        "A) Only RNA",
+        "C) Only proteins"
+      ],
+      "correctAnswer": "D",
+      "explanation": "According to NCERT, prions are infectious agents that are composed of abnormally folded proteins only, with no nucleic acid. They cause neurological diseases like mad cow disease (bovine spongiform encephalopathy) and Creutzfeldt-Jakob disease in humans.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "prions",
+        "protein",
+        "infectious-agents"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "The diatomaceous earth is formed due to the accumulation of:",
+      "options": [
+        "B) Dead dinoflagellates",
+        "D) Calcium carbonate of foraminiferans",
+        "A) Cell walls of diatoms",
+        "C) Siliceous shells of radiolarians"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, diatoms have cell walls forming two thin overlapping shells that fit together like a soap box. The walls are embedded with silica and are thus indestructible. Diatoms have left behind large amounts of cell wall deposits in their habitat forming diatomaceous earth.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protista",
+        "diatoms",
+        "diatomaceous-earth"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "The Two Kingdom classification was given by:",
+      "options": [
+        "C) Haeckel",
+        "B) Linnaeus",
+        "D) Copeland",
+        "A) Whittaker"
+      ],
+      "correctAnswer": "B",
+      "explanation": "According to NCERT, the Two Kingdom classification into Plantae and Animalia was used till very recently. Linnaeus (1758) classified organisms into two kingdoms. This system did not distinguish between eukaryotes and prokaryotes, unicellular and multicellular organisms.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "classification-history",
+        "two-kingdom",
+        "linnaeus"
+      ],
+      "neetWeightage": "LOW"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "In which of the following sexual reproduction is absent?",
+      "options": [
+        "B) Ascomycetes",
+        "A) Phycomycetes",
+        "C) Deuteromycetes",
+        "D) Basidiomycetes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "According to NCERT, Deuteromycetes reproduce only by asexual spores known as conidia. The sexual reproduction is absent or unknown in this group, which is why they are called imperfect fungi. Once sexual stages are discovered, they are reclassified.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "deuteromycetes",
+        "reproduction"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Which among the following is a nitrogen-fixing cyanobacterium that forms a symbiotic association with Azolla?",
+      "options": [
+        "B) Anabaena",
+        "A) Nostoc",
+        "D) Spirulina",
+        "C) Oscillatoria"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Anabaena is a nitrogen-fixing cyanobacterium that forms a symbiotic association with the aquatic fern Azolla. As per NCERT, cyanobacteria like Nostoc and Anabaena can fix atmospheric nitrogen in specialised cells called heterocysts. Anabaena-Azolla association is used as biofertilizer in rice paddies.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monera",
+        "cyanobacteria",
+        "anabaena",
+        "nitrogen-fixation"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Euglenoids have a protein-rich flexible cell surface layer called:",
+      "options": [
+        "C) Glycocalyx",
+        "B) Pellicle",
+        "A) Cell wall",
+        "D) Capsule"
+      ],
+      "correctAnswer": "B",
+      "explanation": "According to NCERT, euglenoids have a protein-rich layer called pellicle instead of a cell wall, which makes their body flexible. They are photosynthetic in the presence of sunlight but behave as heterotrophs in the absence of sunlight (mixotrophic).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protista",
+        "euglenoids",
+        "pellicle"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Basidiospores are produced on structures called:",
+      "options": [
+        "D) Sporangia",
+        "B) Sterigmata",
+        "A) Asci",
+        "C) Conidiophores"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In basidiomycetes, basidiospores are produced exogenously on small stalk-like structures called sterigmata, which arise from the basidium. As per NCERT, basidia are arranged in fruiting bodies called basidiocarps. Four basidiospores are typically produced on each basidium.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "basidiomycetes",
+        "sterigmata",
+        "basidiospores"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "TMV (Tobacco Mosaic Virus) has:",
+      "options": [
+        "C) Double-stranded RNA",
+        "A) Double-stranded DNA",
+        "D) Single-stranded DNA",
+        "B) Single-stranded RNA"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, viruses have either RNA or DNA as genetic material. TMV (Tobacco Mosaic Virus) has single-stranded RNA as its genetic material. It was the first virus to be discovered by Ivanowsky (1892) and crystallised by Stanley (1935).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "viruses",
+        "TMV",
+        "RNA"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Which of the following is a halophilic archaebacterium?",
+      "options": [
+        "A) Methanobacterium",
+        "B) Halobacterium",
+        "C) Thermoacidophiles",
+        "D) Mycoplasma"
+      ],
+      "correctAnswer": "B",
+      "explanation": "According to NCERT, archaebacteria include halophiles (salt-loving), thermoacidophiles (hot spring dwellers), and methanogens. Halobacterium is a halophilic archaebacterium that lives in extremely salty environments like salt marshes.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monera",
+        "archaebacteria",
+        "halophiles"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Ascospores are produced inside a sac-like structure called:",
+      "options": [
+        "A) Basidium",
+        "C) Conidium",
+        "B) Ascus",
+        "D) Sporangium"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, ascomycetes are commonly known as sac fungi because ascospores are produced endogenously inside a sac-like structure called the ascus. These asci are arranged in different types of fruiting bodies called ascocarps. Examples include Aspergillus, Claviceps, and Neurospora.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "ascomycetes",
+        "ascus",
+        "ascospores"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Slime moulds during favourable conditions form an aggregation called:",
+      "options": [
+        "D) Thallus",
+        "C) Mycelium",
+        "B) Plasmodium",
+        "A) Fruiting body"
+      ],
+      "correctAnswer": "C",
+      "explanation": "According to NCERT, slime moulds are saprophytic protists. During favourable conditions, they form an aggregation called plasmodium, which may grow and spread over several feet. During unfavourable conditions, the plasmodium differentiates to form fruiting bodies bearing spores with true walls.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protista",
+        "slime-moulds",
+        "plasmodium"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Which protozoan causes sleeping sickness?",
+      "options": [
+        "A) Plasmodium",
+        "D) Paramoecium",
+        "B) Entamoeba",
+        "C) Trypanosoma"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, protozoans are classified into four major groups based on locomotory structures. Trypanosoma is a flagellated protozoan that causes sleeping sickness (African trypanosomiasis) in humans and is transmitted by the tsetse fly.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protista",
+        "protozoa",
+        "trypanosoma"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "The sexual cycle in Phycomycetes involves the fusion of gametes to form:",
+      "options": [
+        "A) Ascospores",
+        "C) Zygospores",
+        "B) Basidiospores",
+        "D) Conidia"
+      ],
+      "correctAnswer": "B",
+      "explanation": "According to NCERT, in Phycomycetes sexual reproduction involves isogamy, anisogamy, or oogamy, resulting in the formation of zygospores. Examples of Phycomycetes include Mucor, Rhizopus (bread mould), and Albugo (parasitic fungi on mustard).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "phycomycetes",
+        "zygospores",
+        "sexual-reproduction"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Which of the following fungi is used extensively in biochemical and genetic work?",
+      "options": [
+        "D) Puccinia",
+        "B) Neurospora",
+        "C) Ustilago",
+        "A) Agaricus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, Neurospora is used extensively in biochemical and genetic work. It is an ascomycete commonly known as bread mould. Beadle and Tatum used Neurospora crassa to propose the 'one gene one enzyme hypothesis'.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "ascomycetes",
+        "neurospora",
+        "genetics"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Which of the following organisms can fix atmospheric nitrogen?",
+      "options": [
+        "D) Amoeba",
+        "A) Spirogyra",
+        "B) Nostoc",
+        "C) Euglena"
+      ],
+      "correctAnswer": "C",
+      "explanation": "According to NCERT, cyanobacteria such as Nostoc and Anabaena can fix atmospheric nitrogen in specialised cells called heterocysts. They are photosynthetic autotrophs found in freshwater, marine, and terrestrial environments. Some cyanobacteria bloom in polluted water bodies.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monera",
+        "cyanobacteria",
+        "nostoc",
+        "nitrogen-fixation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "The kingdom that includes all prokaryotic organisms is:",
+      "options": [
+        "C) Monera",
+        "A) Protista",
+        "B) Fungi",
+        "D) Plantae"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, Kingdom Monera includes all prokaryotic organisms. Bacteria are the sole members of Kingdom Monera. They are the most abundant micro-organisms. They have a cell wall made of peptidoglycan and lack a well-defined nucleus and membrane-bound organelles.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monera",
+        "prokaryotes",
+        "five-kingdom"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Lichens are important indicators of:",
+      "options": [
+        "B) Air pollution",
+        "C) Soil pollution",
+        "A) Water pollution",
+        "D) Noise pollution"
+      ],
+      "correctAnswer": "A",
+      "explanation": "According to NCERT, lichens are very good pollution indicators. They do not grow in polluted areas, particularly where SO2 pollution is high. Their sensitivity to sulphur dioxide makes them excellent bioindicators of air quality.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lichens",
+        "pollution-indicator",
+        "air-pollution"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Which of the following diseases is caused by a fungal pathogen?",
+      "options": [
+        "A) Cholera",
+        "D) Malaria",
+        "C) Ringworm",
+        "B) Typhoid"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ringworm is caused by deuteromycete fungi like Microsporum, Trichophyton, and Epidermophyton. As per NCERT, deuteromycetes include many species that decompose litter and help in mineral cycling. Some are also pathogenic, causing diseases in plants and animals.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "deuteromycetes",
+        "disease",
+        "ringworm"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Puccinia and Ustilago belong to which class of fungi?",
+      "options": [
+        "C) Basidiomycetes",
+        "B) Ascomycetes",
+        "D) Deuteromycetes",
+        "A) Phycomycetes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "According to NCERT, Puccinia (rust fungus) and Ustilago (smut fungus) are common members of Basidiomycetes. They grow as parasites on wheat and other crop plants. Basidiomycetes include mushrooms, bracket fungi, puffballs, rusts, and smuts.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "basidiomycetes",
+        "puccinia",
+        "ustilago"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "The glycocalyx in bacteria may occur as a loose sheath called:",
+      "options": [
+        "C) Pellicle",
+        "A) Capsule",
+        "B) Slime layer",
+        "D) Mesosomes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the glycocalyx is an outer covering of the bacterial cell wall. When it is thick and tough it is called capsule, and when it is a loose sheath it is called slime layer. The glycocalyx provides protection and aids in adhesion to surfaces.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monera",
+        "bacteria",
+        "glycocalyx",
+        "slime-layer"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Conidiospores are asexual spores produced by which class of fungi?",
+      "options": [
+        "C) Basidiomycetes",
+        "A) Phycomycetes",
+        "D) Both B and C",
+        "B) Ascomycetes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "According to NCERT, ascomycetes are saprophytic, decomposers, parasitic, or coprophilous. Asexual spores are conidia produced exogenously on special mycelium called conidiophores. Sexual spores are ascospores produced endogenously in sac-like asci.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "ascomycetes",
+        "conidia",
+        "asexual-reproduction"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "In the five kingdom system, unicellular eukaryotes are placed in kingdom:",
+      "options": [
+        "B) Protista",
+        "D) Plantae",
+        "A) Monera",
+        "C) Fungi"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, kingdom Protista includes all single-celled eukaryotes. Members of Protista are primarily aquatic. This kingdom forms a link with plants, animals, and fungi. The boundaries of this kingdom are not well-defined.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protista",
+        "eukaryotes",
+        "unicellular",
+        "five-kingdom"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Which of the following is NOT an example of a basidiomycete?",
+      "options": [
+        "B) Puccinia",
+        "D) Ustilago",
+        "A) Agaricus",
+        "C) Aspergillus"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Aspergillus is an ascomycete (sac fungus), not a basidiomycete. According to NCERT, Agaricus (mushroom), Puccinia (rust), and Ustilago (smut) are all basidiomycetes. Aspergillus reproduces asexually by conidia and sexually by ascospores within asci.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "basidiomycetes",
+        "ascomycetes",
+        "aspergillus"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Potato spindle tuber disease is caused by:",
+      "options": [
+        "A) A virus",
+        "D) A bacterium",
+        "B) A viroid",
+        "C) A prion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "According to NCERT, viroids were discovered by T.O. Diener (1971). They cause potato spindle tuber disease. Viroids are free RNA molecules without a protein coat, smaller than viruses. They lack the capsid that characterises viruses.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "viroids",
+        "disease",
+        "potato-spindle-tuber"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Dinoflagellates have cell walls with stiff cellulose plates on the outer surface and have:",
+      "options": [
+        "C) Multiple flagella",
+        "B) Two flagella",
+        "D) No flagella",
+        "A) One flagellum"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, most dinoflagellates are marine and photosynthetic. They have two flagella: one lies longitudinally and the other transversely in a furrow between the wall plates. The appearance and colour vary depending on their pigments.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protista",
+        "dinoflagellates",
+        "flagella"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Which of the following is a coprophilous fungus?",
+      "options": [
+        "B) Albugo",
+        "D) Morels",
+        "A) Mucor",
+        "C) Puccinia"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Coprophilous fungi grow on dung. As per NCERT, Mucor (a phycomycete, also referred to under saprophytic fungi) and some ascomycetes are coprophilous. Albugo is parasitic on mustard, Puccinia is a rust fungus on wheat, and morels are edible ascomycetes.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "fungi",
+        "coprophilous",
+        "mucor"
+      ],
+      "neetWeightage": "LOW"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Archaebacteria can survive in extreme environmental conditions.\nReason (R): Archaebacteria have a different cell wall structure that does not contain peptidoglycan.",
+      "options": [
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both statements are true. As per NCERT, archaebacteria live in harsh habitats such as extreme salty areas (halophiles), hot springs (thermoacidophiles), and marshy areas (methanogens). Their cell wall has a different composition from eubacteria, lacking peptidoglycan, which is the correct reason for their ability to withstand extreme conditions.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monera",
+        "archaebacteria",
+        "cell-wall",
+        "extreme-environments"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Fungi are placed in a separate kingdom from plants.\nReason (R): Fungi are heterotrophic organisms that lack chlorophyll and have cell walls made of chitin.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both assertion and reason are true, and the reason correctly explains the assertion. According to NCERT, fungi were earlier placed in Plantae but are now in a separate kingdom because they are heterotrophic (unlike autotrophic plants), lack chlorophyll, and have chitin in their cell walls instead of cellulose.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "five-kingdom",
+        "heterotrophic",
+        "chitin"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Viruses are not included in any kingdom of biological classification.\nReason (R): Viruses are non-cellular organisms that can multiply only inside a living host cell.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, viruses did not find a place in Whittaker's five kingdom classification because they are non-cellular and are obligate intracellular parasites that can reproduce only within a host cell. This non-cellular and obligate parasitic nature is why they are excluded from all five kingdoms.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "viruses",
+        "classification",
+        "non-cellular"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Euglenoids are called plant-animals.\nReason (R): Euglenoids are photosynthetic in the presence of sunlight but behave as heterotrophs in the dark.",
+      "options": [
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "B",
+      "explanation": "According to NCERT, euglenoids (like Euglena) are photosynthetic in sunlight but become heterotrophic when deprived of sunlight. This dual nature of nutrition (mixotrophy) makes them connecting links between plants and animals, hence called plant-animals. The reason correctly explains the assertion.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protista",
+        "euglenoids",
+        "mixotrophic",
+        "plant-animal"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Diatom cell walls are indestructible.\nReason (R): Diatom cell walls are embedded with silica.",
+      "options": [
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, diatoms have cell walls forming two thin overlapping shells, which are embedded with silica and thus are virtually indestructible. The silica content makes the cell walls resistant to degradation, which is why they accumulate as diatomaceous earth over billions of years.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protista",
+        "diatoms",
+        "silica",
+        "cell-wall"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Mycoplasma can survive without oxygen.\nReason (R): Mycoplasma is the largest known living organism.",
+      "options": [
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The assertion is true as per NCERT: mycoplasmas can survive without oxygen (they are facultative anaerobes). However, the reason is false because mycoplasmas are the smallest living cells known, not the largest. They completely lack a cell wall and are pathogenic in animals and plants.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monera",
+        "mycoplasma",
+        "anaerobic"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Lichens are considered good pollution indicators.\nReason (R): Lichens are very sensitive to sulphur dioxide pollution.",
+      "options": [
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "C",
+      "explanation": "According to NCERT, lichens are good pollution indicators as they do not grow in polluted areas. Their sensitivity to sulphur dioxide (SO2) pollution is the specific reason why they serve as bioindicators. Both statements are true and the reason correctly explains the assertion.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lichens",
+        "pollution-indicator",
+        "SO2"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Bacteria reproduce sexually by the formation of gametes.\nReason (R): Bacteria are prokaryotic organisms lacking membrane-bound organelles.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The assertion is false. As per NCERT, bacteria do not reproduce sexually by gamete formation. They transfer DNA through primitive methods like transformation, transduction, and conjugation. The reason is true: bacteria are prokaryotic and lack membrane-bound organelles.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monera",
+        "bacteria",
+        "reproduction",
+        "prokaryote"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Cyanobacteria are placed in Kingdom Monera and not in Kingdom Plantae.\nReason (R): Cyanobacteria are prokaryotic organisms despite being photosynthetic.",
+      "options": [
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both are true. According to NCERT, cyanobacteria (blue-green algae) are photosynthetic autotrophs with chlorophyll a, but they are prokaryotic organisms. In Whittaker's classification, all prokaryotes are placed in Kingdom Monera. Their prokaryotic nature is the correct reason for their placement.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "monera",
+        "cyanobacteria",
+        "prokaryote",
+        "classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Slime moulds are placed in Kingdom Protista.\nReason (R): Slime moulds have spores that possess true cell walls and are saprophytic protists.",
+      "options": [
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both statements are true. As per NCERT, slime moulds are placed in Protista as saprophytic organisms, and their spores do possess true walls. However, having true-walled spores is not the reason they are placed in Protista. They are placed there because they are unicellular eukaryotes that don't fit into other kingdoms.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protista",
+        "slime-moulds",
+        "classification"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Phycomycetes are found in aquatic habitats as well as on decaying wood.\nReason (R): Phycomycetes have coenocytic mycelium (aseptate and multinucleate).",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both statements are true. As per NCERT, Phycomycetes are found in aquatic habitats and on decaying wood, in damp places, and as obligate parasites. Their mycelium is aseptate and coenocytic. However, having coenocytic mycelium is not the reason for their diverse habitat distribution.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "phycomycetes",
+        "coenocytic",
+        "habitat"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): The two-kingdom classification was inadequate.\nReason (R): It did not distinguish between prokaryotes and eukaryotes, unicellular and multicellular organisms, and photosynthetic and non-photosynthetic organisms.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, the two kingdom classification used by Linnaeus was inadequate because it did not distinguish between eukaryotes and prokaryotes, unicellular and multicellular organisms, and photosynthetic (green algae) and non-photosynthetic (fungi) organisms grouped under Plantae. The reason correctly explains the inadequacy.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "two-kingdom",
+        "classification-history",
+        "limitations"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Basidiomycetes do not produce asexual spores commonly.\nReason (R): Vegetative reproduction in basidiomycetes is by fragmentation.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "According to NCERT, basidiomycetes generally do not produce asexual spores commonly, and vegetative reproduction occurs by fragmentation. Both statements are true, but the fact that they reproduce vegetatively by fragmentation does not explain why they lack common asexual spores.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fungi",
+        "basidiomycetes",
+        "reproduction",
+        "asexual"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biological Classification",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "question": "Assertion (A): Viruses can be crystallised like chemicals.\nReason (R): Viruses are considered to be on the borderline between living and non-living.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both statements are true. As per NCERT, viruses could be crystallised, as demonstrated by Stanley in 1935 with TMV. Viruses are indeed considered at the borderline of living and non-living. However, being on the borderline is not the reason for their ability to crystallise; crystallisation is due to their simple chemical composition (nucleic acid + protein).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "viruses",
+        "crystallisation",
+        "living-nonliving"
+      ],
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

@@ -1,0 +1,2436 @@
+{
+  "batch": {
+    "name": "Class 11 - Chapter 18: Body Fluids and Circulation",
+    "version": 1,
+    "source": "neet-class11-ch18",
+    "totalQuestions": 100
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Plasma constitutes approximately what percentage of the total blood volume?",
+      "options": [
+        "D) 75%",
+        "C) 65%",
+        "A) 45%",
+        "B) 55%"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Plasma is the fluid portion of blood and constitutes about 55% of total blood volume. The remaining 45% is formed elements (RBCs, WBCs, and platelets).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-composition",
+        "plasma"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which plasma protein is essential for blood clotting?",
+      "options": [
+        "B) Globulin",
+        "A) Albumin",
+        "C) Fibrinogen",
+        "D) Prothrombin"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Fibrinogen is a plasma protein that plays a crucial role in blood clotting. It is converted to fibrin by the enzyme thrombin during the coagulation process.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "plasma-proteins",
+        "coagulation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The average lifespan of human RBCs is approximately:",
+      "options": [
+        "D) 200 days",
+        "B) 60 days",
+        "A) 30 days",
+        "C) 120 days"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Human red blood cells have an average lifespan of about 120 days. After this period, they are destroyed in the spleen, which is often called the graveyard of RBCs.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "RBC",
+        "formed-elements"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which type of WBC is most abundant in human blood?",
+      "options": [
+        "D) Monocytes",
+        "C) Neutrophils",
+        "A) Eosinophils",
+        "B) Basophils"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Neutrophils are the most abundant WBCs, constituting 60-65% of total WBCs. They are phagocytic in nature and form the first line of cellular defence against infections.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "WBC",
+        "formed-elements"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The SA node is located in:",
+      "options": [
+        "D) Right ventricle",
+        "A) Left atrium",
+        "B) Right atrium",
+        "C) Left ventricle"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The SA (sinoatrial) node is located in the upper right corner of the right atrium near the opening of the superior vena cava. It is called the pacemaker of the heart as it initiates the cardiac impulse.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "SA-node",
+        "pacemaker"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "A person with blood group AB can receive blood from:",
+      "options": [
+        "D) All blood groups",
+        "A) Only AB group",
+        "B) Only A and B groups",
+        "C) Only O group"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Blood group AB individuals are called universal recipients because they have both A and B antigens on their RBCs and no anti-A or anti-B antibodies in their plasma. Hence, they can receive blood from all blood groups (A, B, AB, and O).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-groups",
+        "ABO-system"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The tricuspid valve is present between the:",
+      "options": [
+        "A) Left atrium and left ventricle",
+        "D) Left ventricle and aorta",
+        "B) Right atrium and right ventricle",
+        "C) Right ventricle and pulmonary artery"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The tricuspid valve (right atrioventricular valve) is located between the right atrium and the right ventricle. It has three flaps or cusps and prevents the backflow of blood from the right ventricle to the right atrium.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "valves"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The normal cardiac output of a healthy individual is approximately:",
+      "options": [
+        "B) 5 litres per minute",
+        "D) 10 litres per minute",
+        "A) 2 litres per minute",
+        "C) 8 litres per minute"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cardiac output is the volume of blood pumped by each ventricle per minute. It is calculated as stroke volume (70 mL) multiplied by heart rate (72 beats/min), which equals approximately 5 litres per minute (5040 mL/min).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cardiac-output",
+        "heart"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The QRS complex in an ECG represents:",
+      "options": [
+        "D) Atrial repolarisation",
+        "C) Ventricular repolarisation",
+        "A) Atrial depolarisation",
+        "B) Ventricular depolarisation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The QRS complex represents ventricular depolarisation, i.e., the spread of electrical impulse through the ventricles causing ventricular contraction (systole). It is the most prominent wave in an ECG.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ECG",
+        "QRS-complex"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Erythroblastosis foetalis occurs when:",
+      "options": [
+        "C) Both parents are Rh-positive",
+        "B) Rh-negative mother carries Rh-positive foetus in subsequent pregnancies",
+        "D) Both parents are Rh-negative",
+        "A) Rh-positive mother carries Rh-negative foetus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Erythroblastosis foetalis occurs when an Rh-negative mother carries an Rh-positive foetus in subsequent pregnancies. The mother's anti-Rh antibodies (formed during first pregnancy) cross the placenta and destroy the foetal RBCs.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Rh-factor",
+        "erythroblastosis-foetalis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Bundle of His is a part of the:",
+      "options": [
+        "B) Conducting system of the heart",
+        "C) Respiratory system",
+        "A) Nervous system",
+        "D) Excretory system"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bundle of His is a part of the conducting system of the heart. It originates from the AV node and passes through the atrioventricular septum, dividing into right and left bundle branches that supply the respective ventricles.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "conducting-system"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which of the following blood vessels carries oxygenated blood?",
+      "options": [
+        "C) Pulmonary vein",
+        "D) Hepatic portal vein",
+        "A) Pulmonary artery",
+        "B) Vena cava"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pulmonary veins carry oxygenated blood from the lungs to the left atrium of the heart. They are the only veins in the body that carry oxygenated blood.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-vessels",
+        "oxygenated-blood"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Thrombocytes are involved in:",
+      "options": [
+        "C) Blood clotting",
+        "A) Oxygen transport",
+        "B) Immunity",
+        "D) Phagocytosis"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thrombocytes (platelets) are cell fragments that play a crucial role in blood clotting (coagulation). They release thromboplastin (factor III) at the site of injury, which initiates the clotting cascade.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "platelets",
+        "coagulation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The blood pressure during ventricular contraction is called:",
+      "options": [
+        "A) Diastolic pressure",
+        "D) Mean arterial pressure",
+        "C) Pulse pressure",
+        "B) Systolic pressure"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Systolic pressure is the pressure exerted on the arterial wall during ventricular contraction (systole). Normal systolic pressure is approximately 120 mm Hg. Diastolic pressure is measured during ventricular relaxation.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-pressure",
+        "systolic"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "During joint diastole of the cardiac cycle:",
+      "options": [
+        "A) Only atria are relaxed",
+        "C) Both atria and ventricles are relaxed",
+        "B) Only ventricles are relaxed",
+        "D) Both atria and ventricles are contracted"
+      ],
+      "correctAnswer": "B",
+      "explanation": "During joint diastole, both the atria and ventricles are in a relaxed state. Blood from the veins flows passively into the atria and then into the ventricles through the open atrioventricular valves.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cardiac-cycle",
+        "joint-diastole"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which WBC is involved in allergic reactions and resistance to parasites?",
+      "options": [
+        "D) Monocytes",
+        "C) Basophils",
+        "A) Neutrophils",
+        "B) Eosinophils"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Eosinophils are associated with allergic reactions and provide resistance against parasitic infections. They constitute 2-3% of total WBCs and their count increases during allergic conditions and parasitic infestations.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "WBC",
+        "eosinophils",
+        "allergy"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The instrument used to measure blood pressure is:",
+      "options": [
+        "A) Stethoscope",
+        "B) ECG machine",
+        "D) Haemocytometer",
+        "C) Sphygmomanometer"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Sphygmomanometer is the instrument used to measure arterial blood pressure. It consists of an inflatable cuff connected to a mercury or aneroid manometer, and is used along with a stethoscope.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "blood-pressure",
+        "instrument"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Angina pectoris is caused by:",
+      "options": [
+        "D) Valve defects in the heart",
+        "C) Excess blood supply to the lungs",
+        "B) Insufficient blood supply to the heart muscle",
+        "A) Insufficient blood supply to the brain"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Angina pectoris is a condition characterised by acute chest pain due to insufficient blood supply (ischaemia) to the heart muscle. It occurs when the coronary arteries are partially blocked, often due to atherosclerosis.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disorders",
+        "angina"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "If the stroke volume is 70 mL and the heart rate is 75 beats per minute, the cardiac output is:",
+      "options": [
+        "D) 7500 mL/min",
+        "B) 5000 mL/min",
+        "C) 5250 mL/min",
+        "A) 4200 mL/min"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cardiac output = Stroke volume x Heart rate = 70 mL x 75 beats/min = 5250 mL/min. This is the volume of blood pumped by each ventricle per minute.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cardiac-output",
+        "numerical"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Coronary artery disease (CAD) is caused by:",
+      "options": [
+        "B) Deposition of cholesterol and fats in arterial walls",
+        "D) Infection of the coronary arteries",
+        "A) Deposition of calcium in arteries",
+        "C) Weakening of arterial walls"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Coronary artery disease is caused by deposition of cholesterol, fats, and fibrous tissue (atherosclerotic plaques) in the walls of coronary arteries. This narrows the lumen and reduces blood flow to the heart muscle.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disorders",
+        "CAD",
+        "atherosclerosis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The correct sequence of cardiac conduction is:",
+      "options": [
+        "A) SA node → AV node → Bundle of His → Purkinje fibres",
+        "B) AV node → SA node → Bundle of His → Purkinje fibres",
+        "D) AV node → Purkinje fibres → SA node → Bundle of His",
+        "C) SA node → Purkinje fibres → AV node → Bundle of His"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The cardiac impulse originates at the SA node, travels to the AV node, then through the Bundle of His (which divides into right and left branches), and finally through the Purkinje fibres to the ventricular musculature.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "conducting-system",
+        "cardiac-conduction"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Lymph differs from blood in having:",
+      "options": [
+        "C) More platelets",
+        "A) More RBCs",
+        "D) Higher concentration of proteins",
+        "B) No RBCs and fewer proteins"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Lymph is a colourless fluid that differs from blood in lacking RBCs and platelets. It has fewer proteins compared to blood plasma. Lymph contains WBCs (mainly lymphocytes), dissolved substances, and waste products.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lymph",
+        "body-fluids"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Mature human RBCs are enucleated. This adaptation helps in:",
+      "options": [
+        "D) Preventing viral infections",
+        "C) Reducing the weight of blood",
+        "A) Faster movement through blood vessels",
+        "B) Accommodating more haemoglobin for efficient oxygen transport"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Mature mammalian RBCs lose their nucleus during development. This provides more space for haemoglobin molecules, enabling each RBC to carry more oxygen and improving the efficiency of oxygen transport.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "RBC",
+        "adaptation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Hypertension is defined as consistently high blood pressure exceeding:",
+      "options": [
+        "C) 140/90 mm Hg",
+        "D) 160/100 mm Hg",
+        "B) 120/80 mm Hg",
+        "A) 100/70 mm Hg"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Hypertension is defined as a condition in which blood pressure is consistently higher than 140/90 mm Hg. Normal blood pressure is about 120/80 mm Hg. Hypertension increases the risk of heart disease and stroke.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disorders",
+        "hypertension",
+        "blood-pressure"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The bicuspid valve (mitral valve) is located between the:",
+      "options": [
+        "D) Right ventricle and pulmonary artery",
+        "B) Left atrium and left ventricle",
+        "A) Right atrium and right ventricle",
+        "C) Left ventricle and aorta"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The bicuspid valve (also called the mitral valve) is located between the left atrium and left ventricle. It has two cusps and prevents backflow of blood from the left ventricle into the left atrium during ventricular systole.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "valves",
+        "bicuspid"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The P wave in an ECG represents:",
+      "options": [
+        "D) Atrial repolarisation",
+        "B) Atrial depolarisation",
+        "A) Ventricular depolarisation",
+        "C) Ventricular repolarisation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The P wave in an electrocardiogram (ECG) represents atrial depolarisation, i.e., the electrical impulse spreading through the atria causing atrial contraction (atrial systole).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ECG",
+        "P-wave"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which mineral ion is essential for blood coagulation?",
+      "options": [
+        "D) Iron",
+        "A) Sodium",
+        "B) Potassium",
+        "C) Calcium"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Calcium ions (Ca²⁺) are essential for blood coagulation. They are required at several steps of the clotting cascade, including the conversion of prothrombin to thrombin and the activation of various clotting factors.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "coagulation",
+        "calcium"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The thickest wall among the four chambers of the heart is found in the:",
+      "options": [
+        "D) Left ventricle",
+        "B) Left atrium",
+        "A) Right atrium",
+        "C) Right ventricle"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The left ventricle has the thickest wall because it pumps oxygenated blood to the entire body through the systemic circulation. It needs to generate the highest pressure to push blood through the aorta to all body parts.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "chambers"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The T wave in an ECG represents:",
+      "options": [
+        "C) Ventricular depolarisation",
+        "B) Atrial repolarisation",
+        "D) Ventricular repolarisation",
+        "A) Atrial depolarisation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The T wave represents ventricular repolarisation, i.e., the return of the ventricles to a resting state after contraction. It marks the end of ventricular systole.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ECG",
+        "T-wave"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which of the following is NOT a granulocyte?",
+      "options": [
+        "C) Basophil",
+        "D) Lymphocyte",
+        "B) Eosinophil",
+        "A) Neutrophil"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lymphocytes are agranulocytes, meaning they lack granules in their cytoplasm. Neutrophils, eosinophils, and basophils are granulocytes that possess cytoplasmic granules.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "WBC",
+        "granulocytes",
+        "agranulocytes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "A complete cardiac cycle lasts for approximately:",
+      "options": [
+        "D) 1.0 second",
+        "C) 0.8 seconds",
+        "B) 0.6 seconds",
+        "A) 0.4 seconds"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A complete cardiac cycle lasts approximately 0.8 seconds at a normal heart rate of 72 beats per minute. This includes atrial systole (0.1 s), ventricular systole (0.3 s), and joint diastole (0.4 s).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cardiac-cycle",
+        "numerical"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Heart failure is also known as:",
+      "options": [
+        "A) Cardiac arrest",
+        "D) Heart block",
+        "B) Congestive heart failure",
+        "C) Myocardial infarction"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Heart failure, also called congestive heart failure (CHF), is a condition in which the heart is unable to pump blood efficiently enough to meet the body's needs. It does not mean the heart has stopped beating.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disorders",
+        "heart-failure"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which of the following is the correct pairing of a blood group with its antibodies?",
+      "options": [
+        "A) Blood group A – Anti-A antibodies",
+        "D) Blood group O – Anti-A antibodies only",
+        "C) Blood group AB – Anti-A and Anti-B antibodies",
+        "B) Blood group B – Anti-A antibodies"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Blood group B has B antigens on RBC surface and anti-A antibodies in plasma. Blood group A has anti-B, AB has no antibodies, and O has both anti-A and anti-B antibodies.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-groups",
+        "antibodies"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The hepatic portal vein carries blood from the:",
+      "options": [
+        "B) Heart to liver",
+        "D) Liver to kidneys",
+        "A) Liver to heart",
+        "C) Intestine to liver"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The hepatic portal vein carries nutrient-rich deoxygenated blood from the intestine (and other abdominal organs like spleen, stomach, pancreas) to the liver for processing before it enters the systemic circulation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "portal-system",
+        "hepatic-portal"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The semilunar valves are present at the base of:",
+      "options": [
+        "A) Vena cava and pulmonary veins",
+        "B) Aorta and pulmonary artery",
+        "D) Right ventricle and left ventricle",
+        "C) Right atrium and left atrium"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Semilunar valves (aortic valve and pulmonary valve) are located at the base of the aorta and pulmonary artery respectively. They prevent the backflow of blood from these great arteries into the ventricles.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "valves",
+        "semilunar"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The normal stroke volume of the human heart is approximately:",
+      "options": [
+        "A) 50 mL",
+        "C) 100 mL",
+        "B) 70 mL",
+        "D) 150 mL"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The stroke volume (volume of blood pumped by each ventricle per beat) is approximately 70 mL in a healthy adult at rest. Cardiac output = Stroke volume (70 mL) x Heart rate (72/min) ≈ 5 L/min.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cardiac-output",
+        "stroke-volume",
+        "numerical"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The interatrial septum has a small opening during foetal development called the:",
+      "options": [
+        "D) Interventricular foramen",
+        "A) Foramen magnum",
+        "B) Foramen ovale",
+        "C) Fossa ovalis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The foramen ovale is an opening in the interatrial septum during foetal life that allows blood to flow directly from the right atrium to the left atrium, bypassing the non-functional lungs. It closes shortly after birth, leaving a depression called fossa ovalis.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "foetal-circulation",
+        "foramen-ovale"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Basophils secrete which of the following substances?",
+      "options": [
+        "C) Haemoglobin",
+        "B) Heparin and histamine",
+        "A) Antibodies",
+        "D) Serotonin only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Basophils secrete heparin (an anticoagulant), histamine (a vasodilator involved in inflammatory and allergic responses), and serotonin. They constitute 0.5-1% of total WBCs.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "WBC",
+        "basophils"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Double circulation means that blood passes through the heart:",
+      "options": [
+        "A) Once in each cardiac cycle",
+        "B) Twice in each cardiac cycle",
+        "C) Thrice in each cardiac cycle",
+        "D) Four times in each cardiac cycle"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In double circulation, blood passes through the heart twice in each complete cycle — once through pulmonary circulation (right heart to lungs and back) and once through systemic circulation (left heart to body and back).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "double-circulation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): The SA node is called the pacemaker of the heart.\nReason (R): The SA node generates the maximum rate of impulses that determine the heart rate.",
+      "options": [
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The SA node is called the pacemaker because it has the highest rate of impulse generation (about 70-75 per minute) compared to other parts of the conducting system. This determines the heart rate, making it the pacemaker. Both assertion and reason are true, and the reason correctly explains the assertion.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "SA-node",
+        "pacemaker",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): Blood group O individuals are called universal donors.\nReason (R): Their RBCs lack both A and B antigens on the surface.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Blood group O individuals are universal donors because their RBCs lack both A and B antigens, so their blood will not be agglutinated by anti-A or anti-B antibodies present in the recipient's plasma. Both assertion and reason are true, and the reason correctly explains the assertion.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-groups",
+        "universal-donor",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): Veins have valves but arteries do not.\nReason (R): Blood flows through veins at high pressure, requiring valves to prevent backflow.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Veins do have valves while arteries do not, so the assertion is true. However, the reason is false — blood flows through veins at LOW pressure (not high pressure). Valves in veins prevent the backflow of blood because the low pressure in veins is insufficient to maintain unidirectional flow, especially against gravity.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-vessels",
+        "veins",
+        "valves",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): The left ventricle has a thicker wall than the right ventricle.\nReason (R): The left ventricle pumps blood to the lungs which are close to the heart.",
+      "options": [
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The assertion is true — the left ventricle has a thicker wall. The reason is false because the left ventricle pumps blood to the entire body (systemic circulation), not to the lungs. It is the right ventricle that pumps blood to the lungs. The thicker wall is needed to generate the high pressure required for systemic circulation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "ventricles",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): Mature mammalian RBCs lack a nucleus.\nReason (R): The absence of nucleus in mature RBCs allows them to carry more haemoglobin.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Mature mammalian RBCs are enucleated (lack nucleus). The absence of nucleus provides more intracellular space for haemoglobin, thereby increasing the oxygen-carrying capacity. Both assertion and reason are true, and the reason correctly explains the assertion.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "RBC",
+        "enucleated",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): Fibrinogen is an inactive precursor present in blood plasma.\nReason (R): Fibrinogen is converted to fibrin by the enzyme thrombin during blood clotting.",
+      "options": [
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Fibrinogen is indeed an inactive precursor (soluble protein) present in blood plasma. During clotting, thrombin converts fibrinogen into insoluble fibrin threads that form the meshwork of the clot. Both statements are true and the reason explains the assertion.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "coagulation",
+        "fibrinogen",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): Lymph plays an important role in the absorption of fats from the intestine.\nReason (R): Lacteals (lymphatic capillaries in villi) absorb fatty acids and glycerol.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Lymph plays a key role in fat absorption. The lacteals in intestinal villi absorb fats (as chylomicrons) that cannot enter blood capillaries directly due to their large size. Both assertion and reason are true, and the reason correctly explains the assertion.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lymph",
+        "fat-absorption",
+        "lacteals",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): The heart is myogenic in humans.\nReason (R): The cardiac impulse originates from the SA node, which is a specialised cardiac muscle.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The human heart is myogenic, meaning the heartbeat is initiated by the heart muscle itself (not by nerves). The SA node, a specialised cardiac muscle mass, generates impulses that initiate each heartbeat. Both are true and the reason explains the assertion.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "myogenic-heart",
+        "SA-node",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): The pulmonary artery carries deoxygenated blood.\nReason (R): Arteries always carry oxygenated blood away from the heart.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The assertion is true — the pulmonary artery carries deoxygenated blood from the right ventricle to the lungs. The reason is false because arteries carry blood AWAY from the heart but not always oxygenated blood (the pulmonary artery is an exception).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pulmonary-artery",
+        "blood-vessels",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): An ECG can detect abnormalities in cardiac function.\nReason (R): The ECG records the electrical activity of the heart from the body surface.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "A",
+      "explanation": "An ECG (electrocardiogram) is a diagnostic tool that records the electrical activity of the heart from the body surface. Any deviation from the normal ECG pattern indicates cardiac abnormalities. Both are true and the reason explains the assertion.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ECG",
+        "diagnosis",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): Platelets do not have a nucleus.\nReason (R): Platelets are cell fragments formed from megakaryocytes in the bone marrow.",
+      "options": [
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Platelets (thrombocytes) are indeed anucleate cell fragments. They are formed by the fragmentation of megakaryocytes in the bone marrow, which is why they lack a nucleus. Both are true and the reason explains the assertion.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "platelets",
+        "megakaryocytes",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): Serum is plasma without clotting factors.\nReason (R): When blood clots, fibrinogen and other clotting factors are used up, leaving behind serum.",
+      "options": [
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Serum is the fluid that remains after blood has clotted. It is essentially plasma without fibrinogen and other clotting factors, which are consumed during the clotting process. Both are true and the reason correctly explains the assertion.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "serum",
+        "plasma",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): Cardiac output increases during vigorous exercise.\nReason (R): During exercise, only the stroke volume increases while the heart rate remains constant.",
+      "options": [
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The assertion is true — cardiac output does increase during exercise (up to 20-25 L/min in athletes). The reason is false because during exercise, BOTH stroke volume AND heart rate increase, leading to increased cardiac output.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cardiac-output",
+        "exercise",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Assertion (A): The AV node introduces a brief delay in the conduction of impulse.\nReason (R): This delay ensures that the atria complete their contraction before the ventricles begin to contract.",
+      "options": [
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The AV node introduces a delay of about 0.1 seconds in impulse conduction. This is crucial because it allows the atria to empty their blood into the ventricles before ventricular contraction begins. Both are true and the reason explains the assertion.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "AV-node",
+        "conduction-delay",
+        "assertion-reason"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Consider the following statements about blood plasma:\n(i) Plasma constitutes about 55% of blood volume.\n(ii) Water forms about 90-92% of plasma.\n(iii) Albumin is the most abundant plasma protein.\n(iv) Plasma without clotting factors is called lymph.\nWhich of the above statements are correct?",
+      "options": [
+        "B) (i), (ii) and (iv) only",
+        "C) (ii), (iii) and (iv) only",
+        "D) All of the above",
+        "A) (i), (ii) and (iii) only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statements (i), (ii), and (iii) are correct. Plasma constitutes about 55% of blood, water forms 90-92% of plasma, and albumin is the most abundant plasma protein. Statement (iv) is incorrect — plasma without clotting factors is called serum, not lymph.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "plasma",
+        "blood-composition",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which of the following statements about the cardiac cycle is/are correct?\n(i) Atrial systole lasts for about 0.1 seconds.\n(ii) Ventricular systole lasts for about 0.3 seconds.\n(iii) Joint diastole lasts for about 0.4 seconds.\n(iv) The complete cardiac cycle takes about 1.2 seconds.",
+      "options": [
+        "B) (i), (ii) and (iii) only",
+        "A) (i) and (ii) only",
+        "D) All of the above",
+        "C) (ii), (iii) and (iv) only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements (i), (ii), and (iii) are correct. Atrial systole = 0.1 s, ventricular systole = 0.3 s, joint diastole = 0.4 s. Statement (iv) is incorrect — the complete cardiac cycle takes about 0.8 seconds (0.1 + 0.3 + 0.4 = 0.8 s) at 72 beats/min.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cardiac-cycle",
+        "numerical",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Read the following statements about WBCs and select the correct option:\n(i) Neutrophils are the most abundant WBCs.\n(ii) Lymphocytes are responsible for immune responses.\n(iii) Monocytes are the smallest WBCs.\n(iv) Eosinophils are associated with allergic reactions.",
+      "options": [
+        "C) (i), (iii) and (iv) only",
+        "A) (i), (ii) and (iii) only",
+        "B) (i), (ii) and (iv) only",
+        "D) All of the above"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statements (i), (ii), and (iv) are correct. Neutrophils are the most abundant (60-65%), lymphocytes mediate immune responses, and eosinophils are associated with allergic reactions. Statement (iii) is incorrect — monocytes are the LARGEST WBCs, not the smallest.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "WBC",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which of the following statements about the human heart is/are INCORRECT?\n(i) The heart is covered by a double-layered pericardium.\n(ii) The heart has four chambers — two atria and two ventricles.\n(iii) The right ventricle pumps blood to the systemic circulation.\n(iv) The interatrial and interventricular septa separate the heart into right and left halves.",
+      "options": [
+        "B) (iii) only",
+        "A) (i) only",
+        "D) (ii) and (iv) only",
+        "C) (i) and (iii) only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statement (iii) is incorrect. The right ventricle pumps blood to the pulmonary circulation (lungs), not the systemic circulation. It is the LEFT ventricle that pumps blood to the systemic circulation. Statements (i), (ii), and (iv) are all correct.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "chambers",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Consider the following statements regarding blood coagulation:\n(i) Injured tissues release thromboplastin.\n(ii) Prothrombin is converted to thrombin in the presence of calcium ions.\n(iii) Thrombin converts soluble fibrinogen to insoluble fibrin.\n(iv) Vitamin K is required for the synthesis of prothrombin.\nSelect the correct option:",
+      "options": [
+        "D) All of the above",
+        "C) (ii), (iii) and (iv) only",
+        "B) (i), (ii) and (iii) only",
+        "A) (i) and (ii) only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "All four statements are correct. Thromboplastin is released from injured tissues, prothrombin is activated to thrombin by Ca²⁺ and thromboplastin, thrombin converts fibrinogen to fibrin, and vitamin K is essential for prothrombin synthesis in the liver.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "coagulation",
+        "clotting-cascade",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which of the following statements about lymph is/are correct?\n(i) Lymph is formed by filtration of blood through capillary walls.\n(ii) Lymph contains all types of blood cells.\n(iii) Lymph flows in one direction — from tissues to the heart.\n(iv) Lymph nodes contain lymphocytes that filter pathogens.",
+      "options": [
+        "A) (i) and (ii) only",
+        "C) (ii) and (iii) only",
+        "D) All of the above",
+        "B) (i), (iii) and (iv) only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statements (i), (iii), and (iv) are correct. Lymph is formed by filtration of plasma through capillary walls, flows unidirectionally towards the heart, and lymph nodes contain lymphocytes. Statement (ii) is incorrect — lymph lacks RBCs and platelets.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lymph",
+        "lymphatic-system",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Read the following statements about ECG:\n(i) P wave represents atrial depolarisation.\n(ii) QRS complex represents ventricular depolarisation.\n(iii) T wave represents atrial repolarisation.\n(iv) The time between QRS complex and T wave represents ventricular contraction.\nWhich statements are correct?",
+      "options": [
+        "C) (i), (ii) and (iv) only",
+        "B) (i), (ii) and (iii) only",
+        "A) (i) and (ii) only",
+        "D) All of the above"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements (i), (ii), and (iv) are correct. P wave = atrial depolarisation, QRS complex = ventricular depolarisation, and the interval between QRS and T wave represents ventricular contraction. Statement (iii) is incorrect — T wave represents ventricular repolarisation, not atrial repolarisation.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ECG",
+        "waves",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Identify the CORRECT statements about the ABO blood grouping system:\n(i) Blood group A has antigen A and antibody b (anti-B).\n(ii) Blood group B has antigen B and antibody a (anti-A).\n(iii) Blood group AB has both antigens but no antibodies.\n(iv) Blood group O has no antigens but both antibodies.",
+      "options": [
+        "D) All of the above",
+        "B) (i), (ii) and (iii) only",
+        "C) (iii) and (iv) only",
+        "A) (i) and (ii) only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "All four statements are correct descriptions of the ABO blood grouping system. Group A: antigen A, anti-B; Group B: antigen B, anti-A; Group AB: both antigens, no antibodies; Group O: no antigens, both anti-A and anti-B antibodies.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-groups",
+        "ABO-system",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which of the following statements about formed elements of blood is/are correct?\n(i) RBCs are formed in the red bone marrow.\n(ii) WBCs are nucleated and much fewer in number than RBCs.\n(iii) Platelets have a lifespan of about 120 days.\n(iv) The total WBC count is 6000-8000 per cubic mm of blood.",
+      "options": [
+        "C) (i) and (iv) only",
+        "A) (i), (ii) and (iii) only",
+        "B) (i), (ii) and (iv) only",
+        "D) All of the above"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statements (i), (ii), and (iv) are correct. RBCs are formed in red bone marrow, WBCs are nucleated and fewer than RBCs, and normal WBC count is 6000-8000/mm³. Statement (iii) is incorrect — platelets have a lifespan of only 3-5 days, not 120 days (which is the lifespan of RBCs).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "formed-elements",
+        "RBC",
+        "WBC",
+        "platelets",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Consider the following statements:\n(i) Arteries carry blood away from the heart.\n(ii) Veins carry blood towards the heart.\n(iii) Capillaries are the site of exchange of materials between blood and tissues.\n(iv) All arteries carry oxygenated blood.\nWhich of the above are correct?",
+      "options": [
+        "A) (i), (ii) and (iii) only",
+        "C) (ii), (iii) and (iv) only",
+        "B) (i), (ii) and (iv) only",
+        "D) All of the above"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements (i), (ii), and (iii) are correct. Arteries carry blood away from the heart, veins carry blood towards the heart, and capillaries are the exchange sites. Statement (iv) is incorrect — the pulmonary arteries carry deoxygenated blood from the heart to the lungs.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-vessels",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which of the following statements about cardiac disorders is INCORRECT?\n(i) Atherosclerosis is the hardening of arteries due to calcium deposits.\n(ii) Angina pectoris is chest pain due to inadequate blood supply to the heart.\n(iii) Hypertension is consistently elevated blood pressure above 140/90 mm Hg.\n(iv) Heart failure means the heart has completely stopped beating.",
+      "options": [
+        "B) (i) and (iv) only",
+        "D) (iii) and (iv) only",
+        "C) (ii) and (iii) only",
+        "A) (i) and (ii) only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements (i) and (iv) are incorrect. Atherosclerosis is the deposition of cholesterol and fats (not calcium) in arterial walls. Heart failure does not mean the heart has stopped — it means the heart cannot pump blood efficiently enough. Arteriosclerosis (not atherosclerosis) refers to hardening of arteries.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disorders",
+        "atherosclerosis",
+        "heart-failure",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Select the correct statements about regulation of cardiac activity:\n(i) The heart is regulated by the autonomic nervous system.\n(ii) Sympathetic nerves increase heart rate.\n(iii) Parasympathetic nerves (vagus) decrease heart rate.\n(iv) Adrenal medullary hormones have no effect on the heart.",
+      "options": [
+        "C) (ii), (iii) and (iv) only",
+        "D) All of the above",
+        "B) (i) and (ii) only",
+        "A) (i), (ii) and (iii) only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statements (i), (ii), and (iii) are correct. The heart is regulated by the autonomic nervous system — sympathetic nerves increase and parasympathetic (vagus) nerves decrease heart rate. Statement (iv) is incorrect — adrenal medullary hormones (adrenaline/noradrenaline) increase heart rate and cardiac output.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cardiac-regulation",
+        "ANS",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Consider the following statements about the Rh factor:\n(i) Rh factor was first discovered in Rhesus monkeys.\n(ii) About 80% of the human population is Rh-positive.\n(iii) Erythroblastosis foetalis occurs in the first pregnancy of an Rh-negative mother.\n(iv) Rh incompatibility can be prevented by administering anti-Rh antibodies to the mother after the first delivery.",
+      "options": [
+        "C) (i), (ii) and (iii) only",
+        "B) (i), (ii) and (iv) only",
+        "D) All of the above",
+        "A) (i) and (iv) only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements (i), (ii), and (iv) are correct. Rh factor was discovered in Rhesus monkeys, about 80% of humans are Rh-positive, and anti-Rh antibodies (RhoGAM) given after first delivery prevent sensitisation. Statement (iii) is incorrect — erythroblastosis foetalis typically occurs in SUBSEQUENT pregnancies, not the first.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "Rh-factor",
+        "erythroblastosis-foetalis",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which of the following statements about double circulation are correct?\n(i) It involves systemic and pulmonary circulation.\n(ii) Oxygenated and deoxygenated blood are kept completely separate.\n(iii) It is found in all vertebrates.\n(iv) It allows more efficient oxygen delivery to tissues.",
+      "options": [
+        "D) All of the above",
+        "A) (i), (ii) and (iv) only",
+        "B) (i) and (iv) only",
+        "C) (i), (ii) and (iii) only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements (i), (ii), and (iv) are correct. Double circulation involves systemic and pulmonary circuits, keeps oxygenated and deoxygenated blood separate, and allows more efficient oxygen delivery. Statement (iii) is incorrect — double circulation is found only in mammals and birds (and to some extent in crocodiles), not in all vertebrates. Fish have single circulation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "double-circulation",
+        "statement-based"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match Column I with Column II:\nColumn I                    Column II\n(a) SA node              (i) Pacemaker\n(b) AV node              (ii) Impulse delay\n(c) Bundle of His        (iii) Interventricular septum\n(d) Purkinje fibres      (iv) Ventricular walls\nSelect the correct match:",
+      "options": [
+        "D) a-iv, b-ii, c-iii, d-i",
+        "C) a-i, b-iii, c-ii, d-iv",
+        "B) a-ii, b-i, c-iv, d-iii",
+        "A) a-i, b-ii, c-iii, d-iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "SA node is the pacemaker (a-i), AV node introduces impulse delay (b-ii), Bundle of His passes through the interventricular septum (c-iii), and Purkinje fibres spread through the ventricular walls (d-iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "conducting-system",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match the blood groups with their antigens and antibodies:\nColumn I (Blood Group)    Column II (Antigens & Antibodies)\n(a) A                     (i) Both A and B antigens, no antibodies\n(b) B                     (ii) Antigen A, Anti-B antibodies\n(c) AB                    (iii) No antigens, both Anti-A and Anti-B antibodies\n(d) O                     (iv) Antigen B, Anti-A antibodies",
+      "options": [
+        "A) a-ii, b-iv, c-i, d-iii",
+        "C) a-iv, b-ii, c-iii, d-i",
+        "D) a-ii, b-iv, c-iii, d-i",
+        "B) a-i, b-ii, c-iii, d-iv"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Blood group A has antigen A and anti-B (a-ii), group B has antigen B and anti-A (b-iv), group AB has both antigens and no antibodies (c-i), and group O has no antigens and both antibodies (d-iii).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-groups",
+        "ABO-system",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match the ECG waves with their significance:\nColumn I          Column II\n(a) P wave        (i) Ventricular repolarisation\n(b) QRS complex   (ii) Atrial depolarisation\n(c) T wave        (iii) Ventricular depolarisation\n(d) P-Q interval  (iv) AV nodal delay",
+      "options": [
+        "B) a-iii, b-ii, c-iv, d-i",
+        "D) a-i, b-iii, c-ii, d-iv",
+        "C) a-ii, b-i, c-iii, d-iv",
+        "A) a-ii, b-iii, c-i, d-iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "P wave = atrial depolarisation (a-ii), QRS complex = ventricular depolarisation (b-iii), T wave = ventricular repolarisation (c-i), P-Q interval = time for impulse to travel from SA node through AV node (AV nodal delay) (d-iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ECG",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match the type of WBC with its function:\nColumn I           Column II\n(a) Neutrophils    (i) Allergic reactions and parasite resistance\n(b) Eosinophils    (ii) Immune response and antibody production\n(c) Basophils      (iii) Phagocytosis of pathogens\n(d) Lymphocytes    (iv) Release histamine and heparin",
+      "options": [
+        "C) a-iii, b-iv, c-i, d-ii",
+        "B) a-i, b-iii, c-ii, d-iv",
+        "D) a-iv, b-i, c-iii, d-ii",
+        "A) a-iii, b-i, c-iv, d-ii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Neutrophils are phagocytic (a-iii), eosinophils are associated with allergic reactions and parasite resistance (b-i), basophils release histamine and heparin (c-iv), and lymphocytes are responsible for immune response and antibody production (d-ii).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "WBC",
+        "functions",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match the heart valves with their locations:\nColumn I              Column II\n(a) Tricuspid valve   (i) Base of aorta\n(b) Bicuspid valve    (ii) Between right atrium and right ventricle\n(c) Aortic valve      (iii) Base of pulmonary artery\n(d) Pulmonary valve   (iv) Between left atrium and left ventricle",
+      "options": [
+        "A) a-ii, b-iv, c-i, d-iii",
+        "B) a-iv, b-ii, c-iii, d-i",
+        "C) a-ii, b-iv, c-iii, d-i",
+        "D) a-i, b-iii, c-iv, d-ii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tricuspid valve is between right atrium and right ventricle (a-ii), bicuspid (mitral) valve is between left atrium and left ventricle (b-iv), aortic valve is at the base of aorta (c-i), and pulmonary valve is at the base of pulmonary artery (d-iii).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "valves",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match the cardiac disorders with their descriptions:\nColumn I               Column II\n(a) Hypertension       (i) Chest pain due to reduced blood supply to heart\n(b) Angina pectoris    (ii) Deposition of fats in coronary arteries\n(c) Atherosclerosis    (iii) Heart unable to pump blood effectively\n(d) Heart failure      (iv) Blood pressure consistently above 140/90 mm Hg",
+      "options": [
+        "D) a-iii, b-i, c-ii, d-iv",
+        "C) a-iv, b-ii, c-i, d-iii",
+        "B) a-i, b-iv, c-iii, d-ii",
+        "A) a-iv, b-i, c-ii, d-iii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hypertension = BP above 140/90 mm Hg (a-iv), angina pectoris = chest pain due to reduced blood supply (b-i), atherosclerosis = fat deposition in coronary arteries (c-ii), heart failure = inability to pump blood effectively (d-iii).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disorders",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match the blood components with their characteristics:\nColumn I          Column II\n(a) RBCs          (i) Cell fragments, anucleate\n(b) WBCs          (ii) Biconcave, enucleate, contain haemoglobin\n(c) Platelets     (iii) Nucleated, fewer in number\n(d) Plasma        (iv) Fluid matrix, contains proteins",
+      "options": [
+        "A) a-ii, b-iii, c-i, d-iv",
+        "D) a-ii, b-i, c-iii, d-iv",
+        "C) a-iii, b-ii, c-iv, d-i",
+        "B) a-i, b-ii, c-iii, d-iv"
+      ],
+      "correctAnswer": "A",
+      "explanation": "RBCs are biconcave, enucleate, and contain haemoglobin (a-ii); WBCs are nucleated and fewer in number (b-iii); platelets are anucleate cell fragments (c-i); plasma is the fluid matrix containing proteins (d-iv).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-composition",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match the blood vessels with the type of blood they carry:\nColumn I               Column II\n(a) Pulmonary artery   (i) Oxygenated blood to the body\n(b) Pulmonary vein     (ii) Deoxygenated blood to lungs\n(c) Aorta              (iii) Oxygenated blood to the heart\n(d) Vena cava          (iv) Deoxygenated blood to the heart",
+      "options": [
+        "C) a-i, b-iv, c-ii, d-iii",
+        "A) a-ii, b-iii, c-i, d-iv",
+        "D) a-ii, b-i, c-iii, d-iv",
+        "B) a-iii, b-ii, c-iv, d-i"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pulmonary artery carries deoxygenated blood to lungs (a-ii), pulmonary vein carries oxygenated blood to heart (b-iii), aorta carries oxygenated blood to body (c-i), and vena cava carries deoxygenated blood to heart (d-iv).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-vessels",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match the plasma proteins with their functions:\nColumn I          Column II\n(a) Albumin       (i) Blood clotting\n(b) Globulin      (ii) Osmotic balance\n(c) Fibrinogen    (iii) Defence/immunity\n(d) Prothrombin   (iv) Inactive clotting factor",
+      "options": [
+        "C) a-i, b-iv, c-ii, d-iii",
+        "A) a-ii, b-iii, c-i, d-iv",
+        "D) a-iv, b-i, c-iii, d-ii",
+        "B) a-iii, b-ii, c-iv, d-i"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Albumin maintains osmotic balance (a-ii), globulins are involved in defence/immunity (b-iii), fibrinogen is involved in blood clotting (c-i), and prothrombin is an inactive clotting factor that gets converted to thrombin (d-iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "plasma-proteins",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match the cardiac cycle phases with their duration:\nColumn I                Column II\n(a) Atrial systole      (i) 0.4 seconds\n(b) Ventricular systole (ii) 0.7 seconds\n(c) Joint diastole      (iii) 0.1 seconds\n(d) Atrial diastole     (iv) 0.3 seconds",
+      "options": [
+        "C) a-i, b-iv, c-iii, d-ii",
+        "D) a-iii, b-i, c-iv, d-ii",
+        "A) a-iii, b-iv, c-i, d-ii",
+        "B) a-iv, b-iii, c-ii, d-i"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Atrial systole = 0.1 s (a-iii), ventricular systole = 0.3 s (b-iv), joint diastole = 0.4 s (c-i), and atrial diastole = 0.7 s (a-ii). Atrial diastole (0.7 s) includes ventricular systole (0.3 s) and joint diastole (0.4 s).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cardiac-cycle",
+        "numerical",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match the following terms with their correct descriptions:\nColumn I                     Column II\n(a) Erythropoiesis           (i) Destruction of RBCs\n(b) Haemolysis               (ii) Formation of RBCs\n(c) Diapedesis               (iii) Squeezing of WBCs through capillary walls\n(d) Erythroblastosis foetalis (iv) Destruction of foetal RBCs by maternal antibodies",
+      "options": [
+        "A) a-ii, b-i, c-iii, d-iv",
+        "C) a-iii, b-iv, c-i, d-ii",
+        "D) a-ii, b-iii, c-i, d-iv",
+        "B) a-i, b-ii, c-iv, d-iii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Erythropoiesis = formation of RBCs (a-ii), haemolysis = destruction of RBCs (b-i), diapedesis = squeezing of WBCs through capillary walls to reach infection sites (c-iii), erythroblastosis foetalis = destruction of foetal RBCs by maternal Rh antibodies (d-iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-terms",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match Column I with Column II regarding heart chambers and their connections:\nColumn I              Column II\n(a) Right atrium      (i) Receives blood from pulmonary veins\n(b) Left atrium       (ii) Pumps blood into aorta\n(c) Right ventricle   (iii) Receives blood from vena cava\n(d) Left ventricle    (iv) Pumps blood into pulmonary artery",
+      "options": [
+        "D) a-iii, b-iv, c-i, d-ii",
+        "A) a-iii, b-i, c-iv, d-ii",
+        "C) a-iv, b-ii, c-iii, d-i",
+        "B) a-i, b-iii, c-ii, d-iv"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Right atrium receives blood from vena cava (a-iii), left atrium receives blood from pulmonary veins (b-i), right ventricle pumps blood into pulmonary artery (c-iv), and left ventricle pumps blood into aorta (d-ii).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "chambers",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Match the following regulatory mechanisms with their effects on the heart:\nColumn I                  Column II\n(a) Sympathetic nerves    (i) Decreases heart rate\n(b) Parasympathetic nerves (ii) Increases heart rate\n(c) Adrenaline            (iii) Increases cardiac output\n(d) Acetylcholine         (iv) Slows heart rate",
+      "options": [
+        "D) a-iv, b-iii, c-i, d-ii",
+        "B) a-i, b-ii, c-iv, d-iii",
+        "C) a-iii, b-iv, c-ii, d-i",
+        "A) a-ii, b-i, c-iii, d-iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Sympathetic nerves increase heart rate (a-ii), parasympathetic (vagus) nerves decrease heart rate (b-i), adrenaline increases cardiac output (c-iii), and acetylcholine (released by vagus nerve) slows heart rate (d-iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cardiac-regulation",
+        "match-following"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "How many of the following are granulocytes?\nNeutrophils, Eosinophils, Basophils, Lymphocytes, Monocytes",
+      "options": [
+        "D) 5",
+        "C) 4",
+        "A) 2",
+        "B) 3"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Three of the listed WBCs are granulocytes: Neutrophils, Eosinophils, and Basophils. These have cytoplasmic granules. Lymphocytes and Monocytes are agranulocytes (lack cytoplasmic granules).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "WBC",
+        "granulocytes",
+        "counting-type"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "How many of the following structures are part of the conducting system of the human heart?\nSA node, AV node, Bundle of His, Purkinje fibres, Chordae tendineae, Papillary muscles",
+      "options": [
+        "D) 6",
+        "B) 3",
+        "C) 4",
+        "A) 2"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Four structures are part of the conducting system: SA node, AV node, Bundle of His, and Purkinje fibres. Chordae tendineae and papillary muscles are structural components of the heart valves and are NOT part of the conducting system.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "conducting-system",
+        "counting-type"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "How many of the following carry oxygenated blood?\nPulmonary artery, Pulmonary vein, Aorta, Superior vena cava, Inferior vena cava, Coronary artery",
+      "options": [
+        "B) 3",
+        "C) 4",
+        "D) 5",
+        "A) 2"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Three vessels carry oxygenated blood: Pulmonary vein (from lungs to left atrium), Aorta (from left ventricle to body), and Coronary artery (supplies heart muscle). Pulmonary artery, superior vena cava, and inferior vena cava carry deoxygenated blood.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-vessels",
+        "oxygenated-blood",
+        "counting-type"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "How many of the following statements about blood are correct?\n(a) Normal RBC count is 5-5.5 million per cubic mm in males.\n(b) Normal WBC count is 6000-8000 per cubic mm.\n(c) Normal platelet count is 1.5-3.5 lakh per cubic mm.\n(d) Haemoglobin content is 12-16 g per 100 mL of blood.\n(e) Blood constitutes about 30% of body weight.",
+      "options": [
+        "B) 3",
+        "D) 5",
+        "A) 2",
+        "C) 4"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Four statements are correct: (a), (b), (c), and (d). Statement (e) is incorrect — blood constitutes about 6-8% of body weight, not 30%. Normal values: RBC = 5-5.5 million/mm³ in males, WBC = 6000-8000/mm³, platelets = 1.5-3.5 lakh/mm³, Hb = 12-16 g/dL.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-composition",
+        "normal-values",
+        "counting-type"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "How many valves are present in the human heart?",
+      "options": [
+        "C) 4",
+        "D) 5",
+        "A) 2",
+        "B) 3"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The human heart has 4 valves: (1) Tricuspid valve (between right atrium and right ventricle), (2) Bicuspid/mitral valve (between left atrium and left ventricle), (3) Pulmonary semilunar valve (at the base of pulmonary artery), and (4) Aortic semilunar valve (at the base of aorta).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "valves",
+        "counting-type"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "How many of the following are correct regarding cardiac output calculation?\n(a) Stroke volume of a healthy adult is approximately 70 mL.\n(b) Normal resting heart rate is about 72 beats per minute.\n(c) Cardiac output = Stroke volume × Heart rate.\n(d) Normal cardiac output is approximately 10 litres per minute.\n(e) Cardiac output can increase during exercise.",
+      "options": [
+        "D) 5",
+        "B) 3",
+        "A) 2",
+        "C) 4"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Four statements are correct: (a), (b), (c), and (e). Statement (d) is incorrect — normal cardiac output is approximately 5 litres per minute (70 mL × 72 = 5040 mL ≈ 5 L/min), not 10 litres. During exercise, cardiac output can increase to 20-25 L/min.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cardiac-output",
+        "numerical",
+        "counting-type"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "How many of the following are functions of lymph?\n(a) Transport of digested fats from the intestine\n(b) Drainage of excess tissue fluid back to blood\n(c) Transport of oxygen to tissues\n(d) Defence against infection through lymphocytes\n(e) Transport of hormones",
+      "options": [
+        "D) 5",
+        "C) 4",
+        "A) 2",
+        "B) 3"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Three functions are correct: (a) lymph transports digested fats via lacteals, (b) it drains excess tissue fluid back to blood, and (d) it contains lymphocytes for immune defence. Statement (c) is incorrect — lymph has no RBCs/haemoglobin so it does not transport oxygen. Statement (e) is also not a primary function of lymph.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lymph",
+        "functions",
+        "counting-type"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "How many of the following are cardiac disorders?\nHypertension, Angina pectoris, Atherosclerosis, Anaemia, Heart failure, Coronary artery disease, Diabetes",
+      "options": [
+        "B) 4",
+        "C) 5",
+        "A) 3",
+        "D) 6"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Five are cardiac/cardiovascular disorders: Hypertension, Angina pectoris, Atherosclerosis, Heart failure, and Coronary artery disease. Anaemia is a blood disorder (not specifically cardiac) and Diabetes is a metabolic disorder.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disorders",
+        "counting-type"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Arrange the following events of blood coagulation in the correct sequence:\n(i) Formation of fibrin threads\n(ii) Release of thromboplastin from injured tissues\n(iii) Conversion of prothrombin to thrombin\n(iv) Trapping of blood cells in fibrin mesh to form clot",
+      "options": [
+        "C) iii → ii → i → iv",
+        "A) ii → iii → i → iv",
+        "D) ii → i → iii → iv",
+        "B) i → ii → iii → iv"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct sequence of blood clotting is: Thromboplastin is released from injured tissues (ii) → Prothrombin is converted to thrombin in the presence of Ca²⁺ and thromboplastin (iii) → Thrombin converts fibrinogen to fibrin threads (i) → Blood cells are trapped in the fibrin mesh to form a clot (iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "coagulation",
+        "sequence",
+        "sequence-order"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Arrange the correct path of blood flow through the heart during systemic circulation:\n(i) Left ventricle\n(ii) Aorta\n(iii) Body tissues\n(iv) Vena cava\n(v) Right atrium",
+      "options": [
+        "A) i → ii → iii → iv → v",
+        "D) i → iii → ii → iv → v",
+        "C) ii → i → iii → v → iv",
+        "B) v → iv → iii → ii → i"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In systemic circulation, blood flows from: Left ventricle (i) → Aorta (ii) → Body tissues via arteries, arterioles, capillaries (iii) → Vena cava via venules and veins (iv) → Right atrium (v).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "systemic-circulation",
+        "sequence-order"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Arrange the correct sequence of cardiac conduction:\n(i) Purkinje fibres\n(ii) AV node\n(iii) SA node\n(iv) Bundle of His\n(v) Bundle branches",
+      "options": [
+        "A) iii → ii → iv → v → i",
+        "D) ii → iv → iii → i → v",
+        "C) iii → iv → ii → v → i",
+        "B) ii → iii → iv → i → v"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct sequence of cardiac conduction is: SA node (iii) → AV node (ii) → Bundle of His (iv) → Right and left bundle branches (v) → Purkinje fibres (i). This ensures coordinated contraction of the heart chambers.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "conducting-system",
+        "sequence-order"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Arrange the following events of the cardiac cycle in correct order:\n(i) Ventricular systole\n(ii) Joint diastole\n(iii) Atrial systole\n(iv) Ventricular diastole begins\n(v) Semilunar valves open",
+      "options": [
+        "B) iii → i → v → iv → ii",
+        "A) ii → iii → i → v → iv",
+        "C) iii → v → i → iv → ii",
+        "D) ii → iii → v → i → iv"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The cardiac cycle begins with atrial systole (iii), followed by ventricular systole (i) during which semilunar valves open (v) to eject blood, then ventricular diastole begins (iv), and finally joint diastole (ii) occurs when all chambers are relaxed.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cardiac-cycle",
+        "sequence-order"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Arrange the path of blood flow through pulmonary circulation in the correct order:\n(i) Pulmonary artery\n(ii) Right ventricle\n(iii) Lung capillaries\n(iv) Pulmonary veins\n(v) Left atrium",
+      "options": [
+        "D) ii → iii → i → iv → v",
+        "A) ii → i → iii → iv → v",
+        "B) v → iv → iii → i → ii",
+        "C) i → ii → iii → v → iv"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In pulmonary circulation, deoxygenated blood flows from: Right ventricle (ii) → Pulmonary artery (i) → Lung capillaries where gas exchange occurs (iii) → Pulmonary veins carrying oxygenated blood (iv) → Left atrium (v).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pulmonary-circulation",
+        "sequence-order"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Arrange the ECG waves in the order they appear during a single cardiac cycle:\n(i) T wave\n(ii) QRS complex\n(iii) P wave\n(iv) U wave (when present)",
+      "options": [
+        "C) i → iii → ii → iv",
+        "B) ii → iii → i → iv",
+        "A) iii → ii → i → iv",
+        "D) iii → i → ii → iv"
+      ],
+      "correctAnswer": "C",
+      "explanation": "During a single cardiac cycle, ECG waves appear in the following order: P wave (atrial depolarisation) (iii) → QRS complex (ventricular depolarisation) (ii) → T wave (ventricular repolarisation) (i) → U wave (when present, thought to represent repolarisation of Purkinje fibres) (iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ECG",
+        "sequence-order"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Arrange the blood vessels in decreasing order of blood pressure:\n(i) Capillaries\n(ii) Arteries\n(iii) Veins\n(iv) Arterioles\n(v) Venules",
+      "options": [
+        "D) iv → ii → i → iii → v",
+        "B) iii → v → i → iv → ii",
+        "C) ii → i → iv → v → iii",
+        "A) ii → iv → i → v → iii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Blood pressure decreases as blood flows from arteries through the circulatory system. The correct decreasing order is: Arteries (highest pressure) (ii) → Arterioles (iv) → Capillaries (i) → Venules (v) → Veins (lowest pressure) (iii).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-pressure",
+        "blood-vessels",
+        "sequence-order"
+      ],
+      "neetWeightage": "HIGH"
+    }
+  ]
+}
