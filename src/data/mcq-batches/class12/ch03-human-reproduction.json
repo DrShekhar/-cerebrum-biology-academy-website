@@ -1,0 +1,2442 @@
+{
+  "batch": {
+    "name": "Class 12 - Chapter 3: Human Reproduction",
+    "version": 1,
+    "source": "neet-class12-ch03",
+    "totalQuestions": 100
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The testes are located outside the abdominal cavity in the scrotum because:",
+      "options": [
+        "A) There is no space in the abdomen",
+        "C) Testes need more oxygen",
+        "B) Spermatogenesis requires 2-2.5°C lower temperature than body temperature",
+        "D) To protect the testes from injury"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The testes are located in the scrotum outside the body cavity because spermatogenesis requires a temperature 2-2.5°C lower than the normal body temperature (37°C). The scrotum provides this cooler environment.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "testes",
+        "scrotum",
+        "temperature"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Sertoli cells are found in:",
+      "options": [
+        "C) Liver",
+        "A) Ovary",
+        "B) Seminiferous tubules",
+        "D) Adrenal gland"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sertoli cells (nurse cells) are found in the seminiferous tubules of the testes. They provide nutrition and support to the developing spermatozoa.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "sertoli-cells",
+        "seminiferous-tubules"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The acrosome of the sperm is derived from:",
+      "options": [
+        "B) Golgi apparatus",
+        "C) Endoplasmic reticulum",
+        "A) Mitochondria",
+        "D) Nucleus"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The acrosome is a cap-like structure at the tip of the sperm head, derived from the Golgi apparatus. It contains hydrolytic enzymes that help the sperm penetrate the egg during fertilisation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "acrosome",
+        "golgi-apparatus",
+        "sperm"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The middle piece of human sperm contains:",
+      "options": [
+        "A) Nucleus",
+        "C) Mitochondria",
+        "B) Centriole",
+        "D) Golgi apparatus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The middle piece of the sperm contains numerous mitochondria that produce energy (ATP) required for the movement of the tail. These mitochondria form the mitochondrial sheath or nebenkern.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "middle-piece",
+        "mitochondria",
+        "sperm"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Leydig cells secrete:",
+      "options": [
+        "A) Estrogen",
+        "D) FSH",
+        "C) Testosterone",
+        "B) Progesterone"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Leydig cells (interstitial cells) are present in the interstitial spaces between seminiferous tubules and secrete testosterone, the male sex hormone responsible for secondary sexual characters.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "leydig-cells",
+        "testosterone"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The process of formation of spermatozoa from spermatogonia is called:",
+      "options": [
+        "A) Oogenesis",
+        "C) Spermiogenesis",
+        "D) Spermiation",
+        "B) Spermatogenesis"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Spermatogenesis is the complete process of formation of spermatozoa from spermatogonia. It involves spermatocytogenesis (mitosis and meiosis) followed by spermiogenesis (transformation of spermatids into spermatozoa).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "spermatogenesis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Capacitation of sperm occurs in:",
+      "options": [
+        "C) Female reproductive tract",
+        "B) Vas deferens",
+        "D) Seminiferous tubules",
+        "A) Epididymis"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Capacitation is the physiological maturation of sperm that occurs in the female reproductive tract. It involves changes in the sperm membrane that enable it to undergo the acrosomal reaction and fertilise the ovum.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "capacitation",
+        "sperm"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The corpus luteum secretes:",
+      "options": [
+        "B) Progesterone primarily",
+        "D) FSH",
+        "A) Estrogen only",
+        "C) LH"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The corpus luteum primarily secretes progesterone (and some estrogen). Progesterone is essential for the maintenance of the endometrium for implantation and pregnancy. If fertilisation does not occur, corpus luteum degenerates.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "corpus-luteum",
+        "progesterone"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Fertilisation in humans normally occurs in the:",
+      "options": [
+        "C) Ampullary-isthmic junction of fallopian tube",
+        "D) Cervix",
+        "B) Ovary",
+        "A) Uterus"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Fertilisation in humans normally occurs at the ampullary-isthmic junction of the fallopian tube (oviduct). The ovum released from the ovary is captured by the fimbriae and transported to this region.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fertilisation",
+        "ampullary-isthmic-junction"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The hormone responsible for the LH surge during the menstrual cycle is:",
+      "options": [
+        "D) Inhibin",
+        "A) Progesterone",
+        "C) FSH",
+        "B) Estrogen"
+      ],
+      "correctAnswer": "D",
+      "explanation": "High levels of estrogen secreted by the developing Graafian follicle trigger the LH surge (a sudden peak in LH secretion) from the anterior pituitary. This LH surge induces ovulation on approximately day 14 of the cycle.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "LH-surge",
+        "estrogen",
+        "menstrual-cycle"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The first cell of a new individual after fertilisation is called:",
+      "options": [
+        "A) Oocyte",
+        "D) Blastocyst",
+        "C) Zygote",
+        "B) Morula"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The zygote is the first cell of a new individual formed after the fusion of the male and female gametes (fertilisation). It is diploid (2n=46 in humans) and undergoes cleavage to form the embryo.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "zygote",
+        "fertilisation"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Implantation of the blastocyst occurs on approximately which day after fertilisation?",
+      "options": [
+        "B) Day 3",
+        "A) Day 1",
+        "D) Day 14",
+        "C) Day 7"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Implantation of the blastocyst in the uterine endometrium occurs approximately 7 days after fertilisation (around day 21 of the menstrual cycle). The trophoblast of the blastocyst attaches to and invades the endometrium.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "implantation",
+        "blastocyst"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Human chorionic gonadotropin (hCG) is produced by:",
+      "options": [
+        "D) Corpus luteum",
+        "C) Trophoblast of blastocyst",
+        "A) Ovary",
+        "B) Pituitary gland"
+      ],
+      "correctAnswer": "B",
+      "explanation": "hCG is produced by the trophoblast cells of the blastocyst after implantation. It maintains the corpus luteum during early pregnancy and is the hormone detected in pregnancy tests.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "hCG",
+        "trophoblast",
+        "pregnancy"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Which of the following hormones is called the 'milk ejection hormone'?",
+      "options": [
+        "D) hPL",
+        "C) Estrogen",
+        "A) Prolactin",
+        "B) Oxytocin"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Oxytocin is called the 'milk ejection hormone' because it stimulates the contraction of smooth muscles in the mammary glands, causing milk to be ejected during breastfeeding. Prolactin stimulates milk production.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "oxytocin",
+        "milk-ejection"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The menstrual phase is caused by the fall in levels of:",
+      "options": [
+        "D) Testosterone and inhibin",
+        "A) FSH and LH",
+        "B) Estrogen and progesterone",
+        "C) hCG and hPL"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The menstrual phase (days 1-5) is caused by the decline in levels of progesterone and estrogen due to degeneration of the corpus luteum. This causes the breakdown and shedding of the endometrial lining.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "menstrual-phase",
+        "hormones"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The zona pellucida is a layer surrounding the:",
+      "options": [
+        "B) Primary oocyte",
+        "C) Secondary oocyte/Ovum",
+        "D) Blastocyst",
+        "A) Sperm"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Zona pellucida is a glycoprotein-rich transparent layer surrounding the secondary oocyte (ovum). It plays an important role in sperm binding during fertilisation and prevents polyspermy after the cortical reaction.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "zona-pellucida",
+        "oocyte"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Spermiogenesis is the process of transformation of:",
+      "options": [
+        "B) Spermatocytes into spermatids",
+        "C) Spermatids into spermatozoa",
+        "A) Spermatogonia into spermatocytes",
+        "D) Spermatozoa into mature sperm"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Spermiogenesis is the process of transformation of haploid spermatids into mature spermatozoa. It involves morphological changes like acrosome formation, tail development, and loss of excess cytoplasm.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "spermiogenesis",
+        "spermatids"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The Graafian follicle releases the ovum during:",
+      "options": [
+        "C) Ovulatory phase",
+        "A) Menstrual phase",
+        "B) Follicular phase",
+        "D) Luteal phase"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Graafian follicle ruptures and releases the secondary oocyte (ovum) during the ovulatory phase, which occurs around day 14 of the menstrual cycle, triggered by the LH surge.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ovulation",
+        "graafian-follicle"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The innermost layer of the uterine wall is:",
+      "options": [
+        "B) Myometrium",
+        "A) Perimetrium",
+        "D) Serosa",
+        "C) Endometrium"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The uterine wall has three layers: perimetrium (outermost), myometrium (middle muscular layer), and endometrium (innermost glandular layer). The endometrium undergoes cyclical changes during the menstrual cycle.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "endometrium",
+        "uterine-wall"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Relaxin hormone is secreted by:",
+      "options": [
+        "B) Placenta and ovary",
+        "C) Adrenal cortex",
+        "A) Anterior pituitary",
+        "D) Hypothalamus"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Relaxin is secreted by the ovary (corpus luteum) and placenta during pregnancy. It helps in relaxing the pelvic ligaments and softening the cervix to facilitate parturition (childbirth).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "relaxin",
+        "parturition"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The average duration of the menstrual cycle in human females is:",
+      "options": [
+        "C) 28 days",
+        "B) 21 days",
+        "A) 14 days",
+        "D) 35 days"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The average duration of the menstrual cycle is 28 days (can vary from 21 to 35 days). It has four phases: menstrual phase (1-5 days), follicular phase (6-13 days), ovulatory phase (day 14), and luteal phase (15-28 days).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "menstrual-cycle",
+        "duration"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The trophoblast of the blastocyst gives rise to:",
+      "options": [
+        "C) Yolk sac only",
+        "D) Nervous system",
+        "A) Embryo proper",
+        "B) Placenta and extra-embryonic membranes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The trophoblast (outer layer of the blastocyst) contributes to the formation of the placenta and extra-embryonic membranes. The inner cell mass (ICM) gives rise to the embryo proper.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "trophoblast",
+        "placenta"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Bulbourethral glands are also known as:",
+      "options": [
+        "C) Bartholin's glands",
+        "D) Seminal vesicles",
+        "B) Cowper's glands",
+        "A) Prostate glands"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Bulbourethral glands are also called Cowper's glands. They are paired glands located below the prostate and secrete a mucus-like substance that lubricates the urethra and neutralises any residual acidity.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cowpers-glands",
+        "bulbourethral"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Which of the following structures connects the foetus to the placenta?",
+      "options": [
+        "D) Vagina",
+        "A) Fallopian tube",
+        "C) Cervix",
+        "B) Umbilical cord"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The umbilical cord connects the developing foetus to the placenta. It contains two umbilical arteries and one umbilical vein that transport blood between the foetus and the placenta for nutrient and gas exchange.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "umbilical-cord",
+        "placenta"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Colostrum is the first secretion from the mammary glands after childbirth and is rich in:",
+      "options": [
+        "A) Fat only",
+        "B) Antibodies (IgA)",
+        "D) Vitamins only",
+        "C) Carbohydrates only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Colostrum is the yellowish fluid secreted by the mammary glands during the initial days after childbirth. It is rich in antibodies (especially IgA) that provide passive immunity to the newborn.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "colostrum",
+        "antibodies",
+        "IgA"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Spermiation is the process of:",
+      "options": [
+        "A) Formation of spermatids",
+        "D) Maturation of sperm",
+        "C) Storage of sperm in epididymis",
+        "B) Release of spermatozoa from Sertoli cells into the lumen"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Spermiation is the process of release of mature spermatozoa from the Sertoli cells into the lumen of the seminiferous tubules. After spermiation, sperms are transported to the epididymis for storage and maturation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "spermiation",
+        "sertoli-cells"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The secretory phase of the menstrual cycle is also known as:",
+      "options": [
+        "A) Follicular phase",
+        "B) Proliferative phase",
+        "D) Menstrual phase",
+        "C) Luteal phase"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The secretory phase is the same as the luteal phase (days 15-28) of the menstrual cycle. During this phase, the corpus luteum secretes progesterone which prepares the endometrium for implantation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "secretory-phase",
+        "luteal-phase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The morula is a stage of embryo development with:",
+      "options": [
+        "D) 128 cells",
+        "A) 2-4 cells",
+        "B) 8-16 cells",
+        "C) 64 cells"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The morula is a solid mass of 8-16 cells formed by repeated mitotic divisions (cleavage) of the zygote. It resembles a mulberry (hence the name morula). Further division leads to the blastocyst stage.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "morula",
+        "cleavage"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Which hormone maintains pregnancy by preventing uterine contractions?",
+      "options": [
+        "B) Progesterone",
+        "C) LH",
+        "D) FSH",
+        "A) Estrogen"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Progesterone maintains pregnancy by keeping the endometrium intact, suppressing uterine contractions, and preventing ovulation during pregnancy. It is secreted by the corpus luteum initially and later by the placenta.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "progesterone",
+        "pregnancy"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The seminal plasma is contributed by:",
+      "options": [
+        "D) Epididymis only",
+        "B) Prostate gland only",
+        "C) Seminal vesicles, prostate gland, and bulbourethral glands",
+        "A) Testes only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Seminal plasma (the fluid part of semen) is contributed by the secretions of seminal vesicles (60%), prostate gland (30%), and bulbourethral (Cowper's) glands. It provides nutrition and a medium for sperm transport.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "seminal-plasma",
+        "accessory-glands"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The human gestation period is approximately:",
+      "options": [
+        "B) 266 days (9 months)",
+        "D) 365 days",
+        "A) 200 days",
+        "C) 300 days"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The human gestation period (from fertilisation to parturition) is approximately 266 days or about 9 months. It is divided into three trimesters of approximately 3 months each.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "gestation",
+        "pregnancy-duration"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "During oogenesis, the primary oocyte completes its first meiotic division to form:",
+      "options": [
+        "C) Four oogonia",
+        "A) Two equal secondary oocytes",
+        "D) Two spermatids",
+        "B) One large secondary oocyte and one small first polar body"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The primary oocyte undergoes unequal meiosis I to form one large secondary oocyte (retaining most cytoplasm) and one small first polar body. This ensures adequate cytoplasm for the future embryo.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "oogenesis",
+        "meiosis-I"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The part of the fallopian tube closest to the ovary with finger-like projections is called:",
+      "options": [
+        "B) Ampulla",
+        "A) Isthmus",
+        "D) Cervix",
+        "C) Infundibulum"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The infundibulum is the funnel-shaped part of the fallopian tube closest to the ovary. It has finger-like projections called fimbriae that help in collecting the ovum after ovulation.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "infundibulum",
+        "fimbriae"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "During the follicular phase of the menstrual cycle, which hormone stimulates the growth of ovarian follicles?",
+      "options": [
+        "D) Oxytocin",
+        "C) FSH",
+        "A) Progesterone",
+        "B) LH"
+      ],
+      "correctAnswer": "B",
+      "explanation": "FSH (Follicle Stimulating Hormone) from the anterior pituitary stimulates the growth and development of ovarian follicles during the follicular phase (days 6-13). The growing follicles secrete estrogen.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "FSH",
+        "follicular-phase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The placenta acts as a barrier and does NOT allow:",
+      "options": [
+        "A) Oxygen to pass from mother to foetus",
+        "B) Nutrients to pass to foetus",
+        "C) Mixing of blood of mother and foetus",
+        "D) Hormones to be produced"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The placenta acts as a barrier and does NOT allow mixing of the blood of the mother and the foetus. Exchange of materials occurs through diffusion across the placental membrane.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "placenta",
+        "barrier"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Which of the following is the correct sequence of embryonic development?",
+      "options": [
+        "C) Morula → Zygote → Blastocyst → Gastrula",
+        "D) Zygote → Gastrula → Morula → Blastocyst",
+        "B) Zygote → Blastocyst → Morula → Gastrula",
+        "A) Zygote → Morula → Blastocyst → Gastrula"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct sequence of early embryonic development is: Zygote → Cleavage → Morula (8-16 cells) → Blastocyst (with blastocoel) → Implantation → Gastrulation (formation of three germ layers).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "embryonic-development",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Parturition is induced by a complex neuroendocrine mechanism involving:",
+      "options": [
+        "A) Estrogen only",
+        "D) FSH and LH",
+        "B) Progesterone and oxytocin",
+        "C) Oxytocin released from maternal and foetal pituitary"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Parturition (childbirth) is induced by signals from the fully developed foetus and the placenta, which trigger the release of oxytocin from both the maternal and foetal posterior pituitary. Oxytocin causes uterine contractions.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "parturition",
+        "oxytocin"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "A secondary oocyte released during ovulation is arrested at which stage of meiosis?",
+      "options": [
+        "B) Metaphase I",
+        "C) Metaphase II",
+        "D) Anaphase II",
+        "A) Prophase I"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The secondary oocyte released during ovulation is arrested at metaphase II of meiosis II. Meiosis II is completed only upon fertilisation by a sperm, producing the ovum and the second polar body.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "secondary-oocyte",
+        "metaphase-II"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The endometrium is regenerated during which phase of the menstrual cycle?",
+      "options": [
+        "A) Menstrual phase",
+        "C) Luteal/Secretory phase",
+        "D) Ovulatory phase",
+        "B) Follicular/Proliferative phase"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The endometrium regenerates during the follicular/proliferative phase (days 6-13) under the influence of estrogen secreted by the developing ovarian follicles. The endometrium thickens and becomes vascularised.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "endometrium",
+        "proliferative-phase"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): Oogenesis is completed only after fertilisation.\nReason (R): The secondary oocyte completes meiosis II only when a sperm penetrates it.",
+      "options": [
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both are true and R explains A. Oogenesis is not completed until fertilisation because the secondary oocyte (arrested at metaphase II) only completes meiosis II after sperm penetration, forming the ovum and second polar body.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "oogenesis",
+        "fertilisation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): The middle piece of sperm is called the powerhouse of sperm.\nReason (R): It contains numerous mitochondria that produce energy for sperm motility.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both are true and R explains A. The middle piece contains a mitochondrial spiral (nebenkern) that generates ATP through oxidative phosphorylation, providing energy for flagellar movement of the sperm tail.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "middle-piece",
+        "mitochondria",
+        "sperm"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): hCG is the basis of pregnancy tests.\nReason (R): hCG is present only in the urine of pregnant women.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both are true and R explains A. Human chorionic gonadotropin (hCG) is produced by the trophoblast after implantation and is excreted in the urine. Its presence in urine is the basis of pregnancy test kits.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "hCG",
+        "pregnancy-test"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): Placenta is an endocrine gland.\nReason (R): Placenta produces several hormones like hCG, hPL, estrogen, progesterone, and relaxin.",
+      "options": [
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both are true and R explains A. The placenta functions as a temporary endocrine gland during pregnancy, secreting hCG, hPL, estrogen, progesterone, and relaxin, which are essential for maintaining pregnancy.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "placenta",
+        "endocrine"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): Colostrum is important for the health of newborn babies.\nReason (R): Colostrum contains antibodies that provide passive immunity to the newborn.",
+      "options": [
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both are true and R explains A. Colostrum contains IgA antibodies that provide passive immunity to the newborn, protecting against various infections during the initial period when the infant's immune system is immature.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "colostrum",
+        "passive-immunity"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): The production of eggs in females stops at birth.\nReason (R): A female is born with all the primary oocytes she will ever have.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "D) Both A and R are false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both are true. No new eggs (oocytes) are formed after birth in females. By birth, a female has about 2 million primary oocytes, which decrease to about 60,000-80,000 at puberty. Only about 400 will ovulate during reproductive life.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "oogenesis",
+        "primary-oocytes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): Testosterone is essential for spermatogenesis.\nReason (R): Testosterone is secreted by Sertoli cells in the seminiferous tubules.",
+      "options": [
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The assertion is true as testosterone is essential for spermatogenesis. However, the reason is false because testosterone is secreted by Leydig cells (interstitial cells), not Sertoli cells. Sertoli cells provide nutritional support to developing sperm.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "testosterone",
+        "leydig-cells",
+        "sertoli-cells"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): During fertilisation, only one sperm can fertilise the ovum.\nReason (R): After the entry of one sperm, the zona pellucida changes to prevent polyspermy.",
+      "options": [
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both are true and R explains A. After one sperm enters the ovum, cortical granules release their contents, causing the zona pellucida to harden (cortical reaction/zona reaction), which blocks the entry of additional sperm (prevents polyspermy).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "polyspermy",
+        "zona-pellucida"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): Sperm transport in the male reproductive system is aided by peristalsis.\nReason (R): The vas deferens and epididymis have smooth muscles that undergo peristaltic contractions.",
+      "options": [
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both are true and the reason explains the assertion. Sperms are non-motile in the male reproductive tract and are transported from the seminiferous tubules through the rete testis, epididymis, and vas deferens by peristaltic contractions.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "sperm-transport",
+        "peristalsis"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): Menstrual cycle does not occur during pregnancy.\nReason (R): High levels of progesterone and estrogen during pregnancy inhibit FSH and LH secretion.",
+      "options": [
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both are true and R explains A. During pregnancy, high levels of progesterone and estrogen (from placenta) inhibit GnRH release, which suppresses FSH and LH. Without FSH and LH, no new follicle develops and no ovulation occurs, so the menstrual cycle stops.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pregnancy",
+        "menstrual-cycle"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): Endosperm development precedes embryo development in flowering plants.\nReason (R): In humans too, the placenta develops before the embryo can grow significantly.",
+      "options": [
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both statements are true. In plants, endosperm develops first to nourish the embryo. In humans, the placenta develops early to support embryonic growth. However, the reason does not directly explain the assertion as they are two different biological systems.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "endosperm",
+        "placenta",
+        "comparison"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): Oxytocin is involved in parturition.\nReason (R): Oxytocin causes strong contractions of the uterine muscles leading to expulsion of the baby.",
+      "options": [
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both are true and R explains A. Oxytocin triggers strong uterine contractions during parturition. The process works through positive feedback - uterine contractions stimulate more oxytocin release, leading to stronger contractions until the baby is delivered.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "oxytocin",
+        "parturition"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Consider the following statements about spermatogenesis:\n(i) It begins at puberty.\n(ii) It occurs in seminiferous tubules.\n(iii) Each primary spermatocyte produces 4 spermatozoa.\n(iv) Spermiogenesis involves meiosis.\nWhich are correct?",
+      "options": [
+        "D) All are correct",
+        "C) (i), (iii), and (iv)",
+        "A) (i), (ii), and (iii) only",
+        "B) (i) and (ii) only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statements (i), (ii), and (iii) are correct. Spermatogenesis begins at puberty, occurs in seminiferous tubules, and each primary spermatocyte produces 4 spermatozoa. Statement (iv) is incorrect because spermiogenesis is the transformation of spermatids into spermatozoa and does NOT involve meiosis.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "spermatogenesis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Read the statements:\nStatement I: The placenta is connected to the foetus through the umbilical cord.\nStatement II: The placenta facilitates the exchange of O2, CO2, nutrients, and waste products between mother and foetus.",
+      "options": [
+        "D) Both statements are incorrect",
+        "C) Only statement II is correct",
+        "B) Only statement I is correct",
+        "A) Both statements are correct"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both statements are correct. The placenta is connected to the foetus via the umbilical cord and serves as the site for exchange of oxygen, carbon dioxide, nutrients, and waste materials between maternal and foetal blood.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "placenta",
+        "umbilical-cord"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Which of the following statements about the menstrual cycle is INCORRECT?\n(i) FSH stimulates follicle growth.\n(ii) LH surge causes ovulation.\n(iii) Progesterone causes endometrial shedding.\n(iv) Estrogen causes proliferation of endometrium.",
+      "options": [
+        "C) (i) and (iii)",
+        "B) (i) only",
+        "D) None are incorrect",
+        "A) (iii) only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statement (iii) is incorrect. It is the DECLINE of progesterone (not its presence) that causes endometrial shedding (menstruation). Progesterone maintains the endometrium; its fall leads to menstruation.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "menstrual-cycle",
+        "hormones"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Consider the following:\n(i) Each seminiferous tubule is lined by spermatogonia and Sertoli cells.\n(ii) Leydig cells are present inside seminiferous tubules.\n(iii) GnRH from hypothalamus stimulates release of FSH and LH.\n(iv) FSH acts on Sertoli cells.\nWhich are correct?",
+      "options": [
+        "D) (ii) and (iv) only",
+        "C) (i) and (iii) only",
+        "B) All are correct",
+        "A) (i), (iii), and (iv) only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statements (i), (iii), and (iv) are correct. Statement (ii) is wrong because Leydig cells are NOT inside seminiferous tubules; they are in the interstitial spaces BETWEEN seminiferous tubules.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "seminiferous-tubules",
+        "leydig-cells"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Read the statements about female reproductive system:\nStatement I: The fallopian tube has four parts - infundibulum, ampulla, isthmus, and uterine part.\nStatement II: Fertilisation normally occurs in the isthmus of the fallopian tube.",
+      "options": [
+        "A) Both statements are correct",
+        "B) Only statement I is correct",
+        "C) Only statement II is correct",
+        "D) Both statements are incorrect"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statement I is correct. Statement II is incorrect because fertilisation normally occurs at the ampullary-isthmic junction (not in the isthmus alone). The junction of the ampulla and isthmus is the usual site of fertilisation.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fallopian-tube",
+        "fertilisation-site"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Consider the following:\n(i) Primary oocytes are arrested at prophase I until puberty.\n(ii) Secondary oocyte completes meiosis II before ovulation.\n(iii) Polar bodies have very little cytoplasm.\n(iv) One primary oocyte produces one ovum and three polar bodies.\nWhich statements are correct?",
+      "options": [
+        "D) All are correct",
+        "B) (i), (iii), and (iv) only",
+        "C) (i), (ii), and (iii)",
+        "A) (i) and (iii) only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements (i), (iii), and (iv) are correct. Statement (ii) is wrong because the secondary oocyte does NOT complete meiosis II before ovulation; it completes meiosis II only upon fertilisation by a sperm.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "oogenesis",
+        "polar-bodies"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Read the following:\nStatement I: The acrosome of the sperm helps in penetrating the egg.\nStatement II: Acrosomal enzymes dissolve the corona radiata and zona pellucida of the ovum.",
+      "options": [
+        "B) Only statement I is correct",
+        "A) Both statements are correct",
+        "D) Both statements are incorrect",
+        "C) Only statement II is correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both are correct. The acrosome releases hydrolytic enzymes (hyaluronidase, acrosin) during the acrosomal reaction that dissolve the corona radiata (layer of follicular cells) and zona pellucida of the ovum, enabling sperm entry.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "acrosome",
+        "acrosomal-reaction"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Which of the following statements about parturition is/are correct?\n(i) It is induced by oxytocin.\n(ii) It involves positive feedback mechanism.\n(iii) It occurs after approximately 9 months of pregnancy.\n(iv) Signals originate from the foetus and placenta.",
+      "options": [
+        "C) (i), (iii), and (iv) only",
+        "D) All are correct",
+        "B) (i), (ii), and (iii) only",
+        "A) (i) and (ii) only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "All four statements are correct. Parturition is induced by oxytocin through a positive feedback mechanism, occurs after ~9 months, and is initiated by signals from both the foetus and the placenta that trigger oxytocin release.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "parturition"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Match Column I with Column II:\nColumn I: (P) Sertoli cells, (Q) Leydig cells, (R) Corpus luteum, (S) Graafian follicle\nColumn II: (i) Testosterone, (ii) Progesterone, (iii) Nourishment of sperm, (iv) Ovulation",
+      "options": [
+        "A) P-iii, Q-i, R-ii, S-iv",
+        "B) P-i, Q-iii, R-ii, S-iv",
+        "D) P-iv, Q-i, R-ii, S-iii",
+        "C) P-iii, Q-ii, R-i, S-iv"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sertoli cells nourish developing sperm (iii), Leydig cells secrete testosterone (i), Corpus luteum secretes progesterone (ii), and Graafian follicle is involved in ovulation (iv).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "reproductive-cells",
+        "match"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Match Column I (Hormone) with Column II (Function):\nColumn I: (P) FSH, (Q) LH, (R) Progesterone, (S) Oxytocin\nColumn II: (i) Uterine contractions during parturition, (ii) Follicle growth, (iii) Ovulation trigger, (iv) Endometrial maintenance",
+      "options": [
+        "B) P-iii, Q-ii, R-iv, S-i",
+        "A) P-ii, Q-iii, R-iv, S-i",
+        "D) P-i, Q-iii, R-iv, S-ii",
+        "C) P-ii, Q-iv, R-iii, S-i"
+      ],
+      "correctAnswer": "B",
+      "explanation": "FSH stimulates follicle growth (ii), LH triggers ovulation (iii), Progesterone maintains the endometrium (iv), and Oxytocin causes uterine contractions during parturition (i).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "hormones",
+        "functions",
+        "match"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Match Column I (Part of sperm) with Column II (Component/Function):\nColumn I: (P) Head, (Q) Middle piece, (R) Tail, (S) Acrosome\nColumn II: (i) Flagellar movement, (ii) Nucleus with DNA, (iii) Mitochondria for energy, (iv) Enzymes for egg penetration",
+      "options": [
+        "D) P-iii, Q-ii, R-i, S-iv",
+        "A) P-ii, Q-iii, R-i, S-iv",
+        "B) P-iv, Q-iii, R-i, S-ii",
+        "C) P-ii, Q-i, R-iii, S-iv"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Head contains the nucleus (ii), Middle piece has mitochondria for energy (iii), Tail provides flagellar movement (i), and Acrosome contains enzymes for egg penetration (iv).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "sperm-structure",
+        "match"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Match Column I (Phase of menstrual cycle) with Column II (Days):\nColumn I: (P) Menstrual phase, (Q) Follicular phase, (R) Ovulatory phase, (S) Luteal phase\nColumn II: (i) Days 15-28, (ii) Days 1-5, (iii) Day 14, (iv) Days 6-13",
+      "options": [
+        "B) P-iv, Q-ii, R-iii, S-i",
+        "D) P-i, Q-iv, R-iii, S-ii",
+        "A) P-ii, Q-iv, R-iii, S-i",
+        "C) P-ii, Q-iii, R-iv, S-i"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Menstrual phase (days 1-5), Follicular phase (days 6-13), Ovulatory phase (day 14), and Luteal phase (days 15-28).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "menstrual-cycle",
+        "phases",
+        "match"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Match Column I (Accessory gland) with Column II (Characteristic):\nColumn I: (P) Seminal vesicles, (Q) Prostate gland, (R) Bulbourethral glands\nColumn II: (i) Secretes slightly alkaline fluid, (ii) Contributes fructose-rich fluid, (iii) Secretes lubricating mucus",
+      "options": [
+        "D) P-ii, Q-iii, R-i",
+        "A) P-ii, Q-i, R-iii",
+        "B) P-i, Q-ii, R-iii",
+        "C) P-iii, Q-i, R-ii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Seminal vesicles contribute fructose-rich fluid (ii) that provides energy for sperm. Prostate gland secretes slightly alkaline fluid (i) that helps neutralise vaginal acidity. Bulbourethral glands secrete lubricating mucus (iii).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "accessory-glands",
+        "match"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Match Column I with Column II:\nColumn I: (P) Morula, (Q) Blastocyst, (R) Gastrula, (S) Zygote\nColumn II: (i) First cell after fertilisation, (ii) Has trophoblast and ICM, (iii) 8-16 cell stage, (iv) Three germ layer stage",
+      "options": [
+        "A) P-iii, Q-ii, R-iv, S-i",
+        "C) P-iii, Q-iv, R-ii, S-i",
+        "D) P-i, Q-ii, R-iv, S-iii",
+        "B) P-ii, Q-iii, R-iv, S-i"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Morula is the 8-16 cell stage (iii), Blastocyst has trophoblast and inner cell mass (ii), Gastrula has three germ layers (iv), and Zygote is the first cell after fertilisation (i).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "embryo-stages",
+        "match"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Match Column I (Germ layer) with Column II (Derivative):\nColumn I: (P) Ectoderm, (Q) Mesoderm, (R) Endoderm\nColumn II: (i) Lining of digestive tract, (ii) Nervous system and skin, (iii) Muscles and bones",
+      "options": [
+        "A) P-ii, Q-iii, R-i",
+        "B) P-iii, Q-ii, R-i",
+        "D) P-ii, Q-i, R-iii",
+        "C) P-i, Q-iii, R-ii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Ectoderm gives rise to the nervous system and skin (ii), Mesoderm forms muscles, bones, and connective tissues (iii), and Endoderm forms the lining of the digestive tract and associated organs (i).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "germ-layers",
+        "derivatives",
+        "match"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Match Column I (Structure) with Column II (Function):\nColumn I: (P) Fimbriae, (Q) Endometrium, (R) Myometrium, (S) Cervix\nColumn II: (i) Strong contractions during labour, (ii) Collects ovum after ovulation, (iii) Implantation site, (iv) Narrow canal connecting uterus and vagina",
+      "options": [
+        "C) P-ii, Q-i, R-iii, S-iv",
+        "A) P-ii, Q-iii, R-i, S-iv",
+        "B) P-iii, Q-ii, R-i, S-iv",
+        "D) P-iv, Q-iii, R-i, S-ii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Fimbriae collect the ovum (ii), Endometrium is the implantation site (iii), Myometrium contracts during labour (i), and Cervix connects the uterus to vagina (iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "female-reproductive",
+        "match"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Match Column I (Placental hormone) with Column II (Primary function):\nColumn I: (P) hCG, (Q) hPL, (R) Relaxin, (S) Estrogen\nColumn II: (i) Relaxation of pelvic ligaments, (ii) Maintenance of corpus luteum, (iii) Growth of mammary glands, (iv) Development of female secondary sexual characters",
+      "options": [
+        "D) P-i, Q-iii, R-iv, S-ii",
+        "A) P-ii, Q-iii, R-i, S-iv",
+        "C) P-ii, Q-iv, R-i, S-iii",
+        "B) P-iii, Q-ii, R-i, S-iv"
+      ],
+      "correctAnswer": "B",
+      "explanation": "hCG maintains corpus luteum (ii), hPL (human placental lactogen) stimulates mammary gland growth (iii), Relaxin relaxes pelvic ligaments (i), and Estrogen develops female secondary sexual characters (iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "placental-hormones",
+        "match"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "How many spermatozoa are produced from one primary spermatocyte?",
+      "options": [
+        "C) Three",
+        "D) Four",
+        "B) Two",
+        "A) One"
+      ],
+      "correctAnswer": "B",
+      "explanation": "One primary spermatocyte undergoes meiosis I to produce 2 secondary spermatocytes, each of which undergoes meiosis II to produce 2 spermatids. Thus, 4 spermatids are formed, which differentiate into 4 spermatozoa.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "spermatogenesis",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "How many ova are produced from one primary oocyte?",
+      "options": [
+        "C) Three",
+        "A) One",
+        "B) Two",
+        "D) Four"
+      ],
+      "correctAnswer": "B",
+      "explanation": "One primary oocyte undergoes meiosis I to form one secondary oocyte and one polar body. The secondary oocyte undergoes meiosis II (upon fertilisation) to form one ovum and one polar body. So only one functional ovum is produced.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "oogenesis",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "How many polar bodies are formed during oogenesis from one primary oocyte?",
+      "options": [
+        "B) Two",
+        "A) One",
+        "C) Three",
+        "D) Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Three polar bodies are formed: one from meiosis I (first polar body from primary oocyte), one from meiosis II of the secondary oocyte, and one from the division of the first polar body (if it divides). Total = 3 polar bodies.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "polar-bodies",
+        "oogenesis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "How many of the following are accessory reproductive glands in males?\nSeminal vesicles, Prostate gland, Cowper's glands, Bartholin's glands, Liver, Adrenal glands",
+      "options": [
+        "A) Two",
+        "D) Five",
+        "C) Four",
+        "B) Three"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Three are male accessory reproductive glands: Seminal vesicles, Prostate gland, and Cowper's (bulbourethral) glands. Bartholin's glands are female accessory glands. Liver and adrenal glands are not reproductive glands.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "accessory-glands",
+        "counting"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "How many chromosomes are present in a secondary spermatocyte?",
+      "options": [
+        "B) 23",
+        "D) 69",
+        "C) 12",
+        "A) 46"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A secondary spermatocyte has 23 chromosomes (haploid). The primary spermatocyte (2n=46) undergoes meiosis I to form two secondary spermatocytes, each with 23 chromosomes (n).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "secondary-spermatocyte",
+        "chromosomes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "How many layers does the uterine wall consist of?",
+      "options": [
+        "B) Two",
+        "D) Four",
+        "C) Three",
+        "A) One"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The uterine wall consists of three layers: perimetrium (outer serous layer), myometrium (middle thick muscular layer), and endometrium (inner glandular layer that undergoes cyclical changes).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "uterine-wall",
+        "layers"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "How many of the following hormones are produced by the placenta?\nhCG, hPL, Estrogen, Progesterone, Relaxin, FSH, GnRH, Testosterone",
+      "options": [
+        "A) Three",
+        "B) Four",
+        "C) Five",
+        "D) Six"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Five hormones are produced by the placenta: hCG, hPL (human placental lactogen), Estrogen, Progesterone, and Relaxin. FSH, GnRH, and Testosterone are not produced by the placenta.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "placental-hormones",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "How many germ layers are formed during gastrulation?",
+      "options": [
+        "B) Two",
+        "A) One",
+        "D) Four",
+        "C) Three"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Three germ layers are formed during gastrulation: ectoderm (outer), mesoderm (middle), and endoderm (inner). These three primary germ layers give rise to all the tissues and organs of the body.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "gastrulation",
+        "germ-layers"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Arrange the following stages of spermatogenesis in correct order:\n(i) Spermatozoa\n(ii) Spermatogonia\n(iii) Primary spermatocyte\n(iv) Secondary spermatocyte\n(v) Spermatid",
+      "options": [
+        "D) ii → iii → v → iv → i",
+        "A) ii → iii → iv → v → i",
+        "B) ii → iv → iii → v → i",
+        "C) iii → ii → iv → v → i"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct sequence is: Spermatogonia (mitosis) → Primary spermatocyte (meiosis I) → Secondary spermatocyte (meiosis II) → Spermatid (spermiogenesis) → Spermatozoa.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "spermatogenesis",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Arrange the sperm transport pathway in correct order:\n(i) Rete testis\n(ii) Vas deferens\n(iii) Seminiferous tubules\n(iv) Epididymis\n(v) Ejaculatory duct\n(vi) Urethra",
+      "options": [
+        "C) i → iii → iv → ii → v → vi",
+        "A) iii → i → iv → ii → v → vi",
+        "B) iii → iv → i → ii → v → vi",
+        "D) iii → i → ii → iv → v → vi"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct pathway: Seminiferous tubules → Rete testis → Vasa efferentia → Epididymis → Vas deferens → Ejaculatory duct → Urethra.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "sperm-pathway",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Arrange the phases of the menstrual cycle in correct chronological order:\n(i) Luteal phase\n(ii) Menstrual phase\n(iii) Ovulatory phase\n(iv) Follicular phase",
+      "options": [
+        "C) ii → iii → iv → i",
+        "D) i → ii → iv → iii",
+        "B) iv → ii → iii → i",
+        "A) ii → iv → iii → i"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct sequence: Menstrual phase (days 1-5) → Follicular/Proliferative phase (days 6-13) → Ovulatory phase (day 14) → Luteal/Secretory phase (days 15-28).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "menstrual-cycle",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Arrange the following events of fertilisation in correct order:\n(i) Cortical reaction\n(ii) Acrosomal reaction\n(iii) Fusion of pronuclei\n(iv) Sperm contacts zona pellucida\n(v) Capacitation of sperm",
+      "options": [
+        "B) v → ii → iv → i → iii",
+        "D) ii → v → iv → iii → i",
+        "C) iv → v → ii → i → iii",
+        "A) v → iv → ii → i → iii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct sequence: Capacitation → Sperm contacts zona pellucida → Acrosomal reaction (releases enzymes) → Cortical reaction (prevents polyspermy) → Fusion of pronuclei (syngamy).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fertilisation-events",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Arrange the early embryonic development in correct order:\n(i) Implantation\n(ii) Blastocyst formation\n(iii) Cleavage\n(iv) Gastrulation\n(v) Fertilisation",
+      "options": [
+        "D) v → iii → i → ii → iv",
+        "C) iii → v → ii → i → iv",
+        "A) v → iii → ii → i → iv",
+        "B) v → ii → iii → i → iv"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The correct sequence: Fertilisation → Cleavage (mitotic divisions) → Blastocyst formation → Implantation (in endometrium) → Gastrulation (formation of three germ layers).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "embryonic-development",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Arrange the following in order of ovarian follicle development:\n(i) Graafian follicle\n(ii) Primary follicle\n(iii) Corpus luteum\n(iv) Secondary follicle\n(v) Tertiary follicle",
+      "options": [
+        "B) ii → v → iv → i → iii",
+        "C) iv → ii → v → i → iii",
+        "D) ii → iv → i → v → iii",
+        "A) ii → iv → v → i → iii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct sequence of follicle development: Primary follicle → Secondary follicle → Tertiary follicle → Graafian follicle (mature) → Ovulation → Corpus luteum (from ruptured follicle).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "follicle-development",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Arrange the following structures traversed by the ovum from ovary to uterus:\n(i) Isthmus\n(ii) Infundibulum\n(iii) Ampulla\n(iv) Uterus",
+      "options": [
+        "D) i → ii → iii → iv",
+        "A) ii → iii → i → iv",
+        "B) iii → ii → i → iv",
+        "C) ii → i → iii → iv"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The ovum travels: Infundibulum (collects ovum via fimbriae) → Ampulla (widest part, site of fertilisation) → Isthmus (narrow part) → Uterus.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ovum-transport",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Which cells in the testes produce inhibin?",
+      "options": [
+        "C) Spermatogonia",
+        "B) Sertoli cells",
+        "A) Leydig cells",
+        "D) Spermatocytes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sertoli cells produce inhibin, a hormone that provides negative feedback to the anterior pituitary to inhibit FSH secretion. This helps regulate the rate of spermatogenesis.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "inhibin",
+        "sertoli-cells"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The inner cell mass (ICM) of the blastocyst gives rise to:",
+      "options": [
+        "D) Chorion",
+        "A) Placenta",
+        "C) Trophoblast",
+        "B) Embryo proper"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The inner cell mass (ICM) or embryoblast of the blastocyst differentiates into the embryo proper. The outer layer (trophoblast) contributes to the formation of placenta and extra-embryonic membranes.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ICM",
+        "blastocyst"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Which of the following is NOT a function of the placenta?",
+      "options": [
+        "D) Direct blood mixing between mother and foetus",
+        "C) Hormone production",
+        "B) Nutrient transfer",
+        "A) Gas exchange"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Direct blood mixing does NOT occur at the placenta. The placenta acts as a selective barrier where exchange of gases, nutrients, and waste occurs by diffusion across the placental membrane without direct blood contact.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "placenta",
+        "functions"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Menarche refers to:",
+      "options": [
+        "A) End of menstruation",
+        "C) Ovulation",
+        "B) Beginning of first menstruation at puberty",
+        "D) Menopause"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Menarche is the first menstrual flow (onset of menstruation) in a female, occurring at puberty around 10-15 years of age. Menopause is the cessation of menstruation, occurring around 45-55 years.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "menarche",
+        "puberty"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The rete testis is a network of tubules located in the:",
+      "options": [
+        "B) Mediastinum testis",
+        "A) Scrotum",
+        "D) Prostate",
+        "C) Epididymis"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The rete testis is a network of tubules located in the mediastinum testis (the connective tissue septum). Seminiferous tubules open into the rete testis through tubuli recti, and from rete testis, sperm pass to epididymis via vasa efferentia.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "rete-testis",
+        "mediastinum"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): Prolactin stimulates milk production in mammary glands.\nReason (R): Prolactin is secreted by the posterior pituitary gland.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is NOT the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The assertion is true - prolactin stimulates milk production. However, the reason is false because prolactin is secreted by the anterior pituitary, not the posterior pituitary. Oxytocin (milk ejection) comes from the posterior pituitary.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "prolactin",
+        "pituitary"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Assertion (A): Seminal plasma contains fructose.\nReason (R): Fructose provides energy for sperm motility.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is NOT the correct explanation of A"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both are true and R explains A. Seminal vesicles contribute fructose-rich fluid to the seminal plasma. Fructose serves as the primary energy source for sperm motility after ejaculation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "seminal-plasma",
+        "fructose"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Consider the following statements:\n(i) Epididymis is the site of sperm storage and maturation.\n(ii) Vas deferens carries sperm from epididymis to ejaculatory duct.\n(iii) Prostate gland is the largest male accessory gland.\n(iv) Seminal vesicles contribute about 60% of seminal fluid.\nWhich are correct?",
+      "options": [
+        "B) (i), (ii), and (iv) only",
+        "D) (i), (ii), and (iii) only",
+        "C) All are correct",
+        "A) (i) and (ii) only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "All four statements are correct. Epididymis stores and matures sperm. Vas deferens transports sperm. Prostate is the largest male accessory gland. Seminal vesicles contribute about 60% of seminal fluid volume.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "male-reproductive-system"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Read the following:\nStatement I: The mammary glands are modified sweat glands.\nStatement II: Mammary glands are functional in females and rudimentary in males.",
+      "options": [
+        "B) Only statement I is correct",
+        "D) Both statements are incorrect",
+        "C) Only statement II is correct",
+        "A) Both statements are correct"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both statements are correct. Mammary glands are modified apocrine sweat glands. They are functional in females after puberty (under hormonal influence) and remain rudimentary in males throughout life.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "mammary-glands"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Match Column I (Process) with Column II (Definition):\nColumn I: (P) Spermatogenesis, (Q) Spermiogenesis, (R) Spermiation, (S) Capacitation\nColumn II: (i) Release of sperm from Sertoli cells, (ii) Maturation of sperm in female tract, (iii) Formation of sperm from spermatogonia, (iv) Transformation of spermatids to spermatozoa",
+      "options": [
+        "D) P-ii, Q-iv, R-i, S-iii",
+        "B) P-iv, Q-iii, R-i, S-ii",
+        "A) P-iii, Q-iv, R-i, S-ii",
+        "C) P-iii, Q-i, R-iv, S-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Spermatogenesis - formation of sperm from spermatogonia (iii), Spermiogenesis - transformation of spermatids to spermatozoa (iv), Spermiation - release from Sertoli cells (i), Capacitation - maturation in female tract (ii).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "sperm-processes",
+        "match"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Match Column I with Column II:\nColumn I: (P) Corona radiata, (Q) Zona pellucida, (R) Cortical granules, (S) Polar body\nColumn II: (i) Prevents polyspermy, (ii) Layer of follicular cells, (iii) Glycoprotein layer, (iv) Small non-functional cell from oogenesis",
+      "options": [
+        "C) P-ii, Q-i, R-iii, S-iv",
+        "A) P-ii, Q-iii, R-i, S-iv",
+        "D) P-iv, Q-iii, R-i, S-ii",
+        "B) P-iii, Q-ii, R-i, S-iv"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Corona radiata is the layer of follicular cells (ii), Zona pellucida is the glycoprotein layer (iii), Cortical granules prevent polyspermy (i), and Polar body is the small non-functional cell from oogenesis (iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ovum-structure",
+        "match"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "How many spermatozoa will be produced from 25 primary spermatocytes?",
+      "options": [
+        "C) 75",
+        "D) 100",
+        "A) 25",
+        "B) 50"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Each primary spermatocyte produces 4 spermatozoa (through meiosis I and II). Therefore, 25 primary spermatocytes will produce 25 x 4 = 100 spermatozoa.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "spermatogenesis",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Which of the following hormones is responsible for the development of secondary sexual characters in males?",
+      "options": [
+        "C) Testosterone",
+        "B) Progesterone",
+        "A) Estrogen",
+        "D) Prolactin"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Testosterone secreted by Leydig cells is responsible for the development of male secondary sexual characters like facial hair, deep voice, muscular development, and growth of reproductive organs at puberty.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "testosterone",
+        "secondary-sexual-characters"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Menopause is the cessation of menstruation which occurs around the age of:",
+      "options": [
+        "D) 60-65 years",
+        "B) 40-45 years",
+        "C) 45-55 years",
+        "A) 30-35 years"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Menopause typically occurs around 45-55 years of age. It marks the permanent cessation of menstruation and reproductive capability in females due to the decline in ovarian function and hormonal changes.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "menopause",
+        "age"
+      ],
+      "neetWeightage": "MEDIUM"
+    }
+  ]
+}

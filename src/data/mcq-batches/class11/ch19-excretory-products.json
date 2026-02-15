@@ -1,0 +1,2268 @@
+{
+  "batch": {
+    "name": "Class 11 - Chapter 19: Excretory Products and their Elimination",
+    "version": 1,
+    "source": "neet-class11-ch19",
+    "totalQuestions": 100
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Animals that excrete urea as the major nitrogenous waste are called:",
+      "options": [
+        "D) Aminotelic",
+        "A) Ammonotelic",
+        "B) Ureotelic",
+        "C) Uricotelic"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ureotelic animals excrete urea as their primary nitrogenous waste. Examples include mammals, most amphibians, and marine fishes. Urea is synthesized in the liver through the ornithine cycle (urea cycle) and is less toxic than ammonia.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ureotelism",
+        "nitrogenous-waste"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Ammonotelic animals include:",
+      "options": [
+        "C) Mammals and adult amphibians",
+        "B) Aquatic invertebrates and bony fishes",
+        "D) Insects and land snails",
+        "A) Birds and reptiles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ammonotelic organisms excrete ammonia as the major nitrogenous waste. These include most aquatic invertebrates, bony fishes, and aquatic amphibian larvae (tadpoles). Ammonia is highly toxic but dissolves readily in water, so aquatic organisms can excrete it directly.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ammonotelism",
+        "aquatic-organisms"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Uricotelic animals include:",
+      "options": [
+        "B) Mammals and amphibians",
+        "D) Cartilaginous fishes",
+        "A) Bony fishes and aquatic invertebrates",
+        "C) Birds, reptiles, and insects"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Uricotelic animals excrete uric acid as the major nitrogenous waste. This includes birds, reptiles, and insects. Uric acid is least toxic and least soluble, excreted as a paste/pellet, conserving water - an adaptation for terrestrial/arid environments.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "uricotelism",
+        "terrestrial-organisms"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The structural and functional unit of the kidney is the:",
+      "options": [
+        "B) Neuron",
+        "C) Glomerulus",
+        "D) Bowman's capsule",
+        "A) Nephron"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The nephron is the structural and functional unit of the kidney. Each human kidney contains about 1 million nephrons. Each nephron consists of a glomerulus, Bowman's capsule, proximal convoluted tubule, loop of Henle, distal convoluted tubule, and collecting duct.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nephron",
+        "kidney"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Glomerular Filtration Rate (GFR) in a healthy individual is approximately:",
+      "options": [
+        "D) 500 mL/min",
+        "C) 250 mL/min",
+        "B) 125 mL/min",
+        "A) 25 mL/min"
+      ],
+      "correctAnswer": "C",
+      "explanation": "GFR is approximately 125 mL/min or about 180 litres per day. This means the entire plasma is filtered about 60 times a day. Out of this filtrate, about 99% is reabsorbed, and only 1.5-1.8 litres of urine is formed per day.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "GFR",
+        "glomerular-filtration"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The Bowman's capsule along with the glomerulus is called the:",
+      "options": [
+        "A) Renal corpuscle (Malpighian body)",
+        "B) Renal tubule",
+        "D) Loop of Henle",
+        "C) Collecting duct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Malpighian body (renal corpuscle) consists of the glomerulus (a tuft of capillaries) and the Bowman's capsule (double-walled cup that encloses the glomerulus). It is located in the cortex of the kidney and is the site of ultrafiltration.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "malpighian-body",
+        "renal-corpuscle"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The hormone ADH (Antidiuretic Hormone) is produced by the:",
+      "options": [
+        "A) Anterior pituitary",
+        "B) Posterior pituitary",
+        "D) Adrenal cortex",
+        "C) Hypothalamus"
+      ],
+      "correctAnswer": "D",
+      "explanation": "ADH (vasopressin) is synthesized in the hypothalamus (supraoptic and paraventricular nuclei) but is stored and released from the posterior pituitary. It acts on the collecting ducts and DCT of nephrons to increase water reabsorption.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ADH",
+        "hypothalamus"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The juxtaglomerular apparatus (JGA) is formed by:",
+      "options": [
+        "A) PCT and glomerulus",
+        "D) Collecting duct and efferent arteriole",
+        "C) Loop of Henle and vasa recta",
+        "B) DCT and afferent arteriole"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The juxtaglomerular apparatus (JGA) is a specialized structure formed by the distal convoluted tubule (macula densa cells) and the afferent arteriole (juxtaglomerular cells). JGA plays a key role in regulating GFR and secreting renin (RAAS).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "JGA",
+        "renin"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The counter-current mechanism operates between:",
+      "options": [
+        "D) Afferent and efferent arterioles",
+        "B) Loop of Henle and vasa recta",
+        "C) Glomerulus and Bowman's capsule",
+        "A) PCT and DCT"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The counter-current mechanism operates between the Henle's loop and the vasa recta (peritubular capillaries in medulla). The flow in the two limbs of Henle's loop and the two branches of vasa recta is in opposite directions, maintaining the osmotic gradient in the medulla.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "counter-current",
+        "loop-of-henle",
+        "vasa-recta"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "In the RAAS (Renin-Angiotensin-Aldosterone System), renin converts:",
+      "options": [
+        "D) Aldosterone to ADH",
+        "A) Angiotensinogen to Angiotensin I",
+        "C) Angiotensin II to Aldosterone",
+        "B) Angiotensin I to Angiotensin II"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Renin, secreted by JG cells of the kidney, acts on angiotensinogen (a plasma protein from the liver) to produce angiotensin I. Angiotensin I is then converted to angiotensin II by ACE (angiotensin converting enzyme) in the lungs.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "RAAS",
+        "renin",
+        "angiotensin"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Urea is formed in the liver through the:",
+      "options": [
+        "A) Krebs cycle",
+        "D) Calvin cycle",
+        "B) Glycolysis",
+        "C) Ornithine cycle (urea cycle)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Urea is synthesized in the liver through the ornithine cycle (urea cycle), also called the Krebs-Henseleit cycle. Ammonia (from amino acid deamination) combines with CO2 to form urea, involving the intermediates ornithine, citrulline, and arginine.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urea-cycle",
+        "ornithine-cycle",
+        "liver"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The ascending limb of the loop of Henle is:",
+      "options": [
+        "B) Impermeable to water and permeable to NaCl",
+        "D) Impermeable to both water and NaCl",
+        "C) Permeable to both water and NaCl",
+        "A) Permeable to water and impermeable to NaCl"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The ascending limb of Henle's loop is impermeable to water but permeable to electrolytes (NaCl). NaCl is actively transported out of the thick ascending limb into the interstitium, making the filtrate progressively dilute as it ascends, while the medullary interstitium becomes hypertonic.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ascending-limb",
+        "permeability"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The descending limb of the loop of Henle is:",
+      "options": [
+        "A) Permeable to water and impermeable to electrolytes",
+        "C) Permeable to both water and electrolytes",
+        "B) Impermeable to water",
+        "D) Impermeable to both water and electrolytes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The descending limb of Henle's loop is permeable to water but almost impermeable to electrolytes and solutes. As the filtrate descends into the hypertonic medulla, water is osmotically drawn out, concentrating the filtrate.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "descending-limb",
+        "permeability"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Which of the following is reabsorbed in the PCT by active transport?",
+      "options": [
+        "B) Glucose",
+        "C) Uric acid",
+        "A) Urea",
+        "D) Creatinine"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Glucose, amino acids, and Na+ are reabsorbed from the PCT by active transport. Normally, all the glucose filtered by the glomerulus is reabsorbed in the PCT. HCO3- and water are also reabsorbed in the PCT.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "PCT",
+        "reabsorption",
+        "glucose"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Aldosterone is secreted by the:",
+      "options": [
+        "A) Adrenal medulla",
+        "D) Anterior pituitary",
+        "C) Hypothalamus",
+        "B) Adrenal cortex (zona glomerulosa)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Aldosterone is a mineralocorticoid hormone secreted by the zona glomerulosa of the adrenal cortex. It acts on the DCT and collecting ducts to increase reabsorption of Na+ and water, and secretion of K+. It is part of the RAAS.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "aldosterone",
+        "adrenal-cortex"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Haemodialysis is an artificial method used for:",
+      "options": [
+        "A) Blood transfusion",
+        "D) Increasing blood pressure",
+        "B) Removal of waste products from blood in kidney failure patients",
+        "C) Blood clotting"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Haemodialysis is a procedure used for patients with kidney failure. Blood is pumped through a dialyser (artificial kidney) containing a semipermeable membrane, which filters waste products and excess water from the blood, mimicking kidney function.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "haemodialysis",
+        "kidney-failure"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The outer region of the kidney is called the:",
+      "options": [
+        "B) Cortex",
+        "C) Pelvis",
+        "D) Hilum",
+        "A) Medulla"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The outer region of the kidney is the cortex, which has a granular appearance due to the presence of glomeruli (Malpighian bodies). The inner region is the medulla, which contains the renal pyramids. The renal pelvis is the funnel-shaped cavity that collects urine.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "kidney",
+        "cortex"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Juxtamedullary nephrons have:",
+      "options": [
+        "A) Short loop of Henle in the cortex",
+        "C) No loop of Henle",
+        "D) Glomerulus in the medulla",
+        "B) Long loop of Henle extending deep into the medulla"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Juxtamedullary nephrons (about 15-20% of total nephrons) have their glomeruli located near the cortico-medullary junction and possess long loops of Henle that extend deep into the medulla. They play a crucial role in producing concentrated urine through the counter-current mechanism.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "juxtamedullary-nephrons",
+        "loop-of-henle"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Atrial Natriuretic Peptide (ANP) causes:",
+      "options": [
+        "D) Increased ADH secretion",
+        "B) Decreased urine output",
+        "A) Increased Na+ reabsorption",
+        "C) Vasodilation and increased Na+ excretion (natriuresis)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "ANP is released by the atrial walls of the heart when blood pressure/blood volume increases. It causes vasodilation, inhibits Na+ reabsorption (causing natriuresis), and inhibits renin and aldosterone secretion, leading to increased urine output and decreased blood pressure.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ANP",
+        "natriuresis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The glomerular filtrate contains all plasma components except:",
+      "options": [
+        "C) Proteins",
+        "A) Glucose",
+        "D) Electrolytes",
+        "B) Amino acids"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The glomerular filtrate (in Bowman's capsule) is essentially protein-free plasma. Large molecules like plasma proteins (albumin, globulins, fibrinogen) and blood cells cannot pass through the filtration membrane. Glucose, amino acids, urea, electrolytes, and water all pass through.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glomerular-filtrate",
+        "ultrafiltration"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The normal volume of urine produced per day in a healthy adult is approximately:",
+      "options": [
+        "C) 3 litres",
+        "D) 5 litres",
+        "B) 1.5 litres",
+        "A) 0.5 litre"
+      ],
+      "correctAnswer": "C",
+      "explanation": "A healthy adult produces approximately 1.5 litres (1000-1800 mL) of urine per day. Although about 180 litres of filtrate is formed daily (GFR = 125 mL/min), about 99% is reabsorbed, leaving only 1.5 litres as urine.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urine-volume",
+        "daily-output"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Blood enters the kidney through the:",
+      "options": [
+        "C) Hepatic portal vein",
+        "D) Inferior vena cava",
+        "B) Renal artery",
+        "A) Renal vein"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Blood enters each kidney through the renal artery (a branch of the abdominal aorta). Inside the kidney, the renal artery branches into afferent arterioles that supply blood to the glomeruli. Filtered blood exits via the renal vein to the inferior vena cava.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "renal-artery",
+        "blood-supply"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Tubular secretion involves the transfer of substances from:",
+      "options": [
+        "C) Glomerulus to Bowman's capsule",
+        "A) Tubular fluid to blood",
+        "B) Blood to tubular fluid",
+        "D) Collecting duct to renal pelvis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Tubular secretion is the active transfer of substances from peritubular capillary blood into the tubular fluid. It helps in eliminating substances like H+, K+, certain drugs, and toxins. It occurs mainly in the PCT and DCT.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "tubular-secretion",
+        "urine-formation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Which part of the nephron is responsible for maintaining the pH of blood by secreting H+ ions?",
+      "options": [
+        "D) Collecting duct only",
+        "A) Glomerulus",
+        "B) Loop of Henle",
+        "C) PCT and DCT"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both PCT and DCT are involved in maintaining blood pH through H+ ion secretion and HCO3- reabsorption. The PCT reabsorbs most of the filtered HCO3- and secretes H+. The DCT also secretes H+ ions, contributing to acid-base balance.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pH-regulation",
+        "H+-secretion"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The presence of glucose in urine is called:",
+      "options": [
+        "D) Albuminuria",
+        "C) Haematuria",
+        "A) Ketonuria",
+        "B) Glycosuria"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Glycosuria is the presence of glucose in urine. Normally, all filtered glucose is reabsorbed in the PCT. In uncontrolled diabetes mellitus, blood glucose exceeds the renal threshold (~180 mg/dL), and excess glucose appears in urine.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycosuria",
+        "diabetes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The net filtration pressure responsible for glomerular filtration is approximately:",
+      "options": [
+        "C) 50 mmHg",
+        "B) 25 mmHg",
+        "A) 10 mmHg",
+        "D) 75 mmHg"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Net Filtration Pressure (NFP) = Glomerular blood pressure - (Capsular hydrostatic pressure + Colloidal osmotic pressure) = 55 - (15 + 30) = 10 mmHg. This positive pressure drives the ultrafiltration of blood through the glomerular capillaries.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "net-filtration-pressure",
+        "GFR"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Podocytes are found in the:",
+      "options": [
+        "B) Inner wall of Bowman's capsule",
+        "C) Loop of Henle",
+        "D) Collecting duct",
+        "A) Proximal convoluted tubule"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Podocytes are specialized epithelial cells that form the visceral (inner) layer of Bowman's capsule. They have foot-like processes (pedicels) that wrap around the glomerular capillaries, forming filtration slits that aid in ultrafiltration.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "podocytes",
+        "bowmans-capsule"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The maximum concentration of urine in humans can reach approximately:",
+      "options": [
+        "D) 2400 mOsm/L",
+        "C) 1200 mOsm/L",
+        "B) 600 mOsm/L",
+        "A) 300 mOsm/L"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The maximum concentration of urine in humans is approximately 1200 mOsmol/L, which is about four times the concentration of initial filtrate (300 mOsmol/L). This is achieved by the counter-current mechanism and the action of ADH on collecting ducts.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urine-concentration",
+        "counter-current"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Cortical nephrons have:",
+      "options": [
+        "B) Short loop of Henle confined mainly to cortex",
+        "C) No loop of Henle",
+        "D) Vasa recta around the loop of Henle",
+        "A) Long loop of Henle extending deep into medulla"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cortical nephrons (about 80-85% of nephrons) have their glomeruli in the outer cortex and possess short loops of Henle that extend only slightly into the medulla. They have minimal vasa recta and play a lesser role in urine concentration compared to juxtamedullary nephrons.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cortical-nephrons",
+        "short-loop"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Angiotensin II stimulates the adrenal cortex to secrete:",
+      "options": [
+        "C) Aldosterone",
+        "A) ADH",
+        "B) Cortisol",
+        "D) Epinephrine"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Angiotensin II, formed from angiotensin I by ACE, has multiple effects: it stimulates the adrenal cortex to secrete aldosterone (which increases Na+ and water reabsorption), causes vasoconstriction, and stimulates ADH release, all of which increase blood pressure.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "angiotensin-II",
+        "aldosterone",
+        "RAAS"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Kidney stones (renal calculi) are formed mainly due to accumulation of:",
+      "options": [
+        "C) Cholesterol",
+        "A) Glucose and amino acids",
+        "B) Calcium oxalate and calcium phosphate crystals",
+        "D) Bilirubin"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Kidney stones (renal calculi) are primarily composed of calcium oxalate and/or calcium phosphate crystals that precipitate in the renal pelvis, ureters, or urinary bladder. Other types include uric acid stones and struvite stones.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "kidney-stones",
+        "renal-calculi"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The vasa recta is absent or poorly developed in:",
+      "options": [
+        "D) Neither type",
+        "A) Juxtamedullary nephrons",
+        "C) Both types of nephrons",
+        "B) Cortical nephrons"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Vasa recta (the peritubular capillaries that run parallel to the loop of Henle in the medulla) are absent or poorly developed in cortical nephrons. They are well-developed in juxtamedullary nephrons and play a key role in the counter-current exchange mechanism.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "vasa-recta",
+        "cortical-nephrons"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Micturition reflex is initiated when the urinary bladder accumulates about:",
+      "options": [
+        "C) 700-800 mL of urine",
+        "B) 300-400 mL of urine",
+        "A) 100-150 mL of urine",
+        "D) 1000 mL of urine"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The micturition (urination) reflex is initiated when the urinary bladder accumulates about 300-400 mL of urine. Stretch receptors in the bladder wall send signals to the CNS, which triggers the reflex, involving contraction of the detrusor muscle and relaxation of sphincters.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "micturition",
+        "reflex"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Diabetes insipidus is caused by:",
+      "options": [
+        "B) Deficiency of ADH",
+        "A) Excess insulin",
+        "D) Deficiency of insulin",
+        "C) Excess aldosterone"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Diabetes insipidus is caused by deficiency of ADH (vasopressin) or inability of kidneys to respond to ADH. Without ADH, the collecting ducts remain impermeable to water, resulting in production of large volumes of dilute urine (polyuria) and excessive thirst (polydipsia).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "diabetes-insipidus",
+        "ADH-deficiency"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The excretory organs in earthworms are:",
+      "options": [
+        "A) Malpighian tubules",
+        "D) Green glands",
+        "C) Flame cells",
+        "B) Nephridia"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Earthworms use nephridia as excretory organs. They have three types: septal nephridia, pharyngeal nephridia, and integumentary nephridia. Malpighian tubules are found in insects, flame cells in flatworms, and green (antennal) glands in crustaceans.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nephridia",
+        "earthworm"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The excretory organs in insects are:",
+      "options": [
+        "D) Green glands",
+        "B) Flame cells",
+        "C) Malpighian tubules",
+        "A) Nephridia"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Malpighian tubules are the excretory organs of insects. They are tubular outgrowths at the junction of the midgut and hindgut. They absorb nitrogenous wastes from haemolymph and convert them to uric acid, which is excreted as dry pellets.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "malpighian-tubules",
+        "insects"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Which of the following substances is NOT normally found in urine?",
+      "options": [
+        "B) Creatinine",
+        "C) Glucose",
+        "D) Uric acid",
+        "A) Urea"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Glucose is NOT normally found in urine. All filtered glucose is completely reabsorbed in the PCT by active transport. Presence of glucose in urine (glycosuria) indicates diabetes mellitus. Urea, creatinine, and uric acid are normal urinary constituents.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urine-composition",
+        "normal"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The renal medulla consists of cone-shaped structures called:",
+      "options": [
+        "A) Cortical columns",
+        "B) Renal pyramids",
+        "D) Glomeruli",
+        "C) Renal corpuscles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The medulla of the kidney is divided into a few conical masses called renal pyramids (medullary pyramids). The tips of these pyramids are called renal papillae and they project into the minor calyces. Each pyramid with its surrounding cortex forms a renal lobe.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "renal-pyramids",
+        "medulla"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "ADH acts primarily on which part of the nephron?",
+      "options": [
+        "A) Proximal convoluted tubule",
+        "D) Glomerulus",
+        "C) Distal convoluted tubule and collecting duct",
+        "B) Loop of Henle"
+      ],
+      "correctAnswer": "C",
+      "explanation": "ADH (antidiuretic hormone/vasopressin) acts primarily on the DCT and collecting duct. It increases the permeability of these segments to water by inserting aquaporin-2 channels, allowing more water reabsorption and producing concentrated urine.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ADH",
+        "collecting-duct",
+        "DCT"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The correct pathway of urine drainage is:",
+      "options": [
+        "D) Collecting duct → Renal pelvis → Minor calyx → Ureter → Urinary bladder → Urethra",
+        "A) Collecting duct → Minor calyx → Major calyx → Renal pelvis → Ureter → Urinary bladder → Urethra",
+        "B) Collecting duct → Major calyx → Minor calyx → Ureter → Renal pelvis → Urethra",
+        "C) Renal pelvis → Collecting duct → Minor calyx → Major calyx → Ureter → Urethra"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Urine flows from the collecting duct → through renal papillae into minor calyces → minor calyces merge into major calyces → major calyces open into the renal pelvis → through the ureter → urinary bladder → urethra for external expulsion.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urine-pathway",
+        "drainage"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): Aquatic organisms are generally ammonotelic.\nReason (R): Ammonia is highly soluble in water and can be rapidly eliminated through body surfaces.",
+      "options": [
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both are true and the reason explains the assertion. Aquatic organisms excrete ammonia directly because it is highly soluble in water and can be quickly diluted and eliminated. Ammonia requires large amounts of water for excretion, which is readily available in aquatic habitats.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ammonotelism",
+        "aquatic-adaptation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): ADH deficiency leads to production of large volumes of dilute urine.\nReason (R): ADH increases water reabsorption from the collecting ducts.",
+      "options": [
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both are true and the reason explains the assertion. ADH normally increases water reabsorption from the collecting ducts. When ADH is deficient (diabetes insipidus), the collecting ducts remain impermeable to water, and large volumes of dilute urine are produced.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ADH",
+        "diabetes-insipidus"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): The ascending limb of Henle's loop is permeable to water.\nReason (R): The ascending limb reabsorbs NaCl actively.",
+      "options": [
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is false but R is true",
+        "D) Both A and R are false"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The assertion is false; the ascending limb of Henle's loop is IMPERMEABLE to water. The reason is true; the thick ascending limb actively transports NaCl out of the tubular fluid. This combination (water-impermeable but solute-permeable) creates the dilute filtrate and hypertonic medullary interstitium.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ascending-limb",
+        "permeability"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): Juxtamedullary nephrons play a significant role in concentrating urine.\nReason (R): They have long loops of Henle and well-developed vasa recta that maintain the medullary osmotic gradient.",
+      "options": [
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both are true and the reason correctly explains the assertion. Juxtamedullary nephrons have long loops of Henle that extend deep into the medulla and well-developed vasa recta. These structures are essential for the counter-current mechanism that creates and maintains the medullary concentration gradient for urine concentration.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "juxtamedullary-nephrons",
+        "urine-concentration"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): The glomerular filtration rate (GFR) is regulated by the JGA.\nReason (R): The JGA releases renin when GFR falls.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both are true and the reason explains the assertion. When GFR decreases, the JGA (juxtaglomerular apparatus) releases renin, which activates the RAAS. Angiotensin II constricts the efferent arteriole, increasing glomerular blood pressure and restoring GFR.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "JGA",
+        "GFR-regulation",
+        "renin"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): Uric acid is the main excretory product of birds and reptiles.\nReason (R): Uric acid requires very little water for excretion and can be excreted as semi-solid crystals.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both are true and the reason explains the assertion. Birds and reptiles are uricotelic because uric acid is the least toxic nitrogenous waste and can be excreted as pellets or paste with minimal water loss, which is advantageous for terrestrial life and developing embryos in shelled eggs.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "uricotelism",
+        "water-conservation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): Glomerular filtrate is called ultrafiltrate.\nReason (R): All the components of blood except proteins and blood cells pass through the glomerular membrane.",
+      "options": [
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both are true and the reason explains the assertion. The glomerular filtrate is called ultrafiltrate because the three-layered filtration membrane allows passage of all plasma components (water, electrolytes, glucose, amino acids, urea) except large proteins and blood cells.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ultrafiltrate",
+        "glomerular-filtration"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): ANP decreases blood pressure.\nReason (R): ANP causes vasoconstriction and increases Na+ reabsorption.",
+      "options": [
+        "D) Both A and R are false",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The assertion is true; ANP does decrease blood pressure. However, the reason is false. ANP causes VASODILATION (not vasoconstriction) and DECREASES Na+ reabsorption (not increases it). These actions lead to increased urine output and decreased blood volume/pressure.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ANP",
+        "blood-pressure"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): The PCT is lined with brush border cells (microvilli).\nReason (R): The microvilli increase the surface area for reabsorption of nutrients.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both are true and the reason explains the assertion. The PCT cells have a prominent brush border of microvilli that greatly increases the surface area. This facilitates the reabsorption of about 65-80% of the filtrate including glucose, amino acids, Na+, water, and HCO3-.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "PCT",
+        "microvilli",
+        "reabsorption"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): In haemodialysis, the dialysing fluid contains glucose, amino acids, and salts in concentrations similar to blood.\nReason (R): This prevents the loss of essential substances from the blood during dialysis.",
+      "options": [
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both are true and the reason explains the assertion. The dialysing fluid (dialysate) is formulated to have concentrations of essential solutes similar to normal plasma. This prevents net diffusion of these substances out of the blood while allowing waste products (urea, creatinine) to diffuse out.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "haemodialysis",
+        "dialysate"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): The efferent arteriole has a smaller diameter than the afferent arteriole.\nReason (R): This creates high hydrostatic pressure in the glomerulus for ultrafiltration.",
+      "options": [
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both are true and the reason explains the assertion. The afferent arteriole (bringing blood to glomerulus) is wider than the efferent arteriole (carrying blood away). This difference creates high glomerular blood pressure (~55 mmHg) necessary for ultrafiltration.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "arterioles",
+        "glomerular-pressure"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): Tubular secretion helps maintain ionic and acid-base balance of body fluids.\nReason (R): H+ ions, K+ ions, and ammonia are secreted into the tubular fluid.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both are true and the reason explains the assertion. Tubular secretion of H+ helps regulate blood pH. Secretion of K+ maintains potassium homeostasis. Ammonia secretion by PCT cells also helps buffer H+ ions in the tubular fluid.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "tubular-secretion",
+        "homeostasis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Assertion (A): Urea is less toxic than ammonia.\nReason (R): Urea requires less water for excretion compared to ammonia.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both assertions are true, but the reason does not directly explain why urea is less toxic. Urea is less toxic due to its chemical nature (non-ionizable at physiological pH). The fact that it requires less water for excretion is a consequence of its lower toxicity and higher solubility compared to its volume requirements, but is not the cause of its lower toxicity.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urea",
+        "ammonia",
+        "toxicity"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Consider the following statements about the counter-current mechanism:\n(i) It maintains the concentration gradient in the renal medulla.\n(ii) It involves the loop of Henle and vasa recta.\n(iii) NaCl is transported out of the ascending limb of Henle's loop.\n(iv) Urea also contributes to the medullary osmotic gradient.\nWhich are correct?",
+      "options": [
+        "C) (i) and (ii) only",
+        "D) (iii) and (iv) only",
+        "B) All are correct",
+        "A) (i), (ii), and (iii) only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "All four statements are correct. The counter-current mechanism involves loop of Henle and vasa recta (ii), maintaining medullary gradient (i). NaCl is actively pumped out of the ascending limb (iii). Urea recycling from the collecting duct to the medullary interstitium also contributes to the osmotic gradient (iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "counter-current",
+        "medullary-gradient"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Read the following statements about urine formation:\n(i) Glomerular filtration is the first step.\n(ii) About 99% of filtrate is reabsorbed.\n(iii) Tubular secretion adds substances from blood to the filtrate.\n(iv) The PCT is the site of maximum reabsorption.\nSelect the correct statements:",
+      "options": [
+        "A) (i) and (ii) only",
+        "B) (i), (ii), and (iii) only",
+        "C) All are correct",
+        "D) (i), (iii), and (iv) only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "All four statements are correct. Urine formation involves three steps: glomerular filtration (i), tubular reabsorption where ~99% of filtrate is reabsorbed (ii), and tubular secretion (iii). The PCT reabsorbs the maximum amount of the filtrate (about 65-80%) including glucose, amino acids, Na+, and water (iv).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urine-formation",
+        "steps"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Which of the following about the kidney is/are INCORRECT?\n(i) Each kidney has about 1 million nephrons.\n(ii) The hilum is on the convex side of the kidney.\n(iii) The cortex is the inner region and medulla is the outer region.\n(iv) Renal pelvis opens into the ureter.",
+      "options": [
+        "B) (ii) only",
+        "D) (i) and (iv)",
+        "C) (iii) only",
+        "A) (ii) and (iii) only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statements (ii) and (iii) are incorrect. The hilum is on the CONCAVE (medial) side of the kidney, not the convex side. The cortex is the OUTER region and medulla is the INNER region. Statements (i) about 1 million nephrons and (iv) about renal pelvis opening into ureter are correct.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "kidney-anatomy",
+        "incorrect-statements"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Consider the following about the RAAS:\n(i) Renin is released by JGA when blood pressure/GFR drops.\n(ii) Renin converts angiotensinogen to angiotensin I.\n(iii) ACE converts angiotensin I to angiotensin II in the lungs.\n(iv) Angiotensin II stimulates aldosterone secretion.\nHow many are correct?",
+      "options": [
+        "A) One",
+        "C) Three",
+        "B) Two",
+        "D) Four"
+      ],
+      "correctAnswer": "D",
+      "explanation": "All four statements are correct. The RAAS cascade: decreased blood pressure/GFR triggers renin release from JGA (i). Renin converts angiotensinogen to angiotensin I (ii). ACE in lung capillaries converts angiotensin I to angiotensin II (iii). Angiotensin II stimulates aldosterone from adrenal cortex (iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "RAAS",
+        "cascade"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Which of the following statements about excretory organs in different organisms is correct?\n(i) Protonephridia (flame cells) - Flatworms\n(ii) Nephridia - Annelids\n(iii) Malpighian tubules - Insects\n(iv) Green glands (antennal glands) - Crustaceans",
+      "options": [
+        "A) (i) and (iii) only",
+        "C) All are correct",
+        "D) (ii) and (iv) only",
+        "B) (i), (ii), and (iii) only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "All four statements are correct. Flatworms use protonephridia with flame cells. Annelids (earthworms) use nephridia. Insects use Malpighian tubules. Crustaceans (prawns) use green glands (antennal glands) for excretion.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "excretory-organs",
+        "organisms"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Consider the following about the PCT:\n(i) It reabsorbs nearly all glucose and amino acids.\n(ii) It reabsorbs about 70-80% of electrolytes and water.\n(iii) It secretes H+ and ammonia.\n(iv) It secretes HCO3- into the tubular fluid.\nWhich are correct?",
+      "options": [
+        "A) (i), (ii), and (iii) only",
+        "D) (iii) and (iv) only",
+        "C) (i) and (ii) only",
+        "B) All are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements (i), (ii), and (iii) are correct. The PCT reabsorbs nearly all glucose and amino acids, 70-80% of electrolytes and water, and secretes H+ and ammonia. Statement (iv) is wrong; the PCT REABSORBS HCO3- (not secretes it) to maintain acid-base balance.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "PCT",
+        "reabsorption",
+        "secretion"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Read the following about renal disorders:\n(i) Uremia is the accumulation of urea in blood.\n(ii) Glomerulonephritis is inflammation of the glomeruli.\n(iii) Kidney failure may require dialysis or transplantation.\n(iv) Renal calculi are always painless.\nSelect the incorrect statement(s):",
+      "options": [
+        "D) None are incorrect",
+        "C) (ii) and (iii)",
+        "A) (iv) only",
+        "B) (i) and (iv)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statement (iv) is incorrect. Renal calculi (kidney stones) can cause severe pain (renal colic), especially when they move through the ureter. The pain can be excruciating and is one of the most intense pain experiences. Statements (i), (ii), and (iii) are all correct.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "renal-disorders"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Consider the following statements:\n(i) The kidneys regulate blood volume and osmolarity.\n(ii) The kidneys maintain acid-base balance.\n(iii) The kidneys produce erythropoietin.\n(iv) The kidneys convert inactive vitamin D to active form.\nHow many of the above are additional functions of kidneys beyond excretion?",
+      "options": [
+        "B) Two",
+        "C) Three",
+        "D) Four",
+        "A) One"
+      ],
+      "correctAnswer": "C",
+      "explanation": "All four are additional functions of kidneys beyond excretion. The kidneys regulate blood volume/osmolarity (i), maintain acid-base balance via H+ and HCO3- handling (ii), produce erythropoietin to stimulate RBC production (iii), and activate vitamin D (1,25-dihydroxycholecalciferol) (iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "kidney-functions",
+        "additional"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Which of the following about the ornithine cycle is/are correct?\n(i) It occurs in the liver.\n(ii) It converts ammonia and CO2 to urea.\n(iii) The intermediates include ornithine, citrulline, and argininosuccinate.\n(iv) It requires 3 ATP molecules per cycle.\nSelect the correct statements:",
+      "options": [
+        "B) All are correct",
+        "D) (i), (ii), and (iv) only",
+        "C) (i) and (ii) only",
+        "A) (i), (ii), and (iii) only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "All four statements are correct. The ornithine (urea) cycle occurs in liver hepatocytes (i). It combines ammonia with CO2 to form urea (ii). Key intermediates are ornithine, citrulline, argininosuccinate, and arginine (iii). The cycle consumes 3 ATP molecules per urea molecule produced (iv).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ornithine-cycle",
+        "urea-synthesis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Consider the following about other organs involved in excretion:\n(i) Lungs excrete CO2 and water vapour.\n(ii) Liver excretes bile pigments and cholesterol.\n(iii) Skin excretes sweat containing NaCl and urea.\n(iv) Sebaceous glands excrete sebum containing sterols and hydrocarbons.\nHow many are correct?",
+      "options": [
+        "D) Four",
+        "C) Three",
+        "B) Two",
+        "A) One"
+      ],
+      "correctAnswer": "A",
+      "explanation": "All four are correct. Besides kidneys, excretion is aided by: lungs (CO2, water vapour) (i), liver (bile pigments like bilirubin, cholesterol, drugs) (ii), skin/sweat glands (NaCl, urea, lactic acid) (iii), and sebaceous glands (sebum containing sterols and hydrocarbons) (iv).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "accessory-excretory-organs"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Which of the following about the micturition reflex is/are correct?\n(i) It is initiated when the bladder fills with about 300-400 mL urine.\n(ii) Stretch receptors in the bladder wall send signals to the CNS.\n(iii) The internal urethral sphincter is under voluntary control.\n(iv) The external urethral sphincter is under voluntary control.",
+      "options": [
+        "B) All are correct",
+        "D) (iii) and (iv) only",
+        "C) (i) and (ii) only",
+        "A) (i), (ii), and (iv) only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Statements (i), (ii), and (iv) are correct. The micturition reflex starts at 300-400 mL, stretch receptors signal CNS, and the external sphincter is under voluntary control (skeletal muscle). Statement (iii) is wrong; the INTERNAL sphincter is under INVOLUNTARY (autonomic) control, not voluntary.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "micturition",
+        "sphincters"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Match the type of excretion with the organism:\n(P) Ammonotelism - (1) Birds and reptiles\n(Q) Ureotelism - (2) Bony fishes and aquatic amphibians\n(R) Uricotelism - (3) Mammals\n(S) Uricotelism - (4) Insects",
+      "options": [
+        "C) P-1, Q-2, R-3, S-4",
+        "B) P-3, Q-2, R-4, S-1",
+        "D) P-4, Q-1, R-2, S-3",
+        "A) P-2, Q-3, R-1, S-4"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ammonotelic organisms include bony fishes and aquatic amphibians (P-2). Ureotelic organisms include mammals (Q-3). Uricotelic organisms include birds/reptiles (R-1) and insects (S-4).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "excretion-types",
+        "organisms"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Match the nephron part with its function:\n(P) Bowman's capsule - (1) Concentration of urine by water reabsorption\n(Q) PCT - (2) Ultrafiltration\n(R) Loop of Henle - (3) Maximum reabsorption of nutrients\n(S) Collecting duct - (4) Counter-current mechanism",
+      "options": [
+        "C) P-1, Q-4, R-3, S-2",
+        "D) P-4, Q-1, R-2, S-3",
+        "B) P-3, Q-2, R-1, S-4",
+        "A) P-2, Q-3, R-4, S-1"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Bowman's capsule is the site of ultrafiltration (P-2). PCT performs maximum reabsorption of glucose, amino acids, ions, and water (Q-3). Loop of Henle participates in counter-current mechanism (R-4). Collecting duct concentrates urine under ADH influence (S-1).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nephron-parts",
+        "functions"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Match the hormone with its effect on the kidney:\n(P) ADH - (1) Increases Na+ reabsorption in DCT\n(Q) Aldosterone - (2) Increases water reabsorption in collecting duct\n(R) ANP - (3) Increases Na+ excretion, decreases blood pressure\n(S) Angiotensin II - (4) Vasoconstriction, increases blood pressure",
+      "options": [
+        "A) P-2, Q-1, R-3, S-4",
+        "C) P-3, Q-4, R-1, S-2",
+        "D) P-4, Q-3, R-2, S-1",
+        "B) P-1, Q-2, R-4, S-3"
+      ],
+      "correctAnswer": "A",
+      "explanation": "ADH increases water reabsorption from collecting duct (P-2). Aldosterone increases Na+ reabsorption in DCT/collecting duct (Q-1). ANP increases Na+ excretion and decreases blood pressure (R-3). Angiotensin II causes vasoconstriction and raises blood pressure (S-4).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "hormones",
+        "kidney-regulation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Match the excretory organ with the organism:\n(P) Flame cells - (1) Annelids (earthworm)\n(Q) Nephridia - (2) Crustaceans (prawn)\n(R) Malpighian tubules - (3) Flatworms (Planaria)\n(S) Green glands - (4) Insects (cockroach)",
+      "options": [
+        "A) P-3, Q-1, R-4, S-2",
+        "B) P-1, Q-3, R-2, S-4",
+        "D) P-2, Q-4, R-1, S-3",
+        "C) P-4, Q-2, R-3, S-1"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Flame cells (protonephridia) are found in flatworms like Planaria (P-3). Nephridia are found in annelids like earthworms (Q-1). Malpighian tubules are found in insects like cockroach (R-4). Green (antennal) glands are found in crustaceans like prawns (S-2).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "excretory-organs",
+        "matching"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Match the limb of Henle's loop with its property:\n(P) Descending limb - (1) Impermeable to water, permeable to NaCl\n(Q) Thin ascending limb - (2) Permeable to water, impermeable to electrolytes\n(R) Thick ascending limb - (3) Passively permeable to NaCl\n(S) Collecting duct (with ADH) - (4) Active NaCl transport out",
+      "options": [
+        "B) P-2, Q-3, R-1, S-2",
+        "D) P-3, Q-4, R-2, S-1",
+        "C) P-1, Q-2, R-3, S-4",
+        "A) P-2, Q-3, R-4, S-2"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The descending limb is permeable to water but impermeable to electrolytes (P-2). Thin ascending limb passively allows NaCl out (Q-3). Thick ascending limb actively transports NaCl out and is impermeable to water (R-1). Collecting duct with ADH becomes permeable to water (S-2).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "henles-loop",
+        "permeability"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Match the condition with its description:\n(P) Glycosuria - (1) Excess urea in blood\n(Q) Uremia - (2) Blood in urine\n(R) Haematuria - (3) Glucose in urine\n(S) Albuminuria - (4) Protein (albumin) in urine",
+      "options": [
+        "D) P-4, Q-2, R-3, S-1",
+        "B) P-1, Q-3, R-4, S-2",
+        "A) P-3, Q-1, R-2, S-4",
+        "C) P-2, Q-4, R-1, S-3"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Glycosuria = glucose in urine (P-3), seen in diabetes mellitus. Uremia = excess urea in blood (Q-1), seen in kidney failure. Haematuria = blood in urine (R-2). Albuminuria/proteinuria = albumin/protein in urine (S-4), indicating glomerular damage.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "renal-conditions",
+        "definitions"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Match the nephron region with the substance primarily handled there:\n(P) Glomerulus - (1) NaCl active transport (counter-current)\n(Q) PCT - (2) ADH-dependent water reabsorption\n(R) Ascending limb of Henle's loop - (3) Glucose and amino acid reabsorption\n(S) Collecting duct - (4) Ultrafiltration of blood",
+      "options": [
+        "D) P-2, Q-1, R-4, S-3",
+        "B) P-3, Q-4, R-2, S-1",
+        "C) P-1, Q-2, R-3, S-4",
+        "A) P-4, Q-3, R-1, S-2"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Glomerulus performs ultrafiltration (P-4). PCT reabsorbs glucose and amino acids (Q-3). Ascending limb of Henle's loop actively transports NaCl out (R-1). Collecting duct reabsorbs water under ADH influence (S-2).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nephron-regions",
+        "substances"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Match the RAAS component with its source:\n(P) Renin - (1) Liver\n(Q) Angiotensinogen - (2) JGA (kidney)\n(R) ACE - (3) Adrenal cortex\n(S) Aldosterone - (4) Lung endothelium",
+      "options": [
+        "B) P-1, Q-2, R-3, S-4",
+        "C) P-4, Q-3, R-1, S-2",
+        "A) P-2, Q-1, R-4, S-3",
+        "D) P-3, Q-4, R-2, S-1"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Renin is secreted by JG cells of the kidney (P-2). Angiotensinogen is produced by the liver (Q-1). ACE (angiotensin converting enzyme) is present in lung capillary endothelium (R-4). Aldosterone is secreted by the adrenal cortex zona glomerulosa (S-3).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "RAAS",
+        "sources"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Match the nitrogenous waste with its toxicity level:\n(P) Ammonia - (1) Least toxic\n(Q) Urea - (2) Moderately toxic\n(R) Uric acid - (3) Most toxic",
+      "options": [
+        "C) P-2, Q-1, R-3",
+        "B) P-1, Q-3, R-2",
+        "A) P-3, Q-2, R-1",
+        "D) P-3, Q-1, R-2"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ammonia is the most toxic nitrogenous waste (P-3) and requires large volumes of water for excretion. Urea is moderately toxic (Q-2) and requires less water. Uric acid is the least toxic (R-1) and can be excreted in semi-solid form with minimal water.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nitrogenous-wastes",
+        "toxicity"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Match the pressure with its approximate value in glomerular filtration:\n(P) Glomerular blood hydrostatic pressure - (1) 30 mmHg\n(Q) Capsular hydrostatic pressure - (2) 55 mmHg\n(R) Colloidal osmotic pressure of blood - (3) 15 mmHg\n(S) Net filtration pressure - (4) 10 mmHg",
+      "options": [
+        "B) P-3, Q-2, R-4, S-1",
+        "C) P-1, Q-4, R-2, S-3",
+        "A) P-2, Q-3, R-1, S-4",
+        "D) P-4, Q-1, R-3, S-2"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Glomerular blood pressure is ~55 mmHg (P-2). Capsular hydrostatic pressure is ~15 mmHg opposing filtration (Q-3). Colloidal osmotic pressure is ~30 mmHg opposing filtration (R-1). NFP = 55 - (15+30) = 10 mmHg (S-4).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "filtration-pressures",
+        "values"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Match the urea cycle intermediate with its position in the cycle:\n(P) Ornithine - (1) Formed from arginine, releases urea\n(Q) Citrulline - (2) Starting amino acid of the cycle\n(R) Argininosuccinate - (3) Formed from ornithine + carbamoyl phosphate\n(S) Arginine - (4) Formed from citrulline + aspartate",
+      "options": [
+        "C) P-3, Q-4, R-1, S-2",
+        "B) P-1, Q-2, R-3, S-4",
+        "D) P-4, Q-1, R-2, S-3",
+        "A) P-2, Q-3, R-4, S-1"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ornithine is the starting amino acid that accepts carbamoyl phosphate (P-2). Citrulline is formed from ornithine + carbamoyl phosphate (Q-3). Argininosuccinate is formed from citrulline + aspartate (R-4). Arginine is cleaved by arginase to form urea and regenerate ornithine (S-1).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urea-cycle",
+        "intermediates"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "How many of the following are parts of a nephron?\n(a) Glomerulus (b) Bowman's capsule (c) PCT (d) Loop of Henle (e) DCT (f) Collecting duct (g) Renal pelvis (h) Ureter",
+      "options": [
+        "B) Five",
+        "D) Seven",
+        "A) Four",
+        "C) Six"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Five structures are parts of a nephron: (a) Glomerulus, (b) Bowman's capsule, (c) PCT, (d) Loop of Henle, and (e) DCT. The collecting duct (f) is NOT technically part of the nephron; it receives filtrate from multiple nephrons. Renal pelvis and ureter are parts of the urinary system, not the nephron.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nephron-parts",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "How many of the following substances are normally reabsorbed in the PCT?\n(a) Glucose (b) Amino acids (c) Na+ (d) Water (e) HCO3- (f) Urea (partially) (g) K+ (h) Creatinine",
+      "options": [
+        "A) Four",
+        "D) Seven",
+        "B) Five",
+        "C) Six"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Seven substances are reabsorbed in the PCT: (a) glucose (100%), (b) amino acids (100%), (c) Na+ (65-80%), (d) water (65-80%), (e) HCO3- (80-90%), (f) urea (partially, ~50%), and (g) K+ (~65%). Creatinine (h) is NOT reabsorbed; it is mainly secreted.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "PCT-reabsorption",
+        "substances"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "How many of the following organs participate in excretion in humans?\n(a) Kidneys (b) Lungs (c) Liver (d) Skin (e) Large intestine (f) Sebaceous glands",
+      "options": [
+        "D) Six",
+        "C) Five",
+        "B) Four",
+        "A) Three"
+      ],
+      "correctAnswer": "A",
+      "explanation": "All six organs participate in excretion: (a) Kidneys - urea, excess water, ions; (b) Lungs - CO2, water vapour; (c) Liver - bile pigments, cholesterol; (d) Skin/sweat glands - NaCl, urea; (e) Large intestine - some metabolic wastes; (f) Sebaceous glands - sebum with sterols.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "excretory-organs",
+        "humans"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "How many steps are involved in urine formation?",
+      "options": [
+        "C) Four",
+        "D) Five",
+        "B) Three",
+        "A) Two"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Urine formation involves three main steps: (1) Glomerular filtration - ultrafiltration of blood in Bowman's capsule, (2) Tubular reabsorption - selective reabsorption of useful substances, and (3) Tubular secretion - active secretion of substances from blood to tubular fluid.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urine-formation",
+        "steps"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "How many of the following are hormones that regulate kidney function?\n(a) ADH (b) Aldosterone (c) ANP (d) Angiotensin II (e) Insulin (f) Renin",
+      "options": [
+        "C) Five",
+        "B) Four",
+        "D) Six",
+        "A) Three"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Four are hormones regulating kidney function: (a) ADH, (b) Aldosterone, (c) ANP, and (d) Angiotensin II. Renin (f) is an enzyme, not a hormone. Insulin (e) regulates blood glucose, not directly kidney function (though it indirectly affects glucose reabsorption).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "hormones",
+        "kidney-regulation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "How many layers make up the filtration membrane in the glomerulus?\n(a) Endothelium of glomerular capillaries (b) Basement membrane (c) Podocytes of Bowman's capsule",
+      "options": [
+        "C) Three",
+        "B) Two",
+        "A) One",
+        "D) Four"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The filtration membrane consists of three layers: (a) Endothelium of glomerular blood vessels (fenestrated), (b) Basement membrane (fused), and (c) Podocytes (epithelial cells of Bowman's capsule with filtration slits). Together they form the selective barrier for ultrafiltration.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "filtration-membrane",
+        "layers"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "How many intermediates are involved in the ornithine (urea) cycle?\n(a) Ornithine (b) Citrulline (c) Argininosuccinate (d) Arginine (e) Carbamoyl phosphate",
+      "options": [
+        "A) Three",
+        "C) Five",
+        "D) Six",
+        "B) Four"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Five intermediates/compounds are involved in the ornithine cycle: (a) Ornithine - the carrier molecule, (b) Citrulline, (c) Argininosuccinate, (d) Arginine - which is cleaved to release urea and regenerate ornithine, and (e) Carbamoyl phosphate - formed from NH3 + CO2.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urea-cycle",
+        "intermediates"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "How many of the following are renal disorders?\n(a) Uremia (b) Renal calculi (c) Glomerulonephritis (d) Renal failure (e) Diabetes insipidus (f) Nephrotic syndrome",
+      "options": [
+        "D) Six",
+        "B) Four",
+        "A) Three",
+        "C) Five"
+      ],
+      "correctAnswer": "A",
+      "explanation": "All six are renal disorders: (a) Uremia (urea accumulation in blood), (b) Renal calculi (kidney stones), (c) Glomerulonephritis (glomerular inflammation), (d) Renal failure (loss of kidney function), (e) Diabetes insipidus (ADH deficiency), and (f) Nephrotic syndrome (proteinuria due to glomerular damage).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "renal-disorders",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Arrange the correct sequence of urine formation:",
+      "options": [
+        "C) Tubular reabsorption → Glomerular filtration → Tubular secretion → Urine",
+        "A) Glomerular filtration → Tubular reabsorption → Tubular secretion → Urine",
+        "D) Glomerular filtration → Tubular secretion → Tubular reabsorption → Urine",
+        "B) Tubular secretion → Glomerular filtration → Tubular reabsorption → Urine"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct sequence of urine formation is: Glomerular filtration (blood is filtered in glomerulus) → Tubular reabsorption (useful substances are reabsorbed) → Tubular secretion (additional wastes are secreted into the filtrate) → Final urine formation.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urine-formation",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Arrange the RAAS pathway in correct sequence:\n(i) Angiotensinogen → Angiotensin I (by renin)\n(ii) JGA releases renin due to low blood pressure\n(iii) Angiotensin II stimulates aldosterone secretion\n(iv) Angiotensin I → Angiotensin II (by ACE)\n(v) Aldosterone increases Na+ and water reabsorption",
+      "options": [
+        "C) (iii) → (iv) → (i) → (ii) → (v)",
+        "A) (ii) → (i) → (iv) → (iii) → (v)",
+        "D) (v) → (ii) → (i) → (iv) → (iii)",
+        "B) (i) → (ii) → (iii) → (iv) → (v)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "RAAS sequence: Low BP triggers JGA to release renin (ii) → Renin converts angiotensinogen to angiotensin I (i) → ACE converts angiotensin I to angiotensin II in lungs (iv) → Angiotensin II stimulates aldosterone from adrenal cortex (iii) → Aldosterone increases Na+/water reabsorption (v).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "RAAS",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Arrange the parts of the nephron in the correct sequence of filtrate flow:",
+      "options": [
+        "B) PCT → Bowman's capsule → DCT → Loop of Henle → Collecting duct",
+        "D) Collecting duct → DCT → Loop of Henle → PCT → Bowman's capsule",
+        "A) Bowman's capsule → PCT → Descending limb of Henle → Ascending limb of Henle → DCT → Collecting duct",
+        "C) Bowman's capsule → DCT → PCT → Loop of Henle → Collecting duct"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The correct sequence of filtrate flow through the nephron is: Bowman's capsule (filtration) → PCT (major reabsorption) → Descending limb of loop of Henle → Hairpin turn → Ascending limb of loop of Henle → DCT (fine-tuning) → Collecting duct (concentration).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nephron",
+        "filtrate-flow"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Arrange the correct sequence of urea cycle intermediates:\n(i) Ornithine (ii) Citrulline (iii) Argininosuccinate (iv) Arginine (v) Urea released, ornithine regenerated",
+      "options": [
+        "D) (i) → (iv) → (iii) → (ii) → (v)",
+        "C) (iv) → (iii) → (ii) → (i) → (v)",
+        "B) (ii) → (i) → (iv) → (iii) → (v)",
+        "A) (i) → (ii) → (iii) → (iv) → (v)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The urea cycle sequence: Ornithine combines with carbamoyl phosphate (i) → forms Citrulline (ii) → Citrulline + Aspartate forms Argininosuccinate (iii) → Argininosuccinate splits into Arginine and fumarate (iv) → Arginine is cleaved by arginase to produce urea and regenerate Ornithine (v).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urea-cycle",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Arrange the correct sequence of blood flow through the kidney:\n(i) Renal artery (ii) Afferent arteriole (iii) Glomerulus (iv) Efferent arteriole (v) Peritubular capillaries/Vasa recta (vi) Renal vein",
+      "options": [
+        "B) (ii) → (i) → (iv) → (iii) → (vi) → (v)",
+        "C) (i) → (iii) → (ii) → (v) → (iv) → (vi)",
+        "D) (vi) → (v) → (iv) → (iii) → (ii) → (i)",
+        "A) (i) → (ii) → (iii) → (iv) → (v) → (vi)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Blood flow sequence in kidney: Renal artery (i) → branches into afferent arterioles (ii) → enters glomerulus (iii) → exits via efferent arteriole (iv) → forms peritubular capillaries/vasa recta around tubules (v) → drains into renal vein (vi). Note the unique portal system (arteriole → capillary → arteriole → capillary).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "renal-blood-flow",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Arrange the nitrogenous wastes in decreasing order of toxicity:",
+      "options": [
+        "D) Ammonia > Uric acid > Urea",
+        "A) Ammonia > Urea > Uric acid",
+        "C) Uric acid > Urea > Ammonia",
+        "B) Urea > Ammonia > Uric acid"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In decreasing order of toxicity: Ammonia (most toxic, requires most water for excretion) > Urea (moderately toxic, less water needed) > Uric acid (least toxic, can be excreted as semi-solid pellets with minimal water). This explains why aquatic organisms excrete ammonia while terrestrial ones excrete urea or uric acid.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "toxicity",
+        "nitrogenous-wastes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Arrange the correct sequence of urine drainage from kidney to outside:\n(i) Collecting duct (ii) Minor calyx (iii) Major calyx (iv) Renal pelvis (v) Ureter (vi) Urinary bladder (vii) Urethra",
+      "options": [
+        "D) (i) → (iv) → (ii) → (iii) → (v) → (vi) → (vii)",
+        "A) (i) → (ii) → (iii) → (iv) → (v) → (vi) → (vii)",
+        "B) (i) → (iii) → (ii) → (v) → (iv) → (vi) → (vii)",
+        "C) (ii) → (i) → (iv) → (iii) → (vi) → (v) → (vii)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Urine drainage pathway: Collecting duct (i) → opens at renal papillae into Minor calyx (ii) → Minor calyces unite to form Major calyx (iii) → Major calyces open into Renal pelvis (iv) → Ureter (v) → Urinary bladder (vi) → Urethra (vii) to the exterior.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "urine-drainage",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    }
+  ]
+}

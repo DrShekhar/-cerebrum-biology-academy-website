@@ -1,0 +1,2388 @@
+{
+  "batch": {
+    "name": "Class 11 - Chapter 9: Biomolecules",
+    "version": 1,
+    "source": "neet-class11-ch09",
+    "totalQuestions": 100
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following is the most abundant chemical in a living organism?",
+      "options": [
+        "D) Nucleic acid",
+        "A) Protein",
+        "C) Lipid",
+        "B) Water"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, water is the most abundant chemical in living organisms, forming about 70-90% of the cellular pool.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "biomolecules",
+        "water",
+        "abundance"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following is the most abundant organic compound on Earth?",
+      "options": [
+        "D) Glycogen",
+        "A) Protein",
+        "C) Cellulose",
+        "B) Starch"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, cellulose is the most abundant organic compound found on Earth. It is a polysaccharide made up of glucose units linked by beta-1,4-glycosidic bonds.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "cellulose",
+        "polysaccharide"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "How many carbon atoms are present in a triose sugar?",
+      "options": [
+        "C) Four",
+        "D) Five",
+        "B) Three",
+        "A) Two"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, monosaccharides are classified based on the number of carbon atoms. Triose sugars have 3 carbon atoms (e.g., glyceraldehyde, dihydroxyacetone).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "monosaccharides",
+        "triose"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which amino acid has the simplest structure?",
+      "options": [
+        "B) Valine",
+        "D) Leucine",
+        "C) Glycine",
+        "A) Alanine"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, glycine is the simplest amino acid with hydrogen as its R group (side chain). All other amino acids have more complex R groups.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amino-acids",
+        "glycine",
+        "protein"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "The bond formed between two amino acids is called:",
+      "options": [
+        "A) Glycosidic bond",
+        "B) Peptide bond",
+        "D) Hydrogen bond",
+        "C) Ester bond"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, a peptide bond is formed between the carboxyl group (-COOH) of one amino acid and the amino group (-NH2) of the next amino acid, with the elimination of a water molecule.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amino-acids",
+        "peptide-bond",
+        "protein"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Chitin is a:",
+      "options": [
+        "A) Polysaccharide",
+        "B) Protein",
+        "C) Lipid",
+        "D) Nucleic acid"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, chitin is a complex polysaccharide (homopolysaccharide). It forms the exoskeleton of arthropods and is also found in the cell wall of fungi.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "chitin",
+        "polysaccharide"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following is a heteropolysaccharide?",
+      "options": [
+        "A) Cellulose",
+        "B) Starch",
+        "D) Agar",
+        "C) Glycogen"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, heteropolysaccharides contain different types of monosaccharide units. Agar is a heteropolysaccharide. Cellulose, starch, and glycogen are homopolysaccharides made of glucose units.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "heteropolysaccharide",
+        "agar"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following is an essential amino acid?",
+      "options": [
+        "B) Alanine",
+        "A) Glycine",
+        "D) Glutamic acid",
+        "C) Leucine"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, essential amino acids are those that cannot be synthesised by the body and must be obtained from the diet. Leucine is an essential amino acid. Glycine, alanine, and glutamic acid are non-essential amino acids.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amino-acids",
+        "essential",
+        "leucine"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "The secondary structure of protein is stabilised by:",
+      "options": [
+        "D) Ionic bonds",
+        "B) Hydrogen bonds",
+        "C) Disulphide bonds",
+        "A) Peptide bonds"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the secondary structure of a protein (alpha-helix, beta-pleated sheet) is stabilised by hydrogen bonds formed between the CO group of one amino acid and the NH group of another amino acid in the polypeptide chain.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protein-structure",
+        "secondary",
+        "hydrogen-bonds"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "An example of a protein with quaternary structure is:",
+      "options": [
+        "A) Myoglobin",
+        "D) Insulin",
+        "C) Haemoglobin",
+        "B) Collagen"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the quaternary structure of a protein is formed when two or more polypeptide chains assemble together. Haemoglobin is a classic example with 4 subunits (2 alpha and 2 beta chains), each with its own haem group.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protein-structure",
+        "quaternary",
+        "haemoglobin"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which enzyme catalyses the hydrolysis of starch?",
+      "options": [
+        "B) Protease",
+        "D) Nuclease",
+        "C) Amylase",
+        "A) Lipase"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, amylases are enzymes that catalyse the hydrolysis of starch into maltose and dextrins. They belong to the class of hydrolases.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "amylase",
+        "hydrolysis"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Enzymes that catalyse the removal of groups from substrates by mechanisms other than hydrolysis, adding double bonds, are called:",
+      "options": [
+        "D) Transferases",
+        "C) Ligases",
+        "A) Hydrolases",
+        "B) Lyases"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, lyases catalyse the removal of groups from substrates by mechanisms other than hydrolysis, leaving double bonds. They include decarboxylases, aldolases, etc.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "lyases",
+        "classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following is NOT a nucleotide base found in DNA?",
+      "options": [
+        "C) Uracil",
+        "B) Guanine",
+        "D) Cytosine",
+        "A) Adenine"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, DNA contains four bases: Adenine (A), Guanine (G), Cytosine (C), and Thymine (T). Uracil (U) is found in RNA instead of thymine.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nucleic-acids",
+        "DNA",
+        "bases"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "The active site of an enzyme is:",
+      "options": [
+        "D) The allosteric site",
+        "C) The regulatory site",
+        "B) A small portion of the enzyme where substrate binds",
+        "A) The entire enzyme surface"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the active site is a small portion of the enzyme into which the substrate fits. It is a crevice or pocket where substrate molecules bind and undergo a chemical reaction.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "active-site",
+        "substrate"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following is a cofactor that is tightly bound to the enzyme?",
+      "options": [
+        "A) Coenzyme",
+        "B) Prosthetic group",
+        "C) Metal ion",
+        "D) Substrate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, prosthetic groups are organic compounds that are tightly bound to the apoenzyme (protein portion). Coenzymes are organic compounds that are loosely bound. Metal ions can also serve as cofactors.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "prosthetic-group",
+        "cofactor"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "In competitive inhibition, the inhibitor:",
+      "options": [
+        "C) Changes the shape of the enzyme permanently",
+        "B) Binds to the active site and competes with the substrate",
+        "A) Binds to the allosteric site",
+        "D) Binds to the enzyme-substrate complex"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, in competitive inhibition, the inhibitor closely resembles the substrate in its molecular structure and competes with the substrate for binding at the active site of the enzyme.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "competitive-inhibition",
+        "active-site"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Lipids are generally insoluble in water because they are:",
+      "options": [
+        "C) Amphipathic",
+        "B) Hydrophobic",
+        "D) Polar",
+        "A) Hydrophilic"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, lipids are insoluble in water because they contain a significant proportion of hydrophobic (non-polar) hydrocarbon chains. They are soluble in non-polar organic solvents.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lipids",
+        "hydrophobic",
+        "solubility"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "A nucleoside is composed of:",
+      "options": [
+        "D) Sugar + phosphate",
+        "B) Base + sugar",
+        "A) Base + sugar + phosphate",
+        "C) Base + phosphate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, a nucleoside is composed of a nitrogenous base linked to a pentose sugar. When a phosphate group is also attached, it becomes a nucleotide (base + sugar + phosphate).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nucleic-acids",
+        "nucleoside",
+        "nucleotide"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Enzymes increase the rate of reaction by:",
+      "options": [
+        "B) Lowering the activation energy",
+        "A) Increasing the temperature",
+        "D) Changing the equilibrium",
+        "C) Increasing the activation energy"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, enzymes lower the activation energy of a reaction, thereby increasing the rate of the reaction. They do not alter the equilibrium of the reaction.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "activation-energy",
+        "catalysis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Glycogen is the storage form of carbohydrate in:",
+      "options": [
+        "D) Fungi",
+        "C) Bacteria",
+        "A) Plants",
+        "B) Animals"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, glycogen is the storage polysaccharide in animals. It is stored primarily in the liver and muscles. Starch is the storage polysaccharide in plants.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "glycogen",
+        "storage"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "The sugar in RNA is:",
+      "options": [
+        "D) Fructose",
+        "C) Glucose",
+        "A) Deoxyribose",
+        "B) Ribose"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, the sugar in RNA is ribose (a pentose sugar with a hydroxyl group at the 2' position). DNA has deoxyribose sugar which lacks the hydroxyl group at the 2' position.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nucleic-acids",
+        "RNA",
+        "ribose"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following is a reducing sugar?",
+      "options": [
+        "B) Maltose",
+        "C) Starch",
+        "A) Sucrose",
+        "D) Cellulose"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, maltose is a reducing sugar because it has a free anomeric carbon that can reduce cupric ions. Sucrose is a non-reducing sugar because both anomeric carbons are involved in the glycosidic bond.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "reducing-sugar",
+        "maltose"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "The lock and key model of enzyme action was proposed by:",
+      "options": [
+        "C) Michaelis and Menten",
+        "B) Emil Fischer",
+        "A) Koshland",
+        "D) Buchner"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the lock and key hypothesis of enzyme action was proposed by Emil Fischer (1894). In this model, the active site of the enzyme has a rigid structure complementary to the substrate, like a lock and key.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "lock-and-key",
+        "emil-fischer"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Enzymes that catalyse the transfer of a group from one substrate to another are called:",
+      "options": [
+        "D) Isomerases",
+        "A) Oxidoreductases",
+        "C) Hydrolases",
+        "B) Transferases"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, transferases catalyse the transfer of a functional group (e.g., amino, phosphate, methyl) from one substrate (donor) to another substrate (acceptor). Transaminases and kinases are examples.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "transferases",
+        "classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "The term 'metabolic basis of living' refers to:",
+      "options": [
+        "A) Only anabolic reactions",
+        "B) Only catabolic reactions",
+        "D) Energy production only",
+        "C) The sum total of all chemical reactions in living organisms"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, metabolism refers to the sum total of all chemical reactions occurring in the body. It includes both anabolic (building up) and catabolic (breaking down) reactions. This metabolic activity is the defining feature of living organisms.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "metabolism",
+        "anabolism",
+        "catabolism"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Inulin is a polymer of:",
+      "options": [
+        "D) Mannose",
+        "A) Glucose",
+        "B) Fructose",
+        "C) Galactose"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, inulin is a polysaccharide (homopolymer) of fructose. It is found as a storage carbohydrate in plants like dahlia and is not digested by human enzymes.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "inulin",
+        "fructose"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following is an example of a derived lipid?",
+      "options": [
+        "C) Cholesterol",
+        "A) Triglyceride",
+        "D) Glycolipid",
+        "B) Phospholipid"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, cholesterol is an example of a steroid, which is a derived lipid. Simple lipids include fats and waxes, compound lipids include phospholipids and glycolipids, and derived lipids include steroids and terpenes.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lipids",
+        "cholesterol",
+        "steroids"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following factors does NOT affect enzyme activity?",
+      "options": [
+        "A) Temperature",
+        "C) Substrate concentration",
+        "D) Colour of the substrate",
+        "B) pH"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, enzyme activity is affected by temperature, pH, substrate concentration, and the presence of inhibitors or activators. The colour of the substrate has no effect on enzyme activity.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "factors",
+        "activity"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "The primary structure of a protein is determined by:",
+      "options": [
+        "B) The sequence of amino acids",
+        "D) Ionic interactions",
+        "C) Disulphide bonds",
+        "A) Hydrogen bonds"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, the primary structure of a protein is the linear sequence of amino acids in a polypeptide chain. It is determined by the sequence of amino acids held together by peptide bonds.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protein-structure",
+        "primary",
+        "amino-acid-sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Sucrose is a disaccharide composed of:",
+      "options": [
+        "C) Glucose + galactose",
+        "D) Fructose + galactose",
+        "A) Glucose + glucose",
+        "B) Glucose + fructose"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, sucrose is a disaccharide composed of one molecule of glucose and one molecule of fructose joined by a glycosidic bond. It is also called cane sugar or table sugar.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "sucrose",
+        "disaccharide"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Fatty acids with one or more double bonds in the hydrocarbon chain are called:",
+      "options": [
+        "D) Trans fatty acids",
+        "B) Unsaturated fatty acids",
+        "A) Saturated fatty acids",
+        "C) Essential fatty acids"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, unsaturated fatty acids have one or more C=C double bonds in their hydrocarbon chain. For example, oleic acid has one double bond, linoleic acid has two. Saturated fatty acids have no double bonds.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lipids",
+        "unsaturated",
+        "fatty-acids"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "An enzyme that catalyses interconversion of optical, geometric, or positional isomers is called:",
+      "options": [
+        "B) Transferase",
+        "C) Isomerase",
+        "A) Oxidoreductase",
+        "D) Ligase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, isomerases catalyse the interconversion of isomers. They include racemases, epimerases, and mutases that interconvert structural, geometric, or optical isomers.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "isomerases",
+        "classification"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "At very high temperatures, enzymes become denatured because:",
+      "options": [
+        "B) The enzyme's 3D structure is disrupted",
+        "C) The pH changes",
+        "A) The substrate is destroyed",
+        "D) The cofactors are destroyed"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, at high temperatures, the enzyme protein gets denatured - its three-dimensional structure is disrupted, the active site loses its shape, and the enzyme can no longer bind to the substrate.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "denaturation",
+        "temperature"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "NAD and NADP are examples of:",
+      "options": [
+        "D) Holoenzymes",
+        "A) Prosthetic groups",
+        "B) Coenzymes",
+        "C) Apoenzymes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, NAD (Nicotinamide Adenine Dinucleotide) and NADP are examples of coenzymes. They are organic, non-protein, loosely attached cofactors that assist enzymes in catalysis.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "coenzymes",
+        "NAD",
+        "NADP"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following amino acids contains sulphur?",
+      "options": [
+        "B) Leucine",
+        "A) Glycine",
+        "D) Tryptophan",
+        "C) Methionine"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, methionine and cysteine are sulphur-containing amino acids. Methionine contains a thioether group (-S-CH3) in its side chain, while cysteine contains a thiol (-SH) group.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amino-acids",
+        "methionine",
+        "sulphur"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Ligases catalyse:",
+      "options": [
+        "A) Hydrolysis of bonds",
+        "D) Removal of groups leaving double bonds",
+        "C) Joining of two molecules using energy from ATP",
+        "B) Transfer of groups"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, ligases (also called synthetases) catalyse the joining of two molecules, coupled with the hydrolysis of a pyrophosphate bond in ATP or a similar triphosphate.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "ligases",
+        "classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "The tertiary structure of a protein is stabilised by:",
+      "options": [
+        "A) Only hydrogen bonds",
+        "B) Only peptide bonds",
+        "C) Hydrogen bonds, disulphide bonds, ionic bonds, and hydrophobic interactions",
+        "D) Only disulphide bonds"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the tertiary structure of a protein is stabilised by various types of bonds including hydrogen bonds, ionic bonds, hydrophobic interactions, van der Waals forces, and disulphide bonds between cysteine residues.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protein-structure",
+        "tertiary",
+        "bonds"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which type of RNA brings amino acids to the ribosome during translation?",
+      "options": [
+        "C) rRNA",
+        "D) snRNA",
+        "A) mRNA",
+        "B) tRNA"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, transfer RNA (tRNA) is responsible for bringing specific amino acids to the ribosome during protein synthesis (translation). Each tRNA has an anticodon that pairs with the codon on mRNA.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nucleic-acids",
+        "tRNA",
+        "translation"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following is the most abundant protein in the animal world?",
+      "options": [
+        "D) Insulin",
+        "C) Collagen",
+        "B) Haemoglobin",
+        "A) Keratin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, collagen is the most abundant protein in the animal world. It is the major structural protein found in connective tissues like tendons, ligaments, skin, and bones.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "proteins",
+        "collagen",
+        "structural-protein"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Apoenzyme is:",
+      "options": [
+        "B) Only the protein part of an enzyme",
+        "A) Enzyme + cofactor",
+        "D) Enzyme + substrate complex",
+        "C) Only the non-protein part"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, the protein portion of a conjugated enzyme is called the apoenzyme. When the apoenzyme binds with the cofactor, the complete catalytically active enzyme called holoenzyme is formed (Apoenzyme + Cofactor = Holoenzyme).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "apoenzyme",
+        "holoenzyme"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): Enzymes are highly specific in their action.\nReason (R): The active site of the enzyme is complementary to the shape of the substrate.",
+      "options": [
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, enzymes are highly specific because the active site is complementary in shape and charge to the substrate. Only specific substrates can fit into the active site, explaining enzyme specificity.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "specificity",
+        "active-site"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): Cellulose cannot be digested by humans.\nReason (R): Cellulose has beta-1,4-glycosidic bonds which human enzymes cannot hydrolyse.",
+      "options": [
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, cellulose is a polysaccharide with beta-1,4-glycosidic bonds between glucose units. Human digestive enzymes can only hydrolyse alpha-glycosidic bonds, hence cellulose is indigestible by humans.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "cellulose",
+        "glycosidic-bonds"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): Sucrose is a non-reducing sugar.\nReason (R): In sucrose, the reducing groups of both glucose and fructose are involved in glycosidic bond formation.",
+      "options": [
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, sucrose is a non-reducing sugar because the glycosidic bond involves the anomeric carbons (reducing groups) of both glucose and fructose, leaving no free reducing group available.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "sucrose",
+        "non-reducing-sugar"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): Proteins are polymers of amino acids.\nReason (R): There are about 20 types of amino acids found in proteins.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, proteins are indeed polymers of amino acids linked by peptide bonds, and there are about 20 different amino acids. However, the number of amino acid types does not explain why proteins are polymers of amino acids.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "proteins",
+        "amino-acids",
+        "polymers"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): Lipids are not true polymers.\nReason (R): Lipids are not made up of repeating monomer units linked by condensation reactions like other macromolecules.",
+      "options": [
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, lipids are not strictly macromolecules/polymers because they are not made up of repeating monomer units linked by condensation polymerisation. They are heterogeneous compounds assembled from smaller molecules like fatty acids and glycerol.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lipids",
+        "polymers",
+        "macromolecules"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): Competitive inhibition can be overcome by increasing substrate concentration.\nReason (R): At high substrate concentration, the substrate outcompetes the inhibitor for binding at the active site.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, in competitive inhibition, the inhibitor competes with the substrate for the active site. Increasing substrate concentration shifts the competition in favour of the substrate, thus overcoming the inhibition.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "competitive-inhibition",
+        "substrate"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): Amino acids are amphoteric in nature.\nReason (R): Amino acids have both an amino group (-NH2) and a carboxyl group (-COOH).",
+      "options": [
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, amino acids are amphoteric because they have both a basic amino group (-NH2) that can accept a proton and an acidic carboxyl group (-COOH) that can donate a proton. This allows them to act as both acids and bases.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amino-acids",
+        "amphoteric",
+        "zwitterion"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): DNA is more stable than RNA.\nReason (R): DNA has deoxyribose sugar which lacks a hydroxyl group at the 2' position.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, DNA is chemically more stable than RNA. The deoxyribose sugar in DNA lacks a hydroxyl group at the 2' position, making it less reactive and more resistant to hydrolysis compared to the ribose sugar in RNA which has this -OH group.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nucleic-acids",
+        "DNA",
+        "RNA",
+        "stability"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): Each enzyme has an optimum pH at which it shows maximum activity.\nReason (R): Changes in pH alter the ionisation of amino acids at the active site.",
+      "options": [
+        "C) A is true but R is false",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is not the correct explanation of A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, each enzyme has an optimum pH. Changes in pH alter the ionisation state of amino acid residues at the active site, affecting substrate binding and catalysis. Extreme pH values cause enzyme denaturation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "pH",
+        "optimum-pH"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): Starch gives blue colour with iodine.\nReason (R): Starch has helical structure that traps iodine molecules.",
+      "options": [
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Starch gives a blue colour with iodine solution. The amylose component of starch has a helical structure that traps iodine molecules within its coils, producing the characteristic blue-black colour.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "starch",
+        "iodine-test"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): The induced fit model is more accepted than the lock and key model.\nReason (R): In induced fit model, the active site changes shape to fit the substrate.",
+      "options": [
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, the induced fit model (proposed by Koshland) is more widely accepted. In this model, the active site is not rigid but flexible, and it changes its shape to accommodate the substrate, providing a better explanation for enzyme-substrate interaction.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "induced-fit",
+        "lock-and-key"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): Phospholipids are amphipathic molecules.\nReason (R): Phospholipids have both hydrophilic (polar head) and hydrophobic (non-polar tail) regions.",
+      "options": [
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "C) A is true but R is false",
+        "D) A is false but R is true",
+        "A) Both A and R are true and R is the correct explanation of A"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, phospholipids are amphipathic because they have a hydrophilic phosphate head group and hydrophobic fatty acid tails. This amphipathic nature allows them to form the lipid bilayer of cell membranes.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lipids",
+        "phospholipids",
+        "amphipathic"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "ASSERTION_REASON",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Assertion (A): Denatured proteins lose their biological activity.\nReason (R): Denaturation disrupts the secondary, tertiary, and quaternary structures of the protein but the primary structure remains intact.",
+      "options": [
+        "B) Both A and R are true but R is not the correct explanation of A",
+        "A) Both A and R are true and R is the correct explanation of A",
+        "D) A is false but R is true",
+        "C) A is true but R is false"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, denaturation causes disruption of the higher-order structures (secondary, tertiary, quaternary) while the primary structure (peptide bonds) remains intact. Since biological activity depends on the 3D conformation, denatured proteins lose their function.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "proteins",
+        "denaturation",
+        "structure"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following statements about enzymes is/are correct?\n(i) All enzymes are proteins\n(ii) Enzymes are consumed during the reaction\n(iii) Enzymes lower the activation energy\n(iv) Enzyme activity is affected by pH and temperature",
+      "options": [
+        "A) (i), (iii), and (iv) only",
+        "B) (i), (ii), (iii), and (iv)",
+        "D) (i) and (ii) only",
+        "C) (iii) and (iv) only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, enzymes lower activation energy and are affected by pH and temperature. Statement (i) is incorrect because some enzymes are RNA molecules (ribozymes). Statement (ii) is incorrect because enzymes are not consumed; they are regenerated after the reaction.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "properties",
+        "ribozymes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Consider the following statements about amino acids:\n(i) All amino acids have an amino group and a carboxyl group\n(ii) All amino acids are L-isomers in proteins\n(iii) There are about 20 types of amino acids in proteins\n(iv) All amino acids are acidic in nature\nWhich statements are correct?",
+      "options": [
+        "A) (i), (ii), and (iii)",
+        "C) (i) and (iii) only",
+        "B) (i), (ii), (iii), and (iv)",
+        "D) (ii) and (iv) only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, amino acids have both amino and carboxyl groups, proteins contain L-amino acids, and there are about 20 standard amino acids. Statement (iv) is incorrect; amino acids are amphoteric (can be acidic or basic), not all acidic.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amino-acids",
+        "properties",
+        "L-isomers"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following statements about nucleic acids is INCORRECT?\n(i) DNA is double-stranded and RNA is single-stranded\n(ii) Thymine is present in RNA\n(iii) Nucleotides are the monomers of nucleic acids\n(iv) Phosphodiester bonds link nucleotides",
+      "options": [
+        "B) (i) and (ii)",
+        "A) (ii) only",
+        "C) (ii) and (iii)",
+        "D) (iii) and (iv)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, thymine is present in DNA, NOT RNA. RNA has uracil instead of thymine. All other statements are correct: DNA is double-stranded, RNA is typically single-stranded, nucleotides are monomers, and phosphodiester bonds link them.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nucleic-acids",
+        "DNA",
+        "RNA",
+        "thymine"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Consider the following statements about lipids:\n(i) Fats with unsaturated fatty acids have lower melting points\n(ii) Phospholipids have glycerol, 2 fatty acids, and a phosphate group\n(iii) Fats are esters of glycerol and fatty acids\n(iv) All lipids are saponifiable",
+      "options": [
+        "D) (ii) and (iv) only",
+        "C) (i) and (iii) only",
+        "A) (i), (ii), and (iii)",
+        "B) All of the above"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Statements (i), (ii), and (iii) are correct. Statement (iv) is incorrect because steroids and terpenes are non-saponifiable lipids as they lack ester bonds that can be hydrolysed by alkali.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lipids",
+        "fatty-acids",
+        "phospholipids"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Read the following statements about protein structure:\n(i) Primary structure is the linear sequence of amino acids\n(ii) Alpha-helix is a type of secondary structure\n(iii) Tertiary structure gives the 3D shape to the protein\n(iv) Quaternary structure is found in all proteins\nHow many statements are correct?",
+      "options": [
+        "A) One",
+        "C) Three",
+        "B) Two",
+        "D) Four"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements (i), (ii), and (iii) are correct = 3. Statement (iv) is incorrect because quaternary structure is found only in proteins with more than one polypeptide subunit (e.g., haemoglobin). Proteins like myoglobin have only tertiary structure.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protein-structure",
+        "levels",
+        "quaternary"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following statements about cofactors is correct?\n(i) Prosthetic groups are tightly bound to the enzyme\n(ii) Coenzymes are tightly bound to the enzyme\n(iii) Metal ions can serve as cofactors\n(iv) Cofactors are always organic compounds",
+      "options": [
+        "B) (i), (ii), and (iii)",
+        "A) (i) and (iii) only",
+        "D) All of the above",
+        "C) (i), (iii), and (iv)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, prosthetic groups are tightly bound organic compounds, and metal ions can serve as cofactors. Statement (ii) is incorrect because coenzymes are loosely bound (transient association). Statement (iv) is incorrect because metal ions (inorganic) are also cofactors.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "cofactors",
+        "prosthetic-group",
+        "coenzyme"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Consider the following about carbohydrates:\n(i) Glucose is an aldohexose\n(ii) Fructose is a ketohexose\n(iii) Ribose is a pentose sugar\n(iv) Galactose is a pentose sugar\nWhich are correct?",
+      "options": [
+        "D) (iii) and (iv) only",
+        "C) (i) and (ii) only",
+        "A) (i), (ii), and (iii)",
+        "B) All of the above"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, glucose is an aldohexose (6C with aldehyde group), fructose is a ketohexose (6C with ketone group), and ribose is a pentose (5C) sugar. Statement (iv) is incorrect; galactose is a hexose (6C), not pentose.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "glucose",
+        "fructose",
+        "classification"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following statements about the metabolic basis of living is/are correct?\n(i) Metabolism includes both anabolism and catabolism\n(ii) Metabolic pathways can be both linear and cyclic\n(iii) All metabolic reactions are reversible\n(iv) Enzymes regulate metabolic pathways",
+      "options": [
+        "D) (i), (ii), and (iii)",
+        "C) (i) and (iv) only",
+        "A) (i), (ii), and (iv)",
+        "B) All of the above"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, metabolism includes anabolism and catabolism, metabolic pathways can be linear or cyclic (like the Krebs cycle), and enzymes regulate these pathways. Statement (iii) is incorrect; not all metabolic reactions are reversible; many are irreversible.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "metabolism",
+        "metabolic-pathways",
+        "anabolism",
+        "catabolism"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Select the correct statements about polysaccharides:\n(i) Starch is made of amylose and amylopectin\n(ii) Glycogen is more branched than starch\n(iii) Cellulose is a branched polymer of glucose\n(iv) Chitin contains nitrogen-containing sugar (N-acetylglucosamine)",
+      "options": [
+        "A) (i), (ii), and (iv)",
+        "B) (i), (ii), and (iii)",
+        "D) (i) and (ii) only",
+        "C) All of the above"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, starch consists of amylose (unbranched) and amylopectin (branched), glycogen is more branched than starch, and chitin is a polymer of N-acetylglucosamine. Statement (iii) is incorrect; cellulose is an unbranched (linear) polymer of glucose.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "polysaccharides",
+        "starch",
+        "chitin"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "How many of the following are correct about enzyme classes?\n(a) Oxidoreductases catalyse oxidation-reduction reactions\n(b) Hydrolases catalyse hydrolysis of bonds\n(c) Transferases catalyse removal of groups\n(d) Ligases join two substrates with ATP energy",
+      "options": [
+        "A) One",
+        "C) Three",
+        "D) Four",
+        "B) Two"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statements (a), (b), and (d) are correct = 3. Statement (c) is incorrect; transferases catalyse transfer of groups from one substrate to another, not removal of groups. Lyases catalyse removal of groups.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "classification",
+        "enzyme-classes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Consider the following about minerals in living organisms:\n(i) Minerals constitute about 1-5% of total body weight\n(ii) All minerals are found in the ionised state\n(iii) Ca and Mg are among the most common minerals\n(iv) Minerals can also be found in salts or as constituents of organic compounds",
+      "options": [
+        "C) (i) and (iii) only",
+        "A) (i), (iii), and (iv)",
+        "D) (ii) and (iv) only",
+        "B) All of the above"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, minerals constitute about 1-5% of body weight, Ca and Mg are abundant, and minerals can be found as ions, in salts, or in organic compounds. Statement (ii) is incorrect because not all minerals are ionised; some are parts of organic molecules (e.g., Fe in haemoglobin).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": false,
+      "tags": [
+        "minerals",
+        "biomolecules",
+        "inorganic"
+      ],
+      "neetWeightage": "LOW"
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following statements is INCORRECT?\n(i) Glycine is the only amino acid without an asymmetric carbon\n(ii) All amino acids except glycine are optically active\n(iii) Amino acids exist as zwitterions at neutral pH\n(iv) All amino acids have a benzene ring",
+      "options": [
+        "B) (i) and (iv)",
+        "A) (iv) only",
+        "C) (ii) and (iii)",
+        "D) (iii) and (iv)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statement (iv) is incorrect; not all amino acids have a benzene ring. Only aromatic amino acids (phenylalanine, tyrosine, tryptophan) have ring structures. Statements (i), (ii), and (iii) are all correct.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amino-acids",
+        "glycine",
+        "optical-activity"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Match the enzyme class (Column I) with its function (Column II):\nColumn I: (a) Oxidoreductases (b) Transferases (c) Hydrolases (d) Ligases\nColumn II: (i) Transfer of groups (ii) Hydrolysis of bonds (iii) Joining two substrates using ATP (iv) Oxidation-reduction reactions",
+      "options": [
+        "D) a-iii, b-ii, c-i, d-iv",
+        "A) a-iv, b-i, c-ii, d-iii",
+        "C) a-ii, b-iii, c-iv, d-i",
+        "B) a-i, b-iv, c-iii, d-ii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT: Oxidoreductases catalyse oxidation-reduction reactions, transferases transfer functional groups, hydrolases catalyse hydrolysis of bonds, and ligases join two substrates using energy from ATP hydrolysis.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "classification",
+        "matching"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Match the biomolecule (Column I) with its monomer (Column II):\nColumn I: (a) Protein (b) Starch (c) DNA (d) Triglyceride\nColumn II: (i) Glucose (ii) Amino acids (iii) Nucleotides (iv) Glycerol + fatty acids",
+      "options": [
+        "B) a-i, b-ii, c-iv, d-iii",
+        "A) a-ii, b-i, c-iii, d-iv",
+        "C) a-iii, b-iv, c-i, d-ii",
+        "D) a-iv, b-iii, c-ii, d-i"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT: Proteins are polymers of amino acids, starch is a polymer of glucose, DNA is a polymer of nucleotides, and triglycerides are composed of glycerol and three fatty acids.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "biomolecules",
+        "monomers",
+        "polymers"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Match the disaccharide (Column I) with its constituent monosaccharides (Column II):\nColumn I: (a) Sucrose (b) Lactose (c) Maltose (d) Trehalose\nColumn II: (i) Glucose + Glucose (ii) Glucose + Fructose (iii) Glucose + Galactose (iv) Glucose + Glucose (alpha-1,1 bond)",
+      "options": [
+        "D) a-iv, b-i, c-iii, d-ii",
+        "C) a-iii, b-iv, c-ii, d-i",
+        "A) a-ii, b-iii, c-i, d-iv",
+        "B) a-i, b-ii, c-iii, d-iv"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT: Sucrose = glucose + fructose, lactose (milk sugar) = glucose + galactose, maltose (malt sugar) = glucose + glucose (alpha-1,4 bond), trehalose = glucose + glucose (alpha-1,1 bond).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "disaccharides",
+        "monosaccharides"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Match the protein (Column I) with its type/function (Column II):\nColumn I: (a) Collagen (b) Haemoglobin (c) Insulin (d) Trypsin\nColumn II: (i) Transport protein (ii) Structural protein (iii) Enzyme (iv) Hormone",
+      "options": [
+        "A) a-ii, b-i, c-iv, d-iii",
+        "D) a-iii, b-iv, c-i, d-ii",
+        "B) a-i, b-ii, c-iii, d-iv",
+        "C) a-iv, b-iii, c-ii, d-i"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT: Collagen is a structural protein (most abundant in animals), haemoglobin is a transport protein (carries oxygen), insulin is a hormone, and trypsin is a digestive enzyme.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "proteins",
+        "functions",
+        "types"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Match the bond type (Column I) with its occurrence (Column II):\nColumn I: (a) Peptide bond (b) Glycosidic bond (c) Ester bond (d) Phosphodiester bond\nColumn II: (i) Between nucleotides (ii) Between amino acids (iii) Between sugars (iv) In fats",
+      "options": [
+        "C) a-i, b-iv, c-iii, d-ii",
+        "B) a-iii, b-ii, c-i, d-iv",
+        "D) a-iv, b-i, c-ii, d-iii",
+        "A) a-ii, b-iii, c-iv, d-i"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT: Peptide bonds link amino acids in proteins, glycosidic bonds link sugar units in polysaccharides, ester bonds link glycerol and fatty acids in fats, and phosphodiester bonds link nucleotides in nucleic acids.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "chemical-bonds",
+        "biomolecules"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Match the cofactor type (Column I) with the example (Column II):\nColumn I: (a) Prosthetic group (b) Coenzyme (c) Metal ion activator (d) Holoenzyme\nColumn II: (i) Zn2+ (ii) NAD+ (iii) Haem in peroxidase (iv) Apoenzyme + cofactor",
+      "options": [
+        "B) a-ii, b-iii, c-iv, d-i",
+        "A) a-iii, b-ii, c-i, d-iv",
+        "D) a-iv, b-i, c-iii, d-ii",
+        "C) a-i, b-iv, c-ii, d-iii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT: Haem is a prosthetic group (tightly bound), NAD+ is a coenzyme (loosely bound), Zn2+ is a metal ion activator, and holoenzyme = apoenzyme + cofactor.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "cofactors",
+        "coenzyme",
+        "prosthetic-group"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Match the polysaccharide (Column I) with its occurrence (Column II):\nColumn I: (a) Starch (b) Glycogen (c) Cellulose (d) Chitin\nColumn II: (i) Arthropod exoskeleton (ii) Plant cell wall (iii) Plant storage (iv) Animal storage",
+      "options": [
+        "B) a-iv, b-iii, c-i, d-ii",
+        "D) a-i, b-ii, c-iii, d-iv",
+        "A) a-iii, b-iv, c-ii, d-i",
+        "C) a-ii, b-i, c-iv, d-iii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT: Starch is stored in plants, glycogen is stored in animals (liver, muscles), cellulose forms plant cell walls, and chitin forms the exoskeleton of arthropods and cell walls of fungi.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "polysaccharides",
+        "occurrence",
+        "storage"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Match the nucleotide base (Column I) with its type (Column II):\nColumn I: (a) Adenine (b) Cytosine (c) Uracil (d) Thymine\nColumn II: (i) Pyrimidine found in DNA only (ii) Purine (iii) Pyrimidine found in RNA only (iv) Pyrimidine found in both DNA and RNA",
+      "options": [
+        "B) a-i, b-ii, c-iv, d-iii",
+        "A) a-ii, b-iv, c-iii, d-i",
+        "C) a-iii, b-i, c-ii, d-iv",
+        "D) a-iv, b-iii, c-i, d-ii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT: Adenine is a purine, cytosine is a pyrimidine found in both DNA and RNA, uracil is a pyrimidine found only in RNA, and thymine is a pyrimidine found only in DNA.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nucleic-acids",
+        "bases",
+        "purine",
+        "pyrimidine"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Match the level of protein structure (Column I) with the stabilising bond (Column II):\nColumn I: (a) Primary (b) Secondary (c) Tertiary (d) Quaternary\nColumn II: (i) Interactions between subunits (ii) Peptide bonds (iii) Hydrogen bonds (iv) Disulphide, ionic, hydrophobic bonds",
+      "options": [
+        "D) a-iv, b-i, c-ii, d-iii",
+        "B) a-iii, b-ii, c-i, d-iv",
+        "A) a-ii, b-iii, c-iv, d-i",
+        "C) a-i, b-iv, c-iii, d-ii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT: Primary structure is maintained by peptide bonds, secondary by hydrogen bonds (alpha-helix, beta-sheet), tertiary by disulphide bonds, ionic bonds, and hydrophobic interactions, and quaternary by interactions between polypeptide subunits.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protein-structure",
+        "bonds",
+        "levels"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Match Column I with Column II:\nColumn I: (a) Palmitic acid (b) Oleic acid (c) Linoleic acid (d) Arachidonic acid\nColumn II: (i) 2 double bonds (ii) 4 double bonds (iii) 1 double bond (iv) No double bond (saturated)",
+      "options": [
+        "C) a-i, b-ii, c-iv, d-iii",
+        "B) a-iii, b-iv, c-ii, d-i",
+        "D) a-ii, b-i, c-iii, d-iv",
+        "A) a-iv, b-iii, c-i, d-ii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Palmitic acid is a saturated fatty acid (no double bonds), oleic acid has 1 double bond (monounsaturated), linoleic acid has 2 double bonds, and arachidonic acid has 4 double bonds (polyunsaturated).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lipids",
+        "fatty-acids",
+        "saturated",
+        "unsaturated"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MATCH_FOLLOWING",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Match the sugar classification (Column I) with the example (Column II):\nColumn I: (a) Triose (b) Pentose (c) Hexose (d) Heptose\nColumn II: (i) Ribose (ii) Sedoheptulose (iii) Glucose (iv) Glyceraldehyde",
+      "options": [
+        "A) a-iv, b-i, c-iii, d-ii",
+        "C) a-iii, b-ii, c-iv, d-i",
+        "B) a-i, b-iv, c-ii, d-iii",
+        "D) a-ii, b-iii, c-i, d-iv"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT: Glyceraldehyde is a triose (3C), ribose is a pentose (5C), glucose is a hexose (6C), and sedoheptulose is a heptose (7C) sugar.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "monosaccharides",
+        "classification"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "How many of the following are polysaccharides?\nGlucose, Sucrose, Starch, Glycogen, Cellulose, Fructose, Chitin, Inulin",
+      "options": [
+        "A) Three",
+        "D) Six",
+        "B) Four",
+        "C) Five"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Polysaccharides: Starch, glycogen, cellulose, chitin, and inulin = 5. Glucose and fructose are monosaccharides, and sucrose is a disaccharide.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "polysaccharides",
+        "counting"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "How many of the following are aromatic amino acids?\nGlycine, Alanine, Phenylalanine, Tyrosine, Tryptophan, Leucine, Valine, Histidine",
+      "options": [
+        "A) Two",
+        "C) Four",
+        "D) Five",
+        "B) Three"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Aromatic amino acids contain a ring structure: phenylalanine, tyrosine, and tryptophan = 3. Glycine, alanine, leucine, valine are aliphatic. Histidine has an imidazole ring but is typically classified as a basic amino acid.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amino-acids",
+        "aromatic",
+        "counting"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Count the number of enzyme classes as per the IUB classification:\nOxidoreductases, Transferases, Hydrolases, Lyases, Isomerases, Ligases, Polymerases",
+      "options": [
+        "C) Seven",
+        "A) Five",
+        "D) Four",
+        "B) Six"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT/IUB classification, there are 6 classes of enzymes: Oxidoreductases, Transferases, Hydrolases, Lyases, Isomerases, and Ligases. Polymerases are not a separate class; they belong to transferases.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "IUB-classification",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "How many of the following are purine bases?\nAdenine, Guanine, Cytosine, Thymine, Uracil",
+      "options": [
+        "A) One",
+        "B) Two",
+        "C) Three",
+        "D) Four"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, purines are double-ring structures: Adenine and Guanine = 2 purines. Cytosine, thymine, and uracil are pyrimidines (single-ring structures).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nucleic-acids",
+        "purines",
+        "pyrimidines",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "How many of the following are true about enzyme inhibition?\n(a) Competitive inhibitor resembles the substrate\n(b) Competitive inhibition can be overcome by high substrate concentration\n(c) Non-competitive inhibitor binds to the active site\n(d) Competitive inhibitor binds to the active site\n(e) Allosteric inhibitor changes enzyme shape",
+      "options": [
+        "C) Four",
+        "A) Two",
+        "D) Five",
+        "B) Three"
+      ],
+      "correctAnswer": "A",
+      "explanation": "True statements: (a), (b), (d), and (e) = 4. Statement (c) is incorrect; non-competitive inhibitor binds to a site other than the active site (allosteric site), not the active site itself.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "inhibition",
+        "competitive",
+        "counting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "How many of the following are heteropolysaccharides?\nStarch, Glycogen, Hyaluronic acid, Cellulose, Heparin, Chondroitin sulphate, Inulin, Agar",
+      "options": [
+        "A) Two",
+        "B) Three",
+        "D) Five",
+        "C) Four"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Heteropolysaccharides (composed of different monosaccharide units): Hyaluronic acid, heparin, chondroitin sulphate, and agar = 4. Starch, glycogen, cellulose, and inulin are homopolysaccharides.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "heteropolysaccharides",
+        "counting"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "How many of the following elements are major components of biomolecules?\nCarbon, Hydrogen, Oxygen, Nitrogen, Gold, Silver, Phosphorus, Sulphur",
+      "options": [
+        "C) Six",
+        "A) Four",
+        "D) Seven",
+        "B) Five"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Major components of biomolecules: Carbon, Hydrogen, Oxygen, Nitrogen, Phosphorus, and Sulphur = 6 (collectively known as CHONPS). Gold and silver are not major components of biomolecules.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "biomolecules",
+        "elements",
+        "CHONPS",
+        "counting"
+      ],
+      "neetWeightage": "LOW"
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "How many of the following are functions of proteins?\n(a) Structural support (b) Transport (c) Catalysis (d) Defence (e) Energy storage (f) Hormonal regulation",
+      "options": [
+        "D) Three",
+        "B) Five",
+        "A) Four",
+        "C) Six"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Functions of proteins include: (a) structural support (collagen), (b) transport (haemoglobin), (c) catalysis (enzymes), (d) defence (antibodies), and (f) hormonal regulation (insulin) = 5. Energy storage is primarily a function of carbohydrates and fats, not proteins.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "proteins",
+        "functions",
+        "counting"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Arrange the following in increasing order of molecular complexity:\n(i) Amino acid\n(ii) Polypeptide\n(iii) Dipeptide\n(iv) Protein with quaternary structure",
+      "options": [
+        "B) iii -> i -> iv -> ii",
+        "C) i -> ii -> iii -> iv",
+        "A) i -> iii -> ii -> iv",
+        "D) iv -> ii -> iii -> i"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In increasing order of complexity: amino acid (monomer) -> dipeptide (2 amino acids) -> polypeptide (many amino acids, single chain) -> protein with quaternary structure (multiple polypeptide chains assembled).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "proteins",
+        "complexity",
+        "sequence"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Arrange the following levels of protein structure from simplest to most complex:\n(i) Quaternary\n(ii) Primary\n(iii) Tertiary\n(iv) Secondary",
+      "options": [
+        "D) ii -> iii -> iv -> i",
+        "A) ii -> iv -> iii -> i",
+        "C) iv -> iii -> ii -> i",
+        "B) i -> ii -> iii -> iv"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the levels of protein structure from simplest to most complex are: Primary (amino acid sequence) -> Secondary (alpha-helix/beta-sheet) -> Tertiary (3D folding) -> Quaternary (multiple subunits).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "protein-structure",
+        "hierarchy",
+        "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Arrange the following carbohydrates in increasing order of complexity:\n(i) Starch\n(ii) Glucose\n(iii) Maltose\n(iv) Glycogen",
+      "options": [
+        "B) i -> ii -> iii -> iv",
+        "C) iii -> ii -> iv -> i",
+        "D) iv -> i -> iii -> ii",
+        "A) ii -> iii -> i -> iv"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In increasing order of complexity: Glucose (monosaccharide) -> Maltose (disaccharide, 2 glucose) -> Starch (polysaccharide, linear/branched) -> Glycogen (polysaccharide, highly branched, more complex).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "complexity",
+        "sequence"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Arrange the following in the correct sequence of enzyme action (Michaelis-Menten model):\n(i) Formation of enzyme-substrate complex\n(ii) Free enzyme and substrate\n(iii) Product release\n(iv) Catalysis at the active site",
+      "options": [
+        "B) i -> ii -> iii -> iv",
+        "C) iv -> iii -> ii -> i",
+        "A) ii -> i -> iv -> iii",
+        "D) ii -> iv -> i -> iii"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the sequence of enzyme action is: Free enzyme and substrate exist separately -> enzyme-substrate complex forms at the active site -> catalysis occurs converting substrate to product -> product is released and enzyme is free again.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "mechanism",
+        "enzyme-substrate-complex"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Arrange the following biomolecules in decreasing order of their relative abundance in a cell (by dry weight):\n(i) Lipids\n(ii) Proteins\n(iii) Nucleic acids\n(iv) Carbohydrates",
+      "options": [
+        "B) i -> ii -> iv -> iii",
+        "C) iv -> ii -> i -> iii",
+        "A) ii -> i -> iii -> iv",
+        "D) ii -> iv -> i -> iii"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT (acid-soluble pool analysis), in decreasing order by dry weight: Proteins (most abundant organic macromolecule) -> Carbohydrates -> Lipids -> Nucleic acids (least by weight but most important informationally).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "biomolecules",
+        "abundance",
+        "dry-weight"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Arrange the following in the correct sequence of formation of a nucleotide:\n(i) Attachment of phosphate group\n(ii) Nitrogenous base\n(iii) Linkage of base to sugar (N-glycosidic bond)\n(iv) Pentose sugar",
+      "options": [
+        "A) ii -> iv -> iii -> i",
+        "B) iv -> ii -> i -> iii",
+        "C) i -> iii -> ii -> iv",
+        "D) iii -> i -> iv -> ii"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A nucleotide is formed by: a nitrogenous base and pentose sugar are linked together by an N-glycosidic bond to form a nucleoside, then a phosphate group is attached to the sugar to form a nucleotide.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nucleic-acids",
+        "nucleotide",
+        "formation"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Arrange the following in order of increasing number of carbon atoms:\n(i) Hexose\n(ii) Triose\n(iii) Tetrose\n(iv) Pentose",
+      "options": [
+        "D) iv -> iii -> ii -> i",
+        "A) ii -> iii -> iv -> i",
+        "C) iii -> ii -> i -> iv",
+        "B) i -> iv -> iii -> ii"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, monosaccharides are classified by carbon number: Triose (3C) -> Tetrose (4C) -> Pentose (5C) -> Hexose (6C), in increasing order.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "monosaccharides",
+        "carbon-atoms"
+      ],
+      "neetWeightage": "LOW"
+    }
+  ]
+}
