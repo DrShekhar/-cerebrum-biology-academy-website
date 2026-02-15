@@ -15,10 +15,10 @@
       "ncertChapterName": "Evolution",
       "question": "The theory of natural selection was proposed by:",
       "options": [
-        "A) Lamarck",
-        "B) Charles Darwin",
-        "C) Hugo de Vries",
-        "D) Mendel"
+        "Lamarck",
+        "Charles Darwin",
+        "Hugo de Vries",
+        "Mendel"
       ],
       "correctAnswer": "B",
       "explanation": "Charles Darwin proposed the theory of natural selection in his book 'On the Origin of Species' (1859). He stated that organisms with favourable variations survive and reproduce more, leading to evolution.",
@@ -40,10 +40,10 @@
       "ncertChapterName": "Evolution",
       "question": "Hardy-Weinberg equilibrium is disturbed by:",
       "options": [
-        "D) Large population size",
-        "A) Random mating",
-        "B) No mutation",
-        "C) Gene flow"
+        "Large population size",
+        "Random mating",
+        "No mutation",
+        "Gene flow"
       ],
       "correctAnswer": "D",
       "explanation": "Gene flow (migration) disturbs Hardy-Weinberg equilibrium. The equilibrium requires: no mutation, random mating, no gene flow, no natural selection, and large population size. Any factor violating these conditions causes evolution.",
@@ -65,10 +65,10 @@
       "ncertChapterName": "Evolution",
       "question": "Homologous organs indicate:",
       "options": [
-        "B) Divergent evolution",
-        "A) Convergent evolution",
-        "D) No evolution",
-        "C) Parallel evolution"
+        "Divergent evolution",
+        "Convergent evolution",
+        "No evolution",
+        "Parallel evolution"
       ],
       "correctAnswer": "A",
       "explanation": "Homologous organs (same structural plan but different functions, e.g., forelimbs of whale, bat, horse, human) indicate divergent evolution from a common ancestor (adaptive radiation).",
@@ -90,10 +90,10 @@
       "ncertChapterName": "Evolution",
       "question": "Analogous organs are a result of:",
       "options": [
-        "B) Convergent evolution",
-        "D) Gene flow",
-        "A) Divergent evolution",
-        "C) Genetic drift"
+        "Convergent evolution",
+        "Gene flow",
+        "Divergent evolution",
+        "Genetic drift"
       ],
       "correctAnswer": "A",
       "explanation": "Analogous organs (different structural origin but similar function, e.g., wings of butterfly and bird) result from convergent evolution. Different organisms evolve similar features independently due to similar environmental pressures.",
@@ -115,10 +115,10 @@
       "ncertChapterName": "Evolution",
       "question": "The Oparin-Haldane hypothesis proposes that life originated from:",
       "options": [
-        "C) Abiotic chemical synthesis",
-        "D) Spontaneous generation",
-        "A) Extra-terrestrial sources",
-        "B) Pre-existing life"
+        "Abiotic chemical synthesis",
+        "Spontaneous generation",
+        "Extra-terrestrial sources",
+        "Pre-existing life"
       ],
       "correctAnswer": "A",
       "explanation": "The Oparin-Haldane hypothesis (chemical evolution) proposes that life originated from abiotic chemical synthesis of organic molecules in the primitive Earth's reducing atmosphere, followed by gradual evolution of complex molecules.",
@@ -140,10 +140,10 @@
       "ncertChapterName": "Evolution",
       "question": "Miller and Urey experiment simulated conditions of:",
       "options": [
-        "A) Modern Earth atmosphere",
-        "B) Primitive Earth atmosphere",
-        "C) Mars atmosphere",
-        "D) Deep ocean"
+        "Modern Earth atmosphere",
+        "Primitive Earth atmosphere",
+        "Mars atmosphere",
+        "Deep ocean"
       ],
       "correctAnswer": "B",
       "explanation": "Stanley Miller and Harold Urey (1953) simulated the conditions of primitive Earth (CH4, NH3, H2, H2O with electric sparks) and demonstrated that amino acids and other organic molecules could be synthesised abiotically.",
@@ -165,10 +165,10 @@
       "ncertChapterName": "Evolution",
       "question": "Industrial melanism is an example of:",
       "options": [
-        "C) Genetic drift",
-        "B) Natural selection",
-        "D) Gene flow",
-        "A) Mutation"
+        "Genetic drift",
+        "Natural selection",
+        "Gene flow",
+        "Mutation"
       ],
       "correctAnswer": "B",
       "explanation": "Industrial melanism (increase in dark-coloured peppered moths during industrial revolution in England) is a classic example of natural selection. Dark moths had survival advantage against soot-covered tree trunks.",
@@ -190,10 +190,10 @@
       "ncertChapterName": "Evolution",
       "question": "Genetic drift operates in:",
       "options": [
-        "B) Small populations",
-        "D) Only in plants",
-        "A) Large populations",
-        "C) All populations equally"
+        "Small populations",
+        "Only in plants",
+        "Large populations",
+        "All populations equally"
       ],
       "correctAnswer": "A",
       "explanation": "Genetic drift (random changes in allele frequency) has significant effects in small populations. In large populations, random fluctuations average out. Examples include founder effect and bottleneck effect.",
@@ -215,10 +215,10 @@
       "ncertChapterName": "Evolution",
       "question": "Darwin's finches are an example of:",
       "options": [
-        "C) Parallel evolution",
-        "A) Convergent evolution",
-        "D) Co-evolution",
-        "B) Adaptive radiation"
+        "Parallel evolution",
+        "Convergent evolution",
+        "Co-evolution",
+        "Adaptive radiation"
       ],
       "correctAnswer": "D",
       "explanation": "Darwin's finches on the Galapagos Islands are a classic example of adaptive radiation. From a common ancestral finch, different species evolved with different beak types adapted to different food sources.",
@@ -240,10 +240,10 @@
       "ncertChapterName": "Evolution",
       "question": "The Hardy-Weinberg equation is:",
       "options": [
-        "A) p + q = 1",
-        "B) p² + 2pq + q² = 1",
-        "C) p² + q² = 1",
-        "D) p - q = 1"
+        "p + q = 1",
+        "p² + 2pq + q² = 1",
+        "p² + q² = 1",
+        "p - q = 1"
       ],
       "correctAnswer": "B",
       "explanation": "The Hardy-Weinberg equation is p² + 2pq + q² = 1, where p and q are allele frequencies. p² = frequency of homozygous dominant, 2pq = frequency of heterozygous, q² = frequency of homozygous recessive.",
@@ -264,10 +264,10 @@
       "ncertChapterName": "Evolution",
       "question": "Which type of natural selection leads to two different phenotypic extremes being favoured?",
       "options": [
-        "D) Artificial selection",
-        "C) Disruptive selection",
-        "A) Stabilising selection",
-        "B) Directional selection"
+        "Artificial selection",
+        "Disruptive selection",
+        "Stabilising selection",
+        "Directional selection"
       ],
       "correctAnswer": "B",
       "explanation": "Disruptive selection favours individuals at both extremes of the phenotypic range, eliminating intermediate forms. This can lead to speciation. Stabilising selection favours the mean, and directional selection shifts the mean in one direction.",
@@ -288,10 +288,10 @@
       "ncertChapterName": "Evolution",
       "question": "Vestigial organs in humans include:",
       "options": [
-        "D) Lungs",
-        "B) Vermiform appendix",
-        "A) Eyes",
-        "C) Heart"
+        "Lungs",
+        "Vermiform appendix",
+        "Eyes",
+        "Heart"
       ],
       "correctAnswer": "B",
       "explanation": "The vermiform appendix is a vestigial organ in humans. It was functional in herbivorous ancestors for cellulose digestion but has no significant function now. Other examples include wisdom teeth, coccyx, and ear muscles.",
@@ -313,10 +313,10 @@
       "ncertChapterName": "Evolution",
       "question": "Hugo de Vries proposed the theory of:",
       "options": [
-        "D) Pangenesis",
-        "B) Mutation",
-        "C) Lamarckism",
-        "A) Natural selection"
+        "Pangenesis",
+        "Mutation",
+        "Lamarckism",
+        "Natural selection"
       ],
       "correctAnswer": "B",
       "explanation": "Hugo de Vries proposed the mutation theory of evolution (1901) based on his work with Oenothera lamarckiana (evening primrose). He suggested that evolution occurs through sudden, large, heritable changes called mutations.",
@@ -338,10 +338,10 @@
       "ncertChapterName": "Evolution",
       "question": "Geographical isolation leads to:",
       "options": [
-        "C) Parapatric speciation",
-        "D) No speciation",
-        "A) Sympatric speciation",
-        "B) Allopatric speciation"
+        "Parapatric speciation",
+        "No speciation",
+        "Sympatric speciation",
+        "Allopatric speciation"
       ],
       "correctAnswer": "D",
       "explanation": "Geographical isolation leads to allopatric speciation. When a population is geographically separated (by mountains, rivers, etc.), gene flow stops and the isolated populations evolve independently into new species.",
@@ -363,10 +363,10 @@
       "ncertChapterName": "Evolution",
       "question": "The bottleneck effect is a type of:",
       "options": [
-        "C) Gene flow",
-        "D) Mutation",
-        "B) Genetic drift",
-        "A) Natural selection"
+        "Gene flow",
+        "Mutation",
+        "Genetic drift",
+        "Natural selection"
       ],
       "correctAnswer": "C",
       "explanation": "The bottleneck effect is a type of genetic drift that occurs when a population is dramatically reduced in size due to a catastrophic event. The surviving population may have different allele frequencies from the original population.",
@@ -388,10 +388,10 @@
       "ncertChapterName": "Evolution",
       "question": "The age of fossils can be determined by:",
       "options": [
-        "A) Carbon dating only",
-        "D) Visual inspection",
-        "C) Radiometric dating methods",
-        "B) Potassium-argon dating only"
+        "Carbon dating only",
+        "Visual inspection",
+        "Radiometric dating methods",
+        "Potassium-argon dating only"
       ],
       "correctAnswer": "C",
       "explanation": "The age of fossils is determined by radiometric dating methods which include carbon-14 dating (for up to 50,000 years) and potassium-argon dating (for older fossils). These are based on the decay rate of radioactive isotopes.",
@@ -413,10 +413,10 @@
       "ncertChapterName": "Evolution",
       "question": "Which of the following is the direct ancestor of modern humans?",
       "options": [
-        "D) Australopithecus",
-        "A) Homo habilis",
-        "C) Homo sapiens sapiens",
-        "B) Homo erectus"
+        "Australopithecus",
+        "Homo habilis",
+        "Homo sapiens sapiens",
+        "Homo erectus"
       ],
       "correctAnswer": "C",
       "explanation": "Homo sapiens sapiens (modern humans) arose in Africa about 100,000-200,000 years ago. The evolutionary sequence includes Dryopithecus → Ramapithecus → Australopithecus → Homo habilis → Homo erectus → Homo sapiens.",
@@ -438,10 +438,10 @@
       "ncertChapterName": "Evolution",
       "question": "Stabilising selection:",
       "options": [
-        "C) Shifts the mean in one direction",
-        "A) Favours extreme phenotypes",
-        "B) Eliminates extreme phenotypes and favours the mean",
-        "D) Creates new species"
+        "Shifts the mean in one direction",
+        "Favours extreme phenotypes",
+        "Eliminates extreme phenotypes and favours the mean",
+        "Creates new species"
       ],
       "correctAnswer": "C",
       "explanation": "Stabilising selection eliminates extreme phenotypes and favours the average/mean phenotype. It reduces variation in the population without changing the mean. Example: human birth weight - very small or very large babies have lower survival.",
@@ -462,10 +462,10 @@
       "ncertChapterName": "Evolution",
       "question": "Lamarck proposed the theory of:",
       "options": [
-        "D) Genetic drift",
-        "A) Natural selection",
-        "C) Mutation",
-        "B) Inheritance of acquired characters"
+        "Genetic drift",
+        "Natural selection",
+        "Mutation",
+        "Inheritance of acquired characters"
       ],
       "correctAnswer": "D",
       "explanation": "Jean-Baptiste Lamarck proposed the theory of inheritance of acquired characters (Lamarckism). He suggested that organisms acquire new characters during their lifetime due to use/disuse and these are inherited by offspring. This theory was later disproved.",
@@ -487,10 +487,10 @@
       "ncertChapterName": "Evolution",
       "question": "Adaptive radiation on an isolated island is also called:",
       "options": [
-        "C) Macro-evolution",
-        "D) Divergent evolution",
-        "B) Micro-evolution",
-        "A) Convergent evolution"
+        "Macro-evolution",
+        "Divergent evolution",
+        "Micro-evolution",
+        "Convergent evolution"
       ],
       "correctAnswer": "B",
       "explanation": "Adaptive radiation on an isolated island is a form of divergent evolution where a single ancestral species diversifies into multiple species adapted to different ecological niches. Darwin's finches on Galapagos Islands is the classic example.",
@@ -512,10 +512,10 @@
       "ncertChapterName": "Evolution",
       "question": "The first life on Earth originated in:",
       "options": [
-        "B) Land",
-        "C) Water",
-        "A) Air",
-        "D) Rocks"
+        "Land",
+        "Water",
+        "Air",
+        "Rocks"
       ],
       "correctAnswer": "B",
       "explanation": "The first life on Earth is believed to have originated in water (oceans/seas). The primitive oceans served as a 'prebiotic soup' where organic molecules accumulated and eventually gave rise to the first living cells.",
@@ -537,10 +537,10 @@
       "ncertChapterName": "Evolution",
       "question": "The founder effect occurs when:",
       "options": [
-        "C) All members of a population die",
-        "D) Mutation rate increases",
-        "A) A large population divides equally",
-        "B) A small group colonises a new area"
+        "All members of a population die",
+        "Mutation rate increases",
+        "A large population divides equally",
+        "A small group colonises a new area"
       ],
       "correctAnswer": "D",
       "explanation": "The founder effect occurs when a small group of individuals colonises a new geographic area. This small founding population may not represent the full genetic diversity of the original population, leading to different allele frequencies.",
@@ -562,10 +562,10 @@
       "ncertChapterName": "Evolution",
       "question": "Embryological evidence for evolution was provided by:",
       "options": [
-        "B) Ernst von Baer",
-        "C) Lamarck",
-        "A) Darwin",
-        "D) Mendel"
+        "Ernst von Baer",
+        "Lamarck",
+        "Darwin",
+        "Mendel"
       ],
       "correctAnswer": "A",
       "explanation": "Ernst von Baer provided embryological evidence for evolution. He showed that embryos of different vertebrates look remarkably similar in early stages of development, suggesting common ancestry (Von Baer's law).",
@@ -587,10 +587,10 @@
       "ncertChapterName": "Evolution",
       "question": "The connecting link between reptiles and birds is:",
       "options": [
-        "D) Peripatus",
-        "B) Archaeopteryx",
-        "A) Platypus",
-        "C) Lungfish"
+        "Peripatus",
+        "Archaeopteryx",
+        "Platypus",
+        "Lungfish"
       ],
       "correctAnswer": "B",
       "explanation": "Archaeopteryx is the connecting link between reptiles and birds. It had features of both: reptilian features (teeth, clawed wings, long tail) and bird-like features (feathers, beak, wings).",
@@ -612,10 +612,10 @@
       "ncertChapterName": "Evolution",
       "question": "Reproductive isolation is important for:",
       "options": [
-        "D) Reducing mutations",
-        "C) Increasing gene flow",
-        "A) Stopping evolution",
-        "B) Speciation"
+        "Reducing mutations",
+        "Increasing gene flow",
+        "Stopping evolution",
+        "Speciation"
       ],
       "correctAnswer": "D",
       "explanation": "Reproductive isolation is essential for speciation. When populations become reproductively isolated (cannot interbreed), they evolve independently and eventually become distinct species.",
@@ -637,10 +637,10 @@
       "ncertChapterName": "Evolution",
       "question": "Directional selection shifts the mean phenotype:",
       "options": [
-        "D) Does not change the mean",
-        "C) In both directions",
-        "B) In one particular direction",
-        "A) Towards the centre"
+        "Does not change the mean",
+        "In both directions",
+        "In one particular direction",
+        "Towards the centre"
       ],
       "correctAnswer": "C",
       "explanation": "Directional selection shifts the mean phenotype in one particular direction, favouring individuals at one extreme of the phenotypic range. This occurs when environmental conditions change, favouring a new phenotype.",
@@ -661,10 +661,10 @@
       "ncertChapterName": "Evolution",
       "question": "Which of the following is a living fossil?",
       "options": [
-        "B) Limulus (king crab)",
-        "D) Frog",
-        "C) Pigeon",
-        "A) Dog"
+        "Limulus (king crab)",
+        "Frog",
+        "Pigeon",
+        "Dog"
       ],
       "correctAnswer": "A",
       "explanation": "Limulus (king crab) is a living fossil that has remained essentially unchanged for millions of years. Other examples include coelacanth, Ginkgo biloba, Sphenodon (tuatara), and Neopilina.",
@@ -686,10 +686,10 @@
       "ncertChapterName": "Evolution",
       "question": "The wings of birds and wings of insects are:",
       "options": [
-        "D) Atavistic organs",
-        "A) Homologous organs",
-        "C) Vestigial organs",
-        "B) Analogous organs"
+        "Atavistic organs",
+        "Homologous organs",
+        "Vestigial organs",
+        "Analogous organs"
       ],
       "correctAnswer": "D",
       "explanation": "Wings of birds and wings of insects are analogous organs. They perform the same function (flight) but have different structural origins and developmental patterns, indicating convergent evolution.",
@@ -711,10 +711,10 @@
       "ncertChapterName": "Evolution",
       "question": "The theory of panspermia suggests that:",
       "options": [
-        "C) Life was created by God",
-        "B) Life came from space",
-        "D) Life arose from non-living matter",
-        "A) Life originated on Earth"
+        "Life was created by God",
+        "Life came from space",
+        "Life arose from non-living matter",
+        "Life originated on Earth"
       ],
       "correctAnswer": "B",
       "explanation": "The theory of panspermia (cosmozoic theory) suggests that life came to Earth from outer space, possibly through meteorites carrying spores or microorganisms. Early supporters included Richter and Arrhenius.",
@@ -736,10 +736,10 @@
       "ncertChapterName": "Evolution",
       "question": "Australian marsupials and placental mammals show:",
       "options": [
-        "A) Convergent evolution",
-        "D) Co-evolution",
-        "B) Divergent evolution",
-        "C) Parallel evolution"
+        "Convergent evolution",
+        "Co-evolution",
+        "Divergent evolution",
+        "Parallel evolution"
       ],
       "correctAnswer": "A",
       "explanation": "Australian marsupials and placental mammals on other continents show convergent evolution. They evolved similar adaptations independently (e.g., marsupial mole vs placental mole) due to similar ecological niches.",
@@ -761,10 +761,10 @@
       "ncertChapterName": "Evolution",
       "question": "Homo erectus was characterised by:",
       "options": [
-        "C) Cave paintings",
-        "A) Large cranial capacity (1400 cc)",
-        "B) Upright posture and use of fire",
-        "D) Agriculture"
+        "Cave paintings",
+        "Large cranial capacity (1400 cc)",
+        "Upright posture and use of fire",
+        "Agriculture"
       ],
       "correctAnswer": "C",
       "explanation": "Homo erectus ('upright man') was characterised by erect posture, use of stone tools, and probably the first to use fire. Their cranial capacity was about 900 cc. They lived approximately 1.5 million years ago.",
@@ -786,10 +786,10 @@
       "ncertChapterName": "Evolution",
       "question": "Neanderthal man had:",
       "options": [
-        "C) No tools",
-        "D) No burial practices",
-        "B) Cranial capacity of about 1400 cc",
-        "A) Cranial capacity of 500 cc"
+        "No tools",
+        "No burial practices",
+        "Cranial capacity of about 1400 cc",
+        "Cranial capacity of 500 cc"
       ],
       "correctAnswer": "C",
       "explanation": "Neanderthal man (Homo sapiens neanderthalensis) had a large cranial capacity of about 1400 cc (similar to modern humans). They used tools, lived in caves, had burial practices, and used animal hides for clothing.",
@@ -811,10 +811,10 @@
       "ncertChapterName": "Evolution",
       "question": "Biogeographical evidence for evolution includes:",
       "options": [
-        "A) Presence of similar fossils on different continents",
-        "D) DNA sequence comparisons",
-        "C) Distribution of species across continents and islands",
-        "B) Embryological similarities"
+        "Presence of similar fossils on different continents",
+        "DNA sequence comparisons",
+        "Distribution of species across continents and islands",
+        "Embryological similarities"
       ],
       "correctAnswer": "C",
       "explanation": "Biogeographical evidence for evolution involves the study of the distribution of species across geographical regions. Island species resembling mainland species and continent-specific fauna support evolution theory.",
@@ -836,10 +836,10 @@
       "ncertChapterName": "Evolution",
       "question": "The primitive atmosphere of Earth lacked:",
       "options": [
-        "D) Water vapour",
-        "C) Free oxygen",
-        "B) Ammonia",
-        "A) Methane"
+        "Water vapour",
+        "Free oxygen",
+        "Ammonia",
+        "Methane"
       ],
       "correctAnswer": "B",
       "explanation": "The primitive atmosphere of Earth was reducing and lacked free oxygen (O2). It contained methane (CH4), ammonia (NH3), hydrogen (H2), and water vapour (H2O). Oxygen accumulated later due to photosynthesis by cyanobacteria.",
@@ -861,10 +861,10 @@
       "ncertChapterName": "Evolution",
       "question": "Which scientist performed experiments to disprove the theory of spontaneous generation?",
       "options": [
-        "D) Lamarck",
-        "C) Mendel",
-        "B) Pasteur",
-        "A) Darwin"
+        "Lamarck",
+        "Mendel",
+        "Pasteur",
+        "Darwin"
       ],
       "correctAnswer": "C",
       "explanation": "Louis Pasteur disproved the theory of spontaneous generation through his famous swan-neck flask experiment (1859). He showed that life arises only from pre-existing life (biogenesis), not from non-living matter spontaneously.",
@@ -886,10 +886,10 @@
       "ncertChapterName": "Evolution",
       "question": "Comparative anatomy provides evidence of evolution through:",
       "options": [
-        "A) Study of fossil record only",
-        "B) Comparison of structures in different organisms",
-        "D) Protein analysis",
-        "C) DNA sequencing"
+        "Study of fossil record only",
+        "Comparison of structures in different organisms",
+        "Protein analysis",
+        "DNA sequencing"
       ],
       "correctAnswer": "B",
       "explanation": "Comparative anatomy provides evidence for evolution by comparing structural similarities and differences between organisms. Homologous organs, analogous organs, and vestigial organs all provide anatomical evidence for evolution.",
@@ -911,10 +911,10 @@
       "ncertChapterName": "Evolution",
       "question": "The first cellular form of life was likely:",
       "options": [
-        "A) An aerobic eukaryote",
-        "D) A multicellular organism",
-        "B) An anaerobic prokaryote",
-        "C) A photosynthetic organism"
+        "An aerobic eukaryote",
+        "A multicellular organism",
+        "An anaerobic prokaryote",
+        "A photosynthetic organism"
       ],
       "correctAnswer": "C",
       "explanation": "The first cellular life forms were likely anaerobic prokaryotes because the primitive atmosphere lacked free oxygen. These early cells were heterotrophic and obtained energy from organic molecules in the 'prebiotic soup'.",
@@ -936,10 +936,10 @@
       "ncertChapterName": "Evolution",
       "question": "Cro-Magnon man is classified as:",
       "options": [
-        "C) Homo sapiens sapiens",
-        "D) Homo sapiens neanderthalensis",
-        "B) Homo erectus",
-        "A) Homo habilis"
+        "Homo sapiens sapiens",
+        "Homo sapiens neanderthalensis",
+        "Homo erectus",
+        "Homo habilis"
       ],
       "correctAnswer": "A",
       "explanation": "Cro-Magnon man is classified as Homo sapiens sapiens (modern humans). They had a cranial capacity of about 1650 cc, made cave paintings, and are anatomically modern humans who lived about 30,000-40,000 years ago.",
@@ -961,10 +961,10 @@
       "ncertChapterName": "Evolution",
       "question": "Which factor is NOT required for Hardy-Weinberg equilibrium?",
       "options": [
-        "C) Natural selection",
-        "B) Random mating",
-        "D) No mutation",
-        "A) Large population"
+        "Natural selection",
+        "Random mating",
+        "No mutation",
+        "Large population"
       ],
       "correctAnswer": "A",
       "explanation": "Natural selection is NOT required for Hardy-Weinberg equilibrium; in fact, it must be ABSENT. The conditions for equilibrium are: large population, random mating, no mutation, no gene flow (migration), and no natural selection.",
@@ -986,10 +986,10 @@
       "ncertChapterName": "Evolution",
       "question": "Assertion (A): Darwin's finches on the Galapagos Islands show adaptive radiation.\nReason (R): A single ancestral species diversified into multiple species with different beak types.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and R explains A. Darwin's finches evolved from a common ancestor into different species with varied beak shapes adapted to different food sources (seeds, insects, fruits), a classic example of adaptive radiation.",
@@ -1011,10 +1011,10 @@
       "ncertChapterName": "Evolution",
       "question": "Assertion (A): Genetic drift can lead to loss of alleles.\nReason (R): In small populations, random events can eliminate certain alleles completely.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and R explains A. In small populations, genetic drift (random fluctuation) can cause some alleles to be completely lost and others to be fixed. This is particularly important in founder and bottleneck effects.",
@@ -1036,10 +1036,10 @@
       "ncertChapterName": "Evolution",
       "question": "Assertion (A): Homologous organs have similar structure but different functions.\nReason (R): Homologous organs develop from the same embryonic origin.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and R explains A. Homologous organs share the same structural plan and embryonic origin but may perform different functions (e.g., forelimbs of whales, bats, horses, humans). This indicates divergent evolution from a common ancestor.",
@@ -1061,10 +1061,10 @@
       "ncertChapterName": "Evolution",
       "question": "Assertion (A): The theory of spontaneous generation was disproved by Louis Pasteur.\nReason (R): Pasteur used swan-necked flasks to show that life comes from pre-existing life.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and R explains A. Pasteur showed that broth in swan-necked flasks did not develop microorganisms because airborne spores were trapped in the neck, proving biogenesis.",
@@ -1086,10 +1086,10 @@
       "ncertChapterName": "Evolution",
       "question": "Assertion (A): Variations are essential for evolution.\nReason (R): Without variation, natural selection has no raw material to act upon.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and R explains A. Heritable variations provide the raw material for natural selection. Without variation, all individuals would be equally fit and there would be no differential survival or reproduction.",
@@ -1111,10 +1111,10 @@
       "ncertChapterName": "Evolution",
       "question": "Assertion (A): Industrial melanism demonstrates natural selection in action.\nReason (R): Dark-coloured moths had better camouflage on soot-covered tree trunks.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and R explains A. During the Industrial Revolution, dark (melanic) moths were better camouflaged on polluted, soot-covered trees, giving them a survival advantage over light-coloured moths.",
@@ -1136,10 +1136,10 @@
       "ncertChapterName": "Evolution",
       "question": "Assertion (A): Mutations are the ultimate source of genetic variation.\nReason (R): Mutations create new alleles that did not previously exist in the population.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and R explains A. Mutations are the only source of completely new genetic information. They create new alleles that can be acted upon by natural selection, providing the raw material for evolution.",
@@ -1161,10 +1161,10 @@
       "ncertChapterName": "Evolution",
       "question": "Assertion (A): Vestigial organs are fully functional in organisms.\nReason (R): Vestigial organs are degenerate or underdeveloped organs that were functional in ancestors.",
       "options": [
-        "D) Both A and R are false",
-        "C) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are false",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "Assertion is false - vestigial organs are NOT fully functional. Reason is true - they are degenerate organs that were functional in ancestral organisms. Examples include the human appendix, coccyx, and wisdom teeth.",
@@ -1185,10 +1185,10 @@
       "ncertChapterName": "Evolution",
       "question": "Assertion (A): Allopatric speciation requires geographical barriers.\nReason (R): Geographical barriers prevent gene flow between populations.",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and R explains A. Allopatric speciation occurs when populations are geographically separated (by mountains, rivers, oceans). The barrier prevents gene flow, allowing independent evolution into different species.",
@@ -1210,10 +1210,10 @@
       "ncertChapterName": "Evolution",
       "question": "Assertion (A): Miller and Urey experiment proved that life can be created in the laboratory.\nReason (R): They synthesised amino acids from simple inorganic molecules.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) Both A and R are false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is false but R is true"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "D",
       "explanation": "Assertion is false - Miller and Urey did NOT create life; they only synthesised organic molecules (amino acids). Reason is true - they demonstrated that amino acids could form from inorganic gases under simulated primitive Earth conditions.",
@@ -1235,10 +1235,10 @@
       "ncertChapterName": "Evolution",
       "question": "Assertion (A): Coacervates were the precursors of the first living cells.\nReason (R): Coacervates are colloidal droplets with a lipid bilayer that can absorb molecules from the environment.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true. Coacervates were proposed by Oparin as precursors to living cells. However, the reason does not precisely explain the assertion. While coacervates can absorb molecules, they are not exactly bound by lipid bilayers like modern cell membranes.",
@@ -1260,10 +1260,10 @@
       "ncertChapterName": "Evolution",
       "question": "Assertion (A): Lamarckism was rejected.\nReason (R): Acquired characters are not heritable because they do not change the DNA of germ cells.",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and R explains A. Lamarck's theory of inheritance of acquired characters was rejected because acquired characters (like muscular build) do not alter the DNA in germ cells, so they cannot be passed to offspring.",
@@ -1285,10 +1285,10 @@
       "ncertChapterName": "Evolution",
       "question": "Consider the following about Hardy-Weinberg equilibrium:\n(i) Allele frequencies remain constant over generations.\n(ii) It requires large, randomly mating population.\n(iii) Gene flow must be present.\n(iv) No natural selection should operate.\nWhich are correct?",
       "options": [
-        "C) (i) and (ii) only",
-        "B) All are correct",
-        "A) (i), (ii), and (iv) only",
-        "D) (i), (ii), and (iii) only"
+        "(i) and (ii) only",
+        "All are correct",
+        "(i), (ii), and (iv) only",
+        "(i), (ii), and (iii) only"
       ],
       "correctAnswer": "C",
       "explanation": "(i), (ii), and (iv) are correct. (iii) is incorrect because gene flow must be ABSENT for Hardy-Weinberg equilibrium. Gene flow changes allele frequencies and disrupts equilibrium.",
@@ -1310,10 +1310,10 @@
       "ncertChapterName": "Evolution",
       "question": "Read the statements:\nStatement I: Evolution is a stochastic process based on chance events.\nStatement II: Natural selection is the only directed evolutionary force.",
       "options": [
-        "A) Both statements are correct",
-        "B) Only statement I is correct",
-        "C) Only statement II is correct",
-        "D) Both are incorrect"
+        "Both statements are correct",
+        "Only statement I is correct",
+        "Only statement II is correct",
+        "Both are incorrect"
       ],
       "correctAnswer": "A",
       "explanation": "Both are correct. Evolution involves random events (mutations, genetic drift) making it stochastic. However, natural selection is directional and non-random, favouring individuals with higher fitness.",
@@ -1335,10 +1335,10 @@
       "ncertChapterName": "Evolution",
       "question": "Which of the following about human evolution is INCORRECT?\n(i) Australopithecus was the first to walk erect.\n(ii) Homo habilis had the largest brain.\n(iii) Homo erectus probably used fire.\n(iv) Neanderthals had a cranial capacity of about 1400 cc.",
       "options": [
-        "C) (i) and (ii)",
-        "B) (i) only",
-        "A) (ii) only",
-        "D) (iii) only"
+        "(i) and (ii)",
+        "(i) only",
+        "(ii) only",
+        "(iii) only"
       ],
       "correctAnswer": "C",
       "explanation": "Statement (ii) is incorrect. Homo habilis did NOT have the largest brain. Modern humans (Homo sapiens) and Neanderthals have the largest cranial capacity (~1400-1650 cc). Homo habilis had about 650-800 cc.",
@@ -1359,10 +1359,10 @@
       "ncertChapterName": "Evolution",
       "question": "Consider the following:\n(i) Fossils provide direct evidence for evolution.\n(ii) Molecular evidence compares DNA and protein sequences.\n(iii) Homologous organs indicate convergent evolution.\n(iv) Analogous organs indicate convergent evolution.\nWhich are correct?",
       "options": [
-        "C) (i) and (ii) only",
-        "B) All are correct",
-        "A) (i), (ii), and (iv) only",
-        "D) (i), (ii), and (iii) only"
+        "(i) and (ii) only",
+        "All are correct",
+        "(i), (ii), and (iv) only",
+        "(i), (ii), and (iii) only"
       ],
       "correctAnswer": "C",
       "explanation": "(i), (ii), and (iv) are correct. (iii) is incorrect because homologous organs indicate DIVERGENT evolution (from common ancestor), not convergent evolution. Analogous organs indicate convergent evolution.",
@@ -1383,10 +1383,10 @@
       "ncertChapterName": "Evolution",
       "question": "Read the following:\nStatement I: Mutation theory of Hugo de Vries suggests evolution by large mutations (saltation).\nStatement II: Darwin believed in small, continuous variations for evolution.",
       "options": [
-        "D) Both are incorrect",
-        "B) Only statement I is correct",
-        "A) Both statements are correct",
-        "C) Only statement II is correct"
+        "Both are incorrect",
+        "Only statement I is correct",
+        "Both statements are correct",
+        "Only statement II is correct"
       ],
       "correctAnswer": "C",
       "explanation": "Both are correct. Hugo de Vries believed in evolution through sudden large mutations (saltation/macromutation) based on his work with Oenothera. Darwin, however, believed in gradual evolution through accumulation of small, continuous variations.",
@@ -1408,10 +1408,10 @@
       "ncertChapterName": "Evolution",
       "question": "Consider the following:\n(i) Stabilising selection reduces variation.\n(ii) Directional selection shifts the mean.\n(iii) Disruptive selection eliminates the mean phenotype.\n(iv) All three types increase population fitness.\nWhich are correct?",
       "options": [
-        "A) All are correct",
-        "B) (i), (ii), and (iii) only",
-        "C) (i) and (ii) only",
-        "D) (ii) and (iii) only"
+        "All are correct",
+        "(i), (ii), and (iii) only",
+        "(i) and (ii) only",
+        "(ii) and (iii) only"
       ],
       "correctAnswer": "A",
       "explanation": "All four statements are correct. Stabilising selection reduces variation by favouring the mean. Directional selection shifts the mean. Disruptive selection eliminates mean phenotypes, favouring extremes. All types ultimately increase population fitness.",
@@ -1432,10 +1432,10 @@
       "ncertChapterName": "Evolution",
       "question": "Read the statements:\nStatement I: Convergent evolution produces analogous structures.\nStatement II: Divergent evolution produces homologous structures.",
       "options": [
-        "B) Only statement I is correct",
-        "C) Only statement II is correct",
-        "A) Both statements are correct",
-        "D) Both are incorrect"
+        "Only statement I is correct",
+        "Only statement II is correct",
+        "Both statements are correct",
+        "Both are incorrect"
       ],
       "correctAnswer": "C",
       "explanation": "Both are correct. Convergent evolution leads to similar adaptations in unrelated organisms (analogous structures, like wings of birds and insects). Divergent evolution leads to different adaptations from a common ancestor (homologous structures).",
@@ -1457,10 +1457,10 @@
       "ncertChapterName": "Evolution",
       "question": "Consider the following about speciation:\n(i) Allopatric speciation requires geographical isolation.\n(ii) Sympatric speciation occurs without geographical isolation.\n(iii) Reproductive isolation is essential for speciation.\n(iv) Gene flow promotes speciation.\nWhich are correct?",
       "options": [
-        "A) (i), (ii), and (iii) only",
-        "B) All are correct",
-        "C) (i) and (iii) only",
-        "D) (i), (ii), and (iv) only"
+        "(i), (ii), and (iii) only",
+        "All are correct",
+        "(i) and (iii) only",
+        "(i), (ii), and (iv) only"
       ],
       "correctAnswer": "A",
       "explanation": "(i), (ii), and (iii) are correct. (iv) is incorrect because gene flow PREVENTS speciation by maintaining genetic similarity between populations.",
@@ -1482,10 +1482,10 @@
       "ncertChapterName": "Evolution",
       "question": "Match Column I (Type of selection) with Column II (Effect):\nColumn I: (P) Stabilising, (Q) Directional, (R) Disruptive\nColumn II: (i) Favours both extremes, (ii) Favours one extreme, (iii) Favours the mean",
       "options": [
-        "C) P-i, Q-ii, R-iii",
-        "B) P-ii, Q-iii, R-i",
-        "A) P-iii, Q-ii, R-i",
-        "D) P-iii, Q-i, R-ii"
+        "P-i, Q-ii, R-iii",
+        "P-ii, Q-iii, R-i",
+        "P-iii, Q-ii, R-i",
+        "P-iii, Q-i, R-ii"
       ],
       "correctAnswer": "C",
       "explanation": "Stabilising selection favours the mean (iii), Directional selection favours one extreme (ii), Disruptive selection favours both extremes (i).",
@@ -1507,10 +1507,10 @@
       "ncertChapterName": "Evolution",
       "question": "Match Column I (Scientist) with Column II (Contribution):\nColumn I: (P) Darwin, (Q) Lamarck, (R) Hugo de Vries, (S) Oparin\nColumn II: (i) Inheritance of acquired characters, (ii) Natural selection, (iii) Chemical evolution, (iv) Mutation theory",
       "options": [
-        "D) P-iii, Q-i, R-iv, S-ii",
-        "A) P-ii, Q-i, R-iv, S-iii",
-        "C) P-ii, Q-iv, R-i, S-iii",
-        "B) P-i, Q-ii, R-iv, S-iii"
+        "P-iii, Q-i, R-iv, S-ii",
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-i, Q-ii, R-iv, S-iii"
       ],
       "correctAnswer": "B",
       "explanation": "Darwin - Natural selection (ii), Lamarck - Inheritance of acquired characters (i), Hugo de Vries - Mutation theory (iv), Oparin - Chemical evolution/origin of life (iii).",
@@ -1533,10 +1533,10 @@
       "ncertChapterName": "Evolution",
       "question": "Match Column I (Hominin) with Column II (Feature):\nColumn I: (P) Australopithecus, (Q) Homo habilis, (R) Homo erectus, (S) Homo sapiens\nColumn II: (i) Brain 1400 cc, modern human, (ii) Brain 900 cc, used fire, (iii) Brain 650-800 cc, tool maker, (iv) First bipedal ape-man",
       "options": [
-        "D) P-i, Q-iii, R-ii, S-iv",
-        "B) P-iii, Q-iv, R-ii, S-i",
-        "C) P-iv, Q-ii, R-iii, S-i",
-        "A) P-iv, Q-iii, R-ii, S-i"
+        "P-i, Q-iii, R-ii, S-iv",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-iv, Q-ii, R-iii, S-i",
+        "P-iv, Q-iii, R-ii, S-i"
       ],
       "correctAnswer": "D",
       "explanation": "Australopithecus - first bipedal (iv), Homo habilis - brain 650-800 cc, first toolmaker (iii), Homo erectus - brain 900 cc, used fire (ii), Homo sapiens - brain 1400 cc, modern (i).",
@@ -1558,10 +1558,10 @@
       "ncertChapterName": "Evolution",
       "question": "Match Column I (Evidence) with Column II (Type):\nColumn I: (P) Fossils, (Q) Homologous organs, (R) DNA similarity, (S) Embryo similarity\nColumn II: (i) Embryological, (ii) Molecular, (iii) Palaeontological, (iv) Anatomical",
       "options": [
-        "C) P-iii, Q-ii, R-iv, S-i",
-        "A) P-iii, Q-iv, R-ii, S-i",
-        "D) P-i, Q-iv, R-ii, S-iii",
-        "B) P-iv, Q-iii, R-ii, S-i"
+        "P-iii, Q-ii, R-iv, S-i",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-i, Q-iv, R-ii, S-iii",
+        "P-iv, Q-iii, R-ii, S-i"
       ],
       "correctAnswer": "B",
       "explanation": "Fossils - Palaeontological evidence (iii), Homologous organs - Anatomical evidence (iv), DNA similarity - Molecular evidence (ii), Embryo similarity - Embryological evidence (i).",
@@ -1583,10 +1583,10 @@
       "ncertChapterName": "Evolution",
       "question": "Match Column I (Connecting link) with Column II (Groups connected):\nColumn I: (P) Archaeopteryx, (Q) Peripatus, (R) Platypus, (S) Lungfish\nColumn II: (i) Fish and amphibians, (ii) Reptiles and mammals, (iii) Reptiles and birds, (iv) Annelids and arthropods",
       "options": [
-        "D) P-ii, Q-iv, R-iii, S-i",
-        "B) P-iv, Q-iii, R-ii, S-i",
-        "A) P-iii, Q-iv, R-ii, S-i",
-        "C) P-iii, Q-ii, R-iv, S-i"
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-iv, Q-iii, R-ii, S-i",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-iii, Q-ii, R-iv, S-i"
       ],
       "correctAnswer": "C",
       "explanation": "Archaeopteryx connects reptiles and birds (iii), Peripatus connects annelids and arthropods (iv), Platypus connects reptiles and mammals (ii), Lungfish connects fish and amphibians (i).",
@@ -1608,10 +1608,10 @@
       "ncertChapterName": "Evolution",
       "question": "Match Column I (Term) with Column II (Definition):\nColumn I: (P) Adaptive radiation, (Q) Genetic drift, (R) Gene flow, (S) Founder effect\nColumn II: (i) Migration of alleles between populations, (ii) Random allele frequency changes in small populations, (iii) Diversification from single ancestor, (iv) Small colonising group with limited genetic diversity",
       "options": [
-        "A) P-iii, Q-ii, R-i, S-iv",
-        "D) P-iv, Q-ii, R-i, S-iii",
-        "C) P-iii, Q-i, R-ii, S-iv",
-        "B) P-ii, Q-iii, R-i, S-iv"
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-iv, Q-ii, R-i, S-iii",
+        "P-iii, Q-i, R-ii, S-iv",
+        "P-ii, Q-iii, R-i, S-iv"
       ],
       "correctAnswer": "A",
       "explanation": "Adaptive radiation - diversification from single ancestor (iii), Genetic drift - random allele frequency changes (ii), Gene flow - migration of alleles (i), Founder effect - small colonising group (iv).",
@@ -1633,10 +1633,10 @@
       "ncertChapterName": "Evolution",
       "question": "Match Column I with Column II:\nColumn I: (P) Analogous organs, (Q) Homologous organs, (R) Vestigial organs, (S) Atavistic organs\nColumn II: (i) Degenerate, non-functional remnants, (ii) Different origin, similar function, (iii) Same origin, different function, (iv) Reappearance of ancestral characters",
       "options": [
-        "A) P-ii, Q-iii, R-i, S-iv",
-        "D) P-iv, Q-iii, R-i, S-ii",
-        "B) P-iii, Q-ii, R-i, S-iv",
-        "C) P-ii, Q-i, R-iii, S-iv"
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-iv, Q-iii, R-i, S-ii",
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-ii, Q-i, R-iii, S-iv"
       ],
       "correctAnswer": "A",
       "explanation": "Analogous organs - different origin, similar function (ii), Homologous organs - same origin, different function (iii), Vestigial organs - degenerate remnants (i), Atavistic organs - reappearance of ancestral characters (iv).",
@@ -1658,10 +1658,10 @@
       "ncertChapterName": "Evolution",
       "question": "How many factors can disturb Hardy-Weinberg equilibrium from the following?\nNatural selection, Mutation, Gene flow, Genetic drift, Non-random mating, Large population size",
       "options": [
-        "C) Five",
-        "A) Three",
-        "D) Six",
-        "B) Four"
+        "Five",
+        "Three",
+        "Six",
+        "Four"
       ],
       "correctAnswer": "A",
       "explanation": "Five factors disturb Hardy-Weinberg equilibrium: Natural selection, Mutation, Gene flow, Genetic drift, and Non-random mating. Large population size is a condition that MAINTAINS equilibrium, not disrupts it.",
@@ -1684,10 +1684,10 @@
       "ncertChapterName": "Evolution",
       "question": "How many of the following are homologous organs?\nForelimb of whale, Wing of bat, Leg of horse, Arm of human, Wing of butterfly",
       "options": [
-        "B) Three",
-        "A) Two",
-        "C) Four",
-        "D) Five"
+        "Three",
+        "Two",
+        "Four",
+        "Five"
       ],
       "correctAnswer": "C",
       "explanation": "Four are homologous: Forelimb of whale, Wing of bat, Leg of horse, and Arm of human. All have the same basic pentadactyl limb structure. Wing of butterfly has a completely different origin (insect exoskeleton).",
@@ -1709,10 +1709,10 @@
       "ncertChapterName": "Evolution",
       "question": "How many of the following are vestigial organs in humans?\nVermiform appendix, Coccyx, Wisdom teeth, Nictitating membrane, Heart, Ear pinna muscles",
       "options": [
-        "C) Five",
-        "A) Three",
-        "B) Four",
-        "D) Six"
+        "Five",
+        "Three",
+        "Four",
+        "Six"
       ],
       "correctAnswer": "A",
       "explanation": "Five are vestigial organs: Vermiform appendix, Coccyx (tail bone), Wisdom teeth, Nictitating membrane (plica semilunaris), and Ear pinna muscles. Heart is a fully functional organ.",
@@ -1734,10 +1734,10 @@
       "ncertChapterName": "Evolution",
       "question": "How many types of natural selection are there?",
       "options": [
-        "B) Two",
-        "D) Four",
-        "C) Three",
-        "A) One"
+        "Two",
+        "Four",
+        "Three",
+        "One"
       ],
       "correctAnswer": "C",
       "explanation": "There are three main types of natural selection: Stabilising selection (favours mean), Directional selection (favours one extreme), and Disruptive selection (favours both extremes).",
@@ -1759,10 +1759,10 @@
       "ncertChapterName": "Evolution",
       "question": "How many of the following are connecting links?\nArchaeopteryx, Peripatus, Platypus, Lungfish, Dog, Cat",
       "options": [
-        "D) Five",
-        "B) Three",
-        "C) Four",
-        "A) Two"
+        "Five",
+        "Three",
+        "Four",
+        "Two"
       ],
       "correctAnswer": "C",
       "explanation": "Four are connecting links: Archaeopteryx (reptiles-birds), Peripatus (annelids-arthropods), Platypus (reptiles-mammals), and Lungfish (fish-amphibians). Dog and Cat are not connecting links.",
@@ -1784,10 +1784,10 @@
       "ncertChapterName": "Evolution",
       "question": "How many of the following are evidences for evolution?\nFossils, Comparative anatomy, Embryology, Molecular biology, Biogeography, Astrology",
       "options": [
-        "A) Three",
-        "C) Five",
-        "D) Six",
-        "B) Four"
+        "Three",
+        "Five",
+        "Six",
+        "Four"
       ],
       "correctAnswer": "B",
       "explanation": "Five are evidences for evolution: Fossils (palaeontological), Comparative anatomy, Embryology, Molecular biology, and Biogeography. Astrology is not a scientific evidence for evolution.",
@@ -1809,10 +1809,10 @@
       "ncertChapterName": "Evolution",
       "question": "How many of the following gases were present in the primitive Earth atmosphere according to the Oparin-Haldane hypothesis?\nMethane, Ammonia, Hydrogen, Oxygen, Water vapour, Nitrogen",
       "options": [
-        "A) Three",
-        "D) Six",
-        "C) Five",
-        "B) Four"
+        "Three",
+        "Six",
+        "Five",
+        "Four"
       ],
       "correctAnswer": "D",
       "explanation": "Four gases were present: Methane (CH4), Ammonia (NH3), Hydrogen (H2), and Water vapour (H2O). Free oxygen was ABSENT in the primitive atmosphere. Nitrogen was present but in small amounts.",
@@ -1834,10 +1834,10 @@
       "ncertChapterName": "Evolution",
       "question": "How many amino acids were synthesised in the Miller-Urey experiment?",
       "options": [
-        "A) 5",
-        "D) 20",
-        "B) 10",
-        "C) About 15"
+        "5",
+        "20",
+        "10",
+        "About 15"
       ],
       "correctAnswer": "D",
       "explanation": "Miller and Urey synthesised about 15 different amino acids along with other simple organic molecules like sugars in their experiment simulating primitive Earth conditions.",
@@ -1860,10 +1860,10 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following in correct chronological order of human evolution:\n(i) Homo sapiens\n(ii) Australopithecus\n(iii) Homo habilis\n(iv) Homo erectus\n(v) Dryopithecus",
       "options": [
-        "B) ii → v → iii → iv → i",
-        "A) v → ii → iii → iv → i",
-        "C) v → iii → ii → iv → i",
-        "D) v → ii → iv → iii → i"
+        "ii → v → iii → iv → i",
+        "v → ii → iii → iv → i",
+        "v → iii → ii → iv → i",
+        "v → ii → iv → iii → i"
       ],
       "correctAnswer": "B",
       "explanation": "Correct chronological order: Dryopithecus (ancestor ape) → Australopithecus (first bipedal) → Homo habilis (tool maker) → Homo erectus (fire user) → Homo sapiens (modern human).",
@@ -1885,10 +1885,10 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following theories/concepts in chronological order:\n(i) Natural selection by Darwin\n(ii) Lamarckism\n(iii) Mutation theory by de Vries\n(iv) Hardy-Weinberg principle",
       "options": [
-        "A) ii → i → iii → iv",
-        "D) iii → ii → i → iv",
-        "B) i → ii → iii → iv",
-        "C) ii → iii → i → iv"
+        "ii → i → iii → iv",
+        "iii → ii → i → iv",
+        "i → ii → iii → iv",
+        "ii → iii → i → iv"
       ],
       "correctAnswer": "A",
       "explanation": "Chronological order: Lamarckism (1809) → Natural selection by Darwin (1859) → Mutation theory by de Vries (1901) → Hardy-Weinberg principle (1908).",
@@ -1910,10 +1910,10 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following events in the history of life on Earth in correct order:\n(i) Origin of photosynthetic organisms\n(ii) Chemical evolution\n(iii) Origin of multicellular organisms\n(iv) First cellular life\n(v) Accumulation of oxygen in atmosphere",
       "options": [
-        "C) ii → i → iv → v → iii",
-        "A) ii → iv → i → v → iii",
-        "B) iv → ii → i → v → iii",
-        "D) ii → iv → v → i → iii"
+        "ii → i → iv → v → iii",
+        "ii → iv → i → v → iii",
+        "iv → ii → i → v → iii",
+        "ii → iv → v → i → iii"
       ],
       "correctAnswer": "B",
       "explanation": "Correct order: Chemical evolution → First cellular life (anaerobic prokaryotes) → Origin of photosynthetic organisms (cyanobacteria) → Accumulation of oxygen → Origin of multicellular organisms.",
@@ -1935,10 +1935,10 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following geological eras from oldest to most recent:\n(i) Mesozoic\n(ii) Palaeozoic\n(iii) Cenozoic\n(iv) Precambrian",
       "options": [
-        "D) iii → i → ii → iv",
-        "B) ii → iv → i → iii",
-        "A) iv → ii → i → iii",
-        "C) iv → i → ii → iii"
+        "iii → i → ii → iv",
+        "ii → iv → i → iii",
+        "iv → ii → i → iii",
+        "iv → i → ii → iii"
       ],
       "correctAnswer": "C",
       "explanation": "From oldest to most recent: Precambrian (4600-542 MYA) → Palaeozoic (542-251 MYA) → Mesozoic (251-66 MYA) → Cenozoic (66 MYA-present). Cenozoic is the 'Age of Mammals'.",
@@ -1960,10 +1960,10 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following steps of speciation in correct order:\n(i) Formation of new species\n(ii) Geographical isolation\n(iii) Accumulation of genetic differences\n(iv) Reproductive isolation\n(v) Natural selection in different environments",
       "options": [
-        "C) ii → iii → v → iv → i",
-        "B) v → ii → iii → iv → i",
-        "D) ii → v → iv → iii → i",
-        "A) ii → v → iii → iv → i"
+        "ii → iii → v → iv → i",
+        "v → ii → iii → iv → i",
+        "ii → v → iv → iii → i",
+        "ii → v → iii → iv → i"
       ],
       "correctAnswer": "D",
       "explanation": "Correct order: Geographical isolation → Natural selection in different environments → Accumulation of genetic differences → Reproductive isolation → Formation of new species.",
@@ -1985,10 +1985,10 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following concepts about origin of life in the order they were proposed:\n(i) Biogenesis\n(ii) Spontaneous generation\n(iii) Chemical evolution\n(iv) Panspermia",
       "options": [
-        "C) ii → iv → i → iii",
-        "A) ii → i → iv → iii",
-        "B) i → ii → iv → iii",
-        "D) ii → i → iii → iv"
+        "ii → iv → i → iii",
+        "ii → i → iv → iii",
+        "i → ii → iv → iii",
+        "ii → i → iii → iv"
       ],
       "correctAnswer": "B",
       "explanation": "Historical order: Spontaneous generation (ancient belief) → Biogenesis by Pasteur (1859) → Panspermia by Richter/Arrhenius (late 1800s) → Chemical evolution by Oparin/Haldane (1920s-1930s).",
@@ -2011,10 +2011,10 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following stages of chemical evolution in correct order:\n(i) Formation of complex organic molecules\n(ii) Formation of simple organic molecules\n(iii) Formation of protocells\n(iv) Formation of first living cell\n(v) Inorganic molecules in primitive atmosphere",
       "options": [
-        "D) v → ii → iii → i → iv",
-        "A) v → ii → i → iii → iv",
-        "C) v → i → ii → iii → iv",
-        "B) ii → v → i → iii → iv"
+        "v → ii → iii → i → iv",
+        "v → ii → i → iii → iv",
+        "v → i → ii → iii → iv",
+        "ii → v → i → iii → iv"
       ],
       "correctAnswer": "B",
       "explanation": "Correct order: Inorganic molecules → Simple organic molecules (amino acids, sugars) → Complex organic molecules (proteins, nucleic acids) → Protocells (coacervates/microspheres) → First living cell.",

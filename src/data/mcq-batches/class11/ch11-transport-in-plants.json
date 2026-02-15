@@ -15,10 +15,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Which of the following is a passive process that does not require expenditure of energy?",
       "options": [
-        "B) Active transport",
-        "C) Endocytosis",
-        "D) Sodium-potassium pump",
-        "A) Diffusion"
+        "Active transport",
+        "Endocytosis",
+        "Sodium-potassium pump",
+        "Diffusion"
       ],
       "correctAnswer": "D",
       "explanation": "Diffusion is a passive process where molecules move from a region of higher concentration to a region of lower concentration without the expenditure of metabolic energy.",
@@ -40,10 +40,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Water potential of pure water at standard temperature and pressure is:",
       "options": [
-        "B) Zero",
-        "A) +1 bar",
-        "D) Infinite",
-        "C) -1 bar"
+        "Zero",
+        "+1 bar",
+        "Infinite",
+        "-1 bar"
       ],
       "correctAnswer": "A",
       "explanation": "The water potential of pure water at standard temperature and pressure is taken as zero. Addition of solute to water decreases (makes more negative) its water potential.",
@@ -65,10 +65,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "The process by which water is absorbed by solids like colloids causing them to increase in volume is called:",
       "options": [
-        "B) Imbibition",
-        "A) Osmosis",
-        "C) Diffusion",
-        "D) Plasmolysis"
+        "Imbibition",
+        "Osmosis",
+        "Diffusion",
+        "Plasmolysis"
       ],
       "correctAnswer": "A",
       "explanation": "Imbibition is the adsorption of water by hydrophilic colloids (such as cell wall, starch, proteins) causing an increase in their volume. It is a special type of diffusion.",
@@ -90,10 +90,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Osmosis is the movement of water molecules from:",
       "options": [
-        "B) Lower water potential to higher water potential through a semipermeable membrane",
-        "D) Equal concentration on both sides",
-        "A) Higher water potential to lower water potential through a semipermeable membrane",
-        "C) Higher solute concentration to lower solute concentration"
+        "Lower water potential to higher water potential through a semipermeable membrane",
+        "Equal concentration on both sides",
+        "Higher water potential to lower water potential through a semipermeable membrane",
+        "Higher solute concentration to lower solute concentration"
       ],
       "correctAnswer": "C",
       "explanation": "Osmosis is defined as the diffusion of water molecules across a semipermeable membrane from a region of higher water potential (less negative) to a region of lower water potential (more negative).",
@@ -116,10 +116,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "The shrinkage of protoplasm from the cell wall when placed in a hypertonic solution is called:",
       "options": [
-        "B) Cytolysis",
-        "A) Deplasmolysis",
-        "C) Plasmolysis",
-        "D) Turgidity"
+        "Cytolysis",
+        "Deplasmolysis",
+        "Plasmolysis",
+        "Turgidity"
       ],
       "correctAnswer": "C",
       "explanation": "Plasmolysis is the shrinkage of the protoplast from the cell wall when a living plant cell is placed in a hypertonic solution. Water moves out of the cell by exosmosis causing the plasma membrane to pull away from the cell wall.",
@@ -141,10 +141,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "The Casparian strip is present in the:",
       "options": [
-        "B) Endodermis",
-        "A) Epidermis",
-        "D) Cortex",
-        "C) Pericycle"
+        "Endodermis",
+        "Epidermis",
+        "Cortex",
+        "Pericycle"
       ],
       "correctAnswer": "A",
       "explanation": "The Casparian strip is a band of suberin deposited on the radial and tangential walls of endodermal cells in roots. It prevents the apoplastic movement of water and forces water to pass through the symplast.",
@@ -167,10 +167,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Guttation occurs through:",
       "options": [
-        "A) Stomata",
-        "B) Hydathodes",
-        "C) Lenticels",
-        "D) Cuticle"
+        "Stomata",
+        "Hydathodes",
+        "Lenticels",
+        "Cuticle"
       ],
       "correctAnswer": "B",
       "explanation": "Guttation is the loss of water in liquid form from special structures called hydathodes present at the tips or margins of leaves. It occurs when transpiration is low and root pressure is high.",
@@ -193,10 +193,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Which pathway involves movement of water through the cell walls and intercellular spaces without crossing any membrane?",
       "options": [
-        "B) Apoplast pathway",
-        "C) Vacuolar pathway",
-        "A) Symplast pathway",
-        "D) Transmembrane pathway"
+        "Apoplast pathway",
+        "Vacuolar pathway",
+        "Symplast pathway",
+        "Transmembrane pathway"
       ],
       "correctAnswer": "A",
       "explanation": "The apoplast pathway involves the movement of water through the cell walls, intercellular spaces, and the water-filled xylem elements without crossing any cell membrane. It is the path of least resistance.",
@@ -219,10 +219,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Transpiration pull theory is also known as:",
       "options": [
-        "B) Cohesion-tension theory",
-        "C) Vital force theory",
-        "D) Relay pump theory",
-        "A) Root pressure theory"
+        "Cohesion-tension theory",
+        "Vital force theory",
+        "Relay pump theory",
+        "Root pressure theory"
       ],
       "correctAnswer": "A",
       "explanation": "The transpiration pull theory, also called the cohesion-tension theory, was proposed by Dixon and Joly. It explains the ascent of sap through xylem based on transpiration pull, cohesion of water molecules, and adhesion to xylem walls.",
@@ -245,10 +245,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Which of the following factors does NOT affect the rate of transpiration?",
       "options": [
-        "B) Light",
-        "D) Wind speed",
-        "C) Soil pH",
-        "A) Temperature"
+        "Light",
+        "Wind speed",
+        "Soil pH",
+        "Temperature"
       ],
       "correctAnswer": "C",
       "explanation": "The rate of transpiration is affected by temperature, light, humidity, wind speed, and the number and distribution of stomata. Soil pH does not directly affect transpiration rate.",
@@ -270,10 +270,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "The pressure flow hypothesis for phloem transport was proposed by:",
       "options": [
-        "B) Munch",
-        "A) Dixon and Joly",
-        "C) Strasburger",
-        "D) Godlewski"
+        "Munch",
+        "Dixon and Joly",
+        "Strasburger",
+        "Godlewski"
       ],
       "correctAnswer": "A",
       "explanation": "The pressure flow or mass flow hypothesis was proposed by Ernst Munch (1930). According to this, the translocation of food in phloem occurs along a turgor pressure gradient from source (high pressure) to sink (low pressure).",
@@ -296,10 +296,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "The main driving force for water movement in the xylem of tall trees is:",
       "options": [
-        "D) Capillarity",
-        "A) Root pressure",
-        "B) Transpiration pull",
-        "C) Osmotic pressure"
+        "Capillarity",
+        "Root pressure",
+        "Transpiration pull",
+        "Osmotic pressure"
       ],
       "correctAnswer": "C",
       "explanation": "Transpiration pull is the main driving force for the ascent of sap in tall trees. It creates a negative pressure (tension) in the xylem which pulls water upward. Root pressure alone is insufficient to account for water transport in tall trees.",
@@ -322,10 +322,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "In symplast pathway, water moves through:",
       "options": [
-        "A) Cell walls and intercellular spaces",
-        "D) Phloem sieve tubes",
-        "C) Xylem vessels only",
-        "B) Plasmodesmata connections between cells"
+        "Cell walls and intercellular spaces",
+        "Phloem sieve tubes",
+        "Xylem vessels only",
+        "Plasmodesmata connections between cells"
       ],
       "correctAnswer": "D",
       "explanation": "In the symplast pathway, water moves from cell to cell through plasmodesmata, which are cytoplasmic connections between adjacent cells. Water passes through the cytoplasm of cells without entering the vacuole.",
@@ -348,10 +348,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Water potential is denoted by the Greek letter:",
       "options": [
-        "D) Omega (ω)",
-        "A) Psi (ψ)",
-        "C) Sigma (σ)",
-        "B) Phi (φ)"
+        "Omega (ω)",
+        "Psi (ψ)",
+        "Sigma (σ)",
+        "Phi (φ)"
       ],
       "correctAnswer": "B",
       "explanation": "Water potential is represented by the Greek letter psi (ψ). It represents the free energy associated with water. Water potential (ψw) = Solute potential (ψs) + Pressure potential (ψp).",
@@ -373,10 +373,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Which of the following is transported through phloem?",
       "options": [
-        "B) Sucrose and amino acids",
-        "C) Oxygen only",
-        "D) Carbon dioxide only",
-        "A) Water and minerals"
+        "Sucrose and amino acids",
+        "Oxygen only",
+        "Carbon dioxide only",
+        "Water and minerals"
       ],
       "correctAnswer": "A",
       "explanation": "Phloem transports organic solutes, primarily sucrose, along with amino acids, hormones, and other substances from source (leaves) to sink (roots, fruits, growing regions). This process is called translocation.",
@@ -399,10 +399,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Root pressure is maximum during:",
       "options": [
-        "A) Hot dry afternoon",
-        "C) Windy conditions",
-        "B) Early morning when transpiration is low",
-        "D) Bright sunlight"
+        "Hot dry afternoon",
+        "Windy conditions",
+        "Early morning when transpiration is low",
+        "Bright sunlight"
       ],
       "correctAnswer": "C",
       "explanation": "Root pressure is maximum in the early morning when transpiration rate is very low and soil is well-watered. Under these conditions, root cells actively pump ions into xylem, creating osmotic gradient that pulls water in.",
@@ -425,10 +425,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "The phenomenon of plasmolysis can be reversed by placing the plasmolysed cell in:",
       "options": [
-        "C) Hypotonic solution",
-        "B) Isotonic solution",
-        "D) Saturated salt solution",
-        "A) Hypertonic solution"
+        "Hypotonic solution",
+        "Isotonic solution",
+        "Saturated salt solution",
+        "Hypertonic solution"
       ],
       "correctAnswer": "A",
       "explanation": "Plasmolysis can be reversed (deplasmolysis) by placing the plasmolysed cell in a hypotonic solution. Water enters the cell by endosmosis, and the protoplast swells back to regain its normal shape.",
@@ -451,10 +451,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Facilitated diffusion requires:",
       "options": [
-        "D) Neither ATP nor carrier proteins",
-        "C) ATP but no carrier proteins",
-        "A) ATP and carrier proteins",
-        "B) Membrane transport proteins but no ATP"
+        "Neither ATP nor carrier proteins",
+        "ATP but no carrier proteins",
+        "ATP and carrier proteins",
+        "Membrane transport proteins but no ATP"
       ],
       "correctAnswer": "D",
       "explanation": "Facilitated diffusion is a passive process that requires specific membrane transport proteins (channel proteins or carrier proteins) to help molecules cross the membrane but does not require ATP or metabolic energy.",
@@ -477,10 +477,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Aquaporins are:",
       "options": [
-        "B) Mineral channels in root hair",
-        "D) Gas exchange pores in stomata",
-        "A) Water channels made of proteins in cell membranes",
-        "C) Sugar transport proteins in phloem"
+        "Mineral channels in root hair",
+        "Gas exchange pores in stomata",
+        "Water channels made of proteins in cell membranes",
+        "Sugar transport proteins in phloem"
       ],
       "correctAnswer": "C",
       "explanation": "Aquaporins are integral membrane proteins that form water-selective channels across the cell membrane. They facilitate the rapid movement of water molecules across the membrane by osmosis.",
@@ -503,10 +503,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Cohesion of water molecules is due to:",
       "options": [
-        "C) Covalent bonds",
-        "B) Hydrogen bonds between water molecules",
-        "D) Van der Waals forces",
-        "A) Ionic bonds"
+        "Covalent bonds",
+        "Hydrogen bonds between water molecules",
+        "Van der Waals forces",
+        "Ionic bonds"
       ],
       "correctAnswer": "B",
       "explanation": "The cohesion of water molecules is due to hydrogen bonding between water molecules. This strong mutual attraction enables water to form an unbroken continuous column in xylem vessels, which is essential for transpiration pull.",
@@ -529,10 +529,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "The water potential (ψw) equation is:",
       "options": [
-        "C) ψw = ψs × ψp",
-        "B) ψw = ψs - ψp",
-        "A) ψw = ψs + ψp",
-        "D) ψw = ψs / ψp"
+        "ψw = ψs × ψp",
+        "ψw = ψs - ψp",
+        "ψw = ψs + ψp",
+        "ψw = ψs / ψp"
       ],
       "correctAnswer": "C",
       "explanation": "Water potential (ψw) is the sum of solute potential (ψs) and pressure potential (ψp). For a typical plant cell, ψs is always negative while ψp is usually positive. In a flaccid cell, ψp = 0 and ψw = ψs.",
@@ -555,10 +555,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "In a fully turgid cell:",
       "options": [
-        "B) ψw = 0 and ψs = -ψp",
-        "A) ψw = ψs",
-        "D) ψs = 0",
-        "C) ψp = 0"
+        "ψw = 0 and ψs = -ψp",
+        "ψw = ψs",
+        "ψs = 0",
+        "ψp = 0"
       ],
       "correctAnswer": "A",
       "explanation": "In a fully turgid cell, water potential (ψw) equals zero because pressure potential (ψp) becomes equal and opposite to solute potential (ψs). Therefore, ψw = ψs + ψp = 0, meaning ψs = -ψp.",
@@ -581,10 +581,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Transpiration is useful because it:",
       "options": [
-        "C) Causes wilting of leaves",
-        "A) Creates transpiration pull for ascent of sap",
-        "B) Wastes water from the plant body",
-        "D) Reduces photosynthesis"
+        "Causes wilting of leaves",
+        "Creates transpiration pull for ascent of sap",
+        "Wastes water from the plant body",
+        "Reduces photosynthesis"
       ],
       "correctAnswer": "B",
       "explanation": "Transpiration is beneficial as it creates the transpiration pull which is the major driving force for the ascent of sap. It also helps in absorption and transport of minerals, cools the leaf surface, and maintains cell turgidity.",
@@ -607,10 +607,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Active transport across a biological membrane requires:",
       "options": [
-        "D) Neither ATP nor carrier proteins",
-        "A) ATP and carrier proteins",
-        "B) Only carrier proteins",
-        "C) Only ATP"
+        "Neither ATP nor carrier proteins",
+        "ATP and carrier proteins",
+        "Only carrier proteins",
+        "Only ATP"
       ],
       "correctAnswer": "B",
       "explanation": "Active transport involves the movement of molecules against the concentration gradient, which requires both metabolic energy (ATP) and specific carrier proteins (pumps). It is an uphill transport process.",
@@ -633,10 +633,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "The loading of sucrose into the sieve tube elements at the source is driven by:",
       "options": [
-        "C) Osmosis",
-        "A) Diffusion",
-        "D) Root pressure",
-        "B) Active transport using ATP"
+        "Osmosis",
+        "Diffusion",
+        "Root pressure",
+        "Active transport using ATP"
       ],
       "correctAnswer": "D",
       "explanation": "At the source (usually leaves), sucrose is actively loaded into the sieve tube elements using ATP by companion cells. This increases the osmotic pressure within the sieve tubes, drawing in water and creating hydrostatic pressure.",
@@ -659,10 +659,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Most of the transpiration in plants occurs through:",
       "options": [
-        "A) Cuticle",
-        "C) Stomata",
-        "B) Lenticels",
-        "D) Bark"
+        "Cuticle",
+        "Stomata",
+        "Lenticels",
+        "Bark"
       ],
       "correctAnswer": "B",
       "explanation": "About 90-95% of transpiration occurs through stomata (stomatal transpiration). Only a small amount occurs through cuticle (cuticular transpiration, 5-10%) and lenticels (lenticular transpiration, negligible).",
@@ -684,10 +684,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "The Casparian strip is chemically composed of:",
       "options": [
-        "A) Cellulose",
-        "C) Lignin",
-        "B) Suberin",
-        "D) Pectin"
+        "Cellulose",
+        "Lignin",
+        "Suberin",
+        "Pectin"
       ],
       "correctAnswer": "C",
       "explanation": "The Casparian strip is composed of suberin, a waxy hydrophobic substance. It is deposited on the radial and tangential walls of endodermal cells and acts as a barrier to the apoplastic flow of water and dissolved ions.",
@@ -710,10 +710,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Adhesion in the context of water transport refers to:",
       "options": [
-        "D) Attraction between solute and solvent",
-        "C) Repulsion between water molecules",
-        "B) Attraction between water molecules and the walls of xylem vessels",
-        "A) Attraction between water molecules"
+        "Attraction between solute and solvent",
+        "Repulsion between water molecules",
+        "Attraction between water molecules and the walls of xylem vessels",
+        "Attraction between water molecules"
       ],
       "correctAnswer": "C",
       "explanation": "Adhesion refers to the attraction between water molecules and the hydrophilic walls of xylem vessels and tracheids. Along with cohesion, adhesion helps maintain the continuous water column in the xylem.",
@@ -736,10 +736,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "In the mass flow hypothesis of phloem transport, flow occurs from:",
       "options": [
-        "A) Sink to source",
-        "D) Shoot to root only",
-        "C) Root to shoot only",
-        "B) Source to sink along a turgor pressure gradient"
+        "Sink to source",
+        "Shoot to root only",
+        "Root to shoot only",
+        "Source to sink along a turgor pressure gradient"
       ],
       "correctAnswer": "D",
       "explanation": "According to the mass flow hypothesis, phloem transport occurs from source (where sucrose is produced, e.g., leaves) to sink (where sucrose is used or stored, e.g., roots, fruits) along a turgor pressure gradient.",
@@ -762,10 +762,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Which of the following ions is absorbed by the root cells against the concentration gradient?",
       "options": [
-        "B) O2 into the leaf cells",
-        "A) K+ into the root cells",
-        "C) CO2 into the stomata",
-        "D) Water into root hair"
+        "O2 into the leaf cells",
+        "K+ into the root cells",
+        "CO2 into the stomata",
+        "Water into root hair"
       ],
       "correctAnswer": "B",
       "explanation": "Mineral ions like K+ are often absorbed by root cells against the concentration gradient through active transport, requiring ATP. This is essential because the concentration of minerals inside root cells is often higher than in the soil solution.",
@@ -788,10 +788,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Uniport, symport, and antiport are types of:",
       "options": [
-        "D) Respiratory enzymes",
-        "B) Membrane transport proteins",
-        "C) Photosynthetic reactions",
-        "A) Passive diffusion"
+        "Respiratory enzymes",
+        "Membrane transport proteins",
+        "Photosynthetic reactions",
+        "Passive diffusion"
       ],
       "correctAnswer": "B",
       "explanation": "Uniport (one molecule in one direction), symport (two molecules in same direction), and antiport (two molecules in opposite directions) are three types of carrier-mediated membrane transport mechanisms.",
@@ -815,10 +815,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "The solute potential is always:",
       "options": [
-        "D) Equal to pressure potential",
-        "A) Positive",
-        "C) Negative",
-        "B) Zero"
+        "Equal to pressure potential",
+        "Positive",
+        "Negative",
+        "Zero"
       ],
       "correctAnswer": "C",
       "explanation": "Solute potential (ψs) is always negative because addition of solutes to pure water always decreases its water potential. The more concentrated the solution, the more negative the solute potential.",
@@ -841,10 +841,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Which type of transport is exhibited by an electrochemical proton gradient driving molecules across the membrane?",
       "options": [
-        "B) Active transport",
-        "A) Simple diffusion",
-        "C) Osmosis",
-        "D) Imbibition"
+        "Active transport",
+        "Simple diffusion",
+        "Osmosis",
+        "Imbibition"
       ],
       "correctAnswer": "A",
       "explanation": "Active transport often relies on electrochemical proton gradients. Proton pumps create a H+ gradient across membranes, and this stored energy is used to drive the transport of other molecules against their concentration gradient.",
@@ -867,10 +867,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "The wilting of plants occurs when:",
       "options": [
-        "A) Rate of transpiration exceeds rate of water absorption",
-        "C) Photosynthesis rate is high",
-        "B) Rate of absorption exceeds rate of transpiration",
-        "D) Root pressure increases"
+        "Rate of transpiration exceeds rate of water absorption",
+        "Photosynthesis rate is high",
+        "Rate of absorption exceeds rate of transpiration",
+        "Root pressure increases"
       ],
       "correctAnswer": "A",
       "explanation": "Wilting occurs when the rate of transpiration exceeds the rate of water absorption by roots. This results in loss of turgor pressure in the cells, causing the plant to droop and the leaves to wilt.",
@@ -893,10 +893,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "The proton pump in plant cell membranes transports:",
       "options": [
-        "A) Na+ ions outside the cell",
-        "D) Ca2+ ions into the vacuole",
-        "B) H+ ions to the outer surface of the membrane",
-        "C) K+ ions into the cell"
+        "Na+ ions outside the cell",
+        "Ca2+ ions into the vacuole",
+        "H+ ions to the outer surface of the membrane",
+        "K+ ions into the cell"
       ],
       "correctAnswer": "C",
       "explanation": "In plant cells, the proton pump (H+-ATPase) actively pumps H+ ions from the cytoplasm to the outer surface of the membrane, creating an electrochemical gradient. This gradient drives secondary active transport of other substances.",
@@ -919,10 +919,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Phloem transport is described as bidirectional because:",
       "options": [
-        "B) Sucrose can move upward to growing shoot tips and downward to roots",
-        "C) Xylem and phloem are side by side",
-        "D) Transpiration and guttation occur simultaneously",
-        "A) Water and minerals move in both directions"
+        "Sucrose can move upward to growing shoot tips and downward to roots",
+        "Xylem and phloem are side by side",
+        "Transpiration and guttation occur simultaneously",
+        "Water and minerals move in both directions"
       ],
       "correctAnswer": "A",
       "explanation": "Phloem transport is bidirectional because food can be transported both upward (to growing shoot tips, developing fruits) and downward (to roots for storage). The direction depends on the relative positions of source and sink.",
@@ -945,10 +945,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "A plant cell placed in an isotonic solution will:",
       "options": [
-        "B) Become plasmolysed",
-        "A) Become turgid",
-        "C) Show no net movement of water",
-        "D) Burst open"
+        "Become plasmolysed",
+        "Become turgid",
+        "Show no net movement of water",
+        "Burst open"
       ],
       "correctAnswer": "C",
       "explanation": "In an isotonic solution, the external solution has the same water potential as the cell sap. There is no net movement of water across the membrane, so the cell remains flaccid (neither turgid nor plasmolysed).",
@@ -971,10 +971,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Long distance transport of water in plants occurs through:",
       "options": [
-        "C) Cortex",
-        "A) Phloem",
-        "D) Epidermis",
-        "B) Xylem"
+        "Cortex",
+        "Phloem",
+        "Epidermis",
+        "Xylem"
       ],
       "correctAnswer": "D",
       "explanation": "Long distance transport of water and dissolved minerals in plants occurs through the xylem tissue (xylem vessels and tracheids). This is also called translocation. The driving forces are root pressure and transpiration pull.",
@@ -997,10 +997,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Stomatal opening is closely linked to the turgidity of:",
       "options": [
-        "B) Guard cells",
-        "D) Mesophyll cells",
-        "A) Epidermal cells",
-        "C) Subsidiary cells"
+        "Guard cells",
+        "Mesophyll cells",
+        "Epidermal cells",
+        "Subsidiary cells"
       ],
       "correctAnswer": "A",
       "explanation": "Stomatal opening depends on the turgor pressure of guard cells. When guard cells become turgid (due to K+ influx and water uptake), the stomata open. When they lose turgor, the stomata close.",
@@ -1023,10 +1023,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): Root pressure alone cannot account for the ascent of sap in tall trees.\nReason (R): Root pressure can push water up to only a few metres and is not found in all plants.",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both assertion and reason are correct, and the reason correctly explains the assertion. Root pressure generates only about 2 atm pressure, sufficient for pushing water to only a few metres. Many gymnosperm and tall trees lack root pressure, making transpiration pull the main driving force.",
@@ -1049,10 +1049,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): Plasmolysis occurs when a plant cell is placed in a hypertonic solution.\nReason (R): Water moves out of the cell by exosmosis causing the protoplast to shrink away from the cell wall.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both assertion and reason are true, and the reason correctly explains the assertion. In a hypertonic solution, the external concentration is higher, causing water to move out of the cell (exosmosis), leading to shrinkage of the protoplast from the cell wall (plasmolysis).",
@@ -1075,10 +1075,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): Diffusion is very important in plants as it is the only means for gaseous movement within the plant body.\nReason (R): Plants do not have any specialized system for transport of gases.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "Both assertion and reason are true, and the reason explains the assertion. Unlike animals, plants lack a specialized gas transport system. Therefore, diffusion through stomata, lenticels, and intercellular spaces is the main mechanism for gaseous exchange in plants.",
@@ -1101,10 +1101,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): The solute potential of a cell sap is always negative.\nReason (R): The addition of solute to pure water always increases the water potential.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "The assertion is true because adding solutes to pure water always decreases the water potential (makes it more negative), hence solute potential is always negative. The reason is false because addition of solute decreases (not increases) the water potential.",
@@ -1127,10 +1127,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): Guttation occurs during early morning hours.\nReason (R): Root pressure is high and transpiration rate is low during early morning.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. Guttation occurs in the early morning when root pressure is high due to active ion absorption and transpiration is minimal due to high humidity and low temperature, forcing water out through hydathodes.",
@@ -1153,10 +1153,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): The apoplast pathway is blocked at the endodermis.\nReason (R): The Casparian strip made of suberin prevents water movement through the cell walls of the endodermis.",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are correct and the reason explains the assertion. The Casparian strip is a band of suberin on the radial and tangential walls of endodermal cells. It blocks the apoplastic pathway, forcing water and minerals to pass through the symplast of endodermal cells.",
@@ -1179,10 +1179,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): Transpiration is a necessary evil.\nReason (R): Transpiration helps in ascent of sap but also causes significant water loss from the plant.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. Curtis called transpiration a 'necessary evil' because while it provides the driving force for water transport and mineral absorption, it leads to enormous water loss (about 98% of water absorbed is lost through transpiration).",
@@ -1205,10 +1205,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): Phloem transport requires metabolic energy.\nReason (R): Loading of sucrose into sieve tubes at the source requires ATP from companion cells.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. Phloem transport is an active process. Companion cells provide ATP for the active loading of sucrose into sieve tube elements at the source. This creates the pressure gradient needed for mass flow.",
@@ -1231,10 +1231,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): Xylem transport of water is unidirectional.\nReason (R): Xylem vessels are dead cells that conduct water only from roots to shoots.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true but the reason does not correctly explain the assertion. Xylem transport is unidirectional (upward) because the driving force (transpiration pull) acts from leaves, but this is not because xylem cells are dead. Even living tracheids in ferns conduct water upward.",
@@ -1257,10 +1257,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): Facilitated diffusion is highly selective.\nReason (R): Facilitated diffusion requires specific membrane proteins that only allow certain molecules to pass.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason correctly explains the assertion. Facilitated diffusion uses specific channel or carrier proteins with particular binding sites, making the process highly selective for specific molecules like glucose, amino acids, or ions.",
@@ -1283,10 +1283,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): Imbibition is a special type of diffusion.\nReason (R): The movement of water in imbibition is along a concentration gradient.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. Imbibition involves movement of water into hydrophilic substances (like seed coats, cell walls) along a concentration gradient from higher to lower water potential. Hence it is considered a special type of diffusion.",
@@ -1309,10 +1309,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): Water moves from the soil into the root xylem along a water potential gradient.\nReason (R): The water potential progressively decreases from the soil to the root cortex to the endodermis to the xylem.",
       "options": [
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. Water moves along a gradient of decreasing water potential: soil (least negative) → root hair → cortex → endodermis → pericycle → xylem (most negative). This gradient is maintained by transpiration pull.",
@@ -1335,10 +1335,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): Transpiration helps in the absorption and upward movement of water and minerals from roots to leaves.\nReason (R): Transpiration pull creates a suction force that pulls water upward through the xylem.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason correctly explains the assertion. Transpiration from leaf mesophyll cells creates a pull (negative pressure or tension) in the xylem. This transpiration pull draws water upward from the roots through the xylem, also facilitating mineral absorption.",
@@ -1361,10 +1361,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): A cell at incipient plasmolysis has zero pressure potential.\nReason (R): At incipient plasmolysis, the protoplast just begins to pull away from the cell wall.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. At incipient plasmolysis, the protoplast just begins to separate from the cell wall, meaning the wall no longer exerts any pressure on the protoplast. Therefore, pressure potential (ψp) = 0, and ψw = ψs.",
@@ -1387,10 +1387,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Consider the following statements about diffusion:\nI. It is a slow process and not suitable for long distance transport.\nII. It is dependent on the concentration gradient.\nIII. It requires ATP as an energy source.\nIV. The rate of diffusion is affected by temperature.\nWhich of the above statements are correct?",
       "options": [
-        "C) II, III and IV only",
-        "D) I and III only",
-        "B) I, II, III and IV",
-        "A) I, II and IV only"
+        "II, III and IV only",
+        "I and III only",
+        "I, II, III and IV",
+        "I, II and IV only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I, II and IV are correct. Diffusion is a slow passive process that depends on the concentration gradient and is affected by temperature (higher temperature increases kinetic energy). Statement III is incorrect because diffusion is a passive process that does not require ATP.",
@@ -1413,10 +1413,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Which of the following statements about osmosis is/are correct?\nI. Osmosis requires a semipermeable membrane.\nII. Osmosis can occur without a membrane.\nIII. Water moves from higher water potential to lower water potential.\nIV. Osmosis is a special case of diffusion.",
       "options": [
-        "B) I, III and IV only",
-        "A) I and II only",
-        "D) I, II, III and IV",
-        "C) II and III only"
+        "I, III and IV only",
+        "I and II only",
+        "I, II, III and IV",
+        "II and III only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, III and IV are correct. Osmosis is a special type of diffusion of water across a semipermeable membrane from a region of higher water potential to lower water potential. Statement II is incorrect as a semipermeable membrane is essential for osmosis.",
@@ -1439,10 +1439,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Read the following statements about transpiration:\nI. Stomatal transpiration accounts for about 90-95% of total transpiration.\nII. Cuticular transpiration is significant in herbaceous plants.\nIII. Transpiration rate decreases with increase in wind speed.\nIV. High humidity reduces transpiration rate.\nSelect the correct statements:",
       "options": [
-        "A) I and IV only",
-        "D) All are correct",
-        "C) I, III and IV only",
-        "B) I, II and IV only"
+        "I and IV only",
+        "All are correct",
+        "I, III and IV only",
+        "I, II and IV only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I, II and IV are correct. Stomatal transpiration accounts for 90-95% of total water loss. Cuticular transpiration is more significant in herbaceous plants with thin cuticles. High humidity reduces the diffusion gradient and decreases transpiration. Statement III is incorrect; moderate wind increases transpiration by removing humid air around leaves.",
@@ -1465,10 +1465,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Which of the following statements regarding the cohesion-tension theory are correct?\nI. Transpiration provides the driving force.\nII. Cohesion is due to hydrogen bonding between water molecules.\nIII. Adhesion is the attraction between water and xylem wall.\nIV. This theory was proposed by Strasburger.\nSelect the correct option:",
       "options": [
-        "A) I, II and III only",
-        "D) I and IV only",
-        "C) II, III and IV only",
-        "B) I, II, III and IV"
+        "I, II and III only",
+        "I and IV only",
+        "II, III and IV only",
+        "I, II, III and IV"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, II and III are correct. The cohesion-tension theory (proposed by Dixon and Joly, not Strasburger) explains ascent of sap. Transpiration creates tension, cohesion (H-bonding) holds water molecules together, and adhesion keeps the water column attached to xylem walls. Statement IV is incorrect.",
@@ -1491,10 +1491,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Consider the following statements about phloem transport:\nI. The main form of sugar transported is sucrose.\nII. Phloem sap also contains hormones and amino acids.\nIII. Sieve tube elements are dead at maturity.\nIV. Companion cells help in the loading of sucrose.\nWhich statements are correct?",
       "options": [
-        "B) I, II and IV only",
-        "C) I, III and IV only",
-        "A) I, II and III only",
-        "D) All are correct"
+        "I, II and IV only",
+        "I, III and IV only",
+        "I, II and III only",
+        "All are correct"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, II and IV are correct. Sucrose is the main transported sugar; phloem sap also carries amino acids, hormones, and other substances; companion cells aid in active loading of sucrose. Statement III is incorrect because sieve tube elements are living cells (though they lack a nucleus at maturity).",
@@ -1517,10 +1517,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Which of the following statements about water potential is/are INCORRECT?\nI. Water potential of pure water is zero.\nII. Solute potential is always positive.\nIII. Pressure potential in a turgid cell is positive.\nIV. In a fully turgid cell, water potential equals zero.",
       "options": [
-        "A) II only",
-        "C) II and III only",
-        "D) III and IV only",
-        "B) I and II only"
+        "II only",
+        "II and III only",
+        "III and IV only",
+        "I and II only"
       ],
       "correctAnswer": "A",
       "explanation": "Only statement II is incorrect. Solute potential is always negative (not positive) because dissolved solutes reduce the free energy of water. Statements I, III and IV are all correct: pure water has ψw = 0, pressure potential is positive in turgid cells, and ψw = 0 in a fully turgid cell.",
@@ -1543,10 +1543,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Select the correct statements about root pressure:\nI. Root pressure is responsible for guttation.\nII. Root pressure provides the main driving force for water transport in tall trees.\nIII. Root pressure develops due to active absorption of mineral ions by root cells.\nIV. Root pressure is positive pressure developed in xylem sap of roots.",
       "options": [
-        "B) I, II and III only",
-        "D) All are correct",
-        "A) I, III and IV only",
-        "C) II, III and IV only"
+        "I, II and III only",
+        "All are correct",
+        "I, III and IV only",
+        "II, III and IV only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements I, III and IV are correct. Root pressure causes guttation, develops due to active ion absorption creating osmotic gradient, and is a positive hydrostatic pressure in root xylem. Statement II is incorrect because root pressure is insufficient for water transport in tall trees; transpiration pull is the main force.",
@@ -1569,10 +1569,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Consider the following statements about facilitated diffusion:\nI. It is faster than simple diffusion.\nII. It requires membrane transport proteins.\nIII. It is sensitive to inhibitors.\nIV. It requires direct input of ATP.\nWhich statements are correct?",
       "options": [
-        "C) I and II only",
-        "A) I, II and III only",
-        "B) I, II, III and IV",
-        "D) II and IV only"
+        "I and II only",
+        "I, II and III only",
+        "I, II, III and IV",
+        "II and IV only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements I, II and III are correct. Facilitated diffusion is faster than simple diffusion, requires specific transport proteins, and can be inhibited by molecules that block the transport proteins. Statement IV is incorrect; facilitated diffusion is a passive process that does not require ATP.",
@@ -1595,10 +1595,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Read the following statements and identify the INCORRECT one:\nI. The apoplast pathway does not involve crossing any cell membrane.\nII. The symplast pathway involves movement through plasmodesmata.\nIII. The apoplast pathway is faster than the symplast pathway.\nIV. The apoplast pathway is not affected by the metabolic state of the cell.",
       "options": [
-        "B) Only IV is incorrect",
-        "D) I and III are incorrect",
-        "A) All statements are correct",
-        "C) Only I is incorrect"
+        "Only IV is incorrect",
+        "I and III are incorrect",
+        "All statements are correct",
+        "Only I is incorrect"
       ],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. The apoplast pathway moves water through cell walls without crossing membranes (I), the symplast uses plasmodesmata (II), apoplast is faster as it doesn't cross membranes (III), and since apoplast doesn't involve living cytoplasm, it's independent of cell metabolism (IV).",
@@ -1621,10 +1621,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Which of the following statements about mass flow in phloem are correct?\nI. It is also called pressure flow hypothesis.\nII. The flow occurs from higher osmotic pressure to lower osmotic pressure.\nIII. It was proposed by Ernst Munch.\nIV. It can be demonstrated by a simple physical model using osmometers.",
       "options": [
-        "A) I and III only",
-        "D) II and IV only",
-        "B) I, III and IV only",
-        "C) I, II, III and IV"
+        "I and III only",
+        "II and IV only",
+        "I, III and IV only",
+        "I, II, III and IV"
       ],
       "correctAnswer": "D",
       "explanation": "All four statements are correct. The mass flow (pressure flow) hypothesis was proposed by Munch. Sucrose loading at source creates high osmotic pressure, water enters by osmosis creating turgor, and bulk flow occurs to sink (lower osmotic pressure). The Munch model using osmometers demonstrates this.",
@@ -1647,10 +1647,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Consider the following statements:\nI. Imbibition pressure can be remarkably high (e.g., splitting of rocks by swelling seeds).\nII. Imbibition requires an affinity between the adsorbent and the liquid.\nIII. Imbibition plays a role in the germination of seeds.\nIV. Imbibition is an endothermic process.\nSelect the correct statements:",
       "options": [
-        "D) II and IV only",
-        "A) I, II and III only",
-        "B) I, II, III and IV",
-        "C) I and III only"
+        "II and IV only",
+        "I, II and III only",
+        "I, II, III and IV",
+        "I and III only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements I, II and III are correct. Imbibition generates enormous pressure (seeds can crack rocks), requires affinity between adsorbent and liquid (e.g., cellulose with water), and is essential for seed germination. Statement IV is incorrect; imbibition is an exothermic process (heat is released).",
@@ -1673,10 +1673,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Read the following statements about the significance of transpiration:\nI. Creates transpiration pull for water transport.\nII. Helps in cooling the leaf surface.\nIII. Helps in absorption and transport of mineral salts.\nIV. Maintains shape and structure of plants through turgidity.\nHow many of the above statements are correct?",
       "options": [
-        "C) Only three",
-        "A) Only one",
-        "D) All four",
-        "B) Only two"
+        "Only three",
+        "Only one",
+        "All four",
+        "Only two"
       ],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. Transpiration (I) creates the pull for ascent of sap, (II) provides evaporative cooling to leaves, (III) facilitates mineral absorption and transport since minerals travel with the transpiration stream, and (IV) the continuous water supply maintains turgidity of cells.",
@@ -1699,10 +1699,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Which of the following statements about active transport are correct?\nI. It requires metabolic energy in the form of ATP.\nII. It moves substances against the concentration gradient.\nIII. It is carried out by specific carrier proteins called pumps.\nIV. It shows saturation kinetics.\nSelect the correct option:",
       "options": [
-        "A) I and II only",
-        "D) II, III and IV only",
-        "B) I, II and III only",
-        "C) I, II, III and IV"
+        "I and II only",
+        "II, III and IV only",
+        "I, II and III only",
+        "I, II, III and IV"
       ],
       "correctAnswer": "D",
       "explanation": "All four statements are correct. Active transport requires ATP, moves molecules against concentration gradient (uphill), uses specific pump proteins (e.g., proton pumps), and shows saturation kinetics because the number of carrier proteins is limited.",
@@ -1726,10 +1726,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Consider the following about plasmolysis:\nI. It occurs in dead cells.\nII. It is a reversible process.\nIII. It can be used to determine the osmotic potential of cell sap.\nIV. It occurs when the cell is placed in a hypertonic solution.\nWhich statements are correct?",
       "options": [
-        "C) I and III only",
-        "D) All are correct",
-        "B) I, II and IV only",
-        "A) II, III and IV only"
+        "I and III only",
+        "All are correct",
+        "I, II and IV only",
+        "II, III and IV only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements II, III and IV are correct. Plasmolysis is reversible (deplasmolysis in hypotonic solution), can measure osmotic potential of cells (at incipient plasmolysis, ψs can be determined), and occurs in hypertonic solutions. Statement I is incorrect; plasmolysis occurs only in living cells with intact semipermeable membranes.",
@@ -1752,10 +1752,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following transport processes with their characteristics:\nColumn I: (P) Diffusion (Q) Osmosis (R) Active transport (S) Facilitated diffusion\nColumn II: (i) Requires ATP and carrier proteins (ii) Movement of water through semipermeable membrane (iii) Requires transport proteins but no ATP (iv) No membrane or protein required",
       "options": [
-        "C) P-iv, Q-ii, R-iii, S-i",
-        "B) P-ii, Q-iv, R-iii, S-i",
-        "D) P-iii, Q-ii, R-i, S-iv",
-        "A) P-iv, Q-ii, R-i, S-iii"
+        "P-iv, Q-ii, R-iii, S-i",
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-iv, Q-ii, R-i, S-iii"
       ],
       "correctAnswer": "D",
       "explanation": "Diffusion (P-iv) is passive movement along concentration gradient requiring no membrane proteins or ATP. Osmosis (Q-ii) is water movement through semipermeable membrane. Active transport (R-i) requires both ATP and carrier proteins. Facilitated diffusion (S-iii) requires transport proteins but not ATP.",
@@ -1779,10 +1779,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following terms with their correct descriptions:\nColumn I: (P) Apoplast (Q) Symplast (R) Casparian strip (S) Plasmodesmata\nColumn II: (i) Cytoplasmic connections between cells (ii) Movement through cell walls and intercellular spaces (iii) Suberin band on endodermal walls (iv) Movement through connected cytoplasms",
       "options": [
-        "A) P-ii, Q-iv, R-iii, S-i",
-        "B) P-iv, Q-ii, R-i, S-iii",
-        "D) P-iv, Q-ii, R-iii, S-i",
-        "C) P-ii, Q-iv, R-i, S-iii"
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-iv, Q-ii, R-i, S-iii",
+        "P-iv, Q-ii, R-iii, S-i",
+        "P-ii, Q-iv, R-i, S-iii"
       ],
       "correctAnswer": "A",
       "explanation": "Apoplast (P-ii) is the pathway through cell walls and intercellular spaces. Symplast (Q-iv) involves movement through interconnected cytoplasm. Casparian strip (R-iii) is a suberin band in endodermal walls. Plasmodesmata (S-i) are cytoplasmic connections linking adjacent cells.",
@@ -1806,10 +1806,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following water relations terms with their values in a fully turgid cell:\nColumn I: (P) Water potential (ψw) (Q) Solute potential (ψs) (R) Pressure potential (ψp) (S) Wall pressure\nColumn II: (i) Zero (ii) Negative (iii) Positive and equal in magnitude to ψs (iv) Equal and opposite to turgor pressure",
       "options": [
-        "B) P-ii, Q-i, R-iii, S-iv",
-        "D) P-iii, Q-ii, R-i, S-iv",
-        "C) P-i, Q-iii, R-ii, S-iv",
-        "A) P-i, Q-ii, R-iii, S-iv"
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-i, Q-iii, R-ii, S-iv",
+        "P-i, Q-ii, R-iii, S-iv"
       ],
       "correctAnswer": "D",
       "explanation": "In a fully turgid cell: water potential (P-i) = 0, solute potential (Q-ii) is always negative, pressure potential (R-iii) is positive and equal in magnitude to solute potential (so they cancel out), and wall pressure (S-iv) is equal and opposite to turgor pressure.",
@@ -1832,10 +1832,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following types of transpiration with their percentage contribution:\nColumn I: (P) Stomatal transpiration (Q) Cuticular transpiration (R) Lenticular transpiration\nColumn II: (i) 90-95% (ii) 5-10% (iii) Very small (negligible)",
       "options": [
-        "D) P-iii, Q-ii, R-i",
-        "B) P-ii, Q-i, R-iii",
-        "A) P-i, Q-ii, R-iii",
-        "C) P-i, Q-iii, R-ii"
+        "P-iii, Q-ii, R-i",
+        "P-ii, Q-i, R-iii",
+        "P-i, Q-ii, R-iii",
+        "P-i, Q-iii, R-ii"
       ],
       "correctAnswer": "C",
       "explanation": "Stomatal transpiration (P-i) accounts for 90-95% of total transpiration. Cuticular transpiration (Q-ii) contributes about 5-10%. Lenticular transpiration (R-iii) through lenticels is negligible in amount.",
@@ -1858,10 +1858,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the scientists with their contributions:\nColumn I: (P) Dixon and Joly (Q) Ernst Munch (R) J.C. Bose (S) Strasburger\nColumn II: (i) Mass flow hypothesis of phloem transport (ii) Cohesion-tension theory (iii) Role of living cells in ascent of sap (iv) Demonstrated xylem transport occurs in dead tissue",
       "options": [
-        "D) P-iv, Q-i, R-ii, S-iii",
-        "A) P-ii, Q-i, R-iii, S-iv",
-        "C) P-ii, Q-iv, R-iii, S-i",
-        "B) P-i, Q-ii, R-iv, S-iii"
+        "P-iv, Q-i, R-ii, S-iii",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-i, Q-ii, R-iv, S-iii"
       ],
       "correctAnswer": "B",
       "explanation": "Dixon and Joly (P-ii) proposed the cohesion-tension (transpiration pull) theory. Ernst Munch (Q-i) proposed the mass flow hypothesis for phloem transport. J.C. Bose (R-iii) suggested that living cells in the stem help in water ascent. Strasburger (S-iv) demonstrated that water can ascend through dead xylem tissue.",
@@ -1885,10 +1885,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following terms with their definitions:\nColumn I: (P) Turgor pressure (Q) Wall pressure (R) Osmotic pressure (S) Water potential\nColumn II: (i) Pressure exerted by cell wall against the expanding protoplast (ii) Free energy of water per unit volume relative to pure water (iii) Pressure exerted by protoplast on the cell wall (iv) Minimum pressure needed to prevent osmotic entry of water",
       "options": [
-        "C) P-iv, Q-i, R-iii, S-ii",
-        "B) P-i, Q-iii, R-ii, S-iv",
-        "A) P-iii, Q-i, R-iv, S-ii",
-        "D) P-iii, Q-iv, R-i, S-ii"
+        "P-iv, Q-i, R-iii, S-ii",
+        "P-i, Q-iii, R-ii, S-iv",
+        "P-iii, Q-i, R-iv, S-ii",
+        "P-iii, Q-iv, R-i, S-ii"
       ],
       "correctAnswer": "C",
       "explanation": "Turgor pressure (P-iii) is the pressure exerted by the protoplast on the cell wall. Wall pressure (Q-i) is the equal and opposite pressure exerted by the cell wall against the protoplast. Osmotic pressure (R-iv) is the minimum pressure to prevent osmotic water entry. Water potential (S-ii) is the free energy of water per unit volume.",
@@ -1912,10 +1912,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following factors with their effect on transpiration rate:\nColumn I: (P) Increase in temperature (Q) Increase in humidity (R) Increase in wind speed (S) Increase in light intensity\nColumn II: (i) Increases transpiration by opening stomata (ii) Decreases transpiration by reducing gradient (iii) Increases transpiration by removing water vapour (iv) Increases transpiration by increasing evaporation",
       "options": [
-        "B) P-i, Q-ii, R-iii, S-iv",
-        "D) P-ii, Q-iv, R-i, S-iii",
-        "C) P-iv, Q-iii, R-ii, S-i",
-        "A) P-iv, Q-ii, R-iii, S-i"
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iv, Q-iii, R-ii, S-i",
+        "P-iv, Q-ii, R-iii, S-i"
       ],
       "correctAnswer": "D",
       "explanation": "Increased temperature (P-iv) raises evaporation rate. High humidity (Q-ii) decreases transpiration by reducing the water vapour gradient. Wind (R-iii) increases transpiration by removing the boundary layer of humid air. Light (S-i) causes stomata to open, increasing transpiration.",
@@ -1939,10 +1939,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following transport types with their characteristics:\nColumn I: (P) Uniport (Q) Symport (R) Antiport (S) Channel proteins\nColumn II: (i) Two substances move in opposite directions (ii) Single substance moves in one direction (iii) Two substances move in the same direction (iv) Form pores for passive ion movement",
       "options": [
-        "D) P-iv, Q-iii, R-i, S-ii",
-        "B) P-iii, Q-ii, R-iv, S-i",
-        "C) P-ii, Q-i, R-iii, S-iv",
-        "A) P-ii, Q-iii, R-i, S-iv"
+        "P-iv, Q-iii, R-i, S-ii",
+        "P-iii, Q-ii, R-iv, S-i",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-ii, Q-iii, R-i, S-iv"
       ],
       "correctAnswer": "D",
       "explanation": "Uniport (P-ii) moves a single substance in one direction. Symport (Q-iii) moves two substances in the same direction. Antiport (R-i) moves two substances in opposite directions. Channel proteins (S-iv) form hydrophilic pores allowing passive ion movement.",
@@ -1966,10 +1966,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following solutions with their effect on a plant cell:\nColumn I: (P) Hypertonic solution (Q) Hypotonic solution (R) Isotonic solution\nColumn II: (i) Cell becomes turgid (ii) Cell becomes flaccid (iii) Cell becomes plasmolysed",
       "options": [
-        "B) P-i, Q-iii, R-ii",
-        "C) P-ii, Q-i, R-iii",
-        "D) P-iii, Q-ii, R-i",
-        "A) P-iii, Q-i, R-ii"
+        "P-i, Q-iii, R-ii",
+        "P-ii, Q-i, R-iii",
+        "P-iii, Q-ii, R-i",
+        "P-iii, Q-i, R-ii"
       ],
       "correctAnswer": "D",
       "explanation": "In a hypertonic solution (P-iii), water moves out causing plasmolysis. In a hypotonic solution (Q-i), water moves in making the cell turgid. In an isotonic solution (R-ii), there is no net water movement and the cell remains flaccid.",
@@ -1993,10 +1993,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following structures with their role in plant water transport:\nColumn I: (P) Root hairs (Q) Xylem vessels (R) Sieve tube elements (S) Hydathodes\nColumn II: (i) Long distance water transport (ii) Water absorption from soil (iii) Guttation (iv) Organic solute transport",
       "options": [
-        "D) P-iii, Q-i, R-iv, S-ii",
-        "A) P-ii, Q-i, R-iv, S-iii",
-        "C) P-ii, Q-iv, R-i, S-iii",
-        "B) P-i, Q-ii, R-iii, S-iv"
+        "P-iii, Q-i, R-iv, S-ii",
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-i, Q-ii, R-iii, S-iv"
       ],
       "correctAnswer": "B",
       "explanation": "Root hairs (P-ii) absorb water and minerals from soil. Xylem vessels (Q-i) conduct water and minerals over long distances. Sieve tube elements (R-iv) transport organic solutes (food). Hydathodes (S-iii) are the structures through which guttation occurs.",
@@ -2020,10 +2020,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following phenomena with their driving forces:\nColumn I: (P) Ascent of sap (Q) Guttation (R) Translocation in phloem (S) Absorption of minerals\nColumn II: (i) Root pressure (ii) Turgor pressure gradient (iii) ATP-dependent proton pumps (iv) Transpiration pull",
       "options": [
-        "B) P-i, Q-iv, R-iii, S-ii",
-        "D) P-ii, Q-i, R-iv, S-iii",
-        "C) P-iv, Q-ii, R-i, S-iii",
-        "A) P-iv, Q-i, R-ii, S-iii"
+        "P-i, Q-iv, R-iii, S-ii",
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-iv, Q-ii, R-i, S-iii",
+        "P-iv, Q-i, R-ii, S-iii"
       ],
       "correctAnswer": "D",
       "explanation": "Ascent of sap (P-iv) is primarily driven by transpiration pull. Guttation (Q-i) is caused by root pressure. Translocation in phloem (R-ii) occurs along a turgor pressure gradient (mass flow). Mineral absorption (S-iii) often involves ATP-dependent proton pumps for active transport.",
@@ -2047,10 +2047,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following cell conditions with the relationship between water potential components:\nColumn I: (P) Flaccid cell (Q) Fully turgid cell (R) Incipient plasmolysis (S) Plasmolysed cell\nColumn II: (i) ψp = 0, ψw = ψs (ii) ψw = 0, ψp = -ψs (iii) ψp is negative (iv) ψp = 0 and protoplast just separates from wall",
       "options": [
-        "D) P-iii, Q-ii, R-iv, S-i",
-        "A) P-i, Q-ii, R-iv, S-iii",
-        "B) P-ii, Q-i, R-iii, S-iv",
-        "C) P-iv, Q-ii, R-i, S-iii"
+        "P-iii, Q-ii, R-iv, S-i",
+        "P-i, Q-ii, R-iv, S-iii",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-iv, Q-ii, R-i, S-iii"
       ],
       "correctAnswer": "B",
       "explanation": "In a flaccid cell (P-i), ψp = 0 so ψw = ψs. In a fully turgid cell (Q-ii), ψw = 0 and ψp = -ψs (they cancel out). At incipient plasmolysis (R-iv), ψp = 0 and the protoplast just starts separating. In a plasmolysed cell (S-iii), ψp can become negative due to tension on the protoplast.",
@@ -2074,10 +2074,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following theories of ascent of sap with their proponents:\nColumn I: (P) Cohesion-tension theory (Q) Vital force theory (R) Root pressure theory (S) Relay pump theory\nColumn II: (i) J.C. Bose (ii) Priestley (iii) Godlewski (iv) Dixon and Joly",
       "options": [
-        "D) P-i, Q-ii, R-iii, S-iv",
-        "C) P-iv, Q-iii, R-ii, S-i",
-        "B) P-ii, Q-iv, R-i, S-iii",
-        "A) P-iv, Q-i, R-ii, S-iii"
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-iv, Q-iii, R-ii, S-i",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iv, Q-i, R-ii, S-iii"
       ],
       "correctAnswer": "D",
       "explanation": "The cohesion-tension theory (P-iv) was proposed by Dixon and Joly. The vital force (pulsation) theory (Q-i) was proposed by J.C. Bose. Root pressure theory (R-ii) was supported by Priestley. The relay pump theory (S-iii) was proposed by Godlewski.",
@@ -2100,10 +2100,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "How many of the following are characteristics of facilitated diffusion?\n(a) Requires membrane transport proteins\n(b) Is highly selective\n(c) Requires ATP\n(d) Shows saturation kinetics\n(e) Can be inhibited by specific inhibitors\n(f) Moves substances against concentration gradient",
       "options": [
-        "D) Six",
-        "C) Five",
-        "A) Three",
-        "B) Four"
+        "Six",
+        "Five",
+        "Three",
+        "Four"
       ],
       "correctAnswer": "D",
       "explanation": "Four characteristics are correct: (a) requires transport proteins, (b) is highly selective due to specific binding sites, (d) shows saturation kinetics because the number of transport proteins is limited, and (e) can be inhibited. (c) is incorrect because facilitated diffusion does not require ATP; (f) is incorrect because it moves substances along the gradient.",
@@ -2126,10 +2126,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "How many of the following factors increase the rate of transpiration?\n(a) Increase in temperature\n(b) Increase in humidity\n(c) Increase in wind speed\n(d) Increase in light intensity\n(e) Thick cuticle on leaves\n(f) Open stomata",
       "options": [
-        "A) Two",
-        "D) Five",
-        "B) Three",
-        "C) Four"
+        "Two",
+        "Five",
+        "Three",
+        "Four"
       ],
       "correctAnswer": "D",
       "explanation": "Four factors increase transpiration: (a) increased temperature increases evaporation rate; (c) wind removes the humid boundary layer; (d) light opens stomata; (f) open stomata allow water vapour to escape. (b) High humidity decreases the vapour pressure gradient, reducing transpiration. (e) Thick cuticle reduces cuticular transpiration.",
@@ -2152,10 +2152,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "How many of the following statements about the cohesion-tension theory are correct?\n(a) Water molecules are held together by hydrogen bonds (cohesion)\n(b) Transpiration creates a tension (negative pressure) in xylem\n(c) Adhesion keeps water attached to xylem walls\n(d) It was proposed by Ernst Munch\n(e) It is the most widely accepted theory for ascent of sap\n(f) It cannot explain water rise in trees taller than 10 metres",
       "options": [
-        "C) Five",
-        "A) Four",
-        "D) Six",
-        "B) Three"
+        "Five",
+        "Four",
+        "Six",
+        "Three"
       ],
       "correctAnswer": "B",
       "explanation": "Four statements are correct: (a) cohesion is due to hydrogen bonding; (b) transpiration creates tension in xylem; (c) adhesion keeps water attached to xylem walls; (e) it is the most widely accepted theory. (d) is incorrect — it was proposed by Dixon and Joly, not Munch. (f) is incorrect — the theory can explain water rise in the tallest trees.",
@@ -2178,10 +2178,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Count the number of correct statements:\n(a) Xylem transport is unidirectional (upward)\n(b) Phloem transport is bidirectional\n(c) Xylem transports water and organic solutes\n(d) Phloem transports mainly sucrose\n(e) Xylem vessels are living at maturity\n(f) Sieve tube elements are living at maturity",
       "options": [
-        "C) Five",
-        "A) Three",
-        "D) Six",
-        "B) Four"
+        "Five",
+        "Three",
+        "Six",
+        "Four"
       ],
       "correctAnswer": "D",
       "explanation": "Four statements are correct: (a) xylem transport is unidirectional (upward), (b) phloem transport is bidirectional (source to sink), (d) sucrose is the main transported sugar in phloem, (f) sieve tube elements are living (though enucleate). (c) is incorrect — xylem transports water and minerals, not organic solutes. (e) is incorrect — xylem vessels are dead at maturity.",
@@ -2205,10 +2205,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "How many of the following substances are transported through the phloem?\n(a) Sucrose\n(b) Amino acids\n(c) Hormones\n(d) Water (along with solutes)\n(e) Mineral ions (primarily)\n(f) ATP molecules",
       "options": [
-        "D) Five",
-        "C) Four",
-        "A) Two",
-        "B) Three"
+        "Five",
+        "Four",
+        "Two",
+        "Three"
       ],
       "correctAnswer": "B",
       "explanation": "Four substances are transported through phloem: (a) sucrose is the main transported sugar; (b) amino acids are transported for protein synthesis; (c) hormones are distributed via phloem; (d) water moves along with solutes in the phloem stream. (e) is incorrect — minerals are primarily transported through xylem. (f) ATP is not transported via phloem.",
@@ -2231,10 +2231,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "How many of the following processes are considered passive transport?\n(a) Diffusion\n(b) Osmosis\n(c) Facilitated diffusion\n(d) Imbibition\n(e) Ion pump activity\n(f) Cytoplasmic streaming",
       "options": [
-        "A) Three",
-        "D) Two",
-        "C) Five",
-        "B) Four"
+        "Three",
+        "Two",
+        "Five",
+        "Four"
       ],
       "correctAnswer": "D",
       "explanation": "Four are passive: (a) diffusion moves molecules along concentration gradient passively; (b) osmosis is passive water movement through semipermeable membrane; (c) facilitated diffusion uses proteins but no ATP; (d) imbibition is a special type of passive diffusion. (e) Ion pumps are active transport requiring ATP. (f) Cytoplasmic streaming requires energy.",
@@ -2258,10 +2258,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "How many of the following are correct differences between diffusion and osmosis?\n(a) Diffusion does not require a semipermeable membrane; osmosis does\n(b) Diffusion involves movement of solute/gas molecules; osmosis involves water\n(c) Both are passive processes\n(d) Diffusion can occur in gases, liquids, and solids; osmosis only in liquids\n(e) Diffusion occurs from high to low concentration; osmosis from low to high solute concentration",
       "options": [
-        "B) Four",
-        "C) Five",
-        "D) Two",
-        "A) Three"
+        "Four",
+        "Five",
+        "Two",
+        "Three"
       ],
       "correctAnswer": "A",
       "explanation": "Four are correct: (a) osmosis requires a semipermeable membrane while diffusion doesn't; (b) diffusion involves solute/gas molecules while osmosis involves water; (c) both are passive; (d) diffusion occurs in all states of matter while osmosis requires liquid medium. (e) is partially incorrect — osmosis occurs from high water potential to low water potential (not low to high solute concentration in the way stated).",
@@ -2284,10 +2284,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "How many of the following are functions of transpiration?\n(a) Creates transpiration pull for ascent of sap\n(b) Cools the leaf surface\n(c) Helps in absorption of minerals\n(d) Maintains turgidity of cells\n(e) Provides CO2 for photosynthesis\n(f) Helps in distribution of minerals throughout the plant body",
       "options": [
-        "B) Four",
-        "D) Six",
-        "C) Five",
-        "A) Three"
+        "Four",
+        "Six",
+        "Five",
+        "Three"
       ],
       "correctAnswer": "C",
       "explanation": "Five are correct functions of transpiration: (a) creates transpiration pull; (b) evaporative cooling of leaves; (c) minerals travel with transpiration stream; (d) continuous water supply maintains turgidity; (f) mineral distribution occurs with the transpiration stream. (e) is incorrect — transpiration does not provide CO2; CO2 enters through stomata independently of transpiration.",
@@ -2309,10 +2309,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Arrange the following in the correct sequence of water movement from soil to xylem in roots:\n(I) Cortex\n(II) Root hair\n(III) Endodermis\n(IV) Pericycle\n(V) Xylem",
       "options": [
-        "D) II → I → IV → III → V",
-        "A) II → I → III → IV → V",
-        "C) II → III → I → IV → V",
-        "B) I → II → III → IV → V"
+        "II → I → IV → III → V",
+        "II → I → III → IV → V",
+        "II → III → I → IV → V",
+        "I → II → III → IV → V"
       ],
       "correctAnswer": "B",
       "explanation": "The correct path of water from soil to xylem is: Root hair (II) absorbs water from soil → Cortex (I) → Endodermis (III) where Casparian strip forces symplastic movement → Pericycle (IV) → Xylem (V). This is the radial pathway of water absorption.",
@@ -2335,10 +2335,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Arrange the following events in the correct sequence during the mass flow of phloem transport:\n(I) Water enters sieve tube by osmosis\n(II) Sucrose is actively loaded into sieve tube at source\n(III) High turgor pressure develops at source end\n(IV) Sucrose is unloaded at sink\n(V) Bulk flow occurs from source to sink",
       "options": [
-        "C) IV → II → I → III → V",
-        "B) I → II → III → IV → V",
-        "A) II → I → III → V → IV",
-        "D) II → III → I → V → IV"
+        "IV → II → I → III → V",
+        "I → II → III → IV → V",
+        "II → I → III → V → IV",
+        "II → III → I → V → IV"
       ],
       "correctAnswer": "C",
       "explanation": "The sequence of mass flow: Sucrose is actively loaded (II) → Water enters by osmosis due to low water potential (I) → High turgor pressure develops (III) → Bulk flow occurs from source to sink (V) → Sucrose is unloaded at sink (IV), water returns to xylem.",
@@ -2361,10 +2361,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Arrange the following in order of decreasing water potential during transpiration pull:\n(I) Soil water\n(II) Root cortex cells\n(III) Xylem of root\n(IV) Xylem of leaf\n(V) Mesophyll cells of leaf\n(VI) Atmosphere",
       "options": [
-        "D) VI → IV → V → III → II → I",
-        "A) I → II → III → IV → V → VI",
-        "C) I → III → II → IV → V → VI",
-        "B) VI → V → IV → III → II → I"
+        "VI → IV → V → III → II → I",
+        "I → II → III → IV → V → VI",
+        "I → III → II → IV → V → VI",
+        "VI → V → IV → III → II → I"
       ],
       "correctAnswer": "B",
       "explanation": "Water potential decreases progressively from soil to atmosphere: Soil water (I, least negative) → Root cortex (II) → Root xylem (III) → Leaf xylem (IV) → Leaf mesophyll (V) → Atmosphere (VI, most negative, approximately -100 MPa). This gradient drives the TACT mechanism.",
@@ -2388,10 +2388,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Arrange the following events during plasmolysis in correct sequence:\n(I) Cell placed in hypertonic solution\n(II) Exosmosis occurs\n(III) Protoplast shrinks away from cell wall\n(IV) Cell sap concentration becomes equal to external solution\n(V) Water potential of cell becomes more negative than external solution initially (is higher at start)",
       "options": [
-        "C) I → II → III → V → IV",
-        "D) I → II → V → IV → III",
-        "A) I → V → II → III → IV",
-        "B) V → I → II → III → IV"
+        "I → II → III → V → IV",
+        "I → II → V → IV → III",
+        "I → V → II → III → IV",
+        "V → I → II → III → IV"
       ],
       "correctAnswer": "C",
       "explanation": "Correct sequence of plasmolysis: Cell is placed in hypertonic solution (I) → Cell's water potential is higher than external solution (V) → Water moves out by exosmosis (II) → Protoplast shrinks from cell wall (III) → Eventually concentrations equalize (IV).",
@@ -2414,10 +2414,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Arrange the following in the correct sequence of stomatal opening:\n(I) K+ ions enter guard cells\n(II) Light stimulates blue-light receptors\n(III) Guard cells become turgid\n(IV) Water enters guard cells by osmosis\n(V) Stomatal pore opens",
       "options": [
-        "D) I → IV → II → V → III",
-        "A) II → I → IV → III → V",
-        "B) I → II → III → IV → V",
-        "C) II → IV → I → III → V"
+        "I → IV → II → V → III",
+        "II → I → IV → III → V",
+        "I → II → III → IV → V",
+        "II → IV → I → III → V"
       ],
       "correctAnswer": "B",
       "explanation": "The correct sequence of stomatal opening: Light activates blue-light receptors (II) → K+ ions accumulate in guard cells actively (I) → Osmotic potential decreases, water enters by osmosis (IV) → Guard cells become turgid (III) → Stomatal pore opens (V).",
@@ -2441,10 +2441,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Arrange the following in the correct sequence of events during guttation:\n(I) Root cells actively absorb minerals\n(II) Positive root pressure develops in xylem\n(III) Water is pushed upward\n(IV) Water droplets appear at leaf margins through hydathodes\n(V) Water enters root xylem by osmosis",
       "options": [
-        "C) I → II → V → III → IV",
-        "B) V → I → II → III → IV",
-        "D) II → I → V → IV → III",
-        "A) I → V → II → III → IV"
+        "I → II → V → III → IV",
+        "V → I → II → III → IV",
+        "II → I → V → IV → III",
+        "I → V → II → III → IV"
       ],
       "correctAnswer": "D",
       "explanation": "Correct sequence of guttation: Root cells actively absorb minerals (I) → This creates osmotic gradient, water enters xylem by osmosis (V) → Positive root pressure develops (II) → Water is pushed upward through xylem (III) → Water exudes as droplets through hydathodes at leaf margins (IV).",
@@ -2468,10 +2468,10 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Arrange the following transport processes in order from fastest to slowest:\n(I) Diffusion\n(II) Mass flow (bulk flow) in xylem\n(III) Cytoplasmic streaming\n(IV) Active transport across membrane",
       "options": [
-        "B) I → II → III → IV",
-        "C) II → I → III → IV",
-        "A) II → III → IV → I",
-        "D) III → II → I → IV"
+        "I → II → III → IV",
+        "II → I → III → IV",
+        "II → III → IV → I",
+        "III → II → I → IV"
       ],
       "correctAnswer": "C",
       "explanation": "In order from fastest to slowest: Mass flow/bulk flow in xylem (II) is the fastest as it involves movement of entire solution under pressure. Cytoplasmic streaming (III) is faster than membrane transport. Active transport (IV) across membranes is relatively fast but limited. Diffusion (I) is the slowest, especially over long distances.",
@@ -2494,13 +2494,21 @@
       "ncertChapter": 11,
       "ncertChapterName": "Transport in Plants",
       "question": "Which of the following is used to measure the rate of transpiration?",
-      "options": ["A) Potometer", "B) Auxanometer", "C) Porometer", "D) Manometer"],
+      "options": [
+        "Potometer",
+        "Auxanometer",
+        "Porometer",
+        "Manometer"
+      ],
       "correctAnswer": "A",
       "explanation": "A potometer (also called transpirometer) is used to measure the rate of transpiration indirectly by measuring the rate of water uptake by a cut shoot. A porometer measures the stomatal aperture, while an auxanometer measures growth rate.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["potometer", "transpiration measurement"],
+      "tags": [
+        "potometer",
+        "transpiration measurement"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2511,13 +2519,21 @@
       "ncertChapter": 11,
       "ncertChapterName": "Transport in Plants",
       "question": "Assertion (A): The movement of water in the symplast pathway is slower than in the apoplast pathway.\nReason (R): In the symplast pathway, water must pass through the selectively permeable plasma membranes and cytoplasm of each cell.",
-      "options": ["A) Both A and R are true and R is the correct explanation of A", "B) Both A and R are true but R is NOT the correct explanation of A", "C) A is true but R is false", "D) A is false but R is true"],
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. The symplast pathway requires water to cross plasma membranes and move through cytoplasm via plasmodesmata, providing more resistance than the apoplast pathway where water moves freely through cell walls and intercellular spaces.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["symplast vs apoplast", "speed comparison"],
+      "tags": [
+        "symplast vs apoplast",
+        "speed comparison"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2528,13 +2544,21 @@
       "ncertChapter": 11,
       "ncertChapterName": "Transport in Plants",
       "question": "Which of the following statements about xylem and phloem transport are correct?\nI. Xylem transport is passive and does not require living cells.\nII. Phloem transport requires metabolic energy.\nIII. Both xylem and phloem transport are unidirectional.\nIV. Companion cells play an important role in phloem loading.\nSelect the correct option:",
-      "options": ["A) I, II and IV only", "B) I, II, III and IV", "C) I and II only", "D) II, III and IV only"],
+      "options": [
+        "I, II and IV only",
+        "I, II, III and IV",
+        "I and II only",
+        "II, III and IV only"
+      ],
       "correctAnswer": "A",
       "explanation": "Statements I, II and IV are correct. Xylem transport is passive (driven by transpiration pull) and occurs through dead cells. Phloem transport requires ATP for sucrose loading by companion cells. Statement III is incorrect because phloem transport is bidirectional (source to sink in any direction).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["xylem vs phloem", "transport comparison"],
+      "tags": [
+        "xylem vs phloem",
+        "transport comparison"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2545,13 +2569,22 @@
       "ncertChapter": 11,
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following instruments with what they measure:\nColumn I: (P) Potometer (Q) Porometer (R) Osmometer (S) Auxanometer\nColumn II: (i) Stomatal aperture (ii) Rate of water uptake (transpiration) (iii) Osmotic pressure (iv) Plant growth rate",
-      "options": ["A) P-ii, Q-i, R-iii, S-iv", "B) P-i, Q-ii, R-iv, S-iii", "C) P-iii, Q-i, R-ii, S-iv", "D) P-ii, Q-iv, R-iii, S-i"],
+      "options": [
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-i, Q-ii, R-iv, S-iii",
+        "P-iii, Q-i, R-ii, S-iv",
+        "P-ii, Q-iv, R-iii, S-i"
+      ],
       "correctAnswer": "A",
       "explanation": "Potometer (P-ii) measures rate of water uptake as a proxy for transpiration rate. Porometer (Q-i) measures stomatal aperture. Osmometer (R-iii) measures osmotic pressure. Auxanometer (S-iv) measures plant growth rate.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["instruments", "potometer", "porometer"],
+      "tags": [
+        "instruments",
+        "potometer",
+        "porometer"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2562,13 +2595,22 @@
       "ncertChapter": 11,
       "ncertChapterName": "Transport in Plants",
       "question": "Match the following types of water loss with their characteristics:\nColumn I: (P) Transpiration (Q) Guttation (R) Bleeding\nColumn II: (i) Loss of water in liquid form through hydathodes (ii) Loss of water in vapour form through stomata (iii) Exudation of sap from cut stem due to root pressure",
-      "options": ["A) P-ii, Q-i, R-iii", "B) P-i, Q-ii, R-iii", "C) P-iii, Q-i, R-ii", "D) P-ii, Q-iii, R-i"],
+      "options": [
+        "P-ii, Q-i, R-iii",
+        "P-i, Q-ii, R-iii",
+        "P-iii, Q-i, R-ii",
+        "P-ii, Q-iii, R-i"
+      ],
       "correctAnswer": "A",
       "explanation": "Transpiration (P-ii) is loss of water as vapour mainly through stomata. Guttation (Q-i) is loss of water in liquid form through hydathodes at leaf tips and margins. Bleeding (R-iii) is the exudation of xylem sap from a cut surface due to root pressure.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["transpiration", "guttation", "bleeding"],
+      "tags": [
+        "transpiration",
+        "guttation",
+        "bleeding"
+      ],
       "neetWeightage": "MEDIUM"
     }
   ]

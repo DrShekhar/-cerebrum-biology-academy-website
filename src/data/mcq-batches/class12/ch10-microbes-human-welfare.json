@@ -15,17 +15,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which microorganism is responsible for the conversion of milk into curd?",
       "options": [
-        "A) Saccharomyces cerevisiae",
-        "B) Lactobacillus",
-        "C) Acetobacter aceti",
-        "D) Streptococcus thermophilus"
+        "Saccharomyces cerevisiae",
+        "Lactobacillus",
+        "Acetobacter aceti",
+        "Streptococcus thermophilus"
       ],
       "correctAnswer": "B",
       "explanation": "Lactobacillus (LAB - Lactic Acid Bacteria) converts milk into curd by producing lactic acid, which coagulates and partially digests the milk protein casein. A small amount of curd (inoculum/starter) is added to warm milk to set it.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["lactobacillus", "curd-formation"],
+      "tags": [
+        "lactobacillus",
+        "curd-formation"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -37,17 +40,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Penicillin was discovered by:",
       "options": [
-        "A) Ernest Chain",
-        "B) Howard Florey",
-        "C) Alexander Fleming",
-        "D) Louis Pasteur"
+        "Ernest Chain",
+        "Howard Florey",
+        "Alexander Fleming",
+        "Louis Pasteur"
       ],
       "correctAnswer": "C",
       "explanation": "Alexander Fleming discovered penicillin in 1928 from the mould Penicillium notatum. He observed that Staphylococcus bacteria did not grow around the Penicillium mould growing on a culture plate. Ernest Chain and Howard Florey later purified and established penicillin as an antibiotic.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["penicillin", "fleming"],
+      "tags": [
+        "penicillin",
+        "fleming"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -59,17 +65,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "BOD (Biochemical Oxygen Demand) refers to:",
       "options": [
-        "A) The amount of oxygen required by green plants for photosynthesis",
-        "B) The amount of oxygen consumed by microorganisms to decompose organic matter in water",
-        "C) The total oxygen content of water",
-        "D) The oxygen produced during aerobic respiration"
+        "The amount of oxygen required by green plants for photosynthesis",
+        "The amount of oxygen consumed by microorganisms to decompose organic matter in water",
+        "The total oxygen content of water",
+        "The oxygen produced during aerobic respiration"
       ],
       "correctAnswer": "B",
       "explanation": "BOD (Biochemical Oxygen Demand) is the amount of dissolved oxygen consumed by microorganisms for the oxidation (decomposition) of organic matter present in a water sample. A higher BOD indicates more organic pollution and more contaminated water.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["BOD", "sewage-treatment"],
+      "tags": [
+        "BOD",
+        "sewage-treatment"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -81,17 +90,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "The dough used for making dosa and idli is fermented by:",
       "options": [
-        "A) Lactobacillus",
-        "B) Saccharomyces cerevisiae",
-        "C) Bacteria naturally present in the batter",
-        "D) Penicillium"
+        "Lactobacillus",
+        "Saccharomyces cerevisiae",
+        "Bacteria naturally present in the batter",
+        "Penicillium"
       ],
       "correctAnswer": "C",
       "explanation": "The batter for making dosa and idli is fermented by bacteria naturally present in the batter. These bacteria (mainly Leuconostoc mesenteroides and other LAB) produce CO2, which causes the batter to rise (puff up) and also gives the characteristic sour taste.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["fermentation", "household-products"],
+      "tags": [
+        "fermentation",
+        "household-products"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -103,17 +115,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following is used in the production of bread?",
       "options": [
-        "A) Lactobacillus",
-        "B) Saccharomyces cerevisiae",
-        "C) Aspergillus niger",
-        "D) Clostridium butylicum"
+        "Lactobacillus",
+        "Saccharomyces cerevisiae",
+        "Aspergillus niger",
+        "Clostridium butylicum"
       ],
       "correctAnswer": "B",
       "explanation": "Saccharomyces cerevisiae (baker's yeast/brewer's yeast) is used in bread-making. The yeast ferments sugars in the dough, producing CO2 gas which causes the dough to rise (leavening). The CO2 is trapped in the gluten network, giving bread its soft, spongy texture.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["saccharomyces", "bread-making"],
+      "tags": [
+        "saccharomyces",
+        "bread-making"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -125,17 +140,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Methanogens are responsible for biogas production. Which of the following is a methanogenic bacterium?",
       "options": [
-        "A) Rhizobium",
-        "B) Pseudomonas",
-        "C) Azotobacter",
-        "D) Methanobacterium"
+        "Rhizobium",
+        "Pseudomonas",
+        "Azotobacter",
+        "Methanobacterium"
       ],
       "correctAnswer": "D",
       "explanation": "Methanobacterium is a methanogenic archaeon that produces methane (biogas) by anaerobic digestion of organic matter (cellulosic material) in the biogas plant. These methanogens are found in the rumen of cattle (anaerobic environment) and in sewage/marshy areas.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["methanogens", "biogas"],
+      "tags": [
+        "methanogens",
+        "biogas"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -147,17 +165,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Rhizobium forms a symbiotic association with:",
       "options": [
-        "A) Roots of grasses",
-        "B) Roots of leguminous plants",
-        "C) Leaves of all plants",
-        "D) Stems of cereals"
+        "Roots of grasses",
+        "Roots of leguminous plants",
+        "Leaves of all plants",
+        "Stems of cereals"
       ],
       "correctAnswer": "B",
       "explanation": "Rhizobium is a nitrogen-fixing bacterium that forms a symbiotic association with the roots of leguminous plants (like peas, beans, clover). It fixes atmospheric nitrogen into ammonia within root nodules. The bacterium gets shelter and food, while the plant gets usable nitrogen.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["rhizobium", "biofertilizers"],
+      "tags": [
+        "rhizobium",
+        "biofertilizers"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -169,17 +190,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Trichoderma harzianum is used as a biocontrol agent against:",
       "options": [
-        "A) Insect pests",
-        "B) Viral diseases",
-        "C) Plant pathogens (fungal diseases)",
-        "D) Bacterial infections in animals"
+        "Insect pests",
+        "Viral diseases",
+        "Plant pathogens (fungal diseases)",
+        "Bacterial infections in animals"
       ],
       "correctAnswer": "C",
       "explanation": "Trichoderma harzianum is a free-living fungus used as a biocontrol agent against several plant pathogens, particularly soil-borne fungal diseases. It acts by competing with and parasitising other fungi.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["trichoderma", "biocontrol"],
+      "tags": [
+        "trichoderma",
+        "biocontrol"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -191,17 +215,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "The primary treatment of sewage involves:",
       "options": [
-        "A) Biological treatment using microorganisms",
-        "B) Physical removal of large particles by filtration and sedimentation",
-        "C) Chlorination of water",
-        "D) Addition of chemicals to kill bacteria"
+        "Biological treatment using microorganisms",
+        "Physical removal of large particles by filtration and sedimentation",
+        "Chlorination of water",
+        "Addition of chemicals to kill bacteria"
       ],
       "correctAnswer": "B",
       "explanation": "Primary treatment of sewage is a physical process that involves sequential filtration (removal of floating debris) and sedimentation (settling of soil and small particles in settling tanks). The settled material is called primary sludge, and the supernatant is called effluent.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["primary-treatment", "sewage-treatment"],
+      "tags": [
+        "primary-treatment",
+        "sewage-treatment"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -213,17 +240,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "During secondary treatment of sewage, the significant decrease in BOD is achieved by:",
       "options": [
-        "A) Addition of chlorine",
-        "B) Vigorous aeration to encourage aerobic microbes that consume organic matter",
-        "C) Filtration through sand beds",
-        "D) UV radiation treatment"
+        "Addition of chlorine",
+        "Vigorous aeration to encourage aerobic microbes that consume organic matter",
+        "Filtration through sand beds",
+        "UV radiation treatment"
       ],
       "correctAnswer": "B",
       "explanation": "During secondary (biological) treatment, the primary effluent is passed into aeration tanks where vigorous aeration encourages the growth of aerobic microbes (flocs). These microbes consume the organic matter, significantly reducing the BOD of the effluent.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["secondary-treatment", "aeration"],
+      "tags": [
+        "secondary-treatment",
+        "aeration"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -235,17 +265,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following organisms is used for the production of citric acid industrially?",
       "options": [
-        "A) Lactobacillus",
-        "B) Clostridium butylicum",
-        "C) Saccharomyces cerevisiae",
-        "D) Aspergillus niger"
+        "Lactobacillus",
+        "Clostridium butylicum",
+        "Saccharomyces cerevisiae",
+        "Aspergillus niger"
       ],
       "correctAnswer": "D",
       "explanation": "Aspergillus niger (a fungus) is used for the industrial production of citric acid. Citric acid is widely used in the food and pharmaceutical industries as a flavouring agent and preservative.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["aspergillus-niger", "citric-acid"],
+      "tags": [
+        "aspergillus-niger",
+        "citric-acid"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -257,17 +290,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Baculoviruses are used as biocontrol agents because they:",
       "options": [
-        "A) Kill all types of organisms non-specifically",
-        "B) Can be mixed with chemical pesticides",
-        "C) Are effective against fungal diseases",
-        "D) Are species-specific and do not harm non-target organisms"
+        "Kill all types of organisms non-specifically",
+        "Can be mixed with chemical pesticides",
+        "Are effective against fungal diseases",
+        "Are species-specific and do not harm non-target organisms"
       ],
       "correctAnswer": "D",
       "explanation": "Baculoviruses (especially nucleopolyhedroviruses) are excellent biocontrol agents because they are species-specific, attacking only specific insect pests without harming non-target organisms, plants, mammals, birds, or beneficial insects like pollinators.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["baculovirus", "biocontrol"],
+      "tags": [
+        "baculovirus",
+        "biocontrol"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -279,17 +315,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Mycorrhiza is a symbiotic association between:",
       "options": [
-        "A) Bacteria and plant roots",
-        "B) Fungi and plant roots",
-        "C) Algae and fungi",
-        "D) Virus and plant roots"
+        "Bacteria and plant roots",
+        "Fungi and plant roots",
+        "Algae and fungi",
+        "Virus and plant roots"
       ],
       "correctAnswer": "B",
       "explanation": "Mycorrhiza (literally 'fungus root') is the symbiotic association between fungi and the roots of higher plants. The fungal hyphae absorb phosphorus and other minerals from the soil and pass them to the plant, while the plant provides organic food to the fungus. Genus Glomus forms mycorrhiza.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["mycorrhiza", "biofertilizers"],
+      "tags": [
+        "mycorrhiza",
+        "biofertilizers"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -301,17 +340,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following is used in the production of Swiss cheese with the characteristic large holes?",
       "options": [
-        "A) Penicillium roqueforti",
-        "B) Propionibacterium shermanii",
-        "C) Lactobacillus",
-        "D) Streptococcus thermophilus"
+        "Penicillium roqueforti",
+        "Propionibacterium shermanii",
+        "Lactobacillus",
+        "Streptococcus thermophilus"
       ],
       "correctAnswer": "B",
       "explanation": "Propionibacterium shermanii is used in the production of Swiss cheese. It produces large amounts of CO2 during fermentation, which creates the characteristic large holes (eyes) in Swiss cheese. It also contributes to the nutty flavour.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["swiss-cheese", "propionibacterium"],
+      "tags": [
+        "swiss-cheese",
+        "propionibacterium"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -323,17 +365,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Roquefort cheese is ripened using:",
       "options": [
-        "A) Penicillium notatum",
-        "B) Penicillium roqueforti",
-        "C) Penicillium camemberti",
-        "D) Aspergillus niger"
+        "Penicillium notatum",
+        "Penicillium roqueforti",
+        "Penicillium camemberti",
+        "Aspergillus niger"
       ],
       "correctAnswer": "B",
       "explanation": "Roquefort cheese is ripened by growing Penicillium roqueforti, which gives it a distinctive blue-green colour and sharp flavour. Penicillium camemberti is used for ripening Camembert cheese.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["roquefort-cheese", "penicillium"],
+      "tags": [
+        "roquefort-cheese",
+        "penicillium"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -345,17 +390,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Cyclosporin A, an immunosuppressive agent used in organ transplants, is produced by:",
       "options": [
-        "A) Monascus purpureus",
-        "B) Penicillium notatum",
-        "C) Aspergillus niger",
-        "D) Trichoderma polysporum"
+        "Monascus purpureus",
+        "Penicillium notatum",
+        "Aspergillus niger",
+        "Trichoderma polysporum"
       ],
       "correctAnswer": "D",
       "explanation": "Cyclosporin A is produced by the fungus Trichoderma polysporum. It is used as an immunosuppressive agent in organ transplant patients to prevent rejection of the transplanted organ by inhibiting T-cell activation.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["cyclosporin-A", "immunosuppressant"],
+      "tags": [
+        "cyclosporin-A",
+        "immunosuppressant"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -367,17 +415,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Statins used as blood cholesterol-lowering agents are produced by:",
       "options": [
-        "A) Trichoderma polysporum",
-        "B) Penicillium notatum",
-        "C) Monascus purpureus",
-        "D) Streptomyces"
+        "Trichoderma polysporum",
+        "Penicillium notatum",
+        "Monascus purpureus",
+        "Streptomyces"
       ],
       "correctAnswer": "C",
       "explanation": "Statins are produced by the yeast Monascus purpureus. Statins are used as blood cholesterol-lowering agents. They act by competitively inhibiting the enzyme HMG-CoA reductase, which catalyses a key step in cholesterol biosynthesis.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["statins", "monascus-purpureus"],
+      "tags": [
+        "statins",
+        "monascus-purpureus"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -389,17 +440,21 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following free-living nitrogen-fixing cyanobacteria is used as a biofertilizer in paddy fields?",
       "options": [
-        "A) Rhizobium",
-        "B) Azotobacter",
-        "C) Frankia",
-        "D) Anabaena"
+        "Rhizobium",
+        "Azotobacter",
+        "Frankia",
+        "Anabaena"
       ],
       "correctAnswer": "D",
       "explanation": "Anabaena (along with Nostoc and other cyanobacteria/blue-green algae) is a free-living nitrogen-fixing cyanobacterium used as a biofertilizer, especially in paddy fields. Anabaena also forms a symbiotic association with the water fern Azolla, which is used as a biofertilizer in rice paddies.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["anabaena", "cyanobacteria", "biofertilizers"],
+      "tags": [
+        "anabaena",
+        "cyanobacteria",
+        "biofertilizers"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -411,17 +466,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Activated sludge in sewage treatment refers to:",
       "options": [
-        "A) The settled primary sludge from settling tanks",
-        "B) The chemical precipitate from chlorination",
-        "C) The sediment containing aerobic bacteria (flocs) used as inoculum in aeration tanks",
-        "D) The final treated water released into rivers"
+        "The settled primary sludge from settling tanks",
+        "The chemical precipitate from chlorination",
+        "The sediment containing aerobic bacteria (flocs) used as inoculum in aeration tanks",
+        "The final treated water released into rivers"
       ],
       "correctAnswer": "C",
       "explanation": "Activated sludge is the sediment formed in the settling tank after secondary treatment, which consists of bacterial flocs (masses of bacteria associated with fungal filaments). A small portion of this activated sludge is pumped back into the aeration tank to serve as inoculum for the next batch.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["activated-sludge", "sewage-treatment"],
+      "tags": [
+        "activated-sludge",
+        "sewage-treatment"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -433,17 +491,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Bt toxin used in biocontrol is produced by:",
       "options": [
-        "A) Baculovirus",
-        "B) Bacillus thuringiensis",
-        "C) Trichoderma harzianum",
-        "D) Beauveria bassiana"
+        "Baculovirus",
+        "Bacillus thuringiensis",
+        "Trichoderma harzianum",
+        "Beauveria bassiana"
       ],
       "correctAnswer": "B",
       "explanation": "Bt toxin (Bacillus thuringiensis toxin) is produced by the soil bacterium Bacillus thuringiensis. The toxin is in the form of an inactive protoxin crystal (Cry protein) that becomes active only in the alkaline gut of insect larvae, killing them.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["bt-toxin", "biocontrol"],
+      "tags": [
+        "bt-toxin",
+        "biocontrol"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -455,17 +516,21 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Curd is more nutritious than milk.\nReason (R): Lactobacillus in curd produces vitamins, especially B12, during fermentation.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true. Curd is more nutritious than milk because Lactobacillus produces vitamins (especially B12) during fermentation. LAB also improves nutritional quality by partially digesting proteins and increasing the bioavailability of nutrients.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["curd", "lactobacillus", "vitamin-B12"],
+      "tags": [
+        "curd",
+        "lactobacillus",
+        "vitamin-B12"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -477,17 +542,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Higher BOD indicates more polluted water.\nReason (R): More organic matter requires more oxygen for microbial decomposition.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason correctly explains the assertion. BOD measures the amount of oxygen required by microorganisms to decompose organic matter. More organic pollution means more organic matter, which requires more oxygen for decomposition, resulting in higher BOD.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["BOD", "water-pollution"],
+      "tags": [
+        "BOD",
+        "water-pollution"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -499,17 +567,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Biogas is a mixture of gases, predominantly methane.\nReason (R): Methanogens are obligate anaerobes that produce methane from CO2 or formic acid.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true. Biogas contains predominantly methane (along with CO2 and H2S). Methanogens like Methanobacterium are obligate anaerobes that produce methane by reducing CO2 with hydrogen or from formic acid. This explains why biogas is methane-rich.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biogas", "methanogens"],
+      "tags": [
+        "biogas",
+        "methanogens"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -521,17 +592,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Mycorrhizal plants show increased resistance to root-borne pathogens.\nReason (R): Mycorrhizal fungi produce antibiotics that kill soil pathogens.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "The assertion is true; mycorrhizal plants do show resistance to root-borne pathogens and tolerance to salinity and drought. However, the reason is false; mycorrhizal fungi do not produce antibiotics. The resistance is due to the physical barrier formed by fungal hyphae and competition for nutrients.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["mycorrhiza", "pathogen-resistance"],
+      "tags": [
+        "mycorrhiza",
+        "pathogen-resistance"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -543,17 +617,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Baculoviruses are preferred biocontrol agents in integrated pest management.\nReason (R): Baculoviruses are species-specific and have no negative impact on non-target organisms.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true. Baculoviruses (especially nucleopolyhedroviruses) are excellent for integrated pest management (IPM) because they are species-specific, do not harm beneficial insects, birds, mammals, or plants, and help maintain ecological balance.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["baculovirus", "IPM"],
+      "tags": [
+        "baculovirus",
+        "IPM"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -565,17 +642,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): LAB (Lactic Acid Bacteria) play a beneficial role in the human stomach.\nReason (R): LAB check the growth of disease-causing microbes in the gut.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true. LAB (Lactobacillus and related bacteria) play a beneficial role in the human digestive system by checking the growth of disease-causing (pathogenic) microbes in the gut through competitive exclusion and production of lactic acid.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["LAB", "gut-health"],
+      "tags": [
+        "LAB",
+        "gut-health"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -587,17 +667,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Penicillin is effective against gram-positive bacteria.\nReason (R): Penicillin prevents the synthesis of the cell wall in bacteria.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true. Penicillin is particularly effective against gram-positive bacteria because it inhibits bacterial cell wall synthesis by blocking transpeptidase enzyme. Gram-positive bacteria have a thick peptidoglycan layer, making them more susceptible to penicillin's mechanism.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["penicillin", "antibiotics"],
+      "tags": [
+        "penicillin",
+        "antibiotics"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -609,17 +692,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Consider the following statements about sewage treatment:\nI. Primary treatment is a physical process.\nII. Secondary treatment is a biological process.\nIII. BOD of the effluent increases after secondary treatment.\nIV. Activated sludge is pumped back into the aeration tank as inoculum.\nWhich of the above statements are correct?",
       "options": [
-        "A) I, II, III and IV",
-        "B) II, III and IV only",
-        "C) I, II and IV only",
-        "D) I and II only"
+        "I, II, III and IV",
+        "II, III and IV only",
+        "I, II and IV only",
+        "I and II only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements I, II, and IV are correct. Primary treatment is physical (filtration/sedimentation), secondary is biological (microbial decomposition), and activated sludge is reused as inoculum. Statement III is incorrect; BOD DECREASES (not increases) after secondary treatment because organic matter is consumed.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["sewage-treatment", "BOD"],
+      "tags": [
+        "sewage-treatment",
+        "BOD"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -631,17 +717,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following statements about biofertilizers is/are correct?\nI. Rhizobium fixes nitrogen symbiotically with legume roots.\nII. Azospirillum and Azotobacter are free-living nitrogen fixers.\nIII. Mycorrhiza helps in absorption of phosphorus from soil.\nIV. Cyanobacteria like Anabaena and Nostoc fix nitrogen only in symbiosis.",
       "options": [
-        "A) I, II, III and IV",
-        "B) I, II and IV only",
-        "C) I and III only",
-        "D) I, II and III only"
+        "I, II, III and IV",
+        "I, II and IV only",
+        "I and III only",
+        "I, II and III only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I, II, and III are correct. Rhizobium is symbiotic with legumes, Azospirillum and Azotobacter are free-living N-fixers, and mycorrhiza aids phosphorus absorption. Statement IV is incorrect; cyanobacteria like Anabaena and Nostoc can fix nitrogen both as free-living organisms AND in symbiosis (e.g., Anabaena with Azolla).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biofertilizers", "nitrogen-fixation"],
+      "tags": [
+        "biofertilizers",
+        "nitrogen-fixation"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -653,17 +742,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Consider the following statements about antibiotics:\nI. Penicillin was the first antibiotic to be discovered.\nII. Antibiotics are produced by bacteria and fungi.\nIII. Antibiotics kill or inhibit the growth of disease-causing microbes.\nIV. Antibiotics are effective against viral infections.\nSelect the correct statements:",
       "options": [
-        "A) I, II, III and IV",
-        "B) I and III only",
-        "C) I, II and III only",
-        "D) II, III and IV only"
+        "I, II, III and IV",
+        "I and III only",
+        "I, II and III only",
+        "II, III and IV only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements I, II, and III are correct. Penicillin was the first antibiotic discovered (1928, Fleming). Antibiotics are produced by bacteria (e.g., Streptomyces) and fungi (e.g., Penicillium) and kill/inhibit pathogenic microbes. Statement IV is incorrect; antibiotics are NOT effective against viruses.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["antibiotics", "penicillin"],
+      "tags": [
+        "antibiotics",
+        "penicillin"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -675,17 +767,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Read the following statements about biogas:\nI. Biogas is produced by anaerobic digestion of organic waste.\nII. The main component of biogas is CO2.\nIII. Methanogens like Methanobacterium are responsible for methane production.\nIV. Cattle dung (gobar) is commonly used as raw material in biogas plants.\nWhich are correct?",
       "options": [
-        "A) I, II, III and IV",
-        "B) I, III and IV only",
-        "C) I and III only",
-        "D) I, II and IV only"
+        "I, II, III and IV",
+        "I, III and IV only",
+        "I and III only",
+        "I, II and IV only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements I, III, and IV are correct. Biogas is produced by anaerobic digestion, methanogens produce methane, and cattle dung (gobar) is the most common substrate. Statement II is incorrect; the main component of biogas is METHANE (CH4, about 50-70%), not CO2. CO2 is present but is not the main component.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biogas", "methane"],
+      "tags": [
+        "biogas",
+        "methane"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -697,17 +792,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Consider the following statements about biocontrol:\nI. Bt cotton contains the gene from Bacillus thuringiensis.\nII. Ladybird beetles and dragonflies are useful as biocontrol agents for aphids and mosquitoes.\nIII. Trichoderma is effective against plant-pathogenic fungi.\nIV. All biocontrol agents are microorganisms.\nWhich of the above are correct?",
       "options": [
-        "A) I, II, III and IV",
-        "B) I and III only",
-        "C) II and IV only",
-        "D) I, II and III only"
+        "I, II, III and IV",
+        "I and III only",
+        "II and IV only",
+        "I, II and III only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I, II, and III are correct. Bt cotton has the Cry gene from B. thuringiensis. Ladybird beetles prey on aphids, and dragonflies prey on mosquitoes. Trichoderma is a fungal biocontrol agent. Statement IV is incorrect; biocontrol agents also include insects (ladybirds, dragonflies) and not just microorganisms.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biocontrol", "IPM"],
+      "tags": [
+        "biocontrol",
+        "IPM"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -719,17 +817,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following microorganisms with their industrial products:\nColumn I: (P) Aspergillus niger (Q) Acetobacter aceti (R) Clostridium butylicum (S) Lactobacillus\nColumn II: (i) Acetic acid (ii) Butyric acid (iii) Citric acid (iv) Lactic acid",
       "options": [
-        "A) P-i, Q-iii, R-iv, S-ii",
-        "B) P-iii, Q-i, R-ii, S-iv",
-        "C) P-iii, Q-ii, R-i, S-iv",
-        "D) P-iv, Q-i, R-ii, S-iii"
+        "P-i, Q-iii, R-iv, S-ii",
+        "P-iii, Q-i, R-ii, S-iv",
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-iv, Q-i, R-ii, S-iii"
       ],
       "correctAnswer": "B",
       "explanation": "Aspergillus niger (P) - citric acid (iii); Acetobacter aceti (Q) - acetic acid/vinegar (i); Clostridium butylicum (R) - butyric acid (ii); Lactobacillus (S) - lactic acid (iv).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["industrial-products", "organic-acids"],
+      "tags": [
+        "industrial-products",
+        "organic-acids"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -741,17 +842,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following microbes with their uses:\nColumn I: (P) Trichoderma polysporum (Q) Monascus purpureus (R) Penicillium notatum (S) Streptococcus\nColumn II: (i) Statin production (ii) Cyclosporin A (iii) Streptokinase (iv) Penicillin",
       "options": [
-        "A) P-i, Q-ii, R-iii, S-iv",
-        "B) P-iv, Q-iii, R-ii, S-i",
-        "C) P-ii, Q-i, R-iv, S-iii",
-        "D) P-ii, Q-iv, R-i, S-iii"
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-iv, Q-iii, R-ii, S-i",
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-ii, Q-iv, R-i, S-iii"
       ],
       "correctAnswer": "C",
       "explanation": "Trichoderma polysporum (P) - Cyclosporin A, immunosuppressant (ii); Monascus purpureus (Q) - Statins, cholesterol-lowering (i); Penicillium notatum (R) - Penicillin, antibiotic (iv); Streptococcus (S) - Streptokinase, clot buster (iii).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["microbial-products", "bioactive-molecules"],
+      "tags": [
+        "microbial-products",
+        "bioactive-molecules"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -763,17 +867,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following biofertilizers with their function:\nColumn I: (P) Rhizobium (Q) Mycorrhiza (R) Azotobacter (S) Anabaena\nColumn II: (i) Free-living nitrogen fixer (bacteria) (ii) Symbiotic nitrogen fixer with legumes (iii) Phosphorus absorption from soil (iv) Free-living nitrogen-fixing cyanobacterium",
       "options": [
-        "A) P-i, Q-ii, R-iv, S-iii",
-        "B) P-ii, Q-iii, R-i, S-iv",
-        "C) P-ii, Q-iv, R-iii, S-i",
-        "D) P-iii, Q-ii, R-i, S-iv"
+        "P-i, Q-ii, R-iv, S-iii",
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-iii, Q-ii, R-i, S-iv"
       ],
       "correctAnswer": "B",
       "explanation": "Rhizobium (P) - symbiotic nitrogen fixer with legumes (ii); Mycorrhiza (Q) - phosphorus absorption from soil (iii); Azotobacter (R) - free-living nitrogen fixer bacteria (i); Anabaena (S) - free-living nitrogen-fixing cyanobacterium (iv).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biofertilizers", "nitrogen-fixation"],
+      "tags": [
+        "biofertilizers",
+        "nitrogen-fixation"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -785,17 +892,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following cheese types with the microorganisms used:\nColumn I: (P) Swiss cheese (Q) Roquefort cheese (R) Camembert cheese\nColumn II: (i) Penicillium roqueforti (ii) Propionibacterium shermanii (iii) Penicillium camemberti",
       "options": [
-        "A) P-i, Q-iii, R-ii",
-        "B) P-iii, Q-ii, R-i",
-        "C) P-ii, Q-iii, R-i",
-        "D) P-ii, Q-i, R-iii"
+        "P-i, Q-iii, R-ii",
+        "P-iii, Q-ii, R-i",
+        "P-ii, Q-iii, R-i",
+        "P-ii, Q-i, R-iii"
       ],
       "correctAnswer": "D",
       "explanation": "Swiss cheese (P) - Propionibacterium shermanii, which produces large holes (ii); Roquefort cheese (Q) - Penicillium roqueforti, blue-green veined (i); Camembert cheese (R) - Penicillium camemberti (iii).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["cheese", "microorganisms"],
+      "tags": [
+        "cheese",
+        "microorganisms"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -807,17 +917,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following sewage treatment stages with their characteristics:\nColumn I: (P) Primary treatment (Q) Secondary treatment (R) Activated sludge (S) Anaerobic sludge digester\nColumn II: (i) Biological treatment with aerobic microbes (ii) Physical removal of debris and sedimentation (iii) Bacterial flocs used as inoculum (iv) Produces biogas from remaining sludge",
       "options": [
-        "A) P-i, Q-ii, R-iv, S-iii",
-        "B) P-ii, Q-iv, R-i, S-iii",
-        "C) P-iii, Q-i, R-ii, S-iv",
-        "D) P-ii, Q-i, R-iii, S-iv"
+        "P-i, Q-ii, R-iv, S-iii",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iii, Q-i, R-ii, S-iv",
+        "P-ii, Q-i, R-iii, S-iv"
       ],
       "correctAnswer": "D",
       "explanation": "Primary treatment (P) - physical removal of debris and sedimentation (ii); Secondary treatment (Q) - biological treatment with aerobic microbes (i); Activated sludge (R) - bacterial flocs used as inoculum (iii); Anaerobic sludge digester (S) - produces biogas from remaining sludge (iv).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["sewage-treatment", "treatment-stages"],
+      "tags": [
+        "sewage-treatment",
+        "treatment-stages"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -829,17 +942,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "How many of the following are used as biofertilizers?\n(i) Rhizobium (ii) Azotobacter (iii) Azospirillum (iv) Glomus (v) Anabaena (vi) Bacillus thuringiensis",
       "options": [
-        "A) Three",
-        "B) Five",
-        "C) Four",
-        "D) Six"
+        "Three",
+        "Five",
+        "Four",
+        "Six"
       ],
       "correctAnswer": "B",
       "explanation": "Five are biofertilizers: Rhizobium (symbiotic N-fixer) (i), Azotobacter (free-living N-fixer) (ii), Azospirillum (free-living N-fixer) (iii), Glomus (mycorrhizal fungus for phosphorus) (iv), and Anabaena (cyanobacterium, N-fixer) (v). Bacillus thuringiensis (vi) is a biocontrol agent, NOT a biofertilizer.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biofertilizers", "nitrogen-fixation"],
+      "tags": [
+        "biofertilizers",
+        "nitrogen-fixation"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -851,17 +967,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "How many of the following statements about fermented beverages are correct?\n(i) Beer is produced without distillation (ii) Whisky is produced by distillation of fermented broth (iii) Wine is made from grape juice fermented by Saccharomyces cerevisiae (iv) Rum is made from fermented sugarcane juice (v) Brandy is distilled from wine",
       "options": [
-        "A) Three",
-        "B) Four",
-        "C) Two",
-        "D) Five"
+        "Three",
+        "Four",
+        "Two",
+        "Five"
       ],
       "correctAnswer": "D",
       "explanation": "All five statements are correct: Beer is produced without distillation (i), whisky is produced by distillation (ii), wine is made from grape juice fermented by yeast (iii), rum is made from sugarcane juice fermentation (iv), and brandy is distilled from wine (v).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["fermented-beverages", "alcohol"],
+      "tags": [
+        "fermented-beverages",
+        "alcohol"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -873,17 +992,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "How many of the following are biocontrol agents?\n(i) Bacillus thuringiensis (ii) Trichoderma harzianum (iii) Baculovirus (iv) Ladybird beetle (v) Rhizobium (vi) Dragonfly",
       "options": [
-        "A) Three",
-        "B) Four",
-        "C) Five",
-        "D) Six"
+        "Three",
+        "Four",
+        "Five",
+        "Six"
       ],
       "correctAnswer": "C",
       "explanation": "Five are biocontrol agents: Bacillus thuringiensis (Bt toxin against insect pests) (i), Trichoderma harzianum (against plant pathogens) (ii), Baculovirus (against insect pests) (iii), Ladybird beetle (predator of aphids) (iv), and Dragonfly (predator of mosquitoes) (vi). Rhizobium (v) is a biofertilizer, not a biocontrol agent.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biocontrol", "agents"],
+      "tags": [
+        "biocontrol",
+        "agents"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -895,17 +1017,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Arrange the following steps of sewage treatment in the correct sequence:\n(I) Aeration in tanks with agitation\n(II) Filtration to remove large debris\n(III) Sedimentation in settling tanks\n(IV) Release of treated water into water bodies\n(V) Anaerobic digestion of sludge",
       "options": [
-        "A) III - II - I - IV - V",
-        "B) I - II - III - IV - V",
-        "C) II - I - III - V - IV",
-        "D) II - III - I - V - IV"
+        "III - II - I - IV - V",
+        "I - II - III - IV - V",
+        "II - I - III - V - IV",
+        "II - III - I - V - IV"
       ],
       "correctAnswer": "D",
       "explanation": "The correct sequence: Filtration to remove large debris (II) - Sedimentation in settling tanks (III, primary treatment) - Aeration in tanks with agitation (I, secondary treatment) - Anaerobic digestion of sludge (V) - Release of treated water into water bodies (IV).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["sewage-treatment", "sequence"],
+      "tags": [
+        "sewage-treatment",
+        "sequence"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -917,17 +1042,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Arrange the steps in the production of biogas in the correct order:\n(I) Collection of biogas from the gas holder\n(II) Loading of cattle dung (slurry) into the digester\n(III) Anaerobic digestion by methanogens\n(IV) Mixing of cattle dung with water\n(V) Production of methane, CO2, and H2S",
       "options": [
-        "A) II - IV - III - I - V",
-        "B) IV - III - II - V - I",
-        "C) IV - II - III - V - I",
-        "D) II - IV - V - III - I"
+        "II - IV - III - I - V",
+        "IV - III - II - V - I",
+        "IV - II - III - V - I",
+        "II - IV - V - III - I"
       ],
       "correctAnswer": "C",
       "explanation": "The correct sequence: Mixing cattle dung with water to form slurry (IV) - Loading slurry into the digester (II) - Anaerobic digestion by methanogens (III) - Production of methane, CO2, and H2S gases (V) - Collection of biogas from the gas holder (I).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biogas", "production-sequence"],
+      "tags": [
+        "biogas",
+        "production-sequence"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -939,17 +1067,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Arrange the following steps of secondary sewage treatment in the correct order:\n(I) BOD is significantly reduced\n(II) Primary effluent is passed into aeration tank\n(III) Flocs (aerobic microbes) consume organic matter\n(IV) Effluent is passed to settling tank\n(V) Activated sludge is partly returned to aeration tank",
       "options": [
-        "A) III - II - I - V - IV",
-        "B) II - III - I - IV - V",
-        "C) II - I - III - IV - V",
-        "D) IV - II - III - I - V"
+        "III - II - I - V - IV",
+        "II - III - I - IV - V",
+        "II - I - III - IV - V",
+        "IV - II - III - I - V"
       ],
       "correctAnswer": "B",
       "explanation": "Correct sequence of secondary treatment: Primary effluent is passed into aeration tank (II) - Flocs (aerobic microbes) consume organic matter (III) - BOD is significantly reduced (I) - Effluent is passed to settling tank (IV) - Activated sludge is partly returned as inoculum (V).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["secondary-treatment", "sequence"],
+      "tags": [
+        "secondary-treatment",
+        "sequence"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -961,17 +1092,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Streptokinase, used as a clot buster in patients with myocardial infarction, is produced by:",
       "options": [
-        "A) Staphylococcus",
-        "B) Clostridium",
-        "C) Streptococcus",
-        "D) Bacillus"
+        "Staphylococcus",
+        "Clostridium",
+        "Streptococcus",
+        "Bacillus"
       ],
       "correctAnswer": "C",
       "explanation": "Streptokinase is a fibrinolytic enzyme produced by Streptococcus bacteria. It is modified genetically and used as a 'clot buster' for removing blood clots from blood vessels of patients who have had myocardial infarction (heart attack).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["streptokinase", "clot-buster"],
+      "tags": [
+        "streptokinase",
+        "clot-buster"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -983,17 +1117,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following is NOT a fermented food product?",
       "options": [
-        "A) Curd",
-        "B) Idli",
-        "C) Bread",
-        "D) Pasteurised milk"
+        "Curd",
+        "Idli",
+        "Bread",
+        "Pasteurised milk"
       ],
       "correctAnswer": "D",
       "explanation": "Pasteurised milk is NOT a fermented product; it is milk that has been heat-treated to kill pathogens. Curd (by Lactobacillus), idli (by bacteria in batter), and bread (by Saccharomyces cerevisiae) are all fermented food products.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["fermented-foods", "pasteurisation"],
+      "tags": [
+        "fermented-foods",
+        "pasteurisation"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -1005,17 +1142,21 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "The technology of biogas production in India was developed by:",
       "options": [
-        "A) IARI (Indian Agricultural Research Institute)",
-        "B) IARI and KVIC (Khadi and Village Industries Commission)",
-        "C) CSIR",
-        "D) ICAR"
+        "IARI (Indian Agricultural Research Institute)",
+        "IARI and KVIC (Khadi and Village Industries Commission)",
+        "CSIR",
+        "ICAR"
       ],
       "correctAnswer": "B",
       "explanation": "The technology of biogas production in India was mainly developed by IARI (Indian Agricultural Research Institute) and KVIC (Khadi and Village Industries Commission). KVIC promoted the Gobar Gas model in rural India.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["biogas", "IARI", "KVIC"],
+      "tags": [
+        "biogas",
+        "IARI",
+        "KVIC"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -1027,17 +1168,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Flocs in secondary sewage treatment consist of:",
       "options": [
-        "A) Only fungal filaments",
-        "B) Chemical precipitates",
-        "C) Dead organic matter only",
-        "D) Masses of bacteria associated with fungal filaments forming mesh-like structures"
+        "Only fungal filaments",
+        "Chemical precipitates",
+        "Dead organic matter only",
+        "Masses of bacteria associated with fungal filaments forming mesh-like structures"
       ],
       "correctAnswer": "D",
       "explanation": "Flocs are masses of bacteria (aerobic heterotrophs) associated with fungal filaments that form mesh-like structures in the aeration tanks during secondary sewage treatment. These flocs consume organic matter and reduce BOD.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["flocs", "secondary-treatment"],
+      "tags": [
+        "flocs",
+        "secondary-treatment"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1049,17 +1193,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following produces ethanol industrially?",
       "options": [
-        "A) Aspergillus niger",
-        "B) Clostridium butylicum",
-        "C) Saccharomyces cerevisiae",
-        "D) Lactobacillus"
+        "Aspergillus niger",
+        "Clostridium butylicum",
+        "Saccharomyces cerevisiae",
+        "Lactobacillus"
       ],
       "correctAnswer": "C",
       "explanation": "Saccharomyces cerevisiae (brewer's yeast) produces ethanol by fermenting sugars (molasses, glucose) anaerobically. It is used industrially for the production of ethanol for beverages, biofuel, and industrial alcohol.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["ethanol", "saccharomyces"],
+      "tags": [
+        "ethanol",
+        "saccharomyces"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1071,17 +1218,21 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Azolla is used as a biofertilizer because:",
       "options": [
-        "A) It directly fixes nitrogen in the soil",
-        "B) It produces growth hormones for plants",
-        "C) It has a symbiotic cyanobacterium Anabaena in its leaf cavities that fixes atmospheric nitrogen",
-        "D) It absorbs phosphorus from the atmosphere"
+        "It directly fixes nitrogen in the soil",
+        "It produces growth hormones for plants",
+        "It has a symbiotic cyanobacterium Anabaena in its leaf cavities that fixes atmospheric nitrogen",
+        "It absorbs phosphorus from the atmosphere"
       ],
       "correctAnswer": "C",
       "explanation": "Azolla (a water fern) is used as a biofertilizer because it harbours the nitrogen-fixing cyanobacterium Anabaena azollae in its leaf cavities. This symbiotic association fixes atmospheric nitrogen, enriching the soil. Azolla is particularly used in rice paddy fields.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["azolla", "anabaena", "biofertilizers"],
+      "tags": [
+        "azolla",
+        "anabaena",
+        "biofertilizers"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1093,17 +1244,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following is an organic acid produced by Aspergillus niger?",
       "options": [
-        "A) Acetic acid",
-        "B) Lactic acid",
-        "C) Citric acid",
-        "D) Butyric acid"
+        "Acetic acid",
+        "Lactic acid",
+        "Citric acid",
+        "Butyric acid"
       ],
       "correctAnswer": "C",
       "explanation": "Aspergillus niger produces citric acid industrially. Acetic acid is produced by Acetobacter aceti, lactic acid by Lactobacillus, and butyric acid by Clostridium butylicum.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["citric-acid", "aspergillus-niger"],
+      "tags": [
+        "citric-acid",
+        "aspergillus-niger"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -1115,17 +1269,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which genus of fungi forms endomycorrhiza (VAM - vesicular arbuscular mycorrhiza)?",
       "options": [
-        "A) Penicillium",
-        "B) Trichoderma",
-        "C) Aspergillus",
-        "D) Glomus"
+        "Penicillium",
+        "Trichoderma",
+        "Aspergillus",
+        "Glomus"
       ],
       "correctAnswer": "D",
       "explanation": "Glomus is the genus of fungi that forms endomycorrhiza (vesicular arbuscular mycorrhiza/VAM) with plant roots. The fungal hyphae penetrate the root cells and help in absorption of phosphorus and other minerals from the soil.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["glomus", "mycorrhiza"],
+      "tags": [
+        "glomus",
+        "mycorrhiza"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1137,17 +1294,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following is an example of a free-living nitrogen-fixing aerobic bacterium used as a biofertilizer?",
       "options": [
-        "A) Rhizobium",
-        "B) Frankia",
-        "C) Azotobacter",
-        "D) Anabaena"
+        "Rhizobium",
+        "Frankia",
+        "Azotobacter",
+        "Anabaena"
       ],
       "correctAnswer": "C",
       "explanation": "Azotobacter is a free-living, aerobic, nitrogen-fixing bacterium used as a biofertilizer. Rhizobium and Frankia are symbiotic nitrogen fixers (Rhizobium with legumes, Frankia with non-leguminous trees like Casuarina). Anabaena is a cyanobacterium, not a bacterium.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["azotobacter", "nitrogen-fixation"],
+      "tags": [
+        "azotobacter",
+        "nitrogen-fixation"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1159,17 +1319,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "The toddy is made by fermenting sap from:",
       "options": [
-        "A) Sugarcane",
-        "B) Palm trees",
-        "C) Grapes",
-        "D) Rice"
+        "Sugarcane",
+        "Palm trees",
+        "Grapes",
+        "Rice"
       ],
       "correctAnswer": "B",
       "explanation": "Toddy is a traditional fermented drink made by fermenting sap from palm trees. Yeast naturally present in the sap ferments the sugars to produce alcohol. In southern India, toddy is prepared from coconut palm and palmyra palm sap.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["toddy", "fermented-beverages"],
+      "tags": [
+        "toddy",
+        "fermented-beverages"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -1181,17 +1344,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "The Bt toxin protein exists as inactive protoxins in Bacillus thuringiensis because:",
       "options": [
-        "A) The bacterium requires acidic pH to activate it",
-        "B) The bacterium is resistant to its own toxin",
-        "C) The toxin is water-insoluble",
-        "D) The toxin becomes active only in the alkaline gut of insect larvae"
+        "The bacterium requires acidic pH to activate it",
+        "The bacterium is resistant to its own toxin",
+        "The toxin is water-insoluble",
+        "The toxin becomes active only in the alkaline gut of insect larvae"
       ],
       "correctAnswer": "D",
       "explanation": "In Bacillus thuringiensis, the Bt toxin (Cry protein) exists as inactive protoxin crystals. When an insect larva ingests it, the alkaline pH in the insect gut solubilises the crystal, and gut proteases activate the toxin. The active toxin binds to midgut epithelial cells, creating pores and causing cell lysis, eventually killing the larva.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["bt-toxin", "cry-protein"],
+      "tags": [
+        "bt-toxin",
+        "cry-protein"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -1203,17 +1369,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following is the correct composition of biogas?",
       "options": [
-        "A) Predominantly CO2 with small amounts of methane",
-        "B) Predominantly methane with CO2 and traces of H2S",
-        "C) Equal parts methane and CO2",
-        "D) Predominantly H2S with small amounts of methane"
+        "Predominantly CO2 with small amounts of methane",
+        "Predominantly methane with CO2 and traces of H2S",
+        "Equal parts methane and CO2",
+        "Predominantly H2S with small amounts of methane"
       ],
       "correctAnswer": "B",
       "explanation": "Biogas is predominantly composed of methane (50-70%), with CO2 (30-40%) and traces of hydrogen sulphide (H2S) and other gases. The high methane content makes biogas an excellent fuel for cooking and lighting.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biogas", "composition"],
+      "tags": [
+        "biogas",
+        "composition"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1225,17 +1394,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following enzymes produced by microorganisms is used to clarify fruit juices?",
       "options": [
-        "A) Lipase",
-        "B) Amylase",
-        "C) Pectinase and protease",
-        "D) Cellulase"
+        "Lipase",
+        "Amylase",
+        "Pectinase and protease",
+        "Cellulase"
       ],
       "correctAnswer": "C",
       "explanation": "Pectinases and proteases are enzymes used to clarify bottled fruit juices. Pectinases break down pectin (which causes cloudiness), while proteases digest proteins that contribute to haze formation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["enzymes", "industrial-products"],
+      "tags": [
+        "enzymes",
+        "industrial-products"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1247,17 +1419,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following is correct about the anaerobic sludge digester in sewage treatment?",
       "options": [
-        "A) It uses aerobic bacteria to decompose sludge",
-        "B) It only removes physical impurities",
-        "C) It uses UV radiation to kill pathogens",
-        "D) The remaining activated sludge is digested by anaerobic bacteria, producing gases like methane, H2S, and CO2"
+        "It uses aerobic bacteria to decompose sludge",
+        "It only removes physical impurities",
+        "It uses UV radiation to kill pathogens",
+        "The remaining activated sludge is digested by anaerobic bacteria, producing gases like methane, H2S, and CO2"
       ],
       "correctAnswer": "D",
       "explanation": "In the anaerobic sludge digester, the excess activated sludge (not returned to the aeration tank) is pumped into large tanks called anaerobic sludge digesters. Here, anaerobic bacteria digest the organic matter in the sludge, producing biogas (methane, H2S, and CO2).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["anaerobic-digester", "sewage-treatment"],
+      "tags": [
+        "anaerobic-digester",
+        "sewage-treatment"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1269,17 +1444,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Lipases are enzymes produced by microorganisms that are used in:",
       "options": [
-        "A) Clarifying fruit juices",
-        "B) Bread making",
-        "C) Cheese ripening only",
-        "D) Laundry detergents to remove oil and grease stains"
+        "Clarifying fruit juices",
+        "Bread making",
+        "Cheese ripening only",
+        "Laundry detergents to remove oil and grease stains"
       ],
       "correctAnswer": "D",
       "explanation": "Lipases produced by microorganisms are used in laundry detergent formulations to remove oil and grease stains from laundry. They break down lipids (fats and oils) into glycerol and fatty acids.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["lipases", "enzymes"],
+      "tags": [
+        "lipases",
+        "enzymes"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1291,17 +1469,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "The ladybird beetle is an example of a biocontrol agent used to control:",
       "options": [
-        "A) Mosquitoes",
-        "B) Aphids",
-        "C) Caterpillars",
-        "D) Beetles"
+        "Mosquitoes",
+        "Aphids",
+        "Caterpillars",
+        "Beetles"
       ],
       "correctAnswer": "B",
       "explanation": "Ladybird beetles (ladybugs) are predatory insects used as biocontrol agents to control aphids, which are sap-sucking pests of many crop plants. A single ladybird can consume up to 5,000 aphids in its lifetime.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["ladybird", "biocontrol"],
+      "tags": [
+        "ladybird",
+        "biocontrol"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1313,17 +1494,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Nucleopolyhedrovirus (NPV), a type of baculovirus, does NOT show negative effects on:",
       "options": [
-        "A) Target insect pests",
-        "B) Insect larvae",
-        "C) Plants, mammals, birds, and fish",
-        "D) Insect eggs"
+        "Target insect pests",
+        "Insect larvae",
+        "Plants, mammals, birds, and fish",
+        "Insect eggs"
       ],
       "correctAnswer": "C",
       "explanation": "Nucleopolyhedrovirus (NPV), a type of baculovirus, is species-specific and only attacks the target insect pest. It does NOT show negative effects on plants, mammals, birds, fish, or other non-target organisms, making it ideal for integrated pest management.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["NPV", "baculovirus"],
+      "tags": [
+        "NPV",
+        "baculovirus"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1335,17 +1519,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following is an antibiotic obtained from Streptomyces?",
       "options": [
-        "A) Penicillin",
-        "B) Cyclosporin A",
-        "C) Statin",
-        "D) Streptomycin"
+        "Penicillin",
+        "Cyclosporin A",
+        "Statin",
+        "Streptomycin"
       ],
       "correctAnswer": "D",
       "explanation": "Streptomycin is an antibiotic obtained from Streptomyces griseus, a soil bacterium (actinomycete). Penicillin comes from Penicillium notatum (fungus), Cyclosporin A from Trichoderma polysporum, and statins from Monascus purpureus.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["streptomycin", "antibiotics"],
+      "tags": [
+        "streptomycin",
+        "antibiotics"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1357,17 +1544,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following microbes is involved in the production of acetic acid (vinegar)?",
       "options": [
-        "A) Saccharomyces cerevisiae",
-        "B) Acetobacter aceti",
-        "C) Aspergillus niger",
-        "D) Clostridium butylicum"
+        "Saccharomyces cerevisiae",
+        "Acetobacter aceti",
+        "Aspergillus niger",
+        "Clostridium butylicum"
       ],
       "correctAnswer": "B",
       "explanation": "Acetobacter aceti is the bacterium responsible for the production of acetic acid (vinegar). It oxidises ethanol to acetic acid in the presence of oxygen (aerobic fermentation).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["acetobacter", "acetic-acid"],
+      "tags": [
+        "acetobacter",
+        "acetic-acid"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1379,17 +1569,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Statins lower blood cholesterol levels.\nReason (R): Statins competitively inhibit the enzyme responsible for cholesterol synthesis.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true. Statins (produced by Monascus purpureus) lower blood cholesterol by competitively inhibiting the enzyme HMG-CoA reductase, which is responsible for cholesterol biosynthesis in the liver.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["statins", "cholesterol"],
+      "tags": [
+        "statins",
+        "cholesterol"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -1401,17 +1594,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Methanogens are found in the rumen of cattle.\nReason (R): The rumen provides an anaerobic environment suitable for methanogens.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. Methanogens are obligate anaerobes, and the rumen (part of the stomach of cattle) provides an anaerobic environment where methanogens can thrive and help in the digestion of cellulose, producing methane as a by-product.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["methanogens", "rumen"],
+      "tags": [
+        "methanogens",
+        "rumen"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1423,17 +1619,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Sewage water should be treated before releasing into rivers.\nReason (R): Untreated sewage causes eutrophication and depletion of dissolved oxygen in water bodies.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true. Untreated sewage contains organic matter that promotes eutrophication (excessive algal growth). Microbial decomposition of this organic matter consumes dissolved oxygen, leading to oxygen depletion and death of aquatic organisms. This explains why sewage must be treated.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["sewage-treatment", "eutrophication"],
+      "tags": [
+        "sewage-treatment",
+        "eutrophication"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1445,17 +1644,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Cyclosporin A is used in organ transplant patients.\nReason (R): Cyclosporin A stimulates the immune system to accept the new organ.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "The assertion is true; Cyclosporin A (from Trichoderma polysporum) is used in organ transplant patients. However, the reason is false; Cyclosporin A SUPPRESSES (not stimulates) the immune system to prevent rejection of the transplanted organ.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["cyclosporin-A", "immunosuppressant"],
+      "tags": [
+        "cyclosporin-A",
+        "immunosuppressant"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1467,17 +1669,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Chemical pesticides cause environmental pollution.\nReason (R): Biocontrol methods using natural predators and pathogens are eco-friendly alternatives to chemical pesticides.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both statements are true. Chemical pesticides do cause environmental pollution, and biocontrol methods are eco-friendly alternatives. However, the reason does not explain why chemical pesticides cause pollution; it merely presents an alternative. The pollution is caused by non-biodegradability and biomagnification of chemical pesticides.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biocontrol", "chemical-pesticides"],
+      "tags": [
+        "biocontrol",
+        "chemical-pesticides"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1489,17 +1694,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Consider the following statements about Lactobacillus:\nI. It converts milk to curd by producing lactic acid.\nII. It increases vitamin B12 content in curd.\nIII. It checks disease-causing microbes in the stomach.\nIV. It is used in bread-making.\nWhich are correct?",
       "options": [
-        "A) I, II and III only",
-        "B) I, II, III and IV",
-        "C) I and II only",
-        "D) I, III and IV only"
+        "I, II and III only",
+        "I, II, III and IV",
+        "I and II only",
+        "I, III and IV only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, II, and III are correct. Lactobacillus converts milk to curd (I), increases vitamin B12 (II), and checks disease-causing microbes in the gut (III). Statement IV is incorrect; bread-making uses Saccharomyces cerevisiae (baker's yeast), not Lactobacillus.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["lactobacillus", "curd"],
+      "tags": [
+        "lactobacillus",
+        "curd"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1511,17 +1719,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Read the following statements about mycorrhiza:\nI. Mycorrhiza is a symbiotic association between fungi and plant roots.\nII. The fungus absorbs phosphorus from the soil and passes it to the plant.\nIII. Mycorrhizal plants show resistance to root-borne pathogens.\nIV. Mycorrhiza provides tolerance to salinity and drought.\nV. Mycorrhiza increases overall plant growth and development.\nHow many of the above statements are correct?",
       "options": [
-        "A) Three",
-        "B) Four",
-        "C) Five",
-        "D) Two"
+        "Three",
+        "Four",
+        "Five",
+        "Two"
       ],
       "correctAnswer": "C",
       "explanation": "All five statements are correct. Mycorrhiza is a fungus-root symbiosis (I), helps absorb phosphorus (II), provides resistance to root-borne pathogens (III), provides tolerance to salinity and drought (IV), and increases overall plant growth (V).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["mycorrhiza", "benefits"],
+      "tags": [
+        "mycorrhiza",
+        "benefits"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1533,17 +1744,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Consider the following statements about industrial products from microbes:\nI. Lipases are used in detergent formulations.\nII. Pectinases are used in clarifying fruit juices.\nIII. Streptokinase is used to dissolve blood clots.\nIV. All industrial enzymes are produced by bacteria only.\nWhich are correct?",
       "options": [
-        "A) I, II and III only",
-        "B) I, II, III and IV",
-        "C) I and II only",
-        "D) II and III only"
+        "I, II and III only",
+        "I, II, III and IV",
+        "I and II only",
+        "II and III only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, II, and III are correct. Lipases are used in detergents, pectinases clarify juices, and streptokinase dissolves blood clots. Statement IV is incorrect; industrial enzymes are produced by both bacteria AND fungi (e.g., Aspergillus produces pectinases).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["industrial-enzymes", "applications"],
+      "tags": [
+        "industrial-enzymes",
+        "applications"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1555,17 +1769,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Consider the following statements about Bacillus thuringiensis (Bt):\nI. It produces a crystalline insecticidal protein (Cry protein).\nII. The Cry protein is toxic in its native crystalline form.\nIII. The toxin is activated by alkaline pH of the insect gut.\nIV. Different Cry proteins are effective against different groups of insects.\nWhich are correct?",
       "options": [
-        "A) I, III and IV only",
-        "B) I, II, III and IV",
-        "C) I and III only",
-        "D) II and IV only"
+        "I, III and IV only",
+        "I, II, III and IV",
+        "I and III only",
+        "II and IV only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, III, and IV are correct. Bt produces Cry protein crystals (I), activated by alkaline gut pH of insects (III), and different Cry proteins target different insects (IV). Statement II is incorrect; the Cry protein is an INACTIVE protoxin in its crystalline form; it becomes active only after ingestion.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["bt-toxin", "cry-protein"],
+      "tags": [
+        "bt-toxin",
+        "cry-protein"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -1577,17 +1794,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Consider the following statements about fermented beverages:\nI. Yeast (Saccharomyces cerevisiae) is used to make wine from grape juice.\nII. Beer is produced without distillation.\nIII. Whisky, brandy, and rum are produced by distillation.\nIV. Ethanol in all fermented beverages is produced by aerobic respiration.\nWhich are correct?",
       "options": [
-        "A) I, II and III only",
-        "B) I, II, III and IV",
-        "C) I and III only",
-        "D) I, II and IV only"
+        "I, II and III only",
+        "I, II, III and IV",
+        "I and III only",
+        "I, II and IV only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, II, and III are correct. Yeast ferments grape juice to wine (I), beer is not distilled (II), and whisky/brandy/rum are distilled spirits (III). Statement IV is incorrect; ethanol is produced by ANAEROBIC respiration (fermentation), not aerobic respiration.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["fermented-beverages", "fermentation"],
+      "tags": [
+        "fermented-beverages",
+        "fermentation"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1599,17 +1819,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following biocontrol agents with their targets:\nColumn I: (P) Bacillus thuringiensis (Q) Trichoderma harzianum (R) Baculovirus (S) Ladybird beetle\nColumn II: (i) Aphids (ii) Insect pests (species-specific, especially lepidopterans) (iii) Insect larvae (iv) Plant pathogenic fungi",
       "options": [
-        "A) P-ii, Q-iii, R-iv, S-i",
-        "B) P-iv, Q-ii, R-i, S-iii",
-        "C) P-iii, Q-iv, R-ii, S-i",
-        "D) P-iii, Q-i, R-ii, S-iv"
+        "P-ii, Q-iii, R-iv, S-i",
+        "P-iv, Q-ii, R-i, S-iii",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-iii, Q-i, R-ii, S-iv"
       ],
       "correctAnswer": "C",
       "explanation": "Bacillus thuringiensis (P) kills insect larvae via Cry protein (iii); Trichoderma harzianum (Q) controls plant pathogenic fungi (iv); Baculovirus (R) attacks specific insect pests, especially lepidopterans (ii); Ladybird beetle (S) feeds on aphids (i).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biocontrol", "agents-targets"],
+      "tags": [
+        "biocontrol",
+        "agents-targets"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -1621,17 +1844,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following household products with the microbes involved:\nColumn I: (P) Curd (Q) Bread (R) Dosa batter (S) Toddy\nColumn II: (i) Saccharomyces cerevisiae (ii) Natural bacteria in batter (iii) Lactobacillus (iv) Natural yeasts in palm sap",
       "options": [
-        "A) P-i, Q-iii, R-iv, S-ii",
-        "B) P-iii, Q-iv, R-ii, S-i",
-        "C) P-ii, Q-i, R-iii, S-iv",
-        "D) P-iii, Q-i, R-ii, S-iv"
+        "P-i, Q-iii, R-iv, S-ii",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-iii, Q-i, R-ii, S-iv"
       ],
       "correctAnswer": "D",
       "explanation": "Curd (P) is made by Lactobacillus (iii); Bread (Q) is leavened by Saccharomyces cerevisiae/baker's yeast (i); Dosa batter (R) is fermented by natural bacteria present in the batter (ii); Toddy (S) is fermented by natural yeasts in palm sap (iv).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["household-products", "fermentation"],
+      "tags": [
+        "household-products",
+        "fermentation"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1643,17 +1869,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following enzymes with their applications:\nColumn I: (P) Lipase (Q) Pectinase (R) Streptokinase (S) Protease\nColumn II: (i) Clarifying fruit juices (ii) Blood clot dissolution (iii) Removing oil stains in laundry (iv) Clarifying fruit juices and in detergents",
       "options": [
-        "A) P-iii, Q-i, R-ii, S-iv",
-        "B) P-i, Q-iii, R-iv, S-ii",
-        "C) P-iv, Q-ii, R-i, S-iii",
-        "D) P-iii, Q-iv, R-ii, S-i"
+        "P-iii, Q-i, R-ii, S-iv",
+        "P-i, Q-iii, R-iv, S-ii",
+        "P-iv, Q-ii, R-i, S-iii",
+        "P-iii, Q-iv, R-ii, S-i"
       ],
       "correctAnswer": "A",
       "explanation": "Lipase (P) removes oil and grease stains in laundry (iii); Pectinase (Q) clarifies fruit juices by breaking down pectin (i); Streptokinase (R) dissolves blood clots (ii); Protease (S) is used in both clarifying fruit juices and in detergent formulations (iv).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["enzymes", "applications"],
+      "tags": [
+        "enzymes",
+        "applications"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1665,17 +1894,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following fermented beverages with their source material:\nColumn I: (P) Wine (Q) Beer (R) Rum (S) Whisky\nColumn II: (i) Malted cereals and hops (ii) Grape juice (iii) Fermented sugarcane juice (iv) Fermented grain mash",
       "options": [
-        "A) P-ii, Q-i, R-iii, S-iv",
-        "B) P-i, Q-ii, R-iv, S-iii",
-        "C) P-ii, Q-iv, R-i, S-iii",
-        "D) P-iii, Q-i, R-ii, S-iv"
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-i, Q-ii, R-iv, S-iii",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iii, Q-i, R-ii, S-iv"
       ],
       "correctAnswer": "A",
       "explanation": "Wine (P) is made from grape juice (ii); Beer (Q) from malted cereals and hops (i); Rum (R) from fermented sugarcane juice/molasses (iii); Whisky (S) from fermented grain mash (iv).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["beverages", "fermentation"],
+      "tags": [
+        "beverages",
+        "fermentation"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -1687,17 +1919,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following nitrogen-fixing organisms with their type of nitrogen fixation:\nColumn I: (P) Rhizobium (Q) Azotobacter (R) Anabaena (S) Frankia\nColumn II: (i) Free-living cyanobacterium (ii) Symbiotic with legumes (iii) Free-living bacterium (iv) Symbiotic with non-leguminous trees",
       "options": [
-        "A) P-ii, Q-iii, R-i, S-iv",
-        "B) P-iii, Q-ii, R-iv, S-i",
-        "C) P-ii, Q-i, R-iii, S-iv",
-        "D) P-iv, Q-iii, R-i, S-ii"
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-iii, Q-ii, R-iv, S-i",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-iv, Q-iii, R-i, S-ii"
       ],
       "correctAnswer": "A",
       "explanation": "Rhizobium (P) is symbiotic with legumes (ii); Azotobacter (Q) is a free-living nitrogen-fixing bacterium (iii); Anabaena (R) is a free-living nitrogen-fixing cyanobacterium (i); Frankia (S) is symbiotic with non-leguminous trees like Casuarina and Alnus (iv).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["nitrogen-fixation", "organisms"],
+      "tags": [
+        "nitrogen-fixation",
+        "organisms"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1709,17 +1944,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "How many of the following are produced by fermentation using microorganisms?\n(i) Ethanol (ii) Citric acid (iii) Acetic acid (iv) Butyric acid (v) Lactic acid (vi) Penicillin",
       "options": [
-        "A) Four",
-        "B) Five",
-        "C) Six",
-        "D) Three"
+        "Four",
+        "Five",
+        "Six",
+        "Three"
       ],
       "correctAnswer": "C",
       "explanation": "All six are produced by microorganisms: Ethanol by Saccharomyces cerevisiae (i), Citric acid by Aspergillus niger (ii), Acetic acid by Acetobacter aceti (iii), Butyric acid by Clostridium butylicum (iv), Lactic acid by Lactobacillus (v), and Penicillin by Penicillium notatum (vi).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["fermentation", "microbial-products"],
+      "tags": [
+        "fermentation",
+        "microbial-products"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1731,17 +1969,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "How many of the following are correct about the anaerobic sludge digester?\n(i) It receives excess activated sludge (ii) Anaerobic bacteria digest the sludge (iii) It produces biogas (methane, H2S, CO2) (iv) It uses aerobic microbes (v) The digested sludge can be used as fertilizer",
       "options": [
-        "A) Three",
-        "B) Four",
-        "C) Five",
-        "D) Two"
+        "Three",
+        "Four",
+        "Five",
+        "Two"
       ],
       "correctAnswer": "B",
       "explanation": "Four are correct: the digester receives excess activated sludge (i), anaerobic bacteria digest it (ii), biogas is produced (iii), and the digested sludge can be used as fertilizer/compost (v). Statement (iv) is incorrect; the digester uses ANAEROBIC microbes, not aerobic ones.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["anaerobic-digester", "sewage"],
+      "tags": [
+        "anaerobic-digester",
+        "sewage"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1753,17 +1994,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "How many of the following household food products involve the use of microorganisms?\n(i) Curd (ii) Bread (iii) Dosa/Idli (iv) Paneer (v) Cheese (vi) Toddy",
       "options": [
-        "A) Three",
-        "B) Four",
-        "C) Five",
-        "D) Six"
+        "Three",
+        "Four",
+        "Five",
+        "Six"
       ],
       "correctAnswer": "C",
       "explanation": "Five products involve microorganisms: Curd (Lactobacillus) (i), Bread (Saccharomyces cerevisiae) (ii), Dosa/Idli (bacteria in batter) (iii), Cheese (bacteria and fungi) (v), and Toddy (yeasts) (vi). Paneer (iv) is made by acid coagulation (using lemon juice or vinegar), not by microbial fermentation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["household-products", "microorganisms"],
+      "tags": [
+        "household-products",
+        "microorganisms"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1775,17 +2019,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Arrange the following events in the discovery and development of penicillin in chronological order:\n(I) Penicillin was mass-produced during World War II\n(II) Fleming observed inhibition of Staphylococcus growth by Penicillium\n(III) Ernest Chain and Howard Florey purified penicillin\n(IV) Fleming, Chain, and Florey received the Nobel Prize",
       "options": [
-        "A) II - III - I - IV",
-        "B) III - II - I - IV",
-        "C) II - I - III - IV",
-        "D) I - II - III - IV"
+        "II - III - I - IV",
+        "III - II - I - IV",
+        "II - I - III - IV",
+        "I - II - III - IV"
       ],
       "correctAnswer": "A",
       "explanation": "The correct chronological order: Fleming observed inhibition of Staphylococcus by Penicillium mould (II, 1928) - Chain and Florey purified penicillin and established it as an effective antibiotic (III, 1940s) - Penicillin was mass-produced during World War II (I, 1943-45) - All three received the Nobel Prize in Physiology or Medicine (IV, 1945).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["penicillin", "history"],
+      "tags": [
+        "penicillin",
+        "history"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1797,17 +2044,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Arrange the following steps in the activation of Bt toxin in correct order:\n(I) Toxin binds to midgut epithelial cells\n(II) Insect larva ingests the Bt crystal protein\n(III) Cell lysis and death of insect larva\n(IV) Alkaline pH of gut solubilises the crystal\n(V) Proteases activate the protoxin into active toxin",
       "options": [
-        "A) IV - II - V - III - I",
-        "B) V - II - IV - I - III",
-        "C) II - IV - V - I - III",
-        "D) II - V - IV - I - III"
+        "IV - II - V - III - I",
+        "V - II - IV - I - III",
+        "II - IV - V - I - III",
+        "II - V - IV - I - III"
       ],
       "correctAnswer": "C",
       "explanation": "The correct sequence: Insect larva ingests Bt crystal protein (II) - Alkaline pH of gut solubilises the crystal (IV) - Gut proteases activate protoxin into active toxin (V) - Active toxin binds to midgut epithelial cells, creating pores (I) - Cell lysis and death of insect larva (III).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["bt-toxin", "activation-sequence"],
+      "tags": [
+        "bt-toxin",
+        "activation-sequence"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -1819,17 +2069,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Arrange the following steps of curd formation in correct order:\n(I) Lactic acid coagulates casein\n(II) A small amount of curd (inoculum) is added to warm milk\n(III) Lactobacillus multiplies and converts lactose to lactic acid\n(IV) Milk is warmed to around 35-40 degrees Celsius\n(V) Curd is formed",
       "options": [
-        "A) IV - II - III - I - V",
-        "B) II - IV - III - V - I",
-        "C) IV - III - II - I - V",
-        "D) II - IV - I - III - V"
+        "IV - II - III - I - V",
+        "II - IV - III - V - I",
+        "IV - III - II - I - V",
+        "II - IV - I - III - V"
       ],
       "correctAnswer": "A",
       "explanation": "The correct sequence: Milk is warmed to 35-40 degrees C (IV) - A small amount of curd (inoculum containing LAB) is added (II) - Lactobacillus multiplies and converts lactose to lactic acid (III) - Lactic acid coagulates and partially digests casein (I) - Curd is formed (V).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["curd-formation", "sequence"],
+      "tags": [
+        "curd-formation",
+        "sequence"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1841,17 +2094,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Arrange the following steps in the production of wine in correct order:\n(I) Alcohol content reaches about 13-14%\n(II) Grape juice is collected\n(III) Saccharomyces cerevisiae is added or present naturally\n(IV) Yeast ferments sugars anaerobically to ethanol and CO2\n(V) Wine is aged and bottled",
       "options": [
-        "A) III - II - IV - V - I",
-        "B) II - III - IV - I - V",
-        "C) II - IV - III - I - V",
-        "D) III - IV - II - V - I"
+        "III - II - IV - V - I",
+        "II - III - IV - I - V",
+        "II - IV - III - I - V",
+        "III - IV - II - V - I"
       ],
       "correctAnswer": "B",
       "explanation": "The correct sequence: Grape juice is collected (II) - Saccharomyces cerevisiae is added or present naturally on grape skin (III) - Yeast ferments sugars anaerobically to ethanol and CO2 (IV) - Alcohol content reaches about 13-14% (I, at which point yeast dies) - Wine is aged and bottled (V).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["wine-production", "sequence"],
+      "tags": [
+        "wine-production",
+        "sequence"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -1863,17 +2119,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Which of the following is NOT a function of microbes used in household products?",
       "options": [
-        "A) Leavening of bread dough",
-        "B) Production of antibodies in milk",
-        "C) Fermentation of dosa batter",
-        "D) Conversion of milk to curd"
+        "Leavening of bread dough",
+        "Production of antibodies in milk",
+        "Fermentation of dosa batter",
+        "Conversion of milk to curd"
       ],
       "correctAnswer": "B",
       "explanation": "Microbes are NOT involved in the production of antibodies in milk. Antibodies are produced by the immune system of animals. Microbes are involved in leavening bread (Saccharomyces), fermenting dosa batter (bacteria), and converting milk to curd (Lactobacillus).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["household-products", "microbes"],
+      "tags": [
+        "household-products",
+        "microbes"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -1885,17 +2144,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Rhizobium cannot fix nitrogen independently as a free-living organism.\nReason (R): Rhizobium requires a symbiotic relationship with legume roots to form root nodules and fix nitrogen.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true. Rhizobium is an obligate symbiont for nitrogen fixation; it cannot fix nitrogen as a free-living bacterium in soil. It requires the symbiotic association with legume roots, where it forms root nodules and the enzyme nitrogenase (which needs anaerobic conditions provided by leghemoglobin) carries out nitrogen fixation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["rhizobium", "nitrogen-fixation"],
+      "tags": [
+        "rhizobium",
+        "nitrogen-fixation"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1907,17 +2169,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Antibiotic resistance is a growing global health concern.\nReason (R): Overuse and misuse of antibiotics has led to the evolution of resistant bacterial strains.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true. Antibiotic resistance is indeed a major global health concern, and it is directly caused by the overuse and misuse of antibiotics. This creates selective pressure favouring bacteria with resistance mutations, leading to 'superbugs' that are difficult to treat.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["antibiotic-resistance", "antibiotics"],
+      "tags": [
+        "antibiotic-resistance",
+        "antibiotics"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1929,17 +2194,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Assertion (A): Trichoderma harzianum is used as a biocontrol agent.\nReason (R): Trichoderma fixes atmospheric nitrogen in the soil.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "The assertion is true; Trichoderma harzianum is a fungal biocontrol agent effective against plant pathogens. However, the reason is false; Trichoderma does NOT fix nitrogen. It controls pathogens by competing with and parasitising other fungi, not by nitrogen fixation.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["trichoderma", "biocontrol"],
+      "tags": [
+        "trichoderma",
+        "biocontrol"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1951,17 +2219,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Consider the following statements about the role of microbes in human welfare:\nI. Alexander Fleming discovered penicillin from Penicillium notatum.\nII. Streptokinase is used as a clot buster.\nIII. Cyclosporin A stimulates the immune system.\nIV. Statins inhibit cholesterol synthesis.\nWhich are correct?",
       "options": [
-        "A) I, II, III and IV",
-        "B) I, III and IV only",
-        "C) I and II only",
-        "D) I, II and IV only"
+        "I, II, III and IV",
+        "I, III and IV only",
+        "I and II only",
+        "I, II and IV only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I, II, and IV are correct. Fleming discovered penicillin (I), streptokinase dissolves blood clots (II), and statins inhibit cholesterol synthesis by blocking HMG-CoA reductase (IV). Statement III is incorrect; Cyclosporin A SUPPRESSES (not stimulates) the immune system.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["microbial-products", "bioactive"],
+      "tags": [
+        "microbial-products",
+        "bioactive"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -1973,17 +2244,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Read the following statements about the use of microbes in food industry:\nI. Propionibacterium shermanii is used in Swiss cheese production.\nII. Penicillium roqueforti gives Roquefort cheese its flavour.\nIII. Saccharomyces cerevisiae is used in bread making and brewing.\nIV. Aspergillus oryzae is used to produce citric acid.\nWhich are correct?",
       "options": [
-        "A) I, II, III and IV",
-        "B) I and III only",
-        "C) II and III only",
-        "D) I, II and III only"
+        "I, II, III and IV",
+        "I and III only",
+        "II and III only",
+        "I, II and III only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I, II, and III are correct. Statement IV is incorrect; citric acid is produced by Aspergillus NIGER, not Aspergillus oryzae. Aspergillus oryzae is used in soy sauce production.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["food-industry", "microbes"],
+      "tags": [
+        "food-industry",
+        "microbes"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1995,17 +2269,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Consider the following about activated sludge in sewage treatment:\nI. It consists of aerobic bacterial flocs.\nII. A small portion is returned to the aeration tank as inoculum.\nIII. The excess sludge is sent to the anaerobic digester.\nIV. Activated sludge contains only anaerobic bacteria.\nWhich are correct?",
       "options": [
-        "A) I, II, III and IV",
-        "B) I and II only",
-        "C) I, II and III only",
-        "D) II and III only"
+        "I, II, III and IV",
+        "I and II only",
+        "I, II and III only",
+        "II and III only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements I, II, and III are correct. Activated sludge consists of aerobic bacterial flocs (I), a portion is returned as inoculum (II), and excess goes to the anaerobic digester (III). Statement IV is incorrect; activated sludge contains AEROBIC bacteria, not anaerobic.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["activated-sludge", "sewage"],
+      "tags": [
+        "activated-sludge",
+        "sewage"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2017,17 +2294,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Consider the following about biogas production:\nI. Methanogens like Methanobacterium produce methane.\nII. The process requires aerobic conditions.\nIII. Cattle dung (gobar) is the most common raw material.\nIV. The spent slurry can be used as organic manure.\nWhich are correct?",
       "options": [
-        "A) I, II, III and IV",
-        "B) I and III only",
-        "C) I, III and IV only",
-        "D) I, II and IV only"
+        "I, II, III and IV",
+        "I and III only",
+        "I, III and IV only",
+        "I, II and IV only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements I, III, and IV are correct. Methanogens produce methane (I), cattle dung is the common substrate (III), and spent slurry serves as manure (IV). Statement II is incorrect; biogas production requires ANAEROBIC conditions, not aerobic.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biogas", "methanogens"],
+      "tags": [
+        "biogas",
+        "methanogens"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2039,17 +2319,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Consider the following about integrated pest management (IPM):\nI. IPM uses a combination of biological, cultural, and chemical methods.\nII. Biological control is always sufficient alone.\nIII. Baculoviruses are used in IPM as species-specific insecticides.\nIV. IPM aims to reduce dependence on chemical pesticides.\nWhich are correct?",
       "options": [
-        "A) I, II, III and IV",
-        "B) I and IV only",
-        "C) III and IV only",
-        "D) I, III and IV only"
+        "I, II, III and IV",
+        "I and IV only",
+        "III and IV only",
+        "I, III and IV only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I, III, and IV are correct. IPM uses multiple methods including biological control (I), baculoviruses are species-specific (III), and IPM reduces chemical pesticide use (IV). Statement II is incorrect; biological control alone is often insufficient and must be integrated with other methods.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["IPM", "biocontrol"],
+      "tags": [
+        "IPM",
+        "biocontrol"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2061,17 +2344,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following antibiotics with their source organisms:\nColumn I: (P) Penicillin (Q) Streptomycin (R) Tetracycline (S) Chloramphenicol\nColumn II: (i) Streptomyces griseus (ii) Penicillium notatum (iii) Streptomyces venezuelae (iv) Streptomyces aureofaciens",
       "options": [
-        "A) P-ii, Q-i, R-iv, S-iii",
-        "B) P-i, Q-ii, R-iii, S-iv",
-        "C) P-ii, Q-iv, R-i, S-iii",
-        "D) P-iii, Q-i, R-iv, S-ii"
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iii, Q-i, R-iv, S-ii"
       ],
       "correctAnswer": "A",
       "explanation": "Penicillin (P) - Penicillium notatum (ii); Streptomycin (Q) - Streptomyces griseus (i); Tetracycline (R) - Streptomyces aureofaciens (iv); Chloramphenicol (S) - Streptomyces venezuelae (iii).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["antibiotics", "source-organisms"],
+      "tags": [
+        "antibiotics",
+        "source-organisms"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2083,17 +2369,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following processes with their key features:\nColumn I: (P) Primary sewage treatment (Q) Secondary sewage treatment (R) Anaerobic sludge digestion (S) Activated sludge process\nColumn II: (i) Produces biogas (ii) Physical process of filtration and sedimentation (iii) Aerobic bacteria form flocs (iv) Biological reduction of BOD",
       "options": [
-        "A) P-ii, Q-iv, R-i, S-iii",
-        "B) P-iv, Q-ii, R-iii, S-i",
-        "C) P-ii, Q-iii, R-i, S-iv",
-        "D) P-i, Q-iv, R-ii, S-iii"
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iv, Q-ii, R-iii, S-i",
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-i, Q-iv, R-ii, S-iii"
       ],
       "correctAnswer": "A",
       "explanation": "Primary treatment (P) is physical filtration and sedimentation (ii); Secondary treatment (Q) involves biological reduction of BOD (iv); Anaerobic sludge digestion (R) produces biogas (i); Activated sludge process (S) involves aerobic bacteria forming flocs (iii).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["sewage-processes", "features"],
+      "tags": [
+        "sewage-processes",
+        "features"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2105,17 +2394,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following industrial enzymes with their uses:\nColumn I: (P) Pectinases (Q) Lipases (R) Proteases (S) Amylases\nColumn II: (i) Laundry detergents for grease removal (ii) Clarifying fruit juices (iii) Detergent formulations and juice clarification (iv) Starch processing",
       "options": [
-        "A) P-ii, Q-i, R-iii, S-iv",
-        "B) P-i, Q-ii, R-iv, S-iii",
-        "C) P-iii, Q-i, R-ii, S-iv",
-        "D) P-ii, Q-iv, R-i, S-iii"
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-i, Q-ii, R-iv, S-iii",
+        "P-iii, Q-i, R-ii, S-iv",
+        "P-ii, Q-iv, R-i, S-iii"
       ],
       "correctAnswer": "A",
       "explanation": "Pectinases (P) clarify fruit juices by breaking down pectin (ii); Lipases (Q) remove grease/oil stains in laundry (i); Proteases (R) are used in both detergent formulations and juice clarification (iii); Amylases (S) are used in starch processing (iv).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["industrial-enzymes", "applications"],
+      "tags": [
+        "industrial-enzymes",
+        "applications"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2127,17 +2419,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following bioactive molecules with their applications:\nColumn I: (P) Cyclosporin A (Q) Statins (R) Streptokinase (S) Penicillin\nColumn II: (i) Anti-bacterial (ii) Blood clot dissolution (iii) Immunosuppression (iv) Cholesterol reduction",
       "options": [
-        "A) P-iii, Q-iv, R-ii, S-i",
-        "B) P-iv, Q-iii, R-i, S-ii",
-        "C) P-iii, Q-ii, R-iv, S-i",
-        "D) P-i, Q-iv, R-ii, S-iii"
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-iv, Q-iii, R-i, S-ii",
+        "P-iii, Q-ii, R-iv, S-i",
+        "P-i, Q-iv, R-ii, S-iii"
       ],
       "correctAnswer": "A",
       "explanation": "Cyclosporin A (P) - immunosuppression in organ transplants (iii); Statins (Q) - cholesterol reduction by inhibiting HMG-CoA reductase (iv); Streptokinase (R) - blood clot dissolution in heart attack patients (ii); Penicillin (S) - anti-bacterial antibiotic (i).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["bioactive-molecules", "applications"],
+      "tags": [
+        "bioactive-molecules",
+        "applications"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2149,17 +2444,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "Match the following free-living nitrogen fixers with their type:\nColumn I: (P) Azotobacter (Q) Azospirillum (R) Nostoc (S) Anabaena\nColumn II: (i) Free-living cyanobacterium (ii) Free-living soil bacterium (associative)",
       "options": [
-        "A) P-ii, Q-ii, R-i, S-i",
-        "B) P-i, Q-i, R-ii, S-ii",
-        "C) P-ii, Q-i, R-i, S-ii",
-        "D) P-i, Q-ii, R-ii, S-i"
+        "P-ii, Q-ii, R-i, S-i",
+        "P-i, Q-i, R-ii, S-ii",
+        "P-ii, Q-i, R-i, S-ii",
+        "P-i, Q-ii, R-ii, S-i"
       ],
       "correctAnswer": "A",
       "explanation": "Azotobacter (P) and Azospirillum (Q) are free-living soil bacteria that fix nitrogen (ii). Nostoc (R) and Anabaena (S) are free-living nitrogen-fixing cyanobacteria (blue-green algae) (i).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["nitrogen-fixers", "classification"],
+      "tags": [
+        "nitrogen-fixers",
+        "classification"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2171,17 +2469,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "How many of the following are correct about Lactobacillus (LAB)?\n(i) Converts lactose to lactic acid (ii) Increases vitamin B12 content in curd (iii) Checks disease-causing microbes in the gut (iv) Is used in bread making (v) Improves nutritional quality of milk upon conversion to curd",
       "options": [
-        "A) Three",
-        "B) Four",
-        "C) Five",
-        "D) Two"
+        "Three",
+        "Four",
+        "Five",
+        "Two"
       ],
       "correctAnswer": "B",
       "explanation": "Four are correct: LAB converts lactose to lactic acid (i), increases vitamin B12 (ii), checks pathogens in gut (iii), and improves nutritional quality (v). Statement (iv) is incorrect; bread making uses Saccharomyces cerevisiae, not Lactobacillus.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["lactobacillus", "functions"],
+      "tags": [
+        "lactobacillus",
+        "functions"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2193,17 +2494,20 @@
       "ncertChapterName": "Microbes in Human Welfare",
       "question": "How many of the following are advantages of using baculoviruses as biocontrol agents?\n(i) Species-specific (ii) No harmful effect on non-target organisms (iii) Eco-friendly for IPM (iv) Effective against all types of pests (v) No negative impact on plants and animals",
       "options": [
-        "A) Three",
-        "B) Four",
-        "C) Five",
-        "D) Two"
+        "Three",
+        "Four",
+        "Five",
+        "Two"
       ],
       "correctAnswer": "B",
       "explanation": "Four are correct advantages: species-specific (i), no harm to non-target organisms (ii), eco-friendly for IPM (iii), and no negative impact on plants and animals (v). Statement (iv) is incorrect; baculoviruses are NOT effective against all types of pests, they are specific to certain insect groups, particularly lepidopterans (moths and butterflies).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["baculovirus", "advantages"],
+      "tags": [
+        "baculovirus",
+        "advantages"
+      ],
       "neetWeightage": "MEDIUM"
     }
   ]

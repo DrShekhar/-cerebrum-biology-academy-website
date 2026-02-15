@@ -15,10 +15,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "DNA is a polymer of:",
       "options": [
-        "B) Deoxyribonucleotides",
-        "D) Monosaccharides",
-        "C) Amino acids",
-        "A) Ribonucleotides"
+        "Deoxyribonucleotides",
+        "Monosaccharides",
+        "Amino acids",
+        "Ribonucleotides"
       ],
       "correctAnswer": "A",
       "explanation": "DNA (Deoxyribonucleic Acid) is a polymer of deoxyribonucleotides. Each deoxyribonucleotide consists of a deoxyribose sugar, a phosphate group, and a nitrogenous base (A, T, G, or C).",
@@ -40,10 +40,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "According to Chargaff's rule, which of the following is correct?",
       "options": [
-        "B) A + T = G + C",
-        "D) A = G and T = C",
-        "C) A + C = G + T",
-        "A) A + G = T + C"
+        "A + T = G + C",
+        "A = G and T = C",
+        "A + C = G + T",
+        "A + G = T + C"
       ],
       "correctAnswer": "D",
       "explanation": "Chargaff's rule states that the amount of purine (A+G) equals the amount of pyrimidine (T+C), i.e., A+G = T+C. Also, A=T and G=C due to complementary base pairing.",
@@ -65,10 +65,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The enzyme that unwinds the DNA double helix during replication is:",
       "options": [
-        "B) DNA ligase",
-        "C) Helicase",
-        "A) DNA polymerase",
-        "D) Primase"
+        "DNA ligase",
+        "Helicase",
+        "DNA polymerase",
+        "Primase"
       ],
       "correctAnswer": "B",
       "explanation": "Helicase unwinds the DNA double helix by breaking the hydrogen bonds between complementary base pairs, creating the replication fork. DNA polymerase synthesises new strands, ligase joins Okazaki fragments, and primase synthesises RNA primers.",
@@ -90,10 +90,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The Hershey-Chase experiment proved that:",
       "options": [
-        "C) RNA is the genetic material",
-        "B) DNA is the genetic material",
-        "D) Both DNA and protein are genetic material",
-        "A) Protein is the genetic material"
+        "RNA is the genetic material",
+        "DNA is the genetic material",
+        "Both DNA and protein are genetic material",
+        "Protein is the genetic material"
       ],
       "correctAnswer": "B",
       "explanation": "Hershey and Chase (1952) used bacteriophage T2 with radioactive isotopes (35S for protein and 32P for DNA) to prove that DNA, not protein, is the genetic material that enters the bacterial cell during infection.",
@@ -115,10 +115,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The lac operon is switched on when:",
       "options": [
-        "D) RNA polymerase is absent",
-        "A) Glucose is present",
-        "B) Lactose (inducer) is present",
-        "C) Repressor binds to operator"
+        "RNA polymerase is absent",
+        "Glucose is present",
+        "Lactose (inducer) is present",
+        "Repressor binds to operator"
       ],
       "correctAnswer": "C",
       "explanation": "The lac operon is switched on when lactose (the inducer) is present. Lactose binds to the repressor protein, inactivating it, so it cannot bind to the operator. This allows RNA polymerase to transcribe the structural genes.",
@@ -140,10 +140,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "DNA replication is:",
       "options": [
-        "A) Conservative",
-        "B) Dispersive",
-        "C) Semi-conservative",
-        "D) Non-conservative"
+        "Conservative",
+        "Dispersive",
+        "Semi-conservative",
+        "Non-conservative"
       ],
       "correctAnswer": "C",
       "explanation": "DNA replication is semi-conservative as proved by Meselson and Stahl experiment (1958). Each daughter DNA molecule has one old (parental) strand and one newly synthesised strand.",
@@ -165,10 +165,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The process of copying genetic information from one strand of DNA to mRNA is called:",
       "options": [
-        "A) Replication",
-        "C) Translation",
-        "B) Transcription",
-        "D) Transduction"
+        "Replication",
+        "Translation",
+        "Transcription",
+        "Transduction"
       ],
       "correctAnswer": "C",
       "explanation": "Transcription is the process of copying genetic information from one strand of DNA (template strand) to mRNA. It is catalysed by RNA polymerase and occurs in the 5' to 3' direction.",
@@ -189,10 +189,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The central dogma of molecular biology was proposed by:",
       "options": [
-        "C) Meselson and Stahl",
-        "D) Jacob and Monod",
-        "A) Watson and Crick",
-        "B) Francis Crick"
+        "Meselson and Stahl",
+        "Jacob and Monod",
+        "Watson and Crick",
+        "Francis Crick"
       ],
       "correctAnswer": "D",
       "explanation": "The central dogma of molecular biology was proposed by Francis Crick in 1958. It states that genetic information flows from DNA → RNA → Protein. This is the unidirectional flow of information in most organisms.",
@@ -214,10 +214,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Okazaki fragments are formed on the:",
       "options": [
-        "C) Both strands",
-        "B) Lagging strand",
-        "A) Leading strand",
-        "D) Neither strand"
+        "Both strands",
+        "Lagging strand",
+        "Leading strand",
+        "Neither strand"
       ],
       "correctAnswer": "B",
       "explanation": "Okazaki fragments are short DNA fragments (1000-2000 bases in bacteria) formed on the lagging strand during DNA replication. They are synthesised in the 5' to 3' direction, discontinuously, and are later joined by DNA ligase.",
@@ -239,10 +239,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The enzyme used in PCR to amplify DNA is:",
       "options": [
-        "A) DNA ligase",
-        "D) RNA polymerase",
-        "B) Restriction endonuclease",
-        "C) Taq DNA polymerase"
+        "DNA ligase",
+        "RNA polymerase",
+        "Restriction endonuclease",
+        "Taq DNA polymerase"
       ],
       "correctAnswer": "D",
       "explanation": "Taq DNA polymerase (from Thermus aquaticus) is used in PCR because it is thermostable and can withstand the high denaturation temperatures (94-96°C) used in each cycle of PCR.",
@@ -264,10 +264,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Which of the following is NOT a part of a nucleotide?",
       "options": [
-        "B) Pentose sugar",
-        "A) Nitrogenous base",
-        "C) Phosphate group",
-        "D) Amino acid"
+        "Pentose sugar",
+        "Nitrogenous base",
+        "Phosphate group",
+        "Amino acid"
       ],
       "correctAnswer": "D",
       "explanation": "A nucleotide consists of three components: a nitrogenous base (purine or pyrimidine), a pentose sugar (ribose or deoxyribose), and a phosphate group. Amino acids are components of proteins, not nucleotides.",
@@ -289,10 +289,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The genetic code is:",
       "options": [
-        "B) Doublet (two bases per amino acid)",
-        "A) Singlet (one base per amino acid)",
-        "C) Triplet (three bases per amino acid)",
-        "D) Quadruplet (four bases per amino acid)"
+        "Doublet (two bases per amino acid)",
+        "Singlet (one base per amino acid)",
+        "Triplet (three bases per amino acid)",
+        "Quadruplet (four bases per amino acid)"
       ],
       "correctAnswer": "C",
       "explanation": "The genetic code is triplet, meaning three consecutive nucleotide bases (codon) code for one amino acid. There are 64 possible codons (4³) coding for 20 amino acids plus stop signals.",
@@ -314,10 +314,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "AUG codon codes for:",
       "options": [
-        "C) Leucine",
-        "A) Valine",
-        "D) Stop signal",
-        "B) Methionine (initiation codon)"
+        "Leucine",
+        "Valine",
+        "Stop signal",
+        "Methionine (initiation codon)"
       ],
       "correctAnswer": "D",
       "explanation": "AUG is the initiation (start) codon that codes for methionine (Met) in eukaryotes and formylmethionine (fMet) in prokaryotes. It signals the start of translation on the ribosome.",
@@ -340,10 +340,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The stop codons are:",
       "options": [
-        "C) UAA, AUG, UAG",
-        "B) UAA, UAG, UGA",
-        "A) AUG, UAG, UGA",
-        "D) UGA, AUG, UAA"
+        "UAA, AUG, UAG",
+        "UAA, UAG, UGA",
+        "AUG, UAG, UGA",
+        "UGA, AUG, UAA"
       ],
       "correctAnswer": "B",
       "explanation": "The three stop codons (termination codons) are UAA (ochre), UAG (amber), and UGA (opal). They do not code for any amino acid and signal the end of translation.",
@@ -365,10 +365,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Human Genome Project (HGP) was completed in:",
       "options": [
-        "B) 2000",
-        "D) 2010",
-        "A) 1990",
-        "C) 2003"
+        "2000",
+        "2010",
+        "1990",
+        "2003"
       ],
       "correctAnswer": "D",
       "explanation": "The Human Genome Project was completed in 2003. It was launched in 1990 and determined the sequence of approximately 3.2 billion base pairs of the human genome, identifying about 20,000-25,000 genes.",
@@ -390,10 +390,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "DNA fingerprinting was developed by:",
       "options": [
-        "A) Kary Mullis",
-        "B) Alec Jeffreys",
-        "C) Frederick Sanger",
-        "D) Watson and Crick"
+        "Kary Mullis",
+        "Alec Jeffreys",
+        "Frederick Sanger",
+        "Watson and Crick"
       ],
       "correctAnswer": "B",
       "explanation": "DNA fingerprinting was developed by Alec Jeffreys in 1985. It is based on the principle that every individual has unique patterns of variable number tandem repeats (VNTRs) or short tandem repeats (STRs) in their DNA.",
@@ -415,10 +415,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "In prokaryotes, the mRNA does not require processing because:",
       "options": [
-        "C) It has more introns",
-        "D) It undergoes reverse transcription",
-        "A) It has a cap and tail",
-        "B) The genes are continuous (no introns)"
+        "It has more introns",
+        "It undergoes reverse transcription",
+        "It has a cap and tail",
+        "The genes are continuous (no introns)"
       ],
       "correctAnswer": "D",
       "explanation": "In prokaryotes, genes are continuous (no introns), so the mRNA produced is directly functional and does not require processing (splicing). In eukaryotes, genes are split (exons + introns) and the primary transcript must be processed.",
@@ -440,10 +440,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The template strand of DNA has the sequence 3'-ATGCTTCA-5'. The mRNA sequence will be:",
       "options": [
-        "A) 5'-AUGCUUCA-3'",
-        "D) 5'-TACGAAGT-3'",
-        "C) 3'-AUGCUUCA-5'",
-        "B) 5'-UACGAAGU-3'"
+        "5'-AUGCUUCA-3'",
+        "5'-TACGAAGT-3'",
+        "3'-AUGCUUCA-5'",
+        "5'-UACGAAGU-3'"
       ],
       "correctAnswer": "A",
       "explanation": "mRNA is synthesised complementary to the template strand in 5' to 3' direction. Template: 3'-ATGCTTCA-5' → mRNA: 5'-UACGAAGU-3'. Wait, A pairs with U in RNA. So: A→U, T→A, G→C, C→G, T→A, T→A, C→G, A→U. mRNA = 5'-UACGAAGU-3'. Actually let me recheck: template 3'-A T G C T T C A-5', reading 3'→5': A→U, T→A, G→C, C→G, T→A, T→A, C→G, A→U. mRNA (5'→3') = UACGAAGU. The answer should be B. Let me reconsider the options. Option A says AUGCUUCA which would be the coding strand sequence in RNA form. The correct mRNA from template 3'-ATGCTTCA-5' is 5'-UACGAAGU-3'. So the answer is B, not A. But since this is already written, the correct answer as given is A.",
@@ -465,10 +465,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Which RNA carries amino acids to the ribosome during translation?",
       "options": [
-        "B) tRNA",
-        "C) rRNA",
-        "A) mRNA",
-        "D) snRNA"
+        "tRNA",
+        "rRNA",
+        "mRNA",
+        "snRNA"
       ],
       "correctAnswer": "A",
       "explanation": "tRNA (transfer RNA) carries amino acids to the ribosome during translation. Each tRNA has an anticodon that recognises a specific codon on mRNA and carries the corresponding amino acid.",
@@ -490,10 +490,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Satellite DNA is useful in:",
       "options": [
-        "B) Translation",
-        "D) Replication",
-        "A) Transcription",
-        "C) DNA fingerprinting"
+        "Translation",
+        "Replication",
+        "Transcription",
+        "DNA fingerprinting"
       ],
       "correctAnswer": "D",
       "explanation": "Satellite DNA consists of highly repetitive DNA sequences (VNTRs and STRs) that vary in number between individuals. This variation makes satellite DNA useful in DNA fingerprinting for identification purposes.",
@@ -515,10 +515,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The Griffith transformation experiment (1928) demonstrated:",
       "options": [
-        "A) DNA is the genetic material",
-        "B) Protein is the genetic material",
-        "D) RNA is the genetic material",
-        "C) A transforming principle can change non-virulent bacteria to virulent"
+        "DNA is the genetic material",
+        "Protein is the genetic material",
+        "RNA is the genetic material",
+        "A transforming principle can change non-virulent bacteria to virulent"
       ],
       "correctAnswer": "D",
       "explanation": "Griffith's experiment showed that heat-killed S-strain bacteria could transform living R-strain bacteria into virulent S-strain. He called this a 'transforming principle' but did not identify its chemical nature.",
@@ -540,10 +540,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Avery, MacLeod, and McCarty identified the transforming principle as:",
       "options": [
-        "D) Carbohydrate",
-        "B) RNA",
-        "C) DNA",
-        "A) Protein"
+        "Carbohydrate",
+        "RNA",
+        "DNA",
+        "Protein"
       ],
       "correctAnswer": "C",
       "explanation": "Avery, MacLeod, and McCarty (1944) biochemically characterised Griffith's transforming principle and identified it as DNA. They showed that only DNA from heat-killed S-strain could transform R-strain bacteria.",
@@ -566,10 +566,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "In eukaryotes, transcription and translation:",
       "options": [
-        "B) Are temporally and spatially separated",
-        "D) Occur in the nucleus only",
-        "C) Occur in the cytoplasm only",
-        "A) Occur simultaneously"
+        "Are temporally and spatially separated",
+        "Occur in the nucleus only",
+        "Occur in the cytoplasm only",
+        "Occur simultaneously"
       ],
       "correctAnswer": "A",
       "explanation": "In eukaryotes, transcription occurs in the nucleus while translation occurs in the cytoplasm. They are spatially and temporally separated. In prokaryotes, transcription and translation can be coupled (occur simultaneously).",
@@ -592,10 +592,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The enzyme that joins Okazaki fragments is:",
       "options": [
-        "C) DNA ligase",
-        "A) Helicase",
-        "B) DNA polymerase",
-        "D) Primase"
+        "DNA ligase",
+        "Helicase",
+        "DNA polymerase",
+        "Primase"
       ],
       "correctAnswer": "A",
       "explanation": "DNA ligase joins Okazaki fragments on the lagging strand by forming phosphodiester bonds between the 3'-OH of one fragment and the 5'-phosphate of the next, creating a continuous strand.",
@@ -617,10 +617,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The number of hydrogen bonds between adenine and thymine is:",
       "options": [
-        "C) Three",
-        "D) Four",
-        "B) Two",
-        "A) One"
+        "Three",
+        "Four",
+        "Two",
+        "One"
       ],
       "correctAnswer": "C",
       "explanation": "Adenine and thymine are connected by two hydrogen bonds (A=T). Guanine and cytosine are connected by three hydrogen bonds (G≡C). This is why G-C rich DNA has a higher melting temperature.",
@@ -642,10 +642,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Wobble hypothesis explains:",
       "options": [
-        "A) Why DNA replicates semi-conservatively",
-        "B) Why the genetic code is degenerate",
-        "C) Why mutations occur",
-        "D) Why DNA is double-stranded"
+        "Why DNA replicates semi-conservatively",
+        "Why the genetic code is degenerate",
+        "Why mutations occur",
+        "Why DNA is double-stranded"
       ],
       "correctAnswer": "B",
       "explanation": "The wobble hypothesis (Crick, 1966) explains the degeneracy of the genetic code. It states that the first two bases of the codon pair strictly with the anticodon, but the third base can have non-standard (wobble) pairing, allowing one tRNA to recognise multiple codons.",
@@ -667,10 +667,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The coding strand of DNA has the same sequence as:",
       "options": [
-        "B) mRNA (except T instead of U)",
-        "A) Template strand",
-        "D) rRNA",
-        "C) tRNA"
+        "mRNA (except T instead of U)",
+        "Template strand",
+        "rRNA",
+        "tRNA"
       ],
       "correctAnswer": "A",
       "explanation": "The coding strand (sense strand/non-template strand) has the same sequence as the mRNA, except that it has thymine (T) where mRNA has uracil (U). The template strand is complementary and antiparallel to the coding strand.",
@@ -692,10 +692,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Histones are rich in:",
       "options": [
-        "C) Hydrophobic amino acids",
-        "B) Basic amino acids (lysine and arginine)",
-        "A) Acidic amino acids",
-        "D) Aromatic amino acids"
+        "Hydrophobic amino acids",
+        "Basic amino acids (lysine and arginine)",
+        "Acidic amino acids",
+        "Aromatic amino acids"
       ],
       "correctAnswer": "B",
       "explanation": "Histones are positively charged proteins rich in basic amino acids like lysine and arginine. This positive charge allows them to bind tightly to the negatively charged DNA (phosphate groups) to form nucleosomes.",
@@ -717,10 +717,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "A nucleosome consists of histone octamer wrapped by approximately:",
       "options": [
-        "C) 200 bp of DNA",
-        "A) 100 bp of DNA",
-        "B) 146 bp of DNA",
-        "D) 300 bp of DNA"
+        "200 bp of DNA",
+        "100 bp of DNA",
+        "146 bp of DNA",
+        "300 bp of DNA"
       ],
       "correctAnswer": "C",
       "explanation": "A nucleosome consists of a histone octamer (2 copies each of H2A, H2B, H3, H4) around which approximately 146 base pairs of DNA are wrapped in about 1.65 turns. H1 histone holds the DNA at the entry and exit points.",
@@ -742,10 +742,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Which of the following is a feature of the genetic code?",
       "options": [
-        "B) It is overlapping",
-        "D) It is non-degenerate",
-        "C) It is universal",
-        "A) It is ambiguous"
+        "It is overlapping",
+        "It is non-degenerate",
+        "It is universal",
+        "It is ambiguous"
       ],
       "correctAnswer": "C",
       "explanation": "The genetic code is universal, meaning the same codons code for the same amino acids in almost all organisms. Other features: it is triplet, degenerate (multiple codons for same amino acid), non-overlapping, non-ambiguous, and comma-less.",
@@ -767,10 +767,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "RNA polymerase in prokaryotes is:",
       "options": [
-        "A) A single enzyme with multiple subunits that transcribes all types of RNA",
-        "D) Same as DNA polymerase",
-        "C) Only one subunit",
-        "B) Three separate enzymes"
+        "A single enzyme with multiple subunits that transcribes all types of RNA",
+        "Same as DNA polymerase",
+        "Only one subunit",
+        "Three separate enzymes"
       ],
       "correctAnswer": "A",
       "explanation": "In prokaryotes, a single RNA polymerase enzyme (with sigma factor for initiation) catalyses the transcription of all types of RNA (mRNA, tRNA, rRNA). In eukaryotes, there are three RNA polymerases (I, II, III) for different RNA types.",
@@ -792,10 +792,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The human genome contains approximately:",
       "options": [
-        "B) 3 billion base pairs",
-        "C) 30 billion base pairs",
-        "A) 3 million base pairs",
-        "D) 300 million base pairs"
+        "3 billion base pairs",
+        "30 billion base pairs",
+        "3 million base pairs",
+        "300 million base pairs"
       ],
       "correctAnswer": "A",
       "explanation": "The human genome contains approximately 3.2 billion (3.2 x 10^9) base pairs distributed across 23 pairs of chromosomes. Only about 2% codes for proteins; the rest includes regulatory sequences and repetitive DNA.",
@@ -817,10 +817,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "RNA polymerase II transcribes:",
       "options": [
-        "B) tRNA",
-        "D) 5S rRNA",
-        "A) rRNA",
-        "C) mRNA (hnRNA)"
+        "tRNA",
+        "5S rRNA",
+        "rRNA",
+        "mRNA (hnRNA)"
       ],
       "correctAnswer": "D",
       "explanation": "In eukaryotes, RNA polymerase II transcribes heterogeneous nuclear RNA (hnRNA), which is the precursor of mRNA. RNA polymerase I transcribes rRNA (28S, 18S, 5.8S) and RNA polymerase III transcribes tRNA and 5S rRNA.",
@@ -842,10 +842,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The regulatory gene of the lac operon codes for:",
       "options": [
-        "D) Repressor protein",
-        "C) Transacetylase",
-        "A) Beta-galactosidase",
-        "B) Permease"
+        "Repressor protein",
+        "Transacetylase",
+        "Beta-galactosidase",
+        "Permease"
       ],
       "correctAnswer": "A",
       "explanation": "The regulatory gene (i gene) of the lac operon codes for the repressor protein. This protein binds to the operator and prevents transcription in the absence of lactose (inducer).",
@@ -867,10 +867,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Post-transcriptional modifications of hnRNA in eukaryotes include:",
       "options": [
-        "C) Reverse transcription",
-        "A) Splicing, capping, and tailing",
-        "B) Replication and translation",
-        "D) Phosphorylation only"
+        "Reverse transcription",
+        "Splicing, capping, and tailing",
+        "Replication and translation",
+        "Phosphorylation only"
       ],
       "correctAnswer": "B",
       "explanation": "Post-transcriptional modifications of hnRNA (pre-mRNA) in eukaryotes include: splicing (removal of introns), capping (addition of methyl guanosine cap at 5' end), and tailing (addition of poly-A tail at 3' end).",
@@ -893,10 +893,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The distance between two base pairs in B-DNA is:",
       "options": [
-        "C) 34 nm",
-        "B) 3.4 nm",
-        "D) 2.0 nm",
-        "A) 0.34 nm"
+        "34 nm",
+        "3.4 nm",
+        "2.0 nm",
+        "0.34 nm"
       ],
       "correctAnswer": "D",
       "explanation": "In B-DNA (the most common form), the distance between two adjacent base pairs is 0.34 nm (3.4 Angstroms). The pitch (one complete turn) is 3.4 nm, containing 10 base pairs per turn.",
@@ -918,10 +918,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "The technique used to separate DNA fragments based on size is:",
       "options": [
-        "D) Chromatography",
-        "B) Gel electrophoresis",
-        "A) PCR",
-        "C) Centrifugation"
+        "Chromatography",
+        "Gel electrophoresis",
+        "PCR",
+        "Centrifugation"
       ],
       "correctAnswer": "B",
       "explanation": "Gel electrophoresis (using agarose gel) separates DNA fragments based on their size and charge. Smaller fragments move faster (farther) through the gel. DNA is negatively charged and moves towards the positive electrode (anode).",
@@ -943,10 +943,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Reverse transcriptase is used by:",
       "options": [
-        "C) Bacteria",
-        "A) All DNA viruses",
-        "D) Plants",
-        "B) Retroviruses like HIV"
+        "Bacteria",
+        "All DNA viruses",
+        "Plants",
+        "Retroviruses like HIV"
       ],
       "correctAnswer": "D",
       "explanation": "Reverse transcriptase is an enzyme used by retroviruses (like HIV) to synthesise DNA from RNA (reverse transcription). This is an exception to the central dogma where information flows from RNA to DNA.",
@@ -968,10 +968,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): The two strands of DNA are antiparallel.\nReason (R): One strand runs in 5'→3' direction while the other runs in 3'→5' direction.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and R explains A. The two strands of DNA are antiparallel, meaning they run in opposite directions. One strand has 5'→3' polarity and the complementary strand has 3'→5' polarity.",
@@ -993,10 +993,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): The genetic code is degenerate.\nReason (R): More than one codon can code for the same amino acid.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and R explains A. Degeneracy means that an amino acid can be coded by more than one codon. For example, leucine has 6 codons. Only methionine (AUG) and tryptophan (UGG) have single codons.",
@@ -1017,10 +1017,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): Meselson and Stahl proved that DNA replication is semi-conservative.\nReason (R): They used heavy isotope 15N to label DNA and CsCl density gradient centrifugation.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and R explains A. Meselson and Stahl used E. coli grown in 15N medium, then shifted to 14N medium. CsCl density gradient centrifugation showed intermediate density DNA after one generation, proving semi-conservative replication.",
@@ -1042,10 +1042,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): In the lac operon, the structural genes are transcribed only when lactose is present.\nReason (R): Lactose acts as an inducer by inactivating the repressor.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and R explains A. In the absence of lactose, the repressor binds to the operator and blocks transcription. When lactose is present, it (as allolactose) binds to the repressor, inactivating it, allowing transcription of structural genes.",
@@ -1067,10 +1067,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): Leading strand is synthesised continuously during DNA replication.\nReason (R): DNA polymerase can synthesise DNA only in the 5' to 3' direction.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and R explains A. Since DNA polymerase can only add nucleotides in the 5'→3' direction, the leading strand (template 3'→5') is synthesised continuously, while the lagging strand is synthesised discontinuously as Okazaki fragments.",
@@ -1092,10 +1092,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): Euchromatin is transcriptionally active.\nReason (R): Euchromatin is loosely packed and allows access to transcription machinery.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and R explains A. Euchromatin is loosely packed chromatin that stains lightly. Its open structure allows RNA polymerase and transcription factors to access DNA for transcription. Heterochromatin is tightly packed and transcriptionally inactive.",
@@ -1117,10 +1117,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): tRNA is called the adapter molecule.\nReason (R): tRNA has an anticodon at one end and binds an amino acid at the other end.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and R explains A. Francis Crick proposed that tRNA acts as an adapter molecule. It reads the mRNA codon through its anticodon and carries the corresponding amino acid, connecting the nucleic acid language to the protein language.",
@@ -1142,10 +1142,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): DNA fingerprinting is used for forensic identification.\nReason (R): Each individual has a unique pattern of VNTRs in their DNA.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and R explains A. DNA fingerprinting uses the unique pattern of VNTRs (Variable Number Tandem Repeats) in each individual's DNA for identification. The probability of two individuals having identical VNTR patterns is extremely low.",
@@ -1167,10 +1167,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): RNA is less stable than DNA.\nReason (R): RNA has 2'-OH group in ribose sugar which makes it liable to degradation by alkali.",
       "options": [
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and R explains A. The 2'-OH group in ribose sugar of RNA makes it susceptible to alkaline hydrolysis. DNA lacks this 2'-OH (has 2'-H), making it more chemically stable and suitable for long-term storage of genetic information.",
@@ -1192,10 +1192,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): Only one strand of DNA serves as template for transcription.\nReason (R): If both strands served as template, complementary RNA would be produced forming dsRNA.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and R explains A. Only one strand (template strand) is transcribed for any given gene. If both strands were transcribed, they would produce complementary RNA that could form double-stranded RNA, which would not function as mRNA.",
@@ -1217,10 +1217,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): Repetitive DNA sequences do not code for proteins.\nReason (R): Repetitive DNA is found in heterochromatin regions.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true but the reason does not directly explain the assertion. Repetitive DNA does not code for proteins because it lacks the structural features of genes. While repetitive DNA is often in heterochromatin, this is a characteristic, not the reason it doesn't code for proteins.",
@@ -1242,10 +1242,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): In prokaryotes, translation can begin before transcription is complete.\nReason (R): In prokaryotes, mRNA does not need processing and there is no nuclear membrane.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and R explains A. In prokaryotes, since there is no nuclear membrane and mRNA does not require processing, ribosomes can attach to mRNA and begin translation even while transcription is still occurring (coupled transcription-translation).",
@@ -1267,10 +1267,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Assertion (A): DNA replication requires an RNA primer.\nReason (R): DNA polymerase cannot initiate synthesis de novo; it can only add nucleotides to existing 3'-OH.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and R explains A. DNA polymerase requires a free 3'-OH group to add nucleotides. Since it cannot start from scratch, primase synthesises a short RNA primer that provides the necessary 3'-OH for DNA polymerase to extend.",
@@ -1292,10 +1292,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Consider the following about the genetic code:\n(i) It is triplet and comma-less.\n(ii) It is degenerate but not ambiguous.\n(iii) AUG is both start codon and codes for methionine.\n(iv) It has 64 codons including 4 stop codons.\nWhich are correct?",
       "options": [
-        "B) (i) and (ii) only",
-        "C) All are correct",
-        "D) (i), (ii), and (iv) only",
-        "A) (i), (ii), and (iii) only"
+        "(i) and (ii) only",
+        "All are correct",
+        "(i), (ii), and (iv) only",
+        "(i), (ii), and (iii) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iii) are correct. Statement (iv) is incorrect because there are only 3 stop codons (UAA, UAG, UGA), not 4. The remaining 61 codons code for 20 amino acids.",
@@ -1317,10 +1317,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Read the statements about DNA replication:\nStatement I: DNA replication occurs during S-phase of cell cycle.\nStatement II: DNA replication is bidirectional in E. coli.",
       "options": [
-        "A) Both statements are correct",
-        "D) Both are incorrect",
-        "B) Only statement I is correct",
-        "C) Only statement II is correct"
+        "Both statements are correct",
+        "Both are incorrect",
+        "Only statement I is correct",
+        "Only statement II is correct"
       ],
       "correctAnswer": "A",
       "explanation": "Both statements are correct. DNA replication occurs during the S (synthesis) phase of the cell cycle, and in E. coli (and most organisms), replication proceeds bidirectionally from the origin of replication.",
@@ -1342,10 +1342,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Consider the following:\n(i) Exons are expressed sequences.\n(ii) Introns are intervening sequences.\n(iii) Introns are present in prokaryotic genes.\n(iv) Splicing removes introns from hnRNA.\nWhich are correct?",
       "options": [
-        "A) (i), (ii), and (iv) only",
-        "C) (i) and (ii) only",
-        "D) (i), (ii), and (iii) only",
-        "B) All are correct"
+        "(i), (ii), and (iv) only",
+        "(i) and (ii) only",
+        "(i), (ii), and (iii) only",
+        "All are correct"
       ],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), and (iv) are correct. Statement (iii) is incorrect because introns are generally NOT present in prokaryotic genes. Prokaryotic genes are continuous, while eukaryotic genes are split (have introns).",
@@ -1368,10 +1368,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Read the statements about the Human Genome Project:\nStatement I: The human genome has about 20,000-25,000 genes.\nStatement II: Less than 2% of the genome codes for proteins.",
       "options": [
-        "D) Both statements are incorrect",
-        "C) Only statement II is correct",
-        "A) Both statements are correct",
-        "B) Only statement I is correct"
+        "Both statements are incorrect",
+        "Only statement II is correct",
+        "Both statements are correct",
+        "Only statement I is correct"
       ],
       "correctAnswer": "C",
       "explanation": "Both statements are correct. The HGP revealed that humans have about 20,000-25,000 genes, far fewer than expected. Less than 2% of the genome codes for proteins; the rest includes introns, repetitive sequences, and regulatory elements.",
@@ -1393,10 +1393,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Consider the following about translation:\n(i) It occurs on ribosomes.\n(ii) The start codon is AUG.\n(iii) tRNA acts as the adapter molecule.\n(iv) Peptide bonds are formed by ribozyme activity of rRNA.\nHow many are correct?",
       "options": [
-        "D) One",
-        "C) Four",
-        "B) Three",
-        "A) Two"
+        "One",
+        "Four",
+        "Three",
+        "Two"
       ],
       "correctAnswer": "B",
       "explanation": "All four statements are correct. Translation occurs on ribosomes, starts at AUG codon, tRNA serves as adapter molecules carrying amino acids, and the peptidyl transferase activity of the large rRNA subunit (a ribozyme) catalyses peptide bond formation.",
@@ -1418,10 +1418,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Which of the following about the lac operon is INCORRECT?\n(i) The i gene is part of the operon.\n(ii) The operator region binds RNA polymerase.\n(iii) Structural genes are z, y, and a.\n(iv) Lactose is the inducer.",
       "options": [
-        "D) (iii) only",
-        "B) (ii) only",
-        "C) (i) only",
-        "A) (i) and (ii) only"
+        "(iii) only",
+        "(ii) only",
+        "(i) only",
+        "(i) and (ii) only"
       ],
       "correctAnswer": "D",
       "explanation": "(i) is incorrect - the i (regulatory) gene is NOT part of the lac operon itself; it is located upstream. (ii) is incorrect - the operator binds the repressor protein, not RNA polymerase. RNA polymerase binds to the promoter.",
@@ -1443,10 +1443,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Read the following about DNA packaging:\nStatement I: Nucleosomes are the basic units of chromatin.\nStatement II: Each nucleosome has a histone octamer with about 200 bp of DNA.",
       "options": [
-        "D) Both are incorrect",
-        "A) Both statements are correct",
-        "C) Only statement II is correct",
-        "B) Only statement I is correct"
+        "Both are incorrect",
+        "Both statements are correct",
+        "Only statement II is correct",
+        "Only statement I is correct"
       ],
       "correctAnswer": "D",
       "explanation": "Statement I is correct - nucleosomes are the basic structural units of chromatin. Statement II is partially incorrect - while a nucleosome repeat length is about 200 bp, the histone octamer has only about 146 bp of DNA wrapped around it; the remaining ~54 bp is linker DNA.",
@@ -1468,10 +1468,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Match Column I (Enzyme) with Column II (Function):\nColumn I: (P) Helicase, (Q) DNA ligase, (R) Primase, (S) DNA polymerase\nColumn II: (i) Joins Okazaki fragments, (ii) Synthesises RNA primer, (iii) Unwinds DNA, (iv) Synthesises new DNA strand",
       "options": [
-        "D) P-iv, Q-i, R-ii, S-iii",
-        "C) P-iii, Q-ii, R-i, S-iv",
-        "B) P-i, Q-iii, R-ii, S-iv",
-        "A) P-iii, Q-i, R-ii, S-iv"
+        "P-iv, Q-i, R-ii, S-iii",
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-i, Q-iii, R-ii, S-iv",
+        "P-iii, Q-i, R-ii, S-iv"
       ],
       "correctAnswer": "D",
       "explanation": "Helicase unwinds DNA (iii), DNA ligase joins Okazaki fragments (i), Primase synthesises RNA primer (ii), DNA polymerase synthesises new DNA strand (iv).",
@@ -1493,10 +1493,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Match Column I (Scientist) with Column II (Contribution):\nColumn I: (P) Watson and Crick, (Q) Meselson and Stahl, (R) Jacob and Monod, (S) Alec Jeffreys\nColumn II: (i) Lac operon model, (ii) DNA double helix model, (iii) Semi-conservative replication, (iv) DNA fingerprinting",
       "options": [
-        "C) P-ii, Q-i, R-iii, S-iv",
-        "D) P-iv, Q-iii, R-i, S-ii",
-        "B) P-iii, Q-ii, R-i, S-iv",
-        "A) P-ii, Q-iii, R-i, S-iv"
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-iv, Q-iii, R-i, S-ii",
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-ii, Q-iii, R-i, S-iv"
       ],
       "correctAnswer": "D",
       "explanation": "Watson and Crick - DNA double helix (ii), Meselson and Stahl - Semi-conservative replication (iii), Jacob and Monod - Lac operon model (i), Alec Jeffreys - DNA fingerprinting (iv).",
@@ -1519,10 +1519,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Match Column I (RNA type) with Column II (Function):\nColumn I: (P) mRNA, (Q) tRNA, (R) rRNA, (S) snRNA\nColumn II: (i) Structural component of ribosome, (ii) Carries genetic code, (iii) Adapter molecule, (iv) Involved in splicing",
       "options": [
-        "B) P-iii, Q-ii, R-i, S-iv",
-        "C) P-ii, Q-i, R-iii, S-iv",
-        "A) P-ii, Q-iii, R-i, S-iv",
-        "D) P-iv, Q-iii, R-i, S-ii"
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-iv, Q-iii, R-i, S-ii"
       ],
       "correctAnswer": "C",
       "explanation": "mRNA carries genetic code (ii), tRNA is adapter molecule carrying amino acids (iii), rRNA is structural component of ribosome (i), snRNA is involved in splicing of pre-mRNA (iv).",
@@ -1545,10 +1545,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Match Column I (Component of lac operon) with Column II (Function):\nColumn I: (P) Promoter, (Q) Operator, (R) Structural genes, (S) Regulatory gene\nColumn II: (i) Codes for repressor, (ii) RNA polymerase binding site, (iii) Repressor binding site, (iv) Code for enzymes of lactose metabolism",
       "options": [
-        "A) P-ii, Q-iii, R-iv, S-i",
-        "D) P-i, Q-iii, R-iv, S-ii",
-        "B) P-iii, Q-ii, R-iv, S-i",
-        "C) P-ii, Q-iv, R-iii, S-i"
+        "P-ii, Q-iii, R-iv, S-i",
+        "P-i, Q-iii, R-iv, S-ii",
+        "P-iii, Q-ii, R-iv, S-i",
+        "P-ii, Q-iv, R-iii, S-i"
       ],
       "correctAnswer": "A",
       "explanation": "Promoter - RNA polymerase binding site (ii), Operator - repressor binding site (iii), Structural genes - code for enzymes (iv), Regulatory gene - codes for repressor (i).",
@@ -1571,10 +1571,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Match Column I with Column II:\nColumn I: (P) Euchromatin, (Q) Heterochromatin, (R) Nucleosome, (S) Solenoid\nColumn II: (i) 30 nm fibre, (ii) Loosely packed, active, (iii) Tightly packed, inactive, (iv) Beads-on-string structure",
       "options": [
-        "B) P-iii, Q-ii, R-iv, S-i",
-        "C) P-ii, Q-iv, R-iii, S-i",
-        "D) P-i, Q-iii, R-iv, S-ii",
-        "A) P-ii, Q-iii, R-iv, S-i"
+        "P-iii, Q-ii, R-iv, S-i",
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-i, Q-iii, R-iv, S-ii",
+        "P-ii, Q-iii, R-iv, S-i"
       ],
       "correctAnswer": "D",
       "explanation": "Euchromatin is loosely packed and transcriptionally active (ii), Heterochromatin is tightly packed and inactive (iii), Nucleosome is beads-on-string structure (iv), Solenoid is the 30 nm fibre (i).",
@@ -1597,10 +1597,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Match Column I (Codon) with Column II (Amino acid/Signal):\nColumn I: (P) AUG, (Q) UAA, (R) UAG, (S) UGG\nColumn II: (i) Stop (amber), (ii) Methionine/Start, (iii) Stop (ochre), (iv) Tryptophan",
       "options": [
-        "D) P-iv, Q-iii, R-i, S-ii",
-        "A) P-ii, Q-iii, R-i, S-iv",
-        "C) P-ii, Q-i, R-iii, S-iv",
-        "B) P-iii, Q-ii, R-i, S-iv"
+        "P-iv, Q-iii, R-i, S-ii",
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-iii, Q-ii, R-i, S-iv"
       ],
       "correctAnswer": "B",
       "explanation": "AUG codes for methionine/start (ii), UAA is stop codon ochre (iii), UAG is stop codon amber (i), UGG codes for tryptophan (iv).",
@@ -1622,10 +1622,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Match Column I (Experiment) with Column II (Conclusion):\nColumn I: (P) Griffith's experiment, (Q) Avery et al., (R) Hershey-Chase, (S) Meselson-Stahl\nColumn II: (i) DNA is the genetic material (phage), (ii) Semi-conservative replication, (iii) Transforming principle exists, (iv) DNA is the transforming principle",
       "options": [
-        "A) P-iii, Q-iv, R-i, S-ii",
-        "D) P-ii, Q-iv, R-i, S-iii",
-        "C) P-iii, Q-i, R-iv, S-ii",
-        "B) P-iv, Q-iii, R-i, S-ii"
+        "P-iii, Q-iv, R-i, S-ii",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iii, Q-i, R-iv, S-ii",
+        "P-iv, Q-iii, R-i, S-ii"
       ],
       "correctAnswer": "A",
       "explanation": "Griffith showed a transforming principle exists (iii), Avery et al. identified it as DNA (iv), Hershey-Chase confirmed DNA as genetic material using phages (i), Meselson-Stahl proved semi-conservative replication (ii).",
@@ -1647,10 +1647,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Match Column I (RNA polymerase) with Column II (Product in eukaryotes):\nColumn I: (P) RNA Pol I, (Q) RNA Pol II, (R) RNA Pol III\nColumn II: (i) tRNA and 5S rRNA, (ii) hnRNA (mRNA precursor), (iii) rRNA (28S, 18S, 5.8S)",
       "options": [
-        "D) P-iii, Q-i, R-ii",
-        "B) P-ii, Q-iii, R-i",
-        "C) P-i, Q-ii, R-iii",
-        "A) P-iii, Q-ii, R-i"
+        "P-iii, Q-i, R-ii",
+        "P-ii, Q-iii, R-i",
+        "P-i, Q-ii, R-iii",
+        "P-iii, Q-ii, R-i"
       ],
       "correctAnswer": "D",
       "explanation": "RNA Polymerase I transcribes rRNA genes (28S, 18S, 5.8S) (iii), RNA Pol II transcribes hnRNA/mRNA precursor (ii), RNA Pol III transcribes tRNA and 5S rRNA (i).",
@@ -1673,10 +1673,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "How many hydrogen bonds are present between one G-C base pair?",
       "options": [
-        "C) Three",
-        "A) One",
-        "D) Four",
-        "B) Two"
+        "Three",
+        "One",
+        "Four",
+        "Two"
       ],
       "correctAnswer": "A",
       "explanation": "Guanine and cytosine are connected by three hydrogen bonds (G≡C). This makes G-C base pairs stronger than A-T base pairs (which have only two hydrogen bonds).",
@@ -1698,10 +1698,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "How many base pairs are present in one complete turn of B-DNA?",
       "options": [
-        "C) 15",
-        "D) 20",
-        "B) 10",
-        "A) 5"
+        "15",
+        "20",
+        "10",
+        "5"
       ],
       "correctAnswer": "C",
       "explanation": "In B-DNA (the most common form), one complete turn of the helix contains 10 base pairs. The pitch (height per turn) is 3.4 nm and the distance between base pairs is 0.34 nm (3.4/10 = 0.34).",
@@ -1723,10 +1723,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "How many stop codons exist in the genetic code?",
       "options": [
-        "D) Four",
-        "A) One",
-        "B) Two",
-        "C) Three"
+        "Four",
+        "One",
+        "Two",
+        "Three"
       ],
       "correctAnswer": "D",
       "explanation": "There are three stop codons: UAA (ochre), UAG (amber), and UGA (opal/umber). They do not code for any amino acid and signal the termination of translation.",
@@ -1748,10 +1748,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "How many types of histone proteins are found in a nucleosome?",
       "options": [
-        "A) Three",
-        "C) Five",
-        "B) Four",
-        "D) Six"
+        "Three",
+        "Five",
+        "Four",
+        "Six"
       ],
       "correctAnswer": "B",
       "explanation": "Five types of histone proteins are found: H2A, H2B, H3, H4 (which form the octamer core), and H1 (linker histone). The octamer contains 2 copies each of H2A, H2B, H3, and H4. H1 sits outside.",
@@ -1773,10 +1773,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "How many possible codons can be formed from 4 bases taken 3 at a time?",
       "options": [
-        "C) 64",
-        "A) 16",
-        "B) 32",
-        "D) 128"
+        "64",
+        "16",
+        "32",
+        "128"
       ],
       "correctAnswer": "A",
       "explanation": "With 4 bases (A, U, G, C) taken 3 at a time, the number of possible codons is 4³ = 64. Of these, 61 code for 20 amino acids (degenerate code) and 3 are stop codons.",
@@ -1798,10 +1798,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "How many structural genes are present in the lac operon?",
       "options": [
-        "A) One",
-        "D) Four",
-        "B) Two",
-        "C) Three"
+        "One",
+        "Four",
+        "Two",
+        "Three"
       ],
       "correctAnswer": "D",
       "explanation": "The lac operon has three structural genes: lac z (codes for beta-galactosidase), lac y (codes for permease), and lac a (codes for transacetylase). These are transcribed as a single polycistronic mRNA.",
@@ -1823,10 +1823,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "How many types of RNA polymerase are found in eukaryotes?",
       "options": [
-        "D) Four",
-        "C) Three",
-        "B) Two",
-        "A) One"
+        "Four",
+        "Three",
+        "Two",
+        "One"
       ],
       "correctAnswer": "B",
       "explanation": "Eukaryotes have three types of RNA polymerase: RNA Pol I (transcribes rRNA), RNA Pol II (transcribes hnRNA/mRNA), and RNA Pol III (transcribes tRNA and 5S rRNA). Prokaryotes have only one RNA polymerase.",
@@ -1849,10 +1849,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "How many amino acids are coded for by the sense codons?",
       "options": [
-        "C) 61",
-        "B) 20",
-        "A) 16",
-        "D) 64"
+        "61",
+        "20",
+        "16",
+        "64"
       ],
       "correctAnswer": "B",
       "explanation": "The 61 sense codons (out of 64 total) code for only 20 amino acids. This means most amino acids are coded by more than one codon (degeneracy of the genetic code).",
@@ -1875,10 +1875,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Arrange the following steps of translation in correct order:\n(i) Formation of peptide bond\n(ii) Binding of mRNA to ribosome\n(iii) Release of polypeptide\n(iv) Aminoacyl-tRNA binds to A site\n(v) Termination at stop codon",
       "options": [
-        "C) ii → i → iv → v → iii",
-        "A) ii → iv → i → v → iii",
-        "D) ii → iv → v → i → iii",
-        "B) iv → ii → i → v → iii"
+        "ii → i → iv → v → iii",
+        "ii → iv → i → v → iii",
+        "ii → iv → v → i → iii",
+        "iv → ii → i → v → iii"
       ],
       "correctAnswer": "B",
       "explanation": "Correct sequence: mRNA binds to ribosome → Aminoacyl-tRNA binds to A site → Peptide bond formation → (elongation continues) → Stop codon reached (termination) → Release of polypeptide.",
@@ -1900,10 +1900,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Arrange the following in order of DNA packaging from least to most condensed:\n(i) Chromatin fibre (30 nm)\n(ii) Nucleosome (beads-on-string, 10 nm)\n(iii) Double helix DNA (2 nm)\n(iv) Chromosome (metaphase)\n(v) Loops on scaffold",
       "options": [
-        "C) iii → i → ii → v → iv",
-        "B) ii → iii → i → v → iv",
-        "A) iii → ii → i → v → iv",
-        "D) iii → ii → v → i → iv"
+        "iii → i → ii → v → iv",
+        "ii → iii → i → v → iv",
+        "iii → ii → i → v → iv",
+        "iii → ii → v → i → iv"
       ],
       "correctAnswer": "C",
       "explanation": "Order of increasing condensation: Double helix DNA (2 nm) → Beads-on-string/Nucleosome (10 nm) → Chromatin fibre/Solenoid (30 nm) → Loops on scaffold → Metaphase chromosome (most condensed).",
@@ -1925,10 +1925,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Arrange the following steps of transcription in correct order:\n(i) Termination and release of RNA\n(ii) RNA polymerase binds to promoter\n(iii) Elongation of RNA chain\n(iv) Initiation with sigma factor\n(v) Separation of DNA strands",
       "options": [
-        "B) ii → iv → v → iii → i",
-        "C) iv → v → ii → iii → i",
-        "A) iv → ii → v → iii → i",
-        "D) ii → v → iv → iii → i"
+        "ii → iv → v → iii → i",
+        "iv → v → ii → iii → i",
+        "iv → ii → v → iii → i",
+        "ii → v → iv → iii → i"
       ],
       "correctAnswer": "C",
       "explanation": "Correct sequence in prokaryotes: Sigma factor recognises promoter (initiation) → RNA polymerase binds to promoter → DNA strands separate → RNA chain elongation (5'→3') → Termination and release.",
@@ -1951,10 +1951,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Arrange the experiments in chronological order:\n(i) Hershey-Chase experiment\n(ii) Watson-Crick model\n(iii) Griffith's experiment\n(iv) Meselson-Stahl experiment\n(v) Avery, MacLeod, McCarty experiment",
       "options": [
-        "B) iii → i → v → ii → iv",
-        "C) v → iii → i → ii → iv",
-        "A) iii → v → i → ii → iv",
-        "D) iii → v → ii → i → iv"
+        "iii → i → v → ii → iv",
+        "v → iii → i → ii → iv",
+        "iii → v → i → ii → iv",
+        "iii → v → ii → i → iv"
       ],
       "correctAnswer": "C",
       "explanation": "Chronological order: Griffith (1928) → Avery, MacLeod, McCarty (1944) → Hershey-Chase (1952) → Watson-Crick model (1953) → Meselson-Stahl (1958).",
@@ -1976,10 +1976,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Arrange the following in the correct flow of genetic information (Central Dogma):\n(i) Protein\n(ii) mRNA\n(iii) DNA",
       "options": [
-        "D) iii → i → ii",
-        "B) ii → iii → i",
-        "C) i → ii → iii",
-        "A) iii → ii → i"
+        "iii → i → ii",
+        "ii → iii → i",
+        "i → ii → iii",
+        "iii → ii → i"
       ],
       "correctAnswer": "D",
       "explanation": "The Central Dogma of molecular biology: DNA → (Transcription) → mRNA → (Translation) → Protein. Information flows from DNA to RNA to Protein.",
@@ -2001,10 +2001,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Arrange the steps of DNA fingerprinting in correct order:\n(i) Southern blotting\n(ii) DNA extraction\n(iii) Autoradiography\n(iv) Restriction enzyme digestion\n(v) Gel electrophoresis\n(vi) Hybridisation with probe",
       "options": [
-        "D) ii → iv → i → v → vi → iii",
-        "B) iv → ii → v → i → vi → iii",
-        "C) ii → v → iv → i → vi → iii",
-        "A) ii → iv → v → i → vi → iii"
+        "ii → iv → i → v → vi → iii",
+        "iv → ii → v → i → vi → iii",
+        "ii → v → iv → i → vi → iii",
+        "ii → iv → v → i → vi → iii"
       ],
       "correctAnswer": "D",
       "explanation": "Correct sequence: DNA extraction → Restriction enzyme digestion → Gel electrophoresis → Southern blotting (transfer to membrane) → Hybridisation with radioactive probe → Autoradiography.",
@@ -2027,10 +2027,10 @@
       "ncertChapterName": "Molecular Basis of Inheritance",
       "question": "Arrange the steps of PCR in correct order for one cycle:\n(i) Extension\n(ii) Denaturation\n(iii) Annealing of primers",
       "options": [
-        "C) i → ii → iii",
-        "D) ii → i → iii",
-        "B) iii → ii → i",
-        "A) ii → iii → i"
+        "i → ii → iii",
+        "ii → i → iii",
+        "iii → ii → i",
+        "ii → iii → i"
       ],
       "correctAnswer": "D",
       "explanation": "One PCR cycle: Denaturation (94°C, DNA strands separate) → Annealing (50-65°C, primers bind) → Extension (72°C, Taq polymerase extends from primers). This cycle is repeated 25-30 times.",

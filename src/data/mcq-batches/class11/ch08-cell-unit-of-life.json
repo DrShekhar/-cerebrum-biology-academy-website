@@ -15,10 +15,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Who proposed the cell theory?",
       "options": [
-        "C) Leeuwenhoek and Brown",
-        "B) Robert Hooke and Virchow",
-        "A) Schleiden and Schwann",
-        "D) Purkinje and Von Mohl"
+        "Leeuwenhoek and Brown",
+        "Robert Hooke and Virchow",
+        "Schleiden and Schwann",
+        "Purkinje and Von Mohl"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the cell theory was proposed by two German scientists, M.J. Schleiden (1838) and Theodore Schwann (1839). They stated that all living organisms are composed of cells and products of cells.",
@@ -40,10 +40,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Who coined the term 'cell'?",
       "options": [
-        "D) Schleiden",
-        "B) Robert Hooke",
-        "A) Leeuwenhoek",
-        "C) Robert Brown"
+        "Schleiden",
+        "Robert Hooke",
+        "Leeuwenhoek",
+        "Robert Brown"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, Robert Hooke (1665) observed slices of cork under a crude microscope and saw small compartments which he termed 'cells' (Latin: cellula = small room).",
@@ -65,10 +65,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following is the exception to cell theory?",
       "options": [
-        "A) Bacteria",
-        "C) Viruses",
-        "D) Algae",
-        "B) Fungi"
+        "Bacteria",
+        "Viruses",
+        "Algae",
+        "Fungi"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, viruses do not have a cellular organisation and are exceptions to cell theory. They consist of a protein coat and nucleic acid but lack cellular machinery.",
@@ -90,10 +90,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The modification of cell theory suggesting that all cells arise from pre-existing cells was given by:",
       "options": [
-        "C) Rudolf Virchow",
-        "D) Robert Brown",
-        "B) Schwann",
-        "A) Schleiden"
+        "Rudolf Virchow",
+        "Robert Brown",
+        "Schwann",
+        "Schleiden"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, Rudolf Virchow (1855) modified the cell theory by proposing 'Omnis cellula-e cellula' meaning all cells arise from pre-existing cells.",
@@ -115,10 +115,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following statements is correct regarding prokaryotic cells?",
       "options": [
-        "D) They have a nucleoid region without a nuclear membrane",
-        "A) They have a well-defined nucleus",
-        "B) They have membrane-bound organelles",
-        "C) They have 80S ribosomes"
+        "They have a nucleoid region without a nuclear membrane",
+        "They have a well-defined nucleus",
+        "They have membrane-bound organelles",
+        "They have 80S ribosomes"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, prokaryotic cells lack a true nucleus. The genetic material (DNA) is present in a region called nucleoid which is not bound by a nuclear membrane. They also lack membrane-bound organelles and have 70S ribosomes.",
@@ -140,10 +140,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The fluid mosaic model of plasma membrane was proposed by:",
       "options": [
-        "A) Robertson",
-        "D) Schleiden and Schwann",
-        "B) Singer and Nicolson",
-        "C) Danielli and Davson"
+        "Robertson",
+        "Schleiden and Schwann",
+        "Singer and Nicolson",
+        "Danielli and Davson"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the fluid mosaic model was proposed by Singer and Nicolson (1972). According to this model, the cell membrane is a quasi-fluid structure with a lipid bilayer and proteins embedded in it.",
@@ -165,10 +165,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The lipid component of the plasma membrane mainly consists of:",
       "options": [
-        "D) Waxes",
-        "C) Triglycerides",
-        "B) Phosphoglycerides",
-        "A) Cholesterol only"
+        "Waxes",
+        "Triglycerides",
+        "Phosphoglycerides",
+        "Cholesterol only"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the lipid component of the cell membrane mainly consists of phosphoglycerides. They are arranged in a bilayer with their polar heads facing outward and hydrophobic tails facing each other.",
@@ -190,10 +190,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which type of membrane proteins are partially embedded in the lipid bilayer?",
       "options": [
-        "D) Channel proteins",
-        "B) Peripheral proteins",
-        "A) Integral proteins",
-        "C) Transmembrane proteins"
+        "Channel proteins",
+        "Peripheral proteins",
+        "Integral proteins",
+        "Transmembrane proteins"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, integral proteins are partially or totally buried in the membrane lipid bilayer. Peripheral proteins lie on the surface of the membrane.",
@@ -215,10 +215,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The cell wall of plant cells is mainly composed of:",
       "options": [
-        "B) Peptidoglycan",
-        "A) Chitin",
-        "C) Cellulose",
-        "D) Starch"
+        "Peptidoglycan",
+        "Chitin",
+        "Cellulose",
+        "Starch"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the cell wall of plant cells is composed of cellulose, hemicellulose, pectins, and proteins. Cellulose is the major structural component providing rigidity.",
@@ -240,10 +240,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The middle lamella between two adjacent plant cells is composed mainly of:",
       "options": [
-        "A) Cellulose",
-        "B) Calcium pectate",
-        "D) Lignin",
-        "C) Hemicellulose"
+        "Cellulose",
+        "Calcium pectate",
+        "Lignin",
+        "Hemicellulose"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the middle lamella is a layer mainly composed of calcium pectate which holds or glues the neighbouring cells together.",
@@ -265,10 +265,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which organelle is called the 'powerhouse of the cell'?",
       "options": [
-        "B) Nucleus",
-        "C) Mitochondria",
-        "D) Golgi apparatus",
-        "A) Chloroplast"
+        "Nucleus",
+        "Mitochondria",
+        "Golgi apparatus",
+        "Chloroplast"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, mitochondria are called the powerhouse of the cell because they produce cellular energy in the form of ATP through oxidative phosphorylation.",
@@ -290,10 +290,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The inner membrane of mitochondria is folded into structures called:",
       "options": [
-        "A) Thylakoids",
-        "D) Cisternae",
-        "C) Grana",
-        "B) Cristae"
+        "Thylakoids",
+        "Cisternae",
+        "Grana",
+        "Cristae"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, the inner membrane of mitochondria forms a number of infoldings called cristae. These increase the surface area for oxidative phosphorylation.",
@@ -315,10 +315,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The cis face of Golgi apparatus is also called:",
       "options": [
-        "A) Maturing face",
-        "D) Secretory face",
-        "B) Trans face",
-        "C) Forming face"
+        "Maturing face",
+        "Secretory face",
+        "Trans face",
+        "Forming face"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, the cis face (forming face) of Golgi apparatus is convex and faces the endoplasmic reticulum. The trans face (maturing face) is concave and faces the plasma membrane.",
@@ -340,10 +340,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which organelle is responsible for intracellular digestion?",
       "options": [
-        "A) Peroxisomes",
-        "D) Centrosomes",
-        "C) Ribosomes",
-        "B) Lysosomes"
+        "Peroxisomes",
+        "Centrosomes",
+        "Ribosomes",
+        "Lysosomes"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, lysosomes contain hydrolytic enzymes (lipases, proteases, carbohydrases) capable of digesting carbohydrates, proteins, lipids, and nucleic acids. They are responsible for intracellular digestion.",
@@ -365,10 +365,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The sedimentation coefficient of prokaryotic ribosomes is:",
       "options": [
-        "B) 60S",
-        "C) 70S",
-        "A) 80S",
-        "D) 40S"
+        "60S",
+        "70S",
+        "80S",
+        "40S"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, prokaryotic ribosomes are 70S type, consisting of two subunits: 50S (larger) and 30S (smaller). Eukaryotic ribosomes are 80S type with 60S and 40S subunits.",
@@ -391,10 +391,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The axoneme of cilia and flagella has which structural arrangement of microtubules?",
       "options": [
-        "C) 9+3",
-        "D) 9+1",
-        "A) 9+0",
-        "B) 9+2"
+        "9+3",
+        "9+1",
+        "9+0",
+        "9+2"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, the axoneme of cilia and flagella has a 9+2 arrangement of microtubules - 9 peripheral doublets and 2 central singlets surrounded by a central sheath.",
@@ -417,10 +417,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Smooth endoplasmic reticulum is primarily involved in:",
       "options": [
-        "C) DNA replication",
-        "D) Photosynthesis",
-        "B) Lipid synthesis",
-        "A) Protein synthesis"
+        "DNA replication",
+        "Photosynthesis",
+        "Lipid synthesis",
+        "Protein synthesis"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, Smooth Endoplasmic Reticulum (SER) is the major site for synthesis of lipids. It also plays a role in detoxification in liver cells.",
@@ -443,10 +443,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The chromatin material is composed of:",
       "options": [
-        "C) DNA and lipids",
-        "B) RNA and histones",
-        "A) DNA and histones",
-        "D) RNA and lipids"
+        "DNA and lipids",
+        "RNA and histones",
+        "DNA and histones",
+        "RNA and lipids"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, chromatin is a thread-like stained material containing DNA and histone proteins. During cell division, chromatin condenses to form chromosomes.",
@@ -469,10 +469,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following is NOT a part of the endomembrane system?",
       "options": [
-        "C) Lysosomes",
-        "A) Endoplasmic reticulum",
-        "D) Mitochondria",
-        "B) Golgi complex"
+        "Lysosomes",
+        "Endoplasmic reticulum",
+        "Mitochondria",
+        "Golgi complex"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the endomembrane system includes ER, Golgi complex, lysosomes, and vacuoles. Mitochondria, chloroplasts, and peroxisomes are NOT part of the endomembrane system as their functions are not coordinated with the above components.",
@@ -494,10 +494,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The nucleus was first discovered by:",
       "options": [
-        "B) Schwann",
-        "A) Schleiden",
-        "C) Robert Brown",
-        "D) Robert Hooke"
+        "Schwann",
+        "Schleiden",
+        "Robert Brown",
+        "Robert Hooke"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, Robert Brown (1831) discovered the nucleus in plant cells. He observed it as a prominent dense body in orchid root cells.",
@@ -519,10 +519,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following structures is common to both prokaryotic and eukaryotic cells?",
       "options": [
-        "C) Ribosomes",
-        "B) Mitochondria",
-        "D) Endoplasmic reticulum",
-        "A) Nuclear membrane"
+        "Ribosomes",
+        "Mitochondria",
+        "Endoplasmic reticulum",
+        "Nuclear membrane"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, ribosomes are found in both prokaryotic (70S) and eukaryotic cells (80S). Nuclear membrane, mitochondria, and ER are present only in eukaryotic cells.",
@@ -545,10 +545,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Plasmodesmata in plant cells are:",
       "options": [
-        "B) Cytoplasmic bridges between adjacent cells",
-        "D) Connections between mitochondria",
-        "C) Pores in the nuclear membrane",
-        "A) Membranous extensions of SER"
+        "Cytoplasmic bridges between adjacent cells",
+        "Connections between mitochondria",
+        "Pores in the nuclear membrane",
+        "Membranous extensions of SER"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, plasmodesmata are connections between adjacent plant cells through which the cytoplasm of one cell is continuous with that of the neighbouring cell, forming the symplast.",
@@ -571,10 +571,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The extra-genomic, circular, self-replicating DNA present in bacteria is called:",
       "options": [
-        "D) Nucleoid",
-        "B) Phagemid",
-        "A) Cosmid",
-        "C) Plasmid"
+        "Nucleoid",
+        "Phagemid",
+        "Cosmid",
+        "Plasmid"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, in addition to the genomic DNA, bacteria have small, circular DNA outside the genomic DNA called plasmids. They are self-replicating and confer certain phenotypic characters such as antibiotic resistance.",
@@ -597,10 +597,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "In chloroplasts, the stroma lamellae connect:",
       "options": [
-        "C) Ribosomes to DNA",
-        "B) Thylakoids of different grana",
-        "A) Inner and outer membrane",
-        "D) Chloroplast to ER"
+        "Ribosomes to DNA",
+        "Thylakoids of different grana",
+        "Inner and outer membrane",
+        "Chloroplast to ER"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, stroma lamellae (or fret membranes) are flat membranous tubules that connect the thylakoids of different grana in a chloroplast.",
@@ -623,10 +623,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The nuclear pores are formed by the fusion of:",
       "options": [
-        "C) Nuclear lamina and chromatin",
-        "A) Chromatin and histones",
-        "D) Nucleoplasm and cytoplasm",
-        "B) Inner and outer nuclear membranes"
+        "Nuclear lamina and chromatin",
+        "Chromatin and histones",
+        "Nucleoplasm and cytoplasm",
+        "Inner and outer nuclear membranes"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, the nuclear envelope has nuclear pores formed by the fusion of its two membranes (inner and outer). These pores regulate the transport of materials between the nucleus and cytoplasm.",
@@ -649,10 +649,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following organisms is the smallest cell?",
       "options": [
-        "D) Human RBC",
-        "B) Mycoplasma",
-        "C) Bacteria",
-        "A) Ostrich egg"
+        "Human RBC",
+        "Mycoplasma",
+        "Bacteria",
+        "Ostrich egg"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, mycoplasmas are the smallest cells known (0.3 micrometres in length). They are also called PPLOs (Pleuro Pneumonia Like Organisms).",
@@ -675,10 +675,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which cytoskeletal structure is involved in amoeboid movement?",
       "options": [
-        "D) Centrioles",
-        "A) Microtubules",
-        "C) Microfilaments",
-        "B) Intermediate filaments"
+        "Centrioles",
+        "Microtubules",
+        "Microfilaments",
+        "Intermediate filaments"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, microfilaments are involved in amoeboid movement and also play a role in cytokinesis, muscular contraction, and cell motility.",
@@ -701,10 +701,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The basal body of cilia and flagella is structurally similar to:",
       "options": [
-        "B) Centrioles",
-        "A) Ribosomes",
-        "C) Lysosomes",
-        "D) Peroxisomes"
+        "Centrioles",
+        "Ribosomes",
+        "Lysosomes",
+        "Peroxisomes"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, cilia and flagella arise from centriole-like structures called basal bodies. Both basal bodies and centrioles are made up of 9 triplets of microtubules arranged in a cartwheel pattern.",
@@ -728,10 +728,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following cell organelles has its own DNA?",
       "options": [
-        "A) Lysosomes",
-        "D) Peroxisomes",
-        "C) Mitochondria",
-        "B) Golgi body"
+        "Lysosomes",
+        "Peroxisomes",
+        "Mitochondria",
+        "Golgi body"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, mitochondria and chloroplasts are semi-autonomous organelles that have their own DNA (circular), ribosomes (70S), and can synthesise some of their own proteins.",
@@ -754,10 +754,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Vacuoles in plant cells are bounded by a membrane called:",
       "options": [
-        "D) Thylakoid membrane",
-        "A) Plasma membrane",
-        "B) Tonoplast",
-        "C) Nuclear membrane"
+        "Thylakoid membrane",
+        "Plasma membrane",
+        "Tonoplast",
+        "Nuclear membrane"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the large central vacuole in plant cells is bounded by a single membrane called the tonoplast. It facilitates transport of ions and other materials against concentration gradients.",
@@ -780,10 +780,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The gas vacuoles found in prokaryotes help in:",
       "options": [
-        "D) Nitrogen fixation",
-        "C) Photosynthesis",
-        "A) Reproduction",
-        "B) Buoyancy"
+        "Nitrogen fixation",
+        "Photosynthesis",
+        "Reproduction",
+        "Buoyancy"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, gas vacuoles are found in some prokaryotes such as cyanobacteria. They help in providing buoyancy to the cells, allowing them to float at appropriate depths in water bodies.",
@@ -806,10 +806,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "RER is different from SER because RER has:",
       "options": [
-        "A) More lipids",
-        "B) Ribosomes on its surface",
-        "D) Pigments",
-        "C) Circular DNA"
+        "More lipids",
+        "Ribosomes on its surface",
+        "Pigments",
+        "Circular DNA"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, Rough Endoplasmic Reticulum (RER) has ribosomes attached to its cytoplasmic surface, giving it a rough appearance. RER is involved in protein synthesis and secretion.",
@@ -832,10 +832,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The thylakoids stacked to form grana are characteristic of:",
       "options": [
-        "B) Chromoplasts",
-        "C) Chloroplasts",
-        "A) Leucoplasts",
-        "D) Mitochondria"
+        "Chromoplasts",
+        "Chloroplasts",
+        "Leucoplasts",
+        "Mitochondria"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, chloroplasts contain thylakoids which are stacked like piles of coins to form grana. These thylakoid membranes contain chlorophyll and are the site of light reactions of photosynthesis.",
@@ -858,10 +858,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The mesosomes in prokaryotic cells are formed by the extension of:",
       "options": [
-        "C) Nuclear membrane",
-        "A) Cell wall",
-        "D) Outer membrane",
-        "B) Plasma membrane"
+        "Nuclear membrane",
+        "Cell wall",
+        "Outer membrane",
+        "Plasma membrane"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, mesosomes are membranous extensions of the plasma membrane into the cell in the form of vesicles, tubules, and lamellae. They help in cell wall formation, DNA replication, distribution to daughter cells, respiration, and secretion.",
@@ -884,10 +884,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Centrioles are absent in cells of:",
       "options": [
-        "A) Animals",
-        "D) Fungi",
-        "C) Higher plants",
-        "B) Lower plants"
+        "Animals",
+        "Fungi",
+        "Higher plants",
+        "Lower plants"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, centrioles are found in animal cells and some lower plant cells. They are absent in higher plant cells. Centrioles form the basal body of cilia/flagella and the spindle fibres during cell division.",
@@ -910,10 +910,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which type of plastid stores starch?",
       "options": [
-        "A) Chloroplast",
-        "D) Elaioplast",
-        "C) Amyloplast",
-        "B) Chromoplast"
+        "Chloroplast",
+        "Elaioplast",
+        "Amyloplast",
+        "Chromoplast"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, leucoplasts are colourless plastids that store nutrients. Amyloplasts store carbohydrates (starch), elaioplasts store oils/fats, and aleuroplasts store proteins.",
@@ -936,10 +936,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The glycocalyx of prokaryotic cells, when present as a loose sheath, is called:",
       "options": [
-        "A) Capsule",
-        "B) Slime layer",
-        "C) Cell wall",
-        "D) Pellicle"
+        "Capsule",
+        "Slime layer",
+        "Cell wall",
+        "Pellicle"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the glycocalyx in prokaryotes can be a loose sheath called the slime layer, or thick and tough called a capsule. It plays a role in protection and sometimes in virulence.",
@@ -962,10 +962,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which one of the following structures is not found in a prokaryotic cell?",
       "options": [
-        "C) Plasma membrane",
-        "A) Ribosome",
-        "B) Mesosome",
-        "D) Nuclear envelope"
+        "Plasma membrane",
+        "Ribosome",
+        "Mesosome",
+        "Nuclear envelope"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, prokaryotic cells lack a nuclear envelope (nuclear membrane). The genetic material lies in the nucleoid region without any membrane-bound organization.",
@@ -987,10 +987,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "The Golgi apparatus is involved in:",
       "options": [
-        "B) Packaging and modification of proteins",
-        "D) DNA replication",
-        "C) Protein synthesis",
-        "A) Fatty acid oxidation"
+        "Packaging and modification of proteins",
+        "DNA replication",
+        "Protein synthesis",
+        "Fatty acid oxidation"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, the Golgi apparatus is the important site for formation of glycoproteins and glycolipids. It packages materials and delivers them to intracellular targets or secretes them outside the cell.",
@@ -1013,10 +1013,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): Mitochondria and chloroplasts are called semi-autonomous organelles.\nReason (R): They have their own DNA and ribosomes and can synthesise some of their own proteins.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, mitochondria and chloroplasts are semi-autonomous because they possess their own circular DNA, 70S ribosomes, and can produce some of their own proteins. This is the reason they are called semi-autonomous organelles.",
@@ -1039,10 +1039,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): The cell membrane is selectively permeable.\nReason (R): The cell membrane allows entry and exit of only certain substances.",
       "options": [
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, the cell membrane is selectively permeable, meaning it permits the movement of only certain molecules across it. This selective permeability is due to the lipid bilayer and transport proteins.",
@@ -1064,10 +1064,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): Lysosomes are called 'suicidal bags' of the cell.\nReason (R): Lysosomes contain hydrolytic enzymes that can digest the cell's own organelles during cellular stress.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, lysosomes are rich in hydrolytic enzymes capable of digesting carbohydrates, proteins, lipids, and nucleic acids. During cellular stress or damage, they can burst and release their enzymes, causing autolysis (self-digestion), hence called suicidal bags.",
@@ -1090,10 +1090,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): Ribosomes are not membrane-bound organelles.\nReason (R): Ribosomes are composed of RNA and proteins and are found freely in the cytoplasm or attached to ER.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, ribosomes are non-membrane-bound organelles composed of RNA and proteins. They are found freely in cytoplasm or attached to ER. However, the reason that they are made of RNA and proteins does not explain why they lack a membrane.",
@@ -1115,10 +1115,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): Viruses are not considered as living organisms.\nReason (R): Viruses can reproduce only inside a host cell and lack cellular organisation.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, viruses are considered exceptions to cell theory as they lack cellular organisation. They are essentially inert outside their specific host cell and are an obligate connection between the living and non-living.",
@@ -1141,10 +1141,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): The quasi-fluid nature of lipid in the membrane enables lateral movement of proteins.\nReason (R): The membrane lipids are arranged in a bilayer with hydrophilic heads facing outside and hydrophobic tails facing each other.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, the quasi-fluid nature of the lipid enables lateral movement of proteins within the bilayer (fluidity). While the bilayer arrangement is true, the fluidity enabling protein movement is due to the nature of lipid-lipid interactions, not specifically the head-tail arrangement.",
@@ -1167,10 +1167,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): Mycoplasma is the smallest known cell.\nReason (R): Mycoplasma lacks a cell wall.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, Mycoplasma (PPLO) is the smallest cell known with a size of about 0.3 micrometres. It also lacks a cell wall. Both facts are true but the absence of cell wall is not the reason for its small size.",
@@ -1193,10 +1193,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): Centrosomes are not found in mature RBCs of mammals.\nReason (R): Mature mammalian RBCs are enucleated cells.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "Both statements are true. Mature mammalian RBCs lack centrosomes and are enucleated. However, the absence of centrosomes is not directly because of enucleation; many nucleated cells also function without centrosomes (e.g., higher plant cells).",
@@ -1219,10 +1219,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): Mesosomes help in respiration in prokaryotic cells.\nReason (R): Mesosomes are extensions of the plasma membrane and contain respiratory enzymes.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, mesosomes are formed by extensions of the plasma membrane into the cell. They contain enzymes involved in respiration, increase surface area for enzymatic content, and also help in cell wall formation and DNA replication.",
@@ -1245,10 +1245,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): Chloroplasts have a double membrane system.\nReason (R): The inner membrane of chloroplasts is less permeable than the outer membrane.",
       "options": [
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, chloroplasts have a double membrane envelope. The inner membrane is less permeable than the outer membrane. Both statements are true but the differential permeability is not the reason for having a double membrane system.",
@@ -1271,10 +1271,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): Peroxisomes are not part of the endomembrane system.\nReason (R): Peroxisomes contain enzymes for oxidation of amino acids and fatty acids.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, peroxisomes are not part of the endomembrane system, and they do contain oxidative enzymes. However, the presence of oxidative enzymes is not the reason for their exclusion from the endomembrane system; their functions are simply not coordinated with the other components of the system.",
@@ -1296,10 +1296,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): Plant cells do not burst in hypotonic solutions.\nReason (R): The cell wall provides rigidity and prevents cell lysis in plant cells.",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the cell wall provides structural support and rigidity to plant cells. In a hypotonic solution, water enters the cell by osmosis, but the cell wall prevents excessive swelling and lysis, unlike animal cells which may burst.",
@@ -1322,10 +1322,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): The nuclear envelope disappears during mitosis.\nReason (R): The nuclear envelope is a double membrane structure continuous with the ER at some places.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, the nuclear envelope does disassemble during mitosis to allow spindle fibres access to chromosomes, and it is indeed a double membrane continuous with ER. However, the continuity with ER is not the reason for its disappearance during mitosis.",
@@ -1348,10 +1348,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Assertion (A): Nucleolus is not bounded by any membrane.\nReason (R): The nucleolus is a site for active rRNA synthesis and ribosomal subunit assembly.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the nucleolus is a non-membrane-bound structure found within the nucleus. It is the site for rRNA synthesis. Both facts are true but the function of rRNA synthesis does not explain why the nucleolus lacks a membrane.",
@@ -1374,10 +1374,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following statements is INCORRECT about prokaryotic cells?\n(i) They have 70S ribosomes\n(ii) They have a well-organised nucleus\n(iii) They possess mesosomes\n(iv) They have membrane-bound organelles",
       "options": [
-        "C) (i) and (ii) only",
-        "D) (iii) and (iv) only",
-        "A) (i) and (iii) only",
-        "B) (ii) and (iv) only"
+        "(i) and (ii) only",
+        "(iii) and (iv) only",
+        "(i) and (iii) only",
+        "(ii) and (iv) only"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, prokaryotic cells do NOT have a well-organised nucleus (they have a nucleoid) and do NOT have membrane-bound organelles. Statements (ii) and (iv) are incorrect. They do have 70S ribosomes and mesosomes.",
@@ -1399,10 +1399,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Consider the following statements about the Golgi apparatus:\n(i) It is involved in formation of lysosomes\n(ii) It is the important site for formation of glycoproteins\n(iii) It consists of flat, disc-shaped sacs called cisternae\n(iv) The cis face is the maturing face\nWhich statements are correct?",
       "options": [
-        "B) (i), (ii), (iii), and (iv)",
-        "D) (i) and (iii) only",
-        "C) (ii), (iii), and (iv) only",
-        "A) (i), (ii), and (iii) only"
+        "(i), (ii), (iii), and (iv)",
+        "(i) and (iii) only",
+        "(ii), (iii), and (iv) only",
+        "(i), (ii), and (iii) only"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, Golgi apparatus forms lysosomes, is the site for glycoprotein and glycolipid formation, and consists of cisternae. However, the cis face is the forming face (not maturing face); the trans face is the maturing face. Statement (iv) is incorrect.",
@@ -1425,10 +1425,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Read the following statements:\n(i) Mitochondria have 70S ribosomes\n(ii) Mitochondria have their own circular DNA\n(iii) Mitochondria have a single membrane\n(iv) Mitochondria can divide by fission\nHow many of the above statements are correct?",
       "options": [
-        "A) One",
-        "C) Three",
-        "D) Four",
-        "B) Two"
+        "One",
+        "Three",
+        "Four",
+        "Two"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, statements (i), (ii), and (iv) are correct. Mitochondria have 70S ribosomes, circular DNA, and can divide by fission. Statement (iii) is incorrect as mitochondria are double-membrane-bound organelles.",
@@ -1451,10 +1451,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Consider the statements about the cell wall:\n(i) It is present in all living cells\n(ii) It determines the shape of the cell\n(iii) It provides structural support\n(iv) It prevents the cell from desiccation\nWhich of the above statements are correct?",
       "options": [
-        "B) (ii), (iii), and (iv)",
-        "C) (i), (iii), and (iv)",
-        "A) (i), (ii), and (iii)",
-        "D) All of the above"
+        "(ii), (iii), and (iv)",
+        "(i), (iii), and (iv)",
+        "(i), (ii), and (iii)",
+        "All of the above"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, the cell wall determines cell shape, provides structural support, and protects from desiccation. However, statement (i) is incorrect because animal cells, mycoplasma, and some other cells lack a cell wall.",
@@ -1476,10 +1476,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following statements about the endoplasmic reticulum is/are correct?\n(i) RER is involved in protein synthesis\n(ii) SER is involved in lipid synthesis\n(iii) ER divides the intracellular space into two compartments\n(iv) SER has ribosomes on its surface",
       "options": [
-        "A) (i) and (ii) only",
-        "C) (i), (ii), and (iv)",
-        "D) All of the above",
-        "B) (i), (ii), and (iii)"
+        "(i) and (ii) only",
+        "(i), (ii), and (iv)",
+        "All of the above",
+        "(i), (ii), and (iii)"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, RER is involved in protein synthesis, SER in lipid synthesis, and ER divides intracellular space into two compartments - luminal (inside ER) and extra-luminal (cytoplasmic). Statement (iv) is incorrect; RER (not SER) has ribosomes.",
@@ -1502,10 +1502,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following statements about the nucleus are correct?\n(i) The nuclear envelope is a double membrane\n(ii) Nuclear pores allow bidirectional transport\n(iii) Chromatin is made of DNA and histone proteins\n(iv) Nucleolus is bound by a single membrane",
       "options": [
-        "D) (ii), (iii), and (iv) only",
-        "C) (i) and (iii) only",
-        "A) (i), (ii), and (iii) only",
-        "B) (i), (ii), (iii), and (iv)"
+        "(ii), (iii), and (iv) only",
+        "(i) and (iii) only",
+        "(i), (ii), and (iii) only",
+        "(i), (ii), (iii), and (iv)"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the nuclear envelope is a double membrane with pores that allow bidirectional transport of materials. Chromatin is composed of DNA and histone proteins. The nucleolus is NOT membrane-bound, making statement (iv) incorrect.",
@@ -1529,10 +1529,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Read the following statements and select the correct option:\n(i) Centrioles have 9+2 organisation of microtubules\n(ii) Centrioles form the basal body of cilia and flagella\n(iii) Centrioles are found in animal cells\n(iv) The centriole has a cartwheel-like organisation",
       "options": [
-        "D) All are correct",
-        "A) (i), (ii), and (iii) are correct",
-        "C) (i), (iii), and (iv) are correct",
-        "B) (ii), (iii), and (iv) are correct"
+        "All are correct",
+        "(i), (ii), and (iii) are correct",
+        "(i), (iii), and (iv) are correct",
+        "(ii), (iii), and (iv) are correct"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, centrioles have a cartwheel-like organisation with 9 triplets of peripheral microtubules (9+0, not 9+2). They form basal bodies and are found in animal cells. Statement (i) is incorrect; 9+2 is the arrangement in the axoneme of cilia/flagella, not centrioles.",
@@ -1555,10 +1555,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Consider the following statements about plastids:\n(i) Chloroplasts, chromoplasts, and leucoplasts are interconvertible\n(ii) Leucoplasts store fats, starch, and proteins\n(iii) Chromoplasts contain chlorophyll and carotenoids\n(iv) All plastids have a double membrane envelope\nWhich statements are correct?",
       "options": [
-        "A) (i), (ii), and (iv)",
-        "D) All of the above",
-        "C) (ii), (iii), and (iv)",
-        "B) (i), (ii), and (iii)"
+        "(i), (ii), and (iv)",
+        "All of the above",
+        "(ii), (iii), and (iv)",
+        "(i), (ii), and (iii)"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, plastids are interconvertible, leucoplasts store fats (elaioplasts), starch (amyloplasts) and proteins (aleuroplasts), and all plastids have a double membrane envelope. Chromoplasts contain carotenoids (fat-soluble pigments) but NOT chlorophyll; chlorophyll is found in chloroplasts. Statement (iii) is incorrect.",
@@ -1582,10 +1582,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following statements about the fluid mosaic model is/are INCORRECT?\n(i) Proteins are embedded in the lipid bilayer\n(ii) The lipid bilayer is rigid and immovable\n(iii) Integral proteins can be easily separated from the membrane\n(iv) The ratio of protein to lipid varies in different cell types",
       "options": [
-        "A) (ii) and (iii) only",
-        "B) (i) and (iv) only",
-        "C) (ii) only",
-        "D) (i), (ii), and (iii)"
+        "(ii) and (iii) only",
+        "(i) and (iv) only",
+        "(ii) only",
+        "(i), (ii), and (iii)"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, in the fluid mosaic model, the lipid bilayer is quasi-fluid (NOT rigid), and integral proteins are buried in the membrane and can be separated only by harsh treatments (detergents). Statements (ii) and (iii) are incorrect.",
@@ -1608,10 +1608,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following organelles are double-membrane-bound?\nMitochondria, Chloroplast, Nucleus, Lysosome, ER, Peroxisome",
       "options": [
-        "A) Two",
-        "D) Five",
-        "B) Three",
-        "C) Four"
+        "Two",
+        "Five",
+        "Three",
+        "Four"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, three organelles are double-membrane-bound: mitochondria, chloroplast, and nucleus. Lysosomes, ER, and peroxisomes are single-membrane-bound organelles.",
@@ -1634,10 +1634,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Select the incorrect statement about mesosomes:\n(i) They are formed by extensions of plasma membrane\n(ii) They help in cell wall formation\n(iii) They help in DNA replication and distribution to daughter cells\n(iv) They are found in all eukaryotic cells",
       "options": [
-        "C) (ii) and (iii) only",
-        "D) (i) and (iv) only",
-        "B) (iv) only",
-        "A) (i) only"
+        "(ii) and (iii) only",
+        "(i) and (iv) only",
+        "(iv) only",
+        "(i) only"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, mesosomes are found in prokaryotic cells (NOT eukaryotic cells). They are extensions of the plasma membrane that help in cell wall formation, DNA replication, and distribution to daughter cells. Statement (iv) is the only incorrect one.",
@@ -1659,10 +1659,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Consider the following about vacuoles:\n(i) Plant cell vacuoles contain cell sap\n(ii) In Amoeba, the contractile vacuole helps in excretion\n(iii) Food vacuoles are formed in protists like Amoeba\n(iv) Tonoplast is the membrane of the Golgi cisternae\nWhich statements are correct?",
       "options": [
-        "D) (ii) and (iv) only",
-        "C) (i) and (iii) only",
-        "B) (i), (ii), (iii), and (iv)",
-        "A) (i), (ii), and (iii)"
+        "(ii) and (iv) only",
+        "(i) and (iii) only",
+        "(i), (ii), (iii), and (iv)",
+        "(i), (ii), and (iii)"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, plant vacuoles contain cell sap (water, sap, excretory products, etc.), contractile vacuoles in Amoeba help in excretion, and food vacuoles are formed in many protists for food digestion. Statement (iv) is wrong; tonoplast is the membrane surrounding the plant cell vacuole, not Golgi cisternae.",
@@ -1685,10 +1685,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following statements about the cytoskeleton is correct?\n(i) It is found in all eukaryotic cells\n(ii) It is composed of microtubules, microfilaments, and intermediate filaments\n(iii) Microfilaments are made of the protein tubulin\n(iv) It provides mechanical support and motility",
       "options": [
-        "C) (i) and (iv) only",
-        "D) (ii) and (iii) only",
-        "A) (i), (ii), and (iv) only",
-        "B) (i), (ii), (iii), and (iv)"
+        "(i) and (iv) only",
+        "(ii) and (iii) only",
+        "(i), (ii), and (iv) only",
+        "(i), (ii), (iii), and (iv)"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the cytoskeleton is found in all eukaryotic cells, composed of microtubules, microfilaments, and intermediate filaments, and provides mechanical support and motility. Statement (iii) is incorrect; microfilaments are made of actin, while microtubules are made of tubulin.",
@@ -1711,10 +1711,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Which of the following is correct about the differences between plant and animal cells?\n(i) Plant cells have cell wall, animal cells do not\n(ii) Plant cells have large central vacuole, animal cells have smaller ones\n(iii) Animal cells have centrioles, most plant cells do not\n(iv) Plant cells have mitochondria, animal cells do not",
       "options": [
-        "D) (ii) and (iv) only",
-        "C) (i) and (iii) only",
-        "B) (i), (ii), (iii), and (iv)",
-        "A) (i), (ii), and (iii)"
+        "(ii) and (iv) only",
+        "(i) and (iii) only",
+        "(i), (ii), (iii), and (iv)",
+        "(i), (ii), and (iii)"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, plant cells have a cell wall, large central vacuoles, and lack centrioles (in most higher plants). However, statement (iv) is incorrect; both plant and animal cells have mitochondria.",
@@ -1737,10 +1737,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match the organelle (Column I) with its function (Column II):\nColumn I: (a) Ribosome (b) Lysosome (c) SER (d) Golgi apparatus\nColumn II: (i) Lipid synthesis (ii) Protein synthesis (iii) Packaging and secretion (iv) Intracellular digestion",
       "options": [
-        "C) a-ii, b-i, c-iv, d-iii",
-        "D) a-iv, b-iii, c-ii, d-i",
-        "B) a-i, b-ii, c-iii, d-iv",
-        "A) a-ii, b-iv, c-i, d-iii"
+        "a-ii, b-i, c-iv, d-iii",
+        "a-iv, b-iii, c-ii, d-i",
+        "a-i, b-ii, c-iii, d-iv",
+        "a-ii, b-iv, c-i, d-iii"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT: Ribosomes are involved in protein synthesis, lysosomes in intracellular digestion, SER in lipid synthesis, and Golgi apparatus in packaging and secretion of materials.",
@@ -1763,10 +1763,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match the scientist (Column I) with their contribution (Column II):\nColumn I: (a) Robert Hooke (b) Robert Brown (c) Schleiden and Schwann (d) Rudolf Virchow\nColumn II: (i) Nucleus discovery (ii) Cell theory (iii) Coined 'cell' (iv) Omnis cellula-e cellula",
       "options": [
-        "A) a-iii, b-i, c-ii, d-iv",
-        "B) a-i, b-iii, c-iv, d-ii",
-        "C) a-ii, b-iv, c-i, d-iii",
-        "D) a-iii, b-ii, c-i, d-iv"
+        "a-iii, b-i, c-ii, d-iv",
+        "a-i, b-iii, c-iv, d-ii",
+        "a-ii, b-iv, c-i, d-iii",
+        "a-iii, b-ii, c-i, d-iv"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT: Robert Hooke coined the term 'cell', Robert Brown discovered the nucleus, Schleiden and Schwann proposed the cell theory, and Rudolf Virchow gave 'Omnis cellula-e cellula' (all cells arise from pre-existing cells).",
@@ -1789,10 +1789,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match the cell structure (Column I) with the correct description (Column II):\nColumn I: (a) Cristae (b) Cisternae (c) Thylakoids (d) Stroma lamellae\nColumn II: (i) Flat membranous tubules connecting grana (ii) Flat disc-shaped sacs in Golgi (iii) Infoldings of inner mitochondrial membrane (iv) Flattened membranous sacs in chloroplast",
       "options": [
-        "C) a-ii, b-i, c-iii, d-iv",
-        "D) a-i, b-iv, c-ii, d-iii",
-        "B) a-iv, b-iii, c-i, d-ii",
-        "A) a-iii, b-ii, c-iv, d-i"
+        "a-ii, b-i, c-iii, d-iv",
+        "a-i, b-iv, c-ii, d-iii",
+        "a-iv, b-iii, c-i, d-ii",
+        "a-iii, b-ii, c-iv, d-i"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT: Cristae are infoldings of the inner mitochondrial membrane, cisternae are flat disc-shaped sacs in the Golgi apparatus, thylakoids are flattened membranous sacs in chloroplasts that form grana, and stroma lamellae connect thylakoids of different grana.",
@@ -1816,10 +1816,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match the type of plastid (Column I) with the stored substance (Column II):\nColumn I: (a) Amyloplast (b) Elaioplast (c) Aleuroplast (d) Chloroplast\nColumn II: (i) Proteins (ii) Oils/Fats (iii) Starch (iv) Chlorophyll pigments",
       "options": [
-        "C) a-iv, b-i, c-ii, d-iii",
-        "A) a-iii, b-ii, c-i, d-iv",
-        "B) a-ii, b-iii, c-iv, d-i",
-        "D) a-i, b-iv, c-iii, d-ii"
+        "a-iv, b-i, c-ii, d-iii",
+        "a-iii, b-ii, c-i, d-iv",
+        "a-ii, b-iii, c-iv, d-i",
+        "a-i, b-iv, c-iii, d-ii"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT: Amyloplasts store starch, elaioplasts store oils/fats, aleuroplasts store proteins, and chloroplasts contain chlorophyll pigments for photosynthesis.",
@@ -1843,10 +1843,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match the cell component (Column I) with its chemical composition (Column II):\nColumn I: (a) Cell wall (b) Chromatin (c) Ribosomes (d) Cell membrane\nColumn II: (i) DNA + histones (ii) RNA + proteins (iii) Cellulose + hemicellulose (iv) Phospholipids + proteins",
       "options": [
-        "A) a-iii, b-i, c-ii, d-iv",
-        "C) a-i, b-iii, c-iv, d-ii",
-        "B) a-iv, b-ii, c-i, d-iii",
-        "D) a-ii, b-iv, c-iii, d-i"
+        "a-iii, b-i, c-ii, d-iv",
+        "a-i, b-iii, c-iv, d-ii",
+        "a-iv, b-ii, c-i, d-iii",
+        "a-ii, b-iv, c-iii, d-i"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT: Cell wall is made of cellulose and hemicellulose, chromatin is composed of DNA and histone proteins, ribosomes are made of RNA and proteins, and the cell membrane consists of phospholipids and proteins.",
@@ -1868,10 +1868,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match the structure (Column I) with the microtubule arrangement (Column II):\nColumn I: (a) Centriole (b) Axoneme of cilium (c) Basal body (d) Spindle fibre\nColumn II: (i) 9+2 (ii) 9+0 (triplets) (iii) 9+0 (triplets) (iv) Individual microtubules",
       "options": [
-        "A) a-ii, b-i, c-iii, d-iv",
-        "C) a-iv, b-iii, c-ii, d-i",
-        "B) a-i, b-ii, c-iv, d-iii",
-        "D) a-iii, b-iv, c-i, d-ii"
+        "a-ii, b-i, c-iii, d-iv",
+        "a-iv, b-iii, c-ii, d-i",
+        "a-i, b-ii, c-iv, d-iii",
+        "a-iii, b-iv, c-i, d-ii"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT: Centrioles have 9+0 arrangement with triplets, axoneme of cilium/flagellum has 9+2 arrangement, basal body (structurally identical to centriole) has 9+0 triplets, and spindle fibres are composed of individual microtubules.",
@@ -1894,10 +1894,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match the organelle (Column I) with its membrane type (Column II):\nColumn I: (a) Mitochondria (b) Ribosome (c) Lysosome (d) Nucleus\nColumn II: (i) Double membrane (ii) Single membrane (iii) No membrane (iv) Double membrane",
       "options": [
-        "A) a-i, b-iii, c-ii, d-iv",
-        "B) a-ii, b-iii, c-i, d-iv",
-        "D) a-iii, b-i, c-iv, d-ii",
-        "C) a-i, b-ii, c-iii, d-iv"
+        "a-i, b-iii, c-ii, d-iv",
+        "a-ii, b-iii, c-i, d-iv",
+        "a-iii, b-i, c-iv, d-ii",
+        "a-i, b-ii, c-iii, d-iv"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT: Mitochondria have a double membrane, ribosomes have no membrane (non-membrane-bound), lysosomes have a single membrane, and the nucleus has a double membrane (nuclear envelope).",
@@ -1920,10 +1920,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match the prokaryotic structure (Column I) with its function (Column II):\nColumn I: (a) Pili (b) Fimbriae (c) Flagellum (d) Mesosome\nColumn II: (i) Motility (ii) Attachment to host (iii) Transfer of DNA (iv) Respiration and cell wall formation",
       "options": [
-        "D) a-iv, b-i, c-iii, d-ii",
-        "C) a-i, b-iv, c-ii, d-iii",
-        "B) a-ii, b-iii, c-iv, d-i",
-        "A) a-iii, b-ii, c-i, d-iv"
+        "a-iv, b-i, c-iii, d-ii",
+        "a-i, b-iv, c-ii, d-iii",
+        "a-ii, b-iii, c-iv, d-i",
+        "a-iii, b-ii, c-i, d-iv"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT: Pili are elongated tubular structures used for transfer of DNA during conjugation, fimbriae are small bristle-like fibres for attachment to host, flagella are for motility, and mesosomes help in respiration and cell wall formation.",
@@ -1947,10 +1947,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match Column I with Column II:\nColumn I: (a) Tonoplast (b) Plasmodesmata (c) Middle lamella (d) Nuclear pore\nColumn II: (i) Transport between nucleus and cytoplasm (ii) Cytoplasmic connection between plant cells (iii) Vacuolar membrane (iv) Calcium pectate layer between cells",
       "options": [
-        "C) a-iv, b-i, c-iii, d-ii",
-        "B) a-ii, b-iii, c-i, d-iv",
-        "A) a-iii, b-ii, c-iv, d-i",
-        "D) a-i, b-iv, c-ii, d-iii"
+        "a-iv, b-i, c-iii, d-ii",
+        "a-ii, b-iii, c-i, d-iv",
+        "a-iii, b-ii, c-iv, d-i",
+        "a-i, b-iv, c-ii, d-iii"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT: Tonoplast is the vacuolar membrane, plasmodesmata provide cytoplasmic connections between plant cells, middle lamella is made of calcium pectate between cells, and nuclear pores allow transport between nucleus and cytoplasm.",
@@ -1974,10 +1974,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match the ribosome type (Column I) with its occurrence (Column II):\nColumn I: (a) 70S (b) 80S (c) 50S + 30S (d) 60S + 40S\nColumn II: (i) Eukaryotic cytoplasm (ii) Prokaryotic cell (iii) Prokaryotic subunits (iv) Eukaryotic subunits",
       "options": [
-        "D) a-iv, b-iii, c-ii, d-i",
-        "A) a-ii, b-i, c-iii, d-iv",
-        "C) a-iii, b-iv, c-i, d-ii",
-        "B) a-i, b-ii, c-iv, d-iii"
+        "a-iv, b-iii, c-ii, d-i",
+        "a-ii, b-i, c-iii, d-iv",
+        "a-iii, b-iv, c-i, d-ii",
+        "a-i, b-ii, c-iv, d-iii"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT: 70S ribosomes are found in prokaryotic cells, 80S ribosomes in eukaryotic cytoplasm, 50S+30S are the subunits of prokaryotic 70S ribosomes, and 60S+40S are the subunits of eukaryotic 80S ribosomes.",
@@ -2001,10 +2001,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match the cytoskeletal element (Column I) with its protein component (Column II):\nColumn I: (a) Microtubules (b) Microfilaments (c) Cilia axoneme (d) Intermediate filaments\nColumn II: (i) Actin (ii) Tubulin (iii) Tubulin with dynein arms (iv) Keratin/vimentin",
       "options": [
-        "D) a-iv, b-iii, c-ii, d-i",
-        "B) a-i, b-ii, c-iv, d-iii",
-        "C) a-iii, b-iv, c-i, d-ii",
-        "A) a-ii, b-i, c-iii, d-iv"
+        "a-iv, b-iii, c-ii, d-i",
+        "a-i, b-ii, c-iv, d-iii",
+        "a-iii, b-iv, c-i, d-ii",
+        "a-ii, b-i, c-iii, d-iv"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT: Microtubules are made of tubulin protein, microfilaments are made of actin, the cilia axoneme contains tubulin microtubules with dynein arms for movement, and intermediate filaments are made of proteins like keratin and vimentin.",
@@ -2028,10 +2028,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match the cell type (Column I) with its characteristic (Column II):\nColumn I: (a) Mycoplasma (b) PPLO (c) Bacteria (d) Blue-green algae\nColumn II: (i) Smallest cell (ii) Same as Mycoplasma (iii) Peptidoglycan cell wall (iv) Photosynthetic prokaryote",
       "options": [
-        "C) a-ii, b-iv, c-i, d-iii",
-        "D) a-iv, b-iii, c-ii, d-i",
-        "B) a-iii, b-i, c-iv, d-ii",
-        "A) a-i, b-ii, c-iii, d-iv"
+        "a-ii, b-iv, c-i, d-iii",
+        "a-iv, b-iii, c-ii, d-i",
+        "a-iii, b-i, c-iv, d-ii",
+        "a-i, b-ii, c-iii, d-iv"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT: Mycoplasma is the smallest known cell, PPLOs (Pleuro Pneumonia Like Organisms) are the same as mycoplasma, bacteria have peptidoglycan (murein) in their cell wall, and blue-green algae (cyanobacteria) are photosynthetic prokaryotes.",
@@ -2055,10 +2055,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match Column I with Column II:\nColumn I: (a) Polysome (b) Nucleolus (c) Centrosome (d) Peroxisome\nColumn II: (i) Contains catalase enzyme (ii) rRNA synthesis (iii) Multiple ribosomes on mRNA (iv) Contains centrioles",
       "options": [
-        "A) a-iii, b-ii, c-iv, d-i",
-        "B) a-ii, b-i, c-iii, d-iv",
-        "C) a-i, b-iv, c-ii, d-iii",
-        "D) a-iv, b-iii, c-i, d-ii"
+        "a-iii, b-ii, c-iv, d-i",
+        "a-ii, b-i, c-iii, d-iv",
+        "a-i, b-iv, c-ii, d-iii",
+        "a-iv, b-iii, c-i, d-ii"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT: Polysomes are formed when multiple ribosomes translate a single mRNA, the nucleolus is the site of rRNA synthesis, the centrosome contains two centrioles, and peroxisomes contain the enzyme catalase that breaks down hydrogen peroxide.",
@@ -2082,10 +2082,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Match the endomembrane component (Column I) with its characteristic (Column II):\nColumn I: (a) RER (b) SER (c) Golgi cis face (d) Golgi trans face\nColumn II: (i) Maturing face (ii) Forming face (iii) Has ribosomes (iv) Lipid synthesis",
       "options": [
-        "A) a-iii, b-iv, c-ii, d-i",
-        "D) a-i, b-ii, c-iii, d-iv",
-        "C) a-ii, b-i, c-iv, d-iii",
-        "B) a-iv, b-iii, c-i, d-ii"
+        "a-iii, b-iv, c-ii, d-i",
+        "a-i, b-ii, c-iii, d-iv",
+        "a-ii, b-i, c-iv, d-iii",
+        "a-iv, b-iii, c-i, d-ii"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT: RER has ribosomes on its surface, SER is involved in lipid synthesis, the cis face of Golgi is the forming face (receives vesicles from ER), and the trans face is the maturing face (sends vesicles to plasma membrane).",
@@ -2109,10 +2109,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following organelles are part of the endomembrane system?\nEndoplasmic reticulum, Golgi complex, Lysosomes, Vacuoles, Mitochondria, Chloroplasts, Peroxisomes, Ribosomes",
       "options": [
-        "B) Four",
-        "D) Six",
-        "C) Five",
-        "A) Three"
+        "Four",
+        "Six",
+        "Five",
+        "Three"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, the endomembrane system includes: ER, Golgi complex, lysosomes, and vacuoles (4 organelles). Mitochondria, chloroplasts, peroxisomes, and ribosomes are NOT part of the endomembrane system.",
@@ -2134,10 +2134,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following features are found in prokaryotic cells?\nNucleus, Ribosome, Cell membrane, Mesosome, ER, Golgi body, Plasmid, Cell wall",
       "options": [
-        "A) Three",
-        "B) Four",
-        "D) Six",
-        "C) Five"
+        "Three",
+        "Four",
+        "Six",
+        "Five"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, prokaryotic cells have: ribosomes (70S), cell membrane, mesosomes, plasmids, and cell wall = 5 features. They lack a true nucleus, ER, and Golgi body.",
@@ -2160,10 +2160,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Count the number of correct statements:\n(a) Chloroplasts are found in all plant cells\n(b) Mitochondria have their own DNA\n(c) Ribosomes are found in both prokaryotes and eukaryotes\n(d) Centrioles are found in all eukaryotic cells\n(e) Lysosomes contain hydrolytic enzymes",
       "options": [
-        "B) Three",
-        "D) Five",
-        "A) Two",
-        "C) Four"
+        "Three",
+        "Five",
+        "Two",
+        "Four"
       ],
       "correctAnswer": "A",
       "explanation": "Correct statements are (b), (c), and (e) = 3. Statement (a) is wrong because chloroplasts are found only in green parts of plants, not all plant cells. Statement (d) is wrong because higher plant cells lack centrioles.",
@@ -2186,10 +2186,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following are functions of mesosomes?\n(a) Cell wall formation (b) DNA replication (c) Distribution of DNA to daughter cells (d) Respiration (e) Secretory processes (f) Photosynthesis",
       "options": [
-        "A) Three",
-        "D) Six",
-        "C) Five",
-        "B) Four"
+        "Three",
+        "Six",
+        "Five",
+        "Four"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, mesosomes help in: (a) cell wall formation, (b) DNA replication, (c) distribution of DNA to daughter cells, (d) respiration by increasing surface area for enzymatic content, and (e) secretory processes = 5 functions. Photosynthesis is NOT a function of mesosomes.",
@@ -2212,10 +2212,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following structures are present in an animal cell but absent in a plant cell?\nCell wall, Centrioles, Chloroplasts, Large central vacuole, Lysosomes (well-developed), Plasmodesmata",
       "options": [
-        "C) Three",
-        "A) One",
-        "D) Four",
-        "B) Two"
+        "Three",
+        "One",
+        "Four",
+        "Two"
       ],
       "correctAnswer": "D",
       "explanation": "Only centrioles and well-developed lysosomes are present in animal cells but absent (or poorly developed) in plant cells = 2. Cell wall, chloroplasts, large central vacuole, and plasmodesmata are present in plant cells but absent in animal cells.",
@@ -2239,10 +2239,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following contain their own DNA?\nMitochondria, Chloroplast, Ribosome, Lysosome, Nucleus, Centriole, Peroxisome",
       "options": [
-        "A) Two",
-        "D) Five",
-        "B) Three",
-        "C) Four"
+        "Two",
+        "Five",
+        "Three",
+        "Four"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, mitochondria, chloroplasts, and the nucleus contain their own DNA = 3. Ribosomes, lysosomes, centrioles, and peroxisomes do not contain DNA.",
@@ -2265,10 +2265,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Count the number of INCORRECT statements:\n(a) Prokaryotic ribosomes are 80S\n(b) SER has ribosomes on its surface\n(c) The middle lamella is made of cellulose\n(d) Chromoplasts are colourless plastids\n(e) Gas vacuoles provide buoyancy",
       "options": [
-        "A) Two",
-        "D) Five",
-        "B) Three",
-        "C) Four"
+        "Two",
+        "Five",
+        "Three",
+        "Four"
       ],
       "correctAnswer": "D",
       "explanation": "Incorrect statements: (a) Prokaryotic ribosomes are 70S not 80S, (b) RER has ribosomes not SER, (c) Middle lamella is made of calcium pectate not cellulose, (d) Leucoplasts are colourless, chromoplasts are coloured = 4 incorrect. Statement (e) is correct.",
@@ -2290,10 +2290,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "How many of the following are single-membrane-bound organelles?\nER, Golgi body, Lysosome, Vacuole, Mitochondria, Chloroplast, Peroxisome, Nucleus",
       "options": [
-        "A) Three",
-        "C) Five",
-        "D) Six",
-        "B) Four"
+        "Three",
+        "Five",
+        "Six",
+        "Four"
       ],
       "correctAnswer": "B",
       "explanation": "Single-membrane-bound organelles: ER, Golgi body, lysosome, vacuole, and peroxisome = 5. Mitochondria, chloroplast, and nucleus are double-membrane-bound.",
@@ -2316,10 +2316,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Arrange the following in the correct sequence of the secretory pathway:\n(i) Golgi apparatus\n(ii) Rough ER\n(iii) Plasma membrane\n(iv) Transport vesicles",
       "options": [
-        "C) iii -> i -> iv -> ii",
-        "A) ii -> iv -> i -> iii",
-        "D) iv -> ii -> i -> iii",
-        "B) i -> ii -> iii -> iv"
+        "iii -> i -> iv -> ii",
+        "ii -> iv -> i -> iii",
+        "iv -> ii -> i -> iii",
+        "i -> ii -> iii -> iv"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, proteins are synthesised on RER, packaged into transport vesicles, sent to Golgi apparatus for modification and packaging, and finally secreted at the plasma membrane. Correct sequence: RER -> Transport vesicles -> Golgi -> Plasma membrane.",
@@ -2342,10 +2342,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Arrange the following scientists in chronological order of their contributions to cell biology:\n(i) Rudolf Virchow\n(ii) Robert Hooke\n(iii) Robert Brown\n(iv) Schleiden and Schwann",
       "options": [
-        "C) iii -> ii -> i -> iv",
-        "B) i -> ii -> iii -> iv",
-        "D) ii -> iv -> iii -> i",
-        "A) ii -> iii -> iv -> i"
+        "iii -> ii -> i -> iv",
+        "i -> ii -> iii -> iv",
+        "ii -> iv -> iii -> i",
+        "ii -> iii -> iv -> i"
       ],
       "correctAnswer": "D",
       "explanation": "Correct chronological order: Robert Hooke (1665) coined 'cell' -> Robert Brown (1831) discovered nucleus -> Schleiden and Schwann (1838-39) proposed cell theory -> Rudolf Virchow (1855) added 'Omnis cellula-e cellula'.",
@@ -2368,10 +2368,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Arrange the following from the outermost to innermost layers in a plant cell:\n(i) Cell membrane\n(ii) Middle lamella\n(iii) Primary wall\n(iv) Secondary wall",
       "options": [
-        "D) ii -> iv -> iii -> i",
-        "A) ii -> iii -> iv -> i",
-        "B) i -> iv -> iii -> ii",
-        "C) iii -> ii -> iv -> i"
+        "ii -> iv -> iii -> i",
+        "ii -> iii -> iv -> i",
+        "i -> iv -> iii -> ii",
+        "iii -> ii -> iv -> i"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, from outermost to innermost: Middle lamella (shared between adjacent cells) -> Primary wall (first wall laid down) -> Secondary wall (deposited on inner side of primary wall) -> Cell membrane (innermost, just inside cell wall).",
@@ -2394,10 +2394,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Arrange the following cell sizes from smallest to largest:\n(i) Mycoplasma\n(ii) Bacteria\n(iii) Human RBC\n(iv) Ostrich egg",
       "options": [
-        "C) i -> iii -> ii -> iv",
-        "B) ii -> i -> iii -> iv",
-        "D) iii -> ii -> i -> iv",
-        "A) i -> ii -> iii -> iv"
+        "i -> iii -> ii -> iv",
+        "ii -> i -> iii -> iv",
+        "iii -> ii -> i -> iv",
+        "i -> ii -> iii -> iv"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, from smallest to largest: Mycoplasma (0.3 micrometres) -> Bacteria (3-5 micrometres) -> Human RBC (7 micrometres) -> Ostrich egg (170 x 135 mm, the largest known cell).",
@@ -2420,10 +2420,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Arrange the following structures from outside to inside in a chloroplast:\n(i) Stroma\n(ii) Outer membrane\n(iii) Inner membrane\n(iv) Thylakoid lumen",
       "options": [
-        "D) ii -> i -> iii -> iv",
-        "B) i -> ii -> iii -> iv",
-        "C) iii -> ii -> iv -> i",
-        "A) ii -> iii -> i -> iv"
+        "ii -> i -> iii -> iv",
+        "i -> ii -> iii -> iv",
+        "iii -> ii -> iv -> i",
+        "ii -> iii -> i -> iv"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, from outside to inside in a chloroplast: Outer membrane -> Inner membrane -> Stroma (matrix between inner membrane and thylakoids) -> Thylakoid lumen (inside the thylakoid).",
@@ -2446,10 +2446,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Arrange the following in the correct order of complexity from simplest to most complex:\n(i) Organelle\n(ii) Molecule\n(iii) Cell\n(iv) Macromolecule",
       "options": [
-        "C) iv -> ii -> i -> iii",
-        "D) ii -> i -> iv -> iii",
-        "A) ii -> iv -> i -> iii",
-        "B) i -> ii -> iii -> iv"
+        "iv -> ii -> i -> iii",
+        "ii -> i -> iv -> iii",
+        "ii -> iv -> i -> iii",
+        "i -> ii -> iii -> iv"
       ],
       "correctAnswer": "C",
       "explanation": "The correct order from simplest to most complex is: Molecule -> Macromolecule -> Organelle -> Cell. Molecules combine to form macromolecules, which organise into organelles, which together form a cell.",
@@ -2472,10 +2472,10 @@
       "ncertChapterName": "Cell - The Unit of Life",
       "question": "Arrange the following events in the formation of a lysosome:\n(i) Hydrolytic enzymes synthesised on RER\n(ii) Enzymes packaged in Golgi apparatus\n(iii) Vesicles bud off from trans-Golgi\n(iv) Mature lysosome formed",
       "options": [
-        "A) i -> ii -> iii -> iv",
-        "D) i -> iii -> ii -> iv",
-        "C) iii -> iv -> i -> ii",
-        "B) ii -> i -> iv -> iii"
+        "i -> ii -> iii -> iv",
+        "i -> iii -> ii -> iv",
+        "iii -> iv -> i -> ii",
+        "ii -> i -> iv -> iii"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, lysosomes are formed by the packaging of hydrolytic enzymes: enzymes are first synthesised on RER, then transported to and packaged in the Golgi apparatus, vesicles bud off from the trans-Golgi face, and finally mature into functional lysosomes.",

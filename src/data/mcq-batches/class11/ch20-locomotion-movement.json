@@ -15,10 +15,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The functional unit of a muscle fibre is called:",
       "options": [
-        "A) Myofibril",
-        "D) Sarcolemma",
-        "C) Sarcoplasm",
-        "B) Sarcomere"
+        "Myofibril",
+        "Sarcolemma",
+        "Sarcoplasm",
+        "Sarcomere"
       ],
       "correctAnswer": "D",
       "explanation": "The sarcomere is the functional (contractile) unit of a muscle fibre (myofibril). It extends from one Z-line to the next Z-line and contains one complete A-band and two half I-bands. During contraction, the sarcomere shortens.",
@@ -40,10 +40,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The thin filaments in a sarcomere are made up of:",
       "options": [
-        "B) Actin, troponin, and tropomyosin",
-        "C) Collagen",
-        "D) Elastin",
-        "A) Myosin"
+        "Actin, troponin, and tropomyosin",
+        "Collagen",
+        "Elastin",
+        "Myosin"
       ],
       "correctAnswer": "A",
       "explanation": "Thin filaments consist of two helical strands of F-actin (polymerized G-actin monomers), tropomyosin (running along the groove of actin helix), and troponin (a complex of three subunits: TnC, TnI, TnT) that regulate muscle contraction.",
@@ -65,10 +65,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The thick filaments of the sarcomere are composed of:",
       "options": [
-        "D) Troponin",
-        "C) Myosin",
-        "A) Actin",
-        "B) Tropomyosin"
+        "Troponin",
+        "Myosin",
+        "Actin",
+        "Tropomyosin"
       ],
       "correctAnswer": "B",
       "explanation": "Thick filaments are composed of the protein myosin. Each myosin molecule has a tail (meromyosin rod) and a head (heavy meromyosin/HMM) with ATPase activity. The myosin heads form cross-bridges with actin during muscle contraction.",
@@ -90,10 +90,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "During muscle contraction, which of the following bands does NOT change its length?",
       "options": [
-        "B) A-band",
-        "D) Both I-band and H-zone",
-        "C) H-zone",
-        "A) I-band"
+        "A-band",
+        "Both I-band and H-zone",
+        "H-zone",
+        "I-band"
       ],
       "correctAnswer": "A",
       "explanation": "According to the sliding filament theory, the A-band (dark band/anisotropic band) does NOT change its length during contraction because it represents the length of thick myosin filaments. The I-band and H-zone both decrease in length as thin filaments slide over thick filaments.",
@@ -115,10 +115,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The sliding filament theory of muscle contraction was proposed by:",
       "options": [
-        "A) Watson and Crick",
-        "C) Darwin and Wallace",
-        "D) Mendel and Morgan",
-        "B) Huxley and Hanson"
+        "Watson and Crick",
+        "Darwin and Wallace",
+        "Mendel and Morgan",
+        "Huxley and Hanson"
       ],
       "correctAnswer": "D",
       "explanation": "The sliding filament theory was proposed by H.E. Huxley and J. Hanson (1954). According to this theory, muscle contraction occurs when thin (actin) filaments slide over thick (myosin) filaments towards the centre of the sarcomere, shortening the sarcomere.",
@@ -140,10 +140,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Ca2+ ions during muscle contraction bind to:",
       "options": [
-        "D) Tropomyosin",
-        "B) Actin",
-        "C) Troponin (TnC subunit)",
-        "A) Myosin"
+        "Tropomyosin",
+        "Actin",
+        "Troponin (TnC subunit)",
+        "Myosin"
       ],
       "correctAnswer": "C",
       "explanation": "When a nerve impulse reaches the muscle, Ca2+ is released from the sarcoplasmic reticulum. Ca2+ binds to the TnC (troponin C) subunit of troponin, causing a conformational change that moves tropomyosin away from the active binding sites on actin, allowing myosin cross-bridge formation.",
@@ -166,10 +166,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The sarcoplasmic reticulum stores:",
       "options": [
-        "B) K+ ions",
-        "D) Mg2+ ions",
-        "C) Ca2+ ions",
-        "A) Na+ ions"
+        "K+ ions",
+        "Mg2+ ions",
+        "Ca2+ ions",
+        "Na+ ions"
       ],
       "correctAnswer": "C",
       "explanation": "The sarcoplasmic reticulum (SR) is a specialized smooth endoplasmic reticulum in muscle fibres that stores Ca2+ ions. Upon stimulation, Ca2+ is released from the SR into the sarcoplasm, triggering muscle contraction. Ca2+ is pumped back by Ca-ATPase during relaxation.",
@@ -191,10 +191,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The total number of bones in an adult human skeleton is:",
       "options": [
-        "A) 200",
-        "D) 300",
-        "B) 206",
-        "C) 212"
+        "200",
+        "300",
+        "206",
+        "212"
       ],
       "correctAnswer": "C",
       "explanation": "An adult human skeleton has 206 bones. It is divided into the axial skeleton (80 bones: skull, vertebral column, ribs, sternum) and the appendicular skeleton (126 bones: limbs, girdles).",
@@ -216,10 +216,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The knee joint is an example of:",
       "options": [
-        "B) Hinge joint",
-        "D) Gliding joint",
-        "A) Pivot joint",
-        "C) Ball and socket joint"
+        "Hinge joint",
+        "Gliding joint",
+        "Pivot joint",
+        "Ball and socket joint"
       ],
       "correctAnswer": "A",
       "explanation": "The knee joint is a hinge joint (ginglymus) that allows movement in one plane only (flexion and extension). It is the largest and most complex joint in the body, connecting the femur to the tibia.",
@@ -241,10 +241,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The shoulder joint is an example of:",
       "options": [
-        "D) Saddle joint",
-        "A) Hinge joint",
-        "C) Ball and socket joint",
-        "B) Pivot joint"
+        "Saddle joint",
+        "Hinge joint",
+        "Ball and socket joint",
+        "Pivot joint"
       ],
       "correctAnswer": "C",
       "explanation": "The shoulder joint (glenohumeral joint) is a ball and socket joint where the round head of the humerus fits into the glenoid cavity of the scapula. It allows movement in all planes (multiaxial), providing maximum range of motion.",
@@ -266,10 +266,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The Z-line bisects the:",
       "options": [
-        "C) H-zone",
-        "A) A-band",
-        "D) M-line",
-        "B) I-band"
+        "H-zone",
+        "A-band",
+        "M-line",
+        "I-band"
       ],
       "correctAnswer": "D",
       "explanation": "The Z-line (Z-disc or Krause's membrane) bisects the I-band (isotropic/light band). It serves as the boundary of each sarcomere, where the thin (actin) filaments are anchored. The distance between two successive Z-lines represents one sarcomere.",
@@ -292,10 +292,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The M-line is found in the centre of the:",
       "options": [
-        "D) Z-line",
-        "A) I-band",
-        "C) Sarcomere only",
-        "B) A-band"
+        "Z-line",
+        "I-band",
+        "Sarcomere only",
+        "A-band"
       ],
       "correctAnswer": "D",
       "explanation": "The M-line (Mittellinie) is a thin dark line in the centre of the A-band (and the H-zone). It holds the thick myosin filaments together and represents the midpoint of the sarcomere. It is formed by proteins like myomesin and M-protein.",
@@ -317,10 +317,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Rigor mortis (stiffening of muscles after death) occurs due to:",
       "options": [
-        "A) Excess Ca2+ release",
-        "B) Depletion of ATP",
-        "D) Loss of myosin",
-        "C) Excess acetylcholine"
+        "Excess Ca2+ release",
+        "Depletion of ATP",
+        "Loss of myosin",
+        "Excess acetylcholine"
       ],
       "correctAnswer": "B",
       "explanation": "Rigor mortis occurs due to depletion of ATP after death. ATP is required to detach the myosin cross-bridges from actin. Without ATP, the cross-bridges remain permanently attached, causing the muscles to become stiff and rigid.",
@@ -342,10 +342,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The neurotransmitter released at the neuromuscular junction is:",
       "options": [
-        "D) Serotonin",
-        "A) Norepinephrine",
-        "B) Dopamine",
-        "C) Acetylcholine"
+        "Serotonin",
+        "Norepinephrine",
+        "Dopamine",
+        "Acetylcholine"
       ],
       "correctAnswer": "D",
       "explanation": "Acetylcholine (ACh) is the neurotransmitter released at the neuromuscular junction (motor end plate). It binds to nicotinic receptors on the sarcolemma, generating an action potential that travels along the muscle fibre and triggers contraction.",
@@ -367,10 +367,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The vertebral column in humans consists of how many vertebrae?",
       "options": [
-        "A) 26",
-        "D) 36",
-        "C) 33",
-        "B) 30"
+        "26",
+        "36",
+        "33",
+        "30"
       ],
       "correctAnswer": "A",
       "explanation": "The adult human vertebral column has 26 bones: 7 cervical + 12 thoracic + 5 lumbar + 1 sacrum (5 fused) + 1 coccyx (4 fused). During embryonic development there are 33 individual vertebrae, but in adults the sacral and coccygeal vertebrae fuse.",
@@ -392,10 +392,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Osteoporosis is characterized by:",
       "options": [
-        "A) Inflammation of joints",
-        "D) Autoimmune destruction of muscles",
-        "C) Excess uric acid in joints",
-        "B) Decreased bone mass and density leading to fragile bones"
+        "Inflammation of joints",
+        "Autoimmune destruction of muscles",
+        "Excess uric acid in joints",
+        "Decreased bone mass and density leading to fragile bones"
       ],
       "correctAnswer": "D",
       "explanation": "Osteoporosis is a condition characterized by decreased bone mass and density, making bones porous and fragile, prone to fractures. It is common in postmenopausal women due to decreased estrogen levels and also occurs with aging.",
@@ -417,10 +417,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Gout is caused by:",
       "options": [
-        "D) Vitamin D deficiency",
-        "C) Excess cholesterol",
-        "A) Calcium deficiency",
-        "B) Accumulation of uric acid crystals in joints"
+        "Vitamin D deficiency",
+        "Excess cholesterol",
+        "Calcium deficiency",
+        "Accumulation of uric acid crystals in joints"
       ],
       "correctAnswer": "D",
       "explanation": "Gout is a form of arthritis caused by the accumulation of uric acid crystals in synovial joints (commonly the big toe). It results from hyperuricemia (elevated blood uric acid levels) and causes severe pain, swelling, and inflammation.",
@@ -443,10 +443,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The smallest bone in the human body is:",
       "options": [
-        "C) Stapes",
-        "B) Incus",
-        "D) Hyoid",
-        "A) Malleus"
+        "Stapes",
+        "Incus",
+        "Hyoid",
+        "Malleus"
       ],
       "correctAnswer": "A",
       "explanation": "The stapes (stirrup bone) in the middle ear is the smallest bone in the human body, measuring about 3 mm. It is one of the three ear ossicles (malleus, incus, stapes) that transmit sound vibrations from the eardrum to the inner ear.",
@@ -468,10 +468,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Red (slow-twitch) muscle fibres contain high amounts of:",
       "options": [
-        "C) Creatine phosphate",
-        "B) Myoglobin",
-        "D) Lactate dehydrogenase",
-        "A) Glycogen"
+        "Creatine phosphate",
+        "Myoglobin",
+        "Lactate dehydrogenase",
+        "Glycogen"
       ],
       "correctAnswer": "B",
       "explanation": "Red (slow-twitch/Type I) muscle fibres contain high amounts of myoglobin (an oxygen-storing protein that gives them their red colour), many mitochondria, and high capillary density. They are adapted for sustained aerobic activities like posture maintenance.",
@@ -493,10 +493,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The atlas and axis vertebrae allow:",
       "options": [
-        "A) Bending of the spine",
-        "C) Movement of the ribs",
-        "B) Nodding and rotation of the head",
-        "D) Protection of the spinal cord"
+        "Bending of the spine",
+        "Movement of the ribs",
+        "Nodding and rotation of the head",
+        "Protection of the spinal cord"
       ],
       "correctAnswer": "C",
       "explanation": "The atlas (C1) allows nodding (yes) movement of the head (atlanto-occipital joint). The axis (C2) has a process called the odontoid process (dens) around which the atlas rotates, allowing side-to-side rotation (no movement) of the head.",
@@ -519,10 +519,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The pectoral girdle consists of:",
       "options": [
-        "D) Humerus and radius",
-        "A) Ilium and ischium",
-        "B) Clavicle and scapula",
-        "C) Pubis and ilium"
+        "Humerus and radius",
+        "Ilium and ischium",
+        "Clavicle and scapula",
+        "Pubis and ilium"
       ],
       "correctAnswer": "C",
       "explanation": "The pectoral (shoulder) girdle consists of the clavicle (collar bone) and scapula (shoulder blade) on each side. It connects the upper limb to the axial skeleton. The glenoid cavity of the scapula articulates with the head of the humerus.",
@@ -545,10 +545,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The pelvic girdle is formed by the fusion of:",
       "options": [
-        "C) Femur and tibia",
-        "D) Sacrum and coccyx",
-        "B) Clavicle and scapula",
-        "A) Ilium, ischium, and pubis"
+        "Femur and tibia",
+        "Sacrum and coccyx",
+        "Clavicle and scapula",
+        "Ilium, ischium, and pubis"
       ],
       "correctAnswer": "D",
       "explanation": "Each half of the pelvic girdle (os coxae/hip bone) is formed by the fusion of three bones: ilium (largest, upper), ischium (posterior-inferior), and pubis (anterior-inferior). They fuse at the acetabulum, which articulates with the head of the femur.",
@@ -572,10 +572,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Myasthenia gravis is a disorder caused by:",
       "options": [
-        "C) Excessive dopamine",
-        "A) Deficiency of calcium",
-        "D) Muscle fibre degeneration",
-        "B) Autoimmune destruction of acetylcholine receptors at NMJ"
+        "Excessive dopamine",
+        "Deficiency of calcium",
+        "Muscle fibre degeneration",
+        "Autoimmune destruction of acetylcholine receptors at NMJ"
       ],
       "correctAnswer": "D",
       "explanation": "Myasthenia gravis is an autoimmune neuromuscular disease where antibodies attack and destroy acetylcholine receptors at the neuromuscular junction. This leads to progressive weakness and fatigue of voluntary muscles, especially facial and limb muscles.",
@@ -597,10 +597,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The number of pairs of ribs in humans is:",
       "options": [
-        "B) 12",
-        "C) 14",
-        "D) 24",
-        "A) 10"
+        "12",
+        "14",
+        "24",
+        "10"
       ],
       "correctAnswer": "A",
       "explanation": "Humans have 12 pairs (24 total) of ribs. The first 7 pairs are true ribs (attached directly to sternum). Pairs 8-10 are false ribs (attached to sternum via 7th rib cartilage). Pairs 11-12 are floating ribs (not attached to sternum).",
@@ -622,10 +622,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Which mineral is stored in bones and is essential for muscle contraction?",
       "options": [
-        "D) Sodium",
-        "B) Calcium",
-        "A) Iron",
-        "C) Potassium"
+        "Sodium",
+        "Calcium",
+        "Iron",
+        "Potassium"
       ],
       "correctAnswer": "B",
       "explanation": "Calcium is stored in bones as calcium phosphate (hydroxyapatite) and is essential for muscle contraction. When released from the sarcoplasmic reticulum, Ca2+ binds to troponin, initiating the sliding filament mechanism of muscle contraction.",
@@ -648,10 +648,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The joint between the atlas (C1) and the skull (occipital condyles) is a:",
       "options": [
-        "C) Condyloid (ellipsoidal) joint",
-        "B) Hinge joint",
-        "A) Pivot joint",
-        "D) Ball and socket joint"
+        "Condyloid (ellipsoidal) joint",
+        "Hinge joint",
+        "Pivot joint",
+        "Ball and socket joint"
       ],
       "correctAnswer": "A",
       "explanation": "The atlanto-occipital joint between the atlas and the occipital condyles of the skull is a condyloid (ellipsoidal) joint. It allows nodding movements of the head (flexion and extension) and slight lateral movements. The pivot joint is between atlas and axis.",
@@ -673,10 +673,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Muscular dystrophy is characterized by:",
       "options": [
-        "D) Autoimmune attack on acetylcholine receptors",
-        "A) Inflammation of joints",
-        "C) Excess calcium deposition",
-        "B) Progressive degeneration and weakening of skeletal muscles"
+        "Autoimmune attack on acetylcholine receptors",
+        "Inflammation of joints",
+        "Excess calcium deposition",
+        "Progressive degeneration and weakening of skeletal muscles"
       ],
       "correctAnswer": "D",
       "explanation": "Muscular dystrophy is a group of genetic disorders characterized by progressive degeneration and weakening of skeletal muscles due to defects in muscle proteins (e.g., dystrophin in Duchenne muscular dystrophy). It leads to increasing disability.",
@@ -698,10 +698,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The H-zone in a sarcomere contains:",
       "options": [
-        "B) Only thick filaments",
-        "C) Both thick and thin filaments",
-        "D) Neither thick nor thin filaments",
-        "A) Only thin filaments"
+        "Only thick filaments",
+        "Both thick and thin filaments",
+        "Neither thick nor thin filaments",
+        "Only thin filaments"
       ],
       "correctAnswer": "A",
       "explanation": "The H-zone (Hensen's zone) is the lighter area in the centre of the A-band. It contains only thick (myosin) filaments without overlapping thin (actin) filaments. During contraction, the H-zone narrows or disappears as thin filaments slide inward.",
@@ -723,10 +723,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The fibrous joint found between the flat bones of the skull is called:",
       "options": [
-        "B) Gomphosis",
-        "A) Suture",
-        "D) Symphysis",
-        "C) Syndesmosis"
+        "Gomphosis",
+        "Suture",
+        "Symphysis",
+        "Syndesmosis"
       ],
       "correctAnswer": "B",
       "explanation": "Sutures are fibrous joints found between the flat bones of the skull. They are immovable (synarthrotic) joints where the bones are joined by dense fibrous connective tissue. They allow bone growth during childhood and fuse in adulthood.",
@@ -749,10 +749,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Tetany occurs due to:",
       "options": [
-        "B) Low blood calcium levels (hypocalcemia)",
-        "D) High blood glucose",
-        "A) Excess calcium",
-        "C) Excess potassium"
+        "Low blood calcium levels (hypocalcemia)",
+        "High blood glucose",
+        "Excess calcium",
+        "Excess potassium"
       ],
       "correctAnswer": "A",
       "explanation": "Tetany is a condition of sustained involuntary muscle contraction (spasms) caused by low blood calcium levels (hypocalcemia). Low Ca2+ increases neuromuscular excitability, causing spontaneous nerve impulses and muscle contractions. It can result from hypoparathyroidism.",
@@ -774,10 +774,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The joint between the radius and ulna is a:",
       "options": [
-        "A) Hinge joint",
-        "C) Ball and socket joint",
-        "B) Pivot joint",
-        "D) Gliding joint"
+        "Hinge joint",
+        "Ball and socket joint",
+        "Pivot joint",
+        "Gliding joint"
       ],
       "correctAnswer": "C",
       "explanation": "The proximal radioulnar joint is a pivot joint where the head of the radius rotates within the radial notch of the ulna. This allows pronation and supination (rotation) of the forearm.",
@@ -799,10 +799,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The longest bone in the human body is:",
       "options": [
-        "D) Fibula",
-        "B) Tibia",
-        "C) Femur",
-        "A) Humerus"
+        "Fibula",
+        "Tibia",
+        "Femur",
+        "Humerus"
       ],
       "correctAnswer": "C",
       "explanation": "The femur (thigh bone) is the longest and strongest bone in the human body. It articulates with the acetabulum of the pelvic girdle (hip joint) proximally and with the tibia at the knee joint distally.",
@@ -824,10 +824,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Smooth muscles are found in:",
       "options": [
-        "D) Tongue",
-        "C) Walls of internal organs like stomach and intestine",
-        "B) Skeletal muscles attached to bones",
-        "A) Heart wall"
+        "Tongue",
+        "Walls of internal organs like stomach and intestine",
+        "Skeletal muscles attached to bones",
+        "Heart wall"
       ],
       "correctAnswer": "B",
       "explanation": "Smooth (visceral/involuntary) muscles are found in the walls of hollow internal organs like the stomach, intestine, urinary bladder, blood vessels, and uterus. They are non-striated, spindle-shaped, and under involuntary control.",
@@ -849,10 +849,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Osteoarthritis is characterized by:",
       "options": [
-        "C) Deposition of uric acid crystals",
-        "B) Degeneration of articular cartilage at joints",
-        "D) Loss of bone density",
-        "A) Inflammation of muscles"
+        "Deposition of uric acid crystals",
+        "Degeneration of articular cartilage at joints",
+        "Loss of bone density",
+        "Inflammation of muscles"
       ],
       "correctAnswer": "B",
       "explanation": "Osteoarthritis is a degenerative joint disease characterized by progressive wear and tear of articular cartilage at synovial joints. It is the most common form of arthritis, predominantly affecting weight-bearing joints like knees and hips, especially in the elderly.",
@@ -874,10 +874,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The synovial fluid in movable joints is secreted by:",
       "options": [
-        "D) Ligaments",
-        "B) Synovial membrane",
-        "A) Articular cartilage",
-        "C) Periosteum"
+        "Ligaments",
+        "Synovial membrane",
+        "Articular cartilage",
+        "Periosteum"
       ],
       "correctAnswer": "B",
       "explanation": "Synovial fluid is secreted by the synovial membrane that lines the inner surface of the joint capsule (except at articular cartilage surfaces). It lubricates the joint, reduces friction, provides nutrients to articular cartilage, and acts as a shock absorber.",
@@ -899,10 +899,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "During muscle contraction, ATP is needed for:",
       "options": [
-        "C) Release of acetylcholine only",
-        "A) Binding of Ca2+ to troponin only",
-        "B) Detachment of myosin heads from actin and re-cocking of myosin heads",
-        "D) Formation of sarcomere"
+        "Release of acetylcholine only",
+        "Binding of Ca2+ to troponin only",
+        "Detachment of myosin heads from actin and re-cocking of myosin heads",
+        "Formation of sarcomere"
       ],
       "correctAnswer": "C",
       "explanation": "ATP plays crucial roles in muscle contraction: (1) detachment of myosin cross-bridges from actin after the power stroke, and (2) re-cocking (re-energizing) of myosin heads for the next cycle. ATP is also needed for Ca2+ pump activity to return Ca2+ to the SR during relaxation.",
@@ -924,10 +924,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The number of bones in the human skull is:",
       "options": [
-        "B) 14",
-        "A) 22",
-        "D) 8",
-        "C) 29"
+        "14",
+        "22",
+        "8",
+        "29"
       ],
       "correctAnswer": "B",
       "explanation": "The human skull has 22 bones: 8 cranial bones (frontal, 2 parietal, 2 temporal, occipital, sphenoid, ethmoid) and 14 facial bones. Additionally, there are 6 ear ossicles (3 in each ear) and 1 hyoid bone in the neck.",
@@ -949,10 +949,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "The sarcolemma is the:",
       "options": [
-        "D) Nucleus of muscle fibre",
-        "A) Cytoplasm of muscle fibre",
-        "B) Cell membrane of muscle fibre",
-        "C) Endoplasmic reticulum of muscle fibre"
+        "Nucleus of muscle fibre",
+        "Cytoplasm of muscle fibre",
+        "Cell membrane of muscle fibre",
+        "Endoplasmic reticulum of muscle fibre"
       ],
       "correctAnswer": "C",
       "explanation": "The sarcolemma is the cell membrane (plasma membrane) of a muscle fibre. It is an electrically excitable membrane that propagates action potentials. It also has T-tubules (transverse tubules) that carry the action potential deep into the muscle fibre.",
@@ -974,10 +974,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Assertion (A): During muscle contraction, the I-band shortens but the A-band remains unchanged.\nReason (R): Thin filaments slide over thick filaments towards the centre of the sarcomere.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. According to the sliding filament theory, thin filaments slide inward over thick filaments. Since the A-band represents thick filament length (unchanged), it stays constant. The I-band (thin filaments only) shortens as thin filaments slide inward.",
@@ -999,10 +999,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Assertion (A): Ca2+ ions play a crucial role in muscle contraction.\nReason (R): Ca2+ ions bind to troponin and expose binding sites on actin for myosin.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. Ca2+ released from SR binds to troponin C, causing a conformational change that shifts tropomyosin away from the myosin-binding sites on actin. This allows myosin heads to form cross-bridges and perform the power stroke.",
@@ -1024,10 +1024,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Assertion (A): Skeletal muscles are voluntary muscles.\nReason (R): They are attached to bones and are controlled by the somatic nervous system.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. Skeletal muscles are attached to bones via tendons and are under voluntary (conscious) control through the somatic nervous system. They are striated, multinucleated, and responsible for locomotion and body movements.",
@@ -1049,10 +1049,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Assertion (A): Cardiac muscle never undergoes fatigue.\nReason (R): Cardiac muscle has intercalated discs that allow synchronized contraction.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true. Cardiac muscle is resistant to fatigue due to its abundant mitochondria, rich blood supply, and continuous aerobic metabolism. Intercalated discs allow rapid electrical communication for synchronized contraction, but they are not the primary reason for fatigue resistance.",
@@ -1074,10 +1074,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Assertion (A): Osteoporosis is more common in postmenopausal women.\nReason (R): Estrogen promotes bone density, and its decline after menopause accelerates bone loss.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. Estrogen has a protective effect on bone by inhibiting bone resorption by osteoclasts. After menopause, estrogen levels drop significantly, leading to increased bone loss and higher risk of osteoporosis.",
@@ -1099,10 +1099,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Assertion (A): The human skull has 22 bones.\nReason (R): The skull includes both cranial bones (8) and facial bones (14).",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. The skull consists of 8 cranial bones (forming the cranium that protects the brain) and 14 facial bones (forming the framework of the face). 8 + 14 = 22 bones total.",
@@ -1124,10 +1124,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Assertion (A): Tendons connect muscles to bones.\nReason (R): Ligaments connect bones to bones at joints.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both statements are true. Tendons are tough bands of dense connective tissue that connect muscles to bones. Ligaments are elastic connective tissue bands that connect bones to bones at joints. However, the reason about ligaments does not explain why tendons connect muscles to bones.",
@@ -1149,10 +1149,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Assertion (A): The axial skeleton has 80 bones.\nReason (R): It includes the skull, vertebral column, sternum, and ribs.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. The axial skeleton consists of skull (22 + 1 hyoid = 29 bones including ear ossicles), vertebral column (26), sternum (1), and ribs (24) = 80 bones forming the central axis of the body.",
@@ -1174,10 +1174,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Assertion (A): Myosin head has ATPase activity.\nReason (R): Myosin head hydrolyzes ATP to provide energy for the power stroke during cross-bridge cycling.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. The myosin head (heavy meromyosin/HMM) contains an ATPase enzyme that hydrolyzes ATP to ADP + Pi. The energy released is used to cock the myosin head and for the power stroke that slides the thin filament.",
@@ -1199,10 +1199,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Assertion (A): Floating ribs are the 11th and 12th pairs.\nReason (R): Floating ribs are not attached to the sternum directly or indirectly.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. The 11th and 12th pairs of ribs are called floating ribs because their anterior ends are free and not connected to the sternum either directly or through cartilage, unlike true ribs (1-7) and false ribs (8-10).",
@@ -1224,10 +1224,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Assertion (A): Rheumatoid arthritis is an autoimmune disorder.\nReason (R): The immune system attacks the synovial membrane, causing inflammation and joint destruction.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. In rheumatoid arthritis, the body's immune system mistakenly attacks the synovial membrane lining the joints, causing chronic inflammation, pain, swelling, and progressive destruction of cartilage and bone.",
@@ -1249,10 +1249,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Consider the following statements about the sliding filament theory:\n(i) Thin filaments slide over thick filaments.\n(ii) The A-band shortens during contraction.\n(iii) The I-band and H-zone decrease in length.\n(iv) The sarcomere shortens during contraction.\nWhich are correct?",
       "options": [
-        "B) All are correct",
-        "D) (ii) and (iii) only",
-        "C) (i) and (iv) only",
-        "A) (i), (iii), and (iv) only"
+        "All are correct",
+        "(ii) and (iii) only",
+        "(i) and (iv) only",
+        "(i), (iii), and (iv) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (iii), and (iv) are correct. During contraction, thin filaments slide inward (i), the I-band and H-zone shorten (iii), and the sarcomere shortens (iv). Statement (ii) is wrong; the A-band does NOT change its length because it represents the fixed length of myosin filaments.",
@@ -1274,10 +1274,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Which of the following statements about muscle types is/are correct?\n(i) Skeletal muscles are striated and voluntary.\n(ii) Smooth muscles are non-striated and involuntary.\n(iii) Cardiac muscles are striated and voluntary.\n(iv) Cardiac muscles have intercalated discs.",
       "options": [
-        "B) All are correct",
-        "D) (iii) and (iv) only",
-        "A) (i), (ii), and (iv) only",
-        "C) (i) and (ii) only"
+        "All are correct",
+        "(iii) and (iv) only",
+        "(i), (ii), and (iv) only",
+        "(i) and (ii) only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements (i), (ii), and (iv) are correct. Skeletal muscles are striated/voluntary. Smooth muscles are non-striated/involuntary. Cardiac muscles have intercalated discs. Statement (iii) is wrong; cardiac muscles are striated but INVOLUNTARY, not voluntary.",
@@ -1299,10 +1299,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Consider the following about the steps of muscle contraction:\n(i) Neural signal reaches motor end plate.\n(ii) ACh is released into the synaptic cleft.\n(iii) Ca2+ is released from sarcoplasmic reticulum.\n(iv) Cross-bridges form between actin and myosin.\nWhich is the correct sequence?",
       "options": [
-        "A) (i) → (ii) → (iii) → (iv)",
-        "C) (ii) → (i) → (iv) → (iii)",
-        "D) (iv) → (iii) → (ii) → (i)",
-        "B) (iii) → (i) → (ii) → (iv)"
+        "(i) → (ii) → (iii) → (iv)",
+        "(ii) → (i) → (iv) → (iii)",
+        "(iv) → (iii) → (ii) → (i)",
+        "(iii) → (i) → (ii) → (iv)"
       ],
       "correctAnswer": "A",
       "explanation": "The correct sequence of muscle contraction: Neural signal reaches motor end plate (i) → ACh released into synaptic cleft (ii) → Action potential propagates along sarcolemma → Ca2+ released from SR (iii) → Ca2+ binds troponin, exposes binding sites → Cross-bridges form (iv) → Power stroke → Contraction.",
@@ -1324,10 +1324,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Read the following statements about joints:\n(i) Synovial joints are freely movable (diarthrosis).\n(ii) Cartilaginous joints allow limited movement (amphiarthrosis).\n(iii) Fibrous joints are immovable (synarthrosis).\n(iv) All joints in the skull are fibrous (sutures).\nWhich statements are correct?",
       "options": [
-        "B) All are correct",
-        "D) (ii) and (iv) only",
-        "C) (i) and (iii) only",
-        "A) (i), (ii), and (iii) only"
+        "All are correct",
+        "(ii) and (iv) only",
+        "(i) and (iii) only",
+        "(i), (ii), and (iii) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iii) correctly describe the three main joint types. Statement (iv) is wrong because the mandible (lower jaw) is connected to the skull by a synovial (temporomandibular) joint, not a fibrous joint. Also, the atlanto-occipital joint is synovial.",
@@ -1349,10 +1349,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Consider the following about the components of a sarcomere:\n(i) Z-line forms the boundary.\n(ii) The A-band is the dark band containing thick filaments.\n(iii) The I-band is the light band containing only thin filaments.\n(iv) The H-zone contains only thick filaments.\nHow many are correct?",
       "options": [
-        "D) One",
-        "A) Two",
-        "C) Four",
-        "B) Three"
+        "One",
+        "Two",
+        "Four",
+        "Three"
       ],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. The Z-line demarcates sarcomere boundaries (i). The A-band (anisotropic) is dark, containing thick filaments with overlapping thin filaments (ii). The I-band (isotropic) is light, with only thin filaments (iii). The H-zone is the central part of A-band with only thick filaments (iv).",
@@ -1374,10 +1374,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Which of the following statements about disorders of the skeletal/muscular system is/are INCORRECT?\n(i) Myasthenia gravis is caused by deficiency of acetylcholine.\n(ii) Gout results from deposition of calcium crystals in joints.\n(iii) Osteoarthritis involves degeneration of articular cartilage.\n(iv) Muscular dystrophy is a genetic disorder.",
       "options": [
-        "B) (i) only",
-        "D) (iii) and (iv)",
-        "A) (i) and (ii) only",
-        "C) (ii) and (iii)"
+        "(i) only",
+        "(iii) and (iv)",
+        "(i) and (ii) only",
+        "(ii) and (iii)"
       ],
       "correctAnswer": "C",
       "explanation": "Statements (i) and (ii) are incorrect. Myasthenia gravis is caused by autoimmune destruction of ACh RECEPTORS, not deficiency of ACh itself. Gout is caused by URIC ACID crystals (not calcium). Statements (iii) and (iv) are correct.",
@@ -1399,10 +1399,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Consider the following about the vertebral column:\n(i) It has 7 cervical, 12 thoracic, 5 lumbar, 1 sacral (5 fused), and 1 coccygeal (4 fused) vertebrae.\n(ii) The first cervical vertebra is called atlas.\n(iii) The vertebral column provides support and protects the spinal cord.\n(iv) Intervertebral discs are present between all adjacent vertebrae without exception.\nSelect the correct statements:",
       "options": [
-        "C) (i) and (iii) only",
-        "B) All are correct",
-        "D) (ii) and (iv) only",
-        "A) (i), (ii), and (iii) only"
+        "(i) and (iii) only",
+        "All are correct",
+        "(ii) and (iv) only",
+        "(i), (ii), and (iii) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iii) are correct. Statement (iv) is wrong because intervertebral discs are NOT present between the atlas and axis (C1-C2), between the fused sacral vertebrae, or between the fused coccygeal vertebrae.",
@@ -1424,10 +1424,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Consider the following about red and white muscle fibres:\n(i) Red fibres have more myoglobin.\n(ii) White fibres are adapted for sustained activity.\n(iii) Red fibres have more mitochondria.\n(iv) White fibres depend more on anaerobic glycolysis.\nWhich are correct?",
       "options": [
-        "B) All are correct",
-        "D) (ii) and (iv) only",
-        "C) (i) and (iii) only",
-        "A) (i), (iii), and (iv) only"
+        "All are correct",
+        "(ii) and (iv) only",
+        "(i) and (iii) only",
+        "(i), (iii), and (iv) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (iii), and (iv) are correct. Red fibres have more myoglobin and mitochondria for aerobic metabolism. White fibres depend on anaerobic glycolysis for quick bursts. Statement (ii) is wrong; RED fibres (not white) are adapted for sustained activity. White fibres are for powerful, quick, but short-duration activity.",
@@ -1449,10 +1449,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Read the following about the role of ATP in muscle contraction:\n(i) ATP is needed for myosin head to detach from actin.\n(ii) ATP hydrolysis energizes the myosin head.\n(iii) ATP is needed for Ca2+ pump to return Ca2+ to SR.\n(iv) ATP binding to myosin causes the power stroke.",
       "options": [
-        "D) (ii) and (iv) only",
-        "B) All are correct",
-        "C) (i) and (iii) only",
-        "A) (i), (ii), and (iii) only"
+        "(ii) and (iv) only",
+        "All are correct",
+        "(i) and (iii) only",
+        "(i), (ii), and (iii) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iii) are correct. ATP is needed for detachment of myosin from actin, for energizing (cocking) the myosin head via hydrolysis, and for pumping Ca2+ back to SR. Statement (iv) is wrong; ATP BINDING causes detachment, not the power stroke. The power stroke occurs when ADP and Pi are released.",
@@ -1475,10 +1475,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Match the joint type with its example:\n(P) Ball and socket - (1) Knee\n(Q) Hinge - (2) Between atlas and axis\n(R) Pivot - (3) Shoulder\n(S) Gliding - (4) Between carpals",
       "options": [
-        "B) P-1, Q-3, R-4, S-2",
-        "C) P-4, Q-2, R-1, S-3",
-        "A) P-3, Q-1, R-2, S-4",
-        "D) P-2, Q-4, R-3, S-1"
+        "P-1, Q-3, R-4, S-2",
+        "P-4, Q-2, R-1, S-3",
+        "P-3, Q-1, R-2, S-4",
+        "P-2, Q-4, R-3, S-1"
       ],
       "correctAnswer": "C",
       "explanation": "Ball and socket joint - shoulder/hip (P-3). Hinge joint - knee/elbow (Q-1). Pivot joint - between atlas and axis vertebrae (R-2). Gliding joint - between carpals/tarsals (S-4).",
@@ -1500,10 +1500,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Match the sarcomere component with its description:\n(P) A-band - (1) Light band, only thin filaments\n(Q) I-band - (2) Dark band, thick + thin filaments overlap\n(R) H-zone - (3) Boundary of sarcomere\n(S) Z-line - (4) Central light zone, only thick filaments",
       "options": [
-        "A) P-2, Q-1, R-4, S-3",
-        "B) P-1, Q-2, R-3, S-4",
-        "D) P-3, Q-4, R-1, S-2",
-        "C) P-4, Q-3, R-2, S-1"
+        "P-2, Q-1, R-4, S-3",
+        "P-1, Q-2, R-3, S-4",
+        "P-3, Q-4, R-1, S-2",
+        "P-4, Q-3, R-2, S-1"
       ],
       "correctAnswer": "A",
       "explanation": "A-band is the dark band with overlapping thick and thin filaments (P-2). I-band is the light band with only thin filaments (Q-1). H-zone is the central lighter area with only thick filaments (R-4). Z-line marks the boundary of each sarcomere (S-3).",
@@ -1525,10 +1525,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Match the disorder with its cause:\n(P) Osteoporosis - (1) Uric acid crystals in joints\n(Q) Gout - (2) Autoimmune destruction of ACh receptors\n(R) Myasthenia gravis - (3) Progressive muscle protein defects\n(S) Muscular dystrophy - (4) Decreased bone mass and density",
       "options": [
-        "D) P-3, Q-2, R-1, S-4",
-        "C) P-2, Q-3, R-4, S-1",
-        "B) P-1, Q-4, R-3, S-2",
-        "A) P-4, Q-1, R-2, S-3"
+        "P-3, Q-2, R-1, S-4",
+        "P-2, Q-3, R-4, S-1",
+        "P-1, Q-4, R-3, S-2",
+        "P-4, Q-1, R-2, S-3"
       ],
       "correctAnswer": "D",
       "explanation": "Osteoporosis = decreased bone density (P-4). Gout = uric acid crystals in joints (Q-1). Myasthenia gravis = autoimmune ACh receptor destruction (R-2). Muscular dystrophy = genetic defects in muscle proteins (S-3).",
@@ -1550,10 +1550,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Match the muscle protein with its role:\n(P) Actin - (1) Blocks myosin binding sites on actin\n(Q) Myosin - (2) Forms thin filaments\n(R) Tropomyosin - (3) Binds Ca2+ to initiate contraction\n(S) Troponin - (4) Forms thick filaments with ATPase heads",
       "options": [
-        "D) P-3, Q-1, R-4, S-2",
-        "B) P-4, Q-2, R-3, S-1",
-        "C) P-1, Q-3, R-2, S-4",
-        "A) P-2, Q-4, R-1, S-3"
+        "P-3, Q-1, R-4, S-2",
+        "P-4, Q-2, R-3, S-1",
+        "P-1, Q-3, R-2, S-4",
+        "P-2, Q-4, R-1, S-3"
       ],
       "correctAnswer": "D",
       "explanation": "Actin forms thin filaments (P-2). Myosin forms thick filaments with ATPase-containing heads (Q-4). Tropomyosin blocks myosin binding sites on actin in resting state (R-1). Troponin (TnC) binds Ca2+ to initiate the conformational change for contraction (S-3).",
@@ -1575,10 +1575,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Match the bone with its location:\n(P) Femur - (1) Upper arm\n(Q) Humerus - (2) Thigh\n(R) Patella - (3) Lower leg (lateral)\n(S) Fibula - (4) Knee cap",
       "options": [
-        "A) P-2, Q-1, R-4, S-3",
-        "C) P-4, Q-3, R-2, S-1",
-        "D) P-3, Q-4, R-1, S-2",
-        "B) P-1, Q-2, R-3, S-4"
+        "P-2, Q-1, R-4, S-3",
+        "P-4, Q-3, R-2, S-1",
+        "P-3, Q-4, R-1, S-2",
+        "P-1, Q-2, R-3, S-4"
       ],
       "correctAnswer": "A",
       "explanation": "Femur is the thigh bone (P-2). Humerus is the upper arm bone (Q-1). Patella is the kneecap (R-4). Fibula is the lateral bone of the lower leg (S-3).",
@@ -1600,10 +1600,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Match the vertebral region with its count:\n(P) Cervical - (1) 5\n(Q) Thoracic - (2) 7\n(R) Lumbar - (3) 12\n(S) Sacral (fused) - (4) 5 (fused into 1)",
       "options": [
-        "A) P-2, Q-3, R-1, S-4",
-        "C) P-1, Q-4, R-2, S-3",
-        "D) P-4, Q-1, R-3, S-2",
-        "B) P-3, Q-2, R-4, S-1"
+        "P-2, Q-3, R-1, S-4",
+        "P-1, Q-4, R-2, S-3",
+        "P-4, Q-1, R-3, S-2",
+        "P-3, Q-2, R-4, S-1"
       ],
       "correctAnswer": "A",
       "explanation": "Cervical = 7 vertebrae (P-2). Thoracic = 12 vertebrae (Q-3). Lumbar = 5 vertebrae (R-1). Sacral = 5 fused into 1 sacrum (S-4). Plus 4 coccygeal fused into 1 coccyx. Total = 26 bones.",
@@ -1625,10 +1625,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Match the muscle type with its characteristics:\n(P) Skeletal muscle - (1) Striated, involuntary, intercalated discs\n(Q) Cardiac muscle - (2) Striated, voluntary, multinucleated\n(R) Smooth muscle - (3) Non-striated, involuntary, spindle-shaped",
       "options": [
-        "C) P-3, Q-1, R-2",
-        "D) P-2, Q-3, R-1",
-        "B) P-1, Q-2, R-3",
-        "A) P-2, Q-1, R-3"
+        "P-3, Q-1, R-2",
+        "P-2, Q-3, R-1",
+        "P-1, Q-2, R-3",
+        "P-2, Q-1, R-3"
       ],
       "correctAnswer": "D",
       "explanation": "Skeletal muscle is striated, voluntary, multinucleated (P-2). Cardiac muscle is striated, involuntary, with intercalated discs (Q-1). Smooth muscle is non-striated, involuntary, spindle-shaped (R-3).",
@@ -1650,10 +1650,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Match the rib type with its pair numbers:\n(P) True ribs - (1) Pairs 11-12\n(Q) False ribs - (2) Pairs 1-7\n(R) Floating ribs - (3) Pairs 8-10",
       "options": [
-        "D) P-2, Q-1, R-3",
-        "C) P-1, Q-2, R-3",
-        "B) P-3, Q-1, R-2",
-        "A) P-2, Q-3, R-1"
+        "P-2, Q-1, R-3",
+        "P-1, Q-2, R-3",
+        "P-3, Q-1, R-2",
+        "P-2, Q-3, R-1"
       ],
       "correctAnswer": "D",
       "explanation": "True ribs are pairs 1-7, directly attached to sternum via costal cartilages (P-2). False ribs are pairs 8-10, attached to sternum indirectly via 7th rib cartilage (Q-3). Floating ribs are pairs 11-12, not attached to sternum (R-1).",
@@ -1675,10 +1675,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Match the girdle with its bones:\n(P) Pectoral girdle - (1) Ilium, ischium, pubis\n(Q) Pelvic girdle - (2) Clavicle and scapula",
       "options": [
-        "C) Both have clavicle and scapula",
-        "A) P-2, Q-1",
-        "D) Both have ilium and ischium",
-        "B) P-1, Q-2"
+        "Both have clavicle and scapula",
+        "P-2, Q-1",
+        "Both have ilium and ischium",
+        "P-1, Q-2"
       ],
       "correctAnswer": "B",
       "explanation": "The pectoral (shoulder) girdle consists of clavicle and scapula (P-2). The pelvic (hip) girdle consists of ilium, ischium, and pubis fused together (Q-1). The pectoral girdle is lighter and more mobile; the pelvic girdle is heavier and more stable.",
@@ -1700,10 +1700,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Match the term with its definition:\n(P) Sarcolemma - (1) Cytoplasm of muscle fibre\n(Q) Sarcoplasm - (2) Cell membrane of muscle fibre\n(R) Sarcoplasmic reticulum - (3) Contractile unit of myofibril\n(S) Sarcomere - (4) Smooth ER that stores Ca2+",
       "options": [
-        "D) P-3, Q-4, R-1, S-2",
-        "B) P-1, Q-2, R-3, S-4",
-        "C) P-4, Q-3, R-2, S-1",
-        "A) P-2, Q-1, R-4, S-3"
+        "P-3, Q-4, R-1, S-2",
+        "P-1, Q-2, R-3, S-4",
+        "P-4, Q-3, R-2, S-1",
+        "P-2, Q-1, R-4, S-3"
       ],
       "correctAnswer": "D",
       "explanation": "Sarcolemma is the cell membrane of muscle fibre (P-2). Sarcoplasm is the cytoplasm (Q-1). Sarcoplasmic reticulum is specialized smooth ER storing Ca2+ (R-4). Sarcomere is the contractile unit from Z-line to Z-line (S-3).",
@@ -1725,10 +1725,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many bones are there in the axial skeleton of an adult human?",
       "options": [
-        "D) 206",
-        "C) 126",
-        "A) 60",
-        "B) 80"
+        "206",
+        "126",
+        "60",
+        "80"
       ],
       "correctAnswer": "D",
       "explanation": "The axial skeleton has 80 bones: skull (22 bones + 1 hyoid + 6 ear ossicles = 29), vertebral column (26 bones), sternum (1 bone), and ribs (24 bones). 29 + 26 + 1 + 24 = 80 bones.",
@@ -1750,10 +1750,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many bones are there in the appendicular skeleton?",
       "options": [
-        "B) 106",
-        "A) 80",
-        "D) 206",
-        "C) 126"
+        "106",
+        "80",
+        "206",
+        "126"
       ],
       "correctAnswer": "D",
       "explanation": "The appendicular skeleton has 126 bones: pectoral girdle (4: 2 clavicles + 2 scapulae), upper limbs (60: 2x30), pelvic girdle (2 hip bones), and lower limbs (60: 2x30). 4 + 60 + 2 + 60 = 126 bones.",
@@ -1775,10 +1775,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many of the following are types of synovial joints?\n(a) Ball and socket (b) Hinge (c) Pivot (d) Gliding (e) Saddle (f) Condyloid (ellipsoidal)",
       "options": [
-        "A) Four",
-        "D) Three",
-        "C) Six",
-        "B) Five"
+        "Four",
+        "Three",
+        "Six",
+        "Five"
       ],
       "correctAnswer": "C",
       "explanation": "All six are types of synovial (freely movable) joints: (a) Ball and socket (shoulder, hip), (b) Hinge (knee, elbow), (c) Pivot (atlas-axis), (d) Gliding (carpals, vertebral facets), (e) Saddle (thumb base), and (f) Condyloid/ellipsoidal (wrist, atlas-occipital).",
@@ -1800,10 +1800,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many cervical vertebrae are present in humans?",
       "options": [
-        "D) 4",
-        "C) 12",
-        "B) 7",
-        "A) 5"
+        "4",
+        "12",
+        "7",
+        "5"
       ],
       "correctAnswer": "C",
       "explanation": "Humans have 7 cervical vertebrae (C1-C7), which is the same number found in almost all mammals (including giraffes). The first cervical vertebra is the atlas and the second is the axis.",
@@ -1825,10 +1825,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many of the following are proteins found in thin filaments?\n(a) Actin (b) Myosin (c) Troponin (d) Tropomyosin (e) Titin (f) Nebulin",
       "options": [
-        "B) Three",
-        "C) Four",
-        "D) Five",
-        "A) Two"
+        "Three",
+        "Four",
+        "Five",
+        "Two"
       ],
       "correctAnswer": "A",
       "explanation": "Three proteins are found in thin filaments: (a) Actin (forms the backbone), (c) Troponin (regulatory protein complex), and (d) Tropomyosin (regulatory, blocks binding sites). Myosin (b) is in thick filaments. Titin (e) connects thick filaments to Z-line. Nebulin (f) is associated with thin filaments but is not a core component in the standard NCERT description.",
@@ -1850,10 +1850,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many cranial bones are there in the human skull?",
       "options": [
-        "D) 22",
-        "C) 14",
-        "B) 8",
-        "A) 6"
+        "22",
+        "14",
+        "8",
+        "6"
       ],
       "correctAnswer": "C",
       "explanation": "The human skull has 8 cranial bones: 1 frontal, 2 parietal, 2 temporal, 1 occipital, 1 sphenoid, and 1 ethmoid. These form the cranium that protects the brain.",
@@ -1875,10 +1875,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "How many of the following are skeletal/muscular disorders?\n(a) Myasthenia gravis (b) Muscular dystrophy (c) Tetany (d) Gout (e) Osteoporosis (f) Osteoarthritis (g) Rheumatoid arthritis",
       "options": [
-        "D) Seven",
-        "B) Five",
-        "C) Six",
-        "A) Four"
+        "Seven",
+        "Five",
+        "Six",
+        "Four"
       ],
       "correctAnswer": "A",
       "explanation": "All seven are skeletal/muscular disorders: myasthenia gravis (autoimmune NMJ), muscular dystrophy (genetic muscle wasting), tetany (Ca2+ imbalance), gout (uric acid in joints), osteoporosis (bone loss), osteoarthritis (cartilage degeneration), rheumatoid arthritis (autoimmune joint inflammation).",
@@ -1900,10 +1900,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the correct sequence of events in muscle contraction:\n(i) ACh binds to receptors on sarcolemma\n(ii) Action potential travels along T-tubules\n(iii) Ca2+ released from sarcoplasmic reticulum\n(iv) Ca2+ binds to troponin, tropomyosin moves\n(v) Myosin cross-bridges attach to actin, power stroke occurs",
       "options": [
-        "C) (ii) → (i) → (iv) → (iii) → (v)",
-        "A) (i) → (ii) → (iii) → (iv) → (v)",
-        "D) (v) → (iv) → (iii) → (ii) → (i)",
-        "B) (iii) → (i) → (ii) → (v) → (iv)"
+        "(ii) → (i) → (iv) → (iii) → (v)",
+        "(i) → (ii) → (iii) → (iv) → (v)",
+        "(v) → (iv) → (iii) → (ii) → (i)",
+        "(iii) → (i) → (ii) → (v) → (iv)"
       ],
       "correctAnswer": "B",
       "explanation": "Muscle contraction sequence: ACh binds to sarcolemma receptors (i) → Action potential propagates along T-tubules into the fibre (ii) → Ca2+ released from SR (iii) → Ca2+ binds troponin, causing tropomyosin shift (iv) → Myosin heads attach to actin, perform power stroke (v) → Filaments slide → Contraction.",
@@ -1925,10 +1925,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the correct sequence of the cross-bridge cycle:\n(i) ATP binds to myosin head, causing detachment from actin\n(ii) Myosin head attaches to actin (cross-bridge formation)\n(iii) Power stroke: myosin head pivots, sliding thin filament\n(iv) ATP is hydrolyzed, myosin head is re-cocked (energized)\n(v) ADP and Pi are released during power stroke",
       "options": [
-        "C) (iv) → (ii) → (iii) → (v) → (i)",
-        "A) (ii) → (iii) → (v) → (i) → (iv)",
-        "B) (i) → (iv) → (ii) → (v) → (iii)",
-        "D) (iv) → (ii) → (v) → (iii) → (i)"
+        "(iv) → (ii) → (iii) → (v) → (i)",
+        "(ii) → (iii) → (v) → (i) → (iv)",
+        "(i) → (iv) → (ii) → (v) → (iii)",
+        "(iv) → (ii) → (v) → (iii) → (i)"
       ],
       "correctAnswer": "A",
       "explanation": "Cross-bridge cycle: ATP hydrolysis energizes (cocks) myosin head (iv) → Myosin attaches to exposed binding sites on actin (ii) → Power stroke: myosin pivots, sliding thin filament (iii) → ADP + Pi released (v) → New ATP binds, causing myosin to detach (i) → Cycle repeats.",
@@ -1950,10 +1950,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the bones of the upper limb in correct proximal to distal sequence:",
       "options": [
-        "A) Humerus → Radius and Ulna → Carpals → Metacarpals → Phalanges",
-        "C) Humerus → Carpals → Radius and Ulna → Phalanges → Metacarpals",
-        "B) Radius and Ulna → Humerus → Metacarpals → Carpals → Phalanges",
-        "D) Carpals → Humerus → Radius and Ulna → Phalanges → Metacarpals"
+        "Humerus → Radius and Ulna → Carpals → Metacarpals → Phalanges",
+        "Humerus → Carpals → Radius and Ulna → Phalanges → Metacarpals",
+        "Radius and Ulna → Humerus → Metacarpals → Carpals → Phalanges",
+        "Carpals → Humerus → Radius and Ulna → Phalanges → Metacarpals"
       ],
       "correctAnswer": "A",
       "explanation": "Upper limb bones from proximal to distal: Humerus (upper arm) → Radius and Ulna (forearm) → Carpals (8 wrist bones) → Metacarpals (5 palm bones) → Phalanges (14 finger bones). Each upper limb has 30 bones.",
@@ -1976,10 +1976,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the vertebral regions in correct sequence from top to bottom:",
       "options": [
-        "C) Cervical → Lumbar → Thoracic → Sacral → Coccygeal",
-        "B) Thoracic → Cervical → Lumbar → Coccygeal → Sacral",
-        "A) Cervical → Thoracic → Lumbar → Sacral → Coccygeal",
-        "D) Lumbar → Thoracic → Cervical → Sacral → Coccygeal"
+        "Cervical → Lumbar → Thoracic → Sacral → Coccygeal",
+        "Thoracic → Cervical → Lumbar → Coccygeal → Sacral",
+        "Cervical → Thoracic → Lumbar → Sacral → Coccygeal",
+        "Lumbar → Thoracic → Cervical → Sacral → Coccygeal"
       ],
       "correctAnswer": "C",
       "explanation": "The vertebral column from top to bottom: Cervical (7, neck) → Thoracic (12, chest) → Lumbar (5, lower back) → Sacral (5 fused, pelvis) → Coccygeal (4 fused, tailbone). Total = 26 bones in the adult.",
@@ -2001,10 +2001,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the correct sequence of events during muscle relaxation:\n(i) Nerve impulse stops at the NMJ\n(ii) Ca2+ is pumped back into the sarcoplasmic reticulum\n(iii) Troponin releases Ca2+, tropomyosin covers binding sites\n(iv) Cross-bridges break, thin filaments slide back\n(v) Muscle returns to resting length",
       "options": [
-        "B) (iii) → (ii) → (i) → (v) → (iv)",
-        "A) (i) → (ii) → (iii) → (iv) → (v)",
-        "C) (ii) → (i) → (iv) → (iii) → (v)",
-        "D) (i) → (iv) → (ii) → (iii) → (v)"
+        "(iii) → (ii) → (i) → (v) → (iv)",
+        "(i) → (ii) → (iii) → (iv) → (v)",
+        "(ii) → (i) → (iv) → (iii) → (v)",
+        "(i) → (iv) → (ii) → (iii) → (v)"
       ],
       "correctAnswer": "B",
       "explanation": "Muscle relaxation sequence: Nerve impulse stops (i) → Ca2+ is actively pumped back into SR by Ca-ATPase (ii) → Troponin releases Ca2+, tropomyosin returns to blocking position (iii) → Cross-bridges cannot form, thin filaments slide back passively (iv) → Muscle returns to resting length (v).",
@@ -2026,10 +2026,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the bones of the lower limb in correct proximal to distal sequence:",
       "options": [
-        "B) Tibia → Femur → Tarsals → Phalanges → Metatarsals",
-        "C) Femur → Tarsals → Tibia and Fibula → Metatarsals → Phalanges",
-        "D) Tarsals → Femur → Tibia → Phalanges → Metatarsals",
-        "A) Femur → Tibia and Fibula → Tarsals → Metatarsals → Phalanges"
+        "Tibia → Femur → Tarsals → Phalanges → Metatarsals",
+        "Femur → Tarsals → Tibia and Fibula → Metatarsals → Phalanges",
+        "Tarsals → Femur → Tibia → Phalanges → Metatarsals",
+        "Femur → Tibia and Fibula → Tarsals → Metatarsals → Phalanges"
       ],
       "correctAnswer": "D",
       "explanation": "Lower limb bones from proximal to distal: Femur (thigh) → Patella (kneecap) → Tibia and Fibula (leg) → Tarsals (7 ankle bones) → Metatarsals (5 foot bones) → Phalanges (14 toe bones). Each lower limb has 30 bones.",
@@ -2052,10 +2052,10 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the structural organization of skeletal muscle from largest to smallest:\n(i) Muscle fibre (cell) (ii) Muscle (organ) (iii) Myofibril (iv) Sarcomere (v) Fascicle (bundle of fibres) (vi) Myofilament (actin/myosin)",
       "options": [
-        "B) (i) → (ii) → (v) → (iii) → (vi) → (iv)",
-        "A) (ii) → (v) → (i) → (iii) → (iv) → (vi)",
-        "D) (vi) → (iv) → (iii) → (i) → (v) → (ii)",
-        "C) (ii) → (i) → (v) → (iv) → (iii) → (vi)"
+        "(i) → (ii) → (v) → (iii) → (vi) → (iv)",
+        "(ii) → (v) → (i) → (iii) → (iv) → (vi)",
+        "(vi) → (iv) → (iii) → (i) → (v) → (ii)",
+        "(ii) → (i) → (v) → (iv) → (iii) → (vi)"
       ],
       "correctAnswer": "B",
       "explanation": "From largest to smallest: Muscle (whole organ) (ii) → Fascicle (bundle of fibres wrapped in perimysium) (v) → Muscle fibre/cell (individual cell) (i) → Myofibril (contractile strand within fibre) (iii) → Sarcomere (functional unit) (iv) → Myofilament (individual actin/myosin protein) (vi).",

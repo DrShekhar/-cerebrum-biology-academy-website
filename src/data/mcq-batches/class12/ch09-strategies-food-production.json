@@ -15,10 +15,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which breed of cow is an exotic breed known for high milk yield?",
       "options": [
-        "B) Red Sindhi",
-        "A) Sahiwal",
-        "C) Jersey",
-        "D) Gir"
+        "Red Sindhi",
+        "Sahiwal",
+        "Jersey",
+        "Gir"
       ],
       "correctAnswer": "C",
       "explanation": "Jersey is an exotic (foreign) breed of cow known for its high milk yield. Sahiwal, Red Sindhi, and Gir are indigenous (Indian) breeds.",
@@ -40,10 +40,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "MOET stands for:",
       "options": [
-        "B) Multiple Ova Embryo Transplant Technology",
-        "D) Multiple Ovum and Embryo Transplant Technology",
-        "C) Multiple Ovulation and Embryo Transfer Technology",
-        "A) Multiple Ovulation Embryo Transfer Technology"
+        "Multiple Ova Embryo Transplant Technology",
+        "Multiple Ovum and Embryo Transplant Technology",
+        "Multiple Ovulation and Embryo Transfer Technology",
+        "Multiple Ovulation Embryo Transfer Technology"
       ],
       "correctAnswer": "D",
       "explanation": "MOET stands for Multiple Ovulation Embryo Transfer Technology. It is a programme used for herd improvement in cattle breeding where a cow is administered hormones (FSH-like) to induce superovulation, producing 6-8 eggs per cycle.",
@@ -65,10 +65,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Inbreeding depression refers to:",
       "options": [
-        "D) Appearance of new traits due to inbreeding",
-        "B) Reduction in fertility and productivity due to continuous inbreeding",
-        "A) Increase in fertility and productivity due to inbreeding",
-        "C) Increase in homozygosity without any effect"
+        "Appearance of new traits due to inbreeding",
+        "Reduction in fertility and productivity due to continuous inbreeding",
+        "Increase in fertility and productivity due to inbreeding",
+        "Increase in homozygosity without any effect"
       ],
       "correctAnswer": "B",
       "explanation": "Inbreeding depression is the reduced biological fitness (fertility and productivity) that occurs due to continuous close inbreeding over several generations. It is overcome by mating selected animals of the inbred population with unrelated superior animals of the same breed (outcrossing).",
@@ -90,10 +90,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following is an example of interspecific hybridisation?",
       "options": [
-        "A) Cross between two individuals of different breeds",
-        "D) Cross between inbred and unrelated animal",
-        "C) Cross between superior male and female of same breed",
-        "B) Mule (cross between male donkey and female horse)"
+        "Cross between two individuals of different breeds",
+        "Cross between inbred and unrelated animal",
+        "Cross between superior male and female of same breed",
+        "Mule (cross between male donkey and female horse)"
       ],
       "correctAnswer": "D",
       "explanation": "Interspecific hybridisation is the mating of animals of two different species. Mule (male donkey x female horse) and hinny (male horse x female donkey) are classic examples.",
@@ -115,10 +115,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "The__(Green Revolution) was largely due to the development of semi-dwarf varieties of wheat. Who is credited for this achievement?",
       "options": [
-        "C) William S. Gaud",
-        "B) Norman E. Borlaug",
-        "D) N.I. Vavilov",
-        "A) M.S. Swaminathan"
+        "William S. Gaud",
+        "Norman E. Borlaug",
+        "N.I. Vavilov",
+        "M.S. Swaminathan"
       ],
       "correctAnswer": "B",
       "explanation": "Norman E. Borlaug is known as the Father of Green Revolution globally. He developed semi-dwarf varieties of wheat. In India, M.S. Swaminathan is credited for spearheading the Green Revolution by introducing these varieties.",
@@ -140,10 +140,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following is the correct sequence of steps in plant breeding?",
       "options": [
-        "A) Collection of variability → Hybridisation → Selection → Evaluation → Release",
-        "B) Hybridisation → Collection of variability → Selection → Evaluation → Release",
-        "C) Selection → Hybridisation → Evaluation → Collection of variability → Release",
-        "D) Collection of variability → Selection → Hybridisation → Release → Evaluation"
+        "Collection of variability → Hybridisation → Selection → Evaluation → Release",
+        "Hybridisation → Collection of variability → Selection → Evaluation → Release",
+        "Selection → Hybridisation → Evaluation → Collection of variability → Release",
+        "Collection of variability → Selection → Hybridisation → Release → Evaluation"
       ],
       "correctAnswer": "A",
       "explanation": "The main steps in plant breeding are: (1) Collection of variability (germplasm collection), (2) Evaluation and selection of parents, (3) Cross hybridisation among selected parents, (4) Selection and testing of superior recombinants, (5) Testing, release and commercialisation of new cultivars.",
@@ -165,10 +165,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Single cell protein (SCP) can be produced from:",
       "options": [
-        "C) Saccharomyces cerevisiae",
-        "A) Spirulina",
-        "D) All of the above",
-        "B) Methylophilus methylotrophus"
+        "Saccharomyces cerevisiae",
+        "Spirulina",
+        "All of the above",
+        "Methylophilus methylotrophus"
       ],
       "correctAnswer": "C",
       "explanation": "Single Cell Protein (SCP) refers to protein-rich biomass of microorganisms grown on an industrial scale for use as food or feed. Examples include Spirulina (cyanobacterium), Methylophilus methylotrophus (bacterium), and Saccharomyces cerevisiae (yeast).",
@@ -190,10 +190,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Somatic hybridisation involves:",
       "options": [
-        "D) Cross-pollination between two species",
-        "C) Grafting of two plants",
-        "A) Fusion of two gametes",
-        "B) Fusion of protoplasts from two different plant species"
+        "Cross-pollination between two species",
+        "Grafting of two plants",
+        "Fusion of two gametes",
+        "Fusion of protoplasts from two different plant species"
       ],
       "correctAnswer": "D",
       "explanation": "Somatic hybridisation is the technique of fusing protoplasts (cells without cell walls) from two different plant species to produce hybrid protoplasts, which can be grown into a new plant called a somatic hybrid. Example: Pomato (potato + tomato).",
@@ -215,10 +215,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "The plant obtained by protoplast fusion of tomato and potato is called:",
       "options": [
-        "D) Potpom",
-        "C) Totato",
-        "B) Pomato",
-        "A) Topato"
+        "Potpom",
+        "Totato",
+        "Pomato",
+        "Topato"
       ],
       "correctAnswer": "C",
       "explanation": "Pomato is the somatic hybrid produced by the fusion of protoplasts of tomato and potato. This was achieved by Melchers in 1978.",
@@ -240,10 +240,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Hisardale is a new breed of sheep developed by crossing:",
       "options": [
-        "C) Hampshire ewes and Corriedale rams",
-        "B) Merino ewes and Bikaneri rams",
-        "A) Bikaneri ewes and Merino rams",
-        "D) Corriedale ewes and Hampshire rams"
+        "Hampshire ewes and Corriedale rams",
+        "Merino ewes and Bikaneri rams",
+        "Bikaneri ewes and Merino rams",
+        "Corriedale ewes and Hampshire rams"
       ],
       "correctAnswer": "C",
       "explanation": "Hisardale is a new breed of sheep developed by crossing Bikaneri ewes (female sheep) and Merino rams (male sheep) at Hisar, Haryana. It is an example of cross-breeding.",
@@ -265,10 +265,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which wheat variety was developed in India as part of the Green Revolution for disease resistance?",
       "options": [
-        "D) IR-36",
-        "A) Sonalika",
-        "C) Jaya",
-        "B) Ratna"
+        "IR-36",
+        "Sonalika",
+        "Jaya",
+        "Ratna"
       ],
       "correctAnswer": "B",
       "explanation": "Sonalika and Kalyan Sona are semi-dwarf wheat varieties developed in India during the Green Revolution. Ratna, Jaya, and IR-36 are rice varieties.",
@@ -290,10 +290,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Golden rice is a transgenic variety enriched with:",
       "options": [
-        "B) Vitamin C",
-        "D) Lysine",
-        "C) Iron",
-        "A) Vitamin A (beta-carotene)"
+        "Vitamin C",
+        "Lysine",
+        "Iron",
+        "Vitamin A (beta-carotene)"
       ],
       "correctAnswer": "D",
       "explanation": "Golden rice is a biofortified transgenic rice variety enriched with beta-carotene (provitamin A) to combat Vitamin A deficiency. It was developed by Ingo Potrykus and Peter Beyer.",
@@ -315,10 +315,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "In tissue culture, the  property of plant cells that allows a single cell to develop into a whole organism is called:",
       "options": [
-        "B) Totipotency",
-        "C) Multipotency",
-        "D) Unipotency",
-        "A) Pluripotency"
+        "Totipotency",
+        "Multipotency",
+        "Unipotency",
+        "Pluripotency"
       ],
       "correctAnswer": "A",
       "explanation": "Totipotency is the ability of a single cell to divide and produce all the differentiated cells of an organism, including the whole plant. This property of plant cells is the basis of tissue culture technology.",
@@ -340,10 +340,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following diseases was successfully bred for resistance in Brassica using plant breeding techniques?",
       "options": [
-        "C) Late blight",
-        "A) White rust",
-        "D) Red rot",
-        "B) Black rot"
+        "Late blight",
+        "White rust",
+        "Red rot",
+        "Black rot"
       ],
       "correctAnswer": "B",
       "explanation": "Pusa Swarnim (Karan rai) is a disease-resistant variety of Brassica bred for resistance against white rust. Black rot resistance was developed in cauliflower (Pusa Shubhra), late blight in potato, and red rot in sugarcane.",
@@ -365,10 +365,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Apiculture is related to the rearing of:",
       "options": [
-        "B) Honey bees",
-        "A) Silkworms",
-        "C) Pearl oysters",
-        "D) Fishes"
+        "Honey bees",
+        "Silkworms",
+        "Pearl oysters",
+        "Fishes"
       ],
       "correctAnswer": "A",
       "explanation": "Apiculture is the practice of bee-keeping for the production of honey, beeswax, and other products. Apis indica (Indian bee) and Apis mellifera (Italian bee) are commonly reared species.",
@@ -390,10 +390,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which species of honey bee is most commonly reared commercially due to its high honey yield?",
       "options": [
-        "C) Apis mellifera",
-        "B) Apis florea",
-        "A) Apis dorsata",
-        "D) Apis indica"
+        "Apis mellifera",
+        "Apis florea",
+        "Apis dorsata",
+        "Apis indica"
       ],
       "correctAnswer": "A",
       "explanation": "Apis mellifera (Italian bee) is the most commercially reared species due to its high honey yield, gentle nature, ability to stay in the hive for long periods, and good disease resistance. Apis dorsata (rock bee) is the largest and produces the most honey naturally but cannot be domesticated.",
@@ -415,10 +415,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Inland fisheries refer to:",
       "options": [
-        "C) Capture fishing in the ocean",
-        "A) Culturing fish in seawater",
-        "B) Culturing fish in freshwater bodies like rivers, ponds, and lakes",
-        "D) Deep-sea fishing"
+        "Capture fishing in the ocean",
+        "Culturing fish in seawater",
+        "Culturing fish in freshwater bodies like rivers, ponds, and lakes",
+        "Deep-sea fishing"
       ],
       "correctAnswer": "C",
       "explanation": "Inland fisheries refer to fisheries in freshwater bodies such as rivers, ponds, lakes, canals, and reservoirs. Marine fisheries involve fishing in seawater and oceans.",
@@ -440,10 +440,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which enzyme is used to remove the cell wall during protoplast isolation for somatic hybridisation?",
       "options": [
-        "A) Ligase",
-        "B) Cellulase and pectinase",
-        "D) Protease",
-        "C) Lipase"
+        "Ligase",
+        "Cellulase and pectinase",
+        "Protease",
+        "Lipase"
       ],
       "correctAnswer": "B",
       "explanation": "To isolate protoplasts, the plant cell wall is digested using enzymes like cellulase (which degrades cellulose) and pectinase (which degrades pectin). The resulting wall-less cells are called protoplasts.",
@@ -465,10 +465,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Outcrossing in animal breeding refers to:",
       "options": [
-        "D) Mating between animals of different breeds",
-        "B) Mating between animals of the same breed with no common ancestors for 4-6 generations",
-        "A) Mating between closely related individuals within a breed",
-        "C) Mating between animals of different species"
+        "Mating between animals of different breeds",
+        "Mating between animals of the same breed with no common ancestors for 4-6 generations",
+        "Mating between closely related individuals within a breed",
+        "Mating between animals of different species"
       ],
       "correctAnswer": "B",
       "explanation": "Outcrossing is the mating of animals within the same breed but that have no common ancestors on either side of their pedigree up to 4-6 generations. It is the best breeding method to overcome inbreeding depression.",
@@ -490,10 +490,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Biofortification aims to improve the nutritional quality of crops. Which of the following is NOT a target of biofortification?",
       "options": [
-        "C) Pest resistance",
-        "A) Protein content",
-        "D) Micronutrient and mineral content",
-        "B) Oil content"
+        "Pest resistance",
+        "Protein content",
+        "Micronutrient and mineral content",
+        "Oil content"
       ],
       "correctAnswer": "A",
       "explanation": "Biofortification aims to improve the nutritional quality of food crops with respect to protein content, oil content, vitamin content, and micronutrient/mineral content. Pest resistance is achieved through mutation breeding or genetic engineering but is not part of biofortification.",
@@ -515,10 +515,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Inbreeding increases homozygosity.\nReason (R): Inbreeding involves mating of closely related individuals within the same breed for 4-6 generations.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both assertion and reason are true. Inbreeding involves mating of closely related individuals, which increases homozygosity over generations. The reason correctly explains why inbreeding leads to increased homozygosity, as related individuals share common alleles.",
@@ -540,10 +540,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Mule is sterile.\nReason (R): Mule is produced by interspecific hybridisation between male donkey and female horse, and the hybrid has an odd number of chromosomes.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Mule is indeed sterile. It is produced by interspecific hybridisation (male donkey 2n=62 x female horse 2n=64). The resulting mule has 63 chromosomes (odd number), which prevents proper pairing during meiosis, making it sterile.",
@@ -565,10 +565,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Somaclones are genetically identical plants produced through tissue culture.\nReason (R): Tissue culture propagation involves only mitotic divisions.",
       "options": [
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "Somaclones are genetically identical plants obtained through tissue culture (micropropagation). Since tissue culture involves only mitotic divisions (no meiosis), the resulting plants are genetically identical to the parent plant, hence they are clones.",
@@ -590,10 +590,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Apis mellifera is preferred over Apis indica in commercial bee-keeping.\nReason (R): Apis mellifera produces less honey than Apis indica.",
       "options": [
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "A",
       "explanation": "The assertion is true; Apis mellifera (Italian bee) is preferred commercially. However, the reason is false because Apis mellifera actually produces MORE honey than Apis indica, not less. It is also less stingy and stays in the hive for longer periods.",
@@ -615,10 +615,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Spirulina is used as a source of single cell protein.\nReason (R): Spirulina can be grown on wastewater from potato processing and straw to reduce environmental pollution.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "Both statements are true. Spirulina is indeed used as SCP, and it can be grown on waste substrates. However, the reason is not the correct explanation of why Spirulina is used as SCP. It is used as SCP because it is rich in proteins, minerals, fats, and vitamins.",
@@ -640,10 +640,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Cross-breeding produces offspring that combine the desirable qualities of two different breeds.\nReason (R): Cross-breeding involves mating of superior males of one breed with superior females of another breed.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "Both statements are true and the reason correctly explains the assertion. Cross-breeding involves mating superior animals of two different breeds to combine desirable qualities. Hisardale sheep (Bikaneri ewes x Merino rams) is an example.",
@@ -665,10 +665,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Tissue culture medium must contain auxins and cytokinins.\nReason (R): The ratio of auxin to cytokinin determines whether the callus will develop into roots or shoots.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason correctly explains the assertion. In tissue culture, the nutrient medium must contain growth regulators (auxins and cytokinins). High auxin:cytokinin ratio promotes root formation, while high cytokinin:auxin ratio promotes shoot formation.",
@@ -690,10 +690,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Mutation breeding can create new varieties with desirable traits.\nReason (R): Mutations always produce beneficial traits in organisms.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "The assertion is true; mutation breeding has been used to develop mung bean resistance to yellow mosaic virus and powdery mildew. However, the reason is false because mutations are mostly harmful or neutral; only a few are beneficial.",
@@ -715,10 +715,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Consider the following statements about MOET:\nI. Cow is administered hormones with FSH-like activity to induce superovulation.\nII. The cow produces 6-8 eggs instead of one egg per cycle.\nIII. The fertilised eggs at 8-32 cell stage are transferred to surrogate mothers.\nIV. All surrogate mothers must be of the same breed as the genetic mother.\nWhich of the above statements are correct?",
       "options": [
-        "A) I, II and III only",
-        "C) I and II only",
-        "D) II, III and IV only",
-        "B) I, II, III and IV"
+        "I, II and III only",
+        "I and II only",
+        "II, III and IV only",
+        "I, II, III and IV"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, II, and III are correct. In MOET, FSH-like hormones induce superovulation (6-8 eggs), and the fertilised eggs at 8-32 cell stage are transferred to surrogate mothers. Statement IV is false; surrogate mothers need not be of the same breed.",
@@ -740,10 +740,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following statements about plant breeding for disease resistance is/are correct?\nI. Pusa Komal is a cowpea variety resistant to bacterial blight.\nII. Pusa Sadabahar is a chilli variety resistant to chilli mosaic virus.\nIII. Pusa Shubhra is a cauliflower variety resistant to black rot.\nIV. Pusa Swarnim is a Brassica variety resistant to white rust.",
       "options": [
-        "B) I, II and III only",
-        "D) All of the above",
-        "C) I, III and IV only",
-        "A) I and II only"
+        "I, II and III only",
+        "All of the above",
+        "I, III and IV only",
+        "I and II only"
       ],
       "correctAnswer": "B",
       "explanation": "All statements are correct. Pusa Komal (cowpea - bacterial blight), Pusa Sadabahar (chilli - chilli mosaic virus, TMV, leaf curl), Pusa Shubhra (cauliflower - black rot and curl blight black rot), and Pusa Swarnim/Karan rai (Brassica - white rust) are all disease-resistant varieties.",
@@ -765,10 +765,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Read the following statements and select the correct option:\nI. Callus is an unorganised mass of cells produced in tissue culture.\nII. Meristematic explants are preferred in tissue culture.\nIII. Somatic embryoids can be encapsulated in synthetic seeds.\nIV. Cryopreservation is the storage of tissues at -196°C in liquid nitrogen.",
       "options": [
-        "B) I, II and IV are correct",
-        "A) Only I and II are correct",
-        "D) I, III and IV are correct",
-        "C) All are correct"
+        "I, II and IV are correct",
+        "Only I and II are correct",
+        "I, III and IV are correct",
+        "All are correct"
       ],
       "correctAnswer": "D",
       "explanation": "All four statements are correct. Callus is an undifferentiated mass of cells. Meristematic cells are preferred as explants because they have high division potential. Somatic embryoids can be used to make synthetic/artificial seeds. Cryopreservation stores plant material at -196°C in liquid nitrogen.",
@@ -790,10 +790,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Consider the following statements about animal husbandry:\nI. Poultry farming involves raising domestic fowl for egg and chicken meat.\nII. Leghorn is an exotic poultry breed.\nIII. Catla, Rohu and Mrigal are marine fish species.\nWhich of the statements given above is/are correct?",
       "options": [
-        "D) II and III only",
-        "B) I, II and III",
-        "A) I and II only",
-        "C) I only"
+        "II and III only",
+        "I, II and III",
+        "I and II only",
+        "I only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements I and II are correct. Poultry farming involves raising fowl for eggs and meat, and Leghorn is an exotic breed (from Italy). Statement III is incorrect because Catla, Rohu, and Mrigal are freshwater fish species used in composite fish culture, not marine species.",
@@ -815,10 +815,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following statements about biofortification is INCORRECT?\nI. Atlas 66 wheat has high protein content.\nII. Maize hybrids have been developed with twice the amino acid lysine and tryptophan.\nIII. Iron-fortified rice variety has been developed with 5 times more iron.\nIV. Biofortification is achieved only through genetic engineering.",
       "options": [
-        "A) I only",
-        "C) I and III only",
-        "B) IV only",
-        "D) II and IV only"
+        "I only",
+        "I and III only",
+        "IV only",
+        "II and IV only"
       ],
       "correctAnswer": "C",
       "explanation": "Statement IV is incorrect. Biofortification can be achieved through conventional plant breeding, not just genetic engineering. Atlas 66 wheat has high protein content (I is correct), maize hybrids with high lysine and tryptophan have been developed (II is correct), and iron-fortified rice varieties with 5 times more iron exist (III is correct).",
@@ -840,10 +840,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Consider the following statements:\nI. Inbreeding exposes harmful recessive alleles by increasing homozygosity.\nII. Inbreeding can be used to produce pure lines.\nIII. Inbreeding always leads to inbreeding depression.\nSelect the correct answer:",
       "options": [
-        "C) II and III only",
-        "D) I only",
-        "B) I, II and III",
-        "A) I and II only"
+        "II and III only",
+        "I only",
+        "I, II and III",
+        "I and II only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I and II are correct. Inbreeding increases homozygosity, exposing harmful recessive alleles (which can be eliminated by selection), and is used to develop pure lines. Statement III is incorrect because inbreeding does not always cause depression; it occurs only with continued inbreeding over many generations.",
@@ -865,10 +865,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following disease-resistant crop varieties with the disease they are resistant to:\nColumn I: (P) Pusa Komal (Q) Pusa Swarnim (R) Pusa Shubhra (S) Pusa Gaurav\nColumn II: (i) White rust (ii) Bacterial blight (iii) Leaf curl (iv) Black rot and curl blight",
       "options": [
-        "C) P-ii, Q-iv, R-i, S-iii",
-        "A) P-ii, Q-i, R-iv, S-iii",
-        "D) P-iii, Q-i, R-iv, S-ii",
-        "B) P-i, Q-ii, R-iii, S-iv"
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-iii, Q-i, R-iv, S-ii",
+        "P-i, Q-ii, R-iii, S-iv"
       ],
       "correctAnswer": "B",
       "explanation": "Pusa Komal (cowpea) - bacterial blight (ii), Pusa Swarnim/Karan rai (Brassica) - white rust (i), Pusa Shubhra (cauliflower) - black rot and curl blight (iv), Pusa Gaurav (chilli) - leaf curl (iii).",
@@ -890,10 +890,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following breeds with their type:\nColumn I: (P) Sahiwal (Q) Jersey (R) Brown Swiss (S) Red Sindhi\nColumn II: (i) Exotic milch breed (ii) Indigenous milch breed",
       "options": [
-        "B) P-i, Q-ii, R-i, S-ii",
-        "C) P-ii, Q-i, R-ii, S-i",
-        "D) P-i, Q-i, R-ii, S-ii",
-        "A) P-ii, Q-i, R-i, S-ii"
+        "P-i, Q-ii, R-i, S-ii",
+        "P-ii, Q-i, R-ii, S-i",
+        "P-i, Q-i, R-ii, S-ii",
+        "P-ii, Q-i, R-i, S-ii"
       ],
       "correctAnswer": "D",
       "explanation": "Sahiwal and Red Sindhi are indigenous (Indian) milch breeds. Jersey and Brown Swiss are exotic (foreign) milch breeds known for longer lactation periods and higher milk yield.",
@@ -915,10 +915,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following animal breeding methods with their descriptions:\nColumn I: (P) Inbreeding (Q) Outcrossing (R) Cross-breeding (S) Interspecific hybridisation\nColumn II: (i) Mating animals of different species (ii) Mating closely related individuals for 4-6 generations (iii) Mating within same breed, no common ancestor for 4-6 generations (iv) Mating superior animals of different breeds",
       "options": [
-        "B) P-iii, Q-ii, R-i, S-iv",
-        "A) P-ii, Q-iii, R-iv, S-i",
-        "D) P-i, Q-iii, R-iv, S-ii",
-        "C) P-ii, Q-iv, R-iii, S-i"
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-ii, Q-iii, R-iv, S-i",
+        "P-i, Q-iii, R-iv, S-ii",
+        "P-ii, Q-iv, R-iii, S-i"
       ],
       "correctAnswer": "B",
       "explanation": "Inbreeding (P) - mating closely related individuals for 4-6 generations (ii); Outcrossing (Q) - mating within same breed, no common ancestor for 4-6 generations (iii); Cross-breeding (R) - mating superior animals of different breeds (iv); Interspecific hybridisation (S) - mating animals of different species (i).",
@@ -940,10 +940,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following bee species with their characteristics:\nColumn I: (P) Apis dorsata (Q) Apis florea (R) Apis mellifera (S) Apis indica\nColumn II: (i) Little bee (ii) Rock bee/largest (iii) Indian bee (iv) Italian bee",
       "options": [
-        "A) P-ii, Q-i, R-iv, S-iii",
-        "D) P-ii, Q-i, R-iii, S-iv",
-        "B) P-i, Q-ii, R-iii, S-iv",
-        "C) P-iv, Q-iii, R-i, S-ii"
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-iv, Q-iii, R-i, S-ii"
       ],
       "correctAnswer": "A",
       "explanation": "Apis dorsata (P) - Rock bee, largest honey bee (ii); Apis florea (Q) - Little bee, smallest (i); Apis mellifera (R) - Italian bee, most commercially important (iv); Apis indica (S) - Indian bee (iii).",
@@ -965,10 +965,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following crops with their biofortified nutrient:\nColumn I: (P) Atlas 66 wheat (Q) Golden rice (R) Iron-fortified rice (S) Maize hybrids\nColumn II: (i) Beta-carotene (ii) High protein (iii) Iron (iv) Lysine and tryptophan",
       "options": [
-        "D) P-ii, Q-iii, R-i, S-iv",
-        "C) P-iv, Q-iii, R-i, S-ii",
-        "A) P-ii, Q-i, R-iii, S-iv",
-        "B) P-i, Q-ii, R-iv, S-iii"
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-iv, Q-iii, R-i, S-ii",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-i, Q-ii, R-iv, S-iii"
       ],
       "correctAnswer": "C",
       "explanation": "Atlas 66 wheat - high protein content (ii); Golden rice - beta-carotene/provitamin A (i); Iron-fortified rice - iron (iii); Maize hybrids - twice the amount of lysine and tryptophan (iv).",
@@ -990,10 +990,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "How many of the following are steps in the plant breeding programme?\n(i) Collection of variability (ii) Evaluation and selection of parents (iii) Cross hybridisation (iv) Selection of superior recombinants (v) Testing and release (vi) Mutation induction",
       "options": [
-        "D) Three",
-        "B) Five",
-        "A) Four",
-        "C) Six"
+        "Three",
+        "Five",
+        "Four",
+        "Six"
       ],
       "correctAnswer": "B",
       "explanation": "Five of the listed items are steps in plant breeding: (i) Collection of variability, (ii) Evaluation and selection of parents, (iii) Cross hybridisation among selected parents, (iv) Selection and testing of superior recombinants, (v) Testing, release and commercialisation. Mutation induction (vi) is a separate technique, not a standard step in conventional plant breeding.",
@@ -1015,10 +1015,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "How many of the following are indigenous (Indian) breeds of cattle?\n(i) Sahiwal (ii) Jersey (iii) Red Sindhi (iv) Brown Swiss (v) Gir (vi) Holstein-Friesian (vii) Deoni",
       "options": [
-        "C) Four",
-        "A) Two",
-        "D) Five",
-        "B) Three"
+        "Four",
+        "Two",
+        "Five",
+        "Three"
       ],
       "correctAnswer": "A",
       "explanation": "Four are indigenous Indian breeds: Sahiwal (i), Red Sindhi (iii), Gir (v), and Deoni (vii). Jersey (ii), Brown Swiss (iv), and Holstein-Friesian (vi) are exotic breeds.",
@@ -1040,10 +1040,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "How many of the following organisms can be used for Single Cell Protein (SCP) production?\n(i) Spirulina (ii) Saccharomyces cerevisiae (iii) Methylophilus methylotrophus (iv) Mushrooms (v) Chlorella",
       "options": [
-        "C) Four",
-        "A) Two",
-        "D) Five",
-        "B) Three"
+        "Four",
+        "Two",
+        "Five",
+        "Three"
       ],
       "correctAnswer": "A",
       "explanation": "Four can be used for SCP: Spirulina (cyanobacterium) (i), Saccharomyces cerevisiae (yeast) (ii), Methylophilus methylotrophus (bacterium) (iii), and Chlorella (green alga) (v). Mushrooms (iv) are multicellular fungi used as food but not classified as SCP organisms.",
@@ -1065,10 +1065,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "How many of the following are correct regarding composite fish culture?\n(i) Catla feeds on surface (ii) Rohu feeds in the middle zone (iii) Mrigal and Common Carp are bottom feeders (iv) Grass carp feeds on weeds (v) Silver carp feeds on zooplankton",
       "options": [
-        "A) Three",
-        "C) Five",
-        "D) Two",
-        "B) Four"
+        "Three",
+        "Five",
+        "Two",
+        "Four"
       ],
       "correctAnswer": "D",
       "explanation": "Four statements are correct: Catla is a surface feeder (i), Rohu feeds in the middle zone (ii), Mrigal and Common Carp are bottom feeders (iii), and Grass carp feeds on weeds (iv). Statement (v) is incorrect; Silver carp feeds on phytoplankton, not zooplankton.",
@@ -1090,10 +1090,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Arrange the steps of plant breeding in the correct sequence:\n(I) Cross hybridisation among selected parents\n(II) Collection of variability\n(III) Testing, release and commercialisation\n(IV) Selection and testing of superior recombinants\n(V) Evaluation and selection of parents",
       "options": [
-        "B) V → II → I → III → IV",
-        "A) II → V → I → IV → III",
-        "C) II → I → V → IV → III",
-        "D) I → II → V → IV → III"
+        "V → II → I → III → IV",
+        "II → V → I → IV → III",
+        "II → I → V → IV → III",
+        "I → II → V → IV → III"
       ],
       "correctAnswer": "B",
       "explanation": "The correct sequence of plant breeding steps is: Collection of variability (II) → Evaluation and selection of parents (V) → Cross hybridisation among selected parents (I) → Selection and testing of superior recombinants (IV) → Testing, release and commercialisation (III).",
@@ -1115,10 +1115,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Arrange the following steps of tissue culture in correct sequence:\n(I) Transfer of plantlets to soil\n(II) Growth of callus on nutrient medium\n(III) Selection of explant from parent plant\n(IV) Differentiation of callus into shoots and roots\n(V) Inoculation of explant on sterile nutrient medium",
       "options": [
-        "D) V → III → IV → II → I",
-        "A) III → V → II → IV → I",
-        "B) V → III → II → I → IV",
-        "C) III → II → V → IV → I"
+        "V → III → IV → II → I",
+        "III → V → II → IV → I",
+        "V → III → II → I → IV",
+        "III → II → V → IV → I"
       ],
       "correctAnswer": "B",
       "explanation": "The correct sequence of tissue culture is: Selection of explant (III) → Inoculation on sterile nutrient medium (V) → Growth of callus (II) → Differentiation into shoots and roots (IV) → Transfer of plantlets to soil (I).",
@@ -1140,10 +1140,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Arrange the following steps in MOET programme in the correct order:\n(I) Fertilised eggs at 8-32 cell stage are recovered\n(II) Cow is administered FSH-like hormones\n(III) Embryos are transferred to surrogate mothers\n(IV) Cow produces 6-8 eggs (superovulation)\n(V) Mating with an elite bull or artificial insemination",
       "options": [
-        "B) V → II → IV → I → III",
-        "D) IV → II → V → I → III",
-        "C) II → V → IV → III → I",
-        "A) II → IV → V → I → III"
+        "V → II → IV → I → III",
+        "IV → II → V → I → III",
+        "II → V → IV → III → I",
+        "II → IV → V → I → III"
       ],
       "correctAnswer": "D",
       "explanation": "The correct sequence in MOET is: Administration of FSH-like hormones (II) → Superovulation producing 6-8 eggs (IV) → Mating with elite bull or artificial insemination (V) → Recovery of fertilised eggs at 8-32 cell stage (I) → Transfer to surrogate mothers (III).",
@@ -1165,10 +1165,10 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Arrange the following steps of somatic hybridisation in correct order:\n(I) Fusion of protoplasts using PEG\n(II) Digestion of cell wall using cellulase and pectinase\n(III) Culture of hybrid protoplast on nutrient medium\n(IV) Isolation of protoplasts from two different species\n(V) Development of somatic hybrid plant",
       "options": [
-        "A) IV → II → I → III → V",
-        "D) IV → I → II → V → III",
-        "C) II → IV → III → I → V",
-        "B) II → IV → I → III → V"
+        "IV → II → I → III → V",
+        "IV → I → II → V → III",
+        "II → IV → III → I → V",
+        "II → IV → I → III → V"
       ],
       "correctAnswer": "D",
       "explanation": "The correct sequence is: Digestion of cell wall using cellulase and pectinase (II) → Isolation of protoplasts from two species (IV) → Fusion of protoplasts using PEG or electric stimulation (I) → Culture of hybrid protoplast on nutrient medium (III) → Development of somatic hybrid plant (V).",
@@ -1190,17 +1190,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following is used as a chemical fusogen in somatic hybridisation?",
       "options": [
-        "A) Colchicine",
-        "B) Gibberellic acid",
-        "C) 2,4-D",
-        "D) Polyethylene glycol (PEG)"
+        "Colchicine",
+        "Gibberellic acid",
+        "2,4-D",
+        "Polyethylene glycol (PEG)"
       ],
       "correctAnswer": "D",
       "explanation": "Polyethylene glycol (PEG) is used as a chemical fusogen to facilitate the fusion of protoplasts in somatic hybridisation. Electric stimulation (electrofusion) can also be used as an alternative method.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["PEG", "somatic-hybridisation"],
+      "tags": [
+        "PEG",
+        "somatic-hybridisation"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1212,17 +1215,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Artificial insemination is a technique used in animal breeding where:",
       "options": [
-        "A) Eggs are removed from one female and transferred to another",
-        "B) Semen from a superior male is injected into the reproductive tract of the selected female",
-        "C) Embryos are cultured in vitro",
-        "D) Protoplasts from two animals are fused"
+        "Eggs are removed from one female and transferred to another",
+        "Semen from a superior male is injected into the reproductive tract of the selected female",
+        "Embryos are cultured in vitro",
+        "Protoplasts from two animals are fused"
       ],
       "correctAnswer": "B",
       "explanation": "Artificial insemination involves collecting semen from a superior male and injecting it into the reproductive tract of the selected female using controlled breeding programmes. The semen can be used fresh or frozen for later use.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["artificial-insemination", "animal-breeding"],
+      "tags": [
+        "artificial-insemination",
+        "animal-breeding"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1234,17 +1240,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following varieties of rice was developed for resistance to stem borer through mutation breeding?",
       "options": [
-        "A) Pusa Basmati-1",
-        "B) IR-8",
-        "C) Atomita 2",
-        "D) Jaya"
+        "Pusa Basmati-1",
+        "IR-8",
+        "Atomita 2",
+        "Jaya"
       ],
       "correctAnswer": "C",
       "explanation": "Atomita 2 is a rice variety developed through mutation breeding for resistance against stem borer. Mutation breeding involves exposing seeds to mutagens (chemicals or radiation) to create genetic variations.",
-      "difficulty": "HARD",
+      "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["mutation-breeding", "rice-varieties"],
+      "tags": [
+        "mutation-breeding",
+        "rice-varieties"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -1256,17 +1265,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following is NOT an advantage of composite fish culture?",
       "options": [
-        "A) Different species occupy different ecological niches",
-        "B) Food resources of the pond are fully utilised",
-        "C) Increases the fish yield per unit area",
-        "D) All species breed naturally in ponds in India"
+        "Different species occupy different ecological niches",
+        "Food resources of the pond are fully utilised",
+        "Increases the fish yield per unit area",
+        "All species breed naturally in ponds in India"
       ],
       "correctAnswer": "D",
       "explanation": "A major problem with composite fish culture is that many of the species used (especially exotic species like Common Carp, Silver Carp, Grass Carp) do NOT breed naturally in confined ponds in India. Hormonal stimulation or hypophysation is required to induce breeding.",
-      "difficulty": "HARD",
+      "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["composite-fish-culture", "fishery"],
+      "tags": [
+        "composite-fish-culture",
+        "fishery"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1278,17 +1290,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "The collection of all the diverse alleles for all genes in a given crop is called:",
       "options": [
-        "A) Gene pool",
-        "B) Germplasm collection",
-        "C) Genome",
-        "D) Gene library"
+        "Gene pool",
+        "Genome",
+        "Germplasm collection",
+        "Gene library"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Germplasm collection is the entire collection of plants, seeds, or tissues having all the diverse alleles for all genes in a given crop. It is the prerequisite for any plant breeding programme and is stored in gene banks.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["germplasm", "plant-breeding"],
+      "tags": [
+        "germplasm",
+        "plant-breeding"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1300,17 +1315,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Pusa Sem 2 and Pusa Sem 3 are varieties of flat bean bred for resistance against:",
       "options": [
-        "A) White rust",
-        "B) Bacterial blight",
-        "C) Yellow mosaic virus",
-        "D) Jassids, aphids and fruit borer"
+        "White rust",
+        "Bacterial blight",
+        "Yellow mosaic virus",
+        "Jassids, aphids and fruit borer"
       ],
       "correctAnswer": "D",
       "explanation": "Pusa Sem 2 and Pusa Sem 3 are insect pest-resistant varieties of flat bean (sem) bred for resistance against jassids, aphids, and fruit borer. These were developed through conventional plant breeding.",
-      "difficulty": "HARD",
+      "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["pest-resistance", "plant-breeding"],
+      "tags": [
+        "pest-resistance",
+        "plant-breeding"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1322,17 +1340,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following is a semi-dwarf rice variety developed during the Green Revolution in India?",
       "options": [
-        "A) Sonalika",
-        "B) Kalyan Sona",
-        "C) Atlas 66",
-        "D) Jaya"
+        "Sonalika",
+        "Kalyan Sona",
+        "Atlas 66",
+        "Jaya"
       ],
       "correctAnswer": "D",
       "explanation": "Jaya and Ratna are semi-dwarf rice varieties introduced in India during the Green Revolution (1960s). Sonalika and Kalyan Sona are wheat varieties. Atlas 66 is a wheat variety with high protein content used in biofortification.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["green-revolution", "rice-varieties"],
+      "tags": [
+        "green-revolution",
+        "rice-varieties"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1344,17 +1365,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Micropropagation is the technique of producing thousands of plants through tissue culture. The plants so produced are called:",
       "options": [
-        "A) Hybrids",
-        "B) Somatic hybrids",
-        "C) Cybrids",
-        "D) Somaclones"
+        "Hybrids",
+        "Somatic hybrids",
+        "Cybrids",
+        "Somaclones"
       ],
       "correctAnswer": "D",
       "explanation": "Plants produced through micropropagation (tissue culture) are called somaclones because they are genetically identical to the parent plant. Each plant is a clone derived from somatic cells through mitotic divisions only.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["somaclones", "micropropagation"],
+      "tags": [
+        "somaclones",
+        "micropropagation"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1366,17 +1390,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following is NOT a component of the nutrient medium used in tissue culture?",
       "options": [
-        "A) Sucrose",
-        "B) Inorganic salts",
-        "C) Vitamins and amino acids",
-        "D) Soil extract"
+        "Sucrose",
+        "Inorganic salts",
+        "Vitamins and amino acids",
+        "Soil extract"
       ],
       "correctAnswer": "D",
       "explanation": "The nutrient medium for tissue culture contains sucrose (carbon source), inorganic salts, vitamins, amino acids, and growth regulators (auxins and cytokinins). Soil extract is not a component; the medium is prepared artificially under aseptic conditions.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["tissue-culture", "nutrient-medium"],
+      "tags": [
+        "tissue-culture",
+        "nutrient-medium"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -1388,17 +1415,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following is true about dairy farm management?",
       "options": [
-        "A) Quality and quantity of milk depend only on the breed",
-        "B) Keeping milch animals in a well-ventilated, hygienic shelter is not important",
-        "C) Proper feeding, health care, and clean housing are essential for good milk production",
-        "D) Veterinary supervision is required only during diseases"
+        "Quality and quantity of milk depend only on the breed",
+        "Proper feeding, health care, and clean housing are essential for good milk production",
+        "Keeping milch animals in a well-ventilated, hygienic shelter is not important",
+        "Veterinary supervision is required only during diseases"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "B",
       "explanation": "Good dairy farm management includes proper feeding of balanced rations, clean and well-ventilated housing, regular health inspections, and veterinary supervision. The quality and quantity of milk depend on both the breed and management practices.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["dairy-farming", "animal-husbandry"],
+      "tags": [
+        "dairy-farming",
+        "animal-husbandry"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -1410,17 +1440,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Pusa Sawani is a variety of okra (bhindi) that is resistant to:",
       "options": [
-        "A) Bacterial blight",
-        "B) Yellow vein mosaic virus",
-        "C) White rust",
-        "D) Shoot and fruit borer"
+        "Bacterial blight",
+        "Yellow vein mosaic virus",
+        "White rust",
+        "Shoot and fruit borer"
       ],
       "correctAnswer": "D",
       "explanation": "Pusa Sawani is a variety of okra (Abelmoschus esculentus / bhindi) bred for resistance against shoot and fruit borer. Pusa A-4 is the okra variety resistant to yellow vein mosaic virus.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["pest-resistance", "okra-varieties"],
+      "tags": [
+        "pest-resistance",
+        "okra-varieties"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1432,17 +1465,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following best describes the advantage of SCP over conventional protein sources?",
       "options": [
-        "A) SCP organisms grow slowly but produce high quality protein",
-        "B) SCP is more expensive to produce than animal protein",
-        "C) SCP can be produced in large quantities using industrial effluents, reducing pollution",
-        "D) SCP organisms require large agricultural land for growth"
+        "SCP organisms grow slowly but produce high quality protein",
+        "SCP is more expensive to produce than animal protein",
+        "SCP can be produced in large quantities using industrial effluents, reducing pollution",
+        "SCP organisms require large agricultural land for growth"
       ],
       "correctAnswer": "C",
       "explanation": "A major advantage of SCP is that microorganisms can grow rapidly on industrial effluents and waste water (like starch processing waste, molasses), thereby reducing environmental pollution while producing protein-rich biomass. They require very little land compared to conventional agriculture.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["SCP", "advantages"],
+      "tags": [
+        "SCP",
+        "advantages"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1454,17 +1490,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "The process of mating a hybrid with one of its parents is called:",
       "options": [
-        "A) Outcrossing",
-        "B) Cross-breeding",
-        "C) Interspecific hybridisation",
-        "D) Backcrossing"
+        "Outcrossing",
+        "Cross-breeding",
+        "Interspecific hybridisation",
+        "Backcrossing"
       ],
       "correctAnswer": "D",
       "explanation": "Backcrossing is the process of crossing a hybrid offspring with one of its parents (or an individual genetically similar to a parent). This is done to incorporate a desirable trait from one parent into the genetic background of the other parent.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["backcrossing", "animal-breeding"],
+      "tags": [
+        "backcrossing",
+        "animal-breeding"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1476,17 +1515,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following poultry diseases is caused by a virus?",
       "options": [
-        "A) Coccidiosis",
-        "B) Aspergillosis",
-        "C) Ranikhet disease (Newcastle disease)",
-        "D) Salmonellosis"
+        "Coccidiosis",
+        "Aspergillosis",
+        "Ranikhet disease (Newcastle disease)",
+        "Salmonellosis"
       ],
       "correctAnswer": "C",
       "explanation": "Ranikhet disease (Newcastle disease) is caused by a paramyxovirus affecting poultry. Coccidiosis is caused by a protozoan (Eimeria), aspergillosis by a fungus (Aspergillus), and salmonellosis by bacteria (Salmonella).",
-      "difficulty": "HARD",
+      "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["poultry-diseases", "poultry"],
+      "tags": [
+        "poultry-diseases",
+        "poultry"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -1498,17 +1540,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following is used as an explant in tissue culture?",
       "options": [
-        "A) Only seeds",
-        "B) Any part of the plant body",
-        "C) Only roots",
-        "D) Only leaves"
+        "Only seeds",
+        "Any part of the plant body",
+        "Only roots",
+        "Only leaves"
       ],
       "correctAnswer": "B",
       "explanation": "An explant is any part of a plant body (leaf, stem, root, meristem, embryo, etc.) that is used to start tissue culture. However, meristematic tissues are preferred as explants because of their high mitotic activity.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["explant", "tissue-culture"],
+      "tags": [
+        "explant",
+        "tissue-culture"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1520,17 +1565,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Mariculture involves:",
       "options": [
-        "A) Culture of marine organisms in freshwater",
-        "B) Culture of marine fishes, prawns, oysters and mussels in the sea",
-        "C) Culture of freshwater organisms in the sea",
-        "D) Breeding of cattle near coastal areas"
+        "Culture of marine organisms in freshwater",
+        "Culture of marine fishes, prawns, oysters and mussels in the sea",
+        "Culture of freshwater organisms in the sea",
+        "Breeding of cattle near coastal areas"
       ],
       "correctAnswer": "B",
       "explanation": "Mariculture is the culture of marine organisms such as fishes, prawns, oysters, mussels, and seaweeds in enclosed areas of the sea (like bays, lagoons, or estuaries). It is a form of aquaculture specific to marine environments.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["mariculture", "fishery"],
+      "tags": [
+        "mariculture",
+        "fishery"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -1542,17 +1590,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Modern sugarcane varieties were developed by crossing Saccharum barberi (North Indian) with Saccharum officinarum (South Indian) to combine:",
       "options": [
-        "A) High sugar content of S. barberi with disease resistance of S. officinarum",
-        "B) High sugar, thick stems of S. officinarum with hardiness and ability to grow in North India from S. barberi",
-        "C) High yield of S. barberi with sweetness of S. officinarum",
-        "D) Pest resistance of both species"
+        "High sugar content of S. barberi with disease resistance of S. officinarum",
+        "High yield of S. barberi with sweetness of S. officinarum",
+        "Pest resistance of both species",
+        "High sugar, thick stems of S. officinarum with hardiness and ability to grow in North India from S. barberi"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Modern sugarcane varieties combine the desirable qualities of both species: high sugar content, thick stems, and higher yield from Saccharum officinarum (South Indian) with the hardiness and ability to grow in North India from Saccharum barberi.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["sugarcane", "plant-breeding"],
+      "tags": [
+        "sugarcane",
+        "plant-breeding"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1564,17 +1615,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Controlled breeding experiments in animals can be carried out using:",
       "options": [
-        "A) Tissue culture only",
-        "B) Artificial insemination only",
-        "C) Natural mating only",
-        "D) Artificial insemination and MOET"
+        "Tissue culture only",
+        "Artificial insemination only",
+        "Natural mating only",
+        "Artificial insemination and MOET"
       ],
       "correctAnswer": "D",
       "explanation": "Controlled breeding experiments in animals use artificial insemination (where semen of superior males is collected and injected into selected females) and MOET (Multiple Ovulation Embryo Transfer Technology) for herd improvement.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["controlled-breeding", "animal-breeding"],
+      "tags": [
+        "controlled-breeding",
+        "animal-breeding"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1586,17 +1640,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following pairs is correctly matched?",
       "options": [
-        "A) Himgiri wheat - Resistance to leaf rust, stripe rust, and hill bunt",
-        "B) Pusa A-4 okra - Resistance to shoot and fruit borer",
-        "C) Pusa Komal - Resistance to yellow mosaic virus",
-        "D) Pusa Shubhra - Resistance to white rust"
+        "Pusa A-4 okra - Resistance to shoot and fruit borer",
+        "Himgiri wheat - Resistance to leaf rust, stripe rust, and hill bunt",
+        "Pusa Komal - Resistance to yellow mosaic virus",
+        "Pusa Shubhra - Resistance to white rust"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "Himgiri wheat was bred for resistance to leaf rust, stripe rust, and hill bunt. Pusa A-4 okra is resistant to yellow vein mosaic virus (not shoot and fruit borer). Pusa Komal (cowpea) is resistant to bacterial blight. Pusa Shubhra (cauliflower) is resistant to black rot and curl blight.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["disease-resistance", "crop-matching"],
+      "tags": [
+        "disease-resistance",
+        "crop-matching"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -1608,17 +1665,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Outcrossing is the best strategy to overcome inbreeding depression.\nReason (R): Outcrossing involves mating of animals that are not closely related within the same breed.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. Outcrossing (mating animals within the same breed with no common ancestor for 4-6 generations) is the best strategy to overcome inbreeding depression because it introduces genetic diversity while maintaining breed purity.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["outcrossing", "inbreeding-depression"],
+      "tags": [
+        "outcrossing",
+        "inbreeding-depression"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1630,17 +1690,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Biofortification is a practical approach to improve public health.\nReason (R): Biofortification involves breeding crops with higher levels of vitamins, minerals, and proteins.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both statements are true and the reason correctly explains the assertion. Biofortification breeds crops with enhanced nutritional content (vitamins, minerals, proteins, healthier fats), making improved nutrition available through staple food crops that people already consume.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biofortification", "public-health"],
+      "tags": [
+        "biofortification",
+        "public-health"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1652,17 +1715,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): In composite fish culture, 5-6 species of fish are grown together in a single pond.\nReason (R): Different species of fish have different food habits and occupy different niches, so they do not compete for food.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true. In composite fish culture, 5-6 species (Catla - surface feeder, Rohu - middle zone, Mrigal/Common Carp - bottom, Grass Carp - weeds, Silver Carp - phytoplankton) are grown together. Since they occupy different niches and have different food habits, they do not compete, maximizing fish yield.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["composite-fish-culture", "fishery"],
+      "tags": [
+        "composite-fish-culture",
+        "fishery"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1674,17 +1740,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Green Revolution succeeded in tripling food supply but NOT increasing food quality.\nReason (R): Green Revolution focused on increasing the yield of wheat and rice using semi-dwarf varieties.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both statements are true. The Green Revolution focused on increasing yield through semi-dwarf varieties of wheat and rice, which successfully tripled food production. However, the nutritional quality was not the focus, which is why biofortification was later initiated to address nutritional deficiencies.",
-      "difficulty": "HARD",
+      "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["green-revolution", "biofortification"],
+      "tags": [
+        "green-revolution",
+        "biofortification"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1696,17 +1765,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Explant is preferably taken from meristematic tissue.\nReason (R): Meristematic cells are actively dividing and have a higher capacity for regeneration.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and reason explains the assertion. Meristematic tissues (root tips, shoot tips) are preferred as explants because their cells are actively dividing (undifferentiated), which gives them a higher capacity for regeneration and callus formation in tissue culture.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["explant", "meristematic-tissue"],
+      "tags": [
+        "explant",
+        "meristematic-tissue"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1718,17 +1790,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following statements about outbreeding is/are correct?\nI. Outcrossing involves mating within the same breed with no common ancestor for 4-6 generations.\nII. Cross-breeding involves mating superior males of one breed with superior females of another breed.\nIII. Interspecific hybridisation always produces fertile offspring.\nIV. Outcrossing is the best method to overcome inbreeding depression.",
       "options": [
-        "A) I, II, III and IV",
-        "B) I and II only",
-        "C) I, II and IV only",
-        "D) II and IV only"
+        "I, II, III and IV",
+        "I and II only",
+        "I, II and IV only",
+        "II and IV only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements I, II, and IV are correct. Statement III is incorrect because interspecific hybridisation often produces sterile offspring (e.g., mule from horse x donkey), though some may be fertile.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["outbreeding", "animal-breeding"],
+      "tags": [
+        "outbreeding",
+        "animal-breeding"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1740,17 +1815,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Consider the following statements about apiculture:\nI. Quality of honey depends on the pasturage available to the bees.\nII. Apis dorsata is the most commercially reared species.\nIII. Bee products include honey, beeswax, and royal jelly.\nIV. The value of bee products is much more than the value of pollination services provided by bees.\nWhich statements are correct?",
       "options": [
-        "A) I, II and III",
-        "B) I, III and IV",
-        "C) All are correct",
-        "D) I and III only"
+        "I, II and III",
+        "I, III and IV",
+        "All are correct",
+        "I and III only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I and III are correct. Statement II is incorrect; Apis mellifera (Italian bee) is the most commercially reared species, not Apis dorsata which cannot be domesticated. Statement IV is incorrect; pollination services are estimated to be much MORE valuable than bee products.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["apiculture", "bee-products"],
+      "tags": [
+        "apiculture",
+        "bee-products"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1762,17 +1840,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Consider the following statements about somatic hybridisation:\nI. Cell walls are removed enzymatically to obtain protoplasts.\nII. Protoplasts of different species can be fused using PEG.\nIII. The resulting hybrid contains the nuclear genome of only one parent.\nSelect the correct option:",
       "options": [
-        "A) I, II and III",
-        "B) II and III only",
-        "C) I and II only",
-        "D) I only"
+        "I, II and III",
+        "II and III only",
+        "I and II only",
+        "I only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements I and II are correct. Cell walls are digested using cellulase and pectinase to obtain protoplasts, which can then be fused using PEG or electric stimulation. Statement III is incorrect; the somatic hybrid contains the nuclear genome of BOTH parents.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["somatic-hybridisation", "protoplast-fusion"],
+      "tags": [
+        "somatic-hybridisation",
+        "protoplast-fusion"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1784,17 +1865,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Read the following statements about poultry farming:\nI. Poultry includes chickens, ducks, geese, turkeys, and guinea fowl.\nII. Cross-breeding between indigenous and exotic breeds is commonly practised.\nIII. Aseel is an exotic poultry breed.\nIV. Poultry birds need proper food, water, healthcare, and housing.\nWhich of the above are correct?",
       "options": [
-        "A) I, II and IV only",
-        "B) I, II, III and IV",
-        "C) I and IV only",
-        "D) II, III and IV only"
+        "I, II, III and IV",
+        "I and IV only",
+        "I, II and IV only",
+        "II, III and IV only"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": "Statements I, II, and IV are correct. Statement III is incorrect; Aseel is an indigenous (Indian) poultry breed known for its fighting quality. Leghorn is an example of an exotic poultry breed.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["poultry", "animal-husbandry"],
+      "tags": [
+        "poultry",
+        "animal-husbandry"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -1806,17 +1890,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Consider the following statements about mutation breeding:\nI. Mung bean variety resistant to yellow mosaic virus was developed by mutation breeding.\nII. Mutations are induced using chemical or physical mutagens.\nIII. Mutation breeding produces only dominant mutations.\nIV. The mutant variety of mung bean is also resistant to powdery mildew.",
       "options": [
-        "A) I and II only",
-        "B) I, II, III and IV",
-        "C) I, II and IV only",
-        "D) II and IV only"
+        "I and II only",
+        "I, II, III and IV",
+        "I, II and IV only",
+        "II and IV only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements I, II, and IV are correct. Mung bean was made resistant to yellow mosaic virus and powdery mildew through mutation breeding using chemical/physical mutagens. Statement III is incorrect; mutation breeding can produce both dominant and recessive mutations.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["mutation-breeding", "mung-bean"],
+      "tags": [
+        "mutation-breeding",
+        "mung-bean"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1828,17 +1915,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following fish species with their feeding habits in composite fish culture:\nColumn I: (P) Catla (Q) Rohu (R) Mrigal (S) Grass Carp\nColumn II: (i) Bottom feeder (ii) Surface feeder (iii) Middle zone feeder (iv) Feeds on weeds",
       "options": [
-        "A) P-ii, Q-iii, R-i, S-iv",
-        "B) P-iii, Q-ii, R-iv, S-i",
-        "C) P-ii, Q-i, R-iii, S-iv",
-        "D) P-iv, Q-iii, R-ii, S-i"
+        "P-iii, Q-ii, R-iv, S-i",
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-iv, Q-iii, R-ii, S-i"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "Catla (P) - surface feeder (ii); Rohu (Q) - feeds in the middle zone (iii); Mrigal (R) - bottom feeder (i); Grass Carp (S) - feeds on weeds (iv). This non-overlapping feeding pattern allows all species to coexist without competition.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["composite-fish-culture", "feeding-habits"],
+      "tags": [
+        "composite-fish-culture",
+        "feeding-habits"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1850,17 +1940,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following pest-resistant crop varieties with the pest they resist:\nColumn I: (P) Pusa Sawani (Q) Pusa Sem 2 (R) Pusa Gaurav (S) Pusa A-4\nColumn II: (i) Jassids, aphids and fruit borer (ii) Shoot and fruit borer (iii) Leaf curl (iv) Yellow vein mosaic virus",
       "options": [
-        "A) P-iv, Q-ii, R-i, S-iii",
-        "B) P-ii, Q-iii, R-i, S-iv",
-        "C) P-i, Q-iv, R-iii, S-ii",
-        "D) P-ii, Q-i, R-iii, S-iv"
+        "P-iv, Q-ii, R-i, S-iii",
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-i, Q-iv, R-iii, S-ii",
+        "P-ii, Q-i, R-iii, S-iv"
       ],
       "correctAnswer": "D",
       "explanation": "Pusa Sawani (okra) - shoot and fruit borer (ii); Pusa Sem 2 (flat bean) - jassids, aphids and fruit borer (i); Pusa Gaurav (chilli) - leaf curl (iii); Pusa A-4 (okra) - yellow vein mosaic virus (iv).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["pest-resistance", "crop-varieties"],
+      "tags": [
+        "pest-resistance",
+        "crop-varieties"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -1872,17 +1965,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following tissue culture terms with their descriptions:\nColumn I: (P) Explant (Q) Callus (R) Totipotency (S) Somaclone\nColumn II: (i) Genetically identical plant from tissue culture (ii) Ability of a cell to form a complete organism (iii) Part of plant used to start tissue culture (iv) Unorganised mass of dividing cells",
       "options": [
-        "A) P-iii, Q-iv, R-ii, S-i",
-        "B) P-iv, Q-iii, R-i, S-ii",
-        "C) P-ii, Q-iv, R-iii, S-i",
-        "D) P-iii, Q-ii, R-iv, S-i"
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-iv, Q-iii, R-i, S-ii",
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-iii, Q-ii, R-iv, S-i"
       ],
       "correctAnswer": "A",
       "explanation": "Explant (P) - part of plant used to start tissue culture (iii); Callus (Q) - unorganised mass of dividing cells (iv); Totipotency (R) - ability of a cell to form a complete organism (ii); Somaclone (S) - genetically identical plant from tissue culture (i).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["tissue-culture", "terminology"],
+      "tags": [
+        "tissue-culture",
+        "terminology"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1894,17 +1990,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following SCP organisms with their type:\nColumn I: (P) Spirulina (Q) Saccharomyces cerevisiae (R) Methylophilus methylotrophus (S) Chlorella\nColumn II: (i) Yeast (ii) Green alga (iii) Cyanobacterium (iv) Bacterium",
       "options": [
-        "A) P-ii, Q-iv, R-i, S-iii",
-        "B) P-iii, Q-iv, R-ii, S-i",
-        "C) P-iii, Q-i, R-iv, S-ii",
-        "D) P-i, Q-iii, R-iv, S-ii"
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-iii, Q-i, R-iv, S-ii",
+        "P-i, Q-iii, R-iv, S-ii"
       ],
       "correctAnswer": "C",
       "explanation": "Spirulina (P) - cyanobacterium/blue-green alga (iii); Saccharomyces cerevisiae (Q) - yeast (i); Methylophilus methylotrophus (R) - bacterium (iv); Chlorella (S) - green alga (ii).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["SCP", "organism-classification"],
+      "tags": [
+        "SCP",
+        "organism-classification"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1916,17 +2015,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following green revolution crops with their developers:\nColumn I: (P) Semi-dwarf wheat (global) (Q) Green Revolution in India (R) IR-8 semi-dwarf rice (S) Jaya and Ratna rice\nColumn II: (i) M.S. Swaminathan (ii) Indian Agricultural Research Institute (iii) Norman E. Borlaug (iv) International Rice Research Institute",
       "options": [
-        "A) P-i, Q-iii, R-ii, S-iv",
-        "B) P-iii, Q-ii, R-iv, S-i",
-        "C) P-iv, Q-i, R-iii, S-ii",
-        "D) P-iii, Q-i, R-iv, S-ii"
+        "P-i, Q-iii, R-ii, S-iv",
+        "P-iii, Q-ii, R-iv, S-i",
+        "P-iv, Q-i, R-iii, S-ii",
+        "P-iii, Q-i, R-iv, S-ii"
       ],
       "correctAnswer": "D",
       "explanation": "Semi-dwarf wheat globally - Norman E. Borlaug (iii); Green Revolution in India - M.S. Swaminathan (i); IR-8 semi-dwarf rice - International Rice Research Institute, Philippines (iv); Jaya and Ratna rice - Indian Agricultural Research Institute (ii).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["green-revolution", "scientists"],
+      "tags": [
+        "green-revolution",
+        "scientists"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1938,17 +2040,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "How many of the following are outbreeding methods in animal breeding?\n(i) Outcrossing (ii) Cross-breeding (iii) Interspecific hybridisation (iv) Inbreeding (v) Artificial insemination",
       "options": [
-        "A) Two",
-        "B) Three",
-        "C) Four",
-        "D) Five"
+        "Two",
+        "Three",
+        "Four",
+        "Five"
       ],
       "correctAnswer": "B",
       "explanation": "Three are outbreeding methods: Outcrossing (i), Cross-breeding (ii), and Interspecific hybridisation (iii). Inbreeding (iv) is not outbreeding. Artificial insemination (v) is a technique, not a breeding method classification.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["outbreeding", "animal-breeding"],
+      "tags": [
+        "outbreeding",
+        "animal-breeding"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1960,17 +2065,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "How many of the following crops have biofortified varieties mentioned in NCERT?\n(i) Wheat (ii) Rice (iii) Maize (iv) Carrots (v) Spinach (vi) Bathua",
       "options": [
-        "A) Three",
-        "B) Four",
-        "C) Five",
-        "D) Six"
+        "Three",
+        "Four",
+        "Five",
+        "Six"
       ],
       "correctAnswer": "D",
       "explanation": "All six are mentioned in NCERT as biofortification targets: Wheat (Atlas 66 - protein), Rice (iron-fortified), Maize (lysine and tryptophan), Carrots (vitamin A), Spinach (iron and calcium), and Bathua (fat content). NCERT specifically lists these crops for improved nutritional quality.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["biofortification", "crop-improvement"],
+      "tags": [
+        "biofortification",
+        "crop-improvement"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -1982,17 +2090,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "How many of the following are correctly matched disease-resistant varieties?\n(i) Himgiri - wheat - leaf and stripe rust (ii) Pusa Shubhra - cauliflower - black rot (iii) Pusa Swarnim - Brassica - white rust (iv) Pusa Komal - cowpea - bacterial blight (v) Pusa Sadabahar - tomato - leaf curl",
       "options": [
-        "A) Three",
-        "B) Four",
-        "C) Five",
-        "D) Two"
+        "Three",
+        "Four",
+        "Five",
+        "Two"
       ],
       "correctAnswer": "B",
       "explanation": "Four are correctly matched: Himgiri wheat - leaf and stripe rust (i), Pusa Shubhra cauliflower - black rot (ii), Pusa Swarnim Brassica - white rust (iii), Pusa Komal cowpea - bacterial blight (iv). Statement (v) is incorrect; Pusa Sadabahar is a chilli variety, not tomato.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["disease-resistance", "crop-varieties"],
+      "tags": [
+        "disease-resistance",
+        "crop-varieties"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2004,17 +2115,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "How many of the following are advantages of micropropagation through tissue culture?\n(i) Large number of plants in short time (ii) Production of disease-free plants (iii) Plants are genetically identical (iv) Requires large agricultural land (v) Year-round propagation",
       "options": [
-        "A) Two",
-        "B) Three",
-        "C) Four",
-        "D) Five"
+        "Two",
+        "Three",
+        "Four",
+        "Five"
       ],
       "correctAnswer": "C",
       "explanation": "Four are advantages: large number of plants quickly (i), meristem culture produces disease-free plants (ii), genetically identical somaclones (iii), and year-round propagation (v). Statement (iv) is incorrect; micropropagation requires very little space.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["micropropagation", "advantages"],
+      "tags": [
+        "micropropagation",
+        "advantages"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2026,17 +2140,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Arrange the following breeding methods in order of increasing genetic diversity in offspring:\n(I) Inbreeding\n(II) Outcrossing\n(III) Cross-breeding\n(IV) Interspecific hybridisation",
       "options": [
-        "A) IV - III - II - I",
-        "B) I - III - II - IV",
-        "C) I - II - III - IV",
-        "D) II - I - IV - III"
+        "IV - III - II - I",
+        "I - III - II - IV",
+        "I - II - III - IV",
+        "II - I - IV - III"
       ],
       "correctAnswer": "C",
       "explanation": "In order of increasing genetic diversity: Inbreeding (I) - least diversity, closely related; Outcrossing (II) - same breed but unrelated; Cross-breeding (III) - different breeds; Interspecific hybridisation (IV) - different species, maximum genetic diversity.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["breeding-methods", "genetic-diversity"],
+      "tags": [
+        "breeding-methods",
+        "genetic-diversity"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2048,17 +2165,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Arrange the following bee species in order of decreasing honey production:\n(I) Apis dorsata\n(II) Apis mellifera\n(III) Apis florea\n(IV) Apis indica",
       "options": [
-        "A) II - I - IV - III",
-        "B) I - IV - II - III",
-        "C) II - IV - I - III",
-        "D) I - II - IV - III"
+        "II - I - IV - III",
+        "I - IV - II - III",
+        "II - IV - I - III",
+        "I - II - IV - III"
       ],
       "correctAnswer": "D",
       "explanation": "In decreasing order: Apis dorsata (rock bee, 35-40 kg, but not domesticable); Apis mellifera (Italian bee, 25-40 kg, commercially reared); Apis indica (Indian bee, 2-5 kg); Apis florea (little bee, least honey production).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["honey-production", "bee-species"],
+      "tags": [
+        "honey-production",
+        "bee-species"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2070,17 +2190,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Arrange the following events in breeding disease-resistant crop varieties in correct order:\n(I) Identification of source of resistance\n(II) Testing of new variety in field\n(III) Screening germplasm for resistance\n(IV) Hybridisation with agronomically desirable variety\n(V) Selection of resistant progeny",
       "options": [
-        "A) III - I - IV - V - II",
-        "B) I - III - IV - II - V",
-        "C) I - IV - III - V - II",
-        "D) III - IV - I - V - II"
+        "I - III - IV - II - V",
+        "III - I - IV - V - II",
+        "I - IV - III - V - II",
+        "III - IV - I - V - II"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "The correct sequence: Screening germplasm for resistance (III) - Identification of resistant source (I) - Hybridisation with agronomically superior variety (IV) - Selection of resistant progeny with desired traits (V) - Field testing (II).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["disease-resistance", "breeding-sequence"],
+      "tags": [
+        "disease-resistance",
+        "breeding-sequence"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2092,17 +2215,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following is a marine fish commonly captured for food?",
       "options": [
-        "A) Catla",
-        "B) Rohu",
-        "C) Pomfret",
-        "D) Mrigal"
+        "Catla",
+        "Rohu",
+        "Pomfret",
+        "Mrigal"
       ],
       "correctAnswer": "C",
       "explanation": "Pomfret is a popular marine fish. Other marine fishes include hilsa, sardines, mackerel, and bombay duck. Catla, Rohu, and Mrigal are freshwater fishes used in composite fish culture.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["marine-fish", "fishery"],
+      "tags": [
+        "marine-fish",
+        "fishery"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -2114,17 +2240,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Pomato is not commercially useful.\nReason (R): Somatic hybrids often do not express the desirable traits of both parent plants.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true. Pomato (potato + tomato hybrid) is not commercially useful because somatic hybrids often fail to express the desired combination of traits from both parents. The reason correctly explains why pomato has limited practical value despite being a scientific achievement.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["pomato", "somatic-hybridisation"],
+      "tags": [
+        "pomato",
+        "somatic-hybridisation"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2136,17 +2265,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Assertion (A): Plant breeding has helped increase food production to feed the growing population.\nReason (R): Plant breeding produces varieties with higher yield, disease resistance, and improved nutritional quality.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. Plant breeding has been instrumental in increasing food production through the development of high-yielding varieties (Green Revolution), disease-resistant varieties, and biofortified crops with improved nutritional quality.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["plant-breeding", "food-production"],
+      "tags": [
+        "plant-breeding",
+        "food-production"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -2158,17 +2290,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Consider the following statements about dairy farming:\nI. Both indigenous and exotic breeds are used in India.\nII. Exotic breeds have longer lactation periods.\nIII. Cross-breeding indigenous with exotic breeds improves milk yield.\nIV. Feeding, hygiene, and veterinary care affect milk quality.\nHow many are correct?",
       "options": [
-        "A) Two",
-        "B) Three",
-        "C) Four",
-        "D) One"
+        "Two",
+        "Three",
+        "Four",
+        "One"
       ],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. India uses both indigenous (Sahiwal, Red Sindhi, Gir) and exotic (Jersey, Brown Swiss, Holstein-Friesian) breeds. Exotic breeds have longer lactation periods. Cross-breeding combines indigenous disease resistance with exotic high yield. Proper management affects milk quality.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["dairy-farming", "cattle-breeds"],
+      "tags": [
+        "dairy-farming",
+        "cattle-breeds"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2180,17 +2315,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Which of the following statements about the Green Revolution are correct?\nI. It was based on semi-dwarf varieties of wheat and rice.\nII. Norman Borlaug developed semi-dwarf wheat varieties.\nIII. M.S. Swaminathan led the Green Revolution in India.\nIV. The Green Revolution addressed nutritional quality of food crops.",
       "options": [
-        "A) I, II and III only",
-        "B) I, II, III and IV",
-        "C) I and II only",
-        "D) II, III and IV only"
+        "I, II and III only",
+        "I, II, III and IV",
+        "I and II only",
+        "II, III and IV only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, II, and III are correct. Statement IV is incorrect; the Green Revolution focused on YIELD increase, not nutritional quality. Biofortification was introduced later to address nutritional deficiencies.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["green-revolution", "scientists"],
+      "tags": [
+        "green-revolution",
+        "scientists"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2202,17 +2340,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Consider the following about SCP (Single Cell Protein):\nI. SCP provides an alternative protein source for animal and human nutrition.\nII. Microorganisms used for SCP multiply rapidly.\nIII. SCP production can utilise industrial waste water as substrate.\nIV. SCP can only be produced using bacteria.\nWhich are correct?",
       "options": [
-        "A) I, II and III only",
-        "B) I, II, III and IV",
-        "C) I and III only",
-        "D) II and III only"
+        "I, II and III only",
+        "I, II, III and IV",
+        "I and III only",
+        "II and III only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, II, and III are correct. SCP is a protein-rich food source, microorganisms multiply rapidly, and waste water can serve as substrate. Statement IV is incorrect; SCP can be produced using bacteria (Methylophilus), yeast (Saccharomyces), algae (Spirulina, Chlorella), and fungi.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["SCP", "alternative-protein"],
+      "tags": [
+        "SCP",
+        "alternative-protein"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2224,17 +2365,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Consider the following statements about fisheries:\nI. Aquaculture involves farming of fishes, crustaceans, and molluscs.\nII. Blue Revolution refers to the rapid increase in fish production.\nIII. Composite fish culture uses only indigenous fish species.\nIV. Mariculture involves culture of marine organisms.\nWhich are correct?",
       "options": [
-        "A) I, II and IV only",
-        "B) I, II, III and IV",
-        "C) I and IV only",
-        "D) II and III only"
+        "I, II and IV only",
+        "I, II, III and IV",
+        "I and IV only",
+        "II and III only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, II, and IV are correct. Statement III is incorrect; composite fish culture uses BOTH indigenous (Catla, Rohu, Mrigal) AND exotic species (Silver Carp, Grass Carp, Common Carp).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["fisheries", "aquaculture"],
+      "tags": [
+        "fisheries",
+        "aquaculture"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2246,17 +2390,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following crop varieties with their improved trait:\nColumn I: (P) Himgiri (Q) Pusa Komal (R) Pusa A-4 (S) Pusa Sawani\nColumn II: (i) Resistance to yellow vein mosaic virus (ii) Resistance to shoot and fruit borer (iii) Resistance to leaf rust, stripe rust, hill bunt (iv) Resistance to bacterial blight",
       "options": [
-        "A) P-iii, Q-iv, R-i, S-ii",
-        "B) P-iv, Q-iii, R-ii, S-i",
-        "C) P-iii, Q-i, R-iv, S-ii",
-        "D) P-i, Q-iv, R-iii, S-ii"
+        "P-iii, Q-iv, R-i, S-ii",
+        "P-iv, Q-iii, R-ii, S-i",
+        "P-iii, Q-i, R-iv, S-ii",
+        "P-i, Q-iv, R-iii, S-ii"
       ],
       "correctAnswer": "A",
       "explanation": "Himgiri (wheat) - leaf rust, stripe rust, hill bunt (iii); Pusa Komal (cowpea) - bacterial blight (iv); Pusa A-4 (okra) - yellow vein mosaic virus (i); Pusa Sawani (okra) - shoot and fruit borer (ii).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["crop-varieties", "disease-resistance"],
+      "tags": [
+        "crop-varieties",
+        "disease-resistance"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2268,17 +2415,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following terms with their definitions:\nColumn I: (P) Germplasm (Q) Cultivar (R) Hybrid vigour (S) Pure line\nColumn II: (i) Superior performance of hybrid over parents (ii) A variety developed by breeding for cultivation (iii) Collection of all diverse alleles for all genes in a crop (iv) A group of homozygous plants obtained by inbreeding",
       "options": [
-        "A) P-iii, Q-ii, R-i, S-iv",
-        "B) P-ii, Q-iii, R-iv, S-i",
-        "C) P-iii, Q-iv, R-ii, S-i",
-        "D) P-i, Q-ii, R-iii, S-iv"
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-ii, Q-iii, R-iv, S-i",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-i, Q-ii, R-iii, S-iv"
       ],
       "correctAnswer": "A",
       "explanation": "Germplasm (P) - collection of all diverse alleles for all genes (iii); Cultivar (Q) - a variety developed by breeding for cultivation (ii); Hybrid vigour/heterosis (R) - superior performance of hybrid over parents (i); Pure line (S) - homozygous plants from inbreeding (iv).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["plant-breeding", "terminology"],
+      "tags": [
+        "plant-breeding",
+        "terminology"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2290,17 +2440,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following animal husbandry practices with their descriptions:\nColumn I: (P) Dairy farming (Q) Poultry farming (R) Apiculture (S) Fishery\nColumn II: (i) Rearing of honey bees (ii) Rearing of domestic fowl (iii) Management of milch animals (iv) Rearing and harvesting of fish",
       "options": [
-        "A) P-iii, Q-ii, R-i, S-iv",
-        "B) P-ii, Q-iii, R-iv, S-i",
-        "C) P-iii, Q-i, R-ii, S-iv",
-        "D) P-iv, Q-ii, R-i, S-iii"
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-ii, Q-iii, R-iv, S-i",
+        "P-iii, Q-i, R-ii, S-iv",
+        "P-iv, Q-ii, R-i, S-iii"
       ],
       "correctAnswer": "A",
       "explanation": "Dairy farming (P) - management of milch animals for milk (iii); Poultry farming (Q) - rearing domestic fowl for eggs and meat (ii); Apiculture (R) - rearing honey bees (i); Fishery (S) - rearing and harvesting fish (iv).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["animal-husbandry", "practices"],
+      "tags": [
+        "animal-husbandry",
+        "practices"
+      ],
       "neetWeightage": "LOW"
     },
     {
@@ -2312,17 +2465,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following sugarcane species with their characteristics:\nColumn I: (P) Saccharum barberi (Q) Saccharum officinarum\nColumn II: (i) High sugar content, thick stems, higher yield (ii) Low sugar, thin, hardy, grows in North India",
       "options": [
-        "A) P-ii, Q-i",
-        "B) P-i, Q-ii",
-        "C) Both have high sugar",
-        "D) Both are thin-stemmed"
+        "P-ii, Q-i",
+        "P-i, Q-ii",
+        "Both have high sugar",
+        "Both are thin-stemmed"
       ],
       "correctAnswer": "A",
       "explanation": "Saccharum barberi (P) is the North Indian species with low sugar content, thin stems but hardy nature (ii). Saccharum officinarum (Q) is the South Indian species with high sugar content, thick stems and higher yield (i). Modern sugarcane varieties were developed by crossing both.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["sugarcane-species", "plant-breeding"],
+      "tags": [
+        "sugarcane-species",
+        "plant-breeding"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2334,17 +2490,20 @@
       "ncertChapterName": "Strategies for Enhancement in Food Production",
       "question": "Match the following tissue culture products with their descriptions:\nColumn I: (P) Callus (Q) Somatic embryoids (R) Synthetic seeds (S) Virus-free plants\nColumn II: (i) Produced by meristem culture (ii) Encapsulated somatic embryoids (iii) Embryo-like structures from somatic cells (iv) Undifferentiated mass of cells",
       "options": [
-        "A) P-iv, Q-iii, R-ii, S-i",
-        "B) P-iii, Q-iv, R-i, S-ii",
-        "C) P-iv, Q-ii, R-iii, S-i",
-        "D) P-i, Q-iii, R-ii, S-iv"
+        "P-iv, Q-iii, R-ii, S-i",
+        "P-iii, Q-iv, R-i, S-ii",
+        "P-iv, Q-ii, R-iii, S-i",
+        "P-i, Q-iii, R-ii, S-iv"
       ],
       "correctAnswer": "A",
       "explanation": "Callus (P) - undifferentiated mass of cells (iv); Somatic embryoids (Q) - embryo-like structures from somatic cells (iii); Synthetic seeds (R) - encapsulated somatic embryoids (ii); Virus-free plants (S) - produced by meristem/shoot tip culture since viruses do not reach meristematic cells (i).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["tissue-culture", "products"],
+      "tags": [
+        "tissue-culture",
+        "products"
+      ],
       "neetWeightage": "MEDIUM"
     }
   ]

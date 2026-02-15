@@ -15,10 +15,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The innermost layer of the alimentary canal is:",
       "options": [
-        "A) Serosa",
-        "C) Submucosa",
-        "B) Muscularis",
-        "D) Mucosa"
+        "Serosa",
+        "Submucosa",
+        "Muscularis",
+        "Mucosa"
       ],
       "correctAnswer": "D",
       "explanation": "The mucosa is the innermost layer of the alimentary canal. It lines the lumen and is involved in absorption and secretion. It is made up of epithelium, lamina propria, and muscularis mucosae.",
@@ -40,10 +40,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Ptyalin is secreted by which gland?",
       "options": [
-        "B) Gastric glands",
-        "D) Liver",
-        "A) Salivary glands",
-        "C) Pancreas"
+        "Gastric glands",
+        "Liver",
+        "Salivary glands",
+        "Pancreas"
       ],
       "correctAnswer": "C",
       "explanation": "Ptyalin (salivary amylase) is secreted by the salivary glands, particularly the parotid glands. It acts on starch and converts it into maltose at an optimum pH of 6.8.",
@@ -66,10 +66,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The pH of human saliva is approximately:",
       "options": [
-        "D) 2.0",
-        "A) 4.0",
-        "C) 8.0",
-        "B) 6.8"
+        "2.0",
+        "4.0",
+        "8.0",
+        "6.8"
       ],
       "correctAnswer": "D",
       "explanation": "The pH of human saliva is approximately 6.8, which is slightly acidic to neutral. This pH is optimal for the action of salivary amylase (ptyalin) on starch.",
@@ -91,10 +91,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which cells of the gastric glands secrete hydrochloric acid?",
       "options": [
-        "C) Mucus neck cells",
-        "D) Goblet cells",
-        "A) Chief cells",
-        "B) Oxyntic (parietal) cells"
+        "Mucus neck cells",
+        "Goblet cells",
+        "Chief cells",
+        "Oxyntic (parietal) cells"
       ],
       "correctAnswer": "D",
       "explanation": "Oxyntic or parietal cells of the gastric glands secrete HCl. The HCl provides an acidic medium (pH 1.8) for pepsin activity and also kills bacteria in food.",
@@ -117,10 +117,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Pepsinogen is activated into pepsin by:",
       "options": [
-        "A) Trypsin",
-        "D) Bile salts",
-        "B) Enterokinase",
-        "C) HCl"
+        "Trypsin",
+        "Bile salts",
+        "Enterokinase",
+        "HCl"
       ],
       "correctAnswer": "D",
       "explanation": "Pepsinogen, the inactive proenzyme secreted by chief cells, is activated into pepsin by hydrochloric acid secreted by parietal cells. Once formed, pepsin also activates more pepsinogen (autocatalysis).",
@@ -143,10 +143,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The bile is produced by the liver but stored and concentrated in the:",
       "options": [
-        "D) Spleen",
-        "C) Duodenum",
-        "B) Gall bladder",
-        "A) Pancreas"
+        "Spleen",
+        "Duodenum",
+        "Gall bladder",
+        "Pancreas"
       ],
       "correctAnswer": "C",
       "explanation": "Bile is continuously produced by the hepatocytes of the liver but is stored and concentrated in the gall bladder. It is released into the duodenum through the common bile duct.",
@@ -169,10 +169,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Trypsinogen is activated into trypsin by:",
       "options": [
-        "A) HCl",
-        "B) Pepsin",
-        "C) Enterokinase",
-        "D) Bile salts"
+        "HCl",
+        "Pepsin",
+        "Enterokinase",
+        "Bile salts"
       ],
       "correctAnswer": "C",
       "explanation": "Trypsinogen, the inactive form of trypsin secreted by the pancreas, is activated into trypsin by the enzyme enterokinase (enteropeptidase) secreted by the intestinal mucosa.",
@@ -195,10 +195,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which part of the small intestine receives the bile and pancreatic juice?",
       "options": [
-        "B) Ileum",
-        "D) Pylorus",
-        "A) Jejunum",
-        "C) Duodenum"
+        "Ileum",
+        "Pylorus",
+        "Jejunum",
+        "Duodenum"
       ],
       "correctAnswer": "D",
       "explanation": "The duodenum is the first part of the small intestine where the hepato-pancreatic duct opens. Both bile from the liver and pancreatic juice from the pancreas are released into the duodenum.",
@@ -221,10 +221,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The largest gland in the human body is:",
       "options": [
-        "D) Pituitary",
-        "B) Thyroid",
-        "A) Pancreas",
-        "C) Liver"
+        "Pituitary",
+        "Thyroid",
+        "Pancreas",
+        "Liver"
       ],
       "correctAnswer": "D",
       "explanation": "The liver is the largest gland in the human body, weighing about 1.2-1.5 kg. It produces bile, stores glycogen, detoxifies substances, and performs over 500 vital functions.",
@@ -246,10 +246,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The enzyme lipase acts on:",
       "options": [
-        "B) Carbohydrates",
-        "A) Proteins",
-        "C) Fats",
-        "D) Nucleic acids"
+        "Carbohydrates",
+        "Proteins",
+        "Fats",
+        "Nucleic acids"
       ],
       "correctAnswer": "C",
       "explanation": "Lipase is a fat-digesting enzyme. Pancreatic lipase converts emulsified fats (triglycerides) into diglycerides, monoglycerides, fatty acids, and glycerol.",
@@ -271,10 +271,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Brunner's glands are found in the:",
       "options": [
-        "A) Stomach",
-        "D) Ileum",
-        "C) Duodenum",
-        "B) Oesophagus"
+        "Stomach",
+        "Ileum",
+        "Duodenum",
+        "Oesophagus"
       ],
       "correctAnswer": "C",
       "explanation": "Brunner's glands are compound tubular submucosal glands found in the duodenum. They secrete an alkaline mucus that protects the duodenal wall from the acidic chyme and provides an alkaline medium for intestinal enzymes.",
@@ -296,10 +296,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The hormone secretin stimulates the secretion of:",
       "options": [
-        "C) Pancreatic juice rich in bicarbonates",
-        "D) Saliva",
-        "A) Gastric juice",
-        "B) Bile from gall bladder"
+        "Pancreatic juice rich in bicarbonates",
+        "Saliva",
+        "Gastric juice",
+        "Bile from gall bladder"
       ],
       "correctAnswer": "A",
       "explanation": "Secretin is a hormone produced by the duodenal mucosa in response to acidic chyme. It stimulates the pancreas to secrete water and bicarbonate ions, which neutralize the acidic chyme entering the duodenum.",
@@ -321,10 +321,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Cholecystokinin (CCK) stimulates the contraction of:",
       "options": [
-        "C) Urinary bladder",
-        "A) Stomach",
-        "B) Gall bladder",
-        "D) Heart"
+        "Urinary bladder",
+        "Stomach",
+        "Gall bladder",
+        "Heart"
       ],
       "correctAnswer": "C",
       "explanation": "Cholecystokinin (CCK) is secreted by the intestinal mucosa and stimulates contraction of the gall bladder, causing release of bile into the duodenum. It also stimulates secretion of pancreatic enzymes.",
@@ -347,10 +347,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Absorption of fats occurs mainly through:",
       "options": [
-        "B) Lymph vessels (lacteals)",
-        "A) Blood capillaries",
-        "C) Hepatic portal vein",
-        "D) Renal vein"
+        "Lymph vessels (lacteals)",
+        "Blood capillaries",
+        "Hepatic portal vein",
+        "Renal vein"
       ],
       "correctAnswer": "A",
       "explanation": "Fatty acids and glycerol are first incorporated into small droplets called micelles, absorbed by intestinal cells, re-esterified into triglycerides, and released as chylomicrons into the lacteals (lymph vessels) in the villi.",
@@ -372,10 +372,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The Crypts of Lieberkuhn are found in:",
       "options": [
-        "B) Small intestine",
-        "C) Oesophagus",
-        "A) Stomach",
-        "D) Pharynx"
+        "Small intestine",
+        "Oesophagus",
+        "Stomach",
+        "Pharynx"
       ],
       "correctAnswer": "A",
       "explanation": "The Crypts of Lieberkuhn are tubular glands found between the bases of villi in the mucosa of the small intestine. They secrete intestinal juice (succus entericus) containing various digestive enzymes.",
@@ -397,10 +397,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following is not a component of bile?",
       "options": [
-        "C) Cholesterol",
-        "D) Digestive enzymes",
-        "A) Bile salts",
-        "B) Bile pigments"
+        "Cholesterol",
+        "Digestive enzymes",
+        "Bile salts",
+        "Bile pigments"
       ],
       "correctAnswer": "B",
       "explanation": "Bile does not contain any digestive enzymes. It contains bile salts, bile pigments (bilirubin and biliverdin), cholesterol, phospholipids, and electrolytes. Bile salts help in emulsification of fats.",
@@ -422,10 +422,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Gastric Inhibitory Peptide (GIP) is released from the:",
       "options": [
-        "D) Liver",
-        "B) Duodenum",
-        "A) Stomach",
-        "C) Pancreas"
+        "Liver",
+        "Duodenum",
+        "Stomach",
+        "Pancreas"
       ],
       "correctAnswer": "B",
       "explanation": "Gastric Inhibitory Peptide (GIP) is secreted by the duodenal mucosa. It inhibits gastric secretion and motility, thereby slowing gastric emptying when fats and glucose are present in the duodenum.",
@@ -447,10 +447,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The sphincter of Oddi guards the opening of the:",
       "options": [
-        "A) Pyloric canal into duodenum",
-        "B) Hepato-pancreatic duct into duodenum",
-        "D) Oesophagus into stomach",
-        "C) Ileum into caecum"
+        "Pyloric canal into duodenum",
+        "Hepato-pancreatic duct into duodenum",
+        "Oesophagus into stomach",
+        "Ileum into caecum"
       ],
       "correctAnswer": "B",
       "explanation": "The sphincter of Oddi is a muscular valve that surrounds the opening of the hepato-pancreatic ampulla (ampulla of Vater) into the duodenum. It regulates the flow of bile and pancreatic juice into the duodenum.",
@@ -472,10 +472,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Rennin acts on:",
       "options": [
-        "A) Starch",
-        "B) Fats",
-        "C) Casein (milk protein)",
-        "D) Nucleic acids"
+        "Starch",
+        "Fats",
+        "Casein (milk protein)",
+        "Nucleic acids"
       ],
       "correctAnswer": "C",
       "explanation": "Rennin (chymosin) is a proteolytic enzyme found in the gastric juice of infants. It converts soluble casein of milk into insoluble paracasein (curdling of milk) in the presence of calcium ions.",
@@ -497,10 +497,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following disorders is characterized by inflammation of the intestinal lining?",
       "options": [
-        "A) Jaundice",
-        "C) Inflammatory Bowel Disease (IBD)",
-        "B) Constipation",
-        "D) Vomiting"
+        "Jaundice",
+        "Inflammatory Bowel Disease (IBD)",
+        "Constipation",
+        "Vomiting"
       ],
       "correctAnswer": "B",
       "explanation": "Inflammatory Bowel Disease (IBD) is characterized by chronic inflammation of the intestinal lining. It includes Crohn's disease and ulcerative colitis, causing symptoms like diarrhea, abdominal pain, and weight loss.",
@@ -522,10 +522,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Peyer's patches are aggregated lymphoid tissue found in the:",
       "options": [
-        "B) Duodenum",
-        "C) Ileum",
-        "D) Large intestine",
-        "A) Stomach"
+        "Duodenum",
+        "Ileum",
+        "Large intestine",
+        "Stomach"
       ],
       "correctAnswer": "B",
       "explanation": "Peyer's patches are large aggregated lymphoid follicles found in the mucosa and submucosa of the ileum (last part of the small intestine). They are part of the gut-associated lymphoid tissue (GALT) and play a role in immune surveillance.",
@@ -548,10 +548,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The correct sequence of the parts of the human alimentary canal is:",
       "options": [
-        "A) Mouth → Pharynx → Oesophagus → Stomach → Small intestine → Large intestine",
-        "C) Mouth → Pharynx → Stomach → Oesophagus → Small intestine → Large intestine",
-        "D) Mouth → Stomach → Pharynx → Oesophagus → Small intestine → Large intestine",
-        "B) Mouth → Oesophagus → Pharynx → Stomach → Large intestine → Small intestine"
+        "Mouth → Pharynx → Oesophagus → Stomach → Small intestine → Large intestine",
+        "Mouth → Pharynx → Stomach → Oesophagus → Small intestine → Large intestine",
+        "Mouth → Stomach → Pharynx → Oesophagus → Small intestine → Large intestine",
+        "Mouth → Oesophagus → Pharynx → Stomach → Large intestine → Small intestine"
       ],
       "correctAnswer": "A",
       "explanation": "The correct anatomical sequence of the human alimentary canal is: Mouth → Pharynx → Oesophagus → Stomach → Small intestine (duodenum, jejunum, ileum) → Large intestine (caecum, colon, rectum) → Anus.",
@@ -573,10 +573,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Starch is digested by salivary amylase into:",
       "options": [
-        "A) Glucose",
-        "C) Maltose",
-        "D) Lactose",
-        "B) Sucrose"
+        "Glucose",
+        "Maltose",
+        "Lactose",
+        "Sucrose"
       ],
       "correctAnswer": "B",
       "explanation": "Salivary amylase (ptyalin) hydrolyzes starch into maltose (a disaccharide). Maltose is further broken down into glucose by the enzyme maltase in the small intestine.",
@@ -599,10 +599,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The vermiform appendix arises from the:",
       "options": [
-        "D) Ileum",
-        "C) Rectum",
-        "B) Caecum",
-        "A) Ascending colon"
+        "Ileum",
+        "Rectum",
+        "Caecum",
+        "Ascending colon"
       ],
       "correctAnswer": "C",
       "explanation": "The vermiform appendix is a narrow, finger-like tubular projection that arises from the caecum. It is a vestigial organ in humans but contains lymphoid tissue that may play a minor role in immunity.",
@@ -624,10 +624,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The main function of bile salts is:",
       "options": [
-        "D) Secretion of enzymes",
-        "B) Emulsification of fats",
-        "C) Absorption of water",
-        "A) Digestion of proteins"
+        "Secretion of enzymes",
+        "Emulsification of fats",
+        "Absorption of water",
+        "Digestion of proteins"
       ],
       "correctAnswer": "B",
       "explanation": "Bile salts (sodium glycocholate and sodium taurocholate) emulsify fats, breaking large fat globules into smaller droplets. This increases the surface area for the action of lipase enzyme.",
@@ -649,10 +649,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following is NOT a part of the large intestine?",
       "options": [
-        "B) Colon",
-        "C) Jejunum",
-        "D) Rectum",
-        "A) Caecum"
+        "Colon",
+        "Jejunum",
+        "Rectum",
+        "Caecum"
       ],
       "correctAnswer": "B",
       "explanation": "The jejunum is the middle part of the small intestine, not the large intestine. The large intestine consists of the caecum, ascending colon, transverse colon, descending colon, sigmoid colon, rectum, and anal canal.",
@@ -674,10 +674,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Succus entericus refers to:",
       "options": [
-        "B) Pancreatic juice",
-        "A) Gastric juice",
-        "D) Bile juice",
-        "C) Intestinal juice"
+        "Pancreatic juice",
+        "Gastric juice",
+        "Bile juice",
+        "Intestinal juice"
       ],
       "correctAnswer": "D",
       "explanation": "Succus entericus is the intestinal juice secreted by the glands of the small intestine (Crypts of Lieberkuhn). It contains enzymes like maltase, lactase, sucrase, peptidases, lipases, and nucleotidases.",
@@ -699,10 +699,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Intrinsic factor required for the absorption of vitamin B12 is secreted by:",
       "options": [
-        "B) Parietal cells",
-        "A) Chief cells",
-        "C) Goblet cells",
-        "D) Argentaffin cells"
+        "Parietal cells",
+        "Chief cells",
+        "Goblet cells",
+        "Argentaffin cells"
       ],
       "correctAnswer": "A",
       "explanation": "The intrinsic factor of Castle, a glycoprotein essential for the absorption of vitamin B12 in the ileum, is secreted by the parietal (oxyntic) cells of the gastric glands.",
@@ -725,10 +725,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Chylomicrons are produced in the:",
       "options": [
-        "D) Stomach",
-        "A) Liver",
-        "B) Intestinal epithelial cells",
-        "C) Pancreas"
+        "Stomach",
+        "Liver",
+        "Intestinal epithelial cells",
+        "Pancreas"
       ],
       "correctAnswer": "C",
       "explanation": "Chylomicrons are lipoproteins formed in the intestinal epithelial cells. They consist of re-esterified triglycerides coated with proteins and are released into lacteals for transport through the lymphatic system.",
@@ -750,10 +750,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Jaundice is caused due to excess accumulation of:",
       "options": [
-        "C) Haemoglobin",
-        "A) Biliverdin",
-        "D) Cholesterol",
-        "B) Bilirubin"
+        "Haemoglobin",
+        "Biliverdin",
+        "Cholesterol",
+        "Bilirubin"
       ],
       "correctAnswer": "D",
       "explanation": "Jaundice is characterized by yellowing of the skin and eyes due to excessive accumulation of bilirubin in the blood. It can result from liver diseases, obstruction of bile duct, or excessive breakdown of RBCs.",
@@ -776,10 +776,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The enzyme nucleotidase acts on:",
       "options": [
-        "A) Proteins",
-        "C) Nucleotides",
-        "B) Fats",
-        "D) Starch"
+        "Proteins",
+        "Nucleotides",
+        "Fats",
+        "Starch"
       ],
       "correctAnswer": "B",
       "explanation": "Nucleotidase is an intestinal enzyme that hydrolyzes nucleotides into nucleosides and phosphate groups. It is part of the nucleic acid digestion pathway in the small intestine.",
@@ -801,10 +801,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following salivary glands produces entirely serous secretion?",
       "options": [
-        "C) Parotid",
-        "D) Buccal",
-        "A) Sublingual",
-        "B) Submandibular"
+        "Parotid",
+        "Buccal",
+        "Sublingual",
+        "Submandibular"
       ],
       "correctAnswer": "A",
       "explanation": "The parotid gland is a purely serous gland that produces watery saliva rich in salivary amylase (ptyalin). The submandibular is mixed (sero-mucous) and sublingual is predominantly mucous.",
@@ -826,10 +826,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which vitamin is synthesized by bacteria in the large intestine?",
       "options": [
-        "C) Vitamin K",
-        "D) Vitamin E",
-        "A) Vitamin A",
-        "B) Vitamin D"
+        "Vitamin K",
+        "Vitamin E",
+        "Vitamin A",
+        "Vitamin D"
       ],
       "correctAnswer": "A",
       "explanation": "Vitamin K and some B-complex vitamins are synthesized by symbiotic bacteria (e.g., E. coli) residing in the large intestine. Vitamin K is essential for blood clotting and is absorbed from the colon.",
@@ -852,10 +852,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The dental formula of an adult human is:",
       "options": [
-        "D) 2122/2122",
-        "C) 2132/2132",
-        "A) 2123/2123",
-        "B) 2133/2133"
+        "2122/2122",
+        "2132/2132",
+        "2123/2123",
+        "2133/2133"
       ],
       "correctAnswer": "C",
       "explanation": "The dental formula of an adult human is 2123/2123, meaning each half of each jaw contains 2 incisors, 1 canine, 2 premolars, and 3 molars. This gives a total of 32 teeth (heterodont and thecodont dentition).",
@@ -877,10 +877,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The wave-like muscular contractions that move food along the alimentary canal are called:",
       "options": [
-        "D) Churning",
-        "B) Peristalsis",
-        "A) Segmentation",
-        "C) Pendular movements"
+        "Churning",
+        "Peristalsis",
+        "Segmentation",
+        "Pendular movements"
       ],
       "correctAnswer": "B",
       "explanation": "Peristalsis consists of successive waves of involuntary muscular contractions along the alimentary canal that propel food from the oesophagus towards the anus. It involves coordinated contraction and relaxation of circular and longitudinal muscles.",
@@ -902,10 +902,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Glucose and amino acids are absorbed in the intestine by:",
       "options": [
-        "C) Active transport",
-        "B) Osmosis",
-        "A) Simple diffusion",
-        "D) Endocytosis"
+        "Active transport",
+        "Osmosis",
+        "Simple diffusion",
+        "Endocytosis"
       ],
       "correctAnswer": "A",
       "explanation": "Glucose and amino acids are absorbed from the intestinal lumen into epithelial cells by active transport (requiring ATP). They are then transported to blood capillaries in the villi. Fructose, however, is absorbed by facilitated diffusion.",
@@ -927,10 +927,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The pancreas is a:",
       "options": [
-        "A) Purely exocrine gland",
-        "C) Mixed gland (both exocrine and endocrine)",
-        "D) Neither exocrine nor endocrine",
-        "B) Purely endocrine gland"
+        "Purely exocrine gland",
+        "Mixed gland (both exocrine and endocrine)",
+        "Neither exocrine nor endocrine",
+        "Purely endocrine gland"
       ],
       "correctAnswer": "B",
       "explanation": "The pancreas is a heterocrine (mixed) gland. Its exocrine part (acinar cells) secretes pancreatic juice containing digestive enzymes, while its endocrine part (Islets of Langerhans) secretes insulin and glucagon.",
@@ -952,10 +952,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Procarboxypeptidase is activated by:",
       "options": [
-        "B) HCl",
-        "C) Trypsin",
-        "D) Pepsin",
-        "A) Enterokinase"
+        "HCl",
+        "Trypsin",
+        "Pepsin",
+        "Enterokinase"
       ],
       "correctAnswer": "B",
       "explanation": "Procarboxypeptidase, an inactive pancreatic proenzyme, is activated into carboxypeptidase by trypsin. Trypsin itself is activated from trypsinogen by enterokinase and can then activate other pancreatic zymogens.",
@@ -978,10 +978,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The sigmoid colon is part of the:",
       "options": [
-        "A) Small intestine",
-        "B) Large intestine",
-        "C) Stomach",
-        "D) Oesophagus"
+        "Small intestine",
+        "Large intestine",
+        "Stomach",
+        "Oesophagus"
       ],
       "correctAnswer": "B",
       "explanation": "The sigmoid colon is the S-shaped terminal part of the descending colon that connects to the rectum. It is part of the large intestine and stores feces before defecation.",
@@ -1003,10 +1003,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): Pepsin is secreted in its inactive form pepsinogen.\nReason (R): Secretion as inactive zymogen protects the gastric mucosa from self-digestion.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both assertion and reason are correct and the reason correctly explains the assertion. Pepsin is secreted as pepsinogen (inactive zymogen) to prevent autodigestion of the gastric glandular cells and mucosa.",
@@ -1029,10 +1029,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): Bile does not contain any enzyme.\nReason (R): Bile is produced by the gall bladder.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "D",
       "explanation": "The assertion is true as bile contains no enzymes; it contains bile salts, bile pigments, and cholesterol. However, the reason is false because bile is produced by the liver (hepatocytes), not the gall bladder. The gall bladder only stores and concentrates bile.",
@@ -1055,10 +1055,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): The stomach has a highly acidic pH of about 1.8.\nReason (R): Oxyntic cells of gastric glands secrete HCl.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason correctly explains the assertion. The highly acidic pH of the stomach (~1.8) is due to HCl secreted by oxyntic (parietal) cells. This acidic environment is essential for pepsin activity and killing ingested bacteria.",
@@ -1081,10 +1081,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): Small intestine is the principal site for absorption of nutrients.\nReason (R): The presence of villi and microvilli greatly increases the surface area for absorption.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are correct, and the reason explains the assertion. The small intestine's mucosal lining has numerous finger-like projections called villi, and each villus cell has microvilli (brush border), increasing the absorptive surface area enormously.",
@@ -1107,10 +1107,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): Enterokinase is a pancreatic enzyme.\nReason (R): Enterokinase activates trypsinogen to trypsin.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is false but R is true",
-        "D) Both A and R are false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "The assertion is false because enterokinase (enteropeptidase) is not a pancreatic enzyme; it is secreted by the intestinal mucosa (duodenum). The reason is true as enterokinase activates trypsinogen into trypsin.",
@@ -1133,10 +1133,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): Fructose is absorbed by active transport.\nReason (R): Glucose and amino acids are absorbed by active transport in the intestine.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) Both A and R are false",
-        "C) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "The assertion is false because fructose is absorbed by facilitated diffusion, not active transport. The reason is true as glucose and amino acids are indeed absorbed by active transport requiring energy (ATP).",
@@ -1159,10 +1159,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): Salivary amylase cannot act in the stomach.\nReason (R): The highly acidic pH of the stomach inactivates salivary amylase.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason correctly explains the assertion. Salivary amylase works optimally at pH 6.8 and is inactivated in the acidic environment of the stomach (pH ~1.8). Starch digestion by ptyalin stops in the stomach.",
@@ -1185,10 +1185,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): Cellulose cannot be digested by humans.\nReason (R): Humans lack the enzyme cellulase that is required to break beta-1,4 glycosidic bonds in cellulose.",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason correctly explains the assertion. Cellulose has beta-1,4 glycosidic bonds that require cellulase for digestion. Humans lack this enzyme, so cellulose passes through as dietary fibre (roughage).",
@@ -1211,10 +1211,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): Fatty acids are absorbed into the lacteals of the intestinal villi.\nReason (R): Fatty acids are water-soluble and easily enter blood capillaries.",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "A",
       "explanation": "The assertion is true as fatty acids (as chylomicrons) are absorbed into lacteals. The reason is false because fatty acids are NOT water-soluble; they are hydrophobic. This is precisely why they are packaged as chylomicrons and transported via lymph rather than blood.",
@@ -1237,10 +1237,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): Proteins in food are digested by pepsin in the stomach.\nReason (R): Pepsin acts on proteins at an alkaline pH.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "D) Both A and R are false"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are false"
       ],
       "correctAnswer": "C",
       "explanation": "The assertion is true as pepsin does digest proteins in the stomach, converting them into proteoses and peptones. The reason is false because pepsin acts at an acidic pH (around 1.8-2.0), not alkaline pH.",
@@ -1263,10 +1263,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): GIP inhibits gastric secretion and motility.\nReason (R): GIP is secreted by the gastric mucosa.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "D",
       "explanation": "The assertion is true as GIP (Gastric Inhibitory Peptide) does inhibit gastric secretion and motility. The reason is false because GIP is secreted by the duodenal mucosa (K cells of the small intestine), not the gastric mucosa.",
@@ -1288,10 +1288,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): The human dentition is described as heterodont and thecodont.\nReason (R): Heterodont means different types of teeth and thecodont means teeth are embedded in jaw sockets.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. Human teeth are heterodont (having different types: incisors, canines, premolars, molars) and thecodont (embedded in bony sockets in the jaw). They are also diphyodont (two sets: milk and permanent teeth).",
@@ -1314,10 +1314,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): Kwashiorkor is a protein-energy malnutrition disorder in children.\nReason (R): It is caused by inadequate protein intake in the diet despite sufficient caloric intake.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason correctly explains the assertion. Kwashiorkor occurs in children who get adequate calories (carbohydrates) but insufficient protein. Symptoms include edema, distended belly, and skin lesions.",
@@ -1340,10 +1340,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Assertion (A): Secretin and CCK are called enterogastrones.\nReason (R): They are secreted by the intestinal mucosa and inhibit gastric secretion.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason correctly explains the assertion. Secretin and CCK are called enterogastrones because they are produced by the intestinal mucosa and have an inhibitory effect on gastric secretion and motility.",
@@ -1366,10 +1366,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Consider the following statements about the stomach:\n(i) The stomach has three parts: cardiac, fundic, and pyloric.\n(ii) Chief cells secrete pepsinogen.\n(iii) Mucus neck cells secrete mucus.\n(iv) Parietal cells secrete HCl and intrinsic factor.\nWhich of the above statements are correct?",
       "options": [
-        "C) (ii) and (iv) only",
-        "A) (i), (ii), and (iii) only",
-        "B) (i), (ii), (iii), and (iv)",
-        "D) (i) and (iii) only"
+        "(ii) and (iv) only",
+        "(i), (ii), and (iii) only",
+        "(i), (ii), (iii), and (iv)",
+        "(i) and (iii) only"
       ],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. The stomach has cardiac, fundic, and pyloric regions. Chief (peptic/zymogenic) cells secrete pepsinogen, mucus neck cells secrete mucus for protection, and parietal (oxyntic) cells secrete HCl and intrinsic factor.",
@@ -1391,10 +1391,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following statements about bile is/are correct?\n(i) Bile contains digestive enzymes.\n(ii) Bile salts help in emulsification of fats.\n(iii) Bilirubin is a bile pigment formed from breakdown of haemoglobin.\n(iv) Bile is produced by the gall bladder.",
       "options": [
-        "B) (ii) and (iii) only",
-        "A) (i) and (iv) only",
-        "D) (i), (ii), and (iii)",
-        "C) (ii), (iii), and (iv)"
+        "(ii) and (iii) only",
+        "(i) and (iv) only",
+        "(i), (ii), and (iii)",
+        "(ii), (iii), and (iv)"
       ],
       "correctAnswer": "A",
       "explanation": "Only statements (ii) and (iii) are correct. Bile salts emulsify fats, and bilirubin is formed from haemoglobin breakdown. Statement (i) is wrong because bile has no enzymes. Statement (iv) is wrong because bile is produced by the liver, not gall bladder.",
@@ -1417,10 +1417,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Read the following statements and select the correct option:\n(i) Carboxypeptidase is an exopeptidase.\n(ii) Chymotrypsin is an endopeptidase.\n(iii) Trypsin activates other pancreatic proenzymes.\n(iv) Elastase digests elastic connective tissue.",
       "options": [
-        "A) Only (i) and (ii) are correct",
-        "B) Only (i), (ii), and (iii) are correct",
-        "C) All four are correct",
-        "D) Only (iii) and (iv) are correct"
+        "Only (i) and (ii) are correct",
+        "Only (i), (ii), and (iii) are correct",
+        "All four are correct",
+        "Only (iii) and (iv) are correct"
       ],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. Carboxypeptidase cleaves terminal amino acids (exopeptidase). Chymotrypsin cleaves internal peptide bonds (endopeptidase). Trypsin activates chymotrypsinogen, procarboxypeptidase, and proelastase. Elastase digests elastin.",
@@ -1442,10 +1442,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Consider the following statements about absorption in the alimentary canal:\n(i) Most absorption occurs in the jejunum and ileum.\n(ii) Water is absorbed mainly in the large intestine.\n(iii) Iron is absorbed in the stomach.\n(iv) Alcohol is absorbed in the stomach.",
       "options": [
-        "B) (i), (ii), and (iv) only",
-        "A) (i) and (ii) only",
-        "D) (i), (iii), and (iv) only",
-        "C) All are correct"
+        "(i), (ii), and (iv) only",
+        "(i) and (ii) only",
+        "(i), (iii), and (iv) only",
+        "All are correct"
       ],
       "correctAnswer": "D",
       "explanation": "All statements are correct. Maximum nutrient absorption occurs in jejunum/ileum. Water absorption is maximal in the large intestine. Iron can be absorbed in the stomach (and duodenum). Alcohol is absorbed in both the stomach and small intestine.",
@@ -1467,10 +1467,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following statements about the small intestine are correct?\n(i) It is the longest part of the alimentary canal.\n(ii) It is divided into duodenum, jejunum, and ileum.\n(iii) Villi are absent in the duodenum.\n(iv) Peyer's patches are found in the ileum.",
       "options": [
-        "A) (i), (ii), and (iv) only",
-        "B) (i), (ii), and (iii) only",
-        "D) All are correct",
-        "C) (ii) and (iv) only"
+        "(i), (ii), and (iv) only",
+        "(i), (ii), and (iii) only",
+        "All are correct",
+        "(ii) and (iv) only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), and (iv) are correct. The small intestine is the longest part (~6 meters), divided into duodenum, jejunum, and ileum, with Peyer's patches in the ileum. Statement (iii) is wrong because villi are present throughout the small intestine, including the duodenum.",
@@ -1492,10 +1492,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Read the following statements about GI tract hormones:\n(i) Gastrin stimulates secretion of HCl and pepsinogen.\n(ii) Secretin stimulates secretion of water and bicarbonate from pancreas.\n(iii) CCK stimulates gall bladder contraction.\n(iv) GIP stimulates gastric motility.\nWhich statements are correct?",
       "options": [
-        "A) (i), (ii), and (iii) only",
-        "B) (i), (ii), (iii), and (iv)",
-        "D) (i) and (iv) only",
-        "C) (ii) and (iii) only"
+        "(i), (ii), and (iii) only",
+        "(i), (ii), (iii), and (iv)",
+        "(i) and (iv) only",
+        "(ii) and (iii) only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), and (iii) are correct. Gastrin stimulates HCl and pepsinogen secretion. Secretin stimulates bicarbonate-rich pancreatic juice. CCK causes gall bladder contraction. Statement (iv) is wrong because GIP INHIBITS (not stimulates) gastric motility.",
@@ -1520,10 +1520,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Consider the following statements about digestive disorders:\n(i) Vomiting is controlled by the vomiting centre in medulla oblongata.\n(ii) Diarrhoea involves abnormal frequent defecation with liquid stools.\n(iii) Constipation is the retention of faeces in the rectum due to irregular bowel movements.\n(iv) Indigestion is also called dyspepsia.",
       "options": [
-        "D) All are correct",
-        "B) (ii) and (iii) only",
-        "C) (i), (ii), and (iii) only",
-        "A) (i) and (ii) only"
+        "All are correct",
+        "(ii) and (iii) only",
+        "(i), (ii), and (iii) only",
+        "(i) and (ii) only"
       ],
       "correctAnswer": "A",
       "explanation": "All four statements are correct. Vomiting is a reflex controlled by the vomiting centre in the medulla. Diarrhoea involves frequent liquid stools with reduced water absorption. Constipation involves retained faeces. Indigestion is clinically termed dyspepsia.",
@@ -1547,10 +1547,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following statements about protein digestion is/are INCORRECT?\n(i) Protein digestion begins in the mouth.\n(ii) Pepsin converts proteins to polypeptides in the stomach.\n(iii) Trypsin and chymotrypsin act in the duodenum.\n(iv) Dipeptidases split dipeptides into amino acids.",
       "options": [
-        "A) (i) only",
-        "B) (i) and (iv)",
-        "C) (ii) and (iii)",
-        "D) None of the above"
+        "(i) only",
+        "(i) and (iv)",
+        "(ii) and (iii)",
+        "None of the above"
       ],
       "correctAnswer": "A",
       "explanation": "Only statement (i) is incorrect. Protein digestion does NOT begin in the mouth; it begins in the stomach with pepsin. Statements (ii), (iii), and (iv) are all correct descriptions of protein digestion.",
@@ -1572,10 +1572,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Read the following statements about the liver:\n(i) It is the largest gland in the body.\n(ii) It has two lobes: right lobe and left lobe.\n(iii) The structural and functional unit of liver is hepatic lobule.\n(iv) Bile canaliculi are present between hepatocytes.\nSelect the correct statements:",
       "options": [
-        "A) (i), (ii), and (iii) only",
-        "D) (i) and (iii) only",
-        "B) (i), (iii), and (iv) only",
-        "C) All are correct"
+        "(i), (ii), and (iii) only",
+        "(i) and (iii) only",
+        "(i), (iii), and (iv) only",
+        "All are correct"
       ],
       "correctAnswer": "D",
       "explanation": "All four statements are correct. The liver is the largest gland (~1.5 kg), has right and left lobes (right being larger), hepatic lobules are its structural/functional units, and bile canaliculi are thin tubular channels between adjacent hepatocytes.",
@@ -1597,10 +1597,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Consider the following statements:\n(i) Lysozyme in saliva has antibacterial action.\n(ii) Mucus in saliva lubricates food for easy swallowing.\n(iii) Saliva contains the enzyme lipase.\n(iv) The pH of saliva is approximately 6.8.",
       "options": [
-        "C) (i) and (ii) only",
-        "A) (i), (ii), and (iv) only",
-        "B) All are correct",
-        "D) (iii) and (iv) only"
+        "(i) and (ii) only",
+        "(i), (ii), and (iv) only",
+        "All are correct",
+        "(iii) and (iv) only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements (i), (ii), and (iv) are correct. Saliva contains lysozyme (antibacterial), mucus (lubrication), and has a pH of ~6.8. Statement (iii) is incorrect; saliva contains amylase (ptyalin), not lipase. Lingual lipase is secreted by serous glands at the base of the tongue, not salivary glands.",
@@ -1623,10 +1623,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Which of the following statements about the layers of the alimentary canal wall is/are correct?\n(i) Serosa is the outermost layer.\n(ii) Muscularis has outer longitudinal and inner circular muscle layers.\n(iii) Submucosa contains blood vessels and Meissner's plexus.\n(iv) The muscularis of the stomach has an additional oblique muscle layer.",
       "options": [
-        "C) All are correct",
-        "D) (i), (iii), and (iv) only",
-        "A) (i) and (ii) only",
-        "B) (i), (ii), and (iii) only"
+        "All are correct",
+        "(i), (iii), and (iv) only",
+        "(i) and (ii) only",
+        "(i), (ii), and (iii) only"
       ],
       "correctAnswer": "A",
       "explanation": "All four statements are correct. The GI tract wall has four layers: serosa (outermost), muscularis (outer longitudinal + inner circular), submucosa (with Meissner's plexus), and mucosa. The stomach uniquely has an additional oblique muscle layer for churning.",
@@ -1649,10 +1649,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Select the INCORRECT statement(s) about carbohydrate digestion:\n(i) Starch digestion begins in the mouth by ptyalin.\n(ii) Pancreatic amylase continues starch digestion in the duodenum.\n(iii) Sucrase converts sucrose into glucose and galactose.\n(iv) Lactase converts lactose into glucose and galactose.",
       "options": [
-        "A) (iii) only",
-        "D) (iv) only",
-        "C) (iii) and (iv)",
-        "B) (i) and (ii)"
+        "(iii) only",
+        "(iv) only",
+        "(iii) and (iv)",
+        "(i) and (ii)"
       ],
       "correctAnswer": "A",
       "explanation": "Statement (iii) is incorrect. Sucrase converts sucrose into glucose and FRUCTOSE (not galactose). Statements (i), (ii), and (iv) are all correct. Lactase correctly converts lactose into glucose and galactose.",
@@ -1674,10 +1674,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Consider the following about pancreatic juice:\n(i) It contains trypsinogen, chymotrypsinogen, and procarboxypeptidase.\n(ii) Pancreatic lipase requires bile salts for its action.\n(iii) Pancreatic amylase acts on starch.\n(iv) DNase and RNase in pancreatic juice digest nucleic acids.\nHow many statements are correct?",
       "options": [
-        "D) Four",
-        "C) Three",
-        "B) Two",
-        "A) One"
+        "Four",
+        "Three",
+        "Two",
+        "One"
       ],
       "correctAnswer": "A",
       "explanation": "All four statements are correct. Pancreatic juice contains inactive proenzymes (trypsinogen, chymotrypsinogen, procarboxypeptidase). Pancreatic lipase works on emulsified fats (bile salt-aided). Pancreatic amylase digests starch. DNase and RNase digest DNA and RNA respectively.",
@@ -1699,10 +1699,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Consider the following about the large intestine:\n(i) It is divided into caecum, colon, and rectum.\n(ii) The main function is absorption of water, minerals, and some vitamins.\n(iii) Bacteria in the colon synthesize vitamin K and B12.\n(iv) Haustrations are the movements of the large intestine.\nWhich are correct?",
       "options": [
-        "D) (i), (ii), (iii), and (iv)",
-        "B) (i), (ii), and (iv) only",
-        "C) All are correct",
-        "A) (i) and (ii) only"
+        "(i), (ii), (iii), and (iv)",
+        "(i), (ii), and (iv) only",
+        "All are correct",
+        "(i) and (ii) only"
       ],
       "correctAnswer": "A",
       "explanation": "All four statements are correct. The large intestine has caecum, colon (ascending, transverse, descending, sigmoid), and rectum. It absorbs water and electrolytes. Colonic bacteria produce vitamin K and some B vitamins. Haustrations are characteristic movements of the colon.",
@@ -1725,10 +1725,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the enzyme with its substrate:\n(P) Ptyalin - (1) Proteins\n(Q) Pepsin - (2) Starch\n(R) Lipase - (3) Lactose\n(S) Lactase - (4) Fats",
       "options": [
-        "B) P-1, Q-2, R-3, S-4",
-        "A) P-2, Q-1, R-4, S-3",
-        "C) P-2, Q-4, R-1, S-3",
-        "D) P-3, Q-1, R-4, S-2"
+        "P-1, Q-2, R-3, S-4",
+        "P-2, Q-1, R-4, S-3",
+        "P-2, Q-4, R-1, S-3",
+        "P-3, Q-1, R-4, S-2"
       ],
       "correctAnswer": "B",
       "explanation": "Ptyalin (salivary amylase) acts on starch (P-2). Pepsin acts on proteins (Q-1). Lipase acts on fats (R-4). Lactase acts on lactose (S-3).",
@@ -1750,10 +1750,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the hormone with its function:\n(P) Gastrin - (1) Stimulates bicarbonate secretion from pancreas\n(Q) Secretin - (2) Stimulates gall bladder contraction\n(R) CCK - (3) Stimulates HCl secretion\n(S) GIP - (4) Inhibits gastric secretion",
       "options": [
-        "B) P-1, Q-3, R-4, S-2",
-        "A) P-3, Q-1, R-2, S-4",
-        "D) P-4, Q-1, R-2, S-3",
-        "C) P-3, Q-2, R-1, S-4"
+        "P-1, Q-3, R-4, S-2",
+        "P-3, Q-1, R-2, S-4",
+        "P-4, Q-1, R-2, S-3",
+        "P-3, Q-2, R-1, S-4"
       ],
       "correctAnswer": "B",
       "explanation": "Gastrin stimulates HCl secretion (P-3). Secretin stimulates bicarbonate-rich pancreatic juice (Q-1). CCK stimulates gall bladder contraction (R-2). GIP inhibits gastric secretion (S-4).",
@@ -1775,10 +1775,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the cell type with its secretion:\n(P) Chief cells - (1) HCl\n(Q) Parietal cells - (2) Mucus\n(R) Mucus neck cells - (3) Pepsinogen\n(S) G cells - (4) Gastrin",
       "options": [
-        "B) P-1, Q-3, R-4, S-2",
-        "A) P-3, Q-1, R-2, S-4",
-        "D) P-4, Q-2, R-1, S-3",
-        "C) P-2, Q-1, R-3, S-4"
+        "P-1, Q-3, R-4, S-2",
+        "P-3, Q-1, R-2, S-4",
+        "P-4, Q-2, R-1, S-3",
+        "P-2, Q-1, R-3, S-4"
       ],
       "correctAnswer": "B",
       "explanation": "Chief (peptic) cells secrete pepsinogen (P-3). Parietal (oxyntic) cells secrete HCl (Q-1). Mucus neck cells secrete mucus (R-2). G cells secrete gastrin (S-4).",
@@ -1800,10 +1800,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the part of the GI tract with its special feature:\n(P) Duodenum - (1) Peyer's patches\n(Q) Ileum - (2) Rugae\n(R) Stomach - (3) Brunner's glands\n(S) Large intestine - (4) Haustrations",
       "options": [
-        "D) P-4, Q-2, R-1, S-3",
-        "B) P-1, Q-3, R-4, S-2",
-        "A) P-3, Q-1, R-2, S-4",
-        "C) P-2, Q-1, R-3, S-4"
+        "P-4, Q-2, R-1, S-3",
+        "P-1, Q-3, R-4, S-2",
+        "P-3, Q-1, R-2, S-4",
+        "P-2, Q-1, R-3, S-4"
       ],
       "correctAnswer": "C",
       "explanation": "The duodenum has Brunner's glands (P-3). The ileum has Peyer's patches (Q-1). The stomach has rugae (folds) (R-2). The large intestine has haustrations (S-4).",
@@ -1825,10 +1825,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the proenzyme with its activator:\n(P) Pepsinogen - (1) Enterokinase\n(Q) Trypsinogen - (2) HCl\n(R) Chymotrypsinogen - (3) Trypsin\n(S) Procarboxypeptidase - (4) Trypsin",
       "options": [
-        "D) P-3, Q-1, R-2, S-4",
-        "B) P-1, Q-2, R-4, S-3",
-        "C) P-2, Q-3, R-1, S-4",
-        "A) P-2, Q-1, R-3, S-4"
+        "P-3, Q-1, R-2, S-4",
+        "P-1, Q-2, R-4, S-3",
+        "P-2, Q-3, R-1, S-4",
+        "P-2, Q-1, R-3, S-4"
       ],
       "correctAnswer": "D",
       "explanation": "Pepsinogen is activated by HCl (P-2). Trypsinogen is activated by enterokinase (Q-1). Chymotrypsinogen is activated by trypsin (R-3). Procarboxypeptidase is activated by trypsin (S-4).",
@@ -1850,10 +1850,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the disaccharide with its monosaccharide products:\n(P) Maltose - (1) Glucose + Galactose\n(Q) Sucrose - (2) Glucose + Glucose\n(R) Lactose - (3) Glucose + Fructose",
       "options": [
-        "C) P-3, Q-1, R-2",
-        "D) P-2, Q-1, R-3",
-        "B) P-1, Q-2, R-3",
-        "A) P-2, Q-3, R-1"
+        "P-3, Q-1, R-2",
+        "P-2, Q-1, R-3",
+        "P-1, Q-2, R-3",
+        "P-2, Q-3, R-1"
       ],
       "correctAnswer": "D",
       "explanation": "Maltose is hydrolyzed into two glucose molecules (P-2). Sucrose is hydrolyzed into glucose and fructose (Q-3). Lactose is hydrolyzed into glucose and galactose (R-1).",
@@ -1875,10 +1875,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the digestive gland with its location:\n(P) Parotid gland - (1) Below the tongue\n(Q) Submandibular gland - (2) Below and in front of the ear\n(R) Sublingual gland - (3) At the angle of the lower jaw\n(S) Brunner's gland - (4) Submucosa of duodenum",
       "options": [
-        "C) P-3, Q-2, R-1, S-4",
-        "D) P-2, Q-1, R-3, S-4",
-        "B) P-1, Q-2, R-3, S-4",
-        "A) P-2, Q-3, R-1, S-4"
+        "P-3, Q-2, R-1, S-4",
+        "P-2, Q-1, R-3, S-4",
+        "P-1, Q-2, R-3, S-4",
+        "P-2, Q-3, R-1, S-4"
       ],
       "correctAnswer": "D",
       "explanation": "Parotid gland is located below and in front of the ear (P-2). Submandibular gland is at the angle of the lower jaw (Q-3). Sublingual gland is below the tongue (R-1). Brunner's glands are in the submucosa of the duodenum (S-4).",
@@ -1900,10 +1900,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the disorder with its description:\n(P) Jaundice - (1) Inflammation of intestinal tract\n(Q) Vomiting - (2) Yellowing of skin due to bilirubin\n(R) Diarrhoea - (3) Ejection of stomach contents through mouth\n(S) IBD - (4) Abnormal frequent defecation with liquid stools",
       "options": [
-        "B) P-3, Q-2, R-1, S-4",
-        "C) P-1, Q-4, R-3, S-2",
-        "D) P-4, Q-1, R-2, S-3",
-        "A) P-2, Q-3, R-4, S-1"
+        "P-3, Q-2, R-1, S-4",
+        "P-1, Q-4, R-3, S-2",
+        "P-4, Q-1, R-2, S-3",
+        "P-2, Q-3, R-4, S-1"
       ],
       "correctAnswer": "D",
       "explanation": "Jaundice causes yellowing of skin due to bilirubin accumulation (P-2). Vomiting is ejection of stomach contents (Q-3). Diarrhoea involves frequent liquid stools (R-4). IBD is inflammation of the intestinal tract (S-1).",
@@ -1925,10 +1925,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the nutrient with its mode of absorption:\n(P) Glucose - (1) Facilitated diffusion\n(Q) Fructose - (2) Passive diffusion\n(R) Fatty acids (as chylomicrons) - (3) Active transport\n(S) Water - (4) Via lacteals",
       "options": [
-        "C) P-2, Q-1, R-4, S-3",
-        "B) P-1, Q-3, R-2, S-4",
-        "D) P-3, Q-2, R-1, S-4",
-        "A) P-3, Q-1, R-4, S-2"
+        "P-2, Q-1, R-4, S-3",
+        "P-1, Q-3, R-2, S-4",
+        "P-3, Q-2, R-1, S-4",
+        "P-3, Q-1, R-4, S-2"
       ],
       "correctAnswer": "D",
       "explanation": "Glucose is absorbed by active transport (P-3). Fructose is absorbed by facilitated diffusion (Q-1). Fatty acids as chylomicrons enter lacteals (R-4). Water is absorbed by passive diffusion/osmosis (S-2).",
@@ -1950,10 +1950,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the sphincter with its location:\n(P) Cardiac sphincter - (1) Between stomach and duodenum\n(Q) Pyloric sphincter - (2) Between oesophagus and stomach\n(R) Sphincter of Oddi - (3) Between ileum and caecum\n(S) Ileocaecal valve - (4) At hepato-pancreatic ampulla",
       "options": [
-        "A) P-2, Q-1, R-4, S-3",
-        "D) P-3, Q-4, R-1, S-2",
-        "C) P-4, Q-3, R-2, S-1",
-        "B) P-1, Q-2, R-3, S-4"
+        "P-2, Q-1, R-4, S-3",
+        "P-3, Q-4, R-1, S-2",
+        "P-4, Q-3, R-2, S-1",
+        "P-1, Q-2, R-3, S-4"
       ],
       "correctAnswer": "A",
       "explanation": "Cardiac sphincter is between oesophagus and stomach (P-2). Pyloric sphincter is between stomach and duodenum (Q-1). Sphincter of Oddi is at the hepato-pancreatic ampulla opening into duodenum (R-4). Ileocaecal valve is between ileum and caecum (S-3).",
@@ -1975,10 +1975,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the layer of alimentary canal with its nerve plexus:\n(P) Between muscularis layers - (1) Meissner's plexus\n(Q) In submucosa - (2) Auerbach's plexus (myenteric plexus)",
       "options": [
-        "B) P-1, Q-2",
-        "A) P-2, Q-1",
-        "C) Both have Auerbach's plexus",
-        "D) Both have Meissner's plexus"
+        "P-1, Q-2",
+        "P-2, Q-1",
+        "Both have Auerbach's plexus",
+        "Both have Meissner's plexus"
       ],
       "correctAnswer": "B",
       "explanation": "Auerbach's plexus (myenteric plexus) is located between the outer longitudinal and inner circular muscle layers of the muscularis (P-2). Meissner's plexus (submucosal plexus) is located in the submucosa (Q-1). Both control GI tract motility and secretion.",
@@ -2000,10 +2000,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the tooth type with its function:\n(P) Incisors - (1) Grinding\n(Q) Canines - (2) Cutting/biting\n(R) Premolars - (3) Tearing\n(S) Molars - (4) Crushing and grinding",
       "options": [
-        "D) P-1, Q-3, R-2, S-4",
-        "B) P-2, Q-3, R-1, S-4",
-        "A) P-2, Q-3, R-4, S-1",
-        "C) P-3, Q-2, R-4, S-1"
+        "P-1, Q-3, R-2, S-4",
+        "P-2, Q-3, R-1, S-4",
+        "P-2, Q-3, R-4, S-1",
+        "P-3, Q-2, R-4, S-1"
       ],
       "correctAnswer": "C",
       "explanation": "Incisors are for cutting and biting food (P-2). Canines are for tearing food (Q-3). Premolars are for crushing and grinding (R-4). Molars are for grinding food (S-1).",
@@ -2025,10 +2025,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Match the end product of digestion with its source macromolecule:\n(P) Amino acids - (1) Fats\n(Q) Glucose - (2) Nucleic acids\n(R) Fatty acids and glycerol - (3) Proteins\n(S) Nucleosides - (4) Carbohydrates",
       "options": [
-        "A) P-3, Q-4, R-1, S-2",
-        "B) P-4, Q-3, R-2, S-1",
-        "D) P-3, Q-1, R-4, S-2",
-        "C) P-1, Q-2, R-3, S-4"
+        "P-3, Q-4, R-1, S-2",
+        "P-4, Q-3, R-2, S-1",
+        "P-3, Q-1, R-4, S-2",
+        "P-1, Q-2, R-3, S-4"
       ],
       "correctAnswer": "A",
       "explanation": "Amino acids are the end products of protein digestion (P-3). Glucose comes from carbohydrate digestion (Q-4). Fatty acids and glycerol come from fat digestion (R-1). Nucleosides are products of nucleic acid digestion (S-2).",
@@ -2050,10 +2050,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many of the following are components of gastric juice?\n(a) HCl (b) Pepsinogen (c) Mucus (d) Prorenin (e) Lipase (f) Trypsinogen (g) Intrinsic factor (h) Gelatinase",
       "options": [
-        "D) Seven",
-        "C) Six",
-        "A) Four",
-        "B) Five"
+        "Seven",
+        "Six",
+        "Four",
+        "Five"
       ],
       "correctAnswer": "A",
       "explanation": "Seven of the listed components are found in gastric juice: (a) HCl - from parietal cells, (b) Pepsinogen - from chief cells, (c) Mucus - from mucus neck cells, (d) Prorenin - in infants, (e) Lipase - gastric lipase, (g) Intrinsic factor - from parietal cells, (h) Gelatinase. Trypsinogen (f) is a pancreatic enzyme, not gastric.",
@@ -2075,10 +2075,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many of the following enzymes are present in pancreatic juice?\n(a) Trypsinogen (b) Chymotrypsinogen (c) Procarboxypeptidase (d) Pancreatic amylase (e) Pancreatic lipase (f) DNase (g) RNase (h) Proelastase",
       "options": [
-        "A) Five",
-        "D) Eight",
-        "B) Six",
-        "C) Seven"
+        "Five",
+        "Eight",
+        "Six",
+        "Seven"
       ],
       "correctAnswer": "B",
       "explanation": "All eight listed enzymes/proenzymes are present in pancreatic juice: trypsinogen, chymotrypsinogen, procarboxypeptidase (proteolytic proenzymes), pancreatic amylase (starch digestion), pancreatic lipase (fat digestion), DNase, RNase (nucleic acid digestion), and proelastase (elastin digestion).",
@@ -2100,10 +2100,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many pairs of salivary glands are present in humans?",
       "options": [
-        "C) Four",
-        "B) Three",
-        "A) Two",
-        "D) Five"
+        "Four",
+        "Three",
+        "Two",
+        "Five"
       ],
       "correctAnswer": "B",
       "explanation": "Humans have three pairs of salivary glands: (1) Parotid glands (largest, serous), (2) Submandibular/submaxillary glands (mixed), and (3) Sublingual glands (smallest, primarily mucous). Together they produce about 1-1.5 litres of saliva daily.",
@@ -2125,10 +2125,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many of the following are absorbed by active transport in the intestine?\n(a) Glucose (b) Amino acids (c) Fructose (d) Electrolytes like Na+ (e) Water (f) Fatty acids",
       "options": [
-        "B) Three",
-        "A) Two",
-        "D) Five",
-        "C) Four"
+        "Three",
+        "Two",
+        "Five",
+        "Four"
       ],
       "correctAnswer": "A",
       "explanation": "Three substances are absorbed by active transport: (a) Glucose, (b) Amino acids, and (d) Na+ (and other electrolytes). Fructose is absorbed by facilitated diffusion. Water by osmosis. Fatty acids enter as chylomicrons into lacteals.",
@@ -2150,10 +2150,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many of the following are parts of the small intestine?\n(a) Duodenum (b) Jejunum (c) Ileum (d) Caecum (e) Colon (f) Rectum",
       "options": [
-        "D) Six",
-        "C) Four",
-        "A) Two",
-        "B) Three"
+        "Six",
+        "Four",
+        "Two",
+        "Three"
       ],
       "correctAnswer": "D",
       "explanation": "Three of the listed structures are parts of the small intestine: (a) Duodenum, (b) Jejunum, and (c) Ileum. Caecum, colon, and rectum are parts of the large intestine.",
@@ -2175,10 +2175,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many of the following layers are present in the wall of the alimentary canal?\n(a) Mucosa (b) Submucosa (c) Muscularis (d) Serosa (e) Adventitia",
       "options": [
-        "C) Five",
-        "B) Four",
-        "D) Two",
-        "A) Three"
+        "Five",
+        "Four",
+        "Two",
+        "Three"
       ],
       "correctAnswer": "B",
       "explanation": "The alimentary canal wall has four basic layers: (a) Mucosa (innermost), (b) Submucosa, (c) Muscularis, and (d) Serosa (outermost). Adventitia is present in the oesophagus instead of serosa but is not a standard separate layer of the typical GI tract wall described in NCERT.",
@@ -2200,10 +2200,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many of the following are digestive disorders mentioned in NCERT?\n(a) Jaundice (b) Vomiting (c) Diarrhoea (d) Constipation (e) Indigestion (f) PEM (Protein Energy Malnutrition) (g) Appendicitis",
       "options": [
-        "C) Six",
-        "D) Seven",
-        "B) Five",
-        "A) Four"
+        "Six",
+        "Seven",
+        "Five",
+        "Four"
       ],
       "correctAnswer": "B",
       "explanation": "All seven are digestive disorders/conditions discussed in NCERT: jaundice (liver disorder), vomiting (reflex), diarrhoea (frequent loose stools), constipation (irregular bowel), indigestion/dyspepsia, PEM (marasmus and kwashiorkor), and appendicitis (inflammation of appendix).",
@@ -2225,10 +2225,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "How many teeth are present in the permanent dentition of an adult human?",
       "options": [
-        "A) 20",
-        "B) 28",
-        "C) 32",
-        "D) 36"
+        "20",
+        "28",
+        "32",
+        "36"
       ],
       "correctAnswer": "C",
       "explanation": "An adult human has 32 permanent teeth: 8 incisors, 4 canines, 8 premolars, and 12 molars (including 4 wisdom teeth). The dental formula is 2123/2123 for each half of upper and lower jaw.",
@@ -2250,10 +2250,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the following events of protein digestion in the correct sequence:\n(i) Pepsin converts proteins to proteoses and peptones\n(ii) Trypsin and chymotrypsin act on proteoses and peptones\n(iii) Dipeptidases convert dipeptides to amino acids\n(iv) Carboxypeptidase acts on polypeptides",
       "options": [
-        "D) (iv) → (i) → (ii) → (iii)",
-        "A) (i) → (ii) → (iv) → (iii)",
-        "C) (i) → (iv) → (ii) → (iii)",
-        "B) (ii) → (i) → (iii) → (iv)"
+        "(iv) → (i) → (ii) → (iii)",
+        "(i) → (ii) → (iv) → (iii)",
+        "(i) → (iv) → (ii) → (iii)",
+        "(ii) → (i) → (iii) → (iv)"
       ],
       "correctAnswer": "B",
       "explanation": "Protein digestion sequence: First, pepsin in stomach converts proteins to proteoses/peptones (i). Then in duodenum, trypsin and chymotrypsin further break them (ii). Carboxypeptidase cleaves terminal amino acids from peptides (iv). Finally, dipeptidases split dipeptides into amino acids (iii).",
@@ -2275,10 +2275,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the correct sequence of fat digestion and absorption:\n(i) Emulsification of fats by bile salts\n(ii) Chylomicron formation in intestinal cells\n(iii) Lipase action on emulsified fat droplets\n(iv) Entry of chylomicrons into lacteals\n(v) Absorption of fatty acids and glycerol by intestinal cells",
       "options": [
-        "A) (i) → (iii) → (v) → (ii) → (iv)",
-        "C) (i) → (v) → (iii) → (ii) → (iv)",
-        "D) (v) → (i) → (iii) → (ii) → (iv)",
-        "B) (iii) → (i) → (v) → (iv) → (ii)"
+        "(i) → (iii) → (v) → (ii) → (iv)",
+        "(i) → (v) → (iii) → (ii) → (iv)",
+        "(v) → (i) → (iii) → (ii) → (iv)",
+        "(iii) → (i) → (v) → (iv) → (ii)"
       ],
       "correctAnswer": "A",
       "explanation": "Fat digestion sequence: Bile salts emulsify fats (i) → Lipase acts on emulsified fats to produce fatty acids and glycerol (iii) → Fatty acids and glycerol absorbed by intestinal cells (v) → Re-esterified into triglycerides and packaged as chylomicrons (ii) → Chylomicrons enter lacteals (iv).",
@@ -2301,10 +2301,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the following parts of the alimentary canal in the correct anatomical sequence from mouth to anus:",
       "options": [
-        "D) Mouth → Pharynx → Stomach → Oesophagus → Duodenum → Jejunum → Ileum → Caecum → Colon → Rectum → Anus",
-        "B) Mouth → Oesophagus → Pharynx → Stomach → Jejunum → Duodenum → Ileum → Colon → Caecum → Rectum → Anus",
-        "A) Mouth → Pharynx → Oesophagus → Stomach → Duodenum → Jejunum → Ileum → Caecum → Colon → Rectum → Anus",
-        "C) Mouth → Pharynx → Oesophagus → Stomach → Jejunum → Ileum → Duodenum → Caecum → Colon → Rectum → Anus"
+        "Mouth → Pharynx → Stomach → Oesophagus → Duodenum → Jejunum → Ileum → Caecum → Colon → Rectum → Anus",
+        "Mouth → Oesophagus → Pharynx → Stomach → Jejunum → Duodenum → Ileum → Colon → Caecum → Rectum → Anus",
+        "Mouth → Pharynx → Oesophagus → Stomach → Duodenum → Jejunum → Ileum → Caecum → Colon → Rectum → Anus",
+        "Mouth → Pharynx → Oesophagus → Stomach → Jejunum → Ileum → Duodenum → Caecum → Colon → Rectum → Anus"
       ],
       "correctAnswer": "C",
       "explanation": "The correct anatomical sequence is: Mouth → Pharynx → Oesophagus → Stomach → Duodenum → Jejunum → Ileum (small intestine) → Caecum → Colon (ascending, transverse, descending, sigmoid) → Rectum → Anus.",
@@ -2326,10 +2326,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the correct sequence of starch digestion:\n(i) Starch → Maltose (by ptyalin)\n(ii) Maltose → Glucose (by maltase)\n(iii) Starch → Maltose + Isomaltose + Limit dextrins (by pancreatic amylase)\n(iv) Isomaltose → Glucose (by isomaltase)",
       "options": [
-        "C) (i) → (iii) → (iv) → (ii)",
-        "A) (i) → (iii) → (ii) → (iv)",
-        "B) (iii) → (i) → (iv) → (ii)",
-        "D) (i) → (ii) → (iii) → (iv)"
+        "(i) → (iii) → (iv) → (ii)",
+        "(i) → (iii) → (ii) → (iv)",
+        "(iii) → (i) → (iv) → (ii)",
+        "(i) → (ii) → (iii) → (iv)"
       ],
       "correctAnswer": "A",
       "explanation": "Starch digestion sequence: Salivary amylase (ptyalin) converts starch to maltose in the mouth (i). Pancreatic amylase continues in the duodenum producing maltose, isomaltose, and limit dextrins (iii). Isomaltase converts isomaltose to glucose (iv). Maltase converts maltose to glucose (ii). Steps ii and iv occur simultaneously at the brush border.",
@@ -2351,10 +2351,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the correct sequence of enzyme activation in the duodenum:\n(i) Enterokinase activates trypsinogen to trypsin\n(ii) Trypsin activates chymotrypsinogen to chymotrypsin\n(iii) Trypsin activates procarboxypeptidase to carboxypeptidase\n(iv) Trypsin activates proelastase to elastase",
       "options": [
-        "A) (i) → (ii) → (iii) → (iv)",
-        "D) (iii) → (i) → (ii) → (iv)",
-        "C) (iv) → (iii) → (ii) → (i)",
-        "B) (ii) → (i) → (iv) → (iii)"
+        "(i) → (ii) → (iii) → (iv)",
+        "(iii) → (i) → (ii) → (iv)",
+        "(iv) → (iii) → (ii) → (i)",
+        "(ii) → (i) → (iv) → (iii)"
       ],
       "correctAnswer": "A",
       "explanation": "The cascade begins with enterokinase activating trypsinogen to trypsin (i). Once trypsin is formed, it acts as a master activator, converting chymotrypsinogen to chymotrypsin (ii), procarboxypeptidase to carboxypeptidase (iii), and proelastase to elastase (iv). Steps ii, iii, iv occur simultaneously but all depend on step i.",
@@ -2377,10 +2377,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the layers of the alimentary canal wall from innermost to outermost:",
       "options": [
-        "D) Mucosa → Muscularis → Submucosa → Serosa",
-        "A) Mucosa → Submucosa → Muscularis → Serosa",
-        "B) Serosa → Muscularis → Submucosa → Mucosa",
-        "C) Submucosa → Mucosa → Muscularis → Serosa"
+        "Mucosa → Muscularis → Submucosa → Serosa",
+        "Mucosa → Submucosa → Muscularis → Serosa",
+        "Serosa → Muscularis → Submucosa → Mucosa",
+        "Submucosa → Mucosa → Muscularis → Serosa"
       ],
       "correctAnswer": "B",
       "explanation": "From innermost to outermost, the layers of the alimentary canal wall are: Mucosa (epithelium + lamina propria + muscularis mucosae) → Submucosa (connective tissue with blood vessels, nerves, Meissner's plexus) → Muscularis (circular + longitudinal muscles, Auerbach's plexus) → Serosa (outermost, visceral peritoneum).",
@@ -2403,10 +2403,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the following events of swallowing (deglutition) in the correct order:\n(i) Bolus is pushed to the back of the oral cavity by the tongue\n(ii) Soft palate rises to close nasopharynx\n(iii) Epiglottis closes the glottis\n(iv) Peristalsis pushes bolus through oesophagus\n(v) Bolus enters the stomach through cardiac sphincter",
       "options": [
-        "C) (iii) → (ii) → (i) → (iv) → (v)",
-        "B) (ii) → (i) → (iii) → (v) → (iv)",
-        "A) (i) → (ii) → (iii) → (iv) → (v)",
-        "D) (i) → (iii) → (ii) → (iv) → (v)"
+        "(iii) → (ii) → (i) → (iv) → (v)",
+        "(ii) → (i) → (iii) → (v) → (iv)",
+        "(i) → (ii) → (iii) → (iv) → (v)",
+        "(i) → (iii) → (ii) → (iv) → (v)"
       ],
       "correctAnswer": "C",
       "explanation": "Deglutition sequence: The tongue pushes the bolus backward (i) → Soft palate rises to prevent food from entering the nasal passages (ii) → Epiglottis folds over the glottis to prevent food from entering the trachea (iii) → Peristaltic waves push bolus through the oesophagus (iv) → Bolus enters the stomach through the relaxed cardiac sphincter (v).",

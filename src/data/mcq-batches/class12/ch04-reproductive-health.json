@@ -15,10 +15,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which of the following is a natural method of contraception?",
       "options": [
-        "D) Vasectomy",
-        "C) Lactational amenorrhoea",
-        "A) Condom",
-        "B) IUD"
+        "Vasectomy",
+        "Lactational amenorrhoea",
+        "Condom",
+        "IUD"
       ],
       "correctAnswer": "B",
       "explanation": "Lactational amenorrhoea method (LAM) is a natural contraceptive method based on the fact that ovulation does not occur during the period of intense lactation following parturition. It is effective up to 6 months after delivery.",
@@ -40,10 +40,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Cu-T is an example of:",
       "options": [
-        "B) Hormonal method",
-        "C) Intra-uterine device",
-        "D) Surgical method",
-        "A) Barrier method"
+        "Hormonal method",
+        "Intra-uterine device",
+        "Surgical method",
+        "Barrier method"
       ],
       "correctAnswer": "B",
       "explanation": "Cu-T (Copper-T) is an Intra-Uterine Device (IUD) that releases copper ions which are spermicidal and also create an unfavourable environment in the uterus for implantation. It is a non-hormonal IUD.",
@@ -65,10 +65,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Vasectomy involves cutting and tying of:",
       "options": [
-        "C) Urethra",
-        "D) Epididymis",
-        "B) Vas deferens",
-        "A) Fallopian tubes"
+        "Urethra",
+        "Epididymis",
+        "Vas deferens",
+        "Fallopian tubes"
       ],
       "correctAnswer": "C",
       "explanation": "Vasectomy is a male sterilisation procedure where a small portion of the vas deferens is cut and tied through a small incision in the scrotum. This prevents sperm from being transported during ejaculation.",
@@ -90,10 +90,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Amniocentesis is a technique used to:",
       "options": [
-        "C) Improve fertility",
-        "A) Determine the sex of the foetus",
-        "D) Prevent implantation",
-        "B) Detect genetic disorders in the foetus"
+        "Improve fertility",
+        "Determine the sex of the foetus",
+        "Prevent implantation",
+        "Detect genetic disorders in the foetus"
       ],
       "correctAnswer": "D",
       "explanation": "Amniocentesis is a prenatal diagnostic technique where amniotic fluid is analysed for chromosomal abnormalities and metabolic disorders of the foetus. Its misuse for sex determination is banned by law in India.",
@@ -115,10 +115,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "GIFT (Gamete Intrafallopian Transfer) involves:",
       "options": [
-        "C) Transfer of ovum and sperm into the fallopian tube",
-        "A) Transfer of zygote into fallopian tube",
-        "B) Transfer of embryo with more than 8 cells into uterus",
-        "D) In vitro fertilisation"
+        "Transfer of ovum and sperm into the fallopian tube",
+        "Transfer of zygote into fallopian tube",
+        "Transfer of embryo with more than 8 cells into uterus",
+        "In vitro fertilisation"
       ],
       "correctAnswer": "A",
       "explanation": "GIFT involves the transfer of an ovum collected from a donor into the fallopian tube of another female who cannot produce ova but can provide a suitable environment for fertilisation and development.",
@@ -140,10 +140,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "The most widely accepted method of contraception in India is:",
       "options": [
-        "D) Oral pills",
-        "A) Condoms",
-        "B) IUDs",
-        "C) Tubectomy"
+        "Oral pills",
+        "Condoms",
+        "IUDs",
+        "Tubectomy"
       ],
       "correctAnswer": "D",
       "explanation": "Tubectomy (female sterilisation) is the most widely accepted method of contraception in India. It is a permanent surgical method where fallopian tubes are cut and tied to prevent the ovum from reaching the uterus.",
@@ -166,10 +166,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which STD is caused by a virus?",
       "options": [
-        "D) Chlamydiasis",
-        "B) Gonorrhoea",
-        "A) Syphilis",
-        "C) Genital herpes"
+        "Chlamydiasis",
+        "Gonorrhoea",
+        "Syphilis",
+        "Genital herpes"
       ],
       "correctAnswer": "D",
       "explanation": "Genital herpes is caused by Herpes simplex virus (HSV). Syphilis is caused by Treponema pallidum (bacterium), Gonorrhoea by Neisseria gonorrhoeae (bacterium), and Chlamydiasis by Chlamydia trachomatis (bacterium).",
@@ -192,10 +192,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "IVF (In Vitro Fertilisation) involves:",
       "options": [
-        "D) Artificial insemination",
-        "C) Transfer of gametes into fallopian tube",
-        "A) Fertilisation inside the body",
-        "B) Fertilisation outside the body in laboratory conditions"
+        "Artificial insemination",
+        "Transfer of gametes into fallopian tube",
+        "Fertilisation inside the body",
+        "Fertilisation outside the body in laboratory conditions"
       ],
       "correctAnswer": "D",
       "explanation": "IVF involves fertilisation of ovum with sperm outside the body in laboratory conditions (in vitro means 'in glass'). The embryo is then transferred to the uterus or fallopian tube for further development.",
@@ -217,10 +217,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Saheli is a:",
       "options": [
-        "D) Hormonal injection",
-        "B) Non-steroidal oral contraceptive pill",
-        "A) Barrier contraceptive",
-        "C) IUD"
+        "Hormonal injection",
+        "Non-steroidal oral contraceptive pill",
+        "Barrier contraceptive",
+        "IUD"
       ],
       "correctAnswer": "B",
       "explanation": "Saheli is a non-steroidal oral contraceptive pill developed by CDRI, Lucknow. It contains centchroman and is taken once a week. It has fewer side effects compared to hormonal pills.",
@@ -242,10 +242,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which of the following STDs can be transmitted from mother to infant during pregnancy?",
       "options": [
-        "C) Chlamydiasis only",
-        "B) Syphilis and HIV",
-        "D) Genital warts only",
-        "A) Gonorrhoea only"
+        "Chlamydiasis only",
+        "Syphilis and HIV",
+        "Genital warts only",
+        "Gonorrhoea only"
       ],
       "correctAnswer": "B",
       "explanation": "Syphilis and HIV can be transmitted from an infected mother to the foetus through the placenta (vertical transmission). Hepatitis B can also be transmitted in this way.",
@@ -267,10 +267,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Emergency contraceptive pills contain:",
       "options": [
-        "B) High dose of progestogen or progestogen-estrogen combination",
-        "A) Low dose of estrogen",
-        "C) Copper ions",
-        "D) Spermicides"
+        "High dose of progestogen or progestogen-estrogen combination",
+        "Low dose of estrogen",
+        "Copper ions",
+        "Spermicides"
       ],
       "correctAnswer": "A",
       "explanation": "Emergency contraceptive pills (morning-after pills) contain high doses of progestogen or a progestogen-estrogen combination. They must be taken within 72 hours of unprotected intercourse to prevent pregnancy.",
@@ -291,10 +291,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "ZIFT (Zygote Intrafallopian Transfer) involves transfer of:",
       "options": [
-        "C) Embryo with more than 8 cells into uterus",
-        "A) Ovum into fallopian tube",
-        "D) Sperm directly into ovary",
-        "B) Zygote with up to 8 blastomeres into fallopian tube"
+        "Embryo with more than 8 cells into uterus",
+        "Ovum into fallopian tube",
+        "Sperm directly into ovary",
+        "Zygote with up to 8 blastomeres into fallopian tube"
       ],
       "correctAnswer": "D",
       "explanation": "ZIFT involves transfer of the zygote or early embryo (up to 8 blastomeres) into the fallopian tube. If the embryo has more than 8 blastomeres, it is transferred into the uterus (IUT - Intra Uterine Transfer).",
@@ -316,10 +316,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Condoms are made of:",
       "options": [
-        "B) Rubber/Latex",
-        "D) Silicone only",
-        "A) Copper",
-        "C) Plastic only"
+        "Rubber/Latex",
+        "Silicone only",
+        "Copper",
+        "Plastic only"
       ],
       "correctAnswer": "A",
       "explanation": "Condoms are made of thin rubber/latex sheath. Male condoms cover the penis, while female condoms line the vagina. They act as barrier methods preventing sperm from entering the female reproductive tract and also protect against STDs.",
@@ -341,10 +341,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "The causative organism of syphilis is:",
       "options": [
-        "C) Chlamydia trachomatis",
-        "D) Human papillomavirus",
-        "A) Neisseria gonorrhoeae",
-        "B) Treponema pallidum"
+        "Chlamydia trachomatis",
+        "Human papillomavirus",
+        "Neisseria gonorrhoeae",
+        "Treponema pallidum"
       ],
       "correctAnswer": "D",
       "explanation": "Syphilis is caused by the bacterium Treponema pallidum. It is a sexually transmitted disease characterised by chancre (painless ulcer) in the primary stage and can affect multiple organ systems if untreated.",
@@ -366,10 +366,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which of the following IUDs releases hormones?",
       "options": [
-        "A) Cu-T",
-        "D) Multiload 375",
-        "B) Cu-7",
-        "C) LNG-20"
+        "Cu-T",
+        "Multiload 375",
+        "Cu-7",
+        "LNG-20"
       ],
       "correctAnswer": "D",
       "explanation": "LNG-20 (Levonorgestrel-releasing IUD) is a hormone-releasing IUD that releases the progestogen levonorgestrel. It makes the cervical mucus hostile to sperm and also thins the endometrium. Cu-T, Cu-7, and Multiload 375 are non-hormonal copper IUDs.",
@@ -392,10 +392,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Medical Termination of Pregnancy (MTP) is safe up to:",
       "options": [
-        "D) 20 weeks",
-        "C) 12 weeks",
-        "B) 8 weeks",
-        "A) 4 weeks"
+        "20 weeks",
+        "12 weeks",
+        "8 weeks",
+        "4 weeks"
       ],
       "correctAnswer": "B",
       "explanation": "MTP is considered relatively safe during the first trimester (up to 12 weeks of pregnancy). After this period, it becomes increasingly risky. In India, MTP is legal up to 20 weeks under the MTP Act with certain conditions.",
@@ -417,10 +417,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Diaphragm is a contraceptive device used by:",
       "options": [
-        "A) Males",
-        "B) Females",
-        "D) Neither",
-        "C) Both males and females"
+        "Males",
+        "Females",
+        "Neither",
+        "Both males and females"
       ],
       "correctAnswer": "B",
       "explanation": "The diaphragm is a dome-shaped rubber barrier device used by females. It is inserted into the vagina to cover the cervix, preventing sperm from entering the uterus. It is often used with a spermicidal cream.",
@@ -442,10 +442,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Test tube baby programme involves:",
       "options": [
-        "C) Fertilisation in vitro and embryo transfer to uterus",
-        "A) Growth of baby in test tube",
-        "B) Fertilisation in vivo followed by growth in test tube",
-        "D) Cloning of embryo"
+        "Fertilisation in vitro and embryo transfer to uterus",
+        "Growth of baby in test tube",
+        "Fertilisation in vivo followed by growth in test tube",
+        "Cloning of embryo"
       ],
       "correctAnswer": "A",
       "explanation": "Test tube baby programme involves in vitro fertilisation (IVF) where ovum and sperm are fertilised in laboratory conditions, and the resulting embryo is transferred back to the uterus (ET) for further development.",
@@ -467,10 +467,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Genital warts are caused by:",
       "options": [
-        "D) HIV",
-        "A) Herpes simplex virus",
-        "B) Human papillomavirus (HPV)",
-        "C) Treponema pallidum"
+        "HIV",
+        "Herpes simplex virus",
+        "Human papillomavirus (HPV)",
+        "Treponema pallidum"
       ],
       "correctAnswer": "C",
       "explanation": "Genital warts are caused by Human Papillomavirus (HPV). Some strains of HPV are also associated with cervical cancer. HPV vaccination is recommended for prevention.",
@@ -492,10 +492,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which of the following is NOT a sexually transmitted disease?",
       "options": [
-        "D) Syphilis",
-        "B) Gonorrhoea",
-        "C) Typhoid",
-        "A) AIDS"
+        "Syphilis",
+        "Gonorrhoea",
+        "Typhoid",
+        "AIDS"
       ],
       "correctAnswer": "C",
       "explanation": "Typhoid is NOT an STD. It is a water-borne disease caused by Salmonella typhi. AIDS, Gonorrhoea, and Syphilis are all sexually transmitted diseases.",
@@ -517,10 +517,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Artificial insemination is useful when:",
       "options": [
-        "A) Female cannot produce ova",
-        "D) Female has endometriosis",
-        "C) Fallopian tubes are blocked",
-        "B) Male has very low sperm count or impotence"
+        "Female cannot produce ova",
+        "Female has endometriosis",
+        "Fallopian tubes are blocked",
+        "Male has very low sperm count or impotence"
       ],
       "correctAnswer": "D",
       "explanation": "Artificial insemination (AI) is used when the male partner has low sperm count, low motility, or cannot inseminate. Semen is collected from the husband/donor and artificially introduced into the female reproductive tract.",
@@ -542,10 +542,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Oral pills contain:",
       "options": [
-        "D) Spermicides",
-        "B) Progesterone or progesterone-estrogen combination",
-        "A) Testosterone and estrogen",
-        "C) FSH and LH"
+        "Spermicides",
+        "Progesterone or progesterone-estrogen combination",
+        "Testosterone and estrogen",
+        "FSH and LH"
       ],
       "correctAnswer": "B",
       "explanation": "Oral contraceptive pills contain synthetic progesterone or a combination of progesterone and estrogen. They prevent ovulation by inhibiting FSH and LH secretion through negative feedback, and also alter cervical mucus.",
@@ -567,10 +567,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Tubectomy involves the blocking of:",
       "options": [
-        "B) Urethra",
-        "C) Fallopian tubes",
-        "D) Cervical canal",
-        "A) Vas deferens"
+        "Urethra",
+        "Fallopian tubes",
+        "Cervical canal",
+        "Vas deferens"
       ],
       "correctAnswer": "B",
       "explanation": "Tubectomy is a female sterilisation procedure involving the cutting and tying of fallopian tubes (oviducts) to prevent the ovum from reaching the uterus and meeting sperm. It is a permanent contraceptive method.",
@@ -592,10 +592,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which of the following cannot be treated with antibiotics?",
       "options": [
-        "C) Genital herpes",
-        "A) Syphilis",
-        "D) Chlamydiasis",
-        "B) Gonorrhoea"
+        "Genital herpes",
+        "Syphilis",
+        "Chlamydiasis",
+        "Gonorrhoea"
       ],
       "correctAnswer": "A",
       "explanation": "Genital herpes is caused by a virus (HSV) and cannot be treated with antibiotics. Antibiotics are effective only against bacterial infections. Syphilis, Gonorrhoea, and Chlamydiasis are bacterial STDs treatable with antibiotics.",
@@ -618,10 +618,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "The ideal contraceptive should be:",
       "options": [
-        "C) Permanent and irreversible",
-        "D) Hormone-based only",
-        "B) User-friendly, reversible, with minimal side effects",
-        "A) Effective only for males"
+        "Permanent and irreversible",
+        "Hormone-based only",
+        "User-friendly, reversible, with minimal side effects",
+        "Effective only for males"
       ],
       "correctAnswer": "C",
       "explanation": "An ideal contraceptive should be user-friendly, easily available, effective, reversible, have minimal or no side effects, not interfere with sexual drive or sexual act, and should be light-weight and easy to use.",
@@ -642,10 +642,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "ICSI (Intra Cytoplasmic Sperm Injection) is used when:",
       "options": [
-        "D) Uterus is absent",
-        "C) Female cannot ovulate",
-        "B) Male produces very few or immotile sperm",
-        "A) Female has blocked tubes"
+        "Uterus is absent",
+        "Female cannot ovulate",
+        "Male produces very few or immotile sperm",
+        "Female has blocked tubes"
       ],
       "correctAnswer": "C",
       "explanation": "ICSI involves injecting a single sperm directly into the cytoplasm of the ovum to achieve fertilisation. It is used when the male has very low sperm count, poor motility, or abnormal sperm morphology.",
@@ -667,10 +667,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which of the following is caused by Neisseria gonorrhoeae?",
       "options": [
-        "B) Gonorrhoea",
-        "C) Chlamydiasis",
-        "D) Trichomoniasis",
-        "A) Syphilis"
+        "Gonorrhoea",
+        "Chlamydiasis",
+        "Trichomoniasis",
+        "Syphilis"
       ],
       "correctAnswer": "A",
       "explanation": "Gonorrhoea is caused by the bacterium Neisseria gonorrhoeae. It affects the mucous membranes of the urogenital tract and can cause urethritis, cervicitis, and pelvic inflammatory disease if untreated.",
@@ -692,10 +692,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "RCH stands for:",
       "options": [
-        "A) Rural Community Health",
-        "D) Reproductive Child Hygiene",
-        "B) Reproductive and Child Health Care",
-        "C) Regional Child Healthcare"
+        "Rural Community Health",
+        "Reproductive Child Hygiene",
+        "Reproductive and Child Health Care",
+        "Regional Child Healthcare"
       ],
       "correctAnswer": "C",
       "explanation": "RCH stands for Reproductive and Child Health Care programme. It was launched by the Government of India to provide improved healthcare for reproduction, maternal health, and child health.",
@@ -717,10 +717,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which of the following is an example of a chemical barrier method?",
       "options": [
-        "C) Spermicidal cream",
-        "D) Cu-T",
-        "B) Diaphragm",
-        "A) Condom"
+        "Spermicidal cream",
+        "Cu-T",
+        "Diaphragm",
+        "Condom"
       ],
       "correctAnswer": "A",
       "explanation": "Spermicidal creams, jellies, and foams are chemical barrier methods. They contain chemicals that kill or immobilise sperm. Condoms and diaphragms are physical/mechanical barrier methods. Cu-T is an IUD.",
@@ -742,10 +742,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Infertility in couples can be treated by:",
       "options": [
-        "D) Contraceptives",
-        "C) Assisted Reproductive Technologies (ART)",
-        "A) MTP",
-        "B) Amniocentesis"
+        "Contraceptives",
+        "Assisted Reproductive Technologies (ART)",
+        "MTP",
+        "Amniocentesis"
       ],
       "correctAnswer": "B",
       "explanation": "Infertility can be treated by various Assisted Reproductive Technologies (ART) including IVF-ET, ZIFT, GIFT, ICSI, and artificial insemination. MTP terminates pregnancy, amniocentesis is for diagnosis, and contraceptives prevent pregnancy.",
@@ -767,10 +767,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Hepatitis B is transmitted through:",
       "options": [
-        "A) Air only",
-        "D) Mosquito bite",
-        "B) Water only",
-        "C) Sexual contact and blood transfusion"
+        "Air only",
+        "Mosquito bite",
+        "Water only",
+        "Sexual contact and blood transfusion"
       ],
       "correctAnswer": "D",
       "explanation": "Hepatitis B is transmitted through sexual contact, contaminated blood or blood products, shared needles, and from mother to child during childbirth. It is caused by the Hepatitis B virus (HBV).",
@@ -792,10 +792,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which of the following methods provides protection against STDs as well as pregnancy?",
       "options": [
-        "A) Oral pills",
-        "C) Condoms",
-        "B) IUDs",
-        "D) Vasectomy"
+        "Oral pills",
+        "Condoms",
+        "IUDs",
+        "Vasectomy"
       ],
       "correctAnswer": "B",
       "explanation": "Condoms (both male and female) provide protection against STDs as well as pregnancy. They act as a physical barrier preventing the exchange of body fluids. Other methods prevent pregnancy but not STDs.",
@@ -817,10 +817,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Trichomoniasis is caused by:",
       "options": [
-        "B) Virus",
-        "D) Fungus",
-        "A) Bacterium",
-        "C) Protozoan"
+        "Virus",
+        "Fungus",
+        "Bacterium",
+        "Protozoan"
       ],
       "correctAnswer": "D",
       "explanation": "Trichomoniasis is caused by the protozoan parasite Trichomonas vaginalis. It is a sexually transmitted infection that commonly affects the urogenital tract, particularly in females.",
@@ -842,10 +842,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "The periodic abstinence method (rhythm method) avoids coitus during:",
       "options": [
-        "A) Days 1-7 of menstrual cycle",
-        "C) Days 20-28 of menstrual cycle",
-        "B) Days 10-17 of menstrual cycle",
-        "D) Throughout the cycle"
+        "Days 1-7 of menstrual cycle",
+        "Days 20-28 of menstrual cycle",
+        "Days 10-17 of menstrual cycle",
+        "Throughout the cycle"
       ],
       "correctAnswer": "C",
       "explanation": "The rhythm method involves avoiding intercourse from day 10 to day 17 of the menstrual cycle when ovulation is expected (around day 14). This period is considered the fertile window.",
@@ -867,10 +867,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which of the following is an injectable contraceptive?",
       "options": [
-        "C) DMPA (Depo-Provera)",
-        "A) Saheli",
-        "D) Condom",
-        "B) Cu-T"
+        "DMPA (Depo-Provera)",
+        "Saheli",
+        "Condom",
+        "Cu-T"
       ],
       "correctAnswer": "A",
       "explanation": "DMPA (Depot medroxyprogesterone acetate/Depo-Provera) is an injectable hormonal contraceptive given every 3 months. It contains progestogen that prevents ovulation and alters the cervical mucus.",
@@ -892,10 +892,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Surrogacy involves:",
       "options": [
-        "B) Another woman carrying the pregnancy for the couple",
-        "C) Cloning of the embryo",
-        "A) Adoption of a child",
-        "D) Use of artificial womb"
+        "Another woman carrying the pregnancy for the couple",
+        "Cloning of the embryo",
+        "Adoption of a child",
+        "Use of artificial womb"
       ],
       "correctAnswer": "A",
       "explanation": "Surrogacy involves another woman (surrogate mother) carrying and delivering the baby for the couple who cannot carry the pregnancy. The embryo may be from the couple's gametes or donor gametes.",
@@ -917,10 +917,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which government programme aimed at achieving population stabilisation?",
       "options": [
-        "C) Green Revolution",
-        "B) Family Planning Programme",
-        "D) Digital India",
-        "A) Swachh Bharat"
+        "Green Revolution",
+        "Family Planning Programme",
+        "Digital India",
+        "Swachh Bharat"
       ],
       "correctAnswer": "B",
       "explanation": "The Family Planning Programme was initiated by the Government of India in 1951 to achieve population stabilisation. It was later renamed as Family Welfare Programme and integrated with Reproductive and Child Health (RCH) programmes.",
@@ -942,10 +942,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which STD can cause pelvic inflammatory disease (PID)?",
       "options": [
-        "C) Gonorrhoea and Chlamydiasis",
-        "A) AIDS",
-        "B) Hepatitis B",
-        "D) Genital warts"
+        "Gonorrhoea and Chlamydiasis",
+        "AIDS",
+        "Hepatitis B",
+        "Genital warts"
       ],
       "correctAnswer": "A",
       "explanation": "Gonorrhoea (Neisseria gonorrhoeae) and Chlamydiasis (Chlamydia trachomatis) can ascend to the upper genital tract and cause pelvic inflammatory disease (PID), which may lead to infertility if untreated.",
@@ -967,10 +967,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Assertion (A): Cu-T prevents pregnancy.\nReason (R): Copper ions released by Cu-T are spermicidal and increase phagocytosis of sperm.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and R explains A. The Cu-T releases copper ions that are toxic to sperm (spermicidal), increase phagocytosis of sperm by leukocytes, and also create an environment unfavourable for implantation.",
@@ -992,10 +992,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Assertion (A): Oral pills are very effective with high failure rate.\nReason (R): Oral pills must be taken daily without missing doses.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) Both A and R are false"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are false"
       ],
       "correctAnswer": "B",
       "explanation": "The assertion is false because oral pills are very effective with LOW failure rate (not high). The reason is true as oral pills must be taken regularly without missing doses for maximum effectiveness.",
@@ -1017,10 +1017,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Assertion (A): Amniocentesis is banned in India.\nReason (R): It was being misused for sex determination of the foetus leading to female foeticide.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "The assertion is false - amniocentesis itself is NOT banned in India. Its use for sex determination is banned under the PCPNDT Act. Amniocentesis is still legal for detecting chromosomal and genetic disorders. The reason is true.",
@@ -1042,10 +1042,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Assertion (A): Condoms are the most popular contraceptive among males.\nReason (R): Condoms are barrier methods that also protect against STDs.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and R explains A. Condoms are the most popular male contraceptive because they not only prevent pregnancy but also provide protection against STDs including HIV/AIDS, making them a dual-purpose contraceptive.",
@@ -1067,10 +1067,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Assertion (A): Vasectomy and tubectomy are highly effective contraceptive methods.\nReason (R): They are permanent methods that can be easily reversed.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "The assertion is true - vasectomy and tubectomy are highly effective. However, the reason is false because they are NOT easily reversed. While reversal is sometimes possible, it is not guaranteed and the procedures should be considered permanent.",
@@ -1092,10 +1092,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Assertion (A): Saheli has fewer side effects than hormonal pills.\nReason (R): Saheli is a non-steroidal contraceptive.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and R explains A. Saheli contains centchroman (a non-steroidal compound) and thus has fewer hormonal side effects compared to steroidal contraceptive pills that contain synthetic progesterone/estrogen.",
@@ -1117,10 +1117,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Assertion (A): IVF babies are called test tube babies.\nReason (R): In IVF, fertilisation occurs outside the body in laboratory glassware.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and R explains A. The term 'test tube baby' refers to the fact that fertilisation occurs in vitro (in laboratory conditions/glassware). However, the embryo develops inside the mother's uterus after transfer.",
@@ -1142,10 +1142,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Assertion (A): Lactational amenorrhoea is effective for about 6 months.\nReason (R): Intense lactation suppresses ovulation by inhibiting GnRH release.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and R explains A. During intense lactation, high prolactin levels suppress GnRH release from the hypothalamus, which in turn suppresses FSH and LH, preventing ovulation. This method is effective only for about 6 months.",
@@ -1167,10 +1167,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Assertion (A): STDs are also called venereal diseases (VD).\nReason (R): STDs are transmitted exclusively through sexual contact.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "The assertion is true - STDs are also called venereal diseases. However, the reason is false because STDs are NOT transmitted exclusively through sexual contact. Some can also be spread through blood transfusion, sharing needles, and from mother to child.",
@@ -1192,10 +1192,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Assertion (A): MTP is not a contraceptive method.\nReason (R): MTP terminates an already established pregnancy.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and R explains A. MTP (Medical Termination of Pregnancy) is not a contraceptive because it does not prevent pregnancy. It terminates an already established pregnancy and should not be used as a regular birth control method.",
@@ -1217,10 +1217,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Assertion (A): Population explosion is a major concern in India.\nReason (R): Improved healthcare has led to decreased death rate without a corresponding decrease in birth rate.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and R explains A. Rapid population growth in India is primarily due to the decline in death rate (improved healthcare, better sanitation) while the birth rate has not declined proportionately.",
@@ -1241,10 +1241,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Consider the following statements about ART:\n(i) IVF involves fertilisation outside the body.\n(ii) ZIFT involves transfer of zygote into fallopian tube.\n(iii) GIFT involves transfer of ovum into the uterus.\n(iv) IUI involves introduction of semen into uterus.\nWhich are correct?",
       "options": [
-        "B) (i) and (ii) only",
-        "D) (i), (ii), and (iii) only",
-        "C) All are correct",
-        "A) (i), (ii), and (iv) only"
+        "(i) and (ii) only",
+        "(i), (ii), and (iii) only",
+        "All are correct",
+        "(i), (ii), and (iv) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iv) are correct. Statement (iii) is incorrect because GIFT involves transfer of an ovum collected from a donor into the FALLOPIAN TUBE (not uterus) of another female.",
@@ -1266,10 +1266,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Read the statements:\nStatement I: Surgical methods of contraception are also called sterilisation.\nStatement II: Both vasectomy and tubectomy are reversible procedures.",
       "options": [
-        "A) Both statements are correct",
-        "C) Only statement II is correct",
-        "B) Only statement I is correct",
-        "D) Both statements are incorrect"
+        "Both statements are correct",
+        "Only statement II is correct",
+        "Only statement I is correct",
+        "Both statements are incorrect"
       ],
       "correctAnswer": "C",
       "explanation": "Statement I is correct - surgical methods (vasectomy and tubectomy) are also called sterilisation procedures. Statement II is incorrect because these procedures are considered permanent and are generally NOT easily reversible.",
@@ -1291,10 +1291,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Consider the following STDs:\n(i) AIDS - caused by virus\n(ii) Syphilis - caused by bacterium\n(iii) Trichomoniasis - caused by fungus\n(iv) Genital warts - caused by virus\nWhich are correctly matched?",
       "options": [
-        "A) (i), (ii), and (iv) only",
-        "D) (i), (ii), and (iii) only",
-        "C) All are correct",
-        "B) (i) and (ii) only"
+        "(i), (ii), and (iv) only",
+        "(i), (ii), and (iii) only",
+        "All are correct",
+        "(i) and (ii) only"
       ],
       "correctAnswer": "A",
       "explanation": "(i), (ii), and (iv) are correctly matched. (iii) is incorrect because Trichomoniasis is caused by a protozoan (Trichomonas vaginalis), not a fungus.",
@@ -1316,10 +1316,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Which of the following statements about contraceptive methods is INCORRECT?\n(i) Barrier methods prevent physical contact between sperm and ovum.\n(ii) Hormonal methods prevent ovulation.\n(iii) IUDs increase sperm motility in the uterus.\n(iv) Surgical methods block gamete transport.",
       "options": [
-        "A) (iii) only",
-        "C) (ii) only",
-        "B) (i) and (iii)",
-        "D) None are incorrect"
+        "(iii) only",
+        "(ii) only",
+        "(i) and (iii)",
+        "None are incorrect"
       ],
       "correctAnswer": "A",
       "explanation": "Statement (iii) is incorrect. IUDs DECREASE sperm motility (not increase it). Cu-T releases copper ions that are spermicidal, and hormonal IUDs thicken cervical mucus to impede sperm movement.",
@@ -1341,10 +1341,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Read the following about reproductive health:\nStatement I: India was the first country to initiate a family planning programme in 1951.\nStatement II: The RCH programme pays attention to reproduction-related areas.",
       "options": [
-        "C) Only statement II is correct",
-        "A) Both statements are correct",
-        "D) Both statements are incorrect",
-        "B) Only statement I is correct"
+        "Only statement II is correct",
+        "Both statements are correct",
+        "Both statements are incorrect",
+        "Only statement I is correct"
       ],
       "correctAnswer": "B",
       "explanation": "Both statements are correct. India was indeed the first country in the world to initiate a national family planning programme in 1951. The RCH (Reproductive and Child Health) programmes provide comprehensive care for reproduction-related issues.",
@@ -1366,10 +1366,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Consider the following:\n(i) MTP is legal in India under certain conditions.\n(ii) MTP is always safe regardless of gestational age.\n(iii) MTP may be needed in cases of rape or contraceptive failure.\n(iv) MTP is used to remove foetuses with genetic abnormalities.\nWhich are correct?",
       "options": [
-        "D) (i), (ii), and (iii) only",
-        "B) All are correct",
-        "C) (i) and (iii) only",
-        "A) (i), (iii), and (iv) only"
+        "(i), (ii), and (iii) only",
+        "All are correct",
+        "(i) and (iii) only",
+        "(i), (iii), and (iv) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (iii), and (iv) are correct. Statement (ii) is incorrect because MTP becomes increasingly unsafe with advancing gestational age. It is safest during the first trimester.",
@@ -1391,10 +1391,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Read the statements:\nStatement I: Natural methods of contraception have high failure rates.\nStatement II: The rhythm method requires knowledge of the fertile period.",
       "options": [
-        "A) Both statements are correct",
-        "B) Only statement I is correct",
-        "D) Both statements are incorrect",
-        "C) Only statement II is correct"
+        "Both statements are correct",
+        "Only statement I is correct",
+        "Both statements are incorrect",
+        "Only statement II is correct"
       ],
       "correctAnswer": "A",
       "explanation": "Both are correct. Natural methods like periodic abstinence and withdrawal have relatively high failure rates compared to other methods. The rhythm method requires accurate knowledge of the woman's fertile period (days 10-17).",
@@ -1416,10 +1416,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Consider the following:\n(i) AIDS has no permanent cure.\n(ii) Hepatitis B can be prevented by vaccination.\n(iii) Syphilis can be cured with antibiotics.\n(iv) Genital herpes can be completely cured with antiviral drugs.\nHow many statements are correct?",
       "options": [
-        "B) Two",
-        "C) Three",
-        "D) Four",
-        "A) One"
+        "Two",
+        "Three",
+        "Four",
+        "One"
       ],
       "correctAnswer": "B",
       "explanation": "Three statements are correct: (i), (ii), and (iii). Statement (iv) is incorrect because genital herpes cannot be completely cured; antiviral drugs can only manage symptoms and reduce outbreaks, but the virus remains in the body.",
@@ -1441,10 +1441,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Match Column I (STD) with Column II (Causative organism):\nColumn I: (P) Syphilis, (Q) Gonorrhoea, (R) Genital herpes, (S) Chlamydiasis\nColumn II: (i) Neisseria, (ii) Chlamydia, (iii) HSV, (iv) Treponema",
       "options": [
-        "D) P-ii, Q-i, R-iii, S-iv",
-        "C) P-iv, Q-iii, R-i, S-ii",
-        "A) P-iv, Q-i, R-iii, S-ii",
-        "B) P-i, Q-iv, R-iii, S-ii"
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-iv, Q-iii, R-i, S-ii",
+        "P-iv, Q-i, R-iii, S-ii",
+        "P-i, Q-iv, R-iii, S-ii"
       ],
       "correctAnswer": "C",
       "explanation": "Syphilis - Treponema pallidum (iv), Gonorrhoea - Neisseria gonorrhoeae (i), Genital herpes - HSV (iii), Chlamydiasis - Chlamydia trachomatis (ii).",
@@ -1467,10 +1467,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Match Column I (ART) with Column II (Description):\nColumn I: (P) IVF, (Q) ZIFT, (R) GIFT, (S) ICSI\nColumn II: (i) Ovum + sperm into fallopian tube, (ii) Single sperm injected into ovum, (iii) Zygote into fallopian tube, (iv) Fertilisation in lab",
       "options": [
-        "A) P-iv, Q-iii, R-i, S-ii",
-        "D) P-ii, Q-iii, R-i, S-iv",
-        "C) P-iv, Q-i, R-iii, S-ii",
-        "B) P-iii, Q-iv, R-i, S-ii"
+        "P-iv, Q-iii, R-i, S-ii",
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-iv, Q-i, R-iii, S-ii",
+        "P-iii, Q-iv, R-i, S-ii"
       ],
       "correctAnswer": "A",
       "explanation": "IVF - fertilisation in laboratory (iv), ZIFT - zygote transfer into fallopian tube (iii), GIFT - ovum and sperm transfer into fallopian tube (i), ICSI - single sperm injection into ovum (ii).",
@@ -1492,10 +1492,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Match Column I (Contraceptive) with Column II (Type):\nColumn I: (P) Condom, (Q) Cu-T, (R) Oral pills, (S) Vasectomy\nColumn II: (i) Hormonal, (ii) IUD, (iii) Surgical, (iv) Barrier",
       "options": [
-        "A) P-iv, Q-ii, R-i, S-iii",
-        "C) P-iv, Q-i, R-ii, S-iii",
-        "B) P-ii, Q-iv, R-i, S-iii",
-        "D) P-iii, Q-ii, R-i, S-iv"
+        "P-iv, Q-ii, R-i, S-iii",
+        "P-iv, Q-i, R-ii, S-iii",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iii, Q-ii, R-i, S-iv"
       ],
       "correctAnswer": "A",
       "explanation": "Condom - Barrier method (iv), Cu-T - IUD (ii), Oral pills - Hormonal method (i), Vasectomy - Surgical method (iii).",
@@ -1517,10 +1517,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Match Column I with Column II:\nColumn I: (P) Barrier methods, (Q) IUDs, (R) Hormonal methods, (S) Natural methods\nColumn II: (i) Prevent ovulation, (ii) Prevent physical contact of gametes, (iii) Based on fertile period awareness, (iv) Create hostile uterine environment",
       "options": [
-        "A) P-ii, Q-iv, R-i, S-iii",
-        "C) P-ii, Q-i, R-iv, S-iii",
-        "B) P-iv, Q-ii, R-i, S-iii",
-        "D) P-iii, Q-iv, R-i, S-ii"
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-iv, Q-ii, R-i, S-iii",
+        "P-iii, Q-iv, R-i, S-ii"
       ],
       "correctAnswer": "A",
       "explanation": "Barrier methods prevent physical contact of gametes (ii), IUDs create a hostile uterine environment (iv), Hormonal methods prevent ovulation (i), and Natural methods are based on fertility awareness (iii).",
@@ -1542,10 +1542,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Match Column I (IUD) with Column II (Type):\nColumn I: (P) Cu-T, (Q) LNG-20, (R) Multiload 375, (S) Lippes loop\nColumn II: (i) First generation IUD, (ii) Hormone-releasing, (iii) Copper-releasing, (iv) Copper-releasing",
       "options": [
-        "B) P-ii, Q-iii, R-iv, S-i",
-        "C) P-iii, Q-iv, R-ii, S-i",
-        "A) P-iii, Q-ii, R-iv, S-i",
-        "D) P-i, Q-ii, R-iii, S-iv"
+        "P-ii, Q-iii, R-iv, S-i",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-iii, Q-ii, R-iv, S-i",
+        "P-i, Q-ii, R-iii, S-iv"
       ],
       "correctAnswer": "C",
       "explanation": "Cu-T is copper-releasing (iii), LNG-20 is hormone-releasing (ii), Multiload 375 is copper-releasing (iv), and Lippes loop is a first-generation non-medicated IUD (i).",
@@ -1567,10 +1567,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Match Column I with Column II:\nColumn I: (P) Amniocentesis, (Q) MTP, (R) Tubectomy, (S) IVF-ET\nColumn II: (i) Termination of pregnancy, (ii) Prenatal diagnosis, (iii) Female sterilisation, (iv) Infertility treatment",
       "options": [
-        "B) P-i, Q-ii, R-iii, S-iv",
-        "A) P-ii, Q-i, R-iii, S-iv",
-        "D) P-iv, Q-i, R-iii, S-ii",
-        "C) P-ii, Q-iii, R-i, S-iv"
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-iv, Q-i, R-iii, S-ii",
+        "P-ii, Q-iii, R-i, S-iv"
       ],
       "correctAnswer": "B",
       "explanation": "Amniocentesis is for prenatal diagnosis (ii), MTP is termination of pregnancy (i), Tubectomy is female sterilisation (iii), and IVF-ET is an infertility treatment (iv).",
@@ -1592,10 +1592,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Match Column I (STD) with Column II (Type of pathogen):\nColumn I: (P) AIDS, (Q) Syphilis, (R) Trichomoniasis, (S) Candidiasis\nColumn II: (i) Protozoan, (ii) Bacterium, (iii) Virus, (iv) Fungus",
       "options": [
-        "B) P-ii, Q-iii, R-i, S-iv",
-        "D) P-iv, Q-ii, R-i, S-iii",
-        "A) P-iii, Q-ii, R-i, S-iv",
-        "C) P-iii, Q-i, R-ii, S-iv"
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-iv, Q-ii, R-i, S-iii",
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-iii, Q-i, R-ii, S-iv"
       ],
       "correctAnswer": "C",
       "explanation": "AIDS is caused by virus HIV (iii), Syphilis by bacterium Treponema pallidum (ii), Trichomoniasis by protozoan Trichomonas vaginalis (i), and Candidiasis by fungus Candida (iv).",
@@ -1618,10 +1618,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "How many of the following are bacterial STDs?\nSyphilis, Gonorrhoea, Chlamydiasis, AIDS, Genital herpes, Trichomoniasis, Hepatitis B, Genital warts",
       "options": [
-        "A) Two",
-        "C) Four",
-        "D) Five",
-        "B) Three"
+        "Two",
+        "Four",
+        "Five",
+        "Three"
       ],
       "correctAnswer": "D",
       "explanation": "Three are bacterial STDs: Syphilis (Treponema pallidum), Gonorrhoea (Neisseria gonorrhoeae), and Chlamydiasis (Chlamydia trachomatis). AIDS, Genital herpes, Hepatitis B, and Genital warts are viral. Trichomoniasis is protozoal.",
@@ -1643,10 +1643,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "How many of the following are barrier methods of contraception?\nCondom, Diaphragm, Cervical cap, Cu-T, Vault, Oral pills",
       "options": [
-        "D) Five",
-        "A) Two",
-        "C) Four",
-        "B) Three"
+        "Five",
+        "Two",
+        "Four",
+        "Three"
       ],
       "correctAnswer": "C",
       "explanation": "Four are barrier methods: Condom (male/female), Diaphragm, Cervical cap, and Vault. Cu-T is an IUD and Oral pills are hormonal methods. All four barrier methods physically prevent sperm from reaching the ovum.",
@@ -1668,10 +1668,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "How many of the following are viral STDs?\nAIDS, Genital herpes, Hepatitis B, Genital warts, Syphilis, Gonorrhoea",
       "options": [
-        "D) Five",
-        "A) Two",
-        "C) Four",
-        "B) Three"
+        "Five",
+        "Two",
+        "Four",
+        "Three"
       ],
       "correctAnswer": "C",
       "explanation": "Four are viral STDs: AIDS (HIV), Genital herpes (HSV), Hepatitis B (HBV), and Genital warts (HPV). Syphilis and Gonorrhoea are bacterial STDs.",
@@ -1693,10 +1693,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "How many of the following ART techniques require in vitro fertilisation?\nIVF-ET, ZIFT, GIFT, IUI, ICSI, Surrogacy",
       "options": [
-        "C) Three",
-        "A) One",
-        "B) Two",
-        "D) Four"
+        "Three",
+        "One",
+        "Two",
+        "Four"
       ],
       "correctAnswer": "A",
       "explanation": "Three techniques require in vitro fertilisation: IVF-ET (in vitro fertilisation and embryo transfer), ZIFT (zygote formed in vitro, then transferred), and ICSI (sperm injected into ovum in vitro). GIFT and IUI do not involve in vitro fertilisation.",
@@ -1719,10 +1719,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "How many of the following are methods to increase public awareness about reproductive health?\nAudio-visual media, Print media, Government agencies, NGOs, Schools and colleges, Religious institutions",
       "options": [
-        "A) Three",
-        "B) Four",
-        "D) Six",
-        "C) Five"
+        "Three",
+        "Four",
+        "Six",
+        "Five"
       ],
       "correctAnswer": "D",
       "explanation": "Five methods are used: Audio-visual media, Print media, Government agencies, NGOs, and Schools/colleges. These platforms help in disseminating information about reproductive health, contraception, and STD prevention.",
@@ -1744,10 +1744,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "How many of the following are copper-releasing IUDs?\nCu-T, Cu-7, Multiload 375, LNG-20, Progestasert, Lippes loop",
       "options": [
-        "D) Five",
-        "B) Three",
-        "A) Two",
-        "C) Four"
+        "Five",
+        "Three",
+        "Two",
+        "Four"
       ],
       "correctAnswer": "B",
       "explanation": "Three are copper-releasing IUDs: Cu-T, Cu-7, and Multiload 375. LNG-20 and Progestasert are hormone-releasing IUDs. Lippes loop is a non-medicated (first generation) IUD.",
@@ -1769,10 +1769,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "How many of the following STDs are incurable?\nAIDS, Genital herpes, Hepatitis B, Syphilis, Gonorrhoea, Genital warts",
       "options": [
-        "C) Three",
-        "B) Two",
-        "A) One",
-        "D) Four"
+        "Three",
+        "Two",
+        "One",
+        "Four"
       ],
       "correctAnswer": "A",
       "explanation": "Three STDs are incurable: AIDS (HIV), Genital herpes (HSV), and Hepatitis B (HBV - can be managed but not cured). Genital warts (HPV) can recur. Syphilis and Gonorrhoea are curable with antibiotics.",
@@ -1794,10 +1794,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following steps of IVF-ET in correct sequence:\n(i) Transfer of embryo to uterus\n(ii) Collection of ova and sperm\n(iii) In vitro fertilisation\n(iv) Embryo development in laboratory\n(v) Hormonal stimulation of ovaries",
       "options": [
-        "C) v → iii → ii → iv → i",
-        "D) ii → iii → v → iv → i",
-        "B) ii → v → iii → iv → i",
-        "A) v → ii → iii → iv → i"
+        "v → iii → ii → iv → i",
+        "ii → iii → v → iv → i",
+        "ii → v → iii → iv → i",
+        "v → ii → iii → iv → i"
       ],
       "correctAnswer": "D",
       "explanation": "Correct sequence: Hormonal stimulation of ovaries (superovulation) → Collection of ova and sperm → In vitro fertilisation → Embryo development in laboratory → Transfer of embryo to uterus.",
@@ -1819,10 +1819,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following in order from least effective to most effective contraceptive method:\n(i) Condoms\n(ii) Sterilisation\n(iii) Periodic abstinence\n(iv) Oral pills",
       "options": [
-        "D) i → iii → ii → iv",
-        "B) i → iii → iv → ii",
-        "A) iii → i → iv → ii",
-        "C) iii → iv → i → ii"
+        "i → iii → ii → iv",
+        "i → iii → iv → ii",
+        "iii → i → iv → ii",
+        "iii → iv → i → ii"
       ],
       "correctAnswer": "C",
       "explanation": "From least to most effective: Periodic abstinence (highest failure rate) → Condoms → Oral pills → Sterilisation (most effective, nearly 100%).",
@@ -1844,10 +1844,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following stages of amniocentesis in correct order:\n(i) Chromosomal analysis\n(ii) Insertion of needle into amniotic cavity\n(iii) Collection of amniotic fluid\n(iv) Ultrasound guidance\n(v) Analysis and diagnosis",
       "options": [
-        "A) iv → ii → iii → i → v",
-        "D) ii → iii → iv → v → i",
-        "B) ii → iv → iii → i → v",
-        "C) iv → iii → ii → i → v"
+        "iv → ii → iii → i → v",
+        "ii → iii → iv → v → i",
+        "ii → iv → iii → i → v",
+        "iv → iii → ii → i → v"
       ],
       "correctAnswer": "A",
       "explanation": "Correct sequence: Ultrasound guidance → Insertion of needle → Collection of amniotic fluid → Chromosomal analysis of foetal cells → Analysis and diagnosis of abnormalities.",
@@ -1869,10 +1869,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following government initiatives for population control in chronological order:\n(i) RCH programme\n(ii) Family Planning Programme (1951)\n(iii) National Population Policy (2000)\n(iv) Family Welfare Programme",
       "options": [
-        "A) ii → iv → i → iii",
-        "C) ii → i → iv → iii",
-        "B) iv → ii → i → iii",
-        "D) ii → iv → iii → i"
+        "ii → iv → i → iii",
+        "ii → i → iv → iii",
+        "iv → ii → i → iii",
+        "ii → iv → iii → i"
       ],
       "correctAnswer": "A",
       "explanation": "Chronological order: Family Planning Programme (1951) → Family Welfare Programme (renamed) → RCH programme → National Population Policy (2000).",
@@ -1894,10 +1894,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following contraceptive methods from temporary to permanent:\n(i) Tubectomy\n(ii) Condom\n(iii) IUD\n(iv) Oral pills",
       "options": [
-        "C) ii → iii → iv → i",
-        "D) iii → ii → iv → i",
-        "A) ii → iv → iii → i",
-        "B) iv → ii → iii → i"
+        "ii → iii → iv → i",
+        "iii → ii → iv → i",
+        "ii → iv → iii → i",
+        "iv → ii → iii → i"
       ],
       "correctAnswer": "A",
       "explanation": "From temporary to permanent: Condom (single use) → IUD (medium-term, removable) → Oral pills (daily, reversible) → Tubectomy (permanent sterilisation). Actually all except tubectomy are temporary; the order from shortest to longest acting is: Condom → IUD → Oral pills → Tubectomy.",
@@ -1919,10 +1919,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following in the order of steps for artificial insemination:\n(i) Introduction of semen into female tract\n(ii) Collection of semen from husband/donor\n(iii) Processing and concentration of semen\n(iv) Monitoring for pregnancy",
       "options": [
-        "B) iii → ii → i → iv",
-        "C) ii → i → iii → iv",
-        "D) i → ii → iii → iv",
-        "A) ii → iii → i → iv"
+        "iii → ii → i → iv",
+        "ii → i → iii → iv",
+        "i → ii → iii → iv",
+        "ii → iii → i → iv"
       ],
       "correctAnswer": "D",
       "explanation": "Correct sequence: Collection of semen → Processing and concentration of semen → Introduction of semen into female reproductive tract → Monitoring for pregnancy.",
@@ -1944,10 +1944,10 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following causes of infertility from most to least common:\n(i) Blocked fallopian tubes\n(ii) Low sperm count\n(iii) Hormonal imbalances\n(iv) Physical inability for coitus",
       "options": [
-        "C) i → ii → iii → iv",
-        "B) ii → i → iii → iv",
-        "A) iii → i → ii → iv",
-        "D) iv → iii → i → ii"
+        "i → ii → iii → iv",
+        "ii → i → iii → iv",
+        "iii → i → ii → iv",
+        "iv → iii → i → ii"
       ],
       "correctAnswer": "C",
       "explanation": "Common causes of infertility from most to least: Hormonal imbalances (most common) → Blocked fallopian tubes → Low sperm count → Physical inability for coitus. Hormonal issues affect both males and females.",

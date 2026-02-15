@@ -15,10 +15,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "The technique of growing plants in a defined nutrient solution without soil is called:",
       "options": [
-        "A) Hydroponics",
-        "D) Vermiculture",
-        "C) Tissue culture",
-        "B) Aeroponics"
+        "Hydroponics",
+        "Vermiculture",
+        "Tissue culture",
+        "Aeroponics"
       ],
       "correctAnswer": "A",
       "explanation": "Hydroponics (soilless culture) is the technique of growing plants in a defined mineral nutrient solution without soil. It was popularised by Julius von Sachs and is used to identify essential mineral elements for plant growth.",
@@ -41,10 +41,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "How many essential mineral elements have been identified for plant growth?",
       "options": [
-        "D) 20",
-        "B) 15",
-        "A) 12",
-        "C) 17"
+        "20",
+        "15",
+        "12",
+        "17"
       ],
       "correctAnswer": "D",
       "explanation": "Seventeen elements have been identified as essential for plant growth. These include C, H, O (from air and water) and 14 mineral elements absorbed from soil. They are classified into macronutrients and micronutrients based on the quantity required.",
@@ -67,10 +67,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which of the following is a micronutrient (trace element)?",
       "options": [
-        "B) Potassium",
-        "A) Nitrogen",
-        "D) Calcium",
-        "C) Manganese"
+        "Potassium",
+        "Nitrogen",
+        "Calcium",
+        "Manganese"
       ],
       "correctAnswer": "D",
       "explanation": "Manganese (Mn) is a micronutrient required in very small amounts (less than 10 mmol kg⁻¹ of dry matter). Other micronutrients include Fe, Cu, Zn, B, Mo, Cl, and Ni. Nitrogen, potassium, and calcium are macronutrients.",
@@ -93,10 +93,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which of the following criteria must be fulfilled for an element to be classified as essential?",
       "options": [
-        "D) It must be an organic molecule",
-        "B) The element must be absolutely necessary for the plant to complete its life cycle",
-        "C) It must be present in large quantities",
-        "A) It must be abundant in the soil"
+        "It must be an organic molecule",
+        "The element must be absolutely necessary for the plant to complete its life cycle",
+        "It must be present in large quantities",
+        "It must be abundant in the soil"
       ],
       "correctAnswer": "B",
       "explanation": "According to Arnon and Stout's criteria, an essential element must be: (1) absolutely necessary for growth and reproduction, (2) its function cannot be replaced by another element, and (3) it must be directly involved in plant metabolism.",
@@ -119,10 +119,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Chlorosis (yellowing of leaves) is caused by deficiency of:",
       "options": [
-        "B) Nitrogen, Potassium, Magnesium, or Iron",
-        "A) Phosphorus",
-        "D) Molybdenum",
-        "C) Boron"
+        "Nitrogen, Potassium, Magnesium, or Iron",
+        "Phosphorus",
+        "Molybdenum",
+        "Boron"
       ],
       "correctAnswer": "A",
       "explanation": "Chlorosis is the loss of chlorophyll leading to yellowing of leaves. It is caused by deficiency of elements needed for chlorophyll synthesis, including N, K, Mg, S, Fe, Mn, Zn, and Mo. These elements are involved in chlorophyll structure or synthesis.",
@@ -145,10 +145,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Nitrogen fixation by Rhizobium is a:",
       "options": [
-        "B) Free-living process",
-        "C) Non-biological process",
-        "A) Symbiotic process",
-        "D) Photochemical process"
+        "Free-living process",
+        "Non-biological process",
+        "Symbiotic process",
+        "Photochemical process"
       ],
       "correctAnswer": "C",
       "explanation": "Rhizobium is a symbiotic nitrogen-fixing bacterium that lives in the root nodules of leguminous plants. The bacteria fix atmospheric nitrogen into ammonia, while the plant provides food and shelter. This is a classic example of mutualistic symbiosis.",
@@ -171,10 +171,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "The enzyme responsible for biological nitrogen fixation is:",
       "options": [
-        "D) Urease",
-        "C) Nitrite reductase",
-        "B) Nitrogenase",
-        "A) Nitrate reductase"
+        "Urease",
+        "Nitrite reductase",
+        "Nitrogenase",
+        "Nitrate reductase"
       ],
       "correctAnswer": "C",
       "explanation": "Nitrogenase is the enzyme complex that catalyses the reduction of atmospheric nitrogen (N₂) to ammonia (NH₃). It requires anaerobic conditions, 16 ATP molecules per N₂ fixed, and is found in nitrogen-fixing organisms like Rhizobium, Azotobacter, and cyanobacteria.",
@@ -197,10 +197,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Leghaemoglobin is found in:",
       "options": [
-        "D) Stems of grasses",
-        "B) Root nodules of leguminous plants",
-        "A) Blood of mammals",
-        "C) Leaves of legumes"
+        "Stems of grasses",
+        "Root nodules of leguminous plants",
+        "Blood of mammals",
+        "Leaves of legumes"
       ],
       "correctAnswer": "B",
       "explanation": "Leghaemoglobin (Lb) is a pinkish-red pigment found in the root nodules of leguminous plants. It acts as an oxygen scavenger, protecting the oxygen-sensitive nitrogenase enzyme. The globin part is coded by the plant and the haem by the bacterium.",
@@ -223,10 +223,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which macronutrient is a constituent of all amino acids, proteins, and nucleic acids?",
       "options": [
-        "A) Phosphorus",
-        "C) Potassium",
-        "B) Nitrogen",
-        "D) Calcium"
+        "Phosphorus",
+        "Potassium",
+        "Nitrogen",
+        "Calcium"
       ],
       "correctAnswer": "C",
       "explanation": "Nitrogen is a constituent of amino acids, proteins, nucleic acids, vitamins, and many coenzymes. It is required in the greatest quantity among mineral nutrients and is the most critical element limiting plant growth.",
@@ -250,10 +250,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which element is a constituent of the middle lamella of the cell wall?",
       "options": [
-        "D) Iron",
-        "B) Magnesium",
-        "A) Potassium",
-        "C) Calcium"
+        "Iron",
+        "Magnesium",
+        "Potassium",
+        "Calcium"
       ],
       "correctAnswer": "D",
       "explanation": "Calcium is a constituent of the middle lamella in the form of calcium pectate. It is also involved in cell membrane stability, enzyme activation, and as a secondary messenger in signal transduction.",
@@ -276,10 +276,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Necrosis (death of tissue) is a deficiency symptom of:",
       "options": [
-        "D) Only sulphur",
-        "A) Only nitrogen",
-        "C) Only phosphorus",
-        "B) Ca, Mg, Cu, and K"
+        "Only sulphur",
+        "Only nitrogen",
+        "Only phosphorus",
+        "Ca, Mg, Cu, and K"
       ],
       "correctAnswer": "D",
       "explanation": "Necrosis, or death of tissue particularly leaf tissue, occurs due to deficiency of Ca, Mg, Cu, and K. It usually appears as brown spots on leaves, often starting at the leaf margins or tips.",
@@ -302,10 +302,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which element activates the enzyme RuBisCO and is required for photolysis of water?",
       "options": [
-        "B) Manganese",
-        "A) Zinc",
-        "D) Copper",
-        "C) Boron"
+        "Manganese",
+        "Zinc",
+        "Copper",
+        "Boron"
       ],
       "correctAnswer": "A",
       "explanation": "Manganese (Mn) activates many enzymes in cellular respiration and photosynthesis. It is essential for the photolysis of water during the light reaction of photosynthesis (as part of the oxygen-evolving complex in PS II).",
@@ -329,10 +329,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "The overall equation for biological nitrogen fixation is:",
       "options": [
-        "C) N₂ + 4e⁻ + 4H⁺ + 8ATP → 2NH₃ + 8ADP + 8Pi",
-        "D) N₂ + 3H₂ → 2NH₃",
-        "A) N₂ + 8e⁻ + 8H⁺ + 16ATP → 2NH₃ + H₂ + 16ADP + 16Pi",
-        "B) N₂ + 6e⁻ + 6H⁺ + 12ATP → 2NH₃ + 12ADP + 12Pi"
+        "N₂ + 4e⁻ + 4H⁺ + 8ATP → 2NH₃ + 8ADP + 8Pi",
+        "N₂ + 3H₂ → 2NH₃",
+        "N₂ + 8e⁻ + 8H⁺ + 16ATP → 2NH₃ + H₂ + 16ADP + 16Pi",
+        "N₂ + 6e⁻ + 6H⁺ + 12ATP → 2NH₃ + 12ADP + 12Pi"
       ],
       "correctAnswer": "C",
       "explanation": "The overall equation for biological nitrogen fixation catalysed by nitrogenase is: N₂ + 8e⁻ + 8H⁺ + 16ATP → 2NH₃ + H₂ + 16ADP + 16Pi. It requires 8 electrons (not 6), produces H₂ as an obligatory by-product, and consumes 16 ATP molecules.",
@@ -355,10 +355,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Magnesium is an essential component of:",
       "options": [
-        "B) Chlorophyll molecule",
-        "A) Cell wall",
-        "D) Ferredoxin",
-        "C) Cytochrome"
+        "Chlorophyll molecule",
+        "Cell wall",
+        "Ferredoxin",
+        "Cytochrome"
       ],
       "correctAnswer": "A",
       "explanation": "Magnesium (Mg) is the central atom in the porphyrin ring of chlorophyll molecules. It is also an activator of enzymes involved in respiration and photosynthesis, including RuBisCO, and is needed for ribosome assembly.",
@@ -381,10 +381,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which of the following is a free-living nitrogen-fixing cyanobacterium?",
       "options": [
-        "A) Rhizobium",
-        "D) Bradyrhizobium",
-        "C) Frankia",
-        "B) Anabaena (free-living form)"
+        "Rhizobium",
+        "Bradyrhizobium",
+        "Frankia",
+        "Anabaena (free-living form)"
       ],
       "correctAnswer": "D",
       "explanation": "Anabaena is a cyanobacterium capable of fixing nitrogen both as a free-living organism and in symbiotic association (e.g., with Azolla). Rhizobium and Bradyrhizobium are symbiotic bacteria, while Frankia is a symbiotic actinomycete.",
@@ -407,10 +407,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Phosphorus is a constituent of:",
       "options": [
-        "C) Chlorophyll and cytochrome",
-        "B) Cell membranes, nucleic acids, and ATP",
-        "A) Cell wall and middle lamella",
-        "D) Ferredoxin and nitrogenase"
+        "Chlorophyll and cytochrome",
+        "Cell membranes, nucleic acids, and ATP",
+        "Cell wall and middle lamella",
+        "Ferredoxin and nitrogenase"
       ],
       "correctAnswer": "B",
       "explanation": "Phosphorus is a constituent of cell membranes (phospholipids), nucleic acids (DNA and RNA), ATP, NADP, and sugar phosphates. It plays a crucial role in energy transfer reactions and is important for root development and flowering.",
@@ -434,10 +434,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Molybdenum is a component of which enzyme?",
       "options": [
-        "A) Nitrogenase and nitrate reductase",
-        "D) Alcohol dehydrogenase",
-        "B) Carbonic anhydrase",
-        "C) Cytochrome oxidase"
+        "Nitrogenase and nitrate reductase",
+        "Alcohol dehydrogenase",
+        "Carbonic anhydrase",
+        "Cytochrome oxidase"
       ],
       "correctAnswer": "A",
       "explanation": "Molybdenum (Mo) is a component of both nitrogenase (which fixes atmospheric nitrogen) and nitrate reductase (which reduces nitrate to nitrite in plants). It is therefore essential for nitrogen metabolism in plants.",
@@ -460,10 +460,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "The deficiency symptoms appear first in older leaves when the deficient element is:",
       "options": [
-        "B) Nitrogen",
-        "A) Calcium",
-        "C) Iron",
-        "D) Sulphur"
+        "Nitrogen",
+        "Calcium",
+        "Iron",
+        "Sulphur"
       ],
       "correctAnswer": "A",
       "explanation": "Mobile elements like N, P, K, and Mg are translocated from older leaves to younger leaves when deficient. Therefore, deficiency symptoms first appear in older (senescent) leaves. Immobile elements (Ca, S, Fe) show symptoms in younger leaves first.",
@@ -486,10 +486,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which micronutrient is essential for pollen germination?",
       "options": [
-        "D) Molybdenum",
-        "B) Boron",
-        "A) Zinc",
-        "C) Copper"
+        "Molybdenum",
+        "Boron",
+        "Zinc",
+        "Copper"
       ],
       "correctAnswer": "B",
       "explanation": "Boron (B) is essential for pollen germination and pollen tube growth. It is also required for cell elongation, cell differentiation, carbohydrate translocation, and is involved in the uptake and utilisation of calcium.",
@@ -512,10 +512,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Potassium is important in plants for:",
       "options": [
-        "C) Being a component of chlorophyll",
-        "D) Being a part of nucleic acids",
-        "B) Maintaining anion-cation balance and stomatal opening",
-        "A) Being a structural component of proteins"
+        "Being a component of chlorophyll",
+        "Being a part of nucleic acids",
+        "Maintaining anion-cation balance and stomatal opening",
+        "Being a structural component of proteins"
       ],
       "correctAnswer": "C",
       "explanation": "Potassium (K) helps maintain anion-cation balance in cells, regulates stomatal opening and closing, activates many enzymes (including those in protein synthesis), and helps in maintaining turgidity of cells. It is not a structural component of any organic molecule.",
@@ -538,10 +538,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "The infection thread in root nodule formation is formed by:",
       "options": [
-        "B) Rhizobium penetrating through root hairs",
-        "C) Mycorrhizal fungi entering the cortex",
-        "A) The plant cell wall invaginating inward",
-        "D) Nod factors dissolving the root cap"
+        "Rhizobium penetrating through root hairs",
+        "Mycorrhizal fungi entering the cortex",
+        "The plant cell wall invaginating inward",
+        "Nod factors dissolving the root cap"
       ],
       "correctAnswer": "A",
       "explanation": "During nodule formation, Rhizobium bacteria attach to root hairs which curl. The bacteria then enter through the infection thread, which is an invagination of the root hair cell membrane surrounded by cell wall material, and reach the inner cortex where they form nodules.",
@@ -564,10 +564,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Iron is a constituent of:",
       "options": [
-        "C) Cell wall",
-        "B) Ferredoxin and cytochromes",
-        "A) Chlorophyll",
-        "D) Nucleic acids"
+        "Cell wall",
+        "Ferredoxin and cytochromes",
+        "Chlorophyll",
+        "Nucleic acids"
       ],
       "correctAnswer": "B",
       "explanation": "Iron (Fe) is a constituent of ferredoxin (electron carrier in photosynthesis), cytochromes (electron transport chain), and catalase. It is essential for chlorophyll biosynthesis but is not a structural part of the chlorophyll molecule.",
@@ -590,10 +590,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Zinc is an activator of which enzyme?",
       "options": [
-        "B) Carbonic anhydrase",
-        "A) Nitrogenase",
-        "D) Nitrate reductase",
-        "C) Cytochrome oxidase"
+        "Carbonic anhydrase",
+        "Nitrogenase",
+        "Nitrate reductase",
+        "Cytochrome oxidase"
       ],
       "correctAnswer": "A",
       "explanation": "Zinc (Zn) activates the enzyme carbonic anhydrase (which catalyses CO₂ + H₂O ⇌ H₂CO₃) and carboxypeptidase. It is also needed for the synthesis of auxin (IAA) and is essential for chlorophyll biosynthesis.",
@@ -616,10 +616,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which of the following is the first stable product of nitrogen fixation?",
       "options": [
-        "C) Ammonia (NH₃)",
-        "B) Nitrite (NO₂⁻)",
-        "D) Urea",
-        "A) Nitrate (NO₃⁻)"
+        "Ammonia (NH₃)",
+        "Nitrite (NO₂⁻)",
+        "Urea",
+        "Nitrate (NO₃⁻)"
       ],
       "correctAnswer": "A",
       "explanation": "The first stable product of biological nitrogen fixation is ammonia (NH₃). Nitrogenase reduces N₂ to 2NH₃. The ammonia is then protonated to ammonium (NH₄⁺) at physiological pH, which is further assimilated into amino acids.",
@@ -642,10 +642,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Sulphur is a constituent of:",
       "options": [
-        "A) Chlorophyll",
-        "C) Nucleic acids",
-        "B) Amino acids cysteine and methionine",
-        "D) Cell wall"
+        "Chlorophyll",
+        "Nucleic acids",
+        "Amino acids cysteine and methionine",
+        "Cell wall"
       ],
       "correctAnswer": "C",
       "explanation": "Sulphur is present in two amino acids - cysteine and methionine - and is therefore part of many proteins. It is also found in coenzyme A, thiamine, biotin, and ferredoxin. Sulphur deficiency causes chlorosis.",
@@ -669,10 +669,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "The process of conversion of ammonia to nitrite and then to nitrate is called:",
       "options": [
-        "A) Ammonification",
-        "C) Denitrification",
-        "D) Nitrogen fixation",
-        "B) Nitrification"
+        "Ammonification",
+        "Denitrification",
+        "Nitrogen fixation",
+        "Nitrification"
       ],
       "correctAnswer": "D",
       "explanation": "Nitrification is the two-step oxidation of ammonia to nitrate. Step 1: NH₃ → NO₂⁻ (by Nitrosomonas). Step 2: NO₂⁻ → NO₃⁻ (by Nitrobacter). Both are chemoautotrophic bacteria that obtain energy from these oxidation reactions.",
@@ -695,10 +695,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "The conversion of nitrate to free nitrogen gas is called:",
       "options": [
-        "A) Nitrogen fixation",
-        "C) Denitrification",
-        "D) Ammonification",
-        "B) Nitrification"
+        "Nitrogen fixation",
+        "Denitrification",
+        "Ammonification",
+        "Nitrification"
       ],
       "correctAnswer": "B",
       "explanation": "Denitrification is the reduction of nitrate (NO₃⁻) to gaseous nitrogen (N₂) by bacteria like Pseudomonas and Thiobacillus under anaerobic conditions. This process returns nitrogen to the atmosphere, completing the nitrogen cycle.",
@@ -721,10 +721,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Copper is needed for:",
       "options": [
-        "A) Pollen germination",
-        "B) Overall metabolism in plants and is a component of cytochrome oxidase",
-        "D) Cell wall formation",
-        "C) Chlorophyll synthesis only"
+        "Pollen germination",
+        "Overall metabolism in plants and is a component of cytochrome oxidase",
+        "Cell wall formation",
+        "Chlorophyll synthesis only"
       ],
       "correctAnswer": "B",
       "explanation": "Copper (Cu) is essential for overall metabolism. It is a component of several enzymes including cytochrome oxidase (terminal oxidase in electron transport chain), tyrosinase, and ascorbic acid oxidase. It is also associated with certain oxidase enzymes in redox reactions.",
@@ -747,10 +747,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which element is the most recently identified essential element for plants?",
       "options": [
-        "A) Cobalt",
-        "B) Nickel",
-        "D) Selenium",
-        "C) Silicon"
+        "Cobalt",
+        "Nickel",
+        "Selenium",
+        "Silicon"
       ],
       "correctAnswer": "B",
       "explanation": "Nickel (Ni) is the most recently identified essential element (the 17th), recognized in 1987. It is a component of the enzyme urease, which is needed for nitrogen metabolism. Without nickel, urea accumulates to toxic levels in plants.",
@@ -773,10 +773,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Chlorine is required in plants for:",
       "options": [
-        "C) Synthesis of chlorophyll",
-        "A) Nitrogen fixation",
-        "D) Cell wall formation",
-        "B) Photolysis of water during photosynthesis"
+        "Synthesis of chlorophyll",
+        "Nitrogen fixation",
+        "Cell wall formation",
+        "Photolysis of water during photosynthesis"
       ],
       "correctAnswer": "D",
       "explanation": "Chlorine (Cl) is essential for the water-splitting reaction (photolysis) in photosystem II during photosynthesis. Along with Mn, it is required for the oxygen-evolving complex. It also helps in maintaining solute concentration and turgor pressure.",
@@ -799,10 +799,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which insectivorous plant obtains nitrogen by trapping insects?",
       "options": [
-        "A) Cuscuta",
-        "B) Nepenthes (pitcher plant)",
-        "C) Rafflesia",
-        "D) Orobanche"
+        "Cuscuta",
+        "Nepenthes (pitcher plant)",
+        "Rafflesia",
+        "Orobanche"
       ],
       "correctAnswer": "B",
       "explanation": "Nepenthes (pitcher plant), Drosera (sundew), Venus flytrap, and other insectivorous plants grow in nitrogen-poor soils. They trap and digest insects to supplement their nitrogen requirement. They are autotrophic for carbon but obtain nitrogen from insects.",
@@ -825,10 +825,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "The role of leghaemoglobin in root nodules is to:",
       "options": [
-        "D) Transport fixed nitrogen to the plant",
-        "B) Protect nitrogenase from oxygen",
-        "C) Provide oxygen for respiration of bacteroids",
-        "A) Fix atmospheric nitrogen"
+        "Transport fixed nitrogen to the plant",
+        "Protect nitrogenase from oxygen",
+        "Provide oxygen for respiration of bacteroids",
+        "Fix atmospheric nitrogen"
       ],
       "correctAnswer": "B",
       "explanation": "Leghaemoglobin acts as an oxygen scavenger in root nodules. It binds oxygen to maintain a low free oxygen concentration, thereby protecting the oxygen-sensitive nitrogenase enzyme while still allowing enough oxygen for aerobic respiration of bacteroids.",
@@ -851,10 +851,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Ammonification refers to:",
       "options": [
-        "B) Reduction of nitrogen to ammonia",
-        "D) Conversion of nitrate to ammonia",
-        "C) Decomposition of organic nitrogen to ammonia",
-        "A) Oxidation of ammonia to nitrate"
+        "Reduction of nitrogen to ammonia",
+        "Conversion of nitrate to ammonia",
+        "Decomposition of organic nitrogen to ammonia",
+        "Oxidation of ammonia to nitrate"
       ],
       "correctAnswer": "C",
       "explanation": "Ammonification is the decomposition of organic nitrogenous compounds (proteins, amino acids, urea) from dead organisms and excretory matter into ammonia by decomposing bacteria and fungi. This ammonia is then available for nitrification or direct plant uptake.",
@@ -877,10 +877,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which element is required for nitrogen fixation but is not a component of nitrogenase?",
       "options": [
-        "A) Molybdenum",
-        "C) Cobalt",
-        "D) Manganese",
-        "B) Iron"
+        "Molybdenum",
+        "Cobalt",
+        "Manganese",
+        "Iron"
       ],
       "correctAnswer": "B",
       "explanation": "Cobalt (Co) is not a component of nitrogenase but is required for the synthesis of vitamin B12 (cobalamin), which is needed by nitrogen-fixing bacteria like Rhizobium. Nitrogenase itself contains Mo and Fe as essential components.",
@@ -903,10 +903,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Stunted growth, premature leaf fall, and delayed flowering are symptoms of deficiency of:",
       "options": [
-        "A) Boron",
-        "B) Nitrogen",
-        "D) Molybdenum",
-        "C) Phosphorus"
+        "Boron",
+        "Nitrogen",
+        "Molybdenum",
+        "Phosphorus"
       ],
       "correctAnswer": "D",
       "explanation": "Phosphorus deficiency causes stunted growth, premature leaf fall, delayed flowering, and purplish or dark green discoloration of older leaves. Phosphorus is highly mobile in plants, so deficiency symptoms appear first in older leaves.",
@@ -929,10 +929,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which of the following is NOT a macronutrient?",
       "options": [
-        "B) Sulphur",
-        "A) Nitrogen",
-        "C) Zinc",
-        "D) Magnesium"
+        "Sulphur",
+        "Nitrogen",
+        "Zinc",
+        "Magnesium"
       ],
       "correctAnswer": "C",
       "explanation": "Zinc is a micronutrient (trace element). The macronutrients (required in concentrations above 10 mmol kg⁻¹ of dry matter) are: C, H, O, N, P, K, Ca, Mg, and S. Micronutrients include Fe, Mn, Zn, Cu, B, Mo, Cl, and Ni.",
@@ -955,10 +955,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "In the nitrogen cycle, Nitrosomonas converts:",
       "options": [
-        "A) N₂ to NH₃",
-        "C) NO₂⁻ to NO₃⁻",
-        "B) NH₃ to NO₂⁻",
-        "D) NO₃⁻ to N₂"
+        "N₂ to NH₃",
+        "NO₂⁻ to NO₃⁻",
+        "NH₃ to NO₂⁻",
+        "NO₃⁻ to N₂"
       ],
       "correctAnswer": "C",
       "explanation": "Nitrosomonas is a chemoautotrophic nitrifying bacterium that oxidises ammonia (NH₃) to nitrite (NO₂⁻) in the first step of nitrification. The second step, oxidation of nitrite to nitrate, is carried out by Nitrobacter.",
@@ -981,10 +981,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Little leaf disease is caused by deficiency of:",
       "options": [
-        "D) Copper",
-        "A) Iron",
-        "C) Boron",
-        "B) Zinc"
+        "Copper",
+        "Iron",
+        "Boron",
+        "Zinc"
       ],
       "correctAnswer": "D",
       "explanation": "Zinc deficiency causes 'little leaf disease' (small leaves) because zinc is needed for the synthesis of the plant hormone auxin (IAA). Without adequate zinc, auxin production is reduced, leading to shortened internodes and small leaves.",
@@ -1007,10 +1007,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Nitrogenase enzyme is sensitive to oxygen.\nReason (R): Leghaemoglobin in root nodules acts as an oxygen scavenger to protect nitrogenase.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason correctly explains the assertion. Nitrogenase is irreversibly inactivated by molecular oxygen. To counter this, leghaemoglobin binds free oxygen in root nodules, maintaining the microaerobic environment needed for nitrogenase activity.",
@@ -1033,10 +1033,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Deficiency symptoms of nitrogen appear first in older leaves.\nReason (R): Nitrogen is a mobile element and is transported from older to younger leaves during deficiency.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. Nitrogen is a mobile element in plants. During deficiency, nitrogen is remobilised from older mature leaves to young growing tissues. Hence, the older leaves show yellowing (chlorosis) first.",
@@ -1059,10 +1059,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Hydroponics is useful for identifying essential mineral elements.\nReason (R): In hydroponics, individual elements can be removed from the nutrient solution to study their effects on plant growth.",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. Hydroponics allows scientists to prepare nutrient solutions with known compositions. By omitting one element at a time, the specific role and essentiality of each element can be determined.",
@@ -1085,10 +1085,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Calcium deficiency leads to death of shoot and root tips.\nReason (R): Calcium is an immobile element and cannot be translocated from older parts to newer growing regions.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. Calcium is relatively immobile in the phloem. During Ca deficiency, it cannot be redistributed from older tissues to growing tips (meristems). Hence, young meristematic tissues like shoot and root tips are affected first, leading to their death.",
@@ -1111,10 +1111,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Magnesium deficiency causes chlorosis.\nReason (R): Magnesium is the central atom in the chlorophyll molecule.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. Magnesium is the central metallic atom in the porphyrin ring of chlorophyll. Without sufficient Mg, chlorophyll cannot be synthesised, leading to chlorosis (yellowing of leaves due to loss of chlorophyll).",
@@ -1137,10 +1137,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Biological nitrogen fixation requires 16 ATP molecules per molecule of N₂ fixed.\nReason (R): Breaking the triple bond of N₂ is an energetically expensive process.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. The N≡N triple bond has a bond energy of about 940 kJ/mol, making it one of the strongest bonds in nature. Breaking this bond requires enormous energy input, which is why nitrogenase needs 16 ATP per N₂ molecule.",
@@ -1163,10 +1163,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Potassium is required in large amounts by plants but is not a constituent of any organic molecule.\nReason (R): Potassium functions as an enzyme activator and helps in maintaining stomatal movement and cell turgidity.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true but the reason does not explain why K is not a constituent of organic molecules. The assertion states K is not structurally incorporated into organic molecules. The reason describes K's functions (enzyme activation, stomatal regulation), which are valid but don't explain why K lacks structural roles.",
@@ -1189,10 +1189,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Iron deficiency causes interveinal chlorosis in young leaves.\nReason (R): Iron is an immobile element and is not easily redistributed from older leaves to younger ones.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. Iron is relatively immobile in plants. During Fe deficiency, it cannot be translocated from older to younger leaves. Hence, young leaves develop interveinal chlorosis (yellowing between veins while veins remain green).",
@@ -1215,10 +1215,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Denitrification is harmful for agriculture.\nReason (R): Denitrifying bacteria convert soil nitrates into gaseous nitrogen, reducing soil fertility.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. Denitrification by bacteria like Pseudomonas converts soil nitrates (usable form of nitrogen) back to gaseous N₂, which escapes into the atmosphere. This depletes the nitrogen available for plant uptake, reducing soil fertility.",
@@ -1241,10 +1241,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): The globin part of leghaemoglobin is coded by the plant gene.\nReason (R): The haem part of leghaemoglobin is synthesised by the Rhizobium bacterium.",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both statements are true. The globin part of leghaemoglobin is indeed coded by the plant genome, and the haem part is synthesised by the bacterium. However, the reason does not explain the assertion — they describe two independent facts about the dual origin of leghaemoglobin.",
@@ -1268,10 +1268,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Insectivorous plants like Nepenthes can survive without trapping insects.\nReason (R): Insectivorous plants are autotrophic and can photosynthesise to produce their own food.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true. Insectivorous plants can survive without insects (they just grow poorly) because they are photosynthetically autotrophic. However, the reason doesn't fully explain the assertion — they trap insects specifically for nitrogen supplementation in nitrogen-poor soils, not for carbon/energy.",
@@ -1294,10 +1294,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Zinc deficiency causes little leaf disease.\nReason (R): Zinc is essential for the biosynthesis of auxin (IAA).",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. Zinc is required for the synthesis of tryptophan, which is a precursor of auxin (IAA). Without zinc, auxin levels drop, leading to reduced cell elongation and expansion, causing small leaves (little leaf disease).",
@@ -1321,10 +1321,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Boron deficiency leads to stout, stunted roots and death of shoot apex.\nReason (R): Boron is required for cell elongation, cell differentiation, and carbohydrate translocation.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. Boron is involved in cell elongation and differentiation, particularly of meristems. Its deficiency causes death of growing tips (shoot apex), stout and stunted roots, and abnormal growth patterns due to impaired cell division.",
@@ -1347,10 +1347,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Consider the following statements about macronutrients:\nI. They are required in concentrations above 10 mmol kg⁻¹ of dry matter.\nII. Carbon, hydrogen, and oxygen are macronutrients obtained from air and water.\nIII. There are 9 macronutrients in total.\nIV. Potassium is a structural component of proteins.\nWhich of the above statements are correct?",
       "options": [
-        "C) I and II only",
-        "D) II and IV only",
-        "B) I, II, III and IV",
-        "A) I, II and III only"
+        "I and II only",
+        "II and IV only",
+        "I, II, III and IV",
+        "I, II and III only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I, II and III are correct. Macronutrients are required in large amounts (>10 mmol kg⁻¹). C, H, O are from air/water. There are 9 macronutrients (C, H, O, N, P, K, Ca, Mg, S). Statement IV is incorrect; K is NOT a structural component of any organic molecule.",
@@ -1373,10 +1373,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which of the following statements about nitrogen fixation are correct?\nI. Atmospheric nitrogen makes up about 78% of the atmosphere.\nII. Biological nitrogen fixation is carried out only by prokaryotes.\nIII. Lightning and UV radiation can fix nitrogen non-biologically.\nIV. All bacteria can fix atmospheric nitrogen.",
       "options": [
-        "D) I, III and IV only",
-        "A) I, II and III only",
-        "B) I, II, III and IV",
-        "C) I and III only"
+        "I, III and IV only",
+        "I, II and III only",
+        "I, II, III and IV",
+        "I and III only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements I, II and III are correct. N₂ makes up about 78% of atmosphere; only prokaryotic organisms (bacteria, cyanobacteria) possess nitrogenase for biological N-fixation; lightning/UV can convert N₂ to NO. Statement IV is incorrect — only certain specialised bacteria can fix nitrogen.",
@@ -1399,10 +1399,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Read the following statements about the nitrogen cycle:\nI. Ammonification converts organic nitrogen to ammonia.\nII. Nitrification converts ammonia to nitrate via nitrite.\nIII. Denitrification converts nitrate back to N₂.\nIV. Nitrogen fixation converts N₂ to nitrate directly.\nSelect the correct statements:",
       "options": [
-        "B) I, II, III and IV",
-        "A) I, II and III only",
-        "D) I and IV only",
-        "C) II, III and IV only"
+        "I, II, III and IV",
+        "I, II and III only",
+        "I and IV only",
+        "II, III and IV only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements I, II and III are correct and represent three key steps of the nitrogen cycle. Statement IV is incorrect because nitrogen fixation converts N₂ to ammonia (NH₃), not directly to nitrate. The ammonia is then converted to nitrate by nitrification.",
@@ -1426,10 +1426,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Consider the following statements about deficiency symptoms:\nI. Deficiency of mobile elements shows symptoms in older leaves.\nII. Deficiency of immobile elements shows symptoms in younger leaves.\nIII. Toxicity and deficiency symptoms can sometimes look similar.\nIV. Manganese toxicity causes brown spots on leaves.\nWhich statements are correct?",
       "options": [
-        "B) I, II and IV only",
-        "C) I, II, III and IV",
-        "D) II and III only",
-        "A) I and II only"
+        "I, II and IV only",
+        "I, II, III and IV",
+        "II and III only",
+        "I and II only"
       ],
       "correctAnswer": "B",
       "explanation": "All four statements are correct. Mobile elements (N, P, K, Mg) are redistributed from old to young leaves, so deficiency appears in older leaves. Immobile elements (Ca, S, Fe, Mn) show symptoms in young leaves. Toxicity and deficiency can look similar. Mn excess causes brown spots surrounded by chlorotic veins.",
@@ -1452,10 +1452,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which of the following statements about root nodule formation are correct?\nI. Rhizobium bacteria produce Nod factors that cause root hair curling.\nII. Bacteria enter through the infection thread.\nIII. Inside nodule cells, bacteria differentiate into bacteroids.\nIV. Nodule formation is controlled only by bacterial genes.",
       "options": [
-        "B) I, II, III and IV",
-        "C) I and II only",
-        "D) II, III and IV only",
-        "A) I, II and III only"
+        "I, II, III and IV",
+        "I and II only",
+        "II, III and IV only",
+        "I, II and III only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I, II and III are correct. Nod factors from Rhizobium cause root hair curling; bacteria enter via infection threads; inside cortical cells they become bacteroids. Statement IV is incorrect; nodule formation requires interaction between both plant and bacterial genes (nod genes of bacteria and nodulin genes of plant).",
@@ -1478,10 +1478,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which of the following statements about the criteria for essential elements are INCORRECT?\nI. The element must be present in all plants.\nII. The requirement of the element must be specific and not replaceable.\nIII. The element must be directly involved in plant metabolism.\nIV. The element must be absorbed from the atmosphere.",
       "options": [
-        "A) I and IV only",
-        "D) I, III and IV",
-        "B) I only",
-        "C) IV only"
+        "I and IV only",
+        "I, III and IV",
+        "I only",
+        "IV only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I and IV are incorrect. The criteria (by Arnon and Stout) do not state an element must be in ALL plants, but that it must be essential for the organism being studied. Also, essential elements need not be from the atmosphere — most mineral nutrients come from soil solution.",
@@ -1504,10 +1504,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Consider the following about Azotobacter:\nI. It is a free-living nitrogen-fixing bacterium.\nII. It is an aerobic bacterium.\nIII. It lives symbiotically with legume roots.\nIV. It can fix atmospheric nitrogen independently without a plant host.\nSelect the correct statements:",
       "options": [
-        "C) I and III only",
-        "D) II and IV only",
-        "B) I, II, III and IV",
-        "A) I, II and IV only"
+        "I and III only",
+        "II and IV only",
+        "I, II, III and IV",
+        "I, II and IV only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I, II and IV are correct. Azotobacter is a free-living, aerobic, nitrogen-fixing soil bacterium that can independently fix atmospheric N₂. Statement III is incorrect because Azotobacter is NOT symbiotic with legume roots (that is Rhizobium).",
@@ -1530,10 +1530,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which of the following statements about the role of essential elements are correct?\nI. Nitrogen is part of amino acids and nucleic acids.\nII. Phosphorus is part of ATP and nucleic acids.\nIII. Iron is the central atom of chlorophyll.\nIV. Sulphur is part of amino acids cysteine and methionine.\nSelect the correct option:",
       "options": [
-        "B) I, II, III and IV",
-        "A) I, II and IV only",
-        "C) I and II only",
-        "D) III and IV only"
+        "I, II, III and IV",
+        "I, II and IV only",
+        "I and II only",
+        "III and IV only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements I, II and IV are correct. N is in amino acids and nucleic acids; P is in ATP, DNA, RNA, and phospholipids; S is in cysteine and methionine. Statement III is incorrect — Magnesium (not Iron) is the central atom of chlorophyll. Iron is part of cytochrome and ferredoxin.",
@@ -1556,10 +1556,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Read the following statements:\nI. Manganese toxicity causes the appearance of brown spots surrounded by chlorotic veins.\nII. Excess of manganese may inhibit the absorption of iron, magnesium, and calcium.\nIII. Manganese competes with iron and magnesium for uptake.\nIV. Toxicity of any mineral element reduces growth.\nHow many of the above statements are correct?",
       "options": [
-        "C) Four",
-        "D) One",
-        "B) Three",
-        "A) Two"
+        "Four",
+        "One",
+        "Three",
+        "Two"
       ],
       "correctAnswer": "A",
       "explanation": "All four statements are correct. Mn toxicity causes brown spots with chlorotic veins. Excess Mn competitively inhibits absorption of Fe, Mg, and Ca because they share similar transport pathways. Mn competes with these ions for uptake. Any mineral toxicity inhibits growth and may cause death.",
@@ -1582,10 +1582,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Consider the following statements about nitrogenase:\nI. It consists of Mo-Fe protein and Fe protein components.\nII. It requires anaerobic conditions for activity.\nIII. It requires 16 ATP per molecule of N₂ fixed.\nIV. It produces H₂ as an obligatory by-product.\nSelect the correct statements:",
       "options": [
-        "D) II and IV only",
-        "C) I, II, III and IV",
-        "B) I, III and IV only",
-        "A) I, II and III only"
+        "II and IV only",
+        "I, II, III and IV",
+        "I, III and IV only",
+        "I, II and III only"
       ],
       "correctAnswer": "B",
       "explanation": "All four statements are correct. Nitrogenase has two components: Mo-Fe protein (dinitrogenase) and Fe protein (dinitrogenase reductase). It is irreversibly inactivated by O₂ (requires anaerobic conditions). It requires 16 ATP and produces H₂ as an obligatory by-product along with 2NH₃.",
@@ -1609,10 +1609,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which of the following are functions of calcium in plants?\nI. Component of middle lamella as calcium pectate.\nII. Required for spindle formation during cell division.\nIII. Activator of certain enzymes.\nIV. Central atom of chlorophyll.\nSelect the correct option:",
       "options": [
-        "A) I, II and III only",
-        "C) I and IV only",
-        "B) I, II, III and IV",
-        "D) II and III only"
+        "I, II and III only",
+        "I and IV only",
+        "I, II, III and IV",
+        "II and III only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, II and III are correct. Calcium forms calcium pectate in the middle lamella, is needed for normal spindle functioning during cell division (mitosis), and acts as an enzyme activator (e.g., ATPase, phospholipase). Statement IV is incorrect — Mg (not Ca) is the central atom of chlorophyll.",
@@ -1635,10 +1635,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Consider the following about the fate of ammonia in plants:\nI. Ammonia is assimilated into amino acids through reductive amination.\nII. Glutamic acid is formed by the reaction of NH₄⁺ with α-ketoglutaric acid.\nIII. Transamination transfers amino group from one amino acid to a keto acid.\nIV. Asparagine and glutamine are storage forms of ammonia.\nWhich statements are correct?",
       "options": [
-        "B) I, II, III and IV",
-        "D) II and IV only",
-        "A) I and III only",
-        "C) I, II and III only"
+        "I, II, III and IV",
+        "II and IV only",
+        "I and III only",
+        "I, II and III only"
       ],
       "correctAnswer": "A",
       "explanation": "All four are correct. Ammonia assimilation occurs via reductive amination (NH₄⁺ + α-ketoglutaric acid → glutamic acid via GDH), transamination transfers amino groups to form other amino acids, and amides (asparagine, glutamine) serve as nitrogen storage and transport forms.",
@@ -1661,10 +1661,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the following elements with their roles in plants:\nColumn I: (P) Nitrogen (Q) Phosphorus (R) Magnesium (S) Calcium\nColumn II: (i) Central atom of chlorophyll (ii) Component of amino acids and nucleic acids (iii) Middle lamella formation (iv) Component of ATP and nucleic acids",
       "options": [
-        "D) P-i, Q-iv, R-ii, S-iii",
-        "A) P-ii, Q-iv, R-i, S-iii",
-        "C) P-ii, Q-i, R-iv, S-iii",
-        "B) P-iv, Q-ii, R-iii, S-i"
+        "P-i, Q-iv, R-ii, S-iii",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-iv, Q-ii, R-iii, S-i"
       ],
       "correctAnswer": "B",
       "explanation": "Nitrogen (P-ii) is a constituent of amino acids, proteins, and nucleic acids. Phosphorus (Q-iv) is part of ATP, nucleic acids, and phospholipids. Magnesium (R-i) is the central atom in the porphyrin ring of chlorophyll. Calcium (S-iii) forms calcium pectate in the middle lamella.",
@@ -1687,10 +1687,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the micronutrients with the enzymes they are associated with:\nColumn I: (P) Zinc (Q) Molybdenum (R) Copper (S) Manganese\nColumn II: (i) Nitrogenase and nitrate reductase (ii) Carbonic anhydrase (iii) Cytochrome oxidase (iv) Splitting of water in photosynthesis",
       "options": [
-        "C) P-iii, Q-iv, R-i, S-ii",
-        "B) P-i, Q-ii, R-iv, S-iii",
-        "D) P-iv, Q-i, R-ii, S-iii",
-        "A) P-ii, Q-i, R-iii, S-iv"
+        "P-iii, Q-iv, R-i, S-ii",
+        "P-i, Q-ii, R-iv, S-iii",
+        "P-iv, Q-i, R-ii, S-iii",
+        "P-ii, Q-i, R-iii, S-iv"
       ],
       "correctAnswer": "D",
       "explanation": "Zinc (P-ii) activates carbonic anhydrase. Molybdenum (Q-i) is a component of nitrogenase and nitrate reductase. Copper (R-iii) is part of cytochrome oxidase and other oxidase enzymes. Manganese (S-iv) is essential for the water-splitting (photolysis) reaction in PS II.",
@@ -1713,10 +1713,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the deficiency symptoms with the elements:\nColumn I: (P) Chlorosis (Q) Necrosis (R) Little leaf disease (S) Stunted growth with delayed flowering\nColumn II: (i) Calcium, Magnesium, Copper, Potassium (ii) Zinc (iii) Nitrogen, Magnesium, Iron (iv) Phosphorus",
       "options": [
-        "D) P-iv, Q-i, R-ii, S-iii",
-        "A) P-iii, Q-i, R-ii, S-iv",
-        "C) P-iii, Q-ii, R-i, S-iv",
-        "B) P-i, Q-iii, R-iv, S-ii"
+        "P-iv, Q-i, R-ii, S-iii",
+        "P-iii, Q-i, R-ii, S-iv",
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-i, Q-iii, R-iv, S-ii"
       ],
       "correctAnswer": "B",
       "explanation": "Chlorosis (P-iii) is caused by deficiency of N, Mg, Fe, K, S, Mn, Zn, Mo. Necrosis (Q-i) is caused by Ca, Mg, Cu, K deficiency. Little leaf (R-ii) is caused by Zn deficiency (reduced auxin synthesis). Stunted growth with delayed flowering (S-iv) is a P deficiency symptom.",
@@ -1738,10 +1738,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the nitrogen cycle processes with the organisms involved:\nColumn I: (P) Biological nitrogen fixation (Q) Nitrification (R) Denitrification (S) Ammonification\nColumn II: (i) Pseudomonas (ii) Decomposing bacteria and fungi (iii) Nitrosomonas and Nitrobacter (iv) Rhizobium, Azotobacter, Anabaena",
       "options": [
-        "C) P-iv, Q-i, R-iii, S-ii",
-        "B) P-iii, Q-iv, R-ii, S-i",
-        "D) P-i, Q-iii, R-iv, S-ii",
-        "A) P-iv, Q-iii, R-i, S-ii"
+        "P-iv, Q-i, R-iii, S-ii",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-i, Q-iii, R-iv, S-ii",
+        "P-iv, Q-iii, R-i, S-ii"
       ],
       "correctAnswer": "D",
       "explanation": "Biological nitrogen fixation (P-iv) is by Rhizobium, Azotobacter, Anabaena etc. Nitrification (Q-iii) is by Nitrosomonas (NH₃→NO₂⁻) and Nitrobacter (NO₂⁻→NO₃⁻). Denitrification (R-i) is by Pseudomonas. Ammonification (S-ii) is by decomposing bacteria and fungi.",
@@ -1764,10 +1764,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the following nitrogen-fixing organisms with their type of fixation:\nColumn I: (P) Rhizobium (Q) Azotobacter (R) Anabaena in Azolla (S) Azospirillum\nColumn II: (i) Symbiotic with legumes (ii) Free-living aerobic (iii) Symbiotic with water fern (iv) Free-living, associative",
       "options": [
-        "C) P-i, Q-iv, R-iii, S-ii",
-        "D) P-iii, Q-ii, R-i, S-iv",
-        "B) P-ii, Q-i, R-iv, S-iii",
-        "A) P-i, Q-ii, R-iii, S-iv"
+        "P-i, Q-iv, R-iii, S-ii",
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-i, Q-ii, R-iii, S-iv"
       ],
       "correctAnswer": "D",
       "explanation": "Rhizobium (P-i) is symbiotic with legume roots. Azotobacter (Q-ii) is a free-living aerobic soil bacterium. Anabaena in Azolla (R-iii) is a symbiotic association between the cyanobacterium and the water fern. Azospirillum (S-iv) is a free-living associative nitrogen fixer in the rhizosphere.",
@@ -1790,10 +1790,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the following elements with their mobility in the plant:\nColumn I: (P) Nitrogen (Q) Calcium (R) Phosphorus (S) Iron\nColumn II: (i) Mobile — deficiency in older leaves (ii) Immobile — deficiency in younger leaves",
       "options": [
-        "A) P-i, Q-ii, R-i, S-ii",
-        "D) P-ii, Q-ii, R-i, S-i",
-        "B) P-ii, Q-i, R-ii, S-i",
-        "C) P-i, Q-i, R-ii, S-ii"
+        "P-i, Q-ii, R-i, S-ii",
+        "P-ii, Q-ii, R-i, S-i",
+        "P-ii, Q-i, R-ii, S-i",
+        "P-i, Q-i, R-ii, S-ii"
       ],
       "correctAnswer": "A",
       "explanation": "Nitrogen (P-i) and Phosphorus (R-i) are mobile elements; their deficiency symptoms appear first in older leaves. Calcium (Q-ii) and Iron (S-ii) are relatively immobile; their deficiency symptoms appear first in younger leaves and growing tips.",
@@ -1816,10 +1816,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the following with their roles in nitrogen fixation:\nColumn I: (P) Nitrogenase (Q) Leghaemoglobin (R) Nod factors (S) Bacteroids\nColumn II: (i) Differentiated form of Rhizobium inside nodule (ii) Catalyses N₂ → NH₃ (iii) Signals root hair curling (iv) Oxygen scavenger",
       "options": [
-        "A) P-ii, Q-iv, R-iii, S-i",
-        "D) P-iii, Q-iv, R-ii, S-i",
-        "C) P-ii, Q-iii, R-iv, S-i",
-        "B) P-iv, Q-ii, R-i, S-iii"
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-ii, Q-iii, R-iv, S-i",
+        "P-iv, Q-ii, R-i, S-iii"
       ],
       "correctAnswer": "A",
       "explanation": "Nitrogenase (P-ii) catalyses the reduction of N₂ to NH₃. Leghaemoglobin (Q-iv) scavenges oxygen to protect nitrogenase. Nod factors (R-iii) are signal molecules from Rhizobium that cause root hair curling. Bacteroids (S-i) are the differentiated nitrogen-fixing form of Rhizobium inside nodules.",
@@ -1843,10 +1843,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the following roles of essential elements:\nColumn I: (P) Potassium (Q) Sulphur (R) Boron (S) Chlorine\nColumn II: (i) Pollen germination and cell elongation (ii) Stomatal regulation and enzyme activation (iii) Water splitting in photosynthesis (iv) Component of coenzyme A and ferredoxin",
       "options": [
-        "C) P-ii, Q-i, R-iv, S-iii",
-        "D) P-i, Q-iv, R-ii, S-iii",
-        "B) P-iv, Q-ii, R-iii, S-i",
-        "A) P-ii, Q-iv, R-i, S-iii"
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-i, Q-iv, R-ii, S-iii",
+        "P-iv, Q-ii, R-iii, S-i",
+        "P-ii, Q-iv, R-i, S-iii"
       ],
       "correctAnswer": "D",
       "explanation": "Potassium (P-ii) regulates stomatal opening/closing and activates enzymes. Sulphur (Q-iv) is a component of coenzyme A, ferredoxin, and sulphur-containing amino acids. Boron (R-i) is essential for pollen germination and cell elongation. Chlorine (S-iii) is needed for the water-splitting reaction in PS II.",
@@ -1870,10 +1870,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the following scientists/terms with their contributions:\nColumn I: (P) Julius von Sachs (Q) Arnon and Stout (R) Liebig's law (S) Solution culture technique\nColumn II: (i) Criteria for essential elements (ii) Pioneer of hydroponics (iii) Growing plants in nutrient solution (iv) Law of minimum — growth limited by scarcest nutrient",
       "options": [
-        "C) P-ii, Q-iv, R-i, S-iii",
-        "D) P-i, Q-ii, R-iii, S-iv",
-        "B) P-iii, Q-iv, R-i, S-ii",
-        "A) P-ii, Q-i, R-iv, S-iii"
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-iii, Q-iv, R-i, S-ii",
+        "P-ii, Q-i, R-iv, S-iii"
       ],
       "correctAnswer": "D",
       "explanation": "Julius von Sachs (P-ii) pioneered hydroponics (soilless plant culture). Arnon and Stout (Q-i) established the criteria for essential elements. Liebig's law of minimum (R-iv) states that plant growth is limited by the nutrient in shortest supply. Solution culture technique (S-iii) refers to growing plants in nutrient solution.",
@@ -1896,10 +1896,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "How many of the following are micronutrients (trace elements)?\n(a) Iron\n(b) Manganese\n(c) Calcium\n(d) Copper\n(e) Boron\n(f) Potassium\n(g) Zinc\n(h) Molybdenum",
       "options": [
-        "A) Four",
-        "B) Five",
-        "D) Seven",
-        "C) Six"
+        "Four",
+        "Five",
+        "Seven",
+        "Six"
       ],
       "correctAnswer": "D",
       "explanation": "Six are micronutrients: (a) Iron, (b) Manganese, (d) Copper, (e) Boron, (g) Zinc, and (h) Molybdenum. The full list of 8 micronutrients is Fe, Mn, Cu, Zn, B, Mo, Cl, and Ni. Calcium (c) and Potassium (f) are macronutrients.",
@@ -1922,10 +1922,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "How many of the following organisms are capable of biological nitrogen fixation?\n(a) Rhizobium\n(b) Azotobacter\n(c) Nitrosomonas\n(d) Anabaena\n(e) Nostoc\n(f) Pseudomonas\n(g) Frankia\n(h) Clostridium",
       "options": [
-        "B) Five",
-        "D) Seven",
-        "A) Four",
-        "C) Six"
+        "Five",
+        "Seven",
+        "Four",
+        "Six"
       ],
       "correctAnswer": "D",
       "explanation": "Six organisms can fix nitrogen: (a) Rhizobium (symbiotic), (b) Azotobacter (free-living), (d) Anabaena (cyanobacterium), (e) Nostoc (cyanobacterium), (g) Frankia (symbiotic actinomycete), (h) Clostridium (free-living anaerobic). Nitrosomonas (c) is a nitrifier, and Pseudomonas (f) is a denitrifier.",
@@ -1947,10 +1947,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "How many of the following elements cause chlorosis when deficient?\n(a) Nitrogen\n(b) Magnesium\n(c) Iron\n(d) Potassium\n(e) Boron\n(f) Sulphur\n(g) Manganese\n(h) Zinc",
       "options": [
-        "B) Six",
-        "C) Seven",
-        "A) Five",
-        "D) Eight"
+        "Six",
+        "Seven",
+        "Five",
+        "Eight"
       ],
       "correctAnswer": "B",
       "explanation": "Seven of these elements cause chlorosis when deficient: (a) Nitrogen, (b) Magnesium, (c) Iron, (d) Potassium, (f) Sulphur, (g) Manganese, and (h) Zinc. All are involved directly or indirectly in chlorophyll synthesis or maintenance. Boron (e) deficiency primarily causes death of growing tips, not chlorosis.",
@@ -1973,10 +1973,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "How many of the following are correct about the role of iron in plants?\n(a) Component of ferredoxin\n(b) Component of cytochromes\n(c) Needed for chlorophyll synthesis\n(d) Central atom of chlorophyll\n(e) Part of catalase enzyme\n(f) Essential for electron transport chain",
       "options": [
-        "D) Six",
-        "A) Three",
-        "C) Five",
-        "B) Four"
+        "Six",
+        "Three",
+        "Five",
+        "Four"
       ],
       "correctAnswer": "C",
       "explanation": "Five statements are correct: (a) iron is a component of ferredoxin, (b) iron is part of cytochromes, (c) iron is needed for chlorophyll biosynthesis (though not part of the molecule), (e) iron is in catalase, and (f) iron is essential for electron transport. (d) is incorrect — Mg (not Fe) is the central atom of chlorophyll.",
@@ -1999,10 +1999,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "How many of the following elements are mobile within the plant and show deficiency in older leaves first?\n(a) Nitrogen\n(b) Phosphorus\n(c) Potassium\n(d) Calcium\n(e) Magnesium\n(f) Iron\n(g) Sulphur",
       "options": [
-        "D) Six",
-        "B) Four",
-        "C) Five",
-        "A) Three"
+        "Six",
+        "Four",
+        "Five",
+        "Three"
       ],
       "correctAnswer": "B",
       "explanation": "Four elements are highly mobile and show deficiency in older leaves first: (a) Nitrogen, (b) Phosphorus, (c) Potassium, and (e) Magnesium. Calcium (d), Iron (f), and Sulphur (g) are relatively immobile, showing deficiency in younger leaves and growing tips.",
@@ -2025,10 +2025,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "How many of the following are macronutrients?\n(a) Nitrogen\n(b) Phosphorus\n(c) Manganese\n(d) Potassium\n(e) Calcium\n(f) Copper\n(g) Magnesium\n(h) Sulphur\n(i) Zinc",
       "options": [
-        "A) Four",
-        "B) Five",
-        "C) Six",
-        "D) Seven"
+        "Four",
+        "Five",
+        "Six",
+        "Seven"
       ],
       "correctAnswer": "C",
       "explanation": "Six are macronutrients from this list: (a) Nitrogen, (b) Phosphorus, (d) Potassium, (e) Calcium, (g) Magnesium, and (h) Sulphur. These are required in concentrations above 10 mmol kg⁻¹. Manganese (c), Copper (f), and Zinc (i) are micronutrients.",
@@ -2051,10 +2051,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "How many of the following statements about leghaemoglobin are correct?\n(a) It is a pinkish-red pigment\n(b) Its globin part is synthesised by the plant\n(c) Its haem part is synthesised by the bacterium\n(d) It transports oxygen to the bacteroids for respiration\n(e) It protects nitrogenase from oxygen\n(f) It is present only in the root nodules of legumes",
       "options": [
-        "A) Four",
-        "D) Three",
-        "B) Five",
-        "C) Six"
+        "Four",
+        "Three",
+        "Five",
+        "Six"
       ],
       "correctAnswer": "C",
       "explanation": "Five are correct: (a) Lb is pinkish-red, (b) globin is plant-coded, (c) haem is bacterium-coded, (e) it scavenges O₂ to protect nitrogenase, (f) it is found in legume root nodules. (d) is partially misleading — Lb does not 'transport' O₂ to bacteroids for respiration like haemoglobin; rather it buffers free O₂ concentration at very low levels.",
@@ -2077,10 +2077,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Arrange the following steps of root nodule formation in correct sequence:\n(I) Rhizobium multiplies and colonises the root surface\n(II) Root hair curls due to Nod factors\n(III) Bacteria enter through infection thread\n(IV) Bacteria reach cortical cells and form bacteroids\n(V) Nodule develops with vascular connections",
       "options": [
-        "C) I → III → II → IV → V",
-        "A) I → II → III → IV → V",
-        "D) II → III → I → IV → V",
-        "B) II → I → III → V → IV"
+        "I → III → II → IV → V",
+        "I → II → III → IV → V",
+        "II → III → I → IV → V",
+        "II → I → III → V → IV"
       ],
       "correctAnswer": "B",
       "explanation": "The correct sequence of nodule formation: Rhizobium multiplies near root surface (I) → Root hairs curl in response to Nod factors (II) → Bacteria enter through infection thread (III) → Bacteria differentiate into bacteroids in cortical cells (IV) → Mature nodule develops with vascular connections to plant (V).",
@@ -2103,10 +2103,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Arrange the steps of nitrogen cycle in the correct sequence starting from atmospheric nitrogen:\n(I) Nitrogen fixation (N₂ → NH₃)\n(II) Nitrification (NH₃ → NO₂⁻ → NO₃⁻)\n(III) Assimilation by plants\n(IV) Ammonification\n(V) Denitrification (NO₃⁻ → N₂)",
       "options": [
-        "A) I → II → III → IV → V",
-        "C) II → I → III → V → IV",
-        "B) I → III → IV → II → V",
-        "D) V → I → II → III → IV"
+        "I → II → III → IV → V",
+        "II → I → III → V → IV",
+        "I → III → IV → II → V",
+        "V → I → II → III → IV"
       ],
       "correctAnswer": "A",
       "explanation": "The nitrogen cycle sequence from atmospheric N₂: Nitrogen fixation converts N₂ to NH₃ (I) → Nitrification converts NH₃ to NO₃⁻ via NO₂⁻ (II) → Plants assimilate NO₃⁻/NH₄⁺ (III) → Dead organic matter is decomposed releasing NH₃ (ammonification) (IV) → Denitrification returns N₂ to atmosphere (V).",
@@ -2129,10 +2129,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Arrange the following in the correct sequence of nitrification:\n(I) NH₃ (ammonia)\n(II) NO₂⁻ (nitrite)\n(III) NO₃⁻ (nitrate)\n(IV) Nitrosomonas acts\n(V) Nitrobacter acts",
       "options": [
-        "A) I → IV → II → V → III",
-        "C) III → V → II → IV → I",
-        "D) I → IV → III → V → II",
-        "B) I → V → II → IV → III"
+        "I → IV → II → V → III",
+        "III → V → II → IV → I",
+        "I → IV → III → V → II",
+        "I → V → II → IV → III"
       ],
       "correctAnswer": "A",
       "explanation": "Nitrification sequence: Ammonia (I) → Nitrosomonas oxidises NH₃ (IV) → Nitrite is formed (II) → Nitrobacter oxidises NO₂⁻ (V) → Nitrate is formed (III). This is a two-step process carried out by two different chemoautotrophic bacteria.",
@@ -2156,10 +2156,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Arrange the following in the correct order of ammonia assimilation in plants:\n(I) Ammonia (NH₃) is produced\n(II) Reductive amination: NH₄⁺ + α-ketoglutaric acid → Glutamic acid\n(III) Transamination: Amino group transferred to other keto acids\n(IV) Formation of various amino acids\n(V) Protein synthesis",
       "options": [
-        "C) II → I → III → V → IV",
-        "B) I → III → II → IV → V",
-        "A) I → II → III → IV → V",
-        "D) I → II → IV → III → V"
+        "II → I → III → V → IV",
+        "I → III → II → IV → V",
+        "I → II → III → IV → V",
+        "I → II → IV → III → V"
       ],
       "correctAnswer": "C",
       "explanation": "The sequence of ammonia assimilation: Ammonia is produced by nitrogen fixation or nitrate reduction (I) → Reductive amination produces glutamic acid (II) → Transamination transfers amino group to form other amino acids (III) → Various amino acids are formed (IV) → Amino acids are used for protein synthesis (V).",
@@ -2182,10 +2182,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Arrange the following events of the fate of nitrogen in biological nitrogen fixation:\n(I) N₂ enters the root nodule\n(II) Nitrogenase reduces N₂ to NH₃\n(III) NH₃ is converted to amino acids in the bacteroid\n(IV) Amino acids are exported to the plant through xylem\n(V) Leghaemoglobin maintains low oxygen environment",
       "options": [
-        "D) I → V → III → II → IV",
-        "B) V → I → II → III → IV",
-        "C) I → II → V → III → IV",
-        "A) I → V → II → III → IV"
+        "I → V → III → II → IV",
+        "V → I → II → III → IV",
+        "I → II → V → III → IV",
+        "I → V → II → III → IV"
       ],
       "correctAnswer": "D",
       "explanation": "Correct sequence: N₂ enters the nodule (I) → Leghaemoglobin creates the anaerobic environment needed (V) → Nitrogenase catalyses N₂ → NH₃ (II) → NH₃ is assimilated into amino acids (III) → Amino acids/amides are transported to the rest of the plant (IV).",
@@ -2208,10 +2208,10 @@
       "ncertChapterName": "Mineral Nutrition",
       "question": "Arrange the following elements in order from the most required (highest concentration needed) to least required in plant tissue:\n(I) Nitrogen\n(II) Molybdenum\n(III) Potassium\n(IV) Iron\n(V) Calcium",
       "options": [
-        "D) III → V → I → IV → II",
-        "B) III → I → V → IV → II",
-        "A) I → III → V → IV → II",
-        "C) I → V → III → II → IV"
+        "III → V → I → IV → II",
+        "III → I → V → IV → II",
+        "I → III → V → IV → II",
+        "I → V → III → II → IV"
       ],
       "correctAnswer": "C",
       "explanation": "In order from most to least required: Nitrogen (I) is needed in the largest quantity among mineral elements → Potassium (III) is the second most abundant mineral → Calcium (V) is required in moderate amounts → Iron (IV) is a micronutrient needed in small amounts → Molybdenum (II) is required in the smallest quantity of all essential elements.",
@@ -2233,13 +2233,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which bacterium is involved in the symbiotic nitrogen fixation in non-leguminous plants like Alnus and Casuarina?",
-      "options": ["A) Rhizobium", "B) Frankia", "C) Azotobacter", "D) Clostridium"],
+      "options": [
+        "Rhizobium",
+        "Frankia",
+        "Azotobacter",
+        "Clostridium"
+      ],
       "correctAnswer": "B",
       "explanation": "Frankia is a filamentous actinomycete bacterium that forms symbiotic associations with non-leguminous plants such as Alnus, Casuarina, and Myrica. It forms root nodules and fixes atmospheric nitrogen, similar to Rhizobium in legumes.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["Frankia", "non-legume", "symbiotic nitrogen fixation"],
+      "tags": [
+        "Frankia",
+        "non-legume",
+        "symbiotic nitrogen fixation"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2250,13 +2259,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Whiptail disease in cauliflower is caused by deficiency of:",
-      "options": ["A) Boron", "B) Zinc", "C) Molybdenum", "D) Copper"],
+      "options": [
+        "Boron",
+        "Zinc",
+        "Molybdenum",
+        "Copper"
+      ],
       "correctAnswer": "C",
       "explanation": "Whiptail disease in cauliflower and other cruciferous plants is caused by molybdenum deficiency. Molybdenum is a component of nitrate reductase and nitrogenase, and its deficiency leads to impaired nitrogen metabolism causing distorted, narrow leaf blades.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["whiptail disease", "molybdenum deficiency", "cauliflower"],
+      "tags": [
+        "whiptail disease",
+        "molybdenum deficiency",
+        "cauliflower"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2267,13 +2285,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Manganese toxicity can induce deficiency symptoms of iron, magnesium, and calcium.\nReason (R): Excess manganese competitively inhibits the uptake of iron, magnesium, and calcium.",
-      "options": ["A) Both A and R are true and R is the correct explanation of A", "B) Both A and R are true but R is NOT the correct explanation of A", "C) A is true but R is false", "D) A is false but R is true"],
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. Excess Mn competes with Fe, Mg, and Ca for the same membrane transport sites. This competitive inhibition reduces the uptake of these elements, leading to their deficiency symptoms even if they are present in adequate amounts in the soil.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["manganese toxicity", "competitive inhibition", "induced deficiency"],
+      "tags": [
+        "manganese toxicity",
+        "competitive inhibition",
+        "induced deficiency"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2284,13 +2311,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Assertion (A): Nitrogen is the most critical mineral element limiting plant productivity.\nReason (R): Nitrogen is a major constituent of proteins, nucleic acids, vitamins, and hormones.",
-      "options": ["A) Both A and R are true and R is the correct explanation of A", "B) Both A and R are true but R is NOT the correct explanation of A", "C) A is true but R is false", "D) A is false but R is true"],
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. Since nitrogen is required in the greatest quantity and is a structural part of virtually all biomolecules (proteins, nucleic acids, chlorophyll, vitamins, hormones), its deficiency immediately limits growth and productivity more than any other mineral element.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["nitrogen", "productivity", "biomolecules"],
+      "tags": [
+        "nitrogen",
+        "productivity",
+        "biomolecules"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2301,13 +2337,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which of the following statements about mycorrhiza are correct?\nI. It is a symbiotic association between fungi and plant roots.\nII. The fungal hyphae help in absorption of phosphorus.\nIII. Mycorrhiza can replace the need for nitrogen fertilisers.\nIV. Most crop plants have mycorrhizal associations.\nSelect the correct option:",
-      "options": ["A) I, II and IV only", "B) I, II, III and IV", "C) I and II only", "D) II and III only"],
+      "options": [
+        "I, II and IV only",
+        "I, II, III and IV",
+        "I and II only",
+        "II and III only"
+      ],
       "correctAnswer": "A",
       "explanation": "Statements I, II and IV are correct. Mycorrhiza is a fungal-root symbiosis where fungi enhance phosphorus and mineral absorption. Most crop plants form mycorrhizal associations. Statement III is incorrect; mycorrhiza primarily helps with phosphorus uptake, not nitrogen fixation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["mycorrhiza", "phosphorus", "symbiosis"],
+      "tags": [
+        "mycorrhiza",
+        "phosphorus",
+        "symbiosis"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2318,13 +2363,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Consider the following statements about essential elements:\nI. Essential elements are classified based on their quantitative requirements.\nII. Macronutrients are needed in concentrations above 10 mmol per kg dry weight.\nIII. All essential elements are absorbed from the soil only.\nIV. Essential elements may play structural, enzymatic, or regulatory roles.\nWhich statements are correct?",
-      "options": ["A) I, II and IV only", "B) I, II, III and IV", "C) I and II only", "D) III and IV only"],
+      "options": [
+        "I, II and IV only",
+        "I, II, III and IV",
+        "I and II only",
+        "III and IV only"
+      ],
       "correctAnswer": "A",
       "explanation": "Statements I, II and IV are correct. Essential elements are classified as macro/micronutrients by quantity needed, macronutrients require >10 mmol/kg, and they can be structural (N in proteins), enzymatic (Fe in cytochrome), or regulatory (K in stomata). Statement III is incorrect; C, H, and O come from air and water, not soil.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["essential elements", "classification", "roles"],
+      "tags": [
+        "essential elements",
+        "classification",
+        "roles"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2335,13 +2389,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Which of the following statements about biological nitrogen fixation are INCORRECT?\nI. All prokaryotes can fix nitrogen.\nII. Nitrogenase requires aerobic conditions.\nIII. 16 ATP molecules are needed per N2 fixed.\nIV. H2 is an obligatory by-product.\nSelect the correct option:",
-      "options": ["A) I and II only", "B) I, II and IV", "C) II and III only", "D) I only"],
+      "options": [
+        "I and II only",
+        "I, II and IV",
+        "II and III only",
+        "I only"
+      ],
       "correctAnswer": "A",
       "explanation": "Statements I and II are incorrect. Not all prokaryotes can fix nitrogen; only those possessing nitrogenase can do so. Nitrogenase requires anaerobic (not aerobic) conditions as it is irreversibly inactivated by oxygen. Statements III and IV are correct facts about nitrogen fixation.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["nitrogen fixation", "incorrect statements", "nitrogenase"],
+      "tags": [
+        "nitrogen fixation",
+        "incorrect statements",
+        "nitrogenase"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2352,13 +2415,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the following deficiency diseases with the deficient elements:\nColumn I: (P) Whiptail disease (Q) Little leaf disease (R) Die-back of shoot tips (S) Interveinal chlorosis in young leaves\nColumn II: (i) Copper (ii) Iron (iii) Zinc (iv) Molybdenum",
-      "options": ["C) P-iv, Q-ii, R-i, S-iii", "B) P-iii, Q-iv, R-ii, S-i", "A) P-iv, Q-iii, R-i, S-ii", "D) P-i, Q-iii, R-iv, S-ii"],
+      "options": [
+        "P-iv, Q-ii, R-i, S-iii",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-iv, Q-iii, R-i, S-ii",
+        "P-i, Q-iii, R-iv, S-ii"
+      ],
       "correctAnswer": "C",
       "explanation": "Whiptail disease (P-iv) is caused by Mo deficiency in cruciferous plants. Little leaf (Q-iii) is due to Zn deficiency (reduced auxin). Die-back of shoots (R-i) is caused by Cu deficiency. Interveinal chlorosis in young leaves (S-ii) is characteristic of Fe deficiency as Fe is immobile.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["deficiency diseases", "element matching", "symptoms"],
+      "tags": [
+        "deficiency diseases",
+        "element matching",
+        "symptoms"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2369,13 +2441,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the following with the form in which elements are absorbed by plants:\nColumn I: (P) Nitrogen (Q) Phosphorus (R) Sulphur (S) Iron\nColumn II: (i) H2PO4⁻ (ii) NO3⁻ and NH4⁺ (iii) Fe³⁺ (iv) SO4²⁻",
-      "options": ["C) P-iv, Q-i, R-ii, S-iii", "B) P-i, Q-ii, R-iii, S-iv", "A) P-ii, Q-i, R-iv, S-iii", "D) P-ii, Q-iv, R-i, S-iii"],
+      "options": [
+        "P-iv, Q-i, R-ii, S-iii",
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-ii, Q-iv, R-i, S-iii"
+      ],
       "correctAnswer": "C",
       "explanation": "Plants absorb Nitrogen (P-ii) mainly as NO3⁻ (nitrate) and NH4⁺ (ammonium). Phosphorus (Q-i) is absorbed as H2PO4⁻ (dihydrogen phosphate). Sulphur (R-iv) is absorbed as SO4²⁻ (sulphate). Iron (S-iii) is absorbed mainly as Fe³⁺ (ferric form).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["absorption form", "ions", "nutrient uptake"],
+      "tags": [
+        "absorption form",
+        "ions",
+        "nutrient uptake"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2386,13 +2467,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the following types of nitrogen-fixing organisms:\nColumn I: (P) Symbiotic bacteria (Q) Free-living aerobic bacteria (R) Free-living anaerobic bacteria (S) Symbiotic cyanobacteria\nColumn II: (i) Clostridium (ii) Anabaena in Azolla (iii) Rhizobium (iv) Azotobacter",
-      "options": ["C) P-iii, Q-i, R-iv, S-ii", "B) P-iv, Q-iii, R-ii, S-i", "A) P-iii, Q-iv, R-i, S-ii", "D) P-ii, Q-iv, R-i, S-iii"],
+      "options": [
+        "P-iii, Q-i, R-iv, S-ii",
+        "P-iv, Q-iii, R-ii, S-i",
+        "P-iii, Q-iv, R-i, S-ii",
+        "P-ii, Q-iv, R-i, S-iii"
+      ],
       "correctAnswer": "C",
       "explanation": "Symbiotic bacteria (P-iii): Rhizobium lives in legume root nodules. Free-living aerobic (Q-iv): Azotobacter is aerobic soil bacterium. Free-living anaerobic (R-i): Clostridium fixes N2 anaerobically. Symbiotic cyanobacteria (S-ii): Anabaena lives symbiotically with Azolla water fern.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["nitrogen fixers", "classification", "symbiotic vs free-living"],
+      "tags": [
+        "nitrogen fixers",
+        "classification",
+        "symbiotic vs free-living"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2403,13 +2493,23 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the following elements with their specific functions:\nColumn I: (P) Calcium (Q) Magnesium (R) Iron (S) Nickel\nColumn II: (i) Component of urease enzyme (ii) Activator of spindle formation in cell division (iii) Activator of RuBisCO and ribosome assembly (iv) Component of ferredoxin and cytochromes",
-      "options": ["C) P-ii, Q-iv, R-iii, S-i", "B) P-iii, Q-ii, R-i, S-iv", "A) P-ii, Q-iii, R-iv, S-i", "D) P-iv, Q-iii, R-ii, S-i"],
+      "options": [
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-ii, Q-iii, R-iv, S-i",
+        "P-iv, Q-iii, R-ii, S-i"
+      ],
       "correctAnswer": "C",
       "explanation": "Calcium (P-ii) is needed for normal mitotic spindle formation. Magnesium (Q-iii) activates RuBisCO and is needed for ribosome assembly. Iron (R-iv) is a structural component of ferredoxin and cytochromes. Nickel (S-i) is a component of the enzyme urease.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["element functions", "calcium", "magnesium", "nickel"],
+      "tags": [
+        "element functions",
+        "calcium",
+        "magnesium",
+        "nickel"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2420,13 +2520,23 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the following beneficial elements with their roles:\nColumn I: (P) Silicon (Q) Cobalt (R) Selenium (S) Sodium\nColumn II: (i) Required for vitamin B12 synthesis in nitrogen-fixing bacteria (ii) Strengthens cell walls in grasses (iii) Required by some C4 and CAM plants (iv) Substitute for sulphur in some plants",
-      "options": ["C) P-ii, Q-iv, R-i, S-iii", "B) P-i, Q-ii, R-iii, S-iv", "A) P-ii, Q-i, R-iv, S-iii", "D) P-iv, Q-i, R-ii, S-iii"],
+      "options": [
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-iv, Q-i, R-ii, S-iii"
+      ],
       "correctAnswer": "C",
       "explanation": "Silicon (P-ii) strengthens cell walls in grasses and helps resist lodging. Cobalt (Q-i) is needed for vitamin B12 synthesis essential for nitrogen-fixing bacteria. Selenium (R-iv) can partially substitute for sulphur in certain plants. Sodium (S-iii) is required by some C4 and CAM plants for photosynthesis.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["beneficial elements", "silicon", "cobalt", "sodium"],
+      "tags": [
+        "beneficial elements",
+        "silicon",
+        "cobalt",
+        "sodium"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2437,13 +2547,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Match the following nitrogenase components with their properties:\nColumn I: (P) Fe-protein (dinitrogenase reductase) (Q) Mo-Fe protein (dinitrogenase)\nColumn II: (i) Smaller subunit, provides electrons (ii) Larger subunit, catalyses N2 reduction",
-      "options": ["C) Both are same size", "B) P-ii, Q-i", "A) P-i, Q-ii", "D) Both catalyse N2 reduction"],
+      "options": [
+        "Both are same size",
+        "P-ii, Q-i",
+        "P-i, Q-ii",
+        "Both catalyse N2 reduction"
+      ],
       "correctAnswer": "C",
       "explanation": "The Fe-protein (P-i) is the smaller component of nitrogenase that acts as a specific electron donor. The Mo-Fe protein (Q-ii) is the larger component that contains the active site where N2 is actually reduced to NH3. Both components are required for nitrogenase activity.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["nitrogenase components", "Fe-protein", "Mo-Fe protein"],
+      "tags": [
+        "nitrogenase components",
+        "Fe-protein",
+        "Mo-Fe protein"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2454,13 +2573,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "How many of the following are correct about the role of potassium in plants?\n(a) Maintains anion-cation balance\n(b) Regulates stomatal opening and closing\n(c) Is a structural component of chlorophyll\n(d) Activates over 40 enzymes\n(e) Helps maintain cell turgidity\n(f) Required for protein synthesis",
-      "options": ["A) Three", "B) Four", "C) Five", "D) Six"],
+      "options": [
+        "Three",
+        "Four",
+        "Five",
+        "Six"
+      ],
       "correctAnswer": "C",
       "explanation": "Five are correct: (a) K+ maintains ionic balance, (b) K+ regulates stomatal movement, (d) K+ activates many enzymes, (e) K+ helps in osmoregulation and turgidity, (f) K+ is needed for protein synthesis. (c) is incorrect; Mg (not K) is the structural component of chlorophyll. Potassium has no structural role in any organic molecule.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["potassium functions", "counting", "enzyme activator"],
+      "tags": [
+        "potassium functions",
+        "counting",
+        "enzyme activator"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2471,13 +2599,22 @@
       "ncertChapter": 12,
       "ncertChapterName": "Mineral Nutrition",
       "question": "Arrange the following steps in the reduction of nitrate to ammonia in plants:\n(I) NO3⁻ (nitrate) absorbed by roots\n(II) NO3⁻ reduced to NO2⁻ by nitrate reductase\n(III) NO2⁻ reduced to NH3 by nitrite reductase\n(IV) NH3 incorporated into amino acids\n(V) Amino acids used for protein synthesis",
-      "options": ["A) I → II → III → IV → V", "B) I → III → II → IV → V", "C) II → I → III → V → IV", "D) I → II → IV → III → V"],
+      "options": [
+        "I → II → III → IV → V",
+        "I → III → II → IV → V",
+        "II → I → III → V → IV",
+        "I → II → IV → III → V"
+      ],
       "correctAnswer": "A",
       "explanation": "The sequence of nitrate assimilation: Nitrate is absorbed by roots (I) → Nitrate reductase (Mo-containing enzyme) reduces NO3⁻ to NO2⁻ in the cytoplasm (II) → Nitrite reductase reduces NO2⁻ to NH3 in plastids (III) → NH3 is incorporated into amino acids via reductive amination/transamination (IV) → Amino acids are used in protein synthesis (V).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["nitrate reduction", "nitrate reductase", "sequence"],
+      "tags": [
+        "nitrate reduction",
+        "nitrate reductase",
+        "sequence"
+      ],
       "neetWeightage": "HIGH"
     }
   ]

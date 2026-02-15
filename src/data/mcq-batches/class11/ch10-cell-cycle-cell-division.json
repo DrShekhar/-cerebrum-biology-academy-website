@@ -15,10 +15,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The cell cycle was first described by:",
       "options": [
-        "D) Mendel",
-        "B) Watson and Crick",
-        "A) Howard and Pelc",
-        "C) Schleiden and Schwann"
+        "Mendel",
+        "Watson and Crick",
+        "Howard and Pelc",
+        "Schleiden and Schwann"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, Howard and Pelc (1953) first described the cell cycle. They identified the different phases of the cell cycle using radioactive labelling techniques.",
@@ -41,10 +41,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "DNA replication occurs during which phase of the cell cycle?",
       "options": [
-        "B) S phase",
-        "C) G2 phase",
-        "A) G1 phase",
-        "D) M phase"
+        "S phase",
+        "G2 phase",
+        "G1 phase",
+        "M phase"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, DNA replication occurs during the S (Synthesis) phase of interphase. During this phase, the amount of DNA per cell doubles, but the chromosome number remains the same.",
@@ -67,10 +67,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Which phase of the cell cycle is the longest?",
       "options": [
-        "C) G2 phase",
-        "A) G1 phase",
-        "D) M phase",
-        "B) S phase"
+        "G2 phase",
+        "G1 phase",
+        "M phase",
+        "S phase"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the G1 phase (Gap 1 or first growth phase) is typically the longest phase of the cell cycle. During G1, the cell is metabolically active and grows but does not replicate its DNA.",
@@ -93,10 +93,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Cells that do not divide further exit G1 and enter:",
       "options": [
-        "D) M phase",
-        "C) G0 phase (quiescent stage)",
-        "A) S phase",
-        "B) G2 phase"
+        "M phase",
+        "G0 phase (quiescent stage)",
+        "S phase",
+        "G2 phase"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, cells that do not divide further exit the G1 phase and enter an inactive stage called the G0 phase (quiescent phase). These cells remain metabolically active but no longer proliferate (e.g., mature neurons).",
@@ -119,10 +119,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "During which phase of mitosis do chromosomes align at the equatorial plate?",
       "options": [
-        "C) Anaphase",
-        "A) Prophase",
-        "B) Metaphase",
-        "D) Telophase"
+        "Anaphase",
+        "Prophase",
+        "Metaphase",
+        "Telophase"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, during metaphase, chromosomes are aligned at the equatorial plate (metaphase plate). The centromeres of all chromosomes lie on the metaphase plate, with spindle fibres attached to the kinetochores.",
@@ -145,10 +145,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The centromere splits during which phase of mitosis?",
       "options": [
-        "D) Telophase",
-        "C) Anaphase",
-        "A) Prophase",
-        "B) Metaphase"
+        "Telophase",
+        "Anaphase",
+        "Prophase",
+        "Metaphase"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, during anaphase, each centromere splits (divides), allowing the two sister chromatids to separate and move to opposite poles of the cell. This is driven by shortening of spindle fibres.",
@@ -171,10 +171,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Cytokinesis in plant cells occurs by:",
       "options": [
-        "C) Budding",
-        "D) Fragmentation",
-        "B) Cell plate formation",
-        "A) Cleavage furrow formation"
+        "Budding",
+        "Fragmentation",
+        "Cell plate formation",
+        "Cleavage furrow formation"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, cytokinesis in plant cells occurs by formation of a cell plate. Vesicles from the Golgi apparatus fuse at the centre of the cell to form the cell plate, which grows outward to divide the cell.",
@@ -197,10 +197,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Cytokinesis in animal cells occurs by:",
       "options": [
-        "A) Cell plate formation",
-        "D) Fragmentation",
-        "B) Budding",
-        "C) Cleavage furrow formation"
+        "Cell plate formation",
+        "Fragmentation",
+        "Budding",
+        "Cleavage furrow formation"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, cytokinesis in animal cells occurs by the formation of a cleavage furrow. The plasma membrane constricts inward at the centre of the cell, eventually pinching the cell into two daughter cells.",
@@ -223,10 +223,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Crossing over occurs during which stage of meiosis?",
       "options": [
-        "B) Zygotene",
-        "D) Diplotene",
-        "A) Leptotene",
-        "C) Pachytene"
+        "Zygotene",
+        "Diplotene",
+        "Leptotene",
+        "Pachytene"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, crossing over (recombination) occurs during the pachytene stage of prophase I. It involves the exchange of genetic material between non-sister chromatids of homologous chromosomes at chiasmata.",
@@ -249,10 +249,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Bivalent formation (synapsis) occurs during which stage of prophase I?",
       "options": [
-        "C) Pachytene",
-        "A) Leptotene",
-        "D) Diakinesis",
-        "B) Zygotene"
+        "Pachytene",
+        "Leptotene",
+        "Diakinesis",
+        "Zygotene"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, synapsis (pairing of homologous chromosomes) occurs during zygotene stage of prophase I. The paired chromosomes are called bivalents or tetrads (as each bivalent has 4 chromatids).",
@@ -276,10 +276,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Chiasmata become visible during which stage of prophase I?",
       "options": [
-        "D) Diakinesis",
-        "B) Pachytene",
-        "A) Zygotene",
-        "C) Diplotene"
+        "Diakinesis",
+        "Pachytene",
+        "Zygotene",
+        "Diplotene"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, chiasmata (X-shaped structures where crossing over occurred) become visible during the diplotene stage. During this stage, the synaptonemal complex dissolves and the homologous chromosomes begin to separate, but remain attached at chiasmata.",
@@ -302,10 +302,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Terminalization of chiasmata occurs during:",
       "options": [
-        "D) Metaphase I",
-        "C) Diakinesis",
-        "B) Diplotene",
-        "A) Pachytene"
+        "Metaphase I",
+        "Diakinesis",
+        "Diplotene",
+        "Pachytene"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, during diakinesis (the final stage of prophase I), terminalization of chiasmata occurs. The chiasmata move towards the ends (termini) of the chromosomes. The nuclear membrane and nucleolus also disappear during this stage.",
@@ -328,10 +328,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "How many daughter cells are produced at the end of meiosis?",
       "options": [
-        "C) Four diploid cells",
-        "A) Two diploid cells",
-        "B) Two haploid cells",
-        "D) Four haploid cells"
+        "Four diploid cells",
+        "Two diploid cells",
+        "Two haploid cells",
+        "Four haploid cells"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, meiosis involves two successive divisions (meiosis I and meiosis II) resulting in four haploid daughter cells from one diploid parent cell. The chromosome number is halved.",
@@ -354,10 +354,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "During which phase of mitosis does the nuclear envelope reappear?",
       "options": [
-        "A) Prophase",
-        "D) Telophase",
-        "C) Anaphase",
-        "B) Metaphase"
+        "Prophase",
+        "Telophase",
+        "Anaphase",
+        "Metaphase"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, during telophase, the nuclear envelope reforms around the group of chromosomes at each pole. The chromosomes decondense, and the nucleolus reappears. These events are essentially the reverse of prophase.",
@@ -380,10 +380,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The synaptonemal complex is formed during:",
       "options": [
-        "C) Pachytene",
-        "B) Zygotene",
-        "A) Leptotene",
-        "D) Diplotene"
+        "Pachytene",
+        "Zygotene",
+        "Leptotene",
+        "Diplotene"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the synaptonemal complex is formed during zygotene. It is a protein-rich structure that holds the homologous chromosomes together during synapsis. It dissolves during diplotene.",
@@ -406,10 +406,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "In which type of cell division is the chromosome number reduced to half?",
       "options": [
-        "C) Meiosis I",
-        "A) Mitosis",
-        "B) Amitosis",
-        "D) Meiosis II"
+        "Meiosis I",
+        "Mitosis",
+        "Amitosis",
+        "Meiosis II"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, meiosis I is the reductional division where the chromosome number is reduced to half. Homologous chromosomes separate during anaphase I. Meiosis II is equational (like mitosis) where sister chromatids separate.",
@@ -432,10 +432,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "During prophase of mitosis, the chromosomes:",
       "options": [
-        "D) Move to opposite poles",
-        "C) Align at the equator",
-        "B) Condense and become visible",
-        "A) Uncoil and become diffuse"
+        "Move to opposite poles",
+        "Align at the equator",
+        "Condense and become visible",
+        "Uncoil and become diffuse"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, during prophase, the chromatin condenses into visible chromosomes. Each chromosome consists of two sister chromatids joined at the centromere. The nuclear envelope begins to break down and the centrioles move to opposite poles.",
@@ -458,10 +458,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "In the G2 phase of the cell cycle, the cell:",
       "options": [
-        "C) Divides",
-        "B) Prepares for mitosis by synthesising proteins",
-        "A) Replicates its DNA",
-        "D) Enters quiescence"
+        "Divides",
+        "Prepares for mitosis by synthesising proteins",
+        "Replicates its DNA",
+        "Enters quiescence"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, during G2 (Gap 2) phase, the cell prepares for mitosis. Proteins needed for cell division, such as tubulins for spindle formation, are synthesised during this phase.",
@@ -484,10 +484,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Which of the following is the significance of mitosis?",
       "options": [
-        "C) Growth and repair of tissues",
-        "A) Genetic variation",
-        "B) Reduction of chromosome number",
-        "D) Formation of gametes"
+        "Growth and repair of tissues",
+        "Genetic variation",
+        "Reduction of chromosome number",
+        "Formation of gametes"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, the significance of mitosis includes growth, repair, and regeneration of tissues. It produces genetically identical daughter cells and maintains the chromosome number. It does NOT produce genetic variation or reduce chromosome number.",
@@ -510,10 +510,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The best stage to count the number of chromosomes in a cell is:",
       "options": [
-        "B) Metaphase",
-        "C) Anaphase",
-        "D) Telophase",
-        "A) Prophase"
+        "Metaphase",
+        "Anaphase",
+        "Telophase",
+        "Prophase"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, metaphase is the best stage for studying chromosomes because they are maximally condensed, clearly visible, and aligned at the metaphase plate, making counting and morphological study easiest.",
@@ -536,10 +536,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "During leptotene of prophase I, chromosomes appear as:",
       "options": [
-        "B) Thin, long threads",
-        "D) Thick, short rods",
-        "A) Bivalents",
-        "C) Tetrads"
+        "Thin, long threads",
+        "Thick, short rods",
+        "Bivalents",
+        "Tetrads"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, during leptotene (the first stage of prophase I), chromosomes become visible as long, thin threads (lepto = thin, tene = thread). Compaction of chromosomes continues throughout prophase I.",
@@ -562,10 +562,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The spindle fibres attach to the chromosomes at the:",
       "options": [
-        "B) Centromere",
-        "C) Kinetochore",
-        "D) Secondary constriction",
-        "A) Telomere"
+        "Centromere",
+        "Kinetochore",
+        "Secondary constriction",
+        "Telomere"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, spindle fibres attach to the chromosomes at the kinetochore, which is a disc-shaped protein structure located on the centromere. Each chromosome has two kinetochores, one on each sister chromatid.",
@@ -588,10 +588,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "If a human cell has 46 chromosomes, after S phase the DNA content will be:",
       "options": [
-        "C) 92",
-        "A) 46",
-        "B) 23",
-        "D) Remains at 46 chromosomes but DNA content doubles"
+        "92",
+        "46",
+        "23",
+        "Remains at 46 chromosomes but DNA content doubles"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, during S phase, DNA replication occurs so the DNA content doubles. However, the chromosome number remains the same (46) because each chromosome now consists of two sister chromatids joined at the centromere.",
@@ -614,10 +614,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Meiosis II is similar to mitosis because:",
       "options": [
-        "D) Homologous chromosomes pair",
-        "C) Sister chromatids separate",
-        "A) It reduces chromosome number",
-        "B) Crossing over occurs"
+        "Homologous chromosomes pair",
+        "Sister chromatids separate",
+        "It reduces chromosome number",
+        "Crossing over occurs"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, meiosis II is similar to mitosis (equational division) because sister chromatids separate during anaphase II, just as they do during anaphase of mitosis. There is no reduction in chromosome number during meiosis II.",
@@ -640,10 +640,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Interkinesis is the stage between:",
       "options": [
-        "A) G1 and S phase",
-        "B) Meiosis I and meiosis II",
-        "D) Telophase and cytokinesis",
-        "C) Prophase and metaphase"
+        "G1 and S phase",
+        "Meiosis I and meiosis II",
+        "Telophase and cytokinesis",
+        "Prophase and metaphase"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, interkinesis is the short interval between meiosis I and meiosis II. It is generally short-lived and there is NO DNA replication during interkinesis.",
@@ -665,10 +665,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Which of the following is NOT a significance of meiosis?",
       "options": [
-        "D) Formation of gametes",
-        "A) Genetic variation",
-        "C) Produces genetically identical cells",
-        "B) Maintains chromosome number across generations"
+        "Formation of gametes",
+        "Genetic variation",
+        "Produces genetically identical cells",
+        "Maintains chromosome number across generations"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, meiosis produces genetically diverse (NOT identical) cells due to crossing over and independent assortment. Its significance includes genetic variation, maintaining chromosome number across generations, and formation of gametes.",
@@ -691,10 +691,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "During anaphase I of meiosis, what separates?",
       "options": [
-        "B) Homologous chromosomes",
-        "C) Centromeres",
-        "A) Sister chromatids",
-        "D) Non-homologous chromosomes"
+        "Homologous chromosomes",
+        "Centromeres",
+        "Sister chromatids",
+        "Non-homologous chromosomes"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, during anaphase I, homologous chromosomes separate and move to opposite poles (reductional division). Sister chromatids remain attached at the centromere. Sister chromatid separation occurs during anaphase II.",
@@ -717,10 +717,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "A cell with 20 chromosomes undergoes mitosis. How many chromosomes will be in each daughter cell?",
       "options": [
-        "C) 40",
-        "A) 10",
-        "D) 5",
-        "B) 20"
+        "40",
+        "10",
+        "5",
+        "20"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, mitosis is an equational division that maintains the chromosome number. Each daughter cell will have the same number of chromosomes as the parent cell, which is 20.",
@@ -743,10 +743,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "In meiosis, the number of DNA replications and cell divisions respectively are:",
       "options": [
-        "C) Two and one",
-        "D) One and one",
-        "A) Two and two",
-        "B) One and two"
+        "Two and one",
+        "One and one",
+        "Two and two",
+        "One and two"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, in meiosis there is only ONE round of DNA replication (during the S phase before meiosis I) but TWO successive cell divisions (meiosis I and meiosis II), resulting in four haploid cells.",
@@ -769,10 +769,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Which of the following events occurs during the G1 phase?",
       "options": [
-        "D) Chromosome condensation",
-        "C) Cell growth and protein synthesis",
-        "A) DNA replication",
-        "B) Centriole duplication"
+        "Chromosome condensation",
+        "Cell growth and protein synthesis",
+        "DNA replication",
+        "Centriole duplication"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, during the G1 phase, the cell grows in size and synthesises RNA and proteins needed for DNA synthesis and cell division. The cell is metabolically active during this phase.",
@@ -795,10 +795,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The shortest phase of mitosis is:",
       "options": [
-        "D) Telophase",
-        "C) Anaphase",
-        "A) Prophase",
-        "B) Metaphase"
+        "Telophase",
+        "Anaphase",
+        "Prophase",
+        "Metaphase"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, anaphase is the shortest phase of mitosis. During this phase, the centromeres split and chromatids move rapidly to opposite poles, making it a relatively brief event.",
@@ -821,10 +821,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Colchicine prevents cell division by:",
       "options": [
-        "A) Inhibiting DNA replication",
-        "D) Preventing nuclear envelope breakdown",
-        "C) Blocking cytokinesis",
-        "B) Preventing spindle fibre formation"
+        "Inhibiting DNA replication",
+        "Preventing nuclear envelope breakdown",
+        "Blocking cytokinesis",
+        "Preventing spindle fibre formation"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, colchicine is a chemical that prevents the assembly of spindle fibres by inhibiting tubulin polymerisation into microtubules. Without spindle fibres, chromosomes cannot segregate, and cell division is arrested at metaphase.",
@@ -847,10 +847,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "During which substage of prophase I do homologous chromosomes begin to separate?",
       "options": [
-        "C) Diplotene",
-        "B) Pachytene",
-        "A) Zygotene",
-        "D) Diakinesis"
+        "Diplotene",
+        "Pachytene",
+        "Zygotene",
+        "Diakinesis"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, during diplotene, the synaptonemal complex dissolves and the homologous chromosomes begin to separate (desynapsis). However, they remain connected at the points of crossing over (chiasmata).",
@@ -873,10 +873,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "A recombinase enzyme that facilitates crossing over is called:",
       "options": [
-        "B) Helicase",
-        "C) RecA",
-        "A) Topoisomerase",
-        "D) Ligase"
+        "Helicase",
+        "RecA",
+        "Topoisomerase",
+        "Ligase"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the enzyme recombinase (RecA in prokaryotes, Rad51/Dmc1 in eukaryotes) facilitates crossing over by catalysing the exchange of genetic material between non-sister chromatids of homologous chromosomes during pachytene.",
@@ -899,10 +899,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "In a yeast cell, the cell cycle is completed in approximately:",
       "options": [
-        "A) 24 hours",
-        "C) 20 minutes",
-        "B) 90 minutes",
-        "D) 12 hours"
+        "24 hours",
+        "20 minutes",
+        "90 minutes",
+        "12 hours"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the cell cycle duration varies in different organisms. In yeast, it takes approximately 90 minutes. In human cells, the cell cycle lasts about 24 hours.",
@@ -925,10 +925,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "The longest phase of the cell cycle in a typical human cell is:",
       "options": [
-        "D) G2 phase",
-        "C) Interphase",
-        "B) M phase",
-        "A) S phase"
+        "G2 phase",
+        "Interphase",
+        "M phase",
+        "S phase"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, interphase (comprising G1, S, and G2 phases) is the longest part of the cell cycle, occupying about 95% of the total cell cycle time. In a 24-hour human cell cycle, interphase lasts about 23 hours and M phase about 1 hour.",
@@ -951,10 +951,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Which type of division results in genetic variation in organisms?",
       "options": [
-        "A) Mitosis",
-        "B) Amitosis",
-        "D) Binary fission",
-        "C) Meiosis"
+        "Mitosis",
+        "Amitosis",
+        "Binary fission",
+        "Meiosis"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, meiosis introduces genetic variation through two mechanisms: (1) crossing over during pachytene of prophase I, and (2) random assortment of homologous chromosomes during anaphase I. This variation is important for evolution.",
@@ -977,10 +977,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Assertion (A): Meiosis I is called reductional division.\nReason (R): During meiosis I, homologous chromosomes separate, reducing the chromosome number to half.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, meiosis I is called reductional division because homologous chromosomes separate during anaphase I, reducing the chromosome number from diploid (2n) to haploid (n). This is the reason it is called reductional.",
@@ -1002,10 +1002,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Assertion (A): Crossing over leads to genetic variation.\nReason (R): Crossing over involves exchange of genetic material between non-sister chromatids of homologous chromosomes.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, crossing over leads to genetic variation by exchanging segments of DNA between non-sister chromatids of homologous chromosomes during pachytene. This creates new combinations of genes not present in either parent chromosome.",
@@ -1028,10 +1028,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Assertion (A): Interphase is not a resting phase.\nReason (R): During interphase, the cell undergoes active metabolic activity including DNA replication and protein synthesis.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, interphase is often called the 'resting phase' but this is a misnomer. The cell is highly active during interphase, undergoing DNA replication (S phase), RNA and protein synthesis, cell growth, and organelle duplication.",
@@ -1054,10 +1054,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Assertion (A): Mitosis maintains the same chromosome number in daughter cells.\nReason (R): In mitosis, sister chromatids separate during anaphase.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, mitosis is an equational division that maintains chromosome number because sister chromatids (formed during S phase) separate during anaphase, giving each daughter cell the same number of chromosomes as the parent cell.",
@@ -1080,10 +1080,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Assertion (A): DNA replication does not occur between meiosis I and meiosis II.\nReason (R): The interkinesis between meiosis I and II is a short-lived phase.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, both statements are true. DNA replication does not occur during interkinesis, and interkinesis is short-lived. However, the short duration is not the reason for lack of DNA replication; it is because the cell is already prepared for the second division.",
@@ -1106,10 +1106,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Assertion (A): Colchicine is used to obtain polyploid plants.\nReason (R): Colchicine inhibits spindle formation, preventing chromosome segregation.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, colchicine inhibits spindle fibre formation by preventing tubulin polymerisation. Without spindle fibres, chromosomes cannot segregate to daughter cells, resulting in a cell with double the chromosome number (polyploidy).",
@@ -1132,10 +1132,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Assertion (A): Mature neurons and red blood cells do not divide.\nReason (R): They are in the G0 phase of the cell cycle.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, cells like mature neurons exit the cell cycle and enter G0 (quiescent phase). They remain metabolically active but no longer proliferate. This G0 state explains why they do not divide.",
@@ -1158,10 +1158,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Assertion (A): Cytokinesis in plant cells differs from that in animal cells.\nReason (R): Plant cells have a rigid cell wall that cannot be constricted inward.",
       "options": [
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, cytokinesis differs in plant and animal cells. Plant cells form a cell plate from the centre outward because the rigid cell wall prevents the formation of a cleavage furrow. Animal cells, lacking a rigid wall, divide by cleavage furrow formation.",
@@ -1185,10 +1185,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Assertion (A): The number of chromosomes at the end of meiosis II is haploid.\nReason (R): Meiosis II involves separation of sister chromatids without DNA replication.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the haploid number at the end of meiosis II is actually established during meiosis I (reductional division). Meiosis II is equational (like mitosis) where sister chromatids separate. Both statements are true but the haploid number results from meiosis I, not meiosis II.",
@@ -1211,10 +1211,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Assertion (A): Meiosis is important for maintaining chromosome number across generations.\nReason (R): Without meiosis, the chromosome number would double with each generation after fertilisation.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, meiosis reduces the chromosome number to half in gametes (n). When two haploid gametes fuse during fertilisation, the diploid number (2n) is restored. Without meiosis, each generation would have double the chromosomes.",
@@ -1237,10 +1237,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Assertion (A): Prophase is the longest phase of mitosis.\nReason (R): During prophase, chromatin condenses, nuclear envelope disassembles, and spindle forms.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, prophase is the longest phase of mitosis because many complex events occur: chromatin condensation, nuclear envelope breakdown, nucleolus disappearance, centriole migration, and spindle formation. These numerous events require more time.",
@@ -1263,10 +1263,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Assertion (A): Metaphase is the best stage for chromosome counting.\nReason (R): During metaphase, chromosomes are at their maximum condensation and are aligned at the equator.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, metaphase is ideal for chromosome counting because chromosomes reach maximum condensation (most compact), making them clearly visible, and they are aligned in a single plane (metaphase plate), making them easy to count.",
@@ -1289,10 +1289,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Which of the following statements about the cell cycle are correct?\n(i) The cell cycle consists of interphase and M phase\n(ii) Interphase includes G1, S, and G2 phases\n(iii) DNA replication occurs during G2 phase\n(iv) M phase includes karyokinesis and cytokinesis",
       "options": [
-        "B) All of the above",
-        "D) (ii) and (iii) only",
-        "A) (i), (ii), and (iv) only",
-        "C) (i) and (ii) only"
+        "All of the above",
+        "(ii) and (iii) only",
+        "(i), (ii), and (iv) only",
+        "(i) and (ii) only"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, the cell cycle consists of interphase (G1+S+G2) and M phase (mitosis + cytokinesis). DNA replication occurs during S phase, NOT G2 phase. Statement (iii) is incorrect.",
@@ -1315,10 +1315,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Consider the following statements about prophase I of meiosis:\n(i) Leptotene - chromosomes appear as thin threads\n(ii) Zygotene - synapsis occurs\n(iii) Pachytene - crossing over occurs\n(iv) Diplotene - synapsis begins\nWhich statements are correct?",
       "options": [
-        "A) (i), (ii), and (iii) only",
-        "C) (i) and (iv) only",
-        "D) (ii), (iii), and (iv) only",
-        "B) All of the above"
+        "(i), (ii), and (iii) only",
+        "(i) and (iv) only",
+        "(ii), (iii), and (iv) only",
+        "All of the above"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, statements (i), (ii), and (iii) are correct. Statement (iv) is incorrect; synapsis begins during zygotene, not diplotene. During diplotene, the homologous chromosomes begin to separate (desynapsis) and chiasmata become visible.",
@@ -1341,10 +1341,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Which of the following statements about mitosis are INCORRECT?\n(i) It results in two genetically identical daughter cells\n(ii) It leads to genetic variation\n(iii) It occurs in somatic cells\n(iv) It involves crossing over",
       "options": [
-        "C) (i), (ii), and (iii)",
-        "B) (i) and (iii) only",
-        "A) (ii) and (iv) only",
-        "D) (iii) and (iv) only"
+        "(i), (ii), and (iii)",
+        "(i) and (iii) only",
+        "(ii) and (iv) only",
+        "(iii) and (iv) only"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, statements (ii) and (iv) are incorrect about mitosis. Mitosis does NOT lead to genetic variation and does NOT involve crossing over. These are features of meiosis. Mitosis produces genetically identical cells and occurs in somatic cells.",
@@ -1367,10 +1367,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Read the following statements about anaphase:\n(i) In anaphase of mitosis, sister chromatids separate\n(ii) In anaphase I, homologous chromosomes separate\n(iii) In anaphase II, homologous chromosomes separate\n(iv) Anaphase is the shortest phase of mitosis\nHow many are correct?",
       "options": [
-        "B) Two",
-        "A) One",
-        "D) Four",
-        "C) Three"
+        "Two",
+        "One",
+        "Four",
+        "Three"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iv) are correct = 3. Statement (iii) is incorrect; in anaphase II, sister chromatids separate (like mitosis), NOT homologous chromosomes. Homologous separation occurs only in anaphase I.",
@@ -1394,10 +1394,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Consider the following statements about the significance of meiosis:\n(i) It maintains chromosome number across generations\n(ii) It introduces genetic variation\n(iii) It produces gametes in sexually reproducing organisms\n(iv) It produces exact copies of the parent cell\nWhich are correct?",
       "options": [
-        "D) (ii) and (iv) only",
-        "B) All of the above",
-        "A) (i), (ii), and (iii)",
-        "C) (i) and (iii) only"
+        "(ii) and (iv) only",
+        "All of the above",
+        "(i), (ii), and (iii)",
+        "(i) and (iii) only"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, meiosis maintains chromosome number across generations, introduces genetic variation through crossing over and independent assortment, and produces gametes. Statement (iv) is incorrect; meiosis does NOT produce exact copies - that is mitosis.",
@@ -1419,10 +1419,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Which of the following statements about telophase is/are correct?\n(i) Chromosomes decondense\n(ii) Nuclear envelope reforms\n(iii) Nucleolus reappears\n(iv) Spindle fibres form",
       "options": [
-        "B) All of the above",
-        "C) (i) and (iii) only",
-        "D) (iv) only",
-        "A) (i), (ii), and (iii)"
+        "All of the above",
+        "(i) and (iii) only",
+        "(iv) only",
+        "(i), (ii), and (iii)"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT, during telophase: chromosomes decondense back to chromatin, nuclear envelope reforms around each set of chromosomes, and nucleolus reappears. Statement (iv) is incorrect; spindle fibres form during prophase, not telophase. Spindle fibres disassemble during telophase.",
@@ -1445,10 +1445,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Select the correct statements about cytokinesis:\n(i) It follows karyokinesis\n(ii) In plant cells, it proceeds centripetally\n(iii) In animal cells, it proceeds centripetally\n(iv) Cell plate formation occurs in plant cells",
       "options": [
-        "A) (i), (iii), and (iv)",
-        "D) (i) and (iv) only",
-        "C) All of the above",
-        "B) (i), (ii), and (iv)"
+        "(i), (iii), and (iv)",
+        "(i) and (iv) only",
+        "All of the above",
+        "(i), (ii), and (iv)"
       ],
       "correctAnswer": "A",
       "explanation": "Statements (i), (iii), and (iv) are correct. Statement (ii) is incorrect; in plant cells, cytokinesis proceeds centrifugally (from centre outward by cell plate formation). In animal cells, it proceeds centripetally (from periphery inward by cleavage furrow).",
@@ -1471,10 +1471,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "How many of the following events occur during prophase of mitosis?\n(a) Chromatin condensation (b) Nucleolus disappears (c) Centrioles move to poles (d) Spindle begins to form (e) Centromere splitting (f) Nuclear envelope breaks down",
       "options": [
-        "D) Six",
-        "A) Three",
-        "B) Four",
-        "C) Five"
+        "Six",
+        "Three",
+        "Four",
+        "Five"
       ],
       "correctAnswer": "D",
       "explanation": "Events during prophase: (a) chromatin condenses, (b) nucleolus disappears, (c) centrioles move to opposite poles, (d) spindle begins to form, and (f) nuclear envelope breaks down = 5 events. Centromere splitting (e) occurs during anaphase, not prophase.",
@@ -1497,10 +1497,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Consider the following differences between mitosis and meiosis:\n(i) Mitosis produces 2 cells, meiosis produces 4 cells\n(ii) Mitosis has no crossing over, meiosis has crossing over\n(iii) Mitosis occurs in somatic cells, meiosis in germ cells\n(iv) Both maintain chromosome number\nWhich statements are correct?",
       "options": [
-        "A) (i), (ii), and (iii)",
-        "C) (i) and (ii) only",
-        "B) All of the above",
-        "D) (i), (iii), and (iv)"
+        "(i), (ii), and (iii)",
+        "(i) and (ii) only",
+        "All of the above",
+        "(i), (iii), and (iv)"
       ],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), and (iii) are correct. Statement (iv) is incorrect; mitosis maintains chromosome number (equational) while meiosis reduces it to half (reductional).",
@@ -1523,10 +1523,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Which of the following about G0 phase is correct?\n(i) Cells in G0 do not divide\n(ii) G0 cells are metabolically inactive\n(iii) Neurons and RBCs are typically in G0\n(iv) G0 cells can re-enter the cell cycle under certain conditions",
       "options": [
-        "D) (i) and (ii) only",
-        "A) (i), (iii), and (iv)",
-        "B) All of the above",
-        "C) (i) and (iii) only"
+        "(i) and (ii) only",
+        "(i), (iii), and (iv)",
+        "All of the above",
+        "(i) and (iii) only"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, cells in G0 do not divide, neurons and mature RBCs are in G0, and some G0 cells can re-enter the cell cycle when stimulated. Statement (ii) is incorrect; G0 cells are metabolically ACTIVE, they simply do not divide.",
@@ -1549,10 +1549,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Select the correct statement(s) about interkinesis:\n(i) It occurs between meiosis I and meiosis II\n(ii) DNA replication occurs during interkinesis\n(iii) It is generally short-lived\n(iv) It is similar to interphase of mitosis",
       "options": [
-        "A) (i) and (iii) only",
-        "D) All of the above",
-        "C) (i), (ii), and (iii)",
-        "B) (i), (iii), and (iv)"
+        "(i) and (iii) only",
+        "All of the above",
+        "(i), (ii), and (iii)",
+        "(i), (iii), and (iv)"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, interkinesis occurs between meiosis I and II and is short-lived. Statement (ii) is incorrect; NO DNA replication occurs during interkinesis. Statement (iv) is incorrect; interkinesis is NOT the same as interphase since it lacks DNA replication.",
@@ -1574,10 +1574,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Match the phase (Column I) with the event (Column II):\nColumn I: (a) G1 phase (b) S phase (c) G2 phase (d) M phase\nColumn II: (i) DNA replication (ii) Cell growth and RNA synthesis (iii) Protein synthesis for division (iv) Nuclear and cytoplasmic division",
       "options": [
-        "D) a-iv, b-iii, c-ii, d-i",
-        "A) a-ii, b-i, c-iii, d-iv",
-        "C) a-iii, b-iv, c-i, d-ii",
-        "B) a-i, b-ii, c-iv, d-iii"
+        "a-iv, b-iii, c-ii, d-i",
+        "a-ii, b-i, c-iii, d-iv",
+        "a-iii, b-iv, c-i, d-ii",
+        "a-i, b-ii, c-iv, d-iii"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT: G1 phase involves cell growth and RNA synthesis, S phase involves DNA replication, G2 phase involves protein synthesis for cell division (e.g., tubulin), and M phase involves nuclear and cytoplasmic division.",
@@ -1600,10 +1600,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Match the stage of prophase I (Column I) with its key event (Column II):\nColumn I: (a) Leptotene (b) Zygotene (c) Pachytene (d) Diplotene\nColumn II: (i) Synapsis (ii) Crossing over (iii) Chiasmata visible (iv) Chromosome condensation begins",
       "options": [
-        "D) a-iii, b-ii, c-i, d-iv",
-        "A) a-iv, b-i, c-ii, d-iii",
-        "B) a-i, b-iv, c-iii, d-ii",
-        "C) a-ii, b-iii, c-iv, d-i"
+        "a-iii, b-ii, c-i, d-iv",
+        "a-iv, b-i, c-ii, d-iii",
+        "a-i, b-iv, c-iii, d-ii",
+        "a-ii, b-iii, c-iv, d-i"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT: Leptotene - chromosomes begin to condense, Zygotene - synapsis (pairing of homologous chromosomes), Pachytene - crossing over occurs, Diplotene - chiasmata become visible as homologs begin to separate.",
@@ -1626,10 +1626,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Match the mitotic phase (Column I) with its characteristic (Column II):\nColumn I: (a) Prophase (b) Metaphase (c) Anaphase (d) Telophase\nColumn II: (i) Nuclear envelope reappears (ii) Chromosomes condense (iii) Centromere splits (iv) Chromosomes at equatorial plate",
       "options": [
-        "D) a-iii, b-i, c-ii, d-iv",
-        "B) a-iv, b-ii, c-i, d-iii",
-        "A) a-ii, b-iv, c-iii, d-i",
-        "C) a-i, b-iii, c-iv, d-ii"
+        "a-iii, b-i, c-ii, d-iv",
+        "a-iv, b-ii, c-i, d-iii",
+        "a-ii, b-iv, c-iii, d-i",
+        "a-i, b-iii, c-iv, d-ii"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT: Prophase - chromosomes condense and become visible, Metaphase - chromosomes align at the equatorial plate, Anaphase - centromere splits and chromatids separate, Telophase - nuclear envelope reforms.",
@@ -1652,10 +1652,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Match Column I with Column II:\nColumn I: (a) Mitosis (b) Meiosis I (c) Meiosis II (d) Amitosis\nColumn II: (i) Equational, sister chromatids separate (ii) Direct division, no spindle (iii) Equational, 2 identical cells (iv) Reductional, homologs separate",
       "options": [
-        "B) a-iv, b-iii, c-ii, d-i",
-        "D) a-ii, b-i, c-iv, d-iii",
-        "C) a-i, b-ii, c-iii, d-iv",
-        "A) a-iii, b-iv, c-i, d-ii"
+        "a-iv, b-iii, c-ii, d-i",
+        "a-ii, b-i, c-iv, d-iii",
+        "a-i, b-ii, c-iii, d-iv",
+        "a-iii, b-iv, c-i, d-ii"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT: Mitosis is equational producing 2 identical cells, meiosis I is reductional where homologous chromosomes separate, meiosis II is equational where sister chromatids separate, and amitosis is direct division without spindle formation.",
@@ -1678,10 +1678,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Match the term (Column I) with the definition (Column II):\nColumn I: (a) Synapsis (b) Bivalent (c) Chiasma (d) Crossing over\nColumn II: (i) X-shaped structure at point of exchange (ii) Exchange of genetic material between homologs (iii) Paired homologous chromosomes (iv) Pairing of homologous chromosomes",
       "options": [
-        "A) a-iv, b-iii, c-i, d-ii",
-        "C) a-i, b-ii, c-iv, d-iii",
-        "D) a-ii, b-i, c-iii, d-iv",
-        "B) a-iii, b-iv, c-ii, d-i"
+        "a-iv, b-iii, c-i, d-ii",
+        "a-i, b-ii, c-iv, d-iii",
+        "a-ii, b-i, c-iii, d-iv",
+        "a-iii, b-iv, c-ii, d-i"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT: Synapsis is the pairing of homologous chromosomes, bivalent is a pair of synapsed homologous chromosomes, chiasma is the X-shaped structure at the point of crossing over, and crossing over is the exchange of genetic material between non-sister chromatids.",
@@ -1704,10 +1704,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Match the cell type (Column I) with its division type (Column II):\nColumn I: (a) Skin cells (b) Germ cells (c) Neurons (d) Liver cells after injury\nColumn II: (i) Meiosis (ii) G0 (no division) (iii) Mitosis (regular) (iv) Mitosis (stimulated)",
       "options": [
-        "C) a-ii, b-iv, c-iii, d-i",
-        "A) a-iii, b-i, c-ii, d-iv",
-        "B) a-i, b-iii, c-iv, d-ii",
-        "D) a-iv, b-ii, c-i, d-iii"
+        "a-ii, b-iv, c-iii, d-i",
+        "a-iii, b-i, c-ii, d-iv",
+        "a-i, b-iii, c-iv, d-ii",
+        "a-iv, b-ii, c-i, d-iii"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT: Skin cells undergo regular mitosis for renewal, germ cells undergo meiosis to form gametes, neurons are in G0 (do not divide), and liver cells can be stimulated to undergo mitosis after injury or damage.",
@@ -1731,10 +1731,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Match Column I with Column II regarding DNA content changes:\nColumn I: (a) G1 phase (b) After S phase (c) After meiosis I (d) After meiosis II\nColumn II: (i) 2C (ii) 4C (iii) C (iv) 2C",
       "options": [
-        "D) a-iv, b-iii, c-ii, d-i",
-        "A) a-i, b-ii, c-iv, d-iii",
-        "C) a-iii, b-iv, c-i, d-ii",
-        "B) a-ii, b-i, c-iii, d-iv"
+        "a-iv, b-iii, c-ii, d-i",
+        "a-i, b-ii, c-iv, d-iii",
+        "a-iii, b-iv, c-i, d-ii",
+        "a-ii, b-i, c-iii, d-iv"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT: In G1, DNA content is 2C (diploid). After S phase (DNA replication), it becomes 4C. After meiosis I, each daughter cell has 2C (still two copies per chromosome). After meiosis II, each cell has C (haploid, one copy).",
@@ -1757,10 +1757,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Match the structure (Column I) with its role in cell division (Column II):\nColumn I: (a) Centriole (b) Kinetochore (c) Cell plate (d) Cleavage furrow\nColumn II: (i) Animal cell cytokinesis (ii) Plant cell cytokinesis (iii) Spindle fibre attachment (iv) Organises spindle apparatus",
       "options": [
-        "B) a-iii, b-iv, c-i, d-ii",
-        "D) a-ii, b-i, c-iii, d-iv",
-        "C) a-i, b-ii, c-iv, d-iii",
-        "A) a-iv, b-iii, c-ii, d-i"
+        "a-iii, b-iv, c-i, d-ii",
+        "a-ii, b-i, c-iii, d-iv",
+        "a-i, b-ii, c-iv, d-iii",
+        "a-iv, b-iii, c-ii, d-i"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT: Centrioles organise the spindle apparatus during cell division, kinetochores are the attachment points for spindle fibres on chromosomes, cell plate forms during plant cell cytokinesis, and cleavage furrow forms during animal cell cytokinesis.",
@@ -1783,10 +1783,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Match Column I with Column II:\nColumn I: (a) Karyokinesis (b) Cytokinesis (c) Interphase (d) Interkinesis\nColumn II: (i) Between meiosis I and II (ii) Nuclear division (iii) Cytoplasmic division (iv) G1 + S + G2",
       "options": [
-        "D) a-i, b-iv, c-ii, d-iii",
-        "A) a-ii, b-iii, c-iv, d-i",
-        "C) a-iv, b-i, c-iii, d-ii",
-        "B) a-iii, b-ii, c-i, d-iv"
+        "a-i, b-iv, c-ii, d-iii",
+        "a-ii, b-iii, c-iv, d-i",
+        "a-iv, b-i, c-iii, d-ii",
+        "a-iii, b-ii, c-i, d-iv"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT: Karyokinesis is nuclear division, cytokinesis is cytoplasmic division, interphase comprises G1 + S + G2 phases, and interkinesis is the brief period between meiosis I and meiosis II.",
@@ -1808,10 +1808,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Match the approximate duration of cell cycle phases in a human cell (24-hour cycle):\nColumn I: (a) G1 phase (b) S phase (c) G2 phase (d) M phase\nColumn II: (i) ~6 hours (ii) ~11 hours (iii) ~1 hour (iv) ~4 hours",
       "options": [
-        "B) a-i, b-ii, c-iii, d-iv",
-        "D) a-iii, b-iv, c-i, d-ii",
-        "A) a-ii, b-i, c-iv, d-iii",
-        "C) a-iv, b-iii, c-ii, d-i"
+        "a-i, b-ii, c-iii, d-iv",
+        "a-iii, b-iv, c-i, d-ii",
+        "a-ii, b-i, c-iv, d-iii",
+        "a-iv, b-iii, c-ii, d-i"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, in a typical 24-hour human cell cycle: G1 phase is ~11 hours (longest), S phase is ~6 hours, G2 phase is ~4 hours, and M phase is ~1 hour (shortest).",
@@ -1834,10 +1834,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Match Column I with Column II:\nColumn I: (a) Independent assortment (b) Crossing over (c) Synapsis (d) Terminalization\nColumn II: (i) Movement of chiasmata to chromosome ends (ii) Random orientation of bivalents at metaphase I (iii) Exchange between non-sister chromatids (iv) Pairing of homologous chromosomes",
       "options": [
-        "D) a-i, b-iv, c-ii, d-iii",
-        "C) a-iv, b-i, c-iii, d-ii",
-        "A) a-ii, b-iii, c-iv, d-i",
-        "B) a-iii, b-ii, c-i, d-iv"
+        "a-i, b-iv, c-ii, d-iii",
+        "a-iv, b-i, c-iii, d-ii",
+        "a-ii, b-iii, c-iv, d-i",
+        "a-iii, b-ii, c-i, d-iv"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT: Independent assortment is the random orientation of bivalents at metaphase I, crossing over is exchange between non-sister chromatids, synapsis is pairing of homologous chromosomes during zygotene, and terminalization is movement of chiasmata to chromosome ends during diakinesis.",
@@ -1860,10 +1860,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Match the event (Column I) with the phase of meiosis (Column II):\nColumn I: (a) Homologous chromosomes at equator (b) Sister chromatids separate (c) Homologous chromosomes separate (d) Chromosomes at equator (single line)\nColumn II: (i) Anaphase I (ii) Metaphase I (iii) Anaphase II (iv) Metaphase II",
       "options": [
-        "D) a-iv, b-i, c-iii, d-ii",
-        "B) a-iii, b-ii, c-iv, d-i",
-        "C) a-i, b-iv, c-ii, d-iii",
-        "A) a-ii, b-iii, c-i, d-iv"
+        "a-iv, b-i, c-iii, d-ii",
+        "a-iii, b-ii, c-iv, d-i",
+        "a-i, b-iv, c-ii, d-iii",
+        "a-ii, b-iii, c-i, d-iv"
       ],
       "correctAnswer": "D",
       "explanation": "As per NCERT: Bivalents align at the equator during metaphase I, sister chromatids separate during anaphase II, homologous chromosomes separate during anaphase I, and individual chromosomes align at the equator during metaphase II.",
@@ -1886,10 +1886,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "How many stages are there in prophase I of meiosis?",
       "options": [
-        "D) Six",
-        "A) Three",
-        "C) Five",
-        "B) Four"
+        "Six",
+        "Three",
+        "Five",
+        "Four"
       ],
       "correctAnswer": "C",
       "explanation": "As per NCERT, prophase I of meiosis has 5 stages: Leptotene, Zygotene, Pachytene, Diplotene, and Diakinesis. This is the longest and most complex phase of meiosis.",
@@ -1913,10 +1913,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "If a cell with 2n = 14 undergoes meiosis, how many chromatids will be present during metaphase I?",
       "options": [
-        "D) 56",
-        "C) 7",
-        "B) 28",
-        "A) 14"
+        "56",
+        "7",
+        "28",
+        "14"
       ],
       "correctAnswer": "C",
       "explanation": "At metaphase I, chromosomes are in bivalent form. With 2n = 14, there are 7 bivalents. Each chromosome has 2 chromatids (replicated during S phase), so total chromatids = 14 x 2 = 28 chromatids.",
@@ -1939,10 +1939,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "If 10 cells undergo meiosis, how many daughter cells will be produced?",
       "options": [
-        "B) 20",
-        "C) 30",
-        "D) 40",
-        "A) 10"
+        "20",
+        "30",
+        "40",
+        "10"
       ],
       "correctAnswer": "C",
       "explanation": "Each cell undergoing meiosis produces 4 haploid daughter cells. Therefore, 10 cells x 4 = 40 daughter cells.",
@@ -1965,10 +1965,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "How many bivalents will be formed during meiosis in a cell with 2n = 46?",
       "options": [
-        "C) 23",
-        "A) 46",
-        "D) 12",
-        "B) 92"
+        "23",
+        "46",
+        "12",
+        "92"
       ],
       "correctAnswer": "A",
       "explanation": "During meiosis I, homologous chromosomes pair to form bivalents. With 2n = 46 (23 pairs), there will be 23 bivalents (each bivalent = 1 pair of homologous chromosomes = 4 chromatids = tetrad).",
@@ -1991,10 +1991,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "How many of the following events are common to both mitosis and meiosis?\n(a) Chromosome condensation (b) Spindle formation (c) Crossing over (d) Cytokinesis (e) Synapsis (f) Centromere splitting",
       "options": [
-        "D) Five",
-        "C) Four",
-        "B) Three",
-        "A) Two"
+        "Five",
+        "Four",
+        "Three",
+        "Two"
       ],
       "correctAnswer": "B",
       "explanation": "Events common to both mitosis and meiosis: (a) chromosome condensation, (b) spindle formation, (d) cytokinesis, and (f) centromere splitting = 4 events. Crossing over and synapsis are exclusive to meiosis.",
@@ -2018,10 +2018,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Count the total number of phases in the complete cell cycle:\nG1, S, G2, Prophase, Metaphase, Anaphase, Telophase, Cytokinesis",
       "options": [
-        "B) Six",
-        "A) Five",
-        "C) Seven",
-        "D) Eight"
+        "Six",
+        "Five",
+        "Seven",
+        "Eight"
       ],
       "correctAnswer": "D",
       "explanation": "The complete cell cycle includes 8 distinct phases/stages: G1 phase, S phase, G2 phase (interphase = 3), and Prophase, Metaphase, Anaphase, Telophase (mitosis = 4), plus Cytokinesis = 3 + 4 + 1 = 8 phases.",
@@ -2044,10 +2044,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "How many of the following statements are correct about meiosis II?\n(a) It is equational division\n(b) Sister chromatids separate\n(c) Crossing over occurs\n(d) No DNA replication occurs before it\n(e) It produces haploid cells\n(f) Homologous chromosomes pair",
       "options": [
-        "D) Five",
-        "A) Two",
-        "C) Four",
-        "B) Three"
+        "Five",
+        "Two",
+        "Four",
+        "Three"
       ],
       "correctAnswer": "C",
       "explanation": "Correct statements about meiosis II: (a) equational division, (b) sister chromatids separate, (d) no DNA replication before it, and (e) produces haploid cells = 4. Statements (c) and (f) are features of meiosis I, not meiosis II.",
@@ -2070,10 +2070,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "If a cell has 2n = 8 chromosomes, how many chromosomes will each daughter cell have after mitosis and meiosis respectively?",
       "options": [
-        "D) 4 and 2",
-        "C) 4 and 4",
-        "A) 8 and 8",
-        "B) 8 and 4"
+        "4 and 2",
+        "4 and 4",
+        "8 and 8",
+        "8 and 4"
       ],
       "correctAnswer": "D",
       "explanation": "After mitosis (equational division), each daughter cell will have the same number as the parent: 8 chromosomes (2n = 8). After meiosis (reductional), each daughter cell will have half: 4 chromosomes (n = 4).",
@@ -2096,10 +2096,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Arrange the stages of prophase I in the correct sequence:\n(i) Pachytene\n(ii) Diplotene\n(iii) Leptotene\n(iv) Zygotene\n(v) Diakinesis",
       "options": [
-        "B) i -> ii -> iii -> iv -> v",
-        "A) iii -> iv -> i -> ii -> v",
-        "C) iii -> i -> iv -> ii -> v",
-        "D) iv -> iii -> i -> v -> ii"
+        "i -> ii -> iii -> iv -> v",
+        "iii -> iv -> i -> ii -> v",
+        "iii -> i -> iv -> ii -> v",
+        "iv -> iii -> i -> v -> ii"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the correct sequence of stages in prophase I is: Leptotene -> Zygotene -> Pachytene -> Diplotene -> Diakinesis. A memory aid: 'Lazy Zebras Play During Daytime'.",
@@ -2122,10 +2122,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Arrange the phases of the cell cycle in the correct sequence:\n(i) M phase\n(ii) S phase\n(iii) G1 phase\n(iv) G2 phase",
       "options": [
-        "D) iii -> iv -> ii -> i",
-        "A) iii -> ii -> iv -> i",
-        "B) i -> ii -> iii -> iv",
-        "C) ii -> iii -> iv -> i"
+        "iii -> iv -> ii -> i",
+        "iii -> ii -> iv -> i",
+        "i -> ii -> iii -> iv",
+        "ii -> iii -> iv -> i"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, the correct sequence of the cell cycle is: G1 phase (cell growth) -> S phase (DNA synthesis) -> G2 phase (preparation for division) -> M phase (mitosis and cytokinesis).",
@@ -2148,10 +2148,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Arrange the following events of mitosis in the correct chronological order:\n(i) Centromere splitting\n(ii) Chromosome condensation\n(iii) Chromosomes at metaphase plate\n(iv) Nuclear envelope reforms",
       "options": [
-        "A) ii -> iii -> i -> iv",
-        "C) iii -> ii -> iv -> i",
-        "B) i -> ii -> iii -> iv",
-        "D) iv -> i -> ii -> iii"
+        "ii -> iii -> i -> iv",
+        "iii -> ii -> iv -> i",
+        "i -> ii -> iii -> iv",
+        "iv -> i -> ii -> iii"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, the correct order of mitotic events is: Chromosome condensation (prophase) -> Chromosomes at metaphase plate (metaphase) -> Centromere splitting (anaphase) -> Nuclear envelope reforms (telophase).",
@@ -2174,10 +2174,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Arrange the following events of meiosis I in the correct order:\n(i) Crossing over at pachytene\n(ii) Separation of homologous chromosomes\n(iii) Synapsis at zygotene\n(iv) Bivalents at equatorial plate\n(v) Terminalization of chiasmata",
       "options": [
-        "B) i -> iii -> iv -> ii -> v",
-        "C) iii -> iv -> i -> v -> ii",
-        "D) v -> iii -> i -> iv -> ii",
-        "A) iii -> i -> v -> iv -> ii"
+        "i -> iii -> iv -> ii -> v",
+        "iii -> iv -> i -> v -> ii",
+        "v -> iii -> i -> iv -> ii",
+        "iii -> i -> v -> iv -> ii"
       ],
       "correctAnswer": "D",
       "explanation": "The correct sequence during meiosis I: Synapsis at zygotene -> Crossing over at pachytene -> Terminalization of chiasmata at diakinesis -> Bivalents at equatorial plate (metaphase I) -> Separation of homologous chromosomes (anaphase I).",
@@ -2200,10 +2200,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Arrange the following in order of decreasing duration in a typical cell cycle:\n(i) M phase\n(ii) G1 phase\n(iii) S phase\n(iv) G2 phase",
       "options": [
-        "D) ii -> iv -> iii -> i",
-        "A) ii -> iii -> iv -> i",
-        "B) iii -> ii -> i -> iv",
-        "C) i -> iv -> iii -> ii"
+        "ii -> iv -> iii -> i",
+        "ii -> iii -> iv -> i",
+        "iii -> ii -> i -> iv",
+        "i -> iv -> iii -> ii"
       ],
       "correctAnswer": "B",
       "explanation": "As per NCERT, in a typical 24-hour cell cycle, the duration in decreasing order is: G1 phase (~11 hours) -> S phase (~6 hours) -> G2 phase (~4 hours) -> M phase (~1 hour).",
@@ -2226,10 +2226,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Arrange the following phases of complete meiosis in order:\n(i) Prophase II\n(ii) Metaphase I\n(iii) Telophase I\n(iv) Anaphase II\n(v) Prophase I",
       "options": [
-        "D) ii -> v -> i -> iii -> iv",
-        "C) v -> iii -> ii -> iv -> i",
-        "A) v -> ii -> iii -> i -> iv",
-        "B) i -> ii -> iii -> iv -> v"
+        "ii -> v -> i -> iii -> iv",
+        "v -> iii -> ii -> iv -> i",
+        "v -> ii -> iii -> i -> iv",
+        "i -> ii -> iii -> iv -> v"
       ],
       "correctAnswer": "C",
       "explanation": "The correct sequence of meiotic phases: Prophase I -> Metaphase I -> (Anaphase I -> Telophase I) -> Prophase II -> (Metaphase II -> Anaphase II -> Telophase II). From the given options: Prophase I -> Metaphase I -> Telophase I -> Prophase II -> Anaphase II.",
@@ -2252,10 +2252,10 @@
       "ncertChapterName": "Cell Cycle and Cell Division",
       "question": "Arrange the following in the correct order of DNA content changes during meiosis (starting from G1):\n(i) 2C\n(ii) 4C\n(iii) 2C\n(iv) C",
       "options": [
-        "A) i -> ii -> iii -> iv",
-        "D) i -> iii -> ii -> iv",
-        "C) iv -> iii -> ii -> i",
-        "B) ii -> i -> iv -> iii"
+        "i -> ii -> iii -> iv",
+        "i -> iii -> ii -> iv",
+        "iv -> iii -> ii -> i",
+        "ii -> i -> iv -> iii"
       ],
       "correctAnswer": "A",
       "explanation": "As per NCERT, DNA content changes during meiosis: 2C (G1) -> 4C (after S phase) -> 2C (after meiosis I, each daughter cell) -> C (after meiosis II, each of 4 cells). This represents the halving of DNA content through two divisions.",

@@ -15,10 +15,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following is a unique feature of plant growth?",
       "options": [
-        "D) Growth stops after reaching maturity",
-        "C) Growth occurs uniformly in all parts",
-        "A) Determinate growth",
-        "B) Growth is limited to certain regions having meristematic tissue"
+        "Growth stops after reaching maturity",
+        "Growth occurs uniformly in all parts",
+        "Determinate growth",
+        "Growth is limited to certain regions having meristematic tissue"
       ],
       "correctAnswer": "D",
       "explanation": "Plant growth is unique because it is largely restricted to certain regions having meristematic tissue (apical, lateral, intercalary meristems). Unlike animals, plants retain the capacity for unlimited growth throughout their life due to meristems.",
@@ -41,10 +41,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arithmetic growth is characterised by which of the following?",
       "options": [
-        "A) Both daughter cells continue to divide",
-        "B) Only one daughter cell continues to divide while the other differentiates",
-        "D) No cell division occurs",
-        "C) All cells divide simultaneously"
+        "Both daughter cells continue to divide",
+        "Only one daughter cell continues to divide while the other differentiates",
+        "No cell division occurs",
+        "All cells divide simultaneously"
       ],
       "correctAnswer": "B",
       "explanation": "In arithmetic growth, following mitotic cell division, only one daughter cell continues to divide while the other differentiates and matures. This results in a linear increase and can be expressed as Lt = L0 + rt.",
@@ -67,10 +67,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "The geometric growth in plants can be expressed by the equation:",
       "options": [
-        "A) Lt = L0 + rt",
-        "C) W1 = W0 / rt",
-        "B) W1 = W0 e^rt",
-        "D) Lt = L0 × t"
+        "Lt = L0 + rt",
+        "W1 = W0 / rt",
+        "W1 = W0 e^rt",
+        "Lt = L0 × t"
       ],
       "correctAnswer": "C",
       "explanation": "Geometric growth is expressed as W1 = W0 e^rt, where W1 = final size, W0 = initial size, r = growth rate, t = time, and e = base of natural logarithms. This represents exponential growth where both daughter cells retain the ability to divide.",
@@ -93,10 +93,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "The S-shaped (sigmoid) growth curve is typical of:",
       "options": [
-        "C) Living organisms growing in a natural environment",
-        "B) Geometric growth only",
-        "A) Arithmetic growth only",
-        "D) Growth in unlimited resources"
+        "Living organisms growing in a natural environment",
+        "Geometric growth only",
+        "Arithmetic growth only",
+        "Growth in unlimited resources"
       ],
       "correctAnswer": "A",
       "explanation": "The sigmoid growth curve is characteristic of living organisms growing in a natural environment with limited resources. It shows three phases: lag phase (slow initial growth), log/exponential phase (rapid growth), and stationary phase (growth slows and becomes stable).",
@@ -119,10 +119,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following is the first naturally occurring auxin isolated from human urine?",
       "options": [
-        "C) NAA (Naphthalene acetic acid)",
-        "A) IAA (Indole-3-acetic acid)",
-        "D) 2,4-D (2,4-dichlorophenoxyacetic acid)",
-        "B) IBA (Indole butyric acid)"
+        "NAA (Naphthalene acetic acid)",
+        "IAA (Indole-3-acetic acid)",
+        "2,4-D (2,4-dichlorophenoxyacetic acid)",
+        "IBA (Indole butyric acid)"
       ],
       "correctAnswer": "B",
       "explanation": "Indole-3-acetic acid (IAA) is the most common naturally occurring auxin. It was first isolated from human urine. Auxins were first discovered by F.W. Went from tips of coleoptiles of oat seedlings. NAA and 2,4-D are synthetic auxins.",
@@ -146,10 +146,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which synthetic auxin is widely used as a herbicide?",
       "options": [
-        "A) IAA",
-        "D) GA3",
-        "B) IBA",
-        "C) 2,4-D"
+        "IAA",
+        "GA3",
+        "IBA",
+        "2,4-D"
       ],
       "correctAnswer": "D",
       "explanation": "2,4-D (2,4-dichlorophenoxyacetic acid) is a synthetic auxin widely used as a herbicide to kill dicotyledonous weeds. It selectively kills broadleaved weeds without affecting monocot crops like cereals.",
@@ -173,10 +173,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Gibberellic acid was first discovered from:",
       "options": [
-        "D) Coconut milk",
-        "B) Rice seedlings infected with Gibberella fujikuroi",
-        "C) Oat coleoptile tips",
-        "A) Corn plants"
+        "Coconut milk",
+        "Rice seedlings infected with Gibberella fujikuroi",
+        "Oat coleoptile tips",
+        "Corn plants"
       ],
       "correctAnswer": "B",
       "explanation": "Gibberellins were first discovered by E. Kurosawa (1926) from rice seedlings infected with the fungus Gibberella fujikuroi (Fusarium moniliforme), which caused 'bakanae' (foolish seedling) disease characterized by excessive elongation.",
@@ -200,10 +200,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Bolting in rosette plants like cabbage can be induced by application of:",
       "options": [
-        "C) Gibberellic acid",
-        "D) Abscisic acid",
-        "A) Auxin",
-        "B) Cytokinin"
+        "Gibberellic acid",
+        "Abscisic acid",
+        "Auxin",
+        "Cytokinin"
       ],
       "correctAnswer": "A",
       "explanation": "Gibberellins cause stem elongation in genetically dwarf plants and induce bolting (internode elongation followed by flowering) in rosette plants like cabbage and beet. This is one of the most characteristic effects of gibberellins.",
@@ -227,10 +227,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Cytokinins were discovered from:",
       "options": [
-        "C) Rice seedlings",
-        "B) Herring sperm DNA (degraded autoclaved)",
-        "D) Immature corn kernels",
-        "A) Oat coleoptile tips"
+        "Rice seedlings",
+        "Herring sperm DNA (degraded autoclaved)",
+        "Immature corn kernels",
+        "Oat coleoptile tips"
       ],
       "correctAnswer": "B",
       "explanation": "Kinetin, the first cytokinin discovered, was isolated from degraded (autoclaved) herring sperm DNA by Miller et al. It is not a natural cytokinin. Zeatin, isolated from corn kernels, was the first natural cytokinin to be discovered.",
@@ -254,10 +254,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "The gaseous plant hormone that promotes fruit ripening is:",
       "options": [
-        "D) Abscisic acid",
-        "A) Auxin",
-        "B) Gibberellin",
-        "C) Ethylene"
+        "Abscisic acid",
+        "Auxin",
+        "Gibberellin",
+        "Ethylene"
       ],
       "correctAnswer": "D",
       "explanation": "Ethylene is a gaseous plant hormone (the only gaseous PGR) that is most effective in promoting fruit ripening. It is widely used to ripen fruits like bananas, mangoes, and tomatoes. It is synthesized in large amounts by ripening fruits.",
@@ -281,10 +281,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Abscisic acid is also called 'stress hormone' because:",
       "options": [
-        "B) It increases tolerance of plants to various kinds of stresses",
-        "A) It promotes growth under stress",
-        "C) It is synthesized only during stress conditions",
-        "D) It stimulates flowering under stress"
+        "It increases tolerance of plants to various kinds of stresses",
+        "It promotes growth under stress",
+        "It is synthesized only during stress conditions",
+        "It stimulates flowering under stress"
       ],
       "correctAnswer": "A",
       "explanation": "Abscisic acid (ABA) is called the stress hormone because it increases the tolerance of plants to various kinds of stresses such as drought, salinity, and cold. It induces stomatal closure during water stress, preventing water loss.",
@@ -308,10 +308,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Short day plants (SDP) flower when the photoperiod is:",
       "options": [
-        "D) Independent of the critical day length",
-        "A) Equal to the critical day length",
-        "C) Less than the critical day length",
-        "B) More than the critical day length"
+        "Independent of the critical day length",
+        "Equal to the critical day length",
+        "Less than the critical day length",
+        "More than the critical day length"
       ],
       "correctAnswer": "C",
       "explanation": "Short day plants (SDP) require a photoperiod less than the critical day length (i.e., a long uninterrupted dark period) for flowering. Examples include tobacco, rice, chrysanthemum, and soybean. They are actually long-night plants.",
@@ -335,10 +335,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Vernalization is the process of acceleration of flowering by exposing plants to:",
       "options": [
-        "B) Low temperature",
-        "D) Short day conditions",
-        "A) High temperature",
-        "C) Long day conditions"
+        "Low temperature",
+        "Short day conditions",
+        "High temperature",
+        "Long day conditions"
       ],
       "correctAnswer": "A",
       "explanation": "Vernalization is the process of promoting flowering by a period of low temperature treatment. It is required by some plants (like winter wheat and biennial plants) that need a cold period before they can flower. The term was coined by T.D. Lysenko.",
@@ -362,10 +362,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which phase of the growth curve shows the maximum rate of cell division?",
       "options": [
-        "D) Decline phase",
-        "B) Log (exponential) phase",
-        "C) Stationary phase",
-        "A) Lag phase"
+        "Decline phase",
+        "Log (exponential) phase",
+        "Stationary phase",
+        "Lag phase"
       ],
       "correctAnswer": "B",
       "explanation": "The log or exponential phase of the sigmoid growth curve shows the maximum rate of cell division and growth. During this phase, both the progeny cells retain the ability to divide, leading to rapid increase in the number of cells.",
@@ -389,10 +389,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "The ability of a mature cell to revert to a meristematic state and form a new growing point is called:",
       "options": [
-        "B) Dedifferentiation",
-        "A) Differentiation",
-        "D) Development",
-        "C) Redifferentiation"
+        "Dedifferentiation",
+        "Differentiation",
+        "Development",
+        "Redifferentiation"
       ],
       "correctAnswer": "A",
       "explanation": "Dedifferentiation is the process by which living differentiated cells regain the capacity to divide under certain conditions. For example, formation of interfascicular cambium and cork cambium from fully differentiated parenchyma cells are examples of dedifferentiation.",
@@ -415,10 +415,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Auxin promotes which of the following?",
       "options": [
-        "C) Stomatal closure",
-        "B) Apical dominance",
-        "A) Abscission of leaves",
-        "D) Seed dormancy"
+        "Stomatal closure",
+        "Apical dominance",
+        "Abscission of leaves",
+        "Seed dormancy"
       ],
       "correctAnswer": "B",
       "explanation": "Auxin promotes apical dominance, which is the phenomenon where the main central stem grows more strongly than lateral branches. The apical bud produces auxin that inhibits the growth of lateral buds. Removal of the apical bud leads to lateral bud growth.",
@@ -441,10 +441,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which plant growth regulator helps in delaying senescence?",
       "options": [
-        "A) Auxin",
-        "C) Ethylene",
-        "B) Cytokinin",
-        "D) Abscisic acid"
+        "Auxin",
+        "Ethylene",
+        "Cytokinin",
+        "Abscisic acid"
       ],
       "correctAnswer": "C",
       "explanation": "Cytokinins delay senescence (ageing) of plant organs, particularly leaves. This property is called the Richmond-Lang effect. Cytokinins help in keeping the leaves green for a longer duration by promoting nutrient mobilization.",
@@ -467,10 +467,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Day-neutral plants are those which:",
       "options": [
-        "C) Flower irrespective of the photoperiod",
-        "B) Flower only in short day conditions",
-        "A) Flower only in long day conditions",
-        "D) Do not flower at all"
+        "Flower irrespective of the photoperiod",
+        "Flower only in short day conditions",
+        "Flower only in long day conditions",
+        "Do not flower at all"
       ],
       "correctAnswer": "A",
       "explanation": "Day-neutral plants (DNPs) flower irrespective of the duration of light or dark period. Their flowering is not affected by the photoperiod. Examples include tomato, cucumber, cotton, and sunflower.",
@@ -494,10 +494,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "The triple response in etiolated pea seedlings is caused by:",
       "options": [
-        "D) Cytokinin",
-        "C) Ethylene",
-        "B) Gibberellin",
-        "A) Auxin"
+        "Cytokinin",
+        "Ethylene",
+        "Gibberellin",
+        "Auxin"
       ],
       "correctAnswer": "B",
       "explanation": "Ethylene causes the triple response in etiolated pea seedlings, which includes: (1) slowing of stem elongation, (2) thickening of the stem (lateral swelling), and (3) horizontal growth habit (loss of geotropic sensitivity). This is a classic ethylene response.",
@@ -520,10 +520,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Seed dormancy in some species is due to the presence of:",
       "options": [
-        "D) Ethylene",
-        "B) Auxin",
-        "A) Gibberellic acid",
-        "C) Abscisic acid"
+        "Ethylene",
+        "Auxin",
+        "Gibberellic acid",
+        "Abscisic acid"
       ],
       "correctAnswer": "D",
       "explanation": "Abscisic acid (ABA) is responsible for seed dormancy. ABA inhibits seed germination and promotes dormancy. The ratio of ABA to gibberellic acid determines whether a seed will remain dormant or germinate. GA overcomes ABA-induced dormancy.",
@@ -547,10 +547,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "The naturally occurring cytokinin found in corn kernels and coconut milk is:",
       "options": [
-        "D) 2-iP",
-        "B) Zeatin",
-        "C) Benzyl aminopurine",
-        "A) Kinetin"
+        "2-iP",
+        "Zeatin",
+        "Benzyl aminopurine",
+        "Kinetin"
       ],
       "correctAnswer": "B",
       "explanation": "Zeatin is the most common naturally occurring cytokinin. It was first isolated from immature corn (Zea mays) kernels, hence the name zeatin. Natural cytokinins are synthesized in regions where rapid cell division occurs, such as root apices, developing shoot buds, and young fruits.",
@@ -573,10 +573,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following is NOT a condition required for plant growth?",
       "options": [
-        "B) Oxygen",
-        "C) Nutrients",
-        "A) Water",
-        "D) Darkness"
+        "Oxygen",
+        "Nutrients",
+        "Water",
+        "Darkness"
       ],
       "correctAnswer": "D",
       "explanation": "Plant growth requires water, oxygen, nutrients, and a suitable temperature. While some growth processes can occur in darkness (etiolation), darkness is not a requirement for plant growth. Light is generally beneficial for overall plant development though not strictly required for cell division.",
@@ -598,10 +598,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Parthenocarpic fruits can be produced by application of:",
       "options": [
-        "D) Cytokinins",
-        "A) ABA",
-        "B) Ethylene",
-        "C) Auxins"
+        "Cytokinins",
+        "ABA",
+        "Ethylene",
+        "Auxins"
       ],
       "correctAnswer": "D",
       "explanation": "Auxins induce parthenocarpy (formation of seedless fruits without fertilization). When applied to unpollinated pistils, auxins stimulate fruit development without seed formation. This is commercially used in tomatoes, peppers, and other crops.",
@@ -624,10 +624,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Gibberellins promote seed germination by activating which enzyme in barley seeds?",
       "options": [
-        "D) Cellulase",
-        "A) Lipase",
-        "B) Protease",
-        "C) Alpha-amylase"
+        "Cellulase",
+        "Lipase",
+        "Protease",
+        "Alpha-amylase"
       ],
       "correctAnswer": "D",
       "explanation": "Gibberellins promote seed germination by inducing the synthesis of hydrolytic enzymes, particularly alpha-amylase, in the aleurone layer of barley seeds. Alpha-amylase breaks down starch into sugars that provide energy for the growing embryo.",
@@ -651,10 +651,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following best describes development in plants?",
       "options": [
-        "C) The sum total of growth and differentiation",
-        "A) Only increase in size",
-        "D) Only cell division",
-        "B) Only differentiation of cells"
+        "The sum total of growth and differentiation",
+        "Only increase in size",
+        "Only cell division",
+        "Only differentiation of cells"
       ],
       "correctAnswer": "A",
       "explanation": "Development in plants refers to the sum total of both growth and differentiation. It includes all changes that an organism goes through during its life cycle from germination to senescence. Development is under the control of both intrinsic (genetic) and extrinsic (environmental) factors.",
@@ -677,10 +677,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "The phenomenon of photoperiodism was first characterised in:",
       "options": [
-        "D) Tomato",
-        "B) Tobacco (Maryland Mammoth)",
-        "C) Wheat",
-        "A) Rice"
+        "Tomato",
+        "Tobacco (Maryland Mammoth)",
+        "Wheat",
+        "Rice"
       ],
       "correctAnswer": "B",
       "explanation": "Photoperiodism was first characterised by Garner and Allard (1920) in tobacco (Maryland Mammoth variety) and soybean. They observed that Maryland Mammoth tobacco flowered only when the day length was below a critical threshold, making it a short day plant.",
@@ -704,10 +704,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "ABA promotes stomatal closure by:",
       "options": [
-        "D) Destroying guard cells",
-        "A) Promoting K+ influx into guard cells",
-        "B) Promoting K+ efflux from guard cells",
-        "C) Promoting water influx into guard cells"
+        "Destroying guard cells",
+        "Promoting K+ influx into guard cells",
+        "Promoting K+ efflux from guard cells",
+        "Promoting water influx into guard cells"
       ],
       "correctAnswer": "C",
       "explanation": "ABA promotes stomatal closure by causing efflux (outward movement) of potassium ions (K+) from guard cells. Loss of K+ leads to loss of turgor in guard cells, causing the stomata to close. This is an important adaptive response to water stress.",
@@ -731,10 +731,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "In the three phases of growth, the phase where cells show maximum metabolic activity and new cell wall formation is:",
       "options": [
-        "C) Phase of cell maturation (differentiation phase)",
-        "B) Phase of cell enlargement (elongation phase)",
-        "D) Stationary phase",
-        "A) Phase of cell division (meristematic phase)"
+        "Phase of cell maturation (differentiation phase)",
+        "Phase of cell enlargement (elongation phase)",
+        "Stationary phase",
+        "Phase of cell division (meristematic phase)"
       ],
       "correctAnswer": "D",
       "explanation": "The meristematic phase (phase of cell division) is characterized by cells that are rich in protoplasm with large conspicuous nuclei. The cells have high metabolic activity and possess thin cellulosic cell walls. They undergo rapid cell division.",
@@ -757,10 +757,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which plant growth regulator is used to promote rooting in stem cuttings?",
       "options": [
-        "D) ABA",
-        "B) IBA",
-        "C) Ethephon",
-        "A) GA3"
+        "ABA",
+        "IBA",
+        "Ethephon",
+        "GA3"
       ],
       "correctAnswer": "B",
       "explanation": "IBA (Indole butyric acid), an auxin, is widely used to promote adventitious root formation in stem cuttings. Auxins stimulate initiation of roots at the base of cuttings, which is crucial in horticulture and plant propagation.",
@@ -784,10 +784,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "In long day plants, flowering is promoted when the day length is:",
       "options": [
-        "C) Equal to 12 hours",
-        "D) Less than 8 hours",
-        "B) More than the critical day length",
-        "A) Less than the critical day length"
+        "Equal to 12 hours",
+        "Less than 8 hours",
+        "More than the critical day length",
+        "Less than the critical day length"
       ],
       "correctAnswer": "C",
       "explanation": "Long day plants (LDPs) flower when the day length exceeds the critical day length (i.e., when they receive light for a period longer than the critical threshold). Examples include wheat, barley, lettuce, and spinach. They need short dark periods.",
@@ -811,10 +811,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Ethephon is a commercial compound that releases:",
       "options": [
-        "C) Ethylene",
-        "A) Auxin",
-        "D) Cytokinin",
-        "B) Gibberellin"
+        "Ethylene",
+        "Auxin",
+        "Cytokinin",
+        "Gibberellin"
       ],
       "correctAnswer": "A",
       "explanation": "Ethephon (2-chloroethylphosphonic acid) is a commercially used compound that releases ethylene slowly when applied to plants. It is used to synchronize fruit ripening, promote female flower formation in cucumbers, and accelerate abscission.",
@@ -838,10 +838,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following correctly represents the phases of growth in the root tip from tip to base?",
       "options": [
-        "B) Maturation zone → Elongation zone → Meristematic zone",
-        "A) Elongation zone → Meristematic zone → Maturation zone",
-        "C) Meristematic zone → Elongation zone → Maturation zone",
-        "D) Meristematic zone → Maturation zone → Elongation zone"
+        "Maturation zone → Elongation zone → Meristematic zone",
+        "Elongation zone → Meristematic zone → Maturation zone",
+        "Meristematic zone → Elongation zone → Maturation zone",
+        "Meristematic zone → Maturation zone → Elongation zone"
       ],
       "correctAnswer": "C",
       "explanation": "From the root tip upward, the zones are arranged as: root cap, meristematic zone (actively dividing cells), elongation zone (cells increase in size), and maturation zone (cells differentiate and mature). This sequence reflects the developmental gradient in the root.",
@@ -865,10 +865,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following is an example of redifferentiation?",
       "options": [
-        "C) Cells produced by interfascicular cambium maturing into secondary xylem and phloem",
-        "D) Root apical meristem producing new cells",
-        "B) Meristematic cells forming tracheary elements",
-        "A) Parenchyma cells forming interfascicular cambium"
+        "Cells produced by interfascicular cambium maturing into secondary xylem and phloem",
+        "Root apical meristem producing new cells",
+        "Meristematic cells forming tracheary elements",
+        "Parenchyma cells forming interfascicular cambium"
       ],
       "correctAnswer": "A",
       "explanation": "Redifferentiation is the process by which dedifferentiated cells (like interfascicular cambium) lose their capacity to divide again and mature to perform specific functions, such as forming secondary xylem and phloem. This represents the final step: differentiation → dedifferentiation → redifferentiation.",
@@ -891,10 +891,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Gibberellins can delay senescence in:",
       "options": [
-        "A) Roots",
-        "C) Seeds",
-        "B) Fruits",
-        "D) Stem"
+        "Roots",
+        "Seeds",
+        "Fruits",
+        "Stem"
       ],
       "correctAnswer": "C",
       "explanation": "Gibberellins can delay senescence in fruits. GA treatment is commercially used to keep citrus fruits like oranges on the tree longer, extending their marketability. This is different from cytokinins which delay leaf senescence.",
@@ -917,10 +917,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Auxin was first isolated by F.W. Went from:",
       "options": [
-        "A) Root tips of maize",
-        "B) Tips of coleoptiles of oat seedlings",
-        "D) Leaf tips of rice",
-        "C) Shoot apices of pea"
+        "Root tips of maize",
+        "Tips of coleoptiles of oat seedlings",
+        "Leaf tips of rice",
+        "Shoot apices of pea"
       ],
       "correctAnswer": "B",
       "explanation": "F.W. Went first isolated auxin from tips of coleoptiles of oat (Avena sativa) seedlings using the Avena curvature test. He demonstrated that a chemical substance diffusing from the coleoptile tip into agar blocks could cause curvature when placed asymmetrically on decapitated coleoptiles.",
@@ -944,10 +944,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which growth regulator is synthesised in almost all parts of the plant, especially in senescent tissues?",
       "options": [
-        "B) Gibberellin",
-        "A) Auxin",
-        "D) Cytokinin",
-        "C) Ethylene"
+        "Gibberellin",
+        "Auxin",
+        "Cytokinin",
+        "Ethylene"
       ],
       "correctAnswer": "D",
       "explanation": "Ethylene is synthesised in almost all plant organs, but particularly in senescent and ripening tissues. It is produced in large quantities by tissues undergoing senescence, ripening fruits, and in response to wounding, flooding, and mechanical stimuli.",
@@ -970,10 +970,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Application of gibberellic acid can increase the length of grape stalks, resulting in:",
       "options": [
-        "D) Reduced sugar content",
-        "A) Smaller berries",
-        "B) Larger fruits with elongated stalks",
-        "C) More seeds per berry"
+        "Reduced sugar content",
+        "Smaller berries",
+        "Larger fruits with elongated stalks",
+        "More seeds per berry"
       ],
       "correctAnswer": "C",
       "explanation": "Gibberellins are applied to elongate grape stalks, which causes the fruits to spread apart, allowing for larger berries. GA application in grapes leads to elongation of the fruit stalk, increases the size of fruits, and improves the overall bunch shape.",
@@ -997,10 +997,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Plasticity in plant development refers to:",
       "options": [
-        "A) Ability to grow in any direction",
-        "C) Ability to regenerate lost parts",
-        "B) Following different developmental pathways in response to the environment",
-        "D) Maintaining a fixed developmental pattern"
+        "Ability to grow in any direction",
+        "Ability to regenerate lost parts",
+        "Following different developmental pathways in response to the environment",
+        "Maintaining a fixed developmental pattern"
       ],
       "correctAnswer": "C",
       "explanation": "Plasticity in plant development refers to the ability of plants to follow different pathways of development in response to different environmental conditions or phases of life. For example, heterophylly in cotton, coriander, and larkspur where juvenile and mature leaves differ in shape.",
@@ -1023,10 +1023,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Ethylene promotes which of the following in deep water rice?",
       "options": [
-        "A) Root growth",
-        "C) Internodal elongation to keep pace with rising water",
-        "D) Seed dormancy",
-        "B) Leaf abscission"
+        "Root growth",
+        "Internodal elongation to keep pace with rising water",
+        "Seed dormancy",
+        "Leaf abscission"
       ],
       "correctAnswer": "B",
       "explanation": "In deep water rice, ethylene promotes internodal elongation to keep the leaves above water level. Flooding leads to accumulation of ethylene in submerged parts, which along with GA promotes rapid internode elongation, an adaptive response to flooding.",
@@ -1049,10 +1049,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): Auxin causes apical dominance in plants.\nReason (R): High concentration of auxin in the apical bud inhibits the growth of lateral buds.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both assertion and reason are true, and the reason correctly explains the assertion. Auxin produced in the apical bud moves basipetally and at high concentrations inhibits the growth of lateral buds, resulting in apical dominance. Removal of the apex allows lateral buds to grow.",
@@ -1075,10 +1075,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): Abscisic acid is called a growth inhibitor.\nReason (R): ABA stimulates the closure of stomata in the epidermis.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both statements are true but the reason does not correctly explain the assertion. ABA is called a growth inhibitor because it inhibits plant growth, promotes dormancy, and causes abscission. Stomatal closure is one of its physiological effects but not the reason for its classification as a growth inhibitor.",
@@ -1102,10 +1102,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): Ethylene is the only gaseous plant growth regulator.\nReason (R): Ethylene is synthesized from the amino acid methionine.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both the assertion and reason are true. Ethylene is indeed the only gaseous PGR, and it is synthesized from the amino acid methionine. However, the biosynthetic pathway from methionine is not the reason why ethylene is the only gaseous PGR; that is simply due to its chemical structure.",
@@ -1129,10 +1129,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): Cytokinins promote cell division.\nReason (R): Cytokinins have an essential role in cytokinesis (cell division), especially cytoplasmic division.",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "Both statements are true and the reason correctly explains the assertion. Cytokinins were named for their ability to promote cytokinesis (cell division). They play an essential role in cell division, particularly in cytoplasmic division, in the presence of auxins.",
@@ -1156,10 +1156,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): Vernalization can replace the cold treatment requirement in biennials.\nReason (R): Vernalization involves treating the plant with gibberellic acid.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "The assertion is true as vernalization fulfills the cold requirement for flowering in biennials. However, the reason is false. Vernalization is the process of exposing plants to low temperature (not gibberellic acid), though GA application can sometimes substitute for vernalization in some plants.",
@@ -1183,10 +1183,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): In short day plants, it is actually the dark period that is critical for flowering.\nReason (R): A brief exposure to red light during the critical dark period prevents flowering in SDPs.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. SDPs actually require a critical uninterrupted dark period. If the dark period is interrupted even by a brief flash of red light, flowering is inhibited. This proves that the dark period (not the light period) is the critical factor.",
@@ -1211,10 +1211,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): Gibberellins cause bolting in rosette plants.\nReason (R): Gibberellins promote internode elongation causing the stem to grow rapidly just before flowering.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both statements are true and the reason correctly explains the assertion. Bolting is the rapid elongation of internodes in rosette plants (like cabbage) just before flowering. Gibberellins promote this internode elongation, causing the condensed rosette to bolt into an elongated stem.",
@@ -1238,10 +1238,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): Dedifferentiated cells can further lose the capacity to divide and become differentiated again.\nReason (R): This process of becoming differentiated again is called redifferentiation.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both statements are true. Dedifferentiated cells (like interfascicular cambium) can lose the capacity to divide and become mature/specialized again (e.g., forming secondary xylem and phloem). This process is correctly called redifferentiation, as stated in the reason.",
@@ -1265,10 +1265,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): Auxin shows polar transport in plants.\nReason (R): Auxin moves basipetally (from apex to base) in stems and acropetally (from base to apex) in roots.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both statements are true and the reason explains the assertion. Auxin transport is polar (unidirectional). In stems, it is basipetal (downward from shoot tip), and in roots, it is acropetal (towards root tip). This polar transport is unique among plant hormones.",
@@ -1293,10 +1293,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): Ethylene promotes senescence and abscission of plant organs.\nReason (R): Ethylene is a gaseous hormone that inhibits fruit ripening.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "D",
       "explanation": "The assertion is true because ethylene does promote senescence and abscission of plant organs like leaves and flowers. However, the reason is false because ethylene promotes (not inhibits) fruit ripening. Ethylene is the primary hormone responsible for fruit ripening.",
@@ -1321,10 +1321,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): Plant growth is generally indeterminate.\nReason (R): Plants retain the capacity for unlimited growth throughout their life because of meristems.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason correctly explains the assertion. Plant growth is indeterminate because they retain meristems (regions of actively dividing cells) throughout their life. These meristems (apical, lateral, intercalary) allow continuous growth, unlike animals where growth is determinate.",
@@ -1348,10 +1348,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): GA3 is used to speed up the malting process in brewing industry.\nReason (R): GA3 stimulates the production of alpha-amylase in barley seeds.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both statements are true and the reason correctly explains the assertion. GA3 stimulates the aleurone layer of barley seeds to produce alpha-amylase, which breaks down starch into maltose. This speeds up the malting process, which is commercially important in the brewing industry.",
@@ -1376,10 +1376,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): Kinetin is not a natural cytokinin.\nReason (R): Kinetin was isolated from autoclaved herring sperm DNA and is a degradation product of DNA.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. Kinetin is not a natural cytokinin; it was discovered as a degradation product of autoclaved herring sperm DNA by Miller et al. It does not occur naturally in plants. Zeatin is the first naturally occurring cytokinin discovered.",
@@ -1403,10 +1403,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Assertion (A): Heterophylly in aquatic plants like buttercup is due to the environment.\nReason (R): In buttercup, leaves that develop underwater are finely dissected while leaves above water are broad.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. In buttercup (Ranunculus), heterophylly is due to the environment. Submerged leaves are highly dissected while aerial leaves are broad lobed. This is because the same genotype responds differently to different environmental conditions (plasticity).",
@@ -1431,10 +1431,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following statements about auxins is/are correct?\n(i) Auxins help in initiating rooting in stem cuttings\n(ii) Auxins promote flowering\n(iii) Auxins help to prevent fruit and leaf drop at early stages\n(iv) Auxins promote apical dominance",
       "options": [
-        "C) (ii), (iii) and (iv) only",
-        "A) (i), (ii) and (iii) only",
-        "B) (i), (iii) and (iv) only",
-        "D) All of the above"
+        "(ii), (iii) and (iv) only",
+        "(i), (ii) and (iii) only",
+        "(i), (iii) and (iv) only",
+        "All of the above"
       ],
       "correctAnswer": "C",
       "explanation": "Statements (i), (iii), and (iv) are correct. Auxins initiate rooting in stem cuttings, prevent premature fruit and leaf drop (abscission) at early stages, and promote apical dominance. Auxins do not directly promote flowering; photoperiodism and vernalization are key factors for flowering.",
@@ -1457,10 +1457,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Consider the following statements about gibberellins:\n(i) They promote bolting in rosette plants\n(ii) They delay senescence in fruits\n(iii) They inhibit seed germination\n(iv) They increase the length of grape stalks\nWhich of the above are correct?",
       "options": [
-        "A) (i), (ii) and (iv) only",
-        "C) (i) and (iv) only",
-        "B) (i), (iii) and (iv) only",
-        "D) (ii), (iii) and (iv) only"
+        "(i), (ii) and (iv) only",
+        "(i) and (iv) only",
+        "(i), (iii) and (iv) only",
+        "(ii), (iii) and (iv) only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), and (iv) are correct. Gibberellins promote bolting in rosette plants, delay senescence in fruits, and increase grape stalk length. Statement (iii) is incorrect because gibberellins promote (not inhibit) seed germination by activating alpha-amylase.",
@@ -1483,10 +1483,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Read the following statements about ethylene:\n(i) It is the only gaseous PGR\n(ii) It promotes fruit ripening\n(iii) It promotes root growth and root hair formation\n(iv) It is used to initiate flowering in pineapple\nWhich of the above statements are correct?",
       "options": [
-        "A) (i) and (ii) only",
-        "D) (i), (ii) and (iv) only",
-        "C) (i), (ii), (iii) and (iv)",
-        "B) (i), (ii) and (iii) only"
+        "(i) and (ii) only",
+        "(i), (ii) and (iv) only",
+        "(i), (ii), (iii) and (iv)",
+        "(i), (ii) and (iii) only"
       ],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. Ethylene is the only gaseous PGR, promotes fruit ripening, promotes root growth and root hair formation (at low concentrations), and is used to initiate flowering in pineapple. It also enhances senescence of leaves and flowers.",
@@ -1510,10 +1510,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following statements regarding ABA are correct?\n(i) ABA inhibits seed germination\n(ii) ABA promotes stomatal closure\n(iii) ABA stimulates seed dormancy\n(iv) ABA promotes leaf senescence",
       "options": [
-        "A) (i), (ii) and (iii) only",
-        "D) (ii) and (iii) only",
-        "C) (i), (ii), (iii) and (iv)",
-        "B) (i) and (ii) only"
+        "(i), (ii) and (iii) only",
+        "(ii) and (iii) only",
+        "(i), (ii), (iii) and (iv)",
+        "(i) and (ii) only"
       ],
       "correctAnswer": "C",
       "explanation": "All four statements are correct. ABA inhibits seed germination, promotes stomatal closure (during water stress by causing K+ efflux), stimulates seed dormancy, and promotes leaf senescence. ABA acts antagonistically to gibberellins in many of these responses.",
@@ -1536,10 +1536,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Consider the following statements about photoperiodism:\n(i) Tomato is a day-neutral plant\n(ii) Rice is a short day plant\n(iii) Wheat is a long day plant\n(iv) Sugarcane is a long day plant\nWhich of the above are correct?",
       "options": [
-        "C) (i), (iii) and (iv) only",
-        "A) (i), (ii) and (iii) only",
-        "D) All of the above",
-        "B) (i) and (ii) only"
+        "(i), (iii) and (iv) only",
+        "(i), (ii) and (iii) only",
+        "All of the above",
+        "(i) and (ii) only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements (i), (ii), and (iii) are correct. Tomato is a day-neutral plant, rice is a short day plant, and wheat is a long day plant. Statement (iv) is incorrect because sugarcane is a short day plant, not a long day plant.",
@@ -1564,10 +1564,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following statements about plant growth is/are INCORRECT?\n(i) Growth is always irreversible\n(ii) Growth can be measured by increase in fresh weight\n(iii) Growth in plants is indeterminate due to presence of meristems\n(iv) Conditions like water, oxygen and nutrients are essential for growth",
       "options": [
-        "B) (ii) only",
-        "C) (i) and (ii)",
-        "D) None of the above",
-        "A) (i) only"
+        "(ii) only",
+        "(i) and (ii)",
+        "None of the above",
+        "(i) only"
       ],
       "correctAnswer": "B",
       "explanation": "Statement (i) is partially incorrect because while growth is generally permanent and irreversible, some aspects like turgor-driven cell expansion can be reversible. Statement (ii) is not fully correct because fresh weight can change with water absorption, so dry weight is a more accurate measure. Statements (iii) and (iv) are correct.",
@@ -1590,10 +1590,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Consider the following statements about differentiation:\n(i) It is the process by which cells derived from root and shoot apical meristems mature\n(ii) The first formed primary xylem elements are tracheids with thick walls\n(iii) Cells of the meristematic region lose the ability to divide as they differentiate\n(iv) A differentiated cell has a thin primary cell wall",
       "options": [
-        "C) (i) and (ii) only",
-        "D) All of the above",
-        "A) (i) and (iii) only",
-        "B) (i), (iii) and (iv) only"
+        "(i) and (ii) only",
+        "All of the above",
+        "(i) and (iii) only",
+        "(i), (iii) and (iv) only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements (i) and (iii) are correct. Differentiation involves maturation of cells from meristems, and differentiating cells lose their ability to divide. Statement (ii) is incorrect because first formed (protoxylem) tracheary elements have annular/spiral thickenings, not uniformly thick walls. Statement (iv) is incorrect as differentiated cells can have thick secondary walls.",
@@ -1617,10 +1617,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Read the following statements about cytokinins:\n(i) They help in delaying senescence\n(ii) They promote nutrient mobilization\n(iii) Natural cytokinins are synthesized in root apices\n(iv) They help in stomatal opening in some species\nSelect the correct option:",
       "options": [
-        "C) (i), (ii), (iii) and (iv)",
-        "A) (i) and (ii) only",
-        "B) (i), (ii) and (iii) only",
-        "D) (i) and (iii) only"
+        "(i), (ii), (iii) and (iv)",
+        "(i) and (ii) only",
+        "(i), (ii) and (iii) only",
+        "(i) and (iii) only"
       ],
       "correctAnswer": "A",
       "explanation": "All four statements are correct. Cytokinins delay senescence (Richmond-Lang effect), promote nutrient mobilization towards the site of application, are synthesized in root apices and rapidly dividing tissues, and help in stomatal opening in some species.",
@@ -1644,10 +1644,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Consider the following statements:\n(i) Auxin and gibberellin are growth promoters\n(ii) ABA is the only growth inhibitor among PGRs\n(iii) Ethylene can act both as growth promoter and inhibitor\n(iv) Cytokinins always promote growth\nWhich of the above are correct?",
       "options": [
-        "C) (i) and (iv) only",
-        "B) (i), (ii) and (iii) only",
-        "A) (i) and (iii) only",
-        "D) All of the above"
+        "(i) and (iv) only",
+        "(i), (ii) and (iii) only",
+        "(i) and (iii) only",
+        "All of the above"
       ],
       "correctAnswer": "C",
       "explanation": "Statements (i) and (iii) are correct. Auxin and GA are primarily growth promoters. Statement (ii) is incorrect because ethylene can also inhibit growth. Statement (iv) is incorrect because cytokinins can have inhibitory effects too. Ethylene has dual roles - it promotes fruit ripening and root growth but inhibits stem elongation.",
@@ -1671,10 +1671,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following statements regarding seed dormancy are correct?\n(i) ABA promotes seed dormancy\n(ii) Gibberellic acid can break seed dormancy\n(iii) Seed coat impermeability can cause dormancy\n(iv) All seeds exhibit dormancy",
       "options": [
-        "C) (i), (ii), (iii) and (iv)",
-        "D) (ii) and (iii) only",
-        "B) (i) and (ii) only",
-        "A) (i), (ii) and (iii) only"
+        "(i), (ii), (iii) and (iv)",
+        "(ii) and (iii) only",
+        "(i) and (ii) only",
+        "(i), (ii) and (iii) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iii) are correct. ABA promotes dormancy, GA can break dormancy by promoting germination, and seed coat impermeability is one cause of dormancy. Statement (iv) is incorrect because not all seeds exhibit dormancy; many germinate immediately under favorable conditions.",
@@ -1698,10 +1698,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Consider the following statements about vernalization:\n(i) It refers to promotion of flowering by low temperature\n(ii) It can be replaced by gibberellin treatment in some plants\n(iii) Winter wheat requires vernalization\n(iv) The site of perception of vernalization is the apical meristem",
       "options": [
-        "C) (i), (ii), (iii) and (iv)",
-        "B) (i) and (iii) only",
-        "D) (i), (ii) and (iv) only",
-        "A) (i), (ii) and (iii) only"
+        "(i), (ii), (iii) and (iv)",
+        "(i) and (iii) only",
+        "(i), (ii) and (iv) only",
+        "(i), (ii) and (iii) only"
       ],
       "correctAnswer": "A",
       "explanation": "All four statements are correct. Vernalization is the promotion of flowering by cold treatment, GA can substitute for cold in some species, winter wheat needs vernalization to flower in spring, and the shoot apical meristem is the site that perceives the cold stimulus.",
@@ -1725,10 +1725,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following statements about growth measurement are correct?\n(i) Growth can be measured by increase in cell number\n(ii) Growth can be measured by increase in length or area\n(iii) Increase in fresh weight is the most accurate parameter\n(iv) Dry weight is a more reliable measure than fresh weight",
       "options": [
-        "C) (i), (ii) and (iii) only",
-        "D) All of the above",
-        "B) (i) and (ii) only",
-        "A) (i), (ii) and (iv) only"
+        "(i), (ii) and (iii) only",
+        "All of the above",
+        "(i) and (ii) only",
+        "(i), (ii) and (iv) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iv) are correct. Growth can be measured by increase in cell number, length, area, volume, or weight. Statement (iii) is incorrect because fresh weight fluctuates with water content and is not the most accurate parameter. Dry weight is a more reliable measure of growth.",
@@ -1752,10 +1752,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following statements about the interaction of PGRs is/are correct?\n(i) Auxin-cytokinin ratio determines root and shoot formation in tissue culture\n(ii) High auxin to cytokinin ratio promotes root formation\n(iii) High cytokinin to auxin ratio promotes shoot formation\n(iv) Equal ratio of auxin and cytokinin promotes callus formation",
       "options": [
-        "B) (i) only",
-        "D) (i) and (iv) only",
-        "A) (i), (ii) and (iii) only",
-        "C) (i), (ii), (iii) and (iv)"
+        "(i) only",
+        "(i) and (iv) only",
+        "(i), (ii) and (iii) only",
+        "(i), (ii), (iii) and (iv)"
       ],
       "correctAnswer": "D",
       "explanation": "All four statements are correct regarding auxin-cytokinin interaction in tissue culture. High auxin:cytokinin ratio favors root differentiation, high cytokinin:auxin ratio favors shoot differentiation, and roughly equal concentrations promote undifferentiated callus growth.",
@@ -1779,10 +1779,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Consider the following about the elongation phase of growth:\n(i) Cells increase in size\n(ii) New cell wall deposition occurs\n(iii) Cell vacuoles enlarge\n(iv) Cells are metabolically inactive\nWhich statements are correct?",
       "options": [
-        "C) (i), (ii), (iii) and (iv)",
-        "B) (i) and (iii) only",
-        "A) (i), (ii) and (iii) only",
-        "D) (ii) and (iv) only"
+        "(i), (ii), (iii) and (iv)",
+        "(i) and (iii) only",
+        "(i), (ii) and (iii) only",
+        "(ii) and (iv) only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements (i), (ii), and (iii) are correct. During the elongation phase, cells increase in size, new cell wall material is deposited, and cell vacuoles enlarge significantly. Statement (iv) is incorrect because cells in the elongation phase are metabolically very active.",
@@ -1806,10 +1806,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the following PGRs with their primary functions:\nColumn I: (P) Auxin (Q) Gibberellin (R) Cytokinin (S) ABA\nColumn II: (i) Bolting (ii) Apical dominance (iii) Seed dormancy (iv) Delay of senescence",
       "options": [
-        "B) P-i, Q-ii, R-iii, S-iv",
-        "D) P-ii, Q-iv, R-i, S-iii",
-        "C) P-iv, Q-iii, R-ii, S-i",
-        "A) P-ii, Q-i, R-iv, S-iii"
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iv, Q-iii, R-ii, S-i",
+        "P-ii, Q-i, R-iv, S-iii"
       ],
       "correctAnswer": "D",
       "explanation": "Auxin (P) promotes apical dominance (ii). Gibberellin (Q) causes bolting in rosette plants (i). Cytokinin (R) delays senescence (iv) - the Richmond-Lang effect. ABA (S) promotes seed dormancy (iii). These are the primary/characteristic functions of each PGR.",
@@ -1835,10 +1835,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the following discoveries with the scientists:\nColumn I: (P) Auxin isolation (Q) Bakanae disease-gibberellin link (R) Photoperiodism (S) Kinetin\nColumn II: (i) Miller et al. (ii) Garner and Allard (iii) F.W. Went (iv) E. Kurosawa",
       "options": [
-        "C) P-ii, Q-i, R-iv, S-iii",
-        "D) P-i, Q-ii, R-iii, S-iv",
-        "B) P-iv, Q-iii, R-i, S-ii",
-        "A) P-iii, Q-iv, R-ii, S-i"
+        "P-ii, Q-i, R-iv, S-iii",
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-iv, Q-iii, R-i, S-ii",
+        "P-iii, Q-iv, R-ii, S-i"
       ],
       "correctAnswer": "D",
       "explanation": "Auxin was isolated by F.W. Went (iii) from oat coleoptile tips. E. Kurosawa (iv) linked the bakanae disease in rice to Gibberella fujikuroi. Garner and Allard (ii) discovered photoperiodism. Miller et al. (i) discovered kinetin from autoclaved herring sperm DNA.",
@@ -1863,10 +1863,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the following plants with their photoperiodic classification:\nColumn I: (P) Tobacco (Q) Wheat (R) Tomato (S) Rice\nColumn II: (i) Long day plant (ii) Short day plant (iii) Day-neutral plant",
       "options": [
-        "D) P-ii, Q-iii, R-i, S-ii",
-        "B) P-i, Q-ii, R-iii, S-i",
-        "A) P-ii, Q-i, R-iii, S-ii",
-        "C) P-iii, Q-ii, R-i, S-iii"
+        "P-ii, Q-iii, R-i, S-ii",
+        "P-i, Q-ii, R-iii, S-i",
+        "P-ii, Q-i, R-iii, S-ii",
+        "P-iii, Q-ii, R-i, S-iii"
       ],
       "correctAnswer": "C",
       "explanation": "Tobacco (P) is a short day plant (ii) - Maryland Mammoth variety was used to discover photoperiodism. Wheat (Q) is a long day plant (i). Tomato (R) is a day-neutral plant (iii). Rice (S) is a short day plant (ii).",
@@ -1891,10 +1891,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the following PGR applications with their effects:\nColumn I: (P) 2,4-D (Q) Ethephon (R) GA3 on grapes (S) Auxin on unpollinated pistil\nColumn II: (i) Fruit ripening (ii) Herbicide (iii) Parthenocarpy (iv) Elongated stalks and larger fruits",
       "options": [
-        "C) P-iii, Q-iv, R-i, S-ii",
-        "B) P-i, Q-ii, R-iii, S-iv",
-        "D) P-iv, Q-iii, R-ii, S-i",
-        "A) P-ii, Q-i, R-iv, S-iii"
+        "P-iii, Q-iv, R-i, S-ii",
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-iv, Q-iii, R-ii, S-i",
+        "P-ii, Q-i, R-iv, S-iii"
       ],
       "correctAnswer": "D",
       "explanation": "2,4-D (P) is used as a herbicide (ii) to kill dicot weeds. Ethephon (Q) releases ethylene to promote fruit ripening (i). GA3 on grapes (R) elongates stalks producing larger fruits (iv). Auxin on unpollinated pistils (S) induces parthenocarpy (iii) - seedless fruit production.",
@@ -1919,10 +1919,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the growth phases with their characteristics:\nColumn I: (P) Meristematic phase (Q) Elongation phase (R) Maturation phase\nColumn II: (i) Cells attain maximum size with thick walls (ii) Cells are rich in protoplasm with thin walls (iii) Cells show increased vacuolation and enlargement",
       "options": [
-        "A) P-ii, Q-iii, R-i",
-        "C) P-i, Q-ii, R-iii",
-        "B) P-iii, Q-i, R-ii",
-        "D) P-ii, Q-i, R-iii"
+        "P-ii, Q-iii, R-i",
+        "P-i, Q-ii, R-iii",
+        "P-iii, Q-i, R-ii",
+        "P-ii, Q-i, R-iii"
       ],
       "correctAnswer": "A",
       "explanation": "Meristematic phase (P) cells are rich in protoplasm, have large nuclei, and thin cellulosic cell walls (ii). Elongation phase (Q) cells show increased vacuolation and cell enlargement (iii). Maturation phase (R) cells attain maximum size and develop thick walls with specific modifications (i).",
@@ -1947,10 +1947,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the following terms with their correct definitions:\nColumn I: (P) Differentiation (Q) Dedifferentiation (R) Redifferentiation (S) Development\nColumn II: (i) Mature cells regaining ability to divide (ii) Sum total of growth and differentiation (iii) Cells from meristems maturing to perform specific functions (iv) Dedifferentiated cells losing ability to divide and maturing again",
       "options": [
-        "B) P-i, Q-iii, R-ii, S-iv",
-        "D) P-ii, Q-iv, R-i, S-iii",
-        "C) P-iv, Q-ii, R-iii, S-i",
-        "A) P-iii, Q-i, R-iv, S-ii"
+        "P-i, Q-iii, R-ii, S-iv",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iv, Q-ii, R-iii, S-i",
+        "P-iii, Q-i, R-iv, S-ii"
       ],
       "correctAnswer": "D",
       "explanation": "Differentiation (P) is the process of meristematic cells maturing to perform specific functions (iii). Dedifferentiation (Q) is when mature cells regain the ability to divide (i). Redifferentiation (R) is when dedifferentiated cells lose dividing capacity and mature again (iv). Development (S) is the sum total of growth and differentiation (ii).",
@@ -1975,10 +1975,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the following hormones with their sites of synthesis:\nColumn I: (P) Auxin (Q) Cytokinin (R) Gibberellin (S) ABA\nColumn II: (i) Root apices (ii) Shoot apices and young leaves (iii) Young leaves near shoot apex (iv) Mature leaves, root caps, and seeds",
       "options": [
-        "A) P-ii, Q-i, R-iii, S-iv",
-        "D) P-iv, Q-iii, R-i, S-ii",
-        "B) P-i, Q-ii, R-iv, S-iii",
-        "C) P-iii, Q-iv, R-ii, S-i"
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-iv, Q-iii, R-i, S-ii",
+        "P-i, Q-ii, R-iv, S-iii",
+        "P-iii, Q-iv, R-ii, S-i"
       ],
       "correctAnswer": "A",
       "explanation": "Auxin (P) is primarily synthesized in shoot apices and young developing leaves (ii). Cytokinins (Q) are synthesized in root apices and rapidly dividing tissues (i). Gibberellins (R) are produced in young leaves near the shoot apex (iii). ABA (S) is synthesized in mature leaves, root caps, and seeds (iv).",
@@ -2003,10 +2003,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the following synthetic auxins with their applications:\nColumn I: (P) 2,4-D (Q) NAA (R) IBA (S) Ethephon\nColumn II: (i) Rooting in cuttings (ii) Weedicide (iii) Source of ethylene (iv) Prevention of premature fruit drop",
       "options": [
-        "D) P-iii, Q-i, R-iv, S-ii",
-        "A) P-ii, Q-iv, R-i, S-iii",
-        "B) P-i, Q-ii, R-iii, S-iv",
-        "C) P-iv, Q-iii, R-ii, S-i"
+        "P-iii, Q-i, R-iv, S-ii",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-iv, Q-iii, R-ii, S-i"
       ],
       "correctAnswer": "B",
       "explanation": "2,4-D (P) is used as a weedicide/herbicide (ii) to selectively kill dicot weeds. NAA (Q) is used to prevent premature fruit drop (iv). IBA (R) is used to promote rooting in stem cuttings (i). Ethephon (S) is a commercial source of ethylene (iii) used for fruit ripening.",
@@ -2032,10 +2032,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the following ethylene effects with their descriptions:\nColumn I: (P) Triple response (Q) Epinasty (R) Climacteric (S) Abscission\nColumn II: (i) Downward bending of leaves (ii) Slowed elongation, thickened stem, horizontal growth (iii) Burst of ethylene production during fruit ripening (iv) Shedding of leaves, fruits, and flowers",
       "options": [
-        "D) P-iv, Q-iii, R-ii, S-i",
-        "B) P-i, Q-ii, R-iv, S-iii",
-        "A) P-ii, Q-i, R-iii, S-iv",
-        "C) P-iii, Q-iv, R-i, S-ii"
+        "P-iv, Q-iii, R-ii, S-i",
+        "P-i, Q-ii, R-iv, S-iii",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-iii, Q-iv, R-i, S-ii"
       ],
       "correctAnswer": "C",
       "explanation": "Triple response (P) includes slowed stem elongation, stem thickening, and horizontal growth (ii). Epinasty (Q) is the downward bending/drooping of leaves (i). Climacteric (R) is the burst of ethylene production during fruit ripening (iii). Abscission (S) is the shedding of plant organs (iv).",
@@ -2060,10 +2060,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the following growth types with their mathematical expressions:\nColumn I: (P) Arithmetic growth (Q) Geometric growth (R) Sigmoid curve phases\nColumn II: (i) W1 = W0 e^rt (ii) Lt = L0 + rt (iii) Lag phase → Log phase → Stationary phase",
       "options": [
-        "B) P-i, Q-ii, R-iii",
-        "A) P-ii, Q-i, R-iii",
-        "C) P-iii, Q-ii, R-i",
-        "D) P-ii, Q-iii, R-i"
+        "P-i, Q-ii, R-iii",
+        "P-ii, Q-i, R-iii",
+        "P-iii, Q-ii, R-i",
+        "P-ii, Q-iii, R-i"
       ],
       "correctAnswer": "B",
       "explanation": "Arithmetic growth (P) is expressed as Lt = L0 + rt (ii) where growth increases linearly. Geometric growth (Q) is expressed as W1 = W0 e^rt (i) showing exponential increase. The sigmoid curve (R) has three phases: lag, log, and stationary (iii).",
@@ -2088,10 +2088,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the gibberellin effects with their targets:\nColumn I: (P) Bolting (Q) Alpha-amylase production (R) Stem elongation in dwarfs (S) Delayed senescence\nColumn II: (i) Genetically dwarf pea and corn (ii) Aleurone layer of barley (iii) Cabbage and beet (iv) Citrus fruits",
       "options": [
-        "D) P-iv, Q-i, R-ii, S-iii",
-        "A) P-iii, Q-ii, R-i, S-iv",
-        "C) P-ii, Q-iv, R-iii, S-i",
-        "B) P-i, Q-iii, R-iv, S-ii"
+        "P-iv, Q-i, R-ii, S-iii",
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-i, Q-iii, R-iv, S-ii"
       ],
       "correctAnswer": "B",
       "explanation": "Bolting (P) occurs in rosette plants like cabbage and beet (iii). Alpha-amylase production (Q) is stimulated in the aleurone layer of barley seeds (ii). Stem elongation (R) is promoted in genetically dwarf pea and corn varieties (i). GA delays senescence in citrus fruits (iv).",
@@ -2116,10 +2116,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the following PGRs with their chemical nature:\nColumn I: (P) Auxin (IAA) (Q) Gibberellin (R) Cytokinin (zeatin) (S) Ethylene\nColumn II: (i) Simple gaseous hydrocarbon (ii) Indole derivative (iii) Adenine derivative (iv) Terpenoid (diterpene)",
       "options": [
-        "A) P-ii, Q-iv, R-iii, S-i",
-        "B) P-iii, Q-i, R-iv, S-ii",
-        "C) P-iv, Q-ii, R-i, S-iii",
-        "D) P-i, Q-iii, R-ii, S-iv"
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-iii, Q-i, R-iv, S-ii",
+        "P-iv, Q-ii, R-i, S-iii",
+        "P-i, Q-iii, R-ii, S-iv"
       ],
       "correctAnswer": "A",
       "explanation": "IAA (P) is an indole derivative (ii). Gibberellin (Q) is a terpenoid/diterpene (iv). Zeatin (R), a natural cytokinin, is an adenine derivative (iii). Ethylene (S) is a simple gaseous hydrocarbon (i) with the formula C2H4.",
@@ -2144,10 +2144,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Match the following phenomena with the correct PGR involved:\nColumn I: (P) Richmond-Lang effect (Q) Bakanae disease (R) Avena curvature test (S) Weed control in cereal fields\nColumn II: (i) Auxin (ii) Gibberellin (iii) Cytokinin (iv) Synthetic auxin (2,4-D)",
       "options": [
-        "C) P-ii, Q-iv, R-iii, S-i",
-        "D) P-iv, Q-i, R-iv, S-ii",
-        "B) P-i, Q-iii, R-ii, S-iv",
-        "A) P-iii, Q-ii, R-i, S-iv"
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-iv, Q-i, R-iv, S-ii",
+        "P-i, Q-iii, R-ii, S-iv",
+        "P-iii, Q-ii, R-i, S-iv"
       ],
       "correctAnswer": "D",
       "explanation": "Richmond-Lang effect (P) is the delay of senescence caused by cytokinins (iii). Bakanae disease (Q) is caused by gibberellin-producing fungus Gibberella fujikuroi (ii). Avena curvature test (R) was used to discover auxin (i). Weed control in cereal fields (S) uses 2,4-D, a synthetic auxin (iv).",
@@ -2172,10 +2172,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "How many of the following are physiological effects of auxins?\n(a) Apical dominance\n(b) Parthenocarpy\n(c) Root initiation in cuttings\n(d) Bolting in rosette plants\n(e) Prevention of premature fruit and leaf drop\n(f) Promotion of female flowers in cucumbers",
       "options": [
-        "D) Six",
-        "A) Three",
-        "B) Four",
-        "C) Five"
+        "Six",
+        "Three",
+        "Four",
+        "Five"
       ],
       "correctAnswer": "C",
       "explanation": "Four statements are correct effects of auxins: (a) apical dominance, (b) parthenocarpy, (c) root initiation in cuttings, and (e) prevention of premature fruit and leaf drop. (d) Bolting is caused by gibberellins, not auxins. (f) Promotion of female flowers in cucumbers is an effect of ethylene.",
@@ -2198,10 +2198,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "How many of the following are short day plants?\n(a) Rice\n(b) Tobacco\n(c) Wheat\n(d) Chrysanthemum\n(e) Tomato\n(f) Soybean\n(g) Spinach",
       "options": [
-        "C) Four",
-        "D) Five",
-        "A) Two",
-        "B) Three"
+        "Four",
+        "Five",
+        "Two",
+        "Three"
       ],
       "correctAnswer": "A",
       "explanation": "Four plants are short day plants: (a) Rice, (b) Tobacco (Maryland Mammoth), (d) Chrysanthemum, and (f) Soybean. (c) Wheat and (g) Spinach are long day plants. (e) Tomato is a day-neutral plant. SDPs need a photoperiod less than the critical day length.",
@@ -2225,10 +2225,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "How many of the following are effects of gibberellins?\n(a) Stem elongation in dwarf plants\n(b) Bolting\n(c) Induction of alpha-amylase in barley\n(d) Seed dormancy promotion\n(e) Delay of senescence in fruits\n(f) Increasing grape stalk length",
       "options": [
-        "D) Six",
-        "A) Three",
-        "C) Five",
-        "B) Four"
+        "Six",
+        "Three",
+        "Five",
+        "Four"
       ],
       "correctAnswer": "C",
       "explanation": "Five are effects of gibberellins: (a) stem elongation in dwarfs, (b) bolting, (c) alpha-amylase induction, (e) delay of senescence in fruits, and (f) increasing grape stalk length. (d) is incorrect because gibberellins break seed dormancy (not promote it); ABA promotes seed dormancy.",
@@ -2251,10 +2251,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "How many of the following are true about ethylene?\n(a) It is a gaseous hormone\n(b) It promotes fruit ripening\n(c) It causes triple response in pea seedlings\n(d) It promotes female flowers in cucumbers\n(e) It inhibits root growth\n(f) It promotes abscission\n(g) It promotes internode elongation in deep water rice",
       "options": [
-        "B) Five",
-        "C) Six",
-        "A) Four",
-        "D) Seven"
+        "Five",
+        "Six",
+        "Four",
+        "Seven"
       ],
       "correctAnswer": "B",
       "explanation": "Six statements are true: (a) ethylene is gaseous, (b) promotes fruit ripening, (c) causes triple response, (d) promotes female flowers in cucumbers, (f) promotes abscission, and (g) promotes internode elongation in deep water rice. (e) is incorrect because ethylene promotes root growth and root hair formation at low concentrations, not inhibits it.",
@@ -2277,10 +2277,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "How many of the following conditions are essential for plant growth?\n(a) Water\n(b) Oxygen\n(c) Nutrients\n(d) Suitable temperature\n(e) Light\n(f) Gravity",
       "options": [
-        "B) Four",
-        "A) Three",
-        "D) Six",
-        "C) Five"
+        "Four",
+        "Three",
+        "Six",
+        "Five"
       ],
       "correctAnswer": "A",
       "explanation": "Four conditions are essential for growth: (a) water, (b) oxygen, (c) nutrients, and (d) suitable temperature. (e) Light is not essential for growth itself (plants can grow in dark - etiolation), though it is needed for photosynthesis. (f) Gravity influences direction of growth but is not essential for growth to occur.",
@@ -2303,10 +2303,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "How many of the following are naturally occurring plant growth regulators?\n(a) IAA\n(b) IBA\n(c) 2,4-D\n(d) Zeatin\n(e) Kinetin\n(f) GA3\n(g) NAA\n(h) Ethylene",
       "options": [
-        "C) Five",
-        "D) Six",
-        "A) Three",
-        "B) Four"
+        "Five",
+        "Six",
+        "Three",
+        "Four"
       ],
       "correctAnswer": "A",
       "explanation": "Five are naturally occurring: (a) IAA (the primary natural auxin), (b) IBA (natural auxin), (d) Zeatin (natural cytokinin from corn), (f) GA3 (natural gibberellin), and (h) Ethylene (gaseous PGR). (c) 2,4-D is a synthetic auxin, (e) Kinetin is a degradation product of DNA (not natural in plants), and (g) NAA is a synthetic auxin.",
@@ -2330,10 +2330,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "How many of the following are effects of ABA (Abscisic acid)?\n(a) Promotes stomatal closure\n(b) Promotes seed dormancy\n(c) Inhibits seed germination\n(d) Acts as stress hormone\n(e) Promotes stem elongation\n(f) Promotes leaf senescence",
       "options": [
-        "B) Four",
-        "A) Three",
-        "D) Six",
-        "C) Five"
+        "Four",
+        "Three",
+        "Six",
+        "Five"
       ],
       "correctAnswer": "D",
       "explanation": "Five are correct effects of ABA: (a) promotes stomatal closure via K+ efflux, (b) promotes seed dormancy, (c) inhibits seed germination, (d) acts as stress hormone increasing stress tolerance, and (f) promotes leaf senescence. (e) is incorrect because ABA inhibits growth rather than promoting stem elongation.",
@@ -2356,10 +2356,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "How many of the following are examples of dedifferentiation?\n(a) Formation of interfascicular cambium from parenchyma\n(b) Formation of cork cambium from cortical cells\n(c) Formation of tracheids from procambium\n(d) Wound healing callus formation\n(e) Formation of secondary xylem from vascular cambium",
       "options": [
-        "A) Two",
-        "B) Three",
-        "C) Four",
-        "D) Five"
+        "Two",
+        "Three",
+        "Four",
+        "Five"
       ],
       "correctAnswer": "B",
       "explanation": "Three are examples of dedifferentiation: (a) interfascicular cambium from parenchyma, (b) cork cambium from cortical cells, and (d) wound callus formation. (c) Formation of tracheids from procambium is differentiation (not dedifferentiation). (e) Formation of secondary xylem from vascular cambium is redifferentiation.",
@@ -2383,10 +2383,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following phases of cell growth in the correct sequence from the root tip upward:\n(i) Maturation phase\n(ii) Elongation phase\n(iii) Root cap\n(iv) Meristematic phase",
       "options": [
-        "C) iii → ii → iv → i",
-        "A) iii → iv → ii → i",
-        "D) i → ii → iv → iii",
-        "B) iv → iii → ii → i"
+        "iii → ii → iv → i",
+        "iii → iv → ii → i",
+        "i → ii → iv → iii",
+        "iv → iii → ii → i"
       ],
       "correctAnswer": "B",
       "explanation": "From the tip of the root upward, the correct sequence is: Root cap (iii) at the very tip → Meristematic phase (iv) where active cell division occurs → Elongation phase (ii) where cells increase in size → Maturation phase (i) where cells differentiate and mature.",
@@ -2409,10 +2409,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following events in the correct sequence during seed germination promoted by gibberellin:\n(i) Starch hydrolysis into sugars\n(ii) GA diffuses to aleurone layer\n(iii) Embryo releases gibberellin\n(iv) Alpha-amylase synthesis is induced\n(v) Sugars provide energy for embryo growth",
       "options": [
-        "A) iii → ii → iv → i → v",
-        "B) ii → iii → i → iv → v",
-        "C) iii → iv → ii → i → v",
-        "D) i → ii → iii → iv → v"
+        "iii → ii → iv → i → v",
+        "ii → iii → i → iv → v",
+        "iii → iv → ii → i → v",
+        "i → ii → iii → iv → v"
       ],
       "correctAnswer": "A",
       "explanation": "The correct sequence is: The embryo releases gibberellin (iii) → GA diffuses to the aleurone layer (ii) → Alpha-amylase synthesis is induced in the aleurone layer (iv) → Starch in the endosperm is hydrolyzed into sugars (i) → Sugars provide energy for embryo growth (v).",
@@ -2436,10 +2436,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following phases of the sigmoid growth curve in the correct temporal sequence:\n(i) Stationary phase\n(ii) Exponential (log) phase\n(iii) Lag phase",
       "options": [
-        "B) ii → iii → i",
-        "D) iii → i → ii",
-        "C) i → ii → iii",
-        "A) iii → ii → i"
+        "ii → iii → i",
+        "iii → i → ii",
+        "i → ii → iii",
+        "iii → ii → i"
       ],
       "correctAnswer": "D",
       "explanation": "The sigmoid growth curve follows this temporal sequence: Lag phase (iii) where growth is slow as cells prepare for division → Exponential/Log phase (ii) where rapid growth occurs → Stationary phase (i) where growth slows and plateaus due to limited resources.",
@@ -2463,10 +2463,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following in the correct sequence of discovery of plant hormones:\n(i) Gibberellin\n(ii) Auxin\n(iii) Abscisic acid\n(iv) Ethylene\n(v) Cytokinin",
       "options": [
-        "D) iv → ii → i → v → iii",
-        "C) ii → iv → i → v → iii",
-        "A) ii → i → v → iv → iii",
-        "B) i → ii → iii → iv → v"
+        "iv → ii → i → v → iii",
+        "ii → iv → i → v → iii",
+        "ii → i → v → iv → iii",
+        "i → ii → iii → iv → v"
       ],
       "correctAnswer": "B",
       "explanation": "The correct chronological order of discovery is: Auxin (ii, 1928 by Went) → Ethylene (iv, 1934 effects described by Neljubow earlier, characterized in 1930s) → Gibberellin (i, 1926 Kurosawa observed effects, isolated in 1930s-1950s) → Cytokinin (v, 1955 kinetin by Miller) → Abscisic acid (iii, 1960s). Note: The exact order can vary by the criterion used (first observation vs isolation).",
@@ -2490,10 +2490,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following developmental events in correct order:\n(i) Redifferentiation\n(ii) Cell division in meristem\n(iii) Dedifferentiation\n(iv) Differentiation",
       "options": [
-        "D) iii → ii → i → iv",
-        "C) ii → iii → iv → i",
-        "B) iv → ii → iii → i",
-        "A) ii → iv → iii → i"
+        "iii → ii → i → iv",
+        "ii → iii → iv → i",
+        "iv → ii → iii → i",
+        "ii → iv → iii → i"
       ],
       "correctAnswer": "D",
       "explanation": "The correct sequence is: Cell division in meristem (ii) → Differentiation (iv) where cells mature and specialize → Dedifferentiation (iii) where some differentiated cells regain the ability to divide (e.g., forming cambium) → Redifferentiation (i) where dedifferentiated cells mature again into specialized cells.",
@@ -2517,10 +2517,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following steps in the correct sequence for ABA-mediated stomatal closure:\n(i) Guard cells lose turgor\n(ii) ABA binds to receptors on guard cells\n(iii) Water stress is detected\n(iv) K+ ions move out of guard cells\n(v) Stomata close",
       "options": [
-        "C) iii → iv → ii → i → v",
-        "D) ii → iv → iii → v → i",
-        "A) iii → ii → iv → i → v",
-        "B) ii → iii → iv → v → i"
+        "iii → iv → ii → i → v",
+        "ii → iv → iii → v → i",
+        "iii → ii → iv → i → v",
+        "ii → iii → iv → v → i"
       ],
       "correctAnswer": "C",
       "explanation": "The correct sequence is: Water stress is detected (iii) → ABA binds to receptors on guard cells (ii) → K+ ions move out of guard cells (iv) → Guard cells lose turgor due to water loss (i) → Stomata close (v). This is a key adaptive response to drought stress.",
@@ -2544,10 +2544,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following steps in the Avena curvature bioassay for auxin in correct sequence:\n(i) Curvature of the decapitated coleoptile observed\n(ii) Agar block placed asymmetrically on cut coleoptile stump\n(iii) Coleoptile tip placed on agar block\n(iv) Diffusion of chemical from tip into agar\n(v) Tip of coleoptile removed",
       "options": [
-        "C) v → iv → iii → ii → i",
-        "B) iii → v → iv → ii → i",
-        "A) v → iii → iv → ii → i",
-        "D) iii → iv → v → i → ii"
+        "v → iv → iii → ii → i",
+        "iii → v → iv → ii → i",
+        "v → iii → iv → ii → i",
+        "iii → iv → v → i → ii"
       ],
       "correctAnswer": "C",
       "explanation": "The correct sequence of the Went experiment is: Tip of coleoptile is removed (v) → Removed tip is placed on agar block (iii) → Chemical (auxin) diffuses from tip into agar (iv) → Agar block is placed asymmetrically on the decapitated coleoptile stump (ii) → Curvature is observed away from the agar block side (i).",

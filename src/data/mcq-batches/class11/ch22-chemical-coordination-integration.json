@@ -15,10 +15,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The pituitary gland is also called the:",
       "options": [
-        "B) Emergency gland",
-        "C) Mixed gland",
-        "D) Pineal gland",
-        "A) Master gland"
+        "Emergency gland",
+        "Mixed gland",
+        "Pineal gland",
+        "Master gland"
       ],
       "correctAnswer": "D",
       "explanation": "The pituitary gland is called the 'master gland' because it secretes hormones that regulate many other endocrine glands. It has two lobes: anterior (adenohypophysis) and posterior (neurohypophysis), and is controlled by the hypothalamus.",
@@ -40,10 +40,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Growth hormone (GH/somatotropin) is secreted by the:",
       "options": [
-        "C) Posterior pituitary",
-        "D) Adrenal cortex",
-        "A) Thyroid gland",
-        "B) Anterior pituitary"
+        "Posterior pituitary",
+        "Adrenal cortex",
+        "Thyroid gland",
+        "Anterior pituitary"
       ],
       "correctAnswer": "D",
       "explanation": "Growth hormone (GH/somatotropin) is secreted by the somatotroph cells of the anterior pituitary. It promotes growth of bones and tissues, stimulates protein synthesis, mobilizes fat, and increases blood glucose levels.",
@@ -65,10 +65,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Excess GH secretion in adults causes:",
       "options": [
-        "B) Gigantism",
-        "A) Dwarfism",
-        "C) Acromegaly",
-        "D) Cretinism"
+        "Gigantism",
+        "Dwarfism",
+        "Acromegaly",
+        "Cretinism"
       ],
       "correctAnswer": "C",
       "explanation": "Excess GH in adults (after closure of epiphyseal plates) causes acromegaly, characterized by enlargement of extremities (hands, feet, jaw), thickening of skin, and enlarged internal organs. In children (before growth plates close), excess GH causes gigantism.",
@@ -90,10 +90,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Oxytocin and vasopressin (ADH) are stored and released from the:",
       "options": [
-        "A) Anterior pituitary",
-        "D) Adrenal medulla",
-        "C) Hypothalamus",
-        "B) Posterior pituitary"
+        "Anterior pituitary",
+        "Adrenal medulla",
+        "Hypothalamus",
+        "Posterior pituitary"
       ],
       "correctAnswer": "D",
       "explanation": "Oxytocin and vasopressin (ADH) are synthesized in the hypothalamus but are stored and released from the posterior pituitary (neurohypophysis). They travel along the hypothalamo-hypophyseal tract to reach the posterior pituitary.",
@@ -116,10 +116,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Thyroid hormones T3 and T4 require which element for their synthesis?",
       "options": [
-        "A) Calcium",
-        "C) Iodine",
-        "D) Zinc",
-        "B) Iron"
+        "Calcium",
+        "Iodine",
+        "Zinc",
+        "Iron"
       ],
       "correctAnswer": "B",
       "explanation": "Iodine is essential for the synthesis of thyroid hormones T3 (triiodothyronine) and T4 (thyroxine). Iodine deficiency leads to hypothyroidism and goitre (enlargement of the thyroid gland due to overstimulation by TSH).",
@@ -141,10 +141,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Cretinism is caused by:",
       "options": [
-        "B) Deficiency of thyroid hormones in children",
-        "D) Deficiency of insulin",
-        "A) Excess thyroid hormones in children",
-        "C) Excess GH in children"
+        "Deficiency of thyroid hormones in children",
+        "Deficiency of insulin",
+        "Excess thyroid hormones in children",
+        "Excess GH in children"
       ],
       "correctAnswer": "A",
       "explanation": "Cretinism is caused by severe deficiency of thyroid hormones during infancy and childhood. It results in stunted physical and mental growth, mental retardation, short stature, and delayed sexual maturity. It is prevented by adequate iodine intake.",
@@ -166,10 +166,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Graves' disease (exophthalmic goitre) is caused by:",
       "options": [
-        "D) Hyperadrenalism",
-        "B) Hyperthyroidism",
-        "A) Hypothyroidism",
-        "C) Hypoparathyroidism"
+        "Hyperadrenalism",
+        "Hyperthyroidism",
+        "Hypothyroidism",
+        "Hypoparathyroidism"
       ],
       "correctAnswer": "B",
       "explanation": "Graves' disease is an autoimmune form of hyperthyroidism where antibodies mimic TSH and stimulate the thyroid gland. Symptoms include enlarged thyroid (goitre), bulging eyes (exophthalmos), weight loss, increased metabolic rate, nervousness, and rapid heartbeat.",
@@ -191,10 +191,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Parathyroid hormone (PTH) regulates:",
       "options": [
-        "B) Blood calcium levels",
-        "C) Blood sodium levels",
-        "D) Blood potassium levels",
-        "A) Blood glucose levels"
+        "Blood calcium levels",
+        "Blood sodium levels",
+        "Blood potassium levels",
+        "Blood glucose levels"
       ],
       "correctAnswer": "A",
       "explanation": "PTH (parathormone) is secreted by the parathyroid glands and increases blood calcium levels (hypercalcemic hormone). It stimulates osteoclasts to resorb bone, increases Ca2+ reabsorption in kidneys, and promotes activation of vitamin D for intestinal Ca2+ absorption.",
@@ -216,10 +216,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Calcitonin is secreted by the:",
       "options": [
-        "C) Adrenal cortex",
-        "A) Parathyroid gland",
-        "D) Pituitary gland",
-        "B) Thyroid gland (parafollicular/C cells)"
+        "Adrenal cortex",
+        "Parathyroid gland",
+        "Pituitary gland",
+        "Thyroid gland (parafollicular/C cells)"
       ],
       "correctAnswer": "D",
       "explanation": "Calcitonin (thyrocalcitonin) is secreted by the parafollicular cells (C cells) of the thyroid gland. It is a hypocalcemic hormone that lowers blood calcium by inhibiting osteoclast activity and promoting calcium deposition in bones. It is antagonistic to PTH.",
@@ -242,10 +242,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Insulin is secreted by the:",
       "options": [
-        "A) Alpha cells of islets of Langerhans",
-        "D) Acinar cells of pancreas",
-        "B) Beta cells of islets of Langerhans",
-        "C) Delta cells of islets of Langerhans"
+        "Alpha cells of islets of Langerhans",
+        "Acinar cells of pancreas",
+        "Beta cells of islets of Langerhans",
+        "Delta cells of islets of Langerhans"
       ],
       "correctAnswer": "C",
       "explanation": "Insulin is secreted by the beta (B) cells of the islets of Langerhans in the pancreas. It is a hypoglycemic hormone that lowers blood glucose by promoting glucose uptake by cells, glycogenesis, and lipogenesis. Insulin deficiency causes diabetes mellitus.",
@@ -267,10 +267,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Glucagon is secreted by the:",
       "options": [
-        "B) Alpha cells of islets of Langerhans",
-        "C) Liver cells",
-        "A) Beta cells",
-        "D) Adrenal cortex"
+        "Alpha cells of islets of Langerhans",
+        "Liver cells",
+        "Beta cells",
+        "Adrenal cortex"
       ],
       "correctAnswer": "A",
       "explanation": "Glucagon is secreted by the alpha (A) cells of the islets of Langerhans. It is a hyperglycemic hormone that raises blood glucose by promoting glycogenolysis (glycogen breakdown) and gluconeogenesis in the liver. It is antagonistic to insulin.",
@@ -292,10 +292,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The fight-or-flight hormones adrenaline and noradrenaline are secreted by the:",
       "options": [
-        "C) Thyroid gland",
-        "B) Adrenal medulla",
-        "D) Hypothalamus",
-        "A) Adrenal cortex"
+        "Thyroid gland",
+        "Adrenal medulla",
+        "Hypothalamus",
+        "Adrenal cortex"
       ],
       "correctAnswer": "B",
       "explanation": "Adrenaline (epinephrine) and noradrenaline (norepinephrine) are catecholamines secreted by the adrenal medulla. They prepare the body for emergency 'fight or flight' responses: increasing heart rate, blood pressure, blood glucose, dilating bronchioles, and diverting blood to skeletal muscles.",
@@ -317,10 +317,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Addison's disease is caused by:",
       "options": [
-        "A) Hypersecretion of adrenal cortical hormones",
-        "D) Excess thyroid hormones",
-        "C) Excess insulin",
-        "B) Hyposecretion of adrenal cortical hormones"
+        "Hypersecretion of adrenal cortical hormones",
+        "Excess thyroid hormones",
+        "Excess insulin",
+        "Hyposecretion of adrenal cortical hormones"
       ],
       "correctAnswer": "D",
       "explanation": "Addison's disease results from hyposecretion (deficiency) of adrenal cortical hormones, especially cortisol and aldosterone. Symptoms include weakness, fatigue, weight loss, low blood pressure, darkening of skin (hyperpigmentation), and salt craving.",
@@ -342,10 +342,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Cushing's syndrome is caused by:",
       "options": [
-        "B) Deficiency of cortisol",
-        "D) Deficiency of aldosterone",
-        "A) Excess cortisol",
-        "C) Excess insulin"
+        "Deficiency of cortisol",
+        "Deficiency of aldosterone",
+        "Excess cortisol",
+        "Excess insulin"
       ],
       "correctAnswer": "C",
       "explanation": "Cushing's syndrome results from chronic excess of cortisol (glucocorticoid). Symptoms include moon face, buffalo hump (fat pad on upper back), central obesity, thin skin, easy bruising, muscle weakness, high blood sugar, and hypertension.",
@@ -367,10 +367,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Melatonin is secreted by the:",
       "options": [
-        "B) Pineal gland",
-        "D) Adrenal cortex",
-        "A) Thymus",
-        "C) Thyroid"
+        "Pineal gland",
+        "Adrenal cortex",
+        "Thymus",
+        "Thyroid"
       ],
       "correctAnswer": "A",
       "explanation": "Melatonin is the primary hormone secreted by the pineal gland (pineal body/epiphysis cerebri). It regulates the sleep-wake cycle (circadian rhythm) and diurnal body rhythms. Melatonin secretion increases in darkness and decreases in light.",
@@ -392,10 +392,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The thymus gland secretes:",
       "options": [
-        "D) Insulin",
-        "A) Thyroxine",
-        "C) Melatonin",
-        "B) Thymosin"
+        "Insulin",
+        "Thyroxine",
+        "Melatonin",
+        "Thymosin"
       ],
       "correctAnswer": "D",
       "explanation": "The thymus gland secretes thymosin, which plays a critical role in the development and differentiation of T-lymphocytes (T cells) for cell-mediated immunity. The thymus is large in childhood and gradually degenerates (involutes) with age.",
@@ -417,10 +417,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The zona glomerulosa of the adrenal cortex secretes:",
       "options": [
-        "B) Aldosterone (mineralocorticoids)",
-        "D) Adrenaline",
-        "C) Androgens",
-        "A) Cortisol"
+        "Aldosterone (mineralocorticoids)",
+        "Adrenaline",
+        "Androgens",
+        "Cortisol"
       ],
       "correctAnswer": "A",
       "explanation": "The adrenal cortex has three zones: zona glomerulosa (outermost) secretes mineralocorticoids like aldosterone, zona fasciculata (middle) secretes glucocorticoids like cortisol, and zona reticularis (innermost) secretes small amounts of androgens.",
@@ -442,10 +442,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Diabetes mellitus (Type 1) is caused by:",
       "options": [
-        "C) Excess glucagon",
-        "A) Excess insulin",
-        "B) Destruction of beta cells leading to insulin deficiency",
-        "D) Excess cortisol"
+        "Excess glucagon",
+        "Excess insulin",
+        "Destruction of beta cells leading to insulin deficiency",
+        "Excess cortisol"
       ],
       "correctAnswer": "C",
       "explanation": "Type 1 diabetes mellitus is caused by autoimmune destruction of beta cells of the islets of Langerhans, leading to absolute insulin deficiency. Without insulin, cells cannot take up glucose, resulting in hyperglycemia, glycosuria, polyuria, polydipsia, and polyphagia.",
@@ -467,10 +467,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "TSH (Thyroid Stimulating Hormone) is secreted by the:",
       "options": [
-        "A) Thyroid gland",
-        "D) Posterior pituitary",
-        "B) Hypothalamus",
-        "C) Anterior pituitary"
+        "Thyroid gland",
+        "Posterior pituitary",
+        "Hypothalamus",
+        "Anterior pituitary"
       ],
       "correctAnswer": "D",
       "explanation": "TSH (thyrotropin) is secreted by the thyrotroph cells of the anterior pituitary. It stimulates the thyroid gland to produce and release T3 and T4. TSH secretion is regulated by TRH from the hypothalamus and negative feedback from thyroid hormones.",
@@ -492,10 +492,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Prolactin is secreted by the anterior pituitary and primarily stimulates:",
       "options": [
-        "C) Thyroid gland activity",
-        "B) Milk production in mammary glands",
-        "D) Adrenal cortex activity",
-        "A) Growth of bones"
+        "Thyroid gland activity",
+        "Milk production in mammary glands",
+        "Adrenal cortex activity",
+        "Growth of bones"
       ],
       "correctAnswer": "B",
       "explanation": "Prolactin (PRL/luteotropic hormone) is secreted by lactotroph cells of the anterior pituitary. It primarily stimulates mammary gland development and milk production (lactation) after childbirth. It also regulates gonadal function.",
@@ -517,10 +517,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Erythropoietin (EPO) is produced by the:",
       "options": [
-        "D) Spleen",
-        "B) Kidneys",
-        "C) Bone marrow",
-        "A) Liver"
+        "Spleen",
+        "Kidneys",
+        "Bone marrow",
+        "Liver"
       ],
       "correctAnswer": "B",
       "explanation": "Erythropoietin (EPO) is a hormone produced primarily by the kidneys (also small amounts by the liver) in response to low blood oxygen levels (hypoxia). It stimulates the bone marrow to produce more red blood cells (erythropoiesis).",
@@ -542,10 +542,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The hypothalamus releases hormones called:",
       "options": [
-        "D) Thyroid hormones",
-        "B) Releasing and inhibiting hormones",
-        "C) Growth hormones",
-        "A) Tropic hormones only"
+        "Thyroid hormones",
+        "Releasing and inhibiting hormones",
+        "Growth hormones",
+        "Tropic hormones only"
       ],
       "correctAnswer": "B",
       "explanation": "The hypothalamus produces releasing hormones (e.g., GnRH, TRH, CRH, GHRH) that stimulate the anterior pituitary and inhibiting hormones (e.g., somatostatin/GHIH, dopamine/PIH) that suppress anterior pituitary hormone release. This is the hypothalamic-hypophyseal axis.",
@@ -567,10 +567,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Hormones that act through intracellular receptors include:",
       "options": [
-        "A) Insulin and glucagon",
-        "D) FSH and LH",
-        "B) Steroid hormones and thyroid hormones",
-        "C) Adrenaline and noradrenaline"
+        "Insulin and glucagon",
+        "FSH and LH",
+        "Steroid hormones and thyroid hormones",
+        "Adrenaline and noradrenaline"
       ],
       "correctAnswer": "C",
       "explanation": "Steroid hormones (cortisol, aldosterone, sex hormones) and thyroid hormones (T3, T4) are lipid-soluble and can cross the cell membrane. They bind to intracellular receptors (typically nuclear receptors) to directly regulate gene expression. Water-soluble hormones use membrane surface receptors and second messengers.",
@@ -592,10 +592,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The second messenger in the action of many peptide hormones is:",
       "options": [
-        "A) Ca2+",
-        "B) cAMP (cyclic AMP)",
-        "C) ATP",
-        "D) GTP"
+        "Ca2+",
+        "cAMP (cyclic AMP)",
+        "ATP",
+        "GTP"
       ],
       "correctAnswer": "B",
       "explanation": "cAMP (cyclic adenosine monophosphate) is a common second messenger used by many water-soluble peptide hormones (e.g., adrenaline, glucagon, TSH, ACTH). The hormone binds to a membrane receptor, activating adenylyl cyclase, which converts ATP to cAMP, triggering a cascade of intracellular events.",
@@ -617,10 +617,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "ACTH (Adrenocorticotropic Hormone) is secreted by the:",
       "options": [
-        "C) Hypothalamus",
-        "B) Anterior pituitary",
-        "D) Posterior pituitary",
-        "A) Adrenal cortex"
+        "Hypothalamus",
+        "Anterior pituitary",
+        "Posterior pituitary",
+        "Adrenal cortex"
       ],
       "correctAnswer": "B",
       "explanation": "ACTH is secreted by corticotroph cells of the anterior pituitary under the influence of CRH (Corticotropin Releasing Hormone) from the hypothalamus. ACTH stimulates the adrenal cortex to secrete glucocorticoids (cortisol) and to a lesser extent, mineralocorticoids and androgens.",
@@ -642,10 +642,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Myxedema is caused by:",
       "options": [
-        "C) Hyperparathyroidism",
-        "A) Hyperthyroidism in adults",
-        "B) Hypothyroidism in adults",
-        "D) Excess GH in adults"
+        "Hyperparathyroidism",
+        "Hyperthyroidism in adults",
+        "Hypothyroidism in adults",
+        "Excess GH in adults"
       ],
       "correctAnswer": "C",
       "explanation": "Myxedema results from hypothyroidism (deficiency of thyroid hormones) in adults. Symptoms include weight gain, lethargy, cold intolerance, puffy face, dry skin, mental sluggishness, constipation, and bradycardia. In children, hypothyroidism causes cretinism.",
@@ -667,10 +667,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Simple goitre (endemic goitre) is caused by:",
       "options": [
-        "A) Excess iodine",
-        "C) Excess calcium",
-        "D) Vitamin D deficiency",
-        "B) Iodine deficiency"
+        "Excess iodine",
+        "Excess calcium",
+        "Vitamin D deficiency",
+        "Iodine deficiency"
       ],
       "correctAnswer": "D",
       "explanation": "Simple/endemic goitre is caused by dietary iodine deficiency. Without sufficient iodine, the thyroid cannot produce adequate T3/T4. Low thyroid hormones fail to provide negative feedback, so TSH remains elevated, continuously stimulating the thyroid to enlarge.",
@@ -692,10 +692,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The number of parathyroid glands in humans is:",
       "options": [
-        "C) Six",
-        "B) Four",
-        "A) Two",
-        "D) Eight"
+        "Six",
+        "Four",
+        "Two",
+        "Eight"
       ],
       "correctAnswer": "B",
       "explanation": "Humans have four parathyroid glands (two pairs), embedded on the posterior surface of the thyroid gland (one pair on each lobe). They secrete parathormone (PTH) which increases blood calcium levels.",
@@ -717,10 +717,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Cortisol (glucocorticoid) primarily:",
       "options": [
-        "B) Raises blood glucose, has anti-inflammatory effects",
-        "A) Lowers blood glucose",
-        "D) Promotes salt reabsorption",
-        "C) Regulates blood calcium"
+        "Raises blood glucose, has anti-inflammatory effects",
+        "Lowers blood glucose",
+        "Promotes salt reabsorption",
+        "Regulates blood calcium"
       ],
       "correctAnswer": "A",
       "explanation": "Cortisol is the main glucocorticoid from the zona fasciculata of the adrenal cortex. It raises blood glucose (gluconeogenesis), has anti-inflammatory and immunosuppressive effects, promotes protein catabolism, and helps the body cope with stress.",
@@ -742,10 +742,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Oxytocin stimulates:",
       "options": [
-        "A) Milk production",
-        "C) Growth of bones",
-        "B) Uterine contractions during labour and milk ejection",
-        "D) Sperm production"
+        "Milk production",
+        "Growth of bones",
+        "Uterine contractions during labour and milk ejection",
+        "Sperm production"
       ],
       "correctAnswer": "C",
       "explanation": "Oxytocin (released from posterior pituitary) stimulates strong uterine smooth muscle contractions during childbirth (labour) and milk ejection (let-down reflex) from mammary glands during breastfeeding. It does not produce milk (that is prolactin's role).",
@@ -767,10 +767,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "FSH and LH are collectively called:",
       "options": [
-        "B) Gonadotropins",
-        "D) Catecholamines",
-        "A) Thyroid hormones",
-        "C) Glucocorticoids"
+        "Gonadotropins",
+        "Catecholamines",
+        "Thyroid hormones",
+        "Glucocorticoids"
       ],
       "correctAnswer": "A",
       "explanation": "FSH (Follicle Stimulating Hormone) and LH (Luteinizing Hormone) are called gonadotropins because they act on the gonads (ovaries and testes). FSH stimulates follicle development/spermatogenesis. LH triggers ovulation and stimulates testosterone production.",
@@ -793,10 +793,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Somatostatin is secreted by the:",
       "options": [
-        "B) Only the pancreas",
-        "D) Only the anterior pituitary",
-        "C) Both hypothalamus and delta cells of pancreas",
-        "A) Only the hypothalamus"
+        "Only the pancreas",
+        "Only the anterior pituitary",
+        "Both hypothalamus and delta cells of pancreas",
+        "Only the hypothalamus"
       ],
       "correctAnswer": "C",
       "explanation": "Somatostatin is secreted by the hypothalamus (as GH inhibiting hormone/GHIH) and by the delta cells of the islets of Langerhans in the pancreas. In the hypothalamus, it inhibits GH and TSH release. In the pancreas, it inhibits both insulin and glucagon secretion.",
@@ -818,10 +818,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "The adrenal gland is also called the:",
       "options": [
-        "D) Pineal gland",
-        "A) Master gland",
-        "B) Emergency gland (gland of emergency)",
-        "C) Mixed gland"
+        "Pineal gland",
+        "Master gland",
+        "Emergency gland (gland of emergency)",
+        "Mixed gland"
       ],
       "correctAnswer": "C",
       "explanation": "The adrenal gland is called the 'gland of emergency' because the adrenal medulla secretes adrenaline and noradrenaline during emergency/stressful situations, preparing the body for 'fight or flight' responses.",
@@ -843,10 +843,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Negative feedback in the thyroid axis means:",
       "options": [
-        "C) T3/T4 stimulates more TRH release",
-        "B) High T3/T4 levels inhibit TSH and TRH secretion",
-        "D) TSH inhibits thyroid gland directly",
-        "A) TSH stimulates T3/T4 production"
+        "T3/T4 stimulates more TRH release",
+        "High T3/T4 levels inhibit TSH and TRH secretion",
+        "TSH inhibits thyroid gland directly",
+        "TSH stimulates T3/T4 production"
       ],
       "correctAnswer": "B",
       "explanation": "In negative feedback, high levels of T3 and T4 in the blood inhibit the secretion of TRH from the hypothalamus and TSH from the anterior pituitary. This prevents overproduction of thyroid hormones and maintains hormonal homeostasis.",
@@ -868,10 +868,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Testosterone is produced by:",
       "options": [
-        "B) Leydig cells (interstitial cells) of the testes",
-        "A) Sertoli cells",
-        "D) Adrenal cortex only",
-        "C) Ovarian follicle cells"
+        "Leydig cells (interstitial cells) of the testes",
+        "Sertoli cells",
+        "Adrenal cortex only",
+        "Ovarian follicle cells"
       ],
       "correctAnswer": "A",
       "explanation": "Testosterone, the primary male sex hormone (androgen), is produced by the Leydig cells (interstitial cells) of the testes under the influence of LH. It promotes development of male secondary sexual characteristics, spermatogenesis, and male reproductive organ growth.",
@@ -893,10 +893,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Estrogen is primarily produced by:",
       "options": [
-        "A) Testes",
-        "B) Adrenal medulla",
-        "C) Ovarian follicles",
-        "D) Corpus luteum only"
+        "Testes",
+        "Adrenal medulla",
+        "Ovarian follicles",
+        "Corpus luteum only"
       ],
       "correctAnswer": "C",
       "explanation": "Estrogen (estradiol) is primarily produced by the ovarian follicles (granulosa cells) under the influence of FSH. It promotes development of female secondary sexual characteristics, regulates the menstrual cycle, and maintains the female reproductive system.",
@@ -918,10 +918,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "MSH (Melanocyte Stimulating Hormone) is secreted by the:",
       "options": [
-        "A) Anterior pituitary (pars intermedia)",
-        "B) Posterior pituitary",
-        "C) Pineal gland",
-        "D) Skin melanocytes"
+        "Anterior pituitary (pars intermedia)",
+        "Posterior pituitary",
+        "Pineal gland",
+        "Skin melanocytes"
       ],
       "correctAnswer": "A",
       "explanation": "MSH is secreted by the pars intermedia of the anterior pituitary. It acts on melanocytes in the skin to regulate skin pigmentation/colouration. In mammals, MSH plays a role in melanin production and distribution.",
@@ -943,10 +943,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Atrial natriuretic factor (ANF) is secreted by the:",
       "options": [
-        "B) Atrial wall of the heart",
-        "A) Kidneys",
-        "D) Hypothalamus",
-        "C) Adrenal cortex"
+        "Atrial wall of the heart",
+        "Kidneys",
+        "Hypothalamus",
+        "Adrenal cortex"
       ],
       "correctAnswer": "A",
       "explanation": "ANF (also called ANP - atrial natriuretic peptide) is secreted by the atrial wall of the heart when blood pressure/volume increases. It causes vasodilation, inhibits NaCl reabsorption in the kidneys, and inhibits renin and aldosterone, resulting in decreased blood pressure.",
@@ -968,10 +968,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Assertion (A): The hypothalamus is called the 'master of the master gland'.\nReason (R): The hypothalamus controls the secretions of the pituitary gland through releasing and inhibiting hormones.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason correctly explains the assertion. The pituitary is the 'master gland' controlling other endocrine glands. The hypothalamus controls the pituitary via releasing/inhibiting hormones through the hypothalamo-hypophyseal portal system, hence it is the master of the master gland.",
@@ -994,10 +994,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Assertion (A): Insulin and glucagon have opposite effects on blood glucose.\nReason (R): Insulin lowers blood glucose while glucagon raises blood glucose.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. Insulin (from beta cells) lowers blood glucose by promoting cellular uptake and glycogenesis. Glucagon (from alpha cells) raises blood glucose by promoting glycogenolysis and gluconeogenesis. They are antagonistic hormones that maintain glucose homeostasis.",
@@ -1020,10 +1020,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Assertion (A): Iodine deficiency causes goitre.\nReason (R): Without iodine, the thyroid cannot produce T3 and T4, leading to sustained TSH stimulation and thyroid enlargement.",
       "options": [
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. Iodine is essential for T3/T4 synthesis. Without iodine, T3/T4 levels drop, removing negative feedback on TSH. Persistently elevated TSH causes the thyroid to enlarge (hypertrophy and hyperplasia), forming a goitre.",
@@ -1046,10 +1046,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Assertion (A): Steroid hormones act through intracellular receptors.\nReason (R): Steroid hormones are lipid-soluble and can cross the cell membrane.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. Being derived from cholesterol, steroid hormones are lipid-soluble and can freely diffuse across the cell membrane. They bind to intracellular receptors (usually in the cytoplasm or nucleus) that directly regulate gene expression.",
@@ -1071,10 +1071,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Assertion (A): PTH and calcitonin have antagonistic effects on blood calcium.\nReason (R): PTH increases blood Ca2+ while calcitonin decreases blood Ca2+.",
       "options": [
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. PTH (from parathyroid glands) is hypercalcemic - increases blood calcium by promoting bone resorption and renal reabsorption. Calcitonin (from thyroid C-cells) is hypocalcemic - decreases blood calcium by promoting bone deposition.",
@@ -1097,10 +1097,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Assertion (A): The thymus gland degenerates with age.\nReason (R): Thymosin production decreases in elderly individuals, leading to reduced immunity.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. The thymus is large and active in childhood but progressively involutes (shrinks) and is largely replaced by adipose tissue in adults. This reduces thymosin production and T-cell development, contributing to age-related decline in immune function.",
@@ -1123,10 +1123,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Assertion (A): Adrenaline is called the emergency hormone.\nReason (R): It is secreted during stress to prepare the body for fight or flight.",
       "options": [
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. Adrenaline (epinephrine) from the adrenal medulla is released during emergencies, causing increased heart rate, blood pressure, blood glucose, bronchodilation, and blood flow to muscles, preparing the body for immediate action.",
@@ -1149,10 +1149,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Assertion (A): Diabetes mellitus leads to glycosuria.\nReason (R): In diabetes mellitus, insulin deficiency causes hyperglycemia, exceeding the renal threshold for glucose reabsorption.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. Without adequate insulin, glucose accumulates in blood (hyperglycemia). When blood glucose exceeds the renal threshold (~180 mg/dL), the kidneys cannot reabsorb all filtered glucose, and excess appears in urine (glycosuria).",
@@ -1175,10 +1175,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Assertion (A): Peptide hormones use second messengers.\nReason (R): Peptide hormones cannot cross the cell membrane and bind to surface receptors.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. Peptide/protein hormones are water-soluble and cannot pass through the lipid bilayer. They bind to membrane receptors, activating second messengers like cAMP, IP3, and Ca2+ inside the cell to produce the hormonal response.",
@@ -1200,10 +1200,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Assertion (A): Aldosterone is called the salt-retaining hormone.\nReason (R): Aldosterone increases reabsorption of Na+ and water from the renal tubules.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. Aldosterone, the main mineralocorticoid from the adrenal cortex zona glomerulosa, acts on the DCT and collecting duct of nephrons to increase Na+ and water reabsorption (and K+ secretion), thereby maintaining blood pressure and electrolyte balance.",
@@ -1225,10 +1225,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Assertion (A): Progesterone is essential for maintaining pregnancy.\nReason (R): Progesterone is secreted by the corpus luteum and later by the placenta.",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. Progesterone prepares and maintains the endometrium for implantation, suppresses uterine contractions, and supports pregnancy. Initially produced by the corpus luteum (under LH), the placenta takes over production later in pregnancy.",
@@ -1250,10 +1250,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Assertion (A): Melatonin helps regulate the sleep-wake cycle.\nReason (R): Melatonin secretion is highest during the day.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) Both A and R are false",
-        "B) Both A and R are true but R is not the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are false",
+        "Both A and R are true but R is not the correct explanation of A"
       ],
       "correctAnswer": "A",
       "explanation": "The assertion is true; melatonin does regulate the circadian rhythm (sleep-wake cycle). The reason is false because melatonin secretion is highest during DARKNESS/NIGHT, not during the day. Light inhibits melatonin production by the pineal gland.",
@@ -1275,10 +1275,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Consider the following statements about the anterior pituitary:\n(i) It secretes GH, TSH, ACTH, FSH, LH, and prolactin.\n(ii) It secretes oxytocin and ADH.\n(iii) It is also called adenohypophysis.\n(iv) It is controlled by hypothalamic releasing and inhibiting hormones.\nWhich are correct?",
       "options": [
-        "B) All are correct",
-        "D) (ii) and (iv) only",
-        "C) (i) and (ii) only",
-        "A) (i), (iii), and (iv) only"
+        "All are correct",
+        "(ii) and (iv) only",
+        "(i) and (ii) only",
+        "(i), (iii), and (iv) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (iii), and (iv) are correct. The anterior pituitary (adenohypophysis) secretes GH, TSH, ACTH, FSH, LH, prolactin, and MSH, controlled by hypothalamic hormones. Statement (ii) is wrong; oxytocin and ADH are stored and released from the POSTERIOR pituitary (neurohypophysis).",
@@ -1300,10 +1300,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Read the following about the adrenal gland:\n(i) It is located on top of each kidney.\n(ii) The cortex has three zones: glomerulosa, fasciculata, reticularis.\n(iii) The medulla secretes cortisol.\n(iv) The cortex is controlled by ACTH.\nWhich statements are correct?",
       "options": [
-        "A) (i), (ii), and (iv) only",
-        "C) (i) and (ii) only",
-        "D) (iii) and (iv) only",
-        "B) All are correct"
+        "(i), (ii), and (iv) only",
+        "(i) and (ii) only",
+        "(iii) and (iv) only",
+        "All are correct"
       ],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), and (iv) are correct. The adrenal glands sit atop the kidneys, the cortex has three zones, and ACTH controls cortex function. Statement (iii) is wrong; the adrenal MEDULLA secretes adrenaline and noradrenaline, NOT cortisol. Cortisol is secreted by the adrenal CORTEX (zona fasciculata).",
@@ -1325,10 +1325,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Consider the following about thyroid disorders:\n(i) Hypothyroidism in children causes cretinism.\n(ii) Hypothyroidism in adults causes myxedema.\n(iii) Hyperthyroidism causes Graves' disease.\n(iv) Iodine deficiency causes hyperthyroidism.",
       "options": [
-        "C) (i) and (ii) only",
-        "B) All are correct",
-        "A) (i), (ii), and (iii) only",
-        "D) (ii) and (iv) only"
+        "(i) and (ii) only",
+        "All are correct",
+        "(i), (ii), and (iii) only",
+        "(ii) and (iv) only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements (i), (ii), and (iii) are correct. Cretinism (children) and myxedema (adults) result from hypothyroidism. Graves' disease is a form of hyperthyroidism. Statement (iv) is wrong; iodine deficiency causes HYPOTHYROIDISM (not hyperthyroidism) and goitre.",
@@ -1349,10 +1349,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Which of the following about the pancreas as an endocrine gland is/are correct?\n(i) Alpha cells secrete glucagon.\n(ii) Beta cells secrete insulin.\n(iii) Delta cells secrete somatostatin.\n(iv) Acinar cells secrete glucagon.\nSelect the correct statements:",
       "options": [
-        "B) All are correct",
-        "D) (i), (ii), (iii), and (iv)",
-        "C) (i) and (ii) only",
-        "A) (i), (ii), and (iii) only"
+        "All are correct",
+        "(i), (ii), (iii), and (iv)",
+        "(i) and (ii) only",
+        "(i), (ii), and (iii) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iii) are correct. Alpha cells produce glucagon, beta cells produce insulin, and delta cells produce somatostatin - all from the islets of Langerhans. Statement (iv) is wrong; acinar cells are the EXOCRINE part of the pancreas that secretes digestive enzymes, not glucagon.",
@@ -1374,10 +1374,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Consider the following about hormone mechanisms of action:\n(i) Steroid hormones bind to membrane receptors.\n(ii) Peptide hormones use second messengers like cAMP.\n(iii) Thyroid hormones bind to intracellular (nuclear) receptors.\n(iv) Amino acid derivative hormones (like adrenaline) bind to membrane receptors.\nWhich are correct?",
       "options": [
-        "A) (ii), (iii), and (iv) only",
-        "B) All are correct",
-        "D) (i) and (iv) only",
-        "C) (ii) and (iii) only"
+        "(ii), (iii), and (iv) only",
+        "All are correct",
+        "(i) and (iv) only",
+        "(ii) and (iii) only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements (ii), (iii), and (iv) are correct. Statement (i) is wrong; steroid hormones bind to INTRACELLULAR receptors (not membrane receptors) because they are lipid-soluble and can cross the cell membrane. Peptide hormones and catecholamines (like adrenaline) use membrane receptors and second messengers.",
@@ -1399,10 +1399,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Read the following about GH disorders:\n(i) Excess GH in children causes gigantism.\n(ii) Excess GH in adults causes acromegaly.\n(iii) Deficiency of GH in children causes pituitary dwarfism.\n(iv) Deficiency of GH in adults causes Addison's disease.\nWhich are correct?",
       "options": [
-        "B) All are correct",
-        "C) (i) and (iii) only",
-        "D) (ii) and (iv) only",
-        "A) (i), (ii), and (iii) only"
+        "All are correct",
+        "(i) and (iii) only",
+        "(ii) and (iv) only",
+        "(i), (ii), and (iii) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iii) are correct. GH excess causes gigantism in children and acromegaly in adults. GH deficiency in children causes pituitary dwarfism. Statement (iv) is wrong; Addison's disease is caused by adrenal cortex hyposecretion, NOT GH deficiency.",
@@ -1423,10 +1423,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Consider the following about the effects of insulin:\n(i) It promotes glucose uptake by cells.\n(ii) It promotes glycogenesis in liver and muscles.\n(iii) It promotes gluconeogenesis.\n(iv) It promotes lipogenesis.\nWhich are correct?",
       "options": [
-        "C) (i) and (ii) only",
-        "B) All are correct",
-        "A) (i), (ii), and (iv) only",
-        "D) (iii) and (iv) only"
+        "(i) and (ii) only",
+        "All are correct",
+        "(i), (ii), and (iv) only",
+        "(iii) and (iv) only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements (i), (ii), and (iv) are correct. Insulin promotes glucose uptake, glycogenesis (glycogen synthesis), and lipogenesis (fat synthesis). Statement (iii) is wrong; insulin INHIBITS gluconeogenesis. Gluconeogenesis (making glucose from non-carb sources) is promoted by glucagon and cortisol.",
@@ -1448,10 +1448,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Which of the following organs produce hormones but are NOT primarily endocrine glands?\n(i) Heart (ANF) (ii) Kidney (erythropoietin) (iii) GI tract (gastrin, secretin, CCK) (iv) Liver (angiotensinogen)\nHow many are correct?",
       "options": [
-        "D) Four",
-        "B) Two",
-        "A) One",
-        "C) Three"
+        "Four",
+        "Two",
+        "One",
+        "Three"
       ],
       "correctAnswer": "A",
       "explanation": "All four organs produce hormones but are not primarily endocrine glands: Heart produces ANF (i). Kidneys produce erythropoietin and calcitriol (ii). GI tract produces gastrin, secretin, CCK, GIP (iii). Liver produces angiotensinogen and IGFs (iv). These are examples of non-endocrine organs with endocrine functions.",
@@ -1472,10 +1472,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Consider the following about the actions of thyroid hormones:\n(i) They increase basal metabolic rate.\n(ii) They are essential for brain development in the foetus.\n(iii) They play a role in metamorphosis of frog tadpoles.\n(iv) They decrease heart rate.\nWhich are correct?",
       "options": [
-        "A) (i), (ii), and (iii) only",
-        "C) (i) and (ii) only",
-        "B) All are correct",
-        "D) (i), (iii), and (iv) only"
+        "(i), (ii), and (iii) only",
+        "(i) and (ii) only",
+        "All are correct",
+        "(i), (iii), and (iv) only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements (i), (ii), and (iii) are correct. Thyroid hormones increase BMR, are critical for foetal brain development, and trigger metamorphosis in frogs. Statement (iv) is wrong; thyroid hormones INCREASE heart rate (positive chronotropic effect), not decrease it.",
@@ -1496,10 +1496,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Match the hormone with its source:\n(P) Insulin - (1) Anterior pituitary\n(Q) GH - (2) Beta cells of pancreas\n(R) Thyroxine - (3) Adrenal medulla\n(S) Adrenaline - (4) Thyroid gland",
       "options": [
-        "C) P-4, Q-3, R-2, S-1",
-        "B) P-1, Q-2, R-3, S-4",
-        "D) P-3, Q-4, R-1, S-2",
-        "A) P-2, Q-1, R-4, S-3"
+        "P-4, Q-3, R-2, S-1",
+        "P-1, Q-2, R-3, S-4",
+        "P-3, Q-4, R-1, S-2",
+        "P-2, Q-1, R-4, S-3"
       ],
       "correctAnswer": "D",
       "explanation": "Insulin is from beta cells of pancreas (P-2). GH is from anterior pituitary (Q-1). Thyroxine is from thyroid gland (R-4). Adrenaline is from adrenal medulla (S-3).",
@@ -1521,10 +1521,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Match the disorder with its cause:\n(P) Dwarfism - (1) Excess cortisol\n(Q) Acromegaly - (2) GH deficiency in children\n(R) Cushing's syndrome - (3) Excess GH in adults\n(S) Cretinism - (4) Thyroid hormone deficiency in children",
       "options": [
-        "B) P-3, Q-2, R-4, S-1",
-        "D) P-4, Q-1, R-2, S-3",
-        "A) P-2, Q-3, R-1, S-4",
-        "C) P-1, Q-4, R-3, S-2"
+        "P-3, Q-2, R-4, S-1",
+        "P-4, Q-1, R-2, S-3",
+        "P-2, Q-3, R-1, S-4",
+        "P-1, Q-4, R-3, S-2"
       ],
       "correctAnswer": "C",
       "explanation": "Dwarfism is from GH deficiency in children (P-2). Acromegaly from excess GH in adults (Q-3). Cushing's syndrome from excess cortisol (R-1). Cretinism from thyroid hormone deficiency in children (S-4).",
@@ -1546,10 +1546,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Match the adrenal cortex zone with its hormone:\n(P) Zona glomerulosa - (1) Cortisol\n(Q) Zona fasciculata - (2) Aldosterone\n(R) Zona reticularis - (3) Androgens",
       "options": [
-        "A) P-2, Q-1, R-3",
-        "D) P-2, Q-3, R-1",
-        "C) P-3, Q-1, R-2",
-        "B) P-1, Q-2, R-3"
+        "P-2, Q-1, R-3",
+        "P-2, Q-3, R-1",
+        "P-3, Q-1, R-2",
+        "P-1, Q-2, R-3"
       ],
       "correctAnswer": "A",
       "explanation": "Zona glomerulosa (outermost) secretes mineralocorticoids like aldosterone (P-2). Zona fasciculata (middle) secretes glucocorticoids like cortisol (Q-1). Zona reticularis (innermost) secretes small amounts of androgens (R-3). Mnemonic: GFR = Glomerulosa-Fasciculata-Reticularis; Salt-Sugar-Sex.",
@@ -1572,10 +1572,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Match the hormone with its function:\n(P) Oxytocin - (1) Regulates sleep-wake cycle\n(Q) Melatonin - (2) Uterine contractions and milk ejection\n(R) Thymosin - (3) Increases blood calcium\n(S) PTH - (4) T-lymphocyte development",
       "options": [
-        "A) P-2, Q-1, R-4, S-3",
-        "D) P-3, Q-4, R-1, S-2",
-        "C) P-4, Q-3, R-2, S-1",
-        "B) P-1, Q-2, R-3, S-4"
+        "P-2, Q-1, R-4, S-3",
+        "P-3, Q-4, R-1, S-2",
+        "P-4, Q-3, R-2, S-1",
+        "P-1, Q-2, R-3, S-4"
       ],
       "correctAnswer": "A",
       "explanation": "Oxytocin causes uterine contractions and milk ejection (P-2). Melatonin regulates circadian rhythm (Q-1). Thymosin promotes T-cell development (R-4). PTH increases blood calcium (S-3).",
@@ -1597,10 +1597,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Match the anterior pituitary hormone with its target:\n(P) TSH - (1) Gonads\n(Q) ACTH - (2) Thyroid\n(R) FSH/LH - (3) Mammary glands\n(S) Prolactin - (4) Adrenal cortex",
       "options": [
-        "B) P-4, Q-2, R-3, S-1",
-        "C) P-1, Q-3, R-2, S-4",
-        "D) P-3, Q-1, R-4, S-2",
-        "A) P-2, Q-4, R-1, S-3"
+        "P-4, Q-2, R-3, S-1",
+        "P-1, Q-3, R-2, S-4",
+        "P-3, Q-1, R-4, S-2",
+        "P-2, Q-4, R-1, S-3"
       ],
       "correctAnswer": "D",
       "explanation": "TSH targets the thyroid gland (P-2). ACTH targets the adrenal cortex (Q-4). FSH/LH target the gonads (ovaries/testes) (R-1). Prolactin targets the mammary glands for milk production (S-3).",
@@ -1622,10 +1622,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Match the hypothalamic hormone with its target pituitary hormone:\n(P) TRH - (1) ACTH\n(Q) GnRH - (2) TSH\n(R) CRH - (3) GH\n(S) GHRH - (4) FSH and LH",
       "options": [
-        "C) P-1, Q-3, R-2, S-4",
-        "A) P-2, Q-4, R-1, S-3",
-        "B) P-4, Q-2, R-3, S-1",
-        "D) P-3, Q-1, R-4, S-2"
+        "P-1, Q-3, R-2, S-4",
+        "P-2, Q-4, R-1, S-3",
+        "P-4, Q-2, R-3, S-1",
+        "P-3, Q-1, R-4, S-2"
       ],
       "correctAnswer": "B",
       "explanation": "TRH (Thyrotropin Releasing Hormone) stimulates TSH release (P-2). GnRH (Gonadotropin Releasing Hormone) stimulates FSH/LH release (Q-4). CRH (Corticotropin Releasing Hormone) stimulates ACTH release (R-1). GHRH stimulates GH release (S-3).",
@@ -1647,10 +1647,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Match the pancreatic cell with its secretion:\n(P) Alpha cells - (1) Somatostatin\n(Q) Beta cells - (2) Glucagon\n(R) Delta cells - (3) Pancreatic polypeptide\n(S) PP cells (F cells) - (4) Insulin",
       "options": [
-        "D) P-3, Q-1, R-4, S-2",
-        "C) P-1, Q-3, R-2, S-4",
-        "B) P-4, Q-2, R-3, S-1",
-        "A) P-2, Q-4, R-1, S-3"
+        "P-3, Q-1, R-4, S-2",
+        "P-1, Q-3, R-2, S-4",
+        "P-4, Q-2, R-3, S-1",
+        "P-2, Q-4, R-1, S-3"
       ],
       "correctAnswer": "D",
       "explanation": "Alpha cells secrete glucagon (P-2). Beta cells secrete insulin (Q-4). Delta cells secrete somatostatin (R-1). PP/F cells secrete pancreatic polypeptide (S-3).",
@@ -1672,10 +1672,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Match the hormone with its chemical nature:\n(P) Insulin - (1) Steroid\n(Q) Cortisol - (2) Amino acid derivative\n(R) Adrenaline - (3) Peptide/Protein\n(S) Thyroxine - (4) Iodinated amino acid derivative",
       "options": [
-        "D) P-4, Q-2, R-3, S-1",
-        "A) P-3, Q-1, R-2, S-4",
-        "C) P-2, Q-4, R-1, S-3",
-        "B) P-1, Q-3, R-4, S-2"
+        "P-4, Q-2, R-3, S-1",
+        "P-3, Q-1, R-2, S-4",
+        "P-2, Q-4, R-1, S-3",
+        "P-1, Q-3, R-4, S-2"
       ],
       "correctAnswer": "B",
       "explanation": "Insulin is a peptide/protein hormone (P-3). Cortisol is a steroid hormone derived from cholesterol (Q-1). Adrenaline is an amino acid derivative (catecholamine, from tyrosine) (R-2). Thyroxine is an iodinated amino acid derivative (S-4).",
@@ -1697,10 +1697,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Match the endocrine gland with its location:\n(P) Pituitary - (1) Anterior neck, below larynx\n(Q) Thyroid - (2) Sella turcica of sphenoid bone\n(R) Adrenals - (3) Behind sternum\n(S) Thymus - (4) On top of kidneys",
       "options": [
-        "A) P-2, Q-1, R-4, S-3",
-        "B) P-1, Q-2, R-3, S-4",
-        "C) P-4, Q-3, R-2, S-1",
-        "D) P-3, Q-4, R-1, S-2"
+        "P-2, Q-1, R-4, S-3",
+        "P-1, Q-2, R-3, S-4",
+        "P-4, Q-3, R-2, S-1",
+        "P-3, Q-4, R-1, S-2"
       ],
       "correctAnswer": "A",
       "explanation": "Pituitary is in the sella turcica of the sphenoid bone (P-2). Thyroid is in the anterior neck below the larynx (Q-1). Adrenals are on top of the kidneys (R-4). Thymus is behind the sternum in the mediastinum (S-3).",
@@ -1722,10 +1722,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Match the antagonistic hormone pair:\n(P) Insulin - (1) Calcitonin\n(Q) PTH - (2) Glucagon\n(R) Sympathetic (adrenaline) - (3) Parasympathetic (ACh)",
       "options": [
-        "A) P-2, Q-1, R-3",
-        "B) P-1, Q-2, R-3",
-        "C) P-3, Q-1, R-2",
-        "D) P-2, Q-3, R-1"
+        "P-2, Q-1, R-3",
+        "P-1, Q-2, R-3",
+        "P-3, Q-1, R-2",
+        "P-2, Q-3, R-1"
       ],
       "correctAnswer": "A",
       "explanation": "Insulin and glucagon are antagonistic in blood glucose regulation (P-2). PTH and calcitonin are antagonistic in blood calcium regulation (Q-1). Sympathetic (adrenaline) and parasympathetic (ACh) have opposing effects on organs (R-3).",
@@ -1746,10 +1746,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many hormones are secreted by the anterior pituitary?\n(a) GH (b) TSH (c) ACTH (d) FSH (e) LH (f) Prolactin (g) MSH (h) Oxytocin",
       "options": [
-        "A) Five",
-        "C) Seven",
-        "B) Six",
-        "D) Eight"
+        "Five",
+        "Seven",
+        "Six",
+        "Eight"
       ],
       "correctAnswer": "B",
       "explanation": "Seven hormones are from the anterior pituitary: (a) GH, (b) TSH, (c) ACTH, (d) FSH, (e) LH, (f) Prolactin, and (g) MSH. Oxytocin (h) is from the POSTERIOR pituitary (synthesized in hypothalamus), not the anterior pituitary.",
@@ -1771,10 +1771,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many parathyroid glands are present in a human body?",
       "options": [
-        "B) Four",
-        "A) Two",
-        "D) Eight",
-        "C) Six"
+        "Four",
+        "Two",
+        "Eight",
+        "Six"
       ],
       "correctAnswer": "A",
       "explanation": "There are four parathyroid glands in humans - two pairs (superior and inferior) embedded on the posterior surface of the thyroid gland. They secrete parathormone (PTH) which is a hypercalcemic hormone.",
@@ -1796,10 +1796,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many of the following are endocrine glands in the human body?\n(a) Pituitary (b) Thyroid (c) Parathyroid (d) Adrenal (e) Pancreas (islets) (f) Pineal (g) Thymus (h) Gonads",
       "options": [
-        "D) Eight",
-        "A) Five",
-        "C) Seven",
-        "B) Six"
+        "Eight",
+        "Five",
+        "Seven",
+        "Six"
       ],
       "correctAnswer": "A",
       "explanation": "All eight are endocrine glands: pituitary, thyroid, parathyroid, adrenal, pancreatic islets, pineal, thymus, and gonads (testes/ovaries). Additionally, the hypothalamus has endocrine function, and organs like the heart, kidneys, and GI tract also produce hormones.",
@@ -1821,10 +1821,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many zones does the adrenal cortex have?",
       "options": [
-        "D) Five",
-        "C) Four",
-        "A) Two",
-        "B) Three"
+        "Five",
+        "Four",
+        "Two",
+        "Three"
       ],
       "correctAnswer": "D",
       "explanation": "The adrenal cortex has three zones from outside to inside: (1) Zona glomerulosa (mineralocorticoids/aldosterone), (2) Zona fasciculata (glucocorticoids/cortisol), and (3) Zona reticularis (androgens). Mnemonic: GFR produces Salt, Sugar, Sex hormones.",
@@ -1846,10 +1846,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many of the following are hyperglycemic hormones?\n(a) Glucagon (b) Adrenaline (c) Cortisol (d) GH (e) Insulin (f) Thyroid hormones",
       "options": [
-        "D) Five",
-        "A) Two",
-        "B) Three",
-        "C) Four"
+        "Five",
+        "Two",
+        "Three",
+        "Four"
       ],
       "correctAnswer": "A",
       "explanation": "Five are hyperglycemic (raise blood glucose): (a) Glucagon (glycogenolysis), (b) Adrenaline (glycogenolysis), (c) Cortisol (gluconeogenesis), (d) GH (anti-insulin effect), and (f) Thyroid hormones (increase glucose absorption). Insulin (e) is the only HYPOglycemic hormone that lowers blood glucose.",
@@ -1870,10 +1870,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many types of cells are present in the islets of Langerhans?\n(a) Alpha cells (b) Beta cells (c) Delta cells (d) PP/F cells",
       "options": [
-        "C) Four",
-        "B) Three",
-        "D) Five",
-        "A) Two"
+        "Four",
+        "Three",
+        "Five",
+        "Two"
       ],
       "correctAnswer": "A",
       "explanation": "Four types of cells are present in the islets of Langerhans: (a) Alpha cells (~20%, secrete glucagon), (b) Beta cells (~70%, secrete insulin), (c) Delta cells (~5%, secrete somatostatin), and (d) PP/F cells (~5%, secrete pancreatic polypeptide).",
@@ -1895,10 +1895,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many hormones are released from the posterior pituitary?",
       "options": [
-        "C) Three",
-        "D) Four",
-        "A) One",
-        "B) Two"
+        "Three",
+        "Four",
+        "One",
+        "Two"
       ],
       "correctAnswer": "D",
       "explanation": "Two hormones are released from the posterior pituitary: (1) Oxytocin (stimulates uterine contractions and milk ejection) and (2) ADH/Vasopressin (promotes water reabsorption in kidneys). Both are synthesized in the hypothalamus and transported to the posterior pituitary for storage and release.",
@@ -1920,10 +1920,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "How many of the following are symptoms/signs of diabetes mellitus?\n(a) Glycosuria (b) Polyuria (c) Polydipsia (d) Polyphagia (e) Hyperglycemia (f) Weight loss",
       "options": [
-        "C) Five",
-        "B) Four",
-        "A) Three",
-        "D) Six"
+        "Five",
+        "Four",
+        "Three",
+        "Six"
       ],
       "correctAnswer": "D",
       "explanation": "All six are symptoms/signs of diabetes mellitus: (a) Glycosuria (glucose in urine), (b) Polyuria (excessive urination), (c) Polydipsia (excessive thirst), (d) Polyphagia (excessive hunger), (e) Hyperglycemia (high blood sugar), and (f) Weight loss (especially in Type 1). The classic triad is polyuria, polydipsia, polyphagia.",
@@ -1945,10 +1945,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the correct sequence of the hypothalamic-pituitary-thyroid axis:\n(i) Hypothalamus releases TRH\n(ii) Anterior pituitary releases TSH\n(iii) Thyroid releases T3 and T4\n(iv) High T3/T4 inhibits TRH and TSH (negative feedback)",
       "options": [
-        "D) (iv) → (iii) → (ii) → (i)",
-        "B) (iii) → (ii) → (i) → (iv)",
-        "A) (i) → (ii) → (iii) → (iv)",
-        "C) (ii) → (i) → (iv) → (iii)"
+        "(iv) → (iii) → (ii) → (i)",
+        "(iii) → (ii) → (i) → (iv)",
+        "(i) → (ii) → (iii) → (iv)",
+        "(ii) → (i) → (iv) → (iii)"
       ],
       "correctAnswer": "C",
       "explanation": "The HPT axis sequence: Hypothalamus releases TRH (i) → TRH stimulates anterior pituitary to release TSH (ii) → TSH stimulates thyroid to release T3/T4 (iii) → When T3/T4 levels are high enough, they inhibit TRH and TSH secretion (negative feedback) (iv), maintaining hormonal homeostasis.",
@@ -1970,10 +1970,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the correct sequence of RAAS activation:\n(i) Decreased blood pressure detected by JGA\n(ii) Renin released from JG cells\n(iii) Angiotensinogen → Angiotensin I (by renin)\n(iv) Angiotensin I → Angiotensin II (by ACE in lungs)\n(v) Angiotensin II stimulates aldosterone release from adrenal cortex\n(vi) Aldosterone increases Na+/water reabsorption → blood pressure rises",
       "options": [
-        "C) (ii) → (i) → (iv) → (iii) → (v) → (vi)",
-        "B) (iii) → (ii) → (i) → (iv) → (vi) → (v)",
-        "A) (i) → (ii) → (iii) → (iv) → (v) → (vi)",
-        "D) (vi) → (v) → (iv) → (iii) → (ii) → (i)"
+        "(ii) → (i) → (iv) → (iii) → (v) → (vi)",
+        "(iii) → (ii) → (i) → (iv) → (vi) → (v)",
+        "(i) → (ii) → (iii) → (iv) → (v) → (vi)",
+        "(vi) → (v) → (iv) → (iii) → (ii) → (i)"
       ],
       "correctAnswer": "C",
       "explanation": "RAAS sequence: Low BP detected by JGA (i) → JG cells release renin (ii) → Renin converts angiotensinogen to angiotensin I (iii) → ACE converts angiotensin I to angiotensin II (iv) → Angiotensin II stimulates aldosterone from adrenal cortex (v) → Aldosterone increases Na+/water reabsorption, raising BP (vi).",
@@ -1995,10 +1995,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the mechanism of peptide hormone action using cAMP pathway:\n(i) Hormone binds to membrane receptor\n(ii) G-protein is activated\n(iii) Adenylyl cyclase converts ATP to cAMP\n(iv) cAMP activates protein kinase A\n(v) Cellular response occurs",
       "options": [
-        "B) (iii) → (ii) → (i) → (v) → (iv)",
-        "A) (i) → (ii) → (iii) → (iv) → (v)",
-        "C) (ii) → (i) → (iv) → (iii) → (v)",
-        "D) (v) → (iv) → (iii) → (ii) → (i)"
+        "(iii) → (ii) → (i) → (v) → (iv)",
+        "(i) → (ii) → (iii) → (iv) → (v)",
+        "(ii) → (i) → (iv) → (iii) → (v)",
+        "(v) → (iv) → (iii) → (ii) → (i)"
       ],
       "correctAnswer": "B",
       "explanation": "cAMP pathway sequence: Hormone binds to membrane receptor (i) → Receptor activates G-protein (ii) → G-protein activates adenylyl cyclase which converts ATP to cAMP (iii) → cAMP activates protein kinase A (PKA) (iv) → PKA phosphorylates target proteins → Cellular response (v).",
@@ -2020,10 +2020,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the adrenal cortex zones from outermost to innermost:",
       "options": [
-        "C) Zona fasciculata → Zona glomerulosa → Zona reticularis",
-        "D) Zona glomerulosa → Zona reticularis → Zona fasciculata",
-        "B) Zona reticularis → Zona fasciculata → Zona glomerulosa",
-        "A) Zona glomerulosa → Zona fasciculata → Zona reticularis"
+        "Zona fasciculata → Zona glomerulosa → Zona reticularis",
+        "Zona glomerulosa → Zona reticularis → Zona fasciculata",
+        "Zona reticularis → Zona fasciculata → Zona glomerulosa",
+        "Zona glomerulosa → Zona fasciculata → Zona reticularis"
       ],
       "correctAnswer": "D",
       "explanation": "From outermost to innermost: Zona glomerulosa (mineralocorticoids) → Zona fasciculata (glucocorticoids) → Zona reticularis (androgens). Mnemonic: GFR from outside to inside produces Salt (aldosterone), Sugar (cortisol), Sex (androgens).",
@@ -2046,10 +2046,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the correct sequence of blood glucose regulation when glucose rises after a meal:\n(i) Blood glucose rises after eating\n(ii) Beta cells of pancreas detect high glucose\n(iii) Beta cells secrete insulin\n(iv) Insulin promotes glucose uptake by cells and glycogenesis\n(v) Blood glucose returns to normal",
       "options": [
-        "B) (iii) → (ii) → (i) → (v) → (iv)",
-        "C) (ii) → (i) → (iv) → (iii) → (v)",
-        "A) (i) → (ii) → (iii) → (iv) → (v)",
-        "D) (v) → (iv) → (iii) → (ii) → (i)"
+        "(iii) → (ii) → (i) → (v) → (iv)",
+        "(ii) → (i) → (iv) → (iii) → (v)",
+        "(i) → (ii) → (iii) → (iv) → (v)",
+        "(v) → (iv) → (iii) → (ii) → (i)"
       ],
       "correctAnswer": "C",
       "explanation": "After a meal: Blood glucose rises (i) → Beta cells detect high glucose (ii) → Insulin is secreted (iii) → Insulin promotes cellular glucose uptake, glycogenesis, and lipogenesis (iv) → Blood glucose returns to normal homeostatic level (v).",
@@ -2071,10 +2071,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the correct sequence of steroid hormone action:\n(i) Steroid hormone crosses cell membrane\n(ii) Binds to intracellular receptor\n(iii) Hormone-receptor complex enters nucleus\n(iv) Complex binds to DNA and activates gene transcription\n(v) mRNA is translated into protein (cellular response)",
       "options": [
-        "A) (i) → (ii) → (iii) → (iv) → (v)",
-        "C) (iii) → (ii) → (i) → (v) → (iv)",
-        "D) (v) → (iv) → (iii) → (ii) → (i)",
-        "B) (ii) → (i) → (iv) → (iii) → (v)"
+        "(i) → (ii) → (iii) → (iv) → (v)",
+        "(iii) → (ii) → (i) → (v) → (iv)",
+        "(v) → (iv) → (iii) → (ii) → (i)",
+        "(ii) → (i) → (iv) → (iii) → (v)"
       ],
       "correctAnswer": "A",
       "explanation": "Steroid hormone mechanism: Being lipid-soluble, the hormone crosses the cell membrane (i) → Binds to intracellular (cytoplasmic/nuclear) receptor (ii) → Hormone-receptor complex enters the nucleus (iii) → Binds to hormone response elements on DNA, activating transcription (iv) → mRNA translated to protein (v).",
@@ -2096,10 +2096,10 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the correct sequence of the stress response:\n(i) Stressful stimulus detected\n(ii) Hypothalamus releases CRH\n(iii) Anterior pituitary releases ACTH\n(iv) Adrenal cortex releases cortisol\n(v) Body adapts to stress (increased glucose, anti-inflammatory effects)",
       "options": [
-        "A) (i) → (ii) → (iii) → (iv) → (v)",
-        "C) (ii) → (i) → (iv) → (iii) → (v)",
-        "B) (iii) → (ii) → (i) → (v) → (iv)",
-        "D) (iv) → (iii) → (ii) → (i) → (v)"
+        "(i) → (ii) → (iii) → (iv) → (v)",
+        "(ii) → (i) → (iv) → (iii) → (v)",
+        "(iii) → (ii) → (i) → (v) → (iv)",
+        "(iv) → (iii) → (ii) → (i) → (v)"
       ],
       "correctAnswer": "A",
       "explanation": "Stress response sequence: Stressful stimulus detected (i) → Hypothalamus releases CRH (ii) → CRH stimulates anterior pituitary to release ACTH (iii) → ACTH stimulates adrenal cortex to release cortisol (iv) → Cortisol helps the body cope with stress through increased glucose, anti-inflammatory effects, etc. (v).",

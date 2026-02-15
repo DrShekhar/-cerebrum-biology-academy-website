@@ -15,10 +15,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The site of light reactions of photosynthesis is:",
       "options": [
-        "C) Cytoplasm",
-        "D) Inner membrane of mitochondria",
-        "B) Stroma of chloroplast",
-        "A) Thylakoid membranes"
+        "Cytoplasm",
+        "Inner membrane of mitochondria",
+        "Stroma of chloroplast",
+        "Thylakoid membranes"
       ],
       "correctAnswer": "D",
       "explanation": "The light reactions (photochemical reactions) of photosynthesis take place in the thylakoid membranes of chloroplasts. The photosystems (PS I and PS II), electron transport chain, and ATP synthase are all located in the thylakoid membrane.",
@@ -41,10 +41,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The Calvin cycle occurs in the:",
       "options": [
-        "B) Stroma of chloroplast",
-        "D) Grana",
-        "A) Thylakoid lumen",
-        "C) Cytoplasm"
+        "Stroma of chloroplast",
+        "Grana",
+        "Thylakoid lumen",
+        "Cytoplasm"
       ],
       "correctAnswer": "A",
       "explanation": "The Calvin cycle (C3 cycle or dark reactions) occurs in the stroma of the chloroplast. All the enzymes of the Calvin cycle, including RuBisCO, are present in the stroma.",
@@ -67,10 +67,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The reaction centre of Photosystem I (PS I) has a chlorophyll a molecule that absorbs light at:",
       "options": [
-        "B) 700 nm",
-        "D) 720 nm",
-        "C) 660 nm",
-        "A) 680 nm"
+        "700 nm",
+        "720 nm",
+        "660 nm",
+        "680 nm"
       ],
       "correctAnswer": "A",
       "explanation": "The reaction centre of PS I contains a special chlorophyll a molecule called P700, which absorbs light maximally at 700 nm. PS I is primarily involved in cyclic and non-cyclic photophosphorylation.",
@@ -93,10 +93,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The reaction centre of Photosystem II (PS II) has a chlorophyll a molecule that absorbs light at:",
       "options": [
-        "C) 660 nm",
-        "D) 640 nm",
-        "A) 700 nm",
-        "B) 680 nm"
+        "660 nm",
+        "640 nm",
+        "700 nm",
+        "680 nm"
       ],
       "correctAnswer": "D",
       "explanation": "The reaction centre of PS II contains a special chlorophyll a molecule called P680, which absorbs light at 680 nm. PS II is the site of photolysis of water and the source of electrons for the electron transport chain.",
@@ -119,10 +119,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The first stable product of the Calvin cycle (C3 pathway) is:",
       "options": [
-        "B) 3-phosphoglyceric acid (3-PGA)",
-        "D) Glyceraldehyde-3-phosphate (G3P)",
-        "C) Ribulose bisphosphate (RuBP)",
-        "A) Oxaloacetate (OAA)"
+        "3-phosphoglyceric acid (3-PGA)",
+        "Glyceraldehyde-3-phosphate (G3P)",
+        "Ribulose bisphosphate (RuBP)",
+        "Oxaloacetate (OAA)"
       ],
       "correctAnswer": "A",
       "explanation": "The first stable product of CO2 fixation in the Calvin cycle is 3-phosphoglyceric acid (3-PGA), a 3-carbon compound. CO2 is fixed by RuBisCO to RuBP producing an unstable 6C compound that immediately splits into two molecules of 3-PGA.",
@@ -145,10 +145,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The primary CO2 acceptor in the Calvin cycle is:",
       "options": [
-        "D) 3-Phosphoglyceric acid",
-        "B) Ribulose-1,5-bisphosphate (RuBP)",
-        "A) Phosphoenolpyruvate (PEP)",
-        "C) Oxaloacetate"
+        "3-Phosphoglyceric acid",
+        "Ribulose-1,5-bisphosphate (RuBP)",
+        "Phosphoenolpyruvate (PEP)",
+        "Oxaloacetate"
       ],
       "correctAnswer": "B",
       "explanation": "Ribulose-1,5-bisphosphate (RuBP) is the primary CO2 acceptor in the Calvin cycle. The enzyme RuBisCO catalyses the carboxylation of RuBP with CO2 to form two molecules of 3-PGA. RuBP is a 5-carbon sugar phosphate.",
@@ -171,10 +171,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Chlorophyll a is:",
       "options": [
-        "C) Yellow-green in colour",
-        "D) Orange in colour",
-        "A) Yellow in colour",
-        "B) Blue-green in colour"
+        "Yellow-green in colour",
+        "Orange in colour",
+        "Yellow in colour",
+        "Blue-green in colour"
       ],
       "correctAnswer": "D",
       "explanation": "Chlorophyll a is blue-green in colour and absorbs light mainly in the red and blue-violet regions of the spectrum. It is the primary photosynthetic pigment found in all photosynthetic organisms that release O2.",
@@ -197,10 +197,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Photolysis of water occurs in:",
       "options": [
-        "D) Cytoplasm",
-        "A) PS I",
-        "B) PS II",
-        "C) Stroma"
+        "Cytoplasm",
+        "PS I",
+        "PS II",
+        "Stroma"
       ],
       "correctAnswer": "C",
       "explanation": "Photolysis (splitting) of water occurs at PS II on the inner side of the thylakoid membrane. Water is split into 2H+, 2e-, and 1/2O2. The electrons released replace those lost by P680, and the O2 is released as a by-product.",
@@ -223,10 +223,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The oxygen evolved during photosynthesis comes from:",
       "options": [
-        "D) Glucose",
-        "B) Water",
-        "C) Both CO2 and water",
-        "A) CO2"
+        "Glucose",
+        "Water",
+        "Both CO2 and water",
+        "CO2"
       ],
       "correctAnswer": "B",
       "explanation": "The oxygen released during photosynthesis comes from water, not CO2. This was demonstrated by Ruben and Kamen using heavy oxygen isotope (18O). When H2(18O) was used, 18O2 was released, proving water is the source of O2.",
@@ -249,10 +249,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Kranz anatomy is characteristic of:",
       "options": [
-        "D) All plants",
-        "A) C3 plants",
-        "B) C4 plants",
-        "C) CAM plants"
+        "All plants",
+        "C3 plants",
+        "C4 plants",
+        "CAM plants"
       ],
       "correctAnswer": "C",
       "explanation": "Kranz anatomy (wreath-like anatomy) is characteristic of C4 plants. It involves a specialised arrangement where mesophyll cells surround large bundle sheath cells in a wreath-like manner. Bundle sheath cells in C4 plants have thick walls, no intercellular spaces, and may contain chloroplasts without grana.",
@@ -275,10 +275,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The primary CO2 acceptor in C4 plants is:",
       "options": [
-        "A) RuBP",
-        "C) 3-PGA",
-        "B) Phosphoenolpyruvate (PEP)",
-        "D) Oxaloacetate"
+        "RuBP",
+        "3-PGA",
+        "Phosphoenolpyruvate (PEP)",
+        "Oxaloacetate"
       ],
       "correctAnswer": "C",
       "explanation": "In C4 plants, the primary CO2 acceptor is phosphoenolpyruvate (PEP), a 3-carbon molecule in the mesophyll cells. PEP carboxylase fixes CO2 to PEP forming oxaloacetate (OAA), a 4-carbon compound. This is why they are called C4 plants.",
@@ -301,10 +301,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The first stable product of CO2 fixation in C4 plants is:",
       "options": [
-        "D) Aspartic acid",
-        "B) Oxaloacetate (OAA)",
-        "A) 3-PGA",
-        "C) Malic acid"
+        "Aspartic acid",
+        "Oxaloacetate (OAA)",
+        "3-PGA",
+        "Malic acid"
       ],
       "correctAnswer": "B",
       "explanation": "In C4 plants, the first stable product of CO2 fixation is oxaloacetate (OAA), a 4-carbon compound. It is formed when PEP carboxylase fixes CO2 to PEP in the mesophyll cells. OAA is then converted to malate or aspartate.",
@@ -327,10 +327,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Photorespiration occurs in:",
       "options": [
-        "C) Both C3 and C4 plants equally",
-        "D) CAM plants only",
-        "B) C3 plants only",
-        "A) C4 plants only"
+        "Both C3 and C4 plants equally",
+        "CAM plants only",
+        "C3 plants only",
+        "C4 plants only"
       ],
       "correctAnswer": "C",
       "explanation": "Photorespiration is significant in C3 plants. It occurs when RuBisCO binds O2 instead of CO2 (oxygenase activity), producing phosphoglycolate. C4 plants have evolved mechanisms to minimize photorespiration by concentrating CO2 in bundle sheath cells.",
@@ -353,10 +353,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The enzyme responsible for CO2 fixation in the Calvin cycle is:",
       "options": [
-        "C) Carbonic anhydrase",
-        "B) RuBisCO",
-        "D) ATP synthase",
-        "A) PEP carboxylase"
+        "Carbonic anhydrase",
+        "RuBisCO",
+        "ATP synthase",
+        "PEP carboxylase"
       ],
       "correctAnswer": "B",
       "explanation": "RuBisCO (Ribulose-1,5-bisphosphate carboxylase/oxygenase) is the enzyme that catalyses the fixation of CO2 to RuBP in the Calvin cycle. It is the most abundant enzyme on Earth and has both carboxylase and oxygenase activities.",
@@ -379,10 +379,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "How many molecules of CO2 are fixed to produce one molecule of glucose in the Calvin cycle?",
       "options": [
-        "C) 12",
-        "A) 3",
-        "B) 6",
-        "D) 18"
+        "12",
+        "3",
+        "6",
+        "18"
       ],
       "correctAnswer": "C",
       "explanation": "Six molecules of CO2 must be fixed in the Calvin cycle to produce one molecule of glucose. For each CO2 fixed, 3 ATP and 2 NADPH are consumed. Thus, 18 ATP and 12 NADPH are required for one glucose molecule.",
@@ -405,10 +405,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Cyclic photophosphorylation involves:",
       "options": [
-        "C) Both PS I and PS II",
-        "B) Only PS I",
-        "D) Neither PS I nor PS II",
-        "A) Only PS II"
+        "Both PS I and PS II",
+        "Only PS I",
+        "Neither PS I nor PS II",
+        "Only PS II"
       ],
       "correctAnswer": "B",
       "explanation": "Cyclic photophosphorylation involves only PS I (P700). Electrons from PS I are passed to ferredoxin and then cycled back to PS I through the cytochrome complex. Only ATP is produced; no NADPH is formed and no O2 is evolved.",
@@ -431,10 +431,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Non-cyclic photophosphorylation produces:",
       "options": [
-        "C) Both ATP and NADPH",
-        "B) Only NADPH",
-        "D) Neither ATP nor NADPH",
-        "A) Only ATP"
+        "Both ATP and NADPH",
+        "Only NADPH",
+        "Neither ATP nor NADPH",
+        "Only ATP"
       ],
       "correctAnswer": "A",
       "explanation": "Non-cyclic photophosphorylation involves both PS II and PS I and produces both ATP and NADPH. Electrons flow from water through PS II, electron transport chain, PS I, and finally to NADP+ to form NADPH. ATP is synthesized during electron transport.",
@@ -457,10 +457,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Chlorophyll b is:",
       "options": [
-        "B) Yellow-green",
-        "D) Red",
-        "A) Blue-green",
-        "C) Orange"
+        "Yellow-green",
+        "Red",
+        "Blue-green",
+        "Orange"
       ],
       "correctAnswer": "A",
       "explanation": "Chlorophyll b is yellow-green in colour. It is an accessory pigment that absorbs light energy and transfers it to chlorophyll a. Chlorophyll b has a -CHO group instead of the -CH3 group present in chlorophyll a.",
@@ -483,10 +483,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Carotenoids function in photosynthesis as:",
       "options": [
-        "C) Electron carriers",
-        "D) CO2 fixation enzymes",
-        "A) Primary photosynthetic pigments",
-        "B) Accessory pigments and photoprotective agents"
+        "Electron carriers",
+        "CO2 fixation enzymes",
+        "Primary photosynthetic pigments",
+        "Accessory pigments and photoprotective agents"
       ],
       "correctAnswer": "D",
       "explanation": "Carotenoids are accessory pigments that absorb light in the blue-violet region and transfer energy to chlorophyll a. They also serve a photoprotective role by quenching triplet chlorophyll and singlet oxygen, preventing photo-oxidative damage.",
@@ -509,10 +509,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The Z-scheme of light reactions represents:",
       "options": [
-        "C) The cyclic flow of electrons around PS I",
-        "D) The C4 pathway of CO2 fixation",
-        "A) The Calvin cycle pathway",
-        "B) The non-cyclic electron flow from water to NADP+"
+        "The cyclic flow of electrons around PS I",
+        "The C4 pathway of CO2 fixation",
+        "The Calvin cycle pathway",
+        "The non-cyclic electron flow from water to NADP+"
       ],
       "correctAnswer": "D",
       "explanation": "The Z-scheme represents the non-cyclic electron transport pathway in photosynthesis. When drawn as a diagram showing redox potentials, the pathway of electron flow from PS II to PS I forms a Z-shape (or N-shape), hence called the Z-scheme.",
@@ -535,10 +535,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "CAM (Crassulacean Acid Metabolism) plants fix CO2 at night using:",
       "options": [
-        "C) Carbonic anhydrase",
-        "B) PEP carboxylase",
-        "D) Phosphofructokinase",
-        "A) RuBisCO"
+        "Carbonic anhydrase",
+        "PEP carboxylase",
+        "Phosphofructokinase",
+        "RuBisCO"
       ],
       "correctAnswer": "B",
       "explanation": "CAM plants open their stomata at night to minimize water loss. They fix CO2 at night using PEP carboxylase to form OAA, which is converted to malic acid and stored in vacuoles. During the day, stomata close, and malic acid releases CO2 for the Calvin cycle.",
@@ -561,10 +561,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Which of the following is a C4 plant?",
       "options": [
-        "C) Sugarcane",
-        "A) Wheat",
-        "D) Potato",
-        "B) Rice"
+        "Sugarcane",
+        "Wheat",
+        "Potato",
+        "Rice"
       ],
       "correctAnswer": "A",
       "explanation": "Sugarcane is a C4 plant. Other examples include maize, sorghum, and certain tropical grasses. C4 plants are more efficient at photosynthesis in high temperatures and high light intensity because they concentrate CO2 in bundle sheath cells, minimizing photorespiration.",
@@ -587,10 +587,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The three stages of the Calvin cycle are:",
       "options": [
-        "A) Carboxylation, Oxidation, Regeneration",
-        "B) Carboxylation, Reduction, Regeneration",
-        "C) Glycolysis, Krebs cycle, ETS",
-        "D) Fixation, Hydrolysis, Regeneration"
+        "Carboxylation, Oxidation, Regeneration",
+        "Carboxylation, Reduction, Regeneration",
+        "Glycolysis, Krebs cycle, ETS",
+        "Fixation, Hydrolysis, Regeneration"
       ],
       "correctAnswer": "B",
       "explanation": "The Calvin cycle has three stages: (1) Carboxylation - CO2 is fixed to RuBP by RuBisCO to form 3-PGA, (2) Reduction - 3-PGA is reduced to G3P using ATP and NADPH, and (3) Regeneration - RuBP is regenerated from G3P using ATP.",
@@ -614,10 +614,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "RuBisCO has both carboxylase and oxygenase activities. The oxygenase activity leads to:",
       "options": [
-        "A) Calvin cycle",
-        "C) C4 pathway",
-        "B) Photorespiration",
-        "D) Nitrogen fixation"
+        "Calvin cycle",
+        "C4 pathway",
+        "Photorespiration",
+        "Nitrogen fixation"
       ],
       "correctAnswer": "C",
       "explanation": "When RuBisCO binds O2 instead of CO2 (oxygenase activity), it catalyses the formation of phosphoglycolate and 3-PGA from RuBP. Phosphoglycolate enters the photorespiratory pathway involving chloroplasts, peroxisomes, and mitochondria, releasing CO2 without producing ATP or NADPH.",
@@ -640,10 +640,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The law of limiting factors in photosynthesis was proposed by:",
       "options": [
-        "C) Melvin Calvin",
-        "B) Blackman",
-        "D) Joseph Priestley",
-        "A) Robert Hill"
+        "Melvin Calvin",
+        "Blackman",
+        "Joseph Priestley",
+        "Robert Hill"
       ],
       "correctAnswer": "B",
       "explanation": "The law of limiting factors was proposed by F.F. Blackman (1905). It states that when a process depends on several factors, its rate is limited by the factor that is nearest to its minimum value (the limiting factor).",
@@ -666,10 +666,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "In the C4 pathway, CO2 fixation in mesophyll cells is catalysed by:",
       "options": [
-        "B) PEP carboxylase",
-        "D) Pyruvate kinase",
-        "C) Carbonic anhydrase",
-        "A) RuBisCO"
+        "PEP carboxylase",
+        "Pyruvate kinase",
+        "Carbonic anhydrase",
+        "RuBisCO"
       ],
       "correctAnswer": "A",
       "explanation": "In C4 plants, the initial fixation of CO2 in mesophyll cells is catalysed by PEP carboxylase (PEPcase). This enzyme has a higher affinity for CO2 than RuBisCO and does not have oxygenase activity, making C4 plants more efficient at low CO2 concentrations.",
@@ -692,10 +692,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The final electron acceptor in non-cyclic photophosphorylation is:",
       "options": [
-        "B) NADP+",
-        "D) Plastocyanin",
-        "A) Oxygen",
-        "C) Ferredoxin"
+        "NADP+",
+        "Plastocyanin",
+        "Oxygen",
+        "Ferredoxin"
       ],
       "correctAnswer": "A",
       "explanation": "In non-cyclic photophosphorylation, NADP+ is the final electron acceptor. Electrons from PS I are transferred to ferredoxin and then to NADP+ reductase, which reduces NADP+ to NADPH using the electrons and H+ ions.",
@@ -718,10 +718,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Which pigment is directly involved in the photochemical reaction of photosynthesis?",
       "options": [
-        "B) Chlorophyll a",
-        "D) Carotenoid",
-        "A) Chlorophyll b",
-        "C) Xanthophyll"
+        "Chlorophyll a",
+        "Carotenoid",
+        "Chlorophyll b",
+        "Xanthophyll"
       ],
       "correctAnswer": "A",
       "explanation": "Only chlorophyll a is directly involved in the photochemical (light) reactions of photosynthesis. It is the reaction centre pigment in both PS I (P700) and PS II (P680). All other pigments (chlorophyll b, carotenoids, xanthophylls) are accessory pigments that transfer absorbed energy to chlorophyll a.",
@@ -744,10 +744,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Photorespiration involves which three organelles?",
       "options": [
-        "B) Chloroplast, ribosome, and lysosome",
-        "A) Chloroplast, peroxisome, and mitochondria",
-        "C) Mitochondria, nucleus, and ER",
-        "D) Golgi body, chloroplast, and vacuole"
+        "Chloroplast, ribosome, and lysosome",
+        "Chloroplast, peroxisome, and mitochondria",
+        "Mitochondria, nucleus, and ER",
+        "Golgi body, chloroplast, and vacuole"
       ],
       "correctAnswer": "B",
       "explanation": "Photorespiration involves three organelles: chloroplast (where RuBisCO produces phosphoglycolate), peroxisome (where glycolate is oxidised to glyoxylate and then to glycine), and mitochondria (where glycine is converted to serine with release of CO2).",
@@ -770,10 +770,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "ATP synthesis during photosynthesis is called:",
       "options": [
-        "A) Oxidative phosphorylation",
-        "C) Substrate level phosphorylation",
-        "B) Photophosphorylation",
-        "D) Fermentation"
+        "Oxidative phosphorylation",
+        "Substrate level phosphorylation",
+        "Photophosphorylation",
+        "Fermentation"
       ],
       "correctAnswer": "C",
       "explanation": "ATP synthesis during the light reactions of photosynthesis is called photophosphorylation. It can be cyclic (involving only PS I) or non-cyclic (involving both PS I and PS II). The energy for ATP synthesis comes from the proton gradient created across the thylakoid membrane.",
@@ -796,10 +796,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The chemiosmotic hypothesis for ATP synthesis was proposed by:",
       "options": [
-        "A) Melvin Calvin",
-        "C) Robert Hill",
-        "D) Blackman",
-        "B) Peter Mitchell"
+        "Melvin Calvin",
+        "Robert Hill",
+        "Blackman",
+        "Peter Mitchell"
       ],
       "correctAnswer": "D",
       "explanation": "Peter Mitchell proposed the chemiosmotic hypothesis in 1961, for which he won the Nobel Prize. The hypothesis explains ATP synthesis through the flow of H+ ions down their concentration gradient through ATP synthase (CF0-CF1 complex) in the thylakoid membrane.",
@@ -822,10 +822,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Which of the following is NOT a limiting factor for photosynthesis?",
       "options": [
-        "D) Temperature",
-        "A) Light intensity",
-        "C) Nitrogen concentration",
-        "B) CO2 concentration"
+        "Temperature",
+        "Light intensity",
+        "Nitrogen concentration",
+        "CO2 concentration"
       ],
       "correctAnswer": "C",
       "explanation": "The main limiting factors for photosynthesis are light intensity, CO2 concentration, temperature, and water availability. Nitrogen concentration in the atmosphere is not a direct limiting factor for photosynthesis, although nitrogen is needed for chlorophyll and enzyme synthesis.",
@@ -847,10 +847,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "In the Calvin cycle, to fix 6 molecules of CO2, the number of ATP and NADPH molecules required are:",
       "options": [
-        "C) 12 ATP and 18 NADPH",
-        "A) 12 ATP and 12 NADPH",
-        "B) 18 ATP and 12 NADPH",
-        "D) 18 ATP and 18 NADPH"
+        "12 ATP and 18 NADPH",
+        "12 ATP and 12 NADPH",
+        "18 ATP and 12 NADPH",
+        "18 ATP and 18 NADPH"
       ],
       "correctAnswer": "C",
       "explanation": "To fix 6 CO2 into one glucose: the reduction phase requires 12 ATP and 12 NADPH (2 ATP and 2 NADPH per CO2), and the regeneration phase requires 6 ATP (1 ATP per CO2). Total = 18 ATP and 12 NADPH for one molecule of glucose.",
@@ -874,10 +874,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The CO2 compensation point is the CO2 concentration at which:",
       "options": [
-        "D) Only photosynthesis occurs",
-        "C) Only respiration occurs",
-        "B) Rate of photosynthesis equals rate of respiration",
-        "A) Photosynthesis exceeds respiration"
+        "Only photosynthesis occurs",
+        "Only respiration occurs",
+        "Rate of photosynthesis equals rate of respiration",
+        "Photosynthesis exceeds respiration"
       ],
       "correctAnswer": "C",
       "explanation": "The CO2 compensation point is the concentration of CO2 at which the rate of photosynthesis exactly equals the rate of respiration. At this point, there is no net gas exchange. C4 plants have a lower CO2 compensation point than C3 plants.",
@@ -900,10 +900,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "In C4 plants, the Calvin cycle operates in:",
       "options": [
-        "B) Bundle sheath cells",
-        "A) Mesophyll cells",
-        "D) Guard cells",
-        "C) Epidermal cells"
+        "Bundle sheath cells",
+        "Mesophyll cells",
+        "Guard cells",
+        "Epidermal cells"
       ],
       "correctAnswer": "A",
       "explanation": "In C4 plants, the Calvin cycle operates in the bundle sheath cells. CO2 is initially fixed in mesophyll cells by PEP carboxylase, then the C4 acid (malate/aspartate) moves to bundle sheath cells where CO2 is released and refixed by RuBisCO in the Calvin cycle.",
@@ -926,10 +926,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Emerson's enhancement effect demonstrated that:",
       "options": [
-        "C) Only red light is needed",
-        "B) Photosynthesis involves two photosystems working together",
-        "D) CO2 is not necessary for photosynthesis",
-        "A) Green light is most effective for photosynthesis"
+        "Only red light is needed",
+        "Photosynthesis involves two photosystems working together",
+        "CO2 is not necessary for photosynthesis",
+        "Green light is most effective for photosynthesis"
       ],
       "correctAnswer": "B",
       "explanation": "Emerson's enhancement effect showed that when both far-red (>680 nm) and red (680 nm) light are given simultaneously, the rate of photosynthesis is greater than the sum of rates with each wavelength alone. This proved the existence of two photosystems (PS I and PS II) that work cooperatively.",
@@ -952,10 +952,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The proton gradient for chemiosmotic ATP synthesis in chloroplasts is formed across the:",
       "options": [
-        "D) Plasma membrane",
-        "C) Inner mitochondrial membrane",
-        "B) Thylakoid membrane",
-        "A) Outer chloroplast membrane"
+        "Plasma membrane",
+        "Inner mitochondrial membrane",
+        "Thylakoid membrane",
+        "Outer chloroplast membrane"
       ],
       "correctAnswer": "C",
       "explanation": "The proton gradient for photophosphorylation is established across the thylakoid membrane. H+ accumulates inside the thylakoid lumen due to photolysis of water and pumping by the ETC. The flow of H+ back through ATP synthase (CF0-CF1) drives ATP synthesis in the stroma.",
@@ -978,10 +978,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): C4 plants are more efficient in photosynthesis than C3 plants at high temperatures.\nReason (R): C4 plants have a mechanism to concentrate CO2 in bundle sheath cells, minimizing photorespiration.",
       "options": [
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. At high temperatures, O2 solubility increases relative to CO2, increasing photorespiration in C3 plants. C4 plants concentrate CO2 in bundle sheath cells using the C4 pathway, saturating RuBisCO with CO2 and virtually eliminating photorespiration.",
@@ -1004,10 +1004,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): The oxygen evolved during photosynthesis comes from water molecules.\nReason (R): This was proven using radioactive isotope 18O in water by Ruben and Kamen.",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. Ruben and Kamen (1941) used heavy water (H2-18O) and showed that 18O2 was released. When C-18O2 was supplied with normal water, normal O2 was released. This conclusively proved O2 comes from water.",
@@ -1030,10 +1030,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): Chlorophyll a is called the universal photosynthetic pigment.\nReason (R): Chlorophyll a is present in all photosynthetic organisms that release O2.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. Chlorophyll a is found in all oxygenic photosynthetic organisms (higher plants, algae, cyanobacteria) and is the only pigment that can directly participate in the light reactions at the reaction centres.",
@@ -1056,10 +1056,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): Photorespiration is a wasteful process.\nReason (R): In photorespiration, CO2 is released without any synthesis of ATP or NADPH.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. Photorespiration releases CO2 and consumes ATP but does not produce any ATP or NADPH. It reduces the net efficiency of photosynthesis by about 25-30% in C3 plants, making it a wasteful process.",
@@ -1082,10 +1082,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): CAM plants open their stomata at night and close them during the day.\nReason (R): This adaptation helps CAM plants conserve water in hot, arid environments.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. CAM plants (like Opuntia, Agave, Bryophyllum) open stomata at night when temperatures are lower and humidity higher, minimizing water loss. CO2 fixed at night is stored as malic acid and used during the day with stomata closed.",
@@ -1108,10 +1108,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): RuBisCO is the most abundant enzyme on Earth.\nReason (R): RuBisCO constitutes about 16% of the total chloroplast protein and is found in all photosynthetic organisms.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. RuBisCO makes up about 16% of chloroplast protein. Since it has a relatively slow catalytic rate, plants produce enormous quantities to maintain adequate rates of CO2 fixation, making it the most abundant protein/enzyme on Earth.",
@@ -1134,10 +1134,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): Bundle sheath cells of C4 plants lack PS II activity.\nReason (R): The absence of PS II in bundle sheath cells prevents O2 evolution, thereby protecting RuBisCO from photorespiration.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. In many C4 plants, bundle sheath chloroplasts lack well-developed grana and PS II. Without PS II, no photolysis of water occurs, so no O2 is generated in bundle sheath cells. This maintains low O2 concentration around RuBisCO, reducing photorespiration.",
@@ -1160,10 +1160,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): In cyclic photophosphorylation, only ATP is produced and NADPH is not formed.\nReason (R): In cyclic photophosphorylation, electrons from PS I are cycled back to PS I without reaching NADP+.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. In cyclic photophosphorylation, excited electrons from PS I pass through ferredoxin, cytochrome complex, and plastocyanin, and return to PS I. Since electrons never reach NADP+, no NADPH is formed. Only ATP is generated via the proton gradient.",
@@ -1186,10 +1186,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): Carotenoids protect chlorophyll from photo-oxidation.\nReason (R): Carotenoids absorb excess light energy and dissipate it as heat, preventing damage to chlorophyll.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. Carotenoids serve a photoprotective role by quenching triplet state chlorophyll and singlet oxygen (reactive oxygen species) that could otherwise cause photo-oxidative damage to the photosynthetic apparatus.",
@@ -1212,10 +1212,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): Photosynthesis is higher in red light than in green light.\nReason (R): Green light is mostly reflected by chlorophyll and is not absorbed efficiently.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. Chlorophyll absorbs red and blue-violet light most effectively, driving photosynthesis. Green light is largely reflected (giving leaves their green colour) and is poorly absorbed, resulting in very low photosynthetic activity.",
@@ -1238,10 +1238,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): The proton gradient in chloroplasts develops with higher H+ concentration inside the thylakoid lumen.\nReason (R): Photolysis of water releases H+ inside the lumen and NADP+ reduction removes H+ from the stroma.",
       "options": [
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true"
+        "A is true but R is false",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. The H+ gradient across the thylakoid membrane is established by: (1) photolysis of water releasing H+ in the lumen, (2) H+ transport from stroma to lumen during electron transport through plastoquinone, and (3) NADP+ reduction consuming H+ in the stroma.",
@@ -1264,10 +1264,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): PEP carboxylase has no oxygenase activity.\nReason (R): This is why the initial CO2 fixation in C4 plants is not affected by high O2 concentration.",
       "options": [
-        "B) Both A and R are true but R is NOT the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. Unlike RuBisCO, PEP carboxylase does not have oxygenase activity and is not competitively inhibited by O2. This means the initial CO2 fixation step in C4 plants works efficiently even at high O2 levels.",
@@ -1290,10 +1290,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Consider the following statements about photosynthetic pigments:\nI. Chlorophyll a absorbs red and blue-violet light.\nII. Chlorophyll b is yellow-green in colour.\nIII. Carotenoids absorb blue and green light.\nIV. Xanthophylls are yellow pigments.\nWhich of the above statements are correct?",
       "options": [
-        "A) I, II and IV only",
-        "C) I and II only",
-        "B) I, II, III and IV",
-        "D) II, III and IV only"
+        "I, II and IV only",
+        "I and II only",
+        "I, II, III and IV",
+        "II, III and IV only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, II and IV are correct. Chlorophyll a absorbs red (around 680 nm) and blue-violet light. Chlorophyll b is yellow-green. Xanthophylls are yellow carotenoid pigments. Statement III is partially incorrect; carotenoids absorb blue-violet light (not green). They appear yellow-orange because they reflect those wavelengths.",
@@ -1316,10 +1316,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Which of the following statements about the Calvin cycle are correct?\nI. It occurs in the stroma of chloroplasts.\nII. It requires ATP and NADPH from light reactions.\nIII. CO2 is fixed by RuBisCO.\nIV. It can proceed in the dark without light reactions.\nSelect the correct option:",
       "options": [
-        "C) II and III only",
-        "B) I, II, III and IV",
-        "D) I and IV only",
-        "A) I, II and III only"
+        "II and III only",
+        "I, II, III and IV",
+        "I and IV only",
+        "I, II and III only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements I, II and III are correct. The Calvin cycle occurs in stroma, requires ATP and NADPH from light reactions, and uses RuBisCO for CO2 fixation. Statement IV is incorrect; although called 'dark reactions', the Calvin cycle cannot proceed indefinitely without light because it depends on ATP and NADPH produced by light reactions.",
@@ -1342,10 +1342,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Read the following statements about C4 plants:\nI. They show Kranz anatomy.\nII. Initial CO2 fixation occurs in bundle sheath cells.\nIII. PEP carboxylase is the primary carboxylating enzyme in mesophyll cells.\nIV. They have higher CO2 compensation point than C3 plants.\nSelect the correct statements:",
       "options": [
-        "C) I, III and IV only",
-        "A) I and III only",
-        "D) I, II, III and IV",
-        "B) I, II and III only"
+        "I, III and IV only",
+        "I and III only",
+        "I, II, III and IV",
+        "I, II and III only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements I and III are correct. C4 plants have Kranz anatomy and PEP carboxylase fixes CO2 in mesophyll cells. Statement II is incorrect; initial CO2 fixation occurs in mesophyll cells (not bundle sheath). Statement IV is incorrect; C4 plants have LOWER CO2 compensation point than C3 plants.",
@@ -1368,10 +1368,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Consider the following statements about photorespiration:\nI. It occurs only in C3 plants.\nII. It involves chloroplasts, peroxisomes, and mitochondria.\nIII. It releases CO2 without producing ATP or NADPH.\nIV. It increases under high O2 and low CO2 conditions.\nWhich of the above are correct?",
       "options": [
-        "C) I and III only",
-        "A) II, III and IV only",
-        "D) II and IV only",
-        "B) I, II, III and IV"
+        "I and III only",
+        "II, III and IV only",
+        "II and IV only",
+        "I, II, III and IV"
       ],
       "correctAnswer": "B",
       "explanation": "Statements II, III and IV are correct. Photorespiration involves three organelles, releases CO2 without useful energy production, and increases at high O2/low CO2. Statement I is incorrect; photorespiration is negligible but not completely absent in C4 plants. It primarily affects C3 plants significantly.",
@@ -1394,10 +1394,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Which of the following statements about non-cyclic photophosphorylation are correct?\nI. It involves both PS I and PS II.\nII. Water is the electron donor.\nIII. NADP+ is the terminal electron acceptor.\nIV. Both ATP and NADPH are produced.\nV. Oxygen is not evolved.\nSelect the correct option:",
       "options": [
-        "A) I, II, III and IV only",
-        "B) I, II, III, IV and V",
-        "C) I, III and IV only",
-        "D) I, II and V only"
+        "I, II, III and IV only",
+        "I, II, III, IV and V",
+        "I, III and IV only",
+        "I, II and V only"
       ],
       "correctAnswer": "A",
       "explanation": "Statements I, II, III and IV are correct. Non-cyclic photophosphorylation involves both photosystems, uses water as electron donor, produces both ATP and NADPH, and NADP+ is the terminal acceptor. Statement V is incorrect; O2 IS evolved from photolysis of water at PS II.",
@@ -1420,10 +1420,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Which of the following statements about the chemiosmotic hypothesis in chloroplasts are correct?\nI. Protons accumulate inside the thylakoid lumen.\nII. ATP synthase has a CF0 channel and CF1 catalytic portion.\nIII. ATP is synthesised on the outer (stromal) side of the thylakoid.\nIV. The proton gradient is maintained solely by photolysis of water.\nSelect the correct statements:",
       "options": [
-        "C) I and III only",
-        "D) II and IV only",
-        "A) I, II and III only",
-        "B) I, II, III and IV"
+        "I and III only",
+        "II and IV only",
+        "I, II and III only",
+        "I, II, III and IV"
       ],
       "correctAnswer": "C",
       "explanation": "Statements I, II and III are correct. H+ accumulates in the lumen; ATP synthase has CF0 (transmembrane channel) and CF1 (catalytic head); ATP is produced on the stromal side. Statement IV is incorrect; the gradient is maintained by photolysis, PQ-mediated H+ transport, and NADP+ reduction (removing H+ from stroma).",
@@ -1446,10 +1446,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Read the following statements about CAM plants:\nI. They fix CO2 at night using PEP carboxylase.\nII. Malic acid is stored in vacuoles during the night.\nIII. During the day, malic acid is decarboxylated to release CO2 for Calvin cycle.\nIV. CAM plants show temporal separation of C4 and C3 pathways.\nHow many of the above statements are correct?",
       "options": [
-        "B) Three",
-        "C) Four",
-        "D) One",
-        "A) Two"
+        "Three",
+        "Four",
+        "One",
+        "Two"
       ],
       "correctAnswer": "B",
       "explanation": "All four statements are correct. CAM plants open stomata at night and fix CO2 using PEPcase (I). OAA is converted to malic acid and stored in vacuoles (II). During the day, malic acid releases CO2 for Calvin cycle (III). Unlike C4 plants (spatial separation), CAM shows temporal separation (IV).",
@@ -1472,10 +1472,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Which of the following about the action spectrum and absorption spectrum are correct?\nI. The action spectrum shows the rate of photosynthesis at different wavelengths.\nII. The absorption spectrum shows wavelengths absorbed by a pigment.\nIII. The action spectrum closely matches the absorption spectrum of chlorophyll a alone.\nIV. The action spectrum is broader than the absorption spectrum of chlorophyll a.\nSelect the correct option:",
       "options": [
-        "B) I, II, III and IV",
-        "A) I, II and IV only",
-        "C) I and II only",
-        "D) III and IV only"
+        "I, II, III and IV",
+        "I, II and IV only",
+        "I and II only",
+        "III and IV only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements I, II and IV are correct. The action spectrum shows photosynthesis rate vs wavelength; absorption spectrum shows light absorbed. The action spectrum is broader than chlorophyll a's absorption spectrum because accessory pigments also contribute. Statement III is incorrect; the action spectrum matches the combined absorption of ALL pigments, not just chlorophyll a alone.",
@@ -1498,10 +1498,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Consider the following statements about the Hill reaction:\nI. Robert Hill demonstrated that isolated chloroplasts can evolve O2.\nII. The Hill reaction requires CO2.\nIII. An artificial electron acceptor (Hill oxidant) is used.\nIV. It showed that O2 evolution and CO2 fixation are separate processes.\nWhich statements are correct?",
       "options": [
-        "B) I, II, III and IV",
-        "C) I and III only",
-        "A) I, III and IV only",
-        "D) I, II and IV only"
+        "I, II, III and IV",
+        "I and III only",
+        "I, III and IV only",
+        "I, II and IV only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements I, III and IV are correct. Hill showed isolated chloroplasts evolve O2 using artificial electron acceptors. This demonstrated that O2 evolution and CO2 fixation are independent. Statement II is incorrect; the Hill reaction does NOT require CO2 — that was the key finding.",
@@ -1524,10 +1524,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Which of the following statements about limiting factors of photosynthesis are correct?\nI. At low light intensity, light is the limiting factor.\nII. At high light intensity, CO2 may become the limiting factor.\nIII. At very high temperatures, enzymes get denatured reducing photosynthesis.\nIV. Water is never a limiting factor for photosynthesis.\nSelect the correct option:",
       "options": [
-        "C) I and II only",
-        "A) I, II and III only",
-        "B) I, II, III and IV",
-        "D) I, III and IV only"
+        "I and II only",
+        "I, II and III only",
+        "I, II, III and IV",
+        "I, III and IV only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements I, II and III are correct. Light limits at low intensity; CO2 becomes limiting at high light; high temperatures denature photosynthetic enzymes. Statement IV is incorrect; water can be a limiting factor since drought causes stomatal closure, reducing CO2 entry and directly affecting photolysis.",
@@ -1551,10 +1551,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following scientists with their contributions:\nColumn I: (P) Joseph Priestley (Q) Jan Ingenhousz (R) Melvin Calvin (S) Robert Hill\nColumn II: (i) Discovered the Calvin cycle using 14C (ii) Showed sunlight is essential for purification of air (iii) Demonstrated O2 evolution by isolated chloroplasts (iv) Discovered that plants purify air",
       "options": [
-        "B) P-ii, Q-iv, R-iii, S-i",
-        "D) P-ii, Q-iv, R-i, S-iii",
-        "C) P-iv, Q-ii, R-iii, S-i",
-        "A) P-iv, Q-ii, R-i, S-iii"
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iv, Q-ii, R-iii, S-i",
+        "P-iv, Q-ii, R-i, S-iii"
       ],
       "correctAnswer": "D",
       "explanation": "Joseph Priestley (P-iv) discovered that plants can purify air using the bell jar experiment. Jan Ingenhousz (Q-ii) showed that sunlight is essential for this air purification. Melvin Calvin (R-i) elucidated the C3 cycle using radioactive 14CO2. Robert Hill (S-iii) demonstrated O2 evolution by isolated chloroplasts (Hill reaction).",
@@ -1577,10 +1577,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following with their locations in the chloroplast:\nColumn I: (P) Light reactions (Q) Calvin cycle (R) Photolysis of water (S) ATP synthase\nColumn II: (i) Stroma (ii) Thylakoid membrane (iii) Thylakoid lumen (inner side) (iv) Thylakoid membrane (CF0-CF1 complex)",
       "options": [
-        "B) P-i, Q-ii, R-iv, S-iii",
-        "C) P-ii, Q-iii, R-i, S-iv",
-        "A) P-ii, Q-i, R-iii, S-iv",
-        "D) P-iv, Q-i, R-ii, S-iii"
+        "P-i, Q-ii, R-iv, S-iii",
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-iv, Q-i, R-ii, S-iii"
       ],
       "correctAnswer": "C",
       "explanation": "Light reactions (P-ii) occur on thylakoid membranes. Calvin cycle (Q-i) occurs in the stroma. Photolysis of water (R-iii) takes place on the inner side of the thylakoid (lumen side). ATP synthase (S-iv) is the CF0-CF1 complex spanning the thylakoid membrane.",
@@ -1603,10 +1603,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the electron carriers with their position in the Z-scheme:\nColumn I: (P) Plastoquinone (PQ) (Q) Plastocyanin (PC) (R) Ferredoxin (Fd) (S) Cytochrome b6f complex\nColumn II: (i) Between PS II and Cyt b6f (ii) Between Cyt b6f and PS I (iii) After PS I, before NADP+ reductase (iv) Between PQ and PC",
       "options": [
-        "C) P-i, Q-iii, R-ii, S-iv",
-        "A) P-i, Q-ii, R-iii, S-iv",
-        "D) P-ii, Q-iv, R-i, S-iii",
-        "B) P-iv, Q-ii, R-iii, S-i"
+        "P-i, Q-iii, R-ii, S-iv",
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iv, Q-ii, R-iii, S-i"
       ],
       "correctAnswer": "B",
       "explanation": "In the Z-scheme: Plastoquinone (P-i) accepts electrons from PS II and passes them to cytochrome b6f. Plastocyanin (Q-ii) transfers electrons from cyt b6f to PS I. Ferredoxin (R-iii) accepts electrons from PS I and passes them to NADP+ reductase. Cytochrome b6f complex (S-iv) is between PQ and PC.",
@@ -1629,10 +1629,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following types of photosynthesis with their characteristics:\nColumn I: (P) C3 pathway (Q) C4 pathway (R) CAM pathway\nColumn II: (i) Spatial separation of initial and final CO2 fixation (ii) Temporal separation of CO2 fixation (iii) Only RuBisCO-mediated CO2 fixation",
       "options": [
-        "C) P-iii, Q-ii, R-i",
-        "D) P-ii, Q-i, R-iii",
-        "B) P-i, Q-iii, R-ii",
-        "A) P-iii, Q-i, R-ii"
+        "P-iii, Q-ii, R-i",
+        "P-ii, Q-i, R-iii",
+        "P-i, Q-iii, R-ii",
+        "P-iii, Q-i, R-ii"
       ],
       "correctAnswer": "D",
       "explanation": "C3 pathway (P-iii) uses only RuBisCO for CO2 fixation in mesophyll cells. C4 pathway (Q-i) has spatial separation: initial fixation by PEPcase in mesophyll, final fixation by RuBisCO in bundle sheath. CAM pathway (R-ii) has temporal separation: CO2 fixed at night by PEPcase, used in Calvin cycle during day.",
@@ -1655,10 +1655,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following photosynthetic pigments with their colours:\nColumn I: (P) Chlorophyll a (Q) Chlorophyll b (R) Carotene (S) Xanthophyll\nColumn II: (i) Yellow (ii) Yellow-green (iii) Blue-green (iv) Orange-yellow",
       "options": [
-        "C) P-iii, Q-ii, R-i, S-iv",
-        "B) P-ii, Q-iii, R-i, S-iv",
-        "A) P-iii, Q-ii, R-iv, S-i",
-        "D) P-iv, Q-ii, R-iii, S-i"
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-iii, Q-ii, R-iv, S-i",
+        "P-iv, Q-ii, R-iii, S-i"
       ],
       "correctAnswer": "C",
       "explanation": "Chlorophyll a (P-iii) is blue-green. Chlorophyll b (Q-ii) is yellow-green. Carotene (R-iv) is orange-yellow. Xanthophyll (S-i) is yellow. These pigments together make up the photosynthetic pigment system in higher plants.",
@@ -1681,10 +1681,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following with the correct comparison between C3 and C4 plants:\nColumn I: (P) Primary CO2 acceptor (Q) First stable product (R) Photorespiration (S) CO2 compensation point\nColumn II (C3 / C4): (i) RuBP / PEP (ii) 3-PGA / OAA (iii) High / Negligible (iv) High / Low",
       "options": [
-        "C) P-i, Q-ii, R-iv, S-iii",
-        "A) P-i, Q-ii, R-iii, S-iv",
-        "D) P-ii, Q-i, R-iii, S-iv",
-        "B) P-ii, Q-i, R-iv, S-iii"
+        "P-i, Q-ii, R-iv, S-iii",
+        "P-i, Q-ii, R-iii, S-iv",
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-ii, Q-i, R-iv, S-iii"
       ],
       "correctAnswer": "B",
       "explanation": "Primary CO2 acceptor (P-i): RuBP in C3, PEP in C4. First stable product (Q-ii): 3-PGA in C3, OAA in C4. Photorespiration (R-iii): high in C3, negligible in C4. CO2 compensation point (S-iv): high in C3 (~50 ppm), low in C4 (~5 ppm).",
@@ -1707,10 +1707,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following stages of the Calvin cycle with their requirements:\nColumn I: (P) Carboxylation (Q) Reduction (R) Regeneration\nColumn II: (i) ATP only (ii) ATP and NADPH (iii) RuBisCO enzyme",
       "options": [
-        "B) P-ii, Q-iii, R-i",
-        "A) P-iii, Q-ii, R-i",
-        "D) P-i, Q-ii, R-iii",
-        "C) P-iii, Q-i, R-ii"
+        "P-ii, Q-iii, R-i",
+        "P-iii, Q-ii, R-i",
+        "P-i, Q-ii, R-iii",
+        "P-iii, Q-i, R-ii"
       ],
       "correctAnswer": "B",
       "explanation": "Carboxylation (P-iii) requires RuBisCO to fix CO2 to RuBP. Reduction (Q-ii) requires both ATP and NADPH to reduce 3-PGA to G3P. Regeneration (R-i) requires only ATP to regenerate RuBP from G3P.",
@@ -1733,10 +1733,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following types of photophosphorylation with their characteristics:\nColumn I: (P) Cyclic photophosphorylation (Q) Non-cyclic photophosphorylation\nColumn II: (i) Involves PS I and PS II, produces ATP + NADPH + O2 (ii) Involves only PS I, produces only ATP",
       "options": [
-        "B) P-i, Q-ii",
-        "A) P-ii, Q-i",
-        "D) P-ii, Q-ii",
-        "C) Both are same"
+        "P-i, Q-ii",
+        "P-ii, Q-i",
+        "P-ii, Q-ii",
+        "Both are same"
       ],
       "correctAnswer": "B",
       "explanation": "Cyclic photophosphorylation (P-ii) involves only PS I and produces only ATP. Non-cyclic photophosphorylation (Q-i) involves both PS I and PS II, and produces ATP, NADPH, and O2 (from photolysis of water).",
@@ -1758,10 +1758,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the organelles involved in photorespiration with their functions:\nColumn I: (P) Chloroplast (Q) Peroxisome (R) Mitochondria\nColumn II: (i) Glycine to serine conversion with CO2 release (ii) RuBisCO oxygenase produces phosphoglycolate (iii) Glycolate to glyoxylate to glycine conversion",
       "options": [
-        "D) P-i, Q-iii, R-ii",
-        "B) P-iii, Q-ii, R-i",
-        "A) P-ii, Q-iii, R-i",
-        "C) P-ii, Q-i, R-iii"
+        "P-i, Q-iii, R-ii",
+        "P-iii, Q-ii, R-i",
+        "P-ii, Q-iii, R-i",
+        "P-ii, Q-i, R-iii"
       ],
       "correctAnswer": "C",
       "explanation": "In photorespiration: Chloroplast (P-ii) — RuBisCO acts as oxygenase, producing phosphoglycolate which is converted to glycolate. Peroxisome (Q-iii) — glycolate is oxidised to glyoxylate and then transaminated to glycine. Mitochondria (R-i) — two glycine molecules combine to form serine with release of CO2 and NH3.",
@@ -1784,10 +1784,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "How many of the following are products of non-cyclic photophosphorylation?\n(a) ATP\n(b) NADPH\n(c) O2\n(d) CO2\n(e) Glucose\n(f) H2O",
       "options": [
-        "B) Three",
-        "D) Five",
-        "A) Two",
-        "C) Four"
+        "Three",
+        "Five",
+        "Two",
+        "Four"
       ],
       "correctAnswer": "A",
       "explanation": "Three are products: (a) ATP is produced by chemiosmosis, (b) NADPH is produced when NADP+ accepts electrons from PS I via ferredoxin, and (c) O2 is released from photolysis of water at PS II. CO2 and glucose are related to Calvin cycle, not light reactions. H2O is a reactant, not a product.",
@@ -1811,10 +1811,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "How many of the following are C4 plants?\n(a) Sugarcane\n(b) Maize\n(c) Wheat\n(d) Sorghum\n(e) Rice\n(f) Amaranthus",
       "options": [
-        "D) Five",
-        "C) Four",
-        "B) Three",
-        "A) Two"
+        "Five",
+        "Four",
+        "Three",
+        "Two"
       ],
       "correctAnswer": "B",
       "explanation": "Four are C4 plants: (a) Sugarcane, (b) Maize, (d) Sorghum, and (f) Amaranthus. Wheat (c) and Rice (e) are C3 plants. C4 plants are mostly tropical grasses and some dicots adapted to high temperature and high light conditions.",
@@ -1837,10 +1837,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "How many of the following statements about C4 plants are correct?\n(a) They have Kranz anatomy\n(b) They show minimal photorespiration\n(c) PEP carboxylase is the initial carboxylating enzyme\n(d) Bundle sheath cells have thick walls with no intercellular spaces\n(e) Both mesophyll and bundle sheath cells have RuBisCO\n(f) They have a higher rate of photosynthesis than C3 plants at high temperatures",
       "options": [
-        "B) Four",
-        "C) Five",
-        "D) Six",
-        "A) Three"
+        "Four",
+        "Five",
+        "Six",
+        "Three"
       ],
       "correctAnswer": "B",
       "explanation": "Five are correct: (a) Kranz anatomy is characteristic, (b) photorespiration is minimal, (c) PEPcase is the initial carboxylating enzyme in mesophyll, (d) bundle sheath cells have thick walls without intercellular spaces, (f) C4 plants photosynthesize faster at high temperatures. (e) is incorrect; RuBisCO is present only in bundle sheath cells of C4 plants, not in mesophyll.",
@@ -1863,10 +1863,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "How many of the following contribute to the proton gradient across the thylakoid membrane?\n(a) Photolysis of water releasing H+ in the lumen\n(b) Transport of H+ from stroma to lumen by plastoquinone\n(c) Removal of H+ from stroma during NADP+ reduction\n(d) ATP synthesis by ATP synthase\n(e) Electron transport through cytochrome b6f complex",
       "options": [
-        "B) Three",
-        "D) Five",
-        "A) Two",
-        "C) Four"
+        "Three",
+        "Five",
+        "Two",
+        "Four"
       ],
       "correctAnswer": "A",
       "explanation": "Three contribute to building the gradient: (a) Photolysis of water releases H+ inside the lumen, (b) Plastoquinone carries H+ from stroma to lumen, and (c) NADP+ reduction removes H+ from the stroma. (d) ATP synthesis uses (dissipates) the gradient, not builds it. (e) Cyt b6f transfers electrons but it is the PQ that does the H+ transport.",
@@ -1889,10 +1889,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "How many of the following are accessory pigments in photosynthesis?\n(a) Chlorophyll a\n(b) Chlorophyll b\n(c) Carotene\n(d) Xanthophyll\n(e) Phycocyanin (in cyanobacteria)\n(f) Phycoerythrin (in red algae)",
       "options": [
-        "C) Five",
-        "D) Six",
-        "A) Three",
-        "B) Four"
+        "Five",
+        "Six",
+        "Three",
+        "Four"
       ],
       "correctAnswer": "A",
       "explanation": "Five are accessory pigments: (b) Chlorophyll b, (c) Carotene, (d) Xanthophyll, (e) Phycocyanin, and (f) Phycoerythrin. All transfer absorbed light energy to chlorophyll a. (a) Chlorophyll a is NOT an accessory pigment — it is the primary/reaction centre pigment.",
@@ -1915,10 +1915,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "How many of the following are correct about the Calvin cycle?\n(a) It occurs in the stroma\n(b) It requires 18 ATP and 12 NADPH for one glucose\n(c) RuBisCO catalyses the carboxylation step\n(d) 3-PGA is the first stable product\n(e) G3P is the primary product that exits the cycle\n(f) It requires light directly for the enzymatic reactions",
       "options": [
-        "D) Six",
-        "C) Five",
-        "A) Three",
-        "B) Four"
+        "Six",
+        "Five",
+        "Three",
+        "Four"
       ],
       "correctAnswer": "B",
       "explanation": "Five are correct: (a) Calvin cycle is in the stroma, (b) 18 ATP + 12 NADPH for one glucose, (c) RuBisCO catalyses carboxylation, (d) 3-PGA is the first stable product, (e) G3P (triose phosphate) is the product that exits. (f) is incorrect; the Calvin cycle enzymes do not directly require light, though they indirectly depend on light reactions for ATP and NADPH.",
@@ -1941,10 +1941,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "How many of the following are CAM plants?\n(a) Opuntia (prickly pear)\n(b) Agave\n(c) Bryophyllum\n(d) Pineapple\n(e) Sugarcane\n(f) Maize",
       "options": [
-        "C) Four",
-        "A) Two",
-        "D) Five",
-        "B) Three"
+        "Four",
+        "Two",
+        "Five",
+        "Three"
       ],
       "correctAnswer": "A",
       "explanation": "Four are CAM plants: (a) Opuntia, (b) Agave, (c) Bryophyllum, and (d) Pineapple. These are succulent plants adapted to arid conditions. (e) Sugarcane and (f) Maize are C4 plants, not CAM plants.",
@@ -1967,10 +1967,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Arrange the following electron carriers in the correct sequence of electron flow during non-cyclic photophosphorylation:\n(I) Plastocyanin (PC)\n(II) Photosystem II (PS II)\n(III) Ferredoxin (Fd)\n(IV) NADP+ reductase\n(V) Plastoquinone (PQ)\n(VI) Cytochrome b6f complex\n(VII) Photosystem I (PS I)",
       "options": [
-        "D) II → V → I → VI → VII → III → IV",
-        "B) VII → III → IV → II → V → VI → I",
-        "C) II → VI → V → I → VII → IV → III",
-        "A) II → V → VI → I → VII → III → IV"
+        "II → V → I → VI → VII → III → IV",
+        "VII → III → IV → II → V → VI → I",
+        "II → VI → V → I → VII → IV → III",
+        "II → V → VI → I → VII → III → IV"
       ],
       "correctAnswer": "D",
       "explanation": "The correct sequence of non-cyclic electron flow: PS II (II) absorbs light, electrons pass to Plastoquinone (V) → Cytochrome b6f (VI) → Plastocyanin (I) → PS I (VII) absorbs light → Ferredoxin (III) → NADP+ reductase (IV) → NADPH. This is the Z-scheme of electron transport.",
@@ -1993,10 +1993,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Arrange the following steps of the Calvin cycle in the correct sequence:\n(I) CO2 combines with RuBP\n(II) 3-PGA is reduced to G3P\n(III) RuBP is regenerated\n(IV) Two molecules of 3-PGA are formed\n(V) G3P is used to form sugars or regenerate RuBP",
       "options": [
-        "A) I → IV → II → V → III",
-        "D) II → I → IV → V → III",
-        "B) IV → I → II → III → V",
-        "C) I → II → IV → V → III"
+        "I → IV → II → V → III",
+        "II → I → IV → V → III",
+        "IV → I → II → III → V",
+        "I → II → IV → V → III"
       ],
       "correctAnswer": "A",
       "explanation": "Correct sequence: CO2 is fixed to RuBP by RuBisCO (I) → Unstable 6C compound splits into two 3-PGA molecules (IV) → 3-PGA is reduced to G3P using ATP and NADPH (II) → G3P either exits the cycle as sugar or is used to regenerate RuBP (V) → RuBP is regenerated using ATP (III).",
@@ -2019,10 +2019,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Arrange the following events in the C4 pathway in the correct sequence:\n(I) PEP carboxylase fixes CO2 to PEP in mesophyll cells\n(II) OAA is converted to malate\n(III) Malate moves to bundle sheath cells\n(IV) Malate is decarboxylated to release CO2\n(V) CO2 enters the Calvin cycle via RuBisCO\n(VI) Pyruvate returns to mesophyll cells",
       "options": [
-        "B) II → I → III → V → IV → VI",
-        "C) I → III → II → IV → V → VI",
-        "D) I → II → IV → III → V → VI",
-        "A) I → II → III → IV → V → VI"
+        "II → I → III → V → IV → VI",
+        "I → III → II → IV → V → VI",
+        "I → II → IV → III → V → VI",
+        "I → II → III → IV → V → VI"
       ],
       "correctAnswer": "D",
       "explanation": "C4 pathway sequence: PEPcase fixes CO2 to PEP forming OAA in mesophyll (I) → OAA is reduced to malate (II) → Malate moves to bundle sheath cells (III) → Malate is decarboxylated releasing CO2 and pyruvate (IV) → CO2 enters Calvin cycle (V) → Pyruvate returns to mesophyll to regenerate PEP (VI).",
@@ -2045,10 +2045,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Arrange the following discoveries in the history of photosynthesis in chronological order:\n(I) Joseph Priestley discovered that plants purify air\n(II) Jan Ingenhousz showed sunlight is necessary\n(III) Julius von Sachs showed glucose forms in green parts\n(IV) T.W. Engelmann used action spectrum with Cladophora\n(V) Cornelius van Niel proposed water as source of H in photosynthesis",
       "options": [
-        "C) I → III → II → IV → V",
-        "B) II → I → III → V → IV",
-        "A) I → II → III → IV → V",
-        "D) I → II → IV → III → V"
+        "I → III → II → IV → V",
+        "II → I → III → V → IV",
+        "I → II → III → IV → V",
+        "I → II → IV → III → V"
       ],
       "correctAnswer": "C",
       "explanation": "Chronological order: Priestley (1770) discovered plant air purification (I) → Ingenhousz (1779) showed sunlight is essential (II) → von Sachs (1854) showed glucose forms in green parts (III) → Engelmann (1888) did the action spectrum experiment (IV) → van Niel (1931) proposed water as H source (V).",
@@ -2071,10 +2071,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Arrange the following events of chemiosmotic ATP synthesis in chloroplasts in the correct sequence:\n(I) H+ accumulates in the thylakoid lumen\n(II) Proton gradient (pH difference) is established across thylakoid membrane\n(III) H+ flows through CF0 channel of ATP synthase\n(IV) CF1 catalytic head synthesises ATP from ADP + Pi\n(V) Light-driven electron transport and water splitting occur",
       "options": [
-        "A) V → I → II → III → IV",
-        "C) II → I → V → IV → III",
-        "B) I → V → II → III → IV",
-        "D) V → II → I → III → IV"
+        "V → I → II → III → IV",
+        "II → I → V → IV → III",
+        "I → V → II → III → IV",
+        "V → II → I → III → IV"
       ],
       "correctAnswer": "A",
       "explanation": "Correct sequence: Light-driven ETC and water splitting occur (V) → H+ accumulates in lumen from photolysis and PQ transport (I) → Proton gradient is established (II) → H+ flows down gradient through CF0 channel (III) → CF1 head catalyses ATP synthesis on stromal side (IV).",
@@ -2097,10 +2097,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Arrange the following in the correct sequence of the photorespiratory pathway:\n(I) RuBisCO oxygenase produces phosphoglycolate in chloroplast\n(II) Phosphoglycolate is converted to glycolate\n(III) Glycolate moves to peroxisome and is converted to glyoxylate then glycine\n(IV) Glycine moves to mitochondria where two glycines form serine + CO2\n(V) Serine returns to peroxisome and then to chloroplast",
       "options": [
-        "A) I → II → III → IV → V",
-        "D) III → I → II → IV → V",
-        "B) II → I → III → V → IV",
-        "C) I → III → II → IV → V"
+        "I → II → III → IV → V",
+        "III → I → II → IV → V",
+        "II → I → III → V → IV",
+        "I → III → II → IV → V"
       ],
       "correctAnswer": "A",
       "explanation": "Photorespiration sequence: RuBisCO oxygenase acts on RuBP producing phosphoglycolate (I) → Phosphoglycolate is dephosphorylated to glycolate (II) → Glycolate moves to peroxisome and is converted to glyoxylate and then glycine (III) → Glycine goes to mitochondria for serine formation with CO2 release (IV) → Serine returns via peroxisome to chloroplast (V).",
@@ -2123,10 +2123,10 @@
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Arrange the following in the correct order of the CAM pathway during a full day-night cycle:\n(I) Stomata open at night\n(II) CO2 is fixed by PEP carboxylase to form OAA\n(III) OAA is converted to malic acid and stored in vacuoles\n(IV) Stomata close during the day\n(V) Malic acid is decarboxylated releasing CO2 for Calvin cycle",
       "options": [
-        "C) I → III → II → IV → V",
-        "D) IV → I → II → III → V",
-        "B) IV → V → I → II → III",
-        "A) I → II → III → IV → V"
+        "I → III → II → IV → V",
+        "IV → I → II → III → V",
+        "IV → V → I → II → III",
+        "I → II → III → IV → V"
       ],
       "correctAnswer": "D",
       "explanation": "CAM sequence: At night, stomata open (I) → CO2 is fixed by PEPcase forming OAA (II) → OAA is converted to malic acid and stored in vacuoles (III) → During the day, stomata close to conserve water (IV) → Malic acid is decarboxylated and CO2 enters Calvin cycle (V).",
@@ -2148,13 +2148,23 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The absorption spectrum of chlorophyll shows maximum absorption in:",
-      "options": ["A) Green and yellow regions", "B) Blue-violet and red regions", "C) Orange and yellow regions", "D) Infrared region"],
+      "options": [
+        "Green and yellow regions",
+        "Blue-violet and red regions",
+        "Orange and yellow regions",
+        "Infrared region"
+      ],
       "correctAnswer": "B",
       "explanation": "Chlorophyll absorbs light maximally in the blue-violet (around 430 nm) and red (around 660-680 nm) regions of the visible spectrum. Green light is mostly reflected, which is why leaves appear green.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["absorption spectrum", "chlorophyll", "blue-violet", "red"],
+      "tags": [
+        "absorption spectrum",
+        "chlorophyll",
+        "blue-violet",
+        "red"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2165,13 +2175,23 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Julius von Sachs demonstrated that:",
-      "options": ["A) Plants purify air", "B) Sunlight is essential for photosynthesis", "C) Green parts of plants produce glucose which is stored as starch", "D) Oxygen comes from water"],
+      "options": [
+        "Plants purify air",
+        "Sunlight is essential for photosynthesis",
+        "Green parts of plants produce glucose which is stored as starch",
+        "Oxygen comes from water"
+      ],
       "correctAnswer": "C",
       "explanation": "Julius von Sachs (1854) provided evidence that glucose is produced during photosynthesis in green parts of the plant. He showed that starch grains formed in the green parts in the presence of light, proving the site and product of photosynthesis.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["von Sachs", "glucose", "starch", "green parts"],
+      "tags": [
+        "von Sachs",
+        "glucose",
+        "starch",
+        "green parts"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2182,13 +2202,23 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "The antenna or light-harvesting complex (LHC) in photosynthesis:",
-      "options": ["A) Fixes CO2 into organic molecules", "B) Absorbs light energy and transfers it to the reaction centre", "C) Splits water molecules", "D) Synthesises ATP directly"],
+      "options": [
+        "Fixes CO2 into organic molecules",
+        "Absorbs light energy and transfers it to the reaction centre",
+        "Splits water molecules",
+        "Synthesises ATP directly"
+      ],
       "correctAnswer": "B",
       "explanation": "The antenna or light-harvesting complex (LHC) consists of hundreds of pigment molecules (chlorophylls a, b, carotenoids, xanthophylls) that absorb light energy and funnel it to the reaction centre chlorophyll a through resonance energy transfer.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["antenna complex", "LHC", "energy transfer", "reaction centre"],
+      "tags": [
+        "antenna complex",
+        "LHC",
+        "energy transfer",
+        "reaction centre"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2199,13 +2229,22 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): The Calvin cycle is also called the C3 cycle.\nReason (R): The first stable product of CO2 fixation in the Calvin cycle is 3-phosphoglyceric acid (3-PGA), a 3-carbon compound.",
-      "options": ["A) Both A and R are true and R is the correct explanation of A", "B) Both A and R are true but R is NOT the correct explanation of A", "C) A is true but R is false", "D) A is false but R is true"],
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. The Calvin cycle is called the C3 cycle because the first stable product of CO2 fixation is 3-PGA, which is a 3-carbon (C3) compound formed when RuBisCO fixes CO2 to RuBP.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["Calvin cycle", "C3 cycle", "3-PGA"],
+      "tags": [
+        "Calvin cycle",
+        "C3 cycle",
+        "3-PGA"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2216,13 +2255,23 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): Melvin Calvin used radioactive carbon (14C) to trace the path of carbon in photosynthesis.\nReason (R): Calvin used the alga Chlorella and 14CO2 to identify the intermediates of the dark reactions.",
-      "options": ["A) Both A and R are true and R is the correct explanation of A", "B) Both A and R are true but R is NOT the correct explanation of A", "C) A is true but R is false", "D) A is false but R is true"],
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. Melvin Calvin used 14CO2 with the unicellular alga Chlorella in his experiments. By exposing Chlorella to 14CO2 for different time periods and analysing the radioactive compounds formed, he traced the complete pathway of carbon fixation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["Melvin Calvin", "14C", "Chlorella", "radioactive tracer"],
+      "tags": [
+        "Melvin Calvin",
+        "14C",
+        "Chlorella",
+        "radioactive tracer"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2233,13 +2282,22 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Assertion (A): C4 plants are more productive than C3 plants in tropical conditions.\nReason (R): C4 plants have higher CO2 compensation point and higher photorespiration than C3 plants.",
-      "options": ["A) Both A and R are true and R is the correct explanation of A", "B) Both A and R are true but R is NOT the correct explanation of A", "C) A is true but R is false", "D) A is false but R is true"],
+      "options": [
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is NOT the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
+      ],
       "correctAnswer": "C",
       "explanation": "The assertion is true; C4 plants are more productive in tropical conditions due to their ability to concentrate CO2 and minimize photorespiration. The reason is false because C4 plants have a LOWER (not higher) CO2 compensation point and negligible (not higher) photorespiration compared to C3 plants.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["C4 productivity", "compensation point", "photorespiration"],
+      "tags": [
+        "C4 productivity",
+        "compensation point",
+        "photorespiration"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2250,13 +2308,22 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Consider the following statements about Photosystem I (PS I):\nI. Its reaction centre is P700.\nII. It is located mainly in the stroma lamellae.\nIII. It is involved in both cyclic and non-cyclic photophosphorylation.\nIV. It directly splits water to release O2.\nSelect the correct statements:",
-      "options": ["D) II and IV only", "B) I, II, III and IV", "C) I and III only", "A) I, II and III only"],
+      "options": [
+        "II and IV only",
+        "I, II, III and IV",
+        "I and III only",
+        "I, II and III only"
+      ],
       "correctAnswer": "D",
       "explanation": "Statements I, II and III are correct. PS I has P700 as reaction centre, is mainly in stroma lamellae, and participates in both cyclic and non-cyclic electron flow. Statement IV is incorrect; water splitting occurs at PS II, not PS I.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["PS I", "P700", "stroma lamellae"],
+      "tags": [
+        "PS I",
+        "P700",
+        "stroma lamellae"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2267,13 +2334,23 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Which of the following statements about Photosystem II (PS II) are correct?\nI. Its reaction centre is P680.\nII. It is located mainly in the grana thylakoids.\nIII. It is the site of water splitting (photolysis).\nIV. It is involved only in cyclic photophosphorylation.\nSelect the correct option:",
-      "options": ["D) I, II and IV only", "B) I, II, III and IV", "C) I and III only", "A) I, II and III only"],
+      "options": [
+        "I, II and IV only",
+        "I, II, III and IV",
+        "I and III only",
+        "I, II and III only"
+      ],
       "correctAnswer": "D",
       "explanation": "Statements I, II and III are correct. PS II has P680 as reaction centre, is predominantly in grana thylakoids, and is where photolysis of water occurs. Statement IV is incorrect; PS II is involved in non-cyclic photophosphorylation, NOT cyclic (which involves only PS I).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["PS II", "P680", "grana", "photolysis"],
+      "tags": [
+        "PS II",
+        "P680",
+        "grana",
+        "photolysis"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2284,13 +2361,22 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Which of the following statements about RuBisCO are correct?\nI. It is the most abundant protein on Earth.\nII. It has both carboxylase and oxygenase activity.\nIII. Its oxygenase activity leads to the Calvin cycle.\nIV. It makes up about 16% of chloroplast protein.\nV. It has a relatively slow catalytic rate.\nSelect the correct option:",
-      "options": ["D) II, III and IV only", "B) I, II, III, IV and V", "C) I and II only", "A) I, II, IV and V only"],
+      "options": [
+        "II, III and IV only",
+        "I, II, III, IV and V",
+        "I and II only",
+        "I, II, IV and V only"
+      ],
       "correctAnswer": "D",
       "explanation": "Statements I, II, IV and V are correct. RuBisCO is the most abundant enzyme, has dual activity, constitutes about 16% of chloroplast protein, and is catalytically slow. Statement III is incorrect; the oxygenase activity leads to photorespiration (not the Calvin cycle). The carboxylase activity drives the Calvin cycle.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["RuBisCO", "dual activity", "most abundant"],
+      "tags": [
+        "RuBisCO",
+        "dual activity",
+        "most abundant"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2301,13 +2387,22 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Consider the following about the Engelmann experiment:\nI. He used the filamentous alga Cladophora and aerobic bacteria.\nII. Bacteria accumulated more near cells exposed to blue and red light.\nIII. The experiment demonstrated the action spectrum of photosynthesis.\nIV. It proved that green light is most effective for photosynthesis.\nSelect the correct statements:",
-      "options": ["D) II and IV only", "B) I, II, III and IV", "C) I and III only", "A) I, II and III only"],
+      "options": [
+        "II and IV only",
+        "I, II, III and IV",
+        "I and III only",
+        "I, II and III only"
+      ],
       "correctAnswer": "D",
       "explanation": "Statements I, II and III are correct. Engelmann used Cladophora with aerobic bacteria that migrated toward areas of maximum O2 evolution. Bacteria clustered near blue and red light regions, demonstrating the action spectrum. Statement IV is incorrect; green light was least effective.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["Engelmann experiment", "action spectrum", "Cladophora"],
+      "tags": [
+        "Engelmann experiment",
+        "action spectrum",
+        "Cladophora"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2318,13 +2413,22 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Read the following statements about the C4 pathway:\nI. C4 plants use PEP carboxylase in mesophyll cells for initial CO2 fixation.\nII. The C4 acid (malate) moves from mesophyll to bundle sheath cells.\nIII. RuBisCO operates only in the bundle sheath cells of C4 plants.\nIV. The C4 pathway requires additional ATP for regeneration of PEP.\nHow many are correct?",
-      "options": ["A) One", "B) Two", "C) Three", "D) Four"],
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
       "correctAnswer": "D",
       "explanation": "All four statements are correct. PEPcase fixes CO2 in mesophyll cells (I). Malate moves to bundle sheath (II). RuBisCO is confined to bundle sheath cells (III). The C4 pathway requires additional ATP for converting pyruvate back to PEP in mesophyll cells (IV), making C4 photosynthesis more ATP-demanding than C3.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["C4 pathway", "PEP carboxylase", "RuBisCO location"],
+      "tags": [
+        "C4 pathway",
+        "PEP carboxylase",
+        "RuBisCO location"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2335,13 +2439,23 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following with their locations in C4 plants:\nColumn I: (P) PEP carboxylase (Q) RuBisCO (R) Calvin cycle (S) Initial CO2 fixation\nColumn II: (i) Bundle sheath cells (ii) Mesophyll cells",
-      "options": ["D) P-i, Q-i, R-ii, S-ii", "B) P-i, Q-ii, R-ii, S-i", "C) P-ii, Q-ii, R-i, S-i", "A) P-ii, Q-i, R-i, S-ii"],
+      "options": [
+        "P-i, Q-i, R-ii, S-ii",
+        "P-i, Q-ii, R-ii, S-i",
+        "P-ii, Q-ii, R-i, S-i",
+        "P-ii, Q-i, R-i, S-ii"
+      ],
       "correctAnswer": "D",
       "explanation": "In C4 plants: PEP carboxylase (P-ii) is in mesophyll cells where initial CO2 fixation (S-ii) occurs. RuBisCO (Q-i) and the Calvin cycle (R-i) operate in the bundle sheath cells where CO2 is released from C4 acids and refixed.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["C4 plants", "cell locations", "PEPcase", "RuBisCO"],
+      "tags": [
+        "C4 plants",
+        "cell locations",
+        "PEPcase",
+        "RuBisCO"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2352,13 +2466,22 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following products with their source reactions:\nColumn I: (P) O2 (Q) NADPH (R) ATP (via chemiosmosis) (S) Glucose\nColumn II: (i) Calvin cycle (ii) NADP+ reductase at PS I (iii) ATP synthase on thylakoid (iv) Photolysis of water at PS II",
-      "options": ["D) P-iii, Q-ii, R-iv, S-i", "B) P-ii, Q-iv, R-i, S-iii", "C) P-iv, Q-iii, R-ii, S-i", "A) P-iv, Q-ii, R-iii, S-i"],
+      "options": [
+        "P-iii, Q-ii, R-iv, S-i",
+        "P-ii, Q-iv, R-i, S-iii",
+        "P-iv, Q-iii, R-ii, S-i",
+        "P-iv, Q-ii, R-iii, S-i"
+      ],
       "correctAnswer": "D",
       "explanation": "O2 (P-iv) is released from photolysis of water at PS II. NADPH (Q-ii) is produced by NADP+ reductase using electrons from PS I. ATP (R-iii) is synthesised by ATP synthase on the thylakoid membrane. Glucose (S-i) is the final product of the Calvin cycle.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["products", "source reactions", "light reactions"],
+      "tags": [
+        "products",
+        "source reactions",
+        "light reactions"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2369,13 +2492,22 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following photosynthesis experiments with their conclusions:\nColumn I: (P) Priestley's experiment (Q) Ingenhousz's experiment (R) Hill reaction (S) Ruben and Kamen experiment\nColumn II: (i) O2 comes from water, not CO2 (ii) Plants purify air (iii) Sunlight is essential for air purification by plants (iv) O2 evolution can occur without CO2 fixation",
-      "options": ["A) P-ii, Q-iii, R-iv, S-i", "B) P-iii, Q-ii, R-i, S-iv", "C) P-ii, Q-iii, R-i, S-iv", "D) P-iv, Q-iii, R-ii, S-i"],
+      "options": [
+        "P-ii, Q-iii, R-iv, S-i",
+        "P-iii, Q-ii, R-i, S-iv",
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-iv, Q-iii, R-ii, S-i"
+      ],
       "correctAnswer": "A",
       "explanation": "Priestley (P-ii) showed plants can purify air. Ingenhousz (Q-iii) demonstrated sunlight is essential for this. Hill reaction (R-iv) showed isolated chloroplasts can evolve O2 without CO2 fixation. Ruben and Kamen (S-i) used 18O to prove O2 comes from water.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["experiments", "conclusions", "history of photosynthesis"],
+      "tags": [
+        "experiments",
+        "conclusions",
+        "history of photosynthesis"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2386,13 +2518,22 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following limiting factors with the conditions under which they become limiting:\nColumn I: (P) Light intensity (Q) CO2 concentration (R) Temperature (S) Water\nColumn II: (i) Dense forest floor or cloudy conditions (ii) Very high temperatures denaturing enzymes (iii) Bright sunny day with adequate water (iv) Drought causing stomatal closure",
-      "options": ["D) P-ii, Q-iii, R-i, S-iv", "B) P-iii, Q-i, R-iv, S-ii", "C) P-i, Q-iv, R-ii, S-iii", "A) P-i, Q-iii, R-ii, S-iv"],
+      "options": [
+        "P-ii, Q-iii, R-i, S-iv",
+        "P-iii, Q-i, R-iv, S-ii",
+        "P-i, Q-iv, R-ii, S-iii",
+        "P-i, Q-iii, R-ii, S-iv"
+      ],
       "correctAnswer": "D",
       "explanation": "Light intensity (P-i) limits on forest floor or cloudy conditions. CO2 (Q-iii) limits on bright sunny days when other factors are adequate. Temperature (R-ii) limits at very high temperatures due to enzyme denaturation. Water (S-iv) limits during drought as stomata close reducing CO2 entry.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["limiting factors", "conditions", "Blackman's law"],
+      "tags": [
+        "limiting factors",
+        "conditions",
+        "Blackman's law"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2403,13 +2544,22 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following key molecules with the number of carbon atoms they contain:\nColumn I: (P) RuBP (Q) 3-PGA (R) OAA (in C4 pathway) (S) G3P (triose phosphate)\nColumn II: (i) 3 carbons (ii) 4 carbons (iii) 5 carbons (iv) 3 carbons",
-      "options": ["D) P-ii, Q-i, R-iii, S-iv", "B) P-i, Q-iii, R-iv, S-ii", "C) P-iii, Q-iv, R-ii, S-i", "A) P-iii, Q-i, R-ii, S-iv"],
+      "options": [
+        "P-ii, Q-i, R-iii, S-iv",
+        "P-i, Q-iii, R-iv, S-ii",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-iii, Q-i, R-ii, S-iv"
+      ],
       "correctAnswer": "D",
       "explanation": "RuBP (P-iii) is a 5-carbon sugar bisphosphate, the CO2 acceptor in Calvin cycle. 3-PGA (Q-i) is a 3-carbon compound, the first stable product. OAA (R-ii) is a 4-carbon compound, the first product in C4 pathway. G3P (S-iv) is a 3-carbon triose phosphate produced during the reduction phase.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["carbon atoms", "key molecules", "Calvin cycle"],
+      "tags": [
+        "carbon atoms",
+        "key molecules",
+        "Calvin cycle"
+      ],
       "neetWeightage": "HIGH"
     },
     {
@@ -2420,13 +2570,22 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "Match the following CAM plants with their families:\nColumn I: (P) Opuntia (Q) Agave (R) Bryophyllum (S) Pineapple\nColumn II: (i) Bromeliaceae (ii) Cactaceae (iii) Crassulaceae (iv) Asparagaceae",
-      "options": ["A) P-ii, Q-iv, R-iii, S-i", "B) P-iii, Q-iv, R-ii, S-i", "C) P-ii, Q-iii, R-iv, S-i", "D) P-iv, Q-ii, R-iii, S-i"],
+      "options": [
+        "P-ii, Q-iv, R-iii, S-i",
+        "P-iii, Q-iv, R-ii, S-i",
+        "P-ii, Q-iii, R-iv, S-i",
+        "P-iv, Q-ii, R-iii, S-i"
+      ],
       "correctAnswer": "A",
       "explanation": "Opuntia (P-ii) belongs to Cactaceae. Agave (Q-iv) belongs to Asparagaceae. Bryophyllum (R-iii) belongs to Crassulaceae (the family after which CAM is named). Pineapple (S-i) belongs to Bromeliaceae. All are succulent CAM plants adapted to arid conditions.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
-      "tags": ["CAM plants", "families", "succulents"],
+      "tags": [
+        "CAM plants",
+        "families",
+        "succulents"
+      ],
       "neetWeightage": "MEDIUM"
     },
     {
@@ -2437,13 +2596,22 @@
       "ncertChapter": 13,
       "ncertChapterName": "Photosynthesis in Higher Plants",
       "question": "How many of the following are differences between cyclic and non-cyclic photophosphorylation?\n(a) Cyclic involves only PS I; non-cyclic involves both PS I and PS II\n(b) O2 is evolved in non-cyclic but not in cyclic\n(c) NADPH is produced only in non-cyclic\n(d) ATP is produced only in non-cyclic\n(e) Water is the electron donor only in non-cyclic\n(f) Both occur in thylakoid membranes",
-      "options": ["A) Three", "B) Four", "C) Five", "D) Six"],
+      "options": [
+        "Three",
+        "Four",
+        "Five",
+        "Six"
+      ],
       "correctAnswer": "B",
       "explanation": "Four are correct differences: (a) cyclic uses only PS I while non-cyclic uses both, (b) O2 is evolved only in non-cyclic from photolysis, (c) NADPH is formed only in non-cyclic, (e) water donates electrons only in non-cyclic. (d) is incorrect; ATP is produced in BOTH cyclic and non-cyclic. (f) is a similarity, not a difference.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
-      "tags": ["cyclic vs non-cyclic", "differences", "counting"],
+      "tags": [
+        "cyclic vs non-cyclic",
+        "differences",
+        "counting"
+      ],
       "neetWeightage": "HIGH"
     }
   ]

@@ -15,10 +15,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The structural and functional unit of the nervous system is the:",
       "options": [
-        "B) Neuron",
-        "A) Nephron",
-        "C) Sarcomere",
-        "D) Alveolus"
+        "Neuron",
+        "Nephron",
+        "Sarcomere",
+        "Alveolus"
       ],
       "correctAnswer": "A",
       "explanation": "The neuron (nerve cell) is the structural and functional unit of the nervous system. It consists of a cell body (soma), dendrites (receiving processes), and an axon (transmitting process). Neurons transmit electrical signals (nerve impulses) throughout the body.",
@@ -40,10 +40,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The resting membrane potential of a neuron is approximately:",
       "options": [
-        "A) +70 mV",
-        "D) -30 mV",
-        "C) 0 mV",
-        "B) -70 mV"
+        "+70 mV",
+        "-30 mV",
+        "0 mV",
+        "-70 mV"
       ],
       "correctAnswer": "D",
       "explanation": "The resting membrane potential of a neuron is approximately -70 mV (inside negative relative to outside). This is maintained by the Na+/K+ ATPase pump (3 Na+ out, 2 K+ in) and selective permeability of the membrane to K+ ions.",
@@ -65,10 +65,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Saltatory conduction of nerve impulse occurs in:",
       "options": [
-        "B) Myelinated nerve fibres",
-        "A) Non-myelinated nerve fibres",
-        "C) Muscle fibres",
-        "D) Cardiac fibres"
+        "Myelinated nerve fibres",
+        "Non-myelinated nerve fibres",
+        "Muscle fibres",
+        "Cardiac fibres"
       ],
       "correctAnswer": "A",
       "explanation": "Saltatory conduction occurs in myelinated nerve fibres where the impulse jumps from one node of Ranvier to the next, skipping the myelinated internodal segments. This makes conduction faster and more energy-efficient compared to continuous conduction in unmyelinated fibres.",
@@ -90,10 +90,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The myelin sheath in the peripheral nervous system is formed by:",
       "options": [
-        "D) Microglia",
-        "B) Schwann cells",
-        "A) Oligodendrocytes",
-        "C) Astrocytes"
+        "Microglia",
+        "Schwann cells",
+        "Oligodendrocytes",
+        "Astrocytes"
       ],
       "correctAnswer": "B",
       "explanation": "In the peripheral nervous system (PNS), the myelin sheath is formed by Schwann cells. Each Schwann cell myelinates a single segment of one axon. In the central nervous system (CNS), oligodendrocytes form the myelin sheath.",
@@ -115,10 +115,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The gap between two adjacent neurons where chemical transmission occurs is called:",
       "options": [
-        "A) Node of Ranvier",
-        "B) Synapse (synaptic cleft)",
-        "D) Nissl body",
-        "C) Axon hillock"
+        "Node of Ranvier",
+        "Synapse (synaptic cleft)",
+        "Nissl body",
+        "Axon hillock"
       ],
       "correctAnswer": "B",
       "explanation": "A synapse is the junction between two neurons. The synaptic cleft is the narrow gap (~20 nm) between the presynaptic and postsynaptic neurons. Neurotransmitters are released from synaptic vesicles into this cleft to transmit the signal chemically.",
@@ -140,10 +140,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The cerebrum is responsible for:",
       "options": [
-        "C) Regulating heart rate",
-        "B) Higher mental functions like thinking, memory, and speech",
-        "A) Maintaining balance and posture",
-        "D) Controlling reflexes"
+        "Regulating heart rate",
+        "Higher mental functions like thinking, memory, and speech",
+        "Maintaining balance and posture",
+        "Controlling reflexes"
       ],
       "correctAnswer": "B",
       "explanation": "The cerebrum is the largest part of the brain and is responsible for higher mental functions including thinking, reasoning, memory, speech, sensory perception, and voluntary motor actions. It has two hemispheres connected by the corpus callosum.",
@@ -165,10 +165,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The cerebellum is primarily involved in:",
       "options": [
-        "C) Regulating hunger and thirst",
-        "B) Maintaining balance, posture, and coordinating movements",
-        "D) Controlling emotions",
-        "A) Thinking and memory"
+        "Regulating hunger and thirst",
+        "Maintaining balance, posture, and coordinating movements",
+        "Controlling emotions",
+        "Thinking and memory"
       ],
       "correctAnswer": "B",
       "explanation": "The cerebellum is the second largest part of the brain, located behind the cerebrum. It is responsible for maintaining body balance and posture, coordinating voluntary muscle movements, and fine-tuning motor activities. Damage causes ataxia (loss of coordination).",
@@ -191,10 +191,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The hypothalamus regulates:",
       "options": [
-        "A) Voluntary muscle movements",
-        "D) Breathing and heart rate only",
-        "C) Vision and hearing",
-        "B) Body temperature, hunger, thirst, and circadian rhythms"
+        "Voluntary muscle movements",
+        "Breathing and heart rate only",
+        "Vision and hearing",
+        "Body temperature, hunger, thirst, and circadian rhythms"
       ],
       "correctAnswer": "D",
       "explanation": "The hypothalamus is a small region at the base of the brain (diencephalon) that regulates body temperature, hunger, thirst, sleep-wake cycles (circadian rhythms), water balance, and emotional responses. It also controls the pituitary gland.",
@@ -216,10 +216,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The medulla oblongata controls:",
       "options": [
-        "A) Thinking and reasoning",
-        "B) Vision and hearing",
-        "D) Voluntary movements",
-        "C) Vital involuntary functions like breathing, heart rate, and blood pressure"
+        "Thinking and reasoning",
+        "Vision and hearing",
+        "Voluntary movements",
+        "Vital involuntary functions like breathing, heart rate, and blood pressure"
       ],
       "correctAnswer": "D",
       "explanation": "The medulla oblongata is the lowermost part of the brainstem. It contains vital centres that control involuntary functions such as breathing (respiratory centre), heart rate (cardiac centre), blood pressure (vasomotor centre), vomiting, swallowing, sneezing, and coughing.",
@@ -241,10 +241,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "During depolarization of a neuron:",
       "options": [
-        "A) K+ ions rush out of the cell",
-        "D) Ca2+ ions rush out of the cell",
-        "C) Cl- ions rush into the cell",
-        "B) Na+ ions rush into the cell"
+        "K+ ions rush out of the cell",
+        "Ca2+ ions rush out of the cell",
+        "Cl- ions rush into the cell",
+        "Na+ ions rush into the cell"
       ],
       "correctAnswer": "D",
       "explanation": "During depolarization, voltage-gated Na+ channels open, and Na+ ions rush into the neuron down their electrochemical gradient. This reverses the membrane potential from -70 mV to about +30 mV (the inside becomes positive), generating an action potential.",
@@ -266,10 +266,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The number of cranial nerves in humans is:",
       "options": [
-        "B) 12 pairs",
-        "D) 8 pairs",
-        "C) 31 pairs",
-        "A) 10 pairs"
+        "12 pairs",
+        "8 pairs",
+        "31 pairs",
+        "10 pairs"
       ],
       "correctAnswer": "A",
       "explanation": "Humans have 12 pairs of cranial nerves that arise from the brain (mostly from the brainstem). They include olfactory (I), optic (II), oculomotor (III), trochlear (IV), trigeminal (V), abducens (VI), facial (VII), vestibulocochlear (VIII), glossopharyngeal (IX), vagus (X), accessory (XI), and hypoglossal (XII).",
@@ -291,10 +291,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The number of spinal nerves in humans is:",
       "options": [
-        "B) 21 pairs",
-        "C) 31 pairs",
-        "A) 12 pairs",
-        "D) 43 pairs"
+        "21 pairs",
+        "31 pairs",
+        "12 pairs",
+        "43 pairs"
       ],
       "correctAnswer": "B",
       "explanation": "Humans have 31 pairs of spinal nerves: 8 cervical, 12 thoracic, 5 lumbar, 5 sacral, and 1 coccygeal. Each spinal nerve has a dorsal root (sensory) and a ventral root (motor), which join to form a mixed nerve.",
@@ -316,10 +316,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The Nissl bodies in neurons are actually:",
       "options": [
-        "D) Lysosomes",
-        "B) Rough endoplasmic reticulum (RER) and ribosomes",
-        "A) Mitochondria",
-        "C) Golgi apparatus"
+        "Lysosomes",
+        "Rough endoplasmic reticulum (RER) and ribosomes",
+        "Mitochondria",
+        "Golgi apparatus"
       ],
       "correctAnswer": "B",
       "explanation": "Nissl bodies (Nissl granules) are clusters of rough endoplasmic reticulum (RER) and free ribosomes found in the cell body and dendrites of neurons. They are sites of protein synthesis. They are absent from the axon hillock and axon.",
@@ -341,10 +341,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The corpus callosum connects:",
       "options": [
-        "A) Cerebrum and cerebellum",
-        "D) Thalamus and hypothalamus",
-        "C) Brain and spinal cord",
-        "B) Two cerebral hemispheres"
+        "Cerebrum and cerebellum",
+        "Thalamus and hypothalamus",
+        "Brain and spinal cord",
+        "Two cerebral hemispheres"
       ],
       "correctAnswer": "D",
       "explanation": "The corpus callosum is a broad band of nerve fibres (white matter) that connects the left and right cerebral hemispheres. It enables communication between the two hemispheres, allowing them to share information and coordinate activities.",
@@ -366,10 +366,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The photoreceptor cells in the retina are:",
       "options": [
-        "B) Rods and cones",
-        "D) Horizontal cells",
-        "C) Amacrine cells",
-        "A) Bipolar cells and ganglion cells"
+        "Rods and cones",
+        "Horizontal cells",
+        "Amacrine cells",
+        "Bipolar cells and ganglion cells"
       ],
       "correctAnswer": "A",
       "explanation": "Rods and cones are the photoreceptor cells in the retina. Rods (about 120 million) are sensitive to dim light and provide scotopic (black and white) vision. Cones (about 6 million) function in bright light and provide photopic (colour) vision.",
@@ -392,10 +392,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The photopigment present in rod cells is:",
       "options": [
-        "D) Photopsin",
-        "C) Melanopsin",
-        "A) Iodopsin",
-        "B) Rhodopsin"
+        "Photopsin",
+        "Melanopsin",
+        "Iodopsin",
+        "Rhodopsin"
       ],
       "correctAnswer": "D",
       "explanation": "Rhodopsin (visual purple) is the photopigment present in rod cells. It is composed of a protein called opsin and a light-absorbing molecule called retinal (derived from vitamin A). Light causes rhodopsin to break down (bleaching), generating a nerve impulse.",
@@ -417,10 +417,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The fovea centralis is the region of the retina:",
       "options": [
-        "D) Where no photoreceptors are present",
-        "C) With the highest concentration of rods",
-        "B) With the highest concentration of cones for sharp colour vision",
-        "A) Where the optic nerve exits (blind spot)"
+        "Where no photoreceptors are present",
+        "With the highest concentration of rods",
+        "With the highest concentration of cones for sharp colour vision",
+        "Where the optic nerve exits (blind spot)"
       ],
       "correctAnswer": "C",
       "explanation": "The fovea centralis (yellow spot/macula lutea) is a small depression in the centre of the retina with the highest density of cone cells and no rods. It is the area of sharpest and most detailed colour vision (highest visual acuity).",
@@ -443,10 +443,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The organ of Corti is found in the:",
       "options": [
-        "C) Cochlea of the inner ear",
-        "D) Semicircular canals",
-        "B) Middle ear",
-        "A) External ear"
+        "Cochlea of the inner ear",
+        "Semicircular canals",
+        "Middle ear",
+        "External ear"
       ],
       "correctAnswer": "A",
       "explanation": "The organ of Corti is the sensory organ of hearing, located on the basilar membrane within the cochlea of the inner ear. It contains hair cells that convert sound vibrations into nerve impulses transmitted via the auditory nerve (CN VIII) to the brain.",
@@ -468,10 +468,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The semicircular canals in the inner ear are responsible for:",
       "options": [
-        "B) Detecting rotational (angular) acceleration and balance",
-        "C) Detecting sound frequency",
-        "A) Hearing",
-        "D) Detecting taste"
+        "Detecting rotational (angular) acceleration and balance",
+        "Detecting sound frequency",
+        "Hearing",
+        "Detecting taste"
       ],
       "correctAnswer": "A",
       "explanation": "The three semicircular canals (anterior, posterior, lateral) are oriented in three mutually perpendicular planes. They detect rotational/angular acceleration of the head. Each canal has an ampulla containing the crista ampullaris with hair cells that respond to movement of endolymph.",
@@ -494,10 +494,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The thalamus acts as:",
       "options": [
-        "C) The hunger centre",
-        "A) A relay centre for sensory impulses",
-        "B) The breathing centre",
-        "D) The balance centre"
+        "The hunger centre",
+        "A relay centre for sensory impulses",
+        "The breathing centre",
+        "The balance centre"
       ],
       "correctAnswer": "B",
       "explanation": "The thalamus, located in the diencephalon, acts as a major relay station for sensory information. All sensory signals (except olfaction) pass through the thalamus before reaching the cerebral cortex. It also plays a role in pain perception and consciousness.",
@@ -519,10 +519,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The blind spot of the eye is the point where:",
       "options": [
-        "C) Maximum rods are present",
-        "A) Maximum cones are present",
-        "B) The optic nerve leaves the eye and no photoreceptors are present",
-        "D) The lens is attached"
+        "Maximum rods are present",
+        "Maximum cones are present",
+        "The optic nerve leaves the eye and no photoreceptors are present",
+        "The lens is attached"
       ],
       "correctAnswer": "C",
       "explanation": "The blind spot (optic disc) is the point on the retina where the optic nerve fibres exit the eye. It has no photoreceptors (no rods or cones), so any image falling on this spot is not detected. It is medial to the fovea.",
@@ -544,10 +544,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Cerebrospinal fluid (CSF) is produced by:",
       "options": [
-        "C) Dura mater",
-        "A) Arachnoid mater",
-        "B) Choroid plexus in the ventricles",
-        "D) Pia mater"
+        "Dura mater",
+        "Arachnoid mater",
+        "Choroid plexus in the ventricles",
+        "Pia mater"
       ],
       "correctAnswer": "C",
       "explanation": "CSF is produced by the choroid plexuses, which are networks of capillaries and ependymal cells found in the ventricles of the brain. CSF fills the ventricles, the central canal of the spinal cord, and the subarachnoid space, providing cushioning and nutrient transport.",
@@ -569,10 +569,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The Na+/K+ ATPase pump transports:",
       "options": [
-        "B) 2 Na+ out and 3 K+ in",
-        "C) 3 Na+ in and 2 K+ out",
-        "A) 3 Na+ out and 2 K+ in",
-        "D) Equal numbers of Na+ and K+"
+        "2 Na+ out and 3 K+ in",
+        "3 Na+ in and 2 K+ out",
+        "3 Na+ out and 2 K+ in",
+        "Equal numbers of Na+ and K+"
       ],
       "correctAnswer": "C",
       "explanation": "The Na+/K+ ATPase pump actively transports 3 Na+ ions out of the cell and 2 K+ ions into the cell for each ATP molecule hydrolyzed. This creates and maintains the electrochemical gradient essential for the resting membrane potential and nerve impulse conduction.",
@@ -594,10 +594,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The accommodation of the eye is achieved by changing the:",
       "options": [
-        "C) Shape of the cornea",
-        "A) Size of the pupil",
-        "D) Length of the eyeball",
-        "B) Curvature of the lens by ciliary muscles"
+        "Shape of the cornea",
+        "Size of the pupil",
+        "Length of the eyeball",
+        "Curvature of the lens by ciliary muscles"
       ],
       "correctAnswer": "D",
       "explanation": "Accommodation is the ability of the eye to focus on objects at different distances by changing the curvature of the lens. Ciliary muscles contract to make the lens more convex (for near vision) or relax to flatten the lens (for distant vision).",
@@ -619,10 +619,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The reflex arc consists of:",
       "options": [
-        "D) Receptor → Efferent nerve → CNS → Afferent nerve → Effector",
-        "B) Effector → CNS → Receptor",
-        "A) Receptor → Afferent nerve → CNS → Efferent nerve → Effector",
-        "C) Afferent nerve → Receptor → CNS → Effector"
+        "Receptor → Efferent nerve → CNS → Afferent nerve → Effector",
+        "Effector → CNS → Receptor",
+        "Receptor → Afferent nerve → CNS → Efferent nerve → Effector",
+        "Afferent nerve → Receptor → CNS → Effector"
       ],
       "correctAnswer": "C",
       "explanation": "A reflex arc is the neural pathway for a reflex action. It consists of: Receptor (detects stimulus) → Afferent (sensory) nerve → CNS (integration centre) → Efferent (motor) nerve → Effector (muscle or gland that responds).",
@@ -644,10 +644,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Myopia (short-sightedness) can be corrected using:",
       "options": [
-        "A) Convex lens",
-        "B) Concave lens",
-        "D) Bifocal lens",
-        "C) Cylindrical lens"
+        "Convex lens",
+        "Concave lens",
+        "Bifocal lens",
+        "Cylindrical lens"
       ],
       "correctAnswer": "B",
       "explanation": "Myopia occurs when the eyeball is too long or the lens is too convex, causing the image to form in front of the retina. It is corrected using a concave (diverging) lens that diverges light rays before they enter the eye, shifting the image back onto the retina.",
@@ -669,10 +669,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The vagus nerve is the:",
       "options": [
-        "B) 7th cranial nerve",
-        "D) 12th cranial nerve",
-        "A) 5th cranial nerve",
-        "C) 10th cranial nerve"
+        "7th cranial nerve",
+        "12th cranial nerve",
+        "5th cranial nerve",
+        "10th cranial nerve"
       ],
       "correctAnswer": "D",
       "explanation": "The vagus nerve (CN X) is the 10th cranial nerve and the longest cranial nerve. It is a mixed nerve with extensive distribution to thoracic and abdominal organs. It carries parasympathetic fibres to the heart, lungs, and digestive tract.",
@@ -694,10 +694,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The all-or-none principle applies to:",
       "options": [
-        "D) Synaptic transmission",
-        "C) Receptor potentials",
-        "B) Action potentials in neurons",
-        "A) Graded potentials only"
+        "Synaptic transmission",
+        "Receptor potentials",
+        "Action potentials in neurons",
+        "Graded potentials only"
       ],
       "correctAnswer": "C",
       "explanation": "The all-or-none principle states that a nerve fibre either conducts an action potential fully or not at all. If the stimulus reaches the threshold level, a full action potential is generated; below threshold, no action potential occurs. The magnitude of the action potential is constant for a given neuron.",
@@ -719,10 +719,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The three meninges that cover the brain and spinal cord from outermost to innermost are:",
       "options": [
-        "B) Dura mater, arachnoid, pia mater",
-        "A) Pia mater, arachnoid, dura mater",
-        "C) Arachnoid, dura mater, pia mater",
-        "D) Dura mater, pia mater, arachnoid"
+        "Dura mater, arachnoid, pia mater",
+        "Pia mater, arachnoid, dura mater",
+        "Arachnoid, dura mater, pia mater",
+        "Dura mater, pia mater, arachnoid"
       ],
       "correctAnswer": "A",
       "explanation": "The three meninges from outermost to innermost are: Dura mater (tough, fibrous), Arachnoid mater (web-like), and Pia mater (thin, vascular, closely adherent to brain/cord surface). CSF circulates in the subarachnoid space between arachnoid and pia mater.",
@@ -744,10 +744,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Hypermetropia (far-sightedness) is corrected using:",
       "options": [
-        "A) Concave lens",
-        "B) Convex lens",
-        "D) Prism",
-        "C) Cylindrical lens"
+        "Concave lens",
+        "Convex lens",
+        "Prism",
+        "Cylindrical lens"
       ],
       "correctAnswer": "B",
       "explanation": "Hypermetropia occurs when the eyeball is too short or the lens cannot become sufficiently convex, causing the image to form behind the retina. It is corrected using a convex (converging) lens that converges light before it enters the eye.",
@@ -769,10 +769,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The ear ossicles in the correct sequence from tympanic membrane to inner ear are:",
       "options": [
-        "B) Malleus → Incus → Stapes",
-        "A) Incus → Malleus → Stapes",
-        "D) Malleus → Stapes → Incus",
-        "C) Stapes → Incus → Malleus"
+        "Malleus → Incus → Stapes",
+        "Incus → Malleus → Stapes",
+        "Malleus → Stapes → Incus",
+        "Stapes → Incus → Malleus"
       ],
       "correctAnswer": "A",
       "explanation": "The three ear ossicles transmit sound vibrations from the tympanic membrane to the oval window in sequence: Malleus (hammer, attached to eardrum) → Incus (anvil) → Stapes (stirrup, attached to oval window). They amplify sound about 20 times.",
@@ -794,10 +794,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The sympathetic nervous system causes:",
       "options": [
-        "A) Constriction of pupil and decreased heart rate",
-        "B) Dilation of pupil and increased heart rate (fight or flight)",
-        "C) Increased digestive activity",
-        "D) Constriction of bronchioles"
+        "Constriction of pupil and decreased heart rate",
+        "Dilation of pupil and increased heart rate (fight or flight)",
+        "Increased digestive activity",
+        "Constriction of bronchioles"
       ],
       "correctAnswer": "B",
       "explanation": "The sympathetic nervous system prepares the body for 'fight or flight' responses: dilates pupils, increases heart rate, dilates bronchioles, inhibits digestion, releases glucose from liver, and increases blood flow to skeletal muscles. It originates from thoracolumbar region of spinal cord.",
@@ -819,10 +819,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The parasympathetic nervous system causes:",
       "options": [
-        "C) Release of adrenaline",
-        "A) Increased heart rate and pupil dilation",
-        "B) Decreased heart rate, increased digestion (rest and digest)",
-        "D) Vasoconstriction"
+        "Release of adrenaline",
+        "Increased heart rate and pupil dilation",
+        "Decreased heart rate, increased digestion (rest and digest)",
+        "Vasoconstriction"
       ],
       "correctAnswer": "C",
       "explanation": "The parasympathetic nervous system promotes 'rest and digest' activities: decreases heart rate, constricts pupils, stimulates digestion, promotes secretion of saliva and digestive juices, and contracts bladder. The vagus nerve is the major parasympathetic nerve.",
@@ -844,10 +844,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The refractory period of a neuron is the time during which:",
       "options": [
-        "D) Synaptic transmission occurs",
-        "C) The neuron is at resting potential",
-        "B) The neuron cannot generate another action potential",
-        "A) The neuron can respond to any stimulus"
+        "Synaptic transmission occurs",
+        "The neuron is at resting potential",
+        "The neuron cannot generate another action potential",
+        "The neuron can respond to any stimulus"
       ],
       "correctAnswer": "C",
       "explanation": "The refractory period is the brief time after an action potential during which the neuron cannot generate another impulse (absolute refractory period) or requires a stronger-than-normal stimulus (relative refractory period). This ensures unidirectional impulse propagation and limits firing frequency.",
@@ -869,10 +869,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The Eustachian tube connects the:",
       "options": [
-        "C) Middle ear to inner ear",
-        "A) External ear to middle ear",
-        "D) Inner ear to brain",
-        "B) Middle ear to pharynx"
+        "Middle ear to inner ear",
+        "External ear to middle ear",
+        "Inner ear to brain",
+        "Middle ear to pharynx"
       ],
       "correctAnswer": "D",
       "explanation": "The Eustachian tube (pharyngotympanic tube/auditory tube) connects the middle ear cavity to the nasopharynx. It equalizes air pressure on both sides of the tympanic membrane, which is essential for proper vibration of the eardrum during hearing.",
@@ -894,10 +894,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Which part of the brain is responsible for thermoregulation?",
       "options": [
-        "D) Medulla oblongata",
-        "B) Cerebellum",
-        "C) Hypothalamus",
-        "A) Cerebrum"
+        "Medulla oblongata",
+        "Cerebellum",
+        "Hypothalamus",
+        "Cerebrum"
       ],
       "correctAnswer": "C",
       "explanation": "The hypothalamus is the thermoregulatory centre of the body. It monitors blood temperature and coordinates responses to maintain body temperature at about 37 degrees C. It triggers sweating, vasodilation (cooling) or shivering, vasoconstriction (warming).",
@@ -919,10 +919,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Aqueous humour is found between the:",
       "options": [
-        "B) Cornea and lens",
-        "C) Sclera and choroid",
-        "D) Retina and choroid",
-        "A) Lens and retina"
+        "Cornea and lens",
+        "Sclera and choroid",
+        "Retina and choroid",
+        "Lens and retina"
       ],
       "correctAnswer": "A",
       "explanation": "Aqueous humour is a clear watery fluid found in the anterior and posterior chambers of the eye (between the cornea and the lens). It is produced by the ciliary processes, nourishes the cornea and lens, and maintains intraocular pressure.",
@@ -944,10 +944,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Vitreous humour is found in the:",
       "options": [
-        "A) Anterior chamber of the eye",
-        "C) Middle ear",
-        "B) Posterior chamber behind the lens",
-        "D) Inner ear"
+        "Anterior chamber of the eye",
+        "Middle ear",
+        "Posterior chamber behind the lens",
+        "Inner ear"
       ],
       "correctAnswer": "C",
       "explanation": "Vitreous humour is a transparent, gel-like substance that fills the large posterior cavity of the eye behind the lens. It maintains the shape of the eyeball, supports the retina, and transmits light to the retina. Unlike aqueous humour, it is not continuously produced.",
@@ -969,10 +969,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Glaucoma is caused by:",
       "options": [
-        "A) Clouding of the lens",
-        "D) Degeneration of the optic nerve",
-        "C) Detachment of the retina",
-        "B) Increased intraocular pressure due to excess aqueous humour"
+        "Clouding of the lens",
+        "Degeneration of the optic nerve",
+        "Detachment of the retina",
+        "Increased intraocular pressure due to excess aqueous humour"
       ],
       "correctAnswer": "D",
       "explanation": "Glaucoma is an eye condition caused by increased intraocular pressure, usually due to impaired drainage of aqueous humour. The elevated pressure can damage the optic nerve, leading to gradual loss of peripheral vision and eventually blindness if untreated.",
@@ -994,10 +994,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The limbic system is associated with:",
       "options": [
-        "C) Maintaining balance",
-        "D) Visual processing",
-        "A) Motor control",
-        "B) Emotional responses and memory"
+        "Maintaining balance",
+        "Visual processing",
+        "Motor control",
+        "Emotional responses and memory"
       ],
       "correctAnswer": "D",
       "explanation": "The limbic system (including the hippocampus, amygdala, hypothalamus, and cingulate gyrus) is involved in emotional responses (fear, anger, pleasure), motivation, memory formation, and olfaction. The amygdala processes fear and anxiety; the hippocampus is vital for memory consolidation.",
@@ -1020,10 +1020,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Assertion (A): Myelinated nerve fibres conduct impulses faster than non-myelinated ones.\nReason (R): In myelinated fibres, the impulse jumps from one node of Ranvier to the next (saltatory conduction).",
       "options": [
-        "C) A is true but R is false",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is true but R is false",
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. Saltatory conduction in myelinated fibres is much faster (up to 120 m/s) than continuous conduction in unmyelinated fibres (~0.5-2 m/s) because the impulse skips the insulated internodal segments.",
@@ -1045,10 +1045,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Assertion (A): The fovea centralis has the highest visual acuity.\nReason (R): It contains the highest density of rod cells.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A"
       ],
       "correctAnswer": "C",
       "explanation": "The assertion is true; the fovea does have the highest visual acuity. However, the reason is false because the fovea has the highest density of CONE cells (not rod cells). Cones provide sharp, detailed colour vision, which is why the fovea has the highest visual acuity.",
@@ -1071,10 +1071,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Assertion (A): Synaptic transmission is unidirectional.\nReason (R): Neurotransmitter vesicles are present only in the presynaptic terminal, and receptors are on the postsynaptic membrane.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. Chemical synaptic transmission is unidirectional because neurotransmitter vesicles are found only in the presynaptic terminal (axon terminal), and the specific receptors for these neurotransmitters are located only on the postsynaptic membrane.",
@@ -1096,10 +1096,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Assertion (A): The cerebellum does not initiate voluntary movements.\nReason (R): The cerebellum coordinates and fine-tunes movements initiated by the cerebral cortex.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true"
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true"
       ],
       "correctAnswer": "C",
       "explanation": "Both are true and the reason explains the assertion. The cerebellum does not initiate movements (that is the role of the motor cortex in the cerebrum). Instead, it coordinates, fine-tunes, and smoothens voluntary movements by integrating sensory and motor information.",
@@ -1121,10 +1121,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Assertion (A): During repolarization, K+ ions move out of the neuron.\nReason (R): Voltage-gated K+ channels open after depolarization, allowing K+ efflux.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. After depolarization (Na+ influx), voltage-gated K+ channels open and K+ ions rapidly move out of the cell down their concentration gradient, restoring the negative internal charge (repolarization from +30 mV back towards -70 mV).",
@@ -1146,10 +1146,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Assertion (A): The blind spot cannot detect light.\nReason (R): The blind spot has a very high density of photoreceptors.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) Both A and R are false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false"
       ],
       "correctAnswer": "D",
       "explanation": "The assertion is true; the blind spot (optic disc) cannot detect light. The reason is false because the blind spot has NO photoreceptors at all (not high density). It is the point where the optic nerve fibres converge and exit the retina.",
@@ -1171,10 +1171,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Assertion (A): The hypothalamus is called the 'master of the master gland'.\nReason (R): The hypothalamus controls the secretions of the pituitary gland through releasing and inhibiting hormones.",
       "options": [
-        "D) A is false but R is true",
-        "C) A is true but R is false",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "A is true but R is false",
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. The pituitary is called the 'master gland' because it controls other endocrine glands. The hypothalamus controls the pituitary via releasing hormones (e.g., GnRH, TRH) and inhibiting hormones (e.g., somatostatin), making it the 'master of the master gland'.",
@@ -1197,10 +1197,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Assertion (A): The Eustachian tube equalizes pressure across the eardrum.\nReason (R): It connects the middle ear to the nasopharynx.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. The Eustachian tube connects the middle ear to the nasopharynx, allowing air to enter or leave the middle ear to equalize pressure on both sides of the tympanic membrane. This is essential for proper eardrum vibration.",
@@ -1222,10 +1222,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Assertion (A): Acetylcholine is degraded after synaptic transmission.\nReason (R): Acetylcholinesterase in the synaptic cleft breaks down ACh into acetate and choline.",
       "options": [
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) A is false but R is true",
-        "C) A is true but R is false"
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is false but R is true",
+        "A is true but R is false"
       ],
       "correctAnswer": "A",
       "explanation": "Both are true and the reason explains the assertion. After transmitting the signal, ACh must be rapidly degraded to prevent continuous stimulation. Acetylcholinesterase enzyme in the synaptic cleft hydrolyzes ACh into acetate and choline, which are recycled by the presynaptic terminal.",
@@ -1247,10 +1247,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Assertion (A): Cataract causes blurred vision.\nReason (R): Cataract is the clouding of the vitreous humour.",
       "options": [
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "D) Both A and R are false"
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A",
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are false"
       ],
       "correctAnswer": "A",
       "explanation": "The assertion is true; cataract does cause blurred vision. The reason is false because cataract is the clouding of the LENS (crystalline lens), not the vitreous humour. The opaque lens prevents light from reaching the retina properly, causing blurry vision.",
@@ -1272,10 +1272,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Assertion (A): Nerve impulse transmission across a synapse is slower than along a nerve fibre.\nReason (R): Synaptic transmission involves release, diffusion, and binding of neurotransmitters, which takes time.",
       "options": [
-        "D) A is false but R is true",
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "C) A is true but R is false",
-        "A) Both A and R are true and R is the correct explanation of A"
+        "A is false but R is true",
+        "Both A and R are true but R is not the correct explanation of A",
+        "A is true but R is false",
+        "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
       "explanation": "Both are true and the reason explains the assertion. Synaptic transmission involves multiple steps: vesicle fusion, neurotransmitter release, diffusion across the cleft, receptor binding, and postsynaptic potential generation. This chemical process introduces a synaptic delay of about 0.5-1 ms.",
@@ -1297,10 +1297,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Assertion (A): Rod cells function better in dim light than cone cells.\nReason (R): Rod cells contain rhodopsin, which has a lower threshold for light activation.",
       "options": [
-        "B) Both A and R are true but R is not the correct explanation of A",
-        "A) Both A and R are true and R is the correct explanation of A",
-        "C) A is true but R is false",
-        "D) A is false but R is true"
+        "Both A and R are true but R is not the correct explanation of A",
+        "Both A and R are true and R is the correct explanation of A",
+        "A is true but R is false",
+        "A is false but R is true"
       ],
       "correctAnswer": "B",
       "explanation": "Both are true and the reason explains the assertion. Rhodopsin in rod cells is extremely sensitive to light and can be activated by even a single photon. This makes rods ideal for vision in dim light (scotopic vision), unlike cones which require brighter light.",
@@ -1323,10 +1323,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Consider the following about the human brain:\n(i) The cerebrum is the largest part.\n(ii) The cerebellum maintains balance.\n(iii) The medulla oblongata controls breathing and heart rate.\n(iv) The hypothalamus controls voluntary movements.\nWhich are correct?",
       "options": [
-        "B) All are correct",
-        "D) (ii) and (iv) only",
-        "C) (i) and (iii) only",
-        "A) (i), (ii), and (iii) only"
+        "All are correct",
+        "(ii) and (iv) only",
+        "(i) and (iii) only",
+        "(i), (ii), and (iii) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iii) are correct. The cerebrum is largest, cerebellum maintains balance, and medulla controls vital functions. Statement (iv) is wrong; the hypothalamus controls body temperature, hunger, thirst, and endocrine function, NOT voluntary movements (which are controlled by the cerebral motor cortex).",
@@ -1348,10 +1348,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Read the following about the action potential:\n(i) Depolarization is caused by Na+ influx.\n(ii) Repolarization is caused by K+ efflux.\n(iii) The threshold potential is about -55 mV.\n(iv) The peak of the action potential reaches about +30 mV.\nWhich statements are correct?",
       "options": [
-        "C) All are correct",
-        "A) (i) and (ii) only",
-        "B) (i), (ii), and (iii) only",
-        "D) (i), (ii), and (iv) only"
+        "All are correct",
+        "(i) and (ii) only",
+        "(i), (ii), and (iii) only",
+        "(i), (ii), and (iv) only"
       ],
       "correctAnswer": "A",
       "explanation": "All four statements are correct. Na+ influx causes depolarization (i). K+ efflux causes repolarization (ii). The threshold is approximately -55 mV (iii). The action potential peaks at about +30 mV (iv), after which K+ channels open for repolarization.",
@@ -1373,10 +1373,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Consider the following about the eye:\n(i) The cornea is the transparent front part that refracts light.\n(ii) The iris controls the amount of light entering through the pupil.\n(iii) The retina contains photoreceptors.\n(iv) The sclera is the innermost layer of the eyeball.\nWhich are correct?",
       "options": [
-        "B) All are correct",
-        "C) (i) and (iii) only",
-        "A) (i), (ii), and (iii) only",
-        "D) (ii) and (iv) only"
+        "All are correct",
+        "(i) and (iii) only",
+        "(i), (ii), and (iii) only",
+        "(ii) and (iv) only"
       ],
       "correctAnswer": "C",
       "explanation": "Statements (i), (ii), and (iii) are correct. The cornea refracts light, the iris regulates light via pupil size, and the retina has photoreceptors. Statement (iv) is wrong; the sclera is the OUTERMOST layer (white of the eye), not the innermost. The retina is the innermost layer.",
@@ -1398,10 +1398,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Which of the following about the ear is/are correct?\n(i) The external ear collects and directs sound waves.\n(ii) The middle ear contains three ossicles.\n(iii) The cochlea is responsible for hearing.\n(iv) The vestibular apparatus detects body position and balance.",
       "options": [
-        "B) (i), (ii), and (iii) only",
-        "D) (iii) and (iv) only",
-        "A) (i) and (ii) only",
-        "C) All are correct"
+        "(i), (ii), and (iii) only",
+        "(iii) and (iv) only",
+        "(i) and (ii) only",
+        "All are correct"
       ],
       "correctAnswer": "D",
       "explanation": "All four statements are correct. The external ear (pinna and ear canal) collects sound (i). The middle ear has malleus, incus, and stapes (ii). The cochlea converts sound into nerve impulses (iii). The vestibular apparatus (utricle, saccule, semicircular canals) maintains balance (iv).",
@@ -1423,10 +1423,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Consider the following about neurotransmitters:\n(i) Acetylcholine is used at neuromuscular junctions.\n(ii) Norepinephrine is the main neurotransmitter of the sympathetic nervous system.\n(iii) Dopamine is involved in reward and motor control.\n(iv) GABA is the main excitatory neurotransmitter in the brain.\nSelect the correct statements:",
       "options": [
-        "D) (iii) and (iv) only",
-        "A) (i), (ii), and (iii) only",
-        "B) All are correct",
-        "C) (i) and (ii) only"
+        "(iii) and (iv) only",
+        "(i), (ii), and (iii) only",
+        "All are correct",
+        "(i) and (ii) only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements (i), (ii), and (iii) are correct. ACh acts at NMJ. Norepinephrine is the main postganglionic sympathetic neurotransmitter. Dopamine is involved in reward pathways and motor control. Statement (iv) is wrong; GABA is the main INHIBITORY (not excitatory) neurotransmitter. Glutamate is the main excitatory one.",
@@ -1448,10 +1448,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Read the following statements about neurons:\n(i) Sensory (afferent) neurons carry impulses from receptors to the CNS.\n(ii) Motor (efferent) neurons carry impulses from the CNS to effectors.\n(iii) Interneurons (association neurons) are found only in the CNS.\n(iv) Unipolar neurons have one process, bipolar have two, and multipolar have many.",
       "options": [
-        "B) (i), (ii), and (iii) only",
-        "C) All are correct",
-        "A) (i) and (ii) only",
-        "D) (i), (iii), and (iv) only"
+        "(i), (ii), and (iii) only",
+        "All are correct",
+        "(i) and (ii) only",
+        "(i), (iii), and (iv) only"
       ],
       "correctAnswer": "B",
       "explanation": "All four statements are correct. Sensory neurons carry impulses TO CNS (i). Motor neurons carry impulses FROM CNS (ii). Interneurons connect sensory and motor neurons within the CNS (iii). Neurons are classified by process number: unipolar (1), bipolar (2), and multipolar (many) (iv).",
@@ -1473,10 +1473,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Consider the following about the autonomic nervous system:\n(i) It has sympathetic and parasympathetic divisions.\n(ii) The sympathetic system prepares for fight or flight.\n(iii) The parasympathetic system promotes rest and digest.\n(iv) Both divisions always act on the same organs in the same way.\nWhich statements are correct?",
       "options": [
-        "D) (iv) only",
-        "A) (i), (ii), and (iii) only",
-        "B) All are correct",
-        "C) (i) and (ii) only"
+        "(iv) only",
+        "(i), (ii), and (iii) only",
+        "All are correct",
+        "(i) and (ii) only"
       ],
       "correctAnswer": "B",
       "explanation": "Statements (i), (ii), and (iii) are correct. The ANS has sympathetic and parasympathetic divisions with opposing effects. Statement (iv) is wrong; the two divisions are generally ANTAGONISTIC, having opposite effects on the same organ (e.g., sympathetic increases heart rate, parasympathetic decreases it).",
@@ -1499,10 +1499,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Which of the following about the three layers of the eyeball is/are INCORRECT?\n(i) The outermost layer is the sclera/cornea (fibrous tunic).\n(ii) The middle layer is the choroid/ciliary body/iris (vascular tunic).\n(iii) The innermost layer is the retina (nervous tunic).\n(iv) The choroid is transparent and allows light to pass through.",
       "options": [
-        "D) None are incorrect",
-        "B) (i) and (ii)",
-        "A) (iv) only",
-        "C) (iii) and (iv)"
+        "None are incorrect",
+        "(i) and (ii)",
+        "(iv) only",
+        "(iii) and (iv)"
       ],
       "correctAnswer": "C",
       "explanation": "Statement (iv) is incorrect. The choroid is NOT transparent; it is a dark, highly vascularized layer that absorbs stray light and nourishes the retina. Statements (i), (ii), and (iii) correctly describe the three layers of the eyeball from outermost to innermost.",
@@ -1524,10 +1524,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Consider the following about the inner ear:\n(i) The cochlea is coiled and contains the organ of Corti.\n(ii) The vestibule contains utricle and saccule.\n(iii) Semicircular canals detect linear acceleration.\n(iv) Endolymph fills the membranous labyrinth.\nWhich are correct?",
       "options": [
-        "D) (i), (iii), and (iv) only",
-        "C) (i) and (ii) only",
-        "B) All are correct",
-        "A) (i), (ii), and (iv) only"
+        "(i), (iii), and (iv) only",
+        "(i) and (ii) only",
+        "All are correct",
+        "(i), (ii), and (iv) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iv) are correct. The cochlea houses the organ of Corti for hearing. The vestibule has utricle and saccule for detecting gravity and linear acceleration. Endolymph fills the membranous labyrinth. Statement (iii) is wrong; semicircular canals detect ROTATIONAL (angular) acceleration, not linear. Utricle and saccule detect linear acceleration.",
@@ -1549,10 +1549,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Read the following about the CNS:\n(i) It consists of the brain and spinal cord.\n(ii) Grey matter contains cell bodies.\n(iii) White matter contains myelinated nerve fibres.\n(iv) In the spinal cord, grey matter is on the outside and white matter on the inside.",
       "options": [
-        "D) (ii) and (iv) only",
-        "B) All are correct",
-        "C) (i) and (ii) only",
-        "A) (i), (ii), and (iii) only"
+        "(ii) and (iv) only",
+        "All are correct",
+        "(i) and (ii) only",
+        "(i), (ii), and (iii) only"
       ],
       "correctAnswer": "D",
       "explanation": "Statements (i), (ii), and (iii) are correct. Statement (iv) is wrong. In the spinal cord, grey matter is on the INSIDE (butterfly/H-shape) and white matter is on the OUTSIDE. This is opposite to the cerebrum, where grey matter (cortex) is on the outside.",
@@ -1574,10 +1574,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Match the brain part with its function:\n(P) Cerebrum - (1) Balance and coordination\n(Q) Cerebellum - (2) Breathing and heart rate\n(R) Hypothalamus - (3) Thinking and memory\n(S) Medulla oblongata - (4) Body temperature and hunger",
       "options": [
-        "B) P-1, Q-3, R-2, S-4",
-        "D) P-2, Q-4, R-3, S-1",
-        "A) P-3, Q-1, R-4, S-2",
-        "C) P-4, Q-2, R-1, S-3"
+        "P-1, Q-3, R-2, S-4",
+        "P-2, Q-4, R-3, S-1",
+        "P-3, Q-1, R-4, S-2",
+        "P-4, Q-2, R-1, S-3"
       ],
       "correctAnswer": "C",
       "explanation": "Cerebrum controls thinking/memory (P-3). Cerebellum maintains balance/coordination (Q-1). Hypothalamus regulates temperature/hunger (R-4). Medulla oblongata controls breathing/heart rate (S-2).",
@@ -1599,10 +1599,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Match the eye structure with its function:\n(P) Cornea - (1) Controls amount of light entering\n(Q) Iris - (2) Refracts light\n(R) Retina - (3) Focuses light on retina\n(S) Lens - (4) Contains photoreceptors",
       "options": [
-        "A) P-2, Q-1, R-4, S-3",
-        "D) P-3, Q-4, R-1, S-2",
-        "C) P-4, Q-3, R-2, S-1",
-        "B) P-1, Q-2, R-3, S-4"
+        "P-2, Q-1, R-4, S-3",
+        "P-3, Q-4, R-1, S-2",
+        "P-4, Q-3, R-2, S-1",
+        "P-1, Q-2, R-3, S-4"
       ],
       "correctAnswer": "A",
       "explanation": "Cornea refracts and transmits light (P-2). Iris controls light entry through the pupil (Q-1). Retina contains rods and cones for image detection (R-4). Lens focuses light precisely on the retina (S-3).",
@@ -1624,10 +1624,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Match the ion movement with its phase:\n(P) Na+ influx - (1) Resting state\n(Q) K+ efflux - (2) Depolarization\n(R) Na+/K+ pump active - (3) Repolarization\n(S) K+ leak channels maintain potential - (4) Recovery (return to resting)",
       "options": [
-        "C) P-1, Q-4, R-2, S-3",
-        "B) P-3, Q-2, R-1, S-4",
-        "A) P-2, Q-3, R-4, S-1",
-        "D) P-4, Q-1, R-3, S-2"
+        "P-1, Q-4, R-2, S-3",
+        "P-3, Q-2, R-1, S-4",
+        "P-2, Q-3, R-4, S-1",
+        "P-4, Q-1, R-3, S-2"
       ],
       "correctAnswer": "C",
       "explanation": "Na+ influx occurs during depolarization (P-2). K+ efflux occurs during repolarization (Q-3). Na+/K+ pump restores ion distribution during recovery (R-4). K+ leak channels maintain resting potential (S-1).",
@@ -1649,10 +1649,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Match the cranial nerve with its function:\n(P) Optic (II) - (1) Hearing and balance\n(Q) Trigeminal (V) - (2) Vision\n(R) Vagus (X) - (3) Facial sensation and chewing\n(S) Vestibulocochlear (VIII) - (4) Visceral functions (heart, lungs, gut)",
       "options": [
-        "D) P-4, Q-1, R-2, S-3",
-        "A) P-2, Q-3, R-4, S-1",
-        "B) P-3, Q-2, R-1, S-4",
-        "C) P-1, Q-4, R-3, S-2"
+        "P-4, Q-1, R-2, S-3",
+        "P-2, Q-3, R-4, S-1",
+        "P-3, Q-2, R-1, S-4",
+        "P-1, Q-4, R-3, S-2"
       ],
       "correctAnswer": "B",
       "explanation": "Optic nerve carries visual impulses (P-2). Trigeminal nerve handles facial sensation and jaw muscles (Q-3). Vagus nerve innervates thoracic/abdominal viscera (R-4). Vestibulocochlear nerve handles hearing and balance (S-1).",
@@ -1674,10 +1674,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Match the ear part with its component:\n(P) External ear - (1) Malleus, incus, stapes\n(Q) Middle ear - (2) Pinna and ear canal\n(R) Inner ear (cochlea) - (3) Semicircular canals, utricle, saccule\n(S) Inner ear (vestibular) - (4) Organ of Corti",
       "options": [
-        "A) P-2, Q-1, R-4, S-3",
-        "D) P-3, Q-4, R-1, S-2",
-        "C) P-4, Q-3, R-2, S-1",
-        "B) P-1, Q-2, R-3, S-4"
+        "P-2, Q-1, R-4, S-3",
+        "P-3, Q-4, R-1, S-2",
+        "P-4, Q-3, R-2, S-1",
+        "P-1, Q-2, R-3, S-4"
       ],
       "correctAnswer": "A",
       "explanation": "External ear has pinna and ear canal (P-2). Middle ear contains the three ossicles (Q-1). Cochlea houses the organ of Corti for hearing (R-4). Vestibular apparatus includes semicircular canals, utricle, and saccule for balance (S-3).",
@@ -1699,10 +1699,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Match the defect with its correction:\n(P) Myopia - (1) Convex lens\n(Q) Hypermetropia - (2) Concave lens\n(R) Astigmatism - (3) Cylindrical lens\n(S) Presbyopia - (4) Bifocal lens",
       "options": [
-        "B) P-1, Q-2, R-4, S-3",
-        "A) P-2, Q-1, R-3, S-4",
-        "D) P-4, Q-3, R-1, S-2",
-        "C) P-3, Q-4, R-2, S-1"
+        "P-1, Q-2, R-4, S-3",
+        "P-2, Q-1, R-3, S-4",
+        "P-4, Q-3, R-1, S-2",
+        "P-3, Q-4, R-2, S-1"
       ],
       "correctAnswer": "B",
       "explanation": "Myopia is corrected with concave lens (P-2). Hypermetropia with convex lens (Q-1). Astigmatism (irregular cornea curvature) with cylindrical lens (R-3). Presbyopia (age-related loss of accommodation) with bifocal lens (S-4).",
@@ -1724,10 +1724,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Match the neuron type with its structure:\n(P) Unipolar - (1) One axon and one dendrite\n(Q) Bipolar - (2) One axon and many dendrites\n(R) Multipolar - (3) Single process that branches\n(S) Pseudounipolar - (4) Single process splits into two branches",
       "options": [
-        "C) P-2, Q-4, R-1, S-3",
-        "D) P-4, Q-2, R-3, S-1",
-        "B) P-1, Q-3, R-4, S-2",
-        "A) P-3, Q-1, R-2, S-4"
+        "P-2, Q-4, R-1, S-3",
+        "P-4, Q-2, R-3, S-1",
+        "P-1, Q-3, R-4, S-2",
+        "P-3, Q-1, R-2, S-4"
       ],
       "correctAnswer": "D",
       "explanation": "Unipolar neurons have a single process (P-3). Bipolar neurons have one axon and one dendrite (Q-1), found in retina and olfactory epithelium. Multipolar neurons have one axon and many dendrites (R-2), the most common type. Pseudounipolar have one process that splits (S-4), found in dorsal root ganglia.",
@@ -1749,10 +1749,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Match the photoreceptor with its property:\n(P) Rods - (1) Three types for colour vision (RGB)\n(Q) Cones - (2) Contain rhodopsin\n(R) Rods - (3) Highest density at fovea\n(S) Cones - (4) Sensitive to dim light",
       "options": [
-        "C) P-1, Q-2, R-3, S-4",
-        "B) P-4, Q-3, R-2, S-1",
-        "A) P-2, Q-1, R-4, S-3",
-        "D) P-2, Q-3, R-4, S-1"
+        "P-1, Q-2, R-3, S-4",
+        "P-4, Q-3, R-2, S-1",
+        "P-2, Q-1, R-4, S-3",
+        "P-2, Q-3, R-4, S-1"
       ],
       "correctAnswer": "D",
       "explanation": "Rods contain rhodopsin (P-2). Cones have highest density at fovea (Q-3). Rods are sensitive to dim light (R-4). Cones come in three types (red, green, blue) for colour vision (S-1).",
@@ -1775,10 +1775,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Match the meninx with its property:\n(P) Dura mater - (1) Innermost, vascular, adheres to brain\n(Q) Arachnoid mater - (2) Outermost, tough, fibrous\n(R) Pia mater - (3) Middle, web-like\n(S) Subarachnoid space - (4) Contains CSF",
       "options": [
-        "D) P-4, Q-3, R-2, S-1",
-        "B) P-1, Q-2, R-3, S-4",
-        "A) P-2, Q-3, R-1, S-4",
-        "C) P-3, Q-1, R-4, S-2"
+        "P-4, Q-3, R-2, S-1",
+        "P-1, Q-2, R-3, S-4",
+        "P-2, Q-3, R-1, S-4",
+        "P-3, Q-1, R-4, S-2"
       ],
       "correctAnswer": "C",
       "explanation": "Dura mater is the outermost, tough, fibrous membrane (P-2). Arachnoid mater is the middle, web-like layer (Q-3). Pia mater is the innermost, vascular layer closely adherent to the brain (R-1). The subarachnoid space (between arachnoid and pia) contains CSF (S-4).",
@@ -1800,10 +1800,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Match the reflex arc component with its function:\n(P) Receptor - (1) Processes information and generates response\n(Q) Afferent nerve - (2) Detects the stimulus\n(R) CNS - (3) Carries motor impulse to effector\n(S) Efferent nerve - (4) Carries sensory impulse to CNS",
       "options": [
-        "A) P-2, Q-4, R-1, S-3",
-        "C) P-1, Q-3, R-2, S-4",
-        "D) P-3, Q-1, R-4, S-2",
-        "B) P-4, Q-2, R-3, S-1"
+        "P-2, Q-4, R-1, S-3",
+        "P-1, Q-3, R-2, S-4",
+        "P-3, Q-1, R-4, S-2",
+        "P-4, Q-2, R-3, S-1"
       ],
       "correctAnswer": "A",
       "explanation": "Receptor detects stimulus (P-2). Afferent (sensory) nerve carries impulse to CNS (Q-4). CNS integrates information and generates response (R-1). Efferent (motor) nerve carries response to effector (S-3).",
@@ -1825,10 +1825,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Match the glial cell with its function:\n(P) Schwann cells - (1) Myelination in CNS\n(Q) Oligodendrocytes - (2) Myelination in PNS\n(R) Astrocytes - (3) Immune defence in CNS\n(S) Microglia - (4) Support and blood-brain barrier",
       "options": [
-        "A) P-2, Q-1, R-4, S-3",
-        "C) P-4, Q-3, R-2, S-1",
-        "D) P-3, Q-4, R-1, S-2",
-        "B) P-1, Q-2, R-3, S-4"
+        "P-2, Q-1, R-4, S-3",
+        "P-4, Q-3, R-2, S-1",
+        "P-3, Q-4, R-1, S-2",
+        "P-1, Q-2, R-3, S-4"
       ],
       "correctAnswer": "A",
       "explanation": "Schwann cells myelinate axons in PNS (P-2). Oligodendrocytes myelinate axons in CNS (Q-1). Astrocytes provide structural support and form the blood-brain barrier (R-4). Microglia are the immune cells of the CNS, acting as phagocytes (S-3).",
@@ -1850,10 +1850,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "How many pairs of cranial nerves originate from the human brain?",
       "options": [
-        "B) 12",
-        "A) 10",
-        "D) 43",
-        "C) 31"
+        "12",
+        "10",
+        "43",
+        "31"
       ],
       "correctAnswer": "A",
       "explanation": "Twelve (12) pairs of cranial nerves originate from the human brain. They are numbered I to XII: Olfactory, Optic, Oculomotor, Trochlear, Trigeminal, Abducens, Facial, Vestibulocochlear, Glossopharyngeal, Vagus, Accessory, and Hypoglossal.",
@@ -1875,10 +1875,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "How many of the following are parts of the human brain?\n(a) Cerebrum (b) Cerebellum (c) Diencephalon (thalamus + hypothalamus) (d) Midbrain (e) Pons (f) Medulla oblongata",
       "options": [
-        "A) Four",
-        "D) Three",
-        "B) Five",
-        "C) Six"
+        "Four",
+        "Three",
+        "Five",
+        "Six"
       ],
       "correctAnswer": "D",
       "explanation": "All six are parts of the human brain: (a) Cerebrum (forebrain), (b) Cerebellum (hindbrain), (c) Diencephalon - thalamus + hypothalamus (forebrain), (d) Midbrain (mesencephalon), (e) Pons (hindbrain), and (f) Medulla oblongata (hindbrain). The brain consists of forebrain, midbrain, and hindbrain.",
@@ -1900,10 +1900,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "How many semicircular canals are present in each inner ear?",
       "options": [
-        "C) Three",
-        "D) Four",
-        "A) One",
-        "B) Two"
+        "Three",
+        "Four",
+        "One",
+        "Two"
       ],
       "correctAnswer": "A",
       "explanation": "Each inner ear has three semicircular canals oriented in three mutually perpendicular planes: anterior (superior), posterior, and lateral (horizontal). They detect rotational movements of the head in all three planes of space.",
@@ -1925,10 +1925,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "How many ear ossicles are present in total in both ears?",
       "options": [
-        "D) 8",
-        "C) 6",
-        "B) 4",
-        "A) 3"
+        "8",
+        "6",
+        "4",
+        "3"
       ],
       "correctAnswer": "B",
       "explanation": "There are 3 ear ossicles in each middle ear (malleus, incus, stapes) and 2 ears, giving a total of 6 ear ossicles. They form the smallest bones in the body and amplify sound vibrations by about 20 times.",
@@ -1950,10 +1950,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "How many of the following are layers of the eyeball?\n(a) Sclera/Cornea (fibrous tunic) (b) Choroid/Ciliary body/Iris (vascular tunic) (c) Retina (nervous tunic) (d) Lens",
       "options": [
-        "A) Two",
-        "C) Four",
-        "D) One",
-        "B) Three"
+        "Two",
+        "Four",
+        "One",
+        "Three"
       ],
       "correctAnswer": "D",
       "explanation": "The eyeball has three layers: (a) Fibrous tunic - sclera and cornea (outermost), (b) Vascular tunic (uvea) - choroid, ciliary body, and iris (middle), (c) Nervous tunic - retina (innermost). The lens (d) is not a layer of the eyeball; it is a transparent structure suspended by the suspensory ligament.",
@@ -1975,10 +1975,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "How many types of photoreceptor cells are found in the human retina?",
       "options": [
-        "A) One",
-        "C) Three",
-        "D) Four",
-        "B) Two"
+        "One",
+        "Three",
+        "Four",
+        "Two"
       ],
       "correctAnswer": "D",
       "explanation": "Two types of photoreceptor cells are found in the retina: (1) Rods - for dim light/scotopic vision (black and white), and (2) Cones - for bright light/photopic vision (colour). There are about 120 million rods and 6 million cones in each eye.",
@@ -2000,10 +2000,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "How many pairs of spinal nerves arise from the spinal cord?",
       "options": [
-        "D) 43",
-        "C) 31",
-        "A) 12",
-        "B) 21"
+        "43",
+        "31",
+        "12",
+        "21"
       ],
       "correctAnswer": "B",
       "explanation": "31 pairs of spinal nerves arise from the spinal cord: 8 cervical, 12 thoracic, 5 lumbar, 5 sacral, and 1 coccygeal. Each spinal nerve is a mixed nerve formed by the union of dorsal (sensory) and ventral (motor) roots.",
@@ -2025,10 +2025,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "How many ventricles are present in the human brain?",
       "options": [
-        "B) Three",
-        "D) Five",
-        "C) Four",
-        "A) Two"
+        "Three",
+        "Five",
+        "Four",
+        "Two"
       ],
       "correctAnswer": "C",
       "explanation": "The human brain has four ventricles: two lateral ventricles (one in each cerebral hemisphere), the third ventricle (in the diencephalon), and the fourth ventricle (between the cerebellum and pons/medulla). They are filled with cerebrospinal fluid (CSF).",
@@ -2050,10 +2050,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the correct sequence of events during synaptic transmission:\n(i) Action potential reaches axon terminal\n(ii) Ca2+ enters the presynaptic terminal\n(iii) Synaptic vesicles fuse with presynaptic membrane\n(iv) Neurotransmitter binds to receptors on postsynaptic membrane\n(v) Neurotransmitter released into synaptic cleft",
       "options": [
-        "A) (i) → (ii) → (iii) → (v) → (iv)",
-        "C) (i) → (iii) → (ii) → (iv) → (v)",
-        "B) (ii) → (i) → (v) → (iii) → (iv)",
-        "D) (v) → (iv) → (iii) → (ii) → (i)"
+        "(i) → (ii) → (iii) → (v) → (iv)",
+        "(i) → (iii) → (ii) → (iv) → (v)",
+        "(ii) → (i) → (v) → (iii) → (iv)",
+        "(v) → (iv) → (iii) → (ii) → (i)"
       ],
       "correctAnswer": "A",
       "explanation": "Synaptic transmission sequence: Action potential arrives at axon terminal (i) → Ca2+ enters through voltage-gated channels (ii) → Ca2+ triggers vesicle fusion with membrane (iii) → Neurotransmitter is released into synaptic cleft (exocytosis) (v) → NT binds to postsynaptic receptors (iv) → Postsynaptic potential generated.",
@@ -2075,10 +2075,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the correct sequence of events in hearing:\n(i) Sound waves collected by pinna\n(ii) Vibrations of tympanic membrane\n(iii) Amplification by ear ossicles\n(iv) Vibrations transmitted to oval window\n(v) Fluid waves in cochlea stimulate organ of Corti\n(vi) Nerve impulse sent via auditory nerve to brain",
       "options": [
-        "C) (i) → (iii) → (ii) → (v) → (iv) → (vi)",
-        "B) (ii) → (i) → (iv) → (iii) → (vi) → (v)",
-        "D) (vi) → (v) → (iv) → (iii) → (ii) → (i)",
-        "A) (i) → (ii) → (iii) → (iv) → (v) → (vi)"
+        "(i) → (iii) → (ii) → (v) → (iv) → (vi)",
+        "(ii) → (i) → (iv) → (iii) → (vi) → (v)",
+        "(vi) → (v) → (iv) → (iii) → (ii) → (i)",
+        "(i) → (ii) → (iii) → (iv) → (v) → (vi)"
       ],
       "correctAnswer": "D",
       "explanation": "Hearing sequence: Pinna collects sound waves (i) → Tympanic membrane vibrates (ii) → Ossicles (malleus → incus → stapes) amplify vibrations (iii) → Stapes transmits to oval window (iv) → Fluid waves stimulate hair cells in organ of Corti (v) → Auditory nerve sends impulse to brain (vi).",
@@ -2100,10 +2100,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the correct sequence of light path through the eye:",
       "options": [
-        "C) Cornea → Lens → Pupil → Vitreous humour → Aqueous humour → Retina",
-        "D) Lens → Cornea → Aqueous humour → Pupil → Retina → Vitreous humour",
-        "A) Cornea → Aqueous humour → Pupil → Lens → Vitreous humour → Retina",
-        "B) Pupil → Cornea → Lens → Aqueous humour → Vitreous humour → Retina"
+        "Cornea → Lens → Pupil → Vitreous humour → Aqueous humour → Retina",
+        "Lens → Cornea → Aqueous humour → Pupil → Retina → Vitreous humour",
+        "Cornea → Aqueous humour → Pupil → Lens → Vitreous humour → Retina",
+        "Pupil → Cornea → Lens → Aqueous humour → Vitreous humour → Retina"
       ],
       "correctAnswer": "C",
       "explanation": "Light enters the eye in this sequence: Cornea (major refraction) → Aqueous humour → Pupil (controlled by iris) → Lens (fine focusing) → Vitreous humour → Retina (where the image is formed on photoreceptors).",
@@ -2125,10 +2125,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the correct sequence of an action potential:\n(i) Resting state (-70 mV)\n(ii) Stimulus reaches threshold (-55 mV)\n(iii) Depolarization (Na+ influx, rises to +30 mV)\n(iv) Repolarization (K+ efflux, returns towards -70 mV)\n(v) Hyperpolarization (briefly overshoots to ~-80 mV)\n(vi) Return to resting potential by Na+/K+ pump",
       "options": [
-        "C) (i) → (iii) → (ii) → (v) → (iv) → (vi)",
-        "B) (iii) → (ii) → (i) → (iv) → (vi) → (v)",
-        "D) (ii) → (i) → (iv) → (iii) → (v) → (vi)",
-        "A) (i) → (ii) → (iii) → (iv) → (v) → (vi)"
+        "(i) → (iii) → (ii) → (v) → (iv) → (vi)",
+        "(iii) → (ii) → (i) → (iv) → (vi) → (v)",
+        "(ii) → (i) → (iv) → (iii) → (v) → (vi)",
+        "(i) → (ii) → (iii) → (iv) → (v) → (vi)"
       ],
       "correctAnswer": "D",
       "explanation": "Action potential sequence: Resting state at -70 mV (i) → Stimulus reaches threshold of -55 mV (ii) → Na+ channels open, rapid depolarization to +30 mV (iii) → Na+ channels close, K+ channels open, repolarization (iv) → Brief hyperpolarization as K+ channels close slowly (v) → Na+/K+ pump restores resting state (vi).",
@@ -2150,10 +2150,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the components of a reflex arc in correct order:",
       "options": [
-        "B) Effector → Efferent nerve → CNS → Afferent nerve → Receptor",
-        "D) Receptor → Efferent nerve → CNS → Afferent nerve → Effector",
-        "C) CNS → Afferent nerve → Receptor → Effector → Efferent nerve",
-        "A) Receptor → Afferent nerve → CNS → Efferent nerve → Effector"
+        "Effector → Efferent nerve → CNS → Afferent nerve → Receptor",
+        "Receptor → Efferent nerve → CNS → Afferent nerve → Effector",
+        "CNS → Afferent nerve → Receptor → Effector → Efferent nerve",
+        "Receptor → Afferent nerve → CNS → Efferent nerve → Effector"
       ],
       "correctAnswer": "D",
       "explanation": "The reflex arc sequence: Receptor (detects stimulus) → Afferent (sensory) nerve (carries impulse to CNS) → CNS (integration, decision) → Efferent (motor) nerve (carries response impulse) → Effector (muscle/gland that responds).",
@@ -2175,10 +2175,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the meninges from outermost to innermost:",
       "options": [
-        "D) Dura mater → Pia mater → Arachnoid mater",
-        "C) Arachnoid mater → Dura mater → Pia mater",
-        "B) Pia mater → Arachnoid mater → Dura mater",
-        "A) Dura mater → Arachnoid mater → Pia mater"
+        "Dura mater → Pia mater → Arachnoid mater",
+        "Arachnoid mater → Dura mater → Pia mater",
+        "Pia mater → Arachnoid mater → Dura mater",
+        "Dura mater → Arachnoid mater → Pia mater"
       ],
       "correctAnswer": "D",
       "explanation": "From outermost to innermost: Dura mater (tough, fibrous, outermost) → Arachnoid mater (web-like, middle) → Pia mater (thin, vascular, innermost, closely adheres to brain surface). CSF circulates in the subarachnoid space.",
@@ -2200,10 +2200,10 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the ear ossicles in the correct sequence from eardrum to oval window:",
       "options": [
-        "A) Malleus → Incus → Stapes",
-        "C) Stapes → Incus → Malleus",
-        "B) Incus → Malleus → Stapes",
-        "D) Malleus → Stapes → Incus"
+        "Malleus → Incus → Stapes",
+        "Stapes → Incus → Malleus",
+        "Incus → Malleus → Stapes",
+        "Malleus → Stapes → Incus"
       ],
       "correctAnswer": "A",
       "explanation": "The three ear ossicles transmit vibrations from the tympanic membrane to the oval window in this order: Malleus (hammer, attached to eardrum) → Incus (anvil, middle) → Stapes (stirrup, attached to oval window of cochlea). They amplify sound about 20 times.",
