@@ -1,0 +1,1025 @@
+{
+  "batch": {
+    "name": "Campbell Ch6-7 Cell Structure & Membrane — Wave 1",
+    "version": 1,
+    "source": "olympiad-wave1",
+    "totalQuestions": 50
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "A researcher treats cells with brefeldin A, which inhibits COPI coat assembly and causes Golgi membranes to fuse back into the ER. Which of the following processes would be LEAST affected by this treatment?",
+      "options": [
+        "Import of proteins bearing a nuclear localization signal into the nucleus",
+        "Secretion of extracellular matrix glycoproteins",
+        "Lysosomal enzyme targeting via mannose-6-phosphate tagging",
+        "Insertion of newly synthesized integral membrane proteins into the plasma membrane"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Nuclear import relies on importin-mediated transport through nuclear pore complexes and does not require the endomembrane system or vesicle trafficking. Brefeldin A disrupts COPI-dependent retrograde transport, causing Golgi collapse into the ER, which blocks secretory pathway function. This would severely impair secretion (A), plasma membrane protein delivery (B), and M6P tagging of lysosomal enzymes in the cis-Golgi (D). Nuclear import is completely independent of the Golgi apparatus.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "During receptor-mediated endocytosis of LDL particles, the pH of the early endosome drops to approximately 6.0. What is the primary functional consequence of this acidification?",
+      "options": [
+        "It triggers fusion of the endosome with the trans-Golgi network",
+        "It denatures the apolipoprotein B-100 coat of the LDL particle",
+        "It causes dissociation of LDL from the LDL receptor, allowing receptor recycling",
+        "It activates lysosomal hydrolases to begin digesting the LDL particle"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The mild acidification of early endosomes (pH ~6.0) causes a conformational change in the LDL receptor that releases the bound LDL ligand. This is critical because it allows the receptor to be recycled back to the plasma membrane via recycling endosomes, while the LDL cargo continues to late endosomes and lysosomes for degradation. Lysosomal hydrolases require pH ~4.5-5.0 and are not yet fully active at pH 6.0 (A). The endosome does not fuse with the TGN in the LDL pathway (C). While apoB-100 may undergo some conformational change, denaturation is not the primary functional consequence (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which observation provides the strongest evidence for the endosymbiotic origin of mitochondria?",
+      "options": [
+        "The inner mitochondrial membrane contains cardiolipin, a lipid also found in bacterial membranes",
+        "Mitochondria have a double membrane and their own ribosomes",
+        "Mitochondrial DNA is circular, replication uses bacterial-type machinery, and phylogenetic analysis places mitochondria within the alphaproteobacteria",
+        "Mitochondria can divide independently of the cell cycle by binary fission"
+      ],
+      "correctAnswer": "C",
+      "explanation": "While all options support endosymbiotic theory, the strongest evidence comes from molecular phylogenetics. Mitochondrial DNA is circular (like bacteria), uses bacterial-type DNA polymerase and replication machinery, and sequence analysis of mitochondrial rRNA genes places them firmly within the alphaproteobacterial clade (closest to Rickettsia). This provides direct evolutionary evidence of ancestry. Double membranes (A) and binary fission (C) are consistent with but not unique proof of endosymbiosis. Cardiolipin presence (D) is supportive but not as phylogenetically informative as DNA sequence analysis.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Colchicine binds to free tubulin dimers and prevents their polymerization into microtubules. If colchicine is applied to a cell during interphase, which of the following structures would be MOST directly disrupted?",
+      "options": [
+        "Adherens junction stability at the cell cortex",
+        "Maintenance of cell shape and intracellular vesicle transport along established tracks",
+        "Contractile ring formation during cytokinesis",
+        "Nuclear lamina integrity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Microtubules are dynamic polymers that undergo continuous turnover even during interphase. Colchicine prevents new polymerization, so existing microtubules gradually depolymerize without replacement. This disrupts the microtubule network responsible for maintaining cell shape (as part of the cytoskeleton) and intracellular transport (kinesin and dynein motor proteins move vesicles along microtubule tracks). The nuclear lamina (A) is composed of intermediate filaments (lamins), not microtubules. The contractile ring (C) is made of actin and myosin II. Adherens junctions (D) are linked to actin filaments via catenins, not to microtubules.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A mutation in the KDEL receptor prevents it from recognizing the KDEL retention signal on ER-resident proteins. Which outcome would most likely result?",
+      "options": [
+        "Lysosomal enzymes would accumulate in the ER instead of being transported to lysosomes",
+        "COPII vesicle budding from the ER would be inhibited",
+        "ER-resident chaperones like BiP (GRP78) would be secreted from the cell via the default secretory pathway",
+        "Proteins destined for the Golgi would be retained in the ER lumen"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The KDEL receptor system is a retrieval mechanism: ER-resident soluble proteins (like chaperones BiP/GRP78, PDI, calreticulin) that accidentally escape to the Golgi are recognized by KDEL receptors in the cis-Golgi and returned to the ER via COPI retrograde vesicles. If the KDEL receptor is non-functional, these proteins would not be retrieved and would continue through the secretory pathway to be secreted by default. COPII budding (C) is not dependent on KDEL recognition. Golgi-destined proteins use different sorting signals (B). Lysosomal enzymes use M6P signals, not KDEL (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Na+/K+ ATPase pumps 3 Na+ out and 2 K+ in per ATP hydrolyzed. Which statement best explains why this pump is classified as electrogenic?",
+      "options": [
+        "It requires ATP hydrolysis to function, making it an active energy-consuming process",
+        "It indirectly drives secondary active transport of glucose and amino acids",
+        "It creates concentration gradients of both Na+ and K+ across the membrane",
+        "It generates a net movement of positive charge outward, directly contributing to the membrane potential"
+      ],
+      "correctAnswer": "D",
+      "explanation": "An electrogenic pump is one that generates an electrical current (net charge movement) across the membrane. The Na+/K+ ATPase moves 3 positive charges out for every 2 positive charges in, resulting in a net export of one positive charge per cycle. This directly contributes approximately -10 mV to the resting membrane potential (which is typically around -70 mV in neurons). While it does require ATP (A), create concentration gradients (C), and drive secondary transport (D), none of these properties define it as electrogenic. The defining feature is the unequal charge transfer.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "In an experiment, a lipid bilayer is reconstituted with 50% saturated phospholipids and 50% unsaturated phospholipids. Cholesterol is then added incrementally. At physiological temperature (37°C), what effect does increasing cholesterol concentration have on membrane fluidity?",
+      "options": [
+        "Fluidity first increases then decreases in a biphasic response",
+        "Fluidity decreases because cholesterol restrains movement of unsaturated phospholipids while having minimal additional effect on already-ordered saturated lipids",
+        "Fluidity decreases continuously because cholesterol immobilizes all phospholipid tails",
+        "Fluidity increases continuously because cholesterol disrupts phospholipid packing"
+      ],
+      "correctAnswer": "B",
+      "explanation": "At physiological temperature (above the phase transition temperature of most membrane lipids), the membrane is already in a fluid state. Cholesterol's rigid steroid ring intercalates between phospholipid tails and restrains their movement, reducing fluidity. This effect is most pronounced on unsaturated phospholipids, which are highly disordered due to their kinked tails. Saturated phospholipids are already relatively ordered, so cholesterol has less additional restraining effect on them. The net result at 37°C is a decrease in overall fluidity. At temperatures below the phase transition, cholesterol would actually increase fluidity by disrupting tight packing, but the question specifies physiological temperature.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Dynein and kinesin are both microtubule motor proteins, yet they generally move cargo in opposite directions. What is the structural basis for their opposite directionality?",
+      "options": [
+        "Dynein is powered by GTP hydrolysis while kinesin uses ATP hydrolysis",
+        "Their motor domains have different ATP hydrolysis cycle conformational changes that produce force toward opposite ends of the microtubule",
+        "They bind to different protofilaments within the microtubule wall",
+        "They require different adaptor proteins that determine the direction of movement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Conventional kinesin (kinesin-1) moves toward the plus end of microtubules, while cytoplasmic dynein moves toward the minus end. This directionality is intrinsic to the motor domain structure of each protein. The conformational changes associated with ATP binding, hydrolysis, and ADP/Pi release produce a power stroke in the motor head that steps toward the plus end for kinesin and toward the minus end for dynein. Both use ATP (not GTP) as their energy source (C is wrong). They can bind the same protofilaments (A is wrong). While adaptor proteins regulate cargo binding, they do not determine intrinsic motor directionality (D is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "INBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A plant cell is placed in a hypertonic solution. As plasmolysis proceeds, which of the following correctly describes the changes in turgor pressure (ΨP) and solute potential (ΨS) of the cell?",
+      "options": [
+        "Both ΨP and ΨS increase as the cell equilibrates with the external solution",
+        "ΨP decreases to zero and ΨS becomes more negative as the cell loses water",
+        "ΨP increases and ΨS becomes less negative as solutes are diluted",
+        "ΨP decreases to zero while ΨS remains constant because solute amount is unchanged"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In a hypertonic solution, water exits the cell by osmosis. As the cell loses water, the plasma membrane pulls away from the cell wall (plasmolysis). Turgor pressure drops to zero once the membrane detaches from the wall. Simultaneously, as water leaves, the intracellular solute concentration increases (same amount of solute in less volume), making ΨS more negative. Option C is incorrect because while the total amount of solute doesn't change, ΨS depends on concentration (molarity), which increases as volume decreases. The water potential equation is Ψ = ΨP + ΨS, and at full plasmolysis, Ψ = 0 + ΨS.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Connexons in gap junctions are hexameric assemblies of connexin proteins. If one cell expresses connexin-43 and its neighbor expresses connexin-32, what is the most likely outcome?",
+      "options": [
+        "Heterotypic gap junctions form normally because all connexins are interchangeable",
+        "No functional gap junctions form because connexin-43 and connexin-32 are incompatible for heterotypic docking",
+        "Hemichannels open on each cell surface but cannot dock, creating unregulated ion leakage",
+        "The cells form tight junctions instead as a compensatory mechanism"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Gap junction formation requires compatible connexin isoforms. Connexin-43 (Cx43) and connexin-32 (Cx32) are incompatible for heterotypic gap junction formation — their extracellular loops cannot dock properly. Connexin compatibility is determined by specific interactions between the two extracellular loops (E1 and E2) of adjacent connexons. While some connexin combinations can form heterotypic channels (e.g., Cx43-Cx37), Cx43-Cx32 is a well-characterized incompatible pair. Undocked hemichannels are normally kept closed by Ca2+ and voltage gating, so unregulated leakage (C) does not occur. Tight junctions (D) are structurally and functionally distinct and not formed as compensation.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the intestinal epithelium, the apical and basolateral domains of the plasma membrane have different lipid and protein compositions. Which structure is primarily responsible for preventing lateral diffusion of membrane components between these two domains?",
+      "options": [
+        "Desmosomes that mechanically anchor adjacent cells",
+        "The glycocalyx that coats the apical surface",
+        "The cortical actin cytoskeleton underlying the plasma membrane",
+        "Tight junctions that form a diffusion barrier within the plane of the membrane"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Tight junctions (zonula occludens) form a continuous belt around the apical end of epithelial cells where claudin and occludin proteins create a seal between adjacent cells. Critically, this seal also acts as a 'fence' within the membrane itself, preventing lateral diffusion of lipids and proteins between the apical and basolateral domains. This maintains membrane polarity essential for vectorial transport (e.g., glucose absorption). Desmosomes (A) provide mechanical strength but do not form a continuous diffusion barrier. The glycocalyx (C) is extracellular and doesn't restrict lateral diffusion within the membrane. The actin cytoskeleton (D) can restrict protein mobility but is not the primary determinant of domain separation.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Smooth ER is abundant in cells of the adrenal cortex and in hepatocytes. Which shared function best explains the extensive smooth ER in both cell types?",
+      "options": [
+        "Both cell types require extensive calcium storage for muscle-like contraction",
+        "Both cell types are involved in lipid/steroid synthesis — steroid hormones in the adrenal cortex and detoxification involving cytochrome P450 enzymes in hepatocytes",
+        "Both cell types synthesize large quantities of secretory proteins requiring folding",
+        "Both cell types perform glycogen synthesis, which occurs exclusively in the smooth ER"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The smooth ER is the site of lipid synthesis, steroid hormone production, and detoxification. Adrenal cortex cells produce steroid hormones (cortisol, aldosterone, androgens) from cholesterol, requiring extensive smooth ER for the enzymatic machinery of steroidogenesis. Hepatocytes have abundant smooth ER for detoxification reactions catalyzed by cytochrome P450 enzymes, which metabolize drugs, toxins, and endogenous substrates. While hepatocytes also store glycogen, glycogen synthesis enzymes are cytoplasmic (glycogen synthase is cytosolic), not exclusively smooth ER-localized (D is wrong). Secretory protein folding occurs in the rough ER (A is wrong). Calcium storage in sarcoplasmic reticulum is specific to muscle cells (C is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Aquaporin-1 (AQP1) allows rapid water transport but strictly excludes protons (H3O+). What structural feature of the aquaporin channel is primarily responsible for proton exclusion?",
+      "options": [
+        "Negatively charged glutamate residues lining the channel that repel positively charged protons",
+        "A narrow hydrophobic constriction that physically blocks hydronium ions based on size",
+        "Two highly conserved NPA (Asn-Pro-Ala) motifs that reorient water molecules and disrupt the hydrogen-bond relay needed for proton hopping",
+        "A gating mechanism controlled by intracellular pH that closes the channel when proton concentration rises"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Aquaporins must allow water but block protons to maintain the proton-motive force across membranes. The two conserved NPA motifs located at the center of the channel create an electrostatic barrier and reorient water molecules passing through the pore. As water molecules pass the NPA region, their dipole orientation is flipped, breaking the continuous hydrogen-bond chain that would otherwise allow proton hopping (Grotthuss mechanism). Additionally, an aromatic/arginine (ar/R) selectivity filter near the extracellular end provides a size restriction. However, the NPA motifs are the PRIMARY mechanism for proton exclusion specifically.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Intermediate filaments differ fundamentally from microfilaments and microtubules in several ways. Which of the following is a unique property of intermediate filaments?",
+      "options": [
+        "They undergo rapid treadmilling driven by GTP hydrolysis",
+        "They are non-polar, do not bind nucleotide triphosphates, and are not associated with motor proteins",
+        "They are exclusively composed of a single protein, vimentin, in all cell types",
+        "They are polar structures with distinct plus and minus ends"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Intermediate filaments (IFs) are fundamentally different from actin filaments and microtubules. IFs are non-polar because their subunits assemble in an antiparallel fashion, meaning there is no structural distinction between the two ends. They do not bind ATP or GTP and lack intrinsic enzymatic activity. Consequently, no motor proteins travel along IFs (unlike kinesin/dynein on microtubules or myosin on actin). This makes them purely structural, providing mechanical strength. Option A is wrong because IFs are non-polar. Option C describes microtubule behavior. Option D is wrong because IFs are diverse: keratins in epithelial cells, vimentin in mesenchymal cells, neurofilaments in neurons, desmin in muscle, and lamins in the nucleus.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The proton motive force across the inner mitochondrial membrane is composed of both a chemical gradient (ΔpH) and an electrical gradient (Δψ). In a typical mammalian mitochondrion at steady state, which component contributes more to the total proton motive force?",
+      "options": [
+        "The electrical gradient (Δψ) contributes approximately 75% of the total force",
+        "The relative contribution varies randomly and cannot be predicted",
+        "The chemical gradient (ΔpH) contributes approximately 75% of the total force",
+        "Both components contribute equally, each accounting for 50%"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In mammalian mitochondria, the total proton motive force (Δp) is approximately 180-220 mV. Of this, the membrane potential (Δψ) contributes about 150-180 mV (~75-80%), while the pH gradient (ΔpH, approximately 0.5-1.0 pH units, equivalent to ~30-60 mV) contributes the remaining ~20-25%. This is in contrast to chloroplasts, where the situation is reversed: the thylakoid lumen becomes very acidic (pH ~5 vs stroma pH ~8), so ΔpH dominates. The large Δψ in mitochondria is maintained by the electrogenic nature of proton pumping by Complexes I, III, and IV. This distinction is functionally important and frequently tested at the olympiad level.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A cell biologist observes that treating cells with cytochalasin D (which blocks actin polymerization at the barbed end) prevents cell migration but does not collapse the existing actin cortex immediately. What explains this observation?",
+      "options": [
+        "Intermediate filaments compensate immediately for loss of actin function",
+        "Microtubules rapidly reorganize to replace the actin cortex",
+        "Cytochalasin D only affects nuclear actin, not cytoplasmic actin",
+        "Existing actin filaments are stabilized by capping proteins and have slow intrinsic depolymerization rates"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cytochalasin D caps the barbed (plus) end of actin filaments, preventing new monomer addition. However, existing actin filaments in the cortex are stabilized by various actin-binding proteins including tropomyosin, cortexillin, and capping proteins that reduce the rate of depolymerization. The cortical actin network also has relatively slow turnover compared to the highly dynamic lamellipodia at the leading edge. Cell migration requires rapid actin polymerization at the leading edge (which is immediately blocked), but the structural cortex persists for some time. Cytochalasin D affects all cytoplasmic actin (B is wrong). Neither intermediate filaments (C) nor microtubules (D) can functionally replace the actin cortex.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "SGLT1 (sodium-glucose linked transporter 1) in the intestinal epithelium co-transports glucose with Na+ into the cell. If the Na+/K+ ATPase on the basolateral membrane is inhibited by ouabain, what is the immediate effect on SGLT1-mediated glucose uptake?",
+      "options": [
+        "Glucose uptake gradually decreases as the Na+ gradient dissipates",
+        "Glucose uptake increases because more Na+ accumulates inside the cell",
+        "Glucose uptake stops immediately and reverses direction",
+        "Glucose uptake is unaffected because SGLT1 uses its own energy source"
+      ],
+      "correctAnswer": "A",
+      "explanation": "SGLT1 is a secondary active transporter that harnesses the Na+ electrochemical gradient (high Na+ outside, low inside) to drive glucose uptake against its concentration gradient. This Na+ gradient is maintained by the Na+/K+ ATPase. When ouabain inhibits the Na+/K+ ATPase, Na+ that enters the cell via SGLT1 and other channels is no longer pumped out. Intracellular Na+ gradually rises, reducing the driving force for SGLT1. The effect is gradual (not immediate) because the existing Na+ gradient takes time to dissipate. Eventually, glucose uptake via SGLT1 would cease entirely. This demonstrates the dependence of secondary active transport on primary active transport.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The signal recognition particle (SRP) binds to the signal peptide of a nascent polypeptide emerging from the ribosome. What would happen if SRP were depleted from a cell?",
+      "options": [
+        "All protein synthesis would halt because SRP is required for ribosome function",
+        "Mitochondrial protein import would be disrupted because SRP targets proteins to the TOM complex",
+        "Secretory and membrane proteins would be synthesized on free ribosomes and released into the cytosol instead of entering the ER lumen",
+        "Only nuclear proteins would be affected because SRP guides proteins to the nuclear pore"
+      ],
+      "correctAnswer": "C",
+      "explanation": "SRP is essential for co-translational targeting of proteins to the ER membrane. It recognizes the hydrophobic signal peptide as it emerges from the ribosome, pauses translation, and docks the ribosome-nascent chain complex at the SRP receptor on the rough ER. The nascent chain is then threaded through the Sec61 translocon into the ER lumen. Without SRP, ribosomes synthesizing secretory and membrane proteins would remain free in the cytosol, completing translation and releasing mislocalized proteins into the cytoplasm. General protein synthesis (A) is unaffected. Nuclear import (C) uses nuclear localization signals and importins, not SRP. Mitochondrial import (D) uses TOM/TIM complexes and mitochondrial targeting sequences, not SRP.",
+      "isOlympiad": true,
+      "olympiadLevel": "INBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Plasmodesmata in plant cells are functionally analogous to gap junctions in animal cells. However, plasmodesmata have a unique structural feature not found in gap junctions. What is it?",
+      "options": [
+        "They contain a central desmotubule derived from smooth ER that connects the ER of adjacent cells",
+        "They span the full thickness of the barrier between adjacent cells",
+        "They are regulated by calcium concentration",
+        "They allow passage of ions and small molecules between cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "While plasmodesmata and gap junctions share the function of allowing intercellular communication, plasmodesmata have a unique structural feature: a desmotubule, which is a strand of smooth endoplasmic reticulum that runs through the center of each plasmodesma, physically connecting the ER networks of adjacent cells. This creates a continuous endomembrane system throughout the plant body (the symplast). Gap junctions lack any ER connection. Both structures allow small molecule passage (A) and are calcium-regulated (C), so these are shared features, not unique. Both span the cell junction (D). The desmotubule is the distinguishing structural element.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Voltage-gated sodium channels have both an activation gate and an inactivation gate. During an action potential, the channel transitions through three states. What is the correct temporal sequence of these states?",
+      "options": [
+        "Inactivated → Open → Closed → Inactivated",
+        "Closed → Inactivated → Open → Closed",
+        "Open → Closed → Inactivated → Open",
+        "Closed → Open → Inactivated → Closed"
+      ],
+      "correctAnswer": "D",
+      "explanation": "At resting membrane potential, voltage-gated Na+ channels are in the closed (resting) state: the activation gate is closed and the inactivation gate is open. Upon membrane depolarization reaching threshold, the activation gate rapidly opens (channel is now Open, both gates open), allowing Na+ influx. Within milliseconds, the inactivation gate (a cytoplasmic loop acting as a 'ball-and-chain') swings into the channel pore, blocking it (Inactivated state — activation gate open, inactivation gate closed). The channel cannot reopen from this inactivated state, which is the basis of the absolute refractory period. As the membrane repolarizes, the channel returns to the Closed resting state (both gates reset). This sequence: Closed → Open → Inactivated → Closed is fundamental to understanding action potential propagation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the endomembrane system and vesicle trafficking:",
+      "options": [
+        "COPII-coated vesicles mediate anterograde transport from the ER to the cis-Golgi, while COPI-coated vesicles mediate retrograde transport from the Golgi back to the ER",
+        "Clathrin-coated vesicles are involved in receptor-mediated endocytosis at the plasma membrane and in transport from the trans-Golgi network to endosomes",
+        "v-SNAREs on the vesicle membrane interact with t-SNAREs on the target membrane to ensure specificity of vesicle fusion, and NSF/SNAP proteins catalyze the fusion event itself",
+        "Rab GTPases in their GTP-bound active form help tether vesicles to target membranes and recruit effector proteins necessary for docking"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — COPII coats assemble on ER exit sites to form vesicles moving to the Golgi (anterograde). COPI coats form on Golgi cisternae for retrograde transport back to the ER (retrieving escaped ER-resident proteins). S2: TRUE — Clathrin-coated pits at the plasma membrane internalize receptor-ligand complexes, and clathrin also coats vesicles budding from the TGN carrying lysosomal enzymes (tagged with M6P). S3: FALSE — While v-SNARE/t-SNARE pairing does provide fusion specificity and drives membrane fusion, NSF (N-ethylmaleimide-sensitive factor) and α-SNAP do NOT catalyze fusion. Instead, they disassemble spent SNARE complexes after fusion, recycling them for reuse. The SNARE complex itself provides the energy for membrane fusion through zippering. S4: TRUE — Rab GTPases cycle between active (GTP-bound, membrane-associated) and inactive (GDP-bound, cytosolic) states. Active Rabs recruit tethering factors and effectors that facilitate the initial contact between vesicle and target membrane before SNARE engagement.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about mitochondrial structure and the endosymbiotic theory:",
+      "options": [
+        "The mitochondrial outer membrane contains porins (VDAC) that make it freely permeable to molecules up to about 5 kDa, while the inner membrane is highly selective",
+        "Mitochondrial ribosomes (mitoribosomes) are 80S, identical to cytoplasmic ribosomes of the host eukaryotic cell",
+        "Cardiolipin (diphosphatidylglycerol) is found almost exclusively in the inner mitochondrial membrane and is essential for the function of several respiratory chain complexes",
+        "The mitochondrial genome encodes all proteins needed for oxidative phosphorylation, making mitochondria fully autonomous in their bioenergetic capacity"
+      ],
+      "correctAnswer": "TFTF",
+      "explanation": "S1: TRUE — VDAC (voltage-dependent anion channel) forms large pores in the outer mitochondrial membrane, allowing free passage of ions and small molecules up to ~5 kDa. The inner membrane is highly impermeable, requiring specific transporters for even small molecules like ADP, ATP, and pyruvate. S2: FALSE — Mitoribosomes are 55S in mammals (smaller than bacterial 70S), reflecting their bacterial ancestry but with significant evolutionary modification. They are NOT 80S like eukaryotic cytoplasmic ribosomes. S3: TRUE — Cardiolipin is a signature lipid of the inner mitochondrial membrane (and bacterial membranes, supporting endosymbiosis). It is critical for cristae morphology and for the function of Complexes III, IV, and ATP synthase. Barth syndrome results from cardiolipin remodeling defects. S4: FALSE — The mitochondrial genome in humans encodes only 13 proteins (all subunits of the respiratory chain), 22 tRNAs, and 2 rRNAs. The vast majority (~1,500) of mitochondrial proteins are nuclear-encoded, synthesized on cytoplasmic ribosomes, and imported via TOM/TIM complexes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the cytoskeleton and motor proteins:",
+      "options": [
+        "Actin filaments exhibit treadmilling when the rate of monomer addition at the barbed (plus) end equals the rate of loss at the pointed (minus) end, maintaining a constant filament length",
+        "Myosin II is a non-processive motor that works in large ensembles (such as thick filaments) to generate contractile force",
+        "Kinesin-13 (MCAK) is a conventional transport kinesin that moves vesicles toward microtubule plus ends",
+        "The Arp2/3 complex nucleates branched actin networks by binding to the side of existing actin filaments and initiating new filament growth at a 70° angle"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Treadmilling occurs at steady state when the critical concentration is between the Cc values for the plus and minus ends. ATP-actin adds preferentially at the barbed end while ADP-actin dissociates from the pointed end, so the filament maintains constant length while individual subunits flux through. S2: TRUE — Unlike processive motors like myosin V (which takes many steps per binding event), myosin II detaches after each power stroke. It works effectively only in large arrays (e.g., sarcomere thick filaments, contractile ring) where many heads generate force simultaneously. S3: FALSE — Kinesin-13 (also called MCAK, Mitotic Centromere-Associated Kinesin) is NOT a transport motor. It is a microtubule depolymerase that uses ATP hydrolysis energy to induce curved protofilament conformations at microtubule ends, promoting catastrophe. It is crucial during mitosis for correcting kinetochore-microtubule attachments. S4: TRUE — Arp2/3 complex binds to the side of existing (mother) filaments and nucleates a new (daughter) filament at a characteristic 70° angle, creating the branched dendritic network that drives lamellipodial protrusion during cell migration.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about membrane transport mechanisms:",
+      "options": [
+        "The glucose transporter GLUT4 is constitutively present on the plasma membrane of adipocytes and muscle cells",
+        "The H+/sucrose symporter in plant cells is an example of secondary active transport driven by the proton motive force generated by the plasma membrane H+-ATPase",
+        "In facilitated diffusion through a channel protein, the rate of transport increases linearly with substrate concentration without ever reaching saturation",
+        "The Ca2+ ATPase (SERCA pump) in the sarcoplasmic reticulum maintains cytosolic Ca2+ at approximately 100 nM by actively pumping Ca2+ into the SR lumen"
+      ],
+      "correctAnswer": "FTFT",
+      "explanation": "S1: FALSE — GLUT4 is NOT constitutively on the plasma membrane. It is stored in intracellular vesicles and translocates to the plasma membrane only in response to insulin signaling (via the PI3K/Akt pathway triggering vesicle fusion). This is why insulin deficiency causes hyperglycemia. S2: TRUE — Plant cells use a primary H+-ATPase to pump protons out, creating an electrochemical gradient. The H+/sucrose symporter then uses the proton gradient to co-transport sucrose into the cell. This is classic secondary active transport. S3: FALSE — Channel proteins can show saturation-like kinetics at very high flux rates due to ion-ion interactions within the pore and limited conductance. However, more importantly, the statement confuses channels with simple diffusion. Carrier-mediated facilitated diffusion definitely shows saturation (Michaelis-Menten kinetics). Some channels show near-linear flux, but the absolute statement 'without ever reaching saturation' is incorrect. S4: TRUE — SERCA (Sarco/Endoplasmic Reticulum Ca2+-ATPase) uses ATP to pump 2 Ca2+ per ATP hydrolyzed from the cytosol (~100 nM) into the SR lumen (~1 mM), maintaining a 10,000-fold gradient essential for muscle contraction signaling.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about membrane fluidity and lipid composition:",
+      "options": [
+        "Bacteria adapted to cold environments increase the proportion of unsaturated fatty acids in their membrane phospholipids to maintain fluidity",
+        "Sphingomyelin and cholesterol tend to associate in lipid rafts, which are more ordered and less fluid than the surrounding glycerophospholipid-rich membrane",
+        "Trans-unsaturated fatty acids increase membrane fluidity more than cis-unsaturated fatty acids because the trans configuration creates a larger kink",
+        "Flip-flop of phospholipids between the two leaflets of a bilayer is thermodynamically unfavorable without the assistance of flippases or scramblases"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Cold-adapted bacteria (and cold-acclimated organisms generally) upregulate desaturase enzymes that introduce cis double bonds into fatty acid tails. The resulting kinks prevent tight packing, maintaining membrane fluidity at lower temperatures. This is a well-known homeoviscous adaptation. S2: TRUE — Lipid rafts are cholesterol- and sphingolipid-enriched microdomains. Sphingomyelin's saturated acyl chains pack tightly with cholesterol's flat steroid ring, forming a liquid-ordered (Lo) phase that is less fluid and thicker than the surrounding liquid-disordered (Ld) phase. S3: FALSE — Trans double bonds produce a nearly straight chain (similar to saturated fatty acids) because the hydrogen atoms are on opposite sides. Cis double bonds create a pronounced ~30° kink that disrupts packing far more effectively. Trans fats actually DECREASE fluidity compared to cis fats. S4: TRUE — Moving a polar phospholipid headgroup through the hydrophobic interior of the bilayer has a very high activation energy (~100 kJ/mol). Spontaneous flip-flop has a half-time of hours to days. Flippases (ATP-dependent, move PS/PE to inner leaflet), floppases (move lipids outward), and scramblases (bidirectional, Ca2+-activated) catalyze this process.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about cell junctions in animal tissues:",
+      "options": [
+        "Desmosomes are anchored to intermediate filaments (such as keratin) inside the cell, while hemidesmosomes anchor cells to the basal lamina via integrins linked to intermediate filaments",
+        "Tight junctions are composed primarily of E-cadherin molecules that form calcium-dependent homophilic interactions",
+        "Gap junction channels have a molecular weight cutoff of approximately 1 kDa, allowing passage of ions, amino acids, and small signaling molecules like cAMP and IP3",
+        "The zonula adherens (adherens junction belt) encircles epithelial cells and is connected to the actin cytoskeleton via alpha-catenin and beta-catenin"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — Desmosomes (macula adherens) use desmogleins and desmocollins (desmosomal cadherins) and link to intermediate filaments (keratins in epithelial cells) via desmoplakin and plakoglobin. Hemidesmosomes use integrin α6β4 to connect intermediate filaments to laminin in the basal lamina. S2: FALSE — Tight junctions (zonula occludens) are composed of claudins, occludin, and JAM (junctional adhesion molecule) proteins, NOT cadherins. E-cadherin is the primary adhesion molecule of adherens junctions, not tight junctions. ZO-1, ZO-2, and ZO-3 are scaffolding proteins associated with tight junctions. S3: TRUE — Gap junction channels (formed by connexons/pannexons) allow passage of molecules up to approximately 1 kDa (~1.5 nm diameter). This includes ions (Na+, K+, Ca2+), metabolites (amino acids, glucose), and second messengers (cAMP, cGMP, IP3), enabling metabolic and electrical coupling between cells. S4: TRUE — The zonula adherens forms a continuous belt around epithelial cells. Classical cadherins (E-cadherin) span the membrane, and their cytoplasmic tails bind β-catenin, which binds α-catenin, which links (directly or indirectly via vinculin) to the circumferential actin belt.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about chloroplast structure and function:",
+      "options": [
+        "The chloroplast has three distinct membrane systems: the outer membrane, inner membrane, and thylakoid membrane, creating three separate aqueous compartments",
+        "Rubisco, the most abundant protein on Earth, is located in the thylakoid lumen where it catalyzes carbon fixation",
+        "The chloroplast genome encodes the large subunit of Rubisco, while the small subunit is encoded by nuclear DNA — illustrating the coordinated gene expression between organelle and nucleus",
+        "Like mitochondria, chloroplasts are thought to have evolved from endosymbiotic cyanobacteria based on phylogenetic analysis of rRNA sequences and the presence of peptidoglycan remnants in some lineages"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — The three membranes create three compartments: the intermembrane space (between outer and inner membranes), the stroma (inside the inner membrane), and the thylakoid lumen (inside the thylakoid membrane). This is critical for understanding the light reactions and Calvin cycle compartmentalization. S2: FALSE — Rubisco is located in the STROMA, not the thylakoid lumen. It catalyzes the Calvin cycle's first step, fixing CO2 by combining it with ribulose-1,5-bisphosphate. The thylakoid lumen is the site of water splitting and proton accumulation. S3: TRUE — This is a classic example of split gene localization. The rbcL gene (large subunit) is in the chloroplast genome, while rbcS (small subunit) is nuclear-encoded. The small subunit is synthesized in the cytoplasm with a transit peptide and imported into the chloroplast. S4: TRUE — Chloroplasts show strong phylogenetic affinity to cyanobacteria. Some algal lineages (glaucophytes) retain a peptidoglycan layer between the inner and outer chloroplast membranes, providing strong evidence for endosymbiotic origin.",
+      "isOlympiad": true,
+      "olympiadLevel": "INBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the Golgi apparatus and protein modification:",
+      "options": [
+        "N-linked glycosylation begins in the ER with the en bloc transfer of a 14-sugar oligosaccharide from dolichol phosphate to asparagine residues, and is further modified in the Golgi",
+        "O-linked glycosylation occurs exclusively in the ER, where sugars are added to serine or threonine residues one at a time",
+        "The cis-to-trans polarity of the Golgi is maintained in part by different resident enzymes in each cisterna — for example, mannosidases in the cis-Golgi and galactosyltransferases in the trans-Golgi",
+        "Proteins are sorted at the trans-Golgi network (TGN) into different vesicles destined for lysosomes, the plasma membrane, or secretory granules"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — The oligosaccharyltransferase (OST) complex in the ER transfers a preassembled Glc3Man9GlcNAc2 (14-sugar) branched oligosaccharide from dolichol-PP to the Asn-X-Ser/Thr sequon on nascent polypeptides. This core glycan is then trimmed and modified as the protein moves through the Golgi. S2: FALSE — O-linked glycosylation occurs primarily in the GOLGI apparatus (especially the cis- and medial-Golgi), not the ER. Sugars (beginning with N-acetylgalactosamine, GalNAc) are added sequentially to Ser/Thr residues. There is no dolichol intermediate. S3: TRUE — The Golgi has a clear enzymatic polarity. Cis cisternae contain mannosidase I and II (trimming mannose residues). Medial cisternae have GlcNAc transferases. Trans cisternae and TGN have galactosyltransferases and sialyltransferases. This sequential processing is the basis of the 'cisternal maturation' model. S4: TRUE — The TGN is a major sorting station. M6P receptors direct lysosomal hydrolases into clathrin-coated vesicles bound for endosomes/lysosomes. Constitutive secretory vesicles deliver cargo to the plasma membrane by default. Regulated secretory vesicles store concentrated cargo for signal-dependent release.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about electrochemical gradients and membrane potential:",
+      "options": [
+        "The Nernst equation calculates the equilibrium potential for a single ion species, at which the electrical driving force exactly balances the chemical concentration gradient for that ion",
+        "At the resting membrane potential of a typical neuron (~-70 mV), both the concentration gradient and electrical gradient for Na+ drive Na+ into the cell",
+        "The Goldman-Hodgkin-Katz equation considers the relative permeability and concentration gradients of all major ions to calculate the resting membrane potential",
+        "Increasing extracellular K+ concentration would hyperpolarize the membrane because K+ is the primary determinant of resting potential"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1: TRUE — The Nernst equation (E = (RT/zF) × ln([ion]out/[ion]in)) gives the voltage at which an ion is in electrochemical equilibrium. For K+ this is approximately -90 mV, for Na+ approximately +60 mV, and for Cl- approximately -80 mV. S2: TRUE — At -70 mV, the Na+ concentration gradient (high outside ~145 mM, low inside ~15 mM) drives Na+ inward. The electrical gradient also drives Na+ inward because the inside is negative, attracting positive charges. Both forces are in the same direction, creating a large electrochemical driving force for Na+ entry. S3: TRUE — The GHK equation (also called the Goldman equation) extends the Nernst equation by incorporating the relative membrane permeabilities (P) and concentrations of K+, Na+, and Cl-. At rest, PK >> PNa, so the resting potential is close to EK. S4: FALSE — Increasing extracellular K+ concentration would DEPOLARIZE (not hyperpolarize) the membrane. According to the Nernst equation, reducing the K+ gradient (by raising external K+) makes EK less negative, pulling the resting potential toward zero. This is why hyperkalemia is clinically dangerous — it depolarizes cardiac cells.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about lysosomes and autophagy:",
+      "options": [
+        "Lysosomal storage diseases such as I-cell disease result from a deficiency in GlcNAc phosphotransferase, which prevents the formation of the mannose-6-phosphate tag required for lysosomal enzyme targeting",
+        "Autophagy involves the formation of a double-membraned autophagosome that engulfs cytoplasmic contents and then fuses with a lysosome to form an autolysosome",
+        "The lysosomal membrane is protected from self-digestion by a thick glycocalyx of heavily glycosylated membrane proteins (LAMPs) on its luminal face",
+        "Lysosomes maintain their acidic pH (4.5-5.0) through the action of a V-type H+-ATPase that pumps protons from the cytosol into the lysosomal lumen"
+      ],
+      "correctAnswer": "TTTT",
+      "explanation": "S1: TRUE — I-cell disease (mucolipidosis II) results from defective GlcNAc phosphotransferase in the cis-Golgi. Without this enzyme, lysosomal hydrolases cannot be tagged with M6P, so they are secreted rather than being directed to lysosomes. This leads to accumulation of undigested substrates (inclusion bodies visible in fibroblasts). S2: TRUE — Macroautophagy begins with formation of a phagophore (isolation membrane) that expands and seals to form a double-membraned autophagosome. This then fuses with lysosomes (forming an autolysosome) where the inner membrane and enclosed contents are degraded. Key regulators include ATG proteins, mTOR, and AMPK. S3: TRUE — LAMP-1 and LAMP-2 (lysosome-associated membrane proteins) are highly glycosylated on their luminal domains, forming a continuous glycocalyx that protects the lysosomal membrane from the hydrolytic enzymes within. Deficiency of LAMP-2 causes Danon disease. S4: TRUE — The V-type (vacuolar) H+-ATPase is a multi-subunit proton pump that uses ATP hydrolysis to transport H+ into the lysosomal lumen, maintaining pH at 4.5-5.0, which is optimal for acid hydrolases. The Cl- channel ClC-7 provides a counter-ion current to facilitate electrogenic H+ pumping.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about peroxisomes:",
+      "options": [
+        "Peroxisomes import folded proteins through the Pex5 receptor recognizing a C-terminal PTS1 (peroxisomal targeting signal) tripeptide, typically SKL",
+        "Peroxisomes are part of the endomembrane system and receive membrane lipids via vesicular transport from the ER",
+        "Beta-oxidation of very-long-chain fatty acids (>22 carbons) begins in peroxisomes and is completed in mitochondria",
+        "Catalase within peroxisomes converts toxic hydrogen peroxide into water and oxygen, protecting the cell from oxidative damage"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — Unlike mitochondria and chloroplasts, peroxisomes can import fully folded and even oligomeric proteins. The Pex5 receptor recognizes the PTS1 signal (most commonly the C-terminal tripeptide Ser-Lys-Leu, SKL) and delivers cargo through a transient pore formed by Pex proteins. There is also a PTS2 signal recognized by Pex7. S2: FALSE — Peroxisomes are NOT part of the endomembrane system. While recent evidence shows that some peroxisomal membrane proteins transit through the ER, peroxisomes primarily grow and divide autonomously. They are not connected to the ER-Golgi secretory pathway in the way lysosomes are. S3: TRUE — Very-long-chain fatty acids (VLCFAs) cannot enter mitochondria directly. They are first shortened in peroxisomes by beta-oxidation to medium-chain products (e.g., octanoyl-CoA), which are then transferred to mitochondria for complete oxidation. Defects in peroxisomal VLCFA oxidation cause X-linked adrenoleukodystrophy. S4: TRUE — Oxidases in peroxisomes generate H2O2 as a byproduct. Catalase (2 H2O2 → 2 H2O + O2) and other peroxidases rapidly decompose H2O2, preventing oxidative damage. Catalase is a hallmark peroxisomal enzyme.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about signal transduction events at the plasma membrane:",
+      "options": [
+        "G protein-coupled receptors (GPCRs) have seven transmembrane alpha-helical domains and activate heterotrimeric G proteins on the cytoplasmic face of the membrane",
+        "Receptor tyrosine kinases (RTKs) are activated by ligand-induced dimerization followed by trans-autophosphorylation of tyrosine residues in the cytoplasmic domain",
+        "Phosphatidylinositol 4,5-bisphosphate (PIP2) is a membrane lipid that can be cleaved by phospholipase C to generate two second messengers: IP3 (which releases Ca2+ from the ER) and DAG (which activates protein kinase C)",
+        "Lipid rafts have no role in signal transduction because signaling proteins are distributed uniformly across the plasma membrane"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1: TRUE — GPCRs (the largest family of cell-surface receptors, ~800 in humans) contain 7 TM helices. Ligand binding induces a conformational change that promotes exchange of GDP for GTP on the Gα subunit, dissociating Gα-GTP from Gβγ, both of which activate downstream effectors. S2: TRUE — RTK activation requires ligand-induced dimerization (or oligomerization). The juxtaposed kinase domains then phosphorylate each other on specific tyrosine residues (trans-autophosphorylation). These phosphotyrosines serve as docking sites for SH2 and PTB domain-containing signaling proteins (e.g., Grb2, PLCγ, PI3K). S3: TRUE — PIP2 cleavage by PLCβ (downstream of GPCRs) or PLCγ (downstream of RTKs) generates IP3 and DAG simultaneously. IP3 is soluble and diffuses to ER IP3 receptors to trigger Ca2+ release. DAG remains membrane-associated and recruits/activates PKC. This is a key branching point in signaling. S4: FALSE — Lipid rafts play important roles in signal transduction. Many signaling proteins (GPI-anchored proteins, Src-family kinases, and some receptors) preferentially partition into lipid rafts. These microdomains concentrate signaling components, facilitating efficient signal transduction.",
+      "isOlympiad": true,
+      "olympiadLevel": "INBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the relationship between membrane structure and cellular energetics:",
+      "options": [
+        "The cristae of the inner mitochondrial membrane increase surface area for ATP synthase complexes and electron transport chain components, and their shape is maintained by the MICOS complex and OPA1",
+        "Uncoupling protein 1 (UCP1) in brown adipose tissue mitochondria allows protons to leak back across the inner membrane, generating heat instead of ATP — a process called non-shivering thermogenesis",
+        "In chloroplasts, the proton gradient across the thylakoid membrane is primarily due to the pH difference (ΔpH ~3 units), unlike mitochondria where Δψ dominates",
+        "The F1 component of ATP synthase is located in the mitochondrial matrix and rotates as protons flow through the membrane-embedded Fo component"
+      ],
+      "correctAnswer": "TTTT",
+      "explanation": "S1: TRUE — Cristae are invaginations of the inner mitochondrial membrane that dramatically increase surface area (5-10 fold). The MICOS (Mitochondrial Contact Site and Cristae Organizing System) complex maintains cristae junctions, while OPA1 (a dynamin-related GTPase) regulates cristae remodeling. Defects in OPA1 cause dominant optic atrophy. S2: TRUE — UCP1 (thermogenin) creates a regulated proton leak pathway in the inner mitochondrial membrane of brown fat cells. This dissipates the proton gradient as heat rather than coupling it to ATP synthesis. UCP1 is activated by free fatty acids and inhibited by purine nucleotides (GDP, GTP). S3: TRUE — In chloroplasts, the thylakoid lumen becomes very acidic during illumination (pH drops from ~7 to ~4, a ΔpH of ~3). The membrane potential contribution is small (~30 mV) because ion channels rapidly equilibrate charge. This contrasts with mitochondria where Δψ (~150-180 mV) dominates over ΔpH (~0.5-1 unit). S4: TRUE — ATP synthase (F0F1 complex) uses rotary catalysis. The Fo domain (in the membrane) contains the c-ring that rotates as protons flow through. This rotation drives conformational changes in the F1 domain (in the matrix), which contains three catalytic β subunits that bind ADP + Pi and release ATP in a binding change mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about aquaporins and water transport across biological membranes:",
+      "options": [
+        "Aquaporin-2 (AQP2) in the kidney collecting duct is regulated by vasopressin (ADH), which triggers insertion of AQP2-containing vesicles into the apical membrane via a cAMP-PKA signaling pathway",
+        "Water can cross biological membranes only through aquaporins; no water permeates through the lipid bilayer itself",
+        "Mercury (Hg2+) ions inhibit certain aquaporins by binding to a cysteine residue near the channel pore, providing a classic pharmacological tool for demonstrating aquaporin-mediated water transport",
+        "All aquaporins are strict water channels; none of them transport any other molecules"
+      ],
+      "correctAnswer": "TFTF",
+      "explanation": "S1: TRUE — ADH binds V2 receptors on collecting duct cells, activating adenylyl cyclase → cAMP → PKA, which phosphorylates AQP2, triggering exocytic insertion of AQP2-containing vesicles into the apical membrane. This increases water reabsorption. Mutations in AQP2 or V2R cause nephrogenic diabetes insipidus. S2: FALSE — While aquaporins dramatically increase water permeability (up to 3 billion water molecules per second per channel), water can still permeate slowly through the lipid bilayer itself via the solubility-diffusion mechanism. The intrinsic permeability of a pure lipid bilayer to water is low but non-zero. S3: TRUE — HgCl2 was historically used to demonstrate aquaporin function. Hg2+ binds to Cys-189 near the NPA motif of AQP1, blocking the channel. Mercury-sensitive water transport became a hallmark of aquaporin-mediated flux. This was a key experiment by Peter Agre. S4: FALSE — Aquaglyceroporins (e.g., AQP3, AQP7, AQP9) transport glycerol, urea, and other small solutes in addition to water. AQP9 in the liver transports glycerol for gluconeogenesis. The aquaporin superfamily is functionally diverse.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about microtubule dynamics and organization:",
+      "options": [
+        "The centrosome contains a pair of centrioles surrounded by pericentriolar material (PCM) that contains gamma-tubulin ring complexes (γ-TuRC) which nucleate microtubule assembly",
+        "Dynamic instability refers to the stochastic switching of individual microtubules between phases of growth and rapid shrinkage, driven by GTP hydrolysis in the beta-tubulin subunit",
+        "Taxol (paclitaxel) promotes microtubule depolymerization, which is why it is effective as an anti-cancer drug during mitosis",
+        "MAPs (microtubule-associated proteins) such as Tau stabilize microtubules by binding along their length, and Tau hyperphosphorylation leading to detachment is implicated in Alzheimer's disease"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — The centrosome is the primary MTOC in animal cells. γ-TuRC complexes in the PCM template microtubule nucleation, orienting all microtubule minus ends at the centrosome and plus ends outward. Centrioles recruit and organize PCM components. S2: TRUE — Dynamic instability was described by Mitchison and Kirschner (1984). GTP-tubulin adds to the plus end; after incorporation, GTP on β-tubulin is hydrolyzed to GDP. If hydrolysis catches up to the growing end (loss of the GTP cap), the microtubule undergoes catastrophe (rapid depolymerization). Rescue is the reverse switch. S3: FALSE — Taxol does the OPPOSITE: it STABILIZES microtubules by binding within the lumen and preventing depolymerization. This is lethal to dividing cells because mitotic spindle dynamics require both polymerization and depolymerization for proper chromosome segregation. Taxol-treated cells arrest in mitosis. S4: TRUE — Tau protein stabilizes axonal microtubules in neurons. In Alzheimer's disease, hyperphosphorylated Tau detaches from microtubules, leading to microtubule destabilization and Tau aggregation into neurofibrillary tangles, contributing to neurodegeneration.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, which conclusion about membrane permeability is best supported?",
+      "dataContext": "A researcher measured the rate of diffusion of four molecules across an artificial phospholipid bilayer (no proteins) at 37°C. Results:\n\n| Molecule | Molecular Weight (Da) | Charge at pH 7.4 | Partition Coefficient (Kp) | Relative Permeability |\n|---|---|---|---|---|\n| Molecule A | 32 | 0 | 0.01 | 1.0 |\n| Molecule B | 180 | 0 | 0.0001 | 0.001 |\n| Molecule C | 18 | 0 | 0.002 | 5.2 |\n| Molecule D | 23 | +1 | 0.0003 | 0.0001 |\n\nNote: Molecule A is O2, B is glucose, C is water, D is Na+. Partition coefficient (Kp) measures the lipid solubility; higher Kp = more lipid soluble.",
+      "options": [
+        "Molecular weight is the sole determinant of membrane permeability, as smaller molecules always permeate faster",
+        "The anomalously high permeability of water (molecule C) despite its low Kp suggests that water crosses the bilayer by a mechanism partially independent of lipid solubility, likely through transient defects in the bilayer",
+        "Na+ (molecule D) permeates slowly solely because of its large hydrated radius, not because of its charge",
+        "Glucose (molecule B) has the lowest permeability because it has the highest molecular weight, and charge plays no role"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data show that while lipid solubility (Kp) generally predicts permeability well (O2 with Kp=0.01 has high permeability), water is an exception: its Kp is very low (0.002) yet it has higher permeability than expected (5.2 relative to O2). This anomaly is well documented and attributed to water's small size allowing it to permeate through transient packing defects in the bilayer (and in vivo, through aquaporins). Option A is wrong because molecular weight alone doesn't explain it — water (MW 18) has lower Kp than O2 (MW 32) but higher permeability than predicted by Kp alone. Option C ignores the critical role of charge: Na+ is impermeable primarily because moving an ion through the hydrophobic bilayer interior has an enormous Born energy penalty. Option D is incorrect because glucose's low permeability is mainly due to its polar hydroxyl groups reducing lipid solubility, and many smaller charged molecules are even less permeable.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, what is the most likely explanation for the difference in glucose uptake between Conditions 3 and 4?",
+      "dataContext": "Researchers measured glucose uptake into vesicles reconstituted with purified GLUT1 transporter under different conditions. All vesicles had equal GLUT1 density.\n\n| Condition | External [Glucose] (mM) | Internal [Glucose] (mM) | Na+ Gradient | ATP Present | Uptake Rate (nmol/min/mg) |\n|---|---|---|---|---|---|\n| 1 | 5 | 0 | None | No | 42 |\n| 2 | 5 | 5 | None | No | 0 |\n| 3 | 5 | 0 | 140mM out, 10mM in | No | 44 |\n| 4 | 5 | 0 | 10mM out, 140mM in | No | 41 |\n| 5 | 50 | 0 | None | No | 48 |\n| 6 | 100 | 0 | None | No | 49 |",
+      "options": [
+        "ATP is required to drive GLUT1 transport, and its absence in both conditions limits uptake equally",
+        "GLUT1 is a sodium-glucose co-transporter, and reversing the Na+ gradient inhibits glucose uptake",
+        "The Na+ gradient difference is negligible because GLUT1-mediated glucose transport is independent of Na+ — it is a uniporter performing facilitated diffusion driven solely by the glucose concentration gradient",
+        "The reversed Na+ gradient in Condition 4 causes GLUT1 to actively pump glucose out of the vesicle"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Comparing Conditions 1, 3, and 4: glucose uptake rates are 42, 44, and 41 nmol/min/mg respectively — nearly identical regardless of the Na+ gradient direction. This demonstrates that GLUT1 is a Na+-independent glucose uniporter (facilitated diffusion). It is NOT a Na+-glucose cotransporter like SGLT1. The small variations (41-44) are within experimental noise. Condition 2 shows zero uptake when glucose concentrations are equal on both sides, confirming that GLUT1 requires a glucose concentration gradient (net flux = 0 at equilibrium). Conditions 5 and 6 show near-saturation kinetics at higher glucose, consistent with carrier-mediated transport (Km of GLUT1 ≈ 1-2 mM, so 5 mM is already approaching Vmax). No ATP is needed (ruling out C), and GLUT1 cannot pump glucose against its gradient (ruling out D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the FRAP data, what conclusion can be drawn about membrane protein mobility in the two cell types?",
+      "dataContext": "Fluorescence Recovery After Photobleaching (FRAP) was performed on cells expressing GFP-tagged membrane protein X. A small region of the plasma membrane was bleached, and fluorescence recovery was monitored over time.\n\n| Time (s) | Cell Type 1 — % Recovery | Cell Type 2 — % Recovery |\n|---|---|---|\n| 0 | 0 | 0 |\n| 10 | 25 | 5 |\n| 30 | 55 | 12 |\n| 60 | 72 | 18 |\n| 120 | 82 | 22 |\n| 300 | 85 | 24 |\n| 600 | 85 | 25 |\n\nAdditional data: Cell Type 1 expresses normal levels of spectrin and ankyrin. Cell Type 2 overexpresses spectrin and ankyrin by 5-fold. Both cell types have identical lipid composition and protein X expression levels.",
+      "options": [
+        "The cortical spectrin-ankyrin cytoskeleton in Cell Type 2 restricts lateral diffusion of protein X, reducing its mobile fraction from ~85% to ~25%",
+        "Cell Type 2 has higher membrane viscosity due to altered lipid composition",
+        "Protein X is a transmembrane protein in Cell Type 1 but a GPI-anchored protein in Cell Type 2",
+        "Protein X is being actively endocytosed in Cell Type 2, explaining the low fluorescence recovery"
+      ],
+      "correctAnswer": "A",
+      "explanation": "FRAP data reveal two key parameters: the mobile fraction (plateau value) and the diffusion rate (speed of recovery). Cell Type 1 shows fast recovery reaching ~85% (mobile fraction = 85%, immobile fraction = 15%). Cell Type 2 shows very slow recovery plateauing at only ~25% (mobile fraction = 25%, immobile fraction = 75%). Since both cell types have identical lipid composition (eliminating B) and identical protein X expression, the difference must be due to the 5-fold spectrin/ankyrin overexpression. The spectrin-ankyrin meshwork underlying the plasma membrane creates 'corral fences' that restrict lateral diffusion of transmembrane proteins. With 5-fold overexpression, most protein X molecules are trapped in small corrals or directly tethered, dramatically increasing the immobile fraction. Option A is contradicted by the identical protein expression data. Option D would show continued fluorescence loss, not a stable low plateau.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the electron microscopy morphometric data, what is the most likely identity of Cell Type X?",
+      "dataContext": "Electron microscopy morphometric analysis of two unknown animal cell types measured the relative volume occupied by different organelles (expressed as % of total cell volume):\n\n| Organelle | Cell Type X | Cell Type Y | Typical Fibroblast (reference) |\n|---|---|---|---|\n| Rough ER | 35% | 3% | 9% |\n| Smooth ER | 3% | 25% | 3% |\n| Golgi apparatus | 12% | 4% | 3% |\n| Mitochondria | 8% | 18% | 8% |\n| Lysosomes | 2% | 1% | 1% |\n| Secretory vesicles | 15% | 2% | 1% |\n| Free ribosomes | 5% | 3% | 5% |\n| Nucleus | 10% | 15% | 15% |\n| Cytoplasm/other | 10% | 29% | 55% |",
+      "options": [
+        "Cell Type X is a skeletal muscle cell specialized for contraction",
+        "Cell Type X is a red blood cell, which lacks organelles",
+        "Cell Type X is a fat storage cell (adipocyte) with extensive lipid-synthesizing smooth ER",
+        "Cell Type X is a professional secretory cell (such as a pancreatic acinar cell) with extensive protein synthesis, processing, and secretory machinery"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cell Type X shows extremely high rough ER (35% vs 9% reference), expanded Golgi (12% vs 3%), and abundant secretory vesicles (15% vs 1%). This organelle profile is characteristic of a professional secretory cell — specifically a pancreatic acinar cell, which synthesizes and secretes large quantities of digestive enzyme zymogens. The workflow: ribosomes on rough ER synthesize secretory proteins → proteins move to the Golgi for sorting and packaging → concentrated in zymogen (secretory) granules awaiting secretion. Cell Type Y, with abundant smooth ER (25%) and mitochondria (18%), matches a steroid-producing cell or hepatocyte. Red blood cells (A) are enucleated and lack organelles. Skeletal muscle (C) would show abundant mitochondria and sarcoplasmic reticulum. Adipocytes (D) would have massive lipid droplets, not rough ER.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, which model of Golgi transport does this experiment best support?",
+      "dataContext": "Researchers used a temperature-sensitive mutant of vesicular stomatitis virus glycoprotein (VSVG-GFP) that is retained in the ER at 40°C but released to the secretory pathway at 32°C. After shifting to 32°C, they tracked VSVG-GFP fluorescence intensity in individual Golgi cisternae over time.\n\nResults (Fluorescence intensity, arbitrary units):\n\n| Time (min) | Cis-Golgi | Medial-Golgi | Trans-Golgi |\n|---|---|---|---|\n| 0 | 0 | 0 | 0 |\n| 5 | 85 | 5 | 0 |\n| 10 | 70 | 45 | 5 |\n| 15 | 30 | 65 | 35 |\n| 20 | 10 | 40 | 60 |\n| 25 | 5 | 15 | 70 |\n| 30 | 0 | 5 | 30 |\n| 40 | 0 | 0 | 5 |\n\nCritically, live imaging showed that individual cisternae acquired VSVG-GFP and then lost it as the cisterna matured, rather than cargo transferring between static cisternae via vesicles.",
+      "options": [
+        "The tubular connection model, in which all cisternae are permanently connected and cargo flows freely",
+        "The rapid partitioning model, in which cargo instantly distributes across all cisternae simultaneously",
+        "The vesicular transport model, in which cargo moves between stable cisternae via COPI vesicles",
+        "The cisternal maturation model, in which Golgi cisternae progressively mature from cis to trans while retrograde vesicles recycle resident Golgi enzymes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The data show a clear wave of VSVG-GFP moving sequentially through cis → medial → trans cisternae: fluorescence peaks in the cis-Golgi first (85 at 5 min), then in the medial-Golgi (65 at 15 min), then in the trans-Golgi (70 at 25 min). Critically, the question states that live imaging showed individual cisternae acquiring then losing the cargo as they matured, which is the hallmark of cisternal maturation. In this model, new cis cisternae form from ER-derived vesicles and progressively mature into medial then trans cisternae. Golgi-resident enzymes are recycled backward (retrograde) via COPI vesicles to maintain the enzymatic identity of each compartment. The vesicular transport model (A) predicts cargo hopping between static cisternae, which contradicts the live imaging observation. Rapid partitioning (C) predicts simultaneous appearance in all compartments, contradicted by the sequential wave. Tubular connections (D) would predict rapid equilibration, not the observed slow sequential progression.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the osmolarity data, what will happen to the red blood cells placed in Solution C?",
+      "dataContext": "Red blood cells (RBCs) with an intracellular osmolarity of 300 mOsm are placed in three different solutions. The osmolarity of each solution and its composition are given below:\n\n| Solution | Total Osmolarity (mOsm) | Composition | Reflection Coefficient (σ) for solute |\n|---|---|---|---|\n| A | 300 | 150 mM NaCl (σ = 1.0) | 1.0 |\n| B | 300 | 300 mM urea (σ = 0) | 0.0 |\n| C | 400 | 200 mM NaCl (σ = 1.0) | 1.0 |\n| D | 400 | 200 mM NaCl + 100 mM urea (σ for NaCl = 1.0, σ for urea = 0) | Mixed |\n\nNote: Reflection coefficient σ = 1.0 means the solute cannot cross the membrane (effective osmole). σ = 0 means the solute freely crosses the membrane (ineffective osmole). Tonicity depends on effective osmolarity = Σ(σi × Ci).",
+      "options": [
+        "RBCs will swell and potentially lyse because Solution C is hypotonic",
+        "RBCs will initially shrink then return to normal volume as NaCl equilibrates across the membrane",
+        "RBCs will crenate (shrink) because Solution C has a higher effective osmolarity (400 mOsm) than the intracellular fluid, making it hypertonic",
+        "RBCs will remain unchanged because Solution C is isotonic (same total osmolarity as the cell)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The key concept is the distinction between osmolarity and tonicity. Solution C contains 200 mM NaCl with σ = 1.0, meaning NaCl cannot cross the RBC membrane. The effective osmolarity = σ × C = 1.0 × 400 mOsm = 400 mOsm (NaCl dissociates into Na+ and Cl-, contributing 400 mOsm from 200 mM). Since the intracellular effective osmolarity is 300 mOsm, Solution C is HYPERTONIC. Water will flow out of the RBCs by osmosis, causing them to crenate (shrink). For comparison: Solution A is isotonic (effective osmolarity = 300 mOsm). Solution B has 300 mOsm total but σ = 0, so effective osmolarity = 0 — it is effectively hypotonic, causing lysis. Solution D has effective osmolarity = (1.0 × 400) + (0 × 100) = 400 mOsm for NaCl only, so it is also hypertonic. This question tests the critical distinction between osmolarity and tonicity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the fluorescence microscopy data, what is the most likely explanation for the difference between normal cells and patient cells?",
+      "dataContext": "Fibroblasts from a patient with a suspected lysosomal storage disease were compared with normal fibroblasts. Both cell types were incubated with fluorescently labeled EGF (epidermal growth factor) and imaged over time.\n\n| Time point | Normal cells — EGF localization | Patient cells — EGF localization |\n|---|---|---|\n| 0 min | Plasma membrane | Plasma membrane |\n| 5 min | Early endosomes (Rab5+) | Early endosomes (Rab5+) |\n| 15 min | Late endosomes (Rab7+) | Late endosomes (Rab7+) |\n| 30 min | Lysosomes (LAMP1+); EGF signal degraded | Large Rab7+ structures; no LAMP1 co-localization; EGF signal persists |\n| 60 min | No EGF signal (fully degraded) | EGF signal persists in enlarged Rab7+ compartments |\n\nAdditional data: Patient cells show normal mannose-6-phosphate receptor expression and normal Golgi morphology. Lysosomal enzyme activity is normal when measured in cell lysates with exogenous substrate at pH 4.5.",
+      "options": [
+        "The patient has a defect in late endosome-lysosome fusion, preventing delivery of endocytosed cargo to lysosomes for degradation",
+        "The patient has a defect in clathrin-mediated endocytosis at the plasma membrane",
+        "The patient has I-cell disease with defective M6P tagging of lysosomal enzymes",
+        "The patient cells have elevated lysosomal pH that inactivates acid hydrolases"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The data show that endocytosis and early-to-late endosome trafficking are normal in patient cells (EGF reaches Rab7+ late endosomes on schedule). However, the late endosomes fail to acquire LAMP1 and EGF is not degraded, indicating that late endosome-lysosome fusion is defective. The fact that lysosomal enzymes have normal activity when tested in lysates (with exogenous substrate at acidic pH) rules out enzyme deficiency and pH problems (D). Normal M6P receptor expression and Golgi morphology rule out I-cell disease (A). Normal endocytosis timing rules out clathrin defects (C). The enlarged Rab7+ structures without LAMP1 co-localization specifically point to a fusion defect — the late endosomes cannot merge with lysosomes (which carry LAMP1). Possible molecular defects include mutations in HOPS complex subunits, Rab7 effectors, or SNARE proteins required for this fusion event.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, which ion channel type is most likely responsible for the current measured in these experiments?",
+      "dataContext": "Patch-clamp recordings were performed on an excised membrane patch from a neuron. Single-channel currents were measured under different conditions:\n\n| Condition | Holding Potential | Bath Solution | Pipette Solution | Channel Open Probability (Po) | Single-Channel Conductance (pS) |\n|---|---|---|---|---|---|\n| 1 | -80 mV | 5 mM K+ / 145 mM Na+ | 140 mM K+ / 10 mM Na+ | 0.02 | 25 |\n| 2 | -40 mV | 5 mM K+ / 145 mM Na+ | 140 mM K+ / 10 mM Na+ | 0.15 | 25 |\n| 3 | 0 mV | 5 mM K+ / 145 mM Na+ | 140 mM K+ / 10 mM Na+ | 0.55 | 25 |\n| 4 | +40 mV | 5 mM K+ / 145 mM Na+ | 140 mM K+ / 10 mM Na+ | 0.85 | 25 |\n| 5 | 0 mV | 5 mM K+ / 145 mM Na+ + 100 nM charybdotoxin | 140 mM K+ / 10 mM Na+ | 0.01 | 25 |\n\nNote: Charybdotoxin is a specific blocker of voltage-gated K+ channels. The pipette solution represents the intracellular side in this configuration.",
+      "options": [
+        "A voltage-gated Na+ channel, because the open probability increases with depolarization",
+        "A ligand-gated K+ channel activated by intracellular Ca2+",
+        "A voltage-gated K+ channel, because open probability increases with depolarization, the conductance is consistent with K+ channels, and charybdotoxin blocks the channel",
+        "An inward rectifier K+ channel (Kir) that opens at hyperpolarized potentials"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Multiple lines of evidence identify this as a voltage-gated K+ channel: (1) Open probability (Po) increases dramatically with depolarization (0.02 at -80 mV to 0.85 at +40 mV), consistent with voltage-gated activation. (2) The single-channel conductance of 25 pS is within the typical range for voltage-gated K+ channels (5-80 pS depending on subtype). (3) Charybdotoxin (Condition 5) nearly eliminates channel activity (Po drops to 0.01), and charybdotoxin is a specific blocker of Kv channels (particularly Kv1 family and BK channels). While voltage-gated Na+ channels (A) also activate with depolarization, they would not be blocked by charybdotoxin and have different conductance properties. Ligand-gated channels (C) would not show voltage-dependent activation in the absence of ligand changes. Inward rectifiers (D) conduct more at hyperpolarized potentials, opposite to the observed pattern.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the TIRF microscopy data, which statement best describes the vesicle trafficking pathway in these cells?",
+      "dataContext": "Total Internal Reflection Fluorescence (TIRF) microscopy was used to image vesicle docking and fusion events at the plasma membrane of pancreatic beta cells stimulated with glucose. Vesicles were labeled with GFP-tagged insulin. Researchers counted fusion events per cell over 10-minute periods.\n\n| Condition | Glucose (mM) | Cytochalasin D | Nocodazole | Fusion Events / cell / 10 min |\n|---|---|---|---|---|\n| 1 (Basal) | 2.8 | — | — | 3 ± 1 |\n| 2 (Stimulated) | 16.7 | — | — | 45 ± 8 |\n| 3 | 16.7 | 10 μM | — | 62 ± 10 |\n| 4 | 16.7 | — | 10 μM | 12 ± 4 |\n| 5 | 16.7 | 10 μM | 10 μM | 8 ± 3 |\n\nNote: Cytochalasin D inhibits actin polymerization. Nocodazole depolymerizes microtubules.",
+      "options": [
+        "Microtubules are essential for long-range transport of insulin vesicles to the plasma membrane, while the cortical actin network acts as a barrier that restricts vesicle access — removing actin increases fusion events",
+        "Actin filaments are the primary tracks for insulin vesicle transport, and microtubules play no role",
+        "The cytoskeleton is not involved in regulated exocytosis; the observed effects are due to drug toxicity",
+        "Both actin and microtubules are required for insulin vesicle fusion; disrupting either one completely blocks exocytosis"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The data reveal a nuanced dual role for the cytoskeleton in insulin granule exocytosis. Condition 3 (cytochalasin D alone) INCREASES fusion events from 45 to 62, indicating that the cortical actin network normally acts as a BARRIER restricting vesicle access to the plasma membrane. Removing this barrier allows more vesicles to fuse. Condition 4 (nocodazole alone) dramatically DECREASES fusion from 45 to 12, indicating that microtubules are essential for transporting vesicles from the cell interior to the cell periphery. Condition 5 (both drugs) shows very low fusion (8), because even though the actin barrier is removed, vesicles cannot reach the plasma membrane without microtubule transport. This is a well-established model in beta cell biology: kinesin moves insulin granules along microtubules toward the plasma membrane, but cortical actin acts as a final gatekeeper. Glucose stimulation triggers actin remodeling that permits vesicle docking and fusion.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a newly discovered membrane protein functions as a channel or a carrier. Which experimental approach would most definitively distinguish between these two mechanisms?",
+      "experimentContext": "The protein has been purified and reconstituted into proteoliposomes. It facilitates transport of a fluorescent substrate across the membrane. The researcher has access to: (1) stopped-flow spectrofluorimetry with millisecond time resolution, (2) electrophysiology equipment for single-molecule recordings, (3) radiolabeled substrate for flux measurements, and (4) various chemical inhibitors.",
+      "options": [
+        "Add competitive inhibitors and measure whether transport is blocked — only carrier proteins can be inhibited",
+        "Test whether transport is saturable — channels show linear kinetics while carriers show Michaelis-Menten saturation",
+        "Measure the maximum transport rate (Vmax) — channels have higher Vmax than carriers because channels allow bulk flow while carriers undergo conformational changes",
+        "Perform patch-clamp electrophysiology to detect discrete single-channel conductance steps, which are characteristic of channel-mediated transport, versus the smooth, continuous flux expected from carrier proteins"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Patch-clamp electrophysiology provides the most definitive distinction between channels and carriers. Channels form aqueous pores that allow ions/molecules to flow through at rates of 10^6-10^8 per second. In single-molecule recordings, channels show characteristic discrete 'square wave' openings and closings (single-channel conductance steps) as individual pore proteins switch between open and closed states. Carriers, by contrast, undergo conformational changes to transport substrate (100-1000 per second) and would show smooth, averaged current without discrete steps. Option A is partially correct (channels are faster) but Vmax alone cannot definitively distinguish mechanism — a highly expressed carrier could have high total flux. Option B is incorrect because some channels also show saturation kinetics (e.g., ion channels at very high ion concentrations). Option D is wrong because both channels and carriers can be specifically inhibited (e.g., tetrodotoxin blocks Na+ channels).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Which control is MOST critical to include in this experiment to validate that the observed GFP redistribution is specifically due to loss of the signal peptide rather than another effect of the mutation?",
+      "experimentContext": "A researcher hypothesizes that a specific 20-amino-acid N-terminal signal peptide is required for targeting protein Z to the endoplasmic reticulum. To test this, they create two constructs: (1) wild-type protein Z fused to GFP (WT-Z-GFP), and (2) a mutant lacking the first 20 amino acids fused to GFP (Δ20-Z-GFP). They plan to transfect both into HeLa cells and observe GFP localization by fluorescence microscopy. WT-Z-GFP localizes to the ER as expected.",
+      "options": [
+        "A construct expressing GFP alone (without protein Z) to establish the default cytoplasmic distribution of GFP",
+        "Co-staining with DAPI to confirm nuclear morphology is normal in transfected cells",
+        "Treating cells expressing WT-Z-GFP with cycloheximide to block new protein synthesis",
+        "A construct with the 20-amino-acid signal peptide fused directly to GFP (SP-GFP), to test whether the signal peptide alone is sufficient for ER targeting"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The most critical control is testing whether the signal peptide alone is sufficient for ER targeting (SP-GFP). The experiment as designed only shows that deleting the first 20 amino acids abolishes ER targeting, but this deletion might disrupt protein folding, remove other functional domains, or affect GFP maturation rather than specifically eliminating the ER signal. The SP-GFP construct directly tests sufficiency: if the 20-amino-acid peptide alone can redirect cytoplasmic GFP to the ER, this provides strong evidence that it functions as a bona fide signal peptide. This is the classic 'necessary and sufficient' experimental logic. GFP alone (A) is a useful but less informative control — it only establishes baseline. Cycloheximide treatment (C) tests protein turnover, not targeting. DAPI staining (D) is a basic quality control, not mechanistically informative.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "What is the most appropriate negative control for this experiment?",
+      "experimentContext": "Researchers are investigating whether lipid raft integrity is required for efficient signaling through receptor X. Their experimental approach: treat cells with methyl-beta-cyclodextrin (MβCD), which extracts cholesterol from the plasma membrane and disrupts lipid rafts. They then stimulate with ligand and measure downstream phosphorylation of signaling protein Y by Western blot. They observe that MβCD treatment reduces phosphorylation of Y by 80%.",
+      "options": [
+        "Cells treated with MβCD but not stimulated with ligand",
+        "Cells treated with filipin (which binds cholesterol but does not extract it) and stimulated with ligand",
+        "MβCD-treated cells stimulated with ligand, but with exogenous cholesterol added back to the membrane after MβCD treatment (cholesterol rescue/replenishment)",
+        "Untreated cells stimulated with ligand (without MβCD treatment)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The cholesterol add-back (rescue) experiment is the most critical control. While untreated cells (A) and unstimulated controls (C) are necessary basic controls, they do not address the key concern: MβCD might reduce signaling through non-specific effects (general membrane disruption, altered receptor conformation, or extraction of non-cholesterol membrane components) rather than specifically through lipid raft disruption. If adding cholesterol back to MβCD-treated cells restores signaling, this demonstrates that the effect is specifically due to cholesterol depletion (and thus raft disruption) rather than irreversible membrane damage or off-target effects. This rescue control is the gold standard in lipid raft studies. Filipin treatment (D) is an interesting complementary experiment but is a positive control/alternative approach rather than the most appropriate negative control for validating specificity.",
+      "isOlympiad": true,
+      "olympiadLevel": "INBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To distinguish between these two models, which experimental approach would provide the most direct evidence?",
+      "experimentContext": "Two competing models explain how the Golgi apparatus maintains its structure during cell division in mammalian cells. Model 1: The Golgi fragments into small vesicles that are distributed between daughter cells and reassemble. Model 2: The Golgi is absorbed back into the ER during mitosis and re-emerges from ER exit sites after division. A researcher has access to: photoactivatable GFP-tagged Golgi markers, electron microscopy, live-cell imaging, and ER-specific fluorescent markers.",
+      "options": [
+        "Photoactivate GFP-tagged Golgi resident enzyme in the Golgi during G2, then track the fluorescent signal through mitosis using live-cell imaging — if it colocalizes with ER markers during mitosis, Model 2 is supported; if it remains in discrete vesicles, Model 1 is supported",
+        "Fix cells at various stages of mitosis and perform electron microscopy to observe Golgi structure",
+        "Measure total Golgi enzyme activity in cell lysates before and after mitosis",
+        "Treat cells with nocodazole to block mitosis and observe whether the Golgi fragments"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Photoactivation of a Golgi-resident enzyme followed by live-cell imaging through mitosis provides the most direct, real-time evidence. By activating GFP fluorescence specifically in the Golgi during G2 phase, the researcher creates a pulse-labeled population of Golgi proteins. Tracking these through mitosis reveals their fate: if they disperse into an ER-like reticular pattern that colocalizes with ER markers (e.g., Sec61β), Model 2 is supported. If they remain in discrete puncta/vesicles that do not colocalize with ER markers, Model 1 is supported. Electron microscopy (A) provides structural snapshots but cannot distinguish Golgi-derived vesicles from ER in fragmented mitotic membranes. Enzyme activity assays (C) measure total protein but not localization. Nocodazole (D) blocks mitosis entirely, preventing the question from being addressed, and nocodazole itself disrupts Golgi structure (Golgi scatters into mini-stacks), confounding the results.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Which additional experiment would most strengthen the conclusion that MRP1 specifically mediates resistance through drug efflux?",
+      "experimentContext": "A cancer cell line has developed resistance to doxorubicin (a chemotherapy drug). The researchers hypothesize that overexpression of a membrane transporter (MRP1, a member of the ABC transporter family) is responsible. They have shown by Western blot that MRP1 expression is 10-fold higher in resistant cells compared to sensitive cells. They have also shown that intracellular doxorubicin accumulation is 70% lower in resistant cells. The researchers want to prove that MRP1 is directly responsible for resistance.",
+      "options": [
+        "Use siRNA to knock down MRP1 in resistant cells and measure whether doxorubicin accumulation and drug sensitivity are restored to levels comparable to parental sensitive cells",
+        "Perform immunofluorescence to confirm MRP1 localizes to the plasma membrane in resistant cells",
+        "Overexpress MRP1 in a completely different cell type to see if it becomes resistant to any drug",
+        "Perform a cell viability assay comparing sensitive and resistant cells at various doxorubicin concentrations"
+      ],
+      "correctAnswer": "A",
+      "explanation": "siRNA knockdown of MRP1 in resistant cells is the strongest experiment because it directly tests the causal requirement for MRP1 in resistance. If reducing MRP1 expression restores doxorubicin accumulation and resensitizes cells to the drug, this provides direct evidence that MRP1 overexpression is causally responsible (not merely correlated with resistance). This is a loss-of-function experiment in the relevant cellular context. Cell viability assays (A) only characterize the resistance phenotype but don't prove MRP1's causal role. Overexpression in another cell type (C) tests sufficiency but in an artificial context — the different cell type may have confounding factors. Immunofluorescence (D) confirms localization but doesn't prove functional causation. The gold standard would combine knockdown (necessity) with rescue by re-expression of siRNA-resistant MRP1 construct, but among the given options, B is the most direct and informative.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, which conclusion about the cytoskeletal requirements for cell migration is best supported?",
+      "dataContext": "Researchers performed a wound-healing (scratch) assay on epithelial monolayers under different drug treatments. Gap closure was measured as a percentage of the original wound width closed after 12 hours.\n\n| Condition | Drug Treatment | Target | Gap Closure (%) |\n|---|---|---|---|\n| 1 (Control) | DMSO vehicle | None | 85 ± 5 |\n| 2 | Cytochalasin D (2 μM) | Actin polymerization (barbed end) | 8 ± 3 |\n| 3 | Latrunculin A (0.5 μM) | Actin monomers (sequesters G-actin) | 5 ± 2 |\n| 4 | Nocodazole (10 μM) | Microtubules (depolymerization) | 35 ± 8 |\n| 5 | Taxol (10 μM) | Microtubules (stabilization) | 30 ± 7 |\n| 6 | Blebbistatin (50 μM) | Myosin II ATPase activity | 12 ± 4 |\n| 7 | Y-27632 (10 μM) | ROCK kinase (Rho effector) | 40 ± 6 |\n\nAll drugs were added 30 minutes before wounding. Cell viability remained above 95% for all conditions at 12 hours.",
+      "options": [
+        "Microtubules are more important than actin for cell migration because nocodazole reduces gap closure more than cytochalasin D",
+        "Actin polymerization and myosin II-based contractility are both essential for wound closure, while microtubule dynamics contribute to but are not absolutely required for directional migration",
+        "ROCK kinase inhibition has no effect on migration because Y-27632 still allows 40% gap closure",
+        "Taxol and nocodazole have identical effects, proving that microtubule stability is irrelevant to migration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data clearly demonstrate that actin is the primary cytoskeletal system required for cell migration. Both actin-disrupting drugs (cytochalasin D and latrunculin A) nearly abolish wound closure (8% and 5%), showing that actin polymerization is essential for lamellipodial protrusion at the leading edge. Blebbistatin (myosin II inhibitor) also severely impairs migration (12%), demonstrating that actomyosin contractility is required for cell body retraction during movement. Microtubule-disrupting drugs (nocodazole and taxol) reduce migration to ~30-35% but do not abolish it, indicating that microtubule dynamics contribute to directional persistence and polarity but are not absolutely essential for migration itself. ROCK inhibition (Y-27632, 40% closure) partially reduces migration because ROCK phosphorylates myosin light chain and regulates actomyosin contractility downstream of RhoA — a significant but not complete reduction. Option A misreads the data (actin disruption is more severe). Option C ignores that 40% is a significant reduction from 85%. Option D ignores that both drugs impair migration by ~50-60%, showing dynamics matter.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    }
+  ]
+}
