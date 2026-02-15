@@ -128,17 +128,30 @@ async function seedBatch(filePath: string): Promise<number> {
   return imported
 }
 
+function findJsonFiles(dir: string): string[] {
+  const results: string[] = []
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const fullPath = path.join(dir, entry.name)
+    if (entry.isDirectory()) {
+      results.push(...findJsonFiles(fullPath))
+    } else if (entry.name.endsWith('.json')) {
+      results.push(fullPath)
+    }
+  }
+  return results
+}
+
 async function main() {
   console.log('=== MCQ Batch Import ===')
   console.log(`Batch directory: ${BATCH_DIR}`)
 
-  const files = fs.readdirSync(BATCH_DIR).filter((f) => f.endsWith('.json'))
-  console.log(`Found ${files.length} batch files`)
+  const files = findJsonFiles(BATCH_DIR)
+  console.log(`Found ${files.length} batch files (including subdirectories)`)
 
   let totalImported = 0
 
   for (const file of files) {
-    const count = await seedBatch(path.join(BATCH_DIR, file))
+    const count = await seedBatch(file)
     totalImported += count
   }
 
