@@ -202,6 +202,7 @@ export async function GET(request: NextRequest) {
       orderBy: { createdAt: 'desc' },
       select: {
         id: true,
+        type: true,
         question: true,
         options: true,
         correctAnswer: true,
@@ -294,6 +295,7 @@ export async function GET(request: NextRequest) {
 
         return {
           id: q.id,
+          type: (q.type as string) || 'MCQ',
           question: q.question,
           options,
           correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
@@ -413,6 +415,7 @@ async function fetchQuestionsByIds(ids: string[]) {
       },
       select: {
         id: true,
+        type: true,
         question: true,
         options: true,
         correctAnswer: true,
@@ -456,6 +459,7 @@ async function fetchQuestionsByIds(ids: string[]) {
         if (options.length === 0) return null
         return {
           id: q.id,
+          type: (q.type as string) || 'MCQ',
           question: q.question,
           options,
           correctAnswer: q.correctAnswer as 'A' | 'B' | 'C' | 'D',
