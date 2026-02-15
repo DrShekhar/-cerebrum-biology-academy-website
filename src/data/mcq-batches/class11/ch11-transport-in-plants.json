@@ -1465,12 +1465,12 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Which of the following statements regarding the cohesion-tension theory are correct?\nI. Transpiration provides the driving force.\nII. Cohesion is due to hydrogen bonding between water molecules.\nIII. Adhesion is the attraction between water and xylem wall.\nIV. This theory was proposed by Strasburger.\nSelect the correct option:",
       "options": [
-        "C) II, III and IV only",
-        "D) I and IV only",
         "A) I, II and III only",
+        "D) I and IV only",
+        "C) II, III and IV only",
         "B) I, II, III and IV"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "A",
       "explanation": "Statements I, II and III are correct. The cohesion-tension theory (proposed by Dixon and Joly, not Strasburger) explains ascent of sap. Transpiration creates tension, cohesion (H-bonding) holds water molecules together, and adhesion keeps the water column attached to xylem walls. Statement IV is incorrect.",
       "difficulty": "HARD",
       "isNcertBased": true,
@@ -1491,12 +1491,12 @@
       "ncertChapterName": "Transport in Plants",
       "question": "Consider the following statements about phloem transport:\nI. The main form of sugar transported is sucrose.\nII. Phloem sap also contains hormones and amino acids.\nIII. Sieve tube elements are dead at maturity.\nIV. Companion cells help in the loading of sucrose.\nWhich statements are correct?",
       "options": [
-        "A) I, II and III only",
-        "C) I, III and IV only",
         "B) I, II and IV only",
+        "C) I, III and IV only",
+        "A) I, II and III only",
         "D) All are correct"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "A",
       "explanation": "Statements I, II and IV are correct. Sucrose is the main transported sugar; phloem sap also carries amino acids, hormones, and other substances; companion cells aid in active loading of sucrose. Statement III is incorrect because sieve tube elements are living cells (though they lack a nucleus at maturity).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
@@ -1941,10 +1941,10 @@
       "options": [
         "D) P-iv, Q-iii, R-i, S-ii",
         "B) P-iii, Q-ii, R-iv, S-i",
-        "A) P-ii, Q-iii, R-i, S-iv",
-        "C) P-ii, Q-i, R-iii, S-iv"
+        "C) P-ii, Q-i, R-iii, S-iv",
+        "A) P-ii, Q-iii, R-i, S-iv"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "Uniport (P-ii) moves a single substance in one direction. Symport (Q-iii) moves two substances in the same direction. Antiport (R-i) moves two substances in opposite directions. Channel proteins (S-iv) form hydrophilic pores allowing passive ion movement.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
@@ -1968,10 +1968,10 @@
       "options": [
         "B) P-i, Q-iii, R-ii",
         "C) P-ii, Q-i, R-iii",
-        "A) P-iii, Q-i, R-ii",
-        "D) P-iii, Q-ii, R-i"
+        "D) P-iii, Q-ii, R-i",
+        "A) P-iii, Q-i, R-ii"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "In a hypertonic solution (P-iii), water moves out causing plasmolysis. In a hypotonic solution (Q-i), water moves in making the cell turgid. In an isotonic solution (R-ii), there is no net water movement and the cell remains flaccid.",
       "difficulty": "EASY",
       "isNcertBased": true,
@@ -2022,10 +2022,10 @@
       "options": [
         "B) P-i, Q-iv, R-iii, S-ii",
         "D) P-ii, Q-i, R-iv, S-iii",
-        "A) P-iv, Q-i, R-ii, S-iii",
-        "C) P-iv, Q-ii, R-i, S-iii"
+        "C) P-iv, Q-ii, R-i, S-iii",
+        "A) P-iv, Q-i, R-ii, S-iii"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "Ascent of sap (P-iv) is primarily driven by transpiration pull. Guttation (Q-i) is caused by root pressure. Translocation in phloem (R-ii) occurs along a turgor pressure gradient (mass flow). Mineral absorption (S-iii) often involves ATP-dependent proton pumps for active transport.",
       "difficulty": "HARD",
       "isNcertBased": true,
@@ -2049,8 +2049,8 @@
       "options": [
         "D) P-iii, Q-ii, R-iv, S-i",
         "A) P-i, Q-ii, R-iv, S-iii",
-        "C) P-iv, Q-ii, R-i, S-iii",
-        "B) P-ii, Q-i, R-iii, S-iv"
+        "B) P-ii, Q-i, R-iii, S-iv",
+        "C) P-iv, Q-ii, R-i, S-iii"
       ],
       "correctAnswer": "B",
       "explanation": "In a flaccid cell (P-i), ψp = 0 so ψw = ψs. In a fully turgid cell (Q-ii), ψw = 0 and ψp = -ψs (they cancel out). At incipient plasmolysis (R-iv), ψp = 0 and the protoplast just starts separating. In a plasmolysed cell (S-iii), ψp can become negative due to tension on the protoplast.",
@@ -2076,10 +2076,10 @@
       "options": [
         "D) P-i, Q-ii, R-iii, S-iv",
         "C) P-iv, Q-iii, R-ii, S-i",
-        "A) P-iv, Q-i, R-ii, S-iii",
-        "B) P-ii, Q-iv, R-i, S-iii"
+        "B) P-ii, Q-iv, R-i, S-iii",
+        "A) P-iv, Q-i, R-ii, S-iii"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "The cohesion-tension theory (P-iv) was proposed by Dixon and Joly. The vital force (pulsation) theory (Q-i) was proposed by J.C. Bose. Root pressure theory (R-ii) was supported by Priestley. The relay pump theory (S-iii) was proposed by Godlewski.",
       "difficulty": "HARD",
       "isNcertBased": true,
@@ -2128,10 +2128,10 @@
       "options": [
         "A) Two",
         "D) Five",
-        "C) Four",
-        "B) Three"
+        "B) Three",
+        "C) Four"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "Four factors increase transpiration: (a) increased temperature increases evaporation rate; (c) wind removes the humid boundary layer; (d) light opens stomata; (f) open stomata allow water vapour to escape. (b) High humidity decreases the vapour pressure gradient, reducing transpiration. (e) Thick cuticle reduces cuticular transpiration.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
@@ -2180,10 +2180,10 @@
       "options": [
         "C) Five",
         "A) Three",
-        "B) Four",
-        "D) Six"
+        "D) Six",
+        "B) Four"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "Four statements are correct: (a) xylem transport is unidirectional (upward), (b) phloem transport is bidirectional (source to sink), (d) sucrose is the main transported sugar in phloem, (f) sieve tube elements are living (though enucleate). (c) is incorrect — xylem transports water and minerals, not organic solutes. (e) is incorrect — xylem vessels are dead at maturity.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
@@ -2233,10 +2233,10 @@
       "options": [
         "A) Three",
         "D) Two",
-        "B) Four",
-        "C) Five"
+        "C) Five",
+        "B) Four"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "Four are passive: (a) diffusion moves molecules along concentration gradient passively; (b) osmosis is passive water movement through semipermeable membrane; (c) facilitated diffusion uses proteins but no ATP; (d) imbibition is a special type of passive diffusion. (e) Ion pumps are active transport requiring ATP. (f) Cytoplasmic streaming requires energy.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
