@@ -41,6 +41,9 @@ interface BatchQuestion {
   campbellUnit?: number
   campbellEdition?: number
   conceptualDepth?: string
+  sourceTextbook?: string
+  dataContext?: string
+  experimentContext?: string
 }
 
 interface BatchFile {
@@ -85,23 +88,24 @@ async function seedBatch(filePath: string): Promise<number> {
       continue
     }
 
+    const isMTF = q.type === 'MTF'
     await prisma.questions.create({
       data: {
         id: crypto.randomUUID(),
         topic: q.topic.trim(),
         subtopic: q.subtopic?.trim() || null,
-        curriculum: 'NCERT',
-        grade: q.ncertClass ? `Class ${q.ncertClass}` : 'Class 11',
+        curriculum: q.isOlympiad ? 'Campbell' : 'NCERT',
+        grade: q.ncertClass ? `Class ${q.ncertClass}` : q.isOlympiad ? 'Olympiad' : 'Class 11',
         type: (q.type as any) || 'MCQ',
         question: q.question.trim(),
         options: q.options,
-        correctAnswer: q.correctAnswer.toUpperCase(),
+        correctAnswer: isMTF ? q.correctAnswer.toUpperCase() : q.correctAnswer.toUpperCase(),
         explanation: q.explanation?.trim() || null,
         difficulty: (q.difficulty as any) || 'MEDIUM',
         subject: 'biology',
         isActive: true,
         isVerified: true,
-        isNcertBased: q.isNcertBased ?? true,
+        isNcertBased: q.isNcertBased ?? !q.isOlympiad,
         ncertClass: q.ncertClass || null,
         ncertChapter: q.ncertChapter || null,
         ncertChapterName: q.ncertChapterName?.trim() || q.chapter?.trim() || null,
@@ -118,6 +122,9 @@ async function seedBatch(filePath: string): Promise<number> {
         campbellUnit: q.campbellUnit || null,
         campbellEdition: q.campbellEdition || null,
         conceptualDepth: q.conceptualDepth || null,
+        sourceTextbook: q.sourceTextbook || null,
+        dataContext: q.dataContext || null,
+        experimentContext: q.experimentContext || null,
         updatedAt: new Date(),
       },
     })
