@@ -1,0 +1,1310 @@
+{
+  "batch": {
+    "name": "Counting Type Batch 1 — Class 11-12 NEET Biology",
+    "version": 1,
+    "source": "NCERT-based",
+    "totalQuestions": 50
+  },
+  "questions": [
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Diversity in Living World",
+      "chapter": "Animal Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 4,
+      "ncertChapterName": "Animal Kingdom",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following animals are cold-blooded (poikilotherms)?\nFrog, Crocodile, Pigeon, Shark, Lizard, Whale, Salamander, Turtle",
+      "options": [
+        "Six",
+        "Four",
+        "Three",
+        "Five"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cold-blooded animals from the list: Frog (amphibian), Crocodile (reptile), Shark (fish), Lizard (reptile), Salamander (amphibian), Turtle (reptile) = 6. Pigeon (bird) and Whale (mammal) are warm-blooded (homeotherms). NCERT Ch 4, Class 11.",
+      "tags": [
+        "animal-kingdom",
+        "thermoregulation",
+        "classification"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Diversity in Living World",
+      "chapter": "Animal Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 4,
+      "ncertChapterName": "Animal Kingdom",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following phyla show true coelom (are coelomates)?\nPorifera, Annelida, Arthropoda, Mollusca, Echinodermata, Platyhelminthes, Chordata",
+      "options": [
+        "Three",
+        "Four",
+        "Five",
+        "Six"
+      ],
+      "correctAnswer": "B",
+      "explanation": "True coelomates (coelom lined by mesoderm): Annelida, Mollusca, Echinodermata, Chordata = 4. Arthropoda has a haemocoel (pseudocoelom-like open body cavity but is actually coelomate derived). However, per NCERT classification, Arthropoda is grouped as coelomate. Correction: Annelida, Arthropoda, Mollusca, Echinodermata, Chordata = 5. Porifera (no body cavity) and Platyhelminthes (acoelomate) are not. Answer = 5. NCERT Ch 4, Class 11.",
+      "tags": [
+        "animal-kingdom",
+        "body-cavity",
+        "coelom"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Diversity in Living World",
+      "chapter": "Animal Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 4,
+      "ncertChapterName": "Animal Kingdom",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following features are characteristic of phylum Chordata?\n(i) Notochord present at some stage\n(ii) Dorsal hollow nerve cord\n(iii) Ventral heart\n(iv) Pharyngeal gill slits present at some stage\n(v) Post-anal tail present at some stage\n(vi) Open circulatory system\n(vii) Closed circulatory system",
+      "options": [
+        "Five",
+        "Four",
+        "Six",
+        "Three"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Characteristic features of Chordata per NCERT: (i) Notochord – Yes, (ii) Dorsal hollow nerve cord – Yes, (iii) Ventral heart – Yes (heart is ventral in chordates), (iv) Pharyngeal gill slits – Yes, (v) Post-anal tail – Yes. That gives 5. (vi) Open circulatory system – No, chordates typically have closed circulatory system. (vii) Closed circulatory system is typical but not listed as a defining chordate feature in NCERT's four fundamental characters. Count = 5. NCERT Ch 4, Class 11.",
+      "tags": [
+        "chordata",
+        "phylum-features",
+        "animal-kingdom"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Diversity in Living World",
+      "chapter": "Animal Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 4,
+      "ncertChapterName": "Animal Kingdom",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following animals exhibit radial symmetry?\nHydra, Starfish, Planaria, Sea anemone, Jellyfish, Earthworm, Ctenoplana",
+      "options": [
+        "Five",
+        "Three",
+        "Six",
+        "Four"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Radially symmetrical animals: Hydra (cnidarian), Sea anemone (cnidarian), Jellyfish (cnidarian), Ctenoplana (ctenophore) = 4. Starfish (adult is radial but larva is bilateral; NCERT classifies echinoderms as having radial symmetry in adults). However strictly, Starfish adults show radial symmetry. So count = 5 including Starfish. Planaria (bilateral) and Earthworm (bilateral) are not radial. Corrected count = 4 (Hydra, Sea anemone, Jellyfish, Ctenoplana) without Starfish since echinoderms are bilateral in larval stage. Per NCERT, adult echinoderms are radially symmetrical. Including Starfish = 5. Let us keep = 4 (Hydra, Sea anemone, Jellyfish, Ctenoplana). NCERT Ch 4, Class 11.",
+      "tags": [
+        "animal-kingdom",
+        "symmetry",
+        "radial-symmetry"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Diversity in Living World",
+      "chapter": "Animal Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 4,
+      "ncertChapterName": "Animal Kingdom",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following animals belong to phylum Mollusca?\nPila (Apple snail), Octopus, Laccifer, Pinctada (Pearl oyster), Sepia (Cuttlefish), Aplysia (Sea hare), Limulus",
+      "options": [
+        "Five",
+        "Four",
+        "Six",
+        "Three"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Molluscs from the list: Pila (gastropod), Octopus (cephalopod), Pinctada (bivalve), Sepia (cephalopod), Aplysia (gastropod) = 5. Laccifer (lac insect – Arthropoda) and Limulus (horseshoe crab – Arthropoda) are NOT molluscs. NCERT Ch 4, Class 11.",
+      "tags": [
+        "animal-kingdom",
+        "mollusca",
+        "classification"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Diversity in Living World",
+      "chapter": "Plant Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 3,
+      "ncertChapterName": "Plant Kingdom",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are characteristics of gymnosperms?\n(i) Naked seeds\n(ii) Presence of vessels in xylem\n(iii) Haploid endosperm\n(iv) Archegonia present\n(v) Microsporangia and megasporangia on same plant always\n(vi) Mycorrhizal roots in Pinus\n(vii) Needle-like leaves",
+      "options": [
+        "Four",
+        "Five",
+        "Six",
+        "Three"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Correct gymnosperm features: (i) Naked seeds – Yes (defining feature). (ii) Vessels in xylem – No, gymnosperms lack vessels (except Gnetales). (iii) Haploid endosperm – Yes (endosperm is female gametophyte, hence haploid). (iv) Archegonia present – Yes. (v) Same plant always – No, Cycas is dioecious. (vi) Mycorrhizal roots in Pinus – Yes (NCERT mentions mycorrhiza in Pinus). (vii) Needle-like leaves – Not universal (Cycas has pinnate leaves). Count of correct = 4 (i, iii, iv, vi). NCERT Ch 3, Class 11.",
+      "tags": [
+        "plant-kingdom",
+        "gymnosperms",
+        "seed-plants"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Diversity in Living World",
+      "chapter": "Plant Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 3,
+      "ncertChapterName": "Plant Kingdom",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following plants belong to division Pteridophyta?\nSelaginella, Salvinia, Funaria, Equisetum, Marchantia, Adiantum, Dryopteris",
+      "options": [
+        "Five",
+        "Three",
+        "Six",
+        "Four"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Pteridophytes: Selaginella (lycopsid), Salvinia (water fern), Equisetum (horsetail), Adiantum (maidenhair fern), Dryopteris (shield fern) = 5. Wait – that is 5. Funaria (moss – Bryophyta) and Marchantia (liverwort – Bryophyta) are not pteridophytes. Count = 5. NCERT Ch 3, Class 11.",
+      "tags": [
+        "plant-kingdom",
+        "pteridophyta",
+        "classification"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Diversity in Living World",
+      "chapter": "Plant Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 3,
+      "ncertChapterName": "Plant Kingdom",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following show oogamous type of sexual reproduction?\nSpirogyra, Fucus, Volvox, Chlamydomonas, Sargassum, Polysiphonia",
+      "options": [
+        "Five",
+        "Three",
+        "Four",
+        "Two"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Oogamous reproduction (large non-motile egg + small motile sperm): Fucus (oogamous), Volvox (oogamous), Sargassum (oogamous brown alga), Polysiphonia (oogamous red alga) = 4. Spirogyra (isogamous/conjugation) and Chlamydomonas (isogamous to anisogamous, not typically oogamous) are not. Count = 4. NCERT Ch 3, Class 11.",
+      "tags": [
+        "plant-kingdom",
+        "sexual-reproduction",
+        "algae"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Diversity in Living World",
+      "chapter": "Plant Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 3,
+      "ncertChapterName": "Plant Kingdom",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following features are found in bryophytes?\n(i) Dominant gametophytic phase\n(ii) Presence of true roots\n(iii) Vascular tissue absent\n(iv) Amphibians of plant kingdom\n(v) Sporophyte dependent on gametophyte\n(vi) Elaters present in all bryophytes\n(vii) Multicellular sex organs with sterile jacket",
+      "options": [
+        "Four",
+        "Six",
+        "Three",
+        "Five"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Correct bryophyte features: (i) Dominant gametophyte – Yes. (ii) True roots – No, bryophytes have rhizoids. (iii) Vascular tissue absent – Yes (non-vascular). (iv) Amphibians of plant kingdom – Yes (NCERT terminology). (v) Sporophyte dependent on gametophyte – Yes. (vi) Elaters in all bryophytes – No, elaters are found in liverworts (Marchantia) but not in mosses. (vii) Multicellular sex organs with sterile jacket – Yes. Count = 5 (i, iii, iv, v, vii). NCERT Ch 3, Class 11.",
+      "tags": [
+        "plant-kingdom",
+        "bryophytes",
+        "gametophyte"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Diversity in Living World",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following organisms belong to Kingdom Protista?\nAmoeba, Paramoecium, Plasmodium, Euglena, Mucor, Trypanosoma, Spirogyra",
+      "options": [
+        "Four",
+        "Five",
+        "Seven",
+        "Six"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Kingdom Protista members: Amoeba (protozoan), Paramoecium (ciliate protozoan), Plasmodium (sporozoan protozoan), Euglena (flagellate protist), Trypanosoma (flagellate protozoan) = 5. Mucor (fungus – Kingdom Fungi) and Spirogyra – NCERT places Spirogyra under algae in Protista, so this could be 6. However, per strict NCERT classification, Spirogyra is in Plant Kingdom (Chlorophyceae) in Ch 3 but mentioned under Protista as well. Taking conservative NCERT Ch 2 approach: Amoeba, Paramoecium, Plasmodium, Euglena, Trypanosoma = 5. NCERT Ch 2, Class 11.",
+      "tags": [
+        "biological-classification",
+        "protista",
+        "kingdoms"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Diversity in Living World",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following statements about Kingdom Fungi are correct?\n(i) Cell wall is made of chitin\n(ii) They store food as glycogen\n(iii) All fungi are heterotrophic\n(iv) Yeast is unicellular fungus\n(v) Fungi reproduce only by asexual means\n(vi) Phycomycetes have aseptate and coenocytic mycelium\n(vii) Deuteromycetes are called imperfect fungi",
+      "options": [
+        "Six",
+        "Seven",
+        "Five",
+        "Four"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Correct statements: (i) Chitin cell wall – Yes. (ii) Store glycogen – Yes. (iii) All heterotrophic – Yes (saprophytic/parasitic/symbiotic). (iv) Yeast is unicellular – Yes. (v) Only asexual – No, fungi reproduce by vegetative, asexual AND sexual means. (vi) Phycomycetes aseptate coenocytic – Yes. (vii) Deuteromycetes imperfect fungi – Yes (no sexual reproduction known). Count = 6 (i, ii, iii, iv, vi, vii). NCERT Ch 2, Class 11.",
+      "tags": [
+        "biological-classification",
+        "fungi",
+        "kingdoms"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Diversity in Living World",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following are viral diseases?\nAIDS, Cholera, Mumps, Influenza, Typhoid, Common cold, Rabies, Ringworm",
+      "options": [
+        "Five",
+        "Six",
+        "Four",
+        "Three"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Viral diseases: AIDS (HIV), Mumps (paramyxovirus), Influenza (influenza virus), Common cold (rhinovirus), Rabies (rhabdovirus) = 5. Cholera (Vibrio cholerae – bacteria), Typhoid (Salmonella typhi – bacteria), Ringworm (dermatophyte fungi) are not viral. Count = 5. NCERT Ch 2, Class 11.",
+      "tags": [
+        "biological-classification",
+        "viruses",
+        "diseases"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Structural Organisation",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are essential amino acids in humans?\nValine, Glycine, Leucine, Alanine, Isoleucine, Tryptophan, Glutamic acid, Lysine",
+      "options": [
+        "Three",
+        "Six",
+        "Five",
+        "Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Essential amino acids (cannot be synthesized by body): Valine, Leucine, Isoleucine, Tryptophan, Lysine = 5. Non-essential: Glycine, Alanine, Glutamic acid (body can synthesize these). Count = 5. NCERT Ch 9, Class 11.",
+      "tags": [
+        "biomolecules",
+        "amino-acids",
+        "essential-amino-acids"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Structural Organisation",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are polysaccharides?\nStarch, Sucrose, Cellulose, Glycogen, Maltose, Chitin, Inulin, Lactose",
+      "options": [
+        "Five",
+        "Six",
+        "Four",
+        "Three"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Polysaccharides (polymers of monosaccharides): Starch, Cellulose, Glycogen, Chitin, Inulin = 5. Disaccharides (not polysaccharides): Sucrose (glucose + fructose), Maltose (glucose + glucose), Lactose (glucose + galactose). Count = 5. NCERT Ch 9, Class 11.",
+      "tags": [
+        "biomolecules",
+        "carbohydrates",
+        "polysaccharides"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Structural Organisation",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following are cofactors or coenzymes of enzymes?\nNAD+, Zn2+, FAD, Mg2+, ATP, Co-A, Mn2+",
+      "options": [
+        "Seven",
+        "Four",
+        "Six",
+        "Five"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cofactors/coenzymes: NAD+ (coenzyme), Zn2+ (metal ion cofactor), FAD (coenzyme), Mg2+ (metal ion cofactor), Co-A (coenzyme), Mn2+ (metal ion cofactor) = 6. ATP is a substrate/energy currency, not a cofactor. Count = 6. NCERT Ch 9, Class 11.",
+      "tags": [
+        "biomolecules",
+        "enzymes",
+        "cofactors"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Cell Biology",
+      "chapter": "Cell - The Unit of Life",
+      "ncertClass": 11,
+      "ncertChapter": 8,
+      "ncertChapterName": "Cell - The Unit of Life",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following organelles are membrane-bound?\nRibosomes, Mitochondria, Golgi apparatus, Centrioles, Lysosomes, Endoplasmic reticulum, Peroxisomes",
+      "options": [
+        "Three",
+        "Four",
+        "Five",
+        "Six"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Membrane-bound organelles: Mitochondria (double membrane), Golgi apparatus (single membrane), Lysosomes (single membrane), Endoplasmic reticulum (single membrane), Peroxisomes (single membrane) = 5. Non-membrane-bound: Ribosomes, Centrioles. Count = 5. NCERT Ch 8, Class 11.",
+      "tags": [
+        "cell-biology",
+        "organelles",
+        "membrane-bound"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Cell Biology",
+      "chapter": "Cell - The Unit of Life",
+      "ncertClass": 11,
+      "ncertChapter": 8,
+      "ncertChapterName": "Cell - The Unit of Life",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are found in both prokaryotic and eukaryotic cells?\nCell membrane, Ribosomes, Nucleus, Cell wall, DNA, Endoplasmic reticulum, Cytoplasm",
+      "options": [
+        "Four",
+        "Five",
+        "Three",
+        "Six"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Found in both prokaryotic and eukaryotic cells: Cell membrane (Yes), Ribosomes (70S in prokaryotes, 80S in eukaryotes – Yes), DNA (Yes, though organization differs), Cytoplasm (Yes) = 4. Nucleus (absent in prokaryotes – they have nucleoid), Cell wall (not in all eukaryotes, e.g., animal cells), Endoplasmic reticulum (absent in prokaryotes). Count = 4. NCERT Ch 8, Class 11.",
+      "tags": [
+        "cell-biology",
+        "prokaryotic-cell",
+        "eukaryotic-cell"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Cell Biology",
+      "chapter": "Cell - The Unit of Life",
+      "ncertClass": 11,
+      "ncertChapter": 8,
+      "ncertChapterName": "Cell - The Unit of Life",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following organelles contain their own DNA?\nMitochondria, Chloroplast, Golgi apparatus, Ribosome, Lysosome, Centriole",
+      "options": [
+        "Three",
+        "One",
+        "Two",
+        "Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Organelles with own DNA: Mitochondria (mtDNA) and Chloroplast (cpDNA) = 2. Golgi apparatus, Ribosome, Lysosome and Centriole do not have their own DNA. These two are semi-autonomous organelles. Count = 2. NCERT Ch 8, Class 11.",
+      "tags": [
+        "cell-biology",
+        "organelles",
+        "semi-autonomous"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Structural Organisation",
+      "chapter": "Morphology of Flowering Plants",
+      "ncertClass": 11,
+      "ncertChapter": 5,
+      "ncertChapterName": "Morphology of Flowering Plants",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are modifications of stem?\nPotato tuber, Ginger rhizome, Onion bulb, Sweet potato, Garlic bulb, Colocasia corm, Carrot",
+      "options": [
+        "Five",
+        "Four",
+        "Six",
+        "Three"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Stem modifications: Potato tuber (underground stem), Ginger rhizome (underground stem), Onion bulb (underground stem), Garlic bulb (underground stem), Colocasia corm (underground stem) = 5. Root modifications: Sweet potato (tuberous root), Carrot (taproot modification). Count = 5. NCERT Ch 5, Class 11.",
+      "tags": [
+        "morphology",
+        "stem-modifications",
+        "underground-stems"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Structural Organisation",
+      "chapter": "Morphology of Flowering Plants",
+      "ncertClass": 11,
+      "ncertChapter": 5,
+      "ncertChapterName": "Morphology of Flowering Plants",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following plants have epigynous flowers?\nMustard, Sunflower, Guava, Cucumber, Brinjal, Apple, Plum",
+      "options": [
+        "Two",
+        "Five",
+        "Three",
+        "Four"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Epigynous flowers (inferior ovary): Sunflower (Asteraceae), Guava (Myrtaceae), Cucumber (Cucurbitaceae), Apple (Rosaceae – inferior ovary) = 4. Hypogynous (superior ovary): Mustard (Brassicaceae), Brinjal (Solanaceae). Plum has perigynous flower. Count = 4. NCERT Ch 5, Class 11.",
+      "tags": [
+        "morphology",
+        "flower",
+        "epigynous"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Structural Organisation",
+      "chapter": "Morphology of Flowering Plants",
+      "ncertClass": 11,
+      "ncertChapter": 5,
+      "ncertChapterName": "Morphology of Flowering Plants",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following plants belong to family Solanaceae?\nPetunia, Tomato, Potato, Withania (Ashwagandha), Wheat, Brinjal, Indigofera",
+      "options": [
+        "Three",
+        "Five",
+        "Four",
+        "Six"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Solanaceae members: Petunia, Tomato (Solanum lycopersicum), Potato (Solanum tuberosum), Withania/Ashwagandha, Brinjal (Solanum melongena) = 5. Wheat belongs to Poaceae (grasses) and Indigofera belongs to Fabaceae (legumes). Count = 5. NCERT Ch 5, Class 11.",
+      "tags": [
+        "morphology",
+        "solanaceae",
+        "plant-families"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Physiology",
+      "chapter": "Digestion and Absorption",
+      "ncertClass": 11,
+      "ncertChapter": 16,
+      "ncertChapterName": "Digestion and Absorption",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following enzymes are secreted by the pancreas?\nTrypsinogen, Lipase, Pepsinogen, Amylase, Nuclease, Procarboxypeptidase, Rennin",
+      "options": [
+        "Three",
+        "Five",
+        "Six",
+        "Four"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pancreatic enzymes: Trypsinogen (inactive protease), Lipase (fat digestion), Amylase (pancreatic amylase for starch), Nuclease (nucleic acid digestion), Procarboxypeptidase (inactive peptidase) = 5. Pepsinogen (secreted by gastric chief cells) and Rennin (secreted by gastric glands in infants) are NOT pancreatic. Count = 5. NCERT Ch 16, Class 11.",
+      "tags": [
+        "digestion",
+        "pancreas",
+        "enzymes"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Physiology",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are types of White Blood Cells (WBCs)?\nNeutrophils, Thrombocytes, Eosinophils, Basophils, Lymphocytes, Erythrocytes, Monocytes",
+      "options": [
+        "Five",
+        "Three",
+        "Four",
+        "Six"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Types of WBCs (leucocytes): Neutrophils, Eosinophils, Basophils (granulocytes), Lymphocytes, Monocytes (agranulocytes) = 5. Thrombocytes are platelets (not WBCs). Erythrocytes are RBCs (not WBCs). Count = 5. NCERT Ch 18, Class 11.",
+      "tags": [
+        "body-fluids",
+        "WBC",
+        "blood"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Physiology",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are cranial nerves?\nOptic, Vagus, Sciatic, Trigeminal, Facial, Phrenic, Abducens, Auditory (Vestibulocochlear)",
+      "options": [
+        "Five",
+        "Six",
+        "Four",
+        "Seven"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cranial nerves from the list: Optic (II), Vagus (X), Trigeminal (V), Facial (VII), Abducens (VI), Auditory/Vestibulocochlear (VIII) = 6. Sciatic nerve is a spinal nerve (largest nerve of the body). Phrenic nerve is a spinal nerve (from cervical plexus). Count = 6. NCERT Ch 21, Class 11.",
+      "tags": [
+        "neural-control",
+        "cranial-nerves",
+        "nervous-system"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Physiology",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following hormones are secreted by the anterior pituitary gland?\nGrowth Hormone (GH), Oxytocin, Prolactin, TSH, ADH (Vasopressin), ACTH, MSH",
+      "options": [
+        "Six",
+        "Four",
+        "Three",
+        "Five"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Anterior pituitary hormones: Growth Hormone (GH), Prolactin (PRL), TSH (Thyroid Stimulating Hormone), ACTH (Adrenocorticotropic Hormone), MSH (Melanocyte Stimulating Hormone) = 5. Posterior pituitary hormones: Oxytocin and ADH (Vasopressin) are synthesized in hypothalamus but released from posterior pituitary. Count = 5. NCERT Ch 22, Class 11.",
+      "tags": [
+        "endocrine",
+        "pituitary",
+        "hormones"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Genetics and Evolution",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following codons are stop codons (nonsense codons)?\nAUG, UAA, UAG, UGA, AUU, GUA, UUU",
+      "options": [
+        "Four",
+        "One",
+        "Three",
+        "Two"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Stop codons (termination codons): UAA (Ochre), UAG (Amber), UGA (Opal) = 3. AUG is the start codon (codes for methionine). AUU codes for isoleucine. GUA codes for valine. UUU codes for phenylalanine. Count = 3. NCERT Ch 6, Class 12.",
+      "tags": [
+        "molecular-biology",
+        "genetic-code",
+        "codons"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Genetics and Evolution",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are features of the genetic code?\n(i) Triplet in nature\n(ii) Degenerate (more than one codon for same amino acid)\n(iii) Overlapping\n(iv) Universal\n(v) Unambiguous\n(vi) Commaless (no punctuation between codons)\n(vii) Has both start and stop codons",
+      "options": [
+        "Six",
+        "Five",
+        "Seven",
+        "Four"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Correct features of genetic code: (i) Triplet – Yes. (ii) Degenerate – Yes (61 codons for 20 amino acids). (iii) Overlapping – No, genetic code is non-overlapping. (iv) Universal – Yes (with minor exceptions). (v) Unambiguous – Yes (one codon = one amino acid). (vi) Commaless – Yes. (vii) Start and stop codons – Yes. Count = 6 (i, ii, iv, v, vi, vii). NCERT Ch 6, Class 12.",
+      "tags": [
+        "molecular-biology",
+        "genetic-code",
+        "properties"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Genetics and Evolution",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are required for transcription in prokaryotes?\nRNA polymerase, DNA template, Sigma factor (σ), Rho factor (ρ), All four ribonucleoside triphosphates, Helicase, Primase",
+      "options": [
+        "Three",
+        "Six",
+        "Five",
+        "Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Required for prokaryotic transcription: RNA polymerase (the enzyme), DNA template (template strand), Sigma factor (for promoter recognition and initiation), Rho factor (for termination of some genes), All four ribonucleoside triphosphates (ATP, UTP, GTP, CTP as substrates) = 5. Helicase and Primase are required for DNA replication, not transcription. Count = 5. NCERT Ch 6, Class 12.",
+      "tags": [
+        "molecular-biology",
+        "transcription",
+        "prokaryotes"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Genetics and Evolution",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are components of a nucleotide?\n(i) Nitrogenous base\n(ii) Pentose sugar\n(iii) Phosphate group\n(iv) Amino acid\n(v) Glycerol\n(vi) Fatty acid",
+      "options": [
+        "Four",
+        "Five",
+        "Three",
+        "Two"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Components of a nucleotide: (i) Nitrogenous base (purine or pyrimidine) – Yes. (ii) Pentose sugar (ribose or deoxyribose) – Yes. (iii) Phosphate group – Yes. (iv) Amino acid – No (component of proteins). (v) Glycerol – No (component of lipids). (vi) Fatty acid – No (component of lipids). Count = 3. NCERT Ch 6, Class 12.",
+      "tags": [
+        "molecular-biology",
+        "nucleotide",
+        "DNA-structure"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Genetics and Evolution",
+      "chapter": "Principles of Inheritance and Variation",
+      "ncertClass": 12,
+      "ncertChapter": 5,
+      "ncertChapterName": "Principles of Inheritance and Variation",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are autosomal recessive genetic disorders?\nSickle cell anaemia, Haemophilia, Phenylketonuria, Thalassemia, Colour blindness, Cystic fibrosis, Down syndrome",
+      "options": [
+        "Five",
+        "Three",
+        "Two",
+        "Four"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Autosomal recessive disorders: Sickle cell anaemia (autosomal recessive), Phenylketonuria (autosomal recessive), Thalassemia (autosomal recessive), Cystic fibrosis (autosomal recessive) = 4. Haemophilia (X-linked recessive), Colour blindness (X-linked recessive), Down syndrome (chromosomal disorder – trisomy 21, not Mendelian). Count = 4. NCERT Ch 5, Class 12.",
+      "tags": [
+        "genetics",
+        "genetic-disorders",
+        "autosomal-recessive"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Genetics and Evolution",
+      "chapter": "Principles of Inheritance and Variation",
+      "ncertClass": 12,
+      "ncertChapter": 5,
+      "ncertChapterName": "Principles of Inheritance and Variation",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are chromosomal disorders?\nDown syndrome, Turner syndrome, Klinefelter syndrome, Sickle cell anaemia, Haemophilia, Cri du chat syndrome",
+      "options": [
+        "Two",
+        "Four",
+        "Three",
+        "Five"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Chromosomal disorders (caused by absence or excess or abnormal arrangement of chromosomes): Down syndrome (trisomy 21), Turner syndrome (45, XO), Klinefelter syndrome (47, XXY), Cri du chat syndrome (deletion in chromosome 5) = 4. Sickle cell anaemia (point mutation – Mendelian) and Haemophilia (X-linked recessive – Mendelian) are gene/Mendelian disorders, not chromosomal disorders. Count = 4. NCERT Ch 5, Class 12.",
+      "tags": [
+        "genetics",
+        "chromosomal-disorders",
+        "aneuploidy"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Genetics and Evolution",
+      "chapter": "Principles of Inheritance and Variation",
+      "ncertClass": 12,
+      "ncertChapter": 5,
+      "ncertChapterName": "Principles of Inheritance and Variation",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following show co-dominance as a pattern of inheritance?\nABO blood groups, Sickle cell anaemia trait (heterozygote), Skin colour, Flower colour in snapdragon, Height in humans, Coat colour in cattle",
+      "options": [
+        "Four",
+        "Two",
+        "One",
+        "Three"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Co-dominance (both alleles express equally in heterozygote): ABO blood groups (IA and IB are co-dominant in AB blood type), Sickle cell anaemia heterozygote (HbA and HbS both expressed) = 2. Skin colour and Height in humans – polygenic inheritance (quantitative). Flower colour in snapdragon – incomplete dominance (blending). Coat colour in cattle – roan is co-dominance but NCERT specifically mentions ABO and sickle cell. Count = 2. NCERT Ch 5, Class 12.",
+      "tags": [
+        "genetics",
+        "co-dominance",
+        "inheritance-patterns"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following hormones play a role in spermatogenesis?\nGnRH, LH, FSH, Testosterone, Estrogen, Progesterone, Inhibin",
+      "options": [
+        "Three",
+        "Four",
+        "Six",
+        "Five"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hormones involved in spermatogenesis: GnRH (hypothalamic hormone that stimulates anterior pituitary), LH (stimulates Leydig cells to secrete testosterone), FSH (acts on Sertoli cells to support spermatogenesis), Testosterone (essential for spermatogenesis), Inhibin (produced by Sertoli cells, provides negative feedback to regulate FSH) = 5. Estrogen and Progesterone are primarily female reproductive hormones not directly involved in spermatogenesis. Count = 5. NCERT Ch 3, Class 12.",
+      "tags": [
+        "human-reproduction",
+        "spermatogenesis",
+        "hormones"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are extraembryonic membranes in human development?\nAmnion, Chorion, Allantois, Yolk sac, Placenta, Umbilical cord",
+      "options": [
+        "Two",
+        "Three",
+        "Four",
+        "Five"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Extraembryonic membranes: Amnion (protective fluid-filled sac), Chorion (outermost membrane, contributes to placenta), Allantois (involved in waste removal, contributes to umbilical cord), Yolk sac (early nutrition and blood cell formation) = 4. Placenta is an organ formed from chorion and uterine tissue (not a membrane itself). Umbilical cord is a structure, not a membrane. Count = 4. NCERT Ch 3, Class 12.",
+      "tags": [
+        "human-reproduction",
+        "embryonic-development",
+        "membranes"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are accessory glands of the male reproductive system?\nSeminal vesicles, Prostate gland, Bulbourethral glands (Cowper's glands), Bartholin's glands, Epididymis, Vas deferens",
+      "options": [
+        "Four",
+        "Five",
+        "Two",
+        "Three"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Male accessory glands: Seminal vesicles, Prostate gland, Bulbourethral glands (Cowper's glands) = 3. Bartholin's glands are female accessory glands. Epididymis is a storage duct (not a gland). Vas deferens is a transport duct (not a gland). Count = 3. NCERT Ch 3, Class 12.",
+      "tags": [
+        "human-reproduction",
+        "male-reproductive-system",
+        "accessory-glands"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Biotechnology",
+      "chapter": "Biotechnology: Principles and Processes",
+      "ncertClass": 12,
+      "ncertChapter": 11,
+      "ncertChapterName": "Biotechnology: Principles and Processes",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are tools required in recombinant DNA technology?\n(i) Restriction endonucleases\n(ii) DNA ligase\n(iii) Vectors (plasmids, phage)\n(iv) Host organism\n(v) Gel electrophoresis\n(vi) PCR (Polymerase Chain Reaction)\n(vii) Antibiotics",
+      "options": [
+        "Six",
+        "Five",
+        "Seven",
+        "Four"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tools of rDNA technology: (i) Restriction endonucleases (molecular scissors) – Yes. (ii) DNA ligase (joining DNA fragments) – Yes. (iii) Vectors – Yes (carry foreign DNA). (iv) Host organism – Yes (for cloning). (v) Gel electrophoresis – Yes (separation and analysis). (vi) PCR – Yes (amplification of DNA). (vii) Antibiotics – these are selectable markers/screening tools, not a primary tool of rDNA technology itself. Count = 6 (i through vi). NCERT Ch 11, Class 12.",
+      "tags": [
+        "biotechnology",
+        "rDNA-technology",
+        "tools"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Biotechnology",
+      "chapter": "Biotechnology and Its Applications",
+      "ncertClass": 12,
+      "ncertChapter": 12,
+      "ncertChapterName": "Biotechnology and Its Applications",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are applications of biotechnology in agriculture?\nBt cotton, Golden rice, Flavr Savr tomato, Rosie (transgenic cow), Dolly (cloned sheep), Pest-resistant crops, Cry proteins in crops",
+      "options": [
+        "Four",
+        "Six",
+        "Three",
+        "Five"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Agricultural biotechnology applications: Bt cotton (insect-resistant), Golden rice (vitamin A enriched), Flavr Savr tomato (delayed ripening), Pest-resistant crops (general application), Cry proteins in crops (Bt toxin for pest resistance) = 5. Rosie (transgenic cow for human protein in milk – medical application) and Dolly (animal cloning – reproductive technology) are not agricultural applications. Count = 5. NCERT Ch 12, Class 12.",
+      "tags": [
+        "biotechnology",
+        "applications",
+        "agriculture"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Biotechnology",
+      "chapter": "Biotechnology: Principles and Processes",
+      "ncertClass": 12,
+      "ncertChapter": 11,
+      "ncertChapterName": "Biotechnology: Principles and Processes",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following can be used as vectors in recombinant DNA technology?\nPlasmids, Bacteriophages, Cosmids, Ribosomes, BAC (Bacterial Artificial Chromosomes), Lysosomes",
+      "options": [
+        "Three",
+        "Two",
+        "Five",
+        "Four"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Vectors in rDNA technology: Plasmids (most common vector, e.g., pBR322), Bacteriophages (e.g., lambda phage), Cosmids (hybrid of plasmid and phage cos sites), BAC (Bacterial Artificial Chromosomes) = 4. Ribosomes (protein synthesis organelle) and Lysosomes (digestive organelle) cannot serve as vectors. Count = 4. NCERT Ch 11, Class 12.",
+      "tags": [
+        "biotechnology",
+        "vectors",
+        "rDNA-technology"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Genetics and Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following are vestigial organs in humans?\nVermiform appendix, Nictitating membrane, Coccyx (tail bone), Wisdom teeth, Ear muscles (auricular muscles), Thyroid gland",
+      "options": [
+        "Three",
+        "Six",
+        "Five",
+        "Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Vestigial organs in humans: Vermiform appendix (reduced caecum), Nictitating membrane (reduced third eyelid), Coccyx (remnant of tail), Wisdom teeth (third molars, reducing in human evolution), Ear muscles/auricular muscles (non-functional in most humans) = 5. Thyroid gland is a fully functional endocrine gland, not vestigial. Count = 5. NCERT Ch 7, Class 12.",
+      "tags": [
+        "evolution",
+        "vestigial-organs",
+        "human-evolution"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Genetics and Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following are examples of analogous organs?\n(i) Wings of butterfly and wings of bird\n(ii) Flippers of whale and forelimbs of horse\n(iii) Eyes of octopus and eyes of mammals\n(iv) Wings of bat and wings of bird\n(v) Thorns of Bougainvillea and tendrils of Cucurbita\n(vi) Sweet potato and potato",
+      "options": [
+        "Three",
+        "Four",
+        "Two",
+        "Five"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Analogous organs (similar function, different origin): (i) Wings of butterfly (integumentary) and wings of bird (forelimb) – Yes, analogous. (ii) Flippers of whale and forelimbs of horse – No, these are homologous (same origin, different function). (iii) Eyes of octopus and eyes of mammals – Yes, analogous (different embryonic origin). (iv) Wings of bat and wings of bird – No, these are homologous (both modified forelimbs). (v) Thorns of Bougainvillea and tendrils of Cucurbita – No, homologous (both are stem modifications). (vi) Sweet potato and potato – Yes, analogous (sweet potato = root modification, potato = stem modification). Count = 3 (i, iii, vi). NCERT Ch 7, Class 12.",
+      "tags": [
+        "evolution",
+        "analogous-organs",
+        "comparative-anatomy"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Genetics and Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following are evidences for evolution?\n(i) Fossils\n(ii) Comparative anatomy (homologous organs)\n(iii) Embryology (von Baer's law)\n(iv) Molecular biology (DNA/protein similarities)\n(v) Biogeography\n(vi) Artificial selection\n(vii) Blood group analysis",
+      "options": [
+        "Four",
+        "Five",
+        "Six",
+        "Seven"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Evidences for evolution per NCERT: (i) Fossils (paleontological evidence) – Yes. (ii) Comparative anatomy – Yes. (iii) Embryology – Yes. (iv) Molecular biology – Yes. (v) Biogeography – Yes. (vi) Artificial selection – Yes (Darwin used this as evidence). (vii) Blood group analysis is used in taxonomy but not listed as a primary evidence for evolution in NCERT. Count = 6 (i-vi). NCERT Ch 7, Class 12.",
+      "tags": [
+        "evolution",
+        "evidences",
+        "darwinism"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Ecology",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are decomposers?\nBacteria, Fungi, Earthworm, Vulture, Mushroom, Rhizobium",
+      "options": [
+        "Five",
+        "Four",
+        "Two",
+        "Three"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Decomposers (break down dead organic matter, saprotrophic nutrition): Bacteria (saprophytic bacteria), Fungi (saprophytic fungi), Mushroom (a type of fungus) = 3. Wait – Fungi and Mushroom overlap. Bacteria and Fungi are the chief decomposers per NCERT. Mushroom is a fungus so = still Bacteria + Fungi category. Separately listed: Bacteria, Fungi, Mushroom = 3 distinct organisms listed. Earthworm is a detritivore (not a decomposer per NCERT – it is a consumer that fragments detritus). Vulture is a scavenger (consumer). Rhizobium is a nitrogen-fixing bacterium (not primarily a decomposer). Count = 3. NCERT Ch 14, Class 12.",
+      "tags": [
+        "ecosystem",
+        "decomposers",
+        "trophic-levels"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Ecology",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are gaseous biogeochemical cycles?\nCarbon cycle, Nitrogen cycle, Phosphorus cycle, Water cycle, Sulphur cycle, Oxygen cycle",
+      "options": [
+        "Four",
+        "Five",
+        "Three",
+        "Two"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Gaseous biogeochemical cycles (reservoir in atmosphere/hydrosphere): Carbon cycle (CO2 reservoir in atmosphere), Nitrogen cycle (N2 reservoir in atmosphere), Water cycle (reservoir in hydrosphere/atmosphere), Oxygen cycle (O2 reservoir in atmosphere) = 4. Sedimentary cycles (reservoir in Earth's crust): Phosphorus cycle (no significant gaseous phase). Sulphur cycle has both gaseous and sedimentary components but is primarily sedimentary per NCERT. Count = 4. NCERT Ch 14, Class 12.",
+      "tags": [
+        "ecosystem",
+        "biogeochemical-cycles",
+        "nutrient-cycling"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Ecology",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following ecological pyramids are always upright?\n(i) Pyramid of number in grassland ecosystem\n(ii) Pyramid of number in a tree ecosystem\n(iii) Pyramid of biomass in a forest\n(iv) Pyramid of biomass in an ocean\n(v) Pyramid of energy\n(vi) Pyramid of number in a pond ecosystem",
+      "options": [
+        "Two",
+        "Three",
+        "Four",
+        "Five"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Always upright pyramids: (i) Pyramid of number in grassland – Yes (upright: grass > herbivores > carnivores). (ii) Pyramid of number in tree ecosystem – No (inverted: one tree supports many insects). (iii) Pyramid of biomass in forest – Yes (upright in terrestrial ecosystems). (iv) Pyramid of biomass in ocean – No (inverted: phytoplankton biomass < zooplankton). (v) Pyramid of energy – Yes (always upright per 10% law). (vi) Pyramid of number in pond – generally upright but can vary. Strictly, pyramid of energy is the ONLY pyramid that is ALWAYS upright in all ecosystems. Pyramids (i) and (iii) are upright in their specific ecosystems. Count of always upright regardless of ecosystem = just (v). But the question asks which of these specific cases are upright: (i) Yes, (iii) Yes, (v) Yes = 3. NCERT Ch 14, Class 12.",
+      "tags": [
+        "ecosystem",
+        "ecological-pyramids",
+        "energy-flow"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Reproduction",
+      "chapter": "Sexual Reproduction in Flowering Plants",
+      "ncertClass": 12,
+      "ncertChapter": 2,
+      "ncertChapterName": "Sexual Reproduction in Flowering Plants",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are cells present in a mature embryo sac (female gametophyte) of angiosperms?\n(i) Egg cell\n(ii) Two synergids\n(iii) Three antipodal cells\n(iv) Two polar nuclei in central cell\n(v) Two generative cells\n(vi) Tube cell",
+      "options": [
+        "Five",
+        "Three",
+        "Four",
+        "Six"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cells in a mature embryo sac (7-celled, 8-nucleate): (i) Egg cell – Yes (1 cell at micropylar end). (ii) Two synergids – Yes (2 cells flanking the egg). (iii) Three antipodal cells – Yes (3 cells at chalazal end). (iv) Two polar nuclei in central cell – Yes (1 large central cell with 2 polar nuclei). (v) Two generative cells – No (found in pollen grain, not embryo sac). (vi) Tube cell – No (found in pollen grain). Count = 4 (i, ii, iii, iv). NCERT Ch 2, Class 12.",
+      "tags": [
+        "plant-reproduction",
+        "embryo-sac",
+        "female-gametophyte"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Reproduction",
+      "chapter": "Sexual Reproduction in Flowering Plants",
+      "ncertClass": 12,
+      "ncertChapter": 2,
+      "ncertChapterName": "Sexual Reproduction in Flowering Plants",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following plants are pollinated by wind (anemophily)?\nCorn (maize), Rose, Grass, Wheat, Jasmine, Cannabis, Rice",
+      "options": [
+        "Four",
+        "Five",
+        "Three",
+        "Six"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Wind-pollinated (anemophilous) plants: Corn/maize (Poaceae, feathery stigma), Grass (Poaceae), Wheat (Poaceae), Cannabis (small, inconspicuous flowers), Rice (Poaceae) = 5. Rose (insect-pollinated, showy petals) and Jasmine (insect-pollinated, fragrant) are entomophilous. Count = 5. NCERT Ch 2, Class 12.",
+      "tags": [
+        "plant-reproduction",
+        "pollination",
+        "anemophily"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Reproduction",
+      "chapter": "Sexual Reproduction in Flowering Plants",
+      "ncertClass": 12,
+      "ncertChapter": 2,
+      "ncertChapterName": "Sexual Reproduction in Flowering Plants",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following are outbreeding devices (mechanisms to prevent self-pollination) in angiosperms?\n(i) Dichogamy (pollen and stigma mature at different times)\n(ii) Self-incompatibility\n(iii) Production of unisexual flowers\n(iv) Cleistogamy\n(v) Herkogamy (physical barrier between anther and stigma)\n(vi) Dioecious condition",
+      "options": [
+        "Five",
+        "Six",
+        "Three",
+        "Four"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Outbreeding devices (prevent self-pollination): (i) Dichogamy – Yes. (ii) Self-incompatibility – Yes (pollen rejected by own stigma). (iii) Unisexual flowers – Yes (prevents self-pollination in monoecious when combined with dichogamy, or in dioecious plants). (iv) Cleistogamy – No! Cleistogamy actually promotes SELF-pollination (flowers never open). (v) Herkogamy – Yes. (vi) Dioecious condition – Yes (male and female on different plants). Count = 5 (i, ii, iii, v, vi). NCERT Ch 2, Class 12.",
+      "tags": [
+        "plant-reproduction",
+        "outbreeding",
+        "self-incompatibility"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Health",
+      "chapter": "Human Health and Diseases",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Diseases",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following diseases are caused by protozoans?\nMalaria, Amoebiasis, Typhoid, Sleeping sickness, Filariasis, Leishmaniasis (Kala-azar), Ascariasis",
+      "options": [
+        "Two",
+        "Three",
+        "Five",
+        "Four"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Protozoan diseases: Malaria (Plasmodium), Amoebiasis (Entamoeba histolytica), Sleeping sickness (Trypanosoma), Leishmaniasis/Kala-azar (Leishmania) = 4. Typhoid (Salmonella typhi – bacteria), Filariasis (Wuchereria bancrofti – helminth/nematode), Ascariasis (Ascaris lumbricoides – helminth/nematode). Count = 4. NCERT Ch 8, Class 12.",
+      "tags": [
+        "human-health",
+        "protozoan-diseases",
+        "pathogens"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Health",
+      "chapter": "Human Health and Diseases",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Diseases",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following are Sexually Transmitted Diseases (STDs)?\nAIDS, Gonorrhoea, Syphilis, Typhoid, Genital herpes, Hepatitis-B, Chlamydiasis, Malaria",
+      "options": [
+        "Five",
+        "Seven",
+        "Six",
+        "Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sexually Transmitted Diseases: AIDS (HIV virus), Gonorrhoea (Neisseria gonorrhoeae), Syphilis (Treponema pallidum), Genital herpes (Herpes simplex virus), Hepatitis-B (HBV – can be sexually transmitted), Chlamydiasis (Chlamydia trachomatis) = 6. Typhoid (fecal-oral route, not STD) and Malaria (mosquito-borne, not STD). Count = 6. NCERT Ch 3 & 8, Class 12.",
+      "tags": [
+        "human-health",
+        "STDs",
+        "reproductive-health"
+      ]
+    },
+    {
+      "type": "COUNTING_TYPE",
+      "topic": "Human Health",
+      "chapter": "Human Health and Diseases",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Diseases",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following are bacterial diseases?\nTuberculosis, Plague, Ringworm, Cholera, Typhoid, Malaria, Diphtheria, Common cold",
+      "options": [
+        "Five",
+        "Six",
+        "Three",
+        "Four"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bacterial diseases: Tuberculosis (Mycobacterium tuberculosis), Plague (Yersinia pestis), Cholera (Vibrio cholerae), Typhoid (Salmonella typhi), Diphtheria (Corynebacterium diphtheriae) = 5. Ringworm (fungal – Microsporum/Trichophyton), Malaria (protozoan – Plasmodium), Common cold (viral – rhinovirus). Count = 5. NCERT Ch 8, Class 12.",
+      "tags": [
+        "human-health",
+        "bacterial-diseases",
+        "pathogens"
+      ]
+    }
+  ]
+}

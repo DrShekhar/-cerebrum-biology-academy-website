@@ -1,0 +1,1440 @@
+{
+  "batch": {
+    "name": "Sequence-Order Batch 1 — Class 11-12 NEET Biology",
+    "version": 1,
+    "source": "NCERT-based",
+    "totalQuestions": 50
+  },
+  "questions": [
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Cell Biology",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following phases of mitosis in correct sequence:\n(1) Anaphase\n(2) Prophase\n(3) Telophase\n(4) Metaphase",
+      "options": [
+        "2 → 4 → 1 → 3",
+        "4 → 2 → 1 → 3",
+        "1 → 2 → 4 → 3",
+        "2 → 1 → 4 → 3"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct sequence of mitosis is Prophase → Metaphase → Anaphase → Telophase (PMAT). So the order is 2 → 4 → 1 → 3. NCERT Class 11, Ch 10.",
+      "tags": [
+        "cell-division",
+        "mitosis",
+        "phases"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Cell Biology",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following stages of prophase I of meiosis in correct sequence:\n(1) Pachytene\n(2) Zygotene\n(3) Diplotene\n(4) Leptotene",
+      "options": [
+        "4 → 2 → 1 → 3",
+        "4 → 2 → 3 → 1",
+        "2 → 4 → 1 → 3",
+        "4 → 1 → 2 → 3"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Prophase I of meiosis has five substages: Leptotene → Zygotene → Pachytene → Diplotene → Diakinesis. So the correct order is 4 → 2 → 1 → 3. Crossing over occurs at pachytene; chiasmata become visible at diplotene. NCERT Class 11, Ch 10.",
+      "tags": [
+        "meiosis",
+        "prophase-I",
+        "crossing-over"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Cell Biology",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following phases of the cell cycle in the correct sequence starting from the beginning:\n(1) S phase\n(2) M phase\n(3) G1 phase\n(4) G2 phase",
+      "options": [
+        "3 → 4 → 1 → 2",
+        "3 → 1 → 4 → 2",
+        "1 → 3 → 4 → 2",
+        "1 → 4 → 3 → 2"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The cell cycle proceeds as: G1 phase (cell growth) → S phase (DNA synthesis) → G2 phase (preparation for mitosis) → M phase (mitosis). G1, S, and G2 together constitute interphase. So the order is 3 → 1 → 4 → 2. NCERT Class 11, Ch 10.",
+      "tags": [
+        "cell-cycle",
+        "interphase",
+        "phases"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Cell Biology",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following events of mitotic prophase in the correct sequence:\n(1) Centrioles move to opposite poles\n(2) Chromosomes become visible as thin threads\n(3) Nuclear envelope starts to break down\n(4) Chromosomes condense and become shorter and thicker",
+      "options": [
+        "2 → 1 → 4 → 3",
+        "2 → 4 → 1 → 3",
+        "1 → 2 → 4 → 3",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "During prophase of mitosis, chromatin condenses and chromosomes first become visible as thin threads (2), then chromosomes further condense to become shorter and thicker (4), centrioles migrate to opposite poles forming the spindle (1), and finally the nuclear envelope begins to disassemble (3). NCERT Class 11, Ch 10.",
+      "tags": [
+        "mitosis",
+        "prophase",
+        "chromosome-condensation"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following levels of protein structure from simplest to most complex:\n(1) Tertiary structure\n(2) Primary structure\n(3) Quaternary structure\n(4) Secondary structure",
+      "options": [
+        "2 → 4 → 3 → 1",
+        "2 → 4 → 1 → 3",
+        "2 → 1 → 4 → 3",
+        "4 → 2 → 1 → 3"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Protein structural hierarchy goes from simple to complex: Primary structure (linear amino acid sequence) → Secondary structure (alpha-helix or beta-sheet) → Tertiary structure (3D folding of single polypeptide) → Quaternary structure (assembly of multiple polypeptide subunits). Order: 2 → 4 → 1 → 3. NCERT Class 11, Ch 9.",
+      "tags": [
+        "protein-structure",
+        "biomolecules",
+        "structural-hierarchy"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following steps of enzyme action (Induced Fit model) in the correct sequence:\n(1) Enzyme-substrate complex forms\n(2) Substrate binds to active site\n(3) Products are released\n(4) Active site changes shape to fit substrate",
+      "options": [
+        "4 → 2 → 1 → 3",
+        "2 → 1 → 4 → 3",
+        "2 → 4 → 1 → 3",
+        "1 → 4 → 2 → 3"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In the Induced Fit model of enzyme action: the substrate approaches and binds to the active site (2) → the active site changes shape to fit the substrate more precisely (4) → a tight enzyme-substrate complex forms (1) → catalysis occurs and products are released (3). Order: 2 → 4 → 1 → 3. NCERT Class 11, Ch 9.",
+      "tags": [
+        "enzyme-action",
+        "induced-fit",
+        "catalysis"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following biomolecules in increasing order of their molecular weight:\n(1) Amino acid\n(2) Polypeptide\n(3) Dipeptide\n(4) Protein (haemoglobin)",
+      "options": [
+        "1 → 2 → 3 → 4",
+        "3 → 1 → 2 → 4",
+        "1 → 3 → 4 → 2",
+        "1 → 3 → 2 → 4"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In increasing molecular weight: a single amino acid (~100-200 Da) is the smallest (1) → dipeptide (two amino acids joined, ~200-400 Da) (3) → polypeptide (chain of many amino acids) (2) → functional protein like haemoglobin (64,500 Da, a quaternary protein with 4 subunits) (4). Order: 1 → 3 → 2 → 4. NCERT Class 11, Ch 9.",
+      "tags": [
+        "molecular-weight",
+        "amino-acids",
+        "proteins"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Plant Physiology",
+      "chapter": "Photosynthesis in Higher Plants",
+      "ncertClass": 11,
+      "ncertChapter": 13,
+      "ncertChapterName": "Photosynthesis in Higher Plants",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following events of the light reactions of photosynthesis in the correct sequence:\n(1) Splitting of water (photolysis)\n(2) Absorption of light by PS II\n(3) Reduction of NADP+ to NADPH\n(4) Electron transport through cytochrome b6f complex",
+      "options": [
+        "2 → 1 → 4 → 3",
+        "1 → 2 → 4 → 3",
+        "2 → 4 → 1 → 3",
+        "1 → 2 → 3 → 4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Light reactions proceed as: PS II absorbs light and gets excited (2) → water is split to replace electrons lost from PS II (1) → electrons pass through cytochrome b6f complex in the electron transport chain (4) → finally, PS I passes electrons to NADP+ reductase which reduces NADP+ to NADPH (3). Order: 2 → 1 → 4 → 3. NCERT Class 11, Ch 13.",
+      "tags": [
+        "photosynthesis",
+        "light-reactions",
+        "electron-transport"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Plant Physiology",
+      "chapter": "Photosynthesis in Higher Plants",
+      "ncertClass": 11,
+      "ncertChapter": 13,
+      "ncertChapterName": "Photosynthesis in Higher Plants",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following steps of the Calvin cycle in the correct sequence:\n(1) Regeneration of RuBP\n(2) Carbon fixation (CO2 + RuBP → 2 molecules of 3-PGA)\n(3) Reduction of 3-PGA to G3P using ATP and NADPH\n(4) Release of one G3P molecule as net product",
+      "options": [
+        "2 → 3 → 4 → 1",
+        "2 → 1 → 3 → 4",
+        "3 → 2 → 4 → 1",
+        "2 → 3 → 1 → 4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Calvin cycle has three stages: Carbon fixation — RuBisCO fixes CO2 with RuBP to form 3-PGA (2) → Reduction — 3-PGA is reduced to G3P using ATP and NADPH (3) → one G3P molecule exits the cycle as net product for every 3 CO2 fixed (4) → Regeneration — the remaining G3P molecules are used to regenerate RuBP using ATP (1). Order: 2 → 3 → 4 → 1. NCERT Class 11, Ch 13.",
+      "tags": [
+        "calvin-cycle",
+        "carbon-fixation",
+        "dark-reactions"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Plant Physiology",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following stages of aerobic respiration in the correct sequence:\n(1) Electron transport chain and oxidative phosphorylation\n(2) Glycolysis\n(3) Krebs cycle (TCA cycle)\n(4) Oxidative decarboxylation of pyruvate (link reaction)",
+      "options": [
+        "4 → 2 → 3 → 1",
+        "2 → 4 → 3 → 1",
+        "2 → 3 → 4 → 1",
+        "2 → 4 → 1 → 3"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Aerobic respiration proceeds: Glycolysis (glucose → pyruvate, in cytoplasm) (2) → Oxidative decarboxylation of pyruvate to acetyl-CoA (link reaction, in mitochondrial matrix) (4) → Krebs cycle/TCA cycle (acetyl-CoA is oxidized, in mitochondrial matrix) (3) → ETC and oxidative phosphorylation (on inner mitochondrial membrane) (1). Order: 2 → 4 → 3 → 1. NCERT Class 11, Ch 14.",
+      "tags": [
+        "aerobic-respiration",
+        "krebs-cycle",
+        "glycolysis"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Plant Physiology",
+      "chapter": "Transport in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 11,
+      "ncertChapterName": "Transport in Plants",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following structures in the correct order of water movement from soil to xylem in a root:\n(1) Endodermis\n(2) Root hair\n(3) Cortex\n(4) Pericycle",
+      "options": [
+        "2 → 3 → 1 → 4",
+        "2 → 3 → 4 → 1",
+        "2 → 1 → 3 → 4",
+        "3 → 2 → 1 → 4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Water moves from soil into the root through: Root hair (absorbs water by osmosis) (2) → Cortex (through symplast or apoplast pathway) (3) → Endodermis (with Casparian strips that force water through symplast) (1) → Pericycle (innermost layer before vascular tissue, then into xylem) (4). Order: 2 → 3 → 1 → 4. NCERT Class 11, Ch 11.",
+      "tags": [
+        "water-transport",
+        "root-anatomy",
+        "transpiration"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Plant Physiology",
+      "chapter": "Plant Growth and Development",
+      "ncertClass": 11,
+      "ncertChapter": 15,
+      "ncertChapterName": "Plant Growth and Development",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following phases of plant cell growth in the correct sequence:\n(1) Phase of maturation (differentiation)\n(2) Phase of cell division (formative phase)\n(3) Phase of cell enlargement (elongation)\n(4) Phase of senescence",
+      "options": [
+        "2 → 3 → 4 → 1",
+        "2 → 3 → 1 → 4",
+        "1 → 2 → 3 → 4",
+        "2 → 1 → 3 → 4"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Plant cell growth follows: Phase of cell division (meristematic cells divide actively) (2) → Phase of cell enlargement/elongation (cells increase in size, vacuoles enlarge) (3) → Phase of maturation/differentiation (cells attain their final shape and function) (1) → Phase of senescence (aging and eventual death) (4). Order: 2 → 3 → 1 → 4. NCERT Class 11, Ch 15.",
+      "tags": [
+        "plant-growth",
+        "cell-differentiation",
+        "growth-phases"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Physiology",
+      "chapter": "Digestion and Absorption",
+      "ncertClass": 11,
+      "ncertChapter": 16,
+      "ncertChapterName": "Digestion and Absorption",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following parts of the human alimentary canal in the correct sequence of food passage:\n(1) Stomach\n(2) Oesophagus\n(3) Small intestine\n(4) Pharynx",
+      "options": [
+        "4 → 1 → 2 → 3",
+        "2 → 4 → 3 → 1",
+        "4 → 2 → 1 → 3",
+        "2 → 4 → 1 → 3"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Food passes through the alimentary canal in this order: Pharynx (common passage for food and air) (4) → Oesophagus (peristalsis moves food to stomach) (2) → Stomach (acid and pepsin digest proteins) (1) → Small intestine (major site of digestion and absorption) (3). Order: 4 → 2 → 1 → 3. NCERT Class 11, Ch 16.",
+      "tags": [
+        "digestion",
+        "alimentary-canal",
+        "food-passage"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Physiology",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following steps of urine formation in the correct sequence:\n(1) Tubular reabsorption\n(2) Glomerular filtration\n(3) Concentration of urine in collecting duct\n(4) Tubular secretion",
+      "options": [
+        "1 → 2 → 4 → 3",
+        "4 → 2 → 1 → 3",
+        "2 → 1 → 4 → 3",
+        "2 → 4 → 1 → 3"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Urine formation involves three main steps: Glomerular filtration (blood filtered in Bowman's capsule to form primary urine) (2) → Tubular reabsorption (selective reabsorption of useful substances in PCT, loop of Henle, DCT) (1) → Tubular secretion (secretion of ions, drugs, toxins into filtrate) (4) → Concentration of urine (in collecting duct under ADH influence) (3). Order: 2 → 1 → 4 → 3. NCERT Class 11, Ch 19.",
+      "tags": [
+        "urine-formation",
+        "nephron",
+        "excretion"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Physiology",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following events of the cardiac cycle in the correct sequence starting from atrial systole:\n(1) Ventricular systole (isovolumetric contraction)\n(2) Atrial systole\n(3) Joint diastole (complete relaxation)\n(4) Ventricular ejection (semilunar valves open)",
+      "options": [
+        "2 → 4 → 1 → 3",
+        "2 → 1 → 4 → 3",
+        "1 → 2 → 4 → 3",
+        "2 → 1 → 3 → 4"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The cardiac cycle starting from atrial systole: Atrial systole (atria contract, AV valves open, blood pushed into ventricles) (2) → Ventricular systole begins with isovolumetric contraction (ventricles contract, all valves closed, pressure builds) (1) → Ventricular ejection (semilunar valves open, blood ejected into aorta/pulmonary artery) (4) → Joint diastole (all chambers relax, AV valves open for passive filling) (3). Order: 2 → 1 → 4 → 3. NCERT Class 11, Ch 18.",
+      "tags": [
+        "cardiac-cycle",
+        "heart",
+        "circulation"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Physiology",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following events in the transmission of a nerve impulse in the correct sequence:\n(1) Depolarization (Na+ influx)\n(2) Resting potential maintained (-70 mV)\n(3) Repolarization (K+ efflux)\n(4) Stimulus reaches threshold",
+      "options": [
+        "4 → 2 → 1 → 3",
+        "2 → 1 → 4 → 3",
+        "1 → 4 → 2 → 3",
+        "2 → 4 → 1 → 3"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Nerve impulse transmission: Resting potential is maintained at -70 mV by Na+/K+ pump (2) → A stimulus reaches threshold level (4) → Depolarization occurs as Na+ channels open and Na+ rushes in, making inside positive (1) → Repolarization follows as K+ channels open and K+ flows out, restoring negative charge inside (3). Order: 2 → 4 → 1 → 3. NCERT Class 11, Ch 21.",
+      "tags": [
+        "nerve-impulse",
+        "action-potential",
+        "depolarization"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Physiology",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following events of blood clotting in the correct sequence:\n(1) Fibrinogen → Fibrin\n(2) Injury to blood vessel\n(3) Prothrombin → Thrombin\n(4) Release of thromboplastin from damaged tissues and platelets",
+      "options": [
+        "2 → 4 → 1 → 3",
+        "4 → 2 → 3 → 1",
+        "2 → 3 → 4 → 1",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Blood clotting cascade: Injury to blood vessel occurs (2) → Damaged tissues and platelets release thromboplastin (tissue factor) (4) → Thromboplastin (with Ca2+) converts inactive prothrombin to active thrombin (3) → Thrombin converts soluble fibrinogen to insoluble fibrin, which forms the clot mesh (1). Order: 2 → 4 → 3 → 1. NCERT Class 11, Ch 18.",
+      "tags": [
+        "blood-clotting",
+        "coagulation",
+        "fibrin"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Diversity in Living World",
+      "chapter": "The Living World",
+      "ncertClass": 11,
+      "ncertChapter": 1,
+      "ncertChapterName": "The Living World",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following taxonomic categories in ascending order (smallest to largest):\n(1) Order\n(2) Family\n(3) Genus\n(4) Class",
+      "options": [
+        "3 → 2 → 1 → 4",
+        "2 → 3 → 1 → 4",
+        "3 → 2 → 4 → 1",
+        "3 → 1 → 2 → 4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Taxonomic hierarchy in ascending order: Species → Genus → Family → Order → Class → Phylum → Kingdom. So among the given options: Genus (3) → Family (2) → Order (1) → Class (4). Order: 3 → 2 → 1 → 4. NCERT Class 11, Ch 1.",
+      "tags": [
+        "taxonomy",
+        "classification",
+        "hierarchy"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Diversity in Living World",
+      "chapter": "Plant Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 3,
+      "ncertChapterName": "Plant Kingdom",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following plant groups in the order of their evolutionary appearance on Earth:\n(1) Angiosperms\n(2) Algae\n(3) Pteridophytes (ferns)\n(4) Gymnosperms",
+      "options": [
+        "2 → 3 → 1 → 4",
+        "3 → 2 → 4 → 1",
+        "2 → 3 → 4 → 1",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Plants evolved in this chronological order: Algae (earliest, aquatic, no vascular tissue) (2) → Pteridophytes/ferns (first vascular plants, spore-bearing) (3) → Gymnosperms (first seed plants, naked seeds) (4) → Angiosperms (flowering plants with enclosed seeds, most recent and diverse) (1). Order: 2 → 3 → 4 → 1. NCERT Class 11, Ch 3.",
+      "tags": [
+        "plant-evolution",
+        "plant-kingdom",
+        "phylogeny"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Diversity in Living World",
+      "chapter": "Plant Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 3,
+      "ncertChapterName": "Plant Kingdom",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following events of the life cycle of a bryophyte (moss) in the correct sequence starting from the spore:\n(1) Sporophyte develops on gametophyte\n(2) Spore germinates to form protonema\n(3) Fertilization produces zygote\n(4) Leafy gametophyte develops from protonema",
+      "options": [
+        "2 → 4 → 1 → 3",
+        "2 → 3 → 4 → 1",
+        "4 → 2 → 3 → 1",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Moss life cycle from spore: Spore germinates to form protonema (creeping, green, branched filamentous stage) (2) → Leafy gametophyte develops from buds on protonema (4) → Male (antherozoids) and female (egg) gametes fuse in fertilization to produce zygote (3) → Zygote develops into sporophyte that remains attached to and dependent on the gametophyte (1). Order: 2 → 4 → 3 → 1. NCERT Class 11, Ch 3.",
+      "tags": [
+        "bryophytes",
+        "moss",
+        "alternation-of-generations"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Diversity in Living World",
+      "chapter": "Animal Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 4,
+      "ncertChapterName": "Animal Kingdom",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following animal phyla in the order of increasing complexity of body organization:\n(1) Annelida\n(2) Porifera\n(3) Platyhelminthes\n(4) Cnidaria",
+      "options": [
+        "2 → 4 → 3 → 1",
+        "2 → 4 → 1 → 3",
+        "2 → 3 → 4 → 1",
+        "4 → 2 → 3 → 1"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Increasing complexity: Porifera (cellular level, no true tissues) (2) → Cnidaria (tissue level organization, diploblastic) (4) → Platyhelminthes (organ level, triploblastic, acoelomate) (3) → Annelida (organ-system level, true coelom, segmentation) (1). Order: 2 → 4 → 3 → 1. NCERT Class 11, Ch 4.",
+      "tags": [
+        "animal-kingdom",
+        "body-organization",
+        "phyla"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Structural Organisation",
+      "chapter": "Anatomy of Flowering Plants",
+      "ncertClass": 11,
+      "ncertChapter": 6,
+      "ncertChapterName": "Anatomy of Flowering Plants",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following tissue layers of a dicot root from outermost to innermost:\n(1) Endodermis\n(2) Epidermis (epiblema)\n(3) Pericycle\n(4) Cortex",
+      "options": [
+        "4 → 2 → 1 → 3",
+        "2 → 1 → 4 → 3",
+        "2 → 4 → 1 → 3",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In a dicot root, from outermost to innermost: Epidermis/epiblema (outermost protective layer with root hairs) (2) → Cortex (multilayered parenchymatous region) (4) → Endodermis (innermost layer of cortex with Casparian strips) (1) → Pericycle (outermost layer of the stele, gives rise to lateral roots) (3). Order: 2 → 4 → 1 → 3. NCERT Class 11, Ch 6.",
+      "tags": [
+        "root-anatomy",
+        "tissue-layers",
+        "dicot"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Structural Organisation",
+      "chapter": "Anatomy of Flowering Plants",
+      "ncertClass": 11,
+      "ncertChapter": 6,
+      "ncertChapterName": "Anatomy of Flowering Plants",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following events in secondary growth of a dicot stem in the correct sequence:\n(1) Secondary xylem and phloem are produced\n(2) Vascular cambium becomes active\n(3) Cork cambium (phellogen) forms in cortex\n(4) Bark is formed (periderm replaces epidermis)",
+      "options": [
+        "2 → 3 → 1 → 4",
+        "2 → 1 → 3 → 4",
+        "1 → 2 → 3 → 4",
+        "3 → 2 → 1 → 4"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Secondary growth in dicot stem: Vascular cambium (between primary xylem and phloem) becomes active (2) → Cambium cuts off secondary xylem towards inside and secondary phloem towards outside (1) → Cork cambium (phellogen) develops in the outer cortical cells (3) → Phellogen produces phellem (cork) outward and phelloderm inward, forming the periderm/bark that replaces the epidermis (4). Order: 2 → 1 → 3 → 4. NCERT Class 11, Ch 6.",
+      "tags": [
+        "secondary-growth",
+        "vascular-cambium",
+        "bark"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Structural Organisation",
+      "chapter": "Structural Organisation in Animals",
+      "ncertClass": 11,
+      "ncertChapter": 7,
+      "ncertChapterName": "Structural Organisation in Animals",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following levels of structural organisation in animals from simplest to most complex:\n(1) Organ system\n(2) Tissue\n(3) Cell\n(4) Organ",
+      "options": [
+        "2 → 3 → 4 → 1",
+        "3 → 2 → 4 → 1",
+        "3 → 4 → 2 → 1",
+        "3 → 2 → 1 → 4"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Levels of structural organisation from simplest to most complex: Cell (basic unit of life) (3) → Tissue (group of similar cells performing a specific function) (2) → Organ (group of tissues forming a structural and functional unit) (4) → Organ system (group of organs working together) (1). Order: 3 → 2 → 4 → 1. NCERT Class 11, Ch 7.",
+      "tags": [
+        "structural-organisation",
+        "tissue",
+        "organ-system"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Structural Organisation",
+      "chapter": "Anatomy of Flowering Plants",
+      "ncertClass": 11,
+      "ncertChapter": 6,
+      "ncertChapterName": "Anatomy of Flowering Plants",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following tissues of a dicot stem from outermost to innermost:\n(1) Vascular bundles\n(2) Epidermis\n(3) Pith\n(4) Cortex (including hypodermis)",
+      "options": [
+        "2 → 4 → 3 → 1",
+        "4 → 2 → 1 → 3",
+        "2 → 4 → 1 → 3",
+        "2 → 1 → 4 → 3"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In a dicot stem from outside to inside: Epidermis (outermost protective layer) (2) → Cortex including hypodermis (collenchymatous in dicots, followed by parenchymatous cortex and endodermis) (4) → Vascular bundles (arranged in a ring, conjoint, collateral, open type) (1) → Pith (central, parenchymatous, stores food) (3). Order: 2 → 4 → 1 → 3. NCERT Class 11, Ch 6.",
+      "tags": [
+        "stem-anatomy",
+        "dicot-stem",
+        "tissue-arrangement"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Molecular Biology",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following steps of DNA replication in the correct sequence:\n(1) RNA primers are synthesized by primase\n(2) Helicase unwinds the double helix\n(3) DNA polymerase III adds nucleotides to the primer\n(4) DNA ligase joins Okazaki fragments",
+      "options": [
+        "2 → 1 → 3 → 4",
+        "2 → 1 → 4 → 3",
+        "1 → 2 → 3 → 4",
+        "2 → 3 → 1 → 4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "DNA replication steps: Helicase unwinds the double helix at the replication fork (2) → Primase synthesizes short RNA primers on the template strand (1) → DNA polymerase III extends the primer by adding complementary deoxyribonucleotides (3) → DNA ligase seals the gaps between Okazaki fragments on the lagging strand (4). Order: 2 → 1 → 3 → 4. NCERT Class 12, Ch 6.",
+      "tags": [
+        "dna-replication",
+        "helicase",
+        "okazaki-fragments"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Molecular Biology",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following steps of transcription in the correct sequence:\n(1) RNA polymerase binds to the promoter\n(2) Termination at the terminator sequence\n(3) RNA polymerase moves along the template strand (3' → 5')\n(4) mRNA strand is synthesized in 5' → 3' direction",
+      "options": [
+        "1 → 3 → 4 → 2",
+        "1 → 3 → 2 → 4",
+        "1 → 4 → 3 → 2",
+        "3 → 1 → 4 → 2"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Transcription proceeds: RNA polymerase binds to the promoter region on DNA (1) → RNA polymerase moves along the template strand reading it in 3' → 5' direction (3) → mRNA is synthesized in the 5' → 3' direction complementary to the template (4) → Transcription terminates when the polymerase reaches the terminator sequence (2). Order: 1 → 3 → 4 → 2. NCERT Class 12, Ch 6.",
+      "tags": [
+        "transcription",
+        "rna-polymerase",
+        "gene-expression"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Molecular Biology",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following steps of translation in the correct sequence:\n(1) Ribosome moves along mRNA (translocation)\n(2) Small ribosomal subunit attaches to mRNA at start codon (AUG)\n(3) Peptide bond forms between amino acids\n(4) Initiator tRNA (Met-tRNA) binds to the P site",
+      "options": [
+        "2 → 4 → 3 → 1",
+        "2 → 3 → 4 → 1",
+        "4 → 2 → 3 → 1",
+        "2 → 4 → 1 → 3"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Translation steps: Small ribosomal subunit attaches to mRNA at the AUG start codon (2) → Initiator tRNA carrying methionine binds to the P site (4) → Peptide bond forms between the amino acid at the P site and the incoming amino acid at the A site via peptidyl transferase (3) → Ribosome translocates along the mRNA by one codon (1), moving the tRNA from A site to P site, and the process repeats. Order: 2 → 4 → 3 → 1. NCERT Class 12, Ch 6.",
+      "tags": [
+        "translation",
+        "ribosome",
+        "protein-synthesis"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Molecular Biology",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following steps of the Hershey-Chase experiment in the correct sequence:\n(1) Centrifugation separated phage coats from bacteria\n(2) Bacteriophages with labelled DNA (32P) and protein (35S) were prepared\n(3) Radioactive 32P was found inside the bacterial cells\n(4) Labelled phages were allowed to infect E. coli",
+      "options": [
+        "4 → 2 → 1 → 3",
+        "2 → 4 → 3 → 1",
+        "2 → 1 → 4 → 3",
+        "2 → 4 → 1 → 3"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hershey-Chase experiment (1952): Bacteriophages were grown in media containing radioactive 32P (labels DNA) and 35S (labels protein) (2) → Labelled phages were allowed to infect E. coli bacteria (4) → Blending and centrifugation separated the phage protein coats (in supernatant) from bacteria (in pellet) (1) → 32P (DNA label) was found in the bacterial pellet, proving DNA is the genetic material (3). Order: 2 → 4 → 1 → 3. NCERT Class 12, Ch 6.",
+      "tags": [
+        "hershey-chase",
+        "genetic-material",
+        "bacteriophage"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Molecular Biology",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following events in the central dogma of molecular biology in the correct sequence:\n(1) Translation (mRNA → Protein)\n(2) DNA replication (DNA → DNA)\n(3) Transcription (DNA → mRNA)\n(4) Post-translational modification of protein",
+      "options": [
+        "3 → 2 → 1 → 4",
+        "2 → 3 → 1 → 4",
+        "3 → 1 → 2 → 4",
+        "2 → 3 → 4 → 1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The central dogma of molecular biology (proposed by Crick): DNA replication (DNA copies itself) (2) → Transcription (DNA is transcribed into mRNA) (3) → Translation (mRNA is translated into protein on ribosomes) (1) → Post-translational modification (protein folding, addition of functional groups) (4). Order: 2 → 3 → 1 → 4. NCERT Class 12, Ch 6.",
+      "tags": [
+        "central-dogma",
+        "gene-expression",
+        "molecular-biology"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following stages of spermatogenesis in the correct sequence:\n(1) Secondary spermatocytes\n(2) Spermatogonia\n(3) Spermatids\n(4) Primary spermatocytes",
+      "options": [
+        "4 → 2 → 1 → 3",
+        "2 → 4 → 1 → 3",
+        "2 → 4 → 3 → 1",
+        "2 → 1 → 4 → 3"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Spermatogenesis proceeds: Spermatogonia (diploid stem cells, undergo mitosis) (2) → Primary spermatocytes (undergo meiosis I) (4) → Secondary spermatocytes (undergo meiosis II) (1) → Spermatids (haploid, undergo spermiogenesis to form spermatozoa) (3). Order: 2 → 4 → 1 → 3. NCERT Class 12, Ch 3.",
+      "tags": [
+        "spermatogenesis",
+        "male-reproduction",
+        "meiosis"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following phases of the menstrual cycle in the correct sequence:\n(1) Secretory phase (luteal phase)\n(2) Menstrual phase\n(3) Proliferative phase (follicular phase)\n(4) Ovulation",
+      "options": [
+        "2 → 4 → 3 → 1",
+        "2 → 3 → 1 → 4",
+        "3 → 2 → 4 → 1",
+        "2 → 3 → 4 → 1"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The menstrual cycle (28 days): Menstrual phase (days 1-5, shedding of endometrium) (2) → Proliferative/follicular phase (days 6-13, endometrium regenerates under estrogen, follicle matures) (3) → Ovulation (day 14, LH surge causes release of secondary oocyte) (4) → Secretory/luteal phase (days 15-28, corpus luteum secretes progesterone, endometrium thickens further) (1). Order: 2 → 3 → 4 → 1. NCERT Class 12, Ch 3.",
+      "tags": [
+        "menstrual-cycle",
+        "ovulation",
+        "female-reproduction"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following stages of human embryonic development in the correct sequence:\n(1) Blastocyst formation\n(2) Zygote\n(3) Implantation in uterus\n(4) Morula (16-cell stage)",
+      "options": [
+        "2 → 1 → 4 → 3",
+        "4 → 2 → 1 → 3",
+        "2 → 4 → 1 → 3",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Human embryonic development: Zygote forms after fertilization (2) → Repeated mitotic divisions (cleavage) form the morula, a solid ball of 16 cells (4) → Morula transforms into blastocyst (hollow ball with trophoblast and inner cell mass) (1) → Blastocyst implants in the uterine endometrium about 7 days after fertilization (3). Order: 2 → 4 → 1 → 3. NCERT Class 12, Ch 3.",
+      "tags": [
+        "embryo-development",
+        "implantation",
+        "blastocyst"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following structures in the correct sequence through which sperm travels from testis to the outside:\n(1) Ejaculatory duct\n(2) Rete testis\n(3) Vas deferens\n(4) Epididymis",
+      "options": [
+        "2 → 3 → 4 → 1",
+        "2 → 4 → 3 → 1",
+        "2 → 4 → 1 → 3",
+        "4 → 2 → 3 → 1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sperm travel path: Seminiferous tubules → Rete testis (network of tubules in testis) (2) → Epididymis (sperm mature and are stored here) (4) → Vas deferens (muscular duct ascending from scrotum) (3) → Ejaculatory duct (vas deferens joins seminal vesicle duct, opens into urethra) (1). Order: 2 → 4 → 3 → 1. NCERT Class 12, Ch 3.",
+      "tags": [
+        "male-reproductive-tract",
+        "sperm-pathway",
+        "vas-deferens"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Reproduction in Plants",
+      "chapter": "Sexual Reproduction in Flowering Plants",
+      "ncertClass": 12,
+      "ncertChapter": 2,
+      "ncertChapterName": "Sexual Reproduction in Flowering Plants",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following events of double fertilization in angiosperms in the correct sequence:\n(1) Two male gametes are released from pollen tube\n(2) One male gamete fuses with egg to form zygote\n(3) Pollen tube enters the ovule through micropyle\n(4) Other male gamete fuses with polar nuclei to form PEN (primary endosperm nucleus)",
+      "options": [
+        "3 → 2 → 1 → 4",
+        "3 → 1 → 2 → 4",
+        "1 → 3 → 2 → 4",
+        "3 → 1 → 4 → 2"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Double fertilization in angiosperms: Pollen tube enters the ovule through the micropyle (porogamy) (3) → Two male gametes are released from the pollen tube into the embryo sac (1) → One male gamete fuses with the egg cell (syngamy) to form the diploid zygote (2) → The other male gamete fuses with the two polar nuclei (triple fusion) to form the triploid primary endosperm nucleus (PEN) (4). Order: 3 → 1 → 2 → 4. NCERT Class 12, Ch 2.",
+      "tags": [
+        "double-fertilization",
+        "angiosperms",
+        "syngamy"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Reproduction in Plants",
+      "chapter": "Sexual Reproduction in Flowering Plants",
+      "ncertClass": 12,
+      "ncertChapter": 2,
+      "ncertChapterName": "Sexual Reproduction in Flowering Plants",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following stages of megasporogenesis in the correct sequence:\n(1) Functional megaspore\n(2) Megaspore mother cell (MMC)\n(3) Four megaspores (linear tetrad)\n(4) Meiosis of MMC",
+      "options": [
+        "2 → 4 → 1 → 3",
+        "4 → 2 → 3 → 1",
+        "2 → 4 → 3 → 1",
+        "2 → 3 → 4 → 1"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Megasporogenesis: Megaspore mother cell (MMC) develops in the nucellus of the ovule (2) → MMC undergoes meiosis (4) → Four haploid megaspores are formed in a linear tetrad (3) → Three megaspores degenerate; only one functional megaspore survives (usually the chalazal one) and develops into the embryo sac (1). Order: 2 → 4 → 3 → 1. NCERT Class 12, Ch 2.",
+      "tags": [
+        "megasporogenesis",
+        "ovule",
+        "embryo-sac"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Reproduction in Plants",
+      "chapter": "Sexual Reproduction in Flowering Plants",
+      "ncertClass": 12,
+      "ncertChapter": 2,
+      "ncertChapterName": "Sexual Reproduction in Flowering Plants",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following events of microsporogenesis and pollen development in the correct sequence:\n(1) Pollen grain with vegetative and generative cells\n(2) Microspore mother cell undergoes meiosis\n(3) Microspore tetrad is formed\n(4) Microspores are released from the tetrad",
+      "options": [
+        "2 → 3 → 1 → 4",
+        "3 → 2 → 4 → 1",
+        "2 → 4 → 3 → 1",
+        "2 → 3 → 4 → 1"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Microsporogenesis and pollen development: Microspore mother cell (MMC) in the microsporangium of the anther undergoes meiosis (2) → A tetrad of four haploid microspores is formed (3) → Individual microspores are released from the tetrad as they separate (4) → Each microspore develops into a pollen grain with a large vegetative cell and a small generative cell (1). Order: 2 → 3 → 4 → 1. NCERT Class 12, Ch 2.",
+      "tags": [
+        "microsporogenesis",
+        "pollen",
+        "anther"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Genetics and Evolution",
+      "chapter": "Principles of Inheritance and Variation",
+      "ncertClass": 12,
+      "ncertChapter": 5,
+      "ncertChapterName": "Principles of Inheritance and Variation",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following steps of Mendel's hybridization experiment in the correct sequence:\n(1) Allowed F1 plants to self-pollinate\n(2) Selected true-breeding parents with contrasting traits\n(3) Observed 3:1 ratio in F2 generation\n(4) Cross-pollinated the parents (removed anthers, transferred pollen)",
+      "options": [
+        "2 → 4 → 1 → 3",
+        "4 → 2 → 1 → 3",
+        "2 → 1 → 4 → 3",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Mendel's experiment: He selected true-breeding (pure/homozygous) parents with contrasting traits (e.g., tall vs. dwarf) (2) → Cross-pollinated the parents by emasculating and transferring pollen (4) → Allowed the F1 hybrid plants (all tall) to self-pollinate (1) → Observed the 3:1 phenotypic ratio (3 tall : 1 dwarf) in the F2 generation (3). Order: 2 → 4 → 1 → 3. NCERT Class 12, Ch 5.",
+      "tags": [
+        "mendel",
+        "hybridization",
+        "monohybrid-cross"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Genetics and Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following geological eras in chronological order from earliest to most recent:\n(1) Mesozoic era\n(2) Cenozoic era\n(3) Palaeozoic era\n(4) Proterozoic era",
+      "options": [
+        "4 → 1 → 3 → 2",
+        "4 → 3 → 1 → 2",
+        "3 → 4 → 1 → 2",
+        "3 → 4 → 2 → 1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Geological eras in chronological order: Proterozoic era (earliest, ~2500-541 Ma, unicellular and early multicellular life) (4) → Palaeozoic era (~541-252 Ma, diversification of invertebrates, fish, amphibians, reptiles, first land plants) (3) → Mesozoic era (~252-66 Ma, age of dinosaurs/reptiles, first mammals and birds) (1) → Cenozoic era (~66 Ma-present, age of mammals) (2). Order: 4 → 3 → 1 → 2. NCERT Class 12, Ch 7.",
+      "tags": [
+        "geological-time",
+        "evolution",
+        "eras"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Genetics and Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following organisms in the order of their evolutionary appearance:\n(1) First mammals\n(2) Jawless fish (ostracoderms)\n(3) First amphibians\n(4) Seed ferns (first seed plants)",
+      "options": [
+        "4 → 2 → 3 → 1",
+        "2 → 3 → 4 → 1",
+        "2 → 3 → 1 → 4",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Evolutionary appearance: Jawless fish/ostracoderms appeared in the Ordovician-Silurian period (~450 Ma) (2) → First amphibians evolved from lobe-finned fish in the late Devonian (~365 Ma) (3) → Seed ferns (first seed plants) appeared in the late Devonian-Carboniferous (~360 Ma) (4) → First mammals appeared in the late Triassic (~225 Ma) (1). Order: 2 → 3 → 4 → 1. NCERT Class 12, Ch 7.",
+      "tags": [
+        "evolution",
+        "fossil-record",
+        "phylogeny"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Genetics and Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following stages of speciation (allopatric) in the correct sequence:\n(1) Reproductive isolation develops\n(2) A population occupies a large geographical area\n(3) New species are formed\n(4) Geographical barrier divides the population",
+      "options": [
+        "2 → 1 → 4 → 3",
+        "2 → 4 → 1 → 3",
+        "4 → 2 → 1 → 3",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allopatric speciation: A population occupies a large geographical range (2) → A geographical barrier (mountain, river, etc.) divides the population into isolated sub-populations (4) → Genetic drift and natural selection cause the isolated populations to diverge; reproductive isolation develops over time (1) → The populations can no longer interbreed, forming new species (3). Order: 2 → 4 → 1 → 3. NCERT Class 12, Ch 7.",
+      "tags": [
+        "speciation",
+        "allopatric",
+        "geographical-isolation"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biotechnology",
+      "chapter": "Biotechnology: Principles and Processes",
+      "ncertClass": 12,
+      "ncertChapter": 11,
+      "ncertChapterName": "Biotechnology: Principles and Processes",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following steps of PCR (Polymerase Chain Reaction) in the correct sequence for one cycle:\n(1) Extension (72 degrees C)\n(2) Denaturation (95 degrees C)\n(3) Annealing of primers (55-65 degrees C)\n(4) Repeated cycles for amplification",
+      "options": [
+        "2 → 3 → 1 → 4",
+        "3 → 2 → 1 → 4",
+        "2 → 1 → 3 → 4",
+        "1 → 2 → 3 → 4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "One PCR cycle consists of three steps: Denaturation at 95 degrees C (DNA double strand separates into single strands) (2) → Annealing at 55-65 degrees C (primers bind to complementary sequences on single-stranded DNA) (3) → Extension at 72 degrees C (Taq polymerase extends the primers, synthesizing new DNA strands) (1) → These three steps are repeated for 25-35 cycles to amplify DNA exponentially (4). Order: 2 → 3 → 1 → 4. NCERT Class 12, Ch 11.",
+      "tags": [
+        "pcr",
+        "taq-polymerase",
+        "dna-amplification"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biotechnology",
+      "chapter": "Biotechnology: Principles and Processes",
+      "ncertClass": 12,
+      "ncertChapter": 11,
+      "ncertChapterName": "Biotechnology: Principles and Processes",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following steps of recombinant DNA technology in the correct sequence:\n(1) Insertion of rDNA into host cell (transformation)\n(2) Isolation of desired DNA (gene of interest)\n(3) Ligation of DNA insert into vector using DNA ligase\n(4) Cutting DNA and vector with restriction enzymes",
+      "options": [
+        "2 → 3 → 4 → 1",
+        "2 → 4 → 1 → 3",
+        "2 → 4 → 3 → 1",
+        "4 → 2 → 3 → 1"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Recombinant DNA technology steps: Isolation of the desired DNA/gene of interest from the source organism (2) → Cutting the isolated DNA and the cloning vector with the same restriction enzyme to generate compatible sticky ends (4) → Ligation of the DNA insert into the vector using DNA ligase to create recombinant DNA (3) → Insertion of the recombinant DNA into the host cell (transformation using methods like heat shock, electroporation) (1). Order: 2 → 4 → 3 → 1. NCERT Class 12, Ch 11.",
+      "tags": [
+        "rdna-technology",
+        "gene-cloning",
+        "restriction-enzymes"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Biotechnology",
+      "chapter": "Biotechnology: Principles and Processes",
+      "ncertClass": 12,
+      "ncertChapter": 11,
+      "ncertChapterName": "Biotechnology: Principles and Processes",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following steps of gene cloning using a plasmid vector in the correct sequence:\n(1) Selection of recombinants (using antibiotic resistance or blue-white screening)\n(2) Foreign DNA is inserted into the plasmid vector\n(3) Recombinant plasmid is introduced into competent bacterial cells\n(4) Transformed bacteria are plated on selective medium",
+      "options": [
+        "2 → 3 → 1 → 4",
+        "2 → 3 → 4 → 1",
+        "3 → 2 → 4 → 1",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Gene cloning steps: Foreign DNA is inserted into the plasmid vector at the restriction site (creating recombinant plasmid) (2) → Recombinant plasmid is introduced into competent bacterial (host) cells by transformation (heat shock/CaCl2 method) (3) → Transformed bacteria are plated on selective medium containing antibiotics (4) → Recombinants are selected using methods like insertional inactivation or blue-white screening (colonies with recombinant DNA are identified) (1). Order: 2 → 3 → 4 → 1. NCERT Class 12, Ch 11.",
+      "tags": [
+        "gene-cloning",
+        "plasmid-vector",
+        "transformation"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Ecology",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following stages of primary ecological succession on bare rock (xerosere) in the correct sequence:\n(1) Shrub stage\n(2) Lichen (crustose) stage\n(3) Climax community (forest)\n(4) Moss stage",
+      "options": [
+        "4 → 2 → 1 → 3",
+        "2 → 4 → 1 → 3",
+        "4 → 2 → 3 → 1",
+        "2 → 1 → 4 → 3"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Primary succession on bare rock (xerosere/lithosere): Lichen (crustose) stage — pioneer community that colonizes bare rock and secretes acids to weather the rock (2) → Moss stage — mosses grow on the thin soil formed by lichens (4) → Shrub stage — as more soil accumulates, shrubs and small plants establish (1) → Climax community — a stable forest community eventually develops (3). Order: 2 → 4 → 1 → 3. NCERT Class 12, Ch 13.",
+      "tags": [
+        "ecological-succession",
+        "xerosere",
+        "pioneer-community"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Ecology",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following trophic levels in a food chain from lowest to highest:\n(1) Tertiary consumers\n(2) Primary consumers (herbivores)\n(3) Producers (plants)\n(4) Secondary consumers",
+      "options": [
+        "3 → 2 → 1 → 4",
+        "3 → 4 → 2 → 1",
+        "2 → 3 → 4 → 1",
+        "3 → 2 → 4 → 1"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Trophic levels in a food chain from lowest to highest: Producers/plants (T1, autotrophs that fix solar energy) (3) → Primary consumers/herbivores (T2, eat plants) (2) → Secondary consumers (T3, carnivores that eat herbivores) (4) → Tertiary consumers (T4, top carnivores) (1). Order: 3 → 2 → 4 → 1. NCERT Class 12, Ch 14.",
+      "tags": [
+        "food-chain",
+        "trophic-levels",
+        "ecosystem"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Ecology",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following steps of the nitrogen cycle in the correct sequence, starting from atmospheric nitrogen:\n(1) Nitrification (NH3 → NO2- → NO3-)\n(2) Nitrogen fixation (N2 → NH3)\n(3) Assimilation by plants (NO3- absorbed by roots)\n(4) Ammonification (organic N → NH3)",
+      "options": [
+        "2 → 1 → 3 → 4",
+        "2 → 1 → 4 → 3",
+        "2 → 4 → 1 → 3",
+        "4 → 2 → 1 → 3"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Nitrogen cycle from atmospheric N2: Nitrogen fixation — N2 is converted to ammonia (NH3) by Rhizobium, Azotobacter, or lightning (2) → Nitrification — ammonia is oxidized to nitrite (NO2-) by Nitrosomonas and then to nitrate (NO3-) by Nitrobacter (1) → Assimilation — plants absorb nitrate through roots and use it to synthesize amino acids and proteins (3) → Ammonification — when organisms die, decomposers break down organic nitrogen compounds back to ammonia, completing the cycle (4). Order: 2 → 1 → 3 → 4. NCERT Class 12, Ch 14.",
+      "tags": [
+        "nitrogen-cycle",
+        "nitrification",
+        "nitrogen-fixation"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following events of the primary immune response in the correct sequence:\n(1) Differentiation of B-cells into plasma cells and memory cells\n(2) Pathogen enters the body for the first time\n(3) Plasma cells secrete antibodies (IgM first)\n(4) Antigen is recognized by specific B-lymphocytes",
+      "options": [
+        "2 → 4 → 1 → 3",
+        "2 → 4 → 3 → 1",
+        "2 → 1 → 4 → 3",
+        "4 → 2 → 1 → 3"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Primary immune response: Pathogen enters the body for the first time (2) → Antigens on the pathogen are recognized by specific B-lymphocytes (via surface antibodies/BCR) (4) → Activated B-cells proliferate and differentiate into plasma cells (antibody-producing) and memory cells (for future encounters) (1) → Plasma cells secrete antibodies, with IgM being produced first, followed by IgG (3). The primary response has a lag period of 5-7 days. Order: 2 → 4 → 1 → 3. NCERT Class 12, Ch 8.",
+      "tags": [
+        "immune-response",
+        "antibodies",
+        "b-cells"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following stages of cancer development in the correct sequence:\n(1) Metastasis (cancer cells spread to distant organs)\n(2) Initiation (DNA mutation in a normal cell)\n(3) Malignant neoplasm (invasive tumor breaks through basement membrane)\n(4) Promotion (mutated cell proliferates to form benign tumor)",
+      "options": [
+        "4 → 2 → 3 → 1",
+        "2 → 3 → 4 → 1",
+        "2 → 4 → 3 → 1",
+        "2 → 4 → 1 → 3"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cancer development (carcinogenesis): Initiation — a carcinogen causes DNA mutation (activation of oncogenes or inactivation of tumor suppressor genes) in a normal cell (2) → Promotion — the mutated cell undergoes uncontrolled proliferation to form a benign tumor/neoplasm (4) → Malignant neoplasm — the tumor becomes invasive, breaking through the basement membrane into surrounding tissues (3) → Metastasis — cancer cells detach, enter blood/lymph, and spread to distant organs forming secondary tumors (1). Order: 2 → 4 → 3 → 1. NCERT Class 12, Ch 8.",
+      "tags": [
+        "cancer",
+        "metastasis",
+        "oncogenes"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Health and Disease",
+      "chapter": "Human Health and Disease",
+      "ncertClass": 12,
+      "ncertChapter": 8,
+      "ncertChapterName": "Human Health and Disease",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following stages of the life cycle of Plasmodium (malarial parasite) in the human host in the correct sequence:\n(1) Merozoites released and infect new RBCs\n(2) Sporozoites enter the body through mosquito bite\n(3) Sporozoites reach liver and multiply (pre-erythrocytic cycle)\n(4) Merozoites enter RBCs and form trophozoites",
+      "options": [
+        "2 → 3 → 4 → 1",
+        "4 → 2 → 3 → 1",
+        "2 → 3 → 1 → 4",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Plasmodium life cycle in human host: Sporozoites are injected into the human body by an infected female Anopheles mosquito bite (2) → Sporozoites travel to the liver and multiply asexually in liver cells (pre-erythrocytic/hepatic schizogony) (3) → Released merozoites enter red blood cells (RBCs) and develop into trophozoites (ring stage) (4) → Trophozoites mature, undergo schizogony, and release more merozoites which infect new RBCs (erythrocytic cycle), causing the cyclic fever (1). Order: 2 → 3 → 4 → 1. NCERT Class 12, Ch 8.",
+      "tags": [
+        "plasmodium",
+        "malaria",
+        "life-cycle"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Genetics and Evolution",
+      "chapter": "Principles of Inheritance and Variation",
+      "ncertClass": 12,
+      "ncertChapter": 5,
+      "ncertChapterName": "Principles of Inheritance and Variation",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following scientists in the chronological order of their contributions to genetics:\n(1) Watson and Crick (DNA structure)\n(2) Gregor Mendel (Laws of inheritance)\n(3) Morgan (Chromosomal theory, linkage)\n(4) Griffith (Transformation experiment)",
+      "options": [
+        "2 → 3 → 1 → 4",
+        "4 → 2 → 3 → 1",
+        "2 → 3 → 4 → 1",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Chronological order of contributions: Gregor Mendel published his laws of inheritance in 1866 (2) → T.H. Morgan conducted Drosophila experiments establishing sex-linkage and chromosomal theory in 1910-1911 (3) → Frederick Griffith performed his transformation experiment in 1928 (4) → Watson and Crick proposed the double helix model of DNA in 1953 (1). Order: 2 → 3 → 4 → 1. NCERT Class 12, Ch 5 & 6.",
+      "tags": [
+        "history-of-genetics",
+        "mendel",
+        "watson-crick"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Physiology",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following events of inspiration (inhalation) in the correct sequence:\n(1) Air rushes into the lungs\n(2) Diaphragm contracts and flattens\n(3) Intra-pulmonary pressure decreases below atmospheric pressure\n(4) Thoracic cavity volume increases",
+      "options": [
+        "4 → 2 → 3 → 1",
+        "2 → 4 → 1 → 3",
+        "2 → 4 → 3 → 1",
+        "2 → 3 → 4 → 1"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Inspiration (inhalation) events: Diaphragm contracts and flattens (external intercostal muscles also contract, lifting ribs) (2) → Thoracic cavity volume increases (4) → Due to Boyle's law, the increase in volume causes intra-pulmonary pressure to decrease below atmospheric pressure (3) → Air rushes into the lungs down the pressure gradient (1). Order: 2 → 4 → 3 → 1. NCERT Class 11, Ch 17.",
+      "tags": [
+        "breathing",
+        "inspiration",
+        "respiratory-mechanism"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Plant Physiology",
+      "chapter": "Mineral Nutrition",
+      "ncertClass": 11,
+      "ncertChapter": 12,
+      "ncertChapterName": "Mineral Nutrition",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following steps of biological nitrogen fixation by Rhizobium in the correct sequence:\n(1) Nitrogenase enzyme converts N2 to NH3\n(2) Rhizobium enters root hair through infection thread\n(3) Bacteroids form inside root nodule cells\n(4) Leg-haemoglobin maintains low O2 environment",
+      "options": [
+        "2 → 3 → 1 → 4",
+        "2 → 1 → 3 → 4",
+        "2 → 3 → 4 → 1",
+        "3 → 2 → 4 → 1"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Biological nitrogen fixation by Rhizobium: Rhizobium bacteria enter the root hair through an infection thread (2) → Inside the nodule cells, Rhizobium transforms into bacteroids (the nitrogen-fixing form) (3) → Leg-haemoglobin (a pink-colored oxygen scavenger produced by the plant) maintains a microaerobic environment essential for nitrogenase function (4) → Nitrogenase enzyme in bacteroids converts atmospheric N2 to NH3 (ammonia), requiring 16 ATP per N2 molecule (1). Order: 2 → 3 → 4 → 1. NCERT Class 11, Ch 12.",
+      "tags": [
+        "nitrogen-fixation",
+        "rhizobium",
+        "nitrogenase"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Diversity in Living World",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Arrange the following kingdoms of Whittaker's five-kingdom classification in the order from simplest (most primitive) to most complex:\n(1) Plantae\n(2) Monera\n(3) Protista\n(4) Fungi",
+      "options": [
+        "3 → 2 → 4 → 1",
+        "2 → 3 → 4 → 1",
+        "2 → 3 → 1 → 4",
+        "2 → 4 → 3 → 1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In terms of evolutionary complexity: Monera (prokaryotic, simplest organisms like bacteria) (2) → Protista (unicellular eukaryotes, more complex than prokaryotes) (3) → Fungi (multicellular eukaryotes, heterotrophic, absorptive nutrition) (4) → Plantae (multicellular eukaryotes, autotrophic, most complex tissue organization among the given options) (1). Order: 2 → 3 → 4 → 1. NCERT Class 11, Ch 2.",
+      "tags": [
+        "five-kingdom",
+        "whittaker",
+        "biological-classification"
+      ]
+    },
+    {
+      "type": "SEQUENCE_ORDER",
+      "topic": "Human Physiology",
+      "chapter": "Digestion and Absorption",
+      "ncertClass": 11,
+      "ncertChapter": 16,
+      "ncertChapterName": "Digestion and Absorption",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Arrange the following steps of protein digestion in the correct sequence:\n(1) Trypsin acts on proteins in the small intestine\n(2) Pepsin acts on proteins in the stomach\n(3) Dipeptidases split dipeptides into amino acids\n(4) Peptones and proteoses are formed",
+      "options": [
+        "2 → 4 → 1 → 3",
+        "4 → 2 → 1 → 3",
+        "1 → 2 → 4 → 3",
+        "2 → 1 → 4 → 3"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Protein digestion sequence: In the stomach, pepsin (activated from pepsinogen by HCl) acts on proteins (2) → Pepsin converts proteins into peptones and proteoses (large peptide fragments) (4) → In the small intestine (duodenum), trypsin (from pancreatic juice) further breaks down peptones into smaller peptides (1) → Dipeptidases (from intestinal juice/succus entericus) finally split dipeptides into individual amino acids for absorption (3). Order: 2 → 4 → 1 → 3. NCERT Class 11, Ch 16.",
+      "tags": [
+        "protein-digestion",
+        "pepsin",
+        "trypsin"
+      ]
+    }
+  ]
+}

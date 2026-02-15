@@ -83,16 +83,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): The smooth endoplasmic reticulum (SER) is the major site for synthesis of lipids.\nReason (R): In animal cells, lipid-like steroidal hormones are synthesized in the smooth endoplasmic reticulum.",
+      "question": "Assertion (A): Mitochondria and chloroplasts are semi-autonomous organelles.\nReason (R): Both mitochondria and chloroplasts are double-membrane-bound organelles.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "SER is the principal organelle for lipid synthesis. In animal cells, steroidal hormones (which are lipids) are synthesized in the SER. The reason provides a specific example that correctly supports and explains the assertion about SER being the major site of lipid synthesis.",
-      "tags": ["cell-biology", "endoplasmic-reticulum", "lipids"]
+      "correctAnswer": "B",
+      "explanation": "Mitochondria and chloroplasts are semi-autonomous because they possess their own circular DNA and 70S ribosomes, enabling them to synthesize some of their own proteins. They are also double-membrane-bound organelles. Both statements are true, but the double-membrane structure is not the reason for their semi-autonomous nature; it is their own genetic material and protein-synthesizing machinery.",
+      "tags": ["cell-biology", "mitochondria", "chloroplasts"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -171,16 +171,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): Competitive inhibitors increase the apparent Km of an enzyme without affecting Vmax.\nReason (R): Competitive inhibitors bind to the active site of the enzyme and compete with the substrate.",
+      "question": "Assertion (A): All enzymes are proteins.\nReason (R): Enzymes are biocatalysts that lower the activation energy of a reaction.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "In competitive inhibition, the inhibitor structurally resembles the substrate and binds to the active site, competing with the substrate. This increases the apparent Km (more substrate needed to reach half Vmax) but Vmax remains unchanged because at very high substrate concentrations, the substrate outcompetes the inhibitor. The reason correctly explains the assertion.",
-      "tags": ["biomolecules", "enzymes", "inhibition"]
+      "correctAnswer": "D",
+      "explanation": "The assertion is false because not all enzymes are proteins. Ribozymes are RNA molecules with catalytic activity (e.g., ribonuclease P). The reason is true — enzymes do function as biocatalysts by lowering the activation energy of biochemical reactions. Since the assertion is false but the reason is true, the answer is D.",
+      "tags": ["biomolecules", "enzymes", "ribozymes"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -193,15 +193,15 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): DNA is chemically less reactive and structurally more stable compared to RNA.\nReason (R): The presence of 2'-OH group in every nucleotide of RNA makes it labile and easily degradable.",
+      "question": "Assertion (A): DNA is chemically less reactive and structurally more stable compared to RNA.\nReason (R): DNA exists as a double-stranded helix held together by hydrogen bonds between complementary base pairs.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "DNA has deoxyribose sugar which lacks the 2'-OH group present in the ribose sugar of RNA. The 2'-OH group in RNA makes it more reactive and prone to hydrolysis, making RNA labile and easily degradable. This is why DNA is chemically more stable and suitable as the genetic material. The reason correctly explains the assertion.",
+      "correctAnswer": "B",
+      "explanation": "DNA is chemically more stable than RNA primarily because it lacks the 2'-OH group (it has deoxyribose instead of ribose). DNA does exist as a double-stranded helix with hydrogen bonding between complementary bases. Both facts are true. However, the double-helical structure contributes to structural stability but is not the primary chemical reason for DNA being less reactive than RNA. The absence of the 2'-OH group is the key chemical difference.",
       "tags": ["biomolecules", "nucleic-acids", "DNA-RNA"]
     },
     {
@@ -215,15 +215,15 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): Bryophytes are called amphibians of the plant kingdom.\nReason (R): Bryophytes require water for fertilization because their male gametes (antherozoids) are flagellated and need water to swim to the egg.",
+      "question": "Assertion (A): Mosses (Bryophyta) are predominantly aquatic plants.\nReason (R): Bryophytes require water for the transfer of male gametes (antherozoids) during sexual reproduction.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "Bryophytes are called amphibians of the plant kingdom because they can live on land but depend on water for sexual reproduction. Their flagellated antherozoids require an external film of water to reach the archegonium (female organ) for fertilization. The reason correctly explains the assertion.",
+      "correctAnswer": "D",
+      "explanation": "The assertion is false — mosses are NOT predominantly aquatic. Bryophytes are primarily terrestrial plants that live in moist, shaded habitats. They are called 'amphibians of the plant kingdom' because they need water for reproduction but live on land. The reason is true — bryophytes do require water for the transfer of flagellated male gametes (antherozoids) to the egg.",
       "tags": ["plant-kingdom", "bryophytes", "reproduction"]
     },
     {
@@ -237,16 +237,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): Gymnosperms produce seeds but do not form fruits.\nReason (R): In gymnosperms, the ovules are not enclosed within an ovary.",
+      "question": "Assertion (A): All gymnosperms are heterosporous.\nReason (R): Heterospory means the production of two kinds of spores — microspores and megaspores.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "Gymnosperms (meaning 'naked seeds') bear ovules that are exposed on the surface of megasporophylls, not enclosed in an ovary. Since there is no ovary, no fruit is formed after fertilization. The seeds remain naked/exposed. The reason correctly explains why gymnosperms do not produce fruits.",
-      "tags": ["plant-kingdom", "gymnosperms", "seeds"]
+      "correctAnswer": "B",
+      "explanation": "All gymnosperms are indeed heterosporous, producing microspores (which develop into male gametophytes/pollen) and megaspores (which develop into female gametophytes). The definition of heterospory in the reason is also correct. However, the definition of heterospory does not explain WHY gymnosperms are heterosporous; it merely defines the term. Both are true but the reason does not explain the assertion.",
+      "tags": ["plant-kingdom", "gymnosperms", "heterospory"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -259,16 +259,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): Lichen is an example of mutualism.\nReason (R): In lichens, the algal component (phycobiont) provides food through photosynthesis while the fungal component (mycobiont) provides shelter and absorbs minerals and water.",
+      "question": "Assertion (A): Pteridophytes are called the first true land plants.\nReason (R): Pteridophytes possess vascular tissues (xylem and phloem) for the transport of water and food.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "Lichens represent a mutualistic association between an alga (or cyanobacterium) and a fungus. The algal partner photosynthesizes and provides organic food, while the fungal partner provides structural support, protection, and absorbs water and minerals. Both partners benefit, making it a classic example of mutualism.",
-      "tags": ["plant-kingdom", "lichens", "mutualism"]
+      "correctAnswer": "D",
+      "explanation": "The assertion is false — pteridophytes are NOT called the first true land plants. Bryophytes are considered the first land plants (though they lack vascular tissue). Pteridophytes are the first vascular land plants. The reason is true — pteridophytes do possess vascular tissues (xylem and phloem) for conduction.",
+      "tags": ["plant-kingdom", "pteridophytes", "vascular-plants"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -288,8 +288,8 @@
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "Platyhelminthes are called flatworms because of their dorsoventrally flattened body. They are triploblastic (have three germ layers) and acoelomate (lack a true body cavity). The dorsoventral flattening gives them their characteristic flat shape. The reason correctly explains the assertion.",
+      "correctAnswer": "B",
+      "explanation": "Platyhelminthes are called flatworms because of their dorsoventrally flattened body. They are triploblastic and acoelomate. Both the assertion and reason are true. However, the reason includes additional information (triploblastic, acoelomate) that does not explain why they are called flatworms. Being acoelomate is not the reason for the name 'flatworms'; it is solely the dorsoventral flattening.",
       "tags": ["animal-kingdom", "platyhelminthes", "classification"]
     },
     {
@@ -303,7 +303,7 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): All chordates possess a notochord at some stage of their life.\nReason (R): In vertebrates, the notochord is replaced by the vertebral column in adults.",
+      "question": "Assertion (A): Sponges (Porifera) have a water canal system.\nReason (R): The water canal system in sponges helps in food gathering, respiratory exchange, and removal of waste.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
@@ -311,8 +311,8 @@
         "A is false but R is true"
       ],
       "correctAnswer": "B",
-      "explanation": "All chordates possess a notochord at some stage of their development — this is a defining characteristic of Phylum Chordata. In vertebrates, the notochord is replaced by the vertebral column in adults. Both facts are true, but the replacement of notochord by vertebral column does not explain why all chordates possess a notochord.",
-      "tags": ["animal-kingdom", "chordates", "notochord"]
+      "explanation": "Sponges do have a water canal system (consisting of ostia, spongocoel, and osculum), and it does help in food gathering, respiratory exchange, and waste removal. Both facts are true. However, the reason describes the functions of the water canal system, not why sponges have it. The reason does not explain the assertion.",
+      "tags": ["animal-kingdom", "porifera", "water-canal"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -325,16 +325,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): Ctenophores are commonly called sea walnuts or comb jellies.\nReason (R): Ctenophores possess special adhesive cells called colloblasts used for capturing prey.",
+      "question": "Assertion (A): All members of phylum Mollusca are terrestrial.\nReason (R): Molluscs have a soft body covered by a calcareous shell and a muscular foot for locomotion.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "B",
-      "explanation": "Ctenophores are indeed called sea walnuts or comb jellies due to the presence of eight rows of ciliary comb plates used for locomotion. They possess colloblasts (adhesive cells) for capturing prey. Both statements are true, but the presence of colloblasts is not the reason why they are called sea walnuts or comb jellies.",
-      "tags": ["animal-kingdom", "ctenophora", "classification"]
+      "correctAnswer": "D",
+      "explanation": "The assertion is false — not all molluscs are terrestrial. Most molluscs are aquatic (marine or freshwater), such as Pila (apple snail), octopus, and oyster. Only some like garden snails are terrestrial. The reason is true — molluscs do have a soft body typically covered by a calcareous shell (though some like octopus lack an external shell) and they possess a muscular foot for locomotion.",
+      "tags": ["animal-kingdom", "mollusca", "classification"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -369,16 +369,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): In pea (Pisum sativum), tendrils are modifications of leaves.\nReason (R): Tendrils in pea arise from the leaf rachis and help the plant in climbing.",
+      "question": "Assertion (A): Pneumatophores are found in all types of plants.\nReason (R): Pneumatophores are specialized aerial roots that grow vertically upward and help in gaseous exchange.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "In pea, the upper leaflets of the compound leaf are modified into tendrils. These tendrils develop from the leaf rachis (the axis of the compound leaf) and coil around nearby supports to help the weak-stemmed plant climb. The reason correctly explains the assertion about leaf modification.",
-      "tags": ["morphology", "leaf-modifications", "tendrils"]
+      "correctAnswer": "D",
+      "explanation": "The assertion is false — pneumatophores are NOT found in all plants. They are specifically found in mangrove plants (like Rhizophora) that grow in marshy, waterlogged, saline soil where oxygen availability is low. The reason is true — pneumatophores are specialized roots that grow vertically upward (negatively geotropic) to facilitate gaseous exchange.",
+      "tags": ["morphology", "root-modifications", "pneumatophores"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -413,16 +413,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): The light reactions of photosynthesis occur in the thylakoid membranes of chloroplasts.\nReason (R): Thylakoid membranes contain photosystems I and II, along with the electron transport chain components and ATP synthase.",
+      "question": "Assertion (A): The Calvin cycle (dark reaction) does not require light directly.\nReason (R): The Calvin cycle occurs in the stroma and uses CO2 along with ATP and NADPH produced during the light reaction.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "Light reactions (photolysis, electron transport, and photophosphorylation) occur in the thylakoid membranes because these membranes house all the necessary molecular machinery — photosystem I (PS I), photosystem II (PS II), the electron transport chain, and ATP synthase. The reason correctly explains the assertion.",
-      "tags": ["photosynthesis", "light-reactions", "thylakoid"]
+      "correctAnswer": "B",
+      "explanation": "The Calvin cycle does not directly require light energy — it uses the chemical energy (ATP and NADPH) produced during the light reactions. The reason correctly states that the Calvin cycle occurs in the stroma and uses CO2, ATP, and NADPH. However, the reason describes what the Calvin cycle uses, not why it does not require light. Both are true but the reason does not explain the assertion.",
+      "tags": ["photosynthesis", "Calvin-cycle", "dark-reaction"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -435,15 +435,15 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): C4 plants are more efficient than C3 plants in hot and dry environments.\nReason (R): C4 plants lack photorespiration because CO2 fixation occurs in bundle sheath cells where RuBisCO is shielded from O2.",
+      "question": "Assertion (A): C4 plants are more efficient than C3 plants in hot and dry environments.\nReason (R): C4 plants have a higher concentration of chlorophyll b compared to C3 plants.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "C4 plants have a CO2 concentrating mechanism. The initial CO2 fixation by PEP carboxylase occurs in mesophyll cells, and the CO2 is then released in bundle sheath cells where RuBisCO operates at high CO2 concentration. This minimizes photorespiration, making C4 plants more efficient in hot, dry conditions. The reason correctly explains the assertion.",
+      "correctAnswer": "C",
+      "explanation": "C4 plants are more efficient in hot and dry environments because they have a CO2 concentrating mechanism that minimizes photorespiration — the assertion is true. The reason is false — C4 plant efficiency is not due to higher chlorophyll b concentration. It is due to the spatial separation of initial CO2 fixation (by PEP carboxylase in mesophyll cells) and the Calvin cycle (in bundle sheath cells).",
       "tags": ["photosynthesis", "C4-pathway", "photorespiration"]
     },
     {
@@ -457,16 +457,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): Oxygen evolved during photosynthesis comes from water, not from carbon dioxide.\nReason (R): Photolysis of water during the light reaction releases oxygen as a by-product.",
+      "question": "Assertion (A): RuBisCO is the most abundant enzyme on earth.\nReason (R): RuBisCO has both carboxylase and oxygenase activity and is found in all photosynthetic organisms.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "The oxygen released during photosynthesis comes from the splitting (photolysis) of water molecules in the light reaction (Hill reaction). This was demonstrated by Ruben and Kamen using heavy oxygen isotope (O18). Water molecules are split as: 2H2O → 4H+ + 4e- + O2. The reason correctly explains the assertion.",
-      "tags": ["photosynthesis", "photolysis", "oxygen-evolution"]
+      "correctAnswer": "B",
+      "explanation": "RuBisCO (Ribulose bisphosphate carboxylase-oxygenase) is indeed the most abundant enzyme on earth, as stated in NCERT. It does have dual activity — carboxylase (fixing CO2 in Calvin cycle) and oxygenase (causing photorespiration). Both statements are true. However, the dual enzymatic activity does not explain why it is the most abundant enzyme; its abundance is due to its relatively slow catalytic rate, requiring large quantities to sustain photosynthesis.",
+      "tags": ["photosynthesis", "RuBisCO", "enzyme"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -479,15 +479,15 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): SA node is called the pacemaker of the heart.\nReason (R): The SA node generates the maximum rate of action potentials, which sets the rhythm of heart contraction.",
+      "question": "Assertion (A): SA node is called the pacemaker of the heart.\nReason (R): The SA node is located in the left atrium near the opening of the pulmonary veins.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "The sinoatrial (SA) node, located in the right atrium, has the highest rate of generating action potentials (about 70-75 per minute). Since it fires at the fastest rate, it sets the pace for the entire heart, causing sequential contraction of atria and ventricles. Thus it is called the pacemaker. The reason correctly explains the assertion.",
+      "correctAnswer": "C",
+      "explanation": "The SA node is indeed the pacemaker of the heart because it generates action potentials at the highest rate (~70-75/min), setting the rhythm for heart contractions — the assertion is true. The reason is false — the SA node is located in the right atrium (near the opening of the superior vena cava), not in the left atrium.",
       "tags": ["circulation", "heart", "SA-node"]
     },
     {
@@ -501,15 +501,15 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): Erythrocytes of humans are enucleated (lack a nucleus).\nReason (R): The absence of nucleus in mature RBCs provides more space for haemoglobin, increasing oxygen-carrying capacity.",
+      "question": "Assertion (A): Erythrocytes of humans are enucleated (lack a nucleus).\nReason (R): Mature human RBCs have a biconcave disc shape that increases their surface area for gas exchange.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "Mature mammalian RBCs lose their nucleus during development. The absence of a nucleus allows more space for haemoglobin molecules, thereby increasing the oxygen-carrying capacity of each red blood cell. This is an evolutionary adaptation for efficient oxygen transport. The reason correctly explains the assertion.",
+      "correctAnswer": "B",
+      "explanation": "Mature human RBCs are indeed enucleated (they lose their nucleus during maturation), and they do have a biconcave disc shape that increases surface area for gas exchange. Both statements are factually correct. However, the biconcave shape is not the reason why RBCs lack a nucleus — rather, the loss of the nucleus allows more space for haemoglobin. The reason does not explain the assertion.",
       "tags": ["circulation", "blood", "erythrocytes"]
     },
     {
@@ -523,7 +523,7 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): Myelinated nerve fibres conduct impulses faster than non-myelinated nerve fibres.\nReason (R): In myelinated fibres, the impulse jumps from one node of Ranvier to the next (saltatory conduction).",
+      "question": "Assertion (A): Synapse ensures unidirectional transmission of nerve impulse.\nReason (R): Neurotransmitters are released only from the pre-synaptic membrane (synaptic knob) into the synaptic cleft.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
@@ -531,8 +531,8 @@
         "A is false but R is true"
       ],
       "correctAnswer": "A",
-      "explanation": "In myelinated nerve fibres, the myelin sheath acts as an insulator. The action potential can only occur at the nodes of Ranvier (gaps in the myelin sheath), so the impulse appears to 'jump' from node to node. This saltatory conduction is much faster than continuous conduction in non-myelinated fibres. The reason correctly explains the assertion.",
-      "tags": ["neural-control", "nerve-impulse", "myelination"]
+      "explanation": "Nerve impulse transmission across a synapse is unidirectional because neurotransmitter vesicles are present only in the pre-synaptic knob (axon terminal), not in the post-synaptic membrane. The neurotransmitter is released into the synaptic cleft from the pre-synaptic side only, ensuring the impulse travels in one direction. The reason correctly explains the assertion.",
+      "tags": ["neural-control", "synapse", "neurotransmitter"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -589,15 +589,15 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): Both strands of DNA are not copied during transcription.\nReason (R): If both strands acted as templates, they would code for RNA molecules with different sequences that would produce two different proteins, complicating the genetic information transfer.",
+      "question": "Assertion (A): Both strands of DNA are not copied during transcription.\nReason (R): The two strands of DNA have the same polarity (both run 5' to 3').",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "During transcription, only one strand of DNA (template strand or antisense strand) is used to synthesize RNA. If both strands served as templates, they would produce two different (complementary) RNA molecules, which would code for different proteins with different amino acid sequences. This would complicate the genetic information transfer. The reason correctly explains the assertion.",
+      "correctAnswer": "C",
+      "explanation": "During transcription, only one strand of DNA (template strand) is used to synthesize RNA — the assertion is true. The reason is false because the two strands of DNA do NOT have the same polarity; they are antiparallel (one runs 5' to 3' and the other runs 3' to 5'). The actual reason only one strand is copied is to avoid producing two different, complementary RNA molecules.",
       "tags": ["molecular-biology", "transcription", "template-strand"]
     },
     {
@@ -655,7 +655,7 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): The genetic code is degenerate.\nReason (R): Some amino acids are coded by more than one codon.",
+      "question": "Assertion (A): The genetic code is degenerate.\nReason (R): One amino acid can be coded by more than one codon.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
@@ -677,16 +677,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): Mendel's law of segregation is also called the law of purity of gametes.\nReason (R): During gamete formation, the two alleles of a gene separate from each other so that each gamete carries only one allele.",
+      "question": "Assertion (A): Mendel's law of independent assortment is universally applicable to all genes.\nReason (R): Genes located on the same chromosome tend to be inherited together (linkage).",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "Mendel's first law (law of segregation) states that alleles of a gene separate during gamete formation, so each gamete receives only one allele. This means gametes are 'pure' for a particular trait (they carry only one allele, not a blend), hence the name 'law of purity of gametes'. The reason correctly explains the assertion.",
-      "tags": ["genetics", "Mendel", "segregation"]
+      "correctAnswer": "D",
+      "explanation": "The assertion is false — Mendel's law of independent assortment is not universally applicable. It applies only to genes located on different chromosomes. Linked genes (genes on the same chromosome) tend to be inherited together and do not assort independently. The reason is true — it correctly describes linkage. The reason actually contradicts the assertion.",
+      "tags": ["genetics", "Mendel", "independent-assortment"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -743,16 +743,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): In ABO blood grouping, the gene I has three alleles: IA, IB, and i.\nReason (R): Multiple allelism occurs when a gene exists in more than two allelic forms in a population.",
+      "question": "Assertion (A): Turner syndrome individuals have __(45) chromosomes with XO genotype.\nReason (R): Turner syndrome is caused by the trisomy of the X chromosome.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "ABO blood groups are controlled by the gene I, which has three alleles — IA, IB, and i. The existence of more than two alleles for a single gene in a population is called multiple allelism. ABO blood grouping is a classic NCERT example of multiple allelism. The reason correctly defines the phenomenon that explains the assertion.",
-      "tags": ["genetics", "blood-groups", "multiple-allelism"]
+      "correctAnswer": "C",
+      "explanation": "Turner syndrome individuals do have 45 chromosomes (2n = 45) with only one X chromosome (44 autosomes + XO), so the assertion is true. However, the reason is false — Turner syndrome is caused by monosomy (absence) of one X chromosome, not trisomy. Trisomy of the X chromosome (XXX) causes Super Female Syndrome, which is a different condition.",
+      "tags": ["genetics", "chromosomal-disorders", "Turner-syndrome"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -765,16 +765,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): The process of spermatogenesis produces four functional sperms from one primary spermatocyte.\nReason (R): Each primary spermatocyte undergoes two meiotic divisions to form four haploid spermatids.",
+      "question": "Assertion (A): Sertoli cells are present in the seminiferous tubules and provide nourishment to developing sperms.\nReason (R): Leydig cells (interstitial cells) secrete estrogen hormone in males.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "During spermatogenesis, one primary spermatocyte (2n) undergoes meiosis I to form two secondary spermatocytes (n), which then undergo meiosis II to form four haploid spermatids. All four spermatids differentiate into functional spermatozoa. The reason correctly explains this process.",
-      "tags": ["human-reproduction", "spermatogenesis", "meiosis"]
+      "correctAnswer": "C",
+      "explanation": "Sertoli cells are indeed present in the seminiferous tubules and provide nourishment to the developing germ cells (spermatids) — the assertion is true. However, the reason is false — Leydig cells (interstitial cells) secrete androgens (mainly testosterone), not estrogen. Testosterone is the primary male sex hormone responsible for development of secondary sexual characters in males.",
+      "tags": ["human-reproduction", "sertoli-cells", "leydig-cells"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -787,15 +787,15 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): Oogenesis produces only one functional ovum from one primary oocyte.\nReason (R): The unequal division of cytoplasm during meiosis in oogenesis produces one large ovum and three small polar bodies.",
+      "question": "Assertion (A): Oogenesis produces only one functional ovum from one primary oocyte.\nReason (R): Both meiotic divisions during oogenesis are equal, producing four equal-sized cells.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "During oogenesis, the primary oocyte divides unequally during meiosis I and II. The cytoplasm is distributed unequally so that one cell (the ovum) gets most of the cytoplasm and nutrients, while the other three cells (polar bodies) receive very little cytoplasm and degenerate. This ensures the ovum has sufficient nutrients for early embryo development.",
+      "correctAnswer": "C",
+      "explanation": "Oogenesis does produce only one functional ovum from one primary oocyte, so the assertion is true. However, the reason is false — the meiotic divisions in oogenesis are UNEQUAL, not equal. The cytoplasm is distributed unequally, producing one large ovum and three small polar bodies that degenerate. It is precisely this unequal division that results in only one functional ovum.",
       "tags": ["human-reproduction", "oogenesis", "polar-bodies"]
     },
     {
@@ -831,16 +831,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): The acrosome reaction is essential for fertilization.\nReason (R): The acrosome releases lysins that dissolve the zona pellucida of the ovum, enabling sperm entry.",
+      "question": "Assertion (A): Implantation of the embryo occurs in the fallopian tube.\nReason (R): The blastocyst gets embedded in the endometrium of the uterus.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "The acrosome is a cap-like structure at the head of the sperm derived from the Golgi complex. During fertilization, the acrosome releases hydrolytic enzymes (lysins/hyaluronidase) that dissolve the zona pellucida and corona radiata surrounding the ovum. Without this acrosome reaction, sperm cannot penetrate the egg coverings. The reason correctly explains the assertion.",
-      "tags": ["human-reproduction", "fertilization", "acrosome"]
+      "correctAnswer": "D",
+      "explanation": "The assertion is false — implantation does NOT occur in the fallopian tube. Normal implantation occurs in the uterus. Implantation in the fallopian tube is an ectopic pregnancy and is abnormal. The reason is true — the blastocyst does get embedded in the endometrium (inner lining) of the uterus during normal implantation.",
+      "tags": ["human-reproduction", "implantation", "embryo"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -853,16 +853,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): Double fertilization is a unique feature of angiosperms.\nReason (R): In double fertilization, one male gamete fuses with the egg cell and the other fuses with the two polar nuclei.",
+      "question": "Assertion (A): Self-pollination always leads to inbreeding depression.\nReason (R): Continued self-pollination reduces genetic variability in a population over generations.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "Double fertilization is exclusive to angiosperms (flowering plants). One sperm fuses with the egg cell (syngamy) to form the diploid zygote, while the second sperm fuses with the two polar nuclei (or secondary nucleus) to form the triploid primary endosperm nucleus (triple fusion). The reason correctly describes the events of double fertilization.",
-      "tags": ["plant-reproduction", "double-fertilization", "angiosperms"]
+      "correctAnswer": "D",
+      "explanation": "The assertion is false — self-pollination does not ALWAYS lead to inbreeding depression. Some plants like wheat, rice, and pea are naturally self-pollinating and are well adapted without suffering significant inbreeding depression. However, the reason is true — continued self-pollination does reduce genetic variability in a population over generations, which can sometimes lead to inbreeding depression in outcrossing species.",
+      "tags": ["plant-reproduction", "self-pollination", "inbreeding"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -882,8 +882,8 @@
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "Pollen grains contain proteins that can trigger allergic responses (allergies/hay fever) in susceptible individuals. According to NCERT, pollen grains are rich in nutrients and have a significant amount of proteins. These proteins on the pollen surface act as allergens and can cause bronchial afflictions and other allergic reactions. The reason correctly explains the assertion.",
+      "correctAnswer": "B",
+      "explanation": "Pollen grains do cause allergic reactions and they are rich in nutrients with allergenic proteins — both statements are true. However, being 'rich in nutrients' is not the specific reason they cause allergies. The allergic reaction is due to the immune system's response to specific proteins on the pollen surface, not their nutritional content. The reason includes extraneous information.",
       "tags": ["plant-reproduction", "pollen", "allergy"]
     },
     {
@@ -897,16 +897,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "HIGH",
-      "question": "Assertion (A): Emasculation is done in bisexual flowers for artificial hybridization.\nReason (R): Removal of anthers from the flower bud prevents self-pollination, allowing only desired cross-pollination.",
+      "question": "Assertion (A): The outer integument of an ovule develops into the seed coat (testa) after fertilization.\nReason (R): The nucellus of the ovule is consumed during seed development and forms the perisperm in some seeds.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "In artificial hybridization, emasculation (removal of anthers) is performed on bisexual flowers before they mature. This prevents self-pollination and allows the breeder to transfer pollen from the desired male parent. The emasculated flower is then bagged and hand-pollinated. The reason correctly explains why emasculation is necessary.",
-      "tags": ["plant-reproduction", "emasculation", "hybridization"]
+      "correctAnswer": "B",
+      "explanation": "The outer integument of the ovule does develop into the seed coat (testa) after fertilization — the assertion is true. The nucellus is generally consumed during seed development, and in some seeds (like black pepper and beet), remnants of the nucellus persist as perisperm — the reason is also true. However, the fate of the nucellus does not explain why the outer integument becomes the testa. Both are true but the reason does not explain the assertion.",
+      "tags": ["plant-reproduction", "seed-development", "ovule"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -919,15 +919,15 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): Homologous organs provide evidence for divergent evolution.\nReason (R): Homologous organs have a similar structural plan and origin but perform different functions.",
+      "question": "Assertion (A): Homologous organs provide evidence for divergent evolution.\nReason (R): Homologous organs have similar functions and perform the same activities in all organisms.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "Homologous organs (e.g., forelimbs of whale, bat, cheetah, and human) share a similar structural plan and developmental origin but have been modified for different functions. This indicates that these organisms evolved from a common ancestor and diverged over time (divergent evolution). The reason correctly explains the assertion.",
+      "correctAnswer": "C",
+      "explanation": "Homologous organs do provide evidence for divergent evolution (assertion is true). However, the reason is false — homologous organs have similar structural plan and origin but perform DIFFERENT functions (not the same). For example, the forelimbs of whale (swimming), bat (flying), and human (grasping) have the same bone structure but different functions.",
       "tags": ["evolution", "homologous-organs", "divergent-evolution"]
     },
     {
@@ -941,16 +941,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): Industrial melanism is an example of natural selection.\nReason (R): During industrialization in England, white-winged moths were selectively picked up by predators against soot-covered tree trunks, favoring the survival of dark-winged (melanised) moths.",
+      "question": "Assertion (A): Genetic drift is more pronounced in large populations.\nReason (R): Genetic drift refers to random changes in allele frequencies that occur by chance alone.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "Industrial melanism in the peppered moth (Biston betularia) is a classic example of natural selection. Before industrialization, light-coloured moths were camouflaged on lichen-covered trees. After industrialization, soot darkened the tree trunks, making dark moths better camouflaged and light moths more visible to predators. This directional selection favored dark moths. The reason correctly explains the assertion.",
-      "tags": ["evolution", "natural-selection", "industrial-melanism"]
+      "correctAnswer": "D",
+      "explanation": "The assertion is false — genetic drift is more pronounced in SMALL populations, not large ones. In large populations, random fluctuations tend to average out. The reason is true — genetic drift does refer to random changes in allele frequencies due to chance events (sampling error) rather than natural selection. The Sewall Wright effect and founder effect are examples of genetic drift in small populations.",
+      "tags": ["evolution", "genetic-drift", "population-genetics"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -963,7 +963,7 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): Analogous organs are the result of convergent evolution.\nReason (R): Analogous organs have similar functions but different structural origin and developmental plan.",
+      "question": "Assertion (A): Lamarck's theory of inheritance of acquired characters is not accepted today.\nReason (R): Changes in somatic cells due to environment are not inherited because they do not alter the germ cell DNA.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
@@ -971,8 +971,8 @@
         "A is false but R is true"
       ],
       "correctAnswer": "A",
-      "explanation": "Analogous organs (e.g., wings of butterfly and wings of bird) perform similar functions but have completely different structural origin and developmental pathways. They evolved independently in unrelated organisms due to similar environmental pressures, which is convergent evolution. The reason correctly explains the assertion.",
-      "tags": ["evolution", "analogous-organs", "convergent-evolution"]
+      "explanation": "Lamarck proposed that characters acquired during an organism's lifetime can be passed to offspring. This theory is not accepted because acquired characters (changes in somatic cells) do not alter the DNA of germ cells (gametes), so they cannot be inherited. Only changes in germ cell DNA are heritable. The reason correctly explains why Lamarck's theory was rejected.",
+      "tags": ["evolution", "Lamarckism", "inheritance"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -985,16 +985,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): Restriction endonucleases are called 'molecular scissors'.\nReason (R): Restriction enzymes cut DNA at specific palindromic nucleotide sequences.",
+      "question": "Assertion (A): Gel electrophoresis separates DNA fragments based on their charge.\nReason (R): Smaller DNA fragments move faster through the agarose gel matrix.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "Restriction endonucleases are called molecular scissors because they cut (cleave) DNA strands at precise, specific locations defined by palindromic recognition sequences. For example, EcoRI recognizes the sequence GAATTC and cuts between G and A on both strands. This precise cutting ability makes them essential tools in recombinant DNA technology.",
-      "tags": ["biotechnology", "restriction-enzymes", "rDNA"]
+      "correctAnswer": "D",
+      "explanation": "The assertion is false — gel electrophoresis separates DNA fragments based on their SIZE (molecular weight), not their charge. All DNA fragments have the same charge-to-mass ratio (due to the phosphate backbone) and migrate toward the anode. The reason is true — smaller DNA fragments do move faster through the pores of the agarose gel because they encounter less resistance.",
+      "tags": ["biotechnology", "gel-electrophoresis", "DNA"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1029,15 +1029,15 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): PCR (Polymerase Chain Reaction) is used to amplify specific DNA segments.\nReason (R): PCR uses a thermostable DNA polymerase (Taq polymerase) that can withstand the high temperatures used in the denaturation step.",
+      "question": "Assertion (A): PCR (Polymerase Chain Reaction) is used to amplify specific DNA segments.\nReason (R): PCR uses DNA ligase enzyme to join DNA fragments during amplification.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "PCR amplifies specific DNA segments in vitro through repeated cycles of denaturation, annealing, and extension. The use of Taq polymerase (from Thermus aquaticus) is crucial because it can withstand the high temperatures (~95 degree C) needed to denature DNA in each cycle without being destroyed. This thermostability is what makes PCR practically possible.",
+      "correctAnswer": "C",
+      "explanation": "PCR does amplify specific DNA segments in vitro through repeated cycles of denaturation, annealing, and extension — the assertion is true. However, the reason is false — PCR uses Taq DNA polymerase (a thermostable DNA polymerase), NOT DNA ligase. DNA ligase is used to join DNA fragments in recombinant DNA technology, not in PCR.",
       "tags": ["biotechnology", "PCR", "Taq-polymerase"]
     },
     {
@@ -1051,15 +1051,15 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): Only 10% of energy is transferred from one trophic level to the next.\nReason (R): A large proportion of energy at each trophic level is lost as heat through respiration and in detritus.",
+      "question": "Assertion (A): Only 10% of energy is transferred from one trophic level to the next.\nReason (R): The pyramids of energy are always upright in any ecosystem.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "A",
-      "explanation": "According to Lindeman's 10% law of energy transfer, only about 10% of the energy at one trophic level is passed to the next. The remaining 90% is lost primarily through metabolic activities (respiration), as heat, and in dead organic matter (detritus). The reason correctly explains why so little energy is transferred between trophic levels.",
+      "correctAnswer": "B",
+      "explanation": "According to Lindeman's 10% law, only about 10% of energy is transferred between trophic levels — the assertion is true. Pyramids of energy are always upright because energy decreases at each successive trophic level — this is also true. However, the fact that energy pyramids are upright is a consequence of energy loss at each level, not the reason why only 10% is transferred. Both are true but the reason does not explain the assertion.",
       "tags": ["ecosystem", "energy-flow", "trophic-levels"]
     },
     {
@@ -1073,16 +1073,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): Decomposers play a crucial role in nutrient cycling.\nReason (R): Decomposers are primary producers that fix carbon dioxide into organic compounds.",
+      "question": "Assertion (A): The pyramid of biomass in an aquatic ecosystem can be inverted.\nReason (R): In aquatic ecosystems, the producers (phytoplankton) have a very short lifespan and reproduce rapidly, so their standing biomass at any given time may be less than that of consumers.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "C",
-      "explanation": "Decomposers (fungi and bacteria) play a vital role in nutrient cycling by breaking down dead organic matter and releasing nutrients back into the soil and atmosphere. However, the reason is false — decomposers are NOT primary producers. Primary producers are autotrophs (like green plants) that fix CO2. Decomposers are heterotrophs that break down organic matter.",
-      "tags": ["ecosystem", "decomposers", "nutrient-cycling"]
+      "correctAnswer": "A",
+      "explanation": "In aquatic ecosystems (like ponds and lakes), the pyramid of biomass is inverted because the producers (phytoplankton) are small, short-lived organisms that reproduce very rapidly. At any given time, their standing biomass is less than that of the consumers (zooplankton and fish). The reason correctly explains why the biomass pyramid is inverted in aquatic ecosystems.",
+      "tags": ["ecosystem", "biomass-pyramid", "aquatic-ecosystem"]
     },
     {
       "type": "ASSERTION_REASON",
@@ -1095,16 +1095,16 @@
       "isNcertBased": true,
       "isNeetImportant": true,
       "neetWeightage": "MEDIUM",
-      "question": "Assertion (A): AIDS is caused by the Human Immunodeficiency Virus (HIV).\nReason (R): HIV destroys helper T-lymphocytes (CD4+ cells), thereby weakening the immune system of the infected person.",
+      "question": "Assertion (A): AIDS cannot be transmitted through casual physical contact like handshaking.\nReason (R): HIV is transmitted only through body fluids like blood, semen, vaginal secretions, and breast milk.",
       "options": [
         "Both A and R are true and R is the correct explanation of A",
         "Both A and R are true but R is NOT the correct explanation of A",
         "A is true but R is false",
         "A is false but R is true"
       ],
-      "correctAnswer": "B",
-      "explanation": "AIDS (Acquired Immuno Deficiency Syndrome) is indeed caused by HIV. HIV does destroy helper T-lymphocytes (CD4+ T cells), leading to severe immunodeficiency. Both facts are true. However, the destruction of T cells explains why AIDS patients are immunodeficient, not why HIV causes AIDS (the causal relationship). The reason explains the mechanism of disease progression, not the causation stated in the assertion.",
-      "tags": ["human-health", "AIDS", "HIV"]
+      "correctAnswer": "A",
+      "explanation": "AIDS cannot be spread through casual contact such as handshaking, hugging, or sharing food. HIV is transmitted through specific body fluids — blood, semen, vaginal secretions, and breast milk — via sexual contact, sharing of infected needles, blood transfusion, or from mother to child. The reason correctly explains why casual contact does not spread AIDS.",
+      "tags": ["human-health", "AIDS", "transmission"]
     }
   ]
 }
