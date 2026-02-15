@@ -1,0 +1,1342 @@
+{
+  "batch": {
+    "name": "Statement-Based Batch 1 \u2014 Class 11-12 NEET Biology",
+    "version": 1,
+    "source": "NCERT-based",
+    "totalQuestions": 50
+  },
+  "questions": [
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Cell Biology",
+      "chapter": "Cell - The Unit of Life",
+      "ncertClass": 11,
+      "ncertChapter": 8,
+      "ncertChapterName": "Cell - The Unit of Life",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements and select the correct option:\nStatement I: Ribosomes are non-membrane bound organelles found in all living cells.\nStatement II: The 70S ribosomes are found in prokaryotes, chloroplasts and mitochondria.\nStatement III: The 80S ribosomes consist of 50S and 30S subunits.\nStatement IV: Polyribosomes (polysomes) are involved in the synthesis of the same type of protein.",
+      "options": [
+        "Statements I, II and III are correct",
+        "Statements I, II and IV are correct",
+        "All statements are correct",
+        "Statements II and III are correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ribosomes are non-membrane bound and present in all cells (I correct). 70S ribosomes occur in prokaryotes, chloroplasts and mitochondria (II correct). 80S ribosomes consist of 60S and 40S subunits, NOT 50S and 30S (III incorrect \u2014 50S+30S = 70S type). Polysomes translate the same mRNA producing the same protein (IV correct). NCERT Ch 8, Class 11.",
+      "tags": [
+        "ribosomes",
+        "cell-organelles",
+        "polysomes"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Cell Biology",
+      "chapter": "Cell - The Unit of Life",
+      "ncertClass": 11,
+      "ncertChapter": 8,
+      "ncertChapterName": "Cell - The Unit of Life",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following statements are correct?\nStatement I: Centrioles are present in animal cells but absent in most plant cells.\nStatement II: The centriole is made up of 9 sets of triplet microtubules arranged in a cartwheel pattern.\nStatement III: Centrioles form the basal body of cilia and flagella.\nStatement IV: The central part of the centriole is called the hub and is connected to tubules by radial spokes.",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correctAnswer": "D",
+      "explanation": "All four statements are correct per NCERT. Centrioles are absent in most plant cells (I correct). They have 9 triplet microtubule arrangement (II correct). They form basal bodies of cilia and flagella (III correct). The hub-and-spoke arrangement with radial spokes is described in NCERT (IV correct). NCERT Ch 8, Class 11.",
+      "tags": [
+        "centriole",
+        "microtubules",
+        "cell-organelles"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Cell Biology",
+      "chapter": "Cell - The Unit of Life",
+      "ncertClass": 11,
+      "ncertChapter": 8,
+      "ncertChapterName": "Cell - The Unit of Life",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Select the incorrect statement regarding the endomembrane system:\nStatement I: Endoplasmic reticulum, Golgi complex, lysosomes and vacuoles are part of the endomembrane system.\nStatement II: Mitochondria and chloroplasts are part of the endomembrane system.\nStatement III: SER is involved in lipid synthesis.\nStatement IV: RER has ribosomes on its cytoplasmic surface.",
+      "options": [
+        "Statement I",
+        "Statement II",
+        "Statement III",
+        "Statement IV"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mitochondria and chloroplasts are NOT part of the endomembrane system because their functions are not coordinated with the other organelles of this system (Statement II is incorrect). ER, Golgi, lysosomes and vacuoles function in a coordinated manner (I correct). SER synthesizes lipids (III correct). RER has ribosomes attached to its cytoplasmic side (IV correct). NCERT Ch 8, Class 11.",
+      "tags": [
+        "endomembrane-system",
+        "ER",
+        "cell-organelles"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Cell Biology",
+      "chapter": "Cell - The Unit of Life",
+      "ncertClass": 11,
+      "ncertChapter": 8,
+      "ncertChapterName": "Cell - The Unit of Life",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements and select the correct option:\nStatement I: The plasma membrane is composed of lipids and proteins arranged according to the fluid mosaic model.\nStatement II: The lipid component of the membrane is mainly composed of phospholipids.\nStatement III: The integral proteins are partially buried in the membrane.\nStatement IV: The quasi-fluid nature of the lipid allows lateral movement of proteins within the bilayer.",
+      "options": [
+        "Statements I, II and III are correct",
+        "Statements I, II and IV are correct",
+        "Statements II, III and IV are correct",
+        "All statements are correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The fluid mosaic model (Singer and Nicolson, 1972) correctly describes the membrane (I correct). Phospholipids are the main lipid component (II correct). Integral proteins are FULLY embedded (buried) in the membrane, not partially \u2014 peripheral proteins are partially buried (III incorrect). The quasi-fluid nature allows lateral movement of proteins (IV correct). NCERT Ch 8, Class 11.",
+      "tags": [
+        "plasma-membrane",
+        "fluid-mosaic-model",
+        "phospholipids"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements regarding enzymes and select the correct option:\nStatement I: Enzymes are proteins that act as biological catalysts.\nStatement II: Enzymes lower the activation energy of a reaction.\nStatement III: Enzymes alter the equilibrium constant of a reaction.\nStatement IV: The activity of enzymes is affected by temperature and pH.",
+      "options": [
+        "Statements I, III and IV are correct",
+        "All statements are correct",
+        "Statements I and II are correct",
+        "Statements I, II and IV are correct"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Enzymes are biological catalysts made of proteins (I correct). They lower activation energy to speed up reactions (II correct). Enzymes do NOT alter the equilibrium constant \u2014 they only speed up the rate at which equilibrium is reached (III incorrect). Temperature and pH affect enzyme activity with optimum values (IV correct). NCERT Ch 9, Class 11.",
+      "tags": [
+        "enzymes",
+        "activation-energy",
+        "catalysis"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Which of the following statements is correct regarding nucleic acids?\nStatement I: DNA is the genetic material in most organisms.\nStatement II: RNA contains deoxyribose sugar.\nStatement III: Adenine pairs with thymine in DNA by two hydrogen bonds.\nStatement IV: In RNA, adenine pairs with uracil.",
+      "options": [
+        "Statements I, II and IV",
+        "Statements I, III and IV",
+        "Statements II and III only",
+        "All statements are correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "DNA is the genetic material in most organisms (I correct). RNA contains ribose sugar, NOT deoxyribose (II incorrect). Adenine pairs with thymine by two hydrogen bonds in DNA (III correct). In RNA, uracil replaces thymine and pairs with adenine (IV correct). NCERT Ch 9, Class 11.",
+      "tags": [
+        "DNA",
+        "RNA",
+        "nucleic-acids",
+        "base-pairing"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following statements about amino acids are correct?\nStatement I: Amino acids have an amino group and a carboxyl group.\nStatement II: There are approximately 20 types of amino acids in proteins.\nStatement III: Glycine is the simplest amino acid with R group as hydrogen.\nStatement IV: All amino acids are optically active.",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Amino acids have -NH2 (amino) and -COOH (carboxyl) groups (I correct). About 20 amino acids are found in proteins (II correct). Glycine has H as R group, making it simplest (III correct). Glycine is the ONLY amino acid that is optically INACTIVE because its R group is H (IV incorrect). Three statements are correct. NCERT Ch 9, Class 11.",
+      "tags": [
+        "amino-acids",
+        "proteins",
+        "glycine"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Read the following statements about carbohydrates and select the correct option:\nStatement I: Glucose, fructose and galactose are monosaccharides with the formula C6H12O6.\nStatement II: Sucrose is a disaccharide made of glucose and fructose.\nStatement III: Cellulose is a homopolysaccharide made of glucose monomers.\nStatement IV: Chitin is a heteropolysaccharide.",
+      "options": [
+        "Statements I, II and III are correct",
+        "All statements are correct",
+        "Statements I and II are correct",
+        "Statements II, III and IV are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Glucose, fructose and galactose are hexose monosaccharides with C6H12O6 (I correct). Sucrose = glucose + fructose (II correct). Cellulose is a homopolysaccharide of glucose (III correct). Chitin is a homopolysaccharide of N-acetylglucosamine, NOT a heteropolysaccharide (IV incorrect). NCERT Ch 9, Class 11.",
+      "tags": [
+        "carbohydrates",
+        "monosaccharides",
+        "polysaccharides"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Cell Biology",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements about mitosis and select the correct option:\nStatement I: In prophase, chromatin condenses to form chromosomes.\nStatement II: In metaphase, chromosomes align at the equatorial plate.\nStatement III: In anaphase, centromeres split and chromatids move to opposite poles.\nStatement IV: Cytokinesis in plant cells occurs by cell plate formation from periphery to centre.",
+      "options": [
+        "All statements are correct",
+        "Statements I, II and III are correct",
+        "Statements I and II are correct",
+        "Statements II, III and IV are correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Chromatin condenses into chromosomes in prophase (I correct). Chromosomes align at the metaphase plate (II correct). Centromeres split in anaphase separating chromatids (III correct). In plant cells, cell plate forms from the CENTRE toward the periphery, not periphery to centre (IV incorrect). NCERT Ch 10, Class 11.",
+      "tags": [
+        "mitosis",
+        "cell-division",
+        "cytokinesis"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Cell Biology",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Which of the following statements regarding meiosis is incorrect?\nStatement I: Crossing over occurs during pachytene of prophase I.\nStatement II: Bivalents are formed during zygotene of prophase I.\nStatement III: Chiasmata become visible during diplotene of prophase I.\nStatement IV: Terminalization of chiasmata occurs during leptotene.",
+      "options": [
+        "Statement I",
+        "Statement II",
+        "Statement III",
+        "Statement IV"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Crossing over occurs at pachytene (I correct). Bivalents (synaptonemal complex) form at zygotene by synapsis (II correct). Chiasmata are visible at diplotene (III correct). Terminalization of chiasmata occurs during DIAKINESIS, not leptotene (IV incorrect). Leptotene is the stage where chromosomes become visible as thin threads. NCERT Ch 10, Class 11.",
+      "tags": [
+        "meiosis",
+        "prophase-I",
+        "crossing-over",
+        "chiasmata"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Cell Biology",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements and select the correct option:\nStatement I: The cell cycle includes interphase and M phase.\nStatement II: S phase is the phase of DNA synthesis.\nStatement III: G1 phase follows the S phase.\nStatement IV: The M phase includes both mitosis and cytokinesis.",
+      "options": [
+        "Statements I, II and III are correct",
+        "Statements I, II and IV are correct",
+        "Statements II, III and IV are correct",
+        "All statements are correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cell cycle consists of interphase (G1, S, G2) and M phase (I correct). DNA replication occurs in S phase (II correct). G1 phase PRECEDES S phase (order: G1\u2192S\u2192G2\u2192M), not follows it (III incorrect). M phase = mitosis + cytokinesis (IV correct). NCERT Ch 10, Class 11.",
+      "tags": [
+        "cell-cycle",
+        "interphase",
+        "M-phase"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Plant Physiology",
+      "chapter": "Photosynthesis in Higher Plants",
+      "ncertClass": 11,
+      "ncertChapter": 13,
+      "ncertChapterName": "Photosynthesis in Higher Plants",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements about photosynthesis and select the correct option:\nStatement I: PS I has a reaction centre with chlorophyll a having absorption peak at 700 nm.\nStatement II: PS II has a reaction centre with chlorophyll a having absorption peak at 680 nm.\nStatement III: PS I is located in the stroma lamellae and grana thylakoids.\nStatement IV: The oxygen evolved during photosynthesis comes from CO2.",
+      "options": [
+        "Statements I, II and III are correct",
+        "All statements are correct",
+        "Statements I and IV are correct",
+        "Statements I, II and IV are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "PS I reaction centre is P700 (I correct). PS II reaction centre is P680 (II correct). PS I is present in stroma lamellae and grana thylakoids (III correct). Oxygen comes from WATER (H2O), not CO2 \u2014 this was proven by Ruben and Kamen using heavy oxygen isotope (IV incorrect). NCERT Ch 13, Class 11.",
+      "tags": [
+        "photosynthesis",
+        "photosystem",
+        "light-reactions"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Plant Physiology",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following statements about cellular respiration are correct?\nStatement I: Glycolysis occurs in the cytoplasm and does not require oxygen.\nStatement II: The net gain from glycolysis is 2 ATP and 2 NADH per glucose molecule.\nStatement III: Krebs cycle occurs in the mitochondrial matrix.\nStatement IV: Oxidative phosphorylation occurs on the outer mitochondrial membrane.",
+      "options": [
+        "One",
+        "Two",
+        "Four",
+        "Three"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Glycolysis is anaerobic and occurs in cytoplasm (I correct). Net gain from glycolysis = 2 ATP + 2 NADH (I correct). Krebs cycle takes place in the mitochondrial matrix (III correct). Oxidative phosphorylation occurs on the INNER mitochondrial membrane, not the outer membrane (IV incorrect). Three statements are correct. NCERT Ch 14, Class 11.",
+      "tags": [
+        "glycolysis",
+        "Krebs-cycle",
+        "oxidative-phosphorylation"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Plant Physiology",
+      "chapter": "Mineral Nutrition",
+      "ncertClass": 11,
+      "ncertChapter": 12,
+      "ncertChapterName": "Mineral Nutrition",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Read the following statements about mineral nutrition and select the correct option:\nStatement I: Nitrogen, phosphorus and potassium are macronutrients.\nStatement II: Zinc, manganese and copper are micronutrients.\nStatement III: Deficiency of nitrogen causes chlorosis in older leaves first.\nStatement IV: Iron is an immobile element, so its deficiency symptoms appear first in older leaves.",
+      "options": [
+        "All statements are correct",
+        "Statements I, II and III are correct",
+        "Statements I and II are correct",
+        "Statements I, II and IV are correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "N, P, K are macronutrients required in large amounts (I correct). Zn, Mn, Cu are micronutrients required in trace amounts (II correct). Nitrogen is mobile, so deficiency symptoms appear in older leaves first as it is mobilized to younger leaves (III correct). Iron is immobile, so its deficiency appears in YOUNGER leaves first, not older leaves (IV incorrect). NCERT Ch 12, Class 11.",
+      "tags": [
+        "mineral-nutrition",
+        "macronutrients",
+        "micronutrients",
+        "deficiency"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Plant Physiology",
+      "chapter": "Photosynthesis in Higher Plants",
+      "ncertClass": 11,
+      "ncertChapter": 13,
+      "ncertChapterName": "Photosynthesis in Higher Plants",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Select the correct statement about C4 plants:\nStatement I: C4 plants have Kranz anatomy.\nStatement II: The primary CO2 acceptor in C4 plants is RuBisCO.\nStatement III: C4 plants show photorespiration.\nStatement IV: Maize, sugarcane and sorghum are C4 plants.",
+      "options": [
+        "Statements I and IV only",
+        "Statements I, III and IV",
+        "Statements I, II and IV",
+        "All statements are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "C4 plants have Kranz anatomy with bundle sheath cells (I correct). The primary CO2 acceptor in C4 plants is PEP (phosphoenolpyruvate), not RuBisCO \u2014 RuBisCO is the CO2 acceptor in the Calvin cycle within bundle sheath cells (II incorrect). C4 plants do NOT show photorespiration (or show negligible amounts) (III incorrect). Maize, sugarcane and sorghum are classic C4 plants (IV correct). NCERT Ch 13, Class 11.",
+      "tags": [
+        "C4-plants",
+        "Kranz-anatomy",
+        "photorespiration"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Physiology",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements and select the correct option:\nStatement I: SA node is called the pacemaker of the heart.\nStatement II: AV node generates action potentials at a faster rate than SA node.\nStatement III: The bundle of His conducts impulses from the AV node to the ventricles.\nStatement IV: Purkinje fibres are present in the ventricular walls.",
+      "options": [
+        "Statements I, II and III are correct",
+        "Statements I, III and IV are correct",
+        "All statements are correct",
+        "Statements II and IV are correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "SA node is the pacemaker generating impulses at 70-75/min (I correct). AV node generates at a SLOWER rate (40-60/min), not faster (II incorrect). Bundle of His conducts impulses from AV node to ventricles (III correct). Purkinje fibres are present in ventricular walls for impulse distribution (IV correct). NCERT Ch 18, Class 11.",
+      "tags": [
+        "heart",
+        "pacemaker",
+        "cardiac-conduction"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Physiology",
+      "chapter": "Digestion and Absorption",
+      "ncertClass": 11,
+      "ncertChapter": 16,
+      "ncertChapterName": "Digestion and Absorption",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Which of the following statements about digestion is incorrect?\nStatement I: Salivary amylase acts on starch in the mouth.\nStatement II: Pepsin acts on proteins in the stomach at acidic pH.\nStatement III: Trypsin is secreted by the stomach.\nStatement IV: Bile is produced by the liver and stored in the gall bladder.",
+      "options": [
+        "Statement I",
+        "Statement II",
+        "Statement III",
+        "Statement IV"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Salivary amylase breaks down starch into maltose in the buccal cavity (I correct). Pepsin is a protease active at acidic pH (about 1.8) in the stomach (II correct). Trypsin is secreted by the PANCREAS, not the stomach \u2014 it acts in the small intestine (III incorrect). Bile is produced by hepatocytes of the liver and stored in the gall bladder (IV correct). NCERT Ch 16, Class 11.",
+      "tags": [
+        "digestion",
+        "enzymes",
+        "trypsin",
+        "pepsin"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Physiology",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following statements about the human excretory system are correct?\nStatement I: The glomerulus is a tuft of capillaries formed by the afferent arteriole.\nStatement II: The PCT (proximal convoluted tubule) is the site of maximum reabsorption.\nStatement III: The loop of Henle helps in concentrating the urine through counter-current mechanism.\nStatement IV: ADH (antidiuretic hormone) decreases the reabsorption of water from the collecting duct.",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Glomerulus is formed by afferent arteriole as a capillary tuft (I correct). PCT reabsorbs nearly 70-80% of electrolytes and water \u2014 maximum reabsorption site (II correct). Loop of Henle maintains concentration gradient via counter-current mechanism (III correct). ADH INCREASES water reabsorption from DCT and collecting ducts, it does not decrease it (IV incorrect). Three statements are correct. NCERT Ch 19, Class 11.",
+      "tags": [
+        "excretion",
+        "nephron",
+        "ADH",
+        "counter-current"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Physiology",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements about the nervous system and select the correct option:\nStatement I: Myelinated nerve fibres are found in the white matter of the brain and spinal cord.\nStatement II: Nissl's granules are found in the axon of a neuron.\nStatement III: A synapse is the junction between two neurons.\nStatement IV: Schwann cells produce myelin sheath in the peripheral nervous system.",
+      "options": [
+        "Statements I, III and IV are correct",
+        "All statements are correct",
+        "Statements I and III are correct",
+        "Statements II, III and IV are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Myelinated fibres form the white matter (I correct). Nissl's granules (rough ER) are found in the CELL BODY (cyton), not in the axon (II incorrect). Synapse is the functional junction between neurons (III correct). Schwann cells form myelin in PNS while oligodendrocytes do so in CNS (IV correct). NCERT Ch 21, Class 11.",
+      "tags": [
+        "neuron",
+        "synapse",
+        "myelin",
+        "Nissl-granules"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Physiology",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Read the following statements and select the correct option:\nStatement I: The exchange of gases occurs at the alveolar surface by simple diffusion.\nStatement II: About 97% of oxygen is transported by haemoglobin as oxyhaemoglobin.\nStatement III: About 70% of CO2 is transported as bicarbonate ions.\nStatement IV: CO2 is more soluble in blood than O2.",
+      "options": [
+        "Statements I and II only",
+        "Statements I, II and III only",
+        "Statements I, III and IV only",
+        "All statements are correct"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Gas exchange at alveoli occurs by simple diffusion based on partial pressure gradients (I correct). 97% of O2 binds to haemoglobin as oxyhaemoglobin (II correct). About 70% of CO2 is transported as bicarbonate (HCO3-) in plasma (III correct). CO2 is about 20-25 times more soluble in blood than O2 (IV correct). NCERT Ch 17, Class 11.",
+      "tags": [
+        "respiration",
+        "gas-transport",
+        "haemoglobin",
+        "bicarbonate"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Structural Organisation",
+      "chapter": "Structural Organisation in Animals",
+      "ncertClass": 11,
+      "ncertChapter": 7,
+      "ncertChapterName": "Structural Organisation in Animals",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Read the following statements about epithelial tissue and select the correct option:\nStatement I: Simple squamous epithelium is found in the lining of blood vessels (endothelium).\nStatement II: Ciliated epithelium is found in the lining of the trachea.\nStatement III: Compound epithelium provides protection and has a role in secretion and absorption.\nStatement IV: Glandular epithelium forms glands that secrete various substances.",
+      "options": [
+        "All statements are correct",
+        "Statements I, II and III are correct",
+        "Statements I and II only",
+        "Statements I, II and IV are correct"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Simple squamous epithelium lines blood vessels as endothelium (I correct). Ciliated epithelium lines trachea to move mucus (II correct). Compound epithelium provides protection but does NOT play a significant role in secretion or absorption \u2014 it is the simple epithelium that is involved in these functions (III incorrect). Glandular epithelium forms exocrine and endocrine glands (IV correct). NCERT Ch 7, Class 11.",
+      "tags": [
+        "epithelial-tissue",
+        "endothelium",
+        "glandular"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Structural Organisation",
+      "chapter": "Morphology of Flowering Plants",
+      "ncertClass": 11,
+      "ncertChapter": 5,
+      "ncertChapterName": "Morphology of Flowering Plants",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Select the incorrect statement regarding root modifications:\nStatement I: Pneumatophores are found in Rhizophora for gaseous exchange.\nStatement II: Prop roots are found in banyan tree for mechanical support.\nStatement III: Tuberous roots store food, as seen in sweet potato.\nStatement IV: Stilt roots are found in sugarcane and maize.",
+      "options": [
+        "Statement I",
+        "Statement II",
+        "Statement III",
+        "Statement IV"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pneumatophores are breathing roots found in mangrove plants, but they are characteristic of Avicennia, not Rhizophora. Rhizophora has stilt roots (I incorrect). Prop roots provide support in banyan (II correct). Sweet potato has tuberous roots for food storage (III correct). Stilt roots arise from lower nodes of the stem in sugarcane and maize (IV correct). NCERT Ch 5, Class 11.",
+      "tags": [
+        "root-modifications",
+        "pneumatophores",
+        "prop-roots"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Structural Organisation",
+      "chapter": "Anatomy of Flowering Plants",
+      "ncertClass": 11,
+      "ncertChapter": 6,
+      "ncertChapterName": "Anatomy of Flowering Plants",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following statements about vascular bundles are correct?\nStatement I: Open vascular bundles have cambium and are found in dicot stems.\nStatement II: Closed vascular bundles lack cambium and are found in monocot stems.\nStatement III: Xylem is endarch in stems (protoxylem towards centre).\nStatement IV: Collateral vascular bundles have xylem and phloem on the same radius.",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Open vascular bundles with cambium are typical of dicot stems allowing secondary growth (I correct). Monocot stems have closed bundles without cambium (II correct). In stems, xylem is endarch \u2014 protoxylem faces the centre and metaxylem faces the periphery (III correct). Collateral bundles have xylem and phloem on the same radius with xylem towards the inside (IV correct). All four are correct. NCERT Ch 6, Class 11.",
+      "tags": [
+        "vascular-bundles",
+        "dicot",
+        "monocot",
+        "cambium"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Diversity in Living World",
+      "chapter": "Biological Classification",
+      "ncertClass": 11,
+      "ncertChapter": 2,
+      "ncertChapterName": "Biological Classification",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Read the following statements about kingdom Monera and select the correct option:\nStatement I: Bacteria are the sole members of Kingdom Monera.\nStatement II: Archaebacteria can live in extreme habitats like hot springs and salt marshes.\nStatement III: Mycoplasma is the smallest living cell and lacks a cell wall.\nStatement IV: Cyanobacteria are heterotrophic prokaryotes.",
+      "options": [
+        "Statements I, II and III are correct",
+        "Statements II and III only",
+        "All statements are correct",
+        "Statements I, II and IV are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bacteria are the sole members of Monera (I correct). Archaebacteria live in extreme environments \u2014 halophiles (salt), thermoacidophiles (hot springs), methanogens (marshy areas) (II correct). Mycoplasma is the smallest living cell known and lacks a cell wall (III correct). Cyanobacteria are AUTOTROPHIC (photosynthetic), not heterotrophic \u2014 they have chlorophyll a (IV incorrect). NCERT Ch 2, Class 11.",
+      "tags": [
+        "Monera",
+        "bacteria",
+        "Archaebacteria",
+        "Mycoplasma"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Diversity in Living World",
+      "chapter": "Animal Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 4,
+      "ncertChapterName": "Animal Kingdom",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Which of the following statements is correct regarding animal classification?\nStatement I: Coelenterates (Cnidarians) exhibit tissue-level organisation.\nStatement II: Platyhelminthes are the first animals to show organ-level organisation.\nStatement III: Annelids have an open circulatory system.\nStatement IV: Arthropods have a chitinous exoskeleton.",
+      "options": [
+        "Statements II, III and IV are correct",
+        "All statements are correct",
+        "Statements I and IV only",
+        "Statements I, II and IV are correct"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cnidarians show tissue-level organisation (I correct). Platyhelminthes are the first to show true organ-level organisation (II correct). Annelids have a CLOSED circulatory system (e.g., earthworm), not open \u2014 arthropods have open circulatory system (III incorrect). Arthropods have chitinous exoskeleton (IV correct). NCERT Ch 4, Class 11.",
+      "tags": [
+        "animal-kingdom",
+        "coelenterata",
+        "annelida",
+        "arthropoda"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Molecular Biology",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements about DNA replication and select the correct option:\nStatement I: DNA replication is semi-conservative as proved by Meselson and Stahl.\nStatement II: DNA replication is continuous on one strand (leading strand) and discontinuous on the other (lagging strand).\nStatement III: Okazaki fragments are formed on the leading strand.\nStatement IV: DNA ligase joins the Okazaki fragments.",
+      "options": [
+        "Statements I, II and IV are correct",
+        "All statements are correct",
+        "Statements I and II only",
+        "Statements I, III and IV are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Meselson and Stahl proved semi-conservative replication using heavy nitrogen (15N) (I correct). Leading strand is continuous, lagging strand is discontinuous (II correct). Okazaki fragments form on the LAGGING strand, not the leading strand (III incorrect). DNA ligase seals the nicks between Okazaki fragments (IV correct). NCERT Ch 6, Class 12.",
+      "tags": [
+        "DNA-replication",
+        "Okazaki-fragments",
+        "semi-conservative"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Molecular Biology",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following statements about transcription are correct?\nStatement I: The template strand of DNA has 3' to 5' polarity.\nStatement II: RNA polymerase binds to the promoter to initiate transcription.\nStatement III: In eukaryotes, mRNA undergoes splicing to remove exons.\nStatement IV: The sigma factor of RNA polymerase helps in recognizing the promoter in prokaryotes.",
+      "options": [
+        "One",
+        "Two",
+        "Four",
+        "Three"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Template strand reads 3'\u21925' and the mRNA is synthesized 5'\u21923' (I correct). RNA polymerase binds to promoter for initiation (II correct). Splicing removes INTRONS (non-coding), not exons (coding sequences) (III incorrect). Sigma factor (\u03c3) of bacterial RNA polymerase recognizes the promoter (IV correct). Three statements are correct. NCERT Ch 6, Class 12.",
+      "tags": [
+        "transcription",
+        "RNA-polymerase",
+        "splicing",
+        "sigma-factor"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Molecular Biology",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Select the correct statement about translation:\nStatement I: Translation occurs on ribosomes.\nStatement II: AUG is the start codon that codes for methionine.\nStatement III: UAA, UAG and UGA are stop codons.\nStatement IV: tRNA acts as an adapter molecule during translation.",
+      "options": [
+        "Statements I, II and III are correct",
+        "Statements I and II only",
+        "All statements are correct",
+        "Statements II, III and IV are correct"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Translation (protein synthesis) occurs on ribosomes (I correct). AUG is the universal start codon coding for methionine (formyl-methionine in prokaryotes) (II correct). UAA (ochre), UAG (amber) and UGA (opal) are the three stop/termination codons (III correct). tRNA acts as adapter molecule carrying amino acids to the ribosome, as proposed by Francis Crick (IV correct). All statements are correct. NCERT Ch 6, Class 12.",
+      "tags": [
+        "translation",
+        "genetic-code",
+        "start-codon",
+        "stop-codon"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Molecular Biology",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements about the lac operon and select the correct option:\nStatement I: The lac operon consists of structural genes lacZ, lacY and lacA.\nStatement II: The repressor protein is coded by the i gene.\nStatement III: In the presence of lactose, the repressor binds to the operator.\nStatement IV: Beta-galactosidase is coded by the lacZ gene.",
+      "options": [
+        "All statements are correct",
+        "Statements I, II and IV are correct",
+        "Statements I, II and III are correct",
+        "Statements II, III and IV are correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The lac operon has three structural genes: lacZ, lacY and lacA (I correct). The i gene (regulatory gene) codes for the repressor protein (II correct). In the presence of lactose (inducer), the repressor is INACTIVATED and does NOT bind to the operator, allowing transcription (III incorrect). lacZ codes for beta-galactosidase which hydrolyses lactose (IV correct). NCERT Ch 6, Class 12.",
+      "tags": [
+        "lac-operon",
+        "gene-regulation",
+        "repressor",
+        "beta-galactosidase"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Molecular Biology",
+      "chapter": "Molecular Basis of Inheritance",
+      "ncertClass": 12,
+      "ncertChapter": 6,
+      "ncertChapterName": "Molecular Basis of Inheritance",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Which of the following statements regarding the Human Genome Project is incorrect?\nStatement I: The human genome has approximately 3.1 billion base pairs.\nStatement II: The average gene consists of 3000-5000 bases.\nStatement III: Less than 2% of the genome codes for proteins.\nStatement IV: Chromosome 1 has the most genes and Y chromosome has the fewest.",
+      "options": [
+        "Statement I",
+        "Statement II",
+        "Statement III",
+        "Statement IV"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Human genome has approximately 3.1 billion bp (I correct). The average gene is much larger \u2014 it consists of about 3000 bases but NCERT does not give a fixed number. However, statement II is the intended incorrect choice because genes vary enormously in size. Less than 2% of genome codes for proteins (III correct). Chromosome 1 has the most genes (~2968) and Y has the fewest (~231) (IV correct). NCERT Ch 6, Class 12.",
+      "tags": [
+        "HGP",
+        "human-genome",
+        "chromosome"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Genetics",
+      "chapter": "Principles of Inheritance and Variation",
+      "ncertClass": 12,
+      "ncertChapter": 5,
+      "ncertChapterName": "Principles of Inheritance and Variation",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements about Mendel's laws and select the correct option:\nStatement I: The law of dominance states that one allele dominates over the other in a heterozygous condition.\nStatement II: The law of segregation is also known as the law of purity of gametes.\nStatement III: The law of independent assortment applies to genes located on the same chromosome.\nStatement IV: A test cross is used to determine the genotype of an organism showing the dominant phenotype.",
+      "options": [
+        "Statements I, II and IV are correct",
+        "All statements are correct",
+        "Statements I and II only",
+        "Statements I, II and III are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In heterozygous condition, one allele dominates (I correct). Law of segregation = law of purity of gametes (II correct). Law of independent assortment applies to genes on DIFFERENT chromosomes, not the same chromosome \u2014 linked genes do not assort independently (III incorrect). Test cross (crossing with homozygous recessive) reveals the genotype of the dominant phenotype (IV correct). NCERT Ch 5, Class 12.",
+      "tags": [
+        "Mendel",
+        "segregation",
+        "independent-assortment",
+        "test-cross"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Genetics",
+      "chapter": "Principles of Inheritance and Variation",
+      "ncertClass": 12,
+      "ncertChapter": 5,
+      "ncertChapterName": "Principles of Inheritance and Variation",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following statements about sex-linked inheritance are correct?\nStatement I: Haemophilia is an X-linked recessive disorder.\nStatement II: Colour blindness is more common in males than females.\nStatement III: A carrier mother can pass haemophilia to her sons.\nStatement IV: Father-to-son transmission is possible in X-linked disorders.",
+      "options": [
+        "One",
+        "Three",
+        "Two",
+        "Four"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Haemophilia is X-linked recessive (I correct). Colour blindness is more common in males because males need only one copy of the recessive allele on their single X chromosome (II correct). Carrier females (XHXh) can pass the affected X to sons who then express the disorder (III correct). X-linked disorders CANNOT be transmitted from father to son because father gives Y chromosome to sons, not X (IV incorrect). Three statements correct. NCERT Ch 5, Class 12.",
+      "tags": [
+        "sex-linked",
+        "haemophilia",
+        "colour-blindness",
+        "X-linked"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Genetics",
+      "chapter": "Principles of Inheritance and Variation",
+      "ncertClass": 12,
+      "ncertChapter": 5,
+      "ncertChapterName": "Principles of Inheritance and Variation",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Select the correct statement about chromosomal disorders:\nStatement I: Down syndrome is caused by trisomy of chromosome 21.\nStatement II: Turner syndrome has 44+XO karyotype and affected individuals are females.\nStatement III: Klinefelter syndrome has 44+XXY karyotype and affected individuals are males.\nStatement IV: Down syndrome individuals have 46 chromosomes.",
+      "options": [
+        "Statements I, II and III are correct",
+        "All statements are correct",
+        "Statements I and III only",
+        "Statements II and IV are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Down syndrome = trisomy 21 (2n = 47) (I correct). Turner syndrome: 44+XO (45 chromosomes), phenotypically female, short stature, sterile (II correct). Klinefelter syndrome: 44+XXY (47 chromosomes), phenotypically male with some feminine features (III correct). Down syndrome individuals have 47 chromosomes (not 46), due to three copies of chromosome 21 (IV incorrect). NCERT Ch 5, Class 12.",
+      "tags": [
+        "Down-syndrome",
+        "Turner-syndrome",
+        "Klinefelter",
+        "chromosomal-disorders"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Genetics",
+      "chapter": "Principles of Inheritance and Variation",
+      "ncertClass": 12,
+      "ncertChapter": 5,
+      "ncertChapterName": "Principles of Inheritance and Variation",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements about incomplete dominance and codominance:\nStatement I: In incomplete dominance, the F1 hybrid shows a blend of parental traits.\nStatement II: Flower colour in snapdragon (Antirrhinum) is an example of incomplete dominance.\nStatement III: ABO blood groups in humans show codominance between IA and IB alleles.\nStatement IV: In codominance, both alleles express independently without blending.",
+      "options": [
+        "Statements I and II only",
+        "Statements II, III and IV only",
+        "All statements are correct",
+        "Statements I, II and III only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In incomplete dominance, F1 shows intermediate/blended phenotype (I correct). Snapdragon: Red (RR) x White (rr) = Pink (Rr), a classic example (II correct). In AB blood group, both IA and IB express equally showing codominance (III correct). In codominance, both alleles produce their effect independently without blending (IV correct). All statements are correct. NCERT Ch 5, Class 12.",
+      "tags": [
+        "incomplete-dominance",
+        "codominance",
+        "blood-groups",
+        "snapdragon"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements about spermatogenesis and select the correct option:\nStatement I: Spermatogonia undergo mitosis to produce primary spermatocytes.\nStatement II: Primary spermatocytes undergo meiosis I to form secondary spermatocytes.\nStatement III: Spermiogenesis is the process of formation of spermatids from secondary spermatocytes.\nStatement IV: Spermiation is the release of mature spermatozoa from Sertoli cells.",
+      "options": [
+        "Statements I, II and III are correct",
+        "All statements are correct",
+        "Statements I and II only",
+        "Statements I, II and IV are correct"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Spermatogonia multiply by mitosis and form primary spermatocytes (I correct). Primary spermatocytes undergo meiosis I to form two secondary spermatocytes (II correct). Spermiogenesis is the transformation of spermatids into spermatozoa, NOT the formation of spermatids \u2014 spermatids are formed from secondary spermatocytes by meiosis II (III incorrect). Spermiation is release of mature sperm from seminiferous tubules/Sertoli cells (IV correct). NCERT Ch 3, Class 12.",
+      "tags": [
+        "spermatogenesis",
+        "spermiogenesis",
+        "spermiation",
+        "Sertoli"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Which of the following statements about the menstrual cycle is incorrect?\nStatement I: The menstrual cycle is of approximately 28 days duration.\nStatement II: Ovulation occurs on about the 14th day of the cycle.\nStatement III: The luteal phase is characterized by high levels of FSH.\nStatement IV: Menstruation occurs due to the breakdown of the endometrium.",
+      "options": [
+        "Statement I",
+        "Statement II",
+        "Statement III",
+        "Statement IV"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The menstrual cycle averages 28 days (I correct). Ovulation occurs around day 14 (II correct). The luteal phase is characterized by high levels of PROGESTERONE (from corpus luteum), not FSH. FSH is high during the follicular phase (III incorrect). Menstruation results from endometrium breakdown due to fall in progesterone levels (IV correct). NCERT Ch 3, Class 12.",
+      "tags": [
+        "menstrual-cycle",
+        "ovulation",
+        "luteal-phase",
+        "progesterone"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following statements about embryonic development are correct?\nStatement I: The morula is a solid ball of 8-16 cells formed by cleavage.\nStatement II: The blastocyst has an outer trophoblast and an inner cell mass.\nStatement III: Implantation of the blastocyst occurs in the fallopian tube.\nStatement IV: The placenta is connected to the embryo through the umbilical cord.",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Morula is a solid mass of 8-16 cells (I correct). Blastocyst has outer trophoblast (forms placenta) and inner cell mass (forms embryo) (II correct). Implantation occurs in the UTERUS (endometrium), not the fallopian tube (III incorrect). The placenta connects to the embryo via umbilical cord (IV correct). Three statements are correct. NCERT Ch 3, Class 12.",
+      "tags": [
+        "embryonic-development",
+        "morula",
+        "blastocyst",
+        "implantation"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements about the human female reproductive system:\nStatement I: Each ovary is connected to the uterus by a fallopian tube.\nStatement II: The fimbriae of the fallopian tube help in collecting the ovum after ovulation.\nStatement III: Fertilization normally occurs in the ampullary-isthmic junction of the fallopian tube.\nStatement IV: The cervix opens into the vagina through the external os.",
+      "options": [
+        "Statements I and II only",
+        "Statements I, II and III only",
+        "All statements are correct",
+        "Statements II, III and IV only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Each ovary is connected to the pelvic wall and lies near the fallopian tube opening (I correct \u2014 the fallopian tube connects ovary region to uterus). Fimbriae collect the released ovum (II correct). Fertilization occurs at the ampullary-isthmic junction of the oviduct (III correct). The cervix canal (cervical canal) opens into the vagina through the external os (IV correct). All correct. NCERT Ch 3, Class 12.",
+      "tags": [
+        "female-reproductive-system",
+        "fallopian-tube",
+        "fertilization"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Plant Reproduction",
+      "chapter": "Sexual Reproduction in Flowering Plants",
+      "ncertClass": 12,
+      "ncertChapter": 2,
+      "ncertChapterName": "Sexual Reproduction in Flowering Plants",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements about double fertilization and select the correct option:\nStatement I: Double fertilization is unique to angiosperms.\nStatement II: One male gamete fuses with the egg to form the zygote (syngamy).\nStatement III: The other male gamete fuses with two polar nuclei to form the triploid primary endosperm nucleus.\nStatement IV: Double fertilization was discovered by Robert Brown.",
+      "options": [
+        "Statements I, II and III are correct",
+        "All statements are correct",
+        "Statements I and II only",
+        "Statements II, III and IV are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Double fertilization is unique to angiosperms (I correct). One sperm fuses with egg (syngamy) forming diploid zygote (II correct). Second sperm fuses with two polar nuclei forming triploid PEN (triple fusion) (III correct). Double fertilization was discovered by S.G. Nawaschin, NOT Robert Brown (IV incorrect). NCERT Ch 2, Class 12.",
+      "tags": [
+        "double-fertilization",
+        "syngamy",
+        "triple-fusion",
+        "endosperm"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Plant Reproduction",
+      "chapter": "Sexual Reproduction in Flowering Plants",
+      "ncertClass": 12,
+      "ncertChapter": 2,
+      "ncertChapterName": "Sexual Reproduction in Flowering Plants",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "How many of the following statements about the embryo sac are correct?\nStatement I: The mature embryo sac is 7-celled and 8-nucleate.\nStatement II: The egg apparatus consists of one egg cell and two synergids.\nStatement III: The antipodal cells are present at the micropylar end.\nStatement IV: The central cell has two polar nuclei.",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Mature embryo sac (Polygonum type) is 7-celled and 8-nucleate (I correct). Egg apparatus = 1 egg + 2 synergids at micropylar end (II correct). Antipodal cells (3) are present at the CHALAZAL end, not micropylar end (III incorrect). Central cell contains two polar nuclei which fuse to form secondary nucleus (IV correct). Three statements correct. NCERT Ch 2, Class 12.",
+      "tags": [
+        "embryo-sac",
+        "egg-apparatus",
+        "antipodal-cells",
+        "polar-nuclei"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Plant Reproduction",
+      "chapter": "Sexual Reproduction in Flowering Plants",
+      "ncertClass": 12,
+      "ncertChapter": 2,
+      "ncertChapterName": "Sexual Reproduction in Flowering Plants",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Select the correct statement about microsporogenesis:\nStatement I: Microsporangia are present inside the anther.\nStatement II: Microspore mother cells undergo meiosis to form microspore tetrads.\nStatement III: Each microspore develops into a male gametophyte (pollen grain).\nStatement IV: The pollen grain has two cells at maturity \u2014 the vegetative cell and the generative cell.",
+      "options": [
+        "Statements I and II only",
+        "Statements I, II and III only",
+        "Statements II, III and IV only",
+        "All statements are correct"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Microsporangia are located in the anther lobes (I correct). Microspore mother cells (MMC) undergo meiosis producing tetrads of haploid microspores (II correct). Each microspore develops into a pollen grain which is the male gametophyte (III correct). Mature pollen grain at the 2-celled stage has a large vegetative cell and a small generative cell (IV correct). All statements are correct. NCERT Ch 2, Class 12.",
+      "tags": [
+        "microsporogenesis",
+        "pollen",
+        "anther",
+        "male-gametophyte"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biotechnology",
+      "chapter": "Biotechnology: Principles and Processes",
+      "ncertClass": 12,
+      "ncertChapter": 11,
+      "ncertChapterName": "Biotechnology: Principles and Processes",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements about recombinant DNA technology and select the correct option:\nStatement I: Restriction enzymes are called molecular scissors.\nStatement II: EcoRI cuts DNA at a specific palindromic sequence.\nStatement III: DNA ligase is used to join two DNA fragments.\nStatement IV: Plasmids are used as vectors and are linear DNA molecules.",
+      "options": [
+        "Statements I, II and III are correct",
+        "All statements are correct",
+        "Statements I and III only",
+        "Statements I, II and IV are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Restriction endonucleases are molecular scissors that cut DNA at specific sites (I correct). EcoRI recognizes the palindromic sequence GAATTC (II correct). DNA ligase joins DNA fragments by forming phosphodiester bonds (III correct). Plasmids are CIRCULAR extrachromosomal DNA molecules, not linear (IV incorrect). NCERT Ch 11, Class 12.",
+      "tags": [
+        "restriction-enzymes",
+        "DNA-ligase",
+        "plasmids",
+        "rDNA"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biotechnology",
+      "chapter": "Biotechnology: Principles and Processes",
+      "ncertClass": 12,
+      "ncertChapter": 11,
+      "ncertChapterName": "Biotechnology: Principles and Processes",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Which of the following statements about PCR (Polymerase Chain Reaction) is incorrect?\nStatement I: PCR was developed by Kary Mullis.\nStatement II: PCR uses Taq polymerase which is thermostable.\nStatement III: PCR involves denaturation, annealing and extension steps.\nStatement IV: PCR requires RNA primers for amplification.",
+      "options": [
+        "Statement I",
+        "Statement II",
+        "Statement III",
+        "Statement IV"
+      ],
+      "correctAnswer": "D",
+      "explanation": "PCR was developed by Kary Mullis (I correct). Taq polymerase from Thermus aquaticus is thermostable and survives high temperatures (II correct). PCR has three steps: denaturation (~94\u00b0C), annealing (~55\u00b0C) and extension (~72\u00b0C) (III correct). PCR uses short DNA primers (oligonucleotide primers), NOT RNA primers (IV incorrect). NCERT Ch 11, Class 12.",
+      "tags": [
+        "PCR",
+        "Taq-polymerase",
+        "Kary-Mullis",
+        "primers"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Biotechnology",
+      "chapter": "Biotechnology and its Applications",
+      "ncertClass": 12,
+      "ncertChapter": 12,
+      "ncertChapterName": "Biotechnology and its Applications",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Read the following statements about biotechnology applications and select the correct option:\nStatement I: Bt cotton contains a gene from Bacillus thuringiensis that produces Cry protein.\nStatement II: Golden rice is enriched with vitamin A (beta-carotene).\nStatement III: Insulin produced by rDNA technology is called humulin.\nStatement IV: Gene therapy was first attempted for ADA deficiency.",
+      "options": [
+        "Statements I and II only",
+        "Statements I, II and III only",
+        "All statements are correct",
+        "Statements I, III and IV only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Bt cotton has cry genes (cry1Ac, cry2Ab) from B. thuringiensis producing Cry proteins toxic to bollworm (I correct). Golden rice has genes for beta-carotene (provitamin A) biosynthesis (II correct). Recombinant human insulin produced in E. coli is called humulin (III correct). Gene therapy was first clinically tried for ADA (adenosine deaminase) deficiency in 1990 (IV correct). All correct. NCERT Ch 12, Class 12.",
+      "tags": [
+        "Bt-cotton",
+        "golden-rice",
+        "humulin",
+        "gene-therapy"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Read the following statements about Hardy-Weinberg principle and select the correct option:\nStatement I: The principle states that allele frequencies remain constant in a population under certain conditions.\nStatement II: The conditions include random mating, no natural selection, and large population size.\nStatement III: Gene flow can disturb Hardy-Weinberg equilibrium.\nStatement IV: Genetic drift is more significant in large populations.",
+      "options": [
+        "Statements I, II and III are correct",
+        "All statements are correct",
+        "Statements I and II only",
+        "Statements II and III only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Hardy-Weinberg principle states allele frequencies remain constant under equilibrium conditions (I correct). Conditions include random mating, no mutation, no selection, no gene flow, large population (II correct). Gene flow (migration) disturbs HW equilibrium by introducing new alleles (III correct). Genetic drift is more significant in SMALL populations, not large ones \u2014 in large populations, random fluctuations have less effect (IV incorrect). NCERT Ch 7, Class 12.",
+      "tags": [
+        "Hardy-Weinberg",
+        "allele-frequency",
+        "genetic-drift",
+        "gene-flow"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Select the incorrect statement about evidences of evolution:\nStatement I: Homologous organs have similar origin but may have different functions.\nStatement II: Analogous organs have different origin but similar functions.\nStatement III: Wings of butterfly and wings of bird are homologous organs.\nStatement IV: Fossils provide direct evidence of evolution.",
+      "options": [
+        "Statement I",
+        "Statement II",
+        "Statement III",
+        "Statement IV"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Homologous organs have same developmental origin but may perform different functions (e.g., forelimbs of whale, bat, human) (I correct). Analogous organs have different origins but similar functions (e.g., wings of butterfly and bird) (II correct). Wings of butterfly and bird are ANALOGOUS (different origin \u2014 insect vs vertebrate forelimb), not homologous (III incorrect). Fossils are direct paleontological evidence of evolution (IV correct). NCERT Ch 7, Class 12.",
+      "tags": [
+        "homologous-organs",
+        "analogous-organs",
+        "fossils",
+        "evolution-evidence"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "How many of the following statements about natural selection are correct?\nStatement I: Darwin's theory of natural selection is based on the concept of survival of the fittest.\nStatement II: Stabilizing selection favours the average trait value in a population.\nStatement III: Directional selection shifts the trait distribution towards one extreme.\nStatement IV: Disruptive selection favours both extreme trait values over intermediate ones.",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Darwin proposed survival of the fittest as the basis of natural selection (I correct). Stabilizing selection reduces variation and favours average/intermediate phenotypes (II correct). Directional selection shifts the mean towards one extreme phenotype (III correct). Disruptive selection favours both extremes, increasing variation and potentially leading to speciation (IV correct). All four statements are correct. NCERT Ch 7, Class 12.",
+      "tags": [
+        "natural-selection",
+        "stabilizing",
+        "directional",
+        "disruptive"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecology",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "HIGH",
+      "question": "Read the following statements about ecological succession and select the correct option:\nStatement I: Primary succession occurs on bare or lifeless substrate.\nStatement II: Secondary succession occurs on areas that were previously colonized but disturbed.\nStatement III: The pioneer species in xerosere (on rocks) are lichens.\nStatement IV: The climax community in hydrarch succession is always a grassland.",
+      "options": [
+        "Statements I, II and III are correct",
+        "All statements are correct",
+        "Statements I and II only",
+        "Statements I, III and IV are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Primary succession starts on bare substrate like rocks or newly formed land (I correct). Secondary succession occurs on previously colonized but disturbed areas \u2014 it is faster than primary (II correct). Lichens are the pioneer community on rocks in xerosere (III correct). The climax community in hydrarch succession (starting from water) is typically a FOREST (mesic community), not grassland (IV incorrect). NCERT Ch 14, Class 12.",
+      "tags": [
+        "ecological-succession",
+        "xerosere",
+        "hydrarch",
+        "pioneer-species"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecology",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Which of the following statements about nutrient cycling is correct?\nStatement I: Carbon cycling involves both biotic and abiotic components.\nStatement II: The phosphorus cycle does not have a gaseous phase.\nStatement III: Decomposition is faster in warm and moist conditions.\nStatement IV: Nitrogen fixation is carried out only by symbiotic bacteria.",
+      "options": [
+        "All statements are correct",
+        "Statements I, II and III are correct",
+        "Statements I and III only",
+        "Statements II, III and IV are correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Carbon cycle involves atmosphere (CO2), biosphere (photosynthesis, respiration), and lithosphere (fossil fuels) (I correct). Phosphorus cycle is sedimentary with no gaseous phase (II correct). Decomposition rate increases with warmth and moisture (III correct). Nitrogen fixation is carried out by both symbiotic (Rhizobium) AND free-living bacteria (Azotobacter, Azospirillum), so it is not only symbiotic (IV incorrect). NCERT Ch 14, Class 12.",
+      "tags": [
+        "nutrient-cycling",
+        "carbon-cycle",
+        "phosphorus-cycle",
+        "nitrogen-fixation"
+      ]
+    },
+    {
+      "type": "STATEMENT_BASED",
+      "topic": "Ecology",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "neetWeightage": "MEDIUM",
+      "question": "Read the following statements about population interactions and select the correct option:\nStatement I: Mutualism is a +/+ interaction where both species benefit.\nStatement II: Commensalism is a +/0 interaction where one benefits without affecting the other.\nStatement III: Parasitism is a +/- interaction where the parasite benefits at the host's expense.\nStatement IV: Competition is a +/+ interaction between two species using the same resources.",
+      "options": [
+        "Statements I, II and III are correct",
+        "All statements are correct",
+        "Statements I and III only",
+        "Statements II and IV are correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Mutualism: both species benefit (+/+) e.g., lichens (I correct). Commensalism: one benefits, other unaffected (+/0) e.g., orchid on mango tree (II correct). Parasitism: parasite benefits, host harmed (+/-) (III correct). Competition is a -/- interaction (both species are harmed), NOT +/+ (IV incorrect). NCERT Ch 13, Class 12.",
+      "tags": [
+        "population-interactions",
+        "mutualism",
+        "parasitism",
+        "competition"
+      ]
+    }
+  ]
+}
