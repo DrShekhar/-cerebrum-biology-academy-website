@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useToast } from '@/components/ui/Toast'
 import { ChevronRight, Maximize2, Minimize2 } from 'lucide-react'
-import { QuestionCard } from '@/components/mcq/QuestionCard'
+import QuestionRenderer from '@/components/mcq/QuestionRenderer'
 import { StatsPanel, StatsPanelCompact } from '@/components/mcq/StatsPanel'
 import { ContentSourceTabs, type ContentSource } from '@/components/mcq/ContentSourceTabs'
 import { FilterPanel } from '@/components/mcq/FilterPanel'
@@ -1078,7 +1078,7 @@ export default function NEETBiologyMCQPage() {
                           </div>
                         ) : currentQuestion ? (
                           <div key={currentQuestion.id} className="animate-fade-in-up">
-                            <QuestionCard
+                            <QuestionRenderer
                               question={currentQuestion}
                               questionNumber={sessionStats.questionsAttempted + 1}
                               onAnswer={handleAnswer}
