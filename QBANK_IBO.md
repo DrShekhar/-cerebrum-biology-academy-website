@@ -11,15 +11,15 @@ Build the most comprehensive Biology Olympiad prep resource: **3,000 questions**
 
 | Unit | Name | Chapters | Target | Generated | Seeded | IBO Weight |
 |------|------|----------|--------|-----------|--------|------------|
-| 7 | Animal Form & Function | Ch 40-49 | 750 | 0 | 0 | 25% |
-| 2 | The Cell | Ch 6-12 | 600 | 0 | 0 | 20% |
-| 3 | Genetics | Ch 13-21 | 600 | 0 | 0 | 20% |
-| 6 | Plant Form & Function | Ch 35-39 | 375 | 0 | 0 | 12.5% |
-| 4 | Evolution | Ch 22-26 | 225 | 0 | 0 | 7.5% |
-| 8 | Ecology | Ch 52-56 | 225 | 0 | 0 | 7.5% |
-| 5 | Diversity of Life | Ch 27-34 | 150 | 0 | 0 | 5% |
-| 1 | Chemistry of Life | Ch 1-5 | 75 | 0 | 0 | 2.5% |
-| **Total** | | | **3,000** | **0** | **0** | |
+| 7 | Animal Form & Function | Ch 40-49 | 750 | 100 | 0 | 25% |
+| 2 | The Cell | Ch 6-12 | 600 | 175 | 0 | 20% |
+| 3 | Genetics | Ch 13-21 | 600 | 75 | 0 | 20% |
+| 6 | Plant Form & Function | Ch 35-39 | 375 | 25 | 0 | 12.5% |
+| 4 | Evolution | Ch 22-26 | 225 | 25 | 0 | 7.5% |
+| 8 | Ecology | Ch 52-56 | 225 | 25 | 0 | 7.5% |
+| 5 | Diversity of Life | Ch 27-34 | 150 | 25 | 0 | 5% |
+| 1 | Chemistry of Life | Ch 1-5 | 75 | 25 | 0 | 2.5% |
+| **Total** | | | **3,000** | **475** | **0** | |
 
 ### By Question Type
 
@@ -60,19 +60,19 @@ Build the most comprehensive Biology Olympiad prep resource: **3,000 questions**
 
 ### Wave 1: Campbell Tier 1 (Cell + Animal Phys + Genetics)
 **Target**: ~1,200 questions
-**Status**: NOT STARTED
-- [ ] Unit 2: The Cell — 200 MCQ + 100 MTF + 50 DATA_INTERPRETATION
-- [ ] Unit 3: Genetics — 200 MCQ + 100 MTF + 50 DATA_INTERPRETATION
-- [ ] Unit 7: Animal Physiology — 250 MCQ + 150 MTF + 100 DATA_INTERPRETATION
+**Status**: IN PROGRESS — 350/1,200 generated
+- [x] Unit 2: The Cell — 175 Qs generated (Ch6-7: 50, Ch8+10: 50, Ch9: 25, Ch11: 25, Ch12: 25)
+- [x] Unit 3: Genetics — 75 Qs generated (Ch13-14: 25, Ch15-17: 25, Ch18-21: 25)
+- [x] Unit 7: Animal Physiology — 100 Qs generated (Ch40-43: 25, Ch41: 25, Ch44-46: 25, Ch47-49: 25)
 
 ### Wave 2: Campbell Tier 2+3 + Data Interpretation
 **Target**: ~800 questions
-**Status**: NOT STARTED
-- [ ] Unit 4: Evolution — 100 MCQ + 50 MTF + 25 DATA_INTERPRETATION
-- [ ] Unit 5: Diversity of Life — 75 MCQ + 25 MTF + 25 DATA_INTERPRETATION
-- [ ] Unit 6: Plant Form & Function — 150 MCQ + 75 MTF + 50 DATA_INTERPRETATION
-- [ ] Unit 8: Ecology — 100 MCQ + 50 MTF + 25 DATA_INTERPRETATION
-- [ ] Unit 1: Chemistry of Life — 50 MCQ + 25 MTF
+**Status**: IN PROGRESS — 125/800 generated
+- [x] Unit 4: Evolution (Ch22-26) — 25 Qs generated
+- [x] Unit 5: Diversity of Life (Ch27-34) — 25 Qs generated
+- [x] Unit 6: Plant Form & Function (Ch35-39) — 25 Qs generated
+- [x] Unit 8: Ecology (Ch52-56) — 25 Qs generated
+- [x] Unit 1: Chemistry of Life (Ch1-5) — 25 Qs generated
 
 ### Wave 3: Advanced Source Questions
 **Target**: ~600 questions
