@@ -504,6 +504,1166 @@
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
       "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following hormones is produced by the posterior pituitary?",
+      "options": [
+        "None — the posterior pituitary stores and releases oxytocin and ADH, which are synthesized by hypothalamic magnocellular neurons in the supraoptic and paraventricular nuclei",
+        "Prolactin",
+        "Growth hormone",
+        "ACTH"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The posterior pituitary (neurohypophysis) does not synthesize hormones. Instead, it serves as a storage and release site for two peptide hormones — oxytocin and vasopressin (ADH) — that are actually synthesized by magnocellular neurosecretory neurons in the hypothalamus. Oxytocin is primarily produced in the paraventricular nucleus (PVN), while ADH is primarily produced in the supraoptic nucleus (SON), though both nuclei produce both hormones. The hormones are packaged into secretory granules in the cell body, transported along axons through the hypothalamo-hypophyseal tract (infundibular stalk), and stored in the axon terminals within the posterior pituitary (Herring bodies). Action potentials trigger Ca²⁺-dependent exocytosis, releasing hormones into fenestrated capillaries. Prolactin, GH, and ACTH are all produced by the anterior pituitary.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Congenital adrenal hyperplasia (CAH) most commonly results from 21-hydroxylase (CYP21A2) deficiency. Which hormonal pattern and clinical presentation would be expected?",
+      "options": [
+        "Excess cortisol and aldosterone, causing hypertension and hyperglycemia",
+        "Deficient cortisol and aldosterone synthesis, causing elevated ACTH, shunting of steroid precursors toward adrenal androgens, and virilization in females",
+        "Isolated cortisol deficiency with normal aldosterone and normal androgens",
+        "Excess aldosterone production with suppressed ACTH"
+      ],
+      "correctAnswer": "B",
+      "explanation": "21-Hydroxylase is required for both cortisol and aldosterone synthesis pathways. Its deficiency blocks the conversion of 17-hydroxyprogesterone to 11-deoxycortisol (cortisol pathway) and progesterone to 11-deoxycorticosterone (aldosterone pathway). The consequences are: (1) Cortisol deficiency — loss of negative feedback causes massive ACTH elevation. (2) Aldosterone deficiency — salt-wasting crisis in severe forms (neonatal hyponatremia, hyperkalemia, dehydration). (3) Androgen excess — ACTH-driven adrenal stimulation causes accumulation of precursors (17-hydroxyprogesterone) that are shunted into the androgen pathway (which doesn't require 21-hydroxylase), producing excessive DHEA, androstenedione, and testosterone. In 46,XX females, this causes ambiguous genitalia at birth (virilization). The diagnostic marker is elevated 17-hydroxyprogesterone. Treatment is glucocorticoid replacement (suppresses ACTH and androgen overproduction) plus mineralocorticoid replacement.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about G-protein-coupled receptor (GPCR) signaling in endocrine systems:\n(I) Gs-coupled receptors activate adenylyl cyclase, increasing cAMP, while Gi-coupled receptors inhibit adenylyl cyclase, decreasing cAMP\n(II) Gq-coupled receptors activate phospholipase C, generating IP₃ (which releases Ca²⁺ from ER) and DAG (which activates PKC)\n(III) Beta-arrestin only desensitizes GPCRs and has no independent signaling function\n(IV) Receptor desensitization involves GRK (GPCR kinase) phosphorylation of the receptor, β-arrestin binding, and clathrin-mediated endocytosis",
+      "options": [
+        "True",
+        "True",
+        "False",
+        "True"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "(I) TRUE: Gs (stimulatory G protein) activates adenylyl cyclase, converting ATP to cAMP, which activates PKA. Gi (inhibitory G protein) inhibits adenylyl cyclase, reducing cAMP. Examples: TSH receptor (Gs), dopamine D2 receptor on lactotrophs (Gi). (II) TRUE: Gq activates phospholipase C-β (PLCβ), which cleaves PIP₂ into IP₃ and DAG. IP₃ binds IP₃ receptors on the ER, releasing stored Ca²⁺. DAG remains membrane-bound and activates protein kinase C (PKC). Examples: GnRH receptor (Gq), oxytocin receptor (Gq). (III) FALSE: β-arrestin was initially identified as a desensitization molecule, but it is now recognized as a signaling scaffold in its own right. β-arrestin-mediated signaling includes activation of MAPK/ERK pathways, Src kinases, and other cascades — independent of G protein signaling. This 'biased agonism' is a major area of pharmacological research. (IV) TRUE: Receptor desensitization is a critical process that prevents overstimulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ecdysone-triggered metamorphosis in Drosophila involves extensive tissue remodeling. Which process correctly describes how ecdysone coordinates larval tissue histolysis and adult tissue formation?",
+      "options": [
+        "Ecdysone induces apoptosis in all tissues simultaneously; adult tissues regenerate from stem cells in the hemolymph",
+        "Ecdysone activates the nuclear receptor EcR/USP, which induces expression of transcription factors (e.g., E74, E75, BR-C) that trigger programmed cell death in larval tissues while simultaneously activating proliferation and differentiation of imaginal discs into adult structures",
+        "Ecdysone has no direct effect on gene expression; it acts solely by increasing intracellular calcium levels",
+        "Juvenile hormone, not ecdysone, is the primary trigger for metamorphosis in Drosophila"
+      ],
+      "correctAnswer": "B",
+      "explanation": "During Drosophila metamorphosis (pupariation), a large ecdysone pulse activates the nuclear hormone receptor heterodimer EcR/USP (Ecdysone receptor/Ultraspiracle, the insect homolog of RXR). This complex binds ecdysone response elements (EcREs) on DNA, directly inducing a cascade of transcription factors organized as early genes (E74A, E75, BR-C/Broad-Complex) and late genes. These transcription factors have tissue-specific effects: (1) In larval tissues (larval salivary glands, larval midgut, larval muscles), they activate programmed cell death (autophagy and apoptosis) via genes like reaper, hid, and grim. (2) In imaginal discs (epithelial primordia set aside during embryogenesis), they stimulate proliferation, eversion, and differentiation into adult structures (wings, legs, eyes, antennae). (3) In histoblasts (abdominal primordia), they drive replacement of larval epidermis. JH ABSENCE is required for metamorphosis, but ecdysone is the active trigger.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures glucose and insulin responses to a mixed meal in three groups:\n\nGroup | Fasting glucose (mg/dL) | Peak glucose (mg/dL) | Fasting insulin (μU/mL) | Peak insulin (μU/mL) | HOMA-IR\nNormal | 88 | 130 | 8 | 60 | 1.7\nPre-diabetic | 110 | 200 | 25 | 150 | 6.8\nType 2 DM | 160 | 310 | 30 | 80 | 11.9\n\nHOMA-IR = (fasting glucose × fasting insulin) / 405. Higher values indicate greater insulin resistance.\n\nWhat key difference between the pre-diabetic and Type 2 DM groups does the insulin data reveal?",
+      "options": [
+        "Both groups have identical insulin secretion capacity",
+        "The pre-diabetic group shows compensatory hyperinsulinemia (high insulin to overcome resistance), while the Type 2 DM group shows β-cell failure (high fasting but blunted peak insulin despite severe hyperglycemia)",
+        "The Type 2 DM group has lower insulin resistance than the pre-diabetic group",
+        "The pre-diabetic group has type 1 diabetes based on its insulin levels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This data illustrates the natural history of type 2 diabetes progression. The pre-diabetic group shows: (1) moderate insulin resistance (HOMA-IR 6.8 vs. normal 1.7), and (2) compensatory hyperinsulinemia — the pancreatic β-cells are working overtime, producing very high insulin levels (fasting 25, peak 150) to overcome peripheral resistance. Despite this compensation, glucose control is impaired (fasting 110, peak 200). The Type 2 DM group shows: (1) severe insulin resistance (HOMA-IR 11.9), but critically (2) relative β-cell failure — fasting insulin is still elevated (30, reflecting residual β-cell mass), but peak insulin (80) is LOWER than the pre-diabetic group despite HIGHER glucose stimulus (310 vs 200). This indicates the β-cells can no longer mount an adequate secretory response. The transition from compensated insulin resistance (pre-diabetes) to decompensated β-cell failure (overt diabetes) is a key concept in diabetes pathophysiology.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Erythropoietin (EPO) is classified as a hormone produced primarily by the kidney. What is the stimulus for EPO release, and what is its target?",
+      "options": [
+        "High blood oxygen stimulates EPO release from the liver; EPO acts on platelets to increase clotting",
+        "Low blood oxygen (hypoxia) stimulates EPO release from peritubular interstitial fibroblasts of the kidney; EPO acts on erythroid progenitor cells in the bone marrow to promote red blood cell production",
+        "Anemia directly stimulates the bone marrow to produce EPO, which then feeds back to the kidney",
+        "EPO is produced by red blood cells themselves in an autocrine fashion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Erythropoietin (EPO) is a glycoprotein hormone primarily produced (~90%) by peritubular interstitial fibroblasts (also called renal EPO-producing cells, or REP cells) in the renal cortex and outer medulla. The stimulus is tissue hypoxia, sensed through the HIF (hypoxia-inducible factor) pathway: under normal oxygen conditions, HIF-α is hydroxylated by prolyl hydroxylases (PHDs) and ubiquitinated by VHL protein for proteasomal degradation. Under hypoxia, PHDs are inactive, HIF-α accumulates, dimerizes with HIF-β, and activates EPO gene transcription. EPO enters the bloodstream and acts on EPO receptors (EpoR) on erythroid progenitor cells (BFU-E and CFU-E) in the bone marrow, promoting their survival, proliferation, and differentiation into mature red blood cells. The liver produces ~10% of EPO (dominant source in fetal life). Chronic kidney disease causes anemia partly due to reduced EPO production.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "The GnRH pulse frequency determines which gonadotropin is preferentially released from the anterior pituitary. Which statement is correct?",
+      "options": [
+        "High-frequency GnRH pulses (~1 per hour) favor LH secretion, while low-frequency pulses (~1 per 2-3 hours) favor FSH secretion",
+        "Continuous (non-pulsatile) GnRH stimulation maximizes both LH and FSH release",
+        "GnRH frequency has no effect on LH/FSH ratio; only GnRH amplitude matters",
+        "Low-frequency GnRH pulses favor LH while high-frequency pulses favor FSH"
+      ],
+      "correctAnswer": "A",
+      "explanation": "GnRH (gonadotropin-releasing hormone) must be released in a PULSATILE manner to maintain gonadotroph responsiveness. The frequency of GnRH pulses differentially regulates LH and FSH gene expression and secretion: (1) High-frequency pulses (~1 per 60-90 minutes, characteristic of the late follicular/preovulatory phase) preferentially increase LH-β subunit gene expression and LH secretion. (2) Low-frequency pulses (~1 per 2-4 hours, characteristic of the early follicular and luteal phases) preferentially increase FSH-β subunit gene expression and FSH secretion. Continuous (non-pulsatile) GnRH actually SUPPRESSES gonadotropin release by causing GnRH receptor downregulation — this is the basis for GnRH agonist therapy (e.g., leuprolide), which after an initial flare, suppresses FSH/LH. This pulsatility requirement explains why the hypothalamic GnRH pulse generator is critical for normal reproductive function.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a particular hypothalamic nucleus is the source of CRH (corticotropin-releasing hormone). Which experimental approach would provide the strongest evidence?",
+      "options": [
+        "Measure CRH in the peripheral blood after systemic stress",
+        "Perform bilateral electrolytic lesions of the candidate nucleus and demonstrate that ACTH response to stress is abolished; confirm with immunohistochemistry showing CRH-positive neurons in the nucleus; restore the ACTH stress response by CRH infusion into the portal system",
+        "Stain the entire brain for CRH mRNA by in situ hybridization and identify all positive regions",
+        "Stimulate the candidate nucleus electrically and measure cortisol in peripheral blood 2 hours later"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The gold standard for establishing that a brain region is the source of a hormone involves three complementary approaches: (1) LESION: Bilateral destruction of the paraventricular nucleus (PVN) — the actual CRH source — should eliminate the ACTH/cortisol response to stress, demonstrating necessity. (2) LOCALIZATION: Immunohistochemistry and in situ hybridization should show CRH protein and mRNA in neurons of that nucleus, demonstrating production capacity. (3) RESCUE: CRH infusion into the hypophyseal portal system (bypassing the lesioned nucleus) should restore the ACTH response, confirming that the lesion effect was due to CRH loss specifically (not destruction of fibers of passage or other signals). This approach — necessity (lesion), sufficiency (rescue), and localization — is the most rigorous. Peripheral CRH measurement (option A) doesn't identify the source. Brain-wide staining (option C) shows expression but doesn't prove physiological relevance. Electrical stimulation (option D) is nonspecific and may activate fibers of passage.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nitric oxide (NO) acts as a local signaling molecule (paracrine signal) in blood vessel endothelium. What is its mechanism of action in vascular smooth muscle relaxation?",
+      "options": [
+        "NO binds membrane-bound guanylyl cyclase receptors on smooth muscle cells",
+        "NO diffuses into smooth muscle cells and activates soluble guanylyl cyclase, increasing cGMP, which activates PKG to promote smooth muscle relaxation by decreasing intracellular Ca²⁺",
+        "NO activates phospholipase C in smooth muscle cells, causing IP₃-mediated calcium release and contraction",
+        "NO inhibits adenylyl cyclase in smooth muscle cells, reducing cAMP and causing relaxation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "NO is a gaseous signaling molecule produced by endothelial NO synthase (eNOS/NOS3) from L-arginine. Being a gas, NO freely diffuses across cell membranes without requiring a receptor. In adjacent vascular smooth muscle cells, NO binds to the heme group of soluble guanylyl cyclase (sGC), activating the enzyme to convert GTP to cGMP. Elevated cGMP activates protein kinase G (PKG), which phosphorylates multiple targets leading to relaxation: (1) phosphorylation of MLCP (myosin light chain phosphatase), increasing its activity to dephosphorylate myosin light chains; (2) phosphorylation of BKCa channels, causing hyperpolarization; (3) phosphorylation of phospholamban, enhancing SERCA activity and lowering cytoplasmic Ca²⁺; (4) inhibition of IP₃ receptors, reducing Ca²⁺ release from ER. The net effect is vasodilation. This pathway is the target of phosphodiesterase-5 inhibitors (e.g., sildenafil), which prevent cGMP breakdown.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about thyroid hormone physiology:\n(I) T4 is the predominant thyroid secretory product but T3 is the more biologically active form\n(II) Most circulating T3 is produced by peripheral deiodination of T4 by type 1 and type 2 deiodinases (D1, D2)\n(III) Thyroid hormones increase basal metabolic rate by upregulating Na⁺/K⁺-ATPase expression and activity, increasing oxygen consumption in most tissues\n(IV) The brain is a major target of thyroid hormone metabolic effects, with thyroid hormone significantly increasing cerebral oxygen consumption in adults",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "(I) TRUE: The thyroid gland produces approximately 90% T4 (thyroxine) and 10% T3 (triiodothyronine). However, T3 has approximately 10× greater affinity for nuclear thyroid hormone receptors (TRα and TRβ) and is the primary active form. (II) TRUE: Approximately 80% of circulating T3 is produced outside the thyroid by deiodination of T4. Type 2 deiodinase (D2) in the brain, pituitary, and brown adipose tissue converts T4 to T3 locally. Type 1 deiodinase (D1) in the liver and kidneys converts T4 to T3 for systemic circulation. Type 3 deiodinase (D3) inactivates both T4 and T3. (III) TRUE: A major metabolic effect of thyroid hormones is upregulation of Na⁺/K⁺-ATPase in most tissues, which consumes ATP and generates heat, increasing oxygen consumption and basal metabolic rate. Thyroid hormones also increase mitochondrial uncoupling proteins and metabolic enzyme expression. (IV) FALSE: The adult brain, along with the spleen and testes, does NOT significantly increase its oxygen consumption in response to thyroid hormone. However, thyroid hormone is critical for fetal and neonatal brain development.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following correctly describes the oxytocin positive feedback loop during parturition?",
+      "options": [
+        "Uterine contractions stimulate cervical stretch receptors, which signal the hypothalamus to release more oxytocin, causing stronger contractions until delivery",
+        "Oxytocin levels decrease progressively during labor to prevent excessive uterine contraction",
+        "Progesterone withdrawal is the sole stimulus for uterine contractions; oxytocin plays no role",
+        "Cervical stretch activates the adrenal gland to release oxytocin"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Parturition involves one of the few examples of positive feedback in mammalian physiology (another being the LH surge). The sequence is: (1) As the fetus descends, its head presses against the cervix, activating stretch receptors (Ferguson reflex). (2) Afferent signals travel via the spinal cord to the paraventricular and supraoptic nuclei of the hypothalamus. (3) Magnocellular neurons release oxytocin from the posterior pituitary into the bloodstream. (4) Oxytocin binds OT receptors on uterine smooth muscle (myometrium), stimulating contractions by increasing intracellular Ca²⁺ via Gq-PLC-IP₃ signaling. (5) Stronger contractions push the fetus further against the cervix, increasing stretch receptor activation. (6) More oxytocin is released, causing even stronger contractions. This escalating positive feedback loop continues until delivery, which removes the stimulus (cervical stretch), breaking the loop. Oxytocin receptor expression is upregulated near term by estrogen.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Glucagon and insulin have opposing effects on hepatic glucose metabolism. Which intracellular signaling mechanism does glucagon use to promote glycogenolysis and gluconeogenesis?",
+      "options": [
+        "Glucagon binds a receptor tyrosine kinase, activating the Ras-MAPK pathway",
+        "Glucagon binds a Gs-coupled GPCR, increasing cAMP, activating PKA, which phosphorylates and activates glycogen phosphorylase kinase (leading to glycogenolysis) and CREB (activating gluconeogenic gene transcription)",
+        "Glucagon directly enters hepatocytes and activates nuclear receptors that bind to gluconeogenic gene promoters",
+        "Glucagon inhibits Gq signaling, reducing intracellular calcium and activating glycogen synthesis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Glucagon binds the glucagon receptor (GCGR), a Gs-coupled GPCR on hepatocytes. This activates adenylyl cyclase, increasing cAMP, which activates protein kinase A (PKA). PKA exerts rapid effects on glycogenolysis: it phosphorylates phosphorylase kinase, which phosphorylates and activates glycogen phosphorylase (converting glycogen to glucose-1-phosphate). PKA simultaneously phosphorylates and INACTIVATES glycogen synthase, preventing glycogen synthesis. For gluconeogenesis, PKA phosphorylates CREB (cAMP response element-binding protein), which translocates to the nucleus and activates transcription of key gluconeogenic enzymes: PEPCK (phosphoenolpyruvate carboxykinase) and glucose-6-phosphatase. PKA also phosphorylates and activates the transcriptional coactivator CRTC2 (also called TORC2). The combined effect is rapid glucose output from the liver via both glycogenolysis (minutes) and gluconeogenesis (hours).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Endocrine disruptors are environmental chemicals that interfere with hormone signaling. Bisphenol A (BPA) is a well-known endocrine disruptor. What is its primary mechanism of action?",
+      "options": [
+        "BPA blocks thyroid hormone receptors, causing hypothyroidism",
+        "BPA binds estrogen receptors (ERα and ERβ) as a weak agonist, mimicking estrogen effects at environmentally relevant concentrations",
+        "BPA inhibits aromatase, blocking estrogen synthesis",
+        "BPA enhances testosterone production by stimulating Leydig cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "BPA (bisphenol A) is a synthetic xenoestrogen widely used in polycarbonate plastics and epoxy resins. Its primary mechanism of endocrine disruption is binding to estrogen receptors ERα and ERβ, acting as a weak estrogen agonist (approximately 1000-10,000× less potent than estradiol). Despite low receptor affinity, BPA is ubiquitous in the environment, and chronic low-level exposure can produce significant estrogenic effects. BPA also interacts with membrane-bound estrogen receptors (GPER/GPR30), triggering rapid non-genomic signaling. Additional mechanisms include interference with thyroid hormone signaling, androgen receptor antagonism, and effects on epigenetic marks (DNA methylation). In animal studies, BPA exposure is associated with early puberty, reproductive abnormalities, altered mammary gland development, and metabolic disruption. The concept of non-monotonic dose-response curves (effects at low doses not predicted by high-dose testing) is important in endocrine disruptor biology.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studies the effect of a novel compound on thyroid function in rats over 8 weeks:\n\nWeek | Free T4 (ng/dL) | TSH (mU/L) | Thyroid weight (mg)\n0 (baseline) | 1.2 | 2.0 | 25\n2 | 0.8 | 5.0 | 28\n4 | 0.5 | 12.0 | 40\n8 | 0.3 | 25.0 | 65\n\nWhich mechanism of the compound is most consistent with these data?",
+      "options": [
+        "The compound stimulates TSH secretion directly, causing thyroid hyperplasia and increased T4 production",
+        "The compound inhibits thyroid hormone synthesis or release, causing progressive hypothyroidism, compensatory TSH elevation via loss of negative feedback, and TSH-driven thyroid growth (goiter)",
+        "The compound directly stimulates thyroid growth independent of TSH",
+        "The compound destroys pituitary thyrotrophs, and the thyroid enlarges autonomously"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data show a clear pattern: (1) Progressive decline in free T4 (1.2→0.3, indicating worsening hypothyroidism), (2) Progressive rise in TSH (2.0→25, a 12.5× increase), and (3) Progressive increase in thyroid weight (25→65 mg, a 2.6× increase). This pattern is consistent with a compound that inhibits thyroid hormone synthesis or release (like a goitrogen). As T4 falls, reduced negative feedback on the hypothalamus and pituitary causes TSH elevation. Chronically elevated TSH is a potent growth factor for thyroid follicular cells, causing thyroid hyperplasia and hypertrophy (goiter). This is the mechanism of goiter formation with iodine deficiency, goitrogens (thiouracil, propylthiouracil), or enzymatic defects in thyroid hormone synthesis. If the compound destroyed thyrotrophs (option D), TSH would decrease, not increase. If it stimulated TSH directly (option A), T4 would increase.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Atrial natriuretic peptide (ANP) is an endocrine signal from the heart. Which receptor type does ANP bind, and what is the downstream effector?",
+      "options": [
+        "ANP binds a GPCR coupled to Gi, decreasing cAMP in target cells",
+        "ANP binds a receptor with intrinsic guanylyl cyclase activity (NPR-A), directly increasing cGMP in target cells",
+        "ANP binds a receptor tyrosine kinase similar to the insulin receptor",
+        "ANP binds intracellular nuclear receptors similar to steroid hormone receptors"
+      ],
+      "correctAnswer": "B",
+      "explanation": "ANP (atrial natriuretic peptide) binds the natriuretic peptide receptor A (NPR-A, also called GC-A), which is unique among hormone receptors because it has intrinsic guanylyl cyclase (GC) enzymatic activity in its intracellular domain. ANP binding activates the GC domain, converting GTP to cGMP without requiring intermediate G proteins. cGMP then activates protein kinase G (PKG, also called cGMP-dependent protein kinase) and cGMP-gated ion channels. In the kidney, PKG phosphorylates targets that: (1) inhibit ENaC in the inner medullary collecting duct, reducing Na⁺ reabsorption; (2) dilate afferent arterioles and constrict efferent arterioles, increasing GFR. In vascular smooth muscle, cGMP/PKG causes vasodilation. This receptor-guanylyl cyclase mechanism is shared by BNP (brain natriuretic peptide, binding NPR-A) and CNP (C-type natriuretic peptide, binding NPR-B/GC-B). NPR-C is a clearance receptor lacking GC activity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To test whether insulin resistance (not insulin deficiency) drives hyperglycemia in a mouse model of type 2 diabetes (db/db mice, which lack the leptin receptor), a researcher designs a hyperinsulinemic-euglycemic clamp study. What does this technique measure, and how does it work?",
+      "options": [
+        "It measures insulin secretion by infusing glucose and measuring the insulin response",
+        "It measures insulin sensitivity by infusing insulin at a constant rate while adjusting glucose infusion rate (GIR) to maintain normal blood glucose; the GIR required to maintain euglycemia reflects whole-body insulin sensitivity — lower GIR indicates greater insulin resistance",
+        "It measures glucagon secretion by clamping insulin at zero and monitoring glucose levels",
+        "It measures hepatic glucose output by infusing tritiated glucose and measuring its dilution"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The hyperinsulinemic-euglycemic clamp is the gold standard for measuring in vivo insulin sensitivity. The technique involves: (1) Insulin is infused intravenously at a constant rate to achieve a steady-state hyperinsulinemic condition (e.g., ~100 μU/mL, well above fasting levels). This suppresses endogenous hepatic glucose production and stimulates peripheral glucose disposal. (2) Simultaneously, glucose is infused at a variable rate, adjusted every 5-10 minutes based on frequent blood glucose measurements, to maintain blood glucose at a normal ('euglycemic') level (e.g., ~90-100 mg/dL). (3) At steady state (typically 90-120 minutes), the glucose infusion rate (GIR) equals total body glucose disposal (since hepatic glucose output is suppressed). A higher GIR indicates greater insulin sensitivity (tissues readily take up glucose in response to insulin). A lower GIR indicates insulin resistance. In db/db mice, GIR would be markedly reduced compared to wild-type controls.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following is a key difference between Type 1 and Type 2 diabetes mellitus in terms of pathophysiology?",
+      "options": [
+        "Type 1 involves autoimmune destruction of pancreatic β-cells leading to absolute insulin deficiency, while Type 2 involves peripheral insulin resistance with progressive β-cell dysfunction",
+        "Type 1 is caused by insulin resistance while Type 2 is caused by autoimmune β-cell destruction",
+        "Both types have identical pathophysiology but differ only in age of onset",
+        "Type 1 involves glucagon deficiency while Type 2 involves cortisol excess"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Type 1 diabetes mellitus (T1DM) is an autoimmune disease in which autoreactive T cells (primarily CD8+ cytotoxic T lymphocytes) destroy pancreatic β-cells, guided by autoantibodies against β-cell antigens (GAD65, IA-2, insulin, ZnT8). This leads to absolute insulin deficiency, requiring lifelong exogenous insulin therapy. It typically presents in childhood/adolescence with acute hyperglycemia, ketoacidosis, and weight loss. Type 2 diabetes mellitus (T2DM) begins with insulin resistance in peripheral tissues (muscle, liver, adipose), initially compensated by β-cell hyperinsulinemia. Over time, the β-cells decompensate (due to glucotoxicity, lipotoxicity, ER stress, amyloid deposition), leading to relative insulin deficiency. T2DM typically presents in adults with obesity, and is initially managed with lifestyle changes and oral medications. The two types differ fundamentally in pathophysiology, genetics (HLA-associated in T1DM), and treatment.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Thyroxine-binding globulin (TBG) is the major transport protein for thyroid hormones in the blood. What happens to thyroid function when TBG levels increase (e.g., during pregnancy due to estrogen)?",
+      "options": [
+        "Free T4 and T3 increase, causing hyperthyroidism",
+        "Total T4 and T3 increase but FREE T4 and T3 remain normal after HPT axis adjustment; the patient is euthyroid",
+        "TSH increases dramatically to compensate for TBG binding",
+        "Total T4 decreases while free T4 increases"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When TBG levels rise (as during pregnancy, estrogen therapy, or hepatitis), initially more thyroid hormone is bound, transiently reducing free T4/T3. The hypothalamic-pituitary axis detects this slight free T4 decrease, transiently increases TSH, which stimulates the thyroid to produce more T4/T3 until free T4/T3 return to normal. The new steady state has: (1) elevated TOTAL T4 and T3 (because more is protein-bound), (2) NORMAL free T4 and T3 (the biologically active fraction), and (3) normal (or very slightly elevated) TSH. The patient is clinically euthyroid because it is the FREE hormone that determines biological activity. This is why modern thyroid function testing measures FREE T4 rather than total T4 — total T4 is affected by TBG changes that don't reflect actual thyroid status. Conversely, conditions that decrease TBG (androgens, nephrotic syndrome) reduce total T4 but maintain normal free T4.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about invertebrate endocrine systems:\n(I) Molting in crustaceans is controlled by ecdysteroids produced by the Y-organ, analogous to the prothoracic gland in insects\n(II) The X-organ/sinus gland complex in crustacean eyestalks produces molt-inhibiting hormone (MIH), which suppresses the Y-organ\n(III) Eyestalk ablation in crustaceans triggers precocious molting due to removal of MIH\n(IV) Crustaceans use juvenile hormone (JH) for the same developmental functions as insects",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "(I) TRUE: The crustacean Y-organ is functionally analogous to the insect prothoracic gland — both produce ecdysteroids (ecdysone/20-hydroxyecdysone) that trigger molting. (II) TRUE: The X-organ/sinus gland complex in the crustacean eyestalk is a major neuroendocrine organ. The X-organ neurons produce several neuropeptide hormones including MIH (molt-inhibiting hormone), which is stored and released from the sinus gland. MIH tonically inhibits the Y-organ, preventing premature molting. (III) TRUE: Eyestalk ablation removes the source of MIH, releasing the Y-organ from inhibition and triggering ecdysteroid production and molting. This technique is used commercially in shrimp aquaculture to induce ovarian maturation (the eyestalk also produces gonad-inhibiting hormone). (IV) FALSE: Crustaceans use methyl farnesoate (MF), not juvenile hormone (JH), as their sesquiterpenoid hormone. MF is the unepoxidized precursor of insect JH III. While MF has some JH-like functions (regulating reproduction and morphogenesis), the crustacean and insect systems have diverged significantly.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Acromegaly results from excessive growth hormone (GH) secretion in adults, usually from a pituitary adenoma. Which clinical feature distinguishes acromegaly from gigantism?",
+      "options": [
+        "Acromegaly occurs before epiphyseal plate closure, causing proportional tall stature; gigantism occurs after closure, causing acral enlargement",
+        "Acromegaly occurs AFTER epiphyseal plate closure, causing enlargement of hands, feet, jaw, and soft tissues without increased height; gigantism occurs BEFORE closure, causing excessive linear growth",
+        "Acromegaly and gigantism are identical conditions with the same clinical features",
+        "Acromegaly is caused by GH excess while gigantism is caused by IGF-1 excess"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The clinical manifestation of GH excess depends critically on whether the long bone epiphyseal growth plates have fused. Before puberty/plate closure (gigantism): GH/IGF-1 stimulate chondrocyte proliferation in open growth plates, causing increased linear growth and proportional tall stature (some patients exceed 7-8 feet). After plate closure (acromegaly): linear bone growth is impossible, so GH/IGF-1 cause periosteal bone growth (widening of hands, feet, jaw/mandible — prognathism), soft tissue enlargement (thickened skin, macroglossia — enlarged tongue), and organomegaly (cardiomegaly, hepatomegaly). Both conditions share metabolic complications: insulin resistance/diabetes, hypertension, and cardiovascular disease. Both are caused by the same pathology (usually a GH-secreting pituitary somatotroph adenoma) — the difference is timing relative to skeletal maturity. Treatment involves transsphenoidal surgery, somatostatin analogs (octreotide), and GH receptor antagonists (pegvisomant).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Adiponectin is an adipokine produced by white adipose tissue. What are its primary metabolic effects?",
+      "options": [
+        "Adiponectin promotes insulin resistance and increases hepatic glucose output",
+        "Adiponectin enhances insulin sensitivity, stimulates fatty acid oxidation via AMPK activation, and has anti-inflammatory properties; its levels are paradoxically LOW in obesity",
+        "Adiponectin is an appetite-stimulating hormone that acts on hypothalamic NPY neurons",
+        "Adiponectin promotes lipogenesis and inhibits lipolysis in adipose tissue"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Adiponectin is a 30 kDa protein secreted abundantly by adipocytes, circulating at high concentrations (5-30 μg/mL — much higher than most hormones). It acts through AdipoR1 (primarily in muscle) and AdipoR2 (primarily in liver) receptors to: (1) activate AMPK (AMP-activated protein kinase), promoting fatty acid oxidation and glucose uptake in skeletal muscle; (2) enhance hepatic insulin sensitivity by reducing gluconeogenesis; (3) exert anti-inflammatory effects by inhibiting NF-κB signaling and TNF-α production. Paradoxically, adiponectin levels are INVERSELY correlated with adiposity — obese individuals have LOW adiponectin despite having more adipose tissue. This is due to adipocyte hypertrophy, hypoxia, and inflammatory cytokines suppressing adiponectin expression. Low adiponectin is associated with insulin resistance, type 2 diabetes, metabolic syndrome, and cardiovascular disease. Weight loss increases adiponectin levels.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher discovers that a specific brain region (Region Z) contains neurons expressing both CRH and AVP that project to the median eminence. She wants to test whether BOTH neuropeptides from Region Z are required for a full ACTH stress response. Which experiment would best address this question?",
+      "options": [
+        "Lesion Region Z and measure ACTH — this would test the region's necessity",
+        "Use Cre-lox conditional knockout to delete CRH specifically from Region Z neurons, then delete AVP from Region Z neurons in a separate cohort, and finally delete both CRH and AVP simultaneously in a third cohort, comparing ACTH stress responses across all groups to wild-type controls",
+        "Inject CRH and AVP into the systemic circulation and measure ACTH",
+        "Measure CRH and AVP mRNA in Region Z after stress"
+      ],
+      "correctAnswer": "B",
+      "explanation": "To determine whether BOTH CRH and AVP from Region Z are required for the full ACTH response, the researcher needs to dissect individual and combined contributions using conditional genetics. The Cre-lox approach allows tissue-specific gene deletion: (1) CRH conditional KO in Region Z: if ACTH response is partially reduced, CRH from this region contributes. (2) AVP conditional KO in Region Z: if ACTH response is partially reduced, AVP from this region contributes. (3) Double conditional KO (both CRH and AVP deleted from Region Z): if the ACTH response is more impaired than either single KO, the two neuropeptides are non-redundant and both required. If the double KO effect equals the sum of single KO effects, they act additively. If greater, they act synergistically (which is known — CRH and AVP synergize at the corticotroph level). Lesion (option A) would eliminate ALL signals from Region Z, not just CRH/AVP.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "The hypothalamic suprachiasmatic nucleus (SCN) is the master circadian clock in mammals. Which molecular mechanism generates the approximately 24-hour oscillation?",
+      "options": [
+        "A transcription-translation feedback loop (TTFL) involving CLOCK/BMAL1 as activators and PER/CRY as repressors that inhibit their own transcription with an approximately 24-hour delay",
+        "Regular 24-hour cycles of DNA replication in SCN neurons",
+        "Daily oscillations in membrane potential driven solely by voltage-gated sodium channels",
+        "Hormonal input from the pineal gland sets the clock; the SCN has no intrinsic rhythmicity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The mammalian circadian clock is based on interlocking transcription-translation feedback loops (TTFLs) with an intrinsic period of approximately 24 hours. The core loop: (1) CLOCK and BMAL1 are transcription factors that heterodimerize and bind E-box elements in the promoters of Period (PER1, PER2) and Cryptochrome (CRY1, CRY2) genes, activating their transcription. (2) PER and CRY proteins accumulate in the cytoplasm, are phosphorylated by casein kinases (CK1δ/ε), dimerize, and translocate to the nucleus. (3) PER/CRY complexes directly inhibit CLOCK/BMAL1 transcriptional activity, suppressing their own transcription. (4) As PER/CRY are degraded by proteasomes (targeted by β-TrCP and FBXL3 ubiquitin ligases), inhibition is relieved and the cycle restarts. A secondary loop involving REV-ERBα/β and RORα/β regulates BMAL1 transcription. The ~24-hour period is determined by protein stability, phosphorylation rates, and nuclear trafficking kinetics.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Thyroid hormone synthesis requires iodide uptake and organification. Which step is inhibited by propylthiouracil (PTU), a drug used to treat hyperthyroidism?",
+      "options": [
+        "PTU inhibits the sodium-iodide symporter (NIS), blocking iodide uptake into follicular cells",
+        "PTU inhibits thyroid peroxidase (TPO), blocking both iodide organification and coupling of MIT/DIT to form T3/T4; PTU also inhibits peripheral type 1 deiodinase, reducing T4-to-T3 conversion",
+        "PTU inhibits TSH receptor signaling, reducing thyroid stimulation",
+        "PTU inhibits thyroglobulin synthesis in the rough ER of follicular cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Propylthiouracil (PTU) is a thionamide antithyroid drug with two mechanisms of action: (1) PRIMARY: PTU inhibits thyroid peroxidase (TPO), the key enzyme in thyroid hormone synthesis. TPO normally catalyzes: (a) oxidation of iodide (I⁻) to reactive iodine; (b) organification — iodination of tyrosine residues on thyroglobulin (forming MIT and DIT); (c) coupling of MIT + DIT → T3 and DIT + DIT → T4 within the thyroglobulin molecule. By inhibiting TPO, PTU blocks all these steps. (2) SECONDARY: PTU (but not methimazole) also inhibits peripheral type 1 deiodinase (D1), reducing peripheral conversion of T4 to the more active T3. This makes PTU particularly useful in thyroid storm where rapid reduction of T3 levels is needed. PTU does NOT inhibit NIS (that would be perchlorate or pertechnetate, competitive inhibitors of iodide uptake) or TSH receptor signaling.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the following hormone levels in a patient with galactorrhea (milk discharge) and amenorrhea (absent menstruation):\n\nHormone | Patient value | Normal range\nProlactin | 200 ng/mL | 2-20 ng/mL\nLH | 1.5 mIU/mL | 5-20 mIU/mL\nFSH | 1.0 mIU/mL | 3-12 mIU/mL\nEstradiol | 15 pg/mL | 30-400 pg/mL\nTSH | 2.5 mU/L | 0.4-4.0 mU/L\n\nWhich diagnosis and mechanism best explain these findings?",
+      "options": [
+        "Primary ovarian failure causing elevated prolactin as compensation",
+        "Prolactinoma (prolactin-secreting pituitary adenoma) causing hyperprolactinemia, which suppresses GnRH pulsatility and gonadotropin secretion, leading to hypogonadism",
+        "Hypothyroidism causing elevated prolactin via TRH stimulation",
+        "Normal postpartum lactation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The clinical picture shows: (1) markedly elevated prolactin (200, 10× upper normal), (2) suppressed LH and FSH (below normal), (3) low estradiol (consistent with hypogonadism), (4) normal TSH (ruling out hypothyroidism as the cause — hypothyroidism can elevate prolactin via TRH stimulation of lactotrophs). The most likely diagnosis is a prolactinoma, the most common functional pituitary adenoma. Hyperprolactinemia suppresses GnRH pulse generator activity in the hypothalamus, reducing GnRH pulsatility. This leads to decreased LH and FSH secretion, resulting in hypogonadotropic hypogonadism (low estradiol, anovulation → amenorrhea). Prolactin also directly stimulates breast milk production (galactorrhea). In primary ovarian failure, FSH and LH would be elevated (not suppressed). Normal TSH rules out hypothyroidism. Treatment is with dopamine agonists (cabergoline or bromocriptine), which inhibit prolactin secretion and often shrink the tumor.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following correctly describes how calcium ions (Ca²⁺) act as intracellular second messengers in hormone signaling?",
+      "options": [
+        "Ca²⁺ released from the ER binds calmodulin, forming the Ca²⁺/calmodulin complex that activates CaM kinases and other effectors; Ca²⁺ also activates protein kinase C (PKC) in conjunction with DAG",
+        "Ca²⁺ acts exclusively by opening voltage-gated sodium channels in the plasma membrane",
+        "Ca²⁺ directly binds DNA as a transcription factor without intermediary proteins",
+        "Ca²⁺ is only important in bone metabolism and has no role as an intracellular messenger"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Intracellular Ca²⁺ is a versatile second messenger that typically rises from ~100 nM (resting) to ~1 μM (stimulated) following IP₃-induced release from the ER or entry through plasma membrane channels. The primary intracellular Ca²⁺ sensor is calmodulin (CaM), a 17 kDa protein with four Ca²⁺-binding EF-hand domains. Ca²⁺/CaM undergoes conformational change and activates numerous targets: (1) CaM-dependent kinases (CaMKII — important in learning/memory, smooth muscle contraction, gene regulation); (2) Calcineurin (CaM-dependent phosphatase — important in T cell activation and NFAT signaling); (3) Myosin light chain kinase (MLCK — smooth muscle contraction); (4) NO synthase (eNOS — vasodilation). Additionally, Ca²⁺ together with DAG activates classical PKC isoforms (α, βI, βII, γ), which phosphorylate diverse substrates. Ca²⁺ signaling is terminated by SERCA pumps (returning Ca²⁺ to ER), PMCA pumps (extruding Ca²⁺), and Na⁺/Ca²⁺ exchangers.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about cortisol's metabolic effects:\n(I) Cortisol promotes gluconeogenesis in the liver by inducing PEPCK and glucose-6-phosphatase gene expression\n(II) Cortisol promotes protein catabolism in muscle, providing amino acid substrates for hepatic gluconeogenesis\n(III) Cortisol enhances lipolysis in adipose tissue, releasing free fatty acids as an alternative fuel source\n(IV) Cortisol increases insulin sensitivity in peripheral tissues, facilitating glucose uptake",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "(I) TRUE: Cortisol's primary metabolic role is maintaining blood glucose during fasting/stress. In the liver, cortisol (via glucocorticoid receptor/GR binding to glucocorticoid response elements) induces transcription of key gluconeogenic enzymes: PEPCK (phosphoenolpyruvate carboxykinase) and glucose-6-phosphatase. (II) TRUE: In skeletal muscle, cortisol promotes protein catabolism (degradation) and inhibits protein synthesis. The released amino acids (particularly alanine and glutamine) serve as carbon skeletons for hepatic gluconeogenesis. Chronic excess causes muscle wasting (as seen in Cushing's syndrome). (III) TRUE: Cortisol promotes lipolysis in adipose tissue (through induction of ATGL and HSL), releasing free fatty acids (FFAs) and glycerol. FFAs provide alternative fuel for peripheral tissues, sparing glucose for the brain. Glycerol serves as a gluconeogenic substrate. (IV) FALSE: Cortisol DECREASES insulin sensitivity (causes insulin resistance) in peripheral tissues. It reduces GLUT4 translocation in muscle and adipose tissue, antagonizing insulin's glucose-lowering effect. This is why chronic cortisol excess causes hyperglycemia/diabetes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "GLP-1 (glucagon-like peptide-1) is an incretin hormone released from intestinal L-cells after food intake. What is its primary effect on pancreatic islets?",
+      "options": [
+        "GLP-1 stimulates glucagon secretion from alpha cells to prepare for glucose absorption",
+        "GLP-1 potentiates glucose-stimulated insulin secretion from beta cells via cAMP/PKA signaling, while also inhibiting glucagon secretion and promoting beta-cell survival",
+        "GLP-1 directly stimulates GLUT4 translocation in muscle cells independent of insulin",
+        "GLP-1 inhibits insulin secretion to prevent postprandial hypoglycemia"
+      ],
+      "correctAnswer": "B",
+      "explanation": "GLP-1 is one of two major incretin hormones (the other being GIP — glucose-dependent insulinotropic peptide). GLP-1 is secreted by enteroendocrine L-cells in the distal ileum and colon within minutes of food intake. It has multiple effects: (1) Beta cells: GLP-1 binds Gs-coupled GLP-1 receptors, increasing cAMP, which enhances glucose-stimulated insulin secretion (GSIS) — critically, this effect is glucose-DEPENDENT, meaning GLP-1 only potentiates insulin release when glucose is elevated, minimizing hypoglycemia risk. (2) Alpha cells: GLP-1 inhibits glucagon secretion (both directly and indirectly via enhanced beta-cell somatostatin release). (3) Beta-cell mass: GLP-1 promotes beta-cell proliferation and inhibits apoptosis. (4) Other effects: slows gastric emptying, promotes satiety via hypothalamic signaling. GLP-1 receptor agonists (semaglutide, liraglutide) and DPP-4 inhibitors (which prevent GLP-1 degradation) are major diabetes and obesity drugs.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "During the stress response, the hypothalamic-pituitary-adrenal (HPA) axis activates cortisol release. Which of the following correctly describes the difference between the acute and chronic effects of cortisol on the immune system?",
+      "options": [
+        "Cortisol stimulates the immune system both acutely and chronically",
+        "Acutely, cortisol redistributes immune cells and can enhance certain immune responses (e.g., wound healing), while chronically elevated cortisol is immunosuppressive, inhibiting NF-κB, suppressing inflammatory cytokines, and inducing lymphocyte apoptosis",
+        "Cortisol has no effect on the immune system; only catecholamines modulate immunity during stress",
+        "Acute cortisol causes immunosuppression while chronic cortisol enhances immunity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The immunological effects of cortisol are dose- and duration-dependent, reflecting an important evolutionary adaptation. Acute stress cortisol (hours): (1) Redistributes immune cells from blood to tissues (skin, lymph nodes, mucosal surfaces) where they may be needed for wound healing or pathogen defense. (2) Can enhance innate immune responses, including neutrophil mobilization and DC maturation. (3) Prepares the immune system for potential injury. Chronic stress cortisol (days to weeks): (1) Suppresses NF-κB, the master inflammatory transcription factor, by inducing IκBα synthesis. (2) Inhibits production of pro-inflammatory cytokines (IL-1, IL-6, TNF-α). (3) Promotes Th2 over Th1 responses, suppressing cell-mediated immunity. (4) Induces apoptosis of lymphocytes, particularly T cells and eosinophils. (5) Inhibits prostaglandin synthesis by inducing lipocortin-1 (annexin A1). This biphasic response explains why acute stress can be immunoenhancing while chronic stress is immunosuppressive.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher suspects that neonatal exposure to an endocrine disruptor causes permanent changes to the HPG (hypothalamic-pituitary-gonadal) axis in female mice, leading to early puberty and reduced fertility. Which experimental design would most comprehensively test this hypothesis?",
+      "options": [
+        "Expose adult female mice to the compound and measure estrous cycle length",
+        "Expose neonatal (P1-P5) female mice to the compound or vehicle, then assess: vaginal opening age (puberty marker), estrous cyclicity, GnRH pulse frequency, serum LH/FSH/estradiol at adulthood, fertility (mating success, litter size), and reproductive histopathology",
+        "Expose pregnant dams to the compound and measure offspring birth weight",
+        "Add the compound to cell culture medium containing hypothalamic neurons and measure GnRH release"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Testing developmental endocrine disruption requires a comprehensive in vivo approach because the hypothesis involves organizational effects during a critical developmental window. The optimal design includes: (1) Neonatal exposure (P1-P5): This targets the critical window of HPG axis organization in rodents when GnRH neurons are establishing connections and gonadal steroid programming occurs. Vehicle control is essential. (2) Puberty assessment: Vaginal opening (VO) is the standard rodent puberty marker — earlier VO indicates accelerated puberty. (3) Adult reproductive function: Estrous cyclicity (vaginal cytology) detects disrupted ovarian cycling. Serum hormones (LH, FSH, estradiol at different cycle stages) reveal HPG axis dysfunction. GnRH pulse frequency (measured by LH pulses as a proxy) assesses hypothalamic function. (4) Fertility: Mating trials with proven males, measuring pregnancy rate, implantation sites, litter size, and offspring sex ratio. (5) Histopathology: Ovarian follicle counts, uterine morphology. Adult exposure (option A) misses organizational effects.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Hormone binding specificity is a fundamental concept in endocrinology. What determines whether a cell responds to a particular hormone?",
+      "options": [
+        "The presence of specific receptors for that hormone on or in the target cell",
+        "The proximity of the cell to the endocrine gland that secretes the hormone",
+        "The concentration of the hormone in blood — all cells respond if the concentration is high enough",
+        "The cell's metabolic rate — only actively dividing cells respond to hormones"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The specificity of hormone action depends entirely on the presence of specific receptors in/on target cells. A hormone may circulate throughout the entire body via the bloodstream, but only cells expressing the appropriate receptor will respond. This 'lock and key' specificity operates at multiple levels: (1) Receptor expression: not all cells express all hormone receptors — receptor gene expression is tissue-specific and developmentally regulated. (2) Receptor affinity: receptors bind their cognate hormones with high affinity (Kd typically in the nM to pM range), ensuring specificity even at low circulating concentrations. (3) Receptor density: the number of receptors (upregulation/downregulation) modulates tissue sensitivity. (4) Post-receptor signaling: even cells with the same receptor may respond differently due to cell-type-specific expression of downstream signaling components and effectors. This principle explains how a single hormone like insulin can have different effects in liver, muscle, and adipose tissue.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "The hypothalamus integrates endocrine and nervous system functions. Which of the following is a key difference between hormonal and neural signaling?",
+      "options": [
+        "Hormones act only on cells adjacent to the secreting cell, while neurons can signal over long distances",
+        "Neural signals are fast (milliseconds) and short-lived, transmitted via synaptic neurotransmitters to specific target cells; hormonal signals are slower (seconds to hours), longer-lasting, and distributed via the bloodstream to all tissues with appropriate receptors",
+        "Hormones can only inhibit target cell function, while neural signals can only stimulate",
+        "Neural and hormonal signaling use completely different molecular mechanisms with no overlap in signaling molecules"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Neural and endocrine signaling represent two complementary communication systems that the hypothalamus uniquely bridges. Key differences: (1) Speed: Neural transmission is fast (ms, via action potentials and synaptic transmission) while hormonal signaling is slower (seconds for catecholamines, minutes to hours for steroids/thyroid hormones). (2) Duration: Neural signals are brief (ms, terminated by neurotransmitter reuptake/degradation) while hormonal effects can last minutes to days. (3) Specificity: Neurons communicate with specific postsynaptic targets via anatomical connections (synapses); hormones broadcast via blood to all tissues, with specificity determined by receptor expression. (4) Amplification: Hormones can reach millions of target cells simultaneously; neurons typically signal a limited number of postsynaptic cells. However, there is significant overlap: neurotransmitters (e.g., norepinephrine) also act as hormones, neuropeptides can function as both, and neuroendocrine cells in the hypothalamus convert neural signals into hormonal outputs.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "11β-Hydroxysteroid dehydrogenase type 2 (11β-HSD2) plays a critical role in mineralocorticoid receptor specificity. What is its function?",
+      "options": [
+        "It converts cortisol to cortisone (inactive) in aldosterone-sensitive tissues, preventing cortisol from activating the mineralocorticoid receptor",
+        "It converts cortisone to cortisol in the liver, amplifying glucocorticoid action",
+        "It synthesizes aldosterone from corticosterone in the zona glomerulosa",
+        "It degrades aldosterone in the kidney to prevent excessive sodium retention"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The mineralocorticoid receptor (MR) has a problem: it has nearly equal affinity for cortisol and aldosterone in vitro. Since cortisol circulates at 100-1000× higher concentrations than aldosterone, cortisol would saturate the MR and make aldosterone signaling impossible — unless a mechanism ensures specificity. This mechanism is 11β-HSD2, which is co-expressed with MR in aldosterone-sensitive tissues (distal nephron, colon, sweat glands). 11β-HSD2 converts cortisol (active) to cortisone (inactive at MR), effectively 'protecting' the MR from cortisol and allowing aldosterone (which is not a substrate for 11β-HSD2) to be the physiological ligand. Mutations in 11β-HSD2 cause apparent mineralocorticoid excess (AME) syndrome: cortisol activates renal MR, causing sodium retention, hypokalemia, and hypertension despite low aldosterone. Glycyrrhizinic acid in licorice inhibits 11β-HSD2, causing a similar syndrome.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the endocrine functions of non-classical endocrine organs:\n(I) The heart produces atrial natriuretic peptide (ANP) and brain natriuretic peptide (BNP), which promote natriuresis and vasodilation\n(II) Adipose tissue produces leptin (satiety signal), adiponectin (insulin sensitizer), and resistin (promotes insulin resistance)\n(III) The gut produces hormones including GLP-1, GIP, cholecystokinin (CCK), and ghrelin, which regulate digestion, metabolism, and appetite\n(IV) The kidney produces only erythropoietin; it has no role in vitamin D metabolism",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "(I) TRUE: Cardiac myocytes produce natriuretic peptides in response to wall stress from volume overload. ANP is produced mainly by atrial myocytes, while BNP (despite its name) is produced primarily by ventricular myocytes. Both promote natriuresis, vasodilation, and oppose RAAS. BNP is clinically used as a biomarker for heart failure. (II) TRUE: Adipose tissue is now recognized as a major endocrine organ. Key adipokines include: leptin (proportional to fat mass, signals satiety to hypothalamus), adiponectin (insulin sensitizer, anti-inflammatory, paradoxically decreased in obesity), and resistin (promotes insulin resistance in rodents, controversial in humans). (III) TRUE: The gastrointestinal tract is the largest endocrine organ by cell number. GLP-1 and GIP are incretins enhancing insulin secretion. CCK from I-cells stimulates gallbladder contraction and pancreatic enzyme secretion. Ghrelin from gastric X/A-like cells stimulates appetite. (IV) FALSE: The kidney is a critical endocrine organ producing: EPO (erythropoiesis), renin (RAAS), AND 1,25-(OH)₂D₃ (calcitriol — the active form of vitamin D, via 1α-hydroxylase).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Type 2 deiodinase (D2) plays a critical role in thyroid hormone action in the brain and pituitary. What is unique about D2 regulation compared to D1?",
+      "options": [
+        "D2 activity is upregulated by T4, ensuring more T3 production when thyroid hormone levels are high",
+        "D2 is rapidly degraded by ubiquitin-proteasome pathway when T4 levels are high, and stabilized when T4 is low, creating a local homeostatic mechanism that maintains intracellular T3 levels even when plasma T4 fluctuates",
+        "D2 only converts T3 to T2, inactivating thyroid hormone",
+        "D2 is constitutively active and unaffected by thyroid hormone levels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "D2 (type 2 deiodinase) is uniquely regulated by substrate-induced degradation. When intracellular T4 (its substrate) is high, T4 binding triggers D2 ubiquitination by the WSB-1/Cul5 E3 ligase complex, targeting it for proteasomal degradation. This reduces D2 activity and T3 production. Conversely, when T4 is low, D2 is stabilized, increasing its half-life and activity, enhancing local T3 production from the limited T4 available. This creates a powerful local homeostatic mechanism that buffers intracellular T3 in the brain and pituitary against fluctuations in plasma T4. This is critical for brain function, as the brain depends on D2-generated T3 rather than plasma T3 (which crosses the blood-brain barrier poorly). D2 in the pituitary mediates the negative feedback of T4 on TSH secretion — local T3 generated by D2 binds pituitary TRβ2 receptors to suppress TSH-β gene transcription. D1, in contrast, is regulated at the transcriptional level by thyroid hormone (T3 increases D1 mRNA).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher performs an insulin tolerance test (ITT) on two groups of mice by injecting a standard dose of insulin and measuring blood glucose:\n\nTime (min) | Wild-type glucose (mg/dL) | Transgenic X glucose (mg/dL)\n0 | 100 | 100\n15 | 55 | 48\n30 | 45 | 35\n45 | 50 | 30\n60 | 65 | 28\n90 | 85 | 26\n120 | 95 | 25\n\nWhat is the most likely phenotype of Transgenic X mice?",
+      "options": [
+        "Transgenic X mice have enhanced insulin sensitivity with normal counter-regulatory responses",
+        "Transgenic X mice have enhanced insulin sensitivity but IMPAIRED counter-regulatory hormone responses (e.g., deficient glucagon, epinephrine, cortisol, or GH secretion), preventing recovery from hypoglycemia",
+        "Transgenic X mice are completely insulin resistant",
+        "Transgenic X mice have a higher metabolic rate, consuming glucose faster"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both groups show initial glucose-lowering in response to insulin (baseline 100 → nadir). Wild-type mice reach a nadir around 45 mg/dL at 30 minutes and then recover progressively (45→50→65→85→95), demonstrating intact counter-regulatory responses. The counter-regulatory hormones — glucagon (from pancreatic α-cells), epinephrine (from adrenal medulla), cortisol (from adrenal cortex), and growth hormone (from anterior pituitary) — activate hepatic glycogenolysis and gluconeogenesis to restore blood glucose. Transgenic X mice show an even greater initial drop (to 35 at 30 min) but critically FAIL TO RECOVER — glucose continues to fall (35→30→28→26→25), indicating absence of effective counter-regulatory responses. This is life-threatening hypoglycemia. The transgene likely disrupts one or more counter-regulatory pathways (e.g., glucagon receptor KO, α-cell ablation, impaired sympathoadrenal response, or defective hepatic glucose output). This phenotype resembles clinical 'hypoglycemia unawareness' in long-standing diabetes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "In amphibian metamorphosis (e.g., tadpole to frog), which hormone is the primary trigger, and what are its major effects?",
+      "options": [
+        "Juvenile hormone triggers metamorphosis by promoting limb growth and tail regression",
+        "Thyroid hormone (T3/T4) triggers metamorphosis, inducing limb growth, tail resorption, gill remodeling to lungs, intestinal remodeling, and neuronal remodeling — tissue-specific responses mediated by differential TRα/TRβ expression and coregulator availability",
+        "Prolactin triggers metamorphosis while thyroid hormone inhibits it",
+        "Ecdysone triggers amphibian metamorphosis via the same mechanism as in insects"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Amphibian metamorphosis is one of the most dramatic thyroid hormone-dependent processes in vertebrates. Rising T3/T4 levels (regulated by TSH and the HPT axis) trigger a complex, tissue-specific developmental program in the tadpole: (1) Tail: T3 induces programmed cell death (apoptosis) via activation of caspases and matrix metalloproteinases, causing complete tail resorption. (2) Limbs: T3 promotes limb bud growth and differentiation. (3) Gills to lungs: Larval gills undergo apoptosis while lung tissue proliferates and differentiates. (4) Gut: Larval herbivorous gut (long, with typhlosole) is remodeled to a shorter adult carnivorous gut via apoptosis and stem cell proliferation. (5) Brain: Neural remodeling including optic system changes and new motor circuits for terrestrial locomotion. The tissue-specific nature of these opposite responses (death vs. growth) to the same hormone is explained by differential expression of TRα vs. TRβ isoforms, and tissue-specific coactivator/corepressor expression. Prolactin actually OPPOSES metamorphosis (larval retention).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Receptor downregulation is an important mechanism for modulating hormone sensitivity. Which process correctly describes homologous desensitization of a GPCR?",
+      "options": [
+        "Chronic hormone stimulation leads to GRK phosphorylation of the occupied receptor, β-arrestin binding, receptor internalization via clathrin-coated pits, and either recycling or lysosomal degradation, reducing cell surface receptor number",
+        "All cellular receptors are simultaneously internalized regardless of which one is stimulated",
+        "The receptor gene is permanently silenced by DNA methylation after prolonged stimulation",
+        "Receptor downregulation only occurs through decreased receptor mRNA transcription, never through internalization"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Homologous desensitization (affecting only the stimulated receptor, not others) is a multi-step process: (1) Agonist binding activates the GPCR and triggers G protein signaling. (2) The activated, agonist-occupied receptor is specifically recognized and phosphorylated by G protein-coupled receptor kinases (GRKs, particularly GRK2/β-ARK for β-adrenergic receptors). GRKs only phosphorylate the active conformation of the receptor. (3) Phosphorylated receptor binds β-arrestin with high affinity. β-arrestin sterically blocks further G protein coupling (uncoupling). (4) β-arrestin also serves as an adaptor for clathrin and AP-2, targeting the receptor for clathrin-mediated endocytosis. (5) Internalized receptors in endosomes are either dephosphorylated and recycled back to the plasma membrane (resensitization, minutes) or targeted to lysosomes for degradation (downregulation, hours). This process reduces cell surface receptor density and hormone responsiveness during chronic exposure.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pheromones are chemical signals used for intraspecific communication. In which well-characterized example do pheromones directly trigger a neuroendocrine response?",
+      "options": [
+        "The Bruce effect: exposure of a pregnant mouse to urine from a strange male (different MHC) triggers prolactin suppression and pregnancy termination via the vomeronasal organ-accessory olfactory bulb pathway",
+        "Human sweat contains pheromones that consciously alter food preferences in nearby individuals",
+        "Pheromones act exclusively through taste receptors on the tongue",
+        "Pheromones have no endocrine effects in any vertebrate species"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Bruce effect (discovered by Hilda Bruce in 1959) is a classic example of pheromone-mediated neuroendocrine response. When a recently mated female mouse is exposed to urine from a genetically unfamiliar male (differing at MHC/H-2 loci), the following cascade occurs: (1) Volatile and non-volatile urinary pheromones (major urinary proteins, MUPs, and small volatile molecules) are detected by the vomeronasal organ (VNO) via V1R and V2R receptors. (2) Signals travel via the accessory olfactory bulb to the medial amygdala and hypothalamus. (3) Hypothalamic dopaminergic neurons are activated, releasing dopamine into the portal system. (4) Dopamine suppresses prolactin secretion from pituitary lactotrophs. (5) Without prolactin, the corpus luteum cannot be maintained (prolactin is luteotropic in rodents), progesterone drops, and pregnancy terminates. The stud male's pheromones form a 'memory' during mating that specifically blocks this response to the familiar male, mediated by the accessory olfactory system.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Multiple endocrine neoplasia type 1 (MEN1) is caused by mutations in the menin gene. Which combination of endocrine tumors characterizes MEN1?",
+      "options": [
+        "Medullary thyroid carcinoma, pheochromocytoma, and parathyroid hyperplasia",
+        "Insulinoma, prolactinoma, and adrenal cortical carcinoma",
+        "Parathyroid adenomas/hyperplasia, pancreatic islet cell tumors (gastrinoma, insulinoma), and anterior pituitary adenomas (prolactinoma, GH-secreting)",
+        "Papillary thyroid carcinoma, adrenal adenoma, and renal cell carcinoma"
+      ],
+      "correctAnswer": "C",
+      "explanation": "MEN1 (Wermer syndrome) is an autosomal dominant disorder caused by loss-of-function mutations in the MEN1 gene encoding menin, a tumor suppressor. The classic triad involves tumors in three 'P's: (1) Parathyroid (95%): multiple parathyroid adenomas or hyperplasia causing primary hyperparathyroidism — the most common and usually earliest manifestation. (2) Pancreatic islet cells (40-70%): gastrinomas (Zollinger-Ellison syndrome — peptic ulcers from excess gastrin), insulinomas (hypoglycemia), glucagonomas, VIPomas. (3) Anterior Pituitary (30-40%): prolactinomas (most common), GH-secreting adenomas (acromegaly), non-functioning adenomas. This is distinct from MEN2A (option A) which involves medullary thyroid carcinoma, pheochromocytoma, and parathyroid hyperplasia, caused by RET proto-oncogene gain-of-function mutations. Menin functions as a scaffold protein involved in histone modification (H3K4 methylation via MLL complex), cell cycle control, and TGF-β signaling.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the role of kisspeptin in reproductive endocrinology:\n(I) Kisspeptin neurons in the arcuate nucleus of the hypothalamus are the primary upstream regulators of GnRH neurons, integrating metabolic and environmental signals\n(II) Loss-of-function mutations in the kisspeptin receptor (KISS1R/GPR54) cause hypogonadotropic hypogonadism and failure of puberty onset\n(III) Kisspeptin neurons are inhibited by sex steroids, providing the mechanism for negative feedback on GnRH\n(IV) Kisspeptin neurons in the AVPV/PeN region mediate the positive feedback estrogen signal that triggers the preovulatory LH surge in females",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "True"
+      ],
+      "correctAnswer": "TTTT",
+      "explanation": "(I) TRUE: Kisspeptin neurons (expressing Kiss1 gene) in the arcuate nucleus (ARC, also called KNDy neurons because they co-express Kisspeptin, Neurokinin B, and Dynorphin) are now recognized as the key 'GnRH pulse generator.' They integrate signals from metabolic state (leptin, insulin), photoperiod, stress, and sex steroids to regulate GnRH neuron firing and pulsatile GnRH release. (II) TRUE: This was the landmark discovery (2003) — patients with inactivating mutations in GPR54 (now KISS1R) had normal GnRH neurons but failed to undergo puberty due to absent GnRH secretion. Similarly, Kiss1 knockout mice are infertile. This established kisspeptin as an essential gatekeeper of reproductive maturation. (III) TRUE: ARC kisspeptin neurons express ERα and androgen receptors. Estradiol and testosterone inhibit these neurons, reducing kisspeptin input to GnRH neurons — this mediates the negative feedback limb. (IV) TRUE: A distinct population of kisspeptin neurons in the AVPV/PeN (anteroventral periventricular nucleus) is STIMULATED by estradiol (positive feedback), existing only in females. The surge of kisspeptin from AVPV triggers the GnRH/LH surge needed for ovulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Thyroid hormone transport into cells requires specific membrane transporters. Which transporter is most critical for thyroid hormone entry into the brain?",
+      "options": [
+        "GLUT1 (glucose transporter)",
+        "NIS (sodium-iodide symporter)",
+        "MCT8 (monocarboxylate transporter 8), encoded by SLC16A2",
+        "OATP1C1, the primary T4 transporter expressed exclusively on neurons"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Although thyroid hormones are lipophilic, they do not efficiently cross cell membranes by simple diffusion and require specific transmembrane transporters. MCT8 (monocarboxylate transporter 8, encoded by SLC16A2 on the X chromosome) is the most important thyroid hormone transporter for brain development and function. MCT8 transports both T3 and T4 across the blood-brain barrier (expressed on brain capillary endothelium) and into neurons. Mutations in SLC16A2 cause Allan-Herndon-Dudley syndrome: severe X-linked psychomotor retardation, indicating that thyroid hormone transport into the developing brain is critical for neurodevelopment. Affected males have characteristic thyroid function tests: high T3, low T4, normal/slightly elevated TSH. OATP1C1 is also important for T4 transport at the blood-brain barrier but MCT8 mutations cause the most severe phenotype. NIS is the iodide transporter in the thyroid gland, not for thyroid hormone transport.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A patient with suspected pheochromocytoma undergoes biochemical testing:\n\nTest | Result | Normal range\n24-hour urine metanephrines | 2,800 μg/24hr | <400 μg/24hr\n24-hour urine catecholamines | 950 μg/24hr | <100 μg/24hr\nPlasma metanephrines | 3.2 nmol/L | <0.5 nmol/L\nPlasma cortisol | 12 μg/dL | 6-23 μg/dL\nPlasma aldosterone | 15 ng/dL | 3-16 ng/dL\n\nWhich conclusion is best supported?",
+      "options": [
+        "Normal adrenal function; all values within range",
+        "Cushing's syndrome based on cortisol levels",
+        "Primary aldosteronism causing hypertension",
+        "Markedly elevated catecholamines and metanephrines strongly suggest pheochromocytoma; normal cortisol and aldosterone exclude adrenal cortical pathology"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The biochemical profile shows: (1) Markedly elevated 24-hour urine metanephrines (7× upper limit), urine catecholamines (9.5× upper limit), and plasma metanephrines (6.4× upper limit). Metanephrines are the methylated metabolites of catecholamines (produced by COMT within the adrenal medulla) and are considered the most sensitive biomarkers for pheochromocytoma — levels >4× upper normal have very high specificity (~100%). (2) Normal plasma cortisol (12 μg/dL) excludes Cushing's syndrome. (3) Normal plasma aldosterone (15 ng/dL) excludes primary aldosteronism (Conn's syndrome). The data localize the pathology to the adrenal medulla (catecholamine-producing tissue), not the cortex (cortisol/aldosterone-producing tissue). Next steps would include CT/MRI of the adrenals, MIBG scintigraphy, and genetic testing (SDH mutations for hereditary paraganglioma, RET for MEN2, VHL).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Somatostatin (SST) is a widespread inhibitory peptide. Which of the following is NOT a physiological action of somatostatin?",
+      "options": [
+        "Inhibition of growth hormone release from the anterior pituitary",
+        "Inhibition of insulin and glucagon secretion from pancreatic islets",
+        "Inhibition of gastric acid and pepsin secretion",
+        "Stimulation of thyroid hormone synthesis by directly activating TPO"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Somatostatin (SST, also called somatotropin release-inhibiting factor, SRIF) is sometimes called the 'universal inhibitor' because it suppresses secretion from numerous tissues. Produced by hypothalamic neurons, pancreatic delta cells, and GI tract D cells, SST acts through five receptor subtypes (SSTR1-5, all Gi-coupled GPCRs). Legitimate SST actions include: (A) GH inhibition — SST from the hypothalamus inhibits GH release from anterior pituitary somatotrophs (SSTR2 and SSTR5); (B) Insulin/glucagon inhibition — pancreatic delta cell SST inhibits both beta cell insulin and alpha cell glucagon secretion via paracrine signaling; (C) GI inhibition — SST inhibits gastric acid (parietal cells), pepsin (chief cells), gastrin (G cells), secretin, CCK, VIP, and pancreatic enzyme secretion. (D) FALSE — SST does NOT stimulate thyroid hormone synthesis. In fact, SST modestly INHIBITS TSH secretion. Somatostatin analogs (octreotide, lanreotide) are used therapeutically for acromegaly, carcinoid tumors, and variceal bleeding.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Vitamin D (calcitriol, 1,25-(OH)₂D₃) acts through which type of receptor to exert its classical effects on calcium homeostasis?",
+      "options": [
+        "A membrane-bound GPCR coupled to Gs",
+        "A receptor tyrosine kinase similar to the insulin receptor",
+        "A nuclear receptor (VDR) that heterodimerizes with RXR and acts as a ligand-dependent transcription factor, binding vitamin D response elements (VDREs) in target gene promoters",
+        "An ion channel receptor that directly conducts Ca²⁺ into the cell"
+      ],
+      "correctAnswer": "C",
+      "explanation": "1,25-(OH)₂D₃ (calcitriol, the hormonally active form of vitamin D) acts through the vitamin D receptor (VDR), a member of the nuclear receptor superfamily. The signaling mechanism follows the classic nuclear receptor paradigm: (1) Calcitriol enters the target cell and binds VDR in the nucleus. (2) VDR heterodimerizes with retinoid X receptor (RXR). (3) The VDR/RXR heterodimer binds to vitamin D response elements (VDREs, typically DR3 — direct repeats spaced by 3 nucleotides) in target gene promoters. (4) Coactivators are recruited (SRC/p160 family, Mediator complex), activating transcription. Key target genes include: calbindin-D9k and TRPV6 (intestinal Ca²⁺ absorption), calbindin-D28k and TRPV5 (renal Ca²⁺ reabsorption), RANKL (bone remodeling), CYP24A1 (calcitriol degradation — negative feedback). VDR is expressed in >30 tissues, explaining vitamin D's pleiotropic effects beyond calcium homeostasis (immunity, cell differentiation, cardiovascular).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher discovers that a novel peptide 'EndoX' is released from enteroendocrine cells after fat ingestion. She wants to determine whether EndoX acts as an incretin (potentiating glucose-stimulated insulin secretion). Which experiment would most directly test this?",
+      "options": [
+        "Measure EndoX levels before and after a fatty meal",
+        "Infuse EndoX intravenously during a hyperglycemic clamp and measure whether insulin secretion is greater than during the hyperglycemic clamp alone; confirm glucose-dependence by showing no insulin secretion enhancement at normal glucose levels",
+        "Feed mice a high-fat diet for 12 weeks and measure body weight",
+        "Knock out the EndoX gene and measure postprandial glucose levels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "An incretin is defined as a gut-derived hormone that potentiates glucose-stimulated insulin secretion (GSIS) — meaning it enhances insulin release only when glucose is elevated. The hyperglycemic clamp (maintaining blood glucose at a constant elevated level via glucose infusion) isolates the insulin secretory response from glucose variability. To test incretin activity: (1) Perform hyperglycemic clamp alone, measuring steady-state insulin secretion (baseline GSIS). (2) During a second clamp at the same glucose level, co-infuse EndoX and measure whether insulin secretion increases above baseline (incretin effect). (3) Critically, infuse EndoX at normal (euglycemic) glucose levels — if EndoX is a true incretin, it should NOT stimulate insulin release at normal glucose (glucose-dependence). This glucose-dependence distinguishes incretins from direct insulin secretagogues (like sulfonylureas). Option A shows release but not function. Option D shows a metabolic effect but doesn't prove incretin action specifically.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following accurately compares paracrine, autocrine, and endocrine signaling?",
+      "options": [
+        "Paracrine signals act on nearby cells via local diffusion; autocrine signals act on the same cell that produced them; endocrine signals travel via the bloodstream to distant target cells — all three mechanisms may use the same signaling molecule in different contexts",
+        "Paracrine signals always use peptides, autocrine signals always use steroids, and endocrine signals always use amines",
+        "Paracrine and autocrine signals require receptors but endocrine signals act by direct membrane penetration only",
+        "These three categories are mutually exclusive and a single molecule can only function in one mode"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cell signaling is classified by the distance between the signaling cell and target cell: (1) Endocrine: the hormone is secreted into the bloodstream and acts on distant target cells (e.g., insulin from pancreas acting on muscle). (2) Paracrine: the signal diffuses locally through extracellular fluid to act on neighboring cells (e.g., histamine from mast cells acting on nearby blood vessels, growth factors in development). (3) Autocrine: the cell responds to signals it produces itself (e.g., cancer cells secreting growth factors that stimulate their own proliferation, IL-2 from T cells stimulating T cell proliferation). A key concept is that the SAME molecule can function in multiple modes: e.g., somatostatin acts as an endocrine hormone (hypothalamus → anterior pituitary), paracrine signal (delta cells → adjacent beta/alpha cells in islets), and neurotransmitter (CNS synapses). The classification depends on the distance and route, not the molecular identity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Photoperiodism in seasonal breeders (e.g., hamsters) involves melatonin signaling from the pineal gland to the reproductive axis. Which statement correctly describes this mechanism in short-day breeders like sheep?",
+      "options": [
+        "Long nights (short days) increase melatonin duration, which stimulates the HPG axis and initiates breeding season in sheep",
+        "Melatonin inhibits GnRH neurons year-round; breeding occurs during melatonin-free periods in summer",
+        "Melatonin has no role in seasonal reproduction; only temperature changes matter",
+        "Long days increase melatonin, stimulating breeding in long-day breeders like sheep"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sheep are 'short-day breeders' — they become reproductively active in autumn when day length decreases. The mechanism involves melatonin, which is secreted by the pineal gland exclusively during darkness (scotophase). As days shorten in autumn, the duration of nightly melatonin secretion increases. In sheep, this prolonged melatonin signal is interpreted by the hypothalamus (specifically by kisspeptin neurons in the arcuate nucleus and preoptic area) as a 'breed now' signal. The extended melatonin acts on MT1 receptors in the pars tuberalis of the pituitary, regulating TSH and subsequently hypothalamic T3/T4 conversion (via DIO2/DIO3), which modulates kisspeptin and GnRH pulse generator activity. The result is increased GnRH pulsatility, LH/FSH surge, and gonadal activation. In contrast, hamsters are 'long-day breeders' — for them, the same prolonged melatonin signal SUPPRESSES the HPG axis, and they breed in summer when melatonin duration is short.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Insulin-like growth factors (IGF-1 and IGF-2) mediate many effects attributed to growth hormone. Which statement correctly describes the GH-IGF axis?",
+      "options": [
+        "IGF-1 is produced exclusively by the liver and acts only on bone growth plates",
+        "GH stimulates hepatic IGF-1 production (endocrine mode); GH also stimulates local IGF-1 production in target tissues (paracrine/autocrine mode); IGF-1 mediates most of GH's growth-promoting effects and provides negative feedback to suppress GH secretion",
+        "IGF-1 stimulates GH release in a positive feedback loop",
+        "GH acts directly on all tissues without requiring IGF-1 as an intermediary"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The GH-IGF axis operates through both endocrine and paracrine mechanisms. The dual effector theory states: (1) Endocrine IGF-1: GH stimulates hepatic IGF-1 production (the major circulating source, ~75% of plasma IGF-1). Liver-derived IGF-1 circulates bound to IGF-binding proteins (IGFBPs, especially IGFBP-3 and the acid-labile subunit, forming a ternary complex that extends IGF-1 half-life from minutes to hours). Circulating IGF-1 mediates many systemic GH effects and provides negative feedback to the hypothalamus (increasing somatostatin) and pituitary (decreasing GH secretion). (2) Paracrine/autocrine IGF-1: GH also stimulates local IGF-1 production in many tissues (bone, muscle, cartilage), where IGF-1 acts in paracrine/autocrine fashion to promote cell proliferation and differentiation. (3) Direct GH effects: GH also has direct effects not mediated by IGF-1, including lipolysis in adipose tissue and diabetogenic effects.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about hormone half-life and its clinical significance:\n(I) Protein-bound hormones (e.g., T4 bound to TBG, cortisol bound to CBG) have longer half-lives than free hormones because binding protects them from degradation and renal clearance\n(II) Peptide hormones generally have shorter half-lives (minutes) than steroid hormones (hours to days)\n(III) The half-life of a hormone determines how quickly its levels change after secretion rate changes, affecting the temporal resolution of hormonal signaling\n(IV) Synthetic hormone analogs are designed with identical half-lives to their natural counterparts",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "(I) TRUE: Protein binding creates a reservoir of hormone that is protected from glomerular filtration (protein-bound complexes are too large to filter), enzymatic degradation, and hepatic clearance. T4 has a half-life of ~6-7 days largely because 99.97% is protein-bound (to TBG, transthyretin, and albumin). Free T4 has a much shorter half-life. (II) TRUE: Peptide hormones (insulin ~5 min, ACTH ~10 min, PTH ~5 min) are rapidly degraded by peptidases and cleared by the kidneys. Steroid hormones bound to proteins last longer (cortisol ~60-90 min, T4 ~7 days). Catecholamines are intermediate (1-2 min). (III) TRUE: Half-life determines the temporal dynamics of hormonal signaling. Short-lived hormones (insulin, catecholamines) allow rapid, pulsatile regulation. Long-lived hormones (T4) provide stable, slowly-changing signals. Clinical implication: after thyroidectomy, T4 levels decline slowly over weeks, while insulin levels fall within minutes of β-cell destruction. (IV) FALSE: Synthetic analogs are often deliberately engineered with DIFFERENT half-lives — usually longer for convenience (e.g., insulin glargine ~24 hr vs. native insulin ~5 min, desmopressin ~3 hr vs. ADH ~20 min, semaglutide ~7 days vs. GLP-1 ~2 min).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "The zona glomerulosa of the adrenal cortex lacks which key enzyme, making it unable to produce cortisol?",
+      "options": [
+        "StAR (steroidogenic acute regulatory) protein",
+        "CYP11A1 (cholesterol side-chain cleavage enzyme/P450scc)",
+        "CYP17A1 (17α-hydroxylase/17,20-lyase)",
+        "CYP11B2 (aldosterone synthase)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The zone-specific steroidogenic enzyme expression determines which steroid each adrenal cortical zone produces. The zona glomerulosa LACKS CYP17A1 (17α-hydroxylase/17,20-lyase). Without CYP17A1, it cannot convert pregnenolone to 17-hydroxypregnenolone or progesterone to 17-hydroxyprogesterone — steps required for both cortisol and androgen synthesis. Instead, pregnenolone and progesterone are directed toward the mineralocorticoid pathway, ultimately producing aldosterone via 21-hydroxylase (CYP21A2), 11β-hydroxylase (CYP11B2), and the unique aldosterone synthase activity of CYP11B2. The zona fasciculata and reticularis DO express CYP17A1, allowing cortisol and androgen production respectively. However, only the zona glomerulosa expresses CYP11B2 (aldosterone synthase) while the fasciculata expresses CYP11B1 (11β-hydroxylase without aldosterone synthase activity). All three zones express StAR, CYP11A1 (the first and rate-limiting step in steroidogenesis), and 3β-HSD.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following hormones uses the JAK-STAT signaling pathway as its primary signal transduction mechanism?",
+      "options": [
+        "Insulin",
+        "Cortisol",
+        "Growth hormone",
+        "Epinephrine"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Growth hormone (GH) binds to the GH receptor (GHR), a type I cytokine receptor that signals through the JAK-STAT pathway. The mechanism: (1) GH binds to a preformed GHR dimer on the target cell surface. (2) Binding induces conformational change, activating JAK2 (Janus kinase 2), which is constitutively associated with the GHR intracellular domain. (3) Activated JAK2 phosphorylates itself (autophosphorylation), the GHR (creating docking sites), and STAT proteins (Signal Transducers and Activators of Transcription, particularly STAT5a and STAT5b). (4) Phosphorylated STATs dimerize, translocate to the nucleus, and activate transcription of target genes including IGF-1, SOCS (suppressors of cytokine signaling — negative feedback), and genes for growth and metabolism. GH also activates MAPK and PI3K pathways via SHC/IRS adaptors. Insulin uses receptor tyrosine kinase/IRS/PI3K. Cortisol uses nuclear receptor. Epinephrine uses GPCRs.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures plasma calcium and PTH levels in four patients:\n\nPatient | Plasma Ca²⁺ (mg/dL) | PTH (pg/mL) | Phosphate (mg/dL)\nNormal | 9.5 | 30 | 3.5\nPatient A | 12.0 | 85 | 2.0\nPatient B | 7.0 | 5 | 6.5\nPatient C | 12.5 | <2 | 3.0\nPatient D | 7.5 | 150 | 5.5\n\nWhich patient most likely has primary hyperparathyroidism?",
+      "options": [
+        "Patient A — elevated calcium with elevated PTH indicates autonomous PTH overproduction",
+        "Patient B — low calcium with low PTH indicates parathyroid insufficiency",
+        "Patient C — elevated calcium with suppressed PTH indicates non-PTH-mediated hypercalcemia",
+        "Patient D — low calcium with high PTH indicates secondary hyperparathyroidism"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Primary hyperparathyroidism (PHPT) is defined by autonomous overproduction of PTH, typically from a parathyroid adenoma. The hallmark is: elevated calcium (12.0 mg/dL, above normal ~8.5-10.5) WITH inappropriately elevated PTH (85 pg/mL, normal ~15-65). Normally, high calcium should suppress PTH via the calcium-sensing receptor — the fact that PTH remains elevated despite hypercalcemia indicates autonomous (unregulated) PTH secretion. Low phosphate (2.0) confirms PTH excess (PTH increases renal phosphate excretion). Patient B has HYPOparathyroidism: low Ca²⁺, low PTH, high phosphate — the parathyroid glands are dysfunctional. Patient C has non-PTH-mediated hypercalcemia (e.g., malignancy-associated via PTHrP, vitamin D intoxication, or granulomatous disease) — the high calcium appropriately suppresses PTH to undetectable levels. Patient D has secondary hyperparathyroidism: low Ca²⁺ (stimulus) with appropriately elevated PTH (compensation), often seen in chronic kidney disease or vitamin D deficiency.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pulsatile hormone secretion is a fundamental feature of the endocrine system. What advantage does pulsatile release provide over continuous secretion?",
+      "options": [
+        "Pulsatile release uses less hormone overall by avoiding receptor desensitization, maintaining receptor sensitivity between pulses, and allowing frequency-encoded information transfer that continuous secretion cannot provide",
+        "Pulsatile release simply reflects irregular blood sampling and has no physiological significance",
+        "Pulsatile release is a pathological finding that indicates endocrine disease",
+        "Continuous secretion is always more effective than pulsatile secretion for all hormones"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pulsatile secretion is a fundamental and evolutionarily conserved feature of endocrine signaling. Its advantages include: (1) Prevention of receptor desensitization: Continuous stimulation causes GRK phosphorylation, β-arrestin binding, and receptor internalization/downregulation. Pulsatile delivery allows receptors to resensitize between pulses, maintaining responsiveness. GnRH is the classic example — continuous GnRH paradoxically SUPPRESSES gonadotropins (basis for GnRH agonist therapy). (2) Frequency encoding: Different pulse frequencies can activate different downstream pathways (e.g., high-frequency GnRH favors LH, low-frequency favors FSH). This adds an information dimension beyond simple concentration. (3) Efficiency: Pulsatile delivery achieves the same biological effect with less total hormone. (4) Temporal coordination: Pulsatile release allows synchronization with circadian rhythms and metabolic cycles. Nearly all hypothalamic-pituitary hormones are pulsatile: GH (largest pulse during sleep), ACTH/cortisol (circadian), LH/FSH (ultradian), prolactin, TSH.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Thyroid C cells (parafollicular cells) produce calcitonin. What is its primary physiological function and clinical significance?",
+      "options": [
+        "Calcitonin is essential for calcium homeostasis in humans and its absence causes severe hypercalcemia",
+        "Calcitonin inhibits osteoclast-mediated bone resorption and promotes renal calcium excretion, but it plays a minor physiological role in adult humans; its main clinical significance is as a tumor marker for medullary thyroid carcinoma",
+        "Calcitonin is the primary hormone for calcium absorption from the gut",
+        "Calcitonin stimulates osteoblast activity and is the main treatment for osteoporosis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Calcitonin is a 32-amino acid peptide produced by thyroid C cells (parafollicular cells, derived from neural crest) in response to elevated blood calcium. Its actions include: (1) Inhibiting osteoclast-mediated bone resorption by binding calcitonin receptors (Gs-coupled) on osteoclasts, reducing ruffled border formation and acid secretion. (2) Increasing renal calcium excretion by inhibiting tubular Ca²⁺ reabsorption. Both effects lower blood calcium. However, calcitonin's physiological role in adult humans is considered MINOR — total thyroidectomy patients (who lose C cells) do not develop significant hypercalcemia, and calcitonin-secreting medullary thyroid carcinoma patients do not develop hypocalcemia. Its role may be more important during pregnancy/lactation and in childhood when bone turnover is high. Clinically, calcitonin's main significance is as a highly sensitive tumor marker for medullary thyroid carcinoma (MTC), which arises from C cells. Calcitonin gene-related peptide (CGRP), from alternative splicing of the same gene, is a potent vasodilator relevant to migraine.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a brain-specific conditional knockout of the insulin receptor (NIRKO mouse — neuron-specific insulin receptor knockout) affects body weight, food intake, and glucose homeostasis. Which control group is most appropriate?",
+      "options": [
+        "Wild-type mice with no Cre or floxed alleles",
+        "Littermate mice carrying the floxed insulin receptor alleles but lacking the nestin-Cre transgene (Cre-negative floxed controls), plus mice with nestin-Cre but wild-type insulin receptor alleles (Cre-only controls)",
+        "Mice from a completely different genetic background fed the same diet",
+        "NIRKO mice treated with systemic insulin injections"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Conditional knockout experiments using the Cre-lox system require careful controls because both the Cre transgene and the floxed (loxP-flanked) allele can independently affect phenotype. The most rigorous approach uses TWO control groups from the same genetic background (ideally littermates): (1) Cre-negative floxed controls: mice homozygous for the floxed insulin receptor allele but lacking Cre. These control for any effects of loxP sites on gene expression (insertional effects, subtle splicing changes). (2) Cre-only controls: mice expressing nestin-Cre on wild-type insulin receptor alleles. These control for any effects of Cre expression itself — Cre recombinase can cause DNA damage at pseudo-loxP sites in the mammalian genome, and the nestin promoter drives Cre in neurons where non-specific effects could confound metabolic phenotypes. Wild-type mice from the same cross are also useful. Using mice from different backgrounds (option C) introduces strain-related confounds. Systemic insulin (option D) doesn't control for the genetic manipulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Glucocorticoid resistance can occur when target cells reduce their sensitivity to cortisol. Which of the following mechanisms can cause glucocorticoid resistance?",
+      "options": [
+        "Mutations in the glucocorticoid receptor (GR/NR3C1) reducing ligand binding affinity, increased expression of 11β-HSD2 converting cortisol to cortisone, or overexpression of GR-β (a dominant-negative splice variant that inhibits GR-α transcriptional activity)",
+        "Increased adrenal cortisol production",
+        "Mutations in the mineralocorticoid receptor",
+        "Overexpression of ACTH receptors on the adrenal cortex"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Glucocorticoid resistance can occur through several mechanisms: (1) GR gene mutations: Mutations in NR3C1 that reduce cortisol binding affinity, impair nuclear translocation, or disrupt DNA binding cause familial glucocorticoid resistance (Chrousos syndrome). Patients have elevated cortisol/ACTH but no Cushingoid features because tissues are resistant. The elevated ACTH drives adrenal androgen and mineralocorticoid excess. (2) 11β-HSD2 overexpression: In tissues where 11β-HSD2 is upregulated, cortisol is converted to inactive cortisone before it can bind GR, creating local glucocorticoid resistance. (3) GR-β splice variant: GR-β is an alternatively spliced isoform that cannot bind glucocorticoids but can form heterodimers with GR-α, acting as a dominant-negative inhibitor. GR-β overexpression is associated with steroid-resistant asthma and inflammatory diseases. (4) Other mechanisms: altered coregulator expression, increased P-glycoprotein efflux of cortisol, or post-translational modifications of GR.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nematodes (C. elegans) use which hormonal system to regulate dauer formation, a stress-resistant larval state analogous to insect diapause?",
+      "options": [
+        "Dafachronic acids (steroid-like molecules) act through the nuclear receptor DAF-12; low dafachronic acid levels (from reduced insulin-like signaling) promote dauer formation, while high levels promote reproductive growth",
+        "Ecdysone and juvenile hormone regulate dauer formation identically to insect metamorphosis",
+        "C. elegans uses only neurotransmitters for developmental decisions; it has no endocrine system",
+        "Vertebrate-type thyroid hormone controls dauer formation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "C. elegans dauer formation is regulated by an endocrine signaling network centered on the nuclear receptor DAF-12 and its ligands, dafachronic acids (DAs). Under favorable conditions (abundant food, low population density, moderate temperature): (1) Insulin-like signaling (via DAF-2 receptor/PI3K/Akt pathway) is active, which promotes DA biosynthesis. (2) DAs bind DAF-12, which then acts as a transcriptional activator promoting reproductive development genes. Under unfavorable conditions: (1) Reduced insulin signaling activates DAF-16/FOXO transcription factor (longevity pathway). (2) DA production decreases. (3) Unliganded DAF-12, in complex with the corepressor DIN-1, represses reproductive programs and activates dauer-specific genes. Dauer pheromones (ascarosides — small molecules secreted at high population density) also feed into this decision through chemosensory neurons. This is analogous but not homologous to insect ecdysone/JH signaling. Interestingly, the insulin/IGF pathway's role in longevity discovered in C. elegans has parallels in mammals.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
     }
   ]
 }

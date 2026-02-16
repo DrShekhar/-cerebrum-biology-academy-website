@@ -1,0 +1,310 @@
+{
+  "batch": {
+    "name": "Campbell Ch51 Animal Behavior — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 100
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "Fixed action patterns (FAPs) are stereotyped behavioral sequences triggered by specific stimuli. Which of the following best describes the key properties of a FAP?",
+      "options": [
+        "FAPs are highly variable behaviors that differ significantly each time they are performed",
+        "FAPs are innate, stereotyped behavioral sequences triggered by a specific sign stimulus (releaser) — once initiated, the motor program runs to completion regardless of changes in sensory feedback; they are species-specific and performed without prior learning, as demonstrated by Lorenz and Tinbergen's studies on the egg-retrieval behavior of the greylag goose",
+        "FAPs are entirely learned behaviors that require extensive practice to perform correctly",
+        "FAPs are conscious voluntary decisions that can be stopped at any point during execution"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Fixed action patterns are fundamental concepts in classical ethology, formalized by Konrad Lorenz and Nikolaas Tinbergen. Key properties: (1) Innate — FAPs develop without learning, as shown by isolation (Kaspar Hauser) experiments where animals raised without exposure to conspecifics still perform species-typical FAPs. (2) Stereotyped — the motor pattern is highly consistent within a species, performed the same way each time (though minor variations exist). (3) Species-specific — each species has its own repertoire of FAPs. (4) Ballistic — once triggered, the complete sequence runs to completion even if the triggering stimulus is removed. Lorenz demonstrated this with the greylag goose egg-retrieval behavior: if the egg is removed mid-retrieval, the goose completes the bill-tucking motion. (5) Triggered by sign stimuli (releasers) — specific sensory cues that activate an innate releasing mechanism (IRM). Tinbergen showed that three-spined stickleback males attack models with red undersides (sign stimulus for territorial aggression), regardless of overall shape. (6) Threshold varies — the internal motivational state affects how easily a FAP is triggered (vacuum behavior occurs when motivation is very high without a releaser). Modern neuroethology has identified the neural circuits underlying many FAPs, though the strict 'ballistic' criterion has been relaxed somewhat.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Inclusive fitness theory, proposed by W.D. Hamilton, explains the evolution of altruistic behavior. What is Hamilton's rule?",
+      "options": [
+        "Hamilton's rule states that altruistic behavior will be favored by natural selection when rB > C, where r is the coefficient of relatedness between altruist and recipient, B is the reproductive benefit to the recipient, and C is the reproductive cost to the altruist — this explains why eusocial Hymenoptera (ants, bees, wasps) with haplodiploid sex determination have unusually high r among sisters (0.75)",
+        "Hamilton's rule states that all organisms always behave selfishly to maximize their own reproduction",
+        "Hamilton's rule applies only to parental care, not to interactions between siblings or other relatives",
+        "Hamilton's rule states that altruism evolves only in species with exactly two offspring per generation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "W.D. Hamilton's 1964 papers on the genetic evolution of social behavior introduced inclusive fitness theory, one of the most important concepts in behavioral ecology. Hamilton's rule: an allele for altruistic behavior will spread when rB > C, where: r = coefficient of relatedness (probability of sharing the allele by descent). For diploid organisms: parent-offspring r = 0.5, full siblings r = 0.5, half-siblings r = 0.25, grandparent-grandchild r = 0.25, cousins r = 0.125. B = reproductive benefit gained by the recipient due to the altruistic act. C = reproductive cost to the altruist. The concept of inclusive fitness = direct fitness (own reproduction) + indirect fitness (reproduction of relatives weighted by r). This explains kin selection — organisms can increase the transmission of their genes by helping relatives reproduce. Haplodiploidy in Hymenoptera creates an asymmetry: sisters share r = 0.75 (they share 100% of their father's haploid genome and 50% of their mother's diploid genome). This makes sisters more related to each other than to their own daughters (r = 0.5), potentially favoring worker sterility — though haplodiploidy alone is insufficient to explain eusociality, as it also predicts reduced investment in brothers (r = 0.25). Hamilton's famous quip: 'I would lay down my life for two brothers or eight cousins' (2 × 0.5 > 1; 8 × 0.125 > 1).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Imprinting is a form of learning that occurs during a critical (sensitive) period early in development. What is filial imprinting, and what neural mechanism underlies it?",
+      "options": [
+        "Filial imprinting is the process by which a young precocial bird learns the characteristics of its parent during a brief sensitive period (typically the first 24-48 hours post-hatching) — Lorenz demonstrated this with greylag goslings that imprinted on him; the neural substrate involves the intermediate medial mesopallium (IMM) in the chick forebrain, where synaptic changes encode the visual features of the imprinted object",
+        "Imprinting occurs throughout the animal's entire lifespan with equal effectiveness",
+        "Imprinting only affects auditory processing and has no visual component",
+        "Imprinting is identical to classical conditioning and uses the same neural circuits"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Filial imprinting, described by Konrad Lorenz (Nobel Prize 1973), is a form of rapid, irreversible learning during a critical sensitive period that establishes the identity of the parent figure. Key features: (1) Sensitive period — occurs during a defined developmental window (~12-36 hours post-hatching in chickens, up to ~48 hours in geese). Before and after this window, imprinting is much less effective. (2) Rapid — exposure for as little as 10 minutes can be sufficient. (3) Relatively irreversible — once established, the imprinted preference is stable and difficult to modify. (4) Influences later behavior — filial imprinting determines which individual the young follow (attachment), while sexual imprinting (a related process occurring later) influences mate choice. (5) Species generality — occurs in many precocial birds and some mammals. Neural basis: In domestic chicks, Gabriel Horn and colleagues identified the intermediate medial mesopallium (IMM, formerly IMHV) as the critical brain region. During imprinting: (a) NMDA receptor-dependent synaptic plasticity in IMM encodes visual features of the imprinted object. (b) c-fos expression increases in IMM during the sensitive period. (c) Dendritic spine density changes in IMM neurons. (d) Bilateral IMM lesions prevent imprinting but do not affect already-imprinted preferences (stored elsewhere after consolidation). Option B ignores the sensitive period. Option C is too narrow. Option D mischaracterizes the learning type.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Optimal foraging theory predicts that animals will maximize their net energy intake per unit time while foraging. What is the marginal value theorem?",
+      "options": [
+        "The marginal value theorem (Charnov, 1976) predicts that an optimal forager should leave a depleting food patch when the marginal rate of energy gain in that patch drops to the average rate of gain for the habitat as a whole, including travel time between patches — this means animals should stay longer in rich patches and leave poor patches sooner, spending more time traveling when patches are far apart",
+        "Animals should always consume all food in a patch before moving to the next one",
+        "Animals should spend equal time in every food patch regardless of patch quality",
+        "The theorem states that animals should always forage in the nearest patch to minimize travel time"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The marginal value theorem (MVT), formulated by Eric Charnov (1976), is one of the most successful quantitative predictions in behavioral ecology. The model assumes: (1) Food patches are distributed across a habitat, separated by travel time. (2) Within a patch, the rate of food intake decreases over time as the patch is depleted (diminishing returns — a negatively accelerated gain function). (3) The forager cannot simultaneously forage and travel. The optimization: an animal should leave a patch when the instantaneous (marginal) rate of energy gain equals the long-term average rate for the entire habitat. Graphically, this is found by drawing a tangent line from the travel time point to the gain function curve. Predictions: (a) Animals stay longer in richer patches (more food to extract before marginal rate drops to average). (b) Animals stay longer in all patches when travel time between patches increases (average rate is lower, so the marginal rate takes longer to decline to that level). (c) Animals leave patches sooner in habitats with many high-quality patches (average rate is higher). These predictions have been confirmed in many species, including great tits foraging in artificial patches, bumblebees visiting flowers, and starlings feeding nestlings. Deviations from MVT predictions reveal important factors like predation risk, incomplete information, and state-dependent decisions.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "The waggle dance of honeybees communicates the location of food sources to hive mates. What information is encoded in the dance?",
+      "options": [
+        "The waggle dance, decoded by Karl von Frisch (Nobel Prize 1973), encodes both distance and direction to a food source — the angle of the waggle run relative to vertical on the comb indicates the angle between the food source and the sun's azimuth, while the duration of the waggle phase encodes distance (approximately 1 second per km); the vigor of dancing correlates with food quality",
+        "The waggle dance only communicates the type of flower at the food source through different wing-beat frequencies",
+        "The waggle dance is a random movement with no informational content",
+        "The waggle dance communicates only the distance to food, not its direction"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Karl von Frisch's decoding of the honeybee (Apis mellifera) waggle dance is one of the most celebrated discoveries in animal behavior. The dance is performed on the vertical surface of a dark hive comb: (1) Direction — the waggle phase is a straight run in which the bee waggles its abdomen while walking. The angle of this waggle run relative to straight up (antigravity) on the comb represents the angle between the food source and the sun's azimuth as seen from the hive. Dancing straight up = food in the direction of the sun; straight down = food opposite to the sun; 60° right of vertical = food 60° right of the sun. The dancer compensates for the sun's movement over time. (2) Distance — the duration of the waggle phase correlates with distance to the food. In Apis mellifera, approximately 1 second of waggling indicates ~1 km (varies by subspecies). Distance can also be encoded by the number of waggle cycles and the tempo of the dance circuit. (3) Quality — the vigor, duration, and number of dance circuits correlate with food source quality (nectar concentration, abundance). High-quality sources elicit more enthusiastic dancing, recruiting more foragers. (4) Odor — dance followers also detect floral odors on the dancer's body, aiding source identification. James Gould (1975) confirmed the symbolic nature using artificial light to manipulate the bees' sun reference, showing recruits indeed follow the dance's directional information.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Classical (Pavlovian) conditioning and operant (instrumental) conditioning are two fundamental forms of associative learning. What key difference distinguishes them?",
+      "options": [
+        "In classical conditioning, the animal learns an association between two stimuli (a neutral conditioned stimulus paired with an unconditioned stimulus that elicits an innate response), producing a conditioned response — in operant conditioning, the animal learns an association between its own behavior and a consequence (reward or punishment), modifying the frequency of that behavior according to Thorndike's law of effect",
+        "Classical and operant conditioning are identical processes with different names",
+        "Classical conditioning involves voluntary responses while operant conditioning involves involuntary reflexes",
+        "Only vertebrates can undergo classical conditioning, while operant conditioning occurs in all animals"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Classical and operant conditioning represent two distinct forms of associative learning, each with different neural substrates and functional significance. Classical (Pavlovian) conditioning: Discovered by Ivan Pavlov (~1900). An initially neutral conditioned stimulus (CS, e.g., bell tone) is repeatedly paired with an unconditioned stimulus (US, e.g., food) that naturally elicits an unconditioned response (UR, e.g., salivation). After pairing, the CS alone elicits a conditioned response (CR, salivation to the bell). Key features: (a) The animal learns a predictive relationship between stimuli. (b) The response is typically reflexive/involuntary (autonomic). (c) Neural substrate: amygdala (fear conditioning), cerebellum (eyeblink conditioning). Operant (instrumental) conditioning: Formalized by B.F. Skinner (1938), building on Thorndike's law of effect (1898). The animal learns that its own behavior has consequences: behaviors followed by positive outcomes (reinforcement) increase in frequency; behaviors followed by negative outcomes (punishment) decrease. Key features: (a) The animal learns a contingency between action and outcome. (b) Responses are typically voluntary/skeletal. (c) Neural substrate: basal ganglia (striatum), prefrontal cortex, dopaminergic reward pathway (VTA→nucleus accumbens). Both forms show extinction, spontaneous recovery, generalization, and discrimination. The Rescorla-Wagner model (1972) mathematically describes CS-US associative strength changes in classical conditioning.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "The prisoner's dilemma is a foundational model in behavioral ecology for understanding cooperation. What strategy proved most successful in Axelrod's iterated prisoner's dilemma tournament?",
+      "options": [
+        "Tit-for-tat, a strategy that cooperates on the first move and then copies the opponent's previous move — it succeeds because it is nice (never defects first), retaliatory (immediately punishes defection), forgiving (returns to cooperation after the opponent cooperates), and clear (easy for opponents to recognize and adapt to), promoting stable mutual cooperation in repeated interactions",
+        "Always defect — the strategy that maximizes individual payoff regardless of the opponent's behavior",
+        "Random — choosing cooperation or defection randomly with equal probability",
+        "Always cooperate — unconditionally helping regardless of the opponent's behavior"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Robert Axelrod's famous tournament (1984) invited game theorists to submit strategies for an iterated prisoner's dilemma (IPD) played against each other strategy. The simplest strategy, tit-for-tat (TFT) submitted by Anatol Rapoport, won both tournaments. TFT's properties: (1) Nice — begins by cooperating, establishing a cooperative relationship. (2) Retaliatory — immediately defects after the opponent defects, punishing exploitation. (3) Forgiving — returns to cooperation when the opponent cooperates, allowing recovery from mutual defection. (4) Clear — its simple pattern is easily recognized by other strategies, facilitating mutual cooperation. In the context of biological evolution: (a) Reciprocal altruism (Trivers, 1971) explains cooperation between non-relatives through repeated interactions where future reciprocation is expected. (b) TFT-like strategies are observed in nature: vampire bats share blood meals reciprocally and punish non-reciprocators; cleaner fish and client fish maintain cooperative relationships. (c) For TFT to evolve, individuals must: meet repeatedly, recognize each other, and remember past interactions. (d) 'Always defect' wins single interactions but performs poorly long-term because it never establishes cooperative partnerships. 'Always cooperate' is exploited by defectors. Later work showed tit-for-tat with some generosity (occasional forgiveness of defection) outperforms strict TFT in noisy environments where errors occur.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Circadian rhythms are endogenous biological clocks with approximately 24-hour periodicity. In mammals, where is the master circadian clock located, and what is its molecular mechanism?",
+      "options": [
+        "The master circadian clock is in the suprachiasmatic nucleus (SCN) of the anterior hypothalamus — it generates ~24-hour rhythms through interlocking transcription-translation feedback loops: CLOCK and BMAL1 proteins heterodimerize to activate transcription of Period (Per1/2) and Cryptochrome (Cry1/2) genes; PER-CRY complexes accumulate, enter the nucleus, and inhibit CLOCK-BMAL1, suppressing their own transcription; this cycle takes ~24 hours and is entrained to the light-dark cycle via retinohypothalamic tract input from intrinsically photosensitive retinal ganglion cells (ipRGCs) containing melanopsin",
+        "Circadian rhythms are entirely determined by external light-dark cycles with no internal clock",
+        "The master clock is in the pineal gland, which directly detects light through the skull",
+        "Circadian rhythms use a purely cytoplasmic mechanism with no gene transcription involved"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The mammalian circadian system is a hierarchical oscillator network with the SCN as the master pacemaker. The SCN (~20,000 neurons in mice, bilateral) generates self-sustained ~24-hour oscillations even in complete darkness (free-running period ~24.2 hours in humans). The molecular clock mechanism involves two interlocking feedback loops: Primary loop: (1) CLOCK and BMAL1 (basic helix-loop-helix PAS domain transcription factors) heterodimerize and bind E-box elements in the promoters of Per1, Per2, Cry1, and Cry2 genes, activating their transcription (positive limb). (2) PER and CRY proteins accumulate in the cytoplasm, heterodimerize, are phosphorylated by casein kinases (CK1δ/ε), and translocate to the nucleus. (3) Nuclear PER-CRY complexes directly inhibit CLOCK-BMAL1 transcriptional activity (negative limb). (4) PER-CRY degradation (ubiquitination by E3 ligases) releases the inhibition, allowing CLOCK-BMAL1 to restart the cycle. Secondary loop: REV-ERBα (repressor) and RORα (activator) regulate Bmal1 transcription, adding robustness. Entrainment: Light detected by melanopsin-containing ipRGCs (intrinsically photosensitive retinal ganglion cells) signals via the retinohypothalamic tract (glutamate + PACAP) to the SCN, inducing Per1/Per2 expression and phase-shifting the clock. The SCN synchronizes peripheral clocks in liver, lung, kidney, etc. Nobel Prize in Physiology or Medicine 2017 was awarded to Hall, Rosbash, and Young for elucidating the molecular clock mechanism in Drosophila.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MTF",
+      "question": "Match the following behavioral ecology concepts with their definitions:\n(I) Kin selection\n(II) Reciprocal altruism\n(III) Sexual selection\n(IV) Frequency-dependent selection\n\n(P) Cooperative behavior between unrelated individuals that benefits both over repeated interactions, requiring recognition, memory, and punishment of cheaters\n(Q) Selection for traits that increase mating success, either through male-male competition (intrasexual) or female choice (intersexual), potentially at the cost of survival\n(R) Altruistic behavior toward genetic relatives that increases inclusive fitness, favored when rB > C\n(S) A form of natural selection where the fitness of a phenotype depends on its frequency in the population, maintaining behavioral polymorphisms",
+      "options": [
+        "I-R, II-P, III-Q, IV-S",
+        "I-P, II-R, III-S, IV-Q",
+        "I-Q, II-S, III-R, IV-P",
+        "I-S, II-Q, III-P, IV-R"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Kin selection (I-R): Hamilton's concept that natural selection can favor genes promoting altruistic behavior toward relatives because relatives share alleles by descent. The gene's-eye-view: an allele for helping relatives can increase in frequency if the benefit to the recipient (weighted by relatedness) exceeds the cost to the altruist. Examples: alarm calls in Belding's ground squirrels (females call more when relatives are nearby), eusociality in Hymenoptera. Reciprocal altruism (II-P): Trivers (1971) proposed that cooperation between non-relatives can evolve through repeated interactions where each partner reciprocates help. Requirements: repeated encounters, individual recognition, memory of past interactions, and punishment of cheaters. Examples: vampire bat blood sharing, grooming in primates, cleaner fish mutualism. Modeled by iterated prisoner's dilemma. Sexual selection (III-Q): Darwin's (1871) concept of selection for traits that increase mating success, operating through two mechanisms: intrasexual selection (competition between same-sex individuals — antlers, fighting) and intersexual selection (mate choice — peacock tail, bowerbird displays). Can produce exaggerated traits that reduce survival but increase mating success (Fisherian runaway, handicap principle/Zahavi). Frequency-dependent selection (IV-S): Fitness depends on how common a phenotype is. Negative FDS maintains polymorphisms (rare morphs have higher fitness — e.g., predator search image, alternative mating strategies in side-blotched lizards). Positive FDS eliminates rare variants.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Song learning in songbirds involves a critical period and a process remarkably similar to human language acquisition. What are the two phases of song learning in species like the zebra finch?",
+      "options": [
+        "Song learning occurs in two phases: a sensory phase (approximately days 20-65 post-hatching in zebra finch) during which the bird memorizes a tutor's song template through auditory exposure, and a sensorimotor phase (~35-90 days) during which the bird practices and refines its own song through auditory feedback (comparing its own output to the memorized template) — the HVC and RA brain nuclei control song production while Area X and LMAN are essential for song learning",
+        "Songbirds are born with a complete song that requires no learning",
+        "Song learning occurs throughout the bird's entire life with no critical periods",
+        "Song learning involves only motor practice — auditory input is unnecessary"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Birdsong learning is one of the best-studied examples of vocal learning in animals and has strong parallels to human speech acquisition. In zebra finches (closed-ended learners that crystallize a single song): Sensory (memorization) phase (~days 20-65): The young bird listens to an adult tutor (usually the father) and forms an auditory memory (template) of the song. Isolation during this period results in abnormal song. Cross-fostering demonstrates that the bird preferentially copies its social tutor over audio playback (social influence on learning). Sensorimotor (practice) phase (~days 35-90, overlapping with sensory phase): The bird begins producing subsong (analogous to infant babbling) — variable, quiet, unstructured vocalizations. Through practice with auditory feedback (comparing its own vocalizations to the memorized template), the bird gradually refines its song into plastic song and finally crystallized song (~90 days). Deafening during this phase prevents normal song development. Song system nuclei: HVC (proper name) → RA (robust nucleus of arcopallium) = motor pathway for song production. HVC → Area X → DLM → LMAN (lateral magnocellular nucleus of anterior nidopallium) → RA = anterior forebrain pathway (AFP) essential for song learning and variability. LMAN lesions prevent song learning but not adult song production. FoxP2 (related to human FOXP2 speech gene) is expressed in Area X and is required for normal song learning.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "In a study of predator-prey dynamics, researchers present different colored prey (moths) on tree bark backgrounds. They find that cryptic (bark-matching) moths survive significantly longer than conspicuous moths, but a small percentage (~5%) of brightly colored (aposematic) moths also survive well. Over 100 generations, the population stabilizes with ~90% cryptic and ~10% aposematic individuals. What evolutionary mechanisms explain this stable polymorphism?",
+      "options": [
+        "The polymorphism is maintained by frequency-dependent selection — at low frequency, aposematic moths benefit from predator avoidance learning (predators quickly learn to avoid their warning colors after an unpleasant experience), while at high frequency the cost of initial predator sampling increases proportionally; cryptic moths benefit at high frequency because predators develop a search image, but at low frequency they are found randomly — the equilibrium frequency reflects where the fitness of both strategies is equal",
+        "The brightly colored moths survive by random chance and the polymorphism is not stable",
+        "All moths will eventually become aposematic because warning coloration is always beneficial",
+        "The 10% aposematic moths are maintained by constant immigration from another population"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This stable polymorphism illustrates negative frequency-dependent selection, a major mechanism for maintaining behavioral and morphological diversity in populations. The dynamics: Aposematic (warning-colored) moths: (1) At low frequency, they benefit because predators that sample and find them unpalatable quickly form an avoidance memory (one-trial learning in many birds). The 'cost of advertising' (being initially conspicuous) is shared among fewer individuals. (2) As aposematic frequency increases, more naive predators must sample them (larger cost), and the per-capita benefit decreases. (3) Automimicry (palatable mimics of aposematic models) may also evolve at high aposematic frequency. Cryptic moths: (1) At high frequency, predators form search images (cognitive templates optimized for detecting common prey), increasing predation on common cryptic morphs. (2) At low frequency, predators do not develop specific search images, and crypsis is more effective. (3) Apostatic selection (predators disproportionately taking common morphs) stabilizes the polymorphism. Equilibrium: The two strategies have equal fitness at the observed frequencies (~90:10). This is analogous to evolutionary game theory's mixed ESS (evolutionarily stable strategy). Similar frequency-dependent polymorphisms are found in: side-blotched lizard mating strategies (rock-paper-scissors game), Batesian mimicry systems, and shell color polymorphisms in snails.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Tinbergen's four questions provide a comprehensive framework for studying animal behavior. What are the four levels of analysis?",
+      "options": [
+        "Tinbergen's four questions address behavior at both proximate and ultimate levels: (1) Causation/mechanism — what physiological/neural mechanisms produce the behavior? (2) Development/ontogeny — how does the behavior develop during the individual's lifetime? (3) Function/adaptation — what is the survival/reproductive benefit? (4) Phylogeny/evolution — how did the behavior evolve over evolutionary time?",
+        "The four questions are: where, when, how fast, and how loud the behavior occurs",
+        "Tinbergen proposed only two questions — mechanism and function — not four",
+        "The four questions apply only to invertebrate behavior, not to vertebrates"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Nikolaas Tinbergen (Nobel Prize 1973, shared with Lorenz and von Frisch) proposed in his 1963 paper 'On Aims and Methods of Ethology' that a complete understanding of any behavior requires answering four complementary questions, organized at two levels: Proximate (how) questions: (1) Causation/Mechanism — what are the immediate physiological, neurological, hormonal, and sensory mechanisms that produce the behavior? Example: male stickleback aggression is triggered by the sign stimulus of a red belly, processed by visual neurons, and executed by specific motor circuits activated by testosterone. (2) Development/Ontogeny — how does the behavior change during the individual's lifetime through maturation, learning, and experience? Example: song learning in birds involves a sensitive period, tutor exposure, and practice. Ultimate (why) questions: (3) Function/Adaptation — what is the current survival or reproductive advantage of the behavior? Addressed through experiments and comparative methods. Example: alarm calling reduces predation on relatives (kin selection). (4) Phylogeny/Evolution — what is the evolutionary history of the behavior? How has it changed across related species? Addressed through phylogenetic comparative analysis. Example: tracing the evolution of courtship displays across duck species. These four questions are complementary, not competing — a complete explanation requires all four. Confusing proximate and ultimate explanations is a common error in behavioral biology.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Eusociality, the highest form of social organization, is characterized by three features. What are they, and in which animal groups has eusociality evolved?",
+      "options": [
+        "Eusociality is defined by: (1) reproductive division of labor (only one or few individuals reproduce), (2) cooperative brood care (non-reproductive workers care for offspring of the queen), and (3) overlapping generations (at least two adult generations coexist in the colony) — eusociality has evolved independently in Hymenoptera (ants, bees, wasps), termites (Isoptera), some shrimp (Synalpheus), naked mole-rats, and possibly some aphids and thrips",
+        "Eusociality simply means any species that lives in groups",
+        "Eusociality is found exclusively in insects and cannot evolve in vertebrates",
+        "The only requirement for eusociality is that individuals forage together"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Eusociality, defined by E.O. Wilson and expanded by subsequent researchers, represents the pinnacle of social evolution. The three defining criteria: (1) Reproductive division of labor — a colony has one or few reproductive individuals (queens, and sometimes kings in termites) while the majority are non-reproductive workers. In extreme cases like honeybees, the queen is the sole egg-layer, while up to 60,000 workers are functionally sterile. (2) Cooperative brood care (alloparenting) — workers collectively raise offspring that are not their own, performing tasks like foraging, nursing, nest defense, and thermoregulation. (3) Overlapping generations — the colony persists across generations, with parents and offspring coexisting as adults, enabling transmission of colony-level adaptations and division of labor. Taxonomic distribution: Eusociality has evolved independently at least 10-15 times. Hymenoptera: all ~20,000 ant species are eusocial, plus some bees (honeybees, stingless bees, some halictid bees) and wasps (Polistes, Vespula). Termites (Blattodea: Termitidae): all ~3,000 species are eusocial, but they are diploid, disproving the hypothesis that haplodiploidy is necessary. Crustacea: snapping shrimp (Synalpheus regalis) — the only known marine eusocial species. Mammalia: naked mole-rats (Heterocephalus glaber) and Damaraland mole-rats — the only known eusocial mammals. Other: some aphids, thrips, and ambrosia beetles show eusocial features.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Aposematism (warning coloration) and Batesian mimicry are related anti-predator strategies. What is Batesian mimicry, and what conditions must be met for it to be evolutionarily stable?",
+      "options": [
+        "Batesian mimicry occurs when a palatable (harmless) species evolves to resemble an unpalatable (toxic or dangerous) model species — it is effective only when: (1) the mimic is rarer than the model (otherwise predators learn the pattern is often profitable), (2) the model is truly noxious and memorable, and (3) predators use visual learning to generalize avoidance from model to mimic; too many mimics relative to models degrades the signal (frequency-dependent selection against the mimic at high frequency)",
+        "Batesian mimicry is when two toxic species resemble each other to reinforce predator avoidance",
+        "Batesian mimicry only occurs between plant species, not animals",
+        "Batesian mimicry requires the mimic to be more toxic than the model"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Batesian mimicry (Henry Walter Bates, 1862, studying Amazonian butterflies) is an evolutionary relationship between a palatable mimic and an unpalatable model. The mimic gains protection by resembling the model, which predators have learned to avoid. Conditions for stability: (1) Rarity of mimic — if mimics become too common relative to models, predators encounter mimics frequently, learn that the pattern is often rewarding, and the signal loses its protective value. This creates negative frequency-dependent selection on the mimic. (2) Noxiousness of model — the model must be sufficiently unpleasant (toxic, venomous, bad-tasting) that predators form strong avoidance memories. (3) Predator learning — predators must use visual pattern recognition and generalise their learned avoidance from model encounters to mimic encounters. (4) Spatial overlap — model and mimic must co-occur in the same habitat. Classic examples: Viceroy butterfly (Limenitis archippus) mimicking the Monarch (Danaus plexippus) — though recent work shows viceroys are mildly unpalatable, making this a case between Batesian and Mullerian mimicry. Non-venomous king snakes mimicking coral snakes. Hoverflies mimicking bees/wasps. This contrasts with Mullerian mimicry (Fritz Muller, 1879), where two or more genuinely unpalatable species converge on the same warning pattern, sharing the cost of predator education.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that female peafowl (peahens) prefer males with more elaborate tail (train) displays because these honestly signal male genetic quality (the handicap principle). What experimental approach would most rigorously test this hypothesis?",
+      "options": [
+        "Count the number of eyespots on male trains and observe which males mate most frequently",
+        "Manipulate male train length by cutting or adding feathers (creating shorter-than-normal and longer-than-normal trains), then measure female choice in controlled mate-choice trials — additionally, measure offspring fitness (survival, parasite resistance, growth rate) from fathers with naturally different train sizes to test whether train elaboration honestly signals heritable genetic quality; include controls with sham-manipulated males",
+        "Compare train sizes across different peafowl species in a phylogenetic analysis",
+        "Measure testosterone levels in males with different train sizes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Testing the handicap principle (Zahavi, 1975) requires demonstrating both that females prefer the trait AND that the trait honestly signals quality. A rigorous experimental design: (1) Experimental manipulation of train length: Cut eyespot feathers from some males (reduced), attach extra feathers to others (enhanced), and sham-manipulate controls (cut and reattach same feathers). This isolates train elaboration from other male traits (territory quality, courtship vigor). Petrie and Halliday (1994) performed this experiment. (2) Mate choice trials: Present females with a choice between manipulated and control males in semi-natural enclosures. Measure approach distance, time spent near each male, and copulation frequency. If females prefer enhanced males, this confirms the female preference. (3) Honest signaling test (critical): Cross-foster offspring to control for maternal effects, then measure: (a) Offspring survival to independence. (b) Parasite resistance (measure ectoparasite loads, immune response assays). (c) Growth rate and condition. If sons of males with naturally more elaborate trains have higher fitness, the train is an honest (condition-dependent) signal of genetic quality. (4) Condition-dependence: Test whether males in better nutritional condition grow more elaborate trains, as the handicap principle requires the trait to be costly enough that only high-quality males can maintain it. Marion Petrie's work showed that peahens mating with more ornamented males produced offspring with higher survival rates. Option A is correlational. Option C tests phylogeny. Option D measures a proximate mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    }
+  ]
+}

@@ -1,0 +1,1189 @@
+{
+  "batchId": "olympiad-campbell-ch12-cell-cycle",
+  "subject": "biology",
+  "topic": "The Cell Cycle",
+  "gradeLevel": "olympiad",
+  "isOlympiad": true,
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "The anaphase-promoting complex/cyclosome (APC/C) is a multi-subunit E3 ubiquitin ligase that targets specific substrates for proteasomal degradation. Which co-activator protein directs APC/C to ubiquitinate securin during the metaphase-to-anaphase transition?",
+      "options": [
+        "Cdh1",
+        "Cdc20",
+        "Skp2",
+        "Sic1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cdc20 is the co-activator that associates with APC/C during the metaphase-to-anaphase transition. APC/C-Cdc20 specifically recognizes the D-box (destruction box) motif in securin and cyclin B, targeting them for ubiquitination and subsequent proteasomal degradation. Securin destruction releases separase, which cleaves cohesin rings holding sister chromatids together. Cdh1 is a different APC/C co-activator that functions later in mitosis and G1 to maintain low cyclin levels. Skp2 is an F-box protein in the SCF complex, not an APC/C co-activator. Sic1 is a CKI (cyclin-dependent kinase inhibitor) in yeast, not an APC/C activator.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "APC/C regulation"
+    },
+    {
+      "type": "MCQ",
+      "question": "During S phase, the licensing system ensures that each origin of replication fires only once per cell cycle. Which protein complex loads the MCM2-7 helicase onto origins during G1 to 'license' them for replication?",
+      "options": [
+        "ORC alone",
+        "Cdc6 and Cdt1 in concert with ORC",
+        "Geminin and Cdc6",
+        "CDK2-cyclin E"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Origin licensing requires the sequential action of ORC (Origin Recognition Complex), Cdc6, and Cdt1 to load the MCM2-7 hexameric helicase onto replication origins during G1 phase. ORC first binds the origin, then recruits Cdc6 and Cdt1, which together load MCM2-7 as a double hexamer around double-stranded DNA. This forms the pre-replicative complex (pre-RC). Once S phase begins, CDK and DDK activities trigger origin firing but also inactivate the licensing factors \u2014 Cdc6 is phosphorylated and degraded, Cdt1 is inhibited by geminin, and MCM2-7 cannot be re-loaded. Geminin inhibits (not promotes) licensing. CDK2-cyclin E is involved in triggering firing, not loading MCM.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "DNA replication licensing"
+    },
+    {
+      "type": "MCQ",
+      "question": "The spindle assembly checkpoint (SAC) prevents premature anaphase onset by generating the mitotic checkpoint complex (MCC). Which protein is the primary SAC sensor that recruits checkpoint components to unattached kinetochores?",
+      "options": [
+        "BubR1",
+        "Aurora B kinase",
+        "Mad1",
+        "Mad2"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Mad1 is constitutively localized to unattached kinetochores and serves as the primary platform for SAC signaling. Mad1 forms a stable complex with a 'closed' conformer of Mad2 (C-Mad2) at unattached kinetochores, which catalyzes the conversion of soluble 'open' Mad2 (O-Mad2) to C-Mad2 through the Mad2 template model. This newly converted C-Mad2 then binds Cdc20, incorporating it into the mitotic checkpoint complex (MCC) along with BubR1 and Bub3, which inhibits APC/C-Cdc20. BubR1 is a MCC component but not the primary kinetochore sensor. Aurora B is involved in error correction of improper attachments. Mad2 is the effector but Mad1 is the sensor/template.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Spindle assembly checkpoint"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cyclin-dependent kinase inhibitors (CKIs) of the Cip/Kip family (p21, p27, p57) regulate cell cycle progression. In response to DNA damage, which transcription factor directly activates p21 expression to induce G1 arrest?",
+      "options": [
+        "E2F1",
+        "p53",
+        "Myc",
+        "Rb"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The tumor suppressor p53 is the principal transcription factor that directly activates p21 (CDKN1A) gene expression in response to DNA damage. When ATM/ATR kinases detect DNA lesions, they phosphorylate and stabilize p53, which then binds to p53 response elements in the p21 promoter. Elevated p21 protein inhibits CDK2-cyclin E and CDK2-cyclin A complexes, preventing Rb phosphorylation and maintaining the G1/S checkpoint. E2F1 is a transcription factor that promotes S phase entry genes, not p21. Myc is an oncogenic transcription factor that drives proliferation. Rb is a tumor suppressor that represses E2F but does not directly activate p21 transcription.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "p53-p21 DNA damage response"
+    },
+    {
+      "type": "MCQ",
+      "question": "During cytokinesis in animal cells, the contractile ring assembles at the cell equator and constricts to divide the cell. Which motor protein generates the force for contractile ring constriction?",
+      "options": [
+        "Kinesin-5 (Eg5)",
+        "Cytoplasmic dynein",
+        "Non-muscle myosin II",
+        "Kinesin-13 (MCAK)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Non-muscle myosin II is the motor protein that drives contractile ring constriction during cytokinesis. The contractile ring consists of antiparallel actin filaments and non-muscle myosin II, which slides actin filaments past each other to generate the constrictive force. RhoA GTPase, activated by the centralspindlin complex at the cell equator, promotes both actin filament assembly (via formins like mDia) and myosin II activation (via ROCK-mediated phosphorylation of myosin light chain). Kinesin-5 generates forces in the mitotic spindle midzone. Cytoplasmic dynein functions at kinetochores and cell cortex. Kinesin-13 depolymerizes microtubules at kinetochores.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Cytokinesis contractile ring"
+    },
+    {
+      "type": "MCQ",
+      "question": "The retinoblastoma protein (Rb) functions as a crucial G1/S checkpoint regulator. What is the molecular mechanism by which Rb represses E2F target gene expression?",
+      "options": [
+        "Rb ubiquitinates E2F for proteasomal degradation",
+        "Rb recruits histone deacetylase (HDAC) complexes to E2F-bound promoters",
+        "Rb phosphorylates E2F to prevent DNA binding",
+        "Rb sequesters E2F in the cytoplasm"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hypophosphorylated Rb represses E2F target genes through two complementary mechanisms: (1) directly masking the E2F transactivation domain, and (2) actively recruiting chromatin-remodeling enzymes, particularly histone deacetylase (HDAC) complexes and SWI/SNF chromatin remodelers, to E2F-responsive promoters. HDAC removes acetyl groups from histone tails, creating a condensed chromatin state that represses transcription. When CDK4/6-cyclin D and then CDK2-cyclin E sequentially phosphorylate Rb, the phosphorylated Rb releases from E2F, allowing E2F to activate S-phase genes. Rb does not ubiquitinate, phosphorylate, or sequester E2F.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Rb-E2F pathway"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cohesins hold sister chromatids together from S phase until their separation in anaphase. During vertebrate mitosis, cohesins are removed in two distinct steps. What removes the bulk of arm cohesins during prophase?",
+      "options": [
+        "Separase cleavage of Scc1/Rad21",
+        "Wapl-mediated release following phosphorylation by Plk1 and Aurora B",
+        "Topoisomerase II decatenation",
+        "APC/C-mediated ubiquitination of cohesin subunits"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In vertebrates, cohesin removal occurs in two phases. During prophase, the 'prophase pathway' removes arm cohesins through a non-proteolytic mechanism: Plk1 and Aurora B kinases phosphorylate the cohesin subunit SA2 (Scc3), which promotes the anti-establishment factor Wapl to open the cohesin ring and release it from chromosome arms. Centromeric cohesins are protected from this pathway by Shugoshin (Sgo1), which recruits PP2A phosphatase to counteract the phosphorylation. At anaphase onset, separase (activated by APC/C-Cdc20-mediated securin destruction) cleaves the remaining centromeric cohesin subunit Scc1/Rad21. Topoisomerase II resolves DNA catenanes but is separate from cohesin removal.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Cohesin regulation"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the Restriction Point (R) model proposed by Arthur Pardee, cells become committed to division independent of mitogenic signals. Molecularly, what event corresponds to passage through the Restriction Point?",
+      "options": [
+        "Activation of CDK1-cyclin B and nuclear envelope breakdown",
+        "CDK4/6-cyclin D phosphorylation of Rb initiating positive feedback with CDK2-cyclin E",
+        "Loading of MCM helicases onto replication origins",
+        "Activation of APC/C-Cdh1 in late G1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Restriction Point corresponds to the molecular switch created by Rb hyperphosphorylation. Initially, mitogenic signaling through Ras-MAPK-ERK induces cyclin D expression, and CDK4/6-cyclin D mono-phosphorylates Rb. This partial phosphorylation releases enough E2F to begin transcribing cyclin E. CDK2-cyclin E then hyperphosphorylates Rb in a positive feedback loop, releasing more E2F, which further amplifies cyclin E expression. This bistable switch makes the transition irreversible \u2014 once CDK2-cyclin E exceeds the threshold, cells are committed to S phase entry regardless of continued mitogenic signaling. MCM loading occurs in G1 but precedes the R point. APC/C-Cdh1 is active before, not after, the R point. CDK1-cyclin B activation occurs much later at G2/M.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Restriction Point"
+    },
+    {
+      "type": "MCQ",
+      "question": "During mitotic spindle assembly, the augmin complex plays a critical role in amplifying spindle microtubules. What is the primary function of augmin?",
+      "options": [
+        "Nucleating new microtubules from existing spindle microtubules via gamma-tubulin recruitment",
+        "Crosslinking antiparallel microtubules at the spindle midzone",
+        "Stabilizing kinetochore-microtubule attachments via the Ndc80 complex",
+        "Depolymerizing microtubules at spindle poles to generate poleward flux"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The augmin complex (also called HAUS complex in humans) is an eight-subunit complex that recruits the gamma-tubulin ring complex (gamma-TuRC) to the lateral surface of existing spindle microtubules, nucleating new microtubules that branch from pre-existing ones. This 'microtubule-dependent microtubule nucleation' amplifies spindle microtubule density and is essential for robust spindle assembly. The branching microtubules inherit the polarity of the parent microtubule, ensuring proper spindle organization. PRC1/Ase1 crosslinks antiparallel midzone microtubules. The Ndc80 complex mediates kinetochore-microtubule attachment. Kinesin-13 and other depolymerases drive poleward flux.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Spindle microtubule nucleation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The DNA damage checkpoint in G2 prevents entry into mitosis when DNA lesions are present. Which kinase directly phosphorylates and inactivates the Cdc25C phosphatase to maintain CDK1 in its inactive, phosphorylated state?",
+      "options": [
+        "ATM",
+        "Chk1",
+        "Wee1",
+        "CDK2"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In the G2/M DNA damage checkpoint, the checkpoint kinases Chk1 and Chk2 are the effector kinases that directly target cell cycle regulators. Specifically, Chk1 (and to a lesser extent Chk2) phosphorylates the Cdc25C phosphatase on Ser216, creating a binding site for 14-3-3 proteins that sequester Cdc25C in the cytoplasm. Since Cdc25C is required to remove the inhibitory Thr14/Tyr15 phosphorylation on CDK1 (placed by Wee1 and Myt1 kinases), its inactivation keeps CDK1-cyclin B in the inactive state, preventing mitotic entry. ATM is the upstream sensor kinase that activates Chk1/Chk2 but does not directly target Cdc25C in most contexts. Wee1 adds the inhibitory phosphate to CDK1 directly, not to Cdc25C.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "G2/M DNA damage checkpoint"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the mitotic spindle:\nS1: Kinetochore microtubules connect chromosomes to centrosomes and their plus ends are embedded in the kinetochore.\nS2: Interpolar (non-kinetochore) microtubules from opposite poles overlap at the spindle midzone and are crosslinked by kinesin-5.\nS3: Astral microtubules radiate from centrosomes toward the cell cortex and are important for spindle positioning.\nS4: All spindle microtubules are nucleated exclusively at centrosomes; no acentrosomal nucleation occurs during mitosis.",
+      "options": [
+        "TTFT",
+        "TTTF",
+        "TFTT",
+        "FTTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Kinetochore microtubules (K-fibers) have their plus ends embedded in the outer kinetochore plate, connected via the Ndc80 complex and other KMN network proteins, while their minus ends are anchored at centrosomes/spindle poles. S2 is TRUE: Interpolar microtubules from opposite poles overlap with antiparallel orientation at the spindle midzone, where they are crosslinked by the bipolar kinesin-5 (Eg5), which slides them apart to generate outward force. PRC1 also bundles these antiparallel microtubules. S3 is TRUE: Astral microtubules project from centrosomes to the cell cortex, where dynein-dynactin complexes anchored at the cortex pull on astral microtubules to position the spindle. S4 is FALSE: Multiple acentrosomal nucleation pathways exist, including RanGTP-mediated chromatin-driven nucleation and augmin-mediated branching nucleation from existing microtubules.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Mitotic spindle architecture"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about CDK-cyclin complexes and their cell cycle roles:\nS1: CDK4/6-cyclin D is active in G1 and initiates Rb phosphorylation.\nS2: CDK2-cyclin E drives cells past the Restriction Point and promotes S phase entry.\nS3: CDK2-cyclin A is active during S phase and is required for DNA replication.\nS4: CDK1-cyclin A is active in G2 and is the sole trigger for mitotic entry.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TFTT",
+        "TTFT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: CDK4/6-cyclin D complexes are the first CDKs activated in response to mitogenic signaling, and they initiate mono-phosphorylation of Rb during G1. S2 is TRUE: CDK2-cyclin E hyperphosphorylates Rb in a positive feedback loop, committing cells past the Restriction Point and promoting S phase entry by activating genes required for DNA synthesis. S3 is TRUE: CDK2-cyclin A is essential during S phase; it phosphorylates replication factors and prevents re-licensing of origins by inhibiting Cdc6/Cdt1. S4 is FALSE: While CDK1-cyclin A contributes to G2 events, it is CDK1-cyclin B that is the master regulator of mitotic entry. CDK1-cyclin B triggers nuclear envelope breakdown, chromosome condensation, and spindle assembly. The statement that CDK1-cyclin A is the 'sole trigger' is incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "CDK-cyclin pairs"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers measured BrdU incorporation (a marker of S phase) in an asynchronous population of HeLa cells and found that 35% of cells were BrdU-positive. The total cell cycle duration was determined to be 22 hours by time-lapse microscopy. Based on the fraction of cells in S phase, what is the estimated duration of S phase?",
+      "options": [
+        "5.5 hours",
+        "7.7 hours",
+        "10.0 hours",
+        "11.0 hours"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In an asynchronously growing population, the fraction of cells in a given phase is proportional to the duration of that phase relative to the total cell cycle time (assuming exponential growth, there is a small correction, but for estimation purposes the linear approximation is commonly used). Using the relationship: Duration of S phase = (fraction in S phase) x (total cell cycle time) = 0.35 x 22 hours = 7.7 hours. This method, based on the fraction-labeled mitoses (FLM) principle, assumes the population is in steady-state exponential growth with cells uniformly distributed across the cell cycle. The BrdU incorporation specifically marks cells that are actively synthesizing DNA (S phase), providing a direct measurement of the S-phase fraction.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Cell cycle duration estimation"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A flow cytometry experiment measures DNA content per cell using propidium iodide staining. In an asynchronous population, three peaks/regions are observed: 40% of cells at 2N DNA content, 25% in an intermediate region (between 2N and 4N), and 35% at 4N DNA content. Treatment with the CDK1 inhibitor RO-3306 shifts the profile to: 5% at 2N, 5% intermediate, and 90% at 4N. What does this result indicate?",
+      "options": [
+        "RO-3306 arrests cells in S phase by blocking DNA replication",
+        "RO-3306 arrests cells at the G2/M boundary with fully replicated DNA",
+        "RO-3306 causes premature mitotic exit and cytokinesis failure",
+        "RO-3306 prevents cells from entering S phase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The flow cytometry data shows that CDK1 inhibition by RO-3306 causes accumulation of cells with 4N DNA content (90%), indicating cells have completed DNA replication (passing through S phase) but cannot enter mitosis. Since CDK1-cyclin B activation is the trigger for mitotic entry, inhibiting CDK1 blocks cells at the G2/M boundary where they have fully replicated 4N DNA content but cannot undergo chromosome condensation, nuclear envelope breakdown, or spindle assembly. The small remaining fraction at 2N likely represents cells that were in G1 at the time of drug addition and have not yet progressed through S phase. If RO-3306 blocked S phase, cells would accumulate in the intermediate region. The 4N accumulation is inconsistent with either S phase arrest or G1 arrest.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Flow cytometry cell cycle analysis"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to test whether a novel compound arrests cells specifically at the G1/S checkpoint rather than the G2/M checkpoint. Which experimental approach would best distinguish between these two possibilities?",
+      "options": [
+        "Measure total cell number over 72 hours to see if proliferation is reduced",
+        "Perform flow cytometry with PI staining after 24-hour drug treatment to determine if cells accumulate at 2N (G1/S) or 4N (G2/M) DNA content",
+        "Treat cells with the compound and count mitotic figures by light microscopy",
+        "Use Western blot to measure total cyclin B1 levels in treated vs. untreated cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Flow cytometry with propidium iodide (PI) DNA staining is the gold standard for determining cell cycle arrest point. Cells arrested at G1/S will have 2N DNA content (unreplicated genome), while cells arrested at G2/M will have 4N DNA content (fully replicated genome). After 24 hours of drug treatment, the accumulation pattern clearly distinguishes these two arrest points. Measuring total cell number only reveals whether proliferation is inhibited but not where cells arrest. Counting mitotic figures could detect a mitotic block but cannot reliably distinguish G1/S from other arrest points, and cells at G2/M may not yet be in mitosis. Western blot for cyclin B1 might show some differences but is indirect and doesn't quantitatively reveal the DNA content distribution of the population.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Cell cycle arrest identification"
+    },
+    {
+      "type": "MCQ",
+      "question": "Condensin complexes are essential for mitotic chromosome compaction. How do condensin I and condensin II differ in their localization and function during mitosis?",
+      "options": [
+        "Condensin I is cytoplasmic in interphase and acts on chromosomes after nuclear envelope breakdown; condensin II is nuclear throughout and compacts chromosomes from prophase",
+        "Condensin I compacts chromosomes axially while condensin II creates lateral loops",
+        "Condensin I functions only in meiosis while condensin II is mitosis-specific",
+        "Both condensin I and II are nuclear in interphase and have identical timing of action"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Condensin I and condensin II have distinct spatial and temporal regulation. Condensin II is localized in the nucleus throughout interphase and begins compacting chromosomes in early prophase, establishing the initial axial shortening of chromosomes. Condensin I is cytoplasmic during interphase and only gains access to chromosomes after nuclear envelope breakdown in prometaphase, where it organizes lateral loops to further compact the already partially condensed chromosomes. Both complexes share the SMC2/SMC4 core but differ in their non-SMC subunits (CAP-D2/G/H for condensin I; CAP-D3/G2/H2 for condensin II). The statement that condensin I creates lateral loops and condensin II compacts axially is the reverse of the actual mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Condensin complexes"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of cell cycle 'checkpoints' was pioneered by Leland Hartwell using budding yeast (Saccharomyces cerevisiae). What experimental approach did Hartwell use to identify cell division cycle (cdc) mutants?",
+      "options": [
+        "CRISPR-Cas9 gene knockouts at specific cell cycle loci",
+        "Temperature-sensitive mutations that arrest cells at specific morphological stages at the restrictive temperature",
+        "RNA interference (RNAi) screens to silence individual genes",
+        "Fluorescent protein tagging of all yeast proteins to track localization"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hartwell's landmark studies in the early 1970s used temperature-sensitive (ts) mutations in budding yeast. At the permissive temperature (25 degrees C), mutant cells grew normally, but when shifted to the restrictive temperature (37 degrees C), specific cdc mutants arrested at characteristic cell cycle stages with uniform morphology. For example, cdc28 (CDK1/Cdc28) mutants arrested as unbudded cells in G1, while cdc2 mutants arrested with large buds. The uniform arrest morphology indicated that these genes were required at specific cell cycle transitions. This approach predated CRISPR, RNAi, and GFP technology by decades. Hartwell shared the 2001 Nobel Prize in Physiology or Medicine for this work with Paul Nurse and Tim Hunt.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Cell cycle genetics history"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine if a candidate tumor suppressor gene causes G1 arrest when re-expressed in cancer cells that have lost it, a researcher introduces the gene under an inducible promoter. After induction, what is the most informative combination of assays to confirm G1 arrest and its mechanism?",
+      "options": [
+        "Colony formation assay and total protein quantification",
+        "Flow cytometry for DNA content plus Western blot for phospho-Rb levels",
+        "Trypan blue exclusion and light microscopy",
+        "qRT-PCR for cyclin B1 mRNA and caspase-3 activity assay"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The combination of flow cytometry and phospho-Rb Western blot provides both the functional evidence and molecular mechanism. Flow cytometry with PI staining will show accumulation of cells at 2N DNA content, confirming G1 arrest. Western blot for phospho-Rb (specifically Ser780, Ser795, or Ser807/811) will reveal whether Rb is hypophosphorylated (active, repressing E2F), which would confirm that the tumor suppressor acts upstream of or at the Rb-E2F axis. If Rb remains phosphorylated despite G1 arrest, the gene likely acts downstream. Colony formation shows long-term growth suppression but not arrest point. Trypan blue measures viability, not cell cycle. Cyclin B1/caspase-3 would detect G2/M effects and apoptosis, not G1 arrest.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Tumor suppressor functional analysis"
+    },
+    {
+      "type": "MCQ",
+      "question": "The centrosome cycle must be coordinated with the DNA replication cycle to ensure bipolar spindle formation. What prevents centrosome re-duplication in the same cell cycle, analogous to the licensing mechanism for DNA replication?",
+      "options": [
+        "Centrosomes are degraded after mitosis and reassembled de novo",
+        "CDK2-dependent phosphorylation of nucleophosmin and disengagement of centrioles licenses duplication once per cycle",
+        "p53 directly inhibits centriole duplication in S and G2",
+        "The APC/C ubiquitinates centrosome components during S phase to prevent reduplication"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Centrosome duplication is tightly coupled to the cell cycle through a 'licensing' mechanism analogous to DNA replication licensing. In late mitosis/G1, the two centrioles within each centrosome disengage (lose their orthogonal arrangement), which is the 'licensing' step \u2014 equivalent to pre-RC formation at replication origins. This disengagement requires separase and Plk1 activity. In S phase, CDK2-cyclin E/A activity triggers centriole duplication by phosphorylating key substrates including nucleophosmin (NPM/B23), which dissociates from centrosomes and allows procentriole assembly. Each mother centriole templates exactly one daughter. The engagement of the new centriole pair prevents reduplication until the next mitotic disengagement event. Centrosomes persist across cell cycles; they are not degraded. p53 loss can lead to centrosome amplification but not through direct inhibition of duplication.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Centrosome duplication cycle"
+    },
+    {
+      "type": "MCQ",
+      "question": "During telophase, the nuclear envelope reassembles around the decondensing chromosomes. Which mechanism drives nuclear envelope reformation?",
+      "options": [
+        "Endoplasmic reticulum membrane tubules are recruited to chromatin surfaces by the inner nuclear membrane protein LBR and other chromatin-binding transmembrane proteins",
+        "Pre-formed nuclear envelope vesicles stored in the Golgi are transported to chromosome surfaces by kinesin motors",
+        "Lipid droplets fuse directly with each other around chromosomes to form the new envelope",
+        "Centrosomes secrete phospholipids that spontaneously self-assemble into a bilayer around chromosomes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Nuclear envelope reassembly in telophase occurs through the recruitment of endoplasmic reticulum (ER) membrane tubules to the chromatin surface. Inner nuclear membrane proteins, particularly the lamin B receptor (LBR) and other integral membrane proteins like emerin and SUN proteins that are retained in the ER during mitosis, bind to chromatin and nucleosome-associated BAF (barrier-to-autointegration factor). These interactions recruit ER membranes to the chromatin surface, where they flatten and fuse to form a continuous double membrane. Nuclear pore complexes are simultaneously inserted into the reforming envelope. The dephosphorylation of lamins by PP1/PP2A allows lamin re-polymerization beneath the inner nuclear membrane. There are no pre-formed vesicles stored in the Golgi for this purpose.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Nuclear envelope reassembly"
+    },
+    {
+      "type": "MCQ",
+      "question": "Aurora B kinase is a key component of the chromosomal passenger complex (CPC). What is the primary role of Aurora B in ensuring accurate chromosome segregation?",
+      "options": [
+        "Nucleating spindle microtubules from kinetochores",
+        "Destabilizing incorrect kinetochore-microtubule attachments, particularly syntelic and merotelic attachments",
+        "Activating APC/C to trigger anaphase onset",
+        "Phosphorylating cohesin subunits to trigger sister chromatid separation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Aurora B kinase, as part of the chromosomal passenger complex (CPC, with INCENP, survivin, and borealin), serves as the error correction machinery for kinetochore-microtubule attachments. Aurora B is positioned at the inner centromere, where it phosphorylates outer kinetochore substrates (Ndc80/Hec1, KNL1) when kinetochore-microtubule attachments lack tension. Syntelic attachments (both sister kinetochores attached to the same pole) and merotelic attachments (one kinetochore attached to both poles) do not generate proper tension, keeping Aurora B substrates within its phosphorylation range. Phosphorylation of Ndc80 reduces its microtubule-binding affinity, destabilizing the incorrect attachment and allowing re-attachment. When proper bipolar (amphitelic) attachment generates tension, substrates are pulled away from Aurora B, stabilizing the attachment.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Aurora B error correction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cellular senescence is an irreversible cell cycle arrest distinct from quiescence (G0). Which molecular feature best distinguishes senescent cells from quiescent cells?",
+      "options": [
+        "Senescent cells have elevated cyclin D expression",
+        "Senescent cells exhibit persistent DNA damage foci (DNA-SCARS) and senescence-associated secretory phenotype (SASP)",
+        "Senescent cells can re-enter the cell cycle upon mitogenic stimulation",
+        "Senescent cells downregulate all CDK inhibitors"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cellular senescence is characterized by several unique molecular features that distinguish it from reversible quiescence. Senescent cells display persistent DNA damage foci called DNA-SCARS (DNA Segments with Chromatin Alterations Reinforcing Senescence), which contain phospho-H2AX and 53BP1 but lack active DNA repair factors. They also exhibit the senescence-associated secretory phenotype (SASP), secreting inflammatory cytokines (IL-6, IL-8), growth factors, and matrix metalloproteinases that affect neighboring cells. Additionally, senescent cells show senescence-associated beta-galactosidase activity, chromatin reorganization (SAHF \u2014 senescence-associated heterochromatin foci), and persistent expression of p16 and/or p21. Unlike quiescent cells, senescent cells CANNOT re-enter the cell cycle upon mitogenic stimulation. Quiescent cells maintain low CDK inhibitor levels and can resume cycling.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Cellular senescence"
+    },
+    {
+      "type": "MCQ",
+      "question": "In plant cells, cytokinesis occurs through formation of the cell plate rather than a contractile ring. Which organelle's vesicles fuse at the phragmoplast to build the cell plate?",
+      "options": [
+        "Endoplasmic reticulum",
+        "Golgi apparatus",
+        "Lysosomes",
+        "Peroxisomes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Plant cell cytokinesis involves the phragmoplast, a structure composed of antiparallel microtubules and actin filaments that directs Golgi-derived vesicles to the cell equator. These vesicles carry cell wall materials (pectins, hemicelluloses, and cell wall polysaccharides) and membrane components. Kinesin motors transport Golgi vesicles along phragmoplast microtubules toward the plus ends at the division plane. The vesicles fuse with each other via SNARE-mediated membrane fusion, progressively building the cell plate from the center outward. The TRAPPII complex and Rab GTPases regulate vesicle tethering and fusion. Eventually, the growing cell plate reaches and fuses with the parental plasma membrane, completing cell division. The new cell wall matures as cellulose synthase complexes are delivered and callose is replaced by cellulose.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Plant cell cytokinesis"
+    },
+    {
+      "type": "MCQ",
+      "question": "Maturation Promoting Factor (MPF), originally identified in frog oocytes by Masui and Markert, was later shown to be a CDK-cyclin complex. What experiment demonstrated that MPF activity is transferable between cells?",
+      "options": [
+        "Injecting cytoplasm from M-phase oocytes into G2-arrested oocytes caused the recipients to enter M phase",
+        "Fusing two G1-phase cells caused both nuclei to enter S phase simultaneously",
+        "Adding purified cyclin B to cell extracts induced spindle assembly",
+        "Treating cells with colchicine prevented chromosome condensation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The classic experiment by Masui and Markert (1971) demonstrated that injecting cytoplasm from mature (M-phase arrested) Rana pipiens oocytes into immature G2-arrested oocytes could induce the recipient oocytes to undergo maturation (meiotic M-phase entry) \u2014 including germinal vesicle breakdown (GVBD), chromosome condensation, and spindle formation. This demonstrated that a diffusible cytoplasmic factor, termed Maturation Promoting Factor (MPF), was responsible for triggering M-phase entry. MPF was later purified by Lohka and Maller and shown to be a heterodimer of Cdc2 (CDK1) and cyclin B. Tim Hunt's discovery of cyclins in sea urchin embryos provided the complementary piece. All three researchers (Hartwell, Nurse, Hunt) shared the 2001 Nobel Prize.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "MPF discovery"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Hayflick limit describes the finite replicative potential of normal somatic cells. What molecular mechanism underlies the Hayflick limit?",
+      "options": [
+        "Accumulation of mitochondrial DNA mutations",
+        "Progressive telomere shortening due to the end-replication problem",
+        "Gradual loss of histone proteins from chromatin",
+        "Depletion of cellular ATP reserves over time"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Hayflick limit is caused by progressive telomere shortening that occurs with each round of DNA replication due to the end-replication problem. Conventional DNA polymerases cannot fully replicate the 3' end of linear chromosomes, resulting in loss of approximately 50-200 base pairs of telomeric DNA per cell division. When telomeres shorten below a critical length (~4-6 kb in humans), they lose their protective shelterin cap and are recognized as DNA double-strand breaks, activating the ATM/ATR-p53-p21 pathway and triggering replicative senescence. Most somatic cells lack sufficient telomerase activity to maintain telomere length. Cells that bypass senescence checkpoints (via p53/Rb loss) eventually reach crisis, where critically short telomeres cause end-to-end fusions and genomic instability. Telomerase reactivation in ~85-90% of cancers allows unlimited replication.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Hayflick limit and telomeres"
+    },
+    {
+      "type": "MCQ",
+      "question": "CDK1 activation at G2/M involves a positive feedback loop that creates switch-like, ultrasensitive behavior. Which molecular interactions constitute this positive feedback?",
+      "options": [
+        "CDK1-cyclin B activates Cdc25 and inhibits Wee1, both of which further activate CDK1-cyclin B",
+        "CDK1 upregulates cyclin B transcription through E2F activation",
+        "CDK1 inhibits APC/C to prevent its own cyclin B from being degraded in G2",
+        "CDK1 phosphorylates p53 to prevent G2 checkpoint activation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The CDK1 activation switch at G2/M relies on a double positive feedback loop. CDK1-cyclin B phosphorylates and activates its own activator Cdc25 (which removes the inhibitory Tyr15 phosphate from CDK1), while simultaneously phosphorylating and inhibiting its own inhibitor Wee1 (which adds the inhibitory Tyr15 phosphate). This creates a bistable switch: once CDK1 activity crosses a threshold, the positive feedback rapidly drives full activation \u2014 Cdc25 becomes fully active and Wee1 becomes fully inhibited, ensuring rapid and complete CDK1 activation. Additionally, Plk1 contributes by phosphorylating Cdc25 to promote its nuclear import and activating Wee1 degradation via SCF-beta-TrCP. This ultrasensitivity ensures an all-or-none switch between interphase (low CDK1) and mitosis (high CDK1).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "CDK1 activation switch"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cancer cells frequently exhibit aneuploidy \u2014 abnormal chromosome numbers. Which mechanism does NOT contribute to aneuploidy in cancer?",
+      "options": [
+        "Merotelic kinetochore-microtubule attachments that persist through anaphase",
+        "Weakened spindle assembly checkpoint due to reduced Mad2 expression",
+        "Centrosome amplification leading to multipolar spindles",
+        "Elevated cohesin loading in S phase leading to hyper-cohesion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Elevated cohesin loading causing hyper-cohesion would, if anything, delay sister chromatid separation rather than cause aneuploidy through missegregation; it is not a recognized mechanism of aneuploidy in cancer. The other three options are well-established mechanisms: (1) Merotelic attachments, where a single kinetochore is attached to microtubules from both poles, can lead to lagging chromosomes in anaphase if not corrected by Aurora B, resulting in chromosome missegregation. (2) A weakened SAC, through reduced expression of Mad2 or other checkpoint components, allows cells to enter anaphase despite incorrect attachments. (3) Centrosome amplification (supernumerary centrosomes) creates multipolar spindles that, even if clustered into pseudo-bipolar configurations, increase the frequency of merotelic attachments. In reality, cancer cells often have REDUCED cohesin (through mutations in STAG2 or other cohesin genes), which promotes premature separation and aneuploidy.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Aneuploidy mechanisms"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the phases of mitosis:\nS1: During prophase, chromosomes condense and centrosomes begin to migrate toward opposite poles driven by kinesin-5.\nS2: During prometaphase, the nuclear envelope breaks down through CDK1-mediated phosphorylation of nuclear lamins.\nS3: During metaphase, all chromosomes are aligned at the metaphase plate with bipolar (amphitelic) kinetochore-microtubule attachments.\nS4: During anaphase A, sister chromatids separate and move poleward exclusively through microtubule sliding by kinesin-5.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: During prophase, chromosome condensation is driven by condensin II (which is nuclear throughout), and centrosomes separate by the action of kinesin-5 (Eg5), which crosslinks antiparallel microtubules between the two centrosomes and slides them apart. S2 is TRUE: Nuclear envelope breakdown (NEBD) in prometaphase requires CDK1-cyclin B phosphorylation of nuclear lamins (lamin A, B, C), causing lamin depolymerization and nuclear envelope disassembly into ER membrane tubules. S3 is TRUE: At metaphase, the spindle assembly checkpoint is satisfied when all chromosomes achieve amphitelic attachment (each sister kinetochore attached to microtubules from opposite poles) and are aligned at the metaphase plate under balanced tension. S4 is FALSE: Anaphase A chromosome movement involves microtubule depolymerization at the kinetochore (Pac-Man mechanism) and at the poles (poleward flux), along with force generation by minus-end directed dynein \u2014 NOT kinesin-5 sliding. Kinesin-5 drives anaphase B spindle elongation.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Mitosis phases"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the G1/S transition:\nS1: The SCF-Skp2 E3 ubiquitin ligase targets the CKI p27 for degradation during the G1/S transition.\nS2: CDK2-cyclin E activity triggers centrosome duplication in addition to Rb phosphorylation.\nS3: E2F target genes include cyclin A, cyclin E, components of the DNA replication machinery, and E2F itself.\nS4: Mitogenic growth factors are required continuously throughout S phase to sustain DNA replication.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TFTT",
+        "FTTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: The SCF (Skp1-Cullin-F-box) complex with the Skp2 F-box protein recognizes phosphorylated p27 (phosphorylated by CDK2-cyclin E on Thr187) and ubiquitinates it for proteasomal degradation, creating another positive feedback loop that reinforces the G1/S transition. S2 is TRUE: CDK2-cyclin E phosphorylates nucleophosmin and other substrates required for centriole duplication initiation in S phase, linking DNA replication licensing with centrosome duplication. S3 is TRUE: E2F transcription factors activate a broad transcriptional program including cyclin E, cyclin A, Cdc6, MCM genes, PCNA, thymidine kinase, dihydrofolate reductase, and E2F itself (creating positive autoregulation). S4 is FALSE: Once cells pass the Restriction Point in late G1, they are committed to S phase entry and no longer require mitogenic signaling. Growth factor withdrawal after the R point does not prevent S phase completion.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "G1/S transition"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers performed a cell fusion experiment, fusing G1-phase cells with S-phase cells. The G1 nucleus was observed to begin DNA replication prematurely. However, when G2-phase cells were fused with S-phase cells, the G2 nucleus did NOT re-replicate. What is the best explanation for this asymmetry?",
+      "options": [
+        "G2 nuclei lack the DNA polymerases needed for replication",
+        "G2 nuclei have already inactivated their replication licensing factors, preventing re-initiation of DNA synthesis",
+        "S-phase cytoplasm contains a replication inhibitor specific to G2 nuclei",
+        "G2 nuclei have higher CDK1 activity that blocks S-phase cytoplasmic factors"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This classic cell fusion experiment (Rao and Johnson, 1970) demonstrates the licensing system for DNA replication. G1 nuclei have licensed origins (pre-RC loaded with MCM helicases via Cdc6 and Cdt1) and can respond to S-phase promoting factors (CDK2-cyclin E/A and DDK) present in the S-phase cytoplasm. However, G2 nuclei have already fired all their origins during the preceding S phase, and the licensing factors have been inactivated: Cdc6 has been phosphorylated and degraded, Cdt1 is inhibited by geminin, and MCM helicases have been displaced from origins during replication fork passage. Without licensed origins, G2 nuclei cannot reinitiate DNA synthesis regardless of S-phase promoting factors present. This ensures each segment of DNA is replicated exactly once per cell cycle.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Replication licensing and cell fusion"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A time-course Western blot during cell cycle progression shows cyclin B1 protein levels: absent in G1, gradually increasing through S and G2, peaking in early mitosis, then abruptly disappearing in late mitosis. A mutant cyclin B1 lacking the destruction box (D-box) shows the same accumulation pattern but fails to disappear after metaphase. What is the consequence of non-degradable cyclin B1 expression?",
+      "options": [
+        "Cells arrest in G1 with hypophosphorylated Rb",
+        "Cells arrest in metaphase with an active spindle assembly checkpoint",
+        "Cells exit mitosis normally but arrest in the subsequent G1",
+        "Cells arrest in late mitosis (anaphase/telophase block) with persistent CDK1 activity, failing to complete mitotic exit"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The destruction box is the motif recognized by APC/C-Cdc20 that targets cyclin B1 for ubiquitination and proteasomal degradation. Without cyclin B1 degradation, CDK1 remains constitutively active even after the SAC is satisfied and securin is destroyed. Persistent CDK1 activity prevents the dephosphorylation events required for mitotic exit: nuclear envelope cannot reassemble (lamins remain phosphorylated), chromosomes cannot decondense (condensin substrates remain phosphorylated), cytokinesis cannot complete, and APC/C-Cdh1 cannot be activated (since CDK1 phosphorylates and inhibits Cdh1). Cells with non-degradable cyclin B1 can initiate anaphase (since securin still has a D-box and can be degraded by APC/C-Cdc20), but they arrest in late mitosis with separated but condensed chromosomes and no nuclear envelope reformation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Cyclin B destruction and mitotic exit"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A research group wants to identify all substrates of CDK1 that are phosphorylated specifically during mitotic entry. Which experimental strategy would provide the most comprehensive identification?",
+      "options": [
+        "Compare phosphoproteomes (using mass spectrometry with phosphopeptide enrichment) of cells synchronized in G2 versus early mitosis, combined with in vitro CDK1 kinase assays to validate candidate substrates",
+        "Perform yeast two-hybrid screens with CDK1 as bait to identify interacting proteins",
+        "Use Western blots with anti-phosphoserine antibodies on total cell lysates from each cell cycle phase",
+        "Create CDK1 knockout cells and compare their transcriptome with wild-type cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Quantitative phosphoproteomics comparing G2 and early mitotic cells provides the most comprehensive and unbiased identification of CDK1 substrates. Using SILAC or TMT labeling combined with titanium dioxide or IMAC phosphopeptide enrichment and LC-MS/MS analysis can identify thousands of phosphorylation events that change during mitotic entry. Sites matching the CDK consensus motif (S/T-P-x-K/R) are candidate CDK1 substrates, which can be validated by in vitro kinase assays with purified CDK1-cyclin B. Chemical genetic approaches (using analog-sensitive CDK1 with bulky ATP analogs) can also identify direct substrates. Yeast two-hybrid detects stable interactions, not transient kinase-substrate interactions. Anti-phosphoserine Westerns lack specificity. Transcriptomics would miss post-translational regulation entirely.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "CDK1 substrate identification"
+    },
+    {
+      "type": "MCQ",
+      "question": "The tumor suppressor p16INK4a specifically inhibits which CDK-cyclin complex?",
+      "options": [
+        "CDK2-cyclin E",
+        "CDK1-cyclin B",
+        "CDK4/6-cyclin D",
+        "CDK7-cyclin H (CAK)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "p16INK4a (encoded by CDKN2A) is a member of the INK4 family of CDK inhibitors that specifically bind and inhibit CDK4 and CDK6 by competing with cyclin D for binding. p16 binds to CDK4/6 through its ankyrin repeat domains, inducing a conformational change that prevents cyclin D association. By blocking CDK4/6-cyclin D, p16 prevents Rb phosphorylation, maintaining Rb in its active hypophosphorylated state that represses E2F target genes. The CDKN2A locus is one of the most frequently mutated or silenced (by promoter methylation) loci in human cancer. Notably, the same locus encodes p14ARF (p19ARF in mouse) through an alternative reading frame, which stabilizes p53 by inhibiting MDM2. The Cip/Kip family (p21, p27, p57) has broader specificity for CDK2 and CDK1 complexes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "INK4 CDK inhibitors"
+    },
+    {
+      "type": "MCQ",
+      "question": "During mitotic exit, the phosphatase PP1 and PP2A are critical for dephosphorylating CDK substrates. How is PP2A-B55 (the major mitotic exit phosphatase) regulated to ensure it is inactive during mitosis but active during mitotic exit?",
+      "options": [
+        "PP2A-B55 is sequestered in the nucleus during mitosis",
+        "Greatwall kinase phosphorylates endosulfine/ARPP-19, which act as potent inhibitors of PP2A-B55 during mitosis",
+        "CDK1 directly phosphorylates the catalytic subunit of PP2A to inactivate it",
+        "PP2A-B55 is ubiquitinated by APC/C and degraded during mitosis, then re-synthesized during exit"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Greatwall kinase (MASTL in humans) pathway ensures that PP2A-B55 is inhibited during mitosis, preventing premature dephosphorylation of CDK1 substrates. CDK1-cyclin B activates Greatwall kinase, which phosphorylates the small proteins endosulfine (ENSA) and ARPP-19. Phospho-ENSA/ARPP-19 bind to PP2A-B55 as potent competitive inhibitors, blocking its phosphatase activity toward CDK substrates. During mitotic exit, when CDK1 is inactivated by cyclin B destruction, Greatwall becomes inactive, ENSA/ARPP-19 are dephosphorylated and release PP2A-B55, which then dephosphorylates CDK substrates to reverse mitotic phosphorylation. This creates a coupled bistable system: high CDK1 + inhibited PP2A-B55 = mitosis; low CDK1 + active PP2A-B55 = interphase.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Greatwall-PP2A mitotic exit"
+    },
+    {
+      "type": "MCQ",
+      "question": "Polo-like kinase 1 (Plk1) is a master regulator of multiple mitotic events. Which domain of Plk1 targets it to specific substrates by recognizing phosphorylated motifs?",
+      "options": [
+        "SH2 domain",
+        "Polo-box domain (PBD)",
+        "BRCT domain",
+        "FHA domain"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The polo-box domain (PBD) is a unique phosphopeptide-binding domain found in Polo-like kinases. The PBD of Plk1 recognizes motifs containing phosphoserine/phosphothreonine (typically S-pS/pT-P), which are often created by prior CDK phosphorylation ('priming phosphorylation'). This creates a sequential phosphorylation relay: CDK1 first phosphorylates a substrate, creating a docking site for Plk1's PBD, which then allows Plk1 to phosphorylate nearby sites. The PBD also has an autoinhibitory function \u2014 in the inactive state, PBD binds to the kinase domain and inhibits it. When PBD engages a phosphopeptide on a substrate, it releases the kinase domain, activating Plk1. This elegant mechanism ensures both spatial targeting and kinase activation at the site of action. SH2 domains bind phosphotyrosine, BRCT/FHA domains are DNA damage response proteins.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Polo-like kinase targeting"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine whether a protein X is degraded in an APC/C-dependent manner during mitotic exit, which experimental control is most critical?",
+      "options": [
+        "Comparing protein X levels in cells treated with proteasome inhibitor MG132 versus untreated cells during mitotic exit",
+        "Measuring protein X mRNA levels by qPCR during the same time course",
+        "Comparing protein X degradation in cells expressing dominant-negative Cdh1 versus wild-type cells",
+        "Performing in vitro binding assays between protein X and cyclin B"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The most critical control for demonstrating APC/C-dependent degradation is treatment with the proteasome inhibitor MG132 during mitotic exit. If protein X normally disappears during mitotic exit but persists when MG132 is added, this demonstrates that the protein is degraded through the ubiquitin-proteasome pathway. This distinguishes true protein degradation from other mechanisms of protein level reduction (such as dilution, secretion, or epitope masking). Additional experiments would then address whether APC/C specifically is responsible: (1) mutating the D-box or KEN-box in protein X to block APC/C recognition, (2) co-immunoprecipitation with APC/C subunits, (3) in vitro ubiquitination assays with purified APC/C, and (4) expression of dominant-negative Cdh1/Cdc20. While the Cdh1 dominant-negative experiment (option C) is useful, the proteasome inhibitor control is the fundamental first step.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Proteasome-dependent degradation assay"
+    },
+    {
+      "type": "MCQ",
+      "question": "The multi-step model of cancer (Vogelstein model) proposes that colorectal cancer develops through sequential acquisition of mutations. What is the typical order of mutations in the adenoma-carcinoma sequence?",
+      "options": [
+        "p53 loss \u2192 APC loss \u2192 KRAS activation \u2192 SMAD4 loss",
+        "APC loss \u2192 KRAS activation \u2192 SMAD4 loss \u2192 p53 loss",
+        "KRAS activation \u2192 APC loss \u2192 p53 loss \u2192 SMAD4 loss",
+        "SMAD4 loss \u2192 p53 loss \u2192 APC loss \u2192 KRAS activation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Vogelstein model of colorectal cancer progression follows a well-characterized sequence: (1) APC loss (5q21) is the initiating event, disrupting the Wnt/beta-catenin pathway and causing adenomatous polyp formation. APC normally targets beta-catenin for destruction; its loss leads to constitutive Wnt signaling and hyperproliferation. (2) KRAS activation (12p12) promotes growth of the adenoma \u2014 activating mutations (typically G12V or G12D) lock Ras in the GTP-bound active state, constitutively activating the MAPK pathway. (3) SMAD4 loss (18q21) disrupts TGF-beta signaling, removing growth inhibition and promoting progression to late adenoma. (4) p53 loss (17p13) removes the final barrier to malignant transformation, allowing accumulation of genomic instability and invasion. This ordered model, based on analysis of tumors at different stages, demonstrates that cancer requires multiple hits.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Multi-step carcinogenesis"
+    },
+    {
+      "type": "MCQ",
+      "question": "Growth factors stimulate quiescent (G0) cells to re-enter the cell cycle. What is the immediate downstream signaling cascade initiated by receptor tyrosine kinase (RTK) activation that leads to cyclin D expression?",
+      "options": [
+        "RTK \u2192 PI3K \u2192 mTOR \u2192 cyclin D translation",
+        "RTK \u2192 Ras \u2192 Raf \u2192 MEK \u2192 ERK \u2192 transcription of cyclin D1",
+        "RTK \u2192 JAK \u2192 STAT \u2192 cyclin D transcription",
+        "RTK \u2192 PLC-gamma \u2192 PKC \u2192 cyclin D degradation prevention"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The canonical pathway from RTK activation to cyclin D1 expression proceeds through the Ras-MAPK cascade: (1) Ligand-bound RTK autophosphorylates, recruiting Grb2-SOS, (2) SOS activates Ras by promoting GDP-to-GTP exchange, (3) Ras-GTP activates Raf (MAP3K), (4) Raf phosphorylates and activates MEK (MAP2K), (5) MEK phosphorylates and activates ERK (MAPK), (6) ERK translocates to the nucleus and activates transcription factors (AP-1 complex: Fos/Jun, Myc) that drive cyclin D1 transcription. While the PI3K-Akt-mTOR pathway also contributes to cyclin D regulation (particularly translational regulation and GSK3beta-mediated stability), the Ras-MAPK pathway is the primary and most direct route for transcriptional induction. JAK-STAT is primarily activated by cytokine receptors, not RTKs.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Growth factor signaling to cell cycle"
+    },
+    {
+      "type": "MCQ",
+      "question": "The spindle midzone (central spindle) forms during anaphase and is essential for cytokinesis positioning. Which protein complex is the master organizer of the central spindle?",
+      "options": [
+        "The chromosomal passenger complex (Aurora B/INCENP/survivin/borealin)",
+        "The centralspindlin complex (MKLP1/MgcRacGAP)",
+        "The PRC1/Ase1 antiparallel microtubule bundler",
+        "The augmin complex"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The centralspindlin complex, a heterotetramer of the kinesin-6 MKLP1 (also called ZEN-4/CHO1) and MgcRacGAP (also called CYK-4/RacGAP50C), is the master organizer of the central spindle and the key determinant of cleavage furrow positioning. Centralspindlin localizes to the spindle midzone during anaphase, where it bundles antiparallel microtubules and recruits the RhoGEF ECT2 to the cell equator. ECT2 then activates RhoA, which triggers contractile ring assembly by promoting actin polymerization (via formins) and myosin II activation (via ROCK). The CPC (Aurora B) relocates to the midzone during anaphase but primarily regulates midzone organization and abscission timing. PRC1 bundles antiparallel microtubules but does not directly signal for furrow formation. Augmin nucleates new microtubules from existing ones.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Central spindle and cytokinesis"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about tumor suppressors and oncogenes:\nS1: Proto-oncogenes require gain-of-function mutations in only one allele to contribute to cancer (dominant effect).\nS2: Tumor suppressor genes typically require loss of both alleles (loss of heterozygosity) to lose function according to Knudson's two-hit hypothesis.\nS3: The BCL-2 gene, when overexpressed due to chromosomal translocation t(14;18), promotes apoptosis and acts as a tumor suppressor.\nS4: The Ras oncogene is the most frequently mutated oncogene in human cancers, found in approximately 30% of all tumors.",
+      "options": [
+        "TTFT",
+        "TTTF",
+        "TTFF",
+        "TFFT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Oncogenes are dominant \u2014 a gain-of-function mutation in a single allele produces a hyperactive or constitutively active protein that drives proliferation regardless of the normal allele. Examples include activating KRAS mutations, BRAF V600E, and EGFR amplification. S2 is TRUE: Knudson's two-hit hypothesis (1971, based on retinoblastoma) states that both alleles of a tumor suppressor must be inactivated for loss of function. The first hit can be inherited (familial cancer) or somatic, and the second hit occurs through LOH, mutation, or epigenetic silencing. S3 is FALSE: BCL-2 is an ANTI-apoptotic protein, and its overexpression due to the t(14;18) translocation (juxtaposing BCL-2 with the immunoglobulin heavy chain enhancer in follicular lymphoma) promotes cell survival by inhibiting the intrinsic apoptotic pathway. BCL-2 is an ONCOGENE, not a tumor suppressor. S4 is TRUE: KRAS, NRAS, and HRAS mutations are found in approximately 30% of all human cancers, making RAS the most commonly mutated oncogene family.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Oncogenes and tumor suppressors"
+    },
+    {
+      "type": "MCQ",
+      "question": "Telomerase is a ribonucleoprotein that extends telomeres. What is unique about the catalytic mechanism of telomerase compared to conventional DNA polymerases?",
+      "options": [
+        "Telomerase uses an internal RNA template (TERC) to synthesize telomeric DNA repeats via reverse transcription by TERT",
+        "Telomerase synthesizes both DNA strands simultaneously without requiring a primer",
+        "Telomerase ligates pre-formed telomeric oligonucleotides onto chromosome ends",
+        "Telomerase uses RNA polymerase activity to transcribe telomeric RNA that is then converted to DNA"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Telomerase is unique among eukaryotic polymerases because it carries its own RNA template (TERC/TR) and uses reverse transcriptase activity (provided by the TERT/catalytic subunit) to synthesize DNA from this RNA template. The TERC RNA contains a short sequence complementary to the telomeric repeat (5'-AAUCCC-3' in humans, templating the 5'-TTAGGG-3' repeat). TERT binds the 3' overhang of the telomere, aligns it with the RNA template, and extends the G-rich strand by reverse transcription. After adding one repeat unit, telomerase translocates and re-aligns for another round. The complementary C-rich strand is then filled in by conventional DNA polymerase alpha-primase. Telomerase processivity is regulated by TPP1-POT1 in the shelterin complex, which recruits telomerase and enhances its processivity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Telomerase mechanism"
+    },
+    {
+      "type": "MCQ",
+      "question": "The shelterin complex protects telomere ends from being recognized as DNA damage. Which shelterin component directly binds the single-stranded G-rich 3' overhang of telomeres?",
+      "options": [
+        "TRF1",
+        "TRF2",
+        "POT1",
+        "RAP1"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The shelterin complex consists of six proteins with distinct binding specificities: TRF1 and TRF2 bind double-stranded telomeric DNA as homodimers; TIN2 bridges TRF1 and TRF2; RAP1 associates with TRF2; TPP1 connects TIN2 to POT1; and POT1 (Protection Of Telomeres 1) specifically binds the single-stranded G-rich 3' overhang through its OB-fold domains. POT1 binding prevents the overhang from activating ATR-mediated DNA damage signaling (since exposed single-stranded DNA normally recruits RPA, which triggers ATR). TRF2 prevents ATM activation by promoting t-loop formation, where the 3' overhang invades the double-stranded telomeric region. Loss of TRF2 leads to ATM activation, NHEJ-mediated telomere fusions. Loss of POT1 leads to ATR activation and inappropriate DNA damage signaling.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Shelterin complex"
+    },
+    {
+      "type": "MCQ",
+      "question": "Contact inhibition is a property of normal cells that contributes to growth control. What molecular mechanism underlies contact inhibition of proliferation?",
+      "options": [
+        "Physical compression of nuclei prevents chromosome condensation",
+        "Cadherin-mediated cell-cell adhesion activates the Hippo pathway, leading to YAP/TAZ phosphorylation and cytoplasmic sequestration",
+        "Tight junctions block growth factor receptors from accessing their ligands",
+        "Gap junction-mediated transfer of CKIs from neighbor cells directly inhibits CDKs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contact inhibition of proliferation is primarily mediated through the Hippo signaling pathway. When cells form dense confluent monolayers, E-cadherin-based adherens junctions activate the Hippo pathway kinase cascade: MST1/2 (Hippo homolog) phosphorylates and activates LATS1/2, which phosphorylates the transcriptional co-activators YAP and TAZ on multiple serine residues. Phosphorylated YAP/TAZ are sequestered in the cytoplasm by 14-3-3 proteins and targeted for proteasomal degradation. This prevents YAP/TAZ from entering the nucleus and co-activating TEAD transcription factors, which drive expression of proliferative and anti-apoptotic genes. NF2/Merlin (an upstream Hippo activator) is also activated by cell-cell contact. Cancer cells frequently inactivate Hippo pathway components (NF2, LATS1/2) or amplify YAP, escaping contact inhibition.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Contact inhibition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The kinetochore is a multi-layered protein structure assembled on centromeric chromatin. Which protein directly links centromeric chromatin (via CENP-A nucleosomes) to the outer kinetochore microtubule-binding machinery?",
+      "options": [
+        "CENP-C and the CCAN (constitutive centromere-associated network) bridging to the KMN network",
+        "Cohesin complexes spanning from chromatin to microtubules",
+        "Histone H3.3 variants at centromeres",
+        "Aurora A kinase acting as a structural bridge"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The kinetochore is hierarchically organized from inner to outer layers. CENP-A (a histone H3 variant) replaces H3 in centromeric nucleosomes, forming the epigenetic mark that specifies kinetochore assembly. CENP-C directly binds the CENP-A nucleosome (recognizing the CENP-A-specific CATD domain) and recruits the CCAN (constitutive centromere-associated network, comprising ~16 proteins including CENP-H/I/K/L/M/N/O/P/Q/R/S/T/U/W/X). The CCAN then recruits the outer kinetochore KMN network (KNL1-MIS12-NDC80 complexes), where the Ndc80 complex (Ndc80/Hec1-Nuf2-Spc24-Spc25) provides the primary microtubule-binding interface through the CH domains of Ndc80 and Nuf2. This molecular chain from CENP-A \u2192 CENP-C \u2192 CCAN \u2192 KMN \u2192 microtubule is essential for chromosome attachment and segregation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Kinetochore architecture"
+    },
+    {
+      "type": "MCQ",
+      "question": "Abscission, the final step of cytokinesis that physically separates the two daughter cells, requires the ESCRT-III machinery. What signal triggers ESCRT-III-mediated abscission at the midbody?",
+      "options": [
+        "High levels of CDK1-cyclin B at the midbody",
+        "Spastin-mediated microtubule severing followed by CHMP4B polymerization",
+        "Release of the Aurora B-dependent abscission checkpoint when no chromatin bridges are detected in the intercellular bridge",
+        "Caspase-3 cleavage of midbody components"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Abscission is the final severing of the intercellular bridge connecting daughter cells. The timing of abscission is regulated by an Aurora B-dependent 'NoCut' checkpoint (abscission checkpoint) that delays abscission if chromatin bridges are trapped in the intercellular canal. Aurora B kinase, relocated to the midbody ring, phosphorylates CHMP4C (an ESCRT-III component), preventing premature ESCRT-III polymerization and membrane scission. When the checkpoint is satisfied (no trapped chromatin), Aurora B activity at the midbody decreases, CHMP4C is dephosphorylated, and ESCRT-III filaments (primarily CHMP4B) polymerize into helical filaments that constrict the membrane. The AAA-ATPase VPS4 then remodels ESCRT-III to complete scission. Spastin does sever midbody microtubules but is downstream of ESCRT-III recruitment. This checkpoint prevents tetraploidization from chromatin bridge breakage.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Abscission and ESCRT-III"
+    },
+    {
+      "type": "MCQ",
+      "question": "Oncogene-induced senescence (OIS) is a tumor-suppressive barrier. When an oncogene like RAS is activated in primary cells, the cells enter senescence instead of proliferating. What molecular pathway mediates OIS?",
+      "options": [
+        "Constitutive Ras activation causes metabolic collapse due to excessive glucose consumption",
+        "Hyperactive Ras-MAPK signaling triggers DNA replication stress, activating the ATR-Chk1 pathway and p53/p16-dependent cell cycle arrest",
+        "Ras directly phosphorylates p53 to stabilize it",
+        "Oncogenic Ras upregulates telomerase expression, which triggers p53-mediated arrest"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Oncogene-induced senescence occurs because hyperactive mitogenic signaling (from oncogenic Ras, BRAF V600E, or cyclin E overexpression) paradoxically triggers DNA replication stress. Excessive replication origin firing, fork stalling, and re-replication lead to DNA damage (DSBs), activating the ATR-Chk1 and ATM-Chk2 DNA damage response pathways. This stabilizes p53 (via Chk2 phosphorylation and MDM2 inhibition by p14ARF, which is upregulated by oncogenic signaling) and upregulates p16INK4a (through mechanisms involving chromatin remodeling). The combined action of p53-p21 and p16-Rb pathways enforces irreversible cell cycle arrest. OIS is a major tumor-suppressive barrier that must be overcome (by p53/Rb loss) for oncogene-driven tumors to develop. OIS cells display typical senescence markers including SAHF, SASP, and SA-beta-gal activity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Oncogene-induced senescence"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers synchronized cells using a double thymidine block (which arrests cells at the G1/S boundary). After release, they measured the percentage of cells in mitosis (mitotic index) over time. The mitotic index peaked at 8 hours post-release and then peaked again at 30 hours. What is the duration of one complete cell cycle in these cells?",
+      "options": [
+        "8 hours",
+        "22 hours",
+        "30 hours",
+        "38 hours"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The double thymidine block synchronizes cells at the G1/S boundary. After release, cells progress through S phase, G2, and into mitosis. The first mitotic peak at 8 hours represents the time for cells to transit from the G1/S boundary through S phase and G2 to reach mitosis (S + G2 = 8 hours). The second mitotic peak at 30 hours represents the same cohort of cells completing an entire cell cycle and returning to mitosis. Therefore, one complete cell cycle = 30 - 8 = 22 hours. This is the interval between successive entries into the same cell cycle phase. The 8-hour interval only represents S + G2 duration, not the full cycle. The 30-hour time point is the total time from release to the second mitotic entry, not the cycle length. This method is commonly used to determine cell cycle parameters in research.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Cell synchronization and cycle timing"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A phospho-specific antibody recognizes CDK1 phosphorylated at Tyr15 (the inhibitory phosphorylation site). In a Western blot time course during mitotic entry, phospho-Tyr15-CDK1 signal is high in G2, drops sharply at mitotic onset, and remains low throughout mitosis. When cells are treated with the Cdc25 inhibitor NSC 95397, phospho-Tyr15-CDK1 remains high and cells fail to enter mitosis. What do these results demonstrate?",
+      "options": [
+        "CDK1 is activated by Tyr15 phosphorylation at mitotic entry",
+        "Removal of the inhibitory Tyr15 phosphorylation by Cdc25 is essential for CDK1 activation and mitotic entry",
+        "Wee1 is the activating kinase for CDK1 during mitosis",
+        "CDK1 activation requires new cyclin B synthesis at the G2/M boundary"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data clearly demonstrate that Cdc25-mediated dephosphorylation of CDK1-Tyr15 is essential for mitotic entry. During G2, CDK1-cyclin B accumulates but is kept inactive by Wee1/Myt1-mediated phosphorylation of CDK1 on Thr14 and Tyr15 (the inhibitory sites). At mitotic onset, Cdc25 phosphatases (primarily Cdc25B for initial activation and Cdc25C for amplification) remove these inhibitory phosphates, converting CDK1 to its active form. The sharp drop in phospho-Tyr15 signal correlates with mitotic entry, and pharmacological inhibition of Cdc25 blocks this dephosphorylation and prevents mitosis. The Tyr15 phosphorylation is INHIBITORY, not activating (ruling out option A). Wee1 ADDS the inhibitory phosphate (ruling out option C). Cyclin B synthesis occurs throughout S and G2, not acutely at G2/M.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "CDK1 Tyr15 regulation"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about cancer hallmarks related to cell cycle control:\nS1: Self-sufficiency in growth signals is achieved by oncogene activation (e.g., constitutive Ras or RTK signaling).\nS2: Insensitivity to anti-growth signals results from loss of tumor suppressors like Rb and p16.\nS3: Evasion of apoptosis can occur through overexpression of pro-apoptotic proteins like Bax and Bak.\nS4: Limitless replicative potential in cancer cells is typically achieved through telomerase reactivation or ALT (alternative lengthening of telomeres).",
+      "options": [
+        "TTFT",
+        "TTTF",
+        "TTTT",
+        "TFFT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Cancer cells acquire self-sufficiency in growth signals through activating mutations in oncogenes (RAS, RAF, EGFR, HER2), autocrine growth factor production, or growth factor receptor overexpression/amplification, allowing proliferation without external mitogenic stimulation. S2 is TRUE: Loss of the Rb pathway (through Rb mutation, p16 silencing, cyclin D amplification, or CDK4 amplification) removes the major anti-proliferative checkpoint, making cells insensitive to anti-growth signals like TGF-beta. S3 is FALSE: Evasion of apoptosis requires LOSS of pro-apoptotic proteins (Bax, Bak, Bim) or OVEREXPRESSION of anti-apoptotic proteins (Bcl-2, Bcl-XL, Mcl-1). Overexpressing Bax/Bak would INCREASE apoptosis, not evade it. Common mechanisms include p53 loss, Bcl-2 overexpression via t(14;18), and IAP upregulation. S4 is TRUE: ~85-90% of cancers reactivate telomerase (hTERT expression), while ~10-15% use ALT, a recombination-based mechanism to maintain telomere length.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Cancer hallmarks"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine the mitotic index of a cell population and identify cells in specific mitotic stages, a researcher prepares fixed cell samples. Which staining approach provides the most detailed information about mitotic stages?",
+      "options": [
+        "Hematoxylin and eosin (H&E) staining and counting condensed chromosomes under bright-field microscopy",
+        "Immunofluorescence staining for phospho-histone H3 (Ser10) combined with DAPI for DNA and anti-alpha-tubulin for spindle visualization",
+        "Flow cytometry with propidium iodide staining alone",
+        "Phase-contrast microscopy of live unstained cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Triple immunofluorescence with phospho-histone H3 (Ser10), DAPI, and alpha-tubulin provides the most comprehensive mitotic stage identification. Phospho-H3 (Ser10) is a highly specific marker of mitotic cells \u2014 it is phosphorylated by Aurora B kinase beginning in late G2/prophase and is completely dephosphorylated by telophase. This allows unambiguous identification of mitotic cells. DAPI stains DNA to reveal chromosome morphology (condensation state, alignment, separation). Alpha-tubulin antibody reveals spindle morphology, enabling distinction between prometaphase (incomplete spindle), metaphase (bipolar spindle with aligned chromosomes), anaphase (separated chromosomes), and telophase (decondensing DNA, midzone microtubules). H&E can identify mitoses but provides less detail. PI flow cytometry gives cell cycle distribution but cannot distinguish G2 from M. Phase-contrast gives limited resolution.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Mitotic index and stage identification"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Warburg effect describes a metabolic alteration common in cancer cells. What is the Warburg effect?",
+      "options": [
+        "Cancer cells preferentially use aerobic glycolysis (fermenting glucose to lactate) even in the presence of oxygen",
+        "Cancer cells have enhanced oxidative phosphorylation compared to normal cells",
+        "Cancer cells cannot metabolize glucose and rely exclusively on glutamine",
+        "Cancer cells use fatty acid oxidation as their primary energy source"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Warburg effect, first observed by Otto Warburg in the 1920s, describes the phenomenon where cancer cells preferentially convert glucose to lactate through glycolysis even when sufficient oxygen is available for oxidative phosphorylation (hence 'aerobic glycolysis'). Although glycolysis produces far less ATP per glucose molecule (2 ATP vs. ~30-36 ATP from complete oxidation), cancer cells compensate by dramatically upregulating glucose uptake (via GLUT1 transporter overexpression) and glycolytic flux. The Warburg effect provides rapidly dividing cells with biosynthetic precursors (nucleotides, amino acids, lipids) from glycolytic intermediates, which is more important for proliferation than maximal ATP production. This metabolic shift is driven by oncogene activation (Ras, Myc, Akt) and HIF-1alpha stabilization, which upregulate glycolytic enzymes and glucose transporters. PET scanning exploits this by detecting high glucose uptake in tumors.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Warburg effect"
+    },
+    {
+      "type": "MCQ",
+      "question": "CDK-activating kinase (CAK) is required for full CDK activation. In mammalian cells, what is the identity of CAK and how does it activate CDKs?",
+      "options": [
+        "CAK is CDK7-cyclin H-MAT1, which phosphorylates the T-loop (activation segment) of CDK1, CDK2, CDK4, and CDK6",
+        "CAK is Wee1 kinase, which phosphorylates Tyr15 on CDK1 to activate it",
+        "CAK is Plk1, which phosphorylates CDKs during mitotic entry",
+        "CAK is ATM kinase, which activates CDKs in response to DNA damage"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In mammalian cells, CDK-activating kinase (CAK) is a trimeric complex of CDK7, cyclin H, and MAT1 (menage a trois 1). CAK phosphorylates a conserved threonine residue in the T-loop (activation segment) of CDKs \u2014 Thr161 in CDK1, Thr160 in CDK2, and Thr172 in CDK4. This phosphorylation causes a conformational change in the T-loop that opens the substrate-binding site and fully activates the CDK. Importantly, T-loop phosphorylation requires prior cyclin binding \u2014 unbound CDK monomers are poor CAK substrates because the T-loop blocks the phosphorylation site. CDK7-cyclin H also functions as part of TFIIH in RNA Polymerase II transcription, phosphorylating the C-terminal domain (CTD) of Pol II. Wee1 adds INHIBITORY phosphorylation. Plk1 and ATM have different substrates.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "CDK-activating kinase"
+    },
+    {
+      "type": "MCQ",
+      "question": "Endoreduplication (endoreplication) is a modified cell cycle where cells replicate DNA without mitosis, producing polyploid cells. In which biological context is endoreduplication a normal physiological process?",
+      "options": [
+        "Human hepatocytes that become tetraploid or octaploid, Drosophila salivary gland polytene chromosomes, and plant trichome cells",
+        "Only in pathological conditions like cancer and viral infection",
+        "Exclusively in megakaryocytes for platelet production",
+        "Only in plant cells, never in animal cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Endoreduplication is a normal physiological process in multiple biological contexts. In Drosophila, larval salivary gland cells undergo many rounds of endoreduplication (up to 1024N) to produce giant polytene chromosomes that support massive gene expression for salivary proteins. In mammals, hepatocytes commonly become tetraploid or octaploid through endoreduplication or failed cytokinesis, and megakaryocytes undergo endomitosis to reach 64-128N before platelet fragmentation. In plants, endoreduplication is extremely common \u2014 trichome cells, endosperm cells, and many differentiated cell types use endoreduplication to increase cell size without division. The molecular mechanism involves oscillation of CDK2-cyclin E/A activity without CDK1-cyclin B activation, allowing S-phase re-entry without mitosis. APC/C-Cdh1 remains active to degrade mitotic cyclins while allowing S-phase cyclins to accumulate periodically.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Endoreduplication"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A clonogenic (colony formation) assay is performed with cells treated with increasing doses of ionizing radiation. At 0 Gy, 100% colonies survive. At 2 Gy, 50% survive. At 4 Gy, 15% survive. At 6 Gy, 3% survive. At 8 Gy, 0.5% survive. When the same experiment is performed on cells with a mutant ATM kinase, survival at 2 Gy drops to 10% and continues to decline steeply. What do these results indicate about ATM function?",
+      "options": [
+        "ATM promotes radiation-induced apoptosis, so its loss increases survival",
+        "ATM is essential for DNA damage checkpoint activation and repair, and its loss sensitizes cells to radiation-induced killing",
+        "ATM directly repairs DNA double-strand breaks through its kinase activity",
+        "ATM mutation has no effect on radiation sensitivity; the observed difference is due to altered growth rates"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The clonogenic assay data show that ATM-mutant cells are significantly more radiosensitive than wild-type cells \u2014 at 2 Gy, only 10% of ATM-mutant cells survive versus 50% of wild-type. This increased radiosensitivity demonstrates that ATM is critical for the cellular response to ionizing radiation. ATM is the primary kinase that responds to DNA double-strand breaks (DSBs): it is activated by the MRN complex at DSB sites and phosphorylates numerous substrates including H2AX (gamma-H2AX for damage signaling), Chk2 (for checkpoint activation), p53 (for transcriptional response), BRCA1 (for homologous recombination repair), and 53BP1. Without functional ATM, cells cannot properly arrest the cell cycle to allow repair, and DSB repair efficiency is compromised. This is why patients with ataxia-telangiectasia (ATM mutations) are hypersensitive to ionizing radiation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "ATM and radiosensitivity"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about cell cycle synchronization methods:\nS1: Serum starvation arrests cells in G0/G1 by removing mitogenic growth factors.\nS2: Double thymidine block arrests cells at the G1/S boundary by inhibiting ribonucleotide reductase.\nS3: Nocodazole arrests cells in prometaphase by depolymerizing microtubules and activating the spindle assembly checkpoint.\nS4: Hydroxyurea arrests cells in S phase by inhibiting DNA topoisomerase II.",
+      "options": [
+        "TTFT",
+        "TTTF",
+        "TTTT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Serum starvation removes growth factors and mitogens, causing cells to exit the cell cycle and enter G0 quiescence. Upon serum re-addition, cells synchronously re-enter G1 and progress through the cell cycle. S2 is TRUE: Excess thymidine (or thymidine analogs) causes nucleotide pool imbalance \u2014 elevated TTP allosterically inhibits ribonucleotide reductase (specifically the reduction of CDP to dCDP), depleting the dCTP pool and stalling DNA replication forks. Two sequential thymidine blocks with a release period between them ensure tight synchronization at the G1/S boundary. S3 is TRUE: Nocodazole binds tubulin and prevents microtubule polymerization, destroying the mitotic spindle. Unattached kinetochores activate the SAC, which inhibits APC/C-Cdc20 and arrests cells in prometaphase with condensed chromosomes. S4 is FALSE: Hydroxyurea inhibits ribonucleotide reductase (not topoisomerase II), depleting deoxyribonucleotide pools and arresting cells in S phase.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Cell cycle synchronization"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher has identified a novel protein that localizes to centromeres during mitosis. To determine if this protein is required for accurate chromosome segregation, which experimental approach would provide the strongest evidence?",
+      "options": [
+        "Overexpress the protein and measure cell proliferation rates",
+        "Deplete the protein using siRNA and perform live-cell imaging to track chromosome behavior, combined with fixed-cell analysis of chromosome segregation errors and aneuploidy measurement by FISH or chromosome counting",
+        "Perform co-immunoprecipitation with known centromere proteins",
+        "Use in vitro microtubule binding assays to test if the protein binds microtubules"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The strongest approach combines functional depletion with multiple readouts for segregation fidelity. siRNA-mediated knockdown (or auxin-inducible degron for acute depletion) removes the protein, and live-cell imaging with fluorescent markers (H2B-GFP for chromosomes, mCherry-alpha-tubulin for spindle) directly visualizes segregation errors in real-time \u2014 including lagging chromosomes, chromatin bridges, multipolar spindles, and failed congression. Fixed-cell analysis with immunofluorescence for kinetochore markers and CREST antibodies can quantify kinetochore-microtubule attachment defects. FISH (fluorescence in situ hybridization) for specific chromosomes or chromosome counting in metaphase spreads directly quantifies aneuploidy rates. Overexpression tests gain-of-function, not requirement. Co-IP shows interaction but not function. In vitro binding is biochemical characterization, not functional evidence in cells.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Chromosome segregation analysis"
+    },
+    {
+      "type": "MCQ",
+      "question": "The phosphatase CDC14 plays a central role in mitotic exit in budding yeast. How is CDC14 regulated during the cell cycle?",
+      "options": [
+        "CDC14 is constitutively active and is inhibited at mitotic entry by CDK1 phosphorylation",
+        "CDC14 is sequestered in the nucleolus by Net1/Cfi1 during interphase and released sequentially by the FEAR and MEN pathways during mitotic exit",
+        "CDC14 is expressed only during mitosis through M-phase-specific transcription",
+        "CDC14 is activated by cyclin B binding during anaphase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In budding yeast, Cdc14 phosphatase is sequestered in an inactive state in the nucleolus throughout most of the cell cycle by its inhibitor Net1 (also called Cfi1), forming part of the RENT (Regulator of Nucleolar silencing and Telophase exit) complex. Cdc14 is released in two waves during mitotic exit: (1) The FEAR (Cdc Fourteen Early Anaphase Release) pathway, involving separase, Slk19, Spo12, and Esp1, causes partial and transient release at early anaphase. (2) The MEN (Mitotic Exit Network), a Ras-like GTPase signaling cascade (Tem1 \u2192 Cdc15 \u2192 Dbf2-Mob1), causes sustained release from the nucleolus. Released Cdc14 dephosphorylates CDK substrates including Sic1 (enabling CDK inhibition), Cdh1 (activating APC/C-Cdh1 for B-cyclin destruction), and Swi5 (promoting SIC1 transcription), creating a robust mitotic exit program. In vertebrates, Cdc14 homologs exist but are less central.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "CDC14 and mitotic exit in yeast"
+    },
+    {
+      "type": "MCQ",
+      "question": "Chromosome passenger complex (CPC) localization changes dynamically during mitosis. At which structure does the CPC localize during early mitosis versus late mitosis?",
+      "options": [
+        "Kinetochores in prophase/prometaphase \u2192 spindle poles in anaphase",
+        "Inner centromere in prometaphase/metaphase \u2192 central spindle/midbody in anaphase/telophase",
+        "Chromosome arms in prometaphase \u2192 nuclear envelope in telophase",
+        "Centrosomes throughout mitosis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The chromosomal passenger complex (CPC), consisting of Aurora B kinase, INCENP, survivin, and borealin, shows a characteristic dynamic localization pattern. During early mitosis (prometaphase and metaphase), the CPC localizes to the inner centromere, where Aurora B functions in error correction of kinetochore-microtubule attachments and contributes to SAC signaling. The inner centromere targeting is mediated by haspin kinase (phosphorylates H3-Thr3) and Bub1 kinase (phosphorylates H2A-Thr120), which recruit survivin and borealin respectively. During the metaphase-to-anaphase transition, the CPC relocates to the central spindle (midzone) through MKLP2-dependent transport along antiparallel microtubules, guided by the interaction of INCENP with microtubules. At the midbody, Aurora B regulates the abscission checkpoint. The CPC does not localize to centrosomes or chromosome arms.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "CPC dynamic localization"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the molecular basis for the 'search and capture' model of kinetochore-microtubule attachment during prometaphase?",
+      "options": [
+        "Kinetochores extend long fibers that physically reach out and grasp spindle microtubules",
+        "Dynamic microtubules growing from centrosomes undergo cycles of polymerization and catastrophe, stochastically encountering and being captured by kinetochore-associated proteins",
+        "Motor proteins at kinetochores walk along astral microtubules to reach centrosomes",
+        "RanGTP gradients from chromosomes direct microtubule growth exclusively toward kinetochores"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The search-and-capture model, proposed by Kirschner and Mitchison, explains how kinetochores become attached to spindle microtubules during prometaphase. Centrosome-nucleated microtubules undergo dynamic instability \u2014 alternating between phases of growth (polymerization) and shrinkage (catastrophe). This creates a 'search' behavior where growing microtubule plus-ends explore the cytoplasm. When a dynamic microtubule encounters a kinetochore, it is 'captured' \u2014 stabilized against catastrophe by kinetochore-associated proteins (Ndc80 complex, CENP-E motor). The RanGTP gradient around chromosomes does contribute by locally promoting microtubule nucleation and stabilization, supplementing (but not replacing) the search-and-capture mechanism. Chromatin-driven microtubule nucleation and augmin-mediated branching also contribute to kinetochore capture, particularly for chromosomes far from centrosomes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Search and capture model"
+    }
+  ]
+}
