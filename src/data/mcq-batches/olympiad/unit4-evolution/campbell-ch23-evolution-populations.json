@@ -1465,6 +1465,536 @@
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
       "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "A population geneticist detects a region of the human genome with significantly reduced nucleotide diversity and an excess of high-frequency derived alleles compared to neutral expectations. This genomic signature is most consistent with:",
+      "options": [
+        "Balancing selection maintaining multiple alleles",
+        "Neutral evolution with no selection",
+        "A recent population expansion with no selection",
+        "A recent selective sweep, where positive selection on a beneficial mutation reduced diversity at linked sites and carried derived alleles to high frequency through genetic hitchhiking"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A selective sweep produces a characteristic signature: reduced nucleotide diversity in the region surrounding the selected site (because the beneficial allele and linked neutral variants rapidly increase to fixation, eliminating variation), and an excess of high-frequency derived alleles (because neutral variants that happened to be linked to the beneficial mutation were swept to high frequency). This is distinct from other evolutionary forces. Option A (balancing selection) would show increased diversity and an excess of intermediate-frequency variants. Option B (neutral evolution) would show diversity levels consistent with neutral expectations. Option C (population expansion) produces an excess of rare variants (negative Tajima's D), not an excess of high-frequency derived alleles.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "Epistatic interactions between loci can create a 'rugged fitness landscape' with multiple adaptive peaks separated by fitness valleys. Why does this pose a challenge for adaptive evolution by natural selection alone?",
+      "options": [
+        "Natural selection can easily traverse fitness valleys because it acts on individual fitness",
+        "A rugged fitness landscape has no effect on evolutionary trajectories",
+        "Natural selection always drives populations to the global fitness maximum regardless of landscape topology",
+        "Natural selection can only move populations uphill on the fitness landscape; crossing a fitness valley requires passing through genotypes with lower fitness, which selection opposes — populations can become trapped on local fitness peaks that are not the global optimum"
+      ],
+      "correctAnswer": "D",
+      "explanation": "On a rugged fitness landscape with multiple peaks, natural selection always moves populations toward higher fitness — it can only 'climb uphill.' To reach a higher but more distant peak, the population would need to pass through a fitness valley (intermediate genotypes with lower fitness), which selection opposes. This means populations can become trapped on suboptimal local fitness peaks. This is one reason Wright proposed that genetic drift in small subpopulations could be important for evolution — drift can move populations across fitness valleys that selection cannot cross. Option A is incorrect because selection cannot traverse fitness valleys since it always favors higher-fitness genotypes. Option B is incorrect because fitness landscape topology profoundly affects evolutionary outcomes. Option C is incorrect because selection can trap populations on local optima without guarantee of reaching the global optimum.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures heterozygosity at 20 microsatellite loci in four populations of the same species:\n\n| Population | Census Size (N) | Estimated Ne | Mean Heterozygosity (He) | Ne/N Ratio |\n|-----------|----------------|-------------|------------------------|------------|\n| A (mainland) | 50,000 | 8,500 | 0.78 | 0.17 |\n| B (large island) | 5,000 | 1,200 | 0.65 | 0.24 |\n| C (small island) | 200 | 35 | 0.31 | 0.18 |\n| D (captive breed) | 150 | 12 | 0.18 | 0.08 |\n\nWhich population is at greatest risk of genetic erosion and inbreeding depression, and why?",
+      "options": [
+        "Population A, because it has the largest census size and therefore the most genetic diversity to lose",
+        "Population B, because island populations are always at greater risk than mainland populations",
+        "Population C, because it has low Ne and low heterozygosity",
+        "Population D, because it has the lowest Ne (12), lowest heterozygosity (0.18), and lowest Ne/N ratio (0.08), indicating severe genetic erosion, high inbreeding, and very limited evolutionary potential"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Population D is at greatest risk for multiple reinforcing reasons. Its extremely low Ne (12) means drift is very powerful, inbreeding rate is high (ΔF = 1/(2Ne) = 4.2% per generation), and beneficial alleles cannot be effectively selected. The low heterozygosity (0.18) indicates substantial genetic diversity has already been lost. The low Ne/N ratio (0.08) suggests severe variance in reproductive success, skewed sex ratios, or other factors reducing effective population size well below census size — common in captive breeding programs where few individuals dominate reproduction. With Ne = 12, this population is below the 50/500 threshold for even short-term avoidance of inbreeding depression. Option A is incorrect because large Ne protects against genetic erosion. Option B faces moderate risk but has Ne = 1,200, well above critical thresholds. Option C is at risk (Ne = 35 is low) but less critically than D.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 'paradox of variation' in population genetics refers to the observation that natural populations maintain far more genetic variation than would be expected if most loci were under strong selection. Which theoretical framework best resolves this paradox?",
+      "options": [
+        "All genetic variation is maintained by overdominant selection at every locus",
+        "The neutral theory, which proposes that most molecular variation is selectively neutral and maintained by mutation-drift balance rather than balancing selection",
+        "All variation is maintained by frequency-dependent selection",
+        "Genetic variation is an illusion caused by measurement error in molecular techniques"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The paradox of variation was that classical population genetics predicted limited polymorphism (selection should fix the best allele at each locus), yet molecular studies (starting with protein electrophoresis in the 1960s) revealed enormous genetic variation. Kimura's neutral theory resolved this by proposing that most molecular variants are selectively neutral — they have no effect on fitness and are maintained by the balance between mutation (introducing new variants) and drift (causing random loss). Under the neutral theory, the level of heterozygosity depends on effective population size and mutation rate (H = 4Neμ/(4Neμ + 1)), which can accommodate the observed levels. Option A is implausible because maintaining overdominance at thousands of loci would impose an unsustainable segregation load. Option C is possible for some loci but cannot explain genome-wide levels of variation. Option D is incorrect because molecular techniques reliably detect genuine genetic variation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that a population of deer mice on a sand dune has evolved lighter coat color due to natural selection for camouflage (predator avoidance). To test whether the light coloration is adaptive, which experimental approach would provide the MOST direct evidence?",
+      "options": [
+        "Comparing the DNA sequences of light and dark mice to identify color genes",
+        "Measuring the abundance of predators in the sand dune habitat",
+        "Placing artificial mouse models (light and dark phenotypes) on the sand dune and measuring differential predation rates by raptors and snakes, combined with measuring survival of live light vs. dark mice transplanted between sand dune and dark soil habitats",
+        "Measuring body weight differences between light and dark mice in laboratory conditions"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The combination of predation experiments using models and reciprocal transplant experiments with live mice provides the most direct evidence for adaptive camouflage evolution. Clay model experiments (as conducted by Hoekstra and colleagues) directly measure predation rates on different color morphs in different habitats: if light models experience less predation on sand and dark models experience less predation on dark soil, this demonstrates that coat color matching provides survival advantages through crypsis. Reciprocal transplants of live mice extend this to measure actual survival differences. Option A identifies the genetic basis but does not demonstrate adaptive function. Option B characterizes the selective environment but does not test whether coat color is actually under selection. Option D measures a different trait (body weight) in an artificial environment without predation pressure.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "If a neutral allele has reached a frequency of 0.8 in a diploid population of effective size Ne = 200, what is the probability that this allele will eventually reach fixation (frequency = 1.0)?",
+      "options": [
+        "0.008 (the initial frequency 1/(2Ne) when it was a new mutation)",
+        "1.0 (guaranteed fixation because it is already at high frequency)",
+        "0.5 (50-50 chance regardless of current frequency)",
+        "0.8 (the current frequency, because for a neutral allele the fixation probability equals its current frequency)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A fundamental result of neutral theory is that the probability of fixation of a neutral allele equals its current frequency in the population. This is because without selection, each gene copy has an equal probability of being the ancestor of all future copies. With 2N gene copies in the population, any specific copy has a 1/(2N) chance of being the ultimate ancestor, but an allele at frequency p has p × 2N copies, giving it a total fixation probability of p. At frequency 0.8, the allele has an 80% chance of eventually fixing and a 20% chance of eventually being lost. This elegant result follows from the mathematical properties of neutral genetic drift. Option A gives the fixation probability when the allele was a new mutation at frequency 1/(2×200) = 0.0025. Option B is incorrect because even at high frequency, the allele can still be lost by drift. Option C would only apply at p = 0.5.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher notices that in a species of bird, populations at higher latitudes tend to have larger body sizes (Bergmann's rule). After conducting common garden experiments confirming that size differences are genetic, she measures the selection gradient on body size in populations at different latitudes. She finds that directional selection favors larger size at all latitudes, but the strength of selection does not differ between latitudes. What is the most likely explanation for the latitudinal cline in body size?",
+      "options": [
+        "The cline is maintained by frequency-dependent selection that varies with latitude",
+        "Gene flow from larger-bodied northern populations to smaller-bodied southern populations maintains the cline despite uniform selection",
+        "The cline evolved because mutation rates are higher at higher latitudes",
+        "Countergradient variation: the observed phenotypic cline is maintained by genetic differences despite uniform selection, possibly because gene flow from large-bodied northern populations is insufficient to homogenize the populations, and historical selection or drift established the genetic differences that persist"
+      ],
+      "correctAnswer": "D",
+      "explanation": "When selection is uniform across locations but a genetic cline still exists, this represents countergradient variation — the genetic differences among populations were established by historical processes (past differential selection, drift during past isolation) and persist because gene flow is insufficient to homogenize populations. Alternatively, the cline may reflect adaptation to environmental factors not captured by the body size selection gradient measured (e.g., thermoregulatory demands, starvation resistance), creating a complex pattern where current selection within each population favors larger size but different local optima produce the cline. Option A is incorrect because frequency-dependent selection is not implicated when the selection gradient on body size is uniform. Option B describes a gene flow mechanism but doesn't explain why the cline would be maintained if gene flow would push southern populations toward larger sizes (same direction as local selection). Option C is incorrect because mutation rates do not vary systematically with latitude.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the Wright-Fisher model of genetic drift:\nS1: In the Wright-Fisher model, each generation is formed by randomly sampling 2N gene copies (with replacement) from the parental generation.\nS2: The expected time for a neutral allele to reach fixation, given that it does fix, is 4Ne generations.\nS3: Genetic drift affects all loci in the genome simultaneously, unlike selection which typically acts on specific loci.\nS4: In very large populations (Ne > 1 million), genetic drift has virtually no effect on allele frequencies.",
+      "options": ["TTTT", "TTTF", "TTFT", "TFTT"],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE because the Wright-Fisher model assumes discrete, non-overlapping generations where the next generation is formed by random multinomial sampling (with replacement) of gametes from the parental gene pool, with each gamete having an equal probability of being sampled. S2 is TRUE because the expected time to fixation for a neutral allele, conditional on fixation occurring, is approximately 4Ne generations. This can be very long for large populations. S3 is TRUE because drift is a genome-wide stochastic process resulting from finite population size; it affects all loci simultaneously (though the specific changes at each locus are independent). Selection, by contrast, typically targets specific loci (though linked loci experience hitchhiking effects). S4 is TRUE because the magnitude of drift-induced allele frequency change per generation scales as 1/(2Ne); for Ne = 10⁶, the standard deviation of allele frequency change per generation is √(pq/(2Ne)) ≈ 0.0005 for p=q=0.5, which is negligibly small. In such large populations, even weakly selected alleles behave deterministically.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "A small population of island foxes (Ne = 20) has been isolated for 500 generations. A conservation geneticist predicts that this population has lost approximately what proportion of its original heterozygosity?",
+      "options": [
+        "Approximately 0% — drift is negligible over 500 generations",
+        "Approximately 100% — all variation would be lost in 500 generations with Ne = 20",
+        "Approximately 1 - (1 - 1/(2Ne))^t = 1 - (1 - 1/40)^500 = 1 - (0.975)^500 ≈ 1 - 0.000003 ≈ 99.9997% — virtually all heterozygosity has been lost",
+        "Exactly 50% because drift always reduces heterozygosity by half"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The expected heterozygosity after t generations of drift in a population of effective size Ne is Ht = H0(1 - 1/(2Ne))^t. The proportion of original heterozygosity remaining = (1 - 1/(2×20))^500 = (0.975)^500. Using logarithms: ln(0.975) = -0.02532, so 500 × (-0.02532) = -12.66, and e^(-12.66) ≈ 0.000003. This means about 99.9997% of heterozygosity has been lost, and virtually no original variation remains. With Ne = 20 and 500 generations, the population has had ample time for drift to erode genetic diversity (the half-life of heterozygosity is t₁/₂ = 1.39 × 2Ne = 55.6 generations, meaning heterozygosity halves roughly every 56 generations). Option A is incorrect because drift is extremely powerful at Ne = 20. Option B is approximately correct in magnitude but stated too absolutely. Option D has no mathematical basis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sexual dimorphism — where males and females of the same species differ in body size, coloration, or ornamentation — is most commonly explained by:",
+      "options": [
+        "Different mutation rates in males and females",
+        "Environmental differences between male and female habitats",
+        "Sexual selection, where intrasexual competition and/or intersexual mate choice create differential selection pressures on males and females, driving the evolution of sex-specific traits",
+        "Identical selection pressures on both sexes that produce different outcomes due to random chance"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Sexual dimorphism is primarily the product of sexual selection — a form of selection arising from differential mating success. Intrasexual selection (typically male-male competition) favors larger body size, weapons (antlers, tusks), and aggressive behavior in males. Intersexual selection (typically female mate choice) favors elaborate ornaments, bright colors, and courtship displays in males. Because these selection pressures act differently on males and females, the sexes diverge in the traits under sexual selection. The magnitude of sexual dimorphism often correlates with the intensity of sexual selection (e.g., polygynous species show greater dimorphism than monogamous species). Option A is incorrect because while male-biased mutation rates exist, they do not explain the specific patterns of sexual dimorphism. Option B is incorrect because males and females of most dimorphic species share the same habitat. Option D is incorrect because the consistent patterns of dimorphism across species indicate systematic selection, not random chance.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a population of 5,000 individuals, a deleterious dominant allele D (W(DD) = 0.7, W(Dd) = 0.85, W(dd) = 1.0) is maintained at mutation-selection balance. If the mutation rate from d to D is μ = 3 × 10⁻⁵, the expected equilibrium frequency of the D allele is approximately:",
+      "options": [
+        "p̂ = μ/s = 3 × 10⁻⁵/0.15 = 0.0002",
+        "p̂ = √(μ/s) = √(3 × 10⁻⁵/0.15) = 0.014",
+        "p̂ = 0.5 because all alleles reach 50% frequency at equilibrium",
+        "p̂ = μ/hs = 3 × 10⁻⁵/(0.5 × 0.3) = 0.0002"
+      ],
+      "correctAnswer": "A",
+      "explanation": "For a deleterious allele with some dominance (heterozygotes affected), the mutation-selection balance depends on the dominance coefficient h and selection coefficient s. With W(DD) = 0.7 (s = 0.3 against homozygotes) and W(Dd) = 0.85 (hs = 0.15, so h = 0.5, meaning the allele is semidominant), the equilibrium frequency is p̂ ≈ μ/(hs) = 3 × 10⁻⁵/0.15 = 2 × 10⁻⁴. This is much lower than for a purely recessive allele because selection can 'see' the deleterious allele in heterozygotes, removing it more efficiently. For a completely dominant deleterious allele (h = 1), p̂ = μ/s, which gives the same formula. Option B uses the formula for recessive alleles (q = √(μ/s)), which is inappropriate here because the allele is partially dominant. Option C has no theoretical basis. Option D uses slightly different parameters but arrives at the same answer as A — both are correct in that they use p̂ = μ/(hs) with h=0.5 and s=0.3.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 'molecular clock' is calibrated using fossil evidence. However, the clock does not tick at a perfectly constant rate across all lineages. Which factor is LEAST likely to cause rate variation in the molecular clock?",
+      "options": [
+        "Differences in generation time between lineages (shorter generations = faster clock due to more DNA replications per unit time)",
+        "Differences in effective population size (smaller Ne allows slightly deleterious mutations to fix more frequently)",
+        "Differences in the ambient temperature of the organism's habitat at the time of DNA replication",
+        "Differences in metabolic rate (higher metabolic rates produce more reactive oxygen species that can damage DNA)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "While some studies have suggested that environmental temperature can affect mutation rates in ectotherms, the ambient temperature of the habitat is the least established cause of molecular clock rate variation compared to the other well-documented factors. Option A (generation time effect) is a major cause: organisms with shorter generations undergo more DNA replications per unit time, accumulating more replication-associated mutations (e.g., rodents evolve faster than primates). Option B (Ne effect) is important through the nearly neutral theory: in small populations, slightly deleterious mutations (which are the majority of non-neutral mutations) fix more frequently, increasing the substitution rate. Option D (metabolic rate effect) has some support: higher metabolic rates generate more oxidative DNA damage, potentially increasing mutation rates, particularly for mitochondrial DNA.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "A population of prairie dogs undergoes a severe bottleneck, reducing from 10,000 to 50 individuals. After recovery to 10,000 individuals, which measure of genetic diversity is expected to recover MORE slowly?",
+      "options": [
+        "Expected heterozygosity (He) will recover slowly, while allelic richness (number of alleles) will recover quickly",
+        "Both measures recover at the same rate",
+        "Allelic richness (number of alleles) will recover more slowly because lost rare alleles can only be restored by new mutations, while heterozygosity recovers faster because it depends primarily on allele frequencies at the remaining alleles",
+        "Neither measure is affected by bottlenecks"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Allelic richness is more sensitive to bottlenecks and recovers more slowly than heterozygosity. During a bottleneck, rare alleles (which contribute little to heterozygosity but substantially to allelic richness) are preferentially lost because they are unlikely to be sampled in a small number of survivors. Once lost, these alleles can only be replaced by new mutations — a very slow process at typical mutation rates. Heterozygosity, in contrast, is determined primarily by the frequencies of the most common alleles, which are likely to survive the bottleneck; even if some diversity is lost, heterozygosity recovers relatively quickly as the population grows and surviving alleles segregate. Option A has the relationship reversed. Option B is incorrect because the two measures have different sensitivities to bottlenecks. Option D is incorrect because bottlenecks significantly affect both measures, albeit to different degrees.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher tests for Hardy-Weinberg equilibrium at the ABO blood group locus (with alleles I^A, I^B, and i) in a population of 1,000 people. The observed and expected genotype counts are:\n\n| Phenotype | Genotype(s) | Observed | Expected (HWE) | (O-E)²/E |\n|-----------|------------|----------|----------------|----------|\n| Type A | I^A I^A + I^A i | 420 | 418 | 0.010 |\n| Type B | I^B I^B + I^B i | 110 | 112 | 0.036 |\n| Type AB | I^A I^B | 40 | 38 | 0.105 |\n| Type O | ii | 430 | 432 | 0.009 |\n\nThe total χ² = 0.160 with 1 degree of freedom (df = k-1-a, where k=4 phenotype classes and a=2 allele frequencies estimated). The critical value at p=0.05 is 3.84. What is the conclusion?",
+      "options": [
+        "Reject HWE because blood groups cannot be in equilibrium",
+        "The population deviates significantly from HWE because all observed counts differ from expected",
+        "Fail to reject HWE; the observed genotype frequencies are consistent with Hardy-Weinberg expectations (χ² = 0.160 << 3.84)",
+        "The test is invalid because the ABO system has three alleles"
+      ],
+      "correctAnswer": "C",
+      "explanation": "With χ² = 0.160, which is far below the critical value of 3.84 at p = 0.05 with 1 degree of freedom, we fail to reject the null hypothesis of Hardy-Weinberg equilibrium. The observed genotype frequencies are fully consistent with the expected frequencies under HWE. Small deviations between observed and expected counts are expected due to sampling variation and do not indicate departure from equilibrium. The degrees of freedom calculation for multiple alleles is df = (number of phenotypic classes - 1) - (number of independent allele frequencies estimated) = (4 - 1) - 2 = 1. Option A is incorrect because many loci, including blood groups, can be in HWE if the assumptions are met. Option B is incorrect because small numerical differences between observed and expected are normal and not statistically significant. Option D is incorrect because the chi-square test is routinely applied to multiallelic systems with appropriate df adjustment.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "Clonal interference occurs in asexual populations when:",
+      "options": [
+        "Two beneficial mutations arise in different clonal lineages and compete with each other for fixation, slowing the overall rate of adaptive evolution because the less-fit beneficial mutation is eliminated rather than combined with the more-fit one",
+        "Sexual reproduction allows beneficial mutations from different individuals to be combined in a single genome",
+        "Deleterious mutations in one clone spread to all other clones through horizontal gene transfer",
+        "All clones in the population fix the same beneficial mutation simultaneously"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Clonal interference is a phenomenon unique to asexual populations where multiple beneficial mutations arise in different genetic backgrounds (clones) and cannot be combined through recombination. These beneficial clones compete with each other, and the clone carrying the most beneficial mutation wins while other beneficial mutations are lost — 'interfering' with each other's fixation. This slows adaptive evolution because only one beneficial mutation can fix at a time. In sexual populations, recombination allows beneficial mutations from different individuals to be combined in the same genome (the Fisher-Muller effect), accelerating adaptation. Option B describes the advantage of sexual reproduction that avoids clonal interference. Option C is incorrect because clonal interference involves competition between clones, not spread of deleterious mutations. Option D is incorrect because different clones carry different mutations that cannot coexist — only one can fix.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher studying a population of 800 mice discovers that the frequency of a lethal recessive allele q = 0.02. She implements a 'eugenic' selection program removing all affected individuals (aa genotype) each generation. After how many generations will the allele frequency be reduced to q = 0.01?",
+      "options": [
+        "1 generation",
+        "10 generations",
+        "50 generations, calculated from the formula t = 1/qt - 1/q0 = 1/0.01 - 1/0.02 = 100 - 50 = 50 generations",
+        "The allele frequency can never be reduced because recessive alleles are hidden in carriers"
+      ],
+      "correctAnswer": "C",
+      "explanation": "For selection against a recessive homozygote with complete selection (s = 1, lethal), the number of generations to change allele frequency from q₀ to qt is: t = 1/qt - 1/q₀. To go from q₀ = 0.02 to qt = 0.01: t = 1/0.01 - 1/0.02 = 100 - 50 = 50 generations. This demonstrates the extreme inefficiency of selection against rare recessive alleles: it takes 50 generations to halve the frequency from 2% to 1%, and it would take 9,950 more generations to go from 1% to 0.01%. The inefficiency arises because as q decreases, a decreasing proportion of q alleles are in homozygous form (q²), where selection can act, while most are hidden in heterozygous carriers (2pq). Option A is incorrect because it takes many generations. Option B is incorrect because the calculation gives 50, not 10. Option D is incorrect because the frequency can be reduced, just very slowly.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following correctly explains why the rate of neutral molecular substitution in a population is independent of population size and equals the neutral mutation rate?",
+      "options": [
+        "Because larger populations produce more mutations but each mutation has a higher fixation probability",
+        "Because the total number of new neutral mutations per generation (2Nμ) multiplied by the fixation probability of each (1/(2N)) gives a substitution rate of 2Nμ × 1/(2N) = μ, independent of N",
+        "Because natural selection is stronger in larger populations, removing all neutral mutations",
+        "Because mutation rates increase in larger populations to compensate for lower fixation probabilities"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is one of the most elegant results of neutral theory. In a diploid population of size N: the number of new neutral mutations arising each generation = 2N × μ (each of 2N gene copies has mutation rate μ). The fixation probability of each neutral mutation = 1/(2N). Therefore, the rate of neutral substitution = (number of new mutations) × (fixation probability) = 2Nμ × 1/(2N) = μ. Population size cancels out: larger populations produce more mutations but each has a proportionally smaller fixation probability. This result means that the neutral substitution rate equals the mutation rate per gene copy per generation, regardless of population size, providing the theoretical foundation for the molecular clock. Option A has the relationship backwards — each mutation has a lower, not higher, fixation probability in larger populations. Option C is incorrect because neutral mutations are by definition not affected by selection. Option D is incorrect because mutation rates are not adjusted by population size.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To test whether genetic drift or natural selection is responsible for allele frequency differences between two recently separated populations of fish, a researcher should:",
+      "options": [
+        "Compare the FST at the candidate locus to the genome-wide distribution of FST values across many neutral markers — if the candidate locus shows significantly higher FST than neutral markers (an FST outlier), this suggests selection, while FST values within the neutral distribution suggest drift",
+        "Count the number of fish in each population to determine which is larger",
+        "Measure the water temperature in each population's habitat",
+        "Cross fish from the two populations and examine hybrid offspring viability"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The FST outlier approach is a powerful method for distinguishing selection from drift. Under drift alone, all loci should show similar levels of genetic differentiation (FST). If a specific locus has significantly higher FST than expected from the genome-wide neutral distribution, this indicates that divergent selection is driving the two populations apart at that locus faster than drift alone would predict. Conversely, unusually low FST at a candidate locus suggests balancing selection maintaining shared polymorphism. This is the basis of genome scan methods for detecting selection (e.g., BayeScan, FDIST). Option B provides census size information but cannot distinguish the evolutionary forces responsible for allele frequency differences. Option C characterizes the environment but not the genetic mechanism. Option D tests hybrid fitness, which relates to reproductive isolation but not directly to whether drift or selection caused the allele frequency divergence.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "Phenotypic plasticity — the ability of a single genotype to produce different phenotypes in response to different environments — can influence evolution in a population by:",
+      "options": [
+        "Preventing any genetic change from ever occurring in the population",
+        "Replacing the need for genetic adaptation entirely",
+        "Shielding genetic variation from selection in favorable environments (by allowing organisms to achieve adequate phenotypes through plasticity), and exposing genetic variation to selection when environmental change exceeds the range of plastic response — plasticity can thus either facilitate or constrain genetic adaptation depending on context",
+        "Having no relationship whatsoever to evolutionary processes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Phenotypic plasticity has a complex relationship with genetic adaptation. Plasticity can shield populations from selection by allowing individuals to adjust their phenotypes to match environmental conditions without genetic change — this can slow genetic adaptation by reducing the strength of selection. However, when environmental change exceeds the range of plastic response, plasticity is insufficient, and natural selection acts on the exposed genetic variation. Additionally, plasticity can facilitate genetic adaptation by allowing populations to persist in novel environments long enough for genetic adaptation to occur (the 'Baldwin effect'). Some researchers argue plasticity can lead evolutionary change when environmentally induced phenotypes are subsequently genetically assimilated. Option A is incorrect because plasticity does not prevent genetic change. Option B is incorrect because plasticity and genetic adaptation work together. Option D is incorrect because plasticity directly interacts with selection and adaptation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the relationship between evolution and fitness:\nS1: Natural selection always increases the mean fitness of a population.\nS2: The environment determines which traits are adaptive, so a trait that increases fitness in one environment may decrease fitness in a different environment.\nS3: Evolution can occur without any change in mean fitness, as when neutral alleles drift to fixation.\nS4: Individual organisms evolve during their lifetimes to become better adapted to their environment.",
+      "options": ["FTTT", "FFTT", "FTTF", "TTTF"],
+      "correctAnswer": "C",
+      "explanation": "S1 is FALSE in general. While Fisher's fundamental theorem states that the rate of increase in fitness due to natural selection equals the additive genetic variance in fitness (always positive), changes in the environment, frequency-dependent fitness, and other factors can simultaneously decrease fitness, so mean fitness can decrease even as selection acts. Also, drift can reduce fitness by fixing deleterious alleles. S2 is TRUE because fitness is environment-dependent. A thick fur coat increases fitness in cold climates but decreases it in hot climates. Antibiotic resistance alleles are beneficial in the presence of antibiotics but often costly in their absence. S3 is TRUE because neutral evolution (fixation of neutral alleles by drift) changes allele frequencies (which is evolution) without changing mean fitness (because the alleles are neutral). This is the most common form of molecular evolution according to the neutral theory. S4 is FALSE because individual organisms do not evolve — populations evolve. While individuals can undergo phenotypic plasticity (acclimation, learning), this is not evolution. Evolution is a change in allele frequencies in a population over generations.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher discovers a population of plants where self-fertilization is common. Compared to an outcrossing population of the same species with identical allele frequencies, the selfing population is expected to have:",
+      "options": [
+        "Higher heterozygosity at all loci",
+        "Identical genotype frequencies because allele frequencies are the same",
+        "Lower heterozygosity at all loci due to inbreeding, with genotype frequencies deviating from Hardy-Weinberg equilibrium toward excess homozygosity",
+        "Higher mutation rates to compensate for reduced genetic variation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Self-fertilization is the most extreme form of inbreeding (inbreeding coefficient F increases by 1/2 each generation of selfing). With frequent selfing, heterozygosity declines rapidly across the genome because heterozygous parents produce 50% heterozygous and 50% homozygous offspring when selfed (compared to maintaining heterozygosity under random outcrossing). After many generations of selfing, virtually all loci become homozygous (F approaches 1.0). The allele frequencies remain unchanged (selfing affects genotype frequencies but not allele frequencies), but heterozygosity is severely reduced at all loci. This genome-wide effect distinguishes inbreeding from locus-specific forces like selection. Option A is incorrect because selfing reduces heterozygosity. Option B is incorrect because identical allele frequencies can produce different genotype frequencies depending on the mating system. Option D is incorrect because mutation rates are not adaptively adjusted in response to mating system.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'genetic hitchhiking' refers to:",
+      "options": [
+        "Neutral or mildly deleterious alleles increasing in frequency because they are physically linked on the same chromosome to a beneficial allele that is being driven to high frequency by positive selection",
+        "All alleles in the genome reaching fixation simultaneously when one beneficial mutation arises",
+        "Horizontal gene transfer between unrelated species",
+        "The random movement of transposable elements to new genomic locations"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Genetic hitchhiking occurs when a positively selected allele drags linked neutral or even mildly deleterious alleles to high frequency. Because physically linked loci are co-inherited (unless separated by recombination), a selective sweep at one locus can dramatically affect allele frequencies at neighboring loci. The extent of hitchhiking depends on the strength of selection (stronger selection = faster sweep = less time for recombination to break up the linkage) and the recombination rate (lower recombination = larger affected region). Hitchhiking reduces genetic diversity in the chromosomal region surrounding the selected locus and creates extended linkage disequilibrium — molecular signatures used to detect past selection events. Option B is incorrect because hitchhiking affects linked regions, not the entire genome. Option C describes horizontal gene transfer, a different process. Option D describes transposition, unrelated to hitchhiking.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "A population has allele frequencies p(A) = 0.3 and q(a) = 0.7. If fitnesses are W(AA) = 0.8, W(Aa) = 0.9, W(aa) = 1.0, what is the mean fitness (w̄) of the population?",
+      "options": [
+        "w̄ = 0.90",
+        "w̄ = 0.80",
+        "w̄ = 1.00",
+        "w̄ = p²W(AA) + 2pqW(Aa) + q²W(aa) = (0.09)(0.8) + (0.42)(0.9) + (0.49)(1.0) = 0.072 + 0.378 + 0.490 = 0.940"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Mean fitness is calculated as the weighted average of genotype fitnesses: w̄ = p²W(AA) + 2pqW(Aa) + q²W(aa). With p = 0.3 and q = 0.7: w̄ = (0.3²)(0.8) + (2 × 0.3 × 0.7)(0.9) + (0.7²)(1.0) = (0.09)(0.8) + (0.42)(0.9) + (0.49)(1.0) = 0.072 + 0.378 + 0.490 = 0.940. This mean fitness is weighted by the frequency of each genotype in the population. Since the most fit genotype (aa, W=1.0) is the most common (49%), the mean fitness is relatively high. Selection will increase q (and decrease p) in the next generation, which will increase w̄. Option A would be the arithmetic average of the three fitness values, which incorrectly ignores genotype frequencies. Option B uses only the AA fitness. Option C uses only the aa fitness.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher studying cystic fibrosis (CF), caused by a recessive allele of the CFTR gene, observes that CF carrier frequency in European populations is approximately 1 in 25 (~4%). Given the severity of the disease, this high carrier frequency is difficult to explain by mutation-selection balance alone. Which hypothesis best explains the maintenance of the CF allele at such high frequency?",
+      "options": [
+        "The CF allele has no fitness effect in heterozygotes or homozygotes",
+        "CF arose very recently in Europeans, so selection has not yet reduced its frequency",
+        "CF carriers are protected from diarrheal diseases by Europeans because of improved hygiene",
+        "Heterozygote advantage (overdominance): CF carriers may have had increased resistance to infectious diseases such as cholera, typhoid fever, or tuberculosis, providing a fitness advantage that balanced the homozygous disease cost"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The CF carrier frequency of ~4% (q ≈ 0.02 for the disease allele, carrier frequency 2pq ≈ 0.04) is far too high to be explained by mutation-selection balance alone. For a lethal recessive, mutation-selection balance predicts q = √(μ/s) ≈ √(10⁻⁵) ≈ 0.003, giving a carrier frequency of only ~0.6%. The most widely discussed hypothesis is heterozygote advantage: CF carriers may have had resistance to diarrheal diseases (cholera, typhoid) because reduced CFTR chloride channel activity in heterozygotes limits fluid secretion in the gut during infection. This would maintain the CF allele at higher-than-expected frequency, analogous to sickle cell trait and malaria. Option A is incorrect because CF in homozygotes is severely deleterious. Option B is unlikely because molecular evidence suggests CF mutations are ancient (several thousand years old). Option C does not explain the maintenance of the allele — improved hygiene would reduce any heterozygote advantage.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "In an island model of migration with n subpopulations, the equilibrium FST is approximately 1/(4Nm + 1), where Nm is the number of migrants per generation. If Nm = 4 (four migrants per generation), the expected FST is:",
+      "options": [
+        "FST = 0.50",
+        "FST = 0.25",
+        "FST = 0.01",
+        "FST = 1/(4 × 4 + 1) = 1/17 ≈ 0.059"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Using Wright's island model formula: FST = 1/(4Nm + 1) = 1/(4(4) + 1) = 1/17 ≈ 0.059. This means that with 4 migrants per generation, only about 5.9% of the total genetic variation is distributed between populations, while 94.1% is within populations. This relatively low FST indicates that 4 migrants per generation is sufficient to substantially homogenize allele frequencies across subpopulations, preventing strong genetic differentiation. This result illustrates Wright's finding that even modest levels of gene flow can prevent substantial differentiation. Option A (FST = 0.50) would require Nm ≈ 0.25 (very little gene flow). Option B (FST = 0.25) would require Nm ≈ 0.75. Option C (FST = 0.01) would require Nm ≈ 25.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measured the relative fitness of three flower color genotypes in a pollinator-rich and pollinator-poor environment:\n\n| Genotype | Phenotype | Fitness (Pollinator-rich) | Fitness (Pollinator-poor) |\n|----------|-----------|-------------------------|-------------------------|\n| RR | Red | 1.0 | 0.7 |\n| Rw | Pink | 0.6 | 0.9 |\n| ww | White | 0.3 | 1.0 |\n\nIf a population with p(R) = 0.5 migrates from the pollinator-poor environment to the pollinator-rich environment, what is the expected direction of allele frequency change?",
+      "options": [
+        "No change because allele frequencies are always at equilibrium",
+        "R frequency will decrease because pink (heterozygote) flowers have low fitness in the new environment",
+        "Both alleles will immediately reach fixation",
+        "R frequency will increase because red (RR) flowers have the highest fitness in the pollinator-rich environment, and selection will favor the R allele"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In the pollinator-rich environment, the fitness ranking is RR (1.0) > Rw (0.6) > ww (0.3), indicating directional selection favoring the R allele. Starting from p(R) = 0.5, the mean fitness is w̄ = 0.25(1.0) + 0.50(0.6) + 0.25(0.3) = 0.625. The frequency of R in the next generation: p' = [p²W(RR) + pqW(Rw)]/ w̄ = [0.25(1.0) + 0.25(0.6)]/0.625 = 0.40/0.625 = 0.64. The R allele increases from 0.50 to 0.64 in one generation — strong directional selection for R in the pollinator-rich environment. Option A is incorrect because the population is not at equilibrium in the new selective environment. Option B is incorrect because although heterozygotes have intermediate fitness, the overall direction favors R. Option C is incorrect because fixation takes multiple generations.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Evolution of Populations"
+    },
+    {
+      "type": "MCQ",
+      "question": "A population of elk was founded by 6 females and 2 males. After 10 generations, it grew to 2,000 individuals. What was the effective population size of the founding population, accounting for the unequal sex ratio?",
+      "options": [
+        "Ne = 8 (the total number of founders)",
+        "Ne = 4 (the average of males and females)",
+        "Ne = 4NfNm/(Nf + Nm) = 4(6)(2)/(6+2) = 48/8 = 6",
+        "Ne = 2,000 (the current census size)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "When the sex ratio among breeders is unequal, the effective population size is calculated as Ne = 4NfNm/(Nf + Nm), where Nf and Nm are the numbers of breeding females and males. With 6 females and 2 males: Ne = 4(6)(2)/(6+2) = 48/8 = 6. This is less than the census size of 8 founders because the unequal sex ratio means that fewer independent genetic lineages are represented. The limiting sex (males, N=2) disproportionately constrains the effective size because each male must contribute more gametes, reducing the independence of genetic contributions. The effective size is closer to 4 times the number of the rarer sex. Option A overestimates Ne by ignoring the sex ratio effect. Option B uses an incorrect formula. Option D uses the current census size, not the founding population's effective size.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Evolution of Populations"
     }
   ]
 }
