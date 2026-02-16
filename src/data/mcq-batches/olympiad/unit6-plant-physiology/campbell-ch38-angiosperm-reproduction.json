@@ -70,10 +70,10 @@
       "options": [
         "Calcium gradient in the transmitting tissue that creates a chemotactic path from stigma to ovule",
         "Arabinogalactan proteins (AGPs) lining the transmitting tract that provide adhesive guidance",
-        "LURE peptides (defensin-like cysteine-rich polypeptides) secreted by the synergid cells that attract the pollen tube to the micropyle",
-        "Auxin gradient from the funiculus that directs pollen tube growth toward the ovule"
+        "Auxin gradient from the funiculus that directs pollen tube growth toward the ovule",
+        "LURE peptides (defensin-like cysteine-rich polypeptides) secreted by the synergid cells that attract the pollen tube to the micropyle"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "Pollen tube guidance occurs in multiple stages with different molecular mechanisms. The final, short-range attraction of the pollen tube to the micropyle of the ovule is mediated by LURE peptides\u2014small, secreted defensin-like cysteine-rich polypeptides (CRPs) produced specifically by the synergid cells of the embryo sac. In Torenia fournieri, where the embryo sac protrudes from the ovule allowing direct observation, LURE1 and LURE2 were identified as the attractants. In Arabidopsis, AtLURE1 peptides serve the same function. These peptides are secreted from the synergid cells through the filiform apparatus (specialized cell wall invaginations at the micropylar end of synergids) and diffuse toward the micropyle, creating a concentration gradient that guides the pollen tube tip. The pollen tube perceives LURE through receptor kinases on its tip membrane (PRK6 in Arabidopsis). Earlier stages of pollen tube guidance involve TTS (Transmitting Tissue-Specific) glycoproteins and AGPs in the style, but these provide funicular guidance, not the final micropylar targeting.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -90,10 +90,10 @@
       "options": [
         "A function alone specifies petals in the second whorl",
         "B function alone specifies petals in the second whorl",
-        "A + B functions together specify petals in the second whorl",
-        "B + C functions together specify petals in the second whorl"
+        "B + C functions together specify petals in the second whorl",
+        "A + B functions together specify petals in the second whorl"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "The ABC model, proposed by Coen and Meyerowitz (1991), explains floral organ identity through combinatorial expression of three classes of homeotic genes across four concentric whorls: Whorl 1 (outermost): A function alone specifies sepals; Whorl 2: A + B functions together specify petals; Whorl 3: B + C functions together specify stamens; Whorl 4 (innermost): C function alone specifies carpels. In Arabidopsis, A-function genes include APETALA1 (AP1) and APETALA2 (AP2); B-function genes include APETALA3 (AP3) and PISTILLATA (PI); C-function gene is AGAMOUS (AG). The model predicts that loss of A function causes C to expand into whorls 1-2, converting sepals to carpels and petals to stamens. Loss of B converts petals to sepals and stamens to carpels. Loss of C converts stamens to petals and carpels to sepals. The model has been extended to ABCDE, with D-function genes specifying ovule identity and E-function (SEPALLATA) genes required as co-factors for all organ identities.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -397,6 +397,546 @@
       "explanation": "An accessory fruit (also called a pseudocarp or false fruit) is characterized by the significant contribution of non-carpel floral tissue to the mature fruit structure. In a simple fruit, the edible or functional portions develop entirely from the ovary wall (pericarp = mature carpel wall). In an accessory fruit, tissues other than the ovary wall\u2014such as the receptacle, hypanthium (floral tube), sepals, or other floral parts\u2014contribute substantially to the fruit. Classic examples include: Apple (Malus)\u2014the fleshy part is the enlarged hypanthium; the actual fruit (developed from the ovary) is the core containing the seeds. Strawberry (Fragaria)\u2014the fleshy red portion is the enlarged receptacle; the actual fruits are the small achenes (dry one-seeded fruits) embedded on the surface. Pineapple is a multiple accessory fruit where the fleshy tissue derives from the fused receptacles and floral parts of many flowers in an inflorescence. Simple fruits can be either fleshy (berries, drupes) or dry (capsules, achenes, caryopses).",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Wind-pollinated (anemophilous) angiosperms have evolved specific floral adaptations. Which set of features is characteristic of wind-pollinated flowers?",
+      "options": [
+        "Large, showy petals with nectar guides, copious nectar production, and strong fragrance",
+        "Small, inconspicuous flowers lacking petals and nectar, with large feathery stigmas and pendulous stamens producing abundant light pollen",
+        "Tubular, red flowers with copious nectar and no scent",
+        "Flowers with trap mechanisms that temporarily imprison visiting insects"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Wind-pollinated angiosperms display a distinct suite of floral adaptations that maximize pollen dispersal and capture efficiency: (1) Reduced or absent petals, sepals, and nectaries\u2014these structures are unnecessary without animal pollinators and would interfere with wind access; (2) Large, feathery or plumose stigmas with extensive surface area to intercept wind-borne pollen from the air; (3) Pendulous, exposed stamens (often on long filaments) that release pollen into air currents; (4) Abundant, small, smooth, lightweight, non-sticky pollen grains\u2014anemophilous species produce vastly more pollen than entomophilous species (pollen:ovule ratios can exceed 1,000,000:1); (5) Flowers often appear before leaves (in deciduous trees) to avoid leaf obstruction of pollen movement; (6) Inflorescences are often catkins (pendulous spikes) that move in wind. Examples include grasses (Poaceae), oaks (Quercus), birches (Betula), and ragweed (Ambrosia). Option A describes insect-pollinated flowers, C describes bird-pollinated, and D describes trap-pollination.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The embryo suspensor in angiosperm seeds plays a transient but important role during embryogenesis. What is the primary function of the suspensor?",
+      "options": [
+        "The suspensor physically pushes the developing embryo into the endosperm for nutrient access and transports nutrients and hormones (especially auxin and gibberellin) from maternal tissues to the embryo proper",
+        "The suspensor produces the seed coat by signaling integument differentiation",
+        "The suspensor generates the endosperm through additional rounds of fertilization",
+        "The suspensor anchors the embryo to prevent premature seed dispersal"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The suspensor is a transient embryonic structure that connects the embryo proper to the maternal tissue of the ovule. It serves several critical functions during early embryogenesis: (1) Physical positioning\u2014the suspensor pushes the embryo proper into the nutrient-rich endosperm, ensuring optimal access to nutritive resources; (2) Nutrient transport\u2014the suspensor acts as a conduit for transferring nutrients and signaling molecules from the maternal seed coat and endosperm to the developing embryo. Transfer cells in the suspensor have wall ingrowths that increase surface area for nutrient absorption; (3) Hormone production\u2014the suspensor synthesizes and transports hormones, particularly auxin and gibberellins, to the embryo proper. Auxin transport through the suspensor establishes the apical-basal axis of the embryo; (4) In Arabidopsis, the suspensor consists of 6-9 cells and undergoes programmed cell death as the embryo matures. Mutations affecting suspensor function (such as suspensor/twin mutants) lead to embryo lethality, demonstrating its essential role.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Vegetative reproduction allows plants to propagate clonally without seeds. Which statement about vegetative reproduction is correct?",
+      "options": [
+        "Vegetative reproduction always produces offspring with greater genetic diversity than sexual reproduction",
+        "Vegetative reproduction is limited to flowering plants and does not occur in ferns or mosses",
+        "Vegetative reproduction produces genetically identical offspring but sacrifices the genetic diversity benefits of sexual reproduction, making clonal populations potentially vulnerable to environmental change",
+        "Vegetative reproduction requires pollination but not fertilization"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Vegetative (asexual) reproduction produces genetically identical offspring (clones) through mitotic cell divisions from somatic tissues of the parent plant. Common mechanisms include runners/stolons (strawberry), rhizomes (iris, ginger), tubers (potato), bulbs (onion, tulip), corms (crocus), plantlets (Kalanchoe), and fragmentation. While vegetative reproduction offers advantages\u2014rapid population expansion, preservation of successful genotypes, reproduction without pollinators\u2014it produces genetically uniform populations that lack the genetic diversity generated by meiosis and recombination during sexual reproduction. This genetic uniformity makes clonal populations vulnerable to environmental changes, new pathogens, and parasites (as exemplified by the Irish potato famine, where clonally propagated potato varieties were devastated by Phytophthora infestans). Vegetative reproduction occurs across plant groups (ferns reproduce via rhizome fragmentation, mosses via gemmae), does not require pollination, and always produces less genetic diversity than sexual reproduction.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Seed germination requires the coordinated action of the embryonic axis and the endosperm/aleurone layer. In cereal grains, what is the signaling cascade that mobilizes starch reserves during germination?",
+      "options": [
+        "Ethylene from the coleoptile activates starch phosphorylase in the endosperm for direct starch breakdown",
+        "Cytokinin from the radicle triggers amylase release from the scutellum epithelium",
+        "ABA from the seed coat activates lipase to convert stored lipids to sugars via gluconeogenesis",
+        "Gibberellin (GA) produced by the embryo diffuses to the aleurone layer, inducing alpha-amylase synthesis and secretion, which hydrolyzes endosperm starch to maltose and glucose"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In cereal grains (wheat, barley, rice), the germination signaling cascade begins with water imbibition, which activates the embryo. The embryo (specifically the scutellum) synthesizes gibberellins (GA3, GA1) which diffuse to the aleurone layer\u2014a specialized protein-rich cell layer surrounding the starchy endosperm. In aleurone cells, GA binds to its receptor GID1, triggering degradation of DELLA repressor proteins via the 26S proteasome. This derepresses GA-responsive transcription factors (particularly GAMYB) that activate transcription of hydrolytic enzyme genes, most importantly alpha-amylase. Alpha-amylase is synthesized in the rough ER of aleurone cells, secreted into the starchy endosperm, and hydrolyzes starch (amylose and amylopectin) to maltose and glucose. Other hydrolases (proteases, beta-glucanases, nucleases) are also induced. The resulting sugars are absorbed by the scutellum epithelium and transported to the growing embryonic axis (radicle and plumule). ABA antagonizes GA signaling in this system, maintaining dormancy when ABA/GA ratio is high.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Heterostyly is a floral polymorphism that promotes outcrossing. In distylous species like Primula, what morphological and physiological differences exist between pin and thrum flower morphs?",
+      "options": [
+        "Pin flowers have long styles and short stamens, while thrum flowers have short styles and long stamens; legitimate pollination occurs only between different morphs due to incompatibility between same-morph pollen and pistil",
+        "Pin flowers are male-sterile and thrum flowers are female-sterile, ensuring obligate outcrossing",
+        "Pin flowers produce yellow pollen and thrum flowers produce white pollen, with no associated incompatibility",
+        "Pin flowers open in the morning and thrum flowers open in the evening, preventing self-pollination through temporal separation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Heterostyly in distylous species like Primula involves two distinct floral morphs controlled by a supergene locus (the S-locus): Pin flowers have long styles with the stigma positioned at the corolla tube opening and short stamens positioned low in the tube. They produce smaller, more numerous pollen grains. Thrum flowers have short styles with the stigma positioned low in the tube and long stamens positioned at the tube opening. They produce larger, fewer pollen grains. This reciprocal arrangement (reciprocal herkogamy) promotes cross-pollination between morphs by pollinators: an insect visiting a pin flower picks up pollen from the low anthers on a body part that contacts the low stigma of a thrum flower, and vice versa. Additionally, a heteromorphic incompatibility system prevents 'illegitimate' pollination (pin x pin or thrum x thrum) through pollen tube rejection in the style. The S-locus supergene contains linked genes controlling style length, stamen height, pollen size, and incompatibility. Tristylous species (like Lythrum) have three morphs.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Agrobacterium tumefaciens-mediated transformation is the most widely used method for generating transgenic plants. What natural mechanism does this technique exploit?",
+      "options": [
+        "Agrobacterium produces a DNA virus that infects plant cells and integrates into the genome",
+        "Agrobacterium transfers a segment of its Ti (tumor-inducing) plasmid\u2014the T-DNA\u2014into plant nuclear DNA, where it integrates randomly; scientists replace the T-DNA oncogenes with genes of interest",
+        "Agrobacterium produces an RNA retrovirus that reverse-transcribes into plant DNA",
+        "Agrobacterium directly transfers bacterial chromosomal DNA to plant cells through conjugation pili"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Agrobacterium tumefaciens naturally causes crown gall disease by transferring a specific DNA segment (T-DNA, for Transfer DNA) from its Ti (Tumor-inducing) plasmid into the nuclear genome of wounded plant cells. In nature, T-DNA carries oncogenes (iaaM, iaaH for auxin synthesis; ipt for cytokinin synthesis) that cause uncontrolled cell proliferation (tumor formation) and opine synthesis genes that produce nutrients only Agrobacterium can metabolize. The transfer process involves: (1) Wounded plant cells release phenolic compounds (acetosyringone) detected by the VirA/VirG two-component system; (2) Vir genes are activated, producing proteins that process T-DNA into a single-stranded copy (T-strand); (3) VirB/VirD4 type IV secretion system transfers the T-strand complexed with VirD2 and VirE2 proteins into the plant cell; (4) T-DNA is imported into the nucleus and integrated into chromosomal DNA. For plant biotechnology, scientists 'disarm' the Ti plasmid by removing oncogenes and opine genes from T-DNA and replacing them with genes of interest (plus selectable markers), creating a vector for stable transgene insertion.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The molecular mechanism of pollen tube reception at the embryo sac involves synergid cell death. What triggers synergid cell death upon pollen tube arrival?",
+      "options": [
+        "Mechanical pressure from the pollen tube physically ruptures the synergid cell membrane",
+        "Pollen tube-derived reactive oxygen species (ROS) poison the synergid cell",
+        "The FERONIA (FER) receptor kinase on the synergid cell surface interacts with pollen tube-derived RALF peptides, triggering a signaling cascade that leads to synergid cell rupture, which simultaneously causes pollen tube burst and sperm release",
+        "Ethylene released by the pollen tube induces programmed cell death in the synergid"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Pollen tube reception at the female gametophyte is mediated by a sophisticated molecular recognition system. The FERONIA (FER) receptor kinase (also called SIRENE) is expressed on the surface of synergid cells. When the pollen tube arrives at the micropyle, FER on the synergid recognizes RALF (Rapid Alkalinization Factor) peptides presented by the pollen tube. This receptor-ligand interaction triggers a signaling cascade in the synergid that involves: (1) Reactive oxygen species (ROS) production by NADPH oxidases; (2) Calcium influx into the synergid cell; (3) Synergid cell death and rupture of the synergid cell membrane. The synergid cell rupture creates a physical opening that causes the pollen tube to also burst (pollen tube discharge), releasing the two sperm cells into the embryo sac. In feronia mutants, pollen tubes grow past the synergids without discharging, and multiple pollen tubes may enter the embryo sac (pollen tube overgrowth phenotype). The nta (NORTIA) gene, encoding a protein that relocates to the synergid membrane upon pollen tube contact, is also essential for this process.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Embryo pattern formation in Arabidopsis establishes the apical-basal axis. What molecular mechanism establishes this axis during early embryogenesis?",
+      "options": [
+        "Differential auxin distribution created by polar auxin transport via PIN proteins establishes the apical-basal axis, with high auxin concentration specifying the root pole (basal end)",
+        "Gravity sensing by statoliths in the zygote determines apical-basal polarity before the first division",
+        "Light signals penetrating the seed coat establish the shoot (apical) pole toward the light source",
+        "Random partitioning of maternal mRNAs during the first zygotic division determines cell fate"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The apical-basal axis of the Arabidopsis embryo is established through polar auxin transport mediated by PIN-FORMED (PIN) auxin efflux carriers. After the first asymmetric division of the zygote produces a small apical cell (future embryo proper) and a large basal cell (future suspensor), PIN7 protein in the suspensor cells directs auxin flow upward into the embryo proper, establishing high auxin levels apically. During the globular-to-heart stage transition, PIN1 expression switches the auxin flow direction\u2014PIN1 in the inner cells of the embryo proper redirects auxin downward toward the basal end, creating an auxin maximum at the position of the future root meristem (hypophysis). This auxin maximum activates the MONOPTEROS/ARF5 transcription factor, which induces root stem cell specification genes. Experimental evidence supporting this model includes: pin7 mutants show disrupted early embryo development; pin1 mutants lack root meristems; auxin response reporter (DR5) confirms the predicted auxin distribution patterns. This PIN-mediated auxin flux is the primary axis-establishing mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Parthenocarpy\u2014fruit development without fertilization\u2014produces seedless fruits. What hormonal treatment can induce parthenocarpy in normally seeded species?",
+      "options": [
+        "Application of ABA to unpollinated flowers inhibits ovule abortion and triggers fruit development",
+        "Application of ethylene to unpollinated flowers accelerates fruit ripening without seeds",
+        "Application of auxin or gibberellin to unpollinated flowers bypasses the fertilization requirement and stimulates fruit development",
+        "Application of jasmonic acid to unpollinated flowers triggers defense-related fruit hardening"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Parthenocarpy can be induced by exogenous application of auxin or gibberellin (GA) to unpollinated flowers, mimicking the hormonal signals that developing seeds normally provide. In natural fruit development, seeds produce auxin (IAA) that triggers fruit growth, and auxin subsequently activates GA biosynthesis in the pericarp. By applying these hormones directly to unfertilized ovaries, the seed-derived signal is bypassed: auxin activates cell division and initial fruit growth, while gibberellins promote cell expansion and fruit enlargement. This principle is commercially exploited in agriculture: gibberellic acid (GA3) is applied to Thompson seedless grape clusters to increase berry size; auxin analogs (2,4-D, 4-CPA) are applied to tomatoes and peppers to produce seedless fruit in greenhouses where pollination is limited. Genetic parthenocarpy occurs naturally in some cultivars due to mutations that constitutively activate auxin or GA signaling in the pericarp\u2014for example, parthenocarpic tomato lines carry mutations in SlARF7 or SlDELLA genes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "In vitro plant propagation through somatic embryogenesis is used in agricultural biotechnology. What distinguishes somatic embryogenesis from organogenesis in tissue culture?",
+      "options": [
+        "Somatic embryogenesis produces embryos directly from somatic cells that develop through stages resembling zygotic embryogenesis (globular, heart, torpedo), while organogenesis produces shoots or roots individually from callus tissue",
+        "Somatic embryogenesis requires fertilization in culture, while organogenesis does not",
+        "Somatic embryogenesis works only with monocot species, while organogenesis works only with dicots",
+        "Somatic embryogenesis produces haploid plants, while organogenesis produces diploid plants"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Somatic embryogenesis is the process by which somatic (non-reproductive) cells develop into embryos through a pathway that recapitulates the stages of zygotic embryogenesis\u2014globular, heart, torpedo, and cotyledonary stages\u2014without fertilization. These somatic embryos are bipolar structures with both a shoot and root meristem, and they can develop into complete plants. The process is typically induced in tissue culture by manipulating the auxin:cytokinin ratio, often beginning with high auxin (2,4-D) to induce embryogenic callus, followed by auxin withdrawal to trigger embryo differentiation. In contrast, organogenesis produces individual organs (shoots or roots) from callus or explant tissue: high cytokinin:auxin ratio favors shoot organogenesis, while high auxin:cytokinin ratio favors root organogenesis. The key distinction is that somatic embryos are complete bipolar structures (like seeds without seed coats), while organogenesis requires separate shoot and root induction, followed by shoot-root joining. Somatic embryogenesis works in both monocots and dicots and produces diploid plants from diploid cells.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The integuments of an ovule develop into the seed coat (testa) after fertilization. Which property of the seed coat is most important for long-term seed viability?",
+      "options": [
+        "The seed coat produces photosynthetic pigments that generate energy for the dormant embryo",
+        "The seed coat contains high concentrations of growth hormones that accelerate germination",
+        "The seed coat accumulates toxic alkaloids that repel all soil microorganisms",
+        "The seed coat provides a physical and chemical barrier against water loss, pathogen invasion, and mechanical damage, with impermeability controlling water imbibition and germination timing"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The seed coat (testa) is the primary protective structure that determines long-term seed viability. Its properties include: (1) Physical impermeability\u2014the testa contains layers of thick-walled, lignified, or suberized cells (often palisade-like macrosclereids in the outer layer) that restrict water and gas exchange, preventing premature germination and protecting against desiccation. Some species (hard-seeded legumes) have nearly completely impermeable seed coats that must be scarified for germination; (2) Pathogen defense\u2014tannins, phenolic compounds, and antimicrobial substances in the testa protect against fungal and bacterial invasion; (3) Mechanical protection\u2014the hardened testa shields the embryo from physical damage during dispersal and soil burial; (4) Germination control\u2014seed coat impermeability acts as a dormancy mechanism, regulating when water can imbibe and trigger germination. The seed coat does not photosynthesize, does not contain significant growth hormone stores, and does not repel all microorganisms (beneficial mycorrhizae must eventually interact with the emerging radicle).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pollination by deception\u2014where flowers attract pollinators without providing rewards\u2014is common in orchids. What mechanism does the Mediterranean orchid Ophrys use to attract pollinating male wasps?",
+      "options": [
+        "Ophrys produces nectar deep in its spur that wasps cannot access, forcing repeated visits",
+        "Ophrys mimics the specific sex pheromone chemicals and visual appearance of female wasps, inducing male wasps to attempt copulation (pseudocopulation) and transfer pollinia in the process",
+        "Ophrys traps wasps inside its flower using a hinged lip mechanism, coating them in pollen before release",
+        "Ophrys produces UV-fluorescent patterns that confuse wasp navigation, causing them to land repeatedly"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ophrys orchids are among the most remarkable examples of pollination by sexual deception. Each Ophrys species typically targets a specific wasp or bee species through an extraordinarily precise mimicry system: (1) Chemical mimicry\u2014the orchid labellum (lip) produces a blend of volatile organic compounds (alkanes, alkenes, esters) that closely matches the species-specific sex pheromone of the target female wasp or bee. These compounds are perceived by the male insect's antennae; (2) Visual mimicry\u2014the labellum color, shape, and pilosity (hairiness) resemble the body of the female insect; (3) Tactile mimicry\u2014the labellum texture and hair patterns provide tactile stimuli similar to the female body. Male wasps or bees, attracted by the chemical and visual cues, land on the labellum and attempt copulation (pseudocopulation). During these movements, the pollinia (pollen masses) are attached to the insect's head or abdomen via the viscidium (sticky disc). When the deceived male visits another Ophrys flower, the pollinia are deposited on the stigma. This highly species-specific pollination mechanism drives reproductive isolation and speciation in Ophrys.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to test whether a newly discovered protein X is required for pollen tube guidance in Arabidopsis. Which experimental approach would provide the strongest evidence?",
+      "options": [
+        "Generate a protein-X knockout mutant, perform reciprocal crosses with wild-type plants, and analyze whether mutant pollen tubes fail to navigate to ovules or whether mutant pistils fail to attract wild-type pollen tubes",
+        "Overexpress protein X in leaf tissue and measure pollen tube growth on leaf surfaces",
+        "Apply purified protein X to pollen grains in vitro and measure germination rates",
+        "Sequence protein X and compare it to known guidance proteins using bioinformatics alone"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Reciprocal crosses using protein-X knockout mutants provide the strongest evidence for guidance function because they distinguish between male and female contributions. If protein X is required for pollen tube guidance: (1) If X functions in the female (pistil): Crossing wild-type pollen onto mutant pistils would show pollen tube guidance defects (tubes failing to reach ovules), while crossing mutant pollen onto wild-type pistils would show normal guidance. This identifies X as a female-expressed guidance cue. (2) If X functions in the male (pollen tube): Crossing mutant pollen onto wild-type pistils would show guidance defects, while the reciprocal cross would be normal. This identifies X as a pollen tube-expressed guidance receptor or response component. (3) If X functions in both: Both cross directions show defects. Additional assays include semi-in-vivo pollen tube guidance assays where excised ovules are placed near pollen tubes growing on agar, and fluorescent protein fusions to determine where protein X localizes. Bioinformatics alone cannot prove function, in vitro germination does not test guidance, and leaf expression is not physiologically relevant.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Polyploidy has been a major force in angiosperm evolution and speciation. What is the difference between autopolyploidy and allopolyploidy?",
+      "options": [
+        "Autopolyploidy involves genome duplication within a single species (e.g., 4n from 2n), while allopolyploidy involves hybridization between different species followed by genome duplication, combining two distinct genomes",
+        "Autopolyploidy produces sterile offspring while allopolyploidy always produces fertile offspring",
+        "Autopolyploidy occurs only in wild species while allopolyploidy occurs only through human intervention",
+        "Autopolyploidy involves duplication of nuclear DNA while allopolyploidy involves duplication of organellar (chloroplast and mitochondrial) DNA"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Polyploidy is classified into two main types based on the origin of the additional chromosome sets: Autopolyploidy results from genome duplication within a single species\u2014for example, if a mitotic error during cell division produces a tetraploid (4n) cell in an otherwise diploid (2n) organism. Autotetraploids have four copies of the same basic chromosome set (AAAA). They may show reduced fertility due to multivalent formation during meiosis (four homologs instead of two, leading to unbalanced segregation), but many autopolyploid species are successful (banana, potato, watermelon). Allopolyploidy results from interspecific hybridization followed by genome duplication. First, two different species (with genomes AA and BB) hybridize to produce a diploid hybrid (AB). This hybrid is typically sterile because the non-homologous chromosomes cannot pair properly during meiosis. However, if the hybrid genome doubles (to AABB), each chromosome now has a homologous partner for meiotic pairing, restoring fertility. Allopolyploidy has been a major mechanism of speciation in angiosperms\u2014bread wheat (Triticum aestivum, AABBDD, hexaploid) is a classic allopolyploid.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Flower development is regulated by the transition from vegetative to reproductive growth. What molecular switch triggers the vegetative-to-floral transition in the shoot apical meristem?",
+      "options": [
+        "Accumulation of sucrose in the meristem above a threshold concentration directly activates floral organ identity genes",
+        "Temperature-dependent degradation of a repressor protein that constitutively blocks flowering",
+        "The florigen signal (FT protein) moves from leaves to the shoot apical meristem via phloem, where it interacts with the transcription factor FD to activate APETALA1 and LEAFY, converting the vegetative meristem to an inflorescence/floral meristem",
+        "Mechanical stress from expanding leaves triggers flower development through mechanosensitive ion channels in the meristem"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The floral transition is triggered by the mobile florigen signal, identified as the FT (FLOWERING LOCUS T) protein. The molecular mechanism involves: (1) In leaves exposed to inductive photoperiod, the circadian clock and photoreceptors activate CONSTANS (CO) transcription factor, which induces FT gene expression; (2) FT protein (a small phosphatidylethanolamine-binding protein) is loaded into phloem companion cells and transported via sieve elements to the shoot apical meristem; (3) At the meristem, FT protein enters cells and interacts with the bZIP transcription factor FD, forming an FT-FD complex; (4) This complex activates expression of floral meristem identity genes, particularly APETALA1 (AP1) and LEAFY (LFY), which irreversibly convert the vegetative meristem to a floral meristem; (5) LFY and AP1 then activate the ABC(DE) floral organ identity genes. This florigen pathway integrates multiple environmental signals (photoperiod, vernalization, temperature, age) and is conserved across angiosperms. In rice, the FT ortholog Hd3a performs the same function.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Seed dispersal mechanisms have evolved in close association with fruit morphology. Which fruit adaptation is correctly matched with its dispersal agent?",
+      "options": [
+        "Winged samaras (maple) \u2014 water dispersal (hydrochory)",
+        "Fleshy, brightly colored drupes (cherry) \u2014 wind dispersal (anemochory)",
+        "Hooked burrs (burdock) \u2014 gravity dispersal (barochory)",
+        "Explosive dehiscent capsules (Impatiens) \u2014 ballistic dispersal (autochory), where the fruit mechanically ejects seeds away from the parent"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Explosive or ballistic seed dispersal (autochory) occurs in species like Impatiens (touch-me-not), Ecballium elaterium (squirting cucumber), and many legumes. In Impatiens, the fruit is a capsule with five fused valves under tension. When ripe, even slight touch causes the valves to suddenly coil inward, explosively ejecting seeds several meters from the parent plant. The mechanism involves differential turgor pressure and tissue tensions within the fruit wall\u2014inner cell layers swell while outer layers remain turgid, building elastic potential energy that is released catastrophically when the dehiscence zone weakens. In Ecballium, internal pressure from mucilaginous fluid builds to several atmospheres, and seeds are squirted out when the fruit detaches from the pedicel. Winged samaras are adapted for wind dispersal (anemochory); fleshy drupes are adapted for animal dispersal (endozoochory\u2014birds eat the fruit and disperse seeds in their droppings); hooked burrs are adapted for animal dispersal by external attachment (epizoochory).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "CRISPR-Cas9 gene editing has revolutionized plant biotechnology. What advantage does CRISPR-Cas9 have over Agrobacterium-mediated transgene insertion for crop improvement?",
+      "options": [
+        "CRISPR-Cas9 can make precise, targeted mutations at specific genomic loci without inserting foreign DNA, potentially producing non-transgenic edited plants that may face less regulatory restriction",
+        "CRISPR-Cas9 works only in monocots while Agrobacterium works only in dicots",
+        "CRISPR-Cas9 is completely free of off-target effects, unlike Agrobacterium transformation",
+        "CRISPR-Cas9 can only knock out genes, while Agrobacterium can both knock out and overexpress genes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "CRISPR-Cas9 gene editing offers several advantages over conventional Agrobacterium-mediated transformation: (1) Precision\u2014CRISPR-Cas9 makes targeted double-strand breaks at specific genomic loci guided by a short guide RNA (sgRNA), allowing precise gene knockout (via NHEJ repair introducing indels), precise base editing (using base editors like CBE or ABE), or precise gene insertion (via HDR with a donor template). Agrobacterium T-DNA integrates randomly, potentially disrupting important genes. (2) Non-transgenic products\u2014after CRISPR reagents (Cas9 + sgRNA) make the desired edit, the Cas9 transgene can be segregated away through crossing, producing edited but transgene-free plants. This is particularly important for regulatory purposes, as some jurisdictions (e.g., Japan, USA for certain modifications) exempt gene-edited crops without foreign DNA from GMO regulations. (3) Multiplexing\u2014multiple guide RNAs can simultaneously target several genes. However, CRISPR is not completely free of off-target effects, works in both monocots and dicots, and can be used for gene activation (CRISPRa) and repression (CRISPRi) as well as knockout.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pollinia are a specialized pollen presentation mechanism found in orchids and milkweeds. What is a pollinium and how does it differ from free pollen grains?",
+      "options": [
+        "A pollinium is a mass of pollen grains held together by viscin threads or a waxy matrix, transferred as a single unit to pollinators via a sticky viscidium, ensuring efficient transfer of large pollen quantities in a single pollinator visit",
+        "A pollinium is a single giant pollen grain that contains thousands of sperm cells",
+        "A pollinium is a nectar-filled structure that attracts pollinators to the anther",
+        "A pollinium is a modified stamen that detaches and is carried away by wind"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A pollinium (plural: pollinia) is a compact, cohesive mass of pollen grains from an entire anther or anther sac that is transferred as a single unit during pollination. In orchids, pollinia are typically waxy and hard, with all pollen grains cemented together. Each pollinium is connected to a viscidium (a sticky pad) via a stalk called the caudicle (in orchids) or translator (in milkweeds). The complete dispersal unit (pollinium + caudicle/translator + viscidium) is called a pollinarium. When a pollinator (typically a specific bee, wasp, moth, or hummingbird) visits the flower, the viscidium attaches to the pollinator's body, and the entire pollinarium is removed. At the next flower, the pollinia contact the stigmatic surface. This mechanism is highly efficient because: (1) All pollen from one anther is transferred in a single visit, unlike free pollen where only a fraction is transferred; (2) Species specificity is high because pollinia must be placed and removed from precise locations on the pollinator's body; (3) Pollinia reduce pollen waste during transit.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MTF",
+      "question": "Match each type of fruit with its correct botanical definition and example:\n(I) Simple fruit\n(II) Aggregate fruit\n(III) Multiple fruit\n(IV) Accessory fruit\n\n(P) Develops from a single ovary of a single flower (e.g., peach, tomato, pea pod)\n(Q) Develops from an inflorescence\u2014multiple fused flowers (e.g., pineapple, fig, mulberry)\n(R) Develops from multiple separate carpels of a single flower (e.g., raspberry, strawberry receptacle achenes excluded)\n(S) Includes substantial non-carpel tissue (receptacle, hypanthium) as part of the edible flesh (e.g., apple, strawberry)",
+      "options": [
+        "I-P, II-R, III-Q, IV-S",
+        "I-R, II-P, III-S, IV-Q",
+        "I-S, II-Q, III-P, IV-R",
+        "I-Q, II-S, III-R, IV-P"
+      ],
+      "correctAnswer": "I-P, II-R, III-Q, IV-S",
+      "explanation": "Fruit classification is based on floral origin: (I) Simple fruit\u2014develops from a single ovary (one or more fused carpels) of a single flower. Can be fleshy (berry: tomato, grape; drupe: peach, cherry; pome: apple core portion) or dry (capsule: poppy; achene: sunflower; legume: pea pod; caryopsis: wheat grain). (II) Aggregate fruit\u2014develops from a single flower that has multiple separate (apocarpous) carpels, each of which develops into a fruitlet. The raspberry is a classic example: each 'drupelet' develops from one carpel of the single flower. Strawberry achenes (the 'seeds' on the surface) are also an aggregate fruit, though the fleshy receptacle makes the whole structure an accessory fruit. (III) Multiple fruit\u2014develops from an inflorescence (cluster of many flowers), where individual fruits fuse together as they mature. Pineapple (fused berry-like fruitlets from a spiral inflorescence), fig (an enclosed inflorescence called a syconium), and mulberry are examples. (IV) Accessory fruit\u2014includes substantial non-ovary tissue: apple (fleshy hypanthium surrounds the carpel-derived core), strawberry (fleshy receptacle bearing aggregate achenes).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures pollen tube growth rates in styles of different lengths in Nicotiana alata. Data shows: Short-styled mutant (5 mm style): compatible tubes reach ovules in 6 hours; Normal-styled plants (25 mm style): compatible tubes reach ovules in 18 hours; Self-incompatible tubes in normal styles: tubes arrest at 3-4 mm after 12 hours. What can be concluded about the S-RNase rejection mechanism?",
+      "options": [
+        "S-RNase acts at the stigma surface, preventing pollen germination entirely",
+        "S-RNase acts throughout the style but requires a minimum distance of tube growth before the cytotoxic effect (RNA degradation) becomes lethal, explaining why self-tubes grow 3-4 mm before arrest",
+        "Self-incompatible pollen tubes grow at the same rate as compatible tubes but are physically blocked by callose plugs in the style transmitting tissue",
+        "S-RNase only acts in the ovary, and the arrest at 3-4 mm is due to nutrient depletion in the style"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data reveal important features of the S-RNase rejection mechanism in gametophytic self-incompatibility: (1) Compatible pollen tubes grow through the full style length (5 mm or 25 mm) and reach ovules, indicating normal tube growth when the S-RNase is detoxified by non-self SLF F-box proteins. (2) Self-incompatible tubes grow 3-4 mm before arresting, regardless of total style length. This indicates that S-RNase enters all pollen tubes (compatible and incompatible) non-specifically as they grow through the style. In incompatible tubes, the matching S-RNase is not degraded by SLF proteins and remains active. The cytotoxic effect (degradation of ribosomal RNA and other cellular RNA by the active S-RNase) is cumulative\u2014it takes time for sufficient RNA degradation to halt protein synthesis and kill the pollen tube. The 3-4 mm growth before arrest represents the lag period during which the pollen tube can still grow using pre-existing mRNAs and proteins while the S-RNase progressively degrades new RNA. The arrest does not occur at the stigma surface or at the ovary, confirming that the mechanism acts within the growing pollen tube during stylar transit.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Protandry and protogyny are temporal mechanisms that reduce self-pollination within a flower. What is the difference between these two strategies?",
+      "options": [
+        "Protandry means stamens and pistils develop on separate plants, while protogyny means both are on the same plant",
+        "Protandry occurs in monocots only, while protogyny occurs in dicots only",
+        "Protandry means anthers mature and release pollen before the stigma of the same flower becomes receptive, while protogyny means the stigma becomes receptive before pollen is released",
+        "Protandry involves pollen production in the morning and stigma receptivity at night, while protogyny is the reverse"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Protandry and protogyny are forms of dichogamy\u2014the temporal separation of male and female functions within a hermaphroditic flower to promote outcrossing: Protandry (male-first): Anthers mature, dehisce, and release pollen BEFORE the stigma of the same flower becomes receptive. By the time the stigma is receptive to pollen, the flower's own pollen has already been dispersed to other flowers by pollinators. Examples include many Asteraceae (sunflower family), carrots (Apiaceae), and many legumes. Protogyny (female-first): The stigma becomes receptive and can receive pollen BEFORE the anthers of the same flower mature and release pollen. Early visitors to the flower deposit pollen from other plants onto the receptive stigma. By the time the flower's own pollen is released, the stigma may no longer be receptive. Examples include avocado, magnolia, walnut, and many wind-pollinated trees. Both strategies reduce (but do not eliminate) self-pollination because other flowers on the same plant may be at different stages. These are distinct from dioecy (separate male and female plants) and spatial separation mechanisms.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bt crops express insecticidal proteins from Bacillus thuringiensis. How does the Bt Cry protein kill susceptible insect larvae?",
+      "options": [
+        "Cry protein acts as a neurotoxin that blocks acetylcholinesterase in the insect nervous system",
+        "Cry protein inhibits chitin synthesis, preventing insect molting and larval development",
+        "Cry protein is activated by alkaline gut pH and forms pores in the midgut epithelial cell membranes, causing osmotic lysis and septicemia",
+        "Cry protein suppresses the insect immune system, making larvae susceptible to environmental pathogens"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Bt Cry (Crystal) proteins are parasporal crystal proteins produced by Bacillus thuringiensis that are highly specific insecticides. Their mechanism of action involves: (1) Ingestion\u2014susceptible insect larvae consume Cry protein crystals (or transgenic plant tissue expressing Cry proteins); (2) Solubilization\u2014in the alkaline environment (pH 9-12) of the lepidopteran midgut, the crystalline protoxin dissolves; (3) Proteolytic activation\u2014midgut proteases (trypsin-like enzymes) cleave the protoxin to produce the active toxin fragment (approximately 60-70 kDa); (4) Receptor binding\u2014the activated toxin binds to specific receptors on midgut epithelial cells, including cadherin-like proteins and aminopeptidase N; (5) Oligomerization and pore formation\u2014bound toxin molecules oligomerize into a pre-pore complex that inserts into the cell membrane, forming transmembrane pores; (6) Cell lysis\u2014pore formation disrupts ion homeostasis and osmotic balance, causing cell swelling and lysis; (7) Gut breakdown\u2014destruction of the midgut epithelium allows gut bacteria to enter the hemocoel, causing septicemia and larval death within 24-48 hours.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The molecular mechanism of pollen hydration on the stigma surface is the first step in pollen-pistil interaction. In dry-stigma species like Arabidopsis, what regulates selective pollen hydration?",
+      "options": [
+        "All pollen grains hydrate equally on any stigma surface regardless of species compatibility",
+        "Compatible pollen coat lipids interact with the stigmatic papilla cell cuticle to allow water transfer from stigma to pollen, while incompatible pollen is not hydrated due to lipid-lipid incompatibility",
+        "Pollen grains carry their own water supply and do not require stigmatic hydration",
+        "Hydration is regulated by atmospheric humidity alone, with no contribution from the stigma"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In dry-stigma species (where the stigma surface lacks a fluid exudate), pollen hydration is a regulated, selective process that serves as the first checkpoint in pollen-pistil compatibility. Compatible pollen hydration involves: (1) Initial adhesion\u2014pollen coat lipids and proteins (produced by the tapetum and deposited during pollen maturation) make initial contact with the stigma papilla cell cuticle; (2) Recognition\u2014compatible pollen coat proteins interact with stigmatic receptors, triggering localized breakdown of the papilla cuticle; (3) Water transfer\u2014water flows from the turgid stigmatic papilla cell through the modified cuticle interface to the desiccated pollen grain, allowing it to hydrate, metabolically activate, and germinate. In sporophytic self-incompatibility systems (Brassicaceae), this hydration step is where rejection occurs: when SCR/SP11 on the pollen coat activates SRK on the papilla surface, the downstream ARC1 signaling pathway prevents cuticle modification and water transfer, so self-pollen fails to hydrate. Pollen from unrelated species also fails to hydrate due to biochemical incompatibility at the lipid-cuticle interface.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Endosperm cellularization timing is critical for seed development and is influenced by parental genome dosage. What happens when the normal 2:1 maternal:paternal genome ratio in endosperm is disrupted by interploidy crosses?",
+      "options": [
+        "Paternal excess (e.g., 2x mother x 4x father, giving 2m:2p endosperm) causes precocious endosperm cellularization and small seeds",
+        "Maternal excess (e.g., 4x mother x 2x father, giving 4m:1p endosperm) causes delayed endosperm cellularization and larger seeds",
+        "Paternal excess delays endosperm cellularization, producing larger endosperm and potentially larger seeds, while maternal excess causes precocious cellularization and smaller seeds",
+        "Genome dosage has no effect on endosperm development; only total ploidy level matters"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Interploidy crosses that disrupt the normal 2m:1p (2 maternal : 1 paternal) genome ratio in endosperm produce predictable developmental abnormalities consistent with the parental conflict theory: Paternal genome excess (e.g., diploid mother x tetraploid father produces endosperm with 2m:2p ratio): The extra paternal genome delays endosperm cellularization, leading to an extended period of free-nuclear division and potentially larger endosperm with more storage reserves. This results in larger seeds. From the parental conflict perspective, the paternal genome drives resource acquisition, and extra paternal dosage amplifies this effect. Maternal genome excess (e.g., tetraploid mother x diploid father produces endosperm with 4m:1p ratio): The extra maternal genome causes precocious cellularization, truncating the period of endosperm proliferation and producing smaller seeds. The maternal genome restricts resource allocation, and extra maternal dosage amplifies this restriction. These observations, first described by Nishiyama and Haig, provided key evidence for genomic imprinting in plants and the interploidy triploid block to interspecific hybridization.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Embryo rescue is a plant breeding technique used to obtain viable plants from interspecific crosses. Why is embryo rescue necessary in wide hybridization?",
+      "options": [
+        "Hybrid embryos grow too quickly and burst through the seed coat, requiring physical containment",
+        "Hybrid embryos abort because endosperm development fails due to interspecific incompatibility (post-zygotic barriers), so embryos must be excised and cultured on artificial medium before they die",
+        "Hybrid embryos produce toxic compounds that kill the mother plant, requiring early removal",
+        "Hybrid pollen is too large for the style, so embryos must be produced through in vitro fertilization"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Embryo rescue is an in vitro culture technique essential for wide hybridization programs where interspecific or intergeneric crosses produce hybrid embryos that would normally abort. The most common reason for embryo abortion in wide crosses is endosperm failure: when parental species have different ploidy levels or divergent genomes, the endosperm (which receives both maternal and paternal contributions) often develops abnormally due to disrupted genomic imprinting, incompatible gene expression patterns, or dosage imbalances. Without functional endosperm, the hybrid embryo lacks nutritive support and degenerates. In embryo rescue, the developing hybrid embryo is excised from the ovule before it aborts (typically at the globular to early heart stage) and placed on artificial nutrient medium containing sugars, vitamins, amino acids, and growth hormones that substitute for the endosperm. This technique has been crucial for developing important crop varieties, including disease-resistant wheat lines derived from crosses with wild grass relatives, and seedless watermelon production (triploid embryos from 4x x 2x crosses require embryo rescue).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the Arabidopsis embryo, the radial axis (inner-outer tissue layers) is established during early embryogenesis. What are the three primary tissue layers from outside to inside, and which gene regulates their specification?",
+      "options": [
+        "Endodermis, cortex, epidermis from outside to inside; regulated by the WOX gene family",
+        "Protoderm (future epidermis), ground meristem (future cortex), and procambium (future vascular tissue) from outside to inside; the ATML1/PDF2 genes specify epidermal identity",
+        "Pith, xylem, phloem from outside to inside; regulated by the CLV3/WUS feedback loop",
+        "Mesophyll, bundle sheath, epidermis from outside to inside; regulated by the KANADI genes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The radial axis of the Arabidopsis embryo establishes three primary tissue systems that will persist throughout the plant's life: (1) Protoderm (outermost)\u2014the future epidermis, specified by the homeodomain transcription factors ATML1 (ARABIDOPSIS THALIANA MERISTEM LAYER 1) and PDF2 (PROTODERMAL FACTOR 2). These genes are initially expressed throughout the embryo but become restricted to the outermost cell layer, where they activate epidermis-specific genes (including cuticle biosynthesis genes); (2) Ground meristem (middle)\u2014the future cortex and endodermis, regulated by SHR (SHORT ROOT) and SCR (SCARECROW) transcription factors that control asymmetric cell divisions producing these distinct cell types; (3) Procambium (innermost)\u2014the future vascular tissue, specified by the MP/ARF5 (MONOPTEROS) transcription factor responding to auxin maxima, and further refined by HD-ZIP III and KANADI transcription factors that establish adaxial-abaxial polarity. These three layers are clearly distinguishable by the dermatogen stage (16-cell embryo) and are maintained by position-dependent signaling throughout plant development.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Seed viability testing is important for agriculture and conservation. Which test provides the fastest assessment of seed viability?",
+      "options": [
+        "Germination test\u2014placing seeds on moist filter paper and counting seedlings after 2-4 weeks",
+        "Tetrazolium (TZ) test\u2014seeds are cut and soaked in 2,3,5-triphenyltetrazolium chloride solution, which is reduced to red formazan by dehydrogenase enzymes in living cells, producing a red stain pattern indicating viable embryo tissues",
+        "Electrical conductivity test\u2014measuring solute leakage from seeds soaked in water for 24 hours",
+        "DNA extraction and quantification\u2014measuring total DNA content as an indicator of cell viability"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The tetrazolium (TZ) test is the fastest standard method for assessing seed viability, providing results within 24 hours compared to weeks for germination tests. The principle: (1) Seeds are soaked to allow imbibition, then bisected to expose the embryo; (2) Cut seeds are placed in a solution of 2,3,5-triphenyltetrazolium chloride (TTC), a colorless, water-soluble compound; (3) In metabolically active (living) cells, mitochondrial dehydrogenase enzymes reduce TTC to triphenylformazan, an insoluble red compound that stains the tissue red/pink; (4) Dead cells cannot perform this reduction and remain unstained (white). A trained analyst evaluates the staining pattern: if the critical embryonic structures (radicle tip, plumule, scutellum in cereals; radicle, hypocotyl, cotyledons in dicots) are stained, the seed is classified as viable. The TZ test is an official method recognized by ISTA (International Seed Testing Association) and provides viability estimates comparable to germination tests. Electrical conductivity tests measure membrane integrity but are less direct. DNA content does not indicate metabolic viability.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
       "campbellUnit": 6,
       "campbellChapter": 38,
       "sourceTextbook": "Campbell-12e",
