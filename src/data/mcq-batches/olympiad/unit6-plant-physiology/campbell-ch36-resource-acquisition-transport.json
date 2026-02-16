@@ -663,6 +663,1206 @@
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
       "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Transpiration rate is influenced by multiple environmental factors. Which factor has the MOST direct effect on stomatal aperture and therefore on transpiration?",
+      "options": [
+        "Light intensity — blue light activates phototropin receptors on guard cells, which stimulate plasma membrane H+-ATPases to pump protons out, hyperpolarizing the membrane and driving K+ influx through voltage-gated channels, leading to osmotic water uptake, guard cell swelling, and stomatal opening; this is why transpiration increases dramatically when light is available",
+        "Soil type and mineral composition",
+        "Atmospheric nitrogen concentration",
+        "The gravitational pull on xylem sap columns"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Light is the primary environmental signal that controls stomatal opening and transpiration: (1) Blue light response — guard cells have phototropin receptors (phot1, phot2) that detect blue light. Activation of phototropins triggers a signaling cascade: phototropin autophosphorylation → 14-3-3 protein binding → activation of plasma membrane H+-ATPase (via phosphorylation of the C-terminal autoinhibitory domain) → H+ efflux → membrane hyperpolarization → opening of voltage-gated inward K+ channels (KAT1/KAT2) → K+ influx → Cl- and malate accumulation → decreased Ψs → osmotic water influx → increased turgor → stomatal opening. (2) Red light response — red light also promotes stomatal opening, mainly through photosynthesis in guard cell chloroplasts and in mesophyll cells. Guard cell photosynthesis reduces intercellular CO2, which triggers opening. Mesophyll photosynthesis reduces leaf Ci (intercellular CO2), also promoting opening. (3) Quantitative effect — in most C3 plants, transpiration rate is 5-10 times higher during the day than at night, primarily due to light-driven stomatal opening. Moving from darkness to full sunlight can increase stomatal conductance by 5-20 fold within 15-30 minutes. (4) Interaction with other factors — while humidity/VPD (vapor pressure deficit), temperature, CO2 concentration, and plant water status also affect stomatal aperture, light is the dominant stimulus for opening under non-stressed conditions. Without light, stomata remain mostly closed regardless of other favorable conditions. (5) Other factors listed — soil type (B) affects water availability but not stomatal aperture directly, atmospheric N2 (C) has no effect on stomata, and gravity (D) affects xylem water columns but not stomatal regulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "In symplastic phloem loading, sucrose moves from mesophyll cells into the sieve element-companion cell (SE-CC) complex through plasmodesmata. In species that use the 'polymer trapping' mechanism, how is the concentration gradient maintained to drive symplastic loading?",
+      "options": [
+        "Sucrose entering the intermediary (companion) cells through plasmodesmata is converted to raffinose and stachyose — these larger raffinose-family oligosaccharides (RFOs) cannot diffuse back through the narrow plasmodesmata connecting intermediary cells to mesophyll cells, effectively trapping them in the SE-CC complex and maintaining a diffusion gradient for continued sucrose entry",
+        "Active pumps in the sieve tube push sucrose backward into mesophyll cells",
+        "Callose permanently seals all plasmodesmata after initial loading",
+        "Invertase in companion cells converts sucrose to glucose, which diffuses back to mesophyll"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The polymer trapping mechanism is an elegant solution for symplastic phloem loading: (1) The problem — in symplastic loading, sucrose moves from mesophyll to the SE-CC complex through plasmodesmata (without crossing any membrane). For net movement to occur, there must be a concentration gradient. But how can sucrose concentration be higher in the SE-CC complex than in mesophyll cells if they are connected by open plasmodesmata? Simple accumulation would equilibrate. (2) Polymer trapping solution — in species with intermediary cells (specialized companion cells, found in ~50% of plant families), the solution involves sugar conversion: (a) Sucrose moves from mesophyll through plasmodesmata into intermediary cells (down its concentration gradient). (b) In intermediary cells, sucrose is converted to raffinose (trisaccharide = galactose + sucrose) by galactinol synthase and raffinose synthase, and further to stachyose (tetrasaccharide = galactose + raffinose) by stachyose synthase. (c) The key: plasmodesmata between mesophyll and intermediary cells have a size exclusion limit that allows sucrose (MW 342) to pass but BLOCKS raffinose (MW 504) and stachyose (MW 666). The larger RFOs are trapped in the SE-CC complex. (3) Concentration gradient — because sucrose is continuously converted to RFOs (which cannot diffuse back), sucrose concentration in intermediary cells remains low relative to mesophyll. This maintains the diffusion gradient driving continued sucrose entry. (4) Species examples — polymer trapping is common in families like Cucurbitaceae (squash, melon), Lamiaceae, Scrophulariaceae, and Oleaceae. These species transport RFOs (raffinose + stachyose) as their primary phloem sugars, rather than sucrose. (5) Plasmodesmata structure — plasmodesmata at the mesophyll-intermediary cell interface are particularly abundant and have a branched structure on the intermediary cell side, consistent with high-flux but size-selective transport. Active pumps pushing sucrose back (B) would oppose loading, permanent callose sealing (C) would block all transport, and invertase conversion (D) would reduce, not enhance, loading.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The proton motive force generated by H+-ATPases on plant cell plasma membranes is used to drive secondary active transport. The uptake of sucrose into companion cells during apoplastic phloem loading is mediated by:",
+      "options": [
+        "A sucrose/H+ symporter (cotransporter) such as SUT1/SUC2 — the H+-ATPase pumps protons out of the cell, creating both a pH gradient (acidic outside) and an electrical gradient (negative inside); the SUT1 transporter couples the thermodynamically favorable return of H+ down its electrochemical gradient with the energetically unfavorable uptake of sucrose against its concentration gradient, achieving sucrose accumulation to 600-900 mM in sieve tubes",
+        "Simple diffusion through the lipid bilayer without any transporter",
+        "An ATP-binding cassette (ABC) transporter that directly hydrolyzes ATP to import sucrose",
+        "Pinocytosis (vesicle-mediated endocytosis of apoplastic solution)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Apoplastic phloem loading via H+/sucrose symport is the dominant mechanism in most crop plants: (1) H+-ATPase — plasma membrane H+-ATPases (P-type ATPases of the AHA family) are the primary active transporters in plant cells. They pump H+ out of the cell at the expense of ATP hydrolysis (1 H+ per ATP), creating: (a) a pH gradient (ΔpH ≈ 1.5-2 units, pH ~5.5 outside vs. ~7.2 inside), and (b) a membrane potential (ΔΨ ≈ -120 to -180 mV, inside negative). Together, these constitute the proton motive force (PMF). (2) SUT1/SUC2 sucrose transporters — these are H+/sucrose symporters (cotransporters) that couple the energetically favorable return of H+ into the cell (down the PMF) with the transport of sucrose against its concentration gradient. The stoichiometry is typically 1 H+: 1 sucrose. SUT1 (in solanaceous species) and SUC2 (in Arabidopsis) are the main phloem-loading sucrose transporters. They are localized specifically to the plasma membrane of companion cells in minor vein phloem. (3) Accumulation — this secondary active transport can achieve sieve tube sucrose concentrations of 600-900 mM (20-30% w/v), compared to ~2-5 mM in the leaf apoplast. This represents a >100-fold concentration gradient across the companion cell membrane. (4) Evidence — sut1/suc2 mutants have dramatically impaired phloem loading, accumulate sugars in source leaves, and show reduced growth of sink organs. Antisense suppression of SUT1 in potato causes sugar accumulation in leaves and reduced tuber yield. (5) Sucrose cannot diffuse through the lipid bilayer (B) due to its size and polarity (MW 342, highly hydrophilic). ABC transporters (C) exist in plants but are not the primary sucrose loaders. Pinocytosis (D) does not occur at significant rates in plant cells.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher grows two groups of bean plants: one with mycorrhizal inoculation and one without (non-mycorrhizal controls). Both groups receive identical watering but NO supplemental phosphorus fertilizer. After 8 weeks, mycorrhizal plants have 3x higher shoot phosphorus content, 2x greater biomass, and extensive hyphal networks extending 5-8 cm from root surfaces. What is the best interpretation?",
+      "options": [
+        "Mycorrhizal fungi synthesize phosphorus de novo from carbon and nitrogen",
+        "The mycorrhizal fungi are parasitic and the increased growth is due to a defense response",
+        "Mycorrhizal hyphae explore a much larger soil volume than roots alone, accessing phosphorus beyond the root depletion zone — this is especially important because phosphate ions (H2PO4-/HPO42-) are relatively immobile in soil, diffusing only 1-2 mm per day, so the root depletion zone develops rapidly; fungal hyphae bridging this zone dramatically enhance phosphorus acquisition",
+        "The increased phosphorus is from atmospheric deposition captured by aerial hyphae"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This experiment demonstrates the critical role of mycorrhizae in phosphorus nutrition: (1) Phosphorus immobility — phosphorus is the least mobile of the major plant nutrients in soil. H2PO4- (the form absorbed by plants at most soil pH values) diffuses through soil solution at only 0.3-3.3 x 10^-9 cm2/s. At these rates, Pi can only diffuse ~1-2 mm in a day. (2) Depletion zone — plant roots absorb Pi faster than it can diffuse through the soil to replace it. This creates a cylindrical depletion zone around each root, typically 1-2 mm wide, where Pi concentration drops to near zero. Roots cannot access Pi beyond this zone by diffusion alone. (3) Hyphal bridging — mycorrhizal hyphae (2-5 micrometers diameter) extend 5-15 cm beyond the root surface, far past the depletion zone. Their enormous surface area (hyphal length density can exceed 100 m per cm3 soil) effectively increases the absorptive volume of the root system by 10-1000 fold for phosphorus. (4) Quantitative impact — mycorrhizal plants typically have 2-5x higher tissue P content than non-mycorrhizal plants in low-P soils. In many natural ecosystems, >80% of plant phosphorus uptake is mediated by mycorrhizal hyphae. (5) Not parasitic — the relationship is mutualistic (the plant provides 4-20% of its photosynthetic carbon to the fungus). The growth increase is from improved nutrition, not defense. Fungi cannot synthesize phosphorus (A), they are not parasitic here (B), and aerial hyphae (D) are not a significant P source.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Osmosis is the net movement of water across a selectively permeable membrane from a region of higher water potential to lower water potential. When a plant cell is placed in a hypertonic solution, which sequence of events occurs?",
+      "options": [
+        "Water enters the cell, turgor increases, and the cell bursts (lysis)",
+        "The cell wall dissolves and the cell disintegrates",
+        "Water leaves the cell by osmosis, the vacuole shrinks, turgor pressure drops to zero, and the plasma membrane pulls away from the cell wall (plasmolysis) — the cell wall retains its shape because it is rigid, but the protoplast contracts, creating a gap between the plasma membrane and cell wall that fills with the external hypertonic solution entering through the permeable cell wall",
+        "Nothing happens because the cell wall prevents all water movement"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Plasmolysis is a fundamental concept in plant water relations: (1) Hypertonic environment — when the external solution has a more negative water potential (more negative Ψs) than the cell, water moves out of the cell by osmosis (from higher Ψw inside to lower Ψw outside). (2) Turgor loss — as water leaves, the vacuole shrinks and turgor pressure (Ψp) decreases. At incipient plasmolysis, Ψp = 0 and the plasma membrane just begins to detach from the cell wall. At this point, Ψw = Ψs (since Ψp = 0). (3) Plasmolysis — with continued water loss, the protoplast (everything inside the cell wall: plasma membrane, cytoplasm, vacuole) contracts further, pulling away from the rigid cell wall. The space between the plasma membrane and cell wall fills with the external solution (which can enter freely through the porous cell wall). (4) Cell wall role — the cell wall is permeable to water and most solutes (it is a porous matrix of cellulose, hemicellulose, and pectin with pores of ~5-10 nm). It does NOT prevent water movement. However, the cell wall IS rigid and maintains its shape even when the protoplast contracts. This is fundamentally different from animal cells, which lack walls and simply shrink (crenation in RBCs) or swell and lyse. (5) Reversibility — plasmolysis is reversible: placing the plasmolyzed cell in a hypotonic solution causes water re-entry, the protoplast re-expands, turgor is restored, and the plasma membrane re-establishes contact with the cell wall (deplasmolysis). However, severe or prolonged plasmolysis can damage the plasma membrane at the Hechtian strands (thin membrane connections to the wall), causing irreversible damage. Lysis (A) occurs in animal cells in hypotonic solutions, not in plant cells in hypertonic ones. The wall doesn't dissolve (B) or block water (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Hagen-Poiseuille equation predicts that the flow rate through a cylindrical tube is proportional to the fourth power of the tube radius (Q ∝ r⁴). This relationship has important implications for xylem transport because:",
+      "options": [
+        "A vessel with twice the radius conducts 16 times more water per unit time per unit pressure gradient — this explains why wide earlywood vessels in ring-porous trees are dramatically more efficient for water transport than narrow latewood vessels, and why angiosperms (with wide vessels) generally have higher hydraulic conductivity than conifers (with narrow tracheids)",
+        "Wider vessels are always safer against cavitation",
+        "The equation shows that flow rate depends only on vessel length, not radius",
+        "Narrower vessels always conduct more water because they have more total surface area"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Hagen-Poiseuille equation is central to understanding plant hydraulic architecture: (1) The equation — for laminar flow through a cylindrical tube: Q = (πr⁴ΔP)/(8ηL), where Q = volumetric flow rate, r = tube radius, ΔP = pressure difference, η = dynamic viscosity of the fluid, L = tube length. The critical feature is the r⁴ dependence: flow rate scales with the FOURTH POWER of radius. (2) Quantitative impact — doubling the radius increases flow by 2⁴ = 16-fold. A vessel 3x wider conducts 3⁴ = 81 times more water. This means a few large-diameter vessels can conduct vastly more water than many small-diameter ones occupying the same total cross-sectional area. (3) Angiosperm advantage — angiosperms have vessel elements that can be 20-500 micrometers in diameter, much wider than conifer tracheids (10-25 micrometers). Combined with perforation plates (reducing end-wall resistance), this gives angiosperms hydraulic conductivities 4-100x higher than conifers per unit sapwood area. This higher efficiency may have contributed to angiosperm ecological dominance. (4) Ring-porous trees — the dramatic difference between earlywood and latewood vessel size in ring-porous species means that earlywood vessels (100-300 micrometers diameter) may conduct >90% of total water flow, while latewood vessels (20-50 micrometers) contribute <10%. (5) Safety-efficiency trade-off — however, wider vessels are actually MORE vulnerable to cavitation (A says 'always safer' which is wrong — that's option B, which is incorrect). Wider vessels: (a) have more air-water interface at pit membranes (greater chance of air seeding), (b) are more vulnerable to freeze-thaw embolism (larger bubbles form in wider conduits), (c) represent a larger investment lost per cavitation event. This creates the well-known safety-efficiency trade-off: wide vessels are efficient but risky, narrow conduits are safe but less efficient. Option C (length only) contradicts the r⁴ term, and D (narrower is better) contradicts the physics.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Boron (B) is an essential micronutrient unique among plant nutrients because its primary structural role involves:",
+      "options": [
+        "Cross-linking rhamnogalacturonan II (RG-II) pectin molecules in the cell wall via borate diester bonds — boron bridges two RG-II monomers through their apiose residues, forming RG-II dimers that are critical for cell wall structural integrity and porosity; boron deficiency causes brittle cell walls, inhibited root elongation, and disrupted meristem function",
+        "Acting as a cofactor in the electron transport chain of mitochondria",
+        "Forming the central atom of the chlorophyll molecule",
+        "Serving as the primary osmoticum in guard cells during stomatal opening"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Boron is unique among essential plant nutrients because its primary function is structural rather than enzymatic: (1) RG-II cross-linking — rhamnogalacturonan II (RG-II) is a structurally complex pectic polysaccharide in the primary cell wall. RG-II has a conserved structure found in all vascular plants. It contains the rare sugar apiose, which has cis-diol groups that can form stable ester bonds with borate (B(OH)4-). A single borate ion bridges two apiose residues on adjacent RG-II molecules, creating a borate diester cross-link (RG-II-B-RG-II dimer). (2) Cell wall function — RG-II dimerization via boron is essential for: (a) normal cell wall strength and integrity, (b) proper cell wall porosity (the pectin network controls the effective pore size of the wall), (c) normal cell expansion (the pectin matrix must be properly cross-linked for regulated loosening during growth). Approximately 95-98% of cell wall boron is in RG-II borate diester complexes. (3) Deficiency symptoms — boron deficiency manifests primarily at growing points (meristems, developing organs) because these are sites of active cell wall synthesis: brittle, cracked stems and petioles; hollow stems and heart rot in beet/turnip; poor fruit set; inhibited root elongation; and death of shoot and root tips. Boron is relatively phloem-immobile in most species, so deficiency appears first in young tissues. (4) Narrow range — boron has the narrowest range between deficiency and toxicity of any essential mineral. Deficiency occurs below ~20 ppm tissue B; toxicity above ~100 ppm. This narrow window makes boron management challenging in agriculture. (5) Other roles — boron may also function in membrane transport, hormone signaling, and nucleic acid metabolism, but the RG-II cross-linking role is best established. Electron transport cofactor (B) describes iron/copper, chlorophyll central atom (C) is magnesium, and guard cell osmoticum (D) is potassium.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine whether phloem transport occurs by mass flow (bulk flow of solution) rather than by diffusion or cytoplasmic streaming, a researcher should:",
+      "options": [
+        "Introduce two different radioactive tracers (e.g., 14C-sucrose and 3H-water) simultaneously at the source and measure their arrival time at the sink — if transport is by mass flow, both tracers should move at the same velocity (carried together in the flowing solution); if by diffusion, the smaller water molecules should arrive faster than the larger sucrose molecules",
+        "Observe phloem cells under a light microscope only",
+        "Measure root growth rate in response to light",
+        "Count the number of sieve plates per unit length of stem"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Distinguishing mass flow from diffusion in phloem is a classic experimental design problem: (1) Mass flow prediction — in bulk flow (mass flow), all solutes and the solvent move together at the same velocity, regardless of molecular size. This is because the entire solution is flowing as a unit (like water in a pipe). If phloem transport is by mass flow, a large molecule (sucrose) and a small molecule (water) introduced at the same source location should arrive at a distant sink at the same time. (2) Diffusion prediction — in diffusion, molecules move independently according to their diffusion coefficients, which depend on molecular size. Smaller molecules (like water, MW 18) diffuse faster than larger ones (like sucrose, MW 342). If transport were by diffusion, tritiated water should arrive at the sink BEFORE 14C-sucrose. (3) Experimental results — such dual-tracer experiments (and their equivalents) have consistently shown that all components of phloem sap move at the same velocity, supporting mass flow. Typical velocities are 0.3-1.5 m/h — far too fast for diffusion (which would take years to transport sucrose even 1 meter). (4) Additional evidence for mass flow — (a) the velocity of phloem transport is independent of the concentration gradient (diffusion rate depends on concentration gradient), (b) transport velocity is consistent with pressure-driven flow through sieve tubes of measured dimensions, (c) all solutes in phloem sap (sugars, amino acids, hormones, ions) move at the same rate, (d) sieve tube turgor measurements show source-to-sink pressure gradients. (5) Why other options fail — microscopy (B) cannot measure transport velocity; root growth (C) is irrelevant; sieve plate counts (D) describe anatomy but don't distinguish transport mechanisms.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "During drought, plants accumulate compatible solutes in their cytoplasm to maintain turgor. Which of the following compounds serves as a compatible solute for osmotic adjustment?",
+      "options": [
+        "Proline — this amino acid accumulates to high concentrations (up to 100 mM) in drought-stressed plant cells, lowering the cytoplasmic osmotic potential without inhibiting enzyme function; proline also acts as a molecular chaperone stabilizing protein structure, a ROS scavenger, and a source of carbon and nitrogen for recovery after stress relief",
+        "Sodium chloride in the cytoplasm at concentrations exceeding 500 mM",
+        "Free calcium ions at 10 mM or higher in the cytoplasm",
+        "Lignin monomers dissolved in the vacuolar sap"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Compatible solute accumulation (osmotic adjustment) is a key drought tolerance mechanism: (1) Definition — compatible solutes are small organic molecules that can accumulate to high concentrations in the cytoplasm without disrupting enzyme function or protein structure. They lower the osmotic potential (Ψs), allowing water retention and turgor maintenance under drought. (2) Proline — one of the most widespread compatible solutes in plants: (a) Accumulation — proline can increase 10-100 fold under drought, from ~5 mM to 100+ mM. Synthesis is upregulated via P5CS (delta-1-pyrroline-5-carboxylate synthetase), which is induced by drought/ABA, while degradation (ProDH, proline dehydrogenase) is suppressed. (b) Osmotic function — high proline concentration lowers Ψs, helping cells retain water. (c) Protein stabilization — proline acts as a 'chemical chaperone' through preferential exclusion: it is excluded from protein surfaces, which stabilizes the native folded state by making unfolding thermodynamically unfavorable. (d) ROS scavenging — proline can react with and detoxify reactive oxygen species (hydroxyl radical, singlet oxygen), providing antioxidant protection during stress. (e) Post-stress recovery — after stress relief, proline is rapidly catabolized by ProDH/P5CDH in mitochondria, providing electrons to the ETC (energy), carbon skeletons, and nitrogen for recovery. (3) Other compatible solutes — glycine betaine (quaternary ammonium compound, common in Chenopodiaceae and grasses), trehalose (disaccharide), pinitol/mannitol (sugar alcohols), and raffinose-family oligosaccharides. (4) NaCl (B) is NOT compatible — high cytoplasmic Na+ (>100 mM) inhibits most enzymes. Free Ca2+ (C) at 10 mM would be toxic to cellular signaling (normal cytoplasmic Ca2+ is ~100 nM). Lignin monomers (D) are not osmolytes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The proton pump (H+-ATPase) on plant cell plasma membranes is analogous to the Na+/K+-ATPase in animal cells because both:",
+      "options": [
+        "Transport sodium and potassium in the same stoichiometry",
+        "Are powered by the proton motive force rather than ATP",
+        "Generate the primary electrochemical gradient across the plasma membrane that drives all secondary active transport — in plants, the H+-ATPase creates the proton motive force (ΔpH + ΔΨ) used by H+/sucrose symporters, H+/amino acid symporters, H+/K+ symporters, and H+/anion antiporters; in animals, the Na+/K+-ATPase creates the Na+ gradient used by Na+/glucose symporters and other secondary transporters",
+        "Are located exclusively in mitochondrial membranes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The plasma membrane H+-ATPase is the 'master transporter' of plant cells, functionally analogous to the Na+/K+-ATPase in animal cells: (1) Plants: H+-ATPase — P-type ATPase (AHA family, ~11 members in Arabidopsis). Pumps H+ OUT of the cell, creating: (a) Chemical gradient — ΔpH of ~1.5-2 units (cytoplasm pH ~7.2, apoplast pH ~5.5). (b) Electrical gradient — membrane potential of -120 to -180 mV (inside negative). Together = proton motive force (PMF). (2) Secondary transport — the PMF drives numerous secondary active transport processes: (a) H+/sucrose symport (SUT/SUC transporters) — phloem loading, sugar uptake. (b) H+/amino acid symport (AAP, LHT transporters) — amino acid uptake. (c) H+/K+ symport — potassium uptake via HAK/KUP transporters. (d) H+/NO3- symport (NRT1/NRT2) — nitrate uptake. (e) H+/Na+ antiport — Na+ exclusion from cytoplasm (SOS1). (f) H+/auxin symport (AUX1) — auxin influx in polar transport. (3) Animals: Na+/K+-ATPase — pumps 3 Na+ out and 2 K+ in per ATP. Creates the Na+ gradient used by: Na+/glucose symport (SGLT), Na+/amino acid symport, Na+/Ca2+ antiport, etc. (4) Functional analogy — both are primary active transporters that consume ATP to establish the electrochemical gradient that powers virtually all other membrane transport. They represent convergent evolution of the same energetic strategy: using ATP to create an ion gradient, then using that gradient to drive secondary transport of dozens of different substrates. (5) They do NOT transport the same ions in the same stoichiometry (A), they both use ATP directly rather than being powered by PMF (B — they CREATE the gradient), and they are plasma membrane-localized, not mitochondrial (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Epiphytic plants growing on tree branches without soil contact face a unique challenge for water and mineral acquisition. Epiphytic orchids often have specialized aerial roots covered with velamen. The velamen is:",
+      "options": [
+        "A multilayered sheath of dead, spongy cells with thickened walls that rapidly absorbs rainwater and dissolved minerals through capillary action — when wet, the velamen becomes translucent, allowing light to reach the chloroplast-containing cortex underneath; when dry, it acts as an insulating reflective layer reducing water loss from underlying living root tissues",
+        "A layer of mycorrhizal fungal tissue forming a permanent sheath",
+        "Living photosynthetic cells that perform CAM photosynthesis",
+        "A waxy cuticle identical to that on leaves"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Velamen is a remarkable adaptation in epiphytic orchid roots: (1) Structure — the velamen is a multilayered epidermis (typically 2-18 cell layers) covering the aerial roots of most epiphytic orchids. Velamen cells are dead at maturity, with thickened cell walls containing lignin and suberin in characteristic spiral or helical patterns. The walls have numerous pores and the cells are hollow, creating a sponge-like tissue. (2) Water absorption — when rain or dew wets the velamen, water is rapidly absorbed by capillary action through the porous dead cells. The velamen can absorb water equivalent to several times its dry weight within seconds. Absorbed water is then taken up by the living exodermis cells (the outermost living cell layer beneath the velamen) through aquaporins and osmotic gradients. (3) Mineral uptake — dissolved minerals in rainwater or leachate from bark and canopy are absorbed along with water. The exodermis cells selectively absorb minerals, similar to the endodermis in soil roots. (4) Light function — dry velamen cells are air-filled and appear silvery-white due to light reflection/refraction. Wet velamen becomes translucent as air is replaced by water, allowing light to reach the green cortical cells beneath. Many epiphytic orchid roots contain chloroplasts in their cortex and can photosynthesize (contributing 5-30% of total carbon fixation in some leafless orchid species). (5) Desiccation protection — when dry, the air-filled velamen acts as an insulating blanket that reduces water loss from living tissues beneath, reflects excess light and UV radiation, and reduces thermal load. It is not mycorrhizal tissue (B — though orchids do have mycorrhizae, the velamen is a plant tissue), not living photosynthetic cells (C — the velamen cells are dead; the cortex beneath has chloroplasts), and not a waxy cuticle (D — it is a multilayered tissue, not a surface coating).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "When a plant cell reaches full turgor in a hypotonic solution, net water movement ceases even though the solute potential (Ψs) is still negative. This is because:",
+      "options": [
+        "All solutes have been expelled from the cell",
+        "The turgor pressure (Ψp) generated by the cell wall pushing back on the expanding protoplast exactly balances the negative solute potential, bringing the total water potential (Ψw = Ψs + Ψp) to zero (equal to that of the surrounding pure water) — at equilibrium, there is no water potential gradient to drive net water movement, even though the osmotic gradient still exists",
+        "The plasma membrane becomes completely impermeable to water",
+        "Aquaporins are all permanently closed by turgor-sensing mechanisms"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Understanding turgor equilibrium is fundamental to plant cell water relations: (1) Initial state — when a flaccid plant cell (Ψp ≈ 0) is placed in pure water (Ψw = 0): Cell Ψw = Ψs + Ψp = (negative) + 0 = negative. Since cell Ψw < external Ψw (0), water enters by osmosis. (2) Water entry and turgor buildup — as water enters, the protoplast swells and presses against the rigid cell wall. The cell wall resists expansion, generating turgor pressure (Ψp > 0) that pushes back on the protoplast. (3) Approach to equilibrium — turgor pressure increases as water continues to enter. Each increment of turgor raises the cell's total Ψw (making it less negative): Ψw = Ψs + Ψp. As turgor builds, the driving force for water entry (the difference between external and cell Ψw) decreases. (4) Equilibrium (full turgor) — net water movement ceases when the cell Ψw equals the external Ψw. If the external solution is pure water (Ψw = 0): 0 = Ψs + Ψp, therefore Ψp = -Ψs. The positive turgor pressure exactly balances the negative solute potential. Note: the osmotic gradient (Ψs) still exists — there are still more solutes inside than outside. But the turgor pressure counterbalances the osmotic driving force. (5) Cell wall role — this equilibrium is possible ONLY because plant cells have rigid walls that generate back-pressure. Animal cells lack walls and therefore cannot generate turgor. In a hypotonic solution, animal cells continue to swell until they lyse (no back-pressure to oppose water entry). This is why plants are turgid but not bursting — the wall provides the counterbalancing force. Solutes are not expelled (A), the membrane remains permeable (C), and aquaporins remain functional (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The loading of sucrose into the phloem occurs specifically in the minor veins of source leaves. Minor veins differ from major veins in that they:",
+      "options": [
+        "Are embedded in the leaf mesophyll and function primarily as collection and loading sites — minor veins have a high ratio of companion cells to sieve elements, companion cells often have wall ingrowths (transfer cell morphology) or branched plasmodesmata (intermediary cell morphology) specialized for efficient phloem loading, and are densely distributed so that no mesophyll cell is far from a vein",
+        "Are the midrib and primary veins that provide structural support only",
+        "Contain only xylem and no phloem elements",
+        "Are found only in monocot leaves, not in eudicot leaves"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Minor veins are the functional loading sites for phloem transport: (1) Vein hierarchy — leaf vasculature forms a hierarchical network: the midrib (1st order) branches into secondary veins (2nd order), then tertiary, quaternary, and eventually minor veins (highest order, typically 4th-7th order). Minor veins are the finest, most numerous vein endings embedded in the mesophyll. (2) Loading function — while major veins serve primarily as transport conduits (carrying phloem sap from the leaf to the stem), minor veins are the sites where sucrose is loaded from the mesophyll into the phloem. No mesophyll cell is typically more than 2-3 cells away from a minor vein, minimizing the distance sucrose must travel before loading. (3) Companion cell specialization — minor vein companion cells are morphologically specialized for loading: (a) Transfer cells — in apoplastic loaders (most crop plants), companion cells have elaborate wall ingrowths that amplify the plasma membrane surface area for H+/sucrose symport. (b) Intermediary cells — in symplastic loaders (polymer trapping), companion cells have extensive branched plasmodesmata connecting to mesophyll cells and contain enzymes for RFO synthesis. (c) Ordinary companion cells — in some species with passive symplastic loading. (4) High CC:SE ratio — minor veins have a higher ratio of companion cells to sieve elements compared to major veins, reflecting the intensive metabolic activity of loading (companion cells provide the energy for active transport). (5) Both monocots and eudicots — minor veins exist in both monocot leaves (parallel venation with cross-connecting minor veins) and eudicot leaves (reticulate venation with minor veins forming the finest network). Major veins primarily transport (B is partially right about support but wrong that this is the ONLY function and doesn't distinguish from minor veins), minor veins contain both xylem and phloem (C is wrong), and minor veins occur in all vascular plants (D is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures xylem sap composition in a plant growing with both NH4+ and NO3- available. The xylem sap contains high concentrations of organic acids (malate, citrate) and amino acids (glutamine, asparagine) but very low NO3-. When the same species is grown with NO3- only (no NH4+), xylem sap NO3- concentration increases dramatically. This indicates that:",
+      "options": [
+        "The plant cannot absorb nitrate from the soil under any conditions",
+        "Ammonium inhibits all root metabolic activity and prevents any nitrogen transport",
+        "When NH4+ is available, roots preferentially assimilate it into amino acids locally, reducing the need to transport NO3- to the shoot for assimilation — NH4+ assimilation in roots via GS/GOGAT produces glutamine and other amino acids that are exported in the xylem; when only NO3- is available, root assimilation capacity is overwhelmed and excess NO3- is transported to shoots for leaf-based assimilation",
+        "NO3- is toxic and plants always exclude it from the xylem"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This experiment reveals the interplay between nitrogen form availability and assimilation site: (1) NH4+ preference — many plants preferentially absorb and assimilate NH4+ over NO3- when both are available: (a) NH4+ is already in the reduced form needed for amino acid synthesis (no energy-costly reduction step needed). (b) NH4+ assimilation via GS/GOGAT occurs readily in root plastids. (c) The energetic cost of NH4+ assimilation is lower than NO3- assimilation (NO3- requires 8 electrons for full reduction to NH4+ before GS/GOGAT can act). (2) Root assimilation — when NH4+ is abundant, roots can assimilate most of the absorbed nitrogen locally, exporting organic nitrogen (glutamine, asparagine, other amino acids) and organic acids (malate, citrate — needed as carbon skeletons and for charge balance) in the xylem sap. Little NO3- is transported because roots have sufficient reduced nitrogen from NH4+. (3) Shoot assimilation — when only NO3- is available, root nitrate reductase and nitrite reductase capacity may be insufficient to reduce all absorbed NO3-. Excess NO3- is loaded into the xylem and transported to leaves, where leaf nitrate reductase (using photosynthetically generated reductant) handles the reduction. The ratio of root vs. shoot NO3- assimilation varies by species: some (like many tree species) assimilate most NO3- in roots; others (like many grasses) transport significant NO3- to shoots. (4) Regulation — NH4+ availability downregulates the expression of high-affinity nitrate transporters (NRT2.1) and nitrate assimilatory genes in roots. This feedback prevents unnecessary NO3- uptake when reduced nitrogen is already available. (5) Plants can clearly absorb nitrate (A is wrong), NH4+ does not inhibit root metabolism (B is wrong), and NO3- is not inherently toxic at normal concentrations (D is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Xylem-to-phloem transfer of water is an important process that links the two long-distance transport systems. This transfer occurs primarily in which part of the plant?",
+      "options": [
+        "Only in the root tips where xylem and phloem terminate",
+        "In the leaves — as phloem sap is loaded with sucrose at the source, water potential in the sieve tubes drops below that of adjacent xylem, causing water to move osmotically from xylem to phloem through intervening cells; this lateral xylem-to-phloem water transfer provides the water that drives pressure-flow transport in the phloem",
+        "In the bark, through lenticels",
+        "Exclusively in root nodules during nitrogen fixation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Xylem-to-phloem water transfer is a critical but often overlooked component of the integrated plant transport system: (1) The need for lateral transfer — the Munch pressure-flow model requires that water enters sieve tubes at the source end to generate turgor pressure. This water must come from somewhere: it comes from the xylem. (2) Mechanism — in source leaves: (a) Sucrose is actively loaded into the SE-CC complex (by apoplastic or symplastic loading), reaching concentrations of 0.3-0.9 M. (b) This high sucrose concentration creates a very negative Ψs (-0.7 to -2.5 MPa) in the sieve tubes. (c) The water potential of sieve tubes (Ψw = Ψs + Ψp) drops below that of the adjacent xylem (which has Ψs ≈ 0 MPa, Ψp = negative but less negative than phloem Ψs). (d) Water moves osmotically from xylem to phloem through the intervening cells (bundle sheath, phloem parenchyma). (3) Quantitative significance — phloem sap is ~80-90% water. All of this water ultimately comes from the xylem. In a rapidly growing plant, phloem water flow can represent 10-30% of total transpirational water flow. (4) Sink end — the reverse occurs at sinks: as sucrose is unloaded from sieve tubes, water potential rises and water moves osmotically from phloem back to xylem, completing the cycle. This returning water is then recirculated through the xylem. (5) Whole-plant integration — the xylem and phloem thus form a circulatory system: xylem carries water and minerals upward, phloem carries sugars and organic nutrients downward (and upward to growing shoot tips), and water cycles between the two systems via lateral transfer at sources and sinks. Transfer does not occur only at root tips (A), through lenticels (C), or in nodules (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'sink strength' determines how much photosynthate a particular organ receives from phloem transport. Sink strength is determined by:",
+      "options": [
+        "Sink size (biomass of the organ) multiplied by sink activity (rate of sugar uptake and utilization per unit mass) — a large, metabolically active organ like a developing fruit has high sink strength because it both has substantial mass and actively imports and metabolizes sugars; modifying either component through breeding or genetic engineering can alter carbon allocation patterns",
+        "Only the physical distance from the nearest source leaf",
+        "The number of stomata on the sink organ surface",
+        "The total chlorophyll content of the sink tissue"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sink strength is a central concept in understanding carbon partitioning in plants: (1) Definition — sink strength = sink size × sink activity. (a) Sink size — the physical mass or volume of the sink organ. A large fruit has greater sink size than a small axillary bud. (b) Sink activity — the rate of sugar import, unloading, and metabolism per unit mass. Rapidly dividing and growing tissues have high sink activity. Tissues actively converting sugars to storage compounds (starch, lipids, proteins) also have high activity. (2) Molecular determinants — sink activity depends on: (a) Phloem unloading capacity — the number and activity of sucrose transporters, invertases, and plasmodesmata at the phloem-sink interface. Cell wall invertase (cwINV) is particularly important for apoplastic unloading. (b) Metabolic rate — the rate at which imported sugars are metabolized (respiration, biosynthesis) or converted to storage forms. Starch synthesis in storage organs, cellulose synthesis in growing cells, and lipid synthesis in developing seeds all consume sugars and maintain the concentration gradient for continued import. (c) Transport infrastructure — the number and diameter of sieve tubes connecting the sink to source leaves. (3) Competition among sinks — when multiple sinks compete for photosynthate from the same source, sink strength determines allocation priority. Developing seeds typically have the highest priority (strong sinks), followed by roots, then vegetative shoot growth. (4) Practical applications — increasing sink strength is a major goal of crop improvement. For example: increasing cwINV expression in seeds enhances seed filling; overexpressing starch synthesis enzymes in tubers increases starch accumulation; altering sucrose transporter expression modifies carbon partitioning. (5) Distance (B) affects transport efficiency but is not the definition of sink strength. Stomata (C) and chlorophyll (D) are irrelevant to sink function.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Potassium (K+) is the most abundant cation in plant cells and is required in large amounts. Which of the following is NOT a function of K+ in plants?",
+      "options": [
+        "Stomatal regulation — K+ accumulation drives guard cell swelling and opening",
+        "Osmotic adjustment — K+ is the major osmoticum for cell expansion and turgor maintenance",
+        "Enzyme activation — K+ is a cofactor for over 60 enzymes including pyruvate kinase",
+        "A structural component of amino acids and proteins — in reality, K+ is NOT incorporated into organic molecules; unlike nitrogen and sulfur, potassium functions exclusively as a free ion (K+) in solution, serving osmotic, electrical, and catalytic roles without forming covalent bonds with organic molecules"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Potassium is unique among macronutrients because it remains as a free ion: (1) Stomatal regulation (A — TRUE function) — K+ accumulation in guard cells is the primary osmotic driver of stomatal opening. K+ influx (via KAT1/KAT2 channels) lowers guard cell Ψs, causing water entry and turgor-driven opening. K+ efflux (via GORK channel) drives stomatal closure. (2) Osmotic adjustment (B — TRUE function) — K+ is the major inorganic osmoticum in plant cells. High K+ concentration in vacuoles and cytoplasm maintains cell turgor. K+ is essential for cell expansion — rapidly elongating cells accumulate K+ to generate the turgor needed to expand the cell wall. K+ deficiency causes plants to wilt despite adequate water. (3) Enzyme cofactor (C — TRUE function) — K+ activates numerous enzymes: (a) Pyruvate kinase — requires K+ for activity. (b) Starch synthase — K+ promotes starch synthesis; K+ deficiency impairs starch accumulation. (c) Protein synthesis — K+ is required for ribosome function and polypeptide elongation. (d) Other — ATPases, dehydrogenases, and transferases all require K+ for optimal activity. K+ typically activates enzymes by stabilizing their active conformations. (4) NOT a structural component (D — FALSE, correct answer) — K+ is NOT covalently bonded into any organic molecule. Unlike N (in amino acids, nucleotides), S (in cysteine, methionine), P (in ATP, nucleic acids, phospholipids), and Mg (in chlorophyll), potassium exists exclusively as the free K+ ion. It functions through its ionic properties: charge, osmotic activity, and ability to bind non-covalently to enzyme active sites. This unique feature means K+ is highly mobile in plants (easily redistributed from old to young tissues via phloem) and its cellular concentration fluctuates dynamically. (5) Required amount — K+ typically comprises 1-5% of plant dry weight, making it the mineral nutrient required in the largest quantity.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a particular anion channel (SLAC1) in guard cells is necessary for ABA-induced stomatal closure. The best experimental approach is:",
+      "options": [
+        "Apply ABA to wild-type plants and measure transpiration rate only",
+        "Compare stomatal closure responses to ABA in wild-type Arabidopsis vs. slac1 loss-of-function mutants — if SLAC1 is necessary, the mutant should show impaired stomatal closure in response to ABA; additionally, patch-clamp electrophysiology on isolated guard cell protoplasts can directly measure whether ABA activates S-type anion currents in wild type but not in slac1 mutants",
+        "Measure SLAC1 gene expression in root tips only",
+        "Grow plants in high CO2 and observe whether stomata close"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Testing whether SLAC1 is necessary for ABA-induced stomatal closure requires a combination of genetic and electrophysiological approaches: (1) Genetic approach — comparing wild-type and slac1 knockout mutants: (a) Treat both genotypes with exogenous ABA at identical concentrations. (b) Measure stomatal aperture by epidermal peels or thermal imaging (stomatal closure reduces transpirational cooling, raising leaf temperature). (c) Prediction: if SLAC1 is necessary, slac1 mutants should show reduced or absent stomatal closure in response to ABA. The original slac1 mutant characterization (Negi et al., 2008; Vahisalu et al., 2008) showed exactly this: slac1 mutants had impaired ABA-induced stomatal closure and exhibited a wilty phenotype under drought. (2) Electrophysiology — patch-clamp recording on guard cell protoplasts: (a) Isolate guard cell protoplasts from wild-type and slac1 leaves. (b) Apply ABA intracellularly or extracellularly. (c) Measure S-type anion channel currents (slow-activating, sustained anion efflux currents). (d) Prediction: ABA should activate S-type anion currents in wild-type protoplasts but not (or much less) in slac1 protoplasts. (3) Complementation — re-expressing SLAC1 in the slac1 mutant background should rescue both the stomatal closure response and the anion channel currents, confirming that the defect is specifically due to loss of SLAC1. (4) Reconstitution — expressing SLAC1 together with OST1/SnRK2.6 kinase in Xenopus oocytes reconstitutes ABA-activatable anion currents, demonstrating direct phosphorylation-dependent activation. (5) Measuring transpiration in wild type only (A) cannot determine whether SLAC1 is involved. Root tip expression (C) is irrelevant to guard cell function. High CO2 (D) tests a different closure pathway that may or may not require SLAC1.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Embolism repair (refilling of cavitated xylem vessels) can occur in some plant species while surrounding vessels are still under tension. The proposed mechanism for this involves:",
+      "options": [
+        "New vessel elements rapidly differentiating from cambial derivatives to replace embolized ones",
+        "Living xylem parenchyma cells adjacent to the embolized vessel actively secreting solutes (sugars, K+) into the vessel lumen, generating a local osmotic gradient that draws water in from surrounding functional xylem — this creates a localized positive pressure sufficient to dissolve and push out the air bubble, and the process requires metabolic energy from parenchyma cells",
+        "The embolized vessel simply remaining non-functional permanently",
+        "Atmospheric pressure forcing air out of the vessel through the roots"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Embolism repair is one of the most actively researched topics in plant hydraulics: (1) The paradox — for refilling to occur in a vessel surrounded by functional vessels under tension, there must be a mechanism to generate local positive pressure in the embolized vessel while maintaining negative pressure (tension) in adjacent functional vessels. The two must be hydraulically isolated during refilling. (2) Osmotic refilling hypothesis — the most widely accepted mechanism involves xylem parenchyma cells (ray parenchyma and axial parenchyma cells that are in contact with vessels through pit pairs): (a) Parenchyma cells detect the embolized (air-filled) vessel, possibly through changes in water potential or mechanical signals at pit membranes. (b) They actively secrete solutes (sugars from starch hydrolysis, K+, other ions) into the lumen of the embolized vessel through aquaporins and solute transporters. (c) The high solute concentration creates a negative water potential in the vessel lumen, causing osmotic water influx from adjacent living cells. (d) As water enters, it builds positive pressure that gradually compresses and dissolves the gas bubble. (3) Energy requirement — the process requires metabolic energy: ATP for H+-ATPases and solute transporters in parenchyma cells. Starch reserves in parenchyma cells provide the sugars. This is why living parenchyma cells are essential for refilling and why heartwood vessels (with dead parenchyma) cannot be refilled. (4) Isolation mechanism — the pit membranes between the refilling vessel and adjacent functioning vessels may provide the hydraulic isolation needed to prevent the positive refilling pressure from disrupting the tension in nearby vessels. Alternatively, vapor-filled vessels may be isolated by air-water menisci at pit membranes. (5) New vessel formation (A) occurs but is too slow (days to weeks) for rapid recovery. Permanent loss of function (C) does occur in some cases but is not universal. Atmospheric pressure (D) cannot push air out of a vessel that is sealed within the xylem.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Phosphorus deficiency is among the most common nutrient deficiencies in agriculture worldwide. Plants respond to low phosphorus availability by:",
+      "options": [
+        "Shutting down all root growth and allocating resources exclusively to shoots",
+        "Increasing shoot-to-root ratio to maximize light capture over nutrient acquisition",
+        "Increasing root hair length and density, secreting organic acids (citrate, malate) and phosphatases into the rhizosphere, upregulating high-affinity Pi transporters (PHT1 family), and forming cluster roots (proteoid roots) in some species — these responses collectively maximize phosphorus acquisition from the soil by increasing root surface area, solubilizing bound phosphorus, hydrolyzing organic phosphorus compounds, and enhancing membrane transport capacity",
+        "Accumulating excess iron to substitute for phosphorus functions"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Plant responses to phosphorus deficiency are among the most elaborate nutrient stress adaptations: (1) Root morphological changes — (a) Increased root hair length and density: root hairs can increase 2-5 fold in length and number under Pi deficiency, dramatically expanding the soil volume explored. (b) Altered root architecture: primary root growth is inhibited while lateral root growth and branching increase, creating a more exploratory root system concentrated in the Pi-rich topsoil. (c) Cluster roots (proteoid roots): formed by species in families like Proteaceae, Lupinus (lupins), and Hakea. These are dense clusters of short lateral rootlets that release massive amounts of organic acids, creating localized acidification zones. (2) Chemical mobilization — (a) Organic acid secretion: citrate, malate, and oxalate are exuded from roots. These organic acids solubilize phosphorus that is bound to iron, aluminum, and calcium minerals by chelating the metal cations and releasing Pi. (b) Phosphatase secretion: acid phosphatases (APases) are secreted into the rhizosphere to hydrolyze organic phosphorus compounds (phytate, phospholipids, nucleotides), releasing inorganic Pi. Up to 30-80% of soil P can be in organic forms. (3) Transporter upregulation — PHT1 family high-affinity Pi transporters (Km = 1-10 μM) are strongly induced under Pi deficiency. Nine PHT1 members exist in Arabidopsis, with PHT1;1 and PHT1;4 being the major root Pi uptake transporters. (4) Internal reallocation — Pi is remobilized from older leaves (via phloem) to younger, growing tissues. Membrane phospholipids are replaced by sulfolipids and galactolipids (saving Pi). Intracellular Pi is released from vacuolar stores. (5) Mycorrhizal enhancement — Pi deficiency promotes mycorrhizal colonization and expression of mycorrhiza-specific Pi transporters (PHT1;6 in Medicago). Plants do not shut down root growth (A) or increase shoot:root ratio (B — the opposite happens). Iron accumulation (D) does not substitute for P functions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MTF",
+      "question": "Match the following types of xylem conduits with their characteristics:\n(P) Vessel elements\n(Q) Tracheids\n(R) Protoxylem\n(S) Metaxylem\n\n1. First-formed xylem with annular or helical wall thickenings that permit stretching during organ elongation\n2. Wide cells with perforation plates at end walls; found in angiosperms; connected end-to-end to form vessels\n3. Elongated cells with tapered end walls lacking perforations; water passes through pit pairs; found in all vascular plants including gymnosperms\n4. Later-formed xylem with reticulate or pitted wall thickenings; matures after organ elongation ceases",
+      "options": [
+        "P-3, Q-2, R-4, S-1",
+        "P-2, Q-3, R-1, S-4",
+        "P-1, Q-4, R-3, S-2",
+        "P-4, Q-1, R-2, S-3"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Understanding the different types of xylem conducting elements is essential: (1) Vessel elements (P-2) — found predominantly in angiosperms (and a few other groups like Gnetales). Key feature: perforation plates at end walls — actual holes (complete removal of cell wall material) connecting adjacent vessel elements. This creates open tubes (vessels) that are highly efficient for water transport. Vessel elements are typically wider and shorter than tracheids. (2) Tracheids (Q-3) — the ancestral conducting element found in ALL vascular plants (ferns, gymnosperms, and angiosperms). Key feature: lack perforation plates. End walls are tapered and overlapping with adjacent tracheids. Water must pass through pit pairs (areas where the secondary wall is absent, leaving only the thin pit membrane/primary wall). This creates more resistance to flow than perforation plates. Tracheids serve both conduction and support functions. (3) Protoxylem (R-1) — the first xylem to differentiate in a developing organ. Matures while surrounding tissues are still elongating. Must have extensible wall thickenings: annular (ring-shaped) or helical (spiral) patterns allow the cell to be stretched as surrounding cells elongate without rupturing. Protoxylem vessels may eventually be torn apart and become non-functional as the organ continues to grow. (4) Metaxylem (S-4) — xylem that differentiates after organ elongation has slowed or stopped. Has more rigid wall thickenings: scalariform (ladder-like), reticulate (net-like), or pitted (nearly complete secondary wall). These patterns do not permit stretching but provide greater mechanical strength and water-conducting efficiency. Metaxylem vessels are typically wider than protoxylem and become the primary conducting elements in mature organs.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Transpiration creates a water potential gradient from soil to leaves. In a tall tree (30 m), the gravitational component of water potential (Ψg) adds an additional energy cost for lifting water. The gravitational water potential is approximately:",
+      "options": [
+        "-0.01 MPa per meter of height, contributing -0.3 MPa at 30 m — this gravitational component means that even in a fully hydrated tree with saturated soil, the water potential at the top of the xylem column would be about -0.3 MPa lower than at the base, solely due to gravity; transpirational pull must overcome this gravitational gradient in addition to frictional resistance along the xylem pathway",
+        "-1.0 MPa per meter of height, making trees over 10 m impossible",
+        "-10 MPa per meter, which is the dominant cost of water transport",
+        "Gravity has no effect on water potential in plants"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The gravitational component of water potential is important for understanding water transport in tall trees: (1) Gravitational water potential — Ψg = ρgh, where ρ = density of water (1000 kg/m3), g = gravitational acceleration (9.8 m/s2), h = height. For each meter of height: Ψg = 1000 × 9.8 × 1 / 10^6 = 0.0098 MPa ≈ 0.01 MPa per meter. At 30 m height: Ψg = 0.01 × 30 = -0.3 MPa. (2) Complete water potential equation — for tall trees, the full equation is: Ψw = Ψs + Ψp + Ψg. The gravitational component is typically small compared to the other components and to the transpiration-driven tension, but it is not negligible in very tall trees. (3) Height limits — the tallest trees (coast redwoods, Sequoia sempervirens) reach about 115 m. At this height, Ψg ≈ -1.15 MPa. Combined with the xylem tension needed to overcome frictional resistance in the conducting pathway, and the tension needed to extract water from soil, the total xylem tension at the top can reach -2 to -3 MPa. Stomata at the top of very tall trees operate at more negative water potentials, reducing photosynthesis and potentially setting the ultimate height limit. (4) Theoretical maximum — Koch et al. (2004) estimated that the maximum tree height is approximately 122-130 m, based on the combined gravitational and frictional limits that would bring xylem tension to the cavitation threshold at the treetop. (5) Practical significance — while -0.3 MPa at 30 m seems small compared to typical leaf water potentials (-1 to -3 MPa), it represents a fixed baseline cost that must be overcome even under zero transpiration. Option B (-1 MPa/m) is 100x too large, C (-10 MPa/m) is 1000x too large, and D (no effect) ignores physics.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Zinc (Zn) is an essential micronutrient for plants. Its most important biochemical role is:",
+      "options": [
+        "Forming the central metal ion in the chlorophyll molecule",
+        "Acting as a structural and catalytic component of numerous enzymes and transcription factors — Zn2+ stabilizes protein structure in zinc finger domains (C2H2, RING, LIM types) of transcription factors and is a catalytic cofactor in enzymes including carbonic anhydrase, alcohol dehydrogenase, Cu/Zn superoxide dismutase, and RNA polymerase; Zn deficiency impairs auxin biosynthesis, reducing internode elongation and causing 'little leaf' symptoms",
+        "Serving as the primary electron carrier in the photosynthetic light reactions",
+        "Providing the red pigmentation in flower petals"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Zinc is second only to iron as the most abundant transition metal in plants: (1) Enzyme cofactor — Zn2+ is required by over 300 enzymes across all six enzyme classes. Key examples: (a) Carbonic anhydrase — converts CO2 + H2O ⇌ HCO3- + H+. Essential for CO2 supply to rubisco in C4 plants (in mesophyll cells) and for pH buffering. (b) Cu/Zn superoxide dismutase (SOD) — detoxifies superoxide radicals to H2O2. Critical for ROS defense. (c) Alcohol dehydrogenase — important for anaerobic metabolism during flooding. (d) RNA polymerases — require Zn2+ for catalytic activity. (2) Structural role — zinc finger domains are one of the most common protein structural motifs in eukaryotes. A Zn2+ ion coordinates with cysteine and/or histidine residues to stabilize a compact protein fold. Major types: (a) C2H2 zinc fingers — in many transcription factors regulating gene expression. (b) RING (Really Interesting New Gene) fingers — in E3 ubiquitin ligases. (c) LIM domains — in cytoskeletal organization. Over 2% of Arabidopsis proteins contain predicted zinc-binding domains. (3) Auxin connection — Zn is required for tryptophan biosynthesis (a precursor of the auxin IAA). Zn deficiency reduces tryptophan levels, impairs auxin production, and causes characteristic symptoms: reduced internode elongation (rosetting), small leaves ('little leaf'), and reduced apical dominance. (4) Required amount — Zn is needed at 20-100 ppm in plant tissue. Deficiency is common on alkaline, calcareous soils where Zn2+ solubility is very low. (5) Chlorophyll contains Mg, not Zn (A); electron carriers use Fe, Cu, and Mn, not Zn (C); and Zn does not provide pigmentation (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Parasitic plants like Cuscuta (dodder) obtain water and nutrients from host plants through specialized penetrating organs called:",
+      "options": [
+        "Mycorrhizae that form between the parasite and host roots",
+        "Haustoria — modified root-like organs that penetrate the host plant's tissues and form direct vascular connections with the host's xylem and phloem; haustoria allow the parasite to tap into the host's transpiration stream for water and minerals and into the host's phloem for photosynthetic sugars and amino acids",
+        "Tendrils that merely provide physical support without nutrient transfer",
+        "Adventitious roots that grow into the soil beneath the host plant"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Haustoria are the defining organ of parasitic plants: (1) Structure — haustoria are specialized organs that develop when a parasitic plant contacts a host stem or root. In Cuscuta (dodder, a stem parasite): the dodder seedling coils around a host stem, and haustorium primordia form at contact points. The haustorium penetrates the host's epidermis, cortex, and eventually reaches the vascular tissues. It forms searching hyphae-like cells that grow between and through host cells to make connections with host xylem and phloem. (2) Vascular connections — the mature haustorium establishes: (a) Xylem-to-xylem connections — parasite xylem elements directly abut or fuse with host xylem elements, allowing the parasite to tap into the host's transpiration stream. Water and dissolved minerals flow from host xylem into parasite xylem. (b) Phloem connections — parasite sieve tubes form connections with host phloem, often via specialized transfer cells at the interface. This allows the parasite to divert photosynthetic sugars and amino acids from the host's phloem. (3) Cuscuta specifics — Cuscuta is a holoparasite: it has no functional chlorophyll (or very little), no roots (except initial seedling root), and depends entirely on host xylem and phloem for water, minerals, and carbon. A single dodder plant can parasitize multiple hosts simultaneously. (4) Other parasitic plants — (a) Striga (witchweed) — root hemiparasite of grasses, major crop pest. (b) Orobanche (broomrape) — root holoparasite. (c) Rafflesia — produces world's largest flower, holoparasite on Tetrastigma vines. (d) Viscum/Phoradendron (mistletoe) — stem hemiparasite with chlorophyll, takes mainly water/minerals. (5) Mycorrhizae (A) are mutualistic fungal associations, not parasitic organs. Tendrils (C) provide support but no vascular connections. Soil roots (D) would make the plant autotrophic, not parasitic.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A plant physiologist uses fluorescent dye (carboxyfluorescein, CF) applied to a source leaf to visualize phloem transport. After 30 minutes, the dye appears in developing fruits above the labeled leaf and in root tips below, but NOT in mature stem internodes between the source leaf and sink tissues. This observation indicates that:",
+      "options": [
+        "Phloem sap does not actually flow through the stem",
+        "CF was degraded in the stem and regenerated at the sinks",
+        "Phloem sap moves through the stem as bulk flow without significant lateral unloading in mature, non-growing internodes — the dye passes through the stem phloem quickly as part of the mass flow stream but does not exit the sieve tubes in regions that are not active sinks; CF only accumulates visibly at true sink destinations where phloem unloading occurs, demonstrating source-to-sink specificity of transport",
+        "The dye was transported by xylem, not phloem"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This fluorescent tracer experiment demonstrates important properties of phloem transport: (1) CF as phloem tracer — carboxyfluorescein (CF, or its membrane-permeant precursor CFDA/carboxyfluorescein diacetate) is loaded into phloem when applied to source tissues. Being phloem-mobile and fluorescent, it can be tracked by fluorescence microscopy. CF is a good proxy for phloem sap movement because it travels with the mass flow stream. (2) Observation explained — CF appearing at sinks (fruits, root tips) but not accumulating in mature stem confirms: (a) The phloem transport pathway through the stem is intact and functioning (sap clearly passes through). (b) But CF (and by extension, phloem sap) does not significantly leave the sieve tubes in mature, non-growing stem internodes. (c) CF accumulates only where phloem unloading is active — at sink tissues with metabolic demand for imported sugars. (3) Source-to-sink transport — this demonstrates that phloem is a directed transport system: sap flows from source to sink without leaking out along the way. The sieve tubes in mature stem internodes are essentially a sealed pipeline — their sieve plate pores are open for longitudinal flow, but lateral unloading into surrounding tissues is minimal because mature stem cells have low metabolic demand and are not active sinks. (4) Unloading specificity — phloem unloading occurs specifically at sink tissues through: (a) symplastic unloading via plasmodesmata (in root tips, shoot apices), (b) apoplastic unloading via sucrose efflux carriers and subsequent invertase-mediated hydrolysis (in fruits, seeds). (5) Phloem sap clearly flows through the stem (A is wrong), CF is stable (B is wrong), and CF/CFDA is specifically loaded into phloem (not xylem — D is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Silicon (Si) is considered a 'beneficial element' rather than an essential mineral nutrient for most plants. In grasses and some other species, silicon deposition provides:",
+      "options": [
+        "Enhanced mechanical strength and resistance to lodging, pathogen attack, and insect herbivory — silicon is deposited as amorphous silica (SiO2·nH2O, called phytoliths) in cell walls and on leaf surfaces; silicified leaf surfaces are abrasive to insect mandibles, and silica deposition strengthens stems against bending (lodging) and creates physical barriers against fungal penetration",
+        "A replacement for phosphorus in ATP synthesis",
+        "The primary pigment responsible for green coloration in grass leaves",
+        "Active transport of sugars from root to shoot via silicon channels"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Silicon is the second most abundant element in the Earth's crust and plays important roles in many plant species: (1) Uptake and transport — silicon is absorbed by roots as silicic acid (Si(OH)4) through specific silicon influx (Lsi1/NIP2;1, an aquaporin-type channel) and efflux (Lsi2, an active transporter) transporters. It is transported in the xylem as silicic acid and deposited as amorphous silica (SiO2·nH2O) at sites of transpiration (leaf epidermis, trichomes). (2) Mechanical strengthening — silica deposits in cell walls and on epidermal surfaces dramatically increase tissue rigidity. In rice and other cereals, silicon makes up 5-10% of dry weight in leaves and stems. Silicified stems resist lodging (falling over) in wind and rain, which is critical for grain crops. Silicon-deficient rice lodges severely, reducing yield. (3) Pest resistance — (a) Insect defense: silica particles on leaf surfaces and in trichomes are extremely hard (Mohs hardness 7) and wear down insect mandibles, reducing feeding. Silicified trichomes physically deter small insects. (b) Fungal resistance: silica deposited beneath the cuticle and in cell walls creates physical barriers to fungal hyphae penetration. Silicon application reduces severity of blast disease (Magnaporthe) in rice, powdery mildew in wheat, and many other fungal diseases. (4) Phytoliths — silica bodies (phytoliths) persist in soil after plant decomposition and can be used for paleobotanical and archaeological studies (identifying ancient plant communities and agricultural practices). (5) 'Beneficial' vs. 'essential' — silicon meets essentiality criteria for some species (rice, horsetails) but not for model plants like Arabidopsis. It is classified as 'beneficial' for most plants: not strictly essential for completing the life cycle but significantly improving growth, yield, and stress tolerance. Silicon does not replace P (B), is not a pigment (C), and does not transport sugars (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the xylem, the movement of water from one tracheid to an adjacent tracheid occurs primarily through:",
+      "options": [
+        "Pit pairs — areas where the secondary wall is absent on both adjacent cells, leaving only the thin pit membrane (consisting of the primary walls and middle lamella of both cells); water passes through the porous pit membrane from one tracheid lumen to the next, with the pit membrane pores providing the resistance to flow and also serving as safety valves against embolism spread",
+        "Open perforation plates at the tracheid end walls",
+        "Plasmodesmata connecting the protoplasts of adjacent tracheids",
+        "Transpiration-independent active pumping by tracheid wall proteins"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pit pairs are the defining water transport pathway between tracheids: (1) Tracheid vs. vessel element — the fundamental difference: tracheids lack perforation plates (B is wrong — perforations are found only in vessel elements). Water moving from one tracheid to the next must pass through pit pairs, where it crosses the thin pit membrane. This creates more resistance to flow compared to the open perforations in vessel elements, which is why tracheid-based xylem (gymnosperms) is generally less efficient than vessel-based xylem (angiosperms). (2) Pit structure — pits in tracheids are typically bordered pits: the secondary wall arches over the pit cavity, leaving a narrow aperture. The pit membrane spans the cavity, consisting of the two primary walls and the middle lamella of the adjacent cells. In conifers, the pit membrane has a central thickening called the torus, surrounded by a porous marginal region (margo). (3) Torus-margo function — in conifers, the torus-margo pit membrane serves a safety valve function: (a) Normal flow: water passes through the porous margo around the torus. The margo has relatively large pores that allow efficient water flow. (b) When one tracheid cavitates (fills with air): the pressure difference displaces the torus against the pit aperture on the cavitated side (aspirated pit), sealing the opening and preventing air from spreading to the adjacent functional tracheid. This is one of the most effective anti-embolism mechanisms in plants. (4) Flow resistance — the total resistance of the xylem pathway is divided between lumen resistance (~35% in tracheids, more in wide vessels) and pit membrane/end wall resistance (~65% in tracheids). In vessel elements with simple perforation plates, end wall resistance is minimal. (5) Tracheids are dead at maturity — they have no protoplasts, so plasmodesmata (C) do not exist, and there are no living cells for active pumping (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The SWEET (Sugars Will Eventually be Exported Transporters) family of sugar transporters plays a critical role in phloem loading. In apoplastic loading species, SWEET transporters function by:",
+      "options": [
+        "Actively importing sucrose from the apoplast into companion cells using ATP",
+        "Facilitating sucrose efflux from phloem parenchyma cells into the apoplast — SWEET proteins are facilitated diffusion carriers (uniporters) that mediate the export of sucrose from mesophyll or phloem parenchyma cells into the cell wall space; this apoplastic sucrose is then actively imported into the SE-CC complex by SUT/SUC H+/sucrose symporters, completing the two-step apoplastic loading pathway",
+        "Transporting only hexoses (glucose and fructose) but never sucrose",
+        "Forming gap junctions between mesophyll and companion cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The discovery of SWEET transporters solved a long-standing puzzle in phloem loading: (1) The two-step problem — in apoplastic loading, sucrose must: (a) first exit mesophyll/phloem parenchyma cells INTO the apoplast (step 1), then (b) be actively imported from the apoplast into the SE-CC complex by SUT/SUC transporters (step 2). Step 2 (active import) was well understood, but step 1 (sucrose export to apoplast) was mysterious for decades — how does sucrose leave cells? (2) SWEET discovery — Chen et al. (2012) identified SWEET proteins as the efflux carriers for step 1. SWEET11 and SWEET12 in Arabidopsis are expressed in phloem parenchyma cells and mediate facilitated diffusion of sucrose down its concentration gradient from the cytoplasm (high sucrose from photosynthesis) into the apoplast (low sucrose, because SUT/SUC transporters on adjacent companion cells rapidly remove it). (3) Facilitated diffusion — SWEET proteins are NOT active transporters. They are uniporters that facilitate bidirectional sugar movement down the concentration gradient. They require no direct energy input. In the source leaf context, the concentration gradient (high intracellular → low apoplastic sucrose) drives net efflux. (4) Pathogen exploitation — many plant pathogens have evolved to manipulate SWEET expression to redirect sugars for their own nutrition. The rice bacterial blight pathogen (Xanthomonas oryzae) secretes TAL effectors that directly activate rice SWEET genes, inducing sugar efflux into the apoplast where bacteria can access it. Resistance genes (xa13, xa25) encode SWEET alleles that cannot be activated by TAL effectors. (5) Complete loading pathway — mesophyll photosynthesis → sucrose → SWEET-mediated efflux to apoplast → SUT/SUC-mediated H+/sucrose symport into SE-CC complex → phloem transport. SWEET proteins do not actively import (A), they can transport sucrose (not only hexoses — C), and they do not form gap junctions (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Manganese (Mn) is an essential micronutrient in plants. Its most critical function is as a component of the:",
+      "options": [
+        "Cytochrome b6f complex in the electron transport chain",
+        "Oxygen-evolving complex (OEC) of Photosystem II — the OEC contains a Mn4CaO5 cluster that catalyzes the oxidation of water (2H2O → O2 + 4H+ + 4e-), the light-driven reaction that provides electrons to the photosynthetic electron transport chain and releases O2 as a byproduct; Mn deficiency directly impairs photosynthetic water splitting",
+        "The Fe-S centers of Photosystem I",
+        "The Mg-porphyrin ring of chlorophyll"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Manganese's most famous role is in the oxygen-evolving complex (OEC): (1) The OEC — the water-splitting reaction of photosynthesis takes place at the donor side of Photosystem II (PSII). The catalytic center is an inorganic cluster containing 4 manganese ions, 1 calcium ion, and 5 bridging oxygen atoms (Mn4CaO5). This cluster is one of nature's most remarkable catalysts, performing the thermodynamically demanding four-electron oxidation of water. (2) Kok cycle (S-state cycle) — the Mn4CaO5 cluster cycles through five oxidation states (S0 → S1 → S2 → S3 → S4 → S0). Each photon absorbed by PSII oxidizes the cluster by one electron (via the reaction center chlorophyll P680 and the tyrosine Z intermediate). After four successive oxidations (S0 to S4), the cluster has accumulated enough oxidizing equivalents to extract four electrons from two water molecules, releasing O2 and resetting to S0. (3) Mn deficiency effects — without sufficient Mn, the OEC cannot assemble or function properly. This directly impairs PSII activity, reducing: (a) photosynthetic electron transport, (b) ATP and NADPH production, (c) CO2 fixation. Visual symptoms include interveinal chlorosis (yellowing between veins) of young leaves, because chlorophyll synthesis is impaired secondarily. (4) Other Mn functions — Mn is also required by: (a) Mn-SOD (manganese superoxide dismutase) in mitochondria, (b) oxalate oxidase, (c) various decarboxylases. (5) Cytochrome b6f (A) contains iron and copper but not Mn. Fe-S centers in PSI (C) contain iron and sulfur. Chlorophyll (D) contains magnesium, not manganese.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Casparian strip forces a membrane-crossing step for all solutes entering the stele. However, some ions may bypass the endodermal selectivity filter through passage cells. Passage cells are particularly important for uptake of which nutrient?",
+      "options": [
+        "Sodium, which must enter the stele in large quantities",
+        "Calcium — because Ca2+ is relatively immobile in the phloem and must enter the xylem in a continuous stream to supply growing tissues; passage cells, which remain in the primary endodermal state without thick suberin lamellae, provide lower-resistance pathways for Ca2+ entry into the stele in older root regions where the rest of the endodermis has developed thick secondary walls",
+        "Nitrogen, which is only absorbed as N2 gas",
+        "Carbon, which enters roots from the soil in CO2 form"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Passage cells play a specialized role in calcium nutrition: (1) Calcium transport challenge — calcium is unique among macronutrients because: (a) It is relatively phloem-immobile (high Ca2+ would cause callose precipitation in sieve plates). (b) Growing tissues cannot receive Ca2+ through phloem redistribution from old leaves. (c) Ca2+ must reach shoot tips, young leaves, and developing fruits through continuous xylem delivery. (d) Therefore, uninterrupted Ca2+ loading into the xylem is critical, especially in root regions where most uptake occurs. (2) Endodermal development — as roots age, endodermal cells progress from State I (Casparian strip only) to State II (suberin lamellae on all walls) to State III (additional thickening). States II and III dramatically restrict transcellular transport because the suberin lamellae on all surfaces make these cells essentially impermeable. (3) Passage cells — certain endodermal cells (typically opposite protoxylem poles) remain in State I, retaining only their Casparian strips without thick suberin deposits. These 'passage cells' provide the primary entry pathway for water and minerals into the stele in older root regions. Their importance is greatest for Ca2+ because Ca2+ cannot be redistributed via phloem. (4) Calcium deficiency disorders — blossom-end rot in tomato, bitter pit in apple, and tip burn in lettuce all result from inadequate Ca2+ supply to rapidly growing tissues. These disorders can occur even when soil Ca2+ is abundant if xylem transport to the affected tissue is insufficient (e.g., during rapid growth with low transpiration). (5) Na+ entry into the stele (A) is generally undesirable and is restricted, not facilitated. N enters as NO3- or NH4+ ions (C is wrong about N2). Carbon enters leaves as CO2 from the atmosphere, not roots (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of soil water potential is critical for understanding plant water uptake. As soil dries, the remaining water is held more tightly. The permanent wilting point is defined as:",
+      "options": [
+        "The soil water content at which the soil water potential equals approximately -1.5 MPa — at this point, most mesophytic crop plants cannot extract water fast enough to prevent irreversible wilting because the matric forces holding the remaining water in thin films around soil particles and in small pores exceed the plant's ability to generate sufficient suction through transpiration",
+        "The point where soil is completely saturated with water",
+        "Field capacity, where gravity has drained excess water",
+        "The point where all pore spaces in soil are filled with air"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The permanent wilting point is a fundamental concept in soil-plant water relations: (1) Soil water retention — soil holds water through two forces: (a) Matric forces — adhesion of water to soil particle surfaces and capillary forces in soil pores. As soil dries, water retreats into progressively smaller pores and thinner films, where it is held increasingly tightly. (b) Osmotic forces — dissolved solutes in soil solution (usually minor compared to matric forces in non-saline soils). (2) Soil water potential curve — as volumetric water content decreases, soil water potential (Ψsoil) becomes increasingly negative: Saturated: Ψsoil ≈ 0 MPa (all pores filled). Field capacity: Ψsoil ≈ -0.01 to -0.03 MPa (gravity-drained, large pores air-filled). Permanent wilting point: Ψsoil ≈ -1.5 MPa. Air-dry: Ψsoil ≈ -100 MPa. (3) Permanent wilting point — at -1.5 MPa, most crop plants and mesophytes can no longer generate sufficient transpirational pull to extract water. The plant wilts and cannot recover even if placed in a humid environment (turgor cannot be restored from soil water alone). The conventional value of -1.5 MPa was established by Briggs and Shantz (1912) using sunflower as a test plant. (4) Available water — the water available to plants is the difference between field capacity and permanent wilting point: Available water = θFC - θPWP. This represents the usable water reservoir in soil. Sandy soils have low available water (large pores drain quickly); clay soils have more available water but hold it more tightly. (5) Species variation — -1.5 MPa is a conventional value. Xerophytes can extract water at much more negative potentials (-3 to -8 MPa). Mesophytes typically wilt between -1 and -2 MPa. Saturated soil (B) is far from wilting point, field capacity (C) is a different reference point, and completely air-filled pores (D) describe oven-dry soil.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nitrogen is absorbed by plant roots primarily as NO3- or NH4+. The initial transport of NO3- across the root epidermal plasma membrane is mediated by:",
+      "options": [
+        "Simple diffusion through the lipid bilayer without any transporter",
+        "NRT (Nitrate Transporter) proteins — both high-affinity (NRT2.1, active at low external NO3- concentrations <0.5 mM, operating as H+/NO3- symporters requiring the NAR2/NRT3 accessory protein) and low-affinity (NRT1.1/NPF6.3, active at high external NO3- concentrations >0.5 mM) transport systems cooperate to ensure efficient NO3- uptake across the range of soil concentrations encountered in nature",
+        "Passive anion channels that are constitutively open in all conditions",
+        "ABC transporters that directly hydrolyze ATP to import NO3-"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Nitrate uptake involves a sophisticated dual-transport system: (1) Dual-affinity system — plants have two kinetically distinct NO3- uptake systems: (a) HATS (High-Affinity Transport System): operates at low external NO3- (<0.5 mM). The primary transporter is NRT2.1, which requires the accessory protein NAR2.1 (also called NRT3.1) for function. NRT2.1 is a H+/NO3- symporter energized by the proton motive force. HATS is inducible — NRT2.1 expression is upregulated by NO3- and downregulated by high internal nitrogen (feedback regulation). (b) LATS (Low-Affinity Transport System): operates at high external NO3- (>0.5 mM). The primary transporter is NRT1.1 (also called CHL1 or NPF6.3). NRT1.1 is remarkable because it functions as a 'transceptor' — both a transporter and a receptor/sensor for NO3-. When phosphorylated by CIPK23 kinase at Thr101, NRT1.1 switches from low affinity to high affinity. (2) H+/NO3- symport — both HATS and LATS are secondary active transporters that couple NO3- import to H+ import (symport), using the proton motive force generated by plasma membrane H+-ATPases. The stoichiometry is 2H+:1NO3- for NRT2.1. This is necessary because NO3- is an anion that must be moved against the electrochemical gradient (the inside of the cell is negative, repelling anions). (3) Regulation — NO3- uptake is regulated at multiple levels: transcriptional (NRT2.1 is induced by NO3- via NLP/NIN-like protein transcription factors), post-translational (NRT1.1 phosphorylation), and systemic (glutamine levels signal whole-plant N status). (4) NRT1.1 as sensor — NRT1.1 triggers nitrate signaling even at very low transport rates, activating genes for nitrate metabolism. This sensing function is independent of its transport activity. NO3- cannot diffuse through membranes (A — it is a hydrophilic anion), passive channels (C) would not achieve accumulation against the gradient, and ABC transporters (D) are not the primary NO3- importers.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To test whether xylem vessels are under negative pressure (tension) in a living, transpiring plant, a researcher can use a xylem pressure probe. If vessels are under tension, what should be observed when the microcapillary is successfully inserted into a functioning vessel?",
+      "options": [
+        "Sap should be pushed out of the vessel and flood the surrounding tissue",
+        "The meniscus in the microcapillary should be pulled inward (toward the vessel) as the negative pressure in the xylem pulls water from the probe — when the researcher applies compensating positive pressure through the probe to stabilize the meniscus, the required pressure indicates the magnitude of the xylem tension",
+        "No change in the meniscus should be observed because xylem sap is at atmospheric pressure",
+        "The microcapillary should immediately shatter due to the extreme pressure"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The xylem pressure probe provides the most direct measurement of in vivo xylem pressure: (1) Principle — a glass microcapillary (tip diameter ~5-10 micrometers) filled with silicone oil and connected to a pressure transducer is inserted into a xylem vessel under microscopic guidance. The oil-water meniscus at the tip serves as the interface between the probe fluid and the xylem sap. (2) Observation under tension — if the xylem is under negative pressure (tension), the meniscus is pulled into the capillary (toward the vessel) because the tension in the xylem creates a lower pressure than the oil in the probe. The researcher must apply positive pressure (through a feedback system) to push the meniscus back to its original position. The positive pressure required to stabilize the meniscus equals the magnitude of the negative pressure in the xylem. (3) Zimmermann's measurements — Ulrich Zimmermann and colleagues developed this technique in the 1990s. Measurements typically show: (a) Xylem tensions of -0.1 to -0.6 MPa in well-watered plants under moderate transpiration. (b) More negative values under drought stress. (c) Diurnal variation with most negative values at midday (peak transpiration). (4) Technical challenges — the probe technique is extremely difficult: (a) Capillary tips must be fine enough to penetrate vessel walls without creating leaks. (b) The oil-water interface must be stable and cleanly defined. (c) Cavitation artifacts can occur if the meniscus retreats too far. (d) Only accessible vessels near the surface can be measured. (5) Controversy — some early xylem pressure probe measurements gave less negative values than expected from pressure bomb measurements, sparking debate about the magnitude of xylem tension. Most researchers now agree that both techniques are valid but measure slightly different things. Sap flooding (A) would occur under positive pressure. No change (C) would occur only if xylem were at atmospheric pressure. Probe shattering (D) does not occur at physiological pressures.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ectomycorrhizae, common in temperate forest trees like pines, oaks, and birches, differ from arbuscular mycorrhizae (AM) in several key features. Which of the following is characteristic of ectomycorrhizae but NOT arbuscular mycorrhizae?",
+      "options": [
+        "A thick fungal sheath (mantle) surrounding the root tip and a Hartig net of hyphae penetrating between (but not into) root cortical cells — the mantle replaces root hairs as the absorptive surface, while the Hartig net provides the interface for nutrient exchange between fungus and plant without breaching cell membranes",
+        "Penetration of hyphae into cortical cells to form arbuscules",
+        "Involvement of Glomeromycota fungi as the fungal partner",
+        "Association with over 80% of all plant species globally"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Ectomycorrhizae (ECM) and arbuscular mycorrhizae (AM) represent the two major mycorrhizal types with distinct structures: (1) Ectomycorrhizal structure — ECM have two defining anatomical features: (a) Mantle (sheath) — a dense layer of fungal hyphae that completely envelops the short lateral root tips, forming a visible sheath 20-100+ micrometers thick. The mantle replaces root hairs as the primary absorptive surface. External hyphae radiate from the mantle into the surrounding soil. (b) Hartig net — hyphae penetrate between the epidermal and cortical cells of the root, growing in the intercellular spaces (apoplast) without entering cells. This creates a network of hyphae surrounding each root cell (like a net around the cells). The Hartig net provides the interface for bidirectional nutrient exchange: nutrients from fungus to plant, carbon from plant to fungus. (2) Key difference from AM — ECM hyphae do NOT penetrate INTO cells (they remain intercellular). AM hyphae penetrate INTO cortical cells to form intracellular arbuscules (B describes AM, not ECM). (3) Fungal partners — ECM fungi are primarily Basidiomycota (Amanita, Boletus, Cortinarius, Laccaria, Lactarius, Russula, Suillus, Pisolithus) and some Ascomycota (Tuber/truffles, Cenococcum). NOT Glomeromycota (C describes AM fungi). (4) Host range — ECM associate with ~5-10% of plant species, but these include ecologically dominant temperate and boreal forest trees (Pinaceae, Fagaceae, Betulaceae, Dipterocarpaceae). AM (D) associate with ~80% of species. (5) Nutritional benefits — ECM fungi are particularly effective at: organic nitrogen mobilization (producing proteases and chitinases to access N from decomposing organic matter), phosphorus mobilization (producing phosphatases and organic acids), and weathering of rock minerals (producing oxalic acid).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The boundary layer is a thin layer of still air adjacent to the leaf surface that affects the rate of gas exchange. Which of the following correctly describes how the boundary layer influences transpiration?",
+      "options": [
+        "The boundary layer has no effect on transpiration because gas exchange occurs only through stomata",
+        "A thicker boundary layer increases transpiration by trapping heat against the leaf",
+        "A thicker boundary layer reduces the transpiration rate by increasing the resistance to water vapor diffusion from the leaf surface to the bulk atmosphere — the boundary layer acts as an additional diffusion barrier beyond the stomatal resistance; its thickness is reduced by wind, smaller leaf size, and leaf dissection (lobed or compound leaves), which is why these features promote transpirational cooling",
+        "The boundary layer only affects CO2 uptake, not water loss"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The boundary layer is a critical concept in leaf gas exchange: (1) Boundary layer defined — a thin layer of relatively still, humid air immediately adjacent to the leaf surface. Within this layer, gas transport occurs primarily by molecular diffusion (slow) rather than by turbulent mixing (fast). The boundary layer adds diffusion resistance to both water vapor leaving the leaf and CO2 entering the leaf. (2) Total diffusion resistance — for transpiration, the total resistance to water vapor diffusion from mesophyll cell walls to the bulk atmosphere is: rtotal = rstomatal + rboundary layer. Both resistances are in series. Even with fully open stomata, a thick boundary layer limits transpiration. (3) Factors affecting thickness — (a) Wind speed: higher wind speeds reduce boundary layer thickness by increasing turbulent mixing at the leaf surface. Transpiration rates are typically 2-5x higher in windy vs. still air conditions. (b) Leaf size: larger leaves have thicker boundary layers because the air has more distance to travel across the leaf surface without encountering the edge (where turbulence is greater). This is why many desert and hot-environment plants have small, narrow, or dissected leaves — to reduce boundary layer thickness and enhance transpirational cooling. (c) Leaf shape: lobed, compound, and serrated leaves disrupt the boundary layer more than smooth, entire leaves. (d) Trichomes: dense pubescence can increase effective boundary layer thickness, reducing transpiration (adaptive in dry environments). (4) Energy balance — in hot environments, transpirational cooling is essential to prevent leaf overheating. A thick boundary layer reduces both heat and water vapor exchange, potentially causing leaf temperatures to rise dangerously above air temperature. Thin boundary layers (from small size or wind) enhance evaporative cooling. (5) The boundary layer affects both CO2 and H2O exchange (not just CO2 — D is wrong), and it does not increase transpiration through heat trapping (B gets the direction wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sulfur is absorbed by plant roots primarily as sulfate (SO42-). The first step of sulfate assimilation involves activation of sulfate in the chloroplast by the enzyme ATP sulfurylase, which produces:",
+      "options": [
+        "Free sulfur atoms for direct incorporation into proteins",
+        "Adenosine 5'-phosphosulfate (APS) — ATP sulfurylase catalyzes SO42- + ATP → APS + PPi; APS is then either reduced to sulfite by APS reductase (using glutathione as reductant) in the reductive assimilation pathway, or phosphorylated by APS kinase to form PAPS (3'-phosphoadenosine 5'-phosphosulfate) for sulfonation reactions",
+        "Hydrogen sulfide gas that is released into the atmosphere",
+        "Iron-sulfur clusters assembled directly from sulfate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sulfur assimilation is primarily a chloroplast-localized pathway: (1) Sulfate uptake and transport — SO42- is absorbed from soil by root sulfate transporters (SULTR family, H+/SO42- symporters) and transported to leaves via the xylem. In leaves, sulfate enters chloroplasts via chloroplast envelope sulfate transporters. (2) ATP sulfurylase — the first committed step: SO42- + ATP → adenosine 5'-phosphosulfate (APS) + pyrophosphate (PPi). This 'activation' step is necessary because sulfate is chemically very stable and must be activated before reduction. ATP sulfurylase overcomes the unfavorable thermodynamics by coupling to pyrophosphate hydrolysis by pyrophosphatase (PPi → 2Pi), making the overall reaction irreversible. (3) Reductive pathway (primary) — APS reductase reduces APS to sulfite (SO32-) using glutathione (GSH) as the electron donor: APS + 2 GSH → SO32- + AMP + GSSG. Sulfite reductase then reduces SO32- to sulfide (S2-) using ferredoxin as electron donor: SO32- + 6 Fdred → S2- + 6 Fdox. Sulfide is immediately incorporated into O-acetylserine by O-acetylserine (thiol) lyase (OAS-TL) to form cysteine: S2- + O-acetylserine → cysteine + acetate. (4) PAPS pathway (secondary) — APS kinase phosphorylates APS to PAPS, which is used for sulfonation reactions (adding sulfate groups to various molecules). This pathway is quantitatively minor compared to the reductive pathway. (5) Cysteine as precursor — cysteine is the entry point for all organic sulfur compounds: methionine (via cystathionine and homocysteine), glutathione (GSH), Fe-S clusters, sulfolipids, glucosinolates (in Brassicaceae), and many secondary metabolites. Free sulfur (A) is not produced, H2S (C) is not released in significant amounts, and Fe-S clusters (D) are assembled from cysteine, not directly from sulfate.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MTF",
+      "question": "Match each nutrient deficiency symptom with the deficient element:\n(P) Interveinal chlorosis of young leaves while veins remain green\n(Q) Purple coloration of leaves, especially older leaves\n(R) Necrosis of leaf margins beginning with older leaves\n(S) Stunted growth with pale, uniformly chlorotic leaves\n\n1. Potassium (K) — mobile nutrient; retranslocated from old leaves causing marginal necrosis\n2. Iron (Fe) — immobile in phloem; deficiency appears first in youngest leaves as interveinal chlorosis\n3. Nitrogen (N) — highly mobile; general chlorosis starts in older leaves due to N remobilization\n4. Phosphorus (P) — mobile; anthocyanin accumulation causes purple color, especially in older leaves",
+      "options": [
+        "P-2, Q-4, R-1, S-3",
+        "P-3, Q-1, R-4, S-2",
+        "P-4, Q-2, R-3, S-1",
+        "P-1, Q-3, R-2, S-4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Nutrient deficiency diagnosis depends on understanding nutrient mobility in the phloem: (1) Iron deficiency (P-2) — iron is phloem-immobile (cannot be redistributed from old to young leaves). Deficiency symptoms appear FIRST in the YOUNGEST leaves. The characteristic symptom is interveinal chlorosis: leaf tissue between veins turns yellow (chlorophyll synthesis impaired) while veins remain green (veins retain Fe from the xylem longer). Fe is required for chlorophyll synthesis (not as a component of chlorophyll itself, but as a cofactor for enzymes in the biosynthetic pathway) and for Fe-S clusters in the photosynthetic electron transport chain. (2) Phosphorus deficiency (Q-4) — P is phloem-mobile and remobilized from old leaves. Deficiency causes accumulation of anthocyanins (purple/red pigments) due to excess sugars (photosynthesis continues but sugar export is impaired without ATP) and upregulation of the anthocyanin biosynthetic pathway. Purple coloration is especially visible in older leaves, stems, and petioles. (3) Potassium deficiency (R-1) — K+ is highly phloem-mobile. Deficiency symptoms appear in OLDER leaves first as K+ is remobilized to young, growing tissues. Characteristic symptom: marginal necrosis (death of leaf edges), often progressing inward. This is because K+ is involved in stomatal regulation and osmotic balance at leaf margins, and deficiency causes oxidative stress. (4) Nitrogen deficiency (S-3) — N is the MOST mobile nutrient. Under deficiency, N is rapidly remobilized from old leaves (protein degradation → amino acids → phloem transport) to young leaves. Older leaves become uniformly pale yellow (general chlorosis) and may senesce prematurely. Whole-plant growth is stunted because N is needed for amino acids, nucleic acids, chlorophyll, and essentially all growth.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Stomata respond to the concentration of CO2 inside the leaf (Ci). When Ci increases, stomata tend to:",
+      "options": [
+        "Open wider to allow even more CO2 to enter",
+        "Close partially — elevated Ci activates anion channels in guard cells (particularly SLAC1), causing Cl- and malate efflux, membrane depolarization, K+ efflux through GORK channels, and consequent water loss and turgor decrease; this CO2 response helps plants reduce unnecessary water loss when CO2 is abundant, and may contribute to reduced stomatal conductance under rising atmospheric CO2 levels",
+        "Remain completely unchanged because CO2 has no effect on guard cells",
+        "Produce more chlorophyll in the guard cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Stomatal response to CO2 is increasingly important in the context of rising atmospheric CO2: (1) The CO2 response — when intercellular CO2 (Ci) rises above ambient levels, stomata partially close. Conversely, when Ci drops (e.g., during active photosynthesis under high light), stomata open. This response optimizes the balance between CO2 uptake for photosynthesis and water loss through transpiration. (2) Sensing mechanism — CO2 sensing in guard cells involves: (a) Carbonic anhydrase (CA1 and CA4 in Arabidopsis) converts CO2 to HCO3- in the guard cell cytoplasm. (b) HCO3- activates SLAC1 anion channels, possibly through intermediary kinases (OST1/SnRK2.6 may be involved, linking CO2 and ABA responses). (c) Activated SLAC1 conducts Cl- and malate efflux, depolarizing the membrane. (d) Depolarization activates GORK outward K+ channels. (e) Net solute loss → water efflux → turgor loss → closure. (3) Physiological logic — if CO2 is plentiful, stomata do not need to be wide open; partial closure conserves water without limiting photosynthesis. If CO2 is scarce, wider opening allows more CO2 entry to support photosynthetic demand. (4) Global change implications — rising atmospheric CO2 (currently ~420 ppm, projected to reach 550-700 ppm by 2100) is expected to reduce stomatal conductance in many plant species. This has been observed in both short-term (hours) and long-term (decades) studies. Reduced stomatal conductance under elevated CO2 may: (a) improve water-use efficiency, (b) reduce ecosystem transpiration (potentially affecting regional hydrology), (c) reduce evaporative cooling of leaves (potentially increasing leaf temperature). (5) Stomatal opening in response to CO2 (A) is backwards, no response (C) is incorrect, and chlorophyll production (D) is unrelated.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Copper (Cu) is an essential micronutrient required by several important plant enzymes. Which of the following enzymes requires copper as a cofactor?",
+      "options": [
+        "Rubisco (ribulose-1,5-bisphosphate carboxylase/oxygenase)",
+        "Plastocyanin — a small (10.5 kDa) blue copper protein that functions as a mobile electron carrier in the thylakoid lumen of chloroplasts, shuttling electrons from the cytochrome b6f complex to Photosystem I (P700+); Cu deficiency directly impairs photosynthetic electron transport by reducing plastocyanin availability",
+        "Glutamine synthetase, the primary ammonia assimilation enzyme",
+        "Nitrate reductase, which converts NO3- to NO2-"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Copper functions as a redox-active cofactor in several critical plant enzymes: (1) Plastocyanin (PC) — the most abundant copper protein in plants and the best-known Cu function in photosynthesis: (a) Location: thylakoid lumen of chloroplasts. (b) Function: soluble electron carrier that accepts electrons from the Rieske Fe-S protein/cytochrome f of the cytochrome b6f complex and donates them to the oxidized reaction center chlorophyll of PSI (P700+). PC alternates between Cu2+ (oxidized) and Cu+ (reduced). (c) Deficiency effect: without sufficient Cu for PC assembly, electron flow between PSII and PSI is impaired, reducing photosynthetic rate. Under severe Cu deficiency, a non-copper alternative electron carrier (cytochrome c6) may partially compensate in some species. (2) Other Cu enzymes in plants — (a) Cu/Zn superoxide dismutase (SOD) — detoxifies superoxide radicals. Both chloroplastic and cytoplasmic forms. (b) Polyphenol oxidase (PPO) — oxidizes phenolic compounds (responsible for browning in cut fruits/vegetables). (c) Laccase — involved in lignin polymerization. (d) Ascorbate oxidase — in the cell wall, oxidizes ascorbic acid. (e) Cytochrome c oxidase (Complex IV) — terminal electron acceptor in mitochondrial ETC. Contains CuA and CuB centers. (f) Amine oxidases — involved in polyamine catabolism. (3) Rubisco (A) does not require Cu (it requires Mg2+ for activation). Glutamine synthetase (C) requires Mn2+ and Mg2+, not Cu. Nitrate reductase (D) requires Mo and heme Fe, not Cu.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The SOS (Salt Overly Sensitive) pathway is the primary mechanism for Na+ exclusion from plant cells. The pathway involves:",
+      "options": [
+        "Direct absorption and storage of Na+ in the chloroplast stroma",
+        "SOS3 (a calcium sensor/CBL protein) detecting elevated cytoplasmic Ca2+ triggered by salt stress, activating SOS2 (a CIPK kinase), which phosphorylates and activates SOS1 (a plasma membrane Na+/H+ antiporter) — SOS1 uses the proton gradient to pump Na+ out of the cell back into the apoplast or soil, preventing toxic Na+ accumulation in the cytoplasm",
+        "Conversion of Na+ to K+ by transmutation enzymes",
+        "Blocking all ion channels permanently to prevent Na+ entry"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The SOS pathway is a cornerstone of plant salt tolerance: (1) Salt stress signal — when NaCl accumulates in the root zone, Na+ enters root cells through non-selective cation channels (NSCCs) and possibly HKT-type transporters. Elevated cytoplasmic Na+ triggers a rise in cytoplasmic Ca2+ (calcium signature) through activation of Ca2+ channels. (2) SOS3 (CBL4) — SOS3 is a calcineurin B-like (CBL) calcium sensor protein. It binds Ca2+ through EF-hand motifs. Ca2+ binding activates SOS3, enabling it to interact with and activate SOS2. (3) SOS2 (CIPK24) — SOS2 is a serine/threonine protein kinase of the CBL-interacting protein kinase (CIPK) family. When complexed with Ca2+-bound SOS3, SOS2 is activated. The SOS3-SOS2 complex translocates to the plasma membrane. (4) SOS1 (NHX7) — SOS1 is a plasma membrane Na+/H+ antiporter. In its unphosphorylated state, SOS1 is relatively inactive (autoinhibited by its C-terminal domain). Phosphorylation of SOS1 by the SOS2 kinase relieves autoinhibition and dramatically increases its Na+/H+ antiport activity. Activated SOS1 uses the H+ gradient (from H+-ATPases) to pump Na+ out of the cell into the apoplast. (5) Genetic evidence — loss-of-function mutants in any of the three SOS genes (sos1, sos2, sos3) show hypersensitivity to NaCl stress, demonstrating the essential role of this pathway. SOS1 overexpression improves salt tolerance in transgenic plants. The pathway has been used as a target for engineering salt-tolerant crops. Na+ cannot be stored in chloroplasts (A — it would disrupt photosynthesis), transmutation is impossible (C), and blocking all channels (D) would prevent essential K+ uptake.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Chloride (Cl-) is classified as an essential micronutrient, even though many plants accumulate it at macronutrient levels. Its confirmed essential function is as a cofactor for:",
+      "options": [
+        "The oxygen-evolving complex (OEC) of Photosystem II — Cl- is required for the proper function of the Mn4CaO5 water-splitting complex; it stabilizes the catalytic cluster and facilitates proton removal during the S-state cycle of water oxidation; Cl- deficiency impairs PSII activity and reduces the rate of photosynthetic oxygen evolution",
+        "Nitrogenase in nitrogen-fixing root nodules",
+        "Rubisco carboxylase activity in the Calvin cycle",
+        "DNA replication in the nucleus"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Chloride has a confirmed essential role in photosynthetic water splitting: (1) Essential role in PSII — the primary confirmed essential function of Cl- is as a cofactor in the oxygen-evolving complex (OEC) of Photosystem II. Cl- ions (along with Ca2+) are structurally and functionally associated with the Mn4CaO5 cluster. (2) Mechanism — Cl- facilitates the water-splitting reaction by: (a) Stabilizing the Mn cluster in its various oxidation states during the S-state (Kok) cycle. (b) Acting as a proton relay — Cl- helps remove H+ from the water-splitting site, facilitating the oxidation of water. Proton channels near the OEC contain Cl- binding sites. (c) Crystal structures of PSII show two Cl- ions in close proximity to the Mn4CaO5 cluster. (3) Deficiency symptoms — Cl- deficiency is rare in nature because Cl- is abundant in most environments (rain, soil). In controlled experiments with purified water, Cl- deficiency causes: (a) reduced photosynthetic O2 evolution (direct OEC impairment), (b) wilting (Cl- is also a major osmoticum in guard cells and vacuoles), (c) reduced leaf area. (4) Classification paradox — Cl- is classified as a micronutrient based on the small amount needed for its essential function (the OEC requires only ~100 Cl- ions per PSII complex). However, many plants accumulate Cl- at macronutrient levels (0.5-3% dry weight) because it serves as a major inorganic osmoticum in vacuoles (for turgor regulation, stomatal movement, and osmotic adjustment). (5) Guard cell osmoticum — Cl- is second only to K+ as an osmotic driver of stomatal opening, entering guard cells through anion channels (activated by hyperpolarization) and leaving through SLAC1/SLAH3 during ABA-induced closure. Nitrogenase (B) requires Fe, Mo, and S. Rubisco (C) requires Mg2+ and CO2. DNA replication (D) does not specifically require Cl-.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher compares two Arabidopsis lines: wild-type and a transgenic line overexpressing the vacuolar H+-pyrophosphatase (AVP1). The AVP1-overexpressing plants show larger root systems, higher drought tolerance, and increased salt tolerance compared to wild type. The most likely explanation is:",
+      "options": [
+        "AVP1 overexpression increases photosynthetic rate in leaves directly",
+        "Enhanced vacuolar H+-pumping by AVP1 increases the vacuolar proton gradient, which energizes vacuolar Na+/H+ antiporters (NHX1) for better Na+ sequestration and improves auxin-dependent root development — the increased root system enhances water and nutrient acquisition under stress, while vacuolar Na+ compartmentalization protects cytoplasmic enzymes from salt toxicity",
+        "AVP1 degrades proline, reducing compatible solute accumulation",
+        "The transgene silences all endogenous H+-ATPases"
+      ],
+      "correctAnswer": "B",
+      "explanation": "AVP1 overexpression is one of the most successful single-gene approaches for improving abiotic stress tolerance: (1) AVP1 function — AVP1 (Arabidopsis Vacuolar H+-Pyrophosphatase 1) is a tonoplast-localized proton pump that uses pyrophosphate (PPi) hydrolysis energy to pump H+ into the vacuole, acidifying the vacuolar lumen and contributing to the vacuolar proton motive force (alongside the vacuolar H+-ATPase). (2) Enhanced vacuolar H+ gradient — overexpression of AVP1 increases the ΔpH across the tonoplast. This enhanced proton gradient energizes: (a) NHX1 (Na+/H+ antiporter): uses the H+ gradient to pump Na+ from the cytoplasm into the vacuole, where it is safely sequestered. Enhanced NHX1 activity explains the improved salt tolerance. (b) Other tonoplast secondary transporters for malate, sugars, and other metabolites, improving vacuolar storage capacity. (3) Root development — AVP1 overexpression promotes larger root systems through effects on auxin transport. AVP1 activity maintains higher vacuolar pH gradients that influence auxin distribution and signaling. Larger root systems provide better soil exploration for water and nutrients, explaining improved drought tolerance. (4) Dual benefit — the combination of (a) enhanced root system for water acquisition and (b) enhanced vacuolar Na+ sequestration for ion toxicity avoidance makes AVP1 overexpression remarkably effective for both drought and salt tolerance. This has been demonstrated in Arabidopsis, tomato, cotton, rice, and other crops. (5) AVP1 does not directly enhance photosynthesis (A), does not degrade proline (C — proline is beneficial for stress tolerance), and does not silence H+-ATPases (D — it complements them).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The matric potential (Ψm) is an important component of water potential in soils and cell walls. It is caused by:",
+      "options": [
+        "Dissolved solutes reducing the free energy of water (this describes osmotic/solute potential)",
+        "Positive turgor pressure from cell walls pushing against the protoplast",
+        "The adhesion of water to surfaces and capillary effects in small pores — in soils, matric forces hold water in thin films around soil particles and in micropores between particles through hydrogen bonding and surface tension; in cell walls, water is held by adhesion to cellulose microfibrils and other hydrophilic matrix polymers; matric potential is always negative and becomes more negative as water content decreases",
+        "Gravity acting on the water column in tall trees"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Matric potential is a key component of water potential in soils and plant cell walls: (1) Definition — matric potential (Ψm) is the reduction in free energy of water caused by its interaction with solid surfaces (adhesion) and its retention in small spaces by capillary forces. Ψm is always negative (it reduces water's free energy). (2) In soils — soil water is held by: (a) Adhesion: water molecules form hydrogen bonds with hydrophilic surfaces of clay minerals, organic matter, and sand particles. (b) Capillarity: surface tension causes water to be drawn into and retained in small pores between soil particles. The smaller the pore, the stronger the capillary force (and the more negative the matric potential). (c) As soil dries: water retreats from larger pores into progressively smaller pores and thinner films, and Ψm becomes increasingly negative. Very dry soil can have Ψm below -100 MPa. (3) In cell walls — plant cell walls are a hydrophilic matrix of cellulose, hemicellulose, pectin, and glycoproteins. Water is held in the wall by adhesion to these polymers and by capillary forces in the nanoscale spaces between microfibrils. At the leaf cell wall-air interface (where evaporation occurs), the air-water menisci retreat into the fine pores of the wall as transpiration removes water, creating the very negative water potentials that drive the transpiration stream. (4) Relationship to other components — in cell physiology, matric potential is often incorporated into the solute potential (Ψs) term or ignored (because intracellular matric effects are relatively small compared to osmotic and pressure effects). But in soils and cell walls, Ψm is the dominant component. (5) Dissolved solutes (A) describe Ψs, turgor (B) describes Ψp, and gravity (D) describes Ψg.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The relative water content (RWC) of a leaf is measured as 65%. This value indicates that the leaf has lost a significant fraction of its maximum water content. What physiological processes are likely impaired at this RWC?",
+      "options": [
+        "No processes are affected; 65% is considered fully hydrated",
+        "Only root growth is affected; shoot functions remain normal",
+        "Only reproductive processes are impaired; vegetative growth continues normally",
+        "Stomata are likely closed, photosynthesis is significantly reduced, and cell expansion has ceased — at RWC of 65%, turgor pressure is near zero in most cells, stomata have closed (typically closing begins at ~90-95% RWC), photosynthetic rate is reduced by 50-90%, and membrane integrity may begin to be compromised; severe drought damage including protein denaturation and oxidative stress is imminent"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Relative water content provides a direct measure of leaf hydration status: (1) RWC definition — RWC = (Fresh weight - Dry weight) / (Turgid weight - Dry weight) × 100%. Turgid weight is measured after floating leaf discs on water to full turgor. RWC of 100% = fully turgid; RWC of ~10-15% = air-dry. (2) Progressive effects of decreasing RWC — (a) 95-100% RWC: fully turgid, all processes normal. (b) 90-95% RWC: cell expansion begins to slow (turgor-driven growth is highly sensitive to water deficit); stomata begin to close. (c) 80-90% RWC: stomata are substantially closed, reducing both transpiration and CO2 uptake; photosynthesis is moderately reduced; ABA accumulates. (d) 65-80% RWC: stomata are fully closed, photosynthesis is severely limited, cellular turgor is near zero, leaf wilting is visible, some protein denaturation begins. (e) 40-65% RWC: severe desiccation stress, membrane damage begins (lipid phase transitions), extensive protein denaturation, ROS accumulation, cell death may initiate in some cells. (f) Below 40% RWC: most mesophytic plants cannot survive; only desiccation-tolerant species (resurrection plants like Craterostigma, Myrothamnus) can recover from such extreme dehydration. (3) Stomatal sensitivity — stomatal closure is one of the first responses to declining RWC, typically beginning at 90-95% RWC. This is mediated by ABA signaling and hydraulic signals. (4) Photosynthetic sensitivity — at 65% RWC: stomatal closure limits CO2 supply (stomatal limitation); metabolic impairment reduces rubisco activity and PSII efficiency (non-stomatal limitation); photoprotection mechanisms (NPQ) are activated. (5) 65% is a critically low RWC for most crops and mesophytes, making options A, B, and C incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nickel (Ni) was the most recently confirmed essential mineral nutrient for plants (1987). Its known essential role is as a cofactor for:",
+      "options": [
+        "Rubisco, the primary carbon fixation enzyme",
+        "Cytochrome oxidase in the mitochondrial electron transport chain",
+        "Chlorophyll biosynthesis enzymes",
+        "Urease — the enzyme that hydrolyzes urea (CO(NH2)2) to NH3 + CO2; without Ni, urease is inactive, and toxic urea accumulates in leaf tips causing necrotic lesions; Ni is required in extremely small amounts (0.05-0.1 ppm tissue concentration) and is the element required in the smallest amount of all essential mineral nutrients"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Nickel's essentiality was established by Brown et al. (1987) in barley: (1) Urease function — urease catalyzes: urea + H2O → 2NH3 + CO2. Urease contains two Ni2+ ions per active subunit. Without Ni, urease has zero activity. (2) Why urease matters — urea is produced in plants from several sources: (a) Arginine catabolism (arginase produces ornithine + urea). (b) Purine degradation (allantoin pathway in tropical legumes). (c) External urea fertilizer application. If urease is non-functional, urea accumulates to toxic levels, particularly in leaf tips where xylem delivers urea-containing sap and water evaporates concentrating solutes. (3) Deficiency symptoms — Ni deficiency causes: (a) Necrosis of leaf tips (urea toxicity). (b) Reduced urease activity. (c) Urea accumulation detectable by chemical analysis. (d) In soybean: disrupted nitrogen cycling in nodulated plants because ureide-N cycling requires functional urease. (4) Essentiality criteria — Brown et al. demonstrated that barley plants could not complete their life cycle (produce viable seeds) without Ni, fulfilling the Arnon-Stout criteria for essentiality. Ni is required at the lowest concentration of any essential element (~0.05-0.1 ppm in tissue), making it technically a 'ultra-micronutrient.' (5) Other possible Ni functions — Ni may play roles in disease resistance (nickel-containing superoxide dismutase has been found in some organisms) and in seed viability, but urease cofactor is the only confirmed essential function. Rubisco (A) requires Mg2+, cytochrome oxidase (B) requires Cu and Fe, and chlorophyll synthesis (C) requires Fe and Mg.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "In xylem, pit membranes between adjacent conduits serve as safety valves against embolism spread. In conifer tracheids, the pit membrane has a specialized structure called the torus-margo arrangement. How does this structure function during cavitation?",
+      "options": [
+        "The torus dissolves to create an open perforation for unrestricted water flow",
+        "The margo (porous margin) stretches to seal the pit aperture on both sides",
+        "The entire pit membrane degrades and is replaced by new wall material",
+        "When one tracheid cavitates, the pressure difference displaces the flexible margo, pressing the central torus against the pit aperture on the embolized side — the torus (a thickened, impermeable disk) seals the aperture like a valve, preventing air from entering the adjacent functional tracheid while still allowing the pit to function normally when both sides are water-filled"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The torus-margo pit membrane is one of nature's most elegant safety valve designs: (1) Structure — conifer bordered pits have a specialized pit membrane consisting of two regions: (a) Torus — a central, thickened, impermeable disk composed of heavily lignified and/or suberized material. The torus is larger in diameter than the pit aperture (the opening in the overarching secondary wall). (b) Margo — the peripheral region surrounding the torus, consisting of a network of cellulose microfibrils with large pores (100-500 nm) between them. The margo is flexible and permeable. (2) Normal function — when both adjacent tracheids are water-filled and under similar tension, the torus floats in the center of the pit chamber. Water flows through the margo pores around the torus, passing from one tracheid to the next. The large margo pores offer relatively low resistance to water flow, making conifer pits quite efficient despite lacking vessel perforations. (3) Pit aspiration — when one tracheid cavitates (fills with air): (a) The pressure difference across the pit membrane (atmospheric pressure in the embolized tracheid vs. tension in the functional tracheid) creates a net force pushing the membrane toward the functional side. (b) The flexible margo stretches, displacing the torus against the pit border on the functional side. (c) The impermeable torus seals the pit aperture, blocking air entry into the functional tracheid. (d) The pit is now 'aspirated' — permanently sealed in that configuration. (4) Effectiveness — torus-margo pits are actually more effective safety valves than angiosperm pit membranes. Conifers can sustain greater xylem tensions before vulnerability to air-seeding compared to many angiosperms, which is why conifers dominate cold and drought-prone environments where freeze-thaw embolism risk is high. (5) The torus does not dissolve (A), the margo does not seal both sides (B — it allows the torus to seal one side), and the membrane is not replaced (C — aspiration is permanent or semi-permanent).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Transpiration serves several important functions beyond simply being an unavoidable consequence of open stomata. Which of the following is a documented benefit of transpiration for the plant?",
+      "options": [
+        "Transpiration provides the primary energy source for photosynthesis",
+        "Transpiration synthesizes new water molecules for cellular use",
+        "Transpiration generates glucose through evaporative chemistry",
+        "Transpirational cooling — evaporation of water from leaf surfaces dissipates latent heat, lowering leaf temperature by 2-10 degrees Celsius below what it would be without transpiration; this cooling effect prevents heat damage to photosynthetic enzymes and membranes, especially in high-light, high-temperature environments; additionally, the transpiration stream delivers mineral nutrients from roots to shoots"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Transpiration, while costly in water, provides important benefits: (1) Evaporative cooling — each gram of water that evaporates absorbs approximately 2,450 joules of latent heat energy from the leaf surface. For a typical tree transpiring 200 liters per day, this represents an enormous cooling capacity. Leaf temperatures in the sun can be 2-10 degrees C lower with transpiration than without it. Without transpirational cooling, leaf temperatures in direct sunlight could reach 45-55 degrees C, which would denature rubisco (optimal temperature ~25-35 degrees C depending on species) and damage thylakoid membranes. (2) Mineral transport — the transpiration stream (bulk flow of xylem sap) is the primary delivery system for mineral nutrients from roots to shoots. Dissolved minerals (NO3-, H2PO4-, K+, Ca2+, Mg2+, SO42-, Fe, Mn, Zn, etc.) are carried upward in the xylem sap driven by transpirational pull. Without transpiration, mineral delivery to leaves would be severely reduced. (3) CO2 access — open stomata allow transpiration but also allow CO2 entry for photosynthesis. There is an unavoidable link: the pathway that admits CO2 also loses water. The ratio of water lost to CO2 gained (transpiration ratio) is typically 200-500:1 (200-500 g water lost per g CO2 fixed). (4) Water cycling — transpiration drives the soil-plant-atmosphere water cycle, contributing to local humidity and rainfall patterns. Forest transpiration is a major component of regional hydrological cycles. (5) Transpiration does NOT provide energy for photosynthesis (A — that comes from light), does not synthesize water (B), and does not generate glucose (C).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the Munch pressure-flow model, what determines the direction of phloem transport — specifically, what makes an organ a 'source' versus a 'sink'?",
+      "options": [
+        "Sources are always leaves and sinks are always roots, with no exceptions",
+        "The direction is fixed anatomically by one-way valves in sieve plates",
+        "Phloem always flows downward due to gravity",
+        "Source-sink status is determined by the net direction of sugar loading vs. unloading — any organ that exports more sugar than it imports is a source (mature leaves), and any organ that imports more than it exports is a sink (roots, developing fruits, young leaves, storage organs); source-sink relationships are dynamic and can change with development and season"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Source-sink dynamics are fundamental to understanding phloem transport: (1) Source definition — a source is any organ that has a net export of photoassimilates into the phloem. Sources load sugar into sieve tubes, creating the high turgor that drives phloem flow. The primary sources are: (a) Mature, fully expanded leaves — photosynthetically active, producing more sugar than they consume. (b) Storage organs releasing reserves — e.g., tubers in spring releasing stored starch (converted back to sucrose) to support new shoot growth. (2) Sink definition — a sink is any organ with a net import of photoassimilates from the phloem. Sinks unload sugar from sieve tubes. Types of sinks: (a) Growth sinks — meristems, developing leaves, expanding internodes, developing fruits and seeds (consume imported sugar for biosynthesis and respiration). (b) Storage sinks — roots, tubers, bulbs, seeds accumulating starch, lipids, or proteins. (c) Metabolic sinks — root tips (respiration for growth and mineral uptake). (3) Dynamic relationships — source-sink status can change: (a) A developing leaf is initially a sink (importing sugar for its own growth). Once it reaches ~30-50% full expansion, it transitions to a source (the 'sink-to-source transition'). (b) A storage organ is a sink during filling (summer: tuber accumulating starch) but becomes a source during mobilization (spring: tuber releasing starch as sucrose). (c) Roots are typically sinks but can export stored carbon in spring. (4) No fixed direction — phloem transport can occur upward (to shoot apical meristems, developing fruits above) or downward (to roots) simultaneously from the same source leaf, through different sieve tubes. There are no one-way valves. (5) Leaves are the most common source but not the ONLY source (A is wrong). Sieve plates do not have valves (B). Phloem can flow upward (C is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Freeze-thaw embolism is a major challenge for trees in temperate and boreal climates. When xylem sap freezes, dissolved gases come out of solution and form bubbles in the ice. Upon thawing, these bubbles can expand into embolisms if the surrounding xylem is under tension. Conifers are generally more resistant to freeze-thaw embolism than ring-porous angiosperms because:",
+      "options": [
+        "Conifers have wider xylem conduits that resist bubble expansion",
+        "Conifer xylem sap contains antifreeze proteins that prevent all ice formation",
+        "Conifer tracheids are much narrower than angiosperm vessels — smaller conduit diameter means smaller bubbles form during freezing, and smaller bubbles dissolve more readily back into solution upon thawing due to higher surface tension and internal gas pressure (Laplace pressure = 2T/r); in large-diameter angiosperm vessels, bubbles can be too large to dissolve and instead expand into embolisms",
+        "Conifers lose all their xylem each winter and grow entirely new conducting tissue in spring"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Freeze-thaw embolism vulnerability is directly related to conduit diameter: (1) The freezing problem — when xylem sap freezes, dissolved gases (mainly N2, O2, CO2) are excluded from the ice crystal lattice and concentrate in small gas bubbles trapped in the ice. These bubbles are harmless while the ice is solid. (2) The thawing problem — when ice melts and the xylem comes under tension (from transpiration or gravity), each gas bubble experiences a pressure tending to expand it. Whether the bubble dissolves or expands depends on the competition between: (a) Dissolution force — surface tension and Laplace pressure (ΔP = 2T/r, where T = surface tension, r = bubble radius) compress small bubbles, increasing internal gas pressure and promoting dissolution into the surrounding liquid. Smaller bubbles have higher internal pressure and dissolve more readily. (b) Expansion force — xylem tension (negative pressure in the liquid) tends to expand bubbles. If xylem tension exceeds the dissolution pressure, the bubble expands and creates an embolism. (3) Conduit diameter effect — in narrow conduits (conifer tracheids, typically 10-25 μm diameter), the bubbles that form during freezing are very small. Their high Laplace pressure makes them dissolve quickly upon thawing, even under moderate xylem tension. In wide conduits (ring-porous angiosperm vessels, 100-300+ μm), much larger bubbles form. These larger bubbles have lower dissolution pressure and are more likely to expand into embolisms. (4) Empirical support — there is a strong correlation between conduit diameter and freeze-thaw vulnerability: species with wider vessels show more embolism after freeze-thaw cycles. Ring-porous species (oak, ash) lose nearly all their large earlywood vessels to freeze-thaw embolism each winter and must produce new vessels each spring. Diffuse-porous species and conifers retain more conducting capacity. (5) Conifers do NOT have wider conduits (A is reversed), do not have effective antifreeze proteins in xylem (B), and do not lose all xylem annually (D — tracheids in sapwood can function for years).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Nod factors produced by Rhizobium bacteria are lipochitooligosaccharide signaling molecules that initiate nodule formation in legume roots. The plant receptor that perceives Nod factors is:",
+      "options": [
+        "A G-protein coupled receptor similar to animal hormone receptors",
+        "Rubisco, which binds Nod factors in the chloroplast stroma",
+        "A voltage-gated calcium channel in the plasma membrane",
+        "A LysM receptor kinase (such as NFR1/NFR5 in Lotus or LYK3/NFP in Medicago) located on the root hair plasma membrane — Nod factor binding to these receptors triggers a signaling cascade including calcium spiking in the nucleus, activation of CCaMK (calcium/calmodulin-dependent kinase), and expression of nodulation genes that initiate root hair curling, cortical cell division, and nodule organogenesis"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Nod factor perception and signaling is a paradigm for plant-microbe molecular communication: (1) Nod factors — Rhizobium bacteria produce Nod factors (lipochitooligosaccharides) as host-specific signaling molecules. Each Rhizobium species produces Nod factors with specific decorations (acetylation, sulfation, fatty acid chain length) that determine host specificity. Nod factors are active at extremely low concentrations (10^-12 to 10^-9 M). (2) LysM receptor kinases — Nod factors are perceived by receptor kinases containing extracellular LysM (lysin motif) domains that bind the chitin backbone of Nod factors. In Lotus japonicus: NFR1 (Nod Factor Receptor 1) and NFR5 form a heteromeric receptor complex. In Medicago truncatula: LYK3 and NFP (Nod Factor Perception) are the equivalent receptors. (3) Downstream signaling — Nod factor binding triggers: (a) Root hair deformation and curling (trapping the bacteria). (b) Calcium spiking — periodic oscillations of Ca2+ concentration in the nucleus, mediated by nuclear-localized ion channels (CASTOR/POLLUX in Lotus, DMI1 in Medicago). (c) CCaMK (Ca2+/calmodulin-dependent protein kinase) — decodes the calcium signal and phosphorylates CYCLOPS, a transcription factor that activates nodulation gene expression. (d) Cortical cell division — a nodule primordium forms in the root cortex (inner cortex cells), independent of but coordinated with infection thread growth. (4) Common symbiosis pathway — remarkably, many components of the Nod factor signaling pathway are shared with the arbuscular mycorrhizal signaling pathway (the 'common symbiosis pathway' or 'SYM pathway'). This suggests that the nodulation pathway evolved by co-opting pre-existing mycorrhizal signaling components. (5) Not GPCR (A — plants do not use canonical GPCRs), not rubisco (B), and not a simple Ca2+ channel (C — calcium spiking is downstream of receptor activation).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Long-distance signaling in the phloem involves not only sugars and amino acids but also macromolecular signals. Which of the following has been demonstrated to move through the phloem as a systemic signal?",
+      "options": [
+        "DNA molecules encoding pathogen resistance genes",
+        "Intact mitochondria that provide energy to distant tissues",
+        "Ribosomal subunits assembled in source leaves for export to sinks",
+        "FT (FLOWERING LOCUS T) protein — produced in leaf companion cells under inductive photoperiod, FT protein moves through the phloem to the shoot apical meristem where it interacts with the transcription factor FD to activate floral meristem identity genes; FT acts as 'florigen,' the long-sought systemic flowering signal; other macromolecules including mRNAs, small RNAs (siRNAs, miRNAs), and proteins also traffic through the phloem"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The phloem is now recognized as a major conduit for systemic signaling molecules: (1) FT as florigen — FT protein is the molecular identity of 'florigen,' the systemic flowering signal hypothesized by Chailakhyan in 1936: (a) Synthesis: FT mRNA is transcribed in leaf companion cells when photoperiod conditions are inductive. The transcription factor CONSTANS (CO), stabilized under long-day conditions (in Arabidopsis), directly activates FT transcription. (b) Movement: FT protein (not mRNA) moves from companion cells into sieve tubes through plasmodesmata and is transported through the phloem to the shoot apical meristem. (c) Action at SAM: FT protein interacts with the bZIP transcription factor FD (expressed specifically at the SAM). The FT-FD complex activates floral meristem identity genes including AP1 (APETALA1) and LEAFY (LFY), initiating the transition from vegetative to reproductive development. (2) Other macromolecular signals in phloem — (a) mRNAs: thousands of mRNAs have been detected in phloem sap. Some are functional: CmNACP mRNA moves from stocks to scions in grafting experiments and can alter leaf development. (b) Small RNAs: siRNAs move through phloem to mediate systemic RNA silencing (important for antiviral defense). miRNAs (e.g., miR399 for phosphorus homeostasis) are also phloem-mobile. (c) Proteins: >1000 proteins detected in phloem sap, including signaling proteins, defense proteins, and chaperones. (d) Hormones: jasmonic acid, salicylic acid, ABA, and auxin are phloem-mobile. (3) DNA molecules (A) are not known to be transported through phloem. Intact mitochondria (B) are far too large for sieve plate pores. Ribosomal subunits (C) are degraded from sieve tubes during maturation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "When measuring plant water status, the psychrometer and pressure chamber give different but related information. A thermocouple psychrometer measures:",
+      "options": [
+        "Total water potential (Ψw) of the tissue — the psychrometer measures the relative humidity of air in equilibrium with the tissue sample in a sealed chamber; the equilibrium relative humidity is directly related to the water potential of the tissue through the thermodynamic relationship Ψw = (RT/Vw)ln(RH/100); this provides Ψw without distinguishing its components (Ψs, Ψp)",
+        "Only turgor pressure (Ψp) of individual cells",
+        "Stomatal conductance of the abaxial leaf surface",
+        "The rate of xylem sap flow in the transpiration stream"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The thermocouple psychrometer is a fundamental tool for measuring plant water potential: (1) Principle — the psychrometer measures the water activity (or equivalently, the equilibrium relative humidity) of air enclosed in a sealed chamber containing the tissue sample. At thermodynamic equilibrium, the water vapor pressure in the chamber equals the water potential of the tissue. (2) Thermocouple wet-bulb method — a fine thermocouple junction is cooled by the Peltier effect until dew condenses on it. The junction temperature at which condensation occurs (the dew point) indicates the water vapor pressure in the chamber. Alternatively, evaporative cooling from a wetted junction (wet-bulb depression) is measured. The temperature difference between wet and dry junctions is proportional to the vapor pressure deficit, from which water potential is calculated. (3) Thermodynamic relationship — Ψw = (RT/Vw) × ln(e/e0) where R = gas constant, T = temperature (K), Vw = molar volume of water, e = vapor pressure, e0 = saturation vapor pressure. Since relative humidity = (e/e0) × 100, the equation becomes: Ψw = (RT/Vw) × ln(RH/100). (4) What is measured — the psychrometer provides total Ψw of the tissue, which includes ALL components (Ψs + Ψp + Ψm). It cannot distinguish between the individual components. If the tissue is killed (by freezing and thawing, disrupting membranes), Ψp drops to zero, and a subsequent measurement gives Ψs (≈ Ψw of killed tissue at zero turgor). The difference between Ψw of living and killed tissue approximates Ψp. (5) Comparison with pressure chamber — the pressure chamber measures Ψw of the xylem sap (approximately Ψp of xylem, assuming dilute sap). The psychrometer measures Ψw of the bulk tissue (average of all cells). They give similar but not identical values. The psychrometer does not measure turgor alone (B), stomatal conductance (C), or sap flow (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Xylem sap contains not only water and mineral ions but also small organic molecules. Which class of organic molecules is commonly found in xylem sap and serves as a signaling function?",
+      "options": [
+        "Sucrose at concentrations equivalent to phloem sap (10-25%)",
+        "DNA fragments encoding stress-response genes",
+        "Intact chloroplasts transported from roots to leaves",
+        "Cytokinins (primarily trans-zeatin riboside) — synthesized mainly in root tips and transported to shoots in the xylem sap; root-derived cytokinins regulate shoot growth, delay leaf senescence, promote chloroplast development, and signal the nitrogen status of roots to shoots; drought and nutrient stress reduce root cytokinin production, contributing to shoot growth inhibition"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Xylem sap serves as a conduit for root-to-shoot signaling: (1) Cytokinins in xylem — cytokinins are the predominant hormonal signal transported from roots to shoots via the xylem: (a) Synthesis: cytokinins are synthesized primarily in root tips by IPT (isopentenyltransferase) enzymes. The main xylem-transported forms are trans-zeatin riboside (tZR) and its derivatives. (b) Transport: cytokinins are loaded into the xylem and carried to the shoot in the transpiration stream. Xylem sap cytokinin concentrations are typically 1-100 nM. (c) Functions in shoot: promote cell division (origin of the name 'cytokinin'), delay leaf senescence (maintain chlorophyll and protein content), stimulate chloroplast development, promote stomatal opening (in some contexts), and regulate shoot branching (counteracting auxin-mediated apical dominance). (2) Root-shoot communication — xylem cytokinin levels decrease under: (a) Drought stress: roots under water stress produce less cytokinin. Reduced cytokinin in xylem contributes to leaf senescence and shoot growth inhibition (drought adaptation). (b) Nitrogen deficiency: low N availability reduces root cytokinin synthesis. This may signal N-poor conditions to the shoot. (c) Root damage: loss of root tips reduces cytokinin supply, affecting shoot growth. (3) Other organic molecules in xylem sap — (a) Amino acids: glutamine, asparagine, glutamate (nitrogen transport forms). (b) Organic acids: malate, citrate (involved in cation charge balance). (c) ABA: transported from roots under drought to promote stomatal closure. (d) Small peptides: CLE peptides, CEPs involved in systemic nitrogen signaling. (4) Xylem sap is dilute (typically <0.1% sugars, vs. 10-25% in phloem — A is wrong). DNA (B) and chloroplasts (C) are not transported in xylem sap.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Callose deposition at plasmodesmata neck regions is a common mechanism for regulating symplastic transport. The enzyme responsible for callose synthesis at plasmodesmata is:",
+      "options": [
+        "Cellulose synthase (CESA) complexes that normally build cell walls",
+        "Callose synthase (CalS/GSL family, particularly CalS7/GSL7 for phloem callose and CalS8/GSL8 for plasmodesmatal callose) — these beta-1,3-glucan synthases deposit callose around the neck region of plasmodesmata, narrowing the aperture and reducing the size exclusion limit; callose deposition is regulated by developmental signals, pathogen infection, wounding, and stress, providing dynamic control of cell-cell communication",
+        "Pectin methylesterase that modifies wall pectins",
+        "Lignin peroxidase that polymerizes phenolic monomers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Callose regulation of plasmodesmata is a key mechanism for controlling symplastic connectivity: (1) Callose synthases — callose (beta-1,3-glucan) is synthesized by a family of callose synthases called CalS (Callose Synthase) or GSL (Glucan Synthase-Like) in Arabidopsis. There are 12 CalS/GSL genes in Arabidopsis, with different members acting at specific locations: CalS7/GSL7 — phloem sieve plate callose; CalS8/GSL8 — plasmodesmatal callose (PD callose); CalS5/GSL5 — pollen wall callose. (2) PD callose regulation — CalS8-deposited callose at PD neck regions acts like a sphincter: increased callose narrows the PD aperture, reducing the size exclusion limit and restricting symplastic transport. Beta-1,3-glucanase (BG) enzymes degrade callose, widening the aperture. The balance between CalS and BG activity dynamically controls PD permeability. (3) Regulation triggers — callose deposition at PD increases in response to: (a) Pathogen infection — plants 'close' PD to restrict pathogen spread (defense response). (b) Wounding — seals off damaged areas. (c) Developmental transitions — the sink-to-source transition in developing leaves involves increased PD callose. (d) Cold stress — reduces symplastic transport. (e) Hormones — salicylic acid promotes PD callose deposition (enhancing defense); auxin may counteract it. (4) Significance for phloem — in sieve tubes, callose deposition on sieve plates is a wound response (blocking sap loss) and a senescence response. During normal function, sieve plate pores are largely open (with only thin callose linings). Excessive callose deposition (triggered by handling or fixation artifacts) led to early underestimates of sieve pore size. (5) CESA (A) synthesizes cellulose (beta-1,4-glucan), not callose. Pectin methylesterase (C) and lignin peroxidase (D) modify different wall components.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of water use efficiency (WUE) can be measured at different scales. At the leaf level, intrinsic WUE is defined as:",
+      "options": [
+        "The ratio of total biomass to total water consumed over the plant's lifetime",
+        "The ratio of net CO2 assimilation rate (A) to stomatal conductance (gs) — this ratio indicates how efficiently the plant uses its stomatal opening for carbon gain vs. water loss; a higher A/gs means more carbon fixed per unit stomatal conductance; intrinsic WUE removes the effect of atmospheric vapor pressure deficit, making it a better comparison metric across different environments than instantaneous transpiration efficiency",
+        "The amount of water stored in the vacuole per unit leaf area",
+        "The number of stomata per unit leaf area"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Water use efficiency is measured at multiple scales with different definitions: (1) Intrinsic WUE (leaf level) — A/gs, where A = net photosynthetic CO2 assimilation (micromol CO2 m-2 s-1) and gs = stomatal conductance to CO2 or water vapor (mol m-2 s-1). This ratio is 'intrinsic' because it normalizes for the atmospheric demand for water (VPD), which varies with temperature and humidity. A/gs reflects the inherent physiological efficiency of the leaf independent of weather. (2) Instantaneous WUE — A/E, where E = transpiration rate. This includes the atmospheric demand effect (E = gs × VPD). Instantaneous WUE varies with weather conditions even if the leaf physiology is unchanged. (3) Whole-plant WUE — total dry matter produced per total water transpired. Often expressed as g dry matter per kg water. Typical values: C3 plants 1-3 g/kg; C4 plants 2-5 g/kg; CAM plants 5-15 g/kg. (4) Carbon isotope discrimination (Δ13C) — a long-term integrated measure of WUE. Plants discriminate against 13CO2 during photosynthesis (rubisco preferentially fixes 12CO2). The degree of discrimination depends on ci/ca (ratio of intercellular to atmospheric CO2). Higher intrinsic WUE (more closed stomata → lower ci/ca) results in less 13C discrimination (more 13C in plant tissue). This allows WUE to be estimated from stable isotope analysis of plant material. (5) Breeding applications — WUE is a major target for crop improvement in water-limited agriculture. C4 crops (maize, sorghum, sugarcane) have inherently higher WUE than C3 crops (rice, wheat, soybean). Total biomass/water (A) is whole-plant, not leaf-level WUE. Vacuolar water (C) and stomatal density (D) are not WUE metrics.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Magnesium (Mg) is an essential macronutrient with multiple functions in plants. Which of the following correctly describes a major function of Mg in plant biochemistry?",
+      "options": [
+        "Mg2+ is a structural component of lignin polymers in the cell wall",
+        "Mg2+ forms the central metal ion in the chlorophyll porphyrin ring and is essential for ribosome structure — Mg2+ coordinates with the four nitrogen atoms of the porphyrin ring in chlorophyll a and b, giving plants their green color; Mg2+ also bridges the two ribosomal subunits and is required for over 300 enzyme activities including rubisco activation, ATPases, kinases, and phosphatases",
+        "Mg2+ is the primary ion responsible for stomatal opening in guard cells",
+        "Mg2+ is a component of the Casparian strip in the root endodermis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Magnesium is one of the most versatile and important mineral nutrients: (1) Chlorophyll — Mg2+ is the central atom of the chlorophyll molecule, coordinated with the four nitrogen atoms of the porphyrin (tetrapyrrole) ring. Without Mg, chlorophyll cannot be synthesized, leading to chlorosis (yellowing). Since Mg is phloem-mobile, deficiency appears first in OLDER leaves (Mg is remobilized to young leaves). Approximately 15-20% of total plant Mg is in chlorophyll. (2) Ribosome structure — Mg2+ is required for the association of the large and small ribosomal subunits. Without adequate Mg, ribosomes dissociate, halting protein synthesis. This makes Mg essential for all growth processes. (3) Enzyme activation — Mg2+ activates over 300 enzymes: (a) Rubisco — Mg2+ is required for activation of rubisco via carbamylation of a lysine residue (by rubisco activase). CO2 binds to the carbamylated lysine, then Mg2+ coordinates with the bound CO2 and adjacent amino acids, creating the catalytically competent active site. (b) ATPases and kinases — Mg2+ complexes with ATP (Mg-ATP is the actual substrate for most kinases and ATPases). Free ATP without Mg is not a substrate. (c) RNA polymerase, DNA polymerase, and many other enzymes require Mg2+ for activity. (4) Quantitative — Mg typically constitutes 0.1-0.4% of plant dry weight, qualifying it as a macronutrient. Most (60-75%) Mg is not in chlorophyll but is involved in enzyme activation, ribosome structure, and as a counter-ion for organic acids in the vacuole. (5) Mg is not a component of lignin (A — lignin contains phenolic monomers, not metals). K+ is the primary stomatal ion (C), not Mg. Suberin and lignin form the Casparian strip (D), not Mg.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "Hydraulic redistribution is a process where deep-rooted plants transfer water from moist deep soil to dry shallow soil through their root systems at night. This process:",
+      "options": [
+        "Requires active metabolic pumping by root cells",
+        "Occurs passively driven by water potential gradients — at night, when stomata close and transpiration ceases, water moves from roots in contact with moist deep soil (higher Ψw) through the root system and out of roots in dry shallow soil (lower Ψw); this hydraulically lifts water from deep to shallow layers, benefiting neighboring shallow-rooted plants and microorganisms and maintaining fine root function in dry upper soil",
+        "Involves reverse phloem transport of water from leaves to roots",
+        "Only occurs in aquatic plants growing in flooded conditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hydraulic redistribution (also called hydraulic lift) is a fascinating passive process: (1) Mechanism — during the day, transpiration creates strong tension throughout the plant's xylem, and water flows upward from all roots. At night, transpiration stops (stomata close), and the plant's water potential equilibrates. If deep roots access moist soil while shallow roots are in dry soil, a water potential gradient exists: Deep soil (moist) → high Ψw → root → shallow soil (dry) → low Ψw. Water flows passively through the root system from deep to shallow soil, following the gradient. (2) Evidence — (a) Deuterium/hydrogen isotope tracing: labeling deep soil water with deuterium and detecting it in shallow soil near the plant's roots. (b) Sap flow sensors: measuring reverse sap flow (downward through shallow roots) at night. (c) Soil moisture monitoring: detecting overnight increases in shallow soil moisture near deep-rooted plants. (3) Ecological significance — (a) Self-benefit: maintains fine root function and mycorrhizal associations in upper soil layers during dry periods. When rain returns, these roots can immediately resume nutrient uptake. (b) Facilitation: redistributed water is available to neighboring shallow-rooted plants, grasses, and seedlings (nurse plant effect). (c) Microbial activity: maintains microbial decomposition and nutrient cycling in upper soil. (4) Species — documented in over 60 species including trees (Eucalyptus, Quercus, Pinus, Acer), shrubs (Artemisia), and grasses (Bouteloua). Not limited to any particular habitat or growth form. (5) Passive process — no active pumping is required (A is wrong). The driving force is the water potential gradient. It is not phloem transport (C) and is not limited to aquatic plants (D — it is primarily a dryland adaptation).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher grafts the shoot of a late-flowering Arabidopsis ecotype onto the rootstock of an early-flowering ecotype and vice versa. The early-flowering shoots flower early regardless of rootstock genotype, while the late-flowering shoots flower late regardless of rootstock genotype. However, when a single leaf from the early-flowering plant is grafted onto the late-flowering plant under inductive photoperiod, the late-flowering plant flowers early. What do these results demonstrate?",
+      "options": [
+        "Flowering is controlled exclusively by the root system through cytokinin signals",
+        "The graft junction blocks all molecular communication between stock and scion",
+        "A leaf-derived mobile signal (florigen/FT protein) produced under inductive photoperiod can move through the phloem across a graft junction to induce flowering at the distant shoot apex — the signal originates in leaves (not roots), requires inductive photoperiod for production, and acts at the shoot apical meristem to trigger the floral transition",
+        "Flowering time is determined solely by the age of the plant, not by any mobile signal"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This classic grafting experiment demonstrates the existence and properties of florigen: (1) First grafting result — early shoot on late root still flowers early, and late shoot on early root still flowers late. This shows that the shoot (or more specifically, the leaves) determines flowering time, not the roots. The rootstock genotype is irrelevant. (2) Leaf grafting result — a single leaf from the early-flowering plant, when grafted onto the late-flowering plant, induces early flowering. This proves: (a) The flowering signal originates in leaves. (b) The signal is mobile — it can move from the grafted leaf through the vascular system (phloem) to the shoot apex. (c) The signal can cross a graft junction (demonstrating it is a small molecule or protein, not a physical structure). (d) A single leaf is sufficient to produce enough signal. (3) Molecular identity — the mobile signal is now known to be FT (FLOWERING LOCUS T) protein, produced in leaf companion cells and transported through the phloem. The protein (not the mRNA) is the mobile form. (4) Historical context — Chailakhyan (1936) first proposed florigen based on similar grafting experiments. Zeevaart and others refined the concept. The molecular identity was established by Corbesier et al. (2007) using phloem-sap proteomics and tissue-specific expression experiments. (5) Not root-derived (A — the first experiment rules this out). The graft junction is clearly permeable to the signal (B is wrong). Age alone doesn't explain the leaf graft result (D is wrong — the signal requires photoperiod).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "The soil cation exchange capacity (CEC) is an important property affecting plant mineral nutrition. CEC refers to:",
+      "options": [
+        "The ability of soil to convert atmospheric N2 to NH4+",
+        "The rate at which soil bacteria decompose organic matter",
+        "The total amount of exchangeable cations (K+, Ca2+, Mg2+, NH4+, Na+, H+, Al3+) that soil particles can adsorb on their negatively charged surfaces — clay particles and humus have permanent and pH-dependent negative charges that electrostatically attract cations; higher CEC soils retain more nutrient cations against leaching and release them to the soil solution for root uptake through ion exchange",
+        "The capacity of soil to store water between field capacity and wilting point"
+      ],
+      "correctAnswer": "C",
+      "explanation": "CEC is fundamental to understanding soil fertility and nutrient availability: (1) Soil negative charges — soil particles carry negative surface charges from two sources: (a) Permanent charges — in clay minerals (montmorillonite, vermiculite), isomorphic substitution (replacement of Si4+ by Al3+ in tetrahedral layers, or Al3+ by Mg2+ in octahedral layers) creates permanent negative charges on the mineral surface. (b) pH-dependent charges — carboxyl (-COOH) and phenolic (-OH) groups on humus, and broken edges of clay minerals, acquire negative charges at higher pH (deprotonation). (2) Cation exchange — these negative charges attract and loosely bind cations (K+, Ca2+, Mg2+, NH4+, Na+, H+, Al3+) from the soil solution through electrostatic attraction. Bound cations are in dynamic equilibrium with the soil solution — they can be displaced ('exchanged') by other cations, including H+ released by root cells. (3) CEC values — expressed in cmolc/kg (centimoles of charge per kilogram of soil) or meq/100g. Typical values: sandy soils 1-5 cmolc/kg (low CEC, poor nutrient retention); loamy soils 10-25 cmolc/kg; clay soils 25-100 cmolc/kg; organic/peat soils 100-300+ cmolc/kg. (4) Nutritional significance — high CEC soils: (a) Retain more nutrient cations, reducing leaching losses. (b) Buffer soil pH changes more effectively. (c) Release nutrients to the soil solution as roots deplete it. Low CEC soils (sandy) lose nutrients rapidly through leaching, requiring more frequent fertilizer application. (5) CEC is not nitrogen fixation (A), organic matter decomposition (B), or water storage capacity (D — that is 'available water capacity').",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "P-proteins (phloem proteins) are structural proteins found in sieve tube elements. Their most important function is:",
+      "options": [
+        "Providing structural support to sieve plates like the cytoskeleton in animal cells",
+        "Wound sealing — when a sieve tube is damaged, P-proteins rapidly aggregate at the sieve plate pores, forming a proteinaceous plug that blocks the sieve plate and prevents loss of phloem sap under pressure; this rapid wound response (occurring within seconds) is analogous to blood clotting in animals and protects the plant from catastrophic loss of photosynthetic products",
+        "Catalyzing the synthesis of sucrose from glucose and fructose",
+        "Actively pumping phloem sap through sieve plate pores"
+      ],
+      "correctAnswer": "B",
+      "explanation": "P-proteins are specialized structural proteins unique to angiosperm sieve tube elements: (1) Types of P-proteins — several forms exist: (a) P-protein filaments (PP1, PP2 in Cucurbita) — the most studied. PP1 is a structural protein that forms filaments; PP2 is a lectin with phloem-specific expression. (b) P-protein bodies — crystalline inclusions in developing sieve tube elements that disperse into filaments at maturity. (c) Forisomes — unique to Fabaceae (legumes), these are specialized P-protein bodies that undergo rapid, reversible conformational changes (contraction/expansion) in response to Ca2+ and are involved in sieve plate sealing. (2) Wound sealing — the primary function of P-proteins is rapid wound response: (a) When a sieve tube is severed (e.g., by insect feeding, herbivore damage, or experimental cutting), the positive turgor pressure causes rapid sap exudation. (b) P-proteins in the sap are swept toward the sieve plate by the surge of sap flow. (c) Within seconds, P-proteins accumulate at sieve plate pores, forming a proteinaceous plug that blocks further sap loss. (d) Callose is then deposited (over minutes to hours) to provide a more permanent seal. (3) Fabaceae forisomes — in legumes, forisomes are spindle-shaped protein bodies that undergo Ca2+-dependent expansion when damage causes Ca2+ to spike. The expanded forisome physically blocks the sieve tube lumen, stopping sap flow almost instantaneously. (4) Not structural support (A — sieve tubes lack cytoskeleton). Not sucrose synthesis (C — sucrose synthase is a different enzyme). Not active pumping (D — phloem transport is pressure-driven, not protein-pumped).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Resource Acquisition and Transport"
     }
   ]
 }
