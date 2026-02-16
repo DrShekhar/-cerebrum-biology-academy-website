@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch40,42-43 Animal Structure, Circulation & Immunity — Wave 1",
+    "version": 1,
+    "source": "olympiad-wave1",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "A mammalian species has a body mass of 500 kg. Using the allometric scaling equation for basal metabolic rate (BMR = 70 × M^0.75, where M is mass in kg and BMR is in kcal/day), what is the approximate mass-specific metabolic rate (kcal/kg/day) for this animal compared to a 5 kg mammal?",
+      "options": [
+        "A) The 500 kg animal has roughly one-third the mass-specific metabolic rate of the 5 kg animal",
+        "B) The 500 kg animal has roughly one-tenth the mass-specific metabolic rate of the 5 kg animal",
+        "C) Both animals have identical mass-specific metabolic rates since they share the same scaling exponent",
+        "D) The 500 kg animal has roughly one-fifth the mass-specific metabolic rate of the 5 kg animal"
+      ],
+      "correctAnswer": "A",
+      "explanation": "For the 5 kg animal: BMR = 70 × 5^0.75 ≈ 70 × 3.34 ≈ 234 kcal/day, so mass-specific = 234/5 ≈ 46.8 kcal/kg/day. For the 500 kg animal: BMR = 70 × 500^0.75 ≈ 70 × 105.7 ≈ 7,400 kcal/day, so mass-specific = 7,400/500 ≈ 14.8 kcal/kg/day. The ratio is 14.8/46.8 ≈ 0.32, meaning the larger animal has roughly one-third the mass-specific metabolic rate. This reflects the general principle that mass-specific BMR scales as M^(−0.25).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 40,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a countercurrent heat exchange system in the flipper of a marine mammal, arterial blood entering the flipper is at 37°C and venous blood returning from the flipper tip is at 5°C. If the countercurrent arrangement were replaced by a concurrent (parallel-flow) system with the same flow rates and heat transfer coefficient, which outcome is most accurate?",
+      "options": [
+        "A) The arterial blood would cool to 5°C before reaching the flipper tip, eliminating heat loss",
+        "B) There would be no difference because heat transfer depends only on total surface area, not flow direction",
+        "C) The venous return would still reach 35°C because the total heat content is conserved",
+        "D) Both streams would equilibrate near 21°C, and net heat recovery would drop substantially"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In a concurrent (parallel-flow) system, the two streams approach a common equilibrium temperature — approximately the average of their inlet temperatures — so both would converge near (37 + 5)/2 ≈ 21°C. This means the venous blood returns at only ~21°C rather than the ~35°C achieved by countercurrent exchange, so much more heat is lost to the environment. Countercurrent exchange maintains a temperature gradient along the entire length of the exchanger, enabling venous blood to recover far more heat. This principle is critical for thermoregulation in endotherms exposed to cold environments.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 40,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "During the cardiac cycle, the isovolumetric contraction phase of the left ventricle is characterized by:",
+      "options": [
+        "A) Both the mitral and aortic valves are closed, ventricular pressure rises sharply, and ventricular volume remains constant",
+        "B) The mitral valve is open and the aortic valve is closed, allowing residual atrial filling",
+        "C) The aortic valve is open and the mitral valve is closed, initiating rapid ventricular ejection",
+        "D) Both valves are open briefly, producing a transient bidirectional flow that generates the S1 heart sound"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Isovolumetric contraction occurs after the mitral (AV) valve closes (producing the S1 heart sound) and before the aortic (semilunar) valve opens. During this brief interval, the ventricle contracts as a closed chamber — both inlet and outlet valves are shut — so ventricular pressure increases rapidly while volume remains unchanged. The aortic valve opens only when ventricular pressure exceeds aortic diastolic pressure (~80 mmHg), initiating the ejection phase.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Frank-Starling mechanism of the heart ensures that:",
+      "options": [
+        "A) Heart rate increases proportionally with sympathetic stimulation during exercise",
+        "B) Stroke volume increases when venous return increases, due to greater preload stretching cardiac myocytes and optimizing actin-myosin overlap",
+        "C) Cardiac output remains constant regardless of changes in peripheral resistance",
+        "D) The refractory period of cardiac muscle lengthens during increased filling to prevent tetanic contraction"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Frank-Starling law states that the heart intrinsically adjusts its output based on the volume of blood returning to it (preload). When end-diastolic volume increases, cardiac muscle fibers are stretched to a more optimal sarcomere length, increasing the number of effective cross-bridges between actin and myosin and enhancing calcium sensitivity of troponin C. This results in a more forceful contraction and greater stroke volume without requiring neural or hormonal input. This mechanism ensures that the output of the left and right ventricles is matched on a beat-to-beat basis.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A patient has a deletion in the gene encoding β2-microglobulin, which is required for proper folding and surface expression of MHC class I molecules. Which immune function would be MOST directly impaired?",
+      "options": [
+        "A) Activation of CD4+ helper T cells by antigen-presenting cells",
+        "B) Presentation of extracellular pathogen antigens to B cells in germinal centers",
+        "C) Cytotoxic CD8+ T cell recognition and killing of virus-infected host cells",
+        "D) Opsonization of bacteria by complement component C3b"
+      ],
+      "correctAnswer": "C",
+      "explanation": "MHC class I molecules present intracellular (endogenous) antigens — such as viral peptides — to CD8+ cytotoxic T lymphocytes. β2-microglobulin is an essential structural component of all MHC class I molecules; without it, MHC I cannot fold correctly or be expressed on the cell surface. This would abolish the ability of CD8+ T cells to recognize and kill virus-infected cells. CD4+ T cells recognize antigens presented by MHC class II (which does not require β2-microglobulin). B cell activation and complement opsonization are independent of MHC I.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 43,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In fish gills, countercurrent flow between water and blood maximizes oxygen extraction. If a mutation caused the blood flow in gill lamellae to become concurrent (same direction as water flow), and water entering the gills has a PO₂ of 150 mmHg while deoxygenated blood entering has a PO₂ of 30 mmHg, what is the approximate maximum equilibrium PO₂ achievable in the blood leaving the exchange surface?",
+      "options": [
+        "A) ~150 mmHg, because the total oxygen content of water is eventually fully transferred",
+        "B) ~90 mmHg, because concurrent flow allows equilibration only to the mean of inlet values",
+        "C) ~30 mmHg, because blood cannot extract oxygen against its own partial pressure gradient",
+        "D) ~120 mmHg, because 80% extraction efficiency is maintained regardless of flow arrangement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In a concurrent system, the two fluid streams approach a common equilibrium partial pressure. Starting with water at 150 mmHg and blood at 30 mmHg, the gradient diminishes as the streams flow in the same direction, and both converge toward an intermediate value of approximately (150 + 30)/2 = 90 mmHg (exact value depends on relative flow rates and heat capacities/oxygen capacities, but the key point is equilibration at an intermediate value). In contrast, countercurrent flow maintains a partial pressure gradient along the entire length of the lamella, allowing blood to approach the PO₂ of incoming water (~150 mmHg). Fish gills can extract up to 80-90% of dissolved O₂ from water via countercurrent exchange.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A patient with type O blood accidentally receives a transfusion of type A blood. Which sequence of events best describes the immunological consequence?",
+      "options": [
+        "A) The recipient's T cells undergo clonal expansion over 7-10 days, then mount a delayed-type hypersensitivity reaction against donor RBCs",
+        "B) Donor anti-B antibodies in the transfused plasma attack recipient RBCs, causing extravascular hemolysis in the spleen",
+        "C) Anti-A IgE antibodies on mast cells cross-link with A antigens, causing systemic histamine release and anaphylaxis without hemolysis",
+        "D) Pre-existing anti-A IgM antibodies bind A antigens on donor RBCs, activate the classical complement pathway, form membrane attack complexes, and cause acute intravascular hemolysis"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Type O individuals have pre-existing (natural) anti-A and anti-B antibodies, which are predominantly IgM class. These do not require prior sensitization — they arise from exposure to environmental antigens similar to A and B blood group antigens. Upon receiving type A blood, anti-A IgM immediately binds the A antigens on donor erythrocytes, activating the classical complement cascade (C1q binds IgM pentamer). This leads to formation of the membrane attack complex (C5b-9), causing direct lysis of donor RBCs in the vasculature (intravascular hemolysis). This is an acute hemolytic transfusion reaction and can be fatal.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 43,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Bohr effect and the Haldane effect are functionally complementary in gas transport. Which statement most accurately distinguishes their physiological roles?",
+      "options": [
+        "A) Both effects depend on 2,3-BPG concentration and are abolished when 2,3-BPG is depleted in stored blood",
+        "B) The Bohr effect operates only in the lungs to increase O₂ loading; the Haldane effect operates only in tissues to decrease CO₂ release",
+        "C) The Bohr effect describes reduced O₂ affinity of hemoglobin at lower pH, promoting O₂ unloading in tissues; the Haldane effect describes enhanced CO₂ carrying capacity of deoxygenated blood, promoting CO₂ loading in tissues",
+        "D) The Bohr effect shifts the O₂ dissociation curve leftward in metabolically active tissues; the Haldane effect shifts the CO₂ dissociation curve leftward in the lungs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Bohr effect: in metabolically active tissues, CO₂ production lowers pH (via carbonic acid), which decreases hemoglobin's O₂ affinity (rightward shift of the O₂-Hb dissociation curve), facilitating O₂ unloading where it is needed most. The Haldane effect: deoxygenated hemoglobin has a greater capacity to carry CO₂ (both as carbaminohemoglobin and by buffering H⁺ from carbonic acid) than oxygenated hemoglobin. In tissues, as Hb releases O₂, it becomes better at picking up CO₂. In the lungs, as Hb binds O₂, it releases CO₂. These two effects work synergistically to optimize both O₂ delivery and CO₂ removal. 2,3-BPG is a separate allosteric effector and is not the mechanistic basis for either effect.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Regarding the electrical conduction system of the human heart, which statement is correct about the sequence and timing of depolarization?",
+      "options": [
+        "A) The AV node initiates each heartbeat, sending impulses simultaneously to atria and ventricles via the bundle of His",
+        "B) The SA node fires, depolarization spreads through atrial muscle, the AV node introduces a ~0.1 s delay, then the bundle of His and Purkinje fibers rapidly depolarize the ventricles from apex to base",
+        "C) Purkinje fibers depolarize the ventricles from base to apex, ensuring blood is ejected toward the apex before reaching the outflow tracts",
+        "D) The SA node and AV node fire simultaneously, with the SA node controlling atrial rate and the AV node independently controlling ventricular rate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The SA node (sinoatrial node) in the right atrium is the primary pacemaker, generating ~72 impulses per minute. Depolarization spreads through atrial myocardium via gap junctions and internodal pathways. The AV node (atrioventricular node) introduces a critical delay of approximately 0.1 seconds, allowing atrial contraction to complete before ventricular contraction begins (atrial kick). The impulse then travels rapidly through the bundle of His, right and left bundle branches, and finally the Purkinje fibers, which depolarize the ventricles from the apex upward toward the base. This apex-to-base contraction pattern efficiently ejects blood into the aorta and pulmonary trunk, whose openings are at the base of the heart.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "During a secondary immune response to a pathogen previously encountered, which combination of features distinguishes it from the primary response?",
+      "options": [
+        "A) Slower onset but higher IgM production, with no change in antibody affinity",
+        "B) Equal speed as primary response but greater involvement of NK cells and complement",
+        "C) Faster onset (1-3 days vs 7-14 days), higher antibody titer, predominantly IgG production, and higher-affinity antibodies due to somatic hypermutation and affinity maturation",
+        "D) Faster onset and higher titer but exclusively IgE production to ensure mucosal protection"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The secondary (anamnestic) immune response is mediated by memory B and T cells generated during the primary response. Memory B cells are already class-switched (predominantly to IgG) and have undergone somatic hypermutation in germinal centers, producing higher-affinity antibodies. Upon re-exposure, these cells are activated rapidly (1-3 days latency vs 7-14 days for the primary response), proliferate extensively, and produce antibody titers 100-1000 times higher than the primary response. This is the immunological basis for vaccination — the first exposure (vaccine) generates memory cells, and subsequent exposure (infection) triggers a rapid, high-affinity, class-switched response.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 43,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate each statement about mammalian tissue types and homeostasis:\nS1: TRUE — Simple squamous epithelium lines blood vessels (endothelium) and facilitates diffusion due to its thin, single-layered structure.\nS2: TRUE — Negative feedback in thermoregulation involves hypothalamic detection of core temperature deviation and activation of effectors (vasodilation, sweating, or shivering) that oppose the change.\nS3: FALSE — Dense regular connective tissue, found in tendons, contains primarily elastic fibers arranged randomly to resist multidirectional forces.\nS4: TRUE — Cardiac muscle is striated, contains intercalated discs with gap junctions for electrical coupling, and is under involuntary control.",
+      "options": [
+        "S1: Simple squamous epithelium lines blood vessels (endothelium) and facilitates diffusion due to its thin, single-layered structure.",
+        "S2: Negative feedback in thermoregulation involves hypothalamic detection of core temperature deviation and activation of effectors (vasodilation, sweating, or shivering) that oppose the change.",
+        "S3: Dense regular connective tissue, found in tendons, contains primarily elastic fibers arranged randomly to resist multidirectional forces.",
+        "S4: Cardiac muscle is striated, contains intercalated discs with gap junctions for electrical coupling, and is under involuntary control."
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 TRUE: Simple squamous epithelium forms the endothelium of blood vessels and serous membranes. Its thinness (single layer of flattened cells) is ideal for diffusion and filtration. S2 TRUE: The hypothalamus acts as the thermostat. When core temperature deviates from the set point (~37°C), it activates negative feedback responses — vasodilation and sweating for cooling, vasoconstriction and shivering for warming — to restore the set point. S3 FALSE: Dense regular connective tissue in tendons contains primarily collagen fibers (not elastic fibers) arranged in parallel (not randomly). The parallel arrangement resists unidirectional tensile forces. Dense irregular connective tissue (e.g., dermis) has fibers arranged in multiple directions. S4 TRUE: Cardiac muscle shares striation with skeletal muscle (organized sarcomeres) but is involuntary like smooth muscle. Intercalated discs contain gap junctions (allowing rapid electrical coupling) and desmosomes (providing mechanical attachment), enabling the heart to function as a functional syncytium.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 40,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate each statement about circulatory system diversity and blood pressure regulation:\nS1: FALSE — In open circulatory systems (e.g., arthropods), hemolymph is always completely separate from interstitial fluid and never bathes organs directly.\nS2: TRUE — Baroreceptors in the carotid sinus and aortic arch detect changes in blood pressure and relay signals via glossopharyngeal (CN IX) and vagus (CN X) nerves to the cardiovascular center in the medulla.\nS3: TRUE — The renin-angiotensin-aldosterone system (RAAS) is activated by decreased renal perfusion, leading to angiotensin II-mediated vasoconstriction and aldosterone-mediated Na⁺/water reabsorption, thereby increasing blood pressure.\nS4: FALSE — Atrial natriuretic peptide (ANP) is released in response to low blood volume and acts to increase Na⁺ reabsorption and blood pressure.",
+      "options": [
+        "S1: In open circulatory systems (e.g., arthropods), hemolymph is always completely separate from interstitial fluid and never bathes organs directly.",
+        "S2: Baroreceptors in the carotid sinus and aortic arch detect changes in blood pressure and relay signals via glossopharyngeal (CN IX) and vagus (CN X) nerves to the cardiovascular center in the medulla.",
+        "S3: The renin-angiotensin-aldosterone system (RAAS) is activated by decreased renal perfusion, leading to angiotensin II-mediated vasoconstriction and aldosterone-mediated Na⁺/water reabsorption, thereby increasing blood pressure.",
+        "S4: Atrial natriuretic peptide (ANP) is released in response to low blood volume and acts to increase Na⁺ reabsorption and blood pressure."
+      ],
+      "correctAnswer": "FTTF",
+      "explanation": "S1 FALSE: In open circulatory systems, hemolymph IS the interstitial fluid — there is no distinction. Hemolymph is pumped by the heart into sinuses (hemocoel) where it directly bathes organs and tissues before returning to the heart. This is the defining feature of an open circulatory system. S2 TRUE: Baroreceptors are stretch-sensitive mechanoreceptors. Carotid sinus baroreceptors send signals via the glossopharyngeal nerve (CN IX), while aortic arch baroreceptors signal via the vagus nerve (CN X), to the nucleus tractus solitarius in the medulla, which coordinates autonomic responses. S3 TRUE: When juxtaglomerular cells detect decreased renal perfusion pressure, they secrete renin, which converts angiotensinogen to angiotensin I. ACE (primarily in pulmonary capillaries) converts angiotensin I to angiotensin II, a potent vasoconstrictor that also stimulates aldosterone secretion from the adrenal cortex, promoting Na⁺ and water retention. S4 FALSE: ANP is released by atrial cardiomyocytes when atrial walls are stretched by HIGH blood volume (not low). ANP promotes natriuresis (Na⁺ excretion), diuresis, and vasodilation, thereby DECREASING blood pressure — it opposes RAAS.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate each statement about innate immunity components:\nS1: TRUE — Toll-like receptors (TLRs) are pattern recognition receptors on immune cells that detect conserved pathogen-associated molecular patterns (PAMPs) such as bacterial LPS (recognized by TLR4) and viral dsRNA (recognized by TLR3).\nS2: FALSE — The complement system functions exclusively through the classical pathway, which requires antibody binding to pathogens before activation can occur.\nS3: TRUE — Type I interferons (IFN-α and IFN-β) are secreted by virus-infected cells and induce an antiviral state in neighboring cells by upregulating RNases, protein kinase R (PKR), and MHC class I expression.\nS4: FALSE — Natural killer (NK) cells are part of adaptive immunity and require prior antigen presentation by dendritic cells to become activated.",
+      "options": [
+        "S1: Toll-like receptors (TLRs) are pattern recognition receptors on immune cells that detect conserved pathogen-associated molecular patterns (PAMPs) such as bacterial LPS (recognized by TLR4) and viral dsRNA (recognized by TLR3).",
+        "S2: The complement system functions exclusively through the classical pathway, which requires antibody binding to pathogens before activation can occur.",
+        "S3: Type I interferons (IFN-α and IFN-β) are secreted by virus-infected cells and induce an antiviral state in neighboring cells by upregulating RNases, protein kinase R (PKR), and MHC class I expression.",
+        "S4: Natural killer (NK) cells are part of adaptive immunity and require prior antigen presentation by dendritic cells to become activated."
+      ],
+      "correctAnswer": "TFTF",
+      "explanation": "S1 TRUE: TLRs are germline-encoded PRRs of the innate immune system. TLR4 recognizes lipopolysaccharide (LPS) from Gram-negative bacteria; TLR3 recognizes double-stranded RNA (a hallmark of viral replication); TLR9 recognizes unmethylated CpG DNA (common in bacteria). Their activation triggers NF-κB signaling and production of inflammatory cytokines. S2 FALSE: The complement system has THREE activation pathways: classical (antibody-dependent, C1q binds Fc), alternative (spontaneous C3 hydrolysis on pathogen surfaces, antibody-independent), and lectin (mannose-binding lectin binds mannose on pathogens). The alternative and lectin pathways are part of innate immunity and do not require antibodies. S3 TRUE: Type I interferons are critical first-line antiviral defense. Virus-infected cells secrete IFN-α/β, which bind IFNAR receptors on neighboring uninfected cells, activating the JAK-STAT pathway. This upregulates hundreds of interferon-stimulated genes (ISGs) including RNase L (degrades viral RNA), PKR (inhibits translation), and MHC I (enhances antigen presentation to CD8+ T cells). S4 FALSE: NK cells are innate lymphoid cells — they do NOT require prior sensitization or antigen presentation. NK cells detect target cells through a balance of activating and inhibitory receptors. Cells with reduced MHC I expression (common in virus-infected or tumor cells) trigger NK cell killing ('missing self' hypothesis).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 43,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate each statement about adaptive immunity and antibody classes:\nS1: TRUE — Clonal selection theory states that each B cell expresses a unique BCR specificity, and antigen binding selects only the clone(s) with matching specificity for proliferation and differentiation into plasma cells and memory cells.\nS2: FALSE — IgA is primarily found in the bloodstream and is the main antibody responsible for opsonization of blood-borne pathogens.\nS3: TRUE — Class switching from IgM to IgG, IgA, or IgE is mediated by cytokines from CD4+ T helper cells and involves recombination of heavy chain constant region genes without altering antigen specificity.\nS4: TRUE — IgE binds to FcεRI receptors on mast cells and basophils; cross-linking of surface-bound IgE by multivalent antigen triggers degranulation and release of histamine, prostaglandins, and leukotrienes.",
+      "options": [
+        "S1: Clonal selection theory states that each B cell expresses a unique BCR specificity, and antigen binding selects only the clone(s) with matching specificity for proliferation and differentiation into plasma cells and memory cells.",
+        "S2: IgA is primarily found in the bloodstream and is the main antibody responsible for opsonization of blood-borne pathogens.",
+        "S3: Class switching from IgM to IgG, IgA, or IgE is mediated by cytokines from CD4+ T helper cells and involves recombination of heavy chain constant region genes without altering antigen specificity.",
+        "S4: IgE binds to FcεRI receptors on mast cells and basophils; cross-linking of surface-bound IgE by multivalent antigen triggers degranulation and release of histamine, prostaglandins, and leukotrienes."
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 TRUE: Clonal selection, proposed by Burnet, is a cornerstone of immunology. The vast diversity of B cell receptors is generated by V(D)J recombination during B cell development. When an antigen enters the body, it binds only to B cells whose BCR has complementary specificity, selecting that clone for expansion. S2 FALSE: IgA is the predominant antibody in mucosal secretions (saliva, tears, breast milk, intestinal mucus), not the bloodstream. It is secreted as a dimer with a secretory component that protects it from proteolytic digestion. IgG is the main opsonizing antibody in blood. S3 TRUE: Class switch recombination (CSR) occurs in germinal centers and is directed by T helper cytokines: IL-4 promotes switching to IgE, IFN-γ to IgG, TGF-β to IgA. CSR involves DNA recombination at switch regions upstream of each constant region gene, replacing the heavy chain constant region while preserving the variable region (antigen specificity). S4 TRUE: IgE has the lowest serum concentration of all antibody classes but has the highest affinity for its Fc receptor (FcεRI). Mast cells and basophils are coated with IgE via FcεRI. When multivalent antigen (allergen) cross-links adjacent IgE molecules, it triggers receptor aggregation and signal transduction leading to rapid degranulation (histamine, proteases) and de novo synthesis of lipid mediators (prostaglandins, leukotrienes) and cytokines.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 43,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate each statement about gas exchange and respiratory pigments:\nS1: TRUE — Fick's law of diffusion states that the rate of gas exchange is proportional to the surface area and the partial pressure gradient, and inversely proportional to the diffusion distance.\nS2: FALSE — Hemocyanin, found in many arthropods and mollusks, contains iron at its oxygen-binding site and turns red when oxygenated.\nS3: TRUE — 2,3-bisphosphoglycerate (2,3-BPG) binds to the central cavity of the deoxyhemoglobin tetramer, stabilizing the T-state and reducing O₂ affinity, which facilitates O₂ unloading in tissues.\nS4: FALSE — Fetal hemoglobin (HbF) has lower O₂ affinity than adult hemoglobin (HbA) because γ-globin chains bind 2,3-BPG more strongly than β-globin chains.",
+      "options": [
+        "S1: Fick's law of diffusion states that the rate of gas exchange is proportional to the surface area and the partial pressure gradient, and inversely proportional to the diffusion distance.",
+        "S2: Hemocyanin, found in many arthropods and mollusks, contains iron at its oxygen-binding site and turns red when oxygenated.",
+        "S3: 2,3-bisphosphoglycerate (2,3-BPG) binds to the central cavity of the deoxyhemoglobin tetramer, stabilizing the T-state and reducing O₂ affinity, which facilitates O₂ unloading in tissues.",
+        "S4: Fetal hemoglobin (HbF) has lower O₂ affinity than adult hemoglobin (HbA) because γ-globin chains bind 2,3-BPG more strongly than β-globin chains."
+      ],
+      "correctAnswer": "TFTF",
+      "explanation": "S1 TRUE: Fick's law: Rate of diffusion ∝ (Surface Area × ΔP) / Distance, where ΔP is the partial pressure difference. This explains why respiratory surfaces are thin (short distance), have large surface area, and are well-ventilated/perfused (maintaining steep gradients). S2 FALSE: Hemocyanin contains COPPER (Cu²⁺), not iron, at its active site. It turns BLUE when oxygenated (Cu²⁺-O₂) and is colorless when deoxygenated. It is found dissolved directly in hemolymph (not in blood cells) in many arthropods and mollusks. Hemoglobin contains iron and turns red when oxygenated. S3 TRUE: 2,3-BPG is a glycolytic intermediate that accumulates in RBCs. It fits into the central cavity of deoxyhemoglobin (T-state), forming salt bridges with positively charged residues on the β-chains. This stabilizes the T-state (low O₂ affinity), shifting the O₂-Hb curve rightward. At high altitude, increased 2,3-BPG production helps maintain O₂ delivery to tissues. S4 FALSE: The statement is reversed. Fetal hemoglobin (HbF, α₂γ₂) has HIGHER O₂ affinity than adult HbA (α₂β₂) because γ-globin chains bind 2,3-BPG LESS strongly than β-chains. With less 2,3-BPG binding, HbF remains more in the R-state, giving it higher O₂ affinity. This allows the fetus to extract O₂ from maternal blood across the placenta.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate each statement about thermoregulation and metabolic rate:\nS1: FALSE — Ectotherms have no behavioral mechanisms for thermoregulation and rely entirely on environmental temperatures to determine body temperature.\nS2: TRUE — The surface area to volume ratio decreases as body size increases, which is why larger endotherms lose heat more slowly per unit mass and have lower mass-specific metabolic rates.\nS3: TRUE — Positive feedback occurs during human childbirth: oxytocin stimulates uterine contractions, which push the fetus against the cervix, stimulating more oxytocin release until delivery.\nS4: FALSE — Brown adipose tissue (BAT) generates heat through coupled oxidative phosphorylation, producing ATP that is then hydrolyzed to release heat.",
+      "options": [
+        "S1: Ectotherms have no behavioral mechanisms for thermoregulation and rely entirely on environmental temperatures to determine body temperature.",
+        "S2: The surface area to volume ratio decreases as body size increases, which is why larger endotherms lose heat more slowly per unit mass and have lower mass-specific metabolic rates.",
+        "S3: Positive feedback occurs during human childbirth: oxytocin stimulates uterine contractions, which push the fetus against the cervix, stimulating more oxytocin release until delivery.",
+        "S4: Brown adipose tissue (BAT) generates heat through coupled oxidative phosphorylation, producing ATP that is then hydrolyzed to release heat."
+      ],
+      "correctAnswer": "FTTF",
+      "explanation": "S1 FALSE: Ectotherms use extensive behavioral thermoregulation: basking in sunlight, shuttling between sun and shade, burrowing, changing body orientation to the sun, selecting appropriate microhabitats, and huddling. Many lizards maintain remarkably stable body temperatures during active periods through behavioral means. S2 TRUE: As a sphere (or organism) increases in size, volume increases as the cube of the linear dimension while surface area increases as the square. Thus SA/V decreases with increasing size. Since heat loss occurs across the body surface, larger animals lose proportionally less heat per unit mass, requiring less metabolic heat production per gram. This is a key factor in Kleiber's law (BMR ∝ M^0.75). S3 TRUE: This is a classic example of positive feedback — the response amplifies the stimulus. Oxytocin from the posterior pituitary stimulates uterine smooth muscle contractions; fetal pressure on the cervix sends afferent signals to the hypothalamus to release more oxytocin. The cycle intensifies until delivery (the stimulus — cervical stretching — is removed). S4 FALSE: BAT generates heat through UNCOUPLED oxidative phosphorylation. The key protein is thermogenin (UCP1, uncoupling protein 1), which dissipates the proton gradient across the inner mitochondrial membrane without driving ATP synthase. The energy from the proton gradient is released directly as heat (non-shivering thermogenesis). This is the opposite of coupled phosphorylation.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 40,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate each statement about T cell activation and autoimmunity:\nS1: TRUE — CD8+ cytotoxic T cells recognize endogenous peptide antigens presented on MHC class I molecules, which are expressed on virtually all nucleated cells.\nS2: TRUE — CD4+ helper T cells recognize exogenous peptide antigens presented on MHC class II molecules, which are expressed primarily on professional antigen-presenting cells (dendritic cells, macrophages, B cells).\nS3: FALSE — Central tolerance eliminates self-reactive T cells in the bone marrow through positive selection, where T cells that bind self-MHC too strongly are selected for survival.\nS4: TRUE — In systemic lupus erythematosus (SLE), autoantibodies are produced against nuclear antigens (anti-dsDNA, anti-histone), leading to immune complex deposition and type III hypersensitivity damage in kidneys, skin, and joints.",
+      "options": [
+        "S1: CD8+ cytotoxic T cells recognize endogenous peptide antigens presented on MHC class I molecules, which are expressed on virtually all nucleated cells.",
+        "S2: CD4+ helper T cells recognize exogenous peptide antigens presented on MHC class II molecules, which are expressed primarily on professional antigen-presenting cells (dendritic cells, macrophages, B cells).",
+        "S3: Central tolerance eliminates self-reactive T cells in the bone marrow through positive selection, where T cells that bind self-MHC too strongly are selected for survival.",
+        "S4: In systemic lupus erythematosus (SLE), autoantibodies are produced against nuclear antigens (anti-dsDNA, anti-histone), leading to immune complex deposition and type III hypersensitivity damage in kidneys, skin, and joints."
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 TRUE: CD8+ T cells (via the TCR and CD8 co-receptor) specifically interact with MHC I-peptide complexes. MHC I molecules present peptides derived from intracellular proteins (processed via the proteasome and loaded in the ER via TAP transporters). Nearly all nucleated cells express MHC I, allowing CD8+ T cells to survey the body for infected or transformed cells. S2 TRUE: CD4+ T cells (via TCR and CD4 co-receptor) recognize MHC II-peptide complexes. MHC II presents peptides from endocytosed extracellular antigens (processed in endosomes/lysosomes). MHC II expression is restricted to professional APCs: dendritic cells (most potent activators of naive T cells), macrophages, and B cells. S3 FALSE: Central tolerance for T cells occurs in the THYMUS (not bone marrow). The statement confuses multiple concepts: NEGATIVE selection (not positive) eliminates T cells that bind self-MHC/self-peptide complexes too strongly (these are potentially autoreactive). Positive selection retains T cells that bind self-MHC with moderate affinity. The AIRE protein in thymic medullary epithelial cells drives ectopic expression of tissue-specific antigens for negative selection. S4 TRUE: SLE is a prototypic systemic autoimmune disease. Anti-dsDNA and anti-Smith (anti-Sm) antibodies are highly specific for SLE. These antibodies form immune complexes with nuclear antigens released from dying cells. The complexes deposit in small blood vessels (kidneys causing glomerulonephritis, skin, joints), activating complement via the classical pathway and recruiting neutrophils, causing type III hypersensitivity inflammation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 43,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate each statement about hemoglobin cooperativity and open vs closed circulatory systems:\nS1: TRUE — Hemoglobin exhibits positive cooperativity: binding of the first O₂ molecule to one subunit induces a conformational change (T→R state transition) that increases the O₂ affinity of the remaining subunits, producing a sigmoidal O₂ dissociation curve.\nS2: FALSE — All vertebrates have closed circulatory systems with four-chambered hearts that completely separate oxygenated and deoxygenated blood.\nS3: TRUE — In the closed circulatory system of earthworms, blood is confined to vessels at all times, flows through capillary beds for gas exchange, and is pumped by muscular aortic arches ('hearts').\nS4: TRUE — The Hill coefficient for hemoglobin is approximately 2.8, reflecting the degree of cooperativity; a Hill coefficient of 1.0 would indicate no cooperativity (as in myoglobin).",
+      "options": [
+        "S1: Hemoglobin exhibits positive cooperativity: binding of the first O₂ molecule to one subunit induces a conformational change (T→R state transition) that increases the O₂ affinity of the remaining subunits, producing a sigmoidal O₂ dissociation curve.",
+        "S2: All vertebrates have closed circulatory systems with four-chambered hearts that completely separate oxygenated and deoxygenated blood.",
+        "S3: In the closed circulatory system of earthworms, blood is confined to vessels at all times, flows through capillary beds for gas exchange, and is pumped by muscular aortic arches ('hearts').",
+        "S4: The Hill coefficient for hemoglobin is approximately 2.8, reflecting the degree of cooperativity; a Hill coefficient of 1.0 would indicate no cooperativity (as in myoglobin)."
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 TRUE: Hemoglobin is a classic example of allosteric cooperativity (described by the MWC/concerted model). In the T (tense) state, hemoglobin has low O₂ affinity. Binding of the first O₂ destabilizes the T state, promoting transition to the R (relaxed) state with higher affinity. This results in a sigmoidal (S-shaped) O₂ dissociation curve, which is physiologically important: it allows hemoglobin to be nearly fully saturated in the lungs while efficiently releasing O₂ at the lower PO₂ values in tissues. S2 FALSE: While all vertebrates have closed circulatory systems, not all have four-chambered hearts. Fish have a two-chambered heart (one atrium, one ventricle) with a single circulation. Amphibians typically have a three-chambered heart (two atria, one ventricle) with some mixing. Only birds and mammals (and crocodilians) have a fully divided four-chambered heart with complete separation of pulmonary and systemic circuits. S3 TRUE: Earthworms (annelids) have a closed circulatory system with dorsal and ventral blood vessels connected by segmental lateral vessels. Five pairs of aortic arches (muscular lateral vessels) function as pumps. Blood (containing dissolved hemoglobin — not in cells) flows through capillary beds for gas exchange across the moist skin. S4 TRUE: The Hill coefficient (n_H) quantifies cooperativity. For hemoglobin, n_H ≈ 2.8 (the theoretical maximum for a tetramer would be 4.0, indicating perfect cooperativity). Myoglobin, a monomeric protein, has n_H = 1.0 (hyperbolic curve, no cooperativity). The sigmoidal curve's steepness correlates with the Hill coefficient.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "The following table shows oxygen dissociation data for hemoglobin at two different pH values. Based on the data, which conclusion is best supported?",
+      "dataContext": "Oxygen-Hemoglobin Dissociation Data:\n\n| PO₂ (mmHg) | % Hb Saturation (pH 7.4) | % Hb Saturation (pH 7.2) |\n|-------------|--------------------------|---------------------------|\n| 10          | 13                       | 8                         |\n| 20          | 35                       | 22                        |\n| 30          | 57                       | 40                        |\n| 40          | 75                       | 58                        |\n| 60          | 89                       | 80                        |\n| 80          | 95                       | 91                        |\n| 100         | 97                       | 95                        |\n\nP₅₀ at pH 7.4 = 26 mmHg; P₅₀ at pH 7.2 = 35 mmHg.",
+      "options": [
+        "A) The Bohr effect shifts the curve rightward at lower pH, increasing the P₅₀ from 26 to 35 mmHg and enhancing O₂ unloading in metabolically active tissues where CO₂ accumulation lowers pH",
+        "B) The Bohr effect shifts the curve leftward at lower pH, decreasing the P₅₀ and impairing O₂ loading in the lungs",
+        "C) The pH change has no significant effect on hemoglobin saturation at high PO₂ values, proving that the Bohr effect only operates in tissues",
+        "D) The data show that hemoglobin at pH 7.2 has higher O₂ affinity at all PO₂ values, facilitating O₂ storage"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The data clearly show that at every PO₂ value, hemoglobin saturation is lower at pH 7.2 than at pH 7.4. The P₅₀ (PO₂ at which hemoglobin is 50% saturated) increases from 26 mmHg to 35 mmHg — a rightward shift. This is the Bohr effect: decreased pH (increased H⁺ and CO₂) reduces hemoglobin's O₂ affinity by stabilizing the T-state through protonation of specific histidine residues (particularly His146 on the β-chains). Physiologically, in metabolically active tissues where CO₂ production is high and pH is lower, hemoglobin releases more O₂. At high PO₂ (80-100 mmHg, as in the lungs), the difference is minimal because hemoglobin is near full saturation regardless — this is the physiological safety margin of the plateau region.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures cardiac output and blood pressure in a resting human subject and during moderate exercise. Based on the data below, which interpretation is most accurate?",
+      "dataContext": "Cardiovascular Parameters — Resting vs Moderate Exercise:\n\n| Parameter                    | Resting      | Moderate Exercise |\n|------------------------------|--------------|-------------------|\n| Heart rate (bpm)             | 72           | 140               |\n| Stroke volume (mL)           | 70           | 110               |\n| Cardiac output (L/min)       | 5.04         | 15.4              |\n| Systolic BP (mmHg)           | 120          | 175               |\n| Diastolic BP (mmHg)          | 80           | 75                |\n| Mean arterial pressure (mmHg)| 93           | 108               |\n| Total peripheral resistance  | 18.5 units   | 7.0 units         |\n\n(TPR = MAP / CO, in mmHg·min/L)",
+      "options": [
+        "A) The drop in diastolic BP indicates heart failure, as the ventricle cannot maintain adequate pressure during diastole",
+        "B) Cardiac output increased primarily due to increased stroke volume, with heart rate contributing minimally",
+        "C) The decrease in total peripheral resistance during exercise is mainly due to vasodilation in skeletal muscle arterioles, mediated by local metabolites (CO₂, H⁺, adenosine, K⁺) and sympathetic vasodilatory signals",
+        "D) The increase in systolic BP with decreased diastolic BP indicates that baroreceptor reflexes have been completely inhibited during exercise"
+      ],
+      "correctAnswer": "C",
+      "explanation": "During exercise, cardiac output increases ~3-fold (from 5.04 to 15.4 L/min) through increases in both heart rate (~1.9×) and stroke volume (~1.6×, via Frank-Starling mechanism and increased contractility from sympathetic stimulation). Systolic BP rises due to increased cardiac output, but diastolic BP slightly decreases (or stays stable) because total peripheral resistance drops dramatically (from 18.5 to 7.0 units). This TPR decrease is caused by profound vasodilation in skeletal muscle arterioles, driven by local metabolic vasodilators (CO₂, H⁺, adenosine, lactate, K⁺, nitric oxide) and withdrawal of sympathetic vasoconstrictor tone to muscles. Simultaneously, sympathetic vasoconstriction redirects blood away from splanchnic and renal circulations. The slight decrease in diastolic BP is normal and does not indicate heart failure. Baroreceptors are reset to a higher operating point during exercise, not inhibited.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "The following data show serum antibody titers after primary and secondary immunization with a protein antigen. Which conclusion is best supported?",
+      "dataContext": "Antibody Titer Profile After Immunization:\n\n| Time (days post-immunization) | IgM Titer (Primary) | IgG Titer (Primary) | IgM Titer (Secondary — booster at day 30) | IgG Titer (Secondary) |\n|-------------------------------|---------------------|---------------------|-------------------------------------------|------------------------|\n| 0                             | <10                 | <10                 | —                                         | —                      |\n| 3                             | <10                 | <10                 | —                                         | —                      |\n| 7                             | 80                  | <10                 | —                                         | —                      |\n| 10                            | 320                 | 40                  | —                                         | —                      |\n| 14                            | 160                 | 160                 | —                                         | —                      |\n| 21                            | 40                  | 320                 | —                                         | —                      |\n| 28                            | <10                 | 160                 | —                                         | —                      |\n| 33 (3 days post-boost)        | —                   | —                   | 40                                        | 640                    |\n| 35 (5 days post-boost)        | —                   | —                   | 80                                        | 5,120                  |\n| 40 (10 days post-boost)       | —                   | —                   | 40                                        | 20,480                 |\n| 50 (20 days post-boost)       | —                   | —                   | <10                                       | 10,240                 |",
+      "options": [
+        "A) The secondary response is characterized by a shorter lag phase, predominant IgG production (with peak titers ~64× higher than primary IgG peak), and minimal IgM elevation, consistent with memory B cell activation and class-switched recall",
+        "B) The secondary response shows equal increases in IgM and IgG, indicating that memory cells have not undergone class switching",
+        "C) The primary response IgG peak at day 21 is higher than the secondary IgG peak, suggesting immune tolerance after boosting",
+        "D) The IgM response in the secondary immunization is absent, proving that all IgM-producing B cells died after the primary response"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The data illustrate classic primary vs secondary immune response kinetics. Primary response: IgM appears first (peaks ~day 10 at 320), followed by IgG (class-switched, peaks ~day 21 at 320). Both decline as the acute response subsides. Secondary response (booster at day 30): IgG rises rapidly (detectable by day 33, only 3 days post-boost vs ~10 days in primary) and reaches a peak of 20,480 — approximately 64× higher than the primary IgG peak of 320. IgM shows only a modest, transient rise (peak 80). This pattern reflects activation of memory B cells that are already class-switched to IgG and have undergone affinity maturation. The minimal IgM reflects activation of some naive B cells but dominance of memory cell responses. This is the immunological basis for booster vaccinations.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 43,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A comparative physiologist measures metabolic rate and body temperature in four animal species under varying ambient temperatures. Based on the data, which species is an endotherm and which is an ectotherm?",
+      "dataContext": "Metabolic Rate and Body Temperature vs Ambient Temperature:\n\n| Ambient Temp (°C) | Species A — Body Temp (°C) | Species A — O₂ consumption (mL/g/h) | Species B — Body Temp (°C) | Species B — O₂ consumption (mL/g/h) |\n|--------------------|---------------------------|--------------------------------------|---------------------------|--------------------------------------|\n| 10                 | 37.0                      | 4.2                                  | 12.0                      | 0.3                                  |\n| 15                 | 37.1                      | 3.5                                  | 16.5                      | 0.5                                  |\n| 20                 | 37.0                      | 2.8                                  | 21.0                      | 0.8                                  |\n| 25                 | 37.0                      | 2.1                                  | 26.0                      | 1.2                                  |\n| 30                 | 37.1                      | 1.5                                  | 30.5                      | 1.8                                  |\n| 35                 | 37.0                      | 1.2                                  | 35.0                      | 2.3                                  |\n| 40                 | 37.2                      | 1.8                                  | 40.0                      | 2.9                                  |\n\nNote: Thermoneutral zone for Species A is approximately 25-35°C.",
+      "options": [
+        "A) Both species are endotherms because both show changing metabolic rates with ambient temperature",
+        "B) Species B is the endotherm because its metabolic rate increases with temperature, indicating active heat generation",
+        "C) Species A is an ectotherm in torpor, maintaining low body temperature variation by metabolic suppression",
+        "D) Species A is an endotherm (constant body temperature, high metabolic rate that increases below the thermoneutral zone for thermogenesis); Species B is an ectotherm (body temperature tracks ambient temperature, metabolic rate increases with temperature following Q₁₀ effects)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Species A maintains a constant body temperature (~37°C) across all ambient temperatures — the hallmark of endothermy. Its metabolic rate is highest at the lowest ambient temperature (4.2 mL/g/h at 10°C) and decreases as ambient temperature approaches body temperature (thermoneutral zone 25-35°C, minimum metabolic rate 1.2 mL/g/h). Below the thermoneutral zone, the animal increases metabolic heat production (shivering and non-shivering thermogenesis) to maintain body temperature. Above 35°C, metabolic rate increases slightly (1.8 at 40°C) due to the energetic cost of active cooling (panting, sweating). Species B's body temperature closely tracks ambient temperature (ectothermic conformer), and its metabolic rate increases with temperature due to the Q₁₀ effect (typically Q₁₀ ≈ 2-3 for biological reactions), meaning enzymatic reaction rates approximately double with each 10°C increase.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 40,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An immunologist measures complement-mediated lysis of red blood cells (RBCs) from different ABO blood types after incubating them with sera from various donors. Based on the data, which interpretation is correct?",
+      "dataContext": "Complement-Mediated Hemolysis Assay Results (% lysis after 30 min at 37°C):\n\n| Serum Donor Blood Type | Target RBCs: Type A | Target RBCs: Type B | Target RBCs: Type AB | Target RBCs: Type O |\n|------------------------|---------------------|---------------------|----------------------|---------------------|\n| Type A serum           | 0%                  | 85%                 | 42%                  | 0%                  |\n| Type B serum           | 88%                 | 0%                  | 45%                  | 0%                  |\n| Type O serum           | 91%                 | 87%                 | 93%                  | 0%                  |\n| Type AB serum          | 0%                  | 0%                  | 0%                   | 0%                  |\n\nNote: Heat-inactivated serum (56°C, 30 min) showed 0% lysis in all combinations.",
+      "options": [
+        "A) Type O individuals are universal donors because their serum cannot lyse any RBC type",
+        "B) Type O serum lyses A, B, and AB RBCs because it contains both anti-A and anti-B IgM antibodies that activate complement; type AB serum lyses none because it lacks both anti-A and anti-B antibodies",
+        "C) The partial lysis of AB RBCs by type A and B sera proves that A and B antigens compete for the same membrane receptor",
+        "D) Heat inactivation eliminates antibodies, which is why heat-treated serum shows no lysis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data perfectly illustrate ABO blood group immunology. Type O individuals possess both anti-A and anti-B antibodies (predominantly IgM), so their serum lyses all non-O RBCs via classical complement activation. Type A serum contains anti-B (lyses B RBCs, 85%), type B serum contains anti-A (lyses A RBCs, 88%), and type AB serum contains neither anti-A nor anti-B (lyses nothing). AB RBCs express both A and B antigens, so they are partially lysed by sera containing either anti-A or anti-B alone (~42-45%), and strongly lysed by type O serum containing both antibodies (93%). The heat-inactivation control is critical: heating to 56°C for 30 min inactivates complement proteins (especially C1 and C2) but does NOT destroy antibodies. This proves that lysis requires complement — antibody alone is insufficient for hemolysis. Option B is wrong because 'universal donor' refers to RBC donation (type O RBCs lack A and B antigens), not serum compatibility.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 43,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that the Frank-Starling mechanism operates independently of sympathetic nervous system input. She isolates a perfused heart preparation (denervated, no circulating hormones) and varies the preload (venous return) while measuring stroke volume. She then repeats the experiment with intact sympathetic innervation and norepinephrine infusion. Which experimental result would best support her hypothesis?",
+      "experimentContext": "Experimental Setup:\n- Group 1: Isolated perfused rat heart (denervated, Krebs-Henseleit buffer, 37°C). Preload varied by adjusting the height of the venous reservoir (5, 10, 15, 20 cmH₂O filling pressure). Stroke volume measured via aortic flow probe.\n- Group 2: Same setup but with intact sympathetic innervation and 100 nM norepinephrine added to the perfusate.\n- Both groups: Heart rate held constant by electrical pacing at 300 bpm to isolate the effect of preload on stroke volume from rate changes.\n\nResults:\n| Preload (cmH₂O) | SV — Group 1 Denervated (μL) | SV — Group 2 + NE (μL) |\n|------------------|------------------------------|-------------------------|\n| 5                | 85                           | 130                     |\n| 10               | 140                          | 210                     |\n| 15               | 190                          | 275                     |\n| 20               | 220                          | 320                     |",
+      "options": [
+        "A) The denervated heart shows no change in stroke volume with varying preload, proving that the Frank-Starling mechanism requires intact innervation",
+        "B) The results are invalid because electrical pacing at a fixed rate prevents the heart from responding to preload changes",
+        "C) Norepinephrine eliminates the preload-stroke volume relationship by maximizing contractility regardless of filling",
+        "D) In the denervated heart, stroke volume increases with increasing preload, confirming that the Frank-Starling mechanism is an intrinsic property of cardiac muscle; norepinephrine shifts the curve upward (higher SV at each preload) by increasing contractility, but the positive SV-preload relationship persists in both groups"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The data show that in the denervated heart (Group 1), stroke volume increases progressively with preload (85→220 μL as preload rises from 5→20 cmH₂O). This directly demonstrates that the Frank-Starling mechanism is an intrinsic myocardial property — it does not require neural or hormonal input. The mechanism operates at the sarcomere level: increased preload stretches cardiac myocytes, optimizing actin-myosin overlap and increasing calcium sensitivity of the contractile apparatus. In Group 2 (with norepinephrine), the entire curve is shifted upward — stroke volume is higher at every preload level. This reflects increased contractility (positive inotropic effect) mediated by β1-adrenergic receptor activation, which increases intracellular Ca²⁺ via cAMP-PKA signaling. Critically, the positive SV-preload relationship (Frank-Starling mechanism) is preserved in both groups, confirming the hypothesis. Pacing at a constant rate is an appropriate experimental control that eliminates heart rate as a confounding variable.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A team of immunologists wants to determine whether a novel vaccine candidate generates both humoral and cell-mediated immune responses. They design a mouse study with the following experimental groups. Based on the experimental design and expected results, which outcome would demonstrate that the vaccine induces BOTH arms of adaptive immunity?",
+      "experimentContext": "Experimental Design:\n- Group A (n=10): Vaccinated mice — receive 2 doses of novel protein-subunit vaccine + adjuvant (days 0 and 21).\n- Group B (n=10): Control mice — receive adjuvant only (days 0 and 21).\n- Group C (n=10): Positive control — receive attenuated live pathogen (day 0).\n\nAssays performed on day 35:\n1. ELISA: Serum tested for antigen-specific IgG titer.\n2. ELISPOT: Splenocytes restimulated ex vivo with the antigen; IFN-γ-producing T cells counted (spots per 10⁶ cells).\n3. In vivo cytotoxicity: Mice receive CFSE-labeled target cells pulsed with antigen peptide + unpulsed control cells; ratio of specific killing measured by flow cytometry at 18 hours.\n\nExpected Results:\n| Group   | Serum IgG Titer | IFN-γ ELISPOT (spots/10⁶) | In Vivo Cytotoxicity (% specific killing) |\n|---------|-----------------|---------------------------|-------------------------------------------|\n| A (Vax) | 25,600          | 450                       | 62%                                       |\n| B (Adj) | <100            | 30                        | 5%                                        |\n| C (Live)| 51,200          | 820                       | 78%                                       |",
+      "options": [
+        "A) Only the ELISA result matters; high IgG titer alone confirms both humoral and cell-mediated immunity because antibodies require T cell help",
+        "B) Group A shows high serum IgG (humoral response, indicating B cell activation and class switching), high IFN-γ ELISPOT spots (CD4+ Th1 cell-mediated response), and significant in vivo cytotoxicity (CD8+ CTL activity) — collectively demonstrating both humoral and cell-mediated immunity",
+        "C) Group A's lower responses compared to Group C (live pathogen) indicate vaccine failure",
+        "D) The ELISPOT and cytotoxicity assays measure innate immune responses and are not relevant to adaptive immunity assessment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is a well-designed vaccine immunogenicity study with three complementary assays measuring different arms of adaptive immunity. (1) ELISA for serum IgG: Group A's titer of 25,600 (vs <100 in adjuvant control) demonstrates a robust humoral response — antigen-specific B cells have been activated, undergone class switching to IgG (requiring CD4+ T cell help), and differentiated into antibody-secreting plasma cells. (2) IFN-γ ELISPOT: 450 spots/10⁶ cells in Group A (vs 30 in control) demonstrates antigen-specific T cell responses. IFN-γ is the signature cytokine of Th1 CD4+ T cells and CD8+ CTLs, indicating cell-mediated immunity. (3) In vivo cytotoxicity assay: 62% specific killing in Group A (vs 5% in control) directly measures CD8+ cytotoxic T lymphocyte function — the ability to kill target cells presenting the vaccine antigen on MHC I. Together, these three assays provide strong evidence for both humoral (IgG) and cell-mediated (Th1 + CTL) adaptive immunity. Group C (live pathogen) shows higher responses, which is expected since live pathogens typically induce stronger immunity than subunit vaccines, but Group A's responses are still robust and significantly above the adjuvant-only control.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 43,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    }
+  ]
+}

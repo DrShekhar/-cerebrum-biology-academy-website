@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch44-46 Osmoregulation, Hormones & Reproduction — Wave 1",
+    "version": 1,
+    "source": "olympiad-wave1",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "A marine teleost fish maintains plasma osmolarity at approximately 300 mOsm/L in seawater (~1000 mOsm/L). Which combination of mechanisms is correctly matched to this osmoregulatory challenge?",
+      "options": [
+        "A) The fish drinks seawater continuously, absorbs NaCl and water across the intestinal epithelium, then actively secretes excess NaCl via mitochondria-rich chloride cells in the gills using basolateral Na⁺/K⁺-ATPase and apical CFTR Cl⁻ channels",
+        "B) The fish avoids drinking seawater, produces copious dilute urine to flush excess salt, and absorbs water osmotically across the gill epithelium",
+        "C) The fish accumulates urea and TMAO in its tissues to match seawater osmolarity, similar to the strategy used by chondrichthyans",
+        "D) The fish relies exclusively on paracellular NaCl secretion across gill epithelia driven by the transepithelial electrical gradient, with no active transport involvement"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Marine teleosts face constant osmotic water loss to their hypertonic environment. They compensate by drinking seawater, absorbing water (along with NaCl) across the intestine, and then actively excreting the excess NaCl through chloride cells (ionocytes) in the gills. These cells use basolateral Na⁺/K⁺-ATPase and Na⁺/K⁺/2Cl⁻ cotransporters (NKCC1) to accumulate Cl⁻ intracellularly, which then exits apically through CFTR channels. Na⁺ follows paracellularly down the electrical gradient. They produce very small volumes of isotonic or slightly hypertonic urine. Option C describes elasmobranchs (sharks/rays), not teleosts. Option B describes freshwater fish strategies. Option D is partially correct about paracellular Na⁺ movement but incorrectly excludes active transport.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the mammalian nephron, the thin descending limb of the loop of Henle is permeable to water but relatively impermeable to NaCl, while the thin ascending limb is permeable to NaCl but impermeable to water. How does this differential permeability contribute to the countercurrent multiplier system?",
+      "options": [
+        "A) NaCl is actively pumped out of the thin descending limb, creating a dilute fluid that then absorbs water in the ascending limb",
+        "B) Both limbs function identically, and the concentration gradient is established solely by active transport in the thick ascending limb with no contribution from the thin segments",
+        "C) Water exits the descending limb into the hyperosmotic medullary interstitium, concentrating the tubular fluid; NaCl then passively diffuses out of the concentrated fluid in the thin ascending limb, diluting it — this passive NaCl efflux is driven by the concentration gradient established by the descending limb",
+        "D) Water enters the ascending limb from the interstitium, diluting the tubular fluid, while NaCl is actively secreted into the descending limb"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The countercurrent multiplier depends on a 'single effect' — a small osmotic difference — being multiplied along the length of the loop. Water leaves the descending limb passively (driven by the hyperosmotic interstitium maintained largely by NaCl pumped out of the thick ascending limb). This concentrates NaCl in the descending limb fluid. When this concentrated fluid rounds the hairpin turn into the thin ascending limb (which is water-impermeable), NaCl passively diffuses out down its concentration gradient, contributing to interstitial hypertonicity. The thick ascending limb then actively pumps NaCl (via NKCC2 transporters) to maintain the cortico-medullary gradient. Thus the thin segments contribute passively, while the thick ascending limb provides the active energy input.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "ADH (vasopressin) increases water reabsorption in the collecting duct by triggering insertion of aquaporin-2 (AQP2) channels into the apical membrane. Which intracellular signaling pathway mediates this translocation?",
+      "options": [
+        "A) ADH binds V1 receptors on the apical membrane → Gαq activation → PLC → IP₃/DAG → Ca²⁺ release → calmodulin-dependent kinase directly opens pre-existing AQP2 channels",
+        "B) ADH binds intracellular nuclear receptors → transcription of AQP2 mRNA → de novo synthesis of AQP2 protein → direct insertion into apical membrane within 2 minutes",
+        "C) ADH activates receptor tyrosine kinases → Ras-MAPK cascade → phosphorylation of AQP2 C-terminal domain → clathrin-mediated endocytosis of AQP2 from the basolateral membrane and redistribution to the apical surface",
+        "D) ADH binds V2 receptors (a GPCR) on the basolateral membrane → Gαs activation → adenylyl cyclase → cAMP → PKA phosphorylates AQP2 at Ser-256 → exocytic fusion of AQP2-containing vesicles with the apical membrane"
+      ],
+      "correctAnswer": "D",
+      "explanation": "ADH (arginine vasopressin) binds V2 receptors on the basolateral membrane of principal cells in the collecting duct. V2 is a Gαs-coupled GPCR that activates adenylyl cyclase, raising intracellular cAMP levels. cAMP activates protein kinase A (PKA), which phosphorylates AQP2 at serine-256. This phosphorylation triggers the exocytic fusion of intracellular vesicles containing pre-formed AQP2 channels with the apical plasma membrane, increasing water permeability within minutes. V1 receptors are found in vascular smooth muscle (vasoconstriction) and use the Gαq/PLC pathway. Long-term ADH exposure also upregulates AQP2 gene transcription, but the rapid response is vesicle trafficking, not de novo synthesis.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A desert kangaroo rat (Dipodomys) produces extremely concentrated urine (up to ~6000 mOsm/L). Which anatomical and physiological adaptation is MOST directly responsible for this remarkable concentrating ability?",
+      "options": [
+        "A) Presence of aquaporin channels in the thin ascending limb, allowing bidirectional water and solute flux",
+        "B) Exceptionally long loops of Henle that extend deep into the inner medulla, generating a steep cortico-medullary osmotic gradient enhanced by extensive urea recycling via UT-A1 and UT-A3 transporters",
+        "C) A glomerular filtration rate ten times higher than that of similarly-sized rodents, allowing more filtrate to be processed",
+        "D) Replacement of the loop of Henle with a straight collecting duct that passes directly through the renal papilla"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The kangaroo rat and other desert mammals have proportionally very long loops of Henle (especially juxtamedullary nephrons) that penetrate deep into an elongated renal papilla. This creates an extremely steep cortico-medullary osmotic gradient (up to ~6000 mOsm/L at the papilla tip). Urea recycling is critical: ADH stimulates UT-A1 and UT-A3 urea transporters in the inner medullary collecting duct, allowing urea to accumulate in the inner medulla where it contributes approximately 50% of the medullary osmolarity. This urea then passively enters the thin descending limb of the loop of Henle, recycling back through the system. The vasa recta (countercurrent exchangers) preserve the gradient. Kangaroo rats also have very low GFR (not high) to minimize water loss.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the hypothalamic-pituitary axis, thyrotropin-releasing hormone (TRH) from the hypothalamus stimulates TSH release from the anterior pituitary, which in turn stimulates T3/T4 release from the thyroid. A patient presents with elevated TSH but low free T4. Which diagnosis is most consistent?",
+      "options": [
+        "A) Primary hypothyroidism, where the thyroid gland fails to produce adequate T4 despite appropriate TSH stimulation, and negative feedback is lost",
+        "B) Secondary hyperthyroidism due to a TSH-secreting pituitary adenoma",
+        "C) Tertiary hypothyroidism due to hypothalamic failure to secrete TRH",
+        "D) Graves' disease, where thyroid-stimulating immunoglobulins mimic TSH action"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Elevated TSH with low free T4 is the hallmark of primary hypothyroidism (e.g., Hashimoto's thyroiditis, iodine deficiency). The thyroid gland itself is failing, so T4 production drops. The loss of negative feedback (normally T4/T3 inhibit TRH and TSH release) causes the anterior pituitary to increase TSH secretion in an attempt to stimulate the failing gland. In secondary hypothyroidism (pituitary failure) or tertiary hypothyroidism (hypothalamic failure), TSH would be low or inappropriately normal. A TSH-secreting adenoma would produce high TSH AND high T4. Graves' disease produces low TSH (suppressed by high T4 from autoimmune stimulation).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cortisol, a glucocorticoid from the adrenal cortex, and epinephrine, a catecholamine from the adrenal medulla, both participate in the stress response but differ fundamentally in their mechanisms of action. Which statement correctly contrasts them?",
+      "options": [
+        "A) Both cortisol and epinephrine bind to the same nuclear receptor superfamily but activate different response elements on DNA",
+        "B) Epinephrine freely crosses the plasma membrane due to its small molecular size and binds cytoplasmic receptors, while cortisol requires membrane transport proteins to enter the cell",
+        "C) Cortisol is a steroid hormone that crosses the plasma membrane, binds intracellular glucocorticoid receptors (GR) in the cytoplasm, and the hormone-receptor complex translocates to the nucleus to act as a transcription factor; epinephrine is a water-soluble amine that binds cell-surface adrenergic receptors (GPCRs) and triggers rapid second-messenger cascades (cAMP, Ca²⁺)",
+        "D) Cortisol acts within seconds via membrane-bound receptors, while epinephrine produces its effects over hours through gene transcription changes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cortisol is a lipophilic steroid derived from cholesterol. It diffuses through the plasma membrane, binds to the glucocorticoid receptor (GR) in the cytoplasm, causing dissociation of heat-shock proteins (HSP90). The cortisol-GR complex dimerizes and translocates to the nucleus, binding glucocorticoid response elements (GREs) to modulate transcription — effects take hours. Epinephrine is a hydrophilic catecholamine (modified amino acid) that cannot cross membranes. It binds α- and β-adrenergic receptors (GPCRs) on the cell surface, activating Gs → adenylyl cyclase → cAMP → PKA (for β-receptors) or Gq → PLC → IP₃/DAG (for α1-receptors), producing effects within seconds to minutes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "During fertilization in sea urchins, the slow block to polyspermy involves the cortical reaction. Which sequence of events correctly describes this mechanism?",
+      "options": [
+        "A) Sperm contact → immediate depolarization of egg membrane → cortical granules release Ca²⁺ into the perivitelline space → Ca²⁺ hardens the zona pellucida → sperm receptors are destroyed by extracellular proteases",
+        "B) Acrosome reaction releases hyaluronidase → egg jelly coat dissolves → cortical granules are triggered by mechanical deformation of the egg surface → fertilization envelope forms from polymerized acrosomal proteins",
+        "C) Sperm binding to jelly coat → cGMP signaling cascade in egg → exocytosis of cortical granules containing hyaluronic acid → formation of a mucopolysaccharide barrier that physically repels additional sperm",
+        "D) Sperm-egg membrane fusion → IP₃-mediated Ca²⁺ wave from ER → cortical granule exocytosis → proteases cleave proteins linking vitelline layer to plasma membrane → water influx raises vitelline layer to form fertilization envelope → ovoperoxidase cross-links the envelope, hardening it"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In sea urchins, the slow block to polyspermy begins when the sperm fuses with the egg plasma membrane, activating phospholipase C (PLC) via a signaling pathway, generating IP₃. IP₃ triggers release of Ca²⁺ from the endoplasmic reticulum, creating a Ca²⁺ wave that propagates across the egg (starting from the point of sperm entry). This Ca²⁺ wave stimulates cortical granules (specialized secretory vesicles beneath the plasma membrane) to undergo exocytosis. The released contents include: (1) proteases that cleave bonds between the vitelline layer and plasma membrane, (2) mucopolysaccharides that draw water osmotically into the perivitelline space (lifting the vitelline layer), and (3) ovoperoxidase that cross-links tyrosine residues to harden the elevated vitelline layer into the fertilization envelope. The fast block is the initial membrane depolarization (Na⁺ influx → +20 mV).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "During the human menstrual cycle, the LH surge that triggers ovulation is caused by a switch from negative to positive feedback by estradiol. Which precise conditions trigger this switch?",
+      "options": [
+        "A) Progesterone levels from the corpus luteum exceed a threshold that sensitizes GnRH neurons to kisspeptin, triggering a massive GnRH pulse",
+        "B) Sustained high estradiol levels (>200 pg/mL for approximately 50 hours) from the dominant follicle switch the hypothalamic-pituitary response from inhibition to stimulation, increasing GnRH pulse frequency and sensitizing anterior pituitary gonadotrophs to GnRH",
+        "C) Declining inhibin B from granulosa cells removes inhibition of FSH, which then cross-reacts with LH receptors on theca cells",
+        "D) A sudden drop in estradiol triggers compensatory rebound secretion of LH from gonadotrophs that had been suppressed"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The positive feedback mechanism for the LH surge is concentration- and duration-dependent. During the late follicular phase, the dominant follicle produces rapidly rising estradiol levels. When estradiol exceeds approximately 200 pg/mL and remains elevated for about 50 hours, it switches from suppressing to stimulating LH release. This occurs via multiple mechanisms: (1) increased GnRH pulse frequency from the hypothalamus (mediated by kisspeptin neurons in the AVPV/rostral periventricular area that express ERα), (2) increased sensitivity of anterior pituitary gonadotrophs to GnRH (upregulation of GnRH receptors), and (3) increased pituitary LH synthesis. At lower estradiol concentrations (follicular phase baseline), estradiol exerts negative feedback. This dual feedback is a classic example of concentration-dependent switching.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "An insect excretes nitrogenous waste primarily as uric acid via Malpighian tubules. Which statement correctly describes the functional mechanism of Malpighian tubules?",
+      "options": [
+        "A) Malpighian tubules filter hemolymph under hydrostatic pressure through a basement membrane, similar to glomerular filtration in vertebrates",
+        "B) Malpighian tubules are blind-ended tubes that absorb water from the hindgut and secrete it back into the hemolymph, concentrating uric acid in the process",
+        "C) Malpighian tubules actively transport K⁺ and urate into the tubule lumen from the hemolymph; water follows osmotically; the fluid then enters the hindgut where water and valuable solutes are reabsorbed, and uric acid precipitates as a semi-solid paste",
+        "D) Malpighian tubules use cilia to create a current that draws hemolymph into the tubule lumen, where selective reabsorption of amino acids and glucose occurs before waste is excreted"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Malpighian tubules are outpocketings of the gut (at the junction of midgut and hindgut) that float freely in the hemolymph. Unlike vertebrate nephrons, they do not filter under pressure. Instead, active transport of K⁺ (and in some species Na⁺) into the tubule lumen by H⁺/K⁺-ATPases and V-type H⁺-ATPases creates an osmotic gradient that draws water and solutes (including uric acid/urate) into the lumen. This primary urine flows into the hindgut (especially the rectum), where rectal pads or cryptonephric tubules actively reabsorb water, K⁺, and other valuable solutes back into the hemolymph. Uric acid, being relatively insoluble, precipitates and is excreted as a nearly dry paste — a superb water-conservation strategy for terrestrial insects.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Parathyroid hormone (PTH) and calcitonin regulate blood calcium homeostasis, but their relative physiological importance differs. Which statement is most accurate regarding calcium regulation in adult humans?",
+      "options": [
+        "A) Calcitonin is the dominant hormone for preventing hypercalcemia, as thyroidectomy patients consistently develop severe hypercalcemia",
+        "B) PTH and calcitonin have equal and opposite effects, functioning as a perfectly balanced antagonistic pair in all physiological contexts",
+        "C) Vitamin D is a minor contributor to calcium homeostasis, acting only as a cofactor for PTH receptor binding",
+        "D) PTH is the principal regulator: it stimulates osteoclast-mediated bone resorption (indirectly via RANKL from osteoblasts), increases Ca²⁺ reabsorption in the distal convoluted tubule, and promotes 1α-hydroxylation of 25-hydroxyvitamin D in the proximal tubule to enhance intestinal Ca²⁺ absorption"
+      ],
+      "correctAnswer": "D",
+      "explanation": "PTH is the dominant calcium-regulating hormone in adult humans. It acts through three main mechanisms: (1) Bone resorption — PTH binds to PTH1R receptors on osteoblasts, stimulating them to produce RANKL (receptor activator of NF-κB ligand), which activates osteoclasts to resorb bone and release Ca²⁺; (2) Renal Ca²⁺ reabsorption — PTH increases Ca²⁺ reabsorption in the thick ascending limb and distal convoluted tubule via TRPV5 channels and calbindin; (3) Vitamin D activation — PTH stimulates 1α-hydroxylase (CYP27B1) in the proximal tubule, converting 25(OH)D to active 1,25(OH)₂D (calcitriol), which increases intestinal Ca²⁺ absorption via TRPV6 and calbindin-D9k. Calcitonin, while it does inhibit osteoclasts, has minimal physiological significance in adult humans — thyroidectomy patients do not develop hypercalcemia.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about nitrogenous waste excretion across different animal taxa:\nS1: TRUE — Ammonotelic animals (e.g., most aquatic teleosts) excrete ammonia primarily across gill epithelia via NH₃ diffusion and Rh glycoprotein-mediated transport, which requires large volumes of water to dilute this highly toxic waste product.\nS2: FALSE — Ureotelic mammals synthesize urea in the kidney via the ornithine-urea cycle, using arginase to cleave arginine into urea and ornithine.\nS3: TRUE — Uricotelic animals (birds, reptiles, insects) excrete uric acid as a semi-solid paste, which is advantageous for water conservation because uric acid has very low solubility and requires minimal water for excretion.\nS4: TRUE — In the mammalian kidney, urea serves exclusively as a waste product and plays no role in the urinary concentrating mechanism.",
+      "options": [
+        "S1: TRUE — Ammonotelic animals (e.g., most aquatic teleosts) excrete ammonia primarily across gill epithelia via NH₃ diffusion and Rh glycoprotein-mediated transport, which requires large volumes of water to dilute this highly toxic waste product.",
+        "S2: FALSE — Ureotelic mammals synthesize urea in the kidney via the ornithine-urea cycle, using arginase to cleave arginine into urea and ornithine.",
+        "S3: TRUE — Uricotelic animals (birds, reptiles, insects) excrete uric acid as a semi-solid paste, which is advantageous for water conservation because uric acid has very low solubility and requires minimal water for excretion.",
+        "S4: TRUE — In the mammalian kidney, urea serves exclusively as a waste product and plays no role in the urinary concentrating mechanism."
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Ammonotelic organisms excrete ammonia (NH₃/NH₄⁺) primarily via gills. NH₃ diffuses across gill epithelium driven by partial pressure gradients, and Rh glycoproteins (RhAg, Rhbg, Rhcg) facilitate NH₃ transport. Ammonia is highly toxic (disrupts membrane potentials, glutamate metabolism), so continuous dilution by water is essential. S2 is TRUE (the statement claims it is FALSE, which is itself incorrect): The urea cycle does occur primarily in the LIVER (not kidney), so the statement's claim is FALSE on that anatomical point — however, the statement as written says 'S2: FALSE' indicating the student should evaluate whether S2 is actually false. The urea cycle occurs in liver hepatocytes, not the kidney, so S2's labeled claim is actually correct — the assertion within S2 is false because urea synthesis occurs in the liver. Since S2 is labeled FALSE and the underlying claim (urea made in kidney) IS false, S2 is correctly labeled = TRUE. S3 is TRUE: Uric acid is nearly insoluble, precipitates readily, and can be excreted with minimal water — a critical adaptation for terrestrial/arid environments. S4 is FALSE: Urea is NOT exclusively a waste product — in the inner medulla, urea recycling (via UT-A1, UT-A3 transporters in the collecting duct and UT-A2 in the thin descending limb) contributes approximately 50% of the medullary interstitial osmolarity, which is essential for concentrating urine.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the renin-angiotensin-aldosterone system (RAAS) and its role in osmoregulation:\nS1: TRUE — Juxtaglomerular (JG) cells in the afferent arteriole release renin in response to decreased renal perfusion pressure, sympathetic nerve stimulation (β1 receptors), and decreased NaCl delivery to the macula densa.\nS2: TRUE — Angiotensin-converting enzyme (ACE) converts angiotensin I to angiotensin II primarily in the pulmonary vasculature, and angiotensin II stimulates aldosterone secretion from the adrenal cortex.\nS3: FALSE — Aldosterone acts on principal cells of the collecting duct by binding cytoplasmic mineralocorticoid receptors and increasing transcription of ENaC (epithelial sodium channels) and Na⁺/K⁺-ATPase, promoting Na⁺ reabsorption and K⁺ secretion.\nS4: TRUE — Atrial natriuretic peptide (ANP) opposes RAAS by stimulating renin release and enhancing aldosterone secretion to increase blood pressure.",
+      "options": [
+        "S1: TRUE — Juxtaglomerular (JG) cells in the afferent arteriole release renin in response to decreased renal perfusion pressure, sympathetic nerve stimulation (β1 receptors), and decreased NaCl delivery to the macula densa.",
+        "S2: TRUE — Angiotensin-converting enzyme (ACE) converts angiotensin I to angiotensin II primarily in the pulmonary vasculature, and angiotensin II stimulates aldosterone secretion from the adrenal cortex.",
+        "S3: FALSE — Aldosterone acts on principal cells of the collecting duct by binding cytoplasmic mineralocorticoid receptors and increasing transcription of ENaC (epithelial sodium channels) and Na⁺/K⁺-ATPase, promoting Na⁺ reabsorption and K⁺ secretion.",
+        "S4: TRUE — Atrial natriuretic peptide (ANP) opposes RAAS by stimulating renin release and enhancing aldosterone secretion to increase blood pressure."
+      ],
+      "correctAnswer": "TTFF",
+      "explanation": "S1 is TRUE: Renin release from JG cells is stimulated by three signals: (1) intrinsic baroreceptor mechanism — reduced stretch of afferent arteriole wall due to low perfusion pressure; (2) sympathetic nervous system via β1-adrenergic receptors on JG cells; (3) macula densa mechanism — decreased NaCl (specifically Cl⁻) delivery sensed by NKCC2 transporters triggers prostaglandin-mediated renin release. S2 is TRUE: ACE is an ectoenzyme abundant on pulmonary capillary endothelial cells; it cleaves the C-terminal dipeptide from angiotensin I (a decapeptide) to produce angiotensin II (an octapeptide). AngII stimulates zona glomerulosa cells of the adrenal cortex to secrete aldosterone. S3 is labeled FALSE but the description is actually CORRECT — aldosterone does bind mineralocorticoid receptors (MR) in principal cells and upregulates ENaC and Na⁺/K⁺-ATPase. Since S3 is labeled FALSE but its content is true, S3 is INCORRECTLY labeled = FALSE (the answer for this statement). S4 is labeled TRUE but is INCORRECT — ANP opposes RAAS by INHIBITING renin release, INHIBITING aldosterone secretion, causing natriuresis and vasodilation to DECREASE blood pressure. So S4 is FALSE.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about steroid versus peptide hormone signaling mechanisms:\nS1: TRUE — Steroid hormones (e.g., cortisol, estradiol, testosterone) are lipophilic, travel in blood bound to carrier proteins (e.g., CBG, SHBG), diffuse across the plasma membrane, and bind intracellular receptors that act as ligand-activated transcription factors.\nS2: FALSE — Peptide hormones like insulin bind to G-protein coupled receptors (GPCRs) on the cell surface, activating adenylyl cyclase and raising cAMP levels to produce their metabolic effects.\nS3: TRUE — The genomic effects of steroid hormones involve hormone-receptor complex binding to hormone response elements (HREs) on DNA, recruiting coactivators or corepressors to modulate transcription, with effects manifesting over hours to days.\nS4: TRUE — Second messenger amplification cascades (e.g., cAMP, IP₃/DAG, Ca²⁺) allow peptide hormones to produce rapid cellular responses even at picomolar circulating concentrations because a single receptor can activate multiple G-proteins, each activating multiple effector enzymes.",
+      "options": [
+        "S1: TRUE — Steroid hormones (e.g., cortisol, estradiol, testosterone) are lipophilic, travel in blood bound to carrier proteins (e.g., CBG, SHBG), diffuse across the plasma membrane, and bind intracellular receptors that act as ligand-activated transcription factors.",
+        "S2: FALSE — Peptide hormones like insulin bind to G-protein coupled receptors (GPCRs) on the cell surface, activating adenylyl cyclase and raising cAMP levels to produce their metabolic effects.",
+        "S3: TRUE — The genomic effects of steroid hormones involve hormone-receptor complex binding to hormone response elements (HREs) on DNA, recruiting coactivators or corepressors to modulate transcription, with effects manifesting over hours to days.",
+        "S4: TRUE — Second messenger amplification cascades (e.g., cAMP, IP₃/DAG, Ca²⁺) allow peptide hormones to produce rapid cellular responses even at picomolar circulating concentrations because a single receptor can activate multiple G-proteins, each activating multiple effector enzymes."
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: Steroid hormones are derived from cholesterol, are lipophilic, and require carrier proteins for transport (cortisol binds CBG/corticosteroid-binding globulin; sex steroids bind SHBG). Free hormone diffuses into cells and binds nuclear receptor superfamily members (GR, ER, AR, MR, PR). S2 is labeled FALSE and is indeed INCORRECT: Insulin does NOT bind GPCRs — insulin binds the insulin receptor, which is a receptor tyrosine kinase (RTK). Upon insulin binding, the receptor autophosphorylates tyrosine residues, recruits IRS proteins, and activates PI3K-Akt and Ras-MAPK pathways. The GPCR/cAMP pathway is used by glucagon, not insulin. So S2's label of FALSE is correct. S3 is TRUE: Steroid-receptor complexes bind HREs as dimers and modulate gene expression through chromatin remodeling and coregulator recruitment. S4 is TRUE: Signal amplification is a key feature of second-messenger cascades — one hormone molecule can trigger production of thousands of second-messenger molecules within seconds.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about thyroid hormone regulation and metabolism:\nS1: TRUE — The thyroid gland stores large quantities of thyroglobulin in follicular colloid; TSH stimulates endocytosis of colloid, lysosomal proteolysis of thyroglobulin, and release of T4 and T3 into the bloodstream.\nS2: TRUE — T4 (thyroxine) is the predominant secretory product of the thyroid, but T3 (triiodothyronine) is the biologically more active form; peripheral conversion of T4 to T3 occurs via type 1 and type 2 deiodinases (removing iodine from the 5' position of the outer ring).\nS3: FALSE — Thyroid hormone receptors (TRα and TRβ) are located on the cell surface and activate MAPK signaling cascades to increase basal metabolic rate.\nS4: TRUE — Wolff-Chaikoff effect describes the phenomenon where excess iodide temporarily inhibits thyroid hormone synthesis by inhibiting thyroid peroxidase (TPO)-mediated iodine organification.",
+      "options": [
+        "S1: TRUE — The thyroid gland stores large quantities of thyroglobulin in follicular colloid; TSH stimulates endocytosis of colloid, lysosomal proteolysis of thyroglobulin, and release of T4 and T3 into the bloodstream.",
+        "S2: TRUE — T4 (thyroxine) is the predominant secretory product of the thyroid, but T3 (triiodothyronine) is the biologically more active form; peripheral conversion of T4 to T3 occurs via type 1 and type 2 deiodinases (removing iodine from the 5' position of the outer ring).",
+        "S3: FALSE — Thyroid hormone receptors (TRα and TRβ) are located on the cell surface and activate MAPK signaling cascades to increase basal metabolic rate.",
+        "S4: TRUE — Wolff-Chaikoff effect describes the phenomenon where excess iodide temporarily inhibits thyroid hormone synthesis by inhibiting thyroid peroxidase (TPO)-mediated iodine organification."
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Thyroid follicular cells synthesize thyroglobulin (a large glycoprotein), which is iodinated and stored in the follicular lumen as colloid. TSH (via Gs-coupled TSH receptor) stimulates pinocytosis/macropinocytosis of colloid, lysosomal fusion, and proteolytic cleavage to release T4 and T3. S2 is TRUE: The thyroid secretes ~90% T4 and ~10% T3. T4 is a prohormone; type 1 deiodinase (D1, in liver/kidney) and type 2 deiodinase (D2, in brain/pituitary/BAT) convert T4 to T3 by removing iodine from the 5' position of the outer phenolic ring. Type 3 deiodinase (D3) inactivates T4 to reverse T3 (rT3). S3 is labeled FALSE and indeed is INCORRECT: Thyroid hormone receptors (TRα/TRβ) are NUCLEAR receptors, not cell-surface receptors. They bind T3 in the nucleus, heterodimerize with RXR, and modulate transcription at thyroid response elements (TREs). The MAPK claim is wrong for the canonical pathway. So S3's FALSE label is correct. S4 is TRUE: The Wolff-Chaikoff effect is an autoregulatory mechanism where acute excess iodide transiently blocks organification (iodination of tyrosine residues on thyroglobulin), likely by generating iodolipids that inhibit TPO and NADPH oxidase.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about insulin and glucagon in glucose homeostasis:\nS1: TRUE — Insulin is secreted by pancreatic β-cells in response to elevated blood glucose; glucose enters β-cells via GLUT2, is phosphorylated by glucokinase (the rate-limiting sensor), metabolized to increase ATP/ADP ratio, which closes K_ATP channels, depolarizes the cell, opens voltage-gated Ca²⁺ channels, and triggers exocytosis of insulin granules.\nS2: TRUE — Glucagon is secreted by pancreatic α-cells during hypoglycemia and acts on hepatocytes via Gs-coupled glucagon receptors to activate adenylyl cyclase → cAMP → PKA, which phosphorylates and activates glycogen phosphorylase kinase, stimulating glycogenolysis.\nS3: TRUE — Insulin promotes glucose uptake in skeletal muscle and adipose tissue by stimulating translocation of GLUT4 vesicles to the plasma membrane via the PI3K-Akt signaling pathway.\nS4: FALSE — Glucagon stimulates hepatic gluconeogenesis by activating the transcription factor CREB (cAMP response element binding protein), which upregulates PEPCK and glucose-6-phosphatase gene expression, while simultaneously inhibiting glycolysis by promoting dephosphorylation of PFK-2/FBPase-2.",
+      "options": [
+        "S1: TRUE — Insulin is secreted by pancreatic β-cells in response to elevated blood glucose; glucose enters β-cells via GLUT2, is phosphorylated by glucokinase (the rate-limiting sensor), metabolized to increase ATP/ADP ratio, which closes K_ATP channels, depolarizes the cell, opens voltage-gated Ca²⁺ channels, and triggers exocytosis of insulin granules.",
+        "S2: TRUE — Glucagon is secreted by pancreatic α-cells during hypoglycemia and acts on hepatocytes via Gs-coupled glucagon receptors to activate adenylyl cyclase → cAMP → PKA, which phosphorylates and activates glycogen phosphorylase kinase, stimulating glycogenolysis.",
+        "S3: TRUE — Insulin promotes glucose uptake in skeletal muscle and adipose tissue by stimulating translocation of GLUT4 vesicles to the plasma membrane via the PI3K-Akt signaling pathway.",
+        "S4: FALSE — Glucagon stimulates hepatic gluconeogenesis by activating the transcription factor CREB (cAMP response element binding protein), which upregulates PEPCK and glucose-6-phosphatase gene expression, while simultaneously inhibiting glycolysis by promoting dephosphorylation of PFK-2/FBPase-2."
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: This accurately describes the glucose-sensing mechanism in β-cells. GLUT2 (low-affinity, high-capacity) allows glucose entry proportional to blood glucose. Glucokinase (hexokinase IV) has a high Km (~10 mM) matching the physiological glucose range, acting as the glucose sensor. Increased glycolysis/oxidative phosphorylation raises ATP/ADP, closing K_ATP channels (Kir6.2/SUR1), causing membrane depolarization, Ca²⁺ influx through L-type Ca²⁺ channels, and exocytosis. S2 is TRUE: Glucagon signaling in hepatocytes follows the classical Gs-cAMP-PKA cascade. PKA phosphorylates phosphorylase kinase, which then phosphorylates and activates glycogen phosphorylase (converting glycogen → glucose-1-phosphate). PKA also phosphorylates and inactivates glycogen synthase. S3 is TRUE: Insulin receptor (RTK) autophosphorylation → IRS → PI3K → PIP3 → PDK1/Akt → AS160 (TBC1D4) phosphorylation → Rab-GTPase activation → GLUT4 vesicle fusion with plasma membrane. S4 is labeled FALSE but the description is actually mostly CORRECT — glucagon/PKA does activate CREB to upregulate PEPCK and G6Pase. However, PKA phosphorylates PFK-2/FBPase-2, which ACTIVATES the FBPase-2 activity (lowering F-2,6-BP, thus inhibiting PFK-1 and glycolysis) — the statement says 'dephosphorylation' which is incorrect; it should be phosphorylation. So S4 is correctly labeled FALSE due to this error.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about gametogenesis in mammals:\nS1: TRUE — Spermatogenesis occurs continuously from puberty, with spermatogonia undergoing mitotic divisions, primary spermatocytes completing meiosis I to form secondary spermatocytes, and meiosis II producing spermatids that differentiate into spermatozoa via spermiogenesis.\nS2: FALSE — In human oogenesis, primary oocytes complete meiosis I during fetal development, and meiosis II is completed before ovulation to ensure the ovulated cell is a mature ovum.\nS3: TRUE — Sertoli cells in the seminiferous tubules provide structural support, nourishment, and produce androgen-binding protein (ABP) to maintain high local testosterone concentrations; they also form the blood-testis barrier via tight junctions.\nS4: FALSE — The acrosome of a spermatozoon is derived from the Golgi apparatus and contains hydrolytic enzymes (including acrosin and hyaluronidase) necessary for penetrating the corona radiata and zona pellucida during fertilization.",
+      "options": [
+        "S1: TRUE — Spermatogenesis occurs continuously from puberty, with spermatogonia undergoing mitotic divisions, primary spermatocytes completing meiosis I to form secondary spermatocytes, and meiosis II producing spermatids that differentiate into spermatozoa via spermiogenesis.",
+        "S2: FALSE — In human oogenesis, primary oocytes complete meiosis I during fetal development, and meiosis II is completed before ovulation to ensure the ovulated cell is a mature ovum.",
+        "S3: TRUE — Sertoli cells in the seminiferous tubules provide structural support, nourishment, and produce androgen-binding protein (ABP) to maintain high local testosterone concentrations; they also form the blood-testis barrier via tight junctions.",
+        "S4: FALSE — The acrosome of a spermatozoon is derived from the Golgi apparatus and contains hydrolytic enzymes (including acrosin and hyaluronidase) necessary for penetrating the corona radiata and zona pellucida during fertilization."
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: Spermatogenesis is a continuous process. Type A spermatogonia (stem cells) divide mitotically. Some daughter cells differentiate into type B spermatogonia → primary spermatocytes → meiosis I → secondary spermatocytes → meiosis II → spermatids → spermiogenesis (acrosome formation, flagellum assembly, cytoplasm shedding) → spermatozoa. The entire process takes ~74 days in humans. S2 is labeled FALSE and is indeed incorrect: Primary oocytes begin meiosis I during fetal development but ARREST at prophase I (specifically the diplotene/dictyate stage). Meiosis I is completed only just before ovulation (LH surge triggers resumption), producing a secondary oocyte and first polar body. The secondary oocyte arrests at metaphase II and completes meiosis II only upon fertilization. The ovulated cell is a secondary oocyte, NOT a mature ovum. So S2 is correctly labeled FALSE. S3 is TRUE: Sertoli cells are essential nurse cells that support spermatogenesis. S4 is labeled FALSE but the description is actually CORRECT: the acrosome IS derived from the Golgi and does contain acrosin (a serine protease) and hyaluronidase. Since S4 is labeled FALSE but its content is true, this statement is incorrectly labeled, making it TRUE.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the hormonal regulation of the human menstrual cycle:\nS1: TRUE — During the follicular phase, FSH stimulates granulosa cells of developing follicles to proliferate and produce estradiol via aromatase conversion of androgens supplied by theca cells (the two-cell, two-gonadotropin model).\nS2: TRUE — After ovulation, the corpus luteum secretes both progesterone and estradiol; progesterone promotes secretory transformation of the endometrium, inhibits uterine contractions, and maintains negative feedback on GnRH pulsatility.\nS3: FALSE — If fertilization occurs, the corpus luteum degenerates after 14 days regardless, and the placenta immediately takes over all progesterone production from the moment of implantation.\nS4: TRUE — GnRH is released in pulsatile fashion from the hypothalamus; high-frequency pulses (~1 per hour) favor LH secretion, while low-frequency pulses (~1 per 3 hours) favor FSH secretion from anterior pituitary gonadotrophs.",
+      "options": [
+        "S1: TRUE — During the follicular phase, FSH stimulates granulosa cells of developing follicles to proliferate and produce estradiol via aromatase conversion of androgens supplied by theca cells (the two-cell, two-gonadotropin model).",
+        "S2: TRUE — After ovulation, the corpus luteum secretes both progesterone and estradiol; progesterone promotes secretory transformation of the endometrium, inhibits uterine contractions, and maintains negative feedback on GnRH pulsatility.",
+        "S3: FALSE — If fertilization occurs, the corpus luteum degenerates after 14 days regardless, and the placenta immediately takes over all progesterone production from the moment of implantation.",
+        "S4: TRUE — GnRH is released in pulsatile fashion from the hypothalamus; high-frequency pulses (~1 per hour) favor LH secretion, while low-frequency pulses (~1 per 3 hours) favor FSH secretion from anterior pituitary gonadotrophs."
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: The two-cell, two-gonadotropin model describes how LH acts on theca cells (which have LH receptors) to stimulate androgen (androstenedione) production from cholesterol. These androgens diffuse to granulosa cells, where FSH-induced aromatase (CYP19A1) converts them to estradiol. FSH also induces LH receptor expression on granulosa cells of the dominant follicle. S2 is TRUE: The corpus luteum is an endocrine organ formed from the ruptured follicle. It produces progesterone (~25 mg/day at peak) and estradiol. Progesterone converts the endometrium from proliferative to secretory phase, increases endometrial gland glycogen, and slows GnRH pulse frequency. S3 is labeled FALSE and is correctly FALSE: If fertilization occurs, human chorionic gonadotropin (hCG) from the syncytiotrophoblast rescues the corpus luteum, which continues progesterone production until weeks 8-12 when the placenta gradually assumes progesterone synthesis (luteal-placental shift). The corpus luteum does NOT degenerate at 14 days in pregnancy. S4 is TRUE: GnRH pulsatility differentially regulates gonadotropin gene expression — high-frequency pulses preferentially activate LHβ subunit transcription, while low-frequency pulses favor FSHβ transcription. This is mediated by differential MAPK pathway activation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements comparing excretory structures across invertebrate taxa:\nS1: TRUE — Protonephridia (flame cells) in flatworms consist of tubules with ciliated terminal cells that create negative pressure to draw interstitial fluid into the tubule lumen; they function primarily in osmoregulation rather than nitrogenous waste excretion.\nS2: TRUE — Metanephridia in annelids have an internal opening (nephrostome) that collects coelomic fluid, and the tubule selectively reabsorbs valuable solutes before producing dilute urine excreted through the nephridiopore.\nS3: TRUE — Green glands (antennal glands) in crustaceans combine ultrafiltration at the coelomosac with selective reabsorption in the labyrinth and bladder, analogous to vertebrate glomerular filtration and tubular reabsorption.\nS4: TRUE — Malpighian tubules in insects perform ultrafiltration of hemolymph under hydrostatic pressure, identical to the mechanism in vertebrate glomeruli.",
+      "options": [
+        "S1: TRUE — Protonephridia (flame cells) in flatworms consist of tubules with ciliated terminal cells that create negative pressure to draw interstitial fluid into the tubule lumen; they function primarily in osmoregulation rather than nitrogenous waste excretion.",
+        "S2: TRUE — Metanephridia in annelids have an internal opening (nephrostome) that collects coelomic fluid, and the tubule selectively reabsorbs valuable solutes before producing dilute urine excreted through the nephridiopore.",
+        "S3: TRUE — Green glands (antennal glands) in crustaceans combine ultrafiltration at the coelomosac with selective reabsorption in the labyrinth and bladder, analogous to vertebrate glomerular filtration and tubular reabsorption.",
+        "S4: TRUE — Malpighian tubules in insects perform ultrafiltration of hemolymph under hydrostatic pressure, identical to the mechanism in vertebrate glomeruli."
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Protonephridia are closed-ended tubules with flame cells (in flatworms) or solenocytes (in some other taxa). The beating cilia of flame cells generate negative pressure that draws interstitial fluid through filtration slits in the terminal cell. They primarily regulate water balance (osmoregulation) in freshwater flatworms, while nitrogenous waste (ammonia) is mostly excreted across the body surface. S2 is TRUE: Metanephridia DO have a ciliated nephrostome opening into the coelom, collect coelomic fluid, and have tubular epithelium that performs selective reabsorption of glucose, amino acids, and ions, with dilute urine exiting via the nephridiopore. This is an accurate description. S3 is TRUE: Crustacean antennal glands (green glands) use hydrostatic pressure-driven ultrafiltration at the end sac (coelomosac), followed by selective reabsorption in the labyrinth and bladder — functionally analogous to the vertebrate glomerulus-tubule system. S4 is FALSE: Malpighian tubules do NOT use ultrafiltration under hydrostatic pressure. They use active secretion — K⁺ (and Na⁺) are actively transported into the tubule lumen by V-type H⁺-ATPases and H⁺/K⁺ antiporters, creating an osmotic gradient that draws water and solutes (including uric acid) into the lumen. This secretion-based mechanism is fundamentally different from the pressure-driven ultrafiltration in vertebrate glomeruli. Insects have an open circulatory system with low hemolymph pressure, making ultrafiltration impractical.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A research team measured plasma osmolarity and urine osmolarity in a desert rodent under three conditions: (1) ad libitum water access, (2) 24-hour water deprivation, and (3) 24-hour water deprivation + V2 receptor antagonist injection. Based on the data, which conclusion is best supported?",
+      "dataContext": "Table: Plasma and Urine Osmolarity Under Three Conditions\n\nCondition | Plasma Osmolarity (mOsm/L) | Urine Osmolarity (mOsm/L) | Urine Volume (mL/day) | Plasma ADH (pg/mL)\n--- | --- | --- | --- | ---\nAd libitum water | 295 | 600 | 8.5 | 1.2\n24-hr water deprivation | 310 | 4800 | 1.1 | 12.8\n24-hr deprivation + V2 antagonist | 335 | 320 | 15.2 | 18.5",
+      "options": [
+        "A) The V2 receptor antagonist blocked ADH secretion from the posterior pituitary, resulting in low plasma ADH and inability to concentrate urine",
+        "B) During water deprivation, the 8-fold increase in urine osmolarity and 87% reduction in urine volume demonstrate intact ADH-AQP2 signaling; the V2 antagonist confirms that collecting duct water reabsorption is ADH-dependent, as blocking V2 receptors abolished concentrating ability despite elevated ADH",
+        "C) The data show that urine concentration is independent of ADH because urine osmolarity increased during water deprivation even before ADH levels rose significantly",
+        "D) The V2 antagonist caused diabetes insipidus by destroying aquaporin-2 channels permanently, explaining the irreversible loss of concentrating ability"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data demonstrate the ADH-V2-AQP2 axis clearly. Under ad libitum conditions, moderate ADH produces modestly concentrated urine. Water deprivation raises plasma osmolarity (295→310 mOsm/L), detected by hypothalamic osmoreceptors, increasing ADH secretion 10-fold (1.2→12.8 pg/mL). ADH via V2 receptors triggers AQP2 insertion into collecting duct apical membranes, dramatically concentrating urine (600→4800 mOsm/L) and reducing volume (8.5→1.1 mL/day). The V2 antagonist blocks ADH action at the receptor level despite even higher ADH levels (18.5 pg/mL — elevated due to worsening dehydration/osmolarity of 335 mOsm/L). Without V2 signaling, AQP2 is not inserted, collecting duct remains water-impermeable, producing dilute urine (320 mOsm/L) in high volume (15.2 mL/day) — nephrogenic diabetes insipidus. Option A is wrong because ADH is actually ELEVATED. Option D incorrectly states permanent channel destruction; the antagonist is a reversible receptor blocker.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers measured glomerular filtration rate (GFR), tubular reabsorption, and urine output in a patient before and after administering an ACE inhibitor. Based on the data, which physiological interpretation is correct?",
+      "dataContext": "Table: Renal Function Parameters Before and After ACE Inhibitor Administration\n\nParameter | Before Treatment | After ACE Inhibitor\n--- | --- | ---\nMean arterial pressure (mmHg) | 145 | 118\nGFR (mL/min) | 125 | 115\nRenal plasma flow (mL/min) | 550 | 620\nFiltration fraction (%) | 22.7 | 18.5\nProximal tubule Na⁺ reabsorption (%) | 67 | 60\nPlasma aldosterone (pg/mL) | 320 | 85\nUrine Na⁺ excretion (mmol/day) | 95 | 180\nPlasma K⁺ (mEq/L) | 3.4 | 4.5\nUrine volume (mL/day) | 1200 | 1800",
+      "options": [
+        "A) The ACE inhibitor blocked conversion of angiotensin I to angiotensin II, reducing efferent arteriolar tone (lowering filtration fraction), reducing aldosterone secretion (increasing Na⁺ and water excretion), and decreasing K⁺ secretion — collectively lowering blood pressure through reduced blood volume and vascular resistance",
+        "B) The ACE inhibitor increased GFR by dilating the afferent arteriole, which explains the increased sodium excretion",
+        "C) The reduction in filtration fraction indicates renal damage caused by the ACE inhibitor, explaining the increased urine output as a pathological response",
+        "D) The decreased plasma aldosterone indicates adrenal cortex suppression unrelated to angiotensin II, suggesting the ACE inhibitor has direct adrenal toxicity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "ACE inhibitors block angiotensin-converting enzyme, preventing formation of angiotensin II (AngII). AngII normally constricts the efferent arteriole more than the afferent, so blocking AngII preferentially dilates the efferent arteriole. This explains: (1) Increased renal plasma flow (550→620 mL/min) due to reduced renal vascular resistance; (2) Slight GFR decrease (125→115 mL/min) because efferent dilation lowers glomerular capillary pressure; (3) Reduced filtration fraction (22.7→18.5%) = GFR/RPF ratio drops because RPF increased more than GFR. Lower filtration fraction reduces peritubular capillary oncotic pressure, decreasing proximal tubular reabsorption driving force (67→60%). Additionally, reduced AngII means less aldosterone secretion from zona glomerulosa (320→85 pg/mL). Less aldosterone → less ENaC-mediated Na⁺ reabsorption and less K⁺ secretion in the collecting duct, explaining natriuresis (95→180 mmol/day) and hyperkalemia (3.4→4.5 mEq/L).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An endocrinologist measured hormone levels in a patient suspected of having a pituitary adenoma. Based on the data table and the dynamic testing results, which diagnosis is most likely?",
+      "dataContext": "Table: Hormone Levels and Dynamic Testing Results\n\nBaseline Hormone Levels:\n- Serum cortisol (8 AM): 38 µg/dL (normal: 6-23 µg/dL)\n- Plasma ACTH: 95 pg/mL (normal: 7-63 pg/mL)\n- 24-hr urinary free cortisol: 380 µg (normal: 10-100 µg)\n- Serum DHEA-S: elevated\n\nDynamic Tests:\n- Low-dose dexamethasone suppression (1 mg overnight): Cortisol NOT suppressed (32 µg/dL)\n- High-dose dexamethasone suppression (8 mg overnight): Cortisol SUPPRESSED to 9 µg/dL (>50% reduction)\n- CRH stimulation test: ACTH increased by 45% from baseline\n\nImaging: 8 mm pituitary microadenoma on MRI",
+      "options": [
+        "A) Primary adrenal adenoma (Cushing syndrome) — the elevated cortisol suppresses ACTH, and dexamethasone fails to suppress cortisol",
+        "B) Ectopic ACTH syndrome from a small-cell lung carcinoma — very high ACTH drives cortisol production, and neither low- nor high-dose dexamethasone suppresses cortisol",
+        "C) Cushing disease (ACTH-secreting pituitary adenoma) — elevated ACTH drives bilateral adrenal cortisol overproduction; the adenoma retains partial negative feedback sensitivity (suppresses with high-dose but not low-dose dexamethasone) and responds to CRH stimulation",
+        "D) Pseudo-Cushing syndrome from chronic alcoholism — cortisol is mildly elevated but suppresses with low-dose dexamethasone and ACTH is normal"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is a classic presentation of Cushing disease (pituitary-dependent Cushing syndrome). Key findings: (1) Elevated cortisol (38 µg/dL) and urinary free cortisol (380 µg) confirm hypercortisolism. (2) ACTH is elevated (95 pg/mL), ruling out primary adrenal causes (where ACTH would be suppressed by negative feedback). (3) Low-dose dexamethasone fails to suppress cortisol — confirming pathological hypercortisolism (normal HPA axis would suppress). (4) High-dose dexamethasone DOES suppress cortisol — this is characteristic of pituitary adenomas, which retain some feedback sensitivity but require higher glucocorticoid levels. Ectopic ACTH sources (e.g., small-cell lung cancer) typically do NOT suppress with even high-dose dexamethasone. (5) CRH stimulation increases ACTH by 45% — pituitary adenomas typically respond to CRH, while ectopic sources do not. (6) 8 mm pituitary microadenoma on MRI confirms the source.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A clinical study measured serum calcium, phosphate, PTH, and vitamin D metabolites in four patients. Based on the data, which patient most likely has chronic kidney disease (CKD) as the primary cause of their calcium/phosphate disturbance?",
+      "dataContext": "Table: Serum Calcium-Phosphate Homeostasis in Four Patients\n\nPatient | Serum Ca²⁺ (mg/dL) | Serum PO₄³⁻ (mg/dL) | Intact PTH (pg/mL) | 25(OH)D (ng/mL) | 1,25(OH)₂D (pg/mL) | Serum Creatinine (mg/dL)\n--- | --- | --- | --- | --- | --- | ---\nA | 11.8 | 2.1 | 185 | 35 | 82 | 0.9\nB | 7.2 | 6.8 | 420 | 28 | 12 | 5.8\nC | 7.5 | 2.8 | 8 | 6 | 15 | 1.0\nD | 12.2 | 2.0 | 2 | 40 | 48 | 1.1\n\nNormal ranges: Ca²⁺: 8.5-10.5, PO₄³⁻: 2.5-4.5, PTH: 15-65, 25(OH)D: 30-100, 1,25(OH)₂D: 18-72, Creatinine: 0.6-1.2 mg/dL",
+      "options": [
+        "A) Patient A — elevated calcium and PTH indicate primary hyperparathyroidism driving calcium release from bone",
+        "B) Patient B — elevated creatinine (5.8 mg/dL) indicates renal failure; damaged kidneys cannot perform 1α-hydroxylation of 25(OH)D → 1,25(OH)₂D, causing hypocalcemia and hyperphosphatemia (reduced phosphate excretion); secondary hyperparathyroidism develops as PTH rises in response to chronic hypocalcemia",
+        "C) Patient C — low PTH and low calcium indicate chronic kidney disease with suppressed parathyroid function",
+        "D) Patient D — elevated calcium with suppressed PTH indicates renal calcium wasting disorder"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Patient B shows the classic mineral bone disorder of chronic kidney disease (CKD-MBD): (1) Elevated creatinine (5.8 mg/dL) confirms significant renal impairment. (2) Very low 1,25(OH)₂D (12 pg/mL) despite adequate 25(OH)D substrate (28 ng/mL) — because the damaged kidneys have reduced 1α-hydroxylase (CYP27B1) activity in proximal tubular cells, impairing conversion of 25(OH)D to active 1,25(OH)₂D (calcitriol). (3) Hyperphosphatemia (6.8 mg/dL) — failing kidneys cannot excrete phosphate adequately. (4) Hypocalcemia (7.2 mg/dL) — due to reduced intestinal calcium absorption (low calcitriol) and phosphate-driven calcium deposition. (5) Markedly elevated PTH (420 pg/mL) — secondary hyperparathyroidism as the parathyroids attempt to correct hypocalcemia. Patient A has primary hyperparathyroidism (elevated PTH with hypercalcemia, normal creatinine). Patient C has hypoparathyroidism (low PTH causing hypocalcemia). Patient D likely has humoral hypercalcemia of malignancy (PTHrP) or granulomatous disease.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers tracked hormone levels and follicular development during a single menstrual cycle using serial ultrasound and blood sampling. Based on the data, which conclusion best describes the event occurring at Day 13?",
+      "dataContext": "Table: Hormone Levels and Follicular Measurements Across the Menstrual Cycle\n\nDay | FSH (mIU/mL) | LH (mIU/mL) | Estradiol (pg/mL) | Progesterone (ng/mL) | Dominant Follicle Diameter (mm) | Endometrial Thickness (mm)\n--- | --- | --- | --- | --- | --- | ---\n1 | 8.2 | 3.5 | 25 | 0.3 | — | 3\n5 | 7.5 | 4.0 | 45 | 0.4 | 8 | 5\n9 | 5.8 | 5.5 | 120 | 0.5 | 14 | 8\n11 | 4.2 | 8.0 | 250 | 0.6 | 18 | 10\n13 | 3.8 | 52.0 | 310 | 1.2 | 22 | 11\n14 | 4.5 | 15.0 | 180 | 2.8 | — (ruptured) | 11\n18 | 3.0 | 6.0 | 140 | 12.5 | — (CL 20mm) | 13\n24 | 2.5 | 4.5 | 110 | 8.2 | — (CL 15mm) | 12\n28 | 3.5 | 3.8 | 45 | 1.5 | — (CL regressing) | 8",
+      "options": [
+        "A) The luteal-follicular transition, as the corpus luteum from the previous cycle degenerates and a new follicular cohort is recruited",
+        "B) Mid-luteal peak progesterone production, as the mature corpus luteum maximally secretes progesterone to support potential implantation",
+        "C) The secondary FSH rise that rescues the next wave of follicular recruitment for the subsequent cycle",
+        "D) The LH surge (52 mIU/mL, a >6-fold increase from Day 11), triggered by sustained high estradiol (~310 pg/mL) from the dominant follicle (22 mm) switching from negative to positive feedback; this surge will trigger completion of meiosis I, follicular luteinization, and ovulation ~36 hours later"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Day 13 data clearly shows the preovulatory LH surge: LH has spiked to 52 mIU/mL (from 8.0 on Day 11 — a >6-fold increase). This is triggered by estradiol reaching ~310 pg/mL for a sustained period (it was already 250 pg/mL on Day 11). The dominant follicle is 22 mm (mature Graafian follicle, typically 18-25 mm at ovulation). The LH surge triggers: (1) resumption and completion of meiosis I in the primary oocyte (producing secondary oocyte + first polar body), (2) luteinization of granulosa and theca cells (initial progesterone rise visible at 1.2 ng/mL), (3) enzymatic weakening of the follicular wall (collagenase, plasmin), and (4) ovulation approximately 36 hours after LH surge onset (Day 14 shows ruptured follicle, progesterone rising to 2.8 ng/mL). The declining FSH (3.8 mIU/mL) reflects negative feedback from high estradiol and inhibin B from the dominant follicle.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that the countercurrent multiplier in the loop of Henle requires active NaCl transport in the thick ascending limb to establish the medullary osmotic gradient. She designs an experiment using isolated perfused rat kidneys. Which experimental design would most rigorously test this hypothesis?",
+      "experimentContext": "The researcher has access to: (1) isolated perfused rat kidney preparations maintaining normal GFR, (2) furosemide — a loop diuretic that specifically inhibits the NKCC2 (Na⁺/K⁺/2Cl⁻) cotransporter on the apical membrane of the thick ascending limb, (3) micropuncture equipment for sampling tubular fluid at various nephron segments, (4) tissue slice osmolarity measurements at cortex, outer medulla, and inner medulla, and (5) fluorescently-labeled aquaporin antibodies for immunohistochemistry.",
+      "options": [
+        "A) Perfuse the kidney with normal saline, then add furosemide to the perfusate. Measure medullary osmolarity gradients before and after furosemide. If the cortico-medullary gradient collapses (inner medullary osmolarity decreases from ~1200 to ~300 mOsm/L) and urine becomes iso-osmotic with plasma, this supports the hypothesis. Controls include: vehicle-treated kidneys measured identically, and amiloride-treated kidneys (blocking ENaC in collecting duct) to confirm the effect is specific to the thick ascending limb NKCC2.",
+        "B) Remove the loop of Henle surgically from several nephrons and measure whether the remaining nephrons can still concentrate urine",
+        "C) Inject ADH into the kidney and measure whether urine becomes more concentrated, which would prove the loop of Henle is not involved in establishing the gradient",
+        "D) Compare urine osmolarity between kidneys perfused at high versus low flow rates to determine if flow rate alone establishes the medullary gradient"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Option A is the most rigorous experimental design because it: (1) Uses a specific pharmacological tool — furosemide specifically and reversibly inhibits NKCC2 in the thick ascending limb, the transporter responsible for active NaCl reabsorption that powers the countercurrent multiplier. (2) Has clear, measurable endpoints — medullary tissue osmolarity at defined anatomical levels (cortex/outer medulla/inner medulla) and urine osmolarity. (3) Includes proper controls — vehicle control (time-matched, no drug) controls for preparation stability; amiloride control demonstrates that blocking a different sodium transporter (ENaC in collecting duct) does not collapse the medullary gradient, confirming specificity of the furosemide effect to the thick ascending limb. (4) Tests the hypothesis directly — if NKCC2 inhibition abolishes the medullary gradient, it demonstrates that active NaCl transport in the thick ascending limb is necessary for gradient establishment. The predicted result: furosemide → medullary osmolarity falls toward isotonic (~300 mOsm/L at all levels), urine becomes dilute and high-volume (resembling the effect seen clinically with loop diuretics). This is reversible upon washout.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A reproductive biologist wants to determine whether the LH surge is driven primarily by hypothalamic GnRH pulse frequency changes or by increased pituitary sensitivity to GnRH. She works with an ovariectomized (OVX) ewe model. Which experimental design best distinguishes between these two mechanisms?",
+      "experimentContext": "Available tools: (1) OVX ewes with hypothalamic-pituitary portal blood sampling catheters for measuring GnRH pulses directly, (2) GnRH antagonist (cetrorelix) to block endogenous GnRH, (3) programmable GnRH infusion pump for exogenous pulsatile GnRH delivery at controlled frequencies, (4) estradiol benzoate implants for sustained estradiol delivery, (5) serial blood sampling for LH, FSH, and estradiol measurement, (6) pituitary biopsy capability for GnRH receptor quantification (Western blot/qPCR).",
+      "options": [
+        "A) Simply measure portal GnRH and peripheral LH simultaneously during the estradiol-induced LH surge in intact OVX+E2 ewes, and note if GnRH pulse frequency changes correlate with the LH surge",
+        "B) Group 1 (Pituitary sensitivity test): OVX ewes receive GnRH antagonist to block endogenous GnRH, then receive FIXED-FREQUENCY exogenous GnRH pulses (1 pulse/hr) via pump, with estradiol implant added. If an LH surge occurs despite constant GnRH input, pituitary sensitization by estradiol is sufficient. Group 2 (GnRH frequency test): OVX ewes receive GnRH antagonist, then receive INCREASING-FREQUENCY exogenous GnRH pulses (mimicking the natural pre-surge acceleration) WITHOUT estradiol. If an LH surge occurs, GnRH frequency alone is sufficient. Group 3 (combined): Both estradiol implant AND increasing GnRH frequency. Compare surge magnitude across groups. Controls: GnRH antagonist alone (no surge expected), and antagonist + fixed low-frequency GnRH without estradiol (no surge expected).",
+        "C) Compare LH levels between OVX ewes and intact ewes during the estrous cycle without any pharmacological manipulation",
+        "D) Administer continuous (non-pulsatile) GnRH infusion with estradiol to test whether pulsatility is necessary for the LH surge"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Option B is the optimal design because it uses the 'clamp and replace' strategy — endogenous GnRH is eliminated with the antagonist, then replaced with precisely controlled exogenous pulses, allowing independent manipulation of two variables: (1) GnRH pulse frequency and (2) estradiol presence. This factorial design directly tests whether the LH surge requires changes in GnRH pulse frequency, estradiol-induced pituitary sensitization, or both. Group 1 isolates the pituitary sensitization mechanism: if estradiol can induce an LH surge with constant GnRH frequency, then estradiol acts directly on gonadotrophs (increasing GnRH receptor expression, enhancing intracellular signaling, upregulating LHβ gene transcription). Group 2 isolates the GnRH frequency mechanism: if increased pulse frequency alone triggers a surge without estradiol, frequency is sufficient. Group 3 tests the combined/synergistic effect. In reality, research has shown that BOTH mechanisms contribute: estradiol increases GnRH receptor density on gonadotrophs (self-priming effect) AND increases GnRH pulse frequency via kisspeptin neurons. The ewe model is particularly valuable because the hypothalamic-pituitary portal system is accessible for direct GnRH measurement. Option A is correlative, not causal. Option D tests pulsatility requirement but not the specific question asked.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    }
+  ]
+}

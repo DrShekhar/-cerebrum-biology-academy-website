@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch47-49 Nervous System, Senses & Development — Wave 1",
+    "version": 1,
+    "source": "olympiad-wave1",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "At rest, a typical mammalian neuron has a membrane potential of approximately −70 mV. The equilibrium potential for K⁺ is about −90 mV and for Na⁺ is about +60 mV. The resting potential is closer to E_K than to E_Na. Which combination of factors best explains why the resting membrane potential is not exactly at E_K?",
+      "options": [
+        "A) The Na⁺/K⁺-ATPase is electrogenic (pumping 3 Na⁺ out per 2 K⁺ in), contributing about −3 to −5 mV of hyperpolarization; however, the dominant reason the resting potential is more positive than E_K is the small but significant resting permeability to Na⁺ through leak channels, as predicted by the Goldman-Hodgkin-Katz (GHK) equation",
+        "B) The Na⁺/K⁺-ATPase generates the entire resting potential of −70 mV through its electrogenic activity, and passive ion channels play no role in setting the resting membrane potential",
+        "C) Chloride ions actively accumulate inside the neuron via Cl⁻ pumps, making the interior more negative than E_K and pulling the resting potential to −70 mV rather than −90 mV",
+        "D) Voltage-gated Na⁺ channels are partially open at rest, producing a large inward Na⁺ current that depolarizes the membrane to −70 mV; the Na⁺/K⁺-ATPase has no direct contribution to the resting potential"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The resting membrane potential is determined primarily by the relative permeabilities of the membrane to different ions, as described by the Goldman-Hodgkin-Katz (GHK) voltage equation. At rest, the membrane is approximately 50-100 times more permeable to K⁺ than to Na⁺ (through K⁺ leak channels, primarily KCNK/K2P family). This high K⁺ permeability drives the membrane potential toward E_K (−90 mV). However, the small resting Na⁺ permeability through Na⁺ leak channels allows some Na⁺ influx, which depolarizes the membrane slightly from E_K toward E_Na, yielding a resting potential around −70 mV. The Na⁺/K⁺-ATPase is electrogenic (3 Na⁺ out : 2 K⁺ in), contributing about −3 to −5 mV directly. More importantly, the pump maintains the concentration gradients that drive ion diffusion. Option B incorrectly attributes the entire resting potential to the pump. Option C is wrong because Cl⁻ is passively distributed in most neurons (via KCC2 cotransporter in mature neurons, not an active Cl⁻ pump). Option D confuses voltage-gated channels (mostly closed at rest) with leak channels.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "During an action potential, the voltage-gated Na⁺ channel transitions through three conformational states. A researcher applies tetrodotoxin (TTX), which blocks the channel pore, and separately applies an intracellular pronase treatment that selectively destroys the inactivation gate. Which pair of experimental outcomes is predicted?",
+      "options": [
+        "A) TTX eliminates both depolarization and repolarization phases entirely; pronase eliminates only the repolarization phase by preventing the channel from closing",
+        "B) TTX prevents Na⁺ influx, abolishing the depolarization phase of the action potential; pronase destroys the ball-and-chain inactivation mechanism (the III-IV linker), so channels open normally upon depolarization but fail to inactivate — producing a sustained Na⁺ current with prolonged depolarization and impaired repolarization",
+        "C) TTX blocks K⁺ channels, preventing repolarization; pronase activates Na⁺ channels constitutively at resting potential, causing spontaneous firing",
+        "D) TTX removes channel selectivity, allowing both Na⁺ and K⁺ through; pronase converts Na⁺ channels into K⁺-selective channels by altering the selectivity filter"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Voltage-gated Na⁺ channels exist in three states: (1) Closed (resting) — activation gate closed, inactivation gate open; (2) Open (activated) — both gates open; (3) Inactivated — activation gate open, inactivation gate (the cytoplasmic III-IV linker loop, the 'ball-and-chain' or 'hinged lid') blocks the pore. TTX is a highly specific blocker that binds to the extracellular mouth of the Na⁺ channel pore (near the selectivity filter formed by DEKA residues), physically blocking Na⁺ permeation. This abolishes inward Na⁺ current and eliminates the depolarization (rising) phase of the action potential. Pronase is a protease that, when applied intracellularly (as in Armstrong and Bhezanilla's classic experiments), selectively digests the III-IV cytoplasmic linker responsible for fast inactivation. Without this inactivation gate, channels activate (open) normally upon depolarization but cannot inactivate, producing a persistent Na⁺ current. This leads to prolonged depolarization because the normal mechanism for terminating Na⁺ influx is abolished. Option A incorrectly claims TTX affects repolarization. Option C confuses TTX specificity. Option D describes nonexistent effects.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a myelinated axon, action potentials propagate via saltatory conduction. A patient with multiple sclerosis (MS) has focal demyelination of a segment of a sensory nerve. Which physiological consequence is MOST directly explained by the loss of myelin?",
+      "options": [
+        "A) The loss of myelin converts saltatory conduction to continuous conduction, which paradoxically increases conduction velocity because more Na⁺ channels are now exposed to participate in depolarization",
+        "B) Demyelination only affects the ability of the axon to generate the initial action potential at the axon hillock but does not impair propagation along the axon once initiated",
+        "C) The demyelinated segment has drastically increased membrane capacitance and decreased membrane resistance, causing local circuit currents to dissipate across the bare membrane before reaching the next node of Ranvier — resulting in conduction block or severe slowing of action potential propagation",
+        "D) The loss of myelin causes K⁺ leak channels at the nodes of Ranvier to close permanently, trapping K⁺ inside the axon and hyperpolarizing the membrane to −120 mV"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Myelin sheaths (formed by Schwann cells in the PNS, oligodendrocytes in the CNS) increase membrane resistance and decrease membrane capacitance in internodal regions. High membrane resistance ensures that ionic current flows longitudinally through the axoplasm rather than leaking across the membrane, while low capacitance means less charge is needed to change the membrane voltage. Together, these properties allow depolarizing current generated at one node of Ranvier to rapidly reach and depolarize the next node (saltatory conduction), achieving velocities of 100+ m/s. In MS, demyelination of CNS axons exposes the internodal membrane, which has very few voltage-gated Na⁺ channels (they are clustered at nodes). The exposed membrane has high capacitance and low resistance, so local circuit currents dissipate before reaching the next node, causing conduction slowing or complete block. Option A is incorrect because continuous conduction, even if it could be established, would be far slower than saltatory conduction. Option B incorrectly limits the defect to the axon hillock. Option D describes an impossible scenario.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "At a cholinergic synapse in the neuromuscular junction (NMJ), acetylcholine (ACh) is released by Ca²⁺-dependent exocytosis. Which sequence of molecular events correctly describes the mechanism from action potential arrival to ACh release?",
+      "options": [
+        "A) Action potential depolarizes the presynaptic terminal → voltage-gated Ca²⁺ channels (P/Q-type, Cav2.1) open → Ca²⁺ influx → Ca²⁺ binds synaptotagmin (the Ca²⁺ sensor on synaptic vesicles) → synaptotagmin interacts with the pre-assembled SNARE complex (syntaxin-1 + SNAP-25 on plasma membrane, synaptobrevin/VAMP on vesicle) and the plasma membrane → membrane fusion and ACh release into the synaptic cleft",
+        "B) Action potential opens ligand-gated Ca²⁺ channels → Ca²⁺ binds calmodulin → calmodulin-kinase phosphorylates synaptic vesicle proteins → vesicles dissolve releasing ACh directly through the presynaptic membrane",
+        "C) Action potential activates G-protein coupled receptors on the presynaptic membrane → second messenger cAMP opens Ca²⁺ stores in the ER → Ca²⁺ release triggers vesicle fusion via clathrin-mediated exocytosis",
+        "D) Action potential opens voltage-gated Na⁺ channels in the presynaptic terminal → Na⁺ influx directly triggers vesicle fusion without requiring Ca²⁺ → ACh is transported across the membrane by vesicular ACh transporter (VAChT) without exocytosis"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Neurotransmitter release at the NMJ follows a precisely orchestrated molecular cascade. When the action potential invades the presynaptic bouton, it activates voltage-gated Ca²⁺ channels (primarily P/Q-type, CaV2.1 at the NMJ; N-type CaV2.2 at many CNS synapses). Ca²⁺ enters the terminal and local concentration rises to ~100 μM near the active zone. Ca²⁺ binds to synaptotagmin-1 (the C2A and C2B domains), which serves as the Ca²⁺ sensor on synaptic vesicles. Prior to Ca²⁺ entry, SNARE complexes are partially assembled: synaptobrevin (VAMP2) on the vesicle membrane forms a four-helix bundle with syntaxin-1A and SNAP-25 on the plasma membrane. This 'trans-SNARE' complex is clamped by complexin, preventing spontaneous fusion. Upon Ca²⁺ binding, synaptotagmin inserts into the plasma membrane, displaces complexin, and drives membrane fusion within ~0.2 ms. After fusion, NSF and α-SNAP disassemble the cis-SNARE complex for recycling. Option B incorrectly invokes ligand-gated Ca²⁺ channels and calmodulin at this step. Option C describes a slow neuromodulatory mechanism, not fast synaptic transmission. Option D incorrectly eliminates the Ca²⁺ requirement.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A neuroscientist records from a postsynaptic neuron receiving both excitatory (glutamatergic) and inhibitory (GABAergic) inputs. She observes that two excitatory inputs arriving within 2 ms of each other at different dendritic locations produce a larger EPSP at the axon hillock than either input alone, but a simultaneous inhibitory input at an intermediate location greatly reduces the combined EPSP. Which phenomena are demonstrated?",
+      "options": [
+        "A) Temporal summation of the two EPSPs; the inhibitory effect demonstrates presynaptic facilitation at the glutamatergic terminals",
+        "B) The two excitatory inputs summate because they both release GABA, which is excitatory in mature neurons; the inhibitory input releases glutamate, which is inhibitory",
+        "C) Long-term potentiation (LTP) of the excitatory synapses; the inhibitory input demonstrates long-term depression (LTD) at the same synapses",
+        "D) Spatial summation of the two EPSPs from different locations; the inhibitory input demonstrates shunting inhibition — the GABA_A receptor opens Cl⁻ channels that increase membrane conductance at the intermediate location, effectively short-circuiting the current flowing from the excitatory synapses toward the axon hillock"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This scenario demonstrates two fundamental integration principles. Spatial summation occurs when EPSPs generated at different synaptic locations on the dendritic tree arrive at the axon hillock simultaneously (or nearly so), and their depolarizations add together. The two excitatory inputs from different dendritic locations arriving within 2 ms constitute spatial summation (with a minor temporal component). The GABAergic inhibitory input demonstrates shunting inhibition — GABA_A receptors are ligand-gated Cl⁻ channels. When opened at an intermediate dendritic location between the excitatory synapses and the soma, they dramatically increase membrane conductance (decrease membrane resistance). According to Ohm's law (V = IR), the same excitatory current now produces a smaller voltage change. Additionally, the increased conductance 'shunts' current flowing toward the soma, preventing it from reaching the axon hillock. This is also called 'divisive inhibition' because it divides the EPSP amplitude rather than simply subtracting from it (as would hyperpolarizing inhibition). Option A incorrectly identifies this as temporal summation and misidentifies the inhibitory mechanism. Option B reverses neurotransmitter identities. LTP/LTD (Option C) require repeated stimulation over time.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Long-term potentiation (LTP) at hippocampal CA3-CA1 synapses requires activation of NMDA receptors. Which property of the NMDA receptor makes it uniquely suited to serve as a 'coincidence detector' for Hebbian learning?",
+      "options": [
+        "A) NMDA receptors are constitutively active at resting membrane potential and require only glutamate binding to conduct ions, providing a continuous Ca²⁺ signal for synaptic strengthening",
+        "B) NMDA receptors function exclusively as metabotropic receptors coupled to G-proteins, triggering IP₃-mediated Ca²⁺ release from the endoplasmic reticulum upon glutamate binding",
+        "C) NMDA receptors are voltage-gated channels that open independently of neurotransmitter binding; they detect postsynaptic activity alone and do not require presynaptic glutamate release",
+        "D) NMDA receptors are blocked by extracellular Mg²⁺ at resting membrane potential; they require simultaneous glutamate binding (presynaptic activity) AND postsynaptic depolarization (to relieve the Mg²⁺ block) to conduct Ca²⁺ — this dual requirement detects coincident pre- and postsynaptic activity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The NMDA receptor (GluN1/GluN2 heterotetramer) is a ligand-gated ion channel with a unique voltage-dependent Mg²⁺ block. At resting membrane potential (~−70 mV), Mg²⁺ ions from the extracellular space physically occlude the channel pore, preventing ion flow even when glutamate and the co-agonist glycine (or D-serine) are bound. When the postsynaptic membrane is depolarized (e.g., by AMPA receptor-mediated EPSPs from high-frequency stimulation), the Mg²⁺ is expelled by electrostatic repulsion. Only then can the channel conduct Na⁺, K⁺, and critically Ca²⁺. This dual requirement — glutamate binding (indicating presynaptic activity) AND postsynaptic depolarization (indicating postsynaptic activity) — makes the NMDA receptor a molecular coincidence detector, perfectly implementing Hebb's rule ('neurons that fire together wire together'). The influx of Ca²⁺ through NMDA receptors activates CaMKII and other kinases, leading to phosphorylation and increased trafficking of AMPA receptors (GluA1) to the postsynaptic density, strengthening the synapse. Option A is wrong because Mg²⁺ block prevents constitutive activity. Option B misidentifies the receptor class — NMDA receptors are ionotropic, not metabotropic. Option C confuses the mechanism — NMDA receptors require ligand binding.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The autonomic nervous system (ANS) regulates involuntary functions through sympathetic and parasympathetic divisions. A pharmacologist administers atropine (a muscarinic ACh receptor antagonist) to a patient. Which set of physiological effects would be expected?",
+      "options": [
+        "A) Decreased heart rate, bronchoconstriction, increased gastrointestinal motility, and pupillary constriction due to unopposed parasympathetic activity",
+        "B) Skeletal muscle paralysis at the neuromuscular junction because atropine blocks nicotinic receptors on motor end plates",
+        "C) Increased heart rate, bronchodilation, decreased salivation, pupillary dilation (mydriasis), and decreased GI motility — because blocking parasympathetic muscarinic receptors allows sympathetic tone to predominate",
+        "D) No observable effects because muscarinic receptors are only present in the CNS and have no peripheral autonomic functions"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Atropine is a competitive antagonist at muscarinic acetylcholine receptors (M1-M5). Parasympathetic postganglionic neurons release ACh onto muscarinic receptors in target organs. Blocking these receptors removes parasympathetic ('rest and digest') tone, allowing sympathetic tone to predominate. Effects include: tachycardia (blocking M2 receptors on SA node that normally slow heart rate via Gi-coupled K_ACh channel opening), bronchodilation (blocking M3-mediated bronchoconstriction), mydriasis (blocking M3 on pupillary sphincter allowing radial dilator muscle to dominate), decreased salivation (blocking M3 on salivary glands), decreased GI motility and secretions (blocking M3 on smooth muscle and glands), and urinary retention (blocking detrusor muscle contraction). The classic mnemonic: 'blind as a bat (mydriasis), dry as a bone (decreased secretions), red as a beet (cutaneous vasodilation), mad as a hatter (CNS effects at high doses), hot as a hare (decreased sweating/thermoregulation).' Option A describes the opposite (parasympathetic activation). Option B is wrong because the NMJ uses nicotinic, not muscarinic, receptors. Option D is incorrect; muscarinic receptors are abundant peripherally.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In vertebrate phototransduction, light causes hyperpolarization of rod photoreceptors, which is opposite to the typical excitatory response. Which molecular cascade correctly explains this paradoxical response?",
+      "options": [
+        "A) Light activates rhodopsin (metarhodopsin II) → activates transducin (Gα_t-GTP) → activates phosphodiesterase 6 (PDE6) → PDE6 hydrolyzes cGMP to 5'-GMP → decreased cytoplasmic cGMP causes closure of cGMP-gated cation channels (CNG channels) in the outer segment → reduced Na⁺/Ca²⁺ influx ('dark current' ceases) → hyperpolarization → decreased glutamate release from synaptic terminal",
+        "B) Light directly opens K⁺ channels in the rod outer segment → K⁺ efflux → hyperpolarization → increased glutamate release signals 'light detected' to bipolar cells",
+        "C) Light activates rhodopsin → inhibits adenylyl cyclase → decreased cAMP → closure of cAMP-gated Na⁺ channels → hyperpolarization, identical to olfactory receptor signaling in reverse",
+        "D) Light converts 11-cis retinal to all-trans retinal, which directly binds and blocks Na⁺ channels in the plasma membrane without involving any G-protein cascade"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Rod phototransduction is a G-protein signaling cascade that uniquely produces hyperpolarization. In the dark: cGMP levels are high (maintained by guanylyl cyclase), keeping CNG channels (composed of CNGA1 and CNGB1 subunits) open. Na⁺ and Ca²⁺ flow inward through these channels (the 'dark current' of ~20 pA), and Na⁺/Ca²⁺-K⁺ exchangers (NCKX) in the outer segment plus Na⁺/K⁺-ATPase in the inner segment maintain ionic balance. The rod is depolarized (~−40 mV) and continuously releases glutamate. In light: a single photon isomerizes 11-cis retinal to all-trans retinal within rhodopsin (a GPCR), producing metarhodopsin II (R*). R* activates hundreds of transducin molecules (Gα_t exchanges GDP for GTP). Each Gα_t-GTP activates one PDE6 catalytic subunit, which hydrolyzes thousands of cGMP molecules. The dramatic drop in cGMP closes CNG channels, stopping the dark current. The rod hyperpolarizes to ~−70 mV, reducing glutamate release. This signal amplification cascade (one photon → ~10⁶ cGMP hydrolyzed) enables single-photon detection. Recovery involves rhodopsin kinase (GRK1), arrestin, RGS9-catalyzed GTP hydrolysis on transducin, and guanylyl cyclase activation by GCAPs when Ca²⁺ drops.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The cross-bridge cycle in skeletal muscle contraction involves cyclic interactions between myosin heads and actin filaments. A researcher applies a non-hydrolyzable ATP analog (ATPγS) to skinned muscle fibers. What is the expected outcome?",
+      "options": [
+        "A) Muscle fibers contract with normal force because ATP binding alone, without hydrolysis, provides sufficient energy for the power stroke",
+        "B) Muscle fibers enter rigor (like rigor mortis) because ATPγS cannot bind the myosin nucleotide pocket, leaving myosin heads permanently attached to actin in the post-power-stroke configuration",
+        "C) The muscle produces tetanic contraction because ATPγS keeps voltage-gated Ca²⁺ channels permanently open in the T-tubule membrane",
+        "D) Muscle fibers relax completely because ATPγS binds myosin, detaching it from actin, but since the analog cannot be hydrolyzed, myosin cannot re-cock its head or reattach — the fibers remain in a relaxed, low-stiffness state"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The cross-bridge cycle depends on ATP both for energy and for detaching myosin from actin. In normal cycling: (1) ATP binds myosin → myosin detaches from actin (low-affinity state); (2) ATP hydrolysis (ATP → ADP + Pi) cocks the myosin head into the pre-power-stroke position; (3) Myosin binds actin (if tropomyosin has shifted); (4) Pi release triggers the power stroke; (5) ADP release completes the stroke; (6) New ATP binds → detachment. ATPγS (adenosine 5'-O-(3-thiotriphosphate)) can bind the nucleotide-binding pocket of myosin, which detaches myosin heads from actin (step 1 occurs). However, because the thio-substituted γ-phosphate bond is resistant to hydrolysis, step 2 cannot proceed — myosin cannot cock its head or enter the pre-power-stroke conformation. Myosin remains detached in a relaxed state. This contrasts with rigor mortis, where NO ATP is available, so myosin heads remain locked to actin in the post-power-stroke state (step 6 cannot occur). Option B confuses ATPγS with absence of ATP. Option C describes an unrelated mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "During gastrulation in amphibians, the dorsal lip of the blastopore acts as the Spemann-Mangold organizer. When organizer tissue is transplanted to the ventral side of a host embryo, a secondary body axis forms. Which molecular mechanism best explains the organizer's inductive activity?",
+      "options": [
+        "A) The organizer secretes high concentrations of BMP4 and Wnt proteins that directly activate dorsal gene expression in neighboring ventral cells",
+        "B) The organizer functions by secreting inhibitory molecules — including chordin, noggin, and follistatin — that antagonize BMP signaling, and secreted Frizzled-related proteins (sFRPs) and Dickkopf (Dkk) that antagonize Wnt signaling, thereby derepressing dorsal cell fates in adjacent tissue",
+        "C) The organizer releases retinoic acid exclusively, which diffuses as a single morphogen gradient to pattern the entire dorsal-ventral axis without involving any BMP or Wnt antagonism",
+        "D) The organizer contains progenitor cells that proliferate and physically displace ventral cells, replacing them with dorsal tissue without any secreted signaling molecules"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Spemann-Mangold organizer (dorsal lip of the blastopore in amphibians; node in mammals) functions primarily as a source of secreted antagonists rather than activators. BMP4 (a TGF-β superfamily member) is expressed broadly in the ventral ectoderm and mesoderm and promotes ventral/epidermal fates. The organizer secretes BMP antagonists: Chordin and Noggin bind BMPs directly, preventing them from interacting with their receptors (BMPR); Follistatin also sequesters BMPs. This BMP inhibition allows the default neural fate to emerge in dorsal ectoderm (the 'default model' of neural induction). Additionally, the organizer secretes Wnt antagonists (Dkk1, sFRPs, Cerberus) that inhibit canonical Wnt/β-catenin signaling in the anterior region, which is important for head formation. The organizer also secretes Nodal-related factors for mesoderm induction. When transplanted ventrally, these antagonists create a local BMP/Wnt-free zone, inducing a secondary neural plate and axis. Option A reverses the logic — the organizer inhibits, not produces, BMP/Wnt. Retinoic acid (Option C) is involved in anterior-posterior patterning but is not the primary organizer mechanism. Option D ignores the demonstrated role of secreted factors.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about action potential generation and propagation:\nS1: TRUE — During the absolute refractory period, a second action potential cannot be generated regardless of stimulus strength because the majority of voltage-gated Na⁺ channels are in the inactivated state (h-gate closed) and must transition through the closed (resting) state before they can reopen.\nS2: TRUE — The relative refractory period occurs when some Na⁺ channels have recovered from inactivation but voltage-gated K⁺ channels (delayed rectifiers) are still open, causing residual hyperpolarization that requires a stronger-than-normal stimulus to reach threshold.\nS3: FALSE — In unmyelinated axons, the conduction velocity is independent of axon diameter because the action potential amplitude is constant regardless of the cable properties of the axon.\nS4: TRUE — The Hodgkin-Huxley model describes Na⁺ channel gating using two independent gates: the m-gate (activation, opens upon depolarization with fast kinetics) and the h-gate (inactivation, closes upon depolarization with slow kinetics), explaining why Na⁺ conductance is transient during an action potential.",
+      "options": [
+        "S1: TRUE — During the absolute refractory period, a second action potential cannot be generated regardless of stimulus strength because the majority of voltage-gated Na⁺ channels are in the inactivated state (h-gate closed) and must transition through the closed (resting) state before they can reopen.",
+        "S2: TRUE — The relative refractory period occurs when some Na⁺ channels have recovered from inactivation but voltage-gated K⁺ channels (delayed rectifiers) are still open, causing residual hyperpolarization that requires a stronger-than-normal stimulus to reach threshold.",
+        "S3: FALSE — In unmyelinated axons, the conduction velocity is independent of axon diameter because the action potential amplitude is constant regardless of the cable properties of the axon.",
+        "S4: TRUE — The Hodgkin-Huxley model describes Na⁺ channel gating using two independent gates: the m-gate (activation, opens upon depolarization with fast kinetics) and the h-gate (inactivation, closes upon depolarization with slow kinetics), explaining why Na⁺ conductance is transient during an action potential."
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: During the absolute refractory period (coinciding with the depolarization and early repolarization phases), most voltage-gated Na⁺ channels are inactivated. The inactivation gate (h-gate/III-IV linker) physically blocks the pore. Channels must return to the closed (resting) conformation (h-gate open, m-gate closed) before they can be activated again. This requires repolarization to near-resting potential, ensuring unidirectional propagation. S2 is TRUE: During the relative refractory period, enough Na⁺ channels have recovered to potentially generate an action potential, but the continued opening of delayed-rectifier K⁺ channels (Kv2.1, Kv3.x family) produces an afterhyperpolarization (undershoot below −70 mV). Reaching threshold from this more negative starting point requires a larger depolarizing stimulus. S3 is labeled FALSE and this label is CORRECT because the statement's content is wrong: conduction velocity in unmyelinated axons IS dependent on axon diameter. Larger diameter axons have lower internal (axial) resistance, increasing the length constant (λ = √(Rm/Ri)), allowing depolarizing current to spread further ahead, thus increasing conduction velocity. Velocity scales approximately with √diameter in unmyelinated axons. S4 is TRUE: Hodgkin and Huxley modeled Na⁺ conductance as gNa = ḡNa × m³h, where m represents activation (fast, voltage-dependent opening) and h represents inactivation (slower, voltage-dependent closing). During depolarization, m increases rapidly (channel opens) while h decreases slowly (channel inactivates), producing a transient Na⁺ conductance.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about neurotransmitter systems in the central nervous system:\nS1: TRUE — Glutamate is the principal excitatory neurotransmitter in the mammalian CNS, acting on ionotropic receptors (AMPA, NMDA, kainate) and metabotropic receptors (mGluR1-8); excessive glutamate release causes excitotoxicity through Ca²⁺ overload and mitochondrial dysfunction.\nS2: FALSE — GABA (γ-aminobutyric acid) is the principal inhibitory neurotransmitter in the adult brain, acting on GABA_A (ionotropic, Cl⁻ channel) and GABA_B (metabotropic, Gi-coupled) receptors; however, in immature neurons, GABA is excitatory because high intracellular Cl⁻ (due to NKCC1 expression and low KCC2) makes the Cl⁻ equilibrium potential more positive than the resting potential.\nS3: TRUE — Dopaminergic neurons in the substantia nigra pars compacta project to the striatum (nigrostriatal pathway), and their degeneration causes the motor symptoms of Parkinson's disease; conversely, excess dopamine signaling in the mesolimbic pathway is associated with positive symptoms of schizophrenia.\nS4: TRUE — Serotonin (5-HT) is synthesized from phenylalanine by phenylalanine hydroxylase in raphe nuclei neurons, and selective serotonin reuptake inhibitors (SSRIs) increase synaptic 5-HT by blocking the DAT transporter.",
+      "options": [
+        "S1: TRUE — Glutamate is the principal excitatory neurotransmitter in the mammalian CNS, acting on ionotropic receptors (AMPA, NMDA, kainate) and metabotropic receptors (mGluR1-8); excessive glutamate release causes excitotoxicity through Ca²⁺ overload and mitochondrial dysfunction.",
+        "S2: FALSE — GABA (γ-aminobutyric acid) is the principal inhibitory neurotransmitter in the adult brain, acting on GABA_A (ionotropic, Cl⁻ channel) and GABA_B (metabotropic, Gi-coupled) receptors; however, in immature neurons, GABA is excitatory because high intracellular Cl⁻ (due to NKCC1 expression and low KCC2) makes the Cl⁻ equilibrium potential more positive than the resting potential.",
+        "S3: TRUE — Dopaminergic neurons in the substantia nigra pars compacta project to the striatum (nigrostriatal pathway), and their degeneration causes the motor symptoms of Parkinson's disease; conversely, excess dopamine signaling in the mesolimbic pathway is associated with positive symptoms of schizophrenia.",
+        "S4: TRUE — Serotonin (5-HT) is synthesized from phenylalanine by phenylalanine hydroxylase in raphe nuclei neurons, and selective serotonin reuptake inhibitors (SSRIs) increase synaptic 5-HT by blocking the DAT transporter."
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: Glutamate is indeed the major excitatory neurotransmitter. AMPA receptors (GluA1-4) mediate fast EPSPs. NMDA receptors (GluN1/GluN2) require depolarization to relieve Mg²⁺ block and are Ca²⁺-permeable. Kainate receptors (GluK1-5) modulate synaptic transmission. Metabotropic glutamate receptors (mGluR1-8) are GPCRs in three groups. Excitotoxicity occurs during stroke, traumatic brain injury, or epilepsy when excessive glutamate release causes sustained NMDA receptor activation, massive Ca²⁺ influx, activation of calpains/caspases, mitochondrial permeability transition, and neuronal death. S2 is labeled FALSE but the content is entirely CORRECT: GABA is inhibitory in adults (GABA_A opens Cl⁻ channels; E_Cl ≈ −75 mV, producing hyperpolarization). In immature neurons, NKCC1 (Na⁺-K⁺-2Cl⁻ cotransporter) imports Cl⁻, raising intracellular [Cl⁻] so E_Cl is more positive than resting potential, making GABA_A-mediated Cl⁻ efflux depolarizing/excitatory. KCC2 expression increases developmentally, lowering intracellular [Cl⁻] and switching GABA to inhibitory. Since S2 is labeled FALSE but is actually true, the answer for S2 is FALSE. S3 is TRUE: The nigrostriatal pathway (substantia nigra pars compacta → dorsal striatum) degenerates in Parkinson's disease. The dopamine hypothesis of schizophrenia implicates hyperactive mesolimbic (VTA → nucleus accumbens) dopamine signaling. S4 is labeled TRUE but contains two errors: serotonin is synthesized from TRYPTOPHAN (not phenylalanine) by TRYPTOPHAN HYDROXYLASE (TPH, not phenylalanine hydroxylase), and SSRIs block SERT (serotonin transporter/5-HTT), not DAT (dopamine transporter). Since S4's content is factually incorrect, S4 is FALSE.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the vertebrate vestibular system and mechanotransduction in hair cells:\nS1: TRUE — The semicircular canals detect angular (rotational) acceleration of the head; endolymph movement deflects the cupula in the ampulla, bending stereocilia of hair cells and modulating the release of neurotransmitter onto vestibular nerve afferents.\nS2: FALSE — Deflection of stereocilia toward the kinocilium opens mechanically gated ion channels (primarily permeable to K⁺ and Ca²⁺) via tip links composed of cadherin-23 and protocadherin-15, causing depolarization; deflection away from the kinocilium closes these channels, causing hyperpolarization.\nS3: TRUE — The otolith organs (utricle and saccule) detect linear acceleration and head tilt relative to gravity; calcium carbonate crystals (otoconia) overlying the macula provide the inertial mass that displaces the gelatinous membrane and bends hair cell stereocilia when the head accelerates linearly.\nS4: TRUE — Hair cells in the cochlea and vestibular organs are unusual sensory receptors because the transduction channel at the tip of the stereocilia is bathed in endolymph (high K⁺, ~150 mM), and the driving force for K⁺ entry is maintained by the endocochlear potential (+80 mV in the cochlea) generated by the stria vascularis.",
+      "options": [
+        "S1: TRUE — The semicircular canals detect angular (rotational) acceleration of the head; endolymph movement deflects the cupula in the ampulla, bending stereocilia of hair cells and modulating the release of neurotransmitter onto vestibular nerve afferents.",
+        "S2: FALSE — Deflection of stereocilia toward the kinocilium opens mechanically gated ion channels (primarily permeable to K⁺ and Ca²⁺) via tip links composed of cadherin-23 and protocadherin-15, causing depolarization; deflection away from the kinocilium closes these channels, causing hyperpolarization.",
+        "S3: TRUE — The otolith organs (utricle and saccule) detect linear acceleration and head tilt relative to gravity; calcium carbonate crystals (otoconia) overlying the macula provide the inertial mass that displaces the gelatinous membrane and bends hair cell stereocilia when the head accelerates linearly.",
+        "S4: TRUE — Hair cells in the cochlea and vestibular organs are unusual sensory receptors because the transduction channel at the tip of the stereocilia is bathed in endolymph (high K⁺, ~150 mM), and the driving force for K⁺ entry is maintained by the endocochlear potential (+80 mV in the cochlea) generated by the stria vascularis."
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: The three semicircular canals (horizontal, anterior, posterior) are oriented in orthogonal planes and detect angular acceleration. When the head rotates, endolymph lags behind due to inertia, deflecting the cupula (a gelatinous partition in the ampulla). This bends the stereocilia of hair cells embedded in the crista ampullaris. Depolarization increases glutamate release onto vestibular nerve (CN VIII) afferents; hyperpolarization decreases it. S2 is labeled FALSE but the content is entirely CORRECT: Tip links (composed of cadherin-23 on the upper end and protocadherin-15 on the lower) connect adjacent stereocilia. Deflection toward the tallest stereocilium (kinocilium) increases tip-link tension, opening mechanotransduction channels (likely TMC1/TMC2) permeable to K⁺ and Ca²⁺. Because endolymph is K⁺-rich, K⁺ flows in, depolarizing the cell. Deflection in the opposite direction relaxes tip links and closes channels. Since S2's content is correct but labeled FALSE, S2 is FALSE (incorrectly labeled). S3 is TRUE: The utricle (horizontal plane) and saccule (vertical plane) contain the macula — a sensory epithelium covered by an otolithic membrane embedded with otoconia (CaCO₃ crystals). During linear acceleration or head tilt, the denser otoconia lag or shift, displacing the membrane and bending stereocilia. S4 is TRUE: The endolymph's unique high-K⁺ composition (maintained by KCNJ10 channels and Na⁺/K⁺-ATPase in the stria vascularis) and the endocochlear potential (+80 mV) create a driving force of ~+150 mV across the hair cell apical membrane, powering K⁺ influx through transduction channels.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about excitation-contraction coupling and the sliding filament mechanism in skeletal muscle:\nS1: TRUE — An action potential propagates along the sarcolemma and down T-tubules, where voltage-sensitive dihydropyridine receptors (DHPRs, L-type Ca²⁺ channels) undergo conformational changes that mechanically couple to ryanodine receptors (RyR1) on the sarcoplasmic reticulum, triggering Ca²⁺ release without requiring extracellular Ca²⁺ entry.\nS2: TRUE — Released Ca²⁺ binds troponin C (TnC), causing a conformational change in the troponin complex that shifts tropomyosin away from myosin-binding sites on actin, allowing cross-bridge formation.\nS3: FALSE — During the power stroke, myosin hydrolyzes ATP while attached to actin; the energy from this hydrolysis directly drives the conformational change that pulls the thin filament toward the M-line.\nS4: TRUE — Muscle relaxation occurs when Ca²⁺-ATPase (SERCA) pumps in the SR membrane actively transport Ca²⁺ back into the SR lumen (where it is buffered by calsequestrin), lowering cytoplasmic [Ca²⁺] below ~0.1 μM so that troponin-tropomyosin re-blocks myosin binding sites.",
+      "options": [
+        "S1: TRUE — An action potential propagates along the sarcolemma and down T-tubules, where voltage-sensitive dihydropyridine receptors (DHPRs, L-type Ca²⁺ channels) undergo conformational changes that mechanically couple to ryanodine receptors (RyR1) on the sarcoplasmic reticulum, triggering Ca²⁺ release without requiring extracellular Ca²⁺ entry.",
+        "S2: TRUE — Released Ca²⁺ binds troponin C (TnC), causing a conformational change in the troponin complex that shifts tropomyosin away from myosin-binding sites on actin, allowing cross-bridge formation.",
+        "S3: FALSE — During the power stroke, myosin hydrolyzes ATP while attached to actin; the energy from this hydrolysis directly drives the conformational change that pulls the thin filament toward the M-line.",
+        "S4: TRUE — Muscle relaxation occurs when Ca²⁺-ATPase (SERCA) pumps in the SR membrane actively transport Ca²⁺ back into the SR lumen (where it is buffered by calsequestrin), lowering cytoplasmic [Ca²⁺] below ~0.1 μM so that troponin-tropomyosin re-blocks myosin binding sites."
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: In skeletal muscle, excitation-contraction (E-C) coupling is mechanical. DHPRs (CaV1.1) in T-tubule membranes are voltage sensors that undergo conformational changes upon depolarization. These DHPRs are physically linked to RyR1 channels on the junctional SR membrane via the II-III cytoplasmic loop. The conformational change in DHPR directly opens RyR1, releasing stored Ca²⁺ from the SR. Unlike cardiac muscle (where Ca²⁺-induced Ca²⁺ release requires Ca²⁺ influx through L-type channels to trigger RyR2), skeletal muscle E-C coupling is mechanical and does not require extracellular Ca²⁺ entry. S2 is TRUE: The troponin complex consists of TnC (Ca²⁺-binding), TnI (inhibitory, binds actin), and TnT (tropomyosin-binding). When Ca²⁺ binds TnC, TnI releases from actin, and the entire troponin complex shifts tropomyosin deeper into the actin groove, exposing myosin-binding sites and allowing cross-bridge cycling. S3 is labeled FALSE and its content is CORRECTLY identified as wrong: ATP hydrolysis occurs while myosin is DETACHED from actin (or loosely bound). The products (ADP + Pi) remain bound, and the energy is stored in the cocked myosin head (pre-power-stroke state). The power stroke occurs upon strong binding to actin and sequential release of Pi (triggers the stroke) then ADP. ATP hydrolysis precedes, not accompanies, the power stroke. So S3's FALSE label is correct. S4 is TRUE: SERCA (sarco/endoplasmic reticulum Ca²⁺-ATPase, SERCA1a in fast-twitch) uses 1 ATP to transport 2 Ca²⁺ ions into the SR lumen against the concentration gradient. Calsequestrin is a low-affinity, high-capacity Ca²⁺-binding protein in the SR lumen that buffers stored Ca²⁺. When cytoplasmic Ca²⁺ drops below ~0.1 μM, Ca²⁺ dissociates from TnC, tropomyosin re-covers myosin-binding sites, and cross-bridge cycling ceases.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about brain organization and higher CNS functions:\nS1: TRUE — The cerebellum receives input from the cerebral cortex (via pontine nuclei), proprioceptors, and vestibular organs, and coordinates motor execution by comparing intended movement (motor commands) with actual movement (sensory feedback), sending corrective signals via the deep cerebellar nuclei to the thalamus and motor cortex.\nS2: FALSE — The limbic system, including the amygdala, hippocampus, and cingulate cortex, is exclusively involved in olfaction and plays no role in emotion, memory formation, or motivated behavior.\nS3: TRUE — The blood-brain barrier (BBB) is formed by tight junctions between brain capillary endothelial cells, reinforced by astrocyte end-feet and pericytes; it restricts paracellular transport and uses specific transporters (GLUT1 for glucose, LAT1 for amino acids) for selective molecular entry.\nS4: TRUE — Broca's area (left inferior frontal gyrus) is primarily involved in speech production and language processing, while Wernicke's area (left posterior superior temporal gyrus) is primarily involved in language comprehension; damage to Broca's area produces non-fluent aphasia, while Wernicke's area damage produces fluent but nonsensical speech.",
+      "options": [
+        "S1: TRUE — The cerebellum receives input from the cerebral cortex (via pontine nuclei), proprioceptors, and vestibular organs, and coordinates motor execution by comparing intended movement (motor commands) with actual movement (sensory feedback), sending corrective signals via the deep cerebellar nuclei to the thalamus and motor cortex.",
+        "S2: FALSE — The limbic system, including the amygdala, hippocampus, and cingulate cortex, is exclusively involved in olfaction and plays no role in emotion, memory formation, or motivated behavior.",
+        "S3: TRUE — The blood-brain barrier (BBB) is formed by tight junctions between brain capillary endothelial cells, reinforced by astrocyte end-feet and pericytes; it restricts paracellular transport and uses specific transporters (GLUT1 for glucose, LAT1 for amino acids) for selective molecular entry.",
+        "S4: TRUE — Broca's area (left inferior frontal gyrus) is primarily involved in speech production and language processing, while Wernicke's area (left posterior superior temporal gyrus) is primarily involved in language comprehension; damage to Broca's area produces non-fluent aphasia, while Wernicke's area damage produces fluent but nonsensical speech."
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: The cerebellum acts as a comparator for motor control. It receives corticopontocerebellar projections (motor plans from cortex relayed via pontine nuclei to cerebellar cortex via mossy fibers), spinocerebellar tracts (proprioceptive feedback from limbs), and vestibular input. Purkinje cells in the cerebellar cortex integrate these inputs and send inhibitory (GABAergic) output to deep cerebellar nuclei (dentate, interposed, fastigial), which then project to thalamus (VL nucleus) and back to motor cortex, as well as to the red nucleus and brainstem motor centers. Cerebellar damage causes ataxia, dysmetria, intention tremor, and dysdiadochokinesia. S2 is labeled FALSE and the content is INCORRECT: The limbic system is fundamentally involved in emotion (amygdala — fear conditioning, emotional valence), memory formation (hippocampus — declarative/episodic memory, spatial memory, long-term potentiation), and motivated behavior (nucleus accumbens, ventral tegmental area connections). While the olfactory system has limbic connections, claiming it is 'exclusively involved in olfaction' is wrong. Since S2 is labeled FALSE and the content is indeed false, S2 is correctly labeled = FALSE (making our answer for S2 = FALSE). S3 is TRUE: The BBB is a selectively permeable barrier. Tight junctions (claudin-5, occludin, ZO-1) seal the paracellular space between endothelial cells. Astrocyte end-feet and pericytes provide structural and signaling support. Essential nutrients cross via specific transporters. S4 is TRUE: This describes the classic Wernicke-Geschwind model of language processing.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about olfactory and gustatory receptor mechanisms:\nS1: TRUE — Olfactory receptor neurons (ORNs) in the nasal epithelium each express only one type of odorant receptor gene (from ~400 in humans, ~1000 in mice) due to monoallelic and monogenic expression; odorant binding activates a G-protein (G_olf) → adenylyl cyclase III → cAMP → opening of cyclic nucleotide-gated (CNG) channels → Na⁺/Ca²⁺ influx → depolarization.\nS2: FALSE — Taste receptor cells for sweet, bitter, and umami use ionotropic receptors (ion channels) that directly depolarize the cell upon tastant binding, while sour and salt taste use GPCRs and second messenger cascades.\nS3: TRUE — Bitter taste is mediated by T2R receptors (a large family of ~25-30 GPCRs in humans) coupled to gustducin (a G-protein) → PLCβ2 → IP₃ → Ca²⁺ release from ER → TRPM5 channel opening → depolarization → ATP release through CALHM1 channels to activate gustatory afferent nerve fibers.\nS4: TRUE — Each olfactory glomerulus in the olfactory bulb receives convergent input from all ORNs expressing the same odorant receptor, creating a spatial map of odorant identity; mitral and tufted cells then relay this information to the piriform cortex without a thalamic relay.",
+      "options": [
+        "S1: TRUE — Olfactory receptor neurons (ORNs) in the nasal epithelium each express only one type of odorant receptor gene (from ~400 in humans, ~1000 in mice) due to monoallelic and monogenic expression; odorant binding activates a G-protein (G_olf) → adenylyl cyclase III → cAMP → opening of cyclic nucleotide-gated (CNG) channels → Na⁺/Ca²⁺ influx → depolarization.",
+        "S2: FALSE — Taste receptor cells for sweet, bitter, and umami use ionotropic receptors (ion channels) that directly depolarize the cell upon tastant binding, while sour and salt taste use GPCRs and second messenger cascades.",
+        "S3: TRUE — Bitter taste is mediated by T2R receptors (a large family of ~25-30 GPCRs in humans) coupled to gustducin (a G-protein) → PLCβ2 → IP₃ → Ca²⁺ release from ER → TRPM5 channel opening → depolarization → ATP release through CALHM1 channels to activate gustatory afferent nerve fibers.",
+        "S4: TRUE — Each olfactory glomerulus in the olfactory bulb receives convergent input from all ORNs expressing the same odorant receptor, creating a spatial map of odorant identity; mitral and tufted cells then relay this information to the piriform cortex without a thalamic relay."
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: The 'one receptor, one neuron' rule is a fundamental principle of olfactory coding. Each ORN expresses a single allele of a single odorant receptor gene (monogenic and monoallelic expression, regulated by negative feedback involving the receptor protein itself). The signaling cascade uses G_olf (a Golf α-subunit specific to ORNs), adenylyl cyclase III (ACIII), and CNG channels (CNGA2/CNGB1b). Ca²⁺ entry also opens Ca²⁺-activated Cl⁻ channels (ANO2/TMEM16B), amplifying depolarization because the Cl⁻ equilibrium potential in ORNs is more positive than resting potential (ORNs actively accumulate Cl⁻ via NKCC1). S2 is labeled FALSE and is correctly FALSE: The statement reverses the actual mechanism. Sweet (T1R2+T1R3), bitter (T2Rs), and umami (T1R1+T1R3) taste receptors are GPCRs that signal through gustducin/PLCβ2/IP₃/Ca²⁺/TRPM5. Conversely, sour taste is mediated by the OTOP1 proton channel (ionotropic), and salt (NaCl) taste involves direct Na⁺ entry through ENaC channels (ionotropic). The statement has it backwards, so S2's FALSE label is correct. S3 is TRUE: T2R bitter receptors couple to gustducin (α-gustducin activates PLCβ2), generating IP₃ that releases Ca²⁺ from ER stores. Ca²⁺ activates TRPM5, a monovalent cation channel causing depolarization. ATP is released through CALHM1 (calcium homeostasis modulator 1) channels as the neurotransmitter to afferent nerve fibers (note: Type II taste cells lack conventional synapses). S4 is TRUE: Axons from all ORNs expressing the same receptor converge onto 1-2 glomeruli in each olfactory bulb, creating a combinatorial odor map. Olfaction is unique among senses in projecting directly to cortex (piriform cortex) without obligatory thalamic relay, though thalamic connections exist via the mediodorsal nucleus for conscious perception.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about embryonic development and cell fate determination:\nS1: TRUE — Morphogens such as Sonic hedgehog (Shh) and BMPs establish concentration gradients that provide positional information to cells; cells respond to different morphogen concentrations by activating distinct sets of transcription factors, thereby acquiring different fates in a concentration-dependent manner.\nS2: FALSE — Hox genes encode homeodomain transcription factors that specify segment identity along the anterior-posterior axis; they are arranged in clusters on chromosomes and exhibit collinearity — their physical order on the chromosome corresponds to their expression domains along the body axis.\nS3: TRUE — During gastrulation in vertebrates, cells undergo epithelial-to-mesenchymal transition (EMT) at the primitive streak (amniotes) or blastopore (amphibians), invaginating to form the three germ layers: ectoderm, mesoderm, and endoderm.\nS4: TRUE — Neural crest cells are a transient, multipotent cell population that originates at the border of the neural plate and epidermis; after neural tube closure, they undergo EMT, migrate extensively, and differentiate into diverse cell types including peripheral neurons, Schwann cells, melanocytes, craniofacial cartilage and bone, and adrenal medulla chromaffin cells.",
+      "options": [
+        "S1: TRUE — Morphogens such as Sonic hedgehog (Shh) and BMPs establish concentration gradients that provide positional information to cells; cells respond to different morphogen concentrations by activating distinct sets of transcription factors, thereby acquiring different fates in a concentration-dependent manner.",
+        "S2: FALSE — Hox genes encode homeodomain transcription factors that specify segment identity along the anterior-posterior axis; they are arranged in clusters on chromosomes and exhibit collinearity — their physical order on the chromosome corresponds to their expression domains along the body axis.",
+        "S3: TRUE — During gastrulation in vertebrates, cells undergo epithelial-to-mesenchymal transition (EMT) at the primitive streak (amniotes) or blastopore (amphibians), invaginating to form the three germ layers: ectoderm, mesoderm, and endoderm.",
+        "S4: TRUE — Neural crest cells are a transient, multipotent cell population that originates at the border of the neural plate and epidermis; after neural tube closure, they undergo EMT, migrate extensively, and differentiate into diverse cell types including peripheral neurons, Schwann cells, melanocytes, craniofacial cartilage and bone, and adrenal medulla chromaffin cells."
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: Morphogens are secreted signaling molecules that form concentration gradients and specify cell fate in a dose-dependent manner. Shh (Sonic hedgehog) is secreted from the notochord and floor plate of the neural tube, forming a ventral-to-dorsal gradient that specifies different neuronal subtypes (motor neurons at high concentrations, interneuron subtypes at lower concentrations) by activating different combinations of homeodomain transcription factors (e.g., Nkx2.2, Olig2, Pax6, Dbx1). BMPs from the roof plate form an opposing dorsal gradient. The French Flag model (Wolpert) illustrates this threshold-based patterning concept. S2 is labeled FALSE but the content is entirely CORRECT: Hox genes (homologs of Drosophila homeotic genes) encode homeodomain-containing transcription factors. In mammals, there are 39 Hox genes in four clusters (HoxA-D) on chromosomes 7, 17, 12, and 2. They exhibit spatial collinearity (3' genes expressed more anteriorly, 5' genes more posteriorly) and temporal collinearity (3' genes expressed earlier). This is a fundamental principle of developmental biology. Since S2 is labeled FALSE but its content is true, S2 is incorrectly labeled = FALSE. S3 is TRUE: Gastrulation transforms the blastula into a three-layered embryo through coordinated cell movements (involution, invagination, ingression, delamination, epiboly). EMT at the primitive streak (in chick, mouse) or dorsal blastopore lip (in Xenopus) is driven by FGF signaling, Snail/Slug transcription factors downregulating E-cadherin, and establishment of mesodermal and endodermal layers. S4 is TRUE: Neural crest cells are sometimes called the 'fourth germ layer' due to their remarkable developmental versatility. Transcription factors Snail2/Slug, FoxD3, and Sox9/Sox10 drive their specification and migration.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about synaptic transmission and neurotransmitter signaling at the neuromuscular junction (NMJ) and in the CNS:\nS1: TRUE — At the vertebrate NMJ, acetylcholine (ACh) released from the motor neuron terminal binds to nicotinic ACh receptors (nAChRs) on the muscle end plate; these are pentameric ligand-gated ion channels (α₂βδε in adults) permeable to both Na⁺ and K⁺, producing a large end-plate potential (EPP) that normally exceeds threshold and guarantees muscle fiber contraction.\nS2: TRUE — Botulinum toxin (BoNT) is a zinc-dependent endopeptidase that cleaves specific SNARE proteins (BoNT/A cleaves SNAP-25, BoNT/B cleaves synaptobrevin/VAMP2), preventing synaptic vesicle fusion and ACh release at the NMJ, causing flaccid paralysis.\nS3: FALSE — Acetylcholinesterase (AChE) in the synaptic cleft rapidly degrades ACh into choline and acetate; the choline is taken back up into the presynaptic terminal by a high-affinity choline transporter (CHT1) for resynthesis of ACh by choline acetyltransferase (ChAT). Nerve agents (e.g., sarin) irreversibly inhibit AChE, causing ACh accumulation and persistent receptor activation.\nS4: TRUE — Norepinephrine at sympathetic postganglionic synapses is primarily terminated by reuptake into the presynaptic terminal via the norepinephrine transporter (NET), followed by degradation by monoamine oxidase (MAO) and catechol-O-methyltransferase (COMT); this differs from ACh, which is terminated by enzymatic hydrolysis in the cleft.",
+      "options": [
+        "S1: TRUE — At the vertebrate NMJ, acetylcholine (ACh) released from the motor neuron terminal binds to nicotinic ACh receptors (nAChRs) on the muscle end plate; these are pentameric ligand-gated ion channels (α₂βδε in adults) permeable to both Na⁺ and K⁺, producing a large end-plate potential (EPP) that normally exceeds threshold and guarantees muscle fiber contraction.",
+        "S2: TRUE — Botulinum toxin (BoNT) is a zinc-dependent endopeptidase that cleaves specific SNARE proteins (BoNT/A cleaves SNAP-25, BoNT/B cleaves synaptobrevin/VAMP2), preventing synaptic vesicle fusion and ACh release at the NMJ, causing flaccid paralysis.",
+        "S3: FALSE — Acetylcholinesterase (AChE) in the synaptic cleft rapidly degrades ACh into choline and acetate; the choline is taken back up into the presynaptic terminal by a high-affinity choline transporter (CHT1) for resynthesis of ACh by choline acetyltransferase (ChAT). Nerve agents (e.g., sarin) irreversibly inhibit AChE, causing ACh accumulation and persistent receptor activation.",
+        "S4: TRUE — Norepinephrine at sympathetic postganglionic synapses is primarily terminated by reuptake into the presynaptic terminal via the norepinephrine transporter (NET), followed by degradation by monoamine oxidase (MAO) and catechol-O-methyltransferase (COMT); this differs from ACh, which is terminated by enzymatic hydrolysis in the cleft."
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: The adult muscle nAChR is a pentameric ligand-gated ion channel composed of 2α1, β1, δ, and ε subunits (fetal form has γ instead of ε). Two ACh molecules bind at the α-δ and α-ε interfaces. The channel opens to allow Na⁺ influx and K⁺ efflux, with a reversal potential near 0 mV. The resulting EPP (~70 mV depolarization) far exceeds the threshold for voltage-gated Na⁺ channels (~−55 mV), providing a large safety factor that guarantees successful transmission under normal conditions. S2 is TRUE: Botulinum neurotoxins are the most potent biological toxins known. There are seven serotypes (A-G). BoNT/A cleaves SNAP-25 (9 residues from the C-terminus), BoNT/B cleaves VAMP2/synaptobrevin, and BoNT/C cleaves both syntaxin-1 and SNAP-25. By cleaving SNARE proteins, BoNT prevents the membrane fusion machinery from assembling, blocking vesicle exocytosis. The result is flaccid paralysis (compare with tetanus toxin, which blocks inhibitory interneuron transmission causing spastic paralysis). S3 is labeled FALSE but the content is entirely CORRECT: AChE is one of the fastest enzymes known (catalytic rate ~25,000 ACh molecules per second). It hydrolyzes ACh into choline and acetate. CHT1 (SLC5A7) is a Na⁺-dependent high-affinity choline transporter. ChAT catalyzes choline + acetyl-CoA → ACh in the presynaptic terminal. Organophosphate nerve agents (sarin, VX, tabun) irreversibly phosphorylate the serine residue in the AChE active site, causing cholinergic crisis (SLUDGE symptoms: salivation, lacrimation, urination, defecation, GI distress, emesis). Since S3 is labeled FALSE but its content is true, S3 = FALSE in our answer. S4 is TRUE: Norepinephrine (NE) signaling termination differs fundamentally from ACh. NE is primarily removed by reuptake (NET, SLC6A2 — the target of cocaine and tricyclic antidepressants). Once inside the terminal, NE is degraded by MAO (on the outer mitochondrial membrane) or can be reloaded into vesicles by VMAT2. Extracellularly, COMT methylates catecholamines. This contrasts with ACh's rapid enzymatic degradation in the cleft itself.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers investigated the ionic basis of the resting membrane potential in cultured hippocampal neurons by systematically varying the extracellular K⁺ concentration ([K⁺]_o) and measuring the membrane potential. They also performed the experiment in the presence of 1 μM TTX (to block voltage-gated Na⁺ channels) and separately with 100 μM Ba²⁺ (to block K⁺ leak channels). Based on the data, which conclusion is best supported?",
+      "dataContext": "Table: Membrane Potential (mV) at Various [K⁺]_o Under Different Conditions\n\n[K⁺]_o (mM) | Normal | + TTX (1 μM) | + Ba²⁺ (100 μM)\n--- | --- | --- | ---\n3 | −72 | −74 | −45\n5 | −68 | −70 | −42\n10 | −58 | −59 | −38\n20 | −45 | −46 | −32\n50 | −28 | −28 | −22\n100 | −12 | −12 | −10\n\nNote: Intracellular [K⁺] = 140 mM. The Nernst equation predicts E_K at each [K⁺]_o.\nE_K (predicted): [K⁺]_o = 3 mM → −101 mV; 5 mM → −86 mV; 10 mM → −69 mV; 20 mM → −50 mV; 50 mM → −27 mV; 100 mM → −9 mV.",
+      "options": [
+        "A) TTX has a large effect on resting membrane potential, indicating that voltage-gated Na⁺ channels are major contributors to the resting potential at all K⁺ concentrations",
+        "B) At low [K⁺]_o, the measured membrane potential deviates substantially from E_K (−72 mV measured vs. −101 mV predicted at 3 mM K⁺), consistent with the GHK equation's prediction that resting Na⁺ permeability depolarizes the membrane from E_K; TTX minimally affects resting potential because voltage-gated Na⁺ channels contribute little at rest; Ba²⁺ dramatically depolarizes the membrane by blocking K⁺ leak channels, confirming their dominant role in setting resting potential",
+        "C) Ba²⁺ hyperpolarizes the neuron because blocking K⁺ leak channels prevents K⁺ efflux, trapping positive charge outside the cell",
+        "D) At high [K⁺]_o, the membrane potential exceeds E_K, indicating that active transport by the Na⁺/K⁺-ATPase is the sole determinant of membrane potential under these conditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data reveal three key findings: (1) At low [K⁺]_o, the resting potential is significantly more positive than E_K (−72 mV vs. −101 mV at 3 mM K⁺), but at high [K⁺]_o, the measured potential closely approaches E_K (−12 mV vs. −9 mV at 100 mM K⁺). This is a classic demonstration of the GHK equation — at low [K⁺]_o, the P_Na/P_K ratio contributes significantly because the Na⁺ driving force is large. As [K⁺]_o increases, E_K shifts positive and dominates, so the membrane potential converges on E_K regardless of Na⁺ permeability. (2) TTX has minimal effect (1-2 mV at most), confirming that voltage-gated Na⁺ channels (the TTX-sensitive channels) are mostly closed at resting potential and contribute negligibly. The small Na⁺ permeability that keeps the resting potential above E_K comes from TTX-insensitive Na⁺ leak channels (NALCN). (3) Ba²⁺ dramatically depolarizes the neurons at all [K⁺]_o, confirming that K⁺ leak channels (likely K2P/KCNK family, including TWIK, TREK, TASK channels — many of which are Ba²⁺-sensitive) are the primary determinants of resting conductance. Blocking them reduces K⁺ permeability, shifting the resting potential toward E_Na. Option C is wrong because blocking K⁺ channels depolarizes (not hyperpolarizes). Option D is incorrect because at high [K⁺]_o, the membrane potential approaches but does not exceed E_K.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A neuroscience lab recorded excitatory postsynaptic currents (EPSCs) at a hippocampal CA1 synapse before and after a high-frequency stimulation (HFS) protocol designed to induce long-term potentiation (LTP). They tested the effect of the NMDA receptor antagonist AP5 and the CaMKII inhibitor KN-93. Based on the data, which interpretation is correct?",
+      "dataContext": "Table: EPSC Amplitude (% of Baseline) at CA3-CA1 Synapse, Measured 60 Minutes After HFS Protocol\n\nCondition | EPSC Amplitude (% baseline) | Statistical Significance vs. Baseline\n--- | --- | ---\nBaseline (pre-HFS) | 100 ± 5 | —\nHFS alone (control) | 185 ± 12 | p < 0.001\nHFS + AP5 (50 μM, bath applied before HFS) | 102 ± 8 | p = 0.78 (ns)\nHFS + AP5 (applied 10 min after HFS) | 178 ± 14 | p < 0.001\nHFS + KN-93 (10 μM, applied before HFS) | 108 ± 7 | p = 0.32 (ns)\nHFS + KN-93 (applied 30 min after HFS) | 181 ± 11 | p < 0.001\n\nAdditional data: Paired-pulse facilitation (PPF) ratio was unchanged after LTP induction (PPF before: 1.8 ± 0.1; PPF after: 1.75 ± 0.12; p = 0.65).",
+      "options": [
+        "A) LTP requires NMDA receptor activation and CaMKII activity during induction but not for maintenance; the unchanged PPF ratio suggests that LTP expression is primarily postsynaptic (increased AMPA receptor number/conductance) rather than presynaptic (increased neurotransmitter release probability)",
+        "B) AP5 blocks LTP both during and after induction, demonstrating that NMDA receptors are required continuously for LTP maintenance",
+        "C) The unchanged PPF ratio proves that LTP is exclusively a presynaptic phenomenon involving increased vesicle release, and AMPA receptor trafficking plays no role",
+        "D) KN-93 blocks LTP maintenance but not induction, indicating that CaMKII is required only during the late phase of LTP expression"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The data provide a comprehensive picture of LTP mechanisms at CA3-CA1 synapses. Key findings: (1) HFS alone produces robust LTP (185% of baseline at 60 min). (2) AP5 (NMDA receptor antagonist) completely blocks LTP induction when applied before HFS (102%) but has no effect when applied after LTP is established (178%). This demonstrates that NMDA receptor activation is required for LTP induction (Ca²⁺ entry through NMDA receptors triggers the signaling cascade) but not for LTP maintenance. (3) KN-93 (CaMKII inhibitor) similarly blocks LTP induction (108%) but not maintenance (181%), confirming that CaMKII activation (autophosphorylation at Thr286, making it constitutively active) is required during the induction phase. CaMKII phosphorylates GluA1 subunits at Ser831, enhancing AMPA receptor conductance, and promotes AMPA receptor trafficking to the postsynaptic density. (4) The unchanged paired-pulse facilitation (PPF) ratio is critical: PPF is a measure of presynaptic release probability. If LTP were presynaptic (increased release probability), PPF should decrease. The unchanged PPF indicates that LTP expression is postsynaptic — more AMPA receptors at the synapse and/or increased single-channel conductance. Option B is wrong because AP5 after HFS has no effect. Option C reverses the PPF interpretation. Option D reverses the KN-93 findings.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers studied skeletal muscle contraction by measuring isometric tension in skinned muscle fibers (with the sarcolemma removed) bathed in solutions with controlled [Ca²⁺]. They also tested fibers treated with the myosin ATPase inhibitor blebbistatin and fibers from a troponin C mutant mouse with reduced Ca²⁺ affinity. Based on the data, which conclusion is best supported?",
+      "dataContext": "Table: Isometric Tension (% of Maximum) vs. Free [Ca²⁺] in Solution\n\npCa (= −log[Ca²⁺]) | Wild-Type Fiber | TnC Mutant Fiber | Wild-Type + Blebbistatin (25 μM)\n--- | --- | --- | ---\n8.0 (10 nM) | 0 | 0 | 0\n7.0 (100 nM) | 2 | 0 | 1\n6.5 (316 nM) | 15 | 2 | 5\n6.0 (1 μM) | 55 | 10 | 18\n5.5 (3.16 μM) | 90 | 45 | 32\n5.0 (10 μM) | 100 | 85 | 38\n4.5 (31.6 μM) | 100 | 100 | 40\n4.0 (100 μM) | 100 | 100 | 40\n\nNote: pCa₅₀ (Ca²⁺ concentration at 50% maximum tension) — Wild-type: pCa 6.1; TnC mutant: pCa 5.5; Blebbistatin maximum tension plateaus at ~40% of WT maximum.",
+      "options": [
+        "A) Blebbistatin shifts the Ca²⁺ sensitivity curve rightward, proving that myosin ATPase activity is required for Ca²⁺ binding to troponin C",
+        "B) The TnC mutant shows a rightward shift in the force-pCa relationship (higher [Ca²⁺] required for half-maximal activation, pCa₅₀ = 5.5 vs. 6.1), consistent with reduced Ca²⁺ binding affinity of mutant TnC; blebbistatin reduces maximum tension to ~40% without shifting Ca²⁺ sensitivity, indicating that it directly inhibits the myosin power stroke but does not impair Ca²⁺-troponin-tropomyosin regulation",
+        "C) Both the TnC mutant and blebbistatin-treated fibers show identical responses, indicating that Ca²⁺ sensitivity and myosin ATPase activity are controlled by the same molecular mechanism",
+        "D) The wild-type fibers reach maximum tension at pCa 5.0 because at this concentration all myosin heads are occupied by Ca²⁺ ions that directly activate the ATPase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The force-pCa relationship is a fundamental measurement in muscle physiology that characterizes the Ca²⁺ sensitivity of the contractile apparatus. Key analyses: (1) Wild-type fibers show a sigmoidal force-pCa curve with pCa₅₀ ≈ 6.1 (about 0.8 μM Ca²⁺), reaching maximum tension at pCa 5.0 (10 μM). The cooperativity (Hill coefficient) reflects cooperative binding of Ca²⁺ to TnC and strong binding of myosin to actin. (2) The TnC mutant shows a rightward shift (pCa₅₀ = 5.5, approximately 3.2 μM Ca²⁺), meaning higher Ca²⁺ is needed to achieve the same tension. However, at saturating [Ca²⁺], maximum tension is reached (100% at pCa 4.5), confirming that the mutation reduces Ca²⁺ affinity but does not eliminate TnC function. This is consistent with a mutation in one of the regulatory Ca²⁺-binding sites (EF-hand domains) of TnC. (3) Blebbistatin inhibits myosin II ATPase by stabilizing the pre-power-stroke conformation (myosin·ADP·Pi state), preventing the power stroke. It reduces maximum tension to ~40%, indicating that ~60% of cross-bridges are inhibited. Importantly, the Ca²⁺ sensitivity is NOT shifted — the pCa₅₀ appears similar, but the maximum is reduced. This demonstrates that blebbistatin acts downstream of Ca²⁺ regulation, directly on the myosin motor. Option A incorrectly claims blebbistatin affects Ca²⁺-TnC binding. Option C ignores the clear mechanistic differences. Option D incorrectly suggests Ca²⁺ binds myosin directly; Ca²⁺ activates contraction by binding TnC.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A clinical neurophysiology lab measured nerve conduction velocity (NCV), compound muscle action potential (CMAP) amplitude, and F-wave latency in control subjects and three patient groups: (1) Guillain-Barré syndrome (GBS, demyelinating type), (2) amyotrophic lateral sclerosis (ALS), and (3) myasthenia gravis (MG). Based on the data, which interpretation correctly matches the electrophysiological findings to the pathophysiology?",
+      "dataContext": "Table: Nerve Conduction and Electromyographic (EMG) Parameters\n\nParameter | Normal Control | Patient Group 1 (GBS) | Patient Group 2 (ALS) | Patient Group 3 (MG)\n--- | --- | --- | --- | ---\nMotor NCV (m/s) | 52 ± 3 | 28 ± 8 | 49 ± 4 | 51 ± 3\nCMAP amplitude (mV) | 8.5 ± 1.2 | 3.2 ± 1.5 | 4.1 ± 2.0 | 8.0 ± 1.5\nDistal motor latency (ms) | 3.5 ± 0.4 | 7.8 ± 2.1 | 3.8 ± 0.5 | 3.6 ± 0.4\nF-wave latency (ms) | 28 ± 2 | 52 ± 12 | 30 ± 3 | 29 ± 2\nConduction block present? | No | Yes (multiple nerves) | No | No\nRepetitive nerve stimulation (3 Hz) — decrement | < 5% | < 5% | < 5% | 22% (> 10% abnormal)\nSpontaneous fibrillations on EMG | Absent | Absent | Present (widespread) | Absent",
+      "options": [
+        "A) GBS shows slowed NCV, prolonged distal latency, prolonged F-waves, and conduction block — all hallmarks of peripheral nerve demyelination; ALS shows normal NCV but reduced CMAP and widespread fibrillations consistent with motor neuron degeneration and denervation; MG shows a significant decrement on repetitive stimulation consistent with postsynaptic neuromuscular junction failure due to anti-AChR antibodies",
+        "B) All three patient groups show identical electrophysiological findings, indicating that GBS, ALS, and MG share a common pathological mechanism at the neuromuscular junction",
+        "C) GBS shows the decrement on repetitive stimulation because it affects the NMJ; ALS shows demyelination patterns; MG shows denervation fibrillations",
+        "D) The reduced CMAP in ALS but normal NCV excludes a motor neuron disease and instead suggests a pure muscle disease (myopathy) with normal nerve function"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This question integrates neuroanatomy, pathophysiology, and clinical neurophysiology. GBS (Guillain-Barré syndrome, acute inflammatory demyelinating polyneuropathy): Autoimmune attack on peripheral nerve myelin produces classic demyelinating features — markedly slowed NCV (28 vs. 52 m/s, reflecting loss of saltatory conduction), prolonged distal motor latency (7.8 vs. 3.5 ms, reflecting distal demyelination), prolonged F-wave latency (52 vs. 28 ms, reflecting proximal demyelination affecting the motor neuron to root segment), and conduction block (failure of action potential propagation across a demyelinated segment, seen as reduced CMAP with proximal vs. distal stimulation). No fibrillations because axons are intact (demyelinating, not axonal, variant). ALS (amyotrophic lateral sclerosis): Motor neuron disease causing progressive death of upper and lower motor neurons. NCV is near-normal (49 m/s) because surviving motor axons conduct normally (it is the neurons that die, not the myelin). CMAP is reduced because fewer motor neurons means fewer motor units contributing to the compound response. Widespread fibrillation potentials on EMG reflect active denervation — muscle fibers that have lost their nerve supply develop spontaneous activity due to upregulation of extrajunctional AChRs and increased membrane excitability. MG (myasthenia gravis): Autoimmune antibodies against nicotinic AChR at the NMJ. NCV and CMAP at single stimulation are normal (nerve and muscle are intact). The diagnostic hallmark is the decremental response on low-frequency repetitive nerve stimulation (22% at 3 Hz; >10% is abnormal). This occurs because repetitive stimulation depletes readily releasable ACh vesicles, and with fewer functional AChRs, the safety factor for NMJ transmission is reduced — successive end-plate potentials fall below threshold, causing progressive failure of NMJ transmission.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An embryology lab investigated the role of Sonic hedgehog (Shh) in ventral neural tube patterning by exposing chick neural plate explants to different concentrations of recombinant Shh protein and assaying expression of transcription factors Nkx2.2, Olig2, Pax6, and Dbx1 by immunofluorescence. Based on the data, which conclusion about morphogen-dependent cell fate specification is best supported?",
+      "dataContext": "Table: Transcription Factor Expression in Neural Tube Explants at Various Shh Concentrations\n\nShh Concentration (nM) | Nkx2.2 | Olig2 | Pax6 | Dbx1 | Predominant Cell Type Differentiated\n--- | --- | --- | --- | --- | ---\n0 (control) | − | − | +++ | ++ | Dorsal interneurons (dI4-6)\n0.5 | − | − | +++ | +++ | Intermediate interneurons (V1)\n1.0 | − | + | ++ | ++ | V2 interneurons\n2.0 | − | +++ | + | − | Motor neurons (MN)\n4.0 | ++ | +++ | − | − | Motor neurons + V3 interneurons\n10.0 | +++ | + | − | − | V3 interneurons (floor plate adjacent)\n25.0 | +++ | − | − | − | Floor plate-like cells\n\nKey: − = absent, + = low, ++ = moderate, +++ = high expression. Nkx2.2 and Olig2 are Class II TFs (activated by Shh); Pax6 and Dbx1 are Class I TFs (repressed by Shh).",
+      "options": [
+        "A) Shh acts as a binary switch that either turns all ventral genes on or off; there is no concentration-dependent graded response",
+        "B) Shh functions as a classical morphogen: increasing concentrations progressively activate ventral (Class II) transcription factors (Olig2 at moderate, Nkx2.2 at high concentrations) while repressing dorsal (Class I) transcription factors (Pax6, Dbx1), and the unique combinatorial code of expressed TFs at each concentration specifies a distinct neuronal subtype — demonstrating the French Flag model of positional identity",
+        "C) All transcription factors are activated simultaneously at all Shh concentrations, and cell fate is determined randomly rather than by morphogen gradients",
+        "D) Shh represses all transcription factors at high concentrations, indicating that it functions as a general transcriptional inhibitor rather than a morphogen"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This dataset beautifully illustrates the morphogen gradient model of neural tube patterning. Key observations: (1) Class I transcription factors (Pax6, Dbx1) are expressed in the absence of Shh and are progressively repressed by increasing Shh concentrations. Pax6 is detectable up to ~2 nM but absent at 4+ nM; Dbx1 is more sensitive and is repressed at >2 nM. These TFs define dorsal/intermediate progenitor domains. (2) Class II transcription factors (Olig2, Nkx2.2) require Shh for activation. Olig2 is first induced at ~1 nM and peaks at 2-4 nM (motor neuron progenitor domain, pMN). Nkx2.2 requires higher Shh concentrations (appearing at 4 nM, peaking at 10-25 nM), defining the p3 domain (V3 interneuron/floor plate progenitors). (3) The combinatorial code of TF expression at each concentration specifies distinct cell fates: Pax6⁺/Dbx1⁺ → dorsal interneurons; Olig2⁺/Pax6⁺ → V2 interneurons; Olig2⁺/Pax6⁻ → motor neurons; Nkx2.2⁺/Olig2⁺ → V3/MN transition; Nkx2.2⁺/Olig2⁻ → floor plate-like cells. Cross-repressive interactions between Class I and Class II TFs (e.g., Pax6 represses Nkx2.2 and vice versa) sharpen domain boundaries. This is the molecular basis of the French Flag model: different morphogen concentration thresholds activate different TF combinations, creating distinct stripes of cell identity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that long-term potentiation (LTP) at hippocampal CA3-CA1 synapses requires postsynaptic insertion of new AMPA receptors (GluA1 subunit-containing) into the synaptic membrane, mediated by CaMKII phosphorylation of GluA1 at Ser-831. She wants to design a definitive experiment to test this hypothesis. Which experimental design would most rigorously test her hypothesis?",
+      "experimentContext": "Available tools: (1) GluA1-S831A knock-in mice (serine replaced with alanine, preventing phosphorylation at this site); (2) GluA1-SEP (super-ecliptic pHluorin) transgenic mice where GluA1 fused with pH-sensitive GFP fluoresces only when inserted into the surface membrane (not in acidic endosomal compartments); (3) Electrophysiology rig for field EPSP and whole-cell patch-clamp recording; (4) Two-photon microscopy for live imaging of dendritic spines; (5) Pharmacological agents: AP5 (NMDA antagonist), KN-93 (CaMKII inhibitor), CNQX (AMPA antagonist), botulinum toxin (blocks SNARE-mediated exocytosis); (6) Recombinant Sindbis virus for expressing wild-type or mutant GluA1 in individual neurons.",
+      "options": [
+        "A) Record field EPSPs in GluA1-S831A knock-in mice before and after HFS; simultaneously image GluA1-SEP fluorescence at individual spines using two-photon microscopy in GluA1-SEP mice with and without KN-93; if S831A mice show impaired LTP AND GluA1-SEP insertion is blocked by KN-93, this supports CaMKII-dependent Ser-831 phosphorylation driving AMPA receptor trafficking for LTP expression",
+        "B) Simply record field EPSPs in wild-type mice with and without CNQX; if CNQX blocks LTP, this proves AMPA receptor insertion is the mechanism of LTP",
+        "C) Express GluA1-S831A via Sindbis virus in wild-type CA1 neurons, apply botulinum toxin to block all exocytosis, then attempt HFS — if no LTP occurs, conclude that all LTP is postsynaptic without considering that botulinum toxin also blocks neurotransmitter release presynaptically",
+        "D) Measure CaMKII protein levels in the hippocampus before and after LTP using Western blot only; if CaMKII levels increase, conclude that CaMKII-dependent AMPA trafficking occurs"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This is a rigorous multi-pronged experimental design that tests the hypothesis at molecular, cellular, and physiological levels. Component 1 — GluA1-S831A knock-in mice: If phosphorylation of GluA1-Ser831 by CaMKII is required for LTP, these mice (where the phosphorylation site is mutated to alanine) should show impaired LTP. Recording field EPSPs before/after HFS will reveal whether Ser-831 phosphorylation is necessary. Controls include wild-type littermates. Component 2 — GluA1-SEP imaging: Super-ecliptic pHluorin (SEP) is a pH-sensitive GFP that fluoresces at neutral pH (extracellular/surface) but is quenched in acidic compartments (endosomes, pH ~5.5). When GluA1-SEP-containing vesicles fuse with the surface membrane during LTP, fluorescence increases at the spine. Two-photon imaging allows tracking of individual spines during and after HFS. Comparing GluA1-SEP insertion with and without KN-93 tests whether CaMKII activity is required for the trafficking event. Component 3 — Convergent evidence: If both the genetic (S831A mutation) and pharmacological (KN-93) approaches impair LTP and reduce AMPA receptor surface insertion, this provides strong, convergent evidence for the CaMKII → Ser831 phosphorylation → AMPA receptor trafficking model. Option B is flawed because CNQX blocks existing AMPA receptors (blocking basal transmission), not specifically new receptor insertion. Option C has a critical confound — botulinum toxin blocks SNARE-mediated vesicle fusion both pre- and postsynaptically, abolishing neurotransmitter release and making LTP induction impossible. Option D measures total protein, not phosphorylation state or trafficking, and Western blots lack spatial resolution to detect synaptic changes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A developmental biology lab wants to test whether neural crest cell migration requires the transcription factor Slug (Snai2)-mediated epithelial-to-mesenchymal transition (EMT) and whether the extracellular matrix protein fibronectin provides a permissive substrate for migration. They plan to use chick embryos and Xenopus embryos. Which experimental design would most rigorously test both components of the hypothesis?",
+      "experimentContext": "Available tools and techniques: (1) Translation-blocking morpholino oligonucleotides (MOs) targeting chick Slug and Xenopus Slug mRNA; (2) Dominant-negative Slug (dnSlug) construct in an expression plasmid; (3) DiI vital dye labeling of premigratory neural crest cells; (4) HNK-1 antibody (labels migrating neural crest cells in chick); (5) In situ hybridization probes for Slug, FoxD3, Sox10 (neural crest markers); (6) Function-blocking antibodies against α5β1 integrin (the major fibronectin receptor); (7) Fibronectin-coated and poly-L-lysine-coated culture substrates for neural crest explant migration assays; (8) Time-lapse video microscopy; (9) Electroporating expression constructs unilaterally into the neural tube (using the contralateral side as internal control); (10) Recombinant fibronectin protein and enzymatic fibronectin digestion reagents.",
+      "options": [
+        "A) Electroporate Slug morpholino unilaterally into chick neural tube at HH stage 8-9, label premigratory neural crest with DiI bilaterally, and compare migration distance between the electroporated and control sides using time-lapse microscopy and HNK-1 immunostaining; separately, culture neural crest explants on fibronectin versus poly-L-lysine substrates ± α5β1 integrin blocking antibodies, quantifying migration distance, speed, and directionality; additionally, rescue the Slug knockdown by co-electroporating a morpholino-resistant Slug construct to confirm specificity",
+        "B) Inject Slug mRNA into both sides of the embryo and observe whether excess Slug causes more neural crest cells to form; this alone would prove that Slug is necessary for migration",
+        "C) Apply fibronectin-blocking antibodies systemically to the whole embryo and observe whether the embryo dies; if it dies, conclude that fibronectin is required for neural crest migration",
+        "D) Perform in situ hybridization for Slug at a single developmental time point and conclude from its expression pattern alone that Slug drives EMT, without any functional perturbation experiments"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This experimental design rigorously tests both aspects of the hypothesis with appropriate controls and multiple complementary approaches. Part 1 — Slug requirement for EMT/migration: Unilateral electroporation of Slug morpholino into the chick neural tube is an elegant approach because the contralateral (non-electroporated) side serves as a perfect internal control (same embryo, same developmental stage, same environmental conditions). At HH stage 8-9, neural crest cells are premigratory. DiI labeling before migration allows tracking of crest cells from both sides. Expected results if Slug is required: the morpholino side shows reduced or absent neural crest emigration (DiI-labeled cells remain near the neural tube), reduced HNK-1+ migratory streams, maintained E-cadherin expression (EMT failure), and retained Sox10/FoxD3 expression in the dorsal neural tube (cells specified but unable to emigrate). The rescue experiment (co-electroporation of a morpholino-resistant Slug construct that restores migration) is critical for confirming specificity — it excludes off-target morpholino effects. Part 2 — Fibronectin as migration substrate: In vitro neural crest explant assays on defined substrates provide direct evidence. Neural crest cells migrate extensively on fibronectin-coated substrates (a well-established result). Comparing migration on poly-L-lysine (a non-specific adhesive substrate lacking integrin-binding RGD motifs) tests substrate specificity. The α5β1 integrin blocking antibody specifically disrupts fibronectin-integrin signaling without removing other ECM interactions, testing whether the fibronectin-integrin pathway is specifically required. Time-lapse microscopy quantifies multiple parameters: speed, persistence, directionality, and cell morphology changes. Option B overexpression alone cannot prove necessity (it tests sufficiency). Option C is too crude — systemic fibronectin disruption would affect many developmental processes beyond neural crest. Option D provides correlation, not causation — expression patterns alone cannot demonstrate functional requirement.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    }
+  ]
+}
