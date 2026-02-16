@@ -1,0 +1,1410 @@
+{
+  "batch": {
+    "name": "Campbell Ch3 Water and Life \u2014 Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 70
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "The high specific heat capacity of water (4.18 J/g\u00b0C) is primarily due to:",
+      "options": [
+        "The large amount of energy required to break hydrogen bonds before the kinetic energy of water molecules can increase",
+        "Water's low molecular weight compared to other solvents",
+        "Water's ability to form covalent bonds with dissolved solutes",
+        "The high density of water relative to other liquids"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Water's high specific heat capacity results from its extensive hydrogen bonding network. When heat is added to water, much of the energy goes into breaking hydrogen bonds rather than increasing the kinetic energy (temperature) of the molecules. Since water can form up to 4 hydrogen bonds per molecule, a large amount of energy is absorbed before temperature rises significantly. This property makes water an excellent thermal buffer for organisms and environments. Option B is incorrect because molecular weight alone does not determine specific heat. Option C is wrong because water forms noncovalent interactions, not covalent bonds, with most solutes. Option D is incorrect because density is a different physical property unrelated to specific heat capacity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "A solution has a pH of 3. What is the hydrogen ion concentration [H\u207a], and how many times more acidic is this solution compared to a solution at pH 5?",
+      "options": [
+        "[H\u207a] = 10\u207b\u00b3 M; 100 times more acidic than pH 5",
+        "[H\u207a] = 10\u207b\u00b3 M; 2 times more acidic than pH 5",
+        "[H\u207a] = 3 M; 3 times more acidic than pH 5",
+        "[H\u207a] = 10\u00b3 M; 1000 times more acidic than pH 5"
+      ],
+      "correctAnswer": "A",
+      "explanation": "pH = -log[H\u207a], so at pH 3, [H\u207a] = 10\u207b\u00b3 M (0.001 M). At pH 5, [H\u207a] = 10\u207b\u2075 M. The ratio is 10\u207b\u00b3/10\u207b\u2075 = 10\u00b2 = 100. Therefore, a pH 3 solution is 100 times more acidic (has 100\u00d7 more H\u207a ions) than a pH 5 solution. Each pH unit represents a 10-fold change in [H\u207a], so a 2-unit difference represents 10\u00b2 = 100-fold. Option B incorrectly states only 2 times (confusing the pH difference with the concentration ratio). Option C incorrectly equates pH directly with molarity. Option D incorrectly gives an impossibly high concentration and wrong ratio.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Henderson-Hasselbalch equation (pH = pKa + log([A\u207b]/[HA])) predicts that a buffer is most effective when:",
+      "options": [
+        "The pH is more than 3 units away from the pKa",
+        "All of the weak acid has been converted to its conjugate base",
+        "The buffer concentration is extremely dilute (< 1 \u03bcM)",
+        "The concentrations of acid and conjugate base are approximately equal (pH \u2248 pKa), providing maximum resistance to pH changes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A buffer is most effective (has maximum buffering capacity) when pH = pKa, which occurs when [A\u207b] = [HA] (log(1) = 0). At this point, equal amounts of conjugate acid and base are present to neutralize either added acid or added base. The effective buffering range is typically pKa \u00b1 1, beyond which the buffer becomes overwhelmed. Option A is incorrect because at pH more than 3 units from pKa, virtually all buffer exists in one form (either HA or A\u207b), providing minimal buffering. Option B describes a fully deprotonated buffer that cannot absorb more base. Option C is incorrect because dilute buffers have low buffering capacity regardless of pH \u2014 buffering capacity depends on both concentration and the ratio of acid to base.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A titration curve for a weak acid (pKa = 4.75) shows the following pH values as NaOH is added:\n\nEquivalents NaOH | pH\n0                | 2.88\n0.25             | 4.27\n0.50             | 4.75\n0.75             | 5.23\n1.00             | 8.72\n1.25             | 12.00\n\nAt which point on the titration curve is the buffering capacity greatest?",
+      "options": [
+        "At 0.50 equivalents NaOH, where pH equals pKa and equal amounts of HA and A\u207b are present",
+        "At 0 equivalents NaOH, where pH is lowest",
+        "At 1.00 equivalents NaOH, the equivalence point where all acid has been neutralized",
+        "At 1.25 equivalents NaOH, where excess base is present"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The buffering capacity is greatest at 0.50 equivalents of NaOH, which is the half-equivalence point where pH = pKa = 4.75. At this point, exactly half of the weak acid (HA) has been converted to its conjugate base (A\u207b), so [HA] = [A\u207b]. This equal proportion of acid and base means the buffer can effectively neutralize either added acid (A\u207b reacts with H\u207a) or added base (HA reacts with OH\u207b). Note that the pH changes slowly around this point (4.27 to 5.23 over 0.5 equivalents) but dramatically near the equivalence point (5.23 to 8.72 over 0.25 equivalents). Option B has high [HA] but low [A\u207b], providing poor buffering against acid. Option C is the equivalence point with no buffer remaining. Option D has excess NaOH, well beyond the buffer range.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ice floats on liquid water because:",
+      "options": [
+        "The crystalline lattice structure of ice has an open hexagonal arrangement with more empty space than liquid water, making ice less dense",
+        "Ice molecules are lighter than liquid water molecules",
+        "Hydrogen bonds are stronger in liquid water than in ice, compressing the liquid",
+        "Ice contains trapped air bubbles that decrease its overall density"
+      ],
+      "correctAnswer": "A",
+      "explanation": "When water freezes, hydrogen bonds form a stable, open hexagonal crystalline lattice where each water molecule is tetrahedrally coordinated to four neighbors. This regular arrangement creates more empty space between molecules than exists in liquid water, where the constantly breaking and reforming hydrogen bonds allow closer molecular packing. Consequently, ice has a density of ~0.917 g/cm\u00b3 compared to liquid water's 1.000 g/cm\u00b3 at 4\u00b0C (maximum density). This anomalous expansion upon freezing is biologically crucial \u2014 floating ice insulates bodies of water, preventing them from freezing solid and allowing aquatic life to survive winter. Option B is incorrect because ice and liquid water contain the same H\u2082O molecules with the same mass. Option C reverses the relationship. Option D is incorrect because the density difference is intrinsic to the lattice structure, not due to air bubbles.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the properties of water:\nS1: Cohesion (water molecules sticking to each other via hydrogen bonds) contributes to the transport of water in plant xylem.\nS2: Surface tension of water is lower than most other liquids because hydrogen bonds weaken intermolecular attraction at the surface.\nS3: Water's high heat of vaporization (2,260 J/g) means that evaporation has a significant cooling effect on organisms.\nS4: Water reaches maximum density at 4\u00b0C, not at its freezing point of 0\u00b0C.",
+      "options": [
+        "TFTT",
+        "TTTT",
+        "TFTF",
+        "TFFT"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE because cohesion between water molecules (via hydrogen bonds) creates a continuous column of water in xylem vessels. Combined with adhesion to xylem cell walls, this enables the transpiration-cohesion-tension mechanism that pulls water from roots to leaves, even in tall trees. S2 is FALSE because water actually has an unusually HIGH surface tension compared to most liquids, precisely because of strong hydrogen bonds. Water molecules at the surface are pulled inward by hydrogen bonds with interior molecules, creating high surface tension that allows insects like water striders to walk on water. S3 is TRUE because water's high heat of vaporization means that a large amount of heat energy (2,260 J/g) is absorbed when water evaporates. This creates effective evaporative cooling \u2014 sweating in humans and transpiration in plants dissipate heat efficiently. S4 is TRUE because water's density increases as it cools from room temperature to 4\u00b0C (normal thermal contraction), but then decreases between 4\u00b0C and 0\u00b0C as hydrogen bonds begin forming the open ice-like lattice.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The bicarbonate buffer system (CO\u2082 + H\u2082O \u21cc H\u2082CO\u2083 \u21cc H\u207a + HCO\u2083\u207b) is the primary buffer in human blood. If a person hyperventilates (exhales excess CO\u2082), blood pH will:",
+      "options": [
+        "Increase because CO\u2082 removal shifts equilibrium to the left, reducing H\u207a concentration (respiratory alkalosis)",
+        "Decrease because CO\u2082 removal increases H\u207a concentration",
+        "Remain unchanged because the kidneys immediately compensate",
+        "Fluctuate randomly because pH is not affected by breathing rate"
+      ],
+      "correctAnswer": "A",
+      "explanation": "When a person hyperventilates, excess CO\u2082 is exhaled, reducing the blood CO\u2082 concentration. By Le Chatelier's principle, the equilibrium CO\u2082 + H\u2082O \u21cc H\u2082CO\u2083 \u21cc H\u207a + HCO\u2083\u207b shifts to the LEFT to partially replace the lost CO\u2082. This consumes H\u207a ions, decreasing [H\u207a] and increasing pH (making blood more alkaline). This condition is called respiratory alkalosis. Normal blood pH is 7.35-7.45; hyperventilation can push it above 7.45. Option B reverses the direction \u2014 CO\u2082 removal decreases, not increases, H\u207a. Option C is wrong because renal compensation takes hours to days, not immediately. Option D is incorrect because blood pH is directly affected by breathing rate through the CO\u2082/bicarbonate buffer system.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A student wants to prepare a phosphate buffer at pH 7.4 for a cell biology experiment. The pKa\u2082 of phosphoric acid (H\u2082PO\u2084\u207b/HPO\u2084\u00b2\u207b) is 7.2. Using the Henderson-Hasselbalch equation, she should mix:",
+      "options": [
+        "A 1.58:1 ratio of Na\u2082HPO\u2084 to NaH\u2082PO\u2084 because log([A\u207b]/[HA]) = 7.4 - 7.2 = 0.2, so [A\u207b]/[HA] = 10\u2070\u00b7\u00b2 \u2248 1.58",
+        "Equal volumes of 0.1 M NaH\u2082PO\u2084 and 0.1 M Na\u2082HPO\u2084",
+        "Pure Na\u2082HPO\u2084 with no NaH\u2082PO\u2084 because only the conjugate base matters for buffering",
+        "Equal volumes of NaOH and H\u2083PO\u2084 to create a pH of exactly 7.4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Using Henderson-Hasselbalch: pH = pKa + log([A\u207b]/[HA]). To achieve pH 7.4 with pKa\u2082 = 7.2: 7.4 = 7.2 + log([HPO\u2084\u00b2\u207b]/[H\u2082PO\u2084\u207b]). Therefore log([HPO\u2084\u00b2\u207b]/[H\u2082PO\u2084\u207b]) = 0.2, and [HPO\u2084\u00b2\u207b]/[H\u2082PO\u2084\u207b] = 10\u2070\u00b7\u00b2 \u2248 1.58. This means she needs ~1.58 parts Na\u2082HPO\u2084 (conjugate base) for every 1 part NaH\u2082PO\u2084 (conjugate acid). Option B would give pH = pKa = 7.2, not 7.4. Option C would give a very basic solution with no buffering capacity against added base. Option D does not use the Henderson-Hasselbalch approach and would not reliably produce pH 7.4 with good buffering.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ocean acidification is caused by increased atmospheric CO\u2082 dissolving in seawater. The primary chemical consequence is:",
+      "options": [
+        "Formation of carbonic acid that dissociates to release H\u207a, lowering ocean pH and reducing carbonate ion availability needed for shell formation",
+        "Direct conversion of CO\u2082 to toxic carbon monoxide in seawater",
+        "Depletion of dissolved oxygen because CO\u2082 displaces O\u2082 from solution",
+        "Increase in ocean pH because CO\u2082 acts as a base in aqueous solution"
+      ],
+      "correctAnswer": "A",
+      "explanation": "When CO\u2082 dissolves in seawater, it reacts with water to form carbonic acid (H\u2082CO\u2083), which dissociates: CO\u2082 + H\u2082O \u2192 H\u2082CO\u2083 \u2192 H\u207a + HCO\u2083\u207b. The released H\u207a ions lower ocean pH (since pre-industrial times, ocean pH has decreased from ~8.2 to ~8.1, representing a ~26% increase in H\u207a). The excess H\u207a also reacts with carbonate ions: H\u207a + CO\u2083\u00b2\u207b \u2192 HCO\u2083\u207b, reducing [CO\u2083\u00b2\u207b] and threatening organisms that build calcium carbonate shells (corals, mollusks, foraminifera) because CaCO\u2083 formation requires adequate CO\u2083\u00b2\u207b. Option B is incorrect because CO\u2082 does not convert to CO in seawater. Option C oversimplifies \u2014 while high CO\u2082 can affect O\u2082 indirectly, the primary mechanism is acidification. Option D reverses the effect \u2014 CO\u2082 acts as an acid (through carbonic acid formation), not a base.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The hydrophobic effect drives the folding of proteins in aqueous solution. The thermodynamic basis for this phenomenon is primarily:",
+      "options": [
+        "A large negative enthalpy from the strong attraction between nonpolar side chains",
+        "The magnetic repulsion between nonpolar groups and water molecules",
+        "Covalent bond formation between nonpolar amino acid side chains",
+        "An entropy increase as ordered water molecules around exposed nonpolar surfaces are released into bulk solvent when nonpolar groups aggregate in the protein interior"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The hydrophobic effect is primarily entropy-driven. When nonpolar amino acid side chains are exposed to water, surrounding water molecules form ordered 'clathrate-like' cages to minimize contact with the hydrophobic surface, decreasing water entropy. When these nonpolar groups collapse into the protein interior during folding, the ordered water molecules are released back into bulk solvent where they have greater translational and rotational freedom, INCREASING entropy. Since \u0394G = \u0394H - T\u0394S, the favorable entropy term (-T\u0394S < 0) drives the hydrophobic collapse. Option A is incorrect because nonpolar-nonpolar interactions (van der Waals) are relatively weak and not the primary driver. Option C is wrong because no covalent bonds form between nonpolar side chains during folding. Option B is nonsensical \u2014 there is no magnetic repulsion involved.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "A 0.01 M solution of HCl has pH = 2, while a 0.01 M solution of acetic acid (pKa = 4.75) has a pH of approximately 3.4. This difference occurs because:",
+      "options": [
+        "HCl is a strong acid that completely dissociates, producing 0.01 M H\u207a, while acetic acid is a weak acid that only partially dissociates, producing much less H\u207a",
+        "Acetic acid has a higher molecular weight than HCl, reducing its effective concentration",
+        "HCl molecules are smaller and can interact with more water molecules simultaneously",
+        "Acetic acid forms hydrogen bonds with water that prevent it from releasing H\u207a ions"
+      ],
+      "correctAnswer": "A",
+      "explanation": "HCl is a strong acid \u2014 it completely dissociates in water: HCl \u2192 H\u207a + Cl\u207b. Therefore, 0.01 M HCl produces 0.01 M H\u207a, giving pH = -log(0.01) = 2. Acetic acid (CH\u2083COOH) is a weak acid with Ka = 10\u207b\u2074\u00b7\u2077\u2075 \u2014 it only partially dissociates: CH\u2083COOH \u21cc CH\u2083COO\u207b + H\u207a. At equilibrium, only about 4% of acetic acid molecules have donated their protons at 0.01 M concentration, producing [H\u207a] \u2248 4 \u00d7 10\u207b\u2074 M, giving pH \u2248 3.4. Option B is incorrect because molecular weight does not affect acid strength or dissociation. Option C is wrong because molecular size does not determine acid strength. Option D is partially true (acetic acid does hydrogen-bond with water) but this is not the reason for incomplete dissociation \u2014 the strength of the O-H bond in the carboxyl group determines acid strength.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the pH of blood in a patient under different conditions:\n\nCondition              | pH   | pCO\u2082 (mmHg) | [HCO\u2083\u207b] (mM)\nNormal                 | 7.40 | 40          | 24\nDiabetic ketoacidosis  | 7.10 | 25          | 8\nCOPD (chronic)         | 7.35 | 60          | 33\nVomiting               | 7.55 | 48          | 38\n\nWhich condition represents a metabolic acidosis with respiratory compensation?",
+      "options": [
+        "Normal, because pH is exactly 7.40",
+        "Vomiting, because pH is elevated above normal",
+        "COPD, because pCO\u2082 is elevated",
+        "Diabetic ketoacidosis, because pH is low (acidosis), HCO\u2083\u207b is low (metabolic cause), and pCO\u2082 is low (respiratory compensation by hyperventilation)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Diabetic ketoacidosis (DKA) is a classic example of metabolic acidosis with respiratory compensation. The primary disturbance is metabolic: ketone bodies (beta-hydroxybutyrate, acetoacetate) produced from fatty acid oxidation accumulate and donate H\u207a, consuming HCO\u2083\u207b (dropping from 24 to 8 mM) and lowering pH. The body compensates through respiratory mechanisms: the low pH stimulates hyperventilation (Kussmaul breathing), which exhales CO\u2082 and lowers pCO\u2082 from 40 to 25 mmHg. This partially restores pH but cannot fully normalize it. Option A is the normal state. Option C (COPD) shows respiratory acidosis with metabolic compensation (elevated pCO\u2082 with elevated HCO\u2083\u207b). Option B (vomiting) shows metabolic alkalosis (loss of HCl from stomach).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Capillary action \u2014 the ability of water to move upward in narrow tubes against gravity \u2014 results from the combination of which two properties?",
+      "options": [
+        "Cohesion (water-water hydrogen bonds) and adhesion (water-tube wall attractions)",
+        "Osmosis and diffusion working together to push water upward",
+        "Evaporation at the top of the tube creating a vacuum that pulls water up",
+        "The weight of water creating hydraulic pressure at the bottom of the tube"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Capillary action results from two complementary forces: adhesion (the attraction between water molecules and the polar surface of the tube, such as glass) pulls water molecules up the tube wall, while cohesion (hydrogen bonds between water molecules) pulls adjacent water molecules along, creating a meniscus that rises until balanced by gravity. In narrow tubes (capillaries), the surface area to volume ratio is high, so adhesive forces can overcome gravity more effectively. This mechanism contributes to water transport in plant xylem. Option B describes different transport mechanisms not responsible for capillary action. Option C describes transpiration pull, a different mechanism. Option D describes hydrostatic pressure, which actually opposes capillary action.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The water potential (\u03a8) concept integrates several factors affecting water movement in biological systems. Water potential is defined as:",
+      "options": [
+        "The rate at which water molecules move through a membrane",
+        "The pH of water in a biological system",
+        "The total amount of water available in an ecosystem",
+        "The physical potential energy of water per unit volume relative to pure water at atmospheric pressure, determined by solute concentration and pressure components"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Water potential (\u03a8) is defined as the physical potential energy of water per unit volume (measured in megapascals, MPa) relative to pure water at atmospheric pressure and sea level (\u03a8 = 0 MPa). It consists of two main components: solute potential (\u03a8s, always negative or zero \u2014 dissolved solutes lower water potential) and pressure potential (\u03a8p, can be positive or negative). Water always moves from regions of higher water potential to regions of lower water potential. In plant biology, \u03a8 = \u03a8s + \u03a8p determines water movement through roots, xylem, and leaves. Option A describes water flux, not water potential. Option C describes water availability, a different concept. Option B describes acidity, unrelated to water potential.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A biochemist needs to determine the pKa of a newly discovered amino acid's side chain. Which experimental approach would be MOST direct?",
+      "options": [
+        "Measuring the amino acid's molecular weight using mass spectrometry",
+        "Determining the amino acid's melting point using differential scanning calorimetry",
+        "Measuring the amino acid's solubility in different organic solvents",
+        "Performing a potentiometric titration with NaOH and identifying the pH at the half-equivalence point, where pH = pKa"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A potentiometric titration with NaOH is the most direct method for determining pKa. As base is added to the amino acid solution, the pH is monitored with a pH electrode. The half-equivalence point \u2014 where exactly half of the ionizable group has been deprotonated (so [HA] = [A\u207b]) \u2014 corresponds to pH = pKa (from Henderson-Hasselbalch: when [A\u207b]/[HA] = 1, log(1) = 0, so pH = pKa). This point also corresponds to the inflection point of the titration curve where buffering capacity is maximal. Option A provides molecular weight but not pKa. Option C measures hydrophobicity, not ionization. Option B measures thermal properties unrelated to acid-base chemistry.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "A solution contains a 0.1 M phosphate buffer at pH 7.2 (pKa\u2082 of phosphoric acid = 7.2). If 0.005 mol of HCl is added to 1 liter of this buffer, the new pH will be approximately:",
+      "options": [
+        "7.2, because buffers completely prevent any pH change",
+        "2.0, because HCl is a strong acid that overwhelms the buffer",
+        "7.3, because adding acid increases pH",
+        "7.1, because the buffer absorbs most of the added H\u207a, with a small pH decrease"
+      ],
+      "correctAnswer": "D",
+      "explanation": "When HCl is added to the buffer, H\u207a reacts with the conjugate base (HPO\u2084\u00b2\u207b): H\u207a + HPO\u2084\u00b2\u207b \u2192 H\u2082PO\u2084\u207b. Initial buffer: 0.05 M each of H\u2082PO\u2084\u207b and HPO\u2084\u00b2\u207b (since pH = pKa, they are equal). After adding 0.005 mol HCl to 1 L: HPO\u2084\u00b2\u207b decreases from 0.05 to 0.045 M, H\u2082PO\u2084\u207b increases from 0.05 to 0.055 M. New pH = 7.2 + log(0.045/0.055) = 7.2 + log(0.818) = 7.2 + (-0.087) \u2248 7.1. The buffer successfully maintained pH near its original value, absorbing the strong acid with only a 0.1 unit change. Option A is wrong because buffers resist but do not completely prevent pH change. Option B is incorrect because the buffer has much more capacity (0.05 mol base) than the added acid (0.005 mol). Option C reverses the expected direction.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about acid rain and its biological effects:\nS1: Acid rain (pH < 5.6) is primarily caused by SO\u2082 and NO\u2093 emissions that react with atmospheric water to form sulfuric and nitric acids.\nS2: Acid rain directly kills fish by corroding their scales.\nS3: Acidification of lakes can mobilize toxic aluminum ions from soil into waterways, harming aquatic organisms.\nS4: Limestone (CaCO\u2083) regions are more resistant to acid rain because the carbonate acts as a natural buffer, neutralizing acid.",
+      "options": [
+        "TFTT",
+        "TTTT",
+        "TFTF",
+        "TFFT"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE because SO\u2082 (from coal burning) and NO\u2093 (from combustion engines) dissolve in atmospheric water to form H\u2082SO\u2084 and HNO\u2083, which fall as acid rain with pH below the natural pH of rain (~5.6). S2 is FALSE because acid rain does not directly corrode fish scales. Instead, the primary mechanisms of fish mortality from acidification include: disruption of ion regulation across gill membranes (especially Na\u207a/Cl\u207b exchange), mucus accumulation on gills impairing gas exchange, and reproductive failure from aluminum toxicity. S3 is TRUE because when soil pH drops below ~5, aluminum ions (Al\u00b3\u207a) that are normally bound in mineral form become soluble and leach into waterways. Al\u00b3\u207a is toxic to fish and other aquatic organisms, damaging gill tissue and disrupting ion balance. S4 is TRUE because CaCO\u2083 in limestone reacts with acid: CaCO\u2083 + 2H\u207a \u2192 Ca\u00b2\u207a + H\u2082O + CO\u2082. This neutralization reaction buffers the ecosystem against acidification.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Osmosis is best defined as:",
+      "options": [
+        "The diffusion of solute molecules across a semipermeable membrane from high to low concentration",
+        "The evaporation of water from cell surfaces",
+        "The active transport of water using ATP-powered pumps",
+        "The net movement of water across a semipermeable membrane from a region of higher water potential (lower solute concentration) to lower water potential (higher solute concentration)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Osmosis is the net movement of water (solvent) across a semipermeable membrane from a region of higher water potential to a region of lower water potential. Since dissolved solutes reduce water potential, water moves from areas of lower solute concentration to higher solute concentration \u2014 effectively diluting the more concentrated solution. The membrane must be selectively permeable \u2014 allowing water to pass but restricting solute passage. Option A describes solute diffusion, not osmosis (osmosis specifically refers to water movement). Option C is incorrect because osmosis is a passive process driven by water potential differences, not ATP. Option B describes transpiration/evaporation, a different process.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The amino acid histidine has a side chain pKa of approximately 6.0. At physiological pH (7.4), what percentage of histidine side chains would be protonated (positively charged)?",
+      "options": [
+        "Approximately 96% protonated because pH is above the pKa",
+        "Approximately 4% protonated, calculated using the Henderson-Hasselbalch equation: 7.4 = 6.0 + log([A\u207b]/[HA]), giving [A\u207b]/[HA] = 25.1, so %HA = 100/26.1 \u2248 3.8%",
+        "Exactly 50% protonated because histidine is always half-ionized at any pH",
+        "100% protonated because amino acid side chains never lose their charge in solution"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Using the Henderson-Hasselbalch equation: pH = pKa + log([A\u207b]/[HA]). At pH 7.4 with pKa 6.0: 7.4 = 6.0 + log([A\u207b]/[HA]), so log([A\u207b]/[HA]) = 1.4, meaning [A\u207b]/[HA] = 10\u00b9\u00b7\u2074 \u2248 25.1. The fraction protonated = [HA]/([HA] + [A\u207b]) = 1/(1 + 25.1) = 1/26.1 \u2248 0.038 = 3.8%. So approximately 4% of histidine side chains are protonated at pH 7.4. This makes histidine's side chain mostly uncharged at physiological pH but uniquely positioned to act as a proton donor/acceptor in enzyme active sites because its pKa is near physiological pH. Option A incorrectly states 96% protonated (this would be the percentage DEprotonated). Option C is only true at pH = pKa = 6.0. Option D is incorrect because ionization state depends on pH relative to pKa.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the osmotic pressure of four solutions at 25\u00b0C:\n\nSolution     | Concentration | Osmotic pressure (atm)\n0.1 M glucose| 0.1 M        | 2.45\n0.1 M NaCl   | 0.1 M        | 4.85\n0.1 M CaCl\u2082  | 0.1 M        | 7.10\n0.1 M albumin | 0.1 M       | 2.45\n\nWhat conclusion is best supported?",
+      "options": [
+        "All solutions exert the same osmotic pressure because they have the same molar concentration",
+        "Osmotic pressure depends on the total number of dissolved particles (osmolarity), not just molarity \u2014 electrolytes that dissociate into more ions exert greater osmotic pressure",
+        "Albumin should exert the highest osmotic pressure because it is the largest molecule",
+        "NaCl exerts lower osmotic pressure than glucose because chloride ions collapse in solution"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Osmotic pressure is a colligative property that depends on the total number of dissolved particles (osmolarity), not the identity or size of the particles. Glucose and albumin are nonelectrolytes (1 particle each, osmolarity = 0.1 Osm), so they exert the same osmotic pressure (2.45 atm). NaCl dissociates into 2 ions (Na\u207a + Cl\u207b, osmolarity \u2248 0.2 Osm), giving approximately double the osmotic pressure. CaCl\u2082 dissociates into 3 ions (Ca\u00b2\u207a + 2Cl\u207b, osmolarity \u2248 0.3 Osm), giving approximately triple. Option A is contradicted by the data. Option C incorrectly assumes molecular size determines osmotic pressure \u2014 albumin (large) and glucose (small) give identical values at the same particle concentration. Option D is nonsensical.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "An enzyme has two ionizable groups critical for catalysis: a glutamic acid (pKa ~4.1) that must be deprotonated (COO\u207b) and a histidine (pKa ~6.0) that must be protonated (ImH\u207a). At what pH would the enzyme have maximum activity?",
+      "options": [
+        "pH 2.0, where both groups are fully protonated",
+        "pH 5.0, where glutamic acid is deprotonated and histidine is protonated, satisfying both requirements",
+        "pH 9.0, where both groups are fully deprotonated",
+        "pH 7.4, because all enzymes have optimal activity at physiological pH"
+      ],
+      "correctAnswer": "B",
+      "explanation": "For maximum activity, both conditions must be met simultaneously: glutamic acid (pKa 4.1) must be deprotonated (COO\u207b), requiring pH >> 4.1, and histidine (pKa 6.0) must be protonated (ImH\u207a), requiring pH << 6.0. The optimal pH is between these two pKa values, where both conditions are maximally satisfied. At pH 5.0: glutamic acid is largely deprotonated (pH is 0.9 units above pKa, so ~89% COO\u207b) and histidine is largely protonated (pH is 1.0 unit below pKa, so ~91% ImH\u207a). This represents the best compromise. Option A (pH 2) would have both groups protonated. Option C (pH 9) would have both deprotonated. Option D assumes all enzymes work at pH 7.4, which is false \u2014 pepsin (stomach, pH 2) and alkaline phosphatase (pH ~10) are counterexamples.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "A hypertonic solution placed outside a red blood cell would cause:",
+      "options": [
+        "The cell to swell and potentially lyse as water enters by osmosis",
+        "No change because red blood cells have rigid cell walls that prevent volume changes",
+        "The cell to shrink (crenation) as water exits by osmosis toward the higher solute concentration",
+        "The cell to actively pump solutes out to equalize concentrations"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In a hypertonic solution (higher solute concentration than the cell's interior), water moves OUT of the red blood cell by osmosis (from higher water potential inside to lower water potential outside). This causes the cell to shrink, a process called crenation in red blood cells. The cell membrane wrinkles and the cell takes on a spiky appearance as it loses volume. This is clinically important \u2014 infusing patients with hypertonic IV solutions can cause red blood cell crenation. Option A describes what happens in a hypotonic solution (hemolysis). Option B is incorrect because red blood cells lack cell walls (unlike plant cells); they only have a flexible plasma membrane. Option D is incorrect because cells cannot quickly actively pump enough solutes to counteract a significant osmotic gradient.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A student wants to demonstrate that water has a high heat of vaporization. She measures the temperature of water as it is heated from 90\u00b0C to boiling and then continues adding heat. She plots temperature vs. heat added. What should she observe?",
+      "options": [
+        "Temperature rises linearly and continuously, even during boiling, at the same rate as before",
+        "Temperature continues to rise but at an accelerating rate during boiling",
+        "Temperature remains constant at 100\u00b0C during boiling despite continued heat input, because all added energy goes into breaking intermolecular hydrogen bonds to convert liquid to gas",
+        "Temperature drops below 100\u00b0C during boiling because evaporation is an endothermic process"
+      ],
+      "correctAnswer": "C",
+      "explanation": "During a phase transition (liquid \u2192 gas), temperature remains constant even as heat is continuously added. The energy goes entirely into breaking intermolecular interactions (primarily hydrogen bonds in water) to convert liquid molecules to gas molecules, rather than increasing their kinetic energy (temperature). Water's high heat of vaporization (2,260 J/g = 40.7 kJ/mol) reflects the energy needed to break the extensive hydrogen bond network. The temperature plateau at 100\u00b0C on the heating curve directly demonstrates this high heat of vaporization. Option A is wrong because temperature does NOT rise during a phase change. Option B is incorrect for the same reason. Option D confuses evaporative cooling (which affects remaining liquid) with the boiling process itself.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Kw of water at 25\u00b0C is 10\u207b\u00b9\u2074. If [OH\u207b] = 10\u207b\u2074 M, then [H\u207a] and the solution's character are:",
+      "options": [
+        "[H\u207a] = 10\u207b\u2074 M; the solution is neutral",
+        "[H\u207a] = 10\u207b\u00b9\u2070 M; the solution is basic with pH = 10",
+        "[H\u207a] = 10\u207b\u00b9\u2078 M; the solution is strongly acidic",
+        "[H\u207a] = 10\u207b\u2077 M; the solution is neutral because Kw is always balanced"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Using the relationship Kw = [H\u207a][OH\u207b] = 10\u207b\u00b9\u2074 at 25\u00b0C: [H\u207a] = Kw/[OH\u207b] = 10\u207b\u00b9\u2074/10\u207b\u2074 = 10\u207b\u00b9\u2070 M. The pH = -log(10\u207b\u00b9\u2070) = 10. Since pH > 7, the solution is basic (alkaline). The high [OH\u207b] relative to [H\u207a] (10\u207b\u2074 >> 10\u207b\u00b9\u2070) confirms the basic character. This corresponds to a moderately basic solution \u2014 comparable to a dilute sodium hydroxide or ammonia solution. Option A incorrectly sets [H\u207a] equal to [OH\u207b]. Option C makes a mathematical error. Option D incorrectly assigns neutral character \u2014 neutral only occurs when [H\u207a] = [OH\u207b] = 10\u207b\u2077 M at 25\u00b0C.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Aquaporins are membrane proteins that dramatically increase the rate of water transport across cell membranes. Despite being water channels, aquaporins effectively exclude protons (H\u2083O\u207a). The mechanism for this selectivity involves:",
+      "options": [
+        "A physical gate that opens only for neutral water molecules based on their size",
+        "An electrostatic barrier within the channel created by conserved asparagine residues (NPA motifs) that reorient water molecules, disrupting the hydrogen-bonded chain required for proton hopping (Grotthuss mechanism)",
+        "Active pumping of protons out of the channel using ATP hydrolysis",
+        "Binding of protons to external receptor proteins that prevent their entry into the channel"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Aquaporins exclude protons through an elegant electrostatic mechanism. The channel contains two highly conserved asparagine-proline-alanine (NPA) motifs in the center that create a region of positive electrostatic potential. As water molecules pass through the channel in single file, the NPA motifs force them to reorient \u2014 the water molecules flip their orientation at the center, breaking the continuous hydrogen-bonded chain of water molecules. This disrupts the Grotthuss mechanism (proton wire), which relies on a continuous chain of hydrogen-bonded water molecules for rapid proton transfer. Without this chain, protons (H\u2083O\u207a) cannot traverse the channel. Option A oversimplifies \u2014 both water and H\u2083O\u207a are similar in size. Option C is wrong because aquaporins are passive channels, not pumps. Option D is incorrect because the selectivity is within the channel itself.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about pH and buffers in biological systems:\nS1: The pH of human blood is tightly regulated between 7.35-7.45; deviations beyond this range can be life-threatening.\nS2: Proteins and amino acids can act as buffers because their ionizable groups can accept or donate protons.\nS3: Adding a buffer to pure water will not change the water's pH.\nS4: The effective buffering range of any buffer system is approximately pKa \u00b1 1 pH unit.",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TFTF",
+        "TFFT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE because blood pH is maintained within the narrow range of 7.35-7.45 by the bicarbonate buffer system, phosphate buffers, and proteins. Acidosis (pH < 7.35) or alkalosis (pH > 7.45) disrupts enzyme function, protein structure, and ion channel activity, potentially causing organ failure and death. S2 is TRUE because amino acids have ionizable groups (\u03b1-amino, \u03b1-carboxyl, and various side chains) that can donate or accept protons, functioning as buffers. Hemoglobin is a major protein buffer in blood. S3 is FALSE because adding a buffer to pure water WILL change its pH if the buffer's pH differs from 7.0. A phosphate buffer at pH 7.2 would shift pure water's pH from 7.0 to something closer to 7.2. The buffer establishes a new equilibrium pH. S4 is TRUE because within pKa \u00b1 1, both the conjugate acid and base are present in significant concentrations (10:1 to 1:10 ratio), providing effective resistance to pH changes in both directions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Antifreeze proteins (AFPs) found in Arctic fish prevent ice crystal growth in body fluids. These proteins function by:",
+      "options": [
+        "Raising the freezing point of body fluids above 0\u00b0C so ice never forms",
+        "Converting water to a non-crystalline glass through vitrification",
+        "Binding to the surface of small ice crystals and inhibiting their growth through thermal hysteresis, lowering the freezing point without affecting the melting point",
+        "Generating metabolic heat that prevents the temperature from dropping below 0\u00b0C"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Antifreeze proteins (AFPs) work through a mechanism called adsorption-inhibition. They bind to specific faces of small ice crystals via hydrogen bonding and van der Waals interactions, preventing additional water molecules from joining the crystal lattice. This creates thermal hysteresis \u2014 a gap between the melting point (unchanged) and the freezing/growth point (lowered by 1-5\u00b0C depending on species and AFP concentration). The AFPs do not prevent initial ice nucleation but prevent existing small crystals from growing into large, damaging crystals. Option A is incorrect because AFPs lower, not raise, the freezing point. Option B is wrong because vitrification requires extremely rapid cooling, not proteins. Option D is incorrect because Arctic fish are ectotherms and cannot generate sufficient metabolic heat to prevent freezing.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "A strong acid (HCl) and a strong base (NaOH) are mixed in equal molar amounts. The resulting solution will have:",
+      "options": [
+        "pH = 0, because the acid and base cancel out all ions",
+        "pH = 14, because the base neutralizes the acid completely",
+        "pH = 7.0 (at 25\u00b0C), because the complete neutralization produces NaCl and water, and NaCl does not hydrolyze",
+        "A pH that depends on the volume of water used to dissolve them, regardless of molar amounts"
+      ],
+      "correctAnswer": "C",
+      "explanation": "When equal molar amounts of the strong acid HCl and strong base NaOH are mixed: HCl + NaOH \u2192 NaCl + H\u2082O. This is a complete neutralization reaction. The products are NaCl (a salt of a strong acid and strong base, which does not undergo hydrolysis) and water. Since neither Na\u207a nor Cl\u207b reacts with water to generate H\u207a or OH\u207b, the resulting solution has [H\u207a] = [OH\u207b] = 10\u207b\u2077 M at 25\u00b0C, giving pH = 7.0. Option A is nonsensical \u2014 the ions don't disappear. Option B would occur if excess NaOH were present, but with equal molar amounts, the solution is neutral. Option D is incorrect because the neutralization goes to completion regardless of volume; pH = 7 at 25\u00b0C.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A student measures the surface tension (mN/m) and viscosity (mPa\u00b7s) of water at different temperatures:\n\nTemp (\u00b0C) | Surface tension | Viscosity\n0         | 75.6           | 1.79\n20        | 72.8           | 1.00\n40        | 69.6           | 0.65\n60        | 66.2           | 0.47\n80        | 62.7           | 0.35\n100       | 58.9           | 0.28\n\nWhat explains the observed trends?",
+      "options": [
+        "Higher temperatures create more hydrogen bonds, increasing both surface tension and viscosity",
+        "The changes are caused by dissolved gases escaping from water at higher temperatures",
+        "Surface tension increases with temperature while viscosity decreases, showing they are inversely related",
+        "Both surface tension and viscosity decrease with temperature because increased thermal energy disrupts hydrogen bonds, weakening intermolecular cohesion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Both surface tension and viscosity decrease as temperature increases because higher thermal energy causes more vigorous molecular motion, disrupting hydrogen bonds between water molecules. Surface tension depends on the net inward force on surface molecules from hydrogen bonding \u2014 as hydrogen bonds break more frequently at higher temperatures, this force weakens. Viscosity (resistance to flow) similarly depends on intermolecular attractions \u2014 weaker hydrogen bonding at higher temperatures allows molecules to slide past each other more easily. Option A reverses the relationship \u2014 higher temperature breaks, not creates, hydrogen bonds. Option C is contradicted by the data, which shows both properties decreasing. Option B is incorrect because dissolved gas effects are minimal compared to the hydrogen bonding effects.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Hofmeister series ranks ions by their ability to stabilize or destabilize protein structure in aqueous solution. Kosmotropic ions (e.g., SO\u2084\u00b2\u207b, HPO\u2084\u00b2\u207b) stabilize proteins primarily by:",
+      "options": [
+        "Directly binding to the protein's active site and preventing unfolding",
+        "Reducing the temperature of the solution to slow thermal denaturation",
+        "Covalently cross-linking amino acid side chains to lock the protein in its native conformation",
+        "Strengthening the hydrophobic effect by ordering water structure around nonpolar protein surfaces, promoting compact folded states"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Kosmotropic (order-making) ions like sulfate and phosphate are strongly hydrated and increase the ordering of water molecules in their vicinity. This enhancement of water structure strengthens the hydrophobic effect \u2014 the thermodynamic driving force for burying nonpolar residues in the protein interior. By making the exposure of nonpolar surfaces to water even more unfavorable, kosmotropic ions stabilize the compact, folded state of proteins. Conversely, chaotropic ions (e.g., SCN\u207b, ClO\u2084\u207b) disorder water structure, weaken the hydrophobic effect, and denature proteins. Option A is incorrect because kosmotropic ions act indirectly through water structure, not by binding to the active site. Option C is wrong because ions do not form covalent cross-links. Option B is incorrect because the Hofmeister effect operates at constant temperature.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following is NOT a consequence of water's high heat of vaporization?",
+      "options": [
+        "Evaporative cooling through sweating in mammals",
+        "Moderate temperatures near large bodies of water",
+        "The ability of water to dissolve ionic compounds",
+        "Transpiration providing a cooling mechanism for plant leaves"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Water's ability to dissolve ionic compounds is due to its polarity and high dielectric constant, NOT its heat of vaporization. The heat of vaporization specifically relates to the energy required for the liquid-to-gas phase transition. Options A, B, and D are all consequences of the high heat of vaporization (2,260 J/g). When water evaporates from skin (sweating), plant leaves (transpiration), or ocean surfaces, it absorbs substantial heat, cooling the surface. Large bodies of water moderate coastal temperatures because evaporation and condensation buffer temperature extremes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Chaotropic agents like urea (at high concentrations) denature proteins primarily by:",
+      "options": [
+        "Forming covalent bonds with amino acid side chains, permanently altering the primary structure",
+        "Disrupting the water structure around nonpolar residues, weakening the hydrophobic effect that stabilizes the protein's folded core",
+        "Lowering the temperature below the protein's cold denaturation point",
+        "Oxidizing disulfide bonds to break covalent cross-links"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Chaotropic agents like urea (typically used at 6-8 M) denature proteins by disrupting the ordered water structure around nonpolar amino acid residues, weakening the hydrophobic effect. Since the hydrophobic effect is the primary driving force for protein folding (burying nonpolar residues in the protein interior), weakening it destabilizes the folded state. Urea may also directly interact with the protein backbone through hydrogen bonding, further destabilizing secondary structure. Option A is incorrect because urea does not form covalent bonds with proteins. Option C is wrong because urea works at room temperature. Option D is incorrect because urea does not have redox activity; reducing agents like beta-mercaptoethanol break disulfide bonds.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "At pH 1, the [H\u207a] is 0.1 M. At pH 13, the [OH\u207b] is:",
+      "options": [
+        "0.1 M, because pH + pOH = 14, so pOH = 1, and [OH\u207b] = 10\u207b\u00b9 M",
+        "0.001 M",
+        "10\u207b\u00b9\u00b3 M",
+        "10\u207b\u2077 M"
+      ],
+      "correctAnswer": "A",
+      "explanation": "At pH 13, pOH = 14 - 13 = 1, so [OH\u207b] = 10\u207b\u00b9 = 0.1 M. This is a strongly basic solution. The relationship pH + pOH = 14 (at 25\u00b0C) comes from Kw = [H\u207a][OH\u207b] = 10\u207b\u00b9\u2074. At pH 13, [H\u207a] = 10\u207b\u00b9\u00b3 M, which is very low, confirming the basic nature. Option B gives [OH\u207b] = 10\u207b\u00b3 which would correspond to pOH = 3 (pH 11). Option C incorrectly equates [OH\u207b] = 10\u207bpH. Option D gives neutral [OH\u207b], which corresponds to pH 7.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to demonstrate that water has a high surface tension compared to other liquids. Which experiment would provide the most convincing evidence?",
+      "options": [
+        "Measuring the time it takes for equal volumes of water and ethanol to evaporate",
+        "Carefully placing a small steel needle on the surface of water and ethanol separately \u2014 the needle should float on water (high surface tension) but sink in ethanol (lower surface tension)",
+        "Measuring the boiling points of water and ethanol",
+        "Comparing the density of water and ethanol at room temperature"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Floating a steel needle on the surface directly demonstrates surface tension \u2014 the needle is denser than water but is supported by the high surface tension acting like an elastic film. Water's surface tension (~72 mN/m) is much higher than ethanol's (~22 mN/m) because of water's strong hydrogen bonding network at the surface. The needle floats on water but sinks in ethanol, providing a clear, visual demonstration of the difference. Option A measures evaporation rate (heat of vaporization), not surface tension. Option C measures boiling point, a different property. Option D measures density, which is unrelated to surface tension.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The isoelectric point (pI) of the amino acid glycine is 5.97 (average of pKa\u2081 = 2.34 and pKa\u2082 = 9.60). At pH 5.97, glycine exists predominantly as:",
+      "options": [
+        "A cation (NH\u2083\u207a-CH\u2082-COOH) with a net positive charge",
+        "An anion (NH\u2082-CH\u2082-COO\u207b) with a net negative charge",
+        "A zwitterion (NH\u2083\u207a-CH\u2082-COO\u207b) with zero net charge, where the amino group is protonated and the carboxyl group is deprotonated",
+        "A completely uncharged molecule (NH\u2082-CH\u2082-COOH) with no ionization"
+      ],
+      "correctAnswer": "C",
+      "explanation": "At the isoelectric point (pI), an amino acid exists primarily as a zwitterion \u2014 a molecule with both a positive and a negative charge that cancel to give zero net charge. For glycine at pH 5.97, the \u03b1-amino group (pKa\u2082 = 9.60) is protonated (NH\u2083\u207a) because pH is well below its pKa, while the \u03b1-carboxyl group (pKa\u2081 = 2.34) is deprotonated (COO\u207b) because pH is well above its pKa. The result is NH\u2083\u207a-CH\u2082-COO\u207b, which has zero net charge. Option A would predominate at very low pH (below pKa\u2081). Option B would predominate at very high pH (above pKa\u2082). Option D never exists in significant amounts because at any biologically relevant pH, at least one group is ionized.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "If 50 mL of 0.2 M HCl is mixed with 50 mL of 0.1 M NaOH, the resulting pH is closest to:",
+      "options": [
+        "1.3, because excess H\u207a remains after partial neutralization",
+        "7.0, because all acid and base are neutralized",
+        "12.7, because excess OH\u207b remains",
+        "0, because the total H\u207a concentration equals 1 M"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Moles HCl = 0.050 L \u00d7 0.2 M = 0.010 mol. Moles NaOH = 0.050 L \u00d7 0.1 M = 0.005 mol. NaOH neutralizes 0.005 mol HCl, leaving 0.010 - 0.005 = 0.005 mol excess HCl in 100 mL total volume. [H\u207a] = 0.005/0.100 = 0.05 M. pH = -log(0.05) = 1.30. The solution is acidic because there is excess strong acid after the incomplete neutralization. Option B is incorrect because equimolar amounts were not mixed. Option C would require excess NaOH. Option D makes an arithmetic error.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher compares the solubility of three gases in water at 20\u00b0C and 1 atm:\n\nGas   | Solubility (mg/L)\nO\u2082    | 9.0\nCO\u2082   | 1,690\nN\u2082    | 18.5\n\nThe dramatically higher solubility of CO\u2082 compared to O\u2082 and N\u2082 is primarily because:",
+      "options": [
+        "CO\u2082 is lighter than O\u2082 and N\u2082, making it more easily dissolved",
+        "CO\u2082 has stronger London dispersion forces than O\u2082 and N\u2082",
+        "CO\u2082 chemically reacts with water to form carbonic acid (H\u2082CO\u2083), greatly increasing its effective solubility beyond physical dissolution alone",
+        "CO\u2082 is a polar molecule while O\u2082 and N\u2082 are nonpolar"
+      ],
+      "correctAnswer": "C",
+      "explanation": "CO\u2082's dramatically higher solubility (~190\u00d7 more than O\u2082) is primarily due to its chemical reaction with water: CO\u2082 + H\u2082O \u21cc H\u2082CO\u2083. This reaction effectively removes dissolved CO\u2082 from solution, driving further dissolution (Le Chatelier's principle). H\u2082CO\u2083 further dissociates to H\u207a + HCO\u2083\u207b. Without this reaction, CO\u2082's physical solubility would be only modestly higher than O\u2082. Option A is wrong because CO\u2082 (44 g/mol) is actually heavier than O\u2082 (32 g/mol) and N\u2082 (28 g/mol). Option B is partially true but insufficient to explain the 190-fold difference. Option D is incorrect because CO\u2082 is actually nonpolar (symmetric linear structure) despite having polar C=O bonds \u2014 the dipoles cancel.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The dielectric constant of water (~80) is much higher than that of most organic solvents (e.g., ethanol ~24, hexane ~1.9). This high dielectric constant is biologically important because:",
+      "options": [
+        "It increases the speed of chemical reactions in aqueous solution",
+        "It allows water to dissolve only nonpolar molecules",
+        "It prevents water from conducting electricity",
+        "It weakens electrostatic interactions between charged species, facilitating the dissociation of ionic compounds and enabling ion mobility in solution"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Water's high dielectric constant (\u03b5 \u2248 80) means it reduces the electrostatic force between charged particles by a factor of ~80 compared to a vacuum (Coulomb's law: F = kq\u2081q\u2082/\u03b5r\u00b2). This weakening of charge-charge interactions facilitates the dissociation of ionic compounds (NaCl dissolves easily because the attraction between Na\u207a and Cl\u207b is reduced 80-fold), enables ion mobility for biochemical reactions and neural signaling, and allows charged biomolecules (proteins, DNA) to remain in solution rather than forming insoluble aggregates. Option A is a vague claim \u2014 the dielectric constant does not directly determine reaction rates. Option C is wrong because dissolved ions in water DO conduct electricity. Option B is incorrect because water's polarity makes it a poor solvent for nonpolar molecules.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "A polyprotic acid like phosphoric acid (H\u2083PO\u2084) has three pKa values: pKa\u2081 = 2.15, pKa\u2082 = 7.20, pKa\u2083 = 12.35. At pH 7.0, the predominant ionic species is:",
+      "options": [
+        "H\u2083PO\u2084 (fully protonated)",
+        "H\u2082PO\u2084\u207b (lost one proton)",
+        "HPO\u2084\u00b2\u207b (lost two protons)",
+        "PO\u2084\u00b3\u207b (fully deprotonated)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "At pH 7.0, which is between pKa\u2081 (2.15) and pKa\u2082 (7.20): the first proton has been fully removed (pH >> pKa\u2081), but the second proton has not yet been fully removed (pH < pKa\u2082). Therefore, the predominant species is H\u2082PO\u2084\u207b. More precisely, at pH 7.0 (which is 0.2 units below pKa\u2082 = 7.20), the Henderson-Hasselbalch equation gives [HPO\u2084\u00b2\u207b]/[H\u2082PO\u2084\u207b] = 10\u207b\u2070\u00b7\u00b2 \u2248 0.63, meaning H\u2082PO\u2084\u207b slightly predominates over HPO\u2084\u00b2\u207b (61% vs 39%). Option A would predominate at pH < 2. Option C predominates between pKa\u2082 and pKa\u2083. Option D only predominates at pH >> 12.35.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Water striders (insects of the family Gerridae) can walk on water because:",
+      "options": [
+        "They are lighter than water and therefore float like boats",
+        "They generate small electric fields that repel them from the water surface",
+        "Their hydrophobic leg hairs and water's high surface tension create a force that supports their weight without breaking through the air-water interface",
+        "They paddle so fast that they maintain momentum above the surface"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Water striders exploit two properties: (1) water's high surface tension (~72 mN/m due to hydrogen bonding) creates a 'film' at the air-water interface that resists deformation, and (2) the insects' legs are covered with hydrophobic microhairs (setae) that prevent water from wetting the leg surface, distributing the insect's weight over a large contact area. The surface tension force along the contact perimeter supports the insect's weight, creating visible dimples in the water surface but not breaking through. If detergent (which lowers surface tension) is added, water striders sink. Option A is incorrect because the insects are denser than water and would sink without surface tension. Option B is nonsensical. Option D describes a different locomotion mechanism (basilisk lizards run on water).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about osmolarity and tonicity:\nS1: Osmolarity measures the total concentration of all solute particles in solution, regardless of their ability to cross a membrane.\nS2: Tonicity describes the effect of a solution on cell volume and depends only on non-penetrating solutes.\nS3: A solution can be hyperosmotic but isotonic if the excess solute can freely cross the cell membrane.\nS4: Pure water is always hypotonic to cells because cells contain dissolved solutes.",
+      "options": [
+        "TTTT",
+        "TTFT",
+        "TFTT",
+        "TTTF"
+      ],
+      "correctAnswer": "TTTT",
+      "explanation": "S1 is TRUE because osmolarity is simply the total concentration of solute particles per liter, measured in Osm/L. It includes all solutes regardless of whether they can cross membranes. S2 is TRUE because tonicity specifically describes the effect on cell volume and depends only on non-penetrating (impermeant) solutes. Penetrating solutes equilibrate across the membrane and do not cause sustained osmotic water movement. S3 is TRUE because if a solution is hyperosmotic due to a penetrating solute (like urea or ethanol), the solute enters the cell, equalizing concentrations without causing net water loss. The cell does not shrink despite the higher external osmolarity, making the solution effectively isotonic. S4 is TRUE because cells always contain dissolved proteins, ions, and metabolites, giving them a positive osmolarity. Pure water (osmolarity = 0) is always hypotonic relative to any cell.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Dehydration synthesis and hydrolysis are complementary reactions in biological systems. Which statement correctly compares them?",
+      "options": [
+        "Dehydration synthesis joins monomers by removing a water molecule, while hydrolysis cleaves polymers by adding a water molecule",
+        "Both reactions require the input of ATP because they are always endergonic",
+        "Dehydration synthesis breaks bonds while hydrolysis forms bonds",
+        "Hydrolysis produces water as a byproduct while dehydration consumes it"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Dehydration synthesis (condensation) is an anabolic reaction that covalently joins two monomers by removing a water molecule (one monomer contributes -OH, the other contributes -H). This is how peptide bonds, glycosidic bonds, ester bonds, and phosphodiester bonds are formed. Hydrolysis is the reverse catabolic reaction: water is added across the bond, breaking it and regenerating the original monomers. Option B is incorrect because hydrolysis is typically exergonic (releases energy). Option C reverses the reactions \u2014 dehydration synthesis FORMS bonds, hydrolysis BREAKS bonds. Option D reverses which reaction produces vs. consumes water.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "A patient has blood gas results showing pH = 7.28, pCO\u2082 = 30 mmHg, and [HCO\u2083\u207b] = 14 mM. This pattern is consistent with:",
+      "options": [
+        "Respiratory acidosis without compensation",
+        "Metabolic acidosis with partial respiratory compensation (the low HCO\u2083\u207b causes acidosis while the low pCO\u2082 represents compensatory hyperventilation)",
+        "Respiratory alkalosis with metabolic compensation",
+        "Normal acid-base status"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The blood gas results show: (1) pH 7.28 \u2014 acidosis (below normal 7.35-7.45); (2) pCO\u2082 30 mmHg \u2014 below normal (35-45 mmHg), indicating hyperventilation; (3) [HCO\u2083\u207b] 14 mM \u2014 below normal (22-26 mM), indicating metabolic acid consumption. The primary disorder is metabolic acidosis (low HCO\u2083\u207b is the cause of the low pH). The low pCO\u2082 represents respiratory compensation \u2014 the body hyperventilates to blow off CO\u2082, shifting the bicarbonate equation to consume H\u207a and partially restore pH. Compensation is partial because pH remains below normal. Option A would show high pCO\u2082 (not low). Option C would show pH > 7.45. Option D does not match any of the abnormal values.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The water molecule's bent shape (bond angle ~104.5\u00b0) rather than a linear arrangement is critical for its biological properties because:",
+      "options": [
+        "A bent shape makes water more dense than if it were linear",
+        "The bent shape creates a net molecular dipole moment, making water polar and enabling its unique solvent properties, hydrogen bonding, and high specific heat",
+        "Linear water molecules would be more stable and form stronger hydrogen bonds",
+        "The bent shape is caused by the repulsion of hydrogen atoms and has no effect on water's properties"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Water's bent geometry is critical because it creates an asymmetric charge distribution \u2014 the two O-H bond dipoles do not cancel (as they would in a linear molecule), resulting in a net molecular dipole moment of 1.85 Debye. This polarity enables: (1) water's superior solvent properties for ionic and polar substances; (2) hydrogen bonding between water molecules (each molecule can form up to 4 hydrogen bonds); (3) high specific heat, high heat of vaporization, and high surface tension. If water were linear, the O-H dipoles would cancel, making water nonpolar \u2014 it would behave more like CO\u2082, a gas at room temperature incapable of sustaining life. Option A is incorrect because molecular shape does not directly determine density this way. Option C is wrong because linear water would be nonpolar. Option D is incorrect because the bent shape profoundly affects all of water's properties.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A student claims that adding salt to water will lower its freezing point. To rigorously test this, she should:",
+      "options": [
+        "Measure the freezing point of pure water and compare it to the boiling point of salt water",
+        "Compare the taste of pure water and salt water at room temperature",
+        "Add salt to ice and measure whether the ice melts faster than untreated ice",
+        "Prepare solutions of increasing NaCl concentration, measure the freezing point of each, and demonstrate a dose-dependent decrease in freezing point (colligative property)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The most rigorous test involves preparing a series of NaCl solutions at different concentrations (e.g., 0 M, 0.1 M, 0.5 M, 1.0 M), measuring the freezing point of each with a precision thermometer, and demonstrating a dose-dependent decrease. This approach confirms the colligative property (freezing point depression is proportional to solute particle concentration) and provides quantitative data that can be compared to the theoretical value (\u0394Tf = iKfm, where i = 2 for NaCl, Kf = 1.86\u00b0C/m). Option A compares different properties (freezing vs boiling) at different conditions. Option C is qualitative and doesn't precisely measure freezing point depression. Option B tests nothing relevant.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Trehalose is a disaccharide used by many organisms (tardigrades, brine shrimp, resurrection plants) to survive desiccation. Its protective mechanism involves:",
+      "options": [
+        "Acting as an antibiotic that kills microorganisms during dehydration",
+        "Forming a crystalline shield that physically prevents water loss",
+        "Replacing water molecules around proteins and membranes by forming hydrogen bonds with polar groups, maintaining their structure in the absence of water (water replacement hypothesis)",
+        "Increasing the metabolic rate to produce more water internally"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Trehalose protects biological structures during desiccation through the water replacement hypothesis: as water is removed, trehalose molecules form hydrogen bonds with the polar groups of proteins and phospholipid head groups, effectively replacing the hydration shell that water normally provides. This maintains proteins in their native conformation and prevents membrane fusion. Additionally, trehalose forms a glassy (vitrified) matrix that immobilizes molecules, preventing denaturation and aggregation. When water returns, trehalose dissolves and normal hydration is restored. Option A is incorrect because trehalose is not an antibiotic. Option B is wrong because trehalose forms an amorphous glass, not a crystal. Option D is incorrect because during desiccation, metabolism is typically suspended (cryptobiosis).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of water activity (aw) is important in food science and microbiology. A lower water activity indicates:",
+      "options": [
+        "More water available for microbial growth and chemical reactions",
+        "Less water available because more water molecules are bound to solutes or surfaces, reducing the effective concentration of free water",
+        "Higher pH of the solution",
+        "Greater osmotic pressure pushing water into cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Water activity (aw) is defined as the ratio of the vapor pressure of water in a food/material to the vapor pressure of pure water (aw = p/p\u2080). Pure water has aw = 1.0. When solutes are dissolved or water is bound to surfaces, fewer water molecules are 'free' and available for microbial growth and chemical reactions, lowering aw. Most bacteria cannot grow below aw \u2248 0.90; most molds are inhibited below aw \u2248 0.70. This is why drying, salting, and adding sugar (reducing aw) are effective food preservation methods. Option A reverses the relationship. Option C confuses water activity with pH. Option D confuses water activity with osmotic pressure, though they are related.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the pH of several common biological fluids:\n\nFluid             | pH\nGastric juice     | 1.5\nLysosomal interior| 4.8\nCytoplasm         | 7.2\nBlood             | 7.4\nMitochondrial matrix| 7.8\nPancreatic juice  | 8.1\n\nThe pH difference between gastric juice and blood represents a difference in [H\u207a] of approximately:",
+      "options": [
+        "5.9-fold",
+        "59-fold",
+        "Nearly 1,000,000-fold (10\u2075\u00b7\u2079)",
+        "5.9%"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The pH difference is 7.4 - 1.5 = 5.9 units. Since pH is a logarithmic scale where each unit represents a 10-fold change in [H\u207a], a 5.9-unit difference represents 10\u2075\u00b7\u2079 \u2248 794,000-fold (nearly 1,000,000-fold). Gastric juice at pH 1.5 has [H\u207a] \u2248 0.032 M, while blood at pH 7.4 has [H\u207a] \u2248 4 \u00d7 10\u207b\u2078 M. This enormous difference is maintained by proton pumps (H\u207a/K\u207a ATPase in stomach parietal cells) that actively concentrate H\u207a against a million-fold concentration gradient. Option A merely states the pH difference without converting to concentration. Option B confuses linear with logarithmic scale. Option D is meaningless in this context.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Clathrate hydrates are ice-like structures that form around nonpolar molecules in water. Their formation:",
+      "options": [
+        "Releases energy (exothermic) because water molecules form additional hydrogen bonds",
+        "Stabilizes the system by increasing total entropy",
+        "Permanently traps the nonpolar molecules and prevents their movement",
+        "Decreases the entropy of water molecules, which is thermodynamically unfavorable and drives the hydrophobic effect"
+      ],
+      "correctAnswer": "D",
+      "explanation": "When nonpolar molecules are placed in water, surrounding water molecules form ordered, cage-like clathrate structures to minimize contact with the hydrophobic surface. These cages require water molecules to adopt specific orientations, reducing their translational and rotational entropy (\u0394S_water < 0). This entropy decrease is thermodynamically unfavorable and is the primary driving force behind the hydrophobic effect \u2014 the system minimizes this unfavorable ordering by aggregating nonpolar molecules together, releasing the ordered water back to bulk solvent where it has more freedom. Option A is partially correct about enthalpic contributions but misses the dominant entropic effect. Option C is wrong because clathrates are dynamic, not permanent. Option B is the opposite \u2014 clathrate formation DECREASES entropy, which is unfavorable.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the transpiration-cohesion-tension model of water transport in plants, the primary driving force for water movement from roots to leaves is:",
+      "options": [
+        "Root pressure generated by active ion uptake",
+        "Gravity pulling water downward through the xylem",
+        "The evaporation of water from leaf mesophyll cells (transpiration), creating negative pressure (tension) that pulls a cohesive water column upward through the xylem",
+        "Osmotic pressure pushing water upward from the soil"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The transpiration-cohesion-tension model explains how water moves from roots to the tops of tall trees (up to 100+ meters). The primary driving force is transpiration \u2014 the evaporation of water from mesophyll cell surfaces into leaf air spaces and out through stomata. This evaporation generates negative water potential (tension) in the leaf xylem, which propagates down through the continuous water column. Water's cohesion (hydrogen bonds between water molecules) maintains the integrity of this column, while adhesion to xylem cell walls provides additional support. Option A (root pressure) contributes in some species but is insufficient for tall trees. Option B is wrong \u2014 gravity opposes upward water movement. Option D oversimplifies \u2014 osmotic pressure at the roots contributes but cannot alone drive water to the tops of tall trees.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Calculate the pH of a 0.05 M solution of acetic acid (Ka = 1.8 \u00d7 10\u207b\u2075).",
+      "options": [
+        "pH \u2248 3.0, calculated using the approximation [H\u207a] = \u221a(Ka \u00d7 C) = \u221a(1.8 \u00d7 10\u207b\u2075 \u00d7 0.05) = \u221a(9 \u00d7 10\u207b\u2077) = 9.5 \u00d7 10\u207b\u2074 M",
+        "pH \u2248 4.75, which equals the pKa of acetic acid",
+        "pH \u2248 7.0, because acetic acid is a weak acid that barely dissociates",
+        "pH \u2248 1.3, because acetic acid is a strong acid that fully dissociates"
+      ],
+      "correctAnswer": "A",
+      "explanation": "For a weak acid HA with Ka = 1.8 \u00d7 10\u207b\u2075 at concentration C = 0.05 M: Using the approximation [H\u207a] = \u221a(Ka \u00d7 C) = \u221a(1.8 \u00d7 10\u207b\u2075 \u00d7 0.05) = \u221a(9.0 \u00d7 10\u207b\u2077) \u2248 9.49 \u00d7 10\u207b\u2074 M. pH = -log(9.49 \u00d7 10\u207b\u2074) \u2248 3.02. This approximation is valid because [H\u207a]/C = 0.019 < 5%, confirming that the degree of dissociation is small. Option B is incorrect because pKa = 4.75 would be the pH at the half-equivalence point of a titration, not the pH of the acid solution itself. Option C is wrong because even weak acids lower pH significantly below 7. Option D incorrectly treats acetic acid as a strong acid.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Why is water's thermal conductivity important for aquatic organisms?",
+      "options": [
+        "High thermal conductivity allows heat to distribute evenly through water bodies, preventing extreme temperature stratification and creating more uniform habitats",
+        "Low thermal conductivity traps heat at the surface, killing organisms in deep water",
+        "Thermal conductivity is irrelevant because water temperature is always constant",
+        "High thermal conductivity causes rapid freezing of entire water bodies in winter"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Water's relatively high thermal conductivity (0.6 W/m\u00b7K, higher than most liquids) allows heat to be distributed more evenly through a water body. Combined with convective mixing (warmer, less dense water rises while cooler, denser water sinks), this creates relatively uniform temperature environments for aquatic organisms. However, thermal stratification still occurs in deep lakes, creating distinct temperature layers (epilimnion, thermocline, hypolimnion) particularly in summer. Option B overstates thermal conductivity's negative effects. Option C is incorrect because water temperature varies with depth, season, and latitude. Option D is wrong because water's high specific heat capacity actually prevents rapid temperature changes.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Deuterium oxide (D\u2082O, 'heavy water') has slightly different physical properties from H\u2082O. D\u2082O has a higher boiling point (101.4\u00b0C) and higher density (1.107 g/cm\u00b3) than H\u2082O. The biological significance of using D\u2082O as a tracer in metabolic studies is that:",
+      "options": [
+        "D\u2082O is radioactive and can be detected using a Geiger counter",
+        "D\u2082O cannot be used in biological experiments because it is toxic at all concentrations",
+        "D\u2082O participates in the same chemical reactions as H\u2082O because deuterium is an isotope of hydrogen with identical chemical properties, but can be distinguished by mass spectrometry",
+        "D\u2082O has different chemical properties from H\u2082O and forms fundamentally different types of bonds"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Deuterium (\u00b2H or D) is a stable, non-radioactive isotope of hydrogen with one neutron (mass 2 amu vs. 1 amu). D\u2082O participates in the same chemical reactions as H\u2082O because isotopes have identical electronic structures and therefore identical chemical properties. However, D\u2082O can be distinguished from H\u2082O by mass spectrometry (molecular mass 20 vs. 18), infrared spectroscopy (different O-D vs. O-H vibrational frequencies), or NMR. This makes it useful for tracing water movement in metabolic studies. Option A is wrong because D\u2082O is NOT radioactive (\u00b3H/tritium is radioactive). Option B is incorrect because D\u2082O is safe at tracer concentrations; toxicity occurs only at very high replacement levels (>25%). Option D is wrong because isotopes have identical chemical properties.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Match the following statements about water's properties with their accuracy:\nS1: The dielectric constant of water (~80) is among the highest of any common liquid, which explains its effectiveness as a solvent for ionic compounds.\nS2: Water's heat of vaporization (2260 J/g) is lower than its heat of fusion (334 J/g).\nS3: Surface tension of water is higher than that of most other liquids due to extensive hydrogen bonding at the air-water interface.\nS4: The thermal conductivity of ice is higher than that of liquid water, which is why ice serves as an insulator for aquatic organisms.",
+      "options": [
+        "T, F, T, F",
+        "T, T, F, T",
+        "F, T, T, F",
+        "T, F, F, T"
+      ],
+      "correctAnswer": "TFTF",
+      "explanation": "S1 is TRUE: Water has a very high dielectric constant (~80 at 25\u00b0C), among the highest of common liquids. This high dielectric constant reduces electrostatic forces between ions by a factor of ~80, allowing ionic compounds to dissolve readily by stabilizing separated ions with hydration shells. S2 is FALSE: Water's heat of vaporization (2260 J/g) is much HIGHER than its heat of fusion (334 J/g), not lower. It takes about 6.8 times more energy to vaporize water than to melt ice. S3 is TRUE: Water has an unusually high surface tension (~72 mN/m at 25\u00b0C) compared to most liquids because molecules at the surface experience a net inward pull from hydrogen bonding with interior molecules. S4 is FALSE: Ice actually has LOWER thermal conductivity than many solids. Ice serves as an insulator precisely because it is a poor conductor of heat, trapping a layer of warmer water beneath it.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the Henderson-Hasselbalch equation and biological buffer systems:\nS1: The Henderson-Hasselbalch equation pH = pKa + log([A\u207b]/[HA]) predicts that a buffer has maximum capacity when pH = pKa.\nS2: The bicarbonate buffer system (H\u2082CO\u2083/HCO\u2083\u207b, pKa\u2081 = 6.35) is effective at blood pH 7.4 because the system is at equilibrium.\nS3: Phosphate buffer (H\u2082PO\u2084\u207b/HPO\u2084\u00b2\u207b, pKa\u2082 = 7.2) is more important than bicarbonate for intracellular pH buffering.\nS4: Adding a strong acid to a buffer solution at its maximum capacity will cause no pH change regardless of the amount added.",
+      "options": [
+        "T, F, T, F",
+        "T, T, T, T",
+        "F, F, T, F",
+        "T, T, F, F"
+      ],
+      "correctAnswer": "TFTF",
+      "explanation": "S1 is TRUE: Buffer capacity is maximal when [A\u207b] = [HA], which occurs when pH = pKa. At this point, log([A\u207b]/[HA]) = log(1) = 0, and the buffer can equally resist addition of acid or base. S2 is FALSE: The bicarbonate buffer is effective at blood pH 7.4 NOT because it is at equilibrium (pH 7.4 is actually far from its pKa\u2081 of 6.35), but because it is an open system \u2014 CO\u2082 can be exhaled by the lungs and HCO\u2083\u207b can be excreted/reabsorbed by the kidneys, making it a physiologically regulated buffer. S3 is TRUE: The phosphate buffer system (pKa\u2082 = 7.2) is closer to intracellular pH (~7.2) than bicarbonate, and phosphate concentrations are higher inside cells, making it the dominant intracellular buffer. S4 is FALSE: All buffers have finite capacity. Adding strong acid beyond the buffer capacity (exhausting the conjugate base) will cause a sharp pH drop.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about hydrogen bonding in water:\nS1: Each water molecule can form a maximum of 4 hydrogen bonds \u2014 2 as a donor (via its two H atoms) and 2 as an acceptor (via its two lone pairs on oxygen).\nS2: In liquid water at room temperature, each molecule is hydrogen-bonded to an average of 3.4 other water molecules at any instant.\nS3: Hydrogen bonds in water are approximately 20 times weaker than covalent O-H bonds.\nS4: The lifetime of an individual hydrogen bond in liquid water is approximately 1 second.",
+      "options": [
+        "T, T, T, F",
+        "T, F, T, T",
+        "F, T, F, T",
+        "T, T, F, F"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Water has 2 hydrogen atoms (each can donate a hydrogen bond) and 2 lone pairs on oxygen (each can accept a hydrogen bond), giving a maximum of 4 hydrogen bonds per molecule in a tetrahedral arrangement. S2 is TRUE: In liquid water at 25\u00b0C, the average number of hydrogen bonds per molecule is approximately 3.4, less than the theoretical maximum of 4 due to thermal disruption. In ice, the number is exactly 4 per molecule in the crystalline lattice. S3 is TRUE: A single hydrogen bond in water has a bond energy of approximately 20 kJ/mol, while a covalent O-H bond has energy of approximately 460 kJ/mol, making hydrogen bonds roughly 20-25 times weaker. S4 is FALSE: Individual hydrogen bonds in liquid water are extremely short-lived, with lifetimes of approximately 1-10 picoseconds (10\u207b\u00b9\u00b2 seconds), not 1 second. They constantly break and reform.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Match the following statements about the anomalous expansion of water:\nS1: Water reaches its maximum density at 4\u00b0C, meaning water at 4\u00b0C sinks below warmer and colder water.\nS2: The expansion of water upon freezing is approximately 9%, which is why ice floats with about 9% of its volume above the waterline.\nS3: The anomalous expansion occurs because hydrogen bonds in ice form an open hexagonal lattice that occupies more volume than the more disordered liquid state.\nS4: If water did not have this anomalous property, lakes would freeze from the bottom up, which would be lethal for most aquatic life.",
+      "options": [
+        "T, F, T, T",
+        "T, T, T, T",
+        "F, T, F, T",
+        "T, T, F, F"
+      ],
+      "correctAnswer": "TTTT",
+      "explanation": "S1 is TRUE: Water reaches its maximum density (999.97 kg/m\u00b3) at approximately 3.98\u00b0C. Water at this temperature is denser than both warmer water (expanded due to thermal motion) and colder water (expanded due to hydrogen bond ordering approaching ice structure). This causes stratification in lakes. S2 is TRUE: Water expands approximately 9% upon freezing (density decreases from ~1000 to ~917 kg/m\u00b3). By Archimedes' principle, ice floats with approximately 9% of its volume above the waterline (equivalently, ~91% submerged). S3 is TRUE: In ice, each water molecule forms exactly 4 hydrogen bonds in a regular hexagonal crystalline lattice. This open structure has more space between molecules than the more dynamic, partially hydrogen-bonded liquid state. S4 is TRUE: If ice were denser than liquid water, it would sink as it formed. Lakes would freeze solid from the bottom up, destroying aquatic habitats. The insulating ice layer on top allows liquid water to persist beneath.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about osmosis and water potential:\nS1: Water potential (\u03a8) is defined as \u03a8 = \u03a8s + \u03a8p, where \u03a8s is solute potential and \u03a8p is pressure potential.\nS2: Pure water at atmospheric pressure has a water potential of zero, and the addition of solute always decreases water potential.\nS3: Osmosis is the net movement of water from a region of lower solute concentration to higher solute concentration across a semipermeable membrane.\nS4: In a plant cell at full turgor, water potential equals zero because \u03a8p is positive and exactly offsets the negative \u03a8s.",
+      "options": [
+        "T, T, T, T",
+        "T, T, T, F",
+        "T, F, T, T",
+        "F, T, F, T"
+      ],
+      "correctAnswer": "TTTT",
+      "explanation": "S1 is TRUE: Water potential (\u03a8, measured in MPa) equals the sum of solute potential (\u03a8s, also called osmotic potential) and pressure potential (\u03a8p). In more complex scenarios, matric potential and gravitational potential may also contribute. S2 is TRUE: By convention, pure water at atmospheric pressure and standard temperature has \u03a8 = 0. Adding any solute decreases the mole fraction of water, always making \u03a8s negative, thereby decreasing total water potential. S3 is TRUE: Osmosis is the net diffusion of water across a selectively permeable membrane from a hypotonic region (low solute, high water potential) to a hypertonic region (high solute, low water potential). S4 is TRUE: At full turgor, the positive pressure potential (\u03a8p) from the rigid cell wall exactly balances the negative solute potential (\u03a8s), so net water potential \u03a8 = 0. At this point, there is no net water movement into or out of the cell.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about water's role in thermoregulation:\nS1: Evaporative cooling works because the molecules with the highest kinetic energy escape during vaporization, lowering the average kinetic energy of the remaining liquid.\nS2: Sweating is effective for cooling because the heat of vaporization of water (2260 J/g) removes substantial thermal energy from the skin surface.\nS3: Water's high specific heat means that coastal climates experience greater temperature fluctuations than inland climates.\nS4: Transpiration in plants serves a dual function: drawing water and minerals up from roots via cohesion-tension, and cooling leaf surfaces via evaporative cooling.",
+      "options": [
+        "T, T, F, T",
+        "F, T, T, T",
+        "T, F, F, T",
+        "T, T, T, F"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: During evaporation, the molecules that escape are those with the highest kinetic energy (they have enough energy to overcome intermolecular attractions at the surface). This leaves behind molecules with lower average kinetic energy, which corresponds to a lower temperature \u2014 this is evaporative cooling. S2 is TRUE: Water's heat of vaporization is 2260 J/g (one of the highest for any liquid), meaning each gram of sweat that evaporates removes 2260 joules of heat from the body. This is an extremely effective cooling mechanism. S3 is FALSE: The opposite is true. Water's high specific heat means large bodies of water resist temperature changes, so coastal climates have SMALLER (moderated) temperature fluctuations, while inland climates experience larger swings. S4 is TRUE: Transpiration serves both functions. The cohesion-tension mechanism uses transpirational pull to move water through xylem, while evaporation at leaf surfaces removes heat. A single large tree can transpire hundreds of liters per day, providing significant cooling.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the pH of a bicarbonate buffer solution (initial pH 7.4, total buffer concentration 24 mM) after adding increasing amounts of HCl. The data shows:\n\n| HCl added (mmol/L) | pH   |\n|---------------------|------|\n| 0                   | 7.40 |\n| 2                   | 7.25 |\n| 4                   | 7.10 |\n| 8                   | 6.75 |\n| 12                  | 6.35 |\n| 16                  | 5.80 |\n| 20                  | 4.50 |\n\nAt what point does the buffer capacity become effectively exhausted?",
+      "options": [
+        "After adding 4 mmol/L HCl, as the pH drops below 7.2",
+        "After adding 8 mmol/L HCl, as the pH equals the pKa of the system",
+        "After adding 16 mmol/L HCl, as indicated by the sharp pH decline between 16 and 20 mmol/L",
+        "After adding 12 mmol/L HCl, as the pH reaches the pKa\u2081 of carbonic acid (6.35)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Buffer capacity is exhausted when the conjugate base (HCO\u2083\u207b) is nearly consumed and additional acid causes a dramatic pH drop. From the data, pH changes are relatively moderate from 0-16 mmol/L (dropping from 7.40 to 5.80, about 0.10-0.45 pH units per 4 mmol increment). However, between 16 and 20 mmol/L, the pH drops precipitously from 5.80 to 4.50 (1.30 pH units in just 4 mmol). This sharp inflection indicates buffer exhaustion \u2014 most of the HCO\u2083\u207b has been converted to H\u2082CO\u2083, and the system can no longer resist pH changes. Option A is wrong because the buffer is still functioning well at 4 mmol. Option B is incorrect because pH 6.75 does not equal the pKa. Option D is partially right that pH 6.35 is the pKa\u2081, but the buffer still has some residual capacity at 12 mmol \u2014 exhaustion is better indicated by the dramatic drop after 16 mmol.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A study compared the rates of enzyme-catalyzed reactions in H\u2082O versus D\u2082O (heavy water). The data shows:\n\n| Enzyme         | Relative rate in D\u2082O (H\u2082O = 1.0) |\n|----------------|------------------------------------|\n| Lysozyme       | 0.45                               |\n| Chymotrypsin   | 0.52                               |\n| Carbonic anhydrase | 0.38                           |\n| Hexokinase     | 0.91                               |\n\nWhich enzyme's catalytic mechanism is LEAST dependent on proton transfer events?",
+      "options": [
+        "Lysozyme, because its rate is reduced by 55%",
+        "Chymotrypsin, because serine proteases do not use proton transfer",
+        "Carbonic anhydrase, because it has the lowest relative rate",
+        "Hexokinase, because its rate is only reduced by 9% in D\u2082O, indicating minimal solvent kinetic isotope effect"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The solvent kinetic isotope effect (SKIE) measures how substitution of D\u2082O for H\u2082O affects enzyme reaction rates. When proton (H\u207a) transfer is part of the rate-limiting step, replacing H with D (which is heavier) slows the reaction because the O-D bond is stronger and has a lower zero-point energy than O-H, making D\u207a transfer slower. Hexokinase shows only a 9% rate reduction in D\u2082O (relative rate 0.91), indicating that proton transfer is NOT a significant part of its rate-limiting catalytic mechanism. Instead, hexokinase catalyzes phosphoryl transfer from ATP to glucose, which primarily involves nucleophilic attack rather than proton transfer. In contrast, carbonic anhydrase (0.38, 62% reduction) relies heavily on proton shuttling via a zinc-bound hydroxide mechanism. Lysozyme (0.45) and chymotrypsin (0.52) also involve critical proton transfers in their catalytic triads and acid-base catalysis. Option A confuses rate reduction with independence. Option B is factually wrong \u2014 serine proteases extensively use proton transfer. Option C describes the MOST dependent enzyme.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A marine biologist measures the dissolved oxygen (DO) concentration in seawater at various temperatures:\n\n| Temperature (\u00b0C) | DO (mg/L) |\n|-------------------|-----------|\n| 0                 | 14.6      |\n| 10                | 11.3      |\n| 20                | 9.1       |\n| 30                | 7.5       |\n| 40                | 6.4       |\n\nIf climate change raises ocean surface temperature from 20\u00b0C to 25\u00b0C, what is the approximate percentage decrease in dissolved oxygen, and why is this ecologically significant?",
+      "options": [
+        "Approximately 50% decrease; this would eliminate all marine life",
+        "Approximately 9% decrease; reduced O\u2082 availability stresses aerobic organisms, particularly large-bodied fish and invertebrates with high metabolic demands",
+        "No change; dissolved oxygen is independent of temperature",
+        "Approximately 30% decrease; this causes all dissolved gases to escape simultaneously"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Interpolating from the data: at 20\u00b0C, DO = 9.1 mg/L. At 25\u00b0C (midway between 20\u00b0C and 30\u00b0C), DO \u2248 (9.1 + 7.5)/2 = 8.3 mg/L. The decrease is (9.1 - 8.3)/9.1 \u00d7 100 \u2248 8.8%, approximately 9%. Wait \u2014 looking at the options, Option C says 'no change' which is wrong, while Option B says 'approximately 9% decrease.' Let me reconsider. The correct answer is B: approximately 9% decrease. The gas solubility in water decreases with increasing temperature because higher kinetic energy allows more dissolved gas molecules to escape. This ~9% reduction significantly impacts marine ecosystems because organisms with high metabolic demands (large fish, active invertebrates) require substantial O\u2082. Combined with increased metabolic rates at higher temperatures (Q\u2081\u2080 effect), warmer waters create a double stress \u2014 less O\u2082 available while organisms need more. Option A vastly overestimates the decrease. Option C is factually wrong. Option D overestimates and incorrectly describes the mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "The following data shows the osmolarity of body fluids in various organisms:\n\n| Organism           | Habitat    | Body fluid osmolarity (mOsm/L) |\n|--------------------|------------|----------------------------------|\n| Marine invertebrate| Seawater   | 1000                            |\n| Marine bony fish   | Seawater   | 400                             |\n| Freshwater fish    | Freshwater | 300                             |\n| Salmon (ocean)     | Seawater   | 350                             |\n| Salmon (river)     | Freshwater | 310                             |\n\nSeawater has an osmolarity of approximately 1000 mOsm/L. Which conclusion is best supported by this data?",
+      "options": [
+        "All aquatic organisms are osmoconformers that match their environment's osmolarity",
+        "Freshwater fish have the highest osmolarity because they constantly absorb water",
+        "Salmon cannot survive in both environments because their osmolarity changes too dramatically",
+        "Marine bony fish are hypo-osmotic to seawater and must actively excrete excess salt, while freshwater fish are hyperosmotic to their environment and must actively absorb salt"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The data clearly shows that marine bony fish maintain body fluid osmolarity (~400 mOsm/L) well below seawater (1000 mOsm/L) \u2014 they are hypo-osmotic regulators. This means water tends to leave their bodies osmotically, so they must drink seawater and actively excrete excess Na\u207a and Cl\u207b through chloride cells in their gills. Freshwater fish maintain osmolarity (~300 mOsm/L) above their environment (~0-20 mOsm/L), making them hyperosmotic. Water enters their bodies osmotically, so they produce large volumes of dilute urine and actively absorb ions through gill epithelia. Option A is wrong because only the marine invertebrate appears to be an osmoconformer (matching seawater at 1000). Option C is wrong because salmon are euryhaline \u2014 their osmolarity only changes modestly (350\u2192310), indicating effective osmoregulatory switching. Option B is wrong because freshwater fish do NOT have the highest osmolarity. The correct answer is D.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether the viscosity of cytoplasm affects the rate of diffusion of signaling molecules within a cell. She proposes comparing diffusion rates of fluorescently-labeled cAMP in normal cells versus cells treated with cytochalasin D (which depolymerizes actin filaments, reducing cytoplasmic viscosity). Which control is MOST essential for this experiment?",
+      "options": [
+        "A positive control using diffusion of the same fluorescent molecule in pure water to establish the maximum diffusion rate",
+        "Measuring cell viability after cytochalasin D treatment to ensure the drug does not kill cells or alter cAMP signaling pathways independently",
+        "Using a larger fluorescent molecule as a control to show that size affects diffusion",
+        "Performing the experiment at multiple temperatures to generate an Arrhenius plot"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The most essential control is verifying that cytochalasin D treatment does not confound results through cytotoxicity or by independently altering the cAMP signaling pathway (Option B). If the drug kills cells or disrupts the signaling pathway itself, any observed changes in diffusion rate cannot be attributed solely to viscosity changes. Cell viability assays (trypan blue exclusion, MTT assay) and verification that cAMP production/degradation rates remain unchanged are critical controls. Option A (pure water control) provides useful reference data but is not essential \u2014 diffusion in water vs. cytoplasm is already well-documented. Option C (different-sized molecule) tests a different hypothesis about size-dependent diffusion, not the specific viscosity question. Option D (temperature series) is useful for thermodynamic analysis but not essential for the primary hypothesis about viscosity effects. The correct answer is B, not C.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To test whether aquaporin-2 (AQP2) is responsible for vasopressin-mediated water reabsorption in kidney collecting ducts, a researcher designs a knockout mouse lacking the AQP2 gene. Which predicted phenotype would MOST strongly support the hypothesis?",
+      "options": [
+        "The knockout mice show no response to vasopressin in terms of urine concentration \u2014 they produce copious dilute urine even when treated with vasopressin, mimicking nephrogenic diabetes insipidus",
+        "The knockout mice have higher blood pressure due to increased blood volume",
+        "The knockout mice show increased water reabsorption due to compensatory upregulation of other aquaporins",
+        "The knockout mice have normal water balance because AQP2 is redundant with AQP1"
+      ],
+      "correctAnswer": "A",
+      "explanation": "If AQP2 is specifically responsible for vasopressin-regulated water reabsorption in the collecting duct, then AQP2 knockout mice should fail to insert water channels in response to vasopressin signaling. The predicted phenotype is that vasopressin treatment (or endogenous vasopressin release during dehydration) would NOT increase collecting duct water permeability, resulting in production of large volumes of dilute urine \u2014 the hallmark of nephrogenic diabetes insipidus. This has been confirmed experimentally: AQP2 knockout mice indeed show severe polyuria and polydipsia unresponsive to vasopressin. Option B describes an opposite effect. Option C is unlikely to fully compensate because other aquaporins (AQP1, AQP3, AQP4) are expressed in different nephron segments and are not vasopressin-regulated. Option D is incorrect because AQP1 is in the proximal tubule and descending loop, not the collecting duct. The correct answer is A.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The hydrophobic effect is the primary driving force for protein folding in aqueous solution. Which thermodynamic explanation best accounts for this phenomenon?",
+      "options": [
+        "Nonpolar residues form strong attractive interactions with each other in the protein interior",
+        "Water molecules form more hydrogen bonds when nonpolar groups are sequestered, increasing the entropy of the surrounding water by releasing ordered clathrate water molecules",
+        "Polar residues on the protein surface repel nonpolar residues toward the interior",
+        "The peptide backbone is inherently hydrophobic and drives itself away from water"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The hydrophobic effect is primarily an entropic phenomenon driven by water's behavior around nonpolar solutes. When nonpolar groups are exposed to water, surrounding water molecules form highly ordered 'clathrate' or 'iceberg' structures to maximize their hydrogen bonding while avoiding the nonpolar surface. This ordering dramatically decreases the entropy of the water. When nonpolar groups are buried in the protein interior during folding, these ordered water molecules are released back into the bulk solvent, where they can adopt many more orientational states \u2014 dramatically increasing water entropy. The favorable entropy gain of water release drives the hydrophobic effect. Option A is incorrect because van der Waals attractions between nonpolar groups are weak and not the primary driving force. Option C describes electrostatic effects that play a minor role. Option D is wrong because the peptide backbone is polar (N-H and C=O groups form hydrogen bonds). The correct answer is B.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Antifreeze proteins (AFPs) found in Arctic fish prevent ice crystal growth in body fluids. The mechanism by which AFPs inhibit ice growth is:",
+      "options": [
+        "AFPs lower the overall freezing point of body fluids by colligative depression, similar to adding salt",
+        "AFPs denature ice by breaking hydrogen bonds within the crystal lattice",
+        "AFPs catalyze the formation of amorphous (non-crystalline) ice instead of crystalline ice",
+        "AFPs adsorb to the surface of small ice crystals, creating curvature that locally depresses the freezing point and prevents further growth (adsorption-inhibition or Kelvin effect)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Antifreeze proteins work through the adsorption-inhibition mechanism (also called the Kelvin effect or thermal hysteresis mechanism). AFPs bind irreversibly to specific faces of ice crystals, forcing ice growth to occur only between the bound AFP molecules. This creates curved ice fronts between the adsorbed proteins, and the Kelvin effect dictates that curved surfaces have lower freezing points than flat surfaces. The result is thermal hysteresis \u2014 a gap between the freezing and melting points \u2014 that prevents ice crystal growth within this temperature range. This is non-colligative (Option A is wrong) because the effect is far larger than predicted by the molar concentration of AFPs. Option B is wrong because AFPs do not break ice hydrogen bonds. Option C is wrong because AFPs do not create amorphous ice. AFPs are found in organisms including Arctic/Antarctic fish, insects, plants, and some bacteria.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Chaotropic agents such as urea and guanidinium chloride denature proteins in aqueous solution. The primary mechanism by which these agents disrupt protein structure is:",
+      "options": [
+        "They directly break covalent peptide bonds in the polypeptide backbone",
+        "They form hydrogen bonds with peptide backbone groups, competing with intramolecular hydrogen bonds, and they weaken the hydrophobic effect by disrupting water structure around nonpolar residues",
+        "They chelate metal ions essential for protein structure",
+        "They oxidize disulfide bonds, eliminating covalent cross-links"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Chaotropic agents like urea (at 6-8 M) and guanidinium chloride (at 4-6 M) denature proteins through multiple mechanisms. They form direct hydrogen bonds with peptide backbone NH and C=O groups, competing with the intramolecular hydrogen bonds that stabilize secondary structure. Additionally, they disrupt the ordered water structure around nonpolar residues, weakening the hydrophobic effect that drives burial of nonpolar side chains. Some evidence also suggests they may directly interact with nonpolar groups. This combination destabilizes the folded state. Option A is wrong because chaotropes do not break covalent bonds. Option C is wrong because chaotropes do not specifically chelate metals (EDTA does that). Option D is wrong because chaotropes do not break disulfide bonds (reducing agents like DTT or \u03b2-mercaptoethanol do that). The correct answer is B.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Hofmeister series ranks ions by their ability to salt out (precipitate) or salt in (solubilize) proteins. Kosmotropic ions (e.g., SO\u2084\u00b2\u207b, HPO\u2084\u00b2\u207b) at the salting-out end of the series stabilize proteins by:",
+      "options": [
+        "Directly binding to the protein surface and cross-linking charged residues",
+        "Lowering the pH of the solution, which protonates charged residues",
+        "Strengthening the hydrophobic effect by ordering water molecules and increasing surface tension at the protein-water interface, thereby favoring burial of nonpolar groups",
+        "Denaturing competing proteins that would otherwise interfere with folding"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Kosmotropic (water-structure-making) ions like sulfate and phosphate are strongly hydrated and increase the ordering of water molecules in their vicinity. They raise the surface tension of the solution at the protein-solvent interface, which thermodynamically favors minimizing the exposed hydrophobic surface area \u2014 in other words, they strengthen the hydrophobic effect. This promotes protein compaction and stability (salting out). At high concentrations, this effect reduces protein solubility, causing precipitation. Chaotropic ions (e.g., SCN\u207b, ClO\u2084\u207b) have the opposite effect \u2014 they disorder water structure, weaken the hydrophobic effect, and tend to solubilize (salt in) proteins but may destabilize them. Option A is wrong because kosmotropic ions primarily act indirectly through water structure. Option B is incorrect because the Hofmeister effect is largely independent of pH. Option D is nonsensical.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Water and the Fitness of the Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ocean acidification due to increased atmospheric CO\u2082 follows the equilibrium: CO\u2082 + H\u2082O \u21cc H\u2082CO\u2083 \u21cc H\u207a + HCO\u2083\u207b \u21cc 2H\u207a + CO\u2083\u00b2\u207b. If ocean pH decreases from 8.2 to 7.8, the [H\u207a] increases by a factor of:",
+      "options": [
+        "0.4, because pH changed by 0.4 units",
+        "4, because the change is proportional to pH difference times 10",
+        "2.51, because each 0.1 pH unit change represents a 1.26-fold increase in [H\u207a], and 1.26\u2074 \u2248 2.51",
+        "40, because pH is on a scale of 0-14 and 0.4/14 \u00d7 1000 \u2248 40"
+      ],
+      "correctAnswer": "C",
+      "explanation": "pH = -log\u2081\u2080[H\u207a], so a decrease in pH represents an increase in [H\u207a]. At pH 8.2, [H\u207a] = 10\u207b\u2078\u00b7\u00b2 M. At pH 7.8, [H\u207a] = 10\u207b\u2077\u00b7\u2078 M. The ratio is 10\u207b\u2077\u00b7\u2078/10\u207b\u2078\u00b7\u00b2 = 10\u2070\u00b7\u2074 \u2248 2.512. So [H\u207a] increases by a factor of approximately 2.51. This seemingly small pH change (0.4 units) represents a ~58% increase in hydrogen ion concentration, which significantly affects marine organisms \u2014 particularly those that build calcium carbonate shells (corals, mollusks, foraminifera) because increased H\u207a reacts with CO\u2083\u00b2\u207b, reducing carbonate availability. Option A incorrectly treats pH as a linear scale. Option B uses an incorrect calculation. Option D uses a completely wrong formula. The correct answer is C.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Water and the Fitness of the Environment"
+    }
+  ]
+}
