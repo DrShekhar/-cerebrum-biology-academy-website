@@ -1,0 +1,648 @@
+{
+  "batchName": "Campbell Ch 35 – Plant Structure, Growth, and Development (Olympiad)",
+  "subject": "Biology",
+  "chapter": "Plant Structure, Growth, and Development",
+  "class": "Olympiad",
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "The shoot apical meristem (SAM) generates the above-ground portions of the plant body. Within the SAM, the tunica-corpus model distinguishes between outer cell layers (tunica, L1 and L2) that divide anticlinally and an inner mass (corpus, L3) that divides in all planes. A chimeric plant with a mutation in the L2 layer but not L1 or L3 would show the mutation in which tissues?",
+      "options": [
+        "Epidermis only, since L1 gives rise to the epidermis",
+        "The L2 layer contributes to the subepidermal mesophyll layers, lateral meristems (vascular cambium and cork cambium derivatives), and the gametes (since the sporogenous tissue in anthers and ovules derives from L2), so the mutation would appear in internal leaf tissues and be transmitted to offspring",
+        "Only in root tissues",
+        "Only in the pith"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The tunica-corpus model describes the organization of the shoot apical meristem. The L1 (outermost tunica layer) gives rise primarily to the epidermis through anticlinal (perpendicular to surface) divisions. The L2 (inner tunica layer) contributes to subepidermal tissues including: the mesophyll layers of leaves, the cortex of stems, and critically the sporogenous tissue (archesporial cells) that gives rise to gametes in flowers. The L3 (corpus) contributes to the central pith and vascular tissues. Therefore, an L2 mutation would: (1) Appear in internal leaf tissues (mesophyll) but NOT the epidermis (L1 territory). (2) Be present in sporogenous cells, meaning it would be transmitted to both pollen and ovules, and thus appear in offspring. (3) May appear in vascular cambium derivatives. This is why periclinal chimeras (with mutations in specific cell layers) are valuable for developmental genetics — they reveal the tissue contributions of each meristematic layer. Understanding chimeral plants has practical importance in horticulture (many variegated ornamental plants are periclinal chimeras) and in fundamental plant developmental biology.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Monocots and eudicots differ in several structural features. Which combination of characteristics correctly distinguishes eudicots from monocots?",
+      "options": [
+        "Parallel leaf venation, scattered vascular bundles, and floral parts in multiples of three",
+        "Two cotyledons in the seed, netlike (reticulate) leaf venation, vascular bundles arranged in a ring in the stem, floral parts typically in multiples of four or five, and a taproot system",
+        "One cotyledon, fibrous root system, and flower parts in multiples of three",
+        "No vascular tissue, no true leaves, and reproduction by spores"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Eudicots (formerly called dicots, now more precisely termed eudicotyledons) are characterized by a suite of correlated features: (1) Two cotyledons (seed leaves) in the embryo — providing nutrition during germination. Monocots have one. (2) Netlike (reticulate) leaf venation — major veins branch repeatedly to form a network. Monocots have parallel venation. (3) Vascular bundles arranged in a ring — in eudicot stems, the vascular bundles form a ring pattern in cross-section, with a pith interior and cortex exterior. Monocot bundles are scattered throughout the ground tissue. (4) Floral parts in multiples of 4 or 5 — eudicot flowers typically have 4 or 5 petals, sepals, etc. Monocot flowers have parts in multiples of 3. (5) Taproot system — a main root (derived from the radicle) with lateral branch roots. Monocots have fibrous root systems with adventitious roots. (6) Vascular cambium — eudicots typically undergo secondary growth via vascular cambium, producing wood and bark. Most monocots lack vascular cambium. Option A describes monocots. Option C also describes monocots. Option D describes bryophytes, not angiosperms.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Secondary growth in a woody eudicot stem involves the activity of two lateral meristems. The vascular cambium produces:",
+      "options": [
+        "Only epidermal cells",
+        "Leaves and flowers",
+        "Secondary xylem (wood) toward the interior of the stem and secondary phloem toward the exterior, increasing the stem's diameter through the periclinal divisions of fusiform initials (producing axial conducting cells) and ray initials (producing radial parenchyma rays)",
+        "Spores for reproduction"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The vascular cambium is a cylindrical sheet of meristematic cells located between the xylem and phloem. It contains two types of initials: (1) Fusiform initials — elongated cells that divide periclinally (parallel to the surface) to produce: (a) secondary xylem (wood) toward the inside — including vessel elements, tracheids, fibers, and axial parenchyma; and (b) secondary phloem toward the outside — including sieve tube elements, companion cells, fibers, and axial parenchyma. (2) Ray initials — roughly isodiametric cells that produce vascular rays — horizontal sheets of parenchyma that extend radially through the xylem and phloem, serving in lateral transport of water, minerals, and sugars, as well as storage of starch and other reserves. The cambium produces more xylem than phloem, which is why wood (accumulated secondary xylem) forms the bulk of a tree trunk. Annual growth rings in temperate trees result from seasonal variation in cambial activity: large-diameter, thin-walled earlywood (spring) vessels alternate with small-diameter, thick-walled latewood (summer) cells. The second lateral meristem, the cork cambium (phellogen), produces the periderm (bark), replacing the epidermis in older stems.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A cross-section of a tree trunk shows 80 annual rings. The rings from years 30-40 are noticeably narrower than those from years 20-30 and 40-50. What is the MOST likely explanation for the narrow rings during years 30-40?",
+      "options": [
+        "The tree was growing in tropical conditions where rings do not form",
+        "An environmental stress (such as drought, defoliation by insects, competition from neighboring trees, or pollution) during years 30-40 reduced the rate of cambial cell division and xylem production, resulting in less wood laid down per year and therefore narrower annual rings",
+        "The tree switched from producing xylem to producing only phloem during that decade",
+        "The narrow rings indicate that the tree was growing faster during that period"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Dendrochronology (tree ring analysis) is based on the principle that annual ring width reflects growth conditions during each year. Wider rings indicate favorable conditions (adequate water, nutrients, light, temperature), while narrower rings indicate stress. The narrow rings during years 30-40 could result from: (1) Drought — water limitation reduces cell expansion and cambial activity. Trees in drought produce fewer, smaller xylem cells per year. This is the most common cause of narrow rings. (2) Insect defoliation — loss of leaves reduces photosynthesis, limiting the carbon available for wood production. Major defoliation events (gypsy moth, spruce budworm) produce characteristic patterns of narrow rings. (3) Competition — if neighboring trees grew larger and shaded the subject tree, reduced light would decrease photosynthesis and growth. (4) Pollution — acid rain, heavy metals, or air pollution can inhibit growth. (5) Disease — fungal or bacterial infections can reduce vigor. The return to wider rings after year 40 suggests the stress was temporary and the tree recovered. Trees do not stop producing xylem (C) — the cambium always produces both xylem and phloem. Narrow rings indicate slower, not faster growth (D). Tropical trees can form rings if there are seasonal changes in water availability (A is not necessarily true).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Casparian strip in root endodermal cells is functionally significant because it:",
+      "options": [
+        "Increases water absorption by root hairs",
+        "Provides structural support to the root",
+        "Forces all water and dissolved minerals entering the vascular cylinder (stele) to pass through the selectively permeable plasma membrane of endodermal cells via the symplastic pathway, because the Casparian strip — a band of suberin and lignin impregnating the radial and transverse walls — blocks the apoplastic route through the cell walls",
+        "Stores starch for root growth"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Casparian strip is one of the most important structural features in plant root anatomy, serving as a selective checkpoint for mineral entry into the vascular system. Understanding its function requires knowing the two transport pathways: (1) Apoplastic pathway — water and solutes move through the cell wall continuum (apoplast) without crossing any plasma membranes. This is a non-selective route. (2) Symplastic pathway — water and solutes move through the cytoplasm, crossing plasma membranes and moving between cells via plasmodesmata. This route is selective because plasma membranes contain transport proteins that control which ions enter. The Casparian strip forces a switch: (1) In the cortex, water and minerals can travel through either pathway. (2) At the endodermis, the Casparian strip — a continuous band of hydrophobic suberin and lignin deposited in the radial and transverse cell walls — blocks the apoplastic route. (3) All water and minerals must cross the endodermal cell's plasma membrane (entering the symplast) to reach the stele. (4) This ensures selective mineral uptake — the plant can control which ions enter the xylem via membrane transport proteins (channels, carriers, and pumps). This prevents toxic substances from freely entering the vascular system and allows the plant to regulate mineral composition of the xylem sap.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about plant tissue systems:\n\nI. The dermal tissue system includes the epidermis and periderm, providing protection against water loss and pathogens.\nII. The vascular tissue system consists of xylem (water and mineral transport) and phloem (sugar transport).\nIII. Ground tissue is composed exclusively of sclerenchyma cells.\nIV. Collenchyma cells have unevenly thickened primary cell walls and provide flexible support to growing organs.",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TFTF",
+        "TFFT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statement I is TRUE. The dermal tissue system forms the outer protective covering. In primary growth, the epidermis (a single cell layer with cuticle) serves this role. In secondary growth, the epidermis is replaced by the periderm (bark), produced by the cork cambium. Both provide protection against water loss (cuticle, suberin in cork), mechanical damage, and pathogen entry. Statement II is TRUE. The vascular tissue system comprises: xylem — conducting water and dissolved minerals from roots to shoots, containing tracheids and vessel elements (dead, hollow cells); and phloem — transporting organic nutrients (primarily sucrose), containing sieve tube elements and companion cells (living cells). Statement III is FALSE. Ground tissue includes three cell types: (a) Parenchyma — the most abundant, with thin primary walls, functioning in photosynthesis, storage, and secretion. (b) Collenchyma — with unevenly thickened primary walls, providing flexible support. (c) Sclerenchyma — with thick, lignified secondary walls, providing rigid support (fibers and sclereids). Ground tissue is NOT exclusively sclerenchyma — parenchyma is the most common ground tissue cell type. Statement IV is TRUE. Collenchyma cells are characterized by primary cell walls thickened irregularly at the corners (angular collenchyma) or along tangential walls (lamellar collenchyma). They are living at maturity and provide mechanical support while retaining flexibility, which is important in growing stems and petioles that must bend without breaking.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Indeterminate growth in plants, as opposed to determinate growth in most animals, means that:",
+      "options": [
+        "Plants stop growing after reaching a fixed size",
+        "Plants can only grow during their first year of life",
+        "Plants continue to grow throughout their lifetime due to the persistent activity of meristems — undifferentiated cell populations at root tips, shoot tips, and lateral positions that retain the capacity for cell division indefinitely",
+        "All plant organs grow at the same rate"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Indeterminate growth is a fundamental feature of plant biology that distinguishes plants from most animals. Key aspects: (1) Meristems — plants retain populations of undifferentiated stem cells (meristematic cells) throughout their lives. These meristems are located at: apical meristems (root and shoot tips) for primary growth (length), lateral meristems (vascular cambium and cork cambium) for secondary growth (width), and intercalary meristems (in some monocots, at nodes). (2) Continuous growth potential — as long as meristems remain active and environmental conditions are favorable, plants can continue producing new organs (leaves, roots, branches, flowers). Some trees (bristlecone pines, certain clonal aspens) have been growing for thousands of years. (3) Modular construction — plants are built from repeating units (modules or phytomers), each consisting of a node with leaf, internode, and axillary bud. This modular design allows continuous addition of new units. (4) Contrast with animals — most animals have determinate growth, reaching a fixed adult size and then stopping. Animal stem cells exist but are more restricted. (5) Some plant organs do have determinate growth — leaves and flowers grow to a defined size and then stop, but the plant as a whole continues. Plants do not stop at a fixed size (A), can grow beyond one year (B), and organs grow at different rates (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a specific gene is expressed in the shoot apical meristem (SAM) versus mature leaf tissue. Which technique would provide the MOST informative spatial expression data?",
+      "options": [
+        "Measuring total plant height over time",
+        "Counting the number of leaves produced per week",
+        "In situ hybridization using an antisense RNA probe complementary to the gene's mRNA, applied to thin sections of the SAM and leaf tissue, which reveals the precise spatial pattern of gene expression at cellular resolution by hybridizing to mRNA molecules in their tissue context",
+        "Measuring the total chlorophyll content of the plant"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In situ hybridization (ISH) is the gold standard technique for determining where a gene is expressed at the tissue and cellular level. The procedure: (1) Tissue preparation — the SAM and leaf tissues are fixed (preserved), embedded in paraffin or resin, and sectioned into thin slices (5-10 micrometers). (2) Probe preparation — an antisense RNA probe (complementary to the target mRNA) is synthesized and labeled with either a radioactive isotope (35S) or a non-radioactive tag (digoxigenin). A sense probe (same orientation as mRNA) serves as a negative control. (3) Hybridization — the labeled probe is applied to tissue sections under conditions that allow it to bind (hybridize) to complementary mRNA molecules in situ (in their tissue context). (4) Detection — bound probe is visualized by autoradiography (radioactive) or immunodetection with a colored substrate (digoxigenin). Areas where the gene is expressed appear as dark spots or colored regions. (5) Results — ISH reveals the exact cells and tissues where the gene is active, providing spatial resolution that Northern blots (whole-tissue RNA quantification) or RT-PCR (bulk tissue) cannot achieve. This is particularly important for the SAM, which is a complex structure with distinct zones (central zone, peripheral zone, rib meristem) that express different gene sets. Plant height (A), leaf number (B), and chlorophyll content (D) are macroscopic measurements that cannot reveal gene expression patterns.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Trichomes on the leaf epidermis serve multiple functions. Which of the following is NOT a documented function of trichomes?",
+      "options": [
+        "Reducing water loss by creating a boundary layer of still air near the leaf surface",
+        "Deterring herbivory through physical (sharp tips) or chemical (toxic secretions) defense",
+        "Reflecting excess solar radiation to reduce leaf temperature",
+        "Conducting photosynthesis as the primary site of carbon fixation in the leaf"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Trichomes (leaf hairs) are epidermal appendages that serve diverse functions, but photosynthesis is not among them — the mesophyll (palisade and spongy parenchyma) is the primary site of photosynthetic carbon fixation. Documented trichome functions include: (1) Reducing water loss (A) — dense trichomes create a boundary layer of still air above the leaf surface, reducing the water vapor gradient that drives transpiration. This is particularly important in plants of dry or windy environments. (2) Herbivore defense (B) — physical defenses include sharp, hook-shaped, or stinging trichomes (like those of nettles, Urtica, which inject histamine, serotonin, and formic acid). Chemical defenses include glandular trichomes that secrete toxic or sticky substances (e.g., tomato trichomes producing acylsugars and terpenes that deter insects). (3) Temperature regulation (C) — reflective trichomes reduce the amount of solar radiation absorbed by the leaf, lowering leaf temperature. White, dense pubescence on desert plants (e.g., some Encelia species) can reduce leaf temperature by several degrees. (4) Additional functions include: UV protection, salt secretion (in halophytes like Atriplex), water absorption (in some epiphytes like Tillandsia), and pathogen defense (creating an unfavorable microenvironment for fungal germination).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "The WUSCHEL (WUS) gene in Arabidopsis is critical for maintaining the shoot apical meristem because it:",
+      "options": [
+        "Encodes a chlorophyll biosynthesis enzyme",
+        "Promotes root elongation exclusively",
+        "Encodes a homeodomain transcription factor expressed in the organizing center of the SAM that maintains the overlying stem cell population in the central zone by inducing CLAVATA3 (CLV3) signaling, establishing a feedback loop that regulates stem cell number",
+        "Causes all cells to differentiate immediately"
+      ],
+      "correctAnswer": "C",
+      "explanation": "WUSCHEL (WUS) is one of the most important genes in plant meristem biology, discovered through loss-of-function mutants in Arabidopsis thaliana. Key aspects: (1) WUS encodes a homeodomain transcription factor expressed in a small group of cells called the organizing center (OC), located beneath the stem cells of the central zone. (2) WUS protein moves through plasmodesmata into the overlying stem cells, where it activates expression of CLAVATA3 (CLV3). (3) CLV3 encodes a small secreted peptide that diffuses outward and binds to CLAVATA1 (CLV1), a leucine-rich repeat receptor kinase on the surface of cells in the peripheral zone and OC. (4) CLV1 signaling represses WUS expression — creating a negative feedback loop: WUS promotes CLV3, CLV3 represses WUS. (5) This WUS-CLV feedback loop maintains a stable stem cell population: if stem cells are lost, CLV3 signaling decreases, WUS expression increases, and new stem cells are specified. If too many stem cells accumulate, CLV3 signaling increases, WUS expression decreases, and fewer stem cells are maintained. (6) Loss of WUS causes the SAM to terminate prematurely (cells differentiate and the meristem is consumed). Loss of CLV1 or CLV3 causes meristem enlargement (too many stem cells). This system is analogous to animal stem cell niches where signaling between niche cells and stem cells maintains homeostasis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Stomata are typically found in highest density on which leaf surface, and what is the primary reason?",
+      "options": [
+        "Equally distributed on both surfaces in all plant species",
+        "Exclusively on the upper (adaxial) surface to maximize light exposure",
+        "Primarily on the lower (abaxial) epidermis in most terrestrial dicots, because this position reduces direct solar radiation on the stomatal pore, minimizing heating of the air in the substomatal cavity and thereby reducing the water vapor pressure gradient that drives transpirational water loss",
+        "Only at leaf margins"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In most terrestrial dicots, stomata are concentrated on the lower (abaxial) leaf surface, a pattern called hypostomaty. The reasons include: (1) Reduced transpiration — the lower surface receives less direct solar radiation than the upper surface. Since stomatal transpiration is driven by the water vapor pressure gradient between the substomatal cavity and the ambient air, keeping stomata away from direct sun reduces the temperature of air within the substomatal cavity, lowering the vapor pressure inside and reducing the driving force for transpiration. (2) Reduced photoinhibition — the upper surface is optimized for light capture by having dense palisade mesophyll below it, and stomata on this surface would disrupt the continuous photosynthetic tissue. (3) Boundary layer effects — the lower surface is typically more sheltered from wind, maintaining a thicker boundary layer that further reduces transpiration. (4) Exceptions exist: (a) Floating aquatic plants (water lilies) have stomata on the upper surface only (epistomaty) because the lower surface contacts water. (b) Grasses and many monocots have stomata on both surfaces (amphistomaty). (c) Some xerophytes have stomata in sunken pits on both surfaces. The distribution is not equal in all species (A), not typically on the upper surface (B), and not at margins (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Heartwood and sapwood differ in a woody stem. Heartwood is characterized by:",
+      "options": [
+        "Active xylem that conducts water and minerals through functional vessels",
+        "Cells that are actively dividing and producing new wood",
+        "Older, central xylem that no longer conducts water because its vessels and tracheids are plugged with tyloses and impregnated with resins, tannins, and other secondary metabolites that give it a darker color and increased resistance to decay",
+        "Phloem tissue that transports sugars"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In a mature tree trunk, the wood (secondary xylem) is differentiated into two zones: (1) Sapwood (alburnum) — the outer, lighter-colored ring of wood that actively conducts water and minerals from roots to leaves. Sapwood vessels and tracheids are functional (open lumen, intact pit membranes), and the xylem parenchyma cells are alive, storing starch and other reserves. Sapwood typically comprises the most recent 10-20 growth rings, depending on species. (2) Heartwood (duramen) — the inner, darker core of wood that no longer conducts water. As sapwood ages and is displaced toward the center by new sapwood production: (a) Parenchyma cells die after depositing secondary metabolites into surrounding cell walls and vessel lumens. (b) Tyloses form — balloon-like outgrowths of adjacent parenchyma cells that protrude through pit apertures into vessel lumens, physically blocking them. (c) Resins, tannins, phenolics, terpenes, and other secondary compounds accumulate, giving heartwood its characteristically darker color. (d) These compounds also make heartwood more resistant to decay by fungi and bacteria, which is why heartwood is valued for lumber and construction. Heartwood provides structural support to the tree but does not conduct water (A is wrong). It does not contain dividing cells (B). It is not phloem (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To study the developmental fate of cells derived from the root apical meristem, a researcher uses a technique where a single meristematic cell is labeled with a heritable marker (such as GFP under a cell-type-specific promoter activated by a random recombination event). This approach is called:",
+      "options": [
+        "Polymerase chain reaction (PCR)",
+        "Gel electrophoresis",
+        "Clonal analysis (cell lineage tracing), where a heritable marker introduced into a single progenitor cell is inherited by all its descendants, revealing the clonal relationships and developmental fates of cells within the growing root — allowing researchers to determine whether cell fate is determined by lineage or by positional information",
+        "Western blotting"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Clonal analysis (cell lineage tracing) is a powerful technique for understanding plant development. The approach: (1) A heritable genetic marker (such as GFP, or restoration of pigment production) is activated in a single cell through a random, irreversible event (e.g., Cre-lox recombination, transposon excision). (2) All descendant cells of the marked cell inherit the marker, forming a visible clone (sector) in the tissue. (3) By analyzing the shape, position, and tissue distribution of these clones, researchers can determine: (a) Which tissues a single meristematic cell contributes to (cell fate). (b) Whether cell fate is determined by lineage (ancestry) or position (signaling from neighbors). (4) In plants, clonal analysis has revealed that cell fate is primarily determined by position, not lineage — a cell that is displaced from its normal position adopts the fate appropriate to its new position. This is because plant cells cannot migrate (due to rigid cell walls), so positional signaling (from neighboring cells) is the primary determinant of identity. (5) Key findings from root clonal analysis: initial cells in the root meristem produce clones that extend along files of cells, consistent with the organized cell division patterns observed in root tips. PCR (A) amplifies DNA, gel electrophoresis (B) separates molecules, and Western blotting (D) detects proteins — none reveal cell fate in intact tissues.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "The root cap serves several important functions. Which function is unique to the root cap and not shared by any other root tissue?",
+      "options": [
+        "Absorbing water and minerals from the soil",
+        "Secreting mucigel (a polysaccharide-rich lubricant) that reduces friction as the root pushes through soil, and housing columella cells containing amyloplasts (starch-filled plastids) that function as statoliths for gravity perception (gravitropism)",
+        "Conducting photosynthesis in root tissues",
+        "Producing lateral roots through pericycle divisions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The root cap is a thimble-shaped mass of parenchyma cells covering and protecting the root apical meristem. Its unique functions include: (1) Physical protection — the root cap shields the delicate meristem as the root forces its way through abrasive soil particles. Root cap cells are continuously sloughed off and replaced by new cells from the meristem. (2) Mucigel secretion — root cap cells secrete a slimy polysaccharide mucilage (mucigel) through Golgi-derived vesicles. This mucigel lubricates the root tip, reducing friction against soil particles. It also: supports beneficial soil microbes, binds toxic heavy metals, and facilitates water uptake in the rhizosphere. (3) Gravity perception — the central columella cells of the root cap contain amyloplasts (starch-storing plastids) that act as statoliths. These dense amyloplasts sediment to the bottom of cells under gravity, triggering a signal transduction cascade involving auxin redistribution that directs root growth downward (positive gravitropism). Surgical removal of the root cap eliminates gravitropism without affecting root elongation. Water and mineral absorption (A) occurs primarily in the root hair zone. Photosynthesis (C) does not occur in roots (lacking chloroplasts). Lateral root production (D) originates from the pericycle, not the root cap.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Leaf mesophyll is organized into palisade and spongy layers. The palisade mesophyll, located just below the upper epidermis, is optimized for photosynthesis because its cells are:",
+      "options": [
+        "Loosely arranged with large air spaces to facilitate gas exchange",
+        "Elongated, tightly packed, columnar cells oriented perpendicular to the leaf surface, containing numerous chloroplasts and positioned to maximize light interception — with the columnar shape channeling light deeper into the leaf",
+        "Dead at maturity with thick secondary walls for structural support",
+        "Specialized for water storage with few chloroplasts"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The palisade mesophyll is the primary photosynthetic tissue in most dicot leaves, and its cellular architecture is precisely optimized for light capture: (1) Columnar cell shape — palisade cells are elongated (typically 2-5 times longer than wide) and oriented perpendicular to the leaf surface. This shape maximizes the number of cells (and chloroplasts) per unit leaf area by stacking them vertically. (2) Tight packing — cells are closely arranged with minimal intercellular air spaces (unlike spongy mesophyll), creating a dense layer of photosynthetic tissue. (3) Abundant chloroplasts — palisade cells contain more chloroplasts than any other cell type, concentrated along the periclinal (upper and lower) cell walls to maximize light exposure while minimizing self-shading. (4) Light channeling — the columnar shape acts like fiber optics, channeling light deeper into the leaf. Light entering a palisade cell is guided by internal reflection along the elongated cell walls, reducing reflection and increasing the path length through chloroplast-containing cytoplasm. (5) Position — directly below the upper epidermis, palisade cells receive the most intense light. The spongy mesophyll below (A) is optimized for gas exchange with its loose arrangement and large air spaces. Dead cells with secondary walls (C) are sclerenchyma. Water storage cells (D) are found in succulent leaves but are not palisade mesophyll.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher compares stem cross-sections of a 5-year-old elm (eudicot) and a 5-year-old corn plant (monocot). The elm shows clearly defined annual rings with a central pith, ring of vascular tissue, cortex, and bark. The corn stem shows no annual rings and has scattered vascular bundles. This difference is explained by:",
+      "options": [
+        "Eudicots and monocots have identical stem anatomy",
+        "Corn is not a plant and therefore lacks vascular tissue",
+        "Monocots generally lack a vascular cambium and therefore cannot undergo secondary growth — their vascular bundles remain scattered in ground tissue as established during primary growth, while eudicots possess a vascular cambium between xylem and phloem that produces secondary xylem (forming annual rings) and secondary phloem, increasing stem diameter year after year",
+        "Elm trees are younger than corn plants and therefore have simpler anatomy"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The fundamental anatomical difference between eudicot and monocot stems arises from the presence or absence of lateral meristems, particularly the vascular cambium: (1) Eudicot stems — during primary growth, procambium produces vascular bundles arranged in a ring. Between the primary xylem and primary phloem within each bundle, and between bundles (interfascicular regions), a continuous vascular cambium forms. This cambium produces secondary xylem (wood) inward and secondary phloem outward, generating annual growth rings in temperate species. The elm at 5 years would show 5 annual rings of secondary xylem, expanding outward from the small pith. (2) Monocot stems — procambium produces vascular bundles that are scattered throughout the ground tissue (not arranged in a ring). Critically, most monocots lack a vascular cambium — there is no lateral meristem between the xylem and phloem within bundles, and no interfascicular cambium. Without vascular cambium, monocots cannot undergo secondary growth and do not produce annual rings. Their stem diameter is essentially fixed by primary growth. (3) Exceptions — some monocots (palms, dragon trees, Dracaena) do increase in stem diameter through a specialized 'secondary thickening meristem' that produces additional vascular bundles and ground tissue, but this is not equivalent to the vascular cambium of eudicots. Both are plants (B is wrong). Anatomy does not correlate with plant age in this way (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Plasmodesmata in plant cells function analogously to gap junctions in animal cells. Which statement about plasmodesmata is MOST accurate?",
+      "options": [
+        "Plasmodesmata are channels through the cell wall lined with plasma membrane and traversed by a desmotubule (a tube of endoplasmic reticulum), creating a cytoplasmic continuum (symplast) that allows intercellular transport of ions, sugars, amino acids, hormones, and even transcription factors and RNA molecules between adjacent cells",
+        "Plasmodesmata are only found in root cells",
+        "Plasmodesmata completely isolate plant cells from each other",
+        "Plasmodesmata are composed of chitin"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Plasmodesmata are uniquely important structures in plant cell biology, creating the symplastic pathway for intercellular communication: (1) Structure — each plasmodesma is a channel (~50 nm diameter) traversing the cell wall, lined by plasma membrane (continuous between adjacent cells), and containing a central desmotubule — a tube of compressed endoplasmic reticulum that runs through the channel. The annular space between the desmotubule and the plasma membrane lining (the cytoplasmic sleeve) allows passage of molecules. (2) Transport — plasmodesmata allow the movement of: small molecules (ions, sugars, amino acids, water) by diffusion; larger molecules including transcription factors (like KNOTTED1, SHORT ROOT); RNA molecules (including mRNA, siRNA); and plant viruses exploit plasmodesmata for cell-to-cell movement. (3) Size exclusion limit (SEL) — typically ~1 kDa for diffusion, but can be enlarged by viral movement proteins or certain endogenous signals to allow passage of much larger molecules (40-60 kDa). (4) Regulation — plasmodesmal aperture is dynamically regulated by callose deposition (closure) and callose degradation (opening), allowing the plant to control symplastic connectivity in response to developmental and environmental signals. (5) Symplast — the cytoplasmic continuum created by plasmodesmata, functionally connecting all living plant cells. Plasmodesmata are found throughout the plant body (B is wrong), connect rather than isolate cells (C is wrong), and are composed of membrane and protein, not chitin (D is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sclerenchyma cells differ from collenchyma cells primarily in that sclerenchyma cells:",
+      "options": [
+        "Have thick, lignified secondary cell walls and are typically dead at functional maturity, providing rigid structural support — whereas collenchyma cells have unevenly thickened primary walls, remain alive at maturity, and provide flexible support",
+        "Have only primary cell walls",
+        "Are found exclusively in the root cap",
+        "Contain more chloroplasts than any other cell type"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Sclerenchyma and collenchyma are both mechanical support tissues, but they differ fundamentally in cell wall composition, vitality, and the type of support they provide: (1) Sclerenchyma: (a) Thick secondary cell walls heavily lignified — lignin makes the walls rigid and waterproof. (b) Dead at functional maturity — the protoplast degenerates after the secondary wall is deposited. (c) Provides rigid, non-elastic support — the lignified walls do not stretch, making sclerenchyma cells ideal for supporting mature, non-growing organs. (d) Two types: fibers (elongated cells in bundles providing tensile strength, e.g., flax, hemp) and sclereids (short, variably shaped cells providing hardness, e.g., gritty texture of pear fruit, seed coat hardness). (2) Collenchyma: (a) Unevenly thickened primary cell walls — thickening concentrated at cell corners (angular collenchyma) or tangential walls (lamellar collenchyma). No secondary wall, no lignification. (b) Living at functional maturity — retains protoplast and can continue to grow. (c) Provides flexible, elastic support — the non-lignified walls can stretch and accommodate organ elongation, making collenchyma ideal for supporting actively growing structures (petioles, young stems, leaf midribs). Collenchyma has primary walls, not sclerenchyma (B is inverted). Sclerenchyma is found throughout the plant, not just root caps (C). Sclerenchyma cells are dead and lack chloroplasts (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about root anatomy:\n\nI. The root epidermis produces root hairs that increase the surface area for water and mineral absorption.\nII. The pericycle, located just inside the endodermis, gives rise to lateral (branch) roots.\nIII. The cortex of the root is composed of dead sclerenchyma cells that provide rigid support.\nIV. In the root tip, the zone of cell division is located behind (proximal to) the root cap.",
+      "options": [
+        "TTFT",
+        "TTFF",
+        "TFTT",
+        "TFTF"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statement I is TRUE. Root hairs are tubular extensions of individual epidermal cells (trichoblasts) that dramatically increase the root surface area in contact with soil. A single rye plant may have 14 billion root hairs, increasing the root surface area by over 400 square meters. Root hairs absorb water and minerals through the enormous surface area they provide. Statement II is TRUE. Lateral roots originate from the pericycle — a layer of parenchyma cells just inside the endodermis. Pericycle cells opposite the xylem poles are stimulated (by auxin) to divide, producing a lateral root primordium that grows through the cortex and epidermis to emerge from the parent root. This endogenous origin (from inside) distinguishes lateral roots from adventitious roots. Statement III is FALSE. The root cortex is primarily composed of living parenchyma cells, not dead sclerenchyma. Cortical parenchyma functions in: storage (starch, sugars), aeration (aerenchyma — air spaces in cortex of wetland plants), and lateral transport of water and minerals. Some cortical cells may have thickened walls, but the cortex is predominantly parenchymatous. Statement IV is TRUE. The root tip is organized into zones: the root cap (protects the meristem), then the zone of cell division (quiescent center + actively dividing cells), then the zone of elongation, and then the zone of differentiation/maturation. The zone of cell division is proximal to (behind) the root cap.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "The ABC model of flower development explains how three classes of genes (A, B, and C) determine the identity of floral organs in the four concentric whorls. According to this model, petals are specified by:",
+      "options": [
+        "A-class genes alone",
+        "C-class genes alone",
+        "The combination of A-class and B-class gene activity in the second whorl, with A genes (such as APETALA1 and APETALA2 in Arabidopsis) and B genes (such as APETALA3 and PISTILLATA) acting together to specify petal identity",
+        "B-class and C-class genes together"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The ABC model (proposed by Enrico Coen, Elliot Meyerowitz, and others) elegantly explains how combinatorial gene activity specifies the four types of floral organs across four concentric whorls: (1) Whorl 1 (outermost) — Sepals: A genes alone (APETALA1, APETALA2). (2) Whorl 2 — Petals: A + B genes together (APETALA1/2 + APETALA3/PISTILLATA). (3) Whorl 3 — Stamens: B + C genes together (APETALA3/PISTILLATA + AGAMOUS). (4) Whorl 4 (innermost) — Carpels: C genes alone (AGAMOUS). Key features of the model: (1) Antagonistic interaction — A and C genes are mutually inhibitory. Where A is expressed, C is repressed, and vice versa. This ensures A and C domains do not overlap. (2) Predictions — loss of A function: C expands into whorls 1 and 2, producing carpels where sepals should be and stamens where petals should be. Loss of B: petals become sepals (A alone in whorl 2) and stamens become carpels (C alone in whorl 3). Loss of C: A expands into whorls 3 and 4, producing petals where stamens should be and sepals where carpels should be (double flowers). (3) E genes — later studies added E-class genes (SEPALLATA) required for organ identity specification in all whorls, expanding the model to ABCE.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following correctly describes the quiescent center (QC) in the root apical meristem?",
+      "options": [
+        "A region of rapidly dividing cells that produces the majority of root tissue",
+        "The photosynthetic center of the root",
+        "A group of slowly dividing cells at the center of the root meristem that functions as a reservoir of stem cells and an organizing center — maintaining the surrounding initials (stem cells) through short-range signaling, analogous to the organizing center in the shoot apical meristem",
+        "A region of dead cells that provides structural support"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The quiescent center (QC) was discovered by F.A.L. Clowes through tritiated thymidine autoradiography, which showed that cells at the very center of the root meristem divide much more slowly than surrounding cells. Key features: (1) Low mitotic rate — QC cells divide approximately 2-10 times slower than surrounding initial cells. This was initially paradoxical — why would the center of a meristem be quiescent? (2) Stem cell reservoir — the slow division rate preserves QC cells as a reserve population. If the rapidly dividing initials (stem cells) around the QC are damaged (by radiation, chemicals, or mechanical injury), QC cells can be activated to replenish them, maintaining meristem integrity. (3) Organizing center function — the QC maintains the stem cell identity of surrounding initials through short-range signaling. Laser ablation experiments showed that when QC cells are destroyed, adjacent initial cells lose their stem cell character and begin differentiating. The QC expresses the transcription factor WUSCHEL-RELATED HOMEOBOX 5 (WOX5), which is the root analogue of WUS in the shoot meristem. (4) Signaling — the QC communicates with surrounding cells through auxin signaling, peptide signals (CLE40), and possibly small RNA movement through plasmodesmata. The QC is not the most actively dividing zone (A), is not photosynthetic (B), and consists of living cells (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Companion cells in the phloem are functionally important because they:",
+      "options": [
+        "Provide structural support like fibers",
+        "Store water for the plant during drought",
+        "Are nucleated, metabolically active cells connected to sieve tube elements through numerous plasmodesmata, providing the proteins, ATP, and molecular signals needed for sieve tube function — since mature sieve tube elements lack nuclei, ribosomes, and most organelles",
+        "Produce spores for plant reproduction"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Companion cells are essential partners of sieve tube elements in angiosperm phloem. The relationship arises because sieve tube elements undergo an unusual maturation process: (1) Sieve tube element maturation — during differentiation, sieve tube elements lose: their nucleus, ribosomes, tonoplast (vacuolar membrane), Golgi apparatus, and most of the cytoskeleton and endomembrane system. The end walls develop sieve plates with sieve pores. This creates a highly modified cell optimized for mass flow transport but unable to maintain itself. (2) Companion cell role — companion cells arise from the same mother cell as sieve tube elements (they are ontogenetically related) and provide: (a) ATP — energy for active loading/unloading of sugars. (b) Proteins — including P-proteins, phloem-specific lectins, and structural proteins delivered through plasmodesmata. (c) mRNA — transcripts of specific genes are produced in companion cells and transported to sieve tubes. (d) Signaling — companion cells mediate responses to environmental signals (pathogen attack, nutrient status). (3) Plasmodesmata connections — numerous branched plasmodesmata connect companion cells to sieve tube elements, creating an intimate cytoplasmic connection. The density of these connections is among the highest in any plant tissue. (4) Types — transfer cells (with wall ingrowths for apoplastic loading), intermediary cells (in symplastic loading species), and ordinary companion cells.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A plant geneticist wants to determine the tissue-specific expression pattern of a newly identified transcription factor gene in Arabidopsis. The MOST comprehensive approach would be to:",
+      "options": [
+        "Create a promoter::GUS (beta-glucuronidase) reporter construct where the gene's promoter drives GUS expression, transform it into Arabidopsis, and stain tissues with X-Gluc substrate — producing blue precipitate wherever the promoter is active, revealing spatial and temporal expression patterns across all developmental stages and organs",
+        "Measure the total protein content of the whole plant",
+        "Count the number of leaves on the plant",
+        "Weigh the plant roots and shoots separately"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The promoter::GUS reporter system is one of the most widely used tools in plant molecular biology for determining spatial and temporal gene expression patterns. The approach: (1) Construct design — the promoter region (typically 2-3 kb upstream of the start codon) of the gene of interest is cloned upstream of the GUS (beta-glucuronidase, uidA gene) coding sequence in a plant transformation vector. (2) Transformation — the construct is introduced into Arabidopsis (typically by Agrobacterium-mediated floral dip transformation). (3) Staining — plant tissues at various developmental stages are incubated with X-Gluc (5-bromo-4-chloro-3-indolyl-beta-D-glucuronide). Where the promoter drives GUS expression, the enzyme cleaves X-Gluc to produce a blue precipitate (5-bromo-4-chloro-3-indolyl, which dimerizes and oxidizes to form an insoluble indigo-blue product). (4) Analysis — blue staining reveals the spatial pattern: which organs, tissues, and cell types express the gene. The approach can show expression in specific meristematic zones, vascular tissues, specific floral organs, etc. (5) Temporal analysis — staining at different developmental stages reveals when expression begins and ends. (6) Limitations — the reporter may not perfectly recapitulate native gene expression if important enhancer elements are outside the cloned promoter region. Protein content (B), leaf count (C), and plant weight (D) provide no information about gene expression patterns.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Vessel elements and tracheids are both water-conducting cells in the xylem. Vessel elements are considered more efficient conductors because they:",
+      "options": [
+        "Are alive at functional maturity while tracheids are dead",
+        "Have perforation plates (open ends) that allow water to flow freely from one vessel element to the next, forming continuous tubes (vessels) with less resistance to flow than the pit-based connections between tracheids",
+        "Contain more chloroplasts for photosynthesis-driven water movement",
+        "Are found only in gymnosperms"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both vessel elements and tracheids are dead at functional maturity (with no protoplast), but they differ significantly in their morphology and efficiency of water conduction: (1) Vessel elements: (a) Have perforation plates — open areas in the end walls where the cell wall is completely absent or perforated. Water flows freely through these openings. (b) Connected end-to-end into long tubes (vessels) that can extend meters. (c) Wider diameter (typically 20-200 micrometers). (d) The combination of open perforation plates and wide diameter produces very low resistance to water flow. Found primarily in angiosperms and a few other groups. (2) Tracheids: (a) Lack perforation plates — end walls are intact. Water must pass through pit pairs (thin areas in the cell wall where secondary wall is absent but primary wall remains). (b) Longer and narrower than vessel elements (typically 10-30 micrometers diameter). (c) Water flows laterally through bordered pit pairs, creating more resistance than vessel perforation plates. (d) The only conducting cells in gymnosperms and ferns. (3) However, tracheids have an advantage in safety: if an air embolism (air bubble) forms, it is contained within a single tracheid by the pit membranes, whereas in vessels, an embolism can spread through the entire vessel length. Both cell types are dead at maturity (A is wrong). Neither contains chloroplasts (C). Vessel elements are found in angiosperms, not gymnosperms (D is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Totipotency in plant cells — the ability of a single differentiated cell to regenerate an entire organism — is demonstrated by which classic experiment?",
+      "options": [
+        "Mendel's pea crossing experiments showing genetic inheritance patterns",
+        "Darwin's observations of finch beak variation in the Galapagos",
+        "Steward's experiment in which single differentiated carrot phloem cells, when cultured in vitro with appropriate hormones (auxin and cytokinin), proliferated to form a callus and ultimately regenerated into complete, fertile carrot plants — proving that mature plant cells retain the full genetic program for development",
+        "Watson and Crick's elucidation of DNA structure"
+      ],
+      "correctAnswer": "C",
+      "explanation": "F.C. Steward's experiment at Cornell University (1958) was groundbreaking in demonstrating plant cell totipotency: (1) Experimental design — small fragments of differentiated phloem tissue from carrot root (Daucus carota) were placed in liquid culture medium containing coconut milk (a natural source of cytokinins) and the synthetic auxin 2,4-D. (2) Callus formation — the differentiated phloem cells dedifferentiated and began dividing, forming an undifferentiated mass of cells called a callus. (3) Embryogenesis — when transferred to medium with altered hormone ratios, callus cells organized into somatic embryos that went through stages morphologically similar to zygotic embryogenesis (globular, heart, torpedo stages). (4) Plant regeneration — the somatic embryos developed into complete, fertile carrot plants with roots, shoots, leaves, flowers, and seeds — genetically identical to the original carrot from which the phloem cells were taken. (5) Significance — this proved that even fully differentiated plant cells retain all the genetic information needed to form an entire organism (totipotency). Unlike most animal cells, which lose developmental potential during differentiation, plant cells can be reprogrammed. This discovery underlies modern plant biotechnology: tissue culture, clonal propagation, genetic transformation, and somatic hybridization.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures cell lengths in a longitudinal section through the root tip zone of elongation. The data shows: cells closest to the meristem are ~20 micrometers long, cells 2mm from the meristem are ~200 micrometers long, and cells 5mm from the meristem are ~200 micrometers long (no further increase). This data indicates that:",
+      "options": [
+        "All root cells are the same size throughout the root",
+        "Cell elongation in the root is restricted to a narrow zone approximately 2mm long behind the meristem, after which cells reach their mature length and stop elongating — this is consistent with the defined zone of elongation model where cell expansion is driven by turgor pressure, cell wall loosening (via expansins), and water uptake",
+        "Root cells shrink as they mature",
+        "Cell division occurs throughout the entire root length"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This data perfectly illustrates the organization of root growth zones. Analysis: (1) At the meristem (~0 mm) — cells are small (~20 um) because they have just divided and have not yet elongated. These are meristematic cells in the zone of cell division. (2) Moving away from the meristem (0-2 mm) — cells progressively increase in length from 20 to 200 um (a 10-fold increase). This is the zone of elongation, where cells expand primarily in the longitudinal direction. (3) Mechanism of elongation — cell expansion is driven by: (a) Turgor pressure — water influx increases cell volume. (b) Cell wall loosening — expansin proteins disrupt hydrogen bonds between cellulose microfibrils and matrix polysaccharides, allowing the wall to stretch. (c) New wall material — Golgi vesicles deliver new cell wall components to maintain wall integrity during expansion. (d) Vacuolar expansion — the central vacuole enlarges dramatically, occupying up to 90% of cell volume. (4) Beyond 2 mm — cells remain at 200 um, indicating they have entered the zone of maturation where elongation has ceased and differentiation (root hairs, xylem, phloem specialization) occurs. (5) The zone of elongation is remarkably narrow (~1-2 mm), meaning the majority of root length increase occurs in this small region. This is why the root tip effectively pushes through soil — only the tip is actively elongating.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cork cambium (phellogen) is the second lateral meristem in woody plants. It produces:",
+      "options": [
+        "Secondary xylem toward the interior",
+        "Cork cells (phellem) toward the exterior and phelloderm toward the interior, collectively forming the periderm — which replaces the epidermis as the protective outer covering in stems and roots undergoing secondary growth",
+        "Leaves and flowers",
+        "Root hairs for absorption"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The cork cambium is a lateral meristem that produces the periderm — the outer protective tissue system that replaces the epidermis in woody stems and roots. Components: (1) Cork cambium (phellogen) — a single layer of meristematic cells that divides to produce: (a) Cork cells (phellem) toward the exterior — dead at maturity, with cell walls impregnated with suberin (a waxy, hydrophobic lipid polymer) that makes them waterproof. Cork cells protect against water loss, pathogens, mechanical damage, and temperature extremes. (b) Phelloderm toward the interior — a thin layer of living parenchyma cells. (2) Periderm = phellem + phellogen + phelloderm — the complete bark replacement tissue. (3) Bark — technically, everything external to the vascular cambium is 'bark,' including both the outer bark (dead phellem, old periderm layers) and inner bark (living phloem). (4) Lenticels — the periderm contains lenticels: areas of loosely arranged cork cells that allow gas exchange between the living cells inside the stem and the atmosphere. Without lenticels, the impermeable cork layer would suffocate internal tissues. (5) In many trees, the first cork cambium forms in the outer cortex. As the stem expands through secondary growth, successive cork cambia form progressively deeper, and the dead outer bark layers develop characteristic patterns (peeling bark, furrowed bark, etc.). Secondary xylem (A) is produced by the vascular cambium, not cork cambium.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Phase change in plants refers to the transition from juvenile to adult vegetative growth, followed by the transition to reproductive growth. Which molecular mechanism is known to regulate the juvenile-to-adult phase transition?",
+      "options": [
+        "Changes in chlorophyll content",
+        "Alteration in root gravitropism",
+        "The progressive decline in microRNA156 (miR156) levels and the corresponding increase in SQUAMOSA PROMOTER BINDING-LIKE (SPL) transcription factor expression as the plant ages — miR156 is highly expressed in juvenile tissue where it represses SPL genes, and its decline allows SPL accumulation that drives adult character expression",
+        "Changes in the ratio of xylem to phloem"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The miR156-SPL regulatory module is the central molecular mechanism controlling the juvenile-to-adult phase transition in plants, discovered through studies in Arabidopsis, maize, and other species. The mechanism: (1) Juvenile phase — miR156 (a small RNA of ~21 nucleotides) is highly expressed in young seedlings. miR156 targets the mRNAs of SPL (SQUAMOSA PROMOTER BINDING-LIKE) transcription factors for degradation and/or translational repression. With SPL proteins repressed, the plant expresses juvenile characteristics (e.g., in Arabidopsis: small, round leaves without trichomes on the abaxial surface; in maize: absence of epicuticular wax). (2) Phase transition — as the plant ages, miR156 levels decline gradually (controlled by sugar signaling from photosynthesis — as the plant grows larger and accumulates more sugar, miR156 is repressed). The declining miR156 allows SPL protein levels to increase. (3) Adult phase — accumulated SPL transcription factors activate the expression of adult-phase genes, including miR172 (which represses floral repressors), leading to adult leaf characteristics and competence to flower. (4) Evidence — overexpression of miR156 prolongs juvenile characteristics indefinitely, while miR156 loss-of-function mutants precociously express adult features. This module is remarkably conserved across angiosperms.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Aerenchyma is a specialized tissue found in many wetland and aquatic plants. It is characterized by:",
+      "options": [
+        "Dense, thick-walled cells providing extra structural support in water",
+        "Large intercellular air spaces in the cortex formed either by lysigenous cell death (programmed cell death of cortical cells) or schizogenous separation (cells pulling apart), creating continuous gas-filled channels that facilitate oxygen transport from aerial parts to submerged roots in waterlogged, hypoxic soils",
+        "Specialized photosynthetic cells in aquatic leaf epidermis",
+        "Storage tissue exclusively for starch accumulation in roots"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Aerenchyma is one of the most important morphological adaptations in wetland and aquatic plants, solving the critical problem of oxygen supply to submerged roots: (1) The problem — waterlogged soils are anoxic (oxygen-depleted) because water fills the soil pore spaces, and microbial respiration consumes available O2 faster than it can diffuse through water (O2 diffuses 10,000 times slower in water than in air). Root cells require O2 for aerobic respiration. (2) The solution — aerenchyma creates a continuous network of gas-filled intercellular spaces from the leaves (where O2 is produced by photosynthesis and enters from the atmosphere through stomata) down through the stem cortex to the root cortex. O2 diffuses rapidly through these air channels, reaching the root tips. (3) Formation mechanisms: (a) Lysigenous aerenchyma — cortical cells undergo programmed cell death (PCD) triggered by ethylene signaling in hypoxic conditions, creating air spaces. This is the most common type (found in rice, maize under flooding). (b) Schizogenous aerenchyma — cells separate at the middle lamella during development, creating air spaces without cell death. Common in many wetland species. (4) Additional functions — aerenchyma also facilitates the diffusion of CO2 to submerged photosynthetic tissues and the release of methane and ethylene from waterlogged roots. (5) Metabolic advantages — aerenchyma also reduces the number of respiring cortical cells, lowering the root's O2 demand.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Leaf primordia initiate at the flanks of the shoot apical meristem in a precise spatial pattern called phyllotaxis. The spiral phyllotactic pattern observed in many plants follows the Fibonacci sequence (1, 1, 2, 3, 5, 8, 13...). The current molecular model explaining this pattern involves:",
+      "options": [
+        "Random placement of leaves determined entirely by chance",
+        "Gravitational effects pulling leaves downward",
+        "Auxin transport dynamics — each new leaf primordium forms at the site of highest auxin concentration on the meristem periphery, and developing primordia deplete auxin from their vicinity (through polar auxin transport mediated by PIN1 efflux carriers), creating inhibitory fields that prevent new primordia from forming too close to existing ones",
+        "Photosynthesis rate differences between different sides of the meristem"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Phyllotaxis (the arrangement of leaves around the stem) is one of the most elegant examples of self-organizing biological pattern formation, and its molecular basis has been largely elucidated: (1) Auxin accumulation — the efflux carrier PIN1 (PIN-FORMED 1) actively transports auxin toward points of highest auxin concentration on the meristem periphery (a positive feedback loop). Where auxin accumulates above a threshold, a leaf primordium initiates. (2) Auxin depletion — the developing primordium acts as a strong auxin sink, depleting auxin from its immediate vicinity. This creates an 'inhibitory field' around each primordium where auxin is too low to initiate a new primordium. (3) Next primordium placement — the next primordium forms at the point on the meristem periphery that is farthest from existing primordia (and therefore has the highest auxin concentration). In a growing meristem, this point is determined by the geometry of the existing inhibitory fields. (4) Fibonacci spiral emerges — mathematical modeling (by Douady and Couder, and later by Smith, Kuhlemeier, and Jonsson) shows that the auxin transport/depletion mechanism naturally produces Fibonacci spiral patterns when the ratio of primordium inhibitory field size to meristem circumference falls within specific ranges. The golden angle (~137.5 degrees) between successive primordia maximizes light interception. (5) Experimental evidence — disrupting PIN1 function (with NPA inhibitor or pin1 mutants) abolishes normal phyllotaxis. Local auxin application to the meristem induces ectopic primordia.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "The endodermis with its Casparian strip is found in roots. An analogous structure in leaves and stems that regulates the passage of water vapor and CO2 is the:",
+      "options": [
+        "Cuticle and stomata — the waxy cuticle prevents uncontrolled water loss from the leaf surface while stomata (pores flanked by guard cells) regulate gas exchange by opening and closing in response to environmental signals including light, CO2 concentration, humidity, and abscisic acid",
+        "Pith parenchyma",
+        "Xylem vessels",
+        "Sclerenchyma fibers"
+      ],
+      "correctAnswer": "A",
+      "explanation": "While the analogy is not perfect (the Casparian strip controls mineral entry while the cuticle/stomata system controls gas and water vapor exchange), both represent biological checkpoints that regulate the passage of substances between the plant body and its environment. The cuticle-stomata system: (1) Cuticle — a continuous hydrophobic layer composed of cutin (a polyester polymer of hydroxylated fatty acids) and epicuticular waxes covering all aerial epidermal surfaces. It is virtually impermeable to water vapor and CO2, preventing uncontrolled water loss. Without the cuticle, terrestrial plants would desiccate rapidly. (2) Stomata — pores in the epidermis (typically 10,000-100,000 per cm2 of leaf surface) flanked by two guard cells that can change shape to open or close the pore. When open, stomata allow: CO2 entry for photosynthesis and water vapor exit (transpiration). Guard cell swelling (opening) is driven by K+ uptake and water influx; closing is triggered by K+ efflux, particularly under water stress (mediated by abscisic acid, ABA). (3) Regulation — stomata integrate multiple environmental signals: light (blue light activates phototropin-mediated H+-ATPase pumping), CO2 (high CO2 promotes closure), humidity (low humidity promotes closure via ABA), and temperature. This regulation allows the plant to balance carbon gain against water loss — the fundamental tradeoff in plant carbon economy.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Structure, Growth, and Development"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher discovers an Arabidopsis mutant that produces leaves but no roots. The shoot apical meristem appears normal. To determine whether the mutation affects root meristem specification or root meristem maintenance, the researcher should:",
+      "options": [
+        "Measure the total chlorophyll content of the mutant",
+        "Count the number of petals in the mutant's flowers",
+        "Examine embryonic development to determine whether the root pole (including the quiescent center and initial cells) is specified during embryogenesis, then analyze postembryonic root development — if the root meristem is specified but fails to maintain, the defect is in maintenance; if the root pole never forms during embryogenesis, the defect is in specification",
+        "Grow the mutant in the dark to test phototropism"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Distinguishing between specification and maintenance defects requires developmental analysis at different stages: (1) Root meristem specification — the root pole is established during embryogenesis. In Arabidopsis, key events include: (a) Asymmetric division of the zygote creates apical (shoot-forming) and basal (root-forming) cells. (b) The hypophysis (the uppermost cell of the suspensor-derived region) gives rise to the quiescent center and columella root cap. (c) Transcription factors like PLT1/PLT2 (PLETHORA), SHR (SHORT ROOT), and SCR (SCARECROW) specify root identity. (2) Analysis approach — examine embryos at different stages (globular, heart, torpedo) using: (a) Microscopy — look for anatomical root pole formation. (b) Marker gene expression — use GFP reporters for root meristem markers (WOX5, PLT1, QC25) to determine if the root identity genes are ever activated. (c) If markers are never expressed and anatomical root pole never forms: specification defect (the root was never 'born'). (d) If markers are initially expressed and root pole forms embryonically but the root meristem later terminates: maintenance defect (the root was 'born' but could not be sustained). (3) This distinction is critical for identifying which genetic pathway is affected — specification genes (PLT, auxin signaling) vs. maintenance genes (WOX5, CLV signaling, PIN-mediated auxin reflux). Chlorophyll (A), petals (B), and phototropism (D) are irrelevant to root development.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Structure, Growth, and Development"
+    }
+  ]
+}
