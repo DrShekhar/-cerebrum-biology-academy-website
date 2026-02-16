@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch35-39 Plant Advanced Molecular Biology — Wave 2B",
+    "version": 1,
+    "source": "olympiad-wave2b",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "In the auxin signaling pathway, when intracellular auxin (IAA) concentration is LOW, Aux/IAA repressor proteins are stable and bind to ARF transcription factors. Which of the following correctly describes the molecular consequence of this Aux/IAA-ARF interaction?",
+      "options": [
+        "Aux/IAA proteins directly methylate ARF DNA-binding domains, permanently silencing auxin-responsive genes",
+        "Aux/IAA proteins recruit the TPL (TOPLESS) co-repressor, which in turn recruits histone deacetylases (HDA19), leading to chromatin condensation at auxin-responsive promoters and transcriptional repression",
+        "Aux/IAA proteins phosphorylate ARFs, triggering their nuclear export and cytoplasmic degradation",
+        "Aux/IAA proteins compete with ARFs for binding to AuxRE (auxin response element) DNA motifs, directly blocking promoter access"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When auxin levels are low, Aux/IAA proteins heterodimerize with ARF transcription factors through their conserved PB1 (Phox and Bem1) domains (formerly called domains III/IV). The Aux/IAA proteins contain an EAR (ethylene-responsive element binding factor-associated amphiphilic repression) motif in their domain I that recruits the TOPLESS (TPL) co-repressor. TPL then recruits histone deacetylase 19 (HDA19), which removes acetyl groups from histone tails at auxin-responsive promoters. This leads to chromatin compaction and transcriptional silencing. When auxin rises, it acts as molecular glue between TIR1 and the degron (domain II) of Aux/IAA, promoting ubiquitination via SCF^TIR1 and 26S proteasomal degradation of Aux/IAA. This releases ARFs to activate (or repress, depending on the ARF class) target genes. Option A is incorrect because methylation is not the mechanism. Option C describes a non-existent phosphorylation-export pathway. Option D is wrong because Aux/IAA proteins do not bind DNA directly; they act through protein-protein interaction with ARFs.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The ethylene signaling pathway is unusual because the receptors are NEGATIVE regulators — they actively suppress the ethylene response when ethylene is ABSENT. In Arabidopsis, constitutive triple response (ctr1) loss-of-function mutants display the triple response even without ethylene. What is the biochemical basis for the ctr1 phenotype?",
+      "options": [
+        "CTR1 is a MAP kinase kinase kinase (MAPKKK/Raf-like kinase) that phosphorylates and inactivates EIN2 when active; loss of CTR1 leaves EIN2 constitutively unphosphorylated, allowing its C-terminal cleavage and translocation to the nucleus to stabilize EIN3/EIL1 transcription factors",
+        "CTR1 is a transcription factor that directly represses ethylene-responsive genes; without CTR1, all ERF genes are constitutively expressed",
+        "CTR1 directly degrades ethylene gas through an oxidase reaction; without CTR1, ethylene accumulates to toxic levels",
+        "CTR1 phosphorylates and activates ETR1 receptor, and loss of CTR1 prevents ethylene perception entirely, mimicking constitutive ethylene signaling through an indirect feedback loop"
+      ],
+      "correctAnswer": "A",
+      "explanation": "CTR1 is a Raf-like serine/threonine kinase that physically associates with the ethylene receptor ETR1 at the ER membrane. When ethylene is absent, ETR1 is active and keeps CTR1 in its active (kinase-competent) state. Active CTR1 directly phosphorylates the C-terminal domain of EIN2 (at specific serine residues), marking it for degradation by ETP1/ETP2 F-box proteins, thereby preventing signal transduction. In ctr1 loss-of-function mutants, EIN2 is never phosphorylated regardless of ethylene presence. Unphosphorylated EIN2 is proteolytically cleaved, and its C-terminal fragment (CEND) translocates to the nucleus where it stabilizes EIN3/EIL1 by preventing their ubiquitination by EBF1/EBF2. Additionally, CEND moves to P-bodies to inhibit translation of EBF1/EBF2 mRNAs. The result is constitutive activation of ethylene responses, including the triple response (short thick hypocotyl, exaggerated apical hook, inhibited root elongation). Option B incorrectly classifies CTR1 as a transcription factor. Option C fabricates an ethylene oxidase function. Option D reverses the relationship between CTR1 and ETR1.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Brassinosteroid (BR) signaling involves receptor kinases at the cell surface. When BR is absent, the GSK3-like kinase BIN2 phosphorylates and inactivates BES1/BZR1 transcription factors. Which sequence correctly describes BR signal transduction from perception to transcriptional activation?",
+      "options": [
+        "BR binds BRI1 (leucine-rich repeat receptor kinase) → BRI1 autophosphorylates and recruits BAK1 co-receptor → trans-phosphorylation between BRI1/BAK1 → activation of BSK1 → BSK1 phosphorylates BSU1 phosphatase → BSU1 dephosphorylates and inactivates BIN2 → unphosphorylated BES1/BZR1 accumulate in the nucleus and activate BR-responsive genes",
+        "BR enters the cell passively and binds BIN2 directly, allosterically inhibiting its kinase activity",
+        "BR binds BAK1 first, which then recruits BRI1 to form a heterodimer; BRI1 acts as a phosphatase that directly dephosphorylates BES1",
+        "BR binds a nuclear receptor similar to animal steroid receptors, forming a BR-receptor complex that directly activates transcription without any kinase cascade"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Unlike animal steroid hormones that typically bind intracellular nuclear receptors, plant brassinosteroids are perceived at the cell surface by BRI1, a leucine-rich repeat receptor-like kinase (LRR-RLK). The canonical BR signaling pathway proceeds as follows: (1) BR binds the island domain of BRI1, causing a conformational change. (2) BRI1 autophosphorylates and the BKI1 inhibitor dissociates. (3) BAK1 (BRI1-Associated Kinase 1, also called SERK3) is recruited as a co-receptor and undergoes sequential trans-phosphorylation with BRI1. (4) Activated BRI1 phosphorylates BSK1 (BR-Signaling Kinase 1) and CDG1. (5) BSK1 phosphorylates and activates the BSU1 phosphatase. (6) BSU1 dephosphorylates a conserved tyrosine on BIN2 (GSK3-like kinase), inactivating it. (7) Without BIN2 activity, BES1 and BZR1 transcription factors are no longer phosphorylated, remain nuclear, and are not degraded or exported. (8) Unphosphorylated BES1/BZR1 bind to E-box and BRRE elements in promoters of BR-responsive genes. Option B incorrectly proposes direct BR-BIN2 binding. Option C reverses the BRI1-BAK1 receptor relationship. Option D incorrectly applies the animal steroid receptor model to plants.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the Arabidopsis circadian clock, the morning-expressed MYB-like transcription factors CCA1 and LHY directly repress TOC1 (TIMING OF CAB EXPRESSION 1) transcription by binding to its promoter. What happens to clock function in a cca1 lhy double loss-of-function mutant?",
+      "options": [
+        "The clock period lengthens to approximately 30 hours because the evening loop now operates without morning repression",
+        "The circadian clock becomes arrhythmic under constant conditions because the core negative feedback loop between the morning and evening components is disrupted; TOC1 is constitutively expressed",
+        "Clock function is completely normal because PRR5, PRR7, and PRR9 redundantly replace CCA1/LHY function",
+        "The clock runs with a normal 24-hour period but all clock-controlled outputs are abolished"
+      ],
+      "correctAnswer": "B",
+      "explanation": "CCA1 and LHY are partially redundant morning-phased transcription factors that form the core morning loop of the Arabidopsis circadian oscillator. They bind to the Evening Element (EE: AAAATATCT) in the TOC1 promoter and repress its transcription during the day. TOC1 (also called PRR1) accumulates in the evening and, in turn, represses CCA1/LHY expression, completing a mutual repression loop. In the cca1 lhy double mutant, this core oscillator is fundamentally broken: TOC1 loses its daytime repression and becomes constitutively expressed. Without rhythmic TOC1 oscillation, the reciprocal repression cycle cannot sustain oscillations. The result is progressive arrhythmicity under constant light (free-running) conditions, though some residual rhythmicity may persist transiently due to other interlocking loops (PRR5/7/9 and the evening complex of ELF3/ELF4/LUX). However, these subsidiary loops cannot maintain robust rhythms alone. Option A incorrectly predicts a long period rather than arrhythmicity. Option C overstates the compensatory capacity of PRRs, which repress CCA1/LHY but do not replace them. Option D incorrectly claims a normal clock with lost outputs.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The ABC model of flower development predicts that four whorls of floral organs are specified by overlapping expression of three classes of homeotic genes. In an Arabidopsis agamous (ag) loss-of-function mutant (C-class), what is the predicted floral organ pattern from the outermost to innermost whorls?",
+      "options": [
+        "Sepal-sepal-sepal-sepal, because loss of C-class eliminates all other organ identities",
+        "Sepal-petal-stamen-stamen, with determinate meristem",
+        "Carpel-stamen-stamen-carpel, with all whorls converted to reproductive organs",
+        "Sepal-petal-petal-sepal, with indeterminate floral meristem producing repeated sepal-petal-petal-sepal whorls"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The ABC model (extended to ABCE with E-class/SEP genes) specifies floral organs as follows: whorl 1 (sepals) = A alone, whorl 2 (petals) = A+B, whorl 3 (stamens) = B+C, whorl 4 (carpels) = C alone. A critical feature is that A-class and C-class activities are mutually antagonistic: in the absence of C, A-class expression expands into whorls 3 and 4. In the ag (C-class) mutant: whorl 1 = A only = sepals, whorl 2 = A+B = petals, whorl 3 = A+B (C is absent, A expands here) = petals, whorl 4 = A only (C is absent, A expands here) = sepals. Additionally, AG (AGAMOUS) is required for floral meristem determinacy. Without AG, the floral meristem never terminates, producing an indeterminate flower with repeated whorls of sepal-petal-petal-sepal in a reiterated pattern, giving rise to a 'flower-within-a-flower' phenotype. This is one of the most elegant demonstrations of the ABC model. AG is a MADS-box transcription factor. Option A ignores the B-class contribution. Option B describes a B-class expansion, not C-class loss. Option C describes the effect of A-class loss (where C expands).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The stomatal lineage in Arabidopsis is controlled by a cascade of three bHLH transcription factors: SPCH, MUTE, and FAMA. A researcher identifies a loss-of-function mutant in the MUTE gene. What is the expected epidermal phenotype?",
+      "options": [
+        "Normal stomata form but lack functional ion channels, so they cannot open or close",
+        "The epidermis contains excessive stomata clustered together in violation of the one-cell-spacing rule",
+        "Stomatal precursor cells (meristemoids) are initiated normally by SPCH but arrest and never differentiate into guard mother cells or guard cells, resulting in an epidermis with no mature stomata and excessive small meristemoid-like cells",
+        "The epidermis is entirely pavement cells with no stomatal lineage cells initiated at all"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The stomatal development pathway in Arabidopsis proceeds through sequential action of three bHLH transcription factors: (1) SPEECHLESS (SPCH) initiates the stomatal lineage by enabling asymmetric divisions in the protodermal cell to produce meristemoids. (2) MUTE drives the transition from meristemoid to guard mother cell (GMC). (3) FAMA promotes the final symmetric division of the GMC and differentiation into guard cells, while preventing further division. In mute loss-of-function mutants, SPCH functions normally, so the stomatal lineage is initiated and meristemoids are produced. However, these meristemoids cannot transition to GMCs. They undergo excessive asymmetric amplifying divisions, producing clusters of small cells that never differentiate into stomata. The result is an epidermis with numerous arrested meristemoid-like cells but zero mature stomata. Option A confuses structural with molecular defects. Option B describes loss of signaling peptides (EPFL/TMM pathway) that enforce spacing. Option D describes the spch loss-of-function phenotype, where no stomatal lineage cells are initiated.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "During vernalization in Arabidopsis, prolonged cold exposure leads to epigenetic silencing of the floral repressor FLC (FLOWERING LOCUS C). Which molecular mechanism maintains FLC silencing even after the plant returns to warm temperatures?",
+      "options": [
+        "Cold induces a point mutation in the FLC promoter that permanently eliminates transcription factor binding",
+        "Cold activates DNA methyltransferases that add 5-methylcytosine to all CpG sites in the FLC gene body, permanently silencing transcription",
+        "Cold directly degrades FLC mRNA through a temperature-sensitive ribozyme element in the 3' UTR",
+        "Cold-induced expression of VIN3 (VERNALIZATION INSENSITIVE 3), a PHD-finger protein, initiates a Polycomb Repressive Complex 2 (PRC2)-mediated deposition of the repressive histone mark H3K27me3 at the FLC locus; this mark is maintained through cell divisions by PRC2-mediated copying to newly synthesized histones, providing stable epigenetic memory without altering DNA sequence"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Vernalization is a classic example of epigenetic memory in plants. The mechanism proceeds as follows: (1) Before cold: FLC (a MADS-box repressor) is actively transcribed and represses flowering by directly binding to promoters of FT and SOC1. (2) During cold: VIN3 (a PHD-finger protein induced only during prolonged cold) associates with PRC2 components (VRN2, FIE, CLF/SWN) to form a complex at the FLC locus. This complex trimethylates histone H3 at lysine 27 (H3K27me3), a repressive chromatin mark. Simultaneously, H3K36me3 (an activating mark) is removed. The non-coding antisense transcript COOLAIR also contributes to initial transcriptional downregulation. (3) After return to warmth: VIN3 expression ceases, but the H3K27me3 mark persists because PRC2 (via the VRN1/LHP1 reading machinery) copies the mark to newly deposited histones during DNA replication. This provides a mitotically stable, cell-autonomous epigenetic memory of winter. (4) The silencing is reset in the next generation during gametogenesis, requiring each generation to experience vernalization. Option A is wrong because no DNA sequence change occurs. Option B overstates the role of DNA methylation, which is not the primary mechanism at FLC. Option C fabricates a ribozyme mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the root stem cell niche of Arabidopsis, the quiescent center (QC) maintains surrounding stem cells in an undifferentiated state. What molecular mechanism explains how the QC prevents differentiation of contacting stem (initial) cells?",
+      "options": [
+        "The QC secretes high concentrations of cytokinin that directly block differentiation gene expression in adjacent initials",
+        "The QC acts as an auxin sink with extremely low auxin concentration, creating a gradient that prevents differentiation",
+        "The QC expresses WOX5, which non-cell-autonomously moves to adjacent columella stem cells and represses their differentiation; simultaneously, the QC maintains a local auxin maximum (via convergence of PIN-mediated auxin transport) that sustains stem cell identity through PLT (PLETHORA) transcription factor expression",
+        "QC cells undergo rapid cell division that physically pushes daughter cells away before they can receive differentiation signals"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Arabidopsis root stem cell niche is organized around the quiescent center (QC), which divides very rarely but plays a critical signaling role in maintaining adjacent stem (initial) cells. Two key molecular mechanisms operate: (1) WOX5 (WUSCHEL-RELATED HOMEOBOX 5), the root counterpart of shoot WUS, is expressed specifically in the QC. WOX5 protein moves into adjacent columella stem cells (CCS) via plasmodesmata and represses the CDF4 transcription factor, thereby preventing columella differentiation (starch grain accumulation). In wox5 mutants, columella stem cells differentiate prematurely. (2) The QC sits at the convergence point of polar auxin transport streams (acropetal via PIN1/PIN3/PIN7 in the stele, basipetal via PIN2 in the epidermis/lateral root cap). This creates a local auxin maximum at/near the QC. High auxin activates PLETHORA (PLT1, PLT2) transcription factors in a dose-dependent manner: highest PLT levels maintain stem cell identity, intermediate levels promote cell expansion, and low levels allow differentiation. PLT gradients thus provide a positional readout for the root developmental zones. Option A is incorrect because cytokinin actually promotes differentiation in the root transition zone (it antagonizes auxin). Option B is wrong because the QC has high, not low, auxin. Option D is wrong because QC cells divide rarely (quiescence is their defining feature).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "In Arabidopsis, the CONSTANS (CO) protein is a key integrator of photoperiodic flowering signals. Under long-day conditions that promote flowering, CO protein accumulates at dusk. Which mechanism ensures that CO protein accumulates specifically when light and the circadian clock coincide?",
+      "options": [
+        "CO mRNA is only transcribed during daylight hours; in the dark, CO mRNA is rapidly degraded by a circadian-gated ribonuclease",
+        "CO protein is constitutively synthesized but is stable only at high temperatures; long days correlate with warmer temperatures, stabilizing CO",
+        "The circadian clock drives CO mRNA expression with a peak in the late afternoon; CO protein is stabilized by light through cryptochrome- and phytochrome A-mediated inhibition of COP1/SPA E3 ubiquitin ligase, while in darkness COP1 ubiquitinates CO for proteasomal degradation — thus CO protein accumulates only when its mRNA peak coincides with light during long days",
+        "CO is activated post-translationally by blue light-dependent phosphorylation by phototropin 2; in short days, phototropin 2 is not expressed"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The external coincidence model explains photoperiodic flowering through the convergence of circadian and light signals at the level of CO protein stability. The mechanism operates as follows: (1) Circadian regulation of CO mRNA: The clock drives CO transcription via GI (GIGANTEA) and FKF1 (a blue-light photoreceptor F-box protein that degrades CDF repressors of CO). CO mRNA peaks approximately 12-16 hours after dawn. (2) Light-dependent CO protein stabilization: CO protein is inherently unstable. In darkness, the COP1/SPA E3 ubiquitin ligase complex ubiquitinates CO, targeting it for 26S proteasomal degradation. In light, activated photoreceptors (cryptochrome 1/2 and phytochrome A) physically interact with COP1/SPA and inhibit its E3 ligase activity, stabilizing CO. Additionally, phyB promotes CO degradation during the morning (preventing premature flowering). (3) Coincidence: Under long days, the CO mRNA peak occurs while it is still light — CO protein is stabilized and activates FT transcription. Under short days, the CO mRNA peak occurs in darkness — CO protein is immediately degraded by COP1, and FT is not induced. This elegantly explains why long days promote flowering in Arabidopsis. Option A incorrectly focuses on mRNA stability. Option B invokes temperature rather than light. Option D incorrectly involves phototropin.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Plant innate immunity includes PAMP-triggered immunity (PTI) as a first line of defense. The flagellin receptor FLS2 recognizes the conserved flg22 peptide from bacterial flagellin. What is the immediate signaling cascade following flg22 perception?",
+      "options": [
+        "flg22 binds to chitin receptors (CERK1) and triggers the same signaling pathway as fungal PAMP recognition",
+        "flg22 enters the cell through aquaporins and directly activates intracellular NLR receptors",
+        "FLS2 is a G-protein coupled receptor; flg22 binding activates heterotrimeric G proteins that increase cAMP, activating PKA",
+        "flg22 binds FLS2 → FLS2 recruits BAK1 co-receptor → reciprocal trans-phosphorylation activates the receptor complex → BIK1 (receptor-like cytoplasmic kinase) is phosphorylated and released → BIK1 phosphorylates RBOHD (NADPH oxidase) for ROS burst and CNGC2/4 calcium channels for Ca2+ influx → downstream MAPK cascade (MEKK1-MKK4/5-MPK3/6) activates WRKY transcription factors"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The FLS2-mediated PTI signaling cascade is one of the best-characterized plant immune pathways: (1) flg22 (a 22-amino acid epitope from bacterial flagellin) binds the extracellular LRR domain of FLS2. (2) This induces rapid heterodimerization with BAK1 (BRI1-Associated Kinase 1/SERK3), the same co-receptor used in brassinosteroid signaling. BAK1 is a universal co-receptor for multiple LRR-RLKs. (3) FLS2 and BAK1 trans-phosphorylate each other on specific intracellular kinase domains. (4) The activated receptor complex phosphorylates BIK1 (Botrytis-Induced Kinase 1), a receptor-like cytoplasmic kinase (RLCK). Phosphorylated BIK1 dissociates from the complex. (5) Released BIK1 directly phosphorylates RBOHD (Respiratory Burst Oxidase Homolog D), triggering the apoplastic ROS burst (superoxide/H2O2), and phosphorylates CNGC2/CNGC4 cyclic nucleotide-gated calcium channels, causing cytoplasmic Ca2+ elevation. (6) A MAPK cascade (MEKK1 → MKK4/MKK5 → MPK3/MPK6) is activated in parallel, leading to phosphorylation and activation of WRKY transcription factors that induce defense gene expression. Additional PTI outputs include callose deposition, stomatal closure (to prevent bacterial entry), and ethylene/SA biosynthesis. Option A confuses flagellin with chitin receptors. Option B incorrectly describes intracellular perception (that is ETI). Option C applies animal GPCR signaling.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the gibberellin (GA) signaling pathway and DELLA protein regulation:",
+      "options": [
+        "S1: TRUE — The GA receptor GID1 is a soluble nuclear receptor with structural similarity to hormone-sensitive lipases; upon binding bioactive GA (GA3 or GA4), GID1 undergoes a lid-closure conformational change that creates a surface for DELLA protein interaction",
+        "S2: FALSE — DELLA proteins promote growth by directly activating cell cycle genes such as CDKB and CYCB1, and GA signaling inhibits growth by degrading these growth promoters",
+        "S3: TRUE — The SCF^SLY1 complex (in Arabidopsis) or SCF^GID2 (in rice) recognizes the GID1-GA-DELLA ternary complex and polyubiquitinates DELLA proteins, targeting them for 26S proteasomal degradation; sly1 loss-of-function mutants accumulate DELLA proteins and exhibit severe dwarfism",
+        "S4: TRUE — DELLA proteins interact with multiple transcription factor families beyond PIFs, including JAZ proteins in jasmonate signaling and BZR1 in brassinosteroid signaling, positioning DELLAs as central nodes integrating hormone crosstalk with growth regulation"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — GID1 (GIBBERELLIN INSENSITIVE DWARF 1) was first identified in rice as a soluble receptor. It belongs to the alpha/beta hydrolase superfamily but lacks catalytic activity. When bioactive GA binds in the hydrophobic pocket, a flexible N-terminal lid extension closes over the GA molecule. This closed-lid conformation exposes a new surface that directly contacts the conserved DELLA/TVHYNP motif of DELLA proteins. The crystal structure of the GID1-GA-DELLA complex confirms this tripartite interaction. S2: FALSE — This statement reverses the function of DELLA proteins. DELLAs are growth REPRESSORS, not promoters. They inhibit growth by sequestering growth-promoting transcription factors (such as PIFs, BZR1, and others). GA promotes growth by DEGRADING DELLAs, thereby releasing these growth promoters. S3: TRUE — After the GID1-GA-DELLA complex forms, SLY1 (SLEEPY1) or its rice ortholog GID2, both F-box proteins, recognize the complex as part of the SCF E3 ubiquitin ligase. They catalyze K48-linked polyubiquitination of DELLA, targeting it for degradation. Arabidopsis sly1 mutants cannot degrade DELLA, leading to DELLA accumulation and constitutive growth repression (GA-insensitive dwarfism). S4: TRUE — DELLA proteins are remarkable signaling hubs. Beyond PIF sequestration, they interact with JAZ proteins (competing with MYC2 for JAZ binding, thereby modulating JA signaling), BZR1 (inhibiting BR-mediated growth), EIN3 (modulating ethylene responses), and MYC2 (affecting jasmonate-mediated defense). This positions DELLAs as central integrators of the growth-defense balance across multiple hormone pathways.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the jasmonate signaling module and wound response in plants:",
+      "options": [
+        "S1: TRUE — The bioactive jasmonate is jasmonoyl-isoleucine (JA-Ile), conjugated by the enzyme JAR1; JA-Ile acts as molecular glue between the COI1 F-box protein and JAZ repressors in the SCF^COI1 complex, analogous to how auxin bridges TIR1 and Aux/IAA proteins",
+        "S2: TRUE — In the absence of JA-Ile, JAZ repressors bind MYC2 and recruit the co-repressor NINJA (Novel Interactor of JAZ), which in turn recruits the TPL (TOPLESS) co-repressor to silence JA-responsive gene expression",
+        "S3: FALSE — Wounding generates jasmonate exclusively at the wound site, and JA-Ile does not move systemically; defense responses in distal leaves are activated by hydraulic signals and electrical (variation potential) signals that trigger de novo JA biosynthesis locally",
+        "S4: TRUE — Jasmonate biosynthesis begins with alpha-linolenic acid (18:3) released from chloroplast membrane galactolipids by DAD1 lipase, proceeds through the octadecanoid pathway (LOX → AOS → AOC → OPR3) partially in the chloroplast and partially in the peroxisome, yielding JA"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — JAR1 (JASMONATE RESISTANT 1) is a GH3 acyl-amino acid synthetase that conjugates jasmonic acid with isoleucine to produce (+)-7-iso-JA-Ile, the biologically active form. The crystal structure of the COI1-JA-Ile-JAZ complex shows JA-Ile bound in a pocket at the interface between COI1 and the Jas degron domain of JAZ proteins, analogous to the auxin-TIR1-Aux/IAA co-receptor mechanism. Inositol pentakisphosphate (InsP5) or InsP6 acts as a structural cofactor in the COI1-JA-Ile binding pocket. S2: TRUE — JAZ proteins contain a ZIM domain that interacts with NINJA (Novel Interactor of JAZ). NINJA contains an EAR motif that recruits TOPLESS (TPL), a WD40 co-repressor that mediates transcriptional silencing. This JAZ-NINJA-TPL repression module is functionally parallel to the Aux/IAA-TPL module in auxin signaling. Some JAZ proteins (JAZ5, JAZ6) can directly recruit TPL without NINJA via their own EAR motifs. S3: FALSE — While the statement correctly identifies roles for hydraulic and electrical signals in systemic wound signaling (GLR3.3/GLR3.6 glutamate receptor-like channels propagate electrical signals, and DEFECTIVE IN INDUCED RESISTANCE 1 (DIR1) is involved in systemic signaling), it incorrectly claims JA-Ile has NO systemic mobility. Recent evidence shows that JA and possibly JA-Ile do travel systemically through the phloem. More importantly, the statement is presented as if wounding generates JA exclusively locally — but systemic signals (including mobile JA precursors like OPDA) contribute to distal JA biosynthesis induction. The statement's claim that JA-Ile does not move systemically oversimplifies the actual mechanism. S4: TRUE — JA biosynthesis occurs via the octadecanoid pathway: (1) In the chloroplast: phospholipase DAD1/DGL releases alpha-linolenic acid (18:3) from membrane lipids → 13-LOX (lipoxygenase) → 13-HPOT → AOS (allene oxide synthase, a CYP74A) → 12,13-EOT → AOC (allene oxide cyclase) → cis-OPDA. (2) OPDA is exported to the peroxisome: OPR3 (12-oxophytodienoic acid reductase) → OPC-8:0 → three cycles of beta-oxidation → JA (jasmonic acid).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about phloem transport molecular biology:",
+      "options": [
+        "S1: TRUE — Sieve-tube elements lack a nucleus, tonoplast, and most organelles at maturity, but retain mitochondria, smooth ER, plastids (S-type or P-type), and specialized sieve element proteins (phloem protein bodies/filaments) that can seal sieve plates upon wounding",
+        "S2: FALSE — Companion cells are connected to sieve-tube elements exclusively through gap junctions similar to animal cells, allowing free exchange of all molecules regardless of size",
+        "S3: TRUE — Callose (beta-1,3-glucan) is rapidly synthesized by callose synthase at sieve plates in response to wounding or turgor shock, forming callose plugs that seal sieve pores and prevent phloem sap leakage; this is reversible, and callose can be degraded by beta-1,3-glucanases to restore transport",
+        "S4: TRUE — The size exclusion limit (SEL) of plasmodesmata between companion cells and sieve elements is significantly larger (up to 67 kDa) than that between other cell types (typically less than 1 kDa), allowing the passage of mRNAs, proteins, and the FT flowering signal from companion cells into the sieve tube"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — During sieve-tube element differentiation, a programmed partial autolysis occurs: the nucleus degenerates, the tonoplast disintegrates (releasing vacuolar contents), and ribosomes are lost. However, the cell retains functional mitochondria (for ATP), smooth ER (stacked as sieve element reticulum), and specialized plastids (S-type containing starch in monocots, P-type containing protein crystalloids in dicots). Phloem-specific proteins (PP1 filaments, PP2 lectins) form forisomes (in Fabaceae) or P-protein plugs that rapidly seal sieve plates upon wounding, preventing excessive phloem sap loss. S2: FALSE — Plant cells do not have gap junctions (these are exclusively animal structures). Companion cells (CCs) are connected to sieve-tube elements (SEs) through specialized branched plasmodesmata called pore-plasmodesmata units (PPUs). On the CC side, multiple plasmodesmata branches converge into a single wider channel on the SE side. These PPUs have an enlarged SEL compared to typical plasmodesmata, but they are structurally distinct from gap junctions. S3: TRUE — Callose synthesis at sieve plates is one of the fastest wound-sealing mechanisms in plants. Within seconds of wounding or turgor perturbation, callose synthase (CalS7/GSL7) deposits beta-1,3-glucan at sieve plate pores, plugging them. This is aided by P-protein plugs. The process is Ca2+-dependent and reversible: once the threat passes, beta-1,3-glucanases degrade the callose, and sieve pore function is restored. S4: TRUE — The PPUs between CCs and SEs have an exceptionally large SEL, estimated at 10-67 kDa for proteins. This allows CCs to supply SEs with mRNAs (for translation is absent in SEs, but some mRNAs may function as non-coding signals), proteins for maintenance, and signaling molecules. The FT protein (approximately 20 kDa) produced in CC is loaded into SEs through these PPUs for long-distance transport to the SAM.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about PIN-mediated auxin polar transport and root development:",
+      "options": [
+        "S1: TRUE — In the Arabidopsis root tip, PIN1 is localized basally (rootward) in stele cells, directing acropetal auxin flow toward the root tip, while PIN2 is localized apically (shootward) in epidermal and lateral root cap cells, directing basipetal auxin flow away from the tip — this creates the 'reverse fountain' auxin circulation pattern essential for gravitropism",
+        "S2: FALSE — PIN protein polarity is established randomly during cell division and remains fixed for the lifetime of the cell, regardless of environmental stimuli or developmental signals",
+        "S3: TRUE — Auxin itself regulates PIN polarity: high auxin concentrations promote PIN1 basal localization through inhibition of the PID (PINOID) kinase, while low auxin or PID overexpression promotes apical PIN1 localization; this auxin-PID-PIN module provides a feedback mechanism for auxin channel formation",
+        "S4: TRUE — During root gravitropism, gravity perception by columella cell amyloplasts (statoliths) leads to rapid relocalization of PIN3 in columella cells toward the lower side, redirecting auxin flow to the lower flank of the root; the resulting auxin asymmetry inhibits cell elongation on the lower side (because root cells respond to high auxin with growth inhibition), causing downward root bending"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — The reverse fountain model of auxin flow in the root is created by differential PIN polarities: PIN1, PIN3, and PIN7 are basally localized in the stele (vascular tissue), channeling auxin acropetally toward the root tip. At the root tip, auxin is redirected laterally through the columella (PIN3/PIN7) and then shootward through the epidermis and lateral root cap via apically localized PIN2. This creates a circulation loop (reverse fountain) that establishes the auxin maximum at the QC/columella initials junction and provides the auxin gradient needed for gravitropism. S2: FALSE — PIN polarity is dynamic and regulated by multiple mechanisms: (1) GNOM-dependent vesicle trafficking controls basal PIN targeting (brefeldin A disrupts this). (2) Phosphorylation by PID/WAG kinases promotes apical targeting, while dephosphorylation by PP2A promotes basal targeting. (3) Auxin itself feeds back to regulate PIN polarity. (4) Gravity, light, and other environmental signals can trigger rapid PIN relocalization (as in gravitropism). PIN proteins constantly cycle between the plasma membrane and endosomes, and this dynamic recycling allows rapid polarity changes. S3: TRUE — PID (PINOID) is an AGC kinase that phosphorylates the hydrophilic loop of PIN proteins. Phosphorylated PINs are targeted to the apical membrane, while unphosphorylated PINs (dephosphorylated by PP2A/PP6) traffic to the basal membrane. High auxin inhibits PID kinase activity (through an unknown mechanism), favoring basal PIN localization and reinforcing existing auxin channels. PID overexpression causes apicalization of PIN1 in the root stele, disrupting the auxin maximum and causing root meristem collapse. S4: TRUE — Root gravitropism involves: (1) Gravity perception: amyloplast sedimentation in columella cells triggers signaling (possibly through mechanosensitive channels or ER-amyloplast contact). (2) PIN3 relocalization: within minutes, PIN3 in columella cells is relocalized to the lower membrane, directing auxin preferentially to the lower epidermis. (3) Differential growth: root epidermal cells show optimal elongation at low auxin concentrations. The auxin increase on the lower side inhibits cell elongation, while the upper side elongates normally, causing the root to curve downward. This is opposite to shoots, where high auxin promotes elongation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the molecular basis of photoperiodism and the FT/FD flowering pathway:",
+      "options": [
+        "S1: TRUE — FT protein produced in leaf companion cells is loaded into sieve elements and travels through the phloem to the shoot apical meristem, where it interacts with the bZIP transcription factor FD; the FT-FD complex, along with 14-3-3 proteins, binds to the promoters of floral meristem identity genes such as AP1 and FRUITFULL to initiate the floral transition",
+        "S2: TRUE — TFL1 (TERMINAL FLOWER 1) is a phosphatidylethanolamine-binding protein (PEBP) paralog of FT that acts as a floral repressor; TFL1 competes with FT for binding to FD, converting the FD complex from a transcriptional activator to a repressor, thereby maintaining vegetative meristem identity",
+        "S3: FALSE — Short-day plants and long-day plants use entirely different molecular pathways for photoperiodic control; CO and FT homologs are absent in short-day plants like rice",
+        "S4: TRUE — In rice (a short-day plant), the CO ortholog Hd1 activates the FT ortholog Hd3a under short days but represses it under long days; this reversal in CO-FT regulatory logic, rather than a fundamentally different molecular machinery, explains the opposite daylength responses of long-day and short-day plants"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — FT is the molecular identity of florigen. After its production in leaf phloem companion cells (activated by CO under inductive photoperiods), FT protein (~20 kDa) moves through plasmodesmata into sieve elements and is transported via phloem mass flow to the SAM. At the SAM, FT forms a tripartite complex with FD (a bZIP transcription factor expressed in the meristem) and 14-3-3 scaffold proteins. This florigen activation complex (FAC) binds to promoters of floral meristem identity genes (AP1, FUL/FRUITFULL, SOC1) to trigger the irreversible transition from vegetative to inflorescence meristem identity. S2: TRUE — TFL1 belongs to the same PEBP (phosphatidylethanolamine-binding protein) family as FT. Despite high sequence similarity (approximately 60%), key amino acid differences (particularly the critical Tyr85 in FT vs His88 in TFL1, and residues in the external loop) determine whether the protein acts as a floral activator (FT) or repressor (TFL1). TFL1 competes with FT for FD binding, and the TFL1-FD complex represses rather than activates floral target genes. This balance between FT and TFL1 determines the timing and extent of the floral transition. S3: FALSE — Short-day plants such as rice (Oryza sativa) possess clear CO and FT orthologs: Hd1 (Heading date 1) is the CO ortholog, and Hd3a is the FT ortholog. The core molecular machinery is conserved between long-day and short-day plants. S4: TRUE — In rice under short days, Hd1 activates Hd3a expression, promoting flowering (similar to how CO activates FT in Arabidopsis under long days). However, under long days, Hd1 is modified (possibly through interaction with Ghd7, a long-day-specific repressor) and becomes a repressor of Hd3a. This elegant regulatory reversal means the same CO-FT module produces opposite photoperiodic responses depending on the species-specific wiring. Rice also has an Hd1-independent pathway through Ehd1, which activates Hd3a under short days.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about plant immunity and the zigzag model:",
+      "options": [
+        "S1: TRUE — In the zigzag model, the first level of defense is PAMP-triggered immunity (PTI), where surface-localized pattern recognition receptors (PRRs) such as FLS2, EFR, and CERK1 detect conserved microbial molecules (flagellin, EF-Tu, chitin); successful pathogens deploy effectors to suppress PTI, resulting in effector-triggered susceptibility (ETS)",
+        "S2: TRUE — Effector-triggered immunity (ETI) occurs when intracellular NLR (NBS-LRR) receptor proteins detect pathogen effectors, either by direct binding (receptor model) or by monitoring the modification of host 'guardee' proteins (guard model); ETI typically produces a stronger, more sustained immune response than PTI, often including hypersensitive response (HR)",
+        "S3: FALSE — NLR proteins are exclusively CNL-type (CC-NBS-LRR) in all plant species; TNL-type (TIR-NBS-LRR) receptors do not exist in plants and are unique to the animal immune system",
+        "S4: TRUE — Recent discoveries show that activated TIR domains of TNL receptors possess NADase enzymatic activity, cleaving NAD+ to produce signaling molecules (including variant cyclic ADP-ribose) that activate downstream helper NLRs (NRG1 and ADR1), which oligomerize to form calcium-permeable resistosome channels in the plasma membrane, triggering cell death"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — The zigzag model (Jones and Dangl, 2006) describes plant-pathogen co-evolution in phases: Phase 1: Plants detect PAMPs (pathogen-associated molecular patterns, also called MAMPs) through extracellular PRRs (LRR-RLKs and LysM-RLKs). Key PRR-PAMP pairs include: FLS2-flg22 (flagellin), EFR-elf18 (elongation factor Tu), CERK1-chitin. PTI responses include ROS burst, MAPK activation, callose deposition, stomatal closure, and defense gene expression. Phase 2: Adapted pathogens inject effector proteins (type III secretion in bacteria, haustorial secretion in fungi/oomycetes) into the host cell. Effectors suppress PTI by targeting key signaling components (e.g., AvrPto targets BAK1, AvrPtoB ubiquitinates FLS2). This leads to ETS. S2: TRUE — Phase 3 of the zigzag model: Plants evolved intracellular NLR receptors to detect effectors. Detection occurs through two main models: (1) Direct recognition (receptor model): NLR directly binds the effector (e.g., rice Pi-ta recognizes AvrPi-ta from Magnaporthe). (2) Guard/decoy model: The NLR monitors a host protein (guardee) that is a target of the effector. If the effector modifies the guardee, the NLR detects this perturbation and activates immunity (e.g., RPM1 guards RIN4, which is modified by AvrRpm1 and AvrB). ETI produces a robust response including a sustained ROS burst, transcriptional reprogramming, salicylic acid accumulation, and often HR (hypersensitive response) — localized programmed cell death that restricts biotrophic pathogen growth. S3: FALSE — TNL (TIR-NBS-LRR) receptors are abundant in dicot plants, including Arabidopsis, where they constitute approximately 50% of all NLR genes. Examples include RPS4 (recognizing AvrRps4), RPP1, and N (tobacco TMV resistance). TNLs are absent from most monocots (grasses), which rely exclusively on CNLs (CC-NBS-LRR). The statement incorrectly claims TNLs do not exist in plants; they are in fact well-characterized in dicots but not in most monocots. S4: TRUE — This represents a major breakthrough in plant immunity. Activated TIR domains function as NADase enzymes (holoenzymes formed upon effector recognition). They cleave NAD+ to produce variant cyclic ADP-ribose (v-cADPR) and related small molecules. These act as signaling molecules that activate helper NLRs of the ADR1 and NRG1 families. NRG1 and ADR1 (which are CNL/HeLo-domain NLRs) oligomerize upon activation into pentameric structures that insert into the plasma membrane as calcium-permeable channels (resistosomes), analogous to the ZAR1 resistosome. Calcium influx through these channels triggers cell death and immune signaling. This TIR-NADase-helper NLR-resistosome pathway is a paradigm-shifting discovery linking NLR activation to ion channel formation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about stomatal development and the one-cell-spacing rule:",
+      "options": [
+        "S1: TRUE — The one-cell-spacing rule ensures that no two stomata are directly adjacent; this is enforced by secreted peptide signals of the EPF/EPFL (Epidermal Patterning Factor-Like) family, which are perceived by the TMM (TOO MANY MOUTHS) receptor and ERECTA family receptor kinases on neighboring cells",
+        "S2: FALSE — FAMA promotes unlimited cell division in the stomatal lineage, and fama mutants produce epidermis with fewer stomata than wild type",
+        "S3: TRUE — EPF2 is secreted by early stomatal lineage cells (meristemoids) and signals through TMM/ER to inhibit neighboring cells from entering the stomatal pathway, while EPF1 is secreted by later cells (guard mother cells) to orient the asymmetric spacing divisions of adjacent meristemoids away from the GMC",
+        "S4: TRUE — STOMAGEN (EPFL9), unlike EPF1 and EPF2, is a positive regulator of stomatal development produced by mesophyll cells (not epidermal cells); it competes with EPF1/EPF2 for binding to TMM/ERECTA receptors, providing an internal tissue-layer signal that promotes stomatal density in coordination with photosynthetic demand"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — The one-cell-spacing rule is a fundamental patterning principle ensuring at least one pavement cell separates any two stomata. This spacing is critical for proper stomatal function (guard cells need surrounding subsidiary/pavement cells for mechanical leverage). The molecular basis involves the EPF/EPFL family of secreted cysteine-rich peptides. These peptides are perceived by a receptor complex of TMM (an LRR receptor-like protein lacking a kinase domain) and the ERECTA family of LRR-RLKs (ER, ERL1, ERL2). Ligand binding activates a MAPK cascade (YODA → MKK4/5 → MPK3/6) that phosphorylates and destabilizes SPCH, preventing stomatal entry in neighboring cells. S2: FALSE — FAMA has the opposite function. FAMA restricts cell division in the stomatal lineage: it promotes the terminal differentiation of guard mother cells into guard cells while preventing further cell divisions. In fama loss-of-function mutants, cells that would normally become guard cells undergo excessive symmetric divisions, producing tumorous clusters of cells that never properly differentiate into guard cells. The result is MORE cells in the stomatal lineage (tumors), not fewer stomata — but none of them are functional guard cells. S3: TRUE — EPF2 acts early: produced by meristemoids, it signals through ER/TMM to prevent neighboring protodermal cells from initiating the stomatal pathway (maintains spacing from the start). EPF1 acts later: produced by GMCs and late meristemoids, it signals through ERL1/TMM to orient the placement divisions (satellite meristemoids) of adjacent stomatal lineage ground cells AWAY from the existing GMC, reinforcing the one-cell-spacing rule at later stages. S4: TRUE — STOMAGEN/EPFL9 is a fascinating counterpoint to EPF1/EPF2. Unlike the epidermal EPFs, STOMAGEN is expressed in the mesophyll (inner leaf tissue). It competes with EPF2 for binding to the TMM/ERECTA receptor complex but acts as an antagonist of the inhibitory signaling. STOMAGEN overexpression dramatically increases stomatal density, while its silencing reduces it. This provides an elegant mechanism for the mesophyll to communicate photosynthetic demand to the epidermis: when photosynthetic capacity is high and more CO2 is needed, mesophyll cells can increase STOMAGEN production to promote more stomatal development.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the ABC model of flower development and MADS-box gene function:",
+      "options": [
+        "S1: TRUE — The ABCE model requires E-class genes (SEPALLATA1/2/3/4) that function as obligate partners for A, B, and C class proteins; all floral organ identity is specified by tetrameric MADS-box protein complexes (quartets), and in sep1 sep2 sep3 triple mutants, all four floral whorls are converted to leaf-like organs",
+        "S2: TRUE — A-class function in Arabidopsis is provided by AP1 (APETALA1) and AP2; however, AP2 is not a MADS-box gene but rather an AP2/ERF-domain transcription factor, and its classification as a true A-class gene is debated because AP2-like genes do not have a conserved A-function role across all angiosperms",
+        "S3: FALSE — B-class genes AP3 and PI form homodimers independently to specify petals; they do not need to interact with each other for DNA binding",
+        "S4: TRUE — C-class gene AG (AGAMOUS) has a dual function: it specifies reproductive organ identity in whorls 3 and 4 (stamens with B-class, carpels alone) AND controls floral meristem determinacy by activating the KNUCKLES gene and repressing WUS expression, terminating meristem activity after carpel initiation"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — The quartet model (Theissen and Saedler, 2001) proposes that floral organ identity is specified by tetrameric MADS-box protein complexes. SEPALLATA (SEP/E-class) proteins are required in all four whorls as obligate members of these quartets: whorl 1 (sepals) = AP1-AP1-SEP-SEP, whorl 2 (petals) = AP1-SEP-AP3-PI, whorl 3 (stamens) = AG-SEP-AP3-PI, whorl 4 (carpels) = AG-AG-SEP-SEP. In sep1 sep2 sep3 triple mutants, all floral organs are converted to leaf-like (sepaloid or vegetative) organs, demonstrating that E-class function is essential for all floral organ differentiation. This extends the ABC model to the ABCE model. S2: TRUE — AP1 is a MADS-box transcription factor with a clear A-class role. AP2, however, belongs to the AP2/ERF family of transcription factors (not MADS-box). While AP2 is traditionally classified as an A-class gene in Arabidopsis (ap2 mutants convert sepals to carpels and petals to stamens due to ectopic C-class expression), AP2-like genes in other species do not consistently show A-class function. This has led to debate about whether 'A-function' is a universal feature of the ABC model or an Arabidopsis-specific refinement. Some researchers propose that the core conserved functions are B-class (petal/stamen boundary) and C-class (reproductive identity/determinacy), with A-function being primarily a cadastral repressor of C rather than a positive identity function. S3: FALSE — AP3 (APETALA3) and PI (PISTILLATA) are B-class MADS-box proteins that MUST form an obligate heterodimer (AP3-PI) for DNA binding. Neither AP3 nor PI can form stable homodimers or bind DNA alone. The AP3-PI heterodimer recognizes CArG-box sequences in target gene promoters. Furthermore, the AP3-PI heterodimer positively autoregulates both AP3 and PI transcription, creating a positive feedback loop that maintains B-class expression once initiated. S4: TRUE — AG has a dual role that explains two features of the ag mutant phenotype: (1) Organ identity: AG specifies reproductive organs — in whorl 3, AG with B-class proteins (in quartets with SEP) specifies stamens; in whorl 4, AG without B-class specifies carpels. (2) Meristem determinacy: AG activates KNUCKLES (KNU), a C2H2 zinc finger protein. KNU directly represses WUS (WUSCHEL) expression in the organizing center through a temporally delayed mechanism involving Polycomb-mediated epigenetic silencing of KNU itself. Once AG accumulates sufficiently in whorl 4, KNU is activated, WUS is repressed, and the floral meristem terminates. In ag mutants, WUS continues indefinitely, producing the indeterminate flower-within-a-flower phenotype.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, what is the most likely identity of the mutant and what does it reveal about the ethylene signaling pathway?",
+      "dataContext": "Researchers screened Arabidopsis seedlings for altered response to ethylene gas. Wild-type etiolated seedlings show the triple response (short hypocotyl, radial swelling, exaggerated apical hook) when grown on 10 uM ACC (ethylene precursor). Four mutants were identified:\n\n| Genotype | Phenotype WITHOUT ACC | Phenotype WITH 10 uM ACC | Phenotype with 100 uM AgNO3 (ethylene perception inhibitor) + ACC |\n|---|---|---|---|\n| Wild type | Normal elongated etiolated | Triple response | Normal elongated (rescued) |\n| Mutant A | Normal elongated | Normal elongated (no response) | Normal elongated |\n| Mutant B | Constitutive triple response | Constitutive triple response | Constitutive triple response |\n| Mutant C | Normal elongated | Normal elongated (no response) | Normal elongated |\n| Mutant D | Constitutive triple response | Constitutive triple response | Normal elongated (rescued) |\n\nGenetic analysis: Mutant A is dominant. Mutant B is recessive. Mutant C is recessive. Mutant D is dominant.\n\nDouble mutant analysis: Mutant A is epistatic to Mutant B (A;B double mutant = no response like A). Mutant C is epistatic to Mutant D (C;D double mutant = no response like C).",
+      "options": [
+        "All four mutants affect the same gene at different positions, causing gain- or loss-of-function phenotypes",
+        "Mutant A is a dominant gain-of-function ETR1 receptor mutation (constitutively active receptor suppresses signaling even with ethylene); Mutant B is a loss-of-function CTR1 mutation (loss of negative regulator → constitutive response); Mutant C is a loss-of-function EIN2 mutation (blocks signal transduction downstream); Mutant D is a dominant gain-of-function EIN3 mutation (constitutive transcriptional activation) — epistasis relationships confirm the pathway order: ETR1 → CTR1 → EIN2 → EIN3",
+        "Mutant A overproduces ethylene, Mutant B is defective in ethylene degradation, Mutant C has enhanced ethylene sensitivity, and Mutant D has a defective ethylene biosynthesis gene",
+        "All mutants affect ethylene biosynthesis enzymes (ACC synthase and ACC oxidase) and none affect signaling components"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is a classic genetic dissection of the ethylene signaling pathway using forward genetics. Each mutant maps to a specific pathway component:\n\nMutant A (dominant, ethylene-insensitive): ETR1 gain-of-function. The ethylene receptor ETR1 is a negative regulator — it actively suppresses ethylene signaling when ethylene is absent. A dominant gain-of-function mutation locks ETR1 in its active (signaling) state even when ethylene is present, constitutively suppressing the pathway. This is dominant because one mutant allele is sufficient to keep CTR1 active. AgNO3 (Ag+ replaces Cu+ in the receptor) normally blocks ethylene binding, but since this receptor is constitutively active regardless, AgNO3 has no additional effect.\n\nMutant B (recessive, constitutive response): CTR1 loss-of-function. CTR1 is a negative regulator (Raf-like kinase) downstream of ETR1. Loss of CTR1 de-represses the pathway, causing constitutive ethylene responses. It is recessive because one functional CTR1 allele provides sufficient kinase activity. AgNO3 cannot rescue because the block is downstream of the receptor.\n\nMutant C (recessive, ethylene-insensitive): EIN2 loss-of-function. EIN2 is a positive regulator downstream of CTR1. Loss of EIN2 blocks signal transmission regardless of upstream activation. Recessive because both copies must be lost.\n\nMutant D (dominant, constitutive response): EIN3 gain-of-function. EIN3 is a transcription factor at the bottom of the pathway. A gain-of-function mutation makes EIN3 constitutively active or resistant to EBF1/2-mediated degradation. AgNO3 rescues Mutant D (unlike Mutant B) because blocking ethylene perception keeps CTR1 active, which phosphorylates EIN2, preventing EIN3 stabilization — but this only works if EIN3 is a gain-of-function that still requires some upstream input. The key distinguishing feature is the epistasis: A is epistatic to B (receptor upstream of CTR1), and C is epistatic to D (EIN2 upstream of EIN3), confirming the linear pathway order.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, what conclusions can be drawn about the roles of the two kinases in stomatal development?",
+      "dataContext": "Researchers studied the role of two receptor kinases, ER (ERECTA) and ERL1, in stomatal patterning using Arabidopsis epidermis. They quantified stomatal density (SD), stomatal index (SI = stomata / [stomata + pavement cells] x 100), and the frequency of stomatal clusters (two or more adjacent stomata) in the abaxial epidermis of mature rosette leaves.\n\n| Genotype | Stomatal Density (stomata/mm2) | Stomatal Index (%) | Cluster Frequency (%) | Meristemoid Persistence |\n|---|---|---|---|---|\n| Wild type (Col-0) | 185 +/- 12 | 28 +/- 2 | 0.2 +/- 0.1 | Normal |\n| er single mutant | 290 +/- 18 | 38 +/- 3 | 1.8 +/- 0.4 | Slightly extended |\n| erl1 single mutant | 210 +/- 15 | 30 +/- 2 | 0.8 +/- 0.3 | Normal |\n| er erl1 double mutant | 520 +/- 25 | 62 +/- 4 | 18.5 +/- 2.1 | Greatly extended |\n| tmm mutant | 0 (stems); 480 (leaves) | Organ-dependent | 22 +/- 3 | Ectopic entry |\n| 35S::EPF2 (EPF2 overexpression) | 12 +/- 5 | 2 +/- 1 | 0 | Abolished |\n| 35S::EPF2 in er erl1 background | 410 +/- 20 | 55 +/- 3 | 15.2 +/- 1.8 | Not suppressed |",
+      "options": [
+        "ER and ERL1 have completely redundant functions; either one alone is sufficient for normal stomatal patterning",
+        "ER and ERL1 are the primary receptors for EPF2-mediated inhibition of stomatal development; they act partially redundantly with ER playing the larger role; the er erl1 double mutant phenotype (massive stomatal overproduction and clustering) demonstrates synergistic interaction, and the failure of EPF2 overexpression to suppress stomatal production in the er erl1 background confirms that ER/ERL1 are required to transduce the EPF2 inhibitory signal",
+        "ER promotes stomatal development while ERL1 inhibits it; their opposing effects cancel in wild type",
+        "The increased stomatal density in the er mutant is solely due to smaller epidermal cells creating more cells per unit area, not due to altered stomatal patterning"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data support several conclusions about ER/ERL1 function:\n\n(1) Partial redundancy with ER as the major player: The er single mutant shows a significant increase in SD (290 vs 185) and SI (38 vs 28), with some clustering (1.8%). The erl1 single mutant shows a modest increase (210, SI 30). This indicates both contribute to stomatal inhibition, but ER plays the larger role.\n\n(2) Synergistic interaction: The er erl1 double mutant shows a dramatically more severe phenotype than either single mutant (SD 520, SI 62, clusters 18.5%). The SI increase is far more than additive: if ER loss adds ~10% SI and ERL1 loss adds ~2% SI, additive would predict ~40%, but the double shows 62%. This synergistic interaction indicates they have partially overlapping but also distinct roles, and one can partially compensate for loss of the other.\n\n(3) ER/ERL1 are required for EPF2 signaling: EPF2 overexpression nearly eliminates stomata in wild type (SD 12, SI 2), demonstrating EPF2 is a potent inhibitor. However, in the er erl1 double mutant background, EPF2 overexpression barely suppresses stomatal production (SD 410, SI 55, clusters 15.2). This epistasis demonstrates that ER and ERL1 are the essential receptors for transducing the EPF2 signal.\n\n(4) SI (stomatal index) confirms patterning defect: Using SI instead of just SD controls for cell size effects — the er erl1 double mutant has a dramatically increased SI (62%), meaning a greater proportion of cells become stomata, not just more cells per area.\n\n(5) The tmm mutant comparison shows organ-specific effects (no stomata in stems, excess in leaves), indicating TMM modulates ER/ERL1 signaling in an organ-dependent manner.\n\nOption A is wrong because single mutants show different severities. Option C incorrectly proposes opposing functions. Option D is refuted by the SI data.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, what model of auxin-mediated root patterning is best supported?",
+      "dataContext": "Researchers used the DR5::GFP auxin response reporter, PIN1-GFP translational fusions, and immunolocalization to map auxin distribution and PIN polarity in wild-type and mutant Arabidopsis root tips.\n\n| Zone / Cell Type | DR5::GFP Intensity (wild type) | PIN1 Polarity (wild type) | PIN2 Polarity (wild type) |\n|---|---|---|---|\n| Quiescent center (QC) | Very high (maximum) | Basal (rootward) | Not expressed |\n| Columella initials | Very high | Lateral/basal | Not expressed |\n| Mature columella | Moderate | Diffuse/lateral | Not expressed |\n| Stele (vasculature) | High, decreasing shootward | Basal (rootward) | Not expressed |\n| Epidermis - meristematic zone | Low to moderate | Not expressed | Apical (shootward) |\n| Epidermis - elongation zone | Low | Not expressed | Apical (shootward) |\n| Lateral root cap | Moderate | Not expressed | Apical (shootward) |\n\n| Mutant / Treatment | DR5::GFP at QC | Root Growth | Meristem Size |\n|---|---|---|---|\n| Wild type | Maximum | Normal | Normal |\n| pin1 pin3 pin7 triple mutant | Severely reduced | Severely stunted | Very small |\n| pin2 mutant | Altered lateral distribution | Agravitropic | Normal |\n| NPA (auxin transport inhibitor) | Abolished | Arrested | Collapsed |\n| plt1 plt2 double mutant | Low (reduced) | Arrested | Consumed (no maintenance) |",
+      "options": [
+        "Auxin distribution in the root is random and does not correlate with developmental zones or cell fates",
+        "Auxin is synthesized exclusively in the QC and diffuses passively to surrounding cells; PIN proteins play no role in establishing the auxin maximum",
+        "PIN-mediated polar auxin transport creates a convergence of auxin flow at the QC/stem cell region, establishing a local auxin maximum; this maximum is essential for root meristem maintenance (as shown by PIN triple mutant and NPA phenotypes) and acts through PLT transcription factors — the model proposes a dose-dependent PLT gradient where highest auxin/PLT maintains stem cells, intermediate levels sustain transit-amplifying divisions, and low levels permit differentiation",
+        "Auxin inhibits root growth at all concentrations; the QC maximum simply marks the site of growth suppression"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The data support a comprehensive model of auxin-mediated root patterning:\n\n(1) PIN polarity creates directional auxin flow: PIN1 (basal in stele) directs auxin acropetally toward the root tip. PIN3/PIN7 redirect auxin laterally in columella. PIN2 (apical in epidermis/LRC) directs auxin basipetally away from the tip. This creates a reverse fountain circulation that converges at the QC, establishing the auxin maximum (highest DR5::GFP).\n\n(2) The auxin maximum is essential for meristem maintenance: The pin1 pin3 pin7 triple mutant severely reduces the QC auxin maximum and shows severely stunted roots with very small meristems. NPA treatment completely abolishes the maximum and collapses the meristem. This demonstrates that actively maintained auxin transport, not passive diffusion, is required.\n\n(3) PIN2 is specifically required for gravitropism: The pin2 mutant shows agravitropic growth but maintains normal meristem size, indicating PIN2's primary role is in lateral auxin redistribution for gravitropic responses rather than meristem maintenance.\n\n(4) PLT transcription factors read the auxin gradient: plt1 plt2 double mutants show reduced DR5 signal and complete meristem consumption (stem cells differentiate). PLT proteins are auxin-responsive transcription factors that form a gradient corresponding to the auxin gradient. The dose-dependent model proposes: maximum PLT (at QC) = stem cell maintenance, high PLT = mitotic activity (meristematic zone), intermediate PLT = cell expansion (elongation zone), low PLT = differentiation. This PLT gradient provides a molecular readout that converts the auxin concentration gradient into distinct developmental zone identities.\n\nOption A is contradicted by the clear DR5 pattern. Option B is wrong because PIN mutations and NPA treatment demonstrate active transport is essential. Option D oversimplifies auxin's dose-dependent effects in roots.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, what molecular mechanism explains why the gid1 mutant and the della gain-of-function mutant show similar phenotypes, and how does this inform our understanding of GA signaling?",
+      "dataContext": "Researchers analyzed gibberellin (GA) signaling mutants in Arabidopsis and rice. They measured plant height, GA3 (bioactive gibberellin) levels, DELLA protein accumulation, and expression of GA-responsive genes.\n\n| Genotype | Height (cm) | Endogenous GA3 (ng/g FW) | DELLA Protein Level | GA-responsive Gene Expression (relative) | Response to Exogenous GA3 |\n|---|---|---|---|---|---|\n| Wild type (WT) | 35 | 2.5 | Moderate (regulated) | 1.0 | Height increases to 42 cm |\n| gid1 loss-of-function | 8 | 12.8 | Very high (constitutive) | 0.05 | No response |\n| sly1 loss-of-function | 9 | 11.5 | Very high (constitutive) | 0.08 | No response |\n| DELLA gain-of-function (gai-1) | 10 | 14.2 | Very high (stabilized) | 0.04 | No response |\n| della quadruple knockout | 48 | 0.3 | Absent | 4.2 | No additional response |\n| ga1 (GA biosynthesis mutant) | 7 | 0.01 | Very high (stabilized) | 0.06 | Full rescue to 36 cm |",
+      "options": [
+        "gid1 and della gain-of-function are phenocopies because GID1 directly promotes growth independently of DELLA degradation",
+        "All dwarf mutants have identical mechanisms — they all fail to produce gibberellin",
+        "gid1, sly1, and DELLA gain-of-function mutants converge on the same phenotype (severe dwarfism, high DELLA, low GA-responsive genes, insensitive to exogenous GA) because they all prevent DELLA protein degradation at different steps of the same pathway; the della quadruple knockout is constitutively tall with high GA-responsive gene expression despite low GA, proving that DELLA degradation IS the primary output of GA signaling; the ga1 biosynthesis mutant accumulates DELLA but responds to exogenous GA because the signaling machinery is intact",
+        "The high GA levels in gid1 and sly1 mutants cause the dwarfism through GA toxicity"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The data reveal the elegant logic of GA signaling through DELLA protein regulation:\n\n(1) Pathway convergence: gid1 (receptor), sly1 (F-box E3 component), and DELLA gain-of-function all prevent DELLA degradation at different steps: gid1 cannot perceive GA → cannot form GID1-GA-DELLA complex → DELLA is not presented to SCF complex. sly1 cannot ubiquitinate DELLA → DELLA is not degraded even when the GID1-GA-DELLA complex forms. DELLA gain-of-function (gai-1) has a mutation in the DELLA domain that prevents GID1 interaction → DELLA cannot be targeted for degradation. All three accumulate high DELLA, suppress GA-responsive genes, and show severe dwarfism.\n\n(2) GA feedback: All three signaling mutants show elevated endogenous GA (11.5-14.2 ng/g vs 2.5 in WT). This is because DELLA proteins activate GA biosynthesis genes (GA20ox and GA3ox) as part of a negative feedback loop. When DELLA cannot be degraded, this feedback is constitutively active, leading to GA overproduction. However, the excess GA is useless because the signaling pathway is blocked.\n\n(3) DELLA is the key output: The della quadruple knockout (losing RGA, GAI, RGL1, RGL2) is constitutively tall (48 cm > WT 35 cm) with high GA-responsive gene expression (4.2x) despite having very low endogenous GA (0.3 ng/g). This proves that GA promotes growth ENTIRELY by degrading DELLA — remove DELLA, and GA is no longer needed. The low GA in della knockouts reflects the loss of DELLA-driven feedback activation of GA biosynthesis.\n\n(4) Biosynthesis vs signaling: The ga1 mutant (deficient in ent-kaurene synthase, an early GA biosynthesis enzyme) is dwarf and accumulates DELLA (no GA to trigger degradation), but its signaling machinery is intact. Exogenous GA3 fully rescues it because GID1, SLY1, and DELLA are all functional. This distinguishes biosynthesis mutants (GA-responsive) from signaling mutants (GA-insensitive).\n\nOption A incorrectly claims GID1 acts independently of DELLA. Option B ignores that gid1 and sly1 have high GA levels. Option D incorrectly attributes dwarfism to GA toxicity.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, what can be concluded about the molecular mechanism by which vernalization promotes flowering?",
+      "dataContext": "Researchers measured FLC (FLOWERING LOCUS C) expression, FT expression, and histone modification status at the FLC locus in winter-annual Arabidopsis plants before, during, and after a 6-week cold treatment (4 degrees C).\n\n| Time Point | FLC mRNA (relative) | FT mRNA (relative) | H3K36me3 at FLC (activating mark) | H3K27me3 at FLC (repressive mark) | VIN3 Expression | Flowering Time (days to bolt after return to 22 C) |\n|---|---|---|---|---|---|---|\n| Before cold (22 C) | 10.0 | 0.1 | High | Low | Undetectable | >60 (very late) |\n| 2 weeks cold | 5.2 | 0.1 | Moderate | Moderate | High | 42 |\n| 4 weeks cold | 1.8 | 0.1 | Low | High | High | 25 |\n| 6 weeks cold | 0.4 | 0.1 | Very low | Very high | High | 15 |\n| 2 weeks after return to 22 C | 0.5 | 3.8 | Very low | Very high | Undetectable | (already bolting) |\n| 8 weeks after return to 22 C | 0.6 | 4.1 | Very low | Very high | Undetectable | (flowering) |\n\nAdditional data:\n| Genotype | FLC after 6 wk cold | H3K27me3 at FLC after cold | Flowering after vernalization |\n|---|---|---|---|\n| Wild type | 0.4 | Very high | Early (15 days) |\n| vin3 mutant | 8.5 | Low | Very late (>55 days) |\n| vrn2 mutant (PRC2 component) | 7.8 | Low | Very late (>55 days) |\n| flc null mutant | N/A | N/A | Early without vernalization |",
+      "options": [
+        "Cold directly destroys FLC mRNA through temperature-sensitive degradation; this is reversed when plants return to warmth",
+        "Vernalization promotes flowering through VIN3/PRC2-mediated progressive deposition of H3K27me3 at the FLC locus, which stably silences FLC transcription; FLC silencing is maintained after return to warmth (stable epigenetic memory) even though VIN3 expression ceases; reduced FLC allows FT expression and flowering — vin3 and vrn2 mutants cannot deposit H3K27me3 and fail to silence FLC, confirming the PRC2-mediated mechanism is essential",
+        "Vernalization works by directly activating FT expression during cold; FLC is not involved in the vernalization pathway",
+        "Cold induces permanent DNA sequence deletions at the FLC locus that prevent transcription in subsequent warm conditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data provide a comprehensive time-resolved picture of vernalization:\n\n(1) Progressive FLC silencing during cold: FLC mRNA decreases gradually over the 6-week cold period (10.0 → 5.2 → 1.8 → 0.4), coinciding with a progressive shift from activating (H3K36me3) to repressive (H3K27me3) histone marks at the FLC locus. This is not an abrupt switch but a quantitative process.\n\n(2) VIN3 is cold-specific: VIN3 is expressed only during cold and is undetectable before and after. VIN3 is a PHD-finger protein that associates with PRC2 to initiate H3K27me3 deposition at FLC. The vin3 mutant fails to silence FLC (8.5 vs 0.4) and shows low H3K27me3, demonstrating VIN3 is essential for initiating the epigenetic switch.\n\n(3) Stable epigenetic memory: After return to warmth, FLC remains silenced (0.5-0.6) and H3K27me3 remains very high even though VIN3 is no longer expressed. This demonstrates that PRC2 maintains the H3K27me3 mark through cell divisions without requiring the initiating signal (cold/VIN3). This is the epigenetic memory component.\n\n(4) FLC silencing enables FT expression: FT mRNA remains low (0.1) throughout cold (because FT requires long-day photoperiod and warm conditions for CO-mediated activation). Only after return to warmth + long days does FT rise dramatically (3.8-4.1), because FLC repression of FT is now removed. The flc null mutant flowers early without vernalization, confirming FLC is the key repressor.\n\n(5) PRC2 is essential: The vrn2 mutant (lacking a PRC2 subunit) shows the same failure as vin3: no H3K27me3 deposition, no FLC silencing, no vernalization response.\n\n(6) Flowering time is quantitative: More cold = lower FLC = earlier flowering (60 → 42 → 25 → 15 days), consistent with a quantitative epigenetic mechanism.\n\nOption A is wrong because FLC silencing is maintained after return to warmth. Option C is wrong because FT is not induced during cold. Option D fabricates DNA deletions.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Which experimental design would most rigorously test the hypothesis that NLR-mediated resistosome formation is the direct cause of cell death in effector-triggered immunity, rather than cell death being a secondary consequence of other NLR-activated signaling?",
+      "experimentContext": "A plant immunologist studies the ZAR1 NLR resistosome in Arabidopsis. ZAR1 recognizes the bacterial effector AvrAC (via the decoy PBL2/guardee RKS1 complex). Upon activation, ZAR1 oligomerizes into a pentameric wheel-like structure (resistosome) that inserts into the plasma membrane, forming a calcium-permeable channel. The researcher wants to determine whether this channel activity DIRECTLY causes cell death or whether ZAR1 activation triggers cell death through a downstream signaling cascade independent of channel formation. Available tools: (1) Cryo-EM structures of inactive and active ZAR1, (2) site-directed mutagenesis of the ZAR1 alpha-1 helix (the membrane-inserting domain), (3) reconstitution of purified ZAR1 in artificial lipid bilayers, (4) calcium imaging with GCaMP sensors, (5) zar1 knockout Arabidopsis lines, (6) ion channel blockers (LaCl3, GdCl3), (7) inducible effector expression systems (DEX-AvrAC), (8) electrophysiology equipment for planar lipid bilayer recordings.",
+      "options": [
+        "Simply knockout ZAR1 and observe whether AvrAC still triggers cell death — if not, ZAR1 is required for cell death",
+        "Overexpress AvrAC at increasing concentrations and measure the dose-response of cell death — if there is a threshold, the resistosome model is confirmed",
+        "Use a multi-pronged approach: (i) Generate ZAR1 alpha-1 helix point mutations (e.g., substituting hydrophobic residues with charged residues) that disrupt membrane insertion but do not affect oligomerization — test whether these mutants fail to cause cell death in planta despite forming pentameric complexes; (ii) Reconstitute purified wild-type and mutant ZAR1 resistosomes in artificial lipid bilayers and measure channel conductance by electrophysiology — confirm channel-dead mutants cannot form calcium-permeable pores; (iii) Use GCaMP calcium imaging to show that alpha-1 helix mutants fail to trigger the rapid calcium influx seen with wild-type ZAR1 activation; (iv) Test whether application of non-specific cation channel blockers (LaCl3, GdCl3) can suppress ZAR1-mediated cell death in a dose-dependent manner",
+        "Treat plants with caspase inhibitors (from animal apoptosis research) to block cell death while monitoring resistosome formation — if caspase inhibitors block death but not resistosome formation, the resistosome does not directly cause cell death"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Option C provides the most rigorous test by generating separation-of-function mutations and combining in vitro biochemistry with in vivo functional assays:\n\n(i) Structure-guided mutagenesis of the alpha-1 helix: The cryo-EM structure of active ZAR1 shows that the N-terminal alpha-1 helices from each protomer form a funnel-shaped structure that inserts into the membrane. Mutating key hydrophobic residues (L10E, L14E-type substitutions) to charged residues would disrupt membrane insertion while preserving the overall pentameric oligomerization. If these mutants still oligomerize (confirmed by native PAGE or size-exclusion chromatography) but fail to cause cell death, this demonstrates that membrane insertion/channel activity (not just oligomerization) is required for cell death.\n\n(ii) In vitro reconstitution with electrophysiology: Purifying wild-type and mutant ZAR1 resistosomes and reconstituting them in planar lipid bilayers allows direct measurement of channel activity. Single-channel recordings would confirm that wild-type resistosomes form calcium-permeable channels with defined conductance, while alpha-1 mutants do not. This establishes a direct causal link between structural features and channel function.\n\n(iii) In vivo calcium imaging: GCaMP-based imaging in plants expressing DEX-inducible AvrAC would show that wild-type ZAR1 activation triggers rapid cytoplasmic calcium elevation within minutes, while channel-dead mutants do not. This bridges the in vitro channel data with in vivo physiology.\n\n(iv) Pharmacological validation: If non-specific cation channel blockers (La3+, Gd3+) suppress ZAR1-mediated cell death dose-dependently, this provides independent evidence that calcium channel activity is necessary for cell death.\n\nOption A only shows ZAR1 is necessary, not that the channel is the mechanism. Option B does not separate resistosome formation from channel activity. Option D uses animal caspase inhibitors that are largely ineffective in plants (plants use metacaspases with different specificity).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Which experimental strategy would most convincingly demonstrate that FT protein (not FT mRNA) is the mobile florigen signal that travels from leaves to the shoot apical meristem?",
+      "experimentContext": "A plant biologist wants to definitively prove whether FT protein or FT mRNA is the mobile signal in Arabidopsis. Previous grafting experiments showed that FT produced in leaves induces flowering at the SAM, but it remained unclear whether the mobile molecule is the protein or mRNA. Available tools: (1) FT-GFP and FT-3xHA translational fusions driven by the companion cell-specific SUC2 promoter, (2) GAS1:GFP (a cell-autonomous GFP that cannot move through plasmodesmata due to 3xGFP size), (3) tissue-specific RT-qPCR for FT mRNA and FT-GFP mRNA, (4) immunoprecipitation/Western blot for FT-HA protein, (5) ft-10 null mutant background, (6) phloem exudate collection by EDTA-facilitated exudation, (7) in situ hybridization for FT mRNA, (8) viral vectors for ectopic expression.",
+      "options": [
+        "Simply measure FT mRNA by RT-qPCR in leaves and SAM — if mRNA is in both locations, mRNA is the signal",
+        "Overexpress FT in all tissues using the 35S promoter and observe whether flowering is accelerated — if yes, FT is sufficient for flowering",
+        "Use a complementary approach: (i) Express FT-GFP from the SUC2 (companion cell-specific) promoter in the ft-10 null background — if flowering is rescued AND GFP fluorescence is detected at the SAM (where SUC2 is not active), this shows FT-GFP protein moves from companion cells to the SAM; (ii) Express GAS1:GFP (immobile control) from SUC2 promoter — GFP should remain in companion cells, confirming that non-specific protein movement does not explain the result; (iii) Perform RT-qPCR on laser-microdissected SAM tissue: detect FT-GFP protein (by anti-GFP Western) but NOT FT-GFP mRNA (below detection by RT-qPCR), demonstrating protein moves without mRNA; (iv) Collect phloem exudates and detect FT-HA protein by immunoprecipitation/Western blot, confirming FT protein is present in the translocation stream",
+        "Use in situ hybridization to detect FT mRNA in the SAM — if present, mRNA is the signal; if absent, protein must be the signal"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is based on the landmark experiments by Corbesier et al. (2007) and Jaeger and Wigge (2007) that identified FT protein as the mobile florigen:\n\n(i) SUC2p::FT-GFP in ft null background: The SUC2 promoter drives expression exclusively in phloem companion cells. If FT-GFP expressed only in companion cells can rescue the ft null mutant (which never flowers without vernalization), this proves that FT produced in companion cells reaches the SAM. Detection of GFP fluorescence at the SAM (where SUC2 is not active) directly visualizes the movement of FT-GFP protein from its site of synthesis (companion cells) to its site of action (SAM). This experiment was actually performed and showed GFP signal at the SAM.\n\n(ii) GAS1:GFP mobility control: The GAS1:GFP fusion (three tandem GFPs, approximately 81 kDa) cannot move through plasmodesmata due to its size. Expressing this from the SUC2 promoter and showing it remains confined to companion cells demonstrates that the movement of FT-GFP is specific and not due to non-selective protein diffusion from dying cells or experimental artifacts.\n\n(iii) Protein without mRNA at the SAM: Laser-capture microdissection of the SAM followed by RT-qPCR and Western blot provides the critical distinction. If FT-GFP protein is detected (by Western blot with anti-GFP antibody) but FT-GFP mRNA is below detection (by RT-qPCR with GFP-specific primers), this conclusively shows that the PROTEIN, not mRNA, is the mobile species. This was confirmed experimentally — FT protein was detected at the SAM but FT mRNA was not detectable there.\n\n(iv) Phloem exudate analysis: Detection of FT-HA protein in phloem exudates by immunoprecipitation and Western blot confirms that FT protein is present in the phloem translocation stream, consistent with long-distance transport. Combined with FTIP1 (FT-Interacting Protein 1)-mediated loading of FT from companion cells into sieve elements, this provides a complete picture of FT protein mobility.\n\nOption A finding mRNA in both tissues could indicate local transcription at the SAM rather than transport. Option B proves sufficiency but not mobility. Option D using in situ hybridization has sensitivity limitations and cannot prove protein movement.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    }
+  ]
+}

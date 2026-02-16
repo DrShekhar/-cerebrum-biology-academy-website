@@ -1,0 +1,512 @@
+{
+  "batch": {
+    "name": "Campbell Ch40-49 Animal Physiology Advanced — Wave 1B",
+    "version": 1,
+    "source": "olympiad-wave1b",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "In the bar-headed goose (Anser indicus), which flies over the Himalayas at altitudes exceeding 9,000 m, hemoglobin has evolved a substitution (Pro-119→Ala) in the alpha chain. How does this mutation enhance oxygen delivery at extreme altitude?",
+      "options": [
+        "A) It shifts the oxygen-hemoglobin dissociation curve to the left by weakening alpha1-beta1 contacts in the T-state, increasing hemoglobin's O2 affinity at the low PO2 of high altitude",
+        "B) It eliminates the Bohr effect entirely, ensuring that pH changes during hyperventilation do not alter O2 binding",
+        "C) It increases the cooperativity of O2 binding (higher Hill coefficient), making hemoglobin switch more abruptly between T and R states",
+        "D) It increases 2,3-BPG binding affinity in the central cavity, stabilizing the T-state and promoting O2 unloading at tissues"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Pro-119→Ala substitution in the alpha chain of bar-headed goose hemoglobin reduces a hydrophobic contact at the alpha1-beta1 interface, destabilizing the T (tense, deoxy) state relative to the R (relaxed, oxy) state. This shifts the oxygen-hemoglobin dissociation curve to the left, meaning hemoglobin has a higher O2 affinity — critical for loading O2 in the lungs at the very low partial pressures of oxygen encountered above 9,000 m. The bird retains the Bohr effect (option B is wrong), which helps with O2 unloading at tissues. The mutation does not affect cooperativity (option C) or 2,3-BPG binding (option D); rather, it intrinsically favors the R-state conformation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Root effect, observed in the hemoglobin of many teleost fish, refers to a phenomenon where lowering blood pH causes:",
+      "options": [
+        "A) A rightward shift of the dissociation curve without reducing the maximum O2 saturation — identical to the standard Bohr effect found in mammals",
+        "B) A dramatic reduction in the maximum oxygen-carrying capacity of hemoglobin (reduced cooperativity and lower saturation plateau), which is exploited in the rete mirabile of the swim bladder and choroid rete of the eye to generate supraphysiological PO2",
+        "C) Hemoglobin to switch from O2 transport to CO2 transport by converting to carbaminohemoglobin irreversibly",
+        "D) An increase in O2 affinity rather than a decrease, enabling fish hemoglobin to load more O2 in the acidic venous blood"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Root effect is distinct from the Bohr effect. While the Bohr effect shifts the O2 dissociation curve rightward (lowering affinity but maintaining maximal saturation), the Root effect causes a pH-dependent reduction in the maximum O2 saturation — hemoglobin simply cannot become fully saturated even at very high PO2. This property is exploited in the countercurrent multiplier of the rete mirabile: lactic acid secreted by gas gland cells acidifies blood in the rete, triggering massive O2 release from Root-effect hemoglobin. The released O2 is trapped by countercurrent exchange, generating PO2 values exceeding 100 atm in deep-sea fish swim bladders. The same mechanism operates in the choroid rete to supply the avascular retina. This is not irreversible carbamino formation (option C), and the effect decreases, not increases, O2 affinity (option D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Crocodilians possess a unique cardiovascular feature — the foramen of Panizza — connecting the left and right aortic arches. During prolonged diving, what is the functional significance of the right-to-left cardiac shunt that crocodilians employ?",
+      "options": [
+        "A) It directs fully oxygenated blood from the left ventricle into the pulmonary circulation to maintain constant lung inflation",
+        "B) It eliminates the need for hemoglobin by allowing direct gas exchange between the aortic arches",
+        "C) It increases pulmonary blood flow during dives to maximize O2 extraction from residual lung air",
+        "D) It allows deoxygenated blood to bypass the lungs and enter the systemic circulation, reducing pulmonary blood flow when gas exchange is impossible during a dive, thereby conserving energy and directing blood preferentially to essential organs"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Crocodilians have a complete interventricular septum (unlike other reptiles) but retain both left and right aortic arches, connected by the foramen of Panizza. At the surface, high pulmonary blood flow ensures efficient oxygenation, with the left aortic arch (arising from the right ventricle) carrying mostly oxygenated blood due to the shunt dynamics. During diving, increased pulmonary vascular resistance (via vagal-mediated vasoconstriction) causes deoxygenated blood from the right ventricle to preferentially flow through the left aortic arch into the systemic circulation — a right-to-left shunt. This bypasses the non-functional lungs, reduces energetically wasteful pulmonary perfusion, and may deliver CO2-rich blood to the stomach to aid gastric acid secretion (the 'dive and digest' hypothesis). This shunting capability is unique among archosaurs.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The juxtaglomerular apparatus (JGA) consists of macula densa cells and juxtaglomerular (granular) cells. When the macula densa detects decreased NaCl delivery to the distal tubule, tubuloglomerular feedback (TGF) produces which of the following responses?",
+      "options": [
+        "A) The macula densa releases ATP and adenosine, causing constriction of the afferent arteriole, which decreases GFR to match the reduced tubular flow",
+        "B) The macula densa releases prostaglandin E2 (PGE2) and reduces its production of adenosine, leading to dilation of the afferent arteriole, increased glomerular capillary pressure, and restoration of GFR toward normal",
+        "C) The macula densa signals juxtaglomerular cells to release renin, which converts angiotensinogen to angiotensin I, but this has no effect on GFR — only on systemic blood pressure",
+        "D) The macula densa directly releases aldosterone, which acts on the collecting duct to increase sodium reabsorption without affecting GFR"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tubuloglomerular feedback (TGF) is a local mechanism that couples NaCl delivery at the macula densa to afferent arteriolar tone. When NaCl delivery decreases (e.g., due to low GFR or volume depletion), the macula densa cells detect reduced Na⁺/K⁺/2Cl⁻ (NKCC2) cotransporter activity. In response, they release vasodilatory prostaglandins (PGE2) and reduce release of ATP/adenosine (which are vasoconstrictors acting on A1 adenosine receptors on afferent arteriolar smooth muscle). The net effect is afferent arteriolar dilation, which increases glomerular capillary hydrostatic pressure and restores GFR. Simultaneously, reduced NaCl delivery triggers renin release from JG cells (via prostaglandin signaling and reduced stretch), activating the RAAS cascade. Option A describes the response to increased NaCl delivery (the opposite scenario). Option C is partially true about renin but incorrect that it has no local GFR effect. Option D is wrong — aldosterone is released by the adrenal cortex, not macula densa.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Insects excrete nitrogenous waste primarily as uric acid. In the Malpighian tubule system, the primary urine is formed by secretion of KCl into the tubule lumen, followed by water movement. Which statement correctly describes uric acid handling?",
+      "options": [
+        "A) Uric acid is filtered from the hemolymph across a glomerulus-like structure at the blind end of each Malpighian tubule",
+        "B) Uric acid dissolves freely in the primary urine and remains in solution throughout the hindgut, exiting as a dilute aqueous waste",
+        "C) Uric acid is synthesized de novo within the rectal pad epithelium and excreted directly without ever entering the Malpighian tubule lumen",
+        "D) Uric acid is actively secreted into the Malpighian tubule lumen via urate transporters, then precipitates in the hindgut as water is reabsorbed, allowing near-complete water recovery"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In insects, Malpighian tubules secrete ions (primarily K⁺ via a vacuolar H⁺-ATPase coupled to a K⁺/H⁺ antiporter on the apical membrane) into the tubule lumen, with Cl⁻ following paracellularly. Water moves osmotically, creating the primary urine. Uric acid is actively secreted into the tubule lumen by urate transporters. The primary urine then flows into the hindgut, where the rectal pads (or cryptonephric system in some species) actively reabsorb water and KCl. As water is removed, uric acid — which has very low solubility — precipitates as crystals or a paste. This precipitation is key to the water-conserving strategy: because uric acid leaves solution, it does not contribute to osmotic pressure, allowing virtually complete water reabsorption. There is no glomerular filtration in insects (option A is wrong). Option D incorrectly states uric acid remains dissolved.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a patch-clamp experiment using the cell-attached configuration on a hippocampal neuron, a researcher observes rectangular current steps of approximately 2.5 pA at a holding potential of -60 mV. When the holding potential is changed to -80 mV, the same channel shows current steps of 5.0 pA. The reversal potential of the channel is closest to:",
+      "options": ["A) -100 mV", "B) -40 mV", "C) 0 mV", "D) +30 mV"],
+      "correctAnswer": "B",
+      "explanation": "Single-channel conductance (gamma) is constant, so i = gamma × (Vm - Erev). At -60 mV: 2.5 pA = gamma × (-60 - Erev). At -80 mV: 5.0 pA = gamma × (-80 - Erev). The ratio gives: 2.5/5.0 = (-60 - Erev)/(-80 - Erev), so 0.5 × (-80 - Erev) = (-60 - Erev), giving -40 - 0.5Erev = -60 - Erev, thus 0.5Erev = -20, and Erev = -40 mV. Checking: gamma = 2.5/(−60 − (−40)) = 2.5/(−20) = −0.125 pA/mV. The negative sign indicates inward current convention (current flowing into the cell is negative in standard convention, but the magnitude of 2.5 pA observed as a downward deflection at −60 mV is consistent with an inward current through a channel with Erev = −40 mV). This reversal potential is consistent with a K⁺ leak channel or possibly a mixed cation channel.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The space constant (lambda) of an axon is defined as lambda = sqrt(rm/ri), where rm is membrane resistance and ri is internal (axoplasmic) resistance per unit length. Which modification would MOST effectively increase the space constant and thus improve passive signal propagation?",
+      "options": [
+        "A) Decreasing axon diameter, which increases ri and decreases rm",
+        "B) Adding myelination, which dramatically increases rm while leaving ri essentially unchanged",
+        "C) Replacing K⁺ leak channels with additional Na⁺ leak channels, which increases rm",
+        "D) Increasing the extracellular K⁺ concentration, which depolarizes the resting potential and decreases ri"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The space constant lambda = sqrt(rm/ri) determines how far a passive (electrotonic) signal spreads along an axon before decaying to 37% of its initial amplitude. To increase lambda, one must increase rm (membrane resistance) and/or decrease ri (axoplasmic resistance). Myelination wraps multiple layers of lipid-rich membrane around the axon, increasing rm by a factor of ~5,000 (since the myelin layers act as resistors in series). The axoplasmic resistance ri is unchanged because myelin is external. This dramatically increases lambda, allowing current to spread passively from one node of Ranvier to the next — the basis of saltatory conduction. Option A would decrease lambda (smaller diameter increases ri by r^2 while rm scales as r). Option C would decrease rm (more open channels reduce membrane resistance). Option D does not meaningfully change ri, which depends on axoplasm resistivity and cross-sectional area, not ion concentrations in the extracellular space.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In skeletal muscle, the length-tension relationship shows that maximum active tension is generated at the optimal sarcomere length (~2.2 micrometers in mammalian muscle). At a sarcomere length of 3.6 micrometers, active tension is essentially zero. This is because:",
+      "options": [
+        "A) Titin molecules are fully stretched and generate maximal passive tension that opposes active contraction",
+        "B) Tropomyosin permanently blocks all actin binding sites at extreme sarcomere lengths regardless of Ca²⁺ concentration",
+        "C) The T-tubule system disconnects from the sarcoplasmic reticulum at long sarcomere lengths, preventing Ca²⁺ release",
+        "D) The thick and thin filaments no longer overlap, so cross-bridges cannot form between myosin heads and actin binding sites"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The active length-tension relationship in striated muscle arises from the geometry of thick (myosin, ~1.6 micrometer) and thin (actin, ~1.0 micrometer from Z-disc) filament overlap. At optimal length (~2.2 micrometers), there is maximal overlap between actin filaments and the myosin cross-bridge-bearing region (the S1 heads are distributed along the thick filament except for the bare zone of ~0.2 micrometers). As sarcomere length increases beyond optimal, overlap decreases and fewer cross-bridges can form. At ~3.6 micrometers (1.6 + 2 × 1.0), thin filaments are pulled completely out of the A-band — zero overlap means zero cross-bridge cycling and zero active tension. Titin contributes to passive tension at long lengths (option A) but does not prevent active tension. The regulatory mechanism (tropomyosin/troponin) still responds to Ca²⁺ normally (option C is wrong). T-tubule-SR coupling is not mechanically disrupted by stretch (option D is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Brown adipose tissue (BAT) generates heat through non-shivering thermogenesis. The key molecular mechanism involves uncoupling protein 1 (UCP1). Which statement BEST describes how UCP1 produces heat?",
+      "options": [
+        "A) UCP1 inhibits Complex IV (cytochrome c oxidase), causing electrons to leak from the electron transport chain and react with O2 to form superoxide, which generates heat through Fenton chemistry",
+        "B) UCP1 activates a futile cycle of ATP synthesis and immediate hydrolysis by a BAT-specific ATPase, converting all substrate energy to heat",
+        "C) UCP1 transports fatty acids across the inner mitochondrial membrane, and the beta-oxidation of these fatty acids directly generates heat without involving the electron transport chain",
+        "D) UCP1 is a proton channel in the inner mitochondrial membrane that dissipates the proton-motive force by allowing H⁺ to flow back to the matrix without passing through ATP synthase, converting the electrochemical gradient energy directly into heat"
+      ],
+      "correctAnswer": "D",
+      "explanation": "UCP1 (thermogenin) is a 32-kDa protein located in the inner mitochondrial membrane of brown adipocytes. It functions as a regulated proton transporter (H⁺ carrier) that provides an alternative pathway for protons to re-enter the mitochondrial matrix, bypassing ATP synthase (Complex V). Normally, the proton-motive force (approximately 200 mV, consisting of both the membrane potential and pH gradient) generated by the electron transport chain drives ATP synthesis. When UCP1 is activated (by long-chain fatty acids, and inhibited by purine nucleotides like GDP and ATP), protons flow through UCP1 down their electrochemical gradient. The energy that would have been used for ATP synthesis is instead released as heat. The electron transport chain continues to oxidize substrates and pump protons, but without the constraint of the proton gradient (which is being dissipated), it runs at maximal rate — consuming O2 and substrates rapidly and generating substantial heat. BAT is richly vascularized and innervated by sympathetic neurons; norepinephrine activates beta-3 adrenergic receptors, triggering lipolysis and UCP1 activation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 40,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pulsatile release of GnRH from the hypothalamus is critical for normal reproductive function. If a patient is given a continuous GnRH agonist infusion (e.g., leuprolide) rather than pulsatile delivery, the long-term effect on the anterior pituitary gonadotrophs is:",
+      "options": [
+        "A) Sustained stimulation of LH and FSH secretion, leading to hyperstimulation of the gonads and elevated sex steroid levels",
+        "B) No change in gonadotropin secretion because GnRH receptors do not desensitize",
+        "C) Initial stimulation (flare) of LH/FSH release followed by downregulation and desensitization of GnRH receptors, resulting in markedly suppressed LH and FSH — effectively a chemical castration",
+        "D) Selective suppression of FSH while maintaining normal LH pulsatility, causing arrest of folliculogenesis without affecting ovulation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "GnRH receptors on anterior pituitary gonadotrophs require pulsatile stimulation for sustained signaling. Continuous exposure to a GnRH agonist initially causes a 'flare' — a transient surge of LH and FSH release from existing gonadotroph stores (days 1-7). However, sustained receptor occupancy leads to receptor internalization, downregulation of GnRH receptor expression, and desensitization of intracellular signaling (uncoupling of Gq/11 from PLC). By 2-4 weeks, LH and FSH secretion is profoundly suppressed, resulting in hypogonadotropic hypogonadism. This is the mechanism exploited clinically: leuprolide is used to treat prostate cancer (reducing testosterone), endometriosis, precocious puberty, and in IVF protocols (after the flare, to suppress premature LH surges). The pulsatile requirement reflects the biology: low-frequency GnRH pulses (~1/90 min) favor FSH secretion, while high-frequency pulses favor LH — continuous exposure shuts down both.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding fetal hemoglobin (HbF) and its physiological significance, evaluate each statement:\nS1: TRUE — HbF (alpha2-gamma2) has a lower affinity for 2,3-BPG than adult HbA (alpha2-beta2) because the gamma chain has a serine at position 143 instead of histidine, reducing electrostatic interactions with 2,3-BPG in the central cavity.\nS2: FALSE — The higher O2 affinity of HbF compared to HbA ensures that oxygen transfers from maternal to fetal blood across the placenta, where maternal and fetal blood mix directly.\nS3: TRUE — In sickle cell disease, persistence of HbF expression (hereditary persistence of fetal hemoglobin, HPFH) is clinically protective because HbF inhibits the polymerization of deoxy-HbS.\nS4: FALSE — HbF has the same P50 as HbA when stripped of all organic phosphates, demonstrating that the difference in O2 affinity is entirely due to differential 2,3-BPG binding.",
+      "options": [
+        "A) S1 TRUE, S2 FALSE, S3 TRUE, S4 TRUE — all evaluated correctly",
+        "B) S1, S3, and S4 are correctly evaluated; S2 is incorrectly evaluated because the FALSE label is wrong — maternal and fetal blood do mix directly",
+        "C) S1, S2, and S3 are correctly evaluated; S4 is incorrectly evaluated because stripped HbF and HbA do NOT have identical P50 values — HbF has intrinsically slightly higher O2 affinity even without 2,3-BPG",
+        "D) Only S1 and S3 are correctly evaluated; both S2 and S4 are incorrectly evaluated"
+      ],
+      "correctAnswer": "C",
+      "explanation": "S1 is correctly labeled TRUE: the gamma subunit of HbF has Ser-143 instead of His-143 in the beta subunit of HbA. Histidine-143 in HbA forms a salt bridge with the negatively charged phosphate groups of 2,3-BPG in the central cavity between beta chains. Serine cannot form this interaction, so 2,3-BPG binds HbF less tightly, and HbF operates at higher effective O2 affinity in vivo. S2 is correctly labeled FALSE: maternal and fetal blood do NOT mix in the placenta. Gas exchange occurs across the placental barrier (syncytiotrophoblast), and it is the higher O2 affinity of HbF that allows it to 'pull' O2 from maternal HbA. S3 is correctly labeled TRUE: HbF (alpha2-gamma2) cannot co-polymerize with HbS (alpha2-betaS2) because polymerization requires specific lateral contacts between deoxy-betaS subunits. HbF disrupts polymer formation, which is why HPFH ameliorates sickle cell disease and why hydroxyurea (which reactivates gamma-globin) is therapeutic. S4 is INCORRECTLY labeled: when stripped of 2,3-BPG, HbF still has a slightly higher O2 affinity than HbA (lower P50). The difference is mostly due to 2,3-BPG, but there is an intrinsic component from the gamma chain's slightly different tertiary structure affecting R-T equilibrium. Therefore S4's TRUE label is wrong — it should be FALSE.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding the comparative physiology of circulatory systems, evaluate each statement:\nS1: TRUE — In fish, blood passes through the gill capillaries and then directly to the systemic capillaries in a single circuit, meaning systemic blood pressure is relatively low compared to the pulmonary-systemic double circuit of mammals.\nS2: FALSE — Amphibians such as frogs have a completely septated ventricle that prevents any mixing of oxygenated and deoxygenated blood.\nS3: TRUE — The spiral valve (conus arteriosus) in frogs helps direct oxygenated blood preferentially toward the systemic arches and deoxygenated blood toward the pulmocutaneous arches, despite having a single ventricle.\nS4: TRUE — Octopuses have a closed circulatory system with branchial hearts that pump blood through the gills, in contrast to most other molluscs which have open circulatory systems.",
+      "options": [
+        "A) All four statements are correctly evaluated",
+        "B) S1, S3, and S4 are correctly evaluated; S2 is correctly evaluated (frogs indeed lack a septum and blood does mix)",
+        "C) S1, S2, S3, and S4 are all correctly evaluated — this is the same as option A",
+        "D) S1, S3, and S4 are correctly evaluated; S2 is correctly evaluated as FALSE since frogs have an unseptated ventricle"
+      ],
+      "correctAnswer": "D",
+      "explanation": "S1 TRUE — correct: Fish have a single-circuit system where blood flows from the heart to the gills (where it is oxygenated but pressure drops across gill capillaries) and then to the systemic tissues. This means systemic blood pressure is lower than in mammals, where a dedicated pulmonary circuit operates at low pressure while the systemic circuit maintains high pressure via the left ventricle. S2 FALSE — correctly labeled: Frogs (and most amphibians) have a three-chambered heart with two atria but a single, undivided ventricle. Some mixing of oxygenated (from lungs/skin) and deoxygenated (from body) blood occurs, though internal trabeculae and differential timing of atrial contraction minimize it. S3 TRUE — correct: The spiral valve in the conus arteriosus of frogs acts as a flow-directing device. When deoxygenated blood is ejected first (from the right side of the ventricle), low resistance in the pulmocutaneous circuit and the spiral valve's geometry direct it toward the lungs and skin. When oxygenated blood follows, higher systemic pressure and valve geometry direct it to the systemic arches. S4 TRUE — correct: Cephalopods (octopuses, squid) are unique among molluscs in having a closed circulatory system with capillaries. They have a systemic heart and two branchial hearts that boost blood pressure entering the gill capillaries.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding immune evasion strategies and cancer immunology, evaluate each statement:\nS1: TRUE — Trypanosoma brucei (African sleeping sickness) evades the adaptive immune response through antigenic variation, sequentially expressing different variant surface glycoprotein (VSG) genes from a repertoire of over 1,000, so each new wave of parasitemia presents a novel antigenic coat.\nS2: FALSE — PD-1 (Programmed Death-1) is a co-stimulatory receptor on T cells that enhances T cell activation when it binds PD-L1 on antigen-presenting cells.\nS3: TRUE — Tumor cells that upregulate PD-L1 exploit the PD-1/PD-L1 checkpoint to suppress cytotoxic T cell responses; anti-PD-1 antibodies (e.g., nivolumab) block this interaction and restore anti-tumor immunity.\nS4: FALSE — MHC class I downregulation by tumor cells makes them more susceptible to cytotoxic CD8⁺ T cell killing because T cells can recognize cells lacking MHC I.",
+      "options": [
+        "A) S1 and S3 are correctly evaluated; S2 is correctly labeled FALSE; S4 is incorrectly evaluated because MHC I loss actually makes cells targets for NK cells, not CD8⁺ T cells",
+        "B) All four are correctly evaluated",
+        "C) S1 and S3 are correctly evaluated; S2 is correctly evaluated; S4's FALSE label is wrong — MHC I downregulation does make cells more susceptible but to NK cells via the 'missing self' hypothesis, so the reasoning in S4 is wrong",
+        "D) S1, S2, and S3 are correctly evaluated; S4 is incorrectly evaluated — its FALSE label should be TRUE"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 TRUE — correct: Trypanosoma brucei undergoes antigenic variation by switching expression among ~1,600 VSG genes. Only one VSG is expressed at a time from a telomeric expression site. As the immune system mounts an antibody response against the current VSG, a small subpopulation of parasites that have switched to a new VSG proliferates, producing the characteristic waves of parasitemia. S2 FALSE — correctly labeled: PD-1 is an inhibitory receptor (immune checkpoint), not co-stimulatory. When PD-1 on activated T cells binds PD-L1 (B7-H1) on target cells or APCs, it recruits SHP-2 phosphatase, which dephosphorylates key signaling molecules (ZAP70, CD28, PI3K), suppressing T cell activation, proliferation, and cytokine production. This is a normal mechanism of peripheral tolerance that prevents autoimmunity. S3 TRUE — correct: Tumors exploit this checkpoint by upregulating PD-L1, effectively 'turning off' infiltrating T cells. Immune checkpoint inhibitors (anti-PD-1: nivolumab, pembrolizumab; anti-PD-L1: atezolizumab) block this interaction, unleashing anti-tumor T cell responses. S4 FALSE — the label is correct (the statement describes an incorrect mechanism), but the reasoning needs clarification: MHC I downregulation makes tumor cells LESS susceptible to CD8⁺ T cells (which require MHC I to recognize targets) but MORE susceptible to NK cells via the 'missing self' hypothesis. NK cells are inhibited by MHC I through KIR receptors; loss of MHC I removes this inhibition, activating NK cell cytotoxicity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 43,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding the hypothalamic-pituitary-thyroid (HPT) axis, evaluate each statement:\nS1: TRUE — TRH (thyrotropin-releasing hormone) is a tripeptide (pyroGlu-His-Pro-NH2) released from the paraventricular nucleus of the hypothalamus into the hypophyseal portal system, stimulating TSH release from anterior pituitary thyrotrophs.\nS2: TRUE — T4 (thyroxine) is the predominant thyroid hormone secreted by the thyroid gland, but T3 (triiodothyronine) is the more biologically active form, generated primarily by peripheral 5'-deiodination of T4 by type 1 and type 2 deiodinases.\nS3: FALSE — Negative feedback of thyroid hormones operates exclusively at the hypothalamic level by suppressing TRH release, with no direct effect on the anterior pituitary.\nS4: TRUE — Graves' disease is caused by thyroid-stimulating immunoglobulins (TSI) that bind and activate the TSH receptor, causing hyperthyroidism that is NOT suppressed by negative feedback because TSI production is independent of the HPT axis.",
+      "options": [
+        "A) S1, S2, and S4 are correctly evaluated; S3 is incorrectly labeled FALSE — negative feedback does operate only at the hypothalamus",
+        "B) S1, S2, and S4 are correctly evaluated; S3 is correctly labeled FALSE because T3/T4 exert negative feedback at BOTH the hypothalamus (suppressing TRH) and the anterior pituitary (suppressing TSH directly)",
+        "C) All four are correctly evaluated",
+        "D) S1 and S2 are correct; S3 is incorrectly evaluated; S4 is incorrectly evaluated because TSI is suppressed by normal negative feedback"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 TRUE — correct: TRH is indeed a modified tripeptide (pyroglutamyl-histidyl-prolinamide) from the PVN of the hypothalamus, delivered via the hypophyseal portal system to the anterior pituitary. S2 TRUE — correct: The thyroid gland secretes ~90% T4 and ~10% T3. T4 is a prohormone; peripheral tissues convert it to the active T3 via 5'-deiodinase (types D1 and D2). Type 3 deiodinase (D3) converts T4 to reverse T3 (rT3), which is inactive. S3 FALSE — correctly labeled: Negative feedback of thyroid hormones operates at both levels. T3 directly suppresses TSH-beta and alpha-glycoprotein subunit gene transcription in thyrotrophs (this is actually the dominant feedback site), AND T3/T4 suppress TRH release from the hypothalamus. The anterior pituitary effect is quantitatively more important clinically — this is why TSH is the most sensitive test for thyroid dysfunction. S4 TRUE — correct: Graves' disease involves autoantibodies (TSI/TSHR-Ab) that mimic TSH and chronically stimulate the TSH receptor. Because these antibodies are produced by B cells/plasma cells independently of the HPT axis, the normal negative feedback loop cannot suppress them, leading to autonomous hyperthyroidism.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding cochlear mechanics and auditory transduction, evaluate each statement:\nS1: TRUE — The basilar membrane exhibits tonotopic organization: it is narrow and stiff at the base (responding to high frequencies) and wide and flexible at the apex (responding to low frequencies).\nS2: FALSE — Inner hair cells are the primary sensory receptors responsible for auditory perception, while outer hair cells are primarily structural support cells with no role in amplification.\nS3: TRUE — Outer hair cells contain the motor protein prestin, which undergoes voltage-dependent conformational changes (electromotility) that amplify basilar membrane motion by up to 40-60 dB, sharpening frequency selectivity.\nS4: TRUE — The endolymph in the scala media has an unusually high K⁺ concentration (~150 mM) and a positive endocochlear potential (~+80 mV), maintained by the stria vascularis, creating a large electrochemical driving force for K⁺ entry through mechanotransduction channels at hair cell stereocilia tips.",
+      "options": [
+        "A) S1, S3, and S4 are correctly evaluated; S2 is incorrectly labeled FALSE — outer hair cells truly are only structural",
+        "B) S1, S2, S3, and S4 are all correctly evaluated",
+        "C) S1, S3, and S4 are correctly evaluated; S2 is correctly labeled FALSE because outer hair cells DO play a critical amplification role via prestin-driven electromotility, not merely structural support",
+        "D) Only S1 and S4 are correctly evaluated; S2 and S3 are both incorrectly labeled"
+      ],
+      "correctAnswer": "C",
+      "explanation": "S1 TRUE — correct: The basilar membrane varies systematically in width (~0.1 mm at base to ~0.5 mm at apex) and stiffness (~100-fold stiffer at base) along the cochlear spiral, creating a tonotopic frequency map. High-frequency sounds (20 kHz) maximally displace the base; low frequencies (20 Hz) displace the apex. This was first described by von Bekesy. S2 FALSE — correctly labeled: Outer hair cells (OHCs) are NOT merely structural. While inner hair cells (IHCs, ~3,500) are indeed the primary sensory transducers sending ~95% of afferent signals to the auditory nerve, outer hair cells (OHCs, ~12,000) serve as cochlear amplifiers. S3 TRUE — correct: Prestin (SLC26A5) is a member of the SLC26 anion transporter family uniquely expressed in OHCs. It undergoes rapid voltage-dependent conformational changes (contracting with depolarization, elongating with hyperpolarization) at the microsecond timescale. This electromotility feeds mechanical energy back into the basilar membrane, amplifying the traveling wave and sharpening the frequency tuning by 40-60 dB. Loss of prestin or OHC damage causes ~40-60 dB hearing loss. S4 TRUE — correct: The stria vascularis (marginal, intermediate, and basal cells) pumps K⁺ into the endolymph, maintaining ~150 mM K⁺ and a +80 mV endocochlear potential. Since hair cells have a resting potential of ~-45 mV (IHC) to -70 mV (OHC), the total driving force for K⁺ entry through open mechanotransduction channels at stereocilia tips is ~125-150 mV — an enormous electrochemical gradient.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding motor unit recruitment and muscle fiber types, evaluate each statement:\nS1: TRUE — According to the size principle (Henneman), smaller alpha motor neurons innervating type I (slow-oxidative) fibers are recruited first, and larger motor neurons innervating type IIx (fast-glycolytic) fibers are recruited last as force demand increases.\nS2: FALSE — A single motor unit can contain a mixture of type I and type II muscle fibers within the same muscle.\nS3: TRUE — The force-velocity relationship of skeletal muscle shows that as the velocity of shortening increases, the force a muscle can generate decreases hyperbolically, reaching zero at Vmax.\nS4: TRUE — Cardiac muscle cannot undergo tetanic contraction because the long duration of the cardiac action potential (plateau phase due to L-type Ca²⁺ channels) creates an extended refractory period that outlasts the mechanical contraction.",
+      "options": [
+        "A) S1, S3, and S4 are correctly evaluated; S2 is incorrectly labeled FALSE — motor units can indeed contain mixed fiber types",
+        "B) S1, S2, S3, and S4 are all correctly evaluated",
+        "C) S1, S3, and S4 are correctly evaluated; S2 is correctly labeled FALSE because all fibers in a single motor unit are of the SAME type, determined by the motor neuron's firing characteristics",
+        "D) S1 and S4 are correctly evaluated; S2 and S3 are incorrectly evaluated"
+      ],
+      "correctAnswer": "C",
+      "explanation": "S1 TRUE — correct: Henneman's size principle states that motor neurons are recruited in order of increasing size. Small motor neurons (low threshold, slow conduction velocity) innervate type I fibers and are recruited first for low-force activities. As force demand increases, progressively larger motor neurons are recruited, activating type IIa (fast-oxidative) and then type IIx (fast-glycolytic) fibers. This orderly recruitment allows fine gradation of force. S2 FALSE — correctly labeled: All muscle fibers within a single motor unit are of the same histochemical type. This is because the motor neuron determines fiber type through trophic factors and firing pattern. Cross-reinnervation experiments show that if a fast motor neuron is made to innervate slow fibers, the fibers gradually convert to fast type (and vice versa). A muscle may contain multiple motor units of different types, but each individual motor unit is homogeneous. S3 TRUE — correct: The force-velocity relationship (Hill's equation) describes an inverse hyperbolic relationship between shortening velocity and force. At isometric conditions (v=0), force is maximal (P0). As velocity increases, fewer cross-bridges can form and complete their power strokes, so force decreases, reaching zero at maximum shortening velocity (Vmax). S4 TRUE — correct: The cardiac action potential lasts ~200-300 ms due to the plateau phase (Phase 2), during which L-type Ca²⁺ channels are open and Na⁺ channels are inactivated. The absolute refractory period extends through most of the contraction, preventing summation and tetanus — essential for maintaining rhythmic pump function.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding torpor, hibernation, and heterothermy, evaluate each statement:\nS1: TRUE — During hibernation, ground squirrels reduce their body temperature to near ambient (as low as ~2-5°C), with heart rate dropping from ~300 bpm to ~5 bpm, achieving up to 90% energy savings.\nS2: FALSE — Hummingbirds enter daily torpor at night, reducing body temperature from ~40°C to ~18°C, but this is fundamentally different from hibernation because torpor lasts only hours whereas hibernation lasts weeks to months.\nS3: TRUE — Heterothermic mammals can selectively maintain brain temperature above body temperature during torpor entry by using countercurrent heat exchange in the carotid rete mirabile.\nS4: FALSE — Arousal from hibernation is powered exclusively by shivering thermogenesis, with brown adipose tissue playing no role in rewarming.",
+      "options": [
+        "A) S1, S2, and S3 are correctly evaluated; S4 is incorrectly labeled FALSE — BAT is actually the primary heat source during arousal from hibernation",
+        "B) All four are correctly evaluated",
+        "C) S1 and S2 are correctly evaluated; S3 is incorrectly evaluated; S4 is correctly evaluated",
+        "D) Only S1 is correctly evaluated; all others are incorrectly labeled"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 TRUE — correct: Hibernating ground squirrels (Ictidomys/Spermophilus) can reduce Tb to within 1-2°C of ambient temperature. Their metabolic rate drops to ~2-5% of euthermic values, heart rate falls from ~200-300 to 3-10 bpm, and breathing may slow to one breath per several minutes. They periodically arouse (interbout arousals) every 1-2 weeks, which paradoxically consumes ~70-80% of their winter energy budget. S2 FALSE — correctly labeled as FALSE because the statement claims torpor is 'fundamentally different' from hibernation. While there are quantitative differences (duration, depth), daily torpor and seasonal hibernation represent a continuum of heterothermy controlled by similar mechanisms (reduced hypothalamic set point). Many researchers consider daily torpor a form of heterothermy on the same spectrum. The FALSE label is appropriate given the assertion of fundamental difference. S3 TRUE — correct: Some heterothermic mammals (e.g., certain artiodactyls) possess a carotid rete mirabile that provides countercurrent heat exchange. During torpor entry, selective brain warming helps protect neural tissue during cooling. However, not all hibernators have a rete, so this statement is broadly true for heterothermic mammals with this structure. S4 FALSE — incorrectly labeled: Arousal from hibernation critically depends on non-shivering thermogenesis (NST) in brown adipose tissue, particularly in the initial phase of rewarming. BAT, located primarily in the interscapular region, generates heat via UCP1 to warm the thoracic region and heart first (enabling cardiac function), before shivering can begin at higher body temperatures. The correct label should be FALSE, and it is labeled FALSE, but the reasoning is wrong — BAT plays a MAJOR role. The label is correct but the explanation within the statement is wrong.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 40,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding Spemann's organizer and morphogen gradients in vertebrate development, evaluate each statement:\nS1: TRUE — The Spemann-Mangold organizer (dorsal lip of the blastopore in amphibians) secretes BMP antagonists such as Chordin, Noggin, and Follistatin, which establish a BMP activity gradient — low BMP dorsally induces neural tissue, high BMP ventrally specifies epidermis.\nS2: FALSE — Morphogen gradients specify cell fate based on concentration thresholds (the French Flag model), but this requires direct cell-cell contact and cannot work over distances greater than one cell diameter.\nS3: TRUE — Sonic hedgehog (Shh) secreted by the notochord and floor plate of the neural tube acts as a ventral morphogen, specifying different neuronal subtypes (floor plate, V3 interneurons, motor neurons, V2 interneurons) at progressively lower concentrations.\nS4: TRUE — Fate mapping experiments using vital dyes, genetic lineage tracing (Cre-lox), or chimeric grafts can determine the prospective fate of cells at specific positions in the early embryo.",
+      "options": [
+        "A) S1, S3, and S4 are correctly evaluated; S2 is correctly labeled FALSE because morphogens act as long-range signals through diffusion, transcytosis, or cytoneme-mediated transport — they do NOT require direct contact",
+        "B) All four are correctly evaluated",
+        "C) S1 and S4 are correctly evaluated; S2 is incorrectly labeled; S3 is incorrectly labeled",
+        "D) Only S1 is correctly evaluated; S2, S3, and S4 are all incorrectly labeled"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 TRUE — correct: The Spemann-Mangold organizer was demonstrated in the famous 1924 transplantation experiment where the dorsal lip of the blastopore from a donor gastrula was grafted to the ventral side of a host, inducing a secondary body axis. Molecularly, the organizer secretes BMP (Bone Morphogenetic Protein) antagonists — Chordin, Noggin, Follistatin — which bind BMPs and prevent them from signaling on the dorsal side. The resulting BMP activity gradient (high ventral, low dorsal) patterns the dorso-ventral axis: low BMP allows neural induction (ectoderm becomes neuroectoderm), while high BMP specifies epidermis. The organizer also secretes Wnt antagonists (sFRPs, Dkk1, Cerberus) and Nodal antagonists. S2 FALSE — correctly labeled: Morphogens by definition act at a distance, forming concentration gradients across fields of cells spanning tens to hundreds of micrometers. They can diffuse through extracellular space, undergo transcytosis, or travel via cytoneme-mediated transport. The French Flag model (Wolpert, 1969) specifically describes how different concentration thresholds activate different gene sets at different distances from the source. S3 TRUE — correct: Shh forms a ventral-to-dorsal gradient in the developing neural tube. The highest concentrations (at the floor plate) activate transcription factors like Nkx2.2, intermediate levels activate Olig2 (motor neuron specification), and lower levels activate Pax6/Irx3. This is mediated through Gli transcription factors (Gli1/2 activators vs. Gli3 repressor). S4 TRUE — correct: Fate mapping is a foundational technique in developmental biology.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures oxygen dissociation curves for hemoglobin from four species under standardized conditions (pH 7.4, 37°C). The P50 values obtained are: Species A (human adult HbA) = 26 mmHg; Species B (llama) = 21 mmHg; Species C (human fetal HbF) = 19 mmHg; Species D (elephant seal during diving) = 30 mmHg. The llama lives at 4,500 m altitude where atmospheric PO2 is approximately 80 mmHg (alveolar PO2 ~45 mmHg). Based on these data, which interpretation is MOST accurate?",
+      "dataContext": "P50 values (mmHg) at pH 7.4, 37°C:\n| Species | P50 (mmHg) | Environment |\n|---------|-----------|-------------|\n| Human adult (HbA) | 26 | Sea level |\n| Llama | 21 | 4,500 m altitude |\n| Human fetus (HbF) | 19 | In utero |\n| Elephant seal (diving) | 30 | Marine, deep diving |\n\nAlveolar PO2 at sea level: ~100 mmHg\nAlveolar PO2 at 4,500 m: ~45 mmHg\nUmbilical vein PO2: ~30-35 mmHg\nMixed venous PO2 during seal dive: ~15-20 mmHg",
+      "options": [
+        "A) The llama's lower P50 compared to human HbA is disadvantageous because it means the hemoglobin cannot release O2 efficiently at tissues, making the llama poorly adapted to high altitude",
+        "B) The elephant seal's higher P50 reflects an adaptation for maximizing O2 unloading to tissues during prolonged breath-hold dives when blood PO2 falls to very low values, ensuring the steep portion of the dissociation curve matches the tissue PO2 range",
+        "C) Human fetal HbF has the highest P50, ensuring efficient O2 transfer across the placenta by having lower affinity than maternal HbA",
+        "D) All four hemoglobins would be equally saturated at an alveolar PO2 of 45 mmHg because the differences in P50 are negligible"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The P50 is the PO2 at which hemoglobin is 50% saturated. A higher P50 means lower O2 affinity (right-shifted curve), while a lower P50 means higher O2 affinity (left-shifted curve). The elephant seal (P50 = 30 mmHg) has a right-shifted curve compared to human HbA. During a deep dive, when the seal's blood PO2 drops to 15-20 mmHg, the steep portion of its dissociation curve (centered around P50 = 30) ensures efficient O2 unloading to working muscles and brain. This is a genuine adaptation: the seal's large blood volume and high hemoglobin concentration ensure adequate total O2 stores, while the right-shifted curve facilitates extraction. Option A is wrong: the llama's lower P50 (21 mmHg, left-shifted) is ADVANTAGEOUS at altitude because it enhances O2 loading in the lungs at the low alveolar PO2 (~45 mmHg). At this PO2, llama Hb achieves ~85% saturation versus ~73% for human HbA. The llama still unloads O2 adequately at tissues because the tissue PO2 is very low (~20-25 mmHg), well below even the llama's P50. Option C reverses the relationship — HbF has the LOWEST P50 (19 mmHg), meaning HIGHEST affinity. Option D is incorrect — at 45 mmHg, saturation differences are significant: llama ~85%, human HbA ~73%, human HbF ~88%, seal ~60%.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studying renal function infuses inulin (freely filtered, not reabsorbed or secreted) and para-aminohippuric acid (PAH; freely filtered and actively secreted) into a patient. The following data are obtained:\n\nPlasma inulin: 1.0 mg/mL; Urine inulin: 125 mg/mL; Urine flow rate: 1.0 mL/min\nPlasma PAH: 0.02 mg/mL; Urine PAH: 12 mg/mL\n\nUsing these data, which calculation and interpretation is correct?",
+      "dataContext": "Inulin clearance = (Uinulin × V) / Pinulin = (125 × 1.0) / 1.0 = 125 mL/min = GFR\nPAH clearance = (UPAH × V) / PPAH = (12 × 1.0) / 0.02 = 600 mL/min = RPF (effective)\nFiltration Fraction = GFR / RPF = 125 / 600 = 0.208 (~21%)\n\nNormal values: GFR = 120-130 mL/min; RPF = 600-700 mL/min; FF = 18-22%",
+      "options": [
+        "A) GFR = 125 mL/min is normal but RPF = 12 mL/min is dangerously low, indicating severe renal artery stenosis",
+        "B) The inulin clearance overestimates GFR because inulin is partially reabsorbed in the proximal tubule",
+        "C) PAH clearance of 600 mL/min represents the total blood flow to the kidney, not just plasma flow",
+        "D) GFR = 125 mL/min and RPF = 600 mL/min are both normal; the filtration fraction of ~21% indicates that approximately one-fifth of the plasma flowing through the glomerulus is filtered — consistent with normal renal function"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Inulin clearance is the gold standard for measuring GFR because inulin is freely filtered at the glomerulus and is neither reabsorbed nor secreted by the tubules. GFR = (Uinulin × V) / Pinulin = (125 mg/mL × 1.0 mL/min) / 1.0 mg/mL = 125 mL/min, which is within the normal range. PAH clearance measures effective renal plasma flow (eRPF) because PAH is both filtered and secreted, with extraction approaching ~90% in a single pass at low plasma concentrations. eRPF = (UPAH × V) / PPAH = (12 × 1.0) / 0.02 = 600 mL/min, which is normal. The filtration fraction (FF = GFR/RPF = 125/600 = 0.208) indicates that ~21% of plasma entering the glomerulus is filtered — a normal value. Option B incorrectly calculates RPF. Option C is wrong — inulin is NOT reabsorbed (that is precisely why it is the gold standard). Option D confuses plasma flow with blood flow; PAH clearance measures renal PLASMA flow, not total renal blood flow (which would be RPF / (1 - hematocrit)).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A neuroscientist records compound action potentials (CAPs) from a peripheral nerve containing both myelinated A-fibers and unmyelinated C-fibers. The recording electrode is placed 10 cm from the stimulating electrode. Two distinct peaks are observed in the CAP: Peak 1 appears at 1.0 ms and Peak 2 at 5.0 ms after stimulation. Which interpretation of these data is correct?",
+      "dataContext": "Recording setup: Extracellular electrodes, 10 cm (0.1 m) separation\nPeak 1: Latency = 1.0 ms → Conduction velocity = 0.1 m / 0.001 s = 100 m/s\nPeak 2: Latency = 5.0 ms → Conduction velocity = 0.1 m / 0.005 s = 20 m/s\n\nTypical fiber conduction velocities:\n| Fiber Type | Myelination | Diameter | Velocity |\n|-----------|-------------|----------|----------|\n| A-alpha | Heavy myelin | 13-20 μm | 80-120 m/s |\n| A-beta | Moderate myelin | 6-12 μm | 35-75 m/s |\n| A-delta | Light myelin | 1-5 μm | 5-30 m/s |\n| C | Unmyelinated | 0.4-1.2 μm | 0.5-2.0 m/s |",
+      "options": [
+        "A) Peak 1 (100 m/s) corresponds to large-diameter myelinated A-alpha fibers (proprioceptive and motor); Peak 2 (20 m/s) corresponds to thinly myelinated A-delta fibers (fast pain and temperature), and unmyelinated C-fibers would produce a third peak at ~50-100 ms",
+        "B) Peak 1 represents C-fibers and Peak 2 represents A-alpha fibers because unmyelinated fibers always conduct faster than myelinated fibers",
+        "C) Both peaks represent the same fiber population recorded at two different time points due to signal reflection at the nerve ends",
+        "D) Peak 2 (20 m/s) represents unmyelinated C-fibers, which typically conduct at 0.5-2.0 m/s — the data must contain an experimental error"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The compound action potential represents the summed activity of all activated nerve fibers. Because different fiber types have different conduction velocities (determined by diameter and myelination), they arrive at the recording electrode at different times, producing distinct peaks. Peak 1 at 100 m/s matches A-alpha fibers (large, heavily myelinated, 80-120 m/s) — these carry proprioceptive afferents from muscle spindles and Golgi tendon organs, as well as alpha motor neuron efferents. Peak 2 at 20 m/s falls in the A-delta range (5-30 m/s, thinly myelinated), which carries first/fast pain and temperature sensation. C-fibers (0.5-2.0 m/s, unmyelinated) would be expected at 50-200 ms latency (0.1 m / 0.5-2.0 m/s = 50-200 ms), forming a third, smaller and broader peak. The observation of only two peaks could mean the stimulus was subthreshold for C-fibers or they were obscured by noise. Option B reverses the relationship. Option C describes a nonexistent phenomenon in standard nerve recording. Option D incorrectly assigns the 20 m/s peak to C-fibers, which are much slower.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A comparative physiologist measures urine osmolarity and urine-to-plasma (U/P) osmolarity ratios in four vertebrate species maintained in their natural environments:\n\nSpecies W (beaver, freshwater): Urine osmolarity = 80 mOsm/L, U/P ratio = 0.27\nSpecies X (lab rat): Urine osmolarity = 1,200 mOsm/L, U/P ratio = 4.0\nSpecies Y (kangaroo rat, desert): Urine osmolarity = 5,500 mOsm/L, U/P ratio = 18.3\nSpecies Z (marine teleost fish): Urine osmolarity = 350 mOsm/L, U/P ratio = 1.17\n\nWhich interpretation best explains the differences?",
+      "dataContext": "| Species | Habitat | Urine Osm (mOsm/L) | Plasma Osm (mOsm/L) | U/P Ratio | Urine Volume |\n|---------|---------|--------------------|--------------------|-----------|-------------|\n| Beaver | Freshwater | 80 | 300 | 0.27 | High |\n| Lab rat | Terrestrial | 1,200 | 300 | 4.0 | Moderate |\n| Kangaroo rat | Desert | 5,500 | 300 | 18.3 | Very low |\n| Marine teleost | Seawater | 350 | 300 | 1.17 | Very low |\n\nNote: Plasma osmolarity is ~300 mOsm/L in all four species (osmoregulators).",
+      "options": [
+        "A) Species W produces dilute urine (U/P < 1) to excrete the excess water gained osmotically in a hypotonic environment; Species Y produces maximally concentrated urine to conserve water in the desert; Species Z produces small volumes of slightly hypertonic urine because marine teleosts primarily excrete excess salt via gill ionocytes, not the kidney",
+        "B) Species Z has the highest U/P ratio because marine fish face the greatest osmotic challenge and must produce the most concentrated urine",
+        "C) All species should produce urine with U/P = 1.0 because urine osmolarity always equals plasma osmolarity in vertebrates",
+        "D) Species Y produces dilute urine because desert animals need to flush out excess sand particles ingested with food"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This question tests comparative renal physiology across different osmoregulatory challenges. Species W (beaver) is a freshwater mammal facing constant osmotic water influx through skin and gills (or equivalent permeable surfaces). To maintain plasma osmolarity at ~300 mOsm/L, it produces copious dilute urine (80 mOsm/L, U/P = 0.27), excreting excess water while retaining solutes via active reabsorption in the thick ascending limb and distal nephron. Low ADH levels keep collecting ducts water-impermeable. Species X (lab rat) produces moderately concentrated urine, reflecting a balanced terrestrial water economy. Species Y (kangaroo rat) has extraordinarily long loops of Henle generating a massive medullary gradient, producing one of the most concentrated urines in nature (up to ~6,000 mOsm/L). This, combined with metabolic water production and minimal water loss, allows survival without drinking. Species Z (marine teleost) faces osmotic water LOSS to hypertonic seawater. It drinks seawater, absorbs water intestinally, and excretes excess NaCl via chloride cells in the gills. The kidney produces only small volumes of iso- to slightly hypertonic urine because marine teleost kidneys lack loops of Henle and cannot produce highly concentrated urine. Salt excretion is primarily branchial, not renal.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An endocrinologist measures serum hormone levels in a patient presenting with fatigue, weight gain, and cold intolerance. Results:\n\nTSH: 45 mIU/L (normal: 0.4-4.0 mIU/L)\nFree T4: 0.3 ng/dL (normal: 0.8-1.8 ng/dL)\nFree T3: 0.8 pg/mL (normal: 2.3-4.2 pg/mL)\nAnti-TPO antibodies: 850 IU/mL (normal: <35 IU/mL)\n\nWhich diagnosis and pathophysiological interpretation is most consistent with these data?",
+      "dataContext": "| Hormone/Marker | Patient Value | Normal Range | Status |\n|---------------|--------------|--------------|--------|\n| TSH | 45 mIU/L | 0.4-4.0 | Markedly elevated |\n| Free T4 | 0.3 ng/dL | 0.8-1.8 | Low |\n| Free T3 | 0.8 pg/mL | 2.3-4.2 | Low |\n| Anti-TPO Ab | 850 IU/mL | <35 | Markedly elevated |\n\nInterpretive framework:\n- High TSH + Low T4/T3 = Primary hypothyroidism\n- Low TSH + Low T4/T3 = Secondary (pituitary) or tertiary (hypothalamic) hypothyroidism\n- Low TSH + High T4/T3 = Primary hyperthyroidism\n- Anti-TPO = autoantibodies against thyroid peroxidase (Hashimoto's marker)",
+      "options": [
+        "A) Primary hyperthyroidism (Graves' disease) — the elevated TSH is stimulating the thyroid to overproduce T4 and T3",
+        "B) Secondary hypothyroidism due to pituitary adenoma — the high TSH reflects a TSH-secreting tumor, and T4/T3 should be high, indicating a data inconsistency",
+        "C) Primary hypothyroidism due to Hashimoto's thyroiditis — autoimmune destruction of thyroid tissue (evidenced by high anti-TPO antibodies) reduces T4/T3 production, and the elevated TSH reflects intact negative feedback with the pituitary attempting to stimulate the failing thyroid gland",
+        "D) Euthyroid sick syndrome — all values are artifacts of acute illness and will normalize without treatment"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The pattern of markedly elevated TSH with low free T4 and free T3 is the hallmark of primary hypothyroidism — the thyroid gland itself is failing, reducing thyroid hormone output. The intact pituitary senses low circulating T3/T4 (via reduced binding to thyroid hormone receptors on thyrotrophs), which relieves negative feedback inhibition of TSH gene transcription and TRH receptor expression, resulting in dramatically increased TSH secretion. The extremely elevated anti-TPO antibodies (>24× upper limit of normal) indicate Hashimoto's thyroiditis (chronic autoimmune thyroiditis), the most common cause of primary hypothyroidism in iodine-sufficient populations. In Hashimoto's, auto-reactive CD4⁺ T cells, CD8⁺ cytotoxic T cells, and anti-TPO/anti-thyroglobulin antibodies progressively destroy thyroid follicular cells. TPO (thyroid peroxidase) is the enzyme responsible for iodination and coupling reactions in thyroid hormone synthesis. Option A is wrong — Graves' shows low TSH and high T4/T3. Option B describes a TSH-oma, which would have high TSH AND high T4/T3. Option D is wrong because the markedly elevated anti-TPO antibodies indicate autoimmune etiology, not sick euthyroid syndrome.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether the vestibular otolith organs or the semicircular canals are primarily responsible for the compensatory eye movements observed when a cat is subjected to linear acceleration (e.g., moving forward in a straight line). Which experimental approach would BEST distinguish between these two vestibular components?",
+      "experimentContext": "Background: The vestibular system contains two types of sensors: (1) Otolith organs (utricle and saccule) — detect linear acceleration and head tilt via calcium carbonate crystals (otoconia) on a gelatinous membrane overlying hair cells; (2) Semicircular canals (anterior, posterior, lateral) — detect angular acceleration via endolymph movement deflecting the cupula in the ampulla.\n\nCompensatory eye movements during linear acceleration (translational VOR) maintain visual stability.\n\nAvailable techniques: Selective surgical ablation, caloric stimulation, galvanic vestibular stimulation, pharmacological blockade, genetic knockout models.",
+      "options": [
+        "A) Apply bilateral caloric stimulation (warm water irrigation) to both ears and measure whether linear VOR persists — caloric stimulation selectively activates otolith organs",
+        "B) Surgically ablate both semicircular canals while preserving the otolith organs intact, then test whether linear acceleration still produces compensatory eye movements (translational VOR); compare with a separate group where otolith organs are selectively destroyed (by centrifugation-induced otoconial displacement or streptomycin injection targeting type I hair cells) with canals intact",
+        "C) Rotate the cat at constant angular velocity and measure whether linear eye movements appear during the rotation — if they do, the canals must mediate linear VOR",
+        "D) Simply blindfold the cat and record spontaneous eye movements — any nystagmus observed must be vestibular in origin and can distinguish otolith from canal contributions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "To distinguish between otolith and canal contributions to the translational VOR, one needs a loss-of-function approach that selectively eliminates each component. The most definitive design involves two experimental groups: (1) Canal-ablated, otolith-intact: If the translational VOR is mediated primarily by otolith organs, this group should retain near-normal compensatory eye movements during linear acceleration. Surgical plugging or ablation of all three semicircular canals eliminates canal function while preserving otolith input. (2) Otolith-ablated, canal-intact: If otolith organs are destroyed (e.g., by targeted otoconial removal, aminoglycoside toxicity to type I hair cells, or genetic knockout of otoconia formation like Otop1 mutant mice), linear VOR should be abolished even though angular VOR (from canals) remains. This double-dissociation design provides strong evidence for the role of each component. Historical experiments by Angelaki and colleagues using rhesus monkeys with canal plugging demonstrated that the translational VOR depends on otolith input, not canals. Option A is wrong because caloric stimulation activates semicircular canals (not otoliths) via convective endolymph flow. Option C tests angular VOR, not linear. Option D cannot distinguish the two systems.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A research team hypothesizes that UCP1 in brown adipose tissue (BAT) is essential for non-shivering thermogenesis during cold exposure in mice. They have access to UCP1 knockout (UCP1-KO) mice and wild-type (WT) controls. Which experimental design would most rigorously test this hypothesis while controlling for confounding variables?",
+      "experimentContext": "Background: UCP1 (uncoupling protein 1) in the inner mitochondrial membrane of brown adipocytes dissipates the proton gradient as heat rather than driving ATP synthesis. Non-shivering thermogenesis (NST) is an autonomic response to cold mediated by sympathetic activation of BAT via beta-3 adrenergic receptors.\n\nAvailable tools: UCP1-KO mice (global knockout), WT littermate controls, implantable temperature telemeters, indirect calorimetry chambers (measuring O2 consumption and CO2 production), thermal imaging cameras, cold exposure chambers (4°C), thermoneutral chambers (30°C), norepinephrine injection, EMG electrodes for detecting shivering.\n\nPotential confounding variables: compensatory shivering, differences in body composition, cage temperature, group housing (social thermoregulation), prior cold acclimation.",
+      "options": [
+        "A) Place UCP1-KO and WT mice in cold (4°C) and measure survival time only — if KO mice die faster, UCP1 is essential for thermogenesis",
+        "B) House UCP1-KO and WT mice at thermoneutrality (30°C) for 2 weeks to equalize baseline conditions, then acutely expose both groups individually to 4°C while simultaneously monitoring: (i) core body temperature via implanted telemeters, (ii) whole-body O2 consumption via indirect calorimetry, (iii) interscapular BAT temperature via thermal imaging, and (iv) EMG activity from trunk muscles to quantify shivering; additionally, inject a separate cohort with norepinephrine at thermoneutrality to measure maximal NST capacity independent of shivering",
+        "C) Feed UCP1-KO mice a high-fat diet to increase their fat mass and then compare their cold tolerance with lean WT mice — differences in cold tolerance would prove UCP1's role",
+        "D) Compare UCP1-KO and WT mice at thermoneutrality only, measuring basal metabolic rate — if KO mice have lower BMR, UCP1 is essential for all heat production"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is a rigorous experimental design because it addresses multiple potential confounds: (1) Prior housing at thermoneutrality (30°C) eliminates differences in cold acclimation history — at thermoneutrality, BAT is minimally activated and both genotypes are metabolically comparable. (2) Individual housing prevents social thermoregulation. (3) Multiple simultaneous measurements: core temperature telemetry tracks thermoregulatory success; indirect calorimetry (VO2) measures total metabolic heat production; thermal imaging of interscapular BAT directly visualizes BAT activation; EMG quantifies compensatory shivering (UCP1-KO mice will shiver intensely to compensate for lost NST). (4) The norepinephrine injection protocol (Cannon and Nedergaard method) measures maximal NST capacity independent of shivering — NE stimulates beta-3 receptors on BAT, and the resulting increase in VO2 above baseline represents NST capacity. UCP1-KO mice show zero NE-induced NST, definitively proving UCP1's role. This was essentially the design used by Enerback et al. (1997) when they generated UCP1-KO mice, demonstrating these mice are cold-sensitive and lack NE-induced NST but survive by increased shivering if gradually acclimated. Option A measures only a crude endpoint without mechanistic insight. Option C introduces body composition as a confound. Option D tests the wrong condition — UCP1's role is negligible at thermoneutrality.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 40,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    }
+  ]
+}
