@@ -1,0 +1,309 @@
+{
+  "batchId": "olympiad-campbell-ch46-animal-reproduction",
+  "subject": "Biology",
+  "topic": "Animal Reproduction",
+  "difficulty": "EXPERT",
+  "totalQuestions": 94,
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "Spermatogenesis in mammals involves a transition from diploid spermatogonia to haploid spermatozoa. Which cell type undergoes meiosis I?",
+      "options": [
+        "Spermatogonia (type A and type B)",
+        "Primary spermatocytes, which are diploid (2n/4C) cells that undergo meiosis I to produce secondary spermatocytes (1n/2C)",
+        "Spermatids, which divide to form mature spermatozoa",
+        "Sertoli cells, which undergo meiosis to generate supporting structures"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Spermatogenesis proceeds through defined stages: (1) Spermatogonial stem cells (type A) undergo mitotic renewal and produce type B spermatogonia. (2) Type B spermatogonia enter meiosis, becoming PRIMARY spermatocytes (diploid, 2n/4C after S-phase DNA replication). (3) Primary spermatocytes undergo meiosis I (including crossing over during prophase I), producing two SECONDARY spermatocytes (haploid, 1n/2C). (4) Secondary spermatocytes undergo meiosis II, producing four round SPERMATIDS (haploid, 1n/1C). (5) Spermatids undergo spermiogenesis (differentiation, not division) — acrosome formation, flagellum assembly, nuclear condensation (histones replaced by protamines), cytoplasmic shedding — to become mature spermatozoa. Spermatogonia undergo mitosis, not meiosis. Sertoli cells are somatic support cells that never undergo meiosis. The entire process takes approximately 64-74 days in humans.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "During mammalian fertilization, what prevents polyspermy (fertilization by multiple sperm)?",
+      "options": [
+        "The egg produces toxic substances that kill all sperm except the first to arrive",
+        "The fast block (membrane depolarization within seconds) and slow block (cortical granule exocytosis modifying the zona pellucida within minutes) provide two sequential barriers to additional sperm entry",
+        "Only one sperm is ever released per ejaculation in mammals",
+        "The oviduct filters out all but one sperm before they reach the egg"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Polyspermy prevention in mammals involves two blocks: (1) Fast (electrical) block: In sea urchins, this is well-characterized — sperm-egg fusion causes immediate membrane depolarization (from -70 mV to +20 mV), preventing additional sperm binding. In mammals, the fast block is less clearly established and may be less important. (2) Slow (cortical reaction) block: This is the primary polyspermy block in mammals. Upon sperm-egg fusion, a Ca2+ wave propagates across the egg cortex. Ca2+ triggers exocytosis of cortical granules (membrane-bound vesicles beneath the plasma membrane). Cortical granule enzymes (including ovastacin, a metalloendoprotease) cleave ZP2 protein in the zona pellucida, preventing additional sperm from binding and penetrating ('zona hardening'). Cortical granule contents also modify the plasma membrane. This cortical reaction takes 1-5 minutes. The Ca2+ oscillations triggered by PLCζ (phospholipase C zeta) introduced by the sperm also activate the egg to complete meiosis II.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the mammalian menstrual cycle:\n(I) The follicular phase is characterized by rising FSH and estradiol levels, with follicular growth driven by FSH from the anterior pituitary\n(II) The LH surge triggers ovulation by activating proteolytic enzymes that break down the follicle wall, and converts the remaining follicle into the corpus luteum\n(III) The luteal phase is characterized by high progesterone from the corpus luteum, which maintains the endometrium and inhibits GnRH pulsatility\n(IV) If pregnancy does not occur, the corpus luteum degenerates after 14 days because it requires continuous LH stimulation that FSH cannot provide",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "(I) TRUE: During the follicular phase (days 1-14), FSH from the anterior pituitary stimulates growth of ovarian follicles. The growing follicles produce increasing amounts of estradiol, which proliferates the endometrium (proliferative phase). (II) TRUE: Mid-cycle, the rising estradiol crosses a threshold (~200 pg/mL for >50 hours) and triggers positive feedback on kisspeptin neurons in the AVPV, causing the GnRH/LH surge. The LH surge activates MMPs and COX-2 in the follicle wall, leading to rupture (ovulation) approximately 36 hours later. The remaining granulosa and theca cells luteinize under LH influence, forming the corpus luteum. (III) TRUE: The corpus luteum secretes high levels of progesterone (and some estrogen), which transforms the endometrium into a secretory state, inhibits GnRH pulse frequency (favoring FSH over LH), and provides negative feedback suppressing the HPG axis. (IV) FALSE: Corpus luteum regression (luteolysis) occurs after ~14 days due to LOSS of LH support (as LH levels decline from progesterone negative feedback) and possibly prostaglandin F2α. In some species, LH (not hCG) maintains the CL early, but the mechanism of luteolysis is complex and involves intrinsic CL programming, not simply lack of FSH.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher tracks follicular development in a woman's ovarian cycle using ultrasound and hormone measurements:\n\nCycle day | Dominant follicle diameter (mm) | Estradiol (pg/mL) | LH (mIU/mL) | Progesterone (ng/mL)\n5 | 8 | 40 | 5 | 0.5\n10 | 16 | 200 | 8 | 0.8\n13 | 22 | 350 | 60 | 1.5\n14 | collapsed | 250 | 25 | 3.0\n21 | corpus luteum | 150 | 8 | 15.0\n28 | regressing CL | 50 | 5 | 2.0\n\nAt which day did ovulation most likely occur, and what evidence supports this?",
+      "options": [
+        "Day 5 — the follicle begins growing",
+        "Day 10 — estradiol reaches 200 pg/mL",
+        "Between days 13-14 — the LH surge (60 mIU/mL) is present on day 13, the follicle collapses by day 14, and progesterone begins rising, all consistent with ovulation occurring approximately 36 hours after the LH surge onset",
+        "Day 21 — progesterone peaks, indicating egg release"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Multiple converging evidence points to ovulation between days 13-14: (1) LH surge: Day 13 shows LH = 60 mIU/mL (compared to baseline 5-8), a >6× increase. The LH surge is the definitive trigger for ovulation. (2) Follicle collapse: The dominant follicle reaches 22 mm on day 13 (near-ovulatory size, typically 18-24 mm) and is 'collapsed' by day 14, indicating rupture and oocyte release. (3) Progesterone rise: Progesterone begins increasing from day 13 (1.5 → 3.0 → 15.0), confirming luteinization — the granulosa cells of the ruptured follicle are producing progesterone as the corpus luteum forms. (4) Estradiol peak and decline: Estradiol peaks at day 13 (350 pg/mL, from the mature follicle) and drops after ovulation as the follicle transitions to corpus luteum. The standard clinical estimate is ovulation ~36 hours after LH surge onset, placing it late day 13 to early day 14. Day 21 peak progesterone (15 ng/mL) confirms successful ovulation occurred ~7 days earlier.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The acrosome reaction is essential for sperm to penetrate the zona pellucida. What triggers the acrosome reaction in mammals?",
+      "options": [
+        "Contact with the cumulus cell layer surrounding the egg",
+        "Binding to ZP3 (zona pellucida glycoprotein 3) triggers Ca2+ influx via CatSper channels and exocytosis of acrosomal enzymes including acrosin and hyaluronidase",
+        "Exposure to uterine fluid pH change during capacitation",
+        "Physical pressure as the sperm pushes against the zona pellucida"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The acrosome reaction in mammals is a regulated exocytic event: (1) Capacitation: Before the acrosome reaction can occur, sperm must undergo capacitation in the female reproductive tract (6-8 hours in humans). Capacitation involves cholesterol removal from the sperm membrane, protein tyrosine phosphorylation, and hyperactivated motility. (2) ZP3 binding: Capacitated sperm bind ZP3 glycoprotein on the zona pellucida via sperm surface receptors. This triggers a signaling cascade involving Gi protein activation, PLCδ, IP3-mediated Ca2+ release, and extracellular Ca2+ influx through CatSper channels (sperm-specific calcium channels). (3) Acrosomal exocytosis: Elevated Ca2+ triggers SNARE-mediated fusion of the outer acrosomal membrane with the sperm plasma membrane, releasing acrosomal enzymes (acrosin — a serine protease, hyaluronidase, and others) that digest a path through the zona pellucida. (4) Inner acrosomal membrane exposure reveals IZUMO1, which binds JUNO on the egg plasma membrane for fusion. CatSper mutations cause male infertility.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which reproductive strategy best describes animals that release eggs and sperm into the water for external fertilization?",
+      "options": [
+        "Viviparity — live birth after internal development",
+        "Ovoviviparity — eggs hatch internally",
+        "Broadcast spawning — simultaneous release of gametes into the aquatic environment, often synchronized by environmental cues (temperature, lunar cycle, pheromones)",
+        "Internal fertilization with external development (oviparity)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Broadcast spawning is the most common reproductive strategy in marine invertebrates and many fish/amphibians. Organisms release enormous numbers of eggs and sperm into the water column, where fertilization occurs externally. Key features: (1) Synchronization: Spawning must be temporally coordinated to maximize fertilization success. Cues include lunar cycles (coral mass spawning on the Great Barrier Reef occurs after the full moon in spring), water temperature, day length, and species-specific pheromones (spawning-inducing substances, SIS). (2) High gamete production: Because dilution and predation in the water column cause massive gamete loss, broadcast spawners produce enormous quantities — a single female sea urchin may release millions of eggs. (3) Species recognition: Bindin proteins on the sperm acrosome surface bind species-specific receptors on the egg vitelline envelope, preventing hybridization. (4) Low parental investment per offspring but high fecundity. This contrasts with internal fertilization strategies that typically involve fewer, more heavily invested offspring.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a particular gene (Gene X) expressed in Sertoli cells is required for spermatogenesis. She generates a Sertoli cell-specific knockout of Gene X using AMH-Cre (AMH is expressed specifically in Sertoli cells). Which phenotypic assessments would most comprehensively evaluate the effect?",
+      "options": [
+        "Measure testis weight and assume that weight change indicates spermatogenic failure",
+        "Assess testis weight, perform histological analysis of seminiferous tubule cross-sections (staging of spermatogenesis), count sperm in the epididymis, evaluate sperm motility and morphology, test fertility by mating trials, and measure hormone levels (FSH, LH, testosterone, inhibin B)",
+        "Sequence Gene X in the knockout to confirm deletion, without phenotypic analysis",
+        "Measure testosterone levels only, since Sertoli cells produce testosterone"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Comprehensive phenotyping of a Sertoli cell-specific knockout requires multi-level analysis: (1) Gross anatomy: Testis weight (reduced if spermatogenesis fails — spermatogenic cells constitute ~75% of testicular volume). (2) Histology: H&E staining of seminiferous tubule cross-sections to identify the stage at which spermatogenesis arrests (e.g., spermatogonial arrest vs. meiotic arrest vs. spermiogenic defect). Immunostaining for specific germ cell markers (PLZF for spermatogonia, SCP3 for meiotic cells, CREM for spermatids) pinpoints the defect. (3) Sperm analysis: Epididymal sperm count, motility assessment, and morphological analysis (WHO criteria). (4) Fertility: Mating trials with proven fertile females measuring pregnancy rate, litter size, and implantation sites. (5) Hormones: FSH (elevated if Sertoli cell function is impaired — loss of inhibin B feedback), LH, testosterone (from Leydig cells, not Sertoli cells — option D is wrong), and inhibin B (Sertoli cell marker). NOTE: Sertoli cells produce inhibin B, NOT testosterone (Leydig cells produce testosterone).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Human chorionic gonadotropin (hCG) is critical for early pregnancy maintenance. What is its source and primary function?",
+      "options": [
+        "hCG is produced by the corpus luteum to stimulate implantation",
+        "hCG is produced by the syncytiotrophoblast of the developing embryo/placenta and maintains the corpus luteum by acting on LH receptors, preventing luteolysis and sustaining progesterone production during the first trimester",
+        "hCG is produced by the anterior pituitary in response to pregnancy",
+        "hCG stimulates the hypothalamus to increase GnRH pulsatility"
+      ],
+      "correctAnswer": "B",
+      "explanation": "hCG is a glycoprotein hormone produced by the syncytiotrophoblast cells of the implanting blastocyst/developing placenta. Its primary function is 'rescue' of the corpus luteum: (1) Without pregnancy, the corpus luteum degenerates by day 28, causing progesterone withdrawal and menstruation. (2) The implanting embryo (~day 6-7) begins producing hCG, which enters the maternal circulation. (3) hCG is structurally similar to LH (sharing the same α-subunit and a homologous β-subunit) and binds the LH/CG receptor (LHCGR) on corpus luteum cells. (4) This maintains the corpus luteum, sustaining progesterone production essential for endometrial support and pregnancy maintenance. (5) hCG peaks at ~10 weeks gestation, after which the placenta itself produces sufficient progesterone (luteal-placental shift), and the corpus luteum is no longer required. hCG is the hormone detected by pregnancy tests (both urine and blood β-hCG assays). It doubles approximately every 48 hours in early viable pregnancies.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sertoli cells in the testis form the blood-testis barrier. What is the functional significance of this barrier?",
+      "options": [
+        "It prevents blood from entering the seminiferous tubules",
+        "Tight junctions between adjacent Sertoli cells create a basal and adluminal compartment, immunologically isolating developing germ cells (which express novel haploid antigens after meiosis) from the immune system, preventing autoimmune orchitis",
+        "It filters nutrients to ensure only glucose reaches developing sperm",
+        "It prevents testosterone from entering the seminiferous tubules"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The blood-testis barrier (BTB) is formed by tight junctions, adherens junctions, and gap junctions between adjacent Sertoli cells near the basement membrane of the seminiferous tubule. It divides the seminiferous epithelium into two compartments: (1) Basal compartment: Contains spermatogonia and early primary spermatocytes. Accessible to immune cells and blood-borne molecules. (2) Adluminal compartment: Contains primary spermatocytes (from leptotene onward), secondary spermatocytes, and spermatids. Immunologically privileged. The critical function is immune protection: Spermatogenesis begins at puberty, long after immune tolerance is established. Post-meiotic germ cells express novel haploid-specific surface antigens that the immune system has never encountered. Without the BTB, these would be recognized as 'foreign' and attacked (autoimmune orchitis). Sertoli cells also actively create an immunosuppressive environment by secreting immunosuppressive factors. The BTB dynamically opens and closes to allow preleptotene spermatocytes to transit from basal to adluminal compartment.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about sexual reproduction strategies across the animal kingdom:\n(I) Sequential hermaphroditism (e.g., clownfish changing from male to female — protandry) is an adaptive strategy that maximizes reproductive success based on body size\n(II) Parthenogenesis (development from unfertilized eggs) occurs naturally in some reptiles, insects, and crustaceans and produces genetically identical offspring\n(III) Traumatic insemination in bedbugs involves the male piercing the female's body wall and injecting sperm directly into the hemocoel\n(IV) All mammals reproduce exclusively through internal fertilization and viviparity",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "(I) TRUE: In clownfish (Amphiprion), all individuals start as males, with the dominant fish becoming female (protandrous hermaphroditism). Since larger females produce more eggs, switching to female when large maximizes reproductive output. Conversely, some wrasses are protogynous (female-to-male), because large dominant males monopolize mating. (II) TRUE: Obligate parthenogenesis occurs in some whiptail lizards (Aspidoscelis), water fleas (Daphnia — cyclical parthenogenesis), aphids (summer generations), and komodo dragons. Most parthenogenetic offspring are genetic clones (apomixis) or near-clones (automixis with fusion of meiotic products). (III) TRUE: Traumatic (or extragenital) insemination in Cimex lectularius involves the male using a hypodermic aedeagus to pierce the female's abdomen, depositing sperm into the hemocoel. Sperm migrate through the hemolymph to the ovaries. (IV) FALSE: Monotremes (platypus, echidna) are egg-laying mammals (oviparity with internal fertilization). Marsupials practice viviparity but with short gestation and extended pouch development. Only placentals have prolonged intrauterine viviparity.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Capacitation is a functional maturation process that sperm must undergo in the female reproductive tract before they can fertilize an egg. Which molecular changes occur during capacitation?",
+      "options": [
+        "Sperm undergo a second round of DNA replication to double their genetic content",
+        "Cholesterol is removed from the sperm plasma membrane by albumin, increasing membrane fluidity; intracellular pH and Ca2+ rise; protein tyrosine phosphorylation increases; and sperm develop hyperactivated motility with asymmetric flagellar beating",
+        "The acrosome is formed de novo during capacitation",
+        "The mitochondria in the midpiece are replaced by glycolytic enzymes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Capacitation is a complex, time-dependent (6-8 hours in humans) series of molecular changes that occur in the female tract: (1) Cholesterol efflux: Albumin and HDL in oviductal fluid remove cholesterol from the sperm membrane, increasing fluidity and unmasking surface receptors needed for ZP3 binding and acrosome reaction. (2) Bicarbonate activation: HCO3- enters sperm, activates soluble adenylyl cyclase (sAC), increasing cAMP, which activates PKA. (3) PKA-dependent protein tyrosine phosphorylation: Widespread tyrosine phosphorylation events (mediated by Src-family kinases) remodel sperm signaling. (4) pH changes: Intracellular pH rises (via NHE and sNHE), contributing to CatSper channel activation. (5) Ca2+ influx: Elevated Ca2+ through CatSper channels in the principal piece of the flagellum. (6) Hyperactivation: The flagellar beat pattern changes from symmetric to highly asymmetric (whip-like), generating the mechanical force needed to penetrate the cumulus and zona pellucida. The acrosome is formed during spermiogenesis in the testis, not during capacitation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studies hormonal changes during pregnancy:\n\nWeek | hCG (mIU/mL) | Progesterone source | Progesterone (ng/mL) | Estrogen (pg/mL)\n4 | 5,000 | Corpus luteum | 15 | 200\n8 | 100,000 | Corpus luteum + placenta | 25 | 500\n12 | 50,000 | Primarily placenta | 40 | 1,000\n20 | 20,000 | Placenta | 50 | 5,000\n36 | 15,000 | Placenta | 150 | 15,000\n\nWhat does the luteal-placental shift refer to, based on these data?",
+      "options": [
+        "The shift from hCG to LH as the primary luteotropic hormone",
+        "The transition of progesterone production from the corpus luteum (weeks 4-8) to the placenta (by week 10-12), after which the corpus luteum is no longer essential for pregnancy maintenance",
+        "The shift from estrogen dominance to progesterone dominance at week 20",
+        "The transfer of the embryo from the oviduct to the uterus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The luteal-placental shift is a critical transition in early pregnancy: (1) Weeks 1-8: The corpus luteum is the primary source of progesterone, sustained by hCG from the trophoblast. Progesterone is essential for endometrial maintenance, myometrial quiescence, and immune tolerance. Loss of the CL before week 8 causes miscarriage. (2) Weeks 8-12: The placenta (specifically, the syncytiotrophoblast) progressively takes over progesterone production. The placenta converts maternal cholesterol to pregnenolone and then progesterone using CYP11A1 and 3β-HSD. (3) After week 10-12: The placenta produces sufficient progesterone independently, and the corpus luteum is no longer essential. This is confirmed clinically: luteectomy (CL removal) before 7 weeks causes miscarriage, but after 10 weeks, pregnancy continues normally. The data show hCG peaks at ~8 weeks then declines (less CL stimulation needed), while progesterone continues rising (placental production increasing). The massive rise in estrogen reflects placental estrogen production (requiring fetal adrenal DHEAS as a precursor — the feto-placental unit).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Combined oral contraceptive pills (COCPs) contain synthetic estrogen and progestin. What is the primary mechanism by which they prevent pregnancy?",
+      "options": [
+        "They directly kill sperm in the female reproductive tract",
+        "The synthetic estrogen and progestin suppress the LH surge (and to a lesser extent FSH), preventing follicular maturation and ovulation; progestin also thickens cervical mucus and thins the endometrium",
+        "They accelerate oocyte transport through the oviduct, preventing fertilization",
+        "They induce premature menopause"
+      ],
+      "correctAnswer": "B",
+      "explanation": "COCPs work through multiple complementary mechanisms: (1) PRIMARY — Ovulation suppression: The continuous exogenous estrogen and progestin provide constant negative feedback on the hypothalamic-pituitary axis, preventing the mid-cycle LH surge needed for ovulation. Without the LH surge, the dominant follicle does not rupture. The progestin component is most critical for ovulation suppression (it suppresses GnRH pulse frequency), while the estrogen stabilizes the endometrium and suppresses FSH (preventing follicular recruitment). (2) Cervical mucus: Progestin thickens cervical mucus, creating a barrier to sperm penetration (the mucus becomes scanty, viscous, and hostile to sperm — low spinnbarkeit). (3) Endometrial effects: The endometrium becomes thin and atrophic, potentially reducing receptivity to implantation if ovulation and fertilization occur (breakthrough). (4) Tubal motility: May alter fallopian tube motility. The combination of these mechanisms gives COCPs >99% effectiveness with perfect use.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The two-cell, two-gonadotropin model explains ovarian steroidogenesis. Which cells produce which hormones, and how do they cooperate?",
+      "options": [
+        "Granulosa cells produce both estrogen and progesterone independently of theca cells",
+        "Theca cells (stimulated by LH) produce androgens (androstenedione); these are transferred to granulosa cells, where aromatase (CYP19A1, stimulated by FSH) converts them to estrogens",
+        "Both theca and granulosa cells express aromatase and independently produce estrogen",
+        "Theca cells produce estrogen directly while granulosa cells produce only inhibin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The two-cell model reflects the complementary enzyme expression in ovarian follicular cells: (1) THECA CELLS (theca interna): Express LH receptors. LH activates steroidogenesis (via cAMP/PKA/StAR), producing androgens — primarily androstenedione (and some testosterone) from cholesterol. However, theca cells LACK aromatase (CYP19A1) and cannot convert androgens to estrogens. (2) GRANULOSA CELLS: Express FSH receptors. FSH induces aromatase (CYP19A1) expression. Granulosa cells take up androstenedione from adjacent theca cells and aromatize it to estrone, which is then converted to estradiol (the most potent estrogen) by 17β-HSD. Granulosa cells LACK CYP17A1 (17α-hydroxylase) and cannot produce androgens from pregnenolone/progesterone. Thus, BOTH cell types and BOTH gonadotropins are required for estrogen production. This model explains why: (a) LH alone produces only androgens (polycystic ovary syndrome phenotype with excess LH), and (b) FSH alone without theca-derived androgen substrate cannot produce estrogen.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that sperm chemotaxis toward the egg is mediated by a gradient of progesterone released from cumulus cells surrounding the oocyte. Which experiment would best test this hypothesis?",
+      "options": [
+        "Measure progesterone levels in follicular fluid",
+        "Using a microfluidic chemotaxis chamber, create a progesterone gradient and observe whether capacitated human sperm swim preferentially toward higher concentrations; use a progesterone receptor antagonist (mifepristone) to block the response; and demonstrate that the CatSper calcium channel mediates the chemotactic response since progesterone activates CatSper via ABHD2",
+        "Mix sperm with cumulus cells in a dish and observe if fertilization occurs",
+        "Knock out the progesterone receptor gene in female mice and observe fertility"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Testing sperm chemotaxis requires demonstrating directional movement in response to a chemical gradient. The microfluidic approach is ideal: (1) Create a stable, measurable progesterone gradient in a microfluidic chamber. (2) Introduce capacitated sperm and quantify directional bias (chemotactic index = % of sperm swimming toward higher concentration vs. expected 50% by chance). (3) Controls: (a) No gradient (uniform concentration) — sperm should show random movement. (b) Mifepristone (progesterone receptor antagonist) — if chemotaxis is PR-mediated, it should be blocked. However, recent evidence shows sperm progesterone response is NOT through classical nuclear PR but through a non-genomic pathway: progesterone inhibits ABHD2 (α/β-hydrolase domain containing protein 2), which normally degrades 2-arachidonoylglycerol (2-AG), an endocannabinoid that inhibits CatSper. Progesterone → ABHD2 inhibition → 2-AG accumulation blocked → CatSper activation → Ca2+ influx → chemotaxis. CatSper knockout sperm should lack the chemotactic response.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    }
+  ]
+}
