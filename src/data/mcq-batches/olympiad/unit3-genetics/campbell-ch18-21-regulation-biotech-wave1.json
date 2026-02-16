@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch18-21 Gene Regulation, Viruses & Biotech — Wave 1",
+    "version": 1,
+    "source": "olympiad-wave1",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "In E. coli, the lac operon is maximally transcribed only when both lactose is present and glucose is absent. A mutation in the adenylyl cyclase gene (cya-) would have which effect on lac operon expression?",
+      "options": [
+        "Constitutive expression of the lac operon regardless of lactose or glucose availability",
+        "Normal induction by lactose because cAMP is not involved in lac operon regulation",
+        "Very low expression even in the presence of lactose and absence of glucose, because CAP-cAMP cannot form to stimulate RNA polymerase binding",
+        "Overexpression of the lac operon because the absence of cAMP destabilizes the lac repressor"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The lac operon requires dual positive and negative regulation for maximal expression. The CAP-cAMP complex binds upstream of the lac promoter and enhances RNA polymerase binding, increasing transcription ~50-fold. Adenylyl cyclase (encoded by cya) synthesizes cAMP from ATP. In a cya- mutant, no cAMP is produced regardless of glucose levels. Without cAMP, the CAP protein cannot adopt its DNA-binding conformation and fails to stimulate transcription. Even if lactose is present (removing the lac repressor), the promoter alone is too weak for significant transcription without CAP-cAMP assistance. This is catabolite repression at its mechanistic core. Option A is wrong because loss of cAMP removes a positive activator, not a repressor. Option B is incorrect because cAMP is absolutely essential for strong lac expression. Option D is wrong because cAMP has no effect on lac repressor stability.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "MCQ",
+      "question": "The trp operon in E. coli uses attenuation as a fine-tuning mechanism. During attenuation, what molecular event determines whether the attenuator hairpin (transcription terminator) forms in the leader mRNA?",
+      "options": [
+        "The rate of ribosome translation through two tandem tryptophan codons in the leader peptide determines which alternative RNA secondary structure forms — when tryptophan is abundant, the ribosome translates quickly, allowing the 3:4 terminator hairpin to form",
+        "A tryptophan-sensing riboswitch in the 5' UTR directly binds free tryptophan and undergoes a conformational change that blocks RNA polymerase",
+        "The trp repressor binds to the attenuator sequence in the mRNA, forming a terminator structure independent of translation",
+        "Charged tRNA-Trp directly binds the leader mRNA and stabilizes the terminator hairpin without ribosomal involvement"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Attenuation in the trp operon relies on the coupling of transcription and translation in prokaryotes. The leader sequence (trpL) encodes a short peptide containing two consecutive Trp codons. Four regions in the leader mRNA can form alternative secondary structures: regions 1:2 (pause), 2:3 (anti-terminator), and 3:4 (terminator). When tryptophan is abundant, charged tRNA-Trp is plentiful, so the ribosome translates through the Trp codons rapidly, covering region 2. This forces regions 3 and 4 to pair, forming the rho-independent terminator hairpin followed by a poly-U tract, causing RNA polymerase to dissociate. When tryptophan is scarce, the ribosome stalls at the Trp codons (region 1), leaving region 2 free to pair with region 3 (anti-terminator), preventing the 3:4 terminator from forming, and allowing read-through transcription. Option B describes a riboswitch mechanism found in some organisms but not the classical trp attenuation. Option C confuses the DNA-binding trp repressor with RNA-level attenuation. Option D incorrectly removes the ribosome from the mechanism.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "MCQ",
+      "question": "In eukaryotic gene regulation, the Mediator complex serves as a critical bridge between transcription factors and RNA polymerase II. If a specific subunit of the Mediator complex that interacts with a particular activator protein is deleted, what is the most likely consequence?",
+      "options": [
+        "Complete abolition of all RNA polymerase II transcription throughout the genome",
+        "A switch from RNA polymerase II to RNA polymerase III transcription at affected promoters",
+        "Constitutive activation of genes normally repressed by the activator",
+        "Selective loss of expression of genes regulated by that specific activator, while genes regulated by other activators remain largely unaffected"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The Mediator complex is a large multi-subunit complex (~30 subunits in mammals) that serves as a coactivator by bridging gene-specific transcription factors bound at enhancers to the RNA Pol II general transcription machinery at the promoter. Individual Mediator subunits provide specific interaction surfaces for different activators. For example, the Med15 subunit interacts with Gal4 in yeast, while Med1 interacts with nuclear hormone receptors. Deleting a subunit that specifically interfaces with one activator would disrupt signal transmission from that activator to Pol II, selectively impairing its target genes. Other activators that contact different Mediator subunits would continue to function normally. Option A is incorrect because the core Mediator retains functionality for other activators (though loss of essential structural subunits could have broader effects). Option B is wrong because Pol III has its own transcription machinery and does not substitute for Pol II. Option C is nonsensical because activators promote transcription, they do not repress.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "MCQ",
+      "question": "CRISPR-Cas systems in bacteria provide adaptive immunity against bacteriophages. During the adaptation phase, what is the function of the Cas1-Cas2 complex?",
+      "options": [
+        "It cleaves double-stranded DNA of invading phages using a guide RNA-directed mechanism",
+        "It scans the bacterial genome for self-targeting spacers and removes them to prevent autoimmunity",
+        "It processes the pre-crRNA transcript into mature crRNAs that guide the effector complex",
+        "It integrates short fragments of foreign DNA (protospacers) as new spacers into the CRISPR array between repeat sequences at the leader-proximal end"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The CRISPR-Cas adaptive immune response occurs in three stages: adaptation, expression/processing, and interference. During adaptation (also called spacer acquisition), the Cas1-Cas2 complex acts as the molecular machinery that captures short DNA fragments (protospacers, typically 30-40 bp) from the invading phage genome and integrates them as new spacers into the CRISPR array. Integration occurs preferentially at the leader-proximal end, creating a chronological record of past infections, with the most recent spacer at the front. Cas1 is the catalytic subunit (an integrase) while Cas2 plays a structural role. The complex recognizes protospacer adjacent motifs (PAMs) in the foreign DNA to select appropriate sequences and avoids self-targeting. Option A describes the interference stage carried out by Cas9 (Type II) or Cascade/Cas3 (Type I). Option B describes a quality control function that, while important, is not the primary role of Cas1-Cas2. Option C describes the expression/processing stage performed by Cas6 (Type I/III) or RNase III (Type II).",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 19,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "MCQ",
+      "question": "During the HIV life cycle, the viral integrase enzyme catalyzes the insertion of the proviral DNA into the host genome. If a patient is treated with an integrase strand transfer inhibitor (INSTI) such as raltegravir, which step is specifically blocked?",
+      "options": [
+        "Reverse transcription of viral RNA into double-stranded DNA in the cytoplasm",
+        "Binding of gp120 to CD4 and CCR5/CXCR4 co-receptors during viral entry",
+        "Proteolytic cleavage of the Gag-Pol polyprotein by HIV protease during viral maturation",
+        "The strand transfer reaction where the 3'-processed viral DNA ends attack the host chromosomal DNA, preventing covalent insertion of the provirus"
+      ],
+      "correctAnswer": "D",
+      "explanation": "HIV integrase catalyzes two sequential reactions: (1) 3' processing, in which a dinucleotide (GT) is removed from each 3' end of the viral DNA, exposing reactive 3'-OH groups; and (2) strand transfer, in which the processed 3' ends carry out a nucleophilic attack on the host chromosomal DNA, inserting the viral DNA. INSTIs like raltegravir, elvitegravir, and dolutegravir specifically block the strand transfer step by chelating the divalent metal ions (Mg2+) in the integrase active site, preventing the viral DNA from attacking the host DNA. The 3' processing step may still occur, but the integration cannot be completed. Option A describes the step inhibited by NRTIs and NNRTIs (reverse transcriptase inhibitors). Option B describes the step inhibited by entry inhibitors like maraviroc (CCR5 antagonist) or enfuvirtide (fusion inhibitor). Option C describes the step blocked by protease inhibitors like ritonavir.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 19,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "MCQ",
+      "question": "In lambda phage, the decision between the lytic and lysogenic pathways depends on a competition between the CI repressor and Cro protein. Which statement correctly describes how this genetic switch operates?",
+      "options": [
+        "CI repressor binds OR1 and OR2 with high affinity, activating its own transcription from PRM while simultaneously repressing Cro from PR — but when CI levels become too high, binding at OR3 represses PRM, creating an autoregulatory negative feedback loop",
+        "Cro protein activates CI transcription by binding to OL, while CI represses its own transcription by binding OR3 only",
+        "The decision is entirely stochastic and does not depend on the relative concentrations or binding affinities of CI and Cro",
+        "CI and Cro compete for the same single operator site, and whichever protein reaches that site first determines the developmental outcome irreversibly"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The lambda genetic switch is one of the best-understood gene regulatory circuits. The right operator (OR) has three binding sites: OR1, OR2, and OR3. CI repressor binds cooperatively to OR1 and OR2 with highest affinity. Binding at OR1 blocks the PR promoter (preventing cro transcription), while CI bound at OR2 makes a direct protein-protein contact with RNA polymerase sigma factor at PRM, activating its own transcription (positive autoregulation). This creates a self-sustaining lysogenic state. However, when CI concentration becomes very high, it occupies OR3 as well, which overlaps PRM, repressing its own transcription (negative autoregulation). This elegant feedback maintains CI at optimal levels. Upon UV damage, RecA stimulates CI autocleavage, removing repression at OR and allowing Cro expression, which initiates the lytic pathway. Option B reverses the regulatory logic. Option C ignores the detailed molecular mechanism. Option D oversimplifies the three-site operator architecture.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "EXPERT",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 19,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher constructs a genomic DNA library and a cDNA library from the same human tissue. When screening both libraries for the beta-globin gene, she finds the genomic clone is 1,600 bp while the cDNA clone is only 626 bp. What accounts for this size difference?",
+      "options": [
+        "The cDNA library was constructed from degraded mRNA, resulting in an incomplete clone",
+        "The genomic clone contains introns, the 5' UTR, 3' UTR, and flanking sequences that are removed or absent in the processed mRNA from which the cDNA was derived",
+        "The cDNA clone underwent spontaneous deletion during bacterial propagation",
+        "The genomic clone contains multiple tandem copies of the beta-globin gene fused together"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The human beta-globin gene spans approximately 1,600 bp of genomic DNA, containing three exons separated by two introns (IVS1: 130 bp, IVS2: 850 bp). The mature mRNA, after splicing removes the introns and adding the poly(A) tail, corresponds to approximately 626 bp of coding and UTR sequence. A cDNA library is constructed by reverse transcription of mature mRNA, so cDNA clones lack introns, promoter sequences, and other upstream/downstream genomic elements. The genomic clone preserves the complete gene structure including introns and flanking sequences. This size difference is a hallmark distinguishing genomic from cDNA clones for any intron-containing gene. Option A would produce a truncated clone, not a precisely intron-free one. Option C is unlikely to produce a perfect intron-excised product. Option D is not consistent with the observed size or gene structure.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sanger dideoxy sequencing relies on chain termination by ddNTPs. If a sequencing reaction contains a ratio of 100:1 dATP:ddATP, which of the following best describes what happens during the extension reaction?",
+      "options": [
+        "All fragments terminate at the same position because ddATP is preferentially incorporated over dATP",
+        "A nested set of fragments is produced, each terminating at a different position where an adenine should be incorporated, because the random low-frequency incorporation of ddATP at any given A position generates a statistical population of all possible termination lengths",
+        "No termination occurs because the concentration of ddATP is too low to compete with dATP for incorporation",
+        "The DNA polymerase preferentially incorporates ddATP at the first adenine position and stops, producing only a single short fragment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In Sanger sequencing, the key principle is that ddNTPs (which lack a 3'-OH group) are present at a low ratio relative to normal dNTPs. At each position where adenine should be incorporated, there is a 1/101 (~1%) probability that ddATP rather than dATP will be incorporated. When ddATP is incorporated, the chain terminates because no 3'-OH is available for the next phosphodiester bond. Because incorporation is random and independent at each A position, after millions of extension events, the reaction produces a statistical distribution of fragments terminating at every possible A position throughout the template. When all four reactions (ddATP, ddGTP, ddCTP, ddTTP) are run and separated by electrophoresis, the complete sequence can be read. Option A is wrong because the low ratio ensures most incorporations are dATP, not ddATP. Option C is incorrect because even 1% incorporation is sufficient over millions of molecules. Option D ignores the statistical nature of the competition.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "MCQ",
+      "question": "The C-value paradox refers to the observation that genome size does not correlate with organismal complexity. Which of the following best explains why the onion (Allium cepa) genome (~16,000 Mb) is approximately five times larger than the human genome (~3,200 Mb) despite having fewer protein-coding genes?",
+      "options": [
+        "Onions have undergone extensive whole-genome duplication, multiplying every gene five-fold",
+        "The human genome has undergone extensive gene loss through pseudogenization, resulting in an unusually small genome",
+        "The onion genome has accumulated massive amounts of repetitive DNA, particularly LTR retrotransposons, which greatly expand genome size without proportionally increasing gene number",
+        "Onion chromosomes contain long telomeric repeats that account for the extra DNA"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The C-value paradox (or C-value enigma) is resolved by understanding that genome size variation is primarily driven by differences in repetitive DNA content, not gene number. Plants like Allium cepa have accumulated enormous quantities of transposable element-derived sequences, particularly long terminal repeat (LTR) retrotransposons such as Ty3/gypsy and Ty1/copia families. These elements replicate via a copy-and-paste mechanism (transcription to RNA, reverse transcription, integration), leading to massive genome expansion. In Allium, retrotransposon-derived sequences constitute over 70% of the genome. The number of protein-coding genes (~25,000-35,000) is remarkably similar across most angiosperms regardless of genome size. Option A is partially true (some polyploidy occurs in Allium) but does not fully explain the 5x size difference. Option B is incorrect because the human genome is not unusually small for a mammal. Option D is wrong because telomeric DNA constitutes a negligible fraction of total genome size.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "MCQ",
+      "question": "Gene duplication followed by divergence is a major source of evolutionary novelty. The human alpha-globin and beta-globin gene clusters are thought to have arisen from an ancestral globin gene. Which of the following correctly describes a processed pseudogene found near the alpha-globin cluster?",
+      "options": [
+        "It contains introns, a functional promoter, and regulatory elements but has acquired a premature stop codon in exon 2",
+        "It is a full-length copy of the gene including flanking sequences, produced by unequal crossing over during meiosis",
+        "It lacks introns, has a poly-A tract at its 3' end, and is flanked by short direct repeats — evidence that it arose by retrotransposition of a mature mRNA intermediate",
+        "It is an alternatively spliced variant of the functional alpha-globin gene that is expressed only during embryonic development"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Processed pseudogenes (retropseudogenes) are distinguished from duplicated (unprocessed) pseudogenes by several hallmark features: (1) they lack introns, because they were reverse-transcribed from a fully spliced mature mRNA; (2) they possess a poly-A tract at the 3' end, reflecting the poly-A tail of the mRNA template; (3) they are flanked by short target-site duplications (direct repeats), generated during the LINE-1-mediated retrotransposition mechanism that inserted them; (4) they lack the original gene's promoter and regulatory sequences, because these are not part of the mRNA. As a result, processed pseudogenes are typically transcriptionally silent and accumulate mutations freely (neutral evolution). The psi-alpha-1 pseudogene near the alpha-globin locus fits this description. Option A describes an unprocessed (duplicated) pseudogene. Option B describes a segmental duplication. Option D is incorrect because processed pseudogenes are generally non-functional and not expressed.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about chromatin remodeling and epigenetic gene regulation:",
+      "options": [
+        "Histone acetyltransferases (HATs) add acetyl groups to lysine residues on histone tails, neutralizing their positive charge and weakening histone-DNA interactions, thereby promoting a more open chromatin state (euchromatin) that is accessible to transcription factors",
+        "DNA methylation at CpG islands in promoter regions is typically associated with transcriptional activation because methyl-CpG binding domain (MBD) proteins recruit HATs to open the chromatin",
+        "The SWI/SNF chromatin remodeling complex uses energy from ATP hydrolysis to slide, eject, or restructure nucleosomes, making DNA accessible to regulatory proteins without chemically modifying histones",
+        "Histone H3 lysine 27 trimethylation (H3K27me3), catalyzed by the Polycomb repressive complex 2 (PRC2), is a repressive mark associated with gene silencing during development and X-chromosome inactivation"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — HATs (such as p300/CBP, GCN5) acetylate lysine residues on histone H3 and H4 tails. Acetylation neutralizes the positive charge of lysine (NH3+ to NH-COCH3), reducing the electrostatic attraction between the positively charged histone tails and the negatively charged DNA phosphate backbone. This loosens nucleosome-DNA contacts, creating a more open, transcriptionally permissive chromatin state. Acetylated histones also serve as docking sites for bromodomain-containing proteins that further promote transcription. S2: FALSE — This statement reverses the actual mechanism. DNA methylation at CpG islands (catalyzed by DNMTs) is typically associated with transcriptional REPRESSION, not activation. MBD proteins (MeCP2, MBD1-4) recognize methylated CpG sites and recruit HDACs (histone deacetylases) and other corepressors, leading to chromatin compaction and gene silencing. Promoter CpG island methylation is a hallmark of silenced tumor suppressor genes in cancer and imprinted genes. S3: TRUE — The SWI/SNF (also called BAF) complex is an ATP-dependent chromatin remodeling complex that uses the energy of ATP hydrolysis to alter nucleosome positioning. It can slide nucleosomes along DNA, evict histone octamers, or replace canonical histones with variants (like H2A.Z). Unlike HATs/HDACs, SWI/SNF does not covalently modify histones but physically restructures chromatin architecture. Mutations in SWI/SNF subunits (e.g., SMARCB1, ARID1A) are found in ~20% of human cancers. S4: TRUE — PRC2 (containing the catalytic subunit EZH2) trimethylates H3K27, establishing a repressive chromatin mark. H3K27me3 is recognized by PRC1, which monoubiquitylates H2AK119 and compacts chromatin. This Polycomb system is essential for Hox gene silencing, maintenance of stem cell pluripotency, and X-chromosome inactivation (Xi is enriched in H3K27me3). EZH2 gain-of-function mutations are found in lymphomas.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about RNA interference (RNAi) and small RNA-mediated gene silencing:",
+      "options": [
+        "Dicer is an RNase III family endonuclease that cleaves double-stranded RNA (dsRNA) or pre-miRNA hairpins into ~21-23 nucleotide duplexes with 2-nucleotide 3' overhangs",
+        "In the miRNA pathway, the guide strand is loaded into the RISC complex containing Argonaute, where it directs translational repression or mRNA degradation depending on the degree of complementarity with the target mRNA",
+        "siRNA-mediated gene silencing in mammals typically triggers transcriptional gene silencing through heterochromatin formation at target loci, identical to the mechanism in S. pombe",
+        "Primary miRNAs (pri-miRNAs) are processed in the nucleus by the Drosha-DGCR8 microprocessor complex to yield precursor miRNAs (pre-miRNAs), which are then exported to the cytoplasm by Exportin-5 in a Ran-GTP-dependent manner"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Dicer (Dcr-1/Dcr-2 in Drosophila, single Dicer in mammals) contains two RNase III domains and a PAZ domain. It measures ~22 bp from the end of the dsRNA substrate and makes staggered cuts, producing small RNA duplexes with characteristic 2-nt 3' overhangs and 5' phosphate groups. For miRNAs, Dicer processes pre-miRNA hairpins exported from the nucleus; for siRNAs, it processes long dsRNA molecules. S2: TRUE — After Dicer cleavage, one strand (the guide strand, typically with the less thermodynamically stable 5' end) is selected and loaded into the RNA-induced silencing complex (RISC), whose catalytic core is an Argonaute protein (Ago2 in mammals). Perfect or near-perfect complementarity (typical of siRNAs and plant miRNAs) triggers Ago2-mediated endonucleolytic cleavage ('slicing') of the target mRNA. Imperfect complementarity (typical of animal miRNAs, which usually match only in the seed region, nt 2-8) leads to translational repression, mRNA deadenylation, and decapping. S3: FALSE — In mammals, exogenous siRNAs primarily trigger post-transcriptional gene silencing (PTGS) through mRNA cleavage in the cytoplasm. Transcriptional gene silencing (TGS) via heterochromatin formation is the predominant RNAi mechanism in fission yeast S. pombe, where the RITS complex (containing Ago1, Chp1, Tas3) directs H3K9 methylation by Clr4 at centromeric repeats. While some evidence suggests limited TGS in mammalian cells, it is not the primary mechanism of siRNA action in mammals. S4: TRUE — miRNA biogenesis begins with RNA Pol II transcription of pri-miRNAs (which can be kilobases long, with cap and poly-A tail). The Drosha-DGCR8 (DiGeorge critical region 8, also called Pasha) microprocessor complex cleaves the pri-miRNA at the base of the hairpin stem, releasing the ~60-70 nt pre-miRNA hairpin. Exportin-5, in complex with Ran-GTP, recognizes the 2-nt 3' overhang of the pre-miRNA and exports it through the nuclear pore to the cytoplasm, where Dicer processes it further.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "EXPERT",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about viral life cycles and molecular biology:",
+      "options": [
+        "In the lysogenic cycle of bacteriophage lambda, the phage integrase catalyzes site-specific recombination between the phage attP site and the bacterial attB site, inserting the phage genome into the host chromosome as a prophage",
+        "Prions propagate by the PrPSc isoform acting as a template that converts normally folded PrPC (alpha-helix-rich) into the misfolded PrPSc conformation (beta-sheet-rich), without requiring any nucleic acid",
+        "Retroviruses carry two copies of their RNA genome, and reverse transcriptase synthesizes a double-stranded DNA copy using the 3' poly-A tail of the mRNA as a primer for first-strand synthesis",
+        "Retroviral oncogenes (v-onc) are derived from normal cellular proto-oncogenes (c-onc) that were captured by retroviral recombination; v-src in Rous sarcoma virus originated from the cellular c-src gene"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Lambda phage integrase (Int) is a tyrosine recombinase that catalyzes reciprocal site-specific recombination between the phage attachment site (attP, located between genes J and N) and the bacterial attachment site (attB, located between gal and bio operons). The Int protein, assisted by integration host factor (IHF), carries out this reaction. The integrated prophage is bounded by attL and attR hybrid sites. Excision requires both Int and the excisionase (Xis) protein. S2: TRUE — Prion diseases (TSEs) represent a unique mode of infectious propagation that violates the central dogma. PrPC is a normal GPI-anchored cell surface glycoprotein expressed primarily in neurons, with predominantly alpha-helical structure. PrPSc is a conformational isomer with increased beta-sheet content that is protease-resistant and aggregation-prone. PrPSc acts as a self-propagating template, inducing the conformational conversion of PrPC through a seeded polymerization mechanism. No nucleic acid genome is involved, as demonstrated by resistance to UV irradiation and nucleases. S3: FALSE — Retroviruses do carry two identical copies of (+)ssRNA, but the primer for first-strand (minus-strand) DNA synthesis is NOT the poly-A tail. Instead, a specific host tRNA molecule anneals to the primer binding site (PBS) near the 5' end of the viral RNA. For HIV-1, tRNA-Lys3 serves as the primer. Reverse transcriptase extends from this tRNA primer. The mechanism involves two strand-transfer steps using the repeated (R) sequences at both ends of the RNA. S4: TRUE — Retroviral oncogenes were captured from host cellular proto-oncogenes through rare recombination events during retroviral replication. The Rous sarcoma virus (RSV) v-src gene was the first identified viral oncogene (Peyton Rous, Nobel Prize work expanded by Varmus and Bishop). v-src differs from c-src in lacking the C-terminal regulatory tyrosine (Tyr527), making it constitutively active as a non-receptor tyrosine kinase, driving cellular transformation.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "EXPERT",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 19,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about molecular biotechnology tools and techniques:",
+      "options": [
+        "Southern blotting detects specific DNA fragments by gel electrophoresis, transfer to a membrane, and hybridization with a labeled probe; Northern blotting uses the same principle to detect RNA, while Western blotting detects proteins using antibodies",
+        "In PCR, Taq polymerase was chosen because it is a thermostable DNA polymerase from Thermus aquaticus that survives the ~95 degrees C denaturation step, and its 5' to 3' exonuclease activity is exploited in TaqMan real-time PCR assays",
+        "CRISPR-Cas9 genome editing requires a single guide RNA (sgRNA) that provides target specificity, and Cas9 generates a blunt-ended double-strand break that is repaired by either error-prone NHEJ (causing indels) or precise HDR (if a donor template is provided)",
+        "Restriction enzymes recognize random DNA sequences of variable length and cut at non-specific positions, which is why different restriction digests of the same DNA produce identical fragment patterns"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1: TRUE — Edwin Southern developed the Southern blot (1975) for DNA detection. The technique involves: restriction enzyme digestion, agarose gel electrophoresis, denaturation, capillary transfer to nitrocellulose/nylon membrane, and hybridization with a labeled complementary probe. Northern blot (named by analogy, for RNA) and Western blot (for proteins, using antibodies) follow similar logic. The naming convention is a biological wordplay: Southern (inventor's name), Northern and Western (compass directions). S2: TRUE — Taq polymerase from the thermophilic bacterium Thermus aquaticus (isolated from hot springs in Yellowstone) retains activity at 72 degrees C and survives repeated 95 degrees C denaturation cycles. Its 5' to 3' exonuclease activity is specifically exploited in TaqMan (5' nuclease) qPCR assays, where Taq cleaves a fluorescently labeled probe hybridized downstream of the primer, releasing the fluorophore from the quencher and generating a fluorescent signal proportional to amplification. S3: TRUE — The sgRNA (a fusion of crRNA and tracrRNA) contains a ~20 nt guide sequence complementary to the target DNA. Cas9 (from S. pyogenes) uses its RuvC and HNH nuclease domains to cut both DNA strands, generating a blunt-ended DSB 3 bp upstream of the PAM (5'-NGG-3'). The cell repairs this via NHEJ (introducing random insertions/deletions, useful for gene knockouts) or HDR (using a provided DNA template for precise edits, but requiring S/G2 phase). S4: FALSE — Restriction enzymes (restriction endonucleases) recognize highly SPECIFIC palindromic DNA sequences of defined length (typically 4-8 bp). For example, EcoRI recognizes GAATTC, BamHI recognizes GGATCC. They cut at defined positions within or near their recognition site. Because recognition is sequence-specific, different enzymes with different recognition sites produce completely DIFFERENT fragment patterns from the same DNA.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about gene cloning and expression vectors:",
+      "options": [
+        "A cDNA library differs from a genomic library in that cDNA clones represent only the genes expressed in the source tissue at the time of mRNA extraction and lack introns, while a genomic library contains all DNA sequences regardless of expression state",
+        "Expression vectors used for producing recombinant proteins in E. coli typically contain a strong inducible promoter (such as the T7 or lac promoter), a ribosome binding site (Shine-Dalgarno sequence), a multiple cloning site, and a selectable marker",
+        "Blue-white screening with the lacZ-alpha complementation system allows selection of recombinant clones: colonies with successful inserts appear blue because the inserted fragment activates beta-galactosidase production",
+        "When expressing eukaryotic genes in E. coli, post-translational modifications such as glycosylation and disulfide bond formation in the cytoplasm occur identically to those in eukaryotic cells"
+      ],
+      "correctAnswer": "TTFF",
+      "explanation": "S1: TRUE — A cDNA library is constructed by reverse transcription of mRNA from a specific tissue/cell type/developmental stage. It captures only the transcriptome of that particular sample: introns are absent (removed during mRNA processing), and non-expressed genes are not represented. A genomic library is constructed by fragmenting total genomic DNA and cloning all fragments. It contains everything: expressed genes, silent genes, introns, intergenic regions, repetitive DNA, and regulatory sequences. This makes cDNA libraries ideal for identifying expressed genes and genomic libraries essential for studying gene structure and regulation. S2: TRUE — Expression vectors are specifically designed for high-level protein production. Key elements include: an inducible promoter (T7 promoter induced by IPTG via T7 RNA polymerase in BL21(DE3), or lac/tac promoters), a Shine-Dalgarno sequence (5'-AGGAGG-3', ~7 bp upstream of the AUG, essential for ribosome recruitment in prokaryotes), a multiple cloning site (polylinker with unique restriction sites for inserting the gene of interest), a selectable marker (typically antibiotic resistance, e.g., ampicillin or kanamycin), and an origin of replication. S3: FALSE — This statement reverses the color logic. In blue-white screening, the vector contains the lacZ-alpha fragment with a multiple cloning site within it. When no insert is present, the alpha fragment complements the omega fragment in the host cell, producing functional beta-galactosidase that cleaves X-gal to produce a BLUE precipitate. When a DNA fragment IS inserted, it disrupts the lacZ-alpha reading frame, preventing beta-galactosidase activity, and colonies appear WHITE. White colonies = recombinants (desired), blue colonies = non-recombinants. S4: FALSE — E. coli CANNOT perform many eukaryotic post-translational modifications. The E. coli cytoplasm is a reducing environment (maintained by thioredoxin and glutaredoxin), preventing disulfide bond formation (which requires the oxidizing environment of the eukaryotic ER). E. coli lacks the glycosylation machinery (no ER or Golgi). For properly folded, glycosylated proteins, eukaryotic expression systems (yeast, insect cells/baculovirus, CHO cells) are required.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about transposable elements and genome evolution:",
+      "options": [
+        "DNA transposons move by a 'cut-and-paste' mechanism using transposase, which excises the element from one genomic location and inserts it at a new site, generating target-site duplications (TSDs) upon insertion",
+        "LINEs (Long Interspersed Nuclear Elements) such as LINE-1 (L1) encode their own reverse transcriptase and endonuclease, enabling autonomous retrotransposition via an RNA intermediate using a target-primed reverse transcription (TPRT) mechanism",
+        "SINEs (Short Interspersed Nuclear Elements) such as Alu elements encode their own reverse transcriptase and transpose independently of LINE machinery",
+        "Approximately 45% of the human genome is derived from transposable elements, with LINEs comprising ~17%, SINEs ~11%, DNA transposons ~3%, and LTR retrotransposons ~8%, though nearly all are currently inactive"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — DNA transposons (Class II TEs) use a conservative 'cut-and-paste' mechanism. The transposase enzyme recognizes terminal inverted repeats (TIRs) flanking the element, excises it by making staggered cuts in the flanking DNA, and integrates it at a new target site. The staggered cut at the target site is filled in by host DNA repair, generating characteristic target-site duplications (TSDs) of defined length (e.g., 8 bp for Tc1/mariner). Most DNA transposons in the human genome (e.g., hAT, Tc1/mariner families) are ancient fossils that lost transposition activity >50 Mya. S2: TRUE — LINE-1 elements (~6 kb full-length) contain two ORFs: ORF1 (encodes an RNA-binding protein/chaperone, ORF1p) and ORF2 (encodes a protein with both endonuclease and reverse transcriptase domains, ORF2p). L1 retrotransposition occurs via TPRT: the L1 mRNA is transcribed, exported to the cytoplasm, translated, and the ORF1p/ORF2p ribonucleoprotein complex re-enters the nucleus. ORF2p endonuclease nicks the target DNA at a consensus site (5'-TTTTAA-3'), and the exposed 3'-OH primes reverse transcription of the L1 mRNA directly at the integration site. S3: FALSE — SINEs (including Alu elements, ~300 bp, ~1.1 million copies in the human genome) do NOT encode any proteins. They are non-autonomous elements that parasitize the LINE-1 retrotransposition machinery (specifically ORF2p) for their own mobilization. Alu elements are derived from the 7SL RNA gene and rely entirely on L1-encoded proteins for their reverse transcription and integration. S4: TRUE — The Human Genome Project revealed that ~45% of the genome is recognizably derived from TEs (the actual fraction may be higher, as ancient degenerate copies are difficult to identify). The breakdown is approximately: LINEs 17% (mostly L1), SINEs 11% (mostly Alu), LTR retrotransposons 8% (endogenous retroviruses/HERVs), DNA transposons 3%. Of the ~500,000 L1 copies, only ~80-100 remain retrotransposition-competent. L1 activity contributes to ~1 in 250 disease-causing insertional mutations.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "EXPERT",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about X-inactivation and epigenetic silencing in mammals:",
+      "options": [
+        "X-inactivation is initiated by upregulation of the Xist long non-coding RNA from the X-inactivation center (Xic) on the future inactive X chromosome; Xist RNA coats the chromosome in cis, recruiting Polycomb repressive complexes that establish H3K27me3 and lead to transcriptional silencing",
+        "The choice of which X chromosome to inactivate in each cell is random in eutherian mammals but always maternal in marsupials, and once established, the pattern is stably inherited through subsequent cell divisions",
+        "All genes on the inactive X chromosome (Barr body) are completely silenced, with no genes escaping X-inactivation in any species",
+        "Tsix is an antisense transcript of Xist that is expressed from the future active X chromosome and represses Xist in cis, thereby protecting that chromosome from inactivation"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Xist (X-inactive specific transcript) is a ~17 kb long non-coding RNA transcribed exclusively from the Xic locus on the X chromosome destined for inactivation. Xist RNA spreads along the chromosome in cis, coating it entirely. The A-repeat region of Xist recruits the SPEN/SHARP protein, which in turn recruits the SMRT/NCoR-HDAC3 complex to deacetylate histones. Xist also recruits PRC2 (via the B/C repeat), which deposits H3K27me3. Subsequently, PRC1 adds H2AK119ub1. Additional silencing marks include CpG methylation by DNMT3B, incorporation of macroH2A histone variant, and late replication timing. S2: TRUE — In eutherian (placental) mammals, X-inactivation is random with respect to parental origin. Each cell independently chooses one X to inactivate early in embryonic development (~3.5 dpc in mouse, during implantation). Once established, the inactivation pattern is clonally inherited through mitosis via stable epigenetic marks. In marsupials, X-inactivation is imprinted: the paternal X is always inactivated. This is also the pattern in mouse extraembryonic tissues (trophoblast, yolk sac). S3: FALSE — Approximately 15-25% of genes on the human inactive X escape inactivation and are expressed from both X chromosomes. Escape genes are more common on the short arm (Xp), particularly in the pseudoautosomal regions (PARs). The degree of escape varies between individuals and tissues. Some genes escape in some women but not others, contributing to phenotypic variability. In mice, fewer genes (~3-7%) escape inactivation. S4: TRUE — Tsix is transcribed antisense to Xist from the future active X. Tsix RNA (or its transcription process) represses Xist expression in cis through multiple mechanisms: (1) transcriptional interference — Tsix transcription through the Xist promoter region blocks Xist transcription; (2) chromatin modification — Tsix recruits DNMT3A to methylate the Xist promoter; (3) dsRNA formation — Tsix and Xist transcripts can form dsRNA processed by Dicer into small RNAs that direct repressive chromatin marks. Deletion of Tsix on one X forces that X to always be inactivated.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "EXPERT",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about comparative genomics and horizontal gene transfer:",
+      "options": [
+        "Horizontal gene transfer (HGT) is a major force in prokaryotic genome evolution, mediated by transformation, transduction, and conjugation, and has contributed antibiotic resistance genes, metabolic pathways, and even pathogenicity islands across bacterial species",
+        "Synteny analysis — the comparison of gene order on chromosomes between species — can reveal conserved chromosomal segments that have been maintained since the last common ancestor, providing evidence for evolutionary relationships",
+        "The human genome contains approximately 100,000 protein-coding genes, as predicted by the complexity hypothesis before the Human Genome Project, confirming a direct relationship between organismal complexity and gene number",
+        "Multigene families such as the immunoglobulin superfamily and the homeobox (Hox) gene family arose through gene duplication events followed by sequence divergence, allowing the evolution of proteins with related but distinct functions"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — HGT (also called lateral gene transfer, LGT) is pervasive in prokaryotes and has profoundly shaped their genomes. Three main mechanisms: transformation (uptake of free DNA from the environment), transduction (bacteriophage-mediated transfer), and conjugation (direct transfer via pili/type IV secretion). HGT has disseminated antibiotic resistance genes (e.g., bla-TEM beta-lactamases on plasmids), entire metabolic operons (e.g., nitrogen fixation nif genes), and pathogenicity islands (large genomic regions encoding virulence factors, e.g., the LEE island in enteropathogenic E. coli). HGT complicates phylogenetic analysis and is one reason the prokaryotic tree of life is better described as a web or network. S2: TRUE — Synteny (conserved gene order) between species reflects shared ancestry. Macro-synteny (conservation of large chromosomal blocks) is detectable even between distantly related species, e.g., extensive synteny between human and mouse chromosomes (each human chromosome corresponds to segments of multiple mouse chromosomes and vice versa). Micro-synteny (local gene order conservation) is useful for identifying orthologous regions. Synteny breaks at chromosomal rearrangement boundaries (inversions, translocations) mark evolutionary events. S3: FALSE — Before the Human Genome Project, estimates ranged widely from 50,000 to 140,000 genes. The actual number of protein-coding genes in the human genome is approximately 20,000-25,000 (current estimate ~19,969 protein-coding genes per GENCODE). This was surprisingly similar to the gene count in C. elegans (~20,000) and far fewer than some plants. Organismal complexity arises not from gene number but from alternative splicing, regulatory complexity, non-coding RNAs, post-translational modifications, and protein interaction networks. S4: TRUE — Gene duplication (by tandem duplication, segmental duplication, or whole-genome duplication) followed by divergence is a primary mechanism for generating new genes with novel functions. The immunoglobulin superfamily includes antibodies, T cell receptors, MHC molecules, and cell adhesion molecules — all sharing a common Ig-fold domain. Hox genes (homeodomain-containing transcription factors) arose by tandem duplication and control anterior-posterior body axis patterning in animals. The four Hox clusters in mammals (HoxA-D) arose from two rounds of whole-genome duplication in early vertebrates.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the experimental data, what can be concluded about the regulation of the lac operon under different carbon source conditions?",
+      "dataContext": "E. coli were grown in minimal medium supplemented with different carbon sources. Beta-galactosidase activity (Miller units) was measured as a reporter for lac operon expression. CAP-cAMP binding at the lac promoter was assessed by in vivo ChIP.\n\nCondition | Beta-gal activity (Miller units) | CAP-cAMP bound at lac promoter? | Lac repressor bound at operator?\nGlucose only | 1 | No | Yes\nLactose only | 5,200 | Yes | No\nGlucose + Lactose | 12 | No | No\nNeither (glycerol) | 8 | Yes | Yes\nGlucose + IPTG | 15 | No | No\ncya- mutant + Lactose | 18 | No | No",
+      "options": [
+        "The lac operon is regulated solely by the lac repressor, and CAP-cAMP has no significant role in modulating expression levels",
+        "Maximal lac operon expression requires both the absence of glucose (allowing CAP-cAMP binding) AND the presence of lactose/inducer (removing the lac repressor); either condition alone is insufficient for high-level expression",
+        "Glucose directly inhibits the lac repressor, preventing it from binding the operator, which is why Glucose + Lactose shows low expression",
+        "The cya- mutant result shows that lactose alone is sufficient for full operon expression, regardless of cAMP levels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data provide a comprehensive picture of dual regulation. Lactose only: both conditions met (CAP-cAMP bound = Yes, repressor removed = Yes) yields maximal expression (5,200 units). Glucose + Lactose: even though lactose removes the repressor (repressor bound = No), glucose keeps cAMP low so CAP-cAMP cannot bind (No), yielding only 12 units. This demonstrates that removing the repressor is necessary but NOT sufficient. Glycerol (neither sugar): CAP-cAMP is bound (Yes, because no glucose) but the repressor is also bound (Yes, because no inducer), yielding only 8 units. This shows that CAP-cAMP alone is insufficient. The cya- mutant + Lactose condition is particularly informative: the repressor is removed by lactose (allolactose), but without adenylyl cyclase, no cAMP is made, so CAP cannot bind. Expression is only 18 units (comparable to Glucose + Lactose), confirming that CAP-cAMP is essential for high expression. Glucose + IPTG similarly shows that even with a non-metabolizable inducer removing the repressor, glucose suppression of cAMP limits expression to 15 units. Option A is refuted by comparing Lactose only (5,200) vs cya- + Lactose (18). Option C is incorrect because glucose does not directly affect the repressor — the Glucose + Lactose condition shows the repressor IS removed. Option D is contradicted by the cya- data showing only 18 units.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "EXPERT",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the gel electrophoresis and qPCR data, what conclusion about this gene's regulation can be drawn?",
+      "dataContext": "Researchers investigated the methylation status and expression of tumor suppressor gene TSG-X in normal colon tissue vs. colon carcinoma. They used methylation-specific PCR (MSP) targeting the CpG island in the TSG-X promoter, and RT-qPCR to quantify mRNA levels. Treatment with 5-azacytidine (a DNMT inhibitor) was performed on carcinoma cells in culture.\n\nSample | MSP: Methylated primers | MSP: Unmethylated primers | TSG-X mRNA (relative to GAPDH)\nNormal colon tissue | Band absent | Band present | 1.00\nColon carcinoma (patient 1) | Band present | Band absent | 0.03\nColon carcinoma (patient 2) | Band present | Band absent | 0.05\nColon carcinoma (patient 3) | Band absent | Band present | 0.85\nCarcinoma cells + 5-azacytidine | Band absent | Band present | 0.78\nCarcinoma cells + vehicle control | Band present | Band absent | 0.04",
+      "options": [
+        "TSG-X is silenced by histone acetylation in carcinoma cells, and 5-azacytidine restores expression by inhibiting HATs",
+        "Promoter CpG island hypermethylation is the primary mechanism silencing TSG-X in most carcinoma samples; DNMT inhibition with 5-azacytidine reverses methylation and restores gene expression, confirming a causal relationship between methylation and silencing",
+        "All carcinoma samples show identical methylation patterns, suggesting a single uniform mechanism of TSG-X inactivation",
+        "5-Azacytidine increases TSG-X expression by directly activating the TSG-X transcription factor rather than affecting DNA methylation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data elegantly demonstrate epigenetic silencing of TSG-X by promoter methylation. In normal tissue, the promoter is unmethylated (MSP: methylated primers negative, unmethylated primers positive) and TSG-X is expressed (mRNA = 1.00). In patients 1 and 2, the promoter is hypermethylated (methylated primers positive, unmethylated primers negative) and expression is nearly abolished (0.03 and 0.05). Critically, patient 3 shows an unmethylated promoter and retained expression (0.85), demonstrating that not all carcinomas use the same silencing mechanism (this tumor may have alternative defects, e.g., mutation or LOH). The 5-azacytidine experiment provides causal evidence: this cytidine analog is incorporated into DNA during replication and forms a covalent adduct with DNMT enzymes, leading to their degradation and passive demethylation during subsequent cell divisions. Treatment reverses the methylation (MSP pattern switches from methylated to unmethylated) and restores expression to 0.78 (near normal), while vehicle control maintains methylation and low expression (0.04). Option A is wrong because 5-azacytidine inhibits DNMTs, not HATs. Option C is contradicted by patient 3. Option D incorrectly describes the mechanism of 5-azacytidine.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "EXPERT",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the PCR and gel electrophoresis data, what can be concluded about the genotype and carrier status of each individual in this family?",
+      "dataContext": "A family is screened for sickle cell disease using a PCR-RFLP approach. The beta-globin gene region is amplified by PCR and digested with the restriction enzyme MstII, which cuts the normal beta-globin sequence (GAG = Glu at codon 6) but NOT the sickle mutation (GTG = Val at codon 6). The normal allele produces two fragments: 200 bp and 180 bp. The sickle allele produces one uncut fragment: 380 bp. Fragments are separated by agarose gel electrophoresis.\n\nIndividual | Band at 380 bp | Band at 200 bp | Band at 180 bp\nFather | Present | Present | Present\nMother | Present | Present | Present\nChild 1 | Present | Absent | Absent\nChild 2 | Absent | Present | Present\nChild 3 | Present | Present | Present",
+      "options": [
+        "Both parents are homozygous normal (HbA/HbA), and the children's results are due to laboratory contamination",
+        "The restriction enzyme analysis is inconclusive because MstII does not distinguish between HbA and HbS alleles",
+        "The father is affected (HbS/HbS) and the mother is homozygous normal (HbA/HbA), making all children obligate carriers",
+        "Both parents are carriers (HbA/HbS); Child 1 is homozygous sickle (HbS/HbS), Child 2 is homozygous normal (HbA/HbA), and Child 3 is a carrier (HbA/HbS) — consistent with Mendelian 1:2:1 ratios from a carrier x carrier cross"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This is a classic PCR-RFLP (restriction fragment length polymorphism) analysis for sickle cell disease. MstII recognizes the sequence CCTNAGG. In the normal beta-globin gene, the codon 6 region contains CCTGAGG (encoding Glu), which MstII cuts between the two fragments (200 + 180 bp). The sickle mutation (A to T in the first position of codon 6) changes GAG to GTG (Glu to Val), disrupting the MstII recognition site and producing a single 380 bp uncut fragment. Both parents show all three bands (380, 200, 180 bp), indicating they each carry one sickle allele (giving the 380 bp band) and one normal allele (giving the 200 and 180 bp bands) — they are both heterozygous carriers (HbA/HbS, sickle cell trait). Child 1 shows only the 380 bp band, indicating homozygous HbS/HbS (sickle cell disease). Child 2 shows only the 200 and 180 bp bands, indicating homozygous HbA/HbA (normal). Child 3 shows all three bands, indicating HbA/HbS (carrier). This 1:1:1 ratio in three children is consistent with expected Mendelian ratios from an HbA/HbS x HbA/HbS cross (expected 1 HbA/HbA : 2 HbA/HbS : 1 HbS/HbS). Option A is wrong because the parents clearly show heterozygous banding patterns. Option B is incorrect as the data clearly show differential cutting. Option C is wrong because the father shows both alleles (all three bands), not just the 380 bp band.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "HARD",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the comparative genomics data, what evolutionary conclusion is best supported?",
+      "dataContext": "Researchers compared the genomes of five vertebrate species to examine the evolution of the Hox gene clusters. They cataloged the number of Hox clusters, total Hox genes, and the presence of specific duplicated gene pairs.\n\nSpecies | Hox clusters | Total Hox genes | Hox paralogy groups present | Genome duplication events (inferred)\nAmphioxus (Branchiostoma) | 1 | 15 | 1-15 (single set) | 0\nLamprey (Petromyzon) | 3-4 | 33 | 1-13 (partial duplicates) | 1-2 (partial)\nZebrafish (Danio) | 7 | 49 | 1-13 (multiple duplicates) | 3 (2R + teleost WGD)\nMouse (Mus) | 4 | 39 | 1-13 (4 paralogs per group) | 2 (2R)\nHuman (Homo) | 4 | 39 | 1-13 (4 paralogs per group) | 2 (2R)",
+      "options": [
+        "The data suggest that all vertebrates share exactly the same number of Hox genes, indicating complete conservation without gene loss after duplication",
+        "Amphioxus represents the ancestral invertebrate chordate state with a single Hox cluster; two rounds of whole-genome duplication (2R) in early vertebrate evolution produced four clusters in mammals, and an additional teleost-specific WGD produced seven clusters in zebrafish (with subsequent loss of one)",
+        "Zebrafish have more Hox clusters because they are more evolutionarily advanced than mammals",
+        "Lamprey data indicate that whole-genome duplications never occurred in the vertebrate lineage"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data strongly support the 2R (two rounds of whole-genome duplication) hypothesis proposed by Ohno (1970) and refined by subsequent genomic analysis. Amphioxus (a cephalochordate, the closest invertebrate relative of vertebrates) has a single Hox cluster with 15 genes, representing the ancestral state. The first whole-genome duplication (1R) and second (2R) in the stem vertebrate lineage produced four Hox clusters (HoxA, HoxB, HoxC, HoxD in mammals, each with a subset of the 13 paralogy groups, totaling 39 genes in human and mouse after gene losses). Lamprey, representing an early-branching vertebrate lineage (jawless fish), shows 3-4 clusters with 33 genes — consistent with having undergone at least one WGD, with uncertain status of the second. Zebrafish have 7 clusters (HoxAa, HoxAb, HoxBa, HoxBb, HoxCa, HoxCb, HoxDa — HoxDb was lost) because ray-finned fish underwent an additional teleost-specific WGD (3R, ~320-350 Mya), producing 8 clusters from which one was lost. Despite 7 clusters, zebrafish have 49 genes (less than 2 x 39 = 78 expected), reflecting extensive gene loss after duplication. Option A is contradicted by the different gene counts. Option C reflects a misunderstanding — more gene clusters does not mean more advanced. Option D is contradicted by the lamprey having multiple clusters.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "EXPERT",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the viral replication kinetics data, what is the most likely identity and life cycle strategy of Virus Y?",
+      "dataContext": "A novel virus (Virus Y) was isolated from infected cells. Researchers measured viral nucleic acid synthesis, protein production, and infectious particle release over time after synchronous infection at MOI = 10.\n\nTime post-infection (h) | Intracellular viral DNA (relative units) | Intracellular viral RNA (relative units) | Viral protein (relative units) | Extracellular infectious particles (PFU/mL)\n0 | 0 | 1.0 | 0 | 0\n2 | 0 | 8.0 | 0.5 | 0\n4 | 5.0 | 3.0 | 4.0 | 0\n8 | 25.0 | 15.0 | 20.0 | 0\n12 | 50.0 | 45.0 | 50.0 | 100\n18 | 55.0 | 50.0 | 55.0 | 5,000\n24 | 55.0 | 48.0 | 55.0 | 50,000\n\nAdditional findings: (1) Treatment with reverse transcriptase inhibitors (AZT) at t=0 completely blocks viral DNA appearance. (2) The viral genome is (+)ssRNA. (3) The virus buds from the plasma membrane.",
+      "options": [
+        "Virus Y is a retrovirus: its (+)ssRNA genome is first reverse-transcribed into DNA (explaining the RNA-before-DNA kinetics and AZT sensitivity), the DNA integrates and serves as template for new viral RNA and proteins, and mature virions bud from the plasma membrane",
+        "Virus Y is a positive-sense RNA virus (like poliovirus) that replicates its RNA genome entirely through RNA-dependent RNA polymerase without a DNA intermediate",
+        "Virus Y is a DNA virus that enters with a pre-formed RNA polymerase and transcribes RNA immediately upon entry",
+        "Virus Y is a double-stranded RNA virus (like reovirus) that uses its own RNA-dependent RNA polymerase for replication"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The data paint a clear picture of a retroviral life cycle. Key evidence: (1) The genome is (+)ssRNA, yet viral DNA appears — this is the defining feature of retroviruses. (2) RNA is detected first (t=0, 1.0 units = input genome; t=2, 8.0 units), BEFORE DNA (first detected at t=4), consistent with the RNA genome entering the cell and being reverse transcribed into DNA. (3) AZT (azidothymidine, a nucleoside analog reverse transcriptase inhibitor) completely blocks DNA synthesis, confirming that a reverse transcription step is essential. (4) After DNA appears (t=4), both RNA (now transcribed from integrated proviral DNA) and protein levels rise dramatically, consistent with proviral gene expression. (5) Infectious particles appear with a delay (t=12) and accumulate gradually rather than in a sudden burst, consistent with continuous budding from the plasma membrane (characteristic of enveloped retroviruses) rather than lytic release. The kinetic pattern — RNA first, then DNA, then exponential increase in all three — is the hallmark of retroviral replication. Option B cannot explain the DNA intermediate or AZT sensitivity. Option C does not explain why RNA appears before DNA. Option D does not produce DNA intermediates.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "EXPERT",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 19,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A research team wants to determine whether a specific enhancer element (Enhancer-X), located 50 kb upstream of Gene-Y, is required for Gene-Y expression in liver cells but not in kidney cells. Which experimental design provides the MOST definitive evidence for tissue-specific enhancer function?",
+      "experimentContext": "Enhancer-X was identified by ChIP-seq for H3K27ac and H3K4me1 (active enhancer marks) in liver tissue; these marks are absent at Enhancer-X in kidney tissue. Gene-Y encodes a liver-specific metabolic enzyme. The team has access to: CRISPR-Cas9 genome editing tools, liver and kidney cell lines, RT-qPCR equipment, luciferase reporter vectors, chromatin conformation capture (3C/4C) reagents, and ChIP-qPCR capability.",
+      "options": [
+        "Clone Enhancer-X upstream of a luciferase reporter and transfect it into liver and kidney cells; if luciferase activity is higher in liver cells, Enhancer-X is liver-specific",
+        "Compare Gene-Y mRNA levels between liver and kidney cells without any perturbation to establish tissue-specific expression",
+        "Perform ChIP-qPCR for RNA Pol II at the Gene-Y promoter in liver and kidney cells to show differential transcription",
+        "Perform CRISPR deletion of Enhancer-X in both liver and kidney cell lines, then measure Gene-Y expression by RT-qPCR in both tissues; additionally, perform 3C/4C to confirm that Enhancer-X physically contacts the Gene-Y promoter in liver but not kidney cells, and rescue the deletion phenotype by reinserting Enhancer-X at its native locus"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Option D provides the most comprehensive and definitive evidence through multiple complementary approaches. (1) CRISPR deletion of Enhancer-X in its native genomic context tests necessity: if Gene-Y expression decreases in liver cells upon deletion but is unaffected in kidney cells, Enhancer-X is specifically required in liver. This avoids artifacts of episomal reporter assays. (2) 3C/4C (Chromosome Conformation Capture) directly tests whether Enhancer-X physically loops to contact the Gene-Y promoter across the 50 kb distance. Finding this interaction specifically in liver (where enhancer marks are present) but not kidney cells provides mechanistic evidence for tissue-specific long-range regulation. (3) Rescue by reinserting Enhancer-X at its native locus confirms that the deletion phenotype is specifically due to loss of Enhancer-X, not off-target effects or disruption of neighboring elements. Option A (reporter assay) tests sufficiency in an artificial context but not necessity at the endogenous locus; episomal reporters lack proper chromatin context and distance relationships. Option B establishes correlation but provides no causal evidence about Enhancer-X specifically. Option C demonstrates differential transcription but does not implicate Enhancer-X as the cause. The combination of loss-of-function (deletion), physical evidence (3C/4C), and rescue provides the gold standard for establishing enhancer-target gene relationships.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "EXPERT",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A graduate student hypothesizes that a newly identified gene (Gene-Z) is essential for bacteriophage lambda's decision to enter the lysogenic rather than the lytic pathway. She wants to test whether Gene-Z promotes lysogeny by enhancing CI repressor activity. Which experimental strategy most rigorously tests this hypothesis?",
+      "experimentContext": "Gene-Z was identified by RNA-seq as being highly expressed during the early phase of lambda infection under conditions that favor lysogeny (high MOI, low temperature). The student has access to: wild-type lambda phage, a Gene-Z deletion mutant (lambda-deltaZ), a CI-lacZ reporter phage (where lacZ replaces cI, reporting on PRM promoter activity), E. coli strains with lacZ deletion, plating assays for measuring lysogeny frequency vs. lytic growth, purified Gene-Z protein, electrophoretic mobility shift assays (EMSA), quantitative Western blots for CI protein, and a beta-galactosidase activity assay kit.",
+      "options": [
+        "Simply compare plaque morphology between wild-type lambda and lambda-deltaZ on a bacterial lawn — larger plaques from lambda-deltaZ would indicate increased lytic growth",
+        "Quantify lysogeny frequency: infect E. coli at high MOI with wild-type lambda vs. lambda-deltaZ and measure the ratio of lysogens to total infected cells; additionally, use the CI-lacZ reporter to show that Gene-Z deletion reduces PRM promoter activity; test by EMSA whether purified Gene-Z protein directly binds the PRM/OR region; and complement the lysogeny defect by providing Gene-Z in trans from a plasmid in the lambda-deltaZ background",
+        "Overexpress Gene-Z from a plasmid in uninfected E. coli and measure any effect on bacterial growth rate",
+        "Sequence the CI gene in lambda-deltaZ to check whether compensatory mutations have arisen"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Option B provides a rigorous multi-layered experimental approach that tests the hypothesis at genetic, molecular, and biochemical levels. (1) Lysogeny frequency assay: This is the most direct functional test. Infect at high MOI (favoring lysogeny) and compare the frequency of stable lysogens (immune to superinfection, detectable by replica plating or selection) vs. lytic growth between WT and lambda-deltaZ. A significant decrease in lysogeny frequency with lambda-deltaZ directly supports the hypothesis that Gene-Z promotes lysogeny. (2) CI-lacZ reporter: Using the reporter phage in which lacZ expression is driven from PRM (the CI maintenance promoter), measure beta-galactosidase activity in cells infected with WT vs. lambda-deltaZ. Reduced beta-gal activity with the deletion would demonstrate that Gene-Z is needed for proper PRM activation/CI expression. (3) EMSA with purified Gene-Z: If Gene-Z protein directly shifts the PRM/OR DNA fragment, this provides biochemical evidence for a direct DNA-binding mechanism. If no shift occurs, Gene-Z may act indirectly (protein-protein interaction with CI or RNA polymerase). (4) Complementation: Providing Gene-Z in trans from a plasmid to lambda-deltaZ should rescue the lysogeny defect if the phenotype is specifically due to Gene-Z loss and not polar effects on neighboring genes. Option A provides only crude qualitative data. Option C tests Gene-Z in isolation from the phage context. Option D is a quality control step but does not test the hypothesis.",
+      "topic": "Genetics and Evolution",
+      "difficulty": "EXPERT",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 19,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert"
+    }
+  ]
+}

@@ -1,0 +1,507 @@
+{
+  "batch": {
+    "name": "Campbell Ch13-14 Meiosis & Mendelian Genetics — Wave 1",
+    "version": 1,
+    "source": "olympiad-wave1",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "During meiosis I, the monopolin complex recruits protein phosphatase PP2A to protect centromeric cohesin from separase cleavage. Which cohesin subunit must be specifically shielded at the centromere to ensure sister chromatids remain attached through anaphase I?",
+      "options": [
+        "Scc1/Rad21 along chromosome arms",
+        "Rec8 at the centromere",
+        "Smc1 at the centromere",
+        "Smc3 along chromosome arms"
+      ],
+      "correctAnswer": "B",
+      "explanation": "During meiosis I, the meiosis-specific cohesin subunit Rec8 (which replaces Scc1/Rad21 of mitotic cohesin) must be protected at centromeres by Shugoshin (Sgo1) recruiting PP2A. This phosphatase counteracts the phosphorylation of centromeric Rec8, preventing its cleavage by separase. Arm cohesin (Rec8 along chromosome arms) is phosphorylated and cleaved at anaphase I, allowing homolog separation, while centromeric Rec8 is preserved until anaphase II.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 13,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a species with a diploid chromosome number of 2n = 8, an individual is found to have 9 chromosomes. Cytogenetic analysis reveals that one chromosome is a Robertsonian translocation product involving two acrocentric chromosomes. What is the phenotypic consequence of this karyotype?",
+      "options": [
+        "The individual is trisomic for both chromosomes involved in the translocation and is expected to be severely affected",
+        "The individual is a balanced carrier with a normal phenotype despite having 9 chromosomes, because no genetic material is gained or lost",
+        "The individual is monosomic for the short arms of the two acrocentric chromosomes and will show haploinsufficiency",
+        "The individual has 9 chromosomes but carries a complete diploid genome because the translocation fused two chromosomes; the individual is phenotypically normal"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A Robertsonian translocation fuses two acrocentric chromosomes at their centromeres, producing one large metacentric chromosome and a small fragment (containing satellite DNA/rDNA repeats from the short arms, which is typically lost). An individual with 2n - 1 = 9 chromosomes but carrying the Robertsonian translocation chromosome has a complete euploid set of genetic information on the long arms. Since the lost short-arm material is repetitive (rDNA genes present in hundreds of copies on other chromosomes), the individual is phenotypically normal. This differs from a simple monosomic, which would be missing an entire chromosome's worth of unique genes.",
+      "isOlympiad": true,
+      "olympiadLevel": "INBO",
+      "campbellUnit": 3,
+      "campbellChapter": 13,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Holliday junction model of homologous recombination involves branch migration and resolution. If a Holliday junction is resolved by cutting the crossing strands (strands that crossed over during strand invasion), what is the outcome?",
+      "options": [
+        "Non-crossover (gene conversion without flanking marker exchange)",
+        "Crossover (reciprocal exchange of flanking markers)",
+        "Deletion of the intervening sequence between the two nicks",
+        "A replication fork collapse requiring break-induced replication"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In the Holliday model, the junction can be resolved in two orientations. Cutting the crossing strands (the strands originally involved in strand exchange) produces non-crossover recombinants — the flanking markers remain in their parental configuration, though gene conversion in the heteroduplex region may still occur. Cutting the non-crossing strands produces crossover recombinants with reciprocal exchange of flanking markers. This distinction is critical for understanding why not all recombination events lead to crossovers and explains the observed ratio of crossover to non-crossover products in meiosis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 13,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a cross between two plants heterozygous at two independently assorting loci (AaBb x AaBb), the expected F2 ratio is 9:3:3:1. A geneticist observes a 15:1 ratio instead. Which genetic phenomenon best explains this modified ratio?",
+      "options": [
+        "Complementary gene interaction where both recessive homozygous conditions produce the same novel phenotype",
+        "Dominant epistasis where a dominant allele at one locus masks the expression of the other locus",
+        "Recessive epistasis where the homozygous recessive genotype at one locus masks the expression of the other locus",
+        "Duplicate gene interaction where a dominant allele at either locus is sufficient to produce the same phenotype"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A 15:1 ratio arises from duplicate gene interaction (also called duplicate dominant epistasis). Here, a dominant allele at either locus A or locus B (or both) produces the same phenotype. Only the double recessive (aabb, 1/16) shows the alternative phenotype. The 15 classes (9 A_B_ + 3 A_bb + 3 aaB_) all appear identical. Complementary interaction gives 9:7, recessive epistasis gives 9:3:4, and dominant epistasis gives 12:3:1.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "A yellow-bodied Drosophila female heterozygous for the X-linked recessive yellow allele (X^+X^y) is crossed with a wild-type male (X^+Y). Among the female offspring, a single yellow-bodied female is found. Assuming no mutation occurred, which mechanism most likely explains her phenotype?",
+      "options": [
+        "X-inactivation skewing where the paternal X chromosome is preferentially inactivated in most cells",
+        "Mitotic nondisjunction early in development producing a clone of X^y X^y cells that predominate",
+        "Paternal X chromosome deletion making her hemizygous for yellow at that locus",
+        "Maternal nondisjunction at meiosis II producing an X^y X^y egg fertilized by a Y-bearing sperm"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The expected female genotypes from this cross are X^+X^+ and X^+X^y, both of which should be wild-type (since yellow is recessive). A yellow-bodied female most likely arose from a deletion on the paternal X^+ chromosome encompassing the yellow locus, making her functionally hemizygous (X^Δ X^y), so only the maternal X^y allele is expressed. Option A (skewed X-inactivation) would produce mosaic patches, not uniform yellow. Option B (mitotic nondisjunction) would produce mosaicism. Option D would yield an XXY female (X^y X^y Y), which is possible but less likely than a deletion given the specific single-gene effect.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "During meiosis in a triploid organism (3n = 21, with 7 sets of three homologs), what is the probability that a balanced gamete containing exactly one complete haploid set (n = 7) is produced, assuming each trivalent segregates 2:1 independently?",
+      "options": [
+        "(1/3)^7 = 1/2187",
+        "(1/2)^7 = 1/128",
+        "(1/2)^7 x 2 = 1/64",
+        "(2/3)^7 approximately 0.059"
+      ],
+      "correctAnswer": "B",
+      "explanation": "For each trivalent (group of three homologous chromosomes), segregation at anaphase I produces a 2:1 split. For a given trivalent, the probability that one specific pole receives exactly one chromosome (rather than two) is 1/2 for each pole. To produce a balanced n = 7 gamete, each of the 7 trivalents must send exactly one chromosome to the same pole. The probability for each trivalent contributing exactly one chromosome to a specific gamete is 1/2. Since the 7 trivalents segregate independently, the probability is (1/2)^7 = 1/128. This explains why triploid organisms are largely sterile — only about 1.6% of gametes are balanced.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 13,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a family, a man with blood type AB marries a woman with blood type O. Their first child has blood type O. Assuming no mutations, what is the most likely explanation?",
+      "options": [
+        "The father has the Bombay phenotype (h/h genotype at the H locus) and is actually genotype I^A I^B h/h, but this cannot explain an O child",
+        "The mother has the Bombay phenotype (h/h) and her true ABO genotype is masked; she could carry I^A or I^B alleles",
+        "The child has the Bombay phenotype (h/h) and is genetically I^A i or I^B i, but lacks the H antigen precursor needed to display A or B antigens",
+        "Non-paternity is the only possible explanation since AB x O cannot produce an O child under any circumstances"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Bombay phenotype (Oh) results from homozygosity for a non-functional allele (h/h) at the FUT1 (H) locus on chromosome 19. The H gene encodes a fucosyltransferase that adds fucose to create the H antigen, which is the precursor substrate for the A and B transferases. Without H antigen, neither A nor B antigens can be expressed, regardless of the ABO genotype. The child could be I^A i or I^B i (from the AB father and O mother) but phenotypes as O because he/she is h/h. Both parents must carry the h allele (H/h). The child's red blood cells would not react with anti-A, anti-B, or anti-H antibodies.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "A cross between two white-flowered sweet pea plants (both true-breeding) produces all purple-flowered F1 offspring. The F1 selfed gives an F2 ratio of 9 purple : 7 white. If an F2 purple plant is test-crossed (crossed with a double homozygous recessive), what fraction of test-cross progeny will be purple?",
+      "options": ["All purple", "1/4", "4/9", "1/3"],
+      "correctAnswer": "C",
+      "explanation": "The 9:7 ratio indicates complementary gene interaction: two genes (say C and P) are both required in dominant form for purple color. The F2 purple plants have genotype C_P_, comprising 1 CCPP : 2 CCPp : 2 CcPP : 4 CcPp out of 9 total purple plants. When test-crossed with ccpp: CCPP (1/9) gives all CcPp (all purple) = 1 x 1/9 = 1/9 purple. CCPp (2/9) gives 1/2 CcPp + 1/2 Ccpp = 1/2 purple, contributing 2/9 x 1/2 = 1/9. CcPP (2/9) gives 1/2 CcPp + 1/2 ccPp = 1/2 purple, contributing 2/9 x 1/2 = 1/9. CcPp (4/9) gives 1/4 CcPp (purple) + 3/4 non-purple, contributing 4/9 x 1/4 = 1/9. Total purple = 1/9 + 1/9 + 1/9 + 1/9 = 4/9.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Interference (I) in genetic mapping is defined as I = 1 - coefficient of coincidence (c.o.c.), where c.o.c. = observed double crossovers / expected double crossovers. If the recombination frequency between genes A and B is 0.20, and between B and C is 0.10 (gene order A-B-C), and 1000 progeny from a trihybrid test cross yield 5 double crossover classes, what is the interference value?",
+      "options": ["0.75", "0.50", "-0.50", "0.25"],
+      "correctAnswer": "A",
+      "explanation": "Expected double crossovers = (recombination frequency A-B) x (recombination frequency B-C) x total progeny = 0.20 x 0.10 x 1000 = 20. Observed double crossovers = 5. Coefficient of coincidence = 5/20 = 0.25. Interference = 1 - 0.25 = 0.75. This positive interference of 0.75 indicates that one crossover event substantially inhibits a second crossover nearby (only 25% of expected double crossovers occurred). This is typical of most eukaryotic organisms where crossover interference is mediated by the synaptonemal complex.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 13,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "A geneticist crosses two pea plants heterozygous for a single gene (Aa x Aa) and expects a 3:1 phenotypic ratio. Instead, she consistently observes a 2:1 ratio of dominant to recessive phenotype. She also notices that litter sizes are approximately 75% of expected. What is the most likely explanation?",
+      "options": [
+        "The A allele shows incomplete penetrance in heterozygotes",
+        "The a allele is a gain-of-function mutation causing a dominant-negative effect",
+        "There is segregation distortion favoring transmission of the a allele",
+        "The AA homozygous genotype is lethal, and affected embryos die before birth"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A 2:1 ratio of dominant:recessive phenotype (instead of 3:1) is the hallmark of a homozygous lethal allele. From Aa x Aa, the expected genotypic ratio is 1 AA : 2 Aa : 1 aa. If AA is lethal, the surviving offspring are 2 Aa : 1 aa, giving a 2:1 phenotypic ratio. The reduced litter size (75% of expected) confirms that 1/4 of conceptuses (AA individuals) are dying. Classic examples include the Yellow mouse (A^y/A^y lethal), Creeper fowl, and Manx cat. This is distinct from incomplete penetrance (which would not reduce litter size) or segregation distortion (which would alter allele transmission ratios differently).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about meiotic recombination and its molecular mechanisms:\n\nS1: The Spo11 protein, a type II topoisomerase homolog, creates double-strand breaks (DSBs) that initiate meiotic recombination, and it remains covalently attached to the 5' ends of the broken DNA.\n\nS2: During meiotic recombination, the RecA homolog Dmc1 catalyzes strand invasion exclusively during meiosis, whereas Rad51 functions in both mitotic and meiotic recombination.\n\nS3: The synaptonemal complex must be fully assembled before any double-strand breaks are formed; DSBs are created only after synapsis is complete.\n\nS4: Crossover interference ensures that crossover events are evenly spaced along chromosomes and is dependent on the ZMM pathway (Zip1, Zip2, Zip3, Msh4, Msh5, Mer3) in budding yeast.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Spo11 is indeed a type II topoisomerase-related protein that generates programmed DSBs during meiosis. It forms a covalent intermediate with the 5' DNA ends via a tyrosine residue, similar to topoisomerase II. These covalently bound Spo11-oligonucleotide complexes are then removed by the Mre11-Rad50-Xrs2 (MRX) complex. S2: TRUE — Dmc1 is a meiosis-specific RecA/Rad51 homolog that is essential for interhomolog strand invasion during meiotic recombination. Rad51 operates in both mitotic (DNA repair) and meiotic contexts. Both work cooperatively during meiosis. S3: FALSE — In most organisms studied (especially S. cerevisiae and mice), DSBs are formed BEFORE full synapsis. In fact, DSBs and the early steps of recombination are required for proper synapsis. The sequence is: DSB formation → strand invasion → synapsis initiation → full synaptonemal complex assembly. This is a critical distinction from the old model. S4: TRUE — The ZMM pathway (named for Zip1-4, Msh4-5, Mer3, and Spo16) promotes class I crossovers that exhibit interference. These crossovers are evenly distributed along chromosomes, ensuring each bivalent receives at least one crossover (the obligate crossover). Class II crossovers (mediated by Mus81-Mms4) do not show interference.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 13,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about nondisjunction and aneuploidy:\n\nS1: Nondisjunction at meiosis I produces two disomic gametes and two nullisomic gametes, whereas nondisjunction at meiosis II produces one disomic gamete, one nullisomic gamete, and two normal gametes.\n\nS2: Trisomy rescue through mitotic loss of the extra chromosome can result in uniparental disomy (UPD), which may cause disease if the affected chromosome contains imprinted genes.\n\nS3: Individuals with Klinefelter syndrome (47,XXY) always inherit both X chromosomes from their mother, because the nondisjunction event must occur during maternal meiosis.\n\nS4: Confined placental mosaicism, where the placenta is trisomic but the fetus is diploid, can arise through trisomy rescue in the inner cell mass while trophoblast cells retain the trisomic line.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Meiosis I nondisjunction means homologs fail to separate: both daughter cells are abnormal (one with an extra chromosome, one missing it). After meiosis II, this yields two disomic and two nullisomic gametes. Meiosis II nondisjunction affects only one of the two secondary cells: sister chromatids fail to separate in one cell, producing one disomic and one nullisomic gamete, while the other cell divides normally producing two euploid gametes. S2: TRUE — Trisomy rescue (loss of one chromosome from a trisomic cell) can produce UPD if the two remaining copies both came from the same parent. If the chromosome is subject to imprinting (e.g., chromosome 15), this can cause Prader-Willi syndrome (maternal UPD15) or Angelman syndrome (paternal UPD15). S3: FALSE — The extra X in Klinefelter syndrome can originate from either parent. Approximately 50% of cases result from paternal nondisjunction (father produces an XY sperm) and 50% from maternal nondisjunction (mother produces an XX egg). The parental origin can be determined using polymorphic DNA markers. S4: TRUE — Confined placental mosaicism (CPM) arises when a trisomic conceptus undergoes trisomy rescue in cells destined to form the embryo proper (ICM-derived), while trophoblast/extraembryonic cells retain the trisomy. CPM affects about 1-2% of CVS samples and can lead to false-positive prenatal diagnoses.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 13,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about Mendel's experiments and the molecular basis of his observed traits in Pisum sativum:\n\nS1: Mendel's 'wrinkled seed' phenotype is caused by a transposon insertion in the SBE1 (starch-branching enzyme 1) gene, which disrupts starch synthesis and causes higher sucrose and water content during seed development.\n\nS2: Mendel's seven traits mapped to seven different chromosomes in pea (n = 7), which is why they all assorted independently in his experiments.\n\nS3: The green/yellow seed color difference is due to the sgr (stay-green) locus, where the dominant allele promotes chlorophyll degradation during seed maturation, producing yellow seeds, while the recessive allele prevents degradation, keeping seeds green.\n\nS4: Mendel's ratios were statistically 'too good' according to later analysis by R.A. Fisher, who calculated that the probability of obtaining results as close to expected ratios as Mendel reported was less than 5%.",
+      "options": [
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-FALSE, S3-TRUE, S4-FALSE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-TRUE"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — The wrinkled phenotype in pea seeds is indeed caused by an ~800 bp insertion of a transposable element in the SBE1 gene (starch-branching enzyme I). This disrupts amylopectin synthesis, leading to higher free sucrose, greater water uptake, and subsequent wrinkling upon desiccation. This was demonstrated by Bhatt et al. (1998). S2: FALSE — Although peas have 7 chromosome pairs, Mendel's seven traits do NOT map to seven different chromosomes. Some traits are on the same chromosome. For example, seed color (I) and flower color (A) are both on chromosome 1, and plant height (Le) and pod shape (V/v) are both on chromosome 4. They still showed independent assortment either because they are far enough apart (>50 cM) to appear unlinked or because Mendel did not perform simultaneous trihybrid crosses that would have revealed linkage. S3: TRUE — The green cotyledon color in pea results from a recessive allele at the SGR (STAY-GREEN) locus. The dominant I allele encodes a functional SGR protein that promotes chlorophyll degradation during maturation, turning cotyledons yellow. The recessive i allele produces a nonfunctional protein, so chlorophyll is retained and seeds remain green. S4: TRUE — R.A. Fisher's 1936 analysis concluded that Mendel's data were suspiciously close to expected ratios. Fisher's chi-square analysis gave a combined P-value of about 0.00004 (far less than 5%), suggesting the data were 'too good to be true.' This has been debated extensively — possible explanations include unconscious bias, confirmation bias in scoring ambiguous phenotypes, or an assistant who knew the expected results.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about epistasis and gene interaction patterns:\n\nS1: In a 13:3 ratio from a dihybrid cross, the mechanism is complementary gene interaction where both genes must be homozygous recessive to produce the alternative phenotype, similar to the 9:7 ratio.\n\nS2: The complementation test determines whether two mutations are in the same gene: if a cross between two homozygous recessive mutants produces a wild-type F1, the mutations are in different genes (different complementation groups).\n\nS3: Duplicate recessive epistasis (9:7 ratio) differs from duplicate dominant epistasis (15:1 ratio) in that the 9:7 ratio requires dominant alleles at BOTH loci for the phenotype, while 15:1 requires a dominant allele at EITHER locus.\n\nS4: In a 9:3:4 ratio (recessive epistasis), the epistatic gene in homozygous recessive condition suppresses the hypostatic gene because the epistatic gene encodes an enzyme acting earlier in a biosynthetic pathway.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-FALSE, S2-FALSE, S3-TRUE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-FALSE"
+      ],
+      "correctAnswer": "FTTT",
+      "explanation": "S1: FALSE — A 13:3 ratio is NOT complementary gene interaction. It is inhibitory (or suppressor) epistasis. In a 13:3 ratio, the 9 A_B_ + 3 aaB_ + 1 aabb classes share one phenotype (13), while only the 3 A_bb class shows a different phenotype. This differs fundamentally from complementary interaction (9:7), where both genes must have at least one dominant allele to produce the phenotype. In 13:3, the dominant allele at one locus (B) suppresses the phenotypic expression of the other locus. S2: TRUE — The complementation test (cis-trans test) is fundamental to defining genes operationally. Two recessive mutations complement (produce wild-type F1 in trans configuration) if they are in different genes, because each parent supplies a functional copy of the other's mutant gene. If mutations are in the same gene, no wild-type allele is provided for that gene, and the F1 is mutant. This defines complementation groups = genes. S3: TRUE — In the 9:7 (complementary interaction), dominant alleles at BOTH loci are needed to produce the phenotype (only A_B_ = 9/16 shows it); any homozygous recessive at either locus blocks the pathway. In 15:1 (duplicate dominant), a dominant allele at EITHER locus suffices (A_B_ + A_bb + aaB_ = 15/16), and only the double recessive aabb (1/16) shows the alternative phenotype. S4: TRUE — In recessive epistasis (9:3:4), the 4 class represents the epistatic locus in homozygous recessive condition (aaB_ + aabb = 3 + 1 = 4) masking the hypostatic locus. This typically reflects a biosynthetic pathway where the epistatic gene product acts upstream. For example, in Labrador coat color, the ee genotype prevents any pigment deposition regardless of the B/b genotype, because the E gene product is needed earlier in the melanin deposition pathway.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about meiotic chromosome behavior:\n\nS1: The bouquet arrangement, where telomeres cluster at one pole of the nucleus during early meiotic prophase I, facilitates homolog pairing and is mediated by SUN-KASH domain proteins spanning the nuclear envelope.\n\nS2: Obligate chiasma — the requirement for at least one crossover per bivalent — ensures proper tension at metaphase I for bipolar attachment; failure results in random segregation of the non-exchange bivalent.\n\nS3: In organisms with chiasmate meiosis, the physical manifestation of crossovers (chiasmata) holds bivalents together after the synaptonemal complex disassembles during diplotene; without chiasmata, homologs would separate prematurely.\n\nS4: Achiasmate segregation systems, such as those in Drosophila males, rely on distributive segregation where non-exchange chromosomes pair based on size rather than homology.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-FALSE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE"
+      ],
+      "correctAnswer": "TTTT",
+      "explanation": "S1: TRUE — The bouquet configuration is a conserved feature of early meiotic prophase. Telomeres attach to the inner nuclear membrane and cluster at one pole, driven by cytoplasmic motors via SUN-domain (inner membrane) and KASH-domain (outer membrane) proteins forming the LINC complex. This arrangement brings homologous chromosomes into proximity, facilitating pairing and synapsis. S2: TRUE — The obligate chiasma (at least one crossover per chromosome pair) is essential for proper meiotic segregation. It creates physical linkage between homologs that, combined with sister chromatid arm cohesion, provides the tension needed for proper bipolar attachment at metaphase I. Non-exchange chromosomes (those lacking a crossover) are at high risk of nondisjunction. S3: TRUE — After the synaptonemal complex disassembles during the diplotene stage, chiasmata are the only physical connections maintaining bivalent integrity. They represent the cytological manifestation of crossovers and are stabilized by residual arm cohesion distal to the crossover point. This is why they are visible as cross-shaped structures and why they terminalize (slide toward chromosome ends) as condensation proceeds. S4: TRUE — Drosophila males completely lack meiotic recombination (achiasmate meiosis). Non-exchange chromosomes segregate via a distributive system where heterologous chromosomes can pair and segregate based on size similarity rather than sequence homology. This backup system also operates for non-exchange chromosomes in Drosophila females. The molecular basis involves heterochromatin-mediated associations.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 13,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about pedigree analysis:\n\nS1: An autosomal recessive trait characteristically skips generations, affected individuals have unaffected carrier parents, and approximately 1/4 of offspring from two carrier parents are affected.\n\nS2: X-linked recessive inheritance can be distinguished from autosomal recessive inheritance in pedigrees because affected fathers never pass the trait to their sons (no male-to-male transmission).\n\nS3: Pseudoautosomal inheritance appears autosomal in pedigree analysis because genes in pseudoautosomal regions of the X and Y chromosomes can recombine, allowing father-to-son transmission.\n\nS4: Autosomal dominant traits with complete penetrance can skip generations because heterozygous carriers may not express the phenotype, similar to autosomal recessive inheritance patterns.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-FALSE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-FALSE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-TRUE"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1: TRUE — Autosomal recessive traits classically skip generations. Two unaffected carriers (Aa x Aa) produce 1/4 affected (aa) offspring on average. Both sexes are equally likely to be affected. The trait may appear to arise 'out of nowhere' when both parents are heterozygous carriers. S2: TRUE — The definitive feature distinguishing X-linked recessive from autosomal recessive is the absence of male-to-male (father-to-son) transmission. An affected father (X^a Y) passes his X chromosome to all daughters (making them carriers) and his Y to all sons. Therefore, an affected father cannot produce an affected son unless the mother is also a carrier. S3: TRUE — Pseudoautosomal regions (PAR1 and PAR2) at the tips of X and Y chromosomes undergo obligate crossover during male meiosis. Genes in these regions (e.g., SHOX) are inherited in a pattern indistinguishable from autosomal inheritance, including father-to-son transmission, because recombination can transfer alleles between X and Y. S4: FALSE — With complete penetrance, autosomal dominant traits CANNOT skip generations. Every individual carrying even one copy of the dominant allele expresses the phenotype. Therefore, affected individuals always have at least one affected parent, and the trait appears in every generation (vertical transmission). It is specifically INCOMPLETE penetrance that allows dominant traits to skip generations (a carrier has the allele but does not express the phenotype). This is a fundamental distinction from autosomal recessive inheritance, where generation-skipping is the norm due to heterozygous carriers.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about independent assortment and its genetic consequences:\n\nS1: For an organism with n = 23 chromosomes, independent assortment alone (ignoring crossing over) generates 2^23 (approximately 8.4 million) genetically distinct gamete types from one individual.\n\nS2: Independent assortment can never apply to genes on the same chromosome regardless of distance, because physical linkage always produces an excess of parental-type gametes even at distances exceeding 50 cM.\n\nS3: If two genes are on the same chromosome and separated by 30 cM, the expected frequency of parental-type gametes from a dihybrid is 70%, violating independent assortment.\n\nS4: Mendel's law of independent assortment is actually a special case of the chromosome theory of inheritance and only applies universally when genes are on separate chromosomes or sufficiently far apart on the same chromosome.",
+      "options": [
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-FALSE"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — Independent assortment of n chromosome pairs generates 2^n different gamete combinations. For humans (n = 23), this is 2^23 = 8,388,608 possible gamete types from one parent, considering only whole-chromosome combinations without crossing over. When crossing over is included, the actual number of genetically distinct gametes is essentially unlimited. S2: FALSE — Genes located more than 50 cM apart on the same chromosome DO exhibit 50% recombination frequency, which is identical to the frequency expected for genes on different chromosomes. Multiple crossovers between very distant loci effectively randomize the allelic combinations. Such genes are genetically unlinked despite being physically linked, and they DO assort independently for all practical purposes. The claim that physical linkage always produces parental excess is incorrect for genes >50 cM apart. S3: TRUE — At 30 cM distance, the recombination frequency is 30%. This means 30% of gametes are recombinant types and 70% are parental types. If the genes assorted independently, we would expect 50% parental and 50% recombinant. The deviation from 50:50 (the excess of parental types) is the hallmark of linkage, violating the prediction of independent assortment. S4: TRUE — Mendel's second law is a consequence of chromosomal behavior during meiosis I, specifically the random orientation of bivalents at metaphase I. It applies strictly only to unlinked genes. Mendel happened to study traits that were either on different chromosomes or far enough apart on the same chromosome to appear unlinked. The chromosome theory (Boveri-Sutton) provided the physical explanation for Mendel's laws.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about pleiotropy and polygenic inheritance:\n\nS1: Sickle cell anemia is a classic example of pleiotropy: a single amino acid substitution (Glu→Val at position 6 of beta-globin) leads to multiple phenotypic effects including hemolytic anemia, splenomegaly, vaso-occlusive crises, and increased resistance to Plasmodium falciparum malaria in heterozygotes.\n\nS2: Polygenic traits like human skin color show continuous variation because multiple additive alleles at different loci contribute incrementally to the phenotype, and environmental effects further smooth the distribution.\n\nS3: Pleiotropy and polygenic inheritance are the same concept viewed from different angles: both describe situations where multiple genes interact to produce a single phenotype.\n\nS4: For a polygenic trait controlled by n loci with two alleles each (additive model, no dominance), the number of phenotypic classes in the F2 generation from a cross between homozygous extreme parents is (2n + 1).",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-FALSE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-TRUE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — The HbS mutation (GAG→GTG causing Glu6Val in beta-globin) is a textbook example of pleiotropy. The single molecular change causes hemoglobin polymerization under low oxygen, leading to sickle-shaped RBCs. This single cause cascades into multiple organ systems: hemolytic anemia (RBC destruction), splenomegaly (splenic sequestration), vaso-occlusive pain crises, stroke risk, renal damage, and in heterozygotes (HbAS), relative protection against severe P. falciparum malaria. S2: TRUE — Polygenic traits display continuous (quantitative) variation. For skin color, at least 4-6 major loci (including SLC24A5, SLC45A2, TYR, TYRP1, OCA2, MC1R) contribute additively. Each 'dose' of a contributing allele adds incrementally to melanin production. Environmental factors (UV exposure) further modulate the phenotype, creating a smooth bell-shaped distribution in populations. S3: FALSE — Pleiotropy and polygenic inheritance are NOT the same concept. They are reciprocal (complementary) concepts: pleiotropy is one gene affecting MANY traits, while polygenic inheritance is MANY genes affecting one trait. The statement incorrectly claims both describe multiple genes interacting for a single phenotype — that is only the definition of polygenic inheritance. Pleiotropy is the opposite: a single gene with multiple phenotypic effects. While a trait can exhibit both phenomena simultaneously (e.g., coat color genes are pleiotropic AND coat color has polygenic modifiers), the two concepts are fundamentally distinct. S4: TRUE — In an additive polygenic model with n loci, each with two alleles contributing equally, and no dominance, the F2 has (2n + 1) phenotypic classes. With 1 locus: 3 classes (0, 1, 2 contributing alleles). With 2 loci: 5 classes (0-4 contributing alleles). With 3 loci: 7 classes. The general formula is 2n + 1 because contributing alleles range from 0 to 2n in integer steps.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher crosses two pure-breeding pea plants differing in two traits: seed shape (round vs. wrinkled) and seed color (yellow vs. green). The F1 are all round yellow. The F1 plants are self-crossed, producing 640 F2 plants with the following phenotypes:\n\nRound yellow: 348\nRound green: 120\nWrinkled yellow: 110\nWrinkled green: 62\n\nUsing a chi-square goodness-of-fit test with the expected 9:3:3:1 ratio, the researcher calculates chi-square and compares to the critical value at alpha = 0.05 with 3 degrees of freedom (critical value = 7.815). Which conclusion is correct?",
+      "dataContext": "F2 data from dihybrid cross (total = 640 plants): Round yellow = 348 (expected 360), Round green = 120 (expected 120), Wrinkled yellow = 110 (expected 120), Wrinkled green = 62 (expected 40). Expected ratio: 9:3:3:1. Chi-square calculation: (348-360)^2/360 + (120-120)^2/120 + (110-120)^2/120 + (62-40)^2/40 = 0.40 + 0 + 0.833 + 12.1 = 13.333. Critical value at alpha 0.05, df=3: 7.815.",
+      "options": [
+        "Chi-square = 13.33, which exceeds 7.815; reject the null hypothesis of a 9:3:3:1 ratio. The excess of wrinkled green plants suggests the genes may be linked with a recombination frequency less than 50%.",
+        "Chi-square = 13.33, which exceeds 7.815; reject the null hypothesis. The excess of wrinkled green plants suggests epistatic interaction between the two loci increasing the double recessive class.",
+        "Chi-square = 2.67, which does not exceed 7.815; fail to reject the null hypothesis. The data fit a 9:3:3:1 ratio and the genes assort independently.",
+        "Chi-square = 13.33, which exceeds 7.815; reject the null hypothesis. However, since both genes are on chromosome 7 in pea, the deviation is due to linkage with recombination, not epistasis."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Chi-square = (348-360)^2/360 + (120-120)^2/120 + (110-120)^2/120 + (62-40)^2/40 = 144/360 + 0/120 + 100/120 + 484/40 = 0.40 + 0 + 0.833 + 12.1 = 13.333. With 3 degrees of freedom and alpha = 0.05, the critical value is 7.815. Since 13.333 > 7.815, we reject the null hypothesis that the data fit a 9:3:3:1 ratio. The most striking deviation is the excess of wrinkled green plants (62 observed vs. 40 expected). This excess of the double recessive parental class, combined with a slight deficit in the two single-recessive classes, is consistent with linkage between the two genes. When genes are linked, parental combinations (round yellow and wrinkled green, if these were the original parental types) are overrepresented. While epistasis could also distort the ratio, the pattern of deviation (excess parental types) is more consistent with incomplete linkage.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "In Labrador retrievers, coat color is determined by two genes: E (pigment deposition) and B (pigment type). E is epistatic to B. A cross between a black Lab (B_E_) and a yellow Lab (B_ee or bbee) produces an F1 that is all black. The F1 dogs are intercrossed, yielding 96 F2 puppies:\n\nBlack: 53\nChocolate: 18\nYellow: 25\n\nTest whether these data fit the expected ratio for this epistatic interaction. Which statement is correct?",
+      "dataContext": "Cross: Black (BBEE) x Yellow (bbee). F1: BbEe (all black). F2 expected ratio: 9 B_E_ (black) : 3 bbE_ (chocolate) : 4 B_ee + bbee (yellow) = 9:3:4. From 96 total: Expected black = 54, Expected chocolate = 18, Expected yellow = 24. Observed: Black = 53, Chocolate = 18, Yellow = 25. Chi-square = (53-54)^2/54 + (18-18)^2/18 + (25-24)^2/24 = 0.019 + 0 + 0.042 = 0.061. df = 2. Critical value at alpha 0.05 = 5.991.",
+      "options": [
+        "Chi-square = 0.061 with 2 df; since 0.061 < 5.991, fail to reject the 9:3:4 recessive epistasis model. The data strongly support that the ee genotype is epistatic to the B locus.",
+        "Chi-square = 5.23 with 2 df; since 5.23 < 5.991, marginally fail to reject the 9:3:4 model, but the fit is poor and complementary epistasis should be considered.",
+        "Chi-square = 0.061 with 3 df; since 0.061 < 7.815, the data fit a 9:3:3:1 ratio, indicating no epistasis.",
+        "Chi-square = 12.5 with 2 df; reject the 9:3:4 model. The data better fit a 12:3:1 dominant epistasis model."
+      ],
+      "correctAnswer": "A",
+      "explanation": "For recessive epistasis in Labrador coat color, the expected ratio is 9:3:4 (black:chocolate:yellow). The ee genotype prevents pigment deposition regardless of B genotype, grouping B_ee and bbee into the yellow class. Expected values: Black = (9/16)(96) = 54, Chocolate = (3/16)(96) = 18, Yellow = (4/16)(96) = 24. Chi-square = (53-54)^2/54 + (18-18)^2/18 + (25-24)^2/24 = 1/54 + 0 + 1/24 = 0.019 + 0 + 0.042 = 0.061. With 2 degrees of freedom (3 phenotypic classes - 1 = 2 df), the critical value at alpha = 0.05 is 5.991. Since 0.061 << 5.991, we fail to reject the null hypothesis. The data fit the 9:3:4 recessive epistasis model extremely well (P > 0.95). Note that df = number of classes - 1 = 3 - 1 = 2, not 3.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studying flower color in a plant species performs a cross between a red-flowered plant and a white-flowered plant. The F1 is all pink. Self-crossing the F1 yields 480 F2 plants:\n\nRed: 52\nDark pink: 105\nPink: 130\nLight pink: 98\nWhite: 95\n\nThe researcher initially hypothesized incomplete dominance at a single locus (expected 1:2:1 ratio of red:pink:white). After the data did not fit, she proposed an alternative model. Which model and conclusion are correct?",
+      "dataContext": "F2 data (n = 480): Red = 52, Dark pink = 105, Pink = 130, Light pink = 98, White = 95. Single-locus incomplete dominance test (1:2:1 for 3 classes): Expected red = 120, pink = 240, white = 120. Chi-square = (52-120)^2/120 + (335-240)^2/240 + (95-120)^2/120 = 38.5 + 37.6 + 5.2 = 81.3. Rejected. Alternative: two-locus additive model (1:4:6:4:1 for 5 dose classes, 0-4 contributing alleles). Expected from 480: 30:120:180:120:30. Chi-square = (52-30)^2/30 + (105-120)^2/120 + (130-180)^2/180 + (98-120)^2/120 + (95-30)^2/30 = 16.13 + 1.875 + 13.89 + 4.033 + 140.83 = 176.8. Also rejected. Modified two-locus model with unequal allelic effects: ratio 1:2:5:4:4 fits better if dominance interactions exist.",
+      "options": [
+        "The data fit a two-locus additive model (1:4:6:4:1) with chi-square = 3.2 and 4 df, supporting two genes with equal additive effects on flower color",
+        "The data reject both the single-locus (1:2:1) and two-locus additive (1:4:6:4:1) models. The asymmetric distribution with excess red and white classes suggests two loci with unequal allelic contributions and possible dominance modifiers",
+        "The data fit a single-locus incomplete dominance model (1:2:1) when the three pink shades are pooled, with chi-square = 2.1 and 2 df",
+        "The data fit a duplicate interaction model (15:1) when all colored classes are pooled, indicating redundant gene action"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Testing the single-locus 1:2:1 model (pooling all pink shades): Expected red = 120, pink (all shades) = 240, white = 120. Observed: red = 52, pink (all shades) = 333, white = 95. Chi-square = (52-120)^2/120 + (333-240)^2/240 + (95-120)^2/120 = 38.5 + 36.0 + 5.2 = 79.7 >> 5.991 (df=2). Rejected. Testing the two-locus additive 1:4:6:4:1 model: Expected from 480 = 30:120:180:120:30. Chi-square = (52-30)^2/30 + (105-120)^2/120 + (130-180)^2/180 + (98-120)^2/120 + (95-30)^2/30 = 16.1 + 1.9 + 13.9 + 4.0 + 140.8 = 176.7 >> 9.488 (df=4). Also strongly rejected. The massive excess of white plants (95 vs. expected 30) and red plants (52 vs. expected 30) indicates the alleles do not contribute equally. This pattern suggests two loci with unequal additive effects and/or dominance interactions, where some allelic combinations produce disproportionately extreme phenotypes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A genetics student performs a test cross of a fruit fly heterozygous for three X-linked genes in Drosophila (y+/y, ct+/ct, v+/v — yellow body, cut wing, vermilion eye). The test cross female (y ct v / y+ ct+ v+) is crossed with y ct v males. From 1000 female progeny, the following classes are obtained:\n\ny+ ct+ v+: 410\ny ct v: 395\ny+ ct v: 48\ny ct+ v+: 52\ny+ ct+ v: 42\ny ct v+: 47\ny+ ct v+: 3\ny ct+ v: 3\n\nWhat is the correct gene order and map distances?",
+      "dataContext": "Test cross progeny (n = 1000): Parentals: y+ ct+ v+ = 410, y ct v = 395 (total = 805). Single crossover class 1: y+ ct v = 48, y ct+ v+ = 52 (total = 100). Single crossover class 2: y+ ct+ v = 42, y ct v+ = 47 (total = 89). Double crossovers: y+ ct v+ = 3, y ct+ v = 3 (total = 6). Gene order determination: The least frequent class (DCO) has ct allele switched relative to parentals, so ct is in the middle. Gene order: y — ct — v. Map distance y-ct = (100 + 6)/1000 = 10.6 cM. Map distance ct-v = (89 + 6)/1000 = 9.5 cM. Coefficient of coincidence = 6/(0.106 x 0.095 x 1000) = 6/10.07 = 0.596. Interference = 1 - 0.596 = 0.404.",
+      "options": [
+        "Gene order: y — v — ct. Map distances: y-v = 10.6 cM, v-ct = 9.5 cM. Interference = 0.40.",
+        "Gene order: y — ct — v. Map distances: y-ct = 10.6 cM, ct-v = 9.5 cM. Interference = 0.40.",
+        "Gene order: ct — y — v. Map distances: ct-y = 10.0 cM, y-v = 9.5 cM. Interference = 0.60.",
+        "Gene order: y — ct — v. Map distances: y-ct = 10.0 cM, ct-v = 8.9 cM. Interference = 0.60."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Step 1 — Identify parentals and double crossovers: Parentals (most frequent) are y+ ct+ v+ (410) and y ct v (395). Double crossovers (least frequent) are y+ ct v+ (3) and y ct+ v (3). Step 2 — Determine gene order: Compare DCO classes to parentals. In the DCO class y+ ct v+, compared to parental y+ ct+ v+, only the ct allele has changed. This means ct is the middle gene (it is the one that switches in double crossovers). Gene order: y — ct — v. Step 3 — Calculate map distances: y-ct distance = (SCO between y and ct + DCO) / total = (48 + 52 + 3 + 3)/1000 = 106/1000 = 10.6 cM. ct-v distance = (SCO between ct and v + DCO) / total = (42 + 47 + 3 + 3)/1000 = 95/1000 = 9.5 cM. Step 4 — Interference: Expected DCO = 0.106 x 0.095 x 1000 = 10.07. Observed DCO = 6. c.o.c. = 6/10.07 = 0.596. Interference = 1 - 0.596 = 0.404 (approximately 0.40). Positive interference indicates that a crossover in one interval reduces the probability of a crossover in the adjacent interval.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 13,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "In a plant species, fruit color is controlled by two genes with the following interaction: Gene A encodes an enzyme converting a white precursor to a yellow pigment, and Gene B encodes an enzyme converting the yellow pigment to red. A dihybrid cross (AaBb x AaBb) yields 160 F2 plants:\n\nRed: 88\nYellow: 32\nWhite: 40\n\nThe researcher hypothesizes this fits a 9:3:4 recessive epistasis model (where aa is epistatic, blocking all pigment). Evaluate the chi-square test result and determine the correct interpretation.",
+      "dataContext": "F2 data (n = 160): Red = 88, Yellow = 32, White = 40. Model: 9:3:4 recessive epistasis (aa blocks pathway, producing white regardless of B genotype). Expected: Red (A_B_) = 9/16 x 160 = 90, Yellow (A_bb) = 3/16 x 160 = 30, White (aaB_ + aabb) = 4/16 x 160 = 40. Chi-square = (88-90)^2/90 + (32-30)^2/30 + (40-40)^2/40 = 4/90 + 4/30 + 0 = 0.044 + 0.133 + 0 = 0.178. df = 2. Critical value at alpha 0.05 = 5.991. P-value > 0.90.",
+      "options": [
+        "Chi-square = 0.178 (df = 2, P > 0.90); the data excellently fit the 9:3:4 model. Gene A acts upstream in the biosynthetic pathway, and aa individuals cannot produce the yellow intermediate, so no red pigment forms regardless of genotype at locus B.",
+        "Chi-square = 4.56 (df = 2, P < 0.05); reject the 9:3:4 model. The data better fit a 9:4:3 model where B is epistatic to A.",
+        "Chi-square = 0.178 (df = 3, P > 0.95); the data fit a standard 9:3:3:1 ratio, indicating no epistasis.",
+        "Chi-square = 8.22 (df = 2, P < 0.05); reject the 9:3:4 model. The excess of red plants suggests dominant epistasis (12:3:1) is a better fit."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Under the 9:3:4 recessive epistasis model: Expected Red (A_B_) = 90, Yellow (A_bb) = 30, White (aaB_ + aabb) = 40. Chi-square = (88-90)^2/90 + (32-30)^2/30 + (40-40)^2/40 = 0.044 + 0.133 + 0 = 0.178. With df = 2 (3 classes minus 1), this chi-square is far below the critical value of 5.991 (alpha = 0.05). The P-value exceeds 0.90, indicating an excellent fit. The biological interpretation: Gene A encodes the first enzyme in the pigment pathway (white precursor → yellow intermediate). Without functional A enzyme (aa genotype), no yellow intermediate is produced, so no red pigment can form regardless of whether Gene B is functional. Gene B encodes the second enzyme (yellow → red). Only A_bb plants accumulate the yellow intermediate. This is a classic example of a biosynthetic pathway determining epistatic relationships.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher discovers a new recessive mutation in Drosophila that causes curly wings when homozygous. She has two other independently isolated curly-wing mutations (curl-1 and curl-2) that are also recessive. She wants to determine whether her new mutation (curl-3) is an allele of curl-1, curl-2, or represents a novel gene. Design the most efficient experimental approach to resolve this question.",
+      "experimentContext": "Three independently isolated recessive mutations (curl-1, curl-2, curl-3) each produce curly wings when homozygous in Drosophila melanogaster. The researcher has true-breeding homozygous stocks for each mutation. Previous complementation tests showed that curl-1 and curl-2 do NOT complement each other (F1 from curl-1/curl-1 x curl-2/curl-2 have curly wings), establishing that they are alleles of the same gene. The researcher needs to determine if curl-3 is in the same complementation group or a different gene.",
+      "options": [
+        "Perform complementation tests by crossing curl-3 homozygous females with curl-1 homozygous males (and separately with curl-2 males). If F1 females have curly wings, curl-3 fails to complement and is in the same gene. If F1 females have wild-type wings, curl-3 is in a different gene.",
+        "Sequence the genomic DNA around the known curl-1 locus in the curl-3 stock. If a mutation is found in the same gene, they are allelic; if not, curl-3 is in a different gene.",
+        "Cross curl-3 homozygotes with wild-type flies, then intercross the F1. A 3:1 ratio confirms it is a single gene. Then map curl-3 relative to curl-1 — if they map to the same locus, they are allelic.",
+        "Perform a deficiency mapping experiment using chromosomal deletions that uncover the curl-1 locus. If curl-3 fails to complement the deletion, it maps to the same region."
+      ],
+      "correctAnswer": "A",
+      "explanation": "The complementation test (also called the cis-trans test or functional allelism test) is the gold standard for determining whether mutations are in the same or different genes. The experimental design is straightforward and efficient: Cross 1: curl-3/curl-3 females x curl-1/curl-1 males → F1 females are curl-3/curl-1. If curly wings (mutant phenotype): curl-3 and curl-1 FAIL to complement, meaning they are in the same gene (same complementation group). Neither allele can produce a functional protein. If wild-type wings: curl-3 and curl-1 DO complement, meaning they are in different genes. Each mutation is covered by the wild-type allele from the other parent. Since curl-1 and curl-2 are already known to be in the same gene, testing curl-3 against curl-1 alone would suffice, but testing against both provides confirmation. This approach is superior to the alternatives because: Option B (sequencing) requires knowing the exact gene and is expensive; Option C (mapping) takes multiple generations and is indirect; Option D (deficiency mapping) is useful but requires specialized deletion stocks and is less direct than complementation testing.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A plant breeder has a tomato variety that shows an unusual phenotype: when selfed, it consistently produces offspring in a 2:1 ratio of tall:dwarf plants, with smaller fruit set than expected. The breeder hypothesizes that a homozygous lethal allele linked to the tall phenotype is responsible. Design a comprehensive experiment to test this hypothesis and distinguish it from alternative explanations (gametic lethality, segregation distortion, or certation).",
+      "experimentContext": "Tomato variety 'TallMax' consistently produces 2:1 tall:dwarf ratio when selfed (n > 500 plants across multiple generations). Expected Mendelian ratio for Aa x Aa is 3:1. Fruit set is approximately 75% of normal. The tall phenotype is dominant over dwarf. The breeder suspects the TT genotype is embryo-lethal. Alternative hypotheses include: (1) gametic lethality — T-bearing pollen or ovules are inviable; (2) segregation distortion — meiotic drive favoring the t allele; (3) certation — differential pollen tube growth rate. Previous data: reciprocal crosses with pure-breeding dwarf (tt) line give 1:1 tall:dwarf in both directions.",
+      "options": [
+        "Cross tall plants (Tt) with dwarf plants (tt) and examine the ratio. If it is 1:1, the heterozygote is normal and the 2:1 selfing ratio confirms zygotic lethality of TT. Then examine developing seeds for aborted embryos at various stages to confirm embryo lethality.",
+        "Perform pollen viability staining on Tt plants. If all pollen grains are viable, gametic lethality is ruled out. Then test for segregation distortion by genotyping individual pollen grains using molecular markers flanking the T locus.",
+        "Conduct reciprocal crosses between Tt and tt, scoring progeny ratios. If both reciprocals give 1:1, gametic lethality and certation are unlikely. Then self Tt plants and examine seeds microscopically at 7, 14, and 21 days post-pollination for embryo abortion. Additionally, genotype surviving tall progeny from selfing to confirm all are Tt and none are TT.",
+        "Use CRISPR to knock out the T allele and observe whether the dwarf phenotype results. If so, T is gain-of-function and homozygous lethality may be due to protein overexpression."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Option C provides the most comprehensive experimental design that systematically tests and distinguishes all four hypotheses. Step 1 — Reciprocal crosses (Tt x tt and tt x Tt): The provided data already show 1:1 ratios in both directions. This rules out gametic lethality (if T pollen or T ovules were lethal, one reciprocal would give only dwarf offspring) and certation (differential pollen tube growth would affect ratios only when both T and t pollen compete on the same stigma, i.e., during selfing, not in crosses with tt). Step 2 — Embryo examination: Self Tt plants and examine developing seeds at sequential time points (7, 14, 21 days post-pollination). If TT is embryo-lethal, approximately 25% of seeds should show arrested/aborted embryos. The timing of arrest reveals when TT lethality occurs (early embryogenesis vs. seed maturation). Empty seed coats or shriveled seeds at a consistent developmental stage would confirm embryo lethality. Step 3 — Genotyping survivors: If all tall F2 plants from selfing are heterozygous Tt (none are TT), this provides molecular confirmation that TT is lethal. Using PCR markers or sequencing to distinguish TT from Tt is definitive. Step 4 — The reduced fruit set (75% of normal) is consistent with 25% embryo abortion (TT lethality), as the plant may abort fruits with too many dead seeds. This multi-pronged approach is superior to Option A (incomplete — doesn't rule out all alternatives), Option B (technically difficult — single pollen grain genotyping is challenging), and Option D (unnecessary genetic engineering — the question can be answered with classical genetics).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    }
+  ]
+}
