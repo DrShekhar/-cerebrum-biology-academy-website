@@ -305,6 +305,306 @@
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
       "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Habituation is the simplest form of non-associative learning. What distinguishes habituation from sensory adaptation?",
+      "options": [
+        "Habituation is a decrease in behavioral response to a repeated, harmless stimulus that occurs through synaptic changes in the neural circuit — unlike sensory adaptation (which is a peripheral receptor phenomenon), habituation involves changes in interneuron and motor neuron activity; it is stimulus-specific, can be reversed by dishabituation (a novel strong stimulus restores the response), and was extensively studied by Kandel in the Aplysia gill-withdrawal reflex",
+        "Habituation and sensory adaptation are identical processes occurring at the receptor level",
+        "Habituation is permanent — once habituated, the response never returns",
+        "Habituation only occurs in vertebrates with complex nervous systems"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Habituation is a form of non-associative learning in which repeated presentation of a benign stimulus leads to a progressive decrease in response. Eric Kandel (Nobel Prize 2000) elucidated the molecular mechanism using the gill-withdrawal reflex of Aplysia californica: A gentle touch to the siphon normally triggers gill withdrawal through a simple circuit: siphon sensory neurons → motor neurons → gill muscles. With repeated stimulation, the response decreases. The mechanism is presynaptic: (1) Reduced Ca2+ influx into the sensory neuron terminal (fewer voltage-gated Ca2+ channels available). (2) Decreased neurotransmitter (glutamate) release at the sensory-motor synapse. (3) Short-term habituation involves covalent modification of existing proteins; long-term habituation requires protein synthesis and structural changes (reduced synaptic contacts). Key distinctions from sensory adaptation: (a) Sensory adaptation occurs at the receptor level (e.g., Pacinian corpuscle filtering sustained pressure). (b) Habituation occurs at synapses within the neural circuit. (c) Habituation is stimulus-specific — habituated to one stimulus, the animal still responds fully to different stimuli. (d) Dishabituation — a strong or novel stimulus restores the habituated response, proving the sensory pathway is intact. Habituation occurs across all animals with nervous systems, from cnidarians to humans.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "The handicap principle (Zahavi, 1975) provides an explanation for the evolution of costly ornamental traits. What does it propose?",
+      "options": [
+        "The handicap principle proposes that sexually selected traits (like the peacock's tail) are honest signals of genetic quality precisely because they are costly to produce and maintain — only males in good condition can afford the survival handicap imposed by the trait, so the trait cannot be faked by low-quality males; this resolves the paradox of why females prefer traits that reduce male survival",
+        "The handicap principle states that ornamental traits have no cost and evolve by random drift",
+        "The principle applies only to auditory signals, not visual displays",
+        "The handicap principle predicts that all males should have equally elaborate ornaments"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Amotz Zahavi's handicap principle (1975, formalized mathematically by Grafen 1990) resolves a key problem in sexual selection theory: how can female preference for costly male traits be maintained by selection? Fisher's runaway sexual selection explains how preferences and traits coevolve but does not explain why females benefit. Zahavi proposed: (1) Costly traits are honest signals — a large peacock tail, bright coloration, or elaborate song impose real survival costs (increased predation, energy expenditure, parasites). (2) Only high-quality males can bear these costs — a male with good genes, high nutritional condition, or strong immune function can produce and maintain an elaborate trait while still surviving. A low-quality male cannot; if he produced the trait, the cost would be fatal. (3) Therefore, the trait is an unfakeable signal of quality — females choosing males with elaborate traits are selecting for good genes that will benefit their offspring. This is formally an example of a 'costly signaling' or 'index' signal in animal communication theory. Supporting evidence: (a) Condition-dependent expression: testosterone-dependent ornaments are suppressed by parasites and poor nutrition. (b) Hamilton and Zuk (1982): bright coloration in birds correlates with low parasite loads. (c) Experimental studies: female barn swallows prefer males with longer tail streamers; offspring of long-tailed males have higher survival. (d) Immunocompetence handicap hypothesis: testosterone promotes ornament development but suppresses immune function.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Migration involves remarkable feats of navigation. What compass mechanisms do migratory birds use to determine direction?",
+      "options": [
+        "Migratory birds use multiple redundant compass systems: (1) a sun compass with time compensation (using the circadian clock to account for the sun's movement across the sky), (2) a stellar compass calibrated during development by observing the rotation of the night sky around the celestial pole, and (3) a magnetic compass based on the inclination (dip angle) of Earth's magnetic field lines, likely using cryptochrome-based radical pair mechanisms in the retina",
+        "Birds navigate exclusively by following landmarks and have no internal compass",
+        "Birds use only the Earth's magnetic field and cannot navigate using celestial cues",
+        "Migration direction is entirely determined genetically with no calibration by environmental cues"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bird navigation is one of the most sophisticated orientation systems in the animal kingdom, using at least three compass mechanisms: (1) Sun compass: Birds determine direction from the sun's position, compensated for time of day using their circadian clock. Demonstrated by clock-shift experiments (Kramer, Schmidt-Koenig): advancing the clock by 6 hours shifts the bird's directional choice by ~90°. Young birds must learn the sun's arc. (2) Star compass: Emlen (1967, 1975) showed that indigo buntings learn the night sky's rotational center (celestial pole) during development by observing stellar rotation in a planetarium. Birds raised under a planetarium sky rotating around Betelgeuse oriented as if Betelgeuse were the pole star. This compass is learned, not innate. (3) Magnetic compass: Birds detect Earth's magnetic field (~25-65 µT) using an inclination compass — they sense the angle between the field lines and the horizontal, not polarity (they cannot distinguish magnetic north from south). The leading mechanism involves cryptochrome proteins (Cry1a, Cry4) in the retina, where light-generated radical pairs have spin dynamics sensitive to magnetic field direction. This is disrupted by oscillating magnetic fields in the radiofrequency range. Additionally, a magnetite-based system in the upper beak (trigeminal nerve-innervated) may provide magnetic map information (field intensity) for determining geographic position. These compasses are hierarchically calibrated: the magnetic compass calibrates the star compass, which calibrates the sun compass.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Game theory applies evolutionary concepts to behavioral strategies. What is an Evolutionarily Stable Strategy (ESS)?",
+      "options": [
+        "An ESS (Maynard Smith and Price, 1973) is a strategy that, when adopted by most members of a population, cannot be invaded by any alternative (mutant) strategy — if a population playing the ESS is invaded by a rare mutant using a different strategy, the mutant will have lower fitness than residents and will be eliminated by natural selection; the classic hawk-dove game demonstrates that pure hawk or pure dove populations are not ESSes, but a mixed ESS exists",
+        "An ESS is the strategy that produces the maximum possible payoff for any individual",
+        "An ESS must be a genetically fixed behavior that cannot change",
+        "ESS applies only to cooperation, not to competitive interactions"
+      ],
+      "correctAnswer": "A",
+      "explanation": "John Maynard Smith and George Price (1973) introduced evolutionary game theory to biology, providing a rigorous framework for analyzing behavioral strategies when the fitness of a strategy depends on what others are doing (frequency-dependent selection). Formal definition: A strategy I is an ESS if, for any alternative strategy J: (a) E(I,I) > E(J,I), OR (b) E(I,I) = E(J,I) and E(I,J) > E(J,J), where E(X,Y) is the payoff to strategy X when interacting with strategy Y. The hawk-dove game: Hawk = always escalate fights. Dove = display but retreat if opponent escalates. Resource value: V. Cost of injury: C (assume C > V). Payoffs: H vs. H: (V-C)/2 each (negative if C > V). H vs. D: H gets V, D gets 0. D vs. D: V/2 each. If all hawks: average payoff = (V-C)/2 (negative), so dove mutant gets 0 > (V-C)/2 — dove invades. If all doves: average payoff = V/2, but hawk mutant gets V > V/2 — hawk invades. Neither pure strategy is an ESS. Mixed ESS: population plays hawk with probability p = V/C, dove with probability 1 - V/C. At this frequency, hawk and dove have equal fitness, and no invasion is possible. Applications: territorial behavior, contest escalation, parental investment, signaling games, producer-scrounger dynamics, sex ratios (Fisher's principle: 1:1 sex ratio is an ESS).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pheromones are chemical signals used for intraspecific communication. What is the difference between primer pheromones and releaser pheromones?",
+      "options": [
+        "Releaser pheromones trigger an immediate behavioral response (e.g., alarm pheromones in ants cause immediate defensive behavior, sex pheromones like bombykol attract male silkmoths from kilometers away), while primer pheromones cause longer-term physiological changes (e.g., queen mandibular pheromone in honeybees suppresses worker ovary development, and the Lee-Boot effect where female mouse urine suppresses estrous cycles in group-housed females)",
+        "Primer pheromones are detected by the main olfactory system while releasers use the vomeronasal organ exclusively",
+        "There is no difference — all pheromones produce immediate behavioral responses",
+        "Primer pheromones only exist in plants, while releaser pheromones only exist in animals"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pheromones (Karlson and Luscher, 1959) are chemicals released by one individual that affect the behavior or physiology of conspecifics. They are classified by their effects: Releaser pheromones cause immediate, reversible behavioral responses: (a) Sex pheromones — bombykol (E-10-Z-12-hexadecadien-1-ol) released by female silk moths (Bombyx mori) attracts males from >10 km downwind; detected by male antennae with extraordinary sensitivity (~200 molecules). (b) Alarm pheromones — formic acid and various ketones in ants trigger immediate defensive aggregation and attack behavior. (c) Trail pheromones — volatile compounds laid by foraging ants guide nest-mates to food sources. (d) Aggregation pheromones — attract conspecifics to resources (bark beetles). Primer pheromones cause long-term physiological changes by altering endocrine function: (a) Queen mandibular pheromone (QMP) in honeybees — 9-ODA and other compounds suppress worker ovary development, prevent queen-rearing behavior, and attract drones during mating flights. (b) Lee-Boot effect — pheromones in female mouse urine suppress estrous cycles in group-housed females. (c) Whitten effect — male mouse urine synchronizes estrous cycles in females. (d) Bruce effect — male mouse pheromones (detected via vomeronasal organ, V2R receptors) can terminate pregnancy in recently mated females exposed to a novel male. (e) Maturation pheromones in locusts — trigger transition from solitary to gregarious phase. Both types can be detected by either the main olfactory epithelium or the vomeronasal organ (in species that possess it).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A behavioral ecologist studies foraging decisions of great tits (Parus major) in an aviary with two patch types: high-quality (HQ, providing 5 mealworms/minute initially, declining) and low-quality (LQ, providing 2 mealworms/minute initially, declining). Travel time between patches is either 5 seconds (short) or 30 seconds (long). Data shows that birds stay longer in both patch types when travel time is 30 seconds compared to 5 seconds. What does this result support?",
+      "options": [
+        "The result supports the marginal value theorem prediction that animals should stay longer in all patches when travel time between patches increases, because the average rate of return for the habitat is lower when travel consumes more time — the optimal departure point (where marginal rate equals average rate) is reached later when the average rate is reduced by longer travel",
+        "Birds stay longer because they are tired from traveling and need to rest",
+        "This result contradicts optimal foraging theory and suggests birds forage randomly",
+        "The longer stay is due to birds having difficulty finding the exit from each patch"
+      ],
+      "correctAnswer": "A",
+      "explanation": "This classic experimental result directly validates one of the key predictions of Charnov's marginal value theorem (MVT). The MVT predicts that the optimal time to leave a depleting patch is when the instantaneous (marginal) rate of gain drops to the average rate for the entire habitat. The average rate includes: (total food gained across all patches) / (total time including foraging + traveling). When travel time increases: (1) Total time increases for the same amount of foraging. (2) Therefore, the average rate of gain for the habitat decreases. (3) In each patch, the marginal rate of gain starts high and declines as the patch depletes. (4) With a lower average rate to match, the marginal rate takes longer to decline to that level. (5) Therefore, the optimal departure time is later — birds should stay longer in ALL patches. Graphically: the tangent line from the (later) travel time departure point on the x-axis touches the gain curve at a later time, corresponding to more food extracted before leaving. Cowie (1977) elegantly tested this with great tits in an aviary where travel time was manipulated by placing barriers between patches. Results quantitatively matched MVT predictions. The same principle explains why: commuters with longer drives stay at work longer, bees visiting flowers farther from the hive extract more nectar per flower, and bears fishing for salmon spend more time per pool in rivers with widely spaced pools.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Parental investment theory (Trivers, 1972) explains patterns of sexual selection. What does the theory predict about which sex will compete for mates and which will be choosy?",
+      "options": [
+        "The sex that invests more in each offspring (typically females in mammals — due to pregnancy, lactation, and obligate maternal care) will be the choosier sex, while the sex with lower investment per offspring (typically males) will compete more intensely for access to the high-investing sex — this explains why sexual selection often acts more strongly on males, producing greater sexual dimorphism, and predicts role reversals in species where males invest more (e.g., pipefish, jacanas)",
+        "Males are always competitive and females always choosy, regardless of parental investment",
+        "The species with more individuals is always the competitive sex",
+        "Parental investment has no relationship to mate choice or competition patterns"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Robert Trivers' parental investment theory (1972) provides the fundamental framework for understanding sex differences in mating behavior. Core logic: (1) Parental investment = any investment in an offspring that increases that offspring's survival at the cost of the parent's ability to invest in other offspring. (2) The sex with higher obligate parental investment per offspring has a lower potential reproductive rate and becomes the limiting resource for the other sex. (3) The lower-investing sex can increase reproductive success by mating with multiple partners, leading to intense competition for access to the high-investing sex. (4) The high-investing sex benefits from being choosy because each reproductive attempt is costly — choosing a high-quality mate maximizes return on investment. In most mammals: females invest heavily (pregnancy, lactation, parental care), are choosy, and limit male reproductive success. Males invest minimally per offspring, compete intensely (intrasexual selection: fights, displays), and are subject to strong sexual selection producing dimorphism. Role-reversal species: (a) Pipefish and seahorses — males brood young in a pouch; females compete for males and are more colorful. (b) Jacanas — males incubate eggs; females are larger, territorial, and polyandrous. (c) Mormon crickets — when food is scarce, males become choosy about which females to offer their spermatophylax (nutritious nuptial gift). Bateman's principle (1948) formalized the relationship: male fitness variance is higher than female fitness variance because males benefit more from additional matings.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Spatial learning enables animals to navigate their environment. What is a cognitive map, and which brain structure is critical for its formation?",
+      "options": [
+        "A cognitive map is an internal representation of the spatial relationships between landmarks in an animal's environment, allowing flexible navigation to goals from novel starting points — the hippocampus is critical for cognitive map formation, as demonstrated by place cells that fire when an animal occupies specific locations, and by studies showing that hippocampal lesions impair spatial learning in the Morris water maze",
+        "A cognitive map is simply a series of left-right turn decisions memorized in sequence",
+        "The cerebellum is the sole brain structure required for spatial navigation",
+        "Cognitive maps can only be formed by humans and do not exist in other animals"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Edward Tolman (1948) first proposed the concept of cognitive maps based on rat maze-learning experiments showing that rats learn spatial relationships, not just stimulus-response chains. Key evidence: (1) Latent learning — rats exploring a maze without reward later find food faster than naive rats, showing they learned the maze layout without reinforcement. (2) Novel shortcuts — rats take shortcuts they have never traversed, requiring knowledge of spatial relationships between locations. Hippocampus and spatial memory: (a) O'Keefe and Dostrovsky (1971) discovered place cells in the hippocampus — neurons that fire only when an animal occupies a specific location (place field). Collections of place cells form a neural map of the environment. John O'Keefe and May-Britt and Edvard Moser (Nobel Prize 2014) identified grid cells in the entorhinal cortex — neurons that fire at multiple locations arranged in a hexagonal grid, providing a metric coordinate system. (b) Morris water maze: hippocampal lesions severely impair rats' ability to find a hidden platform using spatial cues. (c) London taxi drivers (Maguire et al., 2000) have enlarged posterior hippocampi, and the enlargement correlates with years of experience navigating London. (d) Food-caching birds (Clark's nutcracker, black-capped chickadee) have relatively larger hippocampi than non-caching species, and hippocampal volume increases seasonally during caching. (e) Head direction cells in the subiculum and border cells in the entorhinal cortex complement place cells and grid cells to form a complete navigation system.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Honest signaling theory predicts that animal signals must have some mechanism ensuring reliability. What are the main mechanisms that maintain signal honesty?",
+      "options": [
+        "Three main mechanisms maintain signal honesty: (1) cost-based (handicap) signals — production or maintenance costs ensure only high-quality individuals can produce elaborate signals (peacock tails, red carotenoid pigmentation); (2) index signals — physically constrained signals that are unfakeable (body size determines dominant frequency of vocalizations, horn size limited by skull growth); (3) punishment of dishonest signalers — receivers retaliate against cheaters, making dishonesty costly (mantis shrimp bluff about fighting ability but risk escalated attacks if caught)",
+        "All animal signals are always honest and no enforcement mechanism is needed",
+        "Animal signals are purely arbitrary and convey no reliable information about the signaler",
+        "Only visual signals can be honest; acoustic and chemical signals are always dishonest"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Signal honesty is crucial for communication systems to be evolutionarily stable. If signals were always dishonest, receivers would evolve to ignore them, collapsing the communication system. Three mechanisms maintain reliability: (1) Cost-based (handicap) signals: The cost of producing or maintaining the signal ensures honesty because the marginal cost of increasing signal intensity is higher for low-quality than high-quality signaler. Examples: carotenoid-based plumage (red/orange/yellow) requires dietary carotenoids that are also used by the immune system — parasitized or poorly-nourished birds cannot produce bright plumage without immune compromise. Testosterone-dependent ornaments suppress immune function (immunocompetence handicap hypothesis). (2) Index signals: Mechanistically linked to the quality being signaled, making them impossible to fake. Body size constrains vocalization frequency (larger larynx → lower formant frequencies in red deer roars). Antler/horn size is limited by body growth and mineralization capacity. Claw size in fiddler crabs is constrained by body size. (3) Social enforcement: Receivers punish detected dishonesty. Paper wasps (Polistes) with experimentally darkened facial patterns (fake dominance signals) receive more aggression from colony mates. Mantis shrimp that have recently molted sometimes display threat signals despite lacking fighting ability (bluffing), but opponents may call the bluff and attack. Social punishment maintains honesty through receiver retaliation. Some systems also maintain honesty through shared interests (alarm calls benefit both caller and related receivers) or through repeated interactions where reputation matters (cleaner fish maintain honesty to retain clients).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MTF",
+      "question": "Match the following learning types with their characteristics:\n(I) Classical conditioning\n(II) Operant conditioning\n(III) Habituation\n(IV) Insight learning\n\n(P) Non-associative learning where repeated exposure to a harmless stimulus leads to decreased response; involves presynaptic depression at sensory-motor synapses\n(Q) Novel problem-solving without trial-and-error, involving mental manipulation of concepts before acting — demonstrated by Kohler's chimpanzees stacking boxes to reach bananas\n(R) Association between a neutral stimulus and a biologically significant stimulus, producing a conditioned response; neural substrates include amygdala (fear) and cerebellum (eyeblink)\n(S) Association between an animal's own behavior and its consequences; reinforced behaviors increase in frequency; involves dopaminergic reward pathways in the basal ganglia",
+      "options": [
+        "I-R, II-S, III-P, IV-Q",
+        "I-S, II-R, III-Q, IV-P",
+        "I-P, II-Q, III-R, IV-S",
+        "I-Q, II-P, III-S, IV-R"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Classical conditioning (I-R): Pavlov's paradigm where a neutral conditioned stimulus (CS, e.g., tone) is paired with an unconditioned stimulus (US, e.g., food → salivation). After pairing, the CS alone elicits a conditioned response. The animal learns a predictive relationship between stimuli. Neural substrates are well-characterized: amygdala for fear conditioning (tone + shock → freezing), cerebellum (interpositus nucleus) for eyeblink conditioning (tone + airpuff → blink), and nucleus accumbens for appetitive conditioning. Operant conditioning (II-S): Thorndike/Skinner's paradigm where behaviors are modified by their consequences. Positive reinforcement (reward) increases behavior; negative reinforcement (removing aversive stimulus) increases behavior; punishment decreases behavior. The dopaminergic mesolimbic pathway (VTA → nucleus accumbens) signals reward prediction errors (Schultz et al.): dopamine spikes when reward exceeds expectation, driving learning. The dorsal striatum stores learned action-outcome associations. Habituation (III-P): The simplest learning form. Studied extensively by Kandel in Aplysia: repeated siphon stimulation → decreased sensory neuron → motor neuron synaptic transmission due to reduced Ca2+ influx and vesicle depletion at presynaptic terminals. Stimulus-specific and reversible by dishabituation. Insight learning (IV-Q): Wolfgang Kohler (1925) observed that chimpanzees could solve novel problems (reaching suspended bananas) by apparently combining previously learned elements (stacking boxes, using sticks) without trial-and-error. Requires internal mental representation and is seen in corvids, great apes, and possibly dolphins. The neural basis likely involves prefrontal cortex.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Alarm calling in vervet monkeys demonstrates semantic communication. What makes vervet alarm calls particularly noteworthy?",
+      "options": [
+        "Vervet monkeys (Chlorocebus pygerythrus) produce acoustically distinct alarm calls for different predator types — eagle alarms cause monkeys to look up and descend from trees, leopard alarms cause them to climb trees, and snake alarms cause them to look down and stand bipedally; Seyfarth, Cheney, and Marler (1980) demonstrated referential signaling by playing back recorded calls in the absence of predators, eliciting appropriate predator-specific escape responses",
+        "Vervet monkeys produce only a single alarm call type used for all predators",
+        "Alarm calls in vervets are entirely learned with no innate component",
+        "Vervet alarm calls are identical to human language in their complexity and grammar"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Seyfarth, Cheney, and Marler's 1980 study is a landmark in animal communication research, demonstrating functionally referential signaling in a non-human primate. Key findings: (1) Three acoustically distinct alarm call types: 'Rraup' (eagle/raptor alarm) — short, low-pitched. 'Bark' (leopard alarm) — loud, tonal. 'Chutter' (snake alarm) — high-pitched, staccato. (2) Predator-specific responses: Eagle alarm → look up, run into dense bush or descend from exposed tree perch. Leopard alarm → climb to thin outer branches of nearest tree (leopards cannot follow). Snake alarm → stand bipedally, scan ground, mob the snake. (3) Critical experiment: Recorded calls played back through hidden speakers in the absence of any predator elicited the appropriate escape response, proving the calls themselves carry predator-type information (functionally referential). (4) Developmental evidence: Infant vervets make alarm calls but initially overgeneralize (eagle alarm for any aerial object, including falling leaves). Adults respond selectively — reinforcing correct calls by looking up and giving their own eagle alarm when an infant correctly calls for a raptor, but not responding to false alarms. This suggests some innate predisposition refined by experience. (5) Audience effects: callers are more likely to give alarms when vulnerable kin are present (kin selection). While remarkable, vervet calls differ from true language: they lack syntax, generativity, and displacement (referring to things not present). Similar referential alarm systems are found in prairie dogs, Diana monkeys, and some bird species.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Territoriality is a common behavioral strategy for resource defense. Under what conditions is territorial behavior predicted to be economically defensible?",
+      "options": [
+        "According to the economic defensibility model (Brown, 1964), territories are maintained when the benefits of exclusive resource access (food, mates, nest sites) exceed the costs of defense (energy expenditure, risk of injury, time spent patrolling) — territoriality is predicted when resources are moderately abundant and predictable; at very low resource density, defense costs are too high for insufficient returns, and at very high density, defense is unnecessary because resources are superabundant",
+        "Animals defend territories regardless of resource density or defense costs",
+        "Territoriality only occurs in birds and mammals, never in other taxa",
+        "Territory size is always the same regardless of resource distribution"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Jerram Brown's (1964) economic defensibility model applies cost-benefit analysis to territorial behavior. The model predicts: (1) Benefits of territoriality: exclusive access to food, mates, or other resources increases the territory holder's fitness. Benefits depend on resource density and quality within the territory. (2) Costs of territoriality: energy spent patrolling boundaries, time lost from foraging or mating, risk of injury from territorial disputes, and increased conspicuousness to predators. (3) Net benefit curve: At low resource density, territories must be very large to provide sufficient resources, making defense costs prohibitive — no territoriality (e.g., desert birds often flock rather than defend territories). At moderate resource density, a defensible territory provides net benefits — optimal conditions for territoriality. At high resource density, the marginal benefit of excluding competitors decreases because resources are superabundant — territoriality breaks down (e.g., some hummingbird species abandon territory defense when flower density is very high). Predictions confirmed by: (a) Golden-winged sunbirds defend nectar-rich flower patches only when nectar is moderately abundant. (b) Territory size decreases with increasing food density (inverse relationship, confirmed in many species). (c) Pied wagtails share territories with satellites when food becomes scarce (cost of defending alone exceeds benefit). (d) Juvenile salmon switch from territorial to schooling behavior as population density increases. The model also predicts that territorial behavior should increase when intruder pressure is moderate (few intruders) and decrease when intruder pressure is overwhelming.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to test whether cooperation in vampire bats (Desmodus rotundus) is based on reciprocal altruism rather than kin selection. What experimental design would best distinguish these hypotheses?",
+      "options": [
+        "Observe blood-sharing only in wild populations and assume all sharing is between relatives",
+        "In a controlled colony with known pedigrees (from genetic analysis), systematically remove food from specific individuals to create a need for blood-sharing, then record who shares with whom — compare sharing rates between related and unrelated pairs while controlling for association time, roosting proximity, and grooming relationships; critically, test whether individuals preferentially share with previous donors (reciprocity) independently of relatedness, and whether non-reciprocators are punished by reduced future sharing",
+        "Measure genetic relatedness of all bats and correlate it with proximity in the roost",
+        "Simply count the number of blood-sharing events per night"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Distinguishing reciprocal altruism from kin selection requires disentangling the effects of relatedness from reciprocity. Gerald Wilkinson's (1984) classic study, and subsequent work by Carter and Wilkinson (2013, 2015), employed this approach: (1) Known pedigrees: Genetic analysis (microsatellites or SNPs) determines relatedness (r) between all colony members, controlling for kinship effects. (2) Controlled need: Food deprivation of specific bats creates a predictable need for blood meals. Vampire bats can die within ~60 hours without feeding, so blood-sharing is literally life-saving. (3) Behavioral matrix: Record all blood-sharing events, identifying donor and recipient. (4) Statistical analysis: Use generalized linear mixed models with both relatedness and reciprocity (past sharing by recipient toward the current donor) as predictors, plus control variables (association duration, grooming frequency, roosting proximity). If reciprocity predicts sharing independently of relatedness, reciprocal altruism is supported. (5) Critical test — partner switching: When bats from different colonies (unrelated, no history) are housed together, does sharing develop preferentially with those who reciprocate? Carter and Wilkinson showed that food-sharing relationships develop between previously unfamiliar, unrelated bats and that sharing is predicted by grooming history (building trust through low-cost interactions before costly sharing). (6) Punishment test: Do bats reduce sharing with non-reciprocators? This is expected under reciprocal altruism but not kin selection. Results: Both kin selection and reciprocal altruism contribute, but reciprocity explains sharing between non-relatives.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Agonistic behavior includes all forms of conflict, from threats to combat. What does the war of attrition model predict about contest duration?",
+      "options": [
+        "The war of attrition model (Maynard Smith, 1974) predicts that in symmetric contests where opponents cannot assess each other's fighting ability, the ESS is to persist for a random duration drawn from a negative exponential distribution — this means contest duration is unpredictable, and no fixed persistence time is an ESS because any fixed strategy can be beaten by persisting slightly longer; the model explains why some contests last much longer than average while most are brief",
+        "All contests should last exactly the same amount of time",
+        "The stronger individual always wins immediately with no time spent in assessment",
+        "Contest duration is determined entirely by territory size, not by the contestants"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The war of attrition (WoA, Maynard Smith 1974, Bishop and Cannings 1978) models contests where: (1) Two opponents compete for a resource by investing time/energy into the contest. (2) The individual that persists longer wins the resource (value V). (3) Both opponents pay a cost proportional to contest duration (cost rate c per unit time). (4) Neither can assess the other's commitment or fighting ability (symmetric contest with no information). The key insight: no fixed persistence time is an ESS. If all individuals persisted for time T, a mutant persisting for T + ε would always win. But if all persisted for T + ε, a mutant could avoid costly contests by giving up at T - ε and winning elsewhere. The mathematical solution: the ESS is a mixed strategy where persistence times are drawn from a negative exponential distribution with mean = V/(2c). Properties: (a) Average contest duration is proportional to resource value and inversely proportional to cost rate. (b) Most contests are short (the mode of an exponential distribution is zero), but some are very long. (c) The probability of winning at any moment is always 50-50 (the memoryless property of exponential distributions). The model has been extended to asymmetric contests (where information about RHP — resource holding potential — is available). In the sequential assessment model (Enquist and Leimar 1983), opponents gain information about relative fighting ability during the contest, and the weaker individual retreats when sufficiently certain of inferiority — this predicts escalation through increasingly costly display/combat stages.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sociobiology proposes that social behaviors have a genetic basis shaped by natural selection. What is the selfish gene perspective, and how does it explain apparent altruism?",
+      "options": [
+        "Dawkins' selfish gene perspective (1976) reframes evolution as the differential survival of replicators (genes) using organisms as vehicles — altruistic behavior is not truly selfless at the gene level; genes promoting aid to relatives (who carry copies of the same gene) increase in frequency through kin selection, and genes promoting cooperation with non-relatives can spread through reciprocal altruism or mutualism; the organism's reproductive success is important only insofar as it propagates the genes",
+        "The selfish gene theory states that all organisms are purely selfish and never help others",
+        "The selfish gene theory proposes that groups of organisms evolve traits for the good of the species",
+        "The selfish gene perspective applies only to microorganisms, not to animals"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Richard Dawkins' The Selfish Gene (1976) popularized the gene-centered view of evolution, building on Hamilton's inclusive fitness theory. Core concepts: (1) The replicator — the gene (or more precisely, any stretch of DNA that is inherited with sufficient fidelity to be a unit of selection) is the fundamental unit of selection. Genes that are good at producing copies of themselves increase in frequency. (2) The vehicle — the organism is the gene's 'survival machine,' an ephemeral entity constructed by genes to propagate themselves. (3) Gene-level selection explains apparent altruism: (a) Kin selection: a gene that causes its carrier to help relatives (who are likely to carry copies of the same gene) increases its frequency even if the carrier's own reproduction is reduced (Hamilton's rule: rB > C). (b) Reciprocal altruism: a gene for helping non-relatives that is reciprocated can increase in frequency in repeated interactions (Trivers' model, tit-for-tat). (c) Green beard effects: theoretically, a gene could produce three effects simultaneously — a recognizable phenotype (green beard), recognition of that phenotype in others, and altruism toward bearers. The fire ant gene Gp-9 may be an example. (4) Apparent group selection effects can usually be explained by individual/gene-level selection. Group selection (selection between groups for traits benefiting the group) is theoretically possible but usually overwhelmed by within-group selection favoring selfish individuals. Multi-level selection theory (Wilson and Sober) argues both levels operate simultaneously.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
     }
   ]
 }
