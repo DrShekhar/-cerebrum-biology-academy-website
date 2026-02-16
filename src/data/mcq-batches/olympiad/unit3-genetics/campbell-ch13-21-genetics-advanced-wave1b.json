@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch13-21 Genetics Advanced Topics — Wave 1B",
+    "version": 1,
+    "source": "olympiad-wave1b",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "In mammals, the imprinted gene Igf2 is expressed only from the paternal allele. On the maternal allele, the unmethylated imprinting control region (ICR) binds the insulator protein CTCF, which blocks the downstream enhancer from activating Igf2, redirecting it to H19 instead. If a heterozygous mouse inherits a deletion of the ICR from its father, what is the expected phenotype?",
+      "options": [
+        "Normal phenotype because the maternal ICR is intact and continues to block Igf2 on the maternal allele as usual, while the paternal allele already had the ICR methylated and inactive",
+        "Overgrowth because both alleles now express Igf2 — the maternal allele loses CTCF insulation due to ICR deletion, and the paternal allele already expressed Igf2",
+        "Growth retardation because deleting the paternal ICR prevents enhancers from accessing Igf2 on the paternal allele",
+        "Embryonic lethality because the ICR deletion disrupts both Igf2 and H19 expression simultaneously on the paternal chromosome"
+      ],
+      "correctAnswer": "A",
+      "explanation": "On the paternal allele, the ICR is normally methylated, so CTCF cannot bind. This methylation spreads to the H19 promoter, silencing H19, and the enhancers downstream are free to activate Igf2. Deleting the paternal ICR removes a region that was already methylated and non-functional as an insulator. The enhancers can still access Igf2 because there is no CTCF barrier. The maternal allele remains unaffected — its ICR is unmethylated, CTCF binds, and Igf2 is silenced as normal. Therefore the mouse has normal Igf2 dosage and a normal phenotype. If the deletion were inherited maternally, CTCF could not bind, and Igf2 would be expressed biallelically, causing overgrowth (as in Beckwith-Wiedemann syndrome).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "PRDM9 is a histone methyltransferase that specifies meiotic recombination hotspots by trimethylating H3K4 at specific genomic loci. In PRDM9-knockout mice, crossovers are redistributed to promoter-like regions. Which statement best explains why PRDM9 loss redirects recombination to promoters?",
+      "options": [
+        "Without PRDM9, Spo11 cannot generate double-strand breaks and the cell defaults to replication-associated damage at promoters",
+        "PRDM9 normally recruits the cohesin complex, and without it, the synaptonemal complex forms aberrantly near open chromatin at promoters",
+        "Promoters are constitutively marked with H3K4me3 by other methyltransferases such as SET1/MLL complexes, and the DSB machinery (Spo11) preferentially targets accessible H3K4me3-marked chromatin in the absence of PRDM9-defined hotspots",
+        "PRDM9 normally represses promoter-associated recombination through its KRAB domain, and loss of this repression allows default recombination at promoters"
+      ],
+      "correctAnswer": "C",
+      "explanation": "PRDM9 uses its tandem zinc-finger array to bind specific DNA sequences and its PR/SET domain to deposit H3K4me3 marks at these sites, creating recombination hotspots. The DSB-forming machinery, centered on Spo11, preferentially targets chromatin that is accessible and marked with H3K4me3. In PRDM9 knockouts, Spo11 still requires H3K4me3-marked open chromatin to initiate DSBs. Promoters carry H3K4me3 deposited by SET1/COMPASS and MLL complexes as part of normal transcriptional regulation. These become the default targets for Spo11 in the absence of dedicated PRDM9-marked hotspots. This is evolutionarily significant because recombination at promoters can disrupt gene regulation, which may explain why PRDM9 evolved to redirect recombination away from functional elements. PRDM9 does not have a KRAB domain, and Spo11 can still generate DSBs without PRDM9.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 13,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Base editing uses a catalytically impaired Cas9 (nickase or dead Cas9) fused to a deaminase enzyme. A cytosine base editor (CBE) converts C-G to T-A, while an adenine base editor (ABE) converts A-T to G-C. A researcher wants to correct a T-to-C point mutation in the coding strand of a patient's gene. Which base editor and guide RNA strategy is appropriate?",
+      "options": [
+        "Use a CBE targeting the coding strand to deaminate the mutant C back to a U, which is then read as T after replication",
+        "Use an ABE targeting the non-coding (template) strand, converting the complementary G to an A-like base (inosine), which pairs with C and eventually corrects to A-T after replication",
+        "Use an ABE targeting the coding strand to convert the mutant C, since ABE can also deaminate cytosine at lower efficiency",
+        "Use a CBE targeting the non-coding strand to deaminate the G that pairs with the mutant C, converting G to A and thus restoring the original base pair"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The mutation is T-to-C on the coding strand, meaning the original base was T (paired with A) and the mutant is C (paired with G). To correct this, we need to convert C back to T on the coding strand. A cytosine base editor (CBE) fuses a cytidine deaminase (APOBEC1 or similar) with Cas9 nickase. The guide RNA directs the complex to the target, and within the editing window (~4-8 nt of the protospacer), the deaminase converts C to U on the non-target (displaced) strand of the R-loop. Since Cas9 binds the protospacer on the non-target strand, a guide RNA complementary to the non-coding strand would expose the coding strand for editing. The U is read as T during replication, restoring the original T-A pair. ABE converts A to inosine (read as G), which would be the wrong direction for this correction. Option D is incorrect because CBE acts on single-stranded DNA in the R-loop (the displaced strand), not on the strand base-paired with the guide RNA.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cas13 (formerly C2c2) is an RNA-guided RNA-targeting CRISPR effector. Upon binding its target RNA via the guide crRNA, Cas13 exhibits collateral cleavage activity — indiscriminately degrading nearby RNAs. This property has been exploited in the diagnostic platform SHERLOCK. Which limitation does collateral cleavage impose on therapeutic applications of Cas13?",
+      "options": [
+        "Cas13 cannot distinguish between mRNA splice variants, so it would knock down all isoforms equally without selectivity",
+        "Upon target recognition, Cas13 non-specifically degrades bystander cellular RNAs including essential transcripts, potentially causing widespread cytotoxicity that limits its use for in vivo gene silencing",
+        "Cas13 requires a protospacer flanking sequence (PFS) on the target RNA, restricting targetable sites to approximately 25% of all transcripts",
+        "Collateral activity prevents Cas13 from being packaged in AAV vectors because it degrades the vector's RNA genome during production"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cas13's collateral cleavage is its defining feature for diagnostics (SHERLOCK uses it to cleave fluorescent reporter RNAs upon target detection) but creates a major challenge for therapeutics. Once activated by target binding, Cas13 enters a state of non-specific RNase activity, cleaving nearby single-stranded RNAs regardless of sequence. In bacterial cells, this creates a growth arrest (abortive infection), but in mammalian cells it can cause degradation of essential cellular mRNAs and rRNAs, leading to cytotoxicity. While some engineered Cas13 variants show reduced collateral activity in mammalian cells (possibly due to compartmentalization or lower local RNA concentrations), this remains a significant concern. Option A is incorrect because Cas13 guide design can distinguish splice variants if the target sequence spans a unique junction. Option C overstates PFS restrictions — Cas13a from Leptotrichia shahii prefers a non-G PFS, but many Cas13 orthologs have minimal PFS requirements. Option D is irrelevant since AAV has a DNA genome.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Position effect variegation (PEV) in Drosophila occurs when a chromosomal rearrangement places a euchromatic gene near heterochromatin, leading to stochastic gene silencing in some cells. A dominant suppressor of PEV, Su(var)3-9, encodes a histone methyltransferase. Loss-of-function mutations in Su(var)3-9 suppress PEV (restore gene expression). What is the molecular role of the Su(var)3-9 gene product?",
+      "options": [
+        "It acetylates H3K9, creating an open chromatin environment that is required for heterochromatin spreading",
+        "It methylates H3K4, activating transcription at the variegating locus and competing with silencing marks",
+        "It methylates H3K9, creating binding sites for HP1 (Heterochromatin Protein 1), which drives heterochromatin spreading and silencing of the nearby euchromatic gene",
+        "It demethylates H3K27, removing Polycomb-mediated silencing and replacing it with constitutive heterochromatin"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Su(var)3-9 encodes a SET-domain histone methyltransferase that specifically trimethylates lysine 9 of histone H3 (H3K9me3). This modification serves as a docking site for the chromodomain of HP1 (encoded by Su(var)2-5 in Drosophila). HP1 then recruits additional Su(var)3-9 enzyme, creating a positive feedback loop: H3K9me3 recruits HP1, HP1 recruits Su(var)3-9, which methylates adjacent nucleosomes, enabling heterochromatin spreading along the chromosome. In PEV, this spreading extends from the heterochromatin across the rearrangement breakpoint into the formerly euchromatic gene, silencing it stochastically. Loss of Su(var)3-9 function prevents H3K9 methylation, blocking HP1 recruitment and heterochromatin spreading, thereby suppressing PEV and restoring expression of the variegating gene. H3K9 acetylation is an activating mark that opposes methylation. H3K4 methylation is associated with active transcription. H3K27 demethylation relates to Polycomb regulation, not constitutive heterochromatin.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Circular RNAs (circRNAs) are produced by back-splicing, where a downstream splice donor joins to an upstream splice acceptor. Which property makes circRNAs uniquely stable compared to their linear mRNA counterparts?",
+      "options": [
+        "CircRNAs are heavily modified with N6-methyladenosine (m6A), which recruits YTHDF2 and stabilizes the transcript against endonucleolytic cleavage",
+        "CircRNAs lack free 5' and 3' ends, making them resistant to degradation by exonucleases such as XRN1 (5'-to-3') and the exosome (3'-to-5')",
+        "CircRNAs are exclusively nuclear and therefore inaccessible to cytoplasmic decay machinery including the proteasome-associated RNA degradation pathway",
+        "CircRNAs are coated with a dense layer of RNA-binding proteins that sterically block all ribonucleases from accessing the phosphodiester backbone"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The covalent circular structure of circRNAs is the primary basis for their exceptional stability (half-lives often exceeding 24 hours, compared to ~7-10 hours for average mRNAs). Because back-splicing joins a downstream 5' splice site to an upstream 3' splice site via a 3'-5' phosphodiester bond, circRNAs have no free ends. The major cytoplasmic RNA decay pathways — 5'-to-3' degradation by XRN1 (which requires a free 5' monophosphate) and 3'-to-5' degradation by the exosome complex (which requires a free 3' end) — cannot initiate on circRNAs. CircRNAs can only be degraded by endonucleases that cleave internally. While some circRNAs carry m6A modifications, YTHDF2 actually promotes mRNA degradation rather than stabilization. Many circRNAs are cytoplasmic, not exclusively nuclear. While some circRNAs bind proteins, this is not the primary mechanism of their stability.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 17,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "In Drosophila, piRNAs (PIWI-interacting RNAs) silence transposable elements through the ping-pong amplification cycle. This cycle involves two PIWI-family proteins, Aubergine (Aub) and AGO3. Which statement correctly describes the ping-pong mechanism?",
+      "options": [
+        "Aub loaded with antisense piRNAs cleaves transposon mRNAs, generating the 5' end of sense piRNAs that are loaded onto AGO3; AGO3 then cleaves piRNA cluster transcripts to produce new antisense piRNAs for Aub, creating a self-amplifying loop",
+        "Both Aub and AGO3 independently process long piRNA precursors using Dicer, generating mature piRNAs that target transposon DNA for methylation",
+        "AGO3 loaded with antisense piRNAs cleaves transposon DNA in the nucleus, while Aub degrades transposon mRNAs in the cytoplasm, with no direct molecular crosstalk between the two proteins",
+        "Aub and AGO3 form a stable heterodimer that binds transposon mRNA and recruits the RNA-induced transcriptional silencing (RITS) complex to deposit H3K9me3 at transposon loci"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The ping-pong cycle is an elegant amplification mechanism for transposon silencing in the Drosophila germline. Aubergine (Aub) is loaded with antisense piRNAs derived from piRNA clusters (genomic loci containing degraded transposon fragments). When Aub encounters a transposon mRNA, its slicer activity cleaves the mRNA. The cleavage product defines the 5' end of a new sense piRNA, which is loaded onto AGO3 after 3' trimming and 2'-O-methylation. AGO3, now carrying a sense piRNA, can cleave antisense transcripts from piRNA clusters, generating new antisense piRNAs that are loaded back onto Aub. This creates a self-reinforcing cycle that amplifies the piRNA pool targeting active transposons. Importantly, piRNA biogenesis is Dicer-independent (distinguishing piRNAs from siRNAs and miRNAs). The ping-pong signature is a characteristic 10-nucleotide overlap between sense and antisense piRNA pairs, reflecting the slicer cleavage position.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "A splice site mutation changes the conserved GT at the 5' splice site of intron 7 in a human gene to AT. Which of the following is the most likely molecular consequence?",
+      "options": [
+        "The spliceosome skips exon 7 entirely (exon skipping), producing an mRNA lacking exon 7 sequences",
+        "The mutation activates a cryptic splice site within exon 7 or intron 7, producing an mRNA with partial intron retention or partial exon deletion",
+        "RNA polymerase II terminates transcription at the mutation site due to the absence of a functional splice signal",
+        "Both A and B are possible outcomes, and the predominant product depends on the strength and proximity of nearby cryptic splice sites relative to the mutant site"
+      ],
+      "correctAnswer": "D",
+      "explanation": "When the canonical GT dinucleotide at a 5' splice site is mutated, the U1 snRNP can no longer recognize and bind that site. The spliceosome must then use alternative strategies: (1) exon skipping, where the upstream and downstream exons are joined directly, omitting the exon whose 3' boundary was disrupted, or (2) activation of cryptic splice sites — sequences in exons or introns that resemble but do not normally function as splice sites because they are outcompeted by the authentic site. The outcome depends on the sequence context: if a strong cryptic 5' splice site (with good complementarity to U1 snRNA) exists nearby, it will be used, potentially including part of the intron or deleting part of the exon. If no strong cryptic site is available, exon skipping predominates. SR proteins and hnRNPs modulate this competition through exonic/intronic splicing enhancers (ESE/ISE) and silencers (ESS/ISS). Many human diseases result from splice site mutations, including some forms of beta-thalassemia and spinal muscular atrophy. Transcription is not affected because splicing is co-transcriptional but independent of polymerase processivity.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 17,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "In cancer genomics, driver mutations are distinguished from passenger mutations. A tumor exome sequencing study identifies 15,000 somatic mutations across 500 tumor samples. To identify driver genes, researchers calculate the ratio of non-synonymous to synonymous mutation rates (dN/dS). What dN/dS ratio pattern would indicate a gene is a tumor suppressor under positive selection for loss-of-function mutations?",
+      "options": [
+        "dN/dS significantly less than 1, indicating purifying selection against protein-altering mutations",
+        "dN/dS approximately equal to 1, indicating neutral evolution with no selective pressure on the gene in tumors",
+        "dN/dS significantly greater than 1, with an enrichment of truncating mutations (nonsense and frameshift) compared to missense mutations",
+        "dN/dS significantly greater than 1, with clustering of missense mutations at specific hotspot residues in the protein's active site"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The dN/dS ratio compares the rate of non-synonymous (protein-altering) mutations to synonymous (silent) mutations, normalized by the expected rates based on sequence composition. Under neutral evolution, dN/dS equals 1. For tumor suppressors under positive selection in cancer (where loss-of-function provides a growth advantage), dN/dS exceeds 1 because non-synonymous mutations are enriched. Critically, tumor suppressors show a characteristic pattern of truncating mutations — nonsense mutations creating premature stop codons and frameshift insertions/deletions — because any mutation that inactivates the protein is selected for (consistent with Knudson's two-hit hypothesis). In contrast, oncogenes also show dN/dS greater than 1 but with missense mutations clustered at specific activating hotspots (e.g., KRAS G12, BRAF V600). A dN/dS less than 1 would indicate essential genes under purifying selection. The distinction between tumor suppressor and oncogene mutation patterns is a key principle in computational cancer genomics.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "The effective population size (Ne) is often much smaller than the census population size (N). Which factor does NOT reduce Ne below N?",
+      "options": [
+        "Fluctuations in population size across generations, where Ne is dominated by the harmonic mean of generation sizes",
+        "Unequal sex ratio in the breeding population, calculated as Ne = 4NfNm/(Nf + Nm)",
+        "High variance in reproductive success among individuals, which reduces Ne proportionally",
+        "High rates of immigration from genetically similar neighboring populations (gene flow)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Effective population size (Ne) measures the size of an idealized Wright-Fisher population that would experience the same rate of genetic drift as the actual population. Several factors reduce Ne below census N: (1) fluctuating population size — Ne approximates the harmonic mean, which is dominated by the smallest generation size (bottlenecks); (2) unequal sex ratio — if breeding males and females differ, Ne = 4NfNm/(Nf + Nm), which is always less than or equal to N; (3) high variance in reproductive success (e.g., a few males siring most offspring in a harem system) reduces Ne because fewer individuals contribute genetically to the next generation. However, gene flow (immigration) from genetically similar populations does not reduce Ne. In fact, gene flow can increase local Ne by introducing new alleles and counteracting drift, effectively making the local population behave as part of a larger panmictic unit. Gene flow reduces Fst (genetic differentiation between populations) but does not reduce Ne within a population.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding histone modifications and the 'histone code' hypothesis in eukaryotic gene regulation, evaluate the following statements:",
+      "options": [
+        "S1: TRUE — H3K4me3 (trimethylation of lysine 4 on histone H3) is strongly associated with active promoters and is deposited by COMPASS/SET1 family methyltransferases",
+        "S2: FALSE — H3K27me3 is deposited by the Trithorax group (TrxG) proteins and is associated with transcriptional activation at developmental genes",
+        "S3: TRUE — Histone acetylation is generally associated with transcriptional activation because it neutralizes the positive charge on lysine residues, weakening histone-DNA electrostatic interactions and opening chromatin",
+        "S4: FALSE — Bivalent chromatin domains, carrying both H3K4me3 and H3K27me3, are found exclusively in cancer cells and represent pathological epigenetic states"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE: H3K4me3 is one of the best-characterized activating marks, found at nearly all active promoters and CpG islands. The COMPASS (Complex of Proteins Associated with Set1) complex and MLL (Mixed Lineage Leukemia) family methyltransferases catalyze this modification. S2 is TRUE (not FALSE as stated): H3K27me3 is actually deposited by Polycomb Repressive Complex 2 (PRC2, specifically its catalytic subunit EZH2), not by Trithorax group proteins. TrxG proteins oppose Polycomb silencing by depositing H3K4me3. H3K27me3 is a repressive mark associated with gene silencing, particularly at developmental genes. Therefore the statement as written is FALSE, making S2 correct. S3 is TRUE: Histone acetyltransferases (HATs) like p300/CBP, GCN5, and PCAF add acetyl groups to lysine residues, neutralizing their positive charge and reducing affinity for negatively charged DNA. This opens chromatin and also creates binding sites for bromodomain-containing proteins. S4 is FALSE: Bivalent domains are a normal feature of embryonic stem cells, where they poise developmental genes for rapid activation or repression during differentiation. They are not exclusively pathological, though aberrant bivalency can occur in cancer.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding transposable elements and their molecular mechanisms, evaluate the following statements:",
+      "options": [
+        "S1: TRUE — P elements in Drosophila encode a transposase that is only active in germline cells because a tissue-specific splicing event removes an intron (IVS3) that is retained in somatic cells, producing a repressor protein instead",
+        "S2: TRUE — Helitrons are a class of DNA transposons that replicate via a rolling-circle mechanism, can capture host gene fragments, and are widespread in plant genomes",
+        "S3: FALSE — MITEs (Miniature Inverted-repeat Transposable Elements) are autonomous elements that encode their own transposase and are the longest DNA transposons in eukaryotic genomes",
+        "S4: TRUE — LINE-1 (L1) retrotransposons use target-primed reverse transcription (TPRT), where an endonuclease nicks the genomic DNA and the exposed 3'-OH primes reverse transcription of the L1 RNA in situ"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE: P element transposition in Drosophila is regulated by tissue-specific alternative splicing. The P element has 4 exons; in germline cells, all 3 introns are spliced out to produce functional transposase. In somatic cells, the third intron (IVS3, 66 bp) is retained, producing a truncated protein that acts as a repressor of transposition. This explains hybrid dysgenesis — when P-strain males cross with M-strain females, the embryonic germline has no maternally deposited repressor cytoplasm, allowing P element mobilization. S2 is TRUE: Helitrons use a unique rolling-circle (RC) replication mechanism unlike cut-and-paste or copy-and-paste transposition. They encode a Rep/helicase protein, often capture gene fragments, and constitute a significant portion of plant genomes (up to 6% of maize DNA). S3 is correct as FALSE: MITEs are non-autonomous elements that do NOT encode transposase. They are short (< 600 bp), have terminal inverted repeats, and are mobilized in trans by transposases from related autonomous elements. They are among the shortest, not longest, DNA transposons. S4 is TRUE: L1 encodes ORF1p (an RNA-binding protein) and ORF2p (with endonuclease and reverse transcriptase domains). During TPRT, ORF2p nicks the target DNA at a consensus sequence (5'-TTTT/AA-3'), and the liberated 3'-OH primes first-strand cDNA synthesis directly from the L1 mRNA poly-A tail.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 19,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding alternative splicing regulation and SR proteins, evaluate the following statements:",
+      "options": [
+        "S1: TRUE — SR proteins (Serine/Arginine-rich proteins) generally promote exon inclusion by binding to exonic splicing enhancers (ESEs) and recruiting U1 snRNP to the upstream 5' splice site and U2AF to the downstream 3' splice site",
+        "S2: FALSE — hnRNPs (heterogeneous nuclear ribonucleoproteins) always promote exon inclusion and never antagonize SR protein function",
+        "S3: TRUE — The ratio of SR proteins to hnRNPs in a given cell type determines many tissue-specific splicing patterns, acting as a combinatorial code for alternative splicing regulation",
+        "S4: FALSE — Alternative splicing can only produce protein-coding mRNA isoforms and cannot generate transcripts that are targeted for nonsense-mediated decay (NMD)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE: SR proteins are key positive regulators of constitutive and alternative splicing. They contain one or two RNA Recognition Motifs (RRMs) and a C-terminal RS domain rich in serine-arginine dipeptides. By binding ESEs, they promote splice site recognition through protein-protein interactions: the RS domain of SR proteins interacts with U1-70K (at the 5' splice site) and U2AF35 (at the 3' splice site), bridging across the exon in exon definition. S2 is correctly labeled FALSE: hnRNPs (like hnRNP A1, PTB/hnRNP I) generally antagonize SR proteins by binding exonic or intronic splicing silencers (ESS/ISS), blocking SR protein binding or promoting exon skipping. The hnRNP A1/SF2(ASF) antagonism is a classic example. S3 is TRUE: The concentration ratio of SR proteins to hnRNPs varies across tissues and during development, creating tissue-specific splicing patterns. This was demonstrated in classic experiments showing that overexpression of SF2/ASF promotes proximal 5' splice site usage while hnRNP A1 promotes distal site usage. S4 is correctly labeled FALSE: About one-third of alternatively spliced transcripts contain premature termination codons (PTCs) and are degraded by NMD. This 'regulated unproductive splicing and translation' (RUST) is a widespread mechanism for gene expression regulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 17,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding DNA methylation and epigenetic inheritance, evaluate the following statements:",
+      "options": [
+        "S1: TRUE — DNMT1 is the maintenance methyltransferase that recognizes hemimethylated CpG sites after DNA replication and methylates the newly synthesized daughter strand, ensuring faithful propagation of methylation patterns",
+        "S2: FALSE — DNA methylation at CpG islands in gene promoters is associated with transcriptional activation because methyl-CpG attracts transcriptional activators",
+        "S3: TRUE — TET enzymes (TET1, TET2, TET3) catalyze the oxidation of 5-methylcytosine (5mC) to 5-hydroxymethylcytosine (5hmC), and further to 5-formylcytosine and 5-carboxylcytosine, initiating active DNA demethylation through the base excision repair pathway",
+        "S4: TRUE — In the Agouti viable yellow (Avy) mouse model, maternal diet supplemented with methyl donors (folate, choline, betaine) increases DNA methylation at the Avy locus, shifting offspring coat color from yellow toward pseudoagouti, demonstrating transgenerational epigenetic effects of nutrition"
+      ],
+      "correctAnswer": "C",
+      "explanation": "S1 is TRUE: DNMT1 (DNA methyltransferase 1) has a strong preference for hemimethylated DNA (where the parental strand is methylated but the daughter strand is not). It associates with the replication fork via PCNA and UHRF1, ensuring that methylation patterns are copied faithfully during S phase. DNMT3A and DNMT3B are de novo methyltransferases that establish new methylation patterns. S2 is correctly labeled FALSE: CpG island methylation in promoters is associated with transcriptional REPRESSION, not activation. Methylated CpGs recruit methyl-CpG-binding domain proteins (MeCP2, MBD1-4), which in turn recruit histone deacetylases (HDACs) and other corepressors, leading to chromatin compaction and silencing. The statement claims the opposite. S3 is TRUE: TET (Ten-Eleven Translocation) family enzymes are Fe(II)- and alpha-ketoglutarate-dependent dioxygenases that iteratively oxidize 5mC through 5hmC, 5fC, and 5caC. Thymine DNA glycosylase (TDG) then excises 5fC and 5caC, and the BER pathway restores unmodified cytosine. S4 is TRUE: The Avy mouse is a landmark model for nutritional epigenetics. The Avy allele contains an IAP (intracisternal A particle) retrotransposon upstream of the agouti gene. When the IAP is unmethylated, it acts as a cryptic promoter driving ectopic agouti expression (yellow coat, obesity, diabetes). Maternal methyl donor supplementation increases IAP methylation, silencing ectopic expression. However, the correct answer is C because S2 states that methylation activates transcription, which is false, making the S2 label of FALSE correct.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding quantitative genetics concepts, evaluate the following statements:",
+      "options": [
+        "S1: TRUE — Broad-sense heritability (H2) measures the proportion of phenotypic variance due to total genetic variance (VG/VP), including additive, dominance, and epistatic components, while narrow-sense heritability (h2) includes only additive genetic variance (VA/VP)",
+        "S2: FALSE — The breeder's equation R = h2 * S predicts the response to selection (R) based on broad-sense heritability (H2) and the selection differential (S)",
+        "S3: TRUE — QTL mapping identifies chromosomal regions associated with quantitative trait variation by testing for statistical associations between phenotypes and molecular markers in segregating populations derived from crosses between divergent parental lines",
+        "S4: FALSE — GWAS (Genome-Wide Association Studies) require biparental mapping populations and cannot be performed using unrelated individuals from natural populations"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE: Phenotypic variance (VP) = VG + VE (+ VGxE). Genetic variance further decomposes into VA (additive) + VD (dominance) + VI (epistatic). H2 = VG/VP captures all genetic contributions, while h2 = VA/VP captures only additive variance, which is the component that responds predictably to selection because additive allelic effects are faithfully transmitted from parent to offspring. S2 is correctly labeled FALSE: The breeder's equation R = h2 * S uses narrow-sense heritability (h2), not broad-sense (H2). Only additive genetic variance predicts selection response because dominance and epistatic effects are reshuffled by recombination each generation and do not breed true. The selection differential (S) is the difference between the mean phenotype of selected parents and the population mean. S3 is TRUE: QTL (Quantitative Trait Locus) mapping uses linkage analysis in structured populations (F2, backcross, RILs) to detect associations between markers and trait values. Significant marker-trait associations indicate a QTL nearby, and interval mapping methods (Lander-Botstein) estimate QTL positions and effect sizes. S4 is correctly labeled FALSE: GWAS actually uses unrelated individuals from natural populations, exploiting historical recombination (linkage disequilibrium) to achieve fine mapping resolution. It does not require biparental crosses — that describes QTL mapping.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding the lac operon kinetics and gene regulatory circuit behavior, evaluate the following statements:",
+      "options": [
+        "S1: TRUE — The lac operon exhibits bistability: at intermediate inducer (IPTG or allolactose) concentrations, individual cells in a genetically identical population can exist in either a fully induced or fully uninduced state, creating a bimodal distribution of expression levels",
+        "S2: FALSE — The positive feedback loop in the lac operon arises because LacY permease imports more lactose/inducer, which further derepresses the operon producing more LacY, but this loop does not contribute to the all-or-none switching behavior",
+        "S3: TRUE — The cooperativity of lac repressor binding (forming DNA loops between operators O1, O2, and O3) creates a sigmoidal response to inducer concentration, which is a prerequisite for bistability",
+        "S4: TRUE — A synthetic genetic toggle switch can be constructed from two mutually repressing promoters (e.g., lacI repressing cI and cI repressing lacI), creating a bistable circuit with two stable steady states"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 is TRUE: The lac operon is a classic example of bistability in biology. Novick and Weiner (1957) first showed that at intermediate TMG concentrations, E. coli populations split into induced and uninduced subpopulations. This is because the positive feedback through LacY permease creates a switch-like behavior: once a cell starts importing inducer above a threshold, it rapidly transitions to the fully induced state. S2 is correctly labeled FALSE: The LacY positive feedback loop is in fact the primary driver of bistability. As stated, the claim that this loop does NOT contribute to switching is wrong — it absolutely does. LacY imports inducer, which relieves repression, which produces more LacY, creating a self-reinforcing cycle. This positive feedback, combined with the nonlinearity of repressor-operator binding, generates bistability. S3 is TRUE: The lac repressor is a tetramer that simultaneously binds two operators, forming a DNA loop (typically O1-O3 or O1-O2). This cooperative binding creates an ultrasensitive (sigmoidal) response to inducer. Ultrasensitivity combined with positive feedback is the classic recipe for bistability (as analyzed by the mathematical framework of Monod-Jacob and later by Gardner et al.). S4 is TRUE: Gardner, Cantor, and Collins (2000) constructed the genetic toggle switch in E. coli using two mutually repressing promoters. This circuit has two stable states (high lacI/low cI, or low lacI/high cI) and can be switched between them by transient induction. It is a foundational achievement of synthetic biology.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding long non-coding RNAs (lncRNAs) in gene regulation, evaluate the following statements:",
+      "options": [
+        "S1: TRUE — Xist is a 17 kb lncRNA that coats the future inactive X chromosome in cis, recruiting PRC2 to deposit H3K27me3 and initiating X chromosome inactivation in female mammals",
+        "S2: TRUE — HOTAIR is transcribed from the HOXC locus but acts in trans to silence genes at the HOXD locus by serving as a scaffold that bridges PRC2 (which binds its 5' domain) and the LSD1/CoREST demethylase complex (which binds its 3' domain)",
+        "S3: FALSE — lncRNAs are always processed identically to mRNAs: they are 5'-capped, polyadenylated, and exported to the cytoplasm for translation into small functional peptides",
+        "S4: FALSE — The lncRNA NEAT1 functions exclusively as a negative regulator of transcription by competing with enhancers for RNA polymerase II binding"
+      ],
+      "correctAnswer": "D",
+      "explanation": "S1 is TRUE: Xist (X-inactive specific transcript) is the master regulator of X chromosome inactivation (XCI). It is expressed from the X inactivation center (Xic) on one X chromosome and spreads along the chromosome in cis, coating it. Xist recruits PRC2 through its A-repeat region, leading to H3K27me3 deposition, followed by additional silencing mechanisms including DNA methylation, histone deacetylation, and macroH2A incorporation. The antisense transcript Tsix regulates Xist expression and choice of which X to inactivate. S2 is TRUE: HOTAIR (HOX transcript antisense intergenic RNA) was one of the first lncRNAs shown to act in trans. Rinn et al. (2007) demonstrated that HOTAIR is transcribed from chromosome 12 (HOXC locus) but represses transcription on chromosome 2 (HOXD locus). Its modular structure allows it to scaffold two distinct chromatin-modifying complexes: PRC2 at the 5' end and LSD1/CoREST/REST at the 3' end, coordinating H3K27 methylation with H3K4 demethylation for efficient silencing. S3 is correctly labeled FALSE: While many lncRNAs share processing features with mRNAs (capping, splicing, polyadenylation), they are generally not translated into functional peptides (though ribosome profiling has identified some short ORFs in a few lncRNAs). Many lncRNAs are nuclear-retained. The statement is false because lncRNAs are defined as non-coding. S4 is correctly labeled FALSE: NEAT1 (Nuclear Enriched Abundant Transcript 1) is essential for the formation of paraspeckles — nuclear bodies involved in retaining hyperedited double-stranded RNAs. NEAT1 does not compete with enhancers for Pol II. It plays structural and regulatory roles in RNA processing, not direct transcriptional repression.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding meiotic drive and segregation distortion, evaluate the following statements:",
+      "options": [
+        "S1: TRUE — The t-haplotype in mice is a classic segregation distorter where heterozygous +/t males transmit the t-allele to more than 90% of offspring due to a distorter-responder system that impairs the motility of +-bearing sperm",
+        "S2: FALSE — Meiotic drive always benefits the organism by ensuring that the fittest alleles are preferentially transmitted to the next generation",
+        "S3: TRUE — Female meiotic drive in maize exploits the asymmetry of female meiosis (where only one of four meiotic products becomes the egg cell) — knob heterochromatin on the driving chromosome preferentially migrates to the egg pole of the meiotic spindle through neocentromere activity",
+        "S4: FALSE — Segregation distortion and meiotic drive are synonymous terms that refer exclusively to events occurring during meiosis I chromosome segregation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 is TRUE: The t-haplotype occupies a large region of chromosome 17 in mice, maintained by inversions that suppress recombination. In +/t heterozygous males, t-encoded distorter loci produce factors that impair sperm function, while the t-encoded responder locus confers resistance to these factors on t-bearing sperm. This results in > 90% t-haplotype transmission (transmission ratio distortion, TRD). Despite this advantage, t-haplotypes are maintained as polymorphisms because t/t homozygotes are often sterile or lethal. S2 is correctly labeled FALSE: Meiotic drive is a selfish genetic phenomenon — the driving element is transmitted preferentially regardless of its effect on organismal fitness. Many driving elements are harmful in homozygous state (t-haplotype lethality, SD sterility in Drosophila) or carry deleterious linked alleles. Drive represents intragenomic conflict, not adaptation for the organism's benefit. S3 is TRUE: Abnormal chromosome 10 (Ab10) in maize drives via neocentromere activity at knob heterochromatin during female meiosis. The knobs bind a specialized kinesin that pulls them preferentially toward the cell that will become the megaspore (egg), exploiting the inherent asymmetry of female meiosis where 3 of 4 products degenerate. S4 is correctly labeled FALSE: Segregation distortion is a broader term encompassing any deviation from Mendelian 50:50 transmission, including post-meiotic mechanisms. The t-haplotype acts during spermiogenesis (post-meiotically), and some drive systems act during sperm competition. Meiotic drive sensu stricto refers to events during meiotic divisions, but the terms are often used interchangeably in the literature.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 13,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A research team performed ChIP-seq for multiple histone modifications at a mammalian gene locus in embryonic stem cells (ESCs) and differentiated neurons. The data below shows the enrichment of histone marks at the gene's promoter region:\n\n| Histone Mark | ESCs (fold enrichment) | Neurons (fold enrichment) |\n|---|---|---|\n| H3K4me3 | 12.5 | 18.3 |\n| H3K27me3 | 10.8 | 0.4 |\n| H3K9me3 | 0.3 | 0.2 |\n| H3K27ac | 1.2 | 15.6 |\n| H3K4me1 | 0.8 | 0.5 |\n\nmRNA expression: ESCs = 2.1 FPKM (very low); Neurons = 187.4 FPKM (high)\n\nBased on this data, which interpretation is most accurate?",
+      "options": [
+        "The gene is constitutively active in both cell types but post-transcriptionally silenced in ESCs, as indicated by the presence of H3K4me3 in both conditions",
+        "The high H3K4me1 in ESCs indicates the promoter functions as an enhancer in stem cells before transitioning to promoter activity in neurons",
+        "The gene is silenced by constitutive heterochromatin (H3K9me3) in ESCs and switches to a Polycomb-repressed state in neurons",
+        "The gene has a bivalent chromatin state in ESCs (co-occurrence of H3K4me3 and H3K27me3), poising it for activation upon differentiation, and it resolves to an active state in neurons with loss of H3K27me3 and gain of H3K27ac"
+      ],
+      "correctAnswer": "D",
+      "dataContext": "ChIP-seq data showing histone modification enrichment at a gene promoter in embryonic stem cells versus differentiated neurons, with corresponding mRNA expression levels measured by RNA-seq in FPKM.",
+      "explanation": "The data reveals a classic bivalent-to-active transition during differentiation. In ESCs, the promoter carries both H3K4me3 (12.5-fold, an activating mark) and H3K27me3 (10.8-fold, a Polycomb repressive mark) simultaneously — this is the hallmark of bivalent chromatin domains first described by Bernstein et al. (2006). Bivalent domains keep developmental genes in a poised state: not fully active (hence low expression at 2.1 FPKM) but ready for rapid activation. The low H3K27ac (1.2-fold) in ESCs confirms the promoter is not actively transcribed despite the H3K4me3 mark. Upon differentiation to neurons, H3K27me3 is lost (0.4-fold, near background), H3K27ac increases dramatically (15.6-fold, indicating active transcription), and H3K4me3 increases further (18.3-fold). This resolution of bivalency toward the active state correlates with the 89-fold increase in mRNA expression. H3K9me3 is low in both conditions, ruling out constitutive heterochromatin involvement. H3K4me1 (an enhancer mark) is low at the promoter in both conditions, which is expected — promoters carry H3K4me3, while enhancers carry H3K4me1.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A population genetics study measures Fst values between three populations (Pop A, B, C) of a freshwater fish species separated by mountain barriers:\n\n| Population Pair | Fst | Geographic Distance (km) |\n|---|---|---|\n| A vs B | 0.02 | 50 |\n| A vs C | 0.18 | 120 |\n| B vs C | 0.15 | 95 |\n\nAdditional data:\n- Ne (effective population size): Pop A = 12,000; Pop B = 11,500; Pop C = 800\n- Nucleotide diversity (pi): Pop A = 0.0031; Pop B = 0.0028; Pop C = 0.0006\n\nWhich interpretation best explains the pattern of genetic differentiation?",
+      "options": [
+        "The pattern is purely explained by isolation-by-distance, where Fst increases linearly with geographic distance between all population pairs",
+        "Population C is recently founded from a different species through hybridization, explaining its distinct allele frequencies and low diversity",
+        "Population C has experienced a severe bottleneck that reduced both Ne and genetic diversity, and genetic drift in this small population has increased its differentiation from both A and B, while A and B maintain high gene flow between them",
+        "The high Fst between A-C and B-C is entirely due to natural selection at adaptive loci, not genetic drift, because drift alone cannot produce Fst values above 0.10"
+      ],
+      "correctAnswer": "C",
+      "dataContext": "Pairwise Fst values and geographic distances between three freshwater fish populations, with effective population sizes (Ne) estimated from linkage disequilibrium and nucleotide diversity (pi) from genome-wide SNP data.",
+      "explanation": "The data shows a clear pattern consistent with a bottleneck in Population C. Key evidence: (1) Pop C has dramatically lower Ne (800 vs ~12,000) and nucleotide diversity (pi = 0.0006 vs ~0.003), indicating loss of genetic variation through a population size reduction. (2) Pop C is highly differentiated from both Pop A (Fst = 0.18) and Pop B (Fst = 0.15), while A and B are minimally differentiated (Fst = 0.02). Genetic drift is inversely proportional to Ne — the small population size of C (Ne = 800) causes rapid allele frequency changes, increasing Fst. Using the island model approximation Fst = 1/(1 + 4Nem), a bottleneck reducing Ne dramatically increases Fst even without changes in migration rate. (3) The low Fst between A and B (0.02) despite 50 km separation indicates substantial gene flow, likely through connected waterways. The pattern does not follow a simple isolation-by-distance model because the A-B pair at 50 km has far lower Fst than expected from the trend of the other pairs. Option D is incorrect because drift can certainly produce Fst > 0.10, especially in small populations. Option B is unlikely given that the low diversity pattern matches a bottleneck rather than a hybrid origin (which would increase diversity).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A cancer genomics study sequences 200 tumor-normal pairs from colorectal cancer patients. The following data summarizes mutation frequencies in four genes:\n\n| Gene | % Tumors Mutated | Predominant Mutation Type | Mutation Distribution |\n|---|---|---|---|\n| APC | 78% | Nonsense, frameshift | Scattered throughout gene |\n| KRAS | 42% | Missense | 95% at codons 12, 13, or 61 |\n| TP53 | 54% | Missense | Clustered in DNA-binding domain (codons 175, 245, 248, 273) |\n| TTN | 68% | Missense, synonymous | Uniformly distributed, proportional to gene length |\n\nBackground mutation rate analysis: TTN's observed mutation frequency matches the expected rate given its exceptional length (longest human gene, 363 exons). APC, KRAS, and TP53 are mutated significantly more often than expected by chance (q-value < 0.001).\n\nWhich interpretation of this data is most accurate?",
+      "options": [
+        "All four genes are driver genes because they are each mutated in more than 40% of tumors, indicating strong positive selection in cancer",
+        "KRAS and TP53 are both oncogenes because they show hotspot missense mutations, while APC and TTN are both tumor suppressors because they accumulate truncating mutations",
+        "TTN is the most important driver gene because it has the second-highest mutation frequency, and its uniform mutation distribution suggests it is under diversifying selection",
+        "APC is a tumor suppressor (loss-of-function mutations scattered throughout), KRAS is an oncogene (gain-of-function missense at hotspots), TP53 is a tumor suppressor with dominant-negative hotspot mutations, and TTN is a passenger gene with mutations explained by its large mutational target size"
+      ],
+      "correctAnswer": "D",
+      "dataContext": "Somatic mutation data from whole-exome sequencing of 200 colorectal cancer tumor-normal pairs, showing mutation frequency, predominant mutation types, and spatial distribution of mutations across four genes, with background mutation rate correction.",
+      "explanation": "This data illustrates how to distinguish driver from passenger genes and classify driver gene types. APC is a classic tumor suppressor: truncating mutations (nonsense and frameshift) scattered throughout the gene indicate loss-of-function, consistent with Knudson's two-hit model. In colorectal cancer, APC mutations initiate the adenoma-carcinoma sequence. KRAS is a classic oncogene: missense mutations clustered at hotspot codons 12, 13, and 61 lock the protein in its GTP-bound active state, constitutively activating the RAS-MAPK signaling pathway. Only specific point mutations are selected because they must produce gain-of-function, not loss-of-function. TP53 shows a unique pattern: although it is a tumor suppressor, its most frequent mutations are missense rather than truncating. TP53 hotspot mutations (R175H, R248W, R273H) in the DNA-binding domain produce mutant proteins that not only lose tumor-suppressive function but also exert dominant-negative effects by oligomerizing with wild-type p53 and sometimes gain oncogenic functions (gain-of-function mutations). TTN exemplifies a passenger gene: despite its high mutation frequency (68%), this is entirely explained by its enormous size (the longest coding gene in the human genome at ~38,000 amino acids), giving it a proportionally larger mutational target. Its mutation frequency matches background expectations (not statistically significant after correction), mutations are uniformly distributed, and there is no enrichment for functional mutation types.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers study a synthetic genetic toggle switch in E. coli containing two mutually repressing genes: lacI (represses Ptrc promoter) and tetR (represses Ptet promoter). GFP is co-expressed with lacI. The following single-cell flow cytometry data shows GFP fluorescence distributions under different conditions:\n\n| Condition | GFP Distribution | % Cells GFP-high | % Cells GFP-low |\n|---|---|---|---|\n| No inducer | Bimodal | 45% | 55% |\n| + 1 mM IPTG (pulse, then wash) | Unimodal high | 98% | 2% |\n| + 200 ng/mL aTc (pulse, then wash) | Unimodal low | 3% | 97% |\n| + IPTG pulse, then aTc pulse | Unimodal low | 5% | 95% |\n| No inducer, 48h after IPTG pulse | Unimodal high | 96% | 4% |\n\nWhich conclusion is best supported by the data?",
+      "options": [
+        "The toggle switch is a monostable system that always returns to the same state after transient perturbation, with GFP-high being the default state",
+        "The circuit is bistable: it maintains two stable states (GFP-high and GFP-low), can be switched between them by transient inducer pulses, and retains the switched state after inducer removal — demonstrating epigenetic memory in a synthetic circuit",
+        "The bimodal distribution without inducer indicates stochastic gene expression noise but not true bistability, because the system cannot maintain a specific state after perturbation",
+        "The toggle switch requires continuous inducer presence to maintain each state, as shown by the need for IPTG to keep cells in the GFP-high state"
+      ],
+      "correctAnswer": "B",
+      "dataContext": "Single-cell flow cytometry measurements of GFP fluorescence in E. coli carrying a synthetic genetic toggle switch (lacI-tetR mutual repression circuit). IPTG inhibits LacI (switching to GFP-high/lacI-high state); aTc inhibits TetR (switching to GFP-low/tetR-high state). Pulse = 6 hours exposure followed by washing.",
+      "explanation": "The data demonstrates all hallmarks of a bistable toggle switch as designed by Gardner, Cantor, and Collins (2000). Key evidence: (1) Bimodality without inducer: The 45%/55% split in the uninduced condition shows two coexisting stable states in a clonal population, a signature of bistability arising from the mutual repression topology and stochastic initial conditions. (2) Switchability: A transient IPTG pulse (which inhibits LacI, relieving repression of lacI/GFP and allowing TetR to be repressed) switches 98% of cells to GFP-high. A transient aTc pulse (which inhibits TetR, allowing LacI/GFP expression to be repressed) switches 97% to GFP-low. (3) Memory/hysteresis: 48 hours after IPTG pulse and washout, 96% of cells remain GFP-high. The system remembers its state without continuous inducer — this is the key property of bistability. The mutual repression creates positive feedback (each repressor suppresses the other, reinforcing its own expression), which sustains the switched state. (4) Sequential switching: IPTG then aTc results in GFP-low (5%/95%), showing the last switch event determines the final state. This is NOT monostable (option A) because the system has TWO stable states. The memory after washout (option C, D) conclusively demonstrates bistability, not mere noise.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A twin study in humans estimates heritability of body mass index (BMI) using data from monozygotic (MZ) and dizygotic (DZ) twins reared together and apart:\n\n| Twin Type | Rearing | Correlation (r) | Sample Size (pairs) |\n|---|---|---|---|\n| MZ | Together | 0.80 | 1,200 |\n| MZ | Apart | 0.72 | 85 |\n| DZ | Together | 0.43 | 1,800 |\n| DZ | Apart | 0.28 | 62 |\n\nUsing these data, estimate the narrow-sense heritability (h2) and the proportion of variance due to shared environment (c2). Which set of estimates and interpretation is most accurate?",
+      "options": [
+        "h2 = 2(rMZ - rDZ) = 2(0.80 - 0.43) = 0.74; c2 = rMZ - h2 = 0.80 - 0.74 = 0.06; BMI has high heritability with a small shared environment effect, and the MZ-apart correlation (0.72) confirms that most of the MZ similarity is genetic rather than environmental",
+        "h2 = 0.80, c2 = 0.00; BMI is entirely genetic because MZ twins reared together are perfectly concordant, and shared environment has no effect",
+        "h2 = 0.43, c2 = 0.37; DZ twin correlation directly estimates heritability because DZ twins share exactly 50% of their genes",
+        "h2 = 0.28, c2 = 0.52; the DZ-apart correlation provides the best heritability estimate because it is free from shared environment confounding"
+      ],
+      "correctAnswer": "A",
+      "dataContext": "Classical twin study data for BMI showing intraclass correlations for monozygotic and dizygotic twin pairs reared together and apart. MZ twins share 100% of their DNA, DZ twins share on average 50%.",
+      "explanation": "Using Falconer's formula: h2 = 2(rMZ - rDZ). With twins reared together: h2 = 2(0.80 - 0.43) = 0.74. The shared environment component: c2 = rMZ - h2 = 0.80 - 0.74 = 0.06. This small c2 is consistent with the observation that MZ twins reared apart (r = 0.72) have nearly as high a correlation as MZ twins reared together (r = 0.80), confirming that shared family environment contributes minimally to BMI similarity. The difference (0.80 - 0.72 = 0.08) estimates the combined effect of shared environment and gene-environment correlation specific to being reared together. The logic of Falconer's formula: MZ twins share 100% of additive genetic variance, while DZ twins share 50%. Both share 100% of shared environment. So rMZ = h2 + c2, and rDZ = 0.5h2 + c2. Subtracting: rMZ - rDZ = 0.5h2, thus h2 = 2(rMZ - rDZ). Option B overestimates heritability by equating MZ correlation with heritability (ignoring shared environment). Option C incorrectly equates DZ correlation with heritability. Option D incorrectly uses DZ-apart as a heritability estimate; DZ twins share only 50% of genes, so their correlation includes only half the additive genetic variance.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A research team wants to determine whether a specific lncRNA (LINC-X) regulates gene expression in cis (affecting nearby genes on the same chromosome) or in trans (affecting genes on different chromosomes). They know LINC-X is transcribed from chromosome 7 and is nuclear-localized. Design an experiment to distinguish cis from trans regulation.",
+      "experimentContext": "The lab has access to: CRISPR-Cas9 gene editing, CRISPRi (dCas9-KRAB for transcriptional repression), RNA-seq, RT-qPCR, cell lines heterozygous for a SNP in the LINC-X locus (allowing allele-specific analysis), and standard molecular biology reagents. The target organism is human HEK293T cells.",
+      "options": [
+        "Use CRISPRi to repress LINC-X transcription with a guide RNA targeting its promoter, perform RNA-seq, and identify all differentially expressed genes. If only chromosome 7 genes change, the effect is cis; if genes on other chromosomes change, the effect is trans.",
+        "Perform a Northern blot to detect LINC-X in nuclear versus cytoplasmic fractions. If LINC-X is nuclear, it acts in cis; if cytoplasmic, it acts in trans.",
+        "Express LINC-X from an ectopic locus on a different chromosome using a transgene with its own promoter. Perform RNA-seq comparing cells with endogenous-only expression versus endogenous plus ectopic expression. If the ectopic copy regulates the same chromosome 7 target genes, the regulation is in trans (the RNA itself diffuses to targets). If ectopic expression fails to regulate chromosome 7 targets but does regulate genes near the ectopic insertion site, the regulation is cis (requiring the act of local transcription or proximity).",
+        "Knock out the LINC-X gene using CRISPR-Cas9 (deleting the entire locus) and perform RNA-seq. Classify all upregulated genes as trans targets and all downregulated genes as cis targets."
+      ],
+      "correctAnswer": "C",
+      "explanation": "The ectopic expression approach is the gold standard for distinguishing cis and trans lncRNA regulation, as demonstrated in studies of Xist, HOTTIP, and other lncRNAs. The key logic: if a lncRNA regulates targets in cis, it does so because (1) the act of transcription itself remodels local chromatin, or (2) the RNA acts locally before being released from the transcription site and cannot diffuse to distant loci. If the lncRNA acts in trans, the mature RNA molecule can function at remote genomic locations regardless of where it is transcribed. By expressing LINC-X from a transgene on a different chromosome, you separate the RNA product from its native genomic context. If the ectopic copy can still regulate the original chromosome 7 targets, the RNA itself is the regulatory molecule (trans). If it cannot, but instead affects genes near the ectopic insertion, the regulation depends on local context (cis). Option A (CRISPRi + RNA-seq) cannot distinguish cis from trans because silencing the endogenous locus would abolish both mechanisms simultaneously. Option B is too simplistic — nuclear localization does not distinguish cis from trans, as many trans-acting lncRNAs (like HOTAIR) are nuclear. Option D is flawed because locus deletion could remove enhancers, disrupt chromatin architecture (TAD boundaries), and eliminate the gene entirely, confounding cis-regulatory element effects with lncRNA function. Additionally, the direction of gene expression change does not indicate cis versus trans mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 18,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Liquid biopsy using circulating tumor DNA (ctDNA) is an emerging approach for cancer monitoring. A clinical research team wants to develop a ctDNA-based assay to detect minimal residual disease (MRD) in colorectal cancer patients after surgical tumor removal. They have whole-exome sequencing data from each patient's resected primary tumor identifying patient-specific somatic mutations. Design an optimal assay strategy.",
+      "experimentContext": "Resources available: Primary tumor whole-exome sequencing data for each patient (identifying 50-200 somatic mutations per tumor), matched normal germline DNA, serial blood samples collected at surgery and then monthly for 2 years, digital droplet PCR (ddPCR), hybrid-capture targeted sequencing panels (custom design possible), whole-genome sequencing capability, and a bioinformatics team. Budget allows either deep targeted sequencing (>30,000x) of a custom panel or moderate-depth (500x) whole-exome sequencing of plasma cfDNA.",
+      "options": [
+        "Perform whole-exome sequencing at 500x depth on plasma cfDNA at each timepoint and compare to the tumor exome to detect any shared mutations, using the broad coverage to maximize sensitivity for detecting new resistance mutations",
+        "Design a patient-specific custom hybrid-capture panel targeting 16-50 of the clonal somatic mutations identified in each patient's tumor, perform ultra-deep sequencing (>30,000x) of plasma cfDNA, and integrate signals across all tracked variants using a statistical model to detect ctDNA at variant allele frequencies as low as 0.001% — prioritizing clonal (truncal) mutations present in all tumor cells to maximize sensitivity for MRD detection",
+        "Use a fixed commercial panel of 500 cancer hotspot genes for all patients, as this covers the most commonly mutated cancer genes and standardizes the assay across patients",
+        "Perform ddPCR targeting only the single most abundant somatic mutation from each patient's tumor, as ddPCR has the highest sensitivity for single-variant detection"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The patient-specific tumor-informed approach (option B) represents the current state-of-the-art for ctDNA-based MRD detection, exemplified by platforms like Signatera (Natera), ArcherDX, and CAPP-Seq. The key principles: (1) Patient-specific panel design: By selecting 16-50 mutations from the patient's own tumor exome, you create a personalized fingerprint. Clonal (truncal) mutations — present in virtually all tumor cells — are prioritized because they persist even as the tumor evolves, unlike subclonal mutations that may be lost. (2) Ultra-deep sequencing (>30,000x): MRD detection requires identifying ctDNA fractions as low as 0.001-0.01% of total cfDNA. This requires extreme depth that is only practical with a small, focused panel (sequencing 50 targets at 30,000x is feasible; sequencing an entire exome at 30,000x is prohibitively expensive). (3) Multi-variant integration: Tracking many variants simultaneously and integrating signals using a statistical framework (e.g., Monte Carlo sampling) dramatically improves sensitivity beyond any single-variant assay. If the true ctDNA fraction is 0.001%, a single variant might show 0-1 mutant reads at 30,000x (statistically indistinguishable from noise), but observing even a few mutant reads across 30 independently tracked loci provides strong statistical evidence. Option A (WES at 500x) lacks the depth needed for MRD — at 0.01% ctDNA fraction, you would expect only 0.05 mutant reads per variant at 500x, making detection essentially impossible. Option C (fixed panel) wastes sequencing depth on irrelevant genes and misses patient-specific private mutations. Option D (single-variant ddPCR) has good single-variant sensitivity (~0.01%) but cannot match the multi-variant integration approach and provides no information about tumor evolution or new mutations.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    }
+  ]
+}
