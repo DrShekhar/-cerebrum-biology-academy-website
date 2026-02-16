@@ -1,0 +1,510 @@
+{
+  "batchId": "olympiad-campbell-ch44-osmoregulation-excretion",
+  "subject": "Biology",
+  "chapter": "Osmoregulation and Excretion",
+  "campbellChapter": 44,
+  "campbellUnit": 7,
+  "totalQuestions": 102,
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "Marine teleost fish face constant osmotic water loss to the hypertonic seawater environment. What is the primary mechanism by which they maintain water balance?",
+      "options": [
+        "They prevent water loss entirely through an impermeable skin coating",
+        "They absorb water directly through their gills by active transport",
+        "They drink seawater continuously, absorb water and NaCl across the intestinal epithelium, and actively secrete excess Na+ and Cl- through mitochondrion-rich chloride cells (ionocytes) in the gills via basolateral Na+/K+-ATPase and apical CFTR chloride channels, while excreting divalent ions (Mg2+, SO42-, Ca2+) through the kidneys in small volumes of concentrated urine",
+        "They produce large volumes of dilute urine to flush out excess salt"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Marine teleost fish are hypo-osmotic to their environment (body fluids approximately 300-400 mOsm/L vs seawater approximately 1000 mOsm/L) and face continuous osmotic water loss across the gills and body surface, along with passive salt gain. Their osmoregulatory strategy involves: (1) DRINKING SEAWATER: Marine teleosts drink seawater at a rate of approximately 1-5% of body weight per hour. The swallowed seawater is processed in the GI tract — NaCl and water are absorbed across the intestinal epithelium (driven by Na+/K+-ATPase on basolateral membranes and NKCC1 cotransporters). Divalent ions (Mg2+, SO42-) are poorly absorbed and remain in the gut. (2) GILL CHLORIDE CELLS (IONOCYTES): These are the primary site of excess NaCl excretion. Mitochondrion-rich cells in the gill epithelium contain high densities of mitochondria powering Na+/K+-ATPase on the basolateral membrane. The mechanism: Na+/K+-ATPase creates a low intracellular Na+ concentration, driving NKCC1 on the basolateral membrane to bring Cl- into the cell. Cl- exits apically through CFTR chloride channels. Na+ follows paracellularly through leaky tight junctions between MRCs and accessory cells. (3) KIDNEY: Produces small volumes of urine. The kidneys primarily excrete divalent ions via tubular secretion. (4) CONTRAST: Freshwater fish are hyperosmotic, face water gain and salt loss, produce copious dilute urine, and actively absorb NaCl through gill ionocytes in the opposite direction.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "The mammalian kidney concentrates urine using a countercurrent multiplication system. What is the role of the thick ascending limb of the loop of Henle in establishing the medullary osmotic gradient?",
+      "options": [
+        "The thick ascending limb is impermeable to water but actively transports NaCl out of the tubular fluid into the medullary interstitium via apical NKCC2 cotransporters and basolateral Na+/K+-ATPase — this creates the 'single effect' of the countercurrent multiplier, which is amplified by countercurrent flow to generate the steep cortico-medullary osmotic gradient",
+        "The thick ascending limb passively leaks urea into the medullary interstitium",
+        "The thick ascending limb actively reabsorbs water to concentrate the medullary interstitium",
+        "The thick ascending limb secretes potassium to increase medullary osmolality"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The countercurrent multiplication system in the loop of Henle generates the cortico-medullary osmotic gradient (approximately 300 mOsm/kg at cortex to approximately 1200 mOsm/kg at inner medullary tip in humans) that enables urine concentration. THE 'SINGLE EFFECT': The thick ascending limb (TAL) is the motor of the countercurrent multiplier. Two critical properties: (1) It is virtually IMPERMEABLE TO WATER (lacking aquaporins). (2) It actively transports NaCl from lumen to interstitium. The apical NKCC2 (target of loop diuretics like furosemide) drives secondary active transport of Na+, K+, and 2Cl- into the cell. Basolateral Na+/K+-ATPase pumps Na+ out, Cl- exits through ClC-Kb channels. K+ recycles back via ROMK channels, creating the lumen-positive transepithelial potential that drives paracellular Na+, Ca2+, Mg2+ reabsorption. Net result: NaCl added to interstitium (hypertonic) while tubular fluid becomes dilute (hypotonic) — the single effect of approximately 200 mOsm. COUNTERCURRENT AMPLIFICATION: The descending limb (permeable to water via AQP1 but relatively impermeable to solute) runs countercurrent to the ascending limb. Water leaves the descending limb into the hypertonic interstitium, concentrating the fluid. This concentrated fluid enters the ascending limb, where TAL removes NaCl, adding to the gradient. The countercurrent flow geometry amplifies the small single effect into a large axial gradient. UREA RECYCLING contributes approximately 50% of inner medullary osmolality via ADH-stimulated UT-A1/UT-A3 urea transporters in the inner medullary collecting duct.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "Antidiuretic hormone (ADH/vasopressin) regulates water reabsorption in the collecting duct. What is the molecular mechanism by which ADH increases water permeability?",
+      "options": [
+        "ADH directly creates pores in the collecting duct cell membrane by inserting itself into the lipid bilayer",
+        "ADH opens sodium channels in the collecting duct, and water follows osmotically",
+        "ADH increases water permeability by dissolving the tight junctions between collecting duct cells",
+        "ADH binds V2 receptors on the basolateral membrane of principal cells, activating adenylyl cyclase and increasing cAMP, which activates PKA; PKA phosphorylates aquaporin-2 (AQP2) stored in intracellular vesicles, triggering their exocytic insertion into the apical membrane — water then flows through AQP2 apically and AQP3/AQP4 basolaterally into the hypertonic medullary interstitium"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The molecular mechanism of ADH action on the collecting duct is one of the best-understood examples of hormone-regulated membrane trafficking. ADH SIGNALING: (1) ADH (arginine vasopressin, 9 amino acids, from posterior pituitary) binds V2 receptors (Gs-coupled GPCR) on the BASOLATERAL membrane of principal cells. (2) V2 activation stimulates adenylyl cyclase, increasing cAMP. (3) cAMP activates PKA. (4) PKA phosphorylates AQP2 at serine 256. AQP2 is stored in intracellular vesicles when ADH is absent. (5) Phosphorylation triggers SNARE-mediated exocytic fusion of AQP2 vesicles with the apical membrane (VAMP2 on vesicles interacting with syntaxin-4 and SNAP-23). (6) When ADH decreases, AQP2 is internalized by clathrin-mediated endocytosis (ubiquitination by CHIP E3 ligase). WATER FLOW: With AQP2 in the apical membrane, water moves transcellularly driven by the osmotic gradient. Water enters through AQP2 (apical), crosses the cell, and exits through constitutively expressed AQP3 and AQP4 (basolateral) into the interstitium, then enters vasa recta. Long-term ADH also upregulates AQP2 transcription via CREB. CLINICAL: Nephrogenic diabetes insipidus results from V2 receptor or AQP2 mutations. Lithium causes NDI by reducing AQP2 expression.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "Freshwater fish and marine fish face opposite osmotic challenges. How do the osmoregulatory strategies of euryhaline fish like salmon change during migration between freshwater and seawater?",
+      "options": [
+        "Salmon maintain the same gill ion transport direction in both environments but simply change the rate",
+        "In freshwater, salmon actively absorb NaCl through gill ionocytes using apical NHE and Cl-/HCO3- exchangers and produce copious dilute urine; during smoltification and seawater entry, they remodel gill ionocytes to secrete NaCl via basolateral Na+/K+-ATPase, basolateral NKCC1, and apical CFTR, begin drinking seawater, and reduce urine volume — coordinated by cortisol, growth hormone, and prolactin",
+        "Euryhaline fish do not change their osmoregulatory mechanisms because they maintain constant internal osmolality",
+        "Euryhaline fish survive by becoming metabolically dormant during the transition period"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Euryhaline fish like salmon undergo remarkable physiological remodeling during migration. IN FRESHWATER (hypo-osmotic): Salmon are hyperosmotic (body fluids approximately 300 mOsm vs freshwater approximately 1-10 mOsm). Challenges: osmotic water gain, diffusional ion loss. Strategies: (1) Gill ionocytes ABSORB NaCl — apical NHE3 absorbs Na+ exchanging H+, apical pendrin-like Cl-/HCO3- exchangers absorb Cl-, basolateral Na+/K+-ATPase pumps Na+ to blood. (2) Kidney produces copious dilute urine (10-50 mOsm) with high GFR. (3) No drinking. SMOLTIFICATION: Before ocean migration, growth hormone and cortisol increase, prolactin decreases. Freshwater-type ionocytes are replaced by seawater-type ionocytes expressing CFTR. IN SEAWATER (hyperosmotic): Salmon are hypo-osmotic (300 vs 1000 mOsm). Challenges reverse: water loss, NaCl gain. Strategies: (1) Drink seawater with intestinal NaCl/water absorption. (2) Gill ionocytes SECRETE NaCl — basolateral Na+/K+-ATPase, basolateral NKCC1, apical CFTR, with Na+ following paracellularly via claudin-10e tight junctions. (3) Kidney produces small volumes of urine excreting Mg2+, SO42-. HORMONES: Cortisol is the master seawater adaptation regulator (upregulates Na+/K+-ATPase, NKCC1, CFTR). Prolactin promotes freshwater adaptation. GH/IGF-1 promotes seawater-type ionocyte proliferation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about nitrogen excretion in animals:\n\nI. Ammoniotelic animals excrete nitrogen primarily as ammonia, which is highly toxic but requires little energy to produce and is readily diluted in surrounding water\nII. Ureotelic animals convert ammonia to urea via the ornithine-urea cycle in the liver, requiring ATP but producing a less toxic, moderately soluble compound\nIII. Uricotelic animals excrete nitrogen as uric acid, which requires more ATP but is nearly insoluble, allowing excretion as a semi-solid paste with minimal water loss\nIV. All animals are strictly limited to one form of nitrogen excretion throughout their entire life cycle",
+      "options": [
+        "TTTT",
+        "TTTF",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Statement I is TRUE: Ammonia is the immediate product of amino acid deamination. It is highly toxic to the CNS at micromolar concentrations but is small, highly soluble, and diffuses readily across gill epithelia into water. Fish excrete ammonia primarily via Rh glycoprotein ammonia channels (Rhag, Rhbg, Rhcg) and NH4+ transport via NHE. Statement II is TRUE: The ornithine-urea cycle converts ammonia to urea in liver hepatocytes, spanning mitochondria (CPS-I, ornithine transcarbamylase) and cytosol (argininosuccinate synthetase, argininosuccinate lyase, arginase). Energy cost is approximately 4 ATP equivalents per urea. Urea is much less toxic than ammonia, highly soluble (1200 g/L), and can be concentrated in urine. Sharks retain urea as an osmolyte. Statement III is TRUE: Uric acid requires approximately 5-8 ATP per nitrogen atom via purine biosynthesis but is nearly insoluble (0.06 g/L), allowing excretion as white semi-solid paste with minimal water loss. Essential for birds (weight minimization, closed eggs), reptiles (arid environments), and insects (high surface-to-volume ratio). Statement IV is FALSE: Many animals shift between nitrogen excretion forms. Tadpoles are ammoniotelic but adult frogs become ureotelic (urea cycle enzymes induced during metamorphosis by thyroid hormone). Lungfish shift from ammonotely to ureotely during estivation. Some turtles shift between ureotely and uricotely depending on water availability.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures nephron function parameters in a human subject under normal hydration and after 24 hours of water deprivation:\n\n| Parameter | Normal Hydration | Water Deprived |\n|---|---|---|\n| Plasma ADH (pg/mL) | 1.5 | 8.2 |\n| Urine osmolality (mOsm/kg) | 300 | 1050 |\n| Urine volume (mL/day) | 1800 | 500 |\n| Plasma osmolality (mOsm/kg) | 285 | 295 |\n| GFR (mL/min) | 120 | 115 |\n| Free water clearance (mL/min) | +0.5 | -2.1 |\n\nWhat do these data reveal about the kidney's response to dehydration?",
+      "options": [
+        "Water deprivation increases plasma osmolality (285 to 295), detected by hypothalamic osmoreceptors that stimulate ADH release (1.5 to 8.2 pg/mL); ADH inserts AQP2 channels in collecting duct, increasing water reabsorption; urine becomes concentrated (300 to 1050 mOsm/kg) and volume decreases (1800 to 500 mL/day); negative free water clearance (-2.1) indicates the kidney is retaining solute-free water; GFR is maintained near-normal through tubuloglomerular feedback and myogenic autoregulation",
+        "The kidney is unable to concentrate urine during water deprivation",
+        "The increase in ADH indicates kidney failure",
+        "GFR must increase dramatically during dehydration to conserve water"
+      ],
+      "correctAnswer": "A",
+      "explanation": "These data demonstrate the integrated renal response to dehydration. OSMORECEPTOR-ADH AXIS: Plasma osmolality increases modestly (285 to 295 mOsm/kg, approximately 3.5%) due to net water loss. Osmoreceptor neurons in the hypothalamic OVLT and SFO contain mechanosensitive TRPV1/TRPV4 channels detecting cell shrinkage. This stimulates ADH release from posterior pituitary — plasma ADH increases 5.5-fold. ADH release has an osmotic threshold of approximately 280-285 mOsm/kg. COLLECTING DUCT RESPONSE: ADH via V2 receptors inserts AQP2 into apical membranes. The hypertonic medullary interstitium provides the osmotic driving force. Urine osmolality increases from 300 to 1050 mOsm/kg; volume decreases from 1800 to 500 mL/day (72% reduction). FREE WATER CLEARANCE: Positive (+0.5) during normal hydration means excreting excess free water. Negative (-2.1) during dehydration means retaining free water — producing urine more concentrated than plasma. GFR STABILITY: Despite dehydration, GFR maintained at 115 mL/min (only 4% decrease) through myogenic autoregulation (afferent arteriolar contraction to maintain constant GFR) and tubuloglomerular feedback (macula densa sensing reduced NaCl delivery causing afferent arteriolar dilation via PGE2).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "The proximal convoluted tubule (PCT) reabsorbs approximately 65% of the glomerular filtrate. What is the primary driving force for solute and water reabsorption in the PCT?",
+      "options": [
+        "ADH-regulated aquaporin insertion drives all PCT water reabsorption",
+        "Chloride channels in the PCT apical membrane are the primary drivers of reabsorption",
+        "The PCT uses ATP directly to pump water against its concentration gradient",
+        "Basolateral Na+/K+-ATPase creates a low intracellular Na+ that drives apical Na+-coupled cotransporters (SGLT2 for glucose, NHE3 for Na+/bicarbonate, Na+-amino acid cotransporters), establishing an osmotic gradient that drives water reabsorption through constitutively expressed AQP1; the PCT performs obligatory isosmotic reabsorption"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The PCT is the workhorse of the nephron, with epithelial cells uniquely adapted for bulk transport: extensive apical brush border, abundant mitochondria, and constitutive AQP1 on both membranes. Na+/K+-ATPase on the basolateral membrane maintains low intracellular Na+ (approximately 10-15 mM vs 140 mM in filtrate), powering multiple secondary active transporters. EARLY PCT: SGLT2 reabsorbs approximately 90% of filtered glucose (target of empagliflozin/dapagliflozin for diabetes). NHE3 reabsorbs Na+ while secreting H+ (which combines with filtered HCO3- via luminal carbonic anhydrase IV, reabsorbing approximately 80% of filtered bicarbonate). Na+-amino acid and Na+-phosphate cotransporters (NaPi-IIa/IIc, regulated by PTH) handle other solutes. LATE PCT: Paracellular Cl- reabsorption becomes important, driven by lumen-positive potential from preferential early HCO3- reabsorption. WATER: PCT is constitutively and highly permeable via AQP1 (NOT ADH-regulated). Water follows the osmotic gradient from solute reabsorption. Reabsorption is ISOSMOTIC and obligatory — occurs regardless of hydration state. PCT also secretes organic solutes via OAT1/OAT3 and OCT2 basolaterally, MRP2/MRP4 and MATE1 apically.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that a newly discovered hormone regulates sodium reabsorption in the distal nephron. What experimental approach would rigorously test this hypothesis?",
+      "options": [
+        "Only test the hormone's effect on cultured kidney cell lines and assume in vivo relevance",
+        "Administer the hormone to human volunteers without prior animal testing",
+        "Simply measure urinary sodium excretion after injecting the hormone into animals",
+        "Perform microperfusion studies of isolated perfused cortical collecting ducts; measure transepithelial Na+ transport using short-circuit current and Ussing chamber technique; identify the molecular target by testing whether the effect is blocked by amiloride (ENaC blocker) or thiazides (NCC blocker); validate in vivo using hormone knockout mice measuring 24-hour urine sodium on normal and high-sodium diets; include rescue experiments by reintroducing the hormone"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Rigorous investigation of a novel natriuretic/antinatriuretic hormone requires integrated in vitro and in vivo approaches. IN VITRO: (1) ISOLATED PERFUSED TUBULE (gold standard): Microdissect individual nephron segments, perfuse in controlled chambers, apply hormone basolaterally or luminally, measure Na+ flux. (2) USSING CHAMBER/SHORT-CIRCUIT CURRENT: Cultured collecting duct cell monolayers (mpkCCD, M-1 cells) on permeable supports. Transepithelial Isc measures active Na+ transport. Amiloride-sensitive Isc quantifies ENaC-mediated transport. (3) PHARMACOLOGICAL DISSECTION: Amiloride blocks ENaC (collecting duct); hydrochlorothiazide blocks NCC (DCT); furosemide blocks NKCC2 (TAL). This identifies the specific target. (4) SIGNALING PATHWAY: Kinase inhibitors (H89 for PKA, BIM-1 for PKC), cAMP/cGMP measurements, phosphoproteomics. IN VIVO: (1) Knockout mice — metabolic cage parameters (24-hour urine volume, Na+, K+, osmolality) on normal and high-sodium diets, with compensatory hormone measurements. (2) Blood pressure telemetry. (3) Acute infusion studies with bladder catheterization measuring FENa. (4) RECEPTOR LOCALIZATION: Immunohistochemistry on kidney sections identifying which segments express the receptor.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "The renin-angiotensin-aldosterone system (RAAS) is a critical hormonal axis regulating blood pressure and sodium balance. What triggers renin release, and what are the downstream effects?",
+      "options": [
+        "Renin directly reabsorbs sodium in the collecting duct without any intermediary hormones",
+        "Renin is released when blood pressure is too high, and it causes vasodilation to reduce pressure",
+        "Renin is released from juxtaglomerular cells in response to decreased renal perfusion pressure, decreased NaCl delivery to the macula densa, and sympathetic activation via beta-1 receptors; renin cleaves angiotensinogen to angiotensin I, converted to angiotensin II by ACE — angiotensin II causes vasoconstriction, stimulates aldosterone secretion, enhances proximal tubular Na+ reabsorption, stimulates ADH release, and promotes thirst",
+        "Renin is produced by the adrenal cortex and acts exclusively on the liver"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The RAAS is the primary defense against hypotension, hypovolemia, and hyponatremia. RENIN RELEASE TRIGGERS: (1) INTRARENAL BARORECEPTOR: JG cells directly sense afferent arteriolar wall stretch. Decreased renal perfusion pressure reduces stretch, triggering renin exocytosis. (2) MACULA DENSA: These cells sense luminal NaCl concentration via NKCC2. Decreased NaCl delivery causes PGE2 release and decreased adenosine, signaling JG cells to release renin. (3) SYMPATHETIC NERVES: Norepinephrine activates beta-1 adrenergic receptors on JG cells via cAMP/PKA. CASCADE: Renin cleaves angiotensinogen (liver-produced alpha-2 globulin) to angiotensin I (10 amino acids, inactive). ACE (on pulmonary capillary endothelium) cleaves to angiotensin II (8 amino acids, primary effector). ACE also degrades bradykinin (explaining ACE inhibitor cough). ANGIOTENSIN II (via AT1 receptors): (1) Vasoconstriction — raises blood pressure. Preferential efferent arteriolar constriction maintains GFR. (2) Aldosterone — stimulates adrenal zona glomerulosa; aldosterone acts on collecting duct principal cells (mineralocorticoid receptor → SGK1 → ENaC/Na+/K+-ATPase upregulation). (3) Proximal NHE3 stimulation. (4) ADH release. (5) Thirst via SFO/OVLT. ACE inhibitors and ARBs target this axis for hypertension treatment.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "Desert-dwelling kangaroo rats (Dipodomys) can survive without drinking water. What physiological adaptations enable this remarkable water conservation?",
+      "options": [
+        "They absorb atmospheric water vapor through specialized skin cells",
+        "They enter complete metabolic dormancy and do not require any water",
+        "They store water in their humps like camels",
+        "They obtain water from metabolic water production during oxidation of dry seeds and conserve water through extremely long loops of Henle producing urine up to 6000 mOsm/kg, nasal countercurrent heat exchange that condenses exhaled water vapor for reabsorption, dry fecal pellets, nocturnal behavior, and absence of sweat glands"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Kangaroo rats are among the most water-efficient mammals, surviving in North American deserts on dry seeds with no free water intake. METABOLIC WATER: All aerobic organisms produce water from cellular respiration. Fat oxidation yields approximately 1.07 mL/g, carbohydrate approximately 0.56 mL/g. For kangaroo rats, approximately 90% of water gain comes from metabolic water. RENAL CONCENTRATION: Kidneys have extremely long loops of Henle with long papillae generating urine up to approximately 5500-6000 mOsm/kg (vs human max approximately 1200). This is achieved by maximized countercurrent multiplication, high medullary urea concentration, and high AQP2 expression. NASAL COUNTERCURRENT: Elaborate nasal turbinate bones create large surface area. During inhalation, dry air is warmed/humidified (cooling nasal mucosa). During exhalation, warm humid air from lungs passes over cool turbinates, condensing approximately 75-83% of added water. Saves approximately 1-2 mL/day. OTHER: Extremely dry fecal pellets (approximately 55% water vs approximately 75% in humans). No sweat glands. Nocturnal and fossorial behavior — daytime in cool, relatively humid burrows. Concentrated urine minimizes urinary loss to approximately 0.2 mL/day.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about glomerular filtration:\n\nI. Glomerular filtration is driven by net filtration pressure, which equals glomerular capillary hydrostatic pressure minus Bowman's capsule hydrostatic pressure and glomerular capillary oncotic pressure\nII. The filtration barrier consists of fenestrated endothelium, glomerular basement membrane (GBM), and podocyte foot processes with slit diaphragms containing nephrin\nIII. The barrier allows free filtration of molecules up to approximately 7,000 Da while restricting albumin passage based on both size and charge selectivity\nIV. GFR is independent of renal blood flow and cannot be regulated by afferent or efferent arteriolar tone",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statement I is TRUE: NFP = PGC - (PBS + piGC), where PGC approximately 55 mmHg (high because glomerulus is between two arterioles), PBS approximately 15 mmHg (opposes filtration), piGC approximately 30 mmHg at afferent end increasing to approximately 35 at efferent end as filtration concentrates proteins. NFP approximately 10 mmHg at afferent end. Statement II is TRUE: Three-layered sieve: (1) Fenestrated endothelium with 70-100 nm fenestrae covered by negatively charged glycocalyx. (2) GBM — type IV collagen (alpha3/4/5 — mutations cause Alport syndrome), laminin-521, heparan sulfate proteoglycans providing charge barrier. (3) Podocyte foot processes with slit diaphragms — nephrin (NPHS1, mutations cause congenital nephrotic syndrome) interacts in zipper-like pattern creating approximately 4x14 nm pores. Podocin (NPHS2) anchors nephrin to actin cytoskeleton. Statement III is TRUE: Size selectivity — molecules below approximately 7,000 Da freely filtered (inulin, glucose, urea). Albumin (69,000 Da) restricted (less than 0.01% passage). Charge selectivity — GBM heparan sulfate provides negative charge repelling negatively charged albumin (pI approximately 4.7). Dextran studies: negatively charged dextrans filtered less than neutral less than positively charged at same size. Statement IV is FALSE: GFR depends on renal plasma flow and arteriolar tone. Afferent constriction (sympathetic, angiotensin II at high doses) decreases GFR. Efferent constriction (angiotensin II) increases PGC and GFR. ACE inhibitors dilate efferent preferentially, reducing GFR — beneficial in diabetic nephropathy but harmful in renal artery stenosis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher uses clearance studies to characterize renal handling of four substances:\n\n| Substance | Plasma (mg/dL) | Urine (mg/dL) | Urine flow (mL/min) | Clearance (mL/min) | Clearance/GFR |\n|---|---|---|---|---|---|\n| Inulin | 25 | 3000 | 1.0 | 120 | 1.00 |\n| Glucose | 100 | 0 | 1.0 | 0 | 0.00 |\n| PAH | 2 | 1200 | 1.0 | 600 | 5.00 |\n| Substance X | 10 | 600 | 1.0 | 60 | 0.50 |\n\nWhat does the clearance/GFR ratio reveal about renal handling of each substance?",
+      "options": [
+        "All substances are handled identically by the kidney",
+        "A clearance/GFR ratio greater than 1.0 indicates the substance is manufactured by the kidney",
+        "Glucose clearance of zero means glucose is not present in the blood",
+        "Inulin (1.0) is freely filtered and neither reabsorbed nor secreted, serving as the GFR marker; glucose (0.0) is freely filtered but completely reabsorbed by PCT SGLT2/SGLT1; PAH (5.0) is both filtered and actively secreted by PCT organic anion transporters, approximating renal plasma flow; Substance X (0.50) is filtered and approximately 50% net reabsorbed"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Clearance Cx = (Ux x V)/Px. The clearance/GFR ratio reveals net renal handling. INULIN (1.0): Gold standard GFR marker — freely filtered, not reabsorbed, not secreted, not metabolized, not protein-bound. Everything filtered appears in urine. GLUCOSE (0.0): Freely filtered but COMPLETELY reabsorbed by PCT under normal conditions. Filtered load = 120 mL/min x 100 mg/dL = 120 mg/min, well below TmG approximately 375 mg/min. SGLT2 (90%, low affinity/high capacity, S1 segment) and SGLT1 (10%, high affinity/low capacity, S3 segment) reabsorb all glucose. Glucosuria appears when plasma glucose exceeds approximately 180-200 mg/dL (renal threshold). PAH (5.0): Clearance exceeds GFR — ONLY possible if PAH is both filtered AND secreted. PCT organic anion transporters (OAT1/OAT3 basolateral, MRP2/MRP4 apical) actively secrete PAH. Extraction ratio approximately 0.9 (90% removed per pass). PAH clearance approximates effective renal plasma flow. Actual RPF = PAH clearance / extraction ratio = approximately 667 mL/min. SUBSTANCE X (0.50): Clearance less than GFR but greater than zero — filtered and partially reabsorbed. Of filtered amount (120 x 10 = 1200 mg/min), only half appears in urine (600 x 1.0 = 600 mg/min), meaning 50% reabsorbed. Pattern seen with urea, many electrolytes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "Insects use Malpighian tubules rather than kidneys for excretion. How do Malpighian tubules function, and what advantage does this system provide?",
+      "options": [
+        "Malpighian tubules perform ultrafiltration under high pressure like mammalian glomeruli",
+        "Malpighian tubules are simply storage organs with no transport function",
+        "Malpighian tubules are blind-ended tubules bathed in hemolymph that secrete K+, Na+, and uric acid into their lumen via active transport driven by V-type H+-ATPase; water follows osmotically; the primary urine flows into the hindgut where selective reabsorption of water and ions occurs — this secretion-reabsorption system avoids pressure-dependent filtration",
+        "Malpighian tubules function identically to vertebrate kidneys with glomerular filtration"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Malpighian tubules are the excretory organs of insects and some arthropods, representing an elegant alternative to the vertebrate nephron. ANATOMY: Thin, blind-ended tubules (2-250 per species) extending from the midgut-hindgut junction into the hemocoel. MECHANISM: Rather than pressure-dependent ultrafiltration (insects have open circulation with low hemolymph pressure), Malpighian tubules use active secretion. Apical V-type H+-ATPase pumps H+ into the lumen, driving K+/H+ antiporter (K+ is the primary osmolyte), Na+/H+ antiporter, and anion channels. KCl accumulation creates an osmotic gradient driving water entry via aquaporins. Uric acid is secreted by urate transporters. HINDGUT MODIFICATION: Primary urine flows into the hindgut where rectal pads reabsorb water (some desert insects produce urine 8x more concentrated than hemolymph), K+, Na+, amino acids. Final excreta is dry uric acid paste. CRYPTONEPHRIDIAL SYSTEM: In some beetles and lepidopteran larvae, Malpighian tubule tips associate with the rectum, creating extraordinary water extraction efficiency (some beetles absorb water vapor from air at 88% relative humidity). ADVANTAGES: No high-pressure circulation needed; selective secretion avoids wasteful filtration-reabsorption of valuable solutes; excellent water conservation; scalable across insect body sizes.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the role of the vasa recta in maintaining the medullary osmotic gradient?",
+      "options": [
+        "The vasa recta actively pump NaCl into the medullary interstitium to increase osmolality",
+        "The vasa recta are countercurrent exchangers: their hairpin loop arrangement with slow blood flow and highly permeable walls allows passive equilibration with the medullary interstitium (gaining solute and losing water in descending vasa recta, losing solute and gaining water in ascending) — this removes reabsorbed water and solutes without dissipating the concentration gradient",
+        "The vasa recta have no role in osmoregulation and merely supply oxygen to the medulla",
+        "The vasa recta create the medullary osmotic gradient independently of the loop of Henle"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The vasa recta are the blood supply to the renal medulla, derived from efferent arterioles of juxtamedullary glomeruli. They form hairpin loops that run parallel to the loops of Henle, acting as COUNTERCURRENT EXCHANGERS (passive) — distinct from the loops of Henle which are countercurrent MULTIPLIERS (active). DESCENDING VASA RECTA: As blood descends into the progressively hypertonic medullary interstitium, water moves out of the vessel (following the osmotic gradient) and solutes (NaCl, urea) move in. The blood becomes progressively concentrated, equilibrating with the local interstitial osmolality. ASCENDING VASA RECTA: As blood ascends toward the cortex through progressively less concentrated interstitium, the reverse occurs — solutes move out and water moves in. The net result is that the vasa recta remove reabsorbed water (from the descending limb and collecting duct) and solutes from the medulla WITHOUT washing away the gradient. KEY FEATURES: (1) Slow flow rate — allows time for equilibration. (2) Highly permeable fenestrated endothelium — facilitates passive exchange. (3) Hairpin arrangement — essential for countercurrent exchange. If blood flowed straight through the medulla, it would dissipate the gradient. (4) The ascending vasa recta carry away the water reabsorbed from the collecting duct under ADH influence, returning it to the systemic circulation. CLINICAL: NSAIDs reduce medullary blood flow by inhibiting PGE2/PGI2-mediated vasodilation, potentially causing medullary ischemia and acute kidney injury, especially combined with volume depletion.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "Aldosterone regulates sodium and potassium balance in the collecting duct. What is the molecular mechanism of aldosterone action on principal cells?",
+      "options": [
+        "Aldosterone is a steroid hormone that crosses the plasma membrane and binds the intracellular mineralocorticoid receptor (MR); the aldosterone-MR complex translocates to the nucleus and acts as a transcription factor, upregulating SGK1 (serum and glucocorticoid-regulated kinase 1) which phosphorylates and inhibits Nedd4-2 (an E3 ubiquitin ligase), preventing ENaC ubiquitination and endocytosis — increasing apical ENaC density, Na+ reabsorption, and K+ secretion",
+        "Aldosterone binds to membrane receptors and immediately opens sodium channels within seconds",
+        "Aldosterone acts on the proximal tubule to increase glucose reabsorption",
+        "Aldosterone inhibits Na+/K+-ATPase activity to conserve potassium"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Aldosterone (a mineralocorticoid steroid synthesized in the adrenal zona glomerulosa, stimulated by angiotensin II and hyperkalemia) exerts its primary effects on principal cells of the cortical collecting duct through genomic (transcriptional) mechanisms. MECHANISM: (1) Aldosterone (lipophilic) crosses the basolateral membrane and binds the mineralocorticoid receptor (MR, NR3C2) in the cytoplasm. Importantly, cortisol also binds MR with equal affinity — principal cells express 11beta-HSD2 (11beta-hydroxysteroid dehydrogenase type 2), which converts cortisol to cortisone (inactive at MR), ensuring aldosterone-specific signaling. Licorice (glycyrrhizinic acid) inhibits 11beta-HSD2, allowing cortisol to activate MR — causing pseudohyperaldosteronism. (2) Aldosterone-MR complex dimerizes and translocates to the nucleus. (3) It acts as a transcription factor, binding hormone response elements (HREs) to upregulate: SGK1 (serum and glucocorticoid-regulated kinase 1) — the key effector. SGK1 phosphorylates Nedd4-2 (neural precursor cell expressed developmentally downregulated 4-2), an E3 ubiquitin ligase that normally ubiquitinates ENaC, targeting it for endocytosis and proteasomal degradation. Phosphorylated Nedd4-2 is sequestered by 14-3-3 proteins, unable to ubiquitinate ENaC. Result: increased ENaC surface expression and open probability. ENaC alpha, beta, gamma subunit transcription (also directly upregulated). Na+/K+-ATPase alpha1 and beta1 subunit transcription (increased basolateral pump activity). (4) Net effect: Increased apical Na+ entry through ENaC, increased basolateral Na+ extrusion via Na+/K+-ATPase. The enhanced Na+ reabsorption creates a more negative transepithelial potential difference (lumen-negative), which drives: K+ secretion through apical ROMK channels (K+ moves down its electrochemical gradient into the lumen) — explaining aldosterone's kaliuretic effect. H+ secretion by intercalated cells. Onset of aldosterone's transcriptional effects takes approximately 1-3 hours.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A clinical lab measures blood and urine electrolytes in two patients:\n\nPatient A: Serum Na+ = 155 mEq/L, serum osmolality = 320 mOsm/kg, urine osmolality = 80 mOsm/kg, urine volume = 8 L/day, ADH level = 0.5 pg/mL\nPatient B: Serum Na+ = 153 mEq/L, serum osmolality = 315 mOsm/kg, urine osmolality = 85 mOsm/kg, urine volume = 7.5 L/day, ADH level = 12 pg/mL\n\nBoth patients present with excessive thirst and polyuria. What is the diagnosis for each?",
+      "options": [
+        "Both patients have the same condition since their lab values are nearly identical",
+        "Patient A has diabetes mellitus and Patient B has psychogenic polydipsia",
+        "Patient A has central diabetes insipidus (low ADH despite high plasma osmolality — the hypothalamus/posterior pituitary fails to produce adequate ADH, so collecting ducts remain impermeable to water despite dehydration); Patient B has nephrogenic diabetes insipidus (ADH is appropriately elevated in response to high osmolality but the kidneys fail to respond — due to V2 receptor mutations, AQP2 mutations, or acquired causes like lithium toxicity); both produce dilute urine despite hypernatremia and hyperosmolality",
+        "Patient A has kidney failure and Patient B has liver disease"
+      ],
+      "correctAnswer": "C",
+      "explanation": "These data demonstrate two distinct forms of diabetes insipidus with nearly identical clinical presentations but fundamentally different pathophysiology, distinguishable by ADH levels. SHARED FEATURES: Both patients have hypernatremia (155, 153 mEq/L; normal 135-145), hyperosmolality (320, 315 mOsm/kg; normal 275-295), massive polyuria (8, 7.5 L/day; normal 0.8-2 L), and inappropriately DILUTE urine (80, 85 mOsm/kg — should be greater than 800 with appropriate ADH response to hyperosmolality). PATIENT A — CENTRAL DIABETES INSIPIDUS: The key distinguishing feature is LOW ADH (0.5 pg/mL) despite markedly elevated plasma osmolality (320 mOsm/kg). Normally, plasma osmolality above 280-285 should trigger ADH release above 1-2 pg/mL, and osmolality of 320 should produce ADH levels of 8-12+ pg/mL. The failure to produce ADH indicates a defect in ADH synthesis or release — damage to hypothalamic supraoptic/paraventricular nuclei or posterior pituitary. Causes: pituitary surgery, tumors (craniopharyngioma, metastases), traumatic brain injury, autoimmune hypophysitis, sarcoidosis, Langerhans cell histiocytosis. Treatment: desmopressin (DDAVP, a synthetic ADH analog with V2 selectivity). PATIENT B — NEPHROGENIC DIABETES INSIPIDUS: ADH is appropriately ELEVATED (12 pg/mL) — the hypothalamus correctly senses hyperosmolality and releases ADH. However, the kidneys fail to respond to ADH, producing dilute urine despite high circulating ADH. The defect is in the renal ADH signaling pathway: V2 receptor mutations (X-linked, most common congenital cause — approximately 90% of hereditary NDI), AQP2 mutations (autosomal recessive or dominant — approximately 10%), or acquired causes (lithium therapy — most common acquired cause, inhibits adenylyl cyclase and glycogen synthase kinase-3beta, reducing AQP2 expression; hypercalcemia; hypokalemia; obstructive uropathy). DDAVP test distinguishes the two: in central DI, DDAVP administration concentrates urine (AQP2 insertion works when ADH analog provided). In nephrogenic DI, DDAVP has no effect. Treatment of nephrogenic DI: thiazide diuretics paradoxically reduce urine volume (by causing mild volume contraction that enhances proximal reabsorption, reducing fluid delivery to the collecting duct), amiloride (if lithium-induced — blocks lithium entry through ENaC), low-sodium diet, and NSAIDs (reduce prostaglandin-mediated inhibition of ADH signaling).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "Atrial natriuretic peptide (ANP) opposes the RAAS. What are the renal effects of ANP?",
+      "options": [
+        "ANP causes vasoconstriction and promotes sodium retention",
+        "ANP acts only on the brain to reduce thirst, with no direct renal effects",
+        "ANP increases GFR by dilating the afferent arteriole and constricting the efferent arteriole, inhibits renin release, inhibits aldosterone secretion, directly inhibits ENaC-mediated Na+ reabsorption in the collecting duct via cGMP signaling, and inhibits ADH release — collectively promoting natriuresis and diuresis to reduce blood volume",
+        "ANP stimulates erythropoietin production to increase red blood cell mass"
+      ],
+      "correctAnswer": "C",
+      "explanation": "ANP (atrial natriuretic peptide, 28 amino acids) is released from atrial cardiomyocytes in response to atrial stretch (increased blood volume/pressure). It acts through NPR-A (natriuretic peptide receptor A), a guanylyl cyclase-linked receptor, increasing intracellular cGMP. ANP is a key counter-regulatory hormone opposing RAAS. RENAL EFFECTS: (1) INCREASED GFR: ANP dilates the afferent arteriole (via cGMP-mediated relaxation) and constricts the efferent arteriole, increasing glomerular capillary pressure and GFR. This increases the filtered load of sodium. (2) INHIBITION OF TUBULAR REABSORPTION: ANP directly inhibits ENaC in the collecting duct (via cGMP-dependent protein kinase G phosphorylation), reducing sodium reabsorption. It also inhibits sodium reabsorption in the inner medullary collecting duct. (3) INHIBITION OF RENIN RELEASE: ANP suppresses JG cell renin secretion, reducing angiotensin II production. (4) INHIBITION OF ALDOSTERONE: ANP directly inhibits aldosterone synthesis in the adrenal zona glomerulosa (blocking the angiotensin II-stimulated and potassium-stimulated aldosterone secretion). (5) INHIBITION OF ADH: ANP inhibits ADH release from the posterior pituitary, promoting water excretion. (6) MEDULLARY WASHOUT: ANP increases medullary blood flow through the vasa recta, which can partially dissipate the medullary osmotic gradient, reducing concentrating ability. NET EFFECT: Natriuresis (sodium excretion), diuresis (water excretion), reduced blood volume, reduced blood pressure. BNP (brain natriuretic peptide, actually from ventricular cardiomyocytes) has similar effects and is used clinically as a heart failure biomarker (NT-proBNP). Neprilysin (which degrades natriuretic peptides) inhibitors combined with ARBs (sacubitril/valsartan) enhance natriuretic peptide signaling for heart failure treatment.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher discovers that a desert lizard species can excrete concentrated salt from a nasal gland. How should they characterize the function of this salt gland?",
+      "options": [
+        "Observe the lizard in the wild and count nasal secretion events without any measurements",
+        "Perform histological analysis of the gland (identify secretory cell types, mitochondrial density, Na+/K+-ATPase localization by immunohistochemistry); measure secretion composition (Na+, K+, Cl- concentrations by flame photometry/ion chromatography) under varying dietary salt loads; compare salt gland output between salt-loaded and control animals; use ouabain perfusion to test Na+/K+-ATPase dependence; measure osmolality of secretion relative to plasma; and compare renal function between gland-intact and gland-ablated animals",
+        "Simply taste the nasal secretion to determine if it is salty",
+        "Assume the gland functions identically to the mammalian kidney based on anatomy alone"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Salt glands are found in many marine and desert reptiles, birds, and elasmobranchs, serving as extrarenal routes for concentrated NaCl excretion. Rigorous characterization requires: HISTOLOGY: (1) Light and electron microscopy reveals secretory tubule architecture — typically highly folded tubular epithelium with extensive basolateral membrane amplification (for ion transporter surface area). (2) Mitochondrial density — secretory cells are packed with mitochondria (providing ATP for active transport), similar to renal thick ascending limb cells. (3) Na+/K+-ATPase immunolocalization — antibodies against Na+/K+-ATPase alpha subunit reveal basolateral localization, confirming active sodium pumping as the driving force. NKCC1 localization (basolateral) and CFTR (apical) help establish the transport model (similar to shark rectal gland and teleost gill ionocytes). SECRETION ANALYSIS: Collect nasal secretions using micropipettes or filter paper. Measure Na+, K+, Cl- by flame photometry, ion-selective electrodes, or ion chromatography. Measure osmolality by freezing-point depression. In marine iguanas, salt gland secretion can reach approximately 1600-1800 mOsm/kg (higher than seawater), with Na+ approximately 700 mEq/L and Cl- approximately 700 mEq/L. SALT LOADING: Inject or orally administer NaCl solutions at varying concentrations. Measure dose-response of secretion rate, composition, and total salt output. Measure plasma osmolality and electrolytes to determine how effectively the gland maintains homeostasis. PHARMACOLOGICAL: Perfuse ouabain (Na+/K+-ATPase inhibitor) to confirm active transport dependence. Bumetanide (NKCC inhibitor) tests NKCC1 involvement. CFTRinh-172 tests CFTR involvement. ABLATION: Compare animals with intact vs. surgically ablated salt glands on high-salt diets — measuring plasma Na+, osmolality, kidney function, and survival. This determines the gland's contribution to overall salt homeostasis relative to the kidneys.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sharks and rays maintain near-isosmolality with seawater through a unique strategy. What is the primary osmolyte they use, and how does this affect their water balance?",
+      "options": [
+        "Sharks use high NaCl concentrations in their blood to match seawater osmolality",
+        "Sharks maintain low blood osmolality and constantly drink seawater like teleost fish",
+        "Sharks produce large volumes of urine to excrete excess water gained osmotically",
+        "Elasmobranchs retain urea (approximately 350-400 mM) and trimethylamine N-oxide (TMAO, approximately 75 mM) in their blood, making them slightly hyperosmotic to seawater — this eliminates osmotic water loss and even allows slight osmotic water gain across the gills, while NaCl is maintained below seawater levels and excess salt is excreted via the rectal gland"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Elasmobranchs (sharks, rays, skates) have evolved a unique osmoregulatory strategy fundamentally different from both marine teleosts and freshwater fish. UREA RETENTION: Unlike most vertebrates that excrete urea as waste, elasmobranchs retain urea at extremely high concentrations (approximately 350-400 mM, compared to approximately 5 mM in mammals). This is achieved by: (1) Efficient urea synthesis via the ornithine-urea cycle in the liver. (2) Extremely efficient renal urea reabsorption — elasmobranch kidneys reabsorb approximately 90-95% of filtered urea via specialized urea transporters (eUT) in the collecting tubule, countering the tendency for small, soluble urea to be excreted. (3) Low gill permeability to urea — elasmobranch gills have low urea permeability compared to teleost gills. TMAO: Trimethylamine N-oxide (approximately 75 mM) serves as a compatible osmolyte that counteracts the protein-destabilizing effects of urea. Urea at high concentrations disrupts protein structure (chaotrope), but TMAO stabilizes proteins (kosmotrope). The approximately 2:1 urea:TMAO ratio optimally protects protein function. OSMOTIC CONSEQUENCE: Total blood osmolality in sharks is approximately 1000-1050 mOsm/kg (urea approximately 350 mM contributing approximately 350 mOsm, TMAO approximately 75 mM, NaCl approximately 250 mM contributing approximately 500 mOsm, plus other solutes). This makes them slightly HYPEROSMOTIC to seawater (approximately 1000 mOsm/kg), meaning they gain a slight amount of water osmotically across the gills — the opposite of marine teleosts. They do NOT need to drink seawater. NaCl BALANCE: Blood NaCl is maintained at approximately 250 mM, below seawater (approximately 470 mM NaCl), so there is passive NaCl influx. Excess NaCl is excreted by the RECTAL GLAND — a specialized organ that secretes a concentrated NaCl solution (approximately 500 mM NaCl) into the cloaca. The rectal gland uses the same transport mechanism as teleost gill ionocytes (basolateral Na+/K+-ATPase, basolateral NKCC1, apical CFTR). The kidneys contribute to NaCl excretion but also must reabsorb urea efficiently.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about potassium homeostasis in the kidney:\n\nI. Approximately 65% of filtered K+ is reabsorbed in the proximal tubule via paracellular pathways driven by solvent drag\nII. The thick ascending limb reabsorbs approximately 25% of filtered K+ via the apical NKCC2 cotransporter, with K+ recycling back to the lumen through ROMK channels\nIII. The cortical collecting duct is the primary site for regulated K+ secretion, where principal cells secrete K+ through apical ROMK and BK (big conductance) channels driven by the lumen-negative transepithelial potential created by ENaC-mediated Na+ reabsorption\nIV. Hyperkalemia directly inhibits aldosterone release from the adrenal cortex",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statement I is TRUE: The PCT reabsorbs approximately 65-70% of filtered K+ primarily via the paracellular pathway. This is driven by solvent drag — as water is reabsorbed (carrying dissolved solutes), K+ follows through the relatively leaky tight junctions. Additionally, as the early PCT preferentially reabsorbs NaHCO3, the luminal K+ concentration increases slightly, creating a small concentration gradient favoring paracellular reabsorption. Statement II is TRUE: The thick ascending limb reabsorbs approximately 25-30% of filtered K+ via the apical NKCC2 (Na+/K+/2Cl- cotransporter). K+ enters the cell from the lumen via NKCC2 along with Na+ and 2Cl-. However, K+ recycling is essential: K+ is pumped back into the lumen through apical ROMK (renal outer medullary K+) channels. This K+ recycling ensures continuous NKCC2 operation (K+ availability in the lumen is rate-limiting) and generates the lumen-positive transepithelial potential (through net positive charge movement from cell to lumen) that drives paracellular reabsorption of Na+, Ca2+, and Mg2+. Statement III is TRUE: The cortical collecting duct is the principal site for regulated K+ secretion, responsible for matching K+ excretion to dietary intake. Principal cells secrete K+ through: ROMK channels (constitutive, responsible for baseline K+ secretion) and BK (maxi-K/large-conductance) channels (flow-activated, important during high K+ intake when increased distal flow activates these mechanosensitive channels). The driving force is the lumen-negative transepithelial potential created by ENaC-mediated Na+ reabsorption (Na+ entry through apical ENaC depolarizes the lumen relative to the interstitium). Aldosterone enhances both Na+ reabsorption (ENaC) and K+ secretion (ROMK/BK) — linking sodium balance to potassium balance. Statement IV is FALSE: This is reversed. Hyperkalemia STIMULATES (not inhibits) aldosterone release from the adrenal zona glomerulosa. Elevated plasma K+ directly depolarizes zona glomerulosa cells (by reducing the K+ equilibrium potential), opening voltage-gated Ca2+ channels, increasing intracellular Ca2+, and stimulating aldosterone synthesis (CYP11B2/aldosterone synthase). This is a critical homeostatic mechanism: hyperkalemia → aldosterone → enhanced renal K+ secretion → correction of hyperkalemia. Hypokalemia, conversely, suppresses aldosterone. This K+-aldosterone feedback loop operates independently of the RAAS (angiotensin II is the other major aldosterone secretagogue).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "Protonephridia with flame cells are the excretory organs of flatworms (Platyhelminthes). How do flame cells function in osmoregulation?",
+      "options": [
+        "Flame cells use high-pressure ultrafiltration identical to the mammalian glomerulus",
+        "Flame cells function through cilia-driven filtration: the beating cilia within the flame bulb create negative pressure that draws interstitial fluid through specialized filtration slits into the tubule lumen; the fluid then passes through tubular cells where selective reabsorption of useful solutes occurs before the dilute waste fluid exits through nephridiopores — primarily functioning in osmoregulation to remove excess water in freshwater species",
+        "Flame cells actively secrete toxins directly into the environment without filtration",
+        "Flame cells are non-functional vestigial structures in flatworms"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Protonephridia with flame cells represent one of the simplest excretory systems in animals, found in Platyhelminthes (flatworms), rotifers, some annelid larvae, and the larval stages of some other invertebrates. STRUCTURE: The protonephridial system consists of branching tubules ending in flame bulbs (also called flame cells or terminal cells). Each flame bulb is a single cell (or part of a cell) containing a tuft of cilia that beat rhythmically (resembling a flickering flame under the microscope — hence the name). The flame bulb is enclosed by filtration slits (fenestrations in the cell membrane/extracellular matrix) that function as a size-selective filter. MECHANISM: (1) FILTRATION: The beating cilia create negative pressure (suction) in the tubule lumen, drawing interstitial fluid through the filtration slits. The slits exclude larger molecules while allowing water, small ions, small organic molecules, and waste products (primarily ammonia in freshwater species) to pass. This is a cilia-driven filtration rather than the pressure-driven filtration of vertebrate glomeruli. (2) MODIFICATION: As the filtrate passes through the tubular portions of the protonephridium, tubular epithelial cells modify the composition through selective reabsorption of useful solutes (glucose, amino acids, ions) and possibly some secretion of waste products. (3) EXCRETION: Modified fluid exits through nephridiopores on the body surface. PRIMARY FUNCTION IN FRESHWATER SPECIES: Freshwater flatworms (like planarians) are hyperosmotic to their environment and face constant osmotic water influx. The protonephridial system functions primarily as an OSMOREGULATORY organ — pumping excess water out of the body to prevent swelling. The excreted fluid is dilute (hypo-osmotic to body fluids), similar to the dilute urine of freshwater fish. Marine and parasitic flatworms (living in isotonic or hypertonic environments) have less developed protonephridia, supporting the primary osmoregulatory role. CONTRAST WITH METANEPHRIDIA: More derived invertebrates (annelids, mollusks) use metanephridia, which open to the coelomic cavity via ciliated nephrostomes and filter coelomic fluid — more analogous to the vertebrate nephron.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the osmolality of tubular fluid at different points along the nephron of a rat during antidiuresis (high ADH):\n\n| Nephron Segment | Osmolality (mOsm/kg) |\n|---|---|\n| Bowman's capsule | 300 |\n| End of proximal tubule | 300 |\n| Tip of loop of Henle (hairpin turn) | 1200 |\n| End of thick ascending limb | 100 |\n| Early distal tubule | 100 |\n| Cortical collecting duct | 300 |\n| Outer medullary collecting duct | 600 |\n| Inner medullary collecting duct (tip) | 1200 |\n| Final urine | 1200 |\n\nWhat do these values reveal about solute and water handling along the nephron?",
+      "options": [
+        "The data show that all nephron segments reabsorb water equally",
+        "These data demonstrate segment-specific transport: PCT performs isosmotic reabsorption (300 throughout); the descending limb concentrates fluid passively to 1200 as water exits into the hypertonic medulla; TAL dilutes fluid to 100 by removing NaCl without water (impermeable); the dilute fluid entering the collecting duct is progressively concentrated by ADH-regulated water reabsorption through AQP2, equilibrating with the medullary gradient at each level until final urine reaches 1200 mOsm/kg",
+        "The osmolality changes prove that the entire nephron is equally permeable to water",
+        "The data indicate kidney malfunction because osmolality should remain constant throughout"
+      ],
+      "correctAnswer": "B",
+      "explanation": "These micropuncture/microperfusion data illustrate the elegant segment-specific transport that enables urine concentration. BOWMAN'S CAPSULE (300): Glomerular filtrate is isosmotic to plasma — the filtration barrier is freely permeable to water and small solutes. PROXIMAL TUBULE (300): Despite reabsorbing approximately 65% of filtered water and solutes, the PCT remains isosmotic throughout its length. This is because PCT epithelium (with constitutive AQP1) is highly permeable to water — water reabsorption exactly matches solute reabsorption. This is obligatory isosmotic reabsorption. LOOP OF HENLE — DESCENDING LIMB (300→1200): As the thin descending limb descends into the increasingly hypertonic medullary interstitium, water moves out through AQP1 channels (the descending limb is permeable to water but relatively impermeable to NaCl). The tubular fluid becomes progressively concentrated, reaching equilibrium with the inner medullary interstitium (1200 mOsm/kg) at the hairpin turn. LOOP OF HENLE — ASCENDING LIMB (1200→100): The thin ascending limb (in the inner medulla) has passive NaCl efflux and possibly urea recycling. The thick ascending limb (TAL) actively pumps NaCl out via NKCC2 but is IMPERMEABLE TO WATER (no aquaporins). This creates the 'diluting segment' — removing solute without water, progressively diluting the tubular fluid to approximately 100 mOsm/kg (markedly hypotonic). EARLY DISTAL TUBULE (100): Still dilute — the distal convoluted tubule continues NaCl reabsorption via NCC (thiazide-sensitive) with limited water permeability. COLLECTING DUCT WITH ADH (100→1200): This is where ADH-regulated water reabsorption concentrates the urine. ADH inserts AQP2 into the apical membrane. As the collecting duct descends through the cortex (300 mOsm interstitium), outer medulla (600), and inner medulla (1200), water moves out through AQP2 (apical) and AQP3/AQP4 (basolateral) following the osmotic gradient. The tubular fluid progressively equilibrates with the interstitium at each level. Without ADH: AQP2 remains intracellular, the collecting duct stays impermeable to water, and the dilute fluid (100 mOsm) passes through unchanged — producing large volumes of dilute urine. This demonstrates why both the medullary gradient (countercurrent multiplier) AND ADH are required for urine concentration.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "Birds have a unique excretory system that combines features of reptilian and mammalian kidneys. What are the key features of avian renal function?",
+      "options": [
+        "Birds have nephrons identical to mammalian nephrons with the same concentrating ability",
+        "Bird kidneys have no loops of Henle and cannot concentrate urine at all",
+        "Avian kidneys contain two nephron types — reptilian-type (lacking loops of Henle, located in the cortex) and mammalian-type (with short loops extending into medullary cones); they produce moderately concentrated urine (approximately 2x plasma osmolality maximum), excrete nitrogen primarily as uric acid which precipitates in the cloaca where water is reabsorbed by retroperistalsis into the coprodeum, and some species have nasal salt glands for additional NaCl excretion",
+        "Bird kidneys are non-functional; all excretion occurs through the cloaca"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Avian renal physiology represents an evolutionary intermediate between reptilian and mammalian systems, with several unique adaptations. NEPHRON TYPES: Bird kidneys contain approximately 70-90% reptilian-type nephrons (located in the cortex, lacking loops of Henle — similar to reptilian nephrons) that produce isosmotic or slightly hyposmotic urine, and approximately 10-30% mammalian-type nephrons (with loops of Henle extending into medullary cones — small cone-shaped medullary regions) that can produce hypertonic urine. The mammalian-type nephrons create a limited countercurrent multiplication system. CONCENTRATING ABILITY: Maximum urine osmolality in birds is approximately 2-2.5x plasma osmolality (approximately 600-800 mOsm/kg), compared to approximately 4x in humans and approximately 17x in some desert rodents. This limited concentrating ability reflects the short loops and small medullary cones. URIC ACID EXCRETION: Birds (like reptiles) are uricotelic — nitrogen is excreted primarily as uric acid. Uric acid is filtered at the glomerulus AND actively secreted by the proximal tubule (via organic anion transporters). In the distal nephron and ureter, uric acid precipitates as white microspheres/crystals (urate salts). CLOACAL WATER RECLAMATION: The ureters empty into the cloaca (urodeum), not a urinary bladder. Ureteral urine passes retrograde (by retroperistalsis) into the coprodeum and rectum, where the colonic epithelium reabsorbs water and electrolytes. This cloacal recycling is critical — it can recover approximately 50-70% of the water in ureteral urine, producing the characteristic semi-solid white uric acid paste (mixed with fecal material) of bird droppings. SALT GLANDS: Marine and some desert birds (seabirds, shorebirds, raptors) have supraorbital nasal salt glands that secrete concentrated NaCl solution (up to approximately 1500 mOsm/kg) — compensating for the kidney's limited concentrating ability. Salt glands use the same ion transport mechanism as marine fish gill ionocytes (Na+/K+-ATPase, NKCC1, CFTR). GLOMERULAR FILTRATION REGULATION: Some bird species can reduce GFR dramatically (by selectively shutting down reptilian-type nephrons via mesangial cell contraction) during dehydration, conserving water by simply filtering less. Arginine vasotocin (the avian ADH analog) regulates both GFR and collecting duct water permeability.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine why certain deep-sea organisms (at depths exceeding 3000 m) accumulate TMAO (trimethylamine N-oxide) in their tissues at concentrations proportional to depth. What experimental approach would test the hypothesis that TMAO serves as a piezolyte (pressure-counteracting osmolyte)?",
+      "options": [
+        "Simply measure TMAO concentrations in organisms at different depths without functional testing",
+        "Collect tissue samples from organisms at varying depths to measure TMAO concentrations; test protein function (enzyme activity, structural stability) in vitro under simulated deep-sea pressures (300+ atm) with and without TMAO at physiological concentrations; use high-pressure enzyme kinetics to determine if TMAO counteracts pressure-induced protein inhibition; compare TMAO accumulation patterns with pressure tolerance across species; test whether TMAO-deficient mutants of model organisms show impaired survival under high pressure",
+        "Only study TMAO in a test tube without any organisms",
+        "Assume TMAO has the same function in deep-sea organisms as in sharks"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Testing the piezolyte hypothesis requires correlative, biochemical, and functional approaches. CORRELATIVE STUDIES: Measure TMAO concentrations in tissues (muscle, brain, blood) of organisms collected at various depths using HPLC, mass spectrometry, or enzymatic assays. Multiple studies have shown a linear relationship between depth and TMAO concentration in teleost fish (approximately 40 mM per 1000 m depth increase), from near-zero at the surface to approximately 400 mM in the deepest-living fish (hadal snailfish, approximately 8000 m). Compare TMAO accumulation patterns across taxa (fish, crustaceans, cephalopods) to assess universality. BIOCHEMICAL MECHANISM: High hydrostatic pressure compresses proteins, favoring more compact conformations and disrupting the hydration shell around protein surfaces. This can inhibit enzyme catalysis (by reducing the activation volume) and destabilize protein quaternary structure. TMAO counteracts this by: (1) Preferential exclusion from protein surfaces (similar to its role counteracting urea) — TMAO is excluded from the protein hydration shell, thermodynamically favoring more expanded, native protein conformations. (2) Increasing the volume of bulk water (TMAO structures water around itself), counteracting the volume-decreasing effect of pressure. HIGH-PRESSURE ENZYME KINETICS: Use pressure vessels (French press or diamond anvil cells) to simulate deep-sea pressures (300-1000 atm). Measure activity of key enzymes (LDH, citrate synthase, actin polymerization) at: ambient pressure, high pressure without TMAO (should show inhibition), high pressure with physiological TMAO concentrations (should show restored activity). The TMAO concentration required for full restoration should match concentrations found in organisms at corresponding depths. PROTEIN STABILITY: Use high-pressure circular dichroism (CD), fluorescence spectroscopy, or differential scanning calorimetry to measure protein folding stability under pressure with and without TMAO. IN VIVO: If possible, use CRISPR or chemical inhibitors to reduce TMAO synthesis (targeting TMAO-producing enzyme FMO3 or its analogs) in model organisms, then test pressure tolerance in high-pressure aquaria. Compare survival, swimming performance, and metabolic rate of TMAO-deficient vs normal organisms under simulated deep-sea conditions.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    },
+    {
+      "type": "MCQ",
+      "question": "The distal convoluted tubule (DCT) plays a key role in fine-tuning sodium and calcium balance. What are the major transport mechanisms in the DCT?",
+      "options": [
+        "The DCT has no active transport and relies entirely on passive diffusion",
+        "The DCT uses ENaC for sodium reabsorption, identical to the collecting duct",
+        "The DCT reabsorbs NaCl via the apical thiazide-sensitive NCC (Na+/Cl- cotransporter, SLC12A3) driven by basolateral Na+/K+-ATPase; it is the major site of active transcellular Ca2+ reabsorption via apical TRPV5 channels, intracellular calbindin-D28k transport, and basolateral NCX1 (Na+/Ca2+ exchanger) and PMCA1b (Ca2+-ATPase) — regulated by PTH and 1,25-dihydroxyvitamin D",
+        "The DCT primarily secretes urea and creatinine rather than reabsorbing solutes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The DCT (early DCT, DCT1) is a critical fine-tuning segment with distinct transport properties. NaCl REABSORPTION: The apical NCC (thiazide-sensitive NaCl cotransporter, encoded by SLC12A3) is the principal Na+ entry mechanism. NCC electroneutrally reabsorbs Na+ and Cl- from the lumen. NCC is regulated by: WNK kinases (WNK1, WNK4) and their downstream effectors SPAK/OSR1, which phosphorylate and activate NCC. Mutations in WNK1 or WNK4 cause Gordon syndrome (pseudohypoaldosteronism type II) — NCC hyperactivation leading to hypertension, hyperkalemia, and metabolic acidosis. Conversely, loss-of-function NCC mutations cause Gitelman syndrome — NaCl wasting, hypokalemia, metabolic alkalosis, and hypocalciuria. Thiazide diuretics (hydrochlorothiazide, chlorthalidone) directly block NCC, causing natriuresis. CALCIUM REABSORPTION: The DCT (particularly DCT2) is the major site of REGULATED transcellular Ca2+ reabsorption (approximately 5-10% of filtered calcium), controlled by PTH and calcitriol. The three-step transcellular pathway: (1) APICAL ENTRY: TRPV5 (transient receptor potential vanilloid 5) — a highly Ca2+-selective channel constitutively open at physiological membrane potentials. TRPV5 is the rate-limiting step of transcellular Ca2+ transport. (2) INTRACELLULAR TRANSPORT: Calbindin-D28k — a calcium-binding protein that buffers intracellular Ca2+ (preventing toxicity) and shuttles Ca2+ from apical to basolateral membrane by facilitated diffusion. (3) BASOLATERAL EXTRUSION: NCX1 (Na+/Ca2+ exchanger) — uses the Na+ gradient (maintained by Na+/K+-ATPase) to extrude Ca2+ (3 Na+ in, 1 Ca2+ out). PMCA1b (plasma membrane Ca2+-ATPase) — directly pumps Ca2+ out using ATP. REGULATION: PTH (via PTH1R, cAMP/PKA) upregulates TRPV5 expression and membrane insertion, calbindin-D28k expression, and NCX1/PMCA1b activity. 1,25(OH)2D3 (calcitriol) upregulates TRPV5, calbindin-D28k, and NCX1 transcription via VDR (vitamin D receptor). THIAZIDE-CALCIUM LINK: Thiazides paradoxically reduce urinary calcium (hypocalciuric effect, clinically useful for calcium kidney stones and osteoporosis). Mechanism: NCC blockade reduces intracellular Na+ and Cl-, which enhances basolateral NCX1 activity (more Na+ gradient available for Ca2+ extrusion), and the resulting mild volume contraction enhances proximal Ca2+ reabsorption.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Osmoregulation and Excretion"
+    }
+  ]
+}
