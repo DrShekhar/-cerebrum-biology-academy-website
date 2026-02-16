@@ -1,0 +1,1905 @@
+{
+  "batch": {
+    "name": "Campbell Ch7 Membrane Structure and Function \u2014 Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 95
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "The fluid mosaic model of membrane structure was proposed by Singer and Nicolson in 1972. Which experimental finding provided the earliest direct evidence for lateral mobility of membrane proteins?",
+      "options": [
+        "Measurement of membrane thickness by electron microscopy",
+        "Freeze-fracture electron microscopy revealing intramembranous particles",
+        "The Frye-Edidin experiment showing intermixing of mouse and human membrane proteins after cell fusion",
+        "X-ray crystallography of bacteriorhodopsin revealing seven transmembrane helices"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Frye-Edidin experiment (1970) provided compelling visual evidence for protein lateral mobility. They fused mouse and human cells using Sendai virus, then used species-specific fluorescent antibodies (green for mouse, red for human) to track membrane proteins. Within 40 minutes at 37 degrees Celsius, the two sets of proteins had intermixed completely over the hybrid cell surface, demonstrating that membrane proteins diffuse laterally. Cooling to 15 degrees Celsius slowed this mixing, confirming it was an energy-dependent (thermally driven) process. Freeze-fracture EM (A) showed proteins exist within the bilayer but not their mobility. Bacteriorhodopsin crystallography (C) revealed structure, not dynamics. Membrane thickness measurement (D) indicated bilayer dimensions but not protein behavior.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A cell membrane contains 40% cholesterol by mole fraction. Compared to a membrane with 10% cholesterol, how would the high-cholesterol membrane behave at physiological temperature (37 degrees Celsius)?",
+      "options": [
+        "It would undergo spontaneous phase separation into pure cholesterol domains and pure phospholipid domains",
+        "It would be completely rigid and unable to support lateral diffusion of proteins",
+        "It would be more fluid because cholesterol prevents tight packing of phospholipids",
+        "It would have intermediate fluidity \u2014 less fluid than a pure phospholipid membrane but more fluid than a gel-phase membrane \u2014 because cholesterol acts as a fluidity buffer"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cholesterol is a fluidity buffer with dual effects. At physiological temperatures where phospholipids are in a liquid-disordered state, cholesterol's rigid sterol ring restricts the motion of nearby hydrocarbon chains, reducing fluidity. At temperatures below the phase transition, cholesterol prevents tight packing by inserting between phospholipid tails, increasing fluidity and preventing solidification. A membrane with 40% cholesterol at 37 degrees Celsius would therefore be in a liquid-ordered state \u2014 less fluid than a pure phospholipid membrane above its transition temperature (eliminating A) but more fluid than a gel-phase membrane (eliminating C). Cholesterol does promote formation of lipid rafts enriched in sphingolipids and cholesterol, but these are dynamic domains, not complete phase separation (eliminating D). This buffering effect is why cholesterol is essential for membrane function across temperature ranges.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following transport processes moves a solute AGAINST its concentration gradient and requires direct hydrolysis of ATP?",
+      "options": [
+        "Secondary active transport by the Na+/glucose symporter (SGLT1)",
+        "Facilitated diffusion through a channel protein",
+        "Osmosis through aquaporins",
+        "Primary active transport by the Na+/K+-ATPase"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The Na+/K+-ATPase (sodium-potassium pump) is the classic example of primary active transport. It directly hydrolyzes ATP to pump 3 Na+ ions out and 2 K+ ions into the cell, both against their concentration gradients. Each transport cycle uses one ATP molecule and involves phosphorylation of an aspartate residue in the pump, causing conformational changes between E1 and E2 states. Facilitated diffusion (A) moves solutes DOWN their concentration gradient through proteins \u2014 no energy input. Osmosis (B) is passive water movement through aquaporins or the lipid bilayer. Secondary active transport by SGLT1 (D) moves glucose against its gradient but is powered by the Na+ gradient (itself established by the Na+/K+-ATPase), not by direct ATP hydrolysis. Thus only the Na+/K+-ATPase directly couples ATP hydrolysis to transport.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about aquaporins:\nS1: Aquaporins allow water but not protons (H3O+) to pass through the channel\nS2: The selectivity of aquaporins is achieved partly by a constriction region containing two conserved NPA (Asn-Pro-Ala) motifs\nS3: Aquaporin-2 (AQP2) in the kidney collecting duct is regulated by vasopressin (ADH) through insertion into the apical membrane\nS4: Aquaporins transport water by active transport, using ATP to pump water molecules against their concentration gradient",
+      "options": [
+        "TTTT",
+        "TTTF",
+        "TFTT",
+        "FTTF"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Aquaporins have a remarkable selectivity mechanism that allows rapid water transport (~3 billion molecules per second) while completely excluding protons. The channel is oriented so that water molecules pass single-file, with their dipoles reoriented at the NPA constriction to break the hydrogen-bonded water chain, preventing proton hopping (Grotthuss mechanism). S2 is TRUE: The two NPA motifs from opposite loops meet in the center of the channel, creating a constriction that reorients water molecules and provides size exclusion. An additional selectivity filter (ar/R constriction) near the extracellular end uses an arginine residue to provide additional selectivity. S3 is TRUE: Vasopressin (ADH) binds V2 receptors on basolateral membranes of collecting duct principal cells, activating cAMP-PKA signaling that triggers exocytic insertion of AQP2-containing vesicles into the apical membrane, increasing water reabsorption. S4 is FALSE: Aquaporins facilitate PASSIVE water transport down the osmotic gradient. They are channels, not pumps.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Lipid rafts are membrane microdomains enriched in cholesterol and sphingolipids. Which of the following is NOT a proposed function of lipid rafts?",
+      "options": [
+        "Sorting GPI-anchored proteins in the trans-Golgi network for apical delivery in polarized epithelial cells",
+        "Serving as platforms for signal transduction by concentrating receptors and downstream effectors",
+        "Providing the primary site for oxidative phosphorylation in the plasma membrane",
+        "Facilitating membrane budding during caveolae-mediated endocytosis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Oxidative phosphorylation occurs exclusively in the inner mitochondrial membrane, not in lipid rafts of the plasma membrane (C is NOT a function and is the correct answer). Lipid rafts have multiple verified and proposed functions: (1) They serve as signaling platforms by concentrating receptors (like TCR, BCR, and growth factor receptors), GPI-anchored proteins, and Src family kinases in a liquid-ordered environment that facilitates protein-protein interactions (A is correct). (2) Caveolae are flask-shaped invaginations formed by the raft-associated protein caveolin that mediate a distinct endocytic pathway (B is correct). (3) In polarized epithelial cells, GPI-anchored proteins preferentially associate with lipid rafts in the trans-Golgi network, and this association facilitates their selective sorting to the apical plasma membrane domain (D is correct).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the rate of glucose uptake into erythrocytes at varying extracellular glucose concentrations and obtains the following data:\n\nGlucose (mM) | Uptake rate (nmol/min/10^6 cells)\n0.5 | 15\n1.0 | 27\n2.0 | 42\n5.0 | 58\n10.0 | 65\n20.0 | 68\n50.0 | 69\n\nWhich transport mechanism is consistent with this data?",
+      "options": [
+        "Simple diffusion through the lipid bilayer, which shows a linear relationship between concentration and rate",
+        "Carrier-mediated facilitated diffusion (GLUT1), which shows saturation kinetics with a Vmax of approximately 70 nmol/min and Km of approximately 1.5 mM",
+        "Primary active transport by an ATP-dependent glucose pump",
+        "Receptor-mediated endocytosis of glucose-protein complexes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data show classic saturation kinetics: uptake rate increases with glucose concentration but plateaus at a maximum rate (Vmax ~69-70 nmol/min). This hyperbolic relationship is diagnostic of carrier-mediated transport, where a finite number of transporter proteins (GLUT1 in erythrocytes) become saturated at high substrate concentrations. From the data, Vmax is approximately 70 nmol/min. The Km (concentration at half-maximal velocity, ~35 nmol/min) can be estimated at approximately 1.5 mM. Simple diffusion (A) would show a linear, non-saturating relationship because it depends only on the concentration gradient and membrane permeability. Active transport (C) is unlikely because glucose enters erythrocytes down its concentration gradient (blood glucose ~5 mM, intracellular glucose is rapidly consumed). Endocytosis (D) would not show these kinetics and is too slow for metabolic glucose supply.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The electrochemical gradient for an ion across a membrane has both chemical and electrical components. For a cell with a resting membrane potential of -70 mV, which statement about chloride ion (Cl-) movement is correct? (Assume intracellular [Cl-] = 4 mM, extracellular [Cl-] = 120 mM)",
+      "options": [
+        "Cl- is at electrochemical equilibrium at -70 mV",
+        "The chemical gradient favors Cl- influx while the electrical gradient opposes it, resulting in an equilibrium potential near -90 mV",
+        "Both the chemical and electrical gradients favor Cl- movement into the cell",
+        "The chemical gradient favors Cl- influx while the electrical gradient (negative inside repelling anions) also opposes it, but the net electrochemical gradient still favors influx"
+      ],
+      "correctAnswer": "D",
+      "explanation": "For Cl- with intracellular 4 mM and extracellular 120 mM, the chemical (concentration) gradient strongly favors inward movement. The electrical gradient (membrane potential of -70 mV, negative inside) opposes Cl- influx because negative charges repel the negatively charged chloride ion. To determine the net effect, we calculate the Nernst equilibrium potential for Cl-: E_Cl = (RT/zF) x ln([Cl-]out/[Cl-]in) = (-61.5 mV/1) x log(120/4) = -61.5 x 1.48 = approximately -91 mV. Since the resting membrane potential (-70 mV) is more positive than E_Cl (-91 mV), there is a net electrochemical driving force for Cl- influx (the membrane potential is not sufficiently negative to counterbalance the concentration gradient). The cell is not at equilibrium for Cl- (D is wrong). Both gradients do not favor influx (A is wrong), as the electrical component opposes it, but the net effect is still inward (confirming C).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a hypotonic environment, animal cells lyse due to osmotic water influx, but plant cells do not. Which structure provides the mechanical resistance that prevents plant cell lysis?",
+      "options": [
+        "The cell wall, which exerts wall pressure counteracting turgor pressure",
+        "Plasmodesmata, which release excess water to neighboring cells",
+        "The central vacuole, which absorbs excess water",
+        "The plasma membrane, which is more rigid in plant cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "When a plant cell is placed in a hypotonic solution, water enters by osmosis, causing the protoplast to swell and push against the rigid cell wall. The cell wall resists expansion, generating an outward turgor pressure (wall pressure) that counterbalances the osmotic gradient. At full turgor, the water potential inside equals that outside, and net water movement stops. The cell becomes turgid but does not lyse. This is critical for plant physiology \u2014 turgor pressure drives cell expansion during growth, provides mechanical support for non-woody tissues, and powers stomatal opening. Animal cells lack a cell wall and have only the flexible plasma membrane, which cannot withstand significant turgor pressure and ruptures (lysis). The vacuole (A) swells but does not prevent lysis. The plasma membrane (B) is not more rigid in plants. Plasmodesmata (D) do not serve as pressure relief valves.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a drug crosses the cell membrane by passive diffusion or requires a protein transporter. Which experimental approach would be most informative?",
+      "options": [
+        "Measure drug uptake at 37 degrees Celsius only",
+        "Compare drug uptake in cells versus artificial lipid vesicles (liposomes) lacking any proteins, and test whether uptake in cells shows saturation kinetics and is inhibited by protein-modifying reagents",
+        "Visualize drug localization using fluorescence microscopy",
+        "Measure the drug's molecular weight to determine if it is small enough to cross the membrane"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Comparing drug uptake between cells (with all membrane proteins) and protein-free liposomes (pure phospholipid bilayers) directly tests whether proteins are required. If the drug crosses liposomes at the same rate as cells, passive diffusion through the lipid bilayer is sufficient and no transporter is needed. If uptake in cells is significantly faster than in liposomes, a protein-mediated mechanism is implicated. Additional evidence from saturation kinetics (indicative of a finite number of transporter sites), competitive inhibition by structural analogs, and sensitivity to protein-modifying reagents (like DIDS, NEM, or protease treatment) would confirm transporter involvement. Measuring at one temperature only (A) provides no mechanistic information. Fluorescence microscopy (C) shows localization but not transport mechanism. Molecular weight (D) is suggestive but not definitive \u2014 many small molecules still use transporters, and some large molecules can partition into membranes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The CFTR protein (cystic fibrosis transmembrane conductance regulator) functions as a chloride channel regulated by ATP binding and hydrolysis. It belongs to which protein superfamily?",
+      "options": [
+        "Voltage-gated ion channels",
+        "Ligand-gated ion channels",
+        "Aquaporins",
+        "ABC (ATP-binding cassette) transporters"
+      ],
+      "correctAnswer": "D",
+      "explanation": "CFTR is unique among ABC transporters because it functions as an ion channel rather than an active transporter. Most ABC transporters use ATP hydrolysis to pump substrates across membranes (e.g., MDR1/P-glycoprotein pumps drugs out of cells). CFTR retains the structural hallmarks of ABC transporters: two transmembrane domains (TMDs) each with six transmembrane helices, and two nucleotide-binding domains (NBDs) that bind and hydrolyze ATP. ATP binding causes NBD dimerization, opening the channel pore; ATP hydrolysis drives NBD separation and channel closing. Additionally, CFTR has a unique regulatory (R) domain that must be phosphorylated by PKA for channel activation. CFTR is not voltage-gated (A) since it does not respond to membrane potential changes. It is not a ligand-gated channel (C) in the traditional sense. It has no structural relation to aquaporins (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "During co-transport (secondary active transport), the Na+/glucose symporter (SGLT1) in intestinal epithelial cells moves glucose into the cell against its concentration gradient. What provides the energy for this uphill glucose transport?",
+      "options": [
+        "The concentration gradient of glucose itself, from high intracellular to low extracellular",
+        "The favorable downhill movement of Na+ ions into the cell, driven by the electrochemical gradient established by the basolateral Na+/K+-ATPase",
+        "GTP hydrolysis by a G-protein coupled to SGLT1",
+        "Direct hydrolysis of ATP by SGLT1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "SGLT1 is a secondary active transporter (symporter) that couples the downhill movement of Na+ into the cell with the uphill transport of glucose. The Na+ electrochemical gradient is maintained by the Na+/K+-ATPase on the basolateral membrane, which pumps 3 Na+ out and 2 K+ in using ATP. This creates low intracellular Na+ (~10-12 mM) relative to extracellular (~145 mM), providing a strong driving force for Na+ entry. SGLT1 harnesses this energy to co-transport glucose (2 Na+ per glucose) into the cell, even when intracellular glucose concentration is higher than the gut lumen. The glucose then exits the cell across the basolateral membrane via GLUT2 (facilitated diffusion). SGLT1 itself does not hydrolyze ATP (A), the glucose gradient favors efflux not influx (C), and no G-protein is involved (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about membrane transport proteins:\nS1: GLUT4 is an insulin-regulated glucose transporter that is recruited to the plasma membrane in response to insulin signaling\nS2: The Na+/K+-ATPase is electrogenic because it pumps 3 Na+ out for every 2 K+ in, creating a net outward positive current\nS3: Ion channels are always open and cannot be regulated\nS4: The H+/K+-ATPase in gastric parietal cells acidifies the stomach by pumping H+ into the lumen in exchange for K+",
+      "options": [
+        "TTFT",
+        "TTTF",
+        "TFFT",
+        "TTTT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: In the absence of insulin, GLUT4 is stored in intracellular vesicles (GLUT4 storage vesicles, GSVs). Insulin signaling activates PI3K-Akt-AS160 pathway, which promotes translocation and fusion of GSVs with the plasma membrane, dramatically increasing glucose uptake in muscle and adipose tissue (up to 20-fold). S2 is TRUE: The Na+/K+-ATPase moves 3 positive charges out and 2 positive charges in per cycle, generating a net outward current that contributes about -5 to -10 mV to the resting membrane potential. This electrogenic contribution is relatively small compared to K+ leak channels but is physiologically significant. S3 is FALSE: Most ion channels are gated and switch between open and closed states. Types of gating include voltage-gated (respond to membrane potential), ligand-gated (respond to chemical signals), mechanically-gated (respond to physical force), and temperature-gated channels. S4 is TRUE: The H+/K+-ATPase (gastric proton pump) is a P-type ATPase that exchanges cytoplasmic H+ for luminal K+, achieving stomach pH as low as 1.0. This is the target of proton pump inhibitors (PPIs) like omeprazole.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which experimental technique directly demonstrated that the plasma membrane is a lipid bilayer rather than a protein layer coated with lipids?",
+      "options": [
+        "The Frye-Edidin cell fusion experiment",
+        "Freeze-fracture electron microscopy showing two fracture faces",
+        "The Gorter and Grendel experiment showing that lipids extracted from erythrocytes covered twice the cell surface area when spread as a monolayer",
+        "X-ray diffraction of myelin membranes showing periodic structure"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In 1925, Gorter and Grendel extracted lipids from a known number of erythrocytes, spread them as a monolayer on a Langmuir trough, and measured the total area covered. They found the monolayer area was approximately twice the estimated total surface area of the erythrocytes. This directly implied the membrane consists of a lipid bilayer (two layers of lipid molecules). Although their calculation contained compensating errors (they underestimated cell surface area but also incompletely extracted lipids), the conclusion was correct. The Frye-Edidin experiment (B) showed protein mobility, not bilayer structure. Freeze-fracture EM (C) showed the bilayer could be split into two leaflets, supporting but not originally demonstrating the bilayer model. X-ray diffraction of myelin (D) provided structural information consistent with repeated bilayers but was interpreted within the context of the already-proposed bilayer model.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ouabain is a cardiac glycoside that specifically inhibits the Na+/K+-ATPase. If ouabain is applied to a neuron, which sequence of events would occur?",
+      "options": [
+        "Immediate increase in K+ conductance and membrane stabilization",
+        "No effect because neurons do not express Na+/K+-ATPase",
+        "Immediate hyperpolarization followed by increased action potential firing",
+        "Gradual depolarization due to Na+ accumulation inside the cell, loss of the Na+ gradient, impaired secondary active transport, and eventual inability to fire action potentials"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Inhibition of the Na+/K+-ATPase by ouabain prevents the pump from maintaining the normal Na+ and K+ gradients. Without pumping, Na+ gradually accumulates intracellularly (rising from ~12 mM toward 145 mM) and K+ leaks out (falling from ~140 mM toward 4 mM). This causes progressive depolarization of the resting membrane potential (which depends primarily on K+ gradient through leak channels). As the ion gradients dissipate: (1) the Na+ gradient driving secondary active transporters (Na+/Ca2+ exchanger, Na+/glucose symporter) collapses; (2) the reduced K+ gradient decreases the hyperpolarizing drive; (3) depolarization initially may increase excitability but eventually inactivates voltage-gated Na+ channels, preventing action potential generation. Neurons extensively express Na+/K+-ATPase (C is wrong). Hyperpolarization (A) and increased K+ conductance (D) do not occur with pump inhibition.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher observes that a specific amino acid is transported into cells more rapidly at 37 degrees Celsius than at 4 degrees Celsius, shows saturation kinetics, and is inhibited by a structurally similar amino acid. However, transport occurs equally well with and without ATP. Which transport mechanism is most consistent with these observations?",
+      "options": [
+        "Simple diffusion through the lipid bilayer",
+        "Facilitated diffusion through a carrier protein (uniporter)",
+        "Primary active transport by an ATPase",
+        "Pinocytosis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The observations systematically rule out each alternative: Temperature sensitivity and saturation kinetics rule out simple diffusion (A), which is temperature-insensitive for small molecules and shows a linear (non-saturating) relationship with concentration. Competitive inhibition by a structural analog confirms protein-mediated transport (a binding site with specificity). ATP independence eliminates primary active transport (C), which requires ATP hydrolysis. Pinocytosis (D) would not show competitive inhibition by structural analogs or classical saturation kinetics. The remaining option \u2014 facilitated diffusion through a carrier protein \u2014 fits all observations: carrier proteins show temperature-dependent conformational changes, saturate when all binding sites are occupied (Michaelis-Menten kinetics), and can be competitively inhibited by structural analogs. Since it moves solutes down their concentration gradient, no ATP is required.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which phospholipid is predominantly found in the inner (cytoplasmic) leaflet of the plasma membrane and serves as a precursor for second messengers in signal transduction?",
+      "options": [
+        "Sphingomyelin",
+        "Phosphatidylserine",
+        "Phosphatidylinositol 4,5-bisphosphate (PIP2)",
+        "Phosphatidylcholine"
+      ],
+      "correctAnswer": "C",
+      "explanation": "PIP2 (phosphatidylinositol 4,5-bisphosphate) is concentrated in the inner (cytoplasmic) leaflet of the plasma membrane and plays a central role in signal transduction. When phospholipase C (PLC) is activated by G-protein-coupled receptors or receptor tyrosine kinases, it cleaves PIP2 into two second messengers: inositol 1,4,5-trisphosphate (IP3), which releases Ca2+ from ER stores, and diacylglycerol (DAG), which activates protein kinase C (PKC). PIP2 also serves as a substrate for PI3-kinase, which phosphorylates it to PIP3, a crucial signal for Akt/PKB activation. Sphingomyelin (A) is found predominantly in the outer leaflet. Phosphatidylcholine (B) is mainly in the outer leaflet. Phosphatidylserine (D) is in the inner leaflet but serves primarily as an apoptotic signal when externalized, not as a signaling precursor.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A cell is placed in an isotonic solution containing a membrane-permeable solute. Over time, what will happen to the cell?",
+      "options": [
+        "The cell will shrink as the solute enters and draws water out",
+        "The cell will swell and potentially lyse because the permeable solute enters the cell, increasing intracellular osmolarity and drawing water in",
+        "The solute will have no effect on the cell because it can freely cross the membrane",
+        "The cell will maintain its volume indefinitely because the solution is isotonic"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is a subtle but important distinction between isotonic and isosmotic solutions. Although initially isotonic (equal osmolarity), if the solute is membrane-permeable, it will diffuse into the cell down its concentration gradient. As intracellular solute concentration increases, the effective intracellular osmolarity rises (because both the original cell solutes AND the new permeable solute are now inside). This creates an osmotic gradient favoring water influx, causing the cell to swell. In extreme cases, this can lead to lysis. This is why the concept of tonicity (effective osmolarity considering only non-penetrating solutes) differs from osmolarity. A solution may be isosmotic but hypotonic if its solutes are membrane-permeable. Urea, glycerol, and ethanol are clinically relevant examples of membrane-permeable solutes that cause this effect.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers measure the permeability coefficients of various molecules across a pure phospholipid bilayer:\n\nMolecule | Molecular weight | Charge | Permeability (cm/s)\nO2 | 32 | 0 | 2.3 x 10^1\nH2O | 18 | 0 | 5.5 x 10^-3\nGlycerol | 92 | 0 | 5.4 x 10^-6\nGlucose | 180 | 0 | 4.0 x 10^-8\nNa+ | 23 | +1 | 1.0 x 10^-12\nCl- | 35 | -1 | 1.5 x 10^-11\n\nWhich conclusion is best supported by this data?",
+      "options": [
+        "Membrane permeability is determined solely by molecular weight \u2014 smaller molecules cross faster",
+        "Hydrophobicity and charge are the primary determinants of membrane permeability \u2014 small nonpolar molecules cross most readily, while ions are essentially impermeable without protein channels",
+        "All molecules cross at similar rates because the membrane is fluid",
+        "Water crosses faster than any other molecule due to its small size"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data reveal a permeability hierarchy spanning 13 orders of magnitude that correlates with hydrophobicity and charge rather than size alone. O2 (nonpolar gas) has the highest permeability despite being larger than water or Na+. Water, though small and polar, crosses slowly due to its hydrogen-bonding capacity. Glycerol and glucose (larger, more polar) cross progressively more slowly. Na+ and Cl- (small but charged) have the lowest permeability by far (10^-11 to 10^-12), demonstrating that the hydrophobic interior of the lipid bilayer presents an enormous energy barrier to ion passage. Size alone (A) cannot explain why O2 (32 Da) crosses 10^13 times faster than Na+ (23 Da). All molecules clearly do NOT cross at similar rates (C). Water does NOT cross faster than O2 (D). This data explains why cells need ion channels, transporters, and aquaporins for rapid transport of hydrophilic molecules and ions.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The patch clamp technique, developed by Neher and Sakmann (Nobel Prize 1991), allows recording of currents through single ion channels. Which property of ion channels can be directly measured using this technique?",
+      "options": [
+        "Single-channel conductance, open probability, gating kinetics, and ion selectivity",
+        "The rate of channel protein synthesis on ribosomes",
+        "The amino acid sequence of the channel protein",
+        "The three-dimensional crystal structure of the channel"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Patch clamping isolates a small membrane patch (containing one or a few channels) under a glass micropipette, enabling detection of picoampere currents flowing through individual channels. This directly reveals: (1) single-channel conductance (the current amplitude when the channel opens, typically 2-200 pS); (2) open probability (the fraction of time the channel spends in the open state); (3) gating kinetics (transition rates between open, closed, and inactivated states, revealing mechanisms like ball-and-chain inactivation); and (4) ion selectivity (by changing ionic composition and measuring reversal potentials). Different patch configurations (cell-attached, inside-out, outside-out, whole-cell) provide different experimental access. Amino acid sequence (A) requires molecular biology methods. Crystal structure (C) requires X-ray crystallography or cryo-EM. Protein synthesis rate (D) requires metabolic labeling or ribosome profiling.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Glycolipids are found exclusively in which leaflet of the plasma membrane?",
+      "options": [
+        "Both leaflets equally",
+        "The outer (extracellular) leaflet",
+        "The inner (cytoplasmic) leaflet",
+        "Neither leaflet \u2014 they are found only in the ER membrane"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Glycolipids (glycosphingolipids including cerebrosides and gangliosides, as well as glycosylphosphatidylinositol) are found exclusively in the outer (extracellular) leaflet of the plasma membrane, with their sugar moieties extending into the extracellular space. This asymmetric distribution is established during biosynthesis: glycolipid sugar residues are added by glycosyltransferases in the Golgi lumen (topologically equivalent to the extracellular space), and there are no flippases that transfer glycolipids to the cytoplasmic leaflet. The glycolipid sugars contribute to the glycocalyx (cell coat) and function in cell-cell recognition, pathogen binding (ganglioside GM1 is the receptor for cholera toxin), and immune recognition (ABO blood group antigens are glycolipids on erythrocytes). Their exclusive outer leaflet localization is one of the clearest examples of membrane asymmetry.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine if a membrane protein is an integral (transmembrane) or peripheral membrane protein, a researcher uses a series of extraction conditions. Which sequential extraction protocol would best distinguish the two types?",
+      "options": [
+        "First treat with a non-ionic detergent (Triton X-100), then with urea",
+        "First treat with high salt (1M NaCl) and high pH (Na2CO3, pH 11.5) to strip peripheral proteins, then solubilize remaining integral proteins with detergent (Triton X-100 or SDS)",
+        "First treat with protease, then with detergent",
+        "Only use organic solvent extraction with chloroform/methanol"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This sequential extraction is the gold standard for classifying membrane proteins. Step 1: High salt (1M NaCl) disrupts ionic interactions between peripheral proteins and the membrane surface or integral protein headgroups. Carbonate buffer (pH 11.5) opens sealed vesicles into membrane sheets and strips peripherally associated proteins by disrupting electrostatic and hydrogen bonding interactions. Proteins released in this step are classified as peripheral membrane proteins. Step 2: Treating the remaining membrane with a detergent like Triton X-100 (non-denaturing) or SDS (denaturing) solubilizes integral membrane proteins by replacing lipid-protein interactions with detergent-protein interactions. Proteins released only with detergent are classified as integral membrane proteins. Option A starts with detergent, which would extract both types simultaneously. Protease treatment (C) would destroy proteins before classification. Organic solvent (D) would denature most proteins and not preserve classification information.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following transport processes is responsible for the uptake of cholesterol into cells via LDL particles?",
+      "options": [
+        "Direct diffusion of cholesterol through the plasma membrane",
+        "Phagocytosis",
+        "Pinocytosis",
+        "Receptor-mediated endocytosis via clathrin-coated pits"
+      ],
+      "correctAnswer": "D",
+      "explanation": "LDL (low-density lipoprotein) cholesterol uptake occurs through receptor-mediated endocytosis, one of the best-characterized endocytic pathways. LDL particles bind to LDL receptors (LDLRs) concentrated in clathrin-coated pits on the plasma membrane. The coated pit invaginates and pinches off (with dynamin assistance) to form a clathrin-coated vesicle. After uncoating, the vesicle delivers its contents to early endosomes, where acidic pH causes LDL to dissociate from the receptor. The receptor is recycled to the plasma membrane (each receptor makes ~150 round trips), while LDL continues to late endosomes/lysosomes where cholesterol esters are hydrolyzed by acid lipase to release free cholesterol. Mutations in LDLR cause familial hypercholesterolemia (discovered by Brown and Goldstein, Nobel Prize 1985). Phagocytosis (A) is for large particles. Pinocytosis (B) is non-specific. Free cholesterol can diffuse through membranes (D) but LDL particle uptake requires receptor-mediated endocytosis.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Goldman-Hodgkin-Katz (GHK) voltage equation predicts the resting membrane potential by considering the permeability and concentrations of multiple ions. In a typical neuron at rest, which ion's equilibrium potential is closest to the resting membrane potential, and why?",
+      "options": [
+        "Ca2+ (E_Ca = +120 mV), because calcium is the most important intracellular ion",
+        "Na+ (E_Na = +60 mV), because Na+ channels dominate at rest",
+        "Cl- (E_Cl = -70 mV), because Cl- is the most abundant anion",
+        "K+ (E_K = -90 mV), because K+ leak channels provide the dominant resting permeability"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The resting membrane potential of a typical neuron (~-70 mV) is closest to the K+ equilibrium potential (E_K ~-90 mV) because K+ leak channels (KCNK/TREK/TASK family two-pore domain channels) provide the dominant resting conductance. At rest, the membrane permeability to K+ is approximately 50-100 times greater than to Na+. The GHK equation weights each ion's contribution by its relative permeability: V_m = (RT/F) x ln[(P_K[K]out + P_Na[Na]out + P_Cl[Cl]in) / (P_K[K]in + P_Na[Na]in + P_Cl[Cl]out)]. Since P_K >> P_Na at rest, V_m approximates E_K. The small Na+ permeability (through leak channels) pulls the resting potential slightly positive from E_K (to -70 mV). Na+ channels (A) are mostly closed at rest. Ca2+ (B) has negligible resting permeability. Cl- (D) is often passively distributed and does not drive the resting potential in most neurons.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about membrane fluidity:\nS1: Unsaturated fatty acid tails increase membrane fluidity because their cis double bonds introduce kinks that prevent tight packing\nS2: Longer fatty acid chains decrease fluidity by increasing van der Waals interactions between neighboring tails\nS3: Cholesterol increases membrane fluidity at all temperatures\nS4: Mycoplasma bacteria, which lack cell walls, can adjust their membrane fluidity by modifying the proportion of unsaturated fatty acids in their membrane phospholipids",
+      "options": [
+        "TTFT",
+        "TTTF",
+        "TTFF",
+        "TFFT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Cis double bonds in unsaturated fatty acids create a ~30-degree kink in the hydrocarbon chain, which disrupts the regular packing of neighboring fatty acid tails and increases the space between molecules, enhancing fluidity and lowering the phase transition temperature. S2 is TRUE: Longer saturated chains have more surface area for van der Waals (London dispersion) interactions with neighbors, requiring more thermal energy to disrupt these interactions and increasing the transition temperature/decreasing fluidity. S3 is FALSE: Cholesterol has dual, temperature-dependent effects. At physiological temperatures (above transition temperature), cholesterol DECREASES fluidity by restricting phospholipid chain motion. Below the transition temperature, it INCREASES fluidity by preventing tight crystalline packing. Cholesterol thus acts as a fluidity buffer, moderating the effects of temperature changes. S4 is TRUE: Mycoplasma (like Acholeplasma laidlawii) are model organisms for studying membrane adaptation. They can desaturate fatty acids using desaturase enzymes in response to temperature decreases, maintaining appropriate membrane fluidity (homeoviscous adaptation).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Valinomycin is a potassium ionophore that forms a hydrophobic complex with K+ ions, allowing them to cross lipid bilayers. If valinomycin is added to cells, what would happen to the membrane potential?",
+      "options": [
+        "The membrane potential would hyperpolarize toward the K+ equilibrium potential (approximately -90 mV)",
+        "The membrane potential would depolarize toward 0 mV",
+        "The membrane potential would not change because the cell already has K+ channels",
+        "The membrane potential would become positive because K+ would flow into the cell"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Valinomycin is a carrier ionophore that selectively binds K+ (with 10,000-fold selectivity over Na+) and shuttles it across the membrane down its electrochemical gradient. In a typical cell, the high intracellular K+ concentration (~140 mM) relative to extracellular (~4 mM) creates a strong outward driving force for K+. Valinomycin dramatically increases K+ permeability, which would hyperpolarize the membrane potential toward the K+ equilibrium potential (E_K ~-90 mV), since the membrane potential is now determined almost entirely by K+. The resting potential is normally -70 mV (slightly more positive than E_K due to small Na+ permeability). Adding valinomycin makes K+ conductance overwhelmingly dominant, pushing V_m closer to E_K. The cell already has K+ channels (C is wrong in its conclusion; valinomycin adds additional K+ permeability). K+ flows OUT of the cell (D is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following correctly describes the difference between a symporter and an antiporter?",
+      "options": [
+        "A symporter moves two different solutes in the same direction; an antiporter moves two different solutes in opposite directions",
+        "A symporter moves solutes passively; an antiporter moves solutes actively",
+        "A symporter is found only in prokaryotes; an antiporter is found only in eukaryotes",
+        "A symporter uses ATP; an antiporter does not"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Symporters (co-transporters) simultaneously transport two different molecules or ions in the SAME direction across the membrane. Examples include the Na+/glucose symporter (SGLT1) in intestinal epithelia and the Na+/amino acid symporters. Antiporters (exchangers or counter-transporters) simultaneously transport two molecules or ions in OPPOSITE directions. Examples include the Na+/Ca2+ exchanger (NCX) that exports Ca2+ while importing Na+, and the Cl-/HCO3- exchanger (band 3/AE1) in erythrocytes. Both symporters and antiporters are types of secondary active transporters that can use the favorable gradient of one solute to drive the unfavorable transport of another. Neither is restricted to prokaryotes or eukaryotes (C is wrong). Both can perform secondary active transport (D oversimplifies). Neither directly uses ATP (B is wrong); both use ion gradients established by primary active transporters.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher uses FRAP (fluorescence recovery after photobleaching) to measure the lateral diffusion rate of a fluorescently labeled lipid in different membrane preparations at 37 degrees Celsius:\n\nMembrane | Half-time of recovery (seconds)\nPure DOPC bilayer | 0.5\nDOPC + 30% cholesterol | 2.0\nRed blood cell membrane | 5.0\nMuscle cell membrane | 15.0\n\nWhat factor best explains the progressive decrease in lipid diffusion rate?",
+      "options": [
+        "Increasing membrane thickness in each preparation",
+        "Increasing protein content and cytoskeletal constraints that act as diffusion barriers (membrane skeleton fence model)",
+        "Decreasing temperature across the preparations",
+        "Increasing proportion of saturated lipids in each preparation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The progressive increase in FRAP half-time (slower diffusion) from pure lipid bilayer to biological membranes reflects increasing barriers to lateral diffusion. In a pure DOPC bilayer, lipids diffuse freely with minimal constraints. Adding cholesterol (30%) restricts diffusion by condensing the bilayer and reducing free volume. In red blood cell membranes, the spectrin-based membrane skeleton creates corrals that trap lipids and proteins in domains of ~100 nm, requiring hop diffusion between corrals (the Kusumi 'membrane skeleton fence' model). Muscle cell membranes have even more extensive cytoskeletal attachments through dystrophin-glycoprotein complexes and costameres, creating smaller corrals and slower diffusion. Temperature (C) was controlled at 37 degrees Celsius. Lipid saturation (D) is not the primary variable. Membrane thickness (A) has minor effects compared to cytoskeletal barriers. This demonstrates that biological membranes are far more organized than the original fluid mosaic model suggested.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Amphipathic molecules have both hydrophilic and hydrophobic regions. When phospholipids are placed in an aqueous environment, they spontaneously form bilayers. What thermodynamic force primarily drives this self-assembly?",
+      "options": [
+        "The hydrophobic effect \u2014 entropy increase of water molecules released from ordered shells around hydrocarbon tails",
+        "Covalent bonding between phospholipid molecules",
+        "Electrostatic attraction between phospholipid head groups",
+        "Hydrogen bonding between fatty acid tails"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bilayer self-assembly is driven primarily by the hydrophobic effect, which is fundamentally an entropic phenomenon. When hydrocarbon chains are exposed to water, surrounding water molecules form highly ordered 'clathrate' cage structures (iceberg effect), which represents an unfavorable decrease in entropy. When phospholipids aggregate into bilayers, the hydrocarbon tails are sequestered from water, releasing the ordered water molecules back to the bulk solvent. This entropy increase of the freed water molecules provides the dominant thermodynamic driving force (favorable delta G). Van der Waals interactions between tails provide additional stabilization but are secondary. Covalent bonds (A) do not form between lipid molecules. Head group electrostatics (C) can be repulsive (similarly charged heads) and do not drive bilayer formation. Hydrocarbon tails cannot form hydrogen bonds (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Selectin-mediated adhesion between leukocytes and endothelial cells during inflammation involves which type of molecular interaction?",
+      "options": [
+        "Protein-carbohydrate interactions where selectins on one cell bind specific oligosaccharide ligands (like sialyl-Lewis X) on the other cell",
+        "Integrin-fibronectin interactions with the extracellular matrix",
+        "Protein-protein interactions between cadherins",
+        "Gap junction formation between leukocytes and endothelial cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Selectins are C-type lectin adhesion molecules that mediate the initial rolling adhesion of leukocytes on inflamed endothelium. The three selectins \u2014 P-selectin (rapidly deployed from endothelial Weibel-Palade bodies), E-selectin (transcriptionally induced on endothelium by TNF-alpha and IL-1), and L-selectin (constitutively expressed on leukocytes) \u2014 bind to specific carbohydrate structures, particularly sialyl-Lewis X (sLex) tetrasaccharide on glycoprotein ligands (PSGL-1 on leukocytes for P/E-selectin). These interactions are characterized by rapid on-off kinetics under shear flow, enabling the characteristic rolling behavior. Firmer adhesion subsequently requires integrin activation (not selectins). Cadherins (A) mediate homophilic cell-cell adhesion in solid tissues. Integrin-fibronectin (C) is cell-ECM adhesion. Gap junctions (D) do not form between leukocytes and endothelial cells during extravasation.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To study the ion selectivity of a newly discovered channel protein, a researcher purifies the channel and reconstitutes it into planar lipid bilayers. Which combination of measurements would best characterize its selectivity?",
+      "options": [
+        "Measure the channel's molecular weight and predict selectivity from its amino acid sequence alone",
+        "Record current-voltage (I-V) relationships with different ionic solutions on each side of the bilayer, determine reversal potentials, and calculate permeability ratios using the Goldman equation",
+        "Use X-ray crystallography to solve the structure and visually identify the pore",
+        "Measure the total conductance of the bilayer without the channel as a control"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The most rigorous approach to characterizing ion channel selectivity involves electrophysiological measurements in defined ionic conditions. By bathing each side of the bilayer with solutions of known ionic composition (e.g., 150 mM KCl on one side, 150 mM NaCl on the other) and recording current-voltage relationships, the researcher can determine the reversal potential (voltage at which current = 0). This reversal potential reflects the relative permeability of the channel to the ions present, and the Goldman-Hodgkin-Katz equation can be used to calculate permeability ratios (P_K/P_Na, P_K/P_Cl, etc.). Multiple ionic conditions systematically reveal selectivity for monovalent vs. divalent cations, anion vs. cation selectivity, and specific ion preferences. Sequence analysis (A) can suggest but not definitively determine selectivity. Crystal structure (C) provides structural insight but not functional measurements. A bilayer-only control (D) is a necessary but insufficient component.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The potassium channel selectivity filter contains the signature sequence TVGYG. How does this channel achieve selectivity for K+ over the smaller Na+ ion?",
+      "options": [
+        "The selectivity filter precisely mimics the hydration shell of K+, providing carbonyl oxygen ligands at the exact distances to compensate for K+ dehydration energy, but not for the smaller Na+",
+        "K+ channels have a net negative charge that repels Na+ but not K+",
+        "Na+ is actively pumped out of the channel by a built-in ATPase",
+        "The pore is simply too narrow for Na+ to pass through"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The KcsA potassium channel selectivity filter (solved by MacKinnon, Nobel Prize 2003) achieves remarkable selectivity (~10,000:1 for K+ over Na+) through an elegant structural mechanism. The TVGYG signature sequence lines the selectivity filter with backbone carbonyl oxygen atoms arranged to precisely coordinate dehydrated K+ ions at distances mimicking the hydration shell of K+ in water (2.8 Angstroms). When K+ enters the filter, the energy cost of stripping its water hydration shell is exactly compensated by favorable interactions with the carbonyl oxygens. For Na+ (radius 0.95 Angstrom vs. K+ 1.33 Angstrom), the filter is too wide to provide energetically favorable coordination, so the energy cost of dehydrating Na+ is not compensated, making Na+ passage thermodynamically unfavorable. This 'snug fit' mechanism means the channel selects for the LARGER ion, a counterintuitive result. The pore is not too narrow for Na+ (A is wrong; Na+ is actually smaller). There is no ATPase (B). Charge alone (D) cannot distinguish K+ from Na+ since both are monovalent cations.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following membrane proteins would be classified as a multipass (polytopic) transmembrane protein?",
+      "options": [
+        "Spectrin, which associates with the cytoplasmic face of the membrane through protein-protein interactions",
+        "Glycophorin A, which has a single transmembrane alpha-helix",
+        "A GPI-anchored protein attached to the outer leaflet",
+        "A G-protein coupled receptor (GPCR) with seven transmembrane alpha-helices"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A multipass (polytopic) transmembrane protein crosses the lipid bilayer multiple times. GPCRs are the classic example with their seven transmembrane alpha-helices (7TM receptors), creating three extracellular loops, three intracellular loops, an extracellular N-terminus, and an intracellular C-terminus. Other multipass proteins include ion channels (voltage-gated K+ channels have 6 TM helices per subunit), transporters (GLUT1 has 12 TM helices), and rhodopsin. Glycophorin A (A) is a single-pass (bitopic) protein with one TM helix. GPI-anchored proteins (B) are anchored to the outer leaflet by a lipid anchor and do not have transmembrane domains. Spectrin (D) is a peripheral membrane protein associated with the cytoplasmic face through interactions with ankyrin and band 4.1, never crossing the bilayer.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "During exocytosis of neurotransmitter-containing synaptic vesicles, the SNARE complex (synaptobrevin, syntaxin, SNAP-25) drives membrane fusion. Which calcium sensor triggers this rapid fusion event?",
+      "options": [
+        "Calmodulin",
+        "Synaptotagmin",
+        "Protein kinase C",
+        "Troponin C"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Synaptotagmin is the calcium sensor for fast synaptic vesicle exocytosis. It is an integral membrane protein of synaptic vesicles with two C2 domains (C2A and C2B) that bind Ca2+ ions. When an action potential arrives at the presynaptic terminal and Ca2+ enters through voltage-gated Ca2+ channels, Ca2+ binds to synaptotagmin's C2 domains, triggering rapid conformational changes. Ca2+-bound synaptotagmin interacts with both the SNARE complex and the plasma membrane (inserting into the bilayer via Ca2+-dependent phospholipid binding), accelerating membrane fusion from a time scale of minutes (spontaneous SNARE-mediated fusion) to sub-milliseconds. This speed is essential for synchronous neurotransmitter release. Calmodulin (A) mediates many Ca2+ responses but not fast exocytosis. Troponin C (C) is the Ca2+ sensor for muscle contraction. PKC (D) modulates synaptic transmission through phosphorylation but is not the fast Ca2+ sensor.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about endocytosis:\nS1: Clathrin-mediated endocytosis requires adaptor proteins (like AP-2) to link cargo receptors to the clathrin lattice\nS2: Macropinocytosis is a non-specific form of endocytosis that internalizes large volumes of extracellular fluid along with dissolved solutes\nS3: Caveolae-mediated endocytosis requires clathrin for membrane invagination\nS4: Dynamin is required for vesicle scission in clathrin-mediated endocytosis",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TFFT",
+        "TFTF"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: In clathrin-mediated endocytosis, adaptor protein complex AP-2 is essential. AP-2 binds to specific sorting motifs on the cytoplasmic tails of transmembrane cargo receptors (like YXXF motifs for transferrin receptor, or dileucine motifs) and simultaneously binds clathrin heavy chain triskelions, linking cargo selection to coat assembly. Other adaptors include epsins, Dab2, and ARH for specific cargo. S2 is TRUE: Macropinocytosis involves actin-driven membrane ruffling that collapses back onto the cell surface, trapping large volumes (0.2-5 micrometers vesicles) of extracellular fluid in macropinosomes. This non-selective process is important for immune cell antigen sampling and is exploited by some pathogens for cell entry. S3 is FALSE: Caveolae are flask-shaped invaginations formed by caveolin proteins (caveolin-1, -2, -3) and cavins, NOT clathrin. They represent a clathrin-independent endocytic pathway. S4 is TRUE: Dynamin forms a helical collar at the neck of budding clathrin-coated pits; GTP hydrolysis drives membrane fission to release the coated vesicle.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Osmotic pressure is a colligative property that depends on solute concentration. A 1M solution of NaCl generates greater osmotic pressure than a 1M solution of glucose because:",
+      "options": [
+        "NaCl lowers the freezing point more than glucose, which increases osmotic pressure",
+        "NaCl dissociates into two ions (Na+ and Cl-), effectively doubling the number of solute particles compared to the non-dissociating glucose",
+        "Glucose is membrane-permeable while NaCl is not",
+        "NaCl molecules are larger than glucose molecules"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Osmotic pressure is a colligative property, meaning it depends on the NUMBER of dissolved particles, not their chemical identity. When NaCl dissolves, each formula unit dissociates into two ions: Na+ and Cl-. Therefore, 1M NaCl produces approximately 2 osmol/L of solute particles (the van't Hoff factor i is approximately 1.86 due to incomplete dissociation and ion pairing at high concentrations). In contrast, glucose is a non-electrolyte that does not dissociate, so 1M glucose produces 1 osmol/L. The osmotic pressure formula is Pi = iMRT, where i is the van't Hoff factor. NaCl is not larger than glucose (A is wrong and irrelevant). Both NaCl ions and glucose have limited membrane permeability (C oversimplifies). While NaCl does lower the freezing point more (D), this is also a colligative property effect, not the cause of increased osmotic pressure \u2014 both are consequences of more solute particles.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "In polarized epithelial cells, the apical and basolateral membrane domains have different protein compositions. Which structure prevents lateral diffusion of membrane proteins between these domains?",
+      "options": [
+        "Tight junctions",
+        "Gap junctions",
+        "Adherens junctions",
+        "Desmosomes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tight junctions (zonula occludens) serve as a 'fence' that prevents lateral diffusion of membrane lipids and proteins between the apical and basolateral domains. The claudin and occludin strands create a continuous seal around the cell that acts as a diffusion barrier within the plane of the outer leaflet membrane. This maintains the polarized distribution of proteins: for example, SGLT1 (Na+/glucose symporter) is confined to the apical membrane while the Na+/K+-ATPase is restricted to the basolateral membrane. Without tight junctions, these proteins would intermix, abolishing vectorial transport. Desmosomes (A) provide mechanical adhesion but do not form a continuous diffusion barrier. Gap junctions (B) allow intercellular communication. Adherens junctions (D) provide adhesion linked to actin but do not act as diffusion fences.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The proton pump (H+-ATPase) in the plasma membrane of plant root cells generates an electrochemical gradient used for nutrient uptake. This pump belongs to which family of transport ATPases?",
+      "options": [
+        "P-type ATPase",
+        "V-type ATPase",
+        "ABC transporter",
+        "F-type ATPase (ATP synthase)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The plant plasma membrane H+-ATPase is a P-type ATPase, named because it forms a phosphorylated intermediate (aspartyl-phosphate) during its catalytic cycle. Like other P-type ATPases (Na+/K+-ATPase, Ca2+-ATPase/SERCA, H+/K+-ATPase), it undergoes conformational changes between E1 and E2 states coupled to phosphorylation and dephosphorylation. The plant H+-ATPase pumps protons out of the cell, generating both a pH gradient and a membrane potential (inside negative) that together provide the proton-motive force driving secondary active transport of nutrients (sugars, amino acids, K+) through H+-coupled symporters and antiporters. F-type ATPases (A) are the mitochondrial/chloroplast ATP synthases that normally run in the ATP synthesis direction. V-type ATPases (B) acidify intracellular compartments (vacuoles, lysosomes, endosomes). ABC transporters (D) use ATP to transport diverse substrates but are not proton pumps.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers study the effect of temperature on the membrane fluidity of E. coli grown at different temperatures. They measure the proportion of unsaturated fatty acids in the membrane:\n\nGrowth temperature (C) | % Unsaturated fatty acids\n15 | 62\n25 | 45\n37 | 28\n42 | 20\n\nWhat biological phenomenon does this data illustrate?",
+      "options": [
+        "Thermal denaturation of fatty acid desaturase enzymes at high temperatures",
+        "Homeoviscous adaptation \u2014 cells increase the proportion of unsaturated fatty acids at lower temperatures to maintain optimal membrane fluidity",
+        "Random variation in fatty acid composition with no biological significance",
+        "Increased cholesterol incorporation at lower temperatures"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data demonstrate homeoviscous adaptation, a fundamental principle of membrane biology. At lower growth temperatures, membrane lipids tend to become more ordered and less fluid. To compensate, E. coli increases the proportion of unsaturated fatty acids, whose cis double bonds introduce kinks that prevent tight packing, maintaining fluidity at the lower temperature. At higher temperatures, fewer unsaturated fatty acids are needed because the membrane is inherently more fluid. This adaptation is achieved through temperature-dependent regulation of fatty acid desaturase enzymes and selective incorporation of different fatty acids. The systematic inverse relationship between temperature and unsaturation (62% at 15C down to 20% at 42C) clearly demonstrates active regulation. Thermal denaturation (A) would predict loss of desaturase at high temperatures but would not explain the precise inverse correlation. Bacteria like E. coli do not synthesize cholesterol (D). The pattern is clearly non-random (C).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A cell expresses a mutant form of clathrin that cannot trimerize into triskelions. Which process would be MOST directly impaired?",
+      "options": [
+        "Caveolae-mediated transcytosis",
+        "Phagocytosis of bacteria by macrophages",
+        "Receptor-mediated endocytosis of transferrin",
+        "Constitutive secretion of ECM proteins"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Clathrin-mediated endocytosis absolutely requires functional clathrin triskelions (trimers of clathrin heavy chains with associated light chains) to form the polyhedral lattice that drives membrane invagination at coated pits. Transferrin receptor endocytosis is one of the most clathrin-dependent processes; without clathrin coat formation, LDL and transferrin receptors cannot be internalized. Phagocytosis (A) is primarily actin-dependent and does not require clathrin (though some phagocytic pathways use clathrin for signaling). Constitutive secretion (C) uses COPII (ER-to-Golgi) and other non-clathrin mechanisms for the constitutive secretory pathway. Caveolae-mediated transcytosis (D) uses caveolin proteins, not clathrin. While clathrin is also used at the trans-Golgi network for lysosomal enzyme sorting (with AP-1), receptor-mediated endocytosis at the plasma membrane is the most directly impaired process.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The ABC transporter P-glycoprotein (MDR1/ABCB1) is frequently overexpressed in multidrug-resistant cancer cells. What is its mechanism of drug resistance?",
+      "options": [
+        "It prevents drug binding to intracellular targets by sequestering drugs in the ER",
+        "It modifies the drug targets to prevent drug binding",
+        "It actively pumps hydrophobic chemotherapy drugs out of the cell using ATP hydrolysis, reducing intracellular drug concentration below therapeutic levels",
+        "It metabolizes chemotherapy drugs into inactive forms within the cell"
+      ],
+      "correctAnswer": "C",
+      "explanation": "P-glycoprotein (Pgp/MDR1/ABCB1) is a broad-specificity efflux pump that uses ATP hydrolysis (two ATP per transport cycle) to actively export a remarkably wide range of hydrophobic and amphipathic compounds from the cell. Its substrate-binding pocket is large and flexible, accommodating structurally diverse compounds including anthracyclines (doxorubicin), vinca alkaloids (vincristine), taxanes (paclitaxel), and many other chemotherapy drugs. Overexpression of Pgp (often through gene amplification) in cancer cells dramatically reduces intracellular drug accumulation, producing multidrug resistance. Pgp is normally expressed in tissues with barrier functions (intestinal epithelium, blood-brain barrier, kidney, liver) where it serves to export toxins. It does not metabolize drugs (A \u2014 that is the function of cytochrome P450 enzymes). It does not sequester drugs in the ER (C) or modify drug targets (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine the stoichiometry of the Na+/K+-ATPase (how many Na+ and K+ ions are transported per ATP hydrolyzed). Which experimental approach would provide the most direct measurement?",
+      "options": [
+        "Measure the rate of ATP hydrolysis and assume 1:1 stoichiometry",
+        "Reconstitute purified Na+/K+-ATPase into liposomes, measure simultaneous fluxes of 22Na+ (outward) and 42K+ (inward) using radioactive tracers while monitoring ATP hydrolysis with 32P-ATP, and calculate the coupling ratio",
+        "Use X-ray crystallography to count the number of ion binding sites",
+        "Measure the membrane potential change in cells treated with ouabain"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Reconstitution of purified Na+/K+-ATPase into liposomes provides a controlled system where the only transport pathway is the pump itself. Using radioactive tracers: 22Na+ measures outward Na+ transport, 42K+ (or 86Rb+, which substitutes for K+) measures inward K+ transport, and gamma-32P-ATP measures ATP hydrolysis rates. By simultaneously measuring all three fluxes under identical conditions, the stoichiometry can be directly calculated: 22Na+ flux / ATP hydrolysis rate = 3 and 42K+ flux / ATP hydrolysis rate = 2, confirming the 3Na+:2K+:1ATP ratio. This classic experiment was performed by Post and colleagues. Simply measuring ATP hydrolysis (A) provides no information about ion fluxes. Crystal structures (C) show binding sites but not transport stoichiometry per cycle. Membrane potential changes (D) indicate electrogenicity but not precise stoichiometry.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following correctly describes the mechanism by which detergents solubilize integral membrane proteins?",
+      "options": [
+        "Detergent monomers replace the annular lipids surrounding the transmembrane domains, forming a mixed micelle that shields the hydrophobic protein regions from water",
+        "Detergents simply dissolve the lipid bilayer without interacting with proteins",
+        "Detergents denature all membrane proteins by disrupting their secondary structure",
+        "Detergents covalently modify the transmembrane domains, making them hydrophilic"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Detergents are amphipathic molecules that above their critical micelle concentration (CMC) form micelles. When added to membranes, detergent monomers insert into the lipid bilayer, and at sufficient concentration, they disrupt the bilayer and replace the annular (boundary) lipids that normally surround the transmembrane domains of integral membrane proteins. The resulting protein-detergent complex (PDC) is a mixed micelle where detergent molecules coat the hydrophobic transmembrane regions, shielding them from the aqueous environment while leaving the hydrophilic portions exposed. Non-ionic detergents like Triton X-100, DDM, and digitonin are particularly useful because they preserve native protein structure and activity. Ionic detergents like SDS denature most proteins (C is partially true only for SDS, not all detergents). Detergents do not covalently modify proteins (A). They interact extensively with both lipids AND proteins (D is incomplete).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the Na+/K+-ATPase:\nS1: The pump cycles between E1 (high Na+ affinity, facing cytoplasm) and E2 (high K+ affinity, facing extracellular) conformations\nS2: The pump is inhibited by ouabain binding to the extracellular surface\nS3: The pump consumes approximately 30% of a typical cell's ATP budget\nS4: The pump transports Na+ and K+ in the same direction across the membrane",
+      "options": [
+        "TTTT",
+        "TTTF",
+        "TFTT",
+        "FTTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: The Na+/K+-ATPase alternates between E1 conformation (cytoplasm-facing, high affinity for Na+, binds 3 Na+ ions) and E2 conformation (extracellular-facing, high affinity for K+, binds 2 K+ ions). ATP-dependent phosphorylation of Asp376 triggers the E1-to-E2 transition that releases Na+ extracellularly, while dephosphorylation triggers the E2-to-E1 transition that releases K+ intracellularly. S2 is TRUE: Ouabain (and other cardiac glycosides like digoxin) bind to specific sites on the extracellular loops of the alpha subunit, stabilizing the E2-P conformation and preventing the conformational changes needed for continued pumping. S3 is TRUE: The Na+/K+-ATPase is one of the most energy-demanding cellular processes, consuming ~25-30% of cellular ATP in most cells and up to 70% in neurons (which must constantly restore ion gradients after action potentials). S4 is FALSE: The pump is an antiporter \u2014 it transports Na+ OUT and K+ IN (opposite directions). This is fundamental to its function in establishing and maintaining the asymmetric ion distributions across the plasma membrane.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The glycocalyx is a carbohydrate-rich layer on the extracellular surface of animal cells. Which of the following is NOT a function of the glycocalyx?",
+      "options": [
+        "Direct synthesis of membrane phospholipids",
+        "Contributing to the immune system's ability to distinguish self from non-self through MHC glycosylation patterns",
+        "Protection of the cell surface from mechanical damage and chemical attack",
+        "Cell-cell recognition and adhesion through specific carbohydrate-binding interactions"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The glycocalyx does NOT synthesize phospholipids \u2014 that is a function of the smooth ER. The glycocalyx is composed of the sugar portions of glycoproteins, glycolipids, and proteoglycans on the cell surface. Its functions include: (1) Physical protection \u2014 the dense carbohydrate layer shields the plasma membrane from mechanical and chemical damage, and protects against pathogen attachment in some cases (A is correct). (2) Cell recognition and adhesion \u2014 specific oligosaccharide structures serve as ligands for lectins on other cells (e.g., selectin-mediated leukocyte rolling, ABO blood group recognition) (B is correct). (3) Immune recognition \u2014 the glycosylation patterns on cell surface proteins, including MHC molecules, serve as 'self' markers; altered glycosylation (as in cancer cells) can trigger immune responses (D is correct). Additionally, the glycocalyx creates a negatively charged surface coat (due to sialic acid residues) that repels other negatively charged cells and molecules.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cotransport of sucrose in plant phloem companion cells utilizes which type of secondary active transport?",
+      "options": [
+        "ATP-dependent sucrose pump (primary active transport)",
+        "K+/sucrose symporter driven by the K+ gradient",
+        "H+/sucrose symporter driven by the proton gradient established by the plasma membrane H+-ATPase",
+        "Na+/sucrose antiporter driven by the Na+ gradient"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In plants, the plasma membrane H+-ATPase (a P-type ATPase) pumps protons out of the cell, creating a proton-motive force (both a pH gradient and a membrane potential, inside negative). This proton gradient drives secondary active transport of sugars into the cell via H+/sucrose symporters (like SUT1/SUC2 family). In phloem loading, sucrose is actively transported from mesophyll cells into companion cells/sieve elements against its concentration gradient, coupled to the downhill movement of H+ back into the cell. Unlike animal cells that primarily use Na+ gradients for secondary active transport, plant cells use H+ gradients because they lack the Na+/K+-ATPase. This is a fundamental difference between plant and animal membrane energetics. Na+-coupled transport (A) does not occur in typical plant cells. K+-coupled sucrose transport (C) does not exist. While the H+-ATPase uses ATP, the sucrose transporter itself is secondary active (D is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the effect of various treatments on the activity of the Na+/K+-ATPase in isolated membrane vesicles:\n\nTreatment | ATPase activity (% of control)\nControl (no treatment) | 100\n1 mM ouabain | 5\nRemoval of Na+ from internal solution | 8\nRemoval of K+ from external solution | 12\nRemoval of Mg2+ | 15\n0 degrees Celsius | 3\nAddition of 1 mM vanadate | 7\n\nWhich conclusion is best supported?",
+      "options": [
+        "The pump requires only Na+ for activity",
+        "The pump requires Na+, K+, Mg2+, and physiological temperature for optimal activity, and is inhibited by ouabain and vanadate \u2014 consistent with a P-type ATPase mechanism",
+        "The pump is a passive channel that does not require ATP",
+        "Only ouabain affects the pump; other conditions are irrelevant"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data systematically demonstrate multiple requirements for Na+/K+-ATPase activity. Ouabain inhibition (5%) confirms this is the Na+/K+-ATPase. Removing internal Na+ (8%) shows Na+ is required as a transported substrate from the cytoplasmic side. Removing external K+ (12%) shows K+ is required as a substrate from the extracellular side. Mg2+ depletion (15%) demonstrates that Mg2+ is required as a cofactor (Mg-ATP is the actual substrate, and Mg2+ is needed for the phosphorylation step). Low temperature (3%) indicates the transport cycle requires conformational changes that are temperature-dependent. Vanadate inhibition (7%) is a hallmark of P-type ATPases: vanadate (VO4^3-) is a phosphate analog that binds to the phosphorylation site, trapping the enzyme in the E2 conformation. Together, these results paint a comprehensive picture of a P-type ATPase requiring both transported substrates, a cofactor, physiological temperature, and undergoing a phospho-intermediate mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following best describes the 'alternating access' model of carrier-mediated transport?",
+      "options": [
+        "Two different carrier proteins alternate in transporting solutes across the membrane",
+        "The carrier protein physically moves (flips) from one side of the membrane to the other, carrying the solute",
+        "The solute passes through a permanently open aqueous channel in the carrier protein",
+        "The carrier protein alternates between two conformations: one exposing the solute-binding site to one side of the membrane and the other exposing it to the opposite side, allowing solute translocation without the protein ever forming an open channel through the bilayer"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The alternating access model, proposed by Jardetzky in 1966 and confirmed by structural studies of numerous transporters (GLUT1, LacY, LeuT, MFS family), describes how carriers transport solutes without ever creating an open path across the membrane. The transporter alternates between two principal conformations: (1) outward-facing (substrate-binding site exposed to the extracellular side) and (2) inward-facing (binding site exposed to the cytoplasm). Substrate binding on one side triggers a conformational change that closes the initial opening and opens the opposite side, releasing the substrate. At no point are both sides open simultaneously, preventing passive leak. This distinguishes carriers from channels (D), which do form open pores. The carrier does not physically flip in the membrane (C) \u2014 only its conformation changes. The model involves one protein alternating conformations, not two proteins (B). Structural methods (X-ray, cryo-EM) have now captured multiple transporters in both conformations, validating this model.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher suspects that a new compound is a protonophore (uncoupler) that collapses pH gradients across membranes. Which experiment would most directly test this hypothesis?",
+      "options": [
+        "Measure the compound's effect on DNA synthesis rates",
+        "Add the compound to liposomes loaded with a pH-sensitive fluorescent dye (like BCECF) that have an artificially imposed pH gradient, and monitor whether the pH gradient is dissipated",
+        "Determine the compound's molecular weight using mass spectrometry",
+        "Test whether the compound inhibits protein synthesis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Testing on liposomes with an imposed pH gradient provides the most direct and controlled experiment. Liposomes (protein-free) eliminate the possibility that the compound works through any protein target. By loading liposomes with BCECF (a pH-sensitive fluorescent probe that increases fluorescence intensity with increasing pH) and establishing a pH gradient (acidic inside), the researcher can directly monitor whether the compound dissipates the gradient. If the compound is a protonophore, it will shuttle protons down the gradient (from outside to inside if the outside is more acidic, or from inside to outside if the inside is more acidic), equilibrating pH and changing BCECF fluorescence. CCCP, FCCP, and DNP are well-known protonophores that would serve as positive controls. DNA synthesis (A) and protein synthesis (D) are too indirect and could be affected by many mechanisms. Mass spectrometry (C) reveals structure but not function.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The water potential (psi) of a plant cell is described by the equation psi = psi_s + psi_p. If a plant cell has a solute potential of -0.8 MPa and a pressure potential of 0.3 MPa, what is the water potential of the cell?",
+      "options": [
+        "-0.5 MPa",
+        "0 MPa",
+        "-1.1 MPa",
+        "+0.5 MPa"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Water potential (psi) is the sum of solute potential (psi_s, also called osmotic potential) and pressure potential (psi_p, also called turgor pressure). Solute potential is always negative or zero (solutes lower water potential), while pressure potential is typically positive in turgid cells. Calculating: psi = psi_s + psi_p = (-0.8 MPa) + (0.3 MPa) = -0.5 MPa. This negative water potential means the cell would take up water from any source with a higher (less negative) water potential, such as pure water (psi = 0) or a solution with psi > -0.5 MPa. Water always moves from higher to lower water potential. At full turgor, psi_p would equal the magnitude of psi_s, giving psi = 0, and the cell would be in equilibrium with pure water. In a wilted cell, psi_p = 0 and psi = psi_s = -0.8 MPa, the most negative possible value for this cell.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nigericin is an antiporter ionophore that exchanges K+ for H+ across membranes. If nigericin is added to mitochondria that are actively respiring, what would happen?",
+      "options": [
+        "ATP synthesis would increase because more protons would be available to drive the synthase",
+        "Only the delta psi would be dissipated, with no effect on delta pH",
+        "Both the delta pH and delta psi would be dissipated, stopping ATP synthesis completely",
+        "The delta pH would be dissipated (as H+ flows back and K+ flows out) but the delta psi would increase compensatorily; ATP synthesis would continue at a reduced rate"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Nigericin catalyzes electroneutral K+/H+ exchange. In mitochondria, it allows H+ to flow back into the matrix (down the pH gradient) in exchange for K+ moving out. This specifically collapses the chemical component (delta pH) of the proton-motive force. However, because the exchange is electroneutral (one positive charge in for one positive charge out), it does not affect the electrical component (delta psi). With the delta pH dissipated, the mitochondria compensate by increasing delta psi (the ETC continues pumping protons, but now only the electrical gradient builds up). Since ATP synthase can be driven by either component of the proton-motive force (delta psi + delta pH), ATP synthesis continues but at a reduced rate because the total proton-motive force is somewhat diminished. This contrasts with valinomycin, which selectively dissipates delta psi. Using both valinomycin and nigericin together collapses both components and stops ATP synthesis completely (A would be true for both ionophores together).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the erythrocyte membrane skeleton:\nS1: The major protein of the erythrocyte membrane skeleton is spectrin, which forms a flexible meshwork on the cytoplasmic face\nS2: Ankyrin links the spectrin network to the integral membrane protein band 3 (anion exchanger AE1)\nS3: The membrane skeleton gives erythrocytes their rigid, spherical shape\nS4: Defects in spectrin or ankyrin cause hereditary spherocytosis, where erythrocytes lose their normal biconcave shape",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TFFT",
+        "TTTF"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Spectrin alpha and beta chains form antiparallel heterodimers that associate head-to-head to form tetramers, and these are cross-linked by short actin filaments, protein 4.1, and adducin to form a two-dimensional meshwork underlying the plasma membrane. S2 is TRUE: Ankyrin (also called band 2.1) is the key linker protein that binds both spectrin and the cytoplasmic domain of band 3 (the Cl-/HCO3- exchanger). This attachment anchors the spectrin meshwork to the lipid bilayer. Protein 4.1 also links spectrin to glycophorin C, providing a second attachment point. S3 is FALSE: The membrane skeleton gives erythrocytes their characteristic BICONCAVE DISC shape, not a rigid spherical shape. The spectrin meshwork is highly flexible, allowing erythrocytes to deform reversibly as they squeeze through capillaries smaller than their diameter. S4 is TRUE: Hereditary spherocytosis results from mutations in spectrin, ankyrin, band 3, or protein 4.2. Reduced attachment between the skeleton and bilayer causes progressive membrane loss through vesiculation, converting the biconcave disc into a sphere (spherocyte) with reduced surface area-to-volume ratio.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following molecules would cross a pure phospholipid bilayer MOST rapidly?",
+      "options": [
+        "Ethanol (C2H5OH, MW 46, small and partially hydrophobic)",
+        "ATP (MW 507, highly charged with 3-4 negative charges)",
+        "Potassium ion (K+, MW 39, positively charged)",
+        "Glucose (C6H12O6, MW 180, uncharged polar)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Membrane permeability is determined primarily by the molecule's partition coefficient (hydrophobicity) and secondarily by its size. Ethanol is a small molecule (MW 46) with significant hydrophobic character (ethyl group) that allows it to dissolve in and rapidly cross the hydrophobic core of the lipid bilayer. Its small hydroxyl group can also participate in hydrogen bonding, giving it some amphipathic character, but the small size and partial hydrophobicity result in very high membrane permeability. Glucose (A) is larger, more polar, and has multiple hydroxyl groups creating strong hydration shells, making it poorly membrane-permeable (cells need GLUT transporters). ATP (C) is large, highly polar, and carries 3-4 negative charges at physiological pH, making it essentially impermeable. K+ (D) is a charged ion with a strong hydration shell; the Born energy penalty for moving a charge into the low-dielectric lipid interior is enormous (~40 kcal/mol), making ions the least permeable species.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The bacteriorhodopsin of Halobacterium salinarum is a light-driven proton pump. Its structure reveals seven transmembrane alpha-helices arranged around a retinal chromophore. This protein is structurally analogous to which class of mammalian membrane proteins?",
+      "options": [
+        "ABC transporters",
+        "G-protein coupled receptors (GPCRs)",
+        "Ion channels",
+        "Aquaporins"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bacteriorhodopsin and GPCRs share a remarkably similar seven-transmembrane (7TM) helix architecture, despite having evolved independently (convergent evolution). Both have seven alpha-helices spanning the membrane, connected by alternating extracellular and intracellular loops. The visual pigment rhodopsin is particularly relevant \u2014 it is both a GPCR and contains retinal (like bacteriorhodopsin). However, bacteriorhodopsin functions as a light-activated proton pump (transporting H+ across the membrane using light energy from retinal isomerization), while mammalian GPCRs function as signal transducers (activating heterotrimeric G proteins upon ligand binding). Despite the structural similarity, they are not homologous \u2014 molecular phylogenetic analysis shows they evolved independently, representing convergent evolution toward a similar solution for embedding proteins in membranes. ABC transporters (A) have a completely different architecture. Ion channels (C) and aquaporins (D) have distinct structural folds.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine whether a specific membrane protein forms a dimer or functions as a monomer in the native membrane, a researcher should use which technique?",
+      "options": [
+        "SDS-PAGE, which preserves native protein-protein interactions",
+        "Forster resonance energy transfer (FRET) between differently fluorescent-tagged versions of the protein expressed in the same cell, combined with cross-linking and blue native PAGE",
+        "Simple immunofluorescence microscopy to observe protein localization",
+        "Sequencing the gene encoding the protein"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Determining the oligomeric state of a membrane protein in its native environment requires techniques that preserve membrane context. FRET (Forster resonance energy transfer) between two differently tagged versions (e.g., CFP and YFP) of the same protein provides direct evidence of close proximity (<10 nm) in living cells. If the protein dimerizes, FRET efficiency will be high. Cross-linking with membrane-permeable cross-linkers (like DSP or formaldehyde) can capture transient interactions, and subsequent analysis by blue native PAGE (BN-PAGE, which maintains native protein complexes) reveals the molecular weight of the intact complex, indicating monomer, dimer, or higher-order oligomer. SDS-PAGE (A) denatures proteins and disrupts all non-covalent interactions, destroying native complexes. Immunofluorescence (C) lacks the resolution to detect dimerization. Gene sequencing (D) reveals primary structure but not quaternary structure.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The SERCA (sarco/endoplasmic reticulum Ca2+-ATPase) pump in muscle cells transports Ca2+ from the cytosol into the sarcoplasmic reticulum lumen. What is the stoichiometry and direction of transport?",
+      "options": [
+        "1 Ca2+ pumped into the SR per ATP hydrolyzed",
+        "2 Ca2+ pumped into the SR per ATP hydrolyzed, with 2-3 H+ counter-transported to the cytosol",
+        "3 Ca2+ pumped out of the cell per ATP hydrolyzed",
+        "2 Ca2+ pumped out of the SR per ATP hydrolyzed"
+      ],
+      "correctAnswer": "B",
+      "explanation": "SERCA is a P-type ATPase that pumps 2 Ca2+ ions from the cytosol into the sarcoplasmic reticulum lumen per ATP hydrolyzed, reducing cytoplasmic Ca2+ from ~1 micromolar to ~100 nanomolar during muscle relaxation. To maintain electroneutrality, 2-3 H+ are counter-transported from the SR lumen to the cytosol. The pump undergoes the characteristic P-type ATPase E1/E2 conformational cycle: E1 conformation (cytoplasm-facing, high Ca2+ affinity, binds 2 Ca2+) is phosphorylated by ATP, triggering the E1P-to-E2P transition that releases Ca2+ into the SR lumen (low affinity). Dephosphorylation returns the pump to E1. SERCA is one of the best-characterized P-type ATPases, with crystal structures solved in multiple conformational states by Toyoshima and colleagues. It is the target of thapsigargin (an irreversible inhibitor from the plant Thapsia garganica). It pumps Ca2+ INTO the SR, not out (D is wrong). The stoichiometry is 2:1, not 1:1 (A) or 3:1 (C).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Flippases, floppases, and scramblases are enzymes that move phospholipids between membrane leaflets. Which correctly describes their activities and energy requirements?",
+      "options": [
+        "Floppases move lipids inward; flippases move lipids outward",
+        "Scramblases are ATP-dependent; flippases are ATP-independent",
+        "Flippases (P4-ATPases) move phospholipids inward (ATP-dependent), floppases (ABC transporters) move phospholipids outward (ATP-dependent), and scramblases bidirectionally equilibrate lipids between leaflets (ATP-independent, Ca2+-activated)",
+        "All three are ATP-dependent and move lipids in the same direction"
+      ],
+      "correctAnswer": "C",
+      "explanation": "These three classes of lipid translocases have distinct activities: (1) Flippases are P4-type ATPases that ATP-dependently transport aminophospholipids (PS and PE) from the outer to the inner (cytoplasmic) leaflet, maintaining membrane asymmetry. They are responsible for the steady-state enrichment of PS and PE in the cytoplasmic leaflet. (2) Floppases are ABC transporters (like ABCA1, ABCB1) that ATP-dependently move lipids (phospholipids, cholesterol, sphingolipids) from the inner to the outer leaflet. ABCA1 is important for HDL biogenesis. (3) Scramblases (like TMEM16F/ANO6) are calcium-activated, ATP-independent enzymes that bidirectionally randomize lipid distribution between leaflets. Scramblase activation during apoptosis exposes PS on the outer leaflet (an 'eat me' signal). During platelet activation, scramblase-mediated PS exposure provides a surface for coagulation factor assembly. Option D reverses the directions. Option C reverses the energy requirements.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the rate of Na+ transport in renal proximal tubule cells under different conditions:\n\nCondition | Na+ reabsorption (% of control)\nControl | 100\n+ Ouabain (basolateral) | 12\n+ Amiloride (apical) | 18\n+ Ouabain + Amiloride | 5\nRemoval of luminal glucose | 75\nRemoval of luminal amino acids | 80\n\nWhat model of transepithelial Na+ transport is supported by this data?",
+      "options": [
+        "Na+ crosses both membranes through passive diffusion only",
+        "Na+ enters apically through amiloride-sensitive channels and Na+-coupled symporters, and is extruded basolaterally by the ouabain-sensitive Na+/K+-ATPase",
+        "All Na+ reabsorption occurs via the paracellular route between cells",
+        "Na+ is actively transported across the apical membrane and passively diffuses across the basolateral membrane"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data reveal the two-step model of transepithelial Na+ transport. Ouabain (basolateral Na+/K+-ATPase inhibitor) reduces transport to 12%, showing that the basolateral pump is essential for creating the Na+ gradient driving apical entry. Amiloride (epithelial Na+ channel/ENaC inhibitor) applied apically reduces transport to 18%, demonstrating that apical ENaC is a major entry pathway. Combined inhibition drops to 5% (near-complete block). Removing luminal glucose (75%) and amino acids (80%) reduces transport, showing that Na+-coupled symporters (SGLT for glucose, Na+-amino acid symporters) also contribute to apical Na+ entry. The integrated model: Na+ enters across the apical membrane through: (1) ENaC channels (amiloride-sensitive), (2) Na+/glucose symporter (glucose-dependent), and (3) Na+/amino acid symporters (amino acid-dependent). Na+ is then extruded across the basolateral membrane by the Na+/K+-ATPase (ouabain-sensitive), maintaining the low intracellular Na+ that drives all apical entry pathways.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which property distinguishes carrier proteins from channel proteins in membrane transport?",
+      "options": [
+        "Carriers can only transport ions; channels transport all types of molecules",
+        "Carriers undergo conformational changes during transport and show saturation kinetics; channels form aqueous pores and transport at rates approaching diffusion limits",
+        "Carriers are found only in prokaryotes; channels are found only in eukaryotes",
+        "Channels require ATP; carriers do not"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The fundamental distinction between carriers and channels lies in their transport mechanism and kinetics. Carriers (also called transporters or permeases) bind their substrate at a specific site, undergo a conformational change to expose the binding site to the other side of the membrane (alternating access model), and release the substrate. This mechanical cycle limits transport rates to 100-10,000 molecules per second and exhibits Michaelis-Menten saturation kinetics (Vmax and Km). Channels form aqueous pores through the membrane that allow ions to flow down their electrochemical gradient at rates of 10^7-10^8 ions per second (approaching free diffusion in solution), limited mainly by dehydration/rehydration energy. Channels can also show some apparent saturation at very high concentrations but at much higher rates than carriers. Both types exist in all domains of life (D is wrong). Neither exclusively transports one molecular type (A is wrong). Channels do not require ATP (C is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether the membrane protein content of a cell increases during differentiation. Which quantitative approach would best address this question?",
+      "options": [
+        "Visual estimation of membrane staining intensity under a light microscope",
+        "Isolate membrane fractions from undifferentiated and differentiated cells using differential centrifugation, then quantify total protein content using a BCA or Bradford assay and compare protein-to-lipid ratios",
+        "Count the number of genes encoding membrane proteins in the genome",
+        "Measure the cell size before and after differentiation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Isolating membrane fractions by differential centrifugation followed by quantitative protein assays provides a direct, quantitative measurement of membrane protein content. The BCA (bicinchoninic acid) or Bradford assays accurately quantify total protein mass. Normalizing to lipid content (measured by phospholipid phosphorus assay) gives the protein-to-lipid ratio, controlling for any changes in membrane amount. Comparing this ratio between undifferentiated and differentiated cells directly answers whether membrane protein content changes during differentiation. Proteomic analysis (mass spectrometry) could additionally identify which specific proteins change. Visual estimation (A) is subjective and non-quantitative. Genome gene counting (C) reflects genetic potential, not actual expression. Cell size measurement (D) does not specifically address membrane protein content, as size increases could be due to cytoplasmic expansion rather than membrane changes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Nernst equation calculates the equilibrium potential for a single ion. For K+ with intracellular concentration of 140 mM and extracellular concentration of 4 mM at 37 degrees Celsius, the equilibrium potential (E_K) is approximately:",
+      "options": [
+        "0 mV",
+        "+60 mV",
+        "-60 mV",
+        "-95 mV"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The Nernst equation at 37 degrees Celsius for a monovalent ion is: E = (61.5 mV / z) x log10([ion]outside / [ion]inside). For K+ (z = +1): E_K = (61.5 / 1) x log10(4/140) = 61.5 x log10(0.0286) = 61.5 x (-1.544) = -95 mV. This strongly negative equilibrium potential reflects the strong outward driving force for K+ due to the 35:1 concentration ratio (inside:outside). At E_K, the chemical force driving K+ out (due to concentration gradient) is exactly balanced by the electrical force pulling K+ back in (due to the negative membrane potential). If the membrane were permeable only to K+, the membrane potential would be exactly -95 mV. +60 mV (A) is approximately E_Na. -60 mV (B) would correspond to a much smaller concentration ratio. 0 mV (D) would require equal concentrations on both sides.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Filipin is a polyene antibiotic that binds specifically to cholesterol in membranes, forming aggregates visible by electron microscopy. If filipin treatment of cells shows uniform labeling of the plasma membrane but no labeling of the ER membrane, what does this indicate?",
+      "options": [
+        "The ER membrane is composed entirely of proteins with no lipids",
+        "The plasma membrane is enriched in cholesterol relative to the ER membrane, consistent with the cholesterol gradient along the secretory pathway",
+        "Filipin cannot penetrate to intracellular membranes",
+        "The ER membrane contains more cholesterol than the plasma membrane"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Filipin binds specifically to free (unesterified) cholesterol by interacting with the 3-beta-hydroxyl group. The uniform plasma membrane labeling with absent ER labeling directly visualizes the cholesterol gradient in the secretory pathway: the plasma membrane contains ~35-40 mol% cholesterol while the ER membrane contains only ~5-6 mol% cholesterol (below filipin detection threshold). This gradient is maintained by: (1) oxysterol-binding protein (OSBP) and other lipid transfer proteins at membrane contact sites that transport cholesterol from ER to Golgi/PM; (2) vesicular trafficking that preferentially moves cholesterol-rich membranes forward; and (3) cholesterol biosynthetic enzymes in the ER that release newly synthesized cholesterol for transport. Filipin can penetrate cells when membranes are permeabilized or in freeze-fracture preparations (C is wrong). The ER clearly contains lipids (D is absurd). The gradient runs opposite to what A states.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about tonicity and osmosis:\nS1: A solution isotonic to a cell will not cause any net water movement across the membrane\nS2: Tonicity differs from osmolarity in that tonicity considers only non-penetrating solutes\nS3: Pure water has a water potential of zero and always moves from higher to lower water potential\nS4: Red blood cells placed in a 0.9% NaCl solution (normal saline) will undergo crenation due to water loss",
+      "options": [
+        "TTTT",
+        "TTTF",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: An isotonic solution has the same effective osmolarity as the cell cytoplasm (considering only non-penetrating solutes), resulting in no net water movement and no change in cell volume. S2 is TRUE: Osmolarity measures total solute concentration regardless of membrane permeability, while tonicity (effective osmolarity) considers only solutes that cannot freely cross the membrane. A solution can be isosmolar but hypotonic if it contains penetrating solutes (like urea) that equilibrate across the membrane, leaving the cell in a effectively hypotonic environment. S3 is TRUE: Pure water has the maximum water potential (zero, by convention), and water always moves from regions of higher water potential to lower water potential (more negative). Solutes lower water potential; pressure raises it. S4 is FALSE: 0.9% NaCl (normal saline) is isotonic to human red blood cells, so cells maintain their normal biconcave shape. Crenation (shrinkage with spiky projections) occurs in HYPERtonic solutions. In HYPOtonic solutions, RBCs swell and may lyse (hemolysis).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following is true about the distribution of phospholipids in the red blood cell plasma membrane?",
+      "options": [
+        "All phospholipids are evenly distributed between leaflets",
+        "Phosphatidylserine is enriched in the outer leaflet, where it promotes blood clotting",
+        "Sphingomyelin is found exclusively in the inner leaflet",
+        "Phosphatidylcholine and sphingomyelin are enriched in the outer leaflet, while phosphatidylserine and phosphatidylethanolamine are enriched in the inner leaflet"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The red blood cell membrane exhibits well-characterized phospholipid asymmetry maintained by flippases: phosphatidylcholine (PC) and sphingomyelin (SM) predominate in the outer (extracellular) leaflet, while phosphatidylserine (PS) and phosphatidylethanolamine (PE) are concentrated in the inner (cytoplasmic) leaflet. This asymmetry is maintained by ATP-dependent aminophospholipid translocases (flippases) that actively transport PS and PE to the inner leaflet. The distribution is NOT even (B is wrong). PS is normally sequestered in the inner leaflet (C is wrong); its appearance on the outer leaflet is a signal for phagocytic clearance of apoptotic cells and provides a surface for coagulation factor assembly on activated platelets. Sphingomyelin is in the outer leaflet, not inner (D is wrong). This asymmetry was first demonstrated by Bretscher in 1972 using chemical labeling reagents that could not cross the bilayer.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cotranslational insertion of a Type I single-pass transmembrane protein into the ER membrane results in a specific topology. For a Type I protein, which orientation is correct?",
+      "options": [
+        "Both N- and C-termini face the cytosol",
+        "N-terminus faces the ER lumen (extracellular after transport), C-terminus faces the cytosol",
+        "N-terminus faces the cytosol, C-terminus faces the ER lumen",
+        "Both N- and C-termini face the ER lumen"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Type I transmembrane proteins have their N-terminus in the ER lumen (which becomes the extracellular space after vesicular transport to the plasma membrane) and their C-terminus in the cytosol. During cotranslational insertion, the N-terminal signal sequence directs the ribosome to the ER, and the nascent chain is threaded through the translocon into the ER lumen. A downstream stop-transfer anchor sequence (hydrophobic transmembrane domain) halts translocation and laterally exits the translocon into the lipid bilayer, leaving the C-terminal portion in the cytosol. This topology is maintained through the secretory pathway: luminal domains remain luminal (becoming extracellular), and cytoplasmic domains remain cytoplasmic. Type II proteins have the opposite orientation (N-cytosol, C-lumen). Type III are like Type I but use an internal signal-anchor instead of a cleavable signal sequence. Examples of Type I proteins include LDL receptor, transferrin receptor, and most growth factor receptors.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Membrane contact sites (MCSs) are regions where two organelle membranes come into close apposition (10-30 nm apart) without fusing. Which process occurs at ER-mitochondria contact sites (MAMs)?",
+      "options": [
+        "DNA replication of the mitochondrial genome",
+        "Translation of nuclear-encoded mRNAs",
+        "Direct transfer of phospholipids (especially PS and PE) and calcium signaling between the ER and mitochondria",
+        "Protein degradation by the proteasome"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Mitochondria-associated ER membranes (MAMs) are specialized membrane contact sites where the ER and outer mitochondrial membrane are tethered in close proximity by protein bridges (MFN2, VDAC1-GRP75-IP3R complex, PTPIP51-VAPB). Two critical processes occur at MAMs: (1) Lipid transfer: PS synthesized in the ER is transferred to mitochondria at MAMs via lipid transfer proteins (PTPIP51, ORP5/8), where it is converted to PE by phosphatidylserine decarboxylase (PSD) in the inner mitochondrial membrane. PE can then be transferred back to the ER. This non-vesicular lipid exchange is essential for mitochondrial membrane biogenesis. (2) Calcium signaling: IP3 receptors on the ER release Ca2+ that is taken up by mitochondria through VDAC (outer membrane) and MCU (inner membrane), regulating mitochondrial metabolism and potentially triggering apoptosis. Proteasomal degradation (A), mtDNA replication (B), and cytoplasmic translation (D) do not specifically occur at MAMs.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "When erythrocytes are placed in a series of NaCl solutions of decreasing concentration, hemolysis begins at approximately 0.45% NaCl and is complete at 0.30% NaCl. This observation demonstrates:",
+      "options": [
+        "That hemolysis is caused by active transport failure, not osmotic stress",
+        "That NaCl concentration has no effect on erythrocyte integrity",
+        "That erythrocytes have a range of osmotic fragilities, with some cells lysing at mild hypotonicity and others requiring greater hypotonicity",
+        "That all erythrocytes are identical in size and osmotic fragility"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The observation that hemolysis occurs over a range of NaCl concentrations (0.45% to 0.30%) rather than at a single sharp threshold demonstrates that erythrocyte populations are heterogeneous in their osmotic fragility. Younger erythrocytes (reticulocytes and newly released RBCs) have a higher surface area-to-volume ratio (more membrane relative to contents), giving them more capacity to swell before reaching their critical hemolytic volume, making them more resistant. Older erythrocytes have progressively lost membrane through vesiculation, reducing their surface area-to-volume ratio and making them more osmotically fragile. This forms the basis of the osmotic fragility test used clinically: hereditary spherocytosis shows increased fragility (hemolysis begins at higher NaCl concentrations) because spherocytes already have a reduced surface area-to-volume ratio. Iron deficiency anemia shows decreased fragility because microcytic cells have relatively more membrane. Option A ignores the heterogeneity demonstrated by the data.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "In voltage-gated sodium channels, rapid inactivation after channel opening is mediated by the 'ball-and-chain' mechanism. Which structural element acts as the inactivation gate?",
+      "options": [
+        "External pore-blocking toxins like tetrodotoxin",
+        "The cytoplasmic loop between domains III and IV, which swings into and plugs the open channel pore",
+        "The S4 voltage sensor helices returning to their resting position",
+        "The selectivity filter formed by the P-loops"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Rapid (fast) inactivation of voltage-gated Na+ channels is mediated by the intracellular loop connecting domains III and IV (the IFM motif \u2014 isoleucine-phenylalanine-methionine). Within milliseconds of channel opening, this cytoplasmic loop swings into the inner mouth of the open pore like a hinged lid (the 'ball-and-chain' or 'hinged-lid' model), physically blocking ion flow. This was demonstrated by Armstrong and Bezanilla, and later confirmed by mutagenesis studies showing that mutations in the IFM motif (particularly the phenylalanine) abolish fast inactivation. Proteolytic cleavage of the III-IV linker from the cytoplasmic side also eliminates fast inactivation. The selectivity filter (A) determines ion selectivity, not inactivation gating. S4 voltage sensors (C) mediate activation, not inactivation. Tetrodotoxin (D) is an external toxin, not an intrinsic inactivation mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher observes that a specific lipid probe preferentially labels one half of the erythrocyte membrane after freeze-fracture. The fracture face showing intramembranous particles (IMPs) is called the P-face (protoplasmic). What does the abundance of IMPs on the P-face indicate?",
+      "options": [
+        "That peripheral membrane proteins are embedded in the lipid bilayer",
+        "That the outer leaflet contains more proteins than the inner leaflet",
+        "That integral membrane proteins preferentially associate with the inner (cytoplasmic) leaflet after fracture",
+        "That cholesterol molecules are visible as particles on the fracture face"
+      ],
+      "correctAnswer": "C",
+      "explanation": "During freeze-fracture, the membrane splits along the hydrophobic interior of the lipid bilayer, creating two complementary faces: the P-face (protoplasmic face, the inner leaflet viewed from within) and the E-face (exoplasmic face, the outer leaflet viewed from within). Intramembranous particles (IMPs) visible on fracture faces represent integral membrane proteins. Most IMPs associate with the P-face rather than the E-face, indicating that the transmembrane portions of integral proteins preferentially remain associated with the inner leaflet during fracture. This is because many integral proteins have larger cytoplasmic domains or are anchored to cytoskeletal elements (like the spectrin network in erythrocytes). The E-face shows fewer IMPs but corresponding pits where proteins were pulled away. Peripheral proteins (C) are stripped during fracture preparation and are not visible as IMPs. Cholesterol (D) is too small to form visible particles.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The proton-motive force across the inner mitochondrial membrane has two components. Which equation correctly describes their relationship?",
+      "options": [
+        "Proton-motive force = delta psi only",
+        "Proton-motive force = delta psi + (2.3RT/F) x delta pH",
+        "Proton-motive force = delta pH only",
+        "Proton-motive force = delta psi - (2.3RT/F) x delta pH"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The proton-motive force (pmf or delta p) across the inner mitochondrial membrane consists of two components: the membrane potential (delta psi, voltage difference, approximately 150-180 mV, positive outside) and the pH gradient (delta pH, approximately 0.5-1.0 unit, acidic outside). The full equation is: delta p = delta psi - (2.3RT/F) x delta pH. The negative sign arises because the pH gradient and electrical gradient are defined with opposite conventions: a lower pH outside (positive delta pH when pH_in > pH_out) means more protons outside, which adds to the driving force for proton return. At 37 degrees Celsius, 2.3RT/F = 61.5 mV, so delta pH of 0.75 contributes about 46 mV. In mitochondria, delta psi (~150-180 mV) contributes about 75-80% of the total pmf (~200-220 mV), while delta pH contributes ~20-25%. In chloroplasts, the opposite is true: delta pH dominates. Neither component alone (C or D) describes the complete pmf.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following is an example of transcytosis?",
+      "options": [
+        "Pinocytosis of fluid by endothelial cells",
+        "Exocytosis of neurotransmitters at a synapse",
+        "Transport of maternal IgG antibodies across placental epithelium from mother to fetus via receptor-mediated endocytosis on one side and exocytosis on the other",
+        "Phagocytosis of bacteria by neutrophils"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Transcytosis is the process by which macromolecules are transported across the interior of a cell, involving endocytosis on one surface and exocytosis on the opposite surface. The classic example is transport of maternal IgG antibodies across the placental syncytiotrophoblast: IgG binds to the neonatal Fc receptor (FcRn) on the maternal-facing apical membrane, is internalized by receptor-mediated endocytosis, transported in vesicles across the cell, and released by exocytosis on the fetal-facing basolateral surface. FcRn binds IgG at acidic pH (in endosomes) and releases it at neutral pH (extracellular). Other examples include transcytosis of IgA across intestinal epithelium (via the polymeric immunoglobulin receptor) and transport of insulin across brain endothelial cells. Phagocytosis (A) is degradative, not transcytotic. Neurotransmitter exocytosis (C) is unidirectional secretion. Pinocytosis (D) is non-specific fluid uptake without directional transport.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about voltage-gated ion channels:\nS1: The S4 segment of each domain contains positively charged amino acids (arginine/lysine) that serve as the voltage sensor\nS2: Voltage-gated Na+ channels have four homologous domains (I-IV) encoded by a single gene, while voltage-gated K+ channels are tetramers of separate subunits\nS3: Voltage-gated channels are always open at the resting membrane potential\nS4: The selectivity filter of K+ channels is formed by the P-loop (pore loop) between S5 and S6 transmembrane segments",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TTTF",
+        "TFFT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: The S4 transmembrane segment in each voltage-gated ion channel domain contains 4-7 positively charged residues (typically arginine) at every third position. These charged residues sense changes in the electric field across the membrane. When the membrane depolarizes, the S4 segments undergo outward/rotational movement, conformationally opening the activation gate. This was confirmed by gating current measurements and fluorescence studies. S2 is TRUE: Voltage-gated Na+ (Nav) and Ca2+ (Cav) channels are encoded by single genes producing a large protein with four homologous domains (I-IV), each containing six transmembrane segments (S1-S6). Voltage-gated K+ (Kv) channels are tetramers of four separate subunits, each equivalent to one domain. S3 is FALSE: Most voltage-gated channels are CLOSED at the resting potential (-70 mV) and open only upon depolarization past threshold (approximately -55 to -40 mV for Nav channels). S4 is TRUE: The P-loop (between S5 and S6) from each of the four domains/subunits dips into the membrane to form the selectivity filter at the narrowest point of the pore.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the osmolarity of various body fluids:\n\nFluid | Osmolarity (mOsm/L)\nBlood plasma | 290\nIntracellular fluid | 290\nSweat | 80\nGastric juice | 300\nUrine (concentrated) | 1200\nUrine (dilute) | 50\nTears | 310\n\nWhich conclusion about kidney function is best supported?",
+      "options": [
+        "The kidney can only produce urine isotonic to plasma",
+        "The kidney can produce urine ranging from very dilute (50 mOsm/L) to highly concentrated (1200 mOsm/L), demonstrating its ability to regulate water balance across a wide range",
+        "All body fluids are isotonic to blood plasma",
+        "Concentrated urine indicates kidney failure"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data show that urine osmolarity can range from 50 mOsm/L (dilute, when water intake is high) to 1200 mOsm/L (concentrated, when water is scarce), a 24-fold range. This remarkable concentrating ability is achieved through the countercurrent multiplication system in the loop of Henle, which creates a medullary osmolarity gradient reaching 1200 mOsm/L at the papilla. ADH (vasopressin) regulates AQP2 insertion in the collecting duct: with high ADH, water is reabsorbed and urine is concentrated; with low ADH, water is excreted and urine is dilute. This range is essential for maintaining plasma osmolarity at approximately 290 mOsm/L regardless of water intake. Not all fluids are isotonic (C is wrong \u2014 sweat at 80 is hypotonic). Concentrated urine is normal during dehydration, not kidney failure (D is wrong). The kidney clearly produces urine across a range, not just isotonic (A is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A mutation in the gene encoding the V-type H+-ATPase in osteoclasts would most likely result in which clinical condition?",
+      "options": [
+        "Anemia due to defective erythrocyte production",
+        "Diabetes mellitus due to impaired insulin secretion",
+        "Osteoporosis due to excessive bone resorption",
+        "Osteopetrosis (abnormally dense bones) due to inability of osteoclasts to acidify the resorption lacuna"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Osteoclasts resorb bone by creating an acidic compartment (the resorption lacuna) between their ruffled border membrane and the bone surface. V-type H+-ATPases in the ruffled border pump protons into this space, achieving a pH of approximately 4.5 that dissolves the hydroxyapatite mineral component of bone. Acid-activated cathepsin K then degrades the collagen matrix. If V-type H+-ATPase function is lost, osteoclasts cannot acidify the resorption lacuna and therefore cannot resorb bone, leading to osteopetrosis (marble bone disease) \u2014 a condition where bone density progressively increases because bone formation continues but resorption is impaired. This is the opposite of osteoporosis (A), where excessive resorption reduces bone density. Autosomal recessive osteopetrosis caused by mutations in TCIRG1 (encoding the a3 subunit of the osteoclast V-ATPase) is the most common genetic form. Diabetes (C) and anemia (D) are unrelated to osteoclast V-ATPase function.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Mechanosensitive ion channels (like Piezo1 and Piezo2) open in response to membrane stretch. In which physiological process does Piezo1 play a critical role?",
+      "options": [
+        "Mediating insulin receptor signaling in adipocytes",
+        "Visual transduction in rod photoreceptors",
+        "Detecting odorant molecules in olfactory neurons",
+        "Sensing blood flow shear stress in endothelial cells and regulating red blood cell volume"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Piezo1 is a large mechanosensitive cation channel (each subunit has 38 transmembrane segments, forming a trimeric propeller-shaped complex) that converts mechanical forces into electrical signals. In endothelial cells, Piezo1 senses shear stress from blood flow, triggering Ca2+ influx that activates eNOS (endothelial nitric oxide synthase) and promotes vasodilation. In erythrocytes, Piezo1 activation by mechanical stress triggers Ca2+ entry that activates the Gardos channel (KCa3.1), leading to K+ and water efflux and cell volume reduction \u2014 important for RBCs navigating narrow capillaries. Gain-of-function mutations in Piezo1 cause hereditary xerocytosis (dehydrated red blood cells). Piezo2, its paralog, mediates light touch sensation in Merkel cells and proprioception. Visual transduction (A) uses rhodopsin and CNG channels. Olfaction (C) uses Golf-coupled receptors and CNG channels. Insulin signaling (D) uses receptor tyrosine kinase, not mechanosensitive channels.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a newly discovered channel is gated by voltage, ligand binding, or mechanical force. Which set of experiments would most systematically distinguish among these gating mechanisms?",
+      "options": [
+        "Only measure channel activity at different temperatures",
+        "Express the channel in cells, then: (1) apply voltage steps while recording current (patch clamp) to test voltage gating; (2) apply candidate ligands to the bath while recording to test ligand gating; (3) apply membrane stretch or osmotic pressure while recording to test mechanosensitivity",
+        "Sequence the channel gene and predict gating from sequence homology alone",
+        "Measure the channel's expression level by Western blot"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Systematic determination of gating mechanism requires functional electrophysiological testing under controlled conditions. (1) Voltage-clamp experiments: stepping the membrane potential through a range of voltages while recording channel currents reveals whether the channel opens in a voltage-dependent manner (characteristic of voltage-gated channels that show activation at specific threshold potentials and voltage-dependent activation kinetics). (2) Ligand application: perfusing various candidate ligands (neurotransmitters, ions, metabolites, signaling molecules) while recording channel activity at constant voltage tests for ligand gating. (3) Mechanical stimulation: applying suction through the patch pipette (stretch), osmotic shock, or using a piezoelectric probe to deform the membrane tests mechanosensitivity. Temperature alone (A) cannot distinguish gating types. Sequence homology (C) can suggest but not prove gating mechanism (some channels defy sequence-based predictions). Western blot (D) measures expression, not function.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which transport protein in the kidney proximal tubule is primarily responsible for reabsorbing filtered glucose from the tubular fluid?",
+      "options": [
+        "GLUT2 on the basolateral membrane",
+        "SGLT2 (Na+/glucose symporter) on the apical (luminal) membrane",
+        "Aquaporin-1 on both membranes",
+        "Na+/K+-ATPase on the apical membrane"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In the kidney proximal tubule, glucose reabsorption involves two steps with different transporters on opposite membrane domains. On the apical (luminal) membrane, SGLT2 (sodium-glucose co-transporter 2) in the early proximal tubule (S1/S2 segments) reabsorbs approximately 90% of filtered glucose via Na+-coupled secondary active transport. SGLT1 in the late proximal tubule (S3 segment) handles the remaining 10%. The Na+ gradient driving these symporters is maintained by the basolateral Na+/K+-ATPase. Glucose accumulated inside the cell then exits across the basolateral membrane via GLUT2 (facilitating diffusion down the glucose gradient into peritubular capillaries). GLUT2 (A) is on the basolateral side, not the apical reabsorptive surface. Aquaporin-1 (B) transports water, not glucose. The Na+/K+-ATPase (D) is on the basolateral membrane, not apical. SGLT2 inhibitors (like dapagliflozin, empagliflozin) are now widely used diabetes medications that promote glucosuria.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Gramicidin A is a linear peptide antibiotic that forms dimeric channels in membranes, allowing monovalent cations to pass through. Its channel is only 4 Angstroms in diameter. Why does it allow Na+ (ionic radius 0.95 Angstrom) but not Ca2+ (ionic radius 0.99 Angstrom) to pass, despite their similar sizes?",
+      "options": [
+        "The divalent charge of Ca2+ creates a stronger electrostatic interaction with the channel lining that prevents rapid transit, and the higher dehydration energy of Ca2+ cannot be adequately compensated by the narrow pore",
+        "The channel specifically binds and blocks Ca2+ ions",
+        "Ca2+ is physically too large to fit through the pore",
+        "Gramicidin channels are only present in membranes lacking Ca2+"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Despite having a similar ionic radius to Na+, Ca2+ is excluded from gramicidin channels primarily for energetic reasons. Ca2+ has a divalent charge (+2), giving it: (1) a much higher charge density, leading to a stronger and more tightly held hydration shell with a much higher dehydration energy (~380 kcal/mol for Ca2+ vs ~100 kcal/mol for Na+); (2) stronger electrostatic interactions with the carbonyl oxygens lining the gramicidin channel, which create energy wells that trap Ca2+ rather than allowing rapid transit. The narrow pore cannot provide sufficient coordination sites to compensate for the very high Ca2+ dehydration energy, so entry is thermodynamically unfavorable. For Na+, the channel carbonyls can adequately replace the hydration shell. This demonstrates that ion selectivity in narrow channels depends on the balance between dehydration energy costs and ion-channel interaction energies, not simply size. Ca2+ is not physically too large (A). The channel does not specifically bind Ca2+ (B). Gramicidin works in membranes with Ca2+ present (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The blood-brain barrier (BBB) is formed by brain capillary endothelial cells connected by tight junctions. How do essential nutrients like glucose cross the BBB?",
+      "options": [
+        "Via GLUT1 facilitated diffusion transporters expressed on both the luminal and abluminal membranes of brain endothelial cells",
+        "By receptor-mediated transcytosis using insulin receptors only",
+        "Through paracellular gaps between endothelial cells",
+        "Through fenestrations (pores) in the endothelial cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The BBB presents a formidable barrier to most blood-borne molecules due to continuous tight junctions (claudin-5, occludin) that eliminate paracellular transport. Brain endothelial cells lack the fenestrations found in many other capillary beds. To supply the brain's enormous glucose requirement (the brain consumes ~25% of total glucose despite being ~2% of body weight), GLUT1 (SLC2A1) is highly expressed on both the luminal (blood-facing) and abluminal (brain-facing) membranes of brain endothelial cells. Glucose crosses by facilitated diffusion: it enters from blood via luminal GLUT1, crosses the cytoplasm, and exits to the brain interstitium via abluminal GLUT1. GLUT1 deficiency syndrome (caused by SLC2A1 mutations) results in seizures, developmental delay, and microcephaly due to impaired brain glucose supply. Paracellular gaps (A) are sealed by tight junctions. Fenestrations (B) are absent. Transcytosis (D) is used for some large molecules like transferrin and insulin but is not the primary glucose transport mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the Na+/Ca2+ exchanger (NCX):\nS1: NCX is a secondary active transporter that uses the Na+ gradient to extrude Ca2+ from the cell\nS2: NCX exchanges 3 Na+ for 1 Ca2+, making it electrogenic\nS3: NCX can operate in reverse mode (Ca2+ influx) when intracellular Na+ concentration is abnormally high\nS4: NCX is the only mechanism for Ca2+ removal from cardiac myocytes",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: NCX is a secondary active transporter (antiporter) that uses the electrochemical gradient for Na+ (high outside, low inside) to drive Ca2+ extrusion from the cell. Three Na+ ions flow inward down their gradient while one Ca2+ ion is transported outward against its gradient. S2 is TRUE: The 3:1 stoichiometry (3 Na+ in for 1 Ca2+ out) means there is a net inward movement of one positive charge per cycle, making the exchanger electrogenic. This electrogenicity is important because it makes the exchange rate sensitive to membrane potential. S3 is TRUE: Under conditions of elevated intracellular Na+ (as occurs during ischemia or in the presence of cardiac glycosides that inhibit the Na+/K+-ATPase), the driving force can reverse, causing NCX to operate in reverse mode (Na+ out, Ca2+ in). This contributes to Ca2+ overload and is relevant to the mechanism of cardiac glycoside toxicity. S4 is FALSE: SERCA (SR Ca2+-ATPase) is actually the primary mechanism for Ca2+ removal from the cytoplasm in cardiac myocytes (~70% in humans), pumping Ca2+ back into the sarcoplasmic reticulum. NCX handles ~28%, and the plasma membrane Ca2+-ATPase (PMCA) handles ~2%.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Teichoic acids are components of which cell surface structure?",
+      "options": [
+        "The cell wall of gram-positive bacteria",
+        "The plasma membrane of eukaryotic cells",
+        "The outer membrane of gram-negative bacteria",
+        "The capsule of all bacteria"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Teichoic acids are anionic polymers of glycerol phosphate or ribitol phosphate that are unique to gram-positive bacterial cell walls. They are either wall teichoic acids (WTAs, covalently linked to peptidoglycan) or lipoteichoic acids (LTAs, anchored to the plasma membrane via a glycolipid moiety). Teichoic acids constitute up to 60% of the cell wall dry weight in some gram-positive species and serve multiple functions: they regulate cell wall integrity and division, create a negative surface charge that helps capture divalent cations (Mg2+, Ca2+) needed for enzyme function, serve as phage receptors, and act as pathogen-associated molecular patterns (PAMPs) recognized by TLR2 of the innate immune system. Gram-negative bacteria (A) have an outer membrane with lipopolysaccharide (LPS) instead of teichoic acids. Teichoic acids are not capsular components (C) or eukaryotic membrane components (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Annexin V is a protein that binds phosphatidylserine (PS) in a calcium-dependent manner. It is commonly used in flow cytometry to detect:",
+      "options": [
+        "Cells with increased membrane cholesterol content",
+        "Cells undergoing DNA replication",
+        "Cells expressing high levels of surface glycoproteins",
+        "Cells in early apoptosis, where PS is exposed on the outer leaflet of the plasma membrane"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In healthy cells, phosphatidylserine (PS) is maintained in the inner (cytoplasmic) leaflet by ATP-dependent flippases. During early apoptosis, caspase-3 cleaves and inactivates flippases while simultaneously activating Xkr8 scramblase, which randomizes PS distribution. PS exposed on the outer leaflet is then accessible to Annexin V (which cannot cross the intact plasma membrane). In flow cytometry, fluorescently labeled Annexin V identifies early apoptotic cells (PS-positive, PI-negative), distinguishing them from late apoptotic/necrotic cells (PS-positive, PI-positive, where propidium iodide enters through compromised membranes) and live cells (PS-negative, PI-negative). PS exposure also serves as an in vivo 'eat me' signal recognized by phagocyte receptors (TIM-4, BAI-1, MerTK). Annexin V does not detect DNA replication (A), cholesterol (C), or glycoproteins (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To test whether a specific ion channel is voltage-gated, a researcher uses the whole-cell patch clamp technique. Which experimental protocol would definitively demonstrate voltage-dependent gating?",
+      "options": [
+        "Record spontaneous channel openings at the resting membrane potential",
+        "Hold the membrane at -80 mV (resting), then step to progressively more depolarized potentials (-60, -40, -20, 0, +20 mV) while measuring the resulting currents, and plot a current-voltage (I-V) relationship showing voltage-dependent activation",
+        "Add pharmacological blockers and observe reduced current",
+        "Measure the channel's mRNA expression level using qPCR"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Voltage-dependent gating is definitively demonstrated by showing that channel opening probability and/or current amplitude depends systematically on membrane potential. The standard protocol involves: (1) holding the cell at a negative potential where the channel is closed (-80 mV), then (2) stepping to progressively depolarized test potentials, (3) recording the resulting currents at each voltage. For a voltage-gated channel, you expect: minimal or no current at hyperpolarized potentials, increasing current amplitude at more depolarized potentials (as more channels open), characteristic activation kinetics that accelerate with depolarization, and a sigmoidal conductance-voltage relationship. Plotting peak current vs. voltage (I-V curve) and fitting a Boltzmann equation to the conductance reveals V1/2 (half-activation voltage) and slope factor. Spontaneous openings at rest (A) suggest constitutive or ligand-gated activity. Pharmacological block (C) confirms identity but not gating mechanism. mRNA expression (D) is irrelevant to gating properties.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The reflection coefficient (sigma) describes how effectively a membrane excludes a particular solute. A solute with sigma = 1 is completely impermeable, while sigma = 0 means the solute crosses as freely as water. Which solute would have a reflection coefficient closest to 0 for a typical cell membrane?",
+      "options": [
+        "NaCl (electrolyte, MW 58)",
+        "Urea (small, uncharged polar molecule, MW 60)",
+        "Sucrose (disaccharide, MW 342)",
+        "Albumin (protein, MW 66,000)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The reflection coefficient depends on membrane permeability relative to water. Urea is a small, uncharged polar molecule that crosses most cell membranes fairly rapidly through dedicated urea transporters (UT-A and UT-B family), aquaporins (some, like AQP3, AQP7, AQP9, are permeable to urea and glycerol \u2014 called aquaglyceroporins), and even slow diffusion through the lipid bilayer. Its reflection coefficient for many cell membranes is approximately 0.4-0.7, which is the lowest among the listed options. Sucrose (A) is too large and polar to cross membranes (sigma approaches 1), making it an effective osmotic agent used in preserving cells. Albumin (B) is a large protein completely excluded by membranes (sigma = 1). NaCl (D) dissociates into ions that cannot freely cross the hydrophobic bilayer (sigma approximately 0.9-1.0), though Na+ and Cl- do cross via ion channels and transporters at regulated rates.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following events occurs during the E1-to-E2 conformational transition of the Na+/K+-ATPase?",
+      "options": [
+        "Two K+ ions bind to cytoplasm-facing sites and the pump is dephosphorylated",
+        "The pump dissociates into individual alpha and beta subunits",
+        "Three Na+ ions that were bound in the E1 conformation are released to the extracellular space as the pump transitions to the E2 conformation after phosphorylation",
+        "ATP binds to the pump and phosphorylates the catalytic aspartate residue"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Na+/K+-ATPase catalytic cycle: In the E1 conformation, three Na+ ions bind to high-affinity cytoplasm-facing sites. ATP then phosphorylates the catalytic aspartate residue (Asp369), forming E1-P. The E1-P to E2-P conformational transition is the key step: the ion-binding sites change from facing the cytoplasm to facing the extracellular space, AND their affinity switches from high Na+ affinity to low Na+ affinity/high K+ affinity. This causes the three Na+ ions to be released extracellularly. Two K+ ions then bind to the now-exposed high-K+-affinity sites, triggering dephosphorylation (E2-P to E2). The E2-to-E1 transition completes the cycle, releasing K+ into the cytoplasm. ATP binding (B) occurs during E1 state before the transition. K+ binding and dephosphorylation (A) occur in E2 state after the transition. The pump does not dissociate (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the countercurrent exchange system of the vasa recta in the kidney medulla, which property of the capillary walls is essential for maintaining the medullary osmolarity gradient?",
+      "options": [
+        "The capillary walls contain aquaporins but no solute transporters",
+        "The capillary walls actively pump NaCl into the interstitium",
+        "The fenestrated capillary walls allow passive equilibration of solutes and water between blood and the surrounding interstitium, so the blood osmolarity matches the local tissue osmolarity as it flows through the medulla",
+        "The capillary walls are completely impermeable to all solutes and water"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The vasa recta are hairpin-shaped peritubular capillaries that run parallel to the loops of Henle in the renal medulla. Their fenestrated walls are freely permeable to water and small solutes, allowing equilibration with the surrounding interstitium. As blood descends into the hypertonic medulla, it loses water and gains solutes (NaCl, urea) by passive exchange, increasing in osmolarity. As it ascends, the process reverses: blood gains water and loses solutes as the surrounding interstitium becomes less concentrated. Because of the countercurrent flow geometry, the net effect is that solutes that enter the descending limb are largely recovered in the ascending limb, and water gained ascending is largely lost descending. This countercurrent exchange minimizes the washout of the medullary gradient by blood flow. If capillaries were impermeable (A), they could not exchange solutes at all. Active pumping (C) is not a feature of capillary walls. Only aquaporins (D) would not allow the necessary solute exchange.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Tetrodotoxin (TTX) from puffer fish and saxitoxin (STX) from dinoflagellates both block voltage-gated sodium channels. How do they block the channel?",
+      "options": [
+        "They disassemble the channel by degrading the alpha subunit",
+        "They bind to the intracellular inactivation gate and prevent it from closing",
+        "They bind to the extracellular pore entrance (vestibule) near the selectivity filter, physically plugging the ion conduction pathway",
+        "They alter membrane fluidity, indirectly preventing channel function"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both tetrodotoxin (TTX) and saxitoxin (STX) are guanidinium-containing toxins that bind with high affinity to a specific site (Site 1) at the external mouth of the voltage-gated Na+ channel pore. The guanidinium group of each toxin mimics a hydrated Na+ ion and enters the outer vestibule of the selectivity filter, but the bulky remainder of the molecule physically occludes the pore, preventing Na+ conductance. This binding is strictly extracellular \u2014 the toxins are too polar to cross the membrane and cannot access the intracellular side. The selectivity filter residues (outer ring of charged amino acids: DEKA motif in Nav channels) form part of the binding site. TTX-sensitive channels (Nav1.1-1.4, 1.6, 1.7) have a tyrosine/phenylalanine at a key position, while TTX-resistant channels (Nav1.5, cardiac; Nav1.8, 1.9, sensory) have a cysteine or serine. The toxins do not affect the inactivation gate (A), degrade protein (C), or alter membrane fluidity (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures glucose transport rates in adipocytes before and after insulin stimulation:\n\nCondition | Glucose uptake (pmol/min/10^5 cells)\nBasal (no insulin) | 5\n+ 1 nM insulin | 12\n+ 10 nM insulin | 45\n+ 100 nM insulin | 78\n+ 100 nM insulin + cytochalasin B (GLUT inhibitor) | 3\n+ 100 nM insulin + wortmannin (PI3K inhibitor) | 7\n\nWhat mechanism of insulin-stimulated glucose uptake is supported?",
+      "options": [
+        "Insulin increases glucose uptake by directly opening glucose channels in the membrane",
+        "Insulin stimulates GLUT4 translocation to the plasma membrane via PI3K signaling, and the transport is carrier-mediated (inhibited by cytochalasin B) and dose-dependent",
+        "Insulin increases glucose metabolism inside the cell, creating a steeper concentration gradient",
+        "Glucose uptake is insulin-independent and relies on simple diffusion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data reveal several key features of insulin-stimulated glucose uptake: (1) Dose-dependent stimulation \u2014 glucose uptake increases progressively with insulin concentration (5 to 78 pmol/min), showing a typical dose-response relationship with ~15-fold stimulation at maximal insulin. (2) Cytochalasin B inhibition (78 to 3 pmol/min) demonstrates the transport is GLUT-mediated, as cytochalasin B is a competitive inhibitor of GLUT transporters (it binds the endofacial glucose binding site). The near-complete block below basal levels indicates essentially all glucose uptake requires GLUT proteins. (3) Wortmannin inhibition (78 to 7 pmol/min, near basal) demonstrates that PI3-kinase signaling is required for the insulin response. Wortmannin blocks PI3K, preventing PIP3 generation, Akt/PKB activation, AS160 phosphorylation, and consequently GLUT4 vesicle translocation to the plasma membrane. The data do not support simple diffusion (D), direct channel opening (A), or purely metabolic effects (C).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Liposomes (artificial lipid vesicles) are used in drug delivery research. What determines whether a drug can be encapsulated in the aqueous interior versus the lipid bilayer of a liposome?",
+      "options": [
+        "Hydrophilic drugs are encapsulated in the aqueous interior lumen, while hydrophobic drugs partition into the lipid bilayer",
+        "Only the molecular weight of the drug determines its location",
+        "All drugs regardless of their properties are encapsulated in the aqueous interior",
+        "Only charged drugs can be loaded into liposomes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Liposomes are spherical vesicles with a lipid bilayer enclosing an aqueous core, providing two distinct compartments for drug loading. Hydrophilic (water-soluble) drugs like doxorubicin (in Doxil), cisplatin, and nucleic acids are encapsulated in the aqueous interior lumen, protected from the external environment. Hydrophobic (lipid-soluble) drugs like amphotericin B (AmBisome) and paclitaxel partition into the lipid bilayer due to favorable interactions with the acyl chains. Amphipathic drugs may associate at the water-lipid interface. This dual-loading capability is a major advantage of liposomal drug delivery. Drug properties beyond molecular weight \u2014 particularly hydrophobicity (logP), charge, and hydrogen bonding capacity \u2014 determine partitioning. Not all drugs are in the interior (A). Size alone is insufficient (B). Both charged and uncharged drugs can be loaded (D), though remote loading techniques (pH gradient) are used for weakly basic drugs like doxorubicin.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'membrane potential' refers to the voltage difference across the plasma membrane. In a typical resting neuron, the membrane potential is approximately -70 mV. Which statement about this value is correct?",
+      "options": [
+        "The negative sign means the cytoplasmic side is negatively charged relative to the extracellular side, primarily due to K+ leak channels allowing K+ efflux",
+        "A membrane potential of -70 mV means there are 70 millivolts more protons inside than outside",
+        "Membrane potential is generated solely by the Na+/K+-ATPase without contribution from ion channels",
+        "The negative sign means the extracellular side is negatively charged relative to the cytoplasm"
+      ],
+      "correctAnswer": "A",
+      "explanation": "By convention, the membrane potential is measured as V_inside - V_outside. A resting potential of -70 mV means the intracellular side is 70 millivolts more negative than the extracellular side. This is established primarily by K+ leak channels (KCNK family two-pore domain channels) that allow K+ to flow down its concentration gradient from inside (~140 mM) to outside (~4 mM). As positively charged K+ ions leave, they create an excess of negative charge inside the cell. The equilibrium is reached when the electrical force attracting K+ back inside equals the chemical force driving it out (approximately -90 mV for K+ alone). The actual resting potential is slightly less negative (-70 mV) because of small Na+ permeability through leak channels. The Na+/K+-ATPase contributes only about -5 to -10 mV directly through its electrogenic 3Na+:2K+ ratio (D oversimplifies). It mainly contributes indirectly by maintaining the ion gradients. Option A reverses the convention. Option C confuses voltage with proton concentration.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following is an example of a ligand-gated ion channel?",
+      "options": [
+        "The GLUT1 glucose transporter",
+        "The voltage-gated Na+ channel (Nav1.1)",
+        "The nicotinic acetylcholine receptor at the neuromuscular junction",
+        "The Na+/K+-ATPase"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The nicotinic acetylcholine receptor (nAChR) is the prototypical ligand-gated ion channel (also called ionotropic receptor). It is a pentameric channel composed of five subunits (alpha2-beta-gamma-delta at the adult neuromuscular junction) arranged around a central ion-conducting pore. When two acetylcholine molecules bind to the two alpha subunits at the subunit interfaces, a conformational change opens the pore, allowing Na+ influx and K+ efflux (with net depolarizing effect), generating an end-plate potential that triggers muscle contraction. The channel opens and closes within milliseconds, enabling rapid synaptic transmission. Other ligand-gated channels include GABA_A receptors (Cl- channels), glycine receptors, glutamate receptors (NMDA, AMPA, kainate), and P2X ATP receptors. Nav1.1 (A) is voltage-gated, not ligand-gated. GLUT1 (C) is a carrier/transporter, not a channel. The Na+/K+-ATPase (D) is a pump, not a channel.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sphingomyelinase is an enzyme that cleaves sphingomyelin in the outer leaflet of the plasma membrane, generating ceramide. What is the signaling significance of ceramide generation?",
+      "options": [
+        "Ceramide is immediately converted to cholesterol for membrane stabilization",
+        "Ceramide acts as a lipid second messenger that promotes apoptosis by activating protein phosphatases (like PP2A) and pro-apoptotic pathways, and induces formation of ceramide-enriched membrane platforms",
+        "Ceramide activates adenylyl cyclase to increase cAMP levels",
+        "Ceramide directly activates protein kinase A"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ceramide is a bioactive sphingolipid that functions as an important lipid second messenger, primarily in stress-induced signaling pathways. Sphingomyelinase (acid or neutral) hydrolyzes sphingomyelin to produce ceramide, which: (1) activates protein phosphatase 2A (PP2A), which dephosphorylates and activates pro-apoptotic proteins including BAD; (2) activates ceramide-activated protein kinase (CAPK/KSR); (3) directly promotes mitochondrial outer membrane permeabilization; (4) induces formation of ceramide-enriched membrane platforms (large rafts) by self-association of ceramide molecules, which cluster death receptors (Fas, TNF-R) to amplify apoptotic signaling. Ceramide signaling is activated by stress stimuli including radiation, chemotherapy, TNF-alpha, and Fas ligand. It does not activate adenylyl cyclase (A) or PKA (B) \u2014 those are cAMP pathway components. Ceramide is not converted to cholesterol (D); they are entirely different lipid classes synthesized by different pathways.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Endosomes undergo a process called 'maturation' as they progress from early to late endosomes. Which molecular switch drives this maturation?",
+      "options": [
+        "The conversion of Rab5 (early endosome marker) to Rab7 (late endosome marker) through a GTPase cascade",
+        "The addition of clathrin coats to the endosomal membrane",
+        "The fusion of endosomes with the Golgi apparatus",
+        "The removal of all membrane proteins from the endosomal surface"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Endosomal maturation is driven by a Rab GTPase conversion cascade. Early endosomes are characterized by active Rab5, which recruits effectors like EEA1 (early endosomal antigen 1) and the HOPS/CORVET tethering complexes. As maturation proceeds, the SAND-1/Mon1-Ccz1 complex (a Rab5 effector) simultaneously inactivates Rab5 (by displacing its GEF, Rabex-5) and activates Rab7 (by serving as a GEF for Rab7). This switch recruits Rab7 effectors like RILP (which links to dynein for centripetal movement) and the HOPS complex (for lysosome fusion). The Rab conversion is accompanied by progressive acidification (V-ATPase activity), formation of intraluminal vesicles (ILVs via ESCRT machinery, creating multivesicular bodies), and changes in lipid composition (PI3P to PI(3,5)P2). Clathrin addition (B) occurs at specific microdomains but does not drive maturation. Golgi fusion (C) does not occur. Membrane proteins are sorted, not removed entirely (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A mutation in the gene encoding alpha-galactosidase A leads to accumulation of globotriaosylceramide (Gb3) in lysosomes, causing Fabry disease. This glycosphingolipid accumulates because it is normally degraded on which membrane leaflet?",
+      "options": [
+        "The outer leaflet of the plasma membrane by extracellular enzymes",
+        "The inner leaflet of the plasma membrane by cytosolic enzymes",
+        "Within lysosomes, where intra-luminal vesicle membranes present glycosphingolipids to soluble acid hydrolases",
+        "In the ER, where glycosphingolipids are synthesized"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Glycosphingolipid degradation is a lysosomal process. During endocytosis and autophagy, plasma membrane glycosphingolipids (which are in the outer leaflet) end up in the limiting membrane of endosomes. Through the ESCRT-dependent formation of intraluminal vesicles (ILVs), these lipids become accessible to soluble lysosomal hydrolases in the lumen. Within lysosomes, a sequential series of glycosidases (including alpha-galactosidase A) progressively remove sugar residues from glycosphingolipids, aided by sphingolipid activator proteins (saposins) that extract lipids from membranes and present them to the hydrolases. Without functional alpha-galactosidase A, Gb3 accumulates in lysosomes of vascular endothelial cells, podocytes, and cardiomyocytes, causing the multi-organ pathology of Fabry disease. Degradation does not occur at the plasma membrane surface (A, B) or in the ER (D). Enzyme replacement therapy (agalsidase) can provide the missing enzyme to lysosomes via M6P receptor-mediated uptake.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following best describes why CO2 crosses biological membranes easily despite being a polar molecule?",
+      "options": [
+        "CO2 uses specific channel proteins to cross the membrane",
+        "CO2 is converted to HCO3- before crossing, and bicarbonate transporters carry it across",
+        "CO2 is a small, linear molecule with no net dipole moment (symmetric distribution of partial charges), giving it sufficient lipid solubility to rapidly diffuse through the hydrophobic bilayer core",
+        "CO2 crosses exclusively through aquaporins"
+      ],
+      "correctAnswer": "C",
+      "explanation": "While each C=O bond in CO2 is polar, the linear and symmetric geometry of the molecule means the two bond dipoles cancel exactly, resulting in zero net dipole moment. This gives CO2 sufficient hydrophobic character to partition into and diffuse rapidly through the lipid bilayer. CO2 is also small (MW 44), further facilitating membrane crossing. The permeability coefficient of CO2 across lipid bilayers is approximately 0.35 cm/s, making it one of the most permeable molecules. While some aquaporins (AQP1) and Rh proteins may facilitate CO2 transport in specific tissues (D is partially but not completely correct — it is not the exclusive route), the majority of CO2 crosses by simple diffusion. CO2 does not require specific channel proteins in most tissues (A). While CO2 is converted to HCO3- by carbonic anhydrase for blood transport, this conversion occurs in the cytoplasm, and CO2 itself (not HCO3-) crosses the membrane (B describes intracellular conversion, not the transport mechanism).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Membrane Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about membrane transport in plants:\nS1: The proton-motive force across the plant plasma membrane is generated by H+-ATPase and used for secondary active transport of nutrients\nS2: Plant vacuolar membranes (tonoplast) contain V-type H+-ATPases and H+-pyrophosphatases for vacuole acidification\nS3: K+ uptake in root hair cells involves both high-affinity (H+/K+ symporter) and low-affinity (K+ channels) systems\nS4: Plants use the Na+/K+-ATPase as their primary electrogenic pump, identical to animal cells",
+      "options": ["TTTF", "TTTT", "TFTT", "TTFF"],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Plant plasma membrane H+-ATPases (P-type ATPases) pump H+ out of the cell, generating a proton-motive force (both pH gradient and membrane potential, inside negative ~-120 to -180 mV) that drives uptake of nutrients through H+-coupled symporters (for sugars, amino acids, nitrate, phosphate) and antiporters. S2 is TRUE: The tonoplast contains two proton-pumping systems: V-type H+-ATPase (using ATP) and H+-PPase (using pyrophosphate, PPi). Both acidify the vacuole to pH ~5.0-5.5, creating a proton gradient for secondary active transport of solutes into the vacuole (via H+/sucrose antiporters, H+/malate antiporters, etc.). The PPase is particularly active in young, rapidly growing tissues where PPi is produced abundantly by biosynthetic reactions. S3 is TRUE: At low external K+ concentrations (<0.2 mM), high-affinity transport systems (including HAK/KUP H+/K+ symporters) operate. At higher K+ (>1 mM), low-affinity inward-rectifying K+ channels (like AKT1/KAT1) provide bulk K+ uptake. S4 is FALSE: Plants do NOT have Na+/K+-ATPase — this is exclusively an animal cell pump. Plants use the H+-ATPase as their primary electrogenic pump. This is a fundamental difference between plant and animal membrane energetics.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Membrane Structure and Function"
+    }
+  ]
+}

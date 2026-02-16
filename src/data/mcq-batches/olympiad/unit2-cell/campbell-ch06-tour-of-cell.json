@@ -1,0 +1,1370 @@
+{
+  "batch": {
+    "name": "Campbell Ch6 Tour of the Cell \u2014 Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 68
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "A cell biologist uses immunogold electron microscopy to localize a protein that contains both an ER signal sequence and a KKXX retrieval motif. In which cellular compartment would you expect the HIGHEST density of gold particles?",
+      "options": [
+        "trans-Golgi network",
+        "cis-Golgi network",
+        "Plasma membrane",
+        "Rough endoplasmic reticulum cisternae"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Proteins with a KKXX motif at their C-terminus are ER-resident membrane proteins. Although they may transiently escape to the cis-Golgi via anterograde COPII vesicles, the KKXX motif is recognized by COPI coat proteins, which package these proteins into retrograde vesicles returning them to the ER. This continuous retrieval cycle means the steady-state concentration is highest in the ER. The cis-Golgi (B) would show some labeling since the protein transiently visits it, but retrieval ensures the ER has the highest density. The trans-Golgi network (C) and plasma membrane (D) would show negligible labeling because COPI-mediated retrieval occurs before the protein progresses that far in the secretory pathway.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Colchicine depolymerizes microtubules while cytochalasin B disrupts actin microfilaments. If both drugs are applied simultaneously to a cultured fibroblast, which cellular process would STILL proceed normally?",
+      "options": [
+        "Vesicle transport from the Golgi to the plasma membrane",
+        "Transcription of ribosomal RNA in the nucleolus",
+        "Cytokinesis",
+        "Chromosome segregation during mitosis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Transcription of rRNA by RNA polymerase I in the nucleolus is a nuclear process that does not depend on cytoskeletal elements. It relies on transcription factors, polymerases, and template DNA, none of which require microtubules or actin filaments. Cytokinesis (A) requires an actin-myosin contractile ring disrupted by cytochalasin B. Chromosome segregation (B) requires spindle microtubules disrupted by colchicine. Vesicle transport from the Golgi (D) requires microtubule-based motor proteins (kinesins) for long-range transport and actin for short-range cortical transport, so both drugs would impair it. Thus, transcription remains unaffected by either drug.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the endomembrane system, which coat protein complex mediates retrograde transport from the Golgi apparatus back to the endoplasmic reticulum?",
+      "options": [
+        "COPI",
+        "Clathrin with AP-2 adaptors",
+        "Clathrin with AP-1 adaptors",
+        "COPII"
+      ],
+      "correctAnswer": "A",
+      "explanation": "COPI coat proteins mediate retrograde transport from the Golgi back to the ER, retrieving ER-resident proteins that have escaped and recycling SNARE proteins and cargo receptors. COPII (A) mediates anterograde transport from the ER to the Golgi, which is the opposite direction. Clathrin with AP-1 adaptors (C) operates at the trans-Golgi network for sorting proteins to endosomes and lysosomes. Clathrin with AP-2 adaptors (D) functions at the plasma membrane during receptor-mediated endocytosis. Understanding the directionality and specificity of these coat proteins is essential for predicting how disruption of each pathway affects protein sorting.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher discovers a novel single-celled organism that possesses a nucleus, mitochondria, and a cell wall composed of chitin. It lacks chloroplasts and has 80S ribosomes in its cytoplasm. This organism is most likely classified as a:",
+      "options": [
+        "Fungal cell",
+        "Bacterial cell",
+        "Plant cell",
+        "Archaeal cell"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The presence of a nucleus and mitochondria identifies this as a eukaryote, immediately ruling out bacteria (C) and archaea (D), which are prokaryotes lacking membrane-bound nuclei. The cell wall composed of chitin is diagnostic of fungi. Plant cells (A) have cell walls made of cellulose, not chitin, and typically possess chloroplasts. The 80S ribosomes confirm eukaryotic identity (prokaryotes have 70S). Chitin is a polymer of N-acetylglucosamine and is the defining structural polysaccharide of fungal cell walls, also found in arthropod exoskeletons but not in plant or animal cells.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The surface area-to-volume ratio imposes constraints on cell size. If a spherical cell doubles its diameter from 10 micrometers to 20 micrometers, by what factor does its surface area-to-volume ratio change?",
+      "options": [
+        "It decreases by a factor of 2",
+        "It decreases by a factor of 4",
+        "It remains the same",
+        "It increases by a factor of 2"
+      ],
+      "correctAnswer": "A",
+      "explanation": "For a sphere, surface area = 4 pi r^2 and volume = (4/3) pi r^3, so the SA:V ratio = 3/r. When the diameter doubles from 10 to 20 micrometers, the radius doubles from 5 to 10 micrometers. The SA:V ratio changes from 3/5 = 0.6 to 3/10 = 0.3, a decrease by a factor of 2. This explains why larger cells face challenges in nutrient uptake and waste removal, as the membrane surface area grows more slowly than the cytoplasmic volume. This constraint drives adaptations like microvilli, membrane folding, and multinucleate cells. Options A, C, and D reflect incorrect calculations of how surface area and volume scale with radius.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following correctly describes the functional significance of the nuclear lamina?",
+      "options": [
+        "It consists of actin filaments that facilitate transport of mRNA through nuclear pores",
+        "It forms a lipid bilayer barrier between the inner and outer nuclear membranes",
+        "It is composed of microtubules that separate chromosomes during mitosis",
+        "It provides a scaffold of intermediate filaments that maintains nuclear shape and anchors chromatin to the inner nuclear membrane"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The nuclear lamina is a meshwork of intermediate filament proteins called lamins (types A, B, and C) that line the inner surface of the inner nuclear membrane. It provides structural support to maintain nuclear shape, anchors chromatin to the nuclear periphery (influencing gene expression), and helps organize nuclear pore complexes. During mitosis, phosphorylation of lamins causes disassembly of the lamina, facilitating nuclear envelope breakdown. Mutations in lamin A cause laminopathies including progeria. The lamina is not composed of actin (B) or microtubules (C), and it is not a lipid bilayer (D) but rather a proteinaceous meshwork.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the endoplasmic reticulum:\nS1: Smooth ER is the primary site of phospholipid biosynthesis in eukaryotic cells\nS2: Rough ER ribosomes are permanently attached and cannot dissociate\nS3: The ER lumen is topologically equivalent to the extracellular space\nS4: Signal recognition particle (SRP) binds to the signal sequence after translation is complete",
+      "options": [
+        "TTTT",
+        "TFTT",
+        "TFTF",
+        "TFFT"
+      ],
+      "correctAnswer": "TFTF",
+      "explanation": "S1 is TRUE: The smooth ER is indeed the primary site of membrane phospholipid synthesis, where enzymes like flippases transfer newly synthesized phospholipids between leaflets. S2 is FALSE: Ribosomes associate with the rough ER only when translating mRNAs encoding proteins with ER signal sequences; free ribosomes and ER-bound ribosomes are interchangeable. S3 is TRUE: The ER lumen is continuous with the space between the two nuclear envelope membranes and topologically equivalent to the outside of the cell, which is why secretory proteins synthesized in the ER lumen are eventually released extracellularly. S4 is FALSE: SRP binds the signal sequence co-translationally as it emerges from the ribosome, not after translation is complete; SRP binding actually pauses translation until the ribosome-SRP complex docks with the SRP receptor on the ER membrane.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Peroxisomes import fully folded proteins from the cytosol, unlike mitochondria which require unfolded proteins for import. Which structural feature of peroxisomes best explains this difference?",
+      "options": [
+        "Peroxisomes use ATP-dependent chaperones in their lumen to pull proteins across the membrane",
+        "Peroxisomal import receptors (Pex5/Pex7) can shuttle folded cargo through a transient pore that expands to accommodate them",
+        "Peroxisomes have a single membrane, whereas mitochondria have a double membrane",
+        "Peroxisomal membrane proteins have larger pores than the TOM/TIM complexes of mitochondria"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Peroxisomal import is unique because the cytosolic receptors Pex5 (for PTS1 signals) and Pex7 (for PTS2 signals) bind cargo proteins in the cytosol and escort them to the peroxisomal membrane, where they interact with docking proteins (Pex13, Pex14). The receptor-cargo complex is then translocated through a transient pore formed by Pex5 oligomerization that can expand sufficiently to accommodate fully folded proteins and even oligomeric complexes. After cargo release in the matrix, the receptor is recycled back to the cytosol in a ubiquitin-dependent process. Mitochondrial TOM/TIM complexes have narrow channels requiring unfolded proteins. Option A is partially true but does not explain the mechanism. Options C and D are incorrect descriptions of peroxisomal import.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures organelle pH in a hepatocyte using pH-sensitive fluorescent probes and obtains the following data:\n\nCompartment | pH\nCytosol | 7.2\nER lumen | 7.2\nEarly endosome | 6.0\nLate endosome | 5.5\nLysosome | 4.8\nMitochondrial matrix | 7.8\n\nWhich conclusion is best supported by this data?",
+      "options": [
+        "The ER and cytosol share a common pH because they are connected by open channels",
+        "The progressive acidification from early endosome to lysosome is driven by V-type H+-ATPases that are increasingly active in later compartments",
+        "The mitochondrial matrix is alkaline relative to the cytosol due to the electron transport chain pumping protons out of the matrix",
+        "Lysosomes maintain acidic pH through passive diffusion of H+ ions across their membrane"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The mitochondrial matrix pH of 7.8 compared to cytosolic pH of 7.2 reflects the activity of the electron transport chain (ETC), which pumps protons from the matrix into the intermembrane space. This creates both a chemical gradient (delta pH) and an electrical gradient (delta psi) across the inner mitochondrial membrane, collectively forming the proton-motive force that drives ATP synthase. Option A is incorrect because the ER and cytosol are not connected by open channels; rather, small molecules can equilibrate through translocon pores. Option B oversimplifies the mechanism; V-type ATPases have similar intrinsic activity, but the acidification depends on the balance between proton pumping and proton leakage, as well as the buffering capacity of each compartment. Option D is wrong because lysosomal acidification is ATP-dependent via V-type ATPases, not passive diffusion.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Dynein and kinesin are microtubule motor proteins. In a typical animal cell, which correctly describes their directional movement?",
+      "options": [
+        "Both move toward the plus end but at different speeds",
+        "Dynein moves toward the plus end (cell periphery); kinesin moves toward the minus end (cell center)",
+        "Kinesin moves toward the minus end; dynein moves toward the plus end",
+        "Kinesin moves toward the plus end (cell periphery); dynein moves toward the minus end (cell center)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Conventional kinesin (kinesin-1) is a plus-end-directed motor that transports cargo from the cell center (where microtubule minus ends are anchored at the centrosome/MTOC) toward the cell periphery (where plus ends extend). Cytoplasmic dynein is a minus-end-directed motor that transports cargo from the periphery toward the cell center. This directional difference is critical for organelle positioning: kinesin moves secretory vesicles outward toward the plasma membrane, while dynein moves endosomes inward and positions the Golgi apparatus near the centrosome. Options A and D reverse the directionality. Option B incorrectly states both move in the same direction.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A student hypothesizes that mitochondrial protein import requires the electrochemical gradient across the inner mitochondrial membrane. Which experimental approach would best test this hypothesis?",
+      "options": [
+        "Treat isolated mitochondria with CCCP (a protonophore that dissipates the proton gradient), then measure import of a radiolabeled matrix-targeted protein compared to untreated controls",
+        "Remove all ATP from the system and measure protein import rates",
+        "Use siRNA to knock down TOM40, then measure protein import",
+        "Incubate mitochondria at 4 degrees Celsius and compare import rates to 37 degrees Celsius"
+      ],
+      "correctAnswer": "A",
+      "explanation": "CCCP (carbonyl cyanide m-chlorophenyl hydrazone) is an uncoupler that dissipates the proton gradient across the inner mitochondrial membrane, eliminating both the delta pH and delta psi components of the proton-motive force. If mitochondrial protein import requires the electrochemical gradient, CCCP-treated mitochondria should show dramatically reduced import of the radiolabeled matrix protein compared to untreated controls. This directly tests the hypothesis. Removing ATP (B) would test ATP dependence but not specifically the electrochemical gradient, and mtHsp70 requires ATP, confounding interpretation. Knocking down TOM40 (C) tests the role of the outer membrane translocase, not the electrochemical gradient. Temperature change (D) would affect many processes non-specifically, making it difficult to attribute effects to the electrochemical gradient alone.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following organelles does NOT contain its own DNA?",
+      "options": [
+        "Mitochondria",
+        "Peroxisomes",
+        "Chloroplasts",
+        "All of the above contain their own DNA"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Peroxisomes do not contain their own DNA. Unlike mitochondria and chloroplasts, which retain remnant genomes from their endosymbiotic ancestors and replicate their circular DNA independently, peroxisomes derive all their proteins from nuclear-encoded genes. Peroxisomal proteins are synthesized on free ribosomes in the cytosol and imported post-translationally via PTS1 and PTS2 targeting signals recognized by Pex5 and Pex7 receptors respectively. Peroxisomes can divide by fission (using Pex11 and dynamin-related proteins), but they can also arise de novo from the ER. Mitochondria (A) retain ~37 genes in humans and chloroplasts (B) retain ~120 genes, both encoding essential components of their respective electron transport chains and ribosomes.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the Golgi apparatus:\nS1: Proteins move from cis to trans cisternae exclusively via vesicular transport between stable compartments\nS2: N-linked glycosylation begins in the ER and is further modified in the Golgi\nS3: The Golgi sorts lysosomal enzymes by adding mannose-6-phosphate tags in the cis-Golgi\nS4: Plant cells lack a Golgi apparatus and instead use the ER for all secretory functions",
+      "options": [
+        "FTTT",
+        "FTFT",
+        "FTTF",
+        "TFTT"
+      ],
+      "correctAnswer": "FTTF",
+      "explanation": "S1 is FALSE: The cisternal maturation model, supported by substantial experimental evidence, proposes that Golgi cisternae themselves mature from cis to trans, with resident enzymes being recycled backward by COPI vesicles, rather than cargo moving forward through stable cisternae. S2 is TRUE: N-linked glycosylation is initiated in the ER by oligosaccharyltransferase transferring a 14-sugar precursor to asparagine residues, and the glycan is then extensively modified by trimming and addition of sugars in sequential Golgi compartments. S3 is TRUE: In the cis-Golgi network, GlcNAc-1-phosphotransferase recognizes lysosomal hydrolases and adds GlcNAc-phosphate to mannose residues; a second enzyme then removes GlcNAc to expose the mannose-6-phosphate signal. S4 is FALSE: Plant cells possess a fully functional Golgi apparatus that is particularly active in synthesizing cell wall polysaccharides like hemicellulose and pectin.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Hutchinson-Gilford progeria syndrome is caused by a mutation in the LMNA gene producing a truncated lamin A protein called progerin. Which cellular structure is primarily disrupted in this disease?",
+      "options": [
+        "The rough endoplasmic reticulum",
+        "The centrosome and centriole duplication",
+        "The mitotic spindle apparatus",
+        "The nuclear lamina and nuclear envelope architecture"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Progeria results from a point mutation in LMNA that activates a cryptic splice site, producing progerin, a truncated lamin A protein that retains a farnesyl group permanently. This permanently farnesylated progerin integrates into the nuclear lamina but causes dramatic nuclear envelope blebbing, loss of heterochromatin organization, mislocalization of nuclear pore complexes, and impaired mechanotransduction. Affected cells show lobulated nuclei, premature senescence, and defective DNA repair. The mitotic spindle (A) is composed of tubulin, not lamins. The rough ER (C) and centrosomes (D) are not directly disrupted by lamin mutations, though secondary effects on gene expression may eventually impact multiple cellular processes.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An experiment tracks a GFP-tagged secretory protein through the endomembrane system using time-lapse fluorescence microscopy. The following timeline is observed:\n\nTime (min) | Primary fluorescence location\n0 | Rough ER\n5 | ER exit sites (ERES)\n10 | ERGIC (ER-Golgi intermediate compartment)\n20 | cis-Golgi\n35 | trans-Golgi network\n45 | Plasma membrane\n\nIf brefeldin A (BFA) is added at t = 15 min, at which compartment would the protein accumulate?",
+      "options": [
+        "Rough ER, because BFA causes retrograde transport of all Golgi contents to the ER",
+        "ERGIC, because BFA blocks COPII vesicle formation from the ER",
+        "cis-Golgi, because BFA prevents anterograde transport beyond this point",
+        "trans-Golgi network, because BFA only affects retrograde transport"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Brefeldin A inhibits GBF1, a guanine nucleotide exchange factor for Arf1 GTPase, preventing COPI coat assembly. Without COPI-mediated retrograde vesicles, the normal balance between anterograde and retrograde Golgi traffic is disrupted. The Golgi cisternae collapse and fuse with the ER within 15-30 minutes of BFA treatment. At t = 15 min, the protein is at the cis-Golgi, but BFA-induced Golgi collapse would redistribute all Golgi-resident proteins and cargo back to the ER. The protein would therefore accumulate in the ER. Option B is incorrect because BFA does not directly block COPII vesicle formation. Option C is wrong because Golgi compartments are not maintained under BFA treatment. Option D is incorrect because BFA does not merely affect retrograde transport; it causes complete Golgi dissolution.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 9+2 arrangement of microtubules is a defining feature of which cellular structure?",
+      "options": [
+        "Primary (non-motile) cilia",
+        "Motile cilia and flagella",
+        "The mitotic spindle",
+        "Centrioles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The 9+2 axonemal arrangement consists of nine outer doublet microtubules surrounding a central pair of singlet microtubules, and is characteristic of motile cilia and eukaryotic flagella. Dynein arms on the outer doublets generate the bending force for ciliary/flagellar beating. Centrioles (A) and basal bodies have a 9+0 arrangement of triplet microtubules (nine triplets, no central pair). Primary cilia (C) have a 9+0 arrangement of doublet microtubules (no central pair, no dynein arms), making them non-motile and functioning as sensory organelles. The mitotic spindle (D) consists of individual microtubules radiating from centrosomes, not organized in the 9+2 pattern.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Autophagy involves the sequestration of cytoplasmic components into double-membrane vesicles called autophagosomes. Which organelle fuses with autophagosomes to degrade the sequestered contents?",
+      "options": [
+        "Late endosomes only, never lysosomes",
+        "Smooth endoplasmic reticulum",
+        "Lysosomes",
+        "Peroxisomes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "During autophagy, the autophagosome (a double-membrane vesicle formed by the phagophore/isolation membrane) engulfs cytoplasmic cargo including damaged organelles, protein aggregates, and pathogens. The autophagosome then fuses with lysosomes to form an autolysosome, where lysosomal hydrolases (proteases, lipases, glycosidases, nucleases) operating at acidic pH degrade the contents. The breakdown products (amino acids, fatty acids, sugars) are transported back to the cytosol for reuse. Peroxisomes (A) are themselves targets of selective autophagy (pexophagy) and do not degrade autophagosomal contents. The smooth ER (C) contributes membrane to phagophore formation but does not fuse with mature autophagosomes. While autophagosomes can fuse with late endosomes to form amphisomes, the final degradation occurs after lysosome fusion (D is incorrect).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine whether a newly discovered protein is targeted to the mitochondrial matrix or the inner mitochondrial membrane, a researcher performs protease protection assays on isolated mitochondria. Which experimental result would indicate matrix localization?",
+      "options": [
+        "The protein is degraded by protease added to intact mitochondria",
+        "The protein is degraded only when mitochondria are treated with digitonin (which selectively permeabilizes the outer membrane) before protease addition",
+        "The protein is protected from protease digestion even after treatment with both digitonin and Triton X-100",
+        "The protein is protected from protease after digitonin treatment but degraded when both membranes are disrupted with Triton X-100"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A matrix protein is protected by both the outer and inner mitochondrial membranes. Adding protease to intact mitochondria would not degrade it (protected by outer membrane). Adding digitonin to selectively permeabilize the outer membrane exposes the intermembrane space but the inner membrane still protects matrix proteins. Only when both membranes are disrupted with a detergent like Triton X-100 would the matrix protein become accessible to protease and be degraded. Option A describes an outer membrane protein exposed on the cytoplasmic face. Option B describes an intermembrane space protein. Option C is impossible since complete membrane disruption with Triton X-100 would expose all proteins to protease. This systematic protease protection approach is a classic technique for determining sub-mitochondrial protein localization.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following is a key structural difference between prokaryotic and eukaryotic ribosomes that is exploited by antibiotics?",
+      "options": [
+        "Prokaryotic ribosomes use a different genetic code than eukaryotic ribosomes",
+        "Prokaryotic 30S subunit rRNA differences allow selective binding of aminoglycosides like streptomycin",
+        "Prokaryotic ribosomes are 80S while eukaryotic are 70S",
+        "Eukaryotic ribosomes lack an exit tunnel for nascent polypeptides"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Prokaryotic ribosomes (70S = 30S + 50S) differ from eukaryotic ribosomes (80S = 40S + 60S) in both their rRNA and protein composition. Aminoglycosides such as streptomycin, gentamicin, and neomycin bind specifically to the 16S rRNA of the prokaryotic 30S subunit near the decoding center (A site), causing misreading of mRNA codons and inhibiting translocation. The structural differences in the 16S rRNA between prokaryotes and eukaryotes provide selectivity, making these antibiotics toxic to bacteria but not to human cells (though mitochondrial ribosomes, being 70S, can be affected). Option A reverses the sedimentation coefficients. Option C is false; both have exit tunnels. Option D is incorrect; the genetic code is nearly universal across all life.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the cytoskeleton:\nS1: Intermediate filaments are the most dynamic of the three cytoskeletal elements, undergoing rapid assembly and disassembly\nS2: Actin filaments exhibit treadmilling, where subunits are added at the plus end and removed from the minus end\nS3: Microtubule dynamic instability involves stochastic switching between growth and rapid shrinkage phases\nS4: All three cytoskeletal filament types are composed of globular protein subunits",
+      "options": [
+        "FTTT",
+        "FTTF",
+        "FTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "FTTF",
+      "explanation": "S1 is FALSE: Intermediate filaments are actually the LEAST dynamic and most stable of the three cytoskeletal elements. They provide mechanical strength and resist tensile forces. Unlike microtubules and actin filaments, they do not exhibit polarity or rapid turnover under normal conditions. S2 is TRUE: Actin filament treadmilling occurs when the rate of ATP-actin monomer addition at the barbed (plus) end equals the rate of ADP-actin monomer loss at the pointed (minus) end, resulting in a filament that appears to move through the cytoplasm while maintaining constant length. S3 is TRUE: Dynamic instability is a hallmark of microtubules where individual microtubules stochastically switch between phases of growth and rapid depolymerization (catastrophe), with occasional rescue events. This is driven by GTP hydrolysis on beta-tubulin. S4 is FALSE: Intermediate filaments are composed of fibrous (not globular) protein subunits that form coiled-coil dimers, which assemble into tetramers and ultimately into ropelike filaments.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the nuclear pore complex, FG-nucleoporins create a selective permeability barrier. Which of the following describes the mechanism by which large cargo (>40 kDa) crosses the nuclear pore?",
+      "options": [
+        "Large cargo is actively pumped through the pore by ATP-dependent conformational changes in the nuclear pore complex",
+        "The nuclear pore dilates to 50 nm diameter to allow passage of any large molecule",
+        "Nuclear transport receptors (importins/exportins) interact with FG-repeats to facilitate translocation of cargo through the pore",
+        "Large cargo passes through by simple diffusion at a slower rate than small molecules"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Nuclear pore complexes (NPCs) contain FG-nucleoporins whose phenylalanine-glycine repeat domains form a hydrogel-like selective barrier that blocks passive diffusion of molecules larger than ~40 kDa. Large cargo proteins bearing nuclear localization signals (NLS) bind to importin alpha/beta heterodimers in the cytosol. Importin beta directly interacts with the FG-repeat domains, allowing the receptor-cargo complex to partition into and traverse the FG-nucleoporin barrier by facilitated translocation. In the nucleus, RanGTP binds importin beta, releasing the cargo. The process is powered by the RanGTP gradient (high in nucleus, low in cytoplasm), maintained by RanGEF (nuclear) and RanGAP (cytoplasmic). Simple diffusion (A) would be blocked by the FG barrier. ATP-dependent pumping (C) does not describe the actual mechanism. The pore does not dilate non-specifically (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A plant cell is placed in a hypertonic solution. Which of the following correctly describes the sequence of events?",
+      "options": [
+        "The cell wall prevents any water loss, so the cell maintains turgor pressure",
+        "Water exits the cell by osmosis; the plasma membrane pulls away from the cell wall in plasmolysis while the cell wall maintains its shape",
+        "The central vacuole expands as the cell absorbs solutes from the hypertonic environment",
+        "The cell lyses because the hypertonic solution causes water to rush into the cell"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When a plant cell is placed in a hypertonic solution, water moves out of the cell by osmosis down its water potential gradient. Unlike animal cells, plant cells have a rigid cell wall that does not shrink. As the protoplast (the living portion enclosed by the plasma membrane) loses water, it shrinks and the plasma membrane pulls away from the cell wall at the corners first, then progressively across the cell surface. This process is called plasmolysis. The space between the cell wall and the retracted membrane fills with the hypertonic solution. Option A is wrong because the cell wall is permeable to water and most solutes; it provides structural support but does not prevent osmosis. Option C describes what happens in a hypotonic solution to an animal cell. Option D is incorrect because the vacuole would shrink, not expand, as water leaves the cell.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher uses cell fractionation by differential centrifugation to isolate organelles from liver cells. The following enzyme activities are measured in each fraction:\n\nFraction | Centrifugation | Acid phosphatase | Catalase | Cytochrome c oxidase\n1 | 1,000g | Low | Low | Low\n2 | 10,000g | Low | Low | High\n3 | 20,000g | High | High | Low\n4 | 100,000g | Low | Low | Low\n\nWhich organelles are enriched in Fraction 2 and Fraction 3 respectively?",
+      "options": [
+        "Fraction 2: lysosomes; Fraction 3: mitochondria",
+        "Fraction 2: mitochondria; Fraction 3: lysosomes and peroxisomes",
+        "Fraction 2: peroxisomes; Fraction 3: ER microsomes",
+        "Fraction 2: nuclei; Fraction 3: mitochondria"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cytochrome c oxidase is a marker enzyme for mitochondria (Complex IV of the electron transport chain), acid phosphatase is a marker for lysosomes, and catalase is a marker for peroxisomes. Fraction 2 (10,000g pellet) is enriched in cytochrome c oxidase, indicating mitochondria, which are the largest and densest organelles after nuclei. Fraction 3 (20,000g pellet) has both high acid phosphatase and high catalase, indicating co-sedimentation of lysosomes and peroxisomes, which have similar sizes and densities. Fraction 1 (1,000g) would contain nuclei, unbroken cells, and debris. Fraction 4 (100,000g) would contain ER microsomes and plasma membrane fragments. This classical cell fractionation approach, pioneered by Christian de Duve (who discovered lysosomes and peroxisomes using this technique), remains fundamental in cell biology.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following is NOT a function of the smooth endoplasmic reticulum?",
+      "options": [
+        "Sequestration and release of calcium ions in muscle cells",
+        "Detoxification of drugs and poisons in liver hepatocytes",
+        "N-linked glycosylation of newly synthesized proteins",
+        "Synthesis of steroid hormones in adrenal cortex cells"
+      ],
+      "correctAnswer": "C",
+      "explanation": "N-linked glycosylation is performed by the oligosaccharyltransferase (OST) complex, which is associated with the translocon on the rough endoplasmic reticulum, not the smooth ER. OST transfers a preassembled 14-sugar oligosaccharide (Glc3Man9GlcNAc2) from dolichol phosphate to asparagine residues in the consensus sequence Asn-X-Ser/Thr of nascent polypeptides as they enter the ER lumen. The smooth ER has numerous other functions: cytochrome P450-mediated drug detoxification in hepatocytes (A), steroidogenesis in endocrine cells where cholesterol is converted to steroid hormones (B), and calcium storage/release in the sarcoplasmic reticulum of muscle cells (D), which is a specialized form of smooth ER critical for excitation-contraction coupling.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Taxol (paclitaxel) is a chemotherapy drug that stabilizes microtubules and prevents their depolymerization. How does this affect dividing cancer cells?",
+      "options": [
+        "It arrests cells in metaphase because the mitotic spindle cannot undergo the dynamic changes needed for chromosome segregation",
+        "It blocks cell entry into S phase by preventing centrosome duplication",
+        "It prevents cytokinesis by disrupting the actin-myosin contractile ring",
+        "It prevents DNA replication by blocking helicase access to the replication fork"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Taxol binds to beta-tubulin within microtubules and stabilizes them against depolymerization. During mitosis, dynamic instability of spindle microtubules is essential for: (1) capturing chromosomes via search-and-capture mechanisms, (2) correcting improper kinetochore-microtubule attachments, and (3) generating the forces needed for chromosome congression and segregation. By preventing microtubule depolymerization, taxol blocks the spindle assembly checkpoint from being satisfied, arresting cells in metaphase. Prolonged mitotic arrest then triggers apoptosis. Taxol does not affect DNA replication (A), the actin-based contractile ring (C), or centrosome duplication (D). The effectiveness of taxol against rapidly dividing cancer cells exploits their dependence on frequent mitotic divisions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a protein of interest is a peripheral or integral membrane protein. Which experimental approach would best distinguish between these two types?",
+      "options": [
+        "Treat the membrane with a high-salt buffer (1M NaCl) and a carbonate buffer (pH 11.5), then check if the protein is released into the soluble fraction",
+        "Use fluorescence microscopy to determine the subcellular localization of the protein",
+        "Perform Western blotting to determine the molecular weight of the protein",
+        "Use mass spectrometry to identify post-translational modifications on the protein"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Peripheral membrane proteins are associated with the membrane through electrostatic interactions, hydrogen bonds, or interactions with other membrane proteins, and can be released by treatments that disrupt these non-covalent interactions: high-salt buffers (1M NaCl) disrupt ionic interactions, while alkaline carbonate buffer (pH 11.5) strips peripheral proteins by disrupting hydrogen bonds and electrostatic interactions. If the protein is released by these treatments, it is peripheral. Integral membrane proteins have hydrophobic transmembrane domains embedded in the lipid bilayer and require detergents (like Triton X-100 or SDS) to extract them. Fluorescence microscopy (B) shows localization but cannot distinguish peripheral from integral association. Western blotting (C) determines molecular weight, which does not indicate membrane association type. Mass spectrometry (D) can identify modifications but does not directly reveal membrane interaction mode.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The extracellular matrix (ECM) of animal cells contains collagen, proteoglycans, and fibronectin. Through which transmembrane proteins does the ECM communicate mechanical signals to the intracellular cytoskeleton?",
+      "options": [
+        "Integrins",
+        "Selectins",
+        "Cadherins",
+        "Connexins"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Integrins are heterodimeric transmembrane receptors (composed of alpha and beta subunits) that serve as the primary mechanical link between the extracellular matrix and the intracellular actin cytoskeleton. Their extracellular domains bind ECM components like fibronectin, laminin, and collagen, while their cytoplasmic domains connect to the actin cytoskeleton through adaptor proteins (talin, vinculin, paxillin) at focal adhesion complexes. Integrins also mediate bidirectional signaling (outside-in and inside-out). Cadherins (A) mediate cell-cell adhesion, not cell-ECM adhesion. Connexins (C) form gap junctions for direct cell-cell communication. Selectins (D) mediate transient cell-cell adhesion in the immune system through carbohydrate recognition.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A mutation in the GTPase-activating protein (GAP) for Sar1 would most likely result in which cellular defect?",
+      "options": [
+        "Uncontrolled autophagosome formation",
+        "Excessive formation of COPI vesicles from the Golgi",
+        "Failure of COPII vesicle formation at ER exit sites",
+        "Constitutive formation of COPII vesicles that cannot uncoat, leading to accumulation of coated vesicles between the ER and Golgi"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Sar1 is a small GTPase that initiates COPII coat assembly at ER exit sites. When Sar1 is activated by its GEF (Sec12), it inserts an amphipathic helix into the ER membrane and recruits COPII coat components (Sec23/24 and Sec13/31). Normally, Sec23 (a component of the COPII coat) acts as a GAP for Sar1, stimulating GTP hydrolysis after vesicle budding, which triggers coat disassembly and allows the vesicle to fuse with its target. If the GAP function is impaired, Sar1 remains in its GTP-bound active state, COPII coats cannot disassemble, and coated vesicles accumulate that are unable to fuse with the ERGIC or cis-Golgi. Option B describes what would happen if the GEF (Sec12) were defective. Options C and D describe unrelated pathways.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about tight junctions:\nS1: Tight junctions form a continuous seal around the apical end of epithelial cells, preventing paracellular diffusion of solutes\nS2: Claudins and occludin are the major transmembrane proteins of tight junctions\nS3: Tight junctions are linked to the intermediate filament cytoskeleton\nS4: The number of tight junction strands correlates with the tightness of the epithelial barrier",
+      "options": [
+        "TTTT",
+        "TTFT",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Tight junctions (zonula occludens) form a belt-like seal at the most apical end of lateral membranes of epithelial cells, creating a paracellular barrier that restricts the passage of ions and molecules between cells. S2 is TRUE: Claudins are the primary barrier-forming proteins of tight junctions, with over 27 family members that determine the selective permeability of different epithelia. Occludin is also present and contributes to junction formation. Both are tetra-spanning transmembrane proteins. S3 is FALSE: Tight junctions are linked to the ACTIN cytoskeleton, not intermediate filaments, through cytoplasmic scaffolding proteins ZO-1, ZO-2, and ZO-3. Desmosomes, not tight junctions, are linked to intermediate filaments. S4 is TRUE: Epithelia requiring tighter barriers (like kidney collecting duct) have more tight junction strands (up to 8-10), while leakier epithelia (like proximal tubule) have fewer strands (1-2).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following provides the strongest evidence that the inner and outer membranes of mitochondria have different evolutionary origins?",
+      "options": [
+        "The inner membrane is more permeable to ions than the outer membrane",
+        "The outer membrane contains porins similar to gram-negative bacterial outer membranes, while the inner membrane has a lipid composition similar to bacterial plasma membranes",
+        "Both membranes contain the same types of phospholipids",
+        "The inner membrane has more cholesterol than the outer membrane"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The endosymbiotic theory proposes that mitochondria originated when an ancestral alpha-proteobacterium was engulfed by a host cell. The inner mitochondrial membrane corresponds to the bacterial plasma membrane of the endosymbiont, and accordingly it has a bacterial-like lipid composition rich in cardiolipin (diphosphatidylglycerol) and lacks cholesterol. The inner membrane also contains bacterial-type transport systems and the electron transport chain. The outer membrane is derived from the host cell's endomembrane system and contains porins (voltage-dependent anion channels, VDAC) that are structurally similar to those in gram-negative bacterial outer membranes, suggesting a possible acquisition during the endosymbiotic event. Option A is incorrect because the outer membrane is actually more permeable (due to porins) than the inner membrane. Option C is false. Option D is incorrect; mitochondrial membranes generally have low cholesterol content.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers use fluorescence recovery after photobleaching (FRAP) to study the mobility of GFP-tagged proteins in different organelle membranes. The following half-times of fluorescence recovery (t1/2) are measured:\n\nProtein Location | t1/2 (seconds)\nER membrane protein | 15\nPlasma membrane protein | 45\nInner mitochondrial membrane protein | 120\nNuclear envelope protein associated with lamina | 300\n\nWhich interpretation is best supported by this data?",
+      "options": [
+        "Smaller organelles have faster protein diffusion rates",
+        "Proteins in the inner mitochondrial membrane diffuse slowly due to the high protein-to-lipid ratio and cristae topology that restricts lateral movement",
+        "Nuclear envelope proteins diffuse fastest because nuclear pores facilitate protein movement",
+        "ER membrane proteins are the most tightly anchored due to interactions with ribosomes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The FRAP data shows increasing recovery half-times from ER to plasma membrane to inner mitochondrial membrane to nuclear lamina-associated proteins. The inner mitochondrial membrane has an exceptionally high protein-to-lipid ratio (~75% protein by mass) compared to other membranes (~50%), which creates molecular crowding that restricts lateral diffusion. Additionally, the convoluted cristae architecture creates diffusion barriers where proteins must navigate narrow cristae junctions. The nuclear lamina-associated protein has the longest t1/2 because it is tethered to the relatively immobile lamin meshwork, restricting its lateral mobility. The ER membrane protein recovers fastest because the ER is a continuous, extensive membrane network with relatively lower crowding. Option A oversimplifies the relationship. Option C is incorrect; nuclear pores do not facilitate lateral membrane protein movement. Option D is wrong because ribosome association is transient and does not tightly anchor membrane proteins.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Plasmodesmata in plant cells and gap junctions in animal cells serve analogous functions. Which statement correctly compares these structures?",
+      "options": [
+        "Both are composed of the same protein, connexin",
+        "Plasmodesmata are membrane-lined channels containing a central desmotubule derived from ER, while gap junctions are protein channels formed by connexin hexamers",
+        "Gap junctions allow RNA and protein trafficking between cells, while plasmodesmata only allow small molecule passage",
+        "Plasmodesmata allow passage of molecules up to ~900 Da, while gap junctions allow molecules up to ~1,000 Da"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Plasmodesmata are unique plant cell structures consisting of plasma membrane-lined channels that traverse the cell wall, with a central desmotubule that is continuous with the smooth ER of adjacent cells. This means plasmodesmata connect both the cytoplasm and the ER lumen of neighboring cells. They can transport molecules, including proteins and RNA, up to ~60 kDa in their dilated state, facilitated by movement proteins (e.g., from viruses that exploit this pathway). Gap junctions in animal cells are formed by connexin hexamers (connexons) that align between adjacent cells, creating channels permitting passage of molecules up to about 1,000 Da (ions, amino acids, nucleotides, second messengers like cAMP and IP3). Option A is wrong because plasmodesmata do not contain connexins (those are animal-specific). Option B underestimates plasmodesmata capacity. Option D reverses the capabilities.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine the orientation of a single-pass transmembrane protein in the ER membrane \u2014 specifically, whether the N-terminus faces the cytosol or the ER lumen. Which technique would be most definitive?",
+      "options": [
+        "Treat intact microsomes with a membrane-impermeable protease and use an antibody against the N-terminal epitope in Western blotting to check if the N-terminal domain is degraded",
+        "Predict transmembrane topology using hydropathy plot analysis of the amino acid sequence",
+        "Stain cells with a fluorescent membrane dye and observe under confocal microscopy",
+        "Perform mass spectrometry on the purified protein to determine its amino acid sequence"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Treating intact ER microsomes (which are sealed right-side-out vesicles with the cytoplasmic face exposed) with a membrane-impermeable protease like proteinase K will selectively degrade protein domains exposed on the cytoplasmic surface while protecting luminal domains. If subsequent Western blotting with an anti-N-terminal antibody shows loss of the N-terminal signal, the N-terminus faces the cytosol. If the N-terminal signal is preserved, the N-terminus is in the ER lumen (protected from protease). This is a definitive experimental approach. Hydropathy plots (B) can predict transmembrane segments but cannot definitively determine orientation, especially for single-pass proteins where the positive-inside rule may not always apply. Fluorescent membrane dyes (C) do not reveal protein topology. Mass spectrometry (D) identifies sequence and modifications but does not reveal membrane orientation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Ran GTPase cycle is essential for nucleocytoplasmic transport. Which of the following correctly describes the distribution of Ran regulators?",
+      "options": [
+        "RanGEF is in the cytoplasm and RanGAP is in the nucleus",
+        "Both RanGEF and RanGAP are in the cytoplasm",
+        "RanGEF (RCC1) is in the nucleus and RanGAP is in the cytoplasm",
+        "Both RanGEF and RanGAP are in the nucleus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The asymmetric distribution of Ran regulators creates a steep RanGTP/RanGDP gradient across the nuclear envelope that drives directional transport. RanGEF (also called RCC1, Regulator of Chromosome Condensation 1) is chromatin-bound in the nucleus, where it catalyzes the exchange of GDP for GTP on Ran, maintaining high RanGTP concentration in the nucleus. RanGAP (Ran GTPase-Activating Protein) is cytoplasmic (associated with the cytoplasmic filaments of nuclear pores via RanBP2), where it stimulates GTP hydrolysis, maintaining low RanGTP (high RanGDP) in the cytoplasm. This gradient ensures that importin-cargo complexes release their cargo in the nucleus (where RanGTP binds importin) and exportin-cargo complexes release their cargo in the cytoplasm (where RanGTP is hydrolyzed to RanGDP).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which feature distinguishes free ribosomes from membrane-bound ribosomes in eukaryotic cells?",
+      "options": [
+        "Free ribosomes synthesize cytosolic and nuclear proteins, while bound ribosomes synthesize secretory, membrane, and organellar proteins destined for the endomembrane system",
+        "Free ribosomes use a different genetic code than bound ribosomes",
+        "Bound ribosomes are permanently attached to the ER and cannot become free ribosomes",
+        "Free ribosomes are structurally different (smaller) from bound ribosomes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Free and membrane-bound ribosomes are structurally identical 80S ribosomes. The distinction lies in the mRNA being translated: if the mRNA encodes a protein with an ER signal sequence, the signal sequence emerging from the ribosome is recognized by SRP, which directs the ribosome to the ER membrane via the SRP receptor, making it a 'bound' ribosome. If the mRNA lacks a signal sequence, translation proceeds on free ribosomes in the cytosol. Free ribosomes produce proteins destined for the cytosol, nucleus (using NLS for import), mitochondria, chloroplasts, and peroxisomes. Bound ribosomes produce proteins entering the endomembrane system: secretory proteins, ER/Golgi-resident proteins, lysosomal enzymes, and plasma membrane proteins. Ribosomes are interchangeable (C is false), structurally identical (A is false), and use the same genetic code (D is false).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Zellweger syndrome results from mutations in PEX genes required for peroxisome biogenesis. Which metabolic consequence would you most directly expect in affected individuals?",
+      "options": [
+        "Deficiency in glycolysis leading to energy depletion",
+        "Inability to produce ATP via oxidative phosphorylation",
+        "Inability to synthesize cholesterol",
+        "Accumulation of very-long-chain fatty acids (VLCFAs) due to defective beta-oxidation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Peroxisomes are the exclusive site of beta-oxidation of very-long-chain fatty acids (>C22) in animal cells. In Zellweger syndrome, PEX gene mutations prevent proper import of peroxisomal matrix enzymes, rendering peroxisomes non-functional. This leads to dramatic accumulation of VLCFAs (particularly C26:0 and C26:1) in plasma and tissues, which is diagnostic. VLCFAs are too long for mitochondrial beta-oxidation enzymes, so they cannot be compensated for by mitochondria. Cholesterol synthesis (A) occurs primarily in the ER and is not directly affected. Glycolysis (C) occurs in the cytosol and is unrelated. Oxidative phosphorylation (D) occurs in mitochondria, not peroxisomes. Zellweger patients also show impaired plasmalogen synthesis, bile acid synthesis, and phytanic acid oxidation, all peroxisomal functions.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "During the secretory pathway, SNARE proteins mediate membrane fusion. Which correctly describes the roles of v-SNAREs and t-SNAREs?",
+      "options": [
+        "Both v-SNAREs and t-SNAREs are on the vesicle and interact with lipid rafts on the target",
+        "v-SNAREs on the vesicle membrane interact with t-SNAREs on the target membrane to form a four-helix bundle that pulls the membranes together",
+        "t-SNAREs on the vesicle interact with v-SNAREs on the target to create a pore",
+        "NSF and alpha-SNAP form the SNARE complex while v-SNAREs and t-SNAREs disassemble it"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Vesicle-associated SNAREs (v-SNAREs, such as VAMP/synaptobrevin) on the transport vesicle interact with target membrane SNAREs (t-SNAREs, such as syntaxin and SNAP-25 on the plasma membrane) to form a trans-SNARE complex. This complex is a four-helix coiled-coil bundle (one helix from the v-SNARE, one from syntaxin, and two from SNAP-25 in the case of synaptic exocytosis) that zippers from the N-termini toward the C-termini (membrane-anchored ends), pulling the two membranes into close apposition and driving fusion. After fusion, the resulting cis-SNARE complex on the same membrane is disassembled by NSF (an AAA+ ATPase) and its cofactor alpha-SNAP, recycling the SNAREs for another round. Option B reverses the locations. Option C is incorrect. Option D reverses the assembly/disassembly roles.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the centrosome and centrioles:\nS1: The centrosome is the primary microtubule-organizing center (MTOC) in animal cells\nS2: Centrioles are required for microtubule nucleation at the centrosome\nS3: Plant cells lack centrioles but still form mitotic spindles\nS4: Gamma-tubulin ring complexes at the centrosome serve as templates for microtubule nucleation",
+      "options": [
+        "TTTT",
+        "TFTT",
+        "TFTF",
+        "TFFT"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: The centrosome, consisting of two centrioles surrounded by pericentriolar material (PCM), is the main MTOC in animal cells and nucleates most cytoplasmic microtubules. S2 is FALSE: Centrioles are not required for microtubule nucleation. The PCM contains the actual nucleation machinery (gamma-tubulin ring complexes). Centrioles organize and recruit PCM but are not the nucleating agents themselves. Laser ablation of centrioles does not prevent microtubule nucleation as long as PCM remains. S3 is TRUE: Plant cells lack centrioles entirely but successfully form mitotic spindles using distributed MTOCs on the nuclear envelope and pre-prophase band, demonstrating that centrioles are not essential for spindle assembly. S4 is TRUE: Gamma-tubulin ring complexes (gamma-TuRCs) serve as templates that nucleate microtubule assembly, with the gamma-tubulin subunits matching the 13-protofilament architecture of the microtubule minus end.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which organelle is responsible for the synthesis of most cellular lipids, including phospholipids that are then distributed to other organelles?",
+      "options": [
+        "Smooth endoplasmic reticulum",
+        "Peroxisomes",
+        "Golgi apparatus",
+        "Mitochondria"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The smooth endoplasmic reticulum (SER) is the primary site of phospholipid biosynthesis in eukaryotic cells. Enzymes on the cytosolic face of the ER membrane synthesize phospholipids from glycerol-3-phosphate, fatty acyl-CoA, and head group precursors. Flippases then transfer some newly synthesized phospholipids from the cytosolic to the luminal leaflet to maintain bilayer symmetry. These phospholipids are then distributed to other organelles via vesicular transport (to Golgi, plasma membrane, endosomes) or via lipid transfer proteins at membrane contact sites (to mitochondria, peroxisomes). The Golgi (A) modifies lipids (glycolipid synthesis, sphingomyelin synthesis) but is not the primary site of phospholipid production. Mitochondria (C) synthesize cardiolipin and PE but depend on the ER for most other lipids. Peroxisomes (D) synthesize plasmalogens but not bulk phospholipids.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher labels cells with 3H-leucine (radioactive amino acid) and performs autoradiography at different time points to track the secretory pathway:\n\nTime (min) | Location of silver grains\n5 | Rough ER\n15 | Golgi apparatus\n30 | Secretory vesicles near plasma membrane\n60 | Extracellular space\n\nIf the researcher adds monensin (an ionophore that disrupts the pH gradient in Golgi cisternae) at t = 10 min, what would the autoradiogram show at t = 30 min?",
+      "options": [
+        "Silver grains at the plasma membrane, as monensin accelerates secretion",
+        "Silver grains accumulated in the Golgi apparatus, as monensin blocks trans-Golgi sorting and vesicle budding",
+        "Silver grains in the rough ER, as monensin blocks ER-to-Golgi transport",
+        "No silver grains anywhere, as monensin causes protein degradation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Monensin is a Na+/H+ ionophore that dissipates the pH gradient within Golgi cisternae. The progressive acidification from cis to trans Golgi (pH 6.7 to 6.0) is essential for proper glycan processing, protein sorting, and vesicle formation. By neutralizing Golgi pH, monensin disrupts receptor-ligand interactions required for cargo sorting at the trans-Golgi network, inhibits clathrin-coated vesicle formation, and causes Golgi cisternae swelling. Since monensin is added at t = 10 min, when proteins are transiting from ER to Golgi, they would arrive at the Golgi normally but then accumulate there because the subsequent sorting and transport steps are blocked. The proteins would not be degraded (D), and ER-to-Golgi transport (COPII-mediated) is not directly affected by monensin (C). Secretion would be blocked, not accelerated (A).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Desmosomes and hemidesmosomes both anchor to intermediate filaments, but they differ in their cell-surface adhesion molecules. Which correctly describes this difference?",
+      "options": [
+        "Desmosomes use selectins; hemidesmosomes use connexins",
+        "Desmosomes use integrins for cell-cell adhesion; hemidesmosomes use cadherins for cell-ECM adhesion",
+        "Both use cadherins but connect to different intermediate filament types",
+        "Desmosomes use cadherins (desmogleins and desmocollins) for cell-cell adhesion; hemidesmosomes use integrins for cell-ECM adhesion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Desmosomes (maculae adherentes) are cell-cell junctions that use desmosomal cadherins \u2014 desmoglein and desmocollin \u2014 as their transmembrane adhesion molecules. These cadherins engage in calcium-dependent homophilic interactions with cadherins on the adjacent cell. Intracellularly, they connect through plakoglobin and desmoplakin to keratin intermediate filaments. Hemidesmosomes anchor epithelial cells to the underlying basement membrane (ECM) using alpha6-beta4 integrins as their transmembrane adhesion molecules, which bind to laminin in the basal lamina. Intracellularly, hemidesmosomes connect through plectin and BP230 to keratin intermediate filaments. Option C reverses the adhesion molecules. Options B and D are factually incorrect. This distinction is clinically important: autoimmune pemphigus targets desmosomal cadherins (cell-cell), while bullous pemphigoid targets hemidesmosomal proteins (cell-ECM).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which statement about the plant cell vacuole is INCORRECT?",
+      "options": [
+        "The central vacuole stores pigments like anthocyanins that contribute to flower color",
+        "The vacuole is the primary site of oxidative phosphorylation in plant cells",
+        "The tonoplast (vacuolar membrane) contains H+-ATPases and H+-PPases that acidify the vacuolar lumen",
+        "The vacuole occupies up to 80% of the cell volume and generates turgor pressure"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The vacuole is NOT involved in oxidative phosphorylation \u2014 that occurs in mitochondria. The plant central vacuole has diverse functions including: maintaining turgor pressure through osmotic water uptake (C is correct, the vacuole can occupy 80-90% of cell volume in mature plant cells); storing pigments like anthocyanins that determine flower and fruit colors (B is correct); storing nutrients, ions (Ca2+, K+, NO3-), secondary metabolites, and defense compounds (alkaloids, tannins); serving as a degradative compartment analogous to lysosomes (containing acid hydrolases); and detoxification by sequestering heavy metals and xenobiotics. The tonoplast (A is correct) contains V-type H+-ATPases and H+-pyrophosphatases that pump protons into the vacuole, maintaining acidic pH (typically 5.0-5.5) that creates a proton gradient used for secondary active transport of solutes.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To study whether a protein is glycosylphosphatidylinositol (GPI)-anchored to the outer leaflet of the plasma membrane, a researcher should:",
+      "options": [
+        "Treat live cells with phospholipase C (PI-PLC) and check if the protein is released into the culture medium",
+        "Use a high-salt wash to strip the protein from the membrane",
+        "Treat cells with trypsin and check for protein degradation",
+        "Use FRAP to measure the protein's lateral mobility"
+      ],
+      "correctAnswer": "A",
+      "explanation": "GPI-anchored proteins are attached to the outer leaflet of the plasma membrane via a glycosylphosphatidylinositol anchor. Phosphatidylinositol-specific phospholipase C (PI-PLC) specifically cleaves the phosphodiester bond between the inositol ring and the diacylglycerol moiety of the GPI anchor, releasing the protein from the membrane into the extracellular medium. This release can be detected by measuring the protein in conditioned medium via Western blotting or ELISA. High-salt washes (B) would release peripheral proteins but not GPI-anchored proteins, which are embedded in the lipid bilayer via their lipid anchor. Trypsin treatment (C) would cleave the extracellular domain of any surface protein (transmembrane or GPI-anchored), so it cannot distinguish between them. FRAP (D) measures lateral mobility but cannot specifically identify GPI anchoring, though GPI-anchored proteins do tend to associate with lipid rafts.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Chloroplasts and mitochondria both have double membranes, but their inner membrane systems differ fundamentally. Which comparison is correct?",
+      "options": [
+        "The thylakoid lumen is continuous with the intermembrane space, while cristae are continuous with the outer membrane",
+        "Both organelles have their electron transport chains in the inner boundary membrane",
+        "Mitochondrial cristae increase surface area for the ETC; thylakoid membranes in chloroplasts are the site of the Calvin cycle",
+        "Mitochondrial cristae house the ETC and ATP synthase; thylakoid membranes house the photosynthetic light reactions including photosystems and ATP synthase"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In mitochondria, the inner membrane folds into cristae where the electron transport chain complexes (I-IV) and ATP synthase (Complex V) are embedded. The proton gradient is established by pumping H+ from the matrix into the intermembrane space/cristae lumen. In chloroplasts, the thylakoid membrane is an independent internal membrane system (not continuous with the inner membrane) that houses the photosynthetic light reaction machinery: Photosystem II, cytochrome b6f complex, Photosystem I, and ATP synthase. The proton gradient is established by pumping H+ into the thylakoid lumen. Option A is wrong because the Calvin cycle occurs in the stroma, not thylakoid membranes. Option B is incorrect; chloroplast ETC is in thylakoids, not the inner boundary membrane. Option D is wrong; the thylakoid lumen is a distinct compartment not continuous with the intermembrane space.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher observes that treating cells with nocodazole (a microtubule-depolymerizing drug) causes the Golgi apparatus to fragment and disperse throughout the cytoplasm. Which conclusion is best supported?",
+      "options": [
+        "The Golgi apparatus is a stable, self-organizing organelle independent of the cytoskeleton",
+        "Microtubule integrity and dynein-mediated transport are required to maintain the Golgi's perinuclear position",
+        "Nocodazole directly disrupts Golgi membrane proteins",
+        "Actin filaments normally prevent Golgi fragmentation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The perinuclear position of the Golgi apparatus in animal cells depends on microtubules and the minus-end-directed motor protein dynein. Golgi membranes are constantly trafficked along microtubules, with dynein pulling Golgi-derived vesicles and tubules toward the minus ends anchored at the centrosome (MTOC) near the nucleus. When nocodazole depolymerizes microtubules, Golgi elements can no longer be transported to and maintained at the cell center, causing the Golgi to fragment into mini-stacks that disperse throughout the cytoplasm. Importantly, these mini-stacks remain functional for glycosylation and secretion, demonstrating that the Golgi's perinuclear location is not required for its enzymatic activity but is maintained by microtubule-dependent transport. Option A contradicts the observation. Option C is incorrect; nocodazole targets tubulin, not Golgi proteins. Option D is incorrect; actin is not primarily responsible for Golgi positioning.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about lysosomes:\nS1: Lysosomal enzymes are acid hydrolases with optimal activity at pH 4.5-5.0\nS2: Lysosomes receive extracellular material through phagocytosis and intracellular material through autophagy\nS3: Lysosomal storage diseases result from deficiencies in lysosomal export proteins that fail to remove waste products\nS4: The lysosomal membrane contains highly glycosylated proteins (LAMPs) that protect it from self-digestion",
+      "options": [
+        "TTTT",
+        "TTFT",
+        "TTTF",
+        "TFTT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Lysosomal hydrolases (including proteases, lipases, glycosidases, phosphatases, and nucleases) function optimally at acidic pH (4.5-5.0), maintained by V-type H+-ATPases in the lysosomal membrane. This acidic environment also serves as a safety mechanism; if lysosomal contents leak into the neutral-pH cytosol, the enzymes become inactive. S2 is TRUE: Lysosomes are the convergence point for endocytic pathways (phagocytosis, receptor-mediated endocytosis) bringing extracellular material and autophagic pathways (macroautophagy, microautophagy, chaperone-mediated autophagy) delivering intracellular material for degradation. S3 is FALSE: Most lysosomal storage diseases (Tay-Sachs, Gaucher, Niemann-Pick) result from deficiencies in specific lysosomal hydrolases, not export proteins. Without functional enzymes, undigested substrates accumulate within lysosomes. S4 is TRUE: Lysosome-associated membrane proteins (LAMP-1 and LAMP-2) are heavily glycosylated on their luminal domains, forming a glycocalyx layer that protects the membrane from digestion by the resident hydrolases.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A cell biologist uses electron microscopy to measure the surface area of various membrane compartments in a rat liver hepatocyte and obtains the following data:\n\nCompartment | Surface area (% of total)\nPlasma membrane | 2%\nRough ER | 35%\nSmooth ER | 16%\nGolgi apparatus | 7%\nMitochondria (outer + inner) | 32%\nNucleus (outer + inner) | 4%\nOther (endosomes, lysosomes) | 4%\n\nWhat conclusion is best supported by these data?",
+      "options": [
+        "The plasma membrane is the largest membrane compartment because it encloses the entire cell",
+        "The ER constitutes the largest single membrane system, consistent with its role in protein and lipid synthesis",
+        "Mitochondrial membranes are minimal because hepatocytes have low energy demands",
+        "The Golgi has the largest membrane area due to its central role in protein processing"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data clearly show that the combined rough ER (35%) and smooth ER (16%) account for 51% of total cellular membrane area, making the ER by far the largest membrane system. This is consistent with the ER's central roles in protein synthesis and folding (rough ER), lipid synthesis, detoxification (smooth ER is particularly abundant in hepatocytes for drug metabolism), and calcium storage. The plasma membrane (A) constitutes only 2% of total membrane, which is counterintuitive but reflects the massive amplification of internal membranes in eukaryotic cells. Mitochondrial membranes (32%) are the second largest system, reflecting the high metabolic demands of hepatocytes (C is incorrect). The Golgi (D) accounts for only 7%. These proportions vary dramatically between cell types based on their specialized functions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following best explains why eukaryotic cells, but not prokaryotic cells, require an elaborate endomembrane system for protein secretion?",
+      "options": [
+        "Prokaryotic cells have more efficient ribosomes that can secrete proteins directly",
+        "Prokaryotic cells do not secrete proteins",
+        "Eukaryotic cells lack the Sec translocon found in prokaryotes",
+        "Eukaryotic cells are larger and need internal compartmentalization for spatial organization of biosynthetic and degradative pathways that would otherwise interfere with each other"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Eukaryotic cells are typically 10-100 times larger in linear dimensions than prokaryotes, creating a volume difference of 1,000 to 1,000,000-fold. The endomembrane system (ER, Golgi, endosomes, lysosomes) provides internal compartmentalization that: (1) creates distinct biochemical environments (e.g., oxidizing ER lumen vs. reducing cytosol; acidic lysosomes vs. neutral cytoplasm); (2) spatially separates biosynthetic and degradative pathways; (3) enables efficient protein sorting and quality control; (4) provides enormous membrane surface area for membrane-bound enzyme systems. Prokaryotes can secrete proteins directly across their plasma membrane using Sec and Tat pathways (A is wrong). Prokaryotes do have a Sec translocon homologous to the eukaryotic one (D is wrong). The efficiency claim in C is misleading; ribosome efficiency does not determine the need for compartmentalization.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher discovers a novel organelle and wants to determine if it is derived from the endomembrane system or, like mitochondria, has an endosymbiotic origin. Which combination of evidence would MOST strongly support an endosymbiotic origin?",
+      "options": [
+        "The organelle has a single membrane and imports proteins from the cytosol",
+        "The organelle contains its own circular DNA, 70S ribosomes, replicates by binary fission, and phylogenetic analysis places its genome within a bacterial clade",
+        "The organelle is found only in eukaryotic cells and can be stained with specific dyes",
+        "The organelle produces ATP and has a double membrane"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The strongest evidence for endosymbiotic origin requires multiple independent lines of support: (1) circular DNA resembling bacterial genomes, not packaged with histones; (2) 70S ribosomes identical in size and antibiotic sensitivity to bacterial ribosomes (sensitive to chloramphenicol and streptomycin, resistant to cycloheximide); (3) replication by binary fission independent of the host cell cycle; and (4) phylogenetic analysis placing the organelle's genome (particularly rRNA genes) within a specific bacterial lineage. These four lines of evidence together provide overwhelming support, as seen for mitochondria (related to alphaproteobacteria) and chloroplasts (related to cyanobacteria). A double membrane and ATP production (D) are consistent with but not sufficient for endosymbiotic origin. A single membrane (A) would argue against it. Being eukaryote-specific (C) provides no information about origin.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The unfolded protein response (UPR) is activated when misfolded proteins accumulate in the ER lumen. Which of the following is NOT a consequence of UPR activation?",
+      "options": [
+        "Upregulation of ER chaperone genes like BiP/GRP78",
+        "Immediate activation of apoptosis upon any detection of misfolded proteins",
+        "Expansion of the ER membrane to increase folding capacity",
+        "Attenuation of global protein translation via PERK-mediated phosphorylation of eIF2-alpha"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The UPR is initially a pro-survival response that attempts to restore ER homeostasis through three parallel signaling branches: IRE1 (which splices XBP1 mRNA to produce a transcription factor upregulating chaperones and ERAD components), PERK (which phosphorylates eIF2-alpha to attenuate global translation, reducing the protein folding load while selectively translating ATF4), and ATF6 (which is cleaved in the Golgi to generate a transcription factor for ER chaperone genes). These responses increase folding capacity (A), reduce new protein influx (B), and expand ER membrane (C). Apoptosis (D) is NOT immediate; it occurs only when the UPR fails to resolve the ER stress after prolonged activation, through mechanisms including CHOP (a pro-apoptotic transcription factor induced by ATF4) and IRE1-mediated activation of ASK1/JNK. The UPR is thus an adaptive response with apoptosis as a last resort.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Microvilli on the apical surface of intestinal epithelial cells dramatically increase surface area for absorption. Which cytoskeletal component forms the core of each microvillus?",
+      "options": [
+        "Microtubules cross-linked by MAP2",
+        "Intermediate filaments composed of keratin",
+        "Actin filament bundles cross-linked by villin and fimbrin",
+        "Myosin II thick filaments"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Each microvillus contains a core bundle of 20-30 parallel actin filaments oriented with their plus (barbed) ends at the tip and minus (pointed) ends extending into the terminal web. These filaments are cross-linked by two bundling proteins: villin (a calcium-sensitive bundler unique to microvilli) and fimbrin (also called plastin, a more widely distributed bundler). The actin bundles are attached laterally to the plasma membrane by myosin-1a (a single-headed myosin that bridges actin to the membrane) and calmodulin. At the base, actin bundles extend into the terminal web, which contains spectrin, myosin II, and intermediate filaments. Microtubules (A) are not present in microvilli. Intermediate filaments (B) are in the terminal web below microvilli but not in the core. Myosin II (D) provides contractile force in the terminal web but does not form the structural core.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about cell junctions in animal tissues:\nS1: Adherens junctions are linked to actin filaments and form a continuous adhesion belt in epithelial cells\nS2: Gap junctions allow direct electrical coupling between cardiac muscle cells\nS3: Tight junctions are always completely impermeable to all ions and molecules\nS4: Desmosomes provide strong adhesion to resist mechanical stress in tissues like skin and heart",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TFFT",
+        "TTTF"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Adherens junctions (zonula adherens) form a continuous belt around epithelial cells, using E-cadherin as the adhesion molecule. The cytoplasmic domain of E-cadherin binds beta-catenin and p120-catenin, which connect via alpha-catenin to the circumferential actin belt. S2 is TRUE: Gap junctions between cardiac myocytes (at intercalated discs) allow passage of ions (Na+, K+, Ca2+) and small molecules, enabling rapid electrical impulse propagation that coordinates heart contraction. Connexin43 is the primary gap junction protein in ventricular cardiomyocytes. S3 is FALSE: Tight junctions are NOT completely impermeable. They exhibit selective permeability determined by which claudin isoforms are expressed. For example, claudin-2 forms cation-selective pores in leaky epithelia (proximal tubule), while claudin-4 and claudin-8 create tight barriers in collecting duct epithelia. S4 is TRUE: Desmosomes provide strong mechanical adhesion in tissues subject to shear stress, using desmosomal cadherins linked to intermediate filaments.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The ER-associated degradation (ERAD) pathway removes misfolded proteins from the ER. Which describes the fate of ERAD substrates?",
+      "options": [
+        "They are retrotranslocated to the cytosol, ubiquitinated, and degraded by the 26S proteasome",
+        "They aggregate in the ER and are eventually secreted by exocytosis",
+        "They are degraded by proteases within the ER lumen",
+        "They are transported to lysosomes via autophagosomes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "ERAD is a quality control pathway that identifies terminally misfolded proteins in the ER and targets them for cytosolic degradation. The process involves: (1) recognition of misfolded proteins by ER chaperones and lectins (e.g., EDEM recognizes trimmed mannose residues on misfolded glycoproteins); (2) retrotranslocation (dislocation) through a protein channel (likely involving Hrd1, Derlin-1, or Sec61) from the ER lumen back to the cytosol; (3) ubiquitination by ER-associated E3 ubiquitin ligases (Hrd1, gp78) on the cytosolic side; and (4) extraction from the membrane by the p97/VCP AAA-ATPase complex and delivery to the 26S proteasome for proteolytic degradation. ER luminal proteases (A) do not handle ERAD substrates. Autophagy (C) handles aggregates too large for ERAD (ER-phagy) but is not the primary ERAD pathway. Secretion of aggregates (D) does not normally occur.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which characteristic is shared by bacteria AND archaea but NOT by eukaryotes?",
+      "options": [
+        "Cell walls containing peptidoglycan",
+        "Presence of 80S ribosomes",
+        "Circular chromosomes located in a nucleoid region without a nuclear envelope",
+        "Membrane-bound organelles for compartmentalization"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Both bacteria and archaea are prokaryotes that share the feature of having their DNA in a nucleoid region without a surrounding nuclear envelope. Their chromosomes are typically circular (though some prokaryotes have linear chromosomes). Eukaryotes, by contrast, have their DNA enclosed within a nuclear envelope-bounded nucleus. Cell walls containing peptidoglycan (B) are found ONLY in bacteria, not archaea (which have pseudopeptidoglycan, S-layers, or other wall types). 80S ribosomes (C) are found in eukaryotes; prokaryotes have 70S ribosomes. Membrane-bound organelles (D) are a defining feature of eukaryotes, absent in typical prokaryotes. Interestingly, archaeal ribosomes are 70S like bacteria but share more protein similarity with eukaryotic ribosomes, and archaeal transcription/translation machinery more closely resembles eukaryotic systems.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A study compares the lipid composition of various cellular membranes in a mammalian hepatocyte:\n\nMembrane | Cholesterol (%) | Sphingolipids (%) | Phospholipids (%)\nER | 6 | 5 | 89\nGolgi (cis) | 10 | 8 | 82\nGolgi (trans) | 20 | 15 | 65\nPlasma membrane | 35 | 25 | 40\n\nWhat trend is revealed and what is its functional significance?",
+      "options": [
+        "Cholesterol and sphingolipid content decrease along the secretory pathway, making the plasma membrane more fluid",
+        "Cholesterol and sphingolipid content increase progressively along the secretory pathway from ER to plasma membrane, producing a thicker and more rigid bilayer at the cell surface",
+        "Phospholipid content increases along the secretory pathway to accommodate more membrane proteins",
+        "The lipid composition is uniform across all compartments, confirming free diffusion of lipids"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data clearly demonstrate a progressive enrichment of cholesterol (6% to 35%) and sphingolipids (5% to 25%) from the ER through the Golgi to the plasma membrane, with a corresponding decrease in phospholipid proportion. This gradient has critical functional consequences: cholesterol fills spaces between kinked unsaturated phospholipid tails, reducing membrane fluidity and permeability; sphingolipids have saturated acyl chains that pack tightly with cholesterol to form liquid-ordered domains (lipid rafts). The resulting plasma membrane is thicker (~45 Angstroms vs. ~35 Angstroms for ER) and more rigid, providing a robust barrier against the extracellular environment. The thin, fluid ER membrane facilitates protein folding, translocation, and membrane dynamics. This lipid gradient is maintained by selective vesicular transport and lipid transfer proteins at membrane contact sites.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The mitochondrial contact site and cristae organizing system (MICOS complex) is essential for cristae junction formation. Loss of MICOS would most directly result in:",
+      "options": [
+        "Disruption of cristae architecture with detached cristae floating freely in the matrix, reducing oxidative phosphorylation efficiency",
+        "Conversion of mitochondria into peroxisomes",
+        "Increased rate of mitochondrial fission",
+        "Loss of mitochondrial DNA replication"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The MICOS complex (composed of Mic10, Mic12, Mic19, Mic25, Mic26, Mic27, and Mic60/mitofilin subunits) is located at cristae junctions, the narrow tubular connections between cristae and the inner boundary membrane. MICOS maintains cristae junction morphology and connects the inner membrane to the outer membrane via interactions with SAM and TOM complexes. Loss of MICOS causes cristae to detach from the inner boundary membrane, forming concentric or stacked membrane structures trapped within the matrix. This disrupts the normal cristae architecture essential for concentrating protons within the intracristal space, reducing the local proton gradient at ATP synthase and decreasing oxidative phosphorylation efficiency by 30-50%. DNA replication (A) is unrelated to MICOS. Conversion to peroxisomes (C) is biologically impossible. Fission rates (D) are regulated by Drp1 and Fis1, not MICOS.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine whether a secreted protein undergoes O-linked glycosylation in the Golgi, which control experiment is essential?",
+      "options": [
+        "Compare the molecular weight of the protein produced in cells treated with tunicamycin (an N-linked glycosylation inhibitor) versus untreated cells",
+        "Compare the molecular weight of the protein produced in cells treated with brefeldin A (which collapses the Golgi into the ER) versus untreated cells, then probe with an O-GalNAc-specific lectin",
+        "Treat the secreted protein with trypsin and analyze the fragments by mass spectrometry",
+        "Express the protein in a bacterial system that lacks glycosylation machinery and compare molecular weight to the eukaryotic version"
+      ],
+      "correctAnswer": "B",
+      "explanation": "O-linked glycosylation (specifically mucin-type, initiated by GalNAc transferases) occurs primarily in the Golgi apparatus, unlike N-linked glycosylation which begins in the ER. Brefeldin A collapses the Golgi into the ER, preventing proteins from accessing Golgi-resident glycosyltransferases. If the protein undergoes O-linked glycosylation, BFA-treated cells would produce protein lacking O-glycans, detectable as a molecular weight decrease and loss of reactivity with O-GalNAc-specific lectins (like VVA or PNA). This directly tests whether the Golgi is required for the modification. Tunicamycin (A) blocks N-linked glycosylation in the ER but does not affect O-linked glycosylation, so it cannot answer the question. Trypsin digestion (C) maps cleavage sites but does not specifically identify O-glycosylation sites. Bacterial expression (D) would lack all glycosylation, making it impossible to distinguish N-linked from O-linked contributions.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Certain bacterial pathogens like Listeria monocytogenes hijack the host cell's actin cytoskeleton to propel themselves through the cytoplasm. Which bacterial protein mediates this actin-based motility?",
+      "options": [
+        "ActA, which activates the Arp2/3 complex to nucleate branched actin polymerization at one pole of the bacterium",
+        "Invasin, which triggers receptor-mediated endocytosis",
+        "Listeriolysin O, which forms pores in the phagosomal membrane",
+        "InlA (Internalin A), which binds E-cadherin on host cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "After Listeria escapes the phagosome (using listeriolysin O and phospholipases), it expresses ActA on its surface. ActA is an asymmetrically distributed surface protein that mimics WASP family proteins by directly activating the Arp2/3 complex. The Arp2/3 complex nucleates branched actin filaments at one pole of the bacterium, generating a 'comet tail' of polymerized actin that propels the bacterium through the cytoplasm at speeds of ~10 micrometers per minute. This actin-based motility allows Listeria to reach the plasma membrane and push into adjacent cells, spreading infection without exposure to the extracellular immune system. Invasin (A) is used by Yersinia, not Listeria. Listeriolysin O (C) mediates phagosomal escape, not cytoplasmic motility. InlA (D) is an invasion protein for initial host cell entry.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which is the correct order of endomembrane compartments through which a newly synthesized lysosomal hydrolase passes before reaching the lysosome?",
+      "options": [
+        "Rough ER -> cis-Golgi -> trans-Golgi network -> late endosome -> lysosome",
+        "Rough ER -> trans-Golgi network -> plasma membrane -> lysosome",
+        "Smooth ER -> trans-Golgi -> plasma membrane -> early endosome -> lysosome",
+        "Free ribosomes -> cytosol -> lysosome (direct import)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Lysosomal hydrolases follow the secretory pathway with specific sorting signals. They are synthesized on rough ER ribosomes with an N-terminal signal sequence directing them into the ER lumen, where they receive N-linked glycans and fold with help from ER chaperones. They transit through the cis-Golgi where GlcNAc-phosphotransferase recognizes a signal patch on the enzyme surface and adds GlcNAc-phosphate to mannose residues. After GlcNAc removal to expose mannose-6-phosphate (M6P), M6P receptors in the trans-Golgi network sort the hydrolases into clathrin-coated vesicles with AP-1 adaptors. These vesicles deliver the enzymes to late endosomes, where the acidic pH causes M6P receptor release. The late endosome then matures into or fuses with a lysosome. Option B incorrectly routes through smooth ER and plasma membrane. Option C skips the endosomal compartment. Option D describes no known pathway for lysosomal enzymes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which statement about the extracellular matrix component collagen is correct?",
+      "options": [
+        "Procollagen undergoes hydroxylation of proline and lysine residues in the ER (requiring vitamin C as a cofactor), assembles into a triple helix, and is cleaved extracellularly to form mature collagen fibrils",
+        "Collagen is synthesized as a mature triple helix that is directly secreted without any post-translational modification",
+        "Collagen molecules are synthesized and assembled entirely in the extracellular space",
+        "Collagen is a globular protein that forms a meshwork through disulfide bonds exclusively"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Collagen biosynthesis is a complex multistep process. Individual alpha chains (pro-alpha chains) are synthesized on rough ER ribosomes and enter the ER lumen where prolyl hydroxylase and lysyl hydroxylase (both requiring ascorbic acid/vitamin C as a cofactor) hydroxylate specific proline and lysine residues. Hydroxylation is essential for proper triple helix stability through hydrogen bonding. Three pro-alpha chains then assemble into a triple-helical procollagen molecule, stabilized by disulfide bonds in the C-propeptide domain. Procollagen is secreted, and extracellular procollagen peptidases cleave the N- and C-terminal propeptides to generate tropocollagen, which self-assembles into collagen fibrils. Lysyl oxidase then cross-links fibrils for tensile strength. Vitamin C deficiency impairs hydroxylation, causing scurvy (weak collagen). Options A, C, and D contain fundamental errors about collagen structure and biosynthesis.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A mutation abolishes the GTPase activity of dynamin. What would be the immediate cellular consequence?",
+      "options": [
+        "Constitutive secretion of all proteins without sorting",
+        "Accumulation of deeply invaginated clathrin-coated pits at the plasma membrane that cannot pinch off to form vesicles",
+        "Failure of COPII vesicle formation at ER exit sites",
+        "Inhibition of actin polymerization at the cell cortex"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Dynamin is a large GTPase essential for membrane fission during clathrin-mediated endocytosis. It assembles as a helical collar around the neck of invaginated clathrin-coated pits. GTP hydrolysis by dynamin drives a conformational change that constricts the collar, severing the membrane to release the clathrin-coated vesicle into the cytoplasm. If dynamin GTPase activity is abolished (as in the dominant-negative K44A mutant), dynamin can still assemble at coated pit necks but cannot hydrolyze GTP to drive fission. This results in deeply invaginated coated pits that remain connected to the plasma membrane by a thin neck, unable to pinch off. Actin polymerization (A) is not directly affected, though actin does assist in endocytosis. COPII vesicle formation (C) uses Sar1 GTPase, not dynamin. Secretion (D) is not directly affected since dynamin primarily acts in endocytic pathways.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about organelle inheritance during cell division:\nS1: Mitochondria are distributed to daughter cells by random partitioning during cytokinesis\nS2: The ER maintains continuity during mitosis and is distributed by association with the mitotic spindle\nS3: The Golgi apparatus fragments during prophase and reassembles in each daughter cell after mitosis\nS4: Centrosomes must be newly synthesized after each cell division since they cannot be inherited",
+      "options": [
+        "TTTT",
+        "FTTF",
+        "TTFF",
+        "FTTT"
+      ],
+      "correctAnswer": "FTTF",
+      "explanation": "S1 is FALSE: Mitochondrial distribution during cell division is not entirely random. While there is a stochastic component, mitochondria associate with cytoskeletal elements (particularly actin in yeast and microtubules in animal cells) that help ensure roughly equal partitioning. In budding yeast, specific mitochondrial transport mechanisms actively move mitochondria into the bud. S2 is TRUE: The ER network remains largely intact during mitosis (unlike the Golgi) and is partitioned to daughter cells in association with the spindle and through its connections to the nuclear envelope remnants. S3 is TRUE: The Golgi undergoes extensive fragmentation during prophase, driven by CDK1 and PLK1-mediated phosphorylation of Golgi structural proteins (GM130, GRASP55, GRASP65). The resulting Golgi fragments and vesicles are distributed and then reassemble through dephosphorylation in telophase. S4 is FALSE: Centrosomes are inherited; the mother cell's two centrioles each serve as templates for daughter centriole assembly during S phase (semi-conservative duplication), ensuring each daughter cell inherits one centrosome.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers use a pulse-chase experiment with radioactive amino acids to study the secretory pathway in pancreatic acinar cells. After a 5-minute pulse with 3H-leucine, cells are chased with unlabeled medium. Autoradiography reveals:\n\nChase time | % Label in ER | % Label in Golgi | % Label in zymogen granules | % Label secreted\n0 min | 90 | 8 | 2 | 0\n15 min | 20 | 60 | 18 | 2\n30 min | 5 | 20 | 55 | 20\n60 min | 2 | 5 | 25 | 68\n\nWhat can be concluded about the transit time from Golgi to secretion?",
+      "options": [
+        "Transit from Golgi to secretion takes approximately 5 minutes",
+        "The majority of protein is stored in zymogen granules and released upon stimulation, with constitutive secretion accounting for the gradual appearance of label in the secreted fraction",
+        "Proteins bypass the Golgi and are secreted directly from the ER",
+        "The secretory pathway in acinar cells is non-directional, with proteins moving randomly between compartments"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data reveal classic regulated secretion kinetics in pancreatic acinar cells. After the pulse, label moves from ER (90% at t=0) through the Golgi (peaking at 60% at t=15) to zymogen granules (peaking at 55% at t=30). Importantly, zymogen granules accumulate label (reaching 55% by 30 min) but then gradually decrease as protein is secreted. The slow, continuous release of label into the secreted fraction (rather than a sudden burst) indicates ongoing constitutive/basal secretion plus possible low-level stimulation. In vivo, the majority of digestive enzyme secretion is triggered by hormonal stimulation (CCK, secretin), causing mass exocytosis of stored zymogen granules. The data show that without strong stimulation, protein exits slowly. The pathway is clearly directional (D is wrong), does not bypass the Golgi (C is wrong), and the transit time is much longer than 5 minutes (A is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following best explains why antibiotics like chloramphenicol inhibit mitochondrial protein synthesis but not cytoplasmic protein synthesis in eukaryotic cells?",
+      "options": [
+        "Chloramphenicol specifically degrades mitochondrial mRNA",
+        "Mitochondrial ribosomes are 70S (similar to bacterial ribosomes), so they share sensitivity to antibiotics that target the 50S subunit, while cytoplasmic 80S ribosomes have a structurally different 60S subunit that chloramphenicol cannot bind",
+        "Chloramphenicol cannot cross the outer mitochondrial membrane",
+        "Mitochondria use a different genetic code, making them sensitive to chloramphenicol"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Chloramphenicol inhibits peptidyl transferase activity by binding to the 23S rRNA of the bacterial 50S ribosomal subunit. Mitochondrial ribosomes (55S in mammals, but evolutionarily derived from bacterial 70S ribosomes) retain structural similarity in their large subunit that allows chloramphenicol binding, consistent with the endosymbiotic origin of mitochondria from alpha-proteobacteria. Cytoplasmic eukaryotic ribosomes (80S) have a 60S large subunit with 28S rRNA that has a different structure at the chloramphenicol binding site, conferring resistance. This selective toxicity is clinically relevant: prolonged chloramphenicol use can cause bone marrow suppression partly through inhibition of mitochondrial protein synthesis in hematopoietic cells. The outer membrane is permeable via porins (A is wrong). The genetic code difference (C) is unrelated to antibiotic sensitivity. Chloramphenicol does not degrade mRNA (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to test whether a newly identified protein is a component of the nuclear pore complex (NPC). Which experimental strategy would provide the most definitive evidence?",
+      "options": [
+        "Show that the protein is found in the nucleus using immunofluorescence microscopy",
+        "Tag the protein with immunogold, perform cryo-electron tomography of nuclear envelopes, and demonstrate the gold particles localize specifically to the NPCs at a resolution sufficient to determine sub-NPC positioning",
+        "Demonstrate that overexpression of the protein increases the rate of nuclear import",
+        "Show that the protein co-immunoprecipitates with histones"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Immunogold labeling combined with cryo-electron tomography (cryo-ET) provides the most definitive evidence for NPC localization because it: (1) directly visualizes the protein's location at NPCs at near-molecular resolution; (2) can determine sub-NPC positioning (cytoplasmic face, central channel, nuclear basket); and (3) preserves native structure unlike conventional EM. Immunofluorescence (A) has insufficient resolution (~200 nm) to distinguish NPC from general nuclear envelope localization. Increased nuclear import rate upon overexpression (C) could indicate a transport factor rather than an NPC component. Co-immunoprecipitation with histones (D) would suggest chromatin association, not NPC localization. Additional supporting evidence would include mass spectrometry of purified NPCs, genetic interactions with known nucleoporins, and loss of NPC integrity upon depletion.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of membrane asymmetry means that the two leaflets of a biological membrane have different compositions. Which enzyme is primarily responsible for maintaining phospholipid asymmetry in the plasma membrane?",
+      "options": [
+        "Scramblases that randomly mix lipids between leaflets",
+        "Flippases (P4-ATPases) that actively translocate phosphatidylserine and phosphatidylethanolamine to the inner cytoplasmic leaflet",
+        "Phospholipase A2, which cleaves fatty acid tails",
+        "Sphingomyelinase that converts sphingomyelin to ceramide"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Membrane phospholipid asymmetry is actively maintained by ATP-dependent flippases (P4-type ATPases) that selectively translocate phosphatidylserine (PS) and phosphatidylethanolamine (PE) from the exoplasmic leaflet to the cytoplasmic leaflet. This ensures that PS and PE are concentrated in the inner leaflet while sphingomyelin, phosphatidylcholine, and glycolipids dominate the outer leaflet. Loss of this asymmetry, particularly the exposure of PS on the outer leaflet, serves as an 'eat me' signal for phagocytes during apoptosis (recognized by receptors like TIM-4). Scramblases (C) are calcium-activated enzymes that dissipate asymmetry (bidirectionally randomizing lipids), not maintain it \u2014 they are activated during apoptosis and platelet activation. Phospholipase A2 (A) cleaves fatty acids and does not translocate lipids between leaflets. Sphingomyelinase (D) is a degradative enzyme, not a translocator.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cystic fibrosis is caused by mutations in the CFTR gene. In the most common mutation (deltaF508), the CFTR protein misfolds and is retained in the ER. Which quality control mechanism is primarily responsible for preventing the mutant CFTR from reaching the plasma membrane?",
+      "options": [
+        "Golgi-resident enzymes cleave misfolded CFTR into inactive fragments",
+        "Autophagy selectively targets CFTR-containing vesicles",
+        "The calnexin/calreticulin chaperone cycle in the ER recognizes misfolded CFTR and targets it for ERAD",
+        "The proteasome directly degrades CFTR at the plasma membrane"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The deltaF508 CFTR mutation (deletion of phenylalanine at position 508 in nucleotide-binding domain 1) causes misfolding that is detected by the ER quality control system. The calnexin/calreticulin cycle is central: calnexin (membrane-bound) and calreticulin (soluble) are lectin chaperones that bind monoglucosylated N-glycans on newly synthesized glycoproteins, promoting proper folding. When glucosidase II removes the glucose, the protein is released. If it remains misfolded, UDP-glucose:glycoprotein glucosyltransferase (UGGT) re-adds glucose, sending it back into the cycle. After repeated failed folding attempts, the mannose residues are progressively trimmed by ER mannosidase I, creating a signal recognized by EDEM and OS-9, which target the protein for ERAD and proteasomal degradation. The proteasome is cytoplasmic, not at the plasma membrane (A). Autophagy (B) is not the primary mechanism. The Golgi (D) never sees the misfolded protein because ER retention prevents its transport.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "During receptor-mediated endocytosis of transferrin-bound iron, the transferrin receptor and its ligand follow a distinct recycling pathway. What happens to transferrin after endosomal acidification?",
+      "options": [
+        "Iron is released from transferrin due to the acidic pH, but apo-transferrin remains bound to the receptor and both are recycled to the cell surface where apo-transferrin dissociates at neutral pH",
+        "Transferrin is degraded in lysosomes along with the receptor",
+        "Both transferrin and its receptor are recycled to the plasma membrane, but transferrin is released extracellularly only at neutral pH",
+        "Transferrin dissociates from its receptor in the early endosome and is degraded in lysosomes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The transferrin cycle is unique among receptor-mediated endocytosis pathways. At the plasma membrane (pH 7.4), iron-loaded holo-transferrin binds to the transferrin receptor with high affinity. After internalization into early endosomes (pH ~6.0), the acidic environment causes conformational changes in transferrin that release the two bound Fe3+ ions (which are reduced to Fe2+ by STEAP3 reductase and transported into the cytosol by DMT1). Crucially, unlike most ligands that dissociate from their receptors at acidic pH, apo-transferrin (iron-free) actually binds MORE tightly to the transferrin receptor at acidic pH. The apo-transferrin-receptor complex is recycled to the cell surface, where the neutral pH of the extracellular fluid causes apo-transferrin to dissociate and be released back into the blood to capture more iron. Neither transferrin nor the receptor is degraded (A and B are wrong). Option C incorrectly states that both are recycled independently.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    }
+  ]
+}
