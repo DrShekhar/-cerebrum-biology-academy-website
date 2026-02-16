@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch27-34 Diversity of Life — Wave 2",
+    "version": 1,
+    "source": "olympiad-wave2",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "A microbiologist isolates a prokaryote from a hot spring (85 C, pH 2.0) and performs Gram staining, which yields no result (the cells do not retain either crystal violet or safranin). Biochemical analysis reveals that the cell membrane contains ether-linked branched-chain lipids (phytanyl groups) and the cell wall lacks peptidoglycan entirely. Ribosomal RNA sequencing places the organism in the domain Archaea. Which of the following best explains the Gram staining result?",
+      "options": [
+        "Archaea have pseudopeptidoglycan composed of N-acetyltalosaminuronic acid linked by beta-1,3 glycosidic bonds, which reacts atypically with crystal violet, producing an intermediate color that appears as no staining",
+        "Archaea are always Gram-negative because they all possess an outer membrane with lipopolysaccharide identical to that of Gram-negative bacteria",
+        "The extreme thermoacidophilic environment denatured the Gram stain reagents, so the negative result is an artifact of the environmental conditions rather than cell wall composition",
+        "This archaeon likely has a protein-based S-layer as its cell wall and lacks both peptidoglycan and pseudopeptidoglycan; since Gram staining differentiates cells based on peptidoglycan thickness and outer membrane presence, it cannot classify cells that lack peptidoglycan entirely"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Gram staining depends on peptidoglycan: Gram-positive cells have thick peptidoglycan that retains crystal violet-iodine complex after alcohol decolorization, while Gram-negative cells have thin peptidoglycan plus an outer membrane. Many archaea, especially extreme thermoacidophiles like Sulfolobus, lack both peptidoglycan and pseudopeptidoglycan, relying instead on a proteinaceous S-layer (surface layer) for structural support. Since the Gram stain mechanism requires peptidoglycan, organisms lacking it entirely give indeterminate or negative results. Option A describes pseudopeptidoglycan found in some methanogens but not in all archaea. Option B is false because archaea never possess true LPS, and many are Gram-variable or Gram-indeterminate rather than uniformly Gram-negative. Option C is incorrect because staining is performed on fixed slides in the lab.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "Vibrio fischeri, a bioluminescent marine bacterium, colonizes the light organ of the Hawaiian bobtail squid (Euprymna scolopes). The bacteria only produce light when their population density in the light organ reaches approximately 10^10 cells/mL. This density-dependent gene regulation is mediated by:",
+      "options": [
+        "Quorum sensing via N-acyl homoserine lactones (AHLs): at low cell density, the LuxI-produced autoinducer diffuses out faster than it accumulates; at high density, AHL concentration exceeds the threshold, binds LuxR, and the LuxR-AHL complex activates transcription of the lux operon encoding luciferase",
+        "Two-component signal transduction where a membrane-bound histidine kinase detects oxygen concentration changes in the crowded light organ and phosphorylates a response regulator that activates luciferase genes",
+        "Sigma factor switching: at high density, the bacteria switch from sigma-70 to a stationary-phase sigma factor (RpoS) that exclusively transcribes bioluminescence genes",
+        "Horizontal gene transfer of the lux operon from neighboring bacteria via conjugation, which only occurs at high cell density when cells are in physical contact"
+      ],
+      "correctAnswer": "A",
+      "explanation": "V. fischeri bioluminescence is the classic example of quorum sensing. The LuxI enzyme synthesizes N-acyl homoserine lactone (AHL), which diffuses freely across the cell membrane. At low cell density, AHL concentration is negligible because it diffuses away. As the population grows in the confined light organ, AHL accumulates. When it reaches a threshold concentration, AHL binds the transcription factor LuxR. The LuxR-AHL complex activates transcription of the lux operon (luxCDABEG), which encodes luciferase and the enzymes for luciferin biosynthesis. This is a positive feedback loop because the lux operon also includes luxI. Option B describes a different signaling mechanism not involved in bioluminescence regulation. Option C is incorrect because RpoS regulates general stress responses, not specifically lux genes. Option D is wrong because the lux operon is already present in all V. fischeri cells; conjugation is not required.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "The chloroplasts of brown algae (Phaeophyceae) are surrounded by four membranes and contain chlorophylls a and c (but not chlorophyll b). Phylogenomic analysis shows that the chloroplast genome is most closely related to red algal chloroplasts. Which evolutionary scenario best accounts for these observations?",
+      "options": [
+        "Brown algae acquired their chloroplasts through primary endosymbiosis of a cyanobacterium, with two additional membranes added later by gene duplication of membrane biosynthesis pathways",
+        "Brown algae acquired their chloroplasts through tertiary endosymbiosis: a heterotrophic eukaryote engulfed a green alga that had previously engulfed a red alga",
+        "Brown algae acquired their chloroplasts through secondary endosymbiosis: a heterotrophic eukaryote engulfed a red alga (which had acquired its chloroplast via primary endosymbiosis from a cyanobacterium); the four membranes represent (from inside out) the inner and outer cyanobacterial membranes, the red algal plasma membrane, and the host's food vacuole membrane",
+        "Brown algae evolved chloroplasts de novo through convergent evolution with red algae, and the four membranes reflect progressive invaginations of the host endomembrane system"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Brown algae (and other members of the SAR clade, specifically stramenopiles) acquired their plastids through secondary endosymbiosis involving a red alga. In primary endosymbiosis (which gave rise to red algae, green algae, and glaucophytes), a heterotrophic eukaryote engulfed a cyanobacterium, producing plastids with two membranes. In secondary endosymbiosis, a different heterotrophic eukaryote engulfed a red alga. This produced plastids with four membranes: the two original cyanobacterial-derived membranes (inner and outer plastid membranes), the engulfed red alga's plasma membrane, and the host's phagocytic vacuole membrane. The presence of chlorophylls a and c (rather than chlorophyll b found in green lineage) and the phylogenetic affinity with red algal chloroplasts confirm the red algal origin. This is a key concept in the chromalveolate hypothesis and SAR supergroup evolution.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the life cycle of Plasmodium falciparum, the parasite undergoes sexual reproduction within the Anopheles mosquito vector. Which of the following correctly describes the sequence of events from gametocyte ingestion to sporozoite formation?",
+      "options": [
+        "Gametocytes in the blood meal differentiate into gametes in the mosquito midgut; male microgametes undergo exflagellation (rapid mitotic divisions producing 8 flagellated gametes); fertilization produces a diploid zygote; the zygote becomes a motile ookinete that penetrates the midgut wall; the ookinete forms an oocyst on the outer midgut surface; sporozoites develop within the oocyst by meiosis followed by mitosis (sporogony); mature sporozoites migrate to the salivary glands",
+        "Gametocytes undergo meiosis in the human bloodstream before being ingested; haploid gametes fuse in the mosquito midgut; the resulting diploid zygote directly fragments into sporozoites without an oocyst stage",
+        "Gametocytes are ingested and immediately transform into sporozoites in the mosquito stomach by binary fission, bypassing any sexual stage",
+        "Male and female gametocytes fuse in the mosquito midgut to form a trophozoite that invades mosquito red blood cells and undergoes schizogony identical to the human erythrocytic cycle"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Plasmodium has a complex life cycle involving both sexual and asexual reproduction. When a mosquito ingests blood containing gametocytes, the drop in temperature and increase in pH trigger gametogenesis. Male gametocytes undergo exflagellation: the nucleus divides three times to produce 8 nuclei, each associated with a flagellum, forming microgametes. Female gametocytes mature into macrogametes. Fertilization in the midgut lumen produces a diploid zygote, the only diploid stage in the Plasmodium life cycle. The zygote elongates into a motile ookinete that burrows through the midgut epithelium and forms an oocyst on the basal lamina. Within the oocyst, meiosis occurs first (restoring haploidy), followed by many rounds of mitosis (sporogony), producing thousands of sporozoites. When the oocyst ruptures, sporozoites travel through the hemocoel to the salivary glands, ready for injection during the next blood meal.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "A student examines the life cycle of a fern (Dryopteris) and notes that the dominant phase is a large, leafy sporophyte bearing sori on the undersides of fronds, while the gametophyte is a tiny, heart-shaped prothallus. In contrast, a moss (Polytrichum) has a dominant green gametophyte with a smaller, dependent sporophyte growing from it. Which statement best explains the evolutionary significance of the shift in dominant generation from bryophytes to ferns?",
+      "options": [
+        "The shift occurred because ferns evolved flowers and seeds, allowing the sporophyte to become nutritionally independent of the gametophyte",
+        "The dominant generation switched because fern spores are diploid and moss spores are haploid, making fern gametophytes vestigial structures with no reproductive function",
+        "Fern gametophytes are larger than moss gametophytes but are classified as non-dominant because they are subterranean and non-photosynthetic",
+        "Fern sporophytes became dominant because diploid tissue provides a buffer against expression of deleterious recessive mutations, and the evolution of vascular tissue (xylem and phloem) in the sporophyte enabled larger body size, greater photosynthetic capacity, and independence from the gametophyte for water and nutrient transport"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The evolutionary trend in land plants is a progressive reduction of the gametophyte generation and elaboration of the sporophyte generation. In bryophytes, the gametophyte is dominant and the sporophyte depends on it nutritionally. In seedless vascular plants like ferns, the sporophyte became the dominant generation due to two key innovations: (1) vascular tissue (xylem with lignified tracheids for water transport, phloem for sugar transport), enabling large body size and efficient resource distribution; and (2) the advantage of diploidy, where having two copies of each gene masks deleterious recessive alleles and provides raw material for adaptation. Fern gametophytes (prothalli) are small, photosynthetic, and free-living but short-lived. Option A is wrong because ferns do not have flowers or seeds. Option B is false because all spores are haploid, produced by meiosis. Option C is incorrect because fern prothalli are photosynthetic surface-dwellers.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 29,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "Double fertilization is a defining feature of angiosperms. One sperm fuses with the egg to form the diploid zygote, while the second sperm fuses with the two polar nuclei (or the central cell) to form the triploid endosperm. Which of the following correctly identifies an adaptive advantage of double fertilization that is NOT provided by the gymnosperm reproductive strategy?",
+      "options": [
+        "Double fertilization ensures that nutritive tissue (endosperm) develops only when fertilization actually occurs, avoiding the metabolic cost of provisioning unfertilized ovules with large female gametophyte tissue, as occurs in gymnosperms where the megagametophyte develops before fertilization",
+        "Double fertilization produces a tetraploid embryo that has greater genetic diversity than the diploid gymnosperm embryo",
+        "Double fertilization allows angiosperms to reproduce asexually through apomixis, which is impossible in gymnosperms",
+        "Double fertilization provides the embryo with two copies of paternal chromosomes and one copy of maternal chromosomes, increasing paternal gene expression through genomic imprinting"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In gymnosperms, the female gametophyte (megagametophyte) develops extensively before fertilization and serves as the nutrient source for the embryo. This represents a significant metabolic investment regardless of whether fertilization occurs. In angiosperms, double fertilization ensures that the endosperm (the nutrient-storing tissue) only develops when fertilization is successful. The second sperm must fuse with the central cell to trigger endosperm development, coupling nutrient investment to reproductive success. This is metabolically efficient because resources are not wasted on unfertilized ovules. Option B is wrong because the embryo is diploid (2n), not tetraploid. Option C is incorrect because apomixis occurs in some angiosperms but is not dependent on double fertilization. Option D incorrectly describes the ploidy of endosperm — it is triploid (2 maternal polar nuclei + 1 paternal sperm nucleus = 3n), not a 2:1 paternal:maternal ratio.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 30,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "Arbuscular mycorrhizal (AM) fungi form symbiotic associations with approximately 80% of land plant species. Within the root cortex cells, AM fungi develop highly branched structures called arbuscules. Which of the following most accurately describes the nutrient exchange occurring at the arbuscular interface?",
+      "options": [
+        "The fungus delivers nitrogen fixed from atmospheric N2 via nitrogenase directly to the plant, and the plant provides the fungus with amino acids",
+        "The fungus penetrates the plant cell wall and plasma membrane, entering the cytoplasm where it directly accesses sugars stored in the plant's vacuole",
+        "The fungus delivers phosphate (and other mineral nutrients) acquired from soil beyond the root depletion zone via extensive hyphal networks; the plant provides the fungus with photosynthetically fixed carbon (primarily as hexoses); exchange occurs across the periarbuscular membrane — the plant plasma membrane invaginates around the arbuscule but never ruptures, creating an apoplastic interfacial compartment",
+        "The fungus breaks down cellulose in the plant cell wall to obtain carbon, and the plant absorbs water condensed on the fungal hyphae"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Arbuscular mycorrhizal fungi are obligate biotrophs that form intimate associations with plant roots. The fungal hyphae penetrate root cortex cells and develop highly branched arbuscules, which are the primary sites of nutrient exchange. Critically, the fungal hypha pushes inward against the plant plasma membrane but does not breach it — the plant membrane invaginates around each arbuscular branch, creating a periarbuscular membrane. Between this membrane and the fungal cell wall is an apoplastic interfacial compartment (periarbuscular space) where nutrient exchange occurs. The fungus delivers phosphate (Pi) via high-affinity phosphate transporters on its extraradical hyphae; Pi is transported as polyphosphate through hyphae and released at the arbuscular interface. The plant reciprocates with hexoses (glucose, fructose) derived from photosynthesis. AM fungi are especially important for phosphorus nutrition because their hyphae extend far beyond the phosphorus depletion zone around roots.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 31,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "A zoology student is comparing developmental features of protostomes and deuterostomes. Which combination of embryological features correctly characterizes deuterostomes?",
+      "options": [
+        "Spiral and determinate cleavage, schizocoelous coelom formation, blastopore becomes the mouth",
+        "Spiral and indeterminate cleavage, enterocoelous coelom formation, blastopore becomes the mouth",
+        "Radial and determinate cleavage, schizocoelous coelom formation, blastopore becomes the anus",
+        "Radial and indeterminate cleavage, enterocoelous coelom formation (mesoderm buds from the archenteron wall), blastopore becomes the anus (or a new opening forms as the mouth)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Deuterostomes (echinoderms, chordates, hemichordates) are characterized by three key embryological features: (1) Radial cleavage — cell divisions are parallel or perpendicular to the animal-vegetal axis, and cells are stacked directly on top of each other. Cleavage is also indeterminate, meaning early blastomeres retain the ability to develop into complete embryos (this is the basis of identical twinning in humans). (2) Enterocoelous coelom formation — the mesoderm and coelom form from outpocketings (evaginations) of the archenteron (primitive gut) wall, rather than from splitting of a solid mesodermal mass (schizocoely, which characterizes protostomes). (3) The blastopore (the first opening of the archenteron) becomes the anus, and the mouth forms secondarily from a new opening — hence 'deuterostome' (second mouth). Protostomes show the opposite pattern: spiral determinate cleavage, schizocoely, blastopore becomes mouth.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 32,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "The arthropod body plan has been called the most successful animal design in evolutionary history. The open circulatory system of arthropods (hemocoel) is often cited as a limitation compared to the closed circulatory system of vertebrates. However, insects can sustain extremely high metabolic rates during flight. Which feature of insect physiology compensates for the limitations of an open circulatory system in oxygen delivery?",
+      "options": [
+        "Insects use hemocyanin dissolved in hemolymph, which has higher oxygen-carrying capacity than vertebrate hemoglobin",
+        "Insects have evolved a secondary closed circulatory system in flight muscles with capillary-like vessels, similar to vertebrate capillary beds",
+        "The insect tracheal system delivers oxygen directly to tissues via air-filled tubes (tracheae and tracheoles) that branch extensively and reach individual cells, bypassing the circulatory system for gas exchange entirely; O2 transport is driven by diffusion and active ventilation, decoupling gas exchange from hemolymph circulation",
+        "Insect hemolymph contains nucleated erythrocytes with arthropod-specific hemoglobin that provides sufficient oxygen binding for flight metabolism"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Insects evolved a remarkable solution to the oxygen delivery problem: the tracheal system. This network of air-filled tubes (tracheae) opens to the outside through spiracles and branches internally into progressively finer tubes (tracheoles, down to 0.1 micrometers in diameter) that penetrate directly into or between individual cells, particularly in metabolically active flight muscles. Oxygen diffuses directly from the air in tracheoles to mitochondria without requiring a circulatory intermediary. In active insects, ventilation is enhanced by rhythmic compression of air sacs (thoracic pumping) and autoventilation during flight. This system is so efficient that it entirely decouples oxygen delivery from the open circulatory system. The hemolymph (blood) of most insects does not carry oxygen — it transports nutrients, hormones, and waste products. Option A is wrong because most insects lack respiratory pigments in hemolymph. Options B and D describe structures/molecules that do not exist in insects.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 33,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "The amniotic egg was a key innovation enabling vertebrates to reproduce entirely on land. In a developing chicken embryo, four extraembryonic membranes perform distinct functions. A student claims that the allantois 'serves as the embryo's lung and kidney.' Which of the following most accurately evaluates this claim?",
+      "options": [
+        "The claim is entirely incorrect; the allantois stores yolk for embryonic nutrition and has no role in gas exchange or waste storage",
+        "The claim is incorrect because gas exchange occurs exclusively through the amnion, which is the membrane immediately surrounding the embryo",
+        "The claim is correct but incomplete; the allantois also digests shell calcium to provide the embryo with minerals for bone formation",
+        "The claim is partially correct: the allantois stores nitrogenous waste (uric acid) and its blood vessels, which become closely apposed to the chorion and the inner surface of the shell, participate in gas exchange (O2 in, CO2 out); however, calling it a 'lung' oversimplifies the fact that gas exchange depends on the chorioallantoic membrane complex, not the allantois alone"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The allantois serves two primary functions in amniote embryos: (1) Waste storage — it collects metabolic waste, primarily uric acid (insoluble, non-toxic), which accumulates in the allantoic cavity. This is the 'kidney' function. (2) Gas exchange — allantoic blood vessels grow outward and fuse with the chorion (the outermost extraembryonic membrane, lining the shell) to form the chorioallantoic membrane (CAM). The CAM is highly vascularized and lies directly beneath the porous shell, facilitating diffusion of O2 inward and CO2 outward. Calling the allantois the embryo's 'lung' is an oversimplification because the respiratory function depends on the chorioallantoic membrane complex rather than the allantois alone. The amnion surrounds the embryo in fluid but does not participate in gas exchange. The yolk sac, not the allantois, stores yolk. The allantois does participate in calcium absorption from the shell in birds, but option C incorrectly states the claim about lung/kidney function is wrong.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 34,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about bacterial genetics and horizontal gene transfer:\nS1: TRUE/FALSE — In bacterial transformation, a competent cell takes up free DNA fragments from the environment; if the DNA integrates into the chromosome by homologous recombination, the cell acquires a stable new genotype.\nS2: TRUE/FALSE — Generalized transduction occurs when a bacteriophage accidentally packages host DNA instead of phage DNA during lytic cycle assembly; any gene from the donor bacterium can potentially be transferred to a recipient cell.\nS3: TRUE/FALSE — During conjugation mediated by an F plasmid, the F+ donor cell transfers a copy of the entire bacterial chromosome to the F- recipient, converting it to F+.\nS4: TRUE/FALSE — In Hfr (high frequency recombination) conjugation, the F factor is integrated into the bacterial chromosome; during transfer, chromosomal genes near the F integration site are transferred first, and the entire F factor is rarely transferred because the mating bridge typically breaks before complete transfer.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Transformation involves uptake of naked DNA from the environment by competent cells. Competence can be natural (regulated by quorum sensing in some species) or induced artificially. If the foreign DNA shares sequence homology with the recipient chromosome, it can integrate by homologous recombination, stably altering the genotype. S2 is TRUE: In generalized transduction, during the lytic cycle, the phage packaging machinery occasionally packages random fragments of degraded host DNA into phage heads instead of phage DNA. When these defective phage particles inject their contents into a new host cell, any donor gene can potentially recombine into the recipient chromosome. This differs from specialized transduction (which transfers only genes near the prophage integration site). S3 is FALSE: During F plasmid conjugation, only the F plasmid itself is transferred, not the bacterial chromosome. The F+ cell replicates the F plasmid by rolling circle replication and transfers one strand to the F- recipient, which synthesizes the complementary strand to become F+. The chromosome is not mobilized. S4 is TRUE: In Hfr strains, the F factor is integrated into the chromosome. During conjugation, the F factor initiates transfer and pulls chromosomal DNA along. Genes closest to the origin of transfer (oriT within F) are transferred first. Because the conjugation bridge is fragile and typically breaks within minutes, the distal portion of the chromosome (including the rest of the F factor) is rarely transferred, so the recipient remains F-.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about protist diversity and endosymbiosis:\nS1: TRUE/FALSE — The SAR clade unites Stramenopiles, Alveolates, and Rhizaria into a monophyletic supergroup supported by molecular phylogenetic analyses, even though these groups are morphologically extremely diverse.\nS2: TRUE/FALSE — Excavata is characterized by a unique feeding groove supported by cytoskeletal elements, and includes both photosynthetic members (Euglena, which acquired chloroplasts by secondary endosymbiosis of a green alga) and parasitic members (Giardia, Trypanosoma).\nS3: TRUE/FALSE — Primary endosymbiosis occurred only once in evolutionary history, giving rise to all plastid-bearing eukaryotes, which is why all chloroplasts have identical pigment compositions.\nS4: TRUE/FALSE — Mixotrophic protists such as certain dinoflagellates can switch between autotrophy (photosynthesis) and heterotrophy (phagocytosis or osmotrophy) depending on environmental conditions, giving them a competitive advantage in nutrient-poor or light-limited environments.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: The SAR supergroup is a well-supported monophyletic clade in current molecular phylogenies. Stramenopiles include diatoms, brown algae, and oomycetes. Alveolates include dinoflagellates, apicomplexans, and ciliates. Rhizaria include foraminiferans, radiolarians, and cercozoans. Despite enormous morphological diversity, molecular data (especially multigene phylogenomics) consistently support their monophyly. S2 is TRUE: Excavata is defined partly by a distinctive ventral feeding groove in some members. Euglena (Euglenozoa) is photosynthetic, having acquired chloroplasts via secondary endosymbiosis of a green alga (hence chlorophylls a and b). The group also includes parasitic lineages: Giardia (diplomonad) causes intestinal disease, and Trypanosoma (kinetoplastid) causes African sleeping sickness and Chagas disease. S3 is FALSE: While current evidence strongly suggests primary endosymbiosis of a cyanobacterium occurred once (or possibly twice, with Paulinella as an independent event), giving rise to the Archaeplastida (red algae, green algae, glaucophytes, land plants), these lineages have divergent pigment compositions. Red algae have chlorophyll a plus phycobilins; green algae and land plants have chlorophylls a and b; glaucophytes retain phycobilisomes. Furthermore, secondary and tertiary endosymbioses have spread plastids to other lineages with different pigment combinations. S4 is TRUE: Mixotrophy is widespread among protists. Many dinoflagellates possess chloroplasts for photosynthesis but can also engulf prey or absorb dissolved organic compounds. This metabolic flexibility provides a competitive advantage when light or nutrients are limiting.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about plant diversity and alternation of generations:\nS1: TRUE/FALSE — In gymnosperms (e.g., pine), the ovule contains the megasporangium (nucellus), which produces megaspores by meiosis; the surviving megaspore develops into the female gametophyte (which produces archegonia containing egg cells), and the entire ovule is enclosed within a carpel.\nS2: TRUE/FALSE — Monocots and eudicots differ in several structural features: monocots typically have parallel leaf venation, scattered vascular bundles in stems, flower parts in multiples of three, and fibrous root systems, while eudicots typically have netted venation, vascular bundles in a ring, flower parts in multiples of four or five, and a taproot system.\nS3: TRUE/FALSE — Lycophytes (club mosses) and ferns are both seedless vascular plants, but they differ in leaf evolution: lycophytes have microphylls (small leaves with a single unbranched vascular trace), while ferns have megaphylls (large leaves with branched venation), and these leaf types evolved independently.\nS4: TRUE/FALSE — The pollen grain of a seed plant is the immature male gametophyte, which develops from a microspore; upon germination, the pollen tube grows toward the ovule and delivers sperm directly, eliminating the requirement for external water for fertilization that constrains bryophytes and ferns.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-TRUE"
+      ],
+      "correctAnswer": "FTTT",
+      "explanation": "S1 is FALSE: The statement is correct about the megasporangium (nucellus) and female gametophyte development but incorrect about the carpel. Gymnosperms ('naked seeds') do NOT have carpels — their ovules are exposed on the surface of scales (as in cone-bearing structures) rather than enclosed within a carpel. Carpels (which form the ovary wall and later the fruit wall) are a defining feature of angiosperms, not gymnosperms. S2 is TRUE: The monocot-eudicot distinction involves multiple correlated features. Monocots (e.g., grasses, lilies, palms): parallel venation, scattered vascular bundles, trimerous flowers (3, 6, 9 parts), fibrous roots, usually no secondary growth. Eudicots (e.g., roses, oaks, sunflowers): netted (reticulate) venation, ring-arranged vascular bundles, 4- or 5-merous flowers, taproot, often secondary growth. S3 is TRUE: Lycophytes and ferns represent two independent lineages of seedless vascular plants. Microphylls (lycophytes) likely evolved from small enations of the stem axis, while megaphylls (ferns, seed plants) evolved from modified branch systems (the telome theory). These represent convergent solutions to increasing photosynthetic surface area. S4 is TRUE: Pollen grains are immature male gametophytes. Each develops from a microspore by mitosis. The pollen tube is a critical innovation that delivers sperm cells directly to the egg, eliminating the dependence on external water for sperm swimming that limits bryophytes and ferns to moist habitats for sexual reproduction.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 30,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about fungal biology:\nS1: TRUE/FALSE — In Basidiomycota, the dikaryotic (n + n) stage is the dominant phase of the life cycle; the dikaryotic mycelium can persist for years and forms the large fruiting bodies (basidiocarps, such as mushrooms), within which karyogamy and meiosis occur in specialized cells called basidia to produce basidiospores.\nS2: TRUE/FALSE — Lichens are mutualistic associations between a fungal partner (usually an ascomycete) and a photosynthetic partner (green alga or cyanobacterium); the fungus provides mineral nutrients and physical protection while the photobiont provides fixed carbon; recent research has shown that some lichens also contain a basidiomycete yeast as a third partner.\nS3: TRUE/FALSE — Fungi are more closely related to plants than to animals because both fungi and plants are sessile, have cell walls, and absorb nutrients from the environment.\nS4: TRUE/FALSE — Zygomycota (e.g., Rhizopus) are characterized by the formation of a thick-walled zygosporangium during sexual reproduction, which forms when gametangia from two compatible mating types (+ and -) fuse; the zygosporangium contains multiple diploid nuclei that undergo meiosis during germination.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: In Basidiomycota, two compatible monokaryotic (haploid) mycelia fuse (plasmogamy) to form a dikaryotic mycelium containing one nucleus from each parent in every cell. This dikaryotic stage dominates the life cycle and can persist indefinitely, forming large mycelial networks. When conditions are appropriate, the dikaryotic mycelium produces basidiocarps (fruiting bodies such as mushrooms, bracket fungi, puffballs). In the basidia (club-shaped cells lining the gills or pores), karyogamy finally occurs (the two nuclei fuse to form a diploid nucleus), immediately followed by meiosis to produce four haploid basidiospores on sterigmata. S2 is TRUE: Lichens are composite organisms. The mycobiont (fungal partner) is most commonly an ascomycete (in ~98% of lichens). The photobiont is a green alga (e.g., Trebouxia) or cyanobacterium (e.g., Nostoc). In 2016, Spribille et al. discovered that many lichens harbor a basidiomycete yeast (Cyphobasidiales) embedded in the cortex, potentially affecting lichen phenotype. S3 is FALSE: Molecular phylogenetics places Fungi as the sister group to Animalia (together forming the Opisthokonta), not to Plantae. Despite superficial similarities (cell walls, sessility), fungal cell walls contain chitin (not cellulose), fungi are heterotrophs (like animals), and fungi store glycogen (like animals, not starch). S4 is TRUE: In Rhizopus and other zygomycetes, sexual reproduction involves two mating types. Aerial hyphae from + and - mycelia grow toward each other, and their tips swell to form gametangia. Gametangial fusion produces a zygosporangium with a thick, resistant wall. Inside, nuclei from both parents fuse (karyogamy), and meiosis occurs during germination to produce haploid spores.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 31,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about invertebrate diversity:\nS1: TRUE/FALSE — Cnidarians (jellyfish, corals, sea anemones) possess cnidocytes containing nematocysts, which are organelles that discharge a coiled tubule for prey capture or defense; cnidocytes are among the most complex intracellular structures in the animal kingdom and discharge at one of the fastest known biological speeds.\nS2: TRUE/FALSE — The molluscan body plan consists of a muscular foot, a visceral mass, and a mantle that secretes the shell; in cephalopods (squid, octopus), the mantle has been modified into tentacles and the foot forms the siphon (funnel) used for jet propulsion.\nS3: TRUE/FALSE — Echinoderms (sea stars, sea urchins) are deuterostomes that exhibit pentaradial symmetry as adults, but their larvae are bilaterally symmetric, indicating that radial symmetry in this group is a secondary (derived) condition evolved from a bilaterally symmetric ancestor.\nS4: TRUE/FALSE — Annelids (segmented worms) possess a true coelom, segmentation with repeated nephridia and ganglia in each segment, and a closed circulatory system; the coelom functions as a hydrostatic skeleton enabling peristaltic locomotion by allowing segments to contract and elongate independently.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-FALSE, S3-TRUE, S4-TRUE"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: Cnidocytes are specialized cells unique to Cnidaria. Each contains a nematocyst — a capsule with an inverted, coiled tubule under high osmotic pressure. When triggered (by mechanical or chemical stimuli), the nematocyst discharges in microseconds (~700 nanoseconds, generating accelerations of >5 million g), firing the tubule outward to inject toxin or entangle prey. This is among the fastest mechanical processes in biology. S2 is FALSE: The description of the basic molluscan body plan is correct, but the statement incorrectly describes cephalopod modifications. In cephalopods, the tentacles/arms evolved from the foot (the muscular foot was modified into arms and tentacles surrounding the head), and the mantle forms the body wall that contracts for jet propulsion. The siphon (funnel/hyponome) is derived from the foot. The mantle was not modified into tentacles. S3 is TRUE: Echinoderm pentaradial (five-fold) symmetry is a derived character. Their larvae (e.g., pluteus larva of sea urchins, bipinnaria of sea stars) are bilaterally symmetric, and they undergo dramatic metamorphosis to acquire radial symmetry. Molecular and developmental evidence confirms that echinoderms evolved from bilaterally symmetric ancestors, placing them firmly as deuterostomes alongside chordates. S4 is TRUE: Annelids have a eucoelomate body plan with metamerism (segmentation). Each segment typically contains paired coelomic compartments, nephridia (excretory), and ganglia (nervous). The closed circulatory system includes dorsal and ventral blood vessels. The fluid-filled coelom acts as a hydrostatic skeleton: longitudinal and circular muscles in each segment work antagonistically against the incompressible coelomic fluid, enabling peristaltic burrowing movements.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 33,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about vertebrate evolution and adaptations:\nS1: TRUE/FALSE — The evolution of jaws in gnathostomes is hypothesized to have involved the modification of the first (mandibular) gill arch of jawless ancestors, supported by comparative anatomy and Hox gene expression patterns showing that the same genes pattern both gill arches and jaw elements.\nS2: TRUE/FALSE — Amphibians are fully terrestrial vertebrates that have completely eliminated dependence on water for reproduction, since their eggs have a protective amnion that prevents desiccation.\nS3: TRUE/FALSE — Mammals are characterized by hair (fur), mammary glands, a muscular diaphragm for ventilation, three middle ear bones (malleus, incus, stapes), and differentiated (heterodont) dentition; the three middle ear bones evolved from bones of the reptilian jaw joint (articular and quadrate).\nS4: TRUE/FALSE — The phylogenetic placement of primates within the mammals shows that humans are most closely related to chimpanzees (Pan), with our lineages diverging approximately 6-7 million years ago; the key derived traits of the hominin lineage include habitual bipedalism, reduced canines, and progressive increase in brain size relative to body size.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-FALSE, S3-TRUE, S4-TRUE"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: The evolution of jaws from gill arches is one of the best-supported transformations in vertebrate evolution. Comparative anatomy shows structural similarities between gill arch cartilages and jaw elements. Molecular evidence from Hox gene expression patterns (Dlx, Bmp, Fgf) shows that the same developmental genetic toolkit patterns both structures. Paleontological evidence from transitional forms (e.g., placoderms) further supports this hypothesis. S2 is FALSE: Amphibians are NOT fully terrestrial and have NOT eliminated water dependence for reproduction. Most amphibians require water (or at minimum very moist environments) for reproduction because their eggs lack an amnion and are permeable to water — they are anamniotes. Amphibian larvae (tadpoles) are typically aquatic. Even terrestrial amphibians with direct development still require moist conditions for egg survival. The amniotic egg (with amnion, chorion, allantois, yolk sac) evolved in amniotes (reptiles, birds, mammals), not amphibians. S3 is TRUE: All listed features are mammalian synapomorphies. The evolution of the three middle ear bones is one of the best-documented evolutionary transitions: the articular bone (part of the lower jaw in reptiles) became the malleus, the quadrate bone (part of the upper jaw joint) became the incus, and the stapes was already present. This transition is documented by a series of synapsid (mammal-like reptile) fossils showing progressive reduction and migration of these bones. S4 is TRUE: Molecular phylogenetics robustly places Pan (chimpanzees and bonobos) as the sister group to Homo. Molecular clock estimates consistently date the divergence to approximately 6-7 million years ago. Key hominin-derived traits include: habitual bipedalism (earliest evidence in Sahelanthropus, Ardipithecus), reduced canine size and non-honing canine/premolar complex, progressive encephalization (from ~350 cm3 in early hominins to ~1400 cm3 in modern Homo sapiens), and tool manufacture.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 34,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about biofilms and nitrogen-fixing bacteria:\nS1: TRUE/FALSE — Biofilms are structured communities of bacteria encased in a self-produced extracellular polymeric substance (EPS) matrix; within a biofilm, bacteria exhibit altered gene expression compared to planktonic cells, including upregulation of genes for EPS production and increased antibiotic resistance (up to 1000-fold higher MIC values).\nS2: TRUE/FALSE — Nitrogen fixation (N2 to NH3/NH4+) is catalyzed by the enzyme nitrogenase, which is irreversibly inhibited by oxygen; in Rhizobium-legume symbiosis, the plant produces leghemoglobin in root nodule cells to maintain a low free-oxygen concentration while still allowing sufficient oxygen flux for bacterial aerobic respiration.\nS3: TRUE/FALSE — Cyanobacteria fix nitrogen in specialized thick-walled cells called heterocysts, which lack photosystem II (eliminating O2 production from water splitting) and have glycolipid layers that reduce O2 diffusion, thereby protecting the oxygen-sensitive nitrogenase enzyme.\nS4: TRUE/FALSE — All bacteria can fix nitrogen because the nif gene cluster encoding nitrogenase is universally present in prokaryotic genomes as a housekeeping gene essential for amino acid biosynthesis.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-FALSE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-FALSE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-TRUE"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Biofilms are the predominant mode of bacterial growth in nature. Bacteria within biofilms coordinate via quorum sensing to produce EPS (polysaccharides, proteins, eDNA). Biofilm-associated bacteria show dramatically altered gene expression profiles compared to free-floating planktonic cells, including enhanced resistance to antibiotics (often 100-1000x higher minimum inhibitory concentrations) due to restricted antibiotic penetration through EPS, metabolic dormancy of interior cells (persisters), and upregulation of efflux pumps. S2 is TRUE: Nitrogenase is extremely oxygen-sensitive — O2 irreversibly oxidizes its iron-sulfur clusters. In the Rhizobium-legume symbiosis, bacteroids (differentiated Rhizobium cells) reside in nodule cells. The plant produces leghemoglobin, which binds O2 with high affinity, maintaining free O2 concentration at approximately 10 nM — low enough to protect nitrogenase but sufficient to supply O2 (slowly released from leghemoglobin) for the bacteroids' oxidative phosphorylation, which provides the large amounts of ATP (16 per N2 fixed) that nitrogenase requires. S3 is TRUE: Heterocysts are specialized nitrogen-fixing cells in filamentous cyanobacteria. They lack functional photosystem II, so they do not split water and do not evolve O2. They retain photosystem I for cyclic photophosphorylation (ATP production). Their thick glycolipid envelope limits O2 diffusion into the cell. They receive fixed carbon (as sucrose or glutamate) from neighboring vegetative cells and export fixed nitrogen (as glutamine) back. S4 is FALSE: Nitrogen fixation is restricted to certain prokaryotes (diazotrophs) including some bacteria and archaea. The nif genes are not universally present in all prokaryotic genomes. Many bacteria, including E. coli, lack nitrogenase and depend on environmental ammonium, nitrate, or organic nitrogen sources.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about fungal ecology and decomposition:\nS1: TRUE/FALSE — Saprotrophic fungi are the primary decomposers of lignin in terrestrial ecosystems; white-rot basidiomycetes secrete lignin peroxidase and manganese peroxidase, which use hydrogen peroxide to generate free radicals that oxidatively degrade the complex aromatic polymer lignin.\nS2: TRUE/FALSE — Chytridiomycosis, caused by the fungal pathogen Batrachochytrium dendrobatidis (Bd), has contributed to the decline and extinction of amphibian species worldwide; Bd is a member of Chytridiomycota, the only major fungal group with flagellated zoospores.\nS3: TRUE/FALSE — Fungi are exclusively multicellular organisms; all species form hyphae and mycelium, and unicellular fungal forms such as yeasts do not exist.\nS4: TRUE/FALSE — Ascomycota produce sexual spores (ascospores) in sac-like structures called asci; typically, eight ascospores are produced per ascus following karyogamy, meiosis, and one round of mitosis, which is why tetrad analysis in Neurospora crassa can reveal the order of meiotic events.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Lignin is the second most abundant organic polymer on Earth (after cellulose) and is highly resistant to degradation due to its complex, irregular aromatic structure. White-rot fungi (mostly Basidiomycota) are the most effective lignin degraders. They secrete extracellular enzymes including lignin peroxidase (LiP), manganese peroxidase (MnP), and laccase, which generate reactive oxygen species and free radicals that non-specifically attack the lignin polymer. Without these fungi, dead wood would accumulate massively. S2 is TRUE: Bd causes chytridiomycosis, which disrupts amphibian skin function (critical for gas exchange, water balance, and electrolyte transport), leading to cardiac arrest. It has been implicated in declines of over 500 amphibian species and at least 90 presumed extinctions. Chytridiomycota are basal fungi that retain the ancestral trait of flagellated (motile) zoospores, lost in all other major fungal lineages. S3 is FALSE: Many fungi are unicellular. Yeasts (e.g., Saccharomyces cerevisiae, Candida albicans) are single-celled fungi that reproduce by budding or fission. Some species are dimorphic, switching between hyphal and yeast forms depending on environmental conditions (e.g., temperature, CO2). S4 is TRUE: In ascomycetes, karyogamy occurs in the ascus mother cell, producing a diploid nucleus. Meiosis yields four haploid nuclei, and one round of mitosis doubles this to eight. In ordered asci (as in Neurospora crassa), the eight ascospores are arranged linearly, reflecting the geometry of the two meiotic and one mitotic divisions. This allows ordered tetrad analysis to determine the distance of a gene from its centromere (by the frequency of second-division segregation patterns).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 31,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher samples bacteria from three different environments and analyzes their cell wall composition, membrane lipid chemistry, and metabolic capabilities. Based on the data in the table, identify which organism is most likely an archaeon and explain your reasoning.",
+      "dataContext": "Table: Comparative Analysis of Three Prokaryotic Isolates\n\nFeature | Organism X | Organism Y | Organism Z\n--- | --- | --- | ---\nCell wall composition | Thick peptidoglycan (20-80 nm) | No peptidoglycan; S-layer protein only | Thin peptidoglycan (2-7 nm) + outer membrane with LPS\nMembrane lipids | Ester-linked fatty acids, straight-chain | Ether-linked isoprenoid chains, some tetraether (monolayer) | Ester-linked fatty acids, straight-chain\nGrowth temperature optimum | 37 C | 80 C | 37 C\nGrowth pH optimum | 7.0 | 2.0 | 7.0\nRNA polymerase | Single type (4 subunits) | Multiple subunits, resembles eukaryotic RNAP | Single type (4 subunits)\nHistone-like proteins | HU protein (not true histone) | True histones present | HU protein (not true histone)\nSensitivity to chloramphenicol | Sensitive | Resistant | Sensitive",
+      "options": [
+        "Organism X is the archaeon because it has a thick cell wall providing thermal protection and grows at 37 C, the standard temperature for mesophilic archaea",
+        "Organism Y is the archaeon: it lacks peptidoglycan (has an S-layer), has ether-linked isoprenoid membrane lipids (including tetraethers forming monolayer membranes), has a eukaryote-like multi-subunit RNA polymerase, possesses true histones, is resistant to chloramphenicol (which targets bacterial ribosomes), and thrives at 80 C/pH 2.0 — consistent with a thermoacidophilic archaeon",
+        "Organism Z is the archaeon because its outer membrane with LPS is a feature unique to archaea, distinguishing it from bacteria that only have peptidoglycan",
+        "None of these organisms is an archaeon; all three are bacteria because they are prokaryotic and prokaryotes are exclusively within the domain Bacteria"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Organism Y displays every hallmark of an archaeon: (1) No peptidoglycan — archaea never have peptidoglycan (some have pseudopeptidoglycan, others have S-layers or no wall); (2) Ether-linked isoprenoid lipids — this is a defining biochemical feature distinguishing archaea from bacteria (which have ester-linked straight-chain fatty acids). Tetraether lipids forming monolayer membranes are characteristic of thermophilic archaea, providing membrane stability at extreme temperatures; (3) Multi-subunit RNA polymerase resembling eukaryotic RNAP — archaea have complex RNA polymerases more similar to eukaryotic RNAP II than to bacterial RNAP; (4) True histones — many archaea package DNA with histone proteins homologous to eukaryotic histones; (5) Chloramphenicol resistance — this antibiotic targets the 50S ribosomal subunit of bacteria but not archaea or eukaryotes; (6) Thermoacidophilic growth (80 C, pH 2.0) is consistent with Sulfolobus or similar crenarchaeotes. Organism X is a Gram-positive bacterium, and Organism Z is a Gram-negative bacterium.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A plant physiologist measures reproductive parameters in four plant species to study the evolution of seed plant reproduction. Based on the data, which species is an angiosperm with the most derived reproductive features, and which is a bryophyte?",
+      "dataContext": "Table: Reproductive Features of Four Plant Species\n\nFeature | Species A | Species B | Species C | Species D\n--- | --- | --- | --- | ---\nDominant generation | Gametophyte | Sporophyte | Sporophyte | Sporophyte\nVascular tissue | Absent | Present (xylem with tracheids only) | Present (xylem with tracheids and vessel elements) | Present (xylem with tracheids only)\nSeeds | Absent | Absent | Present (enclosed in fruit) | Present (naked, on cone scales)\nPollen | Absent | Absent | Present | Present\nFertilization mechanism | Flagellated sperm, requires water film | Flagellated sperm, requires water film | Pollen tube delivers non-flagellated sperm | Pollen tube delivers non-flagellated sperm (in most species)\nEndosperm ploidy | N/A | N/A | 3n (triploid) | N/A (haploid female gametophyte tissue)\nFlowers/Fruits | Absent | Absent | Present | Absent (cones only)\nDouble fertilization | No | No | Yes | No",
+      "options": [
+        "Species A is the angiosperm (most derived) because the gametophyte-dominant life cycle is the most evolutionarily advanced; Species D is the bryophyte",
+        "Species D is the angiosperm because it produces seeds and pollen; Species B is the bryophyte because it lacks seeds",
+        "Species B is the angiosperm because it has vascular tissue; Species C is the bryophyte because it produces fruits, which are primitive structures",
+        "Species C is the angiosperm: it has vessel elements in xylem, seeds enclosed in fruits, pollen tube delivery of non-flagellated sperm, triploid endosperm from double fertilization, and flowers — all synapomorphies of angiosperms; Species A is the bryophyte: gametophyte-dominant, no vascular tissue, no seeds, flagellated sperm requiring water for fertilization"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Species C displays all defining angiosperm synapomorphies: (1) Vessel elements in xylem — angiosperms (and some gnetophytes) have both tracheids and vessel elements, providing more efficient water transport; (2) Seeds enclosed in fruits — 'angiosperm' means 'enclosed seed,' with the fruit developing from the ovary wall (carpel); (3) Double fertilization producing triploid (3n) endosperm — unique to angiosperms; (4) Flowers — the reproductive structure of angiosperms; (5) Non-flagellated sperm delivered via pollen tube. Species A is clearly a bryophyte: gametophyte-dominant life cycle, no vascular tissue, no seeds, and flagellated sperm requiring water. Species B is a seedless vascular plant (likely a fern: has vascular tissue with tracheids, no seeds, flagellated sperm). Species D is a gymnosperm: sporophyte-dominant, tracheids only, naked seeds on cone scales, pollen but no flowers/fruits, haploid female gametophyte tissue (not triploid endosperm), no double fertilization.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 30,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A marine biologist surveys benthic invertebrates and records key body plan features for five species. Based on the data, identify the phylum of each organism and explain which feature is most diagnostic.",
+      "dataContext": "Table: Body Plan Features of Five Marine Invertebrate Species\n\nFeature | Species 1 | Species 2 | Species 3 | Species 4 | Species 5\n--- | --- | --- | --- | --- | ---\nSymmetry | Radial | Bilateral | Bilateral | Bilateral | Pentaradial (adult)\nBody cavity | No true coelom (gastrovascular cavity) | True coelom | True coelom (reduced) | Pseudocoelom | True coelom (water vascular system)\nSegmentation | None | Metamerism (segments with septa) | None (but serial repetition of gills) | None | None\nExoskeleton/Shell | None | None (but chitinous chaetae) | Calcareous shell (usually spiral) | Collagenous cuticle (molts) | Calcareous endoskeleton (ossicles)\nSpecial features | Cnidocytes with nematocysts | Closed circulatory system | Radula for feeding | Eutely (constant cell number) | Tube feet (podia)\nDevelopment | — | Protostome | Protostome | Protostome (Ecdysozoa) | Deuterostome",
+      "options": [
+        "Species 1: Cnidaria (cnidocytes are diagnostic); Species 2: Annelida (segmented, closed circulation, chaetae); Species 3: Mollusca (calcareous shell, radula); Species 4: Nematoda (pseudocoelom, cuticle molting, eutely, Ecdysozoa); Species 5: Echinodermata (pentaradial symmetry, water vascular system, tube feet, deuterostome, calcareous ossicles)",
+        "Species 1: Porifera; Species 2: Arthropoda; Species 3: Echinodermata; Species 4: Annelida; Species 5: Mollusca",
+        "Species 1: Platyhelminthes; Species 2: Mollusca; Species 3: Annelida; Species 4: Cnidaria; Species 5: Arthropoda",
+        "All five species are arthropods showing different levels of tagmatization and metamorphosis"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Each species can be identified by its diagnostic features: Species 1 is Cnidaria — radial symmetry and cnidocytes (cells containing nematocysts) are the defining synapomorphies. The gastrovascular cavity (incomplete gut) is also characteristic. Species 2 is Annelida — metamerism (true segmentation with septa separating coelomic compartments), a closed circulatory system (dorsal/ventral vessels), and chitinous chaetae (bristles, as in polychaetes and oligochaetes) are diagnostic. Species 3 is Mollusca — the calcareous shell (often spiral, as in gastropods) and the radula (a rasping feeding structure unique to molluscs) are key synapomorphies. The visceral mass is in a true coelom (reduced in most molluscs). Species 4 is Nematoda — a pseudocoelom (body cavity between mesoderm and endoderm, not lined by peritoneum), a collagenous cuticle that molts (placing nematodes in Ecdysozoa), and eutely (fixed cell number in adults) are diagnostic. Species 5 is Echinodermata — pentaradial symmetry (secondary, derived from bilateral ancestor), the water vascular system (unique to echinoderms, used for locomotion, feeding, and gas exchange via tube feet), calcareous endoskeletal ossicles, and deuterostome development are all diagnostic.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 33,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A comparative anatomist examines skull and postcranial skeletal features in four fossil and extant vertebrate taxa to trace the fish-to-tetrapod transition. Based on the data, arrange the taxa in evolutionary order and identify the key transitional feature.",
+      "dataContext": "Table: Skeletal Features of Four Vertebrate Taxa\n\nFeature | Taxon A (Eusthenopteron) | Taxon B (Tiktaalik) | Taxon C (Acanthostega) | Taxon D (Modern salamander)\n--- | --- | --- | --- | ---\nFins/Limbs | Fleshy lobed fins with internal skeleton (humerus, radius, ulna homologs) | Fin-like limbs with functional wrist joint; no digits | Limbs with digits (8 per forelimb); retained tail fin and lateral line | Four limbs with 4-5 digits; no fin rays\nGills | Fully functional gills; operculum present | Reduced gills; operculum reduced; evidence of lungs | Internal gills retained; no operculum | Larval gills lost in adults; lungs functional\nNeck | No distinct neck (skull fused to shoulder girdle) | Mobile neck (skull separated from shoulder girdle) | Mobile neck | Mobile neck\nRibs | Short ribs; no overlap | Overlapping ribs (suggesting body support) | Robust ribs; enlarged ribcage | Ribs present but reduced\nHabitat (inferred) | Aquatic (shallow lobe-finned fish) | Shallow water/tidal flats | Primarily aquatic despite having limbs with digits | Semi-terrestrial/aquatic",
+      "options": [
+        "D, C, B, A (modern to ancient) — the transition was from land to water, with salamanders being ancestral",
+        "B, A, C, D — Tiktaalik is the most primitive form because it has the fewest terrestrial adaptations",
+        "A, B, C, D (aquatic fish to tetrapod) — Tiktaalik is the key transitional form with a mobile neck and wrist joint but no digits, bridging lobe-finned fish (Eusthenopteron) and early digit-bearing tetrapods (Acanthostega); the progressive acquisition of features includes: lobed fins with internal skeleton, then mobile neck and wrist, then digits, and finally full terrestrial limbs with loss of gill/fin remnants",
+        "A, C, B, D — Acanthostega preceded Tiktaalik because having digits is more primitive than having fin-like limbs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The fish-to-tetrapod transition is one of the best-documented evolutionary transitions in the vertebrate fossil record. The sequence is: Eusthenopteron (Late Devonian lobe-finned fish with homologs of tetrapod limb bones in its fins but fully aquatic) -> Tiktaalik (Late Devonian 'fishapod' with a mosaic of fish and tetrapod features: lobed fins with a functional wrist joint, mobile neck separated from shoulder girdle, overlapping ribs for body support, reduced gills, and likely lungs, but no digits) -> Acanthostega (Late Devonian early tetrapod with digit-bearing limbs (polydactylous, 8 digits), but retained internal gills, a tail fin, and lateral line, indicating it was primarily aquatic despite having limbs) -> modern tetrapods like salamanders (fully developed limbs with 4-5 digits, loss of gills in adults, terrestrial or semi-aquatic). Tiktaalik is the critical transitional form because it demonstrates that the mobile neck, wrist joint, and body-supporting ribs evolved before digits, and that the transition occurred in shallow water/tidal flat environments. Acanthostega shows that early digits evolved in aquatic animals, challenging the assumption that limbs evolved for walking on land.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 34,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An ecologist studies mycorrhizal associations in a temperate forest and measures phosphorus uptake in seedlings grown under different conditions. Based on the data, what conclusion about mycorrhizal function is best supported?",
+      "dataContext": "Table: Phosphorus Content and Growth of Pine Seedlings Under Different Mycorrhizal Conditions (12-week experiment)\n\nTreatment | Shoot dry mass (g) | Root dry mass (g) | Root:Shoot ratio | Shoot P concentration (mg/g) | Total P uptake (mg/plant) | Hyphal length in soil (m/g soil)\n--- | --- | --- | --- | --- | --- | ---\nNo mycorrhiza (sterile control) | 0.8 | 0.5 | 0.63 | 0.6 | 0.78 | 0\nEctomycorrhiza (Pisolithus) | 3.2 | 1.4 | 0.44 | 1.8 | 8.28 | 25.3\nEctomycorrhiza + P fertilizer | 3.5 | 1.2 | 0.34 | 2.0 | 9.30 | 12.1\nP fertilizer only (no mycorrhiza) | 2.1 | 0.9 | 0.43 | 1.2 | 3.78 | 0",
+      "options": [
+        "Mycorrhizae are parasitic because the root:shoot ratio decreases with colonization, indicating the fungus is diverting resources away from roots",
+        "P fertilizer alone is sufficient to replace mycorrhizal function because shoot mass increased from 0.8 g to 2.1 g with fertilizer, which is a statistically significant improvement over the control",
+        "Ectomycorrhizal colonization dramatically enhanced P uptake (10.6x increase over control) and total plant growth (4x increase), exceeding the effect of P fertilizer alone (4.8x P uptake, 2.6x growth); the extensive hyphal network (25.3 m/g soil) expands the effective root absorption zone far beyond the P depletion zone; the reduced root:shoot ratio with mycorrhizae reflects efficient P acquisition reducing the plant's need to invest in root growth; when both mycorrhiza and P fertilizer are provided, the benefit is slightly additive but hyphal length decreases (12.1 m/g), suggesting the fungus invests less in exploration when P is abundant",
+        "The data show that mycorrhizae only benefit plants in P-deficient soils and have no effect when P is abundant, as shown by the similar shoot mass between mycorrhiza-only and mycorrhiza+P treatments"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The data comprehensively demonstrate the mutualistic benefit of ectomycorrhizal association: (1) Total P uptake increased from 0.78 mg/plant (control) to 8.28 mg/plant (mycorrhiza), a 10.6-fold increase — far greater than P fertilizer alone (3.78 mg, 4.8-fold). (2) Shoot biomass increased 4-fold with mycorrhiza versus 2.6-fold with fertilizer alone, showing that the mycorrhizal P acquisition is more efficient at promoting growth. (3) Hyphal length of 25.3 m per gram of soil represents an enormous increase in absorptive surface area — mycorrhizal hyphae are much finer than roots (2-10 micrometers versus >100 micrometers) and can access pore spaces and soil volumes that roots cannot penetrate. (4) The decreased root:shoot ratio with mycorrhizae (0.44 vs. 0.63 in control) indicates functional complementarity — the fungal hyphae substitute for root investment in P acquisition, allowing the plant to allocate more resources to shoots. (5) When P fertilizer is added alongside mycorrhiza, hyphal length decreases from 25.3 to 12.1 m/g soil, consistent with the concept that the fungus reduces carbon allocation to exploration when P is not limiting. Option D is partially addressed but overstated; the data show the benefit is reduced but not eliminated with P fertilizer.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 31,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A microbiologist hypothesizes that quorum sensing in Pseudomonas aeruginosa is required for biofilm formation and that disrupting quorum sensing will reduce biofilm-associated antibiotic resistance. She proposes the following experiment. Based on the experimental design, which result would most strongly support her hypothesis?",
+      "experimentContext": "Experimental Setup:\nGroup 1: Wild-type P. aeruginosa grown in flow-cell chambers for 72 hours to form mature biofilms\nGroup 2: lasI/rhlI double mutant (defective in AHL synthesis for both the las and rhl quorum sensing systems) grown under identical conditions\nGroup 3: lasI/rhlI double mutant supplemented with exogenous 3-oxo-C12-HSL and C4-HSL (the two AHL autoinducers) at concentrations equivalent to wild-type stationary phase levels\nGroup 4: Wild-type treated with furanone C-30 (a competitive inhibitor of AHL receptor binding) from inoculation\n\nMeasurements: Biofilm biomass (crystal violet staining, OD570), biofilm architecture (confocal microscopy), and minimum biofilm eradication concentration (MBEC) of tobramycin for each group.",
+      "options": [
+        "Groups 1-4 all form identical biofilms with equal MBEC values, proving that quorum sensing is irrelevant to biofilm formation and antibiotic resistance in P. aeruginosa",
+        "Group 2 (QS mutant) forms flat, unstructured biofilms with significantly reduced biomass and MBEC (e.g., 16 micrograms/mL tobramycin vs. 512 micrograms/mL for wild-type Group 1); Group 3 (QS mutant + exogenous AHLs) rescues biofilm architecture and MBEC to near wild-type levels; Group 4 (wild-type + furanone inhibitor) phenocopies the QS mutant with reduced biofilm and lower MBEC — demonstrating that QS is both necessary and sufficient for mature biofilm formation and that QS-dependent biofilm structure mediates antibiotic resistance",
+        "Only Group 4 shows reduced biofilm, while Group 2 forms normal biofilm; this would indicate that the furanone has direct antibacterial activity independent of QS inhibition",
+        "Group 2 fails to grow entirely because quorum sensing is essential for all bacterial growth, not just biofilm formation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This experiment uses a classic genetic approach with complementation and pharmacological confirmation: (1) The lasI/rhlI double mutant (Group 2) cannot synthesize AHL autoinducers for either QS system (las or rhl). If QS is required for mature biofilm formation, this mutant should form thin, flat, unstructured biofilms lacking the characteristic mushroom-shaped microcolonies and water channels of wild-type P. aeruginosa biofilms. The reduced biofilm architecture should also lower antibiotic resistance (lower MBEC) because the protective EPS matrix and metabolic heterogeneity depend on QS-regulated gene expression. (2) Chemical complementation (Group 3) — adding back the specific AHL molecules should rescue the mutant phenotype, confirming that the biofilm defect is specifically due to loss of QS signaling rather than a pleiotropic effect of the mutations. This is the gold standard for demonstrating that a specific signal mediates the observed phenotype. (3) Pharmacological inhibition (Group 4) — the halogenated furanone C-30 competitively inhibits AHL binding to LuxR-type receptors. If wild-type bacteria treated with furanone phenocopy the QS mutant, this provides independent confirmation and demonstrates therapeutic potential. (4) The link between QS, biofilm architecture, and antibiotic resistance is established by the correlated MBEC changes across all four groups.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diversity of Life"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "An evolutionary developmental biologist wants to test whether the Hox gene expression pattern in the annelid Nereis (polychaete) is homologous to the Hox-mediated anterior-posterior patterning in arthropods, which would support the hypothesis that segmentation in annelids and arthropods is homologous (inherited from a common segmented ancestor). She designs the following experiment. Which result would most strongly support the homology hypothesis?",
+      "experimentContext": "Experimental Design:\nAim: Compare Hox gene expression and function in Nereis virens (annelid) and Drosophila melanogaster (arthropod)\n\nExperiment 1 (Expression mapping): Use whole-mount in situ hybridization with riboprobes to map the expression domains of orthologous Hox genes (lab, pb, Dfd, Scr, Antp, Ubx, abd-A, Abd-B homologs) along the anterior-posterior axis in Nereis embryos during segmentation. Compare expression boundaries with known Drosophila Hox expression domains.\n\nExperiment 2 (Functional test): Use morpholino antisense oligonucleotides to knock down Nvi-Lox5 (the Nereis ortholog of Drosophila Antp/Ubx) in early embryos and assess segment identity transformations by scanning electron microscopy of parapodia and chaetal morphology.\n\nExperiment 3 (Cross-species rescue): Express the Nereis Nvi-Lox5 gene in Drosophila Antp mutant embryos using the UAS-GAL4 system to test whether the annelid gene can functionally substitute for the arthropod ortholog.\n\nControls: Sense-strand riboprobes (Exp 1 negative control), standard morpholino control (Exp 2), UAS-GFP (Exp 3 negative control).",
+      "options": [
+        "Nereis Hox genes are expressed in random, non-collinear patterns with no anterior-posterior correspondence to Drosophila expression domains, morpholino knockdown causes no segment identity changes, and the cross-species rescue fails completely — supporting independent evolution of segmentation",
+        "Nereis Hox genes show spatial collinearity along the anterior-posterior axis with expression domain boundaries that correspond to those in Drosophila (e.g., anterior Hox genes expressed in anterior segments, posterior Hox genes in posterior segments); Nvi-Lox5 knockdown causes homeotic-like transformations of posterior parapodia toward anterior identity; and Nvi-Lox5 partially rescues the Drosophila Antp phenotype — collectively demonstrating conserved Hox-mediated segment patterning consistent with homologous segmentation inherited from a common protostome ancestor",
+        "Only Experiment 1 shows correspondence, but Experiments 2 and 3 fail, indicating that while Hox genes are conserved, their function in segmentation has diverged completely",
+        "The cross-species rescue works perfectly, but expression patterns are completely different, proving that convergent evolution produced identical protein function from different regulatory architecture"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The homology of segmentation between annelids and arthropods is a major question in evolutionary developmental biology. Strong evidence for homology would require: (1) Conserved spatial expression — if Hox genes show collinear expression along the AP axis in both Nereis and Drosophila, with orthologous genes expressed in corresponding body regions, this indicates that the same genetic patterning system operates in both lineages. This is necessary but not sufficient for homology. (2) Conserved function — if knockdown of the Nereis Hox ortholog (Nvi-Lox5) produces homeotic transformations (one segment type taking on the identity of another), this demonstrates that Hox genes specify segment identity in annelids just as they do in arthropods. Functional conservation is strong evidence for homology. (3) Cross-species rescue — if the Nereis protein can substitute for the Drosophila protein, this indicates that the proteins have conserved sufficient sequence and structural similarity to interact with the same downstream targets, consistent with descent from a common ancestral protein that performed the same function. Collectively, these three lines of evidence (expression, function, and cross-species rescue) would strongly support the hypothesis that annelid and arthropod segmentation is homologous, inherited from a segmented common ancestor of the protostomes (the 'Urbilaterian' hypothesis). Option A would support the alternative hypothesis of convergent evolution. Options C and D present contradictory results that weaken the homology argument.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 33,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diversity of Life"
+    }
+  ]
+}

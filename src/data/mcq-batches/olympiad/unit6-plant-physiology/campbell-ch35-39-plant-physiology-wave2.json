@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch35-39 Plant Form & Function — Wave 2",
+    "version": 1,
+    "source": "olympiad-wave2",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "In Arabidopsis, the WUSCHEL (WUS) transcription factor and the CLAVATA (CLV) signaling pathway form a negative feedback loop in the shoot apical meristem (SAM). If a loss-of-function mutation occurs in CLV3 (the ligand for the CLV1 receptor kinase), what phenotype would you predict?",
+      "options": [
+        "The SAM terminates prematurely because stem cells are not maintained",
+        "The root apical meristem enlarges but the shoot meristem is unaffected",
+        "Lateral organ primordia fail to initiate because CLV3 is required for organ boundary specification",
+        "The SAM enlarges dramatically due to unrestricted WUS expression and stem cell overproliferation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The WUS-CLV feedback loop maintains SAM homeostasis. WUS, expressed in the organizing center, promotes stem cell identity and induces CLV3 expression in the central zone. CLV3 peptide binds the CLV1 receptor kinase, which signals to repress WUS transcription, limiting stem cell number. Loss of CLV3 eliminates this negative feedback: WUS expression expands unchecked, leading to excessive stem cell accumulation and a dramatically enlarged, fasciated meristem. This is a classic Arabidopsis phenotype. Option A describes the opposite (WUS loss-of-function). Option C is incorrect because organ initiation depends on auxin maxima, not CLV3. Option B is wrong because CLV3 acts primarily in the SAM, though the related CLE peptide family functions in the RAM via a WOX5/CLE40 pathway.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A cross-section of a woody dicot stem reveals a ring of vascular cambium. Which of the following correctly describes the pattern of cell division and differentiation in this lateral meristem?",
+      "options": [
+        "Vascular cambium divides only periclinally, producing secondary xylem toward the outside and secondary phloem toward the pith",
+        "Vascular cambium divides periclinally, producing secondary xylem centripetally (toward the pith) and secondary phloem centrifugally (toward the bark), with far more xylem produced than phloem",
+        "Vascular cambium produces equal amounts of secondary xylem and secondary phloem, both through anticlinal divisions",
+        "Vascular cambium produces secondary xylem from fusiform initials only and secondary phloem from ray initials only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The vascular cambium is a lateral meristem that undergoes periclinal (tangential) divisions to produce secondary vascular tissues. Cells cut off toward the interior (centripetally, toward the pith) differentiate into secondary xylem (wood), while cells cut off toward the exterior (centrifugally) differentiate into secondary phloem. The cambium produces substantially more xylem than phloem, which is why wood accumulates massively while the phloem layer remains relatively thin. The cambium also undergoes anticlinal (radial) divisions to increase its circumference as the stem expands, but these do not directly produce vascular tissues. Both fusiform initials (producing axial elements) and ray initials (producing ray parenchyma) contribute to both xylem and phloem, not one each.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 35,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "A plant physiologist measures the water potential components of a cell and obtains: Ψs = -0.8 MPa and Ψp = 0.3 MPa. This cell is placed in a solution with Ψs = -0.4 MPa (open container, Ψp = 0). What will happen and what is the equilibrium state?",
+      "options": [
+        "Water moves into the cell because the cell has lower water potential; at equilibrium the cell becomes more turgid",
+        "Water moves out of the cell because the external solution has higher water potential (-0.4 MPa > -0.5 MPa); at equilibrium the cell loses turgor and may plasmolyze",
+        "No net water movement occurs because the solute potentials are both negative",
+        "Water moves into the cell initially, then reverses direction as turgor pressure builds"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Water potential (Ψw) = Ψs + Ψp. For the cell: Ψw = -0.8 + 0.3 = -0.5 MPa. For the external solution (open container, so Ψp = 0): Ψw = -0.4 + 0 = -0.4 MPa. Water moves from regions of higher Ψw to lower Ψw. Since -0.4 MPa (solution) > -0.5 MPa (cell), water enters the cell by osmosis. As water enters, the cell's Ψp increases and Ψs becomes less negative (dilution), raising Ψw until equilibrium is reached when Ψw(cell) = Ψw(solution) = -0.4 MPa. At equilibrium, if the cell Ψs dilutes to approximately -0.7 MPa, then Ψp would be 0.3 MPa. The cell becomes more turgid. Option B reverses the direction. Option C ignores the Ψp component. Option D incorrectly describes flow reversal.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Casparian strip in the root endodermis is composed primarily of suberin and lignin deposited in the radial and transverse walls. What is the primary physiological consequence of this structure for mineral ion transport?",
+      "options": [
+        "It prevents all water from entering the vascular cylinder, forcing water to be actively pumped by root pressure",
+        "It creates a reservoir of ions in the cortex that can be released during drought stress",
+        "It forces water and dissolved solutes moving via the apoplast to cross the selectively permeable plasma membrane of endodermal cells before entering the stele, enabling the plant to regulate ion uptake",
+        "It prevents backflow of water from the xylem to the cortex by creating a one-way valve mechanism"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Casparian strip blocks the apoplastic pathway at the endodermis by sealing the spaces between endodermal cell walls. Minerals and water that have traveled through the apoplast (cell walls and intercellular spaces) in the cortex cannot bypass endodermal cells. They must enter the symplast by crossing the selectively permeable plasma membrane of the endodermal cells, which contains specific ion channels and transporters. This gives the plant control over which minerals enter the xylem and at what concentrations, functioning as a selective filter. Option A is wrong because water can still enter via the symplastic and transmembrane pathways. Option B describes no real function of the Casparian strip. Option D is partially relevant (backflow prevention occurs) but is not the primary function — selective ion regulation is the key role.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "According to the pressure-flow (Munch) hypothesis of phloem transport, sucrose loading into sieve-tube elements at the source creates a high osmotic pressure that drives bulk flow to sinks. Which of the following would most directly inhibit phloem loading in an apoplastic loader?",
+      "options": [
+        "Applying a protonophore (H+ ionophore like CCCP) to the source leaf, which dissipates the proton gradient across the companion cell plasma membrane",
+        "Increasing the turgor pressure in sink tissues by flooding the roots",
+        "Blocking aquaporins in the sieve-tube elements to prevent water entry",
+        "Removing all potassium ions from the soil solution"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In apoplastic phloem loading, sucrose is exported from mesophyll cells into the apoplast and then actively loaded into the companion cell-sieve element complex by a sucrose-H+ symporter (SUT1/SUC2). This secondary active transport is driven by the proton motive force generated by H+-ATPases on the companion cell plasma membrane. A protonophore like CCCP would dissipate the H+ gradient, abolishing the driving force for sucrose uptake. Without active loading, sucrose cannot accumulate to high concentrations in the sieve tube, and the osmotic gradient required for pressure flow collapses. Option B would affect sink unloading, not source loading. Option C would reduce water influx but not sucrose loading directly. Option D affects mineral nutrition but K+ is not directly required for sucrose-H+ symport.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nitrogenase, the enzyme complex responsible for biological nitrogen fixation, is irreversibly inactivated by oxygen. How do legume root nodules protect nitrogenase from O2 while still supporting the aerobic respiration needed to supply ATP for nitrogen fixation?",
+      "options": [
+        "Leghemoglobin in the nodule cytosol binds O2 with high affinity, buffering free O2 at very low concentrations (~10 nM) while delivering it to bacteroid terminal oxidases for respiration",
+        "Nodule cells are entirely anaerobic and generate ATP exclusively through fermentation",
+        "The bacteroids switch to an O2-independent terminal oxidase (nitrate reductase) that uses NO3- as the terminal electron acceptor",
+        "A thick suberized cortex completely excludes O2 from the nodule interior, and bacteroids use substrate-level phosphorylation for ATP production"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Leghemoglobin is a plant-encoded oxygen-binding protein (analogous to animal myoglobin) present at high concentrations (~1 mM) in the cytosol of infected nodule cells. It binds O2 with very high affinity (Kd ~10 nM), maintaining free O2 at approximately 10 nM — low enough to protect nitrogenase from irreversible oxidation. However, bound O2 is continuously delivered to the bacteroid surface, where high-affinity terminal oxidases (cytochrome bd, cytochrome cbb3) accept it for aerobic respiration. This produces the 16 ATP per N2 required by nitrogenase. The nodule cortex also has an oxygen diffusion barrier, but it is leghemoglobin that critically buffers intracellular O2. Option B is wrong because 16 ATP per N2 cannot be generated by fermentation alone. Options C and D describe mechanisms that would not supply sufficient ATP.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Double fertilization in angiosperms produces a triploid endosperm (3n). Which of the following correctly describes the genetic composition of the endosperm nucleus?",
+      "options": [
+        "Two paternal genomes from two separate sperm cells plus one maternal genome",
+        "One maternal genome plus one paternal genome plus one additional genome from a second pollen tube",
+        "Three maternal genomes from the three antipodal cells of the embryo sac",
+        "One paternal genome from a sperm cell fused with the diploid central cell containing two polar nuclei (both maternal), yielding 2 maternal : 1 paternal genome ratio"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In double fertilization, one sperm cell fuses with the egg to form the diploid zygote (1 maternal + 1 paternal). The second sperm cell fuses with the central cell, which contains two polar nuclei (both derived from the same megaspore mother cell through megagametogenesis and thus both maternal). The resulting primary endosperm nucleus is triploid: 2n maternal + 1n paternal. This 2m:1p genomic ratio is critical for normal endosperm development and is the basis of the endosperm balance number concept and genomic imprinting in seeds. Deviation from this 2:1 ratio (as in interploidy crosses) often causes endosperm failure. Option A incorrectly states two sperm contribute. Option C confuses antipodal cells with polar nuclei. Option B invokes a nonexistent second pollen tube.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Florigen, the long-distance flowering signal, was identified as the FT (FLOWERING LOCUS T) protein. In Arabidopsis (a long-day plant), where is FT produced, how does it travel, and where does it act?",
+      "options": [
+        "FT is produced in the shoot apical meristem, travels basipetally through the phloem, and induces flowering in lateral buds",
+        "FT is produced in mature root cells, travels acropetally through the xylem, and activates floral meristem identity genes in the SAM",
+        "FT is produced in leaf companion cells under inductive photoperiods, travels through the phloem to the SAM, and interacts with FD transcription factor to activate floral meristem identity genes like AP1",
+        "FT is produced as mRNA in leaves, moves through plasmodesmata to the meristem, and is translated locally to activate LEAFY"
+      ],
+      "correctAnswer": "C",
+      "explanation": "FT protein is the molecular identity of florigen, the long-sought systemic flowering signal. Under inductive long-day conditions in Arabidopsis, the photoreceptor-mediated pathway activates CONSTANS (CO) protein in leaf phloem companion cells, which transcriptionally activates FT expression. FT protein (not mRNA) is loaded into sieve elements and transported through the phloem to the shoot apical meristem. At the SAM, FT interacts with the bZIP transcription factor FD in a complex that activates floral meristem identity genes, particularly AP1 (APETALA1) and SOC1. This triggers the irreversible transition from vegetative to reproductive development. Option A reverses the source and direction. Option B incorrectly places FT production in roots and transport in xylem. Option D incorrectly identifies FT mRNA rather than protein as the mobile signal.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The acid growth hypothesis explains the mechanism of auxin-induced cell elongation. Which sequence correctly describes the molecular events from auxin perception to cell wall loosening?",
+      "options": [
+        "Auxin binds to ABP1 in the cytoplasm → activates MAP kinase cascade → phosphorylates expansins → expansins break cellulose microfibrils",
+        "Auxin binds to TIR1 (nuclear receptor) → activates gene transcription of proton pump genes → H+-ATPases are synthesized de novo → wall acidification occurs hours later",
+        "Auxin activates plasma membrane H+-ATPases (via phosphorylation of the C-terminal autoinhibitory domain), pumping H+ into the cell wall → lowered apoplastic pH activates expansins → expansins disrupt hydrogen bonds between cellulose and hemicellulose → turgor-driven cell expansion",
+        "Auxin directly acidifies the cell wall by releasing stored H+ from the vacuole through tonoplast channels → low pH dissolves pectin → cell wall disintegrates"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The acid growth hypothesis, supported by extensive evidence, proceeds as follows: auxin (IAA) rapidly activates plasma membrane H+-ATPases, in part through SAUR proteins that inhibit PP2C.D phosphatases, keeping the H+-ATPase C-terminal regulatory domain phosphorylated (active). Protons are pumped into the cell wall space, lowering apoplastic pH from ~5.5 to ~4.5. At this acidic pH, expansins (non-enzymatic wall-loosening proteins) become active and disrupt the non-covalent hydrogen bonds between cellulose microfibrils and hemicellulose (xyloglucan) chains. This wall loosening reduces wall pressure (Ψp of wall), allowing turgor-driven water uptake and irreversible cell expansion. Option A incorrectly claims expansins break cellulose (they disrupt H-bonds between polymers, not covalent bonds). Option B conflates the rapid acid growth response (minutes) with slower transcriptional effects. Option D incorrectly describes vacuolar H+ release and wall disintegration.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The phytochrome system allows plants to detect the red:far-red (R:FR) ratio in their light environment. In a forest understory where canopy leaves have filtered out most red light, the R:FR ratio is very low. What is the molecular state of phytochrome under these conditions and what physiological response does it trigger?",
+      "options": [
+        "Most phytochrome exists as Pfr (the active form), which inhibits stem elongation to keep the plant compact under the canopy",
+        "Most phytochrome exists as Pr (the inactive form) because far-red light converts Pfr back to Pr; low Pfr:Ptotal ratio triggers shade avoidance responses including accelerated stem elongation, reduced branching, and early flowering",
+        "Phytochrome is degraded in low-light conditions, and the plant relies exclusively on cryptochrome signaling",
+        "The R:FR ratio does not affect phytochrome; only absolute light intensity determines the shade avoidance response"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Phytochrome exists in two photointerconvertible forms: Pr (red-absorbing, inactive, λmax = 660 nm) and Pfr (far-red-absorbing, biologically active, λmax = 730 nm). Red light converts Pr to Pfr; far-red light converts Pfr back to Pr. Under a canopy, chlorophyll in overhead leaves absorbs red light but transmits far-red, creating a low R:FR ratio. This shifts the phytochrome equilibrium toward the Pr form, reducing the Pfr/Ptotal ratio. Since Pfr is the form that suppresses shade avoidance, low Pfr levels de-repress shade avoidance syndrome (SAS): increased stem/petiole elongation (via auxin and gibberellin pathways), hyponastic leaf movement, reduced branching, and accelerated flowering. This is mediated primarily by phyB, whose depletion stabilizes PIF (Phytochrome Interacting Factor) transcription factors. Option A reverses the phytochrome response. Options C and D are factually incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about auxin transport and signaling in plants:",
+      "options": [
+        "S1: TRUE — Polar auxin transport is mediated by PIN efflux carriers whose asymmetric localization on the plasma membrane determines the direction of auxin flow; PIN protein cycling between the plasma membrane and endosomes is regulated by GNOM, an ARF-GEF protein",
+        "S2: TRUE — Auxin is perceived intracellularly by the TIR1/AFB family of F-box proteins, which are components of the SCF ubiquitin ligase complex; auxin acts as molecular glue between TIR1 and Aux/IAA transcriptional repressors, targeting them for proteasomal degradation",
+        "S3: TRUE — AUX1/LAX influx carriers are required for auxin uptake into cells because IAA in its protonated form (IAAH) at the acidic apoplastic pH can freely diffuse across the membrane, but the deprotonated form (IAA-) inside the cell cannot exit without PIN efflux carriers",
+        "S4: TRUE — Auxin promotes its own transport by upregulating PIN expression through a positive feedback loop, which explains canalization theory and the formation of auxin transport channels during vascular development"
+      ],
+      "correctAnswer": "TTTT",
+      "explanation": "S1: TRUE — PIN proteins are auxin efflux carriers with polarized subcellular localization. PIN1, for example, is basally localized in vascular cells, driving basipetal auxin transport. The ARF-GEF GNOM is essential for PIN recycling: brefeldin A (a GNOM inhibitor) causes PIN internalization and disrupts polar auxin transport. S2: TRUE — This is the canonical auxin signaling mechanism. TIR1 is an F-box protein in the SCF^TIR1 E3 ubiquitin ligase. IAA (auxin) binds in a pocket between TIR1 and the degron domain of Aux/IAA proteins, promoting their ubiquitination and 26S proteasomal degradation. This releases ARF (Auxin Response Factor) transcription factors to activate auxin-responsive genes. S3: TRUE — The chemiosmotic model of polar auxin transport: in the acidic apoplast (pH ~5.5), ~15-20% of IAA is protonated (IAAH, pKa = 4.75), which diffuses passively into cells. Inside the cell (pH ~7.0), IAAH deprotonates to IAA-, which is membrane-impermeant and requires PIN efflux carriers to exit. AUX1/LAX importers enhance uptake of the anionic form. S4: TRUE — Auxin-mediated upregulation of PIN expression creates positive feedback: where auxin flux is higher, more PINs are recruited, channeling even more auxin. This self-reinforcing mechanism underlies Sachs' canalization hypothesis, explaining how initially diffuse auxin flow becomes focused into narrow channels that prefigure vascular strands.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about gibberellin signaling and DELLA proteins:",
+      "options": [
+        "S1: TRUE — DELLA proteins are nuclear growth repressors that inhibit plant growth by interacting with and sequestering PIF (Phytochrome Interacting Factor) transcription factors, preventing them from activating growth-promoting genes",
+        "S2: FALSE — Gibberellin (GA) promotes growth by stabilizing DELLA proteins, which then directly activate transcription of cell elongation genes",
+        "S3: TRUE — The GA receptor GID1 undergoes a conformational change upon GA binding that enables it to interact with DELLA proteins; this complex is then recognized by the SLY1/GID2 F-box protein in an SCF E3 ubiquitin ligase, leading to DELLA ubiquitination and proteasomal degradation",
+        "S4: TRUE — The Green Revolution dwarf wheat varieties carry mutations in DELLA proteins (Rht genes) that make them resistant to GA-induced degradation, resulting in constitutive growth repression and short stature even in the presence of normal GA levels"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — DELLA proteins act as central growth repressors through multiple mechanisms, including sequestration of PIF transcription factors. DELLAs physically bind PIFs (PIF3, PIF4), preventing them from binding to G-box promoter elements and activating genes for cell elongation and chlorophyll biosynthesis. S2: FALSE — This statement has the mechanism backwards. GA promotes growth by DESTABILIZING (degrading) DELLA proteins, not stabilizing them. When DELLAs are degraded, growth-promoting transcription factors like PIFs are released to activate their targets. S3: TRUE — This describes the canonical GA signaling pathway: GA binds GID1 receptor → GID1-GA-DELLA complex forms → SCF^SLY1/GID2 E3 ligase recognizes the complex → DELLA is polyubiquitinated → 26S proteasome degrades DELLA → growth-promoting TFs are released. S4: TRUE — Semi-dominant Rht-B1b and Rht-D1b alleles encode DELLA proteins with mutations in the DELLA domain (the GA-GID1 interaction surface), making them insensitive to GA-triggered degradation. These constitutively active growth repressors reduce stem elongation, producing shorter plants with improved harvest index. This was the genetic basis of the Green Revolution in wheat.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about nitrogen fixation and assimilation in plants:",
+      "options": [
+        "S1: TRUE — Nitrogenase consists of two components: the Fe protein (dinitrogenase reductase) and the MoFe protein (dinitrogenase); the overall reaction N2 + 8H+ + 8e- + 16ATP → 2NH3 + H2 + 16ADP + 16Pi obligatorily produces one molecule of H2 per N2 fixed",
+        "S2: FALSE — Nod factors secreted by Rhizobium are lipopolysaccharides that are recognized by non-specific pattern recognition receptors on root hair cells, triggering an immune response",
+        "S3: TRUE — After ammonia is released by nitrogenase in the bacteroid, it is assimilated in the plant cytosol primarily via the GS-GOGAT (glutamine synthetase/glutamate synthase) pathway rather than by glutamate dehydrogenase, because GS has a much higher affinity for NH4+",
+        "S4: TRUE — In tropical legumes, fixed nitrogen is exported from nodules predominantly as ureides (allantoin and allantoic acid), while temperate legumes export primarily amides (asparagine and glutamine)"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — The nitrogenase reaction is: N2 + 8H+ + 8e- + 16ATP → 2NH3 + H2 + 16ADP + 16Pi. The obligatory production of H2 (wasting 2 electrons and 4 ATP) is an intrinsic feature of the nitrogenase mechanism and reduces its efficiency. Some rhizobia have uptake hydrogenases that recapture this H2. S2: FALSE — Nod factors are NOT lipopolysaccharides (LPS) and do NOT trigger immune responses. Nod factors are lipochitooligosaccharides (modified chitin oligomers with a fatty acid chain) produced by rhizobia. They are recognized by specific LysM receptor kinases (NFR1/NFR5 in Lotus, LYK3/NFP in Medicago) on the root hair cell surface. This triggers a symbiotic signaling cascade (calcium spiking, ENOD gene expression, root hair curling) — the opposite of an immune response. S3: TRUE — GS has a Km for NH4+ of ~0.2 mM, while GDH has Km ~10 mM. At physiological NH4+ concentrations, the GS-GOGAT cycle dominates. GS converts glutamate + NH4+ → glutamine, then GOGAT (NADH or Fd dependent) transfers the amide group to 2-oxoglutarate: glutamine + 2-OG → 2 glutamate. S4: TRUE — Tropical legumes (soybean, common bean) export ureides, which have a higher N:C ratio (4N:4C) and are thus more carbon-efficient for nitrogen transport. Temperate legumes (pea, clover, alfalfa) export amides (asparagine, glutamine).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about stomatal regulation and guard cell physiology:",
+      "options": [
+        "S1: TRUE — Blue light activates phototropin receptors on guard cells, which activate a signaling cascade leading to phosphorylation and activation of plasma membrane H+-ATPases; proton pumping hyperpolarizes the membrane, driving K+ influx through voltage-gated inward-rectifying K+ channels",
+        "S2: TRUE — ABA (abscisic acid) promotes stomatal closure by activating the PYR/PYL/RCAR receptor, which inhibits PP2C phosphatases, releasing SnRK2 kinases to phosphorylate SLAC1 anion channels and KAT1 potassium channels, causing anion efflux and K+ efflux respectively",
+        "S3: FALSE — Guard cells open stomata at night in C3 plants to maximize CO2 uptake when temperatures are lower and humidity is higher",
+        "S4: TRUE — The radial orientation of cellulose microfibrils in guard cell walls causes them to expand longitudinally (lengthwise) when turgor increases, forcing the stomatal pore open due to the differential thickening of inner and outer walls"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Blue light (via phototropins phot1/phot2) is the primary light signal for stomatal opening. The signaling cascade involves: blue light → phototropin autophosphorylation → 14-3-3 protein binding → phosphorylation of H+-ATPase C-terminal threonine → proton extrusion → membrane hyperpolarization → voltage-gated K+ channels (KAT1, KAT2) open → K+ influx → osmotic water uptake → guard cell swelling → stomatal opening. S2: TRUE — The ABA signaling pathway for stomatal closure: ABA binds PYR/PYL/RCAR receptors → ABA-receptor complex inhibits type 2C protein phosphatases (PP2Cs like ABI1, ABI2) → SnRK2 kinases (e.g., OST1/SnRK2.6) are released from PP2C inhibition → SnRK2 phosphorylates SLAC1 (S-type anion channel, causing Cl- and malate2- efflux) and inhibits KAT1 (blocking K+ influx) → solute loss → water efflux → guard cell deflation → stomatal closure. S3: FALSE — C3 plants open stomata during the day, not at night. It is CAM plants that open stomata at night to fix CO2 via PEP carboxylase. S4: TRUE — The radial arrangement of cellulose microfibrils restricts guard cell diameter but allows elongation. When turgor increases, guard cells lengthen; because they are anchored at their ends and have thicker inner walls (the belly walls), they bow outward, creating the pore.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about plant self-incompatibility (SI) mechanisms:",
+      "options": [
+        "S1: TRUE — In gametophytic self-incompatibility (GSI), as found in Solanaceae, the S-RNase from the pistil enters pollen tubes and degrades RNA of self-pollen, while non-self S-RNases are targeted for degradation by SLF/SFB F-box proteins in compatible pollen tubes",
+        "S2: TRUE — In sporophytic self-incompatibility (SSI) in Brassicaceae, the S-locus receptor kinase (SRK) on the stigma surface recognizes the SCR/SP11 ligand in the pollen coat; if S-haplotypes match, a signaling cascade is activated that prevents pollen hydration and germination",
+        "S3: FALSE — In GSI, the incompatibility phenotype of the pollen is determined by the diploid genotype of the pollen-producing parent (sporophyte), not by the haploid genotype of the pollen grain itself",
+        "S4: TRUE — Both GSI and SSI systems involve co-evolved S-locus genes encoding both male and female determinants that are tightly linked to prevent recombination, ensuring coordinated inheritance of matching recognition components"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — In the Solanaceae-type GSI, the pistil secretes S-RNases into the transmitting tract. All S-RNases enter growing pollen tubes, but in compatible (non-self) pollen tubes, SLF (S-locus F-box) proteins recognize non-self S-RNases and ubiquitinate them for proteasomal degradation. Self S-RNases are not recognized by SLF and remain active, degrading ribosomal RNA and halting pollen tube growth. Multiple SLF genes act collaboratively (collaborative non-self recognition model). S2: TRUE — In Brassica SSI, the stigma papilla cell surface displays SRK (S-locus receptor kinase). When pollen lands, the SCR/SP11 peptide (male determinant, produced by the tapetum and deposited on the pollen coat) interacts with SRK. If S-haplotypes match, SRK autophosphorylation triggers a downstream cascade involving ARC1 (E3 ligase) that ubiquitinates exocyst complex components, blocking vesicle secretion needed for pollen hydration. S3: FALSE — The statement describes SSI, not GSI. In GSI, the pollen phenotype IS determined by the haploid genotype of the pollen grain itself (gametophytic). In SSI, the pollen coat proteins are produced by the diploid tapetum, so the incompatibility phenotype reflects the sporophyte genotype. S4: TRUE — The S-locus is a supergene containing tightly linked male and female determinant genes, maintained by suppressed recombination (often through structural heterozygosity/inversions) to ensure co-inheritance.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about ethylene signaling in plants:",
+      "options": [
+        "S1: TRUE — Ethylene is perceived by a family of ER membrane-localized receptors (ETR1, ERS1, etc.) that contain a copper cofactor essential for ethylene binding; in the ABSENCE of ethylene, these receptors actively signal through CTR1 (a Raf-like kinase) to suppress the ethylene response",
+        "S2: FALSE — The triple response in etiolated Arabidopsis seedlings exposed to ethylene includes exaggerated apical hook formation, radial swelling of the hypocotyl, and accelerated root elongation",
+        "S3: TRUE — In the presence of ethylene, CTR1 is inactivated, which allows EIN2 (a Nramp-like metal transporter homolog) to be cleaved; the C-terminal fragment moves to the nucleus where it stabilizes EIN3/EIL1 transcription factors by blocking their ubiquitination by the EBF1/EBF2 F-box proteins",
+        "S4: TRUE — Ethylene biosynthesis involves the conversion of SAM (S-adenosylmethionine) to ACC (1-aminocyclopropane-1-carboxylic acid) by ACC synthase, followed by oxidation of ACC to ethylene by ACC oxidase; both enzymes are encoded by multigene families with tissue-specific regulation"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — This is the inverse-agonist model unique to ethylene signaling. ETR1 and related receptors are ER-membrane-localized dimeric proteins with copper(I) as the ethylene-binding cofactor (delivered by the RAN1/Responsive to Antagonist 1 copper transporter). Without ethylene, receptors activate CTR1 kinase, which phosphorylates EIN2 and targets it for degradation, suppressing the pathway. Ethylene binding INACTIVATES the receptors, turning OFF CTR1. S2: FALSE — The triple response includes: (1) exaggerated apical hook, (2) radial swelling (thickening) of the hypocotyl, and (3) INHIBITION (not acceleration) of root and hypocotyl elongation. The seedling becomes short, thick, and hooked — an adaptation for pushing through soil. S3: TRUE — When CTR1 is inactive, EIN2 is no longer phosphorylated and its C-terminal domain is proteolytically cleaved. This fragment translocates to the nucleus and to P-bodies where it regulates EBF1/EBF2 mRNA translation. In the nucleus, EIN3/EIL1 accumulate and activate ERF (Ethylene Response Factor) genes. S4: TRUE — The Yang cycle: methionine → SAM → ACC (by ACS, rate-limiting) → ethylene (by ACO). ACS is a PLP-dependent enzyme; ACO requires Fe2+ and ascorbate. Both are encoded by multigene families regulated by developmental and environmental signals.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about mycorrhizal associations:",
+      "options": [
+        "S1: TRUE — Ectomycorrhizal fungi form a Hartig net of hyphae that penetrate between cortical cell walls but do not penetrate the host cell plasma membrane; they also form a dense hyphal mantle around the root surface",
+        "S2: FALSE — Arbuscular mycorrhizal (AM) fungi of the phylum Glomeromycota penetrate the host cortical cell wall and plasma membrane to directly access the cytoplasm, where they form branched arbuscules for nutrient exchange",
+        "S3: TRUE — The common symbiosis pathway (CSM/SYM pathway) involves components shared between AM symbiosis and rhizobial symbiosis, including calcium spiking mediated by DMI1/CASTOR-POLLUX ion channels and interpreted by the CCaMK/DMI3 calcium/calmodulin-dependent kinase",
+        "S4: TRUE — In AM symbiosis, the fungus provides the plant primarily with phosphorus (via high-affinity fungal phosphate transporters) and receives photosynthetically fixed carbon (hexoses and lipids) in return"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — Ectomycorrhizae (ECM) form two characteristic structures: (1) the mantle (sheath) — a dense fungal layer surrounding the root tip, and (2) the Hartig net — intercellular hyphae that grow between cortical cells (and sometimes epidermal cells), providing a large surface area for nutrient exchange. Crucially, ECM hyphae never penetrate the host cell membrane. S2: FALSE — While AM fungi do penetrate the cortical cell wall to form intracellular arbuscules, they do NOT penetrate the plasma membrane. The host plasma membrane invaginates around the arbuscule branches, creating a periarbuscular membrane (PAM) that separates the fungal tissue from the plant cytoplasm. The interface between PAM and fungal cell wall (the periarbuscular space) is where nutrient exchange occurs via specific transporters (e.g., plant PT4 phosphate transporter on the PAM). S3: TRUE — The CSM pathway is shared between AM fungi and rhizobia, reflecting the evolutionary co-option of the older AM signaling pathway by nitrogen-fixing bacteria. Key shared components include: Myc/Nod factor perception → activation of DMI1/CASTOR-POLLUX (nuclear envelope ion channels) → calcium oscillations → CCaMK/DMI3 decodes calcium signal → CYCLOPS/IPD3 transcription factor activation. S4: TRUE — AM fungi dramatically extend the phosphorus depletion zone through their extraradical hyphae. Fungal high-affinity Pi transporters scavenge phosphate from soil and transport it to arbuscules. In return, the plant provides 4-20% of its photosynthate as hexoses and, as recently discovered, lipids (fatty acids synthesized by plant FatM and RAM2) to the fungus.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, which conclusion about the relationship between transpiration rate and environmental factors is best supported?",
+      "dataContext": "A plant physiologist measured transpiration rate in sunflower plants under different environmental conditions. All plants were well-watered, same age, and kept under 1000 μmol photons/m2/s PAR.\n\n| Condition | Temperature (°C) | Relative Humidity (%) | Wind Speed (m/s) | Stomatal Conductance (mmol/m2/s) | Transpiration Rate (mmol H2O/m2/s) |\n|---|---|---|---|---|---|\n| A | 25 | 60 | 0.5 | 320 | 3.2 |\n| B | 25 | 30 | 0.5 | 315 | 5.8 |\n| C | 25 | 60 | 3.0 | 318 | 4.9 |\n| D | 35 | 60 | 0.5 | 310 | 5.1 |\n| E | 35 | 30 | 0.5 | 295 | 8.7 |\n| F | 25 | 90 | 0.5 | 325 | 1.1 |",
+      "options": [
+        "Stomatal conductance is the sole determinant of transpiration rate, as conditions with similar conductance show identical transpiration",
+        "Reducing humidity from 60% to 30% nearly doubles transpiration (A vs B), increasing wind reduces boundary layer resistance and increases transpiration (A vs C), and higher temperature increases vapor pressure deficit — all while stomatal conductance remains relatively constant, demonstrating that the leaf-to-air vapor pressure difference (VPD) is the primary driver of transpiration rate",
+        "Wind speed has a greater effect on transpiration than humidity, as shown by comparing conditions A and C",
+        "Temperature has no significant effect on transpiration when humidity is held constant"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data reveal that stomatal conductance is remarkably similar across all conditions (295-325 mmol/m2/s), yet transpiration rates vary from 1.1 to 8.7 mmol/m2/s. This demonstrates that transpiration is not solely determined by stomatal aperture. Transpiration rate = conductance x VPD (vapor pressure deficit). Comparing A vs B: humidity drops from 60% to 30% while everything else is constant — transpiration nearly doubles (3.2 → 5.8), because lower humidity increases the leaf-to-air water vapor gradient. Comparing A vs C: wind increases from 0.5 to 3.0 m/s — transpiration increases (3.2 → 4.9) because wind reduces the boundary layer (unstirred air layer) around the leaf, decreasing boundary layer resistance. Comparing A vs D: temperature rises from 25°C to 35°C at constant 60% RH — transpiration increases (3.2 → 5.1) because higher temperature increases the saturated vapor pressure inside the leaf more than the ambient vapor pressure, increasing VPD. Condition E (high temp, low humidity) shows the highest rate (8.7). Condition F (90% humidity) shows the lowest (1.1), confirming VPD dominance. Option A is contradicted by the data directly. Option C is wrong — humidity change (A vs B: 2.6 increase) exceeds wind change (A vs C: 1.7 increase). Option D is wrong — compare A vs D.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, what is the most likely identity of the nutrient deficiency and which mineral element is involved?",
+      "dataContext": "A researcher grew tomato plants hydroponically in complete nutrient solution and in solutions each lacking one specific mineral element. After 4 weeks, the following symptoms were recorded:\n\n| Treatment | Symptom Location | Visible Symptoms | Chlorophyll (mg/g FW) | Protein Content (% DW) | Root Nodule Formation |\n|---|---|---|---|---|---|\n| Complete | None | Healthy, dark green | 2.8 | 18.5 | N/A (tomato) |\n| Treatment X | Older leaves first | Interveinal chlorosis progressing to necrosis; young leaves initially green | 1.1 | 17.9 | N/A |\n| Treatment Y | Young leaves, meristems | Distorted, hooked young leaves; death of shoot apex; dark green older leaves | 2.9 | 18.1 | N/A |\n| Treatment Z | Older leaves first | Uniform chlorosis (entire leaf yellowing), not interveinal; stunted growth | 0.8 | 8.2 | N/A |",
+      "options": [
+        "Treatment X is iron deficiency (interveinal chlorosis in young leaves), Treatment Y is calcium deficiency, Treatment Z is nitrogen deficiency",
+        "Treatment X is magnesium deficiency (interveinal chlorosis appearing first in older leaves because Mg is phloem-mobile), Treatment Y is calcium deficiency (Ca is phloem-immobile, so deficiency appears in young growing tissues and meristems), Treatment Z is nitrogen deficiency (uniform chlorosis in older leaves because N is remobilized, plus dramatically reduced protein content)",
+        "Treatment X is manganese deficiency, Treatment Y is boron deficiency, Treatment Z is potassium deficiency",
+        "All three treatments show phosphorus deficiency at different stages of severity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data allow precise identification based on symptom location (mobility) and type: Treatment X shows interveinal chlorosis in OLDER leaves first. This pattern indicates a phloem-mobile nutrient being remobilized from old to young leaves. Magnesium is a component of the chlorophyll molecule and is phloem-mobile — deficiency causes interveinal chlorosis (veins remain green because they retain Mg longer) in older leaves first. Chlorophyll drops to 1.1 but protein is nearly normal (17.9), consistent with Mg deficiency (not N). Treatment Y shows symptoms in YOUNG leaves and meristems (apex death, distorted leaves). This indicates a phloem-IMMOBILE nutrient. Calcium is phloem-immobile and is essential for cell wall pectin cross-linking (calcium pectate), membrane stability, and cell division. Deficiency causes death of growing points and distorted young leaves (blossom end rot in tomato fruit). Normal chlorophyll (2.9) and protein (18.1) confirm it's not N or Mg. Treatment Z shows UNIFORM chlorosis in older leaves with dramatically reduced protein (8.2% vs 18.5%). Nitrogen is a component of both chlorophyll and protein, and is phloem-mobile — deficiency causes uniform (not interveinal) yellowing of older leaves first as N is remobilized, plus severe protein reduction. Option A incorrectly places iron deficiency in older leaves (Fe is phloem-immobile, so Fe deficiency appears in YOUNG leaves). Option C is partially plausible for Mn and B but K deficiency causes marginal necrosis, not uniform chlorosis.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, what can be concluded about the mechanism of phloem loading in this species?",
+      "dataContext": "Researchers measured sucrose concentrations in different cellular compartments of a source leaf using single-cell sampling and HPLC analysis. They also applied the membrane-impermeable sulfhydryl reagent PCMBS (p-chloromercuribenzenesulfonic acid), which inhibits plasma membrane sucrose transporters, and measured the effect on phloem loading.\n\n| Compartment | [Sucrose] (mM) |\n|---|---|\n| Mesophyll cells (cytosol) | 25 |\n| Bundle sheath cells (cytosol) | 28 |\n| Minor vein apoplast | 2 |\n| Companion cells (cytosol) | 820 |\n| Sieve elements | 780 |\n\n| Treatment | Phloem Loading Rate (% of control) |\n|---|---|\n| Control (no inhibitor) | 100 |\n| PCMBS (1 mM) applied to source leaf | 12 |\n| PCMBS (1 mM) + exogenous sucrose in apoplast | 15 |",
+      "options": [
+        "This species uses symplastic phloem loading via polymer trapping, as evidenced by the high sucrose concentration in companion cells and the lack of PCMBS effect",
+        "This species uses apoplastic phloem loading: sucrose exits mesophyll cells into the apoplast, and active loading into the SE-CC complex by sucrose-H+ symporters concentrates sucrose to very high levels; PCMBS severely inhibits loading (88% reduction) because it blocks these apoplastic membrane transporters",
+        "The high concentration in companion cells is due to passive diffusion down a concentration gradient from the apoplast",
+        "PCMBS inhibition proves that sucrose is transported from mesophyll to companion cells exclusively through plasmodesmata"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Several lines of evidence identify apoplastic phloem loading: (1) Concentration profile: Sucrose is 25-28 mM in mesophyll/bundle sheath cytosol but only 2 mM in the minor vein apoplast, then jumps to 780-820 mM in the SE-CC complex. This 400-fold uphill concentration from apoplast to companion cell is thermodynamically impossible by passive diffusion and requires active transport. (2) PCMBS sensitivity: PCMBS is membrane-impermeable and specifically inhibits plasma membrane sucrose transporters (SUT1/SUC2) by modifying sulfhydryl groups. The 88% inhibition of phloem loading by PCMBS demonstrates that sucrose must cross a plasma membrane (the companion cell membrane) during loading — characteristic of the apoplastic pathway. In symplastic loading (polymer trapping), sucrose moves through plasmodesmata without crossing membranes, and PCMBS would have minimal effect. (3) The low apoplastic sucrose (2 mM) represents the transient pool of sucrose exported from mesophyll cells (by SWEET efflux transporters) before active uptake by SUC2/SUT1 into companion cells. Option A is contradicted by the strong PCMBS effect. Option C violates thermodynamics (2 mM → 820 mM cannot be passive). Option D is wrong because PCMBS blocks membrane transport, not plasmodesmatal transport.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 36,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, what is the primary mechanism by which auxin promotes phototropic curvature?",
+      "dataContext": "Researchers investigated phototropism in oat coleoptiles exposed to unilateral blue light. They measured auxin (IAA) concentration and cell elongation on the illuminated (light) and shaded (dark) sides.\n\n| Measurement | Light Side | Dark Side | Intact Control (uniform light) |\n|---|---|---|---|\n| IAA concentration (ng/g FW) | 28 | 57 | 42 |\n| Total IAA in both halves (ng) | 28 + 57 = 85 | — | 42 + 42 = 84 |\n| Cell elongation rate (μm/h) | 15 | 38 | 26 |\n| H+-ATPase activity (relative) | 0.6 | 1.5 | 1.0 |\n| Apoplastic pH | 5.8 | 4.6 | 5.2 |\n\nAdditional experiment: Application of the auxin transport inhibitor NPA (naphthylphthalamic acid) to the coleoptile tip abolished the asymmetric IAA distribution and prevented curvature.",
+      "options": [
+        "Unilateral light destroys auxin on the illuminated side, reducing total auxin and causing differential growth through auxin deficiency",
+        "Blue light causes lateral redistribution of auxin from the illuminated to the shaded side (via PIN3 relocalization) without destroying auxin (total IAA is conserved: 85 ≈ 84 ng); higher auxin on the shaded side activates H+-ATPases, lowers apoplastic pH, and promotes acid growth-mediated cell elongation, producing curvature toward the light",
+        "Light directly inhibits cell elongation on the illuminated side independently of auxin, through flavin-mediated reactive oxygen species production",
+        "Auxin concentration is equal on both sides, and differential growth is caused solely by blue light-induced Ca2+ signaling on the illuminated side"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data strongly support the Cholodny-Went model with modern molecular details: (1) Auxin redistribution, not destruction: Total IAA is conserved (85 ng in phototropically stimulated vs 84 ng in control), proving that light does not photo-oxidize auxin. Instead, IAA is laterally redistributed from the light side (28 ng) to the dark side (57 ng). NPA abolishes this asymmetry, confirming that active polar transport (PIN-mediated) is required. Modern research shows that blue light perceived by phototropin 1 (phot1) causes relocalization of PIN3 in endodermal cells to direct auxin toward the shaded side. (2) Acid growth correlation: The dark side shows higher H+-ATPase activity (1.5 vs 0.6), lower apoplastic pH (4.6 vs 5.8), and greater cell elongation (38 vs 15 μm/h) — exactly as predicted by the acid growth hypothesis. Higher auxin → more H+ pumping → wall acidification → expansin activation → cell elongation. (3) Differential elongation produces curvature: faster-growing dark side causes the coleoptile to bend toward the light. Option A (Blaauw's photodestruction hypothesis) is disproved by the total IAA conservation data. Options C and D are contradicted by the clear auxin asymmetry and its correlation with growth.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the data, which statement best explains the results of the grafting experiments?",
+      "dataContext": "Researchers studied flowering in Xanthium (cocklebur), a short-day plant (SDP) with a critical night length of 9.5 hours. They performed grafting experiments between induced (flowering) and non-induced (vegetative) plants.\n\n| Experiment | Donor (Grafted Leaf) | Recipient Plant | Night Length for Recipient | Result |\n|---|---|---|---|---|\n| 1 | Induced Xanthium leaf (16h dark) | Non-induced Xanthium | 8h dark (non-inductive) | Recipient flowered |\n| 2 | Non-induced Xanthium leaf (8h dark) | Non-induced Xanthium | 8h dark | No flowering |\n| 3 | Induced Xanthium leaf (16h dark) | Non-induced Xanthium | 8h dark (with night break) | Recipient flowered |\n| 4 | Induced Xanthium leaf | Non-induced tobacco (LDP) kept in non-inductive SD | — | Tobacco flowered |\n| 5 | Induced Xanthium leaf (16h dark) treated with phloem-girdling (steam) | Non-induced Xanthium | 8h dark | No flowering |\n\nNote: Night break = brief red light pulse during the dark period. LDP = long-day plant.",
+      "options": [
+        "The induced leaf produces an inhibitor of flowering that is transmitted through the xylem to the recipient",
+        "Flowering is induced by direct light perception at the shoot apical meristem, and grafting merely provides nutritional support",
+        "A transmissible florigenic signal (florigen/FT protein) is produced in induced leaves and travels through the phloem to the SAM to induce flowering; this signal is universal across species (can induce both SDP and LDP), and its production depends on the leaf receiving inductive photoperiods — but once produced, it acts independently of the recipient's photoperiod",
+        "The grafting results are artifacts of wounding stress, which triggers ethylene production and premature flowering"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The grafting experiments demonstrate several key properties of florigen (now identified as FT protein): (1) Transmissibility: Experiment 1 shows that an induced leaf can cause flowering in a non-induced recipient, proving a mobile signal exists. (2) Phloem transport: Experiment 5 shows that phloem girdling (steam-killing phloem while xylem remains functional) blocks signal transmission, proving the signal travels through the phloem, not xylem. (3) Universality: Experiment 4 is remarkable — an induced SDP (Xanthium) leaf can cause flowering in an LDP (tobacco) kept in non-inductive conditions. This proves the flowering signal is the same molecule (or functionally equivalent) across species with different photoperiodic requirements. The difference between SDPs and LDPs lies in how they regulate FT production (the photoperiodic sensing mechanism in leaves), not in the nature of FT itself. (4) Experiment 3 confirms that the signal acts at the recipient meristem independently of the recipient's light conditions — even a night break (which would normally inhibit SDP flowering by converting Pfr) doesn't matter if the signal has already been produced in the donor leaf. (5) Experiment 2 is the negative control showing non-induced leaves do not produce the signal. Option A proposes an inhibitor model, contradicted by the cross-species induction. Option B is wrong because the meristem does not need to perceive light directly. Option D is contradicted by the girdling control.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Which experimental approach would most rigorously test whether the observed root growth inhibition is caused specifically by a plant-derived systemic signal rather than direct local effects of the pathogen?",
+      "experimentContext": "A researcher discovers that when Arabidopsis leaves are infected with a bacterial pathogen (Pseudomonas syringae), root growth slows by 40% within 24 hours, even though the pathogen is confined to the leaves (confirmed by plating root homogenates — no bacteria detected in roots). The researcher hypothesizes that a systemic defense signal (possibly salicylic acid or jasmonic acid) travels from the infected leaf to the roots and inhibits root growth as part of a growth-defense trade-off. Available tools: (1) SA-deficient mutant (sid2, lacking isochorismate synthase), (2) JA signaling mutant (coi1), (3) split-root systems, (4) petiole girdling, (5) GUS reporter lines for SA-responsive (PR1:GUS) and JA-responsive (VSP2:GUS) promoters, (6) LC-MS for hormone quantification.",
+      "options": [
+        "Simply measure SA and JA levels in the roots after leaf infection — if they increase, the hypothesis is proven",
+        "Use a multifactorial approach: (i) Gird the petiole of the infected leaf to block phloem transport and test whether root inhibition is abolished; (ii) Infect leaves of sid2 and coi1 mutants to identify whether SA or JA signaling is required; (iii) Apply exogenous SA or JA to roots of uninfected plants to test sufficiency; (iv) Use PR1:GUS and VSP2:GUS reporters to confirm activation of SA/JA signaling in roots after leaf infection; (v) Quantify root SA/JA by LC-MS over a time course",
+        "Grow plants in sterile agar and add antibiotics to ensure no bacterial contamination reaches the roots",
+        "Compare root growth inhibition in wild-type plants infected with live pathogen versus heat-killed pathogen, as this distinguishes pathogen-derived signals from plant-derived signals"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Option B provides the most rigorous experimental design by testing the hypothesis through multiple complementary approaches addressing both necessity, sufficiency, and mechanism: (i) Petiole girdling tests whether the signal is phloem-mobile — if girdling blocks root inhibition, a phloem-transported signal is required. This is the most direct test for systemic signaling. (ii) Genetic mutants test which pathway is NECESSARY: if sid2 (SA-deficient) shows normal root growth after infection, SA is required for root inhibition. Similarly for coi1 (JA-insensitive). (iii) Exogenous hormone application tests SUFFICIENCY: if applying SA alone to uninfected roots mimics the 40% growth reduction, SA is sufficient. (iv) Reporter genes provide spatial and temporal resolution of where and when defense pathways are activated in roots. (v) LC-MS quantification provides direct biochemical evidence of hormone accumulation in roots. Option A (hormone measurement alone) demonstrates correlation but not causation — hormones might increase without being the causal signal. Option C addresses contamination (already controlled) but doesn't test the signaling hypothesis. Option D is a useful control but doesn't identify the plant signal or its transport mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "What is the most critical control experiment needed to validate that the observed phenotype is due to disruption of polar auxin transport rather than an unintended secondary effect of the manipulation?",
+      "experimentContext": "Researchers investigate the role of polar auxin transport in lateral root formation. They treat Arabidopsis seedlings with NPA (naphthylphthalamic acid, a polar auxin transport inhibitor that blocks PIN efflux carriers) and observe that lateral root initiation is almost completely abolished. They also generate transgenic plants overexpressing PIN1 specifically in pericycle cells (the lateral root founder cells) using the GATA23 promoter. They hypothesize that if polar auxin transport is the causal factor, restoring auxin efflux in founder cells should rescue lateral root formation even in the presence of NPA. Available tools: (1) DR5:GFP auxin response reporter, (2) PIN1-GFP translational fusion, (3) IAA quantification by LC-MS, (4) various auxin-related mutants (pin1, pin3, pin7, tir1), (5) exogenous IAA application, (6) iaa28 gain-of-function mutant (constitutive Aux/IAA repressor, blocks auxin signaling).",
+      "options": [
+        "Apply exogenous IAA to NPA-treated seedlings — if lateral roots are restored, the NPA effect is solely due to auxin depletion rather than transport disruption",
+        "Use the iaa28 gain-of-function mutant to test whether auxin signaling (rather than transport) is required: if lateral root formation is abolished in iaa28, and NPA treatment of iaa28 shows no additional effect, this demonstrates that NPA acts through disrupted auxin signaling rather than having non-specific toxicity; combine with DR5:GFP imaging of NPA-treated roots to confirm whether auxin response maxima at lateral root initiation sites are lost",
+        "Simply use a higher concentration of NPA to achieve complete inhibition, then conclude that polar auxin transport is essential",
+        "Count lateral roots in untreated wild-type plants of different ages as a developmental time course control"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The critical concern is whether NPA's effect on lateral root formation is specifically due to disrupted polar auxin transport or could involve non-specific/off-target effects (NPA can also affect vesicle trafficking). Option B addresses this with a well-designed multi-pronged approach: (1) The iaa28 gain-of-function mutant constitutively represses auxin-responsive gene expression regardless of auxin levels. If iaa28 alone abolishes lateral roots (demonstrating auxin signaling is required), and NPA treatment of iaa28 shows no additional reduction, this epistasis analysis confirms NPA acts through the auxin signaling pathway, not through an independent mechanism. (2) DR5:GFP imaging in NPA-treated roots directly visualizes whether auxin response maxima (which normally mark lateral root founder cells at xylem pole pericycle positions) are disrupted. Loss of these maxima upon NPA treatment provides visual confirmation that auxin transport disruption prevents the local auxin accumulation needed for founder cell specification. Together, these experiments establish that NPA's effect operates through the auxin signaling pathway and correlates with loss of localized auxin responses. Option A is informative but exogenous IAA application floods all tissues non-specifically and doesn't rescue polar transport directionality. Option C merely intensifies the treatment without addressing specificity. Option D is a basic control but doesn't address the mechanism question.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about plant defense responses and systemic acquired resistance (SAR):",
+      "options": [
+        "S1: TRUE — Upon pathogen recognition by intracellular NLR (nucleotide-binding leucine-rich repeat) receptors, the hypersensitive response (HR) is triggered, involving rapid programmed cell death at the infection site mediated by reactive oxygen species (ROS) burst and nitric oxide (NO) signaling",
+        "S2: TRUE — Systemic acquired resistance (SAR) requires the mobile signal methyl salicylate (MeSA), which is converted back to salicylic acid (SA) in distal tissues; SA then activates NPR1 (Nonexpressor of Pathogenesis-Related genes 1), which translocates to the nucleus as a monomer and functions as a transcriptional co-activator of PR (pathogenesis-related) genes by interacting with TGA transcription factors",
+        "S3: FALSE — Jasmonic acid (JA) and salicylic acid (SA) signaling pathways always act synergistically to amplify defense responses against all types of pathogens simultaneously",
+        "S4: TRUE — The jasmonate signaling pathway operates through the COI1 F-box protein (a component of the SCF^COI1 E3 ubiquitin ligase), which, upon binding jasmonoyl-isoleucine (JA-Ile), targets JAZ (Jasmonate ZIM-domain) transcriptional repressors for proteasomal degradation, releasing MYC2 and other transcription factors to activate JA-responsive defense genes"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — NLR receptors (also called R proteins) detect pathogen effectors directly or indirectly (guard/decoy model). Recognition triggers the hypersensitive response (HR): a rapid, localized cell death program. Key events include an oxidative burst (RBOHD-generated superoxide converted to H2O2), NO production, ion fluxes (Ca2+ influx, K+/H+ exchange), callose deposition, and activation of metacaspases. The HR confines biotrophic pathogens by killing host cells they depend on. S2: TRUE — SAR is a long-lasting, broad-spectrum defense activated systemically after local infection. MeSA (produced from SA by SAMT) serves as a phloem-mobile signal. In systemic tissues, MeSA is converted back to SA by MeSA esterase (SABP2). SA binds NPR1, which normally exists as an oligomer in the cytoplasm via intermolecular disulfide bonds. SA-induced redox changes (mediated by thioredoxins) reduce these bonds, releasing NPR1 monomers that enter the nucleus and interact with TGA bZIP transcription factors to activate PR gene expression (PR1, PR2/glucanase, PR5/thaumatin-like). S3: FALSE — JA and SA pathways are generally ANTAGONISTIC, not synergistic. SA suppresses JA signaling (via NPR1-dependent and -independent mechanisms), and JA can suppress SA responses. This antagonism reflects a trade-off: SA primarily defends against biotrophic pathogens, while JA/ET pathways defend against necrotrophs and herbivores. Simultaneous activation of both would be energetically wasteful and could compromise defense specificity. S4: TRUE — JA-Ile (the bioactive jasmonate) binds in a pocket between COI1 and the Jas domain of JAZ proteins (analogous to auxin-TIR1-Aux/IAA). This promotes JAZ ubiquitination and 26S proteasomal degradation, releasing MYC2 (a bHLH transcription factor) and other TFs (MYC3, MYC4) to activate defense genes including PDF1.2, VSP2, and LOX2.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Form and Function"
+    }
+  ]
+}

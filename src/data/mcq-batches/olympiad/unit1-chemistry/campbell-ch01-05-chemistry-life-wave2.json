@@ -1,0 +1,507 @@
+{
+  "batch": {
+    "name": "Campbell Ch1-5 Chemistry of Life — Wave 2",
+    "version": 1,
+    "source": "olympiad-wave2",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "Carbon monoxide (CO) is lethal because it binds hemoglobin with approximately 200-fold greater affinity than O2. From a chemical bonding perspective, which property of CO best explains its strong coordinate bond to the Fe²⁺ in the heme group?",
+      "options": [
+        "CO is a larger molecule than O2, filling the heme binding pocket more completely through van der Waals interactions",
+        "CO forms a stronger ionic bond with Fe²⁺ because the carbon atom carries a partial negative charge",
+        "CO acts as both a sigma donor and strong pi-back-bond acceptor with Fe²⁺, and its linear binding geometry avoids the steric strain that bent O2 binding experiences in the distal pocket",
+        "CO has a triple bond that is weaker than the O2 double bond, making it more reactive toward Fe²⁺"
+      ],
+      "correctAnswer": "C",
+      "explanation": "CO binds to heme Fe²⁺ through coordinate covalent bonding involving two synergistic components: (1) sigma donation from the carbon lone pair into an empty Fe d-orbital, and (2) pi-back-bonding where filled Fe d-orbitals donate electron density into the empty pi* antibonding orbitals of CO. CO is a stronger pi-acceptor than O2, which makes the Fe-CO bond significantly stronger than the Fe-O2 bond. In free heme, CO binds ~20,000-fold more strongly than O2. In hemoglobin, the distal histidine (His E7) sterically forces the CO into a slightly bent geometry, reducing affinity to ~200-fold over O2. O2 naturally binds in a bent end-on fashion. Option A is wrong because molecular size is not the determining factor. Option B is incorrect because the bonding is coordinate covalent, not ionic. Option D is wrong because the CO triple bond is actually stronger (1072 kJ/mol) than the O2 double bond (498 kJ/mol).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 2,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "A buffer system consists of 0.1 M acetic acid (pKa = 4.76) and 0.1 M sodium acetate. If 0.02 mol of HCl is added to 1 L of this buffer, what is the resulting pH? (Use the Henderson-Hasselbalch equation.)",
+      "options": ["4.76", "4.28", "4.40", "4.58"],
+      "correctAnswer": "D",
+      "explanation": "Using the Henderson-Hasselbalch equation: pH = pKa + log([A⁻]/[HA]). Initially, [CH3COO⁻] = 0.1 M and [CH3COOH] = 0.1 M. Adding 0.02 mol HCl to 1 L converts 0.02 mol of the conjugate base (acetate) to the weak acid (acetic acid): new [CH3COO⁻] = 0.1 - 0.02 = 0.08 M; new [CH3COOH] = 0.1 + 0.02 = 0.12 M. Applying Henderson-Hasselbalch: pH = 4.76 + log(0.08/0.12) = 4.76 + log(0.667) = 4.76 + (-0.176) = 4.58. This demonstrates how buffers resist pH change: without the buffer, 0.02 mol HCl in 1 L would give pH = -log(0.02) = 1.70. The buffer maintained pH near the pKa because the conjugate base absorbed the added protons. Option A (4.76) would be the pH only if no acid were added. Option B (4.28) and Option C (4.40) represent incorrect calculations.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "Thalidomide is a drug that was prescribed as a sedative in the 1950s but caused severe birth defects. The R-enantiomer is an effective sedative, while the S-enantiomer is teratogenic. Why can't physicians simply administer the pure R-enantiomer to avoid toxicity?",
+      "options": [
+        "The R-enantiomer spontaneously racemizes to a mixture of R and S forms under physiological conditions due to keto-enol tautomerism at the chiral center",
+        "Both enantiomers have identical biological activity because enzymes cannot distinguish between mirror-image molecules",
+        "The R-enantiomer is unstable and rapidly degrades to toxic metabolites in the liver",
+        "Pharmaceutical manufacturing cannot separate enantiomers, so racemic mixtures are always used"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Thalidomide has a single chiral center adjacent to a carbonyl group. Under physiological pH and temperature, the alpha-hydrogen at this chiral center is sufficiently acidic to undergo keto-enol tautomerism, which temporarily removes the chirality. When the enol form re-protonates, it generates both R and S configurations with roughly equal probability. This in vivo racemization means that even if you administer enantiomerically pure R-thalidomide, it will rapidly equilibrate to a racemic mixture containing the teratogenic S-enantiomer. This is a classic example illustrating that enantiomeric purity at administration does not guarantee enantiomeric purity in vivo. Option B is incorrect because enzymes are highly stereospecific. Option C is incorrect; the R-enantiomer is not inherently unstable. Option D is wrong because chiral resolution techniques (chiral HPLC, enzymatic resolution) can separate enantiomers.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 4,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "In Anfinsen's classic experiment with ribonuclease A, the enzyme was denatured with 8 M urea and reduced with beta-mercaptoethanol, then the denaturant and reductant were removed. The enzyme slowly refolded and regained full activity. What would happen if the beta-mercaptoethanol were removed FIRST, before removing the urea?",
+      "options": [
+        "The enzyme would refold normally because urea does not affect disulfide bond formation",
+        "The enzyme would form incorrect disulfide bonds while still unfolded, trapping it in a misfolded state with only ~1% of native activity",
+        "The enzyme would remain fully unfolded because disulfide bonds cannot form in the presence of urea",
+        "The enzyme would aggregate irreversibly because urea promotes hydrophobic interactions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is a critical control in Anfinsen's experiment that demonstrates the thermodynamic hypothesis of protein folding. Ribonuclease A has 4 disulfide bonds (8 cysteines). If beta-mercaptoethanol is removed first while urea is still present, the protein remains unfolded (denatured by urea) but the free sulfhydryl groups can now oxidize to form disulfide bonds. In the unfolded state, disulfide bonds form randomly between the 8 cysteines. There are 105 possible pairings of 8 cysteines into 4 disulfide bonds (calculated as 7!! = 7 x 5 x 3 x 1 = 105), but only 1 of these 105 arrangements corresponds to the native configuration. This results in a scrambled mixture with ~1% native activity (1/105 ≈ 0.95%). This result confirmed that the amino acid sequence contains all the information needed for folding, but that correct folding requires the polypeptide chain to explore conformational space before being locked by disulfide bonds. Option C is wrong because disulfide bonds can form in urea. Option D is wrong because urea disrupts hydrophobic interactions rather than promoting them.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "A Ramachandran plot shows the allowed phi (φ) and psi (ψ) dihedral angles for amino acid residues in a polypeptide. Glycine residues occupy a much larger area of the Ramachandran plot than other amino acids. Which structural feature of glycine explains this?",
+      "options": [
+        "Glycine has a positively charged amino group that forms more hydrogen bonds, increasing rotational freedom",
+        "Glycine forms stronger peptide bonds due to its small size, allowing greater backbone flexibility",
+        "Glycine is always found in alpha-helices, which have a wider range of allowed backbone angles",
+        "Glycine's R-group is a single hydrogen atom, eliminating steric clashes with the backbone that restrict φ/ψ angles in other amino acids"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The Ramachandran plot maps the energetically allowed combinations of phi (φ, rotation around N-Cα bond) and psi (ψ, rotation around Cα-C bond) backbone dihedral angles. For most amino acids, steric clashes between the side chain (R-group) and the backbone carbonyl oxygen or amide nitrogen restrict ~75% of the φ/ψ space. Glycine uniquely has only a hydrogen atom as its R-group (the smallest possible side chain), which essentially eliminates all side chain-backbone steric clashes. This allows glycine residues to adopt φ/ψ angles that would be sterically forbidden for any other amino acid, giving it the largest allowed region on the Ramachandran plot. Conversely, proline has the most restricted Ramachandran plot because its cyclic side chain constrains φ to approximately -60°. Option A confuses backbone flexibility with hydrogen bonding. Option B is incorrect because peptide bond strength does not vary with amino acid identity. Option C is wrong because glycine is actually a helix-breaker, not preferentially found in alpha-helices.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "Phospholipids spontaneously form bilayers in aqueous solution. Which thermodynamic driving force is PRIMARILY responsible for this self-assembly?",
+      "options": [
+        "The favorable enthalpy from hydrogen bonds formed between phospholipid head groups",
+        "The covalent bonds formed between adjacent phospholipid molecules in the bilayer",
+        "The increase in entropy of water molecules released from ordered cages around the hydrophobic tails (the hydrophobic effect)",
+        "The decrease in entropy of the phospholipid molecules as they become ordered in the bilayer"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Phospholipid bilayer formation is driven primarily by the hydrophobic effect, which is fundamentally an entropic phenomenon. When hydrophobic fatty acid tails are exposed to water, water molecules form highly ordered 'clathrate-like' cages around the nonpolar surfaces, dramatically reducing water entropy. When phospholipids aggregate into bilayers, the hydrophobic tails are sequestered from water, releasing these ordered water molecules back to the bulk solvent. The resulting increase in water entropy (TΔS > 0) provides the dominant thermodynamic driving force (ΔG < 0). While head group interactions (A) contribute, they are secondary. No covalent bonds form between phospholipids in a bilayer (B). The decrease in phospholipid entropy (D) actually opposes bilayer formation, but this is overwhelmed by the much larger increase in water entropy. This is why the hydrophobic effect is sometimes called 'entropy-driven assembly.'",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cellulose and starch are both polymers of glucose, yet humans can digest starch but not cellulose. Which structural difference is responsible?",
+      "options": [
+        "Cellulose contains β(1→4) glycosidic linkages that produce straight chains with extensive inter-chain hydrogen bonding into microfibrils, and human amylases can only hydrolyze α-glycosidic linkages",
+        "Starch is a branched polymer while cellulose is unbranched, and human enzymes can only digest branched polymers",
+        "Cellulose contains fructose subunits instead of glucose, which human enzymes cannot recognize",
+        "Starch has a lower molecular weight than cellulose, making it accessible to digestive enzymes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Both cellulose and starch are composed entirely of D-glucose, but they differ in the stereochemistry of their glycosidic bonds. Starch (both amylose and amylopectin) uses α(1→4) linkages, which produce a helical conformation that is accessible to human α-amylase and other digestive enzymes. Cellulose uses β(1→4) linkages, which cause every other glucose to be flipped 180°, producing straight, rigid chains. These straight chains form extensive inter-chain and intra-chain hydrogen bonds, creating insoluble microfibrils with crystalline regions. Human cells do not produce cellulase (β-glucosidase), so we cannot hydrolyze the β(1→4) bond. Herbivores rely on symbiotic microorganisms that produce cellulase. Option B is partially correct about branching but wrong about the reason — amylose is unbranched starch that IS digestible. Option C is factually wrong. Option D is incorrect because molecular weight is not the determining factor.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "An amino acid has the following pKa values: α-carboxyl = 2.1, α-amino = 9.0, R-group = 4.1. At pH 7.4 (physiological pH), what is the net charge on this amino acid?",
+      "options": ["-1", "0 (zwitterionic, net neutral)", "+1", "-2"],
+      "correctAnswer": "A",
+      "explanation": "To determine the net charge at pH 7.4, we evaluate each ionizable group relative to its pKa. When pH > pKa, the group is predominantly in its deprotonated form. (1) α-carboxyl (pKa 2.1): At pH 7.4 >> 2.1, the carboxyl is deprotonated (COO⁻), contributing -1 charge. (2) α-amino (pKa 9.0): At pH 7.4 < 9.0, the amino group is still protonated (NH3⁺), contributing +1 charge. (3) R-group (pKa 4.1): At pH 7.4 >> 4.1, this acidic side chain is deprotonated, contributing -1 charge. This pKa profile matches aspartic acid (Asp) or glutamic acid (Glu) which have acidic R-groups. Net charge = (-1) + (+1) + (-1) = -1. The isoelectric point (pI) for this amino acid would be the average of the two lowest pKa values: pI = (2.1 + 4.1)/2 = 3.1. At physiological pH, this amino acid carries a net negative charge, which is why Asp and Glu are found on protein surfaces interacting with water. Option B (net neutral) would only be correct at the pI. Option C (+1) and Option D (-2) represent incorrect calculations.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "Water has an unusually high specific heat capacity (4.18 J/g·°C) compared to most liquids. Which molecular property of water is the PRIMARY reason for this?",
+      "options": [
+        "Water molecules are polar and interact strongly with dissolved ions, absorbing heat through solvation",
+        "Water has a low molecular weight, so each gram contains more molecules that must be heated",
+        "The extensive hydrogen bonding network between water molecules must absorb significant energy before kinetic energy (temperature) increases, because heat energy first disrupts hydrogen bonds",
+        "Water's bent molecular geometry causes it to vibrate at frequencies that absorb infrared radiation efficiently"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Specific heat capacity measures the energy required to raise the temperature of 1 g of a substance by 1°C. Temperature reflects the average kinetic energy of molecules. In liquid water, an extensive three-dimensional hydrogen bonding network connects molecules (each water molecule can form up to 4 hydrogen bonds). When heat energy is added, much of it is absorbed by breaking and reorganizing hydrogen bonds rather than increasing molecular kinetic energy. This means water requires substantially more energy input per degree of temperature rise compared to liquids with weaker intermolecular forces. This property is biologically critical: it stabilizes body temperature, moderates climate in coastal regions, and protects organisms from rapid temperature fluctuations. Option A describes solvation, not specific heat. Option B is partially true but is not the primary factor (ethanol has lower MW per gram but lower specific heat). Option D describes infrared absorption, which is relevant to the greenhouse effect but not specific heat capacity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MCQ",
+      "question": "In an omega-3 fatty acid like alpha-linolenic acid (18:3Δ9,12,15), the designation 'omega-3' indicates that the first double bond is 3 carbons from the methyl (omega) end. Why can humans not synthesize omega-3 and omega-6 fatty acids de novo?",
+      "options": [
+        "Human cells lack the energy to form double bonds in long-chain fatty acids",
+        "Omega-3 fatty acids require a specific coenzyme that is only found in plant chloroplasts",
+        "The omega carbon of fatty acids is chemically inert and cannot be modified by any known enzyme",
+        "Human desaturase enzymes can only introduce double bonds at positions Δ9 or closer to the carboxyl end, and cannot desaturate beyond Δ9 toward the methyl end"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Mammals possess Δ9-desaturase (stearoyl-CoA desaturase), Δ6-desaturase, and Δ5-desaturase enzymes. The Δ9-desaturase introduces the first double bond between C9 and C10 (counting from the carboxyl end). Δ6 and Δ5 desaturases can introduce additional double bonds, but only between the existing Δ9 double bond and the carboxyl end. Crucially, mammals lack Δ12-desaturase and Δ15-desaturase (also called omega-3 and omega-6 desaturases) that are present in plants and certain microorganisms. These plant enzymes can introduce double bonds between Δ9 and the methyl end. This is why linoleic acid (18:2Δ9,12, an omega-6) and alpha-linolenic acid (18:3Δ9,12,15, an omega-3) are essential fatty acids that must be obtained from the diet. Once obtained, mammals can elongate and further desaturate these precursors (e.g., ALA → EPA → DHA) using their existing desaturases and elongases. Option A is incorrect because desaturation does occur. Option B overstates the chloroplast requirement. Option C is factually wrong.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about hydrogen bonding and its biological significance:",
+      "options": [
+        "S1: TRUE/FALSE — Hydrogen bonds in liquid water are approximately 20 kJ/mol each, roughly 5% the strength of a covalent O-H bond, and each water molecule forms an average of 3.4 hydrogen bonds at room temperature",
+        "S2: TRUE/FALSE — The high heat of vaporization of water (2260 J/g) is primarily due to the energy required to break all hydrogen bonds when converting liquid water to steam, which is why evaporative cooling is so effective for thermoregulation",
+        "S3: TRUE/FALSE — In an alpha-helix, hydrogen bonds form between the C=O of residue n and the N-H of residue n+3, producing 3.6 residues per turn with a pitch of 5.4 angstroms",
+        "S4: TRUE/FALSE — Hydrogen bonds are highly directional, being strongest when the donor-H-acceptor angle is 180° (linear), and this directionality is critical for the specificity of base pairing in DNA"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Individual hydrogen bonds in water have energies of approximately 20 kJ/mol, while covalent O-H bonds are about 460 kJ/mol (so H-bonds are ~4-5% of covalent bond strength). X-ray and neutron diffraction studies of liquid water show that each molecule participates in an average of 3.4 hydrogen bonds at 25°C (compared to 4 in ice). S2: TRUE — Water's heat of vaporization (2260 J/g or 40.7 kJ/mol) is exceptionally high because vaporization requires breaking essentially all hydrogen bonds holding molecules in the liquid phase. This makes evaporation highly effective for cooling: sweat evaporation removes ~2.4 kJ per gram of water evaporated. S3: FALSE — In an alpha-helix, hydrogen bonds form between the C=O of residue n and the N-H of residue n+4 (not n+3). This n+4 spacing produces 3.6 residues per turn with a rise of 1.5 Å per residue and a pitch (rise per complete turn) of 5.4 Å. The n+3 pattern describes a 3₁₀ helix, which is less common and has a tighter turn. S4: TRUE — Hydrogen bonds exhibit strong angular dependence, with maximum strength at ~180° (linear D-H···A). Deviations from linearity weaken the bond. In DNA, this directionality ensures that A-T pairs (2 H-bonds) and G-C pairs (3 H-bonds) have precise geometric complementarity, contributing to base-pairing specificity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about functional groups in organic molecules:",
+      "options": [
+        "S1: TRUE/FALSE — The carboxyl group (-COOH) acts as a weak acid because the conjugate base (carboxylate, -COO⁻) is stabilized by resonance delocalization of the negative charge over both oxygen atoms",
+        "S2: TRUE/FALSE — The sulfhydryl group (-SH) on cysteine residues can form disulfide bonds (-S-S-) through oxidation, and these bonds are primarily found in intracellular proteins due to the reducing environment of the cytoplasm",
+        "S3: TRUE/FALSE — The phosphate group carries a negative charge at physiological pH and can form phosphoester and phosphoanhydride bonds, the latter being the high-energy bonds found in ATP",
+        "S4: TRUE/FALSE — Methyl groups (-CH3) are nonpolar and hydrophobic, and the addition of methyl groups to DNA (at cytosine C5) and histone proteins (at lysine residues) generally serves as an activating epigenetic mark that increases gene expression"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — The carboxyl group ionizes to release H⁺ with typical pKa values of 2-5. The resulting carboxylate anion is stabilized by resonance: the negative charge is delocalized equally over both oxygen atoms, creating two equivalent C-O bonds (bond order 1.5). This resonance stabilization lowers the energy of the conjugate base, making deprotonation thermodynamically favorable and explaining why carboxylic acids are stronger acids than alcohols. S2: FALSE — The first part is correct: cysteine -SH groups undergo oxidation to form disulfide bonds. However, the statement about localization is reversed. Disulfide bonds are primarily found in extracellular proteins (secreted proteins, extracellular domains of membrane proteins) and within the ER lumen, which has an oxidizing environment maintained by Ero1 and PDI. The cytoplasm maintains a strongly reducing environment (via thioredoxin and glutathione systems) that keeps cysteines reduced. S3: TRUE — At pH 7.4, the phosphate group carries approximately -2 charge (having lost both ionizable protons, pKa1 ≈ 2.1, pKa2 ≈ 7.2). Phosphoester bonds link phosphate to sugars in nucleotides and DNA/RNA backbone. Phosphoanhydride bonds (P-O-P) in ATP are high-energy bonds whose hydrolysis releases ~30.5 kJ/mol under standard conditions. S4: FALSE — The first part is correct: methyl groups are nonpolar and hydrophobic. However, the epigenetic effects are stated incorrectly. DNA methylation at CpG dinucleotides (5-methylcytosine) is generally associated with gene silencing (transcriptional repression), not activation. Histone methylation effects depend on the specific residue: H3K4me3 activates transcription, but H3K9me3 and H3K27me3 are repressive marks. The statement claims methyl groups 'generally activate,' which is incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 4,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about carbohydrate structure and function:",
+      "options": [
+        "S1: TRUE/FALSE — Chitin, the structural polysaccharide in arthropod exoskeletons and fungal cell walls, is a polymer of N-acetylglucosamine linked by β(1→4) glycosidic bonds, structurally analogous to cellulose but with an acetylamino group replacing the C2 hydroxyl",
+        "S2: TRUE/FALSE — Amylopectin and glycogen both contain α(1→4) linkages with α(1→6) branch points, but glycogen is more extensively branched (every 8-12 residues) compared to amylopectin (every 24-30 residues), allowing more rapid glucose mobilization",
+        "S3: TRUE/FALSE — Sucrose (table sugar) is a non-reducing sugar because the glycosidic bond joins the anomeric carbons of both glucose (C1) and fructose (C2), leaving no free anomeric carbon to undergo ring-opening and reduction",
+        "S4: TRUE/FALSE — Lactose is a disaccharide composed of galactose and glucose joined by an α(1→4) glycosidic bond, and lactose intolerance results from a deficiency of the enzyme lactase that hydrolyzes this bond"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1: TRUE — Chitin is indeed a polymer of N-acetylglucosamine (GlcNAc) with β(1→4) linkages. Its structure parallels cellulose (β(1→4)-linked glucose), but each glucose monomer has the C2 hydroxyl replaced by an N-acetylamino group (-NHCOCH3). Like cellulose, chitin chains form extensive hydrogen bonds creating strong, insoluble microfibrils. It is the second most abundant biopolymer on Earth after cellulose. S2: TRUE — Both amylopectin (a component of plant starch) and glycogen (animal storage polysaccharide) use α(1→4) backbone linkages with α(1→6) branch points. Glycogen branches approximately every 8-12 glucose residues, while amylopectin branches every 24-30 residues. The more frequent branching of glycogen creates more non-reducing ends (terminal residues), each of which can be simultaneously acted upon by glycogen phosphorylase, enabling very rapid glucose release during exercise or fight-or-flight responses. S3: TRUE — Sucrose consists of glucose and fructose linked through their anomeric carbons (C1 of glucose to C2 of fructose). Since both anomeric carbons participate in the glycosidic bond, neither sugar can undergo mutarotation (ring opening to expose the free aldehyde/ketone). This makes sucrose a non-reducing sugar that gives a negative Benedict's test. In contrast, maltose and lactose are reducing sugars because one anomeric carbon remains free. S4: FALSE — While it is true that lactose is a disaccharide of galactose and glucose, and that lactose intolerance results from lactase deficiency, the glycosidic bond is β(1→4), not α(1→4). The beta configuration of this bond is critical: it is the reason a specific enzyme (lactase/β-galactosidase) is needed, and why α-amylase (which cleaves α-linkages) cannot hydrolyze lactose.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about protein structure and folding:",
+      "options": [
+        "S1: TRUE/FALSE — The peptide bond has partial double-bond character due to resonance between the C=O and C-N bonds, restricting rotation and making the six atoms of the peptide bond unit (Cα, C, O, N, H, Cα) nearly coplanar",
+        "S2: TRUE/FALSE — Proline is unique among amino acids because its side chain forms a covalent bond with the backbone nitrogen, creating a five-membered pyrrolidine ring that introduces a rigid kink and is commonly found at the first position of alpha-helices",
+        "S3: TRUE/FALSE — Beta-sheets can be parallel (N→C directions of adjacent strands are the same) or antiparallel (N→C directions alternate), with antiparallel sheets having stronger hydrogen bonds because the N-H···O=C bonds are more linear",
+        "S4: TRUE/FALSE — Chaperonins like GroEL/GroES provide an isolated hydrophilic chamber where misfolded proteins can refold without aggregation, using ATP hydrolysis to drive conformational changes that encapsulate and release the substrate protein"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1: TRUE — The peptide bond exhibits approximately 40% double-bond character because the nitrogen lone pair is delocalized into the carbonyl system (resonance structure C-N⁺=C-O⁻). This restricts rotation around the C-N bond, making the peptide bond planar. The trans configuration is strongly favored (>99.9% for most residues) because it minimizes steric clashes between adjacent R-groups. This planarity is a fundamental constraint in protein backbone geometry and is the basis for the Ramachandran plot, which maps the allowed rotations (φ and ψ) around the bonds flanking each Cα. S2: FALSE — The first part is correct: proline's side chain cyclizes back to the backbone nitrogen, forming a pyrrolidine ring that constrains the φ angle to approximately -60° and introduces a kink. However, proline is commonly found at the FIRST position of TURNS and at the ENDS (not beginning) of alpha-helices. Proline is actually known as a 'helix breaker' because the pyrrolidine ring lacks the N-H needed for i→i+4 hydrogen bonding when it appears within a helix. Proline is often found at the first residue of a helix (N-cap) or in turns connecting secondary structure elements. S3: TRUE — In antiparallel beta-sheets, the hydrogen bonds between adjacent strands are nearly perpendicular to the strand direction and are approximately linear (N-H···O angle ~180°). In parallel sheets, the H-bonds are angled, making them slightly longer and weaker. This is why antiparallel sheets are generally more stable and more common in protein structures. S4: TRUE — GroEL is a barrel-shaped complex of 14 subunits arranged in two heptameric rings. GroES acts as a cap. Misfolded or partially folded proteins bind to the hydrophobic interior of the GroEL ring. ATP binding and GroES capping induce conformational changes that create a hydrophilic chamber, giving the protein a protected environment to refold. ATP hydrolysis triggers release of GroES and the substrate after ~10-15 seconds. Multiple rounds may be needed for successful folding.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about lipid structure and membrane properties:",
+      "options": [
+        "S1: TRUE/FALSE — Cholesterol is an amphipathic molecule that inserts into animal cell membranes with its hydroxyl group near the polar head groups and its rigid steroid ring system interacting with the hydrocarbon tails, broadening the phase transition and maintaining intermediate fluidity",
+        "S2: TRUE/FALSE — Trans fatty acids are produced mainly by partial hydrogenation of vegetable oils and are more harmful than saturated fats because their linear configuration allows tight packing similar to saturated fats while also interfering with essential fatty acid metabolism",
+        "S3: TRUE/FALSE — Phospholipids in biological membranes are asymmetrically distributed: phosphatidylserine (PS) is normally confined to the inner leaflet, and its exposure on the outer leaflet serves as an 'eat-me' signal for apoptotic cell clearance by macrophages",
+        "S4: TRUE/FALSE — Sphingomyelin contains a glycerol backbone like glycerophospholipids, and is enriched in lipid rafts along with cholesterol, where it participates in cell signaling"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1: TRUE — Cholesterol is amphipathic with a polar 3-OH group and a nonpolar fused ring system plus hydrocarbon tail. In membranes, it orients with the -OH near the phospholipid head groups. At physiological temperature (37°C), cholesterol has a dual effect: it restricts movement of the upper portions of phospholipid acyl chains (reducing fluidity at high temperatures) while preventing tight crystalline packing at low temperatures (maintaining fluidity). This broadens and eventually eliminates the distinct gel-to-liquid crystalline phase transition, maintaining intermediate fluidity across a range of temperatures. S2: TRUE — Industrial partial hydrogenation creates trans double bonds (elaidic acid is trans-oleic acid). The trans configuration gives fatty acid chains a nearly linear shape, unlike the kinked cis configuration, allowing packing density similar to saturated fats. This raises melting point and increases LDL cholesterol while decreasing HDL cholesterol. Trans fats also competitively inhibit desaturase enzymes involved in essential fatty acid metabolism, disrupting the production of omega-3 and omega-6 derived eicosanoids. S3: TRUE — In healthy cells, flippases (aminophospholipid translocases) actively maintain PS in the inner (cytoplasmic) leaflet at the expense of ATP. During apoptosis, caspase-mediated inactivation of flippases and activation of scramblases causes PS to redistribute to the outer leaflet. Exposed PS is recognized by PS receptors on macrophages (e.g., TIM-4, BAI1) and by bridging molecules like annexin V, triggering phagocytic clearance. S4: FALSE — Sphingomyelin does NOT contain a glycerol backbone. It is built on a sphingosine backbone (a long-chain amino alcohol). A fatty acid is linked to the amino group of sphingosine via an amide bond (forming ceramide), and the terminal hydroxyl of sphingosine is esterified to phosphocholine. The rest of the statement is correct: sphingomyelin is indeed enriched in lipid rafts alongside cholesterol, and these domains participate in signaling.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about water chemistry, pH, and buffer systems:",
+      "options": [
+        "S1: TRUE/FALSE — At 37°C (body temperature), the ion product of water Kw increases to approximately 2.4 × 10⁻¹⁴, making neutral pH approximately 6.8 rather than 7.0, which means blood at pH 7.4 is actually more basic relative to neutral at body temperature than it appears",
+        "S2: TRUE/FALSE — The bicarbonate buffer system (CO2 + H2O ⇌ H2CO3 ⇌ H⁺ + HCO3⁻) is effective at physiological pH 7.4 even though the pKa of carbonic acid is 6.1, because the system is 'open' — the lungs can regulate CO2 and the kidneys can regulate HCO3⁻",
+        "S3: TRUE/FALSE — Surface tension of water arises from the net inward pull on surface molecules that have fewer hydrogen-bonding partners than bulk molecules, creating a contractile tendency at the air-water interface",
+        "S4: TRUE/FALSE — Adhesion of water to the hydrophilic walls of xylem vessels, combined with cohesion between water molecules, helps explain the transpiration-cohesion-tension mechanism of water transport in tall trees to heights exceeding 100 meters"
+      ],
+      "correctAnswer": "TTTT",
+      "explanation": "S1: TRUE — Water's autoionization (2H2O ⇌ H3O⁺ + OH⁻) is endothermic, so Kw increases with temperature. At 25°C, Kw = 1.0 × 10⁻¹⁴ and neutral pH = 7.0. At 37°C, Kw ≈ 2.4 × 10⁻¹⁴, so [H⁺] = [OH⁻] = √(2.4 × 10⁻¹⁴) ≈ 1.55 × 10⁻⁷ M, giving neutral pH ≈ 6.81. Blood at pH 7.4 is therefore 0.59 pH units above neutral at 37°C, compared to only 0.4 units above neutral if we used pH 7.0 as the reference. S2: TRUE — A closed buffer is most effective within ±1 pH unit of its pKa. The pKa of carbonic acid (6.1) is 1.3 units below blood pH (7.4), which would normally make it a poor buffer. However, the bicarbonate system is an open system: the lungs constantly adjust pCO2 (and thus [H2CO3]) via respiratory rate, while the kidneys regulate [HCO3⁻] reabsorption and secretion. This physiological regulation effectively allows the system to operate far from its chemical pKa with enormous buffering capacity. S3: TRUE — In the bulk liquid, water molecules form hydrogen bonds in all directions. At the surface, molecules lack bonding partners on the air side, so the net force is directed inward and laterally. This creates surface tension (72.8 mN/m at 25°C), one of the highest values among common liquids. Surface tension allows small insects (water striders) to walk on water and drives the formation of spherical droplets. S4: TRUE — The cohesion-tension (transpiration pull) theory explains how water moves to the tops of the tallest trees (coastal redwoods, >100 m). Transpiration from leaf stomata creates negative pressure (tension) in the xylem. Cohesion via hydrogen bonds allows this tension to be transmitted as a continuous water column without cavitation (under most conditions). Adhesion to the hydrophilic cellulose/lignin walls of xylem vessels helps counteract gravity and prevents the water column from pulling away from the vessel walls. Theoretical calculations show that the tensile strength of a water column (~25-30 MPa) is sufficient to support water transport to well over 100 m.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about atomic structure, bonding, and molecular interactions in biological systems:",
+      "options": [
+        "S1: TRUE/FALSE — Electronegativity increases across a period and decreases down a group in the periodic table, and the large electronegativity difference between O (3.44) and H (2.20) gives the O-H bond approximately 33% ionic character, making water highly polar",
+        "S2: TRUE/FALSE — Van der Waals interactions (London dispersion forces) arise from transient asymmetries in electron distribution and are individually the weakest intermolecular forces, but they contribute significantly to protein stability because of the enormous number of atomic contacts in a folded protein",
+        "S3: TRUE/FALSE — The molecular geometry of water is linear (180° bond angle) because oxygen has two lone pairs that are positioned opposite to the O-H bonds, and this linear shape is responsible for water's unique properties",
+        "S4: TRUE/FALSE — In a covalent bond between carbon and oxygen (C-O), the bonding electrons are shared unequally, with oxygen attracting the shared electrons more strongly due to its higher electronegativity, creating a polar covalent bond with a partial negative charge (δ⁻) on oxygen"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Electronegativity (Pauling scale) follows the described periodic trend. Oxygen (3.44) and hydrogen (2.20) have an electronegativity difference of 1.24. Using Pauling's relation, this corresponds to approximately 30-35% ionic character in the O-H bond. Each O-H bond has a significant dipole moment, and water's bent geometry means these dipoles don't cancel, giving water a net molecular dipole moment of 1.85 D. This polarity underlies water's solvent properties, high boiling point, and hydrogen bonding capacity. S2: TRUE — London dispersion forces (a component of van der Waals interactions) arise from instantaneous dipole-induced dipole interactions. Individual interactions are very weak (0.4-4 kJ/mol), much weaker than hydrogen bonds (12-30 kJ/mol) or ionic interactions. However, a typical protein of 300 residues has thousands of interatomic contacts in its interior. The cumulative contribution of van der Waals forces to protein stability is substantial and comparable in magnitude to the total hydrogen bonding contribution. These forces are especially important in the tightly packed hydrophobic core. S3: FALSE — Water's molecular geometry is bent (V-shaped) with a bond angle of approximately 104.5°, NOT linear. Oxygen has two bonding pairs and two lone pairs in sp3 hybridization, giving a tetrahedral electron geometry. The lone pairs occupy more space than bonding pairs, compressing the H-O-H angle below the ideal tetrahedral angle of 109.5°. This bent geometry is essential for water's polarity: if water were linear, the two O-H bond dipoles would cancel and water would be nonpolar. S4: TRUE — Carbon (electronegativity 2.55) and oxygen (3.44) have an electronegativity difference of 0.89, creating a polar covalent bond. The more electronegative oxygen atom attracts the shared electrons more strongly, developing a partial negative charge (δ⁻), while carbon develops a partial positive charge (δ⁺). This polarity in C-O bonds is what makes functional groups like hydroxyl (-OH), carbonyl (C=O), and carboxyl (-COOH) groups polar and hydrophilic.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 2,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about nucleic acid structure and chemistry:",
+      "options": [
+        "S1: TRUE/FALSE — DNA and RNA differ in three key ways: DNA uses deoxyribose sugar while RNA uses ribose, DNA contains thymine while RNA contains uracil, and DNA is typically double-stranded while RNA is typically single-stranded (though RNA can form extensive secondary structures)",
+        "S2: TRUE/FALSE — The 5' to 3' directionality of nucleic acid strands arises because phosphodiester bonds connect the 5' phosphate of one nucleotide to the 3' hydroxyl of the next, and DNA polymerase can only add nucleotides to the free 3' hydroxyl end",
+        "S3: TRUE/FALSE — In B-form DNA, the base pairs are stacked 3.4 Å apart with 10 base pairs per complete helical turn, and base stacking interactions (van der Waals forces and hydrophobic interactions between adjacent bases) contribute more to DNA stability than hydrogen bonding between base pairs",
+        "S4: TRUE/FALSE — RNA is more chemically stable than DNA because the 2'-OH group in ribose forms an intramolecular hydrogen bond that protects the phosphodiester backbone from hydrolysis"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1: TRUE — These are the three canonical structural differences between DNA and RNA. The 2'-OH on ribose in RNA makes it more reactive and less chemically stable. Thymine (5-methyluracil) in DNA provides additional van der Waals contacts and helps distinguish it from uracil arising from cytosine deamination. While RNA is single-stranded, it folds into complex structures (tRNA cloverleaf, ribosomal RNA, ribozymes) through intramolecular base pairing. S2: TRUE — The phosphodiester backbone runs 5'→3', with each phosphodiester bond linking the 3'-OH of one nucleotide to the 5'-phosphate of the next. DNA polymerase catalyzes nucleophilic attack by the 3'-OH on the incoming nucleotide's α-phosphate, extending the chain exclusively in the 5'→3' direction. This directionality constraint is why the lagging strand must be synthesized as Okazaki fragments. S3: TRUE — B-DNA has base pair spacing of 3.4 Å and 10 bp/turn (helical pitch = 34 Å). Base stacking is the dominant stabilizing force in DNA: the planar aromatic bases stack on top of each other with favorable van der Waals interactions, hydrophobic exclusion of water, and dipole-dipole interactions. Thermodynamic studies (melting experiments, calorimetry) show that stacking interactions contribute approximately 2/3 of the stabilization free energy, while Watson-Crick hydrogen bonds contribute approximately 1/3. GC-rich DNA is more stable than AT-rich partly due to stronger stacking interactions, not just the extra hydrogen bond. S4: FALSE — This is backwards. RNA is LESS chemically stable than DNA, specifically because of the 2'-OH group. Under basic conditions, the 2'-OH can act as an intramolecular nucleophile, attacking the adjacent 3'-5' phosphodiester bond in an SN2-like mechanism. This produces a 2',3'-cyclic phosphate intermediate and cleaves the backbone. DNA lacks the 2'-OH and is therefore much more resistant to alkaline hydrolysis, making it better suited for long-term genetic storage.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the titration data, what is the isoelectric point (pI) of this amino acid, and at which pH would it migrate toward the cathode (negative electrode) in electrophoresis?",
+      "dataContext": "A biochemist performs a complete titration of 0.1 M histidine (His) starting from pH 0.5 to pH 14.0 and records the following data:\n\n| Equivalents of OH⁻ added | pH   | Predominant ionic species |\n|---|---|---|\n| 0.0 | 0.5 | Fully protonated: +2 charge (α-COOH, α-NH3⁺, Im-H⁺) |\n| 0.5 | 1.77 | Half-titration of α-COOH (pKa1 = 1.77) |\n| 1.0 | 5.0 | α-COO⁻, α-NH3⁺, Im-H⁺: net charge = +1 |\n| 1.5 | 6.04 | Half-titration of imidazole (pKa2 = 6.04) |\n| 2.0 | 7.64 | α-COO⁻, α-NH3⁺, Im: net charge = 0 |\n| 2.5 | 9.33 | Half-titration of α-NH3⁺ (pKa3 = 9.33) |\n| 3.0 | 12.0 | Fully deprotonated: -1 charge (α-COO⁻, α-NH2, Im) |\n\npKa values: pKa1 (α-COOH) = 1.77, pKa2 (imidazole) = 6.04, pKa3 (α-NH3⁺) = 9.33\n\nNote: The isoelectric point (pI) is the pH at which the net charge is zero, calculated as the average of the two pKa values flanking the zwitterionic (zero-charge) species.",
+      "options": [
+        "pI = 5.97; the amino acid migrates toward the cathode at any pH below 5.97",
+        "pI = 4.91; the amino acid migrates toward the cathode at any pH above 4.91",
+        "pI = 7.64; the amino acid migrates toward the cathode at any pH below 7.64",
+        "pI = 7.69; the amino acid migrates toward the cathode at any pH below 7.69"
+      ],
+      "correctAnswer": "D",
+      "explanation": "For histidine, the zero-charge species (α-COO⁻, α-NH3⁺, Im) exists between pKa2 (6.04) and pKa3 (9.33). The pI is the average of the two pKa values flanking this neutral species: pI = (pKa2 + pKa3)/2 = (6.04 + 9.33)/2 = 15.37/2 = 7.685 ≈ 7.69. At pH below pI, the amino acid has a net positive charge (protonation of the imidazole ring) and migrates toward the cathode (negative electrode) in electrophoresis because positive species are attracted to the negative electrode. At pH above pI, the amino acid has a net negative charge and migrates toward the anode (positive electrode). Option A incorrectly averages pKa1 and pKa2 (which would give the pI of an amino acid where the neutral species is flanked by those two pKa values — but for histidine, the +1 to 0 transition is at pKa2, not pKa1). Option C gives the midpoint between 1.0 and 2.0 equivalents from the table, which happens to be the correct zero-charge pH but is not calculated correctly as a pI.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the pH and buffer capacity data, which buffer system would be MOST appropriate for an enzyme assay conducted at pH 7.4?",
+      "dataContext": "A researcher needs to select a buffer for an enzyme kinetics experiment. She tests four buffer systems by measuring their buffer capacity (β) at different pH values:\n\n| Buffer System | pKa | β at pH 6.0 (mM/pH) | β at pH 7.0 (mM/pH) | β at pH 7.4 (mM/pH) | β at pH 8.0 (mM/pH) |\n|---|---|---|---|---|---|\n| MES | 6.15 | 28.3 | 8.2 | 2.1 | 0.4 |\n| PIPES | 6.76 | 14.5 | 25.6 | 15.2 | 3.8 |\n| HEPES | 7.55 | 1.2 | 9.8 | 26.1 | 18.4 |\n| Tris | 8.06 | 0.3 | 2.5 | 8.7 | 23.5 |\n\nAll buffers prepared at 50 mM total concentration, 25°C. Buffer capacity (β) = moles of strong acid or base needed to change pH by 1 unit per liter of buffer. Maximum buffer capacity occurs at pH = pKa.\n\nAdditional data: Tris buffer has a temperature coefficient of -0.028 pH units/°C (pH decreases as temperature increases), while HEPES has a temperature coefficient of -0.014 pH units/°C.",
+      "options": [
+        "MES buffer, because it has the highest buffer capacity overall",
+        "Tris buffer, because it is the most commonly used biological buffer and works at all pH values",
+        "HEPES buffer, because its pKa (7.55) is closest to the target pH 7.4, giving the highest buffer capacity at that pH, and it has a lower temperature coefficient than Tris",
+        "PIPES buffer, because its buffer capacity at pH 7.4 (15.2 mM/pH) is adequate and it is less expensive"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Buffer capacity is maximized at pH = pKa ± 1, with the absolute maximum at pH = pKa. For an experiment at pH 7.4, the ideal buffer has a pKa close to 7.4. HEPES (pKa = 7.55) is closest, and accordingly shows the highest buffer capacity at pH 7.4 (26.1 mM/pH). Additionally, HEPES has a smaller temperature coefficient (-0.014 pH/°C) compared to Tris (-0.028 pH/°C), which is critical because enzyme assays are often conducted at 37°C. For Tris, moving from 25°C to 37°C would shift pH by -0.028 × 12 = -0.34 pH units, meaning a Tris buffer prepared at pH 7.4 at 25°C would be pH 7.06 at 37°C. HEPES would shift only -0.014 × 12 = -0.17 units, giving pH 7.23 at 37°C — much closer to the target. MES (A) has its optimal range around pH 6.0-6.5, far from 7.4. Tris (B) has moderate capacity at 7.4 but its large temperature coefficient is problematic. PIPES (D) has reasonable but inferior capacity at pH 7.4.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 3,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the melting curve data, what can you conclude about the relationship between fatty acid composition and membrane fluidity?",
+      "dataContext": "A biophysicist prepares four different phospholipid bilayer vesicles (liposomes), each composed of a single phospholipid species with identical phosphatidylcholine head groups but different fatty acid tails. She measures the gel-to-liquid crystalline phase transition temperature (Tm) using differential scanning calorimetry:\n\n| Lipid Species | Fatty Acid Composition (sn-1/sn-2) | Tm (°C) | Enthalpy of Transition ΔH (kJ/mol) |\n|---|---|---|---|\n| DPPC | 16:0 / 16:0 (dipalmitoyl) | 41.3 | 36.2 |\n| DMPC | 14:0 / 14:0 (dimyristoyl) | 23.5 | 24.8 |\n| POPC | 16:0 / 18:1Δ9cis (palmitoyl-oleoyl) | -2.5 | 18.3 |\n| DOPC | 18:1Δ9cis / 18:1Δ9cis (dioleoyl) | -18.3 | 15.7 |\n\nAdditional observation: Adding 30 mol% cholesterol to DPPC vesicles broadens and nearly eliminates the sharp phase transition, and the membrane shows intermediate fluidity properties at all temperatures between 10°C and 50°C.",
+      "options": [
+        "Increasing chain length decreases Tm because longer chains have more rotational freedom, and unsaturation has no significant effect on membrane fluidity",
+        "Decreasing chain length decreases Tm because shorter chains have fewer van der Waals contacts, and cis-unsaturation dramatically decreases Tm by introducing kinks that prevent tight packing; cholesterol eliminates the phase transition by disrupting both gel and liquid crystalline order",
+        "Unsaturated fatty acids increase Tm because double bonds create rigid planar regions that promote crystal packing, while cholesterol decreases Tm by intercalating between lipids",
+        "All lipids have the same Tm regardless of chain length or saturation, and only cholesterol concentration determines membrane fluidity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data clearly demonstrate two trends: (1) Chain length effect: Comparing DPPC (16:0/16:0, Tm = 41.3°C) with DMPC (14:0/14:0, Tm = 23.5°C) — both fully saturated — shorter chains give lower Tm because they have fewer carbons making fewer van der Waals contacts with neighboring chains, resulting in weaker intermolecular interactions. The ΔH is also lower (24.8 vs 36.2 kJ/mol), confirming fewer interactions to break. (2) Unsaturation effect: Comparing DPPC (16:0/16:0, Tm = 41.3°C) with POPC (16:0/18:1, Tm = -2.5°C) and DOPC (18:1/18:1, Tm = -18.3°C) — introducing a cis double bond creates a ~30° kink in the fatty acid chain that disrupts the regular parallel packing of acyl chains. One unsaturation (POPC) drops Tm by ~44°C. Two unsaturated chains (DOPC) drop it further. The ΔH values decrease progressively (36.2 → 18.3 → 15.7), indicating fewer ordered interactions in the gel phase. Cholesterol intercalates with its rigid steroid ring between acyl chains, preventing both tight gel packing (at low T) and excessive disorder (at high T), thereby broadening and eliminating the sharp phase transition.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the spectroscopic data, which conclusion about protein secondary structure content is best supported?",
+      "dataContext": "A structural biologist uses circular dichroism (CD) spectroscopy to analyze the secondary structure of four proteins at pH 7.0. CD measures the differential absorption of left- and right-circularly polarized light. Different secondary structures produce characteristic CD spectra:\n\n| Spectral Feature | α-helix signature | β-sheet signature | Random coil signature |\n|---|---|---|---|\n| Positive band | 193 nm | 195 nm | ~218 nm (weak) |\n| Negative bands | 208 nm, 222 nm (double minimum) | 218 nm (single minimum) | ~198 nm (strong minimum) |\n\nResults for four proteins:\n\n| Protein | [θ]208 (deg·cm²/dmol) | [θ]222 (deg·cm²/dmol) | [θ]218 (deg·cm²/dmol) | Estimated % α-helix | Estimated % β-sheet |\n|---|---|---|---|---|---|\n| Protein W | -33,000 | -31,500 | -8,200 | 85% | 3% |\n| Protein X | -8,500 | -5,200 | -18,500 | 12% | 65% |\n| Protein Y | -21,000 | -18,700 | -14,200 | 48% | 22% |\n| Protein Z (after heating to 90°C) | -3,200 | -2,100 | -4,800 | 5% | 8% |\n\nNote: [θ] = mean residue ellipticity. More negative values at 208/222 nm indicate more α-helix. More negative values at 218 nm indicate more β-sheet. Protein Z is the same protein as Protein Y but measured after thermal denaturation.",
+      "options": [
+        "Thermal denaturation of Protein Y to Protein Z causes a near-complete loss of secondary structure as evidenced by the dramatic decrease in ellipticity magnitude at all wavelengths, consistent with an unfolded random coil state",
+        "Protein W is predominantly β-sheet because it has the most negative [θ] values overall, indicating a highly ordered structure",
+        "Protein X has the highest α-helix content because the magnitude of [θ]218 is greatest, and this wavelength is diagnostic for α-helices",
+        "Proteins W and X have identical secondary structure compositions because their total ellipticity magnitudes are similar when summed across wavelengths"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The data show that Protein Y (at 25°C) has mixed α/β structure (48% helix, 22% sheet) with significant ellipticity at all measured wavelengths. After heating to 90°C (Protein Z), the ellipticity values decrease dramatically at all wavelengths: [θ]208 drops from -21,000 to -3,200, [θ]222 from -18,700 to -2,100, and [θ]218 from -14,200 to -4,800. The estimated secondary structure content drops to 5% α-helix and 8% β-sheet, consistent with thermal denaturation producing an unfolded random coil with little residual secondary structure. Option B is incorrect because Protein W's large negative values at 208 and 222 nm (the α-helix diagnostic wavelengths) with 85% estimated α-helix clearly identify it as predominantly helical (e.g., myoglobin-like). Option C is wrong because 218 nm is diagnostic for β-sheet, not α-helix, and Protein X's spectrum (large [θ]218, modest [θ]208/222) is consistent with its 65% β-sheet assignment. Option D is wrong because the distribution across wavelengths, not the total magnitude, determines secondary structure composition.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Based on the solubility data, which conclusion best explains the observed relationship between amino acid side chain properties and solubility behavior?",
+      "dataContext": "A biochemistry student measures the solubility of five amino acids in water at 25°C and also determines their free energy of transfer (ΔGtr) from water to octanol (a measure of hydrophobicity; more positive ΔGtr = more hydrophilic, more negative = more hydrophobic):\n\n| Amino Acid | Side Chain Type | Solubility in Water (g/L) | ΔGtr water→octanol (kJ/mol) | pI |\n|---|---|---|---|---|\n| Leucine (Leu) | Nonpolar, aliphatic | 21.7 | -6.04 | 6.00 |\n| Phenylalanine (Phe) | Nonpolar, aromatic | 27.6 | -4.20 | 5.48 |\n| Serine (Ser) | Polar, uncharged | 362.1 | +1.67 | 5.68 |\n| Glutamic acid (Glu) | Polar, acidic | 8.5 | +2.13 | 3.22 |\n| Lysine (Lys) | Polar, basic | 739.3 | +5.54 | 9.74 |\n\nAdditional data: When these amino acids are incorporated into a model 150-residue globular protein, residues with negative ΔGtr values are found in the protein interior in >80% of solved crystal structures, while residues with positive ΔGtr values are found on the protein surface in >75% of structures.",
+      "options": [
+        "Solubility in water directly correlates with molecular weight: larger amino acids are more soluble because they can form more hydrogen bonds with water",
+        "The ΔGtr data explain protein folding: amino acids with negative ΔGtr values (Leu, Phe) are energetically favored in the nonpolar protein interior, driving hydrophobic core formation, while amino acids with positive ΔGtr values (Ser, Glu, Lys) prefer the aqueous environment and localize to protein surfaces",
+        "Glutamic acid's low aqueous solubility despite its hydrophilic side chain is paradoxical and cannot be explained by its physical properties",
+        "Phenylalanine is more hydrophilic than leucine because its aromatic ring enables pi-stacking with water molecules, as confirmed by its higher aqueous solubility"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The ΔGtr (free energy of transfer from water to octanol) is a thermodynamic measure of how favorable it is for an amino acid side chain to move from an aqueous to a nonpolar environment. Negative values (Leu: -6.04, Phe: -4.20 kJ/mol) indicate the side chain is more stable in a nonpolar environment — these are hydrophobic residues that thermodynamically drive protein folding by burying themselves in the protein interior (the hydrophobic effect). Positive values (Ser: +1.67, Glu: +2.13, Lys: +5.54 kJ/mol) indicate preference for aqueous environments, explaining surface localization. The crystal structure data directly support this: >80% of Leu/Phe residues are buried, >75% of Ser/Glu/Lys are surface-exposed. Option A is wrong because molecular weight does not predict solubility here (Glu at MW 147 has lower solubility than Leu at MW 131). Option C ignores that Glu's low solubility at its pI (3.22) reflects the zwitterionic form's crystal lattice energy; at physiological pH, Glu⁻ is highly soluble. Option D is wrong because Phe's less negative ΔGtr compared to Leu reflects the aromatic ring's slight polarizability, not hydrophilicity, and Phe is decidedly hydrophobic.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A biochemist hypothesizes that the folding of a 200-residue protein is driven primarily by the hydrophobic effect rather than by intramolecular hydrogen bonds. Which experimental approach would most rigorously test this hypothesis?",
+      "experimentContext": "The protein folds into a compact globular structure with a hydrophobic core containing ~40 nonpolar residues and a hydrophilic surface. The researcher has access to: (1) isothermal titration calorimetry (ITC) and differential scanning calorimetry (DSC) for thermodynamic measurements, (2) site-directed mutagenesis capabilities, (3) various co-solvents and chemical denaturants, (4) circular dichroism spectroscopy for monitoring secondary structure, and (5) the ability to measure folding thermodynamics (ΔG, ΔH, ΔS) at multiple temperatures.\n\nKey background: The hydrophobic effect is characterized by a large positive ΔS (due to release of ordered water from hydrophobic surfaces upon folding), a near-zero or slightly positive ΔH at room temperature, and a large negative ΔCp (heat capacity change) upon folding. Hydrogen bond formation contributes favorable ΔH but unfavorable ΔS.",
+      "options": [
+        "Add increasing concentrations of urea and measure whether the protein unfolds, since urea disrupts hydrogen bonds but not hydrophobic interactions",
+        "Measure the temperature dependence of ΔG, ΔH, and ΔS of folding using DSC; if the hydrophobic effect dominates, expect a large negative ΔCp (heat capacity change), entropy-driven folding at room temperature, and cold denaturation at low temperatures",
+        "Replace all 40 nonpolar core residues with alanine by mutagenesis and check whether the protein still folds",
+        "Dissolve the protein in pure organic solvent (100% ethanol) and observe whether it maintains its folded structure"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The most rigorous approach is to measure the thermodynamic signature of folding across a temperature range. The hydrophobic effect has a unique thermodynamic fingerprint: (1) Large negative ΔCp: Burying hydrophobic surfaces removes ordered water 'cages,' reducing the heat capacity. A large negative ΔCp (typically -40 to -80 J/mol·K per residue buried) is the hallmark of hydrophobic-driven processes. (2) Entropy-driven at room temperature: ΔS is positive (water entropy gain exceeds protein conformational entropy loss), contributing favorably to ΔG. (3) Cold denaturation: Because ΔCp is negative, ΔH and ΔS both become less favorable as temperature decreases. At low enough temperatures, ΔG becomes positive and the protein unfolds — this 'cold denaturation' is a unique prediction of hydrophobic-effect-driven folding and cannot be explained by hydrogen bonds alone. If hydrogen bonds dominated, ΔCp would be near zero, folding would be enthalpy-driven at all temperatures, and cold denaturation would not occur. Option A is incorrect because urea disrupts both hydrogen bonds AND hydrophobic interactions (by preferentially interacting with the peptide backbone). Option C is too drastic — replacing 40 core residues would destroy the protein regardless of the folding mechanism. Option D is uninformative because organic solvents disrupt both hydrogen bonding networks and the hydrophobic effect.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a newly discovered disaccharide contains an α or β glycosidic linkage, and whether the linkage involves C1→C4 or C1→C6 connectivity. Which combination of experiments would definitively establish the complete linkage type?",
+      "experimentContext": "The disaccharide is composed of two glucose residues (confirmed by acid hydrolysis followed by chromatography). The researcher has access to: (1) specific glycosidase enzymes — α-glucosidase (cleaves α-glycosidic bonds) and β-glucosidase (cleaves β-glycosidic bonds), (2) periodate oxidation analysis (HIO4 cleaves between adjacent carbons bearing free hydroxyl groups — C-C bonds between vicinal diols), (3) methylation analysis (all free -OH groups are methylated, then the glycosidic bond is hydrolyzed, and the positions of unmethylated -OH groups indicate which carbons were involved in the glycosidic bond), (4) NMR spectroscopy, and (5) Benedict's reagent for detecting reducing sugars.\n\nNote: In periodate oxidation, a C1→C4 linked hexose monomer would be cleaved differently from a C1→C6 linked monomer because different patterns of vicinal diols are available for oxidation.",
+      "options": [
+        "Use only Benedict's reagent — if the disaccharide is a reducing sugar, it must have a β-linkage; if non-reducing, it must have an α-linkage",
+        "Treat the disaccharide with α-glucosidase and β-glucosidase separately (to determine α vs β) and perform methylation analysis (to determine which carbons are involved in the linkage)",
+        "Use only NMR spectroscopy, which cannot distinguish between α and β anomers but can determine linkage position",
+        "Perform acid hydrolysis and identify the monosaccharide products — the ratio of glucose to other sugars will reveal the linkage type"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A two-pronged approach is needed to fully characterize a glycosidic bond: (1) α vs β determination: Treating the disaccharide with specific glycosidases is definitive. If α-glucosidase cleaves it (releasing free glucose), the bond is α; if β-glucosidase cleaves it, the bond is β. These enzymes have strict stereochemical specificity for the anomeric configuration. (2) Linkage position determination: Methylation analysis (Haworth methylation) is the gold standard. All free hydroxyl groups are exhaustively methylated (using CH3I/Ag2O). The glycosidic bond is then hydrolyzed under mild acid conditions. The resulting methylated monosaccharides are analyzed by GC-MS. The positions that were involved in the glycosidic bond will have free (unmethylated) hydroxyl groups. For example, if the non-reducing glucose yields 2,3,6-tri-O-methylglucose, then C1 and C4 were involved in glycosidic bonds (C1 is the anomeric carbon, C4 was linked), indicating a 1→4 linkage. A 1→6 linkage would yield 2,3,4-tri-O-methylglucose. Option A is wrong because reducing/non-reducing character depends on whether an anomeric carbon is free, not on α vs β. Option C is incorrect because NMR CAN distinguish α and β anomers (the anomeric proton shows distinct chemical shifts and coupling constants: α has J1,2 ≈ 3-4 Hz, β has J1,2 ≈ 7-8 Hz). Option D is wrong because acid hydrolysis only confirms monomer identity, not linkage type.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 5,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Chemistry of Life"
+    }
+  ]
+}

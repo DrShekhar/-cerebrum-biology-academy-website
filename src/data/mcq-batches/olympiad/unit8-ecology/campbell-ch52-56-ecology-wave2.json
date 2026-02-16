@@ -1,0 +1,507 @@
+{
+  "batch": {
+    "name": "Campbell Ch52-56 Ecology — Wave 2",
+    "version": 1,
+    "source": "olympiad-wave2",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "A researcher comparing two biomes finds that Biome X has an average annual temperature of 25°C, annual precipitation of 200 cm, and shows minimal seasonal variation. Biome Y has an average annual temperature of 25°C, annual precipitation of 30 cm, and extreme diurnal temperature fluctuations. Which pair of biomes best matches X and Y, respectively?",
+      "options": [
+        "A) Savanna and tropical rainforest",
+        "B) Temperate broadleaf forest and savanna",
+        "C) Tropical rainforest and subtropical desert",
+        "D) Tropical seasonal forest and chaparral"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Tropical rainforests are characterized by high, non-seasonal precipitation (typically >200 cm/year), warm year-round temperatures (~25-29°C), and minimal seasonal variation due to proximity to the equator. Subtropical deserts (e.g., Sahara) share warm average temperatures but receive very little precipitation (<30 cm/year) and experience extreme diurnal temperature swings because dry air and clear skies lose heat rapidly at night. Savannas have moderate seasonal rainfall (not 200 cm). Temperate broadleaf forests have lower average temperatures. Chaparral has a Mediterranean climate with cool, wet winters and hot, dry summers, not year-round warmth at 25°C.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 52,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the context of the aquatic biome, the photic zone of an oligotrophic lake typically extends deeper than that of a eutrophic lake. Which of the following best explains this observation and its ecological consequence?",
+      "options": [
+        "A) Oligotrophic lakes have lower dissolved oxygen, which increases water transparency and allows photosynthetically active radiation to penetrate deeper",
+        "B) Eutrophic lakes have higher concentrations of dissolved calcium carbonate, which absorbs photosynthetically active radiation and creates a shallower photic zone",
+        "C) Oligotrophic lakes are located at higher altitudes where solar radiation intensity is greater, mechanically pushing the photic zone deeper",
+        "D) Oligotrophic lakes have lower nutrient concentrations and therefore lower phytoplankton density, reducing light attenuation and allowing a deeper compensation depth for net photosynthesis"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Oligotrophic lakes are nutrient-poor (low nitrogen and phosphorus), which supports very low phytoplankton biomass. With fewer suspended algal cells and less particulate organic matter, light penetrates much deeper before being attenuated below the compensation depth (where photosynthesis equals respiration). In eutrophic lakes, high nutrient loads drive dense phytoplankton blooms that absorb and scatter light, confining the photic zone to a narrow surface layer. This principle directly ties nutrient status to primary productivity and light availability, a core concept in aquatic ecology.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 52,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "A population of bacteria growing in a chemostat is maintained at steady state with a population size of 5 x 10^8 cells. The intrinsic rate of increase (r) is 0.7 per hour. If the nutrient supply is suddenly doubled, temporarily removing resource limitation, what is the approximate population size after 3 hours of unrestricted exponential growth? (Use N(t) = N0 * e^(rt))",
+      "options": ["A) 1.05 x 10^9", "B) 4.1 x 10^9", "C) 8.2 x 10^8", "D) 5.6 x 10^9"],
+      "correctAnswer": "B",
+      "explanation": "Using the exponential growth equation: N(t) = N0 * e^(rt) = 5 x 10^8 * e^(0.7 * 3) = 5 x 10^8 * e^2.1. Since e^2.1 = 8.166, N(3) = 5 x 10^8 * 8.166 = 4.08 x 10^9, approximately 4.1 x 10^9. This calculation demonstrates that even modest values of r produce dramatic exponential growth over short intervals when resources are non-limiting, a fundamental concept in population ecology. The chemostat context is important because it establishes that the population was previously at carrying capacity before the nutrient pulse.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 53,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "A population follows the logistic growth model dN/dt = rN(K - N)/K. At which population size is dN/dt maximized, and what happens to per capita growth rate (dN/Ndt) as N approaches K?",
+      "options": [
+        "A) dN/dt is maximized at N = K; per capita growth rate remains constant",
+        "B) dN/dt is maximized at N = K/4; per capita growth rate declines exponentially to zero",
+        "C) dN/dt is maximized at N = K/2; per capita growth rate increases as intraspecific facilitation intensifies near K",
+        "D) dN/dt is maximized at N = K/2; per capita growth rate declines linearly to zero as N approaches K"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In the logistic model, total population growth rate dN/dt = rN(K - N)/K is a quadratic function of N that equals zero at both N = 0 and N = K. The maximum occurs at the vertex, N = K/2 (the inflection point of the S-shaped logistic curve). The per capita growth rate is dN/Ndt = r(K - N)/K = r(1 - N/K), which is a linear function of N. It equals r when N is near zero and declines linearly to zero as N approaches K. This linear decline reflects increasing intensity of density-dependent factors (competition for resources, waste accumulation) as population density rises.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 53,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "According to the theory of island biogeography (MacArthur and Wilson), which of the following pairs of islands would be predicted to have the highest species richness at equilibrium?",
+      "options": [
+        "A) A large island close to the mainland",
+        "B) A large island far from the mainland",
+        "C) A small island close to the mainland",
+        "D) A small island far from the mainland"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The equilibrium theory of island biogeography predicts that species richness is determined by the balance between immigration rate and extinction rate. Large islands have lower extinction rates because they support larger populations and more diverse habitats. Islands close to the mainland have higher immigration rates because propagules can reach them more easily. Therefore, a large island near the mainland has the highest immigration rate and lowest extinction rate, yielding the greatest equilibrium species richness. This theory has been applied extensively to habitat fragments in conservation biology, where 'islands' of habitat in a 'sea' of developed land follow similar dynamics.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "In an ecosystem, the gross primary productivity (GPP) is 12,000 kcal/m^2/year, and plant cellular respiration (Ra) consumes 5,500 kcal/m^2/year. If the trophic efficiency from primary producers to primary consumers is 10%, and from primary consumers to secondary consumers is 15%, approximately how much energy (in kcal/m^2/year) is available to secondary consumers?",
+      "options": ["A) 180", "B) 1,800", "C) 97.5", "D) 650"],
+      "correctAnswer": "C",
+      "explanation": "Net primary productivity (NPP) = GPP - Ra = 12,000 - 5,500 = 6,500 kcal/m^2/year. This is the energy available to primary consumers. Energy available to primary consumers = 6,500 x 0.10 = 650 kcal/m^2/year (10% trophic efficiency). Energy available to secondary consumers = 650 x 0.15 = 97.5 kcal/m^2/year (15% trophic efficiency). This calculation illustrates the dramatic energy loss between trophic levels, which explains why food chains rarely exceed 4-5 trophic levels. The distinction between GPP and NPP is critical: herbivores can only access NPP, not the energy plants use for their own respiration.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 55,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "A conservation biologist studying a fragmented population of an endangered salamander calculates that the census population size is 500 individuals, but the effective population size (Ne) is only 80. Which combination of factors most likely explains this discrepancy?",
+      "options": [
+        "A) Equal sex ratio, random mating, stable population size, and overlapping generations",
+        "B) Female-biased sex ratio, low fecundity, high adult survival, and large geographic range",
+        "C) Equal sex ratio, high gene flow between subpopulations, large body size, and long generation time",
+        "D) Skewed sex ratio favoring males, high variance in male reproductive success, recent population bottleneck, and fluctuating population size"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Effective population size (Ne) is reduced below census size (N) by several factors: (1) unequal sex ratio — Ne is determined by the harmonic mean of breeding males and females, so skewed ratios dramatically reduce Ne; (2) high variance in reproductive success — when few individuals sire most offspring, Ne drops because genetic drift operates as if the population were smaller; (3) population bottlenecks — even temporary reductions in N permanently reduce Ne due to the harmonic mean effect across generations; (4) fluctuating population size — Ne tracks the smallest generation sizes, not the average. An Ne/N ratio of 0.16 (80/500) is common in wildlife populations and flags serious concern about genetic drift, inbreeding depression, and loss of adaptive potential.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "A predator-prey system shows stable limit cycles. When a novel parasitoid is introduced that specifically targets the predator, which of the following is the most likely immediate effect on the prey population dynamics?",
+      "options": [
+        "A) Prey population crashes due to apparent competition mediated by the shared parasitoid",
+        "B) Prey population remains unchanged because bottom-up forces, not top-down forces, regulate prey density",
+        "C) Prey population increases initially because reduced predator numbers release the prey from top-down control",
+        "D) Prey population oscillations increase in amplitude but decrease in period"
+      ],
+      "correctAnswer": "C",
+      "explanation": "When a parasitoid targets the predator population, predator density is suppressed, reducing predation pressure on prey. This is a classic trophic cascade: the parasitoid indirectly benefits the prey through a negative effect on the intermediate predator (enemy-of-my-enemy effect). The immediate consequence is predator release for the prey, causing prey numbers to rise. Option A describes apparent competition, which would apply if the parasitoid attacked both predator and prey. Option B ignores well-documented top-down regulation in many systems. Option D incorrectly predicts oscillation changes without mechanistic basis. In the longer term, the system may reach a new dynamic equilibrium or show altered oscillatory behavior.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Coriolis effect influences global wind patterns and ocean currents. How does this force specifically shape the distribution of biomes at approximately 30° latitude?",
+      "options": [
+        "A) The Coriolis effect deflects trade winds westward at 30°N, creating orographic rainfall on eastern continental margins and arid conditions on western margins",
+        "B) Air that rose at the equator (Hadley cell) descends at ~30° latitude as dry, high-pressure air masses, creating subtropical deserts; the Coriolis effect deflects these descending air currents to generate the trade winds and westerlies",
+        "C) The Coriolis effect causes upwelling of cold ocean water at 30° latitude, reducing evaporation and precipitation on nearby coastlines to produce Mediterranean climates",
+        "D) At 30° latitude, the Coriolis effect is zero, allowing air masses to stagnate and form persistent fog belts that sustain temperate rainforests"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Global atmospheric circulation cells (Hadley, Ferrel, Polar) are driven by differential solar heating and shaped by the Coriolis effect. In the Hadley cell, warm moist air rises at the equator (ITCZ), loses moisture as tropical rain, and flows poleward at altitude. As it cools and descends at approximately 30°N and 30°S, it creates persistent high-pressure zones with dry, stable air. These subtropical high-pressure belts are where most of Earth's great deserts are found (Sahara, Arabian, Sonoran, Australian). The Coriolis effect deflects the surface flow of this descending air — toward the equator as the trade winds (NE in Northern Hemisphere) and toward the poles as the westerlies. The Coriolis effect is NOT zero at 30° (it's zero only at the equator).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 52,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the nitrogen cycle, which of the following correctly traces the path of nitrogen from atmospheric N2 to its incorporation into a tertiary consumer's amino acids?",
+      "options": [
+        "A) N2 → N2O (by lightning) → NO3^- (soil absorption) → NH4^+ (plant uptake) → amino acids in plant → herbivore → secondary consumer → tertiary consumer",
+        "B) N2 → NO3^- (direct abiotic oxidation) → NH4^+ (ammonification) → amino acids in plants → herbivore → secondary consumer → tertiary consumer",
+        "C) N2 → NH4^+ (nitrogen fixation) → amino acids in plant → NO3^- (nitrification in plant tissue) → herbivore → secondary consumer → tertiary consumer",
+        "D) N2 → NH3/NH4^+ (nitrogen fixation by diazotrophs) → NO2^- → NO3^- (nitrification by Nitrosomonas then Nitrobacter) → plant assimilation into amino acids → herbivore → secondary consumer → tertiary consumer"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct nitrogen pathway: (1) Biological nitrogen fixation by diazotrophic bacteria (e.g., Rhizobium, free-living Azotobacter) using nitrogenase converts atmospheric N2 to NH3/NH4^+. (2) Nitrification is a two-step aerobic process: Nitrosomonas (and ammonia-oxidizing archaea) oxidize NH4^+ to NO2^-, then Nitrobacter oxidizes NO2^- to NO3^-. (3) Plants assimilate NO3^- (or NH4^+) and incorporate nitrogen into amino acids via glutamine synthetase/glutamate synthase (GS-GOGAT) pathway. (4) Nitrogen moves up through trophic levels as consumers eat producers and other consumers. Option A incorrectly starts with N2O and reverses nitrification. Option B incorrectly claims direct abiotic oxidation to NO3^-. Option C incorrectly places nitrification inside plant tissue.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 55,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding population ecology models and life history strategies, evaluate the following statements:\nS1: TRUE — In the logistic model dN/dt = rN(K-N)/K, the term (K-N)/K represents the fraction of carrying capacity still available, and the model assumes that the effect of each additional individual on population growth rate is equal.\nS2: FALSE — Type III survivorship curves, typical of oysters and many marine invertebrates, show high mortality in early life stages and high survival once individuals reach a critical size or age.\nS3: TRUE — K-selected species invariably have longer generation times than r-selected species because natural selection always favors either maximum reproductive rate or maximum competitive ability, never both.\nS4: FALSE — Density-independent factors such as severe weather events can regulate a population, meaning they act in a manner proportional to population density to return it toward carrying capacity.",
+      "options": [
+        "A) S1 correct, S2 correct, S3 incorrect, S4 incorrect",
+        "B) S1 correct, S2 incorrect, S3 incorrect, S4 incorrect",
+        "C) S1 correct, S2 incorrect, S3 incorrect, S4 correct",
+        "D) S1 incorrect, S2 correct, S3 correct, S4 incorrect"
+      ],
+      "correctAnswer": "C",
+      "explanation": "S1 TRUE is correct: In the logistic equation, (K-N)/K is the unused proportion of K, and the model assumes a linear decrease in per capita growth rate with increasing N (each individual has an equal marginal effect). S2 is labeled FALSE, but the description of Type III curves is actually accurate — they DO show very high mortality early and improved survival later. The FALSE label is incorrectly applied to a true statement, so S2's label assessment is incorrect. S3 is labeled TRUE but is incorrect: the r/K selection concept is a continuum, not an absolute dichotomy, and many species show mixed strategies. The words 'invariably' and 'never both' make this false, so the TRUE label is wrong. S4 is labeled FALSE, and the statement claims density-independent factors 'regulate' populations proportionally to density. This is indeed false — density-independent factors affect populations but cannot regulate them because regulation requires density-dependence by definition. The FALSE label is correctly applied. Assessment: S1 correct, S2 incorrect (FALSE label on a true statement), S3 incorrect (TRUE label on a false statement), S4 correct (FALSE label on a false statement).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 53,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about community ecology concepts:\nS1: TRUE — The competitive exclusion principle states that two species competing for the same limiting resource cannot stably coexist; one will inevitably be eliminated unless the species differentiate their niches.\nS2: TRUE — Character displacement refers to the phenomenon where sympatric populations of two competing species evolve greater morphological differences than allopatric populations of the same species, reducing niche overlap.\nS3: FALSE — Keystone species always occupy the highest trophic level in a community because their disproportionate effect on community structure derives solely from top-down predation.\nS4: TRUE — In Batesian mimicry, a palatable species (mimic) evolves to resemble an unpalatable or dangerous species (model), and the effectiveness of the mimicry decreases as the mimic becomes more abundant relative to the model.",
+      "options": [
+        "A) S1 correct, S2 correct, S3 incorrect, S4 incorrect",
+        "B) S1 correct, S2 correct, S3 incorrect, S4 correct",
+        "C) S1 correct, S2 correct, S3 correct, S4 incorrect",
+        "D) S1 correct, S2 correct, S3 correct, S4 correct"
+      ],
+      "correctAnswer": "D",
+      "explanation": "S1 TRUE is correct: Gause's competitive exclusion principle (demonstrated with Paramecium) states exactly this. Coexistence requires niche differentiation (resource partitioning). S2 TRUE is correct: Character displacement, classically demonstrated by Darwin's finches (Grant & Grant) and Hydrobia mud snails, involves sympatric populations diverging more in traits like beak size or shell morphology compared to allopatric populations, reducing interspecific competition. S3 is labeled FALSE, and the statement claims keystone species 'always' occupy the highest trophic level and their effect derives 'solely' from top-down predation. This is indeed false — keystone species can be at any trophic level. Pisaster ochraceus is a mid-level predator, beavers are herbivorous ecosystem engineers, and fig trees are mutualist keystone species. The FALSE label is correctly applied. S4 TRUE is correct: In Batesian mimicry, the palatable mimic gains protection by resembling the unpalatable model. This depends on frequency-dependent selection — predators learn to avoid the model's appearance, but if mimics become too common relative to models, predators encounter more palatable prey and stop avoiding that pattern, reducing the mimic's protection.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about ecosystem ecology and nutrient cycling:\nS1: TRUE — Biological magnification causes DDT and mercury to reach highest concentrations in top predators because these lipophilic or protein-binding substances are not readily metabolized or excreted, so they accumulate through successive trophic levels.\nS2: FALSE — The phosphorus cycle lacks a significant atmospheric gaseous phase, unlike carbon and nitrogen cycles, which means phosphorus enters ecosystems primarily through weathering of rocks and is often the limiting nutrient in freshwater systems.\nS3: TRUE — In eutrophic lakes, algal blooms caused by excess nitrogen and phosphorus loading ultimately lead to hypoxic dead zones because decomposition of the massive algal biomass by aerobic bacteria consumes dissolved oxygen faster than it can be replenished.\nS4: FALSE — Net ecosystem production (NEP) is defined as GPP minus total ecosystem respiration (both autotrophic and heterotrophic), and a positive NEP indicates the ecosystem is a net carbon sink.",
+      "options": [
+        "A) S1 correct, S2 incorrect, S3 correct, S4 incorrect",
+        "B) S1 correct, S2 correct, S3 correct, S4 incorrect",
+        "C) S1 correct, S2 incorrect, S3 correct, S4 correct",
+        "D) S1 incorrect, S2 incorrect, S3 correct, S4 incorrect"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 TRUE is correct: Biological magnification (bioaccumulation through food chains) concentrates persistent lipophilic toxins like DDT, PCBs, and methylmercury at each trophic transfer. Top predators can accumulate concentrations millions of times higher than ambient water levels. S2 is labeled FALSE, but the statement describes the phosphorus cycle accurately — it DOES lack a major gaseous phase (unlike C and N), phosphorus DOES enter via rock weathering, and it IS often limiting in freshwater. Therefore, the statement is actually true, and the FALSE label is incorrectly applied. S3 TRUE is correct: Eutrophication leads to algal blooms; when algae die, decomposer bacteria consume O2 during aerobic decomposition, creating hypoxic or anoxic conditions (dead zones). This process is well-documented in the Gulf of Mexico, Chesapeake Bay, and many lakes. S4 is labeled FALSE, but NEP = GPP - Re (ecosystem respiration) IS the standard definition, and positive NEP DOES indicate net carbon sequestration (carbon sink). The statement is true, so the FALSE label is incorrect. Assessment: S1 correct, S2 incorrect, S3 correct, S4 incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 55,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about conservation biology:\nS1: TRUE — The extinction vortex describes a positive feedback loop in which small populations lose genetic diversity through drift, which reduces fitness via inbreeding depression, further shrinking the population and accelerating drift — a self-reinforcing cycle toward extinction.\nS2: FALSE — Minimum viable population (MVP) analysis attempts to determine the smallest population size that has a specified probability (often 95%) of persisting for a defined time period (often 100 years), incorporating stochastic models of demographic, environmental, and genetic variation.\nS3: TRUE — Habitat corridors connecting fragmented reserves always increase species diversity by facilitating gene flow, even though they may also facilitate the spread of invasive species and disease between reserves.\nS4: TRUE — Biodiversity hotspots, as defined by Norman Myers, are regions with at least 1,500 endemic vascular plant species that have lost at least 70% of their original habitat, and collectively they contain approximately 44% of all vascular plant species in less than 2% of Earth's land area.",
+      "options": [
+        "A) S1 correct, S2 correct, S3 correct, S4 correct",
+        "B) S1 correct, S2 incorrect, S3 incorrect, S4 correct",
+        "C) S1 correct, S2 incorrect, S3 correct, S4 incorrect",
+        "D) S1 correct, S2 correct, S3 incorrect, S4 incorrect"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 TRUE is correct: The extinction vortex (Gilpin & Soule) is a positive feedback loop: small population -> genetic drift -> loss of heterozygosity -> inbreeding depression -> reduced fitness/fecundity -> smaller population -> more drift. This concept is central to conservation genetics. S2 is labeled FALSE, but the description of MVP analysis is accurate — it does use stochastic population viability analysis (PVA) models to estimate the minimum population size with a given probability of persistence over a specified timeframe. The statement is true, making the FALSE label incorrect. S3 TRUE is incorrect: The word 'always' is problematic. Corridors do NOT always increase diversity — they can spread disease, fire, invasive species, and edge effects. Their effectiveness depends on corridor width, matrix quality, and target species. The absolute claim makes S3 FALSE, so the TRUE label is wrong. S4 TRUE is correct: Myers' hotspot criteria include >=1,500 endemic plant species and >=70% habitat loss. The statistic about ~44% of vascular plants in <2% of land area is approximately correct. Assessment: S1 correct, S2 incorrect (FALSE label on a true statement), S3 incorrect (TRUE label on a false statement), S4 correct.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about ecological succession and restoration:\nS1: TRUE — Primary succession occurs on newly formed or newly exposed substrates with no prior soil (e.g., lava flows, glacial till), and pioneer species like lichens and mosses are critical because they begin the slow process of soil formation through weathering and organic matter accumulation.\nS2: FALSE — During secondary succession following a disturbance such as a forest fire, the community always returns to the exact same climax community that existed before the disturbance, regardless of changed environmental conditions.\nS3: TRUE — The intermediate disturbance hypothesis predicts that species diversity is greatest at moderate levels of disturbance because low disturbance allows competitive exclusion while high disturbance eliminates all but the most resilient colonizers.\nS4: FALSE — Facilitation, tolerance, and inhibition are three models of succession mechanisms; in the facilitation model, early-arriving species modify the environment in ways that make it MORE suitable for later-arriving species.",
+      "options": [
+        "A) S1 correct, S2 correct, S3 correct, S4 incorrect",
+        "B) S1 correct, S2 incorrect, S3 correct, S4 correct",
+        "C) S1 incorrect, S2 correct, S3 correct, S4 incorrect",
+        "D) S1 correct, S2 correct, S3 correct, S4 correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 TRUE is correct: Primary succession on bare substrates (volcanic rock, retreating glaciers) starts with pioneer organisms (cyanobacteria, lichens, mosses) that begin pedogenesis through mechanical/chemical weathering and organic debris accumulation. This is well documented at sites like Mount St. Helens and Glacier Bay, Alaska. S2 is labeled FALSE, and the statement claiming succession 'always returns to the exact same climax community' is indeed false — succession outcomes depend on current environmental conditions, seed banks, priority effects, stochastic factors, and climate change. The FALSE label is correctly applied. S3 TRUE is correct: Connell's intermediate disturbance hypothesis predicts peak diversity at intermediate disturbance frequency/intensity, supported by data from coral reefs and tropical forests. S4 is labeled FALSE, but the description of the facilitation model is accurate — Connell and Slatyer (1977) defined facilitation as early species improving conditions for later species (e.g., nitrogen fixation by alders facilitating spruce establishment). The statement is true, so the FALSE label is wrong. Assessment: S1 correct, S2 correct, S3 correct, S4 incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about biogeography, dispersal, and climate:\nS1: TRUE — Rain shadow deserts form on the leeward side of mountain ranges because orographic lift forces air upward on the windward side, causing adiabatic cooling and precipitation, so that the descending air on the leeward side is warm and dry.\nS2: FALSE — The thermocline in a temperate lake is a narrow zone of rapid temperature change that separates the warm epilimnion from the cold hypolimnion; during fall turnover, the thermocline breaks down as surface waters cool and wind mixing homogenizes the water column.\nS3: TRUE — Biome boundaries are determined solely by average annual temperature and precipitation, and local factors such as soil type, fire frequency, and topography have negligible effects on vegetation type within a climatic zone.\nS4: TRUE — Oceanic islands typically have lower species richness than equivalent-area mainland habitats, partly because they are more isolated and partly because they have fewer habitat types due to smaller area and less topographic complexity.",
+      "options": [
+        "A) S1 correct, S2 correct, S3 incorrect, S4 correct",
+        "B) S1 correct, S2 incorrect, S3 incorrect, S4 correct",
+        "C) S1 correct, S2 incorrect, S3 correct, S4 correct",
+        "D) S1 incorrect, S2 incorrect, S3 incorrect, S4 correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 TRUE is correct: Rain shadow formation is a classic example of how topography influences local climate. Prevailing winds push moist air upward along the windward slope; as air rises, it cools adiabatically (at ~6-10°C/km), water vapor condenses and precipitates. The now-dry air descends the leeward slope, warming adiabatically, producing arid conditions. Classic examples include the Mojave Desert (lee of Sierra Nevada) and Patagonian Desert (lee of Andes). S2 is labeled FALSE, but the description of the thermocline and fall turnover is accurate. The thermocline IS a zone of rapid temperature change between epilimnion and hypolimnion, and fall turnover DOES occur when surface cooling and wind eliminate thermal stratification. The FALSE label is incorrectly applied to a true statement. S3 TRUE is incorrect: While climate (temperature and precipitation) are primary determinants of biome distribution, local factors like soil type (edaphic factors), fire regime, grazing, topography, and human land use significantly influence vegetation. For example, tallgrass prairie and deciduous forest overlap climatically, and fire frequency determines which persists. The words 'solely' and 'negligible' make this false. S4 TRUE is correct: Islands show lower species richness due to isolation (reducing immigration), smaller area (supporting fewer populations), and typically less habitat diversity. Assessment: S1 correct, S2 incorrect, S3 incorrect, S4 correct.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 52,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about metapopulations and age structure:\nS1: TRUE — In a metapopulation, local extinction of a subpopulation can be reversed by recolonization from neighboring subpopulations, and the long-term persistence of the metapopulation depends on the regional balance between local extinction rates and recolonization rates.\nS2: FALSE — A country with a broad-based age structure pyramid (many pre-reproductive individuals relative to reproductive and post-reproductive) is expected to experience rapid population growth even if per capita birth rates decline slightly, due to population momentum.\nS3: TRUE — Density-dependent factors such as intraspecific competition, disease transmission, and predation intensify as population density increases and are the only factors capable of true population regulation (returning N toward K).\nS4: FALSE — In the metapopulation model, corridors between habitat patches are irrelevant because recolonization depends entirely on long-distance aerial dispersal of propagules.",
+      "options": [
+        "A) S1 correct, S2 correct, S3 correct, S4 correct",
+        "B) S1 correct, S2 incorrect, S3 correct, S4 incorrect",
+        "C) S1 correct, S2 incorrect, S3 correct, S4 correct",
+        "D) S1 correct, S2 correct, S3 correct, S4 incorrect"
+      ],
+      "correctAnswer": "C",
+      "explanation": "S1 TRUE is correct: Levins' metapopulation model (dp/dt = cp(1-p) - ep) describes the fraction of occupied patches as a balance between colonization (c) and local extinction (e). Persistence requires c > e. This rescue effect concept is fundamental to conservation planning for fragmented habitats. S2 is labeled FALSE, but the description of population momentum with a youthful age structure is accurate. Countries like India and Nigeria will continue growing due to the large cohort of pre-reproductive individuals entering childbearing age, even if fertility rates drop. The FALSE label is incorrectly applied to a true statement. S3 TRUE is correct: Only density-dependent factors provide negative feedback regulation of population size. Density-independent factors (weather, natural disasters) can affect population size but cannot regulate it because they do not intensify with increasing density. This is a critical distinction in population ecology. S4 is labeled FALSE, and the claim that corridors are 'irrelevant' and recolonization depends 'entirely on aerial dispersal' is indeed false. Habitat corridors are extremely important for many taxa to facilitate movement between patches. The FALSE label is correctly applied to a false statement. Assessment: S1 correct, S2 incorrect (FALSE label on true statement), S3 correct, S4 correct (FALSE label on false statement).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 53,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about global change and conservation:\nS1: TRUE — Ozone (O3) depletion in the stratosphere is caused primarily by chlorofluorocarbons (CFCs) that release chlorine atoms via UV-driven photolysis; each chlorine atom can catalytically destroy thousands of ozone molecules through a chain reaction.\nS2: FALSE — The greenhouse effect is entirely anthropogenic; without human-produced CO2 and methane, Earth's atmosphere would not trap any infrared radiation and the planet's average surface temperature would be the same as it is today.\nS3: TRUE — Biological magnification and eutrophication are both consequences of nutrient pollution; biological magnification concentrates toxins through food chains while eutrophication results from excess nutrient input stimulating primary productivity.\nS4: TRUE — Assisted migration (managed relocation) of species threatened by climate change is considered risk-free because relocated species always integrate into recipient communities without disrupting existing ecological interactions.",
+      "options": [
+        "A) S1 correct, S2 correct, S3 incorrect, S4 incorrect",
+        "B) S1 correct, S2 incorrect, S3 correct, S4 incorrect",
+        "C) S1 correct, S2 correct, S3 correct, S4 incorrect",
+        "D) S1 incorrect, S2 correct, S3 incorrect, S4 incorrect"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 TRUE is correct: CFCs (e.g., CFC-12, Freon) are photolyzed by UV radiation in the stratosphere, releasing Cl atoms. The catalytic cycle: Cl + O3 -> ClO + O2, then ClO + O -> Cl + O2, regenerating the Cl atom. One Cl atom can destroy ~100,000 O3 molecules before being sequestered. The Montreal Protocol (1987) successfully phased out CFCs. S2 is labeled FALSE, and the statement is indeed false — the greenhouse effect is a natural phenomenon essential for life (without it, Earth would average about -18°C instead of +15°C). Human activities have enhanced the greenhouse effect, not created it. The FALSE label is correctly applied. S3 is labeled TRUE but contains an error: biological magnification is a consequence of persistent lipophilic toxin contamination (DDT, mercury, PCBs), NOT nutrient pollution per se. Eutrophication IS caused by nutrient pollution (N, P). Conflating toxin bioaccumulation with nutrient pollution makes this statement inaccurate. The TRUE label is incorrectly applied. S4 is labeled TRUE but the claim that assisted migration is 'risk-free' and species 'always integrate' is obviously false — relocated species can become invasive, introduce novel diseases, hybridize with local species, or competitively exclude natives. The TRUE label is incorrect. Assessment: S1 correct, S2 correct, S3 incorrect, S4 incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher tracked a population of deer over 10 years in an enclosed reserve with K = 800. The initial population was 100. Using the logistic growth model with r = 0.5 per year, the following data were recorded:\n\nYear 0: N = 100\nYear 1: N = 144\nYear 2: N = 205\nYear 3: N = 285\nYear 4: N = 384\nYear 5: N = 493\nYear 6: N = 594\nYear 7: N = 674\nYear 8: N = 729\nYear 9: N = 764\nYear 10: N = 785\n\nBased on the logistic growth model, between which consecutive years was the absolute population growth (change in N) greatest, and what ecological explanation accounts for the deceleration after that point?",
+      "dataContext": "Logistic growth data for a deer population in an enclosed reserve. K = 800, r = 0.5/year, N0 = 100. Data points collected annually for 10 years. The data follow the logistic equation dN/dt = rN(K-N)/K. Population growth increments: Year 0-1: +44, Year 1-2: +61, Year 2-3: +80, Year 3-4: +99, Year 4-5: +109, Year 5-6: +101, Year 6-7: +80, Year 7-8: +55, Year 8-9: +35, Year 9-10: +21.",
+      "options": [
+        "A) Between years 3 and 4 (delta N = 99); deceleration occurs because predators immigrate into the reserve in response to increasing prey density",
+        "B) Between years 6 and 7 (delta N = 80); deceleration occurs because genetic bottleneck effects reduce reproductive fitness after year 6",
+        "C) Between years 4 and 5 (delta N = 109); deceleration occurs because the population surpasses K/2 = 400, and density-dependent factors such as intraspecific competition for food and space increasingly suppress per capita growth rate",
+        "D) Between years 1 and 2 (delta N = 61); deceleration occurs because the population immediately exceeds the reserve's resource base"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In the logistic model, the maximum absolute growth rate (dN/dt) occurs when N = K/2. With K = 800, this inflection point is at N = 400. The population crosses N = 400 between years 4 and 5 (N goes from 384 to 493), and indeed the largest annual increment is +109 during this interval. After this point, although the population continues to grow, the rate of growth decelerates because the term (K-N)/K becomes progressively smaller. Ecologically, as population density increases beyond K/2, density-dependent factors intensify: intraspecific competition for food, space, and mates increases; disease transmission rates rise; and stress-related effects on reproduction and survival become more pronounced. The growth increments clearly show this pattern: rising from +44 to a peak of +109, then declining to +21 as N approaches K.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 53,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An ecologist surveyed species richness on 12 islands of varying area in an archipelago and compiled the following data:\n\nIsland A: Area = 1 km^2, Species = 15\nIsland B: Area = 5 km^2, Species = 30\nIsland C: Area = 10 km^2, Species = 40\nIsland D: Area = 25 km^2, Species = 55\nIsland E: Area = 50 km^2, Species = 70\nIsland F: Area = 100 km^2, Species = 90\nIsland G: Area = 250 km^2, Species = 120\nIsland H: Area = 500 km^2, Species = 150\nIsland I: Area = 1,000 km^2, Species = 190\nIsland J: Area = 2,500 km^2, Species = 250\nIsland K: Area = 5,000 km^2, Species = 310\nIsland L: Area = 10,000 km^2, Species = 390\n\nUsing the species-area relationship S = cA^z, and noting that a doubling of area typically increases species richness by about 15-25% for oceanic islands (z approximately 0.25-0.35), which statement best describes the pattern and its conservation implications?",
+      "dataContext": "Species-area data from 12 islands spanning four orders of magnitude in area (1 to 10,000 km^2). The data follow a power-law relationship S = cA^z on log-log axes. Log-log regression yields approximately z = 0.30 and c = 15. Species counts: 15, 30, 40, 55, 70, 90, 120, 150, 190, 250, 310, 390 for areas 1, 5, 10, 25, 50, 100, 250, 500, 1000, 2500, 5000, 10000 km^2 respectively.",
+      "options": [
+        "A) The relationship is linear on arithmetic axes, with each additional km^2 adding approximately 0.04 species; this means habitat loss has proportionally equal impacts regardless of how much habitat remains",
+        "B) The relationship follows a power law that appears linear on log-log axes; a z value near 0.30 means a 90% habitat loss (reducing area to 10%) would eliminate roughly 50% of species, highlighting the severe biodiversity consequences of habitat destruction",
+        "C) The relationship is logarithmic, meaning species richness plateaus quickly and further habitat protection beyond 100 km^2 yields negligible conservation returns",
+        "D) The data show no consistent pattern because species richness depends entirely on distance from the mainland, not island area"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The species-area relationship S = cA^z is one of ecology's most robust empirical patterns. On log-log axes, it produces a straight line with slope z. For oceanic islands, z typically ranges from 0.25 to 0.35. With z = 0.30, if area is reduced to 10% of its original (90% habitat loss): S_new/S_old = (0.10A)^z / A^z = 0.10^0.30 = 10^(-0.30) = 0.50. This means approximately 50% of species would be lost with 90% habitat destruction. This calculation is fundamental to conservation planning and illustrates why habitat preservation is the most important strategy for biodiversity conservation. The relationship is NOT linear on arithmetic axes (it's a power law), does NOT plateau quickly (logarithmic fit is poor), and area IS a major predictor alongside distance.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A limnologist measured primary productivity and nutrient concentrations in three lakes:\n\nLake 1: Total P = 5 ug/L, Total N = 200 ug/L, Chlorophyll-a = 1.5 ug/L, GPP = 50 g C/m^2/year, Secchi depth = 12 m\nLake 2: Total P = 50 ug/L, Total N = 1,500 ug/L, Chlorophyll-a = 25 ug/L, GPP = 300 g C/m^2/year, Secchi depth = 2 m\nLake 3: Total P = 150 ug/L, Total N = 3,000 ug/L, Chlorophyll-a = 80 ug/L, GPP = 500 g C/m^2/year, Secchi depth = 0.5 m\n\nWhich interpretation is best supported by these data?",
+      "dataContext": "Comparative limnological data from three temperate freshwater lakes. Measurements include total phosphorus (ug/L), total nitrogen (ug/L), chlorophyll-a concentration (ug/L, proxy for phytoplankton biomass), gross primary productivity (g C/m^2/year), and Secchi disk depth (m, measure of water transparency/light penetration). N:P ratios — Lake 1: 40:1, Lake 2: 30:1, Lake 3: 20:1. Redfield ratio reference: N:P = 16:1 by atoms (approximately 7:1 by mass).",
+      "options": [
+        "A) All three lakes are nitrogen-limited because their N:P ratios exceed the Redfield ratio, explaining why nitrogen fertilizer runoff has no effect on algal growth in these systems",
+        "B) Lake 3 has the highest biodiversity because high productivity always correlates with high species richness, as predicted by the intermediate disturbance hypothesis",
+        "C) The Secchi depth differences are caused entirely by dissolved humic acids, not phytoplankton, because chlorophyll-a is not a reliable proxy for algal biomass",
+        "D) Lake 1 is oligotrophic, Lake 2 is mesotrophic/eutrophic, and Lake 3 is hypereutrophic; the high N:P ratios (>16:1 by mass) indicate phosphorus limitation, and the progressive decline in Secchi depth with increasing chlorophyll-a reflects self-shading by phytoplankton"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The data clearly show a gradient from oligotrophic (Lake 1: low nutrients, low chlorophyll, high transparency) through eutrophic (Lake 2) to hypereutrophic (Lake 3: very high nutrients, dense algal biomass, nearly opaque water). The N:P ratios by mass (40:1, 30:1, 20:1) all exceed the Redfield ratio of ~7:1 by mass (16:1 by atoms), indicating relative phosphorus scarcity — these lakes are phosphorus-limited, consistent with the general pattern in freshwater systems (Schindler's classic whole-lake experiments at ELA). As phosphorus increases, phytoplankton biomass (chlorophyll-a) increases, GPP rises, and Secchi depth decreases because dense algal cells absorb and scatter light (self-shading). Option A incorrectly interprets N:P ratios (high ratios mean P limitation, not N limitation). Option B is wrong because hypereutrophic systems often have LOW diversity dominated by cyanobacterial blooms. Option C dismisses chlorophyll-a as a proxy, which is unjustified given the clear correlation pattern.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 55,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A conservation geneticist sampled a population of endangered frogs across three time periods and obtained the following data:\n\nYear 2000: Census N = 2,000, Heterozygosity (He) = 0.72, Number of alleles per locus = 8.4, Ne = 400\nYear 2010: Census N = 500, Heterozygosity (He) = 0.65, Number of alleles per locus = 5.1, Ne = 75\nYear 2020: Census N = 120, Heterozygosity (He) = 0.51, Number of alleles per locus = 3.2, Ne = 22\n\nUsing the expected rate of heterozygosity loss per generation: H(t+1) = H(t) * [1 - 1/(2Ne)], and assuming a generation time of 3 years, which conclusion is best supported?",
+      "dataContext": "Temporal genetic monitoring data for an endangered frog population over 20 years. Census population declined from 2,000 to 120 (94% decline). Effective population size declined from 400 to 22 (95.5% decline). Ne/N ratio: 2000: 0.20, 2010: 0.15, 2020: 0.18. Expected heterozygosity loss per generation at current Ne=22: H_loss = 1/(2*22) = 2.27% per generation (every 3 years). Allelic richness declined more rapidly than heterozygosity (62% loss vs 29% loss), which is expected because rare alleles are lost first through drift. At Ne=22, the expected time to lose 50% of current heterozygosity: t = -ln(0.5)/[1/(2*22)] = 0.693/0.0227 = 30.5 generations = ~91 years.",
+      "options": [
+        "A) The population is genetically healthy because heterozygosity has only declined by 29%, which is within normal fluctuation; no conservation intervention is needed",
+        "B) The declining Ne/N ratio from 0.20 to 0.18 proves that the population's mating system has shifted from random mating to complete selfing over the 20-year period",
+        "C) The rapid loss of allelic richness (62%) despite moderate heterozygosity decline (29%) indicates that rare alleles are being lost preferentially through genetic drift; at Ne = 22, the population is well below typical MVP thresholds (500-5,000) and is entering an extinction vortex where continued drift will erode adaptive potential",
+        "D) The heterozygosity decline is caused entirely by natural selection removing deleterious alleles (purging), which is beneficial for population fitness and should not trigger conservation concern"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This population shows classic signs of entering an extinction vortex. Key indicators: (1) Allelic richness declined much faster (62%) than heterozygosity (29%), which is expected because drift eliminates rare alleles first while common alleles sustain heterozygosity temporarily. This means the population has already lost substantial adaptive genetic variation. (2) Ne = 22 is far below the commonly cited MVP genetic thresholds: Ne >= 50 to avoid immediate inbreeding depression (Franklin's 50/500 rule), and Ne >= 500 for long-term adaptive potential. (3) At Ne = 22, heterozygosity loss is ~2.3% per generation (every 3 years), meaning 50% of remaining heterozygosity would be lost in ~91 years. (4) The Ne/N ratio remained relatively stable (~0.15-0.20), which is typical for amphibians with variance in reproductive success. Option A dangerously underestimates the genetic threat. Option B misinterprets the Ne/N ratio (small changes don't indicate selfing). Option D incorrectly attributes the decline to purging, which cannot explain loss of neutral heterozygosity.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An ecologist constructed an energy flow diagram for a temperate forest ecosystem and obtained the following data (all values in kcal/m^2/year):\n\nSolar radiation intercepted: 1,700,000\nGPP: 12,500\nPlant respiration (Ra): 7,500\nNPP: 5,000\nHerbivore ingestion: 750\nHerbivore assimilation: 500\nHerbivore respiration: 350\nHerbivore production: 150\nCarnivore ingestion: 75\nCarnivore assimilation: 55\nCarnivore respiration: 45\nCarnivore production: 10\nDetritivore processing: 4,100\n\nWhat is the photosynthetic efficiency and the ecological efficiency (production efficiency x assimilation efficiency) at the herbivore level?",
+      "dataContext": "Complete energy budget for a temperate forest ecosystem. Solar-to-GPP photosynthetic efficiency = GPP/solar input. At herbivore level: ingestion = 750, assimilation = 500 (assimilation efficiency = 500/750 = 66.7%), respiration = 350, production = 150 (production efficiency = 150/500 = 30%, net production efficiency = 150/750 = 20%). Trophic efficiency from producers to herbivores = herbivore production/NPP = 150/5000 = 3%. Note that detritivore processing (4,100) accounts for most NPP that does not go to herbivores (5000 - 750 = 4,250 available to detritus pathway).",
+      "options": [
+        "A) Photosynthetic efficiency = 0.74%; herbivore ecological efficiency = 20% (production/ingestion); most NPP flows through the detrital pathway rather than the grazing food chain",
+        "B) Photosynthetic efficiency = 0.29%; herbivore ecological efficiency = 67% (assimilation/ingestion); the grazing food chain dominates energy flow",
+        "C) Photosynthetic efficiency = 1.70%; herbivore ecological efficiency = 3% (herbivore production/NPP); the ecosystem is unusually efficient",
+        "D) Photosynthetic efficiency = 7.35%; herbivore ecological efficiency = 30% (production/assimilation); herbivore and detritivore pathways contribute equally"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Photosynthetic efficiency = GPP/solar radiation = 12,500/1,700,000 = 0.00735 = 0.74%. This is typical for terrestrial ecosystems (usually 1-3% for the most productive, but <1% when accounting for total intercepted radiation). Ecological efficiency at the herbivore level combines assimilation and production: net production efficiency = herbivore production/herbivore ingestion = 150/750 = 0.20 = 20%. This represents the proportion of ingested energy converted to new herbivore biomass. Note: assimilation efficiency = 500/750 = 66.7%, and production efficiency = 150/500 = 30%. The product (0.667 x 0.30 = 0.20 = 20%) confirms the net production efficiency. Critically, only 750 out of 5,000 kcal NPP enters the grazing chain (15%), while the vast majority (~85%) flows through the detrital food web — a pattern typical of forests where most plant biomass is woody tissue that herbivores cannot consume.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 55,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A team of ecologists wants to test whether the removal of a keystone predator (a sea star species) from an intertidal community leads to a decline in species diversity, as predicted by Paine's classic trophic cascade hypothesis. Which experimental design would most rigorously test this hypothesis while controlling for confounding variables?",
+      "experimentContext": "Robert Paine's classic 1966 experiment at Mukkaw Bay demonstrated that removing the predatory sea star Pisaster ochraceus from rocky intertidal zones led to competitive dominance by the mussel Mytilus californianus, which outcompeted other sessile invertebrates and algae, dramatically reducing species diversity. The researchers want to replicate and extend this finding with modern experimental design standards. The intertidal zone under study has similar community composition to Paine's original site. Available resources include 20 comparable rocky intertidal plots (each 10 m^2), diving equipment, species identification expertise, and 3 years of research funding.",
+      "options": [
+        "A) Remove sea stars from all 20 plots and monitor species diversity over 3 years, comparing results to published historical data from the same site",
+        "B) Compare species diversity between one plot with sea stars and one plot without sea stars, measured at a single time point, using a chi-square test to determine significance",
+        "C) Add extra sea stars to half the plots and remove sea stars from the other half, with no unmanipulated controls, measuring only total biomass as the response variable",
+        "D) Randomly assign 10 plots as removal (sea stars manually removed monthly) and 10 plots as controls (no manipulation), with plots separated by >50 m to minimize spillover; conduct baseline surveys before manipulation, then monitor species richness, evenness, and percent cover monthly for 3 years using permanent quadrats; include procedural controls where investigators disturb plots without removing sea stars"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Option D represents a rigorous experimental design with the following strengths: (1) Randomized controlled experiment: Random assignment of plots to treatment and control eliminates systematic bias. (2) Adequate replication: 10 plots per treatment provides statistical power to detect ecologically meaningful differences. (3) Spatial separation (>50 m): Reduces the confounding effect of sea stars migrating from control to removal plots. (4) Baseline surveys: Before-After-Control-Impact (BACI) design allows detection of pre-existing differences between groups. (5) Temporal replication: Monthly monitoring over 3 years captures seasonal variation and allows tracking of community trajectory. (6) Multiple response variables: Species richness, evenness (e.g., Shannon index), and percent cover provide complementary measures of community change. (7) Procedural controls: Distinguish the effect of sea star removal from the effect of investigator disturbance (handling rocks, walking through plots). Option A lacks contemporaneous controls. Option B has no replication and a single time point. Option C lacks unmanipulated controls and uses a suboptimal response variable.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A conservation biologist hypothesizes that habitat corridors between forest fragments increase gene flow and reduce inbreeding depression in a population of an endangered wood-nesting bird. Which experimental approach would most effectively test this hypothesis?",
+      "experimentContext": "The study system consists of 24 forest fragments (each 50-200 ha) in an agricultural landscape. Twelve fragments are currently connected by forested corridors (30 m wide, 200-500 m long) that were planted 15 years ago. Twelve fragments of comparable size are isolated (nearest forest >2 km away across open farmland). The target species is a forest-interior songbird with limited dispersal ability across open habitat. Previous mark-recapture studies indicate movement through corridors but rarely across open landscape. Available tools include microsatellite genotyping (12 loci), demographic monitoring (nest success, fledgling survival), and morphometric measurements. Funding supports 3 years of field work with sampling of 50 birds per fragment.",
+      "options": [
+        "A) Release captive-bred birds into isolated fragments and measure their survival compared to wild birds in corridor-connected fragments, without genetic sampling",
+        "B) Compare microsatellite-derived FST values, heterozygosity, allelic richness, and relatedness between connected and isolated fragment populations; simultaneously measure demographic fitness proxies (hatching success, fledgling mass, juvenile survival) in both groups; use landscape genetic analyses (isolation-by-resistance models) to test whether corridors facilitate gene flow; control for fragment size, habitat quality (canopy cover, understory density), and edge-to-area ratio as covariates in mixed-effects models",
+        "C) Compare species richness of all bird species between connected and isolated fragments, using this as a proxy for gene flow in the target species",
+        "D) Genotype birds from only 2 connected and 2 isolated fragments and use a t-test to compare average heterozygosity, without controlling for fragment size or habitat quality"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Option B provides the most comprehensive and rigorous test: (1) Genetic evidence of gene flow: FST (genetic differentiation) should be lower between connected fragments if corridors facilitate dispersal. Higher heterozygosity and allelic richness in connected populations indicate reduced drift. Lower within-fragment relatedness in connected fragments suggests immigration. (2) Fitness consequences: Measuring hatching success, fledgling mass, and juvenile survival directly tests whether gene flow translates into reduced inbreeding depression (the ultimate conservation question). (3) Landscape genetics: Isolation-by-resistance models using circuit theory can quantify the relative conductance of corridors versus matrix, testing whether genetic distance correlates with landscape resistance rather than simple Euclidean distance. (4) Statistical rigor: Mixed-effects models with fragment size, habitat quality, and edge ratios as covariates control for confounding variables that differ between fragments. (5) Adequate replication: 12 fragments per treatment and 50 birds per fragment provide strong statistical power. Option A introduces captive-bred birds (different genotypes, behavior) as a confound. Option C uses an inappropriate proxy. Option D has woefully inadequate replication and no covariates.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    }
+  ]
+}

@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch22-26 Evolution — Wave 2",
+    "version": 1,
+    "source": "olympiad-wave2",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "The wings of bats and the wings of pterosaurs are both used for powered flight and share a similar aerodynamic shape. However, the skeletal support differs: bat wings are supported by elongated digits II-V, while pterosaur wings were supported primarily by an elongated digit IV. Which of the following best describes this relationship?",
+      "options": [
+        "They are homologous structures derived from the same ancestral wing plan, with subsequent divergence in digit support patterns",
+        "They are analogous structures that evolved independently through convergent evolution, representing homoplasy rather than shared ancestry of the flight apparatus",
+        "They are vestigial structures in both lineages since neither group is ancestral to the other",
+        "They are homologous at the level of the forelimb but the flight membranes represent parallel evolution from a shared genetic toolkit identical in regulatory sequence"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bat wings and pterosaur wings are analogous structures — they serve the same function (flight) but evolved independently. The underlying forelimb bones are homologous as tetrapod forelimbs (inherited from a common ancestor), but the specific flight adaptations (which digits support the membrane, how the patagium attaches) evolved convergently. This is homoplasy — similarity due to convergent evolution, not shared derivation of the flight apparatus. The question tests the critical distinction between homology of the basic limb plan versus analogy of the flight specialization.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 4,
+      "campbellChapter": 22,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Darwin observed that finch species on the Galapagos Islands had beaks adapted to different food sources. If a researcher were to test whether beak depth in Geospiza fortis is heritable and responds to natural selection, which combination of evidence would be most compelling?",
+      "options": [
+        "A high heritability estimate for beak depth (h^2 > 0.7) combined with a documented selection differential during a drought year, resulting in a measurable response to selection (R = h^2 x S) in the next generation",
+        "A phylogenetic analysis showing that all finch species share a common ancestor, combined with a genetic map identifying QTLs for beak morphology on multiple chromosomes",
+        "A comparison of beak morphology across all Galapagos finch species showing a continuous gradient, combined with evidence that the Bmp4 gene is expressed in the developing beak",
+        "Fossil evidence of intermediate beak forms in volcanic strata, combined with stable isotope analysis of diet from museum specimens"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The most compelling test of whether beak depth responds to natural selection requires demonstrating: (1) the trait is heritable (h^2 > 0.7 indicates most phenotypic variation has a genetic basis), (2) there is a selection differential (S) — a difference in mean trait value between survivors and the pre-selection population, and (3) the breeder's equation R = h^2 x S accurately predicts the response in the next generation. This is exactly what Peter and Rosemary Grant documented during the 1977 drought on Daphne Major: larger-beaked birds survived differentially, beak depth was highly heritable, and offspring had measurably deeper beaks. The other options provide supporting evidence but do not directly demonstrate the selection-response cycle.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 22,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a population of 500 diploid organisms, a new neutral mutation arises in a single individual. Assuming the population size remains constant and there is no selection, what is the probability that this allele will eventually reach fixation, and what is the expected time to fixation if it does fix?",
+      "options": [
+        "Probability = 1/1000; expected time = 4N generations = 2000 generations",
+        "Probability = 1/500; expected time = 2N generations = 1000 generations",
+        "Probability = 1/1000; expected time = 4N generations (approximately 2000 generations, since N = 500)",
+        "Probability = 1/500; expected time = N generations = 500 generations"
+      ],
+      "correctAnswer": "C",
+      "explanation": "For a new neutral mutation in a diploid population of N individuals, the initial frequency is 1/(2N) = 1/1000, which equals its probability of fixation by genetic drift alone. If the allele does reach fixation, the expected time is approximately 4N generations = 4(500) = 2000 generations. This result comes from Kimura's neutral theory of molecular evolution. Option A has the correct values but note that 4N = 4(500) = 2000. Option C correctly states the relationship. The key insight is that while any particular neutral mutation is very unlikely to fix (1/2N), the rate at which neutral mutations fix in the population equals the neutral mutation rate itself (mu), because the number of new mutations per generation (2N x mu) multiplied by the fixation probability (1/2N) equals mu.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "A population geneticist observes that the frequency of a recessive lethal allele (a) in a large population has remained stable at q = 0.02 across multiple generations despite selection against aa homozygotes. Which mechanism most likely maintains this equilibrium frequency?",
+      "options": [
+        "Genetic drift counterbalances selection in large populations, preventing the allele from being eliminated",
+        "Mutation-selection balance, where the forward mutation rate (A to a) equals approximately q^2 x s, yielding q_hat = sqrt(mu/s)",
+        "Heterozygote advantage, where Aa individuals have higher fitness than AA, maintaining the allele at q = t/(s+t)",
+        "Frequency-dependent selection favoring the rare allele when it is uncommon"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When a recessive lethal allele persists at a stable, low frequency, the most likely explanation is mutation-selection balance. At equilibrium, the rate at which new copies of allele a are created by mutation (mu) equals the rate at which they are removed by selection (q^2 x s, where s = 1 for a lethal). This gives q_hat = sqrt(mu/s) = sqrt(mu). For q = 0.02, this implies mu approximately equals 4 x 10^-4, which is within the range of observed mutation rates for some loci. Genetic drift is not a balancing force — it causes random fluctuations, not stable equilibria. Heterozygote advantage could also maintain a deleterious allele, but it would typically maintain it at a higher frequency and the question specifies a recessive lethal with no mention of heterozygote fitness advantage. Frequency-dependent selection requires the fitness of genotypes to change with allele frequency, which is a more complex and less parsimonious explanation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "The sickle-cell allele (HbS) is maintained at high frequency in malaria-endemic regions of sub-Saharan Africa due to heterozygote advantage. If malaria were completely eradicated from a region, which prediction about the HbS allele frequency over subsequent generations is most accurate?",
+      "options": [
+        "The allele would be immediately eliminated within one generation because homozygous HbS individuals cannot reproduce",
+        "The allele frequency would decline very slowly because selection against a recessive allele becomes increasingly inefficient as the allele becomes rare, since most copies are hidden in heterozygotes",
+        "The allele frequency would remain constant because the allele has been fixed in the heterozygous state and cannot be selected against",
+        "The allele frequency would decline rapidly at first but then reach a new equilibrium maintained by mutation-selection balance at a frequency much lower than the current one"
+      ],
+      "correctAnswer": "D",
+      "explanation": "With malaria eradicated, there is no longer a fitness advantage for HbS heterozygotes. The HbS allele becomes a purely deleterious recessive (or codominant, since HbAS individuals do have mildly reduced fitness in the absence of malaria). Initially, selection against HbSS homozygotes would reduce allele frequency relatively rapidly from its current high frequency (5-20% in some regions). However, as q decreases, a greater proportion of HbS alleles exist in heterozygotes where they are partially shielded from selection. The rate of decline slows dramatically. Eventually, the allele would reach a new, much lower equilibrium set by mutation-selection balance (q_hat = sqrt(mu/s)), likely below 1%. This process would take hundreds to thousands of generations. The allele would never be completely eliminated as long as forward mutation continues to produce new copies.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Two populations of a freshwater fish species become separated by a newly formed mountain range. After 50,000 years, individuals from the two populations are brought together in the laboratory. Males from population A court females from population B, but the females do not respond to the courtship displays. This reproductive isolation is best classified as:",
+      "options": [
+        "A postzygotic barrier — specifically hybrid inviability — because the hybrid offspring would not survive",
+        "A prezygotic barrier — specifically mechanical isolation — because the reproductive organs are incompatible",
+        "A prezygotic barrier — specifically behavioral (ethological) isolation — because the female courtship response has diverged",
+        "A postzygotic barrier — specifically hybrid sterility — because any offspring produced would be infertile"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This is behavioral (ethological) isolation, a prezygotic barrier. The courtship signals of population A males no longer elicit a mating response from population B females, preventing mating from occurring in the first place. During the 50,000 years of allopatric separation, the courtship displays and/or female preferences diverged through sexual selection, genetic drift, or adaptation to different environments. No mating occurs, so the question of hybrid viability or fertility does not arise. This is a classic example of how allopatric speciation proceeds — populations diverge in traits related to mate recognition, and when brought back into contact, they can no longer interbreed successfully.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 4,
+      "campbellChapter": 24,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "A diploid plant species (2n = 14) undergoes an error in meiosis producing unreduced gametes (2n = 14). If two such unreduced gametes fuse, the resulting offspring is a:",
+      "options": [
+        "Triploid (3n = 21) that is sterile due to unequal chromosome segregation during meiosis",
+        "Autotetraploid (4n = 28) that may be fertile because homologous chromosomes can pair during meiosis to form bivalents or quadrivalents",
+        "Allotetraploid (4n = 28) because two different genomes have combined to form a new species",
+        "Aneuploid (2n + 2 = 16) that has gained two extra chromosomes through nondisjunction"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When unreduced (2n) gametes from the same species fuse, the result is an autotetraploid (4n = 28). Because all four copies of each chromosome are homologous (from the same species), they can pair during meiosis I — forming either bivalents (two pairs per chromosome type) or quadrivalents (all four aligning together). If pairing is predominantly as bivalents, segregation can be regular and the plant may be fertile. This is autopolyploidy — genome duplication within a single species. Allotetraploid would require hybridization between two different species followed by genome doubling. The organism is not aneuploid because it has complete sets of chromosomes. Autopolyploidy is a mechanism of sympatric speciation because the tetraploid is reproductively isolated from the diploid parent (crosses produce triploids, which are usually sterile).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 4,
+      "campbellChapter": 24,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Stanley Miller's 1953 experiment demonstrated that amino acids could be synthesized abiotically under conditions simulating the early Earth's atmosphere. A major criticism of this experiment was later raised regarding atmospheric composition. Which of the following represents the most scientifically accurate reassessment?",
+      "options": [
+        "Miller used a strongly reducing atmosphere (CH4, NH3, H2, H2O) but geochemical evidence now suggests the early atmosphere was mildly reducing or neutral (CO2, N2, H2O), which produces fewer organic molecules but still yields some amino acids, especially with localized energy sources",
+        "Miller's experiment has been completely invalidated because no organic molecules can form in a neutral atmosphere under any conditions",
+        "The criticism was about Miller's energy source (spark discharge), which does not simulate UV radiation accurately; when UV is used instead, no organic molecules form",
+        "Miller's experiment was valid but irrelevant because all prebiotic organic molecules were delivered to Earth by meteorites and comets rather than formed in the atmosphere"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The major reassessment of Miller's experiment concerns atmospheric composition. Miller used a strongly reducing atmosphere (methane, ammonia, hydrogen, water vapor), which was the accepted model in the 1950s. Subsequent geochemical evidence indicates the early atmosphere was more likely mildly reducing or neutral (dominated by CO2, N2, and H2O with some H2). Experiments with such atmospheres produce fewer organic molecules but still generate some amino acids and other organics, particularly when energy is concentrated (volcanic lightning, hydrothermal vents, impact shock waves). The experiment has not been invalidated — it demonstrated the principle of abiotic synthesis. Meteorite delivery (carbonaceous chondrites contain amino acids) is a complementary source, not the sole source. Modern consensus is that both atmospheric synthesis and extraterrestrial delivery contributed to the prebiotic chemical inventory.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "The endosymbiotic theory proposes that mitochondria and chloroplasts originated from free-living prokaryotes engulfed by ancestral eukaryotic cells. Which of the following would be the strongest evidence AGAINST the endosymbiotic origin of a particular organelle?",
+      "options": [
+        "The organelle has a double membrane, with the inner membrane resembling prokaryotic membranes in lipid composition",
+        "Phylogenetic analysis places the organelle's rRNA sequences within a eukaryotic clade rather than clustering with any known bacterial lineage",
+        "The organelle's genome has been significantly reduced, with many genes transferred to the host nucleus",
+        "The organelle divides by binary fission independently of the host cell cycle"
+      ],
+      "correctAnswer": "B",
+      "explanation": "If an organelle's rRNA sequences clustered within eukaryotic clades rather than with bacteria, it would undermine the endosymbiotic hypothesis for that organelle, because the theory predicts the organelle genome should be phylogenetically nested within a bacterial lineage (alpha-proteobacteria for mitochondria, cyanobacteria for chloroplasts). In reality, mitochondrial rRNA clusters with Rickettsiales (alpha-proteobacteria) and chloroplast rRNA clusters with cyanobacteria, strongly supporting endosymbiosis. A double membrane (option A) actually supports the theory — the inner membrane represents the original prokaryotic membrane and the outer represents the host's engulfing membrane. Genome reduction (option C) is expected through endosymbiotic gene transfer. Binary fission (option D) is consistent with the bacterial ancestry of the organelle.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "A molecular phylogeneticist constructs a gene tree for a particular locus and finds that it is incongruent with the accepted species tree. Which of the following is the LEAST likely explanation for this discordance?",
+      "options": [
+        "Incomplete lineage sorting (deep coalescence), where ancestral polymorphism was retained through speciation events and sorted differently than the species branching pattern",
+        "Horizontal gene transfer, where the gene was acquired from a distantly related lineage rather than inherited vertically from the ancestor",
+        "Gene duplication followed by differential loss (paralogy), where different species retained different paralogs that diverged before speciation",
+        "The molecular clock for this gene is perfectly constant across all lineages, causing identical branch lengths that obscure the true topology"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A perfectly constant molecular clock would not cause gene tree-species tree discordance. The molecular clock affects branch lengths (distances), not topology (branching order). Even with a perfectly clock-like gene, incomplete lineage sorting, horizontal gene transfer, or paralogy can cause the gene tree topology to differ from the species tree. Incomplete lineage sorting (A) occurs when ancestral allelic lineages coalesce deeper than the speciation event, so the gene genealogy does not track the species splits. Horizontal gene transfer (B) introduces genes from unrelated lineages. Paralogy (C) creates gene copies that diverge before speciation, so comparing paralogs from different species gives a tree reflecting the gene duplication rather than speciation. All three are well-documented causes of gene tree-species tree discordance.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 26,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about Hardy-Weinberg equilibrium:\nS1: TRUE/FALSE — If a population has genotype frequencies of 0.49 AA, 0.42 Aa, and 0.09 aa, it is in Hardy-Weinberg equilibrium.\nS2: TRUE/FALSE — Hardy-Weinberg equilibrium requires that the population be infinitely large, but a population of 10,000 individuals is generally sufficient for the assumptions to hold approximately.\nS3: TRUE/FALSE — Assortative mating for a trait violates Hardy-Weinberg equilibrium by changing allele frequencies at the locus controlling that trait.\nS4: TRUE/FALSE — Under Hardy-Weinberg conditions, a rare autosomal recessive allele at frequency q = 0.001 exists predominantly in heterozygous carriers, with the ratio of carriers to affected individuals being approximately 2/q.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: p = freq(A) = 0.49 + 0.42/2 = 0.70, q = 0.30. Expected: p^2 = 0.49, 2pq = 0.42, q^2 = 0.09. Observed matches expected perfectly, so the population is in HW equilibrium. S2 is TRUE: While Hardy-Weinberg strictly requires an infinitely large population, a population of 10,000 is considered sufficiently large in practice for drift effects to be negligible (variance in allele frequency change per generation = p(1-p)/(2N) = approximately 0.000025 for intermediate allele frequencies). The statement uses 'generally sufficient' and 'approximately,' which is accurate for practical population genetics. S3 is FALSE: Assortative mating changes genotype frequencies (increases homozygosity) but does NOT change allele frequencies. It violates the random mating assumption and perturbs genotype frequencies away from HW proportions, but allele frequencies remain unchanged. The statement incorrectly claims assortative mating changes allele frequencies. S4 is TRUE: The ratio of carriers (2pq) to affected individuals (q^2) is 2pq/q^2 = 2p/q. When q = 0.001, p is approximately 1, so 2p/q is approximately 2/q = 2000. The statement correctly says 'approximately 2/q,' which is a valid approximation when the recessive allele is rare (p is approximately 1).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about evidence for evolution:\nS1: TRUE/FALSE — The existence of the same ERV (endogenous retrovirus) insertion at the same chromosomal location in humans and chimpanzees is strong evidence for common ancestry because the probability of independent insertion at the identical site is astronomically low.\nS2: TRUE/FALSE — Biogeographic evidence shows that oceanic islands are typically populated by species most closely related to those on the nearest continent, which supports dispersal from continental source populations followed by adaptive radiation.\nS3: TRUE/FALSE — Homologous structures always have the same function in different species, which is why they are evidence for common descent.\nS4: TRUE/FALSE — The observation that cytochrome c amino acid sequences are more similar between humans and chimpanzees than between humans and yeast is consistent with evolutionary predictions but could equally well be explained by functional constraint alone without invoking common ancestry.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-FALSE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFF",
+      "explanation": "S1 is TRUE: Shared ERV insertions at identical chromosomal positions in humans and chimpanzees are compelling evidence for common ancestry. Retroviruses insert essentially randomly into the genome, so the probability of the same virus inserting at the exact same position independently in two lineages is vanishingly small. Shared ERVs are inherited from a common ancestor in which the insertion occurred. S2 is TRUE: Darwin noted that island species most closely resemble those on the nearest mainland. For example, Galapagos finches are most closely related to South American finches. This supports the interpretation that ancestors dispersed from the continent and then diversified on the islands (adaptive radiation). S3 is FALSE: Homologous structures do NOT always have the same function. The classic example is the vertebrate forelimb — the same skeletal elements (humerus, radius, ulna, carpals, metacarpals, phalanges) are modified for flight (bat), swimming (whale flipper), running (horse), and grasping (human hand). Homology refers to shared ancestral origin, not shared function. S4 is FALSE: Functional constraint alone cannot explain why the pattern of sequence similarity matches the phylogenetic tree. If only function mattered, any species with the same functional requirements could have identical sequences regardless of relatedness. The fact that sequence similarity correlates with phylogenetic relatedness (not just functional similarity) is specifically predicted by common descent and is not explained by constraint alone.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 4,
+      "campbellChapter": 22,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about speciation mechanisms:\nS1: TRUE/FALSE — In a hybrid zone where two incipient species overlap, reinforcement occurs when natural selection strengthens prezygotic barriers because hybrid offspring have reduced fitness.\nS2: TRUE/FALSE — Sympatric speciation by autopolyploidy creates instant reproductive isolation because a tetraploid crossed with a diploid produces sterile triploid offspring.\nS3: TRUE/FALSE — The biological species concept is universally applicable to all organisms, including asexual species, fossil organisms, and ring species.\nS4: TRUE/FALSE — Allopolyploidy involves hybridization between two different species followed by chromosome doubling, and the resulting allopolyploid is typically more fertile than the initial F1 hybrid because each chromosome now has a homologous partner for meiotic pairing.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Reinforcement (also called the Wallace effect) occurs in hybrid zones when hybrids have reduced fitness. Natural selection favors individuals that preferentially mate with their own type (strengthening prezygotic barriers), because those individuals avoid producing unfit hybrid offspring. This process can complete speciation. S2 is TRUE: Autopolyploidy creates immediate reproductive isolation. A tetraploid (4n) crossed with a diploid (2n) parent produces triploid (3n) offspring that are typically sterile because of unbalanced chromosome segregation during meiosis (three copies of each chromosome cannot divide evenly). This means the tetraploid is effectively a new biological species from the moment it forms. S3 is FALSE: The biological species concept (BSC) defines species by reproductive isolation. It cannot be applied to: asexual organisms (no sexual reproduction to test), fossils (cannot test interbreeding), or ring species (adjacent populations interbreed but terminal populations do not). Alternative concepts (morphological, phylogenetic, ecological) must be used for these cases. S4 is TRUE: In allopolyploidy, two different species hybridize (producing a sterile F1 because chromosomes from the two parents cannot pair properly). If the hybrid undergoes chromosome doubling, each chromosome from species A now has a homolog (its duplicate), and likewise for species B. This allows normal bivalent formation during meiosis, restoring fertility. Examples include Triticum aestivum (bread wheat) and Brassica napus (canola).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 4,
+      "campbellChapter": 24,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about phylogenetic systematics:\nS1: TRUE/FALSE — A monophyletic group (clade) includes an ancestor and ALL of its descendants, whereas a paraphyletic group includes an ancestor and only SOME of its descendants.\nS2: TRUE/FALSE — In maximum parsimony analysis, the preferred phylogenetic tree is the one that requires the fewest total evolutionary changes (character state transitions) to explain the observed data.\nS3: TRUE/FALSE — Horizontal gene transfer is common among prokaryotes and can cause different genes to yield conflicting phylogenetic trees, which is why a single gene tree may not represent the true organismal phylogeny.\nS4: TRUE/FALSE — Molecular clocks assume that nucleotide substitutions accumulate at a perfectly constant rate across all lineages and all genes, making them unreliable for dating divergence times.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-FALSE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-FALSE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-TRUE"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: By definition, a monophyletic group (clade) consists of an ancestor and all of its descendants — this is a 'natural' group in cladistics. A paraphyletic group includes an ancestor and some but not all descendants (e.g., 'reptiles' excluding birds). A polyphyletic group includes members from two or more clades but excludes their common ancestor. S2 is TRUE: Maximum parsimony selects the tree topology requiring the fewest evolutionary changes (character state transitions or steps). This follows Occam's razor — the simplest explanation is preferred. While parsimony does not guarantee the correct tree (it can be misled by long-branch attraction), it is a widely used criterion in phylogenetics. S3 is TRUE: Horizontal (lateral) gene transfer is pervasive in prokaryotes — via transformation, transduction, and conjugation. Different genes may have different evolutionary histories, producing incongruent gene trees. This is a major reason why phylogeneticists use multiple genes or whole-genome approaches and why the tree of life for prokaryotes is better represented as a web or network than a strictly bifurcating tree. S4 is FALSE: Molecular clocks do NOT assume a perfectly constant rate across all lineages and genes. While the original strict clock model (Zuckerkandl and Pauling, 1965) assumed a constant rate, modern 'relaxed clock' methods allow rates to vary among lineages. Different genes evolve at different rates, and rate calibration using fossil data accounts for this variation. Molecular clocks, when properly calibrated, are valuable tools for estimating divergence times.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 26,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the history of life on Earth:\nS1: TRUE/FALSE — The Cambrian explosion (approximately 541 million years ago) represents the first appearance of animal life on Earth, as no animal fossils exist in Precambrian rocks.\nS2: TRUE/FALSE — The end-Permian mass extinction (approximately 252 Mya) was the most severe of the Big Five, eliminating approximately 96% of marine species and approximately 70% of terrestrial vertebrate species, likely caused primarily by massive volcanism (Siberian Traps).\nS3: TRUE/FALSE — Continental drift explains why fossils of the fern Glossopteris are found on multiple southern continents (South America, Africa, India, Antarctica, Australia), because these landmasses were once joined as Gondwana.\nS4: TRUE/FALSE — The K-Pg (Cretaceous-Paleogene) mass extinction that killed the non-avian dinosaurs 66 Mya was caused exclusively by the Chicxulub asteroid impact, with no contribution from volcanic activity.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-FALSE",
+        "S1-FALSE, S2-FALSE, S3-TRUE, S4-FALSE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE"
+      ],
+      "correctAnswer": "FTTF",
+      "explanation": "S1 is FALSE: The Cambrian explosion represents a rapid diversification of animal body plans, not the first appearance of animals. Ediacaran biota (635-541 Mya) include animal fossils such as Dickinsonia, Kimberella, and other soft-bodied organisms. Molecular clock estimates place the origin of animals even earlier. The Cambrian explosion is remarkable for the rapid appearance of most modern animal phyla and the first appearance of hard body parts (shells, exoskeletons) in the fossil record. S2 is TRUE: The end-Permian extinction (the 'Great Dying') was the most catastrophic of the five major mass extinctions, with approximately 96% of marine species and approximately 70% of terrestrial vertebrate species going extinct. The primary cause is attributed to the eruption of the Siberian Traps — massive flood basalt volcanism that released enormous quantities of CO2, methane, and toxic gases, causing global warming, ocean acidification, and ocean anoxia. S3 is TRUE: The distribution of Glossopteris fossils across southern continents was one of Alfred Wegener's key pieces of evidence for continental drift. These continents were once united as Gondwana in Pangaea, allowing Glossopteris forests to grow across a continuous landmass. When Gondwana fragmented, the fossils were carried with each continental fragment. S4 is FALSE: While the Chicxulub impact was the primary trigger of the K-Pg extinction, evidence increasingly suggests that Deccan Traps volcanism in India (which began before and continued after the impact) also contributed to environmental stress. The interaction between impact and volcanism may have amplified the extinction. It is incorrect to say the impact was the exclusive cause.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about genetic drift:\nS1: TRUE/FALSE — The founder effect occurs when a small group of individuals colonizes a new habitat, and the allele frequencies in the founding population may differ significantly from the source population due to sampling error.\nS2: TRUE/FALSE — A population bottleneck reduces genetic variation and can lead to fixation of mildly deleterious alleles, a phenomenon that has been documented in cheetah populations where extremely low genetic diversity correlates with high susceptibility to disease.\nS3: TRUE/FALSE — Genetic drift has a greater effect on allele frequencies in large populations than in small populations because there are more alleles to drift.\nS4: TRUE/FALSE — Genetic drift can lead to the fixation of a deleterious allele if the selection coefficient against it (s) is less than 1/(2N), where N is the effective population size, because drift overwhelms selection when s is small relative to population size.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: The founder effect is a well-documented form of genetic drift. When a small number of individuals establish a new population, they carry only a subset of the genetic diversity of the source population. By chance, some alleles may be overrepresented or absent. Examples include the high frequency of Ellis-van Creveld syndrome in the Amish (founded by a small group of German immigrants). S2 is TRUE: Population bottlenecks drastically reduce population size and consequently genetic diversity. Cheetahs passed through severe bottlenecks approximately 10,000 years ago, resulting in very low genetic diversity (skin grafts between unrelated cheetahs are not rejected). This reduced diversity is associated with low sperm quality, high cub mortality, and increased susceptibility to infectious diseases. S3 is FALSE: Genetic drift has a GREATER effect in SMALL populations, not large ones. In small populations, random sampling effects are proportionally larger. In large populations, the law of large numbers ensures that allele frequencies remain close to expected values. The variance in allele frequency change per generation due to drift is p(1-p)/(2N), which decreases as N increases. S4 is TRUE: Kimura showed that when the selective disadvantage s of an allele is much less than 1/(2Ne), the allele behaves as effectively neutral and its fate is determined by drift rather than selection. This is the 'nearly neutral' theory. With small Ne, even mildly deleterious alleles can drift to fixation because the boundary 1/(2Ne) is relatively large.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about natural selection:\nS1: TRUE/FALSE — Stabilizing selection reduces phenotypic variance without changing the mean, favoring intermediate phenotypes and selecting against extreme values at both tails of the distribution.\nS2: TRUE/FALSE — Directional selection shifts the phenotypic mean toward one extreme, and if sustained over many generations, can lead to a response to selection that follows the breeder's equation R = h^2 x S.\nS3: TRUE/FALSE — Disruptive (diversifying) selection favors individuals at both extremes of the phenotypic distribution and can potentially lead to bimodal distributions and, under certain conditions, contribute to sympatric speciation.\nS4: TRUE/FALSE — Sexual selection is a form of natural selection where traits that increase mating success are favored, even if they decrease survival, as seen in the elaborate tail of the male peacock, which is explained by Fisher's runaway selection hypothesis alone.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-FALSE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Stabilizing selection narrows the phenotypic distribution by selecting against extreme phenotypes. Human birth weight is a classic example — babies that are too small or too large have higher mortality, so the optimal (intermediate) birth weight is favored. The mean does not shift, but variance decreases. S2 is TRUE: Directional selection shifts the mean phenotype toward one extreme. The response to selection (R) in each generation is predicted by the breeder's equation R = h^2 x S, where h^2 is the narrow-sense heritability and S is the selection differential (the difference between the mean of selected parents and the overall population mean). This has been verified in numerous artificial and natural selection experiments. S3 is TRUE: Disruptive selection favors both extremes and selects against intermediates. This can produce bimodal phenotypic distributions. If combined with assortative mating (individuals at each extreme preferentially mating with similar phenotypes), disruptive selection can theoretically promote sympatric speciation, as seen in African cichlid fishes and some apple maggot fly populations. S4 is FALSE: While the first part is correct (sexual selection can favor traits that reduce survival but increase mating success), the peacock tail is NOT explained by Fisher's runaway hypothesis ALONE. Multiple hypotheses explain elaborate male ornaments: Fisher's runaway, Zahavi's handicap principle (honest signaling of genetic quality), good genes (indicator mechanism), and sensory bias. The peacock's tail may be explained by a combination of these mechanisms, and empirical evidence supports the good genes/handicap hypothesis in addition to Fisherian runaway. The word 'alone' makes this statement false.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the RNA world hypothesis and the origin of life:\nS1: TRUE/FALSE — The RNA world hypothesis proposes that RNA served as both the genetic material and the catalytic molecule in early life, before the evolution of DNA and proteins.\nS2: TRUE/FALSE — Ribozymes discovered in modern organisms (such as the self-splicing Group I introns and RNase P) provide evidence that RNA can function as a catalyst, supporting the plausibility of an RNA world.\nS3: TRUE/FALSE — The ribosome is essentially a ribozyme because peptide bond formation in the large subunit is catalyzed by rRNA (the peptidyl transferase center), not by ribosomal proteins, which is considered a molecular fossil of the RNA world.\nS4: TRUE/FALSE — In the RNA world, RNA replication was highly accurate with negligible error rates, which is why RNA-based life could persist for millions of years before the evolution of DNA.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-FALSE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-FALSE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-TRUE"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: The RNA world hypothesis, proposed by Walter Gilbert in 1986, posits that early life used RNA as both the repository of genetic information and the catalyst for chemical reactions, before the advent of DNA (more stable storage) and proteins (more versatile catalysts). S2 is TRUE: The discovery of ribozymes — RNA molecules with catalytic activity — by Thomas Cech (self-splicing Group I introns in Tetrahymena) and Sidney Altman (RNase P) provided crucial evidence that RNA can catalyze reactions, earning them the 1989 Nobel Prize in Chemistry. These modern ribozymes are considered molecular relics of the RNA world. S3 is TRUE: Structural studies of the ribosome (Nobel Prize 2009) revealed that the peptidyl transferase center — where peptide bond formation occurs — is composed entirely of rRNA, with no protein amino acids within 18 angstroms of the active site. The ribosome is indeed a ribozyme, and this is considered one of the strongest pieces of evidence for the RNA world, suggesting that protein synthesis itself evolved in an RNA-dominated world. S4 is FALSE: RNA replication is inherently error-prone compared to DNA replication. RNA polymerase ribozymes lack proofreading activity, and RNA is chemically less stable than DNA (the 2'-OH group makes it susceptible to hydrolysis). This error-prone replication actually limited the size of RNA genomes (Eigen's error catastrophe), which is one reason why DNA — with its superior stability and replication fidelity — eventually replaced RNA as the genetic material. The transition to DNA allowed larger, more complex genomes to be maintained.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A population geneticist surveys a population of 1,000 individuals for the MN blood group locus (codominant alleles L^M and L^N). The observed genotype counts are: MM = 298, MN = 489, NN = 213. Test whether this population is in Hardy-Weinberg equilibrium and identify the most accurate interpretation.",
+      "dataContext": "Observed genotypes (n = 1000): MM = 298, MN = 489, NN = 213. Step 1: Calculate allele frequencies. freq(L^M) = p = (2 x 298 + 489) / (2 x 1000) = 1085/2000 = 0.5425. freq(L^N) = q = (2 x 213 + 489) / (2 x 1000) = 915/2000 = 0.4575. Step 2: Calculate expected genotype frequencies under HW. Expected MM = p^2 x 1000 = (0.5425)^2 x 1000 = 0.2943 x 1000 = 294.3. Expected MN = 2pq x 1000 = 2(0.5425)(0.4575) x 1000 = 0.4964 x 1000 = 496.4. Expected NN = q^2 x 1000 = (0.4575)^2 x 1000 = 0.2093 x 1000 = 209.3. Step 3: Chi-square test (df = 1 for HW test with 2 alleles). Chi-square = (298 - 294.3)^2/294.3 + (489 - 496.4)^2/496.4 + (213 - 209.3)^2/209.3 = 0.0465 + 0.1103 + 0.0654 = 0.2222. Critical value at alpha = 0.05, df = 1: 3.841.",
+      "options": [
+        "Chi-square = 0.222 with 1 df; since 0.222 < 3.841, we fail to reject the null hypothesis. The population is in Hardy-Weinberg equilibrium for the MN locus, consistent with the expectation for a codominant locus with no known selection differential.",
+        "Chi-square = 0.222 with 2 df; since 0.222 < 5.991, we fail to reject the null hypothesis. However, we should use 2 degrees of freedom because there are three genotype classes.",
+        "Chi-square = 4.56 with 1 df; since 4.56 > 3.841, we reject the null hypothesis and conclude the population is not in HW equilibrium, likely due to assortative mating.",
+        "Chi-square = 0.222 with 1 df; since 0.222 < 3.841, we fail to reject HW equilibrium. However, this result is uninformative because the MN locus is always in HW equilibrium regardless of population dynamics."
+      ],
+      "correctAnswer": "A",
+      "explanation": "The chi-square value of 0.222 with 1 degree of freedom is well below the critical value of 3.841 (alpha = 0.05), so we fail to reject the null hypothesis of Hardy-Weinberg equilibrium. The degrees of freedom for an HW test are calculated as: number of genotype classes minus number of alleles = 3 - 2 = 1 (not 2, because we estimated one parameter — p — from the data, reducing df by 1 from the usual k-1). Option B incorrectly uses 2 df. Option C has the wrong chi-square value. Option D is incorrect because no locus is guaranteed to be in HW equilibrium — the MN locus happens to be a classic example used in population genetics because it is codominant (making genotype counting straightforward) and appears to be selectively neutral in most populations. The result is consistent with random mating, no selection, no drift (large population), and no gene flow affecting this locus.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studying industrial melanism in peppered moths (Biston betularia) collects the following data on genotype frequencies at the melanin locus (where C is the dominant carbonaria/melanic allele and c is the recessive typica/light allele) in a population near an industrial city in 1960 and again in 2010 after pollution controls were implemented:\n\n1960: CC = 0.36, Cc = 0.48, cc = 0.16 (n = 500)\n2010: CC = 0.04, Cc = 0.32, cc = 0.64 (n = 500)\n\nAnalyze the change in allele frequencies and identify the most accurate interpretation.",
+      "dataContext": "1960 population: CC = 0.36, Cc = 0.48, cc = 0.16. Allele frequencies: p(C) = 0.36 + 0.48/2 = 0.60, q(c) = 0.16 + 0.48/2 = 0.40. HW expected: p^2 = 0.36, 2pq = 0.48, q^2 = 0.16 — matches observed (in HW equilibrium). 2010 population: CC = 0.04, Cc = 0.32, cc = 0.64. Allele frequencies: p(C) = 0.04 + 0.32/2 = 0.20, q(c) = 0.64 + 0.32/2 = 0.80. HW expected: p^2 = 0.04, 2pq = 0.32, q^2 = 0.64 — matches observed (in HW equilibrium). Change: p(C) decreased from 0.60 to 0.20; q(c) increased from 0.40 to 0.80 over 50 years (approximately 50 moth generations).",
+      "options": [
+        "The carbonaria allele frequency decreased from 0.60 to 0.20, but since both populations are in HW equilibrium, no evolution has occurred — the allele frequency change is due to random sampling error.",
+        "The carbonaria allele frequency decreased from 0.60 to 0.20 over 50 generations, consistent with directional selection against the melanic phenotype after pollution reduction restored lichen cover to tree bark, making light-colored moths better camouflaged from avian predators.",
+        "The typica allele increased from 0.40 to 0.80 due to heterozygote advantage, as Cc heterozygotes have the highest fitness in the post-industrial environment.",
+        "The allele frequency change is too large to be explained by natural selection alone over 50 generations and must involve gene flow from rural populations where the typica allele was already at high frequency."
+      ],
+      "correctAnswer": "B",
+      "explanation": "The decrease in the carbonaria (C) allele from 0.60 to 0.20 over approximately 50 generations is consistent with directional selection against the melanic phenotype. After the Clean Air Acts reduced pollution and lichens regrew on tree trunks, dark-colored moths became more conspicuous to bird predators, while light-colored moths were better camouflaged. Both populations are in HW equilibrium at their respective time points — this does NOT mean evolution has not occurred. HW equilibrium describes the relationship between allele and genotype frequencies at a single point in time; evolution is the change in allele frequencies over time. The change from p = 0.60 to p = 0.20 in 50 generations is achievable with a selection coefficient of approximately s = 0.15-0.20 against the melanic phenotype, which is within the range estimated from mark-recapture studies. While gene flow from rural populations may have contributed, the magnitude of change is consistent with selection as the primary driver.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A phylogeneticist constructs the following character matrix for five taxa (A-E) using six morphological characters (1-6), where 0 = ancestral state and 1 = derived state:\n\nTaxon A: 0 0 0 0 0 0\nTaxon B: 1 1 0 0 0 0\nTaxon C: 1 1 1 1 0 0\nTaxon D: 1 1 0 0 1 1\nTaxon E: 0 0 0 0 1 1\n\nUsing maximum parsimony, determine the most parsimonious tree and identify the correct interpretation.",
+      "dataContext": "Character matrix (0 = ancestral, 1 = derived): Taxon A: 000000, Taxon B: 110000, Taxon C: 111100, Taxon D: 110011, Taxon E: 000011. Shared derived characters (synapomorphies): Characters 1,2 shared by B, C, D (but not A, E). Characters 3,4 shared by C only. Characters 5,6 shared by D, E. Tree 1: ((B,(C,D)),A,E) — requires characters 1,2 evolve once (synapomorphy of B+C+D), chars 3,4 evolve once in C, chars 5,6 evolve twice (once in D, once in E) = 8 steps with 2 homoplasies. Tree 2: (((B,C),D),(A,E)) — requires chars 1,2 evolve once (synapomorphy of B+C+D), chars 3,4 once in C, chars 5,6 twice = same issue. Tree 3: ((B,C),(D,E),A) — chars 1,2 evolve once in ancestor of B+C, then independently in D = 8 steps. Most parsimonious: (A,((B,C),(D,E))) with chars 1,2 evolving independently in B+C ancestor and D = 8 steps; OR (A,(((B,C),D),E)) with chars 5,6 evolving independently in D and E. Need to evaluate: Tree A: (A,((B,(C)),(D,E))) — chars 1,2 once for B+C+D clade, 3,4 once for C, 5,6 once for D+E but D also has 1,2 so D must be in B+C clade. Best tree: (A,(((B,C),D),E)) requires chars 5,6 to evolve twice (homoplasy). Tree (A,((B,C,D),(E))) with chars 5,6 evolving in D and E independently needs 8 changes. The truly most parsimonious tree groups B,C,D together (sharing chars 1,2) and requires chars 5,6 to evolve convergently in D and E = 8 total steps (6 unique character changes + 2 homoplasies for chars 5,6 in E).",
+      "options": [
+        "The most parsimonious tree is (A,(B,(C,(D,E)))) with 6 total steps and no homoplasy, because each character evolves exactly once.",
+        "The most parsimonious tree is ((A,E),(B,(C,D))) where A and E are grouped because they share the ancestral state for characters 1-4, requiring 6 steps.",
+        "Maximum parsimony cannot resolve this data set because two equally parsimonious trees exist with identical step counts, and bootstrapping is needed to break the tie.",
+        "The most parsimonious tree is (A,((B,C,D),E)) where B, C, and D form a clade united by synapomorphies 1 and 2. Characters 5 and 6 must have evolved convergently in D and E (homoplasy), requiring 8 total steps. The grouping of D with E based on characters 5 and 6 alone would require characters 1 and 2 to have evolved convergently, which is less parsimonious."
+      ],
+      "correctAnswer": "D",
+      "explanation": "The most parsimonious tree groups B, C, and D as a clade based on shared derived characters 1 and 2 (synapomorphies). Within this clade, C has additional derived characters 3 and 4. Characters 5 and 6 are shared by D and E, but grouping D with E would require characters 1 and 2 to have evolved independently in B and in the ancestor of C — that is 2 instances of convergence for 2 characters. Instead, the more parsimonious interpretation is that characters 1 and 2 evolved once (in the ancestor of B+C+D) and characters 5 and 6 evolved twice independently (convergence in D and E) — also 2 instances of homoplasy, but this tree has 8 total steps. Option A is impossible because there is no tree where all 6 characters evolve exactly once without conflict given this data. Option B incorrectly groups taxa by shared ancestral (plesiomorphic) states, which is invalid in cladistics. Shared ancestral characters (symplesiomorphies) cannot define clades. Option C is incorrect because the tree in option D is uniquely most parsimonious.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 26,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Molecular clock data for cytochrome b sequences in mammals show the following pairwise divergence values (percent amino acid difference): Human-Chimpanzee = 1.6%, Human-Gorilla = 2.0%, Human-Orangutan = 3.6%, Human-Mouse = 12.0%. The fossil-calibrated divergence time for the Human-Orangutan split is 14 Mya. Using this calibration point, estimate the divergence times for the other pairs and identify the correct set of estimates.",
+      "dataContext": "Calibration: Human-Orangutan divergence = 3.6% over 14 Mya. Rate = 3.6% / 14 Mya = 0.257% per million years. Estimated divergence times: Human-Chimpanzee = 1.6% / 0.257% per Mya = 6.2 Mya. Human-Gorilla = 2.0% / 0.257% per Mya = 7.8 Mya. Human-Mouse = 12.0% / 0.257% per Mya = 46.7 Mya. Note: These are rough estimates assuming a constant molecular clock rate, which may not hold across all lineages. The Human-Mouse estimate may be too low because rodents have shorter generation times and potentially faster molecular evolution rates, violating the strict clock assumption.",
+      "options": [
+        "Human-Chimpanzee approximately 6.2 Mya, Human-Gorilla approximately 7.8 Mya, Human-Mouse approximately 46.7 Mya. The Human-Mouse estimate is likely an underestimate because rodents have faster molecular evolution rates due to shorter generation times, violating the strict clock assumption.",
+        "Human-Chimpanzee approximately 3.1 Mya, Human-Gorilla approximately 3.9 Mya, Human-Mouse approximately 23.3 Mya. These are half the values because the molecular clock measures divergence in each lineage separately.",
+        "Human-Chimpanzee approximately 6.2 Mya, Human-Gorilla approximately 7.8 Mya, Human-Mouse approximately 46.7 Mya. All estimates are equally reliable because the molecular clock rate is constant across all mammalian lineages.",
+        "The molecular clock cannot be applied here because cytochrome b evolves at different rates in different mammalian orders, making all estimates invalid."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Using the calibration rate of 0.257% per million years (from the Human-Orangutan divergence), we estimate: Human-Chimpanzee = 1.6/0.257 = approximately 6.2 Mya, Human-Gorilla = 2.0/0.257 = approximately 7.8 Mya, Human-Mouse = 12.0/0.257 = approximately 46.7 Mya. The Human-Chimpanzee and Human-Gorilla estimates are reasonably consistent with fossil and genomic evidence (5-7 Mya and 7-9 Mya, respectively). However, the Human-Mouse estimate of 46.7 Mya is likely an underestimate — the actual divergence is approximately 75-90 Mya based on fossil evidence and relaxed molecular clock analyses. This discrepancy occurs because rodents have shorter generation times, higher metabolic rates, and consequently faster rates of molecular evolution. The strict molecular clock assumption (constant rate across all lineages) is violated. Option B incorrectly halves the values — pairwise divergence already measures the total accumulated differences between two lineages since their split, which is correct for dating. Option C is wrong because the clock rate is NOT constant across all mammalian lineages. Option D is too extreme — while rate variation exists, the molecular clock provides useful approximate estimates, especially among closely related lineages where rate variation is minimal.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 26,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "During the adaptive radiation of Hawaiian honeycreepers, researchers documented the following data on beak morphology and diet across 6 species on a single island:\n\nSpecies 1 (Iiwi): Long curved beak (38mm), nectar-feeding, competes with Species 2\nSpecies 2 (Apapane): Short curved beak (15mm), nectar-feeding, overlapping range with Species 1\nSpecies 3 (Palila): Heavy parrot-like beak (22mm), seed-crushing, unique habitat\nSpecies 4 (Akiapolaau): Woodpecker-like beak (32mm), insect-extracting, unique habitat\nSpecies 5 (Maui Parrotbill): Massive hooked beak (28mm), invertebrate-crushing, unique habitat\nSpecies 6 (Akepa): Small crossed beak (12mm), bud-probing, overlapping range with Species 4\n\nSpecies 1 and 2 show character displacement in beak length where they coexist compared to populations on islands where only one is present. Which interpretation best explains the overall pattern?",
+      "dataContext": "Phylogenetic analysis shows all 6 species share a common ancestor (a cardueline finch-like bird from Asia, approximately 5.7 Mya). Beak morphology divergence correlates with dietary niche (r^2 = 0.89, p < 0.001). On islands where Species 1 and 2 are sympatric, Species 1 beak length averages 38mm (vs 32mm on islands where Species 2 is absent) and Species 2 beak length averages 15mm (vs 20mm on islands where Species 1 is absent). This divergence in sympatry (character displacement) is statistically significant (t-test, p < 0.01). Speciation events cluster around periods of island formation (5.1, 3.7, 2.6, 1.2, 0.8 Mya), correlating with geological evidence for sequential island emergence along the Hawaiian hot-spot chain.",
+      "options": [
+        "The beak diversity is entirely due to genetic drift on isolated islands with small populations, not natural selection, because Hawaiian honeycreepers have very small effective population sizes.",
+        "The pattern exemplifies adaptive radiation driven by ecological opportunity on newly formed islands, with beak morphology diversifying to exploit different food resources (niche partitioning). Character displacement between Species 1 and 2 demonstrates that interspecific competition drives further morphological divergence in sympatry, reinforcing niche separation.",
+        "The pattern is best explained by phenotypic plasticity — individual birds modify their beak shape depending on available food — rather than heritable genetic differences between species.",
+        "Character displacement between Species 1 and 2 is an artifact of environmental differences between islands rather than competitive interaction, because beak size varies with island elevation and temperature."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hawaiian honeycreepers are a textbook example of adaptive radiation — the diversification of a single ancestral lineage into multiple species adapted to different ecological niches. The strong correlation between beak morphology and diet (r^2 = 0.89) indicates that natural selection for dietary specialization drove morphological divergence. Character displacement between Species 1 (Iiwi) and Species 2 (Apapane) — where beak lengths diverge more in sympatry than in allopatry — is strong evidence that interspecific competition for nectar resources drives further divergence when species co-occur. This pattern has been documented in Darwin's finches, anoles, and sticklebacks as well. Option A is incorrect because while drift may play a role in small populations, the strong morphology-diet correlation and character displacement pattern are signatures of selection, not drift. Option C is incorrect because beak morphology in birds is highly heritable (h^2 > 0.6 in studies of Darwin's finches) and is determined by genes like Bmp4, calmodulin, and ALX1. Option D does not explain why the displacement pattern is specific to zones of sympatry and absent in allopatry.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 24,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A population of ground beetles (Carabidae) lives in a fragmented landscape with some populations on isolated hilltops surrounded by agricultural land. A conservation geneticist hypothesizes that small, isolated hilltop populations have reduced genetic diversity and are experiencing genetic drift rather than natural selection as the primary evolutionary force. Design a comprehensive study to test this hypothesis and distinguish between genetic drift and selection as drivers of allele frequency differences among populations.",
+      "experimentContext": "The study system includes 8 hilltop beetle populations (census sizes ranging from 50 to 2,000 individuals) and 3 large lowland populations (census sizes > 10,000). The landscape has been fragmented for approximately 100 beetle generations. Microsatellite markers (20 loci) and genome-wide SNP data (50,000 markers) are available. The beetles can be captured using pitfall traps. Laboratory rearing is possible. Key measurements: allele frequencies at neutral markers, FST among populations, heterozygosity levels, effective population sizes (Ne), and candidate loci under selection.",
+      "options": [
+        "Measure allele frequencies at a single microsatellite locus across all populations. If frequencies differ, conclude drift is operating. No controls needed.",
+        "Compare heterozygosity and allelic richness between hilltop and lowland populations using 20 microsatellite loci, estimate Ne using temporal methods (sampling the same populations in consecutive years), calculate pairwise FST values, and test for isolation-by-distance. If hilltop populations show reduced diversity and elevated FST not correlated with geographic distance, drift in isolation is supported.",
+        "Use genome-wide SNP data to: (1) estimate genome-wide FST (neutral expectation under drift) and compare it to locus-specific FST using FST outlier analysis to identify loci under selection, (2) estimate effective population sizes using linkage disequilibrium methods, (3) test for recent population bottlenecks using heterozygosity excess tests, (4) perform a common garden experiment rearing beetles from hilltop and lowland populations under identical conditions to test for genetically based phenotypic divergence (if present, suggests selection), and (5) compare observed FST distribution across SNPs to the neutral expectation from coalescent simulations parameterized with estimated Ne values.",
+        "Release marked beetles from lowland populations into hilltop habitats and measure gene flow rates. If gene flow is zero, drift must be the dominant force."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Option C provides the most comprehensive experimental design because it: (1) Uses genome-wide FST as a baseline neutral expectation and then identifies outlier loci with unusually high or low FST, which are candidates for directional or balancing selection, respectively. This FST outlier approach (e.g., using BayeScan or OutFLANK) directly distinguishes drift from selection at the genomic level. (2) Estimates Ne using linkage disequilibrium methods from a single time-point sample, which is practical and provides population-specific estimates to assess drift vulnerability. (3) Tests for bottlenecks using heterozygosity excess relative to allelic richness (Cornuet & Luikart method), which detects recent population size reductions. (4) Includes a common garden experiment — the gold standard for distinguishing genetic differentiation (potentially due to selection) from environmental effects. If beetles from different populations show phenotypic differences when reared under identical conditions, this indicates genetically based divergence consistent with local adaptation (selection). (5) Uses coalescent simulations parameterized with estimated demographic parameters to generate null distributions, providing a rigorous statistical framework. Option A is inadequate (single locus, no controls). Option B is better but lacks the critical FST outlier analysis to distinguish drift from selection and lacks the common garden experiment. Option D only measures gene flow and cannot distinguish drift from selection.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Two closely related species of frogs (Species X and Species Y) have overlapping ranges in a tropical forest. When crosses are performed in the laboratory, F1 hybrids are viable but show reduced fertility (approximately 30% of normal). Males of Species X produce a distinctive three-pulse call, while males of Species Y produce a five-pulse call. A researcher wants to determine whether reinforcement is occurring in the hybrid zone — specifically, whether female mate preferences are stronger (more discriminating against heterospecific calls) in sympatric populations compared to allopatric populations. Design the most rigorous experiment to test the reinforcement hypothesis.",
+      "experimentContext": "Study system: Species X and Y have 5 sympatric populations (zone of overlap) and 5 allopatric populations each (no overlap). F1 hybrid males have intermediate four-pulse calls. Hybrid females have approximately 30% fertility. The researcher has access to phonotaxis arenas (speakers playing recorded calls at controlled volumes), populations across the geographic range, and genetic markers (microsatellites) to assess gene flow. Molecular data indicate the hybrid zone has existed for approximately 5,000 generations. Reinforcement predicts that prezygotic isolation should be stronger in sympatry than allopatry (reproductive character displacement in mate preference).",
+      "options": [
+        "Play three-pulse and five-pulse calls to females from sympatric populations only. If females prefer conspecific calls, reinforcement is occurring.",
+        "Compare calling behavior of males across sympatric and allopatric populations. If males in sympatry have more divergent calls, this proves reinforcement.",
+        "Conduct reciprocal phonotaxis experiments: present females from both sympatric and allopatric populations of both species with standardized conspecific versus heterospecific calls in a two-choice arena. If females from sympatric populations show significantly stronger preference for conspecific calls than females from allopatric populations (reproductive character displacement in preference), this supports reinforcement. Additionally, use genetic markers to estimate hybridization rates in sympatric versus parapatric zones, perform common-garden rearing to confirm preferences are heritable rather than learned, and test whether preference strength correlates with local hybrid frequency across multiple sympatric populations.",
+        "Perform artificial hybridization in the lab across multiple generations to measure hybrid fitness precisely. If hybrid fitness is low, reinforcement must be occurring in the wild."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Option C provides the most rigorous test of the reinforcement hypothesis because: (1) It compares female preferences between sympatric and allopatric populations — the key prediction of reinforcement is that prezygotic isolation should be stronger where the two species co-occur (sympatry) than where they do not (allopatry). This pattern is called reproductive character displacement. (2) It uses reciprocal tests (both species' females tested with both call types), controlling for the possibility that one species has inherently stronger preferences. (3) It includes a common-garden control to confirm that preference differences are genetically based (heritable) rather than due to learning or environmental effects. This is critical because frogs raised in sympatry hear both call types and could potentially learn to discriminate. (4) It correlates preference strength with local hybrid frequency — reinforcement theory predicts stronger preferences where hybridization risk is highest. (5) It estimates actual hybridization rates using genetic markers, providing independent evidence of the selective pressure driving reinforcement. Option A only tests sympatric females and cannot distinguish reinforcement from pre-existing preference. Option B measures male signals but not female preferences — reinforcement can operate on either, and the hypothesis specifically concerns female discrimination. Option D measures hybrid fitness but does not test whether reinforcement is occurring in the wild.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 24,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    }
+  ]
+}
