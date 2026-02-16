@@ -1,0 +1,509 @@
+{
+  "batchId": "olympiad-campbell-ch45-hormones-endocrine",
+  "subject": "Biology",
+  "topic": "Hormones and the Endocrine System",
+  "difficulty": "EXPERT",
+  "totalQuestions": 105,
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "Steroid hormones such as cortisol and estradiol enter target cells by diffusing across the plasma membrane. Once inside, what is the typical mechanism of action?",
+      "options": [
+        "They activate membrane-bound receptor tyrosine kinases that phosphorylate cytoplasmic targets",
+        "They bind intracellular nuclear receptors, forming hormone-receptor complexes that act as transcription factors by binding to hormone response elements (HREs) in DNA",
+        "They directly phosphorylate transcription factors in the cytoplasm without entering the nucleus",
+        "They activate G-protein-coupled receptors on the endoplasmic reticulum membrane"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Steroid hormones (cortisol, aldosterone, estradiol, testosterone, progesterone) are lipophilic molecules that freely cross the plasma membrane. Inside the cell, they bind to intracellular nuclear receptors (which may be located in the cytoplasm or already in the nucleus, depending on the receptor type). The hormone-receptor complex undergoes conformational change, dimerizes, and translocates to the nucleus (if cytoplasmic), where it binds specific DNA sequences called hormone response elements (HREs) in the promoter regions of target genes. Acting as ligand-activated transcription factors, they recruit coactivators or corepressors to modulate gene transcription. This genomic mechanism explains the relatively slow onset (hours) but prolonged duration of steroid hormone effects compared to peptide hormones that act via surface receptors.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "The hypothalamic-pituitary-thyroid (HPT) axis is regulated by negative feedback. Which of the following correctly describes this regulatory loop?",
+      "options": [
+        "TRH from the hypothalamus stimulates TSH release from the anterior pituitary; TSH stimulates T3/T4 release from the thyroid; elevated T3/T4 inhibit both TRH and TSH secretion",
+        "TSH from the hypothalamus stimulates TRH release from the anterior pituitary, which then acts on the thyroid",
+        "T3 and T4 stimulate TRH release from the hypothalamus in a positive feedback loop",
+        "The thyroid releases TSH which acts directly on the hypothalamus to suppress TRH"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The HPT axis follows the classic three-tier hierarchical pattern. The hypothalamus secretes thyrotropin-releasing hormone (TRH) into the hypophyseal portal system. TRH stimulates thyrotroph cells in the anterior pituitary to secrete thyroid-stimulating hormone (TSH, or thyrotropin). TSH travels through the systemic circulation to the thyroid gland, where it binds TSH receptors (Gs-coupled GPCRs) on follicular cells, stimulating synthesis and release of thyroid hormones T4 (thyroxine, the predominant product) and T3 (triiodothyronine, more active). Elevated circulating T3/T4 exert negative feedback at two levels: (1) inhibiting TRH neurons in the paraventricular nucleus of the hypothalamus, and (2) directly inhibiting TSH release from anterior pituitary thyrotrophs. Most T3 is produced by peripheral deiodination of T4 by type 1 and type 2 deiodinases.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about insulin signaling:\n(I) Insulin binds to a receptor tyrosine kinase (the insulin receptor), triggering autophosphorylation and recruitment of insulin receptor substrate (IRS) proteins\n(II) Activated PI3K-Akt pathway promotes GLUT4 vesicle translocation to the plasma membrane, increasing glucose uptake in muscle and adipose tissue\n(III) Insulin promotes glycogen synthesis by activating glycogen synthase through Akt-mediated inhibition of GSK3\n(IV) All cell types require insulin for glucose uptake, including neurons and red blood cells",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "(I) TRUE: The insulin receptor is a heterotetrameric (α₂β₂) receptor tyrosine kinase. Insulin binding to the α subunits causes conformational change and trans-autophosphorylation of the β subunits on specific tyrosine residues, creating docking sites for IRS-1 and IRS-2. (II) TRUE: IRS phosphorylation activates PI3K, generating PIP₃, which activates PDK1 and subsequently Akt (protein kinase B). Akt phosphorylates AS160 (TBC1D4), promoting GLUT4-containing vesicle fusion with the plasma membrane. This dramatically increases glucose uptake in skeletal muscle and adipose tissue. (III) TRUE: Akt phosphorylates and INACTIVATES GSK3 (glycogen synthase kinase 3), which normally phosphorylates and inhibits glycogen synthase. Thus insulin indirectly activates glycogen synthase, promoting glycogen storage. (IV) FALSE: Neurons use GLUT1 and GLUT3, and red blood cells use GLUT1 — these transporters are constitutively expressed and insulin-independent. Brain and RBCs take up glucose regardless of insulin levels.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pheochromocytoma is a tumor of the adrenal medulla that secretes excessive catecholamines. Which clinical feature would be most characteristic?",
+      "options": [
+        "Chronic hypotension, hypoglycemia, and skin hyperpigmentation",
+        "Episodic hypertension, tachycardia, palpitations, headache, and sweating",
+        "Progressive weight gain, moon face, and abdominal striae",
+        "Goiter, exophthalmos, and heat intolerance"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The adrenal medulla is a modified sympathetic ganglion that produces catecholamines — approximately 80% epinephrine and 20% norepinephrine. Pheochromocytoma causes paroxysmal (episodic) or sustained overproduction of catecholamines, leading to the classic triad: episodic headache, sweating, and tachycardia, along with severe hypertension. The hypertension results from α1-adrenergic vasoconstriction (norepinephrine) and cardiac stimulation via β1 receptors (epinephrine). Episodes can be triggered by physical activity, stress, or certain foods. Option A describes adrenal insufficiency (Addison's disease), option C describes Cushing's syndrome (cortisol excess), and option D describes hyperthyroidism (Graves' disease). Diagnosis involves measuring urinary catecholamines and their metabolites (metanephrines, VMA). Treatment is surgical resection after α-blockade (phenoxybenzamine) followed by β-blockade.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures plasma hormone levels in a patient with suspected endocrine dysfunction:\n\nHormone | Patient value | Normal range\nTSH | 15 mU/L | 0.4-4.0 mU/L\nFree T4 | 0.5 ng/dL | 0.8-1.8 ng/dL\nFree T3 | 0.8 ng/L | 2.0-4.4 ng/L\nAnti-TPO antibodies | 850 IU/mL | <35 IU/mL\n\nWhich diagnosis is most consistent with these findings?",
+      "options": [
+        "Graves' disease (hyperthyroidism)",
+        "Secondary hypothyroidism due to pituitary failure",
+        "Hashimoto's thyroiditis (primary autoimmune hypothyroidism)",
+        "Thyroid hormone resistance syndrome"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The laboratory findings show: (1) elevated TSH (15 mU/L, ~4× upper normal), indicating the pituitary is responding to low thyroid hormone levels; (2) low free T4 and T3, confirming hypothyroidism; (3) markedly elevated anti-thyroid peroxidase (anti-TPO) antibodies (>24× upper normal), indicating autoimmune thyroid destruction. This constellation — primary hypothyroidism with high anti-TPO antibodies — is pathognomonic for Hashimoto's thyroiditis, the most common cause of hypothyroidism in iodine-sufficient regions. In Graves' disease, T3/T4 would be elevated with suppressed TSH. In secondary hypothyroidism (pituitary failure), TSH would be low or inappropriately normal despite low T4/T3, and anti-TPO would be negative. In thyroid hormone resistance, T4/T3 are elevated with non-suppressed TSH due to mutant thyroid hormone receptors.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Parathyroid hormone (PTH) and calcitonin have opposing effects on blood calcium. Which statement correctly describes the mechanism by which PTH raises blood Ca²⁺?",
+      "options": [
+        "PTH directly stimulates osteoblasts to deposit calcium into the blood from bone",
+        "PTH stimulates osteoclast-mediated bone resorption (indirectly via RANKL), increases renal Ca²⁺ reabsorption in the distal tubule, and promotes calcitriol (1,25-(OH)₂D₃) synthesis to enhance intestinal Ca²⁺ absorption",
+        "PTH increases urinary calcium excretion and decreases intestinal calcium absorption to maintain homeostasis",
+        "PTH acts exclusively on the kidneys to reabsorb calcium, with no effect on bone or intestine"
+      ],
+      "correctAnswer": "B",
+      "explanation": "PTH raises blood calcium through three coordinated mechanisms at three target organs: (1) Bone: PTH binds PTH1R receptors on osteoBLASTS (not osteoclasts directly), stimulating them to produce RANKL (receptor activator of nuclear factor κB ligand). RANKL binds RANK on osteoclast precursors, promoting their differentiation into mature osteoclasts that resorb bone, releasing Ca²⁺ and phosphate. OPG (osteoprotegerin), a decoy receptor for RANKL, is simultaneously downregulated. (2) Kidney: PTH increases Ca²⁺ reabsorption in the distal convoluted tubule (via TRPV5 channels and calbindin) while decreasing phosphate reabsorption proximally (via NaPi-IIa internalization). PTH also activates 1α-hydroxylase, converting 25-(OH)D₃ to active 1,25-(OH)₂D₃ (calcitriol). (3) Intestine: Calcitriol increases intestinal Ca²⁺ absorption via TRPV6 channels and calbindin-D9k — an indirect PTH effect.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a newly identified peptide is a hormone. She detects the peptide in the bloodstream of mice after food intake. Which set of experiments would most rigorously demonstrate that this peptide functions as a hormone?",
+      "options": [
+        "Show that the peptide is produced by specialized cells, measure its concentration in blood before and after feeding, identify its receptor in a distant target tissue, and demonstrate that purified peptide injection reproduces the biological effect while receptor antagonist blocks it",
+        "Show that the peptide is present in the blood and that its concentration changes with physiological state",
+        "Demonstrate that the peptide is produced by neurons and released at synapses",
+        "Show that knockout mice lacking the peptide gene have no phenotype"
+      ],
+      "correctAnswer": "A",
+      "explanation": "To rigorously demonstrate hormone function, the classical criteria (analogous to Koch's postulates for hormones) require: (1) Identification of the source: the peptide must be produced by specific endocrine cells and released into the bloodstream. (2) Regulated secretion: blood levels should change in response to physiological stimuli (here, food intake). (3) Target tissue with specific receptor: a receptor for the peptide must be identified in a distant target tissue, distinguishing hormonal from paracrine/autocrine action. (4) Biological effect: injection of purified peptide should reproduce the observed physiological response. (5) Specificity: a receptor antagonist or antibody should block the effect. Option B is necessary but insufficient — mere presence in blood doesn't prove function. Option C would identify a neurotransmitter, not a hormone. Option D is flawed because compensation/redundancy might mask the phenotype.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Growth hormone (GH) secretion from the anterior pituitary is regulated by two hypothalamic hormones with opposing actions. Which pair correctly identifies these regulators?",
+      "options": [
+        "CRH (stimulatory) and dopamine (inhibitory)",
+        "GHRH (stimulatory) and somatostatin (inhibitory)",
+        "GnRH (stimulatory) and GHRH (inhibitory)",
+        "TRH (stimulatory) and ACTH (inhibitory)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Growth hormone secretion is under dual hypothalamic control: (1) Growth hormone-releasing hormone (GHRH), produced by neurons in the arcuate nucleus, stimulates GH release from somatotroph cells via Gs-coupled GHRH receptors that increase cAMP. (2) Somatostatin (SS, also called growth hormone-inhibiting hormone, GHIH), produced by periventricular neurons, inhibits GH release via Gi-coupled SST receptors that decrease cAMP. GH secretion is pulsatile, with the largest pulses during slow-wave sleep, resulting from alternating GHRH stimulation and somatostatin withdrawal. Additionally, ghrelin (from the stomach) stimulates GH release via the GH secretagogue receptor (GHSR). Negative feedback operates at multiple levels: GH inhibits its own secretion by stimulating somatostatin release and inhibiting GHRH, while IGF-1 (produced by the liver in response to GH) also suppresses GH at both hypothalamic and pituitary levels.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Second messenger signaling cascades amplify hormonal signals. In the epinephrine-stimulated glycogenolysis pathway in hepatocytes, approximately how many glucose molecules can be released from a single epinephrine molecule binding its receptor?",
+      "options": [
+        "1 glucose molecule (1:1 stoichiometry)",
+        "Approximately 100 glucose molecules",
+        "Approximately 10⁸ (100 million) glucose molecules through the signal amplification cascade",
+        "Approximately 1,000 glucose molecules"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The epinephrine signaling cascade is a textbook example of signal amplification through an enzymatic cascade. Each step amplifies the signal: (1) One epinephrine molecule activates one β-adrenergic receptor → (2) One receptor activates multiple Gs proteins (amplification ~10×) → (3) Each Gs activates one adenylyl cyclase, which produces many cAMP molecules (~100×) → (4) Each cAMP activates PKA, and each PKA phosphorylates many phosphorylase kinase molecules (~10×) → (5) Each phosphorylase kinase activates many glycogen phosphorylase molecules (~10×) → (6) Each phosphorylase cleaves many glucose-1-phosphate from glycogen (~100×). The multiplicative effect through 5+ enzymatic steps yields approximately 10⁸ glucose molecules from one hormone-receptor binding event. This cascade amplification explains why hormones are effective at nanomolar to picomolar concentrations.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the adrenal cortex:\n(I) The zona glomerulosa produces mineralocorticoids (primarily aldosterone), regulated mainly by angiotensin II and potassium\n(II) The zona fasciculata produces glucocorticoids (primarily cortisol), regulated by ACTH from the anterior pituitary\n(III) The zona reticularis produces adrenal androgens (DHEA and androstenedione), also regulated by ACTH\n(IV) All three zones express aldosterone synthase (CYP11B2), which is the enzyme that determines which steroid is produced",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "(I) TRUE: The outermost zona glomerulosa synthesizes aldosterone. Its regulation is primarily by angiotensin II (from the RAAS) and serum K⁺ concentration, with ACTH playing a minor permissive role. Aldosterone promotes Na⁺ reabsorption and K⁺ secretion in the collecting duct. (II) TRUE: The middle zona fasciculata is the thickest zone and produces cortisol. ACTH from anterior pituitary corticotrophs is the primary regulator, acting through MC2R (melanocortin 2 receptor) to stimulate steroidogenesis via the StAR protein and steroidogenic enzymes. (III) TRUE: The inner zona reticularis produces weak androgens (DHEA, DHEA-S, androstenedione), regulated by ACTH. These androgens are important precursors for peripheral conversion to testosterone and estrogens. (IV) FALSE: Aldosterone synthase (CYP11B2) is expressed ONLY in the zona glomerulosa. The zona fasciculata expresses 11β-hydroxylase (CYP11B1) instead. This zone-specific enzyme expression is what determines the final steroid product from each zone, despite shared precursor pathways.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Juvenile hormone (JH) in insects works antagonistically with ecdysone (20-hydroxyecdysone) to control metamorphosis. Which statement best describes their interaction?",
+      "options": [
+        "High JH during molting promotes progression to the adult stage, while ecdysone maintains the larval form",
+        "Ecdysone triggers molting, while the presence or absence of JH determines the developmental outcome: high JH maintains larval identity, while declining JH allows metamorphosis to pupal and adult stages",
+        "JH and ecdysone both promote molting but at different body segments",
+        "JH acts only in holometabolous insects while ecdysone acts only in hemimetabolous insects"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The interplay between ecdysone and JH is a central paradigm in insect endocrinology. Ecdysone (produced by the prothoracic gland, stimulated by PTTH from the brain) triggers each molt by activating the nuclear receptor EcR/USP heterodimer, inducing genes for cuticle synthesis and apolysis. JH (produced by the corpora allata) determines the QUALITY of the molt: (1) High JH + ecdysone → larva-to-larva molt (maintains larval gene expression programs). (2) Low JH + ecdysone → larva-to-pupa molt in holometabolous insects, or nymph-to-adult molt in hemimetabolous insects. (3) Absence of JH + ecdysone → pupa-to-adult molt (metamorphosis). JH maintains the 'status quo' — it is a 'juvenilizing' hormone. Its gradual decline during larval development, controlled by JH esterase and JH epoxide hydrolase degradation, permits progressive developmental transitions. JH analogs (methoprene) are used as insecticides based on this principle.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher performs a glucose tolerance test (GTT) in three groups of mice, measuring blood glucose (mg/dL) after oral glucose load:\n\nTime (min) | Wild-type | Group X | Group Y\n0 (fasting) | 90 | 180 | 85\n30 | 160 | 350 | 250\n60 | 130 | 330 | 200\n120 | 95 | 310 | 110\n\nAdditional data:\n- Group X has elevated fasting insulin levels\n- Group Y has very low fasting insulin levels\n\nWhich interpretation best fits these data?",
+      "options": [
+        "Group X has type 1 diabetes and Group Y has type 2 diabetes",
+        "Group X has insulin resistance (type 2 diabetes model) and Group Y has insulin deficiency (type 1 diabetes model)",
+        "Both groups have identical pathology but different severity",
+        "Group X is healthy and Group Y has hypoglycemia"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Analyzing the GTT results: Wild-type shows normal glucose handling — fasting glucose 90, peak 160 at 30 min, return to baseline by 120 min. Group X shows severely impaired glucose tolerance: elevated fasting glucose (180), very high peak (350), and minimal decline by 120 min (310). Crucially, their fasting insulin is ELEVATED, indicating the pancreas is producing insulin but tissues are not responding — this is the hallmark of insulin resistance / type 2 diabetes. The hyperinsulinemia represents compensatory β-cell hypersecretion. Group Y has normal fasting glucose (85) but delayed glucose clearance (peak 250, returns near normal at 120). Their very LOW fasting insulin indicates insulin deficiency — consistent with early type 1 diabetes (autoimmune β-cell destruction) or a model thereof. The delayed but eventual clearance suggests some residual insulin secretion or insulin-independent glucose disposal.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "The anterior pituitary derives from which embryonic tissue?",
+      "options": [
+        "Neural ectoderm (infundibulum of the diencephalon)",
+        "Oral ectoderm (Rathke's pouch, an upward invagination of the stomodeum)",
+        "Neural crest cells migrating from the rhombencephalon",
+        "Endoderm of the pharyngeal pouches"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The pituitary gland has a dual embryonic origin, reflecting its functional duality. The anterior pituitary (adenohypophysis — pars distalis, pars tuberalis, and pars intermedia) develops from Rathke's pouch, an upward evagination of the oral ectoderm from the roof of the stomodeum (primitive mouth). The posterior pituitary (neurohypophysis — pars nervosa, infundibular stalk, and median eminence) derives from the infundibulum, a downward extension of the neuroectoderm from the floor of the diencephalon (hypothalamus). During development, Rathke's pouch migrates upward and loses its connection to the oral cavity, while the infundibulum grows downward. They meet and fuse to form the mature pituitary. This dual origin explains why the anterior pituitary is a true endocrine gland (epithelial cells producing hormones) while the posterior pituitary is neural tissue (storing and releasing hypothalamic hormones).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Addison's disease (primary adrenal insufficiency) results from destruction of the adrenal cortex. Which hormone combination pattern would you expect in this condition?",
+      "options": [
+        "Low cortisol, low aldosterone, high ACTH, and skin hyperpigmentation",
+        "High cortisol, high aldosterone, low ACTH",
+        "Low cortisol, low aldosterone, low ACTH",
+        "Normal cortisol, high aldosterone, high ACTH"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In Addison's disease, the adrenal cortex is destroyed (commonly by autoimmune adrenalitis, tuberculosis, or other causes), leading to deficiency of ALL adrenal cortical hormones: cortisol (glucocorticoid), aldosterone (mineralocorticoid), and adrenal androgens. Due to loss of negative feedback from cortisol, ACTH levels rise dramatically. Importantly, ACTH is derived from proopiomelanocortin (POMC), which also produces melanocyte-stimulating hormone (α-MSH). Elevated POMC processing leads to increased α-MSH, causing characteristic skin and mucosal hyperpigmentation — a hallmark sign of primary adrenal insufficiency. In secondary adrenal insufficiency (pituitary ACTH deficiency), cortisol is low but ACTH is also low, aldosterone is relatively preserved (since its regulation depends primarily on RAAS and K⁺, not ACTH), and hyperpigmentation is absent.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that leptin, secreted by adipose tissue, acts on hypothalamic neurons to suppress appetite. She has access to ob/ob mice (which lack functional leptin due to a mutation in the ob gene). Which experimental design would most convincingly support her hypothesis?",
+      "options": [
+        "Feed ob/ob mice a restricted diet and measure their body weight over time",
+        "Perform parabiosis (surgical joining of circulatory systems) between ob/ob and wild-type mice, and demonstrate that ob/ob mice reduce food intake and lose weight; additionally, inject recombinant leptin directly into the hypothalamus of ob/ob mice and show appetite suppression",
+        "Cross ob/ob mice with db/db mice (leptin receptor mutant) and observe offspring phenotype",
+        "Measure leptin mRNA in adipose tissue of ob/ob mice"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The parabiosis experiment between ob/ob and wild-type mice is one of the most elegant experiments in endocrinology history (Coleman, 1973). When circulatory systems are surgically joined, the ob/ob mouse (which lacks leptin) receives leptin from the wild-type partner via the shared circulation. If the hypothesis is correct, the ob/ob mouse should reduce food intake and lose weight — which is exactly what happened. The reciprocal experiment with db/db mice (which produce leptin but lack its receptor) showed that db/db mice did NOT respond to parabiosis with wild-type mice, confirming the receptor defect. Injecting recombinant leptin directly into the hypothalamus of ob/ob mice specifically demonstrates the site of action. Diet restriction (option A) would cause weight loss regardless of leptin. Measuring ob gene mRNA (option D) would show it's mutated but doesn't test function.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Thyroid hormone (T3) acts through nuclear receptors (TR) that bind DNA as heterodimers with retinoid X receptor (RXR). What is unusual about unliganded TR compared to most other nuclear receptors?",
+      "options": [
+        "Unliganded TR is degraded by the proteasome and only stabilized when T3 binds",
+        "Unliganded TR is constitutively bound to thyroid hormone response elements (TREs) on DNA, actively repressing transcription by recruiting corepressor complexes (NCoR/SMRT); T3 binding switches TR from repressor to activator by exchanging corepressors for coactivators",
+        "Unliganded TR remains in the cytoplasm and only enters the nucleus when T3 binds",
+        "Unliganded TR activates transcription at the same level as the liganded form"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Thyroid hormone receptors (TRα and TRβ) are unusual among nuclear receptors because they constitutively occupy thyroid hormone response elements (TREs) on DNA even in the absence of ligand (T3). In the unliganded state, TR/RXR heterodimers recruit corepressor complexes (NCoR — nuclear receptor corepressor, and SMRT — silencing mediator of retinoid and thyroid receptors), which in turn recruit histone deacetylases (HDACs). HDACs condense chromatin and actively REPRESS transcription of target genes below basal levels. When T3 binds, conformational change in TR causes release of corepressors and recruitment of coactivator complexes (SRC/p160 family), which recruit histone acetyltransferases (HATs) that open chromatin and activate transcription. This 'derepression plus activation' model explains why hypothyroidism causes more severe effects than simply lacking a hormone — the unliganded receptor actively represses genes that would otherwise be transcribed at basal levels.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "The pancreatic islets of Langerhans contain several cell types. Which correctly matches cell type to hormone and function?",
+      "options": [
+        "Alpha cells produce insulin (lowers blood glucose); beta cells produce glucagon (raises blood glucose)",
+        "Beta cells produce insulin (lowers blood glucose); alpha cells produce glucagon (raises blood glucose); delta cells produce somatostatin (inhibits insulin and glucagon release)",
+        "Beta cells produce both insulin and glucagon depending on blood glucose levels",
+        "Alpha cells produce somatostatin; delta cells produce glucagon; beta cells produce insulin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The islets of Langerhans comprise approximately 1-2% of pancreatic mass but are essential for glucose homeostasis. They contain at least four endocrine cell types: (1) Beta cells (~65-80% of islet mass) produce INSULIN, released when blood glucose rises above ~100 mg/dL. Insulin promotes glucose uptake, glycogen synthesis, lipogenesis, and protein synthesis. (2) Alpha cells (~15-20%) produce GLUCAGON, released when blood glucose falls. Glucagon stimulates hepatic glycogenolysis and gluconeogenesis. (3) Delta cells (~3-10%) produce SOMATOSTATIN, which inhibits both insulin and glucagon secretion via paracrine signaling — acting as a local brake on islet hormone release. (4) PP cells (~1%) produce pancreatic polypeptide, which inhibits pancreatic exocrine secretion. Additionally, epsilon cells produce ghrelin. The spatial arrangement places beta cells in the core surrounded by alpha and delta cells in the mantle.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the hypothalamic-pituitary portal system:\n(I) Hypothalamic releasing and inhibiting hormones are secreted into capillaries of the median eminence and travel via portal veins to a second capillary bed in the anterior pituitary\n(II) This portal system allows hypothalamic hormones to reach pituitary cells at high concentrations without dilution in the systemic circulation\n(III) Oxytocin and ADH are delivered to the anterior pituitary via this same portal system\n(IV) Destruction of the portal system (e.g., by pituitary stalk transection) leads to decreased secretion of all anterior pituitary hormones except prolactin, which increases",
+      "options": [
+        "True",
+        "True",
+        "False",
+        "True"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "(I) TRUE: The hypothalamic-hypophyseal portal system is a specialized vascular arrangement. Neurons in hypothalamic nuclei (arcuate, paraventricular, etc.) release their hormones (TRH, GnRH, CRH, GHRH, somatostatin, dopamine) into fenestrated capillaries of the primary capillary plexus in the median eminence. These capillaries drain into portal veins that descend along the pituitary stalk to a secondary capillary plexus in the anterior pituitary. (II) TRUE: This portal arrangement delivers hypothalamic hormones directly to their pituitary target cells at concentrations 100-1000× higher than systemic levels. (III) FALSE: Oxytocin and ADH are produced by magnocellular neurons and transported via axons directly to the POSTERIOR pituitary for storage and release into the systemic circulation. They do NOT travel through the portal system. (IV) TRUE: Since most hypothalamic hormones are stimulatory (TRH, GnRH, CRH, GHRH), stalk transection reduces anterior pituitary hormone secretion. The exception is prolactin, which is under tonic INHIBITORY control by dopamine — loss of dopamine inhibition causes prolactin hypersecretion.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Glucocorticoid (cortisol) excess produces Cushing's syndrome. Which of the following is NOT a typical feature of Cushing's syndrome?",
+      "options": [
+        "Central obesity with thin extremities due to peripheral muscle wasting and central fat redistribution",
+        "Hyperglycemia due to cortisol's gluconeogenic and insulin-antagonistic effects",
+        "Hyperpigmentation of the skin due to elevated ACTH",
+        "Osteoporosis due to cortisol's inhibition of osteoblast function and calcium absorption"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cushing's syndrome (chronic glucocorticoid excess) produces: central obesity, moon face, buffalo hump (fat redistribution), muscle wasting (protein catabolism), thin skin with easy bruising and striae (collagen breakdown), hyperglycemia/diabetes (gluconeogenesis stimulation, insulin resistance), osteoporosis (decreased osteoblast activity, increased osteoclast activity, reduced intestinal Ca²⁺ absorption), hypertension (permissive effect on catecholamines, sodium retention), immunosuppression, and psychiatric disturbances. Hyperpigmentation is NOT a typical feature of Cushing's syndrome — it occurs in Addison's disease (primary adrenal insufficiency) where ACTH is elevated. In most Cushing's syndrome cases, the cause is either exogenous glucocorticoids (ACTH is suppressed) or a pituitary adenoma (ACTH is elevated but usually not enough for significant hyperpigmentation). However, ectopic ACTH syndrome (e.g., from small cell lung cancer) can cause hyperpigmentation along with Cushing's features.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "The calcium-sensing receptor (CaSR) on parathyroid chief cells plays a critical role in Ca²⁺ homeostasis. Which signaling mechanism does CaSR use, and what happens when activating mutations occur?",
+      "options": [
+        "CaSR is a receptor tyrosine kinase; activating mutations cause hyperparathyroidism",
+        "CaSR is a G-protein-coupled receptor (Gq/G11); activating mutations cause familial hypocalciuric hypercalcemia (FHH)",
+        "CaSR is a Gq/G11-coupled GPCR; activating mutations cause autosomal dominant hypocalcemia (ADH) due to inappropriate suppression of PTH at normal calcium levels",
+        "CaSR is a ligand-gated ion channel; activating mutations have no clinical phenotype"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The calcium-sensing receptor (CaSR) is a class C GPCR that couples primarily to Gq/G11 and Gi/o proteins. When extracellular Ca²⁺ rises, Ca²⁺ ions bind CaSR on parathyroid chief cells, activating PLC-IP₃-DAG signaling, which inhibits PTH secretion. This creates the negative feedback loop: high Ca²⁺ → CaSR activation → decreased PTH → decreased blood Ca²⁺. Activating (gain-of-function) mutations in CaSR make the receptor hypersensitive to calcium, so it signals 'calcium is high' even at normal Ca²⁺ levels, suppressing PTH and causing autosomal dominant hypocalcemia (ADH). Patients present with hypocalcemia, low PTH, and relative hypercalciuria. Conversely, inactivating (loss-of-function) mutations make the receptor insensitive to calcium, requiring higher Ca²⁺ to suppress PTH, causing familial hypocalciuric hypercalcemia (FHH) — asymptomatic mild hypercalcemia with low urinary calcium.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures cortisol levels in blood samples taken at different times from a healthy subject and a patient:\n\nTime | Healthy subject (μg/dL) | Patient (μg/dL)\n8:00 AM | 18 | 35\n12:00 PM | 12 | 33\n8:00 PM | 6 | 30\n12:00 AM | 3 | 28\n\nAdditional finding: The patient's cortisol does not suppress after overnight dexamethasone (1 mg).\n\nWhich interpretation is most accurate?",
+      "options": [
+        "The patient has adrenal insufficiency with compensatory cortisol elevation",
+        "The patient has lost normal diurnal cortisol variation and shows resistance to dexamethasone suppression, consistent with Cushing's syndrome",
+        "Both subjects show normal cortisol patterns; the patient simply has higher baseline levels",
+        "The patient has an adrenal adenoma that produces cortisol only at night"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Normal cortisol secretion follows a circadian (diurnal) pattern driven by the suprachiasmatic nucleus: highest in the early morning (~15-25 μg/dL at 8 AM, the 'cortisol awakening response'), declining throughout the day, with a nadir at midnight (~1-5 μg/dL). The healthy subject shows this classic pattern (18→3). The patient shows: (1) elevated cortisol at all time points, (2) LOSS of normal diurnal variation (only modest decline from 35 to 28), and (3) failure to suppress with low-dose dexamethasone. Loss of diurnal variation is one of the earliest features of Cushing's syndrome, often preceding overt hypercortisolism. Dexamethasone is a synthetic glucocorticoid that should suppress ACTH and cortisol via negative feedback — failure to suppress confirms autonomous cortisol production. The next diagnostic step would be high-dose dexamethasone suppression and ACTH measurement to distinguish pituitary, adrenal, and ectopic sources.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Prostaglandins are local signaling molecules derived from arachidonic acid. Which enzyme catalyzes the first committed step in prostaglandin synthesis, and why is this enzyme a major pharmacological target?",
+      "options": [
+        "Lipoxygenase; it produces leukotrienes that cause bronchoconstriction",
+        "Cyclooxygenase (COX); it converts arachidonic acid to prostaglandin H₂, and COX inhibitors (NSAIDs like aspirin, ibuprofen) reduce inflammation, pain, and fever",
+        "Phospholipase C; it releases IP₃ and DAG for calcium signaling",
+        "Phospholipase A₂; it releases arachidonic acid from membrane phospholipids"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Prostaglandin synthesis begins when phospholipase A₂ releases arachidonic acid (AA) from membrane phospholipids. However, the first COMMITTED step toward prostaglandins specifically is catalyzed by cyclooxygenase (COX, also called prostaglandin H₂ synthase). COX converts AA to prostaglandin G₂ (via cyclooxygenase activity) and then to prostaglandin H₂ (via peroxidase activity). PGH₂ is then converted by tissue-specific synthases to various prostaglandins (PGE₂, PGD₂, PGF₂α, PGI₂/prostacyclin) and thromboxane A₂. Two major COX isoforms exist: COX-1 (constitutive, housekeeping functions) and COX-2 (inducible by inflammation). NSAIDs inhibit COX: aspirin irreversibly acetylates COX (explaining its antiplatelet effect — platelets cannot synthesize new COX), while ibuprofen and naproxen reversibly compete with AA. This explains their anti-inflammatory, analgesic, and antipyretic effects.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Researchers want to identify the cellular source of a novel hormone 'Factor X' that appears in the blood after exercise. They have antibodies against Factor X. Which combination of techniques would best identify the endocrine source?",
+      "options": [
+        "Measure Factor X in blood before and after exercise in multiple subjects",
+        "Perform immunohistochemistry with anti-Factor X antibodies on tissue sections from multiple organs, combined with measuring arteriovenous concentration differences across candidate organs during exercise",
+        "Inject Factor X into sedentary mice and measure exercise capacity",
+        "Knock out Factor X in all tissues simultaneously and observe the phenotype"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Identifying the cellular source of a hormone requires two complementary approaches: (1) Immunohistochemistry (IHC) using anti-Factor X antibodies on tissue sections from multiple candidate organs would localize Factor X protein to specific cell types. Positive staining would indicate production and storage of the factor. (2) Arteriovenous (A-V) concentration differences across candidate organs during exercise would definitively identify which organ RELEASES Factor X into the circulation. If venous blood leaving an organ has higher Factor X concentration than arterial blood entering it, that organ is secreting Factor X. This technique was classically used to identify the liver as the source of angiotensinogen and adipose tissue as the source of leptin. Option A shows Factor X rises but doesn't identify the source. Option C tests function, not source. Option D (whole-body KO) shows the global effect but not which tissue produces it.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Melatonin, produced by the pineal gland, plays a role in circadian rhythms. Which of the following accurately describes melatonin synthesis and regulation?",
+      "options": [
+        "Melatonin is synthesized from tyrosine via DOPA and dopamine intermediates",
+        "Melatonin is synthesized from tryptophan via serotonin, with the rate-limiting enzyme arylalkylamine N-acetyltransferase (AANAT) activated by darkness-induced norepinephrine release from sympathetic fibers",
+        "Melatonin is synthesized during daylight hours and suppressed at night",
+        "Melatonin synthesis is regulated by cortisol feedback from the adrenal cortex"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Melatonin synthesis in pinealocytes follows the pathway: tryptophan → 5-hydroxytryptophan → serotonin → N-acetylserotonin → melatonin. The rate-limiting enzyme is AANAT (arylalkylamine N-acetyltransferase), which is dramatically upregulated at night. The regulation pathway is: suprachiasmatic nucleus (SCN, the master circadian clock) → paraventricular nucleus → intermediolateral column of spinal cord → superior cervical ganglion → postganglionic sympathetic fibers release norepinephrine → β1-adrenergic receptors on pinealocytes → cAMP → PKA → AANAT activation and stabilization. Light detected by retinal photoreceptors (melanopsin-expressing ipRGCs) signals the SCN, which INHIBITS the sympathetic pathway during daytime. Thus melatonin is high at night (darkness) and low during the day. Melatonin acts on MT1 and MT2 receptors in the SCN and other brain regions to entrain circadian rhythms.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Hormones and the Endocrine System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Graves' disease is an autoimmune condition causing hyperthyroidism. What is the pathological mechanism?",
+      "options": [
+        "Autoantibodies destroy thyroid follicular cells, releasing stored thyroid hormones",
+        "Thyroid-stimulating immunoglobulins (TSI) bind and activate the TSH receptor, causing unregulated thyroid hormone synthesis and secretion independent of TSH",
+        "Anti-thyroglobulin antibodies block T3/T4 release, causing compensatory TSH elevation and thyroid hyperplasia",
+        "Cytotoxic T cells directly stimulate thyroid hormone production"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Graves' disease is caused by autoantibodies (thyroid-stimulating immunoglobulins, TSI, also called thyroid-receptor antibodies or TRAb) that bind the TSH receptor on thyroid follicular cells and MIMIC TSH action. These IgG antibodies activate the Gs-coupled TSH receptor, stimulating cAMP production and driving thyroid hormone synthesis, iodide uptake, thyroglobulin production, and thyroid growth — all independent of actual TSH levels. Because TSI are not regulated by negative feedback (unlike TSH), the result is autonomous, excessive T3/T4 production. The high T3/T4 suppress TSH to undetectable levels via negative feedback, but this doesn't stop TSI-driven stimulation. Clinical features include thyrotoxicosis (weight loss, tachycardia, tremor, heat intolerance), diffuse goiter (thyroid enlargement from TSI stimulation), and ophthalmopathy (exophthalmos — caused by cross-reactive autoimmunity against orbital fibroblasts sharing TSH receptor antigens).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Hormones and the Endocrine System"
+    }
+  ]
+}
