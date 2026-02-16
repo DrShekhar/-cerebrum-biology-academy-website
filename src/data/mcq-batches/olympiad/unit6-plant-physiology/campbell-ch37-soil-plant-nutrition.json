@@ -1,0 +1,728 @@
+{
+  "batchId": "olympiad-campbell-ch37-soil-plant-nutrition",
+  "subject": "Biology",
+  "category": "Olympiad",
+  "description": "Campbell Biology Chapter 37 – Soil and Plant Nutrition: mineral nutrition, essential elements, soil composition, nitrogen fixation, mycorrhizae, nutrient deficiencies, and plant-microbe symbioses (IBO/USABO/NSEB level)",
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "A researcher grows tomato plants in nutrient solutions lacking individual essential elements. Which deficiency would most specifically impair the light-dependent reactions of photosynthesis by preventing water oxidation at Photosystem II?",
+      "options": [
+        "Nitrogen deficiency, because N is a component of chlorophyll porphyrin rings",
+        "Manganese deficiency, because Mn is part of the oxygen-evolving complex (OEC)",
+        "Iron deficiency, because Fe is required for cytochrome and ferredoxin function",
+        "Magnesium deficiency, because Mg is the central atom of chlorophyll molecules"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The oxygen-evolving complex (OEC) of Photosystem II contains a Mn4CaO5 cluster that catalyzes the oxidation of water to molecular oxygen. Manganese deficiency specifically impairs this complex, preventing the splitting of water molecules during the light-dependent reactions. While nitrogen deficiency affects chlorophyll synthesis (which contains N in its porphyrin ring), iron deficiency affects electron carriers like cytochromes and ferredoxin, and magnesium deficiency reduces chlorophyll formation (Mg is the central atom), none of these specifically target the water-oxidation step at PSII. The Mn cluster cycles through oxidation states (S0 through S4) during the Kok cycle, making manganese uniquely essential for photosynthetic water oxidation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a hydroponic experiment, plants supplied with ammonium (NH4+) as the sole nitrogen source show rhizosphere acidification, while plants supplied with nitrate (NO3-) show rhizosphere alkalinization. What is the primary mechanism underlying this pH difference?",
+      "options": [
+        "NH4+ uptake is coupled to H+ efflux via H+-ATPase to maintain membrane potential, while NO3- uptake requires H+ co-transport into the cell",
+        "NH4+ assimilation in roots produces organic acids that are exuded, while NO3- assimilation consumes organic acids",
+        "NH4+ uptake involves H+ release to maintain charge balance across the plasma membrane, while NO3- uptake involves OH-/HCO3- release",
+        "NH4+ triggers increased respiration and CO2 release that acidifies soil water, while NO3- suppresses root respiration"
+      ],
+      "correctAnswer": "C",
+      "explanation": "When plants take up the cation NH4+, they must maintain electrical neutrality across the root cell plasma membrane. To balance the positive charge entering the cell, roots release H+ ions into the rhizosphere, causing acidification. Conversely, when plants take up the anion NO3-, charge balance is maintained by releasing OH- or HCO3- ions, which alkalinize the rhizosphere. This charge-balance mechanism is the primary driver of the pH changes observed. While H+-ATPase activity and organic acid metabolism may contribute, the fundamental cause is the requirement for electroneutrality during ion uptake. This principle is exploited in agriculture, where ammonium-based fertilizers can acidify soils over time, while nitrate-based fertilizers tend to raise soil pH.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Molybdenum is classified as an essential micronutrient for plants, yet it is required in the smallest quantity of all mineral nutrients. Which enzymatic function makes Mo indispensable?",
+      "options": [
+        "Mo is a cofactor for nitrate reductase and nitrogenase, both critical for nitrogen metabolism",
+        "Mo is required for superoxide dismutase activity in chloroplasts, protecting against ROS damage",
+        "Mo activates carbonic anhydrase, which supplies CO2 to RuBisCO in mesophyll cells",
+        "Mo is essential for cytochrome c oxidase in the mitochondrial electron transport chain"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Molybdenum is an essential cofactor for two key enzymes in nitrogen metabolism: nitrate reductase (which reduces NO3- to NO2- in the first step of nitrate assimilation) and nitrogenase (the enzyme in nitrogen-fixing bacteria that converts N2 to NH3). In nitrate reductase, Mo is part of a molybdopterin cofactor (Moco) that facilitates the two-electron transfer during nitrate reduction. In nitrogenase, Mo is part of the FeMo-cofactor at the active site where N2 is reduced. This dual role in nitrogen metabolism explains why Mo deficiency symptoms resemble nitrogen deficiency, including chlorosis of older leaves. Superoxide dismutase uses Cu/Zn, Mn, or Fe as cofactors; carbonic anhydrase uses Zn; and cytochrome c oxidase uses Cu and Fe.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "A soil scientist measures a cation exchange capacity (CEC) of 40 cmol(+)/kg in a clay-rich soil and 5 cmol(+)/kg in a sandy soil. How does high CEC affect plant mineral nutrition?",
+      "options": [
+        "High CEC soils release cations more readily to plants because electrostatic repulsion between clay particles and cations facilitates desorption",
+        "High CEC soils buffer against nutrient loss by holding cations on negatively charged clay and humus surfaces, making them available for root exchange",
+        "High CEC reduces nutrient availability because cations are irreversibly bound to clay mineral lattice structures",
+        "High CEC primarily affects anion nutrition by creating positively charged sites that attract phosphate and nitrate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cation exchange capacity (CEC) measures the total quantity of exchangeable cations that a soil can hold. Clay particles and humus have negatively charged surfaces that electrostatically attract and retain cations such as K+, Ca2+, Mg2+, and NH4+. This retention prevents these essential nutrients from being leached by percolating water, effectively buffering the soil nutrient supply. Roots access these cations through cation exchange: root hairs and associated microorganisms release H+ ions that displace nutrient cations from clay surfaces, making them available for uptake. The binding is reversible (not irreversible), which is what makes the nutrients accessible. CEC primarily affects cation retention, not anion nutrition; anion exchange capacity (AEC) is a separate property. Sandy soils with low CEC are more prone to nutrient leaching and require more frequent fertilization.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nitrogen-fixing rhizobia in legume root nodules are supplied with carbon compounds by the host plant. Which specific carbon source is preferentially provided to bacteroids, and why is sucrose not directly used?",
+      "options": [
+        "Glucose is provided because bacteroids lack invertase to cleave sucrose",
+        "Dicarboxylic acids (malate and succinate) are provided because bacteroids preferentially oxidize C4 compounds via their TCA cycle",
+        "Fructose is provided after sucrose cleavage by plant sucrose synthase in the nodule cortex",
+        "Citrate is provided because it chelates the iron needed for nitrogenase cofactor assembly"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bacteroids within legume root nodules are supplied primarily with dicarboxylic acids, particularly malate and succinate, as their carbon and energy source. Sucrose arriving from the phloem is cleaved by sucrose synthase in nodule cells, and the resulting hexoses are metabolized through plant glycolysis and the TCA cycle to produce malate and succinate. These C4 dicarboxylates are transported across the peribacteroid membrane (symbiosome membrane) via dicarboxylate transport proteins (Dct). Bacteroids have evolved to preferentially metabolize these compounds through their own TCA cycle, generating the large amounts of ATP and reducing equivalents (16 ATP and 8 electrons per N2 reduced) required for nitrogenase activity. Bacteroids have reduced metabolic capabilities compared to free-living rhizobia and depend on the host for their carbon supply.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which statement correctly describes the role of leghemoglobin in nitrogen fixation within legume root nodules?",
+      "options": [
+        "Leghemoglobin transports O2 to bacteroids at high concentrations to fuel the ATP-intensive nitrogenase reaction",
+        "Leghemoglobin is synthesized entirely by the bacteroid and functions as an O2 sensor that regulates nif gene expression",
+        "Leghemoglobin buffers free O2 concentration to nanomolar levels, allowing bacteroid respiration while protecting O2-sensitive nitrogenase",
+        "Leghemoglobin converts O2 to superoxide radicals that signal nodule maturation and trigger bacteroid differentiation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Leghemoglobin is a heme protein found in the cytoplasm of infected nodule cells that plays a critical role in regulating oxygen concentration within the nodule. Nitrogenase is extremely sensitive to oxygen and is irreversibly inactivated by even brief exposure to O2. However, bacteroids require O2 for aerobic respiration to generate the large amounts of ATP needed for nitrogen fixation (16 ATP per N2). Leghemoglobin solves this paradox by binding O2 with very high affinity (Kd ~10 nM), buffering the free O2 concentration to approximately 10 nM while facilitating O2 flux to bacteroid cytochrome oxidase, which has an extremely high affinity for O2. The globin portion is encoded by the plant genome while the heme moiety is synthesized by the bacteroid, making it a truly symbiotic molecule.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Phosphorus is often the most limiting nutrient in tropical soils. Which adaptation is NOT a plant strategy for enhancing phosphorus acquisition?",
+      "options": [
+        "Secretion of organic acids (citrate, malate) from roots to solubilize Al- and Fe-bound phosphate",
+        "Formation of arbuscular mycorrhizal associations that extend the phosphorus depletion zone",
+        "Upregulation of high-affinity phosphate transporters (PHT1 family) in root epidermal cells",
+        "Increasing stomatal density to enhance transpiration-driven mass flow of phosphate to roots"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Phosphate moves through soil primarily by diffusion rather than mass flow because of its very low concentration in soil solution and strong adsorption to soil particles. Increasing stomatal density and transpiration would enhance mass flow of water and dissolved solutes to the root surface, but this has minimal effect on phosphate delivery because phosphate diffusion coefficients in soil are extremely low (10^-12 to 10^-15 m2/s). In contrast, all other options are well-documented phosphorus acquisition strategies: organic acid exudation chelates Al3+ and Fe3+, releasing bound phosphate; arbuscular mycorrhizal fungi extend the effective root surface area by orders of magnitude, exploring soil beyond the phosphorus depletion zone; and PHT1 high-affinity transporters are upregulated under P deficiency, lowering the Km for phosphate uptake to micromolar concentrations.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "A plant geneticist identifies a mutant line of Medicago truncatula that forms nodule primordia but fails to allow rhizobial infection threads to penetrate cortical cells. Which gene is most likely disrupted?",
+      "options": [
+        "NIN (Nodule Inception), a transcription factor required for cortical cell divisions during nodule organogenesis",
+        "DMI1 (Does Not Make Infections 1), encoding a cation channel in the nuclear envelope required for calcium spiking",
+        "NFR5 (Nod Factor Receptor 5), encoding a LysM receptor kinase that perceives Nod factors at the root hair surface",
+        "NSP2 (Nodulation Signaling Pathway 2), a GRAS transcription factor downstream of calcium spiking"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The phenotype described—nodule primordia form but infection threads fail to penetrate cortical cells—points to a defect in the signaling pathway downstream of Nod factor perception but upstream of full infection thread development. DMI1 (also known as CASTOR in Lotus japonicus) encodes a ligand-gated cation channel located in the nuclear envelope that is essential for generating the calcium spiking (calcium oscillations) response to Nod factors. Without functional DMI1, calcium spiking does not occur, infection thread formation is severely impaired, but some cortical cell divisions may still be initiated through alternative signaling. NFR5 mutations would prevent initial Nod factor perception entirely. NIN is required for nodule organogenesis, but its disruption affects both primordia formation and infection. NSP2 acts downstream of calcium spiking but its mutation typically blocks both infection and organogenesis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Iron deficiency chlorosis in calcareous (high pH) soils is common even when total soil iron is abundant. Which mechanism do Strategy I plants (dicots and non-grass monocots) use to acquire iron under these conditions?",
+      "options": [
+        "They secrete mugineic acid family phytosiderophores that chelate Fe3+ for uptake by YS1 transporters",
+        "They acidify the rhizosphere via H+-ATPase, reduce Fe3+ to Fe2+ via FRO2 reductase, and transport Fe2+ via IRT1",
+        "They directly take up Fe3+-hydroxide colloids via endocytosis at root hair tips",
+        "They increase xylem loading of citrate-Fe3+ complexes via the FRD3 transporter to redistribute internal iron"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Strategy I plants (all dicots and non-graminaceous monocots) respond to iron deficiency through a three-component mechanism: (1) Rhizosphere acidification by plasma membrane H+-ATPases (AHA2 in Arabidopsis) that lower soil pH, increasing Fe3+ solubility; (2) Reduction of Fe3+ to Fe2+ by the ferric chelate reductase FRO2 (Ferric Reduction Oxidase 2) at the root surface; (3) Transport of Fe2+ into root epidermal cells by the divalent metal transporter IRT1 (Iron-Regulated Transporter 1). In calcareous soils, the high buffering capacity resists acidification, making Strategy I less effective and resulting in iron deficiency chlorosis. Strategy II (phytosiderophore secretion via mugineic acids and YS1/YSL transporters) is used by grasses. FRD3 functions in internal iron distribution, not primary uptake.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Boron is an essential micronutrient whose primary structural role in plants involves which of the following?",
+      "options": [
+        "Cross-linking rhamnogalacturonan II (RG-II) pectic polysaccharides in the primary cell wall via borate diester bonds",
+        "Stabilizing the thylakoid membrane lipid bilayer by forming complexes with galactolipids",
+        "Acting as a cofactor for cellulose synthase (CESA) complexes during microfibril deposition",
+        "Bridging adjacent lignin monomers during secondary cell wall lignification"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The primary structural role of boron in plants is the cross-linking of rhamnogalacturonan II (RG-II), a pectic polysaccharide in the primary cell wall. Boron forms borate diester bonds between apiose residues on adjacent RG-II molecules, creating RG-II dimers. This cross-linking is essential for maintaining cell wall structure, tensile strength, and porosity. Without boron, RG-II monomers cannot dimerize, leading to weakened cell walls, impaired cell expansion, and the characteristic symptoms of boron deficiency: brittle tissues, hollow stems, and poor reproductive development. Boron deficiency rapidly affects growing points (meristems) because new cell walls require continuous RG-II cross-linking. Boron has no established role in thylakoid membranes, cellulose synthesis, or lignification.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cluster roots (proteoid roots) are a specialized adaptation found in plants of the family Proteaceae growing on extremely phosphorus-poor soils. What is the primary function of these structures?",
+      "options": [
+        "Increasing nitrogen fixation capacity by housing endophytic diazotrophic bacteria",
+        "Enhancing water uptake through dense root hair proliferation in desert environments",
+        "Exuding large quantities of carboxylates (citrate, malate) to mobilize sparingly soluble phosphorus from soil minerals",
+        "Producing allelopathic compounds that suppress competitor root growth in the rhizosphere"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cluster roots (proteoid roots) are dense clusters of short lateral rootlets that develop as an adaptation to extremely phosphorus-deficient soils. These specialized root structures undergo a developmental program culminating in a massive exudative burst of organic acids—primarily citrate and malate—into the rhizosphere. The carboxylates mobilize sparingly soluble forms of phosphorus by chelating Al3+, Fe3+, and Ca2+ that otherwise bind phosphate in soil minerals, releasing it into soil solution for uptake. A single exudative burst can release millimolar concentrations of citrate, far exceeding normal root exudation rates. This strategy has evolved convergently in Proteaceae, Fabaceae, Casuarinaceae, and other families adapted to ancient, weathered soils in Australia, South Africa, and South America. Notably, most Proteaceae cannot form mycorrhizal associations and rely entirely on cluster roots for phosphorus acquisition.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the Nod factor signaling pathway of legume-rhizobium symbiosis, what is the immediate molecular event triggered by Nod factor perception at the root hair surface?",
+      "options": [
+        "Activation of SYMRK/DMI2 receptor kinase and downstream calcium spiking in the nucleus",
+        "Direct activation of NIN transcription factor leading to cortical cell division",
+        "Depolarization of the root hair plasma membrane followed by tip-focused calcium influx and root hair curling",
+        "Secretion of strigolactones that attract rhizobia toward the root surface"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The earliest detectable molecular event after Nod factor perception by LysM receptor kinases (NFR1/NFR5 in Lotus, LYK3/NFP in Medicago) is a rapid depolarization of the root hair plasma membrane, occurring within seconds. This is followed by a tip-focused calcium influx (calcium flux) and subsequent root hair deformation and curling, which entraps rhizobia in a pocket called the infection chamber. The calcium spiking (nuclear calcium oscillations) mediated through the SYMRK/DMI2 pathway occurs later—within minutes to hours—and is a downstream event in the signaling cascade. NIN activation is further downstream, occurring after calcium spiking signal transduction. Strigolactone secretion occurs constitutively from roots and serves as a pre-infection signal for mycorrhizal fungi, not as a Nod factor response.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Arnon and Stout (1939) established three criteria for an element to be considered essential for plant growth. Which set of criteria is correct?",
+      "options": [
+        "The element must be present in plant tissues above 0.1% dry weight, must be absorbed as an ion, and must not be replaceable by another element",
+        "The element must be required for the plant to complete its life cycle, its function cannot be replaced by another element, and it must be directly involved in plant metabolism",
+        "The element must be present in all plant species, must be required in both vegetative and reproductive stages, and must function as an enzyme cofactor",
+        "The element must increase growth when supplied, must be present in the soil solution, and must be transported through the xylem"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Arnon and Stout (1939) defined three criteria of essentiality that remain the standard in plant nutrition: (1) A deficiency of the element makes it impossible for the plant to complete its vegetative or reproductive life cycle; (2) The deficiency is specific to the element in question and can be prevented or corrected only by supplying that element—no other element can substitute; (3) The element must be directly involved in plant metabolism (e.g., as a constituent of an essential molecule or required for a specific enzymatic reaction), not merely exerting an indirect effect such as antagonizing a toxic element. These criteria were established through rigorous hydroponic experiments and distinguish truly essential elements from beneficial elements that may promote growth but are not absolutely required.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "A plant is exhibiting interveinal chlorosis on young, newly expanding leaves while older leaves remain green. Which nutrient deficiency is most likely responsible?",
+      "options": [
+        "Nitrogen, because it is a mobile nutrient that is remobilized from older to younger leaves",
+        "Iron, because it is relatively immobile in phloem and deficiency symptoms appear first in young tissues",
+        "Potassium, because it regulates stomatal aperture and osmotic potential in expanding cells",
+        "Phosphorus, because it is required for ATP synthesis during rapid cell division in young leaves"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Iron deficiency characteristically produces interveinal chlorosis on young, newly expanding leaves. This pattern occurs because iron is relatively immobile in the phloem—once deposited in older leaves, it cannot be efficiently remobilized and redistributed to growing tissues. Therefore, when iron supply from roots is insufficient, young leaves are the first to show deficiency symptoms. The interveinal pattern occurs because iron is required for chlorophyll synthesis (specifically, it is needed for the enzyme Mg-protoporphyrin IX monomethyl ester cyclase) and for chloroplast function, but veins often retain green color slightly longer due to their proximity to the vascular supply. In contrast, nitrogen, phosphorus, and potassium deficiencies typically appear first in older leaves because these mobile nutrients are readily remobilized from senescing tissues to support new growth.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The autoregulation of nodulation (AON) pathway in legumes prevents excessive nodule formation. Which long-distance signaling mechanism mediates this systemic regulation?",
+      "options": [
+        "A shoot-to-root auxin signal that inhibits cortical cell divisions at additional infection sites",
+        "Ethylene accumulation in roots that blocks Nod factor signaling and prevents new infections",
+        "CLE peptides produced by early nodules travel to the shoot, where they activate a receptor kinase (HAR1/SUNN) that sends a shoot-derived inhibitor (SDI) back to roots",
+        "Jasmonic acid synthesized in developing nodules diffuses systemically through the phloem to suppress rhizobial recognition"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Autoregulation of nodulation (AON) is a systemic feedback mechanism that limits nodule number to prevent excessive carbon drain on the host plant. The pathway involves: (1) Early developing nodules produce CLE (CLAVATA3/Embryo surrounding region-related) peptides, specifically CLE-RS1/RS2 in Lotus and RIC1/RIC2 in Medicago; (2) These CLE peptides are transported through the xylem to the shoot; (3) In the shoot, they are perceived by a leucine-rich repeat receptor-like kinase called HAR1 (Hypernodulation Aberrant Root formation 1) in Lotus or SUNN (Super Numeric Nodules) in Medicago; (4) Activation of this receptor triggers production of a shoot-derived inhibitor (SDI), likely a cytokinin or small peptide, that travels back to the roots via the phloem; (5) SDI inhibits further nodule initiation. Mutations in HAR1 or SUNN lead to hypernodulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Carnivorous plants like Dionaea muscipula (Venus flytrap) supplement mineral nutrition through prey capture. Which nutrient is MOST commonly limiting in the habitats of carnivorous plants, driving the evolution of carnivory?",
+      "options": [
+        "Potassium, because bog soils have very low K+ concentrations due to high water saturation",
+        "Nitrogen, because waterlogged acidic bogs have low rates of decomposition and nitrogen mineralization",
+        "Calcium, because acidic bog water dissolves and leaches Ca2+ from the root zone",
+        "Iron, because reducing conditions in waterlogged soils convert Fe3+ to Fe2+ which is toxic at high concentrations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Carnivorous plants have evolved predominantly in nutrient-poor, acidic, waterlogged habitats such as bogs and fens where nitrogen is the most commonly limiting nutrient. In these environments, waterlogged conditions create anaerobic soil that severely slows organic matter decomposition and nitrogen mineralization by soil microbes. Additionally, the acidic pH (often pH 3-5) inhibits nitrifying bacteria, reducing the conversion of ammonium to nitrate. Low nitrogen availability creates strong selective pressure favoring plants that can supplement their nitrogen supply through alternative means. Prey capture provides primarily nitrogen (from proteins and nucleic acids in insect bodies) and phosphorus, which are then absorbed through specialized glandular trichomes. Studies have shown that prey-derived nitrogen can constitute 50-75% of the total nitrogen content in carnivorous plants growing in natural habitats.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the effect of different soil pH levels on the availability of essential minerals. The data shows: At pH 4.5—high Al3+ and Mn2+ availability, low P and Mo availability; At pH 6.5—optimal availability of most nutrients; At pH 8.5—high Ca2+ and Mg2+ availability, very low Fe, Mn, Zn, and Cu availability. Based on these data, which conclusion is most strongly supported?",
+      "options": [
+        "Soil pH affects nutrient availability primarily by altering the activity of soil decomposer organisms that mineralize organic nutrients",
+        "Soil pH affects nutrient availability through its effects on mineral solubility, ion exchange equilibria, and precipitation reactions, with most micronutrients becoming less available at high pH",
+        "Soil pH uniformly increases the availability of all essential minerals as it increases from acidic to alkaline",
+        "Soil pH has minimal direct effect on nutrient availability; the patterns observed are due entirely to differences in root transporter gene expression at different pH values"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data clearly demonstrate that soil pH profoundly affects nutrient availability through chemical mechanisms. At low pH (4.5), high H+ concentration dissolves Al and Mn minerals to potentially toxic levels, while phosphorus precipitates with Al3+ and Fe3+ as insoluble phosphates, and molybdate (MoO4^2-) adsorbs strongly to positively charged surfaces. At optimal pH (6.5), a balance exists where most nutrients are soluble enough for plant uptake without reaching toxic levels. At high pH (8.5), micronutrient cations (Fe3+, Mn2+, Zn2+, Cu2+) form insoluble hydroxides and carbonates, severely limiting their availability, while Ca2+ and Mg2+ remain highly available. These patterns reflect fundamental chemistry: mineral solubility, ion exchange equilibria on clay surfaces, and precipitation-dissolution reactions are all pH-dependent. This is why pH management is one of the most important factors in agricultural nutrient management.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Arbuscular mycorrhizal (AM) fungi facilitate phosphorus uptake in most land plants. What is the molecular mechanism by which AM fungi enhance P delivery to the host?",
+      "options": [
+        "AM fungi secrete phosphatases that mineralize organic phosphorus in the soil, and the released Pi is taken up directly by plant roots",
+        "AM fungal hyphae take up Pi via fungal PHT transporters, translocate it as polyphosphate through hyphae, and release Pi at the arbuscular interface for plant PT4 transporter uptake",
+        "AM fungi fix atmospheric N2 which stimulates plant root growth and indirectly increases P uptake surface area",
+        "AM fungi acidify the rhizosphere more effectively than plant roots, dissolving calcium phosphate minerals for direct plant uptake"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Arbuscular mycorrhizal fungi enhance phosphorus delivery through a sophisticated molecular mechanism: (1) Extraradical hyphae extend far beyond the phosphorus depletion zone around roots, exploring 100× more soil volume; (2) Fungal high-affinity phosphate transporters on extraradical hyphae take up Pi from soil solution; (3) Within the fungal hyphae, Pi is polymerized into polyphosphate granules for long-distance translocation through the interconnected hyphal network; (4) At the arbuscular interface inside root cortical cells, polyphosphate is hydrolyzed and Pi is released into the periarbuscular space; (5) Plant-specific mycorrhiza-inducible phosphate transporters (particularly PT4 family members like MtPT4 in Medicago) on the periarbuscular membrane take up the released Pi into the plant cell. This pathway can deliver up to 80% of a plant's phosphorus requirement in natural soils.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nickel was the most recently confirmed essential element for higher plants (1987). What is the specific metabolic function that makes nickel essential?",
+      "options": [
+        "Nickel is required for the electron transport chain in mitochondria as a component of Complex I",
+        "Nickel is a cofactor for urease, which hydrolyzes urea to ammonia and CO2 during nitrogen recycling",
+        "Nickel activates phytochelatin synthase, enabling heavy metal detoxification in contaminated soils",
+        "Nickel is required for ethylene biosynthesis as a cofactor for ACC oxidase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Nickel was established as the 17th essential mineral element for higher plants through the work of Brown, Welch, and Cary in 1987. The specific function that makes Ni essential is its role as a cofactor for the enzyme urease (EC 3.5.1.5), which catalyzes the hydrolysis of urea to ammonia and carbon dioxide. Urea accumulates in plant tissues through several metabolic pathways, including arginine catabolism (via arginase), purine degradation (via allantoin and allantoic acid pathways), and ureide metabolism in nitrogen-fixing legumes. Without functional urease, toxic concentrations of urea accumulate in leaf tips, causing necrosis—a characteristic symptom of Ni deficiency. Urease contains two Ni2+ ions at its active site that are essential for catalysis. Nickel is not a component of the mitochondrial ETC, phytochelatin synthase, or ACC oxidase (which requires Fe2+).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Soil is composed of mineral particles, organic matter, water, and air. Which soil texture provides optimal conditions for plant growth, and why?",
+      "options": [
+        "Clay soils, because their small particle size maximizes water retention and nutrient-holding capacity",
+        "Sandy soils, because their large pore spaces ensure excellent drainage and root aeration",
+        "Loam soils, because they contain a balanced mixture of sand, silt, and clay that provides adequate drainage, water retention, aeration, and mineral nutrition",
+        "Silt soils, because their intermediate particle size creates capillary spaces that maintain constant water availability"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Loam is considered the ideal soil texture for most plant growth because it combines the beneficial properties of all three mineral particle sizes. A typical loam contains roughly equal influences of sand (0.05-2 mm), silt (0.002-0.05 mm), and clay (<0.002 mm). Sand particles create large pore spaces (macropores) that facilitate drainage and gas exchange, preventing waterlogging and ensuring oxygen reaches roots for aerobic respiration. Silt particles provide intermediate water retention through capillary action in mesopores. Clay particles have the highest surface area-to-volume ratio and carry negative surface charges, providing high CEC for nutrient retention. Pure clay soils, while nutrient-rich, have poor drainage and aeration; pure sandy soils drain too rapidly and have low nutrient-holding capacity. Loam achieves the optimal balance of these competing requirements for plant root function.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a newly discovered element X is essential for plant growth using hydroponic culture. Which experimental design would provide the strongest evidence of essentiality?",
+      "options": [
+        "Grow plants in complete nutrient solution with and without element X, measuring only final biomass after 4 weeks",
+        "Grow plants across multiple generations in purified nutrient solutions lacking only element X, demonstrating failure to complete the life cycle, then rescue the phenotype by adding back element X specifically",
+        "Add element X at increasing concentrations to field soil and measure dose-response growth curves",
+        "Compare tissue concentrations of element X between healthy plants and nutrient-deficient plants using mass spectrometry"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The strongest evidence for essentiality follows Arnon and Stout's criteria and requires: (1) Multi-generational hydroponic culture in highly purified nutrient solutions where element X is the ONLY element absent—this eliminates the possibility that seeds contain sufficient stored X to support one generation; (2) Demonstration that plants cannot complete their life cycle (produce viable seeds) without X; (3) Rescue of the deficiency phenotype by adding back only element X, proving the effect is specific and not due to contamination or indirect effects. Using multiple generations is critical because seed reserves can mask first-generation deficiency. The rescue experiment is essential to prove specificity. Field soil experiments (option C) cannot control for confounding factors. Tissue analysis (option D) shows correlation but not causation. Single-generation biomass measurement (option A) is insufficient—biomass reduction alone does not prove essentiality, and seed reserves may sustain the first generation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Chlorine (Cl) is an essential micronutrient for plants. Besides its role as a cofactor in the oxygen-evolving complex of PSII, which additional physiological function does chloride serve?",
+      "options": [
+        "Chloride is the primary counter-ion for K+ in guard cells, facilitating stomatal opening through osmotic regulation",
+        "Chloride activates RuBisCO carboxylase activity by promoting carbamylation of the active site lysine residue",
+        "Chloride is required for the synthesis of chlorophyll b from chlorophyll a by chlorophyllide a oxygenase",
+        "Chloride functions as a signaling molecule that triggers systemic acquired resistance (SAR) against pathogens"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Chloride (Cl-) serves as an essential osmotically active counter-ion in guard cells during stomatal movements. When stomata open, K+ is actively pumped into guard cells through inward-rectifying K+ channels. To maintain electrical neutrality and generate sufficient osmotic potential for water influx and turgor increase, anions must accompany K+. Chloride and malate2- serve as the primary counter-ions that balance the positive charge of accumulated K+. The relative contribution of Cl- versus malate varies among species and conditions, but Cl- is typically the dominant counter-ion, especially in species well-supplied with chloride. Additionally, Cl- is required for the OEC of PSII (as mentioned), participates in turgor regulation throughout the plant, and may play roles in disease resistance in some species. RuBisCO carbamylation involves CO2 and Mg2+, not Cl-. Chlorophyll interconversion and SAR signaling do not specifically require Cl-.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Zinc deficiency in plants causes characteristic stunting with small, clustered leaves (little leaf and rosette symptoms). What is the biochemical basis for these morphological symptoms?",
+      "options": [
+        "Zinc deficiency impairs photosynthesis by disrupting the Zn-containing enzyme carbonic anhydrase, reducing CO2 supply",
+        "Zinc deficiency reduces auxin (IAA) levels because Zn is required for tryptophan synthesis, the IAA precursor, leading to impaired cell elongation and internode extension",
+        "Zinc deficiency disrupts cell wall extensibility by inhibiting the Zn-dependent enzyme xyloglucan endotransglucosylase",
+        "Zinc deficiency impairs chloroplast division, causing cells to have fewer but larger chloroplasts that cannot support normal growth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The characteristic stunting, small leaves (little leaf), and shortened internodes (rosette) seen in zinc-deficient plants are primarily caused by reduced auxin (indole-3-acetic acid, IAA) production. Zinc is required for the activity of tryptophan synthase, the enzyme that catalyzes the final step in tryptophan biosynthesis. Since tryptophan is the primary precursor for IAA biosynthesis via the TAA1/YUC pathway, zinc deficiency leads to decreased tryptophan availability and consequently reduced IAA levels. Auxin is essential for cell elongation, apical dominance, and internode extension. Reduced auxin levels cause shortened internodes (rosette), reduced leaf expansion (little leaf), and loss of apical dominance. While zinc does serve as a cofactor for carbonic anhydrase and many other enzymes (zinc finger transcription factors, Cu/Zn-SOD, alcohol dehydrogenase), the auxin-related effects best explain the characteristic morphological symptoms.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ectomycorrhizal (ECM) fungi form associations primarily with trees in temperate and boreal forests. How does the ECM symbiosis differ structurally from arbuscular mycorrhizal (AM) symbiosis?",
+      "options": [
+        "ECM fungi penetrate root cortical cell walls and form intracellular arbuscules, while AM fungi remain extracellular",
+        "ECM fungi form a dense hyphal mantle around root tips and a Hartig net between cortical cells without penetrating cell walls, while AM fungi penetrate cortical cell walls to form intracellular arbuscules",
+        "ECM fungi colonize only root hairs, while AM fungi colonize the entire root cortex",
+        "ECM fungi form vesicles for lipid storage inside root cells, while AM fungi form only external hyphae"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ectomycorrhizal (ECM) and arbuscular mycorrhizal (AM) symbioses differ fundamentally in their structural organization. ECM fungi form two distinctive structures: (1) A dense hyphal mantle (sheath) that completely surrounds the root tip, often changing its morphology (forming club-shaped or branched structures); (2) A Hartig net, consisting of hyphae that penetrate between epidermal and cortical cells but never penetrate the cell walls—nutrient exchange occurs across the increased interfacial surface area created by this intercellular hyphal network. In contrast, AM fungi (phylum Glomeromycota) penetrate root cortical cell walls and form highly branched intracellular structures called arbuscules within cortical cells, creating the periarbuscular membrane interface where nutrient exchange occurs. AM fungi do not form an external mantle. This structural difference has functional implications: ECM fungi primarily access organic nitrogen and phosphorus through their production of extracellular enzymes, while AM fungi primarily enhance uptake of inorganic phosphate.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MTF",
+      "question": "Match each mineral nutrient deficiency with its most characteristic visual symptom:\n(I) Nitrogen deficiency\n(II) Potassium deficiency\n(III) Calcium deficiency\n(IV) Sulfur deficiency\n\n(P) General chlorosis starting from older leaves, eventually turning purple\n(Q) Marginal leaf scorch (necrosis) beginning on older leaves\n(R) Distorted and necrotic growing points, blossom-end rot in fruits\n(S) Uniform chlorosis of young leaves similar to nitrogen deficiency but not starting from older leaves",
+      "options": [
+        "I-P, II-Q, III-R, IV-S",
+        "I-Q, II-P, III-S, IV-R",
+        "I-S, II-R, III-Q, IV-P",
+        "I-R, II-S, III-P, IV-Q"
+      ],
+      "correctAnswer": "I-P, II-Q, III-R, IV-S",
+      "explanation": "Each deficiency produces characteristic symptoms related to the nutrient's mobility and function: Nitrogen is highly mobile in phloem, so deficiency symptoms appear first in older leaves as N is remobilized to support new growth. Symptoms include general chlorosis progressing to yellowing and eventual purple coloration (due to anthocyanin accumulation). Potassium is moderately mobile, and deficiency causes marginal leaf scorch (necrosis of leaf edges) on older leaves because K+ is remobilized from mature tissues. The marginal necrosis results from K+'s role in osmotic regulation and enzyme activation. Calcium is phloem-immobile, so deficiency appears in young tissues and meristems. Ca2+ is essential for cell wall structure (pectin cross-linking) and membrane integrity, so deficiency causes distorted, necrotic growing points and blossom-end rot in tomato fruits. Sulfur is relatively immobile, and deficiency produces uniform chlorosis on young leaves (S is needed for amino acids Met and Cys) that resembles N deficiency but targets young rather than old leaves.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The common mycorrhizal network (CMN) allows transfer of resources between plants connected by shared mycorrhizal fungi. What is the primary ecological significance of CMNs?",
+      "options": [
+        "CMNs enable large trees to transfer carbon and nutrients to understory seedlings, facilitating forest regeneration and maintaining plant community diversity",
+        "CMNs allow plants to share defensive signals by transmitting jasmonic acid through fungal hyphae to warn neighboring plants of herbivore attack",
+        "CMNs primarily function to transfer water between plants during drought, acting as an underground irrigation network",
+        "CMNs are parasitic networks through which mycorrhizal fungi extract excessive carbon from host plants, reducing overall forest productivity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Common mycorrhizal networks (CMNs) have significant ecological importance primarily through their role in facilitating resource transfer between interconnected plants. Research, particularly by Suzanne Simard and colleagues, has demonstrated that large, established trees ('mother trees') can transfer photosynthetically fixed carbon and mineral nutrients through CMNs to smaller, shaded seedlings that may not be able to photosynthesize enough to survive independently. This transfer is especially important for shade-tolerant seedling establishment in dense forest understories. Carbon has been tracked using 13C and 14C isotope labeling from source trees through fungal hyphae to recipient seedlings. CMNs also facilitate transfer of nitrogen and phosphorus between plants. While defense signaling through CMNs has been proposed, the evidence is less robust than for carbon/nutrient transfer. CMNs are mutualistic, not parasitic—fungi receive carbon from hosts but provide mineral nutrients in return, and net resource transfer typically flows from larger to smaller plants.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Copper is an essential micronutrient for plants. In which enzymatic process is copper MOST critically required?",
+      "options": [
+        "Lignin biosynthesis, where Cu-containing laccase and polyphenol oxidase catalyze the oxidative polymerization of monolignols",
+        "Starch synthesis, where Cu activates ADP-glucose pyrophosphorylase in amyloplasts",
+        "Lipid desaturation, where Cu is a cofactor for fatty acid desaturases in the endoplasmic reticulum",
+        "Photorespiration, where Cu is required for glycolate oxidase activity in peroxisomes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Copper is most critically required for lignin biosynthesis in plants. The Cu-containing enzymes laccase (EC 1.10.3.2) and polyphenol oxidase (PPO) catalyze the oxidative radical coupling of monolignol precursors (p-coumaryl, coniferyl, and sinapyl alcohols) to form the lignin polymer in secondary cell walls. Laccase is a multi-copper oxidase that generates phenoxy radicals from monolignols, which then undergo non-enzymatic radical coupling to form the complex three-dimensional lignin polymer. Copper is also essential in plastocyanin (electron carrier in PSI), Cu/Zn-SOD (superoxide dismutase), cytochrome c oxidase (Complex IV), and ethylene receptors. However, lignin biosynthesis represents the largest single Cu demand, which is why Cu-deficient plants show wilting and structural weakness (reduced lignification of xylem vessels and sclerenchyma). Starch synthesis uses Mg2+, not Cu. Glycolate oxidase uses FMN, not Cu. Fatty acid desaturases are typically iron-dependent.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Parasitic plants like Striga (witchweed) devastate crop yields in sub-Saharan Africa. What host-derived signal triggers Striga seed germination?",
+      "options": [
+        "Auxin gradients emanating from host root tips that stimulate Striga radicle emergence",
+        "Strigolactones exuded from host roots, which Striga seeds detect via their KAI2d receptor",
+        "Ethylene released during host root cell elongation that breaks Striga seed dormancy",
+        "Flavonoid compounds secreted by host roots that activate Striga germination similar to rhizobial signaling"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Striga seed germination is triggered by strigolactones, a class of carotenoid-derived plant hormones that are normally exuded from roots to stimulate arbuscular mycorrhizal (AM) fungal hyphal branching. Striga and other parasitic plants in the Orobanchaceae family have evolved to exploit this chemical signal as a germination cue, ensuring they only germinate when a suitable host root is nearby. Striga seeds detect strigolactones via modified KAI2 receptors (called KAI2d, for 'divergent'), which are paralogous to the karrikin receptor KAI2 in non-parasitic plants. This receptor has evolved increased sensitivity and specificity for strigolactones. This dependency on host-derived strigolactones is being exploited for Striga management: synthetic strigolactone analogs can be applied to fields to trigger 'suicidal germination' of Striga seeds in the absence of hosts, depleting the seed bank. Additionally, breeding crops with reduced strigolactone exudation is another management strategy.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher applies 15N-labeled ammonium sulfate to soil and tracks nitrogen uptake in wheat plants over 8 weeks. Results show: Weeks 1-2: 15N primarily in roots as NH4+ and glutamine; Weeks 3-4: 15N appears in leaves mainly as glutamate and aspartate; Weeks 5-8: 15N accumulates in developing grain as storage proteins (glutelins and gliadins). Which interpretation best explains this temporal pattern?",
+      "options": [
+        "The pattern reflects progressive nitrogen fixation by wheat-associated diazotrophs that convert the applied 15N-NH4+ to organic nitrogen",
+        "The pattern reflects sequential nitrogen assimilation in roots (GS/GOGAT pathway), translocation of amino acids to shoots via xylem, and remobilization of vegetative nitrogen to reproductive sinks via phloem",
+        "The pattern indicates that wheat preferentially absorbs nitrate over ammonium and the delay reflects the time needed for nitrification in soil",
+        "The pattern shows that nitrogen remains in inorganic form until grain filling, when it is rapidly assimilated into proteins by grain-specific enzymes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The temporal pattern of 15N distribution reflects the well-characterized pathway of nitrogen assimilation and partitioning in cereals: (1) Weeks 1-2: NH4+ is taken up by roots and rapidly assimilated via the GS/GOGAT (glutamine synthetase/glutamine-2-oxoglutarate aminotransferase) pathway. GS converts NH4+ and glutamate to glutamine, then GOGAT transfers the amide nitrogen to 2-oxoglutarate, regenerating glutamate. This explains the initial accumulation of NH4+ and glutamine in roots. (2) Weeks 3-4: Amino acids (primarily glutamine and asparagine) are loaded into xylem vessels for translocation to shoots, where transamination reactions produce the full spectrum of amino acids, with glutamate and aspartate being the most abundant. (3) Weeks 5-8: During grain filling, nitrogen is remobilized from vegetative tissues (leaves, stems) via phloem transport to developing grains, where amino acids are incorporated into storage proteins. In wheat, 60-90% of grain nitrogen comes from remobilization of previously assimilated vegetative nitrogen, not from contemporaneous root uptake.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Epiphytic plants like many orchids and bromeliads grow on tree branches without contact with soil. How do these plants primarily acquire mineral nutrients?",
+      "options": [
+        "By parasitizing their host trees through haustorial connections to xylem vessels",
+        "By trapping atmospheric dust, rainwater runoff, and decomposing organic debris, absorbing dissolved nutrients through specialized structures like velamen or tank reservoirs",
+        "By hosting endophytic nitrogen-fixing bacteria in their roots that provide all necessary mineral nutrients",
+        "By extending aerial roots to the ground that function as conventional soil-based root systems"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Epiphytes have evolved diverse adaptations to acquire mineral nutrients without soil contact. Orchid epiphytes possess a velamen—a multi-layered, sponge-like dead tissue covering aerial roots—that rapidly absorbs rainwater, atmospheric moisture, and dissolved nutrients from water flowing down tree bark (stemflow). The velamen can absorb water and dissolved minerals within seconds and slowly releases them to the living cortex. Tank bromeliads (like Aechmea and many Tillandsia species) have overlapping leaf bases that form reservoirs collecting rainwater, fallen organic debris, insect frass, and dust. Trichomes on leaf surfaces absorb dissolved nutrients from tank water. Atmospheric Tillandsia species (Spanish moss) absorb nutrients entirely through leaf trichomes from rain and mist. These sources provide N, P, K, Ca, and trace elements, though in smaller quantities than soil-based nutrition. Epiphytes are not parasites—they use host trees only for physical support. While some have aerial roots, these primarily function in absorption, not soil contact.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Silicon (Si) is not classified as an essential element by Arnon and Stout's criteria for most plants, yet it is considered a beneficial element. What is the primary benefit of silicon accumulation in grasses like rice?",
+      "options": [
+        "Silicon serves as an osmoticum that contributes to cell turgor pressure during drought stress",
+        "Silicon deposits as amorphous silica (SiO2·nH2O) in cell walls and leaf surfaces, providing mechanical defense against pathogens and herbivores and reducing lodging",
+        "Silicon catalyzes photosynthetic reactions by activating RuBisCO at high temperatures",
+        "Silicon replaces calcium in pectin cross-links, strengthening the middle lamella between cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Silicon, absorbed as monosilicic acid Si(OH)4, is deposited as amorphous silica (SiO2·nH2O, or phytoliths) in cell walls, intercellular spaces, and on leaf epidermal surfaces. In grasses like rice, silicon accumulation can reach 10% of shoot dry weight. The deposited silica provides multiple benefits: (1) Mechanical barrier against fungal penetration—silicified epidermal cells are harder for fungal appressoria to breach, reducing susceptibility to blast disease (Magnaporthe oryzae) and other pathogens; (2) Physical defense against herbivory—silica phytoliths in leaves abrade insect mandibles, reducing feeding damage; (3) Structural support—silicified stems resist lodging (bending and falling) during wind and rain; (4) Reduced transpiration—silicified epidermal layers reduce non-stomatal water loss. While Si has not been proven essential by Arnon's criteria for most species, rice shows severe yield losses without Si supplementation, and Si application is a standard agricultural practice in rice cultivation worldwide.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to quantify the contribution of arbuscular mycorrhizal fungi to phosphorus uptake in maize. Which experimental approach would most accurately separate mycorrhizal from direct root P uptake?",
+      "options": [
+        "Compare P uptake in sterile vs. non-sterile soil, attributing the difference to mycorrhizal contribution",
+        "Use a root-exclusion compartment system where 33P-labeled soil is accessible only to fungal hyphae (separated by fine mesh that excludes roots but allows hyphae), and track 33P appearance in plant tissues",
+        "Apply fungicide to half the plots and compare P uptake between treated and untreated plants",
+        "Measure mycorrhizal colonization percentage and assume it directly proportional to the mycorrhizal P contribution"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The root-exclusion compartment (also called the hyphal compartment or rhizobox) system provides the most accurate quantification of mycorrhizal P contribution. In this design: (1) A mesh barrier with 20-40 μm pore size separates a hyphal compartment from the root compartment—this pore size allows fungal hyphae (typically 2-10 μm diameter) to pass through but excludes plant roots (typically >100 μm); (2) The hyphal compartment contains 33P (or 32P)-labeled soil as a tracer; (3) Any 33P appearing in plant tissues must have been transported through mycorrhizal hyphae, as roots cannot physically access the labeled compartment. This approach directly measures the mycorrhizal contribution. Comparing sterile vs. non-sterile soil (option A) confounds mycorrhizal effects with other soil microorganism effects. Fungicide application (option C) may have non-target effects on soil chemistry and other microbes. Colonization percentage (option D) does not correlate linearly with functional P delivery.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The nitrogen cycle involves multiple oxidation states of nitrogen. Which sequence correctly orders nitrogen transformations from atmospheric N2 to plant-assimilated organic nitrogen?",
+      "options": [
+        "N2 (0) → NH4+ (-3) via nitrogen fixation → NO3- (+5) via nitrification → amino acids via nitrate assimilation",
+        "N2 (0) → NO3- (+5) via lightning fixation → NH4+ (-3) via ammonification → amino acids via GS/GOGAT",
+        "N2 (0) → NH3 (-3) via nitrogen fixation → NH4+ (-3) via protonation → glutamine/glutamate via GS/GOGAT cycle",
+        "N2 (0) → N2O (+1) via denitrification → NO2- (+3) via reduction → amino acids via NiR pathway"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The correct sequence for biological nitrogen fixation and assimilation is: (1) Atmospheric N2 (oxidation state 0) is reduced to NH3 (oxidation state -3) by the nitrogenase enzyme complex in nitrogen-fixing organisms (rhizobia, free-living diazotrophs). The reaction is: N2 + 8H+ + 8e- + 16ATP → 2NH3 + H2 + 16ADP + 16Pi. (2) NH3 is immediately protonated to NH4+ at physiological pH (pKa of NH4+/NH3 = 9.25). (3) NH4+ is assimilated into organic nitrogen primarily through the GS/GOGAT cycle: Glutamine synthetase (GS) combines NH4+ with glutamate to form glutamine (requires ATP); GOGAT (glutamine-2-oxoglutarate aminotransferase, also called glutamate synthase) transfers the amide nitrogen to 2-oxoglutarate, producing two glutamate molecules. One glutamate recycles back to GS, while the other enters amino acid metabolism through transamination reactions. This pathway maintains low intracellular NH4+ concentrations, avoiding ammonia toxicity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Actinorhizal plants (such as Alnus, Casuarina, and Myrica) form nitrogen-fixing symbioses with Frankia bacteria instead of rhizobia. Which key difference distinguishes actinorhizal from rhizobial symbiosis?",
+      "options": [
+        "Frankia fixes nitrogen only aerobically and does not require oxygen protection for nitrogenase",
+        "Frankia forms vesicles with thick hopanoid lipid envelopes that protect nitrogenase from oxygen, eliminating the need for plant-supplied leghemoglobin",
+        "Actinorhizal symbiosis does not involve Nod factor signaling and instead relies entirely on crack entry through lateral root emergence",
+        "Frankia is an obligate endosymbiont that cannot be cultured outside of plant tissues, unlike rhizobia"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A key distinguishing feature of actinorhizal symbiosis is the mechanism of oxygen protection for nitrogenase. While rhizobial bacteroids in legume nodules rely on plant-produced leghemoglobin to buffer O2 to nanomolar levels, Frankia bacteria have evolved their own oxygen protection strategy. In actinorhizal nodules, Frankia differentiates into specialized vesicles—spherical structures surrounded by multiple layers of hopanoid lipids that create an effective oxygen diffusion barrier. These vesicle envelopes are functionally analogous to the heterocyst glycolipid layer in cyanobacteria. The thick hopanoid envelope limits O2 diffusion to the interior where nitrogenase resides, while allowing sufficient O2 for respiration at the vesicle periphery. Consequently, actinorhizal plants do not produce leghemoglobin (or produce very little in some species). Frankia CAN be cultured, though with difficulty. Some actinorhizal infections do involve Nod factor-like signaling, and Frankia can also enter through root hairs in some host species.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Soil horizons develop through pedogenesis over thousands of years. In a typical mature soil profile, what characterizes the B horizon (zone of accumulation)?",
+      "options": [
+        "Darkly colored organic matter (humus) from decomposed plant litter mixed with mineral particles",
+        "Fresh, partially decomposed leaf litter and organic debris resting on the mineral soil surface",
+        "Accumulated clay minerals, iron oxides, aluminum hydroxides, and organic compounds leached from overlying horizons",
+        "Unweathered parent material (bedrock or sediment) that has not been altered by biological or chemical processes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The B horizon, also called the zone of illuviation or accumulation, is characterized by the accumulation of materials that have been leached (eluviated) from the overlying A and E horizons by percolating water. These accumulated materials include: (1) Clay minerals that have been translocated downward in suspension; (2) Iron (Fe) and aluminum (Al) oxides and hydroxides that precipitate when pH and redox conditions change with depth; (3) Organic compounds that form complexes with metals and are deposited; (4) In some soils, calcium carbonate (calcrete) in arid environments. The B horizon typically has a distinctive reddish or brownish color from iron oxide accumulation and often has a higher clay content than the A horizon due to clay illuviation. The O horizon contains fresh and decomposing litter; the A horizon is the dark, humus-rich topsoil; and the C horizon consists of weathered but relatively unaltered parent material. Understanding soil horizons is essential for agricultural management and understanding plant root environments.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Soil and Plant Nutrition"
+    },
+    {
+      "type": "MTF",
+      "question": "Match each plant-microbe interaction with the correct signaling molecule involved in establishing the symbiosis:\n(I) Legume-Rhizobium symbiosis\n(II) Plant-Arbuscular mycorrhizal (AM) symbiosis\n(III) Actinorhizal-Frankia symbiosis\n(IV) Striga parasitism on host crops\n\n(P) Strigolactones\n(Q) Nod factors (lipochitooligosaccharides)\n(R) Myc factors (short-chain chitooligosaccharides and lipochitooligosaccharides)\n(S) Unknown signals; some evidence for Nod factor-independent pathways",
+      "options": [
+        "I-Q, II-R, III-S, IV-P",
+        "I-R, II-Q, III-P, IV-S",
+        "I-P, II-S, III-Q, IV-R",
+        "I-S, II-P, III-R, IV-Q"
+      ],
+      "correctAnswer": "I-Q, II-R, III-S, IV-P",
+      "explanation": "Each plant-microbe interaction involves distinct signaling molecules: (I) Legume-Rhizobium: Rhizobia produce Nod factors (lipochitooligosaccharides) in response to plant flavonoids. Nod factors are perceived by LysM receptor kinases (NFR1/NFR5 in Lotus, LYK3/NFP in Medicago), triggering root hair curling, infection thread formation, and nodule organogenesis. (II) Plant-AM fungi: AM fungi produce Myc factors, which include short-chain chitooligosaccharides (CO4, CO5) and lipochitooligosaccharides structurally similar to Nod factors. These are perceived through the common symbiosis pathway (CSP) shared with nodulation signaling. Strigolactones from plant roots stimulate AM hyphal branching but are not the fungal signal. (III) Actinorhizal-Frankia: The signaling mechanisms are less well characterized. While some Frankia strains possess nod-like genes, many actinorhizal infections proceed through Nod factor-independent pathways (crack entry at lateral root emergence sites). The exact signals remain under investigation. (IV) Striga: Parasitic plant seeds detect strigolactones exuded from host roots via KAI2d receptors as germination cues.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 37,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Soil and Plant Nutrition"
+    }
+  ]
+}
