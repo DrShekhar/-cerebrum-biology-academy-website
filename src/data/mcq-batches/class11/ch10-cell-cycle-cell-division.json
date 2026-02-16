@@ -2268,6 +2268,345 @@
         "sequence"
       ],
       "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "The S phase of the cell cycle is characterised by:",
+      "options": [
+        "DNA synthesis (replication)",
+        "Cell division",
+        "Protein synthesis only",
+        "Organelle duplication only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, the S (synthesis) phase of interphase is characterised by DNA replication. The amount of DNA doubles during this phase (from 2C to 4C), but the chromosome number remains the same as the two copies remain attached at the centromere.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cell-cycle",
+        "s-phase",
+        "dna-replication"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "Crossing over during meiosis occurs between:",
+      "options": [
+        "Sister chromatids of the same chromosome",
+        "Non-sister chromatids of homologous chromosomes",
+        "Non-homologous chromosomes",
+        "Centromeres of different chromosomes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, crossing over occurs during pachytene stage of meiosis I. It involves exchange of genetic material between non-sister chromatids of homologous chromosomes at points called chiasmata, leading to genetic recombination.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "meiosis",
+        "crossing-over",
+        "recombination"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "Cytokinesis in animal cells occurs by:",
+      "options": [
+        "Cell plate formation",
+        "Cleavage (furrowing)",
+        "Budding",
+        "Fragmentation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, in animal cells, cytokinesis occurs by cleavage (furrowing) where a contractile ring of actin and myosin forms at the equator and progressively constricts the cell into two daughter cells. In plant cells, a cell plate forms from the centre outward.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cytokinesis",
+        "cleavage",
+        "animal-cells"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "The synaptonemal complex is formed during which stage of meiosis?",
+      "options": [
+        "Leptotene",
+        "Zygotene",
+        "Pachytene",
+        "Diplotene"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, during zygotene, homologous chromosomes pair up (synapsis) and a complex structure called the synaptonemal complex is formed between them. This complex helps hold the homologous chromosomes together and facilitates crossing over in pachytene.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "meiosis",
+        "synaptonemal-complex",
+        "zygotene"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "Chiasmata become visible during which stage of meiosis I?",
+      "options": [
+        "Zygotene",
+        "Pachytene",
+        "Diplotene",
+        "Diakinesis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, during diplotene the synaptonemal complex dissolves and the homologous chromosomes begin to separate except at the points of crossing over called chiasmata. Chiasmata are X-shaped structures where recombination has occurred.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "meiosis",
+        "chiasmata",
+        "diplotene"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "Cells that do not divide further and exit the cell cycle enter which phase?",
+      "options": [
+        "G\u2080 phase (quiescent phase)",
+        "S phase",
+        "M phase",
+        "G\u2082 phase"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, cells that do not divide further (like mature neurons) exit the cell cycle and enter an inactive stage called G\u2080 phase (quiescent phase). These cells remain metabolically active but do not proliferate unless stimulated.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cell-cycle",
+        "g0-phase",
+        "quiescent"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "During anaphase I of meiosis, what separates?",
+      "options": [
+        "Sister chromatids",
+        "Homologous chromosomes",
+        "Non-homologous chromosomes",
+        "Centromeres"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, during anaphase I of meiosis, the homologous chromosomes separate and move to opposite poles (disjunction). The centromeres do NOT split \u2014 sister chromatids remain attached. Sister chromatid separation occurs in anaphase II.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "meiosis",
+        "anaphase-i",
+        "disjunction"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "The longest phase of the cell cycle in a typical mammalian cell is:",
+      "options": [
+        "S phase",
+        "G\u2081 phase",
+        "G\u2082 phase",
+        "M phase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the G\u2081 phase is typically the longest phase of the cell cycle. In a typical mammalian cell with a 24-hour cell cycle, the G\u2081 phase takes about 11 hours, S phase about 8 hours, G\u2082 about 4 hours, and M phase about 1 hour.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cell-cycle",
+        "g1-phase",
+        "duration"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "Colchicine prevents cell division by:",
+      "options": [
+        "Inhibiting DNA replication",
+        "Preventing spindle fibre formation",
+        "Blocking cytokinesis",
+        "Inhibiting protein synthesis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Colchicine inhibits the polymerisation of tubulin into microtubules, thus preventing the formation of the mitotic spindle. Without the spindle, chromosomes cannot be separated to opposite poles, resulting in polyploidy if the cell survives.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cell-division",
+        "colchicine",
+        "spindle-inhibitor"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "Bivalents (tetrads) are first seen during which stage of meiosis?",
+      "options": [
+        "Leptotene",
+        "Zygotene",
+        "Pachytene",
+        "Metaphase I"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, during zygotene, homologous chromosomes pair up (synapsis) to form bivalents. Each bivalent consists of 4 chromatids and is also called a tetrad. This is the first time paired homologous chromosomes are visible.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "meiosis",
+        "bivalent",
+        "zygotene",
+        "synapsis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "Terminalization of chiasmata occurs during:",
+      "options": [
+        "Pachytene",
+        "Diplotene",
+        "Diakinesis",
+        "Metaphase I"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, during diakinesis, the final stage of prophase I, chromosomes are fully condensed and chiasmata move towards the ends of the chromosomes (terminalization). The nucleolus disappears and the nuclear envelope breaks down.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "meiosis",
+        "diakinesis",
+        "terminalization"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "Which of the following is TRUE about meiosis II?",
+      "options": [
+        "It is a reductional division",
+        "Homologous chromosomes separate",
+        "Sister chromatids separate",
+        "Crossing over occurs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, meiosis II is similar to mitosis \u2014 it is an equational division where sister chromatids separate. Meiosis I is the reductional division where homologous chromosomes separate. Crossing over occurs only in prophase I.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "meiosis-ii",
+        "equational-division",
+        "sister-chromatids"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell Cycle and Cell Division",
+      "chapter": "Cell Cycle and Cell Division",
+      "ncertClass": 11,
+      "ncertChapter": 10,
+      "ncertChapterName": "Cell Cycle and Cell Division",
+      "question": "The checkpoint at the end of G\u2082 phase ensures that:",
+      "options": [
+        "DNA has been replicated completely and accurately",
+        "The cell has enough nutrients",
+        "The cell is large enough",
+        "Chromosomes are aligned at the metaphase plate"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The G\u2082/M checkpoint (at the end of G\u2082 phase) ensures that DNA replication during S phase has been completed successfully and any DNA damage has been repaired before the cell enters mitosis. If DNA is damaged, the cell cycle is arrested for repair.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cell-cycle",
+        "checkpoint",
+        "g2-phase"
+      ],
+      "neetWeightage": "MEDIUM"
     }
   ]
 }

@@ -241,12 +241,12 @@
       "question": "The Hardy-Weinberg equation is:",
       "options": [
         "p + q = 1",
-        "p² + 2pq + q² = 1",
-        "p² + q² = 1",
+        "p\u00b2 + 2pq + q\u00b2 = 1",
+        "p\u00b2 + q\u00b2 = 1",
         "p - q = 1"
       ],
       "correctAnswer": "B",
-      "explanation": "The Hardy-Weinberg equation is p² + 2pq + q² = 1, where p and q are allele frequencies. p² = frequency of homozygous dominant, 2pq = frequency of heterozygous, q² = frequency of homozygous recessive.",
+      "explanation": "The Hardy-Weinberg equation is p\u00b2 + 2pq + q\u00b2 = 1, where p and q are allele frequencies. p\u00b2 = frequency of homozygous dominant, 2pq = frequency of heterozygous, q\u00b2 = frequency of homozygous recessive.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -419,7 +419,7 @@
         "Homo erectus"
       ],
       "correctAnswer": "C",
-      "explanation": "Homo sapiens sapiens (modern humans) arose in Africa about 100,000-200,000 years ago. The evolutionary sequence includes Dryopithecus → Ramapithecus → Australopithecus → Homo habilis → Homo erectus → Homo sapiens.",
+      "explanation": "Homo sapiens sapiens (modern humans) arose in Africa about 100,000-200,000 years ago. The evolutionary sequence includes Dryopithecus \u2192 Ramapithecus \u2192 Australopithecus \u2192 Homo habilis \u2192 Homo erectus \u2192 Homo sapiens.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1860,13 +1860,13 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following in correct chronological order of human evolution:\n(i) Homo sapiens\n(ii) Australopithecus\n(iii) Homo habilis\n(iv) Homo erectus\n(v) Dryopithecus",
       "options": [
-        "ii → v → iii → iv → i",
-        "v → ii → iii → iv → i",
-        "v → iii → ii → iv → i",
-        "v → ii → iv → iii → i"
+        "ii \u2192 v \u2192 iii \u2192 iv \u2192 i",
+        "v \u2192 ii \u2192 iii \u2192 iv \u2192 i",
+        "v \u2192 iii \u2192 ii \u2192 iv \u2192 i",
+        "v \u2192 ii \u2192 iv \u2192 iii \u2192 i"
       ],
       "correctAnswer": "B",
-      "explanation": "Correct chronological order: Dryopithecus (ancestor ape) → Australopithecus (first bipedal) → Homo habilis (tool maker) → Homo erectus (fire user) → Homo sapiens (modern human).",
+      "explanation": "Correct chronological order: Dryopithecus (ancestor ape) \u2192 Australopithecus (first bipedal) \u2192 Homo habilis (tool maker) \u2192 Homo erectus (fire user) \u2192 Homo sapiens (modern human).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1885,13 +1885,13 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following theories/concepts in chronological order:\n(i) Natural selection by Darwin\n(ii) Lamarckism\n(iii) Mutation theory by de Vries\n(iv) Hardy-Weinberg principle",
       "options": [
-        "ii → i → iii → iv",
-        "iii → ii → i → iv",
-        "i → ii → iii → iv",
-        "ii → iii → i → iv"
+        "ii \u2192 i \u2192 iii \u2192 iv",
+        "iii \u2192 ii \u2192 i \u2192 iv",
+        "i \u2192 ii \u2192 iii \u2192 iv",
+        "ii \u2192 iii \u2192 i \u2192 iv"
       ],
       "correctAnswer": "A",
-      "explanation": "Chronological order: Lamarckism (1809) → Natural selection by Darwin (1859) → Mutation theory by de Vries (1901) → Hardy-Weinberg principle (1908).",
+      "explanation": "Chronological order: Lamarckism (1809) \u2192 Natural selection by Darwin (1859) \u2192 Mutation theory by de Vries (1901) \u2192 Hardy-Weinberg principle (1908).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1910,13 +1910,13 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following events in the history of life on Earth in correct order:\n(i) Origin of photosynthetic organisms\n(ii) Chemical evolution\n(iii) Origin of multicellular organisms\n(iv) First cellular life\n(v) Accumulation of oxygen in atmosphere",
       "options": [
-        "ii → i → iv → v → iii",
-        "ii → iv → i → v → iii",
-        "iv → ii → i → v → iii",
-        "ii → iv → v → i → iii"
+        "ii \u2192 i \u2192 iv \u2192 v \u2192 iii",
+        "ii \u2192 iv \u2192 i \u2192 v \u2192 iii",
+        "iv \u2192 ii \u2192 i \u2192 v \u2192 iii",
+        "ii \u2192 iv \u2192 v \u2192 i \u2192 iii"
       ],
       "correctAnswer": "B",
-      "explanation": "Correct order: Chemical evolution → First cellular life (anaerobic prokaryotes) → Origin of photosynthetic organisms (cyanobacteria) → Accumulation of oxygen → Origin of multicellular organisms.",
+      "explanation": "Correct order: Chemical evolution \u2192 First cellular life (anaerobic prokaryotes) \u2192 Origin of photosynthetic organisms (cyanobacteria) \u2192 Accumulation of oxygen \u2192 Origin of multicellular organisms.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1935,13 +1935,13 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following geological eras from oldest to most recent:\n(i) Mesozoic\n(ii) Palaeozoic\n(iii) Cenozoic\n(iv) Precambrian",
       "options": [
-        "iii → i → ii → iv",
-        "ii → iv → i → iii",
-        "iv → ii → i → iii",
-        "iv → i → ii → iii"
+        "iii \u2192 i \u2192 ii \u2192 iv",
+        "ii \u2192 iv \u2192 i \u2192 iii",
+        "iv \u2192 ii \u2192 i \u2192 iii",
+        "iv \u2192 i \u2192 ii \u2192 iii"
       ],
       "correctAnswer": "C",
-      "explanation": "From oldest to most recent: Precambrian (4600-542 MYA) → Palaeozoic (542-251 MYA) → Mesozoic (251-66 MYA) → Cenozoic (66 MYA-present). Cenozoic is the 'Age of Mammals'.",
+      "explanation": "From oldest to most recent: Precambrian (4600-542 MYA) \u2192 Palaeozoic (542-251 MYA) \u2192 Mesozoic (251-66 MYA) \u2192 Cenozoic (66 MYA-present). Cenozoic is the 'Age of Mammals'.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1960,13 +1960,13 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following steps of speciation in correct order:\n(i) Formation of new species\n(ii) Geographical isolation\n(iii) Accumulation of genetic differences\n(iv) Reproductive isolation\n(v) Natural selection in different environments",
       "options": [
-        "ii → iii → v → iv → i",
-        "v → ii → iii → iv → i",
-        "ii → v → iv → iii → i",
-        "ii → v → iii → iv → i"
+        "ii \u2192 iii \u2192 v \u2192 iv \u2192 i",
+        "v \u2192 ii \u2192 iii \u2192 iv \u2192 i",
+        "ii \u2192 v \u2192 iv \u2192 iii \u2192 i",
+        "ii \u2192 v \u2192 iii \u2192 iv \u2192 i"
       ],
       "correctAnswer": "D",
-      "explanation": "Correct order: Geographical isolation → Natural selection in different environments → Accumulation of genetic differences → Reproductive isolation → Formation of new species.",
+      "explanation": "Correct order: Geographical isolation \u2192 Natural selection in different environments \u2192 Accumulation of genetic differences \u2192 Reproductive isolation \u2192 Formation of new species.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1985,13 +1985,13 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following concepts about origin of life in the order they were proposed:\n(i) Biogenesis\n(ii) Spontaneous generation\n(iii) Chemical evolution\n(iv) Panspermia",
       "options": [
-        "ii → iv → i → iii",
-        "ii → i → iv → iii",
-        "i → ii → iv → iii",
-        "ii → i → iii → iv"
+        "ii \u2192 iv \u2192 i \u2192 iii",
+        "ii \u2192 i \u2192 iv \u2192 iii",
+        "i \u2192 ii \u2192 iv \u2192 iii",
+        "ii \u2192 i \u2192 iii \u2192 iv"
       ],
       "correctAnswer": "B",
-      "explanation": "Historical order: Spontaneous generation (ancient belief) → Biogenesis by Pasteur (1859) → Panspermia by Richter/Arrhenius (late 1800s) → Chemical evolution by Oparin/Haldane (1920s-1930s).",
+      "explanation": "Historical order: Spontaneous generation (ancient belief) \u2192 Biogenesis by Pasteur (1859) \u2192 Panspermia by Richter/Arrhenius (late 1800s) \u2192 Chemical evolution by Oparin/Haldane (1920s-1930s).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2011,13 +2011,13 @@
       "ncertChapterName": "Evolution",
       "question": "Arrange the following stages of chemical evolution in correct order:\n(i) Formation of complex organic molecules\n(ii) Formation of simple organic molecules\n(iii) Formation of protocells\n(iv) Formation of first living cell\n(v) Inorganic molecules in primitive atmosphere",
       "options": [
-        "v → ii → iii → i → iv",
-        "v → ii → i → iii → iv",
-        "v → i → ii → iii → iv",
-        "ii → v → i → iii → iv"
+        "v \u2192 ii \u2192 iii \u2192 i \u2192 iv",
+        "v \u2192 ii \u2192 i \u2192 iii \u2192 iv",
+        "v \u2192 i \u2192 ii \u2192 iii \u2192 iv",
+        "ii \u2192 v \u2192 i \u2192 iii \u2192 iv"
       ],
       "correctAnswer": "B",
-      "explanation": "Correct order: Inorganic molecules → Simple organic molecules (amino acids, sugars) → Complex organic molecules (proteins, nucleic acids) → Protocells (coacervates/microspheres) → First living cell.",
+      "explanation": "Correct order: Inorganic molecules \u2192 Simple organic molecules (amino acids, sugars) \u2192 Complex organic molecules (proteins, nucleic acids) \u2192 Protocells (coacervates/microspheres) \u2192 First living cell.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2026,6 +2026,498 @@
         "stages"
       ],
       "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Which of the following is an example of divergent evolution?",
+      "options": [
+        "Wings of birds and wings of insects",
+        "Eyes of octopus and eyes of mammals",
+        "Forelimbs of whale and forelimbs of bat",
+        "Flippers of dolphin and flippers of penguin"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, divergent evolution leads to the development of homologous organs (same ancestral origin but different functions). Forelimbs of whale and bat have similar skeletal elements but different functions, indicating they evolved from a common ancestor.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "divergent-evolution",
+        "homologous-organs"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "The earliest forms of life on Earth are thought to have been:",
+      "options": [
+        "Aerobic autotrophs",
+        "Anaerobic heterotrophs",
+        "Aerobic heterotrophs",
+        "Anaerobic autotrophs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the earliest forms of life were likely anaerobic heterotrophs since the primitive atmosphere lacked free oxygen and organic molecules were available in the 'hot dilute soup'. Photosynthesis and aerobic respiration evolved later.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "origin-of-life",
+        "early-life",
+        "anaerobic"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Which of the following gases was NOT present in the primitive atmosphere of Earth?",
+      "options": [
+        "Methane",
+        "Ammonia",
+        "Oxygen",
+        "Hydrogen"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the primitive atmosphere of Earth was reducing and contained gases like methane (CH\u2084), ammonia (NH\u2083), hydrogen (H\u2082), and water vapour. Free oxygen was absent. Oxygen accumulated later due to photosynthetic organisms like cyanobacteria.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "origin-of-life",
+        "primitive-atmosphere",
+        "reducing"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Peripatus is a connecting link between:",
+      "options": [
+        "Reptiles and birds",
+        "Fish and amphibians",
+        "Annelida and Arthropoda",
+        "Amphibians and reptiles"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Peripatus (Onychophora) is a connecting link between Annelida and Arthropoda. It shows annelidan features (segmented body, nephridia) and arthropod features (tracheal system, open circulatory system). Archaeopteryx links reptiles and birds.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "connecting-link",
+        "peripatus",
+        "evolution-evidence"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Gene flow tends to:",
+      "options": [
+        "Increase differences between populations",
+        "Decrease differences between populations",
+        "Have no effect on allele frequencies",
+        "Cause speciation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Gene flow (migration of individuals between populations) tends to decrease genetic differences between populations by introducing new alleles. It acts against the divergence caused by genetic drift and natural selection in isolated populations.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "gene-flow",
+        "population-genetics",
+        "allele-frequency"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "In the Hardy-Weinberg equation p\u00b2 + 2pq + q\u00b2 = 1, 2pq represents:",
+      "options": [
+        "Homozygous dominant individuals",
+        "Homozygous recessive individuals",
+        "Heterozygous individuals",
+        "Total allele frequency"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, in the Hardy-Weinberg equation, p\u00b2 represents the frequency of homozygous dominant individuals (AA), q\u00b2 represents homozygous recessive (aa), and 2pq represents heterozygous individuals (Aa). p + q = 1 represents total allele frequencies.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "hardy-weinberg",
+        "population-genetics",
+        "heterozygous"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Miller and Urey (1953) experiment produced amino acids by simulating which conditions?",
+      "options": [
+        "Deep ocean hydrothermal vents",
+        "Primitive Earth atmosphere with electric discharge",
+        "Mars-like conditions",
+        "Modern Earth conditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, Miller and Urey created conditions similar to primitive Earth atmosphere using CH\u2084, NH\u2083, H\u2082, and water vapour, and subjected it to electric discharge (simulating lightning). They obtained amino acids and other organic compounds in the collected liquid.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "miller-urey",
+        "origin-of-life",
+        "experiment"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Sympatric speciation occurs:",
+      "options": [
+        "Due to geographical barriers",
+        "In populations living in the same geographical area",
+        "Only in island populations",
+        "Due to continental drift"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sympatric speciation occurs within the same geographical area without physical barriers, often through reproductive isolation mechanisms like polyploidy, habitat differentiation, or temporal isolation. Allopatric speciation involves geographical barriers.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "speciation",
+        "sympatric",
+        "reproductive-isolation"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Which type of natural selection maintains the status quo in a population?",
+      "options": [
+        "Directional selection",
+        "Disruptive selection",
+        "Stabilising selection",
+        "Artificial selection"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, stabilising selection favours intermediate variants and eliminates extreme phenotypes, thus maintaining the status quo. Directional selection shifts the mean in one direction, and disruptive selection favours extreme variants over intermediate ones.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "natural-selection",
+        "stabilising",
+        "population"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Radiometric dating using Carbon-14 is useful for fossils up to approximately:",
+      "options": [
+        "5,000 years old",
+        "50,000 years old",
+        "5 million years old",
+        "500 million years old"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Carbon-14 has a half-life of about 5,730 years, making it useful for dating organic remains up to approximately 50,000 years old. For older fossils, other isotopes like potassium-40 (half-life 1.3 billion years) or uranium-238 are used.",
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": true,
+      "tags": [
+        "fossil-dating",
+        "carbon-14",
+        "radiometric"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Which of the following is an example of convergent evolution?",
+      "options": [
+        "Forelimbs of horse and human",
+        "Sweet potato (root modification) and potato (stem modification)",
+        "Thorn of Bougainvillea and tendril of Cucurbita",
+        "Flipper of whale and wing of bat"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, convergent evolution leads to the development of analogous organs. Sweet potato (modified root) and potato (modified stem) perform similar storage functions but have different anatomical origins \u2014 this is an example of convergent evolution.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "convergent-evolution",
+        "analogous-organs"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Australopithecus is believed to have lived in:",
+      "options": [
+        "North America",
+        "Asia",
+        "Africa",
+        "Europe"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, Australopithecus ('southern ape') fossils were discovered in East Africa. They are considered early human ancestors (hominins) that lived approximately 2-4 million years ago. Africa is regarded as the cradle of human evolution.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "human-evolution",
+        "australopithecus",
+        "africa"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Mutation is the ultimate source of:",
+      "options": [
+        "Speciation only",
+        "Natural selection only",
+        "All genetic variation in populations",
+        "Genetic drift only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, mutation is the ultimate source of all genetic variation upon which natural selection, genetic drift, and other evolutionary forces act. Without mutations, there would be no new alleles and thus no raw material for evolution.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "mutation",
+        "genetic-variation",
+        "evolution"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Hugo de Vries' mutation theory was based on his experiments on:",
+      "options": [
+        "Pisum sativum",
+        "Drosophila melanogaster",
+        "Oenothera lamarckiana",
+        "Lathyrus odoratus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, Hugo de Vries based his mutation theory on his extensive work on the evening primrose (Oenothera lamarckiana). He observed large, sudden, heritable variations which he called mutations. He believed that evolution occurs through mutations, not small variations.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "mutation-theory",
+        "de-vries",
+        "oenothera"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "The idea of 'use and disuse of organs' was proposed by:",
+      "options": [
+        "Darwin",
+        "Lamarck",
+        "Wallace",
+        "Weismann"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, Jean-Baptiste Lamarck proposed the theory of 'inheritance of acquired characters' which included the concept of use and disuse of organs. He believed that organs that are used extensively become well-developed, while unused organs degenerate.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lamarck",
+        "use-disuse",
+        "evolution-theory"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Which of the following provides the most direct evidence for evolution?",
+      "options": [
+        "Comparative anatomy",
+        "Embryology",
+        "Fossils",
+        "Biogeography"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, fossils provide the most direct and concrete evidence for evolution. They are actual remains or impressions of organisms from the past preserved in sedimentary rocks. They reveal the morphology, size, and often the habitat of extinct organisms.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fossils",
+        "evolution-evidence",
+        "direct-evidence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Homo sapiens appeared approximately:",
+      "options": [
+        "2 million years ago",
+        "500,000 years ago",
+        "100,000-200,000 years ago",
+        "10,000 years ago"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Modern Homo sapiens are believed to have appeared in Africa approximately 100,000-200,000 years ago during the Pleistocene era. They then migrated to other continents. Homo erectus appeared about 1.5 million years ago.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "human-evolution",
+        "homo-sapiens",
+        "timeline"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Random changes in allele frequency that occur in small populations are termed:",
+      "options": [
+        "Natural selection",
+        "Gene flow",
+        "Genetic drift",
+        "Mutation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, genetic drift refers to random changes in allele frequencies that occur by chance, particularly in small populations. It can lead to fixation or loss of alleles regardless of their adaptive value. The bottleneck effect and founder effect are examples.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "genetic-drift",
+        "population-genetics",
+        "allele-frequency"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Evolution",
+      "chapter": "Evolution",
+      "ncertClass": 12,
+      "ncertChapter": 7,
+      "ncertChapterName": "Evolution",
+      "question": "Recapitulation theory (ontogeny recapitulates phylogeny) was proposed by:",
+      "options": [
+        "Darwin",
+        "Haeckel",
+        "Oparin",
+        "Weismann"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ernst Haeckel proposed the biogenetic law or recapitulation theory, which states that ontogeny (embryonic development of an organism) repeats its phylogeny (evolutionary history). For example, human embryos develop gill-like structures during early development.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "embryology",
+        "haeckel",
+        "recapitulation"
+      ],
+      "neetWeightage": "MEDIUM"
     }
   ]
 }

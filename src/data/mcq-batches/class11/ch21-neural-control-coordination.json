@@ -619,13 +619,13 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The reflex arc consists of:",
       "options": [
-        "Receptor → Efferent nerve → CNS → Afferent nerve → Effector",
-        "Effector → CNS → Receptor",
-        "Receptor → Afferent nerve → CNS → Efferent nerve → Effector",
-        "Afferent nerve → Receptor → CNS → Effector"
+        "Receptor \u2192 Efferent nerve \u2192 CNS \u2192 Afferent nerve \u2192 Effector",
+        "Effector \u2192 CNS \u2192 Receptor",
+        "Receptor \u2192 Afferent nerve \u2192 CNS \u2192 Efferent nerve \u2192 Effector",
+        "Afferent nerve \u2192 Receptor \u2192 CNS \u2192 Effector"
       ],
       "correctAnswer": "C",
-      "explanation": "A reflex arc is the neural pathway for a reflex action. It consists of: Receptor (detects stimulus) → Afferent (sensory) nerve → CNS (integration centre) → Efferent (motor) nerve → Effector (muscle or gland that responds).",
+      "explanation": "A reflex arc is the neural pathway for a reflex action. It consists of: Receptor (detects stimulus) \u2192 Afferent (sensory) nerve \u2192 CNS (integration centre) \u2192 Efferent (motor) nerve \u2192 Effector (muscle or gland that responds).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -769,13 +769,13 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "The ear ossicles in the correct sequence from tympanic membrane to inner ear are:",
       "options": [
-        "Malleus → Incus → Stapes",
-        "Incus → Malleus → Stapes",
-        "Malleus → Stapes → Incus",
-        "Stapes → Incus → Malleus"
+        "Malleus \u2192 Incus \u2192 Stapes",
+        "Incus \u2192 Malleus \u2192 Stapes",
+        "Malleus \u2192 Stapes \u2192 Incus",
+        "Stapes \u2192 Incus \u2192 Malleus"
       ],
       "correctAnswer": "A",
-      "explanation": "The three ear ossicles transmit sound vibrations from the tympanic membrane to the oval window in sequence: Malleus (hammer, attached to eardrum) → Incus (anvil) → Stapes (stirrup, attached to oval window). They amplify sound about 20 times.",
+      "explanation": "The three ear ossicles transmit sound vibrations from the tympanic membrane to the oval window in sequence: Malleus (hammer, attached to eardrum) \u2192 Incus (anvil) \u2192 Stapes (stirrup, attached to oval window). They amplify sound about 20 times.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2050,13 +2050,13 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the correct sequence of events during synaptic transmission:\n(i) Action potential reaches axon terminal\n(ii) Ca2+ enters the presynaptic terminal\n(iii) Synaptic vesicles fuse with presynaptic membrane\n(iv) Neurotransmitter binds to receptors on postsynaptic membrane\n(v) Neurotransmitter released into synaptic cleft",
       "options": [
-        "(i) → (ii) → (iii) → (v) → (iv)",
-        "(i) → (iii) → (ii) → (iv) → (v)",
-        "(ii) → (i) → (v) → (iii) → (iv)",
-        "(v) → (iv) → (iii) → (ii) → (i)"
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (v) \u2192 (iv)",
+        "(i) \u2192 (iii) \u2192 (ii) \u2192 (iv) \u2192 (v)",
+        "(ii) \u2192 (i) \u2192 (v) \u2192 (iii) \u2192 (iv)",
+        "(v) \u2192 (iv) \u2192 (iii) \u2192 (ii) \u2192 (i)"
       ],
       "correctAnswer": "A",
-      "explanation": "Synaptic transmission sequence: Action potential arrives at axon terminal (i) → Ca2+ enters through voltage-gated channels (ii) → Ca2+ triggers vesicle fusion with membrane (iii) → Neurotransmitter is released into synaptic cleft (exocytosis) (v) → NT binds to postsynaptic receptors (iv) → Postsynaptic potential generated.",
+      "explanation": "Synaptic transmission sequence: Action potential arrives at axon terminal (i) \u2192 Ca2+ enters through voltage-gated channels (ii) \u2192 Ca2+ triggers vesicle fusion with membrane (iii) \u2192 Neurotransmitter is released into synaptic cleft (exocytosis) (v) \u2192 NT binds to postsynaptic receptors (iv) \u2192 Postsynaptic potential generated.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2075,13 +2075,13 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the correct sequence of events in hearing:\n(i) Sound waves collected by pinna\n(ii) Vibrations of tympanic membrane\n(iii) Amplification by ear ossicles\n(iv) Vibrations transmitted to oval window\n(v) Fluid waves in cochlea stimulate organ of Corti\n(vi) Nerve impulse sent via auditory nerve to brain",
       "options": [
-        "(i) → (iii) → (ii) → (v) → (iv) → (vi)",
-        "(ii) → (i) → (iv) → (iii) → (vi) → (v)",
-        "(vi) → (v) → (iv) → (iii) → (ii) → (i)",
-        "(i) → (ii) → (iii) → (iv) → (v) → (vi)"
+        "(i) \u2192 (iii) \u2192 (ii) \u2192 (v) \u2192 (iv) \u2192 (vi)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (vi) \u2192 (v)",
+        "(vi) \u2192 (v) \u2192 (iv) \u2192 (iii) \u2192 (ii) \u2192 (i)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v) \u2192 (vi)"
       ],
       "correctAnswer": "D",
-      "explanation": "Hearing sequence: Pinna collects sound waves (i) → Tympanic membrane vibrates (ii) → Ossicles (malleus → incus → stapes) amplify vibrations (iii) → Stapes transmits to oval window (iv) → Fluid waves stimulate hair cells in organ of Corti (v) → Auditory nerve sends impulse to brain (vi).",
+      "explanation": "Hearing sequence: Pinna collects sound waves (i) \u2192 Tympanic membrane vibrates (ii) \u2192 Ossicles (malleus \u2192 incus \u2192 stapes) amplify vibrations (iii) \u2192 Stapes transmits to oval window (iv) \u2192 Fluid waves stimulate hair cells in organ of Corti (v) \u2192 Auditory nerve sends impulse to brain (vi).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2100,13 +2100,13 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the correct sequence of light path through the eye:",
       "options": [
-        "Cornea → Lens → Pupil → Vitreous humour → Aqueous humour → Retina",
-        "Lens → Cornea → Aqueous humour → Pupil → Retina → Vitreous humour",
-        "Cornea → Aqueous humour → Pupil → Lens → Vitreous humour → Retina",
-        "Pupil → Cornea → Lens → Aqueous humour → Vitreous humour → Retina"
+        "Cornea \u2192 Lens \u2192 Pupil \u2192 Vitreous humour \u2192 Aqueous humour \u2192 Retina",
+        "Lens \u2192 Cornea \u2192 Aqueous humour \u2192 Pupil \u2192 Retina \u2192 Vitreous humour",
+        "Cornea \u2192 Aqueous humour \u2192 Pupil \u2192 Lens \u2192 Vitreous humour \u2192 Retina",
+        "Pupil \u2192 Cornea \u2192 Lens \u2192 Aqueous humour \u2192 Vitreous humour \u2192 Retina"
       ],
       "correctAnswer": "C",
-      "explanation": "Light enters the eye in this sequence: Cornea (major refraction) → Aqueous humour → Pupil (controlled by iris) → Lens (fine focusing) → Vitreous humour → Retina (where the image is formed on photoreceptors).",
+      "explanation": "Light enters the eye in this sequence: Cornea (major refraction) \u2192 Aqueous humour \u2192 Pupil (controlled by iris) \u2192 Lens (fine focusing) \u2192 Vitreous humour \u2192 Retina (where the image is formed on photoreceptors).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2125,13 +2125,13 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the correct sequence of an action potential:\n(i) Resting state (-70 mV)\n(ii) Stimulus reaches threshold (-55 mV)\n(iii) Depolarization (Na+ influx, rises to +30 mV)\n(iv) Repolarization (K+ efflux, returns towards -70 mV)\n(v) Hyperpolarization (briefly overshoots to ~-80 mV)\n(vi) Return to resting potential by Na+/K+ pump",
       "options": [
-        "(i) → (iii) → (ii) → (v) → (iv) → (vi)",
-        "(iii) → (ii) → (i) → (iv) → (vi) → (v)",
-        "(ii) → (i) → (iv) → (iii) → (v) → (vi)",
-        "(i) → (ii) → (iii) → (iv) → (v) → (vi)"
+        "(i) \u2192 (iii) \u2192 (ii) \u2192 (v) \u2192 (iv) \u2192 (vi)",
+        "(iii) \u2192 (ii) \u2192 (i) \u2192 (iv) \u2192 (vi) \u2192 (v)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (v) \u2192 (vi)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v) \u2192 (vi)"
       ],
       "correctAnswer": "D",
-      "explanation": "Action potential sequence: Resting state at -70 mV (i) → Stimulus reaches threshold of -55 mV (ii) → Na+ channels open, rapid depolarization to +30 mV (iii) → Na+ channels close, K+ channels open, repolarization (iv) → Brief hyperpolarization as K+ channels close slowly (v) → Na+/K+ pump restores resting state (vi).",
+      "explanation": "Action potential sequence: Resting state at -70 mV (i) \u2192 Stimulus reaches threshold of -55 mV (ii) \u2192 Na+ channels open, rapid depolarization to +30 mV (iii) \u2192 Na+ channels close, K+ channels open, repolarization (iv) \u2192 Brief hyperpolarization as K+ channels close slowly (v) \u2192 Na+/K+ pump restores resting state (vi).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2150,13 +2150,13 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the components of a reflex arc in correct order:",
       "options": [
-        "Effector → Efferent nerve → CNS → Afferent nerve → Receptor",
-        "Receptor → Efferent nerve → CNS → Afferent nerve → Effector",
-        "CNS → Afferent nerve → Receptor → Effector → Efferent nerve",
-        "Receptor → Afferent nerve → CNS → Efferent nerve → Effector"
+        "Effector \u2192 Efferent nerve \u2192 CNS \u2192 Afferent nerve \u2192 Receptor",
+        "Receptor \u2192 Efferent nerve \u2192 CNS \u2192 Afferent nerve \u2192 Effector",
+        "CNS \u2192 Afferent nerve \u2192 Receptor \u2192 Effector \u2192 Efferent nerve",
+        "Receptor \u2192 Afferent nerve \u2192 CNS \u2192 Efferent nerve \u2192 Effector"
       ],
       "correctAnswer": "D",
-      "explanation": "The reflex arc sequence: Receptor (detects stimulus) → Afferent (sensory) nerve (carries impulse to CNS) → CNS (integration, decision) → Efferent (motor) nerve (carries response impulse) → Effector (muscle/gland that responds).",
+      "explanation": "The reflex arc sequence: Receptor (detects stimulus) \u2192 Afferent (sensory) nerve (carries impulse to CNS) \u2192 CNS (integration, decision) \u2192 Efferent (motor) nerve (carries response impulse) \u2192 Effector (muscle/gland that responds).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2175,13 +2175,13 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the meninges from outermost to innermost:",
       "options": [
-        "Dura mater → Pia mater → Arachnoid mater",
-        "Arachnoid mater → Dura mater → Pia mater",
-        "Pia mater → Arachnoid mater → Dura mater",
-        "Dura mater → Arachnoid mater → Pia mater"
+        "Dura mater \u2192 Pia mater \u2192 Arachnoid mater",
+        "Arachnoid mater \u2192 Dura mater \u2192 Pia mater",
+        "Pia mater \u2192 Arachnoid mater \u2192 Dura mater",
+        "Dura mater \u2192 Arachnoid mater \u2192 Pia mater"
       ],
       "correctAnswer": "D",
-      "explanation": "From outermost to innermost: Dura mater (tough, fibrous, outermost) → Arachnoid mater (web-like, middle) → Pia mater (thin, vascular, innermost, closely adheres to brain surface). CSF circulates in the subarachnoid space.",
+      "explanation": "From outermost to innermost: Dura mater (tough, fibrous, outermost) \u2192 Arachnoid mater (web-like, middle) \u2192 Pia mater (thin, vascular, innermost, closely adheres to brain surface). CSF circulates in the subarachnoid space.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2200,19 +2200,335 @@
       "ncertChapterName": "Neural Control and Coordination",
       "question": "Arrange the ear ossicles in the correct sequence from eardrum to oval window:",
       "options": [
-        "Malleus → Incus → Stapes",
-        "Stapes → Incus → Malleus",
-        "Incus → Malleus → Stapes",
-        "Malleus → Stapes → Incus"
+        "Malleus \u2192 Incus \u2192 Stapes",
+        "Stapes \u2192 Incus \u2192 Malleus",
+        "Incus \u2192 Malleus \u2192 Stapes",
+        "Malleus \u2192 Stapes \u2192 Incus"
       ],
       "correctAnswer": "A",
-      "explanation": "The three ear ossicles transmit vibrations from the tympanic membrane to the oval window in this order: Malleus (hammer, attached to eardrum) → Incus (anvil, middle) → Stapes (stirrup, attached to oval window of cochlea). They amplify sound about 20 times.",
+      "explanation": "The three ear ossicles transmit vibrations from the tympanic membrane to the oval window in this order: Malleus (hammer, attached to eardrum) \u2192 Incus (anvil, middle) \u2192 Stapes (stirrup, attached to oval window of cochlea). They amplify sound about 20 times.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
       "tags": [
         "ear-ossicles",
         "order"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Neural Control and Coordination",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "question": "The part of the brain responsible for maintaining posture and balance is:",
+      "options": [
+        "Cerebrum",
+        "Cerebellum",
+        "Medulla oblongata",
+        "Hypothalamus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the cerebellum is responsible for maintaining posture, balance, and coordination of voluntary movements. It integrates sensory information from the inner ear, muscles, and joints to produce smooth, coordinated movements.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "brain",
+        "cerebellum",
+        "balance",
+        "posture"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Neural Control and Coordination",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "question": "During the resting state of a neuron, the inside of the axon is:",
+      "options": [
+        "Positively charged (+ve)",
+        "Negatively charged (-ve)",
+        "Electrically neutral",
+        "Variable charge"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, during the resting state (resting membrane potential of about -70mV), the inside of the axon is negatively charged relative to the outside due to the distribution of ions maintained by the sodium-potassium pump (3 Na\u207a out, 2 K\u207a in).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "neuron",
+        "resting-potential",
+        "polarisation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Neural Control and Coordination",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "question": "The organ of Corti is located in:",
+      "options": [
+        "External ear",
+        "Middle ear",
+        "Cochlea of the inner ear",
+        "Semicircular canals"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the organ of Corti is the sensory receptor for hearing, located on the basilar membrane in the cochlea of the inner ear. It contains hair cells that convert sound vibrations into nerve impulses.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ear",
+        "organ-of-corti",
+        "cochlea",
+        "hearing"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Neural Control and Coordination",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "question": "Saltatory conduction of nerve impulses occurs in:",
+      "options": [
+        "Non-myelinated nerve fibres",
+        "Myelinated nerve fibres",
+        "Both myelinated and non-myelinated fibres",
+        "Dendrites only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, in myelinated nerve fibres, the impulse jumps from one node of Ranvier to the next, a process called saltatory conduction. This greatly increases the speed of impulse transmission compared to continuous conduction in non-myelinated fibres.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "neuron",
+        "saltatory-conduction",
+        "myelinated"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Neural Control and Coordination",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "question": "The photoreceptor cells responsible for colour vision are:",
+      "options": [
+        "Rod cells",
+        "Cone cells",
+        "Bipolar cells",
+        "Ganglion cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, cone cells are the photoreceptors responsible for daylight (photopic) vision and colour perception. There are three types of cones sensitive to red, green, and blue light. Rod cells are responsible for dim light (scotopic) vision.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "eye",
+        "cone-cells",
+        "colour-vision"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Neural Control and Coordination",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "question": "The hypothalamus controls:",
+      "options": [
+        "Voluntary movements only",
+        "Body temperature, hunger, thirst, and sleep",
+        "Hearing and vision only",
+        "Skeletal muscle contraction"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the hypothalamus is the control centre for homeostasis. It regulates body temperature, hunger, thirst, sleep-wake cycle, water balance, and controls the pituitary gland. It also contains osmoreceptors and thermoregulatory centres.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "brain",
+        "hypothalamus",
+        "homeostasis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Neural Control and Coordination",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "question": "Which cranial nerve is responsible for vision?",
+      "options": [
+        "Optic nerve (II)",
+        "Oculomotor nerve (III)",
+        "Trigeminal nerve (V)",
+        "Vagus nerve (X)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, the optic nerve (cranial nerve II) carries visual information from the retina to the brain. The oculomotor nerve (III) controls eye movement, the trigeminal nerve (V) carries facial sensations, and the vagus nerve (X) controls visceral organs.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cranial-nerves",
+        "optic-nerve",
+        "vision"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Neural Control and Coordination",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "question": "The blind spot on the retina is the point where:",
+      "options": [
+        "Only rod cells are present",
+        "Only cone cells are present",
+        "The optic nerve exits the eye (no photoreceptors)",
+        "Maximum concentration of cones is found"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the blind spot (optic disc) is the point on the retina where the optic nerve leaves the eye. It contains no photoreceptor cells (neither rods nor cones), so no image is formed at this point. The fovea (with maximum cones) has the sharpest vision.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "eye",
+        "blind-spot",
+        "optic-disc"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Neural Control and Coordination",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "question": "The corpus callosum connects:",
+      "options": [
+        "Cerebrum and cerebellum",
+        "Left and right cerebral hemispheres",
+        "Brain and spinal cord",
+        "Thalamus and hypothalamus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the corpus callosum is a thick bundle of nerve fibres (white matter) that connects the left and right cerebral hemispheres, enabling communication and coordination between the two halves of the brain.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "brain",
+        "corpus-callosum",
+        "cerebral-hemispheres"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Neural Control and Coordination",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "question": "Nissl granules in neurons are actually:",
+      "options": [
+        "Mitochondria",
+        "Golgi bodies",
+        "Rough endoplasmic reticulum",
+        "Lysosomes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Nissl granules (Nissl bodies) are clusters of rough endoplasmic reticulum (RER) found in the cell body and dendrites of neurons. They are involved in protein synthesis, particularly for neurotransmitters and structural proteins of the neuron.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "neuron",
+        "nissl-granules",
+        "rer"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Neural Control and Coordination",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "question": "The semicircular canals of the inner ear are responsible for:",
+      "options": [
+        "Hearing",
+        "Detection of sound frequency",
+        "Dynamic equilibrium (rotational balance)",
+        "Static equilibrium only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the three semicircular canals are oriented in different planes and detect rotational movements (dynamic equilibrium). The crista ampullaris inside each canal detects angular acceleration. The utricle and saccule detect static equilibrium and linear acceleration.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ear",
+        "semicircular-canals",
+        "balance",
+        "equilibrium"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Neural Control and Coordination",
+      "chapter": "Neural Control and Coordination",
+      "ncertClass": 11,
+      "ncertChapter": 21,
+      "ncertChapterName": "Neural Control and Coordination",
+      "question": "During depolarisation of a neuron, there is a rapid influx of:",
+      "options": [
+        "Potassium ions (K\u207a) into the cell",
+        "Sodium ions (Na\u207a) into the cell",
+        "Calcium ions (Ca\u00b2\u207a) into the cell",
+        "Chloride ions (Cl\u207b) into the cell"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, during depolarisation, voltage-gated sodium channels open and Na\u207a ions rush into the axon down their concentration gradient. This causes the inside of the axon to become positively charged (from -70mV to about +30mV), generating an action potential.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "neuron",
+        "depolarisation",
+        "sodium-channels",
+        "action-potential"
       ],
       "neetWeightage": "HIGH"
     }

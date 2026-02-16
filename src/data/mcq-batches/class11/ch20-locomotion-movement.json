@@ -1299,13 +1299,13 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Consider the following about the steps of muscle contraction:\n(i) Neural signal reaches motor end plate.\n(ii) ACh is released into the synaptic cleft.\n(iii) Ca2+ is released from sarcoplasmic reticulum.\n(iv) Cross-bridges form between actin and myosin.\nWhich is the correct sequence?",
       "options": [
-        "(i) → (ii) → (iii) → (iv)",
-        "(ii) → (i) → (iv) → (iii)",
-        "(iv) → (iii) → (ii) → (i)",
-        "(iii) → (i) → (ii) → (iv)"
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii)",
+        "(iv) \u2192 (iii) \u2192 (ii) \u2192 (i)",
+        "(iii) \u2192 (i) \u2192 (ii) \u2192 (iv)"
       ],
       "correctAnswer": "A",
-      "explanation": "The correct sequence of muscle contraction: Neural signal reaches motor end plate (i) → ACh released into synaptic cleft (ii) → Action potential propagates along sarcolemma → Ca2+ released from SR (iii) → Ca2+ binds troponin, exposes binding sites → Cross-bridges form (iv) → Power stroke → Contraction.",
+      "explanation": "The correct sequence of muscle contraction: Neural signal reaches motor end plate (i) \u2192 ACh released into synaptic cleft (ii) \u2192 Action potential propagates along sarcolemma \u2192 Ca2+ released from SR (iii) \u2192 Ca2+ binds troponin, exposes binding sites \u2192 Cross-bridges form (iv) \u2192 Power stroke \u2192 Contraction.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1900,13 +1900,13 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the correct sequence of events in muscle contraction:\n(i) ACh binds to receptors on sarcolemma\n(ii) Action potential travels along T-tubules\n(iii) Ca2+ released from sarcoplasmic reticulum\n(iv) Ca2+ binds to troponin, tropomyosin moves\n(v) Myosin cross-bridges attach to actin, power stroke occurs",
       "options": [
-        "(ii) → (i) → (iv) → (iii) → (v)",
-        "(i) → (ii) → (iii) → (iv) → (v)",
-        "(v) → (iv) → (iii) → (ii) → (i)",
-        "(iii) → (i) → (ii) → (v) → (iv)"
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (v)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v)",
+        "(v) \u2192 (iv) \u2192 (iii) \u2192 (ii) \u2192 (i)",
+        "(iii) \u2192 (i) \u2192 (ii) \u2192 (v) \u2192 (iv)"
       ],
       "correctAnswer": "B",
-      "explanation": "Muscle contraction sequence: ACh binds to sarcolemma receptors (i) → Action potential propagates along T-tubules into the fibre (ii) → Ca2+ released from SR (iii) → Ca2+ binds troponin, causing tropomyosin shift (iv) → Myosin heads attach to actin, perform power stroke (v) → Filaments slide → Contraction.",
+      "explanation": "Muscle contraction sequence: ACh binds to sarcolemma receptors (i) \u2192 Action potential propagates along T-tubules into the fibre (ii) \u2192 Ca2+ released from SR (iii) \u2192 Ca2+ binds troponin, causing tropomyosin shift (iv) \u2192 Myosin heads attach to actin, perform power stroke (v) \u2192 Filaments slide \u2192 Contraction.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1925,13 +1925,13 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the correct sequence of the cross-bridge cycle:\n(i) ATP binds to myosin head, causing detachment from actin\n(ii) Myosin head attaches to actin (cross-bridge formation)\n(iii) Power stroke: myosin head pivots, sliding thin filament\n(iv) ATP is hydrolyzed, myosin head is re-cocked (energized)\n(v) ADP and Pi are released during power stroke",
       "options": [
-        "(iv) → (ii) → (iii) → (v) → (i)",
-        "(ii) → (iii) → (v) → (i) → (iv)",
-        "(i) → (iv) → (ii) → (v) → (iii)",
-        "(iv) → (ii) → (v) → (iii) → (i)"
+        "(iv) \u2192 (ii) \u2192 (iii) \u2192 (v) \u2192 (i)",
+        "(ii) \u2192 (iii) \u2192 (v) \u2192 (i) \u2192 (iv)",
+        "(i) \u2192 (iv) \u2192 (ii) \u2192 (v) \u2192 (iii)",
+        "(iv) \u2192 (ii) \u2192 (v) \u2192 (iii) \u2192 (i)"
       ],
       "correctAnswer": "A",
-      "explanation": "Cross-bridge cycle: ATP hydrolysis energizes (cocks) myosin head (iv) → Myosin attaches to exposed binding sites on actin (ii) → Power stroke: myosin pivots, sliding thin filament (iii) → ADP + Pi released (v) → New ATP binds, causing myosin to detach (i) → Cycle repeats.",
+      "explanation": "Cross-bridge cycle: ATP hydrolysis energizes (cocks) myosin head (iv) \u2192 Myosin attaches to exposed binding sites on actin (ii) \u2192 Power stroke: myosin pivots, sliding thin filament (iii) \u2192 ADP + Pi released (v) \u2192 New ATP binds, causing myosin to detach (i) \u2192 Cycle repeats.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1950,13 +1950,13 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the bones of the upper limb in correct proximal to distal sequence:",
       "options": [
-        "Humerus → Radius and Ulna → Carpals → Metacarpals → Phalanges",
-        "Humerus → Carpals → Radius and Ulna → Phalanges → Metacarpals",
-        "Radius and Ulna → Humerus → Metacarpals → Carpals → Phalanges",
-        "Carpals → Humerus → Radius and Ulna → Phalanges → Metacarpals"
+        "Humerus \u2192 Radius and Ulna \u2192 Carpals \u2192 Metacarpals \u2192 Phalanges",
+        "Humerus \u2192 Carpals \u2192 Radius and Ulna \u2192 Phalanges \u2192 Metacarpals",
+        "Radius and Ulna \u2192 Humerus \u2192 Metacarpals \u2192 Carpals \u2192 Phalanges",
+        "Carpals \u2192 Humerus \u2192 Radius and Ulna \u2192 Phalanges \u2192 Metacarpals"
       ],
       "correctAnswer": "A",
-      "explanation": "Upper limb bones from proximal to distal: Humerus (upper arm) → Radius and Ulna (forearm) → Carpals (8 wrist bones) → Metacarpals (5 palm bones) → Phalanges (14 finger bones). Each upper limb has 30 bones.",
+      "explanation": "Upper limb bones from proximal to distal: Humerus (upper arm) \u2192 Radius and Ulna (forearm) \u2192 Carpals (8 wrist bones) \u2192 Metacarpals (5 palm bones) \u2192 Phalanges (14 finger bones). Each upper limb has 30 bones.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1976,13 +1976,13 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the vertebral regions in correct sequence from top to bottom:",
       "options": [
-        "Cervical → Lumbar → Thoracic → Sacral → Coccygeal",
-        "Thoracic → Cervical → Lumbar → Coccygeal → Sacral",
-        "Cervical → Thoracic → Lumbar → Sacral → Coccygeal",
-        "Lumbar → Thoracic → Cervical → Sacral → Coccygeal"
+        "Cervical \u2192 Lumbar \u2192 Thoracic \u2192 Sacral \u2192 Coccygeal",
+        "Thoracic \u2192 Cervical \u2192 Lumbar \u2192 Coccygeal \u2192 Sacral",
+        "Cervical \u2192 Thoracic \u2192 Lumbar \u2192 Sacral \u2192 Coccygeal",
+        "Lumbar \u2192 Thoracic \u2192 Cervical \u2192 Sacral \u2192 Coccygeal"
       ],
       "correctAnswer": "C",
-      "explanation": "The vertebral column from top to bottom: Cervical (7, neck) → Thoracic (12, chest) → Lumbar (5, lower back) → Sacral (5 fused, pelvis) → Coccygeal (4 fused, tailbone). Total = 26 bones in the adult.",
+      "explanation": "The vertebral column from top to bottom: Cervical (7, neck) \u2192 Thoracic (12, chest) \u2192 Lumbar (5, lower back) \u2192 Sacral (5 fused, pelvis) \u2192 Coccygeal (4 fused, tailbone). Total = 26 bones in the adult.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2001,13 +2001,13 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the correct sequence of events during muscle relaxation:\n(i) Nerve impulse stops at the NMJ\n(ii) Ca2+ is pumped back into the sarcoplasmic reticulum\n(iii) Troponin releases Ca2+, tropomyosin covers binding sites\n(iv) Cross-bridges break, thin filaments slide back\n(v) Muscle returns to resting length",
       "options": [
-        "(iii) → (ii) → (i) → (v) → (iv)",
-        "(i) → (ii) → (iii) → (iv) → (v)",
-        "(ii) → (i) → (iv) → (iii) → (v)",
-        "(i) → (iv) → (ii) → (iii) → (v)"
+        "(iii) \u2192 (ii) \u2192 (i) \u2192 (v) \u2192 (iv)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (v)",
+        "(i) \u2192 (iv) \u2192 (ii) \u2192 (iii) \u2192 (v)"
       ],
       "correctAnswer": "B",
-      "explanation": "Muscle relaxation sequence: Nerve impulse stops (i) → Ca2+ is actively pumped back into SR by Ca-ATPase (ii) → Troponin releases Ca2+, tropomyosin returns to blocking position (iii) → Cross-bridges cannot form, thin filaments slide back passively (iv) → Muscle returns to resting length (v).",
+      "explanation": "Muscle relaxation sequence: Nerve impulse stops (i) \u2192 Ca2+ is actively pumped back into SR by Ca-ATPase (ii) \u2192 Troponin releases Ca2+, tropomyosin returns to blocking position (iii) \u2192 Cross-bridges cannot form, thin filaments slide back passively (iv) \u2192 Muscle returns to resting length (v).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2026,13 +2026,13 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the bones of the lower limb in correct proximal to distal sequence:",
       "options": [
-        "Tibia → Femur → Tarsals → Phalanges → Metatarsals",
-        "Femur → Tarsals → Tibia and Fibula → Metatarsals → Phalanges",
-        "Tarsals → Femur → Tibia → Phalanges → Metatarsals",
-        "Femur → Tibia and Fibula → Tarsals → Metatarsals → Phalanges"
+        "Tibia \u2192 Femur \u2192 Tarsals \u2192 Phalanges \u2192 Metatarsals",
+        "Femur \u2192 Tarsals \u2192 Tibia and Fibula \u2192 Metatarsals \u2192 Phalanges",
+        "Tarsals \u2192 Femur \u2192 Tibia \u2192 Phalanges \u2192 Metatarsals",
+        "Femur \u2192 Tibia and Fibula \u2192 Tarsals \u2192 Metatarsals \u2192 Phalanges"
       ],
       "correctAnswer": "D",
-      "explanation": "Lower limb bones from proximal to distal: Femur (thigh) → Patella (kneecap) → Tibia and Fibula (leg) → Tarsals (7 ankle bones) → Metatarsals (5 foot bones) → Phalanges (14 toe bones). Each lower limb has 30 bones.",
+      "explanation": "Lower limb bones from proximal to distal: Femur (thigh) \u2192 Patella (kneecap) \u2192 Tibia and Fibula (leg) \u2192 Tarsals (7 ankle bones) \u2192 Metatarsals (5 foot bones) \u2192 Phalanges (14 toe bones). Each lower limb has 30 bones.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2052,19 +2052,488 @@
       "ncertChapterName": "Locomotion and Movement",
       "question": "Arrange the structural organization of skeletal muscle from largest to smallest:\n(i) Muscle fibre (cell) (ii) Muscle (organ) (iii) Myofibril (iv) Sarcomere (v) Fascicle (bundle of fibres) (vi) Myofilament (actin/myosin)",
       "options": [
-        "(i) → (ii) → (v) → (iii) → (vi) → (iv)",
-        "(ii) → (v) → (i) → (iii) → (iv) → (vi)",
-        "(vi) → (iv) → (iii) → (i) → (v) → (ii)",
-        "(ii) → (i) → (v) → (iv) → (iii) → (vi)"
+        "(i) \u2192 (ii) \u2192 (v) \u2192 (iii) \u2192 (vi) \u2192 (iv)",
+        "(ii) \u2192 (v) \u2192 (i) \u2192 (iii) \u2192 (iv) \u2192 (vi)",
+        "(vi) \u2192 (iv) \u2192 (iii) \u2192 (i) \u2192 (v) \u2192 (ii)",
+        "(ii) \u2192 (i) \u2192 (v) \u2192 (iv) \u2192 (iii) \u2192 (vi)"
       ],
       "correctAnswer": "B",
-      "explanation": "From largest to smallest: Muscle (whole organ) (ii) → Fascicle (bundle of fibres wrapped in perimysium) (v) → Muscle fibre/cell (individual cell) (i) → Myofibril (contractile strand within fibre) (iii) → Sarcomere (functional unit) (iv) → Myofilament (individual actin/myosin protein) (vi).",
+      "explanation": "From largest to smallest: Muscle (whole organ) (ii) \u2192 Fascicle (bundle of fibres wrapped in perimysium) (v) \u2192 Muscle fibre/cell (individual cell) (i) \u2192 Myofibril (contractile strand within fibre) (iii) \u2192 Sarcomere (functional unit) (iv) \u2192 Myofilament (individual actin/myosin protein) (vi).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
       "tags": [
         "muscle-organization",
         "hierarchy"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "The protein that masks the active binding sites on actin filaments is:",
+      "options": [
+        "Myosin",
+        "Tropomyosin",
+        "Meromyosin",
+        "Troponin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, tropomyosin is a protein that lies along the groove of F-actin filaments and masks the active binding sites for myosin. When calcium ions bind to troponin, tropomyosin moves, exposing the active sites for cross-bridge formation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "muscle-contraction",
+        "tropomyosin",
+        "actin"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "The number of bones in the adult human skeleton is:",
+      "options": [
+        "200",
+        "206",
+        "210",
+        "218"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the adult human skeleton consists of 206 bones. These are divided into the axial skeleton (80 bones \u2014 skull, vertebral column, ribs, sternum) and the appendicular skeleton (126 bones \u2014 limbs and girdles).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "skeletal-system",
+        "bones",
+        "human-skeleton"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "Which of the following is a ball and socket joint?",
+      "options": [
+        "Knee joint",
+        "Elbow joint",
+        "Hip joint",
+        "Atlas-axis joint"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, ball and socket joints allow movement in all directions. The hip joint and shoulder joint are examples. Knee and elbow are hinge joints (movement in one plane), and the atlas-axis is a pivot joint.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "joints",
+        "ball-socket",
+        "hip-joint"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "Rigor mortis (stiffness after death) occurs because:",
+      "options": [
+        "Excess calcium is released",
+        "ATP is no longer available to detach cross-bridges",
+        "Actin filaments degenerate",
+        "Muscles contract involuntarily"
+      ],
+      "correctAnswer": "B",
+      "explanation": "After death, ATP synthesis stops. ATP is required for the detachment of myosin heads from actin filaments. Without ATP, the cross-bridges remain intact, causing the muscles to become rigid (rigor mortis).",
+      "difficulty": "HARD",
+      "isNcertBased": false,
+      "isNeetImportant": true,
+      "tags": [
+        "muscle-contraction",
+        "rigor-mortis",
+        "atp"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "Gout is caused by accumulation of:",
+      "options": [
+        "Calcium phosphate in joints",
+        "Uric acid crystals in joints",
+        "Lactic acid in muscles",
+        "Cholesterol in blood vessels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, gout is caused by the accumulation of uric acid crystals in joints, causing inflammation and severe pain. It commonly affects the joints of the feet, especially the big toe.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disorders",
+        "gout",
+        "uric-acid"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "The smallest bone in the human body is:",
+      "options": [
+        "Malleus",
+        "Incus",
+        "Stapes",
+        "Hyoid"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The stapes (stirrup) is the smallest bone in the human body, located in the middle ear. The three ear ossicles (malleus, incus, and stapes) transmit sound vibrations from the tympanic membrane to the inner ear.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "skeletal-system",
+        "stapes",
+        "ear-ossicles"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "Which mineral ion initiates muscle contraction by binding to troponin?",
+      "options": [
+        "Sodium (Na\u207a)",
+        "Potassium (K\u207a)",
+        "Calcium (Ca\u00b2\u207a)",
+        "Magnesium (Mg\u00b2\u207a)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, calcium ions (Ca\u00b2\u207a) released from the sarcoplasmic reticulum bind to troponin on the thin filaments. This causes a conformational change that moves tropomyosin away from the active sites on actin, allowing myosin cross-bridge formation.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "muscle-contraction",
+        "calcium",
+        "troponin"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "Osteoporosis is a disorder characterised by:",
+      "options": [
+        "Inflammation of joints",
+        "Decreased bone mass and increased fragility",
+        "Accumulation of uric acid in joints",
+        "Autoimmune destruction of cartilage"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, osteoporosis is an age-related disorder characterised by decreased bone mass and increased chances of fractures. It occurs due to decreased levels of estrogen (in women) and decreased calcium absorption.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disorders",
+        "osteoporosis",
+        "bone"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "The H-zone in a sarcomere contains only:",
+      "options": [
+        "Actin filaments",
+        "Both actin and myosin filaments",
+        "Myosin filaments",
+        "Titin filaments"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the H-zone (Hensen's zone) is the central part of the A-band that contains only thick myosin filaments, without any overlap with thin actin filaments. During contraction, the H-zone narrows as actin slides over myosin.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "sarcomere",
+        "h-zone",
+        "myosin"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "Smooth muscles are also called:",
+      "options": [
+        "Striated involuntary muscles",
+        "Non-striated voluntary muscles",
+        "Non-striated involuntary muscles",
+        "Striated voluntary muscles"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, smooth muscles (visceral muscles) are non-striated and involuntary. They are found in the walls of internal organs like the stomach, intestines, and blood vessels. They lack the striations seen in skeletal and cardiac muscles.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "muscle-types",
+        "smooth-muscle",
+        "involuntary"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "The pectoral girdle consists of:",
+      "options": [
+        "Ilium and ischium",
+        "Clavicle and scapula",
+        "Pubis and ilium",
+        "Humerus and radius"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the pectoral girdle (shoulder girdle) consists of the clavicle (collar bone) and scapula (shoulder blade) on each side. The pelvic girdle consists of ilium, ischium, and pubis fused together to form the hip bone.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "skeletal-system",
+        "pectoral-girdle",
+        "clavicle-scapula"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "A motor unit consists of:",
+      "options": [
+        "One muscle fibre and many motor neurons",
+        "A motor neuron and all the muscle fibres it innervates",
+        "A single sarcomere",
+        "The neuromuscular junction only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A motor unit consists of a single motor neuron and all the skeletal muscle fibres it innervates. When the motor neuron fires, all the muscle fibres in that motor unit contract simultaneously. Fine movements require motor units with fewer muscle fibres.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "neuromuscular",
+        "motor-unit",
+        "innervation"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "During muscle contraction, which of the following bands remains unchanged in length?",
+      "options": [
+        "I-band",
+        "A-band",
+        "H-zone",
+        "Sarcomere"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, during muscle contraction, the A-band (dark band, containing myosin) does not change in length. The I-band (light band), H-zone, and overall sarcomere length all decrease as thin actin filaments slide over thick myosin filaments.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "muscle-contraction",
+        "a-band",
+        "sliding-filament"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "Myasthenia gravis is an autoimmune disorder that affects:",
+      "options": [
+        "Bone marrow",
+        "Acetylcholine receptors at neuromuscular junction",
+        "Calcium channels in the sarcoplasmic reticulum",
+        "Myosin heavy chains"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Myasthenia gravis is an autoimmune neuromuscular disease where antibodies attack acetylcholine receptors at the neuromuscular junction, leading to progressive weakness and fatigue of skeletal muscles. It does not affect smooth or cardiac muscle.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disorders",
+        "myasthenia-gravis",
+        "autoimmune"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "The gliding joint is found between:",
+      "options": [
+        "Humerus and ulna",
+        "Carpals in the wrist",
+        "Femur and tibia",
+        "Atlas and axis vertebrae"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, gliding joints allow sliding movement between the flat surfaces of bones. They are found between the carpal bones of the wrist and tarsal bones of the ankle. The elbow and knee are hinge joints, and atlas-axis is a pivot joint.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "joints",
+        "gliding-joint",
+        "carpals"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "Tetany (sustained muscle contraction) results from:",
+      "options": [
+        "High blood calcium levels",
+        "Low blood calcium levels",
+        "High blood glucose levels",
+        "Low blood potassium levels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tetany is a condition characterised by involuntary muscle spasms and sustained contraction caused by abnormally low blood calcium levels (hypocalcemia). Calcium is essential for normal nerve and muscle function.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "disorders",
+        "tetany",
+        "calcium",
+        "muscle"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "The vertebral column in humans consists of how many vertebrae?",
+      "options": [
+        "24",
+        "26",
+        "30",
+        "33"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the human vertebral column consists of 26 vertebrae: 7 cervical, 12 thoracic, 5 lumbar, 1 sacral (5 fused), and 1 coccygeal (4 fused). The original count is 33 but sacral and coccygeal fuse to form 2 bones.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "skeletal-system",
+        "vertebral-column",
+        "vertebrae"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Locomotion and Movement",
+      "chapter": "Locomotion and Movement",
+      "ncertClass": 11,
+      "ncertChapter": 20,
+      "ncertChapterName": "Locomotion and Movement",
+      "question": "The neurotransmitter released at the neuromuscular junction is:",
+      "options": [
+        "Norepinephrine",
+        "Acetylcholine",
+        "Dopamine",
+        "Serotonin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, acetylcholine (ACh) is the neurotransmitter released at the neuromuscular junction. When a nerve impulse reaches the motor end plate, ACh is released into the synaptic cleft, causing depolarisation of the muscle fibre and initiating contraction.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "neuromuscular-junction",
+        "acetylcholine",
+        "neurotransmitter"
       ],
       "neetWeightage": "HIGH"
     }

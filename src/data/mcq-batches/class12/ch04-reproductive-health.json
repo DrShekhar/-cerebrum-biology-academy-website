@@ -1794,13 +1794,13 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following steps of IVF-ET in correct sequence:\n(i) Transfer of embryo to uterus\n(ii) Collection of ova and sperm\n(iii) In vitro fertilisation\n(iv) Embryo development in laboratory\n(v) Hormonal stimulation of ovaries",
       "options": [
-        "v → iii → ii → iv → i",
-        "ii → iii → v → iv → i",
-        "ii → v → iii → iv → i",
-        "v → ii → iii → iv → i"
+        "v \u2192 iii \u2192 ii \u2192 iv \u2192 i",
+        "ii \u2192 iii \u2192 v \u2192 iv \u2192 i",
+        "ii \u2192 v \u2192 iii \u2192 iv \u2192 i",
+        "v \u2192 ii \u2192 iii \u2192 iv \u2192 i"
       ],
       "correctAnswer": "D",
-      "explanation": "Correct sequence: Hormonal stimulation of ovaries (superovulation) → Collection of ova and sperm → In vitro fertilisation → Embryo development in laboratory → Transfer of embryo to uterus.",
+      "explanation": "Correct sequence: Hormonal stimulation of ovaries (superovulation) \u2192 Collection of ova and sperm \u2192 In vitro fertilisation \u2192 Embryo development in laboratory \u2192 Transfer of embryo to uterus.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1819,13 +1819,13 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following in order from least effective to most effective contraceptive method:\n(i) Condoms\n(ii) Sterilisation\n(iii) Periodic abstinence\n(iv) Oral pills",
       "options": [
-        "i → iii → ii → iv",
-        "i → iii → iv → ii",
-        "iii → i → iv → ii",
-        "iii → iv → i → ii"
+        "i \u2192 iii \u2192 ii \u2192 iv",
+        "i \u2192 iii \u2192 iv \u2192 ii",
+        "iii \u2192 i \u2192 iv \u2192 ii",
+        "iii \u2192 iv \u2192 i \u2192 ii"
       ],
       "correctAnswer": "C",
-      "explanation": "From least to most effective: Periodic abstinence (highest failure rate) → Condoms → Oral pills → Sterilisation (most effective, nearly 100%).",
+      "explanation": "From least to most effective: Periodic abstinence (highest failure rate) \u2192 Condoms \u2192 Oral pills \u2192 Sterilisation (most effective, nearly 100%).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1844,13 +1844,13 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following stages of amniocentesis in correct order:\n(i) Chromosomal analysis\n(ii) Insertion of needle into amniotic cavity\n(iii) Collection of amniotic fluid\n(iv) Ultrasound guidance\n(v) Analysis and diagnosis",
       "options": [
-        "iv → ii → iii → i → v",
-        "ii → iii → iv → v → i",
-        "ii → iv → iii → i → v",
-        "iv → iii → ii → i → v"
+        "iv \u2192 ii \u2192 iii \u2192 i \u2192 v",
+        "ii \u2192 iii \u2192 iv \u2192 v \u2192 i",
+        "ii \u2192 iv \u2192 iii \u2192 i \u2192 v",
+        "iv \u2192 iii \u2192 ii \u2192 i \u2192 v"
       ],
       "correctAnswer": "A",
-      "explanation": "Correct sequence: Ultrasound guidance → Insertion of needle → Collection of amniotic fluid → Chromosomal analysis of foetal cells → Analysis and diagnosis of abnormalities.",
+      "explanation": "Correct sequence: Ultrasound guidance \u2192 Insertion of needle \u2192 Collection of amniotic fluid \u2192 Chromosomal analysis of foetal cells \u2192 Analysis and diagnosis of abnormalities.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1869,13 +1869,13 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following government initiatives for population control in chronological order:\n(i) RCH programme\n(ii) Family Planning Programme (1951)\n(iii) National Population Policy (2000)\n(iv) Family Welfare Programme",
       "options": [
-        "ii → iv → i → iii",
-        "ii → i → iv → iii",
-        "iv → ii → i → iii",
-        "ii → iv → iii → i"
+        "ii \u2192 iv \u2192 i \u2192 iii",
+        "ii \u2192 i \u2192 iv \u2192 iii",
+        "iv \u2192 ii \u2192 i \u2192 iii",
+        "ii \u2192 iv \u2192 iii \u2192 i"
       ],
       "correctAnswer": "A",
-      "explanation": "Chronological order: Family Planning Programme (1951) → Family Welfare Programme (renamed) → RCH programme → National Population Policy (2000).",
+      "explanation": "Chronological order: Family Planning Programme (1951) \u2192 Family Welfare Programme (renamed) \u2192 RCH programme \u2192 National Population Policy (2000).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
@@ -1894,13 +1894,13 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following contraceptive methods from temporary to permanent:\n(i) Tubectomy\n(ii) Condom\n(iii) IUD\n(iv) Oral pills",
       "options": [
-        "ii → iii → iv → i",
-        "iii → ii → iv → i",
-        "ii → iv → iii → i",
-        "iv → ii → iii → i"
+        "ii \u2192 iii \u2192 iv \u2192 i",
+        "iii \u2192 ii \u2192 iv \u2192 i",
+        "ii \u2192 iv \u2192 iii \u2192 i",
+        "iv \u2192 ii \u2192 iii \u2192 i"
       ],
       "correctAnswer": "A",
-      "explanation": "From temporary to permanent: Condom (single use) → IUD (medium-term, removable) → Oral pills (daily, reversible) → Tubectomy (permanent sterilisation). Actually all except tubectomy are temporary; the order from shortest to longest acting is: Condom → IUD → Oral pills → Tubectomy.",
+      "explanation": "From temporary to permanent: Condom (single use) \u2192 IUD (medium-term, removable) \u2192 Oral pills (daily, reversible) \u2192 Tubectomy (permanent sterilisation). Actually all except tubectomy are temporary; the order from shortest to longest acting is: Condom \u2192 IUD \u2192 Oral pills \u2192 Tubectomy.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1919,13 +1919,13 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following in the order of steps for artificial insemination:\n(i) Introduction of semen into female tract\n(ii) Collection of semen from husband/donor\n(iii) Processing and concentration of semen\n(iv) Monitoring for pregnancy",
       "options": [
-        "iii → ii → i → iv",
-        "ii → i → iii → iv",
-        "i → ii → iii → iv",
-        "ii → iii → i → iv"
+        "iii \u2192 ii \u2192 i \u2192 iv",
+        "ii \u2192 i \u2192 iii \u2192 iv",
+        "i \u2192 ii \u2192 iii \u2192 iv",
+        "ii \u2192 iii \u2192 i \u2192 iv"
       ],
       "correctAnswer": "D",
-      "explanation": "Correct sequence: Collection of semen → Processing and concentration of semen → Introduction of semen into female reproductive tract → Monitoring for pregnancy.",
+      "explanation": "Correct sequence: Collection of semen \u2192 Processing and concentration of semen \u2192 Introduction of semen into female reproductive tract \u2192 Monitoring for pregnancy.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1944,19 +1944,598 @@
       "ncertChapterName": "Reproductive Health",
       "question": "Arrange the following causes of infertility from most to least common:\n(i) Blocked fallopian tubes\n(ii) Low sperm count\n(iii) Hormonal imbalances\n(iv) Physical inability for coitus",
       "options": [
-        "i → ii → iii → iv",
-        "ii → i → iii → iv",
-        "iii → i → ii → iv",
-        "iv → iii → i → ii"
+        "i \u2192 ii \u2192 iii \u2192 iv",
+        "ii \u2192 i \u2192 iii \u2192 iv",
+        "iii \u2192 i \u2192 ii \u2192 iv",
+        "iv \u2192 iii \u2192 i \u2192 ii"
       ],
       "correctAnswer": "C",
-      "explanation": "Common causes of infertility from most to least: Hormonal imbalances (most common) → Blocked fallopian tubes → Low sperm count → Physical inability for coitus. Hormonal issues affect both males and females.",
+      "explanation": "Common causes of infertility from most to least: Hormonal imbalances (most common) \u2192 Blocked fallopian tubes \u2192 Low sperm count \u2192 Physical inability for coitus. Hormonal issues affect both males and females.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
       "tags": [
         "infertility-causes",
         "sequence"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Which of the following IUDs releases copper ions to prevent conception?",
+      "options": [
+        "LNG-20",
+        "Progestasert",
+        "Multiload 375",
+        "Lippes Loop"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, Multiload 375 is a copper-releasing IUD that increases phagocytosis of sperms within the uterus. LNG-20 and Progestasert are hormone-releasing IUDs, while Lippes Loop is a non-medicated IUD.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "contraception",
+        "iud",
+        "copper",
+        "multiload"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Chlamydiasis is caused by:",
+      "options": [
+        "Treponema pallidum",
+        "Neisseria gonorrhoeae",
+        "Chlamydia trachomatis",
+        "Human papillomavirus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Chlamydiasis is caused by the bacterium Chlamydia trachomatis. It is one of the most common bacterial STDs. Treponema causes syphilis, Neisseria causes gonorrhoea, and HPV causes genital warts.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "std",
+        "chlamydia",
+        "bacterial-infection"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Saheli, the oral contraceptive developed by CDRI, contains:",
+      "options": [
+        "Progesterone and estrogen",
+        "Centchroman",
+        "Mifepristone",
+        "Levonorgestrel"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, Saheli is a non-steroidal oral contraceptive developed by CDRI, Lucknow. It contains centchroman and is taken once a week. Unlike hormonal pills, it has very few side effects and high contraceptive value.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "contraception",
+        "saheli",
+        "centchroman",
+        "oral-pill"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Which of the following is NOT a measure to prevent STDs?",
+      "options": [
+        "Using condoms during intercourse",
+        "Avoiding multiple sexual partners",
+        "Using oral contraceptive pills",
+        "Early detection and treatment"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Oral contraceptive pills prevent pregnancy but do NOT provide protection against sexually transmitted diseases. Only barrier methods like condoms provide protection against STDs. Other preventive measures include avoiding multiple partners and early detection.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "std",
+        "prevention",
+        "contraception"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "India was among the first countries to initiate a national family planning programme in:",
+      "options": [
+        "1947",
+        "1952",
+        "1960",
+        "1975"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, India was amongst the first countries in the world to initiate action plans and programmes at a national level to attain total reproductive health as a social goal. The national family planning programme was started in 1952.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-control",
+        "family-planning",
+        "india"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Genital herpes is caused by:",
+      "options": [
+        "Human papillomavirus",
+        "Herpes simplex virus",
+        "Hepatitis B virus",
+        "HIV"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Genital herpes is caused by Herpes simplex virus (HSV-2). It causes painful blisters in the genital area. HPV causes genital warts, Hepatitis B affects the liver, and HIV causes AIDS.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "std",
+        "herpes",
+        "viral-infection"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Which ART technique involves transfer of an embryo with more than 8 blastomeres into the uterus?",
+      "options": [
+        "GIFT",
+        "ZIFT",
+        "IUT (Intra Uterine Transfer)",
+        "ICSI"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, in IUT (Intra Uterine Transfer), embryos with more than 8 blastomeres are transferred into the uterus. ZIFT involves transfer of zygote or early embryo (up to 8 blastomeres) into the fallopian tube. GIFT involves transfer of unfertilised ovum and sperm.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "art",
+        "iut",
+        "embryo-transfer"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Which of the following complications can result from untreated gonorrhoea in females?",
+      "options": [
+        "Liver cirrhosis",
+        "Cervical cancer",
+        "Pelvic inflammatory disease",
+        "Diabetes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, complications of untreated STDs like gonorrhoea include pelvic inflammatory disease (PID), which can lead to infertility, ectopic pregnancy, and other reproductive complications. Cervical cancer is associated with HPV.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "std",
+        "gonorrhoea",
+        "pid",
+        "complications"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Lactational amenorrhoea as a natural contraceptive method is effective up to a maximum of:",
+      "options": [
+        "3 months after parturition",
+        "6 months after parturition",
+        "12 months after parturition",
+        "24 months after parturition"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, lactational amenorrhoea (absence of menstruation during lactation) is effective as a natural contraceptive method only up to 6 months after parturition. After this period, ovulation may resume even during breastfeeding.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "contraception",
+        "natural-methods",
+        "lactational-amenorrhoea"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Which of the following is a non-medicated IUD?",
+      "options": [
+        "Cu-T",
+        "Cu-7",
+        "Lippes Loop",
+        "LNG-20"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, IUDs are classified as non-medicated (like Lippes Loop), copper-releasing (Cu-T, Cu-7, Multiload 375), and hormone-releasing (Progestasert, LNG-20). Non-medicated IUDs work by creating a physical barrier.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "contraception",
+        "iud",
+        "lippes-loop",
+        "non-medicated"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Spermicidal creams and jellies are examples of:",
+      "options": [
+        "Hormonal methods",
+        "Chemical barrier methods",
+        "Surgical methods",
+        "Natural methods"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, spermicidal creams, jellies, and foams are chemical barriers that kill or immobilise sperms. They are used along with physical barriers like diaphragms and cervical caps for better efficacy.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "contraception",
+        "chemical-barrier",
+        "spermicide"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Which of the following is TRUE about MTP (Medical Termination of Pregnancy)?",
+      "options": [
+        "It is legal in India for any stage of pregnancy",
+        "It is safe and legal up to 12 weeks of pregnancy",
+        "It is used as a regular contraceptive method",
+        "It does not require medical supervision"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, MTP is considered safe during the first trimester (up to 12 weeks). It is relatively riskier in the second trimester. MTP is not a contraceptive method and should not be used as one. It requires proper medical supervision.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "mtp",
+        "abortion",
+        "reproductive-health"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "In GIFT, which of the following is transferred into the fallopian tube?",
+      "options": [
+        "Zygote only",
+        "Embryo with 8 blastomeres",
+        "Ovum and sperm together",
+        "Embryo with 16 blastomeres"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, GIFT (Gamete Intra Fallopian Transfer) involves transfer of an ovum collected from a donor along with sperms into the fallopian tube of the woman who cannot produce ova but can provide suitable environment for fertilisation and development.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "art",
+        "gift",
+        "gamete-transfer"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Which of the following is a major cause of population explosion in India?",
+      "options": [
+        "Increased emigration",
+        "Decline in death rate with stable birth rate",
+        "Increased maternal mortality",
+        "Decrease in fertility rate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the major reason for population explosion is the decline in death rate, maternal mortality rate, and infant mortality rate due to better medical facilities, while the birth rate has remained comparatively high.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population",
+        "explosion",
+        "death-rate"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "The statutory age for marriage in India is:",
+      "options": [
+        "18 for both males and females",
+        "18 for females and 21 for males",
+        "21 for both males and females",
+        "16 for females and 18 for males"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the statutory age for marriage in India is 18 years for females and 21 years for males. This measure was taken as a step to control population growth by delaying the reproductive age.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-control",
+        "marriage-age",
+        "india"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Which of the following causes infertility in males due to inability to produce sperms?",
+      "options": [
+        "Blocked vas deferens",
+        "Very low sperm count in ejaculate",
+        "Physical inability to inseminate",
+        "All of the above"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, infertility in males can be due to physical inability to inseminate the female, very low sperm count in the ejaculate, or blocked vas deferens. Females may be infertile due to blocked fallopian tubes, uterine abnormalities, or hormonal imbalances.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "infertility",
+        "male",
+        "causes"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Progestasert and LNG-20 IUDs make the uterus unsuitable for implantation by:",
+      "options": [
+        "Releasing copper ions",
+        "Creating a physical barrier",
+        "Releasing hormones that change uterine environment",
+        "Killing sperms chemically"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, hormone-releasing IUDs like Progestasert (releases progesterone) and LNG-20 (releases levonorgestrel) make the uterus unsuitable for implantation and also make the cervical mucus hostile to sperms.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "contraception",
+        "iud",
+        "hormone-releasing"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Which of the following STDs is caused by a protozoan?",
+      "options": [
+        "Syphilis",
+        "Trichomoniasis",
+        "Genital herpes",
+        "Gonorrhoea"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Trichomoniasis is caused by Trichomonas vaginalis, a protozoan parasite. Syphilis (Treponema) and gonorrhoea (Neisseria) are bacterial STDs, while genital herpes is caused by Herpes simplex virus.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "std",
+        "trichomoniasis",
+        "protozoan"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Amniocentesis was banned in India because it was being misused for:",
+      "options": [
+        "Detecting chromosomal abnormalities",
+        "Determining sex of the foetus leading to female foeticide",
+        "Prenatal diagnosis of genetic disorders",
+        "Testing Rh incompatibility"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, amniocentesis is a technique for prenatal diagnosis of genetic and chromosomal abnormalities. It was banned in India for sex determination because it was being misused to determine the sex of the foetus, leading to female foeticide.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amniocentesis",
+        "sex-determination",
+        "female-foeticide"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Which of the following STDs cannot be cured completely?",
+      "options": [
+        "Gonorrhoea",
+        "Syphilis",
+        "Hepatitis B",
+        "Chlamydiasis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, diseases like AIDS and Hepatitis B are incurable because they are caused by viruses. Bacterial STDs like gonorrhoea, syphilis, and chlamydiasis can be treated and cured with appropriate antibiotics if detected early.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "std",
+        "hepatitis-b",
+        "incurable",
+        "viral"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Cervical caps and vaults are barrier contraceptives used by:",
+      "options": [
+        "Males",
+        "Females",
+        "Both males and females",
+        "Neither males nor females"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, cervical caps and vaults are barrier contraceptive devices used by females. They are placed over the cervix during coitus to prevent sperms from entering the uterus. Male barrier methods include condoms.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "contraception",
+        "barrier",
+        "cervical-cap",
+        "female"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproductive Health",
+      "chapter": "Reproductive Health",
+      "ncertClass": 12,
+      "ncertChapter": 4,
+      "ncertChapterName": "Reproductive Health",
+      "question": "Improved health care facilities have led to rapid decline in which of the following, contributing to population explosion?",
+      "options": [
+        "Birth rate",
+        "Fertility rate",
+        "Death rate and infant mortality rate",
+        "Immigration rate"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, rapid decline in death rate, maternal mortality rate (MMR) and infant mortality rate (IMR) due to better medical facilities and awareness has been a major cause of population explosion, while the birth rate has not declined proportionately.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population",
+        "death-rate",
+        "imr",
+        "mmr"
       ],
       "neetWeightage": "MEDIUM"
     }

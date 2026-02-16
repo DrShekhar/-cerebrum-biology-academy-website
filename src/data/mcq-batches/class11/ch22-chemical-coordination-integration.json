@@ -1945,13 +1945,13 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the correct sequence of the hypothalamic-pituitary-thyroid axis:\n(i) Hypothalamus releases TRH\n(ii) Anterior pituitary releases TSH\n(iii) Thyroid releases T3 and T4\n(iv) High T3/T4 inhibits TRH and TSH (negative feedback)",
       "options": [
-        "(iv) → (iii) → (ii) → (i)",
-        "(iii) → (ii) → (i) → (iv)",
-        "(i) → (ii) → (iii) → (iv)",
-        "(ii) → (i) → (iv) → (iii)"
+        "(iv) \u2192 (iii) \u2192 (ii) \u2192 (i)",
+        "(iii) \u2192 (ii) \u2192 (i) \u2192 (iv)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii)"
       ],
       "correctAnswer": "C",
-      "explanation": "The HPT axis sequence: Hypothalamus releases TRH (i) → TRH stimulates anterior pituitary to release TSH (ii) → TSH stimulates thyroid to release T3/T4 (iii) → When T3/T4 levels are high enough, they inhibit TRH and TSH secretion (negative feedback) (iv), maintaining hormonal homeostasis.",
+      "explanation": "The HPT axis sequence: Hypothalamus releases TRH (i) \u2192 TRH stimulates anterior pituitary to release TSH (ii) \u2192 TSH stimulates thyroid to release T3/T4 (iii) \u2192 When T3/T4 levels are high enough, they inhibit TRH and TSH secretion (negative feedback) (iv), maintaining hormonal homeostasis.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1968,15 +1968,15 @@
       "ncertClass": 11,
       "ncertChapter": 22,
       "ncertChapterName": "Chemical Coordination and Integration",
-      "question": "Arrange the correct sequence of RAAS activation:\n(i) Decreased blood pressure detected by JGA\n(ii) Renin released from JG cells\n(iii) Angiotensinogen → Angiotensin I (by renin)\n(iv) Angiotensin I → Angiotensin II (by ACE in lungs)\n(v) Angiotensin II stimulates aldosterone release from adrenal cortex\n(vi) Aldosterone increases Na+/water reabsorption → blood pressure rises",
+      "question": "Arrange the correct sequence of RAAS activation:\n(i) Decreased blood pressure detected by JGA\n(ii) Renin released from JG cells\n(iii) Angiotensinogen \u2192 Angiotensin I (by renin)\n(iv) Angiotensin I \u2192 Angiotensin II (by ACE in lungs)\n(v) Angiotensin II stimulates aldosterone release from adrenal cortex\n(vi) Aldosterone increases Na+/water reabsorption \u2192 blood pressure rises",
       "options": [
-        "(ii) → (i) → (iv) → (iii) → (v) → (vi)",
-        "(iii) → (ii) → (i) → (iv) → (vi) → (v)",
-        "(i) → (ii) → (iii) → (iv) → (v) → (vi)",
-        "(vi) → (v) → (iv) → (iii) → (ii) → (i)"
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (v) \u2192 (vi)",
+        "(iii) \u2192 (ii) \u2192 (i) \u2192 (iv) \u2192 (vi) \u2192 (v)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v) \u2192 (vi)",
+        "(vi) \u2192 (v) \u2192 (iv) \u2192 (iii) \u2192 (ii) \u2192 (i)"
       ],
       "correctAnswer": "C",
-      "explanation": "RAAS sequence: Low BP detected by JGA (i) → JG cells release renin (ii) → Renin converts angiotensinogen to angiotensin I (iii) → ACE converts angiotensin I to angiotensin II (iv) → Angiotensin II stimulates aldosterone from adrenal cortex (v) → Aldosterone increases Na+/water reabsorption, raising BP (vi).",
+      "explanation": "RAAS sequence: Low BP detected by JGA (i) \u2192 JG cells release renin (ii) \u2192 Renin converts angiotensinogen to angiotensin I (iii) \u2192 ACE converts angiotensin I to angiotensin II (iv) \u2192 Angiotensin II stimulates aldosterone from adrenal cortex (v) \u2192 Aldosterone increases Na+/water reabsorption, raising BP (vi).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1995,13 +1995,13 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the mechanism of peptide hormone action using cAMP pathway:\n(i) Hormone binds to membrane receptor\n(ii) G-protein is activated\n(iii) Adenylyl cyclase converts ATP to cAMP\n(iv) cAMP activates protein kinase A\n(v) Cellular response occurs",
       "options": [
-        "(iii) → (ii) → (i) → (v) → (iv)",
-        "(i) → (ii) → (iii) → (iv) → (v)",
-        "(ii) → (i) → (iv) → (iii) → (v)",
-        "(v) → (iv) → (iii) → (ii) → (i)"
+        "(iii) \u2192 (ii) \u2192 (i) \u2192 (v) \u2192 (iv)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (v)",
+        "(v) \u2192 (iv) \u2192 (iii) \u2192 (ii) \u2192 (i)"
       ],
       "correctAnswer": "B",
-      "explanation": "cAMP pathway sequence: Hormone binds to membrane receptor (i) → Receptor activates G-protein (ii) → G-protein activates adenylyl cyclase which converts ATP to cAMP (iii) → cAMP activates protein kinase A (PKA) (iv) → PKA phosphorylates target proteins → Cellular response (v).",
+      "explanation": "cAMP pathway sequence: Hormone binds to membrane receptor (i) \u2192 Receptor activates G-protein (ii) \u2192 G-protein activates adenylyl cyclase which converts ATP to cAMP (iii) \u2192 cAMP activates protein kinase A (PKA) (iv) \u2192 PKA phosphorylates target proteins \u2192 Cellular response (v).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2020,13 +2020,13 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the adrenal cortex zones from outermost to innermost:",
       "options": [
-        "Zona fasciculata → Zona glomerulosa → Zona reticularis",
-        "Zona glomerulosa → Zona reticularis → Zona fasciculata",
-        "Zona reticularis → Zona fasciculata → Zona glomerulosa",
-        "Zona glomerulosa → Zona fasciculata → Zona reticularis"
+        "Zona fasciculata \u2192 Zona glomerulosa \u2192 Zona reticularis",
+        "Zona glomerulosa \u2192 Zona reticularis \u2192 Zona fasciculata",
+        "Zona reticularis \u2192 Zona fasciculata \u2192 Zona glomerulosa",
+        "Zona glomerulosa \u2192 Zona fasciculata \u2192 Zona reticularis"
       ],
       "correctAnswer": "D",
-      "explanation": "From outermost to innermost: Zona glomerulosa (mineralocorticoids) → Zona fasciculata (glucocorticoids) → Zona reticularis (androgens). Mnemonic: GFR from outside to inside produces Salt (aldosterone), Sugar (cortisol), Sex (androgens).",
+      "explanation": "From outermost to innermost: Zona glomerulosa (mineralocorticoids) \u2192 Zona fasciculata (glucocorticoids) \u2192 Zona reticularis (androgens). Mnemonic: GFR from outside to inside produces Salt (aldosterone), Sugar (cortisol), Sex (androgens).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2046,13 +2046,13 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the correct sequence of blood glucose regulation when glucose rises after a meal:\n(i) Blood glucose rises after eating\n(ii) Beta cells of pancreas detect high glucose\n(iii) Beta cells secrete insulin\n(iv) Insulin promotes glucose uptake by cells and glycogenesis\n(v) Blood glucose returns to normal",
       "options": [
-        "(iii) → (ii) → (i) → (v) → (iv)",
-        "(ii) → (i) → (iv) → (iii) → (v)",
-        "(i) → (ii) → (iii) → (iv) → (v)",
-        "(v) → (iv) → (iii) → (ii) → (i)"
+        "(iii) \u2192 (ii) \u2192 (i) \u2192 (v) \u2192 (iv)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (v)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v)",
+        "(v) \u2192 (iv) \u2192 (iii) \u2192 (ii) \u2192 (i)"
       ],
       "correctAnswer": "C",
-      "explanation": "After a meal: Blood glucose rises (i) → Beta cells detect high glucose (ii) → Insulin is secreted (iii) → Insulin promotes cellular glucose uptake, glycogenesis, and lipogenesis (iv) → Blood glucose returns to normal homeostatic level (v).",
+      "explanation": "After a meal: Blood glucose rises (i) \u2192 Beta cells detect high glucose (ii) \u2192 Insulin is secreted (iii) \u2192 Insulin promotes cellular glucose uptake, glycogenesis, and lipogenesis (iv) \u2192 Blood glucose returns to normal homeostatic level (v).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2071,13 +2071,13 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the correct sequence of steroid hormone action:\n(i) Steroid hormone crosses cell membrane\n(ii) Binds to intracellular receptor\n(iii) Hormone-receptor complex enters nucleus\n(iv) Complex binds to DNA and activates gene transcription\n(v) mRNA is translated into protein (cellular response)",
       "options": [
-        "(i) → (ii) → (iii) → (iv) → (v)",
-        "(iii) → (ii) → (i) → (v) → (iv)",
-        "(v) → (iv) → (iii) → (ii) → (i)",
-        "(ii) → (i) → (iv) → (iii) → (v)"
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v)",
+        "(iii) \u2192 (ii) \u2192 (i) \u2192 (v) \u2192 (iv)",
+        "(v) \u2192 (iv) \u2192 (iii) \u2192 (ii) \u2192 (i)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (v)"
       ],
       "correctAnswer": "A",
-      "explanation": "Steroid hormone mechanism: Being lipid-soluble, the hormone crosses the cell membrane (i) → Binds to intracellular (cytoplasmic/nuclear) receptor (ii) → Hormone-receptor complex enters the nucleus (iii) → Binds to hormone response elements on DNA, activating transcription (iv) → mRNA translated to protein (v).",
+      "explanation": "Steroid hormone mechanism: Being lipid-soluble, the hormone crosses the cell membrane (i) \u2192 Binds to intracellular (cytoplasmic/nuclear) receptor (ii) \u2192 Hormone-receptor complex enters the nucleus (iii) \u2192 Binds to hormone response elements on DNA, activating transcription (iv) \u2192 mRNA translated to protein (v).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2096,19 +2096,435 @@
       "ncertChapterName": "Chemical Coordination and Integration",
       "question": "Arrange the correct sequence of the stress response:\n(i) Stressful stimulus detected\n(ii) Hypothalamus releases CRH\n(iii) Anterior pituitary releases ACTH\n(iv) Adrenal cortex releases cortisol\n(v) Body adapts to stress (increased glucose, anti-inflammatory effects)",
       "options": [
-        "(i) → (ii) → (iii) → (iv) → (v)",
-        "(ii) → (i) → (iv) → (iii) → (v)",
-        "(iii) → (ii) → (i) → (v) → (iv)",
-        "(iv) → (iii) → (ii) → (i) → (v)"
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (v)",
+        "(iii) \u2192 (ii) \u2192 (i) \u2192 (v) \u2192 (iv)",
+        "(iv) \u2192 (iii) \u2192 (ii) \u2192 (i) \u2192 (v)"
       ],
       "correctAnswer": "A",
-      "explanation": "Stress response sequence: Stressful stimulus detected (i) → Hypothalamus releases CRH (ii) → CRH stimulates anterior pituitary to release ACTH (iii) → ACTH stimulates adrenal cortex to release cortisol (iv) → Cortisol helps the body cope with stress through increased glucose, anti-inflammatory effects, etc. (v).",
+      "explanation": "Stress response sequence: Stressful stimulus detected (i) \u2192 Hypothalamus releases CRH (ii) \u2192 CRH stimulates anterior pituitary to release ACTH (iii) \u2192 ACTH stimulates adrenal cortex to release cortisol (iv) \u2192 Cortisol helps the body cope with stress through increased glucose, anti-inflammatory effects, etc. (v).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
       "tags": [
         "stress-response",
         "HPA-axis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Which hormone is known as the 'emergency hormone'?",
+      "options": [
+        "Insulin",
+        "Adrenaline (Epinephrine)",
+        "Thyroxine",
+        "Cortisol"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, adrenaline (epinephrine), secreted by the adrenal medulla, is called the emergency hormone or 'fight or flight' hormone. It increases heart rate, blood pressure, and blood glucose levels during stress situations.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "adrenal-gland",
+        "adrenaline",
+        "emergency-hormone"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Cretinism in children is caused by deficiency of:",
+      "options": [
+        "Growth hormone",
+        "Insulin",
+        "Thyroid hormones",
+        "Parathyroid hormone"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, deficiency of thyroid hormones during childhood causes cretinism, characterised by stunted growth, mental retardation, low intelligence, and abnormal skin. In adults, thyroid hormone deficiency causes myxoedema.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "thyroid",
+        "cretinism",
+        "hormone-deficiency"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Diabetes insipidus is caused by deficiency of:",
+      "options": [
+        "Insulin",
+        "ADH (Vasopressin)",
+        "Aldosterone",
+        "Glucagon"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Diabetes insipidus results from deficiency of ADH (antidiuretic hormone/vasopressin) from the posterior pituitary. It leads to excessive water loss through urine (polyuria) and excessive thirst (polydipsia). It is different from diabetes mellitus which involves insulin.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pituitary",
+        "adh",
+        "diabetes-insipidus"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "The islets of Langerhans are found in:",
+      "options": [
+        "Liver",
+        "Pancreas",
+        "Adrenal gland",
+        "Thyroid gland"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the islets of Langerhans are the endocrine part of the pancreas. They contain alpha cells (secrete glucagon) and beta cells (secrete insulin) that regulate blood glucose levels.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pancreas",
+        "islets-langerhans",
+        "endocrine"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Which of the following hormones is secreted by the corpus luteum?",
+      "options": [
+        "Estrogen only",
+        "Progesterone only",
+        "Both estrogen and progesterone",
+        "FSH and LH"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the corpus luteum (formed after ovulation from the remnant of the Graafian follicle) secretes both progesterone and estrogen. Progesterone maintains the uterine endometrium for implantation of the embryo.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ovary",
+        "corpus-luteum",
+        "progesterone"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Addison's disease is caused by the hyposecretion of hormones from:",
+      "options": [
+        "Adrenal medulla",
+        "Adrenal cortex",
+        "Thyroid gland",
+        "Anterior pituitary"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, Addison's disease results from hyposecretion of adrenal cortex hormones (glucocorticoids and mineralocorticoids). Symptoms include weakness, fatigue, hypotension, and darkening of the skin.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "adrenal-cortex",
+        "addisons-disease",
+        "hyposecretion"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Melatonin is secreted by:",
+      "options": [
+        "Thyroid gland",
+        "Pineal gland",
+        "Pituitary gland",
+        "Thymus gland"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, melatonin is secreted by the pineal gland. It plays a role in regulating the circadian rhythm (24-hour biological clock), sleep-wake cycle, and body temperature. Melatonin secretion increases in darkness.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pineal-gland",
+        "melatonin",
+        "circadian-rhythm"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Graves' disease is associated with:",
+      "options": [
+        "Hypothyroidism",
+        "Hyperthyroidism",
+        "Hypoparathyroidism",
+        "Hypoadrenalism"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Graves' disease is an autoimmune disorder that causes hyperthyroidism (overproduction of thyroid hormones). Symptoms include exophthalmos (bulging eyes), weight loss, increased metabolic rate, rapid heartbeat, and nervousness.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "thyroid",
+        "graves-disease",
+        "hyperthyroidism"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Atrial Natriuretic Factor (ANF) is released by the heart to:",
+      "options": [
+        "Increase blood pressure",
+        "Decrease blood pressure by causing vasodilation",
+        "Increase heart rate",
+        "Stimulate red blood cell production"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, ANF (Atrial Natriuretic Factor) is released by the atrial wall of the heart when blood pressure increases. It causes vasodilation (dilation of blood vessels) and decreases blood pressure. It also inhibits renin and aldosterone secretion.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "anf",
+        "blood-pressure"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Erythropoietin, which stimulates red blood cell production, is primarily produced by:",
+      "options": [
+        "Liver",
+        "Spleen",
+        "Kidneys",
+        "Bone marrow"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the kidneys produce erythropoietin (EPO), a hormone that stimulates the production of red blood cells (erythropoiesis) in the bone marrow. EPO secretion increases in response to low oxygen levels (hypoxia).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "kidney",
+        "erythropoietin",
+        "rbc-production"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Which hormone is responsible for the 'let-down' reflex during breastfeeding?",
+      "options": [
+        "Prolactin",
+        "Oxytocin",
+        "Estrogen",
+        "Progesterone"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, oxytocin (from the posterior pituitary) acts on smooth muscles of the mammary glands causing milk ejection (let-down reflex). Prolactin (from the anterior pituitary) stimulates milk production but not its release.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pituitary",
+        "oxytocin",
+        "lactation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Calcitonin is secreted by the thyroid gland and it:",
+      "options": [
+        "Increases blood calcium levels",
+        "Decreases blood calcium levels",
+        "Regulates blood glucose levels",
+        "Stimulates growth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, calcitonin (TCT - Thyro Calcitonin) is secreted by the parafollicular cells (C cells) of the thyroid gland. It lowers blood calcium levels by inhibiting bone resorption. It works antagonistically with parathyroid hormone (PTH).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "thyroid",
+        "calcitonin",
+        "calcium-regulation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Acromegaly is caused by hypersecretion of growth hormone in:",
+      "options": [
+        "Children before puberty",
+        "Adults after epiphyseal plate closure",
+        "Infants",
+        "Elderly"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, excess secretion of growth hormone in adults (after closure of epiphyseal growth plates) causes acromegaly, characterised by enlargement of extremities like hands, feet, and jaw. In children, excess GH causes gigantism.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pituitary",
+        "growth-hormone",
+        "acromegaly"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Which of the following is a steroid hormone?",
+      "options": [
+        "Insulin",
+        "Thyroxine",
+        "Cortisol",
+        "Adrenaline"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cortisol (a glucocorticoid from the adrenal cortex) is a steroid hormone derived from cholesterol. Insulin is a peptide hormone, thyroxine is an amino acid derivative, and adrenaline is a catecholamine (amino acid derivative).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "hormone-types",
+        "steroid",
+        "cortisol"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "The thymus gland is most active during:",
+      "options": [
+        "Old age",
+        "Childhood and adolescence",
+        "Pregnancy",
+        "Menopause"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the thymus gland plays a major role in immunity, especially during childhood. It secretes thymosins that promote T-cell differentiation. The thymus degenerates (involutes) with age, becoming smaller and less functional in adults.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "thymus",
+        "immunity",
+        "thymosins"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Chemical Coordination and Integration",
+      "chapter": "Chemical Coordination and Integration",
+      "ncertClass": 11,
+      "ncertChapter": 22,
+      "ncertChapterName": "Chemical Coordination and Integration",
+      "question": "Glucocorticoids are secreted by which zone of the adrenal cortex?",
+      "options": [
+        "Zona glomerulosa",
+        "Zona fasciculata",
+        "Zona reticularis",
+        "Adrenal medulla"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the adrenal cortex has three zones: zona glomerulosa (secretes mineralocorticoids like aldosterone), zona fasciculata (secretes glucocorticoids like cortisol), and zona reticularis (secretes small amounts of androgens).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "adrenal-cortex",
+        "glucocorticoids",
+        "zona-fasciculata"
       ],
       "neetWeightage": "HIGH"
     }
