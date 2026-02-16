@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch6-12 Cell Integration & Clinical Applications — Wave 1C",
+    "version": 1,
+    "source": "olympiad-wave1c",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "Lipid rafts are cholesterol- and sphingolipid-enriched membrane microdomains. Caveolae are a specialized subset of lipid rafts characterized by flask-shaped invaginations of the plasma membrane. Which of the following correctly describes the molecular basis of caveolae formation and their signaling function?",
+      "options": [
+        "Caveolae are formed by clathrin heavy chain oligomerization around lipid raft domains, and they function primarily in constitutive receptor recycling from early endosomes to the plasma membrane",
+        "Caveolae require only flotillin-1 for their formation and function exclusively as mechanosensors without any role in receptor signaling or endocytosis",
+        "Caveolae are identical to clathrin-coated pits in structure and function but are found only on the apical surface of polarized epithelial cells",
+        "Caveolae are formed by caveolin-1 oligomerization and insertion of its hairpin-loop hydrophobic domain into the inner leaflet of the plasma membrane; caveolin-1 scaffolding domain (CSD) recruits and concentrates signaling molecules such as eNOS, Src family kinases, and heterotrimeric G-protein alpha subunits, often holding them in an inactive state until stimulus-dependent release"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Caveolae are 50-80 nm flask-shaped invaginations of the plasma membrane formed by oligomerization of caveolin-1 (or caveolin-3 in muscle). Caveolin-1 inserts into the inner leaflet via a hairpin-loop hydrophobic domain, and its oligomerization (14-16 caveolin molecules per caveola) drives membrane curvature. Cavin proteins (cavin-1/PTRF) stabilize the caveolar coat. The caveolin scaffolding domain (CSD, residues 82-101) directly interacts with and concentrates numerous signaling proteins, including eNOS (which caveolin-1 tonically inhibits until calcium/calmodulin-dependent release), Src family kinases, H-Ras, heterotrimeric G-alpha subunits, and EGF receptor. This compartmentalization creates signaling platforms that can rapidly activate or inhibit specific pathways. Option A is wrong because caveolae are clathrin-independent. Option B is incorrect because flotillins form a separate class of raft-associated structures, and caveolae participate in signaling and endocytosis (e.g., SV40 virus entry). Option C is wrong because caveolae and clathrin-coated pits are structurally and mechanistically distinct.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The unfolded protein response (UPR) is activated when misfolded proteins accumulate in the endoplasmic reticulum lumen. The IRE1 branch of the UPR executes an unconventional cytoplasmic mRNA splicing event. Which of the following correctly describes this mechanism?",
+      "options": [
+        "IRE1 is a transmembrane kinase/endoribonuclease that, upon activation by unfolded protein binding, oligomerizes and trans-autophosphorylates, activating its RNase domain to excise a 26-nucleotide intron from XBP1 mRNA in the cytoplasm; the spliced XBP1s mRNA encodes a potent transcription factor that upregulates ER chaperones, ERAD components, and lipid biosynthesis genes",
+        "IRE1 is a soluble ER lumen protease that cleaves misfolded proteins directly, and the resulting peptide fragments activate the spliceosome to process XBP1 pre-mRNA in the nucleus",
+        "IRE1 activates the conventional nuclear spliceosome via phosphorylation of U1 snRNP, which then splices XBP1 pre-mRNA in the nucleus before export to the cytoplasm",
+        "IRE1 functions exclusively as a kinase that phosphorylates eIF2-alpha to attenuate global translation, and it has no endoribonuclease activity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "IRE1 (inositol-requiring enzyme 1) is a type I transmembrane protein with dual kinase and endoribonuclease (RNase) activities. Under ER stress, unfolded proteins bind to the luminal domain of IRE1 (and BiP/GRP78 dissociates), triggering oligomerization and trans-autophosphorylation of the cytoplasmic kinase domain. This activates the adjacent RNase domain, which performs an unconventional cytoplasmic splicing event: it excises a 26-nucleotide intron from XBP1 mRNA (in mammals) or HAC1 mRNA (in yeast). The two exon fragments are ligated by the tRNA ligase RtcB. The resulting spliced XBP1s (XBP1 spliced) mRNA encodes a frameshift protein that is a bZIP transcription factor activating genes for ER chaperones (BiP, GRP94), ERAD components (HRD1, SEL1L), and phospholipid biosynthesis (to expand ER membrane capacity). Option B is wrong because IRE1 is a transmembrane protein, not a soluble protease. Option C is wrong because this splicing is spliceosome-independent. Option D describes the PERK branch, not IRE1; while IRE1 has kinase activity, it also has essential RNase activity.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Zellweger spectrum disorders are caused by mutations in PEX genes encoding peroxins required for peroxisome biogenesis. Which of the following best describes the metabolic consequences of complete loss of functional peroxisomes in Zellweger syndrome?",
+      "options": [
+        "Zellweger syndrome results from loss of a single peroxisomal enzyme (catalase) while the organelle itself is intact, causing only mild oxidative stress without affecting fatty acid metabolism",
+        "Loss of peroxisomes only affects hydrogen peroxide metabolism because catalase is the sole peroxisomal enzyme; all other metabolic functions ascribed to peroxisomes are actually performed by mitochondria",
+        "Loss of peroxisomes causes accumulation of very-long-chain fatty acids (VLCFAs, >C22) due to absence of peroxisomal beta-oxidation, accumulation of phytanic acid due to absent alpha-oxidation, deficiency of plasmalogens (ether phospholipids essential for myelin), and accumulation of pipecolic acid; these combined defects cause severe neurological dysfunction, hepatomegaly, and death in infancy",
+        "Loss of peroxisomes is fully compensated by upregulation of mitochondrial beta-oxidation of VLCFAs and ER-based plasmalogen synthesis, making Zellweger syndrome a clinically mild condition"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Zellweger syndrome (cerebrohepatorenal syndrome) is the most severe peroxisome biogenesis disorder, caused by biallelic mutations in PEX genes (most commonly PEX1, PEX6, PEX12) that prevent import of peroxisomal matrix proteins via the PTS1 (Pex5 receptor) or PTS2 (Pex7 receptor) pathways. Empty peroxisomal membrane ghosts may be present, but no functional peroxisomal enzymes are imported. The metabolic consequences are devastating: (1) VLCFAs (C24:0, C26:0) accumulate because peroxisomal beta-oxidation (which shortens VLCFAs to C8-C12 chains for transfer to mitochondria) is absent — mitochondria cannot oxidize VLCFAs because they lack the very-long-chain acyl-CoA synthetase/transporter. (2) Phytanic acid (from dietary sources) accumulates because alpha-oxidation (which removes a single carbon from branched-chain fatty acids) is exclusively peroxisomal. (3) Plasmalogens are severely deficient because the first two steps of ether lipid synthesis (DHAP acyltransferase and alkyl-DHAP synthase) occur on the luminal side of peroxisomal membranes. (4) Pipecolic acid accumulates due to impaired peroxisomal lysine degradation. Affected infants show craniofacial dysmorphia, profound hypotonia, seizures, hepatomegaly, and typically die within the first year.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Photorespiration involves a three-organelle pathway (chloroplast, peroxisome, mitochondrion). Which of the following correctly traces the complete carbon pathway when RuBisCO fixes O2 instead of CO2?",
+      "options": [
+        "RuBisCO oxygenation produces two molecules of 3-phosphoglycerate (3-PGA); one enters the Calvin cycle and the other is exported to peroxisomes for degradation to CO2",
+        "RuBisCO oxygenation of ribulose-1,5-bisphosphate produces one 3-PGA (3C) and one 2-phosphoglycolate (2C); phosphoglycolate is dephosphorylated to glycolate in the chloroplast, exported to peroxisomes where glycolate oxidase converts it to glyoxylate (producing H2O2 detoxified by catalase), glyoxylate is transaminated to glycine, glycine is exported to mitochondria where glycine decarboxylase converts two glycines to one serine + CO2 + NH3 + NADH, serine returns to peroxisomes for conversion to hydroxypyruvate then glycerate, which returns to the chloroplast for phosphorylation to 3-PGA",
+        "RuBisCO oxygenation produces glycolate, which is directly decarboxylated to CO2 in the chloroplast stroma without involvement of peroxisomes or mitochondria",
+        "RuBisCO oxygenation produces oxaloacetate, which is shuttled to mitochondria via the malate-aspartate shuttle and fully oxidized in the citric acid cycle"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Photorespiration is initiated when RuBisCO catalyzes the oxygenation of ribulose-1,5-bisphosphate (RuBP), producing one molecule of 3-phosphoglycerate (3C, enters Calvin cycle directly) and one molecule of 2-phosphoglycolate (2C). The 2-phosphoglycolate must be salvaged through the photorespiratory pathway spanning three organelles: (1) CHLOROPLAST: Phosphoglycolate phosphatase removes the phosphate, producing glycolate, which is exported. (2) PEROXISOME: Glycolate oxidase oxidizes glycolate to glyoxylate, producing H2O2 (immediately decomposed by catalase to H2O + O2). Glyoxylate is then transaminated (using glutamate as amino donor, producing alpha-ketoglutarate) to form glycine. (3) MITOCHONDRION: The glycine decarboxylase complex (GDC, a massive multi-enzyme complex in plant mitochondria) converts two glycines into one serine, releasing CO2, NH3, and producing NADH. This CO2 release is the carbon loss of photorespiration. The serine returns to peroxisomes, where serine-glyoxylate aminotransferase converts it to hydroxypyruvate, then hydroxypyruvate reductase produces glycerate. Glycerate returns to the chloroplast and is phosphorylated by glycerate kinase to 3-PGA, re-entering the Calvin cycle. Net loss: for every 2 glycolates (4C), one CO2 is lost and one 3-PGA (3C) is recovered.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 10,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ethanol fermentation in yeast and lactate fermentation in mammalian muscle both regenerate NAD+ to sustain glycolysis under anaerobic conditions. Which of the following correctly compares these two pathways AND includes an additional fermentation type found in certain bacteria?",
+      "options": [
+        "Ethanol fermentation: pyruvate is directly reduced to ethanol by alcohol dehydrogenase using NADH. Lactate fermentation: pyruvate is decarboxylated to acetaldehyde, then reduced to lactate. Mixed acid fermentation: all bacteria produce only ethanol and CO2",
+        "Ethanol fermentation and lactate fermentation both require oxygen as a terminal electron acceptor, while mixed acid fermentation is the only truly anaerobic pathway",
+        "All three fermentation types produce identical end products but differ only in the organisms that perform them",
+        "Ethanol fermentation: pyruvate is first decarboxylated by pyruvate decarboxylase (requiring TPP cofactor) to acetaldehyde + CO2, then acetaldehyde is reduced to ethanol by alcohol dehydrogenase using NADH. Lactate fermentation: pyruvate is directly reduced to lactate by lactate dehydrogenase using NADH with no carbon lost as CO2. Mixed acid fermentation (Enterobacteriaceae): pyruvate is converted to a mixture of lactate, ethanol, acetate, formate, succinate, CO2, and H2 via multiple branch points including pyruvate formate-lyase"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ethanol fermentation (yeast, some bacteria) proceeds in two steps: (1) Pyruvate decarboxylase (requiring thiamine pyrophosphate/TPP) irreversibly decarboxylates pyruvate to acetaldehyde + CO2; (2) Alcohol dehydrogenase reduces acetaldehyde to ethanol, oxidizing NADH to NAD+. Net: glucose -> 2 ethanol + 2 CO2 + 2 ATP. Lactate fermentation (mammalian muscle, lactic acid bacteria) is simpler: lactate dehydrogenase directly reduces pyruvate to lactate using NADH, with no CO2 release. Net: glucose -> 2 lactate + 2 ATP. Mixed acid fermentation (Escherichia coli, Salmonella, other Enterobacteriaceae) is more complex: pyruvate is partitioned among multiple pathways including (a) lactate dehydrogenase -> lactate, (b) pyruvate formate-lyase (PFL, an oxygen-sensitive radical enzyme) -> acetyl-CoA + formate (formate can be further split to CO2 + H2 by formate-hydrogen lyase), (c) acetyl-CoA -> ethanol or acetate. Some pyruvate is also directed to succinate via OAA and fumarate. The ratio of products varies with growth conditions and species. Option A reverses the decarboxylation steps. Option B is wrong because all three are anaerobic processes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "I-cell disease (mucolipidosis type II) is caused by a deficiency of the enzyme GlcNAc-phosphotransferase (also called UDP-GlcNAc:lysosomal enzyme N-acetylglucosamine-1-phosphotransferase) in the cis-Golgi. Which of the following correctly describes the molecular pathology?",
+      "options": [
+        "GlcNAc-phosphotransferase deficiency prevents the addition of the mannose-6-phosphate (M6P) targeting signal to lysosomal hydrolases; without M6P tags, these enzymes are not recognized by M6P receptors in the trans-Golgi network and instead follow the default secretory pathway, being secreted extracellularly, leaving lysosomes filled with undigested substrates (inclusion bodies)",
+        "I-cell disease results from a defect in clathrin assembly at the TGN; lysosomal enzymes are properly tagged with M6P but cannot be packaged into clathrin-coated vesicles",
+        "GlcNAc-phosphotransferase deficiency causes hyperglycosylation of lysosomal enzymes, making them too large to enter lysosomes through the lysosomal membrane channels",
+        "I-cell disease is caused by a defect in the V-ATPase proton pump, preventing lysosomal acidification and thus inactivating all acid hydrolases while enzyme trafficking remains normal"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I-cell disease (inclusion cell disease) is an autosomal recessive disorder caused by mutations in GNPTAB, encoding the alpha/beta subunits of GlcNAc-phosphotransferase. This enzyme catalyzes the first step in M6P tag formation: transfer of GlcNAc-1-phosphate from UDP-GlcNAc to specific mannose residues on N-linked oligosaccharides of lysosomal hydrolases in the cis-Golgi. A second enzyme (uncovering enzyme/GlcNAc-1-phosphodiester alpha-N-acetylglucosaminidase) then removes the GlcNAc to expose the M6P signal. Without GlcNAc-phosphotransferase, no M6P tags are added, and lysosomal enzymes are not diverted by M6P receptors (MPR300 and MPR46) at the TGN into clathrin/AP-1 vesicles destined for late endosomes. Instead, they follow the default secretory pathway and are secreted. Lysosomes become engorged with undigested macromolecules (glycosaminoglycans, lipids, oligosaccharides), forming phase-dense inclusions visible by light microscopy — hence 'inclusion cells.' Serum levels of lysosomal enzymes are markedly elevated (diagnostic). Clinical features include coarse facial features, skeletal abnormalities, psychomotor retardation, and death in childhood.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cystic fibrosis is most commonly caused by the deltaF508 mutation in the CFTR gene. This mutation results in deletion of phenylalanine at position 508 of the CFTR protein. Which of the following best describes the cellular pathology of this specific mutation?",
+      "options": [
+        "The deltaF508 mutation causes a frameshift that introduces a premature stop codon, producing a truncated protein that is immediately degraded by the proteasome without ever reaching the ER",
+        "The deltaF508 CFTR is properly folded and reaches the plasma membrane but has reduced chloride channel conductance due to altered pore structure, with no defect in protein folding or trafficking",
+        "The deltaF508 CFTR protein is synthesized on ER-bound ribosomes and translocated into the ER lumen, but the single amino acid deletion causes misfolding that is detected by the ER quality control system (calnexin/calreticulin cycle and BiP); the misfolded protein is retrotranslocated to the cytosol via ERAD, polyubiquitinated, and degraded by the 26S proteasome, preventing its trafficking to the plasma membrane where it functions as a chloride channel",
+        "The deltaF508 mutation affects only the regulatory (R) domain of CFTR, preventing PKA-mediated phosphorylation but having no effect on protein folding, trafficking, or chloride conductance"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The deltaF508 mutation (deletion of Phe508 in nucleotide-binding domain 1, NBD1) is present in ~70% of CF alleles. This mutation causes a temperature-sensitive folding defect: at 37 degrees C, the mutant protein fails to achieve its native conformation in the ER. The ER quality control machinery — including the calnexin/calreticulin cycle (which monitors N-linked glycan processing), BiP/GRP78 (Hsp70 family chaperone), and Hsp90 — recognizes deltaF508-CFTR as misfolded. The misfolded protein is targeted for ER-associated degradation (ERAD): it is retrotranslocated through the Sec61 channel (or Hrd1/Derlin complex) to the cytosol, polyubiquitinated by E3 ligases (including CHIP and RMA1/RNF5), and degraded by the 26S proteasome. Consequently, almost no deltaF508-CFTR reaches the cell surface. Interestingly, if the protein is allowed to fold at reduced temperature (27 degrees C) or in the presence of chemical chaperones (4-PBA, glycerol), some functional protein can reach the plasma membrane and conduct chloride — this principle underlies CFTR corrector therapies (e.g., lumacaftor/elexacaftor). Option A is wrong because deltaF508 is an in-frame deletion, not a frameshift. Option B is wrong because the primary defect is trafficking/folding, not conductance. Option D is wrong because F508 is in NBD1, not the R domain.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "HPV oncoproteins E6 and E7 cooperate to drive cell cycle dysregulation in cervical carcinoma. Which of the following correctly describes the DISTINCT molecular targets and mechanisms of E6 and E7?",
+      "options": [
+        "E6 binds and stabilizes p53, enhancing its transcriptional activity, while E7 phosphorylates Rb to promote its nuclear export",
+        "E6 recruits the E3 ubiquitin ligase E6AP (UBE3A) to form a complex that polyubiquitinates p53, targeting it for proteasomal degradation, thereby eliminating the G1/S DNA damage checkpoint; E7 binds hypophosphorylated Rb through an LXCXE motif, disrupting the Rb-E2F complex and constitutively releasing E2F transcription factors to drive S-phase entry independent of mitogenic signals",
+        "Both E6 and E7 target the same protein (Rb), with E6 degrading Rb and E7 sequestering Rb fragments in the cytoplasm",
+        "E6 is a kinase that directly phosphorylates CDK inhibitor p21, while E7 is a phosphatase that dephosphorylates Rb"
+      ],
+      "correctAnswer": "B",
+      "explanation": "High-risk HPV (types 16, 18) oncoproteins E6 and E7 target the two master tumor suppressors through distinct mechanisms. E6 forms a trimeric complex with the cellular E3 ubiquitin ligase E6AP (encoded by UBE3A, the same gene mutated in Angelman syndrome) and p53. E6 redirects E6AP's ubiquitin ligase activity toward p53, which is not a normal E6AP substrate. K48-linked polyubiquitination targets p53 for proteasomal degradation, abolishing p53-dependent cell cycle arrest, apoptosis, and senescence responses to DNA damage. E6 also activates telomerase (hTERT) and degrades pro-apoptotic proteins (e.g., Bak). E7 mimics cyclin D/CDK-mediated Rb phosphorylation by directly binding hypophosphorylated (active) Rb through its conserved LXCXE motif, displacing E2F transcription factors. E7 also targets Rb for proteasomal degradation and inactivates CDK inhibitors p21 and p27. Together, E6 (eliminating p53) and E7 (inactivating Rb) disable the two critical tumor suppressor pathways, driving uncontrolled proliferation. Option A reverses E6's effect. Option C is wrong because E6 targets p53, not Rb. Option D is wrong because neither E6 nor E7 is a kinase or phosphatase.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The PINK1/Parkin mitophagy pathway selectively eliminates damaged mitochondria. In healthy mitochondria, PINK1 is rapidly degraded after import. Which of the following correctly describes the mechanism by which mitochondrial membrane depolarization triggers PINK1 accumulation and Parkin activation?",
+      "options": [
+        "PINK1 accumulation on damaged mitochondria directly forms pores in the outer membrane, releasing cytochrome c and triggering apoptosis without involving Parkin or ubiquitination",
+        "PINK1 is a cytosolic protein that only binds to mitochondria when Parkin is already activated; membrane depolarization activates Parkin first, which then recruits PINK1",
+        "In healthy mitochondria, PINK1 is imported through TOM and TIM23 complexes, and its transmembrane domain is cleaved by the inner membrane presenilin-associated rhomboid-like protease (PARL), generating a truncated PINK1 that is retrotranslocated to the cytosol and degraded by the N-end rule pathway; when membrane potential collapses, PINK1 import stalls at the TOM complex, PINK1 accumulates on the outer membrane, dimerizes, autophosphorylates, and phosphorylates both ubiquitin (Ser65) and Parkin (Ser65 of its Ubl domain), relieving Parkin's autoinhibition and activating its E3 ubiquitin ligase activity",
+        "PINK1 is a transcription factor that translocates to the nucleus upon mitochondrial damage and upregulates Parkin gene expression; this transcriptional response takes 24-48 hours to initiate mitophagy"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The PINK1/Parkin pathway is the best-characterized selective mitophagy mechanism. In healthy mitochondria with intact membrane potential (delta-psi): PINK1 (a serine/threonine kinase) is constitutively imported through the TOM complex and the TIM23 complex (which requires delta-psi for translocation). The mitochondrial processing peptidase (MPP) cleaves the N-terminal mitochondrial targeting sequence, and then PARL (presenilin-associated rhomboid-like protease) in the inner membrane cleaves within PINK1's transmembrane segment. The resulting N-terminally truncated PINK1 is retrotranslocated to the cytosol, where it is recognized by the N-end rule E3 ligases (UBR1, UBR2, UBR4) and degraded by the proteasome. This keeps PINK1 levels very low on healthy mitochondria. When delta-psi is lost (e.g., by CCCP treatment or mitochondrial damage): PINK1 import through TIM23 stalls because the driving force is absent. PINK1 accumulates on the TOM complex with its kinase domain facing the cytosol. Accumulated PINK1 dimerizes and autophosphorylates, becoming fully active. Active PINK1 phosphorylates ubiquitin at Ser65 and Parkin's ubiquitin-like (Ubl) domain at Ser65. Parkin is normally autoinhibited (the Ubl domain blocks the E2-binding site); phospho-Ser65 on ubiquitin recruits Parkin to the mitochondrial surface, and phosphorylation of Parkin's Ubl domain relieves autoinhibition. Activated Parkin ubiquitinates outer membrane proteins (Mfn1/2, VDAC1, Miro), creating phospho-ubiquitin chains that recruit autophagy receptors (NDP52, optineurin, OPTN) to initiate autophagosome formation around the damaged mitochondrion. Loss-of-function mutations in PINK1 or Parkin cause autosomal recessive early-onset Parkinson's disease (PARK6 and PARK2), linking defective mitophagy to dopaminergic neuron vulnerability.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cellular senescence is characterized by irreversible cell cycle arrest accompanied by the senescence-associated secretory phenotype (SASP). Which of the following most accurately describes the signaling network maintaining senescence and the composition of the SASP?",
+      "options": [
+        "Senescence is maintained solely by telomere shortening activating ATM/ATR kinases; the SASP consists exclusively of anti-inflammatory cytokines that promote tissue repair without any pro-tumorigenic effects",
+        "Senescence is enforced by two major pathways — the p53/p21 pathway (activated by DNA damage response signaling from persistent DNA damage foci) and the p16INK4a/Rb pathway (which prevents CDK4/6-mediated Rb phosphorylation); the SASP includes pro-inflammatory cytokines (IL-6, IL-8/CXCL8, IL-1), matrix metalloproteinases (MMP-1, MMP-3), growth factors (VEGF, HGF), and chemokines, regulated through NF-kappaB and C/EBP-beta transcription factors, with mTOR signaling amplifying SASP factor translation",
+        "Senescence is a reversible quiescent state identical to G0 arrest; cells can re-enter the cell cycle upon growth factor stimulation, and they do not secrete any paracrine factors",
+        "The SASP is produced only by oncogene-induced senescent cells and never by replicative senescent or DNA damage-induced senescent cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cellular senescence is a stable, generally irreversible cell cycle arrest (distinct from quiescence/G0, which is reversible). It is enforced by two interconnected but partially independent pathways: (1) The p53/p21CIP1 pathway: Persistent DNA damage foci (containing gamma-H2AX, 53BP1, MDC1) at telomeres or elsewhere activate ATM/ATR kinases, which stabilize p53 via Chk1/Chk2-mediated phosphorylation. p53 induces p21CIP1, which inhibits CDK2/cyclin E complexes, arresting cells in G1. (2) The p16INK4a/Rb pathway: p16INK4a (encoded by CDKN2A) accumulates during senescence (epigenetically derepressed), specifically inhibiting CDK4/6, preventing phosphorylation of Rb. Hypophosphorylated Rb sequesters E2F transcription factors, blocking S-phase gene expression. Both pathways converge on Rb hypophosphorylation. The SASP is a complex secretome comprising: pro-inflammatory cytokines (IL-6, IL-8/CXCL8, IL-1alpha, IL-1beta), chemokines (MCP-1, GRO-alpha), matrix metalloproteinases (MMP-1, MMP-3, MMP-10), growth factors (VEGF, HGF, amphiregulin), and proteases. SASP is regulated transcriptionally by NF-kappaB and C/EBP-beta, and post-transcriptionally by mTOR (mTOR signaling promotes translation of IL-1alpha and other SASP factors; rapamycin suppresses SASP). The SASP has paradoxical effects: beneficial (immune clearance of senescent cells, wound healing) but also detrimental (chronic inflammation, promotion of tumorigenesis in neighboring cells, tissue dysfunction in aging).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the three branches of the unfolded protein response (UPR):",
+      "options": [
+        "S1: TRUE — PERK (PKR-like ER kinase) is activated by ER stress and phosphorylates eIF2-alpha at Ser51, globally attenuating cap-dependent translation while paradoxically increasing translation of ATF4 mRNA due to upstream open reading frames (uORFs) in its 5'-UTR that are bypassed when eIF2-alpha is phosphorylated",
+        "S2: TRUE — ATF6 is a type II transmembrane ER protein whose cytoplasmic domain is a transcription factor; upon ER stress, ATF6 translocates to the Golgi where it is sequentially cleaved by Site-1 protease (S1P) and Site-2 protease (S2P) to release the active N-terminal fragment (ATF6f), which activates genes for ER chaperones and ERAD components",
+        "S3: TRUE — The IRE1 branch exclusively promotes cell survival; it has no pro-apoptotic functions even during prolonged or unresolvable ER stress",
+        "S4: TRUE — Under chronic unresolved ER stress, the PERK-ATF4 axis induces CHOP/GADD153 (a pro-apoptotic transcription factor) that downregulates Bcl-2, upregulates BIM and DR5, and promotes oxidative stress by inducing GADD34 (which dephosphorylates eIF2-alpha, restoring translation and increasing protein load), thereby switching the UPR from adaptive to apoptotic"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — PERK is a type I transmembrane kinase in the ER membrane. Under ER stress, BiP dissociates from PERK's luminal domain, allowing dimerization and trans-autophosphorylation. Active PERK phosphorylates eIF2-alpha at Ser51, which inhibits the GEF activity of eIF2B, globally reducing cap-dependent translation (decreasing protein load on the ER). However, ATF4 mRNA contains two uORFs: under normal conditions, ribosomes translate uORF1 then reinitiate at the inhibitory uORF2 before reaching the ATF4 coding sequence. When eIF2-alpha is phosphorylated and ternary complexes are scarce, ribosomes skip uORF2 and reinitiate at the ATF4 start codon, allowing ATF4 translation. ATF4 activates genes for amino acid biosynthesis, antioxidant response, and autophagy. S2: TRUE — ATF6 (alpha and beta forms) is a bZIP transcription factor tethered to the ER membrane. BiP binding to the luminal domain retains it in the ER. Under stress, BiP release exposes Golgi localization signals; ATF6 is packaged into COPII vesicles and transported to the Golgi, where regulated intramembrane proteolysis (RIP) by S1P (a serine protease) and S2P (a metalloprotease) releases the cytoplasmic transcription factor domain (ATF6f/ATF6-N). This is the same RIP mechanism used for SREBP activation. ATF6f activates target genes including BiP, GRP94, calreticulin, and XBP1 (providing substrate for IRE1 splicing). S3: FALSE — IRE1 has both pro-survival and pro-apoptotic functions. Pro-survival: XBP1 splicing activates adaptive UPR gene expression. Pro-apoptotic: during chronic stress, IRE1's RNase domain performs regulated IRE1-dependent decay (RIDD), degrading ER-localized mRNAs and pre-miRNAs (including miR-17 that normally suppresses pro-apoptotic TXNIP). IRE1 also recruits TRAF2 to activate ASK1 and JNK kinase, which phosphorylates Bcl-2 (inhibiting its anti-apoptotic function) and activates BIM (pro-apoptotic). S4: TRUE — CHOP (C/EBP homologous protein) is a key effector of the apoptotic switch during chronic ER stress. CHOP downregulates Bcl-2 transcription, upregulates BIM and death receptor DR5, and induces ERO1-alpha (increasing ER oxidative stress). Critically, CHOP induces GADD34 (PPP1R15A), which recruits PP1 to dephosphorylate eIF2-alpha, restoring mRNA translation. While this is initially adaptive (restoring translational capacity), during unresolved stress it floods the ER with new protein, exacerbating misfolding and triggering apoptosis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about peroxisome biogenesis and the PEX protein import machinery:",
+      "options": [
+        "S1: TRUE — Peroxisomal matrix proteins are imported in a fully folded state, and some can even be imported as oligomeric complexes; this is fundamentally different from mitochondrial and ER import, which require unfolded polypeptides for translocation through narrow channels",
+        "S2: TRUE — PEX5 is the receptor for the C-terminal peroxisomal targeting signal 1 (PTS1, consensus SKL or variants), and PEX7 is the receptor for the N-terminal PTS2 signal; both receptors cycle between the cytosol and the peroxisomal membrane in a process requiring ubiquitination and AAA-ATPase activity (PEX1/PEX6) for receptor recycling",
+        "S3: TRUE — Peroxisomes can only arise by growth and division of pre-existing peroxisomes and never form de novo from the endoplasmic reticulum",
+        "S4: TRUE — In mammalian peroxisomes, the beta-oxidation of very-long-chain fatty acids produces acetyl-CoA and chain-shortened acyl-CoA that must be exported to mitochondria for complete oxidation, because peroxisomes lack a citric acid cycle and respiratory chain"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Unlike mitochondrial and ER protein import (which thread unfolded polypeptides through the TOM/TIM or Sec61 translocons), the peroxisomal import machinery can accommodate folded proteins and even oligomeric complexes. This was demonstrated by showing that PTS1-tagged gold particles up to 9 nm could be imported, and that oligomeric thiolase (imported via PTS2) assembles in the cytosol before import. The transient pore model proposes that PEX5 inserts into the peroxisomal membrane and forms a dynamic, flexible pore large enough for folded cargo. S2: TRUE — PEX5 recognizes the PTS1 tripeptide (most commonly -SKL at the extreme C-terminus) and delivers cargo to the peroxisomal membrane docking complex (PEX13/PEX14). PEX7 recognizes the N-terminal PTS2 nonapeptide. After cargo release into the matrix, the receptors must be recycled. PEX5 recycling requires monoubiquitination on a conserved cysteine residue by the RING-finger E3 ligases PEX2/PEX10/PEX12, followed by extraction from the membrane by the AAA-ATPase complex PEX1/PEX6 (anchored by PEX26). Mutations in PEX1 are the most common cause of Zellweger spectrum disorders. S3: FALSE — While peroxisomes do grow and divide (requiring PEX11 for elongation and DRP1/Fis1 for fission), they can also form de novo from the ER. PEX3 and PEX16 are inserted into the ER membrane and bud off in pre-peroxisomal vesicles that mature into functional peroxisomes by importing matrix proteins. This de novo pathway is especially important when all pre-existing peroxisomes are lost (as in PEX3 or PEX16 mutant cells that can be rescued by re-expression of the missing peroxin). S4: TRUE — Peroxisomal beta-oxidation in mammals is specialized for VLCFAs (>C22), branched-chain fatty acids, dicarboxylic acids, and bile acid intermediates. The pathway shortens VLCFAs by sequential removal of C2 units as acetyl-CoA, but peroxisomes cannot further oxidize acetyl-CoA because they lack the citric acid cycle and electron transport chain. The products (acetyl-CoA and medium-chain acyl-CoA, typically octanoyl-CoA) are exported as carnitine esters via the carnitine shuttle to mitochondria for complete oxidation. Peroxisomal FADH2 is reoxidized by acyl-CoA oxidase, which transfers electrons directly to O2 producing H2O2 (detoxified by catalase), rather than to the ETC.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the intrinsic apoptosis pathway and its regulatory mechanisms:",
+      "options": [
+        "S1: TRUE — Mitochondrial outer membrane permeabilization (MOMP) is the point of no return in intrinsic apoptosis; it is mediated by oligomerization of Bax and/or Bak, which form large lipidic pores that release cytochrome c, Smac/DIABLO, Omi/HtrA2, AIF, and endonuclease G from the intermembrane space",
+        "S2: TRUE — Smac/DIABLO promotes apoptosis by binding to and neutralizing inhibitor of apoptosis proteins (IAPs, particularly XIAP), relieving IAP-mediated inhibition of caspases-3, -7, and -9; this creates a positive feedback loop that ensures full caspase activation once MOMP occurs",
+        "S3: TRUE — Executioner caspases (caspase-3, -7) are activated by initiator caspases (caspase-9 in the intrinsic pathway) through proteolytic cleavage at specific aspartate residues, after which they cleave hundreds of cellular substrates including ICAD (releasing CAD endonuclease for DNA fragmentation), lamin A/B (nuclear envelope disassembly), and PARP-1 (inactivation of DNA repair)",
+        "S4: TRUE — BH3-only proteins such as Bad and Noxa directly form pores in the mitochondrial outer membrane to release cytochrome c, functioning identically to the effector proteins Bax and Bak"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1: TRUE — MOMP is the critical commitment step. When pro-apoptotic signals overwhelm anti-apoptotic Bcl-2 family members, BH3-only activator proteins (tBid, Bim) trigger Bax/Bak conformational changes, exposing their BH3 domains and membrane-insertion sequences. Bax translocates from the cytosol to the outer mitochondrial membrane; Bak is already membrane-resident. They oligomerize to form large pores (possibly toroidal/lipidic pores) that release multiple pro-apoptotic intermembrane space (IMS) proteins: cytochrome c (activates apoptosome), Smac/DIABLO and Omi/HtrA2 (neutralize IAPs), AIF (caspase-independent chromatin condensation), and endonuclease G (DNA fragmentation). S2: TRUE — In healthy cells, XIAP (X-linked IAP) directly binds and inhibits active caspase-3 (via its BIR2 domain and linker), caspase-7 (BIR2), and caspase-9 (BIR3 domain). XIAP can also ubiquitinate caspases for proteasomal degradation. Upon MOMP, Smac/DIABLO is released and its N-terminal AVPI tetrapeptide (exposed after removal of the mitochondrial targeting sequence) binds the BIR2 and BIR3 domains of XIAP, competitively displacing caspases. This ensures that even low levels of caspase activation are amplified rather than quenched. The Smac mimetic class of anti-cancer drugs exploits this mechanism. S3: TRUE — Caspase-9 is activated on the apoptosome (heptameric Apaf-1/cytochrome c/dATP complex) via induced proximity/dimerization. Active caspase-9 cleaves the intersubunit linker of procaspase-3 (at Asp175) and procaspase-7 (at Asp198), generating active heterotetrameric executioner caspases. These caspases cleave >1,000 substrates in a coordinated demolition program: ICAD cleavage releases CAD for internucleosomal DNA fragmentation (DNA laddering), lamins A and B cleavage causes nuclear lamina disassembly and nuclear shrinkage, PARP-1 cleavage (at Asp214, producing 89 kDa and 24 kDa fragments) inactivates this DNA repair enzyme and prevents NAD+ depletion. S4: FALSE — BH3-only proteins are divided into two functional classes: activators (tBid, Bim, Puma) that directly bind and activate Bax/Bak, and sensitizers (Bad, Noxa, Hrk, Bmf) that bind and neutralize anti-apoptotic Bcl-2 family members, indirectly promoting Bax/Bak activation. Critically, BH3-only proteins lack the BH1, BH2, and transmembrane domains needed for pore formation. Only the multi-domain effectors Bax and Bak can form pores. Bad specifically neutralizes Bcl-2 and Bcl-xL, while Noxa specifically neutralizes Mcl-1 and A1.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about Li-Fraumeni syndrome and the role of p53 in cell cycle checkpoint control:",
+      "options": [
+        "S1: TRUE — Li-Fraumeni syndrome is caused by germline heterozygous loss-of-function or dominant-negative mutations in TP53, predisposing patients to a wide spectrum of early-onset cancers including sarcomas, breast carcinomas, brain tumors, adrenocortical carcinomas, and leukemias",
+        "S2: TRUE — Wild-type p53 functions as a tetrameric transcription factor; many Li-Fraumeni missense mutations in the DNA-binding domain produce proteins that can oligomerize with wild-type p53 and impair its DNA binding, exerting a dominant-negative effect that reduces p53 activity below 50% even before loss of the second allele",
+        "S3: TRUE — p53 activates cell cycle arrest exclusively through transcriptional induction of p21CIP1, which inhibits all CDK/cyclin complexes; p53 has no role in activating DNA repair, apoptosis, or senescence programs",
+        "S4: TRUE — MDM2 is the principal negative regulator of p53: it ubiquitinates p53 for proteasomal degradation, blocks p53's transactivation domain, and exports p53 from the nucleus; the MDM2 gene is itself a transcriptional target of p53, forming an autoregulatory negative feedback loop"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Li-Fraumeni syndrome (LFS) is an autosomal dominant cancer predisposition syndrome caused by germline TP53 mutations (~70% of families). Patients have a ~50% risk of developing cancer by age 30 and ~90% lifetime risk. The tumor spectrum is characteristic: soft tissue sarcomas, osteosarcomas, pre-menopausal breast cancer, brain tumors (gliomas, choroid plexus carcinomas), adrenocortical carcinoma (highly specific, especially in children), and acute leukemia. Many other tumor types can occur. Somatic loss of the remaining wild-type allele (loss of heterozygosity, LOH) completes tumor suppressor inactivation, consistent with Knudson's two-hit model. S2: TRUE — p53 binds DNA as a tetramer (dimer of dimers). Many LFS mutations are missense mutations in the DNA-binding domain (hotspots: R175H, G245S, R248W, R273H, R282W) that produce stable, full-length mutant proteins. Because p53 tetramers contain mixed wild-type and mutant subunits, even one or two mutant subunits per tetramer can disrupt DNA binding, creating a dominant-negative effect. With one mutant allele, only 1/16 of tetramers are fully wild-type (assuming random assembly), so p53 activity drops to ~6% rather than the expected 50%. Some mutant p53 proteins also acquire gain-of-function (GOF) oncogenic activities, interacting with p63/p73 to inhibit their tumor-suppressive functions. S3: FALSE — p53 is a pleiotropic transcription factor that activates multiple programs depending on the type and severity of stress: (a) Cell cycle arrest: p21CIP1 (inhibits CDK2/cyclin E and CDK4/6/cyclin D), GADD45 (G2/M arrest), 14-3-3-sigma (sequesters CDC25C). (b) DNA repair: p53R2 (ribonucleotide reductase subunit for dNTP synthesis), DDB2/XPC (nucleotide excision repair). (c) Apoptosis: Bax, Puma, Noxa (intrinsic pathway), Fas/DR5 (extrinsic pathway), Apaf-1. (d) Senescence: p21 (acute response), with p16INK4a reinforcement. (e) Metabolism: TIGAR (redirects glycolysis to pentose phosphate pathway), SCO2 (mitochondrial cytochrome c oxidase assembly). S4: TRUE — The p53-MDM2 feedback loop is the core regulatory circuit controlling p53 levels. Under unstressed conditions, MDM2 maintains p53 at low levels through three mechanisms: (1) direct binding to p53's N-terminal transactivation domain, blocking transcriptional activity; (2) functioning as an E3 ubiquitin ligase (RING domain) that monoubiquitinates p53, promoting nuclear export, and polyubiquitinates p53 for proteasomal degradation; (3) promoting p53 nuclear export via a nuclear export signal. MDM2 itself is transcriptionally induced by p53, creating an autoregulatory negative feedback loop that ensures rapid restoration of low p53 levels after stress resolution.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about lipid raft organization and signaling in the plasma membrane:",
+      "options": [
+        "S1: TRUE — Lipid rafts are enriched in cholesterol and sphingolipids (sphingomyelin, glycosphingolipids) and exist in a liquid-ordered (Lo) phase that is more tightly packed than the surrounding liquid-disordered (Ld) phospholipid bilayer, creating lateral heterogeneity in the membrane",
+        "S2: TRUE — GPI-anchored proteins preferentially partition into the outer leaflet of lipid rafts, while doubly acylated (palmitoylated and myristoylated) Src-family kinases partition into the inner leaflet, demonstrating that rafts are asymmetric and organize signaling molecules on both faces of the membrane",
+        "S3: TRUE — Lipid rafts can be completely and specifically extracted from living cell membranes using Triton X-100 at 37 degrees C, and the resulting detergent-resistant membrane (DRM) fraction perfectly represents the in vivo raft composition",
+        "S4: TRUE — Disruption of lipid rafts by cholesterol depletion with methyl-beta-cyclodextrin inhibits T-cell receptor (TCR) signaling because the TCR signaling complex requires raft-mediated co-clustering of Lck (a Src-family kinase) and LAT (linker for activation of T cells) for signal transduction"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Lipid rafts are nanoscale (10-200 nm) dynamic assemblies enriched in cholesterol and saturated-chain sphingolipids. Cholesterol's planar steroid ring intercalates between the saturated hydrocarbon chains of sphingolipids, promoting tight packing characteristic of the liquid-ordered (Lo) phase. This Lo phase coexists with the surrounding liquid-disordered (Ld) phase composed mainly of unsaturated glycerophospholipids. The Lo phase has restricted lateral mobility but retains fluidity (unlike the gel/solid-ordered phase). This lateral phase separation creates functional microdomains for signal transduction, membrane trafficking, and pathogen entry. S2: TRUE — Lipid rafts exhibit transbilayer asymmetry. In the outer leaflet, GPI-anchored proteins (such as Thy-1, CD59, folate receptor) partition into rafts because their saturated acyl chains of the GPI anchor prefer the Lo phase. In the inner (cytoplasmic) leaflet, proteins with saturated acyl modifications — particularly doubly acylated Src-family kinases (Lck, Fyn, Yes) bearing N-terminal myristate (C14:0) and palmitate (C16:0) — partition into the inner leaflet of rafts. Transmembrane proteins can also partition into rafts if their transmembrane domains are compatible with the thicker Lo bilayer. S3: FALSE — Detergent-resistant membranes (DRMs) isolated using cold Triton X-100 (typically at 4 degrees C, not 37 degrees C) are an approximation of lipid rafts but are widely acknowledged to be artifacts of the extraction procedure. At 37 degrees C, Triton X-100 solubilizes most membranes including rafts. Even at 4 degrees C, detergent extraction can induce artificial coalescence of small raft domains into larger DRM fractions, and the composition may not faithfully reflect in vivo rafts. Modern approaches use super-resolution microscopy (STED, PALM/STORM), single-particle tracking, and FRET to study rafts in living cells. S4: TRUE — TCR signaling depends on lipid raft integrity. Upon TCR engagement, the immunoreceptor tyrosine-based activation motifs (ITAMs) of the CD3/zeta chains are phosphorylated by the Src-family kinase Lck, which is constitutively raft-associated via dual acylation. LAT, a transmembrane adaptor palmitoylated on two cysteine residues, also resides in rafts and is phosphorylated by ZAP-70, creating docking sites for PLC-gamma1, Grb2/SOS, and SLP-76. Cholesterol depletion with methyl-beta-cyclodextrin disperses Lck and LAT from raft domains, disrupting their spatial co-localization and severely impairing proximal TCR signaling.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 7,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about retinoblastoma protein (Rb) function and its disruption in cancer:",
+      "options": [
+        "S1: TRUE — Rb is the prototypical tumor suppressor that acts as a molecular switch for the restriction point: in its hypophosphorylated state, Rb binds E2F transcription factors and recruits chromatin-remodeling complexes (histone deacetylases, SWI/SNF) to E2F target gene promoters, actively repressing S-phase genes",
+        "S2: TRUE — Sequential phosphorylation of Rb by CDK4/6-cyclin D (mono-phosphorylation at multiple sites) followed by CDK2-cyclin E (hyper-phosphorylation) progressively inactivates Rb, releasing E2F to activate genes required for DNA replication including cyclin E itself, cyclin A, Cdc6, MCM helicases, DHFR, and thymidine kinase",
+        "S3: TRUE — In hereditary retinoblastoma, children inherit one mutant RB1 allele and develop bilateral retinoblastomas after somatic loss of the remaining wild-type allele, consistent with Knudson's two-hit hypothesis; sporadic retinoblastoma requires two independent somatic mutations in the same retinal cell, explaining its unilateral presentation and later onset",
+        "S4: TRUE — The CDK inhibitor p16INK4a functions upstream of Rb by specifically inhibiting CDK4/6, preventing Rb phosphorylation; loss of p16INK4a (by deletion, promoter methylation, or mutation at the CDKN2A locus) is therefore functionally equivalent to Rb loss and is one of the most frequent alterations in human cancer"
+      ],
+      "correctAnswer": "TTTT",
+      "explanation": "S1: TRUE — Rb is the founding member of the pocket protein family (Rb, p107, p130). Hypophosphorylated Rb binds E2F1-3 transcription factors through its pocket domain, converting them from activators to active repressors. Rb-E2F complexes recruit chromatin modifiers: HDAC1/2 (deacetylate histones, compacting chromatin), histone methyltransferases (SUV39H1, methylates H3K9), HP1 (recognizes H3K9me3, establishing heterochromatin), and SWI/SNF chromatin remodelers. This creates a transcriptionally repressive chromatin state at E2F target promoters. S2: TRUE — Rb inactivation is a two-step process. In early-mid G1, mitogen-stimulated CDK4/6-cyclin D complexes mono-phosphorylate Rb at up to 14 serine/threonine sites. Recent work (Narasimha et al., 2014) suggests mono-phosphorylated Rb retains some E2F-binding activity but has altered interactions. Full inactivation requires CDK2-cyclin E-mediated hyper-phosphorylation, which creates a bistable switch: released E2F activates cyclin E transcription, generating more CDK2-cyclin E, which further phosphorylates Rb in a positive feedback loop that makes the restriction point irreversible. E2F targets include genes essential for S-phase: cyclin E, cyclin A, Cdc6 (pre-RC component), MCM2-7 (replicative helicase), PCNA, DNA polymerases, DHFR, and thymidine kinase. S3: TRUE — This is the paradigmatic example of Knudson's two-hit hypothesis (1971). In hereditary retinoblastoma (40% of cases), one mutant RB1 allele is inherited through the germline (first hit), and somatic loss of the remaining allele (LOH, second hit) in any retinoblast leads to tumor formation. Because every retinal cell already carries the first hit, bilateral and multifocal tumors are common, with early onset (median 12 months). In sporadic retinoblastoma (60%), both hits must occur somatically in the same cell, which is statistically much less likely, resulting in unilateral tumors with later onset (median 24 months). S4: TRUE — p16INK4a (encoded by CDKN2A/INK4a) specifically inhibits CDK4 and CDK6 by binding their catalytic subunit and preventing cyclin D association. Loss of p16 allows constitutive CDK4/6 activity and Rb phosphorylation, functionally mimicking Rb loss. The CDKN2A locus is one of the most frequently altered loci in human cancer: homozygous deletion (mesothelioma, glioblastoma, pancreatic cancer), promoter hypermethylation (colorectal, breast, lung cancers), or point mutations. Importantly, CDKN2A also encodes p14ARF (from an alternative reading frame), which stabilizes p53 by inhibiting MDM2, so CDKN2A deletion simultaneously disables both the Rb and p53 pathways.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about chloroplast-mitochondria metabolic crosstalk in C3 plant cells during active photosynthesis:",
+      "options": [
+        "S1: TRUE — During the day, mitochondria in mesophyll cells continue to perform oxidative phosphorylation but at a reduced rate compared to darkness, because excess NADH from photorespiratory glycine decarboxylation can drive the mitochondrial electron transport chain",
+        "S2: TRUE — The malate-oxaloacetate (malate-OAA) shuttle across the chloroplast envelope serves as an indirect mechanism to export excess reducing equivalents (NADPH) from the chloroplast to the cytosol, where malate can be oxidized by cytosolic or mitochondrial malate dehydrogenase",
+        "S3: TRUE — Chloroplasts and mitochondria are physically and functionally isolated in plant cells and never form direct membrane contact sites",
+        "S4: TRUE — During photorespiration, the ammonium (NH3) released by glycine decarboxylase in mitochondria must be re-assimilated by the GS-GOGAT (glutamine synthetase-glutamate synthase) system in the chloroplast, requiring ATP and reduced ferredoxin from the light reactions"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1: TRUE — Plant mitochondria remain active during the day. Photorespiration generates large amounts of NADH via the glycine decarboxylase complex (GDC) in mitochondria (one NADH per two glycines converted to serine). This NADH is oxidized by the mitochondrial ETC, contributing to ATP production. The rate of photorespiratory NADH production can equal or exceed that from the TCA cycle during active photosynthesis in C3 plants. The TCA cycle itself operates at reduced flux during the day, partly because citrate export for biosynthesis is prioritized and because the high NADH/NAD+ ratio inhibits several TCA dehydrogenases. S2: TRUE — The malate valve is an important mechanism for balancing redox status between chloroplast stroma and cytosol. NADP-malate dehydrogenase (activated by the thioredoxin system in the light) reduces OAA to malate in the chloroplast stroma using NADPH. Malate is exported via the DiT2 transporter (dicarboxylate translocator). In the cytosol, NAD-malate dehydrogenase reoxidizes malate to OAA, generating NADH. This NADH can fuel cytosolic biosynthetic reactions or be shuttled into mitochondria. This valve prevents over-reduction of the photosynthetic electron transport chain when Calvin cycle consumption of NADPH is insufficient. S3: FALSE — Chloroplasts and mitochondria form extensive physical contact sites in plant cells, as demonstrated by electron microscopy, split-GFP complementation, and live-cell imaging. These organelle contact sites facilitate metabolite exchange (particularly during photorespiration, where glycolate/glycine/serine must be efficiently shuttled between chloroplasts, peroxisomes, and mitochondria). Recent research has identified specific tethering proteins and shown that contact site frequency increases during photorespiratory conditions. Peroxisomes also participate in these three-way associations. S4: TRUE — Photorespiration releases NH3 at a very high rate (equal to the rate of glycine conversion). If not re-assimilated, this would be toxic and represent a major nitrogen loss. The released NH4+ is reassimilated primarily in the chloroplast by GS-GOGAT: glutamine synthetase (GS2, chloroplastic isoform) combines NH4+ with glutamate to form glutamine (consuming ATP from the light reactions), and then glutamate synthase (GOGAT/Fd-GOGAT in chloroplasts) transfers the amide nitrogen of glutamine to alpha-ketoglutarate, producing two glutamates (consuming reduced ferredoxin from photosystem I). One glutamate returns to the peroxisome as amino donor for the glyoxylate-to-glycine transamination, completing the nitrogen cycle.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 10,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about cellular senescence, the mTOR pathway, and the effects of rapamycin:",
+      "options": [
+        "S1: TRUE — mTORC1 promotes the senescence-associated secretory phenotype (SASP) at least partly by enhancing translation of IL-1alpha through 4E-BP1 phosphorylation and S6K1-mediated translational regulation; rapamycin (an mTORC1 inhibitor) suppresses SASP factor secretion without reversing the senescence-associated cell cycle arrest",
+        "S2: TRUE — Rapamycin extends lifespan in multiple model organisms (yeast, C. elegans, Drosophila, mice) at least partly by reducing the burden of senescent cells and their SASP-mediated paracrine damage to surrounding tissues",
+        "S3: TRUE — mTORC1 inhibition by rapamycin promotes autophagy by relieving mTORC1-mediated inhibitory phosphorylation of ULK1 (Atg1), thereby enhancing clearance of damaged mitochondria and protein aggregates that otherwise contribute to cellular senescence",
+        "S4: TRUE — Senescent cells are always cleared immediately and efficiently by the immune system through NK cells and macrophages; accumulation of senescent cells never occurs in vivo in any tissue or organism"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1: TRUE — mTORC1 signaling amplifies the SASP through multiple mechanisms. mTORC1 phosphorylates 4E-BP1 (releasing it from eIF4E to permit cap-dependent translation initiation) and activates S6K1, both of which enhance translation of specific mRNAs encoding SASP factors. IL-1alpha is a particularly important upstream regulator of the SASP; its translation is enhanced by mTORC1, and surface-bound IL-1alpha activates NF-kappaB signaling in an autocrine/paracrine manner to drive transcription of IL-6, IL-8, and other SASP genes. Rapamycin (allosteric mTORC1 inhibitor via FKBP12 binding) suppresses SASP factor production without affecting the p16/Rb- or p53/p21-mediated cell cycle arrest, demonstrating that the growth arrest and secretory programs are independently regulated. S2: TRUE — Rapamycin extends median and maximum lifespan in mice (the NIA Interventions Testing Program demonstrated ~10-15% lifespan extension even when treatment began at 20 months of age). While the mechanisms are multifactorial (improved autophagy, reduced translation, enhanced stem cell function, improved immune function), reduction of SASP-mediated chronic sterile inflammation is an important contributor. Senescent cell accumulation and SASP-driven 'inflammaging' are recognized drivers of age-related pathology. Genetic clearance of p16-positive senescent cells (INK-ATTAC mouse model, Baker et al. 2011/2016) extends healthspan and lifespan, supporting the importance of senescent cell burden in aging. S3: TRUE — mTORC1 is a master negative regulator of autophagy. Under nutrient-rich conditions, mTORC1 phosphorylates ULK1 (mammalian Atg1) at Ser757, preventing its activation by AMPK, and also phosphorylates Atg13, disrupting the ULK1 complex (ULK1-Atg13-FIP200-Atg101). mTORC1 also phosphorylates TFEB (transcription factor EB, master regulator of lysosomal biogenesis and autophagy genes), retaining it in the cytoplasm. Rapamycin relieves these inhibitory phosphorylations, activating autophagy at both the initiation and transcriptional levels. Enhanced autophagy clears damaged mitochondria (preventing ROS-mediated DNA damage that triggers senescence) and protein aggregates, reducing the cellular damage that drives senescence entry. S4: FALSE — While the immune system does surveil and clear senescent cells (NK cells recognize NKG2D ligands MICA/MICB on senescent cells; macrophages phagocytose senescent cells), this clearance is often incomplete, especially with aging. Senescent cells accumulate progressively in aged tissues (skin, liver, lung, kidney, adipose) due to declining immune function (immunosenescence), creating a feed-forward loop: accumulated senescent cells secrete SASP factors that impair immune function, further reducing clearance efficiency. This accumulation is a hallmark of aging and drives age-related diseases. Senolytic drugs (dasatinib + quercetin, navitoclax/ABT-263 targeting Bcl-2/Bcl-xL) are being developed to selectively eliminate senescent cells.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers used 13C-labeled glucose (uniformly labeled, U-13C6-glucose) to trace metabolic flux through glycolysis and the TCA cycle in two cell populations: normal differentiated cells and cancer cells exhibiting the Warburg effect. They performed mass spectrometry to detect 13C incorporation patterns (isotopomers) in key metabolites after 4 hours of labeling. Analyze the data and determine which conclusion is best supported.",
+      "dataContext": "Normal cells: Pyruvate — predominantly m+3 (fully labeled from U-13C6-glucose, as expected from glycolysis). Citrate — predominantly m+2 (labeled acetyl-CoA from pyruvate dehydrogenase condenses with unlabeled OAA in first TCA turn). Succinate — mix of m+2 (from first-turn citrate) with significant m+4 appearing by 4h (indicating second TCA cycle turn). Lactate — low total abundance, predominantly m+3. Cancer cells: Pyruvate — predominantly m+3 (same glycolytic pattern). Citrate — predominantly m+0 (unlabeled) with minor m+2 fraction (~15% of total citrate pool). Citrate m+5 species detected (~8%), consistent with reductive carboxylation of glutamine-derived alpha-ketoglutarate. Succinate — predominantly m+0 with minor m+2. Lactate — very high total abundance, predominantly m+3. Glutamine-derived glutamate — predominantly m+5 (from separate U-13C5-glutamine tracer experiment).",
+      "options": [
+        "Normal and cancer cells show identical metabolic flux patterns through both glycolysis and the TCA cycle, with no difference in carbon routing",
+        "Cancer cells route the majority of glycolysis-derived pyruvate to lactate rather than to the TCA cycle, as evidenced by high m+3 lactate but low m+2 citrate labeling; additionally, the presence of m+5 citrate in cancer cells indicates reductive carboxination of glutamine-derived alpha-ketoglutarate by IDH operating in reverse, providing citrate for fatty acid synthesis independently of the oxidative TCA cycle",
+        "The m+0 citrate in cancer cells proves that the TCA cycle is completely absent in these cells, with no residual mitochondrial function",
+        "The 13C labeling data show that cancer cells perform gluconeogenesis rather than glycolysis, explaining why pyruvate is labeled but citrate is not"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This isotopomer analysis reveals fundamental differences in carbon routing between normal and cancer cells. In normal cells, U-13C6-glucose is split by glycolysis into two m+3 pyruvate molecules, which enter the TCA cycle via pyruvate dehydrogenase (producing m+2 acetyl-CoA). Condensation of m+2 acetyl-CoA with unlabeled OAA produces m+2 citrate (first turn). Subsequent TCA turns generate m+4 succinate and further redistribute label. The low lactate abundance indicates efficient pyruvate oxidation. In cancer cells, glycolysis produces m+3 pyruvate normally, but the vast majority is diverted to m+3 lactate (Warburg effect) rather than entering the TCA cycle. This explains why only ~15% of the citrate pool is m+2 (minimal pyruvate dehydrogenase flux). The detection of m+5 citrate is a hallmark of reductive carboxylation: glutamine-derived alpha-ketoglutarate (m+5 from U-13C5-glutamine) is carboxylated by IDH2 (mitochondrial) or IDH1 (cytosolic) operating in the reverse (reductive) direction, generating m+5 isocitrate/citrate. This pathway provides citrate for export to the cytosol and cleavage by ATP-citrate lyase to generate acetyl-CoA for de novo lipogenesis, which is essential for membrane biosynthesis in rapidly dividing cancer cells. This reductive carboxylation is enhanced under hypoxia and in cells with defective oxidative TCA cycle function. Option C is wrong because the TCA cycle is present (m+2 citrate exists, just at reduced flux). Option D is wrong because gluconeogenesis would consume pyruvate, not produce m+3 pyruvate from glucose.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A clinical genetics laboratory tested fibroblasts from three patients suspected of having peroxisome biogenesis disorders. They measured VLCFA levels (C26:0), plasmalogen levels (C16:0 DMA, a plasmalogen marker), catalase localization (cytosolic vs. particle-bound by digitonin fractionation), and performed immunofluorescence for PMP70 (a peroxisomal membrane protein) and catalase. Analyze the data and identify the correct diagnosis for each patient.",
+      "dataContext": "Patient A: C26:0 — markedly elevated (8.2 microg/mL; normal <1.0). Plasmalogens — severely deficient (<5% of normal). Catalase — >95% cytosolic (normal: >85% particle-bound). PMP70 immunofluorescence — absent punctate pattern; diffuse cytoplasmic. Catalase immunofluorescence — diffuse cytoplasmic. Patient B: C26:0 — markedly elevated (7.8 microg/mL). Plasmalogens — severely deficient (<5% of normal). Catalase — >95% cytosolic. PMP70 immunofluorescence — present as membrane ghosts (punctate pattern visible but smaller than normal). Catalase immunofluorescence — diffuse cytoplasmic (not in punctate structures). Patient C: C26:0 — markedly elevated (6.5 microg/mL). Plasmalogens — normal. Catalase — >85% particle-bound (normal). PMP70 immunofluorescence — normal punctate pattern. Catalase immunofluorescence — normal punctate pattern. X-linked inheritance pattern in family.",
+      "options": [
+        "All three patients have identical forms of Zellweger syndrome caused by the same PEX gene mutation",
+        "Patient A: Zellweger spectrum disorder with complete absence of peroxisomal membranes (likely PEX3 or PEX19 mutation preventing peroxisome membrane biogenesis). Patient B: Zellweger spectrum disorder with empty peroxisomal membrane ghosts (likely PEX1, PEX5, or PEX6 mutation impairing matrix protein import while membrane assembly is intact). Patient C: X-linked adrenoleukodystrophy (ABCD1/ALDP transporter deficiency) — peroxisomes are structurally and functionally normal except for impaired VLCFA import into the peroxisome for beta-oxidation",
+        "Patient C has the most severe disease because the X-linked inheritance indicates mitochondrial dysfunction rather than a peroxisomal disorder",
+        "Patient B has a lysosomal storage disease rather than a peroxisomal disorder, as indicated by the presence of membrane structures"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This data set distinguishes three categories of peroxisomal dysfunction. Patient A shows complete absence of peroxisomal structures (no PMP70 puncta), with all matrix enzymes (catalase) and all metabolic functions disrupted. This pattern indicates failure to form peroxisomal membranes entirely, consistent with mutations in PEX3 (integral membrane peroxin), PEX16, or PEX19 (membrane protein receptor/chaperone). Without these proteins, peroxisomal membrane proteins cannot be inserted into membranes, and no peroxisomal structures form — not even membrane ghosts. This is the most mechanistically severe form of peroxisome biogenesis disorder. Patient B shows presence of peroxisomal membrane ghosts (PMP70 puncta present) but failure to import matrix proteins (catalase is cytosolic, all matrix enzyme-dependent functions are lost). This classic Zellweger spectrum phenotype results from defects in the matrix protein import machinery: most commonly PEX1 (accounts for ~65% of ZSD cases), PEX6, PEX5 (PTS1 receptor), PEX7 (PTS2 receptor), PEX12, PEX10, or PEX2. The membrane assembles and incorporates PMPs normally, but the matrix enzyme import cycle (receptor docking, translocation, receptor recycling) is defective. Patient C has normal peroxisomal structure and function (normal catalase localization, normal plasmalogens) except for elevated VLCFAs. The X-linked inheritance, normal peroxisome structure, and isolated VLCFA elevation are pathognomonic for X-linked adrenoleukodystrophy (X-ALD), caused by mutations in ABCD1 encoding the peroxisomal ABC transporter ALDP (adrenoleukodystrophy protein). ALDP imports VLCFA-CoA esters across the peroxisomal membrane for beta-oxidation. Without ALDP, VLCFAs accumulate while all other peroxisomal functions remain intact.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers studied CFTR protein trafficking in cell lines expressing wild-type CFTR, deltaF508-CFTR, and deltaF508-CFTR treated with the corrector drug lumacaftor. They performed pulse-chase experiments with 35S-methionine labeling and monitored CFTR maturation by SDS-PAGE (immature band B, ~150 kDa, core-glycosylated ER form; mature band C, ~170 kDa, complex-glycosylated post-Golgi form). They also measured chloride channel activity by Ussing chamber short-circuit current (Isc) after forskolin stimulation. Analyze the data and determine the correct interpretation.",
+      "dataContext": "Wild-type CFTR: Band B at 0h pulse, progressive conversion to Band C over 2h chase (Band C/Band B ratio = 3.5 at 4h). Band C half-life >12h. Isc after forskolin: 45 microA/cm2. deltaF508-CFTR (untreated): Band B present at 0h, rapid disappearance of Band B over 2h chase (half-life ~40 min), no detectable Band C at any time point. Isc after forskolin: 1.2 microA/cm2. deltaF508-CFTR + lumacaftor (VX-809, 3 microM, 24h pre-treatment): Band B present at 0h, Band C appears during chase (Band C/Band B ratio = 0.8 at 4h). Band C half-life ~4h (shorter than WT). Isc after forskolin: 8.5 microA/cm2. deltaF508-CFTR + lumacaftor + ivacaftor (VX-770 potentiator, added acutely): Same maturation as lumacaftor alone. Isc after forskolin: 22 microA/cm2.",
+      "options": [
+        "Lumacaftor completely restores deltaF508-CFTR to wild-type levels of trafficking and function, rendering additional drugs unnecessary",
+        "The data show that deltaF508-CFTR is degraded in the lysosome, not the proteasome, because Band B disappears rapidly",
+        "Lumacaftor partially rescues deltaF508-CFTR trafficking (Band C appears, indicating some protein escapes ER quality control and matures through the Golgi), but the rescued protein has reduced cell-surface stability (shorter Band C half-life) and reduced open probability compared to wild-type; the addition of ivacaftor (a potentiator that increases channel open probability/conductance) further enhances chloride transport, demonstrating why combination therapy (corrector + potentiator) achieves greater clinical benefit than either drug alone",
+        "Ivacaftor works by preventing deltaF508-CFTR degradation in the ER, explaining why it increases chloride current when added to lumacaftor"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This data recapitulates the key pharmacological findings that led to the development of combination CFTR modulator therapy. Wild-type CFTR: Band B (core-glycosylated, ER form, ~150 kDa) efficiently matures to Band C (complex-glycosylated, post-Golgi/cell surface form, ~170 kDa). The high Band C/B ratio (3.5) indicates efficient ER exit and Golgi processing. Long Band C half-life (>12h) indicates stable surface expression. High Isc (45 microA/cm2) reflects abundant functional channels. deltaF508-CFTR (untreated): Band B appears normally (protein is synthesized and core-glycosylated in the ER) but is rapidly degraded (half-life ~40 min) by the ER-associated degradation (ERAD) pathway — retrotranslocation, ubiquitination, and proteasomal degradation. No Band C is ever detected, meaning no protein escapes the ER. Negligible Isc (1.2 microA/cm2) reflects absence of surface CFTR. deltaF508-CFTR + lumacaftor: This corrector drug acts as a pharmacological chaperone, stabilizing NBD1 folding and its interface with ICL4 (intracellular loop 4). Band C now appears (ratio 0.8), indicating that some deltaF508-CFTR achieves sufficient folding to pass ER quality control and mature through the Golgi. However, the rescued protein is less stable at the surface (Band C half-life ~4h vs >12h for WT) because the deltaF508 folding defect is not fully corrected, and the protein undergoes peripheral quality control (ubiquitination and endolysosomal degradation at the cell surface). The Isc (8.5) is improved but still only ~19% of WT, because both the amount of surface protein and its open probability are suboptimal. Addition of ivacaftor (acute, not affecting trafficking): Ivacaftor is a CFTR potentiator that binds the channel and increases its open probability (Po) and possibly conductance. It does not affect trafficking (same maturation pattern), but dramatically increases Isc to 22 microA/cm2 (~49% of WT). This demonstrates the complementary mechanisms: corrector (lumacaftor) gets more protein to the surface; potentiator (ivacaftor) makes each channel work better. This is the basis for Orkambi (lumacaftor/ivacaftor) and the further-improved Trikafta (elexacaftor/tezacaftor/ivacaftor).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers investigated mitophagy in neuronal cell cultures from wild-type mice and PINK1 knockout mice. They treated cells with CCCP (a mitochondrial uncoupler that dissipates membrane potential) and measured several parameters at 0, 2, 6, and 24 hours. Analyze the data and determine the correct interpretation.",
+      "dataContext": "Wild-type neurons + CCCP: Mitochondrial membrane potential (TMRM fluorescence) — 0h: 100% (baseline); 2h: 15%; 6h: 12%; 24h: 10%. Parkin recruitment to mitochondria (% cells with Parkin-mito colocalization) — 0h: 5%; 2h: 65%; 6h: 78%; 24h: 35% (reduced because damaged mitochondria being cleared). Ubiquitinated Mfn2 levels — 0h: low; 2h: high; 6h: very high; 24h: moderate. LC3-II/mitochondria colocalization — 0h: 3%; 2h: 20%; 6h: 55%; 24h: 70%. Mitochondrial mass (Tom20 total protein by Western) — 0h: 100%; 2h: 95%; 6h: 75%; 24h: 35%. Cell viability — 0h: 98%; 24h: 82%. PINK1-KO neurons + CCCP: Mitochondrial membrane potential — 0h: 100%; 2h: 14%; 6h: 11%; 24h: 9%. Parkin recruitment to mitochondria — 0h: 4%; 2h: 8%; 6h: 7%; 24h: 6%. Ubiquitinated Mfn2 levels — 0h: low; 2h: low; 6h: low; 24h: low. LC3-II/mitochondria colocalization — 0h: 3%; 2h: 5%; 6h: 8%; 24h: 10%. Mitochondrial mass (Tom20) — 0h: 100%; 2h: 98%; 6h: 95%; 24h: 88%. Cell viability — 0h: 97%; 24h: 55%.",
+      "options": [
+        "CCCP fails to depolarize mitochondria in PINK1-KO neurons, which explains why mitophagy does not occur in these cells",
+        "PINK1 is required for CCCP-induced mitochondrial depolarization, and without PINK1, mitochondrial membrane potential remains intact",
+        "PINK1 is essential for CCCP-induced Parkin recruitment to depolarized mitochondria, subsequent ubiquitination of outer membrane proteins (Mfn2), and efficient autophagic clearance of damaged mitochondria; PINK1-KO neurons show normal depolarization but fail to recruit Parkin and clear damaged mitochondria, leading to accumulation of dysfunctional mitochondria and significantly reduced cell viability, modeling the neurodegenerative vulnerability seen in PINK1-mutant Parkinson's disease",
+        "The reduced cell viability in PINK1-KO neurons at 24h is due to excessive mitophagy removing too many mitochondria"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The data provide a comprehensive time-course dissection of PINK1-dependent mitophagy. Key observations: (1) Depolarization is equivalent: CCCP reduces TMRM fluorescence identically in WT and PINK1-KO neurons (~85% loss by 2h), confirming that PINK1 is not required for depolarization itself. (2) Parkin recruitment is PINK1-dependent: In WT neurons, Parkin rapidly translocates to depolarized mitochondria (5% to 65% by 2h, 78% by 6h). In PINK1-KO neurons, Parkin recruitment is negligible (remains at ~6-8%). This confirms that PINK1 accumulation on depolarized mitochondria and its kinase activity (phosphorylating ubiquitin and Parkin's Ubl domain) are essential for Parkin activation and recruitment. (3) Ubiquitination is PINK1-dependent: Mfn2 ubiquitination increases dramatically in WT (Parkin ubiquitinates Mfn1/2, preventing fusion and marking for proteasomal degradation) but remains low in PINK1-KO. (4) Autophagic engulfment is downstream of ubiquitination: LC3-II/mitochondria colocalization (autophagosome formation around mitochondria) increases progressively in WT (to 70% at 24h) but is minimal in PINK1-KO (10% at 24h, likely representing non-selective bulk autophagy). (5) Mitochondrial clearance: Tom20 levels drop to 35% in WT (65% of mitochondrial mass cleared) but only to 88% in PINK1-KO (minimal clearance). (6) Cell viability: WT neurons survive better (82%) because damaged mitochondria are cleared, preventing ROS accumulation and cytochrome c release. PINK1-KO neurons show significantly reduced viability (55%) because damaged, depolarized mitochondria accumulate, generating excessive ROS and eventually triggering cell death. This models the selective vulnerability of dopaminergic neurons in PINK1-mutant Parkinson's disease (PARK6), where these metabolically demanding neurons cannot clear damaged mitochondria and undergo progressive degeneration.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers compared fermentation products in three microorganisms grown anaerobically on glucose-minimal medium. They measured glucose consumed and fermentation products by HPLC after 24 hours. Analyze the data to determine which conclusion is best supported.",
+      "dataContext": "Saccharomyces cerevisiae (yeast): Glucose consumed: 100 mmol/L. Ethanol produced: 185 mmol/L. CO2 produced: 190 mmol/L. Lactate: <1 mmol/L. Acetate: <1 mmol/L. Formate: not detected. H2: not detected. Carbon recovery: ~95%. Lactobacillus delbrueckii (homofermentative LAB): Glucose consumed: 100 mmol/L. Ethanol: <1 mmol/L. CO2: <1 mmol/L. Lactate produced: 195 mmol/L. Acetate: <1 mmol/L. Formate: not detected. H2: not detected. Carbon recovery: ~97%. Escherichia coli (wild-type, pH 6.5): Glucose consumed: 100 mmol/L. Ethanol: 52 mmol/L. CO2: 44 mmol/L. Lactate: 68 mmol/L. Acetate: 35 mmol/L. Formate: 8 mmol/L. Succinate: 12 mmol/L. H2: 36 mmol/L. Carbon recovery: ~93%.",
+      "options": [
+        "All three organisms produce identical fermentation products, differing only in total yield per glucose consumed",
+        "S. cerevisiae performs near-stoichiometric ethanol fermentation (glucose -> 2 ethanol + 2 CO2, theoretical yield ~200 mmol each per 100 mmol glucose); L. delbrueckii performs near-stoichiometric homolactic fermentation (glucose -> 2 lactate, theoretical yield 200 mmol per 100 mmol glucose); E. coli performs mixed acid fermentation with multiple products reflecting branch points at pyruvate (pyruvate formate-lyase producing acetyl-CoA + formate, with formate partially cleaved to CO2 + H2) and PEP (PEP carboxylase producing OAA leading to succinate)",
+        "E. coli produces more total ATP per glucose than yeast or Lactobacillus because it makes more diverse products",
+        "The hydrogen gas produced by E. coli comes from water splitting, similar to the photosynthetic light reactions in cyanobacteria"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data clearly demonstrate three distinct fermentation strategies. S. cerevisiae: The ~2:1 ratio of ethanol and CO2 to glucose (185 and 190 mmol per 100 mmol glucose, close to the theoretical 200) confirms classical ethanol fermentation. Pyruvate decarboxylase (TPP-dependent) converts pyruvate to acetaldehyde + CO2, then alcohol dehydrogenase reduces acetaldehyde to ethanol using NADH. Net: C6H12O6 -> 2 C2H5OH + 2 CO2 + 2 ATP. The slight sub-stoichiometric yield reflects biomass production and minor side reactions. L. delbrueckii: The ~2:1 lactate-to-glucose ratio (195 mmol per 100 mmol glucose) confirms homolactic fermentation. As a homofermentative lactic acid bacterium, it converts >90% of glucose carbon to lactate via the Embden-Meyerhof pathway. Lactate dehydrogenase directly reduces pyruvate to lactate. Net: C6H12O6 -> 2 CH3CHOHCOOH + 2 ATP. No CO2 is produced (distinguishing it from ethanol fermentation). E. coli: The mixed product profile (ethanol, CO2, lactate, acetate, formate, succinate, H2) is characteristic of mixed acid fermentation in facultative anaerobes. Key branch points: (1) At pyruvate: pyruvate formate-lyase (PFL, oxygen-sensitive radical enzyme) cleaves pyruvate to acetyl-CoA + formate. Acetyl-CoA is reduced to ethanol (via acetaldehyde dehydrogenase and alcohol dehydrogenase) or converted to acetate (via phosphotransacetylase and acetate kinase, yielding 1 additional ATP). (2) Formate hydrogen-lyase (FHL) complex cleaves formate to CO2 + H2 (note: 44 CO2 + 8 remaining formate + 36 H2 = ~88 total formate produced from PFL, consistent with acetyl-CoA being the other product). (3) At PEP: PEP carboxylase carboxylates PEP to OAA, which is reduced to malate then fumarate then succinate (consuming NADH, balancing the acetate branch which generates extra ATP but does not consume NADH). (4) Some pyruvate is also directly reduced to lactate by LDH (upregulated at low pH). Option C is incorrect; E. coli gains slightly more ATP per glucose from acetate production (extra substrate-level phosphorylation) but this is not dramatically more than 2 ATP. Option D is wrong; H2 comes from formate cleavage by formate-hydrogen lyase.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Lehninger-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "You want to determine whether a newly discovered mitochondrial outer membrane protein (MOM-X) is a receptor for the PINK1/Parkin mitophagy pathway. Specifically, you hypothesize that MOM-X is ubiquitinated by Parkin upon mitochondrial depolarization and serves as a receptor that recruits autophagy adaptors (NDP52/optineurin) to initiate mitophagosome formation. Design an experiment to test this hypothesis. Which experimental strategy would most definitively establish MOM-X as a Parkin substrate and mitophagy receptor?",
+      "experimentContext": "MOM-X is a single-pass transmembrane protein of the mitochondrial outer membrane with a large cytoplasmic domain containing multiple lysine residues. Preliminary mass spectrometry of the mitochondrial ubiquitinome after CCCP treatment identified MOM-X peptides with GlyGly-modified lysines (ubiquitin remnant). You have available: PINK1-KO and Parkin-KO cell lines, CCCP (uncoupler), MG132 (proteasome inhibitor), Parkin constructs (WT and catalytically dead C431S), anti-MOM-X antibody, anti-ubiquitin antibody (FK2, detects conjugated ubiquitin), anti-phospho-ubiquitin (Ser65) antibody, fluorescently tagged NDP52 and optineurin constructs, CRISPR reagents, and in vitro ubiquitination assay components (recombinant E1, UbcH7/E2, Parkin/E3, ubiquitin, ATP, MOM-X cytoplasmic domain).",
+      "options": [
+        "Simply overexpress MOM-X in cells and check if mitochondria are degraded. If mitochondrial mass decreases, MOM-X is a mitophagy receptor",
+        "Perform the following multi-step approach: (1) In vitro ubiquitination assay with recombinant Parkin, E1, UbcH7, ubiquitin, ATP, and purified MOM-X cytoplasmic domain — confirm Parkin directly ubiquitinates MOM-X; include controls with catalytically dead Parkin C431S, no ATP, and no E2. (2) In cells: treat WT, PINK1-KO, and Parkin-KO cells with CCCP, immunoprecipitate MOM-X, and blot for ubiquitin and phospho-ubiquitin (Ser65) — confirm Parkin- and PINK1-dependent ubiquitination in vivo. (3) Generate MOM-X knockout cells by CRISPR and MOM-X lysine-to-arginine mutants (at identified ubiquitination sites) — test whether MOM-X loss or loss of ubiquitination reduces NDP52/optineurin recruitment and delays mitophagy (measured by Tom20 clearance kinetics). (4) Co-immunoprecipitation and proximity ligation assay between ubiquitinated MOM-X and NDP52/optineurin after CCCP treatment",
+        "Treat cells with CCCP and measure MOM-X mRNA levels by RT-qPCR. If MOM-X mRNA increases, it must be a mitophagy receptor",
+        "Delete all known Parkin substrates (Mfn1, Mfn2, VDAC1, Miro1/2) and check if mitophagy still occurs. If it does, MOM-X must be the receptor"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Option B provides the most rigorous and comprehensive experimental strategy, addressing the hypothesis at multiple levels: (1) In vitro ubiquitination assay: This reconstituted system with purified components directly tests whether Parkin can ubiquitinate MOM-X as an E3 ligase. Controls are essential: catalytically dead Parkin C431S (eliminates ubiquitin-thioester intermediate formation at the active site cysteine), no ATP (ubiquitin activation by E1 requires ATP), and no E2/UbcH7 (Parkin requires an E2 for ubiquitin transfer). Positive results establish a direct enzyme-substrate relationship. Mass spectrometry of the reaction products can map the specific lysines ubiquitinated and the ubiquitin chain types (K48 for degradation vs K63 for signaling). (2) In vivo ubiquitination: CCCP treatment + IP of MOM-X followed by ubiquitin and pSer65-ubiquitin blotting in WT, PINK1-KO, and Parkin-KO cells establishes the physiological relevance and pathway dependency. Phospho-Ser65-ubiquitin on MOM-X would indicate that PINK1 phosphorylates the ubiquitin conjugated to MOM-X, which is a feedforward signal for further Parkin recruitment (the phospho-ubiquitin coat model). (3) Functional requirement: CRISPR KO of MOM-X and lysine-to-arginine point mutants (preventing ubiquitination at specific sites) directly test whether MOM-X ubiquitination is necessary for efficient mitophagy. If MOM-X KO reduces autophagy adaptor (NDP52, optineurin) recruitment to depolarized mitochondria and delays Tom20 clearance, this demonstrates functional significance. Lysine mutants pinpoint the critical residues. (4) Physical interaction: Co-IP and proximity ligation assay (PLA) between ubiquitinated MOM-X and NDP52/optineurin test the receptor model directly — that ubiquitinated MOM-X physically recruits autophagy adaptors. PLA provides in situ evidence of close proximity (<40 nm) between the two proteins specifically on mitochondria after CCCP treatment. Option A is insufficient because MOM-X overexpression alone does not test the ubiquitination hypothesis or the pathway specificity. Option C tests transcription, which is irrelevant to the receptor/substrate hypothesis. Option D is logically flawed because redundancy among multiple Parkin substrates means that mitophagy could persist through any remaining substrate, not specifically MOM-X.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 6,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A pharmaceutical company is developing senolytic drugs that selectively kill senescent cells while sparing proliferating and quiescent cells. They have identified Compound Z, which they believe selectively targets the anti-apoptotic survival network that senescent cells depend on. Design a rigorous preclinical evaluation strategy to validate Compound Z as a senolytic agent. Which experimental approach would most comprehensively establish senolytic specificity and efficacy?",
+      "experimentContext": "Compound Z is a small molecule inhibitor with nanomolar affinity for Bcl-xL and moderate affinity for Bcl-2 (similar profile to navitoclax/ABT-263). Senescent cells upregulate anti-apoptotic Bcl-2 family members to resist apoptosis despite activation of the p53/p21 and p16/Rb pathways (the 'senescent cell anti-apoptotic pathway' or SCAP). You have access to: primary human fibroblasts, ionizing radiation (IR) to induce senescence, oncogene-induced senescence system (4-OHT-inducible H-RasV12), SA-beta-galactosidase staining kit, p16INK4a and p21 antibodies, SASP factor ELISA panels, Annexin V/PI apoptosis assay, BH3 profiling (measures mitochondrial priming/dependence on specific Bcl-2 family members), aged mice (24-month-old C57BL/6), and the INK-ATTAC transgenic mouse model (allows pharmacogenetic clearance of p16-high senescent cells as a positive control).",
+      "options": [
+        "Treat proliferating fibroblasts with Compound Z and measure growth inhibition by MTT assay. If growth is inhibited, it is a senolytic",
+        "Administer Compound Z to young healthy mice (3 months) and measure lifespan extension. If lifespan increases, Compound Z must be killing senescent cells",
+        "Perform the following comprehensive evaluation: (1) In vitro: Induce senescence in fibroblasts by IR and oncogene activation (two independent methods), confirm senescence (SA-beta-gal, p16/p21 expression, SASP secretion, proliferation arrest by EdU incorporation). Treat senescent cells vs. proliferating cells vs. quiescent (serum-starved) cells with Compound Z at multiple doses; measure selective killing by Annexin V/PI at 72h. Perform BH3 profiling to confirm that senescent cells show enhanced mitochondrial priming and specific dependence on Bcl-xL (Compound Z's target). (2) In vivo: Administer Compound Z to 24-month-old mice in intermittent dosing cycles; measure senescent cell burden (p16/p21 expression, SA-beta-gal in tissues), SASP markers (serum IL-6, TNF-alpha), physical function (grip strength, treadmill endurance), and tissue pathology. Use INK-ATTAC mice as positive control for senescent cell clearance. Monitor for on-target toxicity (thrombocytopenia from Bcl-xL inhibition in platelets). (3) Confirm mechanism: show that Compound Z induces apoptosis specifically in senescent cells (caspase-3 cleavage, TUNEL) and that Bcl-xL overexpression rescues senescent cells from Compound Z killing",
+        "Simply stain treated cells with SA-beta-galactosidase. If blue staining disappears after Compound Z treatment, it is a senolytic"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Option C provides the gold-standard preclinical evaluation pipeline for a senolytic compound. Step 1 (In vitro selectivity): Using two independent senescence inducers (IR-induced = DNA damage-induced senescence; oncogene-induced = OIS by RasV12) ensures that results are generalizable across senescence types, not specific to one trigger. Confirmation of senescence by multiple markers is essential because no single marker is definitive (SA-beta-gal can be false-positive in confluent or lysosomal-stressed cells). The critical experiment is the selectivity window: Compound Z must kill senescent cells at doses that spare proliferating cells (actively dividing, not growth-arrested) AND quiescent cells (reversibly arrested in G0 by serum withdrawal). This three-way comparison is essential because quiescent cells share some features with senescent cells (non-dividing) but should not be killed. BH3 profiling is a functional assay that measures how 'primed' mitochondria are for apoptosis and which Bcl-2 family member the cells depend on for survival. Senescent cells are known to be highly primed but dependent on specific anti-apoptotic proteins (Bcl-xL, Bcl-2, Bcl-w — the SCAP network). BH3 profiling with selective BH3 peptides (Bad peptide for Bcl-2/Bcl-xL dependence, HRK peptide for Bcl-xL-specific dependence) directly tests whether senescent cells are more dependent on Bcl-xL than proliferating/quiescent cells. Step 2 (In vivo efficacy): Aged mice (24 months, equivalent to ~70 human years) naturally accumulate senescent cells. Intermittent dosing (e.g., 2 days on, 2 weeks off — 'hit-and-run' strategy) is the standard senolytic regimen because senescent cells take weeks to reaccumulate but can be killed with brief drug exposure, minimizing chronic toxicity. INK-ATTAC positive control: This transgenic mouse expresses an inducible caspase-8 fusion protein (FKBP-Casp8) under the p16INK4a promoter. AP20187 (a dimerizer drug) selectively kills p16-high senescent cells, providing a genetic positive control for the benefits of senescent cell clearance. If Compound Z treatment produces similar improvements as INK-ATTAC activation, this strongly supports a senolytic mechanism. Thrombocytopenia monitoring: Bcl-xL is essential for platelet survival (platelets are anucleate and cannot replenish Bcl-xL). Navitoclax (ABT-263), the prototypical Bcl-xL inhibitor, causes dose-limiting thrombocytopenia. This must be monitored as an expected on-target toxicity. Step 3 (Mechanistic confirmation): Showing that Bcl-xL overexpression rescues senescent cells from Compound Z killing provides definitive on-target mechanistic evidence. Caspase-3 cleavage and TUNEL confirm apoptotic cell death (not necrosis or other death modalities). Option A tests only antiproliferative activity, not senolytic selectivity. Option B in young mice is uninformative because they have few senescent cells. Option D is flawed because SA-beta-gal disappearance could indicate cell death (positive) or simply loss of staining without cell clearance (uninformative).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 12,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cell Structure and Function"
+    }
+  ]
+}
