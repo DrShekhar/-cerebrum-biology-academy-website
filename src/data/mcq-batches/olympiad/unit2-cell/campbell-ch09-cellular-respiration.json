@@ -1,0 +1,1368 @@
+{
+  "batchId": "campbell-ch09-cellular-respiration",
+  "subject": "biology",
+  "topic": "Cellular Respiration and Fermentation",
+  "gradeLevel": "olympiad",
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "During the pyruvate dehydrogenase complex (PDC) reaction, pyruvate is oxidatively decarboxylated to acetyl-CoA. Which cofactors are required for this multi-step reaction?",
+      "options": [
+        "Only NAD+ and CoA are required for the complete reaction",
+        "Five cofactors are required: thiamine pyrophosphate (TPP) for decarboxylation, lipoamide for acyl transfer and oxidation, CoA for acetyl group acceptance, FAD for reoxidation of dihydrolipoamide, and NAD+ as the terminal electron acceptor",
+        "Only ATP and NADPH are needed because the reaction is anabolic",
+        "The reaction requires only thiamine pyrophosphate and water"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The pyruvate dehydrogenase complex (PDC) is a massive multi-enzyme complex (~10 MDa in eukaryotes) consisting of three catalytic components: E1 (pyruvate dehydrogenase/decarboxylase), E2 (dihydrolipoyl transacetylase), and E3 (dihydrolipoyl dehydrogenase). The reaction proceeds through five steps requiring five cofactors: (1) E1 uses thiamine pyrophosphate (TPP, derived from vitamin B1) to decarboxylate pyruvate, forming a hydroxyethyl-TPP intermediate. (2) The hydroxyethyl group is transferred to lipoamide (covalently attached to E2 via a lysine residue), oxidizing it to an acetyl-thioester while reducing the disulfide of lipoamide. (3) E2 transfers the acetyl group from lipoamide to coenzyme A (CoA, derived from pantothenic acid/vitamin B5), forming acetyl-CoA. (4) E3 reoxidizes dihydrolipoamide using FAD (derived from riboflavin/vitamin B2) as an electron acceptor. (5) FADH2 is reoxidized by NAD+ (derived from niacin/vitamin B3), producing NADH. The flexible lipoamide arm of E2 swings between all three active sites, acting as a substrate channel. This is NOT an anabolic reaction (C) — it is oxidative and catabolic. It requires all five cofactors, not just two (A, D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the citric acid cycle, the conversion of isocitrate to alpha-ketoglutarate by isocitrate dehydrogenase is a key regulatory step. Which combination of effectors correctly describes its regulation?",
+      "options": [
+        "Activated by ATP and NADH; inhibited by ADP and NAD+",
+        "Activated by ADP and NAD+ (signaling low energy charge); inhibited by ATP and NADH (signaling high energy charge)",
+        "This enzyme is constitutively active and not subject to any regulation",
+        "Activated only by calcium ions with no other regulatory inputs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Isocitrate dehydrogenase (IDH) catalyzes the first oxidative decarboxylation in the TCA cycle: isocitrate + NAD+ → alpha-ketoglutarate + CO2 + NADH. As one of the three primary regulatory enzymes of the TCA cycle (along with citrate synthase and alpha-ketoglutarate dehydrogenase), IDH is allosterically regulated by the cell's energy status. ADP is a positive allosteric activator — its accumulation signals that ATP has been consumed and more energy is needed, stimulating TCA cycle flux. NAD+ availability also promotes the reaction as a substrate. Conversely, ATP is an allosteric inhibitor — high ATP indicates energy sufficiency, slowing the cycle. NADH inhibits both as a product (mass action) and allosterically, signaling that the electron transport chain has sufficient reducing equivalents. In some tissues, Ca2+ also activates IDH (particularly the mitochondrial NAD+-dependent isoform IDH3), linking TCA cycle activity to muscle contraction and hormonal signaling. Option A reverses the regulatory logic. The enzyme IS regulated (C). While Ca2+ does activate it, it is not the only regulator (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The chemiosmotic hypothesis proposed by Peter Mitchell explains ATP synthesis by oxidative phosphorylation. Which statement most accurately describes this mechanism?",
+      "options": [
+        "ATP is synthesized by direct substrate-level phosphorylation using high-energy intermediates in the electron transport chain",
+        "Electron transport through the ETC complexes pumps protons from the mitochondrial matrix to the intermembrane space, creating an electrochemical gradient (proton-motive force) composed of both a pH gradient (delta-pH) and a membrane potential (delta-psi); protons flow back through ATP synthase (Complex V), which uses the energy of this gradient to drive the mechanical rotation of its rotor and catalyze ATP synthesis",
+        "ATP is produced by the direct chemical coupling of electron transfer to phosphorylation without any intermediate energy form",
+        "The gradient is formed by pumping potassium ions, not protons"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Peter Mitchell's chemiosmotic hypothesis (1961, Nobel Prize 1978) revolutionized bioenergetics by proposing that the energy of electron transport is conserved as an electrochemical proton gradient across the inner mitochondrial membrane, not as a high-energy chemical intermediate (as the chemical coupling hypothesis proposed) or a conformational change (as the conformational coupling hypothesis proposed). The proton-motive force (pmf or delta-p) has two components: (1) delta-psi — the membrane potential (approximately -180 mV, matrix negative), which is the dominant component in mitochondria, contributing approximately 80% of the pmf. (2) delta-pH — the pH gradient (approximately 0.5-1 pH unit, matrix more alkaline), contributing approximately 20%. The relationship is: delta-p = delta-psi - (2.303RT/F)delta-pH. Complexes I, III, and IV of the ETC pump protons across the inner membrane as electrons flow downhill through the chain. ATP synthase (F1Fo-ATPase) then uses the pmf to drive rotational catalysis — protons flowing through the Fo channel cause the c-ring to rotate, which drives conformational changes in the F1 catalytic subunits (binding change mechanism, Boyer) that synthesize ATP from ADP + Pi. This is NOT substrate-level phosphorylation (A). There IS an intermediate energy form — the pmf (C). Protons, not K+ ions, are pumped (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Rotenone (a Complex I inhibitor), antimycin A (a Complex III inhibitor), and cyanide (a Complex IV inhibitor) all block electron transport. If antimycin A is added to actively respiring mitochondria, which ETC components become more reduced and which become more oxidized?",
+      "options": [
+        "All components become fully reduced because electron flow is completely blocked",
+        "Components upstream of the block (Complex I, CoQ, and the Rieske iron-sulfur protein of Complex III upstream of the Qi site) become more reduced because they cannot donate electrons past the block; components downstream (cytochrome c, Complex IV, and O2) become more oxidized because they can no longer receive electrons",
+        "All components become fully oxidized because the block prevents any reduction",
+        "Only Complex III is affected; all other components function normally"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Antimycin A specifically blocks electron transfer in Complex III (cytochrome bc1 complex) at the Qi site (quinone reduction site on the matrix side), preventing the transfer of electrons from cytochrome bH to oxidized ubiquinone. This creates a bifurcation in the redox state of the ETC: UPSTREAM components (Complex I, ubiquinone pool, and the first half of the Q-cycle in Complex III — including the Rieske iron-sulfur protein and cytochrome c1 on the Qo side) become progressively more REDUCED. Electrons continue to flow from NADH into Complex I and through to ubiquinone, but cannot pass the antimycin A block. The ubiquinone pool becomes fully reduced (QH2 accumulates). Complex I also becomes reduced because its electron acceptor (Q) is unavailable. DOWNSTREAM components (cytochrome c, Complex IV including cytochrome a, cytochrome a3, and CuA/CuB centers) become more OXIDIZED because they continue to transfer any remaining electrons to O2, but receive no new electrons from the blocked Complex III. O2 is already the most oxidized component and remains so. This differential redox response is a classic experimental approach for mapping the order of electron carriers in the ETC. Not all components become fully reduced (A) — downstream ones become oxidized. Not all become oxidized (C). The block affects the entire chain, not just Complex III (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The P/O ratio (number of ATP molecules synthesized per oxygen atom reduced) differs for NADH and FADH2. What are the approximate P/O ratios and why do they differ?",
+      "options": [
+        "Both NADH and FADH2 have P/O ratios of exactly 3.0 because they both donate 2 electrons",
+        "NADH has a P/O ratio of approximately 2.5 and FADH2 approximately 1.5, because NADH donates electrons at Complex I (pumping 4 H+), while FADH2 donates at Complex II (pumping 0 H+) — this means NADH-derived electrons drive proton pumping at Complexes I, III, and IV (total approximately 10 H+), while FADH2-derived electrons only drive pumping at Complexes III and IV (total approximately 6 H+); with approximately 4 H+ needed per ATP, this gives approximately 2.5 and 1.5 ATP per atom of oxygen",
+        "FADH2 has a higher P/O ratio than NADH because FADH2 is a stronger reducing agent",
+        "P/O ratios are identical for all substrates because ATP synthase operates at a fixed rate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The P/O ratio reflects the stoichiometry of ATP synthesis coupled to oxygen reduction, and it differs for NADH and FADH2 because they enter the ETC at different points. NADH (E'0 = -320 mV) donates electrons to Complex I (NADH dehydrogenase), which pumps 4 H+ per pair of electrons. Electrons then pass through ubiquinone to Complex III (pumping 4 H+ via the Q-cycle) and through cytochrome c to Complex IV (pumping 2 H+ while reducing 1/2 O2 to H2O). Total: 10 H+ pumped per NADH. FADH2 (E'0 = -220 mV) donates electrons to Complex II (succinate dehydrogenase), which does NOT pump protons — it simply transfers electrons to ubiquinone. Electrons then pass through Complexes III and IV as above. Total: 6 H+ pumped per FADH2. ATP synthase requires approximately 4 H+ per ATP (3 for the rotational catalysis + 1 for the Pi/ATP translocase). Therefore: NADH P/O = 10/4 = 2.5; FADH2 P/O = 6/4 = 1.5. Note these are non-integer values, correcting the older textbook values of 3 and 2. The difference is NOT because of electron number (A) — both donate 2 electrons. NADH is actually the stronger reducing agent, giving it the higher P/O ratio (C is backwards). P/O ratios differ based on entry point (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "During alcoholic fermentation in yeast, pyruvate is converted to ethanol in two steps. What is the biological purpose of this pathway?",
+      "options": [
+        "To generate additional ATP beyond what glycolysis produces",
+        "To regenerate NAD+ from NADH so that glycolysis can continue under anaerobic conditions — without NAD+ regeneration, glyceraldehyde-3-phosphate dehydrogenase cannot function and glycolysis halts, eliminating all ATP production",
+        "To produce ethanol as a nutrient for the yeast cells",
+        "To consume excess acetaldehyde that accumulates during aerobic respiration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Fermentation pathways (both alcoholic and lactic acid) serve one essential purpose: regeneration of NAD+ from NADH under anaerobic conditions. Glycolysis requires NAD+ at the glyceraldehyde-3-phosphate dehydrogenase step (reaction 6). Under aerobic conditions, the NADH produced is reoxidized by the electron transport chain. Under anaerobic conditions, without a functional ETC, NADH accumulates and NAD+ becomes depleted. Without NAD+, GAPDH cannot function, glycolysis stops, and no ATP can be produced — a lethal situation for obligate fermenters. In alcoholic fermentation: (1) Pyruvate decarboxylase (using TPP) converts pyruvate to acetaldehyde + CO2. (2) Alcohol dehydrogenase reduces acetaldehyde to ethanol using NADH, regenerating NAD+. The pathway does NOT generate additional ATP (A) — fermentation produces 0 ATP beyond the 2 from glycolysis. Ethanol is a waste product, not a nutrient (C) — indeed, it is toxic to yeast at high concentrations (>12-15%). Acetaldehyde does not accumulate during aerobic respiration (D) — it is specifically an intermediate of the fermentation pathway.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Q-cycle in Complex III (cytochrome bc1 complex) is essential for efficient proton translocation. What is the net result of one complete Q-cycle?",
+      "options": [
+        "One QH2 is oxidized to Q, transferring both electrons to cytochrome c and pumping 2 H+ across the membrane",
+        "For each pair of electrons transferred from QH2 to cytochrome c, the Q-cycle oxidizes two QH2 molecules at the Qo site and reduces one Q to QH2 at the Qi site, resulting in the net translocation of 4 H+ to the intermembrane space and the transfer of 2 electrons (via two cytochrome c molecules) to Complex IV",
+        "The Q-cycle directly reduces oxygen to water at the Qi site",
+        "The Q-cycle transfers electrons backward from cytochrome c to ubiquinone"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Q-cycle (proposed by Peter Mitchell, refined by structural studies) is an elegant mechanism that doubles the number of protons translocated per pair of electrons through Complex III. It operates in two half-cycles: FIRST HALF: One QH2 binds the Qo (outer) site. One electron goes to the Rieske iron-sulfur protein → cytochrome c1 → cytochrome c (the high-potential chain). The other electron goes to cytochrome bL → cytochrome bH (the low-potential chain) → reduces Q to semiquinone (Q.-) at the Qi (inner) site. Two H+ from QH2 are released to the intermembrane space. SECOND HALF: A second QH2 binds the Qo site. Again, one electron goes to Rieske → cyt c1 → cyt c (second cytochrome c reduced). The other electron goes through bL → bH → reduces the semiquinone at Qi to QH2 (picking up 2 H+ from the matrix). Two more H+ from the second QH2 are released to the IMS. NET RESULT: 2 QH2 oxidized at Qo, 1 QH2 regenerated at Qi (net: 1 QH2 consumed); 2 cytochrome c reduced; 4 H+ released to IMS (2 per QH2 at Qo); 2 H+ consumed from matrix (at Qi). The Q-cycle does NOT reduce oxygen (C) — that occurs at Complex IV. Electrons flow forward, not backward (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Uncoupling proteins (UCPs) such as thermogenin (UCP1) in brown adipose tissue dissipate the proton gradient without ATP synthesis. What is the metabolic consequence?",
+      "options": [
+        "ATP production increases because the proton gradient is maintained more efficiently",
+        "The energy stored in the proton gradient is released as heat instead of driving ATP synthesis — electron transport continues (and may even accelerate due to the reduced proton-motive force) but the energy is dissipated as thermal energy for non-shivering thermogenesis",
+        "Uncoupling proteins pump additional protons to increase the gradient",
+        "UCP1 blocks electron transport, stopping all mitochondrial respiration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Uncoupling proteins (UCPs) are mitochondrial inner membrane carriers that allow protons to flow down their electrochemical gradient from the intermembrane space to the matrix, bypassing ATP synthase. This short-circuits the chemiosmotic coupling between electron transport and ATP synthesis. In brown adipose tissue (BAT), UCP1 (thermogenin) is highly expressed and activated by free fatty acids (released by beta-adrenergic signaling during cold exposure or after sympathetic nervous system activation). When protons leak through UCP1, the proton-motive force decreases, which actually STIMULATES electron transport — the ETC complexes pump protons faster trying to maintain the gradient, consuming more O2 and oxidizing more NADH/FADH2. However, since the energy is not captured as ATP, it is dissipated as heat. This non-shivering thermogenesis is critical for newborn mammals, hibernating animals, and cold-adapted adults. ATP production DECREASES, not increases (A). UCPs allow proton leak, they do not pump additional protons (C). Electron transport CONTINUES and may accelerate; it is not blocked (D). UCP1 is regulated by purine nucleotides (GDP, ATP inhibit) and fatty acids (activate).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the citric acid cycle, succinate dehydrogenase (Complex II) is unique among TCA cycle enzymes. Which statement correctly explains this uniqueness?",
+      "options": [
+        "It is the only TCA cycle enzyme located in the cytoplasm rather than the mitochondrial matrix",
+        "It is the only TCA cycle enzyme that is an integral inner membrane protein and also functions as Complex II of the electron transport chain — it directly transfers electrons from succinate (via FAD → Fe-S clusters) to ubiquinone without producing NADH, linking the TCA cycle to the ETC",
+        "It is the only enzyme in the cycle that uses GTP instead of ATP",
+        "It is the only reversible reaction in an otherwise completely irreversible cycle"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Succinate dehydrogenase (SDH, also called succinate-ubiquinone oxidoreductase or Complex II) is unique because it serves dual functions: it is both a TCA cycle enzyme (catalyzing succinate → fumarate) and an integral component of the electron transport chain (Complex II). All other TCA cycle enzymes are soluble matrix proteins. SDH is embedded in the inner mitochondrial membrane and contains: (1) a covalently bound FAD prosthetic group (not NAD+ — this is why the reaction produces FADH2 instead of NADH); (2) three iron-sulfur clusters (Fe2S2, Fe4S4, Fe3S4) that relay electrons from FADH2; (3) a ubiquinone binding site where electrons are transferred to the ubiquinone pool. The succinate → fumarate oxidation (E'0 = +30 mV) is not sufficiently exergonic to reduce NAD+ (E'0 = -320 mV), so FAD (E'0 = -220 mV) serves as the electron acceptor instead. SDH is in the inner membrane, not the cytoplasm (A). Succinyl-CoA synthetase uses GTP (in animals) or ATP, but that is a different enzyme (C). Several TCA reactions are near-equilibrium and reversible (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Pasteur effect describes the observation that the rate of glucose consumption decreases dramatically when yeast cells shift from anaerobic to aerobic conditions. What is the biochemical basis for this phenomenon?",
+      "options": [
+        "Oxygen directly inhibits all glycolytic enzymes through oxidative modification",
+        "Under aerobic conditions, oxidative phosphorylation generates approximately 30-32 ATP per glucose (versus 2 from glycolysis alone), so far less glucose needs to be consumed to meet the same ATP demand — additionally, the increased ATP/AMP ratio under aerobic conditions inhibits phosphofructokinase-1, the rate-limiting enzyme of glycolysis",
+        "Oxygen competes with glucose for binding to hexokinase, preventing glucose phosphorylation",
+        "Aerobic conditions cause yeast cells to stop growing, eliminating the need for ATP"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Pasteur effect (first observed by Louis Pasteur in the 1860s) reflects the integration of glycolysis with oxidative phosphorylation through allosteric regulation. Under anaerobic conditions, fermentation yields only 2 ATP per glucose, so cells must consume glucose rapidly to meet energy demands. When oxygen becomes available, the mitochondrial ETC and oxidative phosphorylation become active, producing approximately 30-32 ATP per glucose — roughly 15-16 times more efficient. Two mechanisms reduce glycolytic flux: (1) THERMODYNAMIC: The cell's ATP demand is met with far less glucose, so less glycolytic flux is needed. (2) ALLOSTERIC: The increased ATP/AMP ratio (from efficient oxidative phosphorylation) inhibits PFK-1, the committed step of glycolysis. ATP binds PFK-1's inhibitory allosteric site, while AMP (which drops under aerobic conditions) no longer activates it. Additionally, citrate (which accumulates when the TCA cycle is active) also inhibits PFK-1. Oxygen does NOT directly inhibit glycolytic enzymes (A). Oxygen does not bind hexokinase (C). Aerobic yeast cells continue growing, often faster than anaerobic ones (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "During substrate-level phosphorylation in glycolysis, the phosphoglycerate kinase reaction transfers a phosphoryl group from 1,3-bisphosphoglycerate to ADP. Why is this reaction thermodynamically favorable despite ATP synthesis being endergonic?",
+      "options": [
+        "The reaction is driven by high substrate concentrations, not by thermodynamic favorability",
+        "1,3-Bisphosphoglycerate (1,3-BPG) is a mixed anhydride (acyl phosphate) with a very high phosphoryl transfer potential (delta-G-zero-prime of hydrolysis approximately -49.4 kJ/mol), exceeding that of ATP (-30.5 kJ/mol) — the transfer of the phosphoryl group to ADP is therefore exergonic with a net delta-G-zero-prime of approximately -18.9 kJ/mol",
+        "The reaction requires input of additional GTP molecules to proceed",
+        "Phosphoglycerate kinase directly couples to the electron transport chain for energy"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Substrate-level phosphorylation depends on using phosphorylated compounds with higher phosphoryl transfer potential than ATP. 1,3-BPG is a mixed anhydride — its C-1 phosphate is an acyl phosphate (carboxylic acid-phosphoric acid anhydride) formed by the preceding glyceraldehyde-3-phosphate dehydrogenase reaction. The hydrolysis of acyl phosphates is highly exergonic (approximately -49.4 kJ/mol for 1,3-BPG) because: (1) the products (3-phosphoglycerate + Pi) are stabilized by resonance and charge repulsion relief, and (2) the mixed anhydride bond is thermodynamically unstable due to competing resonance between the carboxylate and phosphate groups. Since 1,3-BPG's phosphoryl transfer potential (-49.4 kJ/mol) exceeds ATP's (-30.5 kJ/mol), the transfer from 1,3-BPG to ADP is thermodynamically favorable: delta-G-zero-prime = (-49.4) - (-30.5) = -18.9 kJ/mol. This is why 1,3-BPG can drive ATP synthesis. The reaction IS thermodynamically favorable (A is wrong about the reasoning). No GTP is required (C). Substrate-level phosphorylation is independent of the ETC (D) — this is a defining distinction from oxidative phosphorylation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Warburg effect describes the observation that many cancer cells preferentially use aerobic glycolysis (glycolysis followed by lactate production even in the presence of oxygen). What is the proposed metabolic advantage of this seemingly wasteful strategy?",
+      "options": [
+        "Cancer cells have defective mitochondria and cannot perform oxidative phosphorylation",
+        "Aerobic glycolysis, while less efficient per glucose molecule, provides rapid ATP production and supplies biosynthetic precursors (glycolytic intermediates diverted to pentose phosphate pathway for nucleotides, to serine/glycine for amino acids, and to glycerol for lipid synthesis) that support the high proliferative demands of cancer cells",
+        "Lactate production kills surrounding normal cells, giving cancer cells a competitive advantage",
+        "The Warburg effect is an experimental artifact with no biological significance"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Otto Warburg observed in the 1920s that cancer cells consume glucose at rates 10-100 times higher than normal cells and produce lactate even under aerobic conditions (aerobic glycolysis). While this seems metabolically wasteful (2 ATP per glucose versus 30-32 from complete oxidation), it provides several advantages for rapidly proliferating cells: (1) RAPID ATP PRODUCTION: Although less ATP per glucose, glycolysis can produce ATP much faster than oxidative phosphorylation when glucose is abundant. The rate of ATP production can actually exceed that of OXPHOS. (2) BIOSYNTHETIC PRECURSORS: Rapidly dividing cells need building blocks — nucleotides, amino acids, lipids — more than they need maximal ATP. Glycolytic intermediates feed into: glucose-6-phosphate → pentose phosphate pathway (NADPH + ribose-5-phosphate for nucleotide synthesis); 3-phosphoglycerate → serine → glycine → one-carbon metabolism; dihydroxyacetone phosphate → glycerol-3-phosphate → lipid synthesis; pyruvate → acetyl-CoA → fatty acid synthesis (via citrate shuttle). (3) REDOX BALANCE: Maintaining high glycolytic flux with lactate export helps manage the redox balance needed for biosynthesis. Most cancer cells do NOT have fundamentally defective mitochondria (A) — many maintain functional OXPHOS. While lactate acidification of the microenvironment may confer some advantage, this is secondary (C). The Warburg effect is well-established and therapeutically targeted via PET scanning using 18F-FDG (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cyanide and carbon monoxide both inhibit Complex IV (cytochrome c oxidase) of the electron transport chain. What is the mechanism of inhibition and why is it lethal?",
+      "options": [
+        "They inhibit Complex I, blocking NADH oxidation",
+        "Cyanide binds to the Fe3+ of cytochrome a3, and CO binds to the Fe2+ of cytochrome a3, both preventing the terminal transfer of electrons to oxygen — this halts the entire ETC (no electron flow means no proton pumping), collapses the proton-motive force, stops ATP synthesis, and causes NADH accumulation that inhibits the TCA cycle",
+        "They directly inhibit ATP synthase without affecting electron transport",
+        "They increase oxygen consumption, leading to oxidative damage"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Complex IV (cytochrome c oxidase) contains two heme groups (heme a and heme a3) and two copper centers (CuA and CuB). The binuclear center of heme a3-CuB is where O2 is reduced to H2O in a carefully controlled four-electron reduction. Cyanide (CN-) binds tightly to the ferric (Fe3+) form of heme a3, while carbon monoxide (CO) binds to the ferrous (Fe2+) form — both block oxygen from accessing its binding site at the terminal electron acceptor. The consequences cascade through the entire metabolic system: (1) Electron flow through the entire ETC stops because all carriers upstream become fully reduced (no terminal acceptor for electrons). (2) Proton pumping ceases because it is coupled to electron transport. (3) The proton-motive force collapses, stopping ATP synthase. (4) NADH and FADH2 accumulate because they cannot be reoxidized. (5) The TCA cycle stops because NAD+ and FAD are unavailable. (6) Cellular ATP drops rapidly, leading to failure of all ATP-dependent processes (ion pumps, biosynthesis, muscle contraction). Death occurs within minutes from respiratory failure. They do NOT inhibit Complex I (A) or ATP synthase directly (C). Oxygen consumption DECREASES, not increases (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The glycerol-3-phosphate shuttle and the malate-aspartate shuttle both transfer reducing equivalents from cytoplasmic NADH to mitochondria. Why do they yield different amounts of ATP?",
+      "options": [
+        "Both shuttles yield exactly the same amount of ATP because they transfer the same number of electrons",
+        "The malate-aspartate shuttle regenerates NADH in the matrix (which enters the ETC at Complex I, yielding approximately 2.5 ATP), while the glycerol-3-phosphate shuttle transfers electrons to mitochondrial FAD (linked to ubiquinone/Complex II level, yielding approximately 1.5 ATP) — the glycerol-3-phosphate shuttle sacrifices energy efficiency for speed",
+        "The glycerol-3-phosphate shuttle produces more ATP because FAD is a better electron carrier",
+        "The difference is only theoretical and has no physiological relevance"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cytoplasmic NADH cannot cross the inner mitochondrial membrane (which is impermeable to NADH/NAD+), so shuttle systems transfer the reducing equivalents. MALATE-ASPARTATE SHUTTLE (liver, heart, kidney): Cytoplasmic NADH reduces oxaloacetate to malate (cytoplasmic malate dehydrogenase). Malate enters the matrix via the malate-alpha-ketoglutarate antiporter. Matrix malate dehydrogenase reoxidizes malate to oxaloacetate, regenerating NADH in the matrix. This matrix NADH enters the ETC at Complex I, yielding approximately 2.5 ATP per NADH. Oxaloacetate is returned to the cytoplasm as aspartate (via transamination and the glutamate-aspartate antiporter). GLYCEROL-3-PHOSPHATE SHUTTLE (skeletal muscle, brain, insect flight muscle): Cytoplasmic NADH reduces DHAP to glycerol-3-phosphate (cytoplasmic glycerol-3-phosphate dehydrogenase, NAD+-linked). Mitochondrial glycerol-3-phosphate dehydrogenase (an inner membrane flavoprotein, FAD-linked) reoxidizes glycerol-3-phosphate to DHAP, transferring electrons to FAD → ubiquinone. Since electrons enter at the ubiquinone level (bypassing Complex I), they yield only approximately 1.5 ATP. The glycerol-3-phosphate shuttle is kinetically faster (simpler, irreversible) but thermodynamically less efficient. FAD is NOT a better carrier (C) — it actually yields less ATP. The difference IS physiologically relevant (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Alpha-ketoglutarate dehydrogenase complex catalyzes a key reaction in the TCA cycle. Which statement about its regulation is CORRECT?",
+      "options": [
+        "It is activated by ATP and inhibited by ADP",
+        "It is inhibited by its products (succinyl-CoA and NADH) and activated by Ca2+ — this product inhibition ensures that the TCA cycle slows when the cell has sufficient energy carriers and biosynthetic intermediates",
+        "It is constitutively active and not regulated by any metabolites",
+        "It is regulated solely by oxygen concentration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Alpha-ketoglutarate dehydrogenase (alpha-KGDH) complex catalyzes the second oxidative decarboxylation of the TCA cycle: alpha-ketoglutarate + NAD+ + CoA → succinyl-CoA + CO2 + NADH. Structurally and mechanistically, it is homologous to the pyruvate dehydrogenase complex, using the same five cofactors (TPP, lipoamide, CoA, FAD, NAD+). Its regulation follows a logical energy-sensing pattern: INHIBITION: (1) Succinyl-CoA — product inhibition. When succinyl-CoA accumulates (indicating sufficient biosynthetic precursor supply or downstream congestion), it inhibits alpha-KGDH by competing with CoA at the E2 active site. (2) NADH — product inhibition and energy signal. High NADH/NAD+ ratio indicates the cell has sufficient reducing equivalents. (3) ATP — high energy charge. ACTIVATION: (1) Ca2+ — in mitochondria, Ca2+ concentration increases during muscle contraction and hormonal stimulation, activating alpha-KGDH (as well as isocitrate dehydrogenase and pyruvate dehydrogenase) to increase TCA cycle flux to meet increased energy demand. (2) ADP — low energy charge signal. Option A reverses the regulation. The enzyme IS tightly regulated (C). While oxygen indirectly affects it via NADH/NAD+ ratio, it is not the sole regulator (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The binding change mechanism proposed by Paul Boyer explains how ATP synthase catalyzes ATP formation. Which description is most accurate?",
+      "options": [
+        "Each catalytic beta subunit cycles through three conformational states — O (open, releases ATP), L (loose, binds ADP + Pi), and T (tight, catalyzes ATP synthesis) — driven by the rotation of the gamma subunit powered by proton flow through the Fo channel; the energy input is used primarily for product release, not for bond formation",
+        "ATP synthase uses a simple acid-base catalysis mechanism at a single active site",
+        "The Fo and F1 components function independently, with no mechanical coupling between them",
+        "ATP synthesis requires no conformational changes in the enzyme"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Paul Boyer's binding change mechanism (Nobel Prize 1997, shared with John Walker) elegantly explains rotational catalysis in ATP synthase. The F1 component contains three alpha-beta heterodimers arranged in a ring around the asymmetric gamma subunit (part of the central stalk). The key insight is that each catalytic beta subunit exists in one of three conformational states at any given time, determined by the rotational position of the gamma shaft: O (open) — low affinity for ligands; this is where ATP is released. L (loose) — binds ADP and Pi loosely. T (tight) — substrates are bound tightly and the equilibrium between ADP+Pi and ATP actually FAVORS ATP formation (Keq approximately 1 on the enzyme surface). The remarkable insight is that the actual phosphoanhydride bond formation is nearly isoenergonic on the enzyme surface — the energy from the proton gradient is used primarily to drive the conformational change from T→O that RELEASES the tightly bound ATP product. Proton flow through the Fo membrane channel drives rotation of the c-ring and attached gamma subunit, causing sequential conformational changes in the three beta subunits. Each 360-degree rotation produces 3 ATP molecules. The mechanism requires both Fo and F1 coupled mechanically (C is wrong). Conformational changes are central to the mechanism (D is wrong). It involves three active sites, not one (B).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "In glycolysis, the conversion of fructose-6-phosphate to fructose-1,6-bisphosphate by phosphofructokinase-1 (PFK-1) is the primary regulatory step. Which metabolite is the MOST potent physiological activator of PFK-1?",
+      "options": [
+        "Glucose-6-phosphate, because it is the immediate upstream substrate",
+        "ATP, because it provides the phosphoryl group for the reaction",
+        "Fructose-2,6-bisphosphate (F-2,6-BP), which is produced by PFK-2 in response to insulin signaling and potently activates PFK-1 by increasing its affinity for fructose-6-phosphate and relieving ATP inhibition",
+        "Citrate, because it signals that the TCA cycle needs more acetyl-CoA"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Fructose-2,6-bisphosphate (F-2,6-BP) is the single most potent allosteric activator of PFK-1. It is produced by the bifunctional enzyme phosphofructokinase-2/fructose-2,6-bisphosphatase (PFK-2/FBPase-2). In liver, insulin signaling activates a phosphatase that dephosphorylates PFK-2, activating its kinase domain and increasing F-2,6-BP levels. F-2,6-BP activates PFK-1 by: (1) increasing the enzyme's affinity for its substrate fructose-6-phosphate (lowering K0.5), (2) relieving the allosteric inhibition by ATP and citrate, and (3) shifting the T/R equilibrium strongly toward the active R state. Remarkably, F-2,6-BP activates PFK-1 at concentrations as low as 1 micromolar. Conversely, glucagon signaling (via cAMP-PKA) phosphorylates PFK-2, activating its phosphatase domain, lowering F-2,6-BP, and reducing glycolytic flux. Glucose-6-phosphate is NOT a direct activator of PFK-1 (A). ATP is actually a substrate AND an allosteric inhibitor (at the regulatory site), not an activator (B). Citrate is an INHIBITOR of PFK-1, not an activator (D) — high citrate signals energy/biosynthetic sufficiency.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "During intense anaerobic exercise, lactate accumulates in skeletal muscle. What happens to this lactate after exercise ceases?",
+      "options": [
+        "Lactate is permanently trapped in muscle and eventually excreted in urine",
+        "Lactate is exported from muscle to blood and taken up primarily by the liver, where it is converted back to glucose via gluconeogenesis (the Cori cycle) — this newly synthesized glucose can then be returned to muscle for further glycolysis, completing the metabolic cycle",
+        "Lactate is directly converted to ATP in the muscle cells",
+        "Lactate spontaneously decomposes to CO2 and water without enzymatic involvement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Cori cycle (named after Carl and Gerty Cori, Nobel Prize 1947) is a metabolic cycle that links glycolysis in muscle with gluconeogenesis in the liver. During intense exercise, skeletal muscle produces lactate via anaerobic glycolysis (lactate dehydrogenase reduces pyruvate to lactate, regenerating NAD+). Lactate is exported from muscle via MCT (monocarboxylate transporter) proteins into the bloodstream. The liver takes up blood lactate and converts it back to glucose through gluconeogenesis — a process that requires 6 ATP equivalents per glucose (4 ATP + 2 GTP). This glucose is released back into the blood and can be taken up by muscle for another round of glycolysis. The Cori cycle effectively shifts the metabolic burden of lactate recycling from muscle (which lacks sufficient gluconeogenic enzymes) to the liver (which has abundant gluconeogenic capacity). The net effect is an energy cost — muscle gains 2 ATP from glycolysis, but liver spends 6 ATP on gluconeogenesis, for a net cost of 4 ATP per cycle, paid by the liver's oxidative metabolism. Lactate is NOT trapped in muscle (A) and is not directly converted to ATP (C). Lactate requires enzymatic conversion (D) — it does not spontaneously decompose.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Reactive oxygen species (ROS) such as superoxide (O2.-) are generated as byproducts of mitochondrial electron transport. At which Complex(es) is ROS production most significant, and why?",
+      "options": [
+        "ROS are produced equally at all four complexes of the ETC",
+        "Complexes I and III are the primary sites of superoxide generation — at Complex I, electron leak from the FMNH2 or Fe-S clusters to O2 produces superoxide; at Complex III, the unstable semiquinone intermediate at the Qo site during the Q-cycle can donate a single electron to O2",
+        "Complex V (ATP synthase) is the sole source of mitochondrial ROS",
+        "ROS are only produced during anaerobic conditions when the ETC is inactive"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mitochondrial electron transport is not perfectly efficient — approximately 0.1-2% of electrons leak from the chain and react directly with molecular oxygen to form superoxide anion radical (O2.-), the primary mitochondrial ROS. The two major sites are: COMPLEX I: Electrons can leak from the fully reduced flavin mononucleotide (FMNH2) or from the N2 iron-sulfur cluster when the ubiquinone-binding site is occupied. This occurs particularly during reverse electron transport (when succinate-derived electrons drive NADH reduction at Complex I via a high proton-motive force). COMPLEX III: During the Q-cycle, the ubisemiquinone radical (Q.-) at the Qo site is a thermodynamically unstable species that can donate its unpaired electron to O2, forming O2.-. This is especially problematic when electron flow downstream is impaired (e.g., by antimycin A). Superoxide is released into both the matrix (Complex I, Complex III Qi site) and the intermembrane space (Complex III Qo site). Cells possess antioxidant defenses: superoxide dismutase (SOD) converts O2.- to H2O2, and catalase/glutathione peroxidase converts H2O2 to H2O. Complex II produces minimal ROS. Complex V does not produce ROS (C). ROS production actually increases when the ETC is highly reduced (D is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Glucokinase (hexokinase IV) in hepatocytes differs from hexokinase I found in most tissues. Which property of glucokinase is physiologically significant?",
+      "options": [
+        "Glucokinase has a much lower Km for glucose (approximately 0.1 mM) than hexokinase I, allowing the liver to phosphorylate glucose only when blood sugar is very low",
+        "Glucokinase has a higher Km for glucose (approximately 10 mM, near blood glucose concentration) and is NOT inhibited by its product glucose-6-phosphate — this allows hepatocytes to increase glucose uptake and phosphorylation proportionally as blood glucose rises after a meal, functioning as a glucose sensor",
+        "Glucokinase and hexokinase I have identical kinetic properties and are functionally interchangeable",
+        "Glucokinase functions exclusively in glycogen synthesis, not glycolysis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Glucokinase (GK, hexokinase IV) has two critical kinetic differences from hexokinases I-III that are perfectly adapted for its role in liver glucose homeostasis: (1) HIGH Km: GK has Km approximately 10 mM for glucose (compared to approximately 0.1 mM for hexokinase I). Blood glucose normally ranges from 4-5 mM (fasting) to 8-10 mM (postprandial). Since GK's Km is near the upper physiological range, GK activity increases nearly linearly with blood glucose over the physiological range. This allows the liver to act as a glucose sensor — increasing glucose phosphorylation (and subsequent glycolysis, glycogen synthesis, and lipogenesis) proportionally as blood glucose rises after a meal. (2) NO PRODUCT INHIBITION: Unlike hexokinases I-III (which are potently inhibited by glucose-6-phosphate at micromolar concentrations), GK is NOT inhibited by G6P. This allows the liver to continue phosphorylating glucose even when G6P accumulates, enabling the liver to serve as a glucose buffer. Additionally, GK displays sigmoidal kinetics (Hill coefficient approximately 1.7) and is regulated by glucokinase regulatory protein (GKRP) that sequesters GK in the nucleus when glucose is low. GK mutations cause MODY-2 diabetes. Option A has the wrong Km and reasoning. Options C and D are factually incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about glycolysis:\nS1: Glycolysis occurs in the cytoplasm and does not require oxygen\nS2: The net energy yield from glycolysis is 4 ATP and 2 NADH per glucose molecule\nS3: Phosphofructokinase-1 (PFK-1) is the committed step enzyme and primary regulatory point of glycolysis\nS4: Glycolysis consists of 10 enzymatic reactions divided into an energy-investment phase (reactions 1-5) and an energy-payoff phase (reactions 6-10)",
+      "options": [
+        "TFTT",
+        "TTTT",
+        "TFTF",
+        "TTFT"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: Glycolysis (from Greek 'glycos' = sweet, 'lysis' = splitting) is an ancient metabolic pathway that occurs entirely in the cytoplasm (cytosol) of the cell. It does not require oxygen and can function under both aerobic and anaerobic conditions. This is consistent with its evolution before atmospheric O2 accumulated. All 10 glycolytic enzymes are soluble cytoplasmic proteins (except for some that associate with the outer mitochondrial membrane or cytoskeletal elements). S2 is FALSE: While the energy-payoff phase produces 4 ATP (2 from phosphoglycerate kinase, 2 from pyruvate kinase) and 2 NADH (from glyceraldehyde-3-phosphate dehydrogenase), the energy-investment phase consumes 2 ATP (hexokinase and PFK-1). The NET yield is therefore 2 ATP and 2 NADH per glucose, not 4 ATP. The statement says 'net energy yield' of 4 ATP, which is incorrect. S3 is TRUE: PFK-1 catalyzes fructose-6-phosphate + ATP → fructose-1,6-bisphosphate + ADP. This is the first committed step of glycolysis (glucose-6-phosphate from hexokinase can enter other pathways like PPP or glycogen synthesis, but F-1,6-BP is committed to glycolysis). PFK-1 is the primary regulatory target, controlled by ATP (inhibitor), AMP (activator), citrate (inhibitor), and fructose-2,6-bisphosphate (most potent activator). S4 is TRUE: Glycolysis comprises 10 reactions in two phases. The investment phase (reactions 1-5) uses 2 ATP to phosphorylate glucose to fructose-1,6-bisphosphate and split it into two triose phosphates. The payoff phase (reactions 6-10) generates 4 ATP and 2 NADH from the two triose phosphate molecules.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the citric acid cycle:\nS1: The TCA cycle produces 3 NADH, 1 FADH2, and 1 GTP (or ATP) per turn from one acetyl-CoA\nS2: Oxaloacetate is consumed stoichiometrically and must be continually resynthesized from dietary sources\nS3: Anaplerotic reactions such as pyruvate carboxylase (pyruvate + CO2 → oxaloacetate) replenish TCA cycle intermediates that are removed for biosynthesis\nS4: The TCA cycle operates exclusively in the mitochondrial matrix, with all enzymes being soluble proteins",
+      "options": [
+        "TFTT",
+        "TFTF",
+        "TTFF",
+        "TFFT"
+      ],
+      "correctAnswer": "TFTF",
+      "explanation": "S1 is TRUE: Each turn of the TCA cycle (from one acetyl-CoA) produces: 3 NADH (at isocitrate dehydrogenase, alpha-ketoglutarate dehydrogenase, and malate dehydrogenase), 1 FADH2 (at succinate dehydrogenase), and 1 GTP (at succinyl-CoA synthetase; in some tissues, ATP is produced instead). The overall equation per acetyl-CoA: acetyl-CoA + 3 NAD+ + FAD + GDP + Pi + 2 H2O → 2 CO2 + 3 NADH + FADH2 + GTP + CoA. S2 is FALSE: Oxaloacetate is NOT consumed stoichiometrically — it is regenerated with each turn of the cycle. The cycle begins when acetyl-CoA condenses with oxaloacetate to form citrate (citrate synthase), and after seven more reactions, oxaloacetate is regenerated. OAA is catalytic, not stoichiometric. It does not need to be continually resynthesized from diet — it is recycled. However, when TCA intermediates are withdrawn for biosynthesis (cataplerosis), anaplerotic reactions replenish them. S3 is TRUE: Anaplerotic reactions (Greek 'filling up') replenish TCA cycle intermediates. The most important is pyruvate carboxylase: pyruvate + CO2 + ATP → oxaloacetate + ADP + Pi. This biotin-dependent enzyme is activated by acetyl-CoA — when acetyl-CoA accumulates (from beta-oxidation or amino acid catabolism), it signals the need for more OAA to keep the cycle running. Other anaplerotic reactions include glutamate dehydrogenase (glutamate → alpha-ketoglutarate) and various transaminases. S4 is FALSE: While most TCA cycle enzymes are in the matrix, succinate dehydrogenase (Complex II) is an integral inner membrane protein, not a soluble matrix enzyme. Its FAD prosthetic group is covalently bound, and it directly interfaces with the ubiquinone pool of the ETC.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about oxidative phosphorylation:\nS1: The inner mitochondrial membrane has a very low permeability to protons, which is essential for maintaining the proton gradient\nS2: Oligomycin inhibits ATP synthase by blocking the proton channel in the Fo subunit, preventing proton flow and stopping ATP synthesis\nS3: Under normal coupling conditions, inhibition of ATP synthase by oligomycin will also inhibit electron transport because the proton gradient builds up to a level that thermodynamically opposes further proton pumping\nS4: FCCP (carbonyl cyanide-p-trifluoromethoxyphenylhydrazone) is an ATP synthase activator that increases ATP production",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: The inner mitochondrial membrane has an exceptionally low proton permeability, approximately 10^6 times lower than typical biological membranes. This is essential because the proton-motive force (approximately 200 mV) would rapidly dissipate if protons could leak back freely. The membrane's high content of cardiolipin (a four-acyl-chain phospholipid unique to this membrane) contributes to its impermeability. Protons can only return to the matrix through specific channels — primarily ATP synthase (productive) or UCPs (for thermogenesis). S2 is TRUE: Oligomycin (a macrolide antibiotic from Streptomyces) binds to the c-subunits of the Fo channel, physically blocking proton translocation. Without proton flow, the F1 catalytic subunits cannot undergo the rotational conformational changes needed for ATP synthesis. Oligomycin is a classic experimental tool for studying chemiosmotic coupling. S3 is TRUE: This demonstrates the tight coupling between electron transport and ATP synthesis. When oligomycin blocks proton return through ATP synthase, protons pumped by the ETC accumulate in the IMS, increasing the pmf. As the pmf rises, it becomes thermodynamically more difficult (and eventually impossible) for the ETC complexes to pump additional protons against the larger gradient. Electron transport therefore slows and eventually stops. This respiratory control demonstrates that the ETC and ATP synthase are coupled through the proton gradient. S4 is FALSE: FCCP is NOT an ATP synthase activator — it is a chemical uncoupler (protonophore). FCCP is a lipophilic weak acid that carries protons across the inner membrane, short-circuiting the proton gradient and PREVENTING ATP synthesis. It dissipates the pmf as heat, similar to UCPs but in an unregulated manner.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about fermentation and anaerobic metabolism:\nS1: Lactic acid fermentation in human muscle produces L-lactate (not D-lactate) via lactate dehydrogenase\nS2: Obligate aerobes can switch to fermentation when oxygen is depleted\nS3: In alcoholic fermentation, pyruvate is first decarboxylated to acetaldehyde (by pyruvate decarboxylase, requiring TPP), then acetaldehyde is reduced to ethanol (by alcohol dehydrogenase, oxidizing NADH to NAD+)\nS4: Fermentation pathways produce the same total ATP per glucose as aerobic respiration",
+      "options": [
+        "TFTT",
+        "TFTF",
+        "TTFF",
+        "TFFF"
+      ],
+      "correctAnswer": "TFTF",
+      "explanation": "S1 is TRUE: Human lactate dehydrogenase (LDH) is stereospecific, producing exclusively L-lactate (also called (S)-lactate). The enzyme catalyzes the reduction of pyruvate to L-lactate with concomitant oxidation of NADH to NAD+. D-lactate is produced by certain bacteria using D-specific LDH enzymes. The distinction is clinically relevant because D-lactate accumulation (D-lactic acidosis) can occur in short bowel syndrome from bacterial overgrowth. S2 is FALSE: Obligate aerobes (strict aerobes) CANNOT switch to fermentation — by definition, they require oxygen for growth and energy production. They lack the fermentation enzymes needed for anaerobic ATP production (or their metabolism is too dependent on oxidative phosphorylation). Examples include Mycobacterium tuberculosis and most mitochondria-containing eukaryotic cells (although many eukaryotes are actually facultative and can ferment). Organisms that CAN switch between aerobic respiration and fermentation are called facultative anaerobes (e.g., yeast, E. coli). S3 is TRUE: Alcoholic fermentation proceeds in two steps: (1) Pyruvate decarboxylase (requires TPP/thiamine pyrophosphate as cofactor) removes CO2 from pyruvate to yield acetaldehyde. (2) Alcohol dehydrogenase reduces acetaldehyde to ethanol using NADH as the reductant, regenerating NAD+. This NAD+ regeneration is the essential purpose of the pathway. S4 is FALSE: Fermentation yields only 2 ATP per glucose (net from glycolysis), while aerobic respiration yields approximately 30-32 ATP per glucose — a 15-16 fold difference in efficiency.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers measure oxygen consumption rate (OCR) in isolated mitochondria under different conditions:\n\nCondition | OCR (nmol O2/min/mg protein)\nState 1: Mitochondria alone | 5\nState 2: + Succinate (substrate) | 15\nState 3: + ADP | 85\nState 4: ADP exhausted (all converted to ATP) | 18\nState 3u: + FCCP (uncoupler) | 110\n\nCalculate the respiratory control ratio (RCR = State 3/State 4) and explain what these states reveal about mitochondrial coupling.",
+      "options": [
+        "RCR = 85/5 = 17; this indicates that ADP controls oxygen consumption independently of substrate availability",
+        "RCR = 85/18 = 4.7; this indicates well-coupled mitochondria — State 3 (ADP-stimulated) respiration is approximately 5 times faster than State 4 (resting) because ADP availability limits ATP synthase turnover, which in turn limits proton return to the matrix, which limits electron transport; the high State 3u rate with uncoupler shows the ETC has additional capacity beyond what coupling allows",
+        "RCR = 110/18 = 6.1; the uncoupled rate is the only meaningful comparator for coupling efficiency",
+        "RCR cannot be calculated from these data because the values are in arbitrary units"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The respiratory control ratio (RCR) is the ratio of State 3 (ADP-stimulated) to State 4 (resting) oxygen consumption, and it is the most widely used measure of mitochondrial coupling quality. From the data: RCR = 85/18 = 4.72, indicating well-coupled mitochondria (typical values for isolated mitochondria are 3-10, depending on substrate and tissue). STATE ANALYSIS: State 1 (mitochondria alone, no substrate): Minimal respiration — only endogenous substrates are oxidized. State 2 (+ succinate): Modest increase to 15 — substrate is available but without ADP, ATP synthase cannot operate, and the high pmf limits proton pumping, restricting electron transport. State 3 (+ ADP): Dramatic increase to 85 — ADP drives ATP synthase, protons flow back through Fo, pmf decreases, and the ETC accelerates to restore the gradient. This is the maximum phosphorylating respiration rate. State 4 (ADP exhausted): Returns to 18 — all ADP has been phosphorylated to ATP, ATP synthase stops, pmf builds up again, restricting ETC. Slightly higher than State 2 due to proton leak. State 3u (+ FCCP): Highest rate at 110 — the uncoupler dissipates pmf completely, removing all thermodynamic back-pressure on the ETC. This represents the maximum capacity of the ETC itself (uncoupled respiration). The fact that State 3u > State 3 shows that under normal coupled conditions, the pmf imposes a kinetic constraint on ETC activity. Option A uses the wrong states. Option C uses uncoupled rate, but RCR is specifically State 3/State 4. Option D is wrong — the units are appropriate for RCR calculation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A biochemist measures the standard reduction potentials of ETC components:\n\nComponent | E'0 (mV)\nNADH/NAD+ | -320\nFMN/FMNH2 (Complex I) | -300\nCoQ/CoQH2 | +45\nCyt c (Fe3+/Fe2+) | +254\nO2/H2O | +816\n\nUsing these values, calculate the total free energy change for electron transfer from NADH to O2 and explain why this energy is sufficient to drive ATP synthesis.",
+      "options": [
+        "The total delta-E'0 is 816 - (-320) = 1136 mV, and using delta-G'0 = -nF(delta-E'0) where n=2 and F=96.5 kJ/(V*mol), delta-G'0 = -2 x 96.5 x 1.136 = -219 kJ/mol — this is sufficient to drive the synthesis of approximately 7 ATP molecules (at 30.5 kJ/mol each), but only approximately 2.5 ATP are actually produced due to thermodynamic and mechanical efficiency constraints of the proton-pumping and ATP synthase machinery",
+        "The energy is insufficient for even one ATP because the voltage change is too small",
+        "The free energy change is positive, meaning the electron transfer is non-spontaneous",
+        "Each ETC component produces one ATP independently, totaling 5 ATP per electron pair"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The total standard potential difference is delta-E'0 = E'0(acceptor) - E'0(donor) = +816 - (-320) = +1136 mV = 1.136 V. The positive value indicates a spontaneous (exergonic) electron transfer. Using the Nernst equation relationship: delta-G'0 = -nF(delta-E'0), where n = 2 (electrons per NADH), F = 96,485 J/(V*mol) approximately 96.5 kJ/(V*mol). delta-G'0 = -2 x 96.5 x 1.136 = -219.2 kJ/mol. This is a large negative free energy, indicating a highly exergonic process. Theoretically, 219.2/30.5 = 7.2 ATP molecules could be synthesized per NADH if coupling were 100% efficient. In practice, only approximately 2.5 ATP are produced per NADH (P/O ratio = 2.5), giving a thermodynamic efficiency of approximately 2.5 x 30.5/219.2 = 34.8%. The remaining energy is used to maintain the proton gradient at steady state, drive transport processes, and is inevitably lost as heat (second law of thermodynamics). The energy is NOT insufficient (B). The delta-G is negative, meaning the transfer IS spontaneous (C). ATP is not produced independently at each component (D) — energy is conserved as a proton gradient and then used collectively by ATP synthase.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a new compound acts as an ETC inhibitor, an uncoupler, or an ATP synthase inhibitor. Which experimental approach using isolated mitochondria would distinguish among these three mechanisms?",
+      "options": [
+        "Measure cell viability after 24 hours of compound treatment",
+        "Measure oxygen consumption in isolated mitochondria under State 3 conditions (with substrate and ADP): an ETC inhibitor will decrease OCR; an uncoupler will increase OCR above State 3 levels (approaching State 3u); an ATP synthase inhibitor will decrease OCR to State 4 levels. Confirming with a subsequent addition of FCCP (uncoupler) further distinguishes — after an ETC inhibitor, FCCP will not restore respiration; after an ATP synthase inhibitor, FCCP will restore high respiration rate",
+        "Simply measure ATP levels in intact cells",
+        "Determine the compound's molecular structure and predict its mechanism computationally"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Isolated mitochondria respirometry is the gold-standard approach for mechanistically classifying compounds that affect oxidative phosphorylation. The experimental logic: SETUP: Energize mitochondria with substrate (e.g., glutamate/malate for Complex I, succinate for Complex II) and add ADP to establish State 3 respiration. Then add the test compound. THREE PREDICTIONS: (1) ETC INHIBITOR (e.g., rotenone, antimycin A, cyanide): Blocks electron flow → OCR decreases. Adding FCCP afterward does NOT restore respiration because electrons cannot flow regardless of the gradient. (2) UNCOUPLER (e.g., FCCP, DNP, thermogenin): Dissipates the proton gradient → removes back-pressure on ETC → OCR INCREASES above State 3 (toward maximal ETC capacity). ATP synthesis simultaneously decreases because pmf is dissipated. (3) ATP SYNTHASE INHIBITOR (e.g., oligomycin): Blocks proton return through ATP synthase → pmf builds up → back-pressure slows ETC → OCR decreases to State 4 level. Adding FCCP afterward RESTORES high OCR because the ETC is not blocked — only the coupling is affected. This sequential addition protocol (substrate → ADP → test compound → FCCP) creates a decision tree that unambiguously identifies the mechanism. Cell viability assays (A) cannot distinguish the mechanism. Cellular ATP levels (C) would decrease with all three types. Computational prediction (D) is insufficient without experimental validation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To study the regulation of pyruvate dehydrogenase complex (PDC) activity in vivo, a researcher proposes using isotopically labeled substrates. Which experimental design would most effectively demonstrate that PDC is regulated by its phosphorylation state?",
+      "options": [
+        "Feed cells with C-14-glucose and measure total CO2 output over time",
+        "Compare PDC activity in cell extracts with and without: (1) PDH kinase inhibitor (dichloroacetate/DCA, which inhibits PDK and keeps PDC in the active dephosphorylated state), (2) PDH phosphatase activator (Ca2+ or insulin signaling), and (3) phosphatase inhibitors — then correlate activity with phosphorylation status measured by phospho-specific antibodies or P-32 labeling; additionally, use site-directed mutagenesis of the three phosphorylation sites (Ser-264, Ser-271, Ser-203 on E1-alpha) to non-phosphorylatable alanines to create constitutively active PDC",
+        "Measure mRNA levels of PDC subunits by RT-qPCR",
+        "Simply add excess pyruvate and measure acetyl-CoA production"
+      ],
+      "correctAnswer": "B",
+      "explanation": "PDC regulation by reversible phosphorylation is a paradigm of metabolic control, and demonstrating this requires multiple complementary approaches. PHARMACOLOGICAL APPROACH: Dichloroacetate (DCA) is a specific inhibitor of PDH kinase (PDK), the enzyme that phosphorylates and inactivates PDC. Treatment with DCA keeps PDC in its dephosphorylated (active) state. If phosphorylation is the regulatory mechanism, DCA treatment should increase PDC activity and acetyl-CoA/NADH production. Conversely, conditions that activate PDK (high acetyl-CoA/CoA, NADH/NAD+, ATP/ADP ratios) should increase phosphorylation and decrease activity. BIOCHEMICAL APPROACH: Direct measurement of phosphorylation status using P-32 labeling (incubate with gamma-P-32-ATP) or phospho-specific antibodies (immunoblotting with anti-phospho-Ser-264 antibodies) correlated with activity measurements provides direct evidence. GENETIC APPROACH: Mutating the phosphorylation sites (Ser→Ala mutations prevent phosphorylation; Ser→Asp mutations mimic constitutive phosphorylation) and measuring the resulting PDC activity definitively establishes causality between phosphorylation and activity. PDH phosphatase (PDP) is activated by Ca2+ and insulin signaling, linking PDC activity to hormonal control. Total CO2 output (A) is too indirect. mRNA levels (C) reflect transcriptional regulation, not post-translational phosphorylation. Simply measuring activity without manipulating phosphorylation state (D) cannot establish a regulatory mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Fatty acids are catabolized by beta-oxidation, which occurs in the mitochondrial matrix. Why can't long-chain fatty acyl-CoA molecules (e.g., palmitoyl-CoA) directly cross the inner mitochondrial membrane?",
+      "options": [
+        "Long-chain acyl-CoA molecules are too large to pass through any membrane channel or transporter, so the carnitine shuttle system is required — fatty acyl groups are transferred from CoA to carnitine by CPT-I (on the outer membrane), transported as acylcarnitine through the inner membrane via the carnitine-acylcarnitine translocase, and then retransferred to matrix CoA by CPT-II",
+        "Long-chain acyl-CoAs freely diffuse across both mitochondrial membranes without any transport mechanism",
+        "Only short-chain fatty acids require the carnitine shuttle; long-chain ones cross directly",
+        "Fatty acids are catabolized in the cytoplasm, not the mitochondrial matrix"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The inner mitochondrial membrane is impermeable to CoA and acyl-CoA derivatives. The carnitine shuttle overcomes this barrier through a three-step process: (1) CPT-I (carnitine palmitoyltransferase I, located on the outer face of the inner membrane/outer membrane): Transfers the acyl group from coenzyme A to the hydroxyl group of carnitine, forming acylcarnitine and releasing free CoA. CPT-I is the rate-limiting step of fatty acid oxidation and is inhibited by malonyl-CoA (the first committed intermediate of fatty acid synthesis, ensuring that synthesis and oxidation do not occur simultaneously). (2) Carnitine-acylcarnitine translocase (an integral inner membrane protein): Transports acylcarnitine into the matrix while simultaneously exporting free carnitine (antiport). (3) CPT-II (on the matrix face of the inner membrane): Transfers the acyl group back from carnitine to matrix CoA, regenerating acyl-CoA in the matrix and releasing free carnitine for recycling. Short-chain and medium-chain fatty acids can actually bypass the carnitine shuttle and enter the matrix directly, so option C reverses the actual biology. Beta-oxidation occurs in the mitochondrial matrix (D is wrong). The shuttle system IS required for long-chain species (B is wrong).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The overall equation for cellular respiration is C6H12O6 + 6O2 → 6CO2 + 6H2O. In which specific metabolic reactions are the 6 CO2 molecules released?",
+      "options": [
+        "All 6 CO2 are released during the electron transport chain",
+        "Two CO2 are released during the two pyruvate dehydrogenase reactions (one per pyruvate) and four CO2 are released during the two turns of the citric acid cycle (two per turn, at isocitrate dehydrogenase and alpha-ketoglutarate dehydrogenase) — notably, no CO2 is released during glycolysis or the electron transport chain",
+        "All 6 CO2 are released during glycolysis when glucose is split",
+        "Three CO2 are released in glycolysis and three in the TCA cycle"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Tracking the carbon atoms through cellular respiration reveals where each CO2 is produced: GLYCOLYSIS: Glucose (6C) → 2 pyruvate (3C each). No carbon is lost as CO2; all 6 carbons are retained in the two pyruvate molecules. PYRUVATE OXIDATION: Each pyruvate (3C) is oxidatively decarboxylated to acetyl-CoA (2C) + CO2 by the pyruvate dehydrogenase complex. Two pyruvates → 2 CO2. Running total: 2 CO2 released, 4 carbons remaining (as 2 acetyl-CoA). TCA CYCLE (per turn): Acetyl-CoA (2C) + oxaloacetate (4C) → citrate (6C). Isocitrate (6C) → alpha-ketoglutarate (5C) + CO2 (at isocitrate dehydrogenase). Alpha-ketoglutarate (5C) → succinyl-CoA (4C) + CO2 (at alpha-ketoglutarate dehydrogenase). Two turns: 4 CO2. Running total: 2 + 4 = 6 CO2. ELECTRON TRANSPORT CHAIN: No CO2 is released. The ETC transfers electrons from NADH/FADH2 to O2, forming H2O. Thus: 2 from pyruvate oxidation + 4 from TCA cycle = 6 CO2 total. The O2 consumed in cellular respiration is used exclusively at Complex IV to accept electrons and form water — it does NOT appear in CO2.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The adenine nucleotide translocase (ANT) exchanges ADP and ATP across the inner mitochondrial membrane. Why does this transport process consume part of the proton-motive force?",
+      "options": [
+        "ANT is a passive channel that does not consume any energy",
+        "ANT exchanges ATP4- (out of matrix) for ADP3- (into matrix) — this electrogenic antiport moves one net negative charge out of the matrix, which is driven by and partially dissipates the membrane potential (delta-psi, matrix negative); additionally, the phosphate carrier imports H2PO4- in symport with H+, consuming one proton from the gradient per ATP synthesized",
+        "ANT transports ATP and ADP in the same direction (symport), which requires ATP hydrolysis",
+        "The energy cost is negligible because ATP and ADP have the same charge"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The adenine nucleotide translocase (ANT, also called ADP/ATP carrier) is one of the most abundant proteins in the inner mitochondrial membrane. It catalyzes an obligatory 1:1 exchange of matrix ATP4- for cytoplasmic ADP3-. This antiport is electrogenic because it results in the net export of one negative charge from the matrix per exchange cycle. Since the membrane potential is approximately -180 mV (matrix negative), exporting a negative charge works against the electrical gradient, requiring energy from the membrane potential. This means one proton's worth of energy from the pmf is consumed for each ATP/ADP exchange. Additionally, the phosphate carrier (PiC) imports inorganic phosphate (H2PO4-) into the matrix via H+ symport, consuming one additional proton per Pi imported. Combined, the transport of ADP + Pi in and ATP out costs approximately 1 H+ equivalent beyond the approximately 3 H+ needed to drive one 120-degree rotation of ATP synthase. This is why the total cost is approximately 4 H+ per ATP synthesized and exported (3 for synthesis + 1 for transport), giving the non-integer P/O ratios of 2.5 and 1.5. ANT is NOT passive (A). ATP4- and ADP3- have DIFFERENT charges (D). The transport is antiport, not symport (C).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pyruvate kinase catalyzes the last step of glycolysis. What makes this reaction essentially irreversible under physiological conditions?",
+      "options": [
+        "The enzyme is too slow to catalyze the reverse reaction",
+        "The conversion of PEP to pyruvate releases a large amount of energy (delta-G-zero-prime = -31.4 kJ/mol) because the product pyruvate immediately tautomerizes from the enol to the thermodynamically stable keto form — this spontaneous tautomerization makes the overall reaction highly exergonic and effectively irreversible; gluconeogenesis must bypass this step using pyruvate carboxylase and PEPCK",
+        "The reaction is freely reversible and operates near equilibrium in all tissues",
+        "Pyruvate kinase requires oxygen to function, making it irreversible only under aerobic conditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pyruvate kinase catalyzes: PEP + ADP → pyruvate + ATP. The large negative delta-G-zero-prime (-31.4 kJ/mol) and the even more negative actual delta-G in vivo (approximately -23 kJ/mol) make this reaction essentially irreversible under physiological conditions. The thermodynamic driving force comes from two sources: (1) Substrate-level phosphorylation of ADP to ATP (consuming approximately -30.5 kJ/mol of the PEP hydrolysis energy). (2) The spontaneous tautomerization of enolpyruvate (the initial product) to the much more stable keto form of pyruvate, which contributes an additional large exergonic driving force. This keto-enol tautomerization is spontaneous and essentially irreversible, pulling the overall equilibrium strongly toward product formation. Because this reaction is irreversible, gluconeogenesis cannot simply reverse it. Instead, two enzymes are needed to bypass it: (1) Pyruvate carboxylase (pyruvate + CO2 + ATP → oxaloacetate, in the mitochondrial matrix) and (2) PEPCK (oxaloacetate + GTP → PEP + CO2, in cytoplasm). This two-enzyme bypass costs 2 high-energy phosphate bonds (1 ATP + 1 GTP) versus the 1 ATP gained by pyruvate kinase. The reaction is NOT near equilibrium (C). It does not require oxygen (D). The enzyme catalytic rate is not the issue (A).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which amino acids can be converted to acetyl-CoA and thus are classified as purely ketogenic (cannot produce net glucose through gluconeogenesis)?",
+      "options": [
+        "Alanine and glutamate, because they are the most abundant amino acids",
+        "Leucine and lysine are the only purely ketogenic amino acids — they are degraded exclusively to acetyl-CoA and/or acetoacetyl-CoA, which cannot be converted to net glucose in animals because the pyruvate dehydrogenase reaction is irreversible and acetyl-CoA cannot be carboxylated to pyruvate",
+        "All 20 amino acids are glucogenic; none are purely ketogenic",
+        "Glycine and proline, because they are the simplest amino acids"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Amino acids are classified based on the fate of their carbon skeletons: GLUCOGENIC amino acids yield pyruvate or TCA cycle intermediates (oxaloacetate, alpha-ketoglutarate, succinyl-CoA, fumarate) that can produce net glucose through gluconeogenesis. KETOGENIC amino acids yield only acetyl-CoA or acetoacetyl-CoA, which CANNOT produce net glucose in animals. The key reason is that the pyruvate dehydrogenase reaction (pyruvate → acetyl-CoA) is irreversible in animals, and there is no pathway to convert acetyl-CoA back to pyruvate or any gluconeogenic precursor. The two carbons of acetyl-CoA that enter the TCA cycle are lost as 2 CO2 (at isocitrate dehydrogenase and alpha-ketoglutarate dehydrogenase) before oxaloacetate is regenerated, so there is no NET carbon gain. ONLY TWO amino acids are purely ketogenic: LEUCINE and LYSINE. Both are degraded exclusively to acetyl-CoA and/or acetoacetyl-CoA. Several amino acids are both glucogenic and ketogenic (isoleucine, phenylalanine, threonine, tryptophan, tyrosine) because their catabolism yields both glucogenic and ketogenic intermediates. Alanine and glutamate are glucogenic (A). Some amino acids ARE purely ketogenic (C). Glycine and proline are glucogenic (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Complex I (NADH-ubiquinone oxidoreductase) is the largest complex in the ETC. How many protons does it pump per pair of electrons transferred from NADH to ubiquinone?",
+      "options": [
+        "2 protons per electron pair",
+        "4 protons per electron pair — the mechanism involves a conformational coupling between the electron transfer in the peripheral arm (containing FMN and 8 Fe-S clusters) and the proton translocation in the membrane arm, linked by a long lateral helix that transmits conformational changes to four proton channels",
+        "10 protons per electron pair, accounting for all proton pumping in the ETC",
+        "Complex I does not pump protons; it only transfers electrons"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Complex I (NADH dehydrogenase) is an L-shaped enzyme with approximately 45 subunits in mammals (14 core subunits, 31 supernumerary). It consists of a hydrophilic peripheral arm (extending into the matrix) where electron transfer occurs, and a hydrophobic membrane arm where proton translocation occurs. ELECTRON TRANSFER PATH: NADH → FMN → N3 → N1b → N4 → N5 → N6a → N6b → N2 → ubiquinone. The 8 iron-sulfur clusters span approximately 95 angstroms, relaying electrons from FMN to the ubiquinone-binding site near the membrane surface. PROTON PUMPING: 4 H+ are translocated per 2 electrons. The coupling mechanism involves conformational changes rather than direct redox-linked proton translocation (unlike Complex III's Q-cycle or Complex IV's direct proton transfer). A long amphipathic helix (the 'piston' helix) in the membrane arm transmits conformational changes from the electron transfer events to four proton half-channels (three in NuoL/M/N-type antiporter-like subunits and one at the interface with the peripheral arm). With 4 H+ at Complex I, 4 H+ at Complex III (Q-cycle), and 2 H+ at Complex IV, the total is 10 H+ per NADH. Not 2 H+ (A) — that would be insufficient for the observed P/O ratio. Not 10 H+ (C) — that is the total for the entire chain. Complex I DOES pump protons (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Citrate synthase catalyzes the first reaction of the TCA cycle. Why is the condensation of acetyl-CoA with oxaloacetate to form citrate thermodynamically favorable?",
+      "options": [
+        "The reaction is endergonic and requires ATP input to proceed",
+        "The hydrolysis of the thioester bond of acetyl-CoA (delta-G-zero-prime approximately -31.4 kJ/mol) provides a large exergonic driving force that makes the overall condensation reaction highly favorable (delta-G-zero-prime = -32.2 kJ/mol) — the citryl-CoA intermediate is first formed, then the thioester is hydrolyzed, releasing CoA and pulling the reaction forward",
+        "Citrate synthase uses GTP hydrolysis to drive the reaction forward",
+        "The reaction is near equilibrium and is not thermodynamically favorable"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Citrate synthase catalyzes an aldol condensation followed by a thioester hydrolysis: Acetyl-CoA + Oxaloacetate + H2O → Citrate + CoA-SH. The reaction proceeds in two steps: (1) The methyl carbon of acetyl-CoA attacks the carbonyl of oxaloacetate, forming the intermediate citryl-CoA (enzyme-bound). This condensation step alone would not be sufficiently exergonic to drive the reaction forward. (2) Citryl-CoA is hydrolyzed to citrate + CoA-SH. The hydrolysis of the thioester bond of citryl-CoA (similar to acetyl-CoA hydrolysis, delta-G-zero-prime approximately -31.4 kJ/mol) provides a large free energy decrease that makes the overall reaction highly exergonic (delta-G-zero-prime = -32.2 kJ/mol). This is a common thermodynamic strategy — coupling an unfavorable condensation to a favorable thioester hydrolysis to drive the overall reaction forward. The reaction is NOT endergonic (A). No GTP is needed (C). The reaction is far from equilibrium with a large negative delta-G (D), making it one of the three irreversible regulatory steps of the TCA cycle. Citrate synthase is regulated by substrate availability (oxaloacetate, acetyl-CoA) and product inhibition (citrate, succinyl-CoA, NADH).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The energy charge of a cell is defined as ([ATP] + 0.5[ADP]) / ([ATP] + [ADP] + [AMP]). A typical healthy cell maintains an energy charge of approximately 0.85-0.90. What happens to metabolic pathways when the energy charge drops significantly?",
+      "options": [
+        "All metabolic pathways shut down to conserve energy",
+        "Catabolic pathways (glycolysis, beta-oxidation, TCA cycle) are stimulated while anabolic pathways (gluconeogenesis, fatty acid synthesis, glycogen synthesis) are inhibited — the enzymes at regulatory steps of catabolic pathways are activated by AMP/ADP and inhibited by ATP, while biosynthetic pathway enzymes show the opposite regulatory pattern",
+        "Anabolic pathways accelerate to build emergency energy stores",
+        "The energy charge has no effect on metabolic regulation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The energy charge concept (proposed by Daniel Atkinson, 1968) provides a unified framework for understanding how cells coordinate hundreds of metabolic reactions in response to energy status. The energy charge ranges from 0 (all AMP) to 1 (all ATP), with normal cells maintaining approximately 0.85-0.90 through precise feedback regulation. When energy charge DROPS (more AMP/ADP relative to ATP): CATABOLIC pathways are STIMULATED: (1) PFK-1 (glycolysis) is activated by AMP and ADP, inhibited by ATP. (2) Isocitrate dehydrogenase and alpha-ketoglutarate dehydrogenase (TCA cycle) are activated by ADP, inhibited by ATP and NADH. (3) Pyruvate dehydrogenase is activated by decreased ATP/ADP ratio. (4) AMP-activated protein kinase (AMPK) is activated, phosphorylating and activating catabolic enzymes while inhibiting anabolic ones. ANABOLIC pathways are INHIBITED: (1) Acetyl-CoA carboxylase (fatty acid synthesis) is inhibited by AMPK phosphorylation. (2) Glycogen synthase is inhibited. (3) Gluconeogenesis is inhibited (fructose-1,6-bisphosphatase inhibited by AMP). The cell does NOT shut down all pathways (A) — it selectively upregulates energy-producing ones. Anabolic pathways decrease, not increase (C). Energy charge is central to metabolic regulation (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Dinitrophenol (DNP) was once used as a weight-loss drug but was banned due to its dangerous side effects. How does DNP cause weight loss, and why is it dangerous?",
+      "options": [
+        "DNP blocks glucose absorption in the intestine, causing weight loss from malnutrition",
+        "DNP is a lipophilic weak acid that acts as a protonophore — it carries protons across the inner mitochondrial membrane, uncoupling electron transport from ATP synthesis; the cell compensates by oxidizing more fuel (fats, carbohydrates) to maintain ATP levels, generating heat instead of ATP; it is dangerous because the dose-response curve is steep and unpredictable — slight overdose causes life-threatening hyperthermia, and there is no antidote",
+        "DNP directly burns fat by reacting with lipid molecules in adipose tissue",
+        "DNP increases appetite, causing weight gain, not loss"
+      ],
+      "correctAnswer": "B",
+      "explanation": "2,4-Dinitrophenol (DNP) is a classic chemical uncoupler. Its mechanism: DNP is a lipophilic weak acid (pKa approximately 4.0). In its protonated form (DNP-H), it dissolves in the inner mitochondrial membrane's lipid bilayer and diffuses to the matrix side. In the alkaline matrix (pH approximately 8), it releases its proton. The deprotonated form (DNP-) is still lipophilic enough to diffuse back to the IMS (due to electron delocalization across the nitro groups), where it picks up another proton. This continuous cycling dissipates the proton gradient. METABOLIC CONSEQUENCES: Without a functional pmf, ATP synthase cannot produce ATP at normal rates. The cell senses falling ATP levels and responds by: (1) Activating AMPK, stimulating catabolic pathways. (2) Increasing substrate oxidation (glycolysis, beta-oxidation, TCA cycle). (3) The ETC runs at maximal rate (no back-pressure from pmf). All this fuel oxidation generates heat rather than ATP — causing weight loss from fat burning but also hyperthermia. DANGER: The therapeutic window is extremely narrow. A dose only 2-3 times the 'effective' dose can cause fatal hyperthermia (body temperature >40 degrees C), profuse sweating, tachycardia, and death. There is no antidote. DNP was banned in 1938 by the FDA. It does NOT block absorption (A), directly burn fat chemically (C), or increase appetite (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Succinate dehydrogenase (Complex II) catalyzes the oxidation of succinate to fumarate in the TCA cycle. This reaction involves what type of chemical transformation?",
+      "options": [
+        "A decarboxylation reaction releasing CO2",
+        "A trans-dehydrogenation removing two hydrogen atoms from adjacent carbons to form a trans double bond (C=C) — the enzyme contains a covalently bound FAD that accepts a hydride equivalent; the electrons then pass through three Fe-S clusters to ubiquinone",
+        "A hydrolysis reaction adding water across a bond",
+        "A phosphorylation reaction using GTP"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Succinate dehydrogenase catalyzes the stereospecific oxidation of succinate to fumarate: succinate + FAD → fumarate + FADH2. This is a trans-elimination (dehydrogenation) that removes two hydrogen atoms from the C2 and C3 carbons of succinate, creating the trans (E) double bond of fumarate. The reaction is stereospecific — only the trans isomer is produced (fumarate), not the cis isomer (maleate). The enzyme uses FAD rather than NAD+ as the electron acceptor because the succinate/fumarate half-reaction (E'0 = +30 mV) is not sufficiently exergonic to reduce NAD+ (E'0 = -320 mV), but can reduce FAD (E'0 approximately -220 mV, though when covalently bound in SDH, the effective potential is modified). FAD is covalently linked to a histidine residue of the SDHA subunit. After FAD accepts the hydride, electrons pass through three Fe-S clusters ([2Fe-2S], [4Fe-4S], [3Fe-4S]) to the ubiquinone-binding site, where they reduce Q to QH2. This is NOT a decarboxylation (A) — no CO2 is released. It is NOT hydrolysis (C) — the next reaction (fumarase) adds water. It is NOT phosphorylation (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The complete oxidation of one molecule of palmitate (C16 fatty acid) by beta-oxidation and subsequent TCA cycle/ETC processing yields approximately how many ATP equivalents?",
+      "options": [
+        "Approximately 38 ATP, the same as glucose oxidation",
+        "Approximately 106 ATP — palmitate undergoes 7 rounds of beta-oxidation yielding 8 acetyl-CoA, 7 FADH2, and 7 NADH; each acetyl-CoA generates approximately 10 ATP through the TCA cycle and ETC (3 NADH x 2.5 + 1 FADH2 x 1.5 + 1 GTP = 10); subtracting 2 ATP equivalents for initial activation (palmitoyl-CoA formation) gives 80 + 10.5 + 17.5 - 2 = 106 ATP",
+        "Approximately 200 ATP because fat is the most energy-dense macronutrient",
+        "Approximately 10 ATP because beta-oxidation is an inefficient pathway"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Palmitate (C16:0) is the most common saturated fatty acid. Its complete oxidation proceeds: ACTIVATION: Palmitate + CoA + ATP → Palmitoyl-CoA + AMP + PPi. This costs 2 ATP equivalents (ATP → AMP, equivalent to 2 ATP → 2 ADP). BETA-OXIDATION (7 rounds for C16): Each round removes 2 carbons as acetyl-CoA and produces 1 FADH2 and 1 NADH. 7 rounds yield: 8 acetyl-CoA + 7 FADH2 + 7 NADH. TCA CYCLE (8 acetyl-CoA): Each acetyl-CoA → 3 NADH + 1 FADH2 + 1 GTP. 8 x (3 NADH + 1 FADH2 + 1 GTP) = 24 NADH + 8 FADH2 + 8 GTP. TOTAL REDUCING EQUIVALENTS: NADH: 7 + 24 = 31 NADH → 31 x 2.5 = 77.5 ATP. FADH2: 7 + 8 = 15 FADH2 → 15 x 1.5 = 22.5 ATP. GTP: 8 → 8 ATP. TOTAL: 77.5 + 22.5 + 8 = 108 ATP. Minus 2 ATP for activation = 106 NET ATP. This high ATP yield (106 versus approximately 30-32 from glucose) explains why fat is the most energy-dense macronutrient (9 kcal/g versus 4 kcal/g for carbohydrates) and why fat is the preferred storage form of metabolic energy.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "In gluconeogenesis, the enzyme fructose-1,6-bisphosphatase (FBPase-1) catalyzes the hydrolysis of fructose-1,6-bisphosphate to fructose-6-phosphate. Which metabolite is the most potent inhibitor of this enzyme?",
+      "options": [
+        "Fructose-2,6-bisphosphate (F-2,6-BP) is the most potent inhibitor of FBPase-1, just as it is the most potent activator of PFK-1 — this reciprocal regulation ensures that glycolysis and gluconeogenesis are coordinately and inversely controlled",
+        "ATP is the strongest inhibitor because high energy charge should inhibit glucose production",
+        "Citrate inhibits FBPase-1 to prevent gluconeogenesis when TCA intermediates are abundant",
+        "FBPase-1 is not regulated and operates constitutively"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Fructose-2,6-bisphosphate (F-2,6-BP) serves as the master regulatory metabolite for the reciprocal regulation of glycolysis and gluconeogenesis at the PFK-1/FBPase-1 node. F-2,6-BP activates PFK-1 (glycolysis) AND inhibits FBPase-1 (gluconeogenesis) — ensuring that only one direction operates at a time. This dual regulation prevents a futile cycle (F-6-P → F-1,6-BP → F-6-P) that would waste ATP. The levels of F-2,6-BP are controlled by the bifunctional enzyme PFK-2/FBPase-2: In the FED state (insulin signaling): PFK-2/FBPase-2 is dephosphorylated → PFK-2 kinase activity dominates → F-2,6-BP rises → glycolysis stimulated, gluconeogenesis inhibited. In the FASTING state (glucagon signaling): PKA phosphorylates PFK-2/FBPase-2 → FBPase-2 phosphatase activity dominates → F-2,6-BP falls → glycolysis slows, gluconeogenesis activated. AMP also inhibits FBPase-1 (but AMP signals low energy, when gluconeogenesis should indeed be inhibited to save ATP). ATP does NOT inhibit FBPase-1 (B) — high ATP actually favors gluconeogenesis because the pathway requires ATP. Citrate activates FBPase-1, not inhibits it (C). FBPase-1 IS tightly regulated (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Superoxide dismutase (SOD) is a critical antioxidant enzyme in mitochondria. Which form of SOD is specifically localized to the mitochondrial matrix, and what reaction does it catalyze?",
+      "options": [
+        "SOD1 (Cu/Zn-SOD) is the mitochondrial form that converts superoxide to hydrogen gas",
+        "SOD2 (Mn-SOD) is the mitochondrial matrix form that catalyzes: 2 O2.- + 2 H+ → H2O2 + O2, converting the highly reactive superoxide radical to less reactive hydrogen peroxide; H2O2 is then detoxified by glutathione peroxidase or catalase",
+        "There is no SOD in mitochondria; all ROS detoxification occurs in the cytoplasm",
+        "SOD3 (extracellular SOD) provides all the mitochondrial antioxidant defense"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Three isoforms of superoxide dismutase exist in mammals, each in a specific compartment: SOD1 (Cu/Zn-SOD): Cytoplasm and mitochondrial intermembrane space. SOD2 (Mn-SOD): Mitochondrial matrix — the primary defense against superoxide generated by the ETC. SOD3 (EC-SOD): Extracellular. SOD2 contains manganese at its active site and catalyzes the disproportionation (dismutation) of superoxide: 2 O2.- + 2 H+ → H2O2 + O2. This converts the highly reactive superoxide radical (which can damage Fe-S clusters, DNA, and lipids) to hydrogen peroxide (less reactive but still potentially harmful). H2O2 is subsequently detoxified by: (1) Glutathione peroxidase (GPx): H2O2 + 2 GSH → 2 H2O + GSSG, using the reducing power of glutathione. GSSG is recycled to GSH by glutathione reductase using NADPH. (2) Catalase (primarily in peroxisomes): 2 H2O2 → 2 H2O + O2. (3) Peroxiredoxins. SOD2 knockout mice die within weeks of birth from severe oxidative damage, demonstrating the essential role of mitochondrial antioxidant defense. SOD1 is cytoplasmic, not the mitochondrial matrix form (A). Mitochondria DO contain SOD (C). SOD3 is extracellular (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the regulation of pyruvate dehydrogenase complex (PDC):\nS1: PDC is inactivated by phosphorylation (by PDH kinase) and reactivated by dephosphorylation (by PDH phosphatase)\nS2: PDH kinase is activated by high ratios of acetyl-CoA/CoA, NADH/NAD+, and ATP/ADP, reflecting energy sufficiency\nS3: Calcium ions activate PDH phosphatase, linking PDC activity to muscle contraction and hormonal signaling\nS4: PDC regulation is exclusively controlled by allosteric effectors with no covalent modification",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTF"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: PDC is regulated by a phosphorylation/dephosphorylation cycle on three serine residues of the E1-alpha subunit (Ser-264 is the primary site). PDH kinase (PDK, 4 isoforms PDK1-4) phosphorylates and INACTIVATES PDC. PDH phosphatase (PDP, 2 isoforms PDP1-2) dephosphorylates and REACTIVATES PDC. This is a classic example of interconvertible enzyme regulation. S2 is TRUE: PDH kinase activity is stimulated by the products of the PDC reaction and indicators of energy sufficiency: high acetyl-CoA/CoA ratio (product accumulation), high NADH/NAD+ ratio (excess reducing equivalents), and high ATP/ADP ratio (energy sufficiency). When these ratios are high, PDK is activated, phosphorylates PDC, and slows pyruvate oxidation. Conversely, when these ratios are low (energy depletion), PDK is inhibited, PDC remains dephosphorylated and active. Pyruvate itself also inhibits PDK, ensuring PDC activity when substrate is abundant. S3 is TRUE: Ca2+ directly activates PDP1 (PDH phosphatase 1) by binding to a specific site on the enzyme. During muscle contraction, cytoplasmic (and mitochondrial) Ca2+ levels rise, activating PDP1, which dephosphorylates and activates PDC, increasing acetyl-CoA production for the TCA cycle to meet increased energy demands. Insulin signaling also activates PDP through a separate mechanism. S4 is FALSE: PDC IS regulated by covalent modification (phosphorylation/dephosphorylation), as described in S1-S3. While it is also regulated allosterically by substrates and products, covalent modification is the primary regulatory mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about mitochondrial structure and function:\nS1: The inner mitochondrial membrane is folded into cristae, which greatly increase the surface area available for the electron transport chain and ATP synthase\nS2: The mitochondrial matrix contains the enzymes of the TCA cycle, pyruvate dehydrogenase, and beta-oxidation, as well as mitochondrial DNA, ribosomes, and tRNAs\nS3: The outer mitochondrial membrane is freely permeable to all molecules up to approximately 5000 Da due to porins (VDAC)\nS4: Mitochondria replicate by binary fission independently of the cell cycle and are inherited exclusively from the paternal parent in mammals",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Cristae are invaginations of the inner mitochondrial membrane that dramatically increase the surface area (by approximately 5-10 fold) for oxidative phosphorylation. The ETC complexes and ATP synthase are embedded in the cristae membrane. Cristae morphology is dynamic and regulated — cells with high energy demand (cardiac muscle, neurons) have densely packed lamellar cristae, while cells with lower demand have fewer, tubular cristae. Cristae junctions (narrow openings where cristae connect to the inner boundary membrane) create distinct microcompartments within the IMS that concentrate protons near ATP synthase. S2 is TRUE: The mitochondrial matrix is a gel-like compartment containing: TCA cycle enzymes (all soluble except SDH), pyruvate dehydrogenase complex, beta-oxidation enzymes, amino acid catabolism enzymes, and the machinery for mitochondrial gene expression — mtDNA (circular, approximately 16.5 kb in humans), mitochondrial ribosomes (55S, smaller than cytoplasmic 80S), tRNAs, and aminoacyl-tRNA synthetases. S3 is TRUE: The outer mitochondrial membrane contains voltage-dependent anion channels (VDAC, also called mitochondrial porins) — large beta-barrel channels that allow free passage of molecules up to approximately 5000 Da, including ions, metabolites (ATP, ADP, pyruvate, fatty acyl-CoA), and small proteins. This makes the intermembrane space composition similar to the cytosol for small molecules. S4 is FALSE in two respects: While mitochondria do divide by fission (involving dynamin-related GTPases like Drp1), this process is coordinated with the cell cycle and cellular energy demands, not completely independent. More critically, in mammals, mitochondria are inherited almost exclusively from the MATERNAL parent (through the egg cytoplasm), not paternal. Paternal mitochondria from sperm are tagged with ubiquitin and degraded by autophagy after fertilization.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A student measures the ATP yield from the complete oxidation of glucose using the following accounting:\n\nStage | NADH produced | FADH2 produced | ATP (substrate level)\nGlycolysis | 2 | 0 | 2\nPyruvate oxidation | 2 | 0 | 0\nTCA cycle (2 turns) | 6 | 2 | 2\n\nUsing P/O ratios of 2.5 for NADH and 1.5 for FADH2, calculate the maximum theoretical ATP yield. The student's textbook states 36-38 ATP. Explain the discrepancy.",
+      "options": [
+        "The maximum yield is exactly 38 ATP with no discrepancy — the textbook is correct using older P/O ratios of 3 and 2",
+        "Total NADH: 10, producing 10 x 2.5 = 25 ATP; FADH2: 2, producing 2 x 1.5 = 3 ATP; substrate-level: 4 ATP; TOTAL = 32 ATP maximum — the lower value compared to the textbook's 36-38 reflects updated non-integer P/O ratios (2.5 and 1.5 instead of the older 3 and 2), plus the fact that the 2 cytoplasmic NADH from glycolysis may yield only 1.5 ATP each (via glycerol-3-phosphate shuttle) instead of 2.5 (via malate-aspartate shuttle), giving a range of 30-32 ATP",
+        "The yield is exactly 100 ATP because the calculation must include heat energy",
+        "ATP yield cannot be calculated because it depends entirely on oxygen concentration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Detailed ATP accounting for complete glucose oxidation: MITOCHONDRIAL NADH (produced inside matrix): Pyruvate oxidation: 2 NADH → 2 x 2.5 = 5.0 ATP. TCA cycle: 6 NADH → 6 x 2.5 = 15.0 ATP. Subtotal: 20.0 ATP from 8 matrix NADH. CYTOPLASMIC NADH (from glycolysis, must be shuttled): 2 NADH — yield depends on which shuttle system is used: Via malate-aspartate shuttle (liver, heart): Matrix NADH regenerated → 2 x 2.5 = 5.0 ATP. Via glycerol-3-phosphate shuttle (muscle, brain): Electrons enter at ubiquinone level → 2 x 1.5 = 3.0 ATP. FADH2: 2 FADH2 (TCA cycle, at SDH) → 2 x 1.5 = 3.0 ATP. SUBSTRATE-LEVEL PHOSPHORYLATION: Glycolysis: 2 ATP. TCA cycle: 2 GTP (= 2 ATP). Total: 4 ATP. GRAND TOTAL: With malate-aspartate shuttle: 20 + 5 + 3 + 4 = 32 ATP. With glycerol-3-phosphate shuttle: 20 + 3 + 3 + 4 = 30 ATP. Hence the modern range of 30-32 ATP per glucose. The older textbook values of 36-38 used P/O ratios of 3.0 (NADH) and 2.0 (FADH2), which were overestimates. The updated non-integer ratios (2.5 and 1.5) reflect the stoichiometry of 10 H+ per NADH, 6 H+ per FADH2, and approximately 4 H+ per ATP (including transport costs).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers study the effect of various ETC inhibitors and uncouplers on isolated mitochondria, measuring both oxygen consumption rate (OCR) and ATP production rate:\n\nCondition | OCR (relative) | ATP production (relative)\nControl (substrate + ADP) | 100 | 100\n+ Rotenone (Complex I inhibitor) | 5 | 5\n+ Rotenone + Succinate | 60 | 55\n+ Antimycin A | 3 | 2\n+ FCCP (uncoupler) | 150 | 10\n+ Oligomycin | 15 | 3\n+ Oligomycin + FCCP | 145 | 5\n\nWhat do the results with oligomycin followed by FCCP reveal about the relationship between electron transport and ATP synthesis?",
+      "options": [
+        "The results show that electron transport and ATP synthesis are completely independent processes",
+        "Oligomycin alone inhibits both OCR (to 15%) and ATP (to 3%) because blocking proton return through ATP synthase builds up pmf that opposes further proton pumping by the ETC; adding FCCP after oligomycin restores OCR to 145% (near uncoupled maximum) while ATP remains low (5%), demonstrating that the ETC is FULLY FUNCTIONAL but was being restrained by the high pmf — this proves that electron transport and ATP synthesis are coupled through the proton gradient, not through a direct chemical or conformational linkage",
+        "Oligomycin plus FCCP produces maximum ATP, showing they work synergistically",
+        "The data are inconsistent and do not support any conclusion about coupling"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This classic experiment demonstrates the chemiosmotic coupling mechanism: OLIGOMYCIN ALONE: Blocks the Fo proton channel of ATP synthase. Protons cannot flow back to the matrix, so the pmf increases. As pmf rises, the ETC complexes face an increasingly unfavorable thermodynamic gradient for proton pumping, so electron transport slows dramatically (OCR drops to 15%). ATP production essentially stops (3%). This shows electron transport IS coupled to ATP synthesis — but through what mechanism? OLIGOMYCIN + FCCP: FCCP provides an alternative path for proton return (bypassing the blocked ATP synthase). The pmf is dissipated, removing the thermodynamic back-pressure on the ETC. Electron transport races at maximum uncoupled rate (OCR = 145%), proving the ETC components are fully functional — they were merely being held back by the high pmf. However, ATP production remains negligible (5%) because: (1) ATP synthase is still blocked by oligomycin. (2) The pmf is dissipated by FCCP, so even if some proton channels were open, there is no gradient to drive ATP synthesis. KEY INSIGHT: The ETC and ATP synthase are coupled ONLY through the proton gradient. They share no direct chemical or conformational linkage. This is the essence of Mitchell's chemiosmotic hypothesis. Option A is wrong — they ARE coupled (through the pmf). Option C reverses the actual result. The data are entirely consistent (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to measure the contribution of Complex I versus Complex II to total mitochondrial respiration in a tissue sample. Which experimental design using isolated mitochondria would accomplish this?",
+      "options": [
+        "Measure total cellular ATP levels with and without glucose",
+        "Use substrate-specific respiration measurements: (1) Add glutamate/malate (Complex I substrates that generate matrix NADH) and measure OCR — this represents Complex I-driven respiration; (2) Add rotenone to block Complex I, then add succinate (Complex II substrate) and measure OCR — this represents Complex II-driven respiration; (3) Compare the rates to determine relative contributions; validate by showing that antimycin A blocks both",
+        "Sequence the mitochondrial genome to identify mutations",
+        "Measure the total protein content of mitochondrial extracts"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This experimental design exploits the substrate specificity of ETC entry points to separately measure Complex I and Complex II contributions. COMPLEX I MEASUREMENT: Glutamate/malate are metabolized in the matrix to produce NADH (glutamate dehydrogenase: glutamate → alpha-ketoglutarate + NADH; malate dehydrogenase: malate → oxaloacetate + NADH). This NADH enters the ETC exclusively at Complex I. The resulting OCR represents Complex I-driven respiration. Adding ADP (State 3) gives the coupled Complex I respiration rate. COMPLEX II MEASUREMENT: First, rotenone is added to completely block Complex I (preventing any NADH-derived electron flow). Then succinate is added — it is oxidized by succinate dehydrogenase (Complex II), which transfers electrons directly to ubiquinone via FADH2 and Fe-S clusters, bypassing Complex I entirely. The OCR measured with rotenone + succinate represents Complex II-driven respiration. VALIDATION: Adding antimycin A (Complex III inhibitor) should block both Complex I and Complex II-driven respiration, confirming that both pathways converge at ubiquinone → Complex III → Complex IV. This approach is widely used in clinical mitochondrial diagnostics (e.g., using Seahorse XF Analyzer). ATP levels alone (A) cannot distinguish complex contributions. Genomic sequencing (C) and protein content (D) are not functional measurements.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the role of coenzyme Q (ubiquinone) in the electron transport chain?",
+      "options": [
+        "It transfers electrons from Complex IV to oxygen",
+        "It is a small, lipid-soluble electron carrier that shuttles electrons from Complexes I and II to Complex III — it can accept one electron (forming semiquinone, QH.) or two electrons (forming ubiquinol, QH2), and its mobility within the lipid bilayer allows it to collect electrons from multiple sources and deliver them to a single recipient",
+        "It is a protein-bound cofactor that remains fixed within Complex III",
+        "It serves as the terminal electron acceptor of the ETC, replacing oxygen"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ubiquinone (coenzyme Q, CoQ10 in humans) is a small, hydrophobic molecule consisting of a benzoquinone ring attached to an isoprenoid tail (10 isoprene units in humans). Its lipid solubility allows it to diffuse freely within the inner mitochondrial membrane's lipid bilayer. CoQ serves as a mobile electron carrier that collects electrons from multiple dehydrogenases: Complex I (NADH dehydrogenase), Complex II (succinate dehydrogenase), electron-transferring flavoprotein (ETF) dehydrogenase (from fatty acid beta-oxidation FADH2), and glycerol-3-phosphate dehydrogenase. It delivers all these electrons to Complex III (cytochrome bc1). CoQ can exist in three redox states: fully oxidized (ubiquinone, Q), one-electron-reduced (semiquinone, QH.), and fully reduced (ubiquinol, QH2). The two-electron reduction picks up 2 H+ from the matrix side of the membrane. The Q pool acts as a buffer, maintaining a dynamic equilibrium between Q, QH., and QH2. CoQ does NOT transfer electrons to Complex IV (A) — cytochrome c does that. CoQ is freely mobile, not fixed (C). Oxygen, not CoQ, is the terminal acceptor (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "During the TCA cycle, the conversion of succinyl-CoA to succinate is coupled to GTP (or ATP) synthesis. What type of phosphorylation is this, and what provides the driving force?",
+      "options": [
+        "This is substrate-level phosphorylation — the energy-rich thioester bond of succinyl-CoA (delta-G-zero-prime of hydrolysis approximately -33.5 kJ/mol) drives the phosphorylation of GDP to GTP; the reaction proceeds through a phosphohistidine enzyme intermediate",
+        "This is oxidative phosphorylation driven by the proton gradient",
+        "This is a kinase reaction that requires an external ATP source",
+        "This is photophosphorylation powered by light energy"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Succinyl-CoA synthetase (also called succinate thiokinase) catalyzes the only substrate-level phosphorylation in the TCA cycle: succinyl-CoA + Pi + GDP → succinate + CoA + GTP. The mechanism proceeds in three steps: (1) The thioester bond of succinyl-CoA is cleaved, with the released energy used to form a succinyl-phosphate intermediate (high-energy mixed anhydride between succinate and phosphate). (2) The phosphoryl group is transferred from succinyl-phosphate to a histidine residue on the enzyme, forming a phosphohistidine intermediate. (3) The phosphoryl group is transferred from phosphohistidine to GDP, forming GTP. The driving force is the hydrolysis of the thioester bond of succinyl-CoA, which has a large negative delta-G-zero-prime (approximately -33.5 kJ/mol) — sufficient to drive phosphorylation of GDP (requiring approximately +30.5 kJ/mol). In animals, two isoforms exist: GTP-forming (in liver and other tissues) and ATP-forming (in some tissues). The GTP produced can be converted to ATP by nucleoside diphosphate kinase (GTP + ADP → GDP + ATP). This is NOT oxidative phosphorylation (B), does not require external ATP (C), and has nothing to do with light (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cytochrome c is a small (approximately 12 kDa) mobile electron carrier in the intermembrane space. What structural feature allows it to shuttle electrons between Complex III and Complex IV?",
+      "options": [
+        "Cytochrome c contains a copper center that alternates between Cu+ and Cu2+",
+        "Cytochrome c contains a heme c prosthetic group with an iron atom that alternates between Fe2+ (reduced, ferrous) and Fe3+ (oxidized, ferric) states — the heme is covalently attached to the protein via two thioether bonds to cysteine residues, and the protein's small size and positive surface charge allow it to diffuse along the outer face of the inner membrane between Complexes III and IV",
+        "Cytochrome c is an integral membrane protein that spans the inner membrane multiple times",
+        "Cytochrome c transfers electrons by physically detaching from one complex, diffusing through the matrix, and attaching to the next"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cytochrome c is a small, globular, water-soluble protein that functions as a one-electron carrier in the intermembrane space. Key structural features: (1) HEME C: Unlike other cytochromes, heme c is covalently attached to the protein via two thioether bonds between the heme vinyl groups and Cys-14 and Cys-17 residues (consensus sequence Cys-X-X-Cys-His). The iron atom cycles between Fe2+ (reduced) and Fe3+ (oxidized) during electron transfer. (2) SIZE: At approximately 12 kDa and 104 amino acids, it is small enough to diffuse rapidly in the confined IMS space. (3) SURFACE CHARGE: The protein has a ring of positively charged lysine residues around the heme crevice that interact electrostatically with complementary negative patches on Complex III (cytochrome c1 subunit) and Complex IV (CuA subunit). These electrostatic interactions facilitate proper docking and electron transfer. Cytochrome c does NOT contain copper (A) — that is found in Complex IV (CuA, CuB). It is NOT an integral membrane protein (C) — it is a peripheral IMS protein that associates with the outer face of the inner membrane. It operates in the IMS, not the matrix (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Hexokinase I (found in most tissues) is strongly inhibited by its product, glucose-6-phosphate. What is the physiological significance of this product inhibition?",
+      "options": [
+        "Product inhibition has no physiological role; it is merely a kinetic artifact observed in vitro",
+        "When downstream metabolic pathways (glycolysis, PPP, glycogen synthesis) are saturated and G6P accumulates, hexokinase I is inhibited — this prevents unnecessary glucose phosphorylation that would deplete cellular ATP and trap phosphate groups, effectively coordinating glucose entry into metabolism with the cell's capacity to process it",
+        "Product inhibition ensures that hexokinase I always operates at maximum velocity",
+        "G6P inhibition of hexokinase I accelerates glycolysis by channeling more substrate through the pathway"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hexokinase I product inhibition by glucose-6-phosphate (G6P) is a fundamental regulatory mechanism that coordinates glucose phosphorylation with metabolic demand. When downstream pathways are active and consuming G6P rapidly, [G6P] remains low and hexokinase operates freely. When downstream pathways slow down (glycolysis is inhibited by high ATP/citrate; PPP flux is limited by NADPH demand; glycogen stores are full), G6P accumulates and inhibits hexokinase I at physiological concentrations (Ki approximately 0.04 mM, well within the normal intracellular [G6P] range of 0.05-0.2 mM). This prevents: (1) WASTEFUL ATP CONSUMPTION — each glucose phosphorylation consumes 1 ATP. If hexokinase were unregulated, it would consume ATP without productive metabolism. (2) PHOSPHATE SEQUESTRATION — trapping Pi as organic phosphate esters would deplete the cell's inorganic phosphate pool, affecting all phosphate-requiring reactions. (3) OSMOTIC STRESS — accumulation of G6P (a charged molecule that cannot cross the membrane) would increase intracellular osmolarity. Notably, glucokinase (hexokinase IV in liver) is NOT inhibited by G6P, allowing the liver to continue phosphorylating glucose after meals regardless of [G6P]. Product inhibition IS physiologically important (A). It limits, not maximizes, velocity (C). It slows glucose entry, not accelerates it (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Acetyl-CoA can enter the TCA cycle for complete oxidation, or it can be diverted to other metabolic pathways. Which of the following is NOT a metabolic fate of acetyl-CoA?",
+      "options": [
+        "Fatty acid synthesis (via export as citrate through the citrate shuttle)",
+        "Ketone body synthesis (acetoacetate, beta-hydroxybutyrate, acetone) in liver mitochondria during fasting or diabetes",
+        "Cholesterol and steroid hormone synthesis (via the mevalonate pathway in the cytoplasm)",
+        "Direct conversion to glucose via gluconeogenesis (net synthesis of glucose from acetyl-CoA in animal cells)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Acetyl-CoA is a central metabolic hub with multiple fates: (A) FATTY ACID SYNTHESIS — correct fate. Mitochondrial acetyl-CoA is exported to the cytoplasm as citrate (citrate + ATP + CoA → acetyl-CoA + oxaloacetate, catalyzed by ATP-citrate lyase). Cytoplasmic acetyl-CoA is then carboxylated to malonyl-CoA (by ACC) and used for fatty acid synthesis. (B) KETOGENESIS — correct fate. During fasting or uncontrolled diabetes, excess hepatic acetyl-CoA (from beta-oxidation, when OAA is diverted to gluconeogenesis) is converted to ketone bodies: 2 acetyl-CoA → acetoacetyl-CoA → HMG-CoA → acetoacetate → beta-hydroxybutyrate (or spontaneous decarboxylation to acetone). Ketone bodies serve as fuel for brain, heart, and muscle. (C) CHOLESTEROL SYNTHESIS — correct fate. Acetyl-CoA → acetoacetyl-CoA → HMG-CoA → mevalonate (by HMG-CoA reductase, the rate-limiting step and statin target) → isopentenyl-PP → squalene → cholesterol → steroid hormones. (D) GLUCONEOGENESIS FROM ACETYL-CoA — this is NOT possible in animals. The pyruvate dehydrogenase reaction is irreversible, and the two carbons of acetyl-CoA entering the TCA cycle are lost as 2 CO2 before OAA is regenerated. There is no net conversion of acetyl-CoA to glucose. This is why fat CANNOT be converted to glucose in animals (though glycerol from fat can).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Metformin, the most widely prescribed diabetes drug, exerts its metabolic effects partly through Complex I inhibition. How does mild Complex I inhibition lead to improved glucose homeostasis?",
+      "options": [
+        "Metformin directly stimulates insulin secretion from pancreatic beta cells",
+        "Mild Complex I inhibition reduces mitochondrial ATP production, increasing the AMP/ATP ratio, which activates AMP-activated protein kinase (AMPK) — AMPK then inhibits hepatic gluconeogenesis (reducing blood glucose), enhances glucose uptake in muscle, and stimulates fatty acid oxidation, collectively improving insulin sensitivity",
+        "Metformin blocks glucose absorption in the intestine by inhibiting Complex I in enterocytes",
+        "Complex I inhibition increases gluconeogenesis, which somehow lowers blood glucose through a paradoxical mechanism"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Metformin's mechanism of action involves multiple pathways, but a key component is mild Complex I inhibition in hepatocytes. At therapeutic concentrations, metformin accumulates in mitochondria (driven by the membrane potential) and mildly inhibits Complex I (NADH dehydrogenase). This reduces electron transport → reduces proton pumping → reduces ATP synthesis. The resulting decrease in ATP and increase in AMP activates AMPK, a master metabolic sensor kinase. AMPK activation produces multiple downstream effects: (1) INHIBITS HEPATIC GLUCONEOGENESIS: AMPK phosphorylates and inhibits key transcriptional coactivators (CRTC2, HDAC4) that drive expression of gluconeogenic enzymes (PEPCK, G6Pase), reducing glucose output by the liver. (2) ENHANCES GLUCOSE UPTAKE: AMPK promotes GLUT4 translocation to the plasma membrane in skeletal muscle, increasing glucose uptake. (3) STIMULATES FATTY ACID OXIDATION: AMPK phosphorylates and inhibits acetyl-CoA carboxylase (ACC), reducing malonyl-CoA levels, which relieves inhibition of CPT-I and promotes fatty acid beta-oxidation. (4) INHIBITS LIPOGENESIS: Reduced ACC activity also decreases fatty acid synthesis. Metformin does NOT stimulate insulin secretion (A) — that distinguishes it from sulfonylureas. It does NOT primarily work through intestinal absorption blockade (C). It INHIBITS, not increases, gluconeogenesis (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Why does the conversion of pyruvate to lactate by lactate dehydrogenase (LDH) not involve any net change in the oxidation state of carbon?",
+      "options": [
+        "Because LDH is not a redox enzyme and does not catalyze an oxidation-reduction reaction",
+        "The reduction of pyruvate's keto group to a hydroxyl group (gaining 2 electrons) is exactly balanced by the oxidation of NADH to NAD+ (donating 2 electrons) — this is an intermolecular redox reaction where one molecule is reduced while the coenzyme is oxidized, with no net change in carbon oxidation when you consider only the carbon substrate's initial and final states relative to the overall pathway",
+        "Lactate and pyruvate have the same molecular formula with no difference in hydrogen content",
+        "The reaction occurs too quickly for any redox chemistry to take place"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The LDH reaction (pyruvate + NADH + H+ → lactate + NAD+) IS a redox reaction — pyruvate is REDUCED to lactate (the C2 keto group is reduced to a hydroxyl), and NADH is OXIDIZED to NAD+. However, within the context of the overall fermentation pathway (glucose → 2 lactate), the net oxidation state of carbon does not change from glucose to lactate. In glucose, the average carbon oxidation state is 0 (C6H12O6). In lactate (C3H6O3), the average carbon oxidation state is also 0. This makes sense because fermentation involves no net oxidation — no external electron acceptor (like O2) is used. The NADH produced in glycolysis (at GAPDH) is consumed by LDH, so the NAD+/NADH balance is maintained internally. The LDH reaction specifically involves the transfer of a hydride from NADH to the C2 carbonyl of pyruvate, reducing it to a secondary alcohol. This is indeed a redox reaction (A is wrong). Lactate and pyruvate do NOT have the same formula — lactate has 2 more hydrogens (C is wrong). The speed of the reaction does not prevent redox chemistry (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Mitochondrial diseases caused by mutations in mitochondrial DNA (mtDNA) show maternal inheritance and heteroplasmy. What is heteroplasmy and why does it complicate diagnosis and phenotype prediction?",
+      "options": [
+        "Heteroplasmy means all mitochondria in a cell carry the same mtDNA genotype",
+        "Heteroplasmy means a cell contains a mixture of normal and mutant mtDNA molecules — the phenotypic severity depends on the proportion of mutant mtDNA (threshold effect, typically >60-80% mutant for symptoms), which varies between cells and tissues due to random mitotic segregation during cell division, making disease expression highly variable even within the same family",
+        "Heteroplasmy refers to the nuclear DNA mutations that affect mitochondrial proteins",
+        "Heteroplasmy is a type of mitochondrial fusion that repairs damaged mtDNA"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Each human cell contains hundreds to thousands of mitochondria, each with 2-10 copies of the circular mtDNA (total approximately 1000-10000 copies per cell). Heteroplasmy refers to the coexistence of two or more different mtDNA genotypes (e.g., wild-type and mutant) within the same cell. Key implications: (1) THRESHOLD EFFECT: Mitochondrial function is maintained as long as the proportion of wild-type mtDNA exceeds a minimum threshold (typically 20-40% wild-type, or equivalently, symptoms appear when mutant mtDNA exceeds approximately 60-80%). Below this threshold, the wild-type copies produce enough functional ETC components to sustain adequate OXPHOS. (2) RANDOM MITOTIC SEGREGATION: During cell division, mitochondria (and their mtDNA) are distributed randomly to daughter cells. This means the proportion of mutant mtDNA can vary widely between cells, tissues, and even between family members inheriting the same mutation from their mother. (3) TISSUE-SPECIFIC EFFECTS: Tissues with high energy demands (brain, muscle, heart, retina) are most vulnerable to OXPHOS deficiency, explaining why mitochondrial diseases often present as encephalomyopathies, cardiomyopathies, and optic neuropathies. When all mtDNA copies are identical, it is called homoplasmy (A describes this). Nuclear DNA mutations are separate from mtDNA heteroplasmy (C). Heteroplasmy is not a repair mechanism (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Aconitase catalyzes the reversible isomerization of citrate to isocitrate in the TCA cycle. Why must citrate first be converted to isocitrate before oxidative decarboxylation can occur?",
+      "options": [
+        "Citrate already contains a hydroxyl group suitable for oxidation, so the isomerization is unnecessary",
+        "Citrate is a tertiary alcohol (the hydroxyl is on a carbon bonded to three other carbons including one carboxylate), which cannot be directly oxidized by NAD+-dependent dehydrogenases — aconitase moves the hydroxyl to the adjacent carbon, creating isocitrate (a secondary alcohol) that CAN be oxidized by isocitrate dehydrogenase",
+        "Aconitase only exists to regulate the TCA cycle by controlling the rate of isocitrate formation",
+        "The isomerization is required to remove water from the TCA cycle"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is an elegant example of metabolic logic. Citrate has a hydroxyl group at C3, but this is a TERTIARY alcohol — the carbon bearing the -OH is bonded to three other carbons (including the carboxylate group). Tertiary alcohols cannot be directly oxidized by NAD+- or FAD-dependent dehydrogenases because the oxidation product would require forming a C=O bond on a carbon already bonded to three carbons, which is energetically and mechanistically unfavorable (no hydrogen to remove from the hydroxyl-bearing carbon). Aconitase solves this problem through a two-step dehydration-rehydration mechanism: (1) Removes water from citrate to form the intermediate cis-aconitate (with a C=C double bond). (2) Re-adds water to the opposite end of the double bond, placing the hydroxyl on C2 instead of C3. This creates ISOCITRATE, a SECONDARY alcohol (the hydroxyl-bearing carbon is bonded to only two other carbons). Isocitrate dehydrogenase can then oxidize the secondary alcohol to a ketone (oxalosuccinate intermediate), followed by decarboxylation to alpha-ketoglutarate. The aconitase reaction uses an [4Fe-4S] iron-sulfur cluster to coordinate the substrate and catalyze the stereospecific dehydration/rehydration. While citrate does have a hydroxyl (A), it cannot be oxidized in that position. The primary purpose is chemical feasibility, not regulation (C). Water balance is not the reason (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the role of the adenylate kinase (myokinase) reaction in cellular energy homeostasis?",
+      "options": [
+        "Adenylate kinase synthesizes AMP from adenine and ribose-5-phosphate",
+        "Adenylate kinase catalyzes: 2 ADP ↔ ATP + AMP — this reaction amplifies the energy signal because a small decrease in ATP (with corresponding ADP increase) generates AMP, which is a much more sensitive indicator of energy depletion and a potent activator of AMPK and PFK-1",
+        "Adenylate kinase only functions in nucleotide biosynthesis and has no role in energy sensing",
+        "Adenylate kinase converts AMP to IMP as part of the purine salvage pathway"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Adenylate kinase (also called myokinase in muscle) catalyzes the reversible reaction: 2 ADP ↔ ATP + AMP. This seemingly simple reaction has profound implications for metabolic regulation through SIGNAL AMPLIFICATION. Consider a cell with initial concentrations: [ATP] = 5 mM, [ADP] = 0.5 mM, [AMP] = 0.05 mM (adenylate energy charge = 0.95). If 10% of ATP is consumed: [ATP] drops from 5.0 to 4.5 mM (10% decrease), [ADP] rises from 0.5 to 1.0 mM (100% increase). The adenylate kinase equilibrium then converts some of this ADP to ATP + AMP, causing [AMP] to rise from 0.05 to approximately 0.3 mM (approximately 600% increase!). This amplification means that AMP concentration is an extremely sensitive indicator of energy status — a modest 10% decline in ATP produces a many-fold increase in AMP. AMP serves as a critical allosteric activator of: (1) PFK-1 (stimulating glycolysis), (2) AMPK (AMP-activated protein kinase, the master metabolic sensor), (3) Glycogen phosphorylase (stimulating glycogenolysis). AMP also allosterically inhibits fructose-1,6-bisphosphatase (blocking gluconeogenesis). The reaction does NOT synthesize AMP de novo (A). It plays a central role in energy sensing (C). Conversion of AMP to IMP is catalyzed by AMP deaminase, not adenylate kinase (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Mitochondrial supercomplexes (respirasomes) are organized assemblies of ETC complexes. What is the proposed functional advantage of supercomplex formation?",
+      "options": [
+        "Supercomplexes prevent the ETC from functioning and serve only a structural role",
+        "Supercomplexes (typically I-III2-IV or I-III2) create dedicated electron transfer pathways that minimize the diffusion distance for mobile carriers (CoQ, cytochrome c), reduce electron leak to oxygen (decreasing ROS production), and increase the overall efficiency and rate of electron transport through substrate channeling",
+        "Supercomplexes are experimental artifacts that do not exist in intact mitochondria",
+        "Supercomplexes function only in plant mitochondria, not in animal cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mitochondrial supercomplexes (also called respirasomes) are stable associations of individual ETC complexes. The most common supercomplex in mammalian mitochondria is the respirasome: Complex I + Complex III dimer + Complex IV (I-III2-IV), though I-III2 is also abundant. Cryo-EM structures have confirmed their existence and organization. Proposed advantages: (1) SUBSTRATE CHANNELING: By positioning CoQ reduction (Complex I) and CoQ oxidation (Complex III) sites in close proximity, electrons are channeled through a dedicated CoQ pool trapped within the supercomplex rather than relying on diffusion through the bulk membrane CoQ pool. Similarly, cytochrome c may shuttle within a confined space between Complex III and IV. (2) REDUCED ROS PRODUCTION: Shorter electron transfer distances and channeled CoQ reduce the lifetime of reactive intermediates (especially semiquinone at the Qo site of Complex III), decreasing electron leak to O2. (3) INCREASED EFFICIENCY: Kinetic modeling and experimental data suggest that supercomplex organization increases overall electron transfer rates compared to randomly distributed complexes. (4) COMPLEX I STABILITY: Association with Complex III stabilizes Complex I, preventing its degradation. Supercomplexes are clearly functional (A). They have been confirmed by blue-native PAGE, cryo-EM, and crosslinking mass spectrometry (C). They exist in both animals and plants (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the energetics of electron transport:\nS1: The standard reduction potential of the NAD+/NADH couple (-320 mV) is more negative than the O2/H2O couple (+816 mV), indicating that NADH is a strong reducing agent and electrons flow spontaneously from NADH to O2\nS2: The free energy released by electron transport from NADH to O2 is captured entirely as heat with no useful work\nS3: The electron transport chain is arranged in order of increasing reduction potential, ensuring thermodynamically favorable electron flow at each step\nS4: Each ETC complex has a unique standard reduction potential that determines where it sits in the electron transfer sequence",
+      "options": [
+        "TFTT",
+        "TTTT",
+        "TFTF",
+        "TFFT"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: The more negative the standard reduction potential (E'0), the stronger the reducing agent (greater tendency to donate electrons). NADH (E'0 = -320 mV) has a strong tendency to donate electrons, while O2 (E'0 = +816 mV) has a strong tendency to accept electrons. Electrons flow spontaneously from lower to higher reduction potential: delta-E'0 = +816 - (-320) = +1136 mV, corresponding to delta-G'0 = -219 kJ/mol (highly exergonic). S2 is FALSE: The energy released during electron transport is NOT captured entirely as heat. Instead, it is used to pump protons across the inner mitochondrial membrane, creating the proton-motive force. This stored energy then drives ATP synthesis by ATP synthase. Approximately 34% of the energy is captured as ATP; the remainder is dissipated as heat (consistent with the second law of thermodynamics). S3 is TRUE: The ETC components are arranged in order of increasing (more positive) reduction potential: NADH (-320 mV) → FMN (-300 mV) → Fe-S clusters → CoQ (+45 mV) → cytochrome b (+77 mV) → cytochrome c1 (+215 mV) → cytochrome c (+254 mV) → CuA (+245 mV) → cytochrome a (+290 mV) → CuB/cytochrome a3 (+800 mV) → O2 (+816 mV). Each transfer is thermodynamically favorable (electron moves to a higher potential). S4 is TRUE: Each complex contains multiple redox centers with specific reduction potentials. These potentials determine the thermodynamic favorability and sequence of electron transfer within and between complexes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the regulation of the citric acid cycle:\nS1: The three primary regulatory enzymes of the TCA cycle are citrate synthase, isocitrate dehydrogenase, and alpha-ketoglutarate dehydrogenase\nS2: All three regulatory enzymes catalyze reactions far from equilibrium (large negative delta-G) and are allosterically regulated\nS3: The TCA cycle rate is primarily determined by the availability of NAD+, which is regenerated by the electron transport chain\nS4: In muscle, increased Ca2+ during contraction activates only isocitrate dehydrogenase but not the other TCA cycle regulatory enzymes",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: The three primary control points of the TCA cycle are: (1) Citrate synthase: acetyl-CoA + OAA → citrate. Regulated by substrate availability (OAA, acetyl-CoA) and product/allosteric inhibition (citrate, NADH, succinyl-CoA, ATP). (2) Isocitrate dehydrogenase (NAD+-dependent, IDH3): isocitrate → alpha-KG. Activated by ADP, Ca2+; inhibited by ATP, NADH. (3) Alpha-ketoglutarate dehydrogenase: alpha-KG → succinyl-CoA. Inhibited by succinyl-CoA, NADH; activated by Ca2+. S2 is TRUE: All three catalyze essentially irreversible reactions with large negative delta-G values under cellular conditions: citrate synthase (approximately -32 kJ/mol standard, even more negative in vivo), isocitrate dehydrogenase (approximately -21 kJ/mol), alpha-KGDH (approximately -33 kJ/mol). Their far-from-equilibrium status means their flux is determined by enzyme regulation (kinetic control), not mass action (thermodynamic control). Each is subject to allosteric regulation by indicators of energy status. S3 is TRUE: NAD+ availability is a critical determinant of TCA cycle rate because three of the eight cycle reactions require NAD+ as a substrate (isocitrate DH, alpha-KGDH, malate DH). NAD+ is regenerated by the ETC when it reoxidizes NADH. When the ETC is inhibited or saturated (all NAD+ converted to NADH), the TCA cycle cannot proceed. This creates tight coupling between the TCA cycle and oxidative phosphorylation. S4 is FALSE: Ca2+ activates ALL THREE regulatory enzymes — citrate synthase (indirectly, through increased OAA availability via isocitrate DH acceleration), isocitrate dehydrogenase (directly), and alpha-ketoglutarate dehydrogenase (directly). This coordinate activation by Ca2+ during muscle contraction increases TCA cycle flux to meet the elevated ATP demand.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about substrate-level phosphorylation vs oxidative phosphorylation:\nS1: Substrate-level phosphorylation produces ATP directly by transfer of a phosphoryl group from a high-energy substrate to ADP\nS2: Oxidative phosphorylation produces approximately 90% of the ATP generated during aerobic glucose oxidation\nS3: Substrate-level phosphorylation requires oxygen, while oxidative phosphorylation does not\nS4: Both substrate-level phosphorylation and oxidative phosphorylation occur in the mitochondria of eukaryotic cells",
+      "options": [
+        "TTFF",
+        "TTFT",
+        "TFFT",
+        "TFTF"
+      ],
+      "correctAnswer": "TTFF",
+      "explanation": "S1 is TRUE: Substrate-level phosphorylation involves direct transfer of a phosphoryl group from a phosphorylated substrate (with higher phosphoryl transfer potential than ATP) to ADP. Examples: (1) 1,3-BPG + ADP → 3-PG + ATP (phosphoglycerate kinase in glycolysis). (2) PEP + ADP → pyruvate + ATP (pyruvate kinase in glycolysis). (3) Succinyl-CoA + GDP + Pi → succinate + GTP (succinyl-CoA synthetase in TCA cycle). No electron transport chain or proton gradient is required. S2 is TRUE: Of the approximately 30-32 ATP produced per glucose: substrate-level phosphorylation produces 4 ATP (2 from glycolysis + 2 GTP from TCA cycle) = approximately 12.5% of total. Oxidative phosphorylation produces approximately 26-28 ATP (from 10 NADH x 2.5 + 2 FADH2 x 1.5 = 28 ATP, minus some for shuttle costs) = approximately 87.5% of total. So oxidative phosphorylation accounts for approximately 90% of total ATP. S3 is FALSE: This is REVERSED. Substrate-level phosphorylation does NOT require oxygen — it occurs in both glycolysis (cytoplasm, anaerobic) and the TCA cycle (matrix). Oxidative phosphorylation DOES require oxygen as the terminal electron acceptor at Complex IV. S4 is FALSE: Substrate-level phosphorylation occurs both in the cytoplasm (glycolysis: 2 ATP) and in the mitochondrial matrix (TCA cycle: 2 GTP). Oxidative phosphorylation occurs exclusively in mitochondria (at the inner membrane). The statement implies both occur only in mitochondria, which is incorrect for substrate-level phosphorylation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the pentose phosphate pathway (PPP) and its connection to cellular respiration:\nS1: The PPP produces NADPH (for reductive biosynthesis and antioxidant defense) and ribose-5-phosphate (for nucleotide synthesis)\nS2: The oxidative branch of the PPP is irreversible and regulated by glucose-6-phosphate dehydrogenase, which is inhibited by NADPH\nS3: The non-oxidative branch of the PPP can interchange 3-, 4-, 5-, 6-, and 7-carbon sugar phosphates, connecting the PPP to glycolysis\nS4: The PPP and glycolysis cannot operate simultaneously in the same cell",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TFTF",
+        "TTFF"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: The pentose phosphate pathway (also called hexose monophosphate shunt or phosphogluconate pathway) has two major products: (1) NADPH — produced in the oxidative branch (2 NADPH per glucose-6-phosphate, at glucose-6-phosphate dehydrogenase and 6-phosphogluconate dehydrogenase). NADPH is essential for reductive biosynthesis (fatty acid synthesis, cholesterol synthesis, amino acid synthesis), glutathione reduction (GSH maintenance for ROS detoxification), and NADPH oxidase (phagocyte respiratory burst). (2) Ribose-5-phosphate — the sugar backbone for nucleotide synthesis (DNA, RNA, ATP, CoA, NAD+, FAD). S2 is TRUE: The oxidative branch (glucose-6-phosphate → 6-phosphogluconate → ribulose-5-phosphate + 2 CO2 + 2 NADPH) is irreversible and tightly regulated. Glucose-6-phosphate dehydrogenase (G6PDH), the committed step enzyme, is allosterically inhibited by NADPH (product feedback). When NADPH/NADP+ ratio is high (biosynthetic demand met), the oxidative PPP slows. When NADPH is consumed (e.g., active fatty acid synthesis or oxidative stress), NADP+ accumulates and G6PDH is activated. G6PDH deficiency is the most common human enzyme deficiency, causing hemolytic anemia upon oxidative stress. S3 is TRUE: The non-oxidative branch contains transketolase and transaldolase, which catalyze reversible reactions interconverting sugar phosphates of different chain lengths (C3-C7). This allows ribulose-5-phosphate to be converted to glyceraldehyde-3-phosphate and fructose-6-phosphate (glycolytic intermediates), connecting the PPP to glycolysis. S4 is FALSE: The PPP and glycolysis operate simultaneously and are interconnected through shared intermediates (G6P, F6P, GAP). The relative flux through each pathway is determined by the cell's specific needs for ATP, NADPH, and ribose-5-phosphate.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A clinical laboratory measures blood lactate levels in a patient with a suspected mitochondrial myopathy:\n\nCondition | Blood lactate (mmol/L) | Reference range\nFasting (resting) | 4.8 | 0.5-1.5\nAfter mild exercise (10 min walking) | 8.5 | 1.0-2.5\nAfter moderate exercise (10 min cycling) | 15.2 | 2.0-5.0\nRecovery (30 min post-exercise) | 9.5 | 0.5-2.0\n\nWhat do these results suggest about the patient's metabolic defect?",
+      "options": [
+        "The results are normal and indicate no metabolic abnormality",
+        "Elevated baseline and exercise-induced lactate with delayed recovery strongly suggests impaired oxidative phosphorylation — the patient's mitochondria cannot adequately oxidize NADH via the ETC, forcing increased reliance on anaerobic glycolysis (lactate production to regenerate NAD+); the disproportionate lactate rise with exercise reflects the inability to meet increased ATP demand aerobically, and delayed recovery indicates impaired lactate clearance due to the mitochondrial defect in liver and muscle",
+        "The results indicate a deficiency in the enzyme lactate dehydrogenase",
+        "The high lactate levels are caused by dehydration, not a metabolic defect"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The laboratory findings are classic for mitochondrial myopathy: (1) ELEVATED RESTING LACTATE (4.8 mmol/L vs. reference 0.5-1.5): Even at rest, the patient cannot generate sufficient ATP via oxidative phosphorylation, forcing compensatory glycolysis. The excess pyruvate is converted to lactate by LDH to regenerate NAD+. (2) EXAGGERATED EXERCISE RESPONSE: Mild exercise causes lactate to rise to 8.5 (vs. normal <2.5), and moderate exercise to 15.2 (vs. normal <5.0). During exercise, ATP demand increases dramatically. Normal individuals meet this demand primarily through increased oxidative phosphorylation. This patient's impaired ETC/OXPHOS forces even greater reliance on anaerobic glycolysis, producing proportionally more lactate. (3) DELAYED RECOVERY: 30 minutes after exercise, lactate remains at 9.5 (vs. normal <2.0). Lactate clearance occurs primarily through: (a) hepatic gluconeogenesis (Cori cycle), and (b) oxidation to pyruvate and then acetyl-CoA in muscle and heart. Both pathways require functional mitochondria, so the mitochondrial defect impairs recovery as well. The lactate/pyruvate ratio is typically elevated (>20, normal approximately 10), reflecting the increased NADH/NAD+ ratio from impaired ETC function. Common causes include Complex I deficiency (most common), Complex IV deficiency, CoQ10 deficiency, and mtDNA mutations. LDH deficiency would cause LESS lactate, not more (C). Simple dehydration would not cause this pattern (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers measure the proton-motive force (pmf) across the inner mitochondrial membrane under various conditions:\n\nCondition | delta-psi (mV) | delta-pH | Total pmf (mV)\nControl (State 3) | -150 | 0.5 | -180\nControl (State 4) | -180 | 0.7 | -221\n+ FCCP | -20 | 0.1 | -26\n+ Valinomycin (K+ ionophore) | -50 | 1.5 | -139\n+ Nigericin (K+/H+ antiporter) | -210 | 0.0 | -210\n\nWhat do the valinomycin and nigericin experiments reveal about the two components of the pmf?",
+      "options": [
+        "Valinomycin and nigericin both completely abolish the pmf, proving it is an artifact",
+        "Valinomycin collapses delta-psi (by allowing K+ to dissipate the charge gradient) but the compensatory increase in delta-pH maintains partial pmf; nigericin collapses delta-pH (by exchanging K+ for H+, dissipating the pH gradient) but delta-psi increases compensatorily — together, these experiments demonstrate that delta-psi and delta-pH are interconvertible components of a single thermodynamic driving force, and ATP synthase can be driven by either component alone",
+        "The ionophores have no effect on mitochondrial function",
+        "Only delta-psi contributes to ATP synthesis; delta-pH is irrelevant"
+      ],
+      "correctAnswer": "B",
+      "explanation": "These classic experiments with ionophores elegantly demonstrate the thermodynamic equivalence of the two pmf components. VALINOMYCIN (K+ ionophore): Makes the inner membrane permeable to K+. K+ flows down its concentration gradient into the matrix, carrying positive charge inward and collapsing delta-psi from -150 to -50 mV. However, the proton pumps continue working, and the lost electrical component is partially compensated by an increased delta-pH (from 0.5 to 1.5 pH units). The total pmf decreases but is not abolished (-139 mV), and ATP synthesis continues (albeit at reduced rate). This proves delta-pH alone can drive ATP synthesis. NIGERICIN (K+/H+ antiporter): Exchanges K+ for H+ across the membrane (electroneutral, no net charge transfer). K+ flows in while H+ flows out, collapsing delta-pH from 0.5 to 0.0. Since no net charge moves, delta-psi is not directly affected and actually increases to -210 mV (compensatory increase). The total pmf is well-maintained (-210 mV), and ATP synthesis continues efficiently. This proves delta-psi alone can drive ATP synthesis. FCCP (protonophore): Collapses BOTH components simultaneously (delta-psi = -20 mV, delta-pH = 0.1), abolishing pmf (-26 mV) and stopping ATP synthesis. KEY INSIGHT: The pmf is a single thermodynamic entity (delta-p = delta-psi - 59delta-pH at 25C). ATP synthase responds to the TOTAL pmf regardless of its composition. Neither component alone is irrelevant (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A biochemistry student performs an experiment comparing the ATP yield from glucose versus glutamate as mitochondrial substrates:\n\nSubstrate | O2 consumed (nmol/min) | ATP produced (nmol/min) | P/O ratio\nGlucose (complete oxidation) | 100 | 250 | 2.5\nGlutamate + malate | 80 | 200 | 2.5\nSuccinate | 90 | 135 | 1.5\nPalmitoyl-CoA + carnitine | 120 | 290 | 2.4\n\nWhy does succinate give a lower P/O ratio than glutamate/malate?",
+      "options": [
+        "Succinate is a less energy-rich molecule than glutamate and therefore produces less total energy",
+        "Succinate donates electrons to Complex II (via FADH2), which does not pump protons — electrons enter the ETC at the ubiquinone level, bypassing Complex I; this means only Complexes III and IV pump protons (6 H+ per electron pair versus 10 H+ for NADH from glutamate/malate entering at Complex I), yielding 6/4 = 1.5 ATP versus 10/4 = 2.5 ATP per oxygen atom",
+        "Succinate inhibits ATP synthase, reducing the P/O ratio artificially",
+        "The lower P/O ratio for succinate is a measurement error because all substrates should yield identical P/O ratios"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The P/O ratio difference between NADH-linked and FADH2-linked substrates reflects the different entry points into the ETC: GLUTAMATE/MALATE → NADH (in matrix via glutamate dehydrogenase and malate dehydrogenase): NADH enters at Complex I → Q → Complex III → cyt c → Complex IV → O2. Protons pumped: Complex I (4) + Complex III (4) + Complex IV (2) = 10 H+. With 4 H+/ATP: P/O = 10/4 = 2.5. SUCCINATE → FADH2 (covalently bound in Complex II): FADH2 transfers electrons within Complex II to ubiquinone. Complex II does NOT pump protons. Electrons continue: Q → Complex III → cyt c → Complex IV → O2. Protons pumped: Complex III (4) + Complex IV (2) = 6 H+. With 4 H+/ATP: P/O = 6/4 = 1.5. PALMITOYL-CoA gives an intermediate P/O (2.4) because beta-oxidation produces both NADH (P/O = 2.5) and FADH2 (P/O = 1.5), and the weighted average of multiple rounds gives approximately 2.4. The key insight is that the ETC entry point determines how many proton-pumping complexes the electrons pass through, which directly determines the P/O ratio. Succinate does NOT inhibit ATP synthase (C). The P/O ratio difference is real and fundamental (D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher discovers that cells from a patient with a suspected mitochondrial disease have reduced ATP production. To determine which ETC complex is deficient, what experimental approach should be used?",
+      "options": [
+        "Measure total cellular ATP content after 24 hours and compare to normal cells",
+        "Perform spectrophotometric enzyme assays on isolated mitochondria using complex-specific substrates and inhibitors: measure Complex I activity (NADH + CoQ1 → NAD+ + CoQ1H2, rotenone-sensitive); Complex II activity (succinate + DCIP → fumarate + DCIPH2, inhibited by malonate); Complex III activity (reduced CoQ2 + cytochrome c (oxidized) → CoQ2 + cytochrome c (reduced), antimycin-sensitive); Complex IV activity (reduced cytochrome c + O2 → oxidized cytochrome c + H2O, cyanide-sensitive); normalize each to citrate synthase activity as a mitochondrial mass marker",
+        "Sequence the patient's nuclear genome to identify mutations in ETC subunit genes",
+        "Measure blood glucose levels as a proxy for mitochondrial function"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The gold standard for identifying which ETC complex is deficient is spectrophotometric enzyme activity measurement in isolated mitochondria or tissue homogenates, using complex-specific substrates and artificial electron acceptors: COMPLEX I (NADH:ubiquinone oxidoreductase): Measure rotenone-sensitive NADH oxidation using the artificial electron acceptor decylubiquinone (CoQ1). Follow NADH consumption at 340 nm. Activity = total NADH oxidation minus rotenone-insensitive activity. COMPLEX II (succinate:ubiquinone oxidoreductase): Measure succinate-dependent reduction of the artificial acceptor DCIP (2,6-dichlorophenolindophenol) at 600 nm, in the presence of rotenone (to block Complex I) and antimycin A (to block Complex III). COMPLEX III (ubiquinol:cytochrome c oxidoreductase): Measure antimycin A-sensitive reduction of cytochrome c (followed at 550 nm) using reduced decylubiquinone as electron donor. COMPLEX IV (cytochrome c oxidase): Measure cyanide-sensitive oxidation of reduced cytochrome c at 550 nm. NORMALIZATION: All activities are normalized to citrate synthase activity, which serves as a marker of mitochondrial mass/content. This corrects for differences in mitochondrial density between samples. The activity profile (e.g., low Complex I with normal II-IV) pinpoints the deficient complex. Total ATP measurement (A) cannot identify which complex is affected. Genomic sequencing (C) may miss mtDNA mutations and regulatory defects. Blood glucose (D) is an indirect and nonspecific marker.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To investigate whether a newly isolated bacterial toxin inhibits glycolysis, the TCA cycle, or oxidative phosphorylation, a researcher designs an experiment using intact cells. Which set of measurements would best distinguish among these three targets?",
+      "options": [
+        "Measure cell viability using a simple live/dead stain",
+        "Measure simultaneously: (1) extracellular acidification rate (ECAR, proxy for glycolytic rate/lactate production), (2) oxygen consumption rate (OCR, proxy for mitochondrial respiration), and (3) intracellular ATP levels — a glycolysis inhibitor would decrease ECAR with initially maintained OCR; a TCA cycle inhibitor would decrease OCR with compensatory increase in ECAR; an OXPHOS inhibitor would decrease OCR with compensatory increase in ECAR, but can be distinguished from TCA inhibition by adding an uncoupler (FCCP) which would restore OCR if only OXPHOS is blocked",
+        "Measure protein synthesis rates as a marker of cellular energy status",
+        "Simply incubate cells with the toxin and measure glucose consumption after 48 hours"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Modern metabolic phenotyping (e.g., using the Seahorse XF Analyzer) simultaneously measures OCR and ECAR in real time, providing a comprehensive metabolic profile: GLYCOLYSIS INHIBITOR (e.g., 2-deoxyglucose): ECAR decreases (less lactate produced). OCR may initially increase (cells try to compensate by increasing OXPHOS) or remain stable. ATP decreases if compensatory OXPHOS is insufficient. TCA CYCLE INHIBITOR (e.g., fluoroacetate blocking aconitase): OCR decreases (less NADH/FADH2 generated for ETC). ECAR increases (compensatory glycolysis upregulated via AMPK activation). Adding FCCP after the toxin would NOT restore OCR because the ETC lacks substrates (NADH/FADH2). OXPHOS INHIBITOR: Could be ETC inhibitor or ATP synthase inhibitor. OCR decreases. ECAR increases (compensatory glycolysis). KEY DISTINCTION from TCA inhibition: Adding FCCP after an ETC inhibitor does NOT restore OCR (ETC is blocked). Adding FCCP after an ATP synthase inhibitor (oligomycin) DOES restore OCR (ETC is intact, only coupling is blocked). If the toxin targets OXPHOS at the ATP synthase level: FCCP addition → OCR increases → confirms ATP synthase, not ETC, is the target. Cell viability (A) and protein synthesis (C) are too indirect. Glucose consumption over 48 hours (D) lacks temporal resolution and mechanistic specificity.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A pharmacologist wants to test whether a candidate drug inhibits fatty acid beta-oxidation specifically, without affecting glucose oxidation. Which experimental design would provide the most definitive evidence?",
+      "options": [
+        "Measure body weight changes in mice over several weeks of drug treatment",
+        "Measure CO2 production from C-14-labeled palmitate versus C-14-labeled glucose in isolated hepatocytes — if the drug specifically inhibits beta-oxidation, 14-CO2 from C-14-palmitate will decrease while 14-CO2 from C-14-glucose remains unchanged; additionally, measure acylcarnitine profiles (which accumulate upstream of beta-oxidation blocks) and free fatty acid levels in culture medium",
+        "Measure total cellular ATP levels and assume any decrease is due to beta-oxidation inhibition",
+        "Test whether the drug binds to CPT-I in a cell-free binding assay without measuring actual metabolic flux"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Isotopic tracer studies provide the most direct and specific measurement of metabolic pathway activity in intact cells. EXPERIMENTAL DESIGN: (1) SPECIFICITY TEST: Incubate hepatocytes with either [U-14C]-palmitate (uniformly labeled) or [U-14C]-glucose, with and without the drug. Collect 14-CO2 in an alkaline trap (NaOH). If beta-oxidation is specifically inhibited: 14-CO2 from palmitate DECREASES (less fatty acid oxidation). 14-CO2 from glucose is UNCHANGED (glycolysis and TCA cycle are unaffected). This dual-substrate approach demonstrates pathway specificity. (2) MECHANISTIC CONFIRMATION: Measure acylcarnitine profiles (by LC-MS/MS) — specific beta-oxidation blocks cause accumulation of characteristic acylcarnitine species upstream of the block (e.g., CPT-I inhibition causes long-chain acylcarnitine accumulation; medium-chain acyl-CoA dehydrogenase deficiency causes C6-C10 acylcarnitine accumulation). (3) ADDITIONAL MARKERS: Measure free fatty acids (increase with impaired oxidation), ketone bodies (decrease with impaired hepatic beta-oxidation), and NADH/NAD+ ratio (should not change if only beta-oxidation is affected and cells can compensate with glucose). Body weight changes (A) are too slow and nonspecific. Total ATP measurement (C) cannot distinguish the source of ATP loss. Cell-free binding (D) cannot demonstrate functional inhibition of metabolic flux.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A graduate student is studying the Warburg effect in cancer cells and wants to determine whether a tumor cell line relies more on glycolysis or oxidative phosphorylation for ATP production. Which approach provides the most informative metabolic profiling?",
+      "options": [
+        "Measure the expression levels of glycolytic genes by RNA sequencing",
+        "Use the Seahorse XF Cell Mito Stress Test: sequentially add oligomycin (blocks ATP synthase, revealing glycolytic versus OXPHOS ATP production), FCCP (reveals maximal respiratory capacity), and rotenone/antimycin A (blocks all mitochondrial respiration, revealing non-mitochondrial OCR) — the resulting OCR and ECAR traces quantify basal respiration, ATP-linked respiration, proton leak, maximal respiration, spare respiratory capacity, and glycolytic rate",
+        "Simply count the number of mitochondria per cell using electron microscopy",
+        "Measure intracellular glucose concentration as a proxy for glycolytic rate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Seahorse XF Cell Mito Stress Test is the gold-standard functional assay for profiling cellular energy metabolism. The sequential drug addition protocol provides multiple metabolic parameters from a single experiment: BASAL MEASUREMENT: OCR and ECAR are measured before any drug addition, establishing the baseline metabolic phenotype. High ECAR/OCR ratio suggests glycolytic phenotype (Warburg); low ratio suggests oxidative phenotype. OLIGOMYCIN (ATP synthase inhibitor): OCR drops because ATP-linked respiration stops. The difference between basal and post-oligomycin OCR = ATP-linked respiration. ECAR typically increases (compensatory glycolysis). Any remaining OCR = proton leak (non-phosphorylating respiration). FCCP (uncoupler): OCR increases to maximal capacity (all thermodynamic restraint removed). The difference between FCCP-stimulated and basal OCR = spare respiratory capacity (reserve capacity the cell can call upon under stress). ROTENONE + ANTIMYCIN A (Complex I + III inhibitors): Blocks all mitochondrial electron transport. Residual OCR = non-mitochondrial oxygen consumption (e.g., cytoplasmic oxidases). Together, these measurements generate a comprehensive bioenergetic profile that quantitatively answers whether the cell relies more on glycolysis or OXPHOS. Gene expression (A) does not equal metabolic flux. Mitochondrial counts (C) do not reflect function. Glucose concentration (D) is difficult to interpret.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 2,
+      "campbellChapter": 9,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cellular Respiration and Fermentation"
+    }
+  ]
+}
