@@ -1,0 +1,408 @@
+{
+  "batchId": "olympiad-campbell-ch38-angiosperm-reproduction",
+  "subject": "Biology",
+  "category": "Olympiad",
+  "description": "Campbell Biology Chapter 38 \u2013 Angiosperm Reproduction and Biotechnology: flower structure, gametophyte development, pollination, double fertilization, seed development, fruit development, and plant biotechnology (IBO/USABO/NSEB level)",
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "In angiosperms, the female gametophyte (embryo sac) typically develops through megasporogenesis and megagametogenesis. What is the fate of the four megaspores produced by meiosis of the megaspore mother cell in the Polygonum-type embryo sac?",
+      "options": [
+        "All four megaspores undergo mitosis to form a multicellular gametophyte",
+        "All four megaspores are released as microspores that develop into pollen grains",
+        "Two megaspores fuse to form a diploid central cell, and the other two form synergids",
+        "Three megaspores degenerate, and the surviving functional megaspore undergoes three rounds of mitosis to produce an 8-nucleate, 7-celled embryo sac"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In the Polygonum-type embryo sac (the most common pattern, found in approximately 70% of angiosperms), the megaspore mother cell (megasporocyte, 2n) undergoes meiosis to produce four haploid megaspores arranged in a linear tetrad. Three of these megaspores (typically the three closest to the micropyle) degenerate through programmed cell death. The single surviving functional megaspore (usually the chalazal-most) undergoes three consecutive rounds of mitosis without cytokinesis, producing an 8-nucleate coenocyte. Subsequent cellularization creates the 7-celled embryo sac: 3 antipodal cells at the chalazal end, 2 synergids flanking the egg cell at the micropylar end, the egg cell itself, and the large central cell containing 2 polar nuclei. The synergids play crucial roles in pollen tube guidance through secretion of attractant peptides (LURE proteins), and the central cell's polar nuclei will fuse with one sperm during double fertilization to form the triploid endosperm.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Double fertilization is a defining feature of angiosperms. What are the two fertilization events, and what is the ploidy of the resulting tissues?",
+      "options": [
+        "One sperm fuses with the egg (producing a 2n zygote) and one sperm fuses with one synergid (producing a 2n accessory embryo)",
+        "One sperm fertilizes the egg and the other sperm is stored in the antipodal cells for delayed fertilization in case of embryo failure",
+        "Both sperm fuse with the egg simultaneously, producing a tetraploid embryo",
+        "One sperm fuses with the egg (producing a 2n zygote) and one sperm fuses with the two polar nuclei in the central cell (producing a 3n endosperm)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Double fertilization involves two simultaneous fertilization events within the embryo sac. One sperm cell fuses with the egg cell (n), producing a diploid (2n) zygote that develops into the embryo. The second sperm cell fuses with the two polar nuclei (each n) in the central cell, producing a triploid (3n) primary endosperm nucleus that develops into the endosperm\u2014the nutritive tissue that supports embryo development and, in many species, provides nutrition for the germinating seedling. This process is unique to angiosperms (and Ephedra among gymnosperms, though with different outcomes). The triploid endosperm is genetically 2:1 maternal to paternal, which has implications for genomic imprinting. Double fertilization ensures that endosperm develops only when fertilization occurs, preventing wasteful investment in nutritive tissue without a viable embryo. The synergids facilitate pollen tube reception and burst, and the antipodal cells may have nutritive functions but are not fertilized.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Self-incompatibility (SI) in angiosperms prevents inbreeding by rejecting self-pollen. In the sporophytic self-incompatibility (SSI) system found in Brassicaceae, what determines pollen compatibility?",
+      "options": [
+        "The S-haplotype of the pollen grain itself (gametophytic genotype) determines compatibility through interaction with pistil S-RNase",
+        "Pollen tube growth rate determines compatibility\u2014faster-growing self-pollen tubes are selectively arrested",
+        "Random methylation of SI genes during meiosis determines which pollen grains are compatible",
+        "The S-haplotype of the pollen parent (sporophytic genotype) determines compatibility because S-cysteine-rich protein (SCR/SP11) is deposited on the pollen coat from tapetum cells"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In sporophytic self-incompatibility (SSI) of Brassicaceae, compatibility is determined by the diploid S-genotype of the pollen-producing parent (sporophyte), not the haploid genotype of the pollen grain itself. This occurs because the pollen coat proteins responsible for the SI response are synthesized by the diploid tapetum cells (which line the anther locule) and deposited onto the pollen grain surface during pollen maturation. The key male determinant is SCR/SP11 (S-locus Cysteine-Rich protein), a small cysteine-rich peptide encoded at the S-locus that is expressed in the tapetum and deposited on the pollen coat. On the stigma surface, the female determinant is the SRK (S-locus Receptor Kinase), a transmembrane serine/threonine kinase. When SCR from the pollen coat matches the SRK on the stigma (i.e., they share the same S-haplotype), SRK is activated, triggering a signaling cascade through ARC1 (an E3 ubiquitin ligase) that leads to rejection of the pollen.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pollen tube growth in the pistil is guided to the embryo sac through a series of molecular signals. Which signal is responsible for micropylar pollen tube guidance in the final stage of tube growth?",
+      "options": [
+        "Calcium gradient in the transmitting tissue that creates a chemotactic path from stigma to ovule",
+        "Arabinogalactan proteins (AGPs) lining the transmitting tract that provide adhesive guidance",
+        "LURE peptides (defensin-like cysteine-rich polypeptides) secreted by the synergid cells that attract the pollen tube to the micropyle",
+        "Auxin gradient from the funiculus that directs pollen tube growth toward the ovule"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Pollen tube guidance occurs in multiple stages with different molecular mechanisms. The final, short-range attraction of the pollen tube to the micropyle of the ovule is mediated by LURE peptides\u2014small, secreted defensin-like cysteine-rich polypeptides (CRPs) produced specifically by the synergid cells of the embryo sac. In Torenia fournieri, where the embryo sac protrudes from the ovule allowing direct observation, LURE1 and LURE2 were identified as the attractants. In Arabidopsis, AtLURE1 peptides serve the same function. These peptides are secreted from the synergid cells through the filiform apparatus (specialized cell wall invaginations at the micropylar end of synergids) and diffuse toward the micropyle, creating a concentration gradient that guides the pollen tube tip. The pollen tube perceives LURE through receptor kinases on its tip membrane (PRK6 in Arabidopsis). Earlier stages of pollen tube guidance involve TTS (Transmitting Tissue-Specific) glycoproteins and AGPs in the style, but these provide funicular guidance, not the final micropylar targeting.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The ABC model of floral organ identity explains how three classes of homeotic genes specify the four types of floral organs. According to this model, what gene combination specifies petal identity?",
+      "options": [
+        "A function alone specifies petals in the second whorl",
+        "B function alone specifies petals in the second whorl",
+        "A + B functions together specify petals in the second whorl",
+        "B + C functions together specify petals in the second whorl"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The ABC model, proposed by Coen and Meyerowitz (1991), explains floral organ identity through combinatorial expression of three classes of homeotic genes across four concentric whorls: Whorl 1 (outermost): A function alone specifies sepals; Whorl 2: A + B functions together specify petals; Whorl 3: B + C functions together specify stamens; Whorl 4 (innermost): C function alone specifies carpels. In Arabidopsis, A-function genes include APETALA1 (AP1) and APETALA2 (AP2); B-function genes include APETALA3 (AP3) and PISTILLATA (PI); C-function gene is AGAMOUS (AG). The model predicts that loss of A function causes C to expand into whorls 1-2, converting sepals to carpels and petals to stamens. Loss of B converts petals to sepals and stamens to carpels. Loss of C converts stamens to petals and carpels to sepals. The model has been extended to ABCDE, with D-function genes specifying ovule identity and E-function (SEPALLATA) genes required as co-factors for all organ identities.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Apomixis\u2014asexual reproduction through seed without fertilization\u2014occurs naturally in some plant species. Which mechanism correctly describes gametophytic apomixis?",
+      "options": [
+        "The embryo develops from a somatic cell of the ovule integument through adventitious embryony",
+        "The zygote formed by normal fertilization undergoes polyploidization during the first cell division",
+        "Pollen grains develop into embryos through androgenesis after landing on the stigma",
+        "An unreduced embryo sac develops from the megaspore mother cell (diplospory) or a nucellar cell (apospory), and the embryo develops parthenogenetically from the unreduced egg without fertilization"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Gametophytic apomixis involves the formation of an unreduced (2n) embryo sac that develops into a seed without fertilization. There are two main pathways: (1) Diplospory\u2014the megaspore mother cell itself bypasses or modifies meiosis (either skipping meiosis entirely or undergoing a modified meiosis that restores the diploid chromosome number through restitution), producing an unreduced embryo sac; (2) Apospory\u2014a somatic nucellar cell adjacent to the megaspore mother cell develops directly into an unreduced embryo sac without meiosis, often displacing the normal meiotically-derived embryo sac. In both cases, the unreduced egg cell within the embryo sac develops parthenogenetically into a 2n embryo without fertilization, producing offspring that are genetically identical to the mother plant. Endosperm development may still require fertilization (pseudogamous apomixis) or may develop autonomously. This contrasts with adventitious embryony (option A), which is sporophytic apomixis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "During anther development, the tapetum plays a critical role in pollen maturation. What is the primary function of the tapetum?",
+      "options": [
+        "The tapetum provides mechanical support to maintain anther structure during dehiscence",
+        "The tapetum synthesizes and supplies nutrients, sporopollenin precursors, and pollen coat materials to developing microspores through programmed cell death",
+        "The tapetum produces meiosis-inducing signals that trigger microspore mother cell division",
+        "The tapetum secretes enzymes that degrade the callose wall surrounding microspore tetrads simultaneously with meiosis completion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The tapetum is the innermost cell layer of the anther wall that surrounds developing microspores and plays indispensable roles in pollen development. Its primary functions include: (1) Providing nutrients (sugars, amino acids, lipids) to the avascular developing microspores; (2) Synthesizing and secreting sporopollenin precursors\u2014the extremely resistant biopolymer that forms the outer exine wall of pollen grains. Sporopollenin is one of the most chemically resistant biological polymers known; (3) Depositing pollen coat (tryphine/pollenkitt) materials including lipids, proteins, flavonoids, and (in SSI species) SCR/SP11 compatibility determinants; (4) Producing callase (beta-1,3-glucanase) that dissolves the callose wall surrounding microspore tetrads, releasing individual microspores. The tapetum typically undergoes programmed cell death (PCD) during the later stages of pollen development, releasing its cellular contents into the anther locule for incorporation into pollen walls and coats. Tapetum dysfunction (e.g., in male-sterile mutants) results in defective pollen development.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Endosperm development in angiosperms follows one of three main patterns. Which type of endosperm development is characterized by nuclear divisions without cell wall formation, producing a multinucleate coenocyte before cellularization?",
+      "options": [
+        "Nuclear endosperm development, found in Arabidopsis and most eudicots, where the primary endosperm nucleus divides repeatedly without cytokinesis before eventual cellularization",
+        "Cellular endosperm development, where each nuclear division is immediately followed by cell wall formation",
+        "Helobial endosperm development, where the first division is cellular and subsequent divisions are nuclear",
+        "Ruminate endosperm development, where ingrowths of the seed coat create an irregular endosperm surface"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Nuclear endosperm development is the most common pattern among angiosperms, particularly in eudicots. After double fertilization, the triploid primary endosperm nucleus undergoes rapid, successive nuclear divisions without cytokinesis, producing a large coenocytic cell (syncytium) containing hundreds to thousands of free nuclei distributed in the cytoplasm along the periphery of the central cell. In Arabidopsis (a model for this developmental pattern), the endosperm remains coenocytic until approximately the torpedo stage of embryo development, when cellularization begins from the micropylar end and progresses toward the chalazal end through a wave-like process involving phragmoplast formation. The timing of cellularization is critical and is regulated by genomic imprinting\u2014specifically, the FERTILIZATION INDEPENDENT SEED (FIS) Polycomb group complex. Cellular endosperm (option B) occurs in some species where each division is followed by wall formation. Helobial endosperm (option C) is intermediate, found in monocots. Ruminate endosperm (option D) describes a surface texture, not a developmental type.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Fruit development (carpel maturation into fruit) is normally triggered by successful fertilization. What hormonal signal from developing seeds primarily promotes fruit growth?",
+      "options": [
+        "Ethylene from the seed coat triggers rapid cell expansion in the pericarp",
+        "Abscisic acid (ABA) from the endosperm stimulates pericarp cell division",
+        "Auxin synthesized by developing seeds stimulates pericarp growth, and gibberellins promote fruit enlargement through cell expansion",
+        "Cytokinin from the embryo directly activates fruit maturation genes in the pericarp"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Fruit development is primarily driven by auxin (indole-3-acetic acid, IAA) produced by developing seeds. After fertilization, the developing embryo and endosperm synthesize auxin, which diffuses into the surrounding carpel tissue (pericarp) and stimulates both cell division and cell expansion. The auxin signal from seeds activates the expression of gibberellin biosynthesis genes in the pericarp, and the resulting gibberellins promote fruit enlargement primarily through cell expansion. Evidence supporting this model includes: (1) Seedless mutant fruits are small unless treated with exogenous auxin or gibberellin; (2) Parthenocarpic (seedless) fruit varieties often have mutations that constitutively activate auxin or GA signaling in the pericarp; (3) Application of auxin transport inhibitors to developing fruits blocks fruit growth; (4) In strawberry, selective removal of individual achenes (each containing a seed) creates localized depressions in the receptacle, demonstrating that each seed provides a local auxin source for growth. Ethylene plays a later role in fruit ripening (in climacteric fruits), not in initial fruit development.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Seed dormancy prevents germination under unfavorable conditions. What is the primary hormonal mechanism maintaining seed dormancy in most angiosperm species?",
+      "options": [
+        "High gibberellin (GA) levels in the embryo maintain dormancy by suppressing metabolic activity",
+        "Ethylene accumulation in the seed coat prevents water imbibition needed for germination",
+        "High abscisic acid (ABA) to gibberellin (GA) ratio maintains dormancy; germination occurs when this ratio shifts in favor of GA through ABA degradation and GA biosynthesis",
+        "Jasmonic acid (JA) in the endosperm blocks embryo growth by inhibiting cell division"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Seed dormancy is primarily maintained by a high ratio of abscisic acid (ABA) to gibberellin (GA) in the embryo. ABA promotes and maintains dormancy through multiple mechanisms: (1) ABA induces expression of late embryogenesis abundant (LEA) proteins that protect cellular structures during desiccation; (2) ABA activates transcription factors (ABI3, ABI4, ABI5 in Arabidopsis) that suppress germination-related gene expression; (3) ABA inhibits the biosynthesis of cell wall-degrading enzymes needed for radicle emergence. During dormancy release (triggered by environmental cues such as cold stratification, light, or after-ripening), ABA levels decrease through catabolism by CYP707A cytochrome P450 enzymes, while GA biosynthesis is activated. GAs promote germination by inducing alpha-amylase and cell wall-loosening enzymes in the endosperm/aleurone layer, weakening the mechanical barrier to radicle emergence. The ABA/GA ratio, rather than the absolute concentration of either hormone, is the key determinant of dormancy status.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pollen grains have a distinctive wall structure with two major layers. What is the composition and origin of the outer exine layer?",
+      "options": [
+        "The exine is composed of sporopollenin, a highly resistant polymer of fatty acids and phenylpropanoids, primarily synthesized by the tapetum cells and deposited onto developing microspores",
+        "The exine is composed of cellulose microfibrils arranged in a species-specific pattern by the microspore cytoskeleton",
+        "The exine is composed of lignin derived from the anther wall endothecium during dehiscence",
+        "The exine is composed of cutin, identical to the leaf cuticle, synthesized by the microspore itself"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The pollen grain wall consists of two main layers: the inner intine (composed of cellulose and pectin, synthesized by the microspore itself) and the outer exine (composed of sporopollenin). Sporopollenin is an extraordinarily resistant biopolymer composed of polymerized fatty acid and phenylpropanoid monomers, making it one of the most chemically inert biological materials known\u2014resistant to acetolysis, strong acids and bases, and most organic solvents. This resistance is why pollen grains are so well-preserved in the fossil record. The exine is primarily synthesized by the tapetum, the innermost anther wall layer. Tapetum cells produce sporopollenin precursors (including fatty acid derivatives processed by enzymes like ACOS5, CYP703A2, CYP704B1, and polyketide synthases PKSA/PKSB) that are secreted into the anther locule and polymerize on the microspore surface. The exine has a complex, species-specific ornamentation pattern (tectum, columellae, foot layer) that is important for taxonomic identification and for pollen-stigma interactions during pollination.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher crosses two self-incompatible plants with genotypes S1S2 (female) and S3S4 (male) in a sporophytic SI system. All F1 plants are either S1S3, S1S4, S2S3, or S2S4. When F1 plants with genotype S1S3 are used as females, which pollen genotypes would be rejected, assuming S1 is dominant over S3 in the pollen (tapetum)?",
+      "options": [
+        "Only S1 pollen from S1S3 plants is rejected; all other pollen is accepted",
+        "Both S1 and S3 pollen from any plant with S1 in its sporophytic genotype are rejected, because S1 dominance in the tapetum means all pollen from S1-containing plants carries S1 coat protein",
+        "No pollen is rejected because the cross is between different S-genotypes",
+        "Only S3 pollen is rejected because the female parent is S1S3 and S3 matches"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In sporophytic SI (SSI), pollen compatibility is determined by the diploid sporophytic genotype of the pollen parent, NOT the haploid genotype of the pollen grain itself. This is because the S-locus determinant protein (SCR/SP11) is produced by the diploid tapetum cells and deposited on the pollen coat. When S1 is dominant over S3 in pollen, a plant with genotype S1S3 produces pollen grains that ALL carry S1 SCR protein on their coat, regardless of whether the individual pollen grain carries the S1 or S3 allele. Therefore, an S1S3 female plant (which expresses both SRK1 and SRK3 receptors on its stigma) would reject ALL pollen from any S1S3 father plant\u2014because the S1 coat protein on every pollen grain (even those carrying S3) would activate SRK1 on the stigma. Pollen from S2S4 plants would be accepted because neither S2 nor S4 matches the female's S-haplotypes. Dominance relationships in SSI are thus critical for determining cross-compatibility in breeding programs.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pollination syndromes describe suites of floral traits that correlate with specific pollinator types. Which combination of floral traits is characteristic of bat-pollinated (chiropterophilous) flowers?",
+      "options": [
+        "Small, white or yellow, fragrant flowers with landing platforms, opening during the day",
+        "Blue or purple flowers with ultraviolet nectar guides, moderate scent, and bilateral symmetry",
+        "Large, dull-colored (white or greenish), strong musty or fermented odor, copious dilute nectar, robust structure, and nocturnal anthesis",
+        "Red, tubular, odorless flowers with copious nectar and no landing platform"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Bat-pollinated (chiropterophilous) flowers display a distinctive syndrome of traits adapted to their nocturnal, large-bodied, nectar-feeding pollinators: (1) Nocturnal anthesis (flowers open at night when bats are active); (2) Large, robust flower structure that can withstand contact by relatively heavy bat visitors; (3) Dull coloration (white, cream, or greenish) since bats rely primarily on echolocation and olfaction rather than color vision; (4) Strong musty, sour, or fermented odor that attracts bats (which have excellent olfaction); (5) Copious, dilute nectar (low sugar concentration, typically 10-20%) that provides energy for the high metabolic demands of hovering flight; (6) Flowers often positioned on exposed branches or hanging below foliage (cauliflory or flagelliflory) for easy bat access. Examples include saguaro cactus, agave, banana, and durian. In contrast, option D describes hummingbird-pollinated flowers, option B describes bee-pollinated flowers, and option A describes generalist or moth-pollinated flowers.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Genomic imprinting in angiosperm endosperm follows the parental conflict theory. How does imprinting affect endosperm development?",
+      "options": [
+        "Both maternal and paternal genomes are equally expressed in endosperm, with no parent-of-origin effects",
+        "Paternally expressed genes promote endosperm growth and nutrient acquisition, while maternally expressed genes restrict endosperm growth, reflecting conflicting parental fitness interests",
+        "Only the maternal genome is active in endosperm; the paternal contribution is completely silenced",
+        "Imprinting causes all endosperm cells to be haploid, expressing only one parental allele randomly"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Genomic imprinting in angiosperm endosperm follows predictions of the parental conflict (kinship) theory proposed by Haig and Westoby. In this model: The paternal genome benefits from maximizing resource allocation to its offspring at the potential expense of the mother's future reproductive success (since the father may not father subsequent offspring). Therefore, paternally expressed genes (PEGs) tend to promote endosperm growth, nutrient uptake, and seed size. The maternal genome benefits from distributing resources equitably among all her offspring (current and future). Therefore, maternally expressed genes (MEGs) tend to restrict endosperm growth and limit nutrient allocation to any single seed. This conflict is mediated by epigenetic mechanisms, primarily DNA methylation and histone modifications established during gametogenesis. The FIS (Fertilization Independent Seed) Polycomb group complex (containing MEA, FIS2, FIE, MSI1) is a key maternally expressed regulator that restricts endosperm proliferation. Mutations in FIS components lead to endosperm overproliferation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Anther dehiscence (opening to release pollen) involves a specific biomechanical mechanism. Which cell layer and process are primarily responsible for anther opening?",
+      "options": [
+        "The endothecium layer develops secondary cell wall thickenings (fibrous bands) that create differential hygroscopic tension, causing the anther wall to split along the stomium when the anther dehydrates",
+        "Enzymatic digestion of the entire anther wall by pollen-derived cellulases releases pollen grains",
+        "Turgor pressure buildup in the tapetum forces the anther to burst open explosively",
+        "Abscission of the anther tip by an ethylene-dependent programmed cell death pathway creates a pore for pollen release"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Anther dehiscence is a precisely regulated biomechanical process that involves: (1) Endothecium development\u2014the endothecium, the sub-epidermal layer of the anther wall, develops characteristic secondary cell wall thickenings (fibrous bands or U-shaped thickenings) composed of cellulose and lignin during late anther development. (2) Stomium differentiation\u2014a specialized thin-walled zone (the stomium) develops along the junction between the two microsporangia of each theca, representing the predetermined breakage point. (3) Dehydration-driven opening\u2014as the mature anther dehydrates (water loss is accelerated by expression of aquaporin-type channels), the endothecium cells shrink differentially. The rigid fibrous bands in the endothecium resist inward collapse while the outer epidermis contracts, creating mechanical stress that is concentrated at the weak stomium, causing it to rupture. The two halves of each theca peel apart (like a bivalve shell), exposing the pollen grains. The tapetum has already degenerated by this stage and plays no role in dehiscence.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "In gametophytic self-incompatibility (GSI) systems found in Solanaceae, Rosaceae, and Papaveraceae, the S-RNase mechanism operates in the Solanaceae. How does S-RNase cause rejection of self-pollen tubes?",
+      "options": [
+        "S-RNase on the stigma surface prevents pollen germination by blocking water uptake through the pollen aperture",
+        "S-RNase blocks pollen tube penetration of the cuticle by cross-linking stigmatic papilla cell walls",
+        "S-RNase enters the pollen tube and degrades ribosomal RNA in self-pollen tubes, but is inhibited by non-self SLF/SFB F-box proteins in cross-compatible tubes",
+        "S-RNase activates programmed cell death in the transmitting tissue specifically around self-pollen tubes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In the S-RNase-based gametophytic self-incompatibility (GSI) system of Solanaceae (and Rosaceae, Plantaginaceae), the female determinant is S-RNase, a glycoprotein ribonuclease secreted into the extracellular matrix of the style transmitting tissue. S-RNases are taken up non-specifically into all growing pollen tubes, regardless of S-genotype. Inside the pollen tube, the fate of the S-RNase determines compatibility: In self (incompatible) pollen tubes: the S-RNase with matching S-specificity is NOT degraded and remains active, proceeding to degrade ribosomal RNA and other cellular RNA, killing the pollen tube by halting protein synthesis and disrupting cellular function. In cross-compatible (non-self) pollen tubes: multiple SLF (S-locus F-box) proteins, each recognizing a specific non-self S-RNase, function as part of SCF (Skp-Cullin-F-box) E3 ubiquitin ligase complexes that polyubiquitinate non-self S-RNases, targeting them for proteasomal degradation. This is called the collaborative non-self recognition model\u2014a suite of SLF proteins collectively recognizes and detoxifies all non-self S-RNases.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Seed maturation involves the accumulation of storage reserves. In a typical eudicot seed like soybean, what are the major storage compounds and where are they deposited?",
+      "options": [
+        "Storage compounds (proteins in protein bodies, lipids in oil bodies, and some starch) accumulate in the cotyledons of the embryo, as the endosperm is largely consumed during development",
+        "All storage compounds accumulate in the persistent endosperm surrounding a small embryo",
+        "Storage reserves are deposited exclusively in the seed coat (testa) as a protective nutritive layer",
+        "Starch granules fill the embryonic radicle and plumule as the sole energy reserve for germination"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In typical eudicot seeds like soybean (Glycine max), pea, and bean, the endosperm is consumed during seed development, and the storage reserves accumulate in the enlarged cotyledons of the embryo. Soybean seeds contain approximately 40% protein (stored in protein bodies/protein storage vacuoles as glycinin and beta-conglycinin), 20% lipid (stored in oil bodies/oleosomes bounded by oleosin proteins), and modest amounts of starch and other carbohydrates. During germination, these cotyledonary reserves are mobilized by hydrolytic enzymes to fuel seedling growth until the plant becomes photosynthetically self-sufficient. This contrasts with monocot seeds like maize and wheat, where the persistent, starchy endosperm is the major storage tissue, and the cotyledon (scutellum) functions primarily as an absorptive organ that transfers nutrients from endosperm to the growing embryo. In some eudicots like castor bean (Ricinus), the endosperm persists and serves as the primary storage tissue (endospermic seed). The seed coat provides protection but does not store significant nutritional reserves.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pollen tube growth is one of the fastest rates of cellular elongation in nature, reaching speeds of up to 1 cm/hour in maize. What cellular mechanism drives this rapid tip growth?",
+      "options": [
+        "Rapid cellulose synthesis by cellulose synthase complexes (CESAs) concentrated at the pollen tube tip",
+        "Actin filament-mediated reverse fountain streaming delivers secretory vesicles containing pectin and other wall materials to the growing tip, where they fuse with the plasma membrane to extend the tube wall",
+        "Microtubule-dependent endocytosis at the tube base creates turgor pressure that pushes the tip forward",
+        "Cell plate formation by phragmoplast assembly at the tip progressively extends the tube"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pollen tube tip growth is driven by a highly organized vesicle trafficking system powered by the actin cytoskeleton. The process involves: (1) Cytoplasmic streaming in a 'reverse fountain' pattern\u2014long actin filament bundles in the pollen tube shank drive organelles and vesicles toward the tip along the tube periphery, while material flows backward through the center. (2) An apical 'clear zone' devoid of large organelles but rich in small secretory vesicles. (3) Exocytosis of secretory vesicles at the extreme tip\u2014these vesicles contain pectin (primarily methyl-esterified homogalacturonan), cell wall matrix materials, and new plasma membrane. Vesicle fusion with the apical plasma membrane simultaneously extends the membrane surface area and deposits wall materials externally. (4) The new wall at the tip is initially soft (pectin-rich), then stiffens behind the tip through de-esterification of pectin by pectin methylesterase (PME) and calcium cross-linking. (5) This process is regulated by a tip-focused calcium gradient, ROP GTPases (ROP1), reactive oxygen species (ROS), and phosphoinositide signaling. Cellulose is largely absent from the tip region and is deposited mainly in the tube shank.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Microspore development involves a critical asymmetric division. What is the significance of the asymmetric mitotic division (pollen mitosis I) during male gametophyte development?",
+      "options": [
+        "It creates two identical cells that both contribute equally to the mature pollen grain",
+        "It separates the generative cell (which will later divide to form two sperm) from the larger vegetative cell (which drives pollen tube growth), establishing distinct cell fates through differential gene expression",
+        "It reduces the chromosome number from diploid to haploid in preparation for fertilization",
+        "It produces a small degenerate cell that is absorbed and a large cell that becomes the entire pollen grain"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pollen mitosis I (the first mitotic division of the microspore) is a critically important asymmetric division that establishes the two fundamentally different cell lineages within the male gametophyte. The microspore divides unequally to produce: (1) A large vegetative cell with diffuse chromatin and most of the cytoplasm\u2014this cell will not divide again but will grow to form the pollen tube after germination on the stigma. The vegetative cell nucleus directs pollen tube growth and metabolism. (2) A small generative cell with condensed chromatin and minimal cytoplasm, initially enclosed within the vegetative cell. The generative cell will undergo one more mitotic division (pollen mitosis II) to produce the two sperm cells needed for double fertilization. This asymmetric division is critical because it establishes different chromatin states and gene expression programs in the two cell types. The vegetative cell expresses genes for tube growth, wall synthesis, and signaling, while the generative cell expresses genes related to cell cycle progression and sperm cell specification.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Fruit classification is based on the origin of the mature fruit. What distinguishes an accessory fruit from a simple fruit?",
+      "options": [
+        "An accessory fruit develops from multiple flowers fused together (inflorescence), while a simple fruit develops from a single flower",
+        "An accessory fruit develops from a single carpel, while a simple fruit develops from multiple fused carpels",
+        "An accessory fruit contains non-carpel tissue (such as receptacle or floral tube) as a major part of the edible flesh, while a simple fruit develops entirely from carpel tissue",
+        "An accessory fruit is always fleshy (drupe or berry), while a simple fruit is always dry (achene or capsule)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "An accessory fruit (also called a pseudocarp or false fruit) is characterized by the significant contribution of non-carpel floral tissue to the mature fruit structure. In a simple fruit, the edible or functional portions develop entirely from the ovary wall (pericarp = mature carpel wall). In an accessory fruit, tissues other than the ovary wall\u2014such as the receptacle, hypanthium (floral tube), sepals, or other floral parts\u2014contribute substantially to the fruit. Classic examples include: Apple (Malus)\u2014the fleshy part is the enlarged hypanthium; the actual fruit (developed from the ovary) is the core containing the seeds. Strawberry (Fragaria)\u2014the fleshy red portion is the enlarged receptacle; the actual fruits are the small achenes (dry one-seeded fruits) embedded on the surface. Pineapple is a multiple accessory fruit where the fleshy tissue derives from the fused receptacles and floral parts of many flowers in an inflorescence. Simple fruits can be either fleshy (berries, drupes) or dry (capsules, achenes, caryopses).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    }
+  ]
+}
