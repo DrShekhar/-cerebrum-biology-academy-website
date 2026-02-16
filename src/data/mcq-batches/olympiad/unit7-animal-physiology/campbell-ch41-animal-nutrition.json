@@ -1,0 +1,1510 @@
+{
+  "batch": {
+    "name": "Campbell Ch41 Animal Nutrition \u2014 Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 75
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "A ruminant's four-chambered stomach allows sequential processing of plant material. Which sequence correctly describes the flow of food through the ruminant digestive system?",
+      "options": [
+        "Abomasum \u2192 omasum \u2192 rumen \u2192 reticulum",
+        "Rumen \u2192 reticulum \u2192 omasum \u2192 abomasum",
+        "Reticulum \u2192 rumen \u2192 abomasum \u2192 omasum",
+        "Rumen \u2192 omasum \u2192 reticulum \u2192 abomasum"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In ruminants (cattle, sheep, deer), ingested plant material first enters the rumen, the largest chamber, where symbiotic microorganisms (bacteria, protozoa, fungi) ferment cellulose into volatile fatty acids (VFAs). Material is then regurgitated for further chewing (rumination) and re-swallowed. The reticulum acts as a sorting chamber, directing small particles to the omasum while returning larger particles to the rumen. The omasum absorbs water and VFAs, concentrating the digesta. Finally, the abomasum functions as the true stomach, secreting HCl and pepsin for enzymatic digestion, equivalent to the stomach of monogastric animals. Option B incorrectly places the reticulum first and reverses the omasum and abomasum. Options C and D scramble the correct order entirely.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pepsin, a key gastric protease, is secreted as the inactive zymogen pepsinogen by chief cells. Which factor is essential for the conversion of pepsinogen to active pepsin?",
+      "options": [
+        "Enterokinase secreted by duodenal enterocytes",
+        "Bile salts from the liver that emulsify the zymogen's lipid coating",
+        "Trypsin from the pancreas that proteolytically activates pepsinogen",
+        "Hydrochloric acid (pH < 2) secreted by parietal cells, which causes autocatalytic cleavage of the pepsinogen pro-peptide"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Pepsinogen activation requires the acidic environment (pH 1.5-2.0) created by HCl secreted by parietal (oxyntic) cells of the gastric glands. At low pH, the protonation of key residues in pepsinogen induces a conformational change that exposes the active site and leads to autocatalytic cleavage of the 44-amino-acid N-terminal pro-peptide. Once active pepsin is formed, it can also activate additional pepsinogen molecules (autocatalytic cascade), amplifying the process. Option A is incorrect because enterokinase (enteropeptidase) activates trypsinogen in the duodenum, not pepsinogen in the stomach. Option C is incorrect because bile salts function in lipid emulsification in the duodenum. Option D is incorrect because trypsin operates in the small intestine and does not enter the stomach.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cholecystokinin (CCK) is released from I-cells in the duodenal mucosa. Which combination of stimuli most effectively triggers CCK release, and what are its primary effects?",
+      "options": [
+        "Fiber and water in the duodenum; CCK stimulates large intestinal motility and water absorption",
+        "Carbohydrates in the duodenum; CCK stimulates salivary amylase secretion and gastric motility",
+        "Fatty acids and amino acids in the duodenum; CCK stimulates gallbladder contraction, pancreatic enzyme secretion, and inhibits gastric emptying",
+        "Gastric acid in the duodenum; CCK stimulates bicarbonate secretion from the pancreas"
+      ],
+      "correctAnswer": "C",
+      "explanation": "CCK release is primarily triggered by the presence of fatty acids and amino acids (products of lipid and protein digestion) in the duodenum. CCK has three major effects: (1) stimulation of gallbladder contraction to release bile into the duodenum for fat emulsification; (2) stimulation of pancreatic acinar cells to secrete digestive enzymes (lipase, protease, amylase); and (3) inhibition of gastric emptying via the enterogastric reflex, slowing the delivery of chyme to allow adequate duodenal processing time. CCK also promotes satiety through vagal afferents to the brain. Option A incorrectly identifies the stimulus (carbohydrates) and effects (salivary and gastric). Option C describes the function of secretin, not CCK. Option D fabricates non-existent functions.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The proton pump (H+/K+-ATPase) in parietal cells of the stomach generates an H+ concentration in the gastric lumen that is approximately 3 million times greater than in the blood. Which statement about this process is correct?",
+      "options": [
+        "Carbonic anhydrase in parietal cells generates H+ from CO2 and H2O, which is then secreted into the lumen by facilitated diffusion",
+        "The pump is an example of passive transport because protons move down their concentration gradient into the acidic lumen",
+        "The pump generates HCl directly by combining hydrogen and chloride ions within the pump protein before releasing them into the lumen",
+        "The pump transports H+ into the lumen in exchange for K+ using ATP hydrolysis, and the Cl- follows through separate chloride channels to form HCl"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The gastric proton pump (H+/K+-ATPase) is a P-type ATPase located on the apical (luminal) membrane of parietal cells. It uses energy from ATP hydrolysis to pump H+ into the gastric lumen in exchange for K+ (antiport), generating the extremely low pH (~1-2) of gastric juice. The H+ is generated intracellularly by carbonic anhydrase: CO2 + H2O \u2192 H2CO3 \u2192 H+ + HCO3-. The H+ is pumped out while HCO3- exits the basolateral side in exchange for Cl- (the 'alkaline tide'). Cl- enters the cell from blood via the basolateral Cl-/HCO3- exchanger and exits into the lumen through apical chloride channels, combining with H+ to form HCl. Option A is incorrect because pumping H+ against a 3-million-fold gradient is active transport. Option C incorrectly describes direct HCl formation within the pump. Option D incorrectly calls the secretion facilitated diffusion.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Vitamin B12 (cobalamin) absorption requires a complex series of steps. Which sequence correctly describes the absorption pathway?",
+      "options": [
+        "B12 is absorbed directly by passive diffusion in the jejunum without requiring any binding proteins",
+        "B12 binds intrinsic factor in the mouth \u2192 complex is absorbed in the stomach by active transport",
+        "B12 binds R-protein in saliva \u2192 pancreatic proteases release B12 from R-protein in duodenum \u2192 B12 binds intrinsic factor (IF) from parietal cells \u2192 IF-B12 complex absorbed in ileum via cubilin receptor-mediated endocytosis",
+        "B12 is synthesized by colonic bacteria and absorbed in the large intestine via sodium-dependent transporters"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Vitamin B12 absorption is a multi-step process requiring several binding proteins. In the mouth, B12 binds to haptocorrin (R-protein) in saliva, which protects it from gastric acid. In the duodenum, pancreatic proteases degrade R-protein, releasing B12, which then binds intrinsic factor (IF), a glycoprotein secreted by gastric parietal cells. The IF-B12 complex travels to the terminal ileum, where it binds to cubilin receptors on enterocytes and is internalized by receptor-mediated endocytosis. Inside the cell, B12 is released from IF and transferred to transcobalamin II for transport in the blood. Absence of IF (as in pernicious anemia or after gastrectomy) causes B12 malabsorption. Option B is incorrect because passive diffusion is insufficient for B12 absorption. Option C incorrectly places IF binding in the mouth and absorption in the stomach. Option D is partially true about synthesis but wrong about absorption site.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "An herbivorous insect relies on symbiotic bacteria in its gut to provide essential amino acids that its plant-based diet lacks. This relationship is best described as:",
+      "options": [
+        "Competition, because both organisms are utilizing the same dietary resources",
+        "Mutualistic endosymbiosis, where both partners benefit \u2014 the bacteria receive nutrients and a stable environment while the insect receives essential amino acids it cannot synthesize",
+        "Parasitism, because the bacteria exploit the insect's resources",
+        "Commensalism, because only the bacteria benefit while the insect is unaffected"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This is a classic example of nutritional mutualism. Many herbivorous insects (aphids with Buchnera, tsetse flies with Wigglesworthia) harbor obligate endosymbiotic bacteria in specialized cells called bacteriocytes. The bacteria synthesize essential amino acids, vitamins, and other nutrients that are deficient in the insect's restricted diet (plant sap, blood). In return, the bacteria receive a protected intracellular environment, carbon sources, and other metabolic substrates from the host. Neither partner can survive independently in most cases, indicating an obligate mutualism evolved over millions of years, often with extensive genome reduction in the bacteria. Option A mischaracterizes the mutually beneficial relationship. Option C incorrectly states the insect is unaffected; removal of symbionts causes nutritional deficiency and death. Option D incorrectly describes the relationship as competitive.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following correctly describes the mechanism of fat absorption in the mammalian small intestine?",
+      "options": [
+        "Pancreatic lipase hydrolyzes triglycerides to monoglycerides and fatty acids, which form mixed micelles with bile salts; these diffuse to the brush border where lipid components are absorbed by enterocytes, re-esterified to triglycerides in the smooth ER, packaged into chylomicrons, and secreted into lacteals",
+        "Bile salts directly transport intact fat molecules across enterocyte membranes via active transport pumps",
+        "Short-chain and long-chain fatty acids are both absorbed into portal blood capillaries and transported directly to the liver bound to albumin",
+        "Triglycerides are absorbed intact through paracellular pathways between enterocytes and packaged into chylomicrons"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Fat absorption is a complex process requiring both mechanical and chemical emulsification. Bile salts emulsify large fat globules into smaller droplets, increasing the surface area for pancreatic lipase (with colipase as cofactor) to hydrolyze triglycerides into 2-monoacylglycerol and free fatty acids. These products, along with bile salts, form mixed micelles (~4-7 nm) that shuttle lipids through the unstirred water layer to the brush border. At the enterocyte surface, lipid components leave the micelle and are absorbed (partly by passive diffusion, partly via fatty acid transport proteins). Inside the enterocyte, fatty acids and monoglycerides are re-esterified to triglycerides in the smooth endoplasmic reticulum, packaged with cholesterol, phospholipids, and apolipoprotein B-48 into chylomicrons, and secreted into lacteals (lymphatic capillaries). Option A is incorrect because triglycerides must be hydrolyzed. Option C mischaracterizes bile salt function. Option D is only partially correct for short-chain fatty acids.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The cephalic phase of gastric secretion is initiated before food reaches the stomach. Which neural pathway mediates this anticipatory response?",
+      "options": [
+        "The glossopharyngeal nerve (CN IX) directly stimulates acid secretion in the fundus",
+        "Sympathetic nerves from the thoracic spinal cord stimulate parietal cells via norepinephrine",
+        "The vagus nerve (cranial nerve X) transmits parasympathetic signals that stimulate gastrin release from G-cells and directly stimulate parietal cells and chief cells via acetylcholine",
+        "Local enteric reflexes in the stomach wall detect the sight and smell of food"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The cephalic phase accounts for approximately 30% of total gastric acid secretion and is triggered by the sight, smell, taste, or thought of food. Sensory stimuli from the cerebral cortex and appetite centers in the hypothalamus stimulate the dorsal motor nucleus of the vagus nerve. Vagal efferents (parasympathetic fibers) travel to the stomach via the vagus nerve (CN X) and: (1) directly stimulate parietal cells to secrete HCl via acetylcholine acting on M3 muscarinic receptors; (2) directly stimulate chief cells to secrete pepsinogen; (3) stimulate G-cells in the gastric antrum to release gastrin, which further stimulates acid secretion; and (4) stimulate enterochromaffin-like (ECL) cells to release histamine, a potent stimulator of parietal cells. Option A is incorrect because sympathetic stimulation actually inhibits gastric secretion. Option C involves the wrong nerve. Option D incorrectly describes enteric reflexes as detecting distant stimuli.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cellulose is the most abundant organic polymer on Earth, yet most animals cannot digest it. Which statement best explains why ruminants can extract energy from cellulose while humans cannot?",
+      "options": [
+        "Ruminants absorb intact cellulose fibers and process them in the liver through specialized hepatic enzymes",
+        "Ruminants harbor symbiotic microorganisms (bacteria, protozoa, and anaerobic fungi) in their rumen that produce cellulases to break beta-1,4-glycosidic bonds in cellulose, releasing glucose for fermentation to volatile fatty acids",
+        "Ruminants have acidic stomach environments that chemically hydrolyze cellulose without enzymatic assistance",
+        "Ruminants produce cellulase, a cellulose-degrading enzyme, in their salivary glands"
+      ],
+      "correctAnswer": "B",
+      "explanation": "No vertebrate produces endogenous cellulase. Ruminants and other herbivores that extract energy from cellulose do so through an obligate partnership with symbiotic microorganisms. In the rumen, a diverse community of anaerobic bacteria (e.g., Fibrobacter succinogenes, Ruminococcus albus), protozoa, and anaerobic fungi produces cellulases and hemicellulases that hydrolyze the beta-1,4-glycosidic bonds linking glucose monomers in cellulose. The released glucose is then fermented anaerobically by these microorganisms to volatile fatty acids (VFAs: acetate, propionate, butyrate), which are absorbed across the rumen wall and serve as the ruminant's primary energy source (providing 60-80% of total energy). The microorganisms themselves are eventually digested in the abomasum, providing additional protein. Option A is incorrect because ruminants lack endogenous cellulase. Option C is incorrect because acid alone cannot efficiently break cellulose. Option D is biologically impossible.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Enterohepatic circulation of bile salts is critical for fat digestion. Which description of this recycling pathway is most accurate?",
+      "options": [
+        "Bile salts synthesized from cholesterol in hepatocytes are secreted into bile, stored in the gallbladder, released into the duodenum, actively reabsorbed in the terminal ileum via the apical sodium-dependent bile acid transporter (ASBT), and returned to the liver via the portal vein for resecretion",
+        "Bile salts are reabsorbed passively throughout the entire length of the small intestine and returned to the liver via lymphatic vessels",
+        "Bile salts are synthesized in the gallbladder, secreted into the duodenum, and excreted entirely in feces without reabsorption",
+        "Bile salts are synthesized in the ileum, transported to the liver for conjugation, and then secreted into the duodenum"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Enterohepatic circulation recycles ~95% of bile salts 6-8 times per day. Hepatocytes synthesize primary bile acids (cholic acid, chenodeoxycholic acid) from cholesterol via 7-alpha-hydroxylase (the rate-limiting enzyme). These are conjugated with glycine or taurine, stored in the gallbladder, and released into the duodenum upon CCK stimulation. After participating in fat emulsification and absorption throughout the small intestine, bile salts are actively reabsorbed in the terminal ileum by the apical sodium-dependent bile acid transporter (ASBT/IBAT). They enter the portal circulation bound to albumin, are extracted by hepatocytes, and rescreted into bile. Only ~5% of the bile salt pool is lost in feces daily and must be replaced by new synthesis. Option A incorrectly states bile salts are made in the gallbladder and all excreted. Option C incorrectly claims passive absorption everywhere and lymphatic transport. Option D reverses the synthesis location.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "A patient with complete surgical removal of the stomach (total gastrectomy) would be expected to develop deficiencies in all of the following EXCEPT:",
+      "options": [
+        "Iron due to reduced conversion of Fe3+ to Fe2+ without gastric acid",
+        "Vitamin C due to loss of gastric ascorbate secretion",
+        "Calcium absorption due to reduced solubilization of calcium salts without gastric acid",
+        "Vitamin B12 due to loss of intrinsic factor"
+      ],
+      "correctAnswer": "B",
+      "explanation": "After total gastrectomy, patients lose both parietal cells (which produce HCl and intrinsic factor) and chief cells (which produce pepsin). This leads to: (1) Vitamin B12 deficiency because intrinsic factor is essential for B12 absorption in the ileum; (2) Iron deficiency because gastric acid is needed to reduce ferric iron (Fe3+) to the absorbable ferrous form (Fe2+) and to solubilize dietary iron; (3) Calcium malabsorption because gastric acid helps solubilize calcium salts, making calcium ions available for absorption. However, Vitamin C (ascorbic acid) is readily absorbed in the duodenum and jejunum by the SVCT1 transporter, and its absorption does not depend on gastric acid or any gastric factor. While the stomach does secrete some ascorbate, this is not required for systemic vitamin C status. Therefore, vitamin C deficiency is not a characteristic consequence of gastrectomy.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The glucose transporter SGLT1 on the apical membrane of intestinal enterocytes differs mechanistically from GLUT2 on the basolateral membrane. Which statement correctly contrasts these transporters?",
+      "options": [
+        "SGLT1 transports glucose passively while GLUT2 uses secondary active transport",
+        "SGLT1 is specific for fructose while GLUT2 is specific for glucose and galactose",
+        "SGLT1 is a sodium-glucose cotransporter that uses the Na+ electrochemical gradient to actively transport glucose into the cell against its concentration gradient; GLUT2 is a facilitated diffusion transporter that allows glucose to exit down its concentration gradient",
+        "Both SGLT1 and GLUT2 use ATP directly to transport glucose across their respective membranes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "SGLT1 (sodium-glucose linked transporter 1) is a secondary active transporter on the apical (luminal) membrane of enterocytes. It couples the downhill movement of Na+ (maintained by the basolateral Na+/K+-ATPase) with the uphill transport of glucose (2 Na+ per 1 glucose molecule), allowing glucose absorption even when luminal glucose concentration is lower than intracellular concentration. Once inside the cell, glucose exits via GLUT2 on the basolateral membrane, a facilitated diffusion transporter that allows glucose to move down its concentration gradient into the interstitial fluid and then into blood. Option B is incorrect because neither transporter uses ATP directly; SGLT1 uses secondary active transport (indirect ATP use via Na+/K+-ATPase). Option C reverses the mechanisms. Option D is incorrect because SGLT1 transports glucose and galactose, while fructose uses GLUT5.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Leptin, secreted by adipocytes, plays a central role in long-term energy balance regulation. Which set of effects does leptin produce when acting on the hypothalamus?",
+      "options": [
+        "Decreases appetite by inhibiting NPY/AgRP neurons and stimulating POMC/CART neurons, while increasing energy expenditure",
+        "Has no effect on appetite but directly stimulates lipolysis in peripheral fat tissue",
+        "Increases appetite by stimulating NPY/AgRP neurons and decreases energy expenditure",
+        "Increases appetite by stimulating POMC neurons and decreasing thyroid hormone output"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Leptin is an adipokine whose circulating levels are proportional to body fat mass. When fat stores are adequate, leptin acts on the arcuate nucleus of the hypothalamus to: (1) inhibit orexigenic (appetite-stimulating) NPY/AgRP neurons, reducing hunger signals; (2) stimulate anorexigenic (appetite-suppressing) POMC/CART neurons, which produce alpha-MSH that acts on MC4 receptors to suppress appetite; and (3) increase energy expenditure through sympathetic activation of thermogenesis. In obesity, leptin resistance can develop where the brain becomes less responsive to leptin despite high circulating levels. Option A describes the opposite of leptin's effects (these are the effects of leptin deficiency). Option C incorrectly pairs POMC stimulation with appetite increase. Option D ignores leptin's well-characterized central effects.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following is the correct order of protein digestion and the enzymes involved as food passes through the human digestive tract?",
+      "options": [
+        "Trypsin (stomach) \u2192 pepsin (duodenum) \u2192 carboxypeptidase (jejunum) \u2192 aminopeptidase (ileum)",
+        "Salivary protease \u2192 pepsin \u2192 trypsin \u2192 chymotrypsin \u2192 carboxypeptidase \u2192 aminopeptidase and dipeptidases at brush border",
+        "Pepsin \u2192 bile-activated lipase \u2192 trypsin \u2192 maltase \u2192 aminopeptidase",
+        "Pepsin (stomach) \u2192 trypsin, chymotrypsin, elastase, carboxypeptidase A/B (pancreatic) \u2192 aminopeptidase, dipeptidases, tripeptidases (brush border and intracellular)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Protein digestion begins in the stomach with pepsin (activated from pepsinogen by HCl), which cleaves proteins into large polypeptides by hydrolyzing peptide bonds adjacent to aromatic and hydrophobic amino acids at low pH. In the duodenum, pancreatic zymogens are activated in a cascade: enteropeptidase activates trypsinogen to trypsin, which then activates chymotrypsinogen, proelastase, and procarboxypeptidases. These endopeptidases (trypsin, chymotrypsin, elastase) and exopeptidases (carboxypeptidase A and B) further digest polypeptides to oligopeptides. At the brush border, membrane-bound aminopeptidases and dipeptidases complete hydrolysis to free amino acids, dipeptides, and tripeptides, which are absorbed. Option A incorrectly includes salivary protease (humans lack salivary proteases). Option C reverses pepsin and trypsin locations. Option D includes irrelevant enzymes (maltase digests maltose, not protein).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Scurvy, caused by vitamin C deficiency, leads to weakened connective tissue, poor wound healing, and bleeding gums. What is the biochemical basis for these symptoms?",
+      "options": [
+        "Vitamin C deficiency prevents calcium deposition in bone matrix, leading to skeletal fragility",
+        "Vitamin C is required as a cofactor for prolyl hydroxylase and lysyl hydroxylase, which hydroxylate proline and lysine residues in procollagen; without hydroxylation, collagen cannot form stable triple helices",
+        "Vitamin C directly cross-links collagen fibers in the extracellular matrix",
+        "Vitamin C is required for the synthesis of elastin, and its absence causes elastic tissue breakdown"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Vitamin C (ascorbic acid) serves as an essential cofactor for prolyl hydroxylase and lysyl hydroxylase, the enzymes that hydroxylate proline and lysine residues in procollagen chains. Hydroxyproline residues are critical for forming hydrogen bonds that stabilize the collagen triple helix structure. Without adequate vitamin C, underhydroxylated collagen cannot form stable triple helices, is poorly secreted, and is rapidly degraded. Since collagen is the most abundant protein in the body (constituting ~30% of total protein), providing structural support to skin, blood vessels, bones, tendons, and gums, its deficient production explains the multi-system manifestations of scurvy. Option B is incorrect because vitamin C does not directly cross-link collagen (lysyl oxidase does). Option C is incorrect because elastin synthesis does not require vitamin C. Option D confuses vitamin C with vitamin D's role in calcium metabolism.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Filter-feeding animals such as baleen whales and flamingos have convergently evolved specialized feeding structures. What is the key functional principle shared by all filter feeders?",
+      "options": [
+        "Filter feeders separate food particles from a fluid medium using specialized structures that act as sieves, with the mesh or gap size determining the size range of captured prey",
+        "Filter feeders use electrical fields to attract charged food particles to their filtering apparatus",
+        "Filter feeders inject digestive enzymes into the water to pre-digest prey before consumption",
+        "All filter feeders use mucus to trap food particles before engulfing them"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Filter feeding (suspension feeding) is a widespread strategy across marine and freshwater habitats, convergently evolved in diverse taxa. The fundamental principle involves passing a fluid medium (water) through a filtering structure that retains food particles while allowing water to pass. In baleen whales, keratinous baleen plates filter krill and small fish. In flamingos, lamellae in the bill filter algae and small crustaceans. In bivalve mollusks, gill cilia create water currents and trap particles in mucus. In sponges, choanocytes create flow and capture bacteria. The mesh size or pore size of the filter determines the minimum particle size captured. Option A is partially correct for some filter feeders (bivalves, sponges) but not all (baleen whales do not use mucus). Option C describes external digestion, found in some organisms but not the defining characteristic of filter feeding. Option D fabricates a non-existent mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about digestive enzymes and their specificity:\nS1: Amylase hydrolyzes alpha-1,4-glycosidic bonds in starch but cannot cleave alpha-1,6 branch points, which require isomaltase.\nS2: Trypsin cleaves peptide bonds on the carboxyl side of basic amino acids (lysine, arginine), while chymotrypsin cleaves on the carboxyl side of hydrophobic amino acids (phenylalanine, tryptophan, tyrosine).\nS3: Lactase (beta-galactosidase) hydrolyzes the beta-1,4-glycosidic bond in lactose to produce glucose and fructose.\nS4: Pancreatic lipase requires colipase as a cofactor to access the lipid-water interface of emulsified fat droplets, because bile salts would otherwise exclude lipase from the droplet surface.",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TFTT",
+        "TTTF"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Salivary and pancreatic amylase hydrolyze internal alpha-1,4-glycosidic bonds in amylose and amylopectin, producing maltose, maltotriose, and alpha-limit dextrins. The alpha-1,6 branch points in amylopectin require isomaltase (alpha-dextrinase) for hydrolysis. S2 is TRUE: Trypsin and chymotrypsin are both serine endopeptidases but have different substrate specificities determined by their active site geometry. Trypsin has a negatively charged aspartate in its specificity pocket, attracting positively charged lysine and arginine. Chymotrypsin has a hydrophobic specificity pocket, accommodating aromatic and hydrophobic residues. S3 is FALSE: Lactase cleaves the beta-1,4-glycosidic bond in lactose, but the products are glucose and GALACTOSE, not glucose and fructose. Sucrose (not lactose) yields glucose and fructose upon hydrolysis by sucrase. S4 is TRUE: Bile salts coat emulsified fat droplets, and their amphipathic nature tends to exclude the water-soluble lipase from the lipid interface. Colipase acts as an anchor, binding both the fat droplet and lipase, allowing lipase to access its substrate.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about hormonal regulation of digestion:\nS1: Gastrin stimulates HCl secretion and is released from G-cells in the gastric antrum in response to stomach distension, peptides in the stomach, and vagal stimulation.\nS2: Secretin is released from S-cells in the duodenum in response to acidic chyme and stimulates pancreatic bicarbonate secretion to neutralize the acid.\nS3: GIP (glucose-dependent insulinotropic peptide, formerly gastric inhibitory peptide) is released in response to glucose and fat in the duodenum and enhances insulin secretion from pancreatic beta cells.\nS4: Motilin is released from the duodenum during feeding and stimulates gastric acid secretion to prepare for additional food intake.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TFTT",
+        "TTFF"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Gastrin is the primary hormonal stimulator of gastric acid secretion. G-cells release gastrin in response to three stimuli: mechanical distension of the antral wall, the presence of peptides and amino acids from protein digestion, and acetylcholine from vagal nerve endings (cephalic and gastric phases). Gastrin acts on CCK-B receptors on parietal cells and ECL cells. S2 is TRUE: Secretin was the first hormone ever discovered (Bayliss and Starling, 1902). S-cells in the duodenal mucosa release secretin when luminal pH drops below ~4.5. Secretin stimulates pancreatic duct cells to secrete HCO3--rich fluid, neutralizing acidic chyme. S3 is TRUE: GIP (also called glucose-dependent insulinotropic peptide) is an incretin hormone released by K-cells in the duodenum and jejunum. It potentiates glucose-stimulated insulin release from beta cells, explaining why oral glucose produces a greater insulin response than intravenous glucose (the incretin effect). S4 is FALSE: Motilin is released during fasting (not feeding) and stimulates the migrating motor complex (MMC), the 'housekeeping' waves that sweep residual material through the GI tract between meals. It does not stimulate gastric acid secretion.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about essential nutrients:\nS1: Essential amino acids are those that cannot be synthesized by the organism and must be obtained from the diet.\nS2: All 20 standard amino acids are essential for humans because the human genome lacks genes for any amino acid biosynthetic pathways.\nS3: Essential fatty acids (linoleic acid and alpha-linolenic acid) are polyunsaturated fatty acids that serve as precursors for eicosanoids including prostaglandins and leukotrienes.\nS4: Water-soluble vitamins (B-complex and C) are generally not stored in significant quantities and must be consumed regularly, while fat-soluble vitamins (A, D, E, K) can be stored in liver and adipose tissue.",
+      "options": [
+        "TFTT",
+        "TTTT",
+        "TFFT",
+        "TFTF"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: Essential amino acids are defined as those an organism cannot synthesize de novo or cannot produce at sufficient rates to meet metabolic demands. For adult humans, there are 9 essential amino acids: histidine, isoleucine, leucine, lysine, methionine, phenylalanine, threonine, tryptophan, and valine. S2 is FALSE: Humans can synthesize 11 of the 20 standard amino acids (the non-essential amino acids) through various metabolic pathways. For example, alanine from pyruvate via transamination, glutamate from alpha-ketoglutarate, and serine from 3-phosphoglycerate. Only 9 are truly essential. S3 is TRUE: Linoleic acid (omega-6) and alpha-linolenic acid (omega-3) are essential because mammals lack the delta-12 and delta-15 desaturases needed to introduce double bonds beyond carbon 9. They serve as precursors for arachidonic acid and EPA/DHA, which are substrates for cyclooxygenase and lipoxygenase to produce prostaglandins, thromboxanes, and leukotrienes. S4 is TRUE: The distinction between water-soluble and fat-soluble vitamins has important practical implications for dietary requirements and toxicity risk.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about comparative digestive adaptations:\nS1: Herbivore intestines are generally longer relative to body length than carnivore intestines, reflecting the greater difficulty of extracting nutrients from plant material.\nS2: The cecum is enlarged in hindgut fermenters (horses, rabbits) and serves as a fermentation chamber analogous to the rumen in ruminants.\nS3: Coprophagy (re-ingestion of feces) in rabbits allows a second passage through the digestive tract, enabling absorption of microbial vitamins and proteins produced during cecal fermentation.\nS4: Carnivores have a longer large intestine than herbivores to allow extended water absorption from their protein-rich, low-fiber diet.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Herbivores need longer intestines because plant cell walls (cellulose, hemicellulose, lignin) require extended processing time and more surface area for nutrient extraction. A sheep may have an intestine 25 times its body length, while a cat's is only about 4 times body length. S2 is TRUE: In hindgut fermenters, the cecum (and proximal colon) houses anaerobic microorganisms that ferment cellulose to volatile fatty acids, similar to rumen fermentation but occurring after the main absorptive regions of the small intestine. This is less efficient than foregut fermentation because microbial products cannot be absorbed in the small intestine. S3 is TRUE: Rabbits produce two types of fecal pellets: soft cecotropes (rich in microbial vitamins and proteins from cecal fermentation) consumed directly from the anus, and hard fecal pellets that are discarded. Coprophagy allows rabbits to recover nutrients from cecal fermentation that were not absorbed during the first pass. S4 is FALSE: Carnivores generally have a SHORTER large intestine relative to body size because their diet is highly digestible with little indigestible residue, requiring less colonic processing.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the activity of three digestive enzymes at various pH values:\n\nEnzyme | pH 2 | pH 4 | pH 6 | pH 7 | pH 8 | pH 9\nEnzyme X | 95% | 40% | 5% | 0% | 0% | 0%\nEnzyme Y | 0% | 5% | 20% | 60% | 95% | 70%\nEnzyme Z | 0% | 0% | 10% | 50% | 85% | 60%\n\nBased on these pH activity profiles, which identification of the enzymes is most likely correct?",
+      "options": [
+        "X = salivary amylase, Y = pepsin, Z = trypsin",
+        "X = pepsin, Y = trypsin, Z = pancreatic lipase",
+        "X = pepsin, Y = sucrase, Z = salivary amylase",
+        "X = trypsin, Y = pepsin, Z = pancreatic lipase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The pH activity profiles reveal the optimal operating conditions for each enzyme. Enzyme X has maximum activity at pH 2 and no activity above pH 6, consistent with pepsin, which functions in the highly acidic gastric environment (optimal pH 1.5-2.5). Enzyme Y shows maximum activity at pH 8 with substantial activity at pH 7-9, consistent with trypsin, which operates in the mildly alkaline duodenal environment (optimal pH 7.5-8.5). Enzyme Z shows maximum activity at pH 8 but slightly shifted compared to Y, consistent with pancreatic lipase (optimal pH 7-8). Option A incorrectly assigns salivary amylase to pH 2 (amylase is optimal at pH 6.7-7.0). Option C misidentifies Y as sucrase (which is a brush border enzyme with optimal pH ~6). Option D reverses pepsin and trypsin pH optima.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A nutritional study compares three groups of rats over 8 weeks:\n\nGroup | Diet | Body weight change | Liver fat content | Blood glucose (fasting) | Serum leptin\nA | Normal chow | +5% | Normal | 90 mg/dL | 2 ng/mL\nB | High-fat diet | +35% | 3x normal | 140 mg/dL | 18 ng/mL\nC | High-fat diet + leptin injection | +15% | 1.5x normal | 110 mg/dL | 25 ng/mL\n\nWhich interpretation is best supported by these data?",
+      "options": [
+        "Leptin injection completely reverses all effects of the high-fat diet, restoring normal body weight and metabolism",
+        "Exogenous leptin partially attenuates high-fat diet-induced weight gain, hepatic steatosis, and hyperglycemia, but does not fully normalize these parameters, suggesting partial leptin resistance in obese animals",
+        "The high-fat diet group has low leptin because fat cells are damaged and cannot produce it",
+        "Leptin injection increases weight gain because leptin stimulates appetite"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data reveal several important patterns. Group B (high-fat diet without leptin) shows significant weight gain (+35%), hepatic fat accumulation (3x normal), fasting hyperglycemia (140 mg/dL), and elevated endogenous leptin (18 ng/mL). Despite high leptin levels, these rats continue to overeat and gain weight, indicating leptin resistance. Group C (high-fat diet plus exogenous leptin) shows attenuation of all parameters compared to Group B but not restoration to Group A levels: weight gain is reduced from 35% to 15%, liver fat from 3x to 1.5x, and glucose from 140 to 110 mg/dL. This partial response suggests that additional exogenous leptin can partially overcome leptin resistance but cannot fully compensate. Option A overstates the effect. Option C is incorrect because Group B has high leptin (18 ng/mL), reflecting their increased fat mass. Option D is contradicted by the reduced weight gain with leptin.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A comparative study measures gut transit time and digestive efficiency in five vertebrate species of similar body mass:\n\nSpecies | Diet | Gut length (x body length) | Transit time (hr) | Digestive efficiency (%)\nFrog | Insectivore | 2x | 8 | 82%\nRobin | Frugivore/Insectivore | 5x | 3 | 68%\nRabbit | Herbivore (hindgut fermenter) | 10x | 24 | 45%\nSheep | Herbivore (foregut fermenter) | 25x | 48 | 55%\nCat | Carnivore | 4x | 14 | 90%\n\nWhich statement best explains the observation that the sheep has higher digestive efficiency than the rabbit despite both being herbivores?",
+      "options": [
+        "Sheep have more acidic stomach environments that break down cellulose more effectively",
+        "Foregut fermentation in the rumen allows microbial breakdown of cellulose BEFORE the primary absorption site (small intestine), so microbial products and digested nutrients are absorbed during subsequent intestinal passage; hindgut fermenters process cellulose AFTER the small intestine, missing the primary absorptive region",
+        "Sheep simply eat more food per day than rabbits, so they absorb more total nutrients",
+        "Rabbits have too short a gut for effective cellulose digestion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The critical difference between foregut (ruminant) and hindgut fermentation lies in the anatomical position of the fermentation chamber relative to the small intestine. In ruminants, cellulose fermentation occurs in the rumen/reticulum BEFORE food enters the small intestine. The volatile fatty acids produced by rumen microbes are absorbed across the rumen wall, and when the microbes themselves are digested in the abomasum and small intestine, their protein and other nutrients are absorbed. In hindgut fermenters like rabbits, cellulose fermentation occurs in the cecum/colon AFTER the small intestine. VFAs are absorbed in the colon, but microbial protein and vitamins largely cannot be absorbed in the colon and are lost in feces (which is why rabbits practice coprophagy). This positional difference makes foregut fermentation inherently more efficient. Option A is incorrect because acid does not break down cellulose. Option C confuses intake with efficiency. Option D ignores the rabbit's 10x gut length.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a specific gut microbiome composition causally influences obesity rather than merely being correlated with it. Which experimental approach provides the strongest causal evidence?",
+      "options": [
+        "Compare gut microbiome composition between obese and lean humans using 16S rRNA sequencing",
+        "Transfer gut microbiota from obese and lean mice into germ-free (microbe-free) recipient mice of identical genetic background, fed identical diets, and compare weight gain, fat deposition, and metabolic parameters over 8 weeks",
+        "Feed obese mice probiotics and measure whether their weight decreases",
+        "Correlate body mass index with fecal bacterial diversity across a large human population"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Fecal microbiota transplantation (FMT) into germ-free mice is the gold standard for establishing causality in microbiome research. This approach was pioneered by the Gordon lab and demonstrates that: (1) germ-free mice receiving microbiota from obese donors gain significantly more fat than those receiving lean donor microbiota, even on identical diets; (2) the genetic background and diet are controlled, isolating the microbiome as the independent variable; (3) germ-free recipients start without any microbiome, avoiding confounding from pre-existing microbiota. Option A establishes correlation but not causation (the obesity could cause microbiome changes or vice versa). Option C tests a specific intervention but does not establish the causal direction of the overall relationship. Option D is purely correlational and cannot address causation due to numerous confounding variables.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To test whether secretin is released in response to duodenal acidification and stimulates pancreatic bicarbonate secretion, a researcher designs an experiment using anesthetized dogs. Which protocol includes appropriate controls?",
+      "options": [
+        "Infuse HCl into the duodenum and measure blood secretin levels and pancreatic juice volume; the control is not infusing anything",
+        "Infuse HCl into the duodenum and measure pancreatic juice bicarbonate content; the control is infusing distilled water; additionally, in a separate group, infuse HCl but pre-treat with secretin-receptor antagonist to confirm the pathway",
+        "Inject secretin intravenously and measure whether stomach pH decreases",
+        "Remove the duodenum entirely and measure whether pancreatic secretion ceases"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This experimental design provides multiple lines of evidence with appropriate controls. The HCl infusion group tests whether duodenal acidification triggers pancreatic bicarbonate secretion. The distilled water control (isotonic neutral pH solution would be even better) verifies that the response is specifically due to acid and not mechanical stimulation or volume effects. The secretin-receptor antagonist group provides critical mechanistic evidence: if blocking secretin receptors on pancreatic duct cells prevents the bicarbonate response despite duodenal acidification, this demonstrates that the pathway requires secretin signaling. Option A lacks a proper control (no infusion does not control for volume/mechanical effects). Option C tests the wrong direction (secretin stimulates pancreatic secretion, not gastric acid). Option D is too drastic and would affect multiple hormones and pathways beyond secretin.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following vitamins functions as a coenzyme in the citric acid cycle as part of FAD?",
+      "options": [
+        "Thiamine (B1)",
+        "Riboflavin (B2)",
+        "Niacin (B3)",
+        "Pyridoxine (B6)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Riboflavin (vitamin B2) is the precursor for the coenzymes FAD (flavin adenine dinucleotide) and FMN (flavin mononucleotide). FAD is a critical electron carrier in the citric acid cycle, specifically serving as the prosthetic group of succinate dehydrogenase (Complex II), which catalyzes the oxidation of succinate to fumarate while reducing FAD to FADH2. FAD is also essential in fatty acid beta-oxidation and several other oxidative reactions. Option A (niacin/B3) is the precursor for NAD+ and NADP+, which are also citric acid cycle coenzymes but are different from FAD. Option C (thiamine/B1) forms thiamine pyrophosphate (TPP), a coenzyme for pyruvate dehydrogenase and alpha-ketoglutarate dehydrogenase. Option D (pyridoxine/B6) forms pyridoxal phosphate (PLP), primarily involved in amino acid metabolism (transamination, decarboxylation).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The zymogen activation cascade in the duodenum begins with a single enzyme. Which enzyme initiates this cascade, and where is it produced?",
+      "options": [
+        "Enteropeptidase (enterokinase), produced by duodenal enterocytes, which activates trypsinogen to trypsin",
+        "Pepsin, carried from the stomach in acidic chyme",
+        "Trypsin, produced by pancreatic acinar cells",
+        "Secretin, released by S-cells in the duodenal mucosa"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Enteropeptidase (also called enterokinase) is a serine protease produced and anchored on the brush border membrane of duodenal enterocytes. It is the sole physiological activator of trypsinogen, cleaving a hexapeptide (Val-Asp-Asp-Asp-Asp-Lys) from the N-terminus to produce active trypsin. This is the critical initiation step because trypsin then activates all other pancreatic zymogens: chymotrypsinogen to chymotrypsin, proelastase to elastase, procarboxypeptidases to carboxypeptidases, and prophospholipase A2 to phospholipase A2. Trypsin also autocatalytically activates additional trypsinogen molecules. Option A is incorrect because trypsin is the active form, and it requires enteropeptidase for initial activation. Option C is incorrect because pepsin is inactivated by the alkaline duodenal pH. Option D is incorrect because secretin is a hormone, not a protease.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Iron absorption in the duodenum involves several specialized proteins. Which sequence correctly describes iron uptake from the intestinal lumen to the blood?",
+      "options": [
+        "Fe2+ \u2192 absorbed by passive diffusion \u2192 directly enters blood as free iron \u2192 binds albumin for transport",
+        "Fe3+ \u2192 absorbed intact by receptor-mediated endocytosis \u2192 stored in enterocyte lysosomes \u2192 released into blood by exocytosis",
+        "Fe2+ \u2192 transported by SGLT1 into enterocyte \u2192 converted to hemosiderin \u2192 exported by DMT1 into blood",
+        "Fe3+ \u2192 reduced to Fe2+ by duodenal cytochrome b (Dcytb) \u2192 transported into enterocyte by DMT1 (divalent metal transporter 1) \u2192 stored as ferritin or exported via ferroportin \u2192 oxidized to Fe3+ by hephaestin \u2192 bound to transferrin in blood"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Iron absorption is tightly regulated due to iron's toxicity in excess and the lack of a regulated excretory pathway. Dietary non-heme iron is predominantly in the ferric (Fe3+) form, which must first be reduced to the ferrous (Fe2+) form by duodenal cytochrome b (Dcytb), a ferrireductase on the apical brush border membrane. Fe2+ is then transported into the enterocyte by DMT1 (divalent metal transporter 1, also called NRAMP2). Inside the cell, iron can be stored as ferritin (if iron is sufficient) or exported across the basolateral membrane by ferroportin, the only known iron exporter in mammals. Upon export, Fe2+ is oxidized back to Fe3+ by the copper-dependent ferroxidase hephaestin (membrane-bound) or ceruloplasmin (in plasma), and Fe3+ binds transferrin for blood transport. Hepcidin, a liver-derived peptide hormone, regulates iron absorption by promoting ferroportin degradation. Options B, C, and D all contain fundamental errors in the mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The migrating motor complex (MMC) is a pattern of electromechanical activity in the gastrointestinal tract. Under what conditions does the MMC operate, and what is its function?",
+      "options": [
+        "During active digestion of a meal, sweeping chyme rapidly through the small intestine",
+        "During the interdigestive (fasting) period, sweeping residual undigested material, bacteria, and desquamated cells through the GI tract to prevent bacterial overgrowth",
+        "Continuously, regardless of feeding state, maintaining a constant rate of peristalsis",
+        "Only during sleep, cleaning the GI tract while conscious control of digestion is absent"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The migrating motor complex (MMC) is a cyclical pattern of electromechanical activity that occurs during the interdigestive (fasting) state, approximately every 90-120 minutes. It consists of four phases, with Phase III being the most recognizable: a band of strong peristaltic contractions that migrates from the stomach through the small intestine to the terminal ileum, sweeping ahead residual food particles, bacteria, dead mucosal cells, and secretions. This 'housekeeping' function prevents bacterial overgrowth in the small intestine. The MMC is abolished by feeding (when segmentation and peristalsis take over for digestion) and is regulated by motilin and the enteric nervous system. Option A is incorrect because the MMC operates during fasting, not digestion. Option C is incorrect because feeding interrupts the MMC. Option D is incorrect because the MMC occurs during waking fasting states too.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following animals has the most specialized digestive adaptation for dealing with its toxic diet?",
+      "options": [
+        "A koala, which has an elongated cecum containing bacteria that detoxify eucalyptus leaf tannins and phenolic compounds, along with cytochrome P450 enzymes in its liver for additional detoxification",
+        "A cow, which has multiple stomach chambers for cellulose digestion",
+        "A human, which has a gallbladder for fat digestion",
+        "A shark, which has a spiral valve intestine for increasing absorptive surface area"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Koalas have evolved remarkable specializations for their exclusively eucalyptus leaf diet, which is toxic to most other mammals. Eucalyptus leaves contain high concentrations of tannins, terpenes, phenolic compounds, and cyanogenic glycosides. Koalas possess: (1) an extraordinarily long cecum (up to 2 meters, the longest relative to body size of any mammal) housing specialized bacteria that can break down some of these toxins; (2) highly expressed hepatic cytochrome P450 (CYP) enzymes, particularly CYP2C subfamily members, that metabolize and detoxify phenolic compounds; (3) selective feeding on less-toxic eucalyptus species and leaf age classes. Option B describes cellulose digestion, which is not primarily about toxicity. Option C is a common adaptation not specialized for toxic diets. Option D is an absorptive surface area adaptation, not a detoxification specialization.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ghrelin, often called the 'hunger hormone,' is produced primarily by the stomach. Which of the following correctly describes ghrelin's actions?",
+      "options": [
+        "Ghrelin inhibits gastric motility and reduces the rate of gastric emptying",
+        "Ghrelin levels rise during fasting and stimulate appetite by activating NPY/AgRP neurons in the arcuate nucleus of the hypothalamus; it also stimulates growth hormone release from the anterior pituitary",
+        "Ghrelin is released in response to high blood glucose and promotes insulin secretion",
+        "Ghrelin levels rise after a meal and promote satiety by acting on the ventromedial hypothalamus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ghrelin is a 28-amino acid peptide hormone secreted primarily by P/D1 (or X/A-like) cells in the gastric fundus. Its levels rise during fasting (peaking just before meals) and fall rapidly after eating. Ghrelin crosses the blood-brain barrier and acts on the growth hormone secretagogue receptor (GHSR) on NPY/AgRP neurons in the arcuate nucleus, stimulating orexigenic signaling and increasing appetite. It also acts on the anterior pituitary to stimulate growth hormone release (hence its name, derived from the Proto-Indo-European root 'ghre' meaning grow). Additionally, ghrelin promotes gastric motility and acid secretion, preparing the stomach for food. Option A reverses the temporal pattern (ghrelin falls after meals) and target (the ventromedial hypothalamus is a satiety center). Option C describes the opposite effect. Option D describes an incretin-like function that ghrelin does not possess.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the enteric nervous system (ENS):\nS1: The ENS contains approximately 200-600 million neurons, earning it the nickname 'the second brain,' and can coordinate digestive functions independently of CNS input.\nS2: The myenteric (Auerbach's) plexus lies between the circular and longitudinal muscle layers and primarily controls GI motility.\nS3: The submucosal (Meissner's) plexus lies within the submucosa and primarily controls secretion and blood flow.\nS4: The ENS communicates exclusively through serotonin (5-HT) as its sole neurotransmitter.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: The ENS is the largest division of the peripheral nervous system, containing 200-600 million neurons (comparable to the spinal cord). It can operate autonomously, coordinating peristalsis, segmentation, secretion, and local blood flow without input from the brain or spinal cord, though it normally receives modulatory input from the vagus nerve and sympathetic system. S2 is TRUE: The myenteric plexus (Auerbach's plexus) is located between the circular and longitudinal smooth muscle layers of the muscularis externa. It primarily coordinates GI motility, including peristalsis and the migrating motor complex, through excitatory (ACh, substance P) and inhibitory (NO, VIP) motor neurons. S3 is TRUE: The submucosal plexus (Meissner's plexus) is located within the submucosa, primarily in the small and large intestines. It regulates mucosal secretion (including electrolyte and water secretion), local blood flow, and absorption. S4 is FALSE: The ENS uses more than 30 neurotransmitters, including acetylcholine, norepinephrine, serotonin, dopamine, nitric oxide, VIP, substance P, and ATP. Serotonin is important (95% of body serotonin is in the gut) but is far from the sole neurotransmitter.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about carbohydrate digestion:\nS1: Salivary amylase begins starch digestion in the mouth and continues working in the stomach until inactivated by gastric acid.\nS2: Pancreatic amylase is the primary enzyme for starch digestion in the small intestine, producing maltose, maltotriose, and alpha-limit dextrins.\nS3: The brush border enzymes maltase, sucrase, and lactase are located on the apical surface of enterocytes and hydrolyze disaccharides to monosaccharides for absorption.\nS4: Cellulose is digested by human pancreatic amylase because it contains the same glucose monomers as starch.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Salivary amylase (ptyalin) begins hydrolyzing starch in the mouth at its optimal pH of ~6.7. When the food bolus enters the stomach, amylase continues to work in the interior of the bolus before gastric acid penetrates and lowers the pH below 4, which denatures the enzyme. This can account for significant starch digestion during the meal. S2 is TRUE: Pancreatic alpha-amylase, secreted by acinar cells, is the major enzyme for luminal starch digestion. Like salivary amylase, it cleaves internal alpha-1,4-glycosidic bonds, but at its optimal pH of ~7.5. The products are the disaccharide maltose, the trisaccharide maltotriose, and alpha-limit dextrins (short-branched oligosaccharides). S3 is TRUE: These brush border enzymes complete carbohydrate digestion. Maltase cleaves maltose to two glucose molecules. Sucrase cleaves sucrose to glucose and fructose. Lactase cleaves lactose to glucose and galactose. S4 is FALSE: Cellulose contains beta-1,4-glycosidic bonds, which human amylase cannot cleave (amylase is specific for alpha bonds). This is why dietary fiber passes through the human GI tract largely undigested.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A clinical study measures serum levels of various gastrointestinal hormones in response to a standard meal:\n\nHormone | Fasting level | 15 min post-meal | 60 min post-meal | 180 min post-meal\nGastrin | 50 pg/mL | 200 pg/mL | 120 pg/mL | 55 pg/mL\nCCK | 5 pM | 45 pM | 20 pM | 6 pM\nSecretin | 3 pM | 25 pM | 15 pM | 4 pM\nGhrelin | 800 pg/mL | 200 pg/mL | 350 pg/mL | 700 pg/mL\nGIP | 20 pM | 150 pM | 80 pM | 25 pM\n\nA patient presents with normal gastrin, CCK, secretin, and GIP responses but ghrelin levels that remain at 800 pg/mL after eating. What is the most likely consequence?",
+      "options": [
+        "The patient will have excessive gastric acid secretion",
+        "The patient will experience persistent hunger and difficulty achieving satiety after meals, potentially contributing to overeating and obesity",
+        "The patient will develop vitamin B12 deficiency",
+        "The patient will have accelerated gastric emptying causing dumping syndrome"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ghrelin normally drops sharply after a meal (from 800 to 200 pg/mL in the normal data), signaling satiety. If ghrelin levels remain persistently elevated at 800 pg/mL despite eating, the patient lacks the normal postprandial ghrelin suppression. Since ghrelin is the primary orexigenic (appetite-stimulating) hormone, persistent high levels would continuously stimulate NPY/AgRP neurons in the hypothalamic arcuate nucleus, maintaining hunger signals even after adequate food intake. This would result in persistent hunger, difficulty achieving satiety, and likely overeating, contributing to weight gain and obesity. This phenomenon is relevant to Prader-Willi syndrome, where patients have elevated ghrelin levels and insatiable appetite. Option A is unlikely because gastric acid is primarily regulated by gastrin and histamine. Option C is unrelated to ghrelin. Option D is not a primary effect of ghrelin.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the relative abundance of gut bacteria in herbivorous and carnivorous mammals:\n\nBacterial phylum | Herbivore gut (%) | Carnivore gut (%)\nFirmicutes | 55% | 40%\nBacteroidetes | 35% | 15%\nProteobacteria | 3% | 30%\nActinobacteria | 5% | 10%\nFusobacteria | 2% | 5%\n\nWhat functional explanation best accounts for the elevated Bacteroidetes in herbivores?",
+      "options": [
+        "Bacteroidetes produce urease to help herbivores recycle urea nitrogen",
+        "Bacteroidetes are abundant in herbivores because they encode extensive polysaccharide-degrading enzyme repertoires (glycoside hydrolases, polysaccharide lyases) specialized for breaking down plant cell wall components that the host cannot digest",
+        "Bacteroidetes outcompete other bacteria in the acidic herbivore gut environment",
+        "Bacteroidetes are simply more common in plant material and passively accumulate in herbivore guts"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bacteroidetes (particularly the genera Bacteroides, Prevotella, and Fibrobacter) are enriched in herbivore guts because they possess extensive genomic repertoires for polysaccharide degradation. Their genomes encode large numbers of glycoside hydrolases (GH), polysaccharide lyases (PL), carbohydrate esterases (CE), and polysaccharide utilization loci (PUL) that enable degradation of complex plant cell wall polysaccharides including cellulose, hemicellulose, pectin, and xylans. These enzymes break down plant structural carbohydrates into simple sugars and volatile fatty acids that the host can absorb. The high Proteobacteria abundance in carnivores reflects their role in protein fermentation and amino acid metabolism. Option A describes a function of some bacteria but is not specific to Bacteroidetes or the primary explanation for their herbivore enrichment. Option C is incorrect because the herbivore rumen has a near-neutral pH (~6.5). Option D ignores the active selection of these bacteria by the gut environment.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A student wants to test whether pepsin activity is pH-dependent and determine its optimal pH. Which experimental setup is most appropriate?",
+      "options": [
+        "Add pepsin to protein substrate at a single pH and measure how long it takes for the protein to be completely digested",
+        "Prepare a series of test tubes with identical concentrations of pepsin and egg albumin substrate at pH values of 1, 2, 3, 4, 5, 6, 7, 8, and 9 (using appropriate buffers), incubate for a fixed time at 37\u00b0C, and quantify the amount of peptide products (e.g., by Biuret or ninhydrin assay) or remaining substrate (by SDS-PAGE or spectrophotometry)",
+        "Add increasing amounts of pepsin to protein at neutral pH and measure which concentration produces the most digestion",
+        "Incubate pepsin with protein at 37\u00b0C and observe whether the solution becomes clearer over time"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This experimental design follows the scientific method rigorously for determining the pH optimum of an enzyme. The independent variable is pH (systematically varied from pH 1-9 using buffers). The dependent variable is the amount of protein digested (quantified by an appropriate assay). All other variables are controlled: identical enzyme concentration, identical substrate concentration and type, identical incubation time, and identical temperature (37\u00b0C). The use of multiple pH values across a wide range ensures the full activity curve is captured. Quantitative measurement of products or remaining substrate provides objective data. Option A uses only one pH and cannot determine the optimum. Option C varies enzyme concentration rather than pH. Option D provides only qualitative observation without systematically testing pH.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher discovers that mice fed a diet supplemented with a specific prebiotic fiber show improved intestinal barrier function and reduced systemic inflammation. To determine whether this effect is mediated through the gut microbiome or is a direct effect of the fiber on epithelial cells, which experiment provides the most definitive answer?",
+      "options": [
+        "Compare the effect in conventional mice versus germ-free mice; if the benefit requires gut microbiota, it will be absent in germ-free animals",
+        "Measure the fiber concentration in blood to determine if it is systemically absorbed",
+        "Test the fiber's effect on epithelial cells in vitro using a cell culture system without bacteria",
+        "Sequence the gut microbiome of mice receiving the fiber versus control mice"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Comparing conventional (microbiota-replete) mice with germ-free (axenic) mice is the most definitive approach for determining whether the microbiome is required for a dietary effect. If the prebiotic fiber improves barrier function in conventional mice but NOT in germ-free mice, the effect requires microbial mediation (e.g., microbial fermentation of the fiber produces short-chain fatty acids like butyrate, which nourish colonocytes and enhance barrier function). If the benefit persists in germ-free mice, the fiber has a direct, microbiome-independent effect on the epithelium. This clean comparison eliminates the confounding variable of microbial presence. Option B determines absorption but not mechanism of action. Option C tests direct effects but the in vitro context may not recapitulate in vivo conditions. Option D shows microbiome changes but correlation does not prove these changes mediate the beneficial effect.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Spider silk production requires a high proportion of glycine and alanine residues. Some orb-weaving spiders consume and recycle their old webs. What nutritional advantage does this behavior provide?",
+      "options": [
+        "It recycles amino acids, particularly glycine and alanine, that would otherwise need to be obtained from prey captures, reducing the metabolic cost of silk production by up to 30%",
+        "It stimulates silk gland activity through mechanical stretching of the digestive tract",
+        "It provides essential fatty acids for maintaining the spider's nervous system function",
+        "It provides water and minerals absorbed from atmospheric moisture trapped in the web"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Web recycling (silk ingestion) is an elegant nutritional adaptation. Spider silk is composed primarily of the proteins spidroin 1 and 2, which are rich in glycine (~42%) and alanine (~25%). Producing new silk is metabolically expensive, requiring significant amino acid resources. By consuming their old webs (which takes only a few minutes), spiders can recover and recycle 80-90% of the amino acids in the silk, reducing the need to obtain these amino acids from prey. Studies show web recycling can reduce the overall energetic cost of web building by up to 30%, allowing spiders to rebuild webs daily (as many orb-weavers do) without an unsustainable metabolic burden. Option A is incorrect because silk is protein-based and provides amino acids, not fatty acids. Option C greatly overestimates the mineral content of silk. Option D fabricates a non-existent mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The liver performs over 500 distinct metabolic functions. In the context of nutrition, which set of hepatic functions is most critical for processing absorbed nutrients after a meal?",
+      "options": [
+        "Red blood cell production, antibody synthesis, and hormone secretion",
+        "Mechanical breakdown of food, mucus secretion, and nutrient absorption",
+        "Vitamin D activation, gastric acid regulation, and insulin secretion",
+        "Bile production, glycogen storage, gluconeogenesis, amino acid deamination, urea synthesis, cholesterol metabolism, detoxification of absorbed substances, and plasma protein synthesis"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The liver receives nutrient-rich blood from the intestines via the portal vein and processes these nutrients for the body's use. Key nutritional functions include: (1) bile production for fat digestion; (2) glycogen synthesis and storage (glycogenesis) from absorbed glucose, and glycogen breakdown (glycogenolysis) and gluconeogenesis during fasting; (3) amino acid deamination and transamination for energy production and interconversion; (4) urea synthesis from toxic ammonia via the urea cycle; (5) cholesterol synthesis, lipoprotein metabolism, and ketogenesis; (6) first-pass detoxification of absorbed xenobiotics and drugs via cytochrome P450 enzymes; (7) synthesis of plasma proteins (albumin, clotting factors, transport proteins); (8) storage of vitamins (A, D, B12) and iron. Option B lists functions of bone marrow, B cells, and endocrine glands. Option C mixes functions of multiple organs. Option D describes GI tract functions, not liver functions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "A vampire bat (Desmodus rotundus) feeds exclusively on blood. Which digestive adaptation is most critical for this extreme dietary specialization?",
+      "options": [
+        "An extremely elongated intestine with enlarged villi for maximizing nutrient absorption from the low-calorie blood diet",
+        "Symbiotic bacteria that synthesize all essential vitamins missing from the blood diet",
+        "A highly efficient renal system that rapidly excretes the enormous water load from blood meals, and strong anticoagulant saliva (draculin, desmoteplase) that keeps the wound bleeding, combined with a tubular stomach for rapid processing of the liquid diet",
+        "A highly acidic stomach (pH < 1) that kills blood-borne pathogens"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Vampire bats face unique physiological challenges with their blood-only diet. Blood is approximately 80% water, so a 30g bat consuming 25-30 mL of blood nearly doubles its body weight per meal. The bat must rapidly excrete this water load to reduce mass for flight home, producing highly dilute urine within minutes of feeding (kidneys switch from concentrating to diluting mode). The bat's saliva contains potent anticoagulants: draculin (a glycoprotein that inhibits coagulation factors IXa and Xa) and desmoteplase (a plasminogen activator that dissolves clots), keeping the prey's wound flowing during the 30-minute feeding bout. The stomach is highly tubular and elongated, adapted for rapid processing of liquid meals. Option A is partially true but not the most critical specialization. Option B is incorrect because the intestine is actually relatively short. Option D overestimates the role of symbionts.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Kwashiorkor and marasmus are both forms of protein-energy malnutrition but present with different symptoms. Which comparison is most accurate?",
+      "options": [
+        "Kwashiorkor results from protein deficiency with relatively adequate caloric intake, presenting with edema due to reduced plasma albumin and oncotic pressure; marasmus results from total caloric and protein deficiency, presenting with severe muscle wasting and emaciation",
+        "Marasmus results from protein deficiency with adequate calories, causing edema; kwashiorkor results from total caloric deficiency, causing wasting",
+        "Both conditions present identically with generalized edema and muscle wasting",
+        "Kwashiorkor affects only children under 2 years while marasmus affects only adults"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Kwashiorkor typically occurs when children are weaned onto a protein-poor but calorie-sufficient diet (e.g., starchy gruels). The protein deficiency leads to reduced hepatic synthesis of plasma albumin, decreasing blood colloid osmotic pressure and causing fluid to shift from capillaries to interstitial spaces (edema), particularly in the abdomen (ascites), legs, and face. Other signs include fatty liver (impaired lipoprotein synthesis), skin lesions, and hair discoloration. Marasmus results from chronic total caloric and protein deficiency. The body catabolizes both fat stores and muscle protein for energy, leading to severe wasting, loss of subcutaneous fat, skeletal appearance, and generalized emaciation without edema (because protein deficiency is proportional to overall caloric deficit). Option A reverses the two conditions. Option C ignores the distinctive presentation differences. Option D is incorrect as both can occur at various ages.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the gastric mucosal barrier and protection mechanisms:\nS1: Goblet cells in the gastric mucosa secrete a mucus-bicarbonate barrier that maintains a pH gradient from ~1-2 in the lumen to ~7 at the epithelial surface.\nS2: Prostaglandins (PGE2 and PGI2) produced by the gastric mucosa stimulate mucus and bicarbonate secretion while inhibiting acid secretion, providing cytoprotection.\nS3: NSAIDs (nonsteroidal anti-inflammatory drugs) protect the stomach by enhancing prostaglandin production through COX-1 activation.\nS4: Helicobacter pylori undermines mucosal defense by producing urease, which generates ammonia to neutralize local acid, allowing the bacterium to colonize the gastric epithelium.",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Gastric surface mucous cells (not goblet cells, which are in the intestine, but the concept is correct for gastric mucous cells) secrete a 0.2-0.6 mm thick mucus layer containing entrapped HCO3-. This creates a pH gradient from the hostile luminal pH of 1-2 to a near-neutral pH of 6-7 at the epithelial surface, protecting the cells from acid and pepsin. S2 is TRUE: Prostaglandins, particularly PGE2 and PGI2, are critical cytoprotective mediators. They stimulate mucus and bicarbonate secretion, maintain mucosal blood flow, promote epithelial cell proliferation, and inhibit acid secretion. These are produced constitutively by COX-1 in the gastric mucosa. S3 is FALSE: NSAIDs do the opposite. They INHIBIT cyclooxygenase (particularly COX-1), reducing prostaglandin synthesis and thereby compromising mucosal defense. This is why chronic NSAID use is a major risk factor for peptic ulcers and gastric bleeding. S4 is TRUE: H. pylori produces large amounts of urease, converting urea to ammonia and CO2. The ammonia neutralizes gastric acid in the bacterium's immediate microenvironment, allowing survival and colonization of the gastric mucosa. This chronic infection can cause gastritis, peptic ulcers, and gastric cancer.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the activity of lactase in intestinal biopsies from individuals of different ages and ancestries:\n\nGroup | Age range | Lactase activity (U/g protein)\nNorthern European adults | 25-40 | 35 \u00b1 8\nNorthern European children | 1-5 | 52 \u00b1 12\nEast Asian adults | 25-40 | 4 \u00b1 2\nEast Asian children | 1-5 | 48 \u00b1 10\nWest African (pastoral) adults | 25-40 | 30 \u00b1 7\nWest African (pastoral) children | 1-5 | 50 \u00b1 11\n\nWhich evolutionary interpretation best explains the adult lactase activity pattern?",
+      "options": [
+        "Northern Europeans and East Asians have different diets that directly regulate lactase gene expression in adults",
+        "Lactase persistence in Northern European and West African pastoral adults is a convergent evolutionary adaptation to dairying cultures, driven by independent mutations in the lactase gene enhancer that prevent the normal developmental downregulation of lactase expression",
+        "East Asian adults have a genetic mutation that actively destroys lactase enzyme",
+        "All populations have identical lactase genetics; the differences are solely due to recent dietary habits"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data show a striking pattern: all children regardless of ancestry have similarly high lactase activity (~48-52 U/g), but adult activity varies dramatically. Northern European and West African pastoral adults maintain high activity (~30-35 U/g) while East Asian adults show severe decline (~4 U/g). This reflects lactase persistence, a genetically determined trait that evolved convergently in populations with a long history of dairy farming. The ancestral mammalian condition is lactase non-persistence (downregulation after weaning), seen in East Asian adults. Independent mutations in the cis-regulatory enhancer region upstream of the LCT gene (e.g., -13910*T in Europeans, -14010*C in East Africans) prevent the normal developmental downregulation, maintaining lactase production into adulthood. This is a classic example of gene-culture coevolution. Option A ignores the genetic basis. Option C is incorrect because the decline is developmental downregulation, not enzyme destruction. Option D contradicts the well-documented genetic differences.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A nutritionist wants to determine whether a specific dietary supplement improves iron absorption in iron-deficient patients. Which study design provides the most reliable evidence?",
+      "options": [
+        "Give the supplement to 10 iron-deficient patients and measure their serum ferritin after 3 months",
+        "A randomized, double-blind, placebo-controlled trial where iron-deficient patients are randomly assigned to receive either the supplement or an identical-looking placebo along with a standardized iron-containing meal, with iron absorption measured using stable isotope-labeled iron (58Fe) and dual-isotope technique to calculate fractional absorption",
+        "Compare iron levels in populations that traditionally consume the supplement versus those that do not",
+        "Test the supplement's effect on iron absorption in a cell culture model of intestinal epithelium"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The gold standard for measuring iron absorption in humans is the stable isotope technique combined with a randomized controlled trial design. Each patient consumes a meal containing iron labeled with a stable isotope (e.g., 58Fe, which can be distinguished from natural 56Fe by mass spectrometry). Fractional absorption is calculated by measuring the incorporation of the isotope label into red blood cells 14 days after consumption. The randomized, double-blind, placebo-controlled design eliminates bias: randomization prevents selection bias, blinding prevents placebo effects and observer bias, and the placebo control provides a baseline for comparison. Option A lacks a control group and blinding. Option C is observational with numerous confounders (diet, genetics, iron status, parasitic infections). Option D may not reflect in vivo physiology.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Intracellular digestion, where food particles are engulfed by phagocytosis and digested within food vacuoles, is the primary feeding mechanism in which organisms?",
+      "options": [
+        "Sponges and protozoans, where individual cells engulf food particles that are digested by lysosomal enzymes within food vacuoles",
+        "All vertebrates",
+        "Insects, which use Malpighian tubules for intracellular digestion",
+        "Cnidarians exclusively, which rely entirely on intracellular digestion in gastrodermal cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Intracellular digestion is the most primitive form of digestion, occurring within individual cells. In sponges (Porifera), choanocytes (collar cells) create water currents and trap food particles, which are then phagocytosed and digested within food vacuoles by lysosomal enzymes. Archaeocytes also contribute to intracellular digestion and nutrient distribution. In protozoans (e.g., Paramecium, Amoeba), food vacuoles formed by phagocytosis or cytostome ingestion fuse with lysosomes for enzymatic digestion. This contrasts with extracellular digestion, where enzymes are secreted into a digestive cavity. Option A is incorrect because vertebrates primarily use extracellular digestion. Option C is incorrect because Malpighian tubules are excretory structures, not digestive. Option D is partially correct (cnidarians use some intracellular digestion in gastrodermal cells) but they also have significant extracellular digestion in the gastrovascular cavity, and they are not the primary users.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Hepcidin, a peptide hormone produced by hepatocytes, is the master regulator of systemic iron homeostasis. How does hepcidin control iron levels?",
+      "options": [
+        "Hepcidin stimulates transferrin synthesis in the liver to increase iron transport capacity",
+        "Hepcidin activates erythropoietin production to increase red blood cell production and iron utilization",
+        "Hepcidin stimulates iron absorption by upregulating DMT1 expression on enterocytes",
+        "Hepcidin binds to ferroportin on enterocytes and macrophages, causing its internalization and degradation, thereby blocking iron export into the blood and reducing serum iron levels"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hepcidin is a 25-amino acid peptide hormone that serves as the central regulator of iron homeostasis. Its primary mechanism is to bind to ferroportin, the sole known iron exporter on cell membranes. When hepcidin binds ferroportin, it triggers phosphorylation, ubiquitination, internalization, and lysosomal degradation of the transporter. This prevents iron export from: (1) duodenal enterocytes (blocking dietary iron absorption), (2) hepatocytes (blocking iron release from stores), and (3) reticuloendothelial macrophages (blocking iron recycling from senescent red blood cells). The net effect is reduced serum iron. Hepcidin production increases when iron stores are adequate (via the BMP-SMAD signaling pathway sensing liver iron) and during inflammation (via IL-6-JAK-STAT3 pathway), and decreases during iron deficiency, hypoxia, and increased erythropoiesis. Option A describes the opposite of hepcidin's effect. Options C and D describe unrelated pathways.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The crop in birds serves primarily as:",
+      "options": [
+        "A fermentation chamber similar to the rumen where cellulose is broken down by symbiotic bacteria",
+        "A muscular grinding organ that mechanically processes food using ingested grit and stones",
+        "A secretory organ that produces hydrochloric acid and pepsinogen for chemical digestion",
+        "A temporary storage organ that allows food to be softened before passage to the proventriculus and gizzard"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The crop is a thin-walled, distensible pouch in the esophagus of many bird species. Its primary function is temporary food storage. This allows birds to ingest food rapidly (reducing exposure time to predators) and then process it gradually. In the crop, food is moistened and softened by mucus and water before being passed to the proventriculus (glandular stomach, which secretes HCl and pepsinogen) and then the gizzard (ventriculus or muscular stomach, which mechanically grinds food). In pigeons and some other species, the crop additionally produces 'crop milk' (a nutritious secretion for feeding chicks) under the influence of prolactin. Option A describes ruminant fermentation, which does not occur in most bird crops. Option B describes the gizzard, not the crop. Option D describes the proventriculus.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Short-chain fatty acids (SCFAs) produced by microbial fermentation of dietary fiber in the colon include acetate, propionate, and butyrate. Which SCFA is the preferred energy source for colonocytes?",
+      "options": [
+        "Butyrate, which provides approximately 60-70% of the colonocyte energy requirement through beta-oxidation in their mitochondria",
+        "Acetate, which is transported to colonocytes via monocarboxylate transporters",
+        "Propionate, which is converted to glucose via gluconeogenesis in colonocytes",
+        "Lactate, which is the primary fermentation product absorbed in the colon"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Butyrate is the preferred and primary energy substrate for colonocytes, providing approximately 60-70% of their total energy needs. Colonocytes absorb butyrate via monocarboxylate transporter 1 (MCT1) and sodium-coupled monocarboxylate transporter (SMCT1) on their apical membrane, then oxidize it through beta-oxidation and the citric acid cycle in their mitochondria. Butyrate also has important regulatory functions: it inhibits histone deacetylases (HDAC inhibitor), promotes cell differentiation, induces apoptosis of cancer cells, and strengthens the intestinal barrier by upregulating tight junction proteins. Acetate (Option A) is largely absorbed into portal blood and used by peripheral tissues and liver. Propionate (Option B) is primarily extracted by the liver for gluconeogenesis, not used by colonocytes. Lactate (Option D) is a minor fermentation product in the colon.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "An obligate intracellular parasite like Toxoplasma gondii must obtain certain essential nutrients from its host cell. Which nutritional strategy does Toxoplasma employ?",
+      "options": [
+        "It scavenges purines, certain amino acids, and lipids from the host cell cytoplasm because it has lost the biosynthetic pathways for these molecules during its evolution as an obligate parasite",
+        "It synthesizes all required amino acids de novo using enzymes retained from a free-living ancestor",
+        "It induces host cell lysis to access nutrients from surrounding tissue fluid",
+        "It photosynthesizes using a retained chloroplast to generate all necessary organic molecules"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As an obligate intracellular parasite, Toxoplasma gondii has undergone reductive evolution, losing many biosynthetic pathways that free-living organisms maintain. Notably, it is a purine auxotroph (cannot synthesize purines de novo and must scavenge them from the host), has lost pathways for several amino acids, and depends on host-derived lipids for membrane biogenesis. The parasitophorous vacuole membrane is modified to contain nutrient channels and transporters that allow selective import of host cell metabolites. Interestingly, Toxoplasma retains a non-photosynthetic plastid (the apicoplast, derived from a secondary endosymbiosis event) that synthesizes fatty acids and isoprenoids via pathways absent in the mammalian host, making the apicoplast an attractive drug target. Option A contradicts the metabolic streamlining typical of obligate parasites. Option C is incorrect because while Toxoplasma has a plastid, it is not photosynthetic. Option D describes a lytic parasite strategy that would destroy its niche.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The gastric phase of acid secretion accounts for the largest proportion (~60%) of total acid output. Which combination of stimuli during this phase stimulates parietal cells?",
+      "options": [
+        "Gastrin from G-cells, histamine from ECL cells, and acetylcholine from vagal postganglionic neurons \u2014 all three stimulate parietal cells through different receptors and their effects are potentiated synergistically",
+        "Gastrin alone, which is the only stimulant of acid secretion",
+        "Norepinephrine from sympathetic neurons acting on beta-2 receptors on parietal cells",
+        "Secretin from S-cells and somatostatin from D-cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "During the gastric phase, three stimulatory pathways converge on parietal cells: (1) Gastrin, released from antral G-cells in response to distension and peptides, acts on CCK-B receptors on parietal cells (and also stimulates ECL cells); (2) Histamine, released from enterochromaffin-like (ECL) cells in response to gastrin and vagal stimulation, acts on H2 receptors on parietal cells \u2014 this is the most potent single stimulus, which is why H2-receptor antagonists (ranitidine) effectively reduce acid; (3) Acetylcholine from vagal postganglionic neurons acts on M3 muscarinic receptors on parietal cells. Critically, these three agents act synergistically \u2014 their combined effect is much greater than the sum of individual effects, because they activate different intracellular signaling pathways (cAMP for histamine, calcium/IP3 for ACh and gastrin) that converge to maximally activate the H+/K+-ATPase. Option B lists inhibitors, not stimulators. Option C understates the complexity. Option D describes sympathetic inhibition, not stimulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Suspension-feeding bivalves like mussels use their gills for both respiration and nutrition. How do they capture and sort food particles?",
+      "options": [
+        "They use venomous harpoons to capture prey that swims near their shells",
+        "They produce a sticky web of mucus threads that entangles plankton outside the shell",
+        "They use chemoreception to detect food particles and actively swim toward high-nutrient patches",
+        "Lateral cilia on gill filaments create water currents, frontal cilia trap particles in mucus, and labial palps sort particles by size before directing suitable particles to the mouth via ciliary tracts"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Bivalve suspension feeding is a highly organized ciliary-mucus mechanism. Lateral cilia on the gill filaments create the water current that draws water (and suspended particles) into the mantle cavity through the incurrent siphon. Frontal cilia on the gill surface trap particles in a sheet of mucus. Particles are then transported along ciliary tracts to the labial palps, which sort particles by size, density, and possibly chemical properties. Suitable food particles (phytoplankton, bacteria, detritus) are directed to the mouth, while rejected particles are bound in mucus as pseudofeces and expelled. This allows bivalves to filter enormous volumes of water (a single mussel can filter 50+ liters per day), playing a significant role in water clarity and nutrient cycling. Option A describes cnidarian feeding. Option B describes a different capture mechanism. Option D is incorrect because most bivalves are sessile.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the context of feeding strategies, substrate feeders are animals that:",
+      "options": [
+        "Use long tongues or proboscises to extract nectar or blood from sources",
+        "Filter food particles from water using specialized sieves",
+        "Capture and kill other animals for food",
+        "Live in or on their food source and eat their way through it, such as leaf miners, wood-boring beetles, or parasitic tapeworms that absorb nutrients from the host's intestinal contents"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Substrate feeders are organisms that live in or on their food source and consume it from within. This feeding strategy is found across diverse taxa. Leaf miners are insect larvae that live between the upper and lower epidermis of leaves, eating the mesophyll as they tunnel through. Wood-boring beetles (e.g., bark beetles) live in and consume wood. Earthworms are substrate feeders that eat their way through soil, digesting organic matter. Tapeworms (cestodes) live in the host's intestine and absorb pre-digested nutrients across their tegument. Maggots feeding on decaying matter are also substrate feeders. This strategy is distinguished from filter feeding (Option A), predation (Option B), and fluid feeding (Option D), which represent separate feeding categories in comparative animal biology.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Celiac disease involves an immune reaction to gluten (specifically gliadin peptides) that damages the intestinal villi. A patient with untreated celiac disease would most likely show deficiency in which of the following, and why?",
+      "options": [
+        "Only water and electrolytes, because celiac disease affects only colonic function",
+        "Only vitamin B12, because celiac disease specifically targets the ileal mucosa",
+        "Only glucose, because celiac disease destroys SGLT1 transporters selectively",
+        "Iron, folate, calcium, and fat-soluble vitamins (A, D, E, K), because villous atrophy in the proximal small intestine (duodenum and jejunum) destroys the primary absorptive surface for these nutrients"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Celiac disease primarily damages the mucosa of the proximal small intestine (duodenum and jejunum), causing villous atrophy, crypt hyperplasia, and lymphocytic infiltration. Since these regions are the primary sites for absorbing iron (duodenum), folate (proximal jejunum), calcium (duodenum and jejunum), and fat-soluble vitamins (which require fat absorption, also occurring proximally), deficiencies in these nutrients are common. Fat malabsorption (steatorrhea) occurs because the damaged mucosa has reduced surface area and impaired enterocyte function. This secondarily causes fat-soluble vitamin (A, D, E, K) deficiency because they require lipid micelles for absorption. Option A is incorrect because the ileum (where B12 is absorbed) is typically spared in celiac disease. Option C overly narrows the deficiency. Option D incorrectly localizes the disease to the colon.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "A python that has not eaten for several months shows dramatic upregulation of intestinal nutrient transporters within 24-48 hours of consuming a large meal. This phenomenon of intestinal upregulation is an example of:",
+      "options": [
+        "Passive diffusion \u2014 nutrients automatically increase transporter expression through mass action",
+        "Learned behavior \u2014 the snake consciously increases its digestive efficiency",
+        "Phenotypic plasticity \u2014 rapid, reversible physiological remodeling of the digestive system in response to feeding, allowing energy savings during fasting while maintaining digestive capacity when food is available",
+        "Genetic adaptation \u2014 permanent evolutionary changes in intestinal gene expression"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Infrequently feeding snakes like pythons show remarkable phenotypic plasticity in their digestive systems. During fasting, the intestinal mucosa atrophies (smaller villi, reduced transporter expression, fewer microvilli), dramatically reducing the metabolic cost of maintaining unused digestive tissue. Upon feeding, within 24-48 hours, the intestine undergoes a massive upregulation: intestinal mass increases 50-100%, microvillus length doubles, nutrient transporter expression (SGLT1, peptide transporters, amino acid transporters) increases several-fold, and digestive enzyme secretion surges. This is accompanied by hypertrophy of the liver, kidneys, and heart (as discussed in Chapter 40's SDA section). This reversible plasticity is an adaptation to the feast-or-famine feeding ecology. Option B describes evolutionary change, not individual-level plasticity. Option C incorrectly attributes conscious control. Option D mischaracterizes the mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following correctly describes the role of pancreatic stellate cells in pancreatitis?",
+      "options": [
+        "They form the islets of Langerhans and secrete insulin directly into the bloodstream",
+        "They secrete digestive enzymes that auto-digest the pancreatic tissue",
+        "They line the pancreatic ducts and regulate bicarbonate secretion",
+        "When activated by inflammation, they transform from quiescent vitamin A-storing cells to myofibroblast-like cells that produce excessive extracellular matrix, leading to fibrosis and loss of exocrine and endocrine function"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Pancreatic stellate cells (PSCs) are resident cells of the pancreas that normally exist in a quiescent state, storing vitamin A (retinol) as lipid droplets in their cytoplasm, similar to hepatic stellate cells in the liver. During pancreatic injury (acute pancreatitis, chronic alcoholic pancreatitis), inflammatory mediators (cytokines, oxidative stress, ethanol metabolites) activate PSCs, which lose their vitamin A stores, proliferate, and transform into activated myofibroblast-like cells. These activated PSCs produce excessive amounts of extracellular matrix proteins (collagen I, III, fibronectin) and matrix metalloproteinases, leading to progressive pancreatic fibrosis. This fibrosis destroys both exocrine tissue (causing maldigestion) and endocrine islets (causing diabetes). PSCs also play a role in pancreatic cancer by creating the dense desmoplastic stroma. Option A describes acinar cell autoactivation. Option C describes islet cells. Option D describes ductal epithelial cells.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about digestive system evolution across animal phyla:\nS1: The gastrovascular cavity of cnidarians serves both digestive and circulatory functions, with a single opening serving as both mouth and anus.\nS2: The evolution of a complete digestive tract (mouth to anus) in bilaterian animals allowed specialization of different regions for different digestive functions.\nS3: All insects have a gastrovascular cavity similar to cnidarians because they evolved from cnidarian ancestors.\nS4: The evolution of jaws in vertebrates allowed the exploitation of a wider range of food types, contributing to adaptive radiation.",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TFFT",
+        "TTFF"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: The cnidarian gastrovascular cavity is a blind sac with a single opening that functions as both mouth and anus. Food enters and waste exits through the same opening. The cavity distributes nutrients to all cells (circulatory function) as there is no dedicated circulatory system. S2 is TRUE: The complete digestive tract (alimentary canal) was a major evolutionary innovation. Having separate mouth and anus allows unidirectional food flow, enabling regional specialization: the anterior end can specialize in food processing (mouth, pharynx), middle regions in chemical digestion and absorption (stomach, intestine), and the posterior end in water reabsorption and waste compaction (colon, rectum). S3 is FALSE: Insects are protostome bilaterians (arthropods) with complete digestive tracts (foregut, midgut, hindgut), not gastrovascular cavities. They did not evolve from cnidarians; both trace back to ancient common ancestors. S4 is TRUE: The evolution of jaws (from modified gill arches in gnathostomes) was a key innovation allowing vertebrates to grasp, bite, tear, and crush diverse food types, enabling exploitation of new ecological niches.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about appetite regulation:\nS1: The arcuate nucleus of the hypothalamus contains two opposing populations of neurons: orexigenic NPY/AgRP neurons that stimulate appetite, and anorexigenic POMC/CART neurons that suppress appetite.\nS2: PYY3-36 (peptide YY), released from L-cells in the ileum and colon after meals, reduces appetite by inhibiting NPY/AgRP neurons in the arcuate nucleus.\nS3: Insulin acts as an adiposity signal in the brain, with higher insulin levels (reflecting higher fat stores) suppressing appetite through hypothalamic receptors.\nS4: Cannabinoid CB1 receptor activation in the hypothalamus suppresses appetite, which is why cannabis use typically reduces food intake.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: The arcuate nucleus is the primary hypothalamic center for appetite regulation. NPY (neuropeptide Y) and AgRP (agouti-related peptide) are co-expressed in neurons that powerfully stimulate appetite. POMC (pro-opiomelanocortin) produces alpha-MSH, which activates MC4 receptors to suppress appetite, and CART (cocaine-and-amphetamine-regulated transcript) also suppresses appetite. These two populations integrate peripheral signals and provide opposing control. S2 is TRUE: PYY3-36 is released postprandially from intestinal L-cells and acts on Y2 receptors on NPY/AgRP neurons, inhibiting them and thereby reducing appetite. This is an important satiety signal. S3 is TRUE: Insulin crosses the blood-brain barrier and acts on insulin receptors in the arcuate nucleus, where it inhibits NPY/AgRP neurons and stimulates POMC neurons, functioning as a long-term adiposity signal alongside leptin. S4 is FALSE: Cannabinoid CB1 receptor activation STIMULATES appetite (the 'munchies' effect). THC and endocannabinoids (anandamide, 2-AG) activate CB1 receptors in the hypothalamus and limbic system, increasing food intake. This is why CB1 antagonists (rimonabant) were investigated as anti-obesity drugs.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A study compares the absorptive capacity of the small intestine in three experimental conditions:\n\nCondition | Villus height (um) | Crypt depth (um) | SGLT1 expression | Glucose absorption rate (umol/cm/hr)\nControl (normal diet) | 500 | 150 | 1.0x | 45\nHigh-carb diet (2 weeks) | 650 | 180 | 2.3x | 95\nStarvation (2 weeks) | 280 | 100 | 0.4x | 15\n\nWhich statement best interprets these data in terms of intestinal adaptive plasticity?",
+      "options": [
+        "The intestine is a static organ that does not respond to dietary changes",
+        "The intestine shows remarkable adaptive plasticity: a high-carbohydrate diet upregulates both structural features (increased villus height providing more absorptive surface area) and molecular features (increased SGLT1 transporter expression), resulting in doubled glucose absorption; starvation causes mucosal atrophy with reduced structure and transporter expression, minimizing the metabolic cost of maintaining unused tissue",
+        "The changes are entirely due to bacterial colonization differences between the diet groups",
+        "SGLT1 expression changes are the sole driver of glucose absorption differences; structural changes are irrelevant"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data beautifully illustrate intestinal adaptive plasticity at multiple levels. The high-carbohydrate diet induces: (1) structural adaptation \u2014 increased villus height (500\u2192650 um, +30%) and crypt depth (reflecting increased cell proliferation), providing greater absorptive surface area; (2) molecular adaptation \u2014 2.3-fold upregulation of SGLT1 expression, increasing transporter density per unit area; (3) functional outcome \u2014 more than doubled glucose absorption rate (45\u219295 umol/cm/hr). Conversely, starvation triggers mucosal atrophy (reduced villus height to 280 um) and downregulation of transporter expression (0.4x), conserving energy by reducing the metabolic cost of maintaining unnecessary absorptive capacity. This plasticity is mediated by nutrient-sensing pathways, growth factors (EGF, GLP-2), and transcription factors. Option A is clearly contradicted. Option C ignores the direct diet-tissue response. Option D oversimplifies by ignoring the structural contribution.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A group of researchers hypothesizes that the appendix serves as a reservoir for beneficial gut bacteria that can recolonize the intestine after severe diarrheal illness. Which experimental approach in a mouse model would best test this hypothesis?",
+      "options": [
+        "Compare the gut microbiome composition of mice with and without an appendix under normal conditions",
+        "Subject mice with intact appendices and mice with surgically removed appendices (cecectomy controls) to antibiotic-induced diarrhea, then withdraw antibiotics and compare the rate and completeness of gut microbiome recovery using 16S rRNA sequencing at multiple time points",
+        "Measure the size of the appendix before and after diarrheal episodes",
+        "Compare the incidence of diarrhea between mice with and without appendices"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This experimental design directly tests the 'safe house' hypothesis by creating a scenario where gut recolonization is needed (after antibiotic-induced microbiome disruption) and comparing recovery between mice that have the appendix (potential bacterial reservoir) and those that do not. If the appendix serves as a bacterial reservoir, mice with intact appendices should show faster and more complete microbiome recovery after antibiotic cessation, as bacteria sheltered in the appendix biofilm can emerge and recolonize the gut. Time-course sampling with 16S rRNA sequencing allows tracking of recovery dynamics. The cecectomy control is essential as a surgical sham (mice that had surgery but retained the appendix) should be included to control for surgical stress. Option A tests baseline differences but not the recolonization function. Option C measures an irrelevant parameter. Option D tests susceptibility but not recolonization.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "The peristaltic reflex (also called the law of the intestine) involves coordinated contraction oral to a bolus and relaxation anal to it. Which neurotransmitters mediate these two responses?",
+      "options": [
+        "Norepinephrine causes contraction; serotonin causes relaxation",
+        "Substance P causes both contraction and relaxation through different receptor subtypes",
+        "GABA causes contraction; glutamate causes relaxation",
+        "Acetylcholine causes contraction oral to the bolus; nitric oxide (NO) and vasoactive intestinal peptide (VIP) cause relaxation anal to the bolus"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The peristaltic reflex is a fundamental motor pattern of the enteric nervous system that propels luminal contents aborally. When a bolus distends the intestinal wall, mechanoreceptors in the mucosa and muscle layers activate sensory neurons that trigger two coordinated responses: (1) Ascending contraction: Excitatory motor neurons release acetylcholine (ACh) and substance P, which contract the circular smooth muscle oral (upstream) to the bolus, pushing it forward. (2) Descending relaxation: Inhibitory motor neurons release nitric oxide (NO) and vasoactive intestinal peptide (VIP), which relax the circular muscle anal (downstream) to the bolus, creating a receiving segment. This coordinated contraction-relaxation pattern creates a pressure gradient that propels the bolus aborally. Simultaneously, longitudinal muscle contracts ahead of the bolus, shortening the gut over the bolus. Option B uses CNS neurotransmitters not primarily involved. Options C and D do not accurately describe the dual excitatory-inhibitory mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Hookworms (Ancylostoma duodenale) attach to the intestinal mucosa and feed on blood. Which nutritional deficiency is most commonly caused by chronic hookworm infection?",
+      "options": [
+        "Protein deficiency causing kwashiorkor",
+        "Vitamin A deficiency leading to night blindness",
+        "Iron-deficiency anemia due to chronic intestinal blood loss",
+        "Calcium deficiency causing osteoporosis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Hookworms are among the most important causes of iron-deficiency anemia worldwide. Adult hookworms attach to the intestinal mucosa using cutting plates or teeth, lacerate blood vessels, and feed on blood. A single Ancylostoma duodenale worm can consume 0.2-0.3 mL of blood per day, and patients may harbor hundreds of worms. Additionally, anticoagulant substances secreted by the worm cause continued bleeding after the worm moves to a new attachment site. The chronic blood loss leads to iron depletion, resulting in microcytic hypochromic anemia. This is a major public health problem in tropical and subtropical regions, affecting approximately 500 million people. Options A, C, and D describe deficiencies that can occur with malnutrition but are not the primary consequence of hookworm infection.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following correctly describes how amino acid absorption in the small intestine differs from monosaccharide absorption?",
+      "options": [
+        "All amino acids use a single universal transporter, while each monosaccharide has its own specific carrier",
+        "Both amino acids and monosaccharides are absorbed exclusively by passive diffusion",
+        "Amino acids are absorbed only in the ileum, while monosaccharides are absorbed only in the duodenum",
+        "Amino acids use multiple distinct sodium-dependent cotransporters on the apical membrane (specific for neutral, basic, acidic, and imino acids), and di/tripeptides are absorbed via the H+-coupled PepT1 transporter; monosaccharides use SGLT1 (glucose/galactose) and GLUT5 (fructose) on the apical membrane"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Amino acid absorption is more complex than monosaccharide absorption because of the greater chemical diversity of amino acids. Multiple sodium-dependent cotransporters exist on the enterocyte apical membrane, each with specificity for a different class: neutral amino acid transporters (e.g., B0AT1/SLC6A19 for neutral AAs), basic amino acid transporters (e.g., rBAT/b0,+AT for cystine and dibasic AAs), acidic amino acid transporters, and imino acid (proline) transporters. Importantly, the PepT1 (SLC15A1) transporter absorbs di- and tripeptides using a proton gradient, which is very efficient and accounts for a significant fraction of total amino acid absorption. On the basolateral side, amino acids exit via facilitated diffusion through various transporters. This contrasts with the simpler monosaccharide system: SGLT1 (Na+-coupled) for glucose and galactose, GLUT5 (facilitated diffusion) for fructose on the apical membrane, and GLUT2 on the basolateral membrane.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which mineral is a critical component of the enzyme carbonic anhydrase (important in gastric acid secretion and CO2 transport) and of more than 300 other enzymes including DNA polymerase?",
+      "options": [
+        "Zinc",
+        "Iron",
+        "Copper",
+        "Manganese"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Zinc is an essential trace mineral that serves as a cofactor in over 300 enzymes, making it one of the most widely used metallic cofactors in biology. Carbonic anhydrase, which catalyzes the reversible hydration of CO2 (CO2 + H2O \u2194 H2CO3 \u2194 H+ + HCO3-), requires a zinc ion at its active site for catalysis. This enzyme is essential in parietal cells (providing H+ for gastric acid), red blood cells (CO2 transport), and kidneys (acid-base balance). Other zinc-dependent enzymes include DNA polymerase, RNA polymerase, alcohol dehydrogenase, superoxide dismutase (Cu/Zn-SOD), and matrix metalloproteinases. Zinc also plays structural roles in zinc finger transcription factors. Option A (iron) is important in hemoglobin and cytochromes but not carbonic anhydrase. Option C (copper) is a cofactor in ceruloplasmin and cytochrome c oxidase. Option D (manganese) is a cofactor in arginase and Mn-SOD.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ruminants can survive on nitrogen-poor diets partly because they recycle urea. How does this nitrogen recycling work?",
+      "options": [
+        "Urea is excreted in urine and then ingested through coprophagy",
+        "Urea is converted to amino acids directly in the liver and sent back to the bloodstream",
+        "Blood urea diffuses across the rumen wall and through saliva into the rumen, where microbial urease converts it to ammonia, which rumen bacteria use to synthesize microbial protein; this microbial protein is later digested and absorbed in the abomasum and small intestine",
+        "Rumen bacteria fix atmospheric nitrogen (N2) similar to rhizobium bacteria in legume root nodules"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Urea recycling is a critical nitrogen conservation mechanism in ruminants. When dietary nitrogen is limited, the ruminant's liver still produces urea from protein catabolism. Instead of being entirely excreted by the kidneys, a significant fraction of this urea is recycled back to the rumen via two routes: (1) direct diffusion from blood across the rumen wall epithelium into the rumen lumen, and (2) secretion in saliva (ruminants produce 50-200 liters of saliva daily), which is swallowed back into the rumen during remastication. In the rumen, bacterial urease rapidly hydrolyzes urea to ammonia (NH3) and CO2. Rumen bacteria then incorporate this ammonia into amino acids and eventually microbial protein. When these microbes pass to the abomasum and small intestine, they are digested, and the amino acids are absorbed. This recycling can supply up to 50-80% of rumen microbial nitrogen needs on low-protein diets. Option A describes coprophagy, which is a rabbit strategy. Option C oversimplifies and is biochemically incorrect. Option D is incorrect; rumen bacteria cannot fix N2.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A student wants to demonstrate that bile salts are necessary for efficient fat digestion and absorption. Using a rat model, which experiment with appropriate controls would best demonstrate this?",
+      "options": [
+        "Compare body weight of rats fed a high-fat diet versus a low-fat diet over 4 weeks",
+        "Surgically ligate (tie off) the common bile duct in experimental rats while performing sham surgery (opening and closing the abdomen without ligation) in control rats, then feed both groups identical high-fat diets and measure fecal fat content (steatorrhea), fat-soluble vitamin levels, and body weight gain over 4 weeks",
+        "Add bile salts to a test tube containing oil and water and observe emulsification",
+        "Feed rats increasing amounts of dietary fat and measure serum triglyceride levels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bile duct ligation prevents bile (containing bile salts) from reaching the duodenum, directly testing the necessity of bile salts for fat digestion and absorption in vivo. The sham surgery control is essential to account for the stress and recovery from surgery itself. If bile salts are necessary, bile duct-ligated rats should show: (1) steatorrhea \u2014 markedly increased fecal fat content (normally <5% of ingested fat, rising to >40% without bile); (2) deficiency of fat-soluble vitamins (A, D, E, K) due to impaired fat absorption; (3) reduced weight gain despite adequate caloric intake. This provides comprehensive in vivo evidence. Option A does not test bile function. Option C demonstrates emulsification in vitro but not the necessity for absorption. Option D tests dose-response but not bile salt involvement.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Vitamin D is unique among vitamins because the human body can synthesize it. Which statement correctly describes the complete activation pathway of vitamin D?",
+      "options": [
+        "Vitamin D activation requires UV-A radiation in the dermis, followed by sulfation in the kidneys",
+        "UV-B radiation converts 7-dehydrocholesterol in the skin to cholecalciferol (vitamin D3), which is hydroxylated in the liver to 25-hydroxyvitamin D3 (calcidiol), and then hydroxylated again in the kidney by 1-alpha-hydroxylase to the active form 1,25-dihydroxyvitamin D3 (calcitriol)",
+        "Vitamin D is fully activated in the skin by UV radiation and immediately begins calcium absorption",
+        "Vitamin D is activated entirely in the liver through a single hydroxylation step"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Vitamin D activation is a three-step process spanning three organs. (1) In the skin, UV-B radiation (290-315 nm) photolytically converts 7-dehydrocholesterol (a cholesterol intermediate in the stratum basale/spinosum) to pre-vitamin D3, which thermally isomerizes to cholecalciferol (vitamin D3). (2) In the liver, the enzyme CYP2R1 (a 25-hydroxylase) hydroxylates vitamin D3 at the 25 position to produce 25-hydroxyvitamin D3 (calcidiol, the major circulating form and clinical marker of vitamin D status). (3) In the kidney, CYP27B1 (1-alpha-hydroxylase) performs the final activation step, adding a hydroxyl group at the 1-alpha position to produce 1,25-dihydroxyvitamin D3 (calcitriol), the biologically active hormone. Calcitriol acts as a nuclear hormone, binding the vitamin D receptor (VDR) to regulate genes for calcium and phosphate absorption. Option B skips the two hepatic and renal activation steps. Option C ignores the skin and kidney steps. Option D uses wrong UV type and wrong modification.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the gastric gland, four main cell types contribute to gastric juice composition. Which pairing of cell type and secretory product is INCORRECT?",
+      "options": [
+        "Mucous neck cells: trypsinogen and elastase",
+        "Parietal (oxyntic) cells: hydrochloric acid and intrinsic factor",
+        "G-cells: gastrin",
+        "Chief (zymogenic) cells: pepsinogen and gastric lipase"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Option D is incorrect because mucous neck cells secrete mucus (a different type from surface mucous cells) and some pepsinogen, NOT trypsinogen and elastase. Trypsinogen and elastase are pancreatic zymogens secreted by pancreatic acinar cells, not gastric cells. The correct pairings are: (A) Parietal cells secrete HCl (for acid environment) and intrinsic factor (for vitamin B12 absorption) \u2014 both true. (B) Chief cells secrete pepsinogen (the zymogen form of pepsin) and gastric lipase (which begins lipid digestion) \u2014 both true. (C) G-cells in the antrum secrete gastrin into the bloodstream \u2014 true. Mucous neck cells produce a thin, soluble mucus that differs from the thick, insoluble mucus of surface mucous cells, and they also produce some pepsinogen II.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Segmentation contractions in the small intestine differ from peristalsis in that:",
+      "options": [
+        "Segmentation moves food rapidly toward the anus while peristalsis slows transit",
+        "Segmentation only occurs in the stomach while peristalsis only occurs in the intestine",
+        "Segmentation involves rhythmic contraction and relaxation of circular muscle at alternating points along the intestine, mixing chyme with digestive juices and promoting absorption without significant net movement, while peristalsis propels contents unidirectionally",
+        "Segmentation is controlled by the somatic nervous system while peristalsis is autonomic"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Segmentation is the dominant motility pattern in the small intestine during digestion. It involves rhythmic, alternating contractions of adjacent circular muscle segments that repeatedly divide and mix the chyme, maximizing contact between digesta and the mucosal absorptive surface and between digesta and digestive enzymes/bile salts. The contractions produce a 'back-and-forth' churning motion with minimal net forward propulsion. In contrast, peristalsis involves a coordinated wave of contraction preceded by relaxation that propels luminal contents in one direction (orally to anally). Both are controlled by the enteric nervous system with modulation by autonomic input. Option B incorrectly restricts each pattern to one organ. Option C reverses the propulsive characteristics. Option D is incorrect because both are primarily under autonomic and enteric nervous system control.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "A comparative anatomist notes that the teeth of a mystery skull have large, flat molars with complex ridges, reduced canines, and a wide diastema between the incisors and premolars. The mandible shows significant lateral movement capability. This animal is most likely a:",
+      "options": [
+        "Carnivore, because the complex ridges are for shearing meat",
+        "Insectivore, because the small canines are adapted for picking up small prey",
+        "Omnivore, because it has both sharp and flat teeth",
+        "Herbivore, because large flat molars with ridges are specialized for grinding tough plant material, lateral jaw movement enables grinding motion, and the diastema provides space for the tongue to manipulate food"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The dental formula and jaw mechanics described are classic herbivore features. Large, flat-topped molars with selenodont or lophodont ridges provide grinding surfaces for breaking down fibrous plant material (cellulose, lignin). The lateral (side-to-side) jaw movement is essential for a grinding motion that processes tough plant fibers, in contrast to the up-and-down (orthal) jaw movement of carnivores. The diastema (gap between incisors and premolars) is characteristic of herbivores and rodents, providing space for the tongue and cheeks to manipulate food within the mouth. Reduced canines are typical because herbivores do not need to pierce or tear prey. Carnivores (Option A) would have sharp carnassial teeth for shearing, large canines, and primarily vertical jaw movement. Omnivores (Option B) typically have more generalized dentition. Insectivores (Option D) typically have sharp-cusped teeth for puncturing exoskeletons.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Trypsin inhibitor proteins are found naturally in raw soybeans and other legumes. What is the physiological consequence of consuming large quantities of raw soybeans?",
+      "options": [
+        "Impaired protein digestion because trypsin inhibitors block the trypsin-initiated activation cascade of all pancreatic proteases, and the resulting CCK-mediated hyperstimulation of the pancreas can cause pancreatic hypertrophy",
+        "No effect because gastric acid destroys all trypsin inhibitors before they reach the duodenum",
+        "Enhanced protein digestion due to activation of additional digestive enzymes",
+        "Improved fat absorption due to increased bile salt production"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Trypsin inhibitors (Kunitz-type and Bowman-Birk type) in raw soybeans bind to and inactivate trypsin in the small intestine. Since trypsin is required to activate all other pancreatic zymogens (chymotrypsinogen, proelastase, procarboxypeptidases), its inhibition effectively paralyzes the entire pancreatic protease cascade, severely impairing protein digestion. Additionally, the absence of active trypsin removes the negative feedback on CCK release (trypsin normally degrades CCK-releasing peptide in the duodenum). This causes sustained CCK secretion, continuously stimulating the pancreas to secrete more enzyme, leading to pancreatic hypertrophy and hyperplasia, which in rodent models can progress to pancreatic neoplasia. Cooking denatures trypsin inhibitors, which is why soybeans must be heat-processed before consumption. Option A is the opposite of reality. Option C is unrelated. Option D is incorrect because trypsin inhibitors are proteins that are partially resistant to gastric digestion.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Deep-sea hydrothermal vent ecosystems are based on chemosynthetic bacteria rather than photosynthesis. How do the giant tube worms (Riftia pachyptila) obtain nutrition?",
+      "options": [
+        "They graze on bacterial mats coating the vent chimney surfaces",
+        "They absorb dissolved organic molecules directly from the vent water through their body wall",
+        "They filter-feed on bacteria and organic particles suspended in the vent plume water",
+        "They harbor chemosynthetic endosymbiotic bacteria in a specialized organ (trophosome) that oxidize hydrogen sulfide from the vent fluid to fix CO2 into organic molecules, which nourish the worm"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Riftia pachyptila is one of the most remarkable examples of nutritional symbiosis. Adult tube worms completely lack a mouth, gut, and anus. Instead, they possess a large, specialized organ called the trophosome (constituting up to 50% of body mass) that houses billions of chemosynthetic sulfur-oxidizing gammaproteobacteria. The worm's red plume (branchial structure extending from the tube) absorbs O2, CO2, and H2S from the vent water, which are transported via hemoglobin (which uniquely binds both O2 and H2S on separate binding sites) in the blood to the trophosome. The endosymbiotic bacteria use the energy from oxidizing H2S (H2S + O2 \u2192 SO4^2-) to fix CO2 into organic carbon via the Calvin cycle, sharing these organic molecules with the host worm. Option A is incorrect because Riftia lacks a mouth and gut. Option B is also incorrect for the same reason. Option D is insufficient to support the worm's metabolic needs.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MCQ",
+      "question": "Vitamin K is essential for the post-translational modification of several blood clotting factors. Specifically, vitamin K serves as a cofactor for:",
+      "options": [
+        "Gamma-carboxylation of glutamate residues in clotting factors II (prothrombin), VII, IX, and X, enabling them to bind calcium ions and associate with phospholipid membranes at sites of injury",
+        "Methylation of lysine residues in von Willebrand factor",
+        "Phosphorylation of serine residues in thrombin",
+        "Hydroxylation of proline residues in fibrinogen"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Vitamin K (phylloquinone/K1 from plants, menaquinone/K2 from bacteria) is the essential cofactor for the enzyme gamma-glutamyl carboxylase, which catalyzes the post-translational conversion of specific glutamate (Glu) residues to gamma-carboxyglutamate (Gla) residues in vitamin K-dependent proteins. The Gla residues have two carboxyl groups that can chelate calcium ions (Ca2+), which is essential for these clotting factors to bind to phospholipid surfaces (exposed at sites of vascular injury) and participate in the coagulation cascade. The affected clotting factors are prothrombin (Factor II) and Factors VII, IX, and X, as well as the anticoagulant proteins C, S, and Z. Warfarin, a widely used anticoagulant, works by inhibiting vitamin K epoxide reductase, preventing the recycling of vitamin K and thereby blocking Gla formation. Options A, B, and D describe modifications not performed by vitamin K.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A feeding experiment measures ingestion rate and assimilation efficiency in a caterpillar at different dietary protein:carbohydrate ratios:\n\nP:C ratio | Ingestion rate (mg/day) | Assimilation efficiency (%) | Growth rate (mg/day)\n1:5 | 120 | 45 | 12\n1:2 | 95 | 60 | 18\n1:1 | 75 | 72 | 22\n2:1 | 85 | 65 | 20\n5:1 | 110 | 50 | 14\n\nWhich interpretation best explains the caterpillar's compensatory feeding behavior?",
+      "options": [
+        "The caterpillar always eats the same total mass regardless of food quality",
+        "The caterpillar increases ingestion rate on nutritionally imbalanced diets (protein-poor or protein-rich) to compensate for the deficient nutrient, but this overcompensation results in excess consumption of the abundant nutrient, reducing overall assimilation efficiency and growth rate; optimal growth occurs at balanced P:C ratios",
+        "Higher protein always produces faster growth regardless of carbohydrate content",
+        "The caterpillar cannot detect nutritional imbalance and eats randomly"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data reveal a classic pattern of compensatory feeding. At extreme P:C ratios (1:5 and 5:1), the caterpillar increases total food intake (120 and 110 mg/day) in an attempt to obtain sufficient amounts of the limiting nutrient. However, this overconsumption leads to excess intake of the abundant nutrient, which must be metabolically processed or excreted, reducing assimilation efficiency (45% and 50%). At balanced ratios (1:1), ingestion is lowest (75 mg/day) but assimilation efficiency and growth rate are highest (72% and 22 mg/day), because the nutrient supply matches demand with minimal waste. This nutrient balancing behavior, studied extensively using the Geometric Framework of nutrition by Simpson and Raubenheimer, shows that animals actively regulate intake of multiple nutrients and make feeding decisions that represent compromises when foods are nutritionally imbalanced.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the large intestine (colon):\nS1: The primary function of the colon is to absorb water and electrolytes from undigested residue, compacting it into feces.\nS2: The colon harbors approximately 10^11 bacteria per gram of contents, making it the most densely populated microbial ecosystem in the human body.\nS3: The colon is the primary site of nutrient absorption, where most proteins, fats, and carbohydrates are absorbed.\nS4: Colonic bacteria produce vitamin K and some B vitamins (biotin, folate) as metabolic byproducts, which are absorbed and contribute to the host's nutritional status.",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TFFT",
+        "TTTF"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: The colon absorbs approximately 1-1.5 liters of water and associated electrolytes (Na+, Cl-) from the 1.5 liters of chyme that enters from the ileum daily, producing 100-200 mL of semi-solid feces. S2 is TRUE: The colonic microbiome is extraordinarily dense, containing approximately 10^11 colony-forming units per gram of content. The total microbial biomass in the human colon is approximately 1-2 kg. S3 is FALSE: The small intestine (duodenum, jejunum, ileum) is the primary site of nutrient absorption, where >95% of proteins, fats, and carbohydrates are absorbed. The colon absorbs water, electrolytes, short-chain fatty acids, and some vitamins, but it is NOT the primary site for macronutrient absorption. S4 is TRUE: Colonic bacteria produce vitamin K2 (menaquinone) and several B vitamins as metabolic byproducts. These vitamins can be absorbed in the colon and contribute meaningfully to the host's requirements, particularly vitamin K, where bacterial production can supply up to 50% of daily needs.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Nutrition"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine the site of absorption of a novel drug in the gastrointestinal tract. Which method provides the most precise localization?",
+      "options": [
+        "Give the drug orally and measure plasma levels over time",
+        "Use the Ussing chamber technique: mount excised segments of different GI regions (duodenum, jejunum, ileum, colon) in individual Ussing chambers, add the radiolabeled drug to the mucosal side, and measure its appearance on the serosal side over time, comparing transport rates across all segments",
+        "Administer the drug rectally and compare blood levels to oral administration",
+        "Feed the drug mixed with a barium meal and track its passage using X-ray fluoroscopy"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Ussing chamber is an ex vivo technique that allows precise measurement of solute transport across intact epithelial tissue mounted between two fluid-filled compartments (mucosal and serosal sides). By using tissue segments from specific GI regions and measuring unidirectional flux of the radiolabeled drug (from mucosal to serosal = absorption; from serosal to mucosal = secretion), the researcher can directly compare absorptive capacity across regions. This provides quantitative data on transport rate, mechanism (passive vs. active, determined by comparing with and without inhibitors or energy depletion), and regional specificity. Option A tells you THAT absorption occurs but not WHERE. Option C compares only oral versus rectal routes without localizing the absorption site along the tract. Option D tracks physical transit but not absorption.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 41,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Nutrition"
+    }
+  ]
+}
