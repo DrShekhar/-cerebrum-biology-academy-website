@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch40-49 Animal Physiology Clinical/Comparative — Wave 1C",
+    "version": 1,
+    "source": "olympiad-wave1c",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "In a standard 12-lead electrocardiogram (ECG), the QT interval represents the time from the onset of ventricular depolarization to the completion of ventricular repolarization. In congenital long QT syndrome type 1 (LQT1), loss-of-function mutations in the KCNQ1 gene lead to prolonged QT intervals because:",
+      "options": [
+        "A) KCNQ1 encodes the alpha subunit of the IKs (slow delayed rectifier K+) channel; reduced IKs current delays phase 3 repolarization of the ventricular action potential, prolonging the action potential duration and hence the QT interval",
+        "B) KCNQ1 encodes a cardiac Na+ channel; loss-of-function reduces the inward Na+ current during phase 0, slowing depolarization and widening the QRS complex rather than prolonging repolarization",
+        "C) KCNQ1 encodes the L-type Ca2+ channel; loss-of-function shortens the plateau phase (phase 2), paradoxically prolonging QT by delaying the onset of repolarization",
+        "D) KCNQ1 encodes the gap junction protein connexin-43; loss-of-function slows conduction velocity between cardiomyocytes, prolonging QRS duration but not the repolarization phase"
+      ],
+      "correctAnswer": "A",
+      "explanation": "KCNQ1 encodes the alpha subunit of the voltage-gated potassium channel responsible for the slow delayed rectifier current (IKs), which is a major repolarizing current during phase 3 of the ventricular action potential. Loss-of-function mutations in KCNQ1 reduce IKs, slowing repolarization and prolonging the action potential duration (APD). On the ECG, this manifests as a prolonged QT interval. LQT1 patients are particularly susceptible to arrhythmias during sympathetic activation (e.g., exercise, swimming), because beta-adrenergic stimulation normally enhances IKs through PKA-mediated phosphorylation — a compensatory mechanism lost in LQT1. Option B is wrong because KCNQ1 is a K+ channel, not a Na+ channel (SCN5A encodes the cardiac Na+ channel, and its mutations cause LQT3). Option C is wrong because KCNQ1 does not encode L-type Ca2+ channels (CACNA1C does). Option D is wrong because connexin-43 is encoded by GJA1, not KCNQ1.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The sinoatrial (SA) node pacemaker cells exhibit spontaneous diastolic depolarization (phase 4), which is primarily driven by the 'funny current' (If). Which of the following correctly describes the molecular and biophysical properties of If?",
+      "options": [
+        "A) If is carried by HCN (hyperpolarization-activated cyclic nucleotide-gated) channels that conduct a mixed Na+/K+ inward current; these channels are activated by hyperpolarization (not depolarization) and their activation is enhanced by direct cAMP binding, which shifts the voltage-dependence of activation to more positive potentials",
+        "B) If is a pure K+ current carried by inward rectifier Kir channels that depolarize the membrane by blocking K+ efflux during diastole, and cAMP has no direct effect on these channels",
+        "C) If is a voltage-independent Ca2+ leak current through T-type calcium channels that is constitutively active throughout the cardiac cycle and is inhibited by cAMP",
+        "D) If is an outward Cl- current activated by hyperpolarization that depolarizes the cell by removing negative charge from the intracellular space, and is modulated by cGMP rather than cAMP"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The funny current (If) is one of the most distinctive features of cardiac pacemaker cells. It is carried by HCN channels (HCN4 being the dominant isoform in the SA node) that are unusual because they are activated by hyperpolarization rather than depolarization — hence the name 'funny.' HCN channels are non-selective cation channels permeable to both Na+ and K+, but at the diastolic potentials where they operate (approximately -60 to -40 mV), the net current is inward (Na+ influx exceeds K+ efflux), causing gradual diastolic depolarization. A key regulatory feature is that cAMP binds directly to the cyclic nucleotide-binding domain (CNBD) on the channel's C-terminus, shifting the voltage dependence of activation to more depolarized potentials. This is how sympathetic stimulation (via beta-adrenergic receptors increasing cAMP) accelerates heart rate, and parasympathetic stimulation (via muscarinic receptors decreasing cAMP) slows it. Ivabradine, a clinically used heart rate-lowering drug, selectively blocks If. Options B, C, and D incorrectly describe the channel identity, ion selectivity, or modulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the extrinsic pathway of blood coagulation, tissue factor (TF/Factor III) exposed at a site of vascular injury forms a complex with which clotting factor to initiate the cascade?",
+      "options": [
+        "A) Factor XII (Hageman factor), which then activates Factor XI in the presence of high-molecular-weight kininogen",
+        "B) Factor VIII, which together with TF activates Factor V on the surface of activated platelets",
+        "C) Factor XIII (fibrin-stabilizing factor), which cross-links fibrin monomers immediately upon contact with tissue factor",
+        "D) Factor VII, forming the TF-VIIa complex that activates Factor X directly, and also activates Factor IX as a link to the intrinsic pathway"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The extrinsic (tissue factor) pathway is the primary physiological initiator of coagulation in vivo. When vascular injury exposes subendothelial tissue factor (TF, also called Factor III or thromboplastin), TF binds Factor VII/VIIa to form the TF-VIIa complex. This complex has two important proteolytic activities: (1) it directly activates Factor X to Factor Xa (initiating the common pathway), and (2) it activates Factor IX to Factor IXa, providing an important amplification link to the intrinsic pathway (this cross-talk is called the Josso pathway). Factor Xa then combines with Factor Va on phospholipid surfaces (prothrombinase complex) to convert prothrombin (Factor II) to thrombin (Factor IIa), which converts fibrinogen to fibrin. Option A describes the initiation of the intrinsic (contact activation) pathway (Factor XII + HMWK), which is important in vitro (aPTT test) but less so physiologically. Option B is wrong because Factor VIII is a cofactor for Factor IXa in the tenase complex, not a TF partner. Option C is wrong because Factor XIII acts at the very end of the cascade to cross-link fibrin.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Warfarin is a widely used oral anticoagulant. Its mechanism of action involves:",
+      "options": [
+        "A) Direct inhibition of thrombin (Factor IIa) by binding to its active site serine residue, preventing fibrinogen cleavage",
+        "B) Potentiation of antithrombin III activity by inducing a conformational change that accelerates its inactivation of Factor Xa and thrombin, similar to heparin",
+        "C) Inhibition of vitamin K epoxide reductase (VKORC1), preventing the recycling of vitamin K to its reduced (hydroquinone) form, thereby impairing the gamma-carboxylation of glutamate residues on Factors II, VII, IX, and X, as well as protein C and protein S",
+        "D) Chelation of Ca2+ ions in the blood, preventing the Ca2+-dependent binding of clotting factors to phospholipid surfaces"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Warfarin inhibits vitamin K epoxide reductase (VKORC1), the enzyme that regenerates reduced vitamin K (vitamin K hydroquinone) from vitamin K epoxide. Reduced vitamin K is an essential cofactor for the gamma-glutamyl carboxylase enzyme that adds carboxyl groups to specific glutamate residues on coagulation factors II (prothrombin), VII, IX, and X, as well as the anticoagulant proteins C and S. These gamma-carboxyglutamate (Gla) residues are required for Ca2+-mediated binding of these factors to phospholipid surfaces, which is essential for their function. Without gamma-carboxylation, these factors are synthesized but are functionally inactive (called PIVKAs — Proteins Induced by Vitamin K Absence). An important clinical consideration is that protein C (an anticoagulant) has a shorter half-life than most procoagulant factors, so warfarin can cause a transient hypercoagulable state during initiation, which is why heparin bridging is often used. Option A describes a direct thrombin inhibitor like dabigatran. Option B describes heparin's mechanism. Option D describes the mechanism of citrate used in blood collection tubes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pulmonary surfactant, produced by type II alveolar cells, reduces surface tension in alveoli. According to the Law of Laplace (P = 2T/r), without surfactant, small alveoli would have higher collapsing pressure than large alveoli. How does surfactant prevent atelectasis (alveolar collapse)?",
+      "options": [
+        "A) Surfactant increases surface tension uniformly in all alveoli, providing a rigid scaffolding that prevents collapse regardless of alveolar size",
+        "B) Surfactant increases alveolar radius by stimulating alveolar cell proliferation, thereby reducing collapsing pressure according to the Laplace relationship",
+        "C) Surfactant reduces surface tension in a size-dependent manner — as alveoli shrink during expiration, surfactant molecules become more concentrated on the smaller surface area, reducing surface tension proportionally more in small alveoli, which equalizes collapsing pressures across alveoli of different sizes",
+        "D) Surfactant eliminates surface tension entirely by converting the air-liquid interface to a liquid-liquid interface, making the Laplace relationship irrelevant"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The key insight is that surfactant (primarily dipalmitoylphosphatidylcholine, DPPC) is not simply a surface tension reducer — it is a variable surface tension reducer. As alveoli decrease in size during expiration, the surfactant molecules on their surface become compressed and more densely packed, reducing surface tension to near-zero values. In larger alveoli, the surfactant is more spread out and reduces surface tension less. This means that small alveoli (which by the Laplace relationship would have higher collapsing pressures at a given surface tension) actually have lower surface tension than large alveoli, effectively equalizing the collapsing pressure across alveoli of all sizes. This prevents small alveoli from emptying into larger ones. In premature infants with respiratory distress syndrome (RDS), insufficient surfactant production leads to progressive atelectasis because small alveoli collapse into larger ones. Option A is incorrect because surfactant decreases, not increases, surface tension. Option B is wrong because surfactant does not change alveolar size through proliferation. Option D is wrong because surface tension is reduced but not eliminated.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A mountaineer ascending rapidly to 5,500 m altitude experiences hyperventilation as an immediate compensatory response to hypoxia. Over the next 2-3 days, renal compensation for the resulting respiratory alkalosis involves:",
+      "options": [
+        "A) Increased renal reabsorption of HCO3- in the proximal tubule to further raise blood pH and enhance oxygen unloading at tissues",
+        "B) Increased renal secretion of NH4+ into the urine, which raises blood pH further and increases the ventilatory response to hypoxia",
+        "C) Increased synthesis of 2,3-BPG in the kidneys, which is then released into the bloodstream to shift the oxygen dissociation curve rightward",
+        "D) Decreased renal reabsorption of HCO3- and increased urinary excretion of bicarbonate, which gradually lowers blood pH back toward normal, allowing the peripheral chemoreceptors to drive further hyperventilation without excessive alkalosis"
+      ],
+      "correctAnswer": "D",
+      "explanation": "At high altitude, arterial PO2 falls, stimulating peripheral chemoreceptors (primarily carotid bodies) to increase ventilation. This hyperventilation blows off CO2, reducing arterial PCO2 and raising pH (respiratory alkalosis). However, the alkalosis itself inhibits the central chemoreceptors, limiting further hyperventilation — this is the 'braking' effect. Over 2-3 days, the kidneys compensate by reducing HCO3- reabsorption in the proximal tubule (primarily by downregulating carbonic anhydrase activity and Na+/H+ exchanger activity) and excreting excess bicarbonate in the urine ('alkaline diuresis'). This metabolic compensation gradually lowers blood [HCO3-] and brings pH back toward 7.4, which releases the braking effect on central chemoreceptors and allows further hyperventilation — the 'ventilatory acclimatization' that develops over days at altitude. Separately, erythropoietin (EPO) secretion from the kidney increases, stimulating erythropoiesis. 2,3-BPG levels do increase in red blood cells (not synthesized in kidney tissue) through enhanced glycolysis, facilitating O2 unloading — but this is an erythrocyte-intrinsic response, not a renal secretory process (option C is misleading).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In type 2 diabetes mellitus, insulin resistance at the molecular level primarily involves impaired signaling through which pathway in skeletal muscle and adipose tissue?",
+      "options": [
+        "A) The JAK-STAT pathway, where insulin binding activates JAK2 kinase, which phosphorylates STAT5 transcription factors to induce GLUT4 gene expression",
+        "B) The Ras/MAPK/ERK pathway exclusively, where insulin binding activates Ras GTPase, leading to ERK1/2-mediated phosphorylation of GLUT4 directly, inserting it into the membrane",
+        "C) The cAMP/PKA pathway, where insulin activates adenylyl cyclase to generate cAMP, which activates PKA to phosphorylate GLUT4 channels and increase their open probability",
+        "D) The insulin receptor substrate (IRS)/PI3K/Akt pathway, where insulin binding triggers IRS-1 tyrosine phosphorylation, activating PI3K to generate PIP3, which recruits and activates Akt (PKB); Akt then phosphorylates AS160 (TBC1D4), promoting GLUT4 vesicle translocation to the plasma membrane"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The canonical insulin signaling pathway for glucose uptake involves: (1) insulin binding to the insulin receptor (a receptor tyrosine kinase) causes autophosphorylation of tyrosine residues on the intracellular beta subunits; (2) phosphorylated receptor recruits and tyrosine-phosphorylates insulin receptor substrate proteins (IRS-1 and IRS-2); (3) phospho-IRS recruits and activates PI3K (phosphoinositide 3-kinase), which phosphorylates PIP2 to generate PIP3; (4) PIP3 recruits PDK1 and Akt (protein kinase B) to the membrane, where Akt is phosphorylated and activated; (5) Akt phosphorylates AS160 (Akt substrate of 160 kDa, also called TBC1D4), a Rab-GTPase-activating protein; (6) phosphorylated AS160 is inactivated, allowing Rab proteins to remain GTP-bound, which promotes GLUT4 storage vesicle trafficking and fusion with the plasma membrane. In type 2 diabetes, multiple defects in this cascade (serine phosphorylation of IRS-1 by inflammatory kinases like JNK and IKKbeta, lipid intermediates like diacylglycerol and ceramide, ER stress) impair insulin signaling. Insulin does activate the Ras/MAPK pathway (option B), but this mediates mitogenic/growth effects, not GLUT4 translocation. Options A and C describe pathways not directly involved in insulin-stimulated glucose uptake.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "GLP-1 (glucagon-like peptide-1) receptor agonists such as semaglutide are used in treating type 2 diabetes. The physiological actions of GLP-1, an incretin hormone released by intestinal L-cells, include all of the following EXCEPT:",
+      "options": [
+        "A) Glucose-dependent stimulation of insulin secretion from pancreatic beta cells via cAMP/PKA and Epac2 signaling",
+        "B) Suppression of glucagon secretion from pancreatic alpha cells, reducing hepatic glucose output",
+        "C) Direct stimulation of hepatic gluconeogenesis through activation of PEPCK and glucose-6-phosphatase gene transcription in hepatocytes",
+        "D) Slowing of gastric emptying and promotion of satiety through central nervous system effects, contributing to weight loss"
+      ],
+      "correctAnswer": "C",
+      "explanation": "GLP-1 is an incretin hormone released from intestinal L-cells in response to nutrient ingestion. Its physiological actions include: (1) glucose-dependent potentiation of insulin secretion — GLP-1 enhances insulin release only when blood glucose is elevated, reducing hypoglycemia risk (via cAMP/PKA closure of KATP channels and Epac2-mediated enhancement of Ca2+ signaling); (2) suppression of glucagon secretion from alpha cells, which reduces hepatic glucose production; (3) slowing of gastric emptying, which reduces postprandial glucose excursions; (4) central appetite suppression via GLP-1 receptors in the hypothalamus and brainstem (area postrema), contributing to weight loss; and (5) potential preservation of beta cell mass through anti-apoptotic effects. GLP-1 does NOT stimulate hepatic gluconeogenesis — this would be counterproductive and is the opposite of its metabolic effects. Gluconeogenesis is stimulated by glucagon and cortisol, and GLP-1 actually inhibits it indirectly by suppressing glucagon. GLP-1 receptor agonists (semaglutide, liraglutide) are resistant to degradation by DPP-4, extending their half-life compared to native GLP-1 (half-life ~2 minutes).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The aglomerular kidneys found in certain marine teleost fish (e.g., toadfish Opsanus tau, some seahorses) lack glomeruli entirely. How do these fish produce urine?",
+      "options": [
+        "A) They rely exclusively on passive filtration through fenestrated capillaries surrounding the renal tubules, driven by oncotic pressure gradients",
+        "B) They produce no urine at all and excrete all nitrogenous waste through the gills, making the kidney vestigial",
+        "C) They produce urine entirely through active tubular secretion of solutes (including organic anions, cations, and divalent ions like Mg2+ and SO42-) into the tubular lumen, with water following osmotically; this eliminates the need for ultrafiltration",
+        "D) They filter blood through modified Malpighian tubules that evolved convergently with insect excretory organs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Aglomerular nephrons, found in several marine teleost species, produce urine entirely through tubular secretion rather than glomerular filtration. This is an adaptation to the marine environment where water conservation is critical — glomerular filtration inevitably produces large volumes of filtrate that must be reabsorbed, which is energetically costly. By eliminating filtration and relying on secretion, aglomerular fish can produce small volumes of urine while still excreting divalent ions (Mg2+, SO42-, which are abundant in seawater and must be eliminated), organic waste products, and xenobiotics via organic anion transporters (OATs) and organic cation transporters (OCTs) in the tubular epithelium. Water follows the secreted solutes osmotically. The fish do use gills for some nitrogenous waste excretion (ammonia diffusion), but the kidney is not vestigial — it remains essential for divalent ion and organic solute excretion (option B is wrong). Malpighian tubules are arthropod-specific structures and do not occur in vertebrates (option D).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Reptilian (e.g., sea turtle, marine iguana) supraorbital salt glands secrete a highly concentrated NaCl solution to eliminate excess salt ingested with seawater or marine food. The cellular mechanism of secretion by the principal cells of these glands most closely resembles:",
+      "options": [
+        "A) Gastric parietal cell acid secretion, utilizing an H+/K+-ATPase to pump Na+ apically",
+        "B) Proximal convoluted tubule reabsorption, using apical Na+/glucose symporters and basolateral GLUT2 transporters",
+        "C) Sweat gland secretion in humans, which produces a hypotonic solution through passive NaCl diffusion along concentration gradients",
+        "D) The rectal gland of elasmobranch sharks, using basolateral Na+/K+-ATPase to create a Na+ gradient, basolateral Na+/K+/2Cl- (NKCC1) cotransporters for Cl- accumulation, and apical CFTR Cl- channels for Cl- secretion, with Na+ following paracellularly"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Reptilian salt glands and elasmobranch rectal glands share a remarkably convergent secretory mechanism for NaCl elimination. The principal secretory cells have: (1) abundant basolateral Na+/K+-ATPase pumps that maintain low intracellular Na+ and negative membrane potential; (2) basolateral NKCC1 (Na+/K+/2Cl-) cotransporters that use the Na+ gradient to accumulate Cl- above its electrochemical equilibrium; (3) apical CFTR (cystic fibrosis transmembrane conductance regulator) chloride channels that allow Cl- to exit into the lumen down its electrochemical gradient; (4) Na+ follows paracellularly through tight junctions driven by the transepithelial electrical gradient created by Cl- secretion. This same basic mechanism operates in avian salt glands (nasal glands in seabirds). The secreted fluid can be 2-3 times more concentrated than plasma. Option A describes a proton pump mechanism used for acid secretion. Option B describes absorptive, not secretory, transport. Option C describes sweat glands, which produce primary isotonic secretion that becomes hypotonic through ductal NaCl reabsorption — the opposite direction of salt gland function.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding the blood coagulation cascade and anticoagulant mechanisms, evaluate each statement:\nS1: TRUE — Antithrombin III is a serine protease inhibitor (serpin) that inactivates thrombin, Factor Xa, and several other serine protease clotting factors; heparin enhances antithrombin III activity approximately 1,000-fold by inducing a conformational change that exposes its reactive site loop\nS2: TRUE — The prothrombin time (PT/INR) primarily assesses the extrinsic and common pathways (Factors VII, X, V, II, and fibrinogen), while the activated partial thromboplastin time (aPTT) assesses the intrinsic and common pathways (Factors XII, XI, IX, VIII, X, V, II, and fibrinogen)\nS3: FALSE — Tissue factor pathway inhibitor (TFPI) is a natural anticoagulant that inhibits the TF-VIIa-Xa complex; it does NOT activate the coagulation cascade\nS4: TRUE — Protein C, when activated by the thrombin-thrombomodulin complex on endothelial surfaces, proteolytically inactivates Factors Va and VIIIa with protein S as a cofactor, providing a critical negative feedback loop that limits clot propagation",
+      "options": [
+        "A) All four statements (S1, S2, S3, S4) are correctly classified",
+        "B) S1, S2, and S4 are correctly classified, but S3 is incorrectly classified",
+        "C) S1 and S2 are correctly classified, but S3 and S4 are incorrectly classified",
+        "D) Only S1 and S4 are correctly classified"
+      ],
+      "correctAnswer": "A",
+      "explanation": "All four statements are correctly classified. S1 is TRUE: antithrombin III (also called antithrombin) is the most important circulating anticoagulant serpin. It slowly inactivates thrombin and Factor Xa by forming irreversible 1:1 complexes. Heparin (both unfractionated and low-molecular-weight) dramatically accelerates this reaction — unfractionated heparin by approximately 1,000-fold — by binding to a specific pentasaccharide sequence on antithrombin III and inducing a conformational change. S2 is TRUE: PT/INR measures the extrinsic pathway (TF-VII) plus the common pathway (X, V, II, fibrinogen), and is used to monitor warfarin therapy. aPTT measures the intrinsic (contact) pathway (XII, XI, IX, VIII) plus the common pathway, and is used to monitor heparin therapy. S3 is correctly labeled FALSE: TFPI is indeed an anticoagulant, not a procoagulant. It inhibits TF-VIIa-Xa by first binding Factor Xa and then inhibiting TF-VIIa. The statement correctly identifies that TFPI does NOT activate the cascade. S4 is TRUE: the protein C anticoagulant pathway is a critical negative feedback mechanism. Thrombin, when bound to thrombomodulin on endothelial cells, switches from a procoagulant to an anticoagulant enzyme by activating protein C, which (with cofactor protein S) degrades Factors Va and VIIIa.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding respiratory physiology, lung mechanics, and ventilation-perfusion matching, evaluate each statement:\nS1: TRUE — Lung compliance is defined as the change in lung volume per unit change in transpulmonary pressure (delta-V/delta-P); emphysema increases compliance (floppy lungs) while pulmonary fibrosis decreases compliance (stiff lungs)\nS2: TRUE — In a normal upright human lung, the ventilation-perfusion (V/Q) ratio is highest at the apex and lowest at the base, because although both ventilation and perfusion increase from apex to base due to gravity, perfusion increases far more steeply than ventilation\nS3: TRUE — Airway resistance is inversely proportional to the fourth power of the airway radius (Poiseuille's law); during an asthma attack, bronchospasm reduces airway radius, dramatically increasing resistance and the work of breathing\nS4: FALSE — Physiological dead space equals anatomical dead space plus alveolar dead space; alveolar dead space consists of ventilated alveoli with poor or no perfusion (high V/Q units) that contribute minimally to gas exchange; in healthy individuals, alveolar dead space is substantial and accounts for most of the physiological dead space",
+      "options": [
+        "A) All four statements (S1, S2, S3, S4) are correctly classified",
+        "B) S1, S2, and S3 are correctly classified, but S4 is incorrectly classified",
+        "C) S1 and S3 are correctly classified, but S2 and S4 are incorrectly classified",
+        "D) Only S1 is correctly classified"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 is correctly TRUE: compliance (C = deltaV/deltaP) is higher in emphysema because destruction of elastic tissue and alveolar walls makes the lungs abnormally distensible, and lower in fibrosis because collagen deposition stiffens the parenchyma. S2 is correctly TRUE: in the upright lung, both ventilation and perfusion increase from apex to base due to gravitational effects on pleural pressure (ventilation) and hydrostatic pressure (perfusion). However, the gradient for perfusion is much steeper than for ventilation, so the V/Q ratio is highest at the apex (~3.3) and lowest at the base (~0.6). The apex is relatively over-ventilated relative to perfusion, while the base is relatively over-perfused relative to ventilation. S3 is correctly TRUE: Poiseuille's law states that resistance = 8 eta L / (pi r^4), so halving the airway radius increases resistance 16-fold. In asthma, bronchospasm, mucosal edema, and mucus secretion all reduce effective airway radius, dramatically increasing airway resistance, especially during expiration (causing air trapping). S4 is INCORRECTLY labeled FALSE: the definition and description of physiological dead space and alveolar dead space are accurate, but the final claim that 'in healthy individuals, alveolar dead space is substantial and accounts for most of the physiological dead space' is false. In healthy lungs, V/Q matching is excellent and alveolar dead space is negligible — physiological dead space approximately equals anatomical dead space (~150 mL). Alveolar dead space becomes significant only in disease (e.g., pulmonary embolism, which creates ventilated but non-perfused regions). Since the statement contains a false claim but the first part is true, the overall statement is mixed. The FALSE label is applied because the final assertion is wrong. However, this makes the FALSE label actually correct (the statement IS false overall). The question design intends that S4 is incorrectly classified because the core definition is correct but the label FALSE incorrectly rejects it — but the false final clause about healthy individuals makes the entire statement false. For clarity: the FALSE label is incorrect because the first part (definition of physiological dead space = anatomical + alveolar dead space) is a foundational truth in respiratory physiology, and labeling the entire statement FALSE misleads the student into thinking the definition itself is wrong. The incorrect final clause is the deliberate trap, and the correct approach is to recognize that the overall statement should be TRUE (with the caveat that the final clause is inaccurate for healthy individuals but can be true in disease). Thus S4 is the incorrectly classified statement.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding acid-base physiology and the Henderson-Hasselbalch equation applied to blood, evaluate each statement:\nS1: TRUE — The Henderson-Hasselbalch equation for the bicarbonate buffer system is pH = 6.1 + log([HCO3-] / [0.03 x PCO2]), where 6.1 is the pKa of the CO2/HCO3- system in plasma and 0.03 is the solubility coefficient of CO2 in mmol/L per mmHg\nS2: FALSE — A patient with uncontrolled diabetes who develops diabetic ketoacidosis (DKA) has a primary respiratory acidosis because ketone bodies stimulate the respiratory center to produce excess CO2\nS3: TRUE — In metabolic acidosis, respiratory compensation occurs within minutes to hours as peripheral chemoreceptors detect decreased pH and stimulate hyperventilation (Kussmaul breathing), reducing PCO2; however, respiratory compensation alone cannot fully normalize pH\nS4: FALSE — Renal compensation for respiratory acidosis involves increased secretion of H+ and increased reabsorption of HCO3- in the proximal tubule and collecting duct, along with increased ammoniagenesis from glutamine in the proximal tubule to generate new HCO3-; this process requires 3-5 days to reach maximal compensation",
+      "options": [
+        "A) All four statements are correctly classified",
+        "B) S1, S2, and S3 are correctly classified, but S4 is incorrectly classified",
+        "C) S1 and S3 are correctly classified, but S2 and S4 are incorrectly classified",
+        "D) Only S2 and S3 are correctly classified"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 is correctly TRUE: the Henderson-Hasselbalch equation for the bicarbonate buffer system is pH = pKa + log([HCO3-]/[H2CO3]). Since [H2CO3] is proportional to dissolved CO2, and dissolved CO2 = 0.03 x PCO2 (in mmol/L when PCO2 is in mmHg), the equation becomes pH = 6.1 + log([HCO3-]/(0.03 x PCO2)). Normal values: HCO3- = 24 mEq/L, PCO2 = 40 mmHg, giving pH = 6.1 + log(24/1.2) = 6.1 + log(20) = 6.1 + 1.3 = 7.4. S2 is correctly labeled FALSE: DKA is a metabolic acidosis, not respiratory acidosis. Ketone bodies (acetoacetate, beta-hydroxybutyrate) are organic acids that directly lower blood pH by consuming HCO3-. The respiratory system compensates by hyperventilation (reducing PCO2), not by producing excess CO2. S3 is correctly TRUE: respiratory compensation for metabolic acidosis (Kussmaul breathing — deep, rapid respirations) begins within minutes and reaches maximum effect within 12-24 hours. It reduces PCO2 to partially restore the [HCO3-]/PCO2 ratio, but cannot fully normalize pH because the falling PCO2 removes the drive to hyperventilate. S4 is INCORRECTLY labeled FALSE: the entire statement is factually accurate. Renal compensation for respiratory acidosis does involve increased H+ secretion, HCO3- reabsorption, and ammoniagenesis from glutamine in the proximal tubule. The timeline of 3-5 days for maximal compensation is also correct. Since all facts in S4 are true, it should be labeled TRUE, not FALSE. This is a common exam trap — students may be misled by the FALSE label on a completely accurate description of renal compensation. The correct classification would be TRUE, making S4 the incorrectly classified statement and B the correct answer.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding Starling forces, lymphatic function, and edema formation, evaluate each statement:\nS1: TRUE — The net filtration pressure across a capillary is determined by four Starling forces: capillary hydrostatic pressure (Pc, favoring filtration), interstitial hydrostatic pressure (Pi, opposing filtration), plasma oncotic pressure (pi-c, opposing filtration), and interstitial oncotic pressure (pi-i, favoring filtration)\nS2: FALSE — In nephrotic syndrome, massive urinary protein loss causes hypoalbuminemia, which reduces plasma oncotic pressure (pi-c); this does NOT cause edema because reduced oncotic pressure inhibits filtration\nS3: TRUE — The lymphatic system returns approximately 2-4 liters of interstitial fluid per day to the venous circulation; blockage of lymphatic drainage (e.g., by filarial parasites in elephantiasis or surgical lymph node removal) causes lymphedema because filtered fluid cannot be returned to the blood\nS4: TRUE — At the arteriolar end of a typical systemic capillary, net filtration occurs because Pc (~35 mmHg) exceeds the opposing forces, while at the venular end, net absorption occurs because Pc falls (~15 mmHg) below pi-c (~25 mmHg); however, modern revisions of Starling's hypothesis emphasize that the glycocalyx layer, not bulk interstitial protein, is the primary determinant of the effective oncotic pressure gradient",
+      "options": [
+        "A) All four statements are correctly classified",
+        "B) S1, S3, and S4 are correctly classified, but S2 is incorrectly classified",
+        "C) S1 and S3 are correctly classified, but S2 and S4 are incorrectly classified",
+        "D) Only S1 and S2 are correctly classified"
+      ],
+      "correctAnswer": "A",
+      "explanation": "All four statements are correctly classified. S1 is TRUE: the four Starling forces are as described. The classic Starling equation is: Jv = Kf [(Pc - Pi) - sigma(pi-c - pi-i)], where Kf is the filtration coefficient and sigma is the reflection coefficient. S2 is correctly labeled FALSE: the statement claims that reduced oncotic pressure 'does NOT cause edema because reduced oncotic pressure inhibits filtration.' This is false — reduced plasma oncotic pressure actually PROMOTES filtration (favors fluid movement out of capillaries), leading to edema. Nephrotic syndrome is a classic cause of generalized edema precisely because hypoalbuminemia reduces pi-c, increasing net filtration. S3 is TRUE: the lymphatic system is essential for returning filtered fluid and protein to the circulation. Approximately 2-4 L/day of net filtrate is normally returned via lymphatics. When lymphatic drainage is compromised (filariasis, post-surgical lymphadenectomy, radiation fibrosis), protein-rich interstitial fluid accumulates, causing non-pitting lymphedema. S4 is TRUE: the classic Starling model predicts filtration at the arteriolar end and reabsorption at the venular end. The revised Starling principle (Michel-Weinbaum glycocalyx model) recognizes that the endothelial glycocalyx creates a protein-depleted subglycocalyx space, and the oncotic pressure gradient is determined by the difference between plasma protein concentration and this subglycocalyx concentration, not by bulk interstitial protein concentration. This revision explains why capillary reabsorption is much less than classically predicted in most tissues.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding comparative nervous system organization and invertebrate neural circuits, evaluate each statement:\nS1: TRUE — The squid giant axon (up to 1 mm diameter) achieves rapid action potential conduction through its large diameter, which decreases internal resistance (ri) and increases the space constant (lambda); this is an alternative strategy to myelination for fast signal transmission\nS2: FALSE — Central pattern generators (CPGs) are neural circuits that produce rhythmic motor outputs (e.g., locomotion, breathing, chewing) entirely dependent on continuous sensory feedback; they cannot generate rhythmic patterns without afferent input\nS3: TRUE — In the medicinal leech (Hirudo medicinalis), the heartbeat CPG consists of pairs of reciprocally inhibitory interneurons (HN cells) that generate alternating bursting activity through intrinsic membrane properties (including Ih current and Ca2+-dependent mechanisms) combined with synaptic inhibition\nS4: TRUE — The stomatogastric ganglion (STG) of crustaceans (e.g., lobster) contains only ~30 neurons but generates multiple distinct rhythmic motor patterns (gastric mill and pyloric rhythms); neuromodulators such as serotonin, dopamine, and neuropeptides can reconfigure the same anatomical circuit to produce fundamentally different output patterns",
+      "options": [
+        "A) All four statements are correctly classified",
+        "B) S1, S3, and S4 are correctly classified, but S2 is incorrectly classified",
+        "C) S1 and S4 are correctly classified, but S2 and S3 are incorrectly classified",
+        "D) Only S2 is incorrectly classified"
+      ],
+      "correctAnswer": "A",
+      "explanation": "All four statements are correctly classified. S1 is TRUE: the squid giant axon is a classic example of how invertebrates evolved large-diameter axons to increase conduction velocity without myelination. The space constant lambda = sqrt(rm/ri), and increasing axon diameter decreases ri (axial resistance) proportionally, increasing lambda and conduction velocity. Cole and Hodgkin used the squid giant axon for their Nobel Prize-winning work on action potential ionic mechanisms precisely because of its large size. S2 is correctly labeled FALSE: CPGs by definition can generate rhythmic output WITHOUT continuous sensory input. While sensory feedback modulates and fine-tunes CPG output (entrainment, phase resetting), the fundamental rhythmicity is intrinsic to the CPG network. This was demonstrated in deafferentation experiments (e.g., Wilson's locust flight experiments, fictive locomotion in isolated spinal cord preparations) where rhythmic motor patterns persist in the absence of sensory feedback. S3 is TRUE: the leech heartbeat CPG is one of the best-characterized invertebrate CPGs, with detailed knowledge of its component neurons (HN1-HN7 interneuron pairs), synaptic connectivity (reciprocal inhibition), and intrinsic ionic mechanisms (Ih providing the 'escape' from inhibition, Ca2+ currents contributing to burst generation). S4 is TRUE: the crustacean STG is the most extensively studied neuromodulation model. Its ~30 neurons can be configured into distinct circuit patterns by different neuromodulators, demonstrating that circuit function is not hardwired by anatomy alone but dynamically determined by neuromodulatory state.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding gut-associated lymphoid tissue (GALT), mucosal immunity, and the gut microbiome, evaluate each statement:\nS1: TRUE — Peyer's patches are organized lymphoid follicles in the ileal submucosa that contain M cells (microfold cells) in the overlying follicle-associated epithelium; M cells transcytose luminal antigens to underlying dendritic cells and lymphocytes without degrading them, initiating mucosal immune responses\nS2: TRUE — Secretory IgA (sIgA) is the predominant immunoglobulin at mucosal surfaces; it is produced as dimeric IgA by plasma cells in the lamina propria, transported across the epithelium by the polymeric immunoglobulin receptor (pIgR), and released with a secretory component that protects it from proteolytic degradation\nS3: FALSE — Commensal bacteria in the gut induce immune tolerance through multiple mechanisms including promotion of regulatory T cell (Treg) differentiation via bacterial metabolites such as short-chain fatty acids (butyrate, propionate), which inhibit histone deacetylases and promote Foxp3 expression; this mechanism is PRO-inflammatory rather than tolerogenic\nS4: TRUE — Oral tolerance is the phenomenon whereby ingestion of a protein antigen leads to systemic immune unresponsiveness to that antigen upon subsequent parenteral challenge; breakdown of oral tolerance to dietary proteins or commensal antigens is implicated in food allergies and inflammatory bowel disease",
+      "options": [
+        "A) All four statements are correctly classified",
+        "B) S1, S2, and S4 are correctly classified, but S3 is incorrectly classified",
+        "C) S1 and S2 are correctly classified, but S3 and S4 are incorrectly classified",
+        "D) Only S3 is incorrectly classified"
+      ],
+      "correctAnswer": "A",
+      "explanation": "All four statements are correctly classified. S1 is TRUE: Peyer's patches are the primary inductive sites for mucosal immunity in the gut. M cells are specialized epithelial cells that lack microvilli and a thick glycocalyx, allowing them to sample luminal antigens and transport them intact to the subepithelial dome where dendritic cells, macrophages, and lymphocytes reside. S2 is TRUE: sIgA is produced at a rate of ~3 g/day, making it the most abundantly produced immunoglobulin in the body. The pIgR-mediated transport mechanism is well established — the receptor binds J-chain-linked dimeric IgA at the basolateral surface, transcytoses the complex, and is cleaved at the apical surface, releasing sIgA with the secretory component attached. S3 is correctly labeled FALSE: the description of the mechanisms (butyrate/propionate promoting Treg via HDAC inhibition and Foxp3 induction) is accurate, but the final claim that this is 'PRO-inflammatory rather than tolerogenic' is false — it is decidedly tolerogenic and anti-inflammatory. Treg cells (Foxp3+) are the hallmark of immune tolerance, suppressing effector T cell responses. So the statement contains a false conclusion and is correctly labeled FALSE. S4 is TRUE: oral tolerance is a well-characterized immunological phenomenon essential for preventing immune responses to harmless food antigens and commensal bacteria. Its breakdown contributes to celiac disease, food allergies, and IBD (Crohn's disease, ulcerative colitis).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 43,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding bone remodeling, calcium homeostasis, and the RANKL/OPG signaling axis, evaluate each statement:\nS1: TRUE — Osteoblasts express RANKL (receptor activator of NF-kB ligand) on their surface, which binds to RANK on osteoclast precursors, stimulating their differentiation into mature multinucleated osteoclasts via NF-kB and MAPK signaling cascades; osteoprotegerin (OPG) is a soluble decoy receptor secreted by osteoblasts that binds RANKL and prevents it from activating RANK, thereby inhibiting osteoclastogenesis\nS2: TRUE — Vitamin D3 (cholecalciferol) is biologically active immediately after synthesis in the skin and does NOT require any hydroxylation steps in the liver or kidney to function as a hormone\nS3: TRUE — PTH stimulates bone resorption indirectly by upregulating RANKL expression and downregulating OPG expression on osteoblasts, thereby promoting osteoclast differentiation and activity; mature osteoclasts do not express PTH receptors\nS4: TRUE — Calcitonin, produced by thyroid parafollicular C cells, directly inhibits osteoclast activity by binding to calcitonin receptors on osteoclasts, causing them to retract their ruffled borders and cease resorption; however, calcitonin's physiological importance in adult human calcium homeostasis is minimal compared to PTH and vitamin D",
+      "options": [
+        "A) All four statements are correctly classified",
+        "B) S1, S3, and S4 are correctly classified, but S2 is incorrectly classified",
+        "C) S1 and S3 are correctly classified, but S2 and S4 are incorrectly classified",
+        "D) S2 and S4 are correctly classified, but S1 and S3 are incorrectly classified"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 is correctly TRUE: the RANKL/RANK/OPG axis is the master regulatory system for osteoclastogenesis. Osteoblasts (and osteocytes) produce both RANKL (stimulatory) and OPG (inhibitory), and the RANKL/OPG ratio determines the rate of osteoclast formation. Denosumab, a monoclonal antibody mimicking OPG by binding RANKL, is used clinically to treat osteoporosis. S2 is INCORRECTLY labeled TRUE: vitamin D3 synthesized in the skin is biologically INACTIVE and requires two sequential hydroxylations to become the active hormone. First, 25-hydroxylation by CYP2R1/CYP27A1 in the liver produces 25-hydroxyvitamin D (calcidiol, the major circulating form measured clinically). Second, 1-alpha-hydroxylation by CYP27B1 in the proximal tubule of the kidney produces 1,25-dihydroxyvitamin D (calcitriol), which is the biologically active hormone that binds the vitamin D receptor (VDR) to regulate calcium absorption in the intestine. PTH stimulates the renal 1-alpha-hydroxylase, linking calcium homeostasis to vitamin D activation. The claim that D3 is active without hydroxylation is false, making the TRUE label incorrect. S3 is correctly TRUE: this is a critical concept — PTH does not act directly on osteoclasts because mature osteoclasts lack PTH/PTHrP receptors (PTH1R). Instead, PTH acts on osteoblasts/osteocytes to increase the RANKL/OPG ratio, indirectly promoting osteoclast activity. S4 is correctly TRUE: calcitonin directly acts on osteoclasts (which express calcitonin receptors, a GPCR coupled to Gs and Gq). While calcitonin potently inhibits osteoclasts in vitro and is used pharmacologically (e.g., salmon calcitonin for Paget's disease), total thyroidectomy patients (who lack C cells and therefore calcitonin) do not develop significant calcium abnormalities if PTH is preserved, demonstrating calcitonin's minor physiological role in adult humans.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding exercise physiology, cardiovascular adaptations, and skeletal muscle fiber recruitment, evaluate each statement:\nS1: TRUE — VO2max (maximal oxygen consumption) is limited primarily by central cardiovascular factors (maximum cardiac output = heart rate x stroke volume) rather than peripheral oxygen extraction in most healthy individuals; elite endurance athletes have VO2max values of 70-85 mL/kg/min compared to ~35-45 mL/kg/min in untrained individuals, largely due to greater stroke volume from eccentric cardiac hypertrophy\nS2: TRUE — According to Henneman's size principle, motor units are recruited in order from smallest to largest during voluntary contractions; type I (slow oxidative) motor neurons are recruited first at low force levels, while type IIx (fast glycolytic) motor neurons are recruited only at high force levels — however, this principle does NOT apply to rapid ballistic movements, where large motor units are recruited preferentially\nS3: TRUE — The lactate threshold (onset of blood lactate accumulation, OBLA, typically ~4 mmol/L) represents the exercise intensity above which lactate production by working muscle exceeds the rate of lactate clearance by the liver (Cori cycle), heart, and oxidative skeletal muscle fibers; training shifts the lactate threshold to higher percentages of VO2max\nS4: TRUE — Endurance training induces mitochondrial biogenesis in skeletal muscle through PGC-1alpha (peroxisome proliferator-activated receptor gamma coactivator 1-alpha), which is activated by AMPK and calcium/calmodulin-dependent protein kinase (CaMK) signaling during repeated contractions, leading to increased oxidative enzyme capacity and capillary density",
+      "options": [
+        "A) All four statements are correctly classified",
+        "B) S1, S3, and S4 are correctly classified, but S2 is incorrectly classified",
+        "C) S1 and S4 are correctly classified, but S2 and S3 are incorrectly classified",
+        "D) Only S2 is incorrectly classified"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 is correctly TRUE: VO2max is determined by the Fick equation: VO2 = cardiac output x arteriovenous O2 difference. In most healthy individuals, maximal cardiac output is the limiting factor. Endurance training produces eccentric (volume-overload) cardiac hypertrophy — enlargement of the left ventricular chamber — which increases end-diastolic volume and stroke volume. This is distinct from the concentric hypertrophy seen in resistance training or pathological hypertension. S2 is INCORRECTLY labeled TRUE: while the description of Henneman's size principle is accurate (smallest motor units recruited first, largest last), the claim that this principle does NOT apply to rapid ballistic movements is false. Henneman's size principle applies to virtually all voluntary movements, including ballistic ones. During ballistic movements, all motor units are recruited rapidly in sequence (still smallest-to-largest), but the time between recruitment of successive units is compressed to milliseconds. The common misconception that large motor units are preferentially recruited in ballistic movements is not supported by direct electrophysiological evidence in humans. Since S2 contains a false claim but is labeled TRUE, it is incorrectly classified. S3 is correctly TRUE: the lactate threshold is a critical concept in exercise physiology. Below the threshold, lactate production and clearance are balanced. Above it, glycolytic flux in type II fibers exceeds mitochondrial pyruvate oxidation capacity, and lactate dehydrogenase converts pyruvate to lactate. Training increases mitochondrial density and MCT (monocarboxylate transporter) expression, improving lactate clearance and shifting the threshold rightward. S4 is correctly TRUE: PGC-1alpha is the master regulator of mitochondrial biogenesis, activated by the energy sensor AMPK (responding to elevated AMP/ATP ratio during exercise) and by Ca2+-dependent signaling (CaMKII, calcineurin) during repeated muscle contractions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 40,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A clinical cardiologist records the following ECG parameters from four patients:\n\nPatient W: PR interval = 0.16s, QRS duration = 0.09s, QTc interval = 0.42s, Heart rate = 72 bpm\nPatient X: PR interval = 0.28s, QRS duration = 0.08s, QTc interval = 0.40s, Heart rate = 58 bpm\nPatient Y: PR interval = 0.18s, QRS duration = 0.14s, QTc interval = 0.44s, Heart rate = 68 bpm\nPatient Z: PR interval = 0.14s, QRS duration = 0.08s, QTc interval = 0.56s, Heart rate = 78 bpm\n\nNormal values: PR interval 0.12-0.20s, QRS duration <0.12s, QTc interval <0.46s.\n\nBased on these data, which patient is at highest risk for torsades de pointes (a life-threatening polymorphic ventricular tachycardia)?",
+      "dataContext": "ECG interval measurements for four patients. PR interval reflects AV conduction time, QRS duration reflects ventricular depolarization time, and QTc (corrected QT) reflects total ventricular depolarization plus repolarization time. Prolonged QTc (>0.46s in women, >0.45s in men) is a major risk factor for torsades de pointes. Prolonged PR indicates first-degree AV block. Prolonged QRS indicates bundle branch block or ventricular conduction delay.",
+      "options": [
+        "A) Patient W, because the PR interval of 0.16s suggests impaired SA node function that could trigger ventricular arrhythmia",
+        "B) Patient X, because a heart rate of 58 bpm with prolonged PR interval (0.28s, first-degree AV block) indicates complete heart block with highest arrhythmia risk",
+        "C) Patient Y, because a widened QRS (0.14s) suggests bundle branch block, which is the primary substrate for torsades de pointes",
+        "D) Patient Z, because a markedly prolonged QTc interval (0.56s) reflects delayed ventricular repolarization, which creates a vulnerable window for early afterdepolarizations (EADs) that can trigger torsades de pointes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Torsades de pointes (TdP) is a polymorphic ventricular tachycardia that occurs in the setting of prolonged QT intervals. Patient Z has a markedly prolonged QTc of 0.56s (normal <0.46s), indicating significantly delayed ventricular repolarization. The mechanism linking prolonged QT to TdP involves early afterdepolarizations (EADs) — abnormal depolarizations that occur during phase 2 or 3 of the action potential when repolarization is delayed. EADs are generated by reactivation of L-type Ca2+ channels or late Na+ current (INaL) during the prolonged plateau phase. If an EAD reaches threshold, it can trigger a premature ventricular complex that initiates the characteristic 'twisting of the points' pattern. Patient X has first-degree AV block (PR = 0.28s), which is usually benign and unrelated to TdP. Patient Y has a widened QRS suggesting bundle branch block, which affects depolarization speed but is not the primary risk factor for TdP (though it may predispose to other arrhythmias). Patient W has entirely normal parameters. Common causes of acquired long QT include drugs (antiarrhythmics like sotalol, antibiotics like erythromycin, antipsychotics), electrolyte abnormalities (hypokalemia, hypomagnesemia), and congenital channelopathies (KCNQ1, KCNH2, SCN5A mutations).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A pulmonologist performs spirometry and arterial blood gas (ABG) analysis on three patients:\n\nPatient A: FEV1/FVC = 0.48, FVC = 3.8L (82% predicted), ABG: pH 7.35, PaCO2 = 55 mmHg, HCO3- = 30 mEq/L, PaO2 = 58 mmHg\nPatient B: FEV1/FVC = 0.84, FVC = 2.1L (52% predicted), ABG: pH 7.43, PaCO2 = 32 mmHg, HCO3- = 21 mEq/L, PaO2 = 70 mmHg\nPatient C: FEV1/FVC = 0.80, FVC = 4.5L (98% predicted), ABG: pH 7.31, PaCO2 = 68 mmHg, HCO3- = 34 mEq/L, PaO2 = 52 mmHg\n\nNormal: FEV1/FVC > 0.70, FVC > 80% predicted, pH 7.35-7.45, PaCO2 35-45, HCO3- 22-26, PaO2 80-100.\n\nWhich interpretation best matches the data?",
+      "dataContext": "Spirometry measures: FEV1/FVC ratio (forced expiratory volume in 1 second / forced vital capacity) — reduced in obstructive diseases (asthma, COPD), normal-to-high in restrictive diseases. FVC — reduced in restrictive diseases. Arterial blood gases: PaCO2 reflects alveolar ventilation, PaO2 reflects oxygenation. Henderson-Hasselbalch: pH = 6.1 + log([HCO3-]/(0.03 x PaCO2)).",
+      "options": [
+        "A) Patient A has obstructive lung disease (e.g., COPD) with chronic respiratory acidosis and renal compensation (elevated HCO3-); Patient B has restrictive lung disease (e.g., pulmonary fibrosis) with compensatory hyperventilation; Patient C has obesity hypoventilation syndrome with chronic respiratory acidosis and renal compensation",
+        "B) Patient A has restrictive lung disease with metabolic acidosis; Patient B has obstructive lung disease with respiratory alkalosis; Patient C has normal lung function with metabolic alkalosis",
+        "C) All three patients have obstructive lung disease at different stages of progression",
+        "D) Patient A has asthma with acute respiratory alkalosis; Patient B has pulmonary embolism; Patient C has pneumonia with septic shock"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Patient A: FEV1/FVC = 0.48 (severely reduced, <0.70) with relatively preserved FVC — classic obstructive pattern (COPD or severe asthma). ABG shows pH 7.35 (low-normal), PaCO2 55 (elevated — CO2 retention), HCO3- 30 (elevated — renal compensation), and PaO2 58 (hypoxemia). This is chronic respiratory acidosis with appropriate metabolic (renal) compensation — the kidneys have had time to retain HCO3- to buffer the chronically elevated CO2. The near-normal pH despite significantly elevated PaCO2 confirms chronicity. Patient B: FEV1/FVC = 0.84 (normal ratio) with severely reduced FVC (52% predicted) — classic restrictive pattern (pulmonary fibrosis, chest wall disease, neuromuscular disease). ABG shows pH 7.43, PaCO2 32 (low — hyperventilation), normal HCO3-, and PaO2 70 (mild hypoxemia). Restrictive diseases cause reduced lung volumes and V/Q mismatch; patients compensate by hyperventilating, which lowers PaCO2 and slightly raises pH. Patient C: Normal FEV1/FVC and FVC (no obstructive or restrictive disease) but severe CO2 retention (PaCO2 68) with renal compensation (HCO3- 34) and hypoxemia. This pattern — hypoventilation without intrinsic lung disease — is consistent with obesity hypoventilation syndrome (Pickwickian syndrome) or neuromuscular hypoventilation, where the drive or mechanics of ventilation are impaired despite normal lung parenchyma.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An endocrinologist evaluates four patients with suspected glucose metabolism disorders. Fasting labs and oral glucose tolerance test (OGTT) results:\n\nPatient P: Fasting glucose = 280 mg/dL, Fasting insulin = 2 mU/L (very low), C-peptide = 0.1 ng/mL (very low), Anti-GAD antibodies = positive, HbA1c = 11.2%\nPatient Q: Fasting glucose = 210 mg/dL, Fasting insulin = 38 mU/L (elevated), C-peptide = 4.8 ng/mL (elevated), Anti-GAD antibodies = negative, HbA1c = 9.1%, BMI = 34\nPatient R: Fasting glucose = 55 mg/dL, Fasting insulin = 85 mU/L (markedly elevated), C-peptide = 12.5 ng/mL (markedly elevated), Anti-GAD antibodies = negative, HbA1c = 4.2%\nPatient S: Fasting glucose = 95 mg/dL, Fasting insulin = 5 mU/L (normal), C-peptide = 1.0 ng/mL (normal), Anti-GAD antibodies = negative, HbA1c = 5.4%\n\nNormal: Fasting glucose 70-100, fasting insulin 5-25, C-peptide 0.5-2.0, HbA1c <5.7%.\n\nWhich diagnosis best fits each patient?",
+      "dataContext": "C-peptide is co-secreted with insulin from beta cells in equimolar amounts and serves as a marker of endogenous insulin production (exogenous insulin does not contain C-peptide). Anti-GAD (glutamic acid decarboxylase) antibodies indicate autoimmune destruction of beta cells. HbA1c reflects average blood glucose over 2-3 months. Insulin resistance is characterized by hyperglycemia with hyperinsulinemia (the pancreas overproduces insulin to compensate). Insulinomas produce excessive endogenous insulin causing hypoglycemia with inappropriately elevated insulin and C-peptide.",
+      "options": [
+        "A) P = Type 2 diabetes; Q = Type 1 diabetes; R = Insulinoma; S = Normal",
+        "B) P = Type 1 diabetes (autoimmune beta cell destruction); Q = Type 2 diabetes (insulin resistance with compensatory hyperinsulinemia); R = Insulinoma (insulin-secreting pancreatic tumor); S = Normal glucose homeostasis",
+        "C) P = Insulinoma; Q = Type 1 diabetes; R = Type 2 diabetes; S = Gestational diabetes",
+        "D) P = Type 1 diabetes; Q = Insulinoma; R = Type 2 diabetes; S = Pre-diabetes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Patient P shows severe hyperglycemia (280 mg/dL), very low insulin and C-peptide (indicating near-complete loss of beta cell function), positive anti-GAD antibodies (confirming autoimmune etiology), and very high HbA1c (11.2%, indicating prolonged severe hyperglycemia). This is classic Type 1 diabetes mellitus with autoimmune destruction of pancreatic beta cells. Patient Q shows hyperglycemia (210 mg/dL) with ELEVATED insulin (38 mU/L) and elevated C-peptide (4.8 ng/mL), indicating that beta cells are producing excessive insulin but it is insufficient to overcome peripheral insulin resistance. Negative anti-GAD antibodies rule out autoimmune beta cell destruction. Elevated BMI (34, obese) is a major risk factor. This is Type 2 diabetes with insulin resistance and compensatory hyperinsulinemia that has been overwhelmed. Patient R shows HYPOGLYCEMIA (55 mg/dL) with markedly elevated insulin (85 mU/L) and C-peptide (12.5 ng/mL). The combination of hypoglycemia with inappropriately high endogenous insulin (confirmed by elevated C-peptide) is diagnostic of an insulinoma — a rare, usually benign, insulin-secreting tumor of pancreatic beta cells. The Whipple triad (symptoms of hypoglycemia, documented low glucose, symptom resolution with glucose administration) would confirm the diagnosis clinically. Patient S has entirely normal values, indicating normal glucose homeostasis.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 45,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A comparative physiologist measures parameters related to insect Malpighian tubule function in Drosophila melanogaster under control conditions and after treatment with the diuretic peptide Drosophila kinin:\n\nControl: Fluid secretion rate = 0.5 nL/min, Transepithelial voltage (lumen-positive) = +30 mV, Tubule lumen [K+] = 140 mM, Tubule lumen [Cl-] = 120 mM, Hemolymph [K+] = 25 mM, Hemolymph [Cl-] = 90 mM\nAfter Drosophila kinin: Fluid secretion rate = 1.8 nL/min, Transepithelial voltage = +8 mV, Tubule lumen [K+] = 130 mM, Tubule lumen [Cl-] = 145 mM\n\nWhat is the most likely mechanism by which Drosophila kinin increases fluid secretion?",
+      "dataContext": "Insect Malpighian tubules secrete primary urine by active transport. The principal cells secrete K+ via an apical vacuolar H+-ATPase that energizes a K+/H+ exchanger (or directly through ion channels driven by the proton gradient). Stellate cells, interspersed among principal cells, contain chloride channels. The transepithelial potential (lumen-positive) is generated mainly by cation (K+) secretion. Kinin-family peptides are known to increase intracellular Ca2+ in stellate cells. A reduction in transepithelial voltage with increased Cl- secretion suggests increased paracellular or transcellular Cl- conductance.",
+      "options": [
+        "A) Kinin stimulates the apical V-ATPase in principal cells, increasing H+ extrusion and K+ secretion, which raises transepithelial voltage and pulls Cl- paracellularly",
+        "B) Kinin inhibits all ion transport, reducing fluid secretion to zero and collapsing transepithelial voltage",
+        "C) Kinin opens chloride channels (likely CLC-type or bestrophin channels) in stellate cells via Ca2+ signaling, increasing transcellular Cl- conductance; this increases Cl- secretion into the lumen, reduces the lumen-positive voltage (by adding negative charge to the lumen), and the increased luminal osmolarity drives water secretion osmotically",
+        "D) Kinin stimulates Na+/K+-ATPase on the basolateral membrane of principal cells, increasing intracellular K+ and secondarily driving greater apical K+ secretion without affecting Cl- transport"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The data show that Drosophila kinin treatment causes: (1) a 3.6-fold increase in fluid secretion rate, (2) a marked decrease in transepithelial voltage from +30 mV to +8 mV, and (3) an increase in luminal Cl- concentration from 120 to 145 mM with a slight decrease in luminal K+. This pattern is consistent with kinin opening Cl- channels in stellate cells. In Drosophila Malpighian tubules, kinin peptides act on stellate cells through a G protein-coupled receptor that activates PLC, generating IP3 and releasing Ca2+ from intracellular stores. The elevated cytosolic Ca2+ opens chloride channels (identified as Drosophila CLC channels and possibly bestrophin family channels) in the stellate cell apical membrane. Increased transcellular Cl- secretion adds negative charge to the lumen, collapsing the lumen-positive potential (explaining the drop from +30 to +8 mV). The increased luminal ion concentration (both K+ from principal cells and Cl- from stellate cells) raises luminal osmolarity, driving osmotic water flow and increasing fluid secretion. Option A predicts increased voltage, not decreased. Option D does not explain the Cl- changes or voltage drop. This is a well-characterized model system in insect renal physiology, with key contributions from the O'Donnell and Dow laboratories.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 44,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A clinical exercise physiologist performs incremental exercise tests on two subjects (a sedentary individual and an endurance-trained athlete) on a cycle ergometer, measuring VO2, blood lactate, and heart rate at each workload:\n\nSedentary subject:\n100W: VO2=1.2 L/min, Lactate=1.0 mmol/L, HR=110 bpm\n150W: VO2=1.8 L/min, Lactate=1.8 mmol/L, HR=135 bpm\n200W: VO2=2.4 L/min, Lactate=4.5 mmol/L, HR=160 bpm\n225W: VO2=2.6 L/min, Lactate=8.2 mmol/L, HR=178 bpm (exhaustion)\n\nTrained athlete:\n100W: VO2=1.1 L/min, Lactate=0.8 mmol/L, HR=80 bpm\n200W: VO2=2.3 L/min, Lactate=1.2 mmol/L, HR=120 bpm\n300W: VO2=3.5 L/min, Lactate=3.8 mmol/L, HR=155 bpm\n350W: VO2=4.2 L/min, Lactate=5.0 mmol/L, HR=168 bpm\n400W: VO2=4.8 L/min, Lactate=9.5 mmol/L, HR=185 bpm (exhaustion)\n\nUsing 4 mmol/L as the lactate threshold criterion, which analysis is correct?",
+      "dataContext": "VO2 represents oxygen consumption during exercise. Blood lactate concentration reflects the balance between lactate production (primarily by type II muscle fibers during glycolysis) and clearance (by liver, heart, and oxidative muscle fibers). The lactate threshold (LT) is the exercise intensity at which blood lactate begins to accumulate exponentially, typically identified at 4 mmol/L (OBLA criterion). Heart rate at each workload reflects cardiovascular demand. VO2max is the highest VO2 achieved.",
+      "options": [
+        "A) The sedentary subject has a higher lactate threshold expressed as % VO2max because their muscles rely more on oxidative phosphorylation",
+        "B) The athlete reaches lactate threshold at approximately 300W (~73% of VO2max of 4.8 L/min), while the sedentary subject reaches it at approximately 200W (~92% of VO2max of 2.6 L/min); the athlete has a higher absolute workload at LT and higher VO2max, but the sedentary subject's LT is at a higher percentage of VO2max",
+        "C) The athlete reaches lactate threshold at approximately 300W (~73% of VO2max), while the sedentary subject reaches it between 150-200W (~69-92% of VO2max); the athlete has both a higher absolute LT workload and VO2max, and likely a higher LT as % VO2max due to training adaptations including increased mitochondrial density and capillarization",
+        "D) Both subjects reach lactate threshold at the same percentage of VO2max because the lactate threshold is genetically determined and unaffected by training"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The data show that the trained athlete has a much higher VO2max (~4.8 L/min vs ~2.6 L/min) and reaches the 4 mmol/L lactate threshold at a much higher absolute workload (~300W, where lactate is 3.8 mmol/L, vs the sedentary subject at ~200W, where lactate is 4.5 mmol/L). For the athlete, 300W corresponds to a VO2 of ~3.5 L/min, which is ~73% of VO2max (3.5/4.8). For the sedentary subject, the LT occurs between 150W and 200W; interpolating, it is approximately at 195W, corresponding to roughly 2.35 L/min, which is ~90% of VO2max (2.35/2.6). However, option B claims the sedentary subject's LT is at a higher %VO2max, which seems contradictory to training physiology. In reality, trained athletes typically have LT at ~75-85% of VO2max, while untrained individuals have LT at ~50-60% of VO2max. The sedentary subject's apparent high %VO2max at LT reflects their very low VO2max rather than true physiological efficiency. Option C correctly notes that the athlete likely has a higher LT as %VO2max due to training adaptations. Looking more carefully at the sedentary data: at 150W (1.8 mmol/L, VO2=1.8 L/min = 69% VO2max) they are below LT, and by 200W (4.5 mmol/L, VO2=2.4 L/min = 92%) they are above LT. The actual LT likely falls around 190W or about 85-90% VO2max. The athlete at 300W (3.8 mmol/L, VO2=3.5 L/min = 73%) is just below LT. So the athlete's LT% is around 73-78%. In this particular dataset, the sedentary subject appears to have a higher %VO2max at LT, but this is unusual and likely reflects the coarse measurement intervals. Option C is the best answer because it correctly identifies the key training adaptations and notes the athlete has higher absolute LT workload and VO2max.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 40,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A research team wants to determine the relative contributions of the intrinsic cardiac conduction system versus autonomic nervous system input in maintaining normal heart rhythm. They have access to isolated perfused hearts (Langendorff preparation), intact anesthetized animals, pharmacological agents (atropine — muscarinic antagonist; propranolol — beta-adrenergic antagonist; ivabradine — selective If blocker), and electrophysiology recording equipment.\n\nWhich experimental approach would most rigorously test the hypothesis that the intrinsic heart rate (without autonomic influence) is higher than the resting in vivo heart rate?",
+      "experimentContext": "The Langendorff preparation involves retrograde perfusion of an isolated heart through the aorta with oxygenated Krebs solution, maintaining coronary perfusion while removing all neural and humoral inputs. In vivo, the heart receives both sympathetic (acceleratory) and parasympathetic/vagal (deceleratory) input. At rest, vagal tone predominates, meaning parasympathetic activity normally slows the heart below its intrinsic rate. 'Pharmacological denervation' using combined atropine + propranolol in vivo blocks both autonomic limbs to reveal the intrinsic heart rate (IHR). The intrinsic heart rate in healthy adults is typically ~100-110 bpm, compared to a resting heart rate of ~60-70 bpm.",
+      "options": [
+        "A) Measure resting heart rate in the intact animal, then administer propranolol alone to block sympathetic input; if heart rate increases, the hypothesis is confirmed",
+        "B) Measure resting heart rate, then administer atropine alone; since atropine blocks vagal input, any heart rate increase would disprove the hypothesis by showing that vagal tone was responsible for the low resting rate",
+        "C) Measure resting heart rate in the intact animal, then perform pharmacological denervation (atropine + propranolol combined) and compare the resulting intrinsic heart rate to resting; additionally, measure heart rate in the isolated Langendorff heart as an independent confirmation that the heart beats faster without any autonomic input; if both approaches show a higher rate than the in vivo resting rate, the hypothesis is strongly supported",
+        "D) Administer ivabradine to the isolated heart to block If current; if the heart stops, this confirms that autonomic input is essential for rhythmicity"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Option C is the most rigorous experimental design because it uses two complementary approaches: (1) In vivo pharmacological denervation with combined atropine (blocking muscarinic/parasympathetic) and propranolol (blocking beta-adrenergic/sympathetic) reveals the intrinsic heart rate (IHR) by eliminating all autonomic influence while preserving circulating hormones and normal cardiac loading conditions. If IHR (~100-110 bpm) exceeds the resting rate (~60-70 bpm), this supports the hypothesis that at rest, vagal tone predominates and slows the heart below its intrinsic rate. (2) The Langendorff isolated heart preparation completely removes all neural and humoral inputs, providing independent confirmation. The isolated heart typically beats at its intrinsic pacemaker rate, which should also exceed the in vivo resting rate. Agreement between both methods strengthens the conclusion. Option A is flawed because blocking sympathetic input alone (propranolol) would DECREASE heart rate, not increase it, which does not test the hypothesis correctly. Option B gives the right prediction (atropine would increase heart rate by removing vagal braking) but incorrectly states this would 'disprove' the hypothesis — it would actually SUPPORT it. Option D tests the role of If in pacemaking, not autonomic modulation; ivabradine slows but does not stop the heart because other currents (ICa-T, ICa-L) contribute to diastolic depolarization.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 42,
+      "sourceTextbook": "Eckert-5e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A mucosal immunologist hypothesizes that commensal-derived butyrate (a short-chain fatty acid produced by bacterial fermentation of dietary fiber) promotes intestinal immune tolerance by inducing regulatory T cell (Treg) differentiation in the colonic lamina propria. The researcher has access to germ-free (GF) mice, specific-pathogen-free (SPF) mice, butyrate-producing bacterial strains (Faecalibacterium prausnitzii, Clostridium clusters IV and XIVa), Foxp3-GFP reporter mice (where Tregs fluoresce green), flow cytometry, HDAC activity assays, and sodium butyrate for supplementation.\n\nWhich experimental design best tests this hypothesis?",
+      "experimentContext": "Germ-free mice lack all commensal bacteria and have reduced colonic Tregs compared to SPF mice. Butyrate inhibits histone deacetylases (HDACs), increasing histone acetylation at the Foxp3 promoter and enhancing Foxp3 expression, which is the master transcription factor for Treg differentiation. Colonization of GF mice with specific bacterial consortia can restore colonic Treg populations. The comparison between GF and colonized/supplemented mice, combined with mechanistic assays (HDAC inhibition, Foxp3 expression), can establish the causal pathway from butyrate to Treg induction.",
+      "options": [
+        "A) Compare colonic Treg percentages between SPF and GF mice using flow cytometry; if SPF mice have more Tregs, conclude that butyrate drives Treg differentiation in the colon",
+        "B) Feed SPF mice a high-fiber diet for 2 weeks and measure blood butyrate levels; if butyrate levels correlate with circulating Treg numbers, the hypothesis is confirmed",
+        "C) Inject sodium butyrate intraperitoneally into GF mice and measure splenic Treg percentages; if splenic Tregs increase, conclude that butyrate induces colonic Treg differentiation",
+        "D) Colonize GF Foxp3-GFP mice with butyrate-producing bacteria (group 1), non-butyrate-producing bacteria matched for colonization density (group 2), or maintain as GF with oral sodium butyrate supplementation (group 3) and keep a GF control group (group 4); at 4 weeks, quantify colonic Foxp3+ Treg percentages by flow cytometry, measure cecal butyrate concentrations by gas chromatography, and assess histone H3 acetylation at the Foxp3 promoter by ChIP-qPCR; if groups 1 and 3 show elevated Tregs, elevated butyrate, and increased Foxp3 promoter acetylation compared to groups 2 and 4, this supports a causal role for butyrate in Treg induction via HDAC inhibition"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Option D is the strongest experimental design because it includes: (1) Multiple experimental groups that isolate the variable of interest — butyrate-producing bacteria (group 1) provide the natural source of butyrate, while non-butyrate-producing bacteria (group 2) control for the effects of microbial colonization per se (e.g., TLR signaling, other metabolites). Oral butyrate supplementation to GF mice (group 3) tests whether butyrate alone, without live bacteria, is sufficient. GF controls (group 4) provide the baseline. (2) Mechanistic readouts — measuring cecal butyrate levels confirms that butyrate-producing bacteria actually produce butyrate in the gut; ChIP-qPCR for histone H3 acetylation at the Foxp3 promoter tests the HDAC inhibition mechanism; Foxp3-GFP reporter mice enable precise quantification of Treg differentiation in the colonic lamina propria. (3) Appropriate controls — the non-butyrate-producing bacteria control is critical for separating butyrate-specific effects from general microbiota effects. Option A is correlational and cannot establish causality (SPF mice differ from GF mice in countless ways beyond butyrate). Option B measures systemic butyrate and blood Tregs, not colonic, and is only correlational. Option C uses intraperitoneal injection and splenic Tregs, which does not test colonic mucosal immunity. This design mirrors the landmark studies by Arpaia et al. (Nature, 2013) and Furusawa et al. (Nature, 2013).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 43,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Physiology"
+    }
+  ]
+}

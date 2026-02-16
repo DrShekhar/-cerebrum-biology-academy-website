@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch13-21 Clinical Genetics & Research Applications \u2014 Wave 1C",
+    "version": 1,
+    "source": "olympiad-wave1c",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "In sickle cell disease, deoxygenated hemoglobin S (HbS) polymerizes into rigid fibers that distort erythrocytes. The polymerization follows a double-nucleation mechanism with a pronounced delay time that is highly dependent on intracellular HbS concentration. Hydroxyurea is the primary pharmacological therapy for sickle cell disease. Which mechanism best explains how hydroxyurea reduces sickling episodes?",
+      "options": [
+        "Hydroxyurea directly inhibits the lateral contacts between beta-6 valine and the hydrophobic pocket on an adjacent HbS tetramer, preventing fiber nucleation",
+        "Hydroxyurea functions as a nitric oxide donor that vasodilates the microvasculature, but has no direct effect on HbS polymerization or hemoglobin composition",
+        "Hydroxyurea is a ribonucleotide reductase inhibitor that causes S-phase arrest in erythroid precursors, and the resulting stress reactivates fetal hemoglobin (HbF/gamma-globin) expression; HbF tetramers (alpha2-gamma2) cannot co-polymerize with HbS, acting as chain terminators that disrupt fiber elongation and dramatically increase the delay time",
+        "Hydroxyurea increases oxygen affinity of HbS by covalently modifying the beta-globin chain at cysteine-93, preventing the R-to-T conformational transition required for polymerization"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Hydroxyurea's primary therapeutic mechanism in sickle cell disease is the induction of fetal hemoglobin (HbF). As a ribonucleotide reductase inhibitor, hydroxyurea causes cytotoxic stress in erythroid progenitors, which paradoxically selects for cells that activate the gamma-globin gene through stress erythropoiesis pathways involving p38 MAPK, cGMP signaling, and possibly soluble guanylate cyclase activation. HbF (alpha2-gamma2) is the critical anti-sickling hemoglobin: gamma-globin has a glutamine at position 87 that sterically clashes with the lateral contact site required for HbS polymer extension, meaning HbF tetramers cannot be incorporated into the growing HbS fiber. This mixed inhibition dramatically extends the delay time for polymerization (delay time scales approximately as the 30th to 50th power of HbS concentration, so even modest reductions in effective HbS concentration via HbF dilution produce enormous increases in delay time). Option A is incorrect because hydroxyurea does not directly bind HbS. Option C describes a mechanism attributed to other agents (like voxelotor/GBT440) but not hydroxyurea. Option D has partial truth \u2014 hydroxyurea does generate NO as a secondary mechanism \u2014 but the primary clinical benefit derives from HbF induction.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Huntington disease (HD) is caused by a CAG trinucleotide repeat expansion in the HTT gene. Unaffected individuals have 10-35 repeats, while HD patients carry 36 or more. A notable feature of HD is anticipation \u2014 successive generations show earlier onset and increased severity. Which molecular mechanism best explains the intergenerational instability (expansion bias) of CAG repeats, particularly during paternal transmission?",
+      "options": [
+        "CAG repeats form stable hairpin structures during DNA replication by looping out on the nascent strand; Okazaki fragment processing by FEN1 and DNA ligase I is impaired by these structures, resulting in net expansion that is amplified during the numerous mitotic divisions of spermatogenesis compared to oogenesis",
+        "The mismatch repair protein MSH3 specifically recognizes CAG/CTG hairpins and recruits error-prone translesion synthesis polymerases that add extra repeats during repair, but this process occurs exclusively during meiotic recombination",
+        "CAG expansions arise solely from unequal crossing over between misaligned homologs during meiosis I, which is more frequent in male meiosis due to higher recombination rates on autosomes in males",
+        "Somatic hypermutation machinery from B lymphocytes is aberrantly activated in germ cells, targeting repetitive DNA sequences including CAG tracts for expansion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "CAG/CTG trinucleotide repeats form stable DNA secondary structures \u2014 particularly hairpins stabilized by C-G and non-canonical A-A or T-T base pairs. During DNA replication, these hairpins form on the nascent strand during lagging strand synthesis. When an Okazaki fragment containing a looped-out CAG hairpin is incorporated without proper flap processing (FEN1 is inhibited by the structured DNA), the net effect is insertion of extra repeats. The expansion bias during paternal transmission is explained by the far greater number of mitotic cell divisions in spermatogenesis (~400 divisions by age 30, increasing with paternal age) compared to oogenesis (~23 divisions, completed before birth). Each replication cycle provides an opportunity for slip-strand mispairing and expansion. Additionally, the MMR pathway (particularly MSH2-MSH3) paradoxically promotes expansion rather than correction \u2014 MSH3 binds CAG hairpins and initiates a futile repair cycle that leads to expansion \u2014 but this occurs during DNA replication and repair, not exclusively during meiotic recombination (making option B partially correct but incomplete and incorrectly restricted). Option C is wrong because unequal crossing over is not the primary mechanism for trinucleotide repeat expansion. Option D is entirely fictional.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 15,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "MELAS (Mitochondrial Encephalomyopathy, Lactic Acidosis, and Stroke-like episodes) is most commonly caused by the m.3243A>G mutation in the MT-TL1 gene encoding mitochondrial tRNA-Leu(UUR). The clinical severity varies widely among family members carrying the same mutation. Which concept best explains this phenotypic variability?",
+      "options": [
+        "Variable expressivity due to autosomal modifier genes that interact with the mitochondrial mutation through epistasis at nuclear-encoded respiratory chain subunits",
+        "Heteroplasmy and the threshold effect: each cell contains hundreds to thousands of mitochondria with multiple mtDNA copies, and the proportion of mutant versus wild-type mtDNA (heteroplasmy level) varies between tissues and individuals due to replicative segregation during cell division; symptoms manifest only when the mutant load exceeds a tissue-specific threshold (typically 60-90% for MELAS), and stochastic partitioning during oogenesis creates variable heteroplasmy levels among offspring",
+        "Incomplete penetrance caused by X-linked modifier loci that modulate mitochondrial function differently in males and females",
+        "Anticipation mediated by progressive expansion of the point mutation into a trinucleotide repeat during mitochondrial DNA replication in successive generations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Heteroplasmy and the threshold effect are the central concepts explaining phenotypic variability in mitochondrial diseases. Each human cell contains hundreds of mitochondria, and each mitochondrion contains 2-10 copies of the circular 16.5 kb mtDNA genome, giving roughly 1,000-10,000 mtDNA copies per cell. In a heteroplasmic individual (carrying both mutant and wild-type mtDNA), the proportion of mutant molecules varies between tissues due to replicative segregation \u2014 the random partitioning of mitochondria during mitosis. Different tissues have different energy demands and therefore different vulnerability thresholds: the brain and skeletal muscle (high oxidative demand) have lower thresholds (~60-80% mutant load) than tissues like liver or blood (~90-95%). The mtDNA bottleneck during oogenesis is critical for intergenerational variability: during early oogenesis, the number of mtDNA molecules is drastically reduced (to ~200 copies) before being amplified, creating a sampling effect that can dramatically shift heteroplasmy levels between mother and offspring. This explains why a mildly affected mother (50% mutant load) can have a severely affected child (90% mutant load) or an unaffected child (20% mutant load). Option A has some validity (nuclear modifiers exist) but does not explain the primary source of variability. Options C and D are incorrect \u2014 mtDNA is maternally inherited (not X-linked), and point mutations do not undergo repeat expansion.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 15,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pharmacogenomic testing before prescribing abacavir (an antiretroviral drug for HIV) is now standard of care. Patients carrying the HLA-B*57:01 allele are at high risk of a severe hypersensitivity reaction. What is the immunological mechanism underlying this drug-induced hypersensitivity?",
+      "options": [
+        "Abacavir is metabolized into a reactive intermediate that covalently modifies serum albumin, forming a neoantigen that triggers IgE-mediated type I hypersensitivity through mast cell degranulation",
+        "Abacavir directly cross-links adjacent HLA-B molecules on the cell surface, mimicking antibody-mediated receptor clustering and activating complement-dependent cytotoxicity",
+        "HLA-B*57:01 encodes a defective transporter associated with antigen processing (TAP), leading to accumulation of unprocessed abacavir-peptide complexes in the endoplasmic reticulum, triggering the unfolded protein response and apoptosis",
+        "The HLA-B*57:01 molecule has a unique peptide-binding groove geometry; abacavir binds non-covalently within this groove, altering the repertoire of self-peptides that can be presented, causing previously hidden self-peptides to be displayed to CD8+ T cells, triggering an immune response indistinguishable from graft rejection (the altered peptide repertoire model)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The abacavir-HLA-B*57:01 interaction is one of the best-characterized pharmacogenomic associations and serves as a paradigm for drug-induced immune-mediated adverse reactions. X-ray crystallography (Illing et al., 2012) revealed that abacavir binds non-covalently within the F-pocket of the HLA-B*57:01 peptide-binding groove, occupying space that normally accommodates the C-terminal anchor residue of presented peptides. This fundamentally alters which self-peptides can fit into the groove: peptides that previously could not bind (due to incompatible anchor residues) now become high-affinity ligands because abacavir changes the shape and chemical properties of the binding pocket. The result is presentation of a novel self-peptide repertoire to CD8+ T cells. Because these self-peptides were not presented during thymic selection, T cells reactive against them were not deleted and remain in the peripheral repertoire. Upon abacavir exposure, these T cells mount a vigorous immune response against drug-modified self-peptide-MHC complexes, causing a type IV (delayed-type) hypersensitivity reaction. This is the 'altered peptide repertoire' model. HLA-B*57:01 does not encode TAP (which is encoded by separate genes TAP1 and TAP2). The reaction is T cell-mediated, not IgE-mediated or complement-mediated.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Non-invasive prenatal testing (NIPT) analyzes cell-free fetal DNA (cffDNA) circulating in maternal blood to screen for fetal aneuploidies. The fetal fraction typically ranges from 5-20% of total cell-free DNA. Which principle underlies NIPT's ability to detect trisomy 21 in the fetus?",
+      "options": [
+        "NIPT uses PCR with chromosome 21-specific primers to amplify fetal DNA selectively, and the amplification product is quantified by gel electrophoresis to detect dosage differences",
+        "Massively parallel shotgun sequencing of total cell-free DNA (maternal + fetal) maps millions of sequencing reads to chromosomal bins; a fetus with trisomy 21 contributes slightly more chromosome 21 fragments relative to a reference chromosome, producing a statistically significant increase in the proportion of chromosome 21 reads (a z-score approach) that is detectable even though fetal DNA is a minority of the total cfDNA pool",
+        "NIPT relies on fluorescence in situ hybridization (FISH) of circulating fetal cells captured by anti-fetal hemoglobin antibodies, counting chromosome 21 signals directly in intact fetal nuclei",
+        "Methylation-sensitive restriction digestion selectively destroys maternal DNA (which is hypermethylated), enriching for hypomethylated fetal DNA that is then analyzed by array comparative genomic hybridization"
+      ],
+      "correctAnswer": "B",
+      "explanation": "NIPT for aneuploidy detection is based on counting \u2014 specifically, the statistical overrepresentation of sequencing reads from an aneuploid chromosome. Cell-free DNA in maternal plasma is a mixture: approximately 85-95% maternal and 5-15% fetal (derived primarily from trophoblast apoptosis). In massively parallel shotgun sequencing (MPSS), total cfDNA is fragmented, sequenced to generate millions of short reads, and each read is mapped to its chromosome of origin. For a euploid fetus, the proportion of reads mapping to chromosome 21 matches the expected proportion based on chromosome 21's share of the genome (~1.5%). For a fetus with trisomy 21, there is one extra copy of chromosome 21 in fetal cells, contributing additional chromosome 21 fragments to the maternal plasma. If the fetal fraction is 10%, the expected increase in chromosome 21 reads is approximately 5% (one extra copy out of the two normal copies, scaled by fetal fraction). With millions of reads, this small increase is statistically significant and detected by calculating a z-score comparing observed versus expected chromosome 21 read proportions. The sensitivity exceeds 99% for trisomy 21. Option A is incorrect \u2014 NIPT does not use targeted PCR for aneuploidy detection. Option C describes a different (largely abandoned) approach using intact fetal cells. Option D overstates methylation-based enrichment, which has been explored experimentally but is not the standard NIPT methodology.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ex vivo gene therapy for sickle cell disease using lentiviral vectors has shown remarkable clinical success. The approach involves transducing autologous hematopoietic stem cells (HSCs) with a lentiviral vector carrying a modified beta-globin gene (such as betaA-T87Q). Why are lentiviral vectors preferred over adeno-associated virus (AAV) vectors for this application?",
+      "options": [
+        "Lentiviral vectors have much larger packaging capacity (up to 40 kb) compared to AAV (4.7 kb), and the beta-globin locus control region exceeds AAV capacity",
+        "AAV vectors integrate into the host genome more efficiently than lentiviral vectors, but at random sites that pose an unacceptable insertional mutagenesis risk, whereas lentiviral vectors integrate at safe harbor loci exclusively",
+        "Lentiviral vectors integrate into the host cell genome, providing permanent transgene expression that is maintained through all subsequent HSC divisions and differentiated progeny; AAV vectors remain predominantly episomal and are progressively diluted during the extensive cell divisions of hematopoietic stem cell expansion and differentiation, making them unsuitable for lifelong correction of a continuously renewing tissue",
+        "Lentiviral vectors can transduce quiescent HSCs but AAV vectors cannot enter non-dividing cells, making AAV incompatible with HSC transduction"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The fundamental advantage of lentiviral vectors for HSC gene therapy is stable genomic integration. Lentivectors (derived from HIV-1) carry reverse transcriptase and integrase that convert the RNA genome to DNA and insert it into the host cell chromosome. Once integrated, the transgene is replicated as part of the host genome during every cell division, ensuring permanent expression in all progeny cells. This is essential for hematopoietic stem cells because they undergo extensive self-renewal and differentiation over decades, producing billions of differentiated blood cells. AAV vectors, by contrast, remain predominantly as episomal concatemers in the nucleus. While this is advantageous for post-mitotic tissues (liver, retina, neurons \u2014 where AAV provides stable long-term expression), episomal AAV genomes are progressively lost during cell division because they lack origins of replication and centromeres. In actively dividing HSCs, AAV transgene expression would decline rapidly as cells proliferate. Option A is incorrect because while AAV has limited capacity (~4.7 kb), the therapeutic beta-globin cassettes used in clinical trials (~3.5-4 kb with condensed LCR elements) can fit within AAV. Option B reverses the integration biology \u2014 lentiviral vectors integrate (with some risk), while AAV rarely integrates. Option D is backwards \u2014 AAV can efficiently transduce non-dividing cells, whereas early retroviral vectors (MLV-based) required cell division; lentiviral vectors solved this limitation for retroviruses.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Prime editing, developed by Anzalone et al. (2019), enables precise base substitutions, small insertions, and small deletions without double-strand breaks or donor DNA templates. The prime editor (PE) consists of a Cas9 nickase (H840A) fused to an engineered reverse transcriptase, guided by a prime editing guide RNA (pegRNA). Which step is critical for installing the desired edit?",
+      "options": [
+        "The pegRNA contains a 3' extension with a primer binding site (PBS) that hybridizes to the nicked strand and a reverse transcription template (RTT) encoding the desired edit; after Cas9 nickase nicks the PAM-containing strand, the PBS anneals to the exposed 3'-end of the nicked strand, and the fused reverse transcriptase copies the RTT to synthesize a new DNA flap containing the edit, which is then incorporated through 5'-flap cleavage and ligation by endogenous DNA repair",
+        "The Cas9 nickase creates a double-strand break at the target site, and the pegRNA serves as a homology-directed repair template that is directly incorporated by the cellular HDR machinery",
+        "The reverse transcriptase domain synthesizes a complete complementary DNA copy of the pegRNA, which then displaces both strands of the target DNA through a branch migration mechanism similar to RecA-mediated strand exchange",
+        "Prime editing requires co-delivery of a separate single-stranded oligodeoxynucleotide (ssODN) donor because the reverse transcriptase only creates the nick and cannot synthesize new DNA using RNA as a template"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Prime editing is an elegant approach that circumvents the major limitations of both HDR-based editing (requires DSBs, low efficiency in non-dividing cells, competing NHEJ) and base editing (limited to transition mutations, bystander editing within the activity window). The mechanism proceeds in three key steps: (1) The spacer portion of the pegRNA guides the Cas9 H840A nickase to the target, where it nicks only the PAM-containing (non-target) strand, avoiding a DSB. (2) The primer binding site (PBS, typically 8-15 nt) at the 3' extension of the pegRNA anneals to the free 3'-end of the nicked strand by complementary base pairing. (3) The fused M-MLV reverse transcriptase (engineered for improved thermostability and processivity) uses the reverse transcription template (RTT) as a template to extend the nicked strand, synthesizing new DNA that contains the desired edit. This creates a 3'-flap (containing the edit) and a redundant 5'-flap (containing the original sequence). Cellular 5'-flap endonucleases (such as FEN1) preferentially remove the 5'-flap, and ligation installs the edit on one strand. A second nick on the non-edited strand (in the PE3 strategy) biases mismatch repair to use the edited strand as the template, completing the edit on both strands. Option B is wrong \u2014 no DSB is created. Option C describes a non-existent mechanism. Option D is wrong \u2014 no exogenous donor is needed.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Genome-wide association studies (GWAS) have identified thousands of loci associated with complex traits, yet these loci typically explain only a small fraction of estimated heritability. This discrepancy is known as 'missing heritability.' Which explanation is best supported by current evidence?",
+      "options": [
+        "GWAS results are largely false positives due to population stratification, and the true heritability of complex traits is near zero",
+        "Nearly all missing heritability is due to rare variants with very large effects (odds ratios > 5) that are invisible to common-variant GWAS arrays but would be fully captured by whole-genome sequencing",
+        "Much of the missing heritability is attributable to many common variants of individually small effect that fail to reach genome-wide significance (p < 5 x 10^-8) in current sample sizes, plus contributions from rare variants, gene-gene interactions, gene-environment interactions, and structural variants not well tagged by standard SNP arrays; methods like LD score regression and GREML that aggregate genome-wide signal confirm that common SNPs collectively explain a substantial fraction of heritability even when individual loci are not significant",
+        "Epigenetic inheritance accounts for the majority of missing heritability because DNA methylation patterns are heritable but invisible to genotyping arrays, and twin-based heritability estimates are inflated by shared epigenetic environments"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The missing heritability problem, first articulated by Manolio et al. (2009), has been substantially resolved by improved statistical methods and larger sample sizes. Key insights: (1) The 'infinitesimal model' \u2014 most complex trait heritability is distributed across thousands of common variants with tiny individual effects. GWAS only detects the tip of the iceberg (loci exceeding the stringent significance threshold). Methods like GREML (Genomic Relatedness Matrix Restricted Maximum Likelihood, developed by Yang et al.) and LD score regression estimate total heritability captured by all genotyped SNPs simultaneously, not just significant ones. For height, for example, individual GWAS loci explain ~25% of heritability, but all common SNPs collectively explain ~50-60%. (2) Rare variants contribute additional heritability not captured by common-variant arrays. (3) Structural variants (CNVs, inversions) are poorly tagged. (4) Gene-gene (epistatic) and gene-environment interactions inflate twin-based heritability estimates relative to additive models. (5) Some twin-based heritability is inflated by assortative mating and shared environment. Option A is wrong \u2014 GWAS associations replicate robustly, and genomic control methods correct for stratification. Option B overstates rare variant contribution \u2014 whole-genome sequencing studies show rare variants contribute modestly. Option D overstates epigenetic heritability, which is largely reset each generation in mammals.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Patisiran (Onpattro) was the first FDA-approved RNA interference (RNAi) therapeutic. It treats hereditary transthyretin amyloidosis by silencing the TTR gene in hepatocytes. Which delivery strategy enables patisiran to reach its target cells and engage the RNAi machinery?",
+      "options": [
+        "Patisiran is a naked double-stranded siRNA administered intravenously that freely crosses cell membranes due to its small size and enters the RISC complex directly in the cytoplasm",
+        "Patisiran is a double-stranded siRNA encapsulated in lipid nanoparticles (LNPs) that accumulate in the liver through adsorption of apolipoprotein E (ApoE) from serum, enabling receptor-mediated uptake via the LDL receptor on hepatocytes; once internalized, the siRNA escapes from endosomes, and the guide (antisense) strand is loaded into the Argonaute 2 (AGO2) protein within the RISC complex to direct sequence-specific cleavage of TTR mRNA",
+        "Patisiran is a chemically modified single-stranded antisense oligonucleotide (ASO) that enters hepatocytes via the asialoglycoprotein receptor (ASGPR) through GalNAc conjugation and recruits RNase H to degrade TTR mRNA",
+        "Patisiran uses a lentiviral vector to deliver a short hairpin RNA (shRNA) expression cassette that integrates into hepatocyte genomes for permanent TTR silencing"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Patisiran's delivery system was a breakthrough in RNA therapeutics. The drug consists of a synthetic double-stranded siRNA (targeting TTR mRNA) encapsulated in lipid nanoparticles (LNPs) composed of an ionizable lipid (DLin-MC3-DMA), DSPC, cholesterol, and PEG-lipid. After intravenous administration, the LNPs rapidly adsorb apolipoprotein E (ApoE) from serum, which acts as an endogenous targeting ligand for the LDL receptor (LDLR) on hepatocytes. This exploits the liver's natural lipoprotein uptake pathway. After receptor-mediated endocytosis, the ionizable lipid component is crucial for endosomal escape: as the endosomal pH drops, the lipid becomes positively charged, disrupts the endosomal membrane, and releases the siRNA into the cytoplasm. The siRNA duplex is then processed by the RISC-loading complex: the passenger (sense) strand is cleaved and discarded, while the guide (antisense) strand is loaded into AGO2, where it directs recognition and cleavage of complementary TTR mRNA, reducing transthyretin protein production by ~80%. Option A describes the mechanism of ASOs like inotersen (also approved for hATTR), not siRNA. Option B is wrong because naked siRNA cannot cross cell membranes efficiently and would be rapidly degraded by serum nucleases. Option D describes a gene therapy approach not used for patisiran.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "In forensic genetics, short tandem repeat (STR) profiling is the standard method for human identification. The Combined DNA Index System (CODIS) uses 20 core autosomal STR loci. A forensic laboratory analyzes a crime scene sample and detects three alleles at a single autosomal STR locus (e.g., alleles 12, 14, and 16 at D8S1179). What is the most likely explanation?",
+      "options": [
+        "The individual is a triploid organism with three copies of each chromosome, each carrying a different allele at this locus",
+        "The sample is a mixture of DNA from at least two contributors, since a single diploid individual can have at most two alleles at any autosomal STR locus; mixture interpretation requires probabilistic genotyping software to deconvolve the contributors' profiles and assign likelihood ratios",
+        "The PCR amplification produced a stutter artifact that mimics a third allele, which is a one-repeat-unit smaller artifact generated by strand slippage during amplification",
+        "Somatic mosaicism at this STR locus caused the individual to have three distinct alleles in different cell populations within a single tissue sample"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Detection of more than two alleles at an autosomal STR locus is the hallmark of a DNA mixture. A diploid individual has exactly two alleles per autosomal locus (which may be identical in homozygotes). Three or more alleles at any single locus indicates the presence of DNA from multiple contributors. Mixture interpretation is one of the most challenging aspects of forensic genetics. Modern probabilistic genotyping software (e.g., STRmix, TrueAllele) uses continuous models that consider peak heights, stutter ratios, degradation, and inhibition to estimate the number of contributors, deconvolve individual genotype combinations, and calculate likelihood ratios for inclusion/exclusion of persons of interest. The software evaluates millions of possible genotype combinations weighted by allele frequencies to find the most probable contributor profiles. Option C is partially valid \u2014 stutter artifacts do occur (typically n-1 repeat units at 5-15% of the parent peak height) and must be distinguished from true alleles, but stutter peaks are usually recognizable by their characteristic size and lower intensity. In this scenario with three full-intensity alleles, a mixture is the correct interpretation. Option A is implausible for humans. Option D is theoretically possible but extremely rare for STR loci and would not be the primary forensic interpretation.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding trinucleotide repeat disorders and their molecular pathogenic mechanisms, evaluate the following statements:",
+      "options": [
+        "S1: TRUE \u2014 In Huntington disease, the expanded CAG repeat in the HTT coding region produces a polyglutamine (polyQ) tract that causes the mutant huntingtin protein to misfold and aggregate into intranuclear inclusions, sequestering transcription factors and disrupting protein quality control",
+        "S4: TRUE \u2014 Somatic mosaicism of trinucleotide repeat length occurs in affected tissues, with particularly unstable expansions in post-mitotic neurons, contributing to tissue-specific vulnerability and progressive symptom worsening over time",
+        "S2: FALSE \u2014 Fragile X syndrome is caused by a CGG repeat expansion in the 5' UTR of the FMR1 gene; when the expansion exceeds ~200 repeats (full mutation), the CpG-rich repeat becomes hypomethylated, leading to overexpression of FMRP protein and excitotoxicity",
+        "S3: TRUE \u2014 Myotonic dystrophy type 1 (DM1) involves a CTG expansion in the 3' UTR of the DMPK gene; the pathogenic mechanism is RNA gain-of-function, where expanded CUG repeat RNA accumulates in nuclear foci and sequesters the splicing regulator MBNL1, causing widespread alternative splicing dysregulation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "S1 is TRUE: Huntington disease is the prototypical polyglutamine disorder. The expanded CAG repeat (>36 repeats) encodes a polyQ tract in the huntingtin protein. Mutant huntingtin undergoes conformational changes, forming beta-sheet-rich amyloid-like aggregates and intranuclear inclusions. These aggregates sequester critical cellular proteins including transcription factors (CBP, Sp1, TFIID), components of the ubiquitin-proteasome system, and molecular chaperones (Hsp70, Hsp40). This leads to transcriptional dysregulation, impaired protein degradation, mitochondrial dysfunction, and ultimately neuronal death, particularly in the striatum. S2 is correctly labeled FALSE: The statement contains a critical error. In fragile X syndrome, the expanded CGG repeat (>200 repeats) becomes HYPERmethylated, not hypomethylated, leading to transcriptional SILENCING of FMR1 and LOSS of FMRP protein. FMRP is an RNA-binding protein that regulates synaptic translation; its absence causes excessive protein synthesis at synapses, particularly through the mGluR5 pathway. S3 is TRUE: DM1 exemplifies the RNA toxic gain-of-function mechanism. Expanded CUG repeats form stable hairpin structures in the nucleus that bind and sequester the MBNL1 (Muscleblind-like 1) splicing factor while also stabilizing CELF1 (CUG-binding protein 1). The resulting splicing dysregulation affects hundreds of pre-mRNAs, reverting adult splicing patterns to fetal patterns \u2014 including aberrant splicing of the chloride channel CLCN1 (causing myotonia), the insulin receptor INSR (causing insulin resistance), and cardiac troponin TNNT2 (causing cardiac conduction defects). S4 is TRUE: Somatic instability is increasingly recognized as a key disease modifier. In HD, CAG repeats continue to expand somatically, particularly in striatal neurons, where expansions can reach 1,000+ repeats. The rate of somatic expansion correlates with disease severity and age of onset. DNA mismatch repair genes (MSH3, FAN1, PMS1, PMS2) have been identified as genetic modifiers of HD onset through GWAS, linking somatic expansion rates to disease progression.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 15,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding mitochondrial genetics and mtDNA-associated diseases, evaluate the following statements:",
+      "options": [
+        "S1: TRUE \u2014 Leber hereditary optic neuropathy (LHON) is characterized by acute or subacute bilateral vision loss and is caused by point mutations in mtDNA-encoded Complex I subunits (most commonly m.11778G>A in MT-ND4, m.3460G>A in MT-ND1, and m.14484T>C in MT-ND6), with incomplete penetrance showing a strong male predominance (~50% males vs ~15% females affected among carriers)",
+        "S2: FALSE \u2014 Kearns-Sayre syndrome (KSS) is caused by point mutations in the MT-ATP6 gene and follows strict maternal inheritance with complete penetrance in all offspring",
+        "S3: TRUE \u2014 The mitochondrial genetic code differs from the standard nuclear code in several ways: UGA codes for tryptophan (not stop), AGA and AGG code for stop (not arginine) in human mitochondria, and AUA codes for methionine (not isoleucine)",
+        "S4: FALSE \u2014 Mitochondrial DNA has a higher mutation rate than nuclear DNA because mtDNA lacks histones and has limited DNA repair capacity, but this elevated mutation rate has no utility in human evolutionary genetics or population studies"
+      ],
+      "correctAnswer": "D",
+      "explanation": "S1 is TRUE: LHON is the most common mtDNA disease, caused primarily by three point mutations in Complex I subunits. The m.11778G>A mutation in MT-ND4 accounts for ~70% of cases. The male predominance is one of the most puzzling features of LHON \u2014 since mtDNA is maternally inherited, both sexes should inherit the mutation equally. The male bias is thought to involve X-linked modifier genes, hormonal influences (estrogen may be protective through effects on Complex I assembly and ROS scavenging), and possibly the higher metabolic rate of male retinal ganglion cells. Incomplete penetrance is also modulated by heteroplasmy level, mtDNA haplogroup background (haplogroup J increases risk), and environmental factors (smoking, alcohol). S2 is correctly labeled FALSE: KSS is caused by large-scale single deletions of mtDNA (typically 1.1-10 kb, with the 4,977 bp 'common deletion' being most frequent), NOT point mutations. KSS deletions are almost always sporadic (arising de novo during oogenesis or early development), not maternally inherited, because cells with deleted mtDNA have a replicative disadvantage in the germline bottleneck. KSS presents with progressive external ophthalmoplegia, pigmentary retinopathy, cardiac conduction defects, and onset before age 20. S3 is TRUE: The mitochondrial genetic code deviates from the standard code at several codons. These deviations reflect the simplified decoding system in mitochondria, which uses only 22 tRNAs (compared to ~45 in the cytoplasm). Superwobble reading allows one tRNA to recognize all four codons in a family box. S4 is correctly labeled FALSE: The first part is true (mtDNA has ~10-17x higher mutation rate due to proximity to ROS-generating respiratory chain, lack of protective histones, and limited repair), but the claim of no utility in evolutionary genetics is wrong. mtDNA's high mutation rate, maternal inheritance, lack of recombination, and high copy number make it invaluable for population genetics, phylogeography, forensic identification, and molecular anthropology (e.g., mitochondrial Eve, human migration patterns).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 15,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding CYP2D6 pharmacogenomics and warfarin-VKORC1 interactions, evaluate the following statements:",
+      "options": [
+        "S2: TRUE \u2014 Warfarin dose requirements are strongly influenced by polymorphisms in both VKORC1 (the drug target, vitamin K epoxide reductase) and CYP2C9 (the primary metabolizing enzyme); the VKORC1 -1639G>A promoter polymorphism reduces VKORC1 expression, making carriers more sensitive to warfarin and requiring lower doses",
+        "S1: TRUE \u2014 CYP2D6 is one of the most polymorphic human genes, with over 100 known allelic variants classified into four metabolizer phenotypes: poor metabolizers (PM, no functional alleles), intermediate metabolizers (IM, reduced function), extensive/normal metabolizers (EM/NM, two functional alleles), and ultrarapid metabolizers (UM, gene duplication/multiplication leading to increased enzyme activity)",
+        "S3: FALSE \u2014 Ultrarapid metabolizers of CYP2D6 substrates like codeine are at reduced risk of adverse effects because they convert codeine to morphine more slowly, producing subtherapeutic analgesic levels",
+        "S4: TRUE \u2014 Pharmacogenomic testing has become standard of care for prescribing certain drugs, including HLA-B*57:01 testing before abacavir, TPMT/NUDT15 testing before thiopurines, and DPYD testing before fluoropyrimidines, because genetic variants in drug-metabolizing enzymes can cause life-threatening toxicity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE: CYP2D6 metabolizes approximately 25% of all clinically used drugs. Its exceptional polymorphism results from point mutations, insertions, deletions, and whole-gene duplications/deletions. Poor metabolizers (PM, 5-10% of Caucasians) carry two non-functional alleles (e.g., *4/*4) and cannot metabolize CYP2D6 substrates, leading to drug accumulation and toxicity. Ultrarapid metabolizers (UM, 1-10% depending on population, up to 29% in East Africa) carry duplicated or amplified functional genes (e.g., *1/*1xN), producing excessive enzyme activity. S2 is TRUE: Warfarin pharmacogenomics is a landmark example. VKORC1 -1639G>A (or the linked 1173C>T) reduces VKORC1 expression, lowering the amount of drug target protein and increasing warfarin sensitivity. CYP2C9*2 and *3 reduce warfarin clearance. Together, VKORC1, CYP2C9, and clinical factors explain ~50-60% of warfarin dose variability. The FDA-approved label includes pharmacogenomic dosing recommendations. S3 is correctly labeled FALSE: The statement inverts the actual danger. CYP2D6 ultrarapid metabolizers convert codeine to morphine FASTER and in greater quantities, leading to dangerously elevated morphine levels that can cause respiratory depression and death. This is particularly dangerous in children \u2014 several pediatric deaths have been attributed to codeine administered to CYP2D6 UM children, leading to FDA black box warnings and codeine restrictions in pediatric patients. S4 is TRUE: These are established pharmacogenomic tests mandated or strongly recommended before prescribing. TPMT/NUDT15 deficiency causes severe myelosuppression from thiopurines (azathioprine, 6-mercaptopurine). DPYD deficiency causes severe toxicity from fluoropyrimidines (5-FU, capecitabine) including fatal neutropenia and mucositis.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding CAR-T cell therapy and advanced gene therapy approaches, evaluate the following statements:",
+      "options": [
+        "S1: TRUE \u2014 Chimeric antigen receptor (CAR) T cells are engineered by transducing a patient's T lymphocytes with a lentiviral or retroviral vector encoding a synthetic receptor comprising an extracellular single-chain variable fragment (scFv) targeting a tumor antigen, a transmembrane domain, and intracellular costimulatory (CD28 or 4-1BB) plus CD3-zeta signaling domains",
+        "S2: FALSE \u2014 Gene drives using CRISPR-Cas9 can spread an engineered allele through a sexually reproducing population at super-Mendelian rates (>50% inheritance) by converting heterozygotes to homozygotes through homology-directed repair in the germline, but this technology poses no ecological risk because gene drives are species-specific and self-limiting",
+        "S3: TRUE \u2014 In vivo gene therapy using AAV vectors has achieved clinical success for inherited retinal dystrophy (Luxturna/voretigene neparvovec, AAV2 delivering RPE65), spinal muscular atrophy (Zolgensma/onasemnogene, AAV9 delivering SMN1), and hemophilia B (etranacogene dezaparvovec, AAV5 delivering Factor IX Padua variant)",
+        "S4: FALSE \u2014 Base editors can only perform C-to-T and A-to-G transitions and are incapable of creating transversion mutations, insertions, or deletions, meaning they have no clinical utility for the majority of pathogenic point mutations"
+      ],
+      "correctAnswer": "C",
+      "explanation": "S1 is TRUE: CAR-T cells represent a revolutionary approach to cancer immunotherapy. The CAR is a modular synthetic receptor: the scFv (derived from a monoclonal antibody) provides antigen recognition independent of MHC restriction; the hinge/transmembrane domain (from CD8 or CD28) anchors the receptor; the costimulatory domain(s) provide signal 2 for T cell activation; and CD3-zeta provides signal 1 (the immunoreceptor tyrosine-based activation motifs, ITAMs). Second-generation CARs have one costimulatory domain; third-generation have two. FDA-approved CAR-T products targeting CD19 (for B cell malignancies) include tisagenlecleucel (Kymriah, 4-1BB) and axicabtagene ciloleucel (Yescarta, CD28). S2 is correctly labeled FALSE: The first part correctly describes gene drive mechanism \u2014 in heterozygotes, the drive cassette (containing Cas9 + gRNA targeting the homologous wild-type allele) cuts the wild-type allele, and HDR using the drive-containing chromosome as template converts the cell to homozygosity for the drive. This achieves >99% inheritance. However, the claim of no ecological risk is false. Gene drives pose significant ecological concerns: off-target effects, gene flow to non-target species through hybridization, potential for ecosystem disruption if a target species is suppressed, and evolutionary resistance. Self-limiting designs (daisy-chain drives, split drives) have been proposed to mitigate these risks. S3 is TRUE: These three AAV gene therapies represent milestone achievements. Luxturna (2017) treats RPE65-associated retinal dystrophy via subretinal injection. Zolgensma (2019) treats SMA type 1 via intravenous AAV9, which crosses the blood-brain barrier. Etranacogene dezaparvovec (Hemgenix, 2022) delivers a hyperactive Factor IX Padua variant to hepatocytes. S4 is correctly labeled FALSE: While current base editors are limited to transitions (CBE: C-G to T-A; ABE: A-T to G-C), the statement that this has no clinical utility is wrong. Transitions account for ~60% of known pathogenic point mutations, and base editors have clinical utility for diseases like sickle cell disease (disrupting BCL11A erythroid enhancer), progeria (correcting the LMNA C-to-T mutation), and many others. Additionally, prime editing (not a base editor per se) can install any point mutation, indel, or combination.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding prenatal genetic testing and preimplantation genetic testing (PGT), evaluate the following statements:",
+      "options": [
+        "S1: TRUE \u2014 Chorionic villus sampling (CVS) can be performed at 10-13 weeks' gestation by obtaining trophoblast cells from the placenta, providing fetal karyotype and DNA for molecular testing earlier than amniocentesis (typically 15-18 weeks), though CVS carries a slightly higher risk of miscarriage and cannot detect neural tube defects via alpha-fetoprotein measurement",
+        "S2: FALSE \u2014 Preimplantation genetic testing for monogenic disorders (PGT-M) involves removing a single blastomere from a cleavage-stage embryo or several trophectoderm cells from a blastocyst, amplifying the DNA by whole genome amplification, and testing for the specific familial mutation; this procedure has no effect on embryo viability or implantation rates",
+        "S4: TRUE \u2014 Cell-free fetal DNA used in NIPT originates primarily from apoptotic trophoblast cells of the placenta, not from fetal blood cells; it appears in maternal circulation from around 4-5 weeks' gestation but reaches reliably testable levels (>4% fetal fraction) by 10 weeks, and is rapidly cleared from maternal blood within hours after delivery",
+        "S3: TRUE \u2014 Confined placental mosaicism (CPM) is a recognized limitation of CVS where chromosomal abnormalities detected in the trophoblast may not reflect the true fetal genotype because the placenta and embryo derive from different cell lineages of the blastocyst (trophectoderm versus inner cell mass), necessitating confirmatory amniocentesis in some cases"
+      ],
+      "correctAnswer": "D",
+      "explanation": "S1 is TRUE: CVS is performed by sampling chorionic villi (placental tissue) either transcervically or transabdominally. The villi contain cytotrophoblast cells (for direct analysis or short-term culture) and mesenchymal core cells (for long-term culture). CVS provides results earlier than amniocentesis, enabling earlier decision-making. Procedure-related miscarriage risk is approximately 0.5-1% (slightly higher than amniocentesis at ~0.1-0.3%). CVS cannot measure amniotic fluid alpha-fetoprotein for neural tube defect screening \u2014 this requires amniocentesis. S2 is correctly labeled FALSE: While the description of PGT-M technique is largely accurate, the claim that biopsy has no effect on embryo viability is incorrect. Cleavage-stage biopsy (removing 1 of 6-8 cells) reduces implantation rates by approximately 10-20%. Trophectoderm biopsy at the blastocyst stage is less harmful because the inner cell mass (which forms the embryo) is not directly sampled, but some impact on implantation still exists. Additionally, whole genome amplification introduces artifacts (allele dropout, preferential amplification) that can cause misdiagnosis. S3 is TRUE: CPM occurs in approximately 1-2% of CVS samples. Because the trophoblast and embryo proper originate from different blastocyst lineages, a post-zygotic mitotic error in one lineage may not be present in the other. Type 1 CPM (abnormality in cytotrophoblast only) and Type 2 (in mesenchyme only) may give false-positive CVS results, while Type 3 (both placental layers) still does not necessarily indicate fetal involvement. When CVS reveals mosaicism, amniocentesis is recommended for confirmation. S4 is TRUE: cffDNA is derived predominantly from apoptotic syncytiotrophoblast cells that shed DNA fragments (predominantly ~143 bp, the size of chromatosomal DNA) into maternal circulation. The fetal fraction increases with gestational age and is cleared within 1-2 hours after delivery (half-life ~16 minutes), meaning a previous pregnancy does not interfere with subsequent NIPT testing.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding structural variation in human genomes and its clinical significance, evaluate the following statements:",
+      "options": [
+        "S1: TRUE \u2014 Copy number variations (CNVs) are segments of DNA (>1 kb) that vary in copy number between individuals and collectively account for more nucleotide differences between any two human genomes than single nucleotide polymorphisms (SNPs), due to the large size of individual CNV events",
+        "S4: TRUE \u2014 Reciprocal deletions and duplications mediated by non-allelic homologous recombination (NAHR) between flanking segmental duplications (low-copy repeats) underlie recurrent genomic disorders including Williams syndrome (7q11.23 deletion), DiGeorge/velocardiofacial syndrome (22q11.2 deletion), and Charcot-Marie-Tooth type 1A (17p12 duplication)",
+        "S3: FALSE \u2014 Kataegis refers to clusters of point mutations (predominantly C>T and C>G at TpCpN motifs) localized near structural variant breakpoints, caused by the action of APOBEC family cytidine deaminases on single-stranded DNA exposed during repair; however, kataegis has never been observed in human cancers and remains a purely theoretical concept",
+        "S2: TRUE \u2014 Chromothripsis is a catastrophic mutational process in which a single chromosome (or a small number of chromosomes) is shattered into dozens to hundreds of fragments and reassembled in random order and orientation through NHEJ, resulting in complex rearrangements that can simultaneously activate oncogenes and delete tumor suppressors in a single cell division event"
+      ],
+      "correctAnswer": "D",
+      "explanation": "S1 is TRUE: CNVs are a major source of human genomic diversity. While an estimated 4-5 million SNPs differ between any two human genomes (~0.1% of 3 billion bases = ~3 million base differences), CNVs affect 4.8-9.5% of the genome in aggregate, encompassing far more total nucleotides despite fewer individual events. The Database of Genomic Variants catalogs over 500,000 CNV regions. Clinically significant CNVs include pathogenic deletions and duplications detected by chromosomal microarray analysis. S2 is TRUE: Chromothripsis (literally 'chromosome shattering'), described by Stephens et al. (2011), is detected in 2-3% of cancers (higher in certain types like osteosarcoma and glioblastoma). Evidence for a single catastrophic event includes: oscillating copy number states (typically 2 states rather than progressive gains/losses), random fragment orientation, and clustering of breakpoints on one chromosome. Proposed mechanisms include micronucleus formation followed by aberrant DNA replication or premature chromosome condensation. S3 is correctly labeled FALSE: The description of the kataegis mechanism is accurate \u2014 APOBEC3A/3B deaminases attack ssDNA near rearrangement breakpoints, creating C>T/C>G mutation clusters \u2014 but the claim that kataegis has never been observed in human cancers is completely wrong. Kataegis was first described by Nik-Zainal et al. (2012) in breast cancer genomes and has since been identified in many cancer types. It is one of the defined COSMIC mutational signatures (SBS2 and SBS13). S4 is TRUE: NAHR between misaligned segmental duplications during meiosis is the mechanism underlying recurrent genomic disorders. The flanking low-copy repeats (LCRs) are typically 10-500 kb, share >95% sequence identity, and are separated by 1-5 Mb. Misalignment and crossover between non-allelic LCRs on homologous chromosomes produces reciprocal deletion and duplication products.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 15,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding sickle cell disease molecular biology and gene therapy advances, evaluate the following statements:",
+      "options": [
+        "S3: TRUE \u2014 HbS polymerization follows cooperative kinetics with a concentration dependence described by a high-order power law (approximately [HbS]^n where n ranges from 15 to 50), explaining why even modest reductions in intracellular HbS concentration through HbF induction or HbS modification produce disproportionately large clinical benefits",
+        "S2: FALSE \u2014 The BCL11A transcription factor is a repressor of gamma-globin (fetal hemoglobin) expression in adult erythroid cells; disrupting the erythroid-specific enhancer of BCL11A using CRISPR-Cas9 reactivates HbF production, but this approach has shown no clinical efficacy in sickle cell disease patients",
+        "S1: TRUE \u2014 The heterozygous advantage of sickle cell trait (HbAS) against Plasmodium falciparum malaria is mediated by multiple mechanisms including enhanced sickling of parasitized erythrocytes leading to splenic clearance, reduced parasite growth due to lower intracellular potassium after HbS polymerization, increased phagocytosis of ring-stage infected cells, and enhanced expression of heme oxygenase-1 (HO-1) producing carbon monoxide that prevents cerebral malaria",
+        "S4: TRUE \u2014 Voxelotor (GBT440/Oxbryta) is an allosteric modifier that binds to the alpha-globin N-terminal valine of hemoglobin, stabilizing the oxygenated R-state and increasing oxygen affinity, thereby reducing the fraction of deoxygenated HbS available for polymerization"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE: The balancing selection maintaining HbS in malaria-endemic regions is mediated by multiple complementary mechanisms. Sickling of parasitized HbAS red cells leads to their recognition and removal by the spleen. HbS polymerization in parasitized cells alters membrane permeability, reducing K+ levels that the parasite needs for growth. Microarray studies show HbAS erythrocytes have altered expression of ~100 parasite genes. Enhanced phagocytosis of ring-stage parasitized HbAS cells by macrophages provides an innate clearance mechanism. The HO-1/CO pathway, demonstrated by Ferreira et al. (2011), prevents experimental cerebral malaria in mice by blocking heme-induced inflammation and blood-brain barrier disruption. S2 is correctly labeled FALSE: The first part is accurate \u2014 BCL11A is indeed a key repressor of gamma-globin expression, and its erythroid enhancer is a validated therapeutic target. However, the claim of no clinical efficacy is wrong. The CRISPR-based therapy exa-cel (exagamglogene autotemcel/Casgevy), which disrupts the BCL11A erythroid enhancer, was approved by the FDA in December 2023 and has shown remarkable clinical efficacy. In trials, treated patients achieved sustained HbF levels of 30-40% and were free of vaso-occlusive crises for years. S3 is TRUE: The delay time for HbS nucleation has an extreme concentration dependence (approximately inversely proportional to [HbS]^30-50). This ultrasensitivity means that reducing intracellular HbS concentration by even 10-20% (through HbF dilution) can increase the delay time by orders of magnitude, often beyond the capillary transit time, effectively preventing sickling. This biophysical principle underlies the clinical efficacy of HbF induction. S4 is TRUE: Voxelotor was designed through structure-based drug design to allosterically modify hemoglobin. By binding to alpha-globin Val1, it increases oxygen affinity (left-shifts the oxygen dissociation curve), keeping more hemoglobin in the R-state. Since only deoxygenated T-state HbS polymerizes, reducing the deoxy-HbS pool decreases sickling. This mechanism is distinct from HbF induction and can be used in combination with hydroxyurea.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 14,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding GWAS methodology and polygenic risk scores (PRS), evaluate the following statements:",
+      "options": [
+        "S1: TRUE \u2014 Linkage disequilibrium (LD) is the non-random association of alleles at different loci, and GWAS exploits LD by using tag SNPs on genotyping arrays to capture the effects of ungenotyped causal variants that are in LD with the tag SNP; LD decays over physical distance due to historical recombination, with typical LD blocks spanning 10-100 kb in European populations",
+        "S3: TRUE \u2014 Polygenic risk scores (PRS) aggregate the effects of thousands to millions of SNPs (each contributing a tiny effect) into a single numerical score by summing allele dosages weighted by their GWAS effect sizes; PRS can stratify individuals into risk categories for complex diseases, but current PRS have limited portability across ancestries because LD patterns, allele frequencies, and effect sizes differ between populations",
+        "S4: TRUE \u2014 Fine-mapping methods such as FINEMAP, SuSiE, and PAINTOR use statistical frameworks to identify credible sets of causal variants at GWAS loci by leveraging LD structure, functional annotations, and effect size estimates, narrowing the causal signal from hundreds of correlated SNPs to a small set of candidates",
+        "S2: FALSE \u2014 The genome-wide significance threshold of p < 5 x 10^-8 is an arbitrary convention with no statistical basis, and most GWAS findings that exceed this threshold fail to replicate in independent cohorts"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 is TRUE: LD is fundamental to GWAS design. Common genotyping arrays contain ~500,000 to 2,000,000 tag SNPs selected to capture most common variation through LD. In European populations, LD blocks (regions of correlated SNPs) typically span 10-100 kb, reflecting the ~1,000-2,000 generations since population bottlenecks. In African populations, LD extends over shorter distances (~5-10 kb) due to larger effective population size and more historical recombination, which is why GWAS in African populations have better fine-mapping resolution. S2 is correctly labeled FALSE: The threshold p < 5 x 10^-8 has a solid statistical basis \u2014 it represents a Bonferroni correction for approximately 1 million independent tests across the human genome (0.05/1,000,000 = 5 x 10^-8). The claim that findings fail to replicate is also wrong. GWAS associations that exceed genome-wide significance have an excellent replication rate (>95% in well-powered studies), which is a strength of the rigorous significance threshold. The pre-GWAS era of candidate gene studies had much lower replication rates. S3 is TRUE: PRS construction and cross-ancestry portability are critical issues. PRS methods (pruning-and-thresholding, LDpred, PRS-CS) differ in how they handle LD and select variants, but all create weighted sums. The portability problem is well-documented: a PRS developed in European GWAS has substantially reduced predictive accuracy in African, East Asian, or South Asian populations because (1) causal variants may have different allele frequencies, (2) LD patterns differ, so European tag SNPs may not tag the causal variant in other populations, and (3) gene-environment interactions may differ. This equity issue is a major concern driving diversity in GWAS. S4 is TRUE: Statistical fine-mapping is a critical step between GWAS discovery and biological interpretation. These methods model LD to determine which SNPs in a region are most likely causal. Credible sets contain the minimum set of variants with a specified probability (e.g., 95%) of containing the causal variant. Integration with functional annotations (ENCODE, Roadmap Epigenomics) prioritizes variants in regulatory elements.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A clinical genetics laboratory performs whole-genome sequencing on a family affected by an unknown neurodegenerative disorder. The proband (III-1) shows onset at age 25, his father (II-1) at age 42, and his paternal grandfather (I-1) at age 58. Analysis of a CAG repeat in a candidate gene yields the following data:\n\n| Individual | CAG Repeat Allele 1 | CAG Repeat Allele 2 | Age of Onset | Transmitting Parent |\n|---|---|---|---|---|\n| I-1 (grandfather) | 18 | 41 | 58 | Unknown |\n| I-2 (grandmother) | 15 | 19 | Unaffected | \u2014 |\n| II-1 (father) | 19 | 52 | 42 | Father (I-1) |\n| II-2 (mother) | 16 | 20 | Unaffected | \u2014 |\n| III-1 (proband) | 20 | 68 | 25 | Father (II-1) |\n| III-2 (sister) | 16 | 52 | Presymptomatic (age 20) | Father (II-1) |\n\nNormal range: 10-35 repeats. Reduced penetrance: 36-39. Full penetrance: >=40.\n\nBased on this data, which interpretation is most accurate?",
+      "options": [
+        "The disease follows autosomal recessive inheritance because both parents must contribute an expanded allele, and the unaffected grandmother's allele of 19 repeats is a reduced-penetrance expansion",
+        "The sister (III-2) will not develop the disease because she inherited the smaller expanded allele (52 repeats) which falls in the reduced penetrance range",
+        "The disease is caused by compound heterozygosity for two different repeat expansions, as shown by the proband having expanded alleles on both chromosomes (20 and 68)",
+        "The data demonstrates anticipation with paternal expansion bias: the expanded allele increases from 41 (grandfather) to 52 (father) to 68 (proband) across three generations of paternal transmission, correlating with progressively earlier age of onset; the intergenerational instability during spermatogenesis (gaining 11-16 repeats per generation) is consistent with the known expansion bias of CAG repeats during male meiosis"
+      ],
+      "correctAnswer": "D",
+      "dataContext": "Pedigree analysis with CAG repeat sizing data from whole-genome sequencing of a three-generation family segregating a neurodegenerative disorder. Repeat lengths are shown for both alleles at the candidate locus, along with age of onset and the transmitting parent for each individual.",
+      "explanation": "This data is a textbook demonstration of anticipation \u2014 the hallmark clinical feature of trinucleotide repeat disorders. Key observations: (1) The expanded allele grows across generations during paternal transmission: 41 repeats (I-1, onset 58) -> 52 repeats (II-1, onset 42) -> 68 repeats (III-1, onset 25). Each generation gains 11-16 CAG repeats. (2) There is a strong inverse correlation between repeat length and age of onset: longer repeats cause earlier disease. This is characteristic of CAG repeat disorders like Huntington disease, where the expanded polyglutamine tract causes earlier and more severe protein aggregation. (3) The expansion bias during paternal transmission is explained by the many more mitotic cell divisions in spermatogenesis compared to oogenesis. Each DNA replication provides an opportunity for strand slippage at the repeat. (4) The normal alleles (18, 19, 15, 16, 20) are stably inherited and show no expansion, consistent with the threshold model where repeats below a critical length are stable. (5) III-2 inherited the 52-repeat allele from her father \u2014 this is well within the full penetrance range (>=40), so she will likely develop the disease, probably with onset in her 30s-40s based on the repeat-onset correlation. Her presymptomatic status at age 20 is consistent. Option A is wrong \u2014 the disease is autosomal dominant. Option C is wrong \u2014 20 repeats is normal. Option D is wrong \u2014 52 repeats is fully penetrant.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 15,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A pharmacogenomics study genotypes 500 patients starting warfarin therapy for VKORC1 -1639G>A (rs9923231) and CYP2C9 (*1/*2/*3). After dose stabilization, the mean weekly warfarin dose for each genotype group is recorded:\n\n| VKORC1 Genotype | CYP2C9 *1/*1 | CYP2C9 *1/*2 | CYP2C9 *1/*3 | CYP2C9 *2/*2 | CYP2C9 *3/*3 |\n|---|---|---|---|---|---|\n| GG | 42 mg/week | 35 mg/week | 28 mg/week | 28 mg/week | 14 mg/week |\n| GA | 28 mg/week | 24 mg/week | 19 mg/week | 18 mg/week | 10 mg/week |\n| AA | 18 mg/week | 15 mg/week | 12 mg/week | 11 mg/week | 7 mg/week |\n\nAdditional data: Patients with VKORC1 AA and CYP2C9 *3/*3 had a 12-fold higher risk of major bleeding during warfarin initiation compared to VKORC1 GG + CYP2C9 *1/*1 patients (OR = 12.3, 95% CI: 4.1-37.2).\n\nWhich interpretation of this data is most accurate?",
+      "options": [
+        "Both VKORC1 and CYP2C9 genotypes independently and additively influence warfarin dose requirements: VKORC1 AA reduces the amount of drug target (VKORC1 enzyme), requiring less warfarin to achieve therapeutic anticoagulation, while CYP2C9 reduced-function alleles decrease warfarin clearance, increasing drug exposure at any given dose; the combination of VKORC1 AA + CYP2C9 *3/*3 produces extreme warfarin sensitivity with very low dose requirements and high bleeding risk",
+        "CYP2C9 poor metabolizer genotypes (*3/*3) require higher warfarin doses because reduced enzyme activity means less warfarin is activated to its therapeutic form",
+        "VKORC1 genotype is the only significant determinant of warfarin dose because the dose decreases from GG to GA to AA regardless of CYP2C9 status, and CYP2C9 genotype has no independent effect",
+        "The data shows that genetic testing is unnecessary because the 3-fold dose range (7-42 mg/week) can be managed equally well by standard clinical dose titration using INR monitoring alone"
+      ],
+      "correctAnswer": "A",
+      "dataContext": "Pharmacogenomic data from a warfarin dosing study showing mean stabilized weekly warfarin doses stratified by VKORC1 promoter genotype (-1639G>A) and CYP2C9 metabolizer status, along with bleeding risk data for extreme genotype combinations.",
+      "explanation": "This data illustrates the two-gene pharmacogenomic model for warfarin dosing that has been validated in multiple large clinical studies (COAG, EU-PACT, GIFT trials). VKORC1 effect: The -1639G>A variant reduces VKORC1 promoter activity. The A allele is associated with lower VKORC1 mRNA and protein expression. With less drug target present, less warfarin is needed to achieve therapeutic inhibition of vitamin K-dependent clotting factor carboxylation. The dose-genotype relationship is clear: GG > GA > AA for each CYP2C9 genotype (e.g., 42 > 28 > 18 for CYP2C9 *1/*1). CYP2C9 effect: CYP2C9 is the primary enzyme metabolizing S-warfarin (the more potent enantiomer). The *2 allele (R144C) reduces enzyme activity by ~30%, and *3 (I359L) by ~80%. Reduced metabolism means slower warfarin clearance, higher plasma levels, and lower dose requirements. The effect is visible across each VKORC1 row (e.g., for VKORC1 GG: 42 > 35 > 28 > 28 > 14 as CYP2C9 function decreases). Additive interaction: The effects are approximately additive (on a log scale), meaning both genes independently contribute to dose variability. Together, VKORC1 and CYP2C9 explain approximately 40% of warfarin dose variance, with clinical factors (age, body size, interacting drugs, diet) explaining an additional 15-20%. The 6-fold dose range between extreme genotypes (42 vs 7 mg/week) and the 12-fold bleeding risk difference strongly support pharmacogenomic-guided dosing. Option A ignores the clear CYP2C9 effect. Option B reverses the direction \u2014 reduced CYP2C9 means less clearance, not less activation. Option D ignores the clinical value of pre-emptive dosing.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A genome-wide CRISPR knockout screen is performed to identify genes essential for cancer cell survival. A library of 76,000 sgRNAs targeting 19,000 genes is transduced into a cancer cell line at low MOI (0.3). After 14 days of culture, genomic DNA is extracted, sgRNA sequences are amplified and quantified by next-generation sequencing. The data shows:\n\n| Gene Category | Mean Log2 Fold Change (Day 14/Day 0) | Number of Genes | Example Genes |\n|---|---|---|---|\n| Core essential | -4.2 +/- 1.1 | 684 | RPL11, RPS6, POLR2A, SF3B1 |\n| Context essential | -2.8 +/- 0.9 | 312 | KRAS (in KRAS-mutant line), BRAF (in BRAF-mutant line) |\n| Non-essential | 0.0 +/- 0.3 | 16,847 | Olfactory receptors, keratins |\n| Tumor suppressor | +1.8 +/- 0.6 | 87 | TP53, RB1, NF1, PTEN |\n| sgRNA library representation | Day 0: Gini index = 0.08 | Day 14: Gini index = 0.31 | \u2014 |\n\nBased on this data, which interpretation is most accurate?",
+      "options": [
+        "The negative fold changes for essential genes indicate that CRISPR failed to knock out these genes, and cells with intact essential genes were selected during the 14-day culture",
+        "Genes with positive fold change (e.g., TP53, RB1) are essential because their sgRNAs enriched over time, indicating cells with these knockouts had a growth advantage; therefore they should be targeted for activation rather than inhibition in cancer therapy",
+        "The Gini index increase from 0.08 to 0.31 indicates experimental failure because ideal screens maintain uniform sgRNA representation throughout the experiment",
+        "Cells transduced with sgRNAs targeting essential genes were depleted from the population because loss of these genes caused cell death or growth arrest, reducing the representation of those sgRNAs; conversely, cells with tumor suppressor knockouts gained a proliferative advantage, enriching those sgRNAs; the low MOI ensures each cell receives approximately one sgRNA, linking cell fitness to a single gene knockout; the increasing Gini index reflects the growing inequality in sgRNA representation as selection acts on the population"
+      ],
+      "correctAnswer": "D",
+      "dataContext": "Genome-wide CRISPR-Cas9 loss-of-function screen data showing sgRNA fold-change distributions across gene categories after 14 days of negative selection in a cancer cell line, with library representation metrics (Gini index).",
+      "explanation": "This data represents a standard negative selection (dropout) CRISPR screen, the workhorse of functional genomics. The logic: (1) Low MOI (0.3) transduction ensures ~74% of transduced cells receive exactly one sgRNA integration (Poisson distribution), creating a one-gene-per-cell mapping. (2) Each sgRNA knocks out its target gene via Cas9-mediated DSBs and NHEJ-mediated frameshift mutations. (3) During the 14-day culture, cells are subjected to proliferative selection. Cells carrying sgRNAs against essential genes (RPL11/ribosome, RPS6/ribosome, POLR2A/RNA pol II, SF3B1/spliceosome) die or stop growing, depleting those sgRNAs (negative fold change). (4) Context-essential genes (KRAS in KRAS-addicted lines) represent oncogene addiction \u2014 these genes are essential only in specific genetic backgrounds. (5) Non-essential gene sgRNAs maintain stable representation (fold change ~0). (6) Tumor suppressor gene sgRNAs (TP53, RB1, NF1, PTEN) become enriched because their loss removes growth constraints, giving those cells a proliferative advantage. (7) The Gini index measures inequality in distribution \u2014 the increase from 0.08 (relatively uniform) to 0.31 (more skewed) is expected and reflects successful selection. A high initial Gini index would indicate library problems; the increase during culture is the signal, not an artifact. Option A reverses the logic. Option B correctly identifies the enrichment but the therapeutic conclusion is backward \u2014 tumor suppressors should be reactivated, not further targeted. Option D misinterprets the Gini change.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A forensic genetics laboratory analyzes a mixed DNA sample from a crime scene using a 24-locus STR panel. At the locus D18S51, the electropherogram shows the following peaks:\n\n| Allele | Peak Height (RFU) | Known Profiles |\n|---|---|---|\n| 12 | 4,200 | Victim: 12, 15 |\n| 14 | 1,850 | Suspect: 14, 18 |\n| 15 | 4,350 | \u2014 |\n| 16 | 980 | \u2014 |\n| 18 | 1,720 | \u2014 |\n\nAnalytical threshold: 50 RFU. Stochastic threshold: 300 RFU.\nMixture ratio estimate (across all loci): Major contributor ~70%, Minor contributor ~30%.\n\nBased on this data, which interpretation is best supported?",
+      "options": [
+        "The sample contains DNA from exactly two contributors \u2014 the victim and the suspect \u2014 because five alleles are detected and both known profiles are fully represented at this locus",
+        "Allele 16 is definitely a stutter artifact from allele 17 and can be disregarded, confirming a simple two-person mixture matching the victim and suspect",
+        "The sample contains at least two contributors; the victim's alleles (12, 15) show peak heights consistent with the major contributor (~4,200-4,350 RFU), while alleles 14 and 18 at lower peak heights (~1,720-1,850 RFU) are consistent with a minor contributor; however, allele 16 at 980 RFU is not explained by either the victim or suspect profiles, indicating the presence of at least one additional unknown contributor or requiring evaluation of stutter artifact from allele 17 (absent) or allele 15",
+        "All peaks below 2,000 RFU are artifacts and should be excluded from interpretation, leaving only the victim's profile in the sample"
+      ],
+      "correctAnswer": "C",
+      "dataContext": "Capillary electrophoresis STR typing results from a crime scene mixed DNA sample at locus D18S51, showing allele calls and peak heights in relative fluorescence units (RFU) alongside known reference profiles of the victim and primary suspect.",
+      "explanation": "Mixture interpretation is one of the most complex and legally consequential aspects of forensic genetics. Analysis of this electropherogram: (1) Five alleles are detected at a diploid locus, requiring a minimum of three alleles from at least two contributors (since one person contributes at most two alleles). (2) The victim's alleles (12 and 15) show high, balanced peak heights (4,200 and 4,350 RFU), consistent with being the major contributor. (3) Alleles 14 and 18 (1,850 and 1,720 RFU) are at lower but balanced heights consistent with a minor contributor, and they match the suspect's known profile. (4) The critical issue is allele 16 at 980 RFU. This allele is not explained by either known profile. Stutter (n-1 repeat unit artifact from PCR) from allele 17 would produce an allele 16 peak \u2014 but allele 17 is not present in the profile, ruling out standard stutter from allele 17. Stutter from allele 15 would produce allele 14 (n-1), not 16. Forward stutter (n+1) from allele 15 could produce allele 16, but forward stutter is typically much rarer (~1-2% vs 5-15% for back stutter). (5) Therefore, allele 16 most likely indicates a third contributor. This has profound legal implications: if a third contributor exists, the suspect's inclusion becomes less certain without probabilistic genotyping analysis. Modern forensic laboratories use probabilistic genotyping software that evaluates all possible contributor combinations and calculates likelihood ratios. Option A ignores the unexplained allele 16. Option C incorrectly attributes stutter to a non-existent allele 17. Option D applies an arbitrary threshold with no scientific basis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A mitochondrial disease clinic evaluates a family where the mother (I-1) has mild sensorineural hearing loss, her daughter (II-1) has severe MELAS syndrome, her son (II-2) is clinically unaffected, and her second daughter (II-3) has diabetes and mild myopathy. Quantitative heteroplasmy analysis for the m.3243A>G mutation using digital droplet PCR on multiple tissues yields:\n\n| Individual | Blood | Muscle | Urinary Epithelium | Clinical Phenotype |\n|---|---|---|---|---|\n| I-1 (mother) | 12% | 28% | 35% | Mild hearing loss |\n| II-1 (daughter) | 24% | 78% | 82% | Severe MELAS |\n| II-2 (son) | 3% | 8% | 10% | Unaffected |\n| II-3 (daughter) | 15% | 45% | 52% | Diabetes, mild myopathy |\n\nPublished tissue-specific thresholds for m.3243A>G clinical manifestations:\n- Hearing loss: >20% in cochlear tissue\n- Diabetes: >30% in pancreatic islets\n- Myopathy: >40% in skeletal muscle\n- Stroke-like episodes (MELAS): >70% in brain/muscle\n\nWhich interpretation of this data is most accurate?",
+      "options": [
+        "The variable heteroplasmy levels among siblings result from Mendelian segregation of mitochondrial alleles during meiosis, following Hardy-Weinberg equilibrium for mitochondrial genotypes",
+        "The data demonstrates three key features of mitochondrial genetics: (1) maternal inheritance \u2014 all children carry the mutation inherited from I-1; (2) the mitochondrial bottleneck during oogenesis randomly shifted heteroplasmy levels between offspring, producing dramatically different mutation loads from the same mother; (3) the threshold effect \u2014 each tissue has a critical mutation percentage above which oxidative phosphorylation is compromised, explaining why II-1 with 78% in muscle has MELAS while II-3 with 45% in muscle has only mild myopathy; and blood systematically underestimates tissue heteroplasmy due to negative selection against the mutation in rapidly dividing blood cells",
+        "Blood heteroplasmy levels accurately predict disease severity in all tissues, and II-2 (3% in blood) will never develop symptoms because his mutation load is uniformly low across all tissues",
+        "The mother must be homoplasmic for the wild-type allele because her blood shows only 12% mutant mtDNA, which is below the detection threshold of standard sequencing, and her hearing loss is coincidental"
+      ],
+      "correctAnswer": "B",
+      "dataContext": "Multi-tissue heteroplasmy quantification by digital droplet PCR for the m.3243A>G MELAS mutation in a family with variable clinical presentations, alongside published tissue-specific phenotypic thresholds for this mutation.",
+      "explanation": "This data elegantly demonstrates the three pillars of mitochondrial disease genetics. (1) Maternal inheritance: All four family members carry the m.3243A>G mutation, consistent with transmission from I-1. The father presumably contributes no mutant mtDNA. (2) Mitochondrial bottleneck: During oogenesis, the mtDNA copy number is reduced to ~200 molecules in primordial germ cells before being amplified. This bottleneck creates a sampling effect: oocytes from a heteroplasmic mother can have widely varying mutation loads. I-1 (35% in urine, a proxy for the germline proportion) produced offspring with dramatically different heteroplasmy levels: II-1 (82% urine), II-2 (10% urine), and II-3 (52% urine). This is stochastic partitioning, not Mendelian segregation (mtDNA does not undergo meiosis or recombination). (3) Threshold effect: Clinical manifestations appear only when the mutation load exceeds tissue-specific thresholds. II-1's 78% muscle burden exceeds the 70% MELAS threshold, explaining her stroke-like episodes. II-3's 45% muscle burden is above the 40% myopathy threshold but below the MELAS threshold, explaining mild myopathy without strokes. Her diabetes is consistent with exceeding the 30% pancreatic threshold. The systematic blood underestimation is well-documented \u2014 hematopoietic cells with high mutation loads have impaired proliferation and are outcompeted during the ~120-day erythrocyte turnover cycle. This is why urinary epithelium (a post-mitotic tissue) shows higher and more representative heteroplasmy levels. Option A is wrong \u2014 mtDNA does not follow Mendelian or HWE principles. Option B is wrong \u2014 blood underestimates tissue levels. Option D is wrong \u2014 12% is detectable by ddPCR.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 15,
+      "sourceTextbook": "Lewin-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A gene therapy company wants to develop a treatment for sickle cell disease that does not require myeloablative chemotherapy (which is the current requirement for ex vivo HSC gene therapy). They propose an in vivo approach to directly modify hematopoietic stem cells in the patient's bone marrow. The therapeutic goal is to disrupt the BCL11A erythroid enhancer using CRISPR-Cas9, thereby reactivating fetal hemoglobin production. Design the most feasible in vivo delivery strategy and address the key challenges.",
+      "experimentContext": "Available tools: Lipid nanoparticles (LNPs) with various targeting ligands, AAV serotypes (AAV6 has tropism for HSCs), engineered virus-like particles (eVLPs), anti-CD117 antibody-drug conjugates for HSC-selective conditioning, Cas9 mRNA and synthetic sgRNAs, Cas9 ribonucleoprotein (RNP) complexes. Constraint: The therapy must be transient (hit-and-run editing with no persistent Cas9 expression) to minimize off-target mutagenesis and immune responses. The patient population includes children as young as 2 years.",
+      "options": [
+        "Use LNPs conjugated with anti-CD105 (endoglin) antibodies for HSC targeting, encapsulating Cas9 mRNA and a chemically modified sgRNA targeting the BCL11A erythroid enhancer; combine with non-genotoxic HSC conditioning using anti-CD117 antibody-drug conjugate (e.g., anti-cKit-saporin) to create HSC niche space; the LNP delivers transient Cas9 expression (mRNA is degraded within 24-48 hours), achieving hit-and-run editing without permanent vector integration or persistent nuclease expression, and the antibody-based conditioning avoids the toxicity of busulfan chemotherapy",
+        "Package Cas9 and sgRNA expression cassettes in AAV6 vectors and administer intravenously after anti-CD117 conditioning; AAV6 will transduce HSCs in the bone marrow and provide long-term Cas9 expression for thorough editing of the BCL11A enhancer",
+        "Electroporate Cas9 RNP directly into the patient's bone marrow cavity using an intraosseous injection device, relying on the electric field to permeabilize HSC membranes in situ",
+        "Use a lentiviral vector encoding Cas9 under the control of an HSC-specific promoter (CD34) to restrict expression to stem cells; the lentiviral integration ensures permanent Cas9 expression for continuous editing of any newly arising unedited HSCs"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The LNP + antibody targeting + non-genotoxic conditioning approach represents the cutting edge of in vivo HSC gene editing, addressing all key challenges. (1) Transient delivery: LNPs encapsulating Cas9 mRNA provide transient, hit-and-run expression. The mRNA is translated in the cytoplasm, Cas9 protein performs its editing within hours, and the mRNA is degraded within 24-48 hours. This eliminates the risk of prolonged Cas9 expression causing accumulating off-target mutations \u2014 a critical safety requirement, especially for pediatric patients. (2) HSC targeting: Antibody-conjugated LNPs (anti-CD105 or anti-CD117 Fab fragments) provide active targeting to HSCs beyond the passive liver accumulation that dominates unmodified LNP biodistribution. Alternative targeting strategies include anti-CD117 antibodies or engineered Selective Organ Targeting (SORT) LNPs. (3) Non-genotoxic conditioning: The anti-CD117 (c-Kit) antibody-drug conjugate selectively depletes endogenous HSCs to create niche space, allowing edited HSCs to engraft and expand. This avoids the severe toxicity of myeloablative busulfan, which causes mucositis, veno-occlusive disease, infertility, and secondary cancers \u2014 particularly concerning in young children. (4) No integration: Unlike lentiviral vectors, LNPs do not integrate into the genome, eliminating insertional mutagenesis risk. Option A (AAV6 with Cas9 cassette) violates the hit-and-run requirement \u2014 AAV episomes persist for months/years, providing sustained Cas9 expression and accumulated off-target damage. Option C (in situ electroporation) is not feasible \u2014 electroporation requires precise voltage control impossible in an in vivo bone marrow setting, and would cause massive tissue damage. Option D (lentiviral Cas9) integrates permanently and provides continuous Cas9 expression, the opposite of the transient editing requirement, and poses insertional mutagenesis risk.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A research team suspects that a novel antisense oligonucleotide (ASO) can correct aberrant splicing caused by a deep intronic mutation that creates a cryptic exon in the CFTR gene (the c.3718-2477C>T mutation that activates a pseudoexon in intron 22). This cryptic exon inclusion introduces a premature stop codon, causing cystic fibrosis. Design an experiment to demonstrate that the ASO restores correct CFTR splicing and function in patient-derived cells.",
+      "experimentContext": "Available resources: Patient-derived nasal epithelial cells and intestinal organoids (both carrying the c.3718-2477C>T mutation homozygously), 2'-MOE phosphorothioate ASOs designed to mask the cryptic splice sites, RT-PCR and RT-qPCR equipment, Western blot apparatus, an Ussing chamber for transepithelial ion transport measurement, a forskolin-induced swelling (FIS) assay for organoids, scrambled sequence ASO control, dose range of ASO (1-1000 nM), and a time course capability (24-96 hours post-treatment).",
+      "options": [
+        "Transfect patient-derived nasal cells with the ASO at a single concentration (100 nM), extract RNA at 48 hours, perform RT-PCR with primers flanking the cryptic exon to assess exon skipping, and declare success if any correctly spliced product is detected on an agarose gel",
+        "Perform whole-genome sequencing of ASO-treated cells to confirm the ASO has permanently corrected the intronic mutation at the DNA level, restoring the wild-type CFTR sequence",
+        "Treat patient nasal cells and intestinal organoids with ASO at multiple concentrations (1, 10, 100, 500, 1000 nM) and scrambled control, then perform a multi-level assessment: (1) RT-PCR with primers flanking intron 22 to visualize the shift from cryptic exon-including to correctly spliced transcript, quantified by RT-qPCR for the ratio of correct/aberrant transcripts across the dose range; (2) Western blot for CFTR protein to confirm restoration of full-length CFTR production; (3) Ussing chamber measurement of CFTR-dependent chloride current (short-circuit current after forskolin stimulation followed by CFTR inhibitor-172) in nasal cell monolayers to demonstrate functional channel rescue; (4) forskolin-induced swelling assay in intestinal organoids as an independent functional readout; include dose-response curves for each readout and a scrambled ASO control at each concentration to exclude non-specific effects",
+        "Treat cells with the ASO and measure total cellular chloride concentration by inductively coupled plasma mass spectrometry (ICP-MS) as the sole readout, since CFTR dysfunction alters total cellular chloride content"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This comprehensive experimental design addresses all four levels of therapeutic ASO validation: RNA splicing, protein expression, channel function, and physiological readout. (1) RT-PCR/RT-qPCR for splicing: Primers flanking the cryptic exon in intron 22 will amplify two products \u2014 a longer band including the cryptic exon (aberrant) and a shorter band without it (correct). The dose-response relationship reveals the ASO concentration needed for effective exon skipping. RT-qPCR with junction-specific primers provides quantitative assessment. The scrambled control is essential to exclude non-specific effects of phosphorothioate chemistry (which can bind proteins non-specifically and activate innate immune sensors like TLR7/8). (2) Western blot for CFTR: Splicing correction should restore full-length CFTR protein (~168 kDa). The cryptic exon introduces a PTC that triggers NMD, so untreated cells produce little/no CFTR protein. Detection of band C (fully glycosylated, mature CFTR) indicates proper protein folding and trafficking to the plasma membrane. (3) Ussing chamber electrophysiology: This is the gold standard for CFTR function. Differentiated nasal epithelial monolayers on permeable supports are mounted in Ussing chambers. Forskolin activates CFTR via cAMP/PKA, producing a chloride secretory current (increase in short-circuit current, Isc). Application of CFTRinh-172 specifically inhibits CFTR, confirming the current is CFTR-dependent. The magnitude of forskolin-stimulated, CFTRinh-172-sensitive current quantifies functional rescue. (4) Forskolin-induced swelling (FIS) assay: Patient-derived intestinal organoids swell when CFTR is functional (forskolin activates CFTR-dependent fluid secretion into the organoid lumen). The area under the curve of swelling normalized to baseline is a validated, quantitative biomarker that correlates with clinical severity and drug response. This provides an independent, physiologically relevant confirmation in a second tissue type. Option A is inadequate \u2014 single concentration, single time point, qualitative gel assessment, no protein or functional readout. Option C is wrong \u2014 ASOs do not edit DNA; they work at the RNA level by sterically blocking splice site recognition. Option D measures the wrong parameter \u2014 total cellular chloride is not a direct readout of CFTR channel activity.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Alberts-7e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    }
+  ]
+}
