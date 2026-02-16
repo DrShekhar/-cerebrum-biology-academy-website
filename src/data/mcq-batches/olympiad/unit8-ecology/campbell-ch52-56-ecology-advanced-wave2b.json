@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch52-56 Ecology — Advanced Wave 2b",
+    "version": 1,
+    "source": "olympiad-wave2b",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "In the Lotka-Volterra competition model for two species, the coexistence equilibrium is stable when both species inhibit themselves more than they inhibit each other. Given species 1 with K1 = 1000, alpha12 = 0.6, and species 2 with K2 = 800, alpha21 = 0.9, which condition determines the outcome?",
+      "options": [
+        "A) Species 1 wins because K1 > K2, regardless of competition coefficients",
+        "B) Species 2 wins because alpha21 > alpha12, meaning species 2 exerts stronger per capita competitive effects on species 1",
+        "C) Unstable equilibrium occurs because both species have alpha values less than 1, leading to priority effects depending on initial densities",
+        "D) Stable coexistence occurs because K1/alpha12 > K2 (i.e., 1667 > 800) and K2/alpha21 > K1 (i.e., 889 < 1000) — but this fails the second inequality, so species 1 competitively excludes species 2"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In the Lotka-Volterra competition model, stable coexistence requires that each species inhibits its own growth more than it inhibits the other species. Mathematically, this requires K1/alpha12 > K2 AND K2/alpha21 > K1. Here: K1/alpha12 = 1000/0.6 = 1667 > 800 = K2 (first condition met). K2/alpha21 = 800/0.9 = 889 < 1000 = K1 (second condition NOT met). When only the first inequality holds, species 1 wins regardless of initial conditions. Intuitively, species 1 can invade when rare in a population of species 2 (since K1/alpha12 > K2), but species 2 cannot invade when rare in a population of species 1 (since K2/alpha21 < K1). Option A ignores competition coefficients, which are crucial. Option B confuses the magnitude of alpha with the competitive outcome, which depends on the ratio of K to alpha. Option C misidentifies the unstable equilibrium condition (which requires K1/alpha12 < K2 AND K2/alpha21 < K1).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "A predator exhibits a Type III functional response when consuming prey. Which graph shape and underlying mechanism correctly describe this response?",
+      "options": [
+        "A) Consumption rate increases linearly without bound as prey density rises, because handling time is zero and each prey item is equally easy to find",
+        "B) Consumption rate rises in a decelerating curve that asymptotes, because at high prey density the predator spends most of its time handling prey rather than searching",
+        "C) Consumption rate follows a sigmoidal curve that is initially accelerating at low prey density due to prey switching or search image formation, then decelerates at high density due to handling time saturation",
+        "D) Consumption rate is constant regardless of prey density because the predator has a fixed metabolic demand"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Type III functional response (Holling 1959) produces a sigmoidal (S-shaped) curve of consumption rate versus prey density. At low prey densities, consumption rate increases slowly because predators have not yet formed a search image for that prey species, or they are switching to alternative, more abundant prey (frequency-dependent prey switching). As prey density increases, the predator forms a search image or switches to focus on that prey, causing an accelerating increase in consumption rate. At high densities, the curve decelerates and asymptotes because handling time limits the maximum consumption rate, just as in a Type II response. The Type III response is ecologically significant because it creates a prey density refuge at low densities — the predator effectively ignores rare prey — which can stabilize predator-prey dynamics by allowing rare prey populations to recover. Option A describes the Type I functional response (linear, no saturation). Option B describes the Type II response (decelerating curve, no initial acceleration). Option D describes no functional response at all.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the Levins metapopulation model, dp/dt = cp(1 - p) - ep, where p is the fraction of occupied patches, c is the colonization rate, and e is the extinction rate. If c = 0.3 and e = 0.1, what is the equilibrium fraction of occupied patches, and what happens if habitat destruction permanently removes 50% of all patches?",
+      "options": [
+        "A) Equilibrium p* = 0.67; after 50% patch destruction, the metapopulation persists at a reduced p* of approximately 0.33 of remaining patches",
+        "B) Equilibrium p* = 0.67; after 50% patch destruction, the metapopulation goes extinct because the destruction threshold has been exceeded",
+        "C) Equilibrium p* = 0.33; after 50% patch destruction, the metapopulation is unaffected because only empty patches are removed",
+        "D) Equilibrium p* = 0.50; after 50% patch destruction, the metapopulation shifts to p* = 0.25"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In the basic Levins model, at equilibrium dp/dt = 0, so cp*(1 - p*) = ep*, giving p* = 1 - e/c = 1 - 0.1/0.3 = 0.667. With habitat destruction removing a fraction D = 0.5 of patches, the model becomes dp/dt = cp(1 - D - p) - ep, and the new equilibrium is p* = 1 - D - e/c = 1 - 0.5 - 0.333 = 0.167 as a fraction of total original patches. The critical extinction threshold is D > 1 - e/c = 0.667. Since D = 0.5 < 0.667, the metapopulation persists. Expressed as a fraction of remaining (surviving) patches: 0.167/0.5 = 0.334, approximately 0.33. This matches option A. The metapopulation survives but at a much reduced occupancy. Option B incorrectly states the metapopulation goes extinct; the extinction threshold (D = 0.667) has not been reached. Option C incorrectly claims no effect and gives the wrong initial equilibrium. Option D gives wrong values for both the original and post-destruction equilibria. This problem illustrates a critical conservation concept: habitat destruction has a nonlinear effect on metapopulation persistence, and a sudden collapse occurs when the destruction threshold is crossed.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 53,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ocean acidification due to rising atmospheric CO2 threatens marine calcifiers. Which statement most accurately describes the chemical and biological mechanisms involved?",
+      "options": [
+        "A) CO2 dissolves in seawater to form carbonic acid, which dissociates to release H+ ions, lowering pH and shifting the carbonate equilibrium to reduce carbonate ion (CO3^2-) concentration; this decreases the aragonite saturation state, making it thermodynamically harder for corals, pteropods, and coccolithophores to precipitate CaCO3 shells and skeletons",
+        "B) CO2 directly reacts with calcium in seawater to form insoluble calcium carbonate deposits on the ocean floor, removing calcium from the water column and starving calcifying organisms of this essential mineral",
+        "C) Rising CO2 increases ocean temperature through the greenhouse effect, and the warmer water holds less dissolved calcium carbonate, causing existing shells to dissolve through thermal decomposition",
+        "D) Ocean acidification primarily affects photosynthetic marine organisms by blocking light penetration through carbonic acid accumulation in surface waters, reducing primary productivity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Ocean acidification follows this chemical pathway: CO2(g) + H2O -> H2CO3 -> H+ + HCO3- -> 2H+ + CO3^2-. Increased CO2 shifts the equilibrium, raising H+ concentration (lowering pH from ~8.2 toward ~7.8 by 2100 under high-emission scenarios) and critically reducing CO3^2- concentration. The aragonite saturation state (omega_aragonite = [Ca2+][CO3^2-]/Ksp) drops below 1 in undersaturated waters, meaning aragonite CaCO3 dissolution becomes thermodynamically favorable. Corals (aragonite skeletons), pteropods (aragonite shells), and some coccolithophores (calcite liths) face energetic costs maintaining calcification in undersaturated water. Since pre-industrial times, ocean pH has dropped ~0.1 units (a 26% increase in H+ concentration). Option B incorrectly describes direct CO2-calcium reaction. Option C conflates temperature effects with chemical dissolution (though warming and acidification are both CO2-related, the mechanisms differ). Option D fabricates a light-blocking mechanism that does not exist.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Apparent competition occurs between two prey species that share a common predator. If species A is a preferred prey that supports high predator densities, what is the predicted effect on species B, and how does this differ from exploitative competition?",
+      "options": [
+        "A) Species B benefits because the predator focuses on species A, reducing predation pressure on B; this is identical to exploitative competition where both species compete for the same food resource",
+        "B) Species B increases because the presence of species A dilutes predation risk equally across all prey species, analogous to the dilution effect in disease ecology",
+        "C) Species B is unaffected because predators show complete prey switching and only consume the most abundant species at any given time",
+        "D) Species B declines because the predator population, subsidized by abundant species A, also consumes more of species B than it could sustain in the absence of species A; unlike exploitative competition, the interaction is mediated indirectly through a shared natural enemy rather than through shared resources"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Apparent competition (Holt 1977) is an indirect negative interaction between two prey species mediated by a shared predator. When species A is abundant and supports a large predator population, those predators also prey on species B. The increased predation pressure on B (beyond what B alone could generate) causes B to decline or go locally extinct, even though A and B share no resources. This mimics the outcome of competition (negative effect of one species on another) but through an entirely different mechanism — a shared enemy rather than shared resources. The phenomenon explains many puzzling cases of apparent competitive exclusion. Option A incorrectly predicts a benefit (predator switching is incomplete in most systems and the numerical response to abundant prey A increases total predation). Option B incorrectly applies the dilution effect, which applies to vector-borne parasites attacking herds, not to generalist predators subsidized by alternative prey. Option C assumes complete switching, which is unrealistic.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "In landscape ecology, percolation theory predicts a critical threshold of habitat cover below which landscape connectivity collapses. For a random binary landscape, this threshold is approximately:",
+      "options": [
+        "A) 80% habitat cover; below this, all species experience immediate local extinction due to Allee effects",
+        "B) 10% habitat cover; this is the minimum threshold for any species persistence according to the 90% rule of conservation biology",
+        "C) 25% habitat cover; below this, edge effects dominate and interior habitat disappears entirely",
+        "D) 59.3% habitat cover; below this threshold, the largest habitat cluster fragments into many small, isolated patches, and organisms requiring connected habitat can no longer traverse the landscape"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Percolation theory from physics, applied to landscape ecology by Gardner et al. (1987) and With and Crist (1995), predicts that in a random binary landscape (habitat vs. non-habitat), a critical threshold exists at approximately 59.3% (0.5928) habitat cover. Above this threshold, habitat forms a single connected cluster spanning the landscape, allowing organism movement across the entire extent. Below this threshold, the connected cluster fragments into many small, disconnected patches. This nonlinear transition has profound implications for conservation: habitat loss near this threshold causes disproportionate declines in connectivity. Importantly, real landscapes are not random, so species with different dispersal abilities and habitat specificity experience effective percolation thresholds at different habitat amounts. Species that can traverse small gaps in the matrix may function above their percolation threshold even when total habitat is below 59.3%. Option A overstates the threshold. Options B and C cite thresholds that are conservation rules of thumb, not percolation-derived values.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Redfield ratio describes the atomic C:N:P ratio in marine phytoplankton as approximately 106:16:1. A marine ecologist measures the dissolved inorganic N:P ratio in surface waters as 5:1. What does this indicate about nutrient limitation in this region?",
+      "options": [
+        "A) Phosphorus is limiting because the N:P ratio is below the Redfield ratio of 16:1, indicating excess nitrogen relative to phosphorus demand",
+        "B) Nitrogen is limiting because the dissolved N:P ratio of 5:1 is well below the Redfield demand ratio of 16:1, indicating that nitrogen will be exhausted before phosphorus during phytoplankton growth",
+        "C) Neither nutrient is limiting because both N and P are present in dissolved form, and limitation only occurs when concentrations reach absolute zero",
+        "D) Carbon is limiting because the Redfield ratio indicates that carbon demand (106) vastly exceeds nitrogen and phosphorus demand"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Redfield ratio (C:N:P = 106:16:1) represents the average stoichiometric demand of marine phytoplankton. When dissolved inorganic N:P in the water falls below 16:1, nitrogen is in shorter supply relative to biological demand than phosphorus, making nitrogen the proximate limiting nutrient. At N:P = 5:1, the water has only 5/16 = 31% of the nitrogen needed (relative to phosphorus) to satisfy Redfield demand. As phytoplankton grow and assimilate nutrients in Redfield proportions, nitrogen will be depleted first, halting growth while excess phosphorus remains. This is consistent with Liebig's Law of the Minimum — growth is limited by the nutrient in shortest supply relative to demand. Most open ocean regions are nitrogen-limited (N:P < 16), while most freshwater systems are phosphorus-limited. Option A reverses the interpretation. Option C ignores that limitation occurs when supply rate falls below demand rate, not at absolute zero. Option D is incorrect because dissolved CO2/bicarbonate is rarely limiting in marine systems.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 55,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The enemy release hypothesis in invasion biology predicts that invasive species succeed in novel environments because they:",
+      "options": [
+        "A) Evolve higher mutation rates upon introduction, allowing rapid adaptation to new competitors and abiotic conditions",
+        "B) Benefit from mutualistic interactions with native pollinators and mycorrhizae that are always more effective than those in the invader's home range",
+        "C) Always possess superior competitive ability compared to all native species due to a universally higher intrinsic rate of increase",
+        "D) Are freed from coevolved specialist natural enemies (herbivores, pathogens, parasites) present in their native range, allowing reallocation of resources from defense to growth and reproduction"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The enemy release hypothesis (ERH; Keane and Crawley 2002) posits that when a species is introduced to a new geographic region, it escapes the specialist herbivores, pathogens, and parasites that regulate its population in the native range. In the absence of these coevolved enemies, the invader can redirect energy from costly defenses toward growth, reproduction, and competitive ability (Evolution of Increased Competitive Ability, or EICA hypothesis, extends this logic). Empirical support includes studies showing that invasive plants in introduced ranges harbor fewer pathogen species and suffer less herbivory than conspecifics in native ranges. Biocontrol programs explicitly exploit this concept by reuniting invasive species with their native natural enemies. Option A has no theoretical or empirical basis. Option B is not universally true; some invaders actually suffer from mutualism disruption in the new range. Option C overgeneralizes — many invaders succeed through other mechanisms (novel weapons, empty niches).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a population viability analysis (PVA), a conservation biologist models a small mammal population and finds that demographic stochasticity poses a greater extinction risk than environmental stochasticity. Which population characteristic best explains this finding?",
+      "options": [
+        "A) The population is very large (>10,000 individuals), and random variation in birth and death events among individuals creates significant fluctuations in population size",
+        "B) The population is very small (<50 individuals), where chance variation in individual birth, death, and sex ratio has a proportionally large effect on overall population growth rate, potentially driving the population to zero through random demographic events alone",
+        "C) The population experiences frequent catastrophic events such as hurricanes and droughts that randomly eliminate large fractions of the population",
+        "D) The population has high genetic diversity, which amplifies the effects of random environmental fluctuations on phenotypic variation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Demographic stochasticity refers to random variation in individual-level vital rates: each birth, death, and sex determination is a probabilistic event. In large populations, the law of large numbers ensures that average vital rates closely approximate expected values, so demographic stochasticity is negligible. However, in very small populations (<50-100 individuals), random deviations become proportionally large. For example, if all 5 offspring born in a year happen to be male by chance (probability ~3%), the population loses an entire cohort of potential mothers. Similarly, a chance run of high mortality can push N to zero before environmental conditions deteriorate. Environmental stochasticity (year-to-year fluctuations in climate, disease, resources) affects all individuals simultaneously and is important at all population sizes. PVA models show that demographic stochasticity dominates extinction risk only below a critical population threshold, typically Ne < 50-100. Option A contradicts the principle — large populations buffer demographic noise. Option C describes environmental stochasticity/catastrophes. Option D confuses genetic diversity with demographic processes.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MCQ",
+      "question": "Anammox (anaerobic ammonium oxidation) is a microbial process discovered in the 1990s that significantly altered understanding of the global nitrogen cycle. Which statement correctly describes this process and its ecological significance?",
+      "options": [
+        "A) Anammox converts N2 gas directly into NH4+ under anaerobic conditions, representing a novel form of nitrogen fixation that operates in oxygen minimum zones of the ocean",
+        "B) Anammox is an aerobic process where specialized archaea combine NH4+ and O2 to produce N2O, a potent greenhouse gas, making it a significant contributor to climate change",
+        "C) Anammox converts NO3- to NH4+ through dissimilatory nitrate reduction to ammonium (DNRA), retaining fixed nitrogen in ecosystems rather than losing it as N2 gas",
+        "D) Anammox bacteria oxidize NH4+ using NO2- as the electron acceptor under anoxic conditions, producing N2 gas; this process accounts for up to 50% of marine nitrogen loss and occurs primarily in oxygen minimum zones and anoxic sediments"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Anammox (discovered by Mulder et al. 1995 in a wastewater treatment plant, later found to be globally significant in marine systems) is performed by bacteria of the phylum Planctomycetes (e.g., Candidatus Brocadia, Candidatus Kuenenia). The reaction is: NH4+ + NO2- -> N2 + 2H2O (deltaG = -358 kJ/mol). This is strictly anaerobic and occurs in the anammoxosome, a specialized membrane-bound organelle containing ladderane lipids. In marine oxygen minimum zones (e.g., Arabian Sea, Eastern Tropical Pacific) and anoxic sediments, anammox accounts for 30-50% of total N2 production, rivaling canonical denitrification. This discovery revealed a previously unknown major pathway of nitrogen loss from the ocean, fundamentally revising nitrogen budget models. Option A describes nitrogen fixation, the opposite process. Option B incorrectly makes anammox aerobic and attributes N2O production to it. Option C describes DNRA, a distinct process that retains nitrogen as NH4+.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 55,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about Lotka-Volterra predator-prey dynamics and trophic cascades:\nS1: TRUE — In the classic Lotka-Volterra predator-prey model, prey and predator populations oscillate in linked cycles, with predator peaks lagging behind prey peaks by approximately one-quarter of the cycle period, because predator population growth depends on prey availability with a time delay.\nS2: FALSE — A trophic cascade occurs when a top predator suppresses herbivore populations, indirectly increasing plant biomass; this is an example of top-down control because the regulatory effect propagates downward from apex predators through lower trophic levels.\nS3: TRUE — Adding a predator refuge (a spatial area where prey are safe from predation) to a Lotka-Volterra system stabilizes oscillations by setting a floor on prey density, preventing the overshooting and crashing dynamics that drive neutral cycles.\nS4: FALSE — In the classic Lotka-Volterra predator-prey model, the oscillations are structurally stable, meaning small perturbations from equilibrium always return the system to the same limit cycle regardless of the magnitude of the perturbation.",
+      "options": [
+        "A) S1 correct, S2 correct, S3 correct, S4 correct",
+        "B) S1 correct, S2 incorrect, S3 correct, S4 correct",
+        "C) S1 correct, S2 incorrect, S3 correct, S4 incorrect",
+        "D) S1 correct, S2 correct, S3 incorrect, S4 correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 TRUE is correct: In the Lotka-Volterra predator-prey system, the coupled differential equations (dN/dt = rN - aNP; dP/dt = baNP - mP) produce oscillations where predator peaks lag prey peaks by ~90 degrees (quarter cycle). This lag occurs because predator numerical response to increasing prey takes time — predators must convert consumed prey into offspring. S2 is labeled FALSE, but the description of a trophic cascade is accurate — top predators do suppress herbivores, indirectly increasing plant biomass, and this IS correctly identified as top-down control. The statement is entirely true, so the FALSE label is incorrectly applied. S3 TRUE is correct: Prey refuges (as in the Lotka-Volterra with refuge modification) prevent prey from being driven to extremely low densities, damping the neutral oscillations of the basic model and stabilizing the equilibrium. S4 is labeled FALSE, and the statement claims Lotka-Volterra oscillations are structurally stable. In fact, the classic Lotka-Volterra model produces neutrally stable cycles (centers), not structurally stable limit cycles. Perturbations shift the system to a different amplitude orbit — there is no return to the original cycle. The system is structurally unstable. The FALSE label is correctly applied to a false statement. Assessment: S1 correct, S2 incorrect (FALSE label on a true statement), S3 correct, S4 correct (FALSE label on a false statement).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about climate change impacts on ecosystems:\nS1: TRUE — Phenological mismatch occurs when climate change causes differential shifts in the timing of interacting species' life-cycle events; for example, if plants flower earlier due to warming but their pollinators do not advance emergence equally, the temporal overlap between flower availability and pollinator activity decreases, reducing reproductive success of both.\nS2: FALSE — Coral bleaching occurs when elevated sea surface temperatures cause corals to expel their symbiotic zooxanthellae (dinoflagellates of the family Symbiodiniaceae); if temperatures remain elevated, the coral cannot recover its photosynthetic symbionts and dies from starvation since zooxanthellae provide up to 90% of the coral's energy.\nS3: TRUE — Climate velocity — the speed at which isotherms shift across a landscape — determines whether species can track suitable climatic conditions through migration; flat terrain has higher climate velocity than mountainous terrain because equivalent temperature changes require longer horizontal distances compared to short elevational shifts.\nS4: TRUE — All biomes will shift poleward at equal rates under global warming because temperature is the sole determinant of biome boundaries, and precipitation patterns, soil types, and disturbance regimes are irrelevant to biome distribution.",
+      "options": [
+        "A) S1 correct, S2 correct, S3 correct, S4 incorrect",
+        "B) S1 correct, S2 correct, S3 incorrect, S4 correct",
+        "C) S1 correct, S2 incorrect, S3 incorrect, S4 incorrect",
+        "D) S1 correct, S2 incorrect, S3 correct, S4 incorrect"
+      ],
+      "correctAnswer": "D",
+      "explanation": "S1 TRUE is correct: Phenological mismatch is well-documented. Classic examples include the great tit-winter moth system in Europe (Visser et al.) where birds' breeding timing failed to track advancing caterpillar peak emergence, and plant-pollinator systems where asynchrony reduces mutualistic benefit. Different trophic levels often respond to different environmental cues (photoperiod vs. temperature), amplifying mismatch risk. S2 is labeled FALSE, but the description of coral bleaching is scientifically accurate. Elevated SSTs (typically +1-2 degrees C above summer maximum for 4+ weeks) cause oxidative stress in zooxanthellae, leading to their expulsion from coral tissue. Without zooxanthellae (which provide ~90% of coral energy via photosynthate translocation), the coral appears white ('bleached') and starves if the symbiosis is not re-established within weeks. This is a true statement with a FALSE label, so S2 is incorrectly assessed. S3 TRUE is correct: Climate velocity (Loarie et al. 2009) measures the speed of isotherm displacement. In flat landscapes, isotherms must shift long horizontal distances (high climate velocity), while in mountainous terrain, short elevational shifts accomplish the same temperature change (low climate velocity). Mountain species can track climate by moving upslope; flatland species must migrate much farther. S4 TRUE is incorrect: The claim that all biomes shift equally and that only temperature matters is false. Biome boundaries depend on the interaction of temperature, precipitation seasonality, soil, fire regime, and other factors. The statement's absolute language ('sole determinant,' 'irrelevant') is clearly wrong, making the TRUE label incorrect. Assessment: S1 correct, S2 incorrect, S3 correct, S4 incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 52,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about landscape ecology and habitat fragmentation:\nS1: TRUE — Edge effects in forest fragments create microclimatic gradients (increased light, wind, temperature, decreased humidity) that penetrate 50-300 m into the fragment interior, favoring generalist and disturbance-adapted species over forest-interior specialists.\nS2: FALSE — The SLOSS debate (Single Large Or Several Small reserves) was definitively resolved in favor of several small reserves because multiple small reserves always capture more total species than a single large reserve of the same total area.\nS3: TRUE — Matrix quality — the permeability of the non-habitat landscape surrounding habitat patches — is often more important than corridor presence in determining functional connectivity for many species, because a hospitable matrix allows diffuse dispersal across the entire landscape rather than channeling movement through narrow corridors.\nS4: FALSE — Habitat fragmentation per se (breaking apart of habitat independent of habitat loss) always has negative effects on biodiversity, and no species benefits from increased edge habitat, smaller patch sizes, or landscape heterogeneity.",
+      "options": [
+        "A) S1 correct, S2 correct, S3 correct, S4 correct",
+        "B) S1 correct, S2 incorrect, S3 correct, S4 correct",
+        "C) S1 correct, S2 correct, S3 correct, S4 incorrect",
+        "D) S1 correct, S2 correct, S3 incorrect, S4 correct"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 TRUE is correct: Edge effects are well-documented in the Biological Dynamics of Forest Fragments Project (BDFFP) in the Amazon (Laurance et al.). Abiotic edge effects (elevated temperature, reduced humidity, increased wind) penetrate 50-300 m depending on the variable. These changes favor light-demanding generalists, invasive plants, and disturbance-tolerant species while causing declines in shade-tolerant, humidity-sensitive forest-interior species (e.g., certain understory birds, amphibians, epiphytes). S2 is labeled FALSE, and the statement claims the SLOSS debate was definitively resolved in favor of several small reserves. This is false — the debate was NOT definitively resolved either way. While several small reserves can capture more beta diversity, a single large reserve better supports area-sensitive species, maintains larger populations (reducing extinction risk), and preserves interior habitat. The optimal strategy is context-dependent. The FALSE label is correctly applied. S3 TRUE is correct: Research by Ricketts (2001) and others has shown that matrix quality (e.g., agroforestry vs. cattle pasture surrounding forest patches) can be more important than corridors for many species. A permeable matrix allows movement between patches across the entire landscape, while corridors only provide one narrow path. S4 is labeled FALSE, and the statement claims fragmentation per se always has negative effects. This is indeed false — Fahrig (2017) argued that fragmentation per se (controlling for habitat amount) can have positive, negative, or neutral effects depending on the species. Edge-adapted species, open-habitat species, and matrix-utilizing species can benefit from fragmentation. The FALSE label is correctly applied. Assessment: S1 correct, S2 correct, S3 correct, S4 correct.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about restoration ecology and rewilding:\nS1: TRUE — Reference ecosystems in restoration ecology serve as models or targets for restoration, representing the historical or desired ecological condition; however, the concept is complicated by shifting baselines, novel ecosystems, and the recognition that historical conditions may be unachievable under current climate.\nS2: TRUE — Assisted migration (managed relocation) involves deliberately moving species to areas outside their current range to prevent extinction from climate change; it is universally accepted by conservation biologists because the benefits of preventing extinction always outweigh the risks of creating new invasive species.\nS3: FALSE — Rewilding involves reintroducing large mammals (megafauna) and apex predators to restore top-down ecological processes; the reintroduction of wolves to Yellowstone in 1995 demonstrated trophic cascades as wolf predation on elk reduced browsing pressure, allowing riparian vegetation recovery and associated changes in stream geomorphology.\nS4: TRUE — The novel weapons hypothesis explains some invasion success by proposing that exotic species produce biochemical compounds (allelopathic chemicals, novel pathogens) to which native species have no evolved tolerance, giving invaders a competitive advantage unrelated to enemy release.",
+      "options": [
+        "A) S1 correct, S2 incorrect, S3 correct, S4 correct",
+        "B) S1 correct, S2 incorrect, S3 incorrect, S4 correct",
+        "C) S1 correct, S2 correct, S3 incorrect, S4 correct",
+        "D) S1 incorrect, S2 incorrect, S3 correct, S4 correct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 TRUE is correct: Reference ecosystems are central to restoration planning (Society for Ecological Restoration guidelines), but practitioners increasingly recognize that historical fidelity may be impossible or inappropriate under novel climate conditions. Novel ecosystems (Hobbs et al. 2009) — communities with no historical analog — challenge the reference ecosystem concept. Shifting baselines mean each generation accepts a more degraded state as 'normal.' S2 TRUE is incorrect: Assisted migration is highly controversial, NOT universally accepted. Opponents argue it could create new invasions, disrupt recipient communities, spread diseases, and divert limited conservation resources. Proponents cite it as a last resort for species unable to migrate fast enough. The statement's absolute language ('universally accepted,' 'always outweigh') is false. S3 is labeled FALSE, but the description of rewilding and the Yellowstone wolf reintroduction is largely accurate. Wolves did cause trophic cascades through behavioral and density-mediated effects on elk, leading to riparian vegetation recovery (Ripple and Beschta 2012). While the extent of the cascade is debated, the basic description is correct. The FALSE label is incorrectly applied to a substantially true statement. S4 TRUE is correct: The novel weapons hypothesis (Callaway and Ridenour 2004) explains invasions by species like Alliaria petiolata (garlic mustard), which produces glucosinolates that disrupt native mycorrhizal associations, and Centaurea diffusa (diffuse knapweed), which releases allelopathic chemicals novel to North American plant communities. Assessment: S1 correct, S2 incorrect, S3 incorrect, S4 correct.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about biogeochemical cycles:\nS1: TRUE — Denitrification is an anaerobic process carried out by facultative anaerobic bacteria (e.g., Pseudomonas) that reduces NO3- stepwise through NO2-, NO, and N2O to N2 gas, returning fixed nitrogen to the atmosphere and representing a major pathway of nitrogen loss from ecosystems.\nS2: FALSE — The phosphorus cycle has no gaseous phase and no significant atmospheric reservoir; phosphorus cycles between terrestrial rocks/sediments and aquatic systems primarily through weathering, biological uptake, and sedimentation, making phosphorus a slow-cycling nutrient.\nS3: TRUE — Nitrification is an aerobic two-step chemoautotrophic process: ammonia-oxidizing bacteria (e.g., Nitrosomonas) and archaea oxidize NH4+ to NO2-, then nitrite-oxidizing bacteria (e.g., Nitrobacter) oxidize NO2- to NO3-; both steps generate energy for carbon fixation.\nS4: TRUE — Eutrophication in freshwater systems is primarily driven by nitrogen loading because Liebig's law identifies nitrogen as the nutrient in shortest supply relative to biological demand in all freshwater ecosystems worldwide.",
+      "options": [
+        "A) S1 correct, S2 incorrect, S3 correct, S4 incorrect",
+        "B) S1 correct, S2 correct, S3 correct, S4 incorrect",
+        "C) S1 correct, S2 incorrect, S3 correct, S4 correct",
+        "D) S1 correct, S2 correct, S3 incorrect, S4 incorrect"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 TRUE is correct: Denitrification (NO3- -> NO2- -> NO -> N2O -> N2) is performed under anaerobic/low-oxygen conditions by bacteria like Pseudomonas, Thiobacillus, and Paracoccus using nitrate as a terminal electron acceptor. This is the primary biological mechanism returning fixed N to the atmospheric N2 pool. It occurs in waterlogged soils, aquatic sediments, and oxygen minimum zones. S2 is labeled FALSE, but the description of the phosphorus cycle is accurate. Unlike carbon and nitrogen, phosphorus has no common gaseous form and no atmospheric reservoir (trace amounts of phosphine, PH3, are ecologically insignificant). Phosphorus enters ecosystems through rock weathering and leaves through sedimentation. Cycling timescales are geological (millions of years for the sedimentary pool). The FALSE label is incorrectly applied to a true statement, so S2 is incorrectly assessed. S3 TRUE is correct: Nitrification is the aerobic oxidation of ammonia to nitrate in two steps by chemoautotrophic (chemolithoautotrophic) organisms. Step 1: 2NH4+ + 3O2 -> 2NO2- + 4H+ + 2H2O (by Nitrosomonas/ammonia-oxidizing archaea). Step 2: 2NO2- + O2 -> 2NO3- (by Nitrobacter/Nitrospira). Both groups use the energy to fix CO2 (autotrophy). S4 TRUE is incorrect: Freshwater eutrophication is primarily driven by phosphorus, not nitrogen. Schindler's classic whole-lake experiments at the Experimental Lakes Area definitively showed phosphorus is the limiting nutrient in most freshwater systems. The statement incorrectly claims nitrogen limitation is universal in freshwater, contradicting the well-established primacy of phosphorus limitation. Assessment: S1 correct, S2 incorrect, S3 correct, S4 incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 55,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about source-sink metapopulation dynamics and the rescue effect:\nS1: TRUE — Source habitats have positive local population growth (lambda > 1, births + immigration > deaths + emigration), producing surplus individuals that disperse to colonize other patches, while sink habitats have negative local growth (lambda < 1) and persist only through immigration from sources.\nS2: FALSE — The rescue effect in metapopulation biology refers to immigration from occupied patches reducing the probability of local extinction in small subpopulations by supplementing declining populations with new individuals, thereby maintaining genetic diversity and demographic stability.\nS3: TRUE — Ecological traps are sink habitats that organisms preferentially settle in because environmental cues misindicating high habitat quality attract settlers despite low actual fitness; these traps arise when rapid environmental change decouples habitat selection cues from true habitat quality.\nS4: FALSE — In a source-sink system, eliminating corridors between patches would have no effect on sink populations because sink populations are self-sustaining by definition and do not depend on immigration for persistence.",
+      "options": [
+        "A) S1 correct, S2 incorrect, S3 correct, S4 correct",
+        "B) S1 correct, S2 correct, S3 correct, S4 correct",
+        "C) S1 correct, S2 incorrect, S3 incorrect, S4 correct",
+        "D) S1 correct, S2 incorrect, S3 correct, S4 incorrect"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 TRUE is correct: Pulliam's (1988) source-sink model distinguishes habitats by demographic balance. Sources produce more individuals than needed for local replacement (lambda > 1), exporting surplus via emigration. Sinks lose individuals faster than they produce (lambda < 1) and would go extinct without immigration. Critically, sink populations can appear stable or even dense if immigration rates are high, masking their dependence on sources. S2 is labeled FALSE, but the description of the rescue effect (Brown and Kodric-Brown 1977) is accurate. Immigration into small subpopulations does reduce extinction probability by bolstering population size (demographic rescue) and introducing new alleles (genetic rescue). This is a true statement with a FALSE label, making S2 incorrectly assessed. S3 TRUE is correct: Ecological traps (Robertson and Hutto 2006) are well-documented. Examples include birds preferring to nest in exotic trees that provide inadequate cover from predators, or aquatic insects ovipositing on asphalt roads that polarize light similar to water surfaces. The key mechanism is a mismatch between evolved habitat preference cues and actual habitat quality in altered environments. S4 is labeled FALSE, and the statement claims corridor removal has no effect on sinks because they are 'self-sustaining.' This is false by definition — sinks are NOT self-sustaining; they depend on immigration from sources. Removing corridors would cause sink populations to decline and go extinct. The FALSE label is correctly applied. Assessment: S1 correct, S2 incorrect (FALSE label on true statement), S3 correct, S4 correct (FALSE label on false statement).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 53,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about ecosystem services and their valuation:\nS1: TRUE — Ecosystem services are classified into four categories by the Millennium Ecosystem Assessment: provisioning services (food, water, timber), regulating services (climate regulation, flood control, pollination), cultural services (recreation, spiritual values), and supporting services (nutrient cycling, soil formation, primary productivity).\nS2: FALSE — Pollination services provided by wild bees and other insects have been valued at approximately $235-577 billion globally per year; this represents the cost that would be required to replace insect pollination with artificial hand-pollination or technological alternatives.\nS3: TRUE — Wetlands provide ecosystem services worth far more per hectare than most other biomes because they simultaneously deliver flood control (absorbing excess water), water purification (filtering nutrients and pollutants), carbon sequestration (peat accumulation), biodiversity support (nursery habitat), and coastal protection.\nS4: TRUE — Payment for ecosystem services (PES) schemes are guaranteed to conserve biodiversity because landowners receiving financial compensation will always maintain natural habitats rather than converting them to agriculture, regardless of the payment amount relative to agricultural revenue.",
+      "options": [
+        "A) S1 correct, S2 incorrect, S3 correct, S4 incorrect",
+        "B) S1 correct, S2 correct, S3 correct, S4 incorrect",
+        "C) S1 correct, S2 incorrect, S3 correct, S4 correct",
+        "D) S1 correct, S2 correct, S3 incorrect, S4 incorrect"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 TRUE is correct: The Millennium Ecosystem Assessment (2005) framework classifies ecosystem services into exactly these four categories. Supporting services (also called 'habitat services' in TEEB framework) underpin all other categories. This classification scheme is fundamental to ecosystem service research and policy. S2 is labeled FALSE, but the description of pollination service valuation is approximately correct. Gallai et al. (2009) estimated global pollination services at around 153 billion euros (~$235 billion), and subsequent estimates have been higher. The replacement cost approach (what it would cost to hand-pollinate) is one standard valuation method. The description is substantially accurate, so the FALSE label is incorrectly applied. S3 TRUE is correct: Costanza et al. (1997, updated 2014) valued wetland ecosystem services at $25,681/ha/year — among the highest of any biome. Wetlands deliver the multiple services listed simultaneously, and their per-hectare value reflects this multi-functionality. Despite representing only ~6% of Earth's land surface, wetlands contribute disproportionately to global ecosystem service value. S4 TRUE is incorrect: PES schemes are NOT 'guaranteed' to conserve biodiversity. Their success depends on payment levels exceeding opportunity costs of land conversion, proper monitoring, enforcement, additionality (payments must cause conservation beyond what would have happened anyway), and avoiding leakage (displacement of destruction elsewhere). The words 'guaranteed' and 'always' and 'regardless' make this false. Assessment: S1 correct, S2 incorrect (FALSE label on true statement), S3 correct, S4 incorrect (TRUE label on false statement).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about invasion biology:\nS1: TRUE — Propagule pressure (the number of individuals introduced and the frequency of introduction events) is one of the strongest predictors of invasion success across taxa and ecosystems, because larger and more frequent introductions increase the probability of establishing a self-sustaining population by overcoming demographic stochasticity and Allee effects.\nS2: FALSE — The biotic resistance hypothesis predicts that species-rich communities are more resistant to invasion because diverse communities more completely utilize available resources and harbor more natural enemies, leaving fewer vacant niches for invaders to exploit.\nS3: TRUE — Invasive species that act as ecosystem engineers (e.g., zebra mussels filtering water, Eurasian boar rooting soil, invasive earthworms altering forest floor litter dynamics) can have community-wide impacts far exceeding their direct competitive or predatory effects on individual native species.\nS4: TRUE — All invasive species exhibit r-selected life history traits including high fecundity, rapid growth, small body size, and short generation time, which universally confer invasion advantage regardless of the recipient ecosystem.",
+      "options": [
+        "A) S1 correct, S2 incorrect, S3 correct, S4 incorrect",
+        "B) S1 correct, S2 correct, S3 correct, S4 incorrect",
+        "C) S1 correct, S2 incorrect, S3 correct, S4 correct",
+        "D) S1 correct, S2 correct, S3 incorrect, S4 incorrect"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 TRUE is correct: Propagule pressure is consistently identified as a key predictor of invasion success in meta-analyses (Lockwood et al. 2005). More individuals and more introduction events increase genetic diversity of the founding population, reduce Allee effects, buffer demographic stochasticity, and increase the chance of introducing well-adapted genotypes. S2 is labeled FALSE, but the biotic resistance hypothesis (Elton 1958) is accurately described. It does predict that diverse communities resist invasion better through more complete resource utilization (niche complementarity) and higher probability of containing effective competitors or natural enemies. While empirical support is mixed (invasion paradox: diverse regions also have more invaders), the hypothesis itself is correctly stated. The FALSE label is incorrectly applied to an accurately described hypothesis. S3 TRUE is correct: Invasive ecosystem engineers create outsized impacts. Zebra mussels (Dreissena polymorpha) filter massive volumes of water, increasing clarity and shifting energy from pelagic to benthic pathways. Eurasian wild boar (Sus scrofa) physically disturb soil, destroying ground-nesting bird habitat and facilitating invasive plants. Invasive earthworms (e.g., Lumbricus terrestris in previously glaciated North American forests) consume the duff layer, altering nutrient cycling and destroying habitat for native arthropods and salamanders. S4 TRUE is incorrect: Many successful invaders are K-selected. Burmese pythons, feral cats, wild boar, and many invasive trees (e.g., Melaleuca, Tamarisk) are large, long-lived, and slow-reproducing. Invasion success depends on match between species traits and ecosystem context, not on any universal life history profile. Assessment: S1 correct, S2 incorrect, S3 correct, S4 incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studying Lotka-Volterra competition between two species of Paramecium in laboratory microcosms obtained the following data:\n\nSpecies A alone: K_A = 500, r_A = 0.8/day\nSpecies B alone: K_B = 300, r_B = 1.2/day\nCompetition coefficients: alpha_AB = 1.5 (effect of B on A), alpha_BA = 0.4 (effect of A on B)\n\nAfter 30 days of coculture starting from equal initial densities (N_A = N_B = 10), the researcher observed that one species was driven to extinction. Which species was eliminated, and which mathematical condition confirms this outcome?",
+      "dataContext": "Lotka-Volterra competition parameters for two Paramecium species in laboratory microcosms. Species A: K_A = 500, r_A = 0.8/day. Species B: K_B = 300, r_B = 1.2/day. Competition coefficients: alpha_AB = 1.5 (effect of one individual of B on species A, expressed in A-equivalents), alpha_BA = 0.4 (effect of one individual of A on species B, expressed in B-equivalents). Coexistence conditions: K_A/alpha_AB vs K_B and K_B/alpha_BA vs K_A. Calculations: K_A/alpha_AB = 500/1.5 = 333, K_B = 300. K_B/alpha_BA = 300/0.4 = 750, K_A = 500. Therefore K_A/alpha_AB > K_B (333 > 300) and K_B/alpha_BA > K_A (750 > 500). Both conditions for stable coexistence are met.",
+      "options": [
+        "A) Species B is eliminated because K_A > K_B; carrying capacity alone determines competitive outcomes regardless of competition coefficients",
+        "B) Species A is eliminated because r_B > r_A; the species with the higher intrinsic growth rate always wins in competition",
+        "C) Neither species is eliminated; the coexistence conditions K_A/alpha_AB > K_B (333 > 300) and K_B/alpha_BA > K_A (750 > 500) are both satisfied, predicting stable coexistence — the researcher's observation of extinction suggests factors beyond the Lotka-Volterra model (e.g., stochasticity, environmental variation, or breakdown of model assumptions) caused the extinction",
+        "D) Species A is eliminated because alpha_AB > 1 means species B has a stronger per capita effect on species A than species A has on itself"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Lotka-Volterra competition model predicts the outcome based on the relationship between carrying capacities and competition coefficients. Stable coexistence requires: (1) K_A/alpha_AB > K_B: species A can invade when rare (500/1.5 = 333 > 300, satisfied). (2) K_B/alpha_BA > K_A: species B can invade when rare (300/0.4 = 750 > 500, satisfied). Both conditions are met, so the model predicts stable coexistence — each species inhibits itself more than it inhibits the other (intraspecific competition > interspecific competition). The researcher's observation of extinction contradicts the deterministic model prediction, suggesting that real-world factors not captured by the basic Lotka-Volterra model caused the discrepancy. Possible explanations include demographic stochasticity at low population sizes, environmental heterogeneity in the microcosm, interference competition not captured by the model's exploitation competition framework, or violations of the model's assumption of constant coefficients. Option A ignores competition coefficients. Option B ignores that r affects the rate of approach to equilibrium, not the equilibrium outcome. Option D incorrectly interprets alpha > 1 as determining the winner.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A research team monitoring nitrogen cycling in a temperate forest measured the following annual nitrogen fluxes (kg N/ha/year):\n\nAtmospheric N deposition: 12\nBiological N fixation: 3\nPlant uptake from soil: 80\nLitterfall return to soil: 55\nMineralization (organic N -> NH4+): 65\nNitrification (NH4+ -> NO3-): 40\nDenitrification (NO3- -> N2/N2O): 8\nLeaching (NO3- loss in drainage): 6\nNet change in soil organic N pool: +21\n\nBased on these data, what is the total annual nitrogen input to the ecosystem, and is the system accumulating or losing nitrogen overall?",
+      "dataContext": "Annual nitrogen budget for a temperate deciduous forest ecosystem. All values in kg N/ha/year. Inputs: atmospheric deposition (wet + dry) = 12, biological N fixation (free-living + symbiotic) = 3. Total input = 15. Internal cycling: plant uptake = 80, litterfall = 55, mineralization = 65, nitrification = 40. Outputs: denitrification = 8, leaching = 6. Total output = 14. Net budget: input - output = 15 - 14 = +1 kg N/ha/year. The soil organic N pool increased by 21 kg N/ha/year, which includes the net external input plus internal redistribution from plant biomass to soil organic matter. Plant uptake (80) exceeds litterfall (55), indicating net accumulation of 25 kg N/ha/year in plant biomass.",
+      "options": [
+        "A) Total input = 80 kg N/ha/year (dominated by plant uptake); the system is losing nitrogen because denitrification and leaching exceed atmospheric deposition",
+        "B) Total input = 15 kg N/ha/year (atmospheric deposition + fixation); total output = 14 kg N/ha/year (denitrification + leaching); the system has a net nitrogen gain of +1 kg N/ha/year, indicating slight nitrogen accumulation consistent with nitrogen saturation in early stages",
+        "C) Total input = 65 kg N/ha/year (mineralization is the primary input); the system is in perfect equilibrium because mineralization exactly balances plant uptake",
+        "D) Total input = 120 kg N/ha/year (deposition + fixation + mineralization + nitrification); the system is rapidly accumulating nitrogen because inputs vastly exceed outputs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "To construct a nitrogen budget, we must distinguish external inputs/outputs from internal cycling. External inputs to the ecosystem are atmospheric deposition (12) and biological fixation (3), totaling 15 kg N/ha/year. External outputs are denitrification (8) and leaching (6), totaling 14 kg N/ha/year. Net balance: +1 kg N/ha/year, meaning the ecosystem is a small net nitrogen sink. Mineralization (65) and nitrification (40) are internal cycling processes that transform nitrogen between pools within the ecosystem — they are NOT external inputs. Similarly, plant uptake (80) and litterfall (55) represent internal transfers between plant and soil pools. The soil organic N pool increase (+21) reflects the balance of litterfall input (55) minus mineralization output (65) plus root exudates and root turnover (approximately 31 kg N/ha/year implied). The slight net external accumulation (+1) is consistent with many temperate forests that are weak nitrogen sinks, partly due to elevated anthropogenic N deposition. Option A incorrectly counts plant uptake as an external input. Option C incorrectly counts mineralization as an external input. Option D double-counts by adding internal fluxes to external inputs.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 55,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A marine ecologist tracked coral reef bleaching events at a monitoring site and recorded the following data:\n\nYear | Mean SST anomaly (degrees C above baseline) | % Coral cover | % Bleached colonies | Recovery time (months)\n2010 | +0.5 | 45 | 5 | 3\n2013 | +1.2 | 42 | 35 | 12\n2016 | +1.8 | 30 | 75 | 24+\n2017 | +1.5 | 22 | 60 | Not recovered\n2020 | +1.4 | 15 | 55 | Not recovered\n2024 | +2.1 | 8 | 90 | Not recovered\n\nWhich interpretation is best supported by these data?",
+      "dataContext": "Longitudinal monitoring data from a tropical coral reef site spanning 14 years. Baseline SST represents the 1985-2000 climatological mean for this location. Degree Heating Weeks (DHW) threshold for bleaching: typically 4 DHW causes bleaching, >8 DHW causes mortality. The data show: (1) SST anomalies are increasing over time with more frequent events. (2) Coral cover declined monotonically from 45% to 8%. (3) Bleaching severity increased with temperature anomaly. (4) Recovery times lengthened dramatically. (5) Back-to-back events in 2016-2017 prevented recovery. (6) Cumulative decline shows the reef is on a trajectory toward functional extinction. N:P context: bleaching threshold appears to be approximately +1.0 degrees C above baseline at this site.",
+      "options": [
+        "A) The coral reef is healthy and showing normal cyclical variation; the 2024 bleaching event will be followed by full recovery within 6 months, as corals have evolved thermal tolerance through repeated exposure",
+        "B) The reef is experiencing natural succession from coral-dominated to sponge-dominated community, which is unrelated to climate change and represents normal ecological dynamics on geological timescales",
+        "C) The decline in coral cover is entirely caused by ocean acidification reducing calcification rates, and temperature anomalies are coincidental; removing CO2 emissions would immediately reverse the trend",
+        "D) The data show a ratchet effect: increasing SST anomalies cause progressively more severe bleaching, while shortened intervals between events prevent full recovery, leading to cumulative coral cover loss; the reef is crossing a tipping point toward an algae-dominated alternative stable state with potentially irreversible phase shift"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The data demonstrate a classic climate-driven coral reef decline trajectory. Key patterns: (1) Dose-response: bleaching severity increases with SST anomaly magnitude (5% at +0.5 degrees C to 90% at +2.1 degrees C), consistent with thermal stress physiology. (2) Ratchet/hysteresis effect: coral cover never recovers to pre-disturbance levels between events (45 -> 42 -> 30 -> 22 -> 15 -> 8%), because each bleaching event kills a fraction of colonies, and recovery time (years to decades for slow-growing massive corals) exceeds the interval between events. (3) Increasing frequency: back-to-back events in 2016-2017 are particularly devastating because corals with depleted energy reserves from the first event cannot survive a second. (4) Phase shift trajectory: as coral cover drops below ~10-15%, the reef may cross a tipping point to an alternative stable state dominated by macroalgae, maintained by positive feedbacks (algae outcompete coral recruits, reduced herbivory from habitat loss, sediment accumulation). This regime shift may be difficult or impossible to reverse even if thermal stress is reduced. Option A ignores the clear declining trend and overestimates coral adaptation potential. Option C ignores the strong temperature-bleaching correlation. Option D mischaracterizes the rapid, climate-driven change as natural succession.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A population ecologist conducted a PVA (Population Viability Analysis) for an endangered carnivore using Monte Carlo simulations with 1,000 replicates over 100 years. The following results were obtained for different initial population sizes:\n\nN0 = 25: P(extinction) = 0.89, Median time to extinction = 18 years, Mean final N (surviving runs) = 12\nN0 = 50: P(extinction) = 0.62, Median time to extinction = 35 years, Mean final N (surviving runs) = 28\nN0 = 100: P(extinction) = 0.31, Median time to extinction = 58 years, Mean final N (surviving runs) = 61\nN0 = 250: P(extinction) = 0.08, Median time to extinction = 82 years, Mean final N (surviving runs) = 168\nN0 = 500: P(extinction) = 0.02, Median time to extinction = 95 years, Mean final N (surviving runs) = 372\nN0 = 1000: P(extinction) = <0.01, Median time to extinction = N/A, Mean final N (surviving runs) = 789\n\nModel parameters: r_max = 0.05, K = 1000, environmental variance in r = 0.04, catastrophe probability = 0.02/year (50% population reduction).\n\nWhat is the minimum viable population (MVP) for this species using the standard criterion of 95% persistence probability over 100 years?",
+      "dataContext": "PVA simulation results for an endangered large carnivore. Each scenario was run 1,000 times with demographic stochasticity, environmental stochasticity (variance in r = 0.04), and catastrophes (2% annual probability of 50% die-off). K = 1000. Extinction probabilities: N0=25: 89%, N0=50: 62%, N0=100: 31%, N0=250: 8%, N0=500: 2%, N0=1000: <1%. The 95% persistence criterion (P(extinction) <= 5%) is met between N0=250 (8% extinction) and N0=500 (2% extinction). Linear interpolation: ~330 individuals. The steep decline in extinction probability between N0=100 and N0=500 reflects a threshold where populations become large enough to buffer environmental stochasticity and survive occasional catastrophes.",
+      "options": [
+        "A) MVP = 25, because even at this small size some simulation runs (11%) persisted for 100 years, demonstrating viability",
+        "B) MVP = 1,000, because only at the maximum carrying capacity does the extinction probability approach zero, and no smaller population is truly viable",
+        "C) MVP is between 250 and 500 individuals (approximately 300-350); N0 = 250 has 8% extinction probability (below the 95% persistence threshold), while N0 = 500 has only 2% extinction probability (exceeding the threshold); interpolation suggests ~330 individuals meets the standard 95% persistence criterion",
+        "D) MVP = 50, because the median time to extinction of 35 years exceeds the typical management planning horizon of 20 years"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The standard MVP criterion is the smallest population with at least 95% probability of persisting for 100 years (i.e., extinction probability <= 5%). From the data: N0 = 250 has P(extinction) = 8% (too high, only 92% persistence). N0 = 500 has P(extinction) = 2% (meets criterion, 98% persistence). The MVP lies between 250 and 500. Linear interpolation on extinction probability: from 8% at N=250 to 2% at N=500, we need 5%. The decrease per individual is (8-2)/(500-250) = 0.024%/individual. To drop from 8% to 5% requires a decrease of 3%, so 3/0.024 = 125 additional individuals above 250, giving approximately 375. More sophisticated interpolation (recognizing the relationship is nonlinear) suggests approximately 300-350 individuals. This demonstrates the PVA approach to conservation target-setting. Option A confuses any persistence with viability (89% extinction is catastrophic). Option B is unnecessarily conservative — the 95% criterion, not 100%, is the standard. Option D uses an inappropriate time horizon and persistence criterion.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An ecologist studying a four-species food web measured the following biomass and energy data:\n\nTrophic level | Species | Biomass (g/m^2) | Production (kcal/m^2/yr)\nProducer | Phytoplankton | 5 | 8,000\nPrimary consumer | Zooplankton | 15 | 1,200\nSecondary consumer | Small fish | 8 | 120\nTertiary consumer | Large fish | 2 | 12\n\nThe inverted biomass pyramid (producers < primary consumers) is notable. Which explanation correctly accounts for this pattern, and what do the production data reveal about energy transfer in this system?",
+      "dataContext": "Biomass and production data for an aquatic food web. Biomass pyramid: 5, 15, 8, 2 g/m^2 (inverted at base). Production pyramid: 8000, 1200, 120, 12 kcal/m^2/yr (always right-side up). Trophic efficiencies: zooplankton/phytoplankton = 1200/8000 = 15%, small fish/zooplankton = 120/1200 = 10%, large fish/small fish = 12/120 = 10%. The inverted biomass pyramid occurs because phytoplankton have extremely high turnover rates (P:B ratio = 8000/5 = 1600/yr, meaning the standing stock is replaced every ~0.23 days), while consumers have much lower turnover (zooplankton P:B = 80/yr, small fish P:B = 15/yr, large fish P:B = 6/yr).",
+      "options": [
+        "A) The inverted biomass pyramid indicates that the second law of thermodynamics is violated in aquatic systems, as consumers create more biomass than producers from the same energy input",
+        "B) The inverted biomass pyramid is an artifact of measurement error; true biomass must always decrease at higher trophic levels in all ecosystems without exception",
+        "C) The inverted biomass pyramid occurs because phytoplankton have extremely high turnover rates (high P:B ratio) — their small standing biomass is replaced many times per year, supporting a larger standing biomass of slower-growing consumers; the production (energy flow) pyramid remains right-side up, confirming that the second law of thermodynamics is not violated",
+        "D) The inverted biomass pyramid is caused by zooplankton photosynthesizing through kleptoplasty (stealing chloroplasts from phytoplankton), which adds autotrophic production to the primary consumer level"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Inverted biomass pyramids are characteristic of open-water (pelagic) aquatic ecosystems and were first described by Elton. The key insight is the distinction between standing stock (biomass at a point in time) and flux (production over time). Phytoplankton are tiny, short-lived organisms that divide rapidly (doubling times of hours to days). Their P:B ratio is extremely high (1600/yr in this dataset), meaning the entire standing stock is replaced ~1,600 times per year. Each day's production feeds zooplankton before accumulating as standing biomass. Zooplankton, being larger and longer-lived, accumulate biomass faster than they turn it over (P:B = 80/yr). This difference in turnover rates allows a small standing crop of producers to support a larger standing crop of consumers. Critically, the production pyramid MUST be right-side up (8000 > 1200 > 120 > 12), as energy is lost at each transfer (second law). Trophic efficiencies (15%, 10%, 10%) are within typical ranges. Option A misunderstands thermodynamics. Option B is factually wrong (inverted biomass pyramids are well-documented). Option D describes a real phenomenon (kleptoplasty in some organisms) but it is not responsible for inverted pyramids at the ecosystem scale.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 55,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A team of ecologists hypothesizes that the invasive plant Alliaria petiolata (garlic mustard) succeeds in North American forests by releasing allelopathic glucosinolates that disrupt native plants' mycorrhizal associations (the novel weapons hypothesis). Which experimental design would most rigorously test this specific mechanism?",
+      "experimentContext": "Alliaria petiolata is a biennial plant native to Europe that has invaded understory habitats across eastern North America. Previous correlational studies show reduced arbuscular mycorrhizal fungal (AMF) colonization of native plant roots in areas invaded by garlic mustard. The novel weapons hypothesis predicts that garlic mustard root exudates contain glucosinolates (allyl isothiocyanate and benzyl isothiocyanate) that are toxic to AMF, giving garlic mustard a competitive advantage over mycorrhizal-dependent native plants. The research team has access to a greenhouse, sterilized and live field soils, garlic mustard tissue extracts (containing measured glucosinolate concentrations), purified glucosinolate compounds, native plant species with known mycorrhizal dependency, AMF inoculum of characterized species, and molecular tools for quantifying AMF diversity (ITS sequencing).",
+      "options": [
+        "A) Compare garlic mustard abundance between forest sites with high vs. low native plant diversity, and infer allelopathic effects from the inverse correlation between garlic mustard cover and native species richness",
+        "B) Grow native plants in sterilized soil with vs. without garlic mustard litter added; measure native plant survival and growth after 6 months; conclude that any growth reduction is caused by allelopathic disruption of mycorrhizae",
+        "C) Use a factorial greenhouse experiment: (1) soil inoculation treatment (live AMF inoculum vs. sterilized inoculum + microbial wash), crossed with (2) allelopathy treatment (garlic mustard extract at field-realistic concentrations vs. solvent control), crossed with (3) native plant species varying in mycorrhizal dependency (high vs. low); measure AMF root colonization rates, extraradical hyphal density, AMF species richness via ITS sequencing, native plant biomass, and tissue phosphorus concentration; include activated carbon controls to adsorb glucosinolates and confirm the chemical mechanism",
+        "D) Conduct a field survey measuring AMF spore density in soil cores taken at 0, 5, 10, and 20 m from garlic mustard patches, and correlate declining AMF with proximity to the invader"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Option C provides the most rigorous mechanistic test. The factorial design isolates and tests each component of the novel weapons hypothesis: (1) AMF inoculation treatment distinguishes mycorrhizal-mediated effects from direct effects on plants. If garlic mustard extracts harm native plants only when AMF is present (significant interaction between allelopathy and inoculation treatments), the mycorrhizal disruption mechanism is supported. (2) Garlic mustard extract vs. solvent control directly tests the allelopathic effect while controlling for physical disturbance. (3) Including native species varying in mycorrhizal dependency tests a key prediction: highly mycorrhizal-dependent species should be more negatively affected than species with low dependency (significant three-way interaction). (4) Multiple response variables create a mechanistic chain: extracts -> reduced AMF colonization -> reduced hyphal networks -> reduced phosphorus uptake -> reduced plant growth. (5) Activated carbon controls adsorb allelopathic compounds, providing an additional test: if activated carbon ameliorates the negative effects, the chemical mechanism is confirmed. (6) ITS sequencing reveals whether specific AMF taxa are selectively eliminated. Option A is purely correlational with no causal inference. Option B lacks AMF manipulation and activated carbon controls, so cannot distinguish allelopathy from mycorrhizal disruption. Option D is correlational and cannot separate causation from correlation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Researchers want to determine whether bottom-up (nutrient addition) or top-down (predator manipulation) forces more strongly regulate primary productivity and community structure in a freshwater lake ecosystem. Which experimental design would most effectively disentangle these competing mechanisms?",
+      "experimentContext": "The study site is a mesotrophic temperate lake with a four-level food chain: phytoplankton -> zooplankton (Daphnia-dominated) -> planktivorous fish (minnows) -> piscivorous fish (bass). Previous observational studies suggest both nutrient inputs (from agricultural runoff) and fish community composition influence algal blooms, but their relative importance is unknown. The researchers have access to 16 identical large mesocosms (1,000 L, open-topped enclosures) deployed in the lake littoral zone, nutrient stock solutions (N and P), and the ability to stock or exclude fish at each trophic level. Each mesocosm receives natural light and ambient zooplankton colonization. The experiment will run for 12 weeks during the growing season.",
+      "options": [
+        "A) Add nutrients to the entire lake and monitor algal biomass over 12 weeks; if biomass increases, conclude that bottom-up forces dominate",
+        "B) Stock half the mesocosms with piscivorous fish and leave the other half empty; measure phytoplankton biomass and attribute all differences to top-down control",
+        "C) Use a 2x2 factorial design with 4 replicates per treatment: Factor 1 — Nutrient addition (ambient vs. enriched with N+P to 5x ambient levels); Factor 2 — Top predator presence (piscivorous bass added vs. no bass, with planktivorous minnows present in all mesocosms). Measure chlorophyll-a (phytoplankton biomass), zooplankton density and size structure, minnow survival, nutrient concentrations, and water transparency weekly for 12 weeks. If the nutrient main effect is larger than the predator main effect, bottom-up forces dominate; if the predator main effect is larger, top-down forces dominate; a significant interaction indicates context-dependent regulation",
+        "D) Compare algal biomass between the lake's inlet (high nutrients from agricultural runoff) and the lake's outlet (lower nutrients after biological uptake), attributing any difference to bottom-up nutrient control"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Option C is the optimal design for disentangling bottom-up vs. top-down control because: (1) Factorial design: The 2x2 design (nutrients x predator) allows estimation of the independent main effects of each factor AND their interaction. The interaction term is critical — it reveals whether top-down control depends on nutrient availability (or vice versa), which is the core of the debate. (2) Mechanism: Adding bass creates a four-level trophic cascade: bass suppress minnows, releasing Daphnia from predation, increasing grazing on phytoplankton (top-down). Nutrient addition stimulates phytoplankton regardless of predation (bottom-up). The factorial design separates these. (3) Replication: 4 replicates per treatment (16 mesocosms total) provides adequate statistical power for a two-way ANOVA. (4) Multiple response variables track the full causal chain at every trophic level. (5) Temporal resolution: Weekly sampling captures dynamic responses and seasonal patterns. Option A is unreplicated and tests only one factor. Option B manipulates only top-down forces and lacks nutrient treatment. Option D is a spatial comparison confounded by many variables (flow rate, depth, light, substrate). This factorial mesocosm approach was pioneered by Carpenter et al. and is the standard methodology for testing trophic cascade theory.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 55,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecology and Environment"
+    }
+  ]
+}

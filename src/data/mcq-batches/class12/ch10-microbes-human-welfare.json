@@ -197,7 +197,7 @@
       ],
       "correctAnswer": "C",
       "explanation": "Trichoderma harzianum is a free-living fungus used as a biocontrol agent against several plant pathogens, particularly soil-borne fungal diseases. It acts by competing with and parasitising other fungi.",
-      "difficulty": "MEDIUM",
+      "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
       "tags": [
@@ -272,7 +272,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Aspergillus niger (a fungus) is used for the industrial production of citric acid. Citric acid is widely used in the food and pharmaceutical industries as a flavouring agent and preservative.",
-      "difficulty": "MEDIUM",
+      "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
       "tags": [
@@ -297,7 +297,7 @@
       ],
       "correctAnswer": "D",
       "explanation": "Baculoviruses (especially nucleopolyhedroviruses) are excellent biocontrol agents because they are species-specific, attacking only specific insect pests without harming non-target organisms, plants, mammals, birds, or beneficial insects like pollinators.",
-      "difficulty": "MEDIUM",
+      "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
       "tags": [

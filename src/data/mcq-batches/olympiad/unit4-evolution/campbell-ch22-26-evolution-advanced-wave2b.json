@@ -1,0 +1,517 @@
+{
+  "batch": {
+    "name": "Campbell Ch22-26 Evolution Advanced — Wave 2B",
+    "version": 1,
+    "source": "olympiad-wave2b",
+    "totalQuestions": 25
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "A researcher compares the ratio of nonsynonymous substitutions per nonsynonymous site (dN) to synonymous substitutions per synonymous site (dS) for the primate lysozyme gene lineage leading to colobine monkeys (leaf-eating foregut fermenters). She finds dN/dS = 3.2 for this lineage, whereas all other primate lineages show dN/dS < 0.3 for the same gene. Which interpretation is most accurate?",
+      "options": [
+        "The elevated dN/dS indicates positive (adaptive) selection drove rapid amino acid substitution in the colobine lineage, likely adapting lysozyme to function optimally at the low pH of the foregut fermentation chamber",
+        "The elevated dN/dS indicates strong purifying selection on the lysozyme gene in colobines, as most amino acid changes are being eliminated by selection",
+        "The elevated dN/dS is a consequence of relaxed functional constraint, meaning the lysozyme gene became a pseudogene in the colobine lineage and accumulated mutations neutrally",
+        "The elevated dN/dS reflects an increased synonymous substitution rate in colobines due to their shorter generation time, which artificially deflates the denominator"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A dN/dS ratio significantly greater than 1 is the hallmark of positive (adaptive) selection, meaning amino acid-altering substitutions are being fixed at a rate faster than neutral expectation. In colobine monkeys, lysozyme was co-opted to function in the acidic foregut environment (convergent with ruminant lysozyme), requiring specific amino acid changes that improve enzyme stability and catalytic activity at low pH, resistance to pepsin digestion, and altered substrate specificity. Yang and colleagues demonstrated that five specific codons in the colobine lysozyme lineage show dN/dS > 1 using branch-site models, and several of these convergently evolved the same amino acids as in cow stomach lysozyme. Option B is backwards: purifying selection produces dN/dS < 1. Option C is plausible for a pseudogene (dN/dS approaches 1), but dN/dS = 3.2 exceeds the neutral expectation of 1.0, ruling out simple relaxation. Option D incorrectly suggests generation time affects dN/dS asymmetrically; changes in mutation rate affect both dN and dS proportionally and do not alter their ratio.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Tomoko Ohta's nearly neutral theory of molecular evolution extended Kimura's neutral theory by proposing that many mutations are mildly deleterious rather than strictly neutral. Which prediction uniquely distinguishes the nearly neutral theory from the strictly neutral theory?",
+      "options": [
+        "The rate of molecular evolution should be higher in species with large effective population sizes because there are more mutations produced per generation",
+        "The rate of molecular evolution at nonsynonymous sites should be higher in species with small effective population sizes because genetic drift can fix mildly deleterious alleles when Ne is small (|Nes| < 1), whereas these alleles would be efficiently removed by selection in large populations",
+        "Synonymous and nonsynonymous substitution rates should be identical across all lineages regardless of population size",
+        "Positively selected mutations should accumulate faster in species with smaller population sizes because they experience less competition from other beneficial alleles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The nearly neutral theory predicts that many substitutions involve mildly deleterious alleles whose fate depends on the effective population size (Ne). When |Nes| < 1 (where s is the selection coefficient), an allele behaves as effectively neutral and can drift to fixation. In species with small Ne, the threshold for effective neutrality is larger (s < 1/2Ne), so more mildly deleterious alleles can fix, increasing the observed rate of molecular evolution. In species with large Ne, even weakly deleterious mutations are efficiently purged by selection. This predicts a negative correlation between Ne and the rate of nonsynonymous substitution, which has been confirmed empirically: island species, organisms with small populations, and endosymbiotic bacteria all show elevated dN/dS ratios consistent with fixation of slightly deleterious mutations. The strictly neutral theory predicts the substitution rate equals the neutral mutation rate (mu) and is independent of population size. Option A is the opposite of the nearly neutral prediction. Option C is a prediction of strict neutrality. Option D confuses the nearly neutral theory with clonal interference in asexual populations.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "In phylogenomics, incomplete lineage sorting (ILS) is a major source of gene tree-species tree discordance. For three species A, B, and C where A and B are sister taxa, which demographic condition maximizes the probability of ILS producing a gene tree that groups A with C instead of A with B?",
+      "options": [
+        "Long internal branch between the A-B speciation and the A,B-C speciation, and small ancestral effective population size",
+        "Short internal branch and small ancestral population size, because drift fixes alleles more quickly in small populations",
+        "Long internal branch and large ancestral population size, because more time allows more mutations to accumulate",
+        "Short internal branch between the A-B speciation and the A,B-C speciation, combined with large ancestral effective population size"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Incomplete lineage sorting occurs when ancestral polymorphisms at the time of the first speciation event (A-B split) fail to coalesce before the second speciation event (A,B-C split). The probability of ILS depends on two factors: (1) the length of the internal branch (time between successive speciation events) measured in units of 2Ne generations, and (2) the ancestral effective population size. Specifically, the probability of discordance is (2/3)e^(-t/2Ne), where t is the internal branch length in generations and Ne is the ancestral effective population size. A short internal branch (small t) means less time for lineage sorting. A large ancestral Ne means coalescence takes longer (expected coalescence time is 2Ne generations for two lineages in a diploid population). Together, these maximize the probability that the three gene lineages entering the ancestral population fail to sort according to the species tree. Option A (long branch, small Ne) minimizes ILS. Option C conflates mutation accumulation with coalescence. Option B is wrong because small Ne accelerates coalescence, which actually reduces ILS.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 26,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Hox gene cluster provides a striking example of deep homology across Bilateria. In Drosophila, the Hox cluster is split into the Antennapedia complex (ANT-C) and the Bithorax complex (BX-C). A loss-of-function mutation in the Ultrabithorax (Ubx) gene transforms the third thoracic segment (T3, which normally bears halteres) into a second thoracic segment (T2, with wings), producing a four-winged fly. Which statement best explains the molecular basis of this homeotic transformation?",
+      "options": [
+        "Ubx normally activates wing development genes in T3, and its loss of function prevents wing formation, leading halteres to develop instead",
+        "Ubx normally represses T2 identity genes in T3 and activates haltere-specific gene programs; in its absence, T3 defaults to the T2 developmental program because T2 identity requires no Hox input (is the ground state for thoracic segments), producing an ectopic set of wings",
+        "Ubx is a signaling molecule secreted from T2 that diffuses posteriorly to suppress wing growth in T3, and the mutation eliminates this paracrine signal",
+        "Ubx loss of function causes T3 cells to undergo apoptosis, which triggers regenerative growth that defaults to wing morphology due to compensatory proliferation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ubx is a homeodomain transcription factor expressed in the posterior thorax and anterior abdomen of Drosophila. In T3, Ubx represses the wing developmental program (downstream targets include genes like spalt, omb, and vestigial enhancers that drive wing growth) and activates haltere-specific morphogenesis. In its absence, T3 adopts T2 identity because T2 represents the default thoracic segment identity that does not require Hox gene input for wing specification (the Hox-free state for the thorax). This is a fundamental principle of Hox gene function: posterior Hox genes modify the developmental program specified by more anterior Hox genes or the default state. The Ubx mutant four-winged fly (first described by Edward Lewis, who won the Nobel Prize in 1995) demonstrated that segment identity is under the control of specific Hox selector genes. Option A reverses the function of Ubx. Option C incorrectly describes Ubx as a secreted signaling molecule; it is a transcription factor that acts cell-autonomously. Option D fabricates an apoptosis-regeneration mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sean Carroll's work on evo-devo emphasizes that morphological evolution frequently proceeds through changes in cis-regulatory elements (CREs) rather than changes in the coding sequences of toolkit genes. Which of the following best explains why CRE evolution is favored over coding sequence evolution for morphological diversification?",
+      "options": [
+        "Coding sequence mutations are always lethal, whereas CRE mutations are always neutral, making CREs the only viable substrate for evolution",
+        "Coding sequences are too small to accumulate enough variation for morphological evolution, whereas CREs span megabases of DNA and offer more mutational targets",
+        "CREs evolve faster than coding sequences because they are not subject to natural selection, allowing neutral changes to accumulate and occasionally produce beneficial expression patterns",
+        "CRE mutations can alter the spatial, temporal, or quantitative expression of a pleiotropic gene in one tissue without disrupting its essential functions in other tissues, thereby minimizing negative pleiotropic effects; coding sequence changes alter the protein everywhere it is expressed, increasing the likelihood of deleterious side effects"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Toolkit genes (such as Hox genes, Pax6, Dll/Dlx, and signaling pathway genes like Shh, BMP, Wnt) are highly pleiotropic, meaning they function in multiple developmental contexts. A coding sequence mutation changes the protein product in every cell and tissue where it is expressed, which often has severe deleterious effects (negative pleiotropy). In contrast, CREs are modular: individual enhancers drive expression in specific tissues, at specific times, or at specific levels. A mutation in one CRE can alter gene expression in one context (for example, in the developing limb) without affecting expression elsewhere (for example, in the brain). This modularity allows CRE evolution to be the primary mechanism for morphological diversification while preserving essential protein function. Classic examples include: the loss of Pitx1 pelvic enhancer in threespine sticklebacks (reducing pelvic spines without disrupting Pitx1 function in other tissues), and changes in the yellow gene CREs driving wing pigmentation patterns in Drosophila species. Option A is extreme and incorrect. Option C is wrong because CREs are subject to selection. Option B is incorrect about relative sizes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the Fisherian runaway model of sexual selection, a genetic correlation develops between a male ornamental trait and female preference for that trait. Which condition is necessary for the runaway process to be initiated?",
+      "options": [
+        "The ornamental trait must be costly to produce and must honestly signal male genetic quality to females",
+        "Males must invest heavily in parental care so that females gain direct fitness benefits from choosing ornamented males",
+        "An initial female preference bias (which may arise from sensory bias or a slight viability advantage of the preferred male phenotype) must exist, and there must be additive genetic variation for both the male trait and female preference, allowing linkage disequilibrium to build between them through assortative mating",
+        "The male trait must be condition-independent so that all males can develop the ornament equally regardless of their genetic quality or nutritional state"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Fisher's runaway process requires: (1) heritable variation in a male trait, (2) heritable variation in female preference for that trait, and (3) an initial preference bias that creates non-random mating. Once choosy females preferentially mate with ornamented males, their sons inherit genes for the ornament and their daughters inherit genes for the preference, building linkage disequilibrium between trait and preference loci. This positive feedback loop causes both the trait and preference to coevolve in an escalating fashion (runaway), even if the ornament becomes a survival handicap, because the mating advantage of ornamented males (gained from being preferred) exceeds the survival cost. The process can be initiated by pre-existing sensory bias or by an initial correlation between the ornament and viability. Option A describes the handicap principle (Zahavi), not the Fisherian model. Option B describes direct benefits models. Option D is the opposite of what is expected; condition-dependence is important for honest signaling (Hamilton-Zuk) but is not a requirement for Fisherian runaway.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Hamilton's rule (rb > c) predicts when altruistic behavior will be favored by kin selection. In the eusocial Hymenoptera (ants, bees, wasps), the haplodiploid sex determination system means that full sisters share r = 0.75 of their alleles. However, this 'haplodiploidy hypothesis' for the evolution of eusociality has been criticized. What is the strongest criticism?",
+      "options": [
+        "While sisters are related by r = 0.75 in haplodiploid systems with single mating, the average relatedness of a female to her brood (including brothers at r = 0.25) is 0.50, the same as in diploid systems; furthermore, eusociality has evolved in diploid organisms (termites, naked mole-rats), demonstrating that haplodiploidy is neither necessary nor sufficient",
+        "Hamilton's rule only applies to diploid organisms and cannot be extended to haplodiploid systems because relatedness calculations differ",
+        "Haplodiploidy prevents the evolution of eusociality because the low relatedness to brothers (r = 0.25) always outweighs the high relatedness to sisters (r = 0.75)",
+        "Queens in haplodiploid species always mate with multiple males, reducing average sister-sister relatedness to below 0.50, which eliminates the relatedness asymmetry"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The haplodiploidy hypothesis proposed that the relatedness asymmetry in Hymenoptera (sisters share r = 0.75 under single mating) predisposes them to evolve worker behavior because workers gain more inclusive fitness by helping raise sisters than by producing offspring (related by r = 0.50). However, this argument only considers sisters and ignores brothers: a female's relatedness to brothers is only r = 0.25 under haplodiploidy. When sex ratio is 1:1, the average relatedness of a worker to the brood she helps raise is (0.75 + 0.25)/2 = 0.50, identical to the diploid case. For the haplodiploidy argument to work, there must be a female-biased sex ratio (Trivers and Hare 1976). Furthermore, eusociality has evolved multiple times in diploid species (all termites, naked mole-rats, snapping shrimp), proving that haplodiploidy is not a prerequisite. Modern explanations emphasize ecological factors (defensible nests, progressive provisioning, high cost of independent reproduction) alongside kin selection. Option B is wrong because Hamilton's rule applies to any genetic system. Option C is an incorrect absolute claim. Option D overgeneralizes; many hymenopteran queens mate singly.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Red Queen hypothesis proposes that coevolution between parasites and hosts maintains sexual reproduction in host populations. Which specific prediction of the Red Queen hypothesis has been empirically supported?",
+      "options": [
+        "Asexual host lineages should outcompete sexual lineages in all environments because asexual reproduction avoids the twofold cost of males",
+        "Sexual host populations should maintain higher genetic diversity and should be more prevalent in environments with high parasite pressure; conversely, asexual lineages should accumulate deleterious alleles through Muller's ratchet regardless of parasite load",
+        "In host populations experiencing high parasite prevalence, the most common host genotype should be disproportionately infected (negative frequency-dependent selection by parasites), favoring rare host genotypes and maintaining the advantage of sexual recombination that generates new genotype combinations each generation",
+        "Parasites should evolve faster than hosts because they have shorter generation times, eventually leading to host extinction in all coevolutionary arms races"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Red Queen hypothesis (named after the character in Lewis Carroll's Through the Looking Glass who must run to stay in place) predicts that parasites are adapted to infect the most common host genotypes (time-lagged negative frequency-dependent selection). Rare host genotypes have an advantage because parasites are not adapted to them. Sexual reproduction generates novel genotype combinations through recombination and independent assortment, producing offspring that may carry rare, parasite-resistant genotypes. This has been empirically supported in the Potamopyrgus antipodarum (New Zealand mud snail) system studied by Curtis Lively and colleagues: populations with high trematode (Microphallus) parasite pressure are predominantly sexual, while populations with low parasite pressure harbor more asexual clones. Furthermore, common clonal genotypes suffer higher infection rates than rare ones, directly demonstrating negative frequency-dependent selection by parasites. Option A ignores the context-dependent advantage of sex. Option B conflates Red Queen dynamics with Muller's ratchet, which is a separate hypothesis. Option D makes an unsupported claim about inevitable host extinction.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Gould and Eldredge's theory of punctuated equilibrium proposes that most morphological evolution occurs in brief bursts associated with speciation events, separated by long periods of morphological stasis. Which observation from the fossil record is most consistent with punctuated equilibrium and least consistent with phyletic gradualism?",
+      "options": [
+        "Fossils showing a gradual, continuous increase in body size over 5 million years within a single lineage without any speciation events",
+        "A series of transitional fossils connecting two major groups (e.g., Tiktaalik between fish and tetrapods) showing incremental changes over 20 million years",
+        "Continuous variation in shell coiling within a single gastropod species throughout a 3-million-year stratigraphic sequence",
+        "A species persisting in the fossil record for 8 million years with no significant morphological change (stasis), followed by the abrupt appearance of a morphologically distinct daughter species in overlapping strata, with no intermediates in the local section"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Punctuated equilibrium predicts two key patterns: (1) prolonged morphological stasis within species lineages, and (2) rapid morphological change concentrated during speciation events (cladogenesis). Option D perfectly matches these predictions: 8 million years of stasis followed by the abrupt appearance of a new species without intermediates in the local section. The absence of intermediates is explained by speciation occurring in a small, peripheral isolate (allopatric speciation in a geographically restricted area), which would rarely be sampled in the fossil record. When the daughter species expands its range and appears in the stratigraphic section, it appears abruptly. Options A, B, and C all describe patterns of gradual change within lineages (phyletic gradualism or anagenesis), which are the alternative model. Gould and Eldredge argued that stasis, not gradual change, is the dominant pattern for most species in the fossil record, and that previous workers dismissed stasis as 'no data' rather than recognizing it as a real phenomenon requiring explanation. The debate between punctuated equilibrium and gradualism was one of the most significant in late 20th-century paleontology.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Dobzhansky-Muller (DM) model of hybrid incompatibility explains the evolution of postzygotic reproductive isolation without requiring either population to pass through an unfit intermediate genotype. Consider two allopatric populations that diverge at two loci (A and B) from an ancestral genotype aabb. Population 1 evolves to AAbb and population 2 evolves to aaBB. When these populations hybridize, the F1 is AaBb. According to the DM model, why might this F1 individual be inviable or sterile?",
+      "options": [
+        "The derived A allele has never been tested by natural selection in combination with the derived B allele; these alleles may interact negatively (epistasis) because they evolved in different genetic backgrounds, even though each functions normally with the ancestral allele at the other locus",
+        "The A and B alleles were each deleterious in their respective populations but drifted to fixation, and combining them doubles the deleterious load",
+        "The A and B loci are located on different chromosomes, and hybridization causes chromosomal incompatibility during meiosis due to mismatched centromere sequences",
+        "Hybrid inviability always requires at least three incompatible loci according to the DM model; two loci are insufficient to generate reproductive isolation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The DM model elegantly solves the problem of how reproductive isolation evolves without either population passing through a low-fitness intermediate. The key insight is that the derived alleles (A and B) each function perfectly well with the ancestral allele at the other locus: A works with b (in population 1: AAbb), and B works with a (in population 2: aaBB). Neither population ever experienced the A-B combination. When hybridization brings A and B together for the first time in the F1 (AaBb), they may have negative epistatic interactions because they were never 'tested' together by selection. These incompatible interactions can disrupt development, fertility, or viability. Examples include the Hmr-Lhr incompatibility between D. melanogaster and D. simulans, where HMR and LHR proteins interact to cause hybrid lethality. Option B incorrectly claims the alleles are individually deleterious. Option C fabricates a centromere-based mechanism. Option D is wrong; the DM model works with as few as two loci, though real-world incompatibilities often involve multiple loci (the 'snowball effect' predicts the number of DM incompatibilities grows faster than linearly with divergence time).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 24,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about molecular evolution and the molecular clock:\nS1: TRUE/FALSE — The molecular clock can be calibrated using fossil dates to convert sequence divergence into absolute time estimates, but relaxed clock methods that allow rate variation among lineages provide more accurate estimates than strict clock models.\nS2: TRUE/FALSE — Synonymous substitutions accumulate faster than nonsynonymous substitutions in most protein-coding genes because synonymous changes are invisible to natural selection and evolve at the neutral rate.\nS3: TRUE/FALSE — The ratio dN/dS = 1 indicates that a gene is under strong purifying selection, maintaining the protein sequence against deleterious mutations.\nS4: TRUE/FALSE — Codon usage bias, where certain synonymous codons are preferred over others, demonstrates that even synonymous sites are not entirely free from selective constraint, which can slow the synonymous substitution rate (dS) in highly expressed genes.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Molecular clocks are calibrated using fossil-derived divergence dates as anchor points. The original strict clock (Zuckerkandl and Pauling) assumed a constant rate, but modern relaxed clock methods (e.g., uncorrelated lognormal in BEAST, penalized likelihood in r8s) allow substitution rates to vary among lineages, producing more realistic divergence time estimates. These methods are now standard in molecular dating. S2 is TRUE: Under the neutral theory, synonymous substitutions approximate the neutral mutation rate because they do not alter the amino acid sequence and are largely invisible to selection. Nonsynonymous substitutions typically face purifying selection (most amino acid changes are deleterious), so dN < dS for most genes. S3 is FALSE: dN/dS = 1 indicates neutral evolution (no selection), where nonsynonymous and synonymous substitutions accumulate at the same rate. Strong purifying selection produces dN/dS << 1 (typically 0.05-0.20 for essential genes). Positive selection produces dN/dS > 1. S4 is TRUE: Codon usage bias is a form of translational selection: preferred codons correspond to the most abundant tRNAs, increasing translational accuracy and speed. In highly expressed genes of organisms like E. coli and Drosophila, this selection on synonymous sites reduces dS below the neutral expectation. This demonstrates that synonymous sites are not perfectly neutral, a refinement of the original neutral theory.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 26,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about evo-devo (evolutionary developmental biology):\nS1: TRUE/FALSE — Deep homology refers to the finding that distantly related organisms share conserved developmental toolkit genes (e.g., Pax6 for eye development in both insects and vertebrates), suggesting these genetic programs were present in a common ancestor even if the resulting structures are not classically homologous.\nS2: TRUE/FALSE — The modularity of cis-regulatory elements means that a single enhancer can independently control gene expression in a specific tissue or developmental stage, allowing evolution to modify one module without disrupting others.\nS3: TRUE/FALSE — Heterotopy, a change in the spatial location of gene expression during development, can produce novel morphological features, as exemplified by the ectopic expression of eyeless/Pax6 inducing ectopic eye formation in Drosophila.\nS4: TRUE/FALSE — All morphological differences between species are caused by changes in protein-coding sequences of toolkit genes, with cis-regulatory evolution playing no significant role.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-FALSE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-FALSE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Deep homology, coined by Shubin, Tabin, and Carroll (1997), describes the situation where distantly related organisms use the same conserved genetic toolkit to build analogous structures. For example, Pax6 controls eye development in both insects (compound eyes) and vertebrates (camera eyes). These eyes are not homologous as organs (they evolved independently), but the underlying genetic program is deeply conserved from a common ancestor, suggesting the ancestor had a Pax6-dependent photoreceptive system. S2 is TRUE: CREs are modular, meaning individual enhancers independently drive gene expression in specific spatiotemporal domains. For example, the Drosophila even-skipped gene has separate stripe enhancers, each controlling expression in one parasegment stripe. This modularity allows individual enhancers to evolve (be gained, lost, or modified) without affecting the gene's expression in other domains. S3 is TRUE: Heterotopy is the evolutionary change in the location of a developmental process. The classic experiment by Halder, Callaerts, and Gehring (1995) demonstrated that misexpression of eyeless (the Drosophila Pax6 homolog) in leg or wing imaginal discs induces ectopic compound eyes, demonstrating the master regulatory capacity of this gene. S4 is FALSE: This is the opposite of current understanding. As demonstrated by Carroll, Prud'homme, Gompel, and others, the majority of morphological evolution between closely related species involves changes in cis-regulatory elements, not coding sequences of toolkit genes, precisely because toolkit genes are pleiotropic.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about sexual selection theory:\nS1: TRUE/FALSE — The handicap principle (Zahavi) proposes that costly ornaments are honest signals of male genetic quality because only males in good condition can afford to bear the survival cost of the ornament, making the signal cheat-proof.\nS2: TRUE/FALSE — Sensory bias (or sensory exploitation) proposes that female preferences can evolve before the male trait they favor, if the preference originally evolved in a non-mating context (such as foraging) and males subsequently evolve traits that exploit this pre-existing bias.\nS3: TRUE/FALSE — Intersexual selection (mate choice) and intrasexual selection (competition between same-sex individuals) always favor the same traits, so there is never a conflict between traits that increase mating success through choice versus competition.\nS4: TRUE/FALSE — The good genes hypothesis predicts that females choosing ornamented males gain indirect fitness benefits because their offspring inherit superior viability genes, and the additive genetic variance in fitness (the 'lek paradox') can be maintained by mutation-selection balance, fluctuating selection, or genotype-by-environment interactions.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-FALSE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Amotz Zahavi's handicap principle (1975) argues that signals must be costly to be reliable. If a male bird carries an extravagant tail that reduces his flight ability and increases predation risk, yet still survives and is in good condition, this demonstrates that he has superior genes or is in exceptional phenotypic condition. Cheaters (low-quality males producing the same signal) would suffer disproportionate costs and be selected against. The principle was formalized mathematically by Alan Grafen (1990). S2 is TRUE: The sensory exploitation hypothesis (Ryan, 1990) proposes that female sensory systems evolve for purposes other than mate choice (predator detection, foraging), and males can evolve traits that stimulate these pre-existing biases. The classic example is the swordtail fish (Xiphophorus): females of species lacking swords still prefer males with artificial swords attached, suggesting the preference predated the trait. S3 is FALSE: Intersexual and intrasexual selection can favor different or even opposing traits. For example, large body size or weaponry may be favored by intrasexual competition (male-male combat), while elaborate coloration may be favored by female choice. In some systems, aggressive dominance-related traits may actually be disfavored by female choice, creating a conflict. S4 is TRUE: The good genes model predicts indirect benefits from mate choice. The lek paradox (why heritable variation in fitness persists despite strong directional selection) is resolved by invoking mutation-selection balance (continuous input of new deleterious mutations), fluctuating selection (changing environments alter which alleles are beneficial), and genotype-by-environment interactions (no single genotype is best in all environments).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the origin of life and prebiotic chemistry:\nS1: TRUE/FALSE — The iron-sulfur world hypothesis (Wachtershauser) proposes that life originated on the surfaces of iron-sulfide minerals (such as pyrite, FeS2) near hydrothermal vents, where the oxidation of FeS to FeS2 could provide metabolic energy and catalytic surfaces for the polymerization of organic molecules.\nS2: TRUE/FALSE — Ribozymes in the modern cell, including the hammerhead ribozyme and Group I self-splicing introns, demonstrate that RNA can catalyze a limited set of chemical reactions, but no ribozyme has been shown to catalyze RNA-templated RNA polymerization, which would be required for an RNA world.\nS3: TRUE/FALSE — The RNA-peptide world hypothesis suggests that RNA and short peptides may have coevolved from the earliest stages, with peptides enhancing RNA's catalytic and structural capabilities, rather than RNA functioning entirely alone before the emergence of proteins.\nS4: TRUE/FALSE — Protocells made from fatty acid vesicles can grow by incorporating additional fatty acids from the environment and can divide when subjected to mechanical shear forces, demonstrating that simple cell-like structures can undergo a primitive form of reproduction without any genetic material.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-FALSE",
+        "S1-FALSE, S2-FALSE, S3-TRUE, S4-TRUE"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE: Gunter Wachtershauser proposed the iron-sulfur world hypothesis in 1988, arguing that the first metabolic cycles occurred on positively charged mineral surfaces (pyrite) near hydrothermal vents. The reaction FeS + H2S -> FeS2 + 2H+ + 2e- is thermodynamically favorable and could have provided reducing power for CO2 fixation and organic synthesis. The mineral surface also concentrates reactants and provides a catalytic template. S2 is FALSE: This statement is incorrect because ribozymes that catalyze RNA-templated RNA polymerization have been evolved in vitro. David Bartel's lab evolved an RNA polymerase ribozyme (the 'class I ligase' and subsequent improvements) capable of copying RNA templates. While not yet efficient enough for full self-replication, these experiments demonstrate that RNA can catalyze its own replication, a key requirement of the RNA world. The latest versions can copy sequences longer than themselves, a milestone achieved by the Holliger lab. S3 is TRUE: The RNA-peptide world (or ribonucleopeptide world) hypothesis, championed by researchers including Loren Williams, argues that pure RNA-only systems are insufficient and that short peptides (perhaps formed abiotically or catalyzed by primitive ribozymes) likely coevolved with RNA from very early on. The ribosome itself provides evidence: its deepest, most conserved core shows intimate interdigitation of RNA and peptide, suggesting ancient co-dependency. S4 is TRUE: Jack Szostak's laboratory has demonstrated that fatty acid vesicles (protocells) can grow by incorporating single-chain amphiphiles from micelles, and mechanical forces (such as passage through a pore) can cause division. These experiments show that vesicle growth and division — a primitive form of reproduction — can occur without enzymes, genetic material, or complex biological machinery.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about human evolution and ancient DNA:\nS1: TRUE/FALSE — Genome-wide analyses of Neanderthal DNA (Svante Paabo and colleagues) revealed that non-African modern humans carry approximately 1-4% Neanderthal-derived DNA, indicating gene flow (introgression) occurred when anatomically modern humans migrated out of Africa and encountered Neanderthals in the Middle East or Europe.\nS2: TRUE/FALSE — The Denisovans, identified primarily from ancient DNA extracted from a finger bone found in Siberia, contributed genetic material to modern Melanesian and Aboriginal Australian populations, with Denisovan-derived alleles at the EPAS1 locus conferring adaptation to high-altitude hypoxia in Tibetan populations.\nS3: TRUE/FALSE — Homo erectus was the first hominin species to leave Africa, with fossil evidence from Dmanisi (Georgia) dated to approximately 1.8 million years ago, and was characterized by a brain size approximately equivalent to modern Homo sapiens.\nS4: TRUE/FALSE — Australopithecus afarensis (exemplified by the fossil 'Lucy') was a bipedal hominin that lived approximately 3.2 million years ago in East Africa, possessed a brain size similar to that of a modern chimpanzee (approximately 400-500 cc), and retained some arboreal adaptations such as curved phalanges.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: The Neanderthal Genome Project led by Svante Paabo (Nobel Prize 2022) demonstrated that non-African modern humans carry approximately 1-4% Neanderthal-derived DNA, evidence of introgression during contact approximately 50,000-60,000 years ago. Sub-Saharan Africans have negligible Neanderthal ancestry because their ancestors did not encounter Neanderthals. Some introgressed Neanderthal alleles have been subject to positive selection in modern humans (e.g., immune-related genes, keratin genes for adaptation to cold). S2 is TRUE: Denisovans were identified from ancient DNA in 2010 from Denisova Cave in Siberia. Modern Melanesians carry approximately 3-6% Denisovan DNA. The EPAS1 allele in Tibetans, which enhances oxygen delivery at high altitude, was shown to be of Denisovan origin (Huerta-Sanchez et al., 2014), representing one of the clearest examples of adaptive introgression in humans. S3 is FALSE: While H. erectus was indeed the first hominin to leave Africa, with Dmanisi fossils dated to approximately 1.8 Mya, its brain size (approximately 600-1000 cc) was significantly smaller than modern H. sapiens (approximately 1300-1400 cc). The early Dmanisi specimens had particularly small brains (approximately 600 cc). S4 is TRUE: A. afarensis, including the famous 'Lucy' skeleton (AL 288-1, approximately 3.2 Mya), was clearly bipedal based on pelvic and knee anatomy, the Laetoli footprints, and the foramen magnum position. However, with a brain size of approximately 400-500 cc (comparable to modern chimpanzees), curved finger and toe bones, and relatively long arms, A. afarensis retained adaptations for climbing and likely spent significant time in trees.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about coevolution:\nS1: TRUE/FALSE — In Batesian mimicry, the mimic (a palatable species) evolves to resemble a toxic model species, and the fitness of the mimic increases as the ratio of mimics to models decreases because predators are more likely to encounter and learn to avoid the model.\nS2: TRUE/FALSE — Coevolutionary arms races between predators and prey can lead to escalation, where both lineages evolve increasingly extreme adaptations over time, as documented in the arms race between garter snakes (Thamnophis sirtalis) and rough-skinned newts (Taricha granulosa) involving tetrodotoxin resistance.\nS3: TRUE/FALSE — Mutualistic coevolution always leads to obligate dependence between partners, meaning that neither species can survive without the other once coevolution has occurred.\nS4: TRUE/FALSE — The geographic mosaic theory of coevolution (Thompson) proposes that coevolutionary interactions vary geographically, with some populations experiencing strong reciprocal selection (coevolutionary hotspots) and others experiencing weak or no coevolution (coldspots), and that gene flow among populations creates a dynamic mosaic of coevolutionary outcomes.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: In Batesian mimicry, the palatable mimic benefits by resembling the toxic model. The effectiveness of mimicry is frequency-dependent: as the ratio of mimics to models increases, predators encounter more palatable mimics and learn that the warning pattern is not reliably associated with toxicity, weakening the protection. When mimics are rare relative to models, predators mostly encounter the toxic model and strongly avoid the pattern, maximizing the mimic's fitness. This negative frequency-dependent selection maintains the system. S2 is TRUE: The newt-garter snake system is a textbook example of a coevolutionary arms race. Taricha granulosa newts produce tetrodotoxin (TTX) in their skin, and Thamnophis sirtalis populations have evolved TTX resistance through amino acid substitutions in voltage-gated sodium channels (Nav1.4). Populations in regions with highly toxic newts have correspondingly high resistance in snakes, and vice versa, demonstrating matched escalation (Brodie and Brodie). S3 is FALSE: Mutualism does not always lead to obligate dependence. Many mutualisms are facultative (e.g., many mycorrhizal relationships, pollination by generalist pollinators). Species can switch partners, and the degree of dependence varies along a continuum. Some highly specialized mutualisms are obligate (fig-fig wasp, yucca-yucca moth), but this is not a universal outcome. S4 is TRUE: John Thompson's geographic mosaic theory (2005) proposes that coevolution is not uniform across the range of interacting species. Some populations are hotspots where reciprocal selection is strong, others are coldspots where one or both species do not exert strong selection on the other. Gene flow, genetic drift, and local extinction/recolonization dynamics create a shifting mosaic. This framework explains why coevolutionary patterns vary geographically and why pairwise coevolution studied in a single location may not generalize.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about macroevolution and mass extinctions:\nS1: TRUE/FALSE — Adaptive radiations typically follow mass extinctions because the elimination of incumbent species opens ecological opportunities (empty niches) for surviving lineages to diversify, as occurred with mammalian diversification after the K-Pg extinction.\nS2: TRUE/FALSE — Species selection (also called species sorting) occurs when species-level traits (such as geographic range size or speciation rate) differ among lineages, causing differential diversification that is analogous to natural selection operating among individuals within a population.\nS3: TRUE/FALSE — The Big Five mass extinctions in Earth's history all share the same primary cause: asteroid impacts that triggered global cooling and darkness.\nS4: TRUE/FALSE — Recovery from mass extinctions is typically rapid on a geological timescale, with biodiversity returning to pre-extinction levels within 1-2 million years, as documented by the rapid diversification of surviving clades.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-FALSE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-TRUE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFF",
+      "explanation": "S1 is TRUE: Mass extinctions remove dominant groups, releasing ecological opportunities for survivors. After the K-Pg extinction eliminated non-avian dinosaurs approximately 66 Mya, mammals underwent a spectacular adaptive radiation, diversifying from small, nocturnal, insectivorous forms into the diverse array of ecological niches formerly occupied by dinosaurs. Similar patterns occurred after other mass extinctions: archosaur radiation after the end-Permian, and modern fauna diversification after the end-Cretaceous. S2 is TRUE: Species selection, formalized by Jablonski, Gould, and others, proposes that species possess emergent traits (not reducible to individual-level properties) that affect speciation and extinction rates. For example, species with larger geographic ranges tend to have lower extinction rates. Differential diversification among lineages based on such species-level properties is analogous to natural selection among individuals and can produce macroevolutionary trends. S3 is FALSE: The five major mass extinctions had different causes. Only the K-Pg extinction (66 Mya) has strong evidence for an asteroid impact (Chicxulub). The end-Permian (252 Mya) was caused primarily by Siberian Traps volcanism. The Late Ordovician (445 Mya) involved glaciation. The Late Devonian (375 Mya) may have involved ocean anoxia and cooling. The end-Triassic (201 Mya) is linked to Central Atlantic Magmatic Province volcanism. S4 is FALSE: Recovery from mass extinctions is typically slow on geological timescales. After the end-Permian extinction, full recovery of marine biodiversity took approximately 5-10 million years. After the K-Pg extinction, ecosystem recovery took at least 3-5 million years. The 1-2 million year timeframe is too short; recovery involves not just diversification but also the re-establishment of complex ecological interactions and food webs.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about speciation genomics:\nS1: TRUE/FALSE — Genomic islands of differentiation are localized regions of the genome that show elevated FST between diverging populations, while the rest of the genome remains relatively undifferentiated due to gene flow, and these islands often contain genes involved in reproductive isolation or local adaptation.\nS2: TRUE/FALSE — Reinforcement occurs when natural selection strengthens prezygotic barriers in zones of secondary contact because hybridization produces offspring with reduced fitness, and genomic studies have identified specific loci under reinforcing selection in systems such as Drosophila and Ficedula flycatchers.\nS3: TRUE/FALSE — Haldane's rule states that when one sex is absent, rare, or sterile in F1 hybrids, it is more often the homogametic sex (XX in mammals, ZZ in birds), and this pattern has been explained by the dominance theory of hybrid incompatibilities.\nS4: TRUE/FALSE — Speciation with gene flow (parapatric or sympatric) is expected to produce a heterogeneous genomic landscape of differentiation, where 'barrier loci' that contribute to reproductive isolation diverge more than the genomic background, whereas strict allopatric speciation with no gene flow is expected to produce more uniform genome-wide differentiation.",
+      "options": [
+        "S1-TRUE, S2-TRUE, S3-TRUE, S4-TRUE",
+        "S1-TRUE, S2-TRUE, S3-FALSE, S4-TRUE",
+        "S1-TRUE, S2-FALSE, S3-FALSE, S4-FALSE",
+        "S1-FALSE, S2-TRUE, S3-TRUE, S4-FALSE"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Genomic islands of differentiation (or 'speciation islands') were first described in Anopheles mosquitoes and have since been found in many diverging populations. These regions show high FST between populations while the rest of the genome shows low FST, suggesting that gene flow homogenizes most of the genome but divergent selection or reduced recombination maintains differentiation at these islands. They often contain genes involved in ecological adaptation, mate recognition, or hybrid incompatibility. S2 is TRUE: Reinforcement has been demonstrated at the genomic level. In European Ficedula flycatchers (pied and collared), female preference for conspecific male plumage is stronger in sympatry than allopatry, and candidate loci for this pattern have been identified. In Drosophila, reinforcement of mating discrimination has been documented in zones of secondary contact (Noor, 1999; Ortiz-Barrientos et al., 2004). S3 is FALSE: Haldane's rule states that the heterogametic sex (XY in mammals, ZW in birds) is preferentially affected (absent, rare, or sterile) in interspecific hybrids, not the homogametic sex. This is explained by the dominance theory: recessive incompatibility alleles on the X (or Z) chromosome are exposed in the heterogametic sex (which has only one copy), while they are masked in the homogametic sex (which has two copies, allowing the compatible allele to compensate). S4 is TRUE: Under speciation with gene flow, only loci involved in reproductive isolation and their linked regions resist homogenization by gene flow, creating a heterogeneous landscape of differentiation. Under strict allopatry without gene flow, all loci diverge by drift and selection, producing more uniform genome-wide differentiation (though variation due to different mutation rates and selection pressures still exists).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 24,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studying molecular evolution analyzes the dN/dS ratios for 5 genes across the primate lineage leading to humans. The results are:\n\nGene 1 (Histone H4): dN/dS = 0.01\nGene 2 (Hemoglobin alpha): dN/dS = 0.15\nGene 3 (Fibrinopeptide B): dN/dS = 0.95\nGene 4 (FOXP2, human lineage): dN/dS = 4.6\nGene 5 (MHC class I, peptide-binding domain): dN/dS = 2.8\n\nWhich interpretation of the selective pressures on these genes is most accurate?",
+      "dataContext": "dN/dS ratio interpretation: dN/dS << 1 indicates purifying (negative) selection removing amino acid-altering mutations. dN/dS approximately equal to 1 indicates neutral evolution (no selective constraint on amino acid changes). dN/dS >> 1 indicates positive (adaptive) selection driving amino acid substitutions. Gene-specific context: Histone H4 is one of the most conserved proteins across all eukaryotes (essential for nucleosome structure). Hemoglobin alpha is functionally important but can tolerate some amino acid variation. Fibrinopeptide B is cleaved off during blood clotting and is functionally dispensable after cleavage. FOXP2 is a transcription factor involved in speech and language. MHC class I molecules present peptides to T cells and are under diversifying selection driven by pathogen recognition.",
+      "options": [
+        "Histone H4 (dN/dS = 0.01) is under intense purifying selection consistent with its essential role in chromatin structure; Hemoglobin alpha (0.15) is under moderate purifying selection; Fibrinopeptide B (0.95) evolves nearly neutrally consistent with its dispensable function; FOXP2 (4.6) experienced strong positive selection in the human lineage consistent with language evolution; and MHC class I (2.8) is under pathogen-driven balancing/diversifying selection in the peptide-binding region",
+        "All five genes are under positive selection because dN/dS is greater than zero for all of them, indicating that all amino acid changes were driven by natural selection",
+        "Fibrinopeptide B has the highest dN/dS because it is the most essential gene, so selection drives rapid amino acid change to improve its function",
+        "FOXP2 and MHC class I have artificially inflated dN/dS values because of sequencing errors in ancient DNA, and their true values are below 1"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Option A correctly interprets the selective regime for each gene. Histone H4 (dN/dS = 0.01): Among the most conserved proteins known; virtually all amino acid positions are essential for nucleosome structure and histone-histone/histone-DNA interactions. Extreme purifying selection eliminates nearly all nonsynonymous mutations. Hemoglobin alpha (dN/dS = 0.15): Under significant purifying selection, but some amino acid positions can vary without dramatically affecting oxygen-binding function. The heme-binding pocket is highly constrained while surface residues are more permissive. Fibrinopeptide B (dN/dS = 0.95): This peptide is cleaved from fibrinogen during clot formation and discarded; after cleavage, its sequence is irrelevant to fibrin function. It evolves at nearly the neutral rate because most amino acid changes have no fitness consequence. FOXP2 (dN/dS = 4.6 on the human branch): Two amino acid substitutions were fixed specifically in the human lineage after the split from chimpanzees, and branch-site tests confirm positive selection. FOXP2 is involved in the neural circuits for speech and language. MHC class I peptide-binding domain (dN/dS = 2.8): Pathogen-driven diversifying selection favors new variants that present different pathogen peptides. Heterozygotes presenting more peptide diversity have a fitness advantage (heterozygote advantage). Option B incorrectly classifies all as positive selection. Option C inverts the relationship between constraint and dN/dS. Option D fabricates technical artifacts.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers studying the coevolutionary arms race between rough-skinned newts (Taricha granulosa) and garter snakes (Thamnophis sirtalis) measured tetrodotoxin (TTX) levels in newt skin and TTX resistance in snake skeletal muscle sodium channels (Nav1.4) across 12 populations. The data show:\n\nPopulations 1-4 (Coastal Oregon): Newt TTX = 0.5-1.2 mg, Snake resistance = low (IC50 = 2-5 nM)\nPopulations 5-8 (Central Oregon): Newt TTX = 5-11 mg, Snake resistance = moderate (IC50 = 20-50 nM)\nPopulations 9-12 (Southern Oregon): Newt TTX = 20-40 mg, Snake resistance = very high (IC50 = 200-1000 nM)\n\nSnake resistance is conferred by specific amino acid substitutions in the Nav1.4 P-loop region. What pattern does this data reveal, and which interpretation is most accurate?",
+      "dataContext": "TTX (tetrodotoxin) is a potent neurotoxin that blocks voltage-gated sodium channels. IC50 represents the concentration of TTX needed to block 50% of sodium current; higher IC50 = greater resistance. Newt TTX levels vary 40-fold across populations. Snake resistance varies approximately 500-fold. Molecular analysis shows that resistance alleles involve 1-3 amino acid substitutions in the pore-loop (P-loop) of the Nav1.4 channel: low-resistance populations have 0-1 substitutions, moderate have 1-2, and high-resistance have 2-3. Each additional substitution increases resistance approximately 10-100 fold but reduces channel function (conductance velocity) by 5-15%, representing a fitness cost of resistance.",
+      "options": [
+        "The data show no geographic correlation between toxicity and resistance, indicating that the two traits evolve independently in response to abiotic environmental factors such as temperature and elevation",
+        "The geographic covariation between newt toxicity and snake resistance demonstrates a coevolutionary arms race with matched escalation: populations with more toxic newts have more resistant snakes. The stepwise accumulation of resistance mutations in Nav1.4 with associated fitness costs (reduced channel function) indicates that resistance evolves only where selection pressure from toxin exposure is strong enough to outweigh these costs",
+        "Snakes in all populations should have evolved maximum resistance regardless of local newt toxicity because having the highest resistance would always be advantageous",
+        "The pattern is entirely explained by genetic drift in small isolated populations, with no role for reciprocal selection, because the amino acid substitutions are neutral with respect to TTX resistance"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This data reveals a classic coevolutionary arms race with geographic variation in the intensity of reciprocal selection. The strong positive correlation between newt TTX and snake resistance across populations demonstrates matched escalation: where newts are more toxic, snakes have evolved greater resistance, and vice versa. The molecular mechanism (progressive P-loop substitutions in Nav1.4) shows that resistance evolves in a stepwise manner, with each substitution providing incrementally greater resistance but at a cost to normal sodium channel function. This cost explains why maximum resistance has not evolved in all populations (Option C is wrong): in populations with low-toxicity newts, the fitness cost of resistance mutations exceeds the benefit of resistance, so they are selected against. This pattern is consistent with the geographic mosaic theory of coevolution (Thompson): some populations are coevolutionary hotspots (southern Oregon, with extreme toxicity and resistance) and others are coldspots (coastal Oregon, with low toxicity and resistance). Brodie and Brodie's work on this system represents one of the best-documented examples of a coevolutionary arms race with identified molecular mechanisms, fitness costs, and geographic variation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 23,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A phylogenomics study sequences 1,000 gene loci across 4 species (P, Q, R, S). The accepted species tree based on morphology and multiple prior analyses is ((P,Q),(R,S)). However, gene tree analysis reveals:\n\n- 400 genes support ((P,Q),(R,S)) — matching the species tree\n- 320 genes support ((P,R),(Q,S))\n- 280 genes support ((P,S),(Q,R))\n\nThe internal branch of the species tree separating the P-Q and R-S lineages is estimated to be short (approximately 0.5Ne generations). Which interpretation best explains this gene tree distribution?",
+      "dataContext": "Under the multispecies coalescent model, for a rooted 4-taxon species tree with a short internal branch, the expected gene tree frequencies are: species-tree-concordant topology has probability = 1 - (2/3)e^(-t/2Ne), and each of the two discordant topologies has probability = (1/3)e^(-t/2Ne), where t is the internal branch length in generations and Ne is the effective population size. For t = 0.5Ne: e^(-t/2Ne) = e^(-0.25) = 0.778. Expected concordant frequency = 1 - (2/3)(0.778) = 1 - 0.519 = 0.481. Expected frequency per discordant topology = (1/3)(0.778) = 0.259. For 1000 genes: expected concordant = 481, each discordant = 259. Observed: concordant = 400, discordant topologies = 320 and 280.",
+      "options": [
+        "The species tree must be incorrect because fewer than 50% of gene trees support it; the true species tree should be ((P,R),(Q,S)) since 320 genes support that topology, which is the highest among the discordant trees",
+        "The pattern is consistent with incomplete lineage sorting (ILS) expected under the multispecies coalescent model with a short internal branch. The concordant topology (400/1000) is the most frequent, and the two discordant topologies have roughly equal frequencies (320 and 280), as predicted when ILS is the primary source of discordance. The deviation from perfect equal frequencies of discordant trees could reflect additional processes such as introgression between non-sister lineages",
+        "All 1000 genes must have experienced horizontal gene transfer because no gene tree perfectly matches the species tree in a majority of loci",
+        "The data demonstrate that molecular phylogenetics is unreliable and only morphological data should be used for species tree estimation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Under the multispecies coalescent model for a short internal branch, a large proportion of gene trees are expected to be discordant with the species tree due to incomplete lineage sorting (ILS). The key predictions are: (1) the species-tree-concordant topology should be the most frequent (plurality, not necessarily majority), and (2) the two discordant topologies should have approximately equal frequencies. The observed data match these predictions: the concordant topology (400) is the most common, and the discordant topologies (320, 280) are roughly equal. Using the formula, with t/2Ne = 0.25, the expected concordance is approximately 48%, and each discordant topology approximately 26%. The observed proportions (40%, 32%, 28%) show a slight excess of ((P,R),(Q,S)) relative to ((P,S),(Q,R)), which could indicate introgression (gene flow between non-sister taxa P and R or Q and S) superimposed on ILS. Modern methods like ABBA-BABA tests (Patterson's D-statistic) or phylogenetic network analyses could distinguish ILS from introgression. Option A incorrectly rejects the species tree; under ILS, the most frequent gene tree matches the species tree. Option C incorrectly attributes all discordance to HGT. Option D dismisses molecular data without justification.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 26,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A genome-wide association study of two populations of European flycatchers (Ficedula albicollis and F. hypoleuca) in their zone of secondary contact identifies 'genomic islands of differentiation.' The researchers measure FST across 50,000 SNP markers and find:\n\n- Genome-wide average FST = 0.05\n- 15 genomic regions (each 200-500 kb) show FST = 0.60-0.95\n- These high-FST regions contain genes involved in plumage coloration (MC1R region), song production, and mitochondrial function\n- Regions of high FST are associated with reduced recombination rates and chromosomal inversions\n- In allopatric populations (no contact), genome-wide FST is 0.03 and the same 15 regions show FST = 0.25-0.40\n\nWhich interpretation best explains the genomic landscape of differentiation?",
+      "dataContext": "Context: Ficedula albicollis (collared flycatcher) and F. hypoleuca (pied flycatcher) diverged approximately 1 Mya and have a hybrid zone in Central Europe. Hybrids show reduced fitness (hybrid females are often sterile per Haldane's rule). Sympatric populations show character displacement in male plumage (males are more distinct in sympatry). FST measures genetic differentiation between populations (0 = identical, 1 = fixed for different alleles). Genomic regions with unusually high FST relative to the genome-wide average are candidate 'speciation genes' or regions linked to reproductive isolation. Reduced recombination within chromosomal inversions can protect combinations of locally adapted or incompatibility alleles from being broken apart by recombination.",
+      "options": [
+        "The uniform low genome-wide FST (0.05) indicates that these are a single species with no meaningful genetic differentiation; the 15 high-FST regions are statistical artifacts",
+        "All differentiation is due to genetic drift in the 15 regions, which happen to have lower effective population sizes due to reduced recombination, with no role for selection",
+        "The heterogeneous FST landscape with 'islands' of high differentiation against a background of low differentiation is consistent with speciation with gene flow: gene flow homogenizes most of the genome (low FST), while divergent selection and/or reproductive isolation barriers maintain differentiation at specific regions containing genes involved in species recognition and hybrid incompatibility. The association with reduced recombination and inversions suggests that suppressed recombination protects combinations of barrier alleles. The elevated FST in these islands in sympatry relative to allopatry suggests reinforcement is strengthening barriers where species co-occur",
+        "The high-FST regions represent ancient polymorphisms present in the common ancestor of both species and have nothing to do with the speciation process"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This pattern is a hallmark of speciation with gene flow (also called the 'speciation continuum' or 'divergence hitchhiking' model). The low genome-wide FST (0.05) indicates extensive gene flow between the species, which homogenizes neutral regions of the genome. However, 15 genomic regions maintain much higher differentiation (FST 0.60-0.95), suggesting they contain or are linked to genes under divergent selection or causing hybrid incompatibilities. These regions resist introgression because migrants carrying foreign alleles at these loci produce unfit hybrids or fail to mate successfully. The association with reduced recombination and chromosomal inversions is significant: inversions suppress recombination in heterozygotes, protecting co-adapted allele combinations (potentially multiple barrier loci) from being broken apart. The fact that these regions contain genes for plumage color, song, and mitochondrial function is consistent with their roles in species recognition (prezygotic barriers) and hybrid incompatibility (postzygotic barriers, especially mitonuclear incompatibilities). The higher FST of these islands in sympatry versus allopatry supports reinforcement: natural selection against hybridization has strengthened these barriers where the species co-occur. This Ficedula system, studied extensively by Ellegren, Saetre, and colleagues, is one of the best-characterized examples of the genomic landscape of speciation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 24,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A paleontologist studies the recovery of marine invertebrate diversity after the end-Permian mass extinction using a dataset of fossil occurrences from 252 to 230 Mya (Early to Middle Triassic). The data show:\n\n- Pre-extinction diversity (Late Permian, 255 Mya): approximately 400 marine genera\n- Immediately post-extinction (Early Triassic, 251 Mya): approximately 80 genera (80% reduction)\n- Early recovery (248 Mya): approximately 120 genera, dominated by 'disaster taxa' (Claraia bivalves, Lingula brachiopods)\n- Mid recovery (245 Mya): approximately 200 genera, with reef-building organisms beginning to reappear\n- Late recovery (237 Mya): approximately 350 genera, with novel body plans and ecological guilds appearing\n- Full recovery (230 Mya): approximately 450 genera, exceeding pre-extinction levels\n\nThe 'disaster taxa' that dominated immediately after the extinction were geographically widespread, ecologically generalist, and had high reproductive rates. Which interpretation best explains the recovery pattern?",
+      "dataContext": "The end-Permian extinction (252 Mya) was the most severe mass extinction, eliminating approximately 96% of marine species and approximately 81% of marine genera. Recovery in the Early Triassic was delayed by continued environmental stress: repeated carbon cycle perturbations, ocean anoxia, and global warming. Disaster taxa (opportunistic species that flourish after catastrophic events) dominated early recovery intervals. The recovery was not a simple linear increase but showed several setbacks corresponding to additional environmental perturbations in the Early Triassic. Reef ecosystems, which require complex ecological interactions, were among the last to recover. Novel clades that diversified during recovery included modern coral scleractinians (replacing Paleozoic rugose and tabulate corals), modern-type bivalves, and new echinoderm groups.",
+      "options": [
+        "The recovery pattern demonstrates that mass extinctions have no lasting effect on biodiversity because diversity fully recovered within 22 million years and even exceeded pre-extinction levels",
+        "The recovery was driven entirely by immigration of species from deep-sea refugia that were unaffected by the extinction, not by in-situ diversification",
+        "The disaster taxa should have evolved into the dominant groups of the Mesozoic through anagenesis, but instead they went extinct because they were competitively inferior, proving that competitive exclusion is the sole driver of post-extinction recovery",
+        "The sequential recovery pattern (disaster taxa first, then generalists, then specialists, then reef-builders) reflects the hierarchical nature of ecological recovery: simple, opportunistic species colonize first (primary succession), followed by increasing ecological complexity as food webs, symbioses, and reef frameworks are re-established. The 22-million-year timescale demonstrates that full ecosystem recovery is slow because it requires not just diversification of new species but also the assembly of complex ecological interactions. The post-recovery fauna exceeded pre-extinction diversity because new body plans and ecological strategies (the Modern Evolutionary Fauna replacing the Paleozoic Evolutionary Fauna) were established during recovery"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The post-Permian recovery pattern illustrates several key principles of macroevolution: (1) Recovery is hierarchical and sequential. Disaster taxa (Claraia, Lingula) are classic r-selected opportunists that exploit empty niches with minimal competition. As ecosystems become more structured, K-selected specialists and complex ecological guilds (reef communities, apex predators) gradually re-establish. (2) Full recovery is slow because biodiversity recovery requires more than just species origination; it requires the assembly of complex trophic webs, mutualistic relationships (coral-zooxanthellae symbiosis for reefs), and physical structures (reef frameworks that provide habitat for hundreds of other species). (3) Repeated environmental perturbations in the Early Triassic slowed recovery, explaining the non-linear pattern. (4) The post-recovery fauna was taxonomically different from the pre-extinction fauna: this represents Jack Sepkoski's transition from the Paleozoic Evolutionary Fauna (brachiopod-dominated) to the Modern Evolutionary Fauna (mollusk-dominated). Mass extinctions reset evolutionary trajectories, allowing new groups to radiate into vacated ecospace. The 22-million-year recovery timescale is consistent with evidence from other mass extinctions and highlights their profound, long-lasting impact on the biosphere. Option A underestimates the significance of a 22-Myr recovery. Option B overstates deep-sea refugia. Option C oversimplifies recovery dynamics.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A research team wants to determine whether the loss of pelvic spines in freshwater threespine sticklebacks (Gasterosteus aculeatus) is due to changes in the coding sequence of the Pitx1 gene or due to changes in cis-regulatory elements (enhancers) that control its expression in the developing pelvis. Marine sticklebacks (ancestral) have full pelvic spines, while multiple independently derived freshwater populations have reduced or absent pelvic structures. Design the most rigorous experimental approach to distinguish between these two hypotheses.",
+      "experimentContext": "Study system: Marine sticklebacks have robust pelvic spines for predator defense; multiple freshwater populations have independently evolved pelvic reduction. The Pitx1 gene encodes a homeodomain transcription factor expressed in multiple tissues including developing limbs/pelvis, pituitary, and jaw. Previous work shows Pitx1 coding sequence is identical between marine and freshwater sticklebacks. The pelvic enhancer of Pitx1 has been identified as a 2.5 kb region (Pel enhancer) located 100 kb upstream. Available tools: BAC transgenics, CRISPR-Cas9, GFP reporter constructs, in situ hybridization, whole-genome sequences from 20+ freshwater populations. Key question: Is pelvic loss caused by coding changes, cis-regulatory changes, or both?",
+      "options": [
+        "Compare Pitx1 protein sequences between marine and freshwater fish. If they are different, the coding sequence hypothesis is correct. If they are the same, cis-regulatory evolution is the answer. No further experiments needed.",
+        "Knock out the Pitx1 gene entirely in marine sticklebacks using CRISPR-Cas9. If pelvic spines are lost, this proves the gene is involved. The experiment does not need to distinguish between coding and regulatory mechanisms.",
+        "Conduct a multi-level experimental approach: (1) Compare Pitx1 coding sequences across 20+ independently derived freshwater populations to test for convergent coding changes; (2) Compare the Pel enhancer sequence across all populations to identify shared deletions or mutations; (3) Use GFP reporter constructs driven by the marine versus freshwater Pel enhancer to test whether the freshwater enhancer fails to drive pelvic expression while maintaining expression in other tissues (jaw, pituitary); (4) Use CRISPR-Cas9 to delete only the Pel enhancer in marine sticklebacks, predicting pelvic reduction without affecting Pitx1 expression in other tissues; (5) Perform the reciprocal experiment: insert the marine Pel enhancer into freshwater sticklebacks to test whether it rescues pelvic development; (6) Test multiple independent freshwater populations to determine whether parallel pelvic loss involves the same or different molecular changes (parallel vs convergent molecular evolution).",
+        "Cross marine and freshwater sticklebacks and perform QTL mapping in F2 offspring. If a QTL maps near Pitx1, conclude that the gene is responsible for pelvic reduction without determining the molecular mechanism."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Option C provides the most comprehensive experimental design because it distinguishes between coding and regulatory changes using multiple complementary approaches. (1) Coding sequence comparison across 20+ populations: If the Pitx1 protein sequence is identical in all populations (as has been found empirically by Shapiro, Kingsley, and colleagues), coding changes are eliminated as the cause. (2) Pel enhancer comparison: The actual research found that multiple independent freshwater populations have deletions in the Pel enhancer, representing one of the best examples of parallel cis-regulatory evolution. (3) GFP reporter assay: This is the key functional test. If the marine Pel enhancer drives GFP expression in the developing pelvis but the freshwater version does not, while both drive identical expression in other Pitx1-expressing tissues, this directly demonstrates that the regulatory change specifically affects pelvic expression. This modularity is the hallmark of cis-regulatory evolution. (4) CRISPR Pel enhancer deletion: Deleting only the enhancer (not the coding region) in marine fish should phenocopy the freshwater pelvis phenotype without affecting jaw or pituitary development, proving sufficiency of the regulatory change. (5) Rescue experiment: Inserting the marine enhancer into freshwater fish to restore pelvic development would demonstrate that the enhancer change is both necessary and sufficient. (6) Testing multiple populations addresses whether molecular parallelism underlies morphological convergence, a key question in evo-devo. This multi-pronged approach mirrors the actual landmark studies by the Kingsley laboratory that established the Pitx1 Pel enhancer as a paradigm for cis-regulatory evolution in vertebrate morphological evolution.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Svante Paabo's laboratory wants to determine whether a specific Neanderthal-derived allele that introgressed into modern human populations has been subject to adaptive introgression (positive selection after entering the modern human gene pool). The allele is at the EPAS1 locus, which is involved in the hypoxia response, and is found at 78% frequency in Tibetans but only 1% in Han Chinese lowlanders and is absent in Africans. Design the most rigorous study to test whether this allele was positively selected in Tibetan populations for high-altitude adaptation.",
+      "experimentContext": "Background: Modern non-African humans carry approximately 1-4% Neanderthal DNA. The EPAS1 allele in question contains a 32.7 kb haplotype that is virtually identical to the Denisovan sequence but distinct from the African and most Eurasian modern human sequences. Tibetans live at altitudes above 4,000 m where oxygen partial pressure is approximately 60% of sea level. EPAS1 (also called HIF-2alpha) is a transcription factor in the hypoxia-inducible factor pathway that regulates erythropoietin (EPO) production. Available tools: genome-wide SNP data from 50 Tibetan, 50 Han Chinese, and 50 Yoruba (African) individuals; ancient DNA from Denisovan and Neanderthal specimens; functional assays for EPAS1 variants; hemoglobin concentration measurements; physiological data on hypoxia response.",
+      "options": [
+        "Compare EPAS1 allele frequency between Tibetans and Han Chinese. If the frequency differs, this proves adaptive introgression. No additional analyses are needed.",
+        "Perform a knockout of EPAS1 in mice and observe whether they survive at high altitude. If they die, EPAS1 must have been adaptively introgressed in Tibetans.",
+        "Sequence the EPAS1 gene in 1000 Tibetans and look for nonsynonymous mutations. If there are many amino acid changes, the gene has been positively selected.",
+        "Conduct a comprehensive multi-pronged analysis: (1) Perform population genetic tests for positive selection at the EPAS1 locus in Tibetans: extended haplotype homozygosity (EHH/iHS), reduced nucleotide diversity relative to genome-wide levels, and elevated population-specific differentiation (PBS test comparing Tibetans, Han Chinese, and Yoruba); (2) Confirm Denisovan origin by comparing the Tibetan EPAS1 haplotype with the Denisovan genome sequence and demonstrating greater similarity to Denisovan than to any modern human population outside Tibet; (3) Test the functional effect of the archaic versus modern allele on HIF pathway activation, EPO expression, and hemoglobin levels using CRISPR-engineered cell lines or transgenic models carrying each variant; (4) Correlate EPAS1 genotype with physiological phenotype in Tibetans: test whether carriers of the Denisovan-derived allele have lower hemoglobin concentrations at high altitude (adaptive, because excessively high hemoglobin causes chronic mountain sickness); (5) Estimate the timing and strength of selection using approximate Bayesian computation (ABC) parameterized with demographic models of Tibetan-Han divergence."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Option C provides the most rigorous test of adaptive introgression because it integrates population genetics, phylogenomics, functional genomics, and physiology. (1) Population genetic signatures of selection: The PBS (population branch statistic) test is particularly powerful for detecting lineage-specific selection. If EPAS1 shows an extreme PBS value in Tibetans relative to the genome-wide distribution, this indicates recent positive selection. Extended haplotype homozygosity tests (iHS, XP-EHH) detect selection sweeps that create long-range LD. Reduced nucleotide diversity at EPAS1 relative to the genome background indicates a selective sweep. (2) Confirming archaic origin: The critical evidence is that the selected haplotype is virtually identical to the Denisovan sequence but distinct from all modern human sequences worldwide (Huerta-Sanchez et al., 2014 demonstrated this). This rules out the alternative that the allele arose independently in Tibetans. (3) Functional validation: Demonstrating that the Denisovan-derived variant produces a measurably different cellular response (e.g., blunted HIF-2alpha activity, reduced EPO induction) provides the mechanistic basis for selection. (4) Phenotype-genotype correlation: In Tibetans, the Denisovan EPAS1 allele is associated with lower hemoglobin levels at high altitude, which is adaptive because excessive polycythemia causes chronic mountain sickness. This demonstrates the fitness advantage. (5) ABC modeling estimates selection coefficient and timing, contextualizing the selective sweep within Tibetan demographic history. This approach mirrors the actual groundbreaking studies that established EPAS1 as the clearest example of adaptive introgression from archaic hominins into modern humans.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 4,
+      "campbellChapter": 25,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Genetics and Evolution"
+    }
+  ]
+}
