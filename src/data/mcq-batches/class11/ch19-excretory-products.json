@@ -996,13 +996,13 @@
       "ncertChapterName": "Excretory Products and their Elimination",
       "question": "The correct pathway of urine drainage is:",
       "options": [
-        "Collecting duct → Renal pelvis → Minor calyx → Ureter → Urinary bladder → Urethra",
-        "Collecting duct → Minor calyx → Major calyx → Renal pelvis → Ureter → Urinary bladder → Urethra",
-        "Collecting duct → Major calyx → Minor calyx → Ureter → Renal pelvis → Urethra",
-        "Renal pelvis → Collecting duct → Minor calyx → Major calyx → Ureter → Urethra"
+        "Collecting duct \u2192 Renal pelvis \u2192 Minor calyx \u2192 Ureter \u2192 Urinary bladder \u2192 Urethra",
+        "Collecting duct \u2192 Minor calyx \u2192 Major calyx \u2192 Renal pelvis \u2192 Ureter \u2192 Urinary bladder \u2192 Urethra",
+        "Collecting duct \u2192 Major calyx \u2192 Minor calyx \u2192 Ureter \u2192 Renal pelvis \u2192 Urethra",
+        "Renal pelvis \u2192 Collecting duct \u2192 Minor calyx \u2192 Major calyx \u2192 Ureter \u2192 Urethra"
       ],
       "correctAnswer": "B",
-      "explanation": "Urine flows from the collecting duct → through renal papillae into minor calyces → minor calyces merge into major calyces → major calyces open into the renal pelvis → through the ureter → urinary bladder → urethra for external expulsion.",
+      "explanation": "Urine flows from the collecting duct \u2192 through renal papillae into minor calyces \u2192 minor calyces merge into major calyces \u2192 major calyces open into the renal pelvis \u2192 through the ureter \u2192 urinary bladder \u2192 urethra for external expulsion.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2098,13 +2098,13 @@
       "ncertChapterName": "Excretory Products and their Elimination",
       "question": "Arrange the correct sequence of urine formation:",
       "options": [
-        "Tubular reabsorption → Glomerular filtration → Tubular secretion → Urine",
-        "Glomerular filtration → Tubular reabsorption → Tubular secretion → Urine",
-        "Glomerular filtration → Tubular secretion → Tubular reabsorption → Urine",
-        "Tubular secretion → Glomerular filtration → Tubular reabsorption → Urine"
+        "Tubular reabsorption \u2192 Glomerular filtration \u2192 Tubular secretion \u2192 Urine",
+        "Glomerular filtration \u2192 Tubular reabsorption \u2192 Tubular secretion \u2192 Urine",
+        "Glomerular filtration \u2192 Tubular secretion \u2192 Tubular reabsorption \u2192 Urine",
+        "Tubular secretion \u2192 Glomerular filtration \u2192 Tubular reabsorption \u2192 Urine"
       ],
       "correctAnswer": "B",
-      "explanation": "The correct sequence of urine formation is: Glomerular filtration (blood is filtered in glomerulus) → Tubular reabsorption (useful substances are reabsorbed) → Tubular secretion (additional wastes are secreted into the filtrate) → Final urine formation.",
+      "explanation": "The correct sequence of urine formation is: Glomerular filtration (blood is filtered in glomerulus) \u2192 Tubular reabsorption (useful substances are reabsorbed) \u2192 Tubular secretion (additional wastes are secreted into the filtrate) \u2192 Final urine formation.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2121,15 +2121,15 @@
       "ncertClass": 11,
       "ncertChapter": 19,
       "ncertChapterName": "Excretory Products and their Elimination",
-      "question": "Arrange the RAAS pathway in correct sequence:\n(i) Angiotensinogen → Angiotensin I (by renin)\n(ii) JGA releases renin due to low blood pressure\n(iii) Angiotensin II stimulates aldosterone secretion\n(iv) Angiotensin I → Angiotensin II (by ACE)\n(v) Aldosterone increases Na+ and water reabsorption",
+      "question": "Arrange the RAAS pathway in correct sequence:\n(i) Angiotensinogen \u2192 Angiotensin I (by renin)\n(ii) JGA releases renin due to low blood pressure\n(iii) Angiotensin II stimulates aldosterone secretion\n(iv) Angiotensin I \u2192 Angiotensin II (by ACE)\n(v) Aldosterone increases Na+ and water reabsorption",
       "options": [
-        "(iii) → (iv) → (i) → (ii) → (v)",
-        "(ii) → (i) → (iv) → (iii) → (v)",
-        "(v) → (ii) → (i) → (iv) → (iii)",
-        "(i) → (ii) → (iii) → (iv) → (v)"
+        "(iii) \u2192 (iv) \u2192 (i) \u2192 (ii) \u2192 (v)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (v)",
+        "(v) \u2192 (ii) \u2192 (i) \u2192 (iv) \u2192 (iii)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v)"
       ],
       "correctAnswer": "B",
-      "explanation": "RAAS sequence: Low BP triggers JGA to release renin (ii) → Renin converts angiotensinogen to angiotensin I (i) → ACE converts angiotensin I to angiotensin II in lungs (iv) → Angiotensin II stimulates aldosterone from adrenal cortex (iii) → Aldosterone increases Na+/water reabsorption (v).",
+      "explanation": "RAAS sequence: Low BP triggers JGA to release renin (ii) \u2192 Renin converts angiotensinogen to angiotensin I (i) \u2192 ACE converts angiotensin I to angiotensin II in lungs (iv) \u2192 Angiotensin II stimulates aldosterone from adrenal cortex (iii) \u2192 Aldosterone increases Na+/water reabsorption (v).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2148,13 +2148,13 @@
       "ncertChapterName": "Excretory Products and their Elimination",
       "question": "Arrange the parts of the nephron in the correct sequence of filtrate flow:",
       "options": [
-        "PCT → Bowman's capsule → DCT → Loop of Henle → Collecting duct",
-        "Collecting duct → DCT → Loop of Henle → PCT → Bowman's capsule",
-        "Bowman's capsule → PCT → Descending limb of Henle → Ascending limb of Henle → DCT → Collecting duct",
-        "Bowman's capsule → DCT → PCT → Loop of Henle → Collecting duct"
+        "PCT \u2192 Bowman's capsule \u2192 DCT \u2192 Loop of Henle \u2192 Collecting duct",
+        "Collecting duct \u2192 DCT \u2192 Loop of Henle \u2192 PCT \u2192 Bowman's capsule",
+        "Bowman's capsule \u2192 PCT \u2192 Descending limb of Henle \u2192 Ascending limb of Henle \u2192 DCT \u2192 Collecting duct",
+        "Bowman's capsule \u2192 DCT \u2192 PCT \u2192 Loop of Henle \u2192 Collecting duct"
       ],
       "correctAnswer": "C",
-      "explanation": "The correct sequence of filtrate flow through the nephron is: Bowman's capsule (filtration) → PCT (major reabsorption) → Descending limb of loop of Henle → Hairpin turn → Ascending limb of loop of Henle → DCT (fine-tuning) → Collecting duct (concentration).",
+      "explanation": "The correct sequence of filtrate flow through the nephron is: Bowman's capsule (filtration) \u2192 PCT (major reabsorption) \u2192 Descending limb of loop of Henle \u2192 Hairpin turn \u2192 Ascending limb of loop of Henle \u2192 DCT (fine-tuning) \u2192 Collecting duct (concentration).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2173,13 +2173,13 @@
       "ncertChapterName": "Excretory Products and their Elimination",
       "question": "Arrange the correct sequence of urea cycle intermediates:\n(i) Ornithine (ii) Citrulline (iii) Argininosuccinate (iv) Arginine (v) Urea released, ornithine regenerated",
       "options": [
-        "(i) → (iv) → (iii) → (ii) → (v)",
-        "(iv) → (iii) → (ii) → (i) → (v)",
-        "(ii) → (i) → (iv) → (iii) → (v)",
-        "(i) → (ii) → (iii) → (iv) → (v)"
+        "(i) \u2192 (iv) \u2192 (iii) \u2192 (ii) \u2192 (v)",
+        "(iv) \u2192 (iii) \u2192 (ii) \u2192 (i) \u2192 (v)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (v)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v)"
       ],
       "correctAnswer": "D",
-      "explanation": "The urea cycle sequence: Ornithine combines with carbamoyl phosphate (i) → forms Citrulline (ii) → Citrulline + Aspartate forms Argininosuccinate (iii) → Argininosuccinate splits into Arginine and fumarate (iv) → Arginine is cleaved by arginase to produce urea and regenerate Ornithine (v).",
+      "explanation": "The urea cycle sequence: Ornithine combines with carbamoyl phosphate (i) \u2192 forms Citrulline (ii) \u2192 Citrulline + Aspartate forms Argininosuccinate (iii) \u2192 Argininosuccinate splits into Arginine and fumarate (iv) \u2192 Arginine is cleaved by arginase to produce urea and regenerate Ornithine (v).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2198,13 +2198,13 @@
       "ncertChapterName": "Excretory Products and their Elimination",
       "question": "Arrange the correct sequence of blood flow through the kidney:\n(i) Renal artery (ii) Afferent arteriole (iii) Glomerulus (iv) Efferent arteriole (v) Peritubular capillaries/Vasa recta (vi) Renal vein",
       "options": [
-        "(ii) → (i) → (iv) → (iii) → (vi) → (v)",
-        "(i) → (iii) → (ii) → (v) → (iv) → (vi)",
-        "(vi) → (v) → (iv) → (iii) → (ii) → (i)",
-        "(i) → (ii) → (iii) → (iv) → (v) → (vi)"
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (vi) \u2192 (v)",
+        "(i) \u2192 (iii) \u2192 (ii) \u2192 (v) \u2192 (iv) \u2192 (vi)",
+        "(vi) \u2192 (v) \u2192 (iv) \u2192 (iii) \u2192 (ii) \u2192 (i)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v) \u2192 (vi)"
       ],
       "correctAnswer": "D",
-      "explanation": "Blood flow sequence in kidney: Renal artery (i) → branches into afferent arterioles (ii) → enters glomerulus (iii) → exits via efferent arteriole (iv) → forms peritubular capillaries/vasa recta around tubules (v) → drains into renal vein (vi). Note the unique portal system (arteriole → capillary → arteriole → capillary).",
+      "explanation": "Blood flow sequence in kidney: Renal artery (i) \u2192 branches into afferent arterioles (ii) \u2192 enters glomerulus (iii) \u2192 exits via efferent arteriole (iv) \u2192 forms peritubular capillaries/vasa recta around tubules (v) \u2192 drains into renal vein (vi). Note the unique portal system (arteriole \u2192 capillary \u2192 arteriole \u2192 capillary).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2248,19 +2248,282 @@
       "ncertChapterName": "Excretory Products and their Elimination",
       "question": "Arrange the correct sequence of urine drainage from kidney to outside:\n(i) Collecting duct (ii) Minor calyx (iii) Major calyx (iv) Renal pelvis (v) Ureter (vi) Urinary bladder (vii) Urethra",
       "options": [
-        "(i) → (iv) → (ii) → (iii) → (v) → (vi) → (vii)",
-        "(i) → (ii) → (iii) → (iv) → (v) → (vi) → (vii)",
-        "(i) → (iii) → (ii) → (v) → (iv) → (vi) → (vii)",
-        "(ii) → (i) → (iv) → (iii) → (vi) → (v) → (vii)"
+        "(i) \u2192 (iv) \u2192 (ii) \u2192 (iii) \u2192 (v) \u2192 (vi) \u2192 (vii)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v) \u2192 (vi) \u2192 (vii)",
+        "(i) \u2192 (iii) \u2192 (ii) \u2192 (v) \u2192 (iv) \u2192 (vi) \u2192 (vii)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (vi) \u2192 (v) \u2192 (vii)"
       ],
       "correctAnswer": "B",
-      "explanation": "Urine drainage pathway: Collecting duct (i) → opens at renal papillae into Minor calyx (ii) → Minor calyces unite to form Major calyx (iii) → Major calyces open into Renal pelvis (iv) → Ureter (v) → Urinary bladder (vi) → Urethra (vii) to the exterior.",
+      "explanation": "Urine drainage pathway: Collecting duct (i) \u2192 opens at renal papillae into Minor calyx (ii) \u2192 Minor calyces unite to form Major calyx (iii) \u2192 Major calyces open into Renal pelvis (iv) \u2192 Ureter (v) \u2192 Urinary bladder (vi) \u2192 Urethra (vii) to the exterior.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
       "tags": [
         "urine-drainage",
         "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The Bowman's capsule and glomerulus together form:",
+      "options": [
+        "Loop of Henle",
+        "Malpighian body (renal corpuscle)",
+        "Collecting duct",
+        "Vasa recta"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the Malpighian body (renal corpuscle) consists of the Bowman's capsule (cup-shaped structure) and the glomerulus (tuft of capillaries). It is the site of ultrafiltration in the nephron.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nephron",
+        "malpighian-body",
+        "glomerulus"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The juxtaglomerular apparatus (JGA) plays a role in:",
+      "options": [
+        "Secretion of urea",
+        "Regulation of GFR and blood pressure",
+        "Reabsorption of glucose",
+        "Concentration of urine"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the JGA is a specialised structure located where the DCT passes close to the afferent arteriole of its own nephron. It releases renin which activates the renin-angiotensin-aldosterone system (RAAS) to regulate GFR and blood pressure.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "jga",
+        "gfr",
+        "renin",
+        "blood-pressure"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "ADH (antidiuretic hormone) acts on which part of the nephron?",
+      "options": [
+        "Proximal convoluted tubule",
+        "Loop of Henle",
+        "Distal convoluted tubule and collecting duct",
+        "Glomerulus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, ADH (vasopressin) acts on the distal convoluted tubule (DCT) and collecting duct to increase water reabsorption by making them more permeable to water. This helps in producing concentrated urine and conserving water.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "adh",
+        "dct",
+        "collecting-duct",
+        "water-reabsorption"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The countercurrent mechanism in the kidney helps in:",
+      "options": [
+        "Filtration of blood",
+        "Secretion of waste",
+        "Concentration of urine",
+        "Reabsorption of glucose"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the countercurrent mechanism operates between the Henle's loop and vasa recta. It helps maintain an osmotic gradient in the medulla (300 to 1200 mOsmol/L), which is essential for the concentration of urine.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "countercurrent",
+        "urine-concentration",
+        "henle-loop"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The normal GFR (Glomerular Filtration Rate) in a healthy individual is approximately:",
+      "options": [
+        "25 mL/min",
+        "60 mL/min",
+        "125 mL/min",
+        "250 mL/min"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the GFR in a healthy individual is approximately 125 mL/min or about 180 litres per day. Of this, about 99% is reabsorbed by the renal tubules, and only about 1.5 litres is excreted as urine.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "gfr",
+        "filtration-rate",
+        "kidney-function"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Organisms that excrete uric acid as the primary nitrogenous waste are called:",
+      "options": [
+        "Ammonotelic",
+        "Ureotelic",
+        "Uricotelic",
+        "Aminotelic"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, uricotelic organisms excrete uric acid as the main nitrogenous waste. Reptiles, birds, land snails, and insects are uricotelic. Uric acid requires very little water for excretion, making it ideal for terrestrial water conservation.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "nitrogenous-waste",
+        "uricotelic",
+        "excretion"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Haemodialysis is an artificial method of:",
+      "options": [
+        "Blood transfusion",
+        "Removing waste from blood when kidneys fail",
+        "Increasing blood pressure",
+        "Treating anaemia"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, haemodialysis is an artificial kidney treatment that removes nitrogenous waste and excess fluid from the blood when the kidneys are unable to function. Blood is passed through a dialyser with a semipermeable membrane immersed in dialysing fluid.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "haemodialysis",
+        "kidney-failure",
+        "artificial-kidney"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Maximum reabsorption of useful substances from the glomerular filtrate occurs in:",
+      "options": [
+        "Distal convoluted tubule",
+        "Loop of Henle",
+        "Proximal convoluted tubule",
+        "Collecting duct"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the proximal convoluted tubule (PCT) is responsible for the maximum reabsorption of the glomerular filtrate. About 65-80% of the filtrate (including glucose, amino acids, Na\u207a, and water) is reabsorbed in the PCT.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pct",
+        "reabsorption",
+        "nephron"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "Aldosterone is secreted by the adrenal cortex and acts on the kidney to:",
+      "options": [
+        "Increase water excretion",
+        "Increase reabsorption of Na\u207a and water from DCT",
+        "Decrease blood pressure",
+        "Inhibit renin secretion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, aldosterone acts on the DCT and collecting duct to stimulate reabsorption of Na\u207a and water, and secretion of K\u207a and H\u207a. This increases blood volume and pressure, and is regulated by the RAAS system.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "aldosterone",
+        "dct",
+        "sodium-reabsorption",
+        "raas"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Excretory Products and their Elimination",
+      "chapter": "Excretory Products and their Elimination",
+      "ncertClass": 11,
+      "ncertChapter": 19,
+      "ncertChapterName": "Excretory Products and their Elimination",
+      "question": "The descending limb of the loop of Henle is permeable to:",
+      "options": [
+        "Water only",
+        "Electrolytes only",
+        "Both water and electrolytes",
+        "Neither water nor electrolytes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, the descending limb of the loop of Henle is permeable to water but impermeable to electrolytes. Water moves out of the tubule by osmosis into the hypertonic medullary interstitium, concentrating the filtrate.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "loop-of-henle",
+        "descending-limb",
+        "water-permeability"
       ],
       "neetWeightage": "HIGH"
     }

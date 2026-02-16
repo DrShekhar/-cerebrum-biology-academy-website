@@ -146,7 +146,7 @@
         "Alveoli"
       ],
       "correctAnswer": "D",
-      "explanation": "Gas exchange occurs at the alveoli, which are thin-walled, highly vascularized sac-like structures at the terminal ends of the respiratory tree. The alveolar membrane is extremely thin (0.2 µm), facilitating rapid diffusion of O2 and CO2.",
+      "explanation": "Gas exchange occurs at the alveoli, which are thin-walled, highly vascularized sac-like structures at the terminal ends of the respiratory tree. The alveolar membrane is extremely thin (0.2 \u00b5m), facilitating rapid diffusion of O2 and CO2.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -346,7 +346,7 @@
         "RBCs"
       ],
       "correctAnswer": "D",
-      "explanation": "Carbonic anhydrase is present in high concentration in RBCs (red blood cells). It catalyzes the reversible reaction: CO2 + H2O ⇌ H2CO3 ⇌ H+ + HCO3-. This is essential for CO2 transport as bicarbonate ions.",
+      "explanation": "Carbonic anhydrase is present in high concentration in RBCs (red blood cells). It catalyzes the reversible reaction: CO2 + H2O \u21cc H2CO3 \u21cc H+ + HCO3-. This is essential for CO2 transport as bicarbonate ions.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -771,7 +771,7 @@
         "Three"
       ],
       "correctAnswer": "D",
-      "explanation": "The respiratory (diffusion) membrane consists of three major layers: (1) the thin squamous epithelium of alveoli, (2) the endothelium of alveolar capillaries, and (3) the fused basement membranes of both. The total thickness is about 0.2 µm, facilitating rapid gas diffusion.",
+      "explanation": "The respiratory (diffusion) membrane consists of three major layers: (1) the thin squamous epithelium of alveoli, (2) the endothelium of alveolar capillaries, and (3) the fused basement membranes of both. The total thickness is about 0.2 \u00b5m, facilitating rapid gas diffusion.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -821,7 +821,7 @@
         "ERV + RV"
       ],
       "correctAnswer": "D",
-      "explanation": "Functional Residual Capacity (FRC) = ERV + RV. It is the volume of air remaining in the lungs after a normal expiration. FRC = 1100 mL (ERV) + 1200 mL (RV) ≈ 2300 mL.",
+      "explanation": "Functional Residual Capacity (FRC) = ERV + RV. It is the volume of air remaining in the lungs after a normal expiration. FRC = 1100 mL (ERV) + 1200 mL (RV) \u2248 2300 mL.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -871,7 +871,7 @@
         "TV + ERV"
       ],
       "correctAnswer": "A",
-      "explanation": "Inspiratory Capacity (IC) = Tidal Volume (TV) + Inspiratory Reserve Volume (IRV). It is the total volume of air a person can inspire after normal expiration. IC = 500 mL + 2500-3000 mL ≈ 3000-3500 mL.",
+      "explanation": "Inspiratory Capacity (IC) = Tidal Volume (TV) + Inspiratory Reserve Volume (IRV). It is the total volume of air a person can inspire after normal expiration. IC = 500 mL + 2500-3000 mL \u2248 3000-3500 mL.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1322,7 +1322,7 @@
         "(i) and (ii) only"
       ],
       "correctAnswer": "A",
-      "explanation": "Statements (i), (ii), and (iii) are correct regarding CO2 transport percentages. Statement (iv) is incorrect because carbonic anhydrase is found mainly in RBCs, not in plasma. The enzyme catalyzes CO2 + H2O → H2CO3 inside RBCs.",
+      "explanation": "Statements (i), (ii), and (iii) are correct regarding CO2 transport percentages. Statement (iv) is incorrect because carbonic anhydrase is found mainly in RBCs, not in plasma. The enzyme catalyzes CO2 + H2O \u2192 H2CO3 inside RBCs.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1521,7 +1521,7 @@
         "(i) and (iii) only"
       ],
       "correctAnswer": "B",
-      "explanation": "All four statements are correct. HbA has 2α + 2β chains. HbF (2α + 2γ) has higher O2 affinity, which helps the foetus extract O2 from maternal blood. Each Hb binds 4 O2 molecules. Methaemoglobin (Fe3+ instead of Fe2+) cannot bind O2.",
+      "explanation": "All four statements are correct. HbA has 2\u03b1 + 2\u03b2 chains. HbF (2\u03b1 + 2\u03b3) has higher O2 affinity, which helps the foetus extract O2 from maternal blood. Each Hb binds 4 O2 molecules. Methaemoglobin (Fe3+ instead of Fe2+) cannot bind O2.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1738,7 +1738,7 @@
       "ncertClass": 11,
       "ncertChapter": 17,
       "ncertChapterName": "Breathing and Exchange of Gases",
-      "question": "Match the following:\n(P) Bohr effect - (1) CO2 displaces O2 binding on Hb at tissues\n(Q) Haldane effect - (2) O2 displaces CO2 from Hb at lungs\n(R) Chloride shift - (3) Cl- enters RBC as HCO3- exits\n(S) Carbonic anhydrase - (4) Catalyzes CO2 + H2O → H2CO3",
+      "question": "Match the following:\n(P) Bohr effect - (1) CO2 displaces O2 binding on Hb at tissues\n(Q) Haldane effect - (2) O2 displaces CO2 from Hb at lungs\n(R) Chloride shift - (3) Cl- enters RBC as HCO3- exits\n(S) Carbonic anhydrase - (4) Catalyzes CO2 + H2O \u2192 H2CO3",
       "options": [
         "P-2, Q-1, R-4, S-3",
         "P-1, Q-2, R-3, S-4",
@@ -2065,13 +2065,13 @@
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Arrange the correct sequence of air passage during inspiration:\n(i) Nostrils (ii) Pharynx (iii) Larynx (iv) Trachea (v) Bronchi (vi) Bronchioles (vii) Alveoli",
       "options": [
-        "(ii) → (i) → (iii) → (iv) → (v) → (vii) → (vi)",
-        "(i) → (ii) → (iii) → (iv) → (v) → (vi) → (vii)",
-        "(i) → (ii) → (iv) → (iii) → (v) → (vi) → (vii)",
-        "(i) → (iii) → (ii) → (iv) → (vi) → (v) → (vii)"
+        "(ii) \u2192 (i) \u2192 (iii) \u2192 (iv) \u2192 (v) \u2192 (vii) \u2192 (vi)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v) \u2192 (vi) \u2192 (vii)",
+        "(i) \u2192 (ii) \u2192 (iv) \u2192 (iii) \u2192 (v) \u2192 (vi) \u2192 (vii)",
+        "(i) \u2192 (iii) \u2192 (ii) \u2192 (iv) \u2192 (vi) \u2192 (v) \u2192 (vii)"
       ],
       "correctAnswer": "B",
-      "explanation": "The correct pathway of air during inspiration is: Nostrils → Pharynx → Larynx → Trachea → Bronchi → Bronchioles → Alveolar ducts → Alveoli. Air enters through nostrils, passes through the conducting pathway, and reaches the alveoli for gas exchange.",
+      "explanation": "The correct pathway of air during inspiration is: Nostrils \u2192 Pharynx \u2192 Larynx \u2192 Trachea \u2192 Bronchi \u2192 Bronchioles \u2192 Alveolar ducts \u2192 Alveoli. Air enters through nostrils, passes through the conducting pathway, and reaches the alveoli for gas exchange.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2090,13 +2090,13 @@
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Arrange the correct sequence of events during inspiration:\n(i) Contraction of diaphragm\n(ii) Increase in thoracic volume\n(iii) Decrease in intrapulmonary pressure\n(iv) Air rushes into the lungs\n(v) External intercostal muscles contract, lifting ribs",
       "options": [
-        "(i) and (v) → (ii) → (iii) → (iv)",
-        "(ii) → (iii) → (i) and (v) → (iv)",
-        "(iv) → (iii) → (ii) → (i) and (v)",
-        "(iii) → (iv) → (i) and (v) → (ii)"
+        "(i) and (v) \u2192 (ii) \u2192 (iii) \u2192 (iv)",
+        "(ii) \u2192 (iii) \u2192 (i) and (v) \u2192 (iv)",
+        "(iv) \u2192 (iii) \u2192 (ii) \u2192 (i) and (v)",
+        "(iii) \u2192 (iv) \u2192 (i) and (v) \u2192 (ii)"
       ],
       "correctAnswer": "A",
-      "explanation": "During inspiration: Diaphragm contracts/flattens and external intercostals contract to lift ribs (i,v) → Thoracic cavity volume increases (ii) → Intrapulmonary pressure falls below atmospheric pressure (iii) → Air rushes into the lungs along the pressure gradient (iv).",
+      "explanation": "During inspiration: Diaphragm contracts/flattens and external intercostals contract to lift ribs (i,v) \u2192 Thoracic cavity volume increases (ii) \u2192 Intrapulmonary pressure falls below atmospheric pressure (iii) \u2192 Air rushes into the lungs along the pressure gradient (iv).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2116,13 +2116,13 @@
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Arrange the correct sequence of CO2 transport from tissues to lungs:\n(i) CO2 produced in tissue cells\n(ii) CO2 diffuses into blood and enters RBCs\n(iii) Carbonic anhydrase converts CO2 + H2O to H2CO3\n(iv) H2CO3 dissociates into H+ and HCO3-\n(v) HCO3- moves out of RBC into plasma (chloride shift)\n(vi) At lungs, reverse reactions release CO2 for exhalation",
       "options": [
-        "(i) → (ii) → (iii) → (iv) → (v) → (vi)",
-        "(ii) → (i) → (iv) → (iii) → (vi) → (v)",
-        "(iii) → (i) → (ii) → (iv) → (v) → (vi)",
-        "(i) → (iii) → (ii) → (v) → (iv) → (vi)"
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v) \u2192 (vi)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (vi) \u2192 (v)",
+        "(iii) \u2192 (i) \u2192 (ii) \u2192 (iv) \u2192 (v) \u2192 (vi)",
+        "(i) \u2192 (iii) \u2192 (ii) \u2192 (v) \u2192 (iv) \u2192 (vi)"
       ],
       "correctAnswer": "A",
-      "explanation": "CO2 transport sequence: CO2 is produced in tissue cells (i) → diffuses into blood/RBCs (ii) → carbonic anhydrase catalyzes formation of H2CO3 (iii) → H2CO3 dissociates into H+ and HCO3- (iv) → HCO3- exits RBC via chloride shift (v) → at lungs, reverse reactions release CO2 for exhalation (vi).",
+      "explanation": "CO2 transport sequence: CO2 is produced in tissue cells (i) \u2192 diffuses into blood/RBCs (ii) \u2192 carbonic anhydrase catalyzes formation of H2CO3 (iii) \u2192 H2CO3 dissociates into H+ and HCO3- (iv) \u2192 HCO3- exits RBC via chloride shift (v) \u2192 at lungs, reverse reactions release CO2 for exhalation (vi).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2141,13 +2141,13 @@
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Arrange the branching of the respiratory tree in correct order from trachea to alveoli:",
       "options": [
-        "Trachea → Primary bronchi → Secondary bronchi → Tertiary bronchi → Bronchioles → Terminal bronchioles → Respiratory bronchioles → Alveolar ducts → Alveoli",
-        "Trachea → Primary bronchi → Bronchioles → Secondary bronchi → Alveolar ducts → Alveoli",
-        "Trachea → Secondary bronchi → Primary bronchi → Bronchioles → Alveoli",
-        "Trachea → Bronchioles → Primary bronchi → Secondary bronchi → Alveolar ducts → Alveoli"
+        "Trachea \u2192 Primary bronchi \u2192 Secondary bronchi \u2192 Tertiary bronchi \u2192 Bronchioles \u2192 Terminal bronchioles \u2192 Respiratory bronchioles \u2192 Alveolar ducts \u2192 Alveoli",
+        "Trachea \u2192 Primary bronchi \u2192 Bronchioles \u2192 Secondary bronchi \u2192 Alveolar ducts \u2192 Alveoli",
+        "Trachea \u2192 Secondary bronchi \u2192 Primary bronchi \u2192 Bronchioles \u2192 Alveoli",
+        "Trachea \u2192 Bronchioles \u2192 Primary bronchi \u2192 Secondary bronchi \u2192 Alveolar ducts \u2192 Alveoli"
       ],
       "correctAnswer": "A",
-      "explanation": "The respiratory tree branches progressively: Trachea → Primary (main) bronchi → Secondary (lobar) bronchi → Tertiary (segmental) bronchi → Bronchioles → Terminal bronchioles → Respiratory bronchioles → Alveolar ducts → Alveolar sacs → Alveoli.",
+      "explanation": "The respiratory tree branches progressively: Trachea \u2192 Primary (main) bronchi \u2192 Secondary (lobar) bronchi \u2192 Tertiary (segmental) bronchi \u2192 Bronchioles \u2192 Terminal bronchioles \u2192 Respiratory bronchioles \u2192 Alveolar ducts \u2192 Alveolar sacs \u2192 Alveoli.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2191,13 +2191,13 @@
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Arrange the correct sequence of neural regulation of breathing:\n(i) Respiratory rhythm centre generates impulses\n(ii) Impulses travel via phrenic and intercostal nerves\n(iii) Diaphragm and intercostal muscles contract\n(iv) Pneumotaxic centre modulates the rhythm\n(v) Inspiration occurs",
       "options": [
-        "(iv) → (i) → (iii) → (ii) → (v)",
-        "(i) → (ii) → (iii) → (v) → (iv)",
-        "(i) → (iv) → (ii) → (iii) → (v)",
-        "(ii) → (i) → (iv) → (v) → (iii)"
+        "(iv) \u2192 (i) \u2192 (iii) \u2192 (ii) \u2192 (v)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (v) \u2192 (iv)",
+        "(i) \u2192 (iv) \u2192 (ii) \u2192 (iii) \u2192 (v)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (v) \u2192 (iii)"
       ],
       "correctAnswer": "C",
-      "explanation": "Neural regulation sequence: The respiratory rhythm centre in medulla generates rhythmic impulses (i) → pneumotaxic centre in pons modulates the rhythm and duration (iv) → impulses travel via phrenic nerve (to diaphragm) and intercostal nerves (ii) → respiratory muscles contract (iii) → inspiration occurs (v).",
+      "explanation": "Neural regulation sequence: The respiratory rhythm centre in medulla generates rhythmic impulses (i) \u2192 pneumotaxic centre in pons modulates the rhythm and duration (iv) \u2192 impulses travel via phrenic nerve (to diaphragm) and intercostal nerves (ii) \u2192 respiratory muscles contract (iii) \u2192 inspiration occurs (v).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2216,19 +2216,304 @@
       "ncertChapterName": "Breathing and Exchange of Gases",
       "question": "Arrange the correct sequence of oxygen transport from lungs to tissues:\n(i) O2 diffuses from alveoli into blood\n(ii) O2 binds to haemoglobin forming HbO2\n(iii) Oxygenated blood reaches tissues via circulation\n(iv) At tissues, low pO2 causes O2 release from HbO2\n(v) O2 diffuses into tissue cells for cellular respiration",
       "options": [
-        "(i) → (iii) → (ii) → (iv) → (v)",
-        "(iii) → (i) → (ii) → (v) → (iv)",
-        "(i) → (ii) → (iii) → (iv) → (v)",
-        "(ii) → (i) → (iv) → (iii) → (v)"
+        "(i) \u2192 (iii) \u2192 (ii) \u2192 (iv) \u2192 (v)",
+        "(iii) \u2192 (i) \u2192 (ii) \u2192 (v) \u2192 (iv)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii) \u2192 (v)"
       ],
       "correctAnswer": "C",
-      "explanation": "O2 transport sequence: O2 diffuses from alveoli into pulmonary blood (i) → binds to Hb forming oxyhaemoglobin (ii) → oxygenated blood circulates to tissues (iii) → low pO2 at tissues causes O2 release (Bohr effect) (iv) → O2 diffuses into cells for aerobic respiration (v).",
+      "explanation": "O2 transport sequence: O2 diffuses from alveoli into pulmonary blood (i) \u2192 binds to Hb forming oxyhaemoglobin (ii) \u2192 oxygenated blood circulates to tissues (iii) \u2192 low pO2 at tissues causes O2 release (Bohr effect) (iv) \u2192 O2 diffuses into cells for aerobic respiration (v).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
       "tags": [
         "O2-transport",
         "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Breathing and Exchange of Gases",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "question": "The partial pressure of oxygen (pO\u2082) in alveoli is approximately:",
+      "options": [
+        "40 mmHg",
+        "100 mmHg",
+        "104 mmHg",
+        "159 mmHg"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the partial pressure of oxygen in alveoli is approximately 104 mmHg. In deoxygenated blood entering the lungs, pO\u2082 is about 40 mmHg. This pressure gradient drives oxygen from alveoli into the blood.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "gas-exchange",
+        "partial-pressure",
+        "oxygen"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Breathing and Exchange of Gases",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "question": "Tidal volume is the volume of air:",
+      "options": [
+        "Maximum air breathed in after normal expiration",
+        "Inspired or expired during normal breathing",
+        "That remains in lungs after maximum expiration",
+        "Maximum air breathed out after normal expiration"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, tidal volume (TV) is the volume of air inspired or expired during normal breathing, approximately 500 mL. Inspiratory reserve volume (IRV) is additional air that can be inhaled after normal inspiration.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lung-volumes",
+        "tidal-volume",
+        "breathing"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Breathing and Exchange of Gases",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "question": "The Bohr effect describes the relationship between:",
+      "options": [
+        "Temperature and oxygen binding",
+        "pH and oxygen binding to haemoglobin",
+        "Altitude and breathing rate",
+        "CO\u2082 and lung capacity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Bohr effect states that a decrease in blood pH (increase in H\u207a or CO\u2082) promotes dissociation of oxygen from haemoglobin. In tissues with high CO\u2082 and low pH, haemoglobin releases more oxygen, and in the lungs (high pH), it binds more oxygen.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "haemoglobin",
+        "bohr-effect",
+        "oxygen-dissociation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Breathing and Exchange of Gases",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "question": "Carbon monoxide is poisonous because it:",
+      "options": [
+        "Destroys red blood cells",
+        "Binds to haemoglobin 200 times more strongly than oxygen",
+        "Blocks the trachea",
+        "Dissolves in plasma and becomes acidic"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Carbon monoxide (CO) is highly poisonous because it binds to haemoglobin about 200 times more strongly than oxygen, forming carboxyhaemoglobin (COHb). This prevents haemoglobin from carrying oxygen, leading to oxygen deprivation and potentially death.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbon-monoxide",
+        "haemoglobin",
+        "poisoning"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Breathing and Exchange of Gases",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "question": "The most CO\u2082 is transported in blood as:",
+      "options": [
+        "Dissolved in plasma",
+        "Bound to haemoglobin (carbaminohaemoglobin)",
+        "Bicarbonate ions (HCO\u2083\u207b)",
+        "Carbonic acid"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, about 70% of CO\u2082 is transported as bicarbonate ions (HCO\u2083\u207b) in plasma. About 20-25% is bound to haemoglobin as carbaminohaemoglobin, and about 7% is dissolved directly in plasma.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "co2-transport",
+        "bicarbonate",
+        "blood"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Breathing and Exchange of Gases",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "question": "Vital capacity is equal to:",
+      "options": [
+        "TV + IRV",
+        "TV + ERV",
+        "TV + IRV + ERV",
+        "TV + IRV + ERV + RV"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, vital capacity (VC) = tidal volume (TV) + inspiratory reserve volume (IRV) + expiratory reserve volume (ERV). It represents the maximum volume of air a person can breathe in after maximum expiration (about 3400-4800 mL).",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lung-volumes",
+        "vital-capacity",
+        "spirometry"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Breathing and Exchange of Gases",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "question": "Oxygen is primarily transported in blood by binding to:",
+      "options": [
+        "Plasma proteins",
+        "White blood cells",
+        "Haemoglobin in RBCs",
+        "Platelets"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, about 97% of oxygen is transported bound to haemoglobin in red blood cells as oxyhaemoglobin. Only about 3% of oxygen is dissolved directly in plasma. Each haemoglobin molecule can bind 4 molecules of oxygen.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "oxygen-transport",
+        "haemoglobin",
+        "rbc"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Breathing and Exchange of Gases",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "question": "Emphysema is a chronic disorder characterised by:",
+      "options": [
+        "Inflammation of bronchi",
+        "Damage to alveolar walls reducing surface area for gas exchange",
+        "Spasm of bronchial muscles",
+        "Fluid accumulation in lungs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, emphysema is a chronic obstructive pulmonary disorder in which the alveolar walls are damaged, reducing the respiratory surface area. It is mainly caused by cigarette smoking and leads to breathlessness.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "respiratory-disorders",
+        "emphysema",
+        "alveoli"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Breathing and Exchange of Gases",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "question": "The respiratory centre is located in:",
+      "options": [
+        "Cerebrum",
+        "Cerebellum",
+        "Medulla oblongata",
+        "Hypothalamus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the respiratory rhythm centre is located in the medulla oblongata of the hindbrain. A pneumotaxic centre in the pons regulates the respiratory rhythm by sending signals to reduce the duration of inspiration.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "respiratory-centre",
+        "medulla",
+        "breathing-regulation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Breathing and Exchange of Gases",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "question": "Chloride shift (Hamburger phenomenon) occurs during:",
+      "options": [
+        "Oxygen transport only",
+        "CO\u2082 loading in tissues",
+        "Oxygen loading in lungs",
+        "Nitrogen transport"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Chloride shift occurs during CO\u2082 loading in tissues. When CO\u2082 enters RBCs and is converted to HCO\u2083\u207b by carbonic anhydrase, the HCO\u2083\u207b moves out into plasma and Cl\u207b moves in to maintain electrical neutrality. This is reversed in the lungs.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "chloride-shift",
+        "co2-transport",
+        "rbc"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Breathing and Exchange of Gases",
+      "chapter": "Breathing and Exchange of Gases",
+      "ncertClass": 11,
+      "ncertChapter": 17,
+      "ncertChapterName": "Breathing and Exchange of Gases",
+      "question": "Residual volume is the volume of air:",
+      "options": [
+        "Breathed in during normal breathing",
+        "That remains in lungs after maximum expiration",
+        "That can be additionally expired after normal expiration",
+        "Exchanged during one minute of breathing"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, residual volume (RV) is the volume of air remaining in the lungs even after maximum expiration, approximately 1100-1200 mL. This air cannot be expelled and prevents the collapse of the lungs.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "lung-volumes",
+        "residual-volume"
       ],
       "neetWeightage": "HIGH"
     }

@@ -2512,6 +2512,110 @@
         "rbc-production"
       ],
       "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Allen's rule states that:",
+      "options": [
+        "Animals in cold climates have larger body size",
+        "Animals in cold climates have shorter extremities",
+        "Animals in warm climates have darker pigmentation",
+        "Animals at higher altitudes have more haemoglobin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Allen's rule states that mammals from cold climates generally have shorter ears and limbs (extremities) to minimise heat loss. This is because shorter extremities reduce the surface area to volume ratio, thus conserving body heat.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "adaptation",
+        "allens-rule",
+        "thermoregulation"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "The logistic growth model is represented by the equation:",
+      "options": [
+        "dN/dt = rN",
+        "dN/dt = rN(K-N)/K",
+        "dN/dt = rN\u00b2",
+        "dN/dt = K-N"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the logistic growth model is dN/dt = rN(K-N)/K, where N is population size, r is intrinsic rate of increase, and K is carrying capacity. As N approaches K, growth rate slows, producing an S-shaped (sigmoid) curve.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "population-growth",
+        "logistic-model",
+        "carrying-capacity"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Mycorrhiza is an example of:",
+      "options": [
+        "Parasitism",
+        "Commensalism",
+        "Mutualism",
+        "Competition"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, mycorrhiza is a mutualistic association between fungi and roots of higher plants. The fungal hyphae increase the surface area for water and mineral absorption, while the plant provides sugars (organic food) to the fungus.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "mutualism",
+        "mycorrhiza",
+        "symbiosis"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Organisms and Populations",
+      "chapter": "Organisms and Populations",
+      "ncertClass": 12,
+      "ncertChapter": 13,
+      "ncertChapterName": "Organisms and Populations",
+      "question": "Gause's competitive exclusion principle states that:",
+      "options": [
+        "Two species can coexist in the same niche",
+        "Two closely related species competing for the same resources cannot coexist indefinitely",
+        "Predators regulate prey population",
+        "Parasites always kill their hosts"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, Gause's competitive exclusion principle states that two closely related species competing for the same resources cannot co-exist indefinitely \u2014 the competitively inferior one will be eliminated.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "competition",
+        "gauses-principle",
+        "niche"
+      ],
+      "neetWeightage": "HIGH"
     }
   ]
 }

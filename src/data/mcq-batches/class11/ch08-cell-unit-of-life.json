@@ -2488,6 +2488,110 @@
         "sequence"
       ],
       "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell: The Unit of Life",
+      "chapter": "Cell: The Unit of Life",
+      "ncertClass": 11,
+      "ncertChapter": 8,
+      "ncertChapterName": "Cell: The Unit of Life",
+      "question": "The fluid mosaic model of plasma membrane was proposed by:",
+      "options": [
+        "Robertson",
+        "Singer and Nicolson",
+        "Danielli and Davson",
+        "Overton"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the fluid mosaic model was proposed by Singer and Nicolson (1972). It describes the cell membrane as a fluid bilayer of phospholipids with proteins floating in it like a mosaic pattern.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "cell-membrane",
+        "fluid-mosaic",
+        "singer-nicolson"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell: The Unit of Life",
+      "chapter": "Cell: The Unit of Life",
+      "ncertClass": 11,
+      "ncertChapter": 8,
+      "ncertChapterName": "Cell: The Unit of Life",
+      "question": "The powerhouse of the cell is:",
+      "options": [
+        "Nucleus",
+        "Golgi apparatus",
+        "Mitochondria",
+        "Endoplasmic reticulum"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, mitochondria are called the powerhouse of the cell because they are the sites of aerobic respiration where ATP (energy currency) is produced through oxidative phosphorylation.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "mitochondria",
+        "atp",
+        "cell-organelles"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell: The Unit of Life",
+      "chapter": "Cell: The Unit of Life",
+      "ncertClass": 11,
+      "ncertChapter": 8,
+      "ncertChapterName": "Cell: The Unit of Life",
+      "question": "Centrioles are absent in the cells of:",
+      "options": [
+        "Animals",
+        "Lower plants",
+        "Higher plants",
+        "Fungi"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, centrioles are present in animal cells, lower plants, and some fungi. Higher plants (angiosperms and gymnosperms) lack centrioles. Despite this, they can still form spindle fibres during cell division.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "centriole",
+        "plant-cells",
+        "cell-division"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Cell: The Unit of Life",
+      "chapter": "Cell: The Unit of Life",
+      "ncertClass": 11,
+      "ncertChapter": 8,
+      "ncertChapterName": "Cell: The Unit of Life",
+      "question": "Which organelle is involved in the formation of lysosomes?",
+      "options": [
+        "Endoplasmic reticulum",
+        "Golgi apparatus",
+        "Mitochondria",
+        "Peroxisomes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the Golgi apparatus (Golgi complex) packages hydrolytic enzymes into membrane-bound vesicles to form lysosomes. Lysosomes contain digestive enzymes that break down cellular waste and foreign material.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "golgi-apparatus",
+        "lysosomes",
+        "cell-organelles"
+      ],
+      "neetWeightage": "HIGH"
     }
   ]
 }

@@ -2295,13 +2295,13 @@
       "ncertChapterName": "Animal Kingdom",
       "question": "Arrange the following phyla in the correct evolutionary sequence from simplest to most complex:\n(i) Annelida\n(ii) Porifera\n(iii) Cnidaria\n(iv) Platyhelminthes",
       "options": [
-        "(iv) → (ii) → (iii) → (i)",
-        "(iii) → (ii) → (iv) → (i)",
-        "(ii) → (iv) → (iii) → (i)",
-        "(ii) → (iii) → (iv) → (i)"
+        "(iv) \u2192 (ii) \u2192 (iii) \u2192 (i)",
+        "(iii) \u2192 (ii) \u2192 (iv) \u2192 (i)",
+        "(ii) \u2192 (iv) \u2192 (iii) \u2192 (i)",
+        "(ii) \u2192 (iii) \u2192 (iv) \u2192 (i)"
       ],
       "correctAnswer": "D",
-      "explanation": "The correct evolutionary sequence from simplest to most complex is: Porifera (cellular level) → Cnidaria (tissue level, diploblastic) → Platyhelminthes (organ level, triploblastic, acoelomate) → Annelida (organ-system level, coelomate). (NCERT Chapter 4)",
+      "explanation": "The correct evolutionary sequence from simplest to most complex is: Porifera (cellular level) \u2192 Cnidaria (tissue level, diploblastic) \u2192 Platyhelminthes (organ level, triploblastic, acoelomate) \u2192 Annelida (organ-system level, coelomate). (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2321,13 +2321,13 @@
       "ncertChapterName": "Animal Kingdom",
       "question": "Arrange the following vertebrate classes in the correct evolutionary sequence:\n(i) Mammalia\n(ii) Amphibia\n(iii) Reptilia\n(iv) Osteichthyes",
       "options": [
-        "(ii) → (iv) → (iii) → (i)",
-        "(ii) → (iii) → (iv) → (i)",
-        "(iv) → (iii) → (ii) → (i)",
-        "(iv) → (ii) → (iii) → (i)"
+        "(ii) \u2192 (iv) \u2192 (iii) \u2192 (i)",
+        "(ii) \u2192 (iii) \u2192 (iv) \u2192 (i)",
+        "(iv) \u2192 (iii) \u2192 (ii) \u2192 (i)",
+        "(iv) \u2192 (ii) \u2192 (iii) \u2192 (i)"
       ],
       "correctAnswer": "D",
-      "explanation": "The correct evolutionary sequence of vertebrate classes is: Osteichthyes (bony fishes) → Amphibia (first land vertebrates) → Reptilia (fully terrestrial) → Mammalia (most advanced). This represents the transition from aquatic to terrestrial life. (NCERT Chapter 4)",
+      "explanation": "The correct evolutionary sequence of vertebrate classes is: Osteichthyes (bony fishes) \u2192 Amphibia (first land vertebrates) \u2192 Reptilia (fully terrestrial) \u2192 Mammalia (most advanced). This represents the transition from aquatic to terrestrial life. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2347,13 +2347,13 @@
       "ncertChapterName": "Animal Kingdom",
       "question": "Arrange the following in the correct sequence of increasing complexity of body cavity:\n(i) Coelomate\n(ii) Acoelomate\n(iii) Pseudocoelomate",
       "options": [
-        "(iii) → (ii) → (i)",
-        "(ii) → (iii) → (i)",
-        "(ii) → (i) → (iii)",
-        "(i) → (ii) → (iii)"
+        "(iii) \u2192 (ii) \u2192 (i)",
+        "(ii) \u2192 (iii) \u2192 (i)",
+        "(ii) \u2192 (i) \u2192 (iii)",
+        "(i) \u2192 (ii) \u2192 (iii)"
       ],
       "correctAnswer": "B",
-      "explanation": "The correct sequence of increasing complexity of body cavity is: Acoelomate (no body cavity, e.g., Platyhelminthes) → Pseudocoelomate (false coelom, e.g., Aschelminthes) → Coelomate (true coelom, e.g., Annelida). (NCERT Chapter 4)",
+      "explanation": "The correct sequence of increasing complexity of body cavity is: Acoelomate (no body cavity, e.g., Platyhelminthes) \u2192 Pseudocoelomate (false coelom, e.g., Aschelminthes) \u2192 Coelomate (true coelom, e.g., Annelida). (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2373,13 +2373,13 @@
       "ncertChapterName": "Animal Kingdom",
       "question": "Arrange the following levels of organisation in increasing order of complexity:\n(i) Organ-system level\n(ii) Cellular level\n(iii) Tissue level\n(iv) Organ level",
       "options": [
-        "(iii) → (ii) → (iv) → (i)",
-        "(ii) → (iv) → (iii) → (i)",
-        "(ii) → (iii) → (iv) → (i)",
-        "(i) → (iii) → (iv) → (ii)"
+        "(iii) \u2192 (ii) \u2192 (iv) \u2192 (i)",
+        "(ii) \u2192 (iv) \u2192 (iii) \u2192 (i)",
+        "(ii) \u2192 (iii) \u2192 (iv) \u2192 (i)",
+        "(i) \u2192 (iii) \u2192 (iv) \u2192 (ii)"
       ],
       "correctAnswer": "C",
-      "explanation": "The correct sequence of increasing complexity is: Cellular level (Porifera) → Tissue level (Cnidaria) → Organ level (Platyhelminthes) → Organ-system level (Annelida and higher phyla). Each level builds upon the previous one. (NCERT Chapter 4)",
+      "explanation": "The correct sequence of increasing complexity is: Cellular level (Porifera) \u2192 Tissue level (Cnidaria) \u2192 Organ level (Platyhelminthes) \u2192 Organ-system level (Annelida and higher phyla). Each level builds upon the previous one. (NCERT Chapter 4)",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2398,13 +2398,13 @@
       "ncertChapterName": "Animal Kingdom",
       "question": "Arrange the following in the correct sequence of the chordate hierarchy:\n(i) Vertebrata\n(ii) Cephalochordata\n(iii) Urochordata",
       "options": [
-        "(iii) → (ii) → (i)",
-        "(i) → (ii) → (iii)",
-        "(ii) → (i) → (iii)",
-        "(ii) → (iii) → (i)"
+        "(iii) \u2192 (ii) \u2192 (i)",
+        "(i) \u2192 (ii) \u2192 (iii)",
+        "(ii) \u2192 (i) \u2192 (iii)",
+        "(ii) \u2192 (iii) \u2192 (i)"
       ],
       "correctAnswer": "A",
-      "explanation": "The correct sequence from primitive to advanced chordates is: Urochordata (notochord only in larval tail) → Cephalochordata (notochord head to tail throughout life) → Vertebrata (notochord replaced by vertebral column). This represents increasing complexity of chordate features. (NCERT Chapter 4)",
+      "explanation": "The correct sequence from primitive to advanced chordates is: Urochordata (notochord only in larval tail) \u2192 Cephalochordata (notochord head to tail throughout life) \u2192 Vertebrata (notochord replaced by vertebral column). This represents increasing complexity of chordate features. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2424,13 +2424,13 @@
       "ncertChapterName": "Animal Kingdom",
       "question": "Arrange the following phyla in the correct sequence as they appear in animal classification (lower to higher):\n(i) Arthropoda\n(ii) Mollusca\n(iii) Aschelminthes\n(iv) Annelida",
       "options": [
-        "(iii) → (iv) → (ii) → (i)",
-        "(iv) → (iii) → (i) → (ii)",
-        "(iii) → (iv) → (i) → (ii)",
-        "(iii) → (ii) → (iv) → (i)"
+        "(iii) \u2192 (iv) \u2192 (ii) \u2192 (i)",
+        "(iv) \u2192 (iii) \u2192 (i) \u2192 (ii)",
+        "(iii) \u2192 (iv) \u2192 (i) \u2192 (ii)",
+        "(iii) \u2192 (ii) \u2192 (iv) \u2192 (i)"
       ],
       "correctAnswer": "C",
-      "explanation": "The correct sequence from lower to higher phyla is: Aschelminthes (pseudocoelomate) → Annelida (segmented worms) → Arthropoda (jointed appendages) → Mollusca (soft-bodied). This follows the standard NCERT classification sequence. (NCERT Chapter 4)",
+      "explanation": "The correct sequence from lower to higher phyla is: Aschelminthes (pseudocoelomate) \u2192 Annelida (segmented worms) \u2192 Arthropoda (jointed appendages) \u2192 Mollusca (soft-bodied). This follows the standard NCERT classification sequence. (NCERT Chapter 4)",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2450,13 +2450,13 @@
       "ncertChapterName": "Animal Kingdom",
       "question": "Arrange the following classes of fishes and fish-like vertebrates in evolutionary sequence:\n(i) Osteichthyes\n(ii) Chondrichthyes\n(iii) Cyclostomata",
       "options": [
-        "(ii) → (iii) → (i)",
-        "(i) → (ii) → (iii)",
-        "(ii) → (i) → (iii)",
-        "(iii) → (ii) → (i)"
+        "(ii) \u2192 (iii) \u2192 (i)",
+        "(i) \u2192 (ii) \u2192 (iii)",
+        "(ii) \u2192 (i) \u2192 (iii)",
+        "(iii) \u2192 (ii) \u2192 (i)"
       ],
       "correctAnswer": "D",
-      "explanation": "The correct evolutionary sequence is: Cyclostomata (jawless, most primitive) → Chondrichthyes (cartilaginous, jaws evolved) → Osteichthyes (bony, most advanced fishes). This shows the progression from jawless to jawed to bony vertebrates. (NCERT Chapter 4)",
+      "explanation": "The correct evolutionary sequence is: Cyclostomata (jawless, most primitive) \u2192 Chondrichthyes (cartilaginous, jaws evolved) \u2192 Osteichthyes (bony, most advanced fishes). This shows the progression from jawless to jawed to bony vertebrates. (NCERT Chapter 4)",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2466,6 +2466,134 @@
         "sequence"
       ],
       "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Animal Kingdom",
+      "chapter": "Animal Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 4,
+      "ncertChapterName": "Animal Kingdom",
+      "question": "Which of the following animals shows bioluminescence?",
+      "options": [
+        "Asterias",
+        "Ctenoplana",
+        "Nereis",
+        "Ancylostoma"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ctenophores like Ctenoplana show bioluminescence \u2014 the property of emitting light. They are commonly known as sea walnuts or comb jellies. They use comb plates (ctenes) for locomotion.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ctenophora",
+        "bioluminescence"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Animal Kingdom",
+      "chapter": "Animal Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 4,
+      "ncertChapterName": "Animal Kingdom",
+      "question": "Flame cells are the excretory structures found in:",
+      "options": [
+        "Annelida",
+        "Platyhelminthes",
+        "Arthropoda",
+        "Mollusca"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, flame cells (protonephridia) are the excretory structures in Platyhelminthes (flatworms). Annelids have nephridia, arthropods have Malpighian tubules, and molluscs have kidneys.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "platyhelminthes",
+        "flame-cells",
+        "excretion"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Animal Kingdom",
+      "chapter": "Animal Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 4,
+      "ncertChapterName": "Animal Kingdom",
+      "question": "Which phylum is characterised by the presence of water vascular system?",
+      "options": [
+        "Mollusca",
+        "Arthropoda",
+        "Echinodermata",
+        "Hemichordata"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, echinoderms possess a unique water vascular system (ambulacral system) that helps in locomotion, capture and transport of food, and respiration. Examples include starfish, sea urchins, and sea cucumbers.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "echinodermata",
+        "water-vascular-system"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Animal Kingdom",
+      "chapter": "Animal Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 4,
+      "ncertChapterName": "Animal Kingdom",
+      "question": "Metameric segmentation is a characteristic feature of:",
+      "options": [
+        "Nematoda",
+        "Annelida",
+        "Platyhelminthes",
+        "Coelenterata"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, annelids show metameric segmentation (metamerism) \u2014 the body is divided into segments (metameres) that are arranged in a linear series. Each segment contains a similar set of organs. Examples include earthworm and leech.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "annelida",
+        "metamerism",
+        "segmentation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Animal Kingdom",
+      "chapter": "Animal Kingdom",
+      "ncertClass": 11,
+      "ncertChapter": 4,
+      "ncertChapterName": "Animal Kingdom",
+      "question": "Lateral line system is a sensory organ found in:",
+      "options": [
+        "Amphibians",
+        "Reptiles",
+        "Fishes",
+        "Mammals"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the lateral line system is a sense organ found in fishes and larval amphibians. It consists of a series of canals along the body that detect water pressure changes and vibrations, helping in navigation and predator detection.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pisces",
+        "lateral-line",
+        "sensory-organ"
+      ],
+      "neetWeightage": "MEDIUM"
     }
   ]
 }

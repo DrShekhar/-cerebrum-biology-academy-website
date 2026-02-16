@@ -2383,6 +2383,240 @@
         "carbon-atoms"
       ],
       "neetWeightage": "LOW"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following is a reducing sugar?",
+      "options": [
+        "Sucrose",
+        "Starch",
+        "Maltose",
+        "Cellulose"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Maltose is a reducing sugar because it has a free anomeric carbon that can act as a reducing agent. Sucrose is a non-reducing sugar because both anomeric carbons of glucose and fructose are involved in the glycosidic bond.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "reducing-sugar",
+        "maltose"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Enzymes are chemically:",
+      "options": [
+        "Lipids",
+        "Carbohydrates",
+        "Proteins",
+        "Nucleic acids"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, almost all enzymes are proteins (except ribozymes which are catalytic RNA). They are biological catalysts that increase the rate of biochemical reactions without being consumed in the process.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "proteins",
+        "biocatalysts"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "The lock and key model of enzyme action was proposed by:",
+      "options": [
+        "Koshland",
+        "Emil Fischer",
+        "Michaelis and Menten",
+        "Buchner"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Emil Fischer (1894) proposed the lock and key hypothesis, which states that the active site of an enzyme has a specific shape that fits exactly with the substrate like a key fits into a lock. Koshland proposed the induced fit model.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "lock-key",
+        "fischer"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which of the following is the most abundant protein in the animal world?",
+      "options": [
+        "Haemoglobin",
+        "Albumin",
+        "Collagen",
+        "Keratin"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, collagen is the most abundant protein in the animal world. It is a structural protein found in connective tissues such as bone, cartilage, tendons, and skin. RuBisCO is the most abundant protein in the biosphere.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "proteins",
+        "collagen",
+        "structural-protein"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Competitive inhibition of an enzyme can be overcome by:",
+      "options": [
+        "Increasing temperature",
+        "Decreasing pH",
+        "Increasing substrate concentration",
+        "Adding more inhibitor"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, in competitive inhibition, the inhibitor competes with the substrate for the active site. Increasing substrate concentration overcomes this inhibition because more substrate molecules outcompete the inhibitor for binding to the active site.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "competitive-inhibition",
+        "kinetics"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Which amino acid is the simplest, having only hydrogen as its R group?",
+      "options": [
+        "Alanine",
+        "Glycine",
+        "Valine",
+        "Leucine"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Glycine is the simplest amino acid with hydrogen (H) as its R group. It is the only amino acid that is not optically active (achiral) because its alpha carbon has two identical substituents (two hydrogen atoms).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "amino-acids",
+        "glycine",
+        "structure"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "The secondary structure of proteins includes:",
+      "options": [
+        "Peptide bond formation",
+        "Alpha-helix and beta-pleated sheet",
+        "Quaternary association of subunits",
+        "Disulphide bond formation between distant residues"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the secondary structure of proteins involves the folding of the polypeptide chain into alpha-helix or beta-pleated sheet structures, stabilised by hydrogen bonds between the C=O and N-H groups of the peptide backbone.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "proteins",
+        "secondary-structure",
+        "alpha-helix"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Cofactors are:",
+      "options": [
+        "Always proteins",
+        "Non-protein components needed for enzyme activity",
+        "Substrates",
+        "Products of enzymatic reactions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, cofactors are non-protein components that are needed for the catalytic activity of certain enzymes. They may be prosthetic groups (tightly bound), coenzymes (loosely associated organic compounds like NAD\u207a), or metal ions (like Zn\u00b2\u207a).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "enzymes",
+        "cofactors",
+        "coenzymes"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Biomolecules",
+      "chapter": "Biomolecules",
+      "ncertClass": 11,
+      "ncertChapter": 9,
+      "ncertChapterName": "Biomolecules",
+      "question": "Chitin is a polymer of:",
+      "options": [
+        "Glucose",
+        "Fructose",
+        "N-acetylglucosamine",
+        "Galactose"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Chitin is a homopolysaccharide made up of N-acetylglucosamine (NAG) units linked by beta-1,4-glycosidic bonds. It forms the exoskeleton of arthropods and the cell wall of fungi.",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "carbohydrates",
+        "chitin",
+        "polysaccharide"
+      ],
+      "neetWeightage": "MEDIUM"
     }
   ]
 }

@@ -73,7 +73,7 @@
         "Less than 1"
       ],
       "correctAnswer": "A",
-      "explanation": "RQ = CO2 evolved / O2 consumed. For carbohydrates like glucose (C6H12O6 + 6O2 → 6CO2 + 6H2O), RQ = 6CO2/6O2 = 1.",
+      "explanation": "RQ = CO2 evolved / O2 consumed. For carbohydrates like glucose (C6H12O6 + 6O2 \u2192 6CO2 + 6H2O), RQ = 6CO2/6O2 = 1.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -177,7 +177,7 @@
         "6"
       ],
       "correctAnswer": "A",
-      "explanation": "Each turn of the TCA cycle releases 2 molecules of CO2 (one during isocitrate → α-ketoglutarate and one during α-ketoglutarate → succinyl CoA). For 2 acetyl CoA molecules, 4 CO2 are released.",
+      "explanation": "Each turn of the TCA cycle releases 2 molecules of CO2 (one during isocitrate \u2192 \u03b1-ketoglutarate and one during \u03b1-ketoglutarate \u2192 succinyl CoA). For 2 acetyl CoA molecules, 4 CO2 are released.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -639,10 +639,10 @@
       "ncertChapterName": "Respiration in Plants",
       "question": "Which step of glycolysis is catalyzed by phosphofructokinase?",
       "options": [
-        "Glucose → Glucose-6-phosphate",
-        "Fructose-6-phosphate → Fructose-1,6-bisphosphate",
-        "1,3-bisphosphoglycerate → 3-phosphoglycerate",
-        "PEP → Pyruvate"
+        "Glucose \u2192 Glucose-6-phosphate",
+        "Fructose-6-phosphate \u2192 Fructose-1,6-bisphosphate",
+        "1,3-bisphosphoglycerate \u2192 3-phosphoglycerate",
+        "PEP \u2192 Pyruvate"
       ],
       "correctAnswer": "B",
       "explanation": "Phosphofructokinase (PFK) catalyzes the phosphorylation of fructose-6-phosphate to fructose-1,6-bisphosphate using ATP. This is the rate-limiting step and major regulatory point of glycolysis.",
@@ -745,12 +745,12 @@
       "question": "Which of the following is a 5-carbon compound in the Krebs cycle?",
       "options": [
         "Succinate",
-        "α-ketoglutarate",
+        "\u03b1-ketoglutarate",
         "Oxaloacetate",
         "Citrate"
       ],
       "correctAnswer": "B",
-      "explanation": "α-ketoglutarate is a 5-carbon compound in the Krebs cycle. It is formed from isocitrate by oxidative decarboxylation catalyzed by isocitrate dehydrogenase. Citrate is 6C, succinate is 4C, and OAA is 4C.",
+      "explanation": "\u03b1-ketoglutarate is a 5-carbon compound in the Krebs cycle. It is formed from isocitrate by oxidative decarboxylation catalyzed by isocitrate dehydrogenase. Citrate is 6C, succinate is 4C, and OAA is 4C.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -799,7 +799,7 @@
         "Citrate is converted to isocitrate",
         "Malate is converted to oxaloacetate",
         "Succinate is converted to fumarate",
-        "α-ketoglutarate is converted to succinyl CoA"
+        "\u03b1-ketoglutarate is converted to succinyl CoA"
       ],
       "correctAnswer": "C",
       "explanation": "FADH2 is produced when succinate is oxidized to fumarate by succinate dehydrogenase (Complex II). This is the only step in the TCA cycle that produces FADH2 and the only enzyme of the TCA cycle located on the inner mitochondrial membrane.",
@@ -900,13 +900,13 @@
       "ncertChapterName": "Respiration in Plants",
       "question": "Which of the following is the correct sequence in the electron transport chain?",
       "options": [
-        "Complex I → Ubiquinone → Complex III → Cytochrome c → Complex IV",
-        "Complex I → Complex III → Ubiquinone → Complex IV",
-        "Complex I → Cytochrome c → Complex III → Complex IV",
-        "Complex II → Complex I → Complex III → Complex IV"
+        "Complex I \u2192 Ubiquinone \u2192 Complex III \u2192 Cytochrome c \u2192 Complex IV",
+        "Complex I \u2192 Complex III \u2192 Ubiquinone \u2192 Complex IV",
+        "Complex I \u2192 Cytochrome c \u2192 Complex III \u2192 Complex IV",
+        "Complex II \u2192 Complex I \u2192 Complex III \u2192 Complex IV"
       ],
       "correctAnswer": "A",
-      "explanation": "The correct sequence of electron transport is: Complex I (NADH dehydrogenase) → Ubiquinone (CoQ) → Complex III (cytochrome bc1) → Cytochrome c → Complex IV (cytochrome c oxidase) → O2.",
+      "explanation": "The correct sequence of electron transport is: Complex I (NADH dehydrogenase) \u2192 Ubiquinone (CoQ) \u2192 Complex III (cytochrome bc1) \u2192 Cytochrome c \u2192 Complex IV (cytochrome c oxidase) \u2192 O2.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -952,10 +952,10 @@
       "ncertChapterName": "Respiration in Plants",
       "question": "In the Krebs cycle, which of the following conversions involves substrate-level phosphorylation?",
       "options": [
-        "Malate → Oxaloacetate",
-        "Succinyl CoA → Succinate",
-        "Isocitrate → α-ketoglutarate",
-        "Succinate → Fumarate"
+        "Malate \u2192 Oxaloacetate",
+        "Succinyl CoA \u2192 Succinate",
+        "Isocitrate \u2192 \u03b1-ketoglutarate",
+        "Succinate \u2192 Fumarate"
       ],
       "correctAnswer": "B",
       "explanation": "The conversion of succinyl CoA to succinate, catalyzed by succinyl CoA synthetase, is the only step in the Krebs cycle where substrate-level phosphorylation occurs, producing 1 GTP (equivalent to 1 ATP).",
@@ -1325,7 +1325,7 @@
         "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "D",
-      "explanation": "Both are true and R correctly explains A. The link reaction (pyruvate → acetyl CoA) releases CO2 and produces NADH but does not directly produce ATP by substrate-level phosphorylation. The NADH produced later yields ATP through oxidative phosphorylation.",
+      "explanation": "Both are true and R correctly explains A. The link reaction (pyruvate \u2192 acetyl CoA) releases CO2 and produces NADH but does not directly produce ATP by substrate-level phosphorylation. The NADH produced later yields ATP through oxidative phosphorylation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1430,7 +1430,7 @@
         "I, II, III, and IV"
       ],
       "correctAnswer": "A",
-      "explanation": "Statement I is correct (TCA cycle occurs in mitochondrial matrix). Statement II is correct (2 CO2 per turn). Statement III is incorrect (3 NADH per turn, not 4). Statement IV is correct (1 GTP by substrate-level phosphorylation at succinyl CoA → succinate step).",
+      "explanation": "Statement I is correct (TCA cycle occurs in mitochondrial matrix). Statement II is correct (2 CO2 per turn). Statement III is incorrect (3 NADH per turn, not 4). Statement IV is correct (1 GTP by substrate-level phosphorylation at succinyl CoA \u2192 succinate step).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1764,7 +1764,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the following ETS complexes with their names:\nColumn I (Complex) → Column II (Name)\n(a) Complex I → (i) Cytochrome c oxidase\n(b) Complex II → (ii) Cytochrome bc1 complex\n(c) Complex III → (iii) NADH dehydrogenase\n(d) Complex IV → (iv) Succinate dehydrogenase",
+      "question": "Match the following ETS complexes with their names:\nColumn I (Complex) \u2192 Column II (Name)\n(a) Complex I \u2192 (i) Cytochrome c oxidase\n(b) Complex II \u2192 (ii) Cytochrome bc1 complex\n(c) Complex III \u2192 (iii) NADH dehydrogenase\n(d) Complex IV \u2192 (iv) Succinate dehydrogenase",
       "options": [
         "a-iv, b-iii, c-i, d-ii",
         "a-iii, b-iv, c-ii, d-i",
@@ -1790,7 +1790,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the following substrates with their RQ values:\nColumn I (Substrate) → Column II (RQ)\n(a) Carbohydrates → (i) 0.7\n(b) Fats → (ii) Greater than 1\n(c) Proteins → (iii) 1.0\n(d) Organic acids → (iv) 0.8",
+      "question": "Match the following substrates with their RQ values:\nColumn I (Substrate) \u2192 Column II (RQ)\n(a) Carbohydrates \u2192 (i) 0.7\n(b) Fats \u2192 (ii) Greater than 1\n(c) Proteins \u2192 (iii) 1.0\n(d) Organic acids \u2192 (iv) 0.8",
       "options": [
         "a-iii, b-i, c-iv, d-ii",
         "a-i, b-iii, c-ii, d-iv",
@@ -1798,7 +1798,7 @@
         "a-iii, b-iv, c-i, d-ii"
       ],
       "correctAnswer": "A",
-      "explanation": "Carbohydrates have RQ = 1.0 (a-iii), Fats have RQ ≈ 0.7 (b-i), Proteins have RQ ≈ 0.8 (c-iv), Organic acids have RQ > 1 (d-ii, e.g., malic acid RQ = 1.33).",
+      "explanation": "Carbohydrates have RQ = 1.0 (a-iii), Fats have RQ \u2248 0.7 (b-i), Proteins have RQ \u2248 0.8 (c-iv), Organic acids have RQ > 1 (d-ii, e.g., malic acid RQ = 1.33).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1816,7 +1816,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the following enzymes with their reactions in the Krebs cycle:\nColumn I (Enzyme) → Column II (Reaction)\n(a) Citrate synthase → (i) Succinate → Fumarate\n(b) Isocitrate dehydrogenase → (ii) Acetyl CoA + OAA → Citrate\n(c) Succinate dehydrogenase → (iii) Malate → OAA\n(d) Malate dehydrogenase → (iv) Isocitrate → α-ketoglutarate",
+      "question": "Match the following enzymes with their reactions in the Krebs cycle:\nColumn I (Enzyme) \u2192 Column II (Reaction)\n(a) Citrate synthase \u2192 (i) Succinate \u2192 Fumarate\n(b) Isocitrate dehydrogenase \u2192 (ii) Acetyl CoA + OAA \u2192 Citrate\n(c) Succinate dehydrogenase \u2192 (iii) Malate \u2192 OAA\n(d) Malate dehydrogenase \u2192 (iv) Isocitrate \u2192 \u03b1-ketoglutarate",
       "options": [
         "a-iv, b-ii, c-iii, d-i",
         "a-ii, b-iv, c-i, d-iii",
@@ -1824,7 +1824,7 @@
         "a-ii, b-i, c-iv, d-iii"
       ],
       "correctAnswer": "B",
-      "explanation": "Citrate synthase catalyzes Acetyl CoA + OAA → Citrate (a-ii). Isocitrate dehydrogenase catalyzes Isocitrate → α-ketoglutarate (b-iv). Succinate dehydrogenase catalyzes Succinate → Fumarate (c-i). Malate dehydrogenase catalyzes Malate → OAA (d-iii).",
+      "explanation": "Citrate synthase catalyzes Acetyl CoA + OAA \u2192 Citrate (a-ii). Isocitrate dehydrogenase catalyzes Isocitrate \u2192 \u03b1-ketoglutarate (b-iv). Succinate dehydrogenase catalyzes Succinate \u2192 Fumarate (c-i). Malate dehydrogenase catalyzes Malate \u2192 OAA (d-iii).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1842,7 +1842,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the following processes with their cellular locations:\nColumn I (Process) → Column II (Location)\n(a) Glycolysis → (i) Inner mitochondrial membrane\n(b) Krebs cycle → (ii) Cytoplasm\n(c) ETS → (iii) Mitochondrial matrix\n(d) Oxidative decarboxylation of pyruvate → (iv) Mitochondrial matrix",
+      "question": "Match the following processes with their cellular locations:\nColumn I (Process) \u2192 Column II (Location)\n(a) Glycolysis \u2192 (i) Inner mitochondrial membrane\n(b) Krebs cycle \u2192 (ii) Cytoplasm\n(c) ETS \u2192 (iii) Mitochondrial matrix\n(d) Oxidative decarboxylation of pyruvate \u2192 (iv) Mitochondrial matrix",
       "options": [
         "a-i, b-iii, c-ii, d-iv",
         "a-iii, b-ii, c-i, d-iv",
@@ -1867,7 +1867,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the following products with the stages of aerobic respiration:\nColumn I (Product/molecule) → Column II (Stage)\n(a) 2 ATP (net) + 2 NADH → (i) ETS and oxidative phosphorylation\n(b) 2 NADH + 2 CO2 → (ii) Glycolysis\n(c) 6 NADH + 2 FADH2 + 2 GTP → (iii) Link reaction\n(d) 34 ATP → (iv) Krebs cycle",
+      "question": "Match the following products with the stages of aerobic respiration:\nColumn I (Product/molecule) \u2192 Column II (Stage)\n(a) 2 ATP (net) + 2 NADH \u2192 (i) ETS and oxidative phosphorylation\n(b) 2 NADH + 2 CO2 \u2192 (ii) Glycolysis\n(c) 6 NADH + 2 FADH2 + 2 GTP \u2192 (iii) Link reaction\n(d) 34 ATP \u2192 (iv) Krebs cycle",
       "options": [
         "a-ii, b-iii, c-iv, d-i",
         "a-ii, b-iv, c-iii, d-i",
@@ -1893,7 +1893,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the following Krebs cycle intermediates with their carbon numbers:\nColumn I (Intermediate) → Column II (Carbon atoms)\n(a) Citrate → (i) 5C\n(b) α-ketoglutarate → (ii) 4C\n(c) Succinate → (iii) 6C\n(d) Oxaloacetate → (iv) 4C",
+      "question": "Match the following Krebs cycle intermediates with their carbon numbers:\nColumn I (Intermediate) \u2192 Column II (Carbon atoms)\n(a) Citrate \u2192 (i) 5C\n(b) \u03b1-ketoglutarate \u2192 (ii) 4C\n(c) Succinate \u2192 (iii) 6C\n(d) Oxaloacetate \u2192 (iv) 4C",
       "options": [
         "a-ii, b-i, c-iii, d-iv",
         "a-iii, b-ii, c-i, d-iv",
@@ -1901,7 +1901,7 @@
         "a-iii, b-i, c-ii, d-iv"
       ],
       "correctAnswer": "D",
-      "explanation": "Citrate has 6 carbons (a-iii). α-ketoglutarate has 5 carbons (b-i). Succinate has 4 carbons (c-ii). Oxaloacetate has 4 carbons (d-iv).",
+      "explanation": "Citrate has 6 carbons (a-iii). \u03b1-ketoglutarate has 5 carbons (b-i). Succinate has 4 carbons (c-ii). Oxaloacetate has 4 carbons (d-iv).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1919,7 +1919,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the following glycolysis enzymes with their substrates:\nColumn I (Enzyme) → Column II (Substrate)\n(a) Hexokinase → (i) Fructose-6-phosphate\n(b) Phosphofructokinase → (ii) PEP\n(c) Pyruvate kinase → (iii) Glucose\n(d) Aldolase → (iv) Fructose-1,6-bisphosphate",
+      "question": "Match the following glycolysis enzymes with their substrates:\nColumn I (Enzyme) \u2192 Column II (Substrate)\n(a) Hexokinase \u2192 (i) Fructose-6-phosphate\n(b) Phosphofructokinase \u2192 (ii) PEP\n(c) Pyruvate kinase \u2192 (iii) Glucose\n(d) Aldolase \u2192 (iv) Fructose-1,6-bisphosphate",
       "options": [
         "a-iii, b-iv, c-i, d-ii",
         "a-iv, b-i, c-ii, d-iii",
@@ -1945,7 +1945,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the following types of fermentation with their end products:\nColumn I (Type) → Column II (End product)\n(a) Alcoholic fermentation → (i) Lactic acid\n(b) Lactic acid fermentation → (ii) Ethanol + CO2\n(c) Aerobic respiration → (iii) Pyruvic acid\n(d) Glycolysis → (iv) CO2 + H2O",
+      "question": "Match the following types of fermentation with their end products:\nColumn I (Type) \u2192 Column II (End product)\n(a) Alcoholic fermentation \u2192 (i) Lactic acid\n(b) Lactic acid fermentation \u2192 (ii) Ethanol + CO2\n(c) Aerobic respiration \u2192 (iii) Pyruvic acid\n(d) Glycolysis \u2192 (iv) CO2 + H2O",
       "options": [
         "a-i, b-ii, c-iii, d-iv",
         "a-iii, b-i, c-iv, d-ii",
@@ -1971,7 +1971,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the following scientists with their contributions:\nColumn I (Scientist) → Column II (Contribution)\n(a) Hans Krebs → (i) Chemiosmotic hypothesis\n(b) Peter Mitchell → (ii) EMP pathway\n(c) Embden, Meyerhof, Parnas → (iii) TCA cycle\n(d) Louis Pasteur → (iv) Fermentation studies",
+      "question": "Match the following scientists with their contributions:\nColumn I (Scientist) \u2192 Column II (Contribution)\n(a) Hans Krebs \u2192 (i) Chemiosmotic hypothesis\n(b) Peter Mitchell \u2192 (ii) EMP pathway\n(c) Embden, Meyerhof, Parnas \u2192 (iii) TCA cycle\n(d) Louis Pasteur \u2192 (iv) Fermentation studies",
       "options": [
         "a-ii, b-iii, c-i, d-iv",
         "a-i, b-iii, c-iv, d-ii",
@@ -1997,7 +1997,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the NADH/FADH2 source with the ATP yield per glucose molecule:\nColumn I (Source) → Column II (ATP equivalents)\n(a) 2 NADH from glycolysis → (i) 18 ATP\n(b) 2 NADH from link reaction → (ii) 4 ATP\n(c) 6 NADH from Krebs cycle → (iii) 6 ATP\n(d) 2 FADH2 from Krebs cycle → (iv) 6 ATP",
+      "question": "Match the NADH/FADH2 source with the ATP yield per glucose molecule:\nColumn I (Source) \u2192 Column II (ATP equivalents)\n(a) 2 NADH from glycolysis \u2192 (i) 18 ATP\n(b) 2 NADH from link reaction \u2192 (ii) 4 ATP\n(c) 6 NADH from Krebs cycle \u2192 (iii) 6 ATP\n(d) 2 FADH2 from Krebs cycle \u2192 (iv) 6 ATP",
       "options": [
         "a-iv, b-iii, c-i, d-ii",
         "a-ii, b-iv, c-i, d-iii",
@@ -2023,7 +2023,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the following inhibitors with the ETS complexes they inhibit:\nColumn I (Inhibitor) → Column II (Target)\n(a) Rotenone → (i) Complex III\n(b) Antimycin A → (ii) ATP synthase\n(c) Cyanide → (iii) Complex I\n(d) Oligomycin → (iv) Complex IV",
+      "question": "Match the following inhibitors with the ETS complexes they inhibit:\nColumn I (Inhibitor) \u2192 Column II (Target)\n(a) Rotenone \u2192 (i) Complex III\n(b) Antimycin A \u2192 (ii) ATP synthase\n(c) Cyanide \u2192 (iii) Complex I\n(d) Oligomycin \u2192 (iv) Complex IV",
       "options": [
         "a-iii, b-i, c-iv, d-ii",
         "a-iii, b-iv, c-i, d-ii",
@@ -2049,7 +2049,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the following Krebs cycle reactions with the type of product formed:\nColumn I (Reaction) → Column II (Product type)\n(a) Isocitrate → α-ketoglutarate → (i) FADH2\n(b) α-ketoglutarate → Succinyl CoA → (ii) GTP\n(c) Succinyl CoA → Succinate → (iii) NADH + CO2\n(d) Succinate → Fumarate → (iv) NADH + CO2",
+      "question": "Match the following Krebs cycle reactions with the type of product formed:\nColumn I (Reaction) \u2192 Column II (Product type)\n(a) Isocitrate \u2192 \u03b1-ketoglutarate \u2192 (i) FADH2\n(b) \u03b1-ketoglutarate \u2192 Succinyl CoA \u2192 (ii) GTP\n(c) Succinyl CoA \u2192 Succinate \u2192 (iii) NADH + CO2\n(d) Succinate \u2192 Fumarate \u2192 (iv) NADH + CO2",
       "options": [
         "a-i, b-iv, c-ii, d-iii",
         "a-iii, b-i, c-ii, d-iv",
@@ -2057,7 +2057,7 @@
         "a-iv, b-iii, c-i, d-ii"
       ],
       "correctAnswer": "C",
-      "explanation": "Isocitrate → α-ketoglutarate produces NADH + CO2 (a-iii, oxidative decarboxylation). α-ketoglutarate → Succinyl CoA produces NADH + CO2 (b-iv, oxidative decarboxylation). Succinyl CoA → Succinate produces GTP (c-ii, substrate-level phosphorylation). Succinate → Fumarate produces FADH2 (d-i).",
+      "explanation": "Isocitrate \u2192 \u03b1-ketoglutarate produces NADH + CO2 (a-iii, oxidative decarboxylation). \u03b1-ketoglutarate \u2192 Succinyl CoA produces NADH + CO2 (b-iv, oxidative decarboxylation). Succinyl CoA \u2192 Succinate produces GTP (c-ii, substrate-level phosphorylation). Succinate \u2192 Fumarate produces FADH2 (d-i).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2076,7 +2076,7 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Match the following coenzymes/carriers with their roles:\nColumn I (Carrier) → Column II (Role)\n(a) NAD+ → (i) Mobile electron carrier between Complex I/II and III\n(b) FAD → (ii) Proton channel in ATP synthase\n(c) Ubiquinone (CoQ) → (iii) Electron acceptor in dehydrogenation reactions\n(d) F0 subunit → (iv) Electron acceptor in succinate dehydrogenase reaction",
+      "question": "Match the following coenzymes/carriers with their roles:\nColumn I (Carrier) \u2192 Column II (Role)\n(a) NAD+ \u2192 (i) Mobile electron carrier between Complex I/II and III\n(b) FAD \u2192 (ii) Proton channel in ATP synthase\n(c) Ubiquinone (CoQ) \u2192 (iii) Electron acceptor in dehydrogenation reactions\n(d) F0 subunit \u2192 (iv) Electron acceptor in succinate dehydrogenase reaction",
       "options": [
         "a-iv, b-iii, c-ii, d-i",
         "a-iii, b-iv, c-i, d-ii",
@@ -2188,7 +2188,7 @@
         "2"
       ],
       "correctAnswer": "D",
-      "explanation": "Two decarboxylation reactions occur per turn of the Krebs cycle: (1) Isocitrate → α-ketoglutarate (by isocitrate dehydrogenase) and (2) α-ketoglutarate → succinyl CoA (by α-ketoglutarate dehydrogenase). Both release one CO2 each.",
+      "explanation": "Two decarboxylation reactions occur per turn of the Krebs cycle: (1) Isocitrate \u2192 \u03b1-ketoglutarate (by isocitrate dehydrogenase) and (2) \u03b1-ketoglutarate \u2192 succinyl CoA (by \u03b1-ketoglutarate dehydrogenase). Both release one CO2 each.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2292,7 +2292,7 @@
         "4"
       ],
       "correctAnswer": "C",
-      "explanation": "In the preparatory phase of glycolysis, 2 ATP molecules are consumed: one by hexokinase (glucose → glucose-6-phosphate) and one by phosphofructokinase (fructose-6-phosphate → fructose-1,6-bisphosphate).",
+      "explanation": "In the preparatory phase of glycolysis, 2 ATP molecules are consumed: one by hexokinase (glucose \u2192 glucose-6-phosphate) and one by phosphofructokinase (fructose-6-phosphate \u2192 fructose-1,6-bisphosphate).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2310,15 +2310,15 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Arrange the following Krebs cycle intermediates in the correct sequence:\n(i) α-ketoglutarate\n(ii) Citrate\n(iii) Succinate\n(iv) Oxaloacetate",
+      "question": "Arrange the following Krebs cycle intermediates in the correct sequence:\n(i) \u03b1-ketoglutarate\n(ii) Citrate\n(iii) Succinate\n(iv) Oxaloacetate",
       "options": [
-        "ii → iii → i → iv",
-        "ii → i → iii → iv",
-        "iv → i → ii → iii",
-        "iv → ii → i → iii"
+        "ii \u2192 iii \u2192 i \u2192 iv",
+        "ii \u2192 i \u2192 iii \u2192 iv",
+        "iv \u2192 i \u2192 ii \u2192 iii",
+        "iv \u2192 ii \u2192 i \u2192 iii"
       ],
       "correctAnswer": "B",
-      "explanation": "The correct sequence starting from citrate in the Krebs cycle is: Citrate (ii) → Isocitrate → α-ketoglutarate (i) → Succinyl CoA → Succinate (iii) → Fumarate → Malate → Oxaloacetate (iv). So the order is ii → i → iii → iv.",
+      "explanation": "The correct sequence starting from citrate in the Krebs cycle is: Citrate (ii) \u2192 Isocitrate \u2192 \u03b1-ketoglutarate (i) \u2192 Succinyl CoA \u2192 Succinate (iii) \u2192 Fumarate \u2192 Malate \u2192 Oxaloacetate (iv). So the order is ii \u2192 i \u2192 iii \u2192 iv.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2338,13 +2338,13 @@
       "ncertChapterName": "Respiration in Plants",
       "question": "Arrange the following events of aerobic respiration in the correct order:\n(i) Krebs cycle\n(ii) Glycolysis\n(iii) Oxidative phosphorylation\n(iv) Oxidative decarboxylation of pyruvate",
       "options": [
-        "ii → i → iv → iii",
-        "ii → iii → iv → i",
-        "iv → ii → i → iii",
-        "ii → iv → i → iii"
+        "ii \u2192 i \u2192 iv \u2192 iii",
+        "ii \u2192 iii \u2192 iv \u2192 i",
+        "iv \u2192 ii \u2192 i \u2192 iii",
+        "ii \u2192 iv \u2192 i \u2192 iii"
       ],
       "correctAnswer": "D",
-      "explanation": "The correct sequence of aerobic respiration is: Glycolysis (ii) → Oxidative decarboxylation of pyruvate/Link reaction (iv) → Krebs cycle (i) → Oxidative phosphorylation/ETS (iii).",
+      "explanation": "The correct sequence of aerobic respiration is: Glycolysis (ii) \u2192 Oxidative decarboxylation of pyruvate/Link reaction (iv) \u2192 Krebs cycle (i) \u2192 Oxidative phosphorylation/ETS (iii).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2364,13 +2364,13 @@
       "ncertChapterName": "Respiration in Plants",
       "question": "Arrange the following electron carriers of the ETS in the correct order of electron flow:\n(i) Cytochrome c\n(ii) Complex I\n(iii) Complex IV\n(iv) Ubiquinone\n(v) Complex III",
       "options": [
-        "iv → ii → v → iii → i",
-        "ii → v → iv → i → iii",
-        "ii → iv → v → i → iii",
-        "ii → iv → i → v → iii"
+        "iv \u2192 ii \u2192 v \u2192 iii \u2192 i",
+        "ii \u2192 v \u2192 iv \u2192 i \u2192 iii",
+        "ii \u2192 iv \u2192 v \u2192 i \u2192 iii",
+        "ii \u2192 iv \u2192 i \u2192 v \u2192 iii"
       ],
       "correctAnswer": "C",
-      "explanation": "The correct sequence of electron flow in ETS is: Complex I (NADH dehydrogenase) (ii) → Ubiquinone/CoQ (iv) → Complex III (cytochrome bc1) (v) → Cytochrome c (i) → Complex IV (cytochrome c oxidase) (iii) → O2.",
+      "explanation": "The correct sequence of electron flow in ETS is: Complex I (NADH dehydrogenase) (ii) \u2192 Ubiquinone/CoQ (iv) \u2192 Complex III (cytochrome bc1) (v) \u2192 Cytochrome c (i) \u2192 Complex IV (cytochrome c oxidase) (iii) \u2192 O2.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2390,13 +2390,13 @@
       "ncertChapterName": "Respiration in Plants",
       "question": "Arrange the following glycolysis intermediates in the correct order:\n(i) Fructose-1,6-bisphosphate\n(ii) Glucose-6-phosphate\n(iii) Phosphoenolpyruvate (PEP)\n(iv) 3-phosphoglyceric acid (3-PGA)",
       "options": [
-        "ii → i → iii → iv",
-        "i → ii → iii → iv",
-        "ii → i → iv → iii",
-        "i → ii → iv → iii"
+        "ii \u2192 i \u2192 iii \u2192 iv",
+        "i \u2192 ii \u2192 iii \u2192 iv",
+        "ii \u2192 i \u2192 iv \u2192 iii",
+        "i \u2192 ii \u2192 iv \u2192 iii"
       ],
       "correctAnswer": "C",
-      "explanation": "The correct order in glycolysis is: Glucose → Glucose-6-phosphate (ii) → Fructose-6-phosphate → Fructose-1,6-bisphosphate (i) → G3P/DHAP → 1,3-BPG → 3-phosphoglyceric acid (iv) → 2-PGA → PEP (iii) → Pyruvate.",
+      "explanation": "The correct order in glycolysis is: Glucose \u2192 Glucose-6-phosphate (ii) \u2192 Fructose-6-phosphate \u2192 Fructose-1,6-bisphosphate (i) \u2192 G3P/DHAP \u2192 1,3-BPG \u2192 3-phosphoglyceric acid (iv) \u2192 2-PGA \u2192 PEP (iii) \u2192 Pyruvate.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2416,13 +2416,13 @@
       "ncertChapterName": "Respiration in Plants",
       "question": "Arrange the following steps of alcoholic fermentation in the correct sequence:\n(i) Acetaldehyde is reduced to ethanol\n(ii) Glucose is broken down to pyruvate\n(iii) Pyruvate is decarboxylated to acetaldehyde\n(iv) NADH is oxidized to NAD+",
       "options": [
-        "ii → iii → iv → i",
-        "i → ii → iii → iv",
-        "ii → iv → iii → i",
-        "ii → iii → i → iv"
+        "ii \u2192 iii \u2192 iv \u2192 i",
+        "i \u2192 ii \u2192 iii \u2192 iv",
+        "ii \u2192 iv \u2192 iii \u2192 i",
+        "ii \u2192 iii \u2192 i \u2192 iv"
       ],
       "correctAnswer": "D",
-      "explanation": "The correct sequence is: Glucose → Pyruvate via glycolysis (ii) → Pyruvate decarboxylated to acetaldehyde + CO2 (iii) → Acetaldehyde reduced to ethanol (i) using NADH → NAD+ is regenerated (iv). Steps i and iv occur simultaneously.",
+      "explanation": "The correct sequence is: Glucose \u2192 Pyruvate via glycolysis (ii) \u2192 Pyruvate decarboxylated to acetaldehyde + CO2 (iii) \u2192 Acetaldehyde reduced to ethanol (i) using NADH \u2192 NAD+ is regenerated (iv). Steps i and iv occur simultaneously.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2442,13 +2442,13 @@
       "ncertChapterName": "Respiration in Plants",
       "question": "Arrange the following events of the chemiosmotic hypothesis in correct order:\n(i) ATP is synthesized by ATP synthase\n(ii) Electrons flow through the ETS complexes\n(iii) Protons flow back through F0 channel\n(iv) Protons accumulate in the intermembrane space",
       "options": [
-        "iv → iii → ii → i",
-        "ii → iii → iv → i",
-        "ii → iv → iii → i",
-        "iv → ii → iii → i"
+        "iv \u2192 iii \u2192 ii \u2192 i",
+        "ii \u2192 iii \u2192 iv \u2192 i",
+        "ii \u2192 iv \u2192 iii \u2192 i",
+        "iv \u2192 ii \u2192 iii \u2192 i"
       ],
       "correctAnswer": "C",
-      "explanation": "The correct sequence is: Electrons flow through ETS complexes (ii) → Protons are pumped to and accumulate in intermembrane space (iv) → Protons flow back through F0 channel down the concentration gradient (iii) → ATP is synthesized by ATP synthase using the proton motive force (i).",
+      "explanation": "The correct sequence is: Electrons flow through ETS complexes (ii) \u2192 Protons are pumped to and accumulate in intermembrane space (iv) \u2192 Protons flow back through F0 channel down the concentration gradient (iii) \u2192 ATP is synthesized by ATP synthase using the proton motive force (i).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2466,15 +2466,15 @@
       "ncertClass": 11,
       "ncertChapter": 14,
       "ncertChapterName": "Respiration in Plants",
-      "question": "Arrange the following Krebs cycle reactions in correct order starting from acetyl CoA:\n(i) Succinyl CoA → Succinate\n(ii) Acetyl CoA + OAA → Citrate\n(iii) Isocitrate → α-ketoglutarate\n(iv) Fumarate → Malate",
+      "question": "Arrange the following Krebs cycle reactions in correct order starting from acetyl CoA:\n(i) Succinyl CoA \u2192 Succinate\n(ii) Acetyl CoA + OAA \u2192 Citrate\n(iii) Isocitrate \u2192 \u03b1-ketoglutarate\n(iv) Fumarate \u2192 Malate",
       "options": [
-        "iii → ii → i → iv",
-        "ii → iii → i → iv",
-        "ii → iii → iv → i",
-        "ii → i → iii → iv"
+        "iii \u2192 ii \u2192 i \u2192 iv",
+        "ii \u2192 iii \u2192 i \u2192 iv",
+        "ii \u2192 iii \u2192 iv \u2192 i",
+        "ii \u2192 i \u2192 iii \u2192 iv"
       ],
       "correctAnswer": "B",
-      "explanation": "The correct order starting from acetyl CoA is: Acetyl CoA + OAA → Citrate (ii) → Citrate → Isocitrate → α-ketoglutarate (iii) → α-ketoglutarate → Succinyl CoA → Succinate (i) → Succinate → Fumarate → Malate (iv) → OAA.",
+      "explanation": "The correct order starting from acetyl CoA is: Acetyl CoA + OAA \u2192 Citrate (ii) \u2192 Citrate \u2192 Isocitrate \u2192 \u03b1-ketoglutarate (iii) \u2192 \u03b1-ketoglutarate \u2192 Succinyl CoA \u2192 Succinate (i) \u2192 Succinate \u2192 Fumarate \u2192 Malate (iv) \u2192 OAA.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2482,6 +2482,135 @@
         "Krebs cycle",
         "sequence",
         "reactions"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The net gain of ATP from one molecule of glucose during glycolysis is:",
+      "options": [
+        "4 ATP",
+        "2 ATP",
+        "8 ATP",
+        "38 ATP"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, during glycolysis, 4 ATP are produced (substrate-level phosphorylation) but 2 ATP are consumed in the initial steps. So the net gain is 2 ATP per glucose molecule.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "glycolysis",
+        "atp",
+        "energy-yield"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The Krebs cycle occurs in the:",
+      "options": [
+        "Cytoplasm",
+        "Mitochondrial matrix",
+        "Inner mitochondrial membrane",
+        "Outer mitochondrial membrane"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the Krebs cycle (TCA cycle/citric acid cycle) takes place in the mitochondrial matrix. Glycolysis occurs in the cytoplasm, and the electron transport chain is located in the inner mitochondrial membrane.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "krebs-cycle",
+        "mitochondria",
+        "cellular-respiration"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "RQ (Respiratory Quotient) for carbohydrates is:",
+      "options": [
+        "0.7",
+        "0.8",
+        "1.0",
+        "Greater than 1"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the respiratory quotient (RQ = CO\u2082 evolved / O\u2082 consumed) is 1.0 for carbohydrates, less than 1 for fats (about 0.7), and greater than 1 for organic acids. This helps determine which substrate is being respired.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "respiratory-quotient",
+        "carbohydrates"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "The terminal electron acceptor in aerobic respiration is:",
+      "options": [
+        "NAD\u207a",
+        "FAD",
+        "Cytochrome c",
+        "Molecular oxygen (O\u2082)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "As per NCERT, molecular oxygen (O\u2082) is the terminal electron acceptor in the electron transport chain during aerobic respiration. Electrons are passed through a series of carriers and finally combine with O\u2082 and H\u207a to form water.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "etc",
+        "electron-acceptor",
+        "oxygen"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Respiration in Plants",
+      "chapter": "Respiration in Plants",
+      "ncertClass": 11,
+      "ncertChapter": 14,
+      "ncertChapterName": "Respiration in Plants",
+      "question": "Fermentation in yeast produces:",
+      "options": [
+        "Lactic acid and CO\u2082",
+        "Ethanol and CO\u2082",
+        "Acetic acid and CO\u2082",
+        "Ethanol and O\u2082"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, in yeast, anaerobic respiration (fermentation) converts pyruvic acid to ethanol (ethyl alcohol) and CO\u2082. In animal muscles, anaerobic respiration produces lactic acid instead.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "fermentation",
+        "yeast",
+        "ethanol"
       ],
       "neetWeightage": "HIGH"
     }

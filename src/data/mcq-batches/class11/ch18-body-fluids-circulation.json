@@ -518,10 +518,10 @@
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "The correct sequence of cardiac conduction is:",
       "options": [
-        "SA node → AV node → Bundle of His → Purkinje fibres",
-        "AV node → SA node → Bundle of His → Purkinje fibres",
-        "AV node → Purkinje fibres → SA node → Bundle of His",
-        "SA node → Purkinje fibres → AV node → Bundle of His"
+        "SA node \u2192 AV node \u2192 Bundle of His \u2192 Purkinje fibres",
+        "AV node \u2192 SA node \u2192 Bundle of His \u2192 Purkinje fibres",
+        "AV node \u2192 Purkinje fibres \u2192 SA node \u2192 Bundle of His",
+        "SA node \u2192 Purkinje fibres \u2192 AV node \u2192 Bundle of His"
       ],
       "correctAnswer": "A",
       "explanation": "The cardiac impulse originates at the SA node, travels to the AV node, then through the Bundle of His (which divides into right and left branches), and finally through the Purkinje fibres to the ventricular musculature.",
@@ -676,7 +676,7 @@
         "Calcium"
       ],
       "correctAnswer": "D",
-      "explanation": "Calcium ions (Ca²⁺) are essential for blood coagulation. They are required at several steps of the clotting cascade, including the conversion of prothrombin to thrombin and the activation of various clotting factors.",
+      "explanation": "Calcium ions (Ca\u00b2\u207a) are essential for blood coagulation. They are required at several steps of the clotting cascade, including the conversion of prothrombin to thrombin and the activation of various clotting factors.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -821,10 +821,10 @@
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Which of the following is the correct pairing of a blood group with its antibodies?",
       "options": [
-        "Blood group A – Anti-A antibodies",
-        "Blood group O – Anti-A antibodies only",
-        "Blood group AB – Anti-A and Anti-B antibodies",
-        "Blood group B – Anti-A antibodies"
+        "Blood group A \u2013 Anti-A antibodies",
+        "Blood group O \u2013 Anti-A antibodies only",
+        "Blood group AB \u2013 Anti-A and Anti-B antibodies",
+        "Blood group B \u2013 Anti-A antibodies"
       ],
       "correctAnswer": "D",
       "explanation": "Blood group B has B antigens on RBC surface and anti-A antibodies in plasma. Blood group A has anti-B, AB has no antibodies, and O has both anti-A and anti-B antibodies.",
@@ -903,7 +903,7 @@
         "150 mL"
       ],
       "correctAnswer": "C",
-      "explanation": "The stroke volume (volume of blood pumped by each ventricle per beat) is approximately 70 mL in a healthy adult at rest. Cardiac output = Stroke volume (70 mL) x Heart rate (72/min) ≈ 5 L/min.",
+      "explanation": "The stroke volume (volume of blood pumped by each ventricle per beat) is approximately 70 mL in a healthy adult at rest. Cardiac output = Stroke volume (70 mL) x Heart rate (72/min) \u2248 5 L/min.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -980,7 +980,7 @@
         "Four times in each cardiac cycle"
       ],
       "correctAnswer": "B",
-      "explanation": "In double circulation, blood passes through the heart twice in each complete cycle — once through pulmonary circulation (right heart to lungs and back) and once through systemic circulation (left heart to body and back).",
+      "explanation": "In double circulation, blood passes through the heart twice in each complete cycle \u2014 once through pulmonary circulation (right heart to lungs and back) and once through systemic circulation (left heart to body and back).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1056,7 +1056,7 @@
         "A is true but R is false"
       ],
       "correctAnswer": "D",
-      "explanation": "Veins do have valves while arteries do not, so the assertion is true. However, the reason is false — blood flows through veins at LOW pressure (not high pressure). Valves in veins prevent the backflow of blood because the low pressure in veins is insufficient to maintain unidirectional flow, especially against gravity.",
+      "explanation": "Veins do have valves while arteries do not, so the assertion is true. However, the reason is false \u2014 blood flows through veins at LOW pressure (not high pressure). Valves in veins prevent the backflow of blood because the low pressure in veins is insufficient to maintain unidirectional flow, especially against gravity.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1083,7 +1083,7 @@
         "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "C",
-      "explanation": "The assertion is true — the left ventricle has a thicker wall. The reason is false because the left ventricle pumps blood to the entire body (systemic circulation), not to the lungs. It is the right ventricle that pumps blood to the lungs. The thicker wall is needed to generate the high pressure required for systemic circulation.",
+      "explanation": "The assertion is true \u2014 the left ventricle has a thicker wall. The reason is false because the left ventricle pumps blood to the entire body (systemic circulation), not to the lungs. It is the right ventricle that pumps blood to the lungs. The thicker wall is needed to generate the high pressure required for systemic circulation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1214,7 +1214,7 @@
         "Both A and R are true but R is NOT the correct explanation of A"
       ],
       "correctAnswer": "A",
-      "explanation": "The assertion is true — the pulmonary artery carries deoxygenated blood from the right ventricle to the lungs. The reason is false because arteries carry blood AWAY from the heart but not always oxygenated blood (the pulmonary artery is an exception).",
+      "explanation": "The assertion is true \u2014 the pulmonary artery carries deoxygenated blood from the right ventricle to the lungs. The reason is false because arteries carry blood AWAY from the heart but not always oxygenated blood (the pulmonary artery is an exception).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1318,7 +1318,7 @@
         "Both A and R are true and R is the correct explanation of A"
       ],
       "correctAnswer": "C",
-      "explanation": "The assertion is true — cardiac output does increase during exercise (up to 20-25 L/min in athletes). The reason is false because during exercise, BOTH stroke volume AND heart rate increase, leading to increased cardiac output.",
+      "explanation": "The assertion is true \u2014 cardiac output does increase during exercise (up to 20-25 L/min in athletes). The reason is false because during exercise, BOTH stroke volume AND heart rate increase, leading to increased cardiac output.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1370,7 +1370,7 @@
         "(i), (ii) and (iii) only"
       ],
       "correctAnswer": "D",
-      "explanation": "Statements (i), (ii), and (iii) are correct. Plasma constitutes about 55% of blood, water forms 90-92% of plasma, and albumin is the most abundant plasma protein. Statement (iv) is incorrect — plasma without clotting factors is called serum, not lymph.",
+      "explanation": "Statements (i), (ii), and (iii) are correct. Plasma constitutes about 55% of blood, water forms 90-92% of plasma, and albumin is the most abundant plasma protein. Statement (iv) is incorrect \u2014 plasma without clotting factors is called serum, not lymph.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1396,7 +1396,7 @@
         "(ii), (iii) and (iv) only"
       ],
       "correctAnswer": "A",
-      "explanation": "Statements (i), (ii), and (iii) are correct. Atrial systole = 0.1 s, ventricular systole = 0.3 s, joint diastole = 0.4 s. Statement (iv) is incorrect — the complete cardiac cycle takes about 0.8 seconds (0.1 + 0.3 + 0.4 = 0.8 s) at 72 beats/min.",
+      "explanation": "Statements (i), (ii), and (iii) are correct. Atrial systole = 0.1 s, ventricular systole = 0.3 s, joint diastole = 0.4 s. Statement (iv) is incorrect \u2014 the complete cardiac cycle takes about 0.8 seconds (0.1 + 0.3 + 0.4 = 0.8 s) at 72 beats/min.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1422,7 +1422,7 @@
         "All of the above"
       ],
       "correctAnswer": "C",
-      "explanation": "Statements (i), (ii), and (iv) are correct. Neutrophils are the most abundant (60-65%), lymphocytes mediate immune responses, and eosinophils are associated with allergic reactions. Statement (iii) is incorrect — monocytes are the LARGEST WBCs, not the smallest.",
+      "explanation": "Statements (i), (ii), and (iv) are correct. Neutrophils are the most abundant (60-65%), lymphocytes mediate immune responses, and eosinophils are associated with allergic reactions. Statement (iii) is incorrect \u2014 monocytes are the LARGEST WBCs, not the smallest.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1439,7 +1439,7 @@
       "ncertClass": 11,
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
-      "question": "Which of the following statements about the human heart is/are INCORRECT?\n(i) The heart is covered by a double-layered pericardium.\n(ii) The heart has four chambers — two atria and two ventricles.\n(iii) The right ventricle pumps blood to the systemic circulation.\n(iv) The interatrial and interventricular septa separate the heart into right and left halves.",
+      "question": "Which of the following statements about the human heart is/are INCORRECT?\n(i) The heart is covered by a double-layered pericardium.\n(ii) The heart has four chambers \u2014 two atria and two ventricles.\n(iii) The right ventricle pumps blood to the systemic circulation.\n(iv) The interatrial and interventricular septa separate the heart into right and left halves.",
       "options": [
         "(iii) only",
         "(i) only",
@@ -1473,7 +1473,7 @@
         "(i) and (ii) only"
       ],
       "correctAnswer": "A",
-      "explanation": "All four statements are correct. Thromboplastin is released from injured tissues, prothrombin is activated to thrombin by Ca²⁺ and thromboplastin, thrombin converts fibrinogen to fibrin, and vitamin K is essential for prothrombin synthesis in the liver.",
+      "explanation": "All four statements are correct. Thromboplastin is released from injured tissues, prothrombin is activated to thrombin by Ca\u00b2\u207a and thromboplastin, thrombin converts fibrinogen to fibrin, and vitamin K is essential for prothrombin synthesis in the liver.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1491,7 +1491,7 @@
       "ncertClass": 11,
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
-      "question": "Which of the following statements about lymph is/are correct?\n(i) Lymph is formed by filtration of blood through capillary walls.\n(ii) Lymph contains all types of blood cells.\n(iii) Lymph flows in one direction — from tissues to the heart.\n(iv) Lymph nodes contain lymphocytes that filter pathogens.",
+      "question": "Which of the following statements about lymph is/are correct?\n(i) Lymph is formed by filtration of blood through capillary walls.\n(ii) Lymph contains all types of blood cells.\n(iii) Lymph flows in one direction \u2014 from tissues to the heart.\n(iv) Lymph nodes contain lymphocytes that filter pathogens.",
       "options": [
         "(i) and (ii) only",
         "(ii) and (iii) only",
@@ -1499,7 +1499,7 @@
         "(i), (iii) and (iv) only"
       ],
       "correctAnswer": "D",
-      "explanation": "Statements (i), (iii), and (iv) are correct. Lymph is formed by filtration of plasma through capillary walls, flows unidirectionally towards the heart, and lymph nodes contain lymphocytes. Statement (ii) is incorrect — lymph lacks RBCs and platelets.",
+      "explanation": "Statements (i), (iii), and (iv) are correct. Lymph is formed by filtration of plasma through capillary walls, flows unidirectionally towards the heart, and lymph nodes contain lymphocytes. Statement (ii) is incorrect \u2014 lymph lacks RBCs and platelets.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1525,7 +1525,7 @@
         "All of the above"
       ],
       "correctAnswer": "A",
-      "explanation": "Statements (i), (ii), and (iv) are correct. P wave = atrial depolarisation, QRS complex = ventricular depolarisation, and the interval between QRS and T wave represents ventricular contraction. Statement (iii) is incorrect — T wave represents ventricular repolarisation, not atrial repolarisation.",
+      "explanation": "Statements (i), (ii), and (iv) are correct. P wave = atrial depolarisation, QRS complex = ventricular depolarisation, and the interval between QRS and T wave represents ventricular contraction. Statement (iii) is incorrect \u2014 T wave represents ventricular repolarisation, not atrial repolarisation.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1577,7 +1577,7 @@
         "All of the above"
       ],
       "correctAnswer": "C",
-      "explanation": "Statements (i), (ii), and (iv) are correct. RBCs are formed in red bone marrow, WBCs are nucleated and fewer than RBCs, and normal WBC count is 6000-8000/mm³. Statement (iii) is incorrect — platelets have a lifespan of only 3-5 days, not 120 days (which is the lifespan of RBCs).",
+      "explanation": "Statements (i), (ii), and (iv) are correct. RBCs are formed in red bone marrow, WBCs are nucleated and fewer than RBCs, and normal WBC count is 6000-8000/mm\u00b3. Statement (iii) is incorrect \u2014 platelets have a lifespan of only 3-5 days, not 120 days (which is the lifespan of RBCs).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1605,7 +1605,7 @@
         "All of the above"
       ],
       "correctAnswer": "A",
-      "explanation": "Statements (i), (ii), and (iii) are correct. Arteries carry blood away from the heart, veins carry blood towards the heart, and capillaries are the exchange sites. Statement (iv) is incorrect — the pulmonary arteries carry deoxygenated blood from the heart to the lungs.",
+      "explanation": "Statements (i), (ii), and (iii) are correct. Arteries carry blood away from the heart, veins carry blood towards the heart, and capillaries are the exchange sites. Statement (iv) is incorrect \u2014 the pulmonary arteries carry deoxygenated blood from the heart to the lungs.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1630,7 +1630,7 @@
         "(i) and (ii) only"
       ],
       "correctAnswer": "A",
-      "explanation": "Statements (i) and (iv) are incorrect. Atherosclerosis is the deposition of cholesterol and fats (not calcium) in arterial walls. Heart failure does not mean the heart has stopped — it means the heart cannot pump blood efficiently enough. Arteriosclerosis (not atherosclerosis) refers to hardening of arteries.",
+      "explanation": "Statements (i) and (iv) are incorrect. Atherosclerosis is the deposition of cholesterol and fats (not calcium) in arterial walls. Heart failure does not mean the heart has stopped \u2014 it means the heart cannot pump blood efficiently enough. Arteriosclerosis (not atherosclerosis) refers to hardening of arteries.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1657,7 +1657,7 @@
         "(i), (ii) and (iii) only"
       ],
       "correctAnswer": "D",
-      "explanation": "Statements (i), (ii), and (iii) are correct. The heart is regulated by the autonomic nervous system — sympathetic nerves increase and parasympathetic (vagus) nerves decrease heart rate. Statement (iv) is incorrect — adrenal medullary hormones (adrenaline/noradrenaline) increase heart rate and cardiac output.",
+      "explanation": "Statements (i), (ii), and (iii) are correct. The heart is regulated by the autonomic nervous system \u2014 sympathetic nerves increase and parasympathetic (vagus) nerves decrease heart rate. Statement (iv) is incorrect \u2014 adrenal medullary hormones (adrenaline/noradrenaline) increase heart rate and cardiac output.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1683,7 +1683,7 @@
         "(i) and (iv) only"
       ],
       "correctAnswer": "B",
-      "explanation": "Statements (i), (ii), and (iv) are correct. Rh factor was discovered in Rhesus monkeys, about 80% of humans are Rh-positive, and anti-Rh antibodies (RhoGAM) given after first delivery prevent sensitisation. Statement (iii) is incorrect — erythroblastosis foetalis typically occurs in SUBSEQUENT pregnancies, not the first.",
+      "explanation": "Statements (i), (ii), and (iv) are correct. Rh factor was discovered in Rhesus monkeys, about 80% of humans are Rh-positive, and anti-Rh antibodies (RhoGAM) given after first delivery prevent sensitisation. Statement (iii) is incorrect \u2014 erythroblastosis foetalis typically occurs in SUBSEQUENT pregnancies, not the first.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1709,7 +1709,7 @@
         "(i), (ii) and (iii) only"
       ],
       "correctAnswer": "B",
-      "explanation": "Statements (i), (ii), and (iv) are correct. Double circulation involves systemic and pulmonary circuits, keeps oxygenated and deoxygenated blood separate, and allows more efficient oxygen delivery. Statement (iii) is incorrect — double circulation is found only in mammals and birds (and to some extent in crocodiles), not in all vertebrates. Fish have single circulation.",
+      "explanation": "Statements (i), (ii), and (iv) are correct. Double circulation involves systemic and pulmonary circuits, keeps oxygenated and deoxygenated blood separate, and allows more efficient oxygen delivery. Statement (iii) is incorrect \u2014 double circulation is found only in mammals and birds (and to some extent in crocodiles), not in all vertebrates. Fish have single circulation.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2141,7 +2141,7 @@
         "4"
       ],
       "correctAnswer": "D",
-      "explanation": "Four statements are correct: (a), (b), (c), and (d). Statement (e) is incorrect — blood constitutes about 6-8% of body weight, not 30%. Normal values: RBC = 5-5.5 million/mm³ in males, WBC = 6000-8000/mm³, platelets = 1.5-3.5 lakh/mm³, Hb = 12-16 g/dL.",
+      "explanation": "Four statements are correct: (a), (b), (c), and (d). Statement (e) is incorrect \u2014 blood constitutes about 6-8% of body weight, not 30%. Normal values: RBC = 5-5.5 million/mm\u00b3 in males, WBC = 6000-8000/mm\u00b3, platelets = 1.5-3.5 lakh/mm\u00b3, Hb = 12-16 g/dL.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2185,7 +2185,7 @@
       "ncertClass": 11,
       "ncertChapter": 18,
       "ncertChapterName": "Body Fluids and Circulation",
-      "question": "How many of the following are correct regarding cardiac output calculation?\n(a) Stroke volume of a healthy adult is approximately 70 mL.\n(b) Normal resting heart rate is about 72 beats per minute.\n(c) Cardiac output = Stroke volume × Heart rate.\n(d) Normal cardiac output is approximately 10 litres per minute.\n(e) Cardiac output can increase during exercise.",
+      "question": "How many of the following are correct regarding cardiac output calculation?\n(a) Stroke volume of a healthy adult is approximately 70 mL.\n(b) Normal resting heart rate is about 72 beats per minute.\n(c) Cardiac output = Stroke volume \u00d7 Heart rate.\n(d) Normal cardiac output is approximately 10 litres per minute.\n(e) Cardiac output can increase during exercise.",
       "options": [
         "5",
         "3",
@@ -2193,7 +2193,7 @@
         "4"
       ],
       "correctAnswer": "D",
-      "explanation": "Four statements are correct: (a), (b), (c), and (e). Statement (d) is incorrect — normal cardiac output is approximately 5 litres per minute (70 mL × 72 = 5040 mL ≈ 5 L/min), not 10 litres. During exercise, cardiac output can increase to 20-25 L/min.",
+      "explanation": "Four statements are correct: (a), (b), (c), and (e). Statement (d) is incorrect \u2014 normal cardiac output is approximately 5 litres per minute (70 mL \u00d7 72 = 5040 mL \u2248 5 L/min), not 10 litres. During exercise, cardiac output can increase to 20-25 L/min.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2219,7 +2219,7 @@
         "3"
       ],
       "correctAnswer": "D",
-      "explanation": "Three functions are correct: (a) lymph transports digested fats via lacteals, (b) it drains excess tissue fluid back to blood, and (d) it contains lymphocytes for immune defence. Statement (c) is incorrect — lymph has no RBCs/haemoglobin so it does not transport oxygen. Statement (e) is also not a primary function of lymph.",
+      "explanation": "Three functions are correct: (a) lymph transports digested fats via lacteals, (b) it drains excess tissue fluid back to blood, and (d) it contains lymphocytes for immune defence. Statement (c) is incorrect \u2014 lymph has no RBCs/haemoglobin so it does not transport oxygen. Statement (e) is also not a primary function of lymph.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2264,13 +2264,13 @@
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Arrange the following events of blood coagulation in the correct sequence:\n(i) Formation of fibrin threads\n(ii) Release of thromboplastin from injured tissues\n(iii) Conversion of prothrombin to thrombin\n(iv) Trapping of blood cells in fibrin mesh to form clot",
       "options": [
-        "iii → ii → i → iv",
-        "ii → iii → i → iv",
-        "ii → i → iii → iv",
-        "i → ii → iii → iv"
+        "iii \u2192 ii \u2192 i \u2192 iv",
+        "ii \u2192 iii \u2192 i \u2192 iv",
+        "ii \u2192 i \u2192 iii \u2192 iv",
+        "i \u2192 ii \u2192 iii \u2192 iv"
       ],
       "correctAnswer": "B",
-      "explanation": "The correct sequence of blood clotting is: Thromboplastin is released from injured tissues (ii) → Prothrombin is converted to thrombin in the presence of Ca²⁺ and thromboplastin (iii) → Thrombin converts fibrinogen to fibrin threads (i) → Blood cells are trapped in the fibrin mesh to form a clot (iv).",
+      "explanation": "The correct sequence of blood clotting is: Thromboplastin is released from injured tissues (ii) \u2192 Prothrombin is converted to thrombin in the presence of Ca\u00b2\u207a and thromboplastin (iii) \u2192 Thrombin converts fibrinogen to fibrin threads (i) \u2192 Blood cells are trapped in the fibrin mesh to form a clot (iv).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2290,13 +2290,13 @@
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Arrange the correct path of blood flow through the heart during systemic circulation:\n(i) Left ventricle\n(ii) Aorta\n(iii) Body tissues\n(iv) Vena cava\n(v) Right atrium",
       "options": [
-        "i → ii → iii → iv → v",
-        "i → iii → ii → iv → v",
-        "ii → i → iii → v → iv",
-        "v → iv → iii → ii → i"
+        "i \u2192 ii \u2192 iii \u2192 iv \u2192 v",
+        "i \u2192 iii \u2192 ii \u2192 iv \u2192 v",
+        "ii \u2192 i \u2192 iii \u2192 v \u2192 iv",
+        "v \u2192 iv \u2192 iii \u2192 ii \u2192 i"
       ],
       "correctAnswer": "A",
-      "explanation": "In systemic circulation, blood flows from: Left ventricle (i) → Aorta (ii) → Body tissues via arteries, arterioles, capillaries (iii) → Vena cava via venules and veins (iv) → Right atrium (v).",
+      "explanation": "In systemic circulation, blood flows from: Left ventricle (i) \u2192 Aorta (ii) \u2192 Body tissues via arteries, arterioles, capillaries (iii) \u2192 Vena cava via venules and veins (iv) \u2192 Right atrium (v).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2315,13 +2315,13 @@
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Arrange the correct sequence of cardiac conduction:\n(i) Purkinje fibres\n(ii) AV node\n(iii) SA node\n(iv) Bundle of His\n(v) Bundle branches",
       "options": [
-        "iii → ii → iv → v → i",
-        "ii → iv → iii → i → v",
-        "iii → iv → ii → v → i",
-        "ii → iii → iv → i → v"
+        "iii \u2192 ii \u2192 iv \u2192 v \u2192 i",
+        "ii \u2192 iv \u2192 iii \u2192 i \u2192 v",
+        "iii \u2192 iv \u2192 ii \u2192 v \u2192 i",
+        "ii \u2192 iii \u2192 iv \u2192 i \u2192 v"
       ],
       "correctAnswer": "A",
-      "explanation": "The correct sequence of cardiac conduction is: SA node (iii) → AV node (ii) → Bundle of His (iv) → Right and left bundle branches (v) → Purkinje fibres (i). This ensures coordinated contraction of the heart chambers.",
+      "explanation": "The correct sequence of cardiac conduction is: SA node (iii) \u2192 AV node (ii) \u2192 Bundle of His (iv) \u2192 Right and left bundle branches (v) \u2192 Purkinje fibres (i). This ensures coordinated contraction of the heart chambers.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2340,10 +2340,10 @@
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Arrange the following events of the cardiac cycle in correct order:\n(i) Ventricular systole\n(ii) Joint diastole\n(iii) Atrial systole\n(iv) Ventricular diastole begins\n(v) Semilunar valves open",
       "options": [
-        "iii → i → v → iv → ii",
-        "ii → iii → i → v → iv",
-        "iii → v → i → iv → ii",
-        "ii → iii → v → i → iv"
+        "iii \u2192 i \u2192 v \u2192 iv \u2192 ii",
+        "ii \u2192 iii \u2192 i \u2192 v \u2192 iv",
+        "iii \u2192 v \u2192 i \u2192 iv \u2192 ii",
+        "ii \u2192 iii \u2192 v \u2192 i \u2192 iv"
       ],
       "correctAnswer": "A",
       "explanation": "The cardiac cycle begins with atrial systole (iii), followed by ventricular systole (i) during which semilunar valves open (v) to eject blood, then ventricular diastole begins (iv), and finally joint diastole (ii) occurs when all chambers are relaxed.",
@@ -2365,13 +2365,13 @@
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Arrange the path of blood flow through pulmonary circulation in the correct order:\n(i) Pulmonary artery\n(ii) Right ventricle\n(iii) Lung capillaries\n(iv) Pulmonary veins\n(v) Left atrium",
       "options": [
-        "ii → iii → i → iv → v",
-        "ii → i → iii → iv → v",
-        "v → iv → iii → i → ii",
-        "i → ii → iii → v → iv"
+        "ii \u2192 iii \u2192 i \u2192 iv \u2192 v",
+        "ii \u2192 i \u2192 iii \u2192 iv \u2192 v",
+        "v \u2192 iv \u2192 iii \u2192 i \u2192 ii",
+        "i \u2192 ii \u2192 iii \u2192 v \u2192 iv"
       ],
       "correctAnswer": "B",
-      "explanation": "In pulmonary circulation, deoxygenated blood flows from: Right ventricle (ii) → Pulmonary artery (i) → Lung capillaries where gas exchange occurs (iii) → Pulmonary veins carrying oxygenated blood (iv) → Left atrium (v).",
+      "explanation": "In pulmonary circulation, deoxygenated blood flows from: Right ventricle (ii) \u2192 Pulmonary artery (i) \u2192 Lung capillaries where gas exchange occurs (iii) \u2192 Pulmonary veins carrying oxygenated blood (iv) \u2192 Left atrium (v).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2390,13 +2390,13 @@
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Arrange the ECG waves in the order they appear during a single cardiac cycle:\n(i) T wave\n(ii) QRS complex\n(iii) P wave\n(iv) U wave (when present)",
       "options": [
-        "i → iii → ii → iv",
-        "ii → iii → i → iv",
-        "iii → ii → i → iv",
-        "iii → i → ii → iv"
+        "i \u2192 iii \u2192 ii \u2192 iv",
+        "ii \u2192 iii \u2192 i \u2192 iv",
+        "iii \u2192 ii \u2192 i \u2192 iv",
+        "iii \u2192 i \u2192 ii \u2192 iv"
       ],
       "correctAnswer": "C",
-      "explanation": "During a single cardiac cycle, ECG waves appear in the following order: P wave (atrial depolarisation) (iii) → QRS complex (ventricular depolarisation) (ii) → T wave (ventricular repolarisation) (i) → U wave (when present, thought to represent repolarisation of Purkinje fibres) (iv).",
+      "explanation": "During a single cardiac cycle, ECG waves appear in the following order: P wave (atrial depolarisation) (iii) \u2192 QRS complex (ventricular depolarisation) (ii) \u2192 T wave (ventricular repolarisation) (i) \u2192 U wave (when present, thought to represent repolarisation of Purkinje fibres) (iv).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2415,13 +2415,13 @@
       "ncertChapterName": "Body Fluids and Circulation",
       "question": "Arrange the blood vessels in decreasing order of blood pressure:\n(i) Capillaries\n(ii) Arteries\n(iii) Veins\n(iv) Arterioles\n(v) Venules",
       "options": [
-        "iv → ii → i → iii → v",
-        "iii → v → i → iv → ii",
-        "ii → i → iv → v → iii",
-        "ii → iv → i → v → iii"
+        "iv \u2192 ii \u2192 i \u2192 iii \u2192 v",
+        "iii \u2192 v \u2192 i \u2192 iv \u2192 ii",
+        "ii \u2192 i \u2192 iv \u2192 v \u2192 iii",
+        "ii \u2192 iv \u2192 i \u2192 v \u2192 iii"
       ],
       "correctAnswer": "D",
-      "explanation": "Blood pressure decreases as blood flows from arteries through the circulatory system. The correct decreasing order is: Arteries (highest pressure) (ii) → Arterioles (iv) → Capillaries (i) → Venules (v) → Veins (lowest pressure) (iii).",
+      "explanation": "Blood pressure decreases as blood flows from arteries through the circulatory system. The correct decreasing order is: Arteries (highest pressure) (ii) \u2192 Arterioles (iv) \u2192 Capillaries (i) \u2192 Venules (v) \u2192 Veins (lowest pressure) (iii).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2429,6 +2429,136 @@
         "blood-pressure",
         "blood-vessels",
         "sequence-order"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The pacemaker of the heart is:",
+      "options": [
+        "AV node",
+        "SA node",
+        "Bundle of His",
+        "Purkinje fibres"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the SA node (sino-atrial node) is the pacemaker of the heart because it has the highest rate of generating action potentials (about 70-75 per minute). It initiates and maintains the rhythmic contractile activity of the heart.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart",
+        "sa-node",
+        "pacemaker"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "Which blood cells are responsible for clotting?",
+      "options": [
+        "Erythrocytes",
+        "Leucocytes",
+        "Thrombocytes (Platelets)",
+        "Monocytes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, thrombocytes (platelets) are cell fragments that play a key role in blood clotting. When a blood vessel is injured, platelets aggregate at the site and release thromboplastin, initiating the clotting cascade.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood",
+        "platelets",
+        "clotting"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "The 'lub' sound of the heartbeat is produced by:",
+      "options": [
+        "Closure of semilunar valves",
+        "Closure of atrioventricular (bicuspid and tricuspid) valves",
+        "Opening of AV valves",
+        "Contraction of atria"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the first heart sound 'lub' is produced by the closure of the atrioventricular valves (mitral/bicuspid and tricuspid) at the beginning of ventricular systole. The second sound 'dub' is caused by closure of semilunar valves.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "heart-sounds",
+        "lub-dub",
+        "valves"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "ECG P-wave represents:",
+      "options": [
+        "Ventricular depolarisation",
+        "Ventricular repolarisation",
+        "Atrial depolarisation",
+        "Atrial repolarisation"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the P-wave in an ECG represents atrial depolarisation (contraction). The QRS complex represents ventricular depolarisation, and the T-wave represents ventricular repolarisation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ecg",
+        "p-wave",
+        "atrial-depolarisation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Body Fluids and Circulation",
+      "chapter": "Body Fluids and Circulation",
+      "ncertClass": 11,
+      "ncertChapter": 18,
+      "ncertChapterName": "Body Fluids and Circulation",
+      "question": "A person with blood group AB is called a universal recipient because:",
+      "options": [
+        "Their RBCs have no antigens",
+        "Their plasma has no antibodies (anti-A or anti-B)",
+        "They can donate blood to all groups",
+        "Their blood has both antibodies"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, a person with blood group AB has both A and B antigens on their RBCs but no anti-A or anti-B antibodies in their plasma. Therefore, they can receive blood from any group (A, B, AB, or O) without agglutination.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "blood-groups",
+        "universal-recipient",
+        "ab-group"
       ],
       "neetWeightage": "HIGH"
     }

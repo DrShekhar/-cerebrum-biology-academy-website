@@ -17,11 +17,11 @@
       "options": [
         "There is no space in the abdomen",
         "Testes need more oxygen",
-        "Spermatogenesis requires 2-2.5°C lower temperature than body temperature",
+        "Spermatogenesis requires 2-2.5\u00b0C lower temperature than body temperature",
         "To protect the testes from injury"
       ],
       "correctAnswer": "C",
-      "explanation": "The testes are located in the scrotum outside the body cavity because spermatogenesis requires a temperature 2-2.5°C lower than the normal body temperature (37°C). The scrotum provides this cooler environment.",
+      "explanation": "The testes are located in the scrotum outside the body cavity because spermatogenesis requires a temperature 2-2.5\u00b0C lower than the normal body temperature (37\u00b0C). The scrotum provides this cooler environment.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -895,13 +895,13 @@
       "ncertChapterName": "Human Reproduction",
       "question": "Which of the following is the correct sequence of embryonic development?",
       "options": [
-        "Morula → Zygote → Blastocyst → Gastrula",
-        "Zygote → Gastrula → Morula → Blastocyst",
-        "Zygote → Blastocyst → Morula → Gastrula",
-        "Zygote → Morula → Blastocyst → Gastrula"
+        "Morula \u2192 Zygote \u2192 Blastocyst \u2192 Gastrula",
+        "Zygote \u2192 Gastrula \u2192 Morula \u2192 Blastocyst",
+        "Zygote \u2192 Blastocyst \u2192 Morula \u2192 Gastrula",
+        "Zygote \u2192 Morula \u2192 Blastocyst \u2192 Gastrula"
       ],
       "correctAnswer": "D",
-      "explanation": "The correct sequence of early embryonic development is: Zygote → Cleavage → Morula (8-16 cells) → Blastocyst (with blastocoel) → Implantation → Gastrulation (formation of three germ layers).",
+      "explanation": "The correct sequence of early embryonic development is: Zygote \u2192 Cleavage \u2192 Morula (8-16 cells) \u2192 Blastocyst (with blastocoel) \u2192 Implantation \u2192 Gastrulation (formation of three germ layers).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1924,13 +1924,13 @@
       "ncertChapterName": "Human Reproduction",
       "question": "Arrange the following stages of spermatogenesis in correct order:\n(i) Spermatozoa\n(ii) Spermatogonia\n(iii) Primary spermatocyte\n(iv) Secondary spermatocyte\n(v) Spermatid",
       "options": [
-        "ii → iii → v → iv → i",
-        "ii → iii → iv → v → i",
-        "ii → iv → iii → v → i",
-        "iii → ii → iv → v → i"
+        "ii \u2192 iii \u2192 v \u2192 iv \u2192 i",
+        "ii \u2192 iii \u2192 iv \u2192 v \u2192 i",
+        "ii \u2192 iv \u2192 iii \u2192 v \u2192 i",
+        "iii \u2192 ii \u2192 iv \u2192 v \u2192 i"
       ],
       "correctAnswer": "B",
-      "explanation": "The correct sequence is: Spermatogonia (mitosis) → Primary spermatocyte (meiosis I) → Secondary spermatocyte (meiosis II) → Spermatid (spermiogenesis) → Spermatozoa.",
+      "explanation": "The correct sequence is: Spermatogonia (mitosis) \u2192 Primary spermatocyte (meiosis I) \u2192 Secondary spermatocyte (meiosis II) \u2192 Spermatid (spermiogenesis) \u2192 Spermatozoa.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1949,13 +1949,13 @@
       "ncertChapterName": "Human Reproduction",
       "question": "Arrange the sperm transport pathway in correct order:\n(i) Rete testis\n(ii) Vas deferens\n(iii) Seminiferous tubules\n(iv) Epididymis\n(v) Ejaculatory duct\n(vi) Urethra",
       "options": [
-        "i → iii → iv → ii → v → vi",
-        "iii → i → iv → ii → v → vi",
-        "iii → iv → i → ii → v → vi",
-        "iii → i → ii → iv → v → vi"
+        "i \u2192 iii \u2192 iv \u2192 ii \u2192 v \u2192 vi",
+        "iii \u2192 i \u2192 iv \u2192 ii \u2192 v \u2192 vi",
+        "iii \u2192 iv \u2192 i \u2192 ii \u2192 v \u2192 vi",
+        "iii \u2192 i \u2192 ii \u2192 iv \u2192 v \u2192 vi"
       ],
       "correctAnswer": "B",
-      "explanation": "The correct pathway: Seminiferous tubules → Rete testis → Vasa efferentia → Epididymis → Vas deferens → Ejaculatory duct → Urethra.",
+      "explanation": "The correct pathway: Seminiferous tubules \u2192 Rete testis \u2192 Vasa efferentia \u2192 Epididymis \u2192 Vas deferens \u2192 Ejaculatory duct \u2192 Urethra.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1974,13 +1974,13 @@
       "ncertChapterName": "Human Reproduction",
       "question": "Arrange the phases of the menstrual cycle in correct chronological order:\n(i) Luteal phase\n(ii) Menstrual phase\n(iii) Ovulatory phase\n(iv) Follicular phase",
       "options": [
-        "ii → iii → iv → i",
-        "i → ii → iv → iii",
-        "iv → ii → iii → i",
-        "ii → iv → iii → i"
+        "ii \u2192 iii \u2192 iv \u2192 i",
+        "i \u2192 ii \u2192 iv \u2192 iii",
+        "iv \u2192 ii \u2192 iii \u2192 i",
+        "ii \u2192 iv \u2192 iii \u2192 i"
       ],
       "correctAnswer": "D",
-      "explanation": "The correct sequence: Menstrual phase (days 1-5) → Follicular/Proliferative phase (days 6-13) → Ovulatory phase (day 14) → Luteal/Secretory phase (days 15-28).",
+      "explanation": "The correct sequence: Menstrual phase (days 1-5) \u2192 Follicular/Proliferative phase (days 6-13) \u2192 Ovulatory phase (day 14) \u2192 Luteal/Secretory phase (days 15-28).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1999,13 +1999,13 @@
       "ncertChapterName": "Human Reproduction",
       "question": "Arrange the following events of fertilisation in correct order:\n(i) Cortical reaction\n(ii) Acrosomal reaction\n(iii) Fusion of pronuclei\n(iv) Sperm contacts zona pellucida\n(v) Capacitation of sperm",
       "options": [
-        "v → ii → iv → i → iii",
-        "ii → v → iv → iii → i",
-        "iv → v → ii → i → iii",
-        "v → iv → ii → i → iii"
+        "v \u2192 ii \u2192 iv \u2192 i \u2192 iii",
+        "ii \u2192 v \u2192 iv \u2192 iii \u2192 i",
+        "iv \u2192 v \u2192 ii \u2192 i \u2192 iii",
+        "v \u2192 iv \u2192 ii \u2192 i \u2192 iii"
       ],
       "correctAnswer": "D",
-      "explanation": "The correct sequence: Capacitation → Sperm contacts zona pellucida → Acrosomal reaction (releases enzymes) → Cortical reaction (prevents polyspermy) → Fusion of pronuclei (syngamy).",
+      "explanation": "The correct sequence: Capacitation \u2192 Sperm contacts zona pellucida \u2192 Acrosomal reaction (releases enzymes) \u2192 Cortical reaction (prevents polyspermy) \u2192 Fusion of pronuclei (syngamy).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2024,13 +2024,13 @@
       "ncertChapterName": "Human Reproduction",
       "question": "Arrange the early embryonic development in correct order:\n(i) Implantation\n(ii) Blastocyst formation\n(iii) Cleavage\n(iv) Gastrulation\n(v) Fertilisation",
       "options": [
-        "v → iii → i → ii → iv",
-        "iii → v → ii → i → iv",
-        "v → iii → ii → i → iv",
-        "v → ii → iii → i → iv"
+        "v \u2192 iii \u2192 i \u2192 ii \u2192 iv",
+        "iii \u2192 v \u2192 ii \u2192 i \u2192 iv",
+        "v \u2192 iii \u2192 ii \u2192 i \u2192 iv",
+        "v \u2192 ii \u2192 iii \u2192 i \u2192 iv"
       ],
       "correctAnswer": "C",
-      "explanation": "The correct sequence: Fertilisation → Cleavage (mitotic divisions) → Blastocyst formation → Implantation (in endometrium) → Gastrulation (formation of three germ layers).",
+      "explanation": "The correct sequence: Fertilisation \u2192 Cleavage (mitotic divisions) \u2192 Blastocyst formation \u2192 Implantation (in endometrium) \u2192 Gastrulation (formation of three germ layers).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2049,13 +2049,13 @@
       "ncertChapterName": "Human Reproduction",
       "question": "Arrange the following in order of ovarian follicle development:\n(i) Graafian follicle\n(ii) Primary follicle\n(iii) Corpus luteum\n(iv) Secondary follicle\n(v) Tertiary follicle",
       "options": [
-        "ii → v → iv → i → iii",
-        "iv → ii → v → i → iii",
-        "ii → iv → i → v → iii",
-        "ii → iv → v → i → iii"
+        "ii \u2192 v \u2192 iv \u2192 i \u2192 iii",
+        "iv \u2192 ii \u2192 v \u2192 i \u2192 iii",
+        "ii \u2192 iv \u2192 i \u2192 v \u2192 iii",
+        "ii \u2192 iv \u2192 v \u2192 i \u2192 iii"
       ],
       "correctAnswer": "D",
-      "explanation": "The correct sequence of follicle development: Primary follicle → Secondary follicle → Tertiary follicle → Graafian follicle (mature) → Ovulation → Corpus luteum (from ruptured follicle).",
+      "explanation": "The correct sequence of follicle development: Primary follicle \u2192 Secondary follicle \u2192 Tertiary follicle \u2192 Graafian follicle (mature) \u2192 Ovulation \u2192 Corpus luteum (from ruptured follicle).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2074,13 +2074,13 @@
       "ncertChapterName": "Human Reproduction",
       "question": "Arrange the following structures traversed by the ovum from ovary to uterus:\n(i) Isthmus\n(ii) Infundibulum\n(iii) Ampulla\n(iv) Uterus",
       "options": [
-        "i → ii → iii → iv",
-        "ii → iii → i → iv",
-        "iii → ii → i → iv",
-        "ii → i → iii → iv"
+        "i \u2192 ii \u2192 iii \u2192 iv",
+        "ii \u2192 iii \u2192 i \u2192 iv",
+        "iii \u2192 ii \u2192 i \u2192 iv",
+        "ii \u2192 i \u2192 iii \u2192 iv"
       ],
       "correctAnswer": "B",
-      "explanation": "The ovum travels: Infundibulum (collects ovum via fimbriae) → Ampulla (widest part, site of fertilisation) → Isthmus (narrow part) → Uterus.",
+      "explanation": "The ovum travels: Infundibulum (collects ovum via fimbriae) \u2192 Ampulla (widest part, site of fertilisation) \u2192 Isthmus (narrow part) \u2192 Uterus.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2437,6 +2437,84 @@
         "age"
       ],
       "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The acrosome of the sperm contains:",
+      "options": [
+        "Mitochondria",
+        "Hydrolytic enzymes",
+        "DNA",
+        "Fructose"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the acrosome is a cap-like structure at the head of the sperm containing hydrolytic enzymes (including hyaluronidase and acrosin) that help the sperm penetrate through the outer layers (zona pellucida) of the ovum during fertilisation.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "sperm",
+        "acrosome",
+        "fertilisation"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "Implantation of the blastocyst in the uterine wall occurs approximately:",
+      "options": [
+        "1 day after fertilisation",
+        "7 days after fertilisation",
+        "14 days after fertilisation",
+        "21 days after fertilisation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, after fertilisation, the zygote undergoes cleavage as it moves through the fallopian tube and reaches the uterus as a blastocyst. Implantation occurs about 7 days after fertilisation when the trophoblast attaches to the endometrium.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "implantation",
+        "blastocyst",
+        "pregnancy"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Human Reproduction",
+      "chapter": "Human Reproduction",
+      "ncertClass": 12,
+      "ncertChapter": 3,
+      "ncertChapterName": "Human Reproduction",
+      "question": "The hormone hCG (human Chorionic Gonadotropin) is produced by:",
+      "options": [
+        "Corpus luteum",
+        "Anterior pituitary",
+        "Placenta (trophoblast)",
+        "Ovary"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, hCG is produced by the trophoblast of the developing embryo (later the placenta). It maintains the corpus luteum during early pregnancy, ensuring continued production of progesterone. Detection of hCG in urine is the basis of pregnancy tests.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "pregnancy",
+        "hcg",
+        "placenta"
+      ],
+      "neetWeightage": "HIGH"
     }
   ]
 }

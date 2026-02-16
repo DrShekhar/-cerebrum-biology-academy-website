@@ -70,7 +70,7 @@
         "Lt = L0 + rt",
         "W1 = W0 / rt",
         "W1 = W0 e^rt",
-        "Lt = L0 × t"
+        "Lt = L0 \u00d7 t"
       ],
       "correctAnswer": "C",
       "explanation": "Geometric growth is expressed as W1 = W0 e^rt, where W1 = final size, W0 = initial size, r = growth rate, t = time, and e = base of natural logarithms. This represents exponential growth where both daughter cells retain the ability to divide.",
@@ -838,10 +838,10 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Which of the following correctly represents the phases of growth in the root tip from tip to base?",
       "options": [
-        "Maturation zone → Elongation zone → Meristematic zone",
-        "Elongation zone → Meristematic zone → Maturation zone",
-        "Meristematic zone → Elongation zone → Maturation zone",
-        "Meristematic zone → Maturation zone → Elongation zone"
+        "Maturation zone \u2192 Elongation zone \u2192 Meristematic zone",
+        "Elongation zone \u2192 Meristematic zone \u2192 Maturation zone",
+        "Meristematic zone \u2192 Elongation zone \u2192 Maturation zone",
+        "Meristematic zone \u2192 Maturation zone \u2192 Elongation zone"
       ],
       "correctAnswer": "C",
       "explanation": "From the root tip upward, the zones are arranged as: root cap, meristematic zone (actively dividing cells), elongation zone (cells increase in size), and maturation zone (cells differentiate and mature). This sequence reflects the developmental gradient in the root.",
@@ -871,7 +871,7 @@
         "Parenchyma cells forming interfascicular cambium"
       ],
       "correctAnswer": "A",
-      "explanation": "Redifferentiation is the process by which dedifferentiated cells (like interfascicular cambium) lose their capacity to divide again and mature to perform specific functions, such as forming secondary xylem and phloem. This represents the final step: differentiation → dedifferentiation → redifferentiation.",
+      "explanation": "Redifferentiation is the process by which dedifferentiated cells (like interfascicular cambium) lose their capacity to divide again and mature to perform specific functions, such as forming secondary xylem and phloem. This represents the final step: differentiation \u2192 dedifferentiation \u2192 redifferentiation.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2058,7 +2058,7 @@
       "ncertClass": 11,
       "ncertChapter": 15,
       "ncertChapterName": "Plant Growth and Development",
-      "question": "Match the following growth types with their mathematical expressions:\nColumn I: (P) Arithmetic growth (Q) Geometric growth (R) Sigmoid curve phases\nColumn II: (i) W1 = W0 e^rt (ii) Lt = L0 + rt (iii) Lag phase → Log phase → Stationary phase",
+      "question": "Match the following growth types with their mathematical expressions:\nColumn I: (P) Arithmetic growth (Q) Geometric growth (R) Sigmoid curve phases\nColumn II: (i) W1 = W0 e^rt (ii) Lt = L0 + rt (iii) Lag phase \u2192 Log phase \u2192 Stationary phase",
       "options": [
         "P-i, Q-ii, R-iii",
         "P-ii, Q-i, R-iii",
@@ -2383,13 +2383,13 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following phases of cell growth in the correct sequence from the root tip upward:\n(i) Maturation phase\n(ii) Elongation phase\n(iii) Root cap\n(iv) Meristematic phase",
       "options": [
-        "iii → ii → iv → i",
-        "iii → iv → ii → i",
-        "i → ii → iv → iii",
-        "iv → iii → ii → i"
+        "iii \u2192 ii \u2192 iv \u2192 i",
+        "iii \u2192 iv \u2192 ii \u2192 i",
+        "i \u2192 ii \u2192 iv \u2192 iii",
+        "iv \u2192 iii \u2192 ii \u2192 i"
       ],
       "correctAnswer": "B",
-      "explanation": "From the tip of the root upward, the correct sequence is: Root cap (iii) at the very tip → Meristematic phase (iv) where active cell division occurs → Elongation phase (ii) where cells increase in size → Maturation phase (i) where cells differentiate and mature.",
+      "explanation": "From the tip of the root upward, the correct sequence is: Root cap (iii) at the very tip \u2192 Meristematic phase (iv) where active cell division occurs \u2192 Elongation phase (ii) where cells increase in size \u2192 Maturation phase (i) where cells differentiate and mature.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2409,13 +2409,13 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following events in the correct sequence during seed germination promoted by gibberellin:\n(i) Starch hydrolysis into sugars\n(ii) GA diffuses to aleurone layer\n(iii) Embryo releases gibberellin\n(iv) Alpha-amylase synthesis is induced\n(v) Sugars provide energy for embryo growth",
       "options": [
-        "iii → ii → iv → i → v",
-        "ii → iii → i → iv → v",
-        "iii → iv → ii → i → v",
-        "i → ii → iii → iv → v"
+        "iii \u2192 ii \u2192 iv \u2192 i \u2192 v",
+        "ii \u2192 iii \u2192 i \u2192 iv \u2192 v",
+        "iii \u2192 iv \u2192 ii \u2192 i \u2192 v",
+        "i \u2192 ii \u2192 iii \u2192 iv \u2192 v"
       ],
       "correctAnswer": "A",
-      "explanation": "The correct sequence is: The embryo releases gibberellin (iii) → GA diffuses to the aleurone layer (ii) → Alpha-amylase synthesis is induced in the aleurone layer (iv) → Starch in the endosperm is hydrolyzed into sugars (i) → Sugars provide energy for embryo growth (v).",
+      "explanation": "The correct sequence is: The embryo releases gibberellin (iii) \u2192 GA diffuses to the aleurone layer (ii) \u2192 Alpha-amylase synthesis is induced in the aleurone layer (iv) \u2192 Starch in the endosperm is hydrolyzed into sugars (i) \u2192 Sugars provide energy for embryo growth (v).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2436,13 +2436,13 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following phases of the sigmoid growth curve in the correct temporal sequence:\n(i) Stationary phase\n(ii) Exponential (log) phase\n(iii) Lag phase",
       "options": [
-        "ii → iii → i",
-        "iii → i → ii",
-        "i → ii → iii",
-        "iii → ii → i"
+        "ii \u2192 iii \u2192 i",
+        "iii \u2192 i \u2192 ii",
+        "i \u2192 ii \u2192 iii",
+        "iii \u2192 ii \u2192 i"
       ],
       "correctAnswer": "D",
-      "explanation": "The sigmoid growth curve follows this temporal sequence: Lag phase (iii) where growth is slow as cells prepare for division → Exponential/Log phase (ii) where rapid growth occurs → Stationary phase (i) where growth slows and plateaus due to limited resources.",
+      "explanation": "The sigmoid growth curve follows this temporal sequence: Lag phase (iii) where growth is slow as cells prepare for division \u2192 Exponential/Log phase (ii) where rapid growth occurs \u2192 Stationary phase (i) where growth slows and plateaus due to limited resources.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2463,13 +2463,13 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following in the correct sequence of discovery of plant hormones:\n(i) Gibberellin\n(ii) Auxin\n(iii) Abscisic acid\n(iv) Ethylene\n(v) Cytokinin",
       "options": [
-        "iv → ii → i → v → iii",
-        "ii → iv → i → v → iii",
-        "ii → i → v → iv → iii",
-        "i → ii → iii → iv → v"
+        "iv \u2192 ii \u2192 i \u2192 v \u2192 iii",
+        "ii \u2192 iv \u2192 i \u2192 v \u2192 iii",
+        "ii \u2192 i \u2192 v \u2192 iv \u2192 iii",
+        "i \u2192 ii \u2192 iii \u2192 iv \u2192 v"
       ],
       "correctAnswer": "B",
-      "explanation": "The correct chronological order of discovery is: Auxin (ii, 1928 by Went) → Ethylene (iv, 1934 effects described by Neljubow earlier, characterized in 1930s) → Gibberellin (i, 1926 Kurosawa observed effects, isolated in 1930s-1950s) → Cytokinin (v, 1955 kinetin by Miller) → Abscisic acid (iii, 1960s). Note: The exact order can vary by the criterion used (first observation vs isolation).",
+      "explanation": "The correct chronological order of discovery is: Auxin (ii, 1928 by Went) \u2192 Ethylene (iv, 1934 effects described by Neljubow earlier, characterized in 1930s) \u2192 Gibberellin (i, 1926 Kurosawa observed effects, isolated in 1930s-1950s) \u2192 Cytokinin (v, 1955 kinetin by Miller) \u2192 Abscisic acid (iii, 1960s). Note: The exact order can vary by the criterion used (first observation vs isolation).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
@@ -2490,13 +2490,13 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following developmental events in correct order:\n(i) Redifferentiation\n(ii) Cell division in meristem\n(iii) Dedifferentiation\n(iv) Differentiation",
       "options": [
-        "iii → ii → i → iv",
-        "ii → iii → iv → i",
-        "iv → ii → iii → i",
-        "ii → iv → iii → i"
+        "iii \u2192 ii \u2192 i \u2192 iv",
+        "ii \u2192 iii \u2192 iv \u2192 i",
+        "iv \u2192 ii \u2192 iii \u2192 i",
+        "ii \u2192 iv \u2192 iii \u2192 i"
       ],
       "correctAnswer": "D",
-      "explanation": "The correct sequence is: Cell division in meristem (ii) → Differentiation (iv) where cells mature and specialize → Dedifferentiation (iii) where some differentiated cells regain the ability to divide (e.g., forming cambium) → Redifferentiation (i) where dedifferentiated cells mature again into specialized cells.",
+      "explanation": "The correct sequence is: Cell division in meristem (ii) \u2192 Differentiation (iv) where cells mature and specialize \u2192 Dedifferentiation (iii) where some differentiated cells regain the ability to divide (e.g., forming cambium) \u2192 Redifferentiation (i) where dedifferentiated cells mature again into specialized cells.",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2517,13 +2517,13 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following steps in the correct sequence for ABA-mediated stomatal closure:\n(i) Guard cells lose turgor\n(ii) ABA binds to receptors on guard cells\n(iii) Water stress is detected\n(iv) K+ ions move out of guard cells\n(v) Stomata close",
       "options": [
-        "iii → iv → ii → i → v",
-        "ii → iv → iii → v → i",
-        "iii → ii → iv → i → v",
-        "ii → iii → iv → v → i"
+        "iii \u2192 iv \u2192 ii \u2192 i \u2192 v",
+        "ii \u2192 iv \u2192 iii \u2192 v \u2192 i",
+        "iii \u2192 ii \u2192 iv \u2192 i \u2192 v",
+        "ii \u2192 iii \u2192 iv \u2192 v \u2192 i"
       ],
       "correctAnswer": "C",
-      "explanation": "The correct sequence is: Water stress is detected (iii) → ABA binds to receptors on guard cells (ii) → K+ ions move out of guard cells (iv) → Guard cells lose turgor due to water loss (i) → Stomata close (v). This is a key adaptive response to drought stress.",
+      "explanation": "The correct sequence is: Water stress is detected (iii) \u2192 ABA binds to receptors on guard cells (ii) \u2192 K+ ions move out of guard cells (iv) \u2192 Guard cells lose turgor due to water loss (i) \u2192 Stomata close (v). This is a key adaptive response to drought stress.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2544,13 +2544,13 @@
       "ncertChapterName": "Plant Growth and Development",
       "question": "Arrange the following steps in the Avena curvature bioassay for auxin in correct sequence:\n(i) Curvature of the decapitated coleoptile observed\n(ii) Agar block placed asymmetrically on cut coleoptile stump\n(iii) Coleoptile tip placed on agar block\n(iv) Diffusion of chemical from tip into agar\n(v) Tip of coleoptile removed",
       "options": [
-        "v → iv → iii → ii → i",
-        "iii → v → iv → ii → i",
-        "v → iii → iv → ii → i",
-        "iii → iv → v → i → ii"
+        "v \u2192 iv \u2192 iii \u2192 ii \u2192 i",
+        "iii \u2192 v \u2192 iv \u2192 ii \u2192 i",
+        "v \u2192 iii \u2192 iv \u2192 ii \u2192 i",
+        "iii \u2192 iv \u2192 v \u2192 i \u2192 ii"
       ],
       "correctAnswer": "C",
-      "explanation": "The correct sequence of the Went experiment is: Tip of coleoptile is removed (v) → Removed tip is placed on agar block (iii) → Chemical (auxin) diffuses from tip into agar (iv) → Agar block is placed asymmetrically on the decapitated coleoptile stump (ii) → Curvature is observed away from the agar block side (i).",
+      "explanation": "The correct sequence of the Went experiment is: Tip of coleoptile is removed (v) \u2192 Removed tip is placed on agar block (iii) \u2192 Chemical (auxin) diffuses from tip into agar (iv) \u2192 Agar block is placed asymmetrically on the decapitated coleoptile stump (ii) \u2192 Curvature is observed away from the agar block side (i).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2559,6 +2559,136 @@
         "Avena-curvature-test",
         "Went-experiment",
         "sequence-order"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Plant Growth and Development",
+      "chapter": "Plant Growth and Development",
+      "ncertClass": 11,
+      "ncertChapter": 15,
+      "ncertChapterName": "Plant Growth and Development",
+      "question": "Bolting (rapid internodal elongation) before flowering can be induced by:",
+      "options": [
+        "Auxin",
+        "Gibberellin",
+        "Abscisic acid",
+        "Ethylene"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, gibberellins cause bolting \u2014 the rapid elongation of internodes in rosette plants like cabbage, causing them to grow tall before flowering. This is an important commercial application of gibberellins.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "gibberellin",
+        "bolting",
+        "plant-hormones"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Plant Growth and Development",
+      "chapter": "Plant Growth and Development",
+      "ncertClass": 11,
+      "ncertChapter": 15,
+      "ncertChapterName": "Plant Growth and Development",
+      "question": "Abscisic acid is also known as:",
+      "options": [
+        "Growth promoter",
+        "Stress hormone",
+        "Ripening hormone",
+        "Wounding hormone"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, abscisic acid (ABA) is called the stress hormone because it increases tolerance to various stresses. It promotes stomatal closure during water stress, inhibits growth, and promotes seed dormancy and abscission.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "abscisic-acid",
+        "stress-hormone",
+        "plant-hormones"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Plant Growth and Development",
+      "chapter": "Plant Growth and Development",
+      "ncertClass": 11,
+      "ncertChapter": 15,
+      "ncertChapterName": "Plant Growth and Development",
+      "question": "Photoperiodism was first studied in:",
+      "options": [
+        "Pea plant",
+        "Tobacco (Maryland Mammoth)",
+        "Rice",
+        "Wheat"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Photoperiodism was first studied by Garner and Allard (1920) in Maryland Mammoth variety of tobacco. They discovered that flowering in some plants is regulated by the relative length of day and night (photoperiod).",
+      "difficulty": "HARD",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "photoperiodism",
+        "tobacco",
+        "flowering"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Plant Growth and Development",
+      "chapter": "Plant Growth and Development",
+      "ncertClass": 11,
+      "ncertChapter": 15,
+      "ncertChapterName": "Plant Growth and Development",
+      "question": "Ethylene is the plant hormone that promotes:",
+      "options": [
+        "Cell elongation",
+        "Fruit ripening",
+        "Seed dormancy",
+        "Stem elongation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, ethylene is a gaseous hormone that promotes fruit ripening, senescence, and abscission of leaves. It is widely used commercially to hasten fruit ripening (e.g., banana ripening using ethephon).",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ethylene",
+        "fruit-ripening",
+        "plant-hormones"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Plant Growth and Development",
+      "chapter": "Plant Growth and Development",
+      "ncertClass": 11,
+      "ncertChapter": 15,
+      "ncertChapterName": "Plant Growth and Development",
+      "question": "Vernalisation refers to:",
+      "options": [
+        "Effect of light on flowering",
+        "Promotion of flowering by low temperature treatment",
+        "Effect of gravity on growth",
+        "Effect of hormones on seed germination"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, vernalisation is the process of promoting flowering by exposure to low temperature (cold treatment). Many plants, especially biennials and winter cereals (like wheat), require a period of cold exposure to induce flowering.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "vernalisation",
+        "flowering",
+        "cold-treatment"
       ],
       "neetWeightage": "HIGH"
     }

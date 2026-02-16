@@ -2433,6 +2433,188 @@
         "food-chain"
       ],
       "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The 10% law of energy transfer was given by:",
+      "options": [
+        "Odum",
+        "Lindeman",
+        "Tansley",
+        "Elton"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, Lindeman (1942) proposed the 10% law, which states that only about 10% of the energy at one trophic level is transferred to the next trophic level. The remaining 90% is lost as heat through respiration.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "energy-flow",
+        "10-percent-law",
+        "lindeman"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The pyramid of energy is always:",
+      "options": [
+        "Inverted",
+        "Upright",
+        "Spindle-shaped",
+        "Variable"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, the pyramid of energy is always upright because energy decreases at each successive trophic level (due to the second law of thermodynamics). Unlike pyramids of numbers and biomass, it can never be inverted.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ecological-pyramids",
+        "energy-pyramid",
+        "upright"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Primary succession on bare rock begins with the colonisation of:",
+      "options": [
+        "Grasses",
+        "Shrubs",
+        "Lichens",
+        "Trees"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, primary succession on bare rock (xerosere) begins with pioneer species such as lichens (crustose lichens). They secrete acids that help weather the rock, creating a thin layer of soil for subsequent colonisers.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "succession",
+        "primary-succession",
+        "pioneer-species"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "GPP (Gross Primary Productivity) minus respiration equals:",
+      "options": [
+        "Secondary productivity",
+        "Net primary productivity (NPP)",
+        "Community productivity",
+        "Decomposition rate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, NPP (Net Primary Productivity) = GPP (Gross Primary Productivity) - R (Respiration). GPP is the total rate of photosynthesis, and NPP is the biomass available to consumers after plants use some energy for their own respiration.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "productivity",
+        "npp",
+        "gpp"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Detritivores differ from decomposers in that detritivores:",
+      "options": [
+        "Are microorganisms",
+        "Break down detritus by ingesting it",
+        "Secrete extracellular enzymes",
+        "Are producers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, detritivores (like earthworms and dung beetles) break down detritus by ingesting and digesting it internally. Decomposers (bacteria and fungi) break down dead organic matter by secreting extracellular enzymes and absorbing the digested nutrients.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "decomposition",
+        "detritivores",
+        "decomposers"
+      ],
+      "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "Biological magnification refers to:",
+      "options": [
+        "Increase in species diversity along food chain",
+        "Increase in concentration of non-degradable pollutants at successive trophic levels",
+        "Magnification of organisms under microscope",
+        "Increase in productivity at higher trophic levels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, biological magnification (biomagnification) is the increase in concentration of non-biodegradable toxic substances (like DDT, mercury) at each successive trophic level of a food chain. Top predators accumulate the highest concentrations.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "biomagnification",
+        "food-chain",
+        "pollutants"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Ecosystem",
+      "chapter": "Ecosystem",
+      "ncertClass": 12,
+      "ncertChapter": 14,
+      "ncertChapterName": "Ecosystem",
+      "question": "The term 'ecosystem' was coined by:",
+      "options": [
+        "Odum",
+        "Lindeman",
+        "Tansley",
+        "Haeckel"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the term 'ecosystem' was coined by A.G. Tansley (1935). He defined it as the functional unit of nature where living organisms interact with each other and with the physical environment. Haeckel coined the term 'ecology'.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "ecosystem",
+        "tansley",
+        "ecology-terminology"
+      ],
+      "neetWeightage": "HIGH"
     }
   ]
 }

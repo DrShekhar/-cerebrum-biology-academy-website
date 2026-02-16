@@ -1127,13 +1127,13 @@
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Arrange the following events of sexual reproduction in correct sequence:\n(i) Embryogenesis\n(ii) Gametogenesis\n(iii) Fertilisation\n(iv) Gamete transfer",
       "options": [
-        "i → ii → iii → iv",
-        "iv → ii → iii → i",
-        "ii → iii → iv → i",
-        "ii → iv → iii → i"
+        "i \u2192 ii \u2192 iii \u2192 iv",
+        "iv \u2192 ii \u2192 iii \u2192 i",
+        "ii \u2192 iii \u2192 iv \u2192 i",
+        "ii \u2192 iv \u2192 iii \u2192 i"
       ],
       "correctAnswer": "D",
-      "explanation": "The correct sequence of sexual reproduction events is: Gametogenesis (formation of gametes) → Gamete transfer → Fertilisation (syngamy) → Embryogenesis (development of embryo from zygote).",
+      "explanation": "The correct sequence of sexual reproduction events is: Gametogenesis (formation of gametes) \u2192 Gamete transfer \u2192 Fertilisation (syngamy) \u2192 Embryogenesis (development of embryo from zygote).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1151,13 +1151,13 @@
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Arrange the following phases of an organism's life in correct chronological order:\n(i) Senescent phase\n(ii) Reproductive phase\n(iii) Juvenile phase",
       "options": [
-        "iii → i → ii",
-        "ii → iii → i",
-        "i → ii → iii",
-        "iii → ii → i"
+        "iii \u2192 i \u2192 ii",
+        "ii \u2192 iii \u2192 i",
+        "i \u2192 ii \u2192 iii",
+        "iii \u2192 ii \u2192 i"
       ],
       "correctAnswer": "D",
-      "explanation": "The correct chronological order is: Juvenile phase (growth and maturation) → Reproductive phase (sexual maturity and reproduction) → Senescent phase (old age, decline of metabolic activities and eventual death).",
+      "explanation": "The correct chronological order is: Juvenile phase (growth and maturation) \u2192 Reproductive phase (sexual maturity and reproduction) \u2192 Senescent phase (old age, decline of metabolic activities and eventual death).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -1176,13 +1176,13 @@
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Arrange the following organisms in increasing order of their lifespan:\n(i) Banyan tree\n(ii) Butterfly\n(iii) Crow\n(iv) Parrot",
       "options": [
-        "ii → iv → iii → i",
-        "iii → ii → iv → i",
-        "ii → iii → iv → i",
-        "iv → iii → ii → i"
+        "ii \u2192 iv \u2192 iii \u2192 i",
+        "iii \u2192 ii \u2192 iv \u2192 i",
+        "ii \u2192 iii \u2192 iv \u2192 i",
+        "iv \u2192 iii \u2192 ii \u2192 i"
       ],
       "correctAnswer": "C",
-      "explanation": "The correct increasing order of lifespan is: Butterfly (1-2 weeks) → Crow (15 years) → Parrot (140 years) → Banyan tree (200+ years).",
+      "explanation": "The correct increasing order of lifespan is: Butterfly (1-2 weeks) \u2192 Crow (15 years) \u2192 Parrot (140 years) \u2192 Banyan tree (200+ years).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": false,
@@ -2127,13 +2127,13 @@
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Arrange the following in order of evolutionary complexity of gamete fusion:\n(i) Oogamy\n(ii) Isogamy\n(iii) Anisogamy",
       "options": [
-        "iii → ii → i",
-        "i → ii → iii",
-        "ii → i → iii",
-        "ii → iii → i"
+        "iii \u2192 ii \u2192 i",
+        "i \u2192 ii \u2192 iii",
+        "ii \u2192 i \u2192 iii",
+        "ii \u2192 iii \u2192 i"
       ],
       "correctAnswer": "D",
-      "explanation": "The evolutionary complexity of gamete fusion increases from isogamy (similar gametes) → anisogamy (dissimilar gametes of different sizes) → oogamy (large non-motile egg and small motile sperm). This represents progressive specialisation of gametes.",
+      "explanation": "The evolutionary complexity of gamete fusion increases from isogamy (similar gametes) \u2192 anisogamy (dissimilar gametes of different sizes) \u2192 oogamy (large non-motile egg and small motile sperm). This represents progressive specialisation of gametes.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2152,13 +2152,13 @@
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Arrange the correct sequence of events in the sexual life cycle of an organism:\n(i) Zygote formation\n(ii) Meiosis\n(iii) Gamete formation\n(iv) Syngamy\n(v) Embryogenesis",
       "options": [
-        "iii → iv → ii → i → v",
-        "ii → iii → iv → i → v",
-        "ii → iii → i → iv → v",
-        "iii → ii → iv → i → v"
+        "iii \u2192 iv \u2192 ii \u2192 i \u2192 v",
+        "ii \u2192 iii \u2192 iv \u2192 i \u2192 v",
+        "ii \u2192 iii \u2192 i \u2192 iv \u2192 v",
+        "iii \u2192 ii \u2192 iv \u2192 i \u2192 v"
       ],
       "correctAnswer": "B",
-      "explanation": "The correct sequence is: Meiosis (reduction of chromosome number) → Gamete formation → Syngamy (fusion of gametes) → Zygote formation → Embryogenesis (development of embryo). Meiosis precedes gamete formation as it reduces the ploidy.",
+      "explanation": "The correct sequence is: Meiosis (reduction of chromosome number) \u2192 Gamete formation \u2192 Syngamy (fusion of gametes) \u2192 Zygote formation \u2192 Embryogenesis (development of embryo). Meiosis precedes gamete formation as it reduces the ploidy.",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2177,13 +2177,13 @@
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Arrange the following organisms in increasing order of complexity of their asexual reproduction method:\n(i) Sponge (gemmules)\n(ii) Amoeba (binary fission)\n(iii) Penicillium (conidia)\n(iv) Hydra (budding)",
       "options": [
-        "i → ii → iii → iv",
-        "iv → ii → iii → i",
-        "ii → iv → iii → i",
-        "ii → iii → iv → i"
+        "i \u2192 ii \u2192 iii \u2192 iv",
+        "iv \u2192 ii \u2192 iii \u2192 i",
+        "ii \u2192 iv \u2192 iii \u2192 i",
+        "ii \u2192 iii \u2192 iv \u2192 i"
       ],
       "correctAnswer": "C",
-      "explanation": "The order of increasing complexity is: Binary fission in Amoeba (simplest - just cell division) → Budding in Hydra → Conidia in Penicillium (specialised spore formation) → Gemmules in Sponge (complex internal bud with resistant covering).",
+      "explanation": "The order of increasing complexity is: Binary fission in Amoeba (simplest - just cell division) \u2192 Budding in Hydra \u2192 Conidia in Penicillium (specialised spore formation) \u2192 Gemmules in Sponge (complex internal bud with resistant covering).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": false,
@@ -2202,13 +2202,13 @@
       "ncertChapterName": "Reproduction in Organisms",
       "question": "Arrange the following flowering patterns in order from shortest to longest flowering cycle:\n(i) Strobilanthus kunthiana\n(ii) Annual plants\n(iii) Bamboo\n(iv) Biennial plants",
       "options": [
-        "ii → iv → i → iii",
-        "iv → ii → i → iii",
-        "ii → i → iv → iii",
-        "ii → iv → iii → i"
+        "ii \u2192 iv \u2192 i \u2192 iii",
+        "iv \u2192 ii \u2192 i \u2192 iii",
+        "ii \u2192 i \u2192 iv \u2192 iii",
+        "ii \u2192 iv \u2192 iii \u2192 i"
       ],
       "correctAnswer": "A",
-      "explanation": "The correct order from shortest to longest flowering cycle: Annual plants (flower within one year) → Biennial plants (flower in second year) → Strobilanthus kunthiana (12 years) → Bamboo (50-100 years).",
+      "explanation": "The correct order from shortest to longest flowering cycle: Annual plants (flower within one year) \u2192 Biennial plants (flower in second year) \u2192 Strobilanthus kunthiana (12 years) \u2192 Bamboo (50-100 years).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2492,6 +2492,32 @@
         "adventitious-buds"
       ],
       "neetWeightage": "MEDIUM"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Reproduction in Organisms",
+      "chapter": "Reproduction in Organisms",
+      "ncertClass": 12,
+      "ncertChapter": 1,
+      "ncertChapterName": "Reproduction in Organisms",
+      "question": "Zoospores are flagellated motile asexual reproductive structures found in:",
+      "options": [
+        "Bryophyllum",
+        "Rhizopus",
+        "Chlamydomonas",
+        "Yeast"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, zoospores are flagellated (motile) microscopic asexual reproductive structures produced in aquatic organisms. Chlamydomonas reproduces asexually by zoospores. Yeast reproduces by budding and Rhizopus by non-motile spores.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "asexual-reproduction",
+        "zoospores",
+        "chlamydomonas"
+      ],
+      "neetWeightage": "HIGH"
     }
   ]
 }

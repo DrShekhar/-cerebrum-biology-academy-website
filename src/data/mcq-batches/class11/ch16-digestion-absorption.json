@@ -548,13 +548,13 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "The correct sequence of the parts of the human alimentary canal is:",
       "options": [
-        "Mouth → Pharynx → Oesophagus → Stomach → Small intestine → Large intestine",
-        "Mouth → Pharynx → Stomach → Oesophagus → Small intestine → Large intestine",
-        "Mouth → Stomach → Pharynx → Oesophagus → Small intestine → Large intestine",
-        "Mouth → Oesophagus → Pharynx → Stomach → Large intestine → Small intestine"
+        "Mouth \u2192 Pharynx \u2192 Oesophagus \u2192 Stomach \u2192 Small intestine \u2192 Large intestine",
+        "Mouth \u2192 Pharynx \u2192 Stomach \u2192 Oesophagus \u2192 Small intestine \u2192 Large intestine",
+        "Mouth \u2192 Stomach \u2192 Pharynx \u2192 Oesophagus \u2192 Small intestine \u2192 Large intestine",
+        "Mouth \u2192 Oesophagus \u2192 Pharynx \u2192 Stomach \u2192 Large intestine \u2192 Small intestine"
       ],
       "correctAnswer": "A",
-      "explanation": "The correct anatomical sequence of the human alimentary canal is: Mouth → Pharynx → Oesophagus → Stomach → Small intestine (duodenum, jejunum, ileum) → Large intestine (caecum, colon, rectum) → Anus.",
+      "explanation": "The correct anatomical sequence of the human alimentary canal is: Mouth \u2192 Pharynx \u2192 Oesophagus \u2192 Stomach \u2192 Small intestine (duodenum, jejunum, ileum) \u2192 Large intestine (caecum, colon, rectum) \u2192 Anus.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2250,10 +2250,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the following events of protein digestion in the correct sequence:\n(i) Pepsin converts proteins to proteoses and peptones\n(ii) Trypsin and chymotrypsin act on proteoses and peptones\n(iii) Dipeptidases convert dipeptides to amino acids\n(iv) Carboxypeptidase acts on polypeptides",
       "options": [
-        "(iv) → (i) → (ii) → (iii)",
-        "(i) → (ii) → (iv) → (iii)",
-        "(i) → (iv) → (ii) → (iii)",
-        "(ii) → (i) → (iii) → (iv)"
+        "(iv) \u2192 (i) \u2192 (ii) \u2192 (iii)",
+        "(i) \u2192 (ii) \u2192 (iv) \u2192 (iii)",
+        "(i) \u2192 (iv) \u2192 (ii) \u2192 (iii)",
+        "(ii) \u2192 (i) \u2192 (iii) \u2192 (iv)"
       ],
       "correctAnswer": "B",
       "explanation": "Protein digestion sequence: First, pepsin in stomach converts proteins to proteoses/peptones (i). Then in duodenum, trypsin and chymotrypsin further break them (ii). Carboxypeptidase cleaves terminal amino acids from peptides (iv). Finally, dipeptidases split dipeptides into amino acids (iii).",
@@ -2275,13 +2275,13 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the correct sequence of fat digestion and absorption:\n(i) Emulsification of fats by bile salts\n(ii) Chylomicron formation in intestinal cells\n(iii) Lipase action on emulsified fat droplets\n(iv) Entry of chylomicrons into lacteals\n(v) Absorption of fatty acids and glycerol by intestinal cells",
       "options": [
-        "(i) → (iii) → (v) → (ii) → (iv)",
-        "(i) → (v) → (iii) → (ii) → (iv)",
-        "(v) → (i) → (iii) → (ii) → (iv)",
-        "(iii) → (i) → (v) → (iv) → (ii)"
+        "(i) \u2192 (iii) \u2192 (v) \u2192 (ii) \u2192 (iv)",
+        "(i) \u2192 (v) \u2192 (iii) \u2192 (ii) \u2192 (iv)",
+        "(v) \u2192 (i) \u2192 (iii) \u2192 (ii) \u2192 (iv)",
+        "(iii) \u2192 (i) \u2192 (v) \u2192 (iv) \u2192 (ii)"
       ],
       "correctAnswer": "A",
-      "explanation": "Fat digestion sequence: Bile salts emulsify fats (i) → Lipase acts on emulsified fats to produce fatty acids and glycerol (iii) → Fatty acids and glycerol absorbed by intestinal cells (v) → Re-esterified into triglycerides and packaged as chylomicrons (ii) → Chylomicrons enter lacteals (iv).",
+      "explanation": "Fat digestion sequence: Bile salts emulsify fats (i) \u2192 Lipase acts on emulsified fats to produce fatty acids and glycerol (iii) \u2192 Fatty acids and glycerol absorbed by intestinal cells (v) \u2192 Re-esterified into triglycerides and packaged as chylomicrons (ii) \u2192 Chylomicrons enter lacteals (iv).",
       "difficulty": "HARD",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2301,13 +2301,13 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the following parts of the alimentary canal in the correct anatomical sequence from mouth to anus:",
       "options": [
-        "Mouth → Pharynx → Stomach → Oesophagus → Duodenum → Jejunum → Ileum → Caecum → Colon → Rectum → Anus",
-        "Mouth → Oesophagus → Pharynx → Stomach → Jejunum → Duodenum → Ileum → Colon → Caecum → Rectum → Anus",
-        "Mouth → Pharynx → Oesophagus → Stomach → Duodenum → Jejunum → Ileum → Caecum → Colon → Rectum → Anus",
-        "Mouth → Pharynx → Oesophagus → Stomach → Jejunum → Ileum → Duodenum → Caecum → Colon → Rectum → Anus"
+        "Mouth \u2192 Pharynx \u2192 Stomach \u2192 Oesophagus \u2192 Duodenum \u2192 Jejunum \u2192 Ileum \u2192 Caecum \u2192 Colon \u2192 Rectum \u2192 Anus",
+        "Mouth \u2192 Oesophagus \u2192 Pharynx \u2192 Stomach \u2192 Jejunum \u2192 Duodenum \u2192 Ileum \u2192 Colon \u2192 Caecum \u2192 Rectum \u2192 Anus",
+        "Mouth \u2192 Pharynx \u2192 Oesophagus \u2192 Stomach \u2192 Duodenum \u2192 Jejunum \u2192 Ileum \u2192 Caecum \u2192 Colon \u2192 Rectum \u2192 Anus",
+        "Mouth \u2192 Pharynx \u2192 Oesophagus \u2192 Stomach \u2192 Jejunum \u2192 Ileum \u2192 Duodenum \u2192 Caecum \u2192 Colon \u2192 Rectum \u2192 Anus"
       ],
       "correctAnswer": "C",
-      "explanation": "The correct anatomical sequence is: Mouth → Pharynx → Oesophagus → Stomach → Duodenum → Jejunum → Ileum (small intestine) → Caecum → Colon (ascending, transverse, descending, sigmoid) → Rectum → Anus.",
+      "explanation": "The correct anatomical sequence is: Mouth \u2192 Pharynx \u2192 Oesophagus \u2192 Stomach \u2192 Duodenum \u2192 Jejunum \u2192 Ileum (small intestine) \u2192 Caecum \u2192 Colon (ascending, transverse, descending, sigmoid) \u2192 Rectum \u2192 Anus.",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2324,12 +2324,12 @@
       "ncertClass": 11,
       "ncertChapter": 16,
       "ncertChapterName": "Digestion and Absorption",
-      "question": "Arrange the correct sequence of starch digestion:\n(i) Starch → Maltose (by ptyalin)\n(ii) Maltose → Glucose (by maltase)\n(iii) Starch → Maltose + Isomaltose + Limit dextrins (by pancreatic amylase)\n(iv) Isomaltose → Glucose (by isomaltase)",
+      "question": "Arrange the correct sequence of starch digestion:\n(i) Starch \u2192 Maltose (by ptyalin)\n(ii) Maltose \u2192 Glucose (by maltase)\n(iii) Starch \u2192 Maltose + Isomaltose + Limit dextrins (by pancreatic amylase)\n(iv) Isomaltose \u2192 Glucose (by isomaltase)",
       "options": [
-        "(i) → (iii) → (iv) → (ii)",
-        "(i) → (iii) → (ii) → (iv)",
-        "(iii) → (i) → (iv) → (ii)",
-        "(i) → (ii) → (iii) → (iv)"
+        "(i) \u2192 (iii) \u2192 (iv) \u2192 (ii)",
+        "(i) \u2192 (iii) \u2192 (ii) \u2192 (iv)",
+        "(iii) \u2192 (i) \u2192 (iv) \u2192 (ii)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv)"
       ],
       "correctAnswer": "A",
       "explanation": "Starch digestion sequence: Salivary amylase (ptyalin) converts starch to maltose in the mouth (i). Pancreatic amylase continues in the duodenum producing maltose, isomaltose, and limit dextrins (iii). Isomaltase converts isomaltose to glucose (iv). Maltase converts maltose to glucose (ii). Steps ii and iv occur simultaneously at the brush border.",
@@ -2351,10 +2351,10 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the correct sequence of enzyme activation in the duodenum:\n(i) Enterokinase activates trypsinogen to trypsin\n(ii) Trypsin activates chymotrypsinogen to chymotrypsin\n(iii) Trypsin activates procarboxypeptidase to carboxypeptidase\n(iv) Trypsin activates proelastase to elastase",
       "options": [
-        "(i) → (ii) → (iii) → (iv)",
-        "(iii) → (i) → (ii) → (iv)",
-        "(iv) → (iii) → (ii) → (i)",
-        "(ii) → (i) → (iv) → (iii)"
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv)",
+        "(iii) \u2192 (i) \u2192 (ii) \u2192 (iv)",
+        "(iv) \u2192 (iii) \u2192 (ii) \u2192 (i)",
+        "(ii) \u2192 (i) \u2192 (iv) \u2192 (iii)"
       ],
       "correctAnswer": "A",
       "explanation": "The cascade begins with enterokinase activating trypsinogen to trypsin (i). Once trypsin is formed, it acts as a master activator, converting chymotrypsinogen to chymotrypsin (ii), procarboxypeptidase to carboxypeptidase (iii), and proelastase to elastase (iv). Steps ii, iii, iv occur simultaneously but all depend on step i.",
@@ -2377,13 +2377,13 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the layers of the alimentary canal wall from innermost to outermost:",
       "options": [
-        "Mucosa → Muscularis → Submucosa → Serosa",
-        "Mucosa → Submucosa → Muscularis → Serosa",
-        "Serosa → Muscularis → Submucosa → Mucosa",
-        "Submucosa → Mucosa → Muscularis → Serosa"
+        "Mucosa \u2192 Muscularis \u2192 Submucosa \u2192 Serosa",
+        "Mucosa \u2192 Submucosa \u2192 Muscularis \u2192 Serosa",
+        "Serosa \u2192 Muscularis \u2192 Submucosa \u2192 Mucosa",
+        "Submucosa \u2192 Mucosa \u2192 Muscularis \u2192 Serosa"
       ],
       "correctAnswer": "B",
-      "explanation": "From innermost to outermost, the layers of the alimentary canal wall are: Mucosa (epithelium + lamina propria + muscularis mucosae) → Submucosa (connective tissue with blood vessels, nerves, Meissner's plexus) → Muscularis (circular + longitudinal muscles, Auerbach's plexus) → Serosa (outermost, visceral peritoneum).",
+      "explanation": "From innermost to outermost, the layers of the alimentary canal wall are: Mucosa (epithelium + lamina propria + muscularis mucosae) \u2192 Submucosa (connective tissue with blood vessels, nerves, Meissner's plexus) \u2192 Muscularis (circular + longitudinal muscles, Auerbach's plexus) \u2192 Serosa (outermost, visceral peritoneum).",
       "difficulty": "EASY",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2403,13 +2403,13 @@
       "ncertChapterName": "Digestion and Absorption",
       "question": "Arrange the following events of swallowing (deglutition) in the correct order:\n(i) Bolus is pushed to the back of the oral cavity by the tongue\n(ii) Soft palate rises to close nasopharynx\n(iii) Epiglottis closes the glottis\n(iv) Peristalsis pushes bolus through oesophagus\n(v) Bolus enters the stomach through cardiac sphincter",
       "options": [
-        "(iii) → (ii) → (i) → (iv) → (v)",
-        "(ii) → (i) → (iii) → (v) → (iv)",
-        "(i) → (ii) → (iii) → (iv) → (v)",
-        "(i) → (iii) → (ii) → (iv) → (v)"
+        "(iii) \u2192 (ii) \u2192 (i) \u2192 (iv) \u2192 (v)",
+        "(ii) \u2192 (i) \u2192 (iii) \u2192 (v) \u2192 (iv)",
+        "(i) \u2192 (ii) \u2192 (iii) \u2192 (iv) \u2192 (v)",
+        "(i) \u2192 (iii) \u2192 (ii) \u2192 (iv) \u2192 (v)"
       ],
       "correctAnswer": "C",
-      "explanation": "Deglutition sequence: The tongue pushes the bolus backward (i) → Soft palate rises to prevent food from entering the nasal passages (ii) → Epiglottis folds over the glottis to prevent food from entering the trachea (iii) → Peristaltic waves push bolus through the oesophagus (iv) → Bolus enters the stomach through the relaxed cardiac sphincter (v).",
+      "explanation": "Deglutition sequence: The tongue pushes the bolus backward (i) \u2192 Soft palate rises to prevent food from entering the nasal passages (ii) \u2192 Epiglottis folds over the glottis to prevent food from entering the trachea (iii) \u2192 Peristaltic waves push bolus through the oesophagus (iv) \u2192 Bolus enters the stomach through the relaxed cardiac sphincter (v).",
       "difficulty": "MEDIUM",
       "isNcertBased": true,
       "isNeetImportant": true,
@@ -2417,6 +2417,138 @@
         "deglutition",
         "swallowing",
         "sequence"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Digestion and Absorption",
+      "chapter": "Digestion and Absorption",
+      "ncertClass": 11,
+      "ncertChapter": 16,
+      "ncertChapterName": "Digestion and Absorption",
+      "question": "The enzyme enterokinase is secreted by:",
+      "options": [
+        "Stomach",
+        "Pancreas",
+        "Intestinal mucosa",
+        "Liver"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, enterokinase (enteropeptidase) is secreted by the intestinal mucosa (duodenal mucosa). It activates trypsinogen to trypsin, which then activates other pancreatic proenzymes.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "digestion",
+        "enterokinase",
+        "intestine"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Digestion and Absorption",
+      "chapter": "Digestion and Absorption",
+      "ncertClass": 11,
+      "ncertChapter": 16,
+      "ncertChapterName": "Digestion and Absorption",
+      "question": "Bile salts help in the digestion of fats by:",
+      "options": [
+        "Hydrolysing fats",
+        "Emulsifying fats",
+        "Absorbing fats",
+        "Synthesising fats"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, bile salts (produced by the liver and stored in the gallbladder) emulsify fats, breaking large fat globules into smaller droplets. This increases the surface area for lipase action. Bile does not contain any digestive enzymes.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "digestion",
+        "bile",
+        "emulsification",
+        "fats"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Digestion and Absorption",
+      "chapter": "Digestion and Absorption",
+      "ncertClass": 11,
+      "ncertChapter": 16,
+      "ncertChapterName": "Digestion and Absorption",
+      "question": "The largest gland in the human body is:",
+      "options": [
+        "Pancreas",
+        "Thyroid",
+        "Liver",
+        "Salivary gland"
+      ],
+      "correctAnswer": "C",
+      "explanation": "As per NCERT, the liver is the largest gland in the human body, weighing about 1.2-1.5 kg. It produces bile, stores glycogen, detoxifies blood, produces plasma proteins, and plays a major role in metabolism.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "liver",
+        "largest-gland",
+        "digestive-system"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Digestion and Absorption",
+      "chapter": "Digestion and Absorption",
+      "ncertClass": 11,
+      "ncertChapter": 16,
+      "ncertChapterName": "Digestion and Absorption",
+      "question": "Kwashiorkor in children is caused by deficiency of:",
+      "options": [
+        "Calories only",
+        "Proteins",
+        "Vitamins",
+        "Minerals"
+      ],
+      "correctAnswer": "B",
+      "explanation": "As per NCERT, kwashiorkor is caused by protein deficiency in children. It is characterised by oedema (swelling), wasting of muscles, thinning of limbs, enlarged belly, and mental changes. Marasmus is caused by deficiency of both protein and calories.",
+      "difficulty": "MEDIUM",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "malnutrition",
+        "kwashiorkor",
+        "protein-deficiency"
+      ],
+      "neetWeightage": "HIGH"
+    },
+    {
+      "type": "MCQ",
+      "topic": "Digestion and Absorption",
+      "chapter": "Digestion and Absorption",
+      "ncertClass": 11,
+      "ncertChapter": 16,
+      "ncertChapterName": "Digestion and Absorption",
+      "question": "The pH of gastric juice is approximately:",
+      "options": [
+        "1.0-2.0",
+        "4.0-5.0",
+        "7.0",
+        "8.0-9.0"
+      ],
+      "correctAnswer": "A",
+      "explanation": "As per NCERT, the gastric juice has a very low pH of about 1.0-2.0 due to the presence of hydrochloric acid (HCl) secreted by oxyntic (parietal) cells. This acidic environment activates pepsinogen to pepsin and kills most bacteria.",
+      "difficulty": "EASY",
+      "isNcertBased": true,
+      "isNeetImportant": true,
+      "tags": [
+        "stomach",
+        "gastric-juice",
+        "ph",
+        "hcl"
       ],
       "neetWeightage": "HIGH"
     }
