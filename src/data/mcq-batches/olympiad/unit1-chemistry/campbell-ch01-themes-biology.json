@@ -1,0 +1,1510 @@
+{
+  "batch": {
+    "name": "Campbell Ch1 Themes of Biology — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 75
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "A researcher discovers that a newly identified species of deep-sea organism uses hydrogen sulfide as an energy source. This organism most likely obtains energy through which process?",
+      "options": [
+        "Chemolithoautotrophy via sulfide oxidation",
+        "Photosynthesis using bacteriorhodopsin",
+        "Heterotrophic fermentation of organic detritus",
+        "Photoheterotrophy coupled with sulfur reduction"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Chemolithoautotrophy via sulfide oxidation is the correct answer because organisms in deep-sea environments that use hydrogen sulfide as an energy source are chemolithoautotrophs. They oxidize H₂S to obtain electrons for ATP production, coupling this to carbon fixation (often via the Calvin cycle or reductive TCA cycle). Option B is incorrect because bacteriorhodopsin-mediated photosynthesis requires light, which is absent in the deep sea. Option C is wrong because heterotrophic fermentation requires pre-formed organic molecules, not H₂S as an energy source. Option D is incorrect because photoheterotrophy also requires light energy, making it incompatible with a deep-sea habitat.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a controlled experiment testing the effect of a new fertilizer on plant growth, a student measures stem height, leaf count, and chlorophyll content. Which aspect of the experimental design is MOST critical for establishing causality?",
+      "options": [
+        "Using multiple dependent variables to increase statistical power",
+        "Conducting the experiment in a greenhouse to eliminate all variables",
+        "Measuring chlorophyll content as a proxy for photosynthetic rate",
+        "Randomized assignment of subjects to treatment and control groups"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Randomized assignment of subjects to treatment and control groups is most critical for establishing causality because randomization minimizes systematic bias and ensures that confounding variables are equally distributed between groups. This is a foundational principle in experimental design. Option A is incorrect because multiple dependent variables increase the breadth of measurement but do not inherently establish causality; they may even introduce issues with multiple comparisons. Option B is wrong because a greenhouse reduces but does not eliminate all variables, and controlling the environment alone without randomization cannot establish causality. Option C is incorrect because measuring chlorophyll content is a methodological choice, not a design element that establishes causality.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A biologist studying a coral reef ecosystem notices that cleaner wrasses remove parasites from larger fish. The larger fish refrain from eating the wrasses. This interaction best exemplifies which biological theme?",
+      "options": [
+        "Emergent properties arising from organismal interactions at the community level",
+        "Energy flow through trophic levels requiring abiotic regulation",
+        "Evolutionary adaptation driven exclusively by genetic drift in small populations",
+        "Negative feedback mechanisms maintaining population homeostasis"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Emergent properties arising from organismal interactions at the community level is correct because mutualistic interactions like cleaning symbiosis are properties that emerge only when organisms interact within a community context — they cannot be predicted by studying either species in isolation. This exemplifies the theme that new properties emerge at each level of biological organization. Option B is incorrect because this is a biotic interaction (organism-organism), not an abiotic regulation of energy flow. Option C is wrong because this interaction reflects natural selection favoring mutualism, not genetic drift, which is random and most significant in small populations. Option D is incorrect because negative feedback mechanisms refer to homeostatic regulatory loops (e.g., thermoregulation), not interspecific behavioral interactions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following scenarios best illustrates the concept of structure fitting function at the molecular level?",
+      "options": [
+        "A population of bacteria evolves antibiotic resistance through horizontal gene transfer",
+        "A forest ecosystem maintains biodiversity through disturbance-mediated patch dynamics",
+        "A cell regulates its internal pH through proton pump activity across its membrane",
+        "A hemoglobin molecule's quaternary structure allows cooperative oxygen binding that increases oxygen loading efficiency"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hemoglobin's quaternary structure allowing cooperative oxygen binding is the best example of structure fitting function at the molecular level. The specific arrangement of four subunits (two alpha, two beta) creates allosteric interactions where binding of O₂ to one subunit conformationally shifts the others into a high-affinity state. This is a direct molecular-level demonstration of how three-dimensional structure determines biological function. Option A describes evolutionary mechanism (horizontal gene transfer), not molecular structure-function relationships. Option B describes an ecosystem-level process involving disturbance ecology, not molecular structure. Option C describes a physiological process (pH regulation) that, while involving molecular machinery, is best classified as homeostasis rather than a direct illustration of molecular structure determining function.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A phylogenetic analysis reveals that two morphologically dissimilar organisms share a highly conserved HOX gene cluster. This finding most directly supports which core biological concept?",
+      "options": [
+        "Unity of life at the molecular level despite diversity in form",
+        "Convergent evolution produces analogous structures from different genetic bases",
+        "Natural selection always favors increased morphological complexity",
+        "Genetic drift is the primary force shaping developmental gene evolution"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The conservation of HOX gene clusters across morphologically dissimilar organisms is the hallmark example of unity at the molecular level despite diversity of form. HOX genes are master regulatory genes conserved across vast phylogenetic distances (e.g., from Drosophila to humans), demonstrating that underlying genetic toolkits are shared even when body plans differ dramatically. This illustrates the biological theme that all life shares fundamental molecular similarities inherited from common ancestors. Option B is incorrect because convergent evolution involves different genetic bases producing similar structures, which is the opposite of this scenario (same genes, different morphology). Option C is wrong because natural selection does not always favor complexity; many lineages have undergone simplification. Option D is incorrect because HOX gene conservation is maintained by purifying selection (strong functional constraint), not genetic drift, which would lead to divergence rather than conservation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about emergent properties in biological systems:\nS1: The ability of a flock of birds to exhibit coordinated movement patterns is an emergent property that cannot be predicted from studying individual birds alone.\nS2: Emergent properties violate the laws of physics and chemistry because they produce outcomes not reducible to component parts.\nS3: Consciousness in the human brain is considered an emergent property arising from the complex interactions of billions of neurons.\nS4: A single water molecule exhibits the same cohesive properties as a large collection of water molecules.",
+      "options": [
+        "TTTT",
+        "TFTT",
+        "TFTF",
+        "TTFF"
+      ],
+      "correctAnswer": "TFTF",
+      "explanation": "S1 is TRUE because flocking behavior (e.g., murmurations of starlings) is a classic example of emergence — the coordinated patterns arise from simple rules followed by individuals but cannot be predicted from studying a single bird. S2 is FALSE because emergent properties do not violate physical or chemical laws; they are fully consistent with them but arise from the specific organization and interactions of components, not from new physics. S3 is TRUE because consciousness is widely regarded in neuroscience and philosophy of mind as an emergent property — it arises from neural network interactions and is not a property of any single neuron. S4 is FALSE because cohesion results from hydrogen bonding between multiple water molecules; a single isolated water molecule cannot exhibit cohesion, making cohesion itself an emergent property of water in bulk.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "During a long-term study, researchers observe that a population of lizards on an island develops longer limbs over 15 generations following the introduction of a ground-dwelling predator. Which level of biological organization is MOST directly involved in this change?",
+      "options": [
+        "Molecular level — mutations in limb development genes arise in response to predation",
+        "Organismal level — individual lizards stretch their limbs through use and disuse",
+        "Ecosystem level — predator-prey dynamics alter abiotic resource availability",
+        "Population level — allele frequencies shift due to differential survival and reproduction"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Population level — allele frequencies shifting due to differential survival and reproduction — is the correct answer because evolution by natural selection operates at the population level. Over 15 generations, lizards with longer limbs presumably had higher fitness (better escape from ground predators), leading to increased frequency of alleles associated with longer limbs. Option A is incorrect because mutations are random and do not arise 'in response to' environmental pressures; additionally, mutation is a molecular event but the evolutionary change is a population-level phenomenon. Option B is incorrect because Lamarckian inheritance (use and disuse) is not a valid mechanism of evolution. Option C is wrong because while predator-prey dynamics are ecosystem-level, the morphological change in the lizard population is a population-level genetic shift.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the metabolic rates (in mL O₂/g/hr) of four organisms at different temperatures:\n\nOrganism | 10°C | 20°C | 30°C | 40°C\nMouse    | 3.2  | 3.1  | 3.3  | 3.0\nLizard   | 0.5  | 1.2  | 2.4  | 4.1\nFrog     | 0.3  | 0.9  | 1.8  | 3.5\nSalmon   | 0.8  | 1.5  | 2.8  | 4.5\n\nWhich conclusion is best supported by these data?",
+      "options": [
+        "The mouse is an ectotherm because its metabolic rate is highest at 10°C",
+        "The lizard, frog, and salmon are endotherms because their metabolic rates increase with temperature",
+        "All four organisms show identical thermoregulatory strategies because they all consume oxygen",
+        "The mouse maintains relatively constant metabolic rate across temperatures, consistent with endothermy"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The mouse maintains a relatively constant metabolic rate across temperatures (ranging only from 3.0 to 3.3 mL O₂/g/hr), which is consistent with endothermy. Endotherms maintain a relatively stable internal body temperature through metabolic heat production, so their mass-specific metabolic rate remains relatively constant across a range of ambient temperatures. Option A is incorrect because the mouse's constant metabolic rate indicates endothermy, not ectothermy. Option B is wrong because increasing metabolic rate with ambient temperature is characteristic of ectotherms, whose metabolic rates are temperature-dependent. Option C is incorrect because oxygen consumption is universal among aerobic organisms and says nothing about thermoregulatory strategy; the pattern of metabolic rate change with temperature distinguishes endotherms from ectotherms.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following represents the correct hierarchical sequence of biological organization from least to most inclusive?",
+      "options": [
+        "Organelle → Cell → Tissue → Organ → Organ system → Organism → Population → Community → Ecosystem → Biosphere",
+        "Molecule → Organelle → Cell → Tissue → Organ → Population → Community → Organism → Ecosystem → Biosphere",
+        "Atom → Molecule → Cell → Organelle → Tissue → Organ → Organism → Population → Ecosystem → Biosphere",
+        "Molecule → Cell → Organelle → Tissue → Organ system → Organism → Community → Population → Ecosystem → Biosphere"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct hierarchy from least to most inclusive is: Organelle → Cell → Tissue → Organ → Organ system → Organism → Population → Community → Ecosystem → Biosphere. This sequence properly nests each level within the next. Option B is incorrect because it places Population and Community before Organism, but populations and communities are composed of organisms. Option C is incorrect because it places Cell before Organelle, but organelles are components within cells and thus at a lower level of organization. Option D is wrong because it places Organelle after Cell (organelles are within cells) and Community before Population (populations are subsets of communities, not the reverse). Understanding this hierarchy is fundamental to biology and is a recurring theme in Campbell Biology.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A student hypothesizes that caffeine increases the heart rate of Daphnia (water fleas). She places 10 Daphnia in caffeine solution and 10 in pond water, measuring heart rate after 30 minutes. Her results show a significant increase in the caffeine group. A reviewer critiques the experiment. Which criticism is MOST valid?",
+      "options": [
+        "Individual Daphnia should have been randomly assigned to groups to reduce selection bias",
+        "The sample size of 10 per group is too small to detect any effect of caffeine",
+        "The dependent variable should have been caffeine concentration rather than heart rate",
+        "The experiment lacks a positive control, such as a known cardiac stimulant"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Random assignment of individual Daphnia to treatment and control groups is the most valid criticism because without randomization, there may be systematic differences between the groups (e.g., larger or healthier individuals preferentially placed in one group) that confound the results. Randomization is a fundamental principle of experimental design that ensures internal validity. Option B is incorrect because while larger sample sizes increase power, n=10 per group can be sufficient to detect moderate-to-large effects, and the problem states significant results were obtained. Option C is incorrect because heart rate is the appropriate dependent variable — caffeine concentration is the independent variable being manipulated. Option D is incorrect because a positive control (known stimulant) is useful but not essential for testing whether caffeine affects heart rate; the negative control (pond water) is the critical comparison.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The discovery that all organisms use DNA as their genetic material and share a nearly universal genetic code most directly supports which concept?",
+      "options": [
+        "Descent with modification from a common ancestor",
+        "All species are equally evolved and equally complex",
+        "Spontaneous generation of life occurs regularly",
+        "Horizontal gene transfer is the primary mode of inheritance"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The universality of DNA as genetic material and the near-universal genetic code provide strong evidence for descent with modification from a common ancestor. If all life descended from a common ancestor that used DNA and this genetic code, we would expect these features to be conserved across all descendants. Option B is incorrect because while all organisms share DNA, they vary enormously in complexity and are adapted to different niches — no biologist claims all species are equally complex. Option C is wrong because spontaneous generation has been disproven; shared DNA actually argues against independent origins. Option D is incorrect because although horizontal gene transfer occurs (especially in prokaryotes), vertical inheritance from parent to offspring remains the primary mode of inheritance for most organisms, and the universal code predates HGT as evidence for common ancestry.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the scientific method and hypothesis testing:\nS1: A scientific hypothesis must be falsifiable — there must exist a conceivable observation or experiment that could disprove it.\nS2: A theory in science is merely an unproven guess that has not yet been supported by evidence.\nS3: Inductive reasoning involves drawing general conclusions from specific observations.\nS4: A well-designed experiment tests only one independent variable at a time while holding others constant.",
+      "options": [
+        "TFTF",
+        "TFTT",
+        "TTFT",
+        "FFTT"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE because falsifiability is a defining characteristic of scientific hypotheses (per Karl Popper's criterion). If no conceivable test could disprove a claim, it is not a scientific hypothesis. S2 is FALSE because in science, a theory is a well-substantiated explanation supported by extensive evidence, testing, and peer review (e.g., theory of evolution, cell theory). This is fundamentally different from the colloquial use of 'theory' as a guess. S3 is TRUE because inductive reasoning moves from specific observations to general principles (e.g., observing that all observed swans are white and concluding that all swans are white). S4 is TRUE because controlling variables is essential to experimental design — manipulating one independent variable while holding others constant allows researchers to attribute observed effects to that specific variable.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A bioinformatics study compares the genomes of five bacterial species and finds that they all share a set of 200 orthologous genes. These genes are most likely involved in which cellular processes?",
+      "options": [
+        "Core metabolic functions such as transcription, translation, and DNA replication",
+        "Species-specific pathogenicity and virulence mechanisms",
+        "Adaptive immune responses unique to each bacterial lineage",
+        "Production of secondary metabolites for interspecific competition"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Core metabolic functions such as transcription, translation, and DNA replication are the most likely functions of 200 orthologous genes shared across five bacterial species. Orthologous genes (homologs separated by speciation) that are conserved across diverse species are typically under strong purifying selection because they encode essential, highly conserved cellular processes. Option B is incorrect because pathogenicity and virulence genes are species- or strain-specific and would not be shared as orthologs across diverse species. Option C is wrong because bacteria lack adaptive immune systems entirely (adaptive immunity is a vertebrate feature). Option D is incorrect because secondary metabolite production genes are typically variable among species and often acquired through horizontal gene transfer rather than being universally conserved orthologs.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A study tracks the population sizes of a predator and its prey over 20 years. The data show that prey population peaks consistently precede predator population peaks by approximately 2 years. If the predator is suddenly removed from the ecosystem, which prediction is most consistent with ecological principles?",
+      "options": [
+        "The prey population would immediately go extinct due to loss of evolutionary pressure",
+        "The prey population would remain unchanged because predation has no effect on population dynamics",
+        "The prey population would decrease because predators stimulate prey reproduction through hormonal signaling",
+        "The prey population would initially increase rapidly, then potentially crash due to resource depletion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The prey population would initially increase rapidly due to release from predation pressure (a phenomenon known as mesopredator or prey release), then potentially crash due to resource depletion as the population overshoots carrying capacity. This is consistent with classic ecological models (e.g., logistic growth with density-dependent regulation). Option A is incorrect because loss of a predator does not cause prey extinction; if anything, reduced mortality initially benefits the prey. Option B is wrong because predation is a major factor in population dynamics, and removal of a predator would clearly affect prey population size. Option C is incorrect because predators do not stimulate prey reproduction through hormonal signaling; predation reduces prey numbers through direct mortality.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Systems biology differs from traditional reductionist approaches in biology primarily because it:",
+      "options": [
+        "Attempts to model the dynamic interactions among components of biological systems using computational tools",
+        "Rejects the use of controlled experiments in favor of purely observational studies",
+        "Studies individual genes in isolation to determine their function before integrating findings",
+        "Focuses exclusively on molecular-level interactions and ignores higher organizational levels"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Systems biology attempts to model the dynamic interactions among components of biological systems using computational tools. It is distinguished from reductionism by its holistic, integrative approach — rather than studying components in isolation, it examines how they interact to produce system-level behaviors. Systems biology relies heavily on mathematical modeling, network analysis, and large-scale data integration. Option D is incorrect because systems biology explicitly moves beyond molecular-level reductionism to consider interactions at multiple scales. Option B is wrong because systems biology does not reject controlled experiments; it integrates experimental data with computational modeling. Option C describes a reductionist approach (studying genes in isolation), which is precisely what systems biology seeks to complement and move beyond.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a specific soil microbe enhances plant growth. She designs an experiment with four treatment groups: (1) sterile soil + no microbe, (2) sterile soil + microbe, (3) natural soil + no microbe, (4) natural soil + microbe. What is the PRIMARY advantage of including groups 3 and 4?",
+      "options": [
+        "They allow assessment of whether the microbe's effect depends on the presence of other soil organisms",
+        "They eliminate the need for statistical analysis by providing direct visual comparisons",
+        "They control for the Hawthorne effect by ensuring all plants receive equal attention",
+        "They serve as positive controls confirming that the measurement instruments work correctly"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Including natural soil groups (3 and 4) alongside sterile soil groups (1 and 2) allows the researcher to assess whether the microbe's effect depends on the presence of other soil organisms — this tests for an interaction effect. The microbe might enhance growth only in sterile soil (where it faces no competition) but have no effect in natural soil (where existing microbiota already provide similar benefits), or vice versa. This factorial design reveals context-dependency. Option D is incorrect because positive controls for instrument calibration would involve known standards, not additional experimental groups. Option B is wrong because no experimental design eliminates the need for statistical analysis; visual comparisons are insufficient for scientific conclusions. Option C is incorrect because the Hawthorne effect applies to human subjects who change behavior when observed, not to plants.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The endosymbiotic theory proposes that mitochondria and chloroplasts originated from free-living prokaryotes engulfed by ancestral eukaryotic cells. Which evidence LEAST supports this theory?",
+      "options": [
+        "Mitochondria and chloroplasts have double membranes",
+        "Mitochondria and chloroplasts contain their own circular DNA",
+        "Mitochondrial ribosomes are similar in size to eukaryotic cytoplasmic ribosomes",
+        "Mitochondria and chloroplasts reproduce by binary fission within the cell"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Mitochondrial ribosomes being similar in size to eukaryotic cytoplasmic ribosomes would LEAST support endosymbiotic theory — and in fact, this statement is false. Mitochondrial ribosomes (55S in mammals) are actually more similar to prokaryotic ribosomes (70S) than to eukaryotic cytoplasmic ribosomes (80S), which DOES support endosymbiotic theory. The question asks which evidence least supports the theory, and a claim that mitochondrial ribosomes resemble eukaryotic ribosomes would actually argue against prokaryotic ancestry. Option A supports the theory because the double membrane is explained by the engulfing process (inner membrane from the prokaryote, outer from the host's endocytic vesicle). Option B supports it because circular DNA is characteristic of prokaryotes. Option D supports it because binary fission is a prokaryotic mode of reproduction.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a negative feedback loop regulating blood glucose, which sequence correctly describes the response to elevated blood glucose?",
+      "options": [
+        "Pancreas detects high glucose → alpha cells secrete glucagon → liver releases glucose → blood glucose rises further",
+        "Hypothalamus detects high glucose → posterior pituitary secretes ADH → kidneys reabsorb water → blood glucose is diluted",
+        "Adrenal glands detect high glucose → cortex secretes cortisol → muscle proteins are catabolized → blood glucose increases further",
+        "Pancreas detects high glucose → beta cells secrete insulin → cells uptake glucose and liver stores glycogen → blood glucose decreases"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct negative feedback response to elevated blood glucose involves beta cells of the pancreatic islets of Langerhans detecting high glucose and secreting insulin. Insulin promotes glucose uptake by cells (primarily muscle and adipose) and stimulates the liver to convert glucose to glycogen, thereby reducing blood glucose levels back toward the set point. Option A describes the response to LOW blood glucose (alpha cells release glucagon), which is the opposite scenario. Option B is incorrect because ADH (antidiuretic hormone) regulates water balance, not blood glucose, and the hypothalamus does not directly regulate blood glucose through ADH. Option C describes cortisol's gluconeogenic effects, which would raise blood glucose further — a positive feedback that would worsen hyperglycemia, not correct it.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the domains of life:\nS1: Bacteria and Archaea are both prokaryotic but are classified in separate domains because of fundamental differences in cell wall composition, membrane lipids, and genetic machinery.\nS2: All members of domain Eukarya are multicellular organisms.\nS3: Archaea are more closely related to Eukarya than to Bacteria based on molecular phylogenetics.\nS4: Horizontal gene transfer blurs the boundaries between the three domains, making a strict tree-of-life model inadequate for representing all evolutionary relationships.",
+      "options": [
+        "TFTT",
+        "TTTT",
+        "TFTF",
+        "TFFT"
+      ],
+      "correctAnswer": "TFTT",
+      "explanation": "S1 is TRUE because Bacteria and Archaea, while both prokaryotic, differ fundamentally in cell wall composition (peptidoglycan in Bacteria vs. pseudopeptidoglycan or other polymers in Archaea), membrane lipids (ester-linked in Bacteria vs. ether-linked in Archaea), and aspects of genetic machinery (archaeal RNA polymerase and ribosomes more closely resemble eukaryotic versions). S2 is FALSE because domain Eukarya includes many unicellular organisms such as yeasts, protists (amoebae, paramecia, diatoms), and unicellular algae. S3 is TRUE because molecular phylogenetic analyses, particularly of rRNA sequences and core transcription/translation machinery, consistently show Archaea as the sister group to Eukarya. S4 is TRUE because horizontal gene transfer (HGT), especially among prokaryotes, creates a web-like pattern of genetic exchange that cannot be represented by a simple bifurcating tree.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher conducting a double-blind clinical trial on a new drug assigns patients to treatment and placebo groups. What is the primary purpose of the 'double-blind' design?",
+      "options": [
+        "To ensure that the drug is tested on twice as many subjects as the placebo",
+        "To test two different drugs simultaneously against the same placebo",
+        "To blind subjects to the hypothesis while allowing researchers to know all group assignments",
+        "To prevent both the subjects and the researchers from knowing group assignments, reducing bias in measurement and reporting"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In a double-blind design, neither the subjects nor the researchers collecting data know which participants receive the treatment versus the placebo. This prevents subject bias (placebo effect, behavioral changes) and observer bias (unconscious differences in measurement, assessment, or reporting based on knowledge of group assignment). Option A is incorrect because 'double-blind' does not refer to sample size; it refers to the blinding of two parties (subjects and researchers). Option B is wrong because testing two drugs simultaneously describes a different design element (multiple treatment arms), not blinding. Option C describes a single-blind design (only subjects are blinded), not a double-blind design where both parties are blinded.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Scientists measured species diversity (Shannon diversity index H') in three habitats:\n\nHabitat | Species richness | H' value\nForest  | 45              | 3.2\nGrassland| 30             | 2.8\nDesert  | 15              | 2.5\n\nA fourth habitat, a disturbed wetland, has 50 species but an H' of only 1.9. What is the most likely explanation for the wetland's low diversity index despite high species richness?",
+      "options": [
+        "The wetland has high species richness but extremely uneven species abundances, with one or few species dominating",
+        "The Shannon index only measures species richness and ignores abundance patterns",
+        "The wetland data must contain a calculation error because H' always increases with species richness",
+        "The Shannon index penalizes aquatic habitats because water reduces sampling efficiency"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Shannon diversity index (H') incorporates both species richness (number of species) and evenness (how equally individuals are distributed among species). A habitat can have many species (high richness) but low H' if abundances are highly skewed — for example, if one species comprises 90% of all individuals while the remaining 49 species share only 10%. This is the most likely explanation for the wetland's paradoxically low H'. Option B is incorrect because the Shannon index explicitly incorporates both richness and evenness (H' = -Σ pᵢ ln pᵢ). Option C is wrong because H' does not always increase with richness; it depends on evenness. Option D is incorrect because the Shannon index has no inherent bias against aquatic habitats; it is a mathematical formula applied equally to any community data.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following best illustrates positive feedback in a biological system?",
+      "options": [
+        "Body temperature rises above set point, triggering sweating to cool the body",
+        "During labor, pressure of the baby on the cervix stimulates oxytocin release, which intensifies contractions, increasing pressure further",
+        "Blood calcium drops below set point, stimulating parathyroid hormone release to raise calcium levels",
+        "After a meal, rising blood glucose triggers insulin release, which promotes glucose uptake and lowers blood glucose"
+      ],
+      "correctAnswer": "B",
+      "explanation": "During labor, the baby's head pressing against the cervix triggers the release of oxytocin from the posterior pituitary. Oxytocin stimulates uterine contractions, which push the baby further into the cervix, increasing pressure and triggering more oxytocin release. This is a classic positive feedback loop because the response amplifies the stimulus rather than counteracting it. The loop continues until delivery, when the stimulus (pressure on cervix) is removed. Option A describes negative feedback (sweating counteracts the temperature increase). Option C describes negative feedback (PTH secretion counteracts low calcium). Option D describes negative feedback (insulin counteracts high glucose). Positive feedback amplifies change; negative feedback resists change.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A team of ecologists wants to determine whether a specific invasive plant species reduces native insect diversity. They survey 20 plots: 10 invaded and 10 uninvaded. They find significantly lower insect diversity in invaded plots. A colleague argues the study has a major flaw. What is the most likely criticism?",
+      "options": [
+        "The study should have used only 5 plots per group to reduce sampling effort",
+        "The study is correlational and cannot establish that the invasive plant caused the reduction in insect diversity",
+        "Insect diversity is not a valid dependent variable for ecological studies",
+        "The researchers should have measured plant diversity instead of insect diversity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The most likely criticism is that the study is observational/correlational rather than experimental. The researchers compared naturally invaded vs. uninvaded plots, but these plots may differ in many ways beyond the presence of the invasive plant (soil type, moisture, disturbance history, proximity to water sources). Without random assignment of the invasive plant treatment, confounding variables cannot be ruled out, and causality cannot be established. Option A is incorrect because reducing sample size would reduce statistical power and make the study worse. Option C is wrong because insect diversity is a widely used and valid ecological metric. Option D is incorrect because the research question specifically concerns insect diversity; measuring plant diversity could be supplementary but is not a flaw in the current design.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A new antibiotic is discovered that specifically inhibits peptidyl transferase activity. This drug would most directly affect which domain(s) of life?",
+      "options": [
+        "Only Bacteria, because Archaea and Eukarya lack ribosomes",
+        "Bacteria and Archaea equally, because both have 70S ribosomes with identical peptidyl transferase centers",
+        "Only Eukarya, because peptidyl transferase is exclusive to 80S ribosomes",
+        "Primarily Bacteria, because bacterial peptidyl transferase has structural features distinct from archaeal and eukaryotic versions"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A drug that specifically inhibits peptidyl transferase would primarily affect Bacteria because bacterial peptidyl transferase (located in the large ribosomal subunit, 50S) has structural features distinct from the archaeal and eukaryotic versions. This is why many antibiotics (e.g., chloramphenicol, macrolides) target bacterial ribosomes without affecting human cells. Although Archaea also have 70S ribosomes, their ribosomal RNA and protein compositions share more similarities with eukaryotic ribosomes, making many antibacterial ribosome-targeting drugs ineffective against Archaea. Option A is incorrect because all three domains have ribosomes. Option B is wrong because despite both having 70S ribosomes, the structural details of the peptidyl transferase center differ between Bacteria and Archaea. Option C is incorrect because peptidyl transferase is present in all ribosomes (70S and 80S).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'descent with modification' proposed by Darwin can be most accurately described as:",
+      "options": [
+        "Individual organisms modify their traits during their lifetime and pass these modifications to offspring",
+        "Species arise independently and are fixed in form since their creation",
+        "All evolution proceeds at a constant rate across all lineages over geological time",
+        "Populations change over generations as heritable traits that enhance survival and reproduction become more common"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Descent with modification means that populations change over generations through the differential survival and reproduction of individuals with heritable traits. Organisms with traits better suited to their environment are more likely to survive and reproduce, passing those traits to the next generation. Over time, this leads to modification of the population's characteristics. Option A describes Lamarckism (inheritance of acquired characteristics), which Darwin did not propose as the mechanism. Option B describes the idea of special creation with fixed species, which descent with modification directly contradicts. Option C describes a molecular clock hypothesis of constant evolutionary rates, which is separate from Darwin's concept and has been shown to not hold universally across lineages.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the properties of life:\nS1: All living organisms maintain homeostasis through regulatory mechanisms that keep internal conditions within tolerable limits.\nS2: Viruses are considered living organisms because they contain nucleic acids and can evolve.\nS3: Growth in living organisms always involves an increase in cell number, never an increase in cell size.\nS4: All living organisms process energy, whether through photosynthesis, chemosynthesis, or consumption of other organisms.",
+      "options": [
+        "TFFT",
+        "TFTF",
+        "TFFF",
+        "TTFT"
+      ],
+      "correctAnswer": "TFFT",
+      "explanation": "S1 is TRUE because maintaining homeostasis is one of the fundamental properties of life. All living organisms have regulatory mechanisms (e.g., feedback loops) that maintain internal conditions such as temperature, pH, and ion concentrations within tolerable ranges. S2 is FALSE because viruses are generally NOT considered living organisms despite containing nucleic acids and evolving. They lack cellular structure, cannot reproduce independently, do not maintain homeostasis, and do not carry out metabolism on their own. S3 is FALSE because growth can involve both an increase in cell number (hyperplasia/cell division) AND an increase in cell size (hypertrophy). For example, plant cell growth often involves vacuolar expansion (increased cell size), and muscle hypertrophy involves enlargement of existing cells. S4 is TRUE because energy processing is a universal property of life. All organisms require energy for metabolic processes, obtained through photosynthesis, chemosynthesis, or heterotrophic consumption.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Proteomics, the large-scale study of proteins, differs fundamentally from genomics in that:",
+      "options": [
+        "A genome is static and identical in every cell, while the proteome is dynamic and varies among cell types, developmental stages, and environmental conditions",
+        "Proteomics studies only structural proteins, while genomics studies all types of macromolecules",
+        "Genomic data cannot be obtained using high-throughput sequencing technologies",
+        "The proteome of an organism is always smaller than its genome because each gene encodes exactly one protein"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The fundamental difference is that an organism's genome is essentially static (the same DNA sequence in virtually every cell), while the proteome is dynamic and context-dependent. Different cell types express different subsets of genes, producing different protein profiles. Furthermore, the proteome changes with developmental stage, environmental conditions, and cellular signaling. Post-translational modifications add another layer of complexity. Option B is incorrect because proteomics studies all proteins (structural, enzymatic, regulatory, signaling, etc.), not just structural ones. Option C is wrong because high-throughput sequencing is precisely how genomic data is obtained. Option D is incorrect because the proteome can actually be larger than the number of genes due to alternative splicing, post-translational modifications, and proteolytic processing generating multiple protein variants from a single gene.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A phylogenetic tree shows the following branching pattern: ((Cat, Dog), (Horse, (Cow, Sheep))). Based on this tree, which statement is correct?",
+      "options": [
+        "Cat and Dog share a more recent common ancestor with each other than either does with Horse",
+        "Horse is more closely related to Cat than to Cow",
+        "Cow and Sheep are the most distantly related pair in the tree",
+        "Cat is ancestral to Dog because it appears first in the Newick notation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In the Newick notation ((Cat, Dog), (Horse, (Cow, Sheep))), Cat and Dog are sister taxa — they share the most recent common ancestor within their clade. Similarly, Cow and Sheep are sister taxa in their subclade. Horse is sister to the (Cow, Sheep) clade. The two major clades are (Cat, Dog) and (Horse, (Cow, Sheep)). Therefore, Cat and Dog share a more recent common ancestor with each other than either does with Horse, Cow, or Sheep. Option B is incorrect because Horse is in the same major clade as Cow and Sheep, making it more closely related to them than to Cat. Option C is wrong because the most distantly related pairs span the two major clades (e.g., Cat-Horse, Cat-Cow). Option D is incorrect because position in Newick notation does not imply ancestry; Cat and Dog are sister taxa, not ancestor-descendant.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A graduate student isolates a novel organism from a hot spring. It has no nucleus, its membrane lipids contain ether bonds, and its RNA polymerase closely resembles that of eukaryotes. This organism most likely belongs to:",
+      "options": [
+        "Domain Bacteria, because it is prokaryotic",
+        "Domain Eukarya, because its RNA polymerase resembles eukaryotic RNA polymerase",
+        "Domain Archaea, because it has prokaryotic organization with ether-linked lipids and eukaryote-like RNA polymerase",
+        "A fourth domain of life, because it has mixed characteristics"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This organism belongs to Domain Archaea. The key distinguishing features are: (1) no nucleus (prokaryotic), ruling out Eukarya; (2) ether-linked membrane lipids, which are characteristic of Archaea and absent in Bacteria (which have ester-linked lipids); (3) RNA polymerase resembling eukaryotic RNA polymerase, consistent with the closer phylogenetic relationship between Archaea and Eukarya. The hot spring habitat is also consistent with many extremophilic Archaea. Option A is incorrect because despite being prokaryotic, the ether-linked lipids and eukaryote-like RNA polymerase are inconsistent with Bacteria. Option B is wrong because the organism lacks a nucleus, which defines Eukarya. Option D is incorrect because these mixed characteristics are precisely what defines Archaea — no fourth domain is needed.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To test the hypothesis that UV radiation causes DNA mutations, a researcher exposes bacterial cultures to increasing doses of UV light and measures mutation rates. Which additional control is MOST essential?",
+      "options": [
+        "A group exposed to visible light only, to control for the effect of illumination without UV",
+        "A group kept in complete darkness with no UV exposure, to establish the baseline spontaneous mutation rate",
+        "A group exposed to infrared radiation, to confirm that only UV wavelengths cause mutations",
+        "A group of eukaryotic cells, to confirm the results are universal across domains"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A group kept in complete darkness with no UV exposure is the most essential control because it establishes the baseline spontaneous mutation rate. Without knowing the mutation rate in the absence of UV, the researcher cannot determine how much UV exposure increases mutation rates above the background level. This negative control is fundamental to any dose-response experiment. Option A, while useful, is less essential than the dark control because the primary comparison needed is UV vs. no UV, not UV vs. visible light. Option C (infrared control) could be informative but is not essential for the primary hypothesis. Option D (eukaryotic cells) addresses universality/generalizability, which is a separate question from whether UV causes mutations in the bacterial system being studied.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which statement correctly describes the relationship between genotype and phenotype?",
+      "options": [
+        "Genotype directly determines phenotype with no environmental influence in any organism",
+        "Phenotype is determined solely by post-translational modifications, independent of genotype",
+        "Organisms with identical phenotypes must have identical genotypes",
+        "Genotype provides the blueprint, but phenotype results from interactions between genotype and environment"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Genotype provides the genetic blueprint (the DNA sequence), but the actual phenotype expressed by an organism results from complex interactions between the genotype and environmental factors. This concept of gene-environment interaction is fundamental to biology. Examples include temperature-sensitive coat color in Siamese cats, where the same genotype produces different pigmentation patterns at different body temperatures. Option A is incorrect because environmental factors influence phenotype in virtually all organisms (e.g., nutrition, temperature, light, stress). Option B is wrong because while post-translational modifications affect protein function, genotype is the primary determinant of which proteins are produced. Option C is incorrect because organisms with different genotypes can have identical phenotypes (e.g., heterozygotes and dominant homozygotes in simple Mendelian traits, or convergent evolution producing similar phenotypes from different genotypes).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "CRISPR-Cas9 technology has revolutionized biology by allowing precise genome editing. From the perspective of biological themes in Campbell Biology, this technology most directly relates to which theme?",
+      "options": [
+        "Information — the flow of genetic information can now be precisely manipulated",
+        "Evolution — CRISPR drives natural selection in laboratory populations",
+        "Energy — CRISPR-Cas9 reduces the energetic cost of DNA replication",
+        "Interactions — CRISPR demonstrates that all proteins interact with lipids"
+      ],
+      "correctAnswer": "A",
+      "explanation": "CRISPR-Cas9 technology most directly relates to the theme of Information — specifically, the flow of genetic information. CRISPR allows researchers to precisely edit DNA sequences, modify gene expression, and alter the genetic information that flows from DNA to RNA to protein. This capability to manipulate the informational content of the genome represents a direct application of our understanding of how genetic information is stored, expressed, and regulated. Option B is incorrect because CRISPR is a laboratory tool, not a natural selective force (though CRISPR systems did evolve naturally in bacteria). Option C is wrong because CRISPR-Cas9 does not affect the energetics of DNA replication. Option D is incorrect because CRISPR-Cas9 involves protein-nucleic acid interactions, not protein-lipid interactions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about natural selection and evolution:\nS1: Natural selection acts on individuals, but evolution occurs in populations over generations.\nS2: Natural selection can only increase the complexity of organisms over evolutionary time.\nS3: Genetic variation within a population is a prerequisite for natural selection to operate.\nS4: Natural selection is the only mechanism of evolution; genetic drift, gene flow, and mutation play no role in changing allele frequencies.",
+      "options": [
+        "TFTF",
+        "TFTT",
+        "TTFF",
+        "TFFT"
+      ],
+      "correctAnswer": "TFTF",
+      "explanation": "S1 is TRUE because natural selection operates through differential survival and reproduction of individuals, but the resulting changes in allele frequencies (evolution) are properties of populations, not individuals. An individual does not evolve; populations evolve over generations. S2 is FALSE because natural selection can lead to simplification as well as increased complexity. Many parasites have evolved reduced body plans (loss of eyes, digestive systems), and cave-dwelling organisms often lose pigmentation and vision. Natural selection favors whatever traits increase fitness, whether more complex or simpler. S3 is TRUE because without genetic variation, all individuals would be identical and there would be no differential fitness for natural selection to act upon. Genetic variation provides the raw material for natural selection. S4 is FALSE because genetic drift, gene flow (migration), and mutation are all recognized mechanisms of evolution that change allele frequencies in populations, alongside natural selection.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A biologist discovers two populations of organisms that are morphologically identical but reproductively isolated and genetically divergent. These populations are best described as:",
+      "options": [
+        "Subspecies that will inevitably merge through gene flow",
+        "Members of the same species because morphological similarity defines species",
+        "The same species because genetic differences between populations are always insignificant",
+        "Cryptic species that are distinct despite their morphological similarity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "These populations are best described as cryptic species — species that are morphologically indistinguishable (or nearly so) but are reproductively isolated and genetically distinct. Cryptic species are increasingly being discovered through molecular phylogenetic analyses and have been found in many taxa, from insects to vertebrates to fungi. Their existence demonstrates that morphological similarity does not necessarily indicate close genetic relationship or reproductive compatibility. Option A is incorrect because subspecies are not fully reproductively isolated and do exchange genes. Option B is incorrect because the morphological species concept is only one of several species concepts, and modern biology recognizes that morphological similarity alone does not define species. Option C is incorrect because genetic differences between populations can be highly significant, especially when they underlie reproductive isolation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers measure the rate of photosynthesis in a plant at different light intensities:\n\nLight intensity (μmol/m²/s) | O₂ evolution (μmol/mg chl/hr)\n0                            | -2.5\n50                           | 0.0\n100                          | 4.8\n200                          | 9.2\n400                          | 13.5\n800                          | 14.0\n1200                         | 14.1\n\nThe light compensation point and light saturation point are approximately:",
+      "options": [
+        "Compensation: 0 μmol/m²/s; Saturation: 200 μmol/m²/s",
+        "Compensation: 100 μmol/m²/s; Saturation: 1200 μmol/m²/s",
+        "Compensation: 50 μmol/m²/s; Saturation: 400-800 μmol/m²/s",
+        "Compensation: 200 μmol/m²/s; Saturation: 50 μmol/m²/s"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The light compensation point is the light intensity at which photosynthetic O₂ evolution exactly equals respiratory O₂ consumption, resulting in net O₂ exchange of zero. From the data, this occurs at approximately 50 μmol/m²/s (where O₂ evolution = 0.0). The light saturation point is the light intensity above which further increases produce no significant increase in photosynthesis. From the data, the rate increases substantially from 50 to 400 μmol/m²/s but shows minimal increase from 400 (13.5) to 800 (14.0) to 1200 (14.1), indicating saturation occurs in the 400-800 range. Option A is incorrect because at 0 light intensity, O₂ evolution is -2.5 (net respiration), not the compensation point. Option B overestimates both values. Option D reverses the concepts and gives incorrect values.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the context of biological organization, which example represents a tissue-level property that is NOT present at the cellular level?",
+      "options": [
+        "ATP production through oxidative phosphorylation in mitochondria",
+        "DNA replication during the S phase of the cell cycle",
+        "Directional wave-like contractions (peristalsis) produced by coordinated smooth muscle cells",
+        "Protein synthesis on ribosomes in the rough endoplasmic reticulum"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Peristalsis — coordinated, wave-like contractions that propel food through the digestive tract — is a tissue-level emergent property that requires the coordinated action of many smooth muscle cells communicating through gap junctions and responding to neural and hormonal signals. A single smooth muscle cell can contract, but it cannot produce peristalsis; this coordinated wave pattern emerges only when many cells work together as a tissue. Option A (oxidative phosphorylation), Option B (DNA replication), and Option D (protein synthesis) are all cellular-level processes that occur within individual cells and do not require tissue-level organization. They are properties of individual cells, not emergent properties of tissues.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A research team discovers that a protein in species X is 85% identical in amino acid sequence to a homologous protein in species Y. However, the gene encoding this protein shows only 70% nucleotide identity between the two species. The most likely explanation for this discrepancy is:",
+      "options": [
+        "The protein underwent convergent evolution while the gene did not",
+        "The protein was acquired by horizontal gene transfer in one of the species",
+        "Synonymous (silent) substitutions in the gene have accumulated without changing the amino acid sequence",
+        "The gene was duplicated in species X but not in species Y"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Synonymous (silent) substitutions change the nucleotide sequence without altering the encoded amino acid (due to the degeneracy of the genetic code). These substitutions accumulate over evolutionary time because they are largely neutral — not subject to purifying selection. This explains why nucleotide identity (70%) can be lower than amino acid identity (85%): many nucleotide changes are synonymous and do not affect the protein. The protein sequence is more conserved because non-synonymous changes that alter amino acids are more likely to be deleterious and removed by purifying selection. Option A is incorrect because the proteins are homologous (descended from a common ancestor), not convergent. Option B does not explain the sequence identity discrepancy. Option D (gene duplication) would not account for the systematic difference between nucleotide and amino acid conservation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following observations would most strongly challenge the theory of evolution by natural selection?",
+      "options": [
+        "Discovery of a species that has remained morphologically unchanged for millions of years",
+        "Finding identical DNA sequences in two distantly related species",
+        "Discovery of a new species of bacteria in an extreme environment",
+        "Observing a complex organ that arose with no intermediate functional stages in the fossil record"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Observing a complex organ that arose with no intermediate functional stages would most strongly challenge natural selection because natural selection requires gradual, incremental changes where each intermediate stage provides a fitness advantage. A complex organ appearing fully formed with no precursors would suggest a mechanism other than natural selection. This relates to Darwin's own acknowledgment that 'if it could be demonstrated that any complex organ existed which could not possibly have been formed by numerous, successive, slight modifications, my theory would absolutely break down.' Option A does not challenge evolution — morphological stasis (living fossils) is explained by stabilizing selection. Option B could be explained by strong purifying selection on essential genes. Option C is fully consistent with evolution, as bacteria thrive in extreme environments through natural selection.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A pharmaceutical company claims their new supplement increases memory in elderly adults. To rigorously test this claim, which experimental design feature is LEAST important?",
+      "options": [
+        "Random assignment of participants to supplement and placebo groups",
+        "Use of validated, standardized memory assessment tools",
+        "Including a sufficiently large sample size to detect clinically meaningful effects",
+        "Ensuring the study is conducted during a specific season of the year"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ensuring the study is conducted during a specific season is the LEAST important design feature for testing a memory supplement. While seasonal effects on mood exist, they are not a major confounding factor for memory studies, and any minor seasonal effects would be controlled by randomization (both groups tested at the same time). Option A (random assignment) is essential because it prevents selection bias and ensures groups are comparable. Option B (validated assessment tools) is essential because unreliable measurement instruments would render results meaningless. Option C (sufficient sample size) is essential because underpowered studies cannot detect real effects and waste resources. All three of these are critical design elements, while season of testing is a minor consideration easily handled by standard randomization.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Horizontal gene transfer (HGT) is most prevalent in which group of organisms, and why does this pose challenges for phylogenetic reconstruction?",
+      "options": [
+        "Prokaryotes, because conjugation, transformation, and transduction transfer genes across species boundaries, creating reticulate evolutionary patterns",
+        "Mammals, because their large genomes are prone to transposon-mediated gene shuffling",
+        "Flowering plants, because pollination spreads genes between species at high rates",
+        "Fungi, because their hyphae physically fuse, transferring entire chromosomes between species"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Horizontal gene transfer is most prevalent in prokaryotes (Bacteria and Archaea), where three mechanisms — conjugation (plasmid transfer), transformation (uptake of environmental DNA), and transduction (phage-mediated transfer) — allow genes to move between distantly related species. This creates reticulate (web-like) evolutionary patterns rather than the strictly bifurcating tree expected from vertical inheritance alone, making phylogenetic reconstruction challenging because different genes may have different evolutionary histories. Option B is incorrect because while transposons exist in mammals, they represent intracellular rearrangement rather than horizontal transfer between species. Option C is wrong because pollination transfers genes within species or between closely related species (hybridization), not HGT in the traditional sense. Option D is incorrect because while hyphal anastomosis occurs in fungi, it typically occurs between closely related strains, not at the scale seen in prokaryotic HGT.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "An organism is discovered that obtains energy from inorganic chemical reactions and uses CO₂ as its sole carbon source. This organism's nutritional mode is classified as:",
+      "options": [
+        "Photoautotrophy",
+        "Chemoheterotrophy",
+        "Photoheterotrophy",
+        "Chemoautotrophy"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Chemoautotrophy (chemolithoautotrophy) is the correct classification for an organism that obtains energy from inorganic chemical reactions (chemo-) and uses CO₂ as its sole carbon source (auto-). Such organisms oxidize inorganic compounds (H₂S, NH₃, Fe²⁺, H₂) to generate ATP and use the energy to fix CO₂ into organic molecules. Examples include nitrifying bacteria and iron-oxidizing bacteria. Option A (photoautotrophy) is incorrect because photoautotrophs use light energy, not chemical energy. Option B (chemoheterotrophy) is wrong because chemoheterotrophs obtain carbon from organic molecules, not CO₂. Option C (photoheterotrophy) is incorrect because photoheterotrophs use light energy and organic carbon sources, neither of which matches the described organism.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about model organisms in biology:\nS1: Escherichia coli is used as a model organism because its rapid generation time and well-characterized genetics make it ideal for studying prokaryotic molecular biology.\nS2: Drosophila melanogaster has been instrumental in genetics research because it has a short life cycle, many offspring, and only four pairs of chromosomes.\nS3: Arabidopsis thaliana is the primary model organism for animal developmental biology.\nS4: Caenorhabditis elegans was the first multicellular organism to have its complete genome sequenced and its entire cell lineage mapped.",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TFTF",
+        "TTFT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE because E. coli has a generation time of ~20 minutes, a well-characterized genome, extensive genetic tools, and has been the workhorse of prokaryotic molecular biology for decades. S2 is TRUE because Drosophila melanogaster (fruit fly) has been central to genetics since T.H. Morgan's work. It has a ~10-day generation time, produces hundreds of offspring per cross, and has only 4 chromosome pairs, making genetic analysis tractable. S3 is FALSE because Arabidopsis thaliana is a plant — it is the primary model organism for plant biology, not animal developmental biology. Animal developmental biology models include Drosophila, C. elegans, zebrafish, and mice. S4 is TRUE because C. elegans was the first multicellular organism with a fully sequenced genome (completed in 1998), and Sydney Brenner and colleagues mapped its complete, invariant cell lineage (959 somatic cells in the hermaphrodite).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the context of the hierarchical organization of life, which of the following represents an interaction at the ecosystem level that cannot be studied at lower levels of organization?",
+      "options": [
+        "Enzyme-substrate binding kinetics of hexokinase with glucose",
+        "Biogeochemical cycling of nitrogen between abiotic reservoirs and living organisms",
+        "Signal transduction through a G-protein coupled receptor pathway",
+        "Mitosis in a dividing stem cell niche"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Biogeochemical cycling of nitrogen between abiotic reservoirs (atmosphere, soil, water) and living organisms is an ecosystem-level process that cannot be studied at lower levels of organization. It requires understanding the interactions between abiotic components (geological and atmospheric reservoirs) and biotic components (nitrogen-fixing bacteria, nitrifiers, denitrifiers, plants, animals) across the entire ecosystem. Option A is a molecular-level interaction (enzyme kinetics). Option C is a cellular-level process (signal transduction). Option D is a cellular/tissue-level process (cell division). Only biogeochemical cycling inherently requires the ecosystem level of organization because it involves energy and matter cycling between living organisms and their physical environment.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A student conducts an experiment and obtains a p-value of 0.03. Which interpretation is MOST accurate?",
+      "options": [
+        "There is a 3% probability that the null hypothesis is true",
+        "If the null hypothesis were true, there would be a 3% probability of obtaining results as extreme as or more extreme than those observed",
+        "There is a 97% probability that the alternative hypothesis is true",
+        "The experiment has a 3% error rate in its measurements"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A p-value of 0.03 means that if the null hypothesis were true, there would be a 3% probability of obtaining results as extreme as or more extreme than those actually observed, purely by chance. This is the correct frequentist interpretation of p-values. Option A is a common misconception — the p-value is NOT the probability that the null hypothesis is true. The null hypothesis is either true or false; the p-value is a probability about the data given the null hypothesis, not a probability about the null hypothesis given the data. Option C commits the same error in reverse — the p-value does not give the probability of the alternative hypothesis being true. Option D is incorrect because the p-value is not a measurement error rate; it is a statistical measure of evidence against the null hypothesis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An experiment measures the effect of temperature on enzyme activity for two enzymes:\n\nTemp (°C) | Enzyme A activity | Enzyme B activity\n10        | 15               | 5\n20        | 45               | 20\n30        | 80               | 50\n37        | 100              | 85\n40        | 95               | 100\n50        | 40               | 90\n60        | 5                | 45\n70        | 0                | 10\n\nWhich conclusion is best supported?",
+      "options": [
+        "Enzyme A is from a thermophilic organism and Enzyme B is from a mesophilic organism",
+        "Both enzymes have identical temperature optima but different activation energies",
+        "Enzyme B is irreversibly denatured at 40°C while Enzyme A remains active",
+        "Enzyme A has an optimal temperature around 37°C and is likely from a mesophilic organism, while Enzyme B has a higher optimal temperature and may be from a thermophilic organism"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The data show that Enzyme A peaks at 37°C (activity = 100) and declines sharply above this temperature, which is characteristic of enzymes from mesophilic organisms (organisms thriving at moderate temperatures, like human body temperature of 37°C). Enzyme B peaks at 40°C (activity = 100) and maintains relatively high activity at 50°C (90) and even 60°C (45), suggesting it is from a thermophilic organism with a higher optimal temperature. Option A reverses the assignments — Enzyme A (optimal 37°C) is mesophilic, not thermophilic. Option B is incorrect because the optima are clearly different (37°C vs. 40°C). Option C is wrong because Enzyme B has its peak activity at 40°C and remains highly active at 50°C, so it is clearly not denatured at 40°C.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 'Central Dogma' of molecular biology describes the flow of genetic information. Which of the following correctly states the Central Dogma and identifies a known exception?",
+      "options": [
+        "DNA → RNA → Protein; exception: prions transmit information via protein-to-protein conversion",
+        "RNA → DNA → Protein; exception: some organisms use DNA instead of RNA as genetic material",
+        "DNA → RNA → Protein; exception: reverse transcriptase copies RNA into DNA in retroviruses",
+        "Protein → RNA → DNA; exception: DNA viruses bypass the standard flow"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Central Dogma states that genetic information flows from DNA to RNA (transcription) to Protein (translation). A well-known exception is reverse transcription, where reverse transcriptase in retroviruses (e.g., HIV) copies RNA back into DNA, which is then integrated into the host genome. Option A correctly states the Central Dogma but the 'exception' is mischaracterized — while prions involve protein-to-protein conversion, this is not typically classified as an exception to the Central Dogma because prions do not involve information transfer in the genetic sense (no nucleic acid template is used). Option B incorrectly states the Central Dogma (RNA → DNA → Protein is not the standard flow). Option D is entirely wrong — there is no known mechanism for information flow from Protein to RNA to DNA.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A marine biologist studying deep-sea hydrothermal vent communities observes that the base of the food web consists of chemosynthetic bacteria. This observation demonstrates which biological theme?",
+      "options": [
+        "All ecosystems ultimately depend on solar energy",
+        "Abiotic factors have no influence on biological communities",
+        "Energy and matter flow through ecosystems via different pathways",
+        "All food webs must contain at least three trophic levels"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The presence of chemosynthetic bacteria at the base of hydrothermal vent food webs demonstrates that energy and matter can flow through ecosystems via different pathways. While most ecosystems depend on photosynthesis (solar energy), vent communities derive their energy from the oxidation of inorganic chemicals (H₂S, CH₄) — a fundamentally different energy pathway. This shows that the theme of energy flow is universal but the specific pathway varies. Option A is incorrect because vent communities explicitly demonstrate that not all ecosystems depend on solar energy — they use chemical energy from Earth's interior. Option B is wrong because abiotic factors (temperature, chemical composition, pressure) critically shape vent communities. Option D is incorrect because there is no requirement for a minimum number of trophic levels; some simple ecosystems have only producers and decomposers.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following best represents an example of convergent evolution?",
+      "options": [
+        "The homologous forelimb bones of whales, bats, and humans",
+        "The shared HOX gene cluster in arthropods and vertebrates",
+        "The universal genetic code found in all three domains of life",
+        "The similar streamlined body shapes of dolphins (mammals), sharks (fish), and ichthyosaurs (extinct reptiles)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The similar streamlined body shapes of dolphins (mammals), sharks (fish), and ichthyosaurs (extinct reptiles) represent convergent evolution — these three lineages independently evolved similar body forms as adaptations to similar aquatic environments despite being only distantly related. The selective pressure of moving efficiently through water drove the independent evolution of analogous structures. Option A describes homologous structures (shared due to common ancestry), not convergent evolution. Option B describes deep homology — HOX genes are shared due to common ancestry, not independent evolution. Option C describes a shared ancestral feature (the genetic code inherited from the last universal common ancestor), not convergent evolution.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A student designs an experiment to test whether music affects plant growth. She plays classical music to one group of plants and keeps another group in silence. After 4 weeks, the music group shows greater growth. Her teacher identifies a confounding variable. Which is the most likely confounding variable?",
+      "options": [
+        "The speaker producing the music also generates vibrations and heat, which could affect plant growth independently of the music itself",
+        "The plants in both groups received the same amount of sunlight",
+        "The student measured plant height using a ruler, which introduces measurement error",
+        "The silent group was a valid control because it received no treatment"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The most likely confounding variable is that the speaker generating music also produces vibrations and heat. These physical stimuli (mechanical vibration and thermal energy) could independently affect plant growth through mechanostimulation (thigmomorphogenesis — plant responses to touch/vibration are well-documented) or local temperature changes. The student cannot determine whether any observed growth difference is due to 'music' per se or to the physical byproducts of playing music through a speaker. Option B describes a controlled variable (same sunlight), not a confounding variable. Option C describes random measurement error, which would reduce precision but not systematically bias results. Option D correctly identifies the silent group as a control, but this is not a confounding variable — it's a design element.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which pair of terms correctly matches a level of biological organization with a research question appropriate to that level?",
+      "options": [
+        "Molecular level — How does urbanization affect bird migration patterns?",
+        "Population level — What is the tertiary structure of insulin?",
+        "Ecosystem level — How does nitrogen cycling between soil bacteria and plant roots affect primary productivity?",
+        "Cellular level — How do predator-prey interactions regulate community stability?"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ecosystem level — nitrogen cycling between soil bacteria and plant roots affecting primary productivity — correctly matches the research question to its organizational level. Biogeochemical cycling (nitrogen cycling) between living organisms (bacteria, plants) and abiotic components (soil) is inherently an ecosystem-level process. Primary productivity is an ecosystem-level metric measuring the rate of energy fixation. Option A is mismatched because bird migration patterns are studied at the population or ecosystem level, not the molecular level. Option B is mismatched because protein tertiary structure is a molecular-level question, not a population-level one. Option D is mismatched because predator-prey interactions and community stability are community/population-level phenomena, not cellular-level.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Epigenetic modifications, such as DNA methylation and histone acetylation, challenge traditional views of inheritance because they:",
+      "options": [
+        "Alter the DNA sequence permanently, creating new alleles that are passed to offspring",
+        "Are only found in prokaryotes and have no relevance to eukaryotic biology",
+        "Can be inherited across generations without changes to the underlying DNA sequence, influencing gene expression",
+        "Eliminate the need for DNA as genetic material by storing information in protein conformations"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Epigenetic modifications challenge traditional views of inheritance because they can be inherited across generations (transgenerational epigenetic inheritance) without altering the underlying DNA sequence. DNA methylation can silence genes, and histone modifications can alter chromatin structure and gene accessibility, changing gene expression patterns. When these modifications are transmitted to offspring, they represent a form of inheritance beyond the DNA sequence itself. Option A is incorrect because epigenetic modifications explicitly do NOT alter the DNA sequence — that is their defining feature. Option B is wrong because epigenetic modifications are found in both prokaryotes and eukaryotes (and are particularly well-studied in eukaryotes). Option D is incorrect because epigenetic modifications supplement, not replace, DNA-based information storage.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher plots the number of species discovered per year in a tropical forest over 10 years of surveying:\n\nYear | New species found\n1    | 85\n2    | 62\n3    | 45\n4    | 31\n5    | 22\n6    | 15\n7    | 11\n8    | 8\n9    | 6\n10   | 4\n\nThe cumulative species count after 10 years is 289. Based on this pattern, which conclusion is most appropriate?",
+      "options": [
+        "The forest contains exactly 289 species and the survey is complete",
+        "The declining rate of new species discovery suggests the survey is approaching but has not yet reached the total species richness; species accumulation curve analysis could estimate the true richness",
+        "The data indicate that species are going extinct at an increasing rate each year",
+        "The pattern shows that biodiversity in the forest is declining due to habitat destruction"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The declining rate of new species discovery (from 85 in year 1 to 4 in year 10) represents a classic species accumulation curve (collector's curve or rarefaction curve) pattern. As more species are found, the probability of encountering a new species decreases because the remaining undiscovered species are rarer. The fact that new species are still being found (4 in year 10) indicates the survey has not yet captured all species present. Statistical methods (e.g., Chao estimators, jackknife estimators) can extrapolate the curve to estimate true species richness. Option A is incorrect because new species are still being found, indicating the survey is incomplete. Option C is wrong because the declining discovery rate reflects sampling saturation, not extinction. Option D is incorrect because the data reflect survey effort, not habitat destruction.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following represents an example of a proximate causation question in biology?",
+      "options": [
+        "Why do male birds of paradise have elaborate plumage?",
+        "How did echolocation evolve independently in bats and dolphins?",
+        "Why do some species exhibit altruistic behavior toward non-relatives?",
+        "What hormonal changes trigger the onset of metamorphosis in amphibians?"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A proximate causation question asks about the immediate mechanisms (how something works), while an ultimate causation question asks about the evolutionary reasons (why it evolved). 'What hormonal changes trigger metamorphosis?' is a proximate question because it asks about the immediate physiological mechanism — specifically, the hormonal cascade (thyroid hormones in amphibians) that directly causes the developmental changes. Option A asks about the evolutionary advantage of elaborate plumage (ultimate — sexual selection). Option B asks about the evolutionary history of echolocation (ultimate — convergent evolution). Option C asks about the evolutionary explanation for altruism (ultimate — kin selection or reciprocal altruism theories). Only option D asks about a mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A plant species is found growing in soils contaminated with heavy metals near an abandoned mine. Nearby populations of the same species in uncontaminated soil cannot survive in the contaminated area. The mine population most likely evolved through:",
+      "options": [
+        "Directional selection favoring heavy-metal tolerance alleles already present in the population",
+        "Stabilizing selection maintaining the average phenotype across all environments",
+        "Disruptive selection creating two new species simultaneously",
+        "Artificial selection by humans deliberately breeding metal-tolerant plants"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Directional selection favoring heavy-metal tolerance alleles already present in the population is the correct answer. This is a classic example of directional selection, where an environmental pressure (heavy metal contamination) selects for individuals carrying pre-existing alleles that confer tolerance. Over generations, the frequency of these tolerance alleles increases in the contaminated population. This has been documented in species such as Agrostis tenuis near mines. Option B is incorrect because stabilizing selection would maintain the population's average phenotype, not shift it toward metal tolerance. Option C is wrong because disruptive selection favors extreme phenotypes at both ends, and there is no evidence of simultaneous speciation here. Option D is incorrect because there is no indication of deliberate human intervention in breeding these plants.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following is the best example of how feedback inhibition regulates a metabolic pathway?",
+      "options": [
+        "An enzyme at the beginning of a pathway is inhibited by the pathway's end product, preventing overproduction",
+        "A substrate binds to the active site of an enzyme, initiating catalysis",
+        "An enzyme is permanently destroyed after catalyzing a single reaction",
+        "All enzymes in a pathway are transcribed together as a single polycistronic mRNA"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Feedback inhibition (end-product inhibition) occurs when the final product of a metabolic pathway allosterically inhibits an enzyme early in the pathway (typically the first committed step). This prevents wasteful overproduction of the end product and is a fundamental regulatory mechanism in metabolism. For example, in the isoleucine biosynthesis pathway, isoleucine inhibits threonine deaminase, the first enzyme in the pathway. Option B describes normal enzyme-substrate binding and catalysis, not feedback regulation. Option C is incorrect because enzymes are catalysts that are not destroyed during reactions; they are recycled. Option D describes operon-based transcriptional regulation (common in prokaryotes), not feedback inhibition of enzyme activity.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the oxygen consumption (mL O₂/hr) and body mass (g) of 6 mammalian species:\n\nSpecies   | Mass (g) | O₂ consumption (mL/hr) | O₂/g/hr\nShrew     | 3        | 10.5                   | 3.50\nMouse     | 25       | 42.5                   | 1.70\nRat       | 300      | 240                    | 0.80\nRabbit    | 3000     | 1200                   | 0.40\nDog       | 15000    | 3750                   | 0.25\nHorse     | 500000   | 50000                  | 0.10\n\nWhat relationship between body mass and mass-specific metabolic rate is supported by these data?",
+      "options": [
+        "Mass-specific metabolic rate increases linearly with body mass",
+        "Mass-specific metabolic rate is independent of body mass in mammals",
+        "Mass-specific metabolic rate decreases as body mass increases, following an inverse scaling relationship",
+        "Mass-specific metabolic rate doubles with each 10-fold increase in body mass"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The data clearly show that mass-specific metabolic rate (O₂/g/hr) decreases as body mass increases: from 3.50 in the 3g shrew to 0.10 in the 500,000g horse. This is consistent with the well-established allometric scaling relationship in biology (Kleiber's law), where whole-organism metabolic rate scales approximately as mass^0.75, meaning mass-specific metabolic rate scales as mass^(-0.25). Smaller animals have higher metabolic rates per gram of tissue than larger animals. Option A is the opposite of what the data show — the relationship is inverse, not directly proportional. Option B is incorrect because the data show a clear dependence on body mass. Option D is wrong because the rate decreases (not doubles) with increasing mass, and the decrease is not by a factor of 2 for each 10-fold increase.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "An ecologist studying a salt marsh discovers that the distribution of plant species is strongly correlated with elevation above sea level. The most parsimonious explanation for this pattern is:",
+      "options": [
+        "Plants at lower elevations are genetically identical to those at higher elevations but express different phenotypes due to random variation",
+        "Different plant species have different tolerances to salinity and flooding, creating distinct vegetation zones along the elevation gradient",
+        "All plant species prefer the same elevation but competitive exclusion forces some species to suboptimal positions",
+        "Elevation has no effect on plant distribution; the pattern is an artifact of insufficient sampling"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Different plant species having different tolerances to salinity and flooding, creating distinct vegetation zones along the elevation gradient, is the most parsimonious explanation. In salt marshes, elevation determines exposure to tidal flooding and soil salinity — lower elevations experience more frequent inundation and higher salinity. Species are distributed according to their physiological tolerances, with salt-tolerant species (e.g., Spartina alterniflora) dominating low marsh and less tolerant species at higher elevations. This is a well-documented ecological pattern called zonation. Option A is incorrect because different species (not just phenotypes) occupy different zones. Option C oversimplifies the mechanism — while competition does play a role, the fundamental driver is differential physiological tolerance. Option D contradicts the observed correlation and extensive ecological literature on salt marsh zonation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher studying antibiotic resistance observes that after treating a bacterial culture with a sub-lethal dose of antibiotic, resistant colonies appear within 48 hours. Which interpretation is most scientifically accurate?",
+      "options": [
+        "The antibiotic induced directed mutations in the bacterial genome that confer resistance",
+        "Resistant bacteria were already present in the population before antibiotic exposure, and the antibiotic selected for their survival",
+        "The bacteria acquired resistance genes from the antibiotic itself through chemical transformation",
+        "All bacteria in the population simultaneously developed resistance through a coordinated stress response"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Luria-Delbrück experiment (1943) definitively demonstrated that mutations conferring antibiotic resistance arise spontaneously and randomly before exposure to the selective agent, not in response to it. The antibiotic acts as a selective filter, killing susceptible individuals and allowing pre-existing resistant mutants to proliferate. This is a cornerstone of modern evolutionary biology and genetics. Option A describes directed/adaptive mutation, which is not the standard mechanism (the Luria-Delbrück fluctuation test disproved this). Option C is scientifically impossible — antibiotics are small molecules that do not contain transferable genetic information. Option D is incorrect because coordinated simultaneous mutation in an entire population does not occur; mutations are individual, random events.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A neuroscientist wants to determine whether a specific brain region is necessary for fear memory formation. Which experimental approach provides the strongest evidence of necessity?",
+      "options": [
+        "Showing that neurons in the region are active during fear conditioning using calcium imaging",
+        "Demonstrating that the region receives input from the thalamus using tract-tracing techniques",
+        "Selectively ablating or silencing the region before fear conditioning and showing impaired fear memory formation",
+        "Measuring increased gene expression in the region after fear conditioning using RT-qPCR"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Selectively ablating or silencing the brain region before fear conditioning and demonstrating impaired fear memory provides the strongest evidence of necessity. Loss-of-function experiments (lesion, pharmacological inactivation, optogenetic silencing) directly test whether a structure is required for a function — if removing or silencing the region prevents the behavior, the region is necessary for it. Option A (calcium imaging showing activity) demonstrates correlation/involvement but not necessity — the region could be active but not essential if other regions can compensate. Option B (tract-tracing showing connectivity) demonstrates anatomical connections but does not test functional necessity. Option D (gene expression changes) demonstrates molecular response to conditioning but not whether the region is necessary for the behavior.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'unity in diversity' in biology is best exemplified by which observation?",
+      "options": [
+        "All organisms have fundamentally different metabolic pathways with no shared enzymes",
+        "Organisms in the same habitat always have identical morphological features",
+        "Despite vast morphological diversity, all cellular life shares conserved molecular machinery including ribosomes, DNA polymerase, and ATP synthase",
+        "Biodiversity is uniformly distributed across all biomes on Earth"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The concept of 'unity in diversity' refers to the observation that despite the incredible diversity of life forms (diversity), all cellular life shares fundamental molecular and cellular features (unity). Conserved molecular machinery — including ribosomes for protein synthesis, DNA polymerase for genome replication, and ATP synthase for energy production — is found in all three domains of life, reflecting shared ancestry from a common ancestor. Option A is the opposite of unity — shared enzymes and pathways are precisely what demonstrates molecular unity. Option B is incorrect because organisms in the same habitat often have diverse morphologies (e.g., coral reef organisms). Option D is wrong because biodiversity is unevenly distributed, with tropical regions generally harboring more species than polar regions.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A population geneticist studies two isolated populations of the same frog species separated by a mountain range for 500,000 years. She finds that while both populations can still interbreed in the laboratory, their mating calls have diverged significantly. This scenario most likely represents:",
+      "options": [
+        "Sympatric speciation driven by disruptive selection on body size",
+        "Prezygotic reproductive isolation through behavioral divergence, an early stage of allopatric speciation",
+        "Postzygotic reproductive isolation through hybrid inviability",
+        "Stabilizing selection maintaining identical phenotypes in both populations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Prezygotic reproductive isolation through behavioral divergence represents an early stage of allopatric speciation. The two populations are geographically separated (allopatric) by a mountain range, and over 500,000 years, their mating calls (a behavioral trait critical for mate recognition) have diverged. Divergent mating calls would reduce the likelihood of mating between populations if they were to come into secondary contact, representing prezygotic isolation. Since they can still interbreed in the lab, speciation is incomplete. Option A is incorrect because the populations are separated by a physical barrier (allopatric), not sympatric. Option C is wrong because the populations can still produce viable offspring in the lab, ruling out postzygotic isolation. Option D is incorrect because the mating calls have diverged, indicating the populations are becoming different, not remaining identical.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following best explains why the evolution of multicellularity is considered a major transition in the history of life?",
+      "options": [
+        "Multicellularity eliminated the need for cellular respiration and photosynthesis",
+        "Multicellularity enabled cell specialization, allowing division of labor and the emergence of complex tissues, organs, and organ systems",
+        "Multicellularity reduced genetic diversity within organisms by eliminating mutation",
+        "Multicellularity arose only once in evolutionary history, in the ancestor of all animals"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The evolution of multicellularity is considered a major transition because it enabled cell specialization and division of labor. In multicellular organisms, different cells can specialize for different functions (e.g., muscle cells for contraction, neurons for signaling, epithelial cells for protection), allowing the emergence of tissues, organs, and organ systems with capabilities far exceeding those of individual cells. This represents a new level of biological organization with emergent properties. Option A is incorrect because multicellular organisms still require cellular respiration and many perform photosynthesis. Option C is wrong because multicellularity does not eliminate mutation; all cells accumulate mutations during division. Option D is incorrect because multicellularity evolved independently many times — in animals, plants, fungi, and various algal lineages.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In hypothesis testing, a Type I error occurs when:",
+      "options": [
+        "The researcher fails to reject a false null hypothesis",
+        "The experimental design has insufficient statistical power",
+        "The researcher rejects a true null hypothesis, concluding an effect exists when it does not",
+        "The sample size is too large, leading to meaningless statistical significance"
+      ],
+      "correctAnswer": "C",
+      "explanation": "A Type I error (false positive) occurs when a researcher rejects a null hypothesis that is actually true — in other words, concluding that an effect or difference exists when in reality there is none. The probability of a Type I error is set by the significance level (alpha, typically 0.05). Option A describes a Type II error (false negative), where a real effect is missed. Option B describes low statistical power, which increases the risk of Type II errors but is not itself a Type I error. Option D describes a real concern in research (with very large samples, trivially small effects can be statistically significant), but this is a matter of practical significance versus statistical significance, not a Type I error per se.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Metagenomics — the sequencing of DNA directly from environmental samples — has revealed that the vast majority of microbial diversity is comprised of organisms that cannot be grown in standard laboratory culture. This finding most directly challenges which assumption in traditional microbiology?",
+      "options": [
+        "That microorganisms exist in all environments on Earth",
+        "That culture-based methods adequately represent the full diversity of microbial communities",
+        "That DNA is the genetic material of all microorganisms",
+        "That bacteria reproduce by binary fission"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Metagenomics has revealed that traditional culture-based methods capture only a tiny fraction (estimated at less than 1%) of microbial diversity, a phenomenon sometimes called 'the great plate count anomaly.' Many microorganisms have specific nutritional, symbiotic, or environmental requirements that cannot be replicated in standard laboratory media. This directly challenges the assumption that culture-based methods adequately represent microbial diversity. Option A is not challenged — metagenomics actually reinforces the ubiquity of microorganisms. Option C is not relevant because metagenomics relies on sequencing DNA, confirming that DNA is the genetic material. Option D is not challenged by metagenomic data; binary fission remains the primary mode of bacterial reproduction.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to test whether a gene is essential for embryonic development in mice. She creates a knockout strain lacking functional copies of the gene. The heterozygous knockout mice appear normal, but no homozygous knockout pups are ever born. What is the most likely interpretation?",
+      "options": [
+        "The gene is non-essential because heterozygous mice are normal",
+        "The gene knockout technique failed because no homozygous mice were obtained",
+        "The gene is essential for embryonic development; homozygous knockout is embryonic lethal",
+        "The gene only functions in adult mice, not during embryonic development"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The gene is essential for embryonic development, and homozygous knockout is embryonic lethal. The observation that heterozygous mice are normal (one functional copy suffices — haplosufficiency) but no homozygous knockout pups are born indicates that complete loss of the gene causes embryonic lethality. This is a common finding in mouse genetics for essential developmental genes. Option A is incorrect because the gene is clearly essential — heterozygous survival simply shows that one copy is sufficient for normal development. Option B is wrong because the technique clearly worked (heterozygous mice were obtained); the absence of homozygous mice is a biological result, not a technical failure. Option D is incorrect because embryonic lethality specifically indicates the gene functions during embryonic development, not exclusively in adults.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Hardy-Weinberg principle states that allele frequencies in a population remain constant across generations under certain conditions. Which of the following would NOT disrupt Hardy-Weinberg equilibrium?",
+      "options": [
+        "Natural selection favoring heterozygotes over both homozygous genotypes",
+        "Random mating with respect to the locus in question within a large population",
+        "Immigration of individuals from a population with different allele frequencies",
+        "A population bottleneck reducing the population to 15 individuals"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Random mating within a large population would NOT disrupt Hardy-Weinberg equilibrium — in fact, random mating is one of the conditions required to maintain equilibrium. The five conditions for Hardy-Weinberg equilibrium are: (1) no natural selection, (2) random mating, (3) no gene flow, (4) large population size (no genetic drift), and (5) no mutation. Option A (natural selection favoring heterozygotes) violates the no-selection condition. Option C (immigration with different allele frequencies) violates the no-gene-flow condition. Option D (population bottleneck to 15 individuals) violates the large-population-size condition and would cause genetic drift.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which statement about the relationship between correlation and causation in biological research is most accurate?",
+      "options": [
+        "A strong correlation between two variables always implies that one causes the other",
+        "Experimental manipulation with proper controls is needed to establish causation; correlation alone is insufficient",
+        "Causation can never be established in biological systems because they are too complex",
+        "If two variables are not correlated, there can be no causal relationship between them"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Experimental manipulation with proper controls is needed to establish causation; correlation alone is insufficient. This is a fundamental principle of scientific reasoning. A correlation between two variables could be due to a causal relationship, but it could also result from confounding variables, reverse causation, or coincidence. Only controlled experiments that manipulate the independent variable while holding other factors constant can establish that changes in one variable cause changes in another. Option A is the classic 'correlation equals causation' fallacy. Option C is too extreme — causation can be established in biological systems through rigorous experimental design. Option D is incorrect because non-linear relationships, threshold effects, and complex interactions can produce causal relationships that do not manifest as simple linear correlations.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A comparative genomics study reveals that the human genome contains approximately 20,000 protein-coding genes, similar to the nematode C. elegans. This finding suggests that:",
+      "options": [
+        "Humans and nematodes have identical complexity because they have similar gene numbers",
+        "Gene number alone does not determine organismal complexity; regulatory elements, alternative splicing, and post-translational modifications contribute to phenotypic diversity",
+        "The C. elegans genome must contain many pseudogenes that inflate its apparent gene count",
+        "The human genome has been underestimated and likely contains over 100,000 protein-coding genes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The similar gene numbers between humans (~20,000) and C. elegans (~19,000) illustrate that gene number alone does not determine organismal complexity — this is sometimes called the 'G-value paradox.' Organismal complexity in humans is generated through regulatory complexity (enhancers, promoters, non-coding RNAs), extensive alternative splicing (producing multiple protein variants from one gene), post-translational modifications, and complex gene regulatory networks. Option A is incorrect because humans and nematodes are obviously not equally complex despite similar gene numbers. Option C is wrong because the C. elegans genome is thoroughly annotated and the gene count is accurate. Option D is incorrect because extensive genome projects have confirmed that ~20,000 protein-coding genes is accurate for the human genome.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bioethics plays an increasingly important role in modern biological research. Which scenario presents the MOST significant bioethical concern?",
+      "options": [
+        "Using CRISPR to edit the genome of somatic cells to treat a genetic disease in an adult patient",
+        "Editing the germline of human embryos, creating heritable changes that affect future generations who cannot consent",
+        "Sequencing the genome of a newly discovered bacterial species from a soil sample",
+        "Using model organisms such as yeast to study fundamental cellular processes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Editing the germline of human embryos presents the most significant bioethical concern because changes to the germline are heritable — they will be passed to all future descendants who had no opportunity to consent. This raises issues of informed consent across generations, potential unintended consequences, equity (access to genetic enhancement), and the ethical boundary between therapy and enhancement. Option A (somatic cell therapy) is less controversial because changes affect only the treated individual and are not heritable. Option C (bacterial genome sequencing) raises minimal ethical concerns as it involves environmental microbes, not human subjects. Option D (yeast research) involves single-celled organisms and raises negligible bioethical concerns compared to human germline editing.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher tracks genetic diversity (heterozygosity) in two populations over 50 generations:\n\nGeneration | Pop A (n=10,000) | Pop B (n=50)\n0          | 0.50             | 0.50\n10         | 0.49             | 0.42\n20         | 0.48             | 0.35\n30         | 0.47             | 0.22\n40         | 0.46             | 0.12\n50         | 0.45             | 0.05\n\nWhat is the most likely explanation for the difference in heterozygosity decline between the two populations?",
+      "options": [
+        "Population A is experiencing stronger natural selection than Population B",
+        "Population B has a higher mutation rate, which decreases heterozygosity",
+        "Genetic drift is causing rapid loss of heterozygosity in the small Population B, while the large Population A maintains diversity",
+        "Population B is experiencing increased gene flow from neighboring populations"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Genetic drift — random changes in allele frequencies — has a much stronger effect in small populations than in large ones. In Population B (n=50), drift causes rapid, random loss of alleles, leading to a dramatic decline in heterozygosity from 0.50 to 0.05 over 50 generations. In Population A (n=10,000), drift is negligible and heterozygosity remains relatively stable (0.50 to 0.45). This is consistent with the theoretical prediction that heterozygosity declines at a rate of approximately 1/(2N) per generation. Option A is incorrect because natural selection, not genetic drift, would be expected to operate similarly regardless of population size if selection pressures were equal. Option B is wrong because higher mutation rate would increase heterozygosity, not decrease it. Option D is incorrect because gene flow from other populations would introduce new alleles, maintaining or increasing heterozygosity rather than decreasing it.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following scenarios best illustrates the biological theme of 'interactions' at the cellular level?",
+      "options": [
+        "A cheetah chasing a gazelle across the savanna",
+        "Nitrogen fixation by Rhizobium bacteria in root nodules of legumes",
+        "Signal transduction cascades where a hormone binding to a receptor triggers a series of intracellular protein phosphorylations",
+        "Seasonal migration of wildebeest across the Serengeti"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Signal transduction cascades — where a hormone binds to a cell-surface receptor, triggering a series of intracellular protein phosphorylations that ultimately alter gene expression or cellular behavior — best illustrate the theme of interactions at the cellular level. This involves molecular interactions within and between cellular components (receptor, G-proteins, kinases, transcription factors) that produce coordinated cellular responses. Option A describes an organismal-level interaction (predator-prey). Option B describes an organism-level mutualistic interaction, though it does involve cellular processes. Option D describes a population-level behavior. Only option C specifically describes interactions among molecules within a cell, making it the most direct example of cellular-level interactions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The principle of parsimony (Occam's razor) in phylogenetic analysis suggests that the preferred phylogenetic tree is one that:",
+      "options": [
+        "Includes the maximum possible number of evolutionary changes between taxa",
+        "Requires the fewest evolutionary changes to explain the observed distribution of character states",
+        "Places all taxa equidistant from the root of the tree",
+        "Maximizes the number of homoplasies (convergent similarities) in the dataset"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The principle of parsimony states that the simplest explanation is preferred, and in phylogenetics, this means the tree requiring the fewest evolutionary changes (mutations, character state transitions) to explain the observed data is the most likely hypothesis. This minimizes the assumption of independent, convergent events. While parsimony is not always the most statistically robust method (maximum likelihood and Bayesian methods may be superior in some cases), it remains a fundamental concept in phylogenetics. Option A describes maximizing changes, which is the opposite of parsimony. Option C describes an ultrametric tree, which is a specific tree type unrelated to parsimony. Option D describes maximizing homoplasies, which parsimony explicitly seeks to minimize.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher uses RNA interference (RNAi) to silence a specific gene in C. elegans and observes a distinct phenotypic change. To confirm that the phenotype is specifically due to loss of that gene and not an off-target effect, the most rigorous approach would be to:",
+      "options": [
+        "Perform a rescue experiment by reintroducing a functional copy of the gene and demonstrating restoration of the normal phenotype",
+        "Repeat the RNAi experiment with a higher concentration of double-stranded RNA",
+        "Confirm the result by observing the same phenotype in a different species",
+        "Measure the expression levels of unrelated housekeeping genes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A rescue experiment is the gold standard for confirming gene function specificity. By reintroducing a functional copy of the silenced gene (often under a different promoter or from a synthetic construct resistant to the siRNA), the researcher can demonstrate that restoring gene function reverses the phenotype. If the phenotype is rescued, this strongly supports the conclusion that the original phenotype was specifically due to loss of that gene, not off-target effects. Option B is incorrect because increasing dsRNA concentration could increase off-target effects rather than reducing them. Option C could provide supporting evidence but does not address off-target effects in the original organism. Option D is irrelevant because housekeeping gene expression does not inform about the specificity of the phenotypic effect.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the context of scientific methodology, which scenario best illustrates the distinction between a scientific theory and a scientific law?",
+      "options": [
+        "A scientific theory describes observed patterns without explanation, while a law provides the mechanistic explanation",
+        "A law is simply a more advanced and well-supported version of a theory",
+        "A theory explains why phenomena occur through well-substantiated mechanisms, while a law describes consistent observed patterns or relationships, often mathematically",
+        "Theories apply only to biology while laws apply only to physics and chemistry"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In science, theories and laws serve fundamentally different purposes. A scientific theory provides an explanatory framework for why phenomena occur, supported by extensive evidence (e.g., cell theory, theory of evolution by natural selection, germ theory of disease). A scientific law describes a consistent observed pattern or relationship, often expressed mathematically, without necessarily explaining the underlying mechanism (e.g., Mendel's laws of inheritance, Hardy-Weinberg law, law of conservation of energy). Option A reverses the relationship — theories explain mechanisms, while laws describe patterns. Option B is a common misconception — theories do not 'graduate' to become laws; they serve different roles. Option D is incorrect because both theories and laws exist in biology, physics, and chemistry.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher studying island biogeography finds that larger islands generally harbor more species than smaller islands. According to the equilibrium model of island biogeography proposed by MacArthur and Wilson, this pattern is primarily explained by:",
+      "options": [
+        "Larger islands have identical climates to smaller islands but more human disturbance",
+        "Smaller islands have higher immigration rates that prevent new species from establishing",
+        "Species richness on islands is random and unrelated to island area or distance from the mainland",
+        "Larger islands have lower extinction rates due to larger habitat area and population sizes, allowing more species to persist"
+      ],
+      "correctAnswer": "D",
+      "explanation": "According to MacArthur and Wilson's equilibrium model of island biogeography, larger islands support more species because they have lower extinction rates. Larger islands provide more habitat area, more diverse habitats, and can support larger population sizes — all of which reduce the probability of local extinction. Combined with immigration from the mainland (which is independent of island size in the basic model), this leads to a higher equilibrium species richness on larger islands. Option A is incorrect because human disturbance is not part of the classical model. Option B reverses the expected pattern — island size affects extinction rates, not immigration rates (distance affects immigration). Option C is wrong because the entire model is based on species richness being predictably related to island area and distance.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 1,
+      "campbellChapter": 1,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Themes in the Study of Biology"
+    }
+  ]
+}
