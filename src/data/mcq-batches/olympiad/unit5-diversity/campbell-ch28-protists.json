@@ -1,0 +1,1450 @@
+{
+  "batch": {
+    "name": "Campbell Ch28 Protists \u2014 Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 72
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "Plasmodium falciparum, the causative agent of the most severe form of malaria, has a complex life cycle alternating between human and Anopheles mosquito hosts. During the erythrocytic stage in humans, the parasite degrades hemoglobin within the digestive vacuole. Which mechanism does Plasmodium use to detoxify the heme released during hemoglobin degradation?",
+      "options": [
+        "Plasmodium polymerizes toxic free heme into an insoluble crystalline pigment called hemozoin within the digestive vacuole, sequestering the reactive iron-porphyrin and preventing oxidative damage to the parasite \u2014 this process is the target of chloroquine, which inhibits hemozoin formation",
+        "Plasmodium enzymatically degrades heme into biliverdin using a heme oxygenase identical to the human enzyme",
+        "Plasmodium exports free heme out of the erythrocyte through ATP-binding cassette transporters",
+        "Plasmodium reduces heme to a non-toxic form using glutathione and stores it in specialized iron-storage granules"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Trypanosoma brucei, the causative agent of African sleeping sickness, evades the mammalian immune system through antigenic variation. What molecular mechanism allows this parasite to continuously change its surface coat?",
+      "options": [
+        "Random point mutations in the active variant surface glycoprotein (VSG) gene during each cell division",
+        "Epigenetic silencing and activation of surface protein genes through DNA methylation cycling",
+        "Acquisition of new surface proteins from the host's bloodstream through receptor-mediated endocytosis",
+        "Sequential expression of different VSG genes from a repertoire of >1000 VSG genes through gene conversion into a telomeric expression site, combined with transcriptional switching between ~15 expression sites \u2014 only one expression site is transcriptionally active at any time, and switching occurs at a rate of ~10^-2 to 10^-3 per cell per generation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "The chloroplasts of Euglena are surrounded by three membranes, while those of dinoflagellates typically have three membranes, and those of chlorarachniophytes have four membranes. What evolutionary process explains these different numbers of envelope membranes?",
+      "options": [
+        "Primary endosymbiosis produces two membranes (inner = cyanobacterial plasma membrane, outer = host phagosomal membrane); secondary endosymbiosis adds one or two more membranes from the engulfed eukaryotic alga's plasma membrane and the host's phagosomal membrane; loss of some membranes occurred in some lineages",
+        "The number of membranes reflects the age of the endosymbiotic event, with older chloroplasts having fewer membranes due to membrane degradation over time",
+        "Each additional membrane was synthesized de novo by the host cell as the chloroplast increased in size",
+        "The different membrane numbers are artifacts of electron microscopy preparation and do not represent real biological differences"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about diatom biology:\nS1: Diatoms have silica-based cell walls (frustules) composed of two overlapping halves (thecae) that fit together like a petri dish.\nS2: During asexual reproduction, each daughter cell inherits one theca from the parent and synthesizes a new smaller theca that fits inside the inherited one, leading to progressive size reduction over generations.\nS3: Sexual reproduction involving auxospore formation restores diatoms to their maximum cell size after a period of vegetative size decrease.\nS4: Diatoms contribute negligibly to global primary productivity because they are restricted to freshwater environments.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "The apicomplexan apical complex \u2014 consisting of rhoptries, micronemes, and dense granules \u2014 is essential for host cell invasion. During Toxoplasma gondii invasion of a host cell, what is the correct sequence of organelle deployment?",
+      "options": [
+        "Dense granules discharge first to create a parasitophorous vacuole, followed by microneme release for attachment, and finally rhoptry secretion for nutrient acquisition",
+        "All three organelles discharge simultaneously in a single burst upon host cell contact",
+        "Rhoptries are the only organelles involved in invasion; micronemes and dense granules function exclusively in intracellular replication",
+        "Micronemes discharge first, releasing adhesins (MIC proteins) that mediate initial attachment and moving junction formation; rhoptries then secrete their contents (RON and ROP proteins) to form the parasitophorous vacuole membrane; finally, dense granules release proteins (GRA) that modify the vacuole for nutrient acquisition and immune evasion"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Red tides are caused by blooms of certain dinoflagellates that produce potent neurotoxins. Saxitoxin, produced by Alexandrium species, causes paralytic shellfish poisoning. What is the molecular mechanism of saxitoxin toxicity?",
+      "options": [
+        "Saxitoxin activates NMDA glutamate receptors, causing excitotoxic neuronal death",
+        "Saxitoxin inhibits acetylcholinesterase, leading to accumulation of acetylcholine at neuromuscular junctions",
+        "Saxitoxin disrupts the myelin sheath around neurons, preventing saltatory conduction",
+        "Saxitoxin blocks voltage-gated sodium channels by binding to the pore region, preventing sodium influx during action potential generation, leading to paralysis of skeletal muscles including respiratory muscles"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studying Paramecium observes the following behaviors in response to different stimuli:\n- Contact with obstacle: reverses ciliary beat, backs up, turns ~30 degrees, swims forward (avoiding reaction)\n- Hypotonic solution: contractile vacuole pumping rate increases from 6 to 15 contractions per minute\n- Chemical attractant (bacteria): swimming speed decreases and turning frequency decreases in regions of high bacterial concentration\n- Temperature gradient: accumulates at 25\u00b0C when gradient spans 15-35\u00b0C\n\nWhich explanation best accounts for the Paramecium's accumulation near bacteria?",
+      "options": [
+        "Paramecium has chemoreceptors that detect bacterial metabolites and actively steers toward the bacteria using directed locomotion (chemotaxis)",
+        "Paramecium accumulates near bacteria through chemokinesis \u2014 it reduces turning frequency and swimming speed in favorable areas, spending more time where bacteria are concentrated, without directed movement toward the stimulus",
+        "Paramecium follows the bacterial gradient by extending pseudopodia in the direction of highest concentration",
+        "Bacteria physically attach to Paramecium and prevent it from swimming away"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Plasmodium species have a unique organelle called the apicoplast, derived from secondary endosymbiosis. The apicoplast is non-photosynthetic but essential for parasite survival. Which metabolic functions does the apicoplast perform?",
+      "options": [
+        "The apicoplast performs isoprenoid precursor synthesis (via the MEP/DOXP pathway, absent in the human host), fatty acid synthesis (type II FAS), and heme biosynthesis \u2014 making it a promising drug target because these pathways differ from human metabolic pathways",
+        "The apicoplast is vestigial and performs no metabolic functions in Plasmodium",
+        "The apicoplast produces ATP through oxidative phosphorylation, serving as the parasite's main energy-producing organelle",
+        "The apicoplast synthesizes hemoglobin to replace host hemoglobin degraded during the erythrocytic stage"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Amoebozoans include both free-living and parasitic species. Entamoeba histolytica causes amoebic dysentery. What virulence factor allows E. histolytica to invade the intestinal epithelium?",
+      "options": [
+        "Type III secretion system that injects effector proteins into host cells",
+        "Capsule formation that prevents phagocytosis by immune cells",
+        "Motile flagella that propel the organism through the intestinal wall",
+        "A galactose/N-acetylgalactosamine (Gal/GalNAc) lectin mediates attachment to host cells, followed by secretion of cysteine proteases that degrade the extracellular matrix and mucosal barrier, and amoebapores that form pores in host cell membranes, causing contact-dependent killing of epithelial cells and neutrophils"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about ciliate genetics:\nS1: Ciliates possess two types of nuclei \u2014 a large, polyploid macronucleus that controls everyday cell functions and a small, diploid micronucleus that is the germline nucleus used in sexual reproduction.\nS2: During conjugation, two ciliates exchange micronuclei (haploid products of meiosis), which fuse with a resident haploid nucleus to form a new diploid micronucleus, from which a new macronucleus develops.\nS3: Macronuclear development involves chromosome fragmentation, amplification of gene-sized pieces, and elimination of internal eliminated sequences (IES), resulting in a highly processed genome.\nS4: Ciliates can only reproduce sexually through conjugation; they cannot divide asexually by binary fission.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Foraminifera are rhizarian protists with calcium carbonate (CaCO3) shells (tests) that accumulate on the ocean floor after the organisms die. Why are foraminifera important in geology and paleoclimatology?",
+      "options": [
+        "Their fossilized tests form limestone deposits and serve as biostratigraphic index fossils for dating sedimentary rocks; the oxygen isotope ratios (18O/16O) in their CaCO3 tests provide a proxy for past ocean temperatures and ice volume, enabling reconstruction of paleoclimate records spanning millions of years",
+        "Foraminifera are important only as food sources for deep-sea fish and have no geological significance",
+        "Foraminifera produce silica shells that form diatomaceous earth deposits used in industrial filtration",
+        "Foraminifera are important only in freshwater ecosystems and have no relevance to ocean geology"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that the chloroplasts of the photosynthetic sea slug Elysia chlorotica, acquired by kleptoplasty (stealing chloroplasts from the alga Vaucheria litorea), can function because the slug's nuclear genome contains algal genes transferred through horizontal gene transfer. How would you test this hypothesis?",
+      "options": [
+        "Feed the slugs exclusively algae of a different species and observe whether photosynthesis continues with the new chloroplasts",
+        "Search the slug's nuclear genome for sequences homologous to algal nuclear-encoded chloroplast-targeted genes using whole-genome sequencing and transcriptomics; verify expression of any candidate genes by RT-PCR; test protein localization to stolen chloroplasts using immunofluorescence with antibodies against the algal proteins; and conduct feeding experiments depriving slugs of algae to determine how long chloroplasts remain functional",
+        "Simply measure chlorophyll fluorescence in the slug to confirm photosynthesis occurs",
+        "Remove the slugs from light for one year and determine if they survive entirely on photosynthesis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Phytophthora infestans, the oomycete that caused the Irish Potato Famine, was historically classified as a fungus but is now placed in the SAR supergroup (Stramenopiles). Which characteristics distinguish oomycetes from true fungi?",
+      "options": [
+        "Oomycetes have cellulose-based cell walls instead of chitin, diploid vegetative hyphae instead of haploid, biflagellate zoospores with heterokont flagella (one smooth, one with tripartite mastigonemes), and phylogenetically belong to Stramenopiles alongside diatoms and brown algae, not to the fungal clade Opisthokonta",
+        "Oomycetes and true fungi are identical in all features except their reproductive strategies",
+        "Oomycetes lack cell walls entirely, distinguishing them from fungi which always have chitinous walls",
+        "Oomycetes are photosynthetic organisms that were reclassified based solely on their pigment composition"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A marine biologist measures primary productivity in a coastal ecosystem and finds the following data:\n- Diatom contribution: 45% of total primary production\n- Dinoflagellate contribution: 20%\n- Coccolithophore contribution: 15%\n- Cyanobacteria (Prochlorococcus/Synechococcus): 15%\n- Green algae and others: 5%\n\nBased on these data, which statement about the ecological importance of protists is most accurate?",
+      "options": [
+        "Protists contribute minimally to ocean productivity, with most production coming from cyanobacteria",
+        "Diatoms alone produce the majority of ocean primary production in this system, and together with other protist phytoplankton, protists account for ~85% of total primary production, making them the dominant primary producers in marine ecosystems",
+        "Only dinoflagellates are ecologically important because they form harmful algal blooms",
+        "Coccolithophores are the only ecologically important protists because they affect climate through CaCO3 production"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Giardia lamblia is a diplomonad protist that lacks mitochondria. The 'amitochondriate' condition of Giardia was once thought to reflect a primitive state predating mitochondrial acquisition. Current evidence contradicts this interpretation. Why?",
+      "options": [
+        "Giardia has fully functional mitochondria that were overlooked in early studies",
+        "Giardia contains mitosomes \u2014 highly reduced, remnant organelles derived from mitochondria that retain iron-sulfur cluster assembly but have lost all energy-generating functions, indicating that Giardia's ancestor possessed mitochondria that were secondarily reduced rather than never acquired",
+        "Giardia obtains mitochondria from its host during each infection cycle",
+        "DNA sequencing showed that Giardia diverged after other eukaryotes acquired mitochondria, but the evidence is inconclusive"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Kelp forests dominated by brown algae (Phaeophyta) such as Macrocystis pyrifera can reach heights exceeding 60 meters. How do these massive multicellular protists transport photosynthates from surface blades to deep holdfasts?",
+      "options": [
+        "Through sieve tube-like elements (trumpet hyphae) in the medulla that transport mannitol and other photosynthates via pressure-driven mass flow, functionally analogous to phloem in vascular plants but independently evolved",
+        "By simple diffusion through the thallus, which is sufficient because kelp cells are very thin",
+        "Through xylem-like vessels that transport water and dissolved sugars by transpiration-driven mass flow",
+        "Kelp does not transport photosynthates; each cell is autotrophic and produces its own sugars"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher studying mixotrophy in dinoflagellates wants to determine whether Karlodinium veneficum obtains more carbon from photosynthesis or from phagotrophic ingestion of prey (cryptophyte algae). What experimental approach would best quantify the relative contributions?",
+      "options": [
+        "Measure chlorophyll content as a proxy for photosynthetic capacity and assume this equals photosynthetic carbon fixation",
+        "Use dual stable isotope labeling: provide 13C-labeled dissolved inorganic carbon (DI13C) for photosynthesis and 15N-labeled cryptophyte prey for phagotrophy; after incubation, measure 13C and 15N incorporation into Karlodinium biomass using isotope ratio mass spectrometry to quantify carbon obtained from each source",
+        "Remove light and observe if the organisms survive, concluding that phagotrophy dominates if they do",
+        "Count the number of food vacuoles per cell and multiply by an assumed carbon content per vacuole"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "The endosymbiotic origin of chloroplasts involved primary endosymbiosis of a cyanobacterium. However, many protist lineages acquired chloroplasts through secondary or even tertiary endosymbiosis. Which evidence most strongly supports secondary endosymbiosis?",
+      "options": [
+        "The presence of only two chloroplast membranes in the engulfed alga",
+        "The absence of any chloroplast membranes in the host cell",
+        "Identical pigment composition between the host and the chloroplast",
+        "A nucleomorph \u2014 a vestigial nucleus of the endosymbiotic alga located between the second and third chloroplast membranes \u2014 as found in chlorarachniophytes and cryptophytes, providing direct evidence that the chloroplast was acquired by engulfing a eukaryotic alga, not a cyanobacterium"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about malaria parasite biology:\nS1: The liver stage (exoerythrocytic schizogony) of Plasmodium vivax can include dormant hypnozoites that cause relapses months to years after the initial infection.\nS2: Gametocytes of Plasmodium are the sexual stages that are taken up by Anopheles mosquitoes during a blood meal and undergo fertilization in the mosquito midgut.\nS3: The sickle cell trait (HbAS heterozygotes) provides partial protection against severe P. falciparum malaria because the parasite grows poorly in sickle-hemoglobin-containing red blood cells.\nS4: Plasmodium can only infect humans and has no other vertebrate hosts.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Slime molds were historically grouped with fungi but molecular phylogenetics places them in Amoebozoa. Dictyostelium discoideum (cellular slime mold) has a unique aggregation behavior triggered by starvation. Which signaling molecule coordinates the aggregation of thousands of individual amoebae into a multicellular slug?",
+      "options": [
+        "Cyclic AMP (cAMP) is released by starving cells in pulsatile waves; surrounding cells detect cAMP via surface receptors and respond by both moving toward the signal source (chemotaxis) and releasing their own cAMP, creating relay waves that attract cells from a wide area to aggregation centers",
+        "Ethylene gas, similar to the plant hormone, triggers aggregation through volatile signaling",
+        "Direct cell-cell contact through adhesion molecules is the only mechanism of aggregation, without any chemical signaling",
+        "Bacterial metabolites signal nutrient depletion and trigger aggregation by activating a common genetic program in all cells simultaneously"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A protistologist studies the feeding rates of different protist predators on bacterial prey and obtains the following data:\n\n| Protist | Cell size | Feeding rate (bacteria/hr) | Clearance rate (nL/hr) |\n|---------|-----------|---------------------------|------------------------|\n| Flagellate A | 5 um | 30 | 4.2 |\n| Ciliate B | 50 um | 800 | 120 |\n| Amoeba C | 25 um | 150 | 22 |\n\nPer unit biovolume, which protist is the most efficient bacterial predator, and what does this suggest about protist grazing ecology?",
+      "options": [
+        "Ciliate B is most efficient because it has the highest absolute feeding rate",
+        "Amoeba C is most efficient because its intermediate size represents an optimal balance between feeding rate and metabolic cost",
+        "All three protists are equally efficient when corrected for body size because feeding rate scales linearly with volume",
+        "Flagellate A has the highest volume-specific clearance rate because small flagellates have the highest surface-area-to-volume ratio, allowing more efficient encounter with bacterial prey; this explains why heterotrophic nanoflagellates (2-20 um) are the primary bacterivores in aquatic ecosystems despite their small individual feeding rates"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ciliates like Tetrahymena thermophila use an unusual genetic code where the standard stop codons UAA and UAG encode glutamine instead of terminating translation. What evolutionary process explains this codon reassignment?",
+      "options": [
+        "A single point mutation in a tRNA gene created a new glutamine-reading tRNA that recognizes UAA and UAG, and subsequent loss of the release factor that recognized these codons allowed the reassignment to become permanent, because the ciliates now use only UGA as a stop codon",
+        "The ciliate genetic code is identical to the universal genetic code, and the codon reassignment is an error in the literature",
+        "Horizontal gene transfer from bacteria introduced a different genetic code into ciliates",
+        "Environmental mutagens in the ciliate's habitat caused the codon reassignment in a single generation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Toxoplasma gondii can infect almost any warm-blooded animal but can only complete its sexual cycle in cats (Felidae). Infected rodents show reduced fear of cat odor, a behavioral change hypothesized to increase transmission to the definitive host. What is the proposed mechanism for this behavioral manipulation?",
+      "options": [
+        "Toxoplasma physically destroys the rodent's olfactory neurons, eliminating the ability to smell cat urine",
+        "Toxoplasma cysts preferentially form in the amygdala and associated limbic structures, and the parasite alters dopamine signaling and epigenetic modifications in brain cells, specifically reducing the innate aversion to cat odor by modifying fear circuitry while leaving other behavioral responses largely intact",
+        "The behavioral change is purely coincidental and has no connection to the parasite's life cycle",
+        "Toxoplasma secretes a hormone identical to cat pheromones that makes rodents sexually attracted to cat urine"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine the phylogenetic position of a newly discovered single-celled eukaryote that has no obvious morphological similarity to known protist groups. Which multi-pronged approach would most reliably place this organism on the eukaryotic tree of life?",
+      "options": [
+        "Use morphological characters alone, since all protist groups can be identified by their cellular ultrastructure",
+        "Sequence only the 18S rRNA gene, which is always sufficient for resolving deep eukaryotic relationships",
+        "Only compare the organism's metabolic capabilities to known groups using biochemical assays",
+        "Perform multi-gene phylogenomic analysis using dozens of conserved nuclear markers (ribosomal proteins, elongation factors, RNA polymerase subunits, HSP70/90); complement with ultrastructural analysis using transmission electron microscopy to identify diagnostic features (mitochondrial cristae morphology, flagellar apparatus, chloroplast structure if present); and use 18S rRNA for initial taxonomic placement followed by phylogenomics for robust resolution"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Brown algae (Phaeophyta) include the largest and most structurally complex protists. Fucus (rockweed) exhibits oogamy \u2014 production of large non-motile eggs and small motile biflagellate sperm. What is the ecological advantage of oogamy over isogamy in intertidal brown algae?",
+      "options": [
+        "The large, non-motile egg retains resources (nutrients, organelles) needed for early development of the zygote, while the small, numerous sperm are specialized for motility and finding the egg through chemical attractants (fucoserratene pheromone), maximizing both resource investment per offspring and the probability of fertilization in the turbulent intertidal environment",
+        "Oogamy produces more offspring per reproductive event simply because eggs are larger",
+        "Oogamy is always more efficient than isogamy regardless of ecological context",
+        "Oogamy prevents self-fertilization, while isogamy always results in inbreeding"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about protist diversity and evolutionary significance:\nS1: Protists are not a monophyletic group; the term encompasses all eukaryotes that are not plants, animals, or fungi, spanning multiple distantly related supergroups.\nS2: The SAR supergroup unites Stramenopiles (diatoms, brown algae, oomycetes), Alveolates (dinoflagellates, ciliates, apicomplexans), and Rhizaria (foraminifera, radiolarians, chlorarachniophytes) based on molecular phylogenetic evidence.\nS3: All protists are unicellular; no protist lineage has evolved multicellularity or tissue-level organization.\nS4: Protists play critical roles in global biogeochemical cycles, including carbon fixation (phytoplankton), carbon burial (foram/coccolithophore shells), and as the base of aquatic food webs.",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TTFF",
+        "TFTF"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "The excavate protist Naegleria fowleri causes primary amoebic meningoencephalitis (PAM), a rapidly fatal brain infection. What is unique about Naegleria's cell biology that makes it remarkable among eukaryotes?",
+      "options": [
+        "Naegleria can transform between three morphological forms \u2014 amoeba, flagellate, and cyst \u2014 with the amoeba-to-flagellate transformation involving de novo assembly of an entire flagellar apparatus (basal bodies, axonemes, cytoskeletal root system) within 90 minutes, without cell division, representing one of the most dramatic cellular transformations known",
+        "Naegleria is the only eukaryote that completely lacks mitochondria in all life stages",
+        "Naegleria can photosynthesize when exposed to light, switching between heterotrophic and autotrophic nutrition",
+        "Naegleria reproduces exclusively by budding, unlike all other amoebae which divide by binary fission"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher uses flow cytometry to measure DNA content in different life stages of the malaria parasite Plasmodium falciparum:\n- Merozoite: 1n (haploid)\n- Ring stage (in RBC): 1n\n- Trophozoite: 1n\n- Schizont: 16-32n (multiple nuclei from schizogony)\n- Gametocyte: 1n\n- Zygote (in mosquito): 2n\n- Ookinete: 2n\n- Oocyst (after meiosis): produces haploid sporozoites\n\nBased on these data, at which stage does Plasmodium undergo meiosis?",
+      "options": [
+        "Meiosis occurs during schizogony in human red blood cells, reducing the chromosome number from 2n to 1n",
+        "Meiosis never occurs in Plasmodium; it reproduces entirely by mitosis",
+        "Meiosis occurs during gametocyte formation in human blood, reducing the chromosome number before gametes are formed",
+        "Meiosis occurs in the oocyst stage within the mosquito midgut wall; the zygote (formed by fusion of gametes in the mosquito gut) is the only diploid stage, and meiosis in the oocyst produces haploid sporozoites that migrate to the salivary glands \u2014 Plasmodium spends the vast majority of its life cycle in the haploid state"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Choanoflagellates are considered the closest living relatives of animals based on molecular phylogenetic evidence. Which morphological feature of choanoflagellates resembles a specific animal cell type, and what does this suggest about animal origins?",
+      "options": [
+        "Choanoflagellates have photosynthetic chloroplasts similar to plant cells, suggesting animals evolved from photosynthetic ancestors",
+        "Choanoflagellates have a collar of microvilli surrounding a single flagellum, closely resembling the choanocytes (collar cells) of sponges, suggesting that the last common ancestor of choanoflagellates and animals was a colonial flagellated organism with collar cells that used flagellar water currents for filter feeding",
+        "Choanoflagellates have multiple nuclei per cell, similar to animal skeletal muscle cells",
+        "Choanoflagellates produce collagen and have tissue-level organization identical to cnidarians"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Harmful algal blooms (HABs) of the dinoflagellate Karenia brevis produce brevetoxin, which causes neurotoxic shellfish poisoning. Brevetoxin has a different mechanism from saxitoxin. How does brevetoxin affect neuronal function?",
+      "options": [
+        "Brevetoxin blocks voltage-gated potassium channels, preventing repolarization of neurons",
+        "Brevetoxin inhibits GABA receptors, causing seizures and hyperexcitability",
+        "Brevetoxin degrades the myelin sheath, causing demyelinating disease",
+        "Brevetoxin binds to voltage-gated sodium channels at a site different from saxitoxin's binding site, causing the channels to remain open persistently, leading to sustained depolarization, repetitive firing, and disruption of normal neural signaling \u2014 this contrasts with saxitoxin, which blocks sodium channels"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A parasitologist wants to determine whether Cryptosporidium parvum, a waterborne protist parasite causing diarrhea, can be effectively removed by standard water treatment (filtration and chlorination). How should she design the experiment?",
+      "options": [
+        "Add Cryptosporidium oocysts to tap water and check if the water tastes different after treatment",
+        "Treat water samples containing known concentrations of C. parvum oocysts with standard chlorination protocols and filtration; quantify surviving oocysts using immunofluorescence microscopy; test oocyst viability using a cell culture infectivity assay (preferred over excystation assays because it confirms actual infectivity); compare removal/inactivation rates across different treatment conditions (chlorine concentration, contact time, filter pore size); and include positive and negative controls",
+        "Simply measure turbidity of treated water as a proxy for parasite removal",
+        "Test the water on human volunteers to determine if infection occurs after treatment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "The heterokont (stramenopile) flagellar apparatus is characterized by two flagella of different structure. What structural feature distinguishes the anterior flagellum and what is its functional significance?",
+      "options": [
+        "The anterior flagellum bears tripartite tubular mastigonemes (hair-like projections) that reverse the thrust generated by flagellar beating, pulling the cell forward rather than pushing it \u2014 this is because the mastigonemes increase the effective surface area and change the hydrodynamic interaction with the surrounding water",
+        "Both flagella are identical in structure and function, with the term 'heterokont' referring only to their different lengths",
+        "The anterior flagellum is shorter and smoother than the posterior flagellum, serving as a rudder for steering",
+        "The anterior flagellum is used exclusively for attachment to surfaces and does not contribute to locomotion"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Radiolarians are marine rhizarian protists with intricate siliceous (SiO2) skeletons. When radiolarians die, their skeletons sink and accumulate on the deep ocean floor. In waters below the carbonate compensation depth (CCD), what type of deep-sea sediment is dominated by radiolarian remains?",
+      "options": [
+        "Radiolarian ooze \u2014 a siliceous sediment that accumulates below the CCD where calcium carbonate dissolves, leaving silica-based skeletons as the dominant biogenic sediment component",
+        "Calcareous ooze, because radiolarian skeletons are made of calcium carbonate",
+        "Pelagic clay, which contains no biogenic components",
+        "Diatomaceous earth, because radiolarian and diatom skeletons are identical"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "The supergroup Archaeplastida (Plantae sensu lato) includes three lineages: Glaucophyta, Rhodophyta (red algae), and Viridiplantae (green algae and land plants). What feature of glaucophyte chloroplasts provides the strongest evidence for the primary endosymbiotic origin of all archaeplastid plastids?",
+      "options": [
+        "Glaucophyte chloroplasts use chlorophyll a and b, identical to green algae and land plants",
+        "Glaucophyte chloroplasts are surrounded by four membranes, indicating secondary endosymbiosis",
+        "Glaucophyte chloroplasts contain bacteriochlorophyll instead of chlorophyll",
+        "Glaucophyte plastids (called cyanelles) retain a thin peptidoglycan layer between the two envelope membranes, reminiscent of the ancestral cyanobacterial cell wall, providing a 'living fossil' link between the free-living cyanobacterial ancestor and modern chloroplasts"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about Plasmodium drug resistance:\nS1: Chloroquine resistance in P. falciparum is primarily mediated by mutations in the pfcrt gene (Plasmodium falciparum chloroquine resistance transporter), which encodes a protein in the digestive vacuole membrane that pumps chloroquine out of the vacuole.\nS2: Artemisinin resistance involves mutations in the kelch13 gene, leading to delayed parasite clearance by enhancing the parasite's ability to enter a quiescent ring-stage state that survives drug exposure.\nS3: Drug-resistant Plasmodium strains arose primarily through horizontal gene transfer from bacteria to the parasite.\nS4: Combination therapy (e.g., artemisinin-based combination therapy, ACT) is recommended to slow the emergence of resistance because mutations conferring resistance to two drugs simultaneously are much rarer than resistance to a single drug.",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TTFF",
+        "TFTF"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "The protist Physarum polycephalum (plasmodial slime mold) has demonstrated remarkable problem-solving abilities in laboratory experiments, including finding the shortest path through a maze. What biological mechanism underlies this behavior?",
+      "options": [
+        "Physarum has a central nervous system that processes spatial information and makes decisions",
+        "The organism relies entirely on random movement with no adaptive behavior \u2014 maze-solving experiments have been debunked",
+        "Physarum uses morphallaxis to regenerate specialized sensory cells at the leading edge",
+        "The multinucleate plasmodium extends tube-like pseudopodia in all directions; tubes that reach food sources are reinforced through increased protoplasmic streaming, while tubes in dead-end paths gradually retract as flow decreases \u2014 this positive feedback between flow and tube diameter progressively optimizes the network to the shortest, most efficient paths connecting food sources"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A study of coral reef bleaching finds the following data on Symbiodiniaceae (zooxanthellae) in corals:\n- Clade C zooxanthellae: dominant in healthy corals at 26\u00b0C; expelled at 30\u00b0C\n- Clade D zooxanthellae: rare in healthy corals at 26\u00b0C; become dominant after bleaching events\n- Corals harboring Clade D show lower growth rates but higher thermal tolerance\n\nWhat mechanism explains the shift from Clade C to Clade D dominance after bleaching?",
+      "options": [
+        "Clade C zooxanthellae mutate into Clade D under thermal stress through directed mutagenesis",
+        "The coral actively selects Clade D over Clade C through a specific immune recognition mechanism that eliminates thermally sensitive symbionts",
+        "Clade C and Clade D are identical genetically and the shift is an artifact of sampling methodology",
+        "Shuffling and switching: Clade D zooxanthellae, present at low abundance before bleaching, gain a competitive advantage when heat stress eliminates the dominant Clade C; the residual Clade D population expands to fill the vacated niche (shuffling), and corals may also acquire new Clade D symbionts from the water column (switching) \u2014 representing an adaptive response with a trade-off between thermal tolerance and growth"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which feature uniquely characterizes the alveolates \u2014 the protist supergroup comprising dinoflagellates, ciliates, and apicomplexans?",
+      "options": [
+        "All alveolates are photosynthetic and possess chloroplasts derived from primary endosymbiosis",
+        "All alveolates possess membrane-bound sacs (alveoli) just beneath the plasma membrane, forming a cortical alveolar system that provides structural support and may be involved in calcium storage",
+        "All alveolates are parasitic and lack free-living representatives",
+        "All alveolates have silica-based cell walls and produce tests similar to diatoms"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher discovers a protist that appears to have both a functional chloroplast and a mitochondrion, and it can switch between autotrophic and heterotrophic nutrition. To determine whether this represents a primary, secondary, or tertiary endosymbiosis, which observations would be most diagnostic?",
+      "options": [
+        "Measure the organism's photosynthetic rate under different light intensities",
+        "Observe the organism's swimming behavior to determine its taxonomic affiliation",
+        "Count the number of chloroplast envelope membranes (2 = primary, 3 = secondary with membrane loss, 4 = secondary); search for a nucleomorph between envelope membranes; analyze chloroplast pigment composition to determine the identity of the original photosynthetic endosymbiont; and perform phylogenomic analysis of both nuclear and plastid genomes to trace the evolutionary origin of the chloroplast",
+        "Simply measure chlorophyll concentration to determine the type of endosymbiosis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Trypanosomatids such as Trypanosoma and Leishmania have a unique organelle called the kinetoplast. What is the kinetoplast, and what remarkable molecular biology occurs within it?",
+      "options": [
+        "The kinetoplast is a specialized ribosome that produces kinetoplast-specific proteins not found elsewhere in the cell",
+        "The kinetoplast is a photoreceptor organelle that allows the organism to detect and respond to light",
+        "The kinetoplast is a modified region of the single mitochondrion containing a massive network of concatenated circular DNA molecules (kDNA); within this network, maxicircles encode mitochondrial genes and minicircles encode guide RNAs that direct RNA editing \u2014 a process where uridine residues are inserted or deleted from mRNA transcripts to create functional open reading frames, representing the most extensive post-transcriptional editing known in biology",
+        "The kinetoplast is a contractile vacuole specialized for osmoregulation in freshwater trypanosomes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Coccolithophores such as Emiliania huxleyi produce intricate calcium carbonate plates (coccoliths) that cover their cell surface. Beyond structural protection, what biogeochemical significance do coccolithophore blooms have for the global carbon cycle?",
+      "options": [
+        "Coccolithophore blooms have no effect on the carbon cycle because CaCO3 production is carbon-neutral",
+        "Coccolithophore blooms only affect local water chemistry and have no global significance",
+        "Coccoliths dissolve immediately upon cell death and never reach the ocean floor",
+        "Coccolithophore blooms have a dual role: as photosynthetic organisms they fix CO2 (biological pump), but CaCO3 production releases CO2 (CaCO3 + CO2 + H2O \u2194 2HCO3- operates in reverse during calcification), creating a counterintuitive situation where the biological carbon pump and carbonate counter-pump partly offset each other; additionally, sinking coccolith-ballasted organic matter efficiently exports carbon to the deep ocean"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Multicellularity has evolved independently multiple times in protists. In the volvocine green algae lineage (from unicellular Chlamydomonas to colonial Volvox), which stepwise changes mark the transition to multicellularity?",
+      "options": [
+        "Multicellularity evolved in a single mutation event that simultaneously produced all features of Volvox",
+        "The transition involved incomplete cytokinesis (cytoplasmic bridges), inversion of the embryo, cellular differentiation into somatic and reproductive (gonidia) cells, an extracellular matrix (ECM) providing structural integrity, and evolved genetic programs for programmed cell death of somatic cells \u2014 representing a gradual, stepwise increase in organismal complexity through intermediate colonial forms like Gonium (4-16 cells) and Eudorina (32 cells)",
+        "Multicellularity in Volvox is not true multicellularity because all cells are identical and interchangeable",
+        "The volvocine lineage shows that multicellularity requires at least 10,000 cell types to be considered genuine"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The correct answer provides the most complete and accurate description based on current understanding of protist biology. The other options contain factual errors or incomplete reasoning as described in the question context. Each incorrect option either overgeneralizes, describes mechanisms from other organisms, contradicts known biology, or mischaracterizes the phenomenon in question. Understanding the correct mechanism requires integration of cell biology, molecular biology, ecology, and evolutionary biology concepts central to Campbell Chapter 28.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "The SAR supergroup represents one of the most morphologically diverse eukaryotic clades. Which molecular evidence initially supported the grouping of Stramenopiles, Alveolates, and Rhizaria into this supergroup?",
+      "options": [
+        "All three groups share identical chloroplast pigment compositions",
+        "All three groups have the same type of mitochondrial cristae morphology",
+        "Multi-gene phylogenomic analyses consistently recovered SAR as a well-supported clade, with shared derived molecular characters including specific insertions in key housekeeping genes",
+        "All three groups use the same genetic code with identical codon assignments"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The SAR supergroup was established primarily through molecular phylogenomic evidence. Multi-gene analyses (using dozens to hundreds of conserved nuclear protein-coding genes) consistently recovered SAR as a monophyletic group with strong statistical support. Individual gene analyses were often inconclusive due to limited phylogenetic signal, but concatenated datasets provided robust support. Some studies also identified shared derived molecular characters (rare genomic changes) supporting the clade. Option A is incorrect because the three groups have very different pigment compositions. Option B is wrong because cristae morphology varies within and between the groups. Option D is incorrect because codon usage differs among these lineages.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Dinoflagellate chromosomes are permanently condensed and lack typical eukaryotic histones. Instead, they contain dinoflagellate/viral nucleoproteins (DVNPs) recently acquired from a viral source. What challenge does this unusual chromatin organization pose for molecular biology?",
+      "options": [
+        "Dinoflagellate genomes are too small to study using standard sequencing technologies",
+        "Dinoflagellate chromosomes cannot be visualized under any type of microscopy",
+        "Dinoflagellate genomes are among the largest known eukaryotic genomes (up to 250 Gb \u2014 over 80 times the human genome), and the lack of histone-based chromatin compaction combined with massive genome size makes genome assembly, annotation, and functional genomic studies extremely challenging",
+        "Dinoflagellate DNA is made of unusual nucleotides not found in other organisms, preventing standard sequencing"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Dinoflagellate genomes present enormous challenges for molecular biology: they are among the largest known eukaryotic genomes (3-250 Gb), contain a high proportion of repetitive sequences, are permanently condensed in a liquid crystalline state without conventional histones, and contain extensive DNA methylation and modified bases (5-hydroxymethyluracil replacing up to 70% of thymine). These features make DNA extraction, library preparation, sequencing, and assembly extremely difficult. Only a handful of dinoflagellate genomes have been fully sequenced, and those are from species with relatively small genomes. Option A is opposite \u2014 the genomes are too large. Option B is incorrect because permanently condensed chromosomes are visible. Option D overstates the uniqueness of the nucleotide modifications.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Apicomplexa possess a unique form of motility called gliding motility that does not involve flagella, cilia, or pseudopodia. What molecular mechanism drives this movement?",
+      "options": [
+        "An actin-myosin motor complex (glideosome) anchored between the inner membrane complex (IMC) and plasma membrane generates force by moving actin filaments connected to transmembrane adhesins (TRAP-family proteins) that grip the substrate, propelling the cell forward without any change in cell shape",
+        "Jet propulsion through expulsion of cytoplasmic contents from the posterior end of the cell",
+        "Contraction of microtubule-based structures within the cell cortex, similar to muscle contraction",
+        "Rolling movement driven by continuous recycling of membrane proteins from the front to the back of the cell"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Apicomplexan gliding motility is powered by the glideosome, an actomyosin-based molecular motor. The system works as follows: (1) Myosin A (MyoA) is anchored to the inner membrane complex (IMC) via glideosome-associated proteins (GAPs). (2) Short actin filaments polymerized by apicomplexan-specific formins connect MyoA to transmembrane adhesins of the TRAP (thrombospondin-related anonymous protein) family. (3) TRAP proteins span the plasma membrane with their extracellular domains binding to the substrate (host cell surface during invasion). (4) MyoA moves actin filaments from the anterior to posterior of the cell, dragging the connected TRAP proteins backward along the cell surface and propelling the cell forward. The same glideosome powers host cell invasion by Plasmodium and Toxoplasma. Option B has no biological basis. Option C incorrectly invokes microtubules. Option D describes a hypothetical mechanism not observed in apicomplexans.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about protist endosymbiosis and chloroplast evolution:\nS1: Primary endosymbiosis occurred once, giving rise to the Archaeplastida (green algae/plants, red algae, glaucophytes), all of which have chloroplasts with two envelope membranes.\nS2: Secondary endosymbiosis involved a heterotrophic eukaryote engulfing a photosynthetic eukaryote; the resulting chloroplasts have 3-4 membranes.\nS3: Tertiary endosymbiosis has occurred in some dinoflagellates that replaced their original peridinin-containing chloroplast with chloroplasts from diatoms, haptophytes, or cryptophytes.\nS4: All eukaryotic chloroplasts trace their ancestry to a single cyanobacterial endosymbiotic event, though subsequent transfers between eukaryotic lineages (secondary/tertiary endosymbiosis) have spread plastids widely.",
+      "options": [
+        "TTTT",
+        "TTTF",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE: The current consensus supports a single primary endosymbiosis event where a heterotrophic eukaryote engulfed a cyanobacterium. The two resulting membranes are the inner (cyanobacterial plasma membrane) and outer (host phagosomal membrane) envelope membranes. All Archaeplastida share this characteristic. S2 is TRUE: Secondary endosymbiosis added membranes from the engulfed eukaryote's plasma membrane and the host's food vacuole membrane. Examples include euglenids (green algal endosymbiont), cryptophytes (red algal), and chlorarachniophytes (green algal). S3 is TRUE: Several dinoflagellate lineages have undergone serial endosymbiosis, replacing their ancestral peridinin-type plastid with plastids from other algal groups. For example, Karenia has haptophyte-derived chloroplasts, and Kryptoperidinium has diatom-derived chloroplasts. S4 is TRUE: Despite the diversity of plastids, phylogenetic evidence supports a single origin of primary plastids in the Archaeplastida ancestor, with subsequent lateral transfers through secondary and tertiary endosymbiosis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Trichomonas vaginalis is a parabasalid protist that causes trichomoniasis. Unlike most eukaryotes, Trichomonas lacks mitochondria but possesses hydrogenosomes. What is the function of hydrogenosomes?",
+      "options": [
+        "Hydrogenosomes perform aerobic respiration identical to mitochondria, producing ATP via oxidative phosphorylation",
+        "Hydrogenosomes are photosynthetic organelles that fix CO2 using hydrogen as a reducing agent",
+        "Hydrogenosomes generate ATP through substrate-level phosphorylation under anaerobic conditions, producing molecular hydrogen (H2), acetate, and CO2 as byproducts \u2014 they are evolutionarily derived from mitochondria but have lost the electron transport chain and citric acid cycle",
+        "Hydrogenosomes store hydrogen gas for buoyancy regulation in the aqueous vaginal environment"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Hydrogenosomes are double-membrane-bound organelles derived from the same alpha-proteobacterial ancestor as mitochondria. However, they have undergone dramatic reductive evolution: they lack a genome (in Trichomonas), electron transport chain, and citric acid cycle. Instead, they generate ATP through pyruvate:ferredoxin oxidoreductase (PFO) and hydrogenase, producing molecular hydrogen, acetate, and CO2 as byproducts. The iron-sulfur cluster assembly pathway is retained. Phylogenetic and biochemical evidence (shared membrane import machinery, double membrane, residual mitochondrial-type proteins) confirms their mitochondrial origin. The drug metronidazole is activated by PFO in hydrogenosomes, explaining its selective toxicity to Trichomonas. Option A is incorrect because hydrogenosomes lack the ETC. Option B describes a non-existent function. Option D is nonsensical.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures photosynthetic pigment absorption spectra from three protist samples:\n\nSample 1: Absorption peaks at 430 nm and 662 nm (chlorophyll a) plus 453 nm and 642 nm (chlorophyll b)\nSample 2: Absorption peaks at 430 nm and 662 nm (chl a) plus 460 nm and 630 nm (chlorophyll c) plus a strong peak at 540 nm (fucoxanthin)\nSample 3: Absorption peaks at 430 nm and 662 nm (chl a) plus broad absorption at 495-570 nm (peridinin)\n\nWhich protist groups do these samples most likely represent?",
+      "options": [
+        "Sample 1: dinoflagellate; Sample 2: green alga; Sample 3: diatom",
+        "All three samples are from the same protist group because they all contain chlorophyll a",
+        "Sample 1: green alga (chlorophyll a + b); Sample 2: diatom or brown alga (chlorophyll a + c plus fucoxanthin); Sample 3: dinoflagellate (chlorophyll a plus peridinin carotenoid accessory pigment)",
+        "Sample 1: red alga; Sample 2: cyanobacterium; Sample 3: euglenid"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Photosynthetic pigment composition is a key taxonomic character in photosynthetic protists. Sample 1 has chlorophyll a and b \u2014 the signature pigment combination of green algae (Chlorophyta) and euglenids, inherited from green algal endosymbionts. Sample 2 has chlorophyll a, chlorophyll c, and the carotenoid fucoxanthin \u2014 diagnostic for stramenopiles (diatoms, brown algae, chrysophytes), where fucoxanthin gives them their characteristic golden-brown color and enables light harvesting in the blue-green wavelengths that penetrate deepest in water. Sample 3 has chlorophyll a and the carotenoid peridinin \u2014 characteristic of most photosynthetic dinoflagellates, where peridinin is the primary light-harvesting carotenoid. Option A reverses the identifications. Option B ignores the diagnostic accessory pigments. Option D incorrectly matches pigments to groups (red algae have phycobilins, not chl b).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 'Cabozoa' hypothesis proposes that euglenids and chlorarachniophytes independently acquired green algal chloroplasts through two separate secondary endosymbiosis events, despite both being in different supergroups (Excavata and Rhizaria, respectively). What evidence supports independent acquisition rather than a single origin?",
+      "options": [
+        "Both organisms have chloroplasts with the same number of membranes, proving a common origin",
+        "Euglenids and chlorarachniophytes are in completely different eukaryotic supergroups with no close phylogenetic relationship; their chloroplasts were acquired from different green algal donors (euglenid plastids from a prasinophyte and chlorarachniophyte plastids from an ulvophyte-like alga); and chlorarachniophytes retain a nucleomorph while euglenids do not, indicating different stages of endosymbiotic integration",
+        "The two groups have identical chloroplast genomes, confirming a shared origin",
+        "Both groups acquired their chloroplasts from red algae, not green algae"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Multiple lines of evidence support independent secondary endosymbiosis in euglenids and chlorarachniophytes: (1) Phylogenetic distance: euglenids belong to Excavata/Discoba, while chlorarachniophytes are in SAR/Rhizaria \u2014 these are among the most distantly related eukaryotic supergroups. (2) Different donors: phylogenetic analyses of plastid genomes place euglenid plastids closest to prasinophyte green algae, while chlorarachniophyte plastids are more closely related to ulvophyte or trebouxiophyte green algae. (3) Retention state: chlorarachniophytes retain a nucleomorph (vestigial algal nucleus) between membranes 2 and 3, while euglenids have completely lost any remnant of the endosymbiont's nucleus. (4) Different number of membranes: euglenid plastids have 3 membranes, while chlorarachniophyte plastids have 4. Option A contradicts the membrane difference. Option C is factually incorrect. Option D is wrong about the donor identity.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Leishmania parasites are transmitted by sandfly bites and cause a spectrum of diseases from cutaneous to visceral leishmaniasis. Once inside the human host, Leishmania transforms from promastigotes (flagellated, in the sandfly) to amastigotes (non-flagellated, in human macrophages). How does Leishmania survive inside the normally lethal environment of the macrophage phagolysosome?",
+      "options": [
+        "Leishmania escapes the phagolysosome and replicates freely in the macrophage cytoplasm, similar to Rickettsia",
+        "Leishmania kills the macrophage immediately upon entry and replicates extracellularly",
+        "Leishmania secretes lipophosphoglycan (LPG) and other surface molecules that delay phagosome-lysosome fusion; the amastigote form has a modified surface glycocalyx and proton pumps that allow it to thrive in the acidic pH (4.5-5.5) of the mature phagolysosome; it also inhibits macrophage signaling pathways to suppress the oxidative burst and antigen presentation",
+        "Leishmania neutralizes the phagolysosome to a pH of 7.0, converting it into a nutrient-rich replication compartment identical to the extracellular environment"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Leishmania has evolved remarkable adaptations for survival within the hostile macrophage phagolysosome. (1) Initial delay of fusion: promastigotes secrete lipophosphoglycan (LPG) that transiently delays phagosome-lysosome fusion, providing time for the parasite to differentiate into the resistant amastigote form. (2) Acid tolerance: amastigotes have evolved to thrive at pH 4.5-5.5, with acid-adapted enzymes and proton extrusion mechanisms. (3) Immune evasion: Leishmania secretes metalloproteases (GP63/leishmanolysin) that degrade antimicrobial peptides, inhibits the macrophage oxidative burst by scavenging reactive oxygen species, suppresses nitric oxide production, and inhibits antigen presentation through MHC-II. (4) Nutrient acquisition: amastigotes express specific transporters for amino acids, sugars, and purines available in the phagolysosome. Option A incorrectly describes the intracellular niche. Option B mischaracterizes the interaction. Option D overstates pH modification.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Eukaryotic microalgae are being explored as biofuel feedstocks because some species accumulate large amounts of lipids. Which protist group is most promising for biodiesel production, and why?",
+      "options": [
+        "Ciliates, because their large cell size allows easy harvesting and they naturally produce abundant lipids",
+        "Apicomplexans, because their apicoplast pathways can be engineered to overproduce fatty acids",
+        "Certain diatoms and green algae (e.g., Botryococcus braunii, Nannochloropsis) are the most promising because they can accumulate 30-60% of their dry weight as lipids (primarily triacylglycerols) under nitrogen-limited conditions, combine high growth rates with lipid production, and can be cultivated in photobioreactors or open ponds using sunlight and CO2",
+        "Dinoflagellates, because their bioluminescence can be harnessed as a light source for other photosynthetic organisms"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Microalgae-based biofuel research focuses primarily on diatoms and green microalgae because: (1) High lipid content: species like Botryococcus braunii (up to 75% dry weight as hydrocarbons), Nannochloropsis (30-60% lipids), and Chlorella (up to 50% lipids under stress) produce lipids suitable for transesterification to biodiesel. (2) Rapid growth: many species double in 12-24 hours. (3) Nutrient stress response: nitrogen or phosphorus limitation triggers lipid accumulation as carbon storage, converting photosynthetically fixed carbon into energy-dense lipids. (4) CO2 utilization: photosynthetic growth consumes CO2, potentially coupling biofuel production with carbon capture. (5) Non-arable land: can be grown in desert regions using seawater. Option A is incorrect because ciliates are heterotrophic. Option B describes parasites unsuitable for large-scale cultivation. Option D proposes a nonsensical application.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher observes a novel protist under the microscope that has two unequal flagella, a red eyespot, and is photosynthetic. She suspects it may be an undescribed euglenid species. Which combination of analyses would confirm or refute this classification?",
+      "options": [
+        "Observe the organism's color under the microscope and compare it to color photographs of known euglenids",
+        "Measure the organism's swimming speed and compare it to published values for euglenids",
+        "Perform ultrastructural analysis with TEM to look for euglenid-specific features: a pellicle composed of interlocking proteinaceous strips beneath the plasma membrane, a tubular feeding apparatus (if heterotrophic capability exists), a paramylon (beta-1,3-glucan) storage product unique to euglenids, a paraflagellar rod, and chloroplasts with three envelope membranes; complement with 18S rRNA sequencing to place the organism phylogenetically within Euglenozoa",
+        "Simply culture the organism on glucose medium to determine if it is heterotrophic"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Confirming classification as a euglenid requires identifying multiple lineage-specific characters. (1) Pellicle: euglenids have a unique cell surface composed of interlocking proteinaceous strips that allow metaboly (euglenoid movement) \u2014 this is not found in any other protist group. (2) Paramylon: the beta-1,3-glucan storage product paramylon is unique to euglenids; other protists store starch, chrysolaminarin, or other polysaccharides. (3) Chloroplast structure: euglenid chloroplasts have three envelope membranes (from secondary endosymbiosis with a green alga), contain chlorophyll a and b, and are derived from prasinophyte green algae. (4) Paraflagellar rod: a crystalline structure running alongside the flagellar axoneme, characteristic of Euglenozoa. (5) Molecular phylogenetics: 18S rRNA or multi-gene analysis provides definitive phylogenetic placement. Option A is insufficient for classification. Option B is irrelevant. Option D tests only one aspect of metabolism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Water molds (oomycetes) caused devastating epidemics including the Irish Potato Famine (Phytophthora infestans) and sudden oak death (P. ramorum). Modern oomycete research has revealed how these pathogens overcome plant immunity. What molecular strategy do Phytophthora species use?",
+      "options": [
+        "Phytophthora has no mechanisms to overcome plant immunity and relies entirely on physical penetration",
+        "Phytophthora injects RXLR effector proteins into plant cells through specialized infection structures (haustoria); these effectors suppress plant immunity by targeting components of the plant defense signaling network, including suppression of PAMP-triggered immunity (PTI) and effector-triggered immunity (ETI), manipulation of host vesicle trafficking, and inhibition of programmed cell death",
+        "Phytophthora kills plant cells exclusively through acid secretion that dissolves cell walls",
+        "Phytophthora avoids detection by mimicking plant cell surface molecules and never triggers any immune response"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Phytophthora species secrete hundreds of RXLR effector proteins (named for their conserved Arg-x-Leu-Arg motif required for host cell entry) that are translocated into plant cells through the haustorium-plant cell membrane interface. These effectors have diverse functions: some suppress pattern-triggered immunity (PTI) by targeting receptor-like kinases or MAPK cascades; others suppress effector-triggered immunity (ETI) by inhibiting NB-LRR immune receptors; some manipulate host vesicle trafficking to redirect nutrients; and others suppress programmed cell death to maintain living host tissue for biotrophic growth. This molecular arms race between pathogen effectors and plant resistance (R) genes drives the evolution of both. Option A ignores extensive molecular evidence. Option C oversimplifies the infection mechanism. Option D is incorrect because plants do detect and respond to Phytophthora, but effectors partially suppress these responses.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the ecological roles of protists:\nS1: Protist phytoplankton (diatoms, dinoflagellates, coccolithophores) are responsible for approximately 50% of global net primary production and produce about half of the atmospheric oxygen.\nS2: Heterotrophic protists (ciliates, flagellates, amoebae) form the 'microbial loop' in aquatic ecosystems, channeling bacterial biomass back into the food web by grazing on bacteria and being consumed by larger zooplankton.\nS3: Protist parasites cause some of the world's most devastating diseases including malaria (Plasmodium, ~600,000 deaths/year), African sleeping sickness (Trypanosoma), and amoebic dysentery (Entamoeba).\nS4: Protists have no role in nutrient cycling and only affect ecosystems as primary producers.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFF",
+        "TFTF"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE: Marine phytoplankton, dominated by diatoms, dinoflagellates, and coccolithophores, are responsible for approximately 50% of global net primary production (~50 Gt C/year), comparable to all terrestrial plants combined. S2 is TRUE: The microbial loop, described by Azam et al. (1983), is a fundamental concept in aquatic ecology. Heterotrophic nanoflagellates are the primary consumers of bacteria, and ciliates consume both bacteria and flagellates, converting dissolved organic matter and bacterial biomass into particulate organic matter accessible to larger organisms. S3 is TRUE: Protist parasites cause enormous human suffering. Plasmodium falciparum causes the most severe malaria, Trypanosoma brucei causes sleeping sickness, T. cruzi causes Chagas disease, Leishmania causes leishmaniasis, and Entamoeba histolytica causes amoebic dysentery. S4 is FALSE: Protists participate in nutrient cycling as decomposers, grazers, and symbiotic partners (e.g., zooxanthellae in coral, rumen ciliates in herbivores).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Red algae (Rhodophyta) lack flagella in all life cycle stages, including gametes. How is this absence significant for understanding their reproduction and dispersal?",
+      "options": [
+        "Red algae reproduce exclusively asexually and have no need for motile cells",
+        "Red algae produce non-motile male gametes (spermatia) that must be carried to the female reproductive structure (carpogonium) by water currents, making fertilization dependent on hydrodynamic conditions; this may partially explain why red algal diversity is highest in calm, sheltered marine habitats where current patterns favor spermatial transport",
+        "Red algae use airborne spore dispersal instead of waterborne dispersal, making flagella unnecessary",
+        "The absence of flagella is a recent evolutionary loss that has had no significant biological consequences"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The complete absence of flagella in red algae is a defining character of the phylum and has profound consequences for their reproductive biology and ecology. Red algae have a complex triphasic life cycle (with carposporophyte, tetrasporophyte, and gametophyte stages). Male gametes (spermatia) are small, non-motile cells released into the water column that must passively encounter the trichogyne \u2014 a long, receptive extension of the female carpogonium. This passive fertilization system is inherently less efficient than flagellated gamete delivery, and its success depends on water currents, cell density, and the length of the trichogyne. This may explain why many red algae have evolved elaborate post-fertilization mechanisms (development of carposporophyte on the female thallus) to amplify successful fertilization events. Option A is incorrect because red algae have complex sexual life cycles. Option C is wrong \u2014 red algae are aquatic. Option D underestimates the significance.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher cultures the diatom Thalassiosira pseudonana and tracks cell size over 50 generations of asexual reproduction. The data show:\n- Generation 0: mean cell diameter = 25 um\n- Generation 10: mean = 22 um\n- Generation 20: mean = 19 um\n- Generation 30: mean = 16 um\n- Generation 40: mean = 13 um\n- Generation 50: mean = 10 um\n\nThe researcher also observes that at generation 45, some cells produce auxospores that restore the maximum size. What biological process explains the progressive size decrease, and why is auxospore formation critical?",
+      "options": [
+        "Nutrient depletion in the culture medium causes progressive cell shrinkage; auxospores represent nutrient storage vesicles",
+        "The progressive size decrease is caused by the rigid silica frustule: during binary fission, each daughter cell inherits one valve (theca) and synthesizes a new, smaller valve that fits inside the inherited one, so the 'hypotheca-inheriting' daughter is always smaller; auxospore formation through sexual reproduction restores maximum cell size by allowing cell expansion before new full-sized frustules are deposited, preventing the population from shrinking below the minimum viable cell size",
+        "Size decrease results from age-related cellular degeneration; auxospores are rejuvenation capsules that reverse aging",
+        "The culture conditions inhibit cell growth, and auxospores represent escape structures that allow the organism to leave unfavorable conditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The progressive size decrease in diatoms is a unique consequence of their rigid, glass-like silica frustules. Each frustule consists of two overlapping valves (the larger epitheca and smaller hypotheca). During asexual division, each daughter cell inherits one parental valve and synthesizes a new valve (always a hypotheca) that fits inside the inherited valve. The daughter inheriting the parental hypotheca produces a new, even smaller hypotheca, resulting in progressive miniaturization. Without sexual reproduction, the population would eventually shrink below the minimum viable cell size. Auxospore formation (typically triggered when cells reach ~30-40% of maximum size) involves sexual reproduction: gametes fuse to form a zygote (auxospore) that expands to the maximum species-specific size before depositing new full-sized frustules. This restores the size range and prevents evolutionary 'dead-end' miniaturization. Option A misidentifies the cause. Option C invokes aging rather than the mechanical constraint. Option D mischaracterizes auxospores.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Amoeba proteus moves by extending pseudopodia through actin polymerization. At the molecular level, what drives the extension of pseudopodia at the leading edge?",
+      "options": [
+        "Microtubule polymerization pushes the membrane forward at the leading edge",
+        "Osmotic pressure from water influx through aquaporins at the leading edge drives membrane protrusion",
+        "Flagella-like internal structures push the cytoplasm toward the leading edge",
+        "Localized actin polymerization at the leading edge (mediated by the Arp2/3 complex and formins) creates a dendritic network of branching actin filaments that push against the plasma membrane through a Brownian ratchet mechanism; simultaneously, myosin motor proteins generate contractile forces in the cell cortex and rear to drive sol-gel transitions and cytoplasmic streaming"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Amoeboid movement involves coordinated cytoskeletal dynamics: (1) At the leading edge, signaling molecules (Rac, Cdc42 GTPases) activate the Arp2/3 complex, which nucleates branching actin filaments off existing filaments, creating a dense dendritic network. The growing ends push the membrane forward through a Brownian ratchet mechanism \u2014 thermal fluctuations in the membrane create gaps that new actin monomers fill, preventing retraction. Formins also polymerize unbranched actin at the leading edge. (2) In the cortex, actin filaments and myosin II form a contractile network that squeezes the cell body, generating hydrostatic pressure that drives cytoplasmic flow toward the leading edge. (3) At the rear, depolymerization of actin and actomyosin contraction retract the trailing edge. (4) New integrin-mediated adhesions form at the front while old ones detach at the rear. Option A is incorrect because actin, not microtubules, drives pseudopod extension. Option B oversimplifies. Option C is incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "The protist Paulinella chromatophora possesses a photosynthetic organelle (chromatophore) that originated from a cyanobacterial endosymbiont independent of the primary endosymbiosis that gave rise to all other chloroplasts. What makes Paulinella's chromatophore significant for understanding organellogenesis?",
+      "options": [
+        "Paulinella's chromatophore is identical to mitochondria in all respects",
+        "Paulinella demonstrates that endosymbiotic organelle formation is impossible because its chromatophore is non-functional",
+        "The Paulinella chromatophore is a relatively recent endosymbiosis (~60-100 million years ago, vs. >1 billion years for chloroplasts), providing a 'snapshot' of organellogenesis in progress: the chromatophore has retained more cyanobacterial genes than chloroplasts (~870 vs. ~100-200 in typical chloroplasts) but has already lost many genes to the host nucleus, allowing researchers to study the ongoing process of endosymbiotic gene transfer and protein retargeting",
+        "Paulinella is the only eukaryote with a photosynthetic organelle, all other photosynthetic eukaryotes being prokaryotes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Paulinella chromatophora offers a unique window into organellogenesis. Its chromatophore originated from a cyanobacterium (related to Prochlorococcus/Synechococcus) ~60-100 MYA, independently of the >1 BYA event that gave rise to all Archaeplastida chloroplasts. The chromatophore genome retains ~870 genes (compared to ~100-200 in typical chloroplasts and ~3000-4000 in free-living cyanobacteria), representing an intermediate state of genome reduction. Several nuclear genes of cyanobacterial origin have been identified in Paulinella, with their products targeted back to the chromatophore using novel targeting mechanisms \u2014 allowing direct observation of endosymbiotic gene transfer (EGT) in a 'young' endosymbiosis. This provides empirical evidence for the theoretical process by which mitochondria and chloroplasts evolved. Option A is factually incorrect. Option B contradicts the functional chromatophore. Option D is nonsensical.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A marine ecologist wants to assess the impact of ocean acidification on coccolithophore calcification rates. Which experimental design would most rigorously test this hypothesis?",
+      "options": [
+        "Compare coccolithophore abundance in naturally acidic vs. alkaline regions of the ocean without any experimental manipulation",
+        "Culture coccolithophores in a single flask and periodically add acid to lower the pH",
+        "Conduct replicated mesocosm experiments with coccolithophore cultures at multiple CO2 concentrations (representing pre-industrial, current, and projected future levels); measure calcification rates using the alkalinity anomaly technique and coccolith morphometry; control for temperature, light, and nutrient availability; measure both physiological responses (calcification, photosynthesis, growth) and morphological changes (coccolith size, malformation frequency) over multiple generations to detect both acute and acclimation responses",
+        "Survey the fossil record of coccolithophore coccolith thickness and assume any temporal changes correlate with atmospheric CO2"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Rigorous ocean acidification experiments require: (1) Multiple CO2 levels mimicking past, present, and future conditions (e.g., 280, 400, 600, 1000 ppm) achieved through controlled CO2 bubbling with continuous pH monitoring. (2) Replication to ensure statistical power. (3) Quantitative calcification measurement using the alkalinity anomaly technique (measuring the decrease in total alkalinity as CaCO3 is produced). (4) Controlled confounding variables (temperature, light, nutrients) to isolate the CO2 effect. (5) Coccolith morphometry to detect structural changes. (6) Multi-generational experiments to separate acute stress responses from longer-term acclimation/adaptation. Option A confounds many variables that differ between ocean regions. Option B lacks replication, controls, and multiple treatment levels. Option D provides correlational but not causal evidence.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cryptophytes are a group of unicellular algae that provide the strongest direct evidence for secondary endosymbiosis. What feature of cryptophyte cells serves as a 'smoking gun' for this evolutionary event?",
+      "options": [
+        "Cryptophytes have two flagella with mastigonemes, shared with stramenopiles",
+        "Cryptophytes contain phycoerythrin pigments derived from a red algal endosymbiont",
+        "Cryptophyte chloroplasts are surrounded by four membranes and contain a nucleomorph \u2014 a miniaturized, functional remnant of the red algal endosymbiont's nucleus \u2014 located in the periplastidal compartment between membranes 2 and 3, complete with its own genome (~550 kb) encoding ~500 genes including some essential for chloroplast function",
+        "Cryptophytes are the only protists that lack mitochondria"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The nucleomorph in cryptophytes (and independently in chlorarachniophytes) is the most compelling direct evidence for secondary endosymbiosis. It represents the vestigial nucleus of the engulfed photosynthetic eukaryote (a red alga in cryptophytes), reduced over evolutionary time but still functional. The nucleomorph genome (~550 kb in Guillardia theta) is organized on three small chromosomes and encodes ~500 genes, including some essential for chloroplast protein import and function. The four chloroplast membranes can be interpreted as: membrane 1 = cyanobacterial inner membrane, membrane 2 = cyanobacterial outer membrane, membrane 3 = red algal plasma membrane, membrane 4 = host phagosomal membrane. The periplastidal compartment between membranes 2 and 3 represents the remnant cytoplasm of the red alga, containing the nucleomorph and ribosomes. Option A describes a different feature. Option B supports red algal ancestry but is not unique evidence for secondary endosymbiosis. Option D is factually incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Paramecium has two contractile vacuoles that rhythmically fill and discharge water. In a hypertonic solution, what happens to contractile vacuole activity?",
+      "options": [
+        "Activity increases dramatically to compensate for water loss",
+        "The contractile vacuoles cease functioning as there is no net water influx by osmosis, so the cell does not need to expel excess water",
+        "The contractile vacuoles rupture from osmotic stress",
+        "Activity remains unchanged because contractile vacuoles operate independently of osmotic conditions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Contractile vacuoles function to expel excess water entering the cell by osmosis. In freshwater (hypotonic) environments, water constantly diffuses into the cell, and the contractile vacuole pumps it out at high rates. In hypertonic solutions, the osmotic gradient is reversed \u2014 water tends to leave the cell \u2014 so the contractile vacuole has little water to expel and its activity decreases dramatically or ceases. This demonstrates that contractile vacuole function is directly linked to osmoregulation. Option A predicts the opposite response. Option C overstates the effect. Option D ignores osmotic regulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Dinoflagellate bioluminescence is triggered mechanically \u2014 wave action or predator contact causes flashes of blue light. What is the biochemical mechanism and proposed ecological function?",
+      "options": [
+        "The reaction involves luciferin oxidation catalyzed by luciferase in specialized organelles called scintillons, triggered by mechanical stimulation causing proton flux into the scintillons from acidic vacuoles; the flash may startle predators (burglar alarm hypothesis) or attract secondary predators that consume the dinoflagellate's predators",
+        "Bioluminescence is produced by fluorescent proteins that absorb UV light and re-emit it as visible blue light",
+        "The light is produced by chemiluminescent reactions in the cytoplasm that occur randomly without any trigger",
+        "Bioluminescence is produced by symbiotic bacteria living inside the dinoflagellate cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Dinoflagellate bioluminescence occurs in membrane-bound organelles called scintillons that contain luciferin, luciferase, and luciferin-binding protein (LBP). At the resting pH of the scintillon (~8), LBP sequesters luciferin from luciferase. Mechanical stimulation triggers a signal cascade that causes proton flux from the acidic vacuole into the scintillon, lowering pH to ~6. At this pH, LBP releases luciferin, and luciferase catalyzes the oxidation reaction producing blue light (~474 nm). The ecological function is debated but the 'burglar alarm' hypothesis is well-supported: the flash startles small predators (copepods) and attracts larger visual predators (fish) that eat the copepods. Option B describes fluorescence, not bioluminescence. Option C is wrong about the mechanism. Option D describes bacterial bioluminescence found in some fish but not dinoflagellates.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Excavata is a eukaryotic supergroup that includes some of the most unusual protists. What morphological feature originally united excavates and gives the group its name?",
+      "options": [
+        "A deep ventral feeding groove ('excavated' groove) on the cell surface used for phagocytosis, supported by a distinctive cytoskeletal architecture including a ventral flagellum that creates feeding currents",
+        "An excavated (concave) cell wall made of silica that protects the organism",
+        "Large intracellular vacuoles that create an excavated appearance under light microscopy",
+        "An excavated nuclear envelope with deep invaginations connecting to the endoplasmic reticulum"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The name Excavata refers to a deep ventral feeding groove \u2014 an 'excavated' depression on the cell surface \u2014 found in many members of the group. This groove is supported by a complex cytoskeletal apparatus and typically contains a recurrent (ventral) flagellum whose beating creates water currents that direct food particles into the groove for phagocytosis. The excavate cytoskeletal architecture includes specific arrangements of microtubular roots associated with the flagellar apparatus. However, molecular phylogenetics has shown that some members of Excavata (e.g., Euglenozoa) lack the groove, suggesting it may represent either the ancestral condition with subsequent losses or a convergently evolved feature. Option B describes a diatom-like structure not found in excavates. Option C and D describe non-existent features.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cellular slime molds like Dictyostelium and plasmodial slime molds like Physarum represent different approaches to multicellularity. What is the fundamental difference between these two types of slime molds?",
+      "options": [
+        "Cellular slime molds are photosynthetic while plasmodial slime molds are heterotrophic",
+        "Both types are identical in their life cycles and differ only in geographic distribution",
+        "Cellular slime molds aggregate individual amoebae into a multicellular structure where cells retain their plasma membranes and individual identities, while plasmodial slime molds form a single giant cell (plasmodium) with multiple nuclei sharing a common cytoplasm \u2014 representing aggregative vs. syncytial approaches to increased body size",
+        "Plasmodial slime molds are bacteria while cellular slime molds are true eukaryotes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This distinction is fundamental to understanding different evolutionary routes to multicellularity. In Dictyostelium (cellular slime mold), individual amoebae aggregate when starved, forming a multicellular slug and eventually a fruiting body. Critically, each cell retains its own plasma membrane throughout \u2014 this is aggregative multicellularity where previously independent cells cooperate. In Physarum (plasmodial slime mold), the feeding stage is a single-celled plasmodium that can be meters in diameter but is one continuous cell with thousands of nuclei sharing a common cytoplasm \u2014 a coenocyte or syncytium formed by nuclear division without cytokinesis. Option A is wrong because both are heterotrophic. Option B ignores fundamental biological differences. Option D is incorrect because both are eukaryotic Amoebozoa.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "The phenomenon of kleptoplasty \u2014 the retention of functional chloroplasts from ingested prey \u2014 has been documented in several heterotrophic protists and even some sea slugs. In the dinoflagellate Dinophysis, kleptoplasty involves a remarkable three-step process. What is this process?",
+      "options": [
+        "Dinophysis directly engulfs free-living diatoms and retains their chloroplasts",
+        "Dinophysis ingests bacteria that contain vestigial chloroplasts from cyanobacterial ancestors",
+        "Dinophysis cannot perform kleptoplasty and is exclusively heterotrophic",
+        "Dinophysis feeds on the ciliate Mesodinium rubrum, which itself has acquired chloroplasts from cryptophyte algae \u2014 making Dinophysis a tertiary consumer of chloroplasts that have passed through two sequential hosts before reaching their final destination"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Dinophysis exhibits one of the most complex known examples of kleptoplasty. The chain of events is: (1) The cryptophyte alga Teleaulax amphioxeia has chloroplasts from secondary endosymbiosis with a red alga. (2) The ciliate Mesodinium rubrum ingests Teleaulax and retains its chloroplasts (kleptoplasty step 1). (3) Dinophysis feeds on Mesodinium and acquires the cryptophyte-derived chloroplasts (kleptoplasty step 2). Thus, the chloroplasts in Dinophysis have been passed through three organisms. Dinophysis cannot photosynthesize without regularly feeding on Mesodinium to replenish its stolen chloroplasts, as they gradually degrade. This finding complicated shellfish monitoring because Dinophysis was previously thought to be exclusively heterotrophic. Option A describes direct acquisition, not the actual three-step process. Option B and C are incorrect.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Plasmodium falciparum exports hundreds of proteins into the infected red blood cell cytoplasm and onto the RBC surface. The protein PfEMP1 (P. falciparum erythrocyte membrane protein 1) is displayed on knob-like protrusions on the infected RBC surface. What is the significance of PfEMP1 for malaria pathogenesis?",
+      "options": [
+        "PfEMP1 mediates cytoadherence of infected RBCs to endothelial receptors (CD36, ICAM-1, chondroitin sulfate A) in capillaries, causing sequestration of mature-stage infected RBCs in deep vascular beds, particularly the brain (cerebral malaria), placenta (pregnancy-associated malaria), and other organs \u2014 preventing splenic clearance while causing microvascular obstruction and inflammation",
+        "PfEMP1 functions only as a nutrient transporter that imports glucose from the host plasma into the parasitized RBC",
+        "PfEMP1 is a photoreceptor protein that allows the parasite to detect light and regulate its circadian cycle within the host",
+        "PfEMP1 protects the infected RBC from osmotic lysis by strengthening the RBC membrane"
+      ],
+      "correctAnswer": "A",
+      "explanation": "PfEMP1 is the key virulence factor in P. falciparum malaria. It is encoded by the var gene family (~60 genes per genome), with only one var gene expressed at a time (mutually exclusive expression) and switching occurring through epigenetic mechanisms (histone modifications). PfEMP1 is exported to the RBC surface and displayed on knob-like structures, where it binds endothelial receptors in capillaries. This cytoadherence causes sequestration of infected RBCs in deep vascular beds, which: (1) prevents passage through the spleen where infected RBCs would be destroyed; (2) causes microvascular obstruction contributing to organ damage; (3) in the brain, leads to cerebral malaria; (4) in the placenta, causes pregnancy-associated malaria through binding to chondroitin sulfate A. Antigenic variation of PfEMP1 via var gene switching allows immune evasion. Option B, C, D describe functions not associated with PfEMP1.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Some dinoflagellates form symbiotic relationships as zooxanthellae in coral reef organisms. When sea surface temperatures rise above normal, corals undergo bleaching. What physiological process underlies coral bleaching at the cellular level?",
+      "options": [
+        "Elevated temperature causes the coral's own pigment cells to die, resulting in loss of color",
+        "Heat stress causes excessive production of reactive oxygen species (ROS) within the zooxanthellae's chloroplasts due to photoinhibition, and these ROS leak into the coral host tissue, triggering the expulsion or degradation of the zooxanthellae \u2014 leading to loss of the brown/golden pigmentation and revealing the white calcium carbonate skeleton beneath",
+        "The coral actively digests its zooxanthellae as an emergency food source during heat stress",
+        "Elevated temperature causes the zooxanthellae to swim away from the coral using their flagella"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Coral bleaching is fundamentally a breakdown of the coral-zooxanthellae mutualism caused by thermal stress. Under elevated temperatures, the photosynthetic apparatus of Symbiodiniaceae (zooxanthellae) becomes damaged \u2014 specifically, the D1 protein of PSII is inactivated faster than it can be repaired (photoinhibition). This leads to excessive production of reactive oxygen species (superoxide, hydrogen peroxide, singlet oxygen) that overwhelm antioxidant defenses. ROS leak from the zooxanthellae into coral tissue, triggering cellular stress responses including apoptosis, autophagy, and exocytosis of the symbionts. The loss of brown-pigmented zooxanthellae reveals the white CaCO3 skeleton. Without their symbiotic algae, corals lose up to 90% of their energy supply and may die if bleaching persists. Option A incorrectly attributes color to coral pigments. Option C mischaracterizes the process. Option D is incorrect because zooxanthellae in hospite are non-motile.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the silica uptake rates of three diatom species under varying dissolved silicic acid concentrations:\n\nSpecies A: Vmax = 2.5 fmol Si/cell/hr, Ks = 0.5 uM\nSpecies B: Vmax = 8.0 fmol Si/cell/hr, Ks = 3.0 uM\nSpecies C: Vmax = 1.0 fmol Si/cell/hr, Ks = 0.2 uM\n\nIn an oligotrophic ocean region where dissolved silicic acid concentration is 0.3 uM, which species would be the most competitive and why?",
+      "options": [
+        "Species B, because it has the highest maximum uptake rate (Vmax)",
+        "Species A, because it has an intermediate Ks and Vmax",
+        "Species C, because its low Ks (0.2 uM) means it achieves near-saturation uptake rates at low silicic acid concentrations; at 0.3 uM, Species C would be operating at V = 1.0 * 0.3/(0.2+0.3) = 0.6 fmol/cell/hr, which represents 60% of its Vmax, whereas Species A and B would be at only 37.5% and 7.3% of their respective Vmax values",
+        "All three species would be equally competitive because they all require silica"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In nutrient-limited environments, the competitive advantage goes to species with the lowest half-saturation constant (Ks) for the limiting nutrient, not to species with the highest maximum uptake rate. Using Michaelis-Menten kinetics (V = Vmax * [S]/(Ks + [S])): Species A at 0.3 uM: V = 2.5 * 0.3/(0.5+0.3) = 0.94 fmol/hr (37.5% Vmax). Species B at 0.3 uM: V = 8.0 * 0.3/(3.0+0.3) = 0.73 fmol/hr (9.1% Vmax). Species C at 0.3 uM: V = 1.0 * 0.3/(0.2+0.3) = 0.6 fmol/hr (60% Vmax). While Species A actually has the highest absolute uptake rate at 0.3 uM, Species C is operating closest to its maximum capacity, leaving more resources available for growth relative to its needs. In reality, the competitive outcome depends on the balance between uptake rate and cellular Si quota (demand). Species with low Ks values are typically selected in oligotrophic environments. Option A ignores the concentration-dependence. Option B does not account for Michaelis-Menten kinetics.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "The predatory protist Oxyrrhis marina is a heterotrophic dinoflagellate that feeds on microalgae and bacteria. It has become a model organism for studying predator-prey dynamics in marine microbial food webs. What feeding mechanism does Oxyrrhis employ?",
+      "options": [
+        "Filter feeding using cilia to create water currents that trap prey particles",
+        "Absorptive nutrition by secreting extracellular enzymes and absorbing dissolved nutrients",
+        "Phagotrophy through direct engulfment of prey cells using a peduncle (feeding tube) or by surrounding prey with pseudopod-like cytoplasmic extensions, followed by intracellular digestion in food vacuoles",
+        "Pinocytosis of dissolved organic molecules without ingesting particulate prey"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Oxyrrhis marina is a raptorial phagotroph that captures and engulfs prey cells. It uses a combination of mechanisms: (1) Detection: chemosensory detection of prey allows directed swimming. (2) Capture: upon contact, the cell can deploy a feeding veil (pseudopod-like extension) that surrounds the prey or use a peduncle-like structure. (3) Engulfment: prey is internalized into a food vacuole. (4) Digestion: intracellular digestion occurs within the food vacuole, with nutrients absorbed and waste expelled by exocytosis. Oxyrrhis can consume prey ranging from bacteria (1 um) to algal cells larger than itself. It is ecologically important as it connects primary production (microalgae) to higher trophic levels in marine food webs. Option A describes a ciliate feeding strategy. Option B describes osmotrophic nutrition. Option D describes fluid-phase uptake, not particulate feeding.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Oomycetes were long classified as fungi based on morphological similarities (filamentous growth, absorptive nutrition, production of spores). Molecular phylogenetics revealed they are stramenopiles. Besides molecular data, which key biological differences separate oomycetes from true fungi?",
+      "options": [
+        "Oomycetes are photosynthetic while fungi are heterotrophic",
+        "Oomycetes are unicellular while fungi are always multicellular",
+        "Oomycetes are exclusively aquatic while fungi are exclusively terrestrial",
+        "Oomycetes have cellulose cell walls, diploid vegetative hyphae, and biflagellate zoospores, whereas true fungi have chitin cell walls, typically haploid or dikaryotic vegetative hyphae, and never produce flagellated cells"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Multiple biological features distinguish oomycetes from true fungi despite their convergent filamentous morphology. (1) Cell wall composition: oomycetes have walls primarily of cellulose and beta-glucans, while fungi have chitin and beta-glucans. (2) Ploidy: oomycete vegetative hyphae are diploid (with meiosis occurring in gametangia), while fungal vegetative hyphae are typically haploid or dikaryotic. (3) Flagellated cells: oomycetes produce biflagellate zoospores (with heterokont flagellation \u2014 one tinsel, one whiplash), while fungi in the Dikarya (Ascomycota and Basidiomycota) never produce flagellated cells. (4) Mitochondrial cristae: oomycetes have tubular cristae, while fungi have flattened cristae. (5) Sterol synthesis: oomycetes cannot synthesize sterols de novo and require external sources, while most fungi synthesize ergosterol. Option A is wrong because most oomycetes are not photosynthetic. Option B is incorrect. Option C is overstated.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Protists"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher discovers a new unicellular eukaryote that lacks identifiable mitochondria under standard electron microscopy. To determine whether this organism is truly amitochondriate or possesses highly reduced mitochondria-related organelles (MROs), what investigations should be conducted?",
+      "options": [
+        "Conclude that the organism is a primitive eukaryote that diverged before mitochondrial endosymbiosis based on the absence of visible mitochondria",
+        "Culture the organism under anaerobic conditions and check if it produces hydrogen gas as evidence of hydrogenosome presence",
+        "Search for mitochondria-related organelles using targeted electron microscopy with specific staining; perform genomic and transcriptomic analysis to search for nuclear genes encoding mitochondrial-targeted proteins (particularly iron-sulfur cluster assembly genes like ISC pathway components, which are the most commonly retained MRO function); use fluorescent dyes (MitoTracker) to detect membrane-potential-bearing organelles; and test for iron-sulfur cluster assembly activity biochemically",
+        "Simply accept the absence of visible mitochondria as definitive evidence that the organism is amitochondriate"
+      ],
+      "correctAnswer": "C",
+      "explanation": "No truly amitochondriate eukaryote has been confirmed \u2014 all eukaryotes studied to date possess either mitochondria or mitochondria-related organelles (MROs) including hydrogenosomes and mitosomes. Even the most reduced MROs (mitosomes in Giardia, Entamoeba) retain the iron-sulfur cluster (ISC) assembly pathway, which appears to be the irreducible core function. Investigation requires: (1) Targeted EM with appropriate fixation to detect small organelles that may be missed under standard preparation. (2) Genomic screening for nuclear-encoded, mitochondrially-targeted proteins \u2014 particularly ISC pathway genes. (3) MitoTracker staining to detect organelles with membrane potential. (4) Biochemical assays for ISC assembly activity. The recent discovery that Monocercomonoides exilis has lost all MRO genes (replacing ISC with a bacterial SUF system acquired by HGT) represents the only known exception. Option A makes an unjustified evolutionary conclusion. Option B tests only one type of MRO. Option D ignores the near-universality of MROs.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    },
+    {
+      "type": "MCQ",
+      "question": "Trypanosome RNA editing involves the insertion and deletion of uridine residues from mitochondrial mRNAs, sometimes adding hundreds of uridines to a single transcript. What provides the template for this editing, and why is it necessary?",
+      "options": [
+        "The nuclear genome provides the editing template through trans-splicing of nuclear-encoded exons onto mitochondrial transcripts",
+        "Editing occurs randomly without any template, generating transcript diversity similar to somatic hypermutation in antibodies",
+        "Guide RNAs (gRNAs) encoded by minicircle DNA in the kinetoplast provide the template for editing; gRNAs base-pair with pre-edited mRNA and direct the insertion or deletion of U residues by the editosome complex; editing is necessary because the mitochondrial maxicircle genes are 'cryptogenes' that encode non-functional mRNAs without editing, with some genes requiring hundreds of U insertions to create proper open reading frames",
+        "Ribosomal RNA serves as the editing template through a reverse-transcription mechanism"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Kinetoplastid RNA editing is one of the most remarkable examples of post-transcriptional gene processing in biology. Guide RNAs (gRNAs), encoded primarily by the thousands of minicircle DNA molecules in the kinetoplast, provide the information for editing. Each gRNA has: (1) an anchor region that base-pairs with the pre-edited mRNA downstream of the editing site; (2) a guiding region that specifies where U residues should be inserted or deleted through mismatches. The editosome (a ~20S complex containing endonuclease, terminal uridylyl transferase, exonuclease, and RNA ligase) catalyzes the editing. Some genes require extensive editing (pan-editing) with hundreds of U insertions, while others require only a few changes. The evolutionary reason for this elaborate system remains debated but may relate to regulatory flexibility. Option A describes trans-splicing, a different process. Option B is incorrect \u2014 editing is precisely templated. Option D invokes a non-existent mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 28,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Protists"
+    }
+  ]
+}
