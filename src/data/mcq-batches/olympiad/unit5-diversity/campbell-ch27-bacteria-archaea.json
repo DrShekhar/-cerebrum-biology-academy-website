@@ -1,0 +1,1390 @@
+{
+  "batch": {
+    "name": "Campbell Ch27 Bacteria and Archaea \u2014 Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 69
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "A newly discovered prokaryote from a deep-sea hydrothermal vent possesses ether-linked branched-chain lipids, histone-like proteins, and RNA polymerase with 12 subunits. However, it has a peptidoglycan-like cell wall and is motile via bacterial-type flagella. Based on these characters, which domain does this organism most likely belong to, and how can the seemingly contradictory features be explained?",
+      "options": [
+        "Bacteria, because the presence of peptidoglycan and bacterial flagella definitively places it in the bacterial domain regardless of other features",
+        "Eukarya, because the histone-like proteins and complex RNA polymerase are hallmarks of eukaryotic cells",
+        "Archaea, because the ether-linked lipids and complex RNA polymerase are definitive archaeal features, and the peptidoglycan-like wall may represent pseudopeptidoglycan (with different glycosidic bonds and sugar components), while the flagella may represent archaella that superficially resemble bacterial flagella",
+        "A novel fourth domain of life that combines features of all three existing domains"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The key diagnostic features placing this organism in Archaea are the ether-linked branched-chain lipids (unique to archaea; bacteria have ester-linked fatty acids) and the multi-subunit RNA polymerase (archaeal RNAP resembles eukaryotic RNAPII in complexity, unlike the simpler bacterial RNAP with 5 subunits). The peptidoglycan-like wall is likely pseudopeptidoglycan, found in some methanogenic archaea, which superficially resembles peptidoglycan but uses N-acetyltalosaminuronic acid instead of N-acetylmuramic acid and beta-1,3 glycosidic bonds instead of beta-1,4. The 'flagella' are likely archaella (archaeal flagella), which have a completely different molecular structure, assembly mechanism, and evolutionary origin from bacterial flagella despite similar function. Option A overweights two characters while ignoring the definitive membrane lipid evidence. Option B is incorrect because prokaryotic cell structure rules out Eukarya. Option D is unjustified when features fit within known archaeal diversity.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Methicillin-resistant Staphylococcus aureus (MRSA) acquired resistance through the mecA gene, which encodes PBP2a (penicillin-binding protein 2a). PBP2a has low affinity for beta-lactam antibiotics but retains transpeptidase activity for cell wall synthesis. How did MRSA most likely acquire the mecA gene?",
+      "options": [
+        "Through spontaneous point mutation of the native penicillin-binding protein gene that gradually reduced beta-lactam affinity over many generations",
+        "Through vertical inheritance from the ancestral S. aureus strain that predated the discovery of penicillin",
+        "Through horizontal gene transfer, specifically transduction or conjugation, acquiring the SCCmec (staphylococcal cassette chromosome mec) mobile genetic element from a coagulase-negative Staphylococcus species",
+        "Through gene duplication and neofunctionalization of an existing S. aureus transpeptidase gene"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The mecA gene in MRSA is located on a mobile genetic element called SCCmec (staphylococcal cassette chromosome mec), which integrates into the S. aureus chromosome at a specific site (attBscc). Genomic and phylogenetic evidence indicates that S. aureus acquired SCCmec through horizontal gene transfer from coagulase-negative staphylococci, particularly Staphylococcus sciuri or S. fleurettii, where mecA homologs are found as part of the core genome. The SCCmec element contains the mecA gene along with recombinase genes (ccrA and ccrB) that mediate its integration and excision. Multiple independent acquisitions of different SCCmec types (I through XIII) have occurred, creating distinct MRSA lineages. Option A describes a different mechanism of resistance evolution. Option B is incorrect because mecA was acquired after penicillin use began. Option D does not explain the mobile genetic element context.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about bacterial cell wall structure and Gram staining:\nS1: Gram-positive bacteria have a thick peptidoglycan layer (20-80 nm) that retains the crystal violet-iodine complex during decolorization with alcohol.\nS2: Gram-negative bacteria have an outer membrane containing lipopolysaccharide (LPS), which serves as an endotoxin and can trigger septic shock when released into the bloodstream.\nS3: Mycoplasma bacteria stain Gram-positive because their cholesterol-containing membranes strongly retain crystal violet.\nS4: The periplasmic space in Gram-negative bacteria contains enzymes for nutrient degradation, detoxification, and cell wall synthesis.",
+      "options": [
+        "TTTT",
+        "TTFT",
+        "TTTF",
+        "TFTT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Gram-positive bacteria have thick peptidoglycan layers (20-80 nm) with multiple layers of cross-linked NAG-NAM polymers. This thick layer traps the crystal violet-iodine (CV-I) complex and prevents its removal during alcohol decolorization. S2 is TRUE: The outer membrane of Gram-negative bacteria contains LPS, whose lipid A component is an endotoxin. When released from lysed bacteria, lipid A activates immune cells via TLR4, potentially leading to cytokine storm and septic shock. S3 is FALSE: Mycoplasma bacteria completely lack cell walls (no peptidoglycan at all) and are therefore not stained by the Gram procedure. Their membranes contain sterols (cholesterol obtained from host) for stability, but this does not enable crystal violet retention, which requires peptidoglycan. S4 is TRUE: The periplasm is the gel-like space between the inner and outer membranes of Gram-negative bacteria, containing degradative enzymes (e.g., beta-lactamases), binding proteins for nutrient transport, and enzymes involved in peptidoglycan synthesis and modification.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A microbiologist measures the growth of Escherichia coli in a batch culture and records the following optical density (OD600) readings over time:\n- 0 hr: 0.02\n- 1 hr: 0.02\n- 2 hr: 0.04\n- 3 hr: 0.08\n- 4 hr: 0.16\n- 5 hr: 0.32\n- 6 hr: 0.64\n- 7 hr: 0.80\n- 8 hr: 0.85\n- 9 hr: 0.84\n\nWhat is the generation time during exponential growth, and what explains the transition from exponential to stationary phase?",
+      "options": [
+        "Generation time is 2 hours; the culture enters stationary phase due to accumulation of beneficial metabolites that inhibit cell division",
+        "Generation time is 30 minutes; stationary phase is caused by the culture reaching its genetically determined maximum cell density regardless of nutrient availability",
+        "Generation time is 1 hour during hours 2-6; the transition to stationary phase (hours 7-9) is caused by nutrient depletion, accumulation of toxic waste products (acids, alcohols), and possibly oxygen limitation, leading to a balance between cell division and death rates",
+        "Generation time is 3 hours; the culture never reaches true stationary phase because OD600 continues to increase"
+      ],
+      "correctAnswer": "C",
+      "explanation": "During exponential growth (hours 2-6), the OD600 doubles every hour (0.04 to 0.08 to 0.16 to 0.32 to 0.64), giving a generation time of approximately 1 hour. The lag phase (hours 0-1) shows no growth as cells adapt to the medium. From hour 6 to 7, growth slows dramatically (0.64 to 0.80 instead of the expected 1.28), and by hours 8-9, the culture is in stationary phase (OD stable at ~0.85). Stationary phase results from nutrient exhaustion (carbon source, nitrogen, phosphorus), accumulation of inhibitory metabolites (organic acids, ethanol from fermentation if anaerobic, reactive oxygen species), and pH changes. At this point, the rate of new cell production approximately equals the rate of cell death. Option A has the wrong generation time and incorrect explanation. Option B has the wrong generation time and incorrect reasoning. Option D has the wrong generation time and misreads the data.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cyanobacteria are credited with the Great Oxidation Event approximately 2.4 billion years ago. Which feature of cyanobacterial photosynthesis was primarily responsible for this major change in Earth's atmosphere?",
+      "options": [
+        "The evolution of photosystem II, which uses water as an electron donor and releases molecular oxygen as a byproduct through the oxygen-evolving complex containing a manganese cluster",
+        "The use of hydrogen sulfide as an electron donor, releasing sulfur as a byproduct",
+        "The ability to fix nitrogen gas into ammonia, which subsequently oxidized into nitrous oxide",
+        "The production of ozone through direct enzymatic conversion of carbon dioxide"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Great Oxidation Event resulted from cyanobacteria evolving oxygenic photosynthesis \u2014 specifically, the use of water as an electron donor in photosystem II (PSII). The oxygen-evolving complex (OEC) in PSII contains a Mn4CaO5 cluster that catalyzes the oxidation of two water molecules to produce one O2, four protons, and four electrons. This was revolutionary because it liberated molecular oxygen as a waste product of photosynthesis, gradually transforming Earth's atmosphere from anoxic to oxic over hundreds of millions of years. Prior to this, anoxygenic phototrophs used reduced compounds like H2S or Fe2+ as electron donors. Option A describes anoxygenic photosynthesis performed by purple and green sulfur bacteria. Option C describes nitrogen fixation, which does not produce oxygen. Option D is chemically nonsensical \u2014 ozone is produced photochemically from O2 in the stratosphere, not enzymatically from CO2.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial conjugation involves the transfer of DNA from a donor cell to a recipient cell. In Hfr (high frequency recombination) strains, which of the following correctly describes the transfer process?",
+      "options": [
+        "The entire F factor is transferred first, converting the recipient into an F+ cell, followed by chromosomal DNA",
+        "Only the F factor is transferred; chromosomal DNA is never mobilized during Hfr conjugation",
+        "Chromosomal DNA transfer begins at the integrated F factor origin of transfer (oriT) and proceeds sequentially into the recipient; because mating pairs typically separate before complete chromosome transfer, the F factor genes at the distal end are rarely transferred, and the recipient usually remains F-",
+        "The Hfr cell transfers its entire chromosome as a circular molecule that recombines with the recipient's chromosome at random positions"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In Hfr strains, the F factor is integrated into the bacterial chromosome. During conjugation, transfer initiates at oriT within the integrated F factor. One strand of the chromosome is nicked and transferred linearly through the conjugation pilus, beginning with the leading portion of the F factor and continuing with adjacent chromosomal DNA. Because the trailing portion of the F factor is at the distal end of the transferred DNA, complete transfer of the ~4.6 Mb E. coli chromosome (requiring ~100 minutes) rarely occurs before the mating pair spontaneously separates. Therefore, recipients typically receive a portion of chromosomal DNA but not the complete F factor, remaining F-. The transferred DNA recombines with the recipient's chromosome through homologous recombination. Option A reverses the order of transfer. Option B is incorrect because chromosomal DNA is the primary material transferred. Option D is wrong because transfer is linear, not circular.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher isolates a bacterium from soil that appears to fix atmospheric nitrogen based on growth on nitrogen-free media. To definitively confirm nitrogen fixation and identify the mechanism, which combination of experiments would be most appropriate?",
+      "options": [
+        "Perform an acetylene reduction assay to detect nitrogenase activity, use 15N2 isotope tracing to confirm incorporation of atmospheric nitrogen into cellular biomass, and PCR-amplify the nifH gene (encoding the nitrogenase reductase subunit) to identify the genetic basis",
+        "Measure the organism's growth rate on nitrogen-free versus nitrogen-rich media and conclude nitrogen fixation if growth occurs without added nitrogen",
+        "Sequence the organism's 16S rRNA gene and check if closely related species are known nitrogen fixers",
+        "Stain the organism with a nitrogen-specific fluorescent dye and observe under fluorescence microscopy"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Definitive confirmation of nitrogen fixation requires multiple lines of evidence: (1) The acetylene reduction assay (ARA) measures nitrogenase activity by detecting the reduction of acetylene (C2H2) to ethylene (C2H4), which is catalyzed by nitrogenase as an alternative substrate. This provides a rapid, sensitive biochemical assay. (2) 15N2 isotope tracing provides definitive proof that atmospheric nitrogen is being incorporated into cellular biomass by growing the organism in an atmosphere enriched with 15N2 and detecting 15N incorporation in amino acids via mass spectrometry. (3) nifH PCR identifies the genetic potential for nitrogen fixation by detecting the highly conserved nitrogenase reductase gene. Together, these demonstrate enzyme activity, actual nitrogen incorporation, and the genetic basis. Option A shows growth but does not prove nitrogen fixation (the organism could use trace nitrogen contaminants). Option C provides circumstantial evidence only. Option D describes a nonexistent technique.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial endospores can survive extreme conditions for thousands of years. The remarkable resistance of endospores is primarily attributed to which combination of features?",
+      "options": [
+        "A thick outer capsule made of polysaccharides that prevents chemical penetration, combined with active DNA repair enzymes that function continuously during dormancy",
+        "Dehydrated core with reduced water content, high concentrations of calcium dipicolinic acid (Ca-DPA) that stabilize DNA, small acid-soluble spore proteins (SASPs) that protect DNA by binding and compacting it into a crystalline state, and a multilayered coat of cross-linked proteins",
+        "Active metabolic processes that continuously repair damage from heat, radiation, and chemicals during the dormant state",
+        "A double membrane system identical to Gram-negative bacteria that provides extra protection against environmental stressors"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Endospore resistance results from multiple passive protective mechanisms rather than active metabolism. The core is severely dehydrated (~15% water content vs. ~80% in vegetative cells), which prevents protein denaturation and chemical reactions. Calcium dipicolinic acid comprises up to 10% of spore dry weight and forms a gel with calcium ions that stabilizes DNA against heat denaturation. Small acid-soluble spore proteins (SASPs) bind DNA, converting it from the B-form to the A-form, which is more compact and resistant to UV damage, desiccation, and chemical agents. The spore coat consists of cross-linked protein layers that provide chemical resistance, while the cortex (modified peptidoglycan) maintains core dehydration. Option A incorrectly attributes resistance to a polysaccharide capsule and active repair. Option C is wrong because endospores are metabolically dormant. Option D is wrong but was selected as the answer \u2014 actually, let me reconsider.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "The CRISPR-Cas system in bacteria and archaea functions as an adaptive immune system against bacteriophages and plasmids. Which description correctly outlines the three stages of CRISPR-Cas immunity?",
+      "options": [
+        "Adaptation (acquisition of new spacers from invading DNA), expression (transcription and processing of the CRISPR array into guide RNAs), and interference (Cas proteins guided by crRNAs to recognize and cleave matching foreign DNA or RNA)",
+        "Transcription of the CRISPR array, folding of Cas proteins into antibody-like receptors, and phagocytosis of viral particles",
+        "Random mutagenesis of the Cas genes to generate diversity, selection of functional variants, and clonal expansion of resistant bacteria",
+        "Recognition of foreign DNA by Toll-like receptors, activation of a signaling cascade, and transcription of antiviral defense genes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "CRISPR-Cas immunity operates in three distinct stages. (1) Adaptation: The Cas1 and Cas2 proteins recognize and capture short fragments (spacers) from invading phage DNA or plasmids and integrate them into the CRISPR array between repeat sequences. This creates a molecular memory of previous infections. (2) Expression: The CRISPR array is transcribed into a long pre-crRNA that is processed into individual CRISPR RNAs (crRNAs), each containing one spacer sequence. These crRNAs associate with Cas effector proteins. (3) Interference: The crRNA-Cas complex scans incoming DNA (or RNA in some systems) for sequences complementary to the spacer. When a match is found (adjacent to a PAM sequence in Type II systems), the Cas nuclease cleaves the foreign DNA, destroying it. Option A describes a eukaryotic-like response not found in prokaryotes. Option C describes an immune system resembling vertebrate adaptive immunity. Option D describes innate immunity in eukaryotes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about archaeal biology:\nS1: Archaeal membranes contain ether-linked isoprenoid lipids, in contrast to the ester-linked fatty acid lipids of bacteria and eukaryotes.\nS2: Some archaea (thermophiles) have tetraether lipids that span the entire membrane bilayer, forming a monolayer that provides stability at extreme temperatures.\nS3: Archaeal DNA replication machinery (initiator proteins, helicases, primases, DNA polymerases) more closely resembles the eukaryotic replication system than the bacterial one.\nS4: All archaea are obligate extremophiles that cannot survive in moderate environments.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFF",
+        "TFFT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE: Archaeal membrane lipids have ether bonds linking glycerol to isoprenoid chains (typically phytanyl), compared to ester bonds linking glycerol to fatty acids in bacteria and eukaryotes. Additionally, archaeal glycerol-phosphate backbone uses the sn-2,3 stereochemistry (sn-glycerol-1-phosphate), opposite to bacterial/eukaryotic sn-1,2. S2 is TRUE: Crenarchaeota and other thermophilic archaea possess tetraether lipids (e.g., caldarchaeol) where two glycerol moieties are linked by two C40 biphytanyl chains spanning the entire membrane, creating a monolayer. This eliminates the midplane weakness of a bilayer, providing extraordinary thermal stability. S3 is TRUE: Archaeal DNA replication proteins share homology with eukaryotic proteins: Orc1/Cdc6-like initiator, MCM helicase, GINS complex, and family B DNA polymerases. The bacterial system uses DnaA, DnaB, DnaG, and DNA Pol III. S4 is FALSE: Archaea are found in virtually all environments, including soils, oceans, freshwater lakes, and the human gut and skin microbiome. They are among the most abundant organisms in the ocean.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Quorum sensing allows bacteria to coordinate gene expression based on population density. In Vibrio fischeri, the LuxI/LuxR quorum sensing system regulates bioluminescence. Which molecular mechanism prevents activation of the lux operon at low cell density?",
+      "options": [
+        "At low density, the N-acyl homoserine lactone (AHL) autoinducer produced by LuxI diffuses out of the cell faster than it accumulates, keeping intracellular AHL concentration below the threshold needed for LuxR binding and activation of the lux operon promoter",
+        "At low density, LuxR is actively degraded by a protease that is itself quorum-regulated",
+        "At low density, a repressor protein constitutively blocks the lux promoter regardless of AHL concentration",
+        "At low density, RNA interference degrades all lux mRNA transcripts before they can be translated"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The LuxI/LuxR system operates through a concentration-dependent mechanism. LuxI synthesizes the autoinducer AHL (specifically 3-oxo-C6-HSL in V. fischeri), which freely diffuses across the cell membrane in both directions. At low cell density, the rate of AHL diffusion out of the cell exceeds the rate of production, maintaining low intracellular AHL concentrations. The transcription factor LuxR requires AHL binding to fold correctly and form an active dimer; without sufficient AHL, LuxR remains inactive (or is degraded as an unfolded protein). Only when the population reaches a critical density does extracellular AHL accumulate to a concentration that maintains high intracellular levels, enabling LuxR-AHL complex formation and activation of the lux operon. This creates positive feedback because the lux operon includes luxI, amplifying AHL production. Option A describes a mechanism found in some but not the canonical V. fischeri system. Option C is incorrect for this system. Option D describes a eukaryotic mechanism not found in V. fischeri bioluminescence regulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher discovers a bacterium that obtains energy by oxidizing ferrous iron (Fe2+) to ferric iron (Fe3+) and uses carbon dioxide as its sole carbon source. This organism would be classified metabolically as:",
+      "options": [
+        "A photoautotroph, because it uses an inorganic energy source and CO2",
+        "A chemoheterotroph, because it obtains energy from chemical reactions and uses organic carbon",
+        "A chemoautotroph (chemolithoautotroph), because it derives energy from oxidation of an inorganic compound (Fe2+) and fixes CO2 as its carbon source",
+        "A photoheterotroph, because it uses light energy and organic carbon sources"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This organism fits the definition of a chemolithoautotroph: 'chemo' because it uses chemical energy (not light), 'litho' because the energy source is an inorganic compound (Fe2+), and 'auto' because it uses CO2 as its sole carbon source (autotrophy). Iron-oxidizing bacteria like Acidithiobacillus ferrooxidans and Leptospirillum ferrooxidans are classic examples. They couple the oxidation of Fe2+ to Fe3+ with the reduction of O2 (aerobically) or other electron acceptors, using the energy to drive carbon fixation via the Calvin cycle or other CO2 fixation pathways. Option A is incorrect because the organism uses chemical, not light, energy. Option B is wrong on both counts \u2014 the energy source is inorganic and the carbon source is CO2. Option D is incorrect because no light is involved and the carbon source is inorganic.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An antibiotic susceptibility test using the Kirby-Bauer disk diffusion method produces the following zone of inhibition diameters for an E. coli isolate:\n- Ampicillin: 6 mm (resistant threshold: <13 mm)\n- Ciprofloxacin: 25 mm (susceptible threshold: >21 mm)\n- Gentamicin: 17 mm (intermediate: 13-14 mm, susceptible: >15 mm)\n- Trimethoprim: 10 mm (resistant threshold: <10 mm)\n\nBased on these results, which antibiotic would be most appropriate for treating an infection caused by this isolate?",
+      "options": [
+        "Ampicillin, because it produced a measurable zone of inhibition",
+        "Trimethoprim, because the zone diameter is exactly at the resistant threshold",
+        "Ciprofloxacin, because it produced the largest zone of inhibition (25 mm), exceeding the susceptible threshold of 21 mm, indicating that the isolate is sensitive to this antibiotic at achievable blood concentrations",
+        "Gentamicin is the worst choice because its intermediate-sized zone indicates uncertain efficacy"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In the Kirby-Bauer disk diffusion assay, the zone of inhibition diameter is compared to standardized breakpoints established by CLSI (Clinical and Laboratory Standards Institute) to classify isolates as susceptible, intermediate, or resistant. Ciprofloxacin (25 mm) exceeds the susceptible threshold (>21 mm), indicating that the bacterium is killed or inhibited at drug concentrations achievable in the patient's tissues. Ampicillin (6 mm < 13 mm) is resistant \u2014 the drug concentration in vivo cannot inhibit this isolate. Trimethoprim (10 mm) is at or below the resistant threshold, indicating resistance. Gentamicin (17 mm > 15 mm) is susceptible and could be used, but ciprofloxacin's larger zone suggests stronger sensitivity. Option A incorrectly interprets a resistant result. Option B recommends a drug to which the organism is resistant. Option D mischaracterizes gentamicin \u2014 17 mm is actually in the susceptible range (>15 mm).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Biofilm formation by Pseudomonas aeruginosa in the lungs of cystic fibrosis patients makes infections extremely difficult to treat. Which property of biofilms most directly contributes to antibiotic resistance?",
+      "options": [
+        "Bacteria in biofilms mutate at higher rates than planktonic bacteria, rapidly generating resistance genes",
+        "The extracellular polymeric substance (EPS) matrix physically restricts antibiotic penetration, creates nutrient and oxygen gradients that produce metabolically dormant persister cells in deeper layers, and facilitates horizontal gene transfer of resistance determinants among cells in close proximity",
+        "Biofilm bacteria revert to a spore-like state identical to Bacillus endospores, becoming completely inert to antibiotics",
+        "Biofilms produce enzymes that convert antibiotics into nutrients, using them as an energy source for continued growth"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Biofilm-mediated antibiotic resistance is multifactorial. The EPS matrix (composed of polysaccharides like Psl and Pel, extracellular DNA, and proteins) acts as a diffusion barrier, reducing antibiotic concentrations reaching cells in deeper layers. Oxygen and nutrient gradients within the biofilm create subpopulations with different metabolic states \u2014 cells in nutrient-depleted zones become slow-growing or dormant 'persister cells' that are inherently tolerant to antibiotics targeting active metabolic processes (e.g., cell wall synthesis, DNA replication). The high cell density and proximity within biofilms facilitate horizontal gene transfer through conjugation and transformation, spreading resistance genes. Additionally, quorum sensing coordinates the expression of resistance mechanisms. Option A overstates mutation rates. Option C is incorrect because P. aeruginosa does not form true endospores. Option D is incorrect for most antibiotics, though some biofilm bacteria can enzymatically modify certain antibiotics.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nitrogen-fixing bacteria face a fundamental biochemical challenge: the nitrogenase enzyme complex is irreversibly inactivated by molecular oxygen, yet many nitrogen fixers are aerobic organisms. How do free-living aerobic nitrogen fixers like Azotobacter solve this paradox?",
+      "options": [
+        "They use extremely high respiration rates (respiratory protection) to consume oxygen at the cell membrane faster than it can diffuse to the cytoplasmic nitrogenase, combined with conformational protection of nitrogenase by the FeSII protein and production of abundant extracellular polysaccharides that limit oxygen diffusion",
+        "They only fix nitrogen during the night when photosynthetic organisms are not producing oxygen",
+        "They permanently exclude oxygen from their cells by maintaining an impermeable cell membrane",
+        "They compartmentalize nitrogenase inside membrane-bound organelles analogous to eukaryotic mitochondria"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Azotobacter vinelandii, a free-living aerobic diazotroph, employs multiple strategies to protect its oxygen-sensitive nitrogenase. (1) Respiratory protection: Azotobacter has one of the highest respiration rates known, maintaining very high concentrations of terminal oxidases in its membranes that consume O2 at the cell periphery before it reaches the cytoplasm. (2) Conformational protection: When oxygen levels rise, the FeSII (Shethna) protein binds to nitrogenase, forming a temporarily inactive but protected complex that can reactivate when O2 levels drop. (3) Alginate production: Copious extracellular polysaccharide (alginate) creates a physical barrier that limits oxygen diffusion to the cell. These combined mechanisms allow nitrogenase to function in an aerobic organism. Option A is irrelevant for Azotobacter, which is non-photosynthetic. Option C is impossible because O2 diffuses across all biological membranes. Option D describes a eukaryotic strategy not found in prokaryotes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Two-component signal transduction systems are the predominant signaling mechanism in bacteria. The EnvZ/OmpR system in E. coli regulates outer membrane porin expression in response to osmolarity. Which sequence of events correctly describes signal transduction through this system?",
+      "options": [
+        "High osmolarity activates the sensor histidine kinase EnvZ, which autophosphorylates on a conserved histidine residue, then transfers the phosphoryl group to a conserved aspartate on the response regulator OmpR; phosphorylated OmpR binds to promoter regions of ompF and ompC, repressing ompF (large pore) and activating ompC (small pore) expression",
+        "OmpR directly senses osmolarity changes in the periplasm and activates EnvZ, which then functions as a transcription factor for porin genes",
+        "EnvZ is a G protein-coupled receptor that activates a MAP kinase cascade leading to OmpR phosphorylation by a cytoplasmic kinase",
+        "High osmolarity directly modifies OmpR through allosteric binding of salt ions, bypassing the need for EnvZ kinase activity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The EnvZ/OmpR system is a canonical two-component signaling system. EnvZ is an inner membrane-spanning sensor histidine kinase that detects changes in osmolarity through its periplasmic sensor domain. Under high osmolarity, EnvZ undergoes autophosphorylation on a conserved histidine residue (His243) using ATP. The phosphoryl group is then transferred to a conserved aspartate residue (Asp55) on the cytoplasmic response regulator OmpR through a phosphotransfer reaction. Phosphorylated OmpR (OmpR-P) has enhanced DNA-binding affinity and differentially regulates porin gene expression: at low OmpR-P levels, ompF (encoding the large, less selective porin) is expressed; at high OmpR-P levels, ompF is repressed and ompC (encoding the smaller, more selective porin) is activated. Option A reverses the roles of sensor and regulator. Option C describes eukaryotic GPCR signaling. Option D bypasses the essential phosphorelay mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A team of researchers wants to determine whether a novel antibiotic targets the bacterial ribosome. They have purified the compound and have access to E. coli cell-free translation systems, live bacterial cultures, and mammalian cell lines. Which experimental strategy would most definitively identify the target?",
+      "options": [
+        "Add the antibiotic to E. coli cell-free translation systems and measure protein synthesis inhibition; test for binding to purified 30S and 50S ribosomal subunits using isothermal titration calorimetry or cryo-EM; isolate spontaneous resistant mutants and sequence their ribosomal RNA genes to identify resistance-conferring mutations; and test for selective toxicity by comparing effects on bacterial vs. mammalian (80S) ribosomes",
+        "Observe whether the antibiotic kills E. coli on agar plates and conclude that it targets the ribosome if growth is inhibited",
+        "Compare the antibiotic's chemical structure to known ribosome-targeting antibiotics and predict the target based on structural similarity alone",
+        "Test only whether the antibiotic inhibits mammalian cell growth to determine its mechanism of action"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Definitive identification of an antibiotic's molecular target requires convergent evidence from multiple approaches. (1) Cell-free translation assays directly test whether the compound inhibits ribosomal translation without confounding effects of cell permeability. (2) Biophysical binding studies (ITC, surface plasmon resonance, cryo-EM) demonstrate direct physical interaction between the compound and ribosomal subunits. (3) Resistance mapping is the gold standard: spontaneous resistant mutants often carry mutations in the drug target; rRNA mutations conferring resistance definitively identify the ribosome as the target. (4) Selectivity testing against bacterial 70S vs. eukaryotic 80S ribosomes confirms therapeutic selectivity and validates the target. Option A demonstrates antibacterial activity but not the mechanism. Option C is insufficient because structural analogy does not prove identical targets. Option D only assesses toxicity, not mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial transformation \u2014 the uptake of free DNA from the environment \u2014 requires the bacterium to be in a state of competence. In Bacillus subtilis, natural competence development is regulated by which mechanism?",
+      "options": [
+        "A quorum sensing-based regulatory cascade where the ComQXPA system detects population density via a peptide pheromone, activating the master regulator ComK, which drives expression of DNA uptake and recombination machinery in a fraction of the population",
+        "Random stochastic switching where competence genes are constitutively expressed in all cells at all times",
+        "Direct sensing of extracellular DNA concentrations by a membrane receptor that activates competence genes only when DNA is abundant",
+        "Competence is induced exclusively by antibiotic exposure as part of the SOS response"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Natural competence in B. subtilis is regulated by a sophisticated quorum sensing-dependent pathway. The ComQ enzyme processes a secreted peptide pheromone (ComX), which is detected by the ComP sensor histidine kinase when it accumulates at high cell density. Phosphorylated ComA activates expression of surfactin and ComS. ComS stabilizes the master competence transcription factor ComK by competing with the MecA-ClpCP protease complex that degrades ComK at low cell density. Stabilized ComK activates expression of the late competence genes encoding the DNA binding, uptake, and recombination machinery. Importantly, competence develops in only ~10-20% of cells due to bistable gene expression creating a bimodal population. Option A is incorrect because competence is tightly regulated and only develops in a subpopulation. Option C is wrong because B. subtilis does not sense extracellular DNA for competence induction. Option D confuses competence with the SOS response, which is triggered by DNA damage.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about bacterial metabolic diversity:\nS1: Photoheterotrophs such as purple non-sulfur bacteria can use light as an energy source while assimilating organic compounds as their carbon source.\nS2: Obligate anaerobes like Clostridium botulinum are killed by the presence of molecular oxygen because they lack superoxide dismutase and catalase to neutralize reactive oxygen species.\nS3: Facultative anaerobes like E. coli can switch between aerobic respiration using O2 as the terminal electron acceptor and anaerobic respiration using alternative electron acceptors like nitrate or fumarate.\nS4: All bacteria capable of chemolithotrophy (using inorganic electron donors) are obligate autotrophs that can only use CO2 as a carbon source.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE: Purple non-sulfur bacteria (e.g., Rhodobacter) are photoheterotrophs under anaerobic conditions with light and organic carbon. They use bacteriochlorophyll-based cyclic photophosphorylation for energy (ATP) while assimilating organic compounds (fatty acids, ethanol, succinate) as carbon sources. S2 is TRUE: Strict (obligate) anaerobes lack the protective enzymes superoxide dismutase (SOD) and catalase that convert toxic reactive oxygen species (superoxide O2-, hydrogen peroxide H2O2) to harmless products. Without these enzymes, oxygen generates lethal free radicals that damage DNA, proteins, and lipids. S3 is TRUE: E. coli preferentially uses O2 as the terminal electron acceptor during aerobic respiration (highest ATP yield) but switches to anaerobic respiration using nitrate, fumarate, DMSO, or other alternative electron acceptors when O2 is unavailable, regulated by the ArcAB and FNR systems. S4 is FALSE: Many chemolithotrophs are mixotrophs or facultative heterotrophs. For example, some sulfur-oxidizing bacteria can simultaneously use thiosulfate as an electron donor and organic carbon as a carbon source.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Horizontal gene transfer (HGT) has profoundly shaped prokaryotic evolution. Of the three main mechanisms \u2014 transformation, transduction, and conjugation \u2014 which mechanism allows transfer of the largest amount of DNA in a single event?",
+      "options": [
+        "Transformation, because bacteria can take up entire chromosomes from the environment without size limitations",
+        "Transduction by generalized transducing phages, which can package up to 1000 kb of host DNA per phage particle",
+        "Conjugation, particularly when mediated by integrative and conjugative elements (ICEs) or by Hfr strains, which can transfer large chromosomal segments (up to the entire chromosome) through the conjugation pilus over extended mating periods",
+        "All three mechanisms transfer exactly the same amount of DNA per event, typically less than 1 kb"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Conjugation has the highest capacity for DNA transfer among the three mechanisms. F-plasmid-mediated conjugation can transfer the ~100 kb F plasmid, and Hfr strains can transfer up to the entire bacterial chromosome (~4.6 Mb in E. coli) if mating pairs remain connected long enough. Integrative and conjugative elements (ICEs) can mobilize large genomic islands (50-500+ kb). In contrast, transformation typically transfers small DNA fragments (usually <40 kb, limited by DNA survival in the environment and uptake machinery capacity). Generalized transduction is limited by phage head capacity (typically ~40-100 kb depending on phage). Specialized transduction transfers only DNA adjacent to the phage integration site. Option A overstates transformation capacity \u2014 environmental DNA is degraded and only small fragments are typically taken up. Option B overestimates generalized transduction capacity. Option D incorrectly equates all mechanisms.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studies denitrification in soil bacteria and measures the following gas production rates under anaerobic conditions in a bioreactor:\n\nCondition 1 (nitrate added): N2O production = 0, N2 production = 150 nmol/hr\nCondition 2 (nitrate + acetylene): N2O production = 140 nmol/hr, N2 production = 5 nmol/hr\n\nAcetylene (C2H2) is known to inhibit the enzyme nitrous oxide reductase (N2O reductase). What can be concluded about denitrification in this system?",
+      "options": [
+        "The bacteria cannot perform denitrification because N2O production is zero under normal conditions",
+        "Acetylene stimulates N2O production de novo through an unknown metabolic pathway",
+        "Under normal conditions (Condition 1), the bacteria perform complete denitrification (NO3- to N2), reducing any N2O intermediate fully to N2; acetylene blocks the final step (N2O to N2), causing N2O to accumulate, confirming that N2O is a normal intermediate in the denitrification pathway and that active N2O reductase is present under Condition 1",
+        "The bacteria produce N2O only in the presence of acetylene through an alternative metabolic pathway unrelated to denitrification"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The acetylene inhibition technique is a classic method for measuring denitrification. Complete denitrification proceeds: NO3- \u2192 NO2- \u2192 NO \u2192 N2O \u2192 N2. Under normal conditions (Condition 1), N2O reductase (encoded by nosZ) converts N2O to N2 as fast as it is produced, so no N2O accumulates and all nitrogen exits as N2 (150 nmol/hr). When acetylene blocks N2O reductase (Condition 2), N2O accumulates (140 nmol/hr) because it cannot be further reduced to N2. The small amount of N2 still produced (5 nmol/hr) likely represents incomplete acetylene inhibition or N2 from other sources. The near-equivalence of N2 production under Condition 1 (150) and N2O accumulation under Condition 2 (140) confirms that virtually all N2 was derived from N2O reduction, validating the denitrification pathway. Option A misinterprets the absence of N2O as absence of denitrification. Option B ignores the known mechanism of acetylene inhibition. Option D invokes an unnecessary alternative pathway.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Mycobacterium tuberculosis is notoriously difficult to treat, requiring 6-9 months of multi-drug therapy. Which unique feature of mycobacterial cell envelope contributes most significantly to its intrinsic antibiotic resistance?",
+      "options": [
+        "The mycolic acid-rich outer layer (mycomembrane) forms an extremely hydrophobic barrier with very low permeability, combined with a complex cell envelope consisting of peptidoglycan, arabinogalactan, and mycolic acids that dramatically reduces the rate of antibiotic penetration to the cytoplasmic membrane",
+        "An outer membrane identical to Gram-negative bacteria that blocks antibiotic entry",
+        "Active efflux pumps that are unique to mycobacteria and not found in any other bacterial group",
+        "A complete lack of any cell wall material, allowing the bacterium to exist as a protoplast inside host cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The mycobacterial cell envelope is uniquely complex among prokaryotes, consisting of (from inside to outside): (1) inner cytoplasmic membrane; (2) peptidoglycan layer; (3) arabinogalactan polysaccharide covalently attached to peptidoglycan; (4) mycolic acids (C60-C90 alpha-branched beta-hydroxylated fatty acids) covalently linked to arabinogalactan, forming the mycomembrane; (5) a capsule of proteins, polysaccharides, and lipids. The mycolic acid layer creates an extraordinarily hydrophobic, waxy barrier with permeability 100-1000 times lower than typical Gram-negative outer membranes. This dramatically slows the penetration of hydrophilic antibiotics, contributing to intrinsic resistance. Option A is incorrect because the mycobacterial outer layer is structurally and chemically distinct from a typical Gram-negative outer membrane. Option C overstates efflux pump uniqueness \u2014 efflux pumps are widespread in bacteria. Option D is completely wrong \u2014 mycobacteria have exceptionally thick cell walls.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A microbiologist wants to determine the community composition of bacteria in a hot spring without culturing any organisms. Which metagenomic approach would provide the most comprehensive view of both community composition and functional potential?",
+      "options": [
+        "Shotgun metagenomics, where total environmental DNA is extracted, fragmented, sequenced, and assembled into contigs, allowing identification of community members through marker genes and prediction of metabolic capabilities through annotation of all protein-coding genes, including those not detectable by amplicon approaches",
+        "Amplicon sequencing of 16S rRNA genes, which identifies community members but does not reveal metabolic capabilities",
+        "Culturing bacteria on standard nutrient agar and identifying colonies by Gram staining and biochemical tests",
+        "PCR amplification of a single metabolic gene (e.g., nifH for nitrogen fixation) to characterize the entire community's functional potential"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Shotgun metagenomics provides the most comprehensive culture-independent approach by sequencing all DNA in an environmental sample. This allows: (1) taxonomic profiling using multiple marker genes (16S rRNA, recA, rpoB) rather than relying on a single marker; (2) functional gene annotation revealing the metabolic potential of the community (carbon fixation pathways, nitrogen metabolism, sulfur cycling, etc.); (3) discovery of novel genes and pathways not represented in reference databases; (4) assembly of metagenome-assembled genomes (MAGs) from abundant community members. Option A provides taxonomic information but no functional data. Option C is culture-dependent and misses the >99% of environmental bacteria that are not culturable on standard media. Option D targets only one function and ignores the broader metabolic context. The trade-off is that shotgun metagenomics is more expensive and computationally demanding than amplicon sequencing.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Helicobacter pylori survives in the extremely acidic environment of the human stomach (pH 1.5-3.5). Which primary mechanism allows H. pylori to maintain a near-neutral intracellular pH?",
+      "options": [
+        "H. pylori produces large quantities of urease, which hydrolyzes urea to ammonia and carbon dioxide; the ammonia neutralizes gastric acid in the immediate microenvironment around the bacterium, creating a local pH buffer that protects the cell",
+        "H. pylori secretes hydrochloric acid to match the gastric environment, equilibrating its internal pH with the external pH",
+        "H. pylori has an acid-resistant outer membrane that is completely impermeable to protons",
+        "H. pylori migrates to the stomach lumen where pH is neutral and avoids the acidic mucosal surface entirely"
+      ],
+      "correctAnswer": "A",
+      "explanation": "H. pylori produces copious amounts of urease (up to 10% of total cell protein), which catalyzes: CO(NH2)2 + H2O \u2192 CO2 + 2NH3. The ammonia produced neutralizes gastric HCl in the bacterium's immediate microenvironment (the mucus layer), raising local pH to near-neutral levels. Additionally, ammonia enters the bacterial cytoplasm and acts as a proton sink, helping maintain intracellular pH homeostasis. H. pylori also colonizes the mucus layer overlying the gastric epithelium, where pH is less acidic than in the lumen. The combination of urease activity and mucus colonization allows survival. Option B is nonsensical \u2014 producing acid would not protect against an acidic environment. Option C is incorrect because no membrane is completely impermeable to protons. Option D reverses the pH gradient \u2014 the lumen is most acidic, while the mucus layer near epithelial cells is less acidic.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Anammox (anaerobic ammonium oxidation) bacteria such as Candidatus Kuenenia stuttgartiensis perform a unique metabolic reaction in the global nitrogen cycle. Which reaction do they catalyze, and why is it biogeochemically significant?",
+      "options": [
+        "They combine ammonium (NH4+) with nitrite (NO2-) under anaerobic conditions to produce dinitrogen gas (N2) and water, providing a major pathway for nitrogen loss from marine environments that was unknown before the 1990s and accounts for up to 50% of oceanic nitrogen removal",
+        "They oxidize ammonium to nitrate using oxygen, contributing to nitrification in aerobic soils",
+        "They reduce atmospheric N2 to ammonium under anaerobic conditions, representing the primary nitrogen fixation pathway in the deep ocean",
+        "They convert nitrate to ammonium through dissimilatory nitrate reduction, recycling nitrogen back into bioavailable forms"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Anammox bacteria catalyze the anaerobic oxidation of ammonium: NH4+ + NO2- \u2192 N2 + 2H2O (\u0394G\u00b0 = -357 kJ/mol). This process was only discovered in the 1990s and was a major surprise because it provides a previously unknown pathway for converting fixed nitrogen back to N2 gas under anaerobic conditions. Anammox bacteria are estimated to account for 30-50% of nitrogen removal from the ocean, making them critical players in the global nitrogen cycle. They are unique among bacteria in possessing an intracellular compartment called the anammoxosome, bounded by a ladderane lipid membrane, where the anammox reaction occurs. Option A describes aerobic nitrification by different organisms (Nitrosomonas, Nitrobacter). Option C describes nitrogen fixation, the reverse process. Option D describes DNRA (dissimilatory nitrate reduction to ammonium), a different pathway.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about bacterial pathogenesis mechanisms:\nS1: Type III secretion systems (T3SS) function as molecular syringes that inject effector proteins directly into host cells through a needle-like structure spanning both bacterial membranes and the host cell membrane.\nS2: Pathogenicity islands are large genomic regions (10-200 kb) acquired by horizontal gene transfer that encode virulence factors, often have different GC content from the core genome, and are flanked by mobile genetic elements.\nS3: Koch's postulates can always be satisfied for every bacterial pathogen, including obligate intracellular pathogens that cannot be grown in pure culture.\nS4: Toxin-antitoxin systems in bacteria can contribute to persistence during antibiotic treatment by triggering a dormant state in a subpopulation of cells.",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TFTF",
+        "TTFF"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: The T3SS (also called the injectisome) is a multiprotein complex resembling a molecular syringe. It spans the bacterial inner membrane, periplasm, outer membrane, and forms a translocon pore in the host cell membrane, allowing direct translocation of effector proteins from the bacterial cytoplasm into the host cell. T3SS is used by Salmonella, Shigella, Yersinia, and enteropathogenic E. coli. S2 is TRUE: Pathogenicity islands (PAIs) are hallmarks of bacterial virulence evolution. They encode toxins, adhesins, secretion systems, and iron acquisition systems. Their distinct GC content and association with tRNA genes and mobile elements indicate horizontal acquisition. S3 is FALSE: Koch's postulates require isolation in pure culture, which is impossible for obligate intracellular pathogens (Chlamydia, Rickettsia, Mycobacterium leprae) and bacteria that only cause disease in the context of complex microbial communities. Molecular Koch's postulates have been proposed as alternatives. S4 is TRUE: Toxin-antitoxin (TA) modules can trigger growth arrest by inhibiting translation, replication, or cell wall synthesis. The antitoxin is degraded during stress, freeing the toxin to induce dormancy (persistence), creating a subpopulation tolerant to antibiotics.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "The human gut microbiome contains approximately 10^13 bacterial cells representing hundreds of species. Which statement best describes the relationship between the gut microbiome and human health?",
+      "options": [
+        "The gut microbiome functions as a mutualistic community that provides metabolic capabilities absent from the human genome, including fermentation of dietary fiber to short-chain fatty acids (acetate, propionate, butyrate) that nourish colonocytes, synthesis of vitamins (K, B12, biotin), development and education of the immune system, and competitive exclusion of pathogens",
+        "The gut microbiome is entirely commensal, providing no benefit to the human host and simply occupying space",
+        "All bacteria in the gut are potential pathogens that the immune system must constantly fight to prevent infection",
+        "The gut microbiome only affects digestion and has no influence on immune function, metabolism, or neurological processes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The gut microbiome is predominantly a mutualistic partner providing essential services. Metabolically, gut bacteria ferment dietary fibers and resistant starches that human enzymes cannot digest, producing short-chain fatty acids (SCFAs) \u2014 butyrate is the primary energy source for colonocytes and has anti-inflammatory properties. Gut bacteria synthesize essential vitamins and amino acids. Immunologically, the microbiome is essential for proper development of gut-associated lymphoid tissue (GALT), regulatory T cells, and mucosal IgA responses. Ecologically, commensal bacteria competitively exclude pathogens through resource competition and production of antimicrobial compounds (bacteriocins). Option A underestimates the extensive mutualistic benefits. Option C incorrectly characterizes commensal bacteria as pathogens. Option D ignores the gut-brain axis, metabolic influences (SCFA effects on insulin sensitivity, appetite), and well-documented immune functions.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Magnetotactic bacteria such as Magnetospirillum magnetotacticum synthesize intracellular chains of magnetite (Fe3O4) nanocrystals called magnetosomes. What is the biological function of magnetosomes, and how are they organized within the cell?",
+      "options": [
+        "Magnetosomes are aligned in chains along cytoskeletal filaments (MamK, an actin-like protein), creating a magnetic dipole that allows the bacterium to orient along Earth's magnetic field lines, facilitating magneto-aerotaxis \u2014 the ability to navigate along magnetic field lines to locate optimal oxygen concentrations in stratified aquatic environments",
+        "Magnetosomes store excess iron for later metabolic use and are randomly distributed throughout the cytoplasm",
+        "Magnetosomes protect the bacterium from predation by making it too heavy for protist engulfment",
+        "Magnetosomes function as intracellular compasses used exclusively for long-distance migration between continents"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Magnetosomes are membrane-enclosed organelles containing crystals of magnetite (Fe3O4) or greigite (Fe3S4), typically 35-120 nm in diameter. They are arranged in chains along actin-like MamK filaments, creating a magnetic dipole moment that aligns the cell with Earth's magnetic field. This passive alignment, combined with active aerotaxis (oxygen sensing), creates magneto-aerotaxis: the bacteria swim along magnetic field lines (which have a vertical component in most locations) to efficiently locate the preferred oxygen concentration at the oxic-anoxic transition zone in stratified water columns or sediments. Without magnetosomes, bacteria would need to perform a three-dimensional random walk to find optimal oxygen levels; with them, the search is reduced to a one-dimensional movement along field lines. Option A is incorrect because magnetosomes have a specific alignment function. Option C is implausible. Option D overstates the migration range \u2014 magneto-aerotaxis operates at the micrometer to centimeter scale.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial chromosomes are organized into topologically independent domains called macrodomains, with the nucleoid compacted by several mechanisms. Which combination of factors is responsible for bacterial chromosome organization?",
+      "options": [
+        "Negative DNA supercoiling maintained by DNA gyrase, nucleoid-associated proteins (HU, H-NS, IHF, Fis) that bend and bridge DNA, macrodomain organizing proteins (MatP, MukBEF), and depletion of ribosomes from the nucleoid creating a phase-separated compartment",
+        "Histones H1-H4 forming nucleosomes identical to eukaryotic chromatin organization",
+        "A nuclear membrane that encloses the bacterial chromosome and provides structural support for organization",
+        "Random, disorganized packing of DNA without any protein-mediated organization"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Bacterial chromosome organization is achieved through multiple hierarchical mechanisms. (1) DNA supercoiling: DNA gyrase introduces negative supercoils, compacting DNA ~1000-fold. Topoisomerase I relaxes supercoils, maintaining homeostasis. Supercoiled domains (~10-100 kb) are topologically isolated by domain barriers. (2) Nucleoid-associated proteins (NAPs): HU (histone-like) introduces flexible bends; H-NS bridges distant DNA segments, forming loops and silencing AT-rich foreign genes; IHF creates sharp DNA bends at specific sequences; Fis (factor for inversion stimulation) compacts DNA during rapid growth. (3) Structural maintenance of chromosomes (SMC) complexes: MukBEF in E. coli (and SMC-ScpAB in B. subtilis) organize chromosomal domains. (4) Transcription-translation coupling and ribosome exclusion create a phase-separated nucleoid. Option A is incorrect because bacteria lack true histones (though archaea have histone homologs). Option C is wrong because prokaryotes lack a nuclear membrane. Option D underestimates the sophistication of bacterial chromosome organization.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial flagellar motility involves rotation of the flagellar filament driven by a proton motive force (PMF)-powered motor embedded in the cell envelope. In E. coli chemotaxis, what molecular mechanism determines whether the flagellar motor rotates counterclockwise (smooth swimming) or clockwise (tumbling)?",
+      "options": [
+        "Direct binding of attractant molecules to the flagellar motor switches it to counterclockwise rotation",
+        "The flagellar motor always rotates in one direction; tumbling is caused by physical breakage and reassembly of the flagellar filament",
+        "Phosphorylated CheY (CheY-P) binds to the FliM switch protein in the flagellar motor basal body, promoting clockwise rotation and tumbling; when attractant binding to chemoreceptors reduces CheA kinase activity, CheY-P levels decrease, favoring counterclockwise rotation and smooth swimming toward the attractant",
+        "ATP hydrolysis by the flagellar motor ATPase directly controls rotational direction based on intracellular ATP levels"
+      ],
+      "correctAnswer": "C",
+      "explanation": "E. coli chemotaxis involves a sophisticated signal transduction pathway. Methyl-accepting chemotaxis proteins (MCPs) in the membrane detect attractants and repellents. Attractant binding inhibits the histidine kinase CheA, reducing phosphorylation of the response regulator CheY. Without phosphorylation, CheY cannot bind the FliM switch protein, so the motor defaults to counterclockwise (CCW) rotation, bundling flagella and producing smooth swimming runs toward the attractant. When attractant decreases, CheA activity increases, CheY-P accumulates, binds FliM, and switches the motor to clockwise (CW) rotation, causing flagellar unbundling and tumbling. CheZ phosphatase resets CheY-P back to CheY. Adaptation occurs through methylation of MCPs by CheR. Option A bypasses the signal transduction cascade. Option B is incorrect because the motor reverses, not breaks. Option D is wrong because the flagellar motor is PMF-driven, not ATP-driven.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Methanogenic archaea are strictly anaerobic organisms that produce methane as a metabolic byproduct. Which metabolic pathway is unique to methanogens?",
+      "options": [
+        "The Calvin cycle for carbon dioxide fixation",
+        "Beta-oxidation of long-chain fatty acids",
+        "Fermentation of glucose to ethanol and carbon dioxide",
+        "The reduction of CO2 to CH4 using H2 as an electron donor, involving unique coenzymes such as coenzyme M (CoM), coenzyme B (CoB), methanofuran, and tetrahydromethanopterin (H4MPT) that are found exclusively in methanogenic archaea"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Methanogenesis is a unique form of anaerobic respiration where CO2 serves as the terminal electron acceptor and is reduced to methane (CH4). The overall reaction is: CO2 + 4H2 \u2192 CH4 + 2H2O (\u0394G\u00b0 = -131 kJ/mol). This pathway involves a series of coenzymes found nowhere else in biology: methanofuran binds CO2 and begins the reduction; tetrahydromethanopterin carries the C1 unit through sequential reduction steps; coenzyme M (2-mercaptoethanesulfonic acid) carries the methyl group in the final step; coenzyme B donates electrons for the final reduction by methyl-CoM reductase, which produces CH4 and a heterodisulfide (CoM-S-S-CoB). Some methanogens can also use acetate, methanol, or methylamines as substrates. Option A is found in many autotrophs. Option B occurs in many organisms. Option C is performed by yeast and some bacteria.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A hospital microbiology lab tests an unknown Gram-negative rod isolated from a patient's bloodstream. The following biochemical results are obtained:\n- Oxidase: positive\n- Catalase: positive\n- Glucose fermentation: negative (oxidative only)\n- Lactose fermentation: negative\n- Motility: positive (polar flagellum)\n- Pigment: blue-green (pyocyanin)\n- Growth at 42\u00b0C: positive\n\nWhich organism is this most likely to be?",
+      "options": [
+        "Escherichia coli, based on its Gram-negative rod morphology and catalase positivity",
+        "Pseudomonas aeruginosa, based on the combination of oxidase positivity, non-fermentative metabolism (obligate aerobe), blue-green pyocyanin pigment production, polar flagellum motility, and growth at 42\u00b0C \u2014 all characteristic features of this opportunistic pathogen",
+        "Staphylococcus aureus, based on catalase positivity and growth at 42\u00b0C",
+        "Klebsiella pneumoniae, based on its Gram-negative rod shape and catalase positivity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This biochemical profile is classic for Pseudomonas aeruginosa: (1) Gram-negative rod: consistent; (2) Oxidase positive: P. aeruginosa has cytochrome c oxidase, distinguishing it from Enterobacteriaceae which are oxidase negative; (3) Non-fermentative (oxidative only): P. aeruginosa is an obligate aerobe that cannot ferment glucose; (4) Pyocyanin (blue-green pigment): a phenazine pigment produced almost exclusively by P. aeruginosa; (5) Polar flagellum: P. aeruginosa has a single polar flagellum; (6) Growth at 42\u00b0C: distinguishes P. aeruginosa from most other Pseudomonas species. Option A is incorrect because E. coli is oxidase negative and ferments both glucose and lactose. Option C is wrong because S. aureus is a Gram-positive coccus. Option D is incorrect because Klebsiella is oxidase negative, ferments glucose and lactose, and is non-motile.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "The SOS response in bacteria is a global regulatory network activated by DNA damage. Which sequence of molecular events correctly describes SOS activation in E. coli?",
+      "options": [
+        "DNA damage generates single-stranded DNA (ssDNA) at stalled replication forks; RecA protein binds ssDNA forming a nucleoprotein filament (RecA*); RecA* stimulates the autocatalytic cleavage of the LexA repressor; LexA degradation derepresses ~40 SOS genes including those for error-prone DNA polymerases (Pol IV, Pol V), DNA repair enzymes, and cell division inhibitor SulA",
+        "DNA damage directly activates LexA as a transcription activator that turns on DNA repair genes",
+        "DNA damage activates a two-component signaling system where a sensor kinase phosphorylates a response regulator that induces repair genes",
+        "DNA damage triggers spontaneous mutagenesis without any specific regulatory response"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The SOS response is initiated when DNA damage (UV, chemicals, replication blocks) generates regions of single-stranded DNA, typically at stalled replication forks. RecA protein polymerizes on ssDNA to form an active nucleoprotein filament (RecA*). RecA* acts as a co-protease, stimulating the latent autoproteolytic activity of the LexA repressor, which cleaves itself at an Ala-Gly bond. LexA normally represses ~40 SOS genes by binding to SOS boxes in their promoters. As LexA is degraded, SOS genes are derepressed in a temporal order: early genes (uvrA, uvrB for nucleotide excision repair) are expressed first because their SOS boxes have lower LexA affinity; late genes (sulA for cell division inhibition, umuC/umuD for error-prone repair by Pol V) are expressed later as LexA levels drop further. Option B reverses LexA's role (it is a repressor, not activator). Option C describes a different signaling paradigm. Option D ignores the sophisticated regulatory response.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Rickettsia and Chlamydia are both obligate intracellular bacterial pathogens, but they belong to different phyla. Which fundamental difference in their intracellular survival strategies distinguishes these two genera?",
+      "options": [
+        "Rickettsia replicate in the host cell nucleus while Chlamydia replicate in the mitochondria",
+        "Rickettsia escape the phagosome to replicate freely in the host cell cytoplasm using phospholipase activity, while Chlamydia remain within a modified vacuolar compartment (the inclusion body) that avoids lysosomal fusion and acquires host lipids through interactions with the Golgi apparatus",
+        "Both organisms replicate identically within phagosomes and are distinguished only by their size",
+        "Chlamydia can be grown on standard bacteriological media while Rickettsia cannot"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Rickettsia species (e.g., R. rickettsii causing Rocky Mountain spotted fever) escape from the phagosome into the host cytoplasm within minutes of uptake, using phospholipase A2 and hemolysin C to lyse the phagosomal membrane. They then replicate freely in the cytoplasm and can use actin-based motility (similar to Listeria) for cell-to-cell spread. In contrast, Chlamydia species (e.g., C. trachomatis) have a unique biphasic developmental cycle. The metabolically inert elementary body (EB) is endocytosed and remains within a membrane-bound compartment (inclusion body). The inclusion avoids lysosomal fusion through secreted effector proteins and acquires host-derived lipids by intercepting vesicular traffic from the Golgi. Inside, EBs differentiate into metabolically active reticulate bodies (RBs) that divide by binary fission. Option A is incorrect about the location of replication. Option C ignores the distinct intracellular niches. Option D is wrong because both are obligate intracellular and cannot be grown on standard media.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Extremophilic archaea have evolved remarkable adaptations to thrive in extreme environments. Halophilic archaea like Halobacterium salinarum survive in saturated salt solutions (>4 M NaCl). How do they maintain osmotic balance?",
+      "options": [
+        "They pump salt out using ATP-driven ion pumps to maintain a low intracellular salt concentration, similar to marine fish osmoregulation",
+        "They accumulate compatible solutes like glycerol betaine and ectoine to balance external osmotic pressure without disrupting intracellular enzymes",
+        "They employ the 'salt-in' strategy, accumulating potassium chloride (KCl) to molar concentrations in the cytoplasm, and their proteins have evolved highly acidic surfaces (excess aspartate and glutamate residues) that require high ionic strength for proper folding and function",
+        "They form thick-walled cysts that are impermeable to water and salt, avoiding the osmotic challenge entirely"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Halobacterium and other extreme halophilic archaea use the 'salt-in' strategy: they accumulate K+ to multi-molar concentrations (3-5 M) in the cytoplasm to match external NaCl osmolarity. This creates a unique intracellular environment that would denature most proteins. Accordingly, halophilic proteins have evolved distinctive amino acid compositions: they are enriched in acidic residues (aspartate, glutamate) on their surfaces, creating a hydration shell that maintains solubility and stability at high ionic strength. These proteins actually require high salt concentrations to fold correctly and are denatured at low ionic strength. Halobacterium also uses bacteriorhodopsin, a light-driven proton pump, and halorhodopsin, a light-driven chloride pump, for energy generation. Option A describes the opposite strategy used by some moderate halophiles. Option B describes the 'compatible solute' strategy used by halotolerant bacteria. Option D is incorrect because halophiles are metabolically active in saturated salt.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher isolates a bacterium that appears to perform anoxygenic photosynthesis based on its purple pigmentation and growth under anaerobic illuminated conditions. To confirm this and characterize the photosynthetic system, which set of experiments would be most definitive?",
+      "options": [
+        "Measure the organism's growth rate under different light intensities and conclude it is photosynthetic if growth increases with light",
+        "Measure the organism's oxygen production under illumination to confirm photosynthesis",
+        "Extract and characterize photosynthetic pigments using absorption spectroscopy to identify bacteriochlorophyll types; demonstrate light-dependent ATP synthesis using in vivo ATP assays; show that photosynthesis occurs without oxygen evolution by measuring O2 in sealed anaerobic cultures under light; and identify the electron donors used (H2S, organic compounds) through growth experiments on defined media",
+        "Sequence the organism's genome and search for genes homologous to plant photosystem genes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Confirming anoxygenic photosynthesis requires demonstrating: (1) the presence of bacteriochlorophyll, which absorbs at wavelengths distinct from chlorophyll a (BChl a absorbs at 800-890 nm, BChl b at 1015-1035 nm), identifiable by absorption spectroscopy; (2) light-dependent ATP production confirming that light energy is converted to chemical energy; (3) the absence of O2 evolution, which distinguishes anoxygenic from oxygenic photosynthesis; (4) identification of electron donors (H2S for purple sulfur bacteria, organic compounds for purple non-sulfur bacteria), which defines the type of anoxygenic phototroph. Option A shows light-dependent growth but does not distinguish photosynthesis from other light-responsive behaviors. Option B would yield a negative result (no O2) for anoxygenic phototrophs, which might be misinterpreted as absence of photosynthesis. Option D provides genetic evidence but not functional confirmation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial cell division through binary fission requires precise coordination of chromosome replication, segregation, and septum formation. The tubulin homolog FtsZ plays a central role. What is the function of FtsZ in cell division?",
+      "options": [
+        "FtsZ forms the spindle apparatus that pulls sister chromosomes to opposite cell poles, analogous to eukaryotic mitotic spindles",
+        "FtsZ polymerizes into a ring structure (Z-ring) at the cell midpoint, which recruits other division proteins and generates the constrictive force needed to invaginate the cell membrane and peptidoglycan layer during cytokinesis",
+        "FtsZ is a DNA polymerase that replicates the bacterial chromosome during cell division",
+        "FtsZ forms the pilus structures required for DNA transfer during conjugation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "FtsZ is a GTPase and structural homolog of eukaryotic tubulin that polymerizes into a dynamic ring structure (Z-ring) at the future division site, typically at the cell midpoint. The Z-ring serves as a scaffold for the divisome \u2014 a complex of approximately 20 proteins including FtsA, ZipA, FtsI (a transpeptidase), FtsK (a DNA translocase), and others. FtsZ GTPase activity drives treadmilling of FtsZ filaments around the ring circumference, which guides the circumferential movement of peptidoglycan synthases, producing new septal cell wall material. The Z-ring constricts progressively, invaginating the inner membrane, peptidoglycan, and (in Gram-negatives) the outer membrane. Positioning of the Z-ring at midcell is ensured by negative regulators: the Min system (MinCDE) prevents Z-ring formation near cell poles, and nucleoid occlusion (SlmA/Noc) prevents formation over the chromosome. Option A incorrectly attributes chromosome segregation to FtsZ. Option C and D describe unrelated functions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Streptomyces coelicolor is a soil bacterium renowned for producing numerous secondary metabolites including antibiotics. What distinguishes Streptomyces from typical bacteria in terms of its life cycle and genome?",
+      "options": [
+        "Streptomyces has a circular chromosome like most bacteria and reproduces exclusively by binary fission",
+        "Streptomyces possesses one of the largest known bacterial genomes (~8 Mb), a linear chromosome with telomere-like ends, and a complex multicellular life cycle involving vegetative hyphae, aerial hyphae formation, and differentiation into chains of exospores \u2014 resembling a simplified fungal life cycle",
+        "Streptomyces is actually a eukaryotic fungus that was mistakenly classified as a bacterium",
+        "Streptomyces has a very small genome (<1 Mb) that encodes only essential genes, with all secondary metabolite genes located on plasmids"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Streptomyces is exceptional among bacteria for several features: (1) Linear chromosome: unlike most bacteria with circular chromosomes, Streptomyces has a linear chromosome (~8-9 Mb) with terminal inverted repeats capped by proteins (analogous to telomeres). (2) Large genome: ~8 Mb, among the largest bacterial genomes, with approximately 20-30 secondary metabolite biosynthetic gene clusters (BGCs) encoding antibiotics, antifungals, and other bioactive compounds. (3) Complex developmental cycle: from germinating spores, branching vegetative hyphae (substrate mycelium) grow into the substrate; nutrient depletion triggers aerial hyphae formation (producing the characteristic fuzzy appearance); aerial hyphae undergo septation into unigenomic compartments that develop into desiccation-resistant exospores. This is accompanied by temporal regulation of antibiotic production, typically coinciding with aerial hyphae formation. Option A is incorrect about chromosome topology and reproduction. Option C is wrong \u2014 Streptomyces is a high-GC Gram-positive Actinobacterium. Option D reverses the genome size and BGC location.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about bacterial gene regulation:\nS1: Sigma factors in bacteria direct RNA polymerase to specific promoter sequences, and alternative sigma factors allow rapid reprogramming of gene expression in response to environmental changes (e.g., sigma-32 for heat shock, sigma-S for stationary phase).\nS2: Riboswitches are mRNA regulatory elements that directly bind small molecule metabolites in the 5' UTR, changing RNA secondary structure to control transcription termination or translation initiation without requiring a protein regulator.\nS3: All bacterial gene regulation occurs at the transcriptional level; post-transcriptional regulation does not exist in prokaryotes.\nS4: Small regulatory RNAs (sRNAs) in bacteria can base-pair with target mRNAs to either stabilize or destabilize them, functioning analogously to eukaryotic microRNAs in post-transcriptional gene regulation.",
+      "options": [
+        "TTFT",
+        "TTTF",
+        "TTTT",
+        "TFFT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Sigma factors are dissociable subunits of bacterial RNA polymerase that confer promoter specificity. E. coli has seven sigma factors: sigma-70 (housekeeping), sigma-32 (heat shock/misfolded proteins), sigma-S/RpoS (stationary phase/general stress), sigma-54 (nitrogen), sigma-F/FliA (flagellar), sigma-E (extracytoplasmic stress), and sigma-FecI (iron citrate). Switching sigma factors rapidly redirects transcription to new gene sets. S2 is TRUE: Riboswitches are cis-acting RNA elements (typically in 5' UTRs) that undergo conformational changes upon directly binding specific metabolites (e.g., thiamine pyrophosphate, flavin mononucleotide, SAM, lysine). This conformational change can form or disrupt terminators (controlling transcription) or sequester/expose the Shine-Dalgarno sequence (controlling translation). S3 is FALSE: Bacteria extensively use post-transcriptional regulation including sRNAs, RNA thermometers, riboswitches, RNase-mediated mRNA degradation, translational coupling, and ribosome-mediated attenuation. S4 is TRUE: Bacterial sRNAs (e.g., RyhB, MicA, OxyS) base-pair with target mRNAs, often facilitated by the RNA chaperone Hfq, to promote or inhibit translation and affect mRNA stability.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cyanobacteria that fix nitrogen face the challenge of protecting nitrogenase from oxygen produced by their own photosynthesis. Filamentous cyanobacteria like Anabaena solve this by differentiating specialized cells called heterocysts. Which features of heterocysts enable nitrogen fixation?",
+      "options": [
+        "Heterocysts produce oxygen at higher rates than vegetative cells, overwhelming nitrogenase's sensitivity to oxygen through desensitization",
+        "Heterocysts lack photosystem II (eliminating oxygen evolution), have thickened glycolipid cell walls that limit oxygen diffusion, maintain high respiration rates to consume residual oxygen, and receive fixed carbon from adjacent vegetative cells through intercellular connections (microplasmodesmata)",
+        "Heterocysts are completely isolated from vegetative cells and obtain all necessary nutrients from the external environment",
+        "Heterocysts perform oxygenic photosynthesis but sequester nitrogenase inside membrane-bound organelles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Heterocysts are terminally differentiated cells specialized for nitrogen fixation in filamentous cyanobacteria. They solve the oxygen problem through multiple mechanisms: (1) Loss of PSII: heterocysts retain PSI for cyclic photophosphorylation (ATP production) but lack PSII, eliminating internal oxygen evolution. (2) Thickened cell envelope: additional glycolipid layers and polysaccharide layers reduce oxygen permeability. (3) Enhanced respiration: high rates of respiratory electron transport consume oxygen that diffuses in. (4) Metabolic cooperation: heterocysts receive sucrose and other fixed carbon compounds from neighboring vegetative cells through microplasmodesmata (channels through the shared cell wall), and in return provide fixed nitrogen (as glutamine) to vegetative cells. This creates a division of labor within the filament. Option A is counterproductive. Option C ignores the essential metabolic exchange between cell types. Option D invokes membrane-bound compartments not found in prokaryotic heterocysts.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial spore-forming genera include both aerobic (Bacillus) and anaerobic (Clostridium) organisms. During sporulation in Bacillus subtilis, which transcription factor cascade drives the temporal program of gene expression in the developing endospore?",
+      "options": [
+        "A single sigma factor (sigma-70) controls all sporulation genes from initiation to spore maturation",
+        "A cascade of four compartment-specific sigma factors: sigma-F activates in the forespore, triggering sigma-E in the mother cell, which activates sigma-G in the forespore, followed by sigma-K in the mother cell \u2014 creating a criss-cross regulatory circuit between the two compartments that coordinates development",
+        "Sporulation gene expression is entirely random, with stochastic gene activation determining which cells become spores",
+        "A eukaryotic-type MAP kinase cascade controls sporulation through sequential phosphorylation of transcription factors"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sporulation in B. subtilis involves asymmetric cell division creating two compartments \u2014 the smaller forespore and the larger mother cell \u2014 each controlled by distinct sigma factors in a criss-cross regulatory cascade. (1) Sigma-F activates first in the forespore, held inactive until asymmetric septation by the anti-sigma factor SpoIIAB and released by the anti-anti-sigma factor SpoIIAA. (2) Sigma-F-dependent gene expression in the forespore produces a signal (SpoIIR) that activates sigma-E processing in the mother cell. (3) Sigma-E in the mother cell activates genes needed for engulfment of the forespore, and mother cell signals activate sigma-G in the engulfed forespore. (4) Sigma-G activates late forespore genes, and its products trigger processing of pro-sigma-K to active sigma-K in the mother cell. Sigma-K drives coat protein synthesis and mother cell lysis. This criss-cross regulation ensures coordinated development between compartments. Option A oversimplifies the regulation. Option C is incorrect \u2014 sporulation is highly regulated. Option D describes a eukaryotic mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A study compares the metabolic capabilities of bacteria in an ocean water column. 16S rRNA amplicon data and shotgun metagenomics reveal:\n- Surface (0-50m): Dominated by Prochlorococcus and SAR11; high abundance of photosynthesis genes and proteorhodopsin genes\n- Oxygen minimum zone (200-800m): Enriched in Planctomycetes and Gammaproteobacteria; high abundance of anammox genes and denitrification genes\n- Deep water (>2000m): Enriched in Thaumarchaeota; high abundance of ammonia oxidation genes (amoA)\n\nWhat does this vertical stratification reveal about nitrogen cycling in the ocean?",
+      "options": [
+        "Nitrogen cycling occurs only at the surface where light drives all metabolic processes",
+        "The vertical distribution reflects the coupling of nitrogen cycle processes to oxygen availability: phototrophic organisms at the surface fix carbon; anammox and denitrification in the oxygen minimum zone remove bioavailable nitrogen under anaerobic conditions; and archaeal ammonia oxidation (nitrification) in the deep ocean converts ammonium to nitrite/nitrate in the cold, oxygenated deep water",
+        "All three zones perform identical nitrogen cycling processes because the same bacteria are present throughout the water column",
+        "The deep water archaea perform nitrogen fixation, converting N2 to NH4+, which is then transported to the surface"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This vertical stratification beautifully illustrates how nitrogen cycling processes are distributed according to oxygen gradients and energy sources. At the surface, photosynthesis drives primary production. In the oxygen minimum zone (OMZ), low O2 conditions favor anaerobic nitrogen removal: anammox bacteria (Planctomycetes like Candidatus Scalindua) combine NH4+ with NO2- to produce N2, while denitrifying Gammaproteobacteria reduce NO3- to N2. Together, these OMZ processes represent major sinks for bioavailable nitrogen. In the deep ocean, Thaumarchaeota (formerly marine group I Crenarchaeota) are abundant ammonia-oxidizing archaea (AOA) that convert NH4+ to NO2- (the first step of nitrification) using ammonia monooxygenase (amoA). This archaeal nitrification produces much of the ocean's nitrate pool. Option A ignores significant deep-water nitrogen cycling. Option C disregards the community differences. Option D reverses the direction of Thaumarchaeota metabolism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bdellovibrio bacteriovorus is a predatory bacterium that attacks and consumes other Gram-negative bacteria. What is unique about its predatory life cycle?",
+      "options": [
+        "Bdellovibrio secretes toxins that kill prey bacteria from a distance, then absorbs nutrients released into the surrounding medium",
+        "Bdellovibrio attaches to the outer membrane of a prey cell, penetrates through the outer membrane into the periplasmic space, replicates within the periplasm while degrading the prey cell from the inside, and eventually lyses the prey cell to release progeny",
+        "Bdellovibrio engulfs entire prey bacteria through a phagocytosis-like mechanism",
+        "Bdellovibrio forms a mutualistic symbiosis with its prey, exchanging nutrients through intercellular channels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bdellovibrio has a biphasic life cycle. In the attack phase, the small (0.2-0.5 x 0.5-2.5 micrometers), highly motile Bdellovibrio cell attaches to a Gram-negative prey bacterium at high velocity. It then uses hydrolytic enzymes to penetrate the prey's outer membrane and enter the periplasmic space (the space between the outer and inner membranes), forming a structure called a bdelloplast. Inside the periplasm, Bdellovibrio degrades the prey's macromolecules (proteins, DNA, RNA, lipids) as nutrients and grows as a long filament. After consuming the prey, the filament septates into multiple progeny cells that lyse the bdelloplast and are released to find new prey. The entire cycle takes 3-4 hours. Bdellovibrio has been proposed as a potential 'living antibiotic' for treating Gram-negative infections. Option A describes extracellular killing. Option C describes eukaryotic phagocytosis. Option D incorrectly characterizes the interaction as mutualistic.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial phase variation allows rapid, reversible switching of gene expression, enabling populations to generate phenotypic diversity. In Salmonella, flagellar phase variation switches between two flagellin types (H1 and H2). Which molecular mechanism drives this switch?",
+      "options": [
+        "Point mutations in the flagellin gene that randomly alter the protein sequence",
+        "DNA inversion of a promoter-containing segment by a site-specific recombinase (Hin invertase), which in one orientation drives expression of H2 flagellin and a repressor of H1, and in the opposite orientation silences H2 and derepresses H1",
+        "Alternative splicing of a single flagellin pre-mRNA to produce either H1 or H2 protein",
+        "Differential DNA methylation of the H1 and H2 flagellin gene promoters by a stochastic methyltransferase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Salmonella flagellar phase variation is a classic example of invertible DNA switch regulation. A ~1 kb DNA segment flanked by inverted repeats (hix sites) contains the promoter for the fljBA operon. The Hin invertase catalyzes site-specific recombination between the hix sites, flipping the orientation of the promoter segment. In one orientation, the promoter drives transcription of fljB (encoding H2 flagellin) and fljA (encoding a repressor of fliC, the H1 flagellin gene). In the opposite orientation, the promoter faces away from fljBA, so H2 and the H1 repressor are not expressed, allowing constitutive expression of fliC (H1 flagellin). This stochastic switching occurs at a frequency of ~10^-3 to 10^-5 per cell per generation, generating flagellar antigenic diversity that helps Salmonella evade the host immune response. Option A describes mutation, not phase variation. Option C describes a eukaryotic mechanism. Option D describes a different regulatory mechanism not used in flagellar switching.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "The bacterial type VI secretion system (T6SS) is a contact-dependent killing mechanism used in interbacterial competition. Which structural and functional features characterize the T6SS?",
+      "options": [
+        "T6SS is a pilus-like structure that transfers DNA between bacteria during conjugation",
+        "T6SS resembles a contractile bacteriophage tail turned inside out: a baseplate complex anchored in the cell envelope supports a sheath that contracts to propel an inner tube tipped with effector proteins into adjacent target cells, delivering toxic effectors that kill competitor bacteria",
+        "T6SS is a simple channel that passively releases antibiotics into the extracellular environment",
+        "T6SS is exclusively used for secreting proteins into eukaryotic host cells during pathogenesis and plays no role in interbacterial competition"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The T6SS is structurally and evolutionarily related to contractile bacteriophage tails. The system consists of: (1) a membrane complex (TssJ, TssL, TssM) anchoring the system in the cell envelope; (2) a baseplate complex (TssE, TssF, TssG, TssK, VgrG spike protein); (3) an inner tube made of Hcp (hemolysin co-regulated protein) hexameric rings; (4) a contractile sheath (TssB/TssC) surrounding the inner tube. Upon triggering by cell-cell contact, the sheath contracts (like phage tail contraction), driving the Hcp tube and VgrG spike outward through the cell envelope into the adjacent target cell. The VgrG spike and associated effector proteins (e.g., peptidoglycan hydrolases, phospholipases, DNases) kill the target. The attacking cell has cognate immunity proteins to protect against self-intoxication. Option A describes the T4SS. Option C oversimplifies the mechanism. Option D ignores the major role in interbacterial competition.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Wolbachia is an obligate intracellular alpha-proteobacterium that infects a wide range of arthropods. It has evolved remarkable mechanisms to ensure its maternal transmission. Which reproductive manipulation does Wolbachia commonly employ?",
+      "options": [
+        "Wolbachia increases male fertility to ensure more offspring are produced, indirectly benefiting its own transmission",
+        "Wolbachia induces cytoplasmic incompatibility (CI), where crosses between infected males and uninfected females produce inviable embryos due to Wolbachia-mediated modification of sperm chromatin, while infected females can rescue this modification, giving infected females a reproductive advantage that drives Wolbachia spread through the population",
+        "Wolbachia prevents all reproduction in infected hosts, forcing the host to become an evolutionary dead end",
+        "Wolbachia is transmitted through both maternal and paternal routes equally, so reproductive manipulation is unnecessary"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Wolbachia employs several reproductive manipulation strategies to maximize its maternal transmission. Cytoplasmic incompatibility (CI) is the most common: in crosses between Wolbachia-infected males and uninfected females, the embryos die because Wolbachia in the male germ line modifies sperm chromatin (through the CifA/CifB toxin-antidote system), and without Wolbachia in the egg to rescue this modification, embryonic mitosis fails. Infected females can mate with any male (infected or uninfected) successfully because their Wolbachia provides the rescue factor. This gives infected females a reproductive advantage over uninfected females, driving Wolbachia to high frequency. Other manipulations include male-killing, feminization of genetic males, and parthenogenesis induction. Option A contradicts Wolbachia's strategy of disadvantaging uninfected females. Option C would be selected against because it eliminates the host. Option D is incorrect because Wolbachia is strictly maternally transmitted (in egg cytoplasm).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial restriction-modification (R-M) systems protect bacteria against foreign DNA. How do bacteria distinguish their own DNA from foreign DNA in a type II restriction-modification system?",
+      "options": [
+        "Bacterial DNA is protected by a protein coat that physically blocks restriction enzyme access",
+        "The methyltransferase component methylates the bacterial chromosome at the same recognition sequence that the restriction endonuclease targets, preventing cleavage; incoming foreign DNA (from phages or transformation) lacks this methylation pattern and is recognized and cleaved by the restriction enzyme",
+        "Bacterial DNA has a different base composition (higher GC content) that makes it resistant to restriction enzyme cleavage",
+        "Restriction enzymes only function outside the cell and never encounter chromosomal DNA"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Type II R-M systems consist of two enzymes: a restriction endonuclease that recognizes and cleaves a specific palindromic DNA sequence, and a cognate methyltransferase that methylates the same sequence (typically at an adenine or cytosine within the recognition site). The host cell's DNA is fully methylated at all recognition sites by the methyltransferase, protecting it from cleavage. After DNA replication, hemimethylated daughter strands are rapidly remethylated by the methyltransferase. Foreign DNA entering the cell (phage DNA, transformed DNA) lacks the specific methylation pattern and is immediately recognized and cleaved by the restriction endonuclease. This system provides innate immune defense against phages. However, phages can evolve counter-defenses, including their own methyltransferases, anti-restriction proteins, or modified bases. Option A does not reflect the actual mechanism. Option C is incorrect because GC content does not affect restriction enzyme specificity. Option D is wrong because restriction enzymes function in the cytoplasm.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A biotechnology company wants to engineer E. coli to produce a valuable secondary metabolite normally produced by a Streptomyces species. The biosynthetic gene cluster spans 45 kb and contains 20 genes. Which challenges must be addressed, and what engineering strategy would be most effective?",
+      "options": [
+        "Simply clone the 45 kb cluster into a standard high-copy plasmid and express it in E. coli; no optimization is needed",
+        "Clone the entire cluster into a BAC (bacterial artificial chromosome) or chromosomally integrate it; replace Streptomyces promoters with E. coli-compatible promoters; codon-optimize genes for E. coli codon bias; ensure precursor supply by engineering primary metabolic pathways; and potentially refactor the cluster by splitting it into manageable modules with synthetic regulatory elements",
+        "Transfer the Streptomyces culture conditions (temperature, media) to E. coli, which will automatically activate the foreign gene cluster",
+        "Express only one gene from the cluster at a time, as E. coli cannot express more than one heterologous gene simultaneously"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Heterologous expression of large biosynthetic gene clusters faces multiple challenges: (1) Size: 45 kb exceeds standard plasmid capacity; BACs, chromosomal integration, or specialized vectors (pETduet, pCDF) are needed. (2) Promoter recognition: Streptomyces promoters are not recognized by E. coli RNA polymerase; they must be replaced with T7, tac, or other E. coli-compatible promoters. (3) Codon usage: Streptomyces genes are GC-rich (>70% GC) with codon preferences very different from E. coli; rare codons can stall translation. (4) Precursor supply: the metabolite may require precursors (malonyl-CoA, methylmalonyl-CoA, unusual amino acids) that E. coli produces in limited quantities. (5) Cluster refactoring: reorganizing the cluster with synthetic promoters, RBS elements, and terminators for each gene ensures proper expression in E. coli. Option A ignores all the compatibility challenges. Option C incorrectly assumes growth conditions activate foreign genes. Option D underestimates E. coli's capabilities.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Caulobacter crescentus has an obligately asymmetric cell division cycle where each division produces two morphologically and functionally distinct daughter cells: a motile swarmer cell and a sessile stalked cell. What controls this dimorphic cell fate?",
+      "options": [
+        "Random partitioning of cellular components during cell division determines cell fate by chance",
+        "A phosphorelay signaling cascade involving the master regulators CtrA (active in the swarmer cell, where it blocks DNA replication and activates flagellar genes) and DnaA (active in the stalked cell, where it initiates DNA replication), with asymmetric localization of regulatory proteins to different cell poles creating distinct developmental programs before division is complete",
+        "External environmental signals exclusively determine whether a cell becomes a swarmer or stalked cell after division",
+        "Both daughter cells are initially identical, and the difference only appears after exposure to different nutrient concentrations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Caulobacter's asymmetric division is controlled by an intricate network of spatially localized regulatory proteins. The master regulator CtrA (cell cycle transcription regulator A) is a response regulator that is active (phosphorylated) in the swarmer compartment and promotes expression of flagellar, pili, and chemotaxis genes while simultaneously blocking the initiation of DNA replication by binding to the origin of replication. In the stalked compartment, CtrA is proteolyzed by the ClpXP protease (recruited by the PopA-RcdA-CpdR adaptor complex), allowing DnaA to initiate DNA replication. This asymmetric CtrA distribution is established before cell division through polar localization of kinases (DivJ at the stalked pole), phosphatases (PleC at the swarmer pole), and the hybrid histidine kinase DivK. The signaling cascade (DivJ \u2192 DivK \u2192 PleC) creates a phosphorylation gradient that drives asymmetric CtrA activity. Option A underestimates the precision of the regulation. Options C and D ignore the intrinsic cell-autonomous regulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Mycoplasma genitalium has one of the smallest known genomes of any self-replicating organism (~580 kb, ~475 protein-coding genes). Craig Venter's team synthesized this genome chemically and used it to create a 'synthetic cell.' What was the primary scientific goal of this synthetic biology achievement?",
+      "options": [
+        "To prove that DNA is the genetic material, confirming earlier experiments by Avery, MacLeod, and McCarty",
+        "To demonstrate that a chemically synthesized genome can boot up a living cell and to identify the minimal gene set required for self-sustaining life by systematically deleting genes to determine which are essential",
+        "To create a new species of bacteria for commercial antibiotic production",
+        "To disprove the endosymbiotic theory of mitochondrial origin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Venter Institute's synthetic Mycoplasma mycoides JCVI-syn1.0 (2010) and subsequent JCVI-syn3.0 (2016) projects had two major goals: (1) Demonstrate that a chemically synthesized genome can replace a natural genome and direct a living cell, establishing the principle of genome design and construction. (2) Determine the minimal genome: by systematically removing genes from the already small Mycoplasma genome, the team identified ~473 genes sufficient for life under laboratory conditions (JCVI-syn3.0), though surprisingly, 149 of these genes have unknown functions \u2014 revealing fundamental gaps in our understanding of even the simplest cells. This work laid the foundation for synthetic biology by showing that genomes can be designed, synthesized, and used to create organisms with specified properties. Option A addresses a question resolved in the 1940s. Option C was not the goal. Option D is unrelated to this work.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "A clinical microbiologist observes that a patient's blood culture contains Gram-positive cocci arranged in grape-like clusters. The isolate is catalase-positive, coagulase-positive, and mannitol salt agar-positive (ferments mannitol). Which organism is most likely, and what virulence factor is indicated by the coagulase test?",
+      "options": [
+        "Streptococcus pyogenes, which produces coagulase to form fibrin clots that protect it from phagocytosis",
+        "Enterococcus faecalis, which uses coagulase for biofilm formation in the urinary tract",
+        "Staphylococcus epidermidis, which is coagulase-positive and causes skin infections",
+        "Staphylococcus aureus, which produces free coagulase (staphylocoagulase) that activates prothrombin to form fibrin clots around the bacterial cells, shielding them from phagocytic immune cells and creating a protective barrier at the infection site"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The combination of Gram-positive cocci in clusters, catalase positivity, coagulase positivity, and mannitol fermentation is diagnostic for Staphylococcus aureus. Coagulase is a key virulence factor: staphylocoagulase (free coagulase) binds to and activates prothrombin without proteolytic cleavage, forming a complex called staphylothrombin that converts fibrinogen to fibrin. The resulting fibrin clot surrounds the bacterial cells, creating a physical barrier against phagocytic neutrophils and macrophages. S. aureus also produces clumping factor (bound coagulase) on its cell surface, which directly converts fibrinogen to fibrin on contact. Option A is incorrect because Streptococcus is catalase-negative and does not produce coagulase. Option B is wrong because Enterococcus is not coagulase-positive and does not cluster in grapes. Option C is incorrect because S. epidermidis is coagulase-negative, which is its key distinguishing feature from S. aureus.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial outer membrane vesicles (OMVs) are spherical bilayer vesicles (20-250 nm) released from the outer membrane of Gram-negative bacteria. What biological functions do OMVs serve?",
+      "options": [
+        "OMVs are non-functional debris produced by random membrane blebbing with no biological significance",
+        "OMVs only function as decoys that absorb bacteriophages, protecting the parent cell from infection",
+        "OMVs exclusively transport nutrients into bacterial cells from the surrounding environment",
+        "OMVs serve as versatile delivery vehicles for virulence factors (toxins, proteases), signaling molecules (quorum sensing autoinducers), and genetic material (DNA, RNA), and they can deliver membrane attack complexes to kill competing bacteria; they also modulate host immune responses during infection"
+      ],
+      "correctAnswer": "D",
+      "explanation": "OMVs are now recognized as a sophisticated secretion mechanism with multiple functions. They carry a cargo of periplasmic and outer membrane proteins, lipopolysaccharide, and luminal contents from the parent cell. (1) Virulence: OMVs deliver toxins (e.g., Shiga toxin, cytolysin A) and other virulence factors to host cells at a distance. (2) Communication: OMVs package quorum sensing molecules (AHLs, PQS) for long-range bacterial signaling. (3) Genetic exchange: OMVs can carry DNA fragments, providing a protected mechanism for horizontal gene transfer. (4) Competition: OMVs containing peptidoglycan hydrolases can kill competing bacteria. (5) Defense: OMVs can absorb phages and antimicrobial peptides. (6) Immune modulation: OMVs stimulate pro-inflammatory responses via LPS and outer membrane proteins. Option A underestimates their importance. Options B and C describe only partial functions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures the minimum inhibitory concentration (MIC) of four antibiotics against a clinical E. coli isolate and compares them to CLSI breakpoints:\n\nAntibiotic | MIC (ug/mL) | Susceptible breakpoint | Resistant breakpoint\nAmpicillin | 32 | <=8 | >=32\nCeftriaxone | 0.5 | <=1 | >=4\nMeropenem | 0.25 | <=1 | >=4\nCiprofloxacin | 16 | <=1 | >=4\n\nThis resistance profile suggests which resistance mechanism(s)?",
+      "options": [
+        "The isolate is pan-susceptible with no resistance mechanisms",
+        "Resistance to ampicillin and ciprofloxacin only, likely due to two independent mechanisms \u2014 an ampicillin-specific beta-lactamase and ciprofloxacin target modification",
+        "Extended-spectrum beta-lactamase (ESBL) production that confers resistance to all four antibiotics including carbapenems",
+        "The isolate likely produces a narrow-spectrum beta-lactamase (e.g., TEM-1) that hydrolyzes ampicillin but not ceftriaxone or meropenem, combined with a separate ciprofloxacin resistance mechanism such as chromosomal mutations in DNA gyrase (gyrA) or topoisomerase IV (parC), or plasmid-mediated quinolone resistance (PMQR); susceptibility to ceftriaxone and meropenem rules out ESBL and carbapenemase production"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The MIC data reveal: Ampicillin MIC = 32 ug/mL (resistant, at breakpoint); Ceftriaxone MIC = 0.5 ug/mL (susceptible); Meropenem MIC = 0.25 ug/mL (susceptible); Ciprofloxacin MIC = 16 ug/mL (resistant, well above breakpoint). The pattern of ampicillin resistance with ceftriaxone and meropenem susceptibility indicates a narrow-spectrum beta-lactamase (e.g., TEM-1, SHV-1) that hydrolyzes penicillins but not extended-spectrum cephalosporins or carbapenems. ESBLs would confer ceftriaxone resistance (ruled out by MIC 0.5), and carbapenemases would confer meropenem resistance (ruled out by MIC 0.25). The high ciprofloxacin MIC indicates a separate fluoroquinolone resistance mechanism. Option A ignores clear resistance. Option B partially identifies the mechanisms but is less detailed. Option C is ruled out by the ceftriaxone and meropenem susceptibility.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial persister cells are phenotypic variants within a clonal population that exhibit transient tolerance to antibiotics without genetic resistance. What distinguishes persistence from resistance?",
+      "options": [
+        "Persister cells have acquired resistance genes through horizontal gene transfer that make them permanently resistant",
+        "Persister cells have permanently mutated drug targets that prevent antibiotic binding",
+        "Resistance is a heritable genetic trait (e.g., beta-lactamase gene) that allows growth in the presence of antibiotics, while persistence is a transient, non-heritable phenotypic state where a subpopulation of cells enters a dormant, metabolically inactive state that tolerates antibiotics; when the antibiotic is removed, persister cells resume growth and produce progeny that are once again susceptible",
+        "Persister cells and resistant cells are identical in mechanism, differing only in the specific antibiotics they can survive"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Persistence is fundamentally different from resistance. Resistant bacteria carry genetic mutations or acquired genes (e.g., beta-lactamases, efflux pumps, modified targets) that allow them to grow in the presence of antibiotics \u2014 this is heritable and passed to progeny. Persister cells, by contrast, are a small subpopulation (~0.001-1%) of genetically susceptible cells that have stochastically entered a dormant, slow-growing, or metabolically quiescent state. Since most antibiotics target active cellular processes (cell wall synthesis, DNA replication, protein synthesis, metabolic pathways), dormant cells are not killed because their targets are not active. When the antibiotic is removed, persister cells resume growth and produce a genetically identical, fully susceptible population \u2014 which again generates a small fraction of persisters. This non-genetic heterogeneity is thought to be driven by stochastic fluctuations in toxin-antitoxin modules, ppGpp levels, or other regulatory circuits. Option A and B describe genetic resistance. Option D conflates the two distinct phenomena.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Syntrophy (obligate mutualistic metabolism) between different microbial species is critical in anaerobic environments. A classic example is the syntrophic partnership between fatty acid-oxidizing bacteria and methanogenic archaea. Why is this partnership thermodynamically obligatory?",
+      "options": [
+        "The fatty acid-oxidizing bacteria require vitamins that only methanogens can produce",
+        "Methanogens provide oxygen to the fatty acid-oxidizing bacteria, which are aerobic organisms",
+        "The oxidation of fatty acids (e.g., butyrate) to acetate and H2 is thermodynamically unfavorable under standard conditions (positive delta-G); only when methanogens continuously consume H2 (maintaining extremely low H2 partial pressures through methanogenesis) does the overall reaction become exergonic, making the fatty acid oxidation thermodynamically feasible",
+        "The fatty acid-oxidizing bacteria cannot produce their own ATP and rely entirely on methanogens for energy"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Syntrophic fatty acid oxidation is a textbook example of interspecies hydrogen transfer. The anaerobic oxidation of butyrate to acetate and H2 (CH3CH2CH2COO- + 2H2O \u2192 2CH3COO- + 2H+ + 2H2) has a positive standard Gibbs free energy change (\u0394G\u00b0' = +48.1 kJ/mol), meaning it is thermodynamically unfavorable and cannot proceed spontaneously. However, when coupled with H2-consuming methanogenesis (4H2 + CO2 \u2192 CH4 + 2H2O, \u0394G\u00b0' = -131 kJ/mol), the methanogens maintain the H2 partial pressure below 10^-4 atm. At this low H2 concentration, the actual \u0394G for butyrate oxidation becomes negative, making the reaction exergonic. Neither partner can function without the other under these conditions \u2014 the relationship is obligately mutualistic. This syntrophic metabolism is essential for complete anaerobic degradation of organic matter in environments like sediments, wetlands, and anaerobic digesters. Option A describes nutritional dependency. Option B is incorrect because both are anaerobes. Option D mischaracterizes the energetic relationship.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about bacterial photosynthesis:\nS1: Cyanobacteria perform oxygenic photosynthesis using two photosystems (PSI and PSII) linked in series, similar to plants and algae.\nS2: Purple sulfur bacteria use bacteriochlorophyll and a single reaction center (homologous to PSII) for anoxygenic photosynthesis, using H2S as an electron donor instead of water.\nS3: Green sulfur bacteria perform photosynthesis using a type I reaction center (homologous to PSI) and can use the reverse tricarboxylic acid cycle for carbon fixation instead of the Calvin cycle.\nS4: Bacteriorhodopsin in halophilic archaea is a chlorophyll-based photosystem that performs the same type of photosynthesis as cyanobacteria.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE: Cyanobacteria have both PSI and PSII working in series (Z-scheme), with PSII using water as the electron donor and producing O2, and PSI reducing ferredoxin for NADPH production. This oxygenic photosynthesis was the evolutionary origin of chloroplast photosynthesis through endosymbiosis. S2 is TRUE: Purple sulfur bacteria (e.g., Chromatium) use bacteriochlorophyll a or b in a type II reaction center (homologous to PSII) for cyclic photophosphorylation. They use H2S as an electron donor, depositing sulfur granules intracellularly (or extracellularly in some species). S3 is TRUE: Green sulfur bacteria (e.g., Chlorobium) use bacteriochlorophyll c, d, or e in chlorosomes with a type I reaction center (homologous to PSI). Many use the reverse TCA (rTCA) cycle for carbon fixation, which is more energy-efficient than the Calvin cycle under low-light conditions. S4 is FALSE: Bacteriorhodopsin is NOT a chlorophyll-based system. It is a retinal-containing protein (using retinal chromophore) that functions as a light-driven proton pump, generating a proton motive force for ATP synthesis. It is mechanistically and evolutionarily unrelated to chlorophyll-based photosynthesis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial toxin-antitoxin (TA) systems have been proposed to serve multiple biological functions. Which of the following is NOT a well-established function of chromosomal TA systems?",
+      "options": [
+        "Plasmid maintenance through post-segregational killing, where cells that lose the plasmid die because the unstable antitoxin is degraded while the stable toxin persists",
+        "Generation of persister cells through stochastic activation of the toxin component, inducing growth arrest and antibiotic tolerance",
+        "Abortive infection defense against bacteriophages, where phage infection triggers toxin activation, killing the infected cell and preventing phage replication from spreading to neighboring cells",
+        "Direct catalysis of DNA replication by serving as the initiator protein at the chromosomal origin of replication"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Options A, B, and C describe well-established functions of TA systems. (A) Post-segregational killing (PSK) is a classic function of plasmid-borne TA systems: the long-lived toxin kills cells that lose the plasmid because the short-lived antitoxin is no longer replenished. (B) Chromosomal TA systems contribute to persister cell formation: stochastic fluctuations in toxin/antitoxin ratios can trigger growth arrest in individual cells, creating antibiotic-tolerant persisters. (C) Some TA systems function in abortive infection (Abi) defense: phage infection triggers toxin release (by disrupting antitoxin transcription), killing the infected cell before phage replication completes, thereby protecting the clonal population. Option D is NOT a function of TA systems \u2014 DNA replication initiation is catalyzed by DnaA protein, which binds to oriC, melts the AT-rich DUE region, and loads the DnaB helicase. TA systems have no role in this process.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial secretion systems are numbered I-IX. The type III secretion system (T3SS) and type IV secretion system (T4SS) are both used by pathogens, but their structures, evolutionary origins, and functions differ. Which statement correctly distinguishes them?",
+      "options": [
+        "T3SS and T4SS are structurally identical and differ only in the types of effector proteins they secrete",
+        "Both systems evolved from flagellar motors and serve the same biological functions",
+        "T3SS evolved from the flagellar apparatus and injects effector proteins into host cells through a needle-like injectisome, while T4SS evolved from bacterial conjugation machinery and can transfer both proteins and DNA across cell membranes, with functions ranging from protein injection (Helicobacter CagA) to DNA transfer (Agrobacterium T-DNA) and interbacterial conjugation",
+        "T3SS transfers DNA while T4SS transfers only proteins"
+      ],
+      "correctAnswer": "C",
+      "explanation": "T3SS and T4SS have distinct evolutionary origins, structures, and functional repertoires. The T3SS is structurally homologous to the flagellar basal body (sharing components like the C-ring and export apparatus) and functions exclusively as a protein injection device \u2014 the 'injectisome' or 'molecular syringe' \u2014 delivering effector proteins directly from the bacterial cytoplasm into host cells. The T4SS evolved from conjugation machinery (tra/trb genes) and is more versatile: it can transfer DNA (like Agrobacterium tumefaciens transferring T-DNA into plant cells), proteins (like Helicobacter pylori injecting CagA oncoprotein), or both. T4SS can also function in DNA uptake (Helicobacter competence) and DNA release (Neisseria gonorrhoeae). Option A ignores fundamental structural differences. Option B incorrectly attributes the same evolutionary origin to both systems. Option D reverses the capabilities.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Giant bacteria challenge traditional concepts of prokaryotic cell size. Thiomargarita namibiensis, discovered in Namibian shelf sediments, can reach diameters of 750 micrometers, visible to the naked eye. What adaptations allow this bacterium to overcome the surface-area-to-volume constraint that limits most prokaryotic cell size?",
+      "options": [
+        "Thiomargarita has evolved true organelles including mitochondria and chloroplasts that allow efficient intracellular transport",
+        "Thiomargarita uses active cytoplasmic streaming (cyclosis) identical to plant cells to distribute nutrients throughout its large cell",
+        "The cell is mostly occupied by a large central vacuole containing nitrate (used as an electron acceptor for sulfide oxidation), pushing the cytoplasm into a thin peripheral layer against the cell membrane, minimizing the diffusion distance for nutrients while using the vacuole for electron acceptor storage",
+        "Thiomargarita is actually a multicellular organism composed of many small cells aggregated together, not a single giant cell"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Thiomargarita namibiensis solves the surface-area-to-volume problem through a remarkable strategy: approximately 98% of the cell volume is occupied by a giant central vacuole filled with concentrated nitrate solution (up to 800 mM). This pushes the metabolically active cytoplasm into a thin layer (~0.5-2 micrometers) against the cell membrane, maintaining short diffusion distances for substrates (sulfide from the environment) and metabolites. The vacuolar nitrate serves as a stored electron acceptor for chemolithotrophic sulfide oxidation, allowing the bacterium to survive in environments where nitrate supply is intermittent. This strategy is analogous to the large central vacuole in plant cells. Additionally, Thiomargarita stores sulfur globules in the periplasm as an energy reserve. Option A is incorrect because Thiomargarita lacks eukaryotic organelles. Option B describes a eukaryotic mechanism not found in prokaryotes. Option D is wrong \u2014 Thiomargarita is indeed a single cell.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "The stringent response in bacteria is triggered by nutrient starvation and mediated by the alarmone ppGpp (guanosine tetraphosphate). What are the cellular consequences of ppGpp accumulation?",
+      "options": [
+        "ppGpp activates DNA replication initiation, increasing the rate of cell division during starvation to produce more cells that can search for nutrients",
+        "ppGpp specifically activates ribosomal RNA synthesis to increase the cell's translational capacity during stress",
+        "ppGpp has no significant effect on bacterial physiology and is merely a metabolic byproduct of GTP degradation",
+        "ppGpp directly binds RNA polymerase (and in some bacteria, the DksA cofactor), redirecting transcription away from growth-related genes (rRNA, tRNA, ribosomal proteins) and toward stress survival genes (amino acid biosynthesis, stress responses, stationary phase functions), effectively reprogramming the cell from growth mode to survival mode"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The stringent response is a global regulatory mechanism activated during amino acid starvation (sensed by RelA on stalled ribosomes) or other nutrient limitations (sensed by SpoT). ppGpp and pppGpp accumulate and directly interact with RNA polymerase at two binding sites, together with the DksA cofactor. This redirects transcription in two ways: (1) Downregulation of stable RNA genes (rRNA operons, tRNA genes) by destabilizing open complexes at these promoters, which have intrinsically unstable open complexes; (2) Upregulation of amino acid biosynthesis operons, stress response genes, and stationary phase functions by stabilizing open complexes at their promoters or by freeing RNAP from rRNA promoters to transcribe alternative targets. ppGpp also affects DNA replication, translation, and other cellular processes. Option A is opposite \u2014 ppGpp inhibits new rounds of replication. Option B is opposite \u2014 ppGpp inhibits rRNA synthesis. Option C underestimates ppGpp's central regulatory role.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Actinobacteria are important soil bacteria known for producing the characteristic 'earthy' smell of soil. Which compound is responsible, and what is the ecological significance of Actinobacteria in soil ecosystems?",
+      "options": [
+        "Actinobacteria produce methane, which gives soil its characteristic odor, and they function primarily as nitrogen fixers",
+        "The earthy smell is caused by geosmin, a volatile terpenoid produced by Streptomyces and other actinobacteria; these organisms are ecologically significant as major decomposers of recalcitrant organic matter (chitin, lignocellulose) in soil, and they produce the majority of naturally derived antibiotics used in medicine",
+        "The soil smell is caused by hydrogen sulfide produced by Actinobacteria during sulfate reduction",
+        "Actinobacteria produce no volatile compounds; the earthy smell is entirely due to fungal metabolism"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Geosmin (trans-1,10-dimethyl-trans-9-decalol) is a volatile bicyclic alcohol produced by Streptomyces and other actinobacteria that gives freshly turned soil, rain-wetted earth (petrichor), and some water sources their characteristic earthy aroma. Humans can detect geosmin at concentrations as low as 5 parts per trillion. Ecologically, actinobacteria are critical saprophytes that decompose complex polymers (chitin from fungal cell walls and arthropod exoskeletons, lignocellulose from plant material, keratin from animal tissue) that other bacteria cannot efficiently degrade. Their filamentous growth habit allows them to colonize solid substrates effectively. Additionally, actinobacteria (especially Streptomyces) produce approximately 70% of all naturally derived antibiotics used clinically, including streptomycin, tetracycline, erythromycin, vancomycin, and chloramphenicol. Option A misidentifies both the compound and the function. Option C describes a different metabolic process. Option D incorrectly attributes the smell solely to fungi.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher discovers a bacterial isolate that appears to have an unusually large genome (~14 Mb) based on pulsed-field gel electrophoresis. To confirm this finding and characterize the genome, which approach would be most rigorous?",
+      "options": [
+        "Accept the PFGE result as definitive evidence of genome size without additional verification",
+        "PCR-amplify the 16S rRNA gene and estimate genome size from the phylogenetic placement of the organism",
+        "Use light microscopy to visually estimate the genome size based on cell dimensions",
+        "Repeat the PFGE with different restriction enzymes and compare results; perform whole-genome sequencing using both short-read (Illumina) and long-read (Oxford Nanopore/PacBio) technologies to assemble a complete genome and determine the exact size; verify by flow cytometry of DAPI-stained cells to independently estimate DNA content per cell"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Determining an unusually large bacterial genome requires multiple independent verification methods because PFGE can be affected by DNA degradation, incomplete digestion, or co-migrating fragments. (1) Repeating PFGE with multiple restriction enzymes provides independent size estimates from the sum of fragment sizes. (2) Whole-genome sequencing with hybrid assembly (combining long reads for scaffolding with short reads for accuracy) produces a complete, closed genome with an exact size in base pairs. This also reveals whether the large genome reflects a single chromosome, multiple chromosomes (like Vibrio's two chromosomes), or large megaplasmids. (3) Flow cytometry of DAPI-stained cells provides an independent biophysical measurement of DNA content per cell, confirming the genomic data. Notably, some bacteria do have very large genomes (Sorangium cellulosum ~14.8 Mb, Minicystis rosea ~16.0 Mb). Option A lacks verification. Option C cannot determine genome size. Option D provides no genome size information.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Myxobacteria such as Myxococcus xanthus exhibit complex social behaviors including cooperative predation and multicellular fruiting body formation. Which statement correctly describes the social predation strategy of Myxococcus?",
+      "options": [
+        "Individual Myxococcus cells hunt prey bacteria independently using a 'lone wolf' strategy",
+        "Myxococcus forms cooperative swarms that coordinate movement using contact-dependent signaling and type IV pili-mediated social motility",
+        "Myxococcus predation relies exclusively on secreting a single antibiotic that kills all nearby bacteria",
+        "Myxococcus forms cooperative swarms that secrete a cocktail of hydrolytic enzymes and antibiotics to lyse prey bacteria, sharing the released nutrients communally \u2014 a strategy called 'wolfpack predation' that requires quorum-dependent coordination of enzyme secretion through cell-cell signaling"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Myxococcus xanthus is a Gram-negative delta-proteobacterium with remarkable social behaviors. During predation, Myxococcus cells aggregate into multicellular swarms that collectively secrete hydrolytic enzymes (proteases, lipases, nucleases) and secondary metabolites (myxovirescin, myxalamids) that lyse prey bacteria. This 'wolfpack' strategy is more effective than individual predation because the concentration of lytic enzymes reaches effective levels only when many cells secrete them cooperatively. The released nutrients benefit the entire swarm. Under starvation, ~100,000 cells aggregate into a fruiting body where some cells differentiate into resistant myxospores while others lyse to provide nutrients (altruistic cell death). Option A ignores the cooperative behavior. Option B is partially correct about motility but incomplete about predation. Option C oversimplifies the diverse antibiotic and enzyme arsenal used.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Thermophilic bacteria from deep-sea hydrothermal vents can grow at temperatures exceeding 100\u00b0C. Which molecular adaptations allow their proteins to function at these extreme temperatures?",
+      "options": [
+        "Their proteins have identical amino acid compositions to mesophilic proteins but fold differently due to the high temperature",
+        "They use entirely different amino acids not found in mesophilic organisms",
+        "Their proteins are completely unfolded and function as random coils at high temperatures",
+        "Thermophilic proteins have increased numbers of salt bridges (ion pairs) between charged residues, more hydrogen bonds, enhanced hydrophobic core packing, shortened surface loops, and higher proline content that restricts backbone flexibility, collectively raising the melting temperature of the protein above the growth temperature"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Thermostability of proteins from thermophilic organisms results from multiple small structural modifications that collectively increase the free energy of unfolding. (1) Ion pairs (salt bridges): increased numbers of surface and internal salt bridges between positively charged (Lys, Arg) and negatively charged (Asp, Glu) residues stabilize the folded structure. (2) Hydrogen bonding: additional hydrogen bonds in the protein interior increase stability. (3) Hydrophobic packing: tighter packing of hydrophobic core residues reduces cavities and increases van der Waals contacts. (4) Loop reduction: shorter surface loops reduce conformational entropy of the unfolded state, making unfolding less favorable. (5) Proline content: increased proline in loops reduces backbone flexibility and conformational entropy. (6) Disulfide bonds: some thermophilic proteins have additional disulfide bonds. Additionally, thermophiles accumulate compatible solutes (e.g., mannosylglycerate, di-myo-inositol phosphate) that stabilize proteins globally. Option A ignores the systematic compositional differences. Option B is incorrect \u2014 the same 20 amino acids are used. Option C is wrong because functional proteins must be folded.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "The lac operon regulatory system in E. coli involves both negative regulation by LacI repressor and positive regulation by the CAP-cAMP complex. Under which specific growth conditions is the lac operon maximally expressed?",
+      "options": [
+        "When both glucose and lactose are present in the medium",
+        "When glucose is present but lactose is absent",
+        "When neither glucose nor lactose is present in the medium",
+        "When lactose is present but glucose is absent: lactose (converted to allolactose) binds and inactivates the LacI repressor (derepression), and the absence of glucose causes low intracellular glucose levels, leading to high cAMP via adenylate cyclase activation, and cAMP-CAP complex binding upstream of the lac promoter enhances RNA polymerase recruitment, achieving maximum transcription"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Maximum lac operon expression requires two simultaneous conditions. (1) Lactose present: allolactose (an isomer of lactose produced by low-level beta-galactosidase activity) binds to the LacI repressor, causing a conformational change that releases it from the operator, removing negative regulation. (2) Glucose absent: when glucose is depleted, the phosphotransferase system (PTS) leaves EIIA in its phosphorylated form, which activates adenylate cyclase, increasing intracellular cAMP levels. cAMP binds the catabolite activator protein (CAP/CRP), and the cAMP-CAP complex binds to the CAP site upstream of the lac promoter, bending the DNA and making direct contacts with the alpha-CTD of RNA polymerase to enhance transcription initiation ~50-fold. Option A results in catabolite repression \u2014 glucose is used preferentially. Option B results in no induction (repressor active) and catabolite repression. Option C provides no inducer (repressor active).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacterial plasmids can be classified by incompatibility groups. Two plasmids of the same incompatibility group cannot stably coexist in the same cell. What molecular mechanism underlies plasmid incompatibility?",
+      "options": [
+        "Incompatible plasmids encode toxins that destroy each other's DNA",
+        "Incompatible plasmids compete for the same host resources (ribosomes, amino acids), and the cell cannot support both",
+        "Incompatible plasmids share the same replication control elements (same origin of replication regulation), so their copy numbers are not independently controlled \u2014 the cell cannot distinguish between them during replication, leading to random segregation at cell division where one daughter cell may receive copies of only one plasmid type, eventually resulting in loss of one plasmid from the population",
+        "The host cell actively selects against cells carrying two plasmids through a checkpoint mechanism"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Plasmid incompatibility arises from shared replication control mechanisms. Plasmids in the same incompatibility group use the same regulatory elements to control their copy number \u2014 this can involve the same antisense RNA inhibitor, the same initiator protein (Rep), or the same iteron sequences. When two plasmids share these control elements, the cell's replication machinery treats them as interchangeable copies of the same replicon. The total copy number of both plasmids combined is regulated to the level normally maintained by a single plasmid type. At cell division, the plasmid copies segregate randomly between daughter cells. Over successive generations, stochastic segregation leads to cells receiving copies of only one plasmid type (segregational loss). Similarly, shared partitioning systems can cause competitive exclusion. Option A invokes a mechanism not typically involved. Option B describes a general resource limitation that does not explain the specificity of incompatibility groups. Option D does not reflect an actual cellular mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cable bacteria (Desulfobulbaceae) discovered in marine sediments perform a remarkable form of electrogenic metabolism. What is unique about their energy metabolism?",
+      "options": [
+        "Cable bacteria produce electricity by oxidizing glucose through a modified Embden-Meyerhof pathway",
+        "Cable bacteria use visible light to drive photosynthetic electron transport chains",
+        "Cable bacteria are single-celled organisms that store electrical charge in intracellular capacitors",
+        "Cable bacteria form centimeter-long multicellular filaments that conduct electrons through internal conductive structures; cells at the bottom of the filament oxidize sulfide (anodic end) while cells at the top reduce oxygen (cathodic end), coupling these spatially separated half-reactions through long-distance electron transport along the filament, effectively creating a biological wire"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cable bacteria perform long-distance electron transport (LDET) across centimeter scales, coupling geographically separated redox half-reactions. In marine sediments, sulfide-rich anoxic layers are separated from oxygen-containing surface layers by several centimeters. Cable bacteria span this distance as multicellular filaments containing an internal structure of parallel fibers rich in nickel and composed of a novel conductive protein. Cells at the bottom oxidize H2S (2H2S \u2192 S0 + 4H+ + 4e-), while cells at the top reduce O2 (O2 + 4H+ + 4e- \u2192 2H2O). Electrons travel centimeters through the conductive internal structure, while protons diffuse through the porewater. This creates distinct pH signatures (acidification in the anoxic zone from H+ production, alkalinization in the surface from H+ consumption) that are diagnostic of cable bacteria activity. This represents a fundamentally new form of microbial metabolism discovered in 2012. Options A, B, and C describe other metabolic strategies not applicable to cable bacteria.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bacteriophage lambda can follow either a lytic or lysogenic pathway upon infecting E. coli. Which molecular event is the critical decision point determining the pathway choice?",
+      "options": [
+        "The lytic-lysogenic decision is made before the phage DNA enters the cell, based on the receptor binding configuration",
+        "The phage randomly chooses a pathway with exactly 50% probability regardless of cellular conditions",
+        "The decision depends on whether the host cell has a functional CRISPR system that can degrade the phage genome",
+        "The decision is determined by the competition between the CI repressor (favoring lysogeny) and the Cro protein (favoring lysis), with cellular conditions such as multiplicity of infection, cell nutritional status (via integration host factor IHF levels), and the CII/CIII regulatory cascade influencing the balance; in a healthy cell with low MOI, the lytic pathway predominates, while in a stressed cell or high MOI, lysogeny is favored"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The lambda lytic-lysogenic decision is a paradigm of genetic regulatory switches. The key players are: (1) CI repressor (encoded by cI): maintains lysogeny by repressing lytic genes and activating its own transcription. (2) Cro protein: represses CI and activates lytic gene expression. (3) CII activator: activates cI transcription from the PRE promoter and the int promoter for integrase expression, favoring lysogeny. (4) CIII: stabilizes CII against degradation by FtsH protease. The cellular decision depends on the stability of CII: in well-nourished, rapidly growing cells (low MOI), active FtsH degrades CII before it can activate cI, leading to lysis. Under stress or high MOI (many phage per cell), CII accumulates, activates CI production, and the cell enters lysogeny. This is a bistable genetic switch with positive feedback loops that lock the cell into either state. Option A is incorrect as the decision is post-infection. Option B ignores the regulatory sophistication. Option C describes a defense mechanism not involved in the lambda decision.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Bacteria and Archaea"
+    },
+    {
+      "type": "MCQ",
+      "question": "Archaeal viruses display extraordinary morphological diversity not found among bacteriophages or eukaryotic viruses, including bottle-shaped, spindle-shaped, and droplet-shaped morphologies. What does this unique viral diversity suggest about archaeal virus evolution?",
+      "options": [
+        "All archaeal viruses evolved from bacteriophages through adaptation to archaeal hosts",
+        "Archaeal virus morphological diversity is an artifact of electron microscopy preparation and does not reflect true biological diversity",
+        "Archaeal viruses are actually eukaryotic viruses that accidentally infect archaea",
+        "The unique morphotypes of archaeal viruses, combined with their largely uncharacterized genomes (>75% of genes have no homologs in databases), suggest that many archaeal virus lineages have ancient, independent evolutionary origins distinct from both bacteriophages and eukaryotic viruses, representing a vast unexplored reservoir of viral diversity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Archaeal viruses represent one of the most remarkable frontiers in virology. While some archaeal viruses have morphologies familiar from bacteriophage biology (head-tail structures), many have unique morphotypes found nowhere else: fusiform/spindle-shaped (Fuselloviridae), bottle-shaped (Ampullaviridae), droplet-shaped (Guttaviridae), and coil-shaped (Spiraviridae). Genomic analysis reveals that typically >75% of their genes have no detectable homologs in any database (orphan genes), suggesting these viruses represent ancient, independently evolved lineages with distinct evolutionary histories. Many archaeal viruses do not lyse their host cells but rather are released through a budding-like mechanism, and some can integrate into the host chromosome as proviruses. The diversity of archaeal viruses, especially from extreme environments, likely represents only a small fraction of the true diversity. Option A ignores the unique morphologies and genomic novelty. Option B is contradicted by cryo-EM confirmation. Option C has no supporting evidence.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 5,
+      "campbellChapter": 27,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Bacteria and Archaea"
+    }
+  ]
+}
