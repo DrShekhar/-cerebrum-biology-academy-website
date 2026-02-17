@@ -59,6 +59,14 @@ export default function NEETBiologyMCQPage() {
   const [selectedNeetWeightage, setSelectedNeetWeightage] = useState<string | null>(null)
   const [hasDiagramOnly, setHasDiagramOnly] = useState(false)
 
+  // Dynamic question counts from API
+  const [questionCounts, setQuestionCounts] = useState<{
+    all: number
+    ncert: number
+    pyq: number
+    olympiad: number
+  } | null>(null)
+
   // Derived states from contentSource
   const isNcertOnly = contentSource === 'ncert'
   const isPYQOnlyFromTabs = contentSource === 'pyq'
@@ -288,6 +296,16 @@ export default function NEETBiologyMCQPage() {
     initSession()
   }, [])
 
+  // Fetch dynamic question counts
+  useEffect(() => {
+    fetch('/api/mcq/counts')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) setQuestionCounts(data.data)
+      })
+      .catch(() => {})
+  }, [])
+
   // Session timer - tracks total time spent
   useEffect(() => {
     if (!quizStarted || showSessionSummary) return
@@ -360,6 +378,8 @@ export default function NEETBiologyMCQPage() {
         if (selectedNcertClass) params.append('ncertClass', selectedNcertClass.toString())
         if (selectedNeetWeightage) params.append('neetWeightage', selectedNeetWeightage)
         if (hasDiagramOnly) params.append('hasDiagram', 'true')
+      } else if (contentSource === 'olympiad') {
+        params.append('isOlympiad', 'true')
       }
       // 'all' content source uses no additional filters
 
@@ -685,6 +705,7 @@ export default function NEETBiologyMCQPage() {
     const filterParts = [
       contentSource === 'ncert' ? 'NCERT Based' : null,
       contentSource === 'pyq' ? `PYQ ${selectedPYQYear || 'All Years'}` : null,
+      contentSource === 'olympiad' ? 'Olympiad (Campbell Biology)' : null,
       selectedNcertClass ? `Class ${selectedNcertClass}` : null,
       selectedTopic,
       selectedChapter,
@@ -836,7 +857,7 @@ export default function NEETBiologyMCQPage() {
                     onSourceChange={setContentSource}
                     selectedPYQYear={selectedPYQYear}
                     onPYQYearChange={setSelectedPYQYear}
-                    questionCounts={{ all: 7000, ncert: 3375, pyq: 500 }}
+                    {...(questionCounts ? { questionCounts } : {})}
                   />
 
                   {/* Mode Selection - Botanical Scholar */}

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { ChevronDown, Check } from 'lucide-react'
 
-export type ContentSource = 'all' | 'ncert' | 'pyq'
+export type ContentSource = 'all' | 'ncert' | 'pyq' | 'olympiad'
 
 interface ContentSourceTabsProps {
   activeSource: ContentSource
@@ -14,6 +14,7 @@ interface ContentSourceTabsProps {
     all: number
     ncert: number
     pyq: number
+    olympiad: number
   }
 }
 
@@ -33,7 +34,7 @@ export function ContentSourceTabs({
   onSourceChange,
   selectedPYQYear,
   onPYQYearChange,
-  questionCounts = { all: 7000, ncert: 3375, pyq: 500 },
+  questionCounts = { all: 7000, ncert: 3375, pyq: 500, olympiad: 5972 },
 }: ContentSourceTabsProps) {
   const [isPYQDropdownOpen, setIsPYQDropdownOpen] = useState(false)
   const [clickedTab, setClickedTab] = useState<string | null>(null)
@@ -60,6 +61,13 @@ export function ContentSourceTabs({
       count: questionCounts.pyq,
       description: 'Past year questions',
     },
+    {
+      id: 'olympiad' as ContentSource,
+      label: 'Olympiad',
+      emoji: '🏅',
+      count: questionCounts.olympiad,
+      description: 'Campbell Biology level',
+    },
   ]
 
   const selectedYear = PYQ_YEARS.find((y) => y.value === selectedPYQYear) || PYQ_YEARS[0]
@@ -81,7 +89,7 @@ export function ContentSourceTabs({
       </div>
 
       {/* Tabs Container */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {tabs.map((tab) => {
           const isActive = activeSource === tab.id
           const isClicked = clickedTab === tab.id
