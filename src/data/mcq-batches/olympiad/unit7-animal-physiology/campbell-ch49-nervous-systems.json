@@ -1,0 +1,1894 @@
+{
+  "batch": {
+    "name": "Campbell Biology Ch 49 - Nervous Systems (Olympiad)",
+    "subject": "Biology",
+    "category": "Olympiad",
+    "difficulty": "HARD-EXPERT",
+    "campbellChapter": 49,
+    "campbellUnit": 7,
+    "source": "Campbell Biology 12th Edition",
+    "questionCount": 94
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "The concept of lateralization of brain function refers to the specialization of the two cerebral hemispheres. In most right-handed individuals, which hemisphere is dominant for language?",
+      "options": [
+        "Right hemisphere",
+        "Language is processed only in the brainstem",
+        "Both hemispheres contribute equally in all individuals",
+        "Left hemisphere"
+      ],
+      "correctAnswer": "D",
+      "explanation": "In approximately 95% of right-handed individuals and ~70% of left-handed individuals, the left hemisphere is dominant for language. Key language areas include: (1) Broca's area (left inferior frontal gyrus, Brodmann areas 44-45)\u2014involved in speech production and grammar; damage causes Broca's aphasia (non-fluent speech with preserved comprehension). (2) Wernicke's area (left superior temporal gyrus, Brodmann area 22)\u2014involved in language comprehension; damage causes Wernicke's aphasia (fluent but meaningless speech with impaired comprehension). (3) The arcuate fasciculus connects these areas. Evidence for lateralization comes from split-brain patients (corpus callosum severed), Wada test (intracarotid amobarbital injection), and functional imaging.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Brain Lateralization"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neural stem cells in the adult mammalian brain can generate new neurons (adult neurogenesis). In which two regions of the adult brain has neurogenesis been most convincingly demonstrated?",
+      "options": [
+        "Subventricular zone (SVZ) lining the lateral ventricles and the subgranular zone (SGZ) of the hippocampal dentate gyrus",
+        "Cerebral cortex and cerebellum",
+        "Thalamus and hypothalamus",
+        "Brainstem and spinal cord"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Adult neurogenesis is well-established in two brain regions: (1) Subventricular zone (SVZ)\u2014neural stem cells lining the lateral ventricles produce neuroblasts that migrate along the rostral migratory stream to the olfactory bulb, where they differentiate into granule cells and periglomerular cells. (2) Subgranular zone (SGZ)\u2014in the hippocampal dentate gyrus, neural stem cells produce granule cells that integrate into existing circuits and are thought to contribute to learning and memory. In humans, hippocampal neurogenesis has been demonstrated using carbon-14 dating of neuronal DNA (from nuclear weapons testing fallout) and thymidine analog incorporation, though its extent remains debated. Other brain regions show very limited or absent neurogenesis under normal conditions.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Adult Neurogenesis"
+    },
+    {
+      "type": "MCQ",
+      "question": "The blood-brain barrier presents a major challenge for drug delivery to the CNS. Which of the following strategies can be used to deliver drugs across the BBB?",
+      "options": [
+        "Only small, lipophilic molecules can ever reach the brain",
+        "Approaches include: designing lipophilic prodrugs that cross by passive diffusion, conjugating drugs to ligands of BBB receptor-mediated transcytosis systems (e.g., transferrin receptor), focused ultrasound with microbubbles to transiently open tight junctions, and intrathecal injection to bypass the BBB entirely",
+        "The BBB is completely impermeable to all therapeutic agents",
+        "Large hydrophilic molecules cross the BBB more easily than small molecules"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Overcoming the BBB is a major challenge in neuropharmacology, with multiple strategies: (1) Lipophilic modification: Small, lipophilic, uncharged molecules (<400 Da, >8 hydrogen bonds) cross by passive transcellular diffusion. L-DOPA (levodopa) crosses via the large neutral amino acid transporter (LAT1), unlike dopamine itself. (2) Receptor-mediated transcytosis (RMT): Drugs conjugated to antibodies targeting transferrin receptor, LRP1, or insulin receptor undergo transcytosis across endothelial cells. Bispecific antibodies targeting both a BBB receptor and a brain target are in clinical trials. (3) Focused ultrasound (FUS) + microbubbles: Ultrasound oscillates gas-filled microbubbles in brain capillaries, transiently disrupting tight junctions in a targeted region. Reversible, non-invasive, and in clinical trials for Alzheimer disease. (4) Intranasal delivery: Some drugs can reach the brain via olfactory and trigeminal nerve pathways. (5) Intrathecal/intraventricular injection: Direct CSF delivery bypasses the BBB entirely but is invasive. (6) Nanoparticle carriers with surface modifications can also enhance BBB penetration.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "BBB Drug Delivery Strategies"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'synaptic homeostasis' (synaptic scaling) refers to:",
+      "options": [
+        "The tendency of synapses to all have the same strength",
+        "A compensatory mechanism where neurons globally scale up or down all their synaptic strengths to maintain stable firing rates in response to chronic changes in network activity",
+        "The process of eliminating all synapses during sleep",
+        "Maintaining constant neurotransmitter levels at all synapses"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Synaptic scaling (Turrigiano & Nelson, 1998) is a form of homeostatic plasticity that maintains network stability: (1) If a neuron's activity is chronically decreased (e.g., by TTX blockade), it globally scales up all excitatory synaptic strengths (by inserting more AMPA receptors) to restore firing rates. (2) If activity is chronically increased, synaptic strengths are globally scaled down. (3) This multiplicative scaling preserves relative synaptic weights (and thus information) while adjusting overall excitability. (4) The mechanism involves: sensing of average firing rate via calcium levels, regulation of AMPA receptor trafficking, and TNF-alpha signaling from glia. Synaptic homeostasis complements Hebbian plasticity (LTP/LTD), which strengthens specific synapses but could destabilize networks without homeostatic counterbalance.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Synaptic Homeostasis"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'mirror neurons' refers to neurons that:",
+      "options": [
+        "Only fire when looking in a mirror",
+        "Reflect sensory information back to the receptor",
+        "Mirror the activity of contralateral neurons",
+        "Fire both when an animal performs an action and when it observes the same action performed by another, potentially supporting action understanding and social cognition"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Mirror neurons, first described in macaque premotor cortex (area F5) by Rizzolatti and colleagues (1990s), fire both during execution of an action (e.g., grasping food) and during observation of the same action performed by another individual. Properties: (1) Action specificity\u2014a mirror neuron responds to the same action whether performed or observed. (2) Found in premotor cortex, supplementary motor area, inferior parietal lobule, and superior temporal sulcus. (3) Proposed functions include: action understanding (simulating observed actions internally), imitation learning, empathy, and social cognition. (4) The 'mirror neuron system' in humans has been studied with fMRI and TMS. The theory remains debated\u2014critics question whether mirror neurons truly encode action understanding vs. simply associating observed and executed actions through learning.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Mirror Neurons"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A functional MRI (fMRI) study shows increased blood-oxygen-level-dependent (BOLD) signal in the Broca's area (left inferior frontal gyrus) during speech production tasks. What does the BOLD signal actually measure?",
+      "options": [
+        "Changes in local blood oxygenation that correlate with neural activity\u2014increased activity causes increased blood flow and oxygen consumption, altering the ratio of deoxyhemoglobin to oxyhemoglobin",
+        "Direct electrical activity of neurons",
+        "The number of neurons firing",
+        "Direct measurement of neurotransmitter release"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The fMRI BOLD signal is an indirect measure of neural activity based on the neurovascular coupling principle: (1) Active neurons increase their metabolic demand and consume oxygen. (2) This triggers a local increase in cerebral blood flow (hemodynamic response), which overcompensates, delivering more oxygenated blood than is consumed. (3) The ratio of deoxyhemoglobin (paramagnetic, distorts MRI signal) to oxyhemoglobin (diamagnetic) decreases in active areas. (4) This change in magnetic properties produces the BOLD contrast detectable by MRI. The BOLD signal is delayed by 4-6 seconds after neural activity onset and has limited temporal resolution (~1-2 seconds) compared to EEG or MEG (millisecond resolution). BOLD measures relative changes, not absolute neural activity levels.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "EXPERT",
+      "topic": "fMRI and BOLD Signal"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An EEG (electroencephalogram) recording shows the following brain wave patterns: during wakefulness, beta waves (13-30 Hz) predominate; during relaxation with eyes closed, alpha waves (8-13 Hz) appear; during deep sleep, delta waves (0.5-4 Hz) dominate. During REM sleep, the pattern resembles waking beta waves. What does the REM sleep EEG pattern indicate about brain activity during dreaming?",
+      "options": [
+        "The brain is completely inactive during REM sleep",
+        "Delta waves during REM sleep indicate deep unconsciousness",
+        "REM sleep is identical to being awake in all respects",
+        "The cerebral cortex is highly active during REM sleep despite the body being largely paralyzed, consistent with vivid dreaming"
+      ],
+      "correctAnswer": "D",
+      "explanation": "REM (Rapid Eye Movement) sleep is paradoxical: the EEG shows beta-wave activity similar to wakefulness (indicating high cortical activity), yet the body is essentially paralyzed (muscle atonia from inhibition of spinal motor neurons by the brainstem, specifically the sublaterodorsal nucleus). This combination\u2014active brain, paralyzed body\u2014is consistent with vivid dreaming: the cortex generates complex visual and emotional experiences (dreams) while motor output is inhibited (preventing acting out dreams). REM sleep is important for memory consolidation, emotional processing, and brain development. About 20-25% of adult sleep is REM sleep, occurring in 90-minute cycles. Narcolepsy involves inappropriate intrusion of REM sleep features into wakefulness.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "Sleep Neuroscience"
+    },
+    {
+      "type": "MCQ",
+      "question": "During embryonic development, neural crest cells migrate extensively and give rise to diverse cell types. Which of the following is NOT derived from neural crest cells?",
+      "options": [
+        "Peripheral nervous system sensory neurons (dorsal root ganglia)",
+        "Schwann cells",
+        "Cortical neurons of the cerebral cortex",
+        "Melanocytes (pigment cells)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Neural crest cells (NCCs) are a transient, multipotent cell population that arises at the dorsal neural tube during neurulation and migrates to diverse locations. NCC derivatives include: PNS components (sensory neurons in dorsal root and cranial ganglia, autonomic neurons, enteric neurons, Schwann cells), craniofacial structures (bone, cartilage, connective tissue of the face), melanocytes, adrenal medulla chromaffin cells, smooth muscle of some blood vessels, and cardiac structures. Cortical neurons are NOT neural crest derivatives\u2014they originate from the neuroepithelium of the neural tube (specifically the ventricular zone of the telencephalon) and are therefore of neuroectodermal, not neural crest, origin.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Neural Crest Derivatives"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher uses optogenetics to study the neural circuit controlling a specific behavior. They express channelrhodopsin-2 (ChR2) in a specific population of neurons using a Cre-dependent viral vector in a Cre-driver mouse line. When they deliver blue light, what should they observe if these neurons are sufficient to produce the behavior?",
+      "options": [
+        "The behavior should stop when light is delivered",
+        "Only red light should activate ChR2",
+        "Blue light should have no effect on any neurons",
+        "Blue light activation of ChR2-expressing neurons should evoke the behavior even in the absence of natural stimuli that normally trigger it"
+      ],
+      "correctAnswer": "D",
+      "explanation": "If a specific neuronal population is sufficient for a behavior, artificially activating those neurons (using ChR2 + blue light) should produce the behavior even without the normal triggering stimulus. This demonstrates sufficiency (these neurons alone can cause the behavior). The Cre-lox system provides cell-type specificity: (1) The Cre-driver mouse expresses Cre recombinase only in the target cell type. (2) The viral vector carries ChR2 in a Cre-dependent (DIO/FLEX) cassette\u2014ChR2 is expressed only in Cre-positive cells. Combined with the earlier necessity experiment (silencing neurons disrupts behavior), sufficiency and necessity together provide strong evidence that a specific neural population is the causal driver of a behavior.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Optogenetic Sufficiency Testing"
+    },
+    {
+      "type": "MCQ",
+      "question": "The cerebral cortex of the human brain is organized into distinct functional areas. Which lobe of the cerebral cortex is primarily responsible for processing visual information?",
+      "options": [
+        "Frontal lobe",
+        "Temporal lobe",
+        "Occipital lobe",
+        "Parietal lobe"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The occipital lobe, located at the posterior of the brain, contains the primary visual cortex (V1, Brodmann area 17) and surrounding visual association areas (V2-V5). Visual information from the retina travels via the optic nerve \u2192 optic chiasm \u2192 lateral geniculate nucleus (LGN) of the thalamus \u2192 primary visual cortex. The frontal lobe is involved in executive function, motor control, and planning. The temporal lobe processes auditory information and contains the hippocampus (memory). The parietal lobe processes somatosensory information and spatial awareness.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Cerebral Cortex Organization"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about neurodegenerative diseases:\nI. Multiple sclerosis involves autoimmune destruction of myelin in the central nervous system\nII. Huntington's disease is caused by expansion of a CAG trinucleotide repeat in the huntingtin gene\nIII. Amyotrophic lateral sclerosis (ALS) involves degeneration of both upper and lower motor neurons\nIV. All neurodegenerative diseases are caused by prion proteins",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I. TRUE: MS is an autoimmune disease where T cells and antibodies attack oligodendrocyte myelin sheaths in the CNS, causing demyelination, inflammation, and neurodegeneration. This disrupts saltatory conduction, producing diverse neurological symptoms. II. TRUE: Huntington's disease is caused by expansion of a CAG repeat (encoding polyglutamine) in exon 1 of the HTT gene. Normal: 10-35 repeats; disease: >36 repeats. The mutant huntingtin protein forms toxic aggregates, preferentially destroying medium spiny neurons in the striatum. III. TRUE: ALS (Lou Gehrig's disease) involves progressive degeneration of both upper motor neurons (in motor cortex) and lower motor neurons (in spinal cord and brainstem), causing progressive weakness, paralysis, and eventually death from respiratory failure. IV. FALSE: Prion diseases (Creutzfeldt-Jakob, BSE, kuru) are caused by misfolded prion proteins, but this mechanism does not apply to MS, Huntington's, Parkinson's, or most other neurodegenerative diseases.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Neurodegenerative Diseases"
+    },
+    {
+      "type": "MCQ",
+      "question": "Consciousness remains one of neuroscience's deepest mysteries. The Integrated Information Theory (IIT) proposes that consciousness corresponds to:",
+      "options": [
+        "The total number of neurons in a brain",
+        "The speed of neural signal transmission",
+        "The amount of integrated information (phi) generated by a system\u2014a measure of how much a system is both differentiated (many possible states) and integrated (parts are causally interconnected)",
+        "The strength of connections between the cortex and thalamus exclusively"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Integrated Information Theory (IIT), developed by Giulio Tononi, provides a mathematical framework for consciousness: (1) Core idea: Consciousness = integrated information (phi, or \u03a6). A system is conscious to the degree it generates information above and beyond its parts. (2) Requirements: High differentiation (the system can be in many distinct states\u2014it has a large repertoire) AND high integration (the parts are causally interconnected so the system cannot be divided without losing information). (3) Phi (\u03a6) quantifies this: it measures the minimum information lost when the system is partitioned at its \"minimum information partition.\" (4) Implications: IIT predicts that the cerebellum, despite having more neurons than the cerebral cortex, generates low \u03a6 because its modular architecture has low integration. The cerebral cortex, with extensive recurrent connectivity, generates high \u03a6. (5) IIT is one of several leading theories; others include Global Workspace Theory (Baars/Dehaene) and Higher-Order Theories. The field remains actively debated.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Theories of Consciousness"
+    },
+    {
+      "type": "MCQ",
+      "question": "Schizophrenia is associated with the dopamine hypothesis. The original version of this hypothesis proposed:",
+      "options": [
+        "Dopamine deficiency in all brain regions",
+        "Only serotonin dysfunction causes schizophrenia",
+        "Excessive dopaminergic activity in the mesolimbic pathway contributes to positive symptoms (hallucinations, delusions), while dopaminergic hypofunction in the mesocortical pathway (particularly prefrontal cortex) contributes to negative symptoms (flat affect, social withdrawal) and cognitive deficits",
+        "Schizophrenia results exclusively from structural brain damage without neurotransmitter involvement"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The dopamine hypothesis has evolved through several versions: (1) Original (1960s-70s): Based on the observations that amphetamine (increases dopamine) can induce psychosis, and antipsychotic drugs (D2 receptor antagonists) reduce positive symptoms. Simple hypothesis: excess dopamine causes schizophrenia. (2) Revised hypothesis (1990s): Recognizes regional specificity: Mesolimbic hyperactivity (VTA to NAc)\u2014excessive D2 receptor stimulation produces positive symptoms (hallucinations, delusions, disorganized thought). Mesocortical hypoactivity (VTA to PFC)\u2014reduced D1 receptor stimulation in the prefrontal cortex produces negative symptoms and cognitive deficits. (3) Evidence: Typical antipsychotics (haloperidol) block D2 receptors and treat positive symptoms but worsen negative symptoms. Atypical antipsychotics (clozapine) also affect serotonin (5-HT2A) receptors and better address negative symptoms. (4) Current understanding is broader: glutamate (NMDA receptor hypofunction), GABA, and other systems are also involved, making schizophrenia a disorder of multiple interacting neurotransmitter systems.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Dopamine Hypothesis of Schizophrenia"
+    },
+    {
+      "type": "MCQ",
+      "question": "The corpus callosum is the largest commissural fiber bundle in the brain. What happens when it is surgically severed (split-brain procedure)?",
+      "options": [
+        "No change in brain function",
+        "Loss of all sensory perception",
+        "Complete paralysis of both sides",
+        "The two cerebral hemispheres can no longer directly communicate, leading to dissociable processing of information presented to each hemisphere"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Split-brain patients (corpus callosum severed, typically for intractable epilepsy treatment) show fascinating dissociations: (1) Visual information presented to the left visual field (right hemisphere) cannot be verbally reported (language is in left hemisphere), but patients can indicate it nonverbally with the left hand. (2) Objects felt with the left hand (right hemisphere) cannot be named but can be identified by touch. (3) Each hemisphere can independently process information and control its contralateral hand. Roger Sperry's split-brain research (Nobel Prize 1981) demonstrated that each hemisphere has distinct capabilities and that consciousness can be split. Under normal conditions, the corpus callosum (~200 million axons) integrates information between hemispheres seamlessly.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Split-Brain Studies"
+    },
+    {
+      "type": "MCQ",
+      "question": "The substantia nigra pars reticulata (SNr) and globus pallidus internal segment (GPi) are the output nuclei of the basal ganglia. What neurotransmitter do they use?",
+      "options": [
+        "Glutamate (excitatory)",
+        "GABA (gamma-aminobutyric acid, inhibitory)",
+        "Dopamine",
+        "Acetylcholine"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The GPi and SNr are GABAergic output nuclei that tonically inhibit the thalamus. At rest, their sustained inhibitory output keeps the thalamus suppressed, preventing unwanted movements. To initiate movement, the direct pathway (striatum \u2192 GPi/SNr) uses GABA to inhibit these output nuclei, causing disinhibition of the thalamus, which then excites the motor cortex. This 'release from inhibition' mechanism is fundamental to basal ganglia function. Parkinson's disease (loss of dopamine in the direct pathway) leads to excessive GPi/SNr inhibition of the thalamus \u2192 difficulty initiating movement (akinesia/bradykinesia).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Basal Ganglia Output"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of a 'connectome' refers to:",
+      "options": [
+        "The DNA sequence of all neurons",
+        "A comprehensive map of all neural connections (synaptic connections between neurons) in a nervous system",
+        "The collection of all neurotransmitters in the brain",
+        "The number of neurons in the brain"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A connectome is a comprehensive structural description of the network of neural connections in a nervous system. Connectomes can be mapped at different scales: (1) Microscale\u2014all individual synaptic connections between neurons (achieved for C. elegans: 302 neurons, ~7,000 synapses; being pursued for Drosophila and mouse brain regions using electron microscopy). (2) Mesoscale\u2014connections between brain regions/cell types (region-to-region connectivity). (3) Macroscale\u2014major white matter tracts connecting brain areas (mapped in humans using diffusion tensor imaging, DTI). The Human Connectome Project uses advanced MRI to map macroscale connectivity in 1,200 subjects, correlating connectome structure with behavior and genetics.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Connectomics"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To test whether a newly discovered neuropeptide modulates anxiety-like behavior in mice, a researcher wants to deliver it specifically to the basolateral amygdala (BLA). What delivery method would be most appropriate and what behavioral assays should be used?",
+      "options": [
+        "Intraperitoneal injection and measure weight changes",
+        "Stereotaxic implantation of a cannula targeting the BLA for microinfusion of the neuropeptide, followed by elevated plus maze (EPM) and open field test (OFT) to assess anxiety-like behavior",
+        "Oral administration and measure locomotor activity",
+        "Intravenous injection and measure blood pressure"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Targeted brain region delivery and behavioral testing strategy: (1) Delivery method: Stereotaxic surgery to implant bilateral guide cannulae targeting the BLA using coordinates from a mouse brain atlas (Paxinos and Franklin). After recovery, the neuropeptide is microinfused through internal cannulae (typically 0.1-0.5 microL at 0.1 microL/min). This ensures: region-specific delivery, controlled dosing, ability to test multiple doses, and vehicle-control comparison in the same animal. (2) Behavioral assays: Elevated plus maze (EPM)\u2014anxious mice spend less time in open arms; Open field test (OFT)\u2014anxious mice avoid the center zone; Light-dark box\u2014anxious mice prefer the dark compartment. Multiple assays strengthen conclusions by testing different aspects of anxiety. (3) Controls: Vehicle (artificial CSF) infusion; infusion into adjacent brain regions (anatomical specificity); histological verification of cannula placement post-mortem. (4) Systemic injection would not provide regional specificity and the peptide might not cross the BBB.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Neuropeptide Anxiety Modulation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neurotransmitter inactivation can occur through several mechanisms. Which mechanism terminates the action of acetylcholine at the neuromuscular junction?",
+      "options": [
+        "Reuptake into the presynaptic terminal by transporters",
+        "Uptake by postsynaptic muscle cells",
+        "Diffusion away from the synapse only",
+        "Enzymatic degradation by acetylcholinesterase (AChE) in the synaptic cleft"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Acetylcholine (ACh) at the neuromuscular junction is primarily inactivated by acetylcholinesterase (AChE), one of the fastest enzymes known (~25,000 ACh molecules hydrolyzed per second per enzyme molecule). AChE is anchored to the basal lamina in the synaptic cleft, positioning it for rapid ACh degradation into acetate and choline. Choline is then recycled by high-affinity choline transporters in the presynaptic terminal. Inhibition of AChE (by nerve agents like sarin, insecticides, or therapeutic drugs like neostigmine for myasthenia gravis) causes ACh accumulation, prolonged receptor activation, and muscle paralysis. Other neurotransmitters use reuptake (dopamine, serotonin, norepinephrine via DAT, SERT, NET) or enzymatic degradation (MAO, COMT for catecholamines).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "ACh Inactivation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Proprioception provides the brain with information about body position and movement. Which sensory receptors are primarily responsible for proprioception?",
+      "options": [
+        "Muscle spindles and Golgi tendon organs in muscles and tendons",
+        "Nociceptors in the skin",
+        "Rods and cones in the retina",
+        "Hair cells in the cochlea"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Proprioceptors include: (1) Muscle spindles\u2014intrafusal muscle fibers with sensory nerve endings (type Ia and II afferents) that detect muscle length and rate of change. They are key for the stretch reflex and maintaining posture. (2) Golgi tendon organs\u2014at muscle-tendon junctions, detecting muscle tension via type Ib afferents. They prevent excessive force generation (autogenic inhibition). (3) Joint receptors\u2014detect joint angle and movement. Proprioceptive information travels via the dorsal column-medial lemniscal pathway to the somatosensory cortex and via spinocerebellar tracts to the cerebellum (unconscious proprioception for motor coordination). Loss of proprioception causes severe movement deficits despite intact motor pathways.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Proprioception"
+    },
+    {
+      "type": "MCQ",
+      "question": "Phantom limb pain after amputation demonstrates that the brain's body representation can undergo maladaptive reorganization. What neural mechanism is thought to underlie phantom limb sensations?",
+      "options": [
+        "Regeneration of severed peripheral nerves to their original targets",
+        "Cortical reorganization in the primary somatosensory cortex, where the deafferented cortical area (previously representing the amputated limb) is invaded by inputs from adjacent body representations, generating referred sensations perceived as coming from the missing limb",
+        "Direct stimulation of pain receptors in the stump tissue only",
+        "Damage to the thalamus caused by the amputation procedure"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Phantom limb phenomena illustrate cortical plasticity and body representation: (1) After amputation, the cortical area that formerly represented the amputated limb becomes deafferented (loses its normal input). (2) Adjacent cortical representations (following the somatosensory homunculus) expand into the deafferented zone. For hand amputation, face and upper arm representations expand. (3) Ramachandran demonstrated that touching the face of hand amputees could produce referred sensations in the phantom hand\u2014a topographic map of the phantom hand could be found on the face. (4) Phantom pain may arise from: cortical reorganization creating abnormal neural activity; neuroma formation at the stump; spinal cord sensitization; mismatch between motor intention and missing sensory feedback. (5) Mirror therapy (Ramachandran) provides visual feedback of the intact limb \"replacing\" the phantom, which can reduce phantom pain\u2014supporting the role of visual-motor-sensory conflict. (6) These findings demonstrate that body representation in the brain is dynamic, not hardwired, and can be reorganized by experience or injury.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Phantom Limb and Cortical Reorganization"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of \"neural coding\" addresses how information is represented by neural activity. What is the key difference between rate coding and temporal coding?",
+      "options": [
+        "Rate coding encodes information in the average firing rate of neurons over time, while temporal coding encodes information in the precise timing of individual action potentials or the pattern of inter-spike intervals",
+        "They are identical concepts",
+        "Rate coding is used only in the visual system; temporal coding is used only in the auditory system",
+        "Temporal coding is faster but less accurate than rate coding"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Neural coding refers to how the nervous system represents information: (1) Rate coding (Adrian, 1926): Information is encoded in the mean firing rate of a neuron averaged over a time window (typically 100-500 ms). Stronger stimuli produce higher firing rates. This is well-established for sensory encoding (e.g., stronger pressure = higher firing rate in mechanoreceptors). (2) Temporal coding: Information is encoded in the precise timing of spikes (millisecond precision) or in temporal patterns. Examples include: phase-locked firing in auditory neurons (encoding sound frequency), synchronization between neurons (binding features of a visual object), and spike-timing-dependent plasticity (STDP). (3) Population coding: Information is distributed across a population of neurons, with each neuron's response contributing a \"vote\" (e.g., Georgopoulos population vector for motor cortex direction coding). (4) In practice, the nervous system likely uses combinations of these strategies depending on the context and brain region.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Neural Coding Strategies"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A neuroscientist wants to determine whether a specific neural circuit in the amygdala is necessary AND sufficient for fear conditioning in mice. What combination of techniques would most directly test both necessity and sufficiency?",
+      "options": [
+        "Use optogenetic inhibition (halorhodopsin/archaerhodopsin) of the circuit during fear conditioning to test necessity, and optogenetic activation (channelrhodopsin) of the same circuit in the absence of a fear stimulus to test sufficiency",
+        "Recording neural activity with electrodes during fear conditioning",
+        "Lesioning the entire amygdala and testing for fear responses",
+        "Measuring c-Fos expression in the amygdala after fear conditioning"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Testing necessity and sufficiency requires different experimental approaches: (1) NECESSITY: Does the circuit need to be active for the behavior? Use optogenetic inhibition\u2014express inhibitory opsins (halorhodopsin/NpHR or archaerhodopsin/Arch) in the specific neural population. If silencing the circuit during fear conditioning prevents learning, the circuit is necessary. Advantage over lesions: temporal precision (can silence only during specific trial phases) and cell-type specificity. (2) SUFFICIENCY: Can activating the circuit alone produce the behavior? Express channelrhodopsin-2 (ChR2) in the circuit and stimulate with blue light in the absence of any fear stimulus (no shock). If activation alone produces freezing behavior, the circuit is sufficient. (3) Together, necessity + sufficiency experiments provide the strongest evidence for a causal role. Control experiments include: viral expression without light, light without opsin expression, and testing in other brain regions.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Necessity vs Sufficiency Testing"
+    },
+    {
+      "type": "MCQ",
+      "question": "Invertebrate nervous systems display a range of organizational complexity. The planarian nervous system is described as having a \"ladder-type\" arrangement. What does this mean structurally?",
+      "options": [
+        "A single dorsal nerve cord with no ganglia",
+        "A single giant axon running the body length",
+        "A diffuse nerve net with no centralization",
+        "A pair of ventral nerve cords connected by transverse commissures, with an anterior cephalic ganglion serving as a simple brain"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The planarian nervous system represents an important evolutionary advance over the cnidarian nerve net. It features: (1) Cephalization\u2014an anterior cephalic ganglion (cerebral ganglion) that integrates sensory input from eyespots (ocelli) and auricles (chemoreceptors). (2) Two ventral longitudinal nerve cords that run the body length. (3) Transverse commissures connecting the two cords at regular intervals, creating a ladder-like appearance. This organization demonstrates the evolutionary trend toward centralization and cephalization. The cephalic ganglion processes phototactic and chemotactic information, enabling planarians to move away from light and toward food sources.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Planarian Nervous System"
+    },
+    {
+      "type": "MCQ",
+      "question": "The blood-brain barrier (BBB) selectively restricts the passage of substances from the bloodstream into the brain. Which cellular feature primarily establishes the BBB?",
+      "options": [
+        "Fenestrated capillary endothelium with large pores",
+        "The meninges (dura, arachnoid, pia mater)",
+        "Gap junctions between neurons",
+        "Tight junctions between brain capillary endothelial cells, reinforced by astrocyte foot processes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The BBB is primarily formed by tight junctions (zonulae occludentes) between brain capillary endothelial cells, creating a physical barrier that restricts paracellular diffusion. Key features: (1) Continuous, non-fenestrated endothelium with tight junctions having very high transepithelial electrical resistance (~1,500-2,000 \u03a9\u00b7cm\u00b2). (2) Astrocyte foot processes (endfeet) surround ~99% of the capillary surface and induce/maintain BBB properties. (3) Pericytes embedded in the capillary basement membrane regulate BBB development and function. The BBB allows passage of: small lipophilic molecules (O\u2082, CO\u2082, ethanol), specific transport systems (glucose via GLUT1, amino acids via specific carriers), and receptor-mediated transcytosis (insulin, transferrin). It excludes most large molecules, pathogens, and polar drugs.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Blood-Brain Barrier"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about the spinal cord:\nI. The spinal cord contains both ascending (sensory) and descending (motor) tracts in its white matter\nII. The gray matter of the spinal cord contains neuron cell bodies organized into dorsal (sensory) and ventral (motor) horns\nIII. The spinal cord can mediate reflexes independently of the brain\nIV. The spinal cord extends the full length of the vertebral column in adult humans",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I. TRUE: White matter contains myelinated axon tracts organized into dorsal, lateral, and ventral columns (funiculi). Ascending tracts carry sensory information to the brain (e.g., dorsal columns for fine touch, spinothalamic for pain/temperature). Descending tracts carry motor commands from the brain (e.g., corticospinal/pyramidal tract for voluntary movement). II. TRUE: Gray matter is organized into: dorsal horn (receives sensory input from dorsal root ganglia), ventral horn (contains lower motor neurons whose axons exit via ventral roots), and lateral horn (autonomic preganglionic neurons in thoracolumbar segments). III. TRUE: Spinal reflexes (knee-jerk, withdrawal) operate via local circuits without requiring brain input, though they can be modulated by descending brain signals. IV. FALSE: The adult human spinal cord ends at approximately L1-L2 vertebral level (the conus medullaris). Below this, the vertebral canal contains only the cauda equina (spinal nerve roots).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Spinal Cord Organization"
+    },
+    {
+      "type": "MCQ",
+      "question": "Deep brain stimulation (DBS) is a therapeutic technique used for movement disorders. How does DBS work?",
+      "options": [
+        "Destroying brain tissue with electrical current",
+        "Replacing damaged neurons with electrode-generated signals",
+        "Stimulating peripheral nerves to improve central function",
+        "Delivering continuous high-frequency electrical stimulation to specific brain nuclei (typically the subthalamic nucleus or GPi) via implanted electrodes, modulating abnormal neural circuit activity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Deep brain stimulation (DBS) involves: (1) Surgical implantation of electrodes into specific brain targets\u2014most commonly the subthalamic nucleus (STN) or globus pallidus internal segment (GPi) for Parkinson's disease. (2) Connection to a pulse generator ('brain pacemaker') implanted in the chest. (3) Delivery of continuous high-frequency (130-185 Hz) electrical stimulation. (4) The precise mechanism is debated but likely involves: disrupting pathological oscillatory activity, stimulating output axons, and modulating local neurotransmitter release. DBS dramatically improves motor symptoms (tremor, rigidity, dyskinesia) in appropriately selected Parkinson's patients. DBS is also FDA-approved for essential tremor and dystonia, and is being investigated for OCD, depression, Tourette syndrome, and epilepsy.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Deep Brain Stimulation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Long-term depression (LTD) at cerebellar parallel fiber-Purkinje cell synapses is thought to underlie motor learning. How does cerebellar LTD differ mechanistically from hippocampal LTP?",
+      "options": [
+        "They use identical mechanisms in different brain regions",
+        "Cerebellar LTD requires coincident activation of parallel fibers (glutamate) and climbing fibers (strong depolarization), leading to AMPA receptor internalization and weakened synaptic transmission\u2014the opposite of hippocampal LTP which strengthens synapses through AMPA receptor insertion",
+        "LTD only occurs in invertebrate nervous systems",
+        "Cerebellar LTD strengthens synapses while hippocampal LTP weakens them"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cerebellar LTD and hippocampal LTP represent contrasting forms of synaptic plasticity: (1) Cerebellar LTD mechanism: Coincident activation of parallel fiber input (glutamate activating mGluR1 metabotropic receptors and AMPA receptors) and climbing fiber input (strong depolarization, calcium entry) triggers a signaling cascade: PKC activation leads to phosphorylation and clathrin-mediated endocytosis of AMPA receptors, WEAKENING the synapse. (2) Hippocampal LTP: Strong presynaptic glutamate release coincident with postsynaptic depolarization relieves the Mg2+ block of NMDA receptors, allowing Ca2+ entry, which activates CaMKII, leading to AMPA receptor phosphorylation and INSERTION into the membrane, STRENGTHENING the synapse. (3) Functional significance: Cerebellar LTD during motor learning reduces the output of Purkinje cells (which are inhibitory), effectively disinhibiting deep cerebellar nuclei, refining motor commands. Error signals from climbing fibers instruct which synapses to weaken. (4) Both require coincidence detection and calcium signaling but produce opposite outcomes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Cerebellar LTD vs Hippocampal LTP"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which amino acid serves as the primary inhibitory neurotransmitter in the spinal cord and brainstem?",
+      "options": [
+        "Glutamate",
+        "GABA",
+        "Glycine",
+        "Aspartate"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Glycine is the primary inhibitory neurotransmitter in the spinal cord and brainstem, while GABA (gamma-aminobutyric acid) is the primary inhibitory neurotransmitter in the brain. Glycine receptors are ligand-gated chloride channels that hyperpolarize neurons when activated. Glycine is particularly important for: (1) reciprocal inhibition in spinal motor circuits (inhibiting antagonist muscles during movement), (2) inhibition of motor neurons during REM sleep (producing muscle atonia), and (3) modulating pain transmission in the dorsal horn. Strychnine, a potent poison, blocks glycine receptors, causing disinhibition of motor neurons \u2192 muscle spasms and convulsions. Glycine also serves as a co-agonist at NMDA glutamate receptors in the brain.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Inhibitory Neurotransmitters"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neurulation is the embryonic process that forms the neural tube, the precursor to the entire CNS. Primary neurulation involves:",
+      "options": [
+        "Migration of neural crest cells to form the brain",
+        "Budding of the neural tube from the notochord",
+        "Thickening of dorsal ectoderm to form the neural plate, which folds inward at the neural groove, with the neural folds ultimately fusing to form the neural tube\u2014failure of closure causes neural tube defects such as spina bifida and anencephaly",
+        "Condensation of mesenchymal cells into the spinal cord"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Primary neurulation is a critical embryonic event: (1) Induction: The notochord and adjacent mesoderm release signals (noggin, chordin, follistatin\u2014BMP antagonists) that induce overlying dorsal ectoderm to become neural ectoderm (neural plate). (2) Neural plate formation: The neural plate thickens and elongates, driven by convergent extension cell movements. (3) Neural groove: The neural plate invaginates along the midline, forming the neural groove flanked by neural folds. (4) Neural tube closure: The neural folds elevate, converge, and fuse at the dorsal midline. Closure initiates at multiple sites and proceeds bidirectionally. (5) Neural crest cells delaminate from the dorsal neural tube via epithelial-to-mesenchymal transition and migrate to form PNS ganglia, melanocytes, craniofacial cartilage, etc. (6) Failure of closure: Anterior neuropore failure causes anencephaly (fatal); posterior neuropore failure causes spina bifida. Folic acid supplementation reduces neural tube defect risk by 50-70%.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Neurulation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neuroplasticity refers to the brain's ability to reorganize itself by forming new neural connections. Which type of neuroplasticity occurs when functions from a damaged brain area are taken over by adjacent or contralateral areas?",
+      "options": [
+        "Synaptic plasticity",
+        "Compensatory masquerade",
+        "Functional reorganization (cortical remapping)",
+        "Neurogenesis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Functional reorganization (cortical remapping) occurs when undamaged brain regions take over functions previously performed by damaged areas. This can involve: (1) Unmasking of latent pathways\u2014pre-existing but normally suppressed connections become active. (2) Synaptic sprouting\u2014surviving neurons grow new connections. (3) Cross-modal plasticity\u2014sensory cortex normally devoted to one modality processes information from another (e.g., visual cortex processes tactile information in blind individuals). (4) Contralateral compensation\u2014the opposite hemisphere takes over functions. Cortical remapping is most effective in young brains but can occur throughout life. Constraint-induced movement therapy (CIMT) for stroke rehabilitation exploits this principle by forcing use of the affected limb.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Neuroplasticity"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neurotransmitter systems in the brain can be broadly categorized. Which neurotransmitter system originates primarily from the substantia nigra and ventral tegmental area and is involved in reward, motivation, and motor control?",
+      "options": [
+        "Dopamine (from substantia nigra and ventral tegmental area)",
+        "Serotonin (from raphe nuclei)",
+        "Norepinephrine (from locus coeruleus)",
+        "Acetylcholine (from basal nucleus of Meynert)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The dopaminergic system has two major pathways: (1) Nigrostriatal pathway\u2014from substantia nigra pars compacta to dorsal striatum (caudate nucleus, putamen). This pathway is essential for voluntary motor control; its degeneration causes Parkinson's disease (tremor, rigidity, bradykinesia). (2) Mesolimbic/mesocortical pathways\u2014from ventral tegmental area (VTA) to nucleus accumbens (reward, motivation) and prefrontal cortex (executive function, working memory). Dysfunction is implicated in addiction (excessive dopamine signaling in reward circuits) and schizophrenia (dopamine hypothesis\u2014excess mesolimbic dopamine, deficient mesocortical dopamine). Serotonin (raphe nuclei) regulates mood; norepinephrine (locus coeruleus) regulates arousal; acetylcholine (basal forebrain) is involved in attention and memory.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Dopaminergic Systems"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of a \"critical period\" in neural development was established by Hubel and Wiesel's experiments on the visual cortex. What happens if one eye is sutured shut (monocular deprivation) during the critical period in kittens?",
+      "options": [
+        "The visual cortex compensates by increasing binocular neurons",
+        "Ocular dominance columns reorganize: neurons that would normally respond to the deprived eye become responsive to the open eye instead, causing permanent visual impairment in the deprived eye even after reopening",
+        "There is no effect because the visual cortex is already mature at birth",
+        "The deprived eye develops enhanced sensitivity after reopening"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hubel and Wiesel's Nobel Prize-winning experiments (1981) demonstrated experience-dependent plasticity during critical periods: (1) Normal development: Visual cortex neurons are organized into ocular dominance columns, with roughly equal representation of both eyes. (2) Monocular deprivation during the critical period (approximately weeks 3-8 in kittens): The deprived eye loses its representation in the visual cortex\u2014columns shrink while the open eye's columns expand. This is mediated by competitive Hebbian mechanisms (\"neurons that fire together wire together\"). (3) After the critical period: Reopening the eye cannot restore normal cortical representation\u2014the changes are permanent (amblyopia). (4) The same deprivation in adult cats has no effect\u2014plasticity is restricted to the critical period. (5) Molecular mechanisms involve NMDA receptors, BDNF, GABAergic maturation, and perineuronal nets. These findings have clinical implications for treating amblyopia in children.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "HARD",
+      "topic": "Critical Period Visual Cortex"
+    },
+    {
+      "type": "MCQ",
+      "question": "Astrocytes participate in the 'tripartite synapse' concept. What is the role of astrocytes at synapses?",
+      "options": [
+        "Astrocytes regulate synaptic transmission by taking up and recycling neurotransmitters, releasing gliotransmitters (glutamate, D-serine, ATP), and modulating synaptic strength",
+        "Astrocytes directly transmit electrical signals between neurons",
+        "Astrocytes produce myelin around synaptic terminals",
+        "Astrocytes have no role at synapses"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The tripartite synapse concept (presynaptic neuron + postsynaptic neuron + perisynaptic astrocyte) recognizes astrocytes as active participants in synaptic signaling: (1) Neurotransmitter uptake\u2014astrocytes express high-affinity transporters (especially for glutamate: GLT-1, GLAST) that rapidly clear neurotransmitter from the synaptic cleft. (2) Neurotransmitter recycling\u2014astrocytes convert glutamate to glutamine (via glutamine synthetase), which is transported back to neurons for reconversion to glutamate. (3) Gliotransmitter release\u2014astrocytes release glutamate, D-serine (NMDA receptor co-agonist), and ATP in response to neuronal activity. (4) K\u207a buffering\u2014astrocytes take up excess extracellular K\u207a through Kir channels. (5) Metabolic support\u2014lactate shuttle provides energy substrate to active neurons.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Tripartite Synapse"
+    },
+    {
+      "type": "MCQ",
+      "question": "Wernicke's area is located in the posterior part of the left superior temporal gyrus. Damage to this area causes:",
+      "options": [
+        "Inability to produce speech but intact comprehension",
+        "Fluent speech that lacks meaning, with severely impaired comprehension (Wernicke's aphasia)",
+        "Complete deafness",
+        "Visual field deficits"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Wernicke's aphasia results from damage to Wernicke's area (Brodmann area 22) in the left superior temporal gyrus. Characteristics: (1) Fluent speech\u2014patients speak easily and grammatically but produce nonsensical word strings (word salad, neologisms). (2) Impaired comprehension\u2014patients cannot understand spoken or written language. (3) Patients are often unaware of their deficit (anosognosia). This contrasts with Broca's aphasia (non-fluent but meaningful speech, intact comprehension). Conduction aphasia results from damage to the arcuate fasciculus connecting these areas, producing difficulty repeating words despite fluent speech and intact comprehension.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Wernicke's Aphasia"
+    },
+    {
+      "type": "MCQ",
+      "question": "Spinal reflexes demonstrate several important principles of neural circuit organization. In the patellar (knee-jerk) reflex, why is reciprocal inhibition of antagonist muscles essential for the reflex to function?",
+      "options": [
+        "It prevents damage to the sensory neurons",
+        "Without inhibition of the hamstring flexors via inhibitory interneurons, simultaneous contraction of both quadriceps (extensors) and hamstrings (flexors) would prevent the leg from extending",
+        "It increases the speed of sensory nerve conduction",
+        "It reduces the amount of neurotransmitter needed at the synapse"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The patellar reflex illustrates reciprocal inhibition, a fundamental principle of motor control: (1) Stimulus: Tapping the patellar tendon stretches the quadriceps muscle, activating muscle spindle (Ia afferent) sensory neurons. (2) Direct pathway: Ia afferents synapse directly on alpha motor neurons innervating the quadriceps (monosynaptic reflex arc)\u2014the fastest possible circuit. (3) Reciprocal inhibition: The same Ia afferents also synapse on inhibitory interneurons (Ia inhibitory interneurons) that release glycine onto motor neurons innervating the antagonist hamstring muscles. (4) Result: Quadriceps contracts while hamstrings relax, allowing smooth knee extension. Without reciprocal inhibition, co-contraction would occur\u2014both muscle groups contracting simultaneously, producing no movement (like trying to open and close your fist simultaneously). This principle\u2014Sherrington's reciprocal innervation\u2014applies throughout the motor system.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Reciprocal Inhibition"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about the peripheral nervous system:\nI. The somatic nervous system controls voluntary skeletal muscle movements\nII. The autonomic nervous system regulates involuntary functions like heart rate and digestion\nIII. Sensory neurons in the PNS have their cell bodies in the dorsal root ganglia\nIV. All peripheral nerves are myelinated by oligodendrocytes",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I. TRUE: The somatic nervous system contains motor neurons that innervate skeletal muscles for voluntary movement, and sensory neurons that carry information from skin, joints, and muscles. II. TRUE: The autonomic nervous system (sympathetic, parasympathetic, enteric divisions) controls visceral functions including heart rate, blood pressure, digestion, respiration, and glandular secretion, largely without conscious control. III. TRUE: Sensory (afferent) neurons of the PNS are pseudounipolar neurons with cell bodies in dorsal root ganglia (spinal nerves) or cranial nerve ganglia. Their peripheral process extends to sensory receptors, central process enters the spinal cord. IV. FALSE: In the PNS, myelination is performed by Schwann cells, not oligodendrocytes. Oligodendrocytes myelinate CNS axons only. Each Schwann cell myelinates one segment of one axon, while non-myelinating Schwann cells envelop multiple small unmyelinated axons (Remak bundles).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "PNS Organization"
+    },
+    {
+      "type": "MCQ",
+      "question": "Alzheimer's disease is characterized by progressive cognitive decline. Which two pathological protein aggregates are diagnostic hallmarks of Alzheimer's disease?",
+      "options": [
+        "Amyloid-beta plaques (extracellular) and neurofibrillary tangles (intracellular hyperphosphorylated tau)",
+        "Prion proteins and tau tangles",
+        "Alpha-synuclein aggregates and Lewy bodies",
+        "Huntingtin protein aggregates and poly-Q inclusions"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Alzheimer's disease has two hallmark pathologies: (1) Amyloid-beta (A\u03b2) plaques\u2014extracellular deposits of A\u03b2 peptide (40-42 amino acids), produced by sequential cleavage of amyloid precursor protein (APP) by \u03b2-secretase (BACE1) and \u03b3-secretase (presenilin complex). A\u03b242 is particularly aggregation-prone and neurotoxic. (2) Neurofibrillary tangles (NFTs)\u2014intracellular aggregates of hyperphosphorylated tau protein. Tau normally stabilizes microtubules in axons; when hyperphosphorylated, tau detaches from microtubules and forms insoluble paired helical filaments, disrupting axonal transport. The amyloid cascade hypothesis posits that A\u03b2 accumulation triggers tau pathology, synaptic dysfunction, neuroinflammation, and neuronal death. Cholinergic neurons in the basal forebrain are especially vulnerable.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Alzheimer's Disease Pathology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher records from a neuron in the visual cortex and finds it responds strongly to a vertical bar of light moving rightward across its receptive field, weakly to a vertical bar moving leftward, and not at all to a horizontal bar. This neuron is best classified as:",
+      "options": [
+        "A retinal ganglion cell with a center-surround receptive field",
+        "A lateral geniculate nucleus relay neuron",
+        "A rod photoreceptor detecting light intensity",
+        "A simple cell in V1 that responds to a specific orientation, with direction selectivity indicating stronger response to one direction of motion within its preferred orientation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This neuron displays properties characteristic of a direction-selective simple cell in primary visual cortex (V1): (1) Orientation selectivity: Responds to vertical but not horizontal bars\u2014a defining feature of V1 neurons (Hubel and Wiesel). This emerges because multiple LGN neurons with aligned center-surround receptive fields converge on the cortical neuron. (2) Direction selectivity: Stronger response to rightward vs. leftward motion at the preferred orientation. Direction selectivity in V1 simple cells arises from asymmetric inhibitory circuits: GABAergic interneurons suppress responses in the non-preferred direction. (3) Simple cells (vs. complex cells): Simple cells have clearly defined ON and OFF subregions that can be mapped with stationary stimuli; their responses are modulated by the spatial phase of a grating. Complex cells are phase-invariant. (4) Hubel and Wiesel's hierarchical model: LGN (center-surround) \u2192 V1 simple cells (orientation-selective) \u2192 V1 complex cells (orientation + position-invariant) \u2192 higher visual areas. This work earned the Nobel Prize in 1981.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "Visual Cortex Receptive Fields"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of critical periods in brain development refers to:",
+      "options": [
+        "The time when the brain stops growing entirely",
+        "Time-limited windows during development when the nervous system is especially sensitive to certain environmental stimuli, and proper stimulation is required for normal development of specific functions",
+        "The period when neurons first begin to form",
+        "The time needed for myelination to complete"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Critical periods are time windows during brain development when neural circuits are especially plastic and require appropriate sensory input for normal development. Classic examples: (1) Visual system\u2014if one eye is deprived of input during the critical period (first few months/years in humans), the visual cortex permanently fails to respond to that eye (amblyopia). Hubel and Wiesel's monocular deprivation experiments in kittens demonstrated this. (2) Language acquisition\u2014the ability to learn language natively declines dramatically after puberty. (3) Auditory processing\u2014exposure to language sounds during the first year establishes phonemic categories. Critical periods are regulated by the balance of excitation and inhibition (particularly GABAergic inhibition via parvalbumin interneurons) and involve molecular brakes (perineuronal nets, myelin-associated inhibitors) that close plasticity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Critical Periods"
+    },
+    {
+      "type": "MCQ",
+      "question": "The reticular formation extends through the brainstem core and plays critical roles in arousal and consciousness. Damage to the reticular activating system (RAS) most likely results in:",
+      "options": [
+        "Loss of voluntary motor control only",
+        "Impaired visual processing",
+        "Coma or persistent vegetative state, because the RAS provides essential ascending excitatory input to the thalamus and cortex required for maintaining wakefulness",
+        "Inability to produce speech while remaining conscious"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The reticular activating system (RAS) is essential for consciousness and arousal: (1) It consists of interconnected nuclei throughout the brainstem (medulla, pons, midbrain) that send diffuse ascending projections to the thalamus, hypothalamus, and cortex. (2) Key neurotransmitter systems involved: noradrenergic (locus coeruleus), serotonergic (raphe nuclei), cholinergic (pedunculopontine and laterodorsal tegmental nuclei), dopaminergic (VTA), and histaminergic (tuberomammillary nucleus). (3) These ascending projections tonically depolarize thalamocortical neurons, maintaining them in a relay mode conducive to cortical activation. (4) Bilateral RAS damage causes coma because cortical neurons lose their activating input\u2014the cortex itself may be intact but cannot function without thalamic/brainstem arousal signals. (5) Moruzzi and Magoun (1949) demonstrated that electrical stimulation of the RAS awakens sleeping animals, while lesions cause permanent coma. This was foundational for understanding the neural basis of consciousness.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Reticular Activating System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Myelin is essential for rapid nerve conduction in vertebrates. Demyelinating diseases such as multiple sclerosis (MS) cause neurological deficits because:",
+      "options": [
+        "Myelin generates action potentials that are lost when it degrades",
+        "Loss of myelin insulation exposes the axonal membrane between nodes of Ranvier, causing current leak, conduction slowing, and eventually conduction block as action potentials fail to regenerate at nodes due to insufficient depolarization",
+        "Myelin provides the only source of nutrition to neurons",
+        "Demyelination causes immediate neuronal death by apoptosis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Demyelination disrupts saltatory conduction through specific biophysical mechanisms: (1) Normal function: Myelin acts as an electrical insulator, restricting current flow to nodes of Ranvier where voltage-gated Na+ channels are concentrated (1,000-2,000/micrometer-squared at nodes vs. <25/micrometer-squared under myelin). (2) Demyelination effects: (a) Increased membrane capacitance in demyelinated segments (current charges the now-exposed membrane). (b) Decreased membrane resistance (current leaks across the exposed membrane). (c) These changes reduce the length constant (lambda), so current generated at one node may be insufficient to depolarize the next node to threshold. (3) Conduction slowing occurs first; complete conduction block follows with extensive demyelination. (4) In MS, the immune system attacks oligodendrocyte myelin in the CNS, causing focal plaques of demyelination. (5) Symptoms depend on lesion location: optic neuritis (optic nerve), numbness/weakness (spinal cord), ataxia (cerebellar connections). (6) Partial recovery can occur through remyelination (by oligodendrocyte precursor cells) or redistribution of Na+ channels along demyelinated segments.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Demyelination Pathophysiology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An EEG recording from a patient shows the following progression over a night: initial alpha waves transitioning to theta, then periods of high-amplitude delta waves interspersed with periods showing low-amplitude mixed-frequency activity with rapid eye movements. The patient shows 4 complete cycles of this pattern. What does this recording indicate?",
+      "options": [
+        "An epileptic episode with postictal depression",
+        "Anesthesia with intermittent arousal responses",
+        "A comatose state with periodic cortical activity",
+        "Normal sleep architecture showing 4 NREM-REM sleep cycles, each lasting approximately 90 minutes, with progressive increase in REM duration across the night"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Normal sleep architecture follows a predictable pattern: (1) Transition from wakefulness (alpha) through NREM stages: Stage 1 (theta, sleep spindles), Stage 2 (K-complexes, sleep spindles), Stage 3 (delta/slow-wave sleep). (2) After reaching deep sleep, the brain transitions to REM sleep, characterized by low-amplitude, mixed-frequency EEG (similar to waking), rapid eye movements, and muscle atonia. (3) One complete NREM-REM cycle lasts ~90 minutes. (4) Across the night, early cycles contain more slow-wave sleep while later cycles have longer REM periods. (5) Adults typically complete 4-6 cycles per night. The pattern described\u20144 complete cycles over approximately 6-8 hours\u2014represents normal healthy sleep. Sleep architecture is disrupted in many neurological and psychiatric conditions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "Sleep Architecture Analysis"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neuroinflammation involves activation of resident immune cells in the CNS. Which cell type serves as the primary innate immune cell of the brain, and what is its developmental origin?",
+      "options": [
+        "Astrocytes, derived from neural progenitor cells",
+        "Schwann cells, derived from circulating monocytes",
+        "Oligodendrocytes, derived from the neural crest",
+        "Microglia, which are derived from yolk sac myeloid progenitors that colonize the brain during embryonic development\u2014making them distinct from other CNS cells (which derive from neuroectoderm) and from peripheral macrophages"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Microglia are the brain's resident immune cells with a unique developmental origin: (1) Unlike all other CNS cells (neurons, astrocytes, oligodendrocytes from neuroectoderm), microglia derive from yolk sac primitive myeloid progenitors that migrate into the developing brain during early embryogenesis (before BBB formation). (2) They are maintained throughout life by local self-renewal, not replenished from bone marrow-derived monocytes. (3) In the healthy brain, microglia exist in a \"surveying\" state\u2014extending and retracting processes to monitor the microenvironment, phagocytosing debris, and pruning excess synapses during development (complement-mediated). (4) Upon detecting damage or infection (via pattern recognition receptors like TLRs), microglia become \"activated,\" adopting pro-inflammatory (M1-like) or anti-inflammatory (M2-like) phenotypes. (5) Chronic microglial activation contributes to neurodegeneration in Alzheimer's, Parkinson's, and ALS. (6) Recent research shows microglia play essential roles beyond immunity: synaptic plasticity, learning, and maintaining neural circuit homeostasis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Microglia Origin and Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Gate control theory of pain proposes that:",
+      "options": [
+        "All pain signals travel directly to the brain without modulation",
+        "Pain is entirely psychological and has no neural basis",
+        "Pain transmission in the spinal cord can be modulated by non-painful sensory input\u2014activation of large-diameter A-beta fibers can inhibit pain signal transmission by small C fibers through interneuron mechanisms",
+        "Only opioids can modulate pain perception"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Melzack and Wall's gate control theory (1965) proposes that a 'gate' in the spinal cord dorsal horn modulates pain transmission: (1) Small-diameter C fibers (nociceptors) open the gate, facilitating pain signal transmission to the brain. (2) Large-diameter A-beta fibers (mechanoreceptors) close the gate by activating inhibitory interneurons that suppress pain transmission. (3) Descending inhibitory pathways from the brain (periaqueductal gray \u2192 raphe nuclei \u2192 dorsal horn) can also close the gate using serotonin and endogenous opioids. This explains why rubbing a painful area (activating A-beta fibers) reduces pain perception, and why psychological factors (stress, attention, expectation) modulate pain. TENS (transcutaneous electrical nerve stimulation) therapy is based on this principle.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Gate Control Theory"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neuropharmacology exploits specific features of synaptic transmission. Selective serotonin reuptake inhibitors (SSRIs) like fluoxetine treat depression by:",
+      "options": [
+        "Blocking the serotonin transporter (SERT) on presynaptic terminals, preventing reuptake and prolonging serotonin signaling in the synaptic cleft",
+        "Increasing serotonin synthesis in presynaptic neurons",
+        "Directly activating postsynaptic serotonin receptors as agonists",
+        "Inhibiting monoamine oxidase from degrading serotonin"
+      ],
+      "correctAnswer": "A",
+      "explanation": "SSRIs represent a targeted neuropharmacological approach: (1) Normal serotonin signaling: Serotonin (5-HT) released into the synaptic cleft activates postsynaptic receptors, then is primarily cleared by the serotonin transporter (SERT) on the presynaptic membrane (reuptake). (2) SSRI mechanism: Fluoxetine and other SSRIs competitively bind to SERT, blocking serotonin reuptake. This increases serotonin concentration and duration in the synaptic cleft. (3) Clinical paradox: While SSRIs increase synaptic serotonin within hours, therapeutic effects take 2-4 weeks. This delay is attributed to downstream adaptive changes: desensitization of presynaptic 5-HT1A autoreceptors (which normally provide negative feedback), changes in postsynaptic receptor density, and neuroplastic changes including increased BDNF expression and hippocampal neurogenesis. (4) SSRIs are \"selective\" because they primarily target SERT over norepinephrine and dopamine transporters.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "SSRI Mechanism"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A neuroscientist wants to determine the precise timing of neural events during decision-making. Which recording technique provides the best temporal resolution for measuring neural activity?",
+      "options": [
+        "fMRI (functional magnetic resonance imaging)",
+        "PET (positron emission tomography)",
+        "Electrophysiology (single-unit or multi-electrode recordings), which measures action potentials with sub-millisecond temporal resolution",
+        "Structural MRI"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Electrophysiology provides the best temporal resolution for neural activity: (1) Single-unit recording (extracellular)\u2014records action potentials from individual neurons with sub-millisecond precision. (2) Multi-electrode arrays\u2014simultaneously record from tens to thousands of neurons. (3) Patch clamp\u2014records synaptic currents and single ion channel activity. Comparison of temporal resolution: electrophysiology (~0.1 ms) >> EEG/MEG (~1 ms) >> fMRI (~1-2 s) >> PET (~30-60 s). For decision-making research, electrophysiology can capture the precise timing of neuronal firing patterns during stimulus evaluation, evidence accumulation, and response selection. However, fMRI provides superior spatial coverage and can identify distributed networks involved in the decision.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "HARD",
+      "topic": "Neural Recording Techniques"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cranial nerves provide motor and sensory innervation to the head, neck, and visceral organs. The vagus nerve (cranial nerve X) is unique among cranial nerves because:",
+      "options": [
+        "It is the only cranial nerve that innervates muscles of facial expression",
+        "It exclusively controls eye movements",
+        "It is purely sensory with no motor function",
+        "It extends beyond the head and neck to innervate thoracic and abdominal viscera, providing parasympathetic innervation to the heart, lungs, and most of the digestive tract"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The vagus nerve (CN X) has the most extensive distribution of any cranial nerve: (1) It is the primary parasympathetic nerve to thoracic and abdominal viscera, innervating: heart (slowing heart rate via SA node), lungs (bronchoconstriction), esophagus and stomach (peristalsis, acid secretion), liver, pancreas, small intestine, and proximal large intestine. (2) Approximately 80% of vagal fibers are afferent (sensory), carrying visceral sensory information from internal organs to the brainstem (nucleus of the solitary tract). (3) The vagus plays critical roles in: the inflammatory reflex (cholinergic anti-inflammatory pathway), gut-brain axis communication, and baroreceptor reflex (blood pressure regulation). (4) Vagal tone (measured by heart rate variability) is an important indicator of autonomic function. (5) Vagus nerve stimulation (VNS) is FDA-approved for treating epilepsy and depression. The name \"vagus\" means \"wandering\" in Latin, reflecting its extensive distribution.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Vagus Nerve"
+    },
+    {
+      "type": "MCQ",
+      "question": "Microglia are the resident immune cells of the central nervous system. Which developmental origin distinguishes microglia from other glial cells?",
+      "options": [
+        "Microglia originate from the neural tube, like neurons",
+        "Microglia are derived from neural crest cells",
+        "Microglia originate from yolk sac myeloid progenitors (mesodermal origin), entering the brain during embryonic development, unlike other CNS glia which are ectodermal",
+        "Microglia originate from bone marrow in adulthood"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Microglia are unique among CNS cells because they are not derived from neuroectoderm. They originate from yolk sac myeloid progenitors during early embryonic development, migrating into the developing brain before blood-brain barrier formation. Key features: (1) Mesodermal origin distinguishes them from neurons, astrocytes, and oligodendrocytes (all neuroectodermal). (2) They are self-renewing\u2014under normal conditions, adult microglia are maintained by local proliferation, not by bone marrow-derived monocyte infiltration. (3) Functions include: surveillance of the neural environment (ramified morphology), phagocytosis of debris and dead cells, synaptic pruning during development (complement-mediated), cytokine release during neuroinflammation, and antigen presentation. Microglial activation is implicated in neurodegenerative diseases.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Microglial Origin"
+    },
+    {
+      "type": "MCQ",
+      "question": "Parkinson's disease is a neurodegenerative disorder characterized by tremor, rigidity, and bradykinesia. What is the primary neuropathological feature of Parkinson's disease?",
+      "options": [
+        "Loss of dopaminergic neurons in the substantia nigra pars compacta",
+        "Degeneration of hippocampal neurons",
+        "Demyelination of axons in the central nervous system",
+        "Accumulation of prion proteins in the cerebellum"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Parkinson's disease is caused primarily by the progressive degeneration of dopaminergic neurons in the substantia nigra pars compacta (SNpc). These neurons project to the dorsal striatum (caudate/putamen) via the nigrostriatal pathway, providing dopamine that modulates the basal ganglia motor circuit. Loss of ~60-80% of SNpc dopamine neurons produces the cardinal motor symptoms: resting tremor, rigidity, bradykinesia (slowness), and postural instability. Pathological hallmarks include: (1) neuronal loss in the SNpc, (2) Lewy bodies (intracellular inclusions containing aggregated alpha-synuclein protein) in surviving neurons. Treatment includes L-DOPA (dopamine precursor), dopamine agonists, and deep brain stimulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Parkinson's Disease Pathology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The limbic system is involved in emotion, motivation, and memory. Which structure in the limbic system is essential for the formation of new declarative (explicit) memories?",
+      "options": [
+        "Amygdala",
+        "Hippocampus",
+        "Hypothalamus",
+        "Basal ganglia"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The hippocampus is essential for the consolidation of new declarative memories (facts and events). Evidence comes from: (1) Patient H.M. (Henry Molaison), whose bilateral hippocampal removal for epilepsy treatment resulted in severe anterograde amnesia\u2014inability to form new declarative memories while retaining old memories and procedural learning. (2) Animal lesion studies confirm hippocampal involvement in spatial memory (Morris water maze). (3) Hippocampal 'place cells' encode spatial location, forming cognitive maps. The amygdala is involved in emotional memory and fear conditioning. The hypothalamus regulates homeostasis. The basal ganglia are involved in procedural (implicit) memory and habit formation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Hippocampus and Memory"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which cranial nerve has the broadest distribution in the body, innervating structures from the pharynx to the abdominal organs?",
+      "options": [
+        "Trigeminal nerve (CN V)",
+        "Facial nerve (CN VII)",
+        "Vagus nerve (CN X)",
+        "Glossopharyngeal nerve (CN IX)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The vagus nerve (CN X, from Latin 'wandering') has the broadest distribution of any cranial nerve, extending from the brainstem to the abdomen. It innervates: (1) the pharynx and larynx (motor for swallowing and speech), (2) the heart (parasympathetic\u2014slows heart rate), (3) the lungs (bronchoconstriction), (4) the gastrointestinal tract from esophagus to the splenic flexure of the colon (parasympathetic\u2014increases motility and secretion), (5) the liver, pancreas, and kidneys. The vagus carries ~80% of all parasympathetic fibers and ~80% of its fibers are afferent (sensory), carrying information from visceral organs to the brain. Vagus nerve stimulation is used therapeutically for epilepsy and depression.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Cranial Nerves"
+    },
+    {
+      "type": "MCQ",
+      "question": "The thalamus is often described as the 'gateway to the cortex.' Which statement about the thalamus is INCORRECT?",
+      "options": [
+        "The thalamus relays most sensory information (except olfaction) to the cerebral cortex",
+        "The thalamus receives input from the basal ganglia and cerebellum and relays it to the motor cortex",
+        "The thalamus directly processes and stores long-term memories without cortical involvement",
+        "The thalamus plays a role in regulating consciousness and alertness"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The thalamus is a relay and integration center in the diencephalon. TRUE functions: (1) Sensory relay\u2014most sensory information (visual: LGN, auditory: MGN, somatosensory: VPL/VPM) passes through specific thalamic nuclei en route to the cortex. Olfaction is unique in projecting directly to cortex without thalamic relay. (2) Motor relay\u2014receives basal ganglia and cerebellar output and relays to motor cortex (VA/VL nuclei). (3) Consciousness\u2014intralaminar and reticular thalamic nuclei participate in arousal and attention. The INCORRECT statement is C\u2014the thalamus does NOT directly process and store long-term memories. Memory storage involves the hippocampus (formation) and distributed cortical areas (long-term storage). The thalamus contributes to memory circuits (anterior nucleus in Papez circuit) but does not independently store memories.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Thalamic Functions"
+    },
+    {
+      "type": "MCQ",
+      "question": "The glymphatic system, discovered in 2012, represents a brain-wide pathway for waste clearance. Which of the following best describes how this system functions?",
+      "options": [
+        "Cerebrospinal fluid flows along perivascular channels (surrounding arteries), enters the brain parenchyma facilitated by astrocytic aquaporin-4 water channels, and exits along perivenous spaces, clearing metabolic waste including amyloid-beta",
+        "It uses blood vessels to filter cerebrospinal fluid",
+        "Lymphatic vessels within the brain directly absorb interstitial waste",
+        "Microglial cells actively transport waste across the blood-brain barrier"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The glymphatic (glial-lymphatic) system provides a macroscopic waste clearance pathway for the brain: (1) CSF from the subarachnoid space enters the brain along para-arterial spaces (Virchow-Robin spaces). (2) CSF then enters the brain parenchyma, driven by arterial pulsation and facilitated by aquaporin-4 (AQP4) water channels on astrocytic endfeet that surround blood vessels. (3) CSF mixes with interstitial fluid (ISF) in the parenchyma, collecting metabolic waste including amyloid-beta, tau, and lactate. (4) The waste-laden fluid exits along perivenous spaces and drains to meningeal lymphatic vessels and cervical lymph nodes. (5) Crucially, glymphatic clearance is most active during sleep (especially slow-wave sleep) when the interstitial space expands by ~60%, facilitating fluid flow. This discovery has major implications for understanding Alzheimer disease, where impaired glymphatic clearance may contribute to amyloid-beta accumulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Glymphatic System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neuropeptides differ from classical neurotransmitters in several ways. Which characteristic distinguishes neuropeptide signaling?",
+      "options": [
+        "Neuropeptides are synthesized locally in the synaptic terminal",
+        "Neuropeptides are synthesized in the cell body, packaged in dense-core vesicles, and released from non-synaptic sites; they act over longer distances and durations than classical neurotransmitters",
+        "Neuropeptides are always excitatory",
+        "Neuropeptides bind to ionotropic receptors only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Neuropeptides differ from classical (small-molecule) neurotransmitters in: (1) Synthesis\u2014neuropeptides are synthesized as precursor proteins in the soma, processed in the Golgi, and transported in dense-core vesicles via axonal transport to terminals. Classical transmitters are synthesized locally in terminals. (2) Release\u2014neuropeptides require higher-frequency stimulation and higher Ca\u00b2\u207a levels for release. They are released from dense-core vesicles at non-synaptic sites and can diffuse over larger distances (volume transmission). (3) Inactivation\u2014no reuptake; neuropeptides are degraded by extracellular peptidases. (4) Receptors\u2014exclusively metabotropic (G-protein-coupled), producing slow, modulatory effects. (5) Co-transmission\u2014neuropeptides are often co-released with classical transmitters. Examples: substance P (pain), endorphins (pain modulation), oxytocin (social bonding), vasopressin (water balance).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Neuropeptide Signaling"
+    },
+    {
+      "type": "MCQ",
+      "question": "The hypothalamus is a small region of the diencephalon that plays critical roles in homeostasis. Which of the following is NOT a function of the hypothalamus?",
+      "options": [
+        "Regulation of body temperature",
+        "Control of hunger and thirst",
+        "Coordination of voluntary movement and motor learning",
+        "Release of hormones that regulate the anterior pituitary"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The hypothalamus regulates numerous homeostatic functions: body temperature (thermoregulation), hunger/satiety (feeding centers), thirst (osmoreceptors), circadian rhythms (suprachiasmatic nucleus), emotional responses, autonomic nervous system control, and hormone regulation (releasing hormones that control the anterior pituitary, and direct production of ADH and oxytocin for the posterior pituitary). Coordination of voluntary movement and motor learning is the function of the cerebellum, not the hypothalamus. The cerebellum receives motor commands from the cerebral cortex and sensory feedback, integrating them to produce smooth, coordinated movements.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Hypothalamus Functions"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of the 'default mode network' (DMN) in neuroscience refers to:",
+      "options": [
+        "Brain regions active during intense focused tasks",
+        "The network that maintains autonomic functions during sleep",
+        "The motor system default settings",
+        "A set of interconnected brain regions (medial prefrontal cortex, posterior cingulate, precuneus, angular gyrus) that are more active during rest and internal mentation than during externally directed tasks"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The default mode network (DMN) was discovered when fMRI studies consistently found certain brain regions more active during rest than task performance (Raichle et al., 2001). DMN components include: medial prefrontal cortex, posterior cingulate cortex/precuneus, angular gyrus, and medial temporal lobe. The DMN is associated with: (1) mind-wandering and daydreaming, (2) self-referential thought, (3) autobiographical memory retrieval, (4) theory of mind (considering others' perspectives), (5) future planning and simulation. The DMN deactivates during externally focused attention tasks. Abnormal DMN activity has been implicated in: Alzheimer's disease (early amyloid deposition preferentially affects DMN regions), depression, schizophrenia, autism, and ADHD.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Default Mode Network"
+    },
+    {
+      "type": "MCQ",
+      "question": "The enteric nervous system (ENS) is sometimes called the 'second brain' of the body. Which statement about the ENS is correct?",
+      "options": [
+        "The ENS contains only 100 neurons",
+        "The ENS receives no input from the autonomic nervous system",
+        "The ENS is part of the somatic nervous system",
+        "The ENS contains ~500 million neurons embedded in the gut wall and can function autonomously, controlling gastrointestinal motility, secretion, and blood flow independently of CNS input"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The ENS is the largest division of the peripheral nervous system, containing approximately 500 million neurons organized into two major plexuses in the gut wall: (1) Myenteric (Auerbach's) plexus\u2014between the circular and longitudinal muscle layers, controlling gut motility (peristalsis). (2) Submucosal (Meissner's) plexus\u2014controlling secretion, absorption, and local blood flow. The ENS can function autonomously\u2014if all connections to the CNS are severed, the gut continues to exhibit coordinated peristalsis. However, the ENS normally receives input from sympathetic (inhibitory) and parasympathetic (excitatory, via vagus nerve) divisions. The ENS uses over 30 neurotransmitters, including serotonin (95% of the body's serotonin is in the gut), dopamine, nitric oxide, and acetylcholine.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Enteric Nervous System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Long-term potentiation (LTP) at hippocampal synapses is considered a cellular mechanism underlying learning and memory. Which receptor is critical for the induction of LTP at CA3-CA1 synapses?",
+      "options": [
+        "GABA-A receptor",
+        "Dopamine D2 receptor",
+        "Nicotinic acetylcholine receptor",
+        "NMDA (N-methyl-D-aspartate) glutamate receptor"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The NMDA receptor is critical for LTP induction at hippocampal CA3-CA1 synapses because it serves as a 'coincidence detector': (1) At resting membrane potential, the NMDA receptor channel is blocked by Mg\u00b2\u207a ions, even when glutamate is bound. (2) When the postsynaptic cell is sufficiently depolarized (by coincident AMPA receptor activation), Mg\u00b2\u207a is expelled, allowing Ca\u00b2\u207a influx through the NMDA channel. (3) The rise in intracellular Ca\u00b2\u207a triggers signaling cascades (CaMKII, PKC activation) that strengthen the synapse by: inserting additional AMPA receptors into the postsynaptic membrane, phosphorylating existing AMPA receptors to increase conductance, and ultimately triggering gene expression for long-lasting structural changes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Long-Term Potentiation"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A patient presents with inability to form new explicit memories (anterograde amnesia) but can still learn new motor skills (procedural memory). The patient can recall events from before the injury. An MRI reveals bilateral damage to a specific brain structure. Which structure is most likely damaged?",
+      "options": [
+        "Cerebellum",
+        "Primary motor cortex",
+        "Hippocampus, because it is specifically required for consolidation of new declarative (explicit) memories but not procedural memories, which depend on the basal ganglia and cerebellum",
+        "Occipital lobe"
+      ],
+      "correctAnswer": "C",
+      "explanation": "This clinical presentation\u2014anterograde amnesia with preserved procedural learning\u2014is the hallmark of hippocampal damage, famously demonstrated by patient H.M. (Henry Molaison): (1) The hippocampus is critical for consolidating new declarative (explicit) memories\u2014both episodic (personal events) and semantic (facts). Bilateral hippocampal damage prevents formation of new declarative memories. (2) Procedural memory (motor skills, habits) depends on different structures: basal ganglia (particularly the striatum), cerebellum, and supplementary motor areas. These are intact in this patient. (3) Remote memories are preserved because they have already been consolidated into neocortical storage through systems consolidation\u2014the hippocampus is needed for initial encoding and consolidation but not for long-term storage of remote memories. (4) This dissociation provides strong evidence for multiple memory systems in the brain with distinct neural substrates.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "Memory Systems Dissociation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which brain region is the primary center for thermoregulation in mammals?",
+      "options": [
+        "Cerebellum",
+        "Occipital lobe",
+        "Motor cortex",
+        "Preoptic area of the hypothalamus"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The preoptic area of the anterior hypothalamus is the primary thermoregulatory center. It contains: (1) Warm-sensitive neurons that increase firing rate when blood temperature rises, triggering cooling responses (vasodilation, sweating, panting). (2) Cold-sensitive neurons that respond to decreased temperature, triggering warming responses (vasoconstriction, shivering, non-shivering thermogenesis via brown adipose tissue). The hypothalamic thermostat compares core body temperature (sensed by central thermoreceptors) with a set point (~37\u00b0C in humans). Fever occurs when pyrogens (interleukins, prostaglandin E2) raise the hypothalamic set point\u2014the body then generates heat to reach the new, higher set point. Antipyretics (aspirin, ibuprofen) reduce fever by inhibiting prostaglandin synthesis.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Thermoregulation Center"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which type of glial cell lines the ventricles of the brain and the central canal of the spinal cord?",
+      "options": [
+        "Oligodendrocytes",
+        "Astrocytes",
+        "Ependymal cells",
+        "Schwann cells"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ependymal cells are ciliated epithelial cells that line the ventricles of the brain and the central canal of the spinal cord. Functions include: (1) CSF circulation\u2014their cilia beat in a coordinated manner to propel cerebrospinal fluid through the ventricular system. (2) Barrier function\u2014ependymal cells form a partial barrier between CSF and brain tissue (though this barrier is more permeable than the blood-brain barrier). (3) Some ependymal cells in specific regions are modified as tanycytes, which have long processes extending into the hypothalamus and may function in neuroendocrine signaling. (4) The choroid plexus, which produces CSF, consists of specialized ependymal cells overlying capillaries in the ventricles.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Ependymal Cells"
+    },
+    {
+      "type": "MCQ",
+      "question": "The blood-brain barrier (BBB) is formed primarily by brain capillary endothelial cells connected by tight junctions. However, certain brain regions called circumventricular organs (CVOs) lack a complete BBB. Why is this functionally important?",
+      "options": [
+        "CVOs are vestigial structures with no current function",
+        "The lack of BBB in CVOs is a developmental defect that causes disease",
+        "CVOs such as the area postrema (vomiting center) and median eminence need direct access to blood-borne signals (hormones, toxins, osmolarity) to monitor blood composition and regulate homeostatic responses",
+        "CVOs require higher oxygen levels than other brain regions"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Circumventricular organs (CVOs) are specialized brain regions with fenestrated capillaries (lacking tight junctions) that allow direct chemical communication between blood and brain: (1) Sensory CVOs (detect blood-borne signals): Area postrema\u2014detects blood-borne toxins and triggers vomiting (chemoreceptor trigger zone); Subfornical organ and organum vasculosum of the lamina terminalis (OVLT)\u2014detect blood osmolarity and angiotensin II for fluid balance regulation. (2) Secretory CVOs (release hormones into blood): Median eminence\u2014hypothalamic releasing hormones access the hypothalamic-hypophyseal portal system; Neurohypophysis (posterior pituitary)\u2014releases oxytocin and ADH into blood; Pineal gland\u2014secretes melatonin. (3) CVOs are strategically positioned to serve as \"windows\" between the blood and brain, enabling neuroendocrine regulation and homeostatic monitoring. Tanycytes (specialized ependymal cells) in CVOs help regulate which substances reach the brain.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Circumventricular Organs"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of neurovascular coupling describes:",
+      "options": [
+        "How blood vessels form in the embryonic brain",
+        "The mechanism by which neural activity triggers local increases in cerebral blood flow to provide oxygen and glucose to active brain regions",
+        "The connection between the heart and brain",
+        "How neurons grow along blood vessels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Neurovascular coupling is the mechanism linking neural activity to local cerebral blood flow: (1) Active neurons and astrocytes release vasoactive molecules (nitric oxide, prostaglandins, potassium ions, adenosine). (2) These molecules dilate local arterioles, increasing blood flow to active brain regions within 1-2 seconds. (3) Astrocytes play a key intermediary role\u2014their endfeet contact both synapses and blood vessels, converting neural signals to vascular responses. (4) This mechanism ensures that metabolically active brain regions receive adequate oxygen and glucose. Neurovascular coupling is the basis for fMRI BOLD signal and other hemodynamic brain imaging methods. Disruption of neurovascular coupling is implicated in Alzheimer's disease, stroke, and vascular dementia.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Neurovascular Coupling"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which brain structure serves as the primary relay for pain signals ascending from the spinal cord to the cerebral cortex?",
+      "options": [
+        "Cerebellum",
+        "Thalamus (ventral posterolateral nucleus)",
+        "Hippocampus",
+        "Corpus callosum"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pain (nociceptive) signals from the body travel via A-delta (fast, sharp pain) and C fibers (slow, dull pain) to the spinal cord dorsal horn. Second-order neurons cross the midline and ascend in the spinothalamic tract to the ventral posterolateral (VPL) nucleus of the thalamus. From the thalamus, signals project to the somatosensory cortex (sensory-discriminative component) and to the anterior cingulate cortex and insula (affective-motivational component). The thalamus serves as the obligatory relay for ascending pain information. Other thalamic targets include the medial dorsal nucleus (projecting to prefrontal cortex) and intralaminar nuclei (projecting broadly to cortex for arousal).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Pain Pathways"
+    },
+    {
+      "type": "MCQ",
+      "question": "The hypothalamus, despite comprising less than 1% of brain volume, serves as a critical integrative center. Which of the following is NOT a function directly controlled by the hypothalamus?",
+      "options": [
+        "Conscious language comprehension and speech production",
+        "Body temperature regulation via thermoreceptors and autonomic responses",
+        "Circadian rhythms via the suprachiasmatic nucleus",
+        "Regulation of food intake via hunger and satiety centers"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The hypothalamus is the master regulator of homeostasis and autonomic function: (1) Thermoregulation: The anterior hypothalamus (preoptic area) detects blood temperature and coordinates cooling responses; the posterior hypothalamus coordinates heating responses (shivering, vasoconstriction). (2) Circadian rhythms: The suprachiasmatic nucleus (SCN) serves as the master circadian clock, receiving direct retinal input via the retinohypothalamic tract. (3) Feeding behavior: The arcuate nucleus contains NPY/AgRP (orexigenic) and POMC/CART (anorexigenic) neurons that integrate leptin, ghrelin, and insulin signals. (4) Additional functions: water balance (osmoreceptors, ADH release), reproductive function (GnRH), stress response (CRH to pituitary), autonomic nervous system coordination, and emotional behavior. Language comprehension (Wernicke's area) and speech production (Broca's area) are cortical functions of the left hemisphere, not hypothalamic.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Hypothalamic Functions"
+    },
+    {
+      "type": "MTF",
+      "question": "Which of the following statements about neurotransmitter systems in the brain are correct? (I) Dopaminergic neurons of the substantia nigra pars compacta project primarily to the dorsal striatum via the nigrostriatal pathway. (II) The locus coeruleus is the primary source of norepinephrine in the brain. (III) Serotonin is synthesized exclusively in the cerebral cortex. (IV) The nucleus basalis of Meynert provides the major cholinergic input to the cerebral cortex and degenerates in Alzheimer disease.",
+      "options": [
+        "I and II only",
+        "I, II, and IV only",
+        "II and III only",
+        "I, II, III, and IV"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Evaluating each statement: (I) CORRECT: Substantia nigra pars compacta (SNpc) dopaminergic neurons project to the dorsal striatum (caudate and putamen) via the nigrostriatal pathway. Degeneration of these neurons causes Parkinson disease. (II) CORRECT: The locus coeruleus (LC) in the pons is the primary noradrenergic nucleus, with widespread projections to virtually all brain regions. LC activity increases with arousal, stress, and attention. (III) INCORRECT: Serotonin (5-HT) is synthesized primarily in the raphe nuclei of the brainstem (dorsal and median raphe), not the cortex. These neurons project widely throughout the brain and spinal cord. (IV) CORRECT: The nucleus basalis of Meynert (NBM) in the basal forebrain provides the major cholinergic innervation of the neocortex. Severe degeneration of NBM cholinergic neurons occurs in Alzheimer disease and contributes to cognitive decline\u2014this is the basis for cholinesterase inhibitor therapy. Therefore I, II, and IV are correct.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Neurotransmitter Systems"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neural oscillations (brain rhythms) recorded by EEG are classified by frequency bands. Alpha waves (8-13 Hz) are characteristically associated with:",
+      "options": [
+        "Deep non-REM sleep",
+        "Active problem-solving and intense concentration",
+        "Relaxed wakefulness with eyes closed, and are suppressed (alpha blocking) when the subject opens their eyes or begins a cognitive task",
+        "Epileptic seizure activity"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Brain oscillations (neural rhythms) arise from synchronized activity of neuronal populations and are classified by frequency: (1) Delta (0.5-4 Hz): deep non-REM sleep (stages 3-4). (2) Theta (4-8 Hz): drowsiness, memory consolidation, hippocampal processing. (3) Alpha (8-13 Hz): relaxed wakefulness, particularly prominent over occipital cortex with eyes closed. Alpha blocking\u2014suppression when eyes open or mental effort begins\u2014was one of the first EEG phenomena described (Berger, 1929). (4) Beta (13-30 Hz): active thinking, focus, anxiety. (5) Gamma (30-100 Hz): attention, perception, consciousness binding. Neural oscillations reflect synchronization of local field potentials from excitatory and inhibitory neuronal populations and are critical for information processing, attention, and inter-regional communication.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Neural Oscillations"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "In an experiment, researchers lesion the left motor cortex of a rat. Which of the following behavioral outcomes would you predict, and why?",
+      "options": [
+        "Impaired voluntary movement of the right side of the body because the corticospinal tract crosses (decussates) at the pyramidal decussation in the medulla, so the left cortex controls right-sided muscles",
+        "Paralysis of the left side of the body because motor cortex controls ipsilateral muscles",
+        "No motor deficits because the cerebellum compensates immediately",
+        "Bilateral paralysis because each motor cortex controls both sides"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Contralateral motor control via the corticospinal tract: (1) The primary motor cortex (precentral gyrus) contains upper motor neurons whose axons form the corticospinal tract. (2) At the medullary pyramids (pyramid decussation), approximately 85-90% of corticospinal fibers cross to the opposite side, forming the lateral corticospinal tract. (3) Therefore, the left motor cortex primarily controls voluntary movements of the right side of the body, and vice versa. (4) A left motor cortex lesion produces contralateral (right-sided) weakness or paralysis, particularly affecting distal limb muscles (fine motor control). (5) The remaining 10-15% of uncrossed fibers (anterior corticospinal tract) cross at segmental levels and primarily control axial/proximal muscles, providing some ipsilateral motor control. (6) Recovery may occur through: ipsilateral corticospinal projections, cortical reorganization (plasticity), or compensatory strategies via other motor pathways (rubrospinal, reticulospinal).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "Motor Cortex Lateralization"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A patient suffers a stroke that damages the left primary motor cortex. Which deficit would be expected?",
+      "options": [
+        "Paralysis of the left side of the body",
+        "Loss of vision in both eyes",
+        "Paralysis of the right side of the body (contralateral), because motor pathways cross the midline in the medullary pyramids",
+        "Complete loss of hearing"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Damage to the left primary motor cortex produces contralateral (right-sided) motor deficits because the corticospinal tract (pyramidal tract) crosses the midline (decussates) at the medullary pyramids in the brainstem. Specifically: ~80-85% of corticospinal fibers cross at the pyramidal decussation, forming the lateral corticospinal tract that controls distal limb muscles contralaterally. The remaining ~15-20% do not cross and form the anterior corticospinal tract (controlling axial muscles). Therefore, left cortex damage \u2192 right body weakness/paralysis (contralateral hemiparesis/hemiplegia). The face is also affected contralaterally, as corticobulbar fibers to the lower face motor neurons cross similarly.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "Motor Cortex and Decussation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The enteric nervous system (ENS), sometimes called the \"second brain,\" contains approximately 200-600 million neurons. What evidence supports the ENS's ability to function autonomously from the central nervous system?",
+      "options": [
+        "The ENS receives input from the vagus nerve",
+        "The ENS uses different neurotransmitters than the CNS",
+        "Isolated segments of intestine (denervated from the CNS) can still generate coordinated peristaltic contractions through local reflex circuits involving sensory neurons, interneurons, and motor neurons within the myenteric and submucosal plexuses",
+        "The ENS develops from mesoderm rather than neural crest"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The ENS demonstrates remarkable autonomy: (1) Structural independence: Complete reflex circuits exist within the gut wall\u2014intrinsic primary afferent neurons (IPANs) detect mechanical and chemical stimuli, interneurons relay signals, and motor neurons control smooth muscle, secretion, and blood flow. (2) The peristaltic reflex (Bayliss and Starling, 1899): Even in completely denervated intestinal segments, distension triggers coordinated contraction oral to the stimulus and relaxation anal to it, propelling contents aborally. (3) The ENS uses >30 neurotransmitters (serotonin, acetylcholine, NO, VIP, substance P, etc.). (4) Two plexuses organize ENS circuits: myenteric (Auerbach's) plexus controls motility; submucosal (Meissner's) plexus controls secretion and blood flow. (5) While the ENS can function autonomously, it normally receives modulatory input from the CNS via the vagus nerve (parasympathetic) and sympathetic fibers. Hirschsprung disease, where ENS ganglia are absent from a segment of colon, demonstrates ENS necessity\u2014the aganglionic segment cannot perform peristalsis.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "HARD",
+      "topic": "Enteric Nervous System Autonomy"
+    },
+    {
+      "type": "MCQ",
+      "question": "Glial cells (neuroglia) perform essential functions in the nervous system. Which glial cell type produces myelin in the central nervous system?",
+      "options": [
+        "Oligodendrocytes",
+        "Schwann cells",
+        "Astrocytes",
+        "Microglia"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Oligodendrocytes produce myelin sheaths in the central nervous system (brain and spinal cord). A single oligodendrocyte can myelinate segments of multiple axons (up to ~50). In contrast, Schwann cells produce myelin in the peripheral nervous system, with each Schwann cell myelinating a single internode of one axon. Other glial cells: (1) Astrocytes\u2014most abundant CNS glia, maintaining the blood-brain barrier, regulating extracellular K\u207a and neurotransmitter levels, providing metabolic support to neurons. (2) Microglia\u2014resident immune cells of the CNS, derived from mesoderm (not neural crest), phagocytosing debris and pathogens. (3) Ependymal cells\u2014line the ventricles, producing cerebrospinal fluid (along with choroid plexus epithelial cells).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Glial Cell Functions"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A neuroscientist wants to determine whether a specific brain region is necessary for a particular behavior in mice. Which approach provides the strongest evidence for necessity?",
+      "options": [
+        "Functional MRI showing activation during the behavior",
+        "Reversible inactivation using optogenetics (halorhodopsin to silence neurons) or chemogenetics (DREADDs) during the behavior, showing the behavior is disrupted when neurons are silenced and restored when silencing is removed",
+        "Recording neural activity correlating with the behavior",
+        "Anatomical tracing showing connections between the region and motor areas"
+      ],
+      "correctAnswer": "B",
+      "explanation": "To demonstrate that a brain region is necessary for a behavior requires a loss-of-function approach: if silencing the region disrupts the behavior, and removing the silencing restores it, the region is necessary. Modern techniques provide temporal precision: (1) Optogenetic silencing\u2014express inhibitory opsins (halorhodopsin, archaerhodopsin) in specific neurons; light delivery silences them on a millisecond timescale. (2) Chemogenetics (DREADDs)\u2014express modified receptors that respond only to an inert drug (CNO/DCZ); drug administration silences neurons for hours. These reversible approaches are superior to permanent lesions because: they avoid compensatory plasticity, allow within-subject controls, and can target specific cell types. Correlation (fMRI, electrophysiology) shows association but not causation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Testing Brain Region Necessity"
+    },
+    {
+      "type": "MCQ",
+      "question": "The prefrontal cortex is associated with executive functions. Which specific executive function is most impaired by damage to the prefrontal cortex?",
+      "options": [
+        "Basic visual perception",
+        "Planning, decision-making, impulse control, and working memory",
+        "Reflexive withdrawal from painful stimuli",
+        "Heart rate regulation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The prefrontal cortex (PFC) is the anterior portion of the frontal lobe, highly developed in primates and especially humans. PFC damage (as in the famous case of Phineas Gage) impairs: (1) Planning and goal-directed behavior. (2) Decision-making and judgment. (3) Impulse control and social behavior (particularly orbitofrontal/ventromedial PFC). (4) Working memory\u2014the ability to hold and manipulate information temporarily (particularly dorsolateral PFC). (5) Cognitive flexibility\u2014switching between tasks or strategies. (6) Attention and concentration. The PFC is the last brain region to mature (not fully myelinated until ~25 years old), which partly explains adolescent risk-taking behavior. PFC dysfunction is implicated in ADHD, schizophrenia, and addiction.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Prefrontal Cortex Functions"
+    },
+    {
+      "type": "MCQ",
+      "question": "The myelin sheath has gaps called nodes of Ranvier. What is the functional significance of nodes of Ranvier?",
+      "options": [
+        "They provide sites for neurotransmitter release",
+        "They store calcium ions for synaptic transmission",
+        "They prevent action potentials from propagating",
+        "They enable saltatory conduction\u2014action potentials jump between nodes, dramatically increasing conduction velocity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Nodes of Ranvier are ~1 \u03bcm gaps between myelin segments (internodes ~1 mm long) where the axonal membrane is exposed and enriched with voltage-gated Na\u207a channels (~1,200/\u03bcm\u00b2 at nodes vs. ~25/\u03bcm\u00b2 under myelin). During saltatory conduction, current flows passively through the myelinated internode (low-resistance, high-capacitance insulation) and regenerates the action potential only at nodes. This dramatically increases conduction velocity (up to 120 m/s in large myelinated fibers vs. ~2 m/s in unmyelinated fibers of similar diameter) while reducing metabolic cost (fewer ions need to be pumped back). Demyelinating diseases (MS, Guillain-Barre) disrupt saltatory conduction.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Saltatory Conduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Synaptic vesicle release requires calcium influx. Which protein complex directly mediates the fusion of synaptic vesicles with the presynaptic membrane?",
+      "options": [
+        "Clathrin coat proteins",
+        "Myosin motor proteins",
+        "Sodium-potassium ATPase",
+        "The SNARE complex (synaptobrevin/VAMP, syntaxin, and SNAP-25)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The SNARE (Soluble NSF Attachment Protein Receptor) complex directly mediates synaptic vesicle fusion: (1) v-SNARE synaptobrevin (VAMP2) on the vesicle membrane interacts with t-SNAREs syntaxin-1 and SNAP-25 on the presynaptic membrane. (2) The four-helix SNARE bundle 'zips up' from N- to C-terminus, pulling the vesicle and plasma membranes together with sufficient force to drive membrane fusion. (3) Ca\u00b2\u207a influx through voltage-gated Ca\u00b2\u207a channels triggers the final fusion step via synaptotagmin (the Ca\u00b2\u207a sensor), which binds Ca\u00b2\u207a and interacts with SNAREs and phospholipids. (4) After fusion, NSF and alpha-SNAP disassemble the SNARE complex for recycling. Tetanus and botulinum toxins are proteases that cleave specific SNARE proteins, blocking neurotransmitter release.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "SNARE-mediated Vesicle Fusion"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neurulation is the embryonic process that forms the neural tube. What congenital defect results from failure of the posterior neural tube to close?",
+      "options": [
+        "Spina bifida",
+        "Anencephaly",
+        "Hydrocephalus",
+        "Cerebral palsy"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Spina bifida results from failure of the posterior (caudal) neural tube to close completely during the 4th week of human embryonic development. The severity ranges from: (1) Spina bifida occulta\u2014incomplete vertebral arch closure with no herniation (often asymptomatic). (2) Meningocele\u2014meninges protrude through the vertebral defect. (3) Myelomeningocele\u2014spinal cord and meninges protrude, causing paralysis and loss of sensation below the defect. Anencephaly results from failure of the anterior (cranial) neural tube to close, causing absence of major brain regions (incompatible with life). Folic acid (vitamin B9) supplementation before and during early pregnancy reduces neural tube defect risk by ~70%, which is why folate fortification of grain products is mandated in many countries.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Neural Tube Defects"
+    },
+    {
+      "type": "MCQ",
+      "question": "The basal ganglia consist of several interconnected nuclei that modulate motor and cognitive functions. The primary input structure (receiving cortical afferents) and the primary output structure (projecting to the thalamus) are, respectively:",
+      "options": [
+        "Globus pallidus (input), Caudate nucleus (output)",
+        "Thalamus (input), Cerebral cortex (output)",
+        "Subthalamic nucleus (input), Putamen (output)",
+        "Striatum/caudate-putamen (input), Globus pallidus internal segment/Substantia nigra pars reticulata (output)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The basal ganglia circuit: (1) INPUT: The striatum (caudate nucleus + putamen) is the primary input structure, receiving glutamatergic projections from the entire cerebral cortex (somatotopic organization) and dopaminergic projections from the substantia nigra pars compacta. (2) Processing: Information flows through direct (striatum \u2192 GPi/SNr, facilitating movement) and indirect (striatum \u2192 GPe \u2192 STN \u2192 GPi/SNr, inhibiting movement) pathways. (3) OUTPUT: The globus pallidus internal segment (GPi) and substantia nigra pars reticulata (SNr) are the primary output structures, sending GABAergic (inhibitory) projections to the thalamus (VA/VL nuclei), which then excites the motor cortex. At rest, GPi/SNr tonically inhibits the thalamus. Movement initiation involves disinhibition\u2014the direct pathway suppresses GPi/SNr, releasing thalamic neurons to excite the cortex.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Basal Ganglia Circuit"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about cerebrospinal fluid (CSF):\nI. CSF is produced primarily by the choroid plexus in the brain ventricles\nII. CSF cushions the brain against mechanical impact and provides buoyancy\nIII. CSF is reabsorbed into the venous blood through arachnoid granulations (villi)\nIV. CSF has the same composition as blood plasma",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I. TRUE: CSF is produced (~500 mL/day in adults, ~150 mL total volume) by the choroid plexus\u2014specialized ependymal cells with fenestrated capillaries in the lateral, third, and fourth ventricles. Active transport of ions (Na\u207a, Cl\u207b, HCO\u2083\u207b) drives water movement into the ventricles. II. TRUE: CSF reduces the effective weight of the brain from ~1,400 g to ~50 g through buoyancy (Archimedes' principle), protecting against mechanical damage. III. TRUE: CSF is reabsorbed into venous blood via arachnoid granulations (villi) projecting into the superior sagittal sinus. Impaired reabsorption can cause hydrocephalus (CSF accumulation). IV. FALSE: CSF differs from plasma\u2014it has lower protein concentration (~0.3% vs. ~7% in plasma), lower glucose, fewer cells, and a different electrolyte composition. The blood-CSF barrier at the choroid plexus selectively controls CSF composition.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Cerebrospinal Fluid"
+    },
+    {
+      "type": "MCQ",
+      "question": "The octopus brain contains approximately 500 million neurons, with about two-thirds located in the arms rather than the central brain. What does this distribution suggest about octopus neural processing?",
+      "options": [
+        "Significant autonomous local processing occurs in the arms, enabling independent motor control without requiring central brain commands for every movement",
+        "The central brain controls all arm movements directly",
+        "The arms function independently of the central brain at all times",
+        "Arm neurons are non-functional remnants"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The octopus nervous system is remarkable for its distributed architecture: (1) The central brain (supra- and subesophageal masses) handles higher-order processing, learning, and decision-making. (2) Each arm contains a brachial ganglion and extensive nerve cords with ~40 million neurons per arm. (3) Severed arms can still perform coordinated movements (grasping, walking), demonstrating autonomous local control. (4) This distributed architecture allows the central brain to issue high-level commands while arms handle the computational demands of controlling their flexible, boneless structure (infinite degrees of freedom). (5) This represents convergent evolution of complex nervous systems in a lineage (mollusks) very distant from vertebrates.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Octopus Distributed Neural Processing"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher uses the Morris water maze to test hippocampal-dependent spatial memory in mice. The maze consists of a circular pool of opaque water with a hidden platform. What is the key dependent variable that indicates spatial learning?",
+      "options": [
+        "The latency (time) to find the hidden platform across training trials, and the time spent in the platform quadrant during probe trials",
+        "The speed at which the mouse swims",
+        "The color of the mouse's fur",
+        "The amount of water consumed by the mouse"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Morris water maze assesses hippocampal-dependent spatial learning and memory: (1) During training\u2014mice must learn the location of a hidden submerged platform using distal spatial cues (landmarks on the walls). The latency to find the platform decreases across trials, indicating spatial learning. (2) During probe trials\u2014the platform is removed, and the time spent in the target quadrant (where the platform was located) vs. other quadrants indicates spatial memory. Mice with hippocampal lesions show no platform quadrant preference. Additional measures include: path length, search strategy analysis (random vs. directed), and reversal learning (platform moved to new location). The maze specifically tests allocentric spatial memory, which is hippocampus-dependent.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "HARD",
+      "topic": "Spatial Memory Testing"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'excitotoxicity' refers to:",
+      "options": [
+        "Neuronal death caused by excessive glutamate receptor activation, leading to calcium overload and activation of destructive enzymes",
+        "The toxic effects of inhibitory neurotransmitters",
+        "The damage caused by too many inhibitory synapses",
+        "Toxicity from excessive sleep"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Excitotoxicity is a major mechanism of neuronal death in stroke, traumatic brain injury, and neurodegenerative diseases: (1) During ischemia or injury, damaged neurons release excessive glutamate. (2) Excessive activation of NMDA and AMPA receptors causes massive Ca\u00b2\u207a influx. (3) Elevated intracellular Ca\u00b2\u207a activates destructive enzymes: calpains (proteases), phospholipases (membrane degradation), endonucleases (DNA fragmentation), and nitric oxide synthase (free radical production). (4) Mitochondrial Ca\u00b2\u207a overload triggers the mitochondrial permeability transition, releasing cytochrome c and initiating apoptosis. (5) The cascade propagates as dying neurons release more glutamate. This creates a feed-forward loop of neuronal death. Understanding excitotoxicity has guided therapeutic strategies for stroke (rapid reperfusion to limit glutamate release).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Excitotoxicity"
+    },
+    {
+      "type": "MCQ",
+      "question": "The somatosensory cortex in the parietal lobe contains a topographic map of the body surface (somatotopic map). In this map, which body parts are disproportionately overrepresented?",
+      "options": [
+        "The trunk and legs",
+        "The back and shoulders",
+        "The hands, fingers, lips, and tongue",
+        "All body parts are equally represented"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The somatosensory homunculus (cortical map) shows disproportionate representation of body parts based on their sensory innervation density, not physical size. The hands/fingers and face (lips, tongue) have extremely high receptor density and fine discriminative ability, so they occupy large cortical areas. The trunk and legs, despite their large physical size, have relatively sparse innervation and small cortical representation. This principle also applies to the motor homunculus in the primary motor cortex, where hand/finger and face/tongue areas are disproportionately large, reflecting the fine motor control required for manipulation and speech.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Somatotopic Organization"
+    },
+    {
+      "type": "MCQ",
+      "question": "The cerebellum receives two major excitatory inputs: mossy fibers and climbing fibers. How do these inputs differ in their origin and connectivity pattern?",
+      "options": [
+        "They have identical origins and connectivity",
+        "Mossy fibers arise from diverse sources (pontine nuclei, spinal cord, vestibular nuclei) and diverge widely\u2014each mossy fiber contacts many granule cells; climbing fibers arise exclusively from the inferior olive and each climbing fiber wraps around a single Purkinje cell, making hundreds of synaptic contacts",
+        "Both inputs synapse directly on Purkinje cells with equal strength",
+        "Climbing fibers arise from the cerebral cortex and mossy fibers from the thalamus"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The cerebellum has a highly stereotyped circuit architecture with two distinct excitatory inputs: (1) Mossy fibers: Arise from multiple sources\u2014pontine nuclei (relaying cerebral cortex input), spinocerebellar tracts (proprioceptive), vestibular nuclei, reticular formation. They synapse on granule cells in the granular layer, which send parallel fibers through the molecular layer to contact Purkinje cell dendrites. One mossy fiber diverges to contact ~400 granule cells; each granule cell sends a parallel fiber contacting ~300 Purkinje cells. This creates a massive divergence/convergence network. (2) Climbing fibers: Arise exclusively from the inferior olive (contralateral). Each Purkinje cell receives input from exactly ONE climbing fiber (in adults), but that climbing fiber makes ~300 synaptic contacts climbing along the Purkinje cell dendritic tree. Climbing fiber activation produces a powerful \"complex spike\" (multiple spikelets). (3) Functional significance: Mossy fiber/parallel fiber input provides the \"context\" signal; climbing fiber input provides an \"error\" or \"teaching\" signal that drives cerebellar LTD at active parallel fiber-Purkinje cell synapses, enabling motor learning.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Cerebellar Circuit Architecture"
+    },
+    {
+      "type": "MCQ",
+      "question": "The cerebellum receives input from multiple sources and integrates them to coordinate movement. Which describes the error-correction model of cerebellar function?",
+      "options": [
+        "The cerebellum compares intended motor commands (from the cortex) with actual sensory feedback, computing error signals that refine ongoing and future movements",
+        "The cerebellum directly initiates voluntary movements",
+        "The cerebellum only processes vestibular information",
+        "The cerebellum stores long-term declarative memories"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The cerebellum functions as a comparator or error-correction system: (1) It receives copies of motor commands from the cerebral cortex (via pontine nuclei \u2192 mossy fibers). (2) It simultaneously receives sensory feedback about actual movement (from proprioceptors, vestibular system, visual system via inferior olive \u2192 climbing fibers). (3) Purkinje cells compute the discrepancy (error) between intended and actual movement. (4) Error signals are sent (via deep cerebellar nuclei) to the motor cortex and brainstem motor centers to adjust ongoing movements and update internal models for future movements. (5) This is the basis of motor learning\u2014repeated practice reduces cerebellar error signals as movements become automatic. Cerebellar damage causes ataxia (uncoordinated movement), intention tremor, and dysmetria.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Cerebellar Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Epilepsy is characterized by recurrent seizures caused by abnormal synchronous neuronal firing. Which mechanism is primarily responsible for seizure generation?",
+      "options": [
+        "An imbalance between excitatory (glutamatergic) and inhibitory (GABAergic) neurotransmission, favoring excitation",
+        "Excessive serotonin release",
+        "Demyelination of peripheral nerves",
+        "Degeneration of the cerebellum"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Seizures result from an imbalance between excitation and inhibition in neural circuits, with excessive synchronous excitatory activity. Contributing mechanisms include: (1) Enhanced glutamatergic (excitatory) transmission\u2014increased glutamate release, upregulation of AMPA/NMDA receptors. (2) Reduced GABAergic (inhibitory) transmission\u2014decreased GABA synthesis, reduced GABA receptor function, loss of inhibitory interneurons. (3) Ion channel dysfunction\u2014mutations in voltage-gated Na\u207a, K\u207a, or Ca\u00b2\u207a channels (channelopathies) can increase neuronal excitability. (4) Network-level mechanisms\u2014abnormal circuit formation (e.g., hippocampal mossy fiber sprouting). Anti-epileptic drugs target these mechanisms: enhancing GABA (benzodiazepines, barbiturates), blocking Na\u207a channels (phenytoin, carbamazepine), or blocking glutamate receptors (perampanel).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Epilepsy Mechanisms"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of the 'grandmother cell' versus 'population coding' in neuroscience refers to how the brain represents complex stimuli. Which model is most supported by current evidence?",
+      "options": [
+        "Individual neurons each respond to only one specific object (grandmother cell)",
+        "Complex stimuli are represented by patterns of activity across populations of neurons, with individual neurons participating in multiple representations (population coding)",
+        "Only motor neurons encode information",
+        "The brain does not encode information at all"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Population coding (distributed representation) is the dominant model: individual neurons respond to multiple related stimuli with different firing rates, and a stimulus is encoded by the pattern of activity across a population of neurons. Evidence: (1) Neurons in visual cortex respond to ranges of orientations, spatial frequencies, and locations, not single specific stimuli. (2) Population decoding algorithms can accurately predict stimulus identity or motor intention from population activity. (3) Sparse coding models suggest that a small subset of neurons is active for any given stimulus, balancing specificity with efficiency. However, some 'concept cells' in the human medial temporal lobe respond selectively to specific individuals or concepts (e.g., 'Jennifer Aniston neurons'), suggesting that some high-level representations approach the grandmother cell concept in a sparse coding framework.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Neural Coding"
+    },
+    {
+      "type": "MCQ",
+      "question": "Synaptic pruning is an important developmental process in the nervous system. During postnatal brain development, synaptic density:",
+      "options": [
+        "Remains constant from birth through adulthood",
+        "Initially increases dramatically (synaptogenesis), reaching a peak in early childhood, then decreases through activity-dependent elimination of unused synapses (pruning) during childhood and adolescence\u2014with prefrontal cortex pruning continuing into the mid-20s",
+        "Continuously increases throughout life",
+        "Decreases from birth and never recovers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Synaptic pruning follows a well-characterized developmental trajectory: (1) Synaptogenesis: After birth, synapse formation occurs at extraordinary rates (up to 40,000 new synapses per second in some brain regions during peak periods). Synaptic density peaks at different ages in different regions: visual cortex peaks around 8 months, prefrontal cortex around 3-4 years. (2) Pruning: Activity-dependent mechanisms selectively eliminate weak or unused synapses while strengthening active ones (\"use it or lose it\"). This follows Hebbian principles and involves: complement proteins (C1q, C3) tagging synapses for microglial phagocytosis, and proteasome-mediated degradation of postsynaptic scaffolding. (3) Regional timing: Sensory cortices mature earliest; prefrontal cortex pruning continues into the mid-20s, which has implications for adolescent decision-making, risk-taking, and the age of onset of schizophrenia (which may involve excessive pruning). (4) Result: Adult brains have approximately half the synaptic density of peak childhood levels, but remaining synapses are stronger and more efficient. (5) Abnormal pruning is implicated in autism (insufficient pruning) and schizophrenia (excessive pruning).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Synaptic Pruning"
+    },
+    {
+      "type": "MCQ",
+      "question": "The autonomic nervous system (ANS) has two main divisions with opposing effects on most organs. Which statement correctly describes the sympathetic and parasympathetic divisions?",
+      "options": [
+        "Sympathetic neurons release acetylcholine at target organs; parasympathetic neurons release norepinephrine",
+        "The sympathetic division originates only from the brain, not the spinal cord",
+        "Both divisions always have identical effects on the same organ",
+        "Sympathetic preganglionic neurons are short and synapse in ganglia near the spinal cord; parasympathetic preganglionic neurons are long and synapse in ganglia near or within target organs"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The sympathetic and parasympathetic divisions differ in: (1) Anatomy\u2014sympathetic: short preganglionic neurons from thoracolumbar spinal cord (T1-L2) \u2192 paravertebral or prevertebral ganglia \u2192 long postganglionic neurons to target. Parasympathetic: long preganglionic neurons from brainstem cranial nerves (III, VII, IX, X) and sacral spinal cord (S2-S4) \u2192 ganglia near or within target organs \u2192 short postganglionic neurons. (2) Neurotransmitters\u2014both use ACh for preganglionic neurons. Postganglionic: sympathetic releases norepinephrine (exception: sweat glands use ACh), parasympathetic releases ACh. (3) Effects are generally antagonistic: sympathetic = 'fight or flight' (increased heart rate, dilated pupils, bronchodilation); parasympathetic = 'rest and digest' (decreased heart rate, constricted pupils, increased digestion).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Autonomic Nervous System"
+    },
+    {
+      "type": "MCQ",
+      "question": "The reticular activating system (RAS) in the brainstem plays a critical role in:",
+      "options": [
+        "Regulating arousal, wakefulness, and consciousness by sending excitatory projections to the thalamus and cerebral cortex",
+        "Coordinating voluntary movement",
+        "Producing cerebrospinal fluid",
+        "Controlling reflexive eye movements only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The reticular activating system (RAS) is a network of nuclei in the brainstem reticular formation (extending from the medulla through the pons to the midbrain) that maintains consciousness and alertness. Key features: (1) Ascending projections through the thalamus to the cerebral cortex produce cortical arousal (EEG desynchronization). (2) Damage to the RAS causes coma, while its stimulation produces arousal from sleep. (3) Neurotransmitters involved include: acetylcholine (from pedunculopontine nucleus), norepinephrine (from locus coeruleus), serotonin (from raphe nuclei), dopamine (from ventral tegmental area), and histamine (from tuberomammillary nucleus). (4) Anesthetic agents act partly by suppressing RAS activity.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Reticular Activating System"
+    },
+    {
+      "type": "MCQ",
+      "question": "Glial-derived neurotrophic factor (GDNF) and brain-derived neurotrophic factor (BDNF) are important for neuronal survival and function. During development, which process selects which neurons survive based on competition for limited neurotrophic factors?",
+      "options": [
+        "Programmed cell death (apoptosis) of neurons that fail to receive adequate trophic support from their target tissues",
+        "Myelination",
+        "Neuronal migration",
+        "Axon guidance by netrin and semaphorin"
+      ],
+      "correctAnswer": "A",
+      "explanation": "During nervous system development, many more neurons are produced than needed. The neurotrophic theory proposes that target tissues produce limited amounts of neurotrophic factors (NGF, BDNF, NT-3, GDNF), and neurons must compete for access to these factors. Neurons that successfully innervate targets and receive sufficient trophic support survive; those that fail to connect properly or receive inadequate trophic factor undergo apoptosis (programmed cell death). Approximately 50% of neurons produced during development die by apoptosis. This matching mechanism ensures: (1) appropriate neuron-to-target ratios, (2) elimination of incorrectly connected neurons, and (3) proper sizing of neuronal populations. Neurotrophins bind to Trk receptors, activating survival signaling pathways (PI3K/Akt, Ras/MAPK).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Neurotrophic Factor Competition"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to map the functional connectivity between the prefrontal cortex and amygdala in awake, behaving mice during a decision-making task. Which technique would provide the best combination of cell-type specificity and temporal resolution?",
+      "options": [
+        "Structural MRI to identify anatomical connections",
+        "Simultaneous fiber photometry using genetically encoded calcium indicators (GCaMP) expressed in specific cell types in both regions, allowing real-time monitoring of population activity during behavior",
+        "Post-mortem histological staining of neural pathways",
+        "Single-unit recording with non-specific electrodes in one region"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Fiber photometry with genetically encoded indicators is optimal for this question: (1) Cell-type specificity: GCaMP (calcium indicator) or other genetically encoded sensors can be expressed in specific cell populations using Cre-driver lines (e.g., CaMKII-Cre for excitatory neurons, PV-Cre for parvalbumin interneurons). (2) Temporal resolution: Fiber photometry provides sub-second temporal resolution sufficient for capturing neural dynamics during decision-making. (3) Dual-site recording: Optical fibers implanted in both PFC and amygdala allow simultaneous monitoring of both regions during behavior. (4) Awake behaving animals: The technique is compatible with freely moving mice performing tasks. (5) Alternative approaches: fMRI has poor temporal resolution and no cell-type specificity; post-mortem analysis cannot capture dynamics; non-specific electrodes lack cell-type specificity. More advanced approaches like multi-fiber photometry arrays, miniscopes, or Neuropixels probes with optogenetic tagging could provide single-neuron resolution with cell-type identification.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Functional Connectivity Mapping"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A patient has a lesion in the right posterior parietal cortex. They neglect objects in the left visual field, fail to dress the left side of their body, and draw only the right side of clocks. What is this condition?",
+      "options": [
+        "Broca's aphasia",
+        "Parkinson's disease",
+        "Blindness in both eyes",
+        "Hemispatial neglect (contralateral neglect syndrome)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Hemispatial neglect (also called unilateral neglect or contralateral neglect) is a neurological condition, most commonly after right posterior parietal cortex damage (especially inferior parietal lobule and temporoparietal junction), where patients fail to attend to or be aware of stimuli in the contralesional (left) hemispace. They may: eat food from only the right side of a plate, shave only the right side of the face, draw only the right side of objects, and deny that their left arm belongs to them (anosognosia). Neglect is more common and severe with right hemisphere damage because spatial attention is more lateralized to the right hemisphere, which attends to both sides, while the left hemisphere primarily attends to the right.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "Hemispatial Neglect"
+    },
+    {
+      "type": "MCQ",
+      "question": "Addiction involves hijacking of the brain's reward circuitry. The mesolimbic dopamine pathway, central to reward processing, originates in the:",
+      "options": [
+        "Cerebellum and projects to the motor cortex",
+        "Hippocampus and projects to the hypothalamus",
+        "Ventral tegmental area (VTA) of the midbrain and projects to the nucleus accumbens in the ventral striatum, prefrontal cortex, and amygdala",
+        "Locus coeruleus and projects to the cerebral cortex"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The mesolimbic dopamine pathway is central to reward and addiction: (1) Origin: Dopaminergic neurons in the ventral tegmental area (VTA) of the midbrain. (2) Projections: Nucleus accumbens (NAc) in the ventral striatum\u2014the primary \"reward center\"; prefrontal cortex (PFC)\u2014decision-making and impulse control; amygdala\u2014emotional associations; hippocampus\u2014contextual memory. (3) Natural rewards (food, sex, social interaction) transiently increase dopamine release in the NAc. (4) Drugs of abuse hijack this system: cocaine blocks the dopamine transporter (DAT), amphetamine reverses DAT to release dopamine, opioids disinhibit VTA dopaminergic neurons by inhibiting GABAergic interneurons, nicotine directly activates VTA neurons via nicotinic ACh receptors. (5) Addiction involves: tolerance (reduced response requiring more drug), dependence (withdrawal symptoms), and compulsive drug-seeking despite negative consequences. (6) Long-term changes include altered synaptic plasticity in the NAc and PFC, and reduced D2 receptor density.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Reward Circuitry and Addiction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Amyotrophic lateral sclerosis (ALS) selectively degenerates motor neurons. The disease affects both upper motor neurons (in the motor cortex) and lower motor neurons (in the brainstem and spinal cord). What combination of symptoms distinguishes ALS from a pure upper motor neuron or pure lower motor neuron disease?",
+      "options": [
+        "Only sensory deficits without motor impairment",
+        "ALS uniquely presents with both upper motor neuron signs (spasticity, hyperreflexia, Babinski sign) and lower motor neuron signs (muscle atrophy, fasciculations, hyporeflexia) in the same patient, often in different body regions simultaneously",
+        "Complete loss of consciousness with preserved motor function",
+        "Exclusively autonomic dysfunction without somatic motor involvement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "ALS demonstrates mixed UMN and LMN pathology: (1) Upper motor neuron (UMN) degeneration produces: spasticity (increased muscle tone), hyperreflexia (exaggerated stretch reflexes), and Babinski sign (extensor plantar response)\u2014because descending inhibitory control of spinal reflexes is lost. (2) Lower motor neuron (LMN) degeneration produces: muscle weakness and atrophy (denervation atrophy), fasciculations (spontaneous firing of denervated motor units), fibrillations (on EMG), and eventually hyporeflexia/areflexia in severely denervated segments. (3) The hallmark of ALS is the co-occurrence of both UMN and LMN signs, which is unique among motor neuron diseases. (4) Progression: Symptoms typically begin focally (limb or bulbar onset) and spread to other regions. Respiratory muscle involvement is the usual cause of death (median survival 3-5 years). (5) Sensory neurons, oculomotor neurons, and autonomic neurons are relatively spared. (6) ~10% of cases are familial, with mutations in SOD1, C9orf72, TDP-43, and FUS being most common.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "EXPERT",
+      "topic": "ALS Pathology"
+    }
+  ]
+}
