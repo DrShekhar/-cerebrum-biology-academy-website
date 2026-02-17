@@ -304,6 +304,366 @@
       "conceptualDepth": "advanced",
       "difficulty": "EXPERT",
       "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Stem cells are classified by their developmental potential. Which correctly ranks stem cell potency from most to least broad?",
+      "options": [
+        "Multipotent > Totipotent > Pluripotent > Unipotent",
+        "Totipotent (can form entire organism including extraembryonic tissues) > Pluripotent (can form all cell types of the body but not extraembryonic tissues) > Multipotent (can form multiple cell types within a lineage) > Unipotent (can form only one cell type)",
+        "Pluripotent > Totipotent > Unipotent > Multipotent",
+        "All stem cells have identical developmental potential regardless of classification"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Stem cell potency hierarchy is fundamental to understanding developmental and regenerative biology: (1) Totipotent: The zygote and cells up to approximately the 8-cell stage (in humans) are totipotent — they can give rise to ALL cell types of the organism, including both embryonic (all three germ layers) and extraembryonic tissues (trophoblast/placenta, yolk sac). The ability to form trophoblast distinguishes totipotency from pluripotency. After compaction, cells become allocated to inner cell mass (ICM) or trophectoderm. (2) Pluripotent: ICM cells of the blastocyst (and derived embryonic stem cells, ESCs) are pluripotent — they can differentiate into all cell types of the embryo proper (ectoderm, mesoderm, endoderm) but cannot independently form trophoblast or a complete organism. The gold standard test for pluripotency is tetraploid complementation — injecting pluripotent cells into tetraploid blastocysts (where host cells can only contribute to extraembryonic tissues) produces an animal entirely derived from the injected cells. Induced pluripotent stem cells (iPSCs) created by Yamanaka factors (Oct4, Sox2, Klf4, c-Myc) demonstrate artificially restored pluripotency. (3) Multipotent: Tissue-specific stem cells that can differentiate into multiple cell types within a lineage. Hematopoietic stem cells (HSCs) are multipotent — they generate all blood cell types but not liver, brain, etc. Neural stem cells produce neurons, astrocytes, and oligodendrocytes. (4) Unipotent: Progenitor cells committed to a single cell type, such as spermatogonial stem cells (generating only sperm) or satellite cells (generating only skeletal muscle).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about gastrulation movements in different organisms:\n(I) In sea urchins, gastrulation occurs primarily through invagination of the vegetal plate, where a sheet of cells buckles inward to form the archenteron (primitive gut).\n(II) In Drosophila, the mesoderm forms through ventral furrow invagination, driven by apical constriction of mesodermal precursor cells mediated by the transcription factors Twist and Snail.\n(III) In birds and mammals, gastrulation occurs through the primitive streak, where epiblast cells undergo EMT and ingress to form mesoderm and definitive endoderm.\n(IV) All organisms use exactly the same mechanism of gastrulation regardless of egg size or yolk content.",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "Analysis of each statement: (I) TRUE — Sea urchin gastrulation involves invagination of the vegetal plate, forming the archenteron. This occurs in two phases: primary invagination (buckling of the vegetal plate driven by cell shape changes — apical constriction and cell wedging) and secondary invagination (extension of the archenteron by convergent extension and filopodial traction from secondary mesenchyme cells at the archenteron tip that pull toward the animal pole). Primary mesenchyme cells (from micromere descendants) had already ingressed into the blastocoel before invagination begins. (II) TRUE — Drosophila mesoderm formation is driven by ventral furrow invagination. Twist and Snail (transcription factors activated by nuclear Dorsal) are expressed in the ventral-most cells. Twist activates fog (folded gastrulation) and T48, which activate RhoGEF2 and myosin II to cause apical constriction. Snail represses ectodermal genes. The coordinated apical constriction of ~1000 ventral cells creates the ventral furrow, which folds inward, bringing mesoderm precursors into the interior. (III) TRUE — In amniotes (birds, reptiles, mammals), the primitive streak is the site of gastrulation. Epiblast cells converge toward the streak, undergo EMT (losing E-cadherin, gaining N-cadherin and vimentin), and ingress through the streak. Cells that ingress early and migrate anteriorly form definitive endoderm (replacing the hypoblast). Later-ingressing cells form mesoderm. The anterior tip of the streak (Hensen's node) is equivalent to Spemann's organizer. (IV) FALSE — Gastrulation mechanisms vary dramatically based on egg size, yolk content, and evolutionary lineage. Holoblastic cleavage animals (sea urchins, frogs) use invagination and involution. Meroblastic (partial) cleavage animals (birds, reptiles with large yolky eggs) use the primitive streak. Drosophila uses ventral furrow formation. Each mechanism is adapted to the specific constraints of the egg.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Left-right asymmetry in vertebrate embryos is established through a conserved mechanism involving a structure called the node. What is the role of motile cilia at the node?",
+      "options": [
+        "Cilia create turbulent flow that randomly determines left-right orientation",
+        "Posteriorly tilted motile cilia at the node rotate clockwise (when viewed from the apical surface), generating a leftward fluid flow (nodal flow) that concentrates morphogens or activates mechanosensory cilia on the left side, initiating left-specific gene expression (Nodal, Lefty, Pitx2)",
+        "Cilia transport nutrients to the developing heart",
+        "Immotile cilia on both sides of the node transmit identical signals bilaterally"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Left-right (L-R) axis specification is one of the last steps in establishing the body plan and involves a remarkable ciliary mechanism: (1) Nodal cilia: The ventral surface of the node (a transient pit-like structure at the anterior end of the primitive streak in mice, equivalent to Kupffer's vesicle in zebrafish) is lined with approximately 200 motile monocilia. Each cilium is posteriorly tilted (~40° from vertical) and rotates clockwise when viewed from above. (2) Nodal flow: Due to the posterior tilt, the effective stroke of each cilium sweeps leftward near the cell surface (where friction is high) while the recovery stroke occurs higher up (where there is less friction). This generates a net leftward flow of extraembryonic fluid across the node at approximately 5-10 μm/s. (3) Signal transduction — two models: (a) Morphogen transport model: Nodal flow sweeps morphogen-containing vesicles (NVPs, nodal vesicular parcels) or free morphogens to the left side, directly activating left-side receptors. (b) Two-cilia model: Immotile mechanosensory cilia on the left periphery of the node detect the leftward flow and transduce a calcium signal through polycystin-2 (PC2) channels. Current evidence supports both mechanisms. (4) Downstream cascade: Leftward flow activates Nodal (a TGF-beta family ligand) expression on the left side of the node, which propagates to the left lateral plate mesoderm. Left-side Nodal activates Pitx2 (a homeodomain transcription factor) and Lefty2 (which limits Nodal signaling). Pitx2 directs left-specific morphogenesis (heart looping, gut rotation, spleen position). (5) Clinical: Mutations in cilia genes (dynein, IFT components) cause primary ciliary dyskinesia/Kartagener syndrome with situs inversus (50% probability of reversed L-R asymmetry).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neural induction in vertebrates was historically described as a positive signal from the organizer. What is the current 'default model' of neural induction?",
+      "options": [
+        "Neural tissue requires a specific inducing signal from the organizer to form",
+        "Ectoderm cells default to a neural fate in the absence of BMP signaling — the organizer's role is to secrete BMP antagonists (Chordin, Noggin, Follistatin) that block BMP4/7 in dorsal ectoderm, allowing the neural 'default' fate to emerge; ventral ectoderm receiving BMP becomes epidermis",
+        "Neural induction requires FGF signaling exclusively with no role for BMP",
+        "All ectoderm becomes neural tissue regardless of signaling environment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The default model of neural induction fundamentally changed our understanding of how the nervous system forms: (1) Historical context: Spemann and Mangold showed that the organizer induces neural tissue. For decades, researchers searched for the 'neural inducing' signal. The surprising answer was that neural fate is the default state of ectoderm, and the organizer's role is to REMOVE an inhibitory signal (BMP). (2) Key experiments: (a) Dissociated animal cap cells (prospective epidermis) become neural tissue in isolation — because cell dissociation dilutes BMP signals. (b) Dominant-negative BMP receptors expressed in ventral ectoderm (which normally becomes epidermis) convert it to neural tissue. (c) Injecting BMP into dorsal ectoderm (which normally becomes neural) converts it to epidermis. (3) BMP antagonists: The organizer secretes three BMP antagonists: Chordin (binds BMP4 directly, preventing receptor binding), Noggin (binds BMPs with high affinity), and Follistatin (binds Activin and BMP). These create a dorsal zone of low BMP signaling where ectoderm adopts neural fate. (4) Refinements: The strict default model is now modified. FGF signaling and Wnt inhibition (via secreted frizzled-related proteins, sFRPs, from the organizer) also contribute to neural induction. FGF may sensitize ectoderm to BMP antagonism by reducing BMP receptor levels. Thus, neural induction involves the coordinated inhibition of BMP, Wnt, and potentially Nodal signaling. (5) A-P patterning: After initial neural induction (all neural tissue is initially anterior/forebrain), posterior neural identities (hindbrain, spinal cord) are imposed by caudalizing signals: Wnt, FGF, and retinoic acid from posterior mesoderm.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studies the role of retinoic acid (RA) in limb development using chick wing buds:\n\nExperiment | Manipulation | Result (digit pattern, anterior to posterior)\nControl | None | 2-3-4 (normal wing)\nRA bead anterior | RA-soaked bead placed at anterior margin | 4-3-2-2-3-4 (mirror-image duplication)\nSHH bead anterior | Shh-soaked bead placed at anterior margin | 4-3-2-2-3-4 (mirror-image duplication)\nRA bead + Shh inhibitor | RA-soaked bead + cyclopamine at anterior | 2-3-4 (normal, no duplication)\nSHH bead + RA inhibitor | Shh-soaked bead + BMS493 at anterior | 4-3-2-2-3-4 (duplication still occurs)\n\nWhat mechanism does RA use to cause digit duplication?",
+      "options": [
+        "RA directly specifies digit identity without involving any other signaling molecule",
+        "RA induces ectopic Shh expression at the anterior margin (creating an ectopic ZPA), and Shh then specifies the mirror-image digit pattern — as shown by the fact that blocking Shh (cyclopamine) prevents RA-induced duplication, but blocking RA does not prevent Shh-induced duplication",
+        "RA and Shh have identical mechanisms that are completely interchangeable",
+        "RA causes digit duplication by killing anterior cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "These experiments elegantly dissect the epistatic relationship between RA and Shh in limb patterning: (1) Control: Normal chick wing has digits 2-3-4 (anterior to posterior). Digit 4 is closest to the ZPA (zone of polarizing activity, which produces Shh at the posterior margin). (2) RA and Shh mimic ZPA: Both RA beads and Shh beads placed at the anterior margin produce the same result — mirror-image digit duplication (4-3-2-2-3-4). This suggests they act on the same pathway. (3) Critical experiment — epistasis: When RA is blocked (RA inhibitor BMS493) but Shh is provided directly, duplication still occurs. This shows Shh acts downstream of RA and can function independently. Conversely, when Shh is blocked (cyclopamine, a Smoothened inhibitor) but RA is provided, duplication is abolished. This proves RA requires Shh to produce digit duplication — RA's effect is mediated through Shh. (4) Mechanism: RA activates Shh transcription by inducing the 5' HoxD genes (Hoxd10-13) in ectopic anterior mesenchyme. These Hox proteins, together with the limb-specific enhancer ZRS (zone of polarizing activity regulatory sequence), activate Shh expression. Thus, RA creates an ectopic ZPA. (5) Epistatic hierarchy: RA → HoxD gene activation → Shh induction → digit specification. RA is upstream, Shh is the effector. (6) Tickle's experiments: These experiments, originally performed by Cheryll Tickle and colleagues, were foundational in establishing the ZPA and Shh as the primary A-P limb patterning mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the role of the Nieuwkoop center in Xenopus development, and how does it relate to the Spemann organizer?",
+      "options": [
+        "The Nieuwkoop center and Spemann organizer are identical structures",
+        "The Nieuwkoop center is a signaling center in the dorsal vegetal region of the blastula that induces the overlying dorsal marginal zone to become the Spemann organizer — it is specified by the combined action of maternal VegT (which activates Nodal signaling) and dorsally localized beta-catenin (from cortical rotation)",
+        "The Nieuwkoop center directly forms the nervous system",
+        "The Nieuwkoop center is found only in the animal hemisphere"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Nieuwkoop center is a critical but often overlooked signaling center that acts upstream of the Spemann organizer: (1) Location: The Nieuwkoop center is located in the dorsal-vegetal region of the Xenopus blastula. It is specified by the intersection of two maternal signals: VegT (a T-box transcription factor localized in the vegetal hemisphere) and nuclear beta-catenin (localized dorsally by cortical rotation-mediated displacement of Dishevelled and GSK-3 inhibitors). (2) Function: The Nieuwkoop center does not contribute to the organizer itself. Instead, it induces the overlying dorsal marginal zone (equatorial region) to become the Spemann organizer through Nodal (Xnr) signaling. VegT activates Nodal-related genes (Xnr1, Xnr2, Xnr4, Xnr5, Xnr6) throughout the vegetal hemisphere, but the highest levels of Nodal signaling occur dorsally where beta-catenin synergizes with VegT to activate Siamois and Twin, which further boost Nodal expression. (3) Experiment: Pieter Nieuwkoop (1969) showed that dorsal vegetal blastomeres, when combined with animal cap cells (prospective ectoderm), could induce dorsal mesoderm (notochord, somite) — demonstrating the inductive capacity of the dorsal vegetal region. (4) Cascade: Nieuwkoop center (dorsal vegetal) → induces Spemann organizer (dorsal marginal zone) → organizer patterns the dorsal-ventral axis by secreting BMP/Wnt antagonists. (5) Molecular basis: The organizer is specified by the combination of high Nodal signaling (from Nieuwkoop center) and beta-catenin (which directly activates organizer genes Siamois, Twin, Goosecoid).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Lateral inhibition is a mechanism that generates pattern from initially equivalent cells. Which signaling pathway mediates lateral inhibition during neurogenesis?",
+      "options": [
+        "The Wnt/beta-catenin canonical pathway",
+        "Delta-Notch signaling, where cells committing to neural fate (neuroblasts) upregulate the ligand Delta, which activates Notch receptors on neighboring cells, keeping them in an undifferentiated state through Hes/Her transcriptional repressors",
+        "BMP signaling from the roof plate exclusively",
+        "Hedgehog signaling from the floor plate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lateral inhibition via Delta-Notch signaling is one of the most fundamental patterning mechanisms in biology: (1) The problem: In the neuroectoderm, all cells initially have the potential to become neurons or remain as epidermis/glia. How do individual cells 'choose' to become neurons while their neighbors do not? (2) Delta-Notch mechanism: Initially, all cells in the proneural cluster express both Delta (ligand) and Notch (receptor) at equivalent levels. Small stochastic fluctuations mean some cells express slightly more Delta than their neighbors. These cells more strongly activate Notch on neighbors, upregulating Hes/Her genes (transcriptional repressors) that suppress Delta expression and proneural genes (Neurogenin, Achaete-Scute). The Notch-activated cells thus produce less Delta, further freeing the high-Delta cell from Notch activation. (3) Positive feedback: This creates a self-amplifying loop — the nascent neuroblast expresses progressively more Delta and less Notch, while surrounding cells express progressively more Notch target genes and less Delta. The result is a salt-and-pepper pattern of differentiated cells (neurons) surrounded by inhibited cells (progenitors/glia). (4) Molecular details: Notch is a single-pass transmembrane receptor. Delta/Serrate (Jagged in mammals) binding triggers proteolytic cleavage: ADAM metalloprotease cleaves the extracellular domain, then gamma-secretase cleaves the transmembrane domain, releasing the Notch intracellular domain (NICD). NICD translocates to the nucleus and activates CSL/RBP-J transcription factors with Mastermind co-activator. (5) Universality: Delta-Notch lateral inhibition operates in many tissues: hair cells vs supporting cells in the inner ear, secretory vs absorptive cells in the gut, arterial vs venous endothelial cells, and T cell lineage decisions.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a specific gene (Gene Y) is necessary for heart development in zebrafish. Which experimental approach would provide the strongest evidence?",
+      "options": [
+        "Perform RNA in situ hybridization to show Gene Y is expressed in the heart",
+        "Generate a Gene Y loss-of-function using CRISPR/Cas9 knockout or morpholino antisense knockdown in zebrafish, document heart defects (abnormal looping, contractility, valve formation), then rescue the phenotype by injecting wild-type Gene Y mRNA to confirm specificity — combining loss-of-function, phenotype analysis, and rescue",
+        "Overexpress Gene Y in the entire embryo and observe general effects",
+        "Sequence Gene Y across multiple fish species"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Demonstrating that a gene is necessary for a developmental process requires loss-of-function analysis with appropriate controls: (1) Loss-of-function: CRISPR/Cas9 gene editing creates heritable null mutations by introducing frameshift insertions/deletions in the coding sequence. Morpholino antisense oligonucleotides provide a complementary, rapid approach by blocking translation (ATG morpholino) or splicing (splice-site morpholino) of the target mRNA. Using both approaches in parallel strengthens the evidence. (2) Phenotype documentation: Heart development in zebrafish is directly observable due to embryo transparency. Key parameters to assess: cardiac morphology (linear heart tube formation, looping, chamber formation), contractility (heart rate, fractional shortening by video analysis), valve formation, and blood circulation. Molecular markers (nkx2.5, gata4, hand2 for cardiac progenitors; vmhc, amhc for ventricle/atrium) can be assessed by in situ hybridization. (3) Rescue experiment: This is the critical control. Injecting wild-type Gene Y mRNA into Gene Y knockout/knockdown embryos should restore normal heart development. If it does, this proves: (a) the phenotype is specifically caused by Gene Y loss (not off-target effects), and (b) Gene Y protein is sufficient to rescue. Rescue with a tagged version (Gene Y-GFP) can additionally show protein localization. (4) Additional controls: Uninjected controls, control morpholino (standard or mismatch), and p53 morpholino co-injection (to control for morpholino-induced apoptosis). (5) Expression alone (option A) shows correlation, not causation. Overexpression (C) tests sufficiency but not necessity. Phylogenetic analysis (D) shows conservation but not function.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Regeneration capacity varies greatly among animals. What distinguishes epimorphic regeneration (as seen in salamander limb regeneration) from compensatory regeneration (as seen in liver regeneration in mammals)?",
+      "options": [
+        "Both types involve formation of a blastema and complete structural regrowth",
+        "Epimorphic regeneration involves formation of a blastema (a mass of dedifferentiated/progenitor cells) that proliferates and re-differentiates to restore the lost structure, while compensatory regeneration involves proliferation of existing differentiated cells to restore organ mass without forming a blastema or recreating the original architecture",
+        "Compensatory regeneration produces a structure identical to the original while epimorphic does not",
+        "Epimorphic regeneration only occurs in invertebrates"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Regeneration mechanisms differ fundamentally between organisms and tissues: (1) Epimorphic regeneration (salamander limb): After limb amputation, wound epidermis (without a basement membrane) forms within hours. The wound epidermis signals to underlying stump tissues, causing mature cells (muscle, cartilage, connective tissue) to dedifferentiate — losing their specialized characteristics and re-entering the cell cycle. These dedifferentiated cells form a blastema, a mass of proliferating progenitor-like cells at the amputation plane. Blastema cells then re-differentiate in a pattern that recapitulates embryonic limb development, regenerating all missing structures (skeleton, muscle, nerves, blood vessels, skin) with proper patterning. Key molecular players include FGF (from wound epidermis), nAG (produced by regenerating nerves), and reactivation of developmental pathways (Shh, Wnt, BMP). (2) Compensatory regeneration (mammalian liver): After partial hepatectomy (removal of up to 70% of liver mass), remaining hepatocytes (which are normally quiescent, in G0) re-enter the cell cycle and proliferate. The liver regrows to its original mass within 1-2 weeks, but does NOT regenerate the original lobular architecture or missing lobes. Instead, remaining lobes enlarge (hypertrophy and hyperplasia). Key signals include HGF (hepatocyte growth factor), EGF, and TNF-alpha/IL-6 priming. (3) Morphallaxis (Hydra): A third type — regeneration through remodeling and re-patterning of existing tissue with minimal new cell proliferation. (4) Mammals have very limited epimorphic capacity — neonatal mouse digit tips can regenerate (involving a blastema), but this capacity is lost with age.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Induced pluripotent stem cells (iPSCs) are generated by reprogramming somatic cells. Which set of transcription factors, known as the 'Yamanaka factors,' was used to first generate iPSCs from mouse fibroblasts?",
+      "options": [
+        "p53, Rb, BRCA1, and ATM",
+        "Oct4, Sox2, Klf4, and c-Myc (OSKM), which together can reprogram differentiated somatic cells to a pluripotent state resembling embryonic stem cells",
+        "Pax6, Neurogenin, NeuroD, and Ascl1",
+        "GATA4, Tbx5, Mef2c, and Hand2"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The discovery of iPSCs by Shinya Yamanaka (2006) revolutionized stem cell biology and earned the 2012 Nobel Prize: (1) The factors: Yamanaka screened 24 candidate pluripotency-associated transcription factors and identified a minimal set of four that could reprogram mouse embryonic fibroblasts to pluripotency: (a) Oct4 (Pou5f1): A POU-domain transcription factor essential for maintaining pluripotency in the ICM and ESCs. It activates pluripotency genes and represses differentiation genes. (b) Sox2: A SRY-related HMG-box transcription factor that partners with Oct4 to co-regulate many pluripotency target genes. Oct4-Sox2 heterodimers bind composite elements in enhancers of genes like Nanog. (c) Klf4: A Krüppel-like zinc finger transcription factor that activates pluripotency genes and inhibits p53-mediated senescence. (d) c-Myc: An oncogenic transcription factor that promotes cell proliferation, chromatin remodeling (histone acetylation), and telomerase activity. c-Myc was later shown to be replaceable, and iPSCs can be generated without it (though less efficiently). (2) Mechanism: Reprogramming involves massive epigenetic remodeling — demethylation of pluripotency gene promoters (Oct4, Nanog), reactivation of the inactive X chromosome in female cells, chromatin remodeling from heterochromatin to euchromatin at stem cell genes, and telomere elongation. (3) Validation: iPSCs meet key pluripotency criteria — they form teratomas (tumors containing all three germ layers), contribute to chimeric mice when injected into blastocysts, and can pass the tetraploid complementation test (generating entire mice from iPSCs). (4) Applications: iPSCs enable patient-specific disease modeling, drug screening, and potentially personalized cell therapy without immune rejection concerns. (5) Alternatives: Thomson's group used Oct4, Sox2, Nanog, and Lin28 for human iPSC generation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "During neurulation, the neural plate folds to form the neural tube. What is the primary cellular mechanism driving neural plate bending at the median hinge point?",
+      "options": [
+        "Rapid cell death along the midline creates a groove",
+        "Apical constriction of neuroepithelial cells at the midline, driven by actomyosin contraction, transforms columnar cells into wedge-shaped cells that collectively cause the neural plate to bend inward",
+        "Increased cell proliferation at the neural plate edges pushes the plate inward",
+        "External pressure from the surrounding ectoderm compresses the neural plate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Neurulation (formation of the neural tube from the neural plate) involves coordinated cell shape changes and tissue movements: (1) Neural plate bending: The neural plate bends at specific 'hinge points' — the median hinge point (MHP, at the midline overlying the notochord) and dorsolateral hinge points (DLHPs, lateral to the midline). At these hinge points, neuroepithelial cells undergo apical constriction — contraction of the actin-myosin network at their apical surface transforms them from columnar to wedge-shaped (wide basally, narrow apically). This collectively bends the epithelial sheet. (2) Molecular mechanism: Shh signaling from the notochord induces MHP formation by upregulating Shh target genes in floor plate precursors. Apical constriction is driven by RhoA-ROCK-myosin II signaling. The apical surface accumulates phosphorylated myosin light chain (pMLC), generating contractile force. Additionally, PAR-3/PAR-6/aPKC apical polarity proteins help organize the actomyosin network. (3) Elevation and convergence: After bending at hinge points, the neural folds elevate (rise) bilaterally, converge at the dorsal midline, and fuse to form the closed neural tube. Non-neural ectoderm also contributes by pushing the folds medially (extrinsic forces). (4) Closure sites: In mammals, neural tube closure initiates at multiple sites. In humans, closure begins at the cervical region and proceeds bidirectionally (both cranially and caudally). Failure of closure produces neural tube defects — anencephaly (cranial) or spina bifida (caudal). (5) Secondary neurulation: In the most caudal region (sacral/coccygeal), the neural tube forms by cavitation of a solid cord of mesenchymal cells, rather than by folding of a neural plate.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the role of maternal-to-zygotic transition (MZT) in early embryonic development?",
+      "options": [
+        "MZT refers to the transfer of mitochondria from mother to embryo",
+        "MZT is the developmental switch from reliance on maternally deposited mRNAs and proteins to transcription from the embryo's own (zygotic) genome, involving degradation of maternal transcripts and activation of zygotic genome activation (ZGA)",
+        "MZT occurs only in mammals and not in other animal phyla",
+        "MZT is the process by which the embryo receives nutrients from the mother via the placenta"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The maternal-to-zygotic transition is one of the most dramatic reprogramming events in biology: (1) Maternal control: Early embryonic development is directed entirely by maternally deposited mRNAs and proteins stockpiled in the egg during oogenesis. In Drosophila, the first 13 nuclear divisions occur without any zygotic transcription. In zebrafish, MZT occurs at the 1000-cell stage (~3 hours). In humans, ZGA begins at the 4-8 cell stage (day 2-3). (2) Two components: MZT involves two concurrent processes: (a) Maternal mRNA clearance: Maternal transcripts are degraded by both maternal factors (e.g., Smaug, which recruits the CCR4-NOT deadenylase complex to maternal mRNAs in Drosophila) and zygotic factors (microRNAs, particularly miR-430 in zebrafish and miR-427 in Xenopus, which trigger deadenylation and decay of hundreds of maternal transcripts). (b) Zygotic genome activation (ZGA): The embryonic genome becomes transcriptionally active. This involves chromatin remodeling — the initially transcriptionally repressive chromatin (high nucleosome density, repressive histone marks) is remodeled to an active state. Pioneer transcription factors (e.g., Zelda/VIELFALTIG in Drosophila, Oct4/Nanog/Sox2 in mammals, Pou5f3/SoxB1/Nanog in zebrafish) open chromatin and initiate zygotic transcription. (3) Timing regulation: The timing of ZGA is regulated by the nuclear-to-cytoplasmic ratio — as cleavage progresses, the increasing number of nuclei titrates out a cytoplasmic repressor of transcription. In Drosophila and Xenopus, this has been linked to histone availability. (4) Importance: Failure of MZT causes developmental arrest. Understanding MZT is critical for improving IVF/ICSI outcomes, where embryonic arrest at the cleavage stage correlates with ZGA failure.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studies homeotic transformations in Drosophila Hox gene mutants:\n\nMutant | Gene affected | Phenotype\nAntennapedia gain-of-function | Antp ectopic expression in head | Antennae transformed into legs on the head\nUltrabithorax loss-of-function | Ubx null | T3 (haltere) segment transformed into T2 (wing), producing 4-winged fly\nbithorax gain-of-function | Ubx ectopic in T2 | T2 wings partially transformed toward haltere identity\nAbdominal-B loss-of-function | Abd-B null | Posterior abdominal segments transformed into more anterior abdominal identity\nbithoraxoid | Ubx regulatory mutation | Partial T3 to T2 transformation\n\nWhat principle of Hox gene function do these data illustrate?",
+      "options": [
+        "Hox genes have no effect on segment identity",
+        "Hox genes specify segment identity in a position-specific manner: loss-of-function causes posterior-to-anterior homeotic transformations (segments adopt more anterior identity), while gain-of-function causes anterior-to-posterior transformations (segments adopt more posterior identity), demonstrating that each Hox gene confers a specific segmental identity",
+        "All Hox mutants produce identical phenotypes",
+        "Hox genes only affect wing development and no other structures"
+      ],
+      "correctAnswer": "B",
+      "explanation": "These classic Drosophila Hox mutants demonstrate fundamental principles of homeotic gene function: (1) Homeotic transformation: Hox genes specify segment identity — they do not create segments (that is done by the segmentation cascade) but instead tell each segment WHAT it should become. Mutations cause homeotic transformations — one segment takes on the identity of another. (2) Loss-of-function → posterior-to-anterior transformation: When a Hox gene is lost, its segment loses its specified identity and defaults to a more anterior identity (the ground state without that Hox gene's instruction). Ubx loss-of-function: T3 segment lacks Ubx instruction, so it adopts T2 identity — the haltere (balancing organ) becomes a wing, producing Bateson's famous 4-winged fly. Abd-B loss-of-function: posterior abdominal segments lose their posterior identity and adopt more anterior abdominal identities. (3) Gain-of-function → anterior-to-posterior transformation: When a Hox gene is ectopically expressed in anterior segments, it imposes a more posterior identity. Antennapedia gain-of-function: Antp is normally expressed in T2 (leg segments). When ectopically expressed in the head (where antenna-specifying genes normally act), it transforms antennae into legs — one of the most iconic mutant phenotypes in genetics. (4) Posterior prevalence: When multiple Hox genes are expressed in the same region, the more posterior (5') Hox gene dominates — explaining why gain-of-function always produces posteriorization. (5) Regulatory mutations: The bithoraxoid (bxd) mutation affects Ubx regulatory sequences (not the coding sequence), causing reduced Ubx expression in part of T3 and partial T3→T2 transformation. This demonstrates that Hox gene regulation is as important as the protein itself.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the role of Wnt/beta-catenin signaling in axis determination during early vertebrate embryogenesis?",
+      "options": [
+        "Wnt signaling inhibits all dorsal development",
+        "Dorsal accumulation of nuclear beta-catenin (via cortical rotation-mediated transport of Wnt pathway components) activates dorsal-specific target genes (Siamois, Twin, Nodal-related genes) that specify the organizer, while ventral cells lacking nuclear beta-catenin adopt ventral fates under BMP signaling dominance",
+        "Beta-catenin functions only in cell adhesion and has no signaling role",
+        "Wnt signaling is active uniformly throughout the embryo with no regional differences"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Wnt/beta-catenin signaling is the earliest zygotic signaling event in vertebrate axis determination: (1) Cortical rotation: In Xenopus, fertilization triggers cortical rotation — a 30-degree rotation of the egg cortex relative to the cytoplasm, driven by parallel arrays of microtubules. This transports Dishevelled (Dsh) protein and GBP (GSK-3 Binding Protein) from the vegetal pole to the dorsal side. (2) Beta-catenin stabilization: On the dorsal side, transported Dsh and GBP inhibit GSK-3beta, which normally phosphorylates beta-catenin (targeting it for ubiquitin-proteasome degradation via the APC destruction complex). Dorsal GSK-3 inhibition allows beta-catenin to accumulate, enter the nucleus, and partner with TCF/LEF transcription factors to activate dorsal target genes. On the ventral side, GSK-3 remains active, beta-catenin is degraded, and TCF acts as a repressor. (3) Target genes: Nuclear beta-catenin + TCF activates Siamois and Twin (homeodomain transcription factors that are master regulators of organizer formation), Nodal-related genes (Xnr3, Xnr5, Xnr6), and Wnt8 (which maintains dorsal signaling). Siamois directly activates organizer genes including Goosecoid, Chordin, and Noggin. (4) Proof: Injection of beta-catenin mRNA into ventral blastomeres induces a secondary axis (dorsalization). Injection of dominant-negative TCF or depletion of beta-catenin prevents organizer formation (ventralization). Lithium chloride (which inhibits GSK-3) ventrally causes dorsalization of the entire embryo. (5) Conservation: The Wnt/beta-catenin pathway plays analogous roles in axis specification in sea urchins, zebrafish, chick, and mammals.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'regulative' versus 'mosaic' development describes two modes of embryonic specification. Which correctly distinguishes them?",
+      "options": [
+        "Regulative embryos cannot compensate for missing cells, while mosaic embryos can",
+        "In regulative development (e.g., sea urchin, mammalian), embryonic cells can compensate for removed or rearranged cells by adjusting their fate — isolated blastomeres can form complete embryos; in mosaic development (e.g., ascidian, C. elegans), cell fates are rigidly determined by localized cytoplasmic determinants and isolated blastomeres develop only into their normal fate",
+        "All vertebrates show exclusively mosaic development",
+        "Regulative and mosaic development are identical processes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The regulative-mosaic distinction, while a simplification, captures a fundamental difference in developmental strategy: (1) Regulative development: In regulative embryos, cells are not irreversibly committed to specific fates early in development. They receive positional information from cell-cell interactions (induction) and can adjust their fate based on context. Key evidence: if one blastomere is removed from a 4-cell sea urchin or mammalian embryo, the remaining cells compensate and a complete (albeit smaller) organism develops. Similarly, two 2-cell embryos combined can form a single, normal-sized chimeric organism. This capacity for regulation underlies identical twinning in mammals and the ability to perform preimplantation genetic testing (removing cells for biopsy without harming the embryo). (2) Mosaic development: In mosaic embryos, cell fates are determined by asymmetrically distributed cytoplasmic determinants (mRNAs, proteins) that are partitioned to specific blastomeres during cleavage. Removing a blastomere results in a partial embryo missing the structures normally derived from that cell. Classical example: in ascidians (tunicates), yellow crescent cytoplasm contains macho-1 mRNA (muscle determinant). If the blastomere receiving this cytoplasm is removed, no muscle forms. C. elegans also shows strong mosaic features — the invariant cell lineage reflects autonomous specification by localized determinants (PIE-1, SKN-1, PAL-1, P granules). (3) Spectrum: Most organisms use a combination of both modes. Sea urchins were considered regulative but have mosaic features (micromere specification). C. elegans was considered mosaic but uses induction (P2-EMS signaling). Mammals are highly regulative early but become increasingly mosaic as development proceeds.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the role of cadherins in morphogenesis:\n(I) Cadherins are calcium-dependent cell adhesion molecules that mediate homophilic binding between cells expressing the same cadherin type.\n(II) Differential cadherin expression drives cell sorting — cells expressing different cadherins segregate in mixed cultures, recapitulating tissue boundaries observed in vivo.\n(III) E-cadherin to N-cadherin switching is a hallmark of the epithelial-to-mesenchymal transition (EMT) that occurs during neural crest cell delamination and cancer metastasis.\n(IV) Cadherins play no role in signaling and function exclusively as structural adhesion molecules.",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "Analysis of each statement: (I) TRUE — Cadherins (E-cadherin/CDH1, N-cadherin/CDH2, P-cadherin/CDH3, VE-cadherin/CDH5, etc.) are type I transmembrane glycoproteins that mediate calcium-dependent cell-cell adhesion through homophilic (like-to-like) trans-interactions between their extracellular cadherin (EC) domains. Calcium ions rigidify the EC domain linker regions, enabling binding. Intracellularly, cadherins link to the actin cytoskeleton through alpha-catenin, beta-catenin, and p120-catenin, forming adherens junctions. (II) TRUE — The differential adhesion hypothesis (Steinberg, 1963) proposes that cells sort based on quantitative and qualitative differences in cell adhesion. Cells expressing different cadherins (E-cadherin vs N-cadherin) segregate when mixed in culture, with the more adhesive cells (higher cadherin expression) forming the inner core and less adhesive cells forming the outer layer. This principle explains tissue boundary formation during development — for example, the segregation of neural tube (N-cadherin) from epidermis (E-cadherin). (III) TRUE — During EMT, cells switch from E-cadherin (epithelial adhesion) to N-cadherin (mesenchymal adhesion). This 'cadherin switch' is driven by transcriptional repressors Snail, Slug, Twist, and ZEB1/2, which directly repress CDH1 (E-cadherin gene) promoter. Neural crest cells undergo this switch during delamination from the neural tube. The same E-to-N cadherin switch occurs during cancer metastasis, enabling tumor cells to detach from the primary tumor and invade surrounding tissues. (IV) FALSE — Cadherins participate in multiple signaling pathways: (a) beta-catenin, released from cadherin complexes, can enter the nucleus and act as a Wnt signaling effector; (b) p120-catenin regulates Rho GTPase activity; (c) Cadherins modulate receptor tyrosine kinase signaling (FGFR, EGFR) through direct interactions; (d) Cadherin engagement activates contact-inhibition-of-proliferation signals (Hippo pathway). Thus, cadherins are both adhesion and signaling molecules.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Planarians (flatworms) possess remarkable regenerative abilities mediated by neoblasts. What are neoblasts?",
+      "options": [
+        "Specialized nerve cells that coordinate regeneration signals",
+        "Adult pluripotent stem cells (the only dividing cells in the adult planarian body) that can give rise to all cell types and are distributed throughout the body; a single transplanted neoblast can rescue a lethally irradiated planarian by reconstituting the entire animal",
+        "Immune cells that clear debris at wound sites",
+        "Embryonic cells that persist only in the head region"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Planarian neoblasts are among the most remarkable stem cells in the animal kingdom: (1) Identity: Neoblasts are adult somatic stem cells that constitute approximately 25-30% of planarian cells. They are the ONLY mitotically active cells in the adult planarian — all differentiated cells are post-mitotic. Neoblasts are small, undifferentiated cells with a high nuclear-to-cytoplasmic ratio, scattered throughout the parenchyma (but excluded from the pharynx and in front of the photoreceptors). (2) Pluripotency: Individual neoblasts are clonally pluripotent, as demonstrated by the landmark experiment of Wagner et al. (2011): a single transplanted neoblast (cNeoblast) into a lethally irradiated planarian (which destroys all host neoblasts) can repopulate the entire animal, generating all cell types including neurons, intestine, muscle, epidermis, and excretory cells. This is arguably the most extreme demonstration of adult stem cell potency in any animal. (3) Regeneration: When a planarian is cut (even into 1/279th of its body), neoblasts at the wound site proliferate, forming a blastema. Wnt signaling determines head vs tail fate — Wnt is high posteriorly (promoting tail), and Wnt inhibition is high anteriorly (promoting head). Beta-catenin knockdown causes all wounds to regenerate heads (producing 'two-headed' planarians). (4) Molecular markers: Neoblasts express piwi (piRNA pathway component), vasa, and other germline-associated genes. They are sensitive to irradiation (lethal dose eliminates all neoblasts and eventually kills the animal as differentiated cells cannot be replaced). (5) Heterogeneity: Recent single-cell sequencing reveals neoblast heterogeneity — some are true pluripotent stem cells while others are lineage-committed progenitors.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Amphibian metamorphosis involves the transformation from an aquatic tadpole to a terrestrial frog. Which hormone drives metamorphosis, and what is its mechanism?",
+      "options": [
+        "Growth hormone drives metamorphosis by stimulating cell proliferation in all tissues",
+        "Thyroid hormones (T3 and T4) drive metamorphosis by binding to thyroid hormone receptors (TRs) in target tissues, triggering tissue-specific programs: limb growth, tail resorption (via apoptosis), intestinal remodeling, and hemoglobin switching from larval to adult forms",
+        "Estrogen drives metamorphosis by feminizing all tissues",
+        "Cortisol drives metamorphosis through stress-induced tissue remodeling"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Amphibian metamorphosis is one of the most dramatic post-embryonic developmental events in vertebrates, entirely orchestrated by thyroid hormones: (1) Thyroid hormone (TH): The onset of metamorphosis is triggered by a surge in circulating T3 (triiodothyronine) and T4 (thyroxine), produced by the thyroid gland under stimulation from TSH (from the pituitary) and ultimately TRH (from the hypothalamus). TH levels rise progressively during prometamorphosis and peak during metamorphic climax. (2) Mechanism: TH binds to thyroid hormone receptors (TRalpha and TRbeta), which are nuclear receptors that act as ligand-dependent transcription factors. Unliganded TRs repress target genes (maintaining the larval state); upon TH binding, TRs recruit coactivators and activate metamorphic gene programs. (3) Tissue-specific responses: Remarkably, the same hormone produces opposite effects in different tissues: (a) Limbs — TH stimulates cell proliferation and morphogenesis, growing the legs; (b) Tail — TH induces apoptosis and tissue resorption, eliminating the tail; (c) Intestine — the larval gut (simple herbivore intestine) undergoes massive remodeling to a shorter, more complex carnivore gut via apoptosis of larval epithelium and proliferation of adult stem cells; (d) Skin — transition from larval to adult skin with mucous glands; (e) Hemoglobin — switch from larval hemoglobin (higher O2 affinity for aquatic respiration) to adult hemoglobin (optimized for air breathing); (f) Brain — remodeling of the visual system from lateral-eyed to binocular. (4) Proof: Thyroidectomy prevents metamorphosis. Treatment of tadpoles with exogenous TH induces precocious metamorphosis. Blocking TH synthesis with propylthiouracil halts metamorphosis.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
     }
   ]
 }
