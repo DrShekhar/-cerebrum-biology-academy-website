@@ -17,7 +17,7 @@
       "Bioethics"
     ],
     "difficulty": "EXPERT",
-    "totalQuestions": 58,
+    "totalQuestions": 79,
     "olympiadLevel": "IBO",
     "isOlympiad": true,
     "campbellUnit": 3,
@@ -1184,6 +1184,426 @@
       "conceptualDepth": "CONCEPTUAL",
       "difficulty": "EXPERT",
       "topic": "Emerging Biotechnologies"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher wants to amplify a specific 2 kb region from human genomic DNA. After 30 cycles of PCR, the theoretical yield of the target amplicon from a single starting template molecule is approximately:",
+      "options": [
+        "30 copies",
+        "2^30 (approximately 10^9) copies",
+        "30 \u00d7 2 = 60 copies",
+        "2^30 copies minus the original template and first-cycle products"
+      ],
+      "correctAnswer": "D",
+      "explanation": "PCR amplification is exponential, producing 2^n copies after n cycles, where n is the number of cycles. After 30 cycles from a single template, the theoretical yield is 2^30 \u2248 1.07 \u00d7 10^9 copies. However, the precise answer accounts for the fact that the first two cycles produce long products extending beyond the primer sites, not the discrete target amplicon. The unit-length target amplicon (bounded by both primers) first appears in cycle 3, so after 30 cycles there are 2^30 - 2n copies of the exact target (subtracting the original template and long first/second-cycle products). Option B is approximately correct but ignores these first-cycle products. Option A confuses linear with exponential amplification. Option C confuses multiplication with exponentiation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "PCR Amplification"
+    },
+    {
+      "type": "MCQ",
+      "question": "In Southern blotting, after restriction digestion and gel electrophoresis of genomic DNA, a researcher observes that a probe hybridizes to three distinct bands. The most likely explanation is:",
+      "options": [
+        "The gene of interest has three exons",
+        "There are restriction sites within the region complementary to the probe",
+        "The probe is nonspecifically binding to ribosomal RNA",
+        "PCR contamination has introduced extra copies"
+      ],
+      "correctAnswer": "B",
+      "explanation": "When a Southern blot probe hybridizes to multiple bands, the most common explanation is that restriction enzyme recognition sites exist within the genomic region complementary to the probe. The enzyme cuts the DNA at these internal sites, producing multiple fragments that each contain part of the probe-complementary sequence. Each fragment migrates differently during electrophoresis, producing multiple bands. Option A is incorrect because Southern blotting detects DNA fragments, not mRNA \u2014 exon structure would only be relevant if restriction sites coincide with exon boundaries. Option C is wrong because Southern blots analyze DNA, not RNA (that would be Northern blotting). Option D is irrelevant since Southern blotting uses genomic DNA directly, not PCR products.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Southern Blotting"
+    },
+    {
+      "type": "MCQ",
+      "question": "A CRISPR-Cas9 experiment targeting gene X shows efficient cutting at the target site but the researcher also detects mutations at three other genomic loci sharing 85-90% sequence identity with the guide RNA target. Which modification would MOST effectively reduce these off-target effects?",
+      "options": [
+        "Using a longer guide RNA (25 nt instead of 20 nt)",
+        "Using high-fidelity Cas9 variants (e.g., eSpCas9 or HiFi Cas9) with reduced non-specific DNA contacts",
+        "Increasing the concentration of Cas9 protein",
+        "Using a different promoter to express Cas9"
+      ],
+      "correctAnswer": "B",
+      "explanation": "High-fidelity Cas9 variants such as eSpCas9(1.1), SpCas9-HF1, and HiFi Cas9 have been engineered with specific amino acid substitutions that reduce non-specific electrostatic interactions between the Cas9 protein and the DNA backbone. These variants maintain on-target activity while dramatically reducing off-target cleavage at sites with mismatches to the guide RNA. Option A is incorrect because extending the guide RNA beyond 20 nt does not improve specificity (excess 5' nucleotides are processed) and can actually increase off-target effects. Option C would worsen off-target cutting by increasing the enzyme:substrate ratio. Option D affects expression level and timing but not the inherent specificity of the Cas9-guide RNA complex.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "CRISPR-Cas9 Specificity"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A forensic scientist analyzes STR (short tandem repeat) profiles from a crime scene sample and three suspects. The crime scene DNA shows alleles of 12,14 at locus D3S1358; 8,11 at locus TH01; and 28,32 at locus D21S11. Suspect A shows 12,14; 8,11; 28,32. Suspect B shows 12,15; 8,11; 28,32. Suspect C shows 12,14; 9,11; 28,32. Based on these three loci alone:",
+      "options": [
+        "All three suspects can be excluded",
+        "Only Suspect A cannot be excluded; B and C have mismatches",
+        "Suspects A and C cannot be excluded",
+        "The analysis is inconclusive without at least 13 STR loci"
+      ],
+      "correctAnswer": "B",
+      "explanation": "STR profiling in forensics compares allele sizes at multiple loci. A match means the suspect's profile is consistent with the crime scene DNA; a mismatch at even one locus excludes the suspect (assuming no sample degradation or mixtures). Suspect A matches at all three loci (12,14; 8,11; 28,32). Suspect B has a mismatch at D3S1358 (15 instead of 14), so B is excluded. Suspect C has a mismatch at TH01 (9 instead of 8), so C is excluded. While forensic standards typically require 13+ STR loci (CODIS system) for positive identification, exclusion can be definitively made with a single-locus mismatch. Option D is incorrect because exclusion is conclusive even with few loci \u2014 it is inclusion that requires more loci for statistical confidence.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Forensic DNA Profiling"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a yeast two-hybrid screen, protein X (the bait) is fused to the DNA-binding domain of GAL4, and a library of prey proteins is fused to the GAL4 activation domain. Reporter gene activation indicates:",
+      "options": [
+        "Protein X has been successfully expressed in yeast",
+        "A prey protein physically interacts with protein X, reconstituting functional GAL4",
+        "Protein X binds directly to the promoter of the reporter gene",
+        "The prey protein has enzymatic activity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The yeast two-hybrid system detects protein-protein interactions in vivo. The bait protein is fused to the GAL4 DNA-binding domain (DBD), which can bind the UAS (upstream activating sequence) but cannot activate transcription alone. The prey library proteins are fused to the GAL4 activation domain (AD), which cannot reach the promoter without the DBD. When a prey protein physically interacts with the bait, it brings the AD into proximity with the DBD-UAS complex, reconstituting a functional transcription factor that activates reporter genes (typically HIS3, ADE2, or lacZ). Option A is incorrect because expression alone would not activate the reporter without interaction. Option C is wrong because protein X does not directly bind the promoter \u2014 the GAL4 DBD does. Option D is irrelevant to the two-hybrid readout.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Yeast Two-Hybrid System"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to create a conditional knockout mouse where gene Y is deleted only in hepatocytes. Which combination of genetic tools would achieve this?",
+      "options": [
+        "Constitutive Cre recombinase expression and loxP sites flanking gene Y",
+        "Albumin promoter-driven Cre recombinase and loxP sites flanking gene Y",
+        "Tetracycline-inducible shRNA targeting gene Y mRNA",
+        "CRISPR-Cas9 injection into fertilized eggs targeting gene Y"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Conditional knockout using the Cre-loxP system requires two components: (1) loxP sites flanking the target gene (floxed allele), and (2) Cre recombinase expressed in a tissue-specific manner. The albumin promoter drives expression specifically in hepatocytes, so Cre recombinase will only be produced in liver cells, excising the floxed gene Y only in hepatocytes while leaving it intact in all other tissues. Option A would create a constitutive (whole-body) knockout, not conditional. Option C would achieve knockdown (not knockout) and would require tissue-specific delivery, which shRNA alone does not provide. Option D would create a whole-organism knockout in the founder and all derived tissues. The Cre-loxP system is the gold standard for tissue-specific gene deletion in mouse genetics.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Conditional Knockout Mice"
+    },
+    {
+      "type": "MCQ",
+      "question": "RNA interference (RNAi) and CRISPR-Cas9 both silence gene expression, but they differ fundamentally in their mechanism. Which statement correctly distinguishes them?",
+      "options": [
+        "RNAi permanently modifies the genome while CRISPR effects are transient",
+        "RNAi degrades mRNA post-transcriptionally while CRISPR-Cas9 introduces permanent DNA mutations",
+        "Both RNAi and CRISPR-Cas9 act at the translational level",
+        "RNAi requires a PAM sequence adjacent to the target while CRISPR does not"
+      ],
+      "correctAnswer": "B",
+      "explanation": "RNAi operates post-transcriptionally: double-stranded RNA (dsRNA) is processed by Dicer into small interfering RNAs (siRNAs), which are loaded into the RISC complex containing Argonaute protein. The guide strand directs RISC to complementary mRNA, which is then cleaved and degraded. This effect is transient because new mRNA is continuously transcribed. CRISPR-Cas9 introduces permanent double-strand breaks in genomic DNA, which are repaired by error-prone NHEJ (creating insertions/deletions that disrupt the gene) or HDR (for precise edits). Option A reverses the permanence \u2014 RNAi is transient, CRISPR is permanent. Option C is wrong; neither acts at translation. Option D reverses the PAM requirement \u2014 CRISPR-Cas9 requires a PAM sequence, RNAi does not.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "RNAi vs CRISPR"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about next-generation sequencing (NGS) technologies:\nS1: Illumina sequencing uses reversible terminator chemistry where fluorescently labeled nucleotides are incorporated one at a time\nS2: Oxford Nanopore sequencing can produce reads exceeding 100 kb by threading single DNA molecules through protein nanopores\nS3: PacBio SMRT sequencing achieves high accuracy on single reads comparable to Illumina\nS4: All NGS platforms require PCR amplification of the DNA library before sequencing",
+      "options": [
+        "TTFT",
+        "TTFF",
+        "TTTT",
+        "TFFT"
+      ],
+      "correctAnswer": "B",
+      "explanation": "S1 is TRUE: Illumina sequencing-by-synthesis uses fluorescently labeled dNTPs with 3'-O-azidomethyl reversible terminators. Each cycle adds one nucleotide, the fluorescence is imaged, and the terminator is cleaved to allow the next cycle. S2 is TRUE: Oxford Nanopore can produce ultra-long reads (>100 kb, record >4 Mb) by measuring current changes as single-stranded DNA passes through a biological nanopore (e.g., CsgG). S3 is FALSE: Individual PacBio SMRT reads have ~10-15% error rate (primarily insertions/deletions), much higher than Illumina's <0.1% per-base error rate. However, PacBio achieves high consensus accuracy (>99.999%) through circular consensus sequencing (CCS/HiFi reads). S4 is FALSE: Both Oxford Nanopore and PacBio can sequence native DNA without PCR amplification, enabling direct detection of base modifications like methylation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Next-Generation Sequencing"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher performing gel electrophoresis of DNA restriction fragments observes that a 5 kb fragment migrates faster than expected compared to the DNA ladder. The most likely explanation is:",
+      "options": [
+        "The fragment has a higher GC content than average",
+        "The gel concentration is too low for accurate resolution",
+        "The fragment contains a supercoiled plasmid that has not been linearized",
+        "The voltage was too high during electrophoresis"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Supercoiled DNA migrates faster through agarose gels than linear DNA of the same molecular weight because its compact conformation reduces friction with the gel matrix. If the restriction enzyme failed to cut a supercoiled plasmid (e.g., due to methylation-sensitive restriction), the intact supercoiled form would migrate faster than expected for its size when compared to linear DNA markers. Option A is incorrect because GC content has minimal effect on migration in native agarose gels (it affects melting temperature but not electrophoretic mobility). Option B would cause poor resolution of large fragments but would not make a specific band migrate faster. Option D could cause band distortion or excessive heating but would affect all bands similarly, not cause a specific fragment to run anomalously fast.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Gel Electrophoresis"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A microarray experiment compares gene expression in normal liver tissue versus hepatocellular carcinoma. The data show 2,347 genes with >2-fold upregulation and 1,892 genes with >2-fold downregulation in tumor tissue. Gene ontology enrichment analysis of the upregulated genes shows significant enrichment for cell cycle regulation, DNA replication, and angiogenesis pathways. The MOST appropriate next step to validate these findings would be:",
+      "options": [
+        "Repeat the microarray with more biological replicates",
+        "Perform RT-qPCR for a subset of differentially expressed genes using independent patient samples",
+        "Directly proceed to drug development targeting the most upregulated gene",
+        "Conclude that all 2,347 upregulated genes are cancer driver genes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Microarray results must be validated using an orthogonal method with independent samples. RT-qPCR is the gold standard for validating differential gene expression because it provides quantitative, gene-specific measurements independent of the hybridization-based microarray platform. Using independent patient samples (not the same samples used for the microarray) is critical to confirm that findings are reproducible and not artifacts of specific samples. Option A (more replicates on the same platform) improves statistical power but does not provide orthogonal validation. Option C is premature \u2014 most differentially expressed genes are passengers, not drivers, and extensive functional validation is needed before drug development. Option D is incorrect because differential expression does not imply causation; many changes are downstream consequences of the cancer phenotype.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Microarray Analysis"
+    },
+    {
+      "type": "MCQ",
+      "question": "In recombinant DNA technology, a bacterial expression vector typically includes all of the following EXCEPT:",
+      "options": [
+        "An origin of replication functional in E. coli",
+        "A eukaryotic polyadenylation signal sequence",
+        "A selectable marker gene (e.g., ampicillin resistance)",
+        "A multiple cloning site downstream of an inducible promoter"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bacterial expression vectors are designed for protein production in prokaryotic hosts and contain: an origin of replication (ori) for autonomous replication in E. coli, a selectable marker (typically antibiotic resistance) for selecting transformed cells, and a multiple cloning site (MCS) downstream of a strong inducible promoter (e.g., T7, lac, or tac) for controlled expression of the inserted gene. A eukaryotic polyadenylation signal is NOT needed in bacterial vectors because prokaryotes use different mechanisms for mRNA processing and stability (Rho-dependent or Rho-independent transcription termination, not polyadenylation). Polyadenylation signals (like the SV40 polyA or BGH polyA) are components of eukaryotic expression vectors used in mammalian cell culture.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Expression Vectors"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine whether a newly discovered protein interacts with chromatin in vivo, a researcher should use:",
+      "options": [
+        "Western blot with anti-histone antibodies",
+        "Chromatin immunoprecipitation (ChIP) followed by qPCR or sequencing",
+        "Yeast two-hybrid screening with histone proteins as bait",
+        "In vitro pull-down assay with purified histones"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Chromatin immunoprecipitation (ChIP) is the gold-standard technique for detecting protein-DNA interactions in vivo. In ChIP, proteins are crosslinked to DNA in living cells using formaldehyde, chromatin is sheared, and the protein of interest is immunoprecipitated using a specific antibody. The co-precipitated DNA is then analyzed by qPCR (for specific loci) or high-throughput sequencing (ChIP-seq, for genome-wide binding). This provides direct evidence of in vivo chromatin association at specific genomic locations. Option A detects protein expression but not chromatin interaction. Option C detects protein-protein interactions, not protein-chromatin interactions in their native context. Option D detects interactions in vitro, which may not reflect the in vivo situation (chromatin context, post-translational modifications, and other bound factors are absent).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "ChIP Technology"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher clones a human cDNA into a bacterial expression vector but obtains no functional protein. The most likely reason is:",
+      "options": [
+        "Bacteria cannot transcribe human DNA sequences",
+        "The human protein requires post-translational modifications (glycosylation, disulfide bonds) that bacteria cannot perform",
+        "The cDNA is too large for bacterial plasmids",
+        "Human codons are incompatible with bacterial ribosomes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Many human proteins require post-translational modifications for proper folding and function that E. coli cannot perform. Eukaryotic modifications include N-linked glycosylation (in the ER/Golgi), disulfide bond formation (in the oxidizing ER environment), specific proteolytic processing, and proper chaperone-assisted folding. E. coli lacks these systems: its cytoplasm is reducing (preventing disulfide bonds), it has no ER/Golgi (no glycosylation), and its chaperones may not properly fold complex eukaryotic proteins. Option A is wrong \u2014 bacteria can transcribe any DNA with appropriate promoter and terminator signals. Option C is wrong \u2014 bacterial plasmids can accommodate inserts of 10+ kb, sufficient for most human cDNAs. Option D is partially true (codon bias exists) but can be overcome with codon-optimized sequences or special strains with rare tRNA genes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Recombinant Protein Expression"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about molecular cloning strategies:\nS1: Restriction enzyme-based cloning requires compatible cohesive or blunt ends between insert and vector\nS2: Gateway cloning uses site-specific recombination (att sites) to transfer inserts between vectors without restriction enzymes\nS3: Gibson assembly can join multiple DNA fragments in a single isothermal reaction using overlapping sequences\nS4: TA cloning exploits the terminal transferase activity of Taq polymerase which adds a single adenine to 3' ends of PCR products",
+      "options": [
+        "TTTT",
+        "TTFT",
+        "TFTT",
+        "FTTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 is TRUE: Traditional restriction cloning requires that the insert and vector be cut with compatible enzymes producing compatible ends (matching cohesive ends for directional cloning, or blunt ends). Incompatible ends must be modified or blunted before ligation. S2 is TRUE: Gateway cloning uses bacteriophage lambda integrase-mediated site-specific recombination between att sites (attB \u00d7 attP \u2192 attL + attR via BP reaction; attL \u00d7 attR \u2192 attB + attP via LR reaction), enabling efficient transfer of cloned inserts between vectors without restriction enzymes. S3 is TRUE: Gibson assembly joins multiple DNA fragments with 20-40 bp overlapping ends in a single isothermal reaction (50\u00b0C, 1 hour) using three enzymes: T5 exonuclease (creates 3' overhangs), Phusion polymerase (fills gaps), and Taq ligase (seals nicks). S4 is TRUE: Taq DNA polymerase has a non-template-directed terminal transferase activity that adds a single deoxyadenosine (A) to the 3' ends of PCR products, which can be ligated into vectors with complementary 3' T overhangs (T-vectors).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Molecular Cloning Strategies"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sanger sequencing and Illumina sequencing both rely on incorporation of modified nucleotides, but differ in a key aspect. Which statement best describes this difference?",
+      "options": [
+        "Sanger uses fluorescent dNTPs while Illumina uses radioactive dNTPs",
+        "Sanger uses irreversible ddNTP chain terminators mixed with dNTPs, while Illumina uses reversible terminators where all four bases are added simultaneously",
+        "Sanger can sequence entire genomes in a single run while Illumina cannot",
+        "Illumina requires chain termination while Sanger does not"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sanger sequencing uses dideoxynucleotide triphosphates (ddNTPs) that lack a 3'-OH group, causing irreversible chain termination. ddNTPs are mixed with normal dNTPs at low ratios, producing a population of fragments of every possible length. Modern Sanger sequencing uses four different fluorescent labels on the four ddNTPs for capillary electrophoresis separation. Illumina sequencing-by-synthesis uses all four fluorescently labeled reversible terminators simultaneously. Each cycle, one nucleotide is incorporated (the 3'-O-azidomethyl group blocks further extension), the fluorescence is imaged to identify the base, then the terminator and fluorophore are chemically cleaved to allow the next cycle. Option A is wrong \u2014 both modern platforms use fluorescence, not radioactivity. Option C is wrong \u2014 neither platform sequences entire genomes in a single reaction. Option D reverses the relationship.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "DNA Sequencing Technologies"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A western blot experiment probing for protein Z shows a single band at 45 kDa in wild-type cell lysate. In cells transfected with an siRNA targeting gene Z, the 45 kDa band is absent but a new band appears at 42 kDa. The most likely explanation is:",
+      "options": [
+        "The siRNA completely eliminated protein Z and the 42 kDa band is a non-specific antibody artifact",
+        "The siRNA caused alternative splicing producing a shorter protein Z isoform that retains the antibody epitope",
+        "The 42 kDa band represents a degradation product of protein Z",
+        "The siRNA targeted the wrong gene"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The appearance of a smaller band (42 kDa vs 45 kDa) that is recognized by the same antibody suggests the epitope is preserved in a shorter protein. siRNAs target specific mRNA sequences, and if the siRNA targets an exon that can be alternatively spliced, knockdown of the full-length mRNA may allow an alternatively spliced isoform (lacking the targeted exon) to be preferentially expressed. This shorter isoform retains the antibody epitope (since the epitope-containing region is in a different exon) but has lower molecular weight. Option A is less likely because non-specific bands would also appear in the wild-type lane. Option C is unlikely because degradation products would typically appear in both conditions. Option D is contradicted by the successful elimination of the 45 kDa full-length protein.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Western Blot Interpretation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Therapeutic monoclonal antibodies like trastuzumab (Herceptin) are produced using hybridoma technology. The key step in hybridoma formation is:",
+      "options": [
+        "Fusion of T cells with myeloma cells using PEG",
+        "Fusion of B cells producing the desired antibody with immortal myeloma cells, followed by HAT selection",
+        "Transfection of bacteria with immunoglobulin genes",
+        "Direct isolation of antibodies from patient serum"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hybridoma technology (developed by K\u00f6hler and Milstein, 1975 Nobel Prize) involves: (1) immunizing a mouse with the target antigen, (2) harvesting splenic B cells producing antibodies against the antigen, (3) fusing these B cells with immortal myeloma cells (which lack HGPRT) using polyethylene glycol (PEG) or electrofusion, (4) selecting hybrid cells in HAT medium (hypoxanthine, aminopterin, thymidine) \u2014 only hybridomas survive because unfused myeloma cells die (lack HGPRT, cannot use salvage pathway with aminopterin blocking de novo synthesis) and unfused B cells die naturally, (5) screening hybridoma clones for desired antibody production. Option A uses T cells instead of B cells (antibody-producing cells). Option C describes recombinant antibody production, not hybridoma technology. Option D describes polyclonal serum antibody collection.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Monoclonal Antibodies"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To create a reporter construct that measures the transcriptional activity of a human promoter, a researcher should:",
+      "options": [
+        "Clone the promoter upstream of the GFP coding sequence in a mammalian expression vector and transfect into cells",
+        "Clone the GFP coding sequence upstream of the promoter",
+        "Clone the promoter into a bacterial vector with lacZ",
+        "Insert the promoter into the 3' UTR of a reporter gene"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Reporter constructs measure promoter activity by linking the promoter of interest to a quantifiable reporter gene. The promoter must be positioned upstream (5') of the reporter coding sequence (GFP, luciferase, lacZ, etc.) in the correct orientation, mimicking its natural position relative to a gene. When the promoter is active, it drives transcription of the reporter gene, and reporter protein levels correlate with promoter activity. Using a mammalian expression vector ensures proper chromatin context and transcription factor availability for a human promoter. Option B places the reporter before the promoter, which would not produce a functional mRNA. Option C might work for some constitutive promoters but many human promoters require mammalian-specific transcription factors absent in bacteria. Option D places the promoter in the 3' UTR, where it cannot drive transcription initiation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Reporter Gene Assays"
+    },
+    {
+      "type": "MCQ",
+      "question": "Metagenomics involves sequencing DNA directly from environmental samples. Compared to traditional culture-based methods, metagenomics reveals that:",
+      "options": [
+        "All environmental bacteria can be cultured under standard laboratory conditions",
+        "The vast majority (>99%) of microbial species in most environments have never been cultured, representing enormous undiscovered biodiversity",
+        "Culture-based methods detect more species than sequencing approaches",
+        "Metagenomic sequences cannot be assigned to specific organisms"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Metagenomics has revolutionized microbiology by revealing that culture-based methods capture only a tiny fraction (<1%) of microbial diversity in most environments \u2014 a phenomenon called the 'great plate count anomaly.' Direct DNA sequencing of soil, ocean water, human gut, and other environments consistently shows thousands to millions of species that have never been cultured, including entire novel phyla with unknown metabolic capabilities. Option A is completely wrong \u2014 most microbes resist standard culture conditions. Option C is wrong \u2014 metagenomics detects orders of magnitude more species than culturing. Option D is partially true for some sequences but advances in bioinformatics (binning, assembly, phylogenetic markers like 16S rRNA) allow many sequences to be assigned to specific taxonomic groups.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Metagenomics"
+    },
+    {
+      "type": "MCQ",
+      "question": "Site-directed mutagenesis is used to introduce a specific amino acid substitution in a protein. The technique typically involves:",
+      "options": [
+        "Random chemical mutagenesis followed by screening",
+        "Designing PCR primers containing the desired mutation and using them to amplify the entire plasmid in a DpnI-based protocol",
+        "CRISPR-Cas9 editing of the chromosomal gene",
+        "UV irradiation of the protein to induce conformational changes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The QuikChange-style site-directed mutagenesis protocol uses complementary PCR primers containing the desired nucleotide change(s) to amplify the entire plasmid in a linear amplification reaction. After PCR, the methylated parental template (from dam+ E. coli) is digested with DpnI (which cuts only methylated GATC sites), leaving only the newly synthesized, unmethylated mutant plasmid. This is transformed into competent cells where nicks are repaired. This approach precisely introduces the desired mutation without altering any other sequence. Option A (random mutagenesis) produces many unwanted mutations and requires extensive screening. Option C is used for in vivo genomic editing, not in vitro plasmid mutagenesis. Option D is nonsensical \u2014 UV does not induce specific amino acid substitutions in proteins.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Site-Directed Mutagenesis"
+    },
+    {
+      "type": "MCQ",
+      "question": "In bioinformatics, a BLAST search compares a query sequence against a database. A result with an E-value of 1e-50 indicates:",
+      "options": [
+        "The match is likely due to random chance",
+        "There is an extremely high probability of a true homologous relationship between the query and the database hit",
+        "The sequences share exactly 50% identity",
+        "The database contains 10^50 sequences"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The E-value (Expect value) in BLAST represents the number of alignments with a particular score that would be expected by chance in a database of a given size. An E-value of 1e-50 means the probability of finding such a match by random chance is approximately 10^-50 \u2014 essentially zero. This extremely low E-value provides very strong statistical evidence that the query and hit are homologous (share common ancestry) rather than coincidentally similar. Generally, E-values below 1e-5 suggest significant homology. Option A is wrong \u2014 a low E-value means the match is NOT due to chance. Option C is wrong \u2014 E-values do not directly correspond to percent identity (a 30% identity alignment could have a low E-value if sufficiently long). Option D is nonsensical \u2014 the E-value does not represent database size.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Bioinformatics and BLAST"
     }
   ]
 }

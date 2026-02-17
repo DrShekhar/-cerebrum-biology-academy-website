@@ -4,7 +4,7 @@
     "subject": "Biology",
     "chapter": "Vertebrates",
     "class": "Olympiad",
-    "totalQuestions": 94
+    "totalQuestions": 97
   },
   "questions": [
     {
@@ -1886,6 +1886,66 @@
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
       "topic": "Fin-to-Limb Homology"
+    },
+    {
+      "type": "MCQ",
+      "question": "The evolution of the amniotic egg was a key innovation that allowed vertebrates to reproduce entirely on land. Which component of the amniotic egg is MOST critical for preventing desiccation of the embryo?",
+      "options": [
+        "The yolk sac, which provides nutrients",
+        "The chorion, which is the outermost extraembryonic membrane facilitating gas exchange",
+        "The amnion, which encloses the embryo in a fluid-filled cavity",
+        "The allantois, which stores metabolic waste"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The amnion is the defining feature of amniotic eggs and is most directly responsible for preventing embryonic desiccation. It forms a fluid-filled cavity (the amniotic cavity) that surrounds the embryo, creating an aquatic microenvironment that protects against drying out and mechanical shock. This essentially replaces the aquatic environment required by anamniote embryos (fish, amphibians). The yolk sac (option A) provides nutrition but does not prevent desiccation. The chorion (option B) lines the inner shell surface and facilitates gas exchange but its primary role is not water retention. The allantois (option D) stores nitrogenous waste (uric acid in reptiles/birds) and participates in gas exchange. While the shell/shell membranes also prevent water loss, among the extraembryonic membranes, the amnion's fluid-filled enclosure is the most critical anti-desiccation adaptation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 5,
+      "campbellChapter": 34,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Amniotic Egg Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cetaceans (whales, dolphins) evolved from terrestrial artiodactyl ancestors. Which combination of evidence MOST strongly supports this evolutionary relationship?",
+      "options": [
+        "Cetaceans and artiodactyls both have four-chambered hearts",
+        "Molecular phylogenetics places cetaceans within Artiodactyla, and transitional fossils (Pakicetus, Ambulocetus, Rodhocetus) show progressive aquatic adaptations",
+        "Both groups are endothermic and nurse their young with milk",
+        "Cetaceans and artiodactyls both have hooves"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The strongest evidence for cetacean-artiodactyl relationship comes from two converging lines: (1) Molecular data from multiple gene sequences (including SINEs \u2014 short interspersed nuclear elements, casein genes, and mitochondrial DNA) consistently nest Cetacea within Artiodactyla, making Hippopotamus the closest living relative of whales. (2) A remarkable fossil series from Pakistan and India documents the transition: Pakicetus (land-dwelling, with cetacean-like ear bones), Ambulocetus (amphibious, with powerful hindlimbs), Rodhocetus (more aquatic, with reduced pelvis), Basilosaurus (fully aquatic, with vestigial hindlimbs). Option A describes a trait shared by all mammals, not specifically linking these groups. Option C describes general mammalian traits. Option D is incorrect \u2014 cetaceans have lost their hooves entirely through adaptation to aquatic life.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 5,
+      "campbellChapter": 34,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Cetacean Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A phylogenetic analysis of vertebrate hemoglobin genes reveals that jawless fish (lampreys) possess a single-domain hemoglobin, while jawed vertebrates have tetrameric hemoglobin (\u03b12\u03b22). Gene duplication events produced the \u03b1 and \u03b2 globin gene families on separate chromosomes. This pattern indicates that:",
+      "options": [
+        "Gene duplication occurred after the divergence of jawless and jawed vertebrates, enabling cooperative oxygen binding in the tetramer",
+        "Lampreys lost their additional globin genes through gene deletion",
+        "All vertebrate hemoglobins function identically regardless of quaternary structure",
+        "The \u03b1 and \u03b2 genes evolved independently from unrelated precursors"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The phylogenetic distribution of hemoglobin structure provides clear evidence for the timing and functional consequences of gene duplication. Jawless vertebrates (lampreys, hagfish) diverged before the whole-genome duplication events that occurred at the base of jawed vertebrates. Their monomeric/dimeric hemoglobins lack cooperative oxygen binding. After gene duplication in the jawed vertebrate lineage, the duplicated globin genes diverged to produce \u03b1 and \u03b2 chains, which assemble into \u03b12\u03b22 tetramers capable of cooperative binding (sigmoidal oxygen dissociation curve, Bohr effect, 2,3-BPG regulation). This is a classic example of subfunctionalization following gene duplication leading to enhanced physiological capability. Option B is less parsimonious than the duplication scenario. Option C is incorrect \u2014 monomeric and tetrameric hemoglobins differ significantly in oxygen binding properties. Option D is wrong \u2014 \u03b1 and \u03b2 genes share a common ancestral globin gene.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 5,
+      "campbellChapter": 34,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Vertebrate Hemoglobin Evolution"
     }
   ]
 }
