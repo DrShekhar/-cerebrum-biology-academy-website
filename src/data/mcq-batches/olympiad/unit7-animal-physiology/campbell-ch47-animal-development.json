@@ -1304,6 +1304,306 @@
       "conceptualDepth": "advanced",
       "difficulty": "EXPERT",
       "topic": "Animal Development"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about epigenetic reprogramming during mammalian development:\n(I) After fertilization, both the maternal and paternal genomes undergo extensive DNA demethylation, but the paternal genome is demethylated more rapidly through an active TET3-mediated oxidation mechanism.\n(II) Imprinted genes escape the global wave of demethylation and maintain parent-of-origin-specific methylation marks throughout preimplantation development.\n(III) De novo methylation by DNMT3A and DNMT3B re-establishes DNA methylation patterns during post-implantation development.\n(IV) Histone modifications play no role in epigenetic reprogramming; only DNA methylation matters.",
+      "options": [
+        "TTTF",
+        "TFTT",
+        "TTFT",
+        "FTTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Epigenetic reprogramming is essential for totipotency and proper development: (1) Statement I is TRUE: After fertilization, the paternal genome undergoes rapid active demethylation. TET3 (Ten-Eleven Translocation 3), a dioxygenase provided by the oocyte, oxidizes 5-methylcytosine (5mC) to 5-hydroxymethylcytosine (5hmC) and further oxidized derivatives on the paternal pronucleus. This is visible as loss of 5mC immunostaining in the paternal pronucleus within hours of fertilization. The maternal genome is demethylated more slowly through a replication-dependent (passive) mechanism, as DNMT1 (the maintenance methyltransferase) is excluded from the nucleus during early cleavages. (2) Statement II is TRUE: Imprinted genes (approximately 100-150 in mice) maintain their parent-of-origin methylation marks through preimplantation development. This is protected by DPPA3/Stella (PGC7), which binds H3K9me2-marked chromatin and protects maternal imprints from TET3-mediated oxidation, and by ZFP57/KAP1 (TRIM28), which recognizes methylated imprinting control regions and recruits DNMT1 to maintain methylation. (3) Statement III is TRUE: After implantation (around E3.5-E6.5 in mouse), the genome undergoes de novo methylation. DNMT3A and DNMT3B, along with cofactor DNMT3L, establish new methylation patterns. DNMT3B is primarily active in the embryo proper (epiblast), while DNMT3A methylates both embryonic and extraembryonic tissues. This de novo methylation establishes tissue-specific gene expression patterns. (4) Statement IV is FALSE: Histone modifications are critical for epigenetic reprogramming. Broad H3K4me3 and H3K27me3 domains are reorganized during preimplantation development. H3K9me3 and H3K27me3 (deposited by PRC2) help maintain gene silencing. The sperm genome carries bivalent chromatin marks (H3K4me3 + H3K27me3) at developmental gene promoters, poising them for later activation or silencing. Protamine-to-histone exchange in the paternal genome after fertilization is itself a major chromatin reprogramming event.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers investigating cell fate specification performed single-cell RNA sequencing on mouse embryos at multiple developmental stages. The data shows:\n\nStage | Cell population | Key transcription factors | Cell count\nE3.5 | Inner cell mass | Oct4+, Nanog+, Sox2+ | 12-15 cells\nE3.5 | Trophectoderm | Cdx2+, Eomes+ | 40-60 cells\nE4.5 | Epiblast | Oct4+, Nanog+, Fgf4+ | 8-10 cells\nE4.5 | Primitive endoderm | Gata6+, Sox17+, Pdgfra+ | 8-10 cells\nE4.5 | Trophectoderm | Cdx2+, Elf5+ | 60-80 cells\n\nWhich interpretation of the data is most accurate?",
+      "options": [
+        "All cells maintain identical transcription factor profiles throughout development",
+        "The data demonstrates the progressive lineage segregation model where the first binary decision (ICM vs TE at E3.5) is governed by Hippo signaling and position-dependent Cdx2/Oct4 mutual antagonism, followed by a second decision within the ICM (epiblast vs primitive endoderm at E4.5) driven by FGF4/FGFR2 signaling where initially salt-and-pepper distributed Nanog+ and Gata6+ cells sort into distinct layers",
+        "Cell fate is determined entirely by cell size at the 8-cell stage",
+        "Primitive endoderm cells derive from the trophectoderm lineage"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This data illustrates the two sequential lineage segregation events in preimplantation mouse development: (1) First lineage decision (E3.0-E3.5): At the 16-32 cell stage (morula to blastocyst), outside cells become trophectoderm (TE) and inside cells become inner cell mass (ICM). This is regulated by the Hippo signaling pathway — outside cells experience low cell-cell contact, leading to nuclear YAP/TAZ which activates TEAD4 transcription factor. TEAD4 drives Cdx2 expression, which suppresses Oct4 and promotes TE identity. Inside cells have active Hippo signaling (high cell contact), leading to cytoplasmic YAP sequestration, no TEAD4 activity, and maintenance of Oct4/Nanog/Sox2 (pluripotency). CDX2 and OCT4 are mutually antagonistic. (2) Second lineage decision (E3.5-E4.5): Within the ICM, cells segregate into epiblast (which forms the embryo proper) and primitive endoderm (PrE, which forms the yolk sac endoderm). Initially, ICM cells co-express both Nanog and Gata6 in a salt-and-pepper pattern. FGF4 (produced by Nanog-high cells) signals through FGFR2 (on neighboring cells) to activate the Ras-MAPK pathway, promoting Gata6 and suppressing Nanog. This creates a bistable switch — cells commit to either Nanog+/Gata6- (epiblast) or Nanog-/Gata6+ (PrE). (3) Sorting: After specification, PrE cells sort to the blastocoelic surface of the ICM (forming a single epithelial layer), while epiblast cells remain internal. PrE cells that fail to reach the surface undergo apoptosis. (4) Experimental validation: Treating embryos with exogenous FGF4 converts all ICM cells to PrE (Gata6+), while FGFR/MEK inhibitors convert all to epiblast (Nanog+), demonstrating the FGF4-dependent mechanism. (5) The cell counts in the data reflect the normal proliferation and specification timeline of mouse preimplantation development.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Compaction in the mouse embryo occurs at the 8-cell stage and is essential for the first lineage decision. What molecular mechanism drives compaction?",
+      "options": [
+        "Compaction is a passive process requiring no molecular machinery",
+        "E-cadherin (encoded by Cdh1) mediates calcium-dependent cell-cell adhesion, while the Par-aPKC polarity complex establishes apical-basal polarity in outer cells — together, these processes increase cell-cell contact, flatten outer cells against inner cells, and create the inside-outside asymmetry necessary for trophectoderm versus ICM specification",
+        "Compaction is driven by integrin-mediated attachment to a surrounding extracellular matrix",
+        "Only gap junction communication between blastomeres causes compaction"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Compaction is a critical morphogenetic event in early mammalian development: (1) Timing: At the 8-cell stage, blastomeres undergo a dramatic change in morphology — they flatten against each other, maximize cell-cell contact, and the embryo transitions from a loose cluster of round cells to a tightly packed morula with a smooth outer surface. (2) E-cadherin: The primary adhesion molecule driving compaction is E-cadherin (CDH1). E-cadherin forms calcium-dependent homophilic interactions between adjacent cell surfaces. Before compaction, E-cadherin is present but not concentrated at cell-cell contacts. At the 8-cell stage, E-cadherin undergoes posttranslational regulation — it becomes concentrated at cell-cell junctions and linked to the actin cytoskeleton via catenins (alpha-catenin, beta-catenin). Maternal Cdh1 knockout embryos fail to compact. (3) Polarity establishment: Simultaneously, outer cells establish apical-basal polarity. The Par complex (Par3-Par6-aPKC) localizes to the contact-free (apical) surface, while E-cadherin concentrates at the contact (basolateral) surface. This polarization is essential because at the next division (8-cell to 16-cell), cells can divide symmetrically (tangentially, producing two outer polarized cells) or asymmetrically (radially, producing one outer polarized cell and one inner apolar cell). (4) Inside-outside model: Inner (apolar) cells become ICM and outer (polarized) cells become TE. The polarity state determines Hippo signaling status and thus Cdx2 vs Oct4 expression. (5) Additional mechanisms: Tight junctions (involving ZO-1 and occludin) form between the apical surfaces of outer cells, creating a permeability seal that allows fluid accumulation to form the blastocoel cavity. (6) Ezrin and other ERM proteins help anchor the apical domain to the actin cytoskeleton.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Researchers want to test whether the Wnt/beta-catenin pathway is necessary for dorsal axis specification in Xenopus embryos. They design an experiment using lithium chloride (LiCl), which inhibits GSK-3beta, and a dominant-negative Wnt receptor (dnFrizzled). Which experimental design would best test the hypothesis?",
+      "options": [
+        "Treat embryos with LiCl only and observe if they develop normally",
+        "Group 1: Untreated control embryos; Group 2: Embryos treated with LiCl at the 32-cell stage (expected to dorsalize — inhibiting GSK-3 mimics Wnt activation, stabilizing beta-catenin); Group 3: Embryos injected with dnFrizzled mRNA at the 2-cell stage on the dorsal side (expected to ventralize — blocking Wnt reception prevents beta-catenin stabilization); Group 4: Embryos co-injected with dnFrizzled dorsally + LiCl treatment (expected to rescue — LiCl acts downstream of the receptor, bypassing the dnFrizzled block)",
+        "Inject beta-catenin mRNA ventrally and observe all phenotypes",
+        "Compare wild-type and albino embryos for axis formation differences"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This experimental design tests the Wnt/beta-catenin pathway at multiple levels using epistasis analysis: (1) Hypothesis: Wnt signaling via beta-catenin stabilization on the dorsal side is necessary and sufficient for dorsal axis specification in Xenopus. (2) Control group: Untreated embryos develop normally with a single dorsal axis. The dorsal side is specified during cortical rotation (first cell cycle), which translocates Dishevelled and GBP to the dorsal side, locally inhibiting GSK-3 and stabilizing beta-catenin. (3) LiCl treatment (Group 2): Lithium chloride inhibits GSK-3beta globally, stabilizing beta-catenin in all cells. This causes dorsalization — the entire embryo adopts dorsal fates, often resulting in radially dorsalized 'belly piece' embryos lacking ventral structures. In mild cases, embryos develop expanded dorsal structures and secondary axes. This demonstrates that beta-catenin stabilization is sufficient for dorsal specification. (4) dnFrizzled injection (Group 3): A dominant-negative Frizzled receptor blocks Wnt ligand reception. When injected dorsally, it prevents the normal dorsal Wnt signal from being transduced, causing ventralization — loss or reduction of dorsal structures (notochord, somites, neural tissue) and expansion of ventral fates (blood, mesenchyme). This demonstrates that Wnt signaling is necessary for dorsal specification. (5) Epistasis rescue (Group 4): LiCl inhibits GSK-3, which acts downstream of the Frizzled receptor in the pathway (Wnt → Frizzled → Dishevelled → GSK-3 inhibition → beta-catenin stabilization). Therefore, LiCl should rescue the dnFrizzled phenotype because it bypasses the blocked receptor. If dorsal structures are restored, it confirms the epistatic relationship and that the key output of Wnt signaling is GSK-3 inhibition and beta-catenin stabilization. (6) This design incorporates gain-of-function, loss-of-function, and epistasis approaches — the gold standard for pathway analysis in developmental biology.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the role of the extracellular matrix (ECM) in embryonic development:\n(I) Fibronectin is essential for mesoderm cell migration during gastrulation, and its RGD (Arg-Gly-Asp) peptide sequence is recognized by integrin receptors on migrating cells.\n(II) Hyaluronic acid, a large glycosaminoglycan, creates hydrated spaces in the ECM that facilitate cell migration and tissue expansion, as seen in neural crest migration pathways and cardiac jelly formation.\n(III) Basal lamina (basement membrane) components including laminin and type IV collagen provide structural support and signaling cues, with laminin being the first ECM molecule deposited during development.\n(IV) The ECM serves only as a passive structural scaffold and has no role in signal transduction during development.",
+      "options": [
+        "TTTF",
+        "TFTT",
+        "TTFT",
+        "TTTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The extracellular matrix plays dynamic and essential roles throughout embryonic development: (1) Statement I is TRUE: Fibronectin is a large glycoprotein that forms a fibrillar network in the ECM. During gastrulation, migrating mesoderm cells require fibronectin as a substrate. The RGD (Arg-Gly-Asp) tripeptide within fibronectin's type III repeat domains is recognized by integrin receptors (particularly alpha5beta1) on migrating cells. Blocking fibronectin with antibodies or injecting RGD peptides to competitively inhibit integrin binding disrupts gastrulation movements in Xenopus and chick embryos. Fibronectin fibrillogenesis on the blastocoele roof is essential for mesoderm migration. (2) Statement II is TRUE: Hyaluronic acid (hyaluronan) is an exceptionally large, unbranched GAG that does not bind to a core protein but exists freely in the ECM. Its enormous water-binding capacity creates swollen, hydrated spaces that physically open migration pathways and expand tissues. In cardiac development, hyaluronan-rich cardiac jelly separates the myocardium from the endocardium and is essential for valve and septum formation. Neural crest cells migrate through hyaluronan-rich pathways, and hyaluronidase treatment disrupts their migration. (3) Statement III is TRUE: Laminin is among the earliest ECM molecules expressed during development, detectable even in the 2-cell stage mouse embryo. It is a heterotrimeric glycoprotein (alpha, beta, gamma chains) that self-assembles on cell surfaces and serves as the scaffold for basement membrane assembly. Laminin interacts with cells via integrin receptors and dystroglycan, providing adhesion, polarity, and signaling cues. Type IV collagen provides structural integrity to the basement membrane. (4) Statement IV is FALSE: The ECM is far from a passive scaffold. It actively participates in signal transduction by: (a) sequestering and releasing growth factors (FGFs, BMPs, Wnts bind to heparan sulfate proteoglycans), (b) activating integrin signaling pathways (FAK, Src, Ras-MAPK) that regulate cell survival, proliferation, and differentiation, (c) providing mechanical signals (mechanotransduction through integrins), and (d) serving as a substrate for morphogen gradient formation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Morphogen gradients are fundamental to pattern formation. The French Flag model proposes that cells read morphogen concentrations to adopt different fates. Which of the following best describes how the Bicoid morphogen gradient functions in Drosophila anterior-posterior axis patterning?",
+      "options": [
+        "Bicoid is uniformly distributed throughout the embryo and activates all target genes equally",
+        "Bicoid mRNA is localized at the anterior pole by dynein-mediated transport along microtubules; after translation, Bicoid protein forms an anterior-to-posterior concentration gradient through diffusion and degradation, functioning as a transcription factor that activates anterior gap genes (hunchback) at high concentrations and represses posterior genes (caudal mRNA translation) — different target gene promoters have different numbers and affinities of Bicoid binding sites, enabling concentration-dependent threshold responses",
+        "Bicoid acts only as a translational repressor and does not function as a transcription factor",
+        "Bicoid gradient is established by active transport of the protein from posterior to anterior"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Bicoid morphogen system is the best-characterized morphogen gradient in developmental biology: (1) mRNA localization: bicoid mRNA is localized to the anterior cortex of the Drosophila oocyte during oogenesis. This localization depends on the 3'UTR of bicoid mRNA and involves dynein-mediated transport along microtubules, as well as trapping by Staufen protein at the anterior. (2) Gradient formation: After fertilization, bicoid mRNA is translated, and Bicoid protein diffuses posteriorly from the anterior source while being simultaneously degraded. This creates an exponentially declining anterior-to-posterior concentration gradient with a characteristic length of approximately 100 micrometers (about 20% of embryo length). The gradient reaches steady state within approximately 90 minutes. (3) Transcription factor function: Bicoid is a homeodomain transcription factor. It binds to specific DNA sequences (Bicoid binding sites) in the promoters/enhancers of target genes. The key target is hunchback (hb) — the hb promoter contains multiple Bicoid binding sites that act cooperatively, creating a sharp on/off threshold for hb transcription at about 50% egg length. (4) Concentration-dependent targets: Different genes require different concentrations of Bicoid for activation. High-affinity binding sites in certain enhancers are activated at low Bicoid concentrations (more posteriorly), while low-affinity sites require high concentrations (activated only anteriorly). This enables concentration-dependent readout of a single gradient. (5) Translational repression: Bicoid also functions as a translational repressor — it binds to the 3'UTR of caudal mRNA (via its homeodomain, recognizing an RNA structural element) and represses its translation in the anterior. This allows Caudal protein to accumulate only in the posterior, where it activates posterior gap genes. (6) The SDD (Synthesis-Diffusion-Degradation) model explains gradient formation, though recent evidence suggests that nucleocytoplasmic shuttling and pre-steady-state dynamics also contribute to gradient shape.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A gene expression study measured mRNA levels of key transcription factors during Xenopus gastrulation. The following data was obtained:\n\nGene | Dorsal lip expression | Ventral expression | Function\nChordin | +++ | - | BMP antagonist\nNoggin | ++ | - | BMP antagonist\nBMP4 | - | +++ | Ventral mesoderm/epidermis inducer\nGoosecoid | +++ | - | Homeodomain TF, organizer marker\nVent1/2 | - | +++ | BMP target, ventral fate\nSox2 | ++ | - | Neural progenitor marker\n\nWhich conclusion about dorsal-ventral axis patterning is best supported by this data?",
+      "options": [
+        "BMP4 induces neural tissue on the dorsal side",
+        "The data supports the default model of neural induction, where the dorsal organizer secretes BMP antagonists (Chordin, Noggin) that create a BMP-free zone dorsally — in the absence of BMP signaling, dorsal ectoderm adopts neural fate (Sox2+) by default, while ventral ectoderm receiving BMP4 signaling activates Vent1/2 and becomes epidermis, and ventral mesoderm adopts ventral fates (blood, lateral plate mesoderm)",
+        "Goosecoid directly activates BMP4 expression ventrally",
+        "Sox2 expression is induced by high BMP4 concentrations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This data beautifully illustrates the default model of neural induction and BMP-mediated dorsal-ventral patterning: (1) Default neural induction: The revolutionary insight from the 1990s (Hemmati-Brivanlou and Melton) was that ectoderm cells become neural by default when BMP signaling is absent. Dissociated ectodermal cells (which lose autocrine BMP signaling) spontaneously express neural markers. The organizer's role is to locally inhibit BMP signaling, allowing dorsal ectoderm to follow its default neural pathway. (2) BMP antagonists at the organizer: Chordin (+++ dorsal) binds BMP4 with high affinity and prevents it from activating its receptors (BMPR-I and BMPR-II). Noggin (++ dorsal) similarly sequesters BMPs. Follistatin (not shown) also antagonizes BMPs. These secreted antagonists create a BMP activity gradient — low dorsally (organizer), high ventrally. (3) BMP4 ventral expression: BMP4 (+++ ventral) signals through type I and type II serine/threonine kinase receptors to activate Smad1/5/8 transcription factors. Smad1/5/8 dimerize with Smad4 and activate ventral target genes including Vent1 and Vent2 (+++ ventral), which are homeobox transcription factors that promote ventral-posterior mesoderm and epidermal fates while repressing dorsal genes. (4) Goosecoid (+++ dorsal): A homeodomain transcription factor that is one of the first genes activated in the organizer by the combined input of beta-catenin (from Wnt/cortical rotation) and Nodal signaling. Goosecoid can directly repress ventral genes including BMP4 and Wnt8. (5) Sox2 (++ dorsal): A key neural progenitor transcription factor. Its dorsal expression confirms that neural induction occurs in the BMP-free zone. Sox2 is initially activated by FGF signaling and maintained by the absence of BMP — constitutive BMP signaling blocks Sox2 and drives epidermal fate. (6) The complementary expression patterns (dorsal organizer genes vs ventral BMP targets) perfectly reflect the morphogen gradient model of axis patterning.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Genomic imprinting results in parent-of-origin-specific gene expression. Which of the following correctly explains the mechanism and developmental consequences of imprinting at the Igf2/H19 locus?",
+      "options": [
+        "Both Igf2 and H19 are expressed from both parental alleles",
+        "The paternal allele expresses Igf2 (growth factor) while the maternal allele expresses H19 (non-coding RNA), regulated by differential methylation of the imprinting control region (ICR) — on the maternal allele, the unmethylated ICR binds CTCF insulator protein which blocks the downstream enhancer from accessing Igf2, directing it instead to H19; on the paternal allele, ICR methylation prevents CTCF binding, allowing the enhancer to activate Igf2 while H19 is silenced by spreading methylation",
+        "Imprinting at this locus is controlled by histone acetylation only",
+        "The maternal allele always expresses Igf2 and the paternal allele always expresses H19"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Igf2/H19 locus is the paradigmatic example of genomic imprinting regulation: (1) Genomic organization: On mouse chromosome 7 (human chromosome 11p15.5), the Igf2 gene (encoding Insulin-like Growth Factor 2) and H19 gene (encoding a long non-coding RNA) are located approximately 90 kb apart, separated by an imprinting control region (ICR, also called the differentially methylated region, DMR). Shared enhancers lie downstream of H19. (2) Maternal allele: The ICR is unmethylated. The zinc-finger protein CTCF (CCCTC-binding factor) binds to the unmethylated ICR (which contains 4 CTCF binding sites). CTCF acts as an insulator, creating a chromatin loop that blocks the downstream enhancers from physically interacting with the Igf2 promoter. Instead, the enhancers activate H19. Result: maternal allele expresses H19, Igf2 is silent. (3) Paternal allele: The ICR is methylated (established during spermatogenesis by DNMT3A/DNMT3L). Methylation prevents CTCF binding. Without the insulator, the downstream enhancers can access and activate the Igf2 promoter. Meanwhile, methylation spreads from the ICR to the H19 promoter, silencing H19. Result: paternal allele expresses Igf2, H19 is silent. (4) Parental conflict hypothesis: IGF2 is a potent growth factor — the paternal allele promotes fetal growth (benefiting paternal reproductive fitness), while the maternal H19 (which may act as a tumor suppressor and limit growth) counterbalances this. This aligns with the kinship/parental conflict theory of imprinting (Haig). (5) Disease relevance: Loss of imprinting at this locus causes Beckwith-Wiedemann syndrome (biallelic Igf2 expression — overgrowth, tumor predisposition) or Silver-Russell syndrome (biallelic H19/loss of Igf2 — growth restriction). (6) The CTCF-insulator model was confirmed by deletion experiments — removing the ICR on the maternal allele causes Igf2 activation, and inserting ectopic CTCF sites can create new insulator boundaries.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about axis determination in the chick embryo:\n(I) The anterior-posterior axis of the chick embryo is determined before gastrulation by the posterior marginal zone (PMZ), which expresses Vg1 (GDF1) and Wnt8C, and induces primitive streak formation through Nodal signaling.\n(II) Gravity plays a role in axis determination — as the egg rotates in the oviduct, the yolk rotates so that the blastoderm sits on top, and this tilting helps establish asymmetry by displacing the blastoderm relative to the yolk.\n(III) Koller's sickle, located at the posterior edge of the area pellucida, contains cells equivalent to the amphibian Nieuwkoop center and is essential for initiating gastrulation.\n(IV) The anterior region of the primitive streak (Hensen's node) is the chick equivalent of the Spemann organizer and can induce a secondary axis when transplanted to an ectopic site.",
+      "options": [
+        "TTTT",
+        "TTTF",
+        "TFTT",
+        "TTFT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "All four statements about chick axis determination are true: (1) Statement I is TRUE: The posterior marginal zone (PMZ) is a crescent-shaped region at the posterior edge of the blastoderm that acts as the inducing center for primitive streak formation. The PMZ expresses Vg1 (GDF1, a TGF-beta family member) and Wnt8C. Vg1 signals through Activin/Nodal receptors to induce Nodal expression in the overlying epiblast, which triggers the cascade leading to primitive streak formation. Transplanting the PMZ to an anterior or lateral position induces an ectopic primitive streak. The anterior marginal zone actively inhibits streak formation by expressing the Nodal antagonist Cerberus. (2) Statement II is TRUE: As the egg travels through the oviduct (over approximately 20 hours), it rotates along its long axis. The blastoderm, floating on top of the yolk, is tilted by this rotation, and the tilting creates an asymmetry. The posterior side (where the streak will form) is consistently on the side that was tilted down. This was demonstrated experimentally by von Baer and later confirmed by rotating eggs in culture — gravitational tilting consistently biases the site of streak formation. (3) Statement III is TRUE: Koller's sickle is a thickened crescent of cells at the posterior edge of the area pellucida (where it meets the area opaca). It contains cells that ingress beneath the epiblast to form the hypoblast. These cells have inducing activity similar to the Nieuwkoop center in Xenopus — they produce signals (Vg1, Wnts) that induce the overlying epiblast to form the primitive streak. Ablation of Koller's sickle prevents normal gastrulation. (4) Statement IV is TRUE: Hensen's node, at the anterior tip of the fully formed primitive streak, is functionally equivalent to the Spemann organizer. It expresses Chordin, Noggin, and other BMP antagonists. Transplanting Hensen's node to an ectopic site induces a secondary axis, with host tissue contributing to the secondary neural tube (non-cell-autonomous induction), directly paralleling the Spemann-Mangold organizer transplant experiment.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that Notch signaling is required for maintaining the oscillatory clock driving somitogenesis. They design experiments using a conditional Notch inhibitor (DAPT, a gamma-secretase inhibitor) applied to presomitic mesoderm (PSM) explants in culture. Which experimental approach would most rigorously test this hypothesis?",
+      "options": [
+        "Apply DAPT to fully formed somites and look for changes",
+        "Group 1: Untreated PSM explants cultured in vitro (expect periodic Hes7/Lfng expression oscillations with period matching in vivo somite formation rate); Group 2: PSM explants treated with DAPT from the start (expect loss of oscillatory gene expression — Hes7 and Lunatic fringe cycles should dampen or freeze — and disruption of somite boundary formation); Group 3: PSM explants treated with DAPT, then washed and cultured without inhibitor (expect recovery of oscillations if the clock mechanism can reinitiate, or permanent disruption if Notch-dependent synchronization is irreversibly lost); Group 4: PSM explants from a Hes7-luciferase reporter line to enable real-time bioluminescence imaging of oscillation dynamics",
+        "Overexpress Notch intracellular domain constitutively in all PSM cells",
+        "Compare somite number between wild-type and Notch heterozygous mice at birth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This experimental design rigorously tests Notch's role in the segmentation clock: (1) Background: The clock-and-wavefront model of somitogenesis proposes that an oscillating gene expression pattern (the clock) in PSM cells interacts with a moving wavefront of differentiation (defined by opposing FGF/Wnt and RA gradients) to periodically define somite boundaries. In mouse, the oscillation period is approximately 2 hours, matching the rate of somite formation. (2) Notch pathway oscillations: Key oscillating genes include Hes7 (a Notch target and transcriptional repressor), Lunatic fringe (Lfng, a glycosyltransferase that modulates Notch receptor sensitivity), and Delta-like1 (Dll1, a Notch ligand). The oscillation mechanism involves a negative feedback loop: Notch activation induces Hes7, which represses its own transcription (delayed negative feedback due to intron splicing and protein/mRNA instability creates oscillations). Lunatic fringe oscillations modulate Notch sensitivity cyclically. (3) Group 1 (control): Untreated PSM explants maintain oscillations ex vivo for several cycles, demonstrating the cell-autonomous nature of the clock. Real-time reporters (Hes7-luciferase or GFP) reveal traveling waves of gene expression sweeping from posterior to anterior PSM. (4) Group 2 (DAPT treatment): DAPT inhibits gamma-secretase, which is required for proteolytic cleavage and nuclear translocation of the Notch intracellular domain (NICD). Without NICD, Notch target genes (Hes7, Lfng) are not activated. Prediction: oscillations should cease, and somite boundaries should fail to form properly, potentially causing fused or irregular somites. (5) Group 3 (washout): Tests reversibility. If oscillations recover, it suggests the clock mechanism is robust and can reinitiate. If they do not recover, it suggests that Notch-dependent intercellular synchronization (coupling between neighboring oscillators via Delta-Notch signaling) is required to maintain coherent tissue-level oscillations, and that once cells desynchronize, they cannot resynchronize autonomously. (6) Group 4 (real-time imaging): The Hes7-luciferase reporter provides quantitative, real-time data on oscillation period, amplitude, and phase coherence — enabling measurement of precisely when and how oscillations are disrupted rather than relying on endpoint analysis. (7) This design covers loss-of-function (DAPT), recovery (washout), and quantitative dynamics (reporter), providing robust mechanistic evidence.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers studying limb bud patterning performed the following ZPA (zone of polarizing activity) transplantation experiments in chick embryos:\n\nExperiment | Manipulation | Digit pattern (anterior to posterior)\nControl | No manipulation | 2-3-4\nA | ZPA grafted to anterior margin | 4-3-2-2-3-4 (mirror image duplication)\nB | Bead soaked in Shh placed anteriorly | 4-3-2-2-3-4 (identical to ZPA graft)\nC | ZPA graft + cyclopamine (Shh inhibitor) | 2-3-4 (normal, no duplication)\nD | Two ZPA grafts (anterior + posterior) | 4-3-2-2-3-4 (same as single anterior graft)\n\nWhich interpretation best explains these results?",
+      "options": [
+        "The ZPA acts by cell contact-dependent signaling only",
+        "Sonic hedgehog (Shh) is the morphogen produced by the ZPA that specifies digit identity in a concentration-dependent manner — an anterior ZPA graft or Shh bead creates a second source, generating a mirror-image Shh gradient and duplicated digits; cyclopamine blocks Shh signaling, abolishing the graft's effect; and two opposing ZPA sources produce the same mirror pattern as a single anterior graft because the digit pattern is determined by the local Shh concentration experienced by each progenitor cell",
+        "Digit identity is determined by distance from the apical ectodermal ridge only",
+        "Shh acts as a mitogen rather than a morphogen in the limb"
+      ],
+      "correctAnswer": "B",
+      "explanation": "These classic experiments demonstrate that Shh from the ZPA acts as a morphogen for anteroposterior limb patterning: (1) Normal patterning: The ZPA is a small group of cells at the posterior margin of the limb bud. These cells express Sonic hedgehog (Shh), which diffuses anteriorly to create a posterior-high to anterior-low concentration gradient. Different digits are specified at different Shh concentration thresholds: digit 4 (highest Shh, most posterior), digit 3 (intermediate), digit 2 (lowest, most anterior). Digit 1 (thumb) forms independently of Shh. (2) Experiment A — anterior ZPA graft: When the ZPA is transplanted to the anterior margin, a second source of Shh is created. This generates a mirror-image gradient — now both anterior and posterior margins have high Shh, with the lowest concentration in the middle. The resulting digit pattern (4-3-2-2-3-4) is a perfect mirror duplication, with posterior-type digits at both margins. This was first demonstrated by Saunders and Gasseling (1968). (3) Experiment B — Shh bead: A bead soaked in recombinant Shh protein placed anteriorly produces an identical mirror-image duplication, proving that Shh itself is the active morphogen (not some other ZPA-derived factor). This was shown by Riddle et al. (1993) when they identified Shh as the polarizing activity. (4) Experiment C — cyclopamine: Cyclopamine binds Smoothened (Smo), the transmembrane signal transducer in the Hedgehog pathway, and blocks its activity. When applied with a ZPA graft, cyclopamine abolishes the duplicating effect, confirming that the graft acts through Shh signaling. The normal posterior digits are maintained because endogenous Shh is also blocked, and digit formation reverts to a default pattern. (5) Experiment D — two ZPA sources: Two opposing ZPAs produce the same mirror pattern as a single anterior graft because the digit pattern depends on local Shh concentration. With two sources, the concentration profile is symmetric (high at both ends, low in the middle), identical to experiment A. Having more total Shh does not change digit identity — only the local concentration matters. (6) Mechanism: Shh signals by binding the receptor Patched (Ptc1), relieving its inhibition of Smoothened. Smoothened activates Gli transcription factors (Gli1, Gli2 — activators; Gli3 — cleaved to a repressor in absence of Shh). High Shh activates Gli2 (activator) and blocks Gli3 processing (removing repressor), while low Shh allows Gli3 repressor formation. The ratio of Gli activator to repressor determines digit identity.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Gastrulation movements differ dramatically across animal phyla. Which of the following correctly matches the gastrulation mechanism with its primary cellular basis?",
+      "options": [
+        "Invagination is driven by chemotaxis of cells toward an external signal source",
+        "Epiboly in zebrafish involves the thinning and spreading of the blastoderm over the yolk cell, driven primarily by radial intercalation of deep cells (reducing blastoderm thickness) and actomyosin contraction at the yolk cell margin (yolk syncytial layer), while ingression at the primitive streak in amniotes involves individual cells undergoing epithelial-to-mesenchymal transition (EMT) mediated by Snail/Slug transcription factors that repress E-cadherin",
+        "Convergent extension requires no cytoskeletal activity",
+        "All gastrulation movements in all species use the same cellular mechanism"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Different gastrulation mechanisms rely on distinct cellular processes: (1) Epiboly in zebrafish: The blastoderm (initially sitting as a cap on top of the large yolk cell) must spread to envelop the entire yolk. This involves: (a) Radial intercalation — deep cells in the blastoderm rearrange by moving from inner layers to outer layers, effectively thinning the blastoderm and increasing its surface area. (b) The enveloping layer (EVL) at the surface spreads by cell flattening and possibly division. (c) The yolk syncytial layer (YSL) — a syncytium at the margin of the blastoderm — drives epiboly through actomyosin contraction. An actin band at the YSL margin contracts like a purse string, pulling the blastoderm vegetally. Microtubules in the YSL also contribute by directing vesicle trafficking toward the vegetal pole. (2) Ingression at the primitive streak (amniotes): In chick and mouse, gastrulation occurs at the primitive streak. Epiblast cells move toward the streak, undergo EMT, and ingress (individually delaminate) to form mesoderm and endoderm. The EMT is controlled by: (a) Snail and Slug (Snail2) — zinc-finger transcription factors that directly repress E-cadherin transcription. Loss of E-cadherin disrupts cell-cell adhesion, enabling cells to delaminate. (b) FGF signaling — activates Snail expression and promotes EMT. FGFR1 mutant mice fail to undergo EMT at the primitive streak. (c) RhoA downregulation — allows cells to lose apical-basal polarity and acquire mesenchymal morphology. (3) Other mechanisms: Involution (Xenopus) — cells roll over the blastopore lip and migrate internally as a coherent sheet. Invagination (sea urchin) — inward buckling of an epithelial sheet, driven by apical constriction of bottle cells. Convergent extension — cells intercalate mediolaterally, driven by polarized protrusive activity regulated by the PCP (planar cell polarity) pathway. (4) Each mechanism requires specific cytoskeletal activities, adhesion molecule regulation, and signaling pathways.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about programmed cell death (apoptosis) in development:\n(I) Apoptosis during development is executed primarily through the intrinsic (mitochondrial) pathway, where pro-apoptotic Bcl-2 family members (Bax, Bak) permeabilize the outer mitochondrial membrane, releasing cytochrome c which activates caspases.\n(II) In C. elegans, 131 of 1090 somatic cells generated during development undergo programmed cell death, and the core pathway involves CED-9 (Bcl-2 homolog, anti-apoptotic) inhibiting CED-4 (Apaf-1 homolog), which when released activates CED-3 (caspase).\n(III) BMP signaling triggers apoptosis in the interdigital mesenchyme of vertebrate limbs, sculpting the digits — blocking this apoptosis (as occurs naturally in duck webbed feet) results in tissue retention between digits.\n(IV) Developmental apoptosis is a pathological process that occurs only when cells are damaged or infected.",
+      "options": [
+        "TTTF",
+        "TFTT",
+        "TTFT",
+        "FTTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Apoptosis is an essential, genetically programmed component of normal development: (1) Statement I is TRUE: The intrinsic (mitochondrial) pathway is the primary apoptotic mechanism in development. When a cell receives a death signal (or lacks survival signals), pro-apoptotic BH3-only proteins (Bid, Bim, Bad, etc.) activate the effectors Bax and Bak. Bax/Bak oligomerize and form pores in the outer mitochondrial membrane (MOMP — mitochondrial outer membrane permeabilization), releasing cytochrome c into the cytoplasm. Cytochrome c binds Apaf-1, which assembles into the apoptosome — a heptameric wheel-shaped complex that recruits and activates procaspase-9 (initiator caspase). Active caspase-9 then cleaves and activates executioner caspases (caspase-3, -7), which cleave cellular substrates (DNA fragmentation factor, lamins, PARP) leading to orderly cell dismantling. Anti-apoptotic Bcl-2 family members (Bcl-2, Bcl-xL) prevent MOMP by sequestering pro-apoptotic members. (2) Statement II is TRUE: C. elegans development produces exactly 1090 somatic cells, of which 131 undergo programmed cell death (discovered by Sulston and Horvitz, Nobel Prize 2002). The core pathway: EGL-1 (BH3-only protein) is transcriptionally activated in cells fated to die. EGL-1 binds CED-9 (Bcl-2 homolog), releasing CED-4 (Apaf-1 homolog) from the mitochondrial membrane. Free CED-4 oligomerizes and activates CED-3 (caspase), executing cell death. Dead cell corpses are engulfed by neighboring cells. This pathway is conserved in all animals. (3) Statement III is TRUE: In pentadactyl vertebrate limbs, the digits are initially connected by interdigital mesenchyme. BMPs (particularly BMP2, BMP4, BMP7) are expressed in the interdigital regions and trigger apoptosis in this tissue, sculpting free digits. In ducks and other webbed species, the interdigital mesenchyme expresses high levels of the BMP antagonist Gremlin, which protects these cells from BMP-induced apoptosis, resulting in webbing retention. Experimentally, applying BMP-soaked beads to chick interdigital tissue accelerates apoptosis, while applying Noggin (BMP inhibitor) prevents it. (4) Statement IV is FALSE: Developmental apoptosis is a normal, essential, genetically programmed process. It occurs in healthy, undamaged cells as part of morphogenesis and tissue remodeling. Examples include: interdigital cell death (digit separation), elimination of the tail during tadpole metamorphosis, sculpting of the nervous system (50% of neurons die during development due to insufficient neurotrophic factor support), hollowing of lumens, and deletion of structures (Mullerian duct in males, Wolffian duct in females).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers performed lineage tracing experiments in mouse embryos using Cre-lox technology to determine the contributions of different germ layers. They crossed tissue-specific Cre driver lines with Rosa26-reporter mice and analyzed adult tissue composition:\n\nCre driver line | Labeled germ layer | Labeled tissues in adult\nSox17-Cre | Definitive endoderm | Gut epithelium, liver hepatocytes, pancreatic islets, thyroid follicular cells, lung alveolar epithelium\nMesp1-Cre | Mesoderm | Heart (cardiomyocytes), blood vessels (endothelium), kidneys (nephrons), skeletal muscle, dermis, bone marrow\nSox1-Cre | Neuroectoderm | Brain neurons, spinal cord, retina, peripheral ganglia (partial)\nWnt1-Cre | Neural crest | Craniofacial cartilage/bone, melanocytes, peripheral neurons/glia, adrenal medulla, cardiac outflow tract\n\nWhich conclusion about germ layer contributions is best supported?",
+      "options": [
+        "Each adult tissue derives from only one germ layer",
+        "The data confirms that while the three germ layers have characteristic derivative tissues, some organs receive contributions from multiple germ layers — for example, the gut wall contains endoderm-derived epithelium plus mesoderm-derived smooth muscle and vasculature; furthermore, neural crest (a fourth quasi-germ layer unique to vertebrates) contributes extensively to craniofacial structures, PNS, melanocytes, and cardiac outflow tract, overlapping with both ectodermal and mesodermal territories",
+        "Neural crest cells contribute only to neural tissue",
+        "All internal organs derive exclusively from endoderm"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cre-lox lineage tracing provides definitive evidence for germ layer fate mapping in mammals: (1) Technology: Cre recombinase expressed under a tissue-specific promoter (matching a germ layer) permanently activates a reporter gene (e.g., lacZ or GFP at the Rosa26 locus) in all cells derived from that lineage, regardless of whether the Cre promoter remains active. This allows tracking all descendants of labeled cells into adult tissues. (2) Endoderm derivatives (Sox17-Cre): The definitive endoderm gives rise to the epithelial lining of the gastrointestinal tract (from pharynx to rectum), and the parenchymal cells of associated organs: liver (hepatocytes, cholangiocytes), pancreas (both exocrine acinar cells and endocrine islet cells), thyroid (follicular cells), parathyroid, thymus epithelium, lungs (alveolar and bronchial epithelium), and bladder epithelium. Importantly, the stroma, muscle, and blood vessels of these organs are mesoderm-derived — only the epithelial/parenchymal components come from endoderm. (3) Mesoderm derivatives (Mesp1-Cre): Mesoderm gives rise to: cardiovascular system (heart, blood vessels, blood cells), musculoskeletal system (skeletal muscle from somitic myotome, bone from sclerotome, cartilage), excretory system (kidneys — nephrons from intermediate mesoderm), dermis (from dermatome of somites and lateral plate mesoderm), gonads, adrenal cortex, and serous membranes (peritoneum, pleura, pericardium). (4) Neuroectoderm derivatives (Sox1-Cre): Entire central nervous system (brain, spinal cord, retina), and some peripheral ganglia. The neural plate gives rise to the CNS through neurulation. (5) Neural crest (Wnt1-Cre): Neural crest is sometimes called the fourth germ layer because of its extraordinary multipotency. Wnt1-Cre marks midbrain and neural crest cells. Neural crest derivatives include: craniofacial bones and cartilage (unique among vertebrate skeletal elements in being ectoderm-derived), melanocytes (skin pigment cells), entire peripheral nervous system (sensory neurons, sympathetic/parasympathetic ganglia, Schwann cells, enteric nervous system), adrenal medulla (chromaffin cells), smooth muscle of cardiac outflow tract and great vessels, and dental pulp/odontoblasts. (6) Multi-germ layer organs: Most organs are composites — e.g., the intestine has endodermal epithelium, mesodermal smooth muscle and blood vessels, ectodermal enteric neurons (neural crest), and mesodermal connective tissue. The heart has mesodermal cardiomyocytes but neural crest-derived outflow tract components.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Hedgehog (Hh) signaling pathway uses a unique signal transduction mechanism involving the primary cilium in vertebrates. Which of the following correctly describes how Hh signaling is transduced?",
+      "options": [
+        "Hedgehog ligand binds directly to a tyrosine kinase receptor, activating the Ras-MAPK cascade",
+        "In the absence of Hh ligand, the receptor Patched (Ptch1) localizes to the primary cilium and inhibits Smoothened (Smo) by preventing its ciliary accumulation; Gli transcription factors are proteolytically processed to repressor forms (Gli3R) at the cilium base — when Hh binds Patched, Patched exits the cilium, allowing Smoothened to accumulate in the cilium and activate full-length Gli proteins (Gli2A) which enter the nucleus to activate target genes",
+        "Smoothened is a ligand-gated ion channel that opens when Hedgehog binds",
+        "Hedgehog signaling does not require the primary cilium in any organism"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The vertebrate Hedgehog pathway is uniquely dependent on the primary cilium: (1) Primary cilium: A non-motile, microtubule-based antenna projecting from most vertebrate cells during G0/G1. It is built by intraflagellar transport (IFT) — kinesin-2 (anterograde) and dynein-2 (retrograde) move cargo along the ciliary axoneme. The cilium concentrates and organizes Hh signaling components. (2) Pathway OFF (no Hh ligand): Patched1 (Ptch1), a 12-transmembrane protein, localizes to the ciliary membrane. Ptch1 acts catalytically to inhibit Smoothened (Smo), a 7-transmembrane protein (related to Frizzled), by altering the lipid/sterol environment — Ptch1 may transport sterols (oxysterols, cholesterol) that regulate Smo activity. With Smo inhibited, it remains excluded from the cilium. Gli transcription factors (Gli2, Gli3) are transported to the cilium tip by IFT, where they are phosphorylated by PKA, CK1, and GSK3 (kinases associated with the cilium base). Phosphorylated Gli3 (and to a lesser extent Gli2) is recognized by the E3 ubiquitin ligase SCF/beta-TrCP, leading to proteasomal processing that removes the C-terminal activation domain, generating the truncated repressor forms (Gli3R, Gli2R). Gli3R enters the nucleus and represses Hh target genes. (3) Pathway ON (Hh present): Hedgehog ligand (Shh, Ihh, or Dhh) binds Patched1, causing Ptch1 to exit the cilium (internalized and degraded). This relieves Smo inhibition. Smo undergoes conformational change, is phosphorylated, and translocates into the cilium. Ciliary Smo disrupts the Gli processing complex — full-length Gli2 is now activated (Gli2A) rather than processed. Gli2A dissociates from Sufu (Suppressor of Fused, a negative regulator) at the cilium tip and translocates to the nucleus, activating target genes (Ptch1, Gli1, Hhip1, etc.). Gli1 is itself a target gene and amplifies the transcriptional response. (4) Cilium requirement: IFT mutant mice (e.g., IFT88, Kif3a knockouts) lose primary cilia and show Hh signaling defects resembling both loss and gain of function — they lose Gli activator function but also lose Gli repressor processing. This explains why cilium defects cause complex phenotypes. (5) Diseases: Mutations in ciliary genes cause ciliopathies (polycystic kidney disease, Bardet-Biedl syndrome, Joubert syndrome), many with Hh-related developmental defects. Aberrant Hh activation causes basal cell carcinoma and medulloblastoma.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
     }
   ]
 }
