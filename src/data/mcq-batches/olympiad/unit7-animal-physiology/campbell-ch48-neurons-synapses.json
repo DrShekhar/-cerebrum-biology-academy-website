@@ -4,6 +4,7 @@
   "topic": "Neurons, Synapses, and Signaling",
   "gradeLevel": "olympiad",
   "isOlympiad": true,
+  "totalQuestions": 134,
   "questions": [
     {
       "type": "MCQ",
