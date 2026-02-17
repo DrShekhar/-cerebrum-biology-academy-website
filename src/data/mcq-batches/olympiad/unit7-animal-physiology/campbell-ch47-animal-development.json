@@ -984,6 +984,326 @@
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
       "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Axis specification in the chick embryo begins before gastrulation through signals from the hypoblast and marginal zone. What signal determines the posterior end where the primitive streak will form?",
+      "options": [
+        "BMP signaling from the anterior marginal zone specifies the posterior site",
+        "Wnt and Vg1/GDF1 signaling from the posterior marginal zone (Koller's sickle) induces Nodal expression, which drives primitive streak formation at the posterior end, while anterior signals (Cerberus, Lefty) from the hypoblast inhibit streak formation anteriorly",
+        "Random cell death at one edge of the blastoderm determines polarity",
+        "Gravity determines which end becomes posterior in the chick embryo"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Chick axis specification involves interplay between posterior inducing signals and anterior inhibitory signals: (1) Posterior marginal zone: Koller's sickle (a crescent-shaped thickening at the posterior edge of the area pellucida) is the site where the primitive streak will form. This region expresses Wnt8C, Vg1 (GDF1), and FGF, which together induce Nodal expression. Nodal (acting through Smad2/3 signaling) is the key driver of primitive streak and mesendoderm formation. (2) Anterior inhibition: The hypoblast (a thin layer of cells beneath the epiblast) secretes antagonists including Cerberus and Lefty that inhibit Nodal signaling anteriorly, restricting streak formation to the posterior. Rotation of the hypoblast repositions the streak — demonstrating that the hypoblast's inhibitory activity defines the anterior-posterior axis. (3) Gravity and pH: Before laying, rotation of the egg in the oviduct creates a pH gradient across the blastoderm (due to asymmetric albumin secretion) that influences posterior-anterior polarity. This means the A-P axis is influenced by the physical environment even before incubation begins. (4) Streak elongation: Once initiated, the streak extends anteriorly by addition of cells at its posterior end and convergence of epiblast cells toward the midline. The fully formed streak extends about 60% of the blastoderm diameter. (5) Single streak: The posterior marginal zone acts as a self-organizing center — if two posterior marginal zones are grafted onto opposite sides of a host, they inhibit each other through Lefty/Cerberus signals until one dominates, ensuring only one streak (and thus one body axis) forms.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the Wnt signaling pathway in development:\n(I) The canonical Wnt pathway stabilizes beta-catenin by inhibiting the APC/Axin/GSK-3 destruction complex, allowing beta-catenin to enter the nucleus and activate TCF/LEF target genes.\n(II) The non-canonical Wnt/PCP (planar cell polarity) pathway controls convergent extension movements through RhoA/Rac1 GTPase signaling without involving beta-catenin stabilization.\n(III) The Wnt/calcium pathway activates phospholipase C and PKC, influencing cell adhesion and migration.\n(IV) Wnt signaling plays no role in stem cell maintenance or cancer and functions exclusively during embryonic development.",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "Analysis of each statement: (I) TRUE — In the canonical Wnt pathway, Wnt ligands bind Frizzled (Fzd) receptor and LRP5/6 co-receptor, triggering Dishevelled (Dsh/Dvl) activation. Activated Dsh recruits Axin to the membrane, disrupting the beta-catenin destruction complex (APC/Axin/CK1/GSK-3beta). Without destruction complex activity, beta-catenin is not phosphorylated, escapes ubiquitination, accumulates in the cytoplasm, and translocates to the nucleus where it displaces Groucho co-repressor from TCF/LEF transcription factors and recruits co-activators (CBP, BCL9, Pygo) to activate Wnt target genes (c-Myc, Cyclin D1, Axin2). (II) TRUE — The non-canonical Wnt/PCP pathway signals through Wnt5a, Wnt11, and their receptors Fzd/Ror2/Ryk. Dishevelled activates small GTPases: RhoA (via DAAM1 formin) and Rac1. These reorganize the actin cytoskeleton, generating mediolateral cell polarity and driving convergent extension movements during gastrulation and neural tube closure. Core PCP proteins (Vangl2, Prickle, Celsr) establish planar polarity within epithelial sheets. (III) TRUE — The Wnt/calcium pathway, often triggered by Wnt5a/Fzd, activates heterotrimeric G proteins, phospholipase C (PLC), and inositol trisphosphate (IP3)-mediated calcium release. Elevated calcium activates CaMKII and PKC, which influence cell adhesion, migration, and gene expression. This pathway can antagonize canonical Wnt signaling. (IV) FALSE — Wnt signaling is critically important beyond embryonic development. In adults, canonical Wnt signaling maintains stem cell populations in the intestinal crypt (Lgr5+ stem cells), hair follicle bulge, and hematopoietic system. Aberrant Wnt activation is a major driver of cancer — APC loss-of-function mutations (constitutive Wnt signaling) cause ~80% of colorectal cancers. Wnt pathway components (Axin, beta-catenin, TCF) are mutated in various cancers.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the community effect in developmental biology?",
+      "options": [
+        "Individual cells always differentiate regardless of the number of neighboring cells",
+        "The community effect is the phenomenon where cells require a minimum number of neighboring cells of the same type to maintain their differentiated state — first described by Gurdon for Xenopus muscle differentiation, where isolated mesoderm cells fail to express muscle genes but groups of cells above a threshold number successfully differentiate",
+        "The community effect refers to interactions between different species' embryos",
+        "The community effect describes how all cells in an embryo differentiate simultaneously"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The community effect, discovered by John Gurdon, reveals that cell differentiation is not purely cell-autonomous: (1) Discovery: Gurdon (1988) found that single Xenopus mesoderm cells transplanted to the blastocoel cavity failed to maintain muscle gene expression (MyoD, actin), even though they were initially induced to become muscle. However, when groups of mesoderm cells (above ~100 cells) were transplanted, they successfully differentiated into muscle. (2) Mechanism: The community effect involves autocrine/paracrine signaling — cells secrete signals that reinforce their own and their neighbors' differentiation state. In a small group, these signals are diluted below the threshold needed for reinforcement. In a sufficiently large group, cells generate enough mutual reinforcement to maintain differentiation. (3) Molecular basis: In Xenopus muscle, the community effect involves FGF signaling — mesoderm cells secrete eFGF (embryonic FGF), which reinforces their own XMyoD expression through an autocrine loop. Below the threshold cell number, eFGF concentration is too low to maintain the positive feedback. (4) General principle: Community effects ensure that isolated cells accidentally placed in the wrong location do not inappropriately differentiate — a safety mechanism. They also sharpen tissue boundaries by requiring a minimum local density of committed cells. (5) Broader relevance: Community effects have been demonstrated in other contexts including neural induction, cartilage differentiation, and pancreatic beta-cell function (insulin secretion is enhanced when beta cells are in clusters vs isolated). In cancer, a 'community effect' may explain why minimum tumor cell numbers are needed for successful metastasis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher creates a series of chimeric embryos by combining different numbers of cells from two mouse strains (labeled with GFP vs RFP):\n\nChimera composition | ICM contribution (GFP:RFP) | TE contribution (GFP:RFP) | Development\n16 GFP + 0 RFP | 100% GFP | 100% GFP | Normal\n12 GFP + 4 RFP | 65% GFP, 35% RFP | 70% GFP, 30% RFP | Normal\n8 GFP + 8 RFP | 48% GFP, 52% RFP | 50% GFP, 50% RFP | Normal\n4 GFP + 12 RFP | 30% GFP, 70% RFP | 35% GFP, 65% RFP | Normal\n0 GFP + 16 RFP | 100% RFP | 100% RFP | Normal\n\nWhat do these data demonstrate about the early mammalian embryo?",
+      "options": [
+        "Cell fate is fixed at the 2-cell stage and cannot be altered",
+        "Mammalian blastomeres are highly regulative — cells from both donor strains contribute proportionally to both ICM and TE regardless of their original position, demonstrating that early blastomeres are not committed to specific lineages and can adopt either ICM or TE fate based on their final position in the chimeric morula",
+        "Only GFP cells can contribute to the ICM",
+        "Chimeric embryos always fail to develop normally"
+      ],
+      "correctAnswer": "B",
+      "explanation": "These chimera experiments are the definitive demonstration of regulative development in mammals: (1) Proportional contribution: In every chimera combination, both donor strains (GFP and RFP) contribute to both ICM and TE in roughly the same proportion as their overall representation. For example, in 8+8 chimeras, the ICM is approximately 50/50, as is the TE. This means cells from both sources can adopt either fate. (2) Regulative capacity: If cell fates were determined before aggregation (mosaic development), we would expect cells to maintain their original fates regardless of new context. Instead, cells adjust their fates based on their position in the chimeric morula — those ending up on the outside become TE, those inside become ICM. (3) Historical significance: Chimera experiments by Tarkowski (1961) and Mintz (1962) were foundational. They showed that even aggregates of cells from completely different embryos develop normally, with cells seamlessly integrating. Later, Gardner and colleagues showed that ICM cells from one embryo could contribute to all tissues of a chimeric adult. (4) Implications: This regulative capacity means: (a) cell fate is determined by position, not lineage; (b) early blastomeres are equivalent in developmental potential; (c) identical twinning (natural splitting of the morula/ICM) produces complete individuals; (d) biopsy of blastomeres for preimplantation genetic testing does not compromise embryo viability. (5) Limits: Regulative capacity decreases with developmental stage. By the late blastocyst, ICM and TE cells have become committed (Cdx2 vs Oct4 mutual repression), and their fates cannot be easily reversed.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "During Drosophila eye development, the R7 photoreceptor cell is specified through an inductive signal from the R8 cell. Which signaling pathway mediates this specification?",
+      "options": [
+        "Notch-Delta signaling from R8 to R7",
+        "The Boss (Bride of Sevenless) ligand on R8 activates the Sevenless receptor tyrosine kinase on the R7 precursor cell, triggering the Ras-MAPK signaling cascade that specifies R7 fate — this was the genetic system that elucidated the RTK-Ras-MAPK pathway",
+        "Hedgehog signaling from posterior to anterior in the eye disc",
+        "Wnt signaling from the morphogenetic furrow"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The specification of R7 in the Drosophila eye is a landmark story in signal transduction: (1) The system: The Drosophila compound eye consists of approximately 800 ommatidia, each containing 8 photoreceptor neurons (R1-R8). R7 is the UV-sensitive photoreceptor. Its specification depends on a contact-dependent inductive signal from the neighboring R8 cell. (2) Boss-Sevenless signaling: R8 expresses Boss (Bride of Sevenless), a transmembrane ligand. Boss activates Sevenless (Sev), a receptor tyrosine kinase (RTK) expressed on the surface of the R7 precursor cell. This is a contact-dependent (juxtacrine) signaling event. (3) RTK-Ras-MAPK cascade: Activated Sevenless autophosphorylates, recruiting the adaptor protein Drk (Grb2 homolog) via its SH2 domain. Drk recruits Sos (a guanine nucleotide exchange factor) which activates Ras (converting Ras-GDP to Ras-GTP). Active Ras initiates the MAPK cascade: Raf → MEK → MAPK (rolled in Drosophila). MAPK phosphorylates transcription factors (Pointed, Yan) that activate R7-specific gene expression. (4) Historical significance: Genetic screens for sevenless pathway mutants in Drosophila (by Rubin, Simon, and others) identified most components of the RTK-Ras-MAPK pathway before it was known to be a universal growth factor signaling pathway in mammals. The same pathway (EGF/PDGF/FGF → Ras → Raf → MEK → ERK) controls cell proliferation, differentiation, and survival in all metazoans. Ras mutations (KRAS, HRAS, NRAS) are found in ~30% of human cancers. (5) Without Boss or Sevenless, the R7 precursor defaults to a cone cell fate instead of R7, demonstrating the inductive signal is necessary for R7 specification.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What are organoids, and what developmental principles do they exploit?",
+      "options": [
+        "Organoids are fully formed organs grown in culture from single cells",
+        "Organoids are three-dimensional tissue structures grown from stem cells (ESCs, iPSCs, or adult tissue stem cells) in vitro that self-organize into miniature organ-like structures recapitulating key features of tissue architecture and function, exploiting the intrinsic self-organizing capacity of cells driven by the same signaling pathways (Wnt, BMP, FGF, Notch) that pattern organs in vivo",
+        "Organoids are computer models that simulate organ development",
+        "Organoids require transplantation into an animal host to develop structure"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Organoids represent a revolution in developmental biology and disease modeling: (1) Definition: Organoids are three-dimensional multicellular structures that self-organize from stem cells in culture, forming miniature versions of organs with tissue architecture, multiple cell types, and some organ-specific functions. They are grown in extracellular matrix (typically Matrigel) supplemented with growth factors that recapitulate developmental signaling. (2) Key examples: (a) Intestinal organoids (Clevers lab, 2009): Lgr5+ intestinal stem cells in Matrigel with R-spondin (Wnt agonist), Noggin (BMP inhibitor), and EGF self-organize into crypt-villus structures with all intestinal cell types (enterocytes, goblet cells, Paneth cells, enteroendocrine cells); (b) Brain organoids (Lancaster and Knoblich, 2013): iPSC-derived neural organoids form layered cortical structures with progenitor zones and neuronal layers; (c) Kidney, liver, lung, retinal, and gastric organoids have all been generated. (3) Developmental principles: Organoids work because stem cells retain intrinsic developmental programs — when provided with appropriate signals, they self-organize using the same morphogen gradients, lateral inhibition, and tissue mechanics that operate in vivo. Wnt gradients establish stem cell niches, BMP inhibition maintains progenitor zones, Notch mediates lateral inhibition for cell type diversification. (4) Applications: Disease modeling (cystic fibrosis, cancer), drug screening, personalized medicine, gene editing studies, and understanding organ development. Patient-derived tumor organoids can predict drug responses. (5) Limitations: Organoids lack vasculature, immune cells, and nervous system innervation; they are limited in size by diffusion of oxygen and nutrients; and they do not perfectly recapitulate organ-level organization.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether a specific morphogen (Morphogen X) acts as a true morphogen — specifying multiple cell fates at different concentrations — in the developing wing disc of Drosophila. Which experimental strategy would be most rigorous?",
+      "options": [
+        "Simply overexpress Morphogen X everywhere and observe the result",
+        "Create clones of cells that express a constitutively active form of Morphogen X's receptor at different levels (using different promoter strengths), demonstrating that increasing levels of pathway activation cell-autonomously specify different cell fates in a position-independent manner, then show that a uniform field of Morphogen X at different concentrations produces distinct cell types at each concentration",
+        "Knock out Morphogen X and observe which structures are missing",
+        "Measure Morphogen X protein levels without functional studies"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Proving that a signal acts as a true morphogen (rather than simply permissive for a single fate) requires demonstrating concentration-dependent, cell-autonomous fate specification: (1) True morphogen criteria (Wolpert's definition): A morphogen must (a) form a concentration gradient in a developing field, (b) directly specify at least two different cell fates at different threshold concentrations, and (c) act directly on target cells (not through a relay of secondary signals). (2) Constitutive receptor activation: By creating clones expressing the receptor at defined levels (mimicking different morphogen concentrations), the researcher tests whether pathway activity level alone determines cell fate, independent of position. If cells expressing high receptor activity adopt fate A, medium activity adopt fate B, and low activity adopt fate C — regardless of where in the tissue the clones are located — this demonstrates concentration-dependent, position-independent fate specification. (3) Concentration series: Exposing a uniform field of competent cells (e.g., wing disc cells in culture) to different defined concentrations of Morphogen X and demonstrating distinct, concentration-specific outcomes provides complementary evidence. (4) Classic examples: Dpp (BMP homolog) in the Drosophila wing disc meets all morphogen criteria — it forms a gradient from the A-P compartment boundary, directly activates target genes (spalt, omb) at different threshold concentrations, and constitutive Dpp pathway activation at different levels specifies different cell fates cell-autonomously. (5) Controls: Loss-of-function (receptor knockout clones) should show loss of all morphogen-dependent fates. Ectopic expression at specific levels should induce specific fates ectopically.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the function of the sperm centrosome (centriole) after fertilization in most animals?",
+      "options": [
+        "The sperm centrosome is degraded immediately after sperm-egg fusion",
+        "The sperm-derived centriole serves as the organizing center for the first mitotic spindle of the zygote, since the oocyte's centrioles were eliminated during oogenesis — the sperm thus provides both the paternal genome and the centrosome required for cell division",
+        "Both maternal and paternal centrosomes organize the first mitotic spindle equally",
+        "The sperm centrosome is only needed for sperm flagellar movement and has no post-fertilization role"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The sperm centrosome contribution is essential for the first zygotic cell division in most animals: (1) Oocyte centriole loss: During oogenesis in most animal species (mammals, sea urchins, Drosophila), the oocyte's centrioles are eliminated or degraded. The mature oocyte therefore lacks functional centrioles and centrosomes. Meiotic spindles in the oocyte are assembled without centrioles (acentrosomal spindle assembly using RanGTP-dependent mechanisms). (2) Sperm centriole: The sperm brings two centrioles — the proximal centriole (at the base of the nucleus, which it retains) and the distal centriole (which becomes modified as the basal body of the flagellum). After sperm-egg fusion, the sperm axoneme and mitochondria are typically degraded, but the proximal centriole is retained. (3) Zygotic centrosome: The sperm-derived centriole recruits maternal pericentriolar material (PCM, including gamma-tubulin ring complexes, pericentrin) from the egg cytoplasm. It duplicates to form two centrosomes, which then nucleate the astral microtubules that form the mitotic spindle for the first zygotic division. (4) Pronuclear migration: Before the first division, the sperm centrosome also organizes the microtubule aster that draws the two pronuclei (male and female) together for syngamy. (5) Exceptions: In mice, both sperm centrioles are degraded during spermiogenesis, and the first mitotic spindle is assembled acentrosomally using RanGTP-dependent mechanisms (similar to meiotic spindles). This is an exception rather than the rule. (6) Clinical: Defective sperm centrioles can cause fertilization failure or abnormal first cleavage, contributing to some cases of ICSI failure and early embryonic arrest.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Xenopus animal cap explants have been instrumental in understanding inductive signaling. What makes the animal cap a valuable experimental system?",
+      "options": [
+        "Animal cap cells are already fully differentiated and cannot respond to signals",
+        "The animal cap (the ectodermal tissue at the animal pole of the blastula) is a naive, multipotent tissue that defaults to epidermis but can be induced to form neural tissue (by BMP inhibition), mesoderm (by Activin/Nodal), or endoderm (by high Activin) — providing a blank canvas for testing inductive signals",
+        "The animal cap produces all three germ layers autonomously",
+        "Animal cap tissue is unique to Xenopus and does not exist in other species"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Xenopus animal cap is one of the most powerful tools in experimental embryology: (1) Properties: The animal cap comprises the uppermost (animal pole) region of the blastula, consisting of approximately 1000 ectodermal cells. When explanted (surgically removed) and cultured in isolation, it defaults to forming epidermis (atypical epidermis, specifically ciliated epidermal balls). This makes it a naive, responsive tissue — a 'blank canvas' that can be redirected to various fates by appropriate signals. (2) Neural induction: When animal cap cells are treated with BMP antagonists (Noggin, Chordin) or dissociated (which dilutes endogenous BMP signaling), they adopt neural fate instead of epidermis. This was the key experiment supporting the 'default model' of neural induction — ectoderm defaults to neural fate in the absence of BMP signaling. (3) Mesoderm induction: Animal cap cells treated with Activin (a Nodal family member) at low-to-moderate concentrations form mesoderm (muscle, notochord). Different Activin concentrations induce different mesodermal subtypes — low Activin: ventral mesoderm (blood), medium Activin: muscle, high Activin: notochord and endoderm. This demonstrated the concentration-dependent (morphogen) activity of TGF-beta family ligands. (4) Competence: The animal cap is 'competent' to respond to mesoderm inducers only during a specific developmental window (mid-blastula to early gastrula). Outside this window, competence is lost. (5) Modern applications: Animal caps are used in combination with defined recombinant proteins or injected mRNAs to dissect signaling pathway interactions, test epistatic relationships, and identify downstream target genes using transcriptomic approaches.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the role of gap junctions during embryonic development?",
+      "options": [
+        "Gap junctions provide structural support like rivets between cells",
+        "Gap junctions are channels formed by connexin proteins that allow direct cytoplasmic communication between adjacent cells, permitting passage of small molecules (ions, metabolites, second messengers like cAMP and IP3) up to ~1 kDa, enabling coordinated signaling and metabolic coupling during compaction, implantation, and tissue patterning",
+        "Gap junctions are present only in adult tissues and absent during development",
+        "Gap junctions transport proteins and mRNAs between cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Gap junctions play multiple essential roles in embryonic development: (1) Structure: Each gap junction channel is composed of two hemichannels (connexons), one from each cell. Each connexon consists of six connexin (Cx) protein subunits arranged around a central pore. The pore diameter (~1.5 nm) allows passage of molecules up to approximately 1 kDa — including ions (Ca2+, K+), metabolites (glucose, amino acids), and second messengers (cAMP, cGMP, IP3). Proteins and nucleic acids cannot pass. (2) Developmental roles: (a) Compaction: Gap junctional communication (GJC) begins at the 8-cell stage in mouse embryos (mediated by Cx43/GJA1) and is essential for compaction. (b) Oocyte maturation: Gap junctions between granulosa cells and the oocyte (Cx37/GJA4) transfer cGMP and cAMP that maintain meiotic arrest; LH surge closes these junctions to trigger meiosis resumption. (c) Left-right asymmetry: Cx43 gap junctions are involved in the transfer of serotonin and other small molecules that contribute to L-R axis establishment in some species. (d) Heart development: Cx43, Cx40, and Cx45 are essential for cardiac conduction. Cx43 knockout mice die at birth from cardiac malformations. (e) Neural tube closure: Gap junctional communication coordinates the epithelial movements during neurulation. (3) Patterning: Gap junctions enable 'community effects' by synchronizing signaling states among groups of cells. The passage of IP3 can propagate calcium waves across cell groups, coordinating responses to inductive signals. (4) Disease: Mutations in connexin genes cause diverse developmental disorders — Cx43 mutations cause oculodentodigital dysplasia, Cx26 mutations cause deafness, and Cx32 mutations cause Charcot-Marie-Tooth neuropathy.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studies the effect of retinoic acid (RA) concentration on the differentiation of embryonic stem cells in culture:\n\nRA concentration (nM) | Cell type generated | Key markers | Percentage\n0 | Undifferentiated ESCs | Oct4+, Nanog+, Sox2+ | 95%\n10 | Neural progenitors (anterior) | Sox1+, Pax6+, Otx2+ | 60%\n100 | Neural progenitors (posterior/hindbrain) | Hoxb1+, Hoxb4+, Krox20+ | 55%\n1000 | Mesoderm/endoderm | Brachyury+, Gata4+ | 45%\n10000 | Apoptosis + mesoderm | Cleaved caspase-3+, FLK1+ | 70% dead\n\nWhat does this reveal about RA's role in differentiation?",
+      "options": [
+        "RA has no effect on stem cell differentiation at any concentration",
+        "RA acts as a concentration-dependent differentiation signal: low RA promotes anterior neural identity, moderate RA promotes posterior/hindbrain neural identity (consistent with its caudalizing role in vivo), high RA promotes mesoderm/endoderm, and very high RA is cytotoxic — demonstrating that RA is a morphogen-like signal whose concentration determines cell fate outcomes",
+        "All RA concentrations produce identical cell types",
+        "RA maintains pluripotency at all concentrations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data demonstrate retinoic acid's concentration-dependent effects on cell fate: (1) RA as a caudalizing agent: In vivo, RA is a major posteriorizing (caudalizing) signal in the vertebrate embryo. It is synthesized by Raldh2 (retinaldehyde dehydrogenase 2) in the somites and lateral plate mesoderm, and is degraded by Cyp26 enzymes in the anterior. This creates a posterior-high, anterior-low RA gradient. (2) Low RA (10 nM): Promotes neural differentiation with anterior (forebrain/midbrain) identity — consistent with the default model where neural fate is the default state and low RA levels specify anterior neural character (Pax6+, Otx2+ are anterior neural markers). (3) Moderate RA (100 nM): Shifts neural fate toward posterior (hindbrain) identity. Hoxb1 and Hoxb4 are hindbrain Hox genes activated by RA (via RA response elements, RAREs, in their regulatory regions). Krox20 marks rhombomeres 3 and 5. This reflects RA's in vivo role in specifying hindbrain segment identities. (4) High RA (1000 nM): At supraphysiological concentrations, RA can induce non-neural fates including mesoderm (Brachyury) and endoderm (Gata4). This is consistent with RA's ability to activate multiple downstream pathways at different thresholds. (5) Toxic levels (10000 nM): Very high RA causes apoptosis, reflecting teratogenic effects. RA teratogenicity (e.g., isotretinoin/Accutane birth defects) results from disruption of morphogen gradients. (6) Mechanism: RA binds nuclear receptors (RARalpha/beta/gamma, which heterodimerize with RXR), directly regulating transcription of target genes. Different RA concentrations activate different gene sets based on promoter sensitivity (RARE affinity and number).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is transdetermination in Drosophila imaginal disc development?",
+      "options": [
+        "The normal differentiation of an imaginal disc into its specified adult structure",
+        "The rare switching of one imaginal disc's determined state to that of another disc type — for example, a leg disc fragment generating wing tissue upon serial transplantation — demonstrating that determined states, while normally stable, are not irreversible and can switch to closely related alternative fates through changes in selector gene expression",
+        "The death of imaginal disc cells during metamorphosis",
+        "The initial specification of imaginal disc identity during embryogenesis"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Transdetermination reveals important principles about the stability and flexibility of determined states: (1) Imaginal discs: In Drosophila larvae, groups of cells called imaginal discs are set aside for adult structures. Each disc is 'determined' — committed to forming a specific adult structure (leg, wing, eye, antenna, etc.) — long before it actually differentiates. Determination is maintained through many cell divisions during larval growth. (2) Discovery: Hadorn (1968) discovered transdetermination by serially transplanting fragments of imaginal discs into the abdomens of adult flies (which support disc growth but not differentiation). After many rounds of transplantation and regeneration, rare disc fragments switched their determined state — for example, a leg disc fragment began generating wing tissue, or an antenna disc fragment produced leg structures. (3) Characteristics: (a) Transdetermination occurs at low frequency (~1-5% of disc fragments per transplant generation); (b) It follows specific rules — certain switches are more common than others (leg→wing is common, wing→leg is rare), suggesting a hierarchy of determined states; (c) Switches often involve closely related selector gene states (Antennapedia → wing via Vestigial activation); (d) Wnt/Wingless signaling promotes transdetermination frequency. (4) Molecular basis: Transdetermination involves changes in selector gene expression — for example, leg-to-wing switch involves downregulation of the leg selector gene (Distalless) and upregulation of the wing selector gene (Vestigial). This likely involves epigenetic switches at Polycomb/Trithorax-regulated loci. (5) Significance: Transdetermination shows that determination is maintained by ongoing regulatory circuits (not permanent DNA changes) and can be disrupted — foreshadowing modern cellular reprogramming (iPSCs, transdifferentiation).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Somites differentiate into distinct regions under the influence of signals from surrounding tissues. What determines whether a somite cell becomes sclerotome, dermomyotome, or myotome?",
+      "options": [
+        "All somite cells are identical and their fate is determined randomly",
+        "Shh from the notochord and floor plate induces ventromedial cells to become sclerotome (Pax1+, future vertebrae/ribs); Wnt from the dorsal neural tube and surface ectoderm induces dorsolateral cells to become dermomyotome (Pax3/7+, future dermis and muscle); and BMP from the lateral plate mesoderm influences lateral somite fate",
+        "Somite fate is determined entirely by maternal mRNAs deposited in the egg",
+        "All somite cells differentiate into muscle only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Somite compartmentalization is driven by signals from surrounding tissues, providing a textbook example of embryonic induction: (1) Sclerotome (ventromedial): Sonic hedgehog (Shh) secreted from the notochord and floor plate induces the ventromedial portion of the somite to become sclerotome. Shh activates Pax1 expression and represses Pax3/7 in these cells. Sclerotome cells undergo EMT (losing N-cadherin, gaining mesenchymal markers), migrate medially around the neural tube and notochord, and eventually differentiate into vertebrae (via endochondral ossification) and ribs. Noggin from the notochord (BMP antagonist) cooperates with Shh. (2) Dermomyotome (dorsolateral): Wnt1/Wnt3a from the dorsal neural tube and Wnt7a from the surface ectoderm maintain the dorsal somite as dermomyotome, expressing Pax3 and Pax7. The dermomyotome has two fates: (a) its central region (dermatome) spreads beneath the ectoderm to form the dermis of the back; (b) its lips delaminate cells that migrate beneath the dermomyotome to form the myotome — the muscle precursor layer. (3) Myotome: Cells from the four lips of the dermomyotome (particularly medial and lateral lips) detach and form the myotome between the dermomyotome and sclerotome. Myf5 and MyoD (myogenic regulatory factors, MRFs) are activated in these cells, committing them to skeletal muscle fate. Wnt and Shh signals converge to activate MRFs. (4) BMP from lateral plate mesoderm: BMP4 from the adjacent lateral plate mesoderm promotes lateral dermomyotome fate and limb muscle precursor specification (Pax3+ cells that migrate into the limb bud). (5) Integration: The combination of Shh (ventral), Wnt (dorsal), and BMP (lateral) signals creates a three-dimensional fate map within each somite.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about X-chromosome inactivation (XCI) in mammalian females:\n(I) XCI ensures dosage compensation between XX females and XY males by transcriptionally silencing one X chromosome in each female somatic cell.\n(II) XCI is initiated by the long non-coding RNA Xist, which coats the future inactive X in cis, recruiting Polycomb repressive complexes and other silencing factors.\n(III) The choice of which X to inactivate is random in the epiblast but determined (paternal X always inactivated) in mouse extraembryonic tissues.\n(IV) X-chromosome inactivation is fully reversible in all adult somatic cells without any intervention.",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "Analysis of each statement: (I) TRUE — X-chromosome inactivation (Lyon hypothesis, 1961) is the mammalian dosage compensation mechanism. One X chromosome is transcriptionally silenced in each female somatic cell early in development, equalizing X-linked gene dosage between XX females and XY males. The inactive X (Xi) is visible as the Barr body at the nuclear periphery. About 15-25% of X-linked genes escape inactivation and are expressed from both chromosomes. (II) TRUE — Xist (X-inactive specific transcript) is a 17-kb lncRNA transcribed from the X-inactivation center (Xic). Xist RNA spreads in cis along the future inactive X, coating it. Xist recruits: (a) SPEN/SHARP, which in turn recruits the NCoR-HDAC3 histone deacetylase complex for gene silencing; (b) PRC2 (which deposits H3K27me3); (c) PRC1 (which deposits H2AK119ub). Additional silencing mechanisms include DNA methylation of CpG islands (by DNMT3B), histone H4K20me1, and macroH2A histone variant incorporation. Xist deletion prevents XCI initiation. (III) TRUE — In mice, there are two forms of XCI: imprinted XCI (in the trophectoderm and primitive endoderm — always the paternal X is inactivated, regulated by the paternal-specific Xist activation and maternal-specific Tsix antisense RNA) and random XCI (in the epiblast/embryo proper — either X can be inactivated, with the choice being stochastic). Humans appear to have only random XCI (no imprinted XCI). (IV) FALSE — XCI is extremely stable in somatic cells and is NOT readily reversible. The multiple layers of silencing (Xist coating, Polycomb marks, DNA methylation, late replication timing, nuclear peripheral localization) make the inactive state highly stable through mitotic cell divisions. XCI is reversed only in very specific contexts: in primordial germ cells (X-reactivation occurs during epigenetic reprogramming at E11.5-13.5 in mouse) and during iPSC reprogramming. Spontaneous X-reactivation in somatic cells is associated with cancer.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Gastrulation in sea urchins involves invagination of the vegetal plate. What is the role of filopodia extended by secondary mesenchyme cells during archenteron elongation?",
+      "options": [
+        "Filopodia have no role in archenteron elongation",
+        "Secondary mesenchyme cells at the tip of the elongating archenteron extend long filopodia that contact the inner surface of the blastocoel roof (animal pole), providing traction that pulls the archenteron across the blastocoel through a process of filopodial attachment and contraction, complementing convergent extension of the archenteron wall",
+        "Filopodia push the archenteron away from the animal pole",
+        "Filopodia are extended from the animal pole toward the vegetal plate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Archenteron elongation in sea urchins involves multiple complementary mechanisms: (1) Primary invagination: The initial inward buckling of the vegetal plate (forming the beginning of the archenteron) is driven by apical constriction of vegetal cells (bottle cells) and changes in extracellular matrix. This produces a short, stubby invagination extending approximately one-third of the way across the blastocoel. (2) Secondary invagination — convergent extension: The archenteron then elongates dramatically through convergent extension — cells in the archenteron wall rearrange by intercalating along the long axis, causing the tube to narrow and lengthen. This is analogous to convergent extension during vertebrate gastrulation. (3) Filopodial traction: Secondary mesenchyme cells (SMCs) at the leading tip of the archenteron extend long, dynamic filopodia (up to 80 micrometers) that explore the blastocoel cavity. When filopodia contact the inner surface of the animal pole (blastocoel roof), they attach and generate contractile force (using actin-myosin) that pulls the archenteron tip toward the animal pole. (4) Evidence: Laser ablation of SMC filopodia delays (but does not completely prevent) archenteron elongation, demonstrating that filopodial traction is one of multiple mechanisms. When the animal pole ectoderm is removed, filopodia fail to find attachment sites and archenteron elongation is impaired. (5) Target recognition: SMC filopodia show preferential attachment to a specific region of the animal pole — near the future mouth (stomodeum) — suggesting the target tissue provides guidance cues. (6) Mouth formation: After the archenteron reaches the animal pole, it fuses with the ectoderm at the oral side to form the mouth (deuterostome pattern — blastopore becomes anus, mouth is a secondary opening).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Asymmetric cell division is a fundamental mechanism for generating cellular diversity. What molecular machinery ensures that cell fate determinants are unequally distributed to the two daughter cells during neuroblast division in Drosophila?",
+      "options": [
+        "Both daughter cells receive equal determinants and differentiate identically",
+        "The Par complex (Par3/Bazooka-Par6-aPKC) localizes to the apical cortex of the neuroblast, while cell fate determinants (Numb, Prospero, Miranda, Brat) are localized to the basal cortex by the adaptor proteins Miranda and Partner of Numb — upon division along the apical-basal axis, the apical daughter retains stem cell identity while the basal daughter (inheriting Numb and Prospero) differentiates",
+        "Cell fate is determined after division by random external signals",
+        "Only the mitotic spindle orientation matters; no determinants are asymmetrically distributed"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Drosophila neuroblast division is the paradigm for asymmetric cell division: (1) Neuroblast identity: Neuroblasts are neural stem cells that divide asymmetrically to produce a large apical daughter (renewed neuroblast) and a small basal daughter (ganglion mother cell, GMC, which divides once more to produce two neurons or glia). (2) Apical complex: The Par complex (Bazooka/Par3, Par6, aPKC) localizes to the apical cortex during late interphase. aPKC phosphorylates and excludes basal determinants from the apical domain. The apical complex also recruits Inscuteable and Pins/LGN/Mud, which orient the mitotic spindle along the apical-basal axis to ensure correct segregation. (3) Basal determinants: (a) Numb (Notch signaling inhibitor) — localizes to the basal crescent via its adaptor Partner of Numb (Pon). In the GMC, Numb inhibits Notch, preventing self-renewal and promoting differentiation. (b) Prospero (homeodomain transcription factor) — localized basally by the adaptor protein Miranda. In the GMC, Prospero enters the nucleus and activates differentiation genes while repressing cell cycle genes. (c) Brain tumor (Brat) — a translational repressor also localized by Miranda, promoting differentiation. (4) Spindle orientation: The Inscuteable-Pins-Mud complex connects the apical Par complex to astral microtubules via dynein, orienting the spindle perpendicular to the epithelium and parallel to the apical-basal axis. This ensures that division produces one apical daughter (inheriting Par complex, maintaining stem cell state) and one basal daughter (inheriting Numb/Prospero/Brat, committing to differentiation). (5) Cancer: Loss of Numb, Prospero, or Brat causes symmetric divisions producing two neuroblasts, leading to brain tumors — directly linking asymmetric division defects to tumorigenesis.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
     }
   ]
 }
