@@ -2364,6 +2364,286 @@
       "conceptualDepth": "COMPETITION",
       "difficulty": "EXPERT",
       "topic": "Neurexin-neuroligin complex"
+    },
+    {
+      "type": "MCQ",
+      "question": "Intrinsic neuronal excitability \u2014 how readily a neuron converts synaptic input to action potential output \u2014 is modulated by the complement of ion channels expressed. Which K+ channel type sets the threshold for action potential initiation?",
+      "options": [
+        "BK (big-conductance Ca2+-activated K+) channels",
+        "Kv7/KCNQ channels (M-current), which are open near resting potential and produce a subthreshold K+ current that raises the voltage threshold for spike initiation",
+        "KATP channels that sense metabolic state",
+        "Kir2.1 inward rectifier K+ channels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Kv7.2/Kv7.3 (KCNQ2/3) channels carry the M-current (IM), named because it is suppressed by muscarinic ACh receptor activation. M-current channels are partially open at resting potential and near threshold (-60 to -40 mV), generating a sustained outward K+ current that opposes depolarization and raises the spike threshold. These channels are concentrated at the axon initial segment (AIS) alongside Nav1.6 channels, where they directly gate action potential initiation. Inhibition of M-current (by muscarinic agonists, or by genetic mutations as in benign familial neonatal epilepsy caused by KCNQ2/3 mutations) lowers the threshold and increases neuronal excitability. The anti-epileptic drug retigabine (ezogabine) is a Kv7 channel opener that enhances M-current and dampens excitability. BK channels contribute to the fast afterhyperpolarization. KATP channels link metabolism to excitability. Kir2.1 sets the resting potential but is not strongly active near threshold.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "M-current and threshold"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Nernst equation assumes the membrane is permeable to only one ion. What fundamental improvement does the Goldman-Hodgkin-Katz (GHK) equation provide?",
+      "options": [
+        "The GHK equation accounts for active transport by ion pumps",
+        "The GHK equation calculates resting membrane potential by considering the relative permeabilities and concentration gradients of all permeable ion species simultaneously, providing a more accurate prediction of Vm when multiple ions contribute",
+        "The GHK equation predicts action potential amplitude and duration",
+        "The GHK equation only applies to Ca2+ flux"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The GHK (Goldman-Hodgkin-Katz) voltage equation extends the Nernst equation by accounting for multiple permeable ions simultaneously: Vm = (RT/F) \u00d7 ln[(PK[K+]o + PNa[Na+]o + PCl[Cl-]i) / (PK[K+]i + PNa[Na+]i + PCl[Cl-]o)]. Each ion's contribution is weighted by its membrane permeability (P). At rest, PK dominates, pulling Vm near EK, but the finite PNa and PCl push Vm slightly positive from EK. The GHK equation also explains why the resting potential changes when relative permeabilities change: during the action potential peak, PNa >> PK drives Vm toward ENa. Key assumptions: (1) constant electric field across the membrane, (2) independent ion movement, (3) steady-state conditions. The GHK equation does not account for active transport (pumps) or for voltage-gated channel dynamics. For action potential dynamics, the Hodgkin-Huxley equations (which model time- and voltage-dependent conductance changes) are needed.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "GHK equation"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the role of the protein Arc (activity-regulated cytoskeletal-associated protein) in synaptic plasticity?",
+      "options": [
+        "Arc directly phosphorylates NMDA receptors to enhance their function",
+        "Arc is an immediate-early gene product that promotes AMPA receptor endocytosis, is essential for LTD and memory consolidation, and its mRNA is transported to activated dendritic synapses where it is locally translated",
+        "Arc is a structural component of the axon initial segment",
+        "Arc inhibits action potential generation in the soma"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Arc/Arg3.1 is one of the most important immediate-early genes (IEGs) in synaptic plasticity and memory. It is rapidly transcribed in response to strong synaptic activity (mediated by CREB, SRF, and MEF2 transcription factors). Key features: (1) Arc mRNA is one of few mRNAs transported to dendrites, where it localizes specifically to recently activated synapses and is locally translated \u2014 this provides synapse-specific regulation. (2) Arc protein interacts with endocytic machinery (endophilin-2/3 and dynamin-2) to promote clathrin-mediated endocytosis of AMPA receptors, reducing surface receptor levels and mediating LTD. (3) Arc is essential for memory consolidation \u2014 Arc knockout mice form memories normally but cannot consolidate them to long-term storage. (4) Arc expression is used as a marker of recently activated neurons (catFISH technique). Remarkably, Arc protein has structural homology to retroviral Gag capsid proteins and can form virus-like capsids that transfer RNA between cells, suggesting an evolutionary origin from retrotransposons.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Arc protein function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Acetylcholine synthesis requires the enzyme choline acetyltransferase (ChAT). What is the rate-limiting factor for ACh synthesis in vivo?",
+      "options": [
+        "ChAT enzyme activity, which is always saturated",
+        "The availability of choline, which must be taken up from the extracellular space by the high-affinity choline transporter (CHT1/SLC5A7), since neurons cannot synthesize choline de novo",
+        "The availability of ATP as the acetyl donor",
+        "The rate of vesicular loading by VAChT"
+      ],
+      "correctAnswer": "B",
+      "explanation": "While ChAT catalyzes the transfer of the acetyl group from acetyl-CoA to choline to form ACh, ChAT itself is not rate-limiting because it is present in excess and not saturated with substrates. The rate-limiting step for ACh synthesis in vivo is the availability of choline. Neurons cannot synthesize choline de novo \u2014 they depend on: (1) recycling of choline from AChE-mediated ACh hydrolysis in the synaptic cleft, taken up by the high-affinity choline transporter CHT1 (SLC5A7), a Na+-dependent transporter with Km ~1-5 uM for choline; (2) dietary choline from plasma. CHT1 is the true rate-limiting factor: it is localized to presynaptic terminals, and its activity is regulated by neuronal firing (more CHT1 is inserted into the plasma membrane during sustained activity). Hemicholinium-3 (HC-3) is a competitive inhibitor of CHT1 that blocks ACh synthesis and depletes vesicle stores. Acetyl-CoA (from mitochondria, not ATP) is the acetyl donor.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "ACh synthesis rate limitation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which neurotransmitter system is most directly implicated in the cognitive deficits of Alzheimer's disease, and what is the evidence?",
+      "options": [
+        "Glutamate system \u2014 excessive NMDA receptor activation is the primary cause",
+        "The cholinergic system \u2014 selective degeneration of basal forebrain cholinergic neurons (nucleus basalis of Meynert) correlates with cognitive decline, and cholinesterase inhibitors (donepezil, rivastigmine) provide modest symptomatic improvement",
+        "The dopamine system \u2014 dopamine depletion mirrors Parkinson's disease symptoms",
+        "The serotonin system \u2014 SSRI antidepressants reverse Alzheimer's symptoms"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The 'cholinergic hypothesis' of Alzheimer's disease (AD) proposes that degeneration of cholinergic neurons, particularly in the basal forebrain nucleus basalis of Meynert (which projects cholinergic fibers to the cerebral cortex and hippocampus), contributes significantly to the cognitive deficits. Evidence: (1) Post-mortem AD brains show severe loss of cholinergic neurons, reduced ChAT activity, and decreased ACh levels in cortex and hippocampus. (2) The degree of cholinergic loss correlates with dementia severity. (3) Anticholinergic drugs (scopolamine) impair memory in healthy subjects, mimicking AD-like deficits. (4) AChE inhibitors (donepezil, rivastigmine, galantamine) provide modest symptomatic improvement by increasing synaptic ACh levels. However, the cholinergic hypothesis is incomplete \u2014 AD also involves amyloid-beta plaque accumulation, tau neurofibrillary tangles, neuroinflammation, and glutamatergic dysfunction (memantine, an NMDA antagonist, is also approved for moderate-severe AD).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Cholinergic hypothesis of Alzheimer's"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the molecular organization of inhibitory synapses:\nS1: Gephyrin is the main scaffolding protein at inhibitory synapses, analogous to PSD-95 at excitatory synapses.\nS2: GABA_A receptors are clustered at postsynaptic sites by gephyrin via direct interaction with receptor subunits.\nS3: Neuroligin-2 is preferentially found at inhibitory synapses and recruits gephyrin scaffolds.\nS4: Inhibitory synapses have the same ultrastructural appearance as excitatory synapses in electron microscopy.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Gephyrin is the primary scaffold protein at glycinergic and GABAergic inhibitory synapses. It self-oligomerizes into a hexagonal lattice beneath the postsynaptic membrane, clustering inhibitory receptors through direct and indirect interactions. This is functionally analogous to PSD-95's role at excitatory synapses. S2 is TRUE: Gephyrin directly binds glycine receptor beta subunits (high affinity) and GABA_A receptor alpha1, alpha2, alpha3, and gamma2 subunits (lower affinity, sometimes requiring intermediate proteins like collybistin/ARHGEF9). This binding clusters receptors at the synapse. S3 is TRUE: Neuroligin-2 (NLGN2) is selectively enriched at inhibitory synapses (while NLGN1 is at excitatory synapses). NLGN2 interacts with gephyrin and collybistin to organize the inhibitory postsynaptic scaffold, and binds presynaptic neurexins to align pre- and postsynaptic specializations. S4 is FALSE: Inhibitory synapses have a SYMMETRIC appearance in EM (thin postsynaptic density), while excitatory synapses are ASYMMETRIC (thick postsynaptic density = PSD). This morphological distinction (Gray's type I = excitatory/asymmetric; type II = inhibitory/symmetric) was identified in the 1950s.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Inhibitory synapse organization"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the patch-clamp technique:\nS1: The cell-attached configuration allows recording of single-channel currents without disrupting the intracellular milieu.\nS2: The whole-cell configuration provides access to the cell interior, allowing measurement of total membrane current and control of intracellular composition.\nS3: Outside-out patches are used to study ligand-gated channels because the extracellular face is accessible for drug application.\nS4: The patch-clamp technique can only measure currents from voltage-gated channels, not ligand-gated channels.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: In cell-attached mode, the glass pipette forms a gigaohm (gigaseal) seal on the cell membrane without breaking through. This allows recording of single-channel currents from the membrane patch under the pipette while the cell remains intact. The intracellular contents are undisturbed, preserving normal second messenger cascades and ion concentrations. S2 is TRUE: In whole-cell mode, after forming a gigaseal, brief suction ruptures the membrane patch, providing electrical and diffusional access to the cell interior. This allows measurement of total membrane currents and injection of the pipette solution into the cell (dialyzing the cytoplasm with known solutions). S3 is TRUE: Outside-out patches are formed by pulling the pipette away from a whole-cell configuration, causing a membrane patch to detach with the extracellular face exposed to the bath solution. This is ideal for studying ligand-gated receptors (applying agonists to the external face) and for rapid solution exchange experiments. S4 is FALSE: Patch-clamp can measure ANY ion channel current \u2014 voltage-gated, ligand-gated, mechanically gated, or constitutively open. It is the most versatile technique for studying ion channel function.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Patch-clamp configurations"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about neurotransmitter co-transmission:\nS1: Many neurons release multiple neurotransmitters \u2014 a classical small-molecule transmitter and one or more neuropeptides \u2014 from the same terminal.\nS2: Small-molecule transmitters and neuropeptides are stored in different vesicle types (small clear vesicles vs. large dense-core vesicles) with different release properties.\nS3: Co-released peptides and classical transmitters always act on the same postsynaptic receptors.\nS4: Dale's principle (one neuron, one transmitter) is now known to be an oversimplification, as co-transmission is widespread.",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TTTF",
+        "TFTT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: Co-transmission is the rule rather than the exception. Many neurons release a classical transmitter (glutamate, GABA, ACh, etc.) alongside one or more neuropeptides. Examples: sympathetic neurons release norepinephrine + neuropeptide Y; parasympathetic neurons release ACh + VIP; some GABAergic interneurons release GABA + somatostatin or cholecystokinin. S2 is TRUE: Classical transmitters are stored in small synaptic vesicles (SSVs, ~40 nm) that fuse at active zones upon single APs. Neuropeptides are in large dense-core vesicles (LDCVs, 80-200 nm) that require burst/high-frequency firing for release and fuse at perisynaptic sites. The different release conditions allow activity-dependent regulation of co-transmission. S3 is FALSE: Co-released molecules typically act on DIFFERENT receptor types. For example, at sympathetic neuroeffector junctions, norepinephrine acts on adrenergic receptors (fast) while NPY acts on Y receptors (slow, modulatory). This provides complementary fast and slow signaling. S4 is TRUE: Dale's original observation (that a neuron releases the same transmitter at all its terminals) has been extended and corrected \u2014 neurons commonly release multiple transmitters, and the specific combination is an important determinant of circuit function.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Co-transmission"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "In an experiment measuring synaptic currents, a researcher records EPSCs at holding potentials of -80, -60, -40, -20, 0, +20, and +40 mV. In the control condition (no drugs), the I-V curve shows an approximately linear relationship with a reversal potential near 0 mV. After adding 50 uM APV (NMDA blocker), the I-V curve remains linear but with smaller currents, still reversing near 0 mV. The APV-sensitive component (control minus APV = NMDA current) shows a characteristic J-shaped I-V curve with a region of negative slope conductance between -80 and -40 mV. What causes this J-shaped NMDA I-V curve?",
+      "options": [
+        "NMDA receptors have unusual ion selectivity that changes with voltage",
+        "The voltage-dependent Mg2+ block reduces NMDA channel conductance at negative potentials, creating a region of increasing current with depolarization (negative slope conductance) until the block is fully relieved around -20 mV, after which the I-V relationship becomes linear",
+        "NMDA receptors are inactivated at negative potentials",
+        "The APV subtraction introduces mathematical artifacts"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The J-shaped (or N-shaped) I-V curve of NMDA receptors is a hallmark of their voltage-dependent Mg2+ block. At very negative potentials (-80 mV), the strong inward electrical field drives Mg2+ deep into the pore, causing nearly complete block \u2014 only a small inward current flows despite the large driving force. As the membrane depolarizes from -80 to -20 mV, the Mg2+ block is progressively relieved (Mg2+ is expelled from the pore), and the conductance INCREASES. In this range (-80 to -20 mV), the NMDA current becomes MORE inward with depolarization \u2014 the opposite of normal behavior (normally, depolarization reduces inward current by reducing driving force). This produces the region of 'negative slope conductance' (current increasing with depolarization). Above -20 mV, the Mg2+ block is essentially fully relieved, and the I-V relationship becomes approximately linear (current decreasing with depolarization as driving force diminishes), reversing near +10 mV. This negative slope conductance region is functionally important because it enables NMDA receptors to act as regenerative amplifiers of depolarization.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "NMDA I-V curve"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "In an experiment on synaptic transmission at the Calyx of Held synapse (a giant glutamatergic synapse), reducing extracellular Ca2+ from 2 mM to 0.5 mM decreases the evoked EPSC amplitude from 10 nA to 0.3 nA \u2014 a >30-fold reduction for only a 4-fold reduction in Ca2+. This steep Ca2+ dependence indicates a cooperative relationship between Ca2+ and release. What is the approximate Hill coefficient (cooperativity) of Ca2+ for neurotransmitter release?",
+      "options": [
+        "1 (linear relationship)",
+        "4-5, indicating that approximately 4-5 Ca2+ ions must bind cooperatively to trigger vesicle fusion",
+        "10 (extremely cooperative)",
+        "0.5 (negatively cooperative)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The relationship between extracellular Ca2+ concentration and neurotransmitter release follows a power-law relationship: Release \u221d [Ca2+]^n, where n is the Hill coefficient (cooperativity). From the data: at 2 mM Ca2+, EPSC = 10 nA; at 0.5 mM Ca2+, EPSC = 0.3 nA. If Release \u221d [Ca2+]^n, then 10/0.3 = (2/0.5)^n \u2192 33 = 4^n \u2192 n = log(33)/log(4) = 1.52/0.60 = 2.5. However, this underestimates the true cooperativity because reducing extracellular Ca2+ also reduces single-channel Ca2+ current, not just channel open probability. Direct measurements of intracellular Ca2+ transients vs. release show a Hill coefficient of approximately 4-5. This reflects the binding of ~5 Ca2+ ions to synaptotagmin-1 (3 to C2A + 2 to C2B) cooperatively triggering the fusion reaction. This high cooperativity is essential for the temporal precision of synaptic transmission \u2014 the Ca2+ signal from a brief channel opening sharply triggers fusion, and release terminates quickly as Ca2+ is buffered.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Ca2+ cooperativity of release"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A neuron at rest has the following ion concentrations: [K+]in = 140 mM, [K+]out = 5 mM, [Na+]in = 15 mM, [Na+]out = 145 mM. The membrane has relative permeabilities PK:PNa = 1:0.04. Using the simplified GHK equation (ignoring Cl-): Vm = 61.5 log[(PK[K+]out + PNa[Na+]out)/(PK[K+]in + PNa[Na+]in)], what is the predicted resting membrane potential at 37\u00b0C?",
+      "options": [
+        "-90 mV",
+        "-86 mV",
+        "-66 mV",
+        "-55 mV"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Using the simplified GHK equation at 37\u00b0C (using log base 10 with 61.5 mV prefactor): Vm = 61.5 \u00d7 log[(1\u00d75 + 0.04\u00d7145) / (1\u00d7140 + 0.04\u00d715)] = 61.5 \u00d7 log[(5 + 5.8) / (140 + 0.6)] = 61.5 \u00d7 log[10.8 / 140.6] = 61.5 \u00d7 log[0.0768] = 61.5 \u00d7 (-1.115) = -68.6 mV, approximately -66 to -69 mV. This is close to the typical neuronal resting potential of -70 mV. The calculation shows how the small Na+ permeability (PNa = 0.04 \u00d7 PK) pulls the membrane potential positive from the K+ equilibrium potential (EK = 61.5 \u00d7 log[5/140] = -89 mV) toward ENa. If PNa were zero, Vm would equal EK (-89 mV). The approximately -20 mV difference between EK and the resting Vm is due to the small but non-zero Na+ permeability, which provides a tonic depolarizing influence balanced by K+ efflux through leak channels.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "GHK calculation"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to measure the release probability (Pr) at individual synaptic boutons of a cortical neuron. Which technique allows direct visualization of vesicle fusion events at single synapses?",
+      "options": [
+        "Standard electrophysiology with patch-clamp recording",
+        "FM dye staining/destaining: load FM1-43 dye into recycling vesicles by stimulation in the presence of dye, then stimulate again and measure the rate of fluorescence decrease (destaining) at individual boutons, which reflects release probability",
+        "Western blot for synaptic vesicle proteins",
+        "fMRI imaging of neural activity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "FM dyes (FM1-43, FM4-64) are amphiphilic styryl dyes that insert into the outer leaflet of membranes during endocytosis. The protocol: (1) Loading: Stimulate the neuron in the presence of FM dye. Vesicles that fuse and recycle incorporate dye into their membranes. (2) Wash: Remove extracellular dye. Fluorescent puncta represent presynaptic boutons containing dye-loaded vesicles. (3) Destaining: Stimulate again (without dye). Each vesicle fusion event releases a packet of FM dye into the bath. The rate of fluorescence loss at individual boutons reflects the rate of exocytosis and thus the release probability. High-Pr boutons destain rapidly; low-Pr boutons destain slowly. Alternative approaches include: pHluorin-tagged vesicle proteins (SypHy, vGlut1-pHluorin) that fluoresce when the vesicle lumen is exposed to neutral extracellular pH during fusion, and iGluSnFR (genetically encoded glutamate sensor) that detects glutamate release at individual synapses.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "FM dye release probability"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine whether a drug acts presynaptically (changing release) or postsynaptically (changing receptor function), a researcher analyzes miniature EPSCs (mEPSCs) in the presence of TTX before and after drug application. If the drug reduces mEPSC amplitude by 50% without changing mEPSC frequency, what is the site of drug action?",
+      "options": [
+        "Presynaptic \u2014 the drug reduces the amount of neurotransmitter per vesicle",
+        "Postsynaptic \u2014 the drug reduces receptor number or conductance at the synapse, since mEPSC amplitude reflects the postsynaptic response to a single quantum while mEPSC frequency reflects presynaptic release rate",
+        "Both pre- and postsynaptic equally",
+        "The drug has no effect on synaptic transmission"
+      ],
+      "correctAnswer": "B",
+      "explanation": "mEPSC analysis is a powerful method for localizing drug effects to pre- or postsynaptic compartments. mEPSCs are recorded in TTX (blocking all action potentials), so they represent the postsynaptic response to spontaneous (AP-independent) single vesicle fusion events. Two parameters are analyzed: (1) mEPSC amplitude: Reflects the postsynaptic response to one quantum of neurotransmitter \u2014 determined by the number and conductance of postsynaptic receptors, spine geometry, and dendritic cable properties. A change in amplitude indicates a postsynaptic effect (e.g., drug blocking some receptors, reducing single-channel conductance, or promoting receptor internalization). (2) mEPSC frequency: Reflects the rate of spontaneous vesicle fusion \u2014 determined by the number of release sites and the probability of spontaneous fusion at each. A change in frequency indicates a presynaptic effect (e.g., drug changing spontaneous release rate, or changing the number of functional synapses). In this case: reduced amplitude + unchanged frequency = purely postsynaptic action.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "mEPSC pre-post analysis"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To study the role of a specific interneuron subtype (parvalbumin-positive basket cells) in gamma oscillations, a researcher needs to selectively silence these neurons during oscillatory network activity. Which approach provides the most temporally precise and reversible inhibition?",
+      "options": [
+        "Permanently ablate PV+ interneurons with a targeted toxin",
+        "Express the inhibitory opsin halorhodopsin (NpHR) or the chloride-conducting channelrhodopsin (GtACR) selectively in PV+ neurons using a PV-Cre mouse line crossed with a Cre-dependent opsin line, then deliver yellow/green light to hyperpolarize these neurons with millisecond temporal precision during gamma oscillation epochs",
+        "Apply the GABA_A antagonist bicuculline to block all inhibition",
+        "Reduce the temperature of the brain slice to slow PV+ neuron firing"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Optogenetic silencing with inhibitory opsins provides the ideal combination of cell-type specificity, temporal precision, and reversibility. The experimental design: (1) Use PV-Cre transgenic mice crossed with Cre-dependent opsin reporters (e.g., Ai39 for eNpHR3.0, or viral injection of AAV-DIO-GtACR1-EGFP). This expresses the inhibitory opsin exclusively in parvalbumin-positive (PV+) interneurons. (2) During gamma oscillation recording (measured by local field potential or multi-electrode array), deliver yellow light (590 nm for NpHR) or blue light (470 nm for GtACR1) to activate the Cl- pump/channel. NpHR pumps Cl- into the cell; GtACR1 conducts Cl- into the cell \u2014 both hyperpolarize and silence PV+ neurons. (3) Light ON/OFF provides millisecond-resolution control \u2014 oscillation disruption during light-ON followed by recovery during light-OFF demonstrates the causal role of PV+ neurons. Permanent ablation is irreversible and allows compensation. Bicuculline blocks all GABA_A receptors (no cell-type specificity). Temperature changes are nonspecific.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Optogenetic silencing of interneurons"
     }
   ]
 }
