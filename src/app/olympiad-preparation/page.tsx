@@ -362,6 +362,24 @@ export default function OlympiadPreparationPage() {
         </div>
       </section>
 
+      {/* Olympiad MCQ Practice CTA */}
+      <section className="py-16 bg-gradient-to-br from-green-50 to-teal-50">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Practice Olympiad MCQs Online</h2>
+          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+            Sharpen your Biology Olympiad skills with our free practice tool featuring 5,900+ questions
+            from Campbell Biology — covering IBO, USABO, INBO, and more.
+          </p>
+          <Link
+            href="/neet-biology-mcq?source=olympiad"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition-colors shadow-lg hover:shadow-xl text-lg"
+          >
+            Start Olympiad Practice
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+          </Link>
+        </div>
+      </section>
+
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">

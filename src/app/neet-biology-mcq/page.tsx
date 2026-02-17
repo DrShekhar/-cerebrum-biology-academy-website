@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useToast } from '@/components/ui/Toast'
 import { ChevronRight, Maximize2, Minimize2 } from 'lucide-react'
 import QuestionRenderer from '@/components/mcq/QuestionRenderer'
@@ -23,6 +23,7 @@ import { LEAD_CAPTURE_CONFIG } from '@/lib/mcq/types'
 
 export default function NEETBiologyMCQPage() {
   const router = useRouter()
+  const searchParams = useSearchParams()
   const { showToast } = useToast()
 
   // Session & User State
@@ -66,6 +67,14 @@ export default function NEETBiologyMCQPage() {
     pyq: number
     olympiad: number
   } | null>(null)
+
+  // Read ?source= URL param to pre-select content source tab
+  useEffect(() => {
+    const source = searchParams.get('source')
+    if (source && ['ncert', 'pyq', 'olympiad'].includes(source)) {
+      setContentSource(source as ContentSource)
+    }
+  }, [searchParams])
 
   // Derived states from contentSource
   const isNcertOnly = contentSource === 'ncert'
