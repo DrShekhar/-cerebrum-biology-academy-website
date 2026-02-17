@@ -664,6 +664,326 @@
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
       "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Polycomb group (PcG) and Trithorax group (TrxG) proteins maintain gene expression states established during development. How do they function?",
+      "options": [
+        "PcG proteins activate all genes while TrxG proteins repress all genes",
+        "PcG proteins maintain gene silencing through histone H3K27 trimethylation (by PRC2 complex) and chromatin compaction (by PRC1 complex), while TrxG proteins maintain gene activation through histone H3K4 trimethylation and chromatin opening — together they ensure that cell identity is stably inherited through cell divisions",
+        "Both PcG and TrxG modify DNA sequence directly to control gene expression",
+        "PcG and TrxG are transcription factors that bind to promoters and directly control RNA polymerase activity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "PcG and TrxG proteins form an epigenetic memory system that maintains developmental gene expression patterns: (1) Polycomb Repressive Complexes: PRC2 (core: EZH2/EZH1, SUZ12, EED) is a histone methyltransferase that catalyzes H3K27me3 (trimethylation of histone H3 lysine 27), a repressive histone mark. PRC1 (core: RING1A/B, BMI1, CBX) recognizes H3K27me3 through the CBX chromodomain, ubiquitinates histone H2A at lysine 119 (H2AK119ub), and mediates chromatin compaction. Together, PRC1 and PRC2 maintain transcriptional silencing of developmental genes (especially Hox genes) in cells where those genes should remain off. (2) Trithorax complexes: TrxG proteins include the MLL/COMPASS complex (catalyzes H3K4me3, an activating mark), SWI/SNF chromatin remodeling complexes (use ATP to slide nucleosomes and open chromatin), and Mediator complex. These maintain active transcription of developmental genes in cells where those genes should remain on. (3) Bistable switch: The PcG/TrxG system creates a bistable epigenetic switch at each developmental gene locus — once a gene is silenced (PcG-marked) or activated (TrxG-marked) during development, that state is maintained through subsequent cell divisions. (4) Hox gene regulation: The most studied PcG/TrxG targets are Hox genes. PcG mutations cause posterior homeotic transformations (derepression of posterior Hox genes in anterior segments), while TrxG mutations cause anterior transformations (failure to maintain Hox expression). (5) Cancer: EZH2 is overexpressed in many cancers, and EZH2 inhibitors (tazemetostat) are used in cancer therapy. MLL translocations cause aggressive leukemias.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "The formation of the three germ layers during gastrulation is a fundamental event in animal development. Which correctly matches each germ layer with its derivatives?",
+      "options": [
+        "Ectoderm gives rise to muscle, mesoderm gives rise to nerves, endoderm gives rise to skin",
+        "Ectoderm gives rise to the nervous system and epidermis; mesoderm gives rise to muscle, skeleton, cardiovascular system, and kidneys; endoderm gives rise to the digestive tract lining, liver, pancreas, and respiratory epithelium",
+        "All three germ layers produce identical cell types with complete interchangeability",
+        "Endoderm gives rise to all external structures while ectoderm gives rise to all internal organs"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Germ layer fate specification is highly conserved across triploblastic animals: (1) Ectoderm (outermost layer): The ectoderm gives rise to: (a) Surface ectoderm — epidermis (skin), hair, nails, sweat glands, mammary glands, tooth enamel, lens of the eye, anterior pituitary (Rathke's pouch); (b) Neuroectoderm — entire central nervous system (brain, spinal cord, retina), neural crest cells (which produce peripheral nervous system, melanocytes, craniofacial skeleton, adrenal medulla); (c) Sensory placodes — lens, otic vesicle (inner ear), olfactory epithelium. (2) Mesoderm (middle layer): Mesoderm gives rise to: (a) Axial mesoderm — notochord (later nucleus pulposus); (b) Paraxial mesoderm — somites → skeletal muscle, vertebrae, ribs, dermis of the back; (c) Intermediate mesoderm — kidneys, ureters, gonads, adrenal cortex; (d) Lateral plate mesoderm — cardiovascular system (heart, blood vessels, blood), smooth muscle, body wall, limb skeleton, serous membranes (pleura, peritoneum), spleen. (3) Endoderm (innermost layer): Endoderm gives rise to: (a) Epithelial lining of the digestive tract (pharynx to rectum); (b) Liver and pancreas (as outgrowths of foregut endoderm); (c) Respiratory epithelium (lungs, trachea — as ventral outgrowth of foregut); (d) Thyroid, parathyroid, thymus (from pharyngeal pouch endoderm); (e) Urinary bladder and urethra lining. (4) Exceptions: Neural crest cells, derived from ectoderm, produce many mesenchymal derivatives (bone, cartilage) normally associated with mesoderm — they are sometimes called the 'fourth germ layer.'",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to create a fate map of the early zebrafish embryo to determine which cells contribute to which adult structures. Which technique would provide the most precise single-cell resolution fate map?",
+      "options": [
+        "Observe embryos under a standard microscope and infer cell fates from position",
+        "Inject individual blastomeres with a fluorescent lineage tracer (such as fluorescein-dextran or photoconvertible fluorescent proteins like Kaede), then follow the labeled cells and their descendants through development using confocal microscopy to determine which tissues they contribute to",
+        "Stain all cells with the same dye and observe color changes",
+        "Remove individual cells and observe which structures are missing"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Fate mapping is the cornerstone of understanding embryonic development and has evolved from classical to modern techniques: (1) Fluorescent lineage tracers: Injecting fluorescein-dextran (a large, cell-impermeant molecule that is inherited by all daughter cells) or rhodamine-dextran into individual blastomeres at specific stages labels that cell and all its progeny permanently. Using confocal time-lapse microscopy, the researcher can follow labeled cells throughout development and determine their final tissue contributions. (2) Photoconvertible proteins: Kaede protein (from the stony coral Trachyphyllia geoffroyi) converts from green to red fluorescence upon UV exposure. By expressing Kaede ubiquitously and photoconverting specific cells at defined stages, researchers can mark cells without injection. The red-converted cells and their descendants are distinguishable from unconverted cells. More advanced versions (KikGR, Dendra2, mEos) offer reversible or sequential conversion. (3) Genetic approaches: Cre-loxP lineage tracing uses tissue-specific Cre drivers to permanently activate a reporter (like GFP from a Rosa26 locus) in specific cell populations. CreERT2 (tamoxifen-inducible) adds temporal control. These approaches are widely used in mouse development. (4) Why zebrafish: Zebrafish embryos are transparent (allowing live imaging), develop externally, have a short generation time (3 months), and are genetically tractable. (5) Classic fate maps: Fate maps of Xenopus (Dale and Slack, 1987) and zebrafish (Kimmel et al., 1990) were foundational. They revealed that cell fates are largely predictable at the 32-cell stage but show some mixing, indicating regulative capacity. (6) Option D (cell ablation) reveals necessity, not normal fate — a cell that is needed for a structure may not normally contribute to it.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the role of FGF signaling in mesoderm induction during vertebrate embryogenesis?",
+      "options": [
+        "FGF inhibits all mesoderm formation and promotes ectoderm exclusively",
+        "FGF signaling cooperates with Nodal/Activin signaling to induce and pattern mesoderm — FGF is required for mesoderm maintenance and posterior mesoderm specification, while Nodal provides the primary inductive signal with high Nodal levels specifying dorsal mesoderm (organizer) and low levels specifying ventral mesoderm",
+        "FGF acts exclusively on endoderm with no role in mesoderm",
+        "FGF signaling replaces Nodal entirely and is the sole mesoderm inducer"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mesoderm induction involves the interplay of multiple signaling pathways: (1) Nodal as primary inducer: Nodal (a TGF-beta superfamily member) is the primary mesoderm-inducing signal. In Xenopus, maternal VegT activates Nodal-related genes (Xnr1-6) in the vegetal hemisphere. Nodal acts in a concentration-dependent manner — high Nodal levels induce dorsal/anterior mesoderm (organizer: notochord, head mesoderm), medium levels induce lateral mesoderm (somites, kidney), and low levels induce ventral mesoderm (blood, lateral plate). (2) FGF cooperation: FGF signaling (primarily FGF4 and FGF8, acting through FGFR1/MAPK-ERK pathway) is required for mesoderm to be induced and maintained: (a) Competence: FGF signaling makes ectoderm competent to respond to Nodal. Blocking FGF prevents Nodal-induced mesoderm formation. (b) Maintenance: FGF maintains mesodermal gene expression — cells induced by Nodal revert to ectodermal fate if FGF is subsequently blocked. (c) Posterior specification: FGF promotes posterior mesodermal fates. High FGF levels specify posterior mesoderm (tail structures), while low FGF allows anterior mesoderm fates. (3) BMP modulation: BMP4/7 (another TGF-beta family member) patterns the mesoderm along the dorsal-ventral axis. High BMP promotes ventral mesoderm (blood), low BMP (due to organizer-secreted antagonists) promotes dorsal mesoderm (notochord, muscle). (4) Integration: The combination of Nodal level, FGF signaling strength, BMP activity, and Wnt signaling collectively specifies the many mesodermal subtypes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about cleavage patterns across different animal groups:\n(I) Radial holoblastic cleavage (equal, symmetrical divisions through the entire egg) is characteristic of sea urchins and amphibians.\n(II) Spiral holoblastic cleavage, where successive cleavage planes are tilted obliquely, is characteristic of most mollusks and annelids.\n(III) Discoidal meroblastic cleavage (cell division restricted to a small disc at the animal pole) occurs in birds and reptiles due to the large yolk mass preventing complete cell division.\n(IV) Superficial cleavage (nuclear division without cytokinesis, forming a syncytium) is unique to mammals and does not occur in insects.",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "Analysis of each statement: (I) TRUE — Radial holoblastic cleavage occurs in eggs with relatively little yolk (isolecithal to moderately telolecithal). In sea urchins, cleavage is radial and initially equal. In amphibians (Xenopus), cleavage is radial but unequal — the vegetal hemisphere contains more yolk, so vegetal blastomeres are larger (macromeres) than animal blastomeres (micromeres). The cleavage furrow passes completely through the egg in both cases (holoblastic). (II) TRUE — Spiral cleavage is a highly derived cleavage pattern found in the Spiralia clade (mollusks, annelids, nemerteans, flatworms, and some other lophotrochozoans). Each cleavage plane is tilted approximately 45 degrees from the animal-vegetal axis, with the direction alternating between dextral (clockwise) and sinistral (counterclockwise). This produces daughter cells that sit in the furrows between their sister cells, creating a characteristic spiral arrangement. Spiral cleavage is highly deterministic — the fate of each blastomere is predictable based on its position in the spiral pattern. (III) TRUE — Birds, reptiles, and most fish have telolecithal eggs with massive yolk deposits. Cleavage furrows cannot penetrate the dense yolk, so cell division is restricted to a small blastodisc at the animal pole (meroblastic discoidal cleavage). The result is a flat disc of cells (the blastoderm) sitting atop the undivided yolk mass. (IV) FALSE — Superficial cleavage is characteristic of insects (including Drosophila), NOT mammals. In Drosophila, the fertilized egg undergoes 13 rapid rounds of nuclear division without cytokinesis, creating a syncytial blastoderm with ~6000 nuclei sharing a common cytoplasm. Nuclei then migrate to the periphery and cellularize simultaneously. Mammals have holoblastic rotational cleavage.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the Turing reaction-diffusion mechanism, and how does it apply to biological pattern formation?",
+      "options": [
+        "Turing mechanism involves direct mechanical forces shaping tissue patterns",
+        "A Turing system involves two diffusible molecules — a short-range activator and a long-range inhibitor — whose interaction spontaneously generates stable periodic patterns (spots, stripes) from initially uniform conditions through local self-activation and lateral inhibition",
+        "Turing mechanism requires pre-existing spatial information and cannot generate patterns de novo",
+        "A Turing system involves only a single molecule acting uniformly across the tissue"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Alan Turing's 1952 paper 'The Chemical Basis of Morphogenesis' proposed a mathematical framework for spontaneous pattern formation: (1) Core concept: Two diffusible morphogens interact — an activator (A) that promotes its own production (positive feedback) and also promotes production of an inhibitor (I), and an inhibitor that represses the activator. The critical requirement is that the inhibitor diffuses faster than the activator (long-range inhibition, short-range activation). (2) Pattern emergence: Starting from a uniform state with small random fluctuations, this system amplifies perturbations — wherever activator is slightly higher, it locally boosts itself while also producing inhibitor that diffuses away and suppresses activator in neighboring regions. This generates stable periodic patterns: spots, stripes, or labyrinthine patterns depending on parameter values. (3) Biological examples: (a) Digit patterning — BMP/Wnt as activator, Sox9 as downstream target, Noggin/FGF as inhibitor, generating periodic digit/interdigit pattern; (b) Hair follicle spacing — Wnt/beta-catenin as activator, DKK/sFRP as inhibitor, generating regular follicle spacing; (c) Feather bud patterning in chick skin; (d) Zebrafish skin pigmentation stripes — interaction between melanophore (black) and xanthophore (yellow) pigment cells; (e) Left-right asymmetry in some models. (4) Mathematical formulation: da/dt = f(a,i) + Da*nabla^2(a); di/dt = g(a,i) + Di*nabla^2(i), where Di >> Da (inhibitor diffuses faster). (5) Verification: Computational modeling predicts specific parameter relationships, and experimental perturbation of component concentrations or diffusion rates produces predicted pattern changes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studies the timing and location of Hox gene expression during mouse embryogenesis:\n\nHox gene | Expression onset (E day) | Anterior expression boundary | Posterior expression | Chromosomal position\nHoxa1 | E7.5 | Rhombomere 4 | Entire posterior | 3' end\nHoxa4 | E8.0 | Cervical somite 1 | Entire posterior | Middle\nHoxa9 | E8.5 | Thoracolumbar junction | Entire posterior | Middle-5'\nHoxa13 | E9.5 | Sacral/caudal region | Most posterior | 5' end\n\nWhat two principles of Hox gene regulation are demonstrated?",
+      "options": [
+        "All Hox genes are expressed simultaneously in all tissues",
+        "Spatial colinearity (3' genes have more anterior expression boundaries, 5' genes more posterior) and temporal colinearity (3' genes are activated earlier in development, 5' genes later), with each gene having a sharp anterior boundary but extending throughout the posterior axis",
+        "5' Hox genes are expressed first and most anteriorly",
+        "Hox gene expression shows no correlation with chromosomal position"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data illustrate two fundamental properties of Hox gene organization: (1) Spatial colinearity: The anterior boundary of expression correlates with chromosomal position. Hoxa1 (3' end of cluster) has the most anterior boundary (rhombomere 4 in the hindbrain). Hoxa4 has a more posterior boundary (cervical somite 1). Hoxa9 is further posterior (thoracolumbar junction). Hoxa13 (5' end) has the most posterior boundary (sacral/caudal region). Importantly, each gene is expressed from its anterior boundary through the entire posterior axis — Hox genes show nested, overlapping expression domains with progressively more anterior boundaries as you move 3' in the cluster. (2) Temporal colinearity: 3' genes are activated earlier (Hoxa1 at E7.5) and 5' genes progressively later (Hoxa13 at E9.5). This temporal sequence correlates with body axis elongation — as new somites are added posteriorly, more 5' Hox genes are sequentially activated. (3) Mechanism: Temporal colinearity is linked to progressive chromatin opening from the 3' end of the Hox cluster. Initially, the entire cluster is in a PcG-silenced, compact chromatin state. During development, chromatin at the 3' end opens first (losing H3K27me3, gaining H3K4me3), followed progressively by more 5' regions. This involves the opposition between PcG silencing and TrxG activation, with retinoic acid (RA) and FGF/Wnt signals influencing the rate of chromatin opening. (4) Posterior prevalence: Where expression domains overlap, the most 5' (most recently activated) Hox gene dominates segment specification. (5) Conservation: Both spatial and temporal colinearity are conserved across vertebrates and correlate with the 4-cluster organization (HoxA, B, C, D) arising from whole-genome duplications.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the role of the primary cilium in Hedgehog (Hh) signaling in vertebrates, and how does this differ from Drosophila?",
+      "options": [
+        "The primary cilium plays no role in Hedgehog signaling in any organism",
+        "In vertebrates, the primary cilium is essential for Hedgehog signal transduction — Patched localizes to the cilium and inhibits Smoothened; upon Hh ligand binding, Patched exits the cilium, Smoothened enters and activates Gli transcription factors at the cilium tip; this ciliary requirement is absent in Drosophila, which lacks primary cilia on most cells",
+        "Both Drosophila and vertebrates require cilia for Hedgehog signaling",
+        "The primary cilium inhibits all Hedgehog signaling in vertebrates"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The requirement for primary cilia in vertebrate Hedgehog signaling was an unexpected discovery that revealed a fundamental difference from Drosophila: (1) Vertebrate Hh signaling at the cilium: In the absence of Hedgehog ligand, the receptor Patched1 (PTCH1) localizes to the primary cilium membrane and prevents Smoothened (SMO) from entering the cilium. Under these conditions, Gli3 (and to some extent Gli2) is processed into a transcriptional repressor (Gli3R) at the cilium base by PKA-mediated phosphorylation and subsequent proteolytic cleavage. (2) Ligand binding: When Shh binds PTCH1, PTCH1 is internalized and degraded (exits the cilium), releasing the inhibition of SMO. SMO then accumulates in the cilium membrane. Active SMO at the cilium tip prevents Gli processing, allowing full-length Gli2 and Gli3 to function as transcriptional activators (GliA). Activated Gli proteins traffic from the cilium to the nucleus. (3) Intraflagellar transport (IFT): IFT proteins (which transport cargo along the ciliary axoneme) are essential for Hh signaling. Mutations in IFT proteins (IFT88, IFT172, Kif3a) cause loss of primary cilia and disrupt Hh signaling, phenocopying Hh pathway mutants. (4) Drosophila difference: Drosophila cells (except sensory neurons) lack primary cilia. Hh signaling in Drosophila occurs at the plasma membrane without ciliary involvement. The downstream pathway components are homologous (Patched, Smoothened, Ci/Gli) but the spatial organization differs fundamentally. (5) Clinical significance: Ciliopathies (diseases of ciliary function, such as Bardet-Biedl syndrome, Joubert syndrome) often show features of disrupted Hedgehog signaling, including polydactyly and craniofacial abnormalities.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "The blastocyst stage is critical in mammalian development. What event during blastocyst formation determines the first cell lineage decision?",
+      "options": [
+        "Differential gene expression at the 2-cell stage that permanently assigns all cell fates",
+        "Compaction and polarization at the 8-16 cell morula stage lead to differential allocation of cells to the outer trophectoderm (TE) versus the inner cell mass (ICM), mediated by the Hippo pathway — outer cells with no cell contacts on their apical surface activate YAP/TAZ and express Cdx2 (trophoblast fate), while inner cells activate Hippo signaling, inactivating YAP/TAZ, and express Oct4/Nanog (ICM fate)",
+        "Random selection at implantation determines which cells form the embryo",
+        "All cells of the blastocyst are identical with no lineage differences"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The first cell lineage decision in mammals (ICM vs TE) is a paradigm for understanding how cell position drives cell fate: (1) Compaction: At the 8-cell stage, blastomeres increase cell-cell adhesion (via E-cadherin), flatten against each other, and polarize — establishing apical (outward-facing) and basolateral (contact) domains. The apical domain is marked by Par3/Par6/aPKC and apical microvilli. (2) Inside-outside model: During the 8-to-16 and 16-to-32 cell divisions, cells can divide symmetrically (both daughters on the outside) or asymmetrically (one outside, one inside). Outside cells retain apical polarity; inside cells are surrounded by neighbors and lack a free apical surface. (3) Hippo pathway: Cell polarity and position are read by the Hippo signaling pathway. Outside cells: apical domain sequesters the Hippo pathway components (AMOT/Angiomotin associates with the apical domain away from the NF2/Merlin complex), preventing Hippo pathway activation. YAP/TAZ remain unphosphorylated, enter the nucleus, and partner with TEAD4 to activate Cdx2 (the master trophoblast transcription factor). Inside cells: lack of polarity allows NF2/AMOT interaction, activating the Hippo kinase cascade (MST1/2 → LATS1/2 → YAP/TAZ phosphorylation). Phosphorylated YAP/TAZ are retained in the cytoplasm and degraded. Without YAP/TEAD4, Cdx2 is not activated, and Oct4/Sox2/Nanog maintain pluripotency (ICM fate). (4) Mutual repression: Cdx2 and Oct4 mutually repress each other, creating a bistable switch that reinforces the TE vs ICM distinction. (5) Second lineage decision: Within the ICM, a second decision separates epiblast (Oct4/Nanog-high) from primitive endoderm (Gata6/Gata4-high), mediated by FGF4/ERK signaling.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Organogenesis involves complex tissue interactions. What is the mechanism of kidney induction in mammals?",
+      "options": [
+        "The kidney forms from a single cell type without any inductive interactions",
+        "Reciprocal induction between the ureteric bud (from the Wolffian duct) and the metanephric mesenchyme — GDNF from mesenchyme attracts and promotes branching of the ureteric bud, while Wnt9b and Wnt11 from the ureteric bud tips induce the mesenchyme to undergo mesenchymal-to-epithelial transition and form nephrons",
+        "The kidney develops entirely from endoderm through self-assembly",
+        "Neural crest cells migrate to form all kidney structures"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Kidney development (metanephric kidney) is the textbook example of reciprocal induction: (1) Initiation: The metanephric mesenchyme (derived from intermediate mesoderm) produces GDNF (glial cell line-derived neurotrophic factor), which binds to Ret/GFRalpha1 receptors on the Wolffian duct epithelium. This attracts the ureteric bud to grow out from the Wolffian duct and invade the mesenchyme. (2) Ureteric bud branching: Once in contact with the mesenchyme, the ureteric bud undergoes iterative branching morphogenesis (ultimately ~15 generations of branching). Branching is promoted by GDNF/Ret signaling and regulated by BMP, Wnt, and FGF signals from the surrounding mesenchyme. The branching pattern generates the collecting duct system and the renal pelvis/calyces. (3) Nephron induction: At each branch tip, the ureteric bud secretes Wnt9b and Wnt11, which induce adjacent metanephric mesenchyme cells to condense, undergo mesenchymal-to-epithelial transition (MET — the reverse of EMT), and form a renal vesicle. This vesicle elongates into a comma-shaped body, then an S-shaped body, and finally differentiates into a complete nephron (glomerulus, proximal tubule, loop of Henle, distal tubule) that connects to the ureteric bud-derived collecting duct. (4) Reciprocal: The interaction is truly reciprocal — mesenchyme induces bud branching (GDNF), and the bud induces nephron formation (Wnt). Neither tissue develops normally in isolation. (5) Transcription factors: Key TFs include Pax2/8 and WT1 in the mesenchyme (WT1 mutations cause Wilms tumor, a pediatric kidney cancer), and Hoxb7 in the ureteric bud.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to test whether cell fate in the early mammalian embryo is determined by position (outside vs inside) rather than by lineage (inherited from a specific parent cell). Which experiment would best test this?",
+      "options": [
+        "Sequence the genome of individual blastomeres",
+        "Disaggregate an 8-cell embryo, reaggregate the cells in a new random arrangement, allow development to proceed, and demonstrate that cells adopt fates based on their new positions (outside cells become trophectoderm, inside cells become ICM) regardless of their original position in the embryo",
+        "Observe natural development without manipulation",
+        "Count the number of cells at each developmental stage"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This experiment directly tests the inside-outside hypothesis of mammalian cell fate determination: (1) Experimental logic: If cell fate is determined by lineage (inherited determinants), then reassembling cells in new positions should not change their fate — they should develop according to their original position. If cell fate is determined by current position, cells should adopt new fates matching their new positions. (2) Procedure: (a) Dissociate an 8-cell embryo into individual blastomeres using calcium-free medium (to disrupt E-cadherin-mediated adhesion). (b) Reaggregate the cells in a random arrangement (or specifically place cells in new positions). (c) Culture to the blastocyst stage and assess lineage allocation using markers: Cdx2 for trophectoderm, Oct4/Nanog for ICM. (3) Expected result if position-dependent: Cells on the outside of the reaggregate adopt trophectoderm fate (Cdx2+), cells on the inside adopt ICM fate (Oct4+/Nanog+), regardless of their original position. This was indeed observed in classic experiments by Tarkowski and Wroblewska (1967) and confirmed with modern molecular markers. (4) Additional evidence: When two 8-cell embryos are combined (creating a chimeric 16-cell morula), cells adopt fates based on their position in the combined aggregate — both sets of cells contribute to both TE and ICM. This demonstrates regulative development and position-dependent fate specification. (5) Molecular mechanism: As discussed, the Hippo pathway reads cell polarity (outside vs inside position) and activates the appropriate transcriptional programs. (6) Caveats: While position is the primary determinant, recent studies show subtle biases — the first cleavage plane may influence the proportion of cells allocated to ICM vs TE, suggesting some very early asymmetries.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Angiogenesis (formation of new blood vessels from existing ones) is critical during embryonic development and wound healing. What distinguishes angiogenesis from vasculogenesis?",
+      "options": [
+        "Angiogenesis and vasculogenesis are identical processes",
+        "Vasculogenesis is the de novo formation of blood vessels from angioblasts (mesodermal precursors) that coalesce into a primary vascular plexus, while angiogenesis is the sprouting of new vessels from pre-existing ones, driven by VEGF signaling that activates endothelial tip cells to extend filopodia and guide new sprouts toward hypoxic tissue",
+        "Vasculogenesis occurs only in adults while angiogenesis occurs only in embryos",
+        "Angiogenesis produces only lymphatic vessels while vasculogenesis produces blood vessels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Blood vessel formation involves two distinct but sequential processes: (1) Vasculogenesis (embryonic, de novo): During early embryogenesis, mesodermal cells differentiate into angioblasts (endothelial progenitor cells) under the influence of FGF and BMP signaling. Angioblasts express VEGFR2 (KDR/Flk1) and coalesce to form blood islands (aggregates of angioblasts surrounding hematopoietic precursors). These blood islands fuse to form a primary vascular plexus — a simple, honeycomb-like network of vessels. This occurs in the yolk sac (extraembryonic vasculogenesis) and within the embryo proper. (2) Angiogenesis (sprouting from existing vessels): The primary plexus is remodeled and expanded through angiogenesis — sprouting of new vessel branches from pre-existing vessels. The key driver is VEGF-A (vascular endothelial growth factor A), which is secreted by hypoxic tissues. VEGF binds VEGFR2 on endothelial cells, activating a tip cell that extends filopodia and guides the growing sprout. (3) Tip-stalk cell selection: Delta-Notch lateral inhibition selects tip vs stalk cells. VEGF induces Dll4 (Delta-like 4) in the tip cell; Dll4 activates Notch in adjacent cells, suppressing their VEGFR2 expression and making them stalk cells (which proliferate to extend the sprout but do not lead). (4) Clinical: Tumor angiogenesis (driven by tumor-secreted VEGF) is targeted by anti-angiogenic therapies (bevacizumab/Avastin, anti-VEGF antibody). VEGF knockout is embryonic lethal (even heterozygous). (5) Lymphangiogenesis: Lymphatic vessels develop from venous endothelium under Prox1 transcription factor control, using VEGF-C/VEGFR3 signaling.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Teratology is the study of birth defects. What is the critical period concept, and why are the first 8 weeks of human gestation particularly sensitive to teratogens?",
+      "options": [
+        "The critical period is when the fetus is largest and therefore most exposed to toxins",
+        "The critical period is the time window during which an organ system is undergoing active morphogenesis and is most susceptible to teratogenic disruption — the first 8 weeks encompass organogenesis (formation of all major organ systems), making this the period of greatest vulnerability to structural birth defects",
+        "The critical period is the third trimester when organs are fully formed",
+        "There is no critical period — all stages of development are equally susceptible"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The critical period concept is fundamental to teratology and reproductive toxicology: (1) Definition: The critical period for an organ is the developmental window during which that organ is undergoing active morphogenesis — cell proliferation, migration, differentiation, and pattern formation. During this window, the organ is exquisitely sensitive to disruption by teratogens (chemicals, radiation, infections, nutritional deficiencies). Before the critical period, the organ has not yet begun forming; after it, the major structures are established and less vulnerable. (2) Human timeline: Weeks 3-8 of gestation (embryonic period) encompass organogenesis — all major organ systems are established. The heart begins forming at week 3, limbs at weeks 4-8, face at weeks 5-8, and external genitalia at weeks 7-12. This is the period of maximum susceptibility to structural birth defects (malformations). (3) All-or-nothing period: Weeks 1-2 (pre-implantation) follow an 'all-or-nothing' rule — severe damage kills the embryo, while mild damage is repaired due to the regulative capacity of the early embryo. Few structural defects result from teratogen exposure during this period. (4) Fetal period: After week 8, organs continue to grow and mature but major structural patterns are established. Teratogen exposure during the fetal period causes functional defects (growth restriction, intellectual disability) rather than major structural malformations. (5) Organ-specific timing: Neural tube closure (weeks 3-4), heart septation (weeks 4-8), palate fusion (weeks 6-9), and limb development (weeks 4-8) each have distinct critical periods. Thalidomide, for example, causes limb defects (phocomelia) only when taken during days 20-36 post-fertilization, correlating precisely with the limb bud critical period.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "Somatic cell nuclear transfer (SCNT) was used to create Dolly the sheep. What key developmental biology principle did this experiment demonstrate?",
+      "options": [
+        "That adult somatic cells have irreversibly lost genetic information during differentiation",
+        "That the nucleus of a differentiated adult somatic cell retains all the genetic information needed to direct development of an entire organism — proving that cell differentiation involves changes in gene expression rather than gene loss, and that the cytoplasm of an enucleated oocyte contains factors capable of epigenetically reprogramming a somatic nucleus to totipotency",
+        "That embryonic development requires only cytoplasm without any nuclear contribution",
+        "That mitochondrial DNA alone can direct embryonic development"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Dolly (born 1996, Campbell and Wilmut) was the first mammal cloned from an adult somatic cell and provided definitive proof of nuclear equivalence: (1) Experiment: The nucleus from a mammary gland epithelial cell of an adult Finn Dorset ewe was transferred into an enucleated (nucleus-removed) oocyte from a Scottish Blackface ewe. The reconstructed embryo was activated electrically, cultured to the blastocyst stage, and transferred to a surrogate mother. Dolly was genetically identical to the Finn Dorset mammary cell donor. (2) Nuclear equivalence: This proved that a fully differentiated adult cell nucleus retains the complete genome — no genes are permanently lost during differentiation (with minor exceptions like immunoglobulin gene rearrangement in lymphocytes and red blood cell enucleation). Cell specialization is achieved through differential gene expression (epigenetic regulation), not gene loss. (3) Reprogramming: The oocyte cytoplasm contains reprogramming factors that can reset the somatic nucleus's epigenetic state — removing differentiation-specific epigenetic marks (DNA methylation patterns, histone modifications) and re-establishing a totipotent state. This is conceptually related to iPSC reprogramming but achieved by oocyte factors rather than defined transcription factors. (4) Limitations: SCNT is extremely inefficient (Dolly was the only success from 277 attempts, <0.4% efficiency), and cloned animals often show abnormalities — aberrant DNA methylation, premature aging, telomere shortening, large offspring syndrome, and immune deficiencies. These reflect incomplete epigenetic reprogramming. (5) Historical context: Earlier nuclear transfer experiments in amphibians (Briggs and King, 1952; Gurdon, 1962) demonstrated nuclear equivalence with frog intestinal cells, earning Gurdon the 2012 Nobel Prize alongside Yamanaka.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the role of the primitive streak in avian and mammalian gastrulation?",
+      "options": [
+        "The primitive streak is a permanent structure that persists into adulthood",
+        "The primitive streak is a transient midline groove in the epiblast through which cells ingress via EMT to form mesoderm (moving laterally and anteriorly) and definitive endoderm (displacing the hypoblast), with Hensen's node at its anterior tip functioning as the organizer equivalent",
+        "The primitive streak forms only in the extraembryonic membranes",
+        "The primitive streak generates only ectodermal derivatives"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The primitive streak is the site of gastrulation in amniote embryos (birds, reptiles, mammals): (1) Formation: In the chick, the primitive streak forms as a thickening of the epiblast at the posterior marginal zone, then elongates anteriorly across the epiblast surface. In the mouse, it forms at the posterior end of the epiblast at E6.5. The streak is induced by Nodal and Wnt signaling. (2) EMT and ingression: Epiblast cells converge toward the streak from both sides, undergo EMT (losing E-cadherin, gaining N-cadherin, Snail/Slug activation), and ingress through the streak into the interior of the embryo. This is the primary mechanism of gastrulation in amniotes. (3) Germ layer formation: Cells that ingress through the anterior streak early form definitive endoderm (replacing the hypoblast/visceral endoderm). Cells that ingress later and through the more posterior streak form mesoderm — which migrates laterally between the epiblast and endoderm. Epiblast cells that do not ingress become ectoderm. (4) Hensen's node: The anterior tip of the primitive streak (Hensen's node in chick, the node in mouse) is the organizer equivalent of Spemann's organizer. It secretes BMP antagonists (Chordin, Noggin), Wnt antagonists (Cerberus, DKK1), and Nodal antagonists (Lefty), inducing neural tissue and organizing the body axes. Cells that pass through the node form the notochord (axial mesoderm). (5) Regression: As the embryo elongates, the streak shortens from anterior to posterior, eventually remaining only as the tail bud. Failure of streak regression causes sacrococcygeal teratoma. (6) Mammals: The process is essentially identical in mice and humans, though occurring in a cup-shaped (mouse) or flat disc (human, chick) geometry.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Development"
+    },
+    {
+      "type": "MCQ",
+      "question": "What role does the extracellular matrix (ECM) play in embryonic cell migration?",
+      "options": [
+        "ECM is a passive structural scaffold with no role in directing cell migration",
+        "The ECM provides both structural substrates (fibronectin, laminin, collagen) for cell adhesion and migration via integrin receptors, and guidance cues — including permissive tracks that promote migration and inhibitory barriers (versican, tenascin) that restrict and channel migrating cells to specific pathways",
+        "ECM is found only in adult tissues and is absent during embryonic development",
+        "ECM components are identical in all tissues and do not vary spatially"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The extracellular matrix plays essential, active roles in directing embryonic cell migration: (1) Migration substrate: Migrating cells require a physical substrate to adhere to and exert traction upon. Fibronectin is the primary migration substrate in the early embryo — it is deposited along migration pathways and provides adhesive contacts through RGD (Arg-Gly-Asp) motifs recognized by integrin receptors (alpha5-beta1 integrin) on migrating cells. Laminin serves a similar role in basement membrane-guided migration. (2) Integrin signaling: Integrins do not merely anchor cells — they activate intracellular signaling cascades (FAK, Src, Rac, Rho) that regulate cytoskeletal dynamics, cell polarity, and migration speed. Integrin-ECM engagement at focal adhesions provides traction force for movement. (3) Guidance cues: ECM molecules provide spatial information: (a) Permissive substrates (fibronectin, laminin) promote migration along specific tracks. For example, neural crest cells migrate along fibronectin-rich pathways. (b) Inhibitory barriers (versican, tenascin-C, chondroitin sulfate proteoglycans) prevent migration into certain territories. Neural crest cells are excluded from posterior somite halves by ephrin-B/EphB repulsion and versican. (4) Growth factor presentation: The ECM sequesters and presents growth factors (FGF, TGF-beta, BMP, Wnt) — heparan sulfate proteoglycans (perlecan, agrin) bind growth factors and create local signaling gradients. (5) Mechanical properties: ECM stiffness influences cell behavior through mechanotransduction. Cells sense ECM stiffness via integrin-cytoskeleton coupling and can migrate toward stiffer substrates (durotaxis). (6) Remodeling: Matrix metalloproteinases (MMPs) cleave ECM components, enabling migration through dense matrices and releasing sequestered growth factors.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 47,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Development"
     }
   ]
 }
