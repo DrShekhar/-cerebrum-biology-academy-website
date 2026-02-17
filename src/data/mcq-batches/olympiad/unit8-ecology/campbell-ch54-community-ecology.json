@@ -4,7 +4,7 @@
     "subject": "Biology",
     "chapter": "Community Ecology",
     "class": "Olympiad",
-    "totalQuestions": 47
+    "totalQuestions": 78
   },
   "questions": [
     {
@@ -112,11 +112,11 @@
       "question": "A researcher wants to test whether the presence of a top predator (wolves) in a grassland ecosystem causes a trophic cascade that increases plant biomass. Which experimental design would provide the STRONGEST evidence?",
       "options": [
         "Compare plant biomass in areas where wolves are present versus absent using observational surveys",
-        "Establish replicated exclosures: wolf-present plots, wolf-excluded (but herbivore-accessible) plots, and herbivore-excluded plots, measuring plant biomass across all treatments",
         "Reintroduce wolves to an area where they were absent and monitor plant biomass before and after",
+        "Establish replicated exclosures: wolf-present plots, wolf-excluded (but herbivore-accessible) plots, and herbivore-excluded plots, measuring plant biomass across all treatments",
         "Use mathematical models to simulate the trophic cascade and compare predictions to field data"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "A replicated exclosure experiment with three treatments provides the strongest evidence for a wolf-mediated trophic cascade. The three treatments are: (1) open control plots (wolves and herbivores present); (2) wolf-excluded plots (herbivores present but wolves excluded by selective fencing or presence manipulation); (3) herbivore-excluded plots (both wolves and herbivores excluded). Comparing plant biomass across treatments reveals: wolf effects on herbivore behavior/abundance (comparing treatments 1 vs. 2), herbivore effects on plants (comparing treatments 2 vs. 3), and the full trophic cascade (comparing treatments 1 vs. 3). This factorial approach separates direct and indirect effects and can distinguish density-mediated (wolves reducing herbivore numbers) from trait-mediated (wolves changing herbivore behavior) trophic cascades.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -192,11 +192,11 @@
       "question": "The 'green world hypothesis' (Hairston, Smith, and Slobodkin 1960) proposed that the world is green because predators control herbivore populations, preventing overgrazing. Which evidence would MOST strongly support this hypothesis?",
       "options": [
         "Plants have more biomass than herbivores in most ecosystems",
-        "Removal of predators leads to herbivore population increases and dramatic reductions in plant biomass",
         "Plants produce defensive chemicals against herbivores",
+        "Removal of predators leads to herbivore population increases and dramatic reductions in plant biomass",
         "Herbivore populations fluctuate with predator populations"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The strongest evidence for the green world hypothesis comes from predator removal experiments (or natural experiments) that demonstrate the top-down control pathway. If predator removal causes herbivore populations to increase, leading to overgrazing and reduced plant biomass, this directly supports the hypothesis that predators normally keep herbivore populations below the level that would devastate vegetation. Classic examples include: the sea otter-sea urchin-kelp cascade (otter removal \u2192 urchin increase \u2192 kelp forest collapse); the wolf-elk-willow cascade in Yellowstone (wolf absence \u2192 elk overgrazing \u2192 willow decline); and numerous island studies where predator absence leads to hyperabundant herbivores and denuded vegetation. Simply observing that plants are more abundant than herbivores (A) is consistent with but does not prove top-down control.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -272,11 +272,11 @@
       "question": "Ecological succession describes the sequential change in community composition over time after a disturbance. Which factor MOST fundamentally distinguishes primary succession from secondary succession?",
       "options": [
         "Primary succession occurs on land while secondary succession occurs in aquatic ecosystems",
-        "Primary succession begins on substrates without any pre-existing soil or biological legacy, while secondary succession occurs where soil and seed banks remain",
         "Primary succession is faster than secondary succession because pioneers grow quickly",
+        "Primary succession begins on substrates without any pre-existing soil or biological legacy, while secondary succession occurs where soil and seed banks remain",
         "Primary succession requires human intervention while secondary succession is entirely natural"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The fundamental distinction is the starting substrate. Primary succession begins on entirely new or sterile surfaces with no soil, organic matter, or biological legacy: newly formed volcanic islands, exposed rock after glacial retreat, new sand dunes, or cooled lava flows. Organisms must build soil from scratch through weathering of rock and accumulation of organic matter. Secondary succession occurs on substrates where disturbance has removed the community but the soil profile, seed bank, root systems, and microbial community remain intact: abandoned agricultural fields, burned forests, clear-cut areas. Because secondary succession starts with existing soil and biological legacy, it proceeds much faster (decades vs. centuries for primary succession) and often follows more predictable trajectories.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -351,12 +351,12 @@
       "type": "MCQ",
       "question": "Bottom-up vs. top-down control of community structure is a fundamental debate in community ecology. In which type of ecosystem is top-down control (predator regulation of lower trophic levels) MOST likely to predominate?",
       "options": [
-        "Nutrient-poor, low-productivity ecosystems where food limitation constrains all trophic levels",
         "Aquatic ecosystems, particularly lakes and marine systems, where trophic cascades are frequently documented",
+        "Nutrient-poor, low-productivity ecosystems where food limitation constrains all trophic levels",
         "Deserts, where abiotic factors overwhelm all biotic interactions",
         "Agricultural monocultures, where simplified food webs prevent top-down effects"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Top-down control and trophic cascades are most frequently and clearly documented in aquatic ecosystems, particularly lakes and marine systems. Several features of aquatic systems facilitate trophic cascades: (1) aquatic primary producers (phytoplankton) are small, fast-growing, and rapidly consumed, making them highly responsive to changes in herbivore pressure; (2) food chain lengths are often short (3-4 trophic levels) and relatively discrete; (3) aquatic predators are often size-structured generalists that can strongly suppress their prey; and (4) there is less structural complexity to provide prey refugia compared to terrestrial forests. Carpenter and colleagues' whole-lake experiments directly demonstrated four-level trophic cascades: manipulating fish populations caused predictable, cascading effects on zooplankton, phytoplankton, and water clarity.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -631,12 +631,12 @@
       "type": "DATA_INTERPRETATION",
       "question": "A long-term study of a forest community documents recovery after a catastrophic windstorm. Year 0 (post-storm): 5 pioneer species dominate. Year 20: 25 species present, including shade-tolerant trees in the understory. Year 50: 40 species, shade-tolerant trees forming the canopy. Year 100: 35 species, with 5 shade-tolerant species dominating. What does the decline from 40 to 35 species between Year 50 and Year 100 indicate?",
       "options": [
-        "Environmental degradation is reducing the habitat quality",
         "Competitive exclusion by shade-tolerant dominant trees, which outcompete and eliminate some earlier-successional and less competitive species from the canopy",
+        "Environmental degradation is reducing the habitat quality",
         "An invasive species arrived and displaced 5 native species",
         "Random extinction of rare species due to small population sizes"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The decline from 40 to 35 species during late succession (Year 50-100) reflects competitive exclusion by the dominant, shade-tolerant late-successional species. As the forest canopy closes and becomes dominated by a few tall, shade-casting species, the light environment beneath becomes uniformly dark. Pioneer and mid-successional species that require higher light levels are gradually eliminated as they cannot regenerate in the deep shade. This pattern is consistent with the intermediate disturbance hypothesis: diversity peaks during mid-succession (Year 50, when both early and late species coexist) and declines as competitive dominants monopolize resources in late succession. The 5-species loss represents the final competitive exclusion of species that cannot tolerate the low-light conditions created by the climax canopy.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -772,11 +772,11 @@
       "question": "The paradox of the plankton (Hutchinson 1961) asks: why do so many phytoplankton species coexist in the open ocean when they all compete for the same few limiting resources (light, N, P, Fe)? Which mechanism has been MOST widely accepted as a resolution?",
       "options": [
         "Phytoplankton species actually use different forms of each nutrient and do not truly compete",
-        "Temporal and spatial environmental variability (fluctuating conditions) prevents competitive exclusion by preventing any single species from dominating, combined with trade-offs in competitive abilities under different conditions",
+        "Phytoplankton reproduce too slowly for competitive exclusion to occur within ecological time",
         "Predation by zooplankton eliminates all competitive interactions among phytoplankton",
-        "Phytoplankton reproduce too slowly for competitive exclusion to occur within ecological time"
+        "Temporal and spatial environmental variability (fluctuating conditions) prevents competitive exclusion by preventing any single species from dominating, combined with trade-offs in competitive abilities under different conditions"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The most widely accepted resolution of the paradox of the plankton invokes temporal and spatial variability in environmental conditions combined with species-specific trade-offs. In the fluctuating ocean environment, conditions change faster than the time required for competitive exclusion (which takes many generations). Different phytoplankton species have competitive advantages under different conditions (e.g., species A dominates when nitrogen is limiting, species B dominates when light is limiting). If conditions shift before exclusion is complete, no single species can eliminate all others. This non-equilibrium coexistence mechanism is consistent with intermediate disturbance theory and the storage effect. Additional contributing factors include allelopathy, viral lysis (species-specific viruses that prevent dominance), and spatial heterogeneity at scales relevant to planktonic organisms.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -832,11 +832,11 @@
       "question": "Mycorrhizal fungi provide phosphorus to plants in exchange for photosynthetic carbon. However, some plants called mycoheterotrophs obtain carbon from mycorrhizal networks rather than from photosynthesis. What type of ecological interaction does this represent?",
       "options": [
         "Mutualism, because both the plant and fungus benefit",
-        "Parasitism of the mycorrhizal network \u2014 the mycoheterotroph obtains carbon without providing anything in return",
         "Commensalism, because the mycoheterotroph neither helps nor harms the fungus",
+        "Parasitism of the mycorrhizal network \u2014 the mycoheterotroph obtains carbon without providing anything in return",
         "Decomposition, because the mycoheterotroph feeds on dead fungal tissue"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Mycoheterotrophs (such as Indian pipe, Monotropa uniflora, and many orchids) parasitize mycorrhizal networks. These non-photosynthetic or partially photosynthetic plants tap into common mycorrhizal networks and extract carbon that was originally fixed by a neighboring photosynthetic tree and transferred to the shared fungal network. The mycoheterotroph provides nothing to the fungus in return \u2014 it is a 'cheater' on the mutualistic mycorrhizal network. In some cases, the carbon pathway is: autotrophic tree \u2192 mycorrhizal fungus \u2192 mycoheterotrophic plant, making the mycoheterotroph an epiparasite (parasite of a mutualist). This system demonstrates that mutualisms are vulnerable to exploitation by cheaters and that the 'wood wide web' of mycorrhizal networks can be parasitized.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -946,6 +946,626 @@
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
       "topic": "Fig-Fig Wasp Coevolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Resource partitioning among sympatric species of Anolis lizards in the Caribbean is primarily along which niche dimension?",
+      "options": [
+        "Diet composition \u2014 different lizard species eat different insect orders",
+        "Structural habitat \u2014 different species use different perch heights and diameters on vegetation",
+        "Temporal activity \u2014 different species are active at different times of day",
+        "Altitudinal range \u2014 different species occupy different elevation bands"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Caribbean Anolis lizards partition resources primarily along the structural habitat axis: different species specialize on different perch heights and perch diameters. This has produced convergent ecomorphs across islands \u2014 independently evolved body forms adapted to specific microhabitats. Crown giants perch high on large-diameter branches, trunk-crown species use intermediate perches, trunk-ground species use lower perches and ground, and grass-bush species use low vegetation. The repeated evolution of similar ecomorphs on different islands is one of the most elegant demonstrations of adaptive radiation driven by interspecific competition and ecological opportunity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Anolis Niche Partitioning"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 'dilution effect' hypothesis proposes that higher biodiversity reduces disease risk. Which mechanism underlies this hypothesis?",
+      "options": [
+        "More species means more potential immune genes shared among hosts",
+        "Higher diversity includes more incompetent hosts that reduce transmission by encountering vectors without amplifying the pathogen",
+        "Higher diversity leads to stronger herd immunity across the entire community",
+        "More species produce more antimicrobial compounds that collectively suppress pathogens"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The dilution effect occurs when increased biodiversity reduces disease transmission by including more 'incompetent' or 'dead-end' hosts in the community. Vectors (such as ticks) feed on a variety of host species, but not all hosts amplify the pathogen equally. If a tick feeds on an incompetent host (one that does not transmit the pathogen effectively), that feeding event is 'wasted' from the pathogen's perspective. In higher-diversity communities, the probability that a vector encounters a competent (highly infectious) host decreases because many encounters are with incompetent hosts. The classic example is Lyme disease: high mammal diversity dilutes the proportion of tick meals from white-footed mice (the primary Borrelia reservoir), reducing human infection risk.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Dilution Effect \u2014 Disease Ecology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A manipulative experiment excludes large herbivores (>50 kg) from African savanna plots for 10 years. Results: herbivore-excluded plots have 40% more woody plant biomass, 60% less grass biomass, and 30% fewer bird species compared to control plots with herbivores. What do these results demonstrate?",
+      "options": [
+        "Large herbivores have no effect on savanna community structure",
+        "The bird species decline is unrelated to the herbivore exclusion and caused by climate change",
+        "Large herbivores maintain the open, grass-dominated savanna structure that supports avian diversity through selective browsing of woody plants \u2014 a form of ecosystem engineering",
+        "Woody plant increase always benefits all animal communities"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The results demonstrate that large herbivores act as ecosystem engineers in savannas, maintaining the open grass-tree mosaic. By browsing and breaking woody plants, large herbivores like elephants, giraffes, and buffalo suppress woody enclosure and maintain grassland patches. When herbivores are excluded, woody plants increase dramatically (40% more biomass) at the expense of grasses (60% less), transforming the open savanna into denser bushland. The 30% decline in bird species reflects the loss of open grassland habitat \u2014 many savanna birds (grassland specialists, ground-nesting species) depend on the open structure maintained by herbivore activity. This demonstrates how megaherbivores influence community composition across trophic levels.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Herbivore Effects on Savanna Structure"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'ecological networks' extends food web analysis to include multiple interaction types (predation, mutualism, competition, parasitism). Why is a multi-interaction network perspective important for understanding community stability?",
+      "options": [
+        "Single-interaction networks always predict community stability correctly",
+        "Different interaction types can buffer or amplify each other \u2014 for example, mutualistic networks can stabilize communities that would otherwise be destabilized by strong competitive interactions",
+        "Multi-interaction networks are simpler to analyze than single-interaction food webs",
+        "All interaction types have identical effects on community dynamics"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Multi-interaction ecological networks reveal dynamics invisible in single-interaction studies. Different interaction types have opposing effects on stability: mutualistic interactions tend to destabilize communities (positive feedbacks amplify perturbations), while predator-prey interactions tend to stabilize them (negative feedbacks dampen oscillations). In real communities, these interactions coexist and their combined effects determine overall stability. Recent network analyses show that the architecture of mutualistic networks (nested structure) and antagonistic networks (modular structure) can compensate for each other's destabilizing properties, producing communities more stable than predicted by either network alone.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecological Networks \u2014 Multi-interaction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Invasive species often lack natural enemies in their new range (the 'enemy release hypothesis'). The 'evolution of increased competitive ability' (EICA) hypothesis predicts what evolutionary change in invasive populations freed from enemies?",
+      "options": [
+        "Invasives evolve increased defense allocation because they face new types of enemies",
+        "Invasives evolve to reallocate resources from defense to growth and reproduction, becoming more competitive than native-range populations",
+        "Invasives evolve decreased growth rate to conserve energy in the novel environment",
+        "Invasives do not evolve differently from native-range populations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The evolution of increased competitive ability (EICA) hypothesis (Blossey and Notzold 1995) predicts that invasive plant populations, freed from their coevolved specialist herbivores and pathogens, will evolve to reduce investment in costly defense mechanisms and redirect those resources toward growth, reproduction, and competitive ability. This makes evolutionary sense: defense is only beneficial when enemies are present, so in enemy-free space, selection favors genotypes that invest less in defense and more in traits that enhance competitive dominance. Empirical tests using common garden experiments comparing native-range and invasive-range populations of the same species have shown mixed but generally supportive results: invasive populations often grow larger and produce more biomass but are more susceptible to herbivory than native populations.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "EICA Hypothesis \u2014 Invasive Evolution"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A community ecologist wants to test the role of pollination mutualisms in maintaining plant community diversity. She hypothesizes that removing pollinators will disproportionately affect rare plant species (which depend more on shared pollinator services). Which experiment would MOST effectively test this?",
+      "options": [
+        "Observe natural variation in pollinator abundance across years and correlate with plant diversity changes",
+        "Experimentally exclude pollinators from plots using mesh enclosures and compare plant reproduction and population dynamics of common vs. rare species relative to open control plots over multiple years",
+        "Add honeybee hives to some plots to increase pollination and compare plant diversity to control plots",
+        "Survey plant-pollinator interaction networks and model the consequences of pollinator loss computationally"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Experimental pollinator exclusion using mesh enclosures that prevent pollinator access while allowing wind, rain, and light provides the most direct test. By comparing reproductive success (seed set, fruit production) and population dynamics (seedling recruitment, population size) of both common and rare plant species in pollinator-excluded vs. open plots, the researcher can directly test whether pollinator loss differentially affects rare species. If rare species experience disproportionately greater reproductive failure under pollinator exclusion (because they are less attractive to pollinators and more dependent on the shared pollinator pool), this supports the hypothesis. Multi-year monitoring is essential because effects on plant diversity may take multiple reproductive cycles to manifest.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Pollinator Exclusion \u2014 Community Effects"
+    },
+    {
+      "type": "MCQ",
+      "question": "Assembly rules attempt to predict which species from a regional pool will coexist in local communities. Which of Diamond's assembly rules has been MOST controversial?",
+      "options": [
+        "Species with identical niches cannot coexist",
+        "Communities that do not exist: certain combinations of ecologically similar species are never found together (forbidden species combinations)",
+        "The most widespread species occurs in all community types",
+        "Communities are always subsets of the regional species pool"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Diamond's 'forbidden species combinations' \u2014 the observation that certain pairs of ecologically similar species never co-occur on the same island despite both being present in the regional pool \u2014 has been the most controversial assembly rule. Critics (particularly Connor and Simberloff) argued that these patterns could arise from random colonization and did not require invoking competitive exclusion. This debate launched the field of null model analysis in community ecology: are observed species co-occurrence patterns significantly different from those expected by random assembly? The controversy stimulated decades of methodological development in null model construction and statistical testing of community structure, and remains relevant today in debates over niche-based versus neutral community assembly.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Diamond's Assembly Rules"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 'landscape of fear' concept describes how predator presence alters prey behavior and habitat use. In Yellowstone, wolf reintroduction caused elk to avoid certain areas (risky valley bottoms), leading to vegetation recovery in those areas. This is an example of:",
+      "options": [
+        "A density-mediated trophic cascade \u2014 wolves reduced elk numbers, allowing plants to recover",
+        "A trait-mediated trophic cascade (behaviorally mediated) \u2014 wolves changed elk behavior (habitat use), allowing plants to recover in areas elk now avoid",
+        "A bottom-up effect where increased vegetation attracted wolves",
+        "A competitive interaction between wolves and elk for shared food resources"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The 'landscape of fear' in Yellowstone illustrates a trait-mediated (behaviorally mediated) trophic cascade. Rather than wolves simply killing enough elk to reduce their population (density-mediated effect), wolves altered elk behavior: elk became vigilant, avoided risky habitats (open valley bottoms, stream banks with poor escape terrain), and spent less time foraging in dangerous areas. This behavioral shift reduced browsing pressure on willows and aspens in 'fear zones,' allowing vegetation recovery even without large changes in total elk numbers. The distinction is important: trait-mediated cascades can occur without significant prey population reduction if predators alter prey behavior sufficiently to change their spatial distribution of foraging impact.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Trait-Mediated Trophic Cascade"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ecological stoichiometry studies how the balance of chemical elements (C:N:P ratios) constrains ecological interactions. How do C:N:P ratios affect herbivore-plant interactions?",
+      "options": [
+        "Plants and herbivores have identical C:N:P ratios, so stoichiometry is irrelevant",
+        "Stoichiometric ratios only affect decomposer communities, not herbivore-plant interactions",
+        "Herbivores have higher C:N ratios than plants because animals store more carbon as fat",
+        "Plants typically have much higher C:N and C:P ratios than herbivores (more carbon relative to nutrients), creating a fundamental nutritional mismatch that herbivores must overcome"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Plants are 'carbon-rich and nutrient-poor' relative to herbivores. Typical plant tissue C:N:P is approximately 300:15:1, while herbivore body tissue is approximately 50:10:1 \u2014 a dramatic stoichiometric mismatch. Herbivores need proportionally more nitrogen and phosphorus relative to carbon than plants provide. This means herbivores must: (1) consume large quantities of plant material to obtain sufficient nitrogen/phosphorus; (2) selectively feed on nutrient-rich plant parts (young leaves, seeds, phloem); or (3) maintain gut symbionts that fix nitrogen or otherwise supplement nutrition. The stoichiometric mismatch fundamentally constrains herbivore growth efficiency and explains why herbivores typically assimilate only 10-40% of ingested plant material.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Ecological Stoichiometry \u2014 Herbivory"
+    },
+    {
+      "type": "MCQ",
+      "question": "Beta diversity measures the turnover (change) in species composition between communities or along gradients. High beta diversity indicates:",
+      "options": [
+        "Communities differ substantially in species composition, with many species replacing each other along environmental gradients",
+        "All communities in the region have the same species composition",
+        "The region has very few total species",
+        "All species are uniformly distributed across the landscape"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Beta diversity quantifies the difference in species composition between communities (or sampling units). High beta diversity means that different communities contain substantially different species \u2014 there is high species turnover along environmental gradients or between habitats. Regions with high beta diversity have high regional (gamma) diversity even if local (alpha) diversity is moderate, because different localities contribute different species. The relationship gamma = alpha \u00d7 beta (multiplicative partitioning) or gamma = alpha + beta (additive partitioning) formalizes how total regional diversity arises from local diversity and between-site turnover. High beta diversity is characteristic of landscapes with heterogeneous environments, strong dispersal limitation, or steep environmental gradients.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Beta Diversity"
+    },
+    {
+      "type": "MTF",
+      "question": "Regarding predator-prey coevolution, mark each statement as True (T) or False (F):\n(I) The Red Queen hypothesis proposes that predators and prey must continuously evolve just to maintain their relative fitness\n(II) Aposematic coloration (warning colors) evolves in palatable species to scare predators\n(III) Predator-prey arms races can lead to escalation of both offensive and defensive adaptations over evolutionary time\n(IV) Cryptic coloration (camouflage) is an anti-predator adaptation that reduces detection probability",
+      "options": [
+        "TFTT",
+        "FTTT",
+        "TTTT",
+        "TFFT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "(I) TRUE \u2014 The Red Queen hypothesis proposes that organisms must continuously evolve to maintain fitness relative to coevolving antagonists. For predators and prey, this means prey must evolve better defenses as predators evolve better attack strategies, and vice versa \u2014 an endless evolutionary arms race. (II) FALSE \u2014 Aposematic coloration evolves in UNPALATABLE or dangerous species, not palatable ones. The bright warning colors (red, orange, yellow + black) honestly signal toxicity, venom, or distastefulness to visual predators. Palatable species that resemble aposematic ones are Batesian mimics. (III) TRUE \u2014 Arms races produce escalating adaptations: thicker shells in prey, stronger jaws in predators; faster prey, faster predators; more potent toxins, greater toxin resistance. The fossil record shows clear escalation patterns. (IV) TRUE \u2014 Crypsis (camouflage) reduces the probability that a prey organism is detected by a visual predator, including background matching, disruptive coloration, countershading, and masquerading as inedible objects.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Predator-Prey Coevolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'niche construction' proposes that organisms modify their own selective environments through their activities. How does niche construction differ from standard natural selection?",
+      "options": [
+        "Niche construction is Lamarckian inheritance disguised as ecology",
+        "Niche construction only occurs in social insects that build elaborate structures",
+        "In niche construction, organisms alter environmental selective pressures through their own activities (building nests, modifying soil, changing vegetation), creating feedback loops between the organism and its environment that standard selection models ignore",
+        "Niche construction contradicts Darwinian evolution by suggesting organisms direct their own evolution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Niche construction theory (Odling-Smee et al. 2003) recognizes that organisms are not merely passive recipients of environmental selection but actively modify their selective environments. Earthworms modify soil chemistry, beavers create ponds, trees alter microclimate, and humans transform landscapes. These modifications change the selective pressures acting on the constructing organism AND other species in the community. This creates an ecological-evolutionary feedback: organism modifies environment \u2192 modified environment creates new selection pressures \u2192 organism evolves in response \u2192 evolved organism modifies environment differently. Niche construction does not contradict Darwinian selection but extends it by formally incorporating the organism's role in modifying its own selective environment.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Niche Construction Theory"
+    },
+    {
+      "type": "MCQ",
+      "question": "Functional diversity \u2014 the range and distribution of species functional traits in a community \u2014 has been proposed as a better predictor of ecosystem function than species richness alone. Why?",
+      "options": [
+        "Two communities with identical species richness can differ greatly in ecosystem function if one has species with diverse, complementary functional traits and the other has functionally similar species",
+        "Functional diversity counts species more accurately than species richness",
+        "Functional diversity is always perfectly correlated with species richness",
+        "Functional diversity only applies to plant communities, not animal communities"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Functional diversity captures the ecological roles and capabilities of species rather than just counting them. Two communities with 20 species each could have very different functional diversity: one might contain species spanning the full range of body sizes, trophic levels, dispersal modes, and nutrient cycling strategies, while another might contain 20 functionally similar species. The functionally diverse community would be expected to have higher ecosystem productivity (through complementary resource use), greater stability (through response diversity to perturbations), and more complete ecosystem services. Functional diversity metrics (functional richness, evenness, divergence) have been shown to be better predictors of ecosystem processes than species richness in many empirical studies.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Functional Diversity \u2014 Ecosystem Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The meta-community framework describes regional communities connected by dispersal. Which meta-community paradigm predicts that environmental heterogeneity and niche differences drive community composition at local scales, while dispersal connects communities at regional scales?",
+      "options": [
+        "Neutral model \u2014 all species are ecologically equivalent",
+        "Mass effects \u2014 dispersal overwhelms local environmental sorting",
+        "Patch dynamics \u2014 all patches are identical and colonization-extinction dynamics determine composition",
+        "Species sorting \u2014 local environmental conditions filter species from the regional pool based on their niche requirements"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The species sorting paradigm of meta-community theory predicts that local environmental conditions act as a filter, selecting species from the regional pool based on their environmental tolerances and competitive abilities. Different patches in the meta-community have different environmental conditions, and species sort themselves among patches according to their niche requirements. Dispersal connects patches, maintaining the regional species pool and allowing species to reach suitable patches. Species sorting predicts strong correlations between local species composition and local environmental conditions, with dispersal rates high enough for species to reach suitable patches but not so high as to overwhelm local sorting (which would be 'mass effects'). This paradigm is supported by many empirical studies showing that environmental variables explain community composition better than spatial variables alone.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Meta-community \u2014 Species Sorting"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A study of plant-pollinator networks finds: the network is significantly nested (generalist pollinators interact with both generalist and specialist plants, while specialist pollinators only interact with generalist plants). What does this nested architecture imply for network robustness?",
+      "options": [
+        "Nested networks are less robust because loss of any species causes cascade failures",
+        "Nested networks are equally vulnerable to all types of species loss",
+        "Nestedness has no effect on network robustness",
+        "Nested networks are more robust to random species loss because generalist species maintain network connectivity, but vulnerable to targeted loss of the most connected (generalist hub) species"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Nested mutualistic networks show a characteristic pattern of robustness: they are highly resilient to random species loss (because random removals typically remove peripheral specialist species, leaving the connected generalist core intact) but vulnerable to targeted removal of the most connected species (generalist hubs that serve as network connectors). The asymmetric interaction pattern in nested networks means that specialist species depend on generalist partners, so the loss of a generalist cascades through the network, potentially causing secondary extinctions of specialists that depended on it. This has important conservation implications: protecting generalist pollinator species (e.g., bumblebees) may be disproportionately important for maintaining pollination network integrity compared to protecting any randomly chosen species.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Nested Network Robustness"
+    },
+    {
+      "type": "MCQ",
+      "question": "Intraguild predation (IGP) occurs when a predator both competes with and preys upon another predator at the same trophic level. How does IGP affect community dynamics compared to simple predator-prey interactions?",
+      "options": [
+        "IGP simplifies community dynamics by eliminating one predator species",
+        "IGP always stabilizes communities by adding redundancy to the predator guild",
+        "IGP complicates coexistence conditions and can either promote or reduce biodiversity depending on productivity: at low productivity the IG prey may dominate, at high productivity the IG predator may dominate, and coexistence is possible at intermediate productivity",
+        "IGP has no effect on community dynamics because it occurs between species at the same trophic level"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Intraguild predation creates complex dynamics because it combines competition (both predators eat the same resource) with predation (one predator eats the other). Theory predicts that the outcome depends on productivity: at low productivity, the IG prey (the species that is both predator and prey) often dominates because it is a superior competitor for the shared resource; at high productivity, the IG predator dominates because abundant resources fuel its predation on the IG prey; and at intermediate productivity, coexistence is possible. IGP is extremely common in nature (ladybugs eating other predator insects, raptors preying on smaller predators) and can produce counterintuitive results for biological control.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Intraguild Predation \u2014 Community Effects"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "An ecologist wants to determine whether the competitive dominance hierarchy among four grassland plant species in the lab (A > B > C > D) accurately predicts competitive outcomes in the field. Which experiment would MOST rigorously test this?",
+      "options": [
+        "Grow all four species together in field plots and observe which survives after 10 years",
+        "Survey natural plant communities to see if the four species co-occur",
+        "Grow species individually and compare growth rates as a proxy for competitive ability",
+        "Establish all pairwise combinations (AB, AC, AD, BC, BD, CD) in replicated field plots and measure competitive outcomes for each pair, testing whether the lab-determined hierarchy correctly predicts all field outcomes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Testing all pairwise combinations in replicated field plots provides the most rigorous validation because: (1) it directly measures competitive outcomes for every pair in realistic field conditions; (2) it tests whether the transitive hierarchy (A>B>C>D) holds in the field (lab hierarchies may not predict field outcomes due to environmental context dependence); (3) replication provides statistical power; and (4) pairwise tests can detect intransitive competitive relationships (A beats B, B beats C, but C beats A) that would be missed in a single multi-species mixture. If all six pairwise outcomes match the lab hierarchy, this is strong evidence that the hierarchy is robust. If some outcomes differ, this reveals context-dependent competitive dynamics.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Competitive Hierarchy \u2014 Field Validation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 'insurance hypothesis' (Yachi and Loreau 1999) proposes that biodiversity provides temporal stability to ecosystem functioning. Which mechanism underlies this hypothesis?",
+      "options": [
+        "More diverse communities contain more species that respond identically to environmental change",
+        "The insurance effect only operates through genetic diversity within a single species, not species diversity",
+        "Insurance comes from species that store resources during good times and release them during bad times",
+        "In diverse communities, different species respond differently to environmental fluctuations (asynchronous responses), so that when some species decline, others increase, buffering total community function over time"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The insurance hypothesis predicts that biodiversity stabilizes ecosystem functioning over time because species respond differently (asynchronously) to environmental fluctuations. In a diverse community, when environmental conditions are unfavorable for some species, other species with different environmental optima may thrive, maintaining overall community biomass or productivity. In a species-poor community, fluctuations in the few dominant species translate directly into ecosystem-level fluctuations. The key mechanism is 'response diversity' \u2014 variation among species in their sensitivities to environmental change. Greater response diversity in more species-rich communities creates a portfolio effect analogous to financial diversification, where investing in many uncorrelated assets reduces overall portfolio volatility.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Insurance Hypothesis \u2014 Biodiversity and Stability"
+    },
+    {
+      "type": "MCQ",
+      "question": "Trophic downgrading \u2014 the systematic removal of apex predators from ecosystems worldwide \u2014 has been called one of humanity's most pervasive ecological impacts. Which cascade effect has been documented following shark population declines in the western Atlantic?",
+      "options": [
+        "Coral reef expansion due to reduced shark damage to reef structure",
+        "No detectable cascade effects because marine food webs are too complex for cascades",
+        "Increased biodiversity of reef fish communities due to reduced predation pressure",
+        "Increases in mesopredatory rays and skates, which then overconsumed bay scallops, leading to scallop fishery collapse"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Myers et al. (2007) documented that declines in large shark populations along the US East Coast led to 'mesopredator release' \u2014 populations of cownose rays and other mesopredators increased dramatically. The expanded ray populations then consumed bay scallops, clams, and oysters at unsustainable rates, contributing to the collapse of century-old scallop fisheries in North Carolina. This cascade demonstrates that apex predator removal can have far-reaching economic and ecological consequences.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Trophic Downgrading \u2014 Shark Removal"
+    },
+    {
+      "type": "MCQ",
+      "question": "Parasites are estimated to constitute 30-50% of species in most food webs but are often omitted from food web studies. How does including parasites change our understanding of food web properties?",
+      "options": [
+        "Including parasites decreases the number of trophic links and simplifies the web",
+        "Including parasites increases food chain length, connectance, and the number of trophic links, revealing that standard food webs drastically underestimate network complexity",
+        "Parasites have no effect on food web topology",
+        "Including parasites only changes the web structure in tropical ecosystems"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Including parasites in food web analyses dramatically changes our understanding of network properties. Parasites add numerous trophic links (each parasite species links to multiple hosts), increase food chain length (parasites of predators are functionally at higher trophic levels), and increase connectance. Studies of estuarine food webs that included parasites found that total links doubled and mean food chain length increased by 1-2 levels. Parasites also create unique topological features: they can simultaneously occupy multiple trophic levels (a parasite infecting both a herbivore and its predator), and parasitoid wasps that consume herbivorous insects are effectively carnivores in the food web.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Parasites in Food Webs"
+    },
+    {
+      "type": "MCQ",
+      "question": "The species-energy hypothesis proposes that greater energy availability (productivity) supports more species. What is the proposed mechanism linking energy to species richness?",
+      "options": [
+        "More energy allows faster evolution of new species",
+        "Higher energy supports larger total populations, reducing extinction risk for each species and allowing more species to maintain viable populations",
+        "More energy creates more distinct habitat types through increased vegetation structure",
+        "Energy has no effect on species richness \u2014 the correlation is spurious"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The more individuals hypothesis, a component of the species-energy theory, proposes that higher energy availability supports more total individuals in a community. With more individuals, each species can maintain a larger population, reducing the probability of stochastic extinction. This allows more species to persist simultaneously. Additionally, more individuals may support more trophic levels and more specialized niches. The species-energy relationship has strong empirical support across many taxa and scales.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Species-Energy Hypothesis"
+    },
+    {
+      "type": "MCQ",
+      "question": "The competitive exclusion principle was demonstrated experimentally by G.F. Gause using Paramecium species. In his classic experiment, what happened when P. aurelia and P. caudatum were cultured together?",
+      "options": [
+        "Both species coexisted at stable densities",
+        "P. aurelia outcompeted and completely excluded P. caudatum because it grew faster and consumed the shared bacterial food source more efficiently",
+        "P. caudatum excluded P. aurelia through interference competition",
+        "Neither species could survive in culture, so both went extinct"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In Gause's classic 1934 experiments, P. aurelia and P. caudatum could each grow well in separate cultures (monoculture), but when cultured together with a shared bacterial food source, P. aurelia consistently drove P. caudatum to extinction. P. aurelia grew faster and achieved higher population densities, depleting the shared food resource more effectively (exploitation competition). However, Gause also showed that P. aurelia and P. bursaria could coexist because P. bursaria fed on yeast at the bottom of the culture vessel while P. aurelia fed on bacteria in the water column \u2014 niche differentiation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Gause's Competitive Exclusion Experiments"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A network analysis of a plant-pollinator community reveals: network nestedness = 0.85 (high), connectance = 0.15, and modularity = 0.25 (low). The network is also highly asymmetric \u2014 specialist plants depend on generalist pollinators. If climate change causes the loss of the two most generalist pollinator species, what is the MOST likely consequence?",
+      "options": [
+        "Minimal impact because specialist pollinators can replace generalist functions",
+        "Disproportionate loss of plant diversity because many specialist plants depend on those generalist pollinators and no alternative pollinator partners exist for them",
+        "Increased pollination services because remaining pollinators experience competitive release",
+        "No prediction can be made from network structure alone"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In a highly nested network with asymmetric specialization, generalist pollinators are the 'hubs' that maintain connectivity for specialist plants. The loss of the two most connected pollinator species would disproportionately affect specialist plants that depend primarily or exclusively on these generalists. Because the network is nested, specialist pollinators interact only with generalist plants (which may find alternative pollinators) but specialist plants depend on generalist pollinators (which have no substitutes). The high nestedness and low modularity indicate that losing hub species cascades widely rather than being contained within modules.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Pollinator Network \u2014 Targeted Removal"
+    },
+    {
+      "type": "MCQ",
+      "question": "Secondary succession in a temperate forest following clear-cutting typically follows a predictable sequence. What is the correct order of dominant plant life forms?",
+      "options": [
+        "Trees \u2192 shrubs \u2192 grasses \u2192 mosses",
+        "Annual herbs and grasses \u2192 perennial herbs \u2192 shrubs \u2192 shade-intolerant trees \u2192 shade-tolerant trees",
+        "Shade-tolerant trees \u2192 shade-intolerant trees \u2192 shrubs \u2192 herbs",
+        "Lichens \u2192 mosses \u2192 grasses \u2192 trees (same as primary succession)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Secondary succession on a clear-cut temperate forest site follows a predictable sequence of dominant life forms: (1) annual herbs and grasses colonize first from the existing seed bank and wind dispersal; (2) perennial herbs, ferns, and early-successional species establish over 2-5 years; (3) shrubs and fast-growing pioneer trees (birch, aspen, willow) form a dense canopy over 5-20 years; (4) shade-intolerant trees (pines, oaks) overtop the shrubs and form a canopy over 20-50 years; (5) shade-tolerant late-successional trees (maple, beech, hemlock) eventually dominate the canopy after 50-200+ years. This differs from primary succession because the existing soil and seed bank allow rapid initial colonization.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Secondary Succession Sequence"
+    },
+    {
+      "type": "MCQ",
+      "question": "In tropical forests, lianas (woody vines) can comprise up to 25% of woody stem density. How do lianas affect forest community structure?",
+      "options": [
+        "Lianas reduce tree growth and increase tree mortality by competing for light, water, and nutrients while using trees as structural support without photosynthesizing for them",
+        "Lianas increase tree growth by providing structural support",
+        "Lianas have no effect on tree communities because they occupy a separate niche",
+        "Lianas benefit trees by transferring water from the canopy to the roots through their stems"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Lianas are structural parasites \u2014 they use trees for mechanical support (avoiding the cost of building a self-supporting trunk) while competing intensely for above- and below-ground resources. Lianas compete with their host trees for light (spreading their leaves in the canopy), water (via extensive root systems), and nutrients. Studies removing lianas from tropical forest plots have shown that tree growth increases by 50-75% and tree mortality decreases significantly after liana removal. Lianas also alter forest dynamics by connecting tree canopies, so that when one tree falls, it pulls down connected trees (increasing disturbance severity). Liana abundance is increasing in many tropical forests, possibly due to rising CO2 and increasing drought frequency.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Liana Effects on Forest Communities"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'enemy release' helps explain the success of invasive species. A related concept, 'biotic resistance,' proposes that diverse native communities are more resistant to invasion. Which mechanism underlies biotic resistance?",
+      "options": [
+        "Diverse communities occupy more niche space, leaving fewer empty niches for invaders to exploit, and provide more enemies (predators, pathogens, competitors) that can suppress invaders",
+        "Diverse communities produce chemical barriers that exclude all non-native species",
+        "Biotic resistance only operates through direct physical exclusion of invaders by resident species",
+        "Diverse communities are always more resistant because they have higher total biomass"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Biotic resistance operates through multiple mechanisms: (1) niche preemption \u2014 diverse communities with many species utilize more of the available resource space, leaving fewer vacant niches for invaders; (2) consumer pressure \u2014 diverse communities contain more potential enemies (herbivores, predators, pathogens) that can attack invaders; (3) competitive suppression \u2014 residents compete with invaders for resources. Charles Elton first proposed that species-rich communities resist invasion better than species-poor ones. Evidence is mixed: diverse communities generally resist invasion at small scales, but the pattern is weaker at larger scales. The 'biotic resistance' and 'invasional meltdown' (where invasives facilitate each other) hypotheses represent opposing perspectives on how community diversity affects invasibility.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Biotic Resistance to Invasion"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to test whether facilitation (positive interactions) between species is more important in harsh environments than in benign environments, as predicted by the stress gradient hypothesis. Which approach would MOST effectively test this?",
+      "options": [
+        "Transplant species with and without neighboring plants across a stress gradient and measure growth/survival, testing for facilitation (neighbor presence increases performance) that strengthens with stress",
+        "Survey plant species associations (co-occurrence) across a stress gradient from benign to harsh conditions, testing whether positive associations increase with environmental stress",
+        "Only study communities in the harshest environment and look for evidence of facilitation",
+        "Compare species diversity between harsh and benign environments"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The most rigorous test uses transplant experiments across the stress gradient. By planting target individuals both with and without neighboring plants at multiple points along the stress gradient (wet-dry, low-high elevation, cool-hot), the researcher can directly measure the net effect of neighbors on target plant performance at each stress level. If the neighbor effect shifts from negative (competition dominates in benign conditions) to positive (facilitation dominates in harsh conditions), this supports the stress gradient hypothesis. Co-occurrence patterns (A) are suggestive but cannot distinguish facilitation from shared habitat preferences. The crossed design (with/without neighbors \u00d7 stress levels) directly quantifies the interaction strength and direction across the gradient.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Stress Gradient Hypothesis \u2014 Facilitation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ecosystem multifunctionality \u2014 the simultaneous provision of multiple ecosystem functions \u2014 often requires higher biodiversity than any single function alone. Why?",
+      "options": [
+        "Different functions are optimized by different species, so high diversity is needed for many species to each contribute to different functions",
+        "A single species can optimize all functions simultaneously in any ecosystem",
+        "Ecosystem multifunctionality is independent of biodiversity",
+        "Only primary productivity requires biodiversity; other functions do not"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Different ecosystem functions (primary productivity, decomposition, nutrient cycling, pollination, pest control, carbon sequestration) are often optimized by different species or functional groups. A single species may be important for one function but irrelevant for another. As more functions are considered simultaneously (multifunctionality), more species are needed because the set of species important for function A may overlap only partially with the set important for function B. Empirical studies have shown that while 1-3 species may suffice to maintain a single function at a moderate level, maintaining multiple functions simultaneously at high levels requires substantially higher diversity \u2014 often 50-80% of the species pool.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Biodiversity \u2014 Ecosystem Multifunctionality"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 'mesopredator release' hypothesis predicts that removing apex predators leads to population increases of medium-sized predators. What cascading effect does this typically have on prey communities?",
+      "options": [
+        "Prey populations increase because mesopredators are less efficient hunters than apex predators",
+        "Prey populations decline more severely than under apex predator control because mesopredators are more numerous, have higher per capita consumption rates, and exploit a wider range of prey sizes",
+        "Prey populations are unaffected because total predation pressure remains constant",
+        "Mesopredators switch entirely to herbivory, releasing prey populations from predation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mesopredator release can have devastating effects on prey communities because mesopredators (foxes, raccoons, feral cats, small raptors) are typically more numerous, have higher reproductive rates, and often have higher per capita predation rates on small prey than the apex predators that formerly controlled them. When apex predators (wolves, large raptors, large cats) are removed, mesopredator populations increase, and their combined predation pressure on small prey (songbirds, rodents, lizards) often exceeds the predation formerly exerted by the apex predator. This has been documented in numerous systems: coyote release after wolf removal increasing predation on pronghorn fawns; cat release after dingo removal devastating Australian marsupials.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Mesopredator Release"
+    },
+    {
+      "type": "MCQ",
+      "question": "Mutualistic networks (e.g., plant-pollinator, plant-seed disperser) differ structurally from antagonistic networks (e.g., food webs) in several consistent ways. Which structural property MOST clearly distinguishes mutualistic from antagonistic networks?",
+      "options": [
+        "Mutualistic networks have fewer species than antagonistic networks",
+        "Mutualistic networks are significantly more nested (specialist species interact with a subset of the partners of generalist species), while antagonistic networks are more modular",
+        "Mutualistic networks have higher connectance than antagonistic networks",
+        "There are no consistent structural differences between mutualistic and antagonistic networks"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A consistent finding across hundreds of studied networks is that mutualistic networks (plant-pollinator, plant-frugivore) are significantly more nested than expected by chance, while antagonistic networks (host-parasitoid, predator-prey) tend to be more modular. Nestedness in mutualistic networks means that specialist species interact with a subset of the partners of more generalist species, creating a core of generalist-generalist interactions surrounded by specialist-generalist interactions. This architecture promotes biodiversity by reducing interspecific competition and increasing network robustness to species loss. Modularity in antagonistic networks means species cluster into distinct groups of closely interacting species with fewer interactions between groups, which may limit the spread of perturbations.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Mutualistic vs Antagonistic Network Architecture"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ecological communities can transition between alternative stable states when environmental conditions cross a 'tipping point.' Which feature of these transitions makes ecosystem management particularly challenging?",
+      "options": [
+        "Tipping points are always precisely predictable from environmental data",
+        "Hysteresis \u2014 the environmental conditions required to restore the original state are very different from those that caused the transition, requiring much greater intervention to reverse",
+        "Transitions between states are always gradual and easily reversible",
+        "Alternative stable states only occur in theoretical models, never in real ecosystems"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Hysteresis in alternative stable state transitions means that the environmental threshold for a shift from state A to state B is different from the threshold for the reverse shift from B to A. For example, a clear-water lake may shift to a turbid state when phosphorus loading exceeds 50 \u00b5g/L, but restoring the clear-water state may require reducing phosphorus below 20 \u00b5g/L (much lower than the forward threshold). This asymmetry occurs because each state has self-reinforcing positive feedback loops that resist change. Hysteresis makes restoration extremely challenging because simply reversing the stressor to its pre-disturbance level is insufficient \u2014 much more aggressive intervention is needed to overcome the feedbacks maintaining the degraded state.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 54,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Tipping Points and Hysteresis"
     }
   ]
 }

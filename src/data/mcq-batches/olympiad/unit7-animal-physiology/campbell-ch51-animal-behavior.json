@@ -1705,6 +1705,306 @@
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
       "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Mobbing behavior involves prey animals approaching and harassing a predator. What is the adaptive significance of this seemingly risky behavior?",
+      "options": [
+        "Mobbing functions through multiple mechanisms: (1) predator deterrence — persistent harassment causes the predator to leave the area, reducing future attack risk; (2) predator education — teaching offspring to recognize predators (cultural transmission of predator identity); (3) signaling to the predator that it has been detected, eliminating its surprise advantage; (4) selfish herd benefits — participants reduce their individual risk by joining a mob; mobbing intensity increases when offspring are present and when the predator is more dangerous, consistent with fitness-based decision-making",
+        "Mobbing behavior is purely accidental and animals approach predators by mistake",
+        "Mobbing only occurs in bird species and never in mammals",
+        "Mobbing always increases the predation risk for all participants"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Mobbing (Curio et al. 1978, Caro 2005) is widespread across birds and mammals (meerkats, ground squirrels, colobus monkeys): Functions (not mutually exclusive): (1) Move-on hypothesis: Persistent mobbing causes the predator to relocate, reducing immediate and future predation risk for the mobber and its associates. Owls that are mobbed move to new roosts more frequently. (2) Perception advertisement: By approaching the predator, the mobber signals 'I see you,' eliminating the element of surprise that ambush predators depend on. The predator, knowing it has been detected, is less likely to attack. This benefits the signaler directly (selfish benefit, not altruistic). (3) Cultural transmission of predator recognition (Curio et al. 1978): Naive blackbirds learn to mob novel objects by observing experienced birds mobbing them. In Curio's experiment, birds were trained to mob a completely harmless object (a plastic bottle) by observing a tutor mobbing it, and this learned response was transmitted through chains of tutors ('cultural evolution of enemy recognition'). (4) Offspring protection: Mobbing intensity peaks during the nesting/rearing period when offspring are most vulnerable. (5) Self-advertisement of quality: Vigorous mobbing may signal individual quality to potential mates or allies. Costs: (a) Risk of injury or capture — mobbing birds are occasionally caught by the predator being mobbed. (b) Energy expenditure. (c) Drawing attention to nest location (particularly relevant for cryptic nesters). Decision rules: Animals assess the costs and benefits of mobbing. Mobbing is more likely when: (a) The predator is more dangerous (owls mobbed more than hawks in many species). (b) Offspring are present and vulnerable. (c) More mobbers are present (safety in numbers). (d) The mobber has a safe escape route.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that worker honey bees (Apis mellifera) transition from nurse duties to foraging based on juvenile hormone (JH) levels rather than a fixed age schedule. What experiment would test this?",
+      "options": [
+        "Simply observe the ages at which bees perform different tasks in a normal colony",
+        "Manipulate the colony's demographic structure by removing all forager-aged bees, then measure JH levels and behavioral responses in the remaining young bees — if the hypothesis is correct, some young bees should precociously increase their JH levels and begin foraging far earlier than normal age; additionally, apply exogenous JH (methoprene) to young nurse bees and observe whether this accelerates their transition to foraging, while treating age-matched controls with vehicle only; measure behavioral observations, JH titers, and expression of foraging-related genes (Amfor/PKG)",
+        "Compare honey bee JH levels with those of solitary bee species",
+        "Feed bees different diets and measure their body weight"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The relationship between JH and behavioral maturation in honey bees has been extensively studied (Robinson 1992, Sullivan et al. 2000): The normal pattern: In a typical colony, JH titers increase with worker age: low JH in young nurse bees → intermediate in middle-aged bees (wax production, food processing) → high JH in foragers (~3 weeks old). But is this age-dependent or JH-dependent? Experimental approaches: (1) Single-cohort colonies (social manipulation): Create colonies with only newly emerged bees (all the same age). If behavioral maturation were purely age-based, all bees should transition simultaneously. Instead, some bees precociously develop into foragers within days, while others remain nurses — demonstrating that the colony adjusts its division of labor to meet needs, not following a rigid age schedule. (2) Forager removal experiments: Remove all foragers from a colony. Within days, some young bees (normally nurses) precociously increase JH levels and begin foraging. This demonstrates that social signals (absence of foragers, reduced ethyl oleate pheromone from forager-bee contact) accelerate behavioral development. (3) JH application (methoprene/JH analog): Topical application of JH analog to young nurse bees causes precocious foraging within 1-3 days (vs. normal onset at ~21 days). Vehicle-treated controls maintain normal nurse behavior. This demonstrates JH is sufficient to drive the behavioral transition. (4) Allatectomy (JH gland removal): Removing the corpora allata (JH-producing gland) delays or prevents the transition to foraging. JH replacement rescues the foraging phenotype. (5) Molecular markers: Precocious foragers show upregulated Amfor (PKG) gene expression in the brain, similar to normal-aged foragers, confirming that the molecular pathway matches the behavioral change regardless of actual age. Conclusion: Behavioral maturation in honey bees is regulated by JH levels, which are in turn modulated by social context (colony demography, pheromone signals) — age provides a default developmental trajectory, but social factors can accelerate or delay the transition.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Multimodal signaling occurs when animals use signals in more than one sensory channel simultaneously. Why do animals evolve multimodal signals?",
+      "options": [
+        "Multimodal signals (combining visual, acoustic, chemical, vibrational, or tactile components) evolve because: (1) the backup signal hypothesis — redundant information in multiple channels ensures the message is received even if one channel is degraded by noise; (2) the multiple messages hypothesis — different components convey different information (e.g., bird song conveys species identity while plumage conveys individual quality); (3) the receiver psychology hypothesis — multimodal signals are more easily detected, discriminated, or remembered due to cross-modal integration in the receiver's nervous system",
+        "Animals always use only one sensory channel for communication",
+        "Multimodal signals are always less effective than unimodal signals",
+        "Only human communication uses multiple sensory channels"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Multimodal communication (Partan and Marler 1999, Hebets and Papaj 2005) is widespread across animal taxa: Examples: (1) Wolf spider (Schizocosa ocreata) courtship: Males combine visual signals (leg-waving, body vibrations) with substrate-borne seismic signals (vibrations transmitted through leaf litter). On substrates that transmit vibrations well, the seismic component is sufficient for female attraction; on poor substrates, the visual component compensates. (2) Túngara frog (Engystomops pustulosus): Males produce acoustic calls (whine + chuck) combined with vocal sac inflation (visual). Females respond more to multimodal signal than to either component alone (but the visual signal also attracts predatory bats — multimodal signals increase predation risk). (3) Honeybee waggle dance: Combines mechanical vibrations (substrate-borne), acoustic signals (wing buzzing), chemical signals (floral odors on body), and spatial information (dance angle/duration). Hypotheses for multimodal signal evolution: (1) Backup (redundancy) hypothesis: Different signal components convey the same information, providing reliability in variable environments where some channels may be degraded (dense vegetation blocks visual signals; wind interferes with chemical signals). (2) Multiple messages hypothesis (Johnstone 1996): Different components convey different, independent pieces of information. Male songbirds: song complexity may indicate learning ability (neural quality) while plumage brightness indicates current condition (parasite resistance). Receivers integrate information across channels to make better decisions. (3) Receiver psychology hypothesis: Multimodal signals exploit properties of the receiver's nervous system — cross-modal integration, enhanced detection through multisensory neurons, improved memory formation for multimodal stimuli (documented in neuroscience: superior colliculus neurons respond supraadditively to coincident visual-auditory stimuli). Trade-offs: Multimodal signals are costlier to produce and may attract eavesdroppers (predators, parasitoids) that use one or more signal components to locate the signaler.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Zugunruhe (migratory restlessness) provides evidence for the endogenous control of migration timing. What does it demonstrate?",
+      "options": [
+        "Zugunruhe is a period of nocturnal restlessness and oriented activity displayed by captive migratory birds during the time they would normally be migrating — it demonstrates endogenous (internal clock) control of migration because: (1) it occurs even in birds raised in constant conditions (photoperiod, temperature) without any external migratory cues; (2) its duration and intensity correspond to the normal migration distance (long-distance migrants show more Zugunruhe than short-distance migrants); (3) the directional preference during Zugunruhe matches the species' normal migration heading, even in hand-raised birds that have never migrated",
+        "Zugunruhe is caused by cage stress and has no biological significance",
+        "Migratory birds show no behavioral changes when prevented from migrating",
+        "Migration timing is entirely determined by food availability with no internal clock"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Zugunruhe (German: 'migration restlessness,' Gwinner 1977, 1996) is a powerful tool for studying the endogenous control of avian migration: Characteristics: (1) Nocturnal activity — nocturnal migrants (most songbirds) show increased nighttime activity during spring and autumn migration seasons. (2) Orientation — in Emlen funnels, Zugunruhe is directionally oriented in the species-typical migration direction (south in autumn, north in spring). (3) Seasonal timing — onset and cessation match normal migration periods. Evidence for endogenous control: (1) Circannual rhythms: Garden warblers (Sylvia borin) and blackcaps (S. atricapilla) raised in constant photoperiod (12:12) and temperature still show Zugunruhe at the appropriate seasons. This demonstrates an endogenous circannual clock that generates approximately yearly rhythms in migratory behavior, body condition (pre-migratory fattening), and physiology. (2) Duration corresponds to migration distance: The total amount of Zugunruhe (cumulative activity over the season) correlates with the species' normal migration distance. Garden warblers (which migrate from Europe to sub-Saharan Africa, ~5,000 km) show more Zugunruhe than blackcaps (which migrate shorter distances to the Mediterranean). This suggests the endogenous program includes a 'migration distance' component — possibly a time-based estimate of how long to fly. (3) Directional program: Hand-raised garden warblers show the correct two-step migration pattern: southwest in autumn (toward the Iberian Peninsula), then shift to southeast (toward Africa) — matching the species' dogleg migration route, despite never having migrated or seen a starry sky. (4) Genetic basis: Cross-breeding experiments between populations with different migration directions produce offspring with intermediate Zugunruhe orientations, demonstrating genetic control of migratory direction. The endogenous program is modified by experience in adults — first-year birds follow the innate program, while experienced adults also use learned landmarks and route memories.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Condition-dependent signaling is central to honest communication. What is the Hamilton-Zuk hypothesis?",
+      "options": [
+        "Hamilton and Zuk (1982) proposed that female mate choice for bright, elaborate male ornaments evolved because these ornaments honestly signal resistance to parasites — brightly colored males have lower parasite loads because carotenoid pigments used in plumage are also needed by the immune system; by choosing ornamented males, females obtain good genes for parasite resistance for their offspring; the hypothesis predicts a positive correlation between the elaborateness of male sexual ornaments and the prevalence of blood parasites across bird species",
+        "Hamilton-Zuk hypothesis states that parasites have no effect on sexual ornaments",
+        "The hypothesis predicts that species with more parasites should have duller males",
+        "Parasite resistance and ornament expression are controlled by completely independent genes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Hamilton-Zuk hypothesis (1982) links sexual selection to host-parasite coevolution: Core idea: (1) Parasites are a major selective force in natural populations, constantly coevolving with hosts. (2) Bright, elaborate sexual ornaments are condition-dependent — their full expression requires the bearer to be in excellent health. Parasitized individuals cannot maintain full ornament development. (3) Therefore, ornaments are honest indicators of current health and, by extension, genetic resistance to prevalent parasites. (4) Females choosing the most ornamented males obtain 'good genes' for their offspring — specifically, genes for parasite resistance. This provides an ongoing selective advantage because host-parasite coevolution ensures that the 'best' resistance genotype keeps changing (Red Queen dynamics), maintaining genetic variation in both parasite virulence and host resistance. Evidence: (1) Interspecific comparison (Hamilton and Zuk 1982): Across 109 North American passerine species, species with higher prevalence of blood parasites (Plasmodium, Haemoproteus, Leucocytozoon) showed brighter, more elaborate male plumage. This positive correlation supports the idea that sexual ornaments evolved more in species where parasite-mediated selection is strongest. (2) Intraspecific evidence: (a) Male red jungle fowl (Gallus gallus) — experimentally parasitized males develop shorter, duller combs and are rejected by females. (b) Male barn swallows — tail streamer length is reduced by parasitism; females prefer long-tailed males; offspring of long-tailed fathers have better immune responses. (c) Male guppies — carotenoid coloration is reduced by parasites; females prefer more colorful males. Mechanism — carotenoid trade-off: Carotenoid pigments (obtained from diet) serve dual functions: (1) Ornamental coloration (yellow/orange/red plumage, skin). (2) Immune function (antioxidants that protect immune cells, precursors for immune signaling). Because carotenoids must be allocated between these competing demands, only males in excellent condition (low parasite load, good immune function) can spare sufficient carotenoids for bright coloration. This creates the honest signal.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers compare nest-building behavior in lovebird hybrids. Peach-faced lovebirds (Agapornis roseicollis) carry nesting material by tucking strips into their rump feathers, while Fischer's lovebirds (A. fischeri) carry material in their beaks. F1 hybrids attempt to tuck material into their feathers (like peach-faced) but fail ~80% of the time, eventually learning to carry material in their beaks after months of practice. What does this demonstrate about the genetic basis of behavior?",
+      "options": [
+        "This classic experiment (Dilger 1962) demonstrates that: (1) nest material carrying behavior has a genetic basis — the hybrid's initial attempts to tuck material show inheritance of the peach-faced motor pattern; (2) behavior is polygenic with incomplete dominance — hybrids show intermediate, conflicted motor patterns rather than pure parental types; (3) learning can modify genetically influenced behavior — hybrids eventually shift to beak-carrying through trial-and-error, but the transition takes months because they must overcome the genetically predisposed tucking tendency; (4) even 'innate' behaviors can be modified by experience, blurring the nature-nurture dichotomy",
+        "The experiment shows that nest-building is purely learned with no genetic component",
+        "The hybrids behave identically to one parent species, demonstrating simple Mendelian dominance",
+        "The failure of hybrids to carry material proves that hybridization always produces non-functional behaviors"
+      ],
+      "correctAnswer": "A",
+      "explanation": "William Dilger's (1962) lovebird hybridization experiment is a landmark study in behavioral genetics: The parental species: (1) Peach-faced lovebird (A. roseicollis): Females cut long strips of bark or leaves and tuck them into their rump feathers (a unique motor pattern) to transport them to the nest. This behavior involves a complex, stereotyped sequence: cut strip → hold in beak → rotate head → reach back → insert strip under rump feathers → release. Multiple strips can be carried simultaneously. (2) Fischer's lovebird (A. fischeri): Females carry nesting material in their beaks (the more common avian method). No tucking behavior. The F1 hybrids: (1) Initial behavior: Hybrids consistently attempted to tuck material into their rump feathers — demonstrating genetic inheritance of the peach-faced motor pattern. However, the tucking sequence was disrupted: (a) Strips were cut too short or too long. (b) The head-rotation movement was incomplete or incorrectly directed. (c) Strips were not properly inserted and fell out (~80% failure rate). (2) This disrupted behavior suggests that the complete tucking motor pattern requires coordinated expression of multiple genes, which are 'broken up' by hybridization (like polygenic epistasis in morphological traits). (3) Gradual learning: Over months of practice, hybrids shifted toward beak-carrying. But even after years, hybrids occasionally attempted (and failed at) tucking — the genetic predisposition was never fully eliminated. Conclusions: (1) Complex motor patterns (even those appearing 'innate') have a multigenic basis. (2) Hybridization disrupts coordinated gene expression, producing intermediate or non-functional behaviors. (3) The nature-nurture dichotomy is false — behavior reflects an interaction between genetic predisposition and learning. (4) Genetic constraints on behavior can be partially overcome by experience, but the underlying predisposition persists.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Conflict resolution in social animals often involves ritualized aggression rather than outright fighting. Why has ritualized combat evolved?",
+      "options": [
+        "Ritualized aggression evolved because the cost of escalated fighting (injury, death, energy loss) often exceeds the value of the contested resource — ritualized displays allow opponents to assess relative fighting ability (resource holding potential, RHP) without the costs of actual combat; assessment displays are typically honest signals of RHP because they are physically constrained (roaring rate in red deer correlates with body size and lung capacity, which determine actual fighting ability); contests escalate through sequential phases of increasing cost and information, and the inferior contestant typically retreats before serious injury occurs",
+        "Ritualized aggression serves no function and is simply an evolutionary vestige",
+        "Animals always fight to the death over any contested resource",
+        "Ritualization has no relationship to fighting ability assessment"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Ritualized aggression (Maynard Smith and Price 1973, Enquist and Leimar 1983) represents an evolutionarily stable resolution to animal conflict: Why not always fight? (1) Injury costs — wounds reduce future survival and reproductive success. In red deer stags, ~6% of fights result in permanent injury, and ~0.5% result in death. (2) Energy costs — prolonged combat depletes energy reserves needed for other activities. (3) Time costs — fighting time is lost from foraging or mating. (4) Infection risk — wounds are entry points for pathogens. Ritualized assessment: (1) Red deer roaring contests (Clutton-Brock and Albon 1979): Rivals first engage in parallel walking (visual assessment of body size). Then they enter a roaring contest — each stag roars as rapidly as possible (roaring rate limited by lung capacity, which correlates with body size and fighting ability). If one stag cannot match the other's roaring rate, it withdraws. Only if roaring rates are matched does the contest escalate to antler wrestling (the most costly phase). (2) Fiddler crab claw displays: Males wave their enlarged claw (which can represent 40% of body mass). Claw size is an honest signal of fighting ability because it is physically constrained by body size. Opponents assess relative claw size visually and smaller individuals typically withdraw. However, some crabs bluff: regenerated claws are weaker than original claws of the same size, but opponents cannot distinguish them visually. (3) Sequential assessment model (Enquist and Leimar 1983): Contests proceed through escalating phases (display → threat → contact → wrestling → injury). Each phase provides increasingly accurate information about relative RHP, but at increasing cost. The weaker contestant gathers enough information to assess its inferiority and retreats before the most costly phase. Close matches escalate further and last longer (size-matched contests are more costly). Bourgeois strategy: In some species, ownership alone determines contest outcome. The 'owner always wins' convention (Maynard Smith 1982) is an ESS because it resolves conflicts without any fighting: both contestants benefit from the convention's existence.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Bruce effect is a form of pregnancy termination induced by male chemical signals. What is the mechanism and adaptive significance?",
+      "options": [
+        "In the Bruce effect, a recently mated female mouse exposed to the scent (urinary pheromones) of a novel male — not the stud male that inseminated her — undergoes pregnancy block: prolactin secretion is suppressed via vomeronasal organ (VNO) detection of the stranger male's major urinary proteins (MUPs), leading to luteolysis (corpus luteum regression), progesterone withdrawal, and embryo resorption; the adaptive explanation is that the new male would likely kill any pups he did not sire (infanticide), so the female avoids wasting reproductive investment on offspring that would be killed, and instead becomes available to mate with the new (likely dominant) male",
+        "The Bruce effect is caused by stress from overcrowding and has no male-specific trigger",
+        "Pregnancy termination only occurs through physical aggression, never chemical signals",
+        "The Bruce effect occurs in all mammals, including humans"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Bruce effect (Bruce 1959) is a remarkable example of chemical communication influencing reproductive physiology: Discovery: Hilda Bruce (1959) found that recently inseminated female mice, when exposed to a male different from their mating partner, frequently failed to implant (pregnancy block). The mechanism: (1) Pheromone detection: The novel male's urine contains major urinary proteins (MUPs) and other volatile/non-volatile compounds that are chemically distinct from the stud male's scent. (2) Vomeronasal organ (VNO): The accessory olfactory system (VNO → accessory olfactory bulb → medial amygdala → hypothalamus) detects the foreign male pheromones. Removal of the VNO prevents the Bruce effect. (3) Neuroendocrine cascade: The foreign male signal reaches the hypothalamus, suppressing prolactin release from the anterior pituitary. Prolactin is necessary for maintaining the corpus luteum during early pregnancy in mice. (4) Luteal regression: Without prolactin support, the corpus luteum degenerates (luteolysis), progesterone levels drop, and the uterine lining cannot maintain the implanted embryos. (5) Pregnancy failure: Embryos fail to implant or are resorbed. The female returns to estrus within 4-5 days. Memory of the stud male: The female recognizes and 'remembers' the stud male's pheromone signature through a learned olfactory memory formed during mating. This memory is formed in the accessory olfactory bulb through noradrenergic mechanisms (norepinephrine from the locus coeruleus modulates synaptic plasticity). Only exposure to a DIFFERENT male's scent triggers pregnancy block. Adaptive significance: (1) Infanticide avoidance: In mice, new dominant males frequently commit infanticide. By terminating pregnancy and mating with the new male, the female: (a) Avoids wasting weeks of gestation and lactation on pups that would be killed. (b) May gain the new male's paternity protection for future litters. (2) Sexual selection: The Bruce effect may be a form of male manipulation — the new male benefits by bringing the female into estrus sooner (eliminating a competitor's offspring). (3) Female choice — alternatively, the female may benefit by 'choosing' to mate with the new, presumably superior (since he displaced the previous male) male. Taxonomic distribution: Well-documented in laboratory mice; evidence in wild mice, voles, horses, lions (where visual/auditory cues rather than pheromones may trigger similar effects), and primates (gelada baboons — females more likely to miscarry after male takeover).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Information center hypothesis proposes that colonial roosts serve as information exchanges for foraging. What is the evidence?",
+      "options": [
+        "Ward and Zahavi (1973) proposed that communal roosts and breeding colonies function as 'information centers' where unsuccessful foragers follow successful ones to food sources the next day — evidence from cliff swallows shows that colony members that foraged poorly on the previous day were more likely to follow departing flock-mates the next morning, while successful foragers departed independently; however, the hypothesis remains controversial because the original model assumed information transfer is costly to donors and may instead be explained by local enhancement or passive information parasitism",
+        "Communal roosts provide only thermal benefits and never facilitate information exchange",
+        "Animals in colonies always forage independently and never share foraging information",
+        "The information center hypothesis has been conclusively disproven in all species"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The information center hypothesis (ICH, Ward and Zahavi 1973) proposes a major adaptive function for communal roosting and colonial breeding: The hypothesis: (1) Colony/roost members vary in foraging success on any given day. (2) Unsuccessful foragers can identify successful ones (by crop fullness, behavior, etc.). (3) The next morning, unsuccessful individuals follow successful foragers to productive feeding sites. (4) The colony thus functions as an information exchange ('information center'), reducing individual foraging uncertainty. Evidence: (1) Cliff swallows (Petrochelidon pyrrhonota) — Brown (1986): Colony members that were experimentally food-deprived were more likely to follow departing flock-mates the next morning, compared to well-fed controls. (2) Ravens (Corvus corax) — Heinrich (1988): Juvenile ravens that discovered large carcasses recruited other ravens from communal roosts (possibly to overwhelm territorial adults defending the carcass). (3) Vultures — Buckley (1996): Communal roosts facilitate information transfer about carcass locations; unsuccessful vultures follow successful ones at departure. Controversy and alternatives: (1) Passive information: Followers may simply be attracted to departures without active information transfer — local enhancement rather than intentional signaling. (2) Recruitment signal: Ward and Zahavi's original version suggested donors actively signal food location (costly signaling), but this is hard to distinguish from passive following. (3) Commodities trade: Successful foragers may 'pay' for roost site benefits (safety, thermoregulation) by tolerating followers, rather than actively advertising food locations. (4) Cultural transmission: Over time, roost-based information sharing could generate traditional foraging routes that persist across generations. Alternative hypotheses for colonial roosting: (a) Predator dilution and detection (many-eyes). (b) Thermal benefits (huddling). (c) Reduction of individual search costs. (d) Proximity to ephemeral food sources (colonies near food). The ICH makes the specific prediction that colony size should increase when food is unpredictable (more benefit from information exchange) — this has been supported in some species but not others.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Phylogenetic comparative methods are used to study the evolution of behavior. What does ancestral state reconstruction allow researchers to determine?",
+      "options": [
+        "Ancestral state reconstruction maps behavioral traits onto a phylogeny to infer: (1) the evolutionary origin of a behavior (did it evolve once or multiple times independently?); (2) the ancestral condition at internal nodes (was the ancestor of a clade monogamous or polygynous?); (3) the direction of evolutionary change (from simple to complex behavior, or vice versa?); (4) correlated evolution between traits (did cooperative breeding and ecological constraints evolve together?) — methods include maximum parsimony, maximum likelihood, and Bayesian approaches using molecular phylogenies",
+        "Ancestral state reconstruction can only be applied to morphological traits, never to behaviors",
+        "The method requires fossil behavioral evidence, which never exists",
+        "Phylogenetic methods are irrelevant to understanding behavioral evolution"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Phylogenetic comparative methods (Harvey and Pagel 1991, Felsenstein 1985) are essential tools in modern behavioral ecology: Ancestral state reconstruction: (1) The approach: Map the character states (behavioral phenotypes) of extant species onto a molecular phylogeny. Use statistical methods to estimate the most likely character states at ancestral nodes (internal branch points). (2) Example — mating system evolution: By mapping monogamy, polygyny, and promiscuity onto primate phylogenies, researchers inferred that the ancestral primate mating system was likely promiscuous/polygynous, and that monogamy evolved independently multiple times (in gibbons, titi monkeys, marmosets). (3) Example — eusociality: Mapping eusociality onto the insect phylogeny reveals multiple independent origins in Hymenoptera (ants evolved eusociality once; bees and wasps evolved it multiple times). Methods: (a) Maximum parsimony — minimizes the total number of character state changes on the tree. Simple but can be misled by unequal branch lengths. (b) Maximum likelihood — evaluates the probability of the observed character distribution given a model of character evolution (e.g., Mk model for discrete characters). Accounts for branch lengths. (c) Bayesian — estimates posterior probabilities of ancestral states using MCMC sampling. Incorporates phylogenetic uncertainty. Correlated evolution: The method of independent contrasts (Felsenstein 1985) or phylogenetic generalized least squares (PGLS) tests whether two traits have evolved in a correlated fashion across species. Example: Barton and Harvey (1985) showed that neocortex size and social group size are positively correlated across primates (social brain hypothesis), controlling for shared ancestry. Pagel's (1994) test for correlated evolution of discrete traits can determine whether transitions in one binary trait (e.g., monogamy → polygyny) are contingent on the state of another (e.g., biparental care → no paternal care). Limitations: (1) Behavior rarely fossilizes, so extant-only data are used. (2) Ancestral state estimates become increasingly uncertain deeper in the tree. (3) Convergent evolution can obscure phylogenetic signal. (4) Model assumptions (e.g., equal rates of gain and loss) may not be met.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nepotism (kin-biased behavior) requires kin recognition. What mechanisms allow animals to recognize relatives?",
+      "options": [
+        "Four main kin recognition mechanisms exist: (1) spatial proximity (association) — treat individuals encountered in the natal environment as kin (effective when relatives cluster, e.g., nest-mates); (2) familiarity — learn individual characteristics during early development and later recognize familiar individuals as kin; (3) phenotype matching — compare others' phenotypes (odor, MHC-derived cues) to a learned or genetic template and recognize as kin if similarity exceeds a threshold; (4) recognition alleles (greenbeard) — a gene that produces a recognizable marker and directs altruism toward bearers, though this is theoretically possible but rarely documented",
+        "Animals cannot recognize kin and all social behavior is directed randomly",
+        "Kin recognition requires direct genetic testing similar to DNA fingerprinting",
+        "Only visual cues are used for kin recognition; chemical cues play no role"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Kin recognition (Holmes and Sherman 1983, Hepper 1991) is fundamental to kin selection and is achieved through several mechanisms: (1) Spatial proximity (indirect recognition): Rule: Treat individuals in a specific location (e.g., the nest, the natal burrow) as relatives. Mechanism: Does not require individual recognition; relies on the statistical association between spatial proximity and kinship. Effectiveness: High when relatives cluster (colonial breeders, communal nests), but can be exploited by brood parasites. Example: Many bird species feed any chick in their nest — gulls, terns, and swallows use nest location as a proxy for kinship. (2) Familiarity (direct recognition through association): Rule: Learn the characteristics of individuals encountered during early development (sensitive period). Treat familiar individuals as kin. Mechanism: Learning specific odors, vocalizations, or visual features during early social interaction. Example: Belding's ground squirrels are more tolerant of littermates (even when cross-fostered) than of unfamiliar siblings — demonstrating that early association, not genetic similarity, drives recognition. (3) Phenotype matching: Rule: Compare others' phenotype (often odor) to a template and assess similarity. Mechanism: The template can be: (a) Self-referent (self-matching): Compare others' phenotype to one's own. (b) Family-referent: Compare to familiar kin encountered during development. Example: Golden hamsters preferentially nest with unfamiliar siblings over unfamiliar non-siblings, even when raised apart from their siblings — suggesting self-referent phenotype matching. MHC-based recognition: Major histocompatibility complex (MHC) genes produce individually distinct odor profiles (via peptide-binding to MHC molecules affecting volatile metabolites in urine). Mice prefer mates with different MHC genotypes (optimal outbreeding), and can discriminate MHC-similar from MHC-dissimilar individuals by odor. Detected via the main olfactory system and/or VNO. (4) Recognition alleles: Theoretically possible (greenbeard effect) but rarely documented. The gene must pleiotropically produce a recognizable marker and direct behavior toward bearers. Fire ant Gp-9 is a candidate. Recognition errors: (a) Accepting non-kin (Type I error) — costly if altruism is wasted. (b) Rejecting kin (Type II error) — costly if fitness-enhancing interactions are missed. Optimal recognition threshold balances these errors given the frequency of kin encounters (Reeve 1989).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Mate choice copying occurs when an individual's mate preference is influenced by observing the mate choices of conspecifics. What evidence supports this phenomenon?",
+      "options": [
+        "In female guppies (Poecilia reticulata), Dugatkin (1992) demonstrated that when a focal female observes a model female associating with a particular male, the focal female's preference shifts toward that male — even when the male is objectively less attractive (smaller, duller); this non-independent mate choice is adaptive because it reduces the time and risk of direct mate assessment by relying on social information; mate choice copying has been documented in fish, birds, insects, and mammals, and can drive rapid cultural changes in mate preferences across populations",
+        "Mate choice is always based on individual assessment and never influenced by others",
+        "Mate choice copying occurs only in humans, not in other animals",
+        "Observing others' mate choices always causes avoidance of that mate type"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Mate choice copying (Dugatkin 1992, 1996; Pruett-Jones 1992) is a form of social learning applied to reproductive decisions: Key experimental evidence: (1) Guppies (Dugatkin 1992): A focal female observed a model female placed next to one of two males (the less-preferred male based on initial assessment). After observation, the focal female's preference reversed — she now preferred the male she saw with the model female. The effect was robust even when the 'endorsed' male was objectively less colorful. (2) Sailfin mollies (Schlupp et al. 1994): Females preferred males they had seen mating (or associating with a female) over males seen alone. (3) Japanese quail (Galef and White 2000): Both females and males showed mate choice copying — preferring individuals they had seen paired with a conspecific. (4) Fruit flies (Drosophila melanogaster, Mery et al. 2009): Females copied the mate choice of conspecifics, preferring males of the same phenotype (dust color) as males they observed mating. Adaptive significance: (1) Reduced assessment costs: Direct mate assessment (evaluating male quality through displays, contests, territory inspection) is time-consuming and risky (predation during assessment). Copying leverages the assessment work done by others. (2) Information cascade: When individual assessment is uncertain, social information may be more reliable (many observers averaging out assessment errors). (3) Trade-off: Copying is most beneficial when individual information is poor (young, inexperienced females; difficult-to-assess male traits). When individual information is strong, copying provides less benefit. Evolutionary consequences: (1) Mate choice copying can cause rapid shifts in population-wide mate preferences (cultural evolution of mating preferences). (2) It can generate positive frequency-dependent sexual selection — rare male types are disadvantaged because they are never seen being chosen. (3) It can spread arbitrary preferences (similar to Fisher's runaway). (4) Copying can maintain costly female preferences without the need for good-genes benefits.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "intermediate",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "The handicap principle predicts that signals must be costly to be honest. What is the strategic handicap (index signal) alternative?",
+      "options": [
+        "Index signals are physically unfakeable signals where the signal value is mechanically or physiologically constrained to correlate with the quality being advertised — unlike handicap signals where honesty requires a fitness cost, index signals are honest because they CANNOT be produced at higher intensity by low-quality individuals; examples include body-size-dependent call frequency in frogs (larger larynx = lower frequency), sprint speed displays in coursing predators (gazelles' stotting height limited by leg muscle power), and mandible size in stag beetles (constrained by overall body growth)",
+        "Index signals and handicap signals are identical concepts with no meaningful distinction",
+        "Index signals are always dishonest because they involve no cost",
+        "Only mammals produce index signals; invertebrates always use handicap signals"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Index signals (Maynard Smith and Harper 2003) represent an alternative mechanism for signal honesty that does not require costly signaling: Distinction from handicap signals: (1) Handicap signals: Honesty maintained by differential costs. High-quality individuals bear the cost more easily than low-quality ones, creating a correlation between signal intensity and quality. The signal IS costly, and this cost is what maintains honesty. Example: bright carotenoid plumage (costly because carotenoids are diverted from immune function). (2) Index signals: Honesty maintained by physical constraint. The signal value is mechanically linked to the quality being assessed. No cost is required for honesty because the signal literally cannot be faked. Example: body size determines acoustic frequency (larger body = larger resonating chamber = lower frequency — a physical law). Examples of index signals: (a) Frog call frequency: In many frog species, dominant frequency of advertisement calls is inversely correlated with body size because larger frogs have larger vocal cords and buccal cavities. Females can assess male body size from call frequency alone. A small frog cannot produce a low-frequency call regardless of effort — the signal is physically constrained. (b) Stotting (pronking) in gazelles: Thomson's gazelles perform high jumps with stiff legs when a predator approaches. Jump height correlates with escape speed and stamina. A weak or injured gazelle cannot stot as high — the display is physically constrained by muscle power and body condition. Predators preferentially pursue gazelles that stot less vigorously. (c) Roaring in red deer: Roaring rate is limited by lung capacity, which correlates with body size and fighting ability. (d) Mandible size in stag beetles: Limited by overall body size (allometric growth). In practice, many signals contain both index and handicap components — the distinction is about the mechanism maintaining honesty, not the signal modality.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MTF",
+      "question": "Match the following mating systems with their defining characteristics:\n(I) Monogamy\n(II) Polygyny\n(III) Polyandry\n(IV) Promiscuity\n\n(P) One female mates with multiple males who provide parental care; the female may hold a territory encompassing several male territories; role-reversal in sexual dimorphism (females larger/more colorful)\n(Q) Both sexes mate with multiple partners with no lasting pair bond; strong sexual selection on both sexes; common in lekking species and species with external fertilization\n(R) One male mates with multiple females; high variance in male reproductive success; strong sexual selection producing male-biased sexual dimorphism; often associated with resource or female defense\n(S) One male and one female form a pair bond; biparental care is common; low sexual dimorphism; can be social (pair bond) or genetic (exclusive mating, which is rare)",
+      "options": [
+        "I-S, II-R, III-P, IV-Q",
+        "I-R, II-P, III-Q, IV-S",
+        "I-P, II-Q, III-S, IV-R",
+        "I-Q, II-S, III-R, IV-P"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Monogamy (I-S): A pair bond between one male and one female. Social monogamy (pair bond, shared territory, biparental care) is common in birds (~90% of species) but genetic monogamy (exclusive mating) is rare — DNA paternity studies reveal extra-pair paternity in most socially monogamous species (~11% of offspring on average in passerines). Characteristics: low sexual dimorphism (both sexes similar in size and ornamentation), biparental care, relatively equal parental investment. Examples: albatrosses (lifetime pair bonds), gibbons, California mice. Polygyny (II-R): One male mates with multiple females. Types: resource defense (male controls high-quality territory that attracts multiple females — red-winged blackbirds), female defense (male directly guards group of females — elephant seals, gorillas), lek (males aggregate at display sites — sage grouse). High variance in male reproductive success (many males unmated). Strong sexual selection produces pronounced sexual dimorphism (males larger, more ornamented). Sexual size dimorphism correlates with degree of polygyny across species. Polyandry (III-P): One female mates with multiple males. Rare (<1% of bird species). Classical polyandry: sex-role reversal — females are larger, more colorful, and compete for males, who provide most parental care. Examples: jacanas (females hold territories encompassing multiple male territories), phalaropes, spotted sandpipers. In cooperative polyandry (dunnocks, Galapagos hawks), multiple males share a female and all help raise young. Promiscuity (IV-Q): Both sexes mate with multiple partners with no lasting pair bond. No biparental care (or minimal). Both sexes subject to sexual selection, though often stronger on males. Examples: many marine invertebrates with broadcast spawning, many rodent species, chimpanzees (multi-male multi-female mating). In some lekking species, the system appears promiscuous but with strong female choice.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
+    },
+    {
+      "type": "MCQ",
+      "question": "Manipulation and deception are forms of animal communication where the signaler benefits at the receiver's expense. What is an example of exploitative signaling?",
+      "options": [
+        "Photuris fireflies (femmes fatales) mimic the flash patterns of Photinus females to lure Photinus males, which they then capture and eat — the predatory female exploits the male's mate-searching behavior by producing a dishonest signal; similarly, zone-tailed hawks resemble turkey vultures in flight silhouette and soaring behavior, allowing them to approach prey undetected among groups of harmless vultures (aggressive mimicry); and anglerfish use a modified dorsal spine (illicium) as a lure that mimics prey items to attract fish",
+        "All animal communication is perfectly honest with no deception ever occurring",
+        "Deceptive signaling only occurs between different species, never within a species",
+        "Exploitative signaling always leads to the extinction of the exploited species"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Exploitative signaling and deception in animal communication (Dawkins and Krebs 1978, Searcy and Nowicki 2005) challenge the assumption that all signals are honest: Types of deceptive signaling: (1) Aggressive mimicry: Predators mimic harmless species or attractive stimuli to lure prey. (a) Photuris fireflies (Lloyd 1965): Female Photuris imitates the species-specific flash pattern of female Photinus to attract male Photinus. When the male approaches expecting to mate, the Photuris female captures and consumes him. She also acquires defensive chemicals (lucibufagins) from the male. (b) Bolas spiders: Produce chemical mimics of moth sex pheromones to attract male moths. (c) Orchid mantis: Mimics flower petals to attract pollinating insects. (d) Anglerfish: Use a bioluminescent or prey-mimicking lure (esca) on a modified dorsal spine to attract prey fish. (2) Batesian mimicry (interspecific deception): Palatable species mimic unpalatable models — deceiving predators about their profitability. (3) Intraspecific dishonesty: (a) Mantis shrimp bluffing: Recently molted mantis shrimp perform meral spreads (threat displays) despite being temporarily unable to fight. Opponents that call the bluff discover the deception and attack. (b) Satellite males: In many species, small males mimic females to sneak copulations past territorial males (side-blotched lizards, cuttlefish, bluegill sunfish). (c) False alarm calls: Fork-tailed drongos give false alarm calls to kleptoparasitize meerkats and other species — when the target drops its food and flees, the drongo steals it. Drongos switch alarm call types to prevent habituation. Why doesn't deception destabilize communication? (1) Frequency-dependent selection: Deception is profitable only when rare. If most signalers are honest, receivers benefit from responding to signals. As deception increases, selection favors receiver skepticism, reducing deception's payoff. (2) Signal costs: Costly signals (handicaps) are harder to fake. (3) Punishment: Receivers may retaliate against detected cheaters.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 51,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Behavior"
     }
   ]
 }
