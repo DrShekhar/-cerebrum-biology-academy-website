@@ -369,11 +369,11 @@
       "question": "Microspore development involves a critical asymmetric division. What is the significance of the asymmetric mitotic division (pollen mitosis I) during male gametophyte development?",
       "options": [
         "It creates two identical cells that both contribute equally to the mature pollen grain",
-        "It separates the generative cell (which will later divide to form two sperm) from the larger vegetative cell (which drives pollen tube growth), establishing distinct cell fates through differential gene expression",
+        "It produces a small degenerate cell that is absorbed and a large cell that becomes the entire pollen grain",
         "It reduces the chromosome number from diploid to haploid in preparation for fertilization",
-        "It produces a small degenerate cell that is absorbed and a large cell that becomes the entire pollen grain"
+        "It separates the generative cell (which will later divide to form two sperm) from the larger vegetative cell (which drives pollen tube growth), establishing distinct cell fates through differential gene expression"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Pollen mitosis I (the first mitotic division of the microspore) is a critically important asymmetric division that establishes the two fundamentally different cell lineages within the male gametophyte. The microspore divides unequally to produce: (1) A large vegetative cell with diffuse chromatin and most of the cytoplasm\u2014this cell will not divide again but will grow to form the pollen tube after germination on the stigma. The vegetative cell nucleus directs pollen tube growth and metabolism. (2) A small generative cell with condensed chromatin and minimal cytoplasm, initially enclosed within the vegetative cell. The generative cell will undergo one more mitotic division (pollen mitosis II) to produce the two sperm cells needed for double fertilization. This asymmetric division is critical because it establishes different chromatin states and gene expression programs in the two cell types. The vegetative cell expresses genes for tube growth, wall synthesis, and signaling, while the generative cell expresses genes related to cell cycle progression and sperm cell specification.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -409,11 +409,11 @@
       "question": "Wind-pollinated (anemophilous) angiosperms have evolved specific floral adaptations. Which set of features is characteristic of wind-pollinated flowers?",
       "options": [
         "Large, showy petals with nectar guides, copious nectar production, and strong fragrance",
-        "Small, inconspicuous flowers lacking petals and nectar, with large feathery stigmas and pendulous stamens producing abundant light pollen",
+        "Flowers with trap mechanisms that temporarily imprison visiting insects",
         "Tubular, red flowers with copious nectar and no scent",
-        "Flowers with trap mechanisms that temporarily imprison visiting insects"
+        "Small, inconspicuous flowers lacking petals and nectar, with large feathery stigmas and pendulous stamens producing abundant light pollen"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Wind-pollinated angiosperms display a distinct suite of floral adaptations that maximize pollen dispersal and capture efficiency: (1) Reduced or absent petals, sepals, and nectaries\u2014these structures are unnecessary without animal pollinators and would interfere with wind access; (2) Large, feathery or plumose stigmas with extensive surface area to intercept wind-borne pollen from the air; (3) Pendulous, exposed stamens (often on long filaments) that release pollen into air currents; (4) Abundant, small, smooth, lightweight, non-sticky pollen grains\u2014anemophilous species produce vastly more pollen than entomophilous species (pollen:ovule ratios can exceed 1,000,000:1); (5) Flowers often appear before leaves (in deciduous trees) to avoid leaf obstruction of pollen movement; (6) Inflorescences are often catkins (pendulous spikes) that move in wind. Examples include grasses (Poaceae), oaks (Quercus), birches (Betula), and ragweed (Ambrosia). Option A describes insect-pollinated flowers, C describes bird-pollinated, and D describes trap-pollination.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -509,11 +509,11 @@
       "question": "Agrobacterium tumefaciens-mediated transformation is the most widely used method for generating transgenic plants. What natural mechanism does this technique exploit?",
       "options": [
         "Agrobacterium produces a DNA virus that infects plant cells and integrates into the genome",
-        "Agrobacterium transfers a segment of its Ti (tumor-inducing) plasmid\u2014the T-DNA\u2014into plant nuclear DNA, where it integrates randomly; scientists replace the T-DNA oncogenes with genes of interest",
+        "Agrobacterium directly transfers bacterial chromosomal DNA to plant cells through conjugation pili",
         "Agrobacterium produces an RNA retrovirus that reverse-transcribes into plant DNA",
-        "Agrobacterium directly transfers bacterial chromosomal DNA to plant cells through conjugation pili"
+        "Agrobacterium transfers a segment of its Ti (tumor-inducing) plasmid\u2014the T-DNA\u2014into plant nuclear DNA, where it integrates randomly; scientists replace the T-DNA oncogenes with genes of interest"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Agrobacterium tumefaciens naturally causes crown gall disease by transferring a specific DNA segment (T-DNA, for Transfer DNA) from its Ti (Tumor-inducing) plasmid into the nuclear genome of wounded plant cells. In nature, T-DNA carries oncogenes (iaaM, iaaH for auxin synthesis; ipt for cytokinin synthesis) that cause uncontrolled cell proliferation (tumor formation) and opine synthesis genes that produce nutrients only Agrobacterium can metabolize. The transfer process involves: (1) Wounded plant cells release phenolic compounds (acetosyringone) detected by the VirA/VirG two-component system; (2) Vir genes are activated, producing proteins that process T-DNA into a single-stranded copy (T-strand); (3) VirB/VirD4 type IV secretion system transfers the T-strand complexed with VirD2 and VirE2 proteins into the plant cell; (4) T-DNA is imported into the nucleus and integrated into chromosomal DNA. For plant biotechnology, scientists 'disarm' the Ti plasmid by removing oncogenes and opine genes from T-DNA and replacing them with genes of interest (plus selectable markers), creating a vector for stable transgene insertion.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -629,11 +629,11 @@
       "question": "Pollination by deception\u2014where flowers attract pollinators without providing rewards\u2014is common in orchids. What mechanism does the Mediterranean orchid Ophrys use to attract pollinating male wasps?",
       "options": [
         "Ophrys produces nectar deep in its spur that wasps cannot access, forcing repeated visits",
-        "Ophrys mimics the specific sex pheromone chemicals and visual appearance of female wasps, inducing male wasps to attempt copulation (pseudocopulation) and transfer pollinia in the process",
+        "Ophrys produces UV-fluorescent patterns that confuse wasp navigation, causing them to land repeatedly",
         "Ophrys traps wasps inside its flower using a hinged lip mechanism, coating them in pollen before release",
-        "Ophrys produces UV-fluorescent patterns that confuse wasp navigation, causing them to land repeatedly"
+        "Ophrys mimics the specific sex pheromone chemicals and visual appearance of female wasps, inducing male wasps to attempt copulation (pseudocopulation) and transfer pollinia in the process"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Ophrys orchids are among the most remarkable examples of pollination by sexual deception. Each Ophrys species typically targets a specific wasp or bee species through an extraordinarily precise mimicry system: (1) Chemical mimicry\u2014the orchid labellum (lip) produces a blend of volatile organic compounds (alkanes, alkenes, esters) that closely matches the species-specific sex pheromone of the target female wasp or bee. These compounds are perceived by the male insect's antennae; (2) Visual mimicry\u2014the labellum color, shape, and pilosity (hairiness) resemble the body of the female insect; (3) Tactile mimicry\u2014the labellum texture and hair patterns provide tactile stimuli similar to the female body. Male wasps or bees, attracted by the chemical and visual cues, land on the labellum and attempt copulation (pseudocopulation). During these movements, the pollinia (pollen masses) are attached to the insect's head or abdomen via the viscidium (sticky disc). When the deceived male visits another Ophrys flower, the pollinia are deposited on the stigma. This highly species-specific pollination mechanism drives reproductive isolation and speciation in Ophrys.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
@@ -789,11 +789,11 @@
       "question": "A researcher measures pollen tube growth rates in styles of different lengths in Nicotiana alata. Data shows: Short-styled mutant (5 mm style): compatible tubes reach ovules in 6 hours; Normal-styled plants (25 mm style): compatible tubes reach ovules in 18 hours; Self-incompatible tubes in normal styles: tubes arrest at 3-4 mm after 12 hours. What can be concluded about the S-RNase rejection mechanism?",
       "options": [
         "S-RNase acts at the stigma surface, preventing pollen germination entirely",
-        "S-RNase acts throughout the style but requires a minimum distance of tube growth before the cytotoxic effect (RNA degradation) becomes lethal, explaining why self-tubes grow 3-4 mm before arrest",
+        "S-RNase only acts in the ovary, and the arrest at 3-4 mm is due to nutrient depletion in the style",
         "Self-incompatible pollen tubes grow at the same rate as compatible tubes but are physically blocked by callose plugs in the style transmitting tissue",
-        "S-RNase only acts in the ovary, and the arrest at 3-4 mm is due to nutrient depletion in the style"
+        "S-RNase acts throughout the style but requires a minimum distance of tube growth before the cytotoxic effect (RNA degradation) becomes lethal, explaining why self-tubes grow 3-4 mm before arrest"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The data reveal important features of the S-RNase rejection mechanism in gametophytic self-incompatibility: (1) Compatible pollen tubes grow through the full style length (5 mm or 25 mm) and reach ovules, indicating normal tube growth when the S-RNase is detoxified by non-self SLF F-box proteins. (2) Self-incompatible tubes grow 3-4 mm before arresting, regardless of total style length. This indicates that S-RNase enters all pollen tubes (compatible and incompatible) non-specifically as they grow through the style. In incompatible tubes, the matching S-RNase is not degraded by SLF proteins and remains active. The cytotoxic effect (degradation of ribosomal RNA and other cellular RNA by the active S-RNase) is cumulative\u2014it takes time for sufficient RNA degradation to halt protein synthesis and kill the pollen tube. The 3-4 mm growth before arrest represents the lag period during which the pollen tube can still grow using pre-existing mRNAs and proteins while the S-RNase progressively degrades new RNA. The arrest does not occur at the stigma surface or at the ovary, confirming that the mechanism acts within the growing pollen tube during stylar transit.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -849,11 +849,11 @@
       "question": "The molecular mechanism of pollen hydration on the stigma surface is the first step in pollen-pistil interaction. In dry-stigma species like Arabidopsis, what regulates selective pollen hydration?",
       "options": [
         "All pollen grains hydrate equally on any stigma surface regardless of species compatibility",
-        "Compatible pollen coat lipids interact with the stigmatic papilla cell cuticle to allow water transfer from stigma to pollen, while incompatible pollen is not hydrated due to lipid-lipid incompatibility",
+        "Hydration is regulated by atmospheric humidity alone, with no contribution from the stigma",
         "Pollen grains carry their own water supply and do not require stigmatic hydration",
-        "Hydration is regulated by atmospheric humidity alone, with no contribution from the stigma"
+        "Compatible pollen coat lipids interact with the stigmatic papilla cell cuticle to allow water transfer from stigma to pollen, while incompatible pollen is not hydrated due to lipid-lipid incompatibility"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "In dry-stigma species (where the stigma surface lacks a fluid exudate), pollen hydration is a regulated, selective process that serves as the first checkpoint in pollen-pistil compatibility. Compatible pollen hydration involves: (1) Initial adhesion\u2014pollen coat lipids and proteins (produced by the tapetum and deposited during pollen maturation) make initial contact with the stigma papilla cell cuticle; (2) Recognition\u2014compatible pollen coat proteins interact with stigmatic receptors, triggering localized breakdown of the papilla cuticle; (3) Water transfer\u2014water flows from the turgid stigmatic papilla cell through the modified cuticle interface to the desiccated pollen grain, allowing it to hydrate, metabolically activate, and germinate. In sporophytic self-incompatibility systems (Brassicaceae), this hydration step is where rejection occurs: when SCR/SP11 on the pollen coat activates SRK on the papilla surface, the downstream ARC1 signaling pathway prevents cuticle modification and water transfer, so self-pollen fails to hydrate. Pollen from unrelated species also fails to hydrate due to biochemical incompatibility at the lipid-cuticle interface.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -942,6 +942,446 @@
       "sourceTextbook": "Campbell-12e",
       "conceptualDepth": "expert",
       "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cleistogamy is a reproductive strategy where flowers self-pollinate without ever opening. What is the ecological advantage of cleistogamy?",
+      "options": [
+        "Cleistogamy increases genetic diversity by promoting outcrossing through wind pollination",
+        "Cleistogamy allows reproduction when pollinator populations are low or absent",
+        "Cleistogamy ensures guaranteed seed set without requiring pollinators, providing reproductive assurance, especially in unpredictable environments where pollinator visits may be unreliable",
+        "Cleistogamy prevents pollen theft by non-pollinating insects"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cleistogamy (from Greek kleistos = closed, gamos = marriage) provides reproductive assurance by guaranteeing seed production through obligate self-fertilization within closed flowers. Many cleistogamous species (like violets, Viola spp.) produce both cleistogamous (CL) flowers and chasmogamous (CH, normal opening) flowers. The CL flowers never open, and self-pollination occurs within the closed bud when pollen directly contacts the stigma. The ecological advantages include: (1) Guaranteed seed set regardless of pollinator availability\u2014critical in environments where pollinators are scarce, unpredictable, or absent (high altitudes, early/late season, dense shade); (2) Reduced energy investment\u2014CL flowers are small and lack petals, nectar, and scent, saving resources compared to CH flowers; (3) Efficient pollen use\u2014no pollen is lost to wind, grooming, or pollen-collecting visitors. The tradeoff is reduced genetic diversity from selfing, but many species balance this by producing both CL and CH flowers (mixed mating), allowing some outcrossing when pollinators are available.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "During double fertilization, the two sperm cells must be delivered simultaneously to the egg and central cell. How are the two sperm cells transported within the pollen tube?",
+      "options": [
+        "Each sperm cell swims independently using flagella, navigating through the pollen tube cytoplasm",
+        "Sperm cells are enclosed within the vegetative cell cytoplasm and are passively transported by cytoplasmic streaming toward the tube tip, connected to each other and to the vegetative nucleus by a physical cytoplasmic projection",
+        "Sperm cells are released from the pollen grain at the stigma and travel independently through the style transmitting tissue",
+        "Sperm cells divide from the vegetative nucleus at the tube tip just before ovule entry"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In flowering plants, sperm cells are non-motile (unlike the flagellated sperm of bryophytes, ferns, and some gymnosperms). The two sperm cells are contained within the vegetative cell of the pollen grain/tube as a 'cell within a cell' arrangement. They are physically connected to each other and to the vegetative cell nucleus by a cytoplasmic extension called the male germ unit (MGU). The vegetative cell nucleus typically travels near the tube tip, and the two sperm cells follow closely behind, all transported by the actin-mediated cytoplasmic streaming within the pollen tube. Upon pollen tube burst at the synergid, the two sperm cells are released along with the pollen tube cytoplasm. One sperm fuses with the egg cell and the other with the central cell. Recent live-imaging studies have shown that sperm cell delivery is mediated by specific molecular interactions between sperm cell surface proteins (including GCS1/HAP2 fusion protein) and the egg/central cell membrane. , which accurately describes sperm transport within the pollen tube.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Herkogamy is the spatial separation of anthers and stigma within a hermaphroditic flower. How does this arrangement promote outcrossing?",
+      "options": [
+        "Herkogamy makes self-pollination physically difficult because pollen from the anthers cannot easily reach the stigma of the same flower without a pollinator intermediary",
+        "Herkogamy causes male sterility by separating pollen from the vascular supply",
+        "Herkogamy enables wind pollination by positioning anthers above the stigma",
+        "Herkogamy prevents insect access to nectar, forcing pollinators to visit multiple flowers"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Herkogamy (spatial separation of male and female organs within a flower) is one of the most common mechanisms promoting outcrossing in hermaphroditic flowers. By physically separating the anthers and stigma\u2014through differences in their height, position, or orientation\u2014the flower reduces the probability that its own pollen will self-fertilize. For effective pollination, pollen must be transferred by an intermediary agent (insect, bird, wind) from the anthers of one flower to the stigma of another. Examples include: (1) Approach herkogamy\u2014stigma extends beyond the anthers (common in many species); (2) Reverse herkogamy\u2014anthers extend beyond the stigma; (3) Heterostyly\u2014a specialized form involving discrete morphs (pin and thrum) with reciprocal positioning. While herkogamy does not completely prevent self-pollination (especially when pollinators carry a flower's own pollen to its stigma), it significantly reduces autonomous self-pollination and promotes cross-pollination through the requirement for pollinator-mediated transfer.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Late embryogenesis abundant (LEA) proteins accumulate during seed maturation. What is the function of LEA proteins in mature seeds?",
+      "options": [
+        "LEA proteins catalyze starch hydrolysis during germination",
+        "LEA proteins form crystalline storage bodies that provide amino acids for embryo growth",
+        "LEA proteins serve as transcription factors that activate seed storage protein genes",
+        "LEA proteins protect cellular structures during desiccation by acting as molecular shields that prevent protein aggregation and stabilize membranes"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Late Embryogenesis Abundant (LEA) proteins are a diverse group of highly hydrophilic, intrinsically disordered proteins that accumulate to high levels during the late stages of seed maturation, coinciding with the acquisition of desiccation tolerance. Their functions include: (1) Molecular shield activity\u2014LEA proteins surround and protect other proteins during dehydration, preventing irreversible aggregation and denaturation that would occur as cellular water is removed; (2) Membrane stabilization\u2014some LEA proteins interact with phospholipid membranes, maintaining bilayer integrity during desiccation by replacing water molecules at the membrane surface; (3) Ion sequestration\u2014certain LEA proteins bind divalent metal ions that could catalyze oxidative damage in dry tissues; (4) Vitrification\u2014LEA proteins contribute to the formation of a glassy (vitrified) state in the cytoplasm of dry seeds, a state that severely limits molecular mobility and thereby slows deteriorative reactions. LEA proteins are also induced by drought, salinity, and cold stress in vegetative tissues, suggesting a general role in dehydration protection. Their accumulation is primarily regulated by ABA signaling through the ABI3/ABI5 transcription factor pathway.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cytoplasmic male sterility (CMS) is used in hybrid seed production. What causes CMS and how is fertility restored?",
+      "options": [
+        "CMS is caused by nuclear gene mutations that prevent anther development; fertility is restored by backcrossing with wild-type pollen donors",
+        "CMS results from chimeric mitochondrial genes that produce proteins toxic to tapetum/microspore development; fertility is restored by nuclear Restorer-of-fertility (Rf) genes encoding pentatricopeptide repeat (PPR) proteins",
+        "CMS is caused by chloroplast genome deletions that reduce photosynthetic output; fertility is restored by high-light cultivation",
+        "CMS results from viral infection that destroys pollen grains; fertility is restored by antiviral treatment"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cytoplasmic male sterility (CMS) is a maternally inherited trait caused by chimeric or rearranged mitochondrial genes that arose through recombination events within the mitochondrial genome. These chimeric genes encode novel proteins that are specifically toxic to the tapetum or developing microspores, causing pollen abortion without affecting female fertility. For example: in maize CMS-T (Texas), the T-urf13 gene encodes a 13 kDa protein that forms pores in the inner mitochondrial membrane, disrupting energy production in tapetum cells. In rice CMS-BT, the orf79 gene produces a cytotoxic protein. CMS is exploited commercially because CMS mothers cannot self-pollinate and must receive pollen from a different line\u2014enabling efficient hybrid seed production without manual emasculation. Fertility is restored by nuclear Restorer-of-fertility (Rf) genes, most of which encode pentatricopeptide repeat (PPR) proteins that bind to and degrade or prevent translation of the CMS-causing mitochondrial mRNA, neutralizing the cytotoxic effect. In the three-line hybrid system: (1) CMS line (A-line, male-sterile mother); (2) Maintainer (B-line, same nuclear genotype but normal cytoplasm); (3) Restorer (R-line, carries Rf gene to restore fertility in hybrid offspring).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Orthodox seeds can survive extreme desiccation (down to 5% moisture content) during long-term storage. What molecular mechanism protects cellular components during this extreme water loss?",
+      "options": [
+        "Trehalose and sucrose form a glassy (vitrified) matrix that immobilizes cellular contents and prevents deleterious chemical reactions in the dry state",
+        "Wax secretion from the embryo creates an internal waterproof barrier around each cell",
+        "Protein crystallization converts all enzymes to inactive but stable crystalline forms",
+        "DNA wrapping by histones becomes so tight that no molecular damage can occur"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Desiccation tolerance in orthodox seeds involves a suite of protective mechanisms, with sugar vitrification being a central component. During late maturation, seeds accumulate high concentrations of non-reducing sugars\u2014primarily sucrose and raffinose family oligosaccharides (RFOs: raffinose, stachyose, verbascose). As water is removed during desiccation, these sugars undergo vitrification\u2014they transition from a liquid to an amorphous solid (glass) state. This glassy matrix has several protective properties: (1) It fills the space vacated by water, preventing mechanical collapse of cellular structures; (2) The extremely high viscosity of the glassy state (approximately 10^12 Pa.s) severely limits molecular mobility, slowing degradative reactions (oxidation, Maillard reactions, hydrolysis) to negligible rates; (3) Sugars can hydrogen-bond with phospholipid head groups, replacing water molecules and maintaining membrane bilayer structure in the dry state (water replacement hypothesis). This sugar glass works synergistically with LEA proteins (which also contribute to vitrification and protein protection) and antioxidant systems. Trehalose is more prominent in resurrection plants and anhydrobiotic organisms, while sucrose and RFOs dominate in orthodox seeds.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A plant breeder wants to develop a male-sterile line for hybrid seed production in a crop that lacks natural CMS. Which biotechnological strategy could achieve engineered male sterility?",
+      "options": [
+        "Apply chemical pollen suppressants (gametocides) to the entire crop field to prevent pollen production in all plants",
+        "Express a cytotoxic gene (such as barnase ribonuclease from Bacillus amyloliquefaciens) specifically in the tapetum using the TA29 tapetum-specific promoter, destroying the tapetum and preventing pollen development",
+        "Remove all stamens manually from every flower before pollen maturation",
+        "Grow the crop under constant darkness to prevent anther development"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Engineered male sterility using tissue-specific cytotoxic gene expression is a powerful biotechnological approach developed by Mariani et al. (1990). The strategy involves: (1) The barnase gene from Bacillus amyloliquefaciens encodes a ribonuclease that is lethal when expressed in eukaryotic cells because it degrades cellular RNA; (2) The TA29 promoter, isolated from tobacco, drives expression exclusively in the tapetum\u2014the anther cell layer essential for pollen development; (3) When TA29::barnase is expressed in transgenic plants, barnase ribonuclease destroys tapetum cells during early anther development, preventing pollen formation\u2014the plant is male-sterile but otherwise normal; (4) Fertility is restored by crossing with a line expressing barstar (a specific barnase inhibitor) driven by the same TA29 promoter. In the TA29::barnase x TA29::barstar hybrid, barstar neutralizes barnase in the tapetum, allowing normal pollen development. This system has been commercialized in canola (Brassica napus) for hybrid seed production. Chemical gametocides (option A) lack specificity, manual emasculation (option C) is labor-intensive, and darkness (option D) would kill the plant.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pollen allergenicity is a significant health concern. What molecular property of pollen grains causes allergic responses in sensitized individuals?",
+      "options": [
+        "The sporopollenin exine directly activates immune cells upon inhalation",
+        "Pollen grains release soluble proteins (pollen allergens) from the pollen coat and cytoplasm upon hydration in the nasal mucosa, which trigger IgE-mediated hypersensitivity reactions",
+        "Pollen grains contain toxic alkaloids that directly damage respiratory epithelium",
+        "Pollen grain cell walls contain beta-glucan that activates complement cascade proteins in blood"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pollen allergenicity is caused by soluble proteins released from pollen grains upon contact with moist mucosal surfaces. When pollen grains land in the nasal mucosa, they rapidly hydrate and release proteins from two sources: (1) pollen coat proteins (deposited on the surface by the tapetum during development); and (2) cytoplasmic proteins released when the grain germinates or ruptures. These released proteins include the major pollen allergens\u2014which are often enzymes or structural proteins with normal biological functions in pollen: Bet v 1 (birch, pathogenesis-related protein), Phl p 1 (timothy grass, expansin-like), Der p 1 (mite, cysteine protease), Amb a 1 (ragweed, pectate lyase). In sensitized individuals, these proteins bind to IgE antibodies on mast cells in the nasal mucosa, triggering mast cell degranulation and release of histamine, leukotrienes, and prostaglandins\u2014causing the symptoms of allergic rhinitis (hay fever). The IgE-mediated Type I hypersensitivity response explains why only specific proteins from specific pollen species cause allergies. Sporopollenin itself is immunologically inert.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Seed banks preserve genetic diversity of crop species and wild relatives. What storage conditions maximize the longevity of orthodox seeds in gene banks?",
+      "options": [
+        "Room temperature (25 degrees C) with high humidity to maintain seed hydration and metabolic activity",
+        "Liquid nitrogen (-196 degrees C) cryopreservation for all seed types without any pre-treatment",
+        "Low temperature (-18 to -20 degrees C) and low moisture content (3-7%) in sealed containers to minimize metabolic activity and chemical deterioration",
+        "Oxygen-enriched atmosphere at 4 degrees C to support aerobic seed respiration during storage"
+      ],
+      "correctAnswer": "C",
+      "explanation": "International gene bank standards (established by FAO/IPGRI, now Bioversity International) specify optimal conditions for long-term conservation of orthodox seeds: (1) Moisture content: Seeds are dried to 3-7% moisture content (species-specific optimum), which is below the threshold for enzymatic activity and puts the seed in a glassy state where chemical reactions proceed extremely slowly; (2) Temperature: Base collection storage at -18 to -20 degrees C (conventional cold storage) dramatically reduces the rate of all deteriorative reactions. The Svalbard Global Seed Vault maintains seeds at -18 degrees C in a permafrost-cooled facility; (3) Sealed containers: Hermetically sealed aluminum foil packets or glass jars prevent moisture reabsorption from the environment; (4) Reduced oxygen: Some facilities use vacuum-sealed or nitrogen-flushed containers to reduce oxidative damage. Under these conditions, many orthodox seeds remain viable for decades to centuries. Room temperature storage (option A) dramatically reduces seed longevity. While cryopreservation at -196 degrees C (option B) can extend viability even further, it requires species-specific protocols for desiccation-sensitive (recalcitrant) seeds. Oxygen enrichment (option D) would accelerate oxidative deterioration.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The sperm cell fusion protein GCS1/HAP2 is essential for double fertilization. What is the function of this protein?",
+      "options": [
+        "GCS1/HAP2 guides the pollen tube to the ovule through chemotactic signaling",
+        "GCS1/HAP2 degrades the synergid cell wall to allow sperm release",
+        "GCS1/HAP2 is a class II viral-like fusion protein on the sperm cell surface that mediates membrane fusion between the sperm and egg/central cell",
+        "GCS1/HAP2 activates sperm cell division within the pollen tube"
+      ],
+      "correctAnswer": "C",
+      "explanation": "GCS1 (Generative Cell Specific 1), also known as HAP2 (Hapless 2), is a transmembrane protein expressed on the surface of plant sperm cells that is essential for gamete fusion. GCS1/HAP2 was identified through characterization of Arabidopsis mutants where pollen tubes reach the embryo sac and release sperm, but the sperm cells fail to fuse with the egg or central cell. Structural analysis revealed that GCS1/HAP2 is a class II fusion protein with structural homology to viral membrane fusion proteins (such as dengue virus E protein), containing a hydrophobic fusion loop that inserts into the target membrane to drive membrane merger. GCS1/HAP2 is remarkably conserved across eukaryotes\u2014orthologs function in gamete fusion in animals (Chlamydomonas, Plasmodium, C. elegans), suggesting it represents an ancient eukaryotic fertilization mechanism. In plants, GCS1/HAP2 on the sperm surface likely interacts with receptors on the egg cell membrane (candidate egg receptors include EC1 in maize), triggering the conformational changes that drive sperm-egg membrane fusion.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Flower color is one of the most important traits for pollinator attraction. What biochemical pathway determines red, blue, and purple flower colors?",
+      "options": [
+        "Carotenoid biosynthesis pathway produces red, blue, and purple pigments in chromoplasts",
+        "Chlorophyll degradation produces red and purple pigments as breakdown products",
+        "The flavonoid/anthocyanin biosynthetic pathway produces cyanidin (red-magenta), delphinidin (blue-purple), and pelargonidin (orange-red) in vacuoles, with final color modified by pH, co-pigments, and metal ions",
+        "Betalain biosynthesis produces all flower colors across all angiosperm families"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Red, blue, and purple flower colors are primarily determined by anthocyanins, which are synthesized through the flavonoid biosynthetic pathway. The three major anthocyanidin aglycones are: pelargonidin (orange-red), cyanidin (red-magenta), and delphinidin (blue-violet), differing in the number of hydroxyl groups on the B-ring. The final perceived flower color is modified by: (1) Vacuolar pH\u2014anthocyanins are red at acidic pH and blue at basic pH; (2) Co-pigmentation\u2014non-colored flavonoids (flavones, flavonols) stack with anthocyanins to shift color toward blue (bathochromic shift); (3) Metal ion complexation\u2014complexes with Al3+ or Fe3+ shift color to blue (as in Hydrangea, where soil aluminum availability determines flower color); (4) Glycosylation, acylation, and methylation patterns affect stability and color. The flavonoid pathway begins with phenylalanine (via the phenylpropanoid pathway) and progresses through chalcone synthase (CHS), chalcone isomerase (CHI), flavanone 3-hydroxylase (F3H), dihydroflavonol reductase (DFR), and anthocyanidin synthase (ANS). Carotenoids produce yellow/orange colors. Betalains replace anthocyanins only in Caryophyllales (beets, cacti).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the biological significance of the polyspermy block in angiosperms\u2014the mechanism preventing more than one pollen tube from delivering sperm to an embryo sac?",
+      "options": [
+        "Multiple fertilizations would produce polyploid embryos that cannot develop normally",
+        "There is no polyspermy block in angiosperms; multiple pollen tubes routinely fertilize each embryo sac",
+        "The polyspermy block ensures that exactly two sperm from a single pollen tube fertilize the egg and central cell, preventing genetic conflicts from supernumerary paternal genomes in the endosperm and embryo",
+        "The polyspermy block prevents infection of the embryo sac by pathogenic fungi carried by pollen tubes"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Angiosperms have evolved a polyspermy block to ensure that each embryo sac receives sperm from only one pollen tube. After the first pollen tube discharges its two sperm cells into the embryo sac, a mechanism prevents additional pollen tubes from entering. This is crucial because: (1) Additional sperm would cause polyspermy\u2014extra fertilizations would create polyploid embryos or endosperm with disrupted genome balance, leading to developmental failure; (2) In the endosperm, the 2:1 maternal:paternal genome ratio is critical for proper development (as demonstrated by interploidy cross experiments)\u2014extra paternal genomes disrupt genomic imprinting and endosperm cellularization timing; (3) Multiple paternal contributions would create genetic conflicts within the seed. The molecular mechanism involves rapid changes in the synergid/embryo sac after the first pollen tube discharge: ethylene production, modification of LURE peptide secretion, and possibly physical changes that block additional tube entry. In feronia mutants, the polyspermy block fails and multiple pollen tubes enter the embryo sac. The FERONIA pathway thus plays a dual role in both pollen tube reception and polyspermy prevention.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures fertilization success in Arabidopsis mutants affecting different stages of reproduction. Results: Wild-type = 95% seed set; lure1/2 mutant (no LURE peptide) = 20% seed set; fer mutant (no FERONIA) = 5% seed set with pollen tube overgrowth; gcs1 mutant (no GCS1/HAP2) sperm = 0% seed set despite normal pollen tube growth and discharge. What can be concluded about the hierarchy of these processes?",
+      "options": [
+        "All three genes function at the same step\u2014pollen tube guidance\u2014and their different phenotypes reflect varying severity of the same defect",
+        "LURE is required for pollen tube guidance, FERONIA for pollen tube reception and sperm discharge, and GCS1/HAP2 for gamete fusion\u2014they act sequentially, with each step dependent on the previous one",
+        "GCS1/HAP2 is the master regulator of all fertilization events, and LURE and FERONIA are downstream targets",
+        "The results show that fertilization is a single-step process with redundant pathways"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The mutant phenotypes reveal three sequential, non-redundant steps in the fertilization process: (1) LURE-mediated pollen tube guidance: lure1/2 mutants show reduced but not eliminated seed set (20%), indicating that LURE peptides from synergids are important but not absolutely required for pollen tube guidance\u2014some tubes reach ovules through other guidance mechanisms. Without LURE, guidance efficiency drops dramatically but is not zero. (2) FERONIA-mediated pollen tube reception: fer mutants show very low seed set (5%) with a characteristic pollen tube overgrowth phenotype\u2014tubes grow into the embryo sac but fail to stop, burst, and release sperm. This shows FERONIA is required for the pollen tube discharge step downstream of tube arrival. (3) GCS1/HAP2-mediated gamete fusion: gcs1 mutant sperm result in 0% seed set despite normal tube growth and discharge, demonstrating that GCS1/HAP2 is absolutely required for the final membrane fusion event between sperm and egg/central cell. The hierarchy is: Guidance (LURE) then Reception/Discharge (FERONIA) then Fusion (GCS1/HAP2). Each step must succeed for the next to occur.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Recalcitrant seeds cannot tolerate desiccation and therefore cannot be stored using conventional seed bank methods. Which type of seed is recalcitrant, and what alternative conservation method is used?",
+      "options": [
+        "Grass seeds are recalcitrant; they are conserved by drying and freezing at -80 degrees C",
+        "Tropical tree seeds (mango, cocoa, rubber, coconut) are often recalcitrant, requiring cryopreservation of excised embryonic axes or in vitro slow-growth tissue culture for conservation",
+        "All legume seeds are recalcitrant; they are conserved by maintaining live plants in field gene banks only",
+        "Desert plant seeds are recalcitrant; they are conserved by storing in high-humidity chambers"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Recalcitrant seeds are produced by many tropical and subtropical tree species\u2014including mango (Mangifera indica), cocoa (Theobroma cacao), rubber (Hevea brasiliensis), coconut (Cocos nucifera), avocado (Persea americana), and many rainforest trees. These seeds are metabolically active at maturity, have high moisture content (30-70%), and cannot survive desiccation below a critical moisture level (typically 20-35%). They also cannot tolerate the low temperatures used for orthodox seed storage. This poses significant challenges for genetic resource conservation. Alternative strategies include: (1) Cryopreservation\u2014excision of embryonic axes (or shoot tips) followed by rapid dehydration to an acceptable moisture level and immediate immersion in liquid nitrogen (-196 degrees C), vitrifying the remaining cellular water and bypassing the lethal ice crystal formation; (2) In vitro slow-growth storage\u2014maintaining shoot tips or embryogenic cultures on nutrient media at reduced temperature and low light, slowing growth but keeping cultures alive; (3) Field gene banks\u2014maintaining living collections of trees, though this is expensive and vulnerable to natural disasters and disease. Grass seeds (wheat, rice) are typically orthodox and store well.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The formation of the pollen wall follows a precisely ordered developmental program. What cellular structure determines the species-specific exine patterning of pollen grains?",
+      "options": [
+        "The callose wall surrounding the microspore tetrad acts as a negative template, with primexine deposition occurring in gaps of the callose",
+        "The primexine matrix, deposited between the microspore plasma membrane and the callose wall, serves as a template for sporopollenin polymerization; the pattern is determined by the microspore's own gene expression and cytoplasmic organization",
+        "The tapetum cells directly sculpt the exine pattern by projecting extensions that mold sporopollenin deposition on each microspore",
+        "Wind and fluid dynamics within the anther locule randomly determine exine patterns through physical forces"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The species-specific exine ornamentation pattern of pollen grains is determined by the primexine matrix\u2014a cellulosic and glycoprotein-rich layer deposited between the microspore plasma membrane and the inner surface of the callose wall during the tetrad stage. The primexine serves as a scaffold or template that guides where sporopollenin precursors (produced by the tapetum) will polymerize. The pattern within the primexine is determined by the microspore's own haploid gene expression and the organization of its cytoplasm and plasma membrane: (1) Colpi (germination furrows) are specified by the microspore's cytoskeleton; (2) Tectum patterns (reticulate, echinate, striate, etc.) are determined by the spacing and arrangement of primexine components. Key genes controlling exine patterning include DEX1 (Defective in Exine patterning) and RPG1 (Ruptured Pollen Grain), which are expressed in the microspore. While the tapetum provides sporopollenin precursors, it does not determine the spatial pattern\u2014this is the microspore's autonomous contribution to its own wall structure.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Xenia is the immediate effect of pollen genotype on endosperm or seed coat characteristics in the same generation. What mechanism causes xenia?",
+      "options": [
+        "Pollen hormones diffuse into maternal tissues, altering fruit color and size",
+        "Since the endosperm is triploid (2n maternal + 1n paternal from double fertilization), the paternal genome contributes to endosperm gene expression, causing visible differences in endosperm-derived traits such as kernel color in maize",
+        "Pollen proteins are absorbed by the stigma and transported to developing seeds, where they modify gene expression",
+        "Pollen grains produce volatile signals that influence neighboring flowers on the same plant"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Xenia refers to the visible effect of the pollen parent's genotype on the endosperm (or occasionally seed coat/pericarp) characteristics of seeds produced in the current generation. This occurs because the endosperm is a triploid tissue formed by the fusion of two maternal polar nuclei (2n) with one paternal sperm nucleus (n) during double fertilization. Since the paternal genome contributes to endosperm gene expression, any dominant or dosage-dependent paternal alleles affecting endosperm composition can produce visible effects in the current seed. The classic example is in maize (Zea mays): when a yellow-endosperm variety (Y/Y maternal) is pollinated by a purple-endosperm variety carrying the dominant Pr (purple) allele, the resulting endosperm (Y/Y from mother + Pr from father) expresses the paternal Pr allele and appears purple in the current kernel. Without the paternal contribution, the kernel would be yellow. Xenia is distinguished from metaxenia (effects on maternal pericarp/fruit tissue), which involves different mechanisms. Xenia directly demonstrates the genetic contribution of the paternal genome to the triploid endosperm.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Coevolution between angiosperms and their pollinators has produced highly specialized pollination systems. Which of the following represents the most extreme example of obligate coevolution between a plant and its pollinator?",
+      "options": [
+        "Honeybees pollinating clover\u2014each can survive without the other",
+        "Hummingbirds pollinating Heliconia\u2014both can use alternative food sources/pollinators",
+        "Fig wasps (Agaonidae) pollinating figs (Ficus)\u2014each fig species has a specific wasp pollinator, and neither can complete its life cycle without the other",
+        "Butterflies pollinating lavender\u2014multiple butterfly species visit lavender, and butterflies visit many flower species"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The fig-fig wasp mutualism represents one of the most extreme examples of obligate coevolution in nature. Each of the approximately 900 Ficus species typically has a specific pollinating wasp species (family Agaonidae), and the relationship is mutually obligate: The fig depends on the wasp for pollination\u2014fig flowers are enclosed inside a specialized structure called the syconium (the fig fruit), accessible only through a tiny pore (ostiole). Only the species-specific fig wasp can navigate through the ostiole to reach the flowers. The wasp depends on the fig for reproduction\u2014female wasps enter the syconium, pollinate the flowers, and lay eggs inside short-styled pistillate flowers (gall flowers). Wasp larvae develop inside the fig, feeding on gall flower tissue. Males emerge first, mate with females inside the fig, and chew exit holes. Newly mated females collect pollen from male flowers (which mature last), exit, and seek a receptive fig of the same species to continue the cycle. This mutualism has been maintained for approximately 75-90 million years, with extensive co-speciation events. The other examples represent more generalized pollination relationships.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Biolistic (gene gun) transformation is an alternative to Agrobacterium-mediated transformation. In what situation is biolistics preferred?",
+      "options": [
+        "When transforming dicot species that are highly susceptible to Agrobacterium",
+        "When very large DNA fragments (over 1 Mb) need to be inserted",
+        "When transforming monocot species (cereals like wheat, rice, maize) or other species recalcitrant to Agrobacterium-mediated transformation",
+        "When the goal is site-specific integration at a predetermined genomic locus"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Biolistic (particle bombardment) transformation is preferred for species and tissues that are recalcitrant to Agrobacterium-mediated transformation. Historically, monocots (cereals) were difficult to transform with Agrobacterium because: (1) Agrobacterium naturally infects dicots through wound sites, and many monocots are poor hosts; (2) Regeneration-competent monocot tissues (embryogenic callus, immature embryos) may not support efficient T-DNA transfer. In biolistic transformation, DNA-coated gold or tungsten microprojectiles (0.4-1.7 micrometers) are accelerated at high velocity into target cells using compressed gas or gunpowder charge. The microprojectiles penetrate cell walls and membranes, delivering DNA directly into the cytoplasm and nucleus. This method is species-independent and works with any tissue type. Biolistics was used for the first successful transformations of wheat, rice, and maize. However, biolistic transformation has disadvantages: random, often multicopy integration; potential for DNA rearrangement; and higher rates of transgene silencing. With improvements in Agrobacterium protocols, many monocots can now also be transformed by Agrobacterium, though biolistics remains important for chloroplast transformation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Seed vigor is distinct from seed viability. What does seed vigor measure that viability does not?",
+      "options": [
+        "Seed vigor measures whether a seed can germinate under laboratory conditions",
+        "Seed vigor measures the rate and uniformity of germination and seedling emergence under field conditions, including stress tolerance, which indicates performance potential beyond simple alive/dead viability",
+        "Seed vigor measures the nutritional content of the endosperm",
+        "Seed vigor measures the genetic purity of the seed lot"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Seed vigor encompasses the properties that determine the potential for rapid, uniform emergence and development of normal seedlings under a wide range of field conditions. While viability simply indicates whether a seed is alive and capable of germination (a binary measure), vigor describes the physiological quality that determines performance: (1) Speed of germination\u2014vigorous seeds germinate faster, emerging before competitors and avoiding soil pathogens; (2) Uniformity\u2014vigorous seed lots produce even stands with uniform crop maturity; (3) Stress tolerance\u2014vigorous seeds can germinate and establish in suboptimal conditions (cold, wet, compacted soil, pathogen pressure) where low-vigor seeds fail; (4) Seedling growth rate\u2014vigorous seeds produce larger, more competitive seedlings. Seed vigor declines during storage before viability is lost\u2014a seed lot may be 95% viable but have low vigor. Vigor tests include accelerated aging test, cold test, electrical conductivity test, and seedling growth rate assessment. High vigor is critical for commercial agriculture.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MTF",
+      "question": "Match each component of the mature embryo sac with its function:\n(I) Egg cell\n(II) Synergid cells\n(III) Central cell (with two polar nuclei)\n(IV) Antipodal cells\n\n(P) Fuses with one sperm to form the triploid endosperm that nourishes the developing embryo\n(Q) Fuses with one sperm to form the diploid zygote that develops into the embryo\n(R) Secrete LURE peptides for pollen tube guidance and facilitate pollen tube reception\n(S) May have nutritive functions; degenerate early in many species",
+      "options": [
+        "I-Q, II-R, III-P, IV-S",
+        "I-R, II-Q, III-S, IV-P",
+        "I-P, II-S, III-Q, IV-R",
+        "I-S, II-P, III-R, IV-Q"
+      ],
+      "correctAnswer": "I-Q, II-R, III-P, IV-S",
+      "explanation": "Each component of the mature Polygonum-type embryo sac has a specific function: (I) Egg cell\u2014the female gamete that fuses with one sperm cell during double fertilization to produce the diploid (2n) zygote, which develops into the embryo of the seed. The egg cell is positioned at the micropylar end of the embryo sac. (II) Synergid cells\u2014two cells flanking the egg at the micropylar end. They have a specialized cell wall structure (filiform apparatus) at their micropylar end that secretes LURE peptides for pollen tube guidance. One synergid degenerates upon pollen tube arrival (facilitating tube reception through FERONIA signaling), and the other may persist briefly after fertilization. (III) Central cell\u2014the largest cell in the embryo sac, containing two polar nuclei (which often fuse before fertilization to form the diploid secondary nucleus). The central cell fuses with the second sperm cell, producing the triploid (3n) primary endosperm nucleus that divides to form the endosperm. (IV) Antipodal cells\u2014three cells at the chalazal end that may have nutritive functions (transferring nutrients from maternal tissue to the embryo sac). In many species (including Arabidopsis), they degenerate early in embryo sac development.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Golden Rice was developed to address vitamin A deficiency in rice-dependent populations. What genetic modification was made to produce beta-carotene (provitamin A) in rice endosperm?",
+      "options": [
+        "A single gene from daffodil was inserted to produce beta-carotene directly from fatty acids",
+        "Genes encoding phytoene synthase (from daffodil or maize) and carotene desaturase (from Erwinia bacterium) were introduced to complete the carotenoid biosynthesis pathway in endosperm, which normally lacks these enzymes",
+        "Beta-carotene from carrots was physically injected into each rice grain during processing",
+        "The rice chloroplast genome was modified to produce beta-carotene that accumulates in all plant tissues"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Golden Rice was developed by Ingo Potrykus and Peter Beyer to address vitamin A deficiency (VAD), which causes blindness and death in millions of children in rice-dependent developing countries. Rice endosperm naturally produces geranylgeranyl diphosphate (GGPP), a precursor in the isoprenoid pathway, but lacks the downstream enzymes to convert GGPP to beta-carotene. The genetic modification involved introducing two transgenes: (1) Phytoene synthase (PSY)\u2014originally from daffodil (Narcissus pseudonarcissus), later replaced with a more active version from maize (Zea mays) in Golden Rice 2\u2014catalyzes the conversion of GGPP to phytoene; (2) Carotene desaturase (CrtI) from the bacterium Erwinia uredovora (Pantoea ananatis)\u2014a single bacterial enzyme that performs the four desaturation and isomerization steps normally requiring two plant enzymes (PDS and ZDS), converting phytoene to lycopene. Lycopene is then cyclized to beta-carotene by endogenous endosperm enzymes. The resulting transgenic rice produces beta-carotene in the endosperm, giving it a golden color. Golden Rice 2 produces up to 37 micrograms/g carotenoids.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Epigenetic reprogramming occurs during plant reproduction. What is the role of DNA demethylation in the central cell of the embryo sac?",
+      "options": [
+        "Demethylation in the central cell silences all gene expression to prevent premature endosperm development",
+        "Demethylation by DME (DEMETER) DNA glycosylase in the central cell activates maternally expressed imprinted genes (MEGs) that will control endosperm development after fertilization",
+        "Demethylation converts the central cell from 2n to 1n by removing one set of chromosomes",
+        "Demethylation in the central cell produces mobile small RNAs that travel to the egg cell to modify embryo development"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The DEMETER (DME) DNA glycosylase plays a critical role in establishing genomic imprinting in angiosperms. DME is expressed specifically in the central cell of the embryo sac (and also in the vegetative cell of the pollen grain), where it actively removes DNA methylation from specific genomic loci through a base excision repair pathway. This demethylation activates maternally expressed imprinted genes (MEGs) in the central cell, which will continue to be expressed from the maternal alleles in the endosperm after fertilization. Key genes activated by DME-mediated demethylation include: (1) MEA (MEDEA)\u2014a Polycomb group protein that restricts endosperm proliferation; (2) FIS2\u2014another Polycomb component; (3) FWA\u2014an endosperm-specific homeodomain transcription factor. The paternal alleles of these genes remain methylated and silenced in the sperm and subsequently in the endosperm, creating parent-of-origin-specific (imprinted) expression. dme mutant seeds show excessive endosperm proliferation and seed abortion because the maternal MEA/FIS2 alleles are not activated. This epigenetic reprogramming in the central cell is essential for normal endosperm development and represents a key mechanism of genomic imprinting in plants.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
       "topic": "Angiosperm Reproduction"
     }
   ]
