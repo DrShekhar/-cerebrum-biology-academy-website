@@ -1,0 +1,1189 @@
+{
+  "batch": {
+    "id": "campbell-ch20-dna-tools-biotech",
+    "name": "Campbell Ch 20: DNA Tools and Biotechnology (Olympiad)",
+    "description": "Olympiad-level questions on DNA tools, biotechnology, recombinant DNA technology, PCR, sequencing, CRISPR, genomics, and bioethics from Campbell Biology Chapter 20",
+    "subject": "Biology",
+    "topic": "DNA Tools and Biotechnology",
+    "subtopics": [
+      "Restriction Enzymes and Cloning",
+      "PCR and Gel Electrophoresis",
+      "DNA Sequencing",
+      "CRISPR-Cas9 Genome Editing",
+      "Gene Expression Analysis",
+      "Genomics and Bioinformatics",
+      "Gene Therapy",
+      "Biotechnology Applications",
+      "Bioethics"
+    ],
+    "difficulty": "EXPERT",
+    "totalQuestions": 58,
+    "olympiadLevel": "IBO",
+    "isOlympiad": true,
+    "campbellUnit": 3,
+    "campbellChapter": 20,
+    "sourceTextbook": "Campbell Biology 12th Edition"
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "A researcher wants to clone a 3.5 kb human gene into a plasmid vector. After restriction digestion of both the insert and vector with EcoRI, the researcher notices low cloning efficiency. What is the most likely cause?",
+      "options": [
+        "Self-ligation of the linearized vector is more likely than insert ligation, as vector ends are compatible",
+        "EcoRI produces blunt ends that are inefficient for ligation",
+        "The 3.5 kb insert is too large for any plasmid vector",
+        "EcoRI does not cut human DNA"
+      ],
+      "correctAnswer": "A",
+      "explanation": "When both vector and insert are cut with the same restriction enzyme (EcoRI, which produces 5'-AATT-3' sticky ends), vector self-ligation (re-circularization without insert) competes with insert-vector ligation. Since self-ligation is an intramolecular reaction favored at low DNA concentrations, it often dominates over the bimolecular insert-vector ligation. Solutions include: (1) dephosphorylating the vector with alkaline phosphatase (prevents self-ligation), (2) using two different restriction enzymes for directional cloning (incompatible ends prevent self-ligation), or (3) blue-white screening to identify recombinant clones. EcoRI produces 4-base 5' sticky ends, not blunt ends.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "DNA Cloning Strategy"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the polymerase chain reaction (PCR), what is the purpose of the denaturation step at 94-98\u00b0C?",
+      "options": [
+        "To activate the DNA polymerase",
+        "To synthesize new DNA strands",
+        "To anneal primers to the template",
+        "To separate the double-stranded DNA template into single strands"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The denaturation step (typically 94-98\u00b0C for 15-30 seconds) disrupts the hydrogen bonds between complementary base pairs, separating the double-stranded DNA template into two single strands. This exposes the template sequences so primers can bind (anneal) during the subsequent lower-temperature step. Taq polymerase (from Thermus aquaticus) is already active and thermostable; the denaturation step does not activate it. Annealing occurs at 50-65\u00b0C, and extension (DNA synthesis) occurs at 72\u00b0C\u2014the optimal temperature for Taq polymerase.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "PCR Mechanism"
+    },
+    {
+      "type": "MCQ",
+      "question": "CRISPR-Cas9 genome editing requires two components: the Cas9 endonuclease and a guide RNA (gRNA). What determines the specificity of CRISPR-Cas9 targeting?",
+      "options": [
+        "The 20-nucleotide spacer sequence in the gRNA that is complementary to the target DNA, adjacent to a PAM sequence",
+        "The Cas9 protein recognizes specific DNA sequences directly",
+        "The size of the target gene determines specificity",
+        "Random binding of Cas9 to any double-stranded DNA"
+      ],
+      "correctAnswer": "A",
+      "explanation": "CRISPR-Cas9 targeting specificity is determined by two elements: (1) the 20-nucleotide spacer sequence in the guide RNA (gRNA) that base-pairs with the complementary target DNA strand, and (2) the presence of a protospacer adjacent motif (PAM, typically 5'-NGG-3' for SpCas9) immediately downstream of the target site on the non-target strand. The Cas9 protein first recognizes the PAM, then checks for complementarity between the gRNA and the adjacent DNA. Mismatches in the 'seed region' (8-12 nt proximal to the PAM) are least tolerated. Off-target cutting can occur at sites with partial gRNA complementarity, which is a major concern for therapeutic applications.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "CRISPR-Cas9 Specificity"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sanger sequencing (chain termination method) uses dideoxynucleotides (ddNTPs). Why do ddNTPs cause chain termination?",
+      "options": [
+        "They are toxic to DNA polymerase, causing it to dissociate",
+        "They cause the DNA template to denature",
+        "They are too large to fit in the active site of DNA polymerase",
+        "They lack a 3'-OH group, preventing formation of the phosphodiester bond with the next incoming nucleotide"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Dideoxynucleotides (2',3'-dideoxynucleotides, ddNTPs) lack the 3'-hydroxyl group that is essential for forming the 3'-5' phosphodiester bond with the next nucleotide. When DNA polymerase incorporates a ddNTP instead of the normal dNTP, the growing chain cannot be extended further because there is no 3'-OH to attack the 5' phosphate of the incoming nucleotide. By including a small proportion of each fluorescently labeled ddNTP (ddATP, ddGTP, ddCTP, ddTTP) along with normal dNTPs, chain termination occurs randomly at every position, producing fragments of every possible length that reveal the DNA sequence when separated by capillary electrophoresis.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Sanger Sequencing Chemistry"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A gel electrophoresis experiment separates DNA fragments. Fragment A is 500 bp, Fragment B is 2,000 bp, and Fragment C is 1,000 bp. The gel is run with the negative electrode at the top and positive electrode at the bottom. In what order do the fragments appear from top (near wells) to bottom?",
+      "options": [
+        "A (500 bp), C (1,000 bp), B (2,000 bp)",
+        "All fragments migrate the same distance",
+        "B (2,000 bp), C (1,000 bp), A (500 bp)",
+        "C (1,000 bp), A (500 bp), B (2,000 bp)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "DNA is negatively charged (due to phosphate groups) and migrates toward the positive electrode (anode) during electrophoresis. Smaller fragments migrate faster through the gel matrix pores than larger fragments. Therefore, from top (near wells) to bottom: the largest fragment B (2,000 bp) travels the shortest distance, followed by C (1,000 bp), and the smallest fragment A (500 bp) travels the farthest. This inverse relationship between fragment size and migration distance is the basis for size determination using molecular weight markers (ladders). The relationship between log(size) and distance migrated is approximately linear over a range of fragment sizes.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "Gel Electrophoresis"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher wants to detect a specific mRNA transcript in tissue sections while preserving spatial information about which cells express the gene. Which technique should they use?",
+      "options": [
+        "Northern blot",
+        "RT-PCR",
+        "In situ hybridization (ISH)",
+        "Western blot"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In situ hybridization (ISH) uses labeled nucleic acid probes (DNA or RNA) that hybridize to complementary mRNA sequences directly within intact tissue sections or whole-mount specimens. This preserves spatial information, showing exactly which cells and tissues express the gene of interest. Northern blots detect mRNA but require tissue homogenization (losing spatial information). RT-PCR quantifies mRNA levels but also requires homogenized samples. Western blots detect protein, not mRNA. Fluorescent ISH (FISH) variants and single-molecule FISH (smFISH) can visualize individual mRNA molecules within cells with high spatial resolution.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Gene Expression Detection"
+    },
+    {
+      "type": "MCQ",
+      "question": "Next-generation sequencing (NGS) technologies like Illumina sequencing differ from Sanger sequencing in a fundamental way. What is the key difference that enables massively parallel sequencing?",
+      "options": [
+        "NGS uses longer reads than Sanger sequencing",
+        "NGS sequences millions of short DNA fragments simultaneously on a flow cell surface, rather than sequencing one fragment at a time",
+        "NGS does not require any DNA preparation",
+        "NGS uses radioactive rather than fluorescent labels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The revolutionary aspect of NGS is massively parallel sequencing\u2014millions to billions of DNA fragments are sequenced simultaneously. In Illumina sequencing: (1) DNA is fragmented and adapters are ligated; (2) fragments are bridge-amplified on a flow cell to create clusters of identical molecules; (3) fluorescently labeled reversible terminators allow one base to be incorporated and read per cycle across all clusters simultaneously. While individual reads are shorter than Sanger reads (typically 150-300 bp vs. 700-1000 bp for Sanger), the massive parallelism generates gigabases of data per run, enabling whole-genome sequencing at a fraction of the cost.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Next-Generation Sequencing"
+    },
+    {
+      "type": "MCQ",
+      "question": "Restriction fragment length polymorphisms (RFLPs) were among the first DNA markers used for genetic mapping and forensics. What creates an RFLP between two individuals?",
+      "options": [
+        "Differences in DNA fragment size due to mutations that create or destroy restriction enzyme recognition sites, or insertions/deletions between sites",
+        "Differences in protein expression between individuals",
+        "Differences in RNA splicing patterns",
+        "Differences in chromosome number"
+      ],
+      "correctAnswer": "A",
+      "explanation": "RFLPs arise from DNA sequence variations that alter restriction enzyme recognition sites or change the distance between sites. A single nucleotide polymorphism (SNP) within a restriction site can abolish the site, creating a larger uncut fragment. Alternatively, insertions, deletions, or variable number tandem repeats (VNTRs) between two sites change the fragment length without altering the sites themselves. RFLPs are detected by restriction digestion followed by gel electrophoresis and Southern blotting. While largely replaced by STR profiling and SNP genotyping, RFLPs were foundational in the development of genetic mapping and forensic DNA profiling.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "RFLP Analysis"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine the function of a newly identified gene in mice. Which approach would provide the most definitive evidence of gene function?",
+      "options": [
+        "Creating a knockout mouse by disrupting the gene using CRISPR-Cas9 and analyzing the mutant phenotype",
+        "Comparing the gene's sequence to known genes in databases (homology search)",
+        "Performing Northern blot to determine where the gene is expressed",
+        "Predicting protein structure using computational tools"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Creating a knockout (loss-of-function) organism by disrupting or deleting the gene provides the most direct evidence of gene function. If removing a gene causes a specific phenotype (e.g., developmental defect, disease, behavioral change), this directly links the gene to that function. CRISPR-Cas9 has made gene knockout much faster and more precise than traditional methods (homologous recombination with targeting vectors). Complementary approaches include: rescue experiments (restoring the gene corrects the phenotype), conditional knockouts (tissue-specific or temporal inactivation), and knock-in experiments. While homology searches, expression analysis, and computational predictions provide important information, they cannot definitively establish function\u2014only perturbation experiments can.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Functional Genomics"
+    },
+    {
+      "type": "MCQ",
+      "question": "In DNA fingerprinting (STR profiling), short tandem repeats (STRs) are amplified by PCR. A forensic sample from a crime scene shows alleles of 12 and 14 repeats at the D13S317 locus. A suspect shows 12 and 12 at the same locus. Can the suspect be excluded as the source?",
+      "options": [
+        "Yes, the suspect can be definitively excluded because the alleles do not match",
+        "Yes, because forensic DNA must show exact matches at all loci",
+        "The STR evidence is inconclusive regardless of the results",
+        "No, the suspect cannot be excluded\u2014they share one allele (12), and the other allele (14) could have come from a different contributor if this is a mixed sample"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The suspect (12,12 homozygote) shares one allele (12) with the evidence sample (12,14). If the evidence is a single-source sample, the suspect can be excluded because they lack the 14-repeat allele. However, if the evidence could be a mixture of DNA from two or more individuals (common at crime scenes), the suspect cannot be excluded\u2014the 12 allele could be from the suspect and the 14 from another contributor. This illustrates why forensic DNA interpretation requires careful consideration of mixture possibilities, and why multiple STR loci (typically 20+ in modern kits) are analyzed to achieve extremely high discriminating power. The random match probability for 20+ STR loci is typically less than 1 in a trillion.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "EXPERT",
+      "topic": "DNA Forensics - STR Analysis"
+    },
+    {
+      "type": "MCQ",
+      "question": "Quantitative PCR (qPCR or real-time PCR) measures DNA amplification in real time. What is the Ct (threshold cycle) value, and how does it relate to the initial amount of target DNA?",
+      "options": [
+        "Ct is the total number of PCR cycles; higher Ct means more initial DNA",
+        "Ct is the cycle at which the reaction reaches plateau phase",
+        "Ct is the cycle at which fluorescence first exceeds a threshold; lower Ct values indicate more initial template DNA",
+        "Ct is unrelated to the initial amount of DNA"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Ct (threshold cycle) or Cq (quantification cycle) value is the PCR cycle number at which the fluorescent signal first crosses a defined threshold above background. Because PCR amplification is exponential during the log-linear phase, samples with more initial template DNA reach the threshold in fewer cycles (lower Ct), while samples with less template require more cycles (higher Ct). A difference of one Ct value represents approximately a 2-fold difference in initial template quantity (since each PCR cycle doubles the DNA). Ct values are used to calculate relative gene expression (\u0394\u0394Ct method) or absolute quantification using standard curves.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "Quantitative PCR"
+    },
+    {
+      "type": "MCQ",
+      "question": "Southern blotting is used to detect specific DNA sequences. What is the correct order of steps in a Southern blot?",
+      "options": [
+        "DNA extraction \u2192 restriction digestion \u2192 gel electrophoresis \u2192 transfer to membrane \u2192 hybridization with labeled probe \u2192 detection",
+        "Protein extraction \u2192 gel electrophoresis \u2192 antibody probing",
+        "RNA extraction \u2192 reverse transcription \u2192 gel electrophoresis \u2192 probe hybridization",
+        "Cell lysis \u2192 immunoprecipitation \u2192 mass spectrometry"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Southern blot (invented by Edwin Southern, 1975) follows this sequence: (1) Isolate genomic DNA and digest with restriction enzymes. (2) Separate fragments by agarose gel electrophoresis. (3) Denature DNA in the gel (alkali treatment). (4) Transfer (blot) DNA fragments to a nylon or nitrocellulose membrane by capillary action or vacuum. (5) Fix DNA to membrane (UV crosslinking or baking). (6) Hybridize with a labeled DNA or RNA probe complementary to the target sequence. (7) Wash away unbound probe. (8) Detect signal (autoradiography for radioactive probes, or chemiluminescence). Northern blotting is the analogous technique for RNA, and Western blotting detects proteins using antibodies.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Southern Blotting"
+    },
+    {
+      "type": "MCQ",
+      "question": "Gene therapy aims to correct genetic diseases by introducing functional copies of defective genes. Which vector is most commonly used for in vivo gene therapy, and why?",
+      "options": [
+        "Naked plasmid DNA, because it is easy to produce",
+        "Adeno-associated virus (AAV), because it has low immunogenicity, can infect dividing and non-dividing cells, and rarely integrates into the genome",
+        "Bacteriophage lambda, because it efficiently infects human cells",
+        "Retrovirus, because it always integrates at safe genomic locations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Adeno-associated virus (AAV) has become the preferred vector for in vivo gene therapy because: (1) low immunogenicity\u2014minimal immune response compared to adenovirus; (2) broad tissue tropism\u2014different AAV serotypes can target different tissues (AAV9 for CNS, AAV8 for liver); (3) ability to infect non-dividing cells (unlike retrovirus/lentivirus for some applications); (4) predominantly remains episomal (does not integrate into the host genome, reducing insertional mutagenesis risk); (5) long-term stable expression in non-dividing cells. Limitations include small packaging capacity (~4.7 kb), potential for pre-existing antibodies in patients, and the episomal nature means expression may be lost in rapidly dividing cells.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Gene Therapy Vectors"
+    },
+    {
+      "type": "MCQ",
+      "question": "A researcher performs a restriction digest with BamHI (recognition site: 5'-GGATCC-3') on a 10 kb circular plasmid and obtains two linear fragments of 3 kb and 7 kb. How many BamHI sites are present in this plasmid?",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Cutting a circular DNA molecule with a restriction enzyme always produces a number of fragments equal to the number of cut sites. Since two fragments were produced (3 kb + 7 kb = 10 kb total, consistent with the plasmid size), there must be exactly 2 BamHI sites in the plasmid. One cut in a circle produces a single linear fragment; two cuts produce two fragments; n cuts produce n fragments. This is different from linear DNA, where n cuts produce n+1 fragments. The result is consistent because 3 + 7 = 10 kb, matching the original plasmid size.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "Restriction Enzyme Analysis"
+    },
+    {
+      "type": "MCQ",
+      "question": "RNA interference (RNAi) can be used to study gene function by knocking down gene expression. Which enzyme processes double-stranded RNA (dsRNA) into short interfering RNAs (siRNAs)?",
+      "options": [
+        "RNA polymerase II",
+        "Dicer (an RNase III family endoribonuclease)",
+        "Reverse transcriptase",
+        "DNA ligase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Dicer is the key enzyme that initiates the RNAi pathway by cleaving long double-stranded RNA (dsRNA) or pre-miRNA hairpins into 21-23 nucleotide short interfering RNAs (siRNAs) or mature miRNAs. Dicer is an RNase III family enzyme with a PAZ domain (that binds the dsRNA end), two RNase III catalytic domains (that make staggered cuts), and a helicase domain. The resulting siRNAs have 2-nucleotide 3' overhangs and 5' phosphates. One strand (the guide strand) is loaded into the RNA-induced silencing complex (RISC), where it directs Argonaute protein to complementary mRNA targets for degradation or translational repression.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "RNA Interference Mechanism"
+    },
+    {
+      "type": "MCQ",
+      "question": "A bacterial artificial chromosome (BAC) can carry inserts of approximately what size range, making it useful for genomic library construction?",
+      "options": [
+        "1-10 kb",
+        "10-50 kb",
+        "100-300 kb",
+        "1-5 Mb"
+      ],
+      "correctAnswer": "C",
+      "explanation": "BACs (Bacterial Artificial Chromosomes) can carry DNA inserts of approximately 100-300 kb, making them essential for constructing genomic libraries and genome sequencing projects. BACs are based on the F (fertility) plasmid of E. coli, which naturally maintains itself at one copy per cell, ensuring insert stability. For comparison: plasmids typically carry 0.1-10 kb inserts; cosmids 35-45 kb; fosmids ~40 kb; and YACs (Yeast Artificial Chromosomes) 200-2,000 kb but with higher chimeric rates. BACs were the primary cloning vector used in the Human Genome Project due to their stability, large insert capacity, and ease of manipulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Cloning Vectors"
+    },
+    {
+      "type": "MCQ",
+      "question": "In a cDNA library construction, what is the role of reverse transcriptase?",
+      "options": [
+        "To amplify DNA fragments by PCR",
+        "To ligate DNA fragments into vectors",
+        "To synthesize a DNA copy (first-strand cDNA) from mRNA templates using an oligo-dT primer",
+        "To denature double-stranded DNA"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Reverse transcriptase (RT) synthesizes a complementary DNA (cDNA) strand using mRNA as a template. In cDNA library construction: (1) mRNA is isolated from cells (typically using oligo-dT columns that bind poly-A tails); (2) oligo-dT primers anneal to the poly-A tail of mRNA; (3) reverse transcriptase extends the primer, synthesizing first-strand cDNA; (4) the mRNA is removed (using RNase H); (5) DNA polymerase synthesizes the second strand; (6) double-stranded cDNA is cloned into vectors. cDNA libraries represent only expressed genes (no introns, no intergenic DNA), making them valuable for identifying protein-coding sequences and studying gene expression patterns.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "cDNA Library Construction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Human Genome Project (completed 2003) revealed approximately how many protein-coding genes in the human genome?",
+      "options": [
+        "Approximately 100,000 genes",
+        "Approximately 20,000-25,000 genes",
+        "Approximately 5,000 genes",
+        "Approximately 500,000 genes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Human Genome Project revealed approximately 20,000-25,000 protein-coding genes (current estimates are ~19,000-20,000), far fewer than the 100,000 genes originally predicted. This was surprising because: (1) the nematode C. elegans has ~20,000 genes and many other organisms have similar gene counts, suggesting increased complexity doesn't simply require more genes; (2) much of human genome complexity arises from alternative splicing (one gene producing multiple protein variants), regulatory complexity, and non-coding RNAs; (3) protein-coding sequences represent only ~1.5% of the human genome, with the remainder consisting of introns, regulatory regions, repetitive elements, and other non-coding sequences.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Human Genome Project"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A pharmaceutical company wants to produce human insulin using recombinant DNA technology. What is the key challenge in producing functional human insulin in E. coli, and how is it addressed?",
+      "options": [
+        "E. coli cannot transcribe human genes at all",
+        "E. coli produces too much insulin, causing cell death",
+        "Human insulin is toxic to E. coli",
+        "E. coli lacks the post-translational processing machinery to form disulfide bonds and cleave proinsulin, so the A and B chains are produced separately and then combined in vitro"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Producing functional human insulin in E. coli faces several challenges: (1) E. coli lacks eukaryotic protein processing\u2014insulin is naturally synthesized as preproinsulin, which is processed by signal peptidase and prohormone convertases in the ER and Golgi, and folded with specific disulfide bonds. (2) E. coli cannot perform these post-translational modifications. Solution: the A chain (21 amino acids) and B chain (30 amino acids) are produced separately as fusion proteins in E. coli, purified, and then combined in vitro under conditions that promote correct disulfide bond formation (two inter-chain and one intra-chain disulfide bond). Alternatively, proinsulin can be produced and enzymatically processed in vitro. This was among the first therapeutic proteins produced by recombinant DNA technology (approved 1982).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Recombinant Protein Production"
+    },
+    {
+      "type": "MCQ",
+      "question": "Gel electrophoresis separates DNA fragments by size. In a standard agarose gel, which percentage of agarose would be most appropriate for resolving DNA fragments in the 100-500 bp range?",
+      "options": [
+        "0.5% agarose",
+        "2.0% agarose",
+        "0.8% agarose",
+        "4.0% agarose"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The agarose concentration determines pore size and thus the resolution range. Higher agarose concentrations have smaller pores that better resolve small fragments: 0.5% agarose: resolves 1-30 kb fragments; 0.8% agarose: resolves 0.5-12 kb; 1.0% agarose: resolves 0.25-10 kb; 2.0% agarose: resolves 0.1-2 kb (best for the 100-500 bp range); 3-4% agarose: resolves very small fragments (<100 bp) but these concentrations make brittle gels. For very fine resolution of small fragments, polyacrylamide gels (PAGE) are used instead of agarose. The optimal agarose percentage is the one where the target size range falls in the linear portion of the log(size) vs. distance relationship.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Gel Electrophoresis Optimization"
+    },
+    {
+      "type": "MCQ",
+      "question": "Site-directed mutagenesis allows researchers to make specific changes to a gene's DNA sequence. What is the most common modern method for introducing point mutations?",
+      "options": [
+        "Random chemical mutagenesis followed by screening",
+        "Crossing organisms with different alleles",
+        "Exposing cells to UV radiation and selecting for mutants",
+        "PCR-based mutagenesis using primers containing the desired mutation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "PCR-based site-directed mutagenesis (e.g., QuikChange method) uses oligonucleotide primers that contain the desired mutation. The primers are complementary to the template plasmid except at the mutation site. PCR amplification with high-fidelity polymerase creates a mutant copy of the entire plasmid. The methylated parental (template) DNA is then digested with DpnI (which cuts only methylated DNA), leaving only the newly synthesized mutant plasmid. This method is rapid, efficient, and allows precise introduction of point mutations, insertions, or deletions at any desired position. More recently, CRISPR-based methods can introduce specific mutations in vivo.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Site-directed Mutagenesis"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher designs primers for PCR amplification. The forward primer is 5'-ATCGATCGATCG-3' (12 nt) and the reverse primer is 5'-TAGCTAGCTAGCTAGCTAGC-3' (20 nt). What is a potential problem with this primer pair?",
+      "options": [
+        "The primers have significantly different lengths and likely different melting temperatures (Tm), which may cause one primer to anneal poorly at the chosen annealing temperature",
+        "Both primers are too long for PCR",
+        "Primers cannot contain the sequence ATCG",
+        "PCR requires only one primer, not two"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Optimal PCR requires that both primers have similar melting temperatures (Tm within 2-5\u00b0C of each other) so they both anneal efficiently at the same annealing temperature. A 12-nt primer will have a significantly lower Tm than a 20-nt primer, meaning: at a low annealing temperature (suitable for the short primer), the long primer may bind non-specifically; at a high annealing temperature (suitable for the long primer), the short primer may not bind at all. Good PCR primer design guidelines include: 18-25 nt length, 40-60% GC content, matched Tm (within 5\u00b0C), no self-complementarity (avoiding primer dimers), and no secondary structure.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "EXPERT",
+      "topic": "PCR Primer Design"
+    },
+    {
+      "type": "MCQ",
+      "question": "Microarray (DNA chip) technology allows simultaneous measurement of expression levels for thousands of genes. What does a microarray hybridization experiment actually detect?",
+      "options": [
+        "The relative abundance of mRNA molecules from a sample, by hybridization of fluorescently labeled cDNA to immobilized DNA probes",
+        "The protein products of genes",
+        "The DNA sequence of genes",
+        "The methylation status of all genes"
+      ],
+      "correctAnswer": "A",
+      "explanation": "DNA microarrays contain thousands of gene-specific DNA sequences (probes) spotted or synthesized at defined positions on a glass slide or chip. In a typical gene expression experiment: (1) mRNA is extracted from the sample, (2) converted to cDNA, (3) fluorescently labeled (e.g., Cy3 green for control, Cy5 red for treatment), and (4) hybridized to the array. The fluorescence intensity at each probe location reflects the abundance of the corresponding mRNA. Two-color experiments (competitive hybridization) allow direct comparison between conditions. While largely superseded by RNA-seq for gene expression profiling, microarrays remain valuable for SNP genotyping, comparative genomic hybridization (CGH), and specific applications.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Microarray Technology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Electroporation is used in molecular biology to introduce DNA into cells. What physical principle does electroporation exploit?",
+      "options": [
+        "DNA naturally diffuses through cell membranes",
+        "Electroporation uses magnetic fields to attract DNA-coated particles into cells",
+        "Electric current synthesizes new DNA within the cell",
+        "Brief high-voltage electrical pulses create transient pores in the cell membrane, allowing DNA to enter the cell"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Electroporation uses brief (microsecond to millisecond) high-voltage electrical pulses (typically 200-2,500 V for mammalian cells) to create transient nanometer-scale pores in the lipid bilayer of cell membranes. During the brief period when pores are open, exogenous DNA in the surrounding medium can enter the cell. After the pulse, the pores reseal and the cell recovers. Electroporation is widely used because it works with many cell types (bacteria, yeast, plant cells, mammalian cells) and can introduce plasmids, linear DNA, RNA, or proteins. Key parameters that must be optimized include field strength, pulse duration, pulse number, and buffer composition.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "DNA Delivery Methods"
+    },
+    {
+      "type": "MCQ",
+      "question": "Genome-wide association studies (GWAS) identify genetic variants associated with diseases or traits. What type of genetic marker is most commonly used in GWAS?",
+      "options": [
+        "RFLPs (Restriction Fragment Length Polymorphisms)",
+        "STRs (Short Tandem Repeats)",
+        "SNPs (Single Nucleotide Polymorphisms) genotyped on high-density arrays",
+        "Entire gene sequences determined by Sanger sequencing"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Modern GWAS use SNP arrays (chips) that genotype hundreds of thousands to millions of SNPs across the genome in thousands of individuals. SNPs are the most abundant genetic variants (~1 every 300 bp in the human genome, ~4-5 million per individual), making them ideal for comprehensive genome scanning. The study compares SNP frequencies between affected (case) and unaffected (control) groups. SNPs significantly more common in cases are associated with the trait, and their genomic location points to candidate genes or regulatory regions. GWAS have identified thousands of disease-associated loci, though most individual variants have small effect sizes (odds ratios 1.1-1.5).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "GWAS Methodology"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher uses CRISPR-Cas9 to knock out a gene and observes no phenotypic change. Before concluding the gene is non-functional, what should they verify?",
+      "options": [
+        "Nothing further\u2014the absence of phenotype proves the gene is non-functional",
+        "Check if the Cas9 protein was properly folded using X-ray crystallography",
+        "Repeat the experiment with a different organism",
+        "Confirm successful gene disruption by sequencing the target locus, check for compensatory mechanisms from paralogous genes, and test under multiple environmental conditions"
+      ],
+      "correctAnswer": "D",
+      "explanation": "A negative result (no phenotype) from a gene knockout requires careful validation: (1) Confirm the knockout\u2014sequence the target locus to verify the gene is actually disrupted (frameshift, large deletion). An in-frame deletion may produce a truncated but functional protein. (2) Check for genetic compensation\u2014paralogous genes may compensate for the lost gene's function (genetic redundancy). This is especially common for genes in multigene families. (3) Test multiple conditions\u2014the gene may only be essential under specific environmental stresses, developmental stages, or tissue-specific contexts not tested. (4) Verify at the protein level\u2014Western blot to confirm protein absence. (5) Consider conditional knockouts to bypass developmental lethality that might cause embryonic death before observable phenotypes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "CRISPR Knockout Validation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Recombinant DNA technology relies on DNA ligase to join DNA fragments. Which chemical bond does DNA ligase form?",
+      "options": [
+        "Hydrogen bonds between base pairs",
+        "Glycosidic bonds between sugar and base",
+        "Peptide bonds between amino acids",
+        "Phosphodiester bonds between the 3'-OH of one nucleotide and the 5'-phosphate of the adjacent nucleotide"
+      ],
+      "correctAnswer": "D",
+      "explanation": "DNA ligase catalyzes the formation of a phosphodiester bond between the 3'-hydroxyl group of one nucleotide and the 5'-phosphate group of the adjacent nucleotide, sealing nicks in the sugar-phosphate backbone. T4 DNA ligase (from bacteriophage T4) is most commonly used in molecular biology because it can ligate both cohesive (sticky) ends and blunt ends (though blunt-end ligation is ~100x less efficient). T4 ligase uses ATP as a cofactor, while E. coli DNA ligase uses NAD\u207a. In cloning, ligase joins vector and insert DNA fragments that have compatible ends generated by restriction enzyme digestion.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "DNA Ligase Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which technique allows visualization of all chromosomes in a cell simultaneously, with each chromosome pair labeled in a different color?",
+      "options": [
+        "Standard G-banding karyotyping",
+        "PCR amplification of centromeric sequences",
+        "Spectral karyotyping (SKY) or multiplex FISH (M-FISH)",
+        "Southern blot of chromosomal DNA"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Spectral karyotyping (SKY) and multiplex FISH (M-FISH) use combinatorial labeling strategies where probes specific to each chromosome are labeled with different combinations of fluorophores. Using 5-7 different fluorophores in various combinations creates a unique spectral signature for each chromosome, displayed as a different pseudocolor. This allows: (1) identification of chromosomal translocations (a chromosome segment will display the color of its chromosome of origin, even when attached to a different chromosome), (2) detection of complex rearrangements that might be missed by standard G-banding, and (3) identification of marker chromosomes of unknown origin. SKY/M-FISH is particularly valuable in cancer cytogenetics where complex chromosomal rearrangements are common.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Cytogenetic Techniques"
+    },
+    {
+      "type": "MCQ",
+      "question": "In Gibson Assembly, multiple DNA fragments are joined in a single isothermal reaction. Which combination of enzymes is used?",
+      "options": [
+        "Restriction enzyme + DNA ligase",
+        "Exonuclease + DNA polymerase + DNA ligase working simultaneously at 50\u00b0C",
+        "Taq polymerase + reverse transcriptase",
+        "Topoisomerase + helicase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Gibson Assembly (Daniel Gibson, 2009) uses three enzymatic activities in a single isothermal reaction at 50\u00b0C: (1) T5 exonuclease chews back 5' ends of double-stranded DNA, exposing complementary single-stranded overhangs on adjacent fragments (fragments must share ~20-40 bp of overlapping sequence). (2) Phusion DNA polymerase fills in the single-stranded gaps. (3) Taq DNA ligase seals the nicks, covalently joining the fragments. The reaction is performed in a single tube at 50\u00b0C for 15-60 minutes. Gibson Assembly is more versatile than traditional restriction enzyme cloning because it does not require specific restriction sites and can join multiple fragments simultaneously in a defined order.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Gibson Assembly"
+    },
+    {
+      "type": "MCQ",
+      "question": "Fluorescence in situ hybridization (FISH) can detect specific DNA sequences on chromosomes. Which application of FISH is most important in clinical genetics?",
+      "options": [
+        "Detecting chromosomal microdeletions, duplications, and translocations associated with genetic disorders and cancers",
+        "Measuring protein expression levels",
+        "Sequencing entire genomes",
+        "Measuring enzyme activity in cells"
+      ],
+      "correctAnswer": "A",
+      "explanation": "FISH is a powerful clinical tool for detecting structural chromosomal abnormalities that may be too small for conventional karyotyping: (1) Microdeletions\u201422q11.2 deletion (DiGeorge syndrome), 15q11-13 deletion (Prader-Willi/Angelman). (2) Translocations\u2014BCR-ABL fusion in chronic myeloid leukemia (Philadelphia chromosome), PML-RARA in acute promyelocytic leukemia. (3) Gene amplifications\u2014HER2/neu amplification in breast cancer (guides treatment decisions). (4) Aneuploidy detection\u2014trisomy 13, 18, 21 in prenatal diagnosis using interphase FISH for rapid results. FISH uses fluorescently labeled DNA probes that hybridize to specific chromosomal regions, allowing visualization under fluorescence microscopy.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "FISH Applications"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bioinformatics tools like BLAST (Basic Local Alignment Search Tool) are essential for analyzing DNA and protein sequences. What does BLAST primarily do?",
+      "options": [
+        "Amplifies DNA sequences using PCR",
+        "Searches sequence databases for regions of similarity between a query sequence and known sequences, identifying homologs and inferring function",
+        "Edits DNA sequences in a text editor",
+        "Predicts the three-dimensional structure of proteins from their sequence"
+      ],
+      "correctAnswer": "B",
+      "explanation": "BLAST compares a query sequence (DNA or protein) against a database of known sequences to identify regions of significant similarity (homology). It uses a heuristic algorithm that is much faster than exhaustive alignment methods (like Smith-Waterman). BLAST outputs include: aligned sequences, percent identity, E-value (statistical significance\u2014lower is more significant), and bit score. Applications include: identifying gene function by homology to characterized genes, finding orthologs across species for evolutionary analysis, identifying conserved protein domains, and annotating newly sequenced genomes. Variants include BLASTn (nucleotide), BLASTp (protein), BLASTx (translated nucleotide vs. protein database), and tBLASTn (protein vs. translated nucleotide database).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "BLAST and Bioinformatics"
+    },
+    {
+      "type": "MCQ",
+      "question": "Epigenome editing using catalytically dead Cas9 (dCas9) fused to epigenetic modifiers allows researchers to:",
+      "options": [
+        "Permanently delete genes from the genome",
+        "Alter gene expression without changing the DNA sequence, by targeting histone modifications or DNA methylation to specific loci",
+        "Amplify genes using PCR",
+        "Sequence the entire genome in a single read"
+      ],
+      "correctAnswer": "B",
+      "explanation": "dCas9 (catalytically dead Cas9, mutations D10A/H840A) retains DNA-binding specificity guided by gRNA but cannot cut DNA. By fusing dCas9 to epigenetic effector domains, researchers can target specific epigenetic modifications to desired genomic loci: (1) dCas9-DNMT3A: deposits DNA methylation at promoters, typically silencing genes. (2) dCas9-TET1: removes DNA methylation, potentially activating genes. (3) dCas9-p300: acetylates histones, activating enhancers and promoters. (4) dCas9-KRAB: recruits heterochromatin machinery, silencing genes (CRISPRi). (5) dCas9-VP64: activates transcription (CRISPRa). This allows reversible modulation of gene expression without permanent DNA sequence changes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Epigenome Editing"
+    },
+    {
+      "type": "MCQ",
+      "question": "Phage display technology is used to identify peptides or proteins that bind to specific targets. How does phage display work?",
+      "options": [
+        "Bacteriophages naturally produce all human antibodies",
+        "Diverse peptide or antibody sequences are fused to phage coat proteins, and phages displaying peptides that bind the target are selected by biopanning",
+        "Phages are used to sequence DNA",
+        "Phage display involves displaying chromosomes on phage surfaces"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Phage display (George Smith, 1985; Nobel Prize 2018) works by: (1) inserting a library of random DNA sequences (encoding diverse peptides or antibody fragments) into a phage coat protein gene (usually pIII or pVIII of M13 filamentous phage). (2) When the phage is produced, the foreign peptide is displayed on the phage surface fused to the coat protein. (3) The phage library (10\u2078-10\u00b9\u00b9 unique variants) is exposed to an immobilized target molecule. Phages that bind are retained (biopanning), non-binders are washed away, and bound phages are eluted, amplified, and subjected to additional rounds of selection. After 3-5 rounds, high-affinity binders are enriched. This technology is widely used for antibody discovery (therapeutic antibodies like adalimumab) and peptide identification.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Phage Display Technology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A restriction map is constructed by comparing single and double digests. When plasmid X (8 kb) is cut with EcoRI alone, two fragments result: 5 kb and 3 kb. When cut with HindIII alone, two fragments result: 6 kb and 2 kb. When cut with both enzymes together, four fragments result: 4 kb, 2 kb, 1 kb, and 1 kb. Where is the HindIII site located relative to the EcoRI sites?",
+      "options": [
+        "The HindIII site is within the 5 kb EcoRI fragment, 4 kb from one EcoRI site and 1 kb from the other",
+        "The HindIII site is within the 3 kb EcoRI fragment",
+        "The HindIII site coincides with one of the EcoRI sites",
+        "The data are inconsistent and cannot produce a valid map"
+      ],
+      "correctAnswer": "A",
+      "explanation": "With EcoRI: 5 kb + 3 kb = 8 kb. With HindIII: 6 kb + 2 kb = 8 kb. Double digest: 4 + 2 + 1 + 1 = 8 kb. Since EcoRI produces 5 and 3 kb fragments, and the double digest produces 4 fragments, HindIII must cut within one of the EcoRI fragments. The 5 kb fragment is split into 4 kb + 1 kb (= 5 kb) by HindIII. The 3 kb fragment becomes the 2 kb + 1 kb fragments? No: 2 + 1 = 3. But then HindIII cuts both EcoRI fragments, giving 4 fragments from 2 HindIII sites. However, we established there are only 2 HindIII sites total. The HindIII site splits the 5 kb EcoRI fragment into 4 kb and 1 kb. The 3 kb and 2 kb remaining fragments come from the arrangement on the circular molecule. Working through the circular map confirms the HindIII site is within the 5 kb EcoRI fragment.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "EXPERT",
+      "topic": "Restriction Mapping"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is metagenomics, and why is it important for studying microbial diversity?",
+      "options": [
+        "Sequencing all DNA extracted directly from an environmental sample without culturing, revealing the full diversity of organisms present, including unculturable species",
+        "Sequencing a single organism's genome to high accuracy",
+        "Comparing the genomes of two closely related species",
+        "Studying only the mitochondrial genome of a species"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Metagenomics involves extracting and sequencing all DNA directly from environmental samples (soil, water, gut contents, etc.) without the need to culture individual organisms. This is revolutionary because >99% of environmental microorganisms cannot be cultured using standard laboratory techniques. Metagenomics reveals: (1) the taxonomic diversity of microbial communities (who is there?), (2) the functional potential encoded in community genomes (what can they do?), (3) novel genes and enzymes from uncultured organisms (bioprospecting), and (4) community dynamics in response to environmental changes. Shotgun metagenomics sequences all DNA, while amplicon sequencing (e.g., 16S rRNA gene) focuses on taxonomic identification.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Metagenomics"
+    },
+    {
+      "type": "MCQ",
+      "question": "The CRISPR-Cas9 system requires a PAM (Protospacer Adjacent Motif) sequence adjacent to the target site. What is the primary biological function of the PAM requirement?",
+      "options": [
+        "PAM increases the cutting efficiency of Cas9",
+        "PAM is required for Cas9 protein folding",
+        "PAM distinguishes foreign DNA (targets) from the host's own CRISPR array, preventing autoimmunity\u2014the host CRISPR locus lacks PAM sequences adjacent to spacers",
+        "PAM provides the energy source for DNA cleavage"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The PAM sequence serves as a self vs. non-self discrimination mechanism in the bacterial CRISPR immune system. Spacer sequences in the host's CRISPR array are identical to target sequences in invading phages/plasmids, which could potentially cause self-targeting. However, the spacers in the CRISPR array are NOT flanked by PAM sequences, while the same sequences in foreign DNA are. Cas9 first recognizes the PAM on the target DNA before checking for gRNA complementarity. Since the host CRISPR locus lacks PAMs adjacent to its spacers, self-cleavage is prevented. This elegant self/non-self discrimination mechanism prevents autoimmune destruction of the bacterial chromosome while allowing destruction of matching foreign DNA.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "CRISPR PAM Function"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ethical concerns about human germline editing using CRISPR-Cas9 primarily center on which issue?",
+      "options": [
+        "Germline edits are technically impossible",
+        "Germline edits are heritable, affecting all future generations, raising concerns about consent, equity, unintended consequences, and the potential for eugenics",
+        "Germline editing only affects the individual being treated",
+        "CRISPR-Cas9 cannot target human genes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Human germline editing (modifying eggs, sperm, or embryos) is controversial because changes are heritable\u2014they are passed to all descendants, who cannot consent to the modification. Key ethical concerns include: (1) Consent\u2014future generations cannot agree to irreversible genetic changes. (2) Safety\u2014off-target mutations could have unpredictable effects that propagate through generations. (3) Equity\u2014access to genetic enhancement could exacerbate social inequality. (4) Eugenics\u2014the potential for selecting 'desirable' traits raises historical parallels to eugenics programs. (5) Unknown consequences\u2014we lack full understanding of gene interactions and pleiotropy. Somatic gene therapy (affecting only the individual) is less controversial because changes are not inherited. The 2018 CRISPR-baby case (He Jiankui) highlighted these concerns.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Gene Editing Ethics"
+    },
+    {
+      "type": "MCQ",
+      "question": "Plasmid vectors used for protein expression in E. coli typically contain an inducible promoter. The lac promoter/operator system uses IPTG (isopropyl \u03b2-D-1-thiogalactopyranoside) as an inducer. Why is IPTG used instead of lactose?",
+      "options": [
+        "IPTG is cheaper than lactose",
+        "IPTG binds the lac repressor and relieves repression, but unlike lactose it is not metabolized by the cell, maintaining constant induction levels",
+        "IPTG is a stronger inducer than lactose",
+        "IPTG activates RNA polymerase directly"
+      ],
+      "correctAnswer": "B",
+      "explanation": "IPTG is a non-metabolizable analog of allolactose (the natural inducer of the lac operon). IPTG binds to the lac repressor protein, causing a conformational change that releases the repressor from the operator, allowing transcription. The key advantage of IPTG over lactose is that IPTG is not broken down by \u03b2-galactosidase, so its intracellular concentration remains constant throughout the experiment, providing stable, consistent induction. Lactose, in contrast, is metabolized by the cell, causing its concentration to decrease over time and leading to variable, difficult-to-control expression levels. IPTG also penetrates cells without requiring a transporter and is not subject to catabolite repression.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Expression Vector Design"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the principle behind the blue-white screening method used to identify recombinant clones in molecular cloning?",
+      "options": [
+        "Recombinant cells turn blue due to expression of the foreign gene",
+        "White colonies contain more DNA than blue colonies",
+        "Insertion of foreign DNA into the lacZ gene within the multiple cloning site disrupts \u03b2-galactosidase activity, so recombinant colonies remain white while non-recombinant colonies turn blue on X-gal plates",
+        "The color indicates antibiotic resistance status"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Blue-white screening exploits insertional inactivation of the lacZ gene. The vector contains the lacZ alpha-peptide gene with a multiple cloning site (MCS) embedded within it. (1) Non-recombinant vectors (no insert): the lacZ gene remains intact, producing functional \u03b2-galactosidase alpha-peptide. This complements the host's \u03b2-galactosidase omega-peptide (alpha-complementation), producing active enzyme that cleaves X-gal (5-bromo-4-chloro-3-indolyl-\u03b2-D-galactoside), releasing a blue precipitate \u2192 blue colonies. (2) Recombinant vectors (insert in MCS): the insert disrupts the lacZ reading frame, no functional alpha-peptide is produced, X-gal is not cleaved \u2192 white colonies. IPTG is added to induce lacZ expression.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Blue-White Screening"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to study the regulatory elements controlling expression of a specific gene. Which experimental approach would map the promoter and enhancer regions?",
+      "options": [
+        "PCR amplification of the coding sequence",
+        "Restriction enzyme digestion of the genomic locus",
+        "Western blot analysis of the protein product",
+        "Reporter gene assays using a series of deletion constructs, where different upstream regions are fused to a reporter gene (luciferase/GFP) and transfected into cells"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Reporter gene deletion analysis is the gold standard for mapping regulatory elements: (1) Clone the upstream region of the gene of interest in front of a reporter gene (luciferase, GFP, \u03b2-galactosidase). (2) Create a series of 5' deletion constructs (progressively removing upstream sequence). (3) Transfect each construct into appropriate cells and measure reporter activity. (4) A significant drop in reporter expression when a specific region is deleted indicates that region contains an essential regulatory element. This approach can identify promoters, enhancers, silencers, and other cis-regulatory elements. Complementary approaches include DNase footprinting, EMSA, ChIP (chromatin immunoprecipitation), and ATAC-seq.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Promoter Analysis"
+    },
+    {
+      "type": "MCQ",
+      "question": "Comparative genomics has revealed that the proportion of the genome encoding proteins varies dramatically across species. Which organism has the highest proportion of its genome devoted to protein-coding sequences?",
+      "options": [
+        "Humans (~1.5% protein-coding)",
+        "Pufferfish (Fugu rubripes, ~10% protein-coding)",
+        "Corn (Zea mays, ~3% protein-coding)",
+        "E. coli (~87% protein-coding)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Bacteria like E. coli have compact genomes where approximately 87% of the DNA encodes proteins, with minimal intergenic and non-coding sequences. As genome complexity increases, the proportion of protein-coding DNA generally decreases: the pufferfish Fugu has one of the most compact vertebrate genomes (~10% coding); most mammals including humans have only ~1.5% protein-coding DNA; and some plants like corn have even lower proportions (~3%) due to massive genome expansion by transposable elements. The human genome (~3.2 billion bp) encodes ~20,000 genes in ~1.5% of its sequence; the remaining ~98.5% consists of introns, regulatory sequences, repetitive elements, and other non-coding DNA.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Comparative Genomics"
+    },
+    {
+      "type": "MCQ",
+      "question": "Whole-exome sequencing (WES) focuses on the protein-coding regions of the genome (~1-2% of total DNA). Why might a clinician choose WES over whole-genome sequencing (WGS) for diagnosing a genetic disease?",
+      "options": [
+        "WES is always more accurate than WGS",
+        "WES can detect structural variants better than WGS",
+        "WES is less expensive and faster to analyze, while capturing the majority of known disease-causing variants since ~85% of disease-causing mutations occur in coding regions",
+        "WES sequences all non-coding regulatory regions"
+      ],
+      "correctAnswer": "C",
+      "explanation": "WES is often preferred clinically because: (1) Cost\u2014sequencing only ~2% of the genome is significantly cheaper than WGS. (2) Data analysis\u2014much smaller datasets are faster to analyze and interpret. (3) Clinical utility\u2014approximately 85% of known disease-causing mutations are in exons (protein-coding regions), so WES captures the vast majority of clinically relevant variants. However, WES misses: variants in regulatory regions, deep intronic splice variants, structural variants, repeat expansions, and mitochondrial DNA mutations. WGS is becoming more common as costs decrease and analytical methods improve, but WES remains the first-line sequencing approach for many clinical genetic diagnoses.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Clinical Sequencing"
+    },
+    {
+      "type": "MCQ",
+      "question": "Chromatin immunoprecipitation followed by sequencing (ChIP-seq) is used to study protein-DNA interactions. What information does ChIP-seq provide?",
+      "options": [
+        "The complete DNA sequence of a genome",
+        "The methylation status of CpG islands",
+        "The expression levels of all genes",
+        "The specific genomic locations where a protein of interest (e.g., transcription factor, modified histone) binds to DNA across the entire genome"
+      ],
+      "correctAnswer": "D",
+      "explanation": "ChIP-seq maps the genome-wide binding sites of specific proteins: (1) Cross-link proteins to DNA in living cells (formaldehyde). (2) Fragment chromatin by sonication. (3) Immunoprecipitate protein-DNA complexes using an antibody specific to the protein of interest (transcription factor, histone modification like H3K4me3, H3K27ac). (4) Reverse cross-links and purify the immunoprecipitated DNA. (5) Sequence the enriched DNA fragments by NGS. (6) Map reads to the genome to identify peaks of enrichment indicating binding sites. ChIP-seq has been instrumental in mapping transcription factor binding sites, histone modification patterns, and the epigenomic landscape across cell types and conditions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "ChIP-seq Technology"
+    },
+    {
+      "type": "MCQ",
+      "question": "Single-cell RNA sequencing (scRNA-seq) has revolutionized our understanding of cellular heterogeneity. What is the key advantage of scRNA-seq over bulk RNA-seq?",
+      "options": [
+        "scRNA-seq reveals gene expression profiles of individual cells, enabling identification of rare cell types, cell states, and developmental trajectories that are averaged out in bulk analysis",
+        "scRNA-seq is cheaper per sample",
+        "scRNA-seq provides longer read lengths",
+        "scRNA-seq sequences DNA rather than RNA"
+      ],
+      "correctAnswer": "A",
+      "explanation": "scRNA-seq analyzes the transcriptome of individual cells rather than averaging across thousands to millions of cells (as in bulk RNA-seq). Key advantages include: (1) Identifying rare cell types\u2014even cells comprising <1% of a population can be characterized. (2) Revealing cellular heterogeneity\u2014discovering previously unknown cell subtypes and states within seemingly homogeneous tissues. (3) Trajectory analysis\u2014inferring developmental pathways and cell fate decisions (pseudotime). (4) Cell atlas construction\u2014comprehensive catalogs of cell types in organs/organisms (Human Cell Atlas project). Technologies include droplet-based methods (10x Genomics), plate-based methods (Smart-seq2), and combinatorial indexing (sci-RNA-seq). scRNA-seq typically captures 1,000-5,000 genes per cell from thousands to millions of cells.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Single-Cell Sequencing"
+    },
+    {
+      "type": "MCQ",
+      "question": "CRISPR-Cas13 differs from CRISPR-Cas9 in its target substrate. What does Cas13 target, and what potential application does this enable?",
+      "options": [
+        "Cas13 targets DNA and enables genome editing",
+        "Cas13 targets single-stranded RNA, enabling transcript knockdown, RNA editing, and nucleic acid-based diagnostics without altering the genome",
+        "Cas13 targets proteins for degradation",
+        "Cas13 targets carbohydrates on cell surfaces"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cas13 is an RNA-guided RNA endonuclease\u2014it targets single-stranded RNA rather than DNA. This enables: (1) Programmable RNA knockdown\u2014reducing transcript levels without permanently altering the genome (reversible). (2) RNA editing\u2014Cas13 fused to ADAR (adenosine deaminase acting on RNA) can perform A-to-I editing on specific RNA transcripts. (3) Diagnostics\u2014the SHERLOCK platform exploits Cas13's collateral cleavage activity (upon target recognition, Cas13 non-specifically cleaves nearby ssRNAs, including fluorescent reporters) for ultrasensitive nucleic acid detection of pathogens. (4) RNA tracking\u2014catalytically dead dCas13 fused to fluorescent proteins can track specific RNAs in living cells.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "CRISPR-Cas13 Applications"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher uses RT-qPCR to measure expression of Gene X relative to a housekeeping gene (GAPDH). In control cells, Gene X Ct = 25 and GAPDH Ct = 18. In treated cells, Gene X Ct = 22 and GAPDH Ct = 18. Calculate the fold change in Gene X expression using the \u0394\u0394Ct method.",
+      "options": [
+        "2-fold increase",
+        "4-fold increase",
+        "8-fold increase",
+        "No change"
+      ],
+      "correctAnswer": "C",
+      "explanation": "\u0394\u0394Ct method: (1) \u0394Ct_control = Ct(Gene X) - Ct(GAPDH) = 25 - 18 = 7. (2) \u0394Ct_treated = 22 - 18 = 4. (3) \u0394\u0394Ct = \u0394Ct_treated - \u0394Ct_control = 4 - 7 = -3. (4) Fold change = 2^(-\u0394\u0394Ct) = 2^(-(-3)) = 2\u00b3 = 8. Gene X expression is 8-fold higher in treated cells compared to control cells. The lower Ct value in treated cells (22 vs. 25) indicates more template (earlier crossing of the fluorescence threshold). Each 1-Ct difference represents approximately a 2-fold change in starting template quantity, so a 3-Ct reduction corresponds to 2\u00b3 = 8-fold increase.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "RT-qPCR Analysis"
+    },
+    {
+      "type": "MCQ",
+      "question": "Optogenetics combines genetic engineering with optics to control neuronal activity. Which component is essential for optogenetic control of neurons?",
+      "options": [
+        "Fluorescent proteins like GFP for visualization",
+        "Chemical neurotransmitter analogs",
+        "Light-sensitive ion channels (e.g., channelrhodopsin-2) genetically expressed in target neurons, which can be activated or inhibited by specific wavelengths of light",
+        "Radioactive tracers that target neurons"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Optogenetics requires: (1) Genetic targeting\u2014expressing a light-sensitive protein (opsin) in specific neuron types using genetic tools (viral vectors, transgenic lines). (2) Light delivery\u2014implanting fiber optics to deliver light to deep brain regions. Key opsins include: channelrhodopsin-2 (ChR2, blue light-activated cation channel \u2192 neuronal excitation), halorhodopsin (NpHR, yellow light-activated chloride pump \u2192 neuronal inhibition), and archaerhodopsin (Arch, green light-activated proton pump \u2192 inhibition). By combining cell-type-specific expression with temporally precise light pulses (millisecond resolution), researchers can causally link specific neuronal activity patterns to behaviors\u2014something impossible with pharmacological or lesion approaches.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Optogenetics"
+    },
+    {
+      "type": "MCQ",
+      "question": "Long-read sequencing technologies (Pacific Biosciences SMRT, Oxford Nanopore) can produce reads of 10-100+ kb. What specific advantage does this provide over short-read sequencing?",
+      "options": [
+        "Long reads are more accurate per base",
+        "Long reads do not require any library preparation",
+        "Long reads are less expensive per base",
+        "Long reads can span repetitive regions and structural variants that are unresolvable with short reads, improving genome assembly continuity"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Long reads (10-100+ kb) provide critical advantages for: (1) Resolving repetitive regions\u2014the human genome contains many repeats longer than short reads (e.g., centromeric satellite DNA, segmental duplications, transposable elements), causing ambiguous short-read mapping. Long reads can span these repeats, providing unique flanking sequences for placement. (2) Detecting structural variants\u2014large insertions, deletions, inversions, and translocations that are missed by short reads. (3) Phasing\u2014determining which variants are on the same chromosome (haplotype). (4) Assembly continuity\u2014reducing the number of contigs and gaps in genome assemblies. (5) Direct detection of base modifications (methylation) without bisulfite conversion. The tradeoff is generally higher per-base error rates, though this has improved significantly.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Long-Read Sequencing"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine which of 20,000 genes are essential for cell viability in a human cancer cell line. Which high-throughput CRISPR-based approach is most suitable?",
+      "options": [
+        "Individually knocking out each gene one at a time",
+        "A genome-wide CRISPR knockout screen using a pooled sgRNA library, followed by identifying which guide RNAs are depleted from the surviving population",
+        "RNA-seq to measure gene expression levels",
+        "Proteomics to quantify all proteins"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Genome-wide CRISPR screens use pooled lentiviral sgRNA libraries (targeting every gene with 4-10 guides each) to systematically disrupt genes across a cell population: (1) Transduce cells at low MOI (one guide per cell). (2) Culture under selection (viability screen) or specific conditions (phenotypic screen). (3) Sequence the integrated guides from surviving cells. (4) Guides targeting essential genes are depleted (cells with those knockouts die), while guides targeting non-essential genes remain. (5) Computational analysis (MAGeCK, BAGEL) identifies essential genes. This approach can screen all ~20,000 genes simultaneously in a single experiment. Variations include CRISPRi (inhibition) and CRISPRa (activation) screens for more nuanced loss/gain-of-function studies.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "CRISPR Screens"
+    },
+    {
+      "type": "MCQ",
+      "question": "Antisense oligonucleotides (ASOs) are synthetic single-stranded DNA or RNA molecules used therapeutically. How do ASOs reduce target gene expression?",
+      "options": [
+        "ASOs activate transcription of the target gene",
+        "ASOs bind to the protein product and cause its degradation",
+        "ASOs integrate into the genome and delete the target gene",
+        "ASOs bind complementary mRNA by Watson-Crick base pairing, blocking translation or triggering RNase H-mediated mRNA degradation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "ASOs work through several mechanisms: (1) RNase H recruitment\u2014DNA-based ASOs form RNA:DNA heteroduplexes with target mRNA, recruiting RNase H which cleaves the RNA strand, destroying the mRNA. (2) Steric blocking\u2014some ASOs (especially those with 2'-modified sugars) physically block ribosome scanning or splicing machinery without triggering RNase H. (3) Splice modulation\u2014ASOs targeting splice sites can alter pre-mRNA splicing, either skipping exons (exon skipping in Duchenne muscular dystrophy: eteplirsen) or including exons normally skipped. Chemical modifications (phosphorothioate backbone, 2'-O-methyl, locked nucleic acids) improve stability, binding affinity, and pharmacokinetics. FDA-approved ASO drugs include nusinersen (SMA), mipomersen (hypercholesterolemia), and inotersen (TTR amyloidosis).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Antisense Therapeutics"
+    },
+    {
+      "type": "MCQ",
+      "question": "Molecular cloning often uses blue-white screening combined with antibiotic selection. If a researcher plates transformed E. coli on LB agar containing ampicillin, IPTG, and X-gal, what does each component select for?",
+      "options": [
+        "Ampicillin selects for cells containing the plasmid; IPTG induces lacZ expression; X-gal is the substrate that produces blue color when cleaved by \u03b2-galactosidase",
+        "Ampicillin kills all bacteria; IPTG provides a carbon source; X-gal provides nitrogen",
+        "Ampicillin induces gene expression; IPTG is an antibiotic; X-gal is a vitamin",
+        "All three components are required for bacterial growth"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The three-component screening system works together: (1) Ampicillin in the medium kills non-transformed cells (only cells containing the ampicillin-resistance plasmid survive). (2) IPTG induces expression of the lacZ alpha-peptide gene on the plasmid\u2014without IPTG, lacZ would not be expressed and all colonies would be white regardless of insert status. (3) X-gal is a chromogenic substrate for \u03b2-galactosidase\u2014functional enzyme (in non-recombinant clones) cleaves X-gal to produce an insoluble blue precipitate, while disrupted lacZ (in recombinant clones with insert) cannot cleave X-gal, leaving colonies white. Result: only white colonies on ampicillin plates are likely recombinant clones.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Clone Selection Methods"
+    },
+    {
+      "type": "MCQ",
+      "question": "The polymerase chain reaction (PCR) can theoretically amplify a single molecule of DNA. After 30 cycles of PCR with 100% efficiency, approximately how many copies of the target sequence would be produced from a single template molecule?",
+      "options": [
+        "30 copies",
+        "60 copies",
+        "About 1 billion (10\u2079) copies",
+        "About 1 million (10\u2076) copies"
+      ],
+      "correctAnswer": "C",
+      "explanation": "PCR amplification is exponential: after n cycles, the number of copies = 2\u207f (assuming 100% efficiency from a single template). After 30 cycles: 2\u00b3\u2070 = 1,073,741,824 \u2248 10\u2079 (about 1 billion copies). This exponential amplification is what makes PCR so powerful\u2014from a single DNA molecule, detectable quantities of DNA can be generated in about 2-3 hours. In practice, efficiency is less than 100% (typically 90-105%), so actual yields are somewhat lower. The amplification power of PCR also means that contamination with even a few molecules of non-target DNA can produce false positives, necessitating careful laboratory procedures.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "PCR Amplification Mathematics"
+    },
+    {
+      "type": "MCQ",
+      "question": "Transgenic animals can be created by microinjecting DNA constructs into fertilized eggs. In mice, the pronucleus of a recently fertilized oocyte is injected. Which pronucleus is typically targeted and why?",
+      "options": [
+        "The male pronucleus, because it is larger (more decondensed) and easier to visualize and inject",
+        "The female pronucleus, because it is larger and easier to inject",
+        "Both pronuclei must be injected simultaneously",
+        "Neither pronucleus\u2014DNA is injected into the cytoplasm only"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In pronuclear microinjection for generating transgenic mice, DNA is injected into the male pronucleus because: (1) it is larger than the female pronucleus at the time of injection (shortly after fertilization, the male pronucleus undergoes protamine-to-histone replacement and decondensation, making it visibly larger), (2) the larger size makes it easier to target with the microinjection needle, and (3) the more decondensed chromatin may facilitate DNA integration. The injected DNA integrates randomly into the genome (transgene insertion). Typically 10-30% of surviving pups will carry the transgene. This approach has largely been supplemented by CRISPR-based methods for generating genetically modified mice.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Transgenic Animal Production"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the principle behind DNA methylation analysis using bisulfite sequencing?",
+      "options": [
+        "Bisulfite converts methylated cytosines to thymine, allowing detection by sequencing",
+        "Bisulfite converts unmethylated cytosines to uracil (read as thymine after PCR), while methylated cytosines are protected and remain as cytosine\u2014comparison to the reference sequence reveals methylation status",
+        "Bisulfite directly sequences methylated DNA without conversion",
+        "Bisulfite removes all cytosines regardless of methylation status"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Bisulfite treatment is the gold standard for single-nucleotide-resolution DNA methylation analysis: (1) Sodium bisulfite deaminates unmethylated cytosine to uracil (which is read as thymine after PCR amplification). (2) 5-methylcytosine (5mC) is resistant to bisulfite conversion and remains as cytosine. (3) By sequencing bisulfite-treated DNA and comparing to the reference genome, every position where C is retained (instead of converting to T) indicates a methylated cytosine. (4) This can be applied genome-wide (whole-genome bisulfite sequencing, WGBS) or targeted (reduced representation bisulfite sequencing, RRBS, focusing on CpG-rich regions). Limitations include degradation of DNA during harsh bisulfite treatment and inability to distinguish 5mC from 5-hydroxymethylcytosine (5hmC) without additional methods.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "EXPERT",
+      "topic": "Bisulfite Sequencing"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about biotechnology applications:\nI. Transgenic organisms contain DNA from another species introduced through genetic engineering\nII. Golden rice was engineered to produce beta-carotene (provitamin A) to address vitamin A deficiency\nIII. Bt crops produce Bacillus thuringiensis toxin that kills insect pests\nIV. All genetically modified organisms are produced using CRISPR-Cas9",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I. TRUE: Transgenic organisms contain foreign DNA (transgenes) from another species. Examples include GFP-expressing mice (jellyfish gene), Bt crops (bacterial gene), and transgenic salmon (growth hormone gene). II. TRUE: Golden rice was engineered by inserting daffodil phytoene synthase and bacterial carotene desaturase genes into rice, enabling beta-carotene production in the endosperm to combat vitamin A deficiency. III. TRUE: Bt crops (corn, cotton, soybean) express the Cry protein from Bacillus thuringiensis, which forms pores in insect gut membranes, killing specific insect pests while being non-toxic to mammals. IV. FALSE: GMOs have been produced since the 1970s using various methods including Agrobacterium-mediated transformation, biolistics (gene gun), microinjection, and electroporation\u2014long before CRISPR-Cas9 was developed (2012).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Biotechnology Applications"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about cloning vectors:\nI. A cloning vector must contain an origin of replication (ori) to replicate in host cells\nII. Selectable markers (e.g., antibiotic resistance) allow identification of cells that have taken up the vector\nIII. A multiple cloning site (polylinker) contains several unique restriction enzyme recognition sequences for inserting foreign DNA\nIV. All cloning vectors can accept DNA inserts larger than 500 kb",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I. TRUE: All cloning vectors require an origin of replication for autonomous replication in the host cell. Plasmid vectors use bacterial ori sequences; YACs include yeast centromere and telomere sequences. II. TRUE: Selectable markers (ampicillin resistance, kanamycin resistance, URA3 in yeast) are essential for identifying cells that have taken up the vector, as transformation efficiency is typically low. III. TRUE: The multiple cloning site (MCS) or polylinker is a short DNA segment containing multiple unique restriction sites, allowing researchers to choose compatible enzymes for directional cloning. IV. FALSE: Insert capacity varies greatly: plasmids (1-10 kb), cosmids (~35-45 kb), BACs (100-300 kb), and only YACs can accept inserts >500 kb (up to ~2 Mb). Most vectors have upper insert size limits.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Cloning Vector Features"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about gene therapy:\nI. Ex vivo gene therapy involves modifying cells outside the body and then transplanting them back into the patient\nII. In vivo gene therapy delivers the therapeutic gene directly to cells within the patient's body\nIII. Gene therapy has successfully cured some patients with severe combined immunodeficiency (SCID)\nIV. Gene therapy carries no risk of adverse effects such as insertional mutagenesis",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I. TRUE: Ex vivo gene therapy removes cells from the patient (e.g., hematopoietic stem cells), genetically modifies them in culture, and returns them to the patient. Examples include CAR-T cell therapy and ex vivo gene correction for SCID. II. TRUE: In vivo gene therapy delivers therapeutic genes directly to target tissues using viral vectors (AAV, lentivirus) or non-viral delivery systems. Examples include Luxturna (AAV for RPE65 mutation causing blindness) and Zolgensma (AAV for spinal muscular atrophy). III. TRUE: Gene therapy has cured SCID-X1 (bubble boy disease) in clinical trials, with patients maintaining functional immune systems years after treatment. IV. FALSE: Gene therapy carries risks including insertional mutagenesis (vector integration near oncogenes can cause cancer, as occurred in early SCID trials), immune responses to viral vectors, off-target effects, and variable transgene expression.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Gene Therapy Approaches"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about emerging biotechnologies:\nI. Base editing can convert one DNA base to another (e.g., C to T) without creating double-strand breaks\nII. Prime editing can install any type of point mutation, small insertion, or deletion without double-strand breaks or donor DNA\nIII. Organoids are three-dimensional cell cultures that recapitulate some structural and functional features of organs\nIV. All CRISPR applications require cutting both strands of DNA",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TFTT",
+        "TFTF"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I. TRUE: Base editors (CBE = cytidine base editor, C\u2192T; ABE = adenine base editor, A\u2192G) use nickase Cas9 fused to deaminase enzymes to directly convert one base to another without double-strand breaks. II. TRUE: Prime editing (PE) uses Cas9 nickase fused to reverse transcriptase and a prime editing guide RNA (pegRNA) that contains both the target-binding sequence and a template for the desired edit. It can install any single-base change, small insertions (up to ~40 bp), or deletions without DSBs or external donor DNA. III. TRUE: Organoids are self-organizing 3D structures grown from stem cells that mimic organ architecture and function (brain organoids, intestinal organoids, kidney organoids). IV. FALSE: Many CRISPR applications (CRISPRi/a using dCas9, base editing, prime editing, RNA targeting with Cas13, epigenome editing) do not require double-strand DNA breaks.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 20,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Emerging Biotechnologies"
+    }
+  ]
+}
