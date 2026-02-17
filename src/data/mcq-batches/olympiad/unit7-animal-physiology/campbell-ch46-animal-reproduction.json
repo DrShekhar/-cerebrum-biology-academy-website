@@ -9,12 +9,12 @@
       "type": "MCQ",
       "question": "Spermatogenesis in mammals involves a transition from diploid spermatogonia to haploid spermatozoa. Which cell type undergoes meiosis I?",
       "options": [
-        "Spermatogonia (type A and type B)",
         "Primary spermatocytes, which are diploid (2n/4C) cells that undergo meiosis I to produce secondary spermatocytes (1n/2C)",
         "Spermatids, which divide to form mature spermatozoa",
+        "Spermatogonia (type A and type B)",
         "Sertoli cells, which undergo meiosis to generate supporting structures"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Spermatogenesis proceeds through defined stages: (1) Spermatogonial stem cells (type A) undergo mitotic renewal and produce type B spermatogonia. (2) Type B spermatogonia enter meiosis, becoming PRIMARY spermatocytes (diploid, 2n/4C after S-phase DNA replication). (3) Primary spermatocytes undergo meiosis I (including crossing over during prophase I), producing two SECONDARY spermatocytes (haploid, 1n/2C). (4) Secondary spermatocytes undergo meiosis II, producing four round SPERMATIDS (haploid, 1n/1C). (5) Spermatids undergo spermiogenesis (differentiation, not division) — acrosome formation, flagellum assembly, nuclear condensation (histones replaced by protamines), cytoplasmic shedding — to become mature spermatozoa. Spermatogonia undergo mitosis, not meiosis. Sertoli cells are somatic support cells that never undergo meiosis. The entire process takes approximately 64-74 days in humans.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -29,12 +29,12 @@
       "type": "MCQ",
       "question": "During mammalian fertilization, what prevents polyspermy (fertilization by multiple sperm)?",
       "options": [
-        "The egg produces toxic substances that kill all sperm except the first to arrive",
         "The fast block (membrane depolarization within seconds) and slow block (cortical granule exocytosis modifying the zona pellucida within minutes) provide two sequential barriers to additional sperm entry",
         "Only one sperm is ever released per ejaculation in mammals",
+        "The egg produces toxic substances that kill all sperm except the first to arrive",
         "The oviduct filters out all but one sperm before they reach the egg"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Polyspermy prevention in mammals involves two blocks: (1) Fast (electrical) block: In sea urchins, this is well-characterized — sperm-egg fusion causes immediate membrane depolarization (from -70 mV to +20 mV), preventing additional sperm binding. In mammals, the fast block is less clearly established and may be less important. (2) Slow (cortical reaction) block: This is the primary polyspermy block in mammals. Upon sperm-egg fusion, a Ca2+ wave propagates across the egg cortex. Ca2+ triggers exocytosis of cortical granules (membrane-bound vesicles beneath the plasma membrane). Cortical granule enzymes (including ovastacin, a metalloendoprotease) cleave ZP2 protein in the zona pellucida, preventing additional sperm from binding and penetrating ('zona hardening'). Cortical granule contents also modify the plasma membrane. This cortical reaction takes 1-5 minutes. The Ca2+ oscillations triggered by PLCζ (phospholipase C zeta) introduced by the sperm also activate the egg to complete meiosis II.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -69,8 +69,8 @@
       "type": "DATA_INTERPRETATION",
       "question": "A researcher tracks follicular development in a woman's ovarian cycle using ultrasound and hormone measurements:\n\nCycle day | Dominant follicle diameter (mm) | Estradiol (pg/mL) | LH (mIU/mL) | Progesterone (ng/mL)\n5 | 8 | 40 | 5 | 0.5\n10 | 16 | 200 | 8 | 0.8\n13 | 22 | 350 | 60 | 1.5\n14 | collapsed | 250 | 25 | 3.0\n21 | corpus luteum | 150 | 8 | 15.0\n28 | regressing CL | 50 | 5 | 2.0\n\nAt which day did ovulation most likely occur, and what evidence supports this?",
       "options": [
-        "Day 5 — the follicle begins growing",
         "Day 10 — estradiol reaches 200 pg/mL",
+        "Day 5 — the follicle begins growing",
         "Between days 13-14 — the LH surge (60 mIU/mL) is present on day 13, the follicle collapses by day 14, and progesterone begins rising, all consistent with ovulation occurring approximately 36 hours after the LH surge onset",
         "Day 21 — progesterone peaks, indicating egg release"
       ],
@@ -89,12 +89,12 @@
       "type": "MCQ",
       "question": "The acrosome reaction is essential for sperm to penetrate the zona pellucida. What triggers the acrosome reaction in mammals?",
       "options": [
-        "Contact with the cumulus cell layer surrounding the egg",
         "Binding to ZP3 (zona pellucida glycoprotein 3) triggers Ca2+ influx via CatSper channels and exocytosis of acrosomal enzymes including acrosin and hyaluronidase",
+        "Contact with the cumulus cell layer surrounding the egg",
         "Exposure to uterine fluid pH change during capacitation",
         "Physical pressure as the sperm pushes against the zona pellucida"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The acrosome reaction in mammals is a regulated exocytic event: (1) Capacitation: Before the acrosome reaction can occur, sperm must undergo capacitation in the female reproductive tract (6-8 hours in humans). Capacitation involves cholesterol removal from the sperm membrane, protein tyrosine phosphorylation, and hyperactivated motility. (2) ZP3 binding: Capacitated sperm bind ZP3 glycoprotein on the zona pellucida via sperm surface receptors. This triggers a signaling cascade involving Gi protein activation, PLCδ, IP3-mediated Ca2+ release, and extracellular Ca2+ influx through CatSper channels (sperm-specific calcium channels). (3) Acrosomal exocytosis: Elevated Ca2+ triggers SNARE-mediated fusion of the outer acrosomal membrane with the sperm plasma membrane, releasing acrosomal enzymes (acrosin — a serine protease, hyaluronidase, and others) that digest a path through the zona pellucida. (4) Inner acrosomal membrane exposure reveals IZUMO1, which binds JUNO on the egg plasma membrane for fusion. CatSper mutations cause male infertility.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -110,11 +110,11 @@
       "question": "Which reproductive strategy best describes animals that release eggs and sperm into the water for external fertilization?",
       "options": [
         "Viviparity — live birth after internal development",
+        "Internal fertilization with external development (oviparity)",
         "Ovoviviparity — eggs hatch internally",
-        "Broadcast spawning — simultaneous release of gametes into the aquatic environment, often synchronized by environmental cues (temperature, lunar cycle, pheromones)",
-        "Internal fertilization with external development (oviparity)"
+        "Broadcast spawning — simultaneous release of gametes into the aquatic environment, often synchronized by environmental cues (temperature, lunar cycle, pheromones)"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "Broadcast spawning is the most common reproductive strategy in marine invertebrates and many fish/amphibians. Organisms release enormous numbers of eggs and sperm into the water column, where fertilization occurs externally. Key features: (1) Synchronization: Spawning must be temporally coordinated to maximize fertilization success. Cues include lunar cycles (coral mass spawning on the Great Barrier Reef occurs after the full moon in spring), water temperature, day length, and species-specific pheromones (spawning-inducing substances, SIS). (2) High gamete production: Because dilution and predation in the water column cause massive gamete loss, broadcast spawners produce enormous quantities — a single female sea urchin may release millions of eggs. (3) Species recognition: Bindin proteins on the sperm acrosome surface bind species-specific receptors on the egg vitelline envelope, preventing hybridization. (4) Low parental investment per offspring but high fecundity. This contrasts with internal fertilization strategies that typically involve fewer, more heavily invested offspring.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -129,10 +129,10 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher wants to determine whether a particular gene (Gene X) expressed in Sertoli cells is required for spermatogenesis. She generates a Sertoli cell-specific knockout of Gene X using AMH-Cre (AMH is expressed specifically in Sertoli cells). Which phenotypic assessments would most comprehensively evaluate the effect?",
       "options": [
-        "Measure testis weight and assume that weight change indicates spermatogenic failure",
+        "Measure testosterone levels only, since Sertoli cells produce testosterone",
         "Assess testis weight, perform histological analysis of seminiferous tubule cross-sections (staging of spermatogenesis), count sperm in the epididymis, evaluate sperm motility and morphology, test fertility by mating trials, and measure hormone levels (FSH, LH, testosterone, inhibin B)",
-        "Sequence Gene X in the knockout to confirm deletion, without phenotypic analysis",
-        "Measure testosterone levels only, since Sertoli cells produce testosterone"
+        "Measure testis weight and assume that weight change indicates spermatogenic failure",
+        "Sequence Gene X in the knockout to confirm deletion, without phenotypic analysis"
       ],
       "correctAnswer": "B",
       "explanation": "Comprehensive phenotyping of a Sertoli cell-specific knockout requires multi-level analysis: (1) Gross anatomy: Testis weight (reduced if spermatogenesis fails — spermatogenic cells constitute ~75% of testicular volume). (2) Histology: H&E staining of seminiferous tubule cross-sections to identify the stage at which spermatogenesis arrests (e.g., spermatogonial arrest vs. meiotic arrest vs. spermiogenic defect). Immunostaining for specific germ cell markers (PLZF for spermatogonia, SCP3 for meiotic cells, CREM for spermatids) pinpoints the defect. (3) Sperm analysis: Epididymal sperm count, motility assessment, and morphological analysis (WHO criteria). (4) Fertility: Mating trials with proven fertile females measuring pregnancy rate, litter size, and implantation sites. (5) Hormones: FSH (elevated if Sertoli cell function is impaired — loss of inhibin B feedback), LH, testosterone (from Leydig cells, not Sertoli cells — option D is wrong), and inhibin B (Sertoli cell marker). NOTE: Sertoli cells produce inhibin B, NOT testosterone (Leydig cells produce testosterone).",
@@ -149,12 +149,12 @@
       "type": "MCQ",
       "question": "Human chorionic gonadotropin (hCG) is critical for early pregnancy maintenance. What is its source and primary function?",
       "options": [
+        "hCG is produced by the anterior pituitary in response to pregnancy",
         "hCG is produced by the corpus luteum to stimulate implantation",
         "hCG is produced by the syncytiotrophoblast of the developing embryo/placenta and maintains the corpus luteum by acting on LH receptors, preventing luteolysis and sustaining progesterone production during the first trimester",
-        "hCG is produced by the anterior pituitary in response to pregnancy",
         "hCG stimulates the hypothalamus to increase GnRH pulsatility"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "hCG is a glycoprotein hormone produced by the syncytiotrophoblast cells of the implanting blastocyst/developing placenta. Its primary function is 'rescue' of the corpus luteum: (1) Without pregnancy, the corpus luteum degenerates by day 28, causing progesterone withdrawal and menstruation. (2) The implanting embryo (~day 6-7) begins producing hCG, which enters the maternal circulation. (3) hCG is structurally similar to LH (sharing the same α-subunit and a homologous β-subunit) and binds the LH/CG receptor (LHCGR) on corpus luteum cells. (4) This maintains the corpus luteum, sustaining progesterone production essential for endometrial support and pregnancy maintenance. (5) hCG peaks at ~10 weeks gestation, after which the placenta itself produces sufficient progesterone (luteal-placental shift), and the corpus luteum is no longer required. hCG is the hormone detected by pregnancy tests (both urine and blood β-hCG assays). It doubles approximately every 48 hours in early viable pregnancies.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -169,10 +169,10 @@
       "type": "MCQ",
       "question": "Sertoli cells in the testis form the blood-testis barrier. What is the functional significance of this barrier?",
       "options": [
-        "It prevents blood from entering the seminiferous tubules",
+        "It prevents testosterone from entering the seminiferous tubules",
         "Tight junctions between adjacent Sertoli cells create a basal and adluminal compartment, immunologically isolating developing germ cells (which express novel haploid antigens after meiosis) from the immune system, preventing autoimmune orchitis",
         "It filters nutrients to ensure only glucose reaches developing sperm",
-        "It prevents testosterone from entering the seminiferous tubules"
+        "It prevents blood from entering the seminiferous tubules"
       ],
       "correctAnswer": "B",
       "explanation": "The blood-testis barrier (BTB) is formed by tight junctions, adherens junctions, and gap junctions between adjacent Sertoli cells near the basement membrane of the seminiferous tubule. It divides the seminiferous epithelium into two compartments: (1) Basal compartment: Contains spermatogonia and early primary spermatocytes. Accessible to immune cells and blood-borne molecules. (2) Adluminal compartment: Contains primary spermatocytes (from leptotene onward), secondary spermatocytes, and spermatids. Immunologically privileged. The critical function is immune protection: Spermatogenesis begins at puberty, long after immune tolerance is established. Post-meiotic germ cells express novel haploid-specific surface antigens that the immune system has never encountered. Without the BTB, these would be recognized as 'foreign' and attacked (autoimmune orchitis). Sertoli cells also actively create an immunosuppressive environment by secreting immunosuppressive factors. The BTB dynamically opens and closes to allow preleptotene spermatocytes to transit from basal to adluminal compartment.",
@@ -209,9 +209,9 @@
       "type": "MCQ",
       "question": "Capacitation is a functional maturation process that sperm must undergo in the female reproductive tract before they can fertilize an egg. Which molecular changes occur during capacitation?",
       "options": [
-        "Sperm undergo a second round of DNA replication to double their genetic content",
-        "Cholesterol is removed from the sperm plasma membrane by albumin, increasing membrane fluidity; intracellular pH and Ca2+ rise; protein tyrosine phosphorylation increases; and sperm develop hyperactivated motility with asymmetric flagellar beating",
         "The acrosome is formed de novo during capacitation",
+        "Cholesterol is removed from the sperm plasma membrane by albumin, increasing membrane fluidity; intracellular pH and Ca2+ rise; protein tyrosine phosphorylation increases; and sperm develop hyperactivated motility with asymmetric flagellar beating",
+        "Sperm undergo a second round of DNA replication to double their genetic content",
         "The mitochondria in the midpiece are replaced by glycolytic enzymes"
       ],
       "correctAnswer": "B",
@@ -230,11 +230,11 @@
       "question": "A researcher studies hormonal changes during pregnancy:\n\nWeek | hCG (mIU/mL) | Progesterone source | Progesterone (ng/mL) | Estrogen (pg/mL)\n4 | 5,000 | Corpus luteum | 15 | 200\n8 | 100,000 | Corpus luteum + placenta | 25 | 500\n12 | 50,000 | Primarily placenta | 40 | 1,000\n20 | 20,000 | Placenta | 50 | 5,000\n36 | 15,000 | Placenta | 150 | 15,000\n\nWhat does the luteal-placental shift refer to, based on these data?",
       "options": [
         "The shift from hCG to LH as the primary luteotropic hormone",
-        "The transition of progesterone production from the corpus luteum (weeks 4-8) to the placenta (by week 10-12), after which the corpus luteum is no longer essential for pregnancy maintenance",
         "The shift from estrogen dominance to progesterone dominance at week 20",
-        "The transfer of the embryo from the oviduct to the uterus"
+        "The transfer of the embryo from the oviduct to the uterus",
+        "The transition of progesterone production from the corpus luteum (weeks 4-8) to the placenta (by week 10-12), after which the corpus luteum is no longer essential for pregnancy maintenance"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The luteal-placental shift is a critical transition in early pregnancy: (1) Weeks 1-8: The corpus luteum is the primary source of progesterone, sustained by hCG from the trophoblast. Progesterone is essential for endometrial maintenance, myometrial quiescence, and immune tolerance. Loss of the CL before week 8 causes miscarriage. (2) Weeks 8-12: The placenta (specifically, the syncytiotrophoblast) progressively takes over progesterone production. The placenta converts maternal cholesterol to pregnenolone and then progesterone using CYP11A1 and 3β-HSD. (3) After week 10-12: The placenta produces sufficient progesterone independently, and the corpus luteum is no longer essential. This is confirmed clinically: luteectomy (CL removal) before 7 weeks causes miscarriage, but after 10 weeks, pregnancy continues normally. The data show hCG peaks at ~8 weeks then declines (less CL stimulation needed), while progesterone continues rising (placental production increasing). The massive rise in estrogen reflects placental estrogen production (requiring fetal adrenal DHEAS as a precursor — the feto-placental unit).",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -249,12 +249,12 @@
       "type": "MCQ",
       "question": "Combined oral contraceptive pills (COCPs) contain synthetic estrogen and progestin. What is the primary mechanism by which they prevent pregnancy?",
       "options": [
-        "They directly kill sperm in the female reproductive tract",
         "The synthetic estrogen and progestin suppress the LH surge (and to a lesser extent FSH), preventing follicular maturation and ovulation; progestin also thickens cervical mucus and thins the endometrium",
-        "They accelerate oocyte transport through the oviduct, preventing fertilization",
-        "They induce premature menopause"
+        "They induce premature menopause",
+        "They directly kill sperm in the female reproductive tract",
+        "They accelerate oocyte transport through the oviduct, preventing fertilization"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "COCPs work through multiple complementary mechanisms: (1) PRIMARY — Ovulation suppression: The continuous exogenous estrogen and progestin provide constant negative feedback on the hypothalamic-pituitary axis, preventing the mid-cycle LH surge needed for ovulation. Without the LH surge, the dominant follicle does not rupture. The progestin component is most critical for ovulation suppression (it suppresses GnRH pulse frequency), while the estrogen stabilizes the endometrium and suppresses FSH (preventing follicular recruitment). (2) Cervical mucus: Progestin thickens cervical mucus, creating a barrier to sperm penetration (the mucus becomes scanty, viscous, and hostile to sperm — low spinnbarkeit). (3) Endometrial effects: The endometrium becomes thin and atrophic, potentially reducing receptivity to implantation if ovulation and fertilization occur (breakthrough). (4) Tubal motility: May alter fallopian tube motility. The combination of these mechanisms gives COCPs >99% effectiveness with perfect use.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
@@ -270,11 +270,11 @@
       "question": "The two-cell, two-gonadotropin model explains ovarian steroidogenesis. Which cells produce which hormones, and how do they cooperate?",
       "options": [
         "Granulosa cells produce both estrogen and progesterone independently of theca cells",
-        "Theca cells (stimulated by LH) produce androgens (androstenedione); these are transferred to granulosa cells, where aromatase (CYP19A1, stimulated by FSH) converts them to estrogens",
         "Both theca and granulosa cells express aromatase and independently produce estrogen",
+        "Theca cells (stimulated by LH) produce androgens (androstenedione); these are transferred to granulosa cells, where aromatase (CYP19A1, stimulated by FSH) converts them to estrogens",
         "Theca cells produce estrogen directly while granulosa cells produce only inhibin"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The two-cell model reflects the complementary enzyme expression in ovarian follicular cells: (1) THECA CELLS (theca interna): Express LH receptors. LH activates steroidogenesis (via cAMP/PKA/StAR), producing androgens — primarily androstenedione (and some testosterone) from cholesterol. However, theca cells LACK aromatase (CYP19A1) and cannot convert androgens to estrogens. (2) GRANULOSA CELLS: Express FSH receptors. FSH induces aromatase (CYP19A1) expression. Granulosa cells take up androstenedione from adjacent theca cells and aromatize it to estrone, which is then converted to estradiol (the most potent estrogen) by 17β-HSD. Granulosa cells LACK CYP17A1 (17α-hydroxylase) and cannot produce androgens from pregnenolone/progesterone. Thus, BOTH cell types and BOTH gonadotropins are required for estrogen production. This model explains why: (a) LH alone produces only androgens (polycystic ovary syndrome phenotype with excess LH), and (b) FSH alone without theca-derived androgen substrate cannot produce estrogen.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -289,12 +289,12 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher hypothesizes that sperm chemotaxis toward the egg is mediated by a gradient of progesterone released from cumulus cells surrounding the oocyte. Which experiment would best test this hypothesis?",
       "options": [
-        "Measure progesterone levels in follicular fluid",
         "Using a microfluidic chemotaxis chamber, create a progesterone gradient and observe whether capacitated human sperm swim preferentially toward higher concentrations; use a progesterone receptor antagonist (mifepristone) to block the response; and demonstrate that the CatSper calcium channel mediates the chemotactic response since progesterone activates CatSper via ABHD2",
+        "Measure progesterone levels in follicular fluid",
         "Mix sperm with cumulus cells in a dish and observe if fertilization occurs",
         "Knock out the progesterone receptor gene in female mice and observe fertility"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Testing sperm chemotaxis requires demonstrating directional movement in response to a chemical gradient. The microfluidic approach is ideal: (1) Create a stable, measurable progesterone gradient in a microfluidic chamber. (2) Introduce capacitated sperm and quantify directional bias (chemotactic index = % of sperm swimming toward higher concentration vs. expected 50% by chance). (3) Controls: (a) No gradient (uniform concentration) — sperm should show random movement. (b) Mifepristone (progesterone receptor antagonist) — if chemotaxis is PR-mediated, it should be blocked. However, recent evidence shows sperm progesterone response is NOT through classical nuclear PR but through a non-genomic pathway: progesterone inhibits ABHD2 (α/β-hydrolase domain containing protein 2), which normally degrades 2-arachidonoylglycerol (2-AG), an endocannabinoid that inhibits CatSper. Progesterone → ABHD2 inhibition → 2-AG accumulation blocked → CatSper activation → Ca2+ influx → chemotaxis. CatSper knockout sperm should lack the chemotactic response.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -309,12 +309,12 @@
       "type": "MCQ",
       "question": "In marsupials such as kangaroos, which unique reproductive feature allows for embryonic diapause?",
       "options": [
+        "Marsupial eggs have impenetrable shells that prevent development until external conditions are favorable",
         "Marsupials can freeze embryos in the oviduct for months before implantation",
         "The blastocyst enters a state of reversible developmental arrest in the uterus, regulated by the suckling stimulus from a joey in the pouch which maintains prolactin-mediated inhibition of the corpus luteum",
-        "Marsupial eggs have impenetrable shells that prevent development until external conditions are favorable",
         "Marsupials store sperm for years in specialized sperm storage tubules"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Embryonic diapause (delayed implantation) in marsupials like kangaroos is a remarkable reproductive strategy. In the typical scenario: (1) A female kangaroo mates shortly after giving birth. The resulting embryo develops to the blastocyst stage and then enters diapause — developmental arrest at ~80-100 cells. (2) The arrest is maintained by the lactational inhibition of the corpus luteum: the suckling stimulus from the pouch young triggers prolactin release, which inhibits corpus luteum progesterone production and/or directly inhibits embryonic development. (3) When the pouch young is weaned, lost, or removed, the suckling inhibition ceases, prolactin falls, the corpus luteum reactivates, progesterone rises, and the dormant blastocyst resumes development and implants. This allows kangaroos to have three offspring at different stages simultaneously: a fetus in utero, a young joey in the pouch, and an older joey at foot. Embryonic diapause also occurs in some placental mammals (bears, mustelids, armadillos) but with different mechanisms.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -329,12 +329,12 @@
       "type": "MCQ",
       "question": "Sex determination in many reptiles depends on the temperature at which eggs are incubated. This is called temperature-dependent sex determination (TSD). Which statement about TSD is correct?",
       "options": [
-        "In all TSD species, higher temperatures produce males and lower temperatures produce females",
-        "TSD patterns vary among species: in many turtles, higher temperatures produce females (Pattern Ia), while in crocodilians, extreme temperatures produce females and intermediate temperatures produce males (Pattern II); the molecular mechanism involves temperature-sensitive expression of aromatase (CYP19A1) and/or epigenetic regulators",
         "TSD is identical in mechanism to XX/XY genetic sex determination",
-        "TSD occurs during embryonic development but can be reversed after hatching"
+        "In all TSD species, higher temperatures produce males and lower temperatures produce females",
+        "TSD occurs during embryonic development but can be reversed after hatching",
+        "TSD patterns vary among species: in many turtles, higher temperatures produce females (Pattern Ia), while in crocodilians, extreme temperatures produce females and intermediate temperatures produce males (Pattern II); the molecular mechanism involves temperature-sensitive expression of aromatase (CYP19A1) and/or epigenetic regulators"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "TSD is found in all crocodilians, most turtles, some lizards, and tuatara. Three main patterns exist: (1) Pattern Ia (many turtles): Higher incubation temperatures → females; lower temperatures → males. (2) Pattern Ib (some lizards): Higher temperatures → males; lower temperatures → females. (3) Pattern II (crocodilians, some turtles): Intermediate temperatures → males; both extremes → females. The molecular mechanism involves temperature-sensitive expression of key sex-determining genes during the thermosensitive period (TSP, typically the middle third of development). Aromatase (CYP19A1, which converts androgens to estrogens) is temperature-sensitive — at female-producing temperatures, aromatase expression increases, producing estrogen that drives ovarian differentiation. Recent work has also implicated the calcium-dependent TRPV4 channel, epigenetic regulators (KDM6B — histone demethylase), and the transcription factor CIRBP. TSD is irreversible once the gonads differentiate during embryonic development.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -369,12 +369,12 @@
       "type": "MCQ",
       "question": "Testosterone is produced by Leydig cells in the testis. Which signaling pathway regulates Leydig cell steroidogenesis?",
       "options": [
-        "LH binds LH/CG receptors (Gs-coupled GPCRs) on Leydig cells, increasing cAMP, activating PKA, which acutely upregulates StAR protein (transporting cholesterol into mitochondria) and chronically induces steroidogenic enzyme expression",
-        "FSH directly stimulates Leydig cells to produce testosterone",
+        "GnRH acts directly on Leydig cells to stimulate testosterone synthesis",
         "Testosterone production is constitutive and not hormonally regulated",
-        "GnRH acts directly on Leydig cells to stimulate testosterone synthesis"
+        "LH binds LH/CG receptors (Gs-coupled GPCRs) on Leydig cells, increasing cAMP, activating PKA, which acutely upregulates StAR protein (transporting cholesterol into mitochondria) and chronically induces steroidogenic enzyme expression",
+        "FSH directly stimulates Leydig cells to produce testosterone"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": "Leydig cell steroidogenesis is regulated by LH via a well-characterized signaling pathway: (1) LH (from anterior pituitary gonadotrophs) binds the LH/CG receptor (LHCGR), a Gs-coupled GPCR on Leydig cells. (2) Gs activation stimulates adenylyl cyclase → cAMP → PKA activation. (3) ACUTE regulation (minutes): PKA phosphorylates and activates StAR (steroidogenic acute regulatory protein), which transports cholesterol from the outer to inner mitochondrial membrane — the rate-limiting step in steroidogenesis. Without StAR, cholesterol cannot access CYP11A1 (P450scc) in the inner membrane. StAR mutations cause lipoid congenital adrenal hyperplasia. (4) CHRONIC regulation (hours-days): PKA activates CREB, which induces transcription of steroidogenic enzymes: CYP11A1, CYP17A1, 3β-HSD, and 17β-HSD. (5) The steroidogenic pathway: Cholesterol → pregnenolone (CYP11A1) → 17-hydroxypregnenolone (CYP17A1) → DHEA (CYP17A1 lyase) → androstenedione (3β-HSD) → testosterone (17β-HSD). FSH acts on Sertoli cells (not Leydig cells). GnRH acts on the pituitary (not directly on testes).",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -389,12 +389,12 @@
       "type": "DATA_INTERPRETATION",
       "question": "A reproductive endocrinologist evaluates a couple for infertility. The male partner's semen analysis shows:\n\nParameter | Result | WHO reference\nVolume | 3.0 mL | >1.5 mL\nConcentration | 2 million/mL | >15 million/mL\nTotal count | 6 million | >39 million\nMotility | 60% progressive | >32% progressive\nMorphology (strict) | 5% normal | >4% normal\nFSH | 25 mIU/mL | 1.5-12.4 mIU/mL\nTestosterone | 450 ng/dL | 264-916 ng/dL\n\nWhich diagnosis best fits these findings?",
       "options": [
-        "Obstructive azoospermia with normal spermatogenesis",
-        "Non-obstructive severe oligozoospermia with primary spermatogenic failure — evidenced by severely low sperm concentration despite high FSH (indicating loss of negative feedback from Sertoli cells/germ cells) and normal testosterone (Leydig cell function preserved)",
         "Hypogonadotropic hypogonadism causing reduced sperm production",
-        "Normal semen analysis — all parameters within reference range"
+        "Obstructive azoospermia with normal spermatogenesis",
+        "Normal semen analysis — all parameters within reference range",
+        "Non-obstructive severe oligozoospermia with primary spermatogenic failure — evidenced by severely low sperm concentration despite high FSH (indicating loss of negative feedback from Sertoli cells/germ cells) and normal testosterone (Leydig cell function preserved)"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The semen analysis reveals severe oligozoospermia (2 million/mL, far below the 15 million/mL reference). The key diagnostic clue is the elevated FSH (25 mIU/mL, ~2× upper normal) with normal testosterone (450 ng/dL). This pattern indicates: (1) PRIMARY spermatogenic failure: The seminiferous tubules are failing to produce sperm normally. Possible causes include genetic factors (Y-chromosome microdeletions, Klinefelter syndrome), varicocele, cryptorchidism, or idiopathic. (2) Elevated FSH: Sertoli cells normally produce inhibin B, which provides negative feedback to the anterior pituitary, suppressing FSH. When spermatogenesis fails, Sertoli cell inhibin B production decreases, removing negative feedback and allowing FSH to rise. High FSH is a marker of testicular germ cell damage. (3) Normal testosterone: Leydig cell function (testosterone production) is controlled by LH and is typically preserved in primary spermatogenic failure because the Leydig cell compartment is often intact. In obstructive azoospermia, FSH would be normal (spermatogenesis is occurring but sperm cannot exit). In hypogonadotropic hypogonadism, BOTH FSH and testosterone would be low.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -409,12 +409,12 @@
       "type": "MCQ",
       "question": "The placenta serves as the interface between maternal and fetal circulations. In humans, what type of placentation exists, and what is the significance?",
       "options": [
+        "Diffuse placentation — the entire chorion is involved in exchange",
         "Epitheliochorial placentation — 6 tissue layers separate maternal and fetal blood",
-        "Hemochorial placentation — fetal trophoblast cells are in direct contact with maternal blood, with only 3 tissue layers separating maternal blood from fetal blood (syncytiotrophoblast, fetal connective tissue, fetal endothelium)",
         "Endotheliochorial placentation — maternal endothelium contacts fetal chorion",
-        "Diffuse placentation — the entire chorion is involved in exchange"
+        "Hemochorial placentation — fetal trophoblast cells are in direct contact with maternal blood, with only 3 tissue layers separating maternal blood from fetal blood (syncytiotrophoblast, fetal connective tissue, fetal endothelium)"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Humans have hemochorial placentation, the most invasive type. During implantation: (1) The trophoblast differentiates into cytotrophoblast (inner, proliferative) and syncytiotrophoblast (outer, multinucleated, formed by cell fusion). (2) The syncytiotrophoblast aggressively invades the uterine endometrium (decidua), eroding maternal spiral arteries. (3) Maternal blood flows directly into the intervillous space, bathing the fetal chorionic villi. (4) Exchange occurs across only 3 layers: syncytiotrophoblast → fetal villous connective tissue (mesenchyme) → fetal capillary endothelium. This minimal barrier maximizes nutrient/gas exchange efficiency. Compare with: epitheliochorial (pig, horse) — all 6 layers intact, least invasive; endotheliochorial (dog, cat) — 4 layers; hemochorial (human, mouse, rabbit) — 3 layers, most invasive. The invasiveness of human placentation creates risks: ectopic implantation, placenta accreta (excessive invasion into myometrium), and the immunological challenge of maternal tolerance of the semi-allogeneic fetus.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -429,12 +429,12 @@
       "type": "MCQ",
       "question": "Genomic imprinting plays a critical role in mammalian placental development. Which statement best describes the conflict theory of imprinting?",
       "options": [
-        "Imprinting evolved to prevent parthenogenesis and ensure biparental contribution",
         "The kinship (parental conflict) theory proposes that paternally expressed genes (e.g., IGF2) promote fetal/placental growth to extract maximum resources from the mother, while maternally expressed genes (e.g., IGF2R, H19) restrain fetal growth to preserve maternal resources for future offspring — reflecting conflicting evolutionary interests of maternal and paternal genomes",
-        "Imprinting randomly silences one allele to reduce gene dosage",
-        "All imprinted genes favor maternal interests because the mother invests more in offspring"
+        "Imprinting evolved to prevent parthenogenesis and ensure biparental contribution",
+        "All imprinted genes favor maternal interests because the mother invests more in offspring",
+        "Imprinting randomly silences one allele to reduce gene dosage"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The kinship (parental conflict) theory of genomic imprinting, proposed by David Haig, explains why ~100+ mammalian genes show parent-of-origin-specific expression. The theory: (1) Paternal genome interest: Maximize resource extraction from THIS mother for THIS offspring (since the father may not sire future offspring with the same mother). Paternally expressed imprinted genes (IGF2, PEG1/MEST, PEG3, PLAGL1) tend to promote fetal and placental growth. (2) Maternal genome interest: Balance resource investment across all current and future offspring (all share the maternal genome). Maternally expressed imprinted genes (IGF2R, H19, CDKN1C, GRB10) tend to restrain fetal growth. (3) Evidence: IGF2 knockout (paternally expressed) → small placentas and pups (40% normal weight). IGF2R knockout (maternally expressed, a 'sink' for IGF2) → placental and fetal overgrowth. In humans, Beckwith-Wiedemann syndrome (BWS, biallelic IGF2 expression) causes fetal overgrowth, while Silver-Russell syndrome (IGF2 loss) causes growth restriction.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -449,10 +449,10 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher wants to determine whether a newly identified secreted protein from the uterine endometrium is essential for embryo implantation. Which experimental approach would most directly test this?",
       "options": [
-        "Measure the protein levels during the menstrual cycle and show they peak during the implantation window",
-        "Generate a uterine-specific conditional knockout of the gene (using PR-Cre or Ltf-Cre), then test fertility by natural mating; if knockout females fail to maintain pregnancies despite normal ovulation and fertilization, transfer KO embryos to wild-type recipients (and wild-type embryos to KO recipients) to distinguish embryonic vs. uterine defects",
         "Add the protein to in vitro culture medium and observe whether embryos attach to culture dishes",
-        "Inject the protein systemically and measure uterine weight"
+        "Generate a uterine-specific conditional knockout of the gene (using PR-Cre or Ltf-Cre), then test fertility by natural mating; if knockout females fail to maintain pregnancies despite normal ovulation and fertilization, transfer KO embryos to wild-type recipients (and wild-type embryos to KO recipients) to distinguish embryonic vs. uterine defects",
+        "Inject the protein systemically and measure uterine weight",
+        "Measure the protein levels during the menstrual cycle and show they peak during the implantation window"
       ],
       "correctAnswer": "B",
       "explanation": "Testing whether a uterine factor is essential for implantation requires: (1) Uterine-specific gene deletion: PR-Cre (progesterone receptor-Cre) or Ltf-Cre (lactoferrin-Cre) deletes the gene specifically in the uterus while preserving expression elsewhere (including the embryo and ovary). (2) Fertility testing: Natural mating to assess pregnancy rates, implantation sites (blue dye test at E4.5), and litter sizes. (3) CRITICAL CONTROL — Embryo transfer experiments: These distinguish between uterine defects and embryonic/ovarian defects. (a) Transfer wild-type embryos into KO uteri: If implantation fails, the uterine factor is required for receptivity. (b) Transfer KO embryos into wild-type uteri: If implantation succeeds, the protein is not needed in the embryo. This reciprocal transfer is the gold standard in reproductive biology. Simply measuring protein levels (option A) shows correlation but not causation. In vitro attachment (option C) is a poor model for in vivo implantation. Systemic injection (option D) doesn't test uterine function specifically.",
@@ -469,12 +469,12 @@
       "type": "MCQ",
       "question": "Sperm competition occurs in species where females mate with multiple males. Which anatomical or physiological adaptation in males is associated with intense sperm competition?",
       "options": [
-        "Reduced testis size relative to body size, since fewer sperm are needed",
         "Larger testis size relative to body size, higher sperm counts per ejaculate, faster sperm swimming speed, and copulatory plugs — all increasing the probability that a male's sperm fertilize the egg",
-        "Brighter plumage to attract females and avoid sperm competition entirely",
-        "Reduced ejaculation frequency to conserve energy"
+        "Reduced testis size relative to body size, since fewer sperm are needed",
+        "Reduced ejaculation frequency to conserve energy",
+        "Brighter plumage to attract females and avoid sperm competition entirely"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Sperm competition theory (Parker, 1970) predicts that in species with promiscuous mating systems, males evolve traits that increase fertilization success in the competitive environment of the female reproductive tract: (1) Larger relative testis size: Chimpanzees (multi-male mating) have much larger testes relative to body size than gorillas (single-male harem). In primates, there is a strong positive correlation between testis size and mating system promiscuity. (2) Higher sperm counts: More sperm per ejaculate increases the statistical probability of fertilization (raffle principle). (3) Faster sperm: Sperm velocity correlates with testis size across primate species. (4) Copulatory plugs: In some rodents and primates, seminal fluid coagulates in the female tract, forming a plug that physically blocks subsequent males' sperm. (5) Sperm morphology: Longer midpieces (more mitochondria, more energy) correlate with sperm competition intensity. (6) Seminal fluid proteins: In Drosophila, accessory gland proteins (Acps) can reduce female remating tendency and displace rival sperm.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -510,9 +510,9 @@
       "question": "The IZUMO1-JUNO interaction is essential for sperm-egg fusion. What are these molecules?",
       "options": [
         "IZUMO1 is an immunoglobulin-like protein on the sperm inner acrosomal membrane (exposed after acrosome reaction) that binds JUNO (folate receptor 4/FOLR4) on the egg plasma membrane; JUNO is rapidly shed from the oolemma after fertilization as part of the membrane block to polyspermy",
-        "IZUMO1 is a carbohydrate on the zona pellucida and JUNO is a lectin on the sperm",
+        "IZUMO1 is a nuclear protein transferred from sperm to egg during fertilization",
         "Both are gap junction proteins that connect sperm and egg cytoplasm",
-        "IZUMO1 is a nuclear protein transferred from sperm to egg during fertilization"
+        "IZUMO1 is a carbohydrate on the zona pellucida and JUNO is a lectin on the sperm"
       ],
       "correctAnswer": "A",
       "explanation": "The molecular basis of sperm-egg membrane fusion was a long-standing mystery until the discovery of IZUMO1 (2005) and JUNO (2014): (1) IZUMO1: A type I transmembrane protein containing an immunoglobulin-like domain, located on the inner acrosomal membrane of sperm. It is only exposed on the sperm surface AFTER the acrosome reaction. Named after the Japanese marriage shrine. (2) JUNO: A GPI-anchored protein (also known as folate receptor 4/FOLR4) on the oocyte plasma membrane (oolemma). Named to complement IZUMO1. (3) Binding: IZUMO1 on acrosome-reacted sperm binds JUNO on the egg, mediating initial adhesion and facilitating membrane fusion. The crystal structure of the IZUMO1-JUNO complex was solved in 2016. (4) Polyspermy block: Within 30-40 minutes of fertilization, JUNO is shed from the oolemma in extracellular vesicles, removing the receptor for additional sperm — contributing to the membrane block to polyspermy. Knockout of either gene in mice causes complete infertility.",
@@ -529,10 +529,10 @@
       "type": "MCQ",
       "question": "Preeclampsia is a pregnancy complication characterized by hypertension and proteinuria. What is the current understanding of its pathophysiology?",
       "options": [
-        "Preeclampsia is caused by excessive maternal weight gain during pregnancy",
-        "Defective trophoblast invasion of spiral arteries leads to incomplete vascular remodeling, placental hypoxia, and release of anti-angiogenic factors (sFlt-1) into the maternal circulation, causing systemic endothelial dysfunction",
         "Preeclampsia results from maternal immune rejection of the fetus",
-        "High dietary sodium intake during pregnancy is the sole cause"
+        "Defective trophoblast invasion of spiral arteries leads to incomplete vascular remodeling, placental hypoxia, and release of anti-angiogenic factors (sFlt-1) into the maternal circulation, causing systemic endothelial dysfunction",
+        "High dietary sodium intake during pregnancy is the sole cause",
+        "Preeclampsia is caused by excessive maternal weight gain during pregnancy"
       ],
       "correctAnswer": "B",
       "explanation": "Preeclampsia (affecting 3-5% of pregnancies) is a two-stage disease: (1) STAGE 1 — Placental stage (preclinical): Normally, extravillous trophoblast cells invade the uterine spiral arteries, replacing the muscular walls with fibrinoid material. This converts narrow, high-resistance arteries into wide, low-resistance vessels, ensuring adequate placental blood flow. In preeclampsia, this trophoblast invasion is shallow and incomplete. The spiral arteries remain narrow and responsive to vasoconstrictors, leading to intermittent placental ischemia-reperfusion injury. (2) STAGE 2 — Maternal stage (clinical): The hypoxic, stressed placenta releases anti-angiogenic factors into the maternal circulation: sFlt-1 (soluble fms-like tyrosine kinase 1, which sequesters VEGF and PlGF) and sEng (soluble endoglin). The resulting imbalance between pro-angiogenic (VEGF, PlGF) and anti-angiogenic (sFlt-1, sEng) factors causes widespread maternal endothelial dysfunction, manifesting as hypertension (vasoconstriction), proteinuria (glomerular endotheliosis), and potentially HELLP syndrome, eclampsia (seizures), and organ damage. Delivery of the placenta is the only definitive cure.",
@@ -549,10 +549,10 @@
       "type": "MCQ",
       "question": "Which correctly describes the difference between r-selected and K-selected reproductive strategies?",
       "options": [
-        "r-selected species invest heavily in few offspring with extensive parental care (e.g., elephants), while K-selected species produce many offspring with no parental care (e.g., oysters)",
+        "The r/K distinction applies only to mammals",
         "r-selected species produce many small offspring with minimal parental investment, high mortality, and rapid maturation (e.g., insects, fish); K-selected species produce few large offspring with extensive parental care, low mortality, and slow maturation (e.g., primates, whales)",
         "Both strategies produce identical numbers of offspring but differ in habitat preference",
-        "The r/K distinction applies only to mammals"
+        "r-selected species invest heavily in few offspring with extensive parental care (e.g., elephants), while K-selected species produce many offspring with no parental care (e.g., oysters)"
       ],
       "correctAnswer": "B",
       "explanation": "The r/K selection theory (MacArthur and Wilson) describes a continuum of life history strategies: r-selected species: (1) High fecundity — large number of offspring per reproductive event (an oyster releases millions of eggs). (2) Small offspring size with minimal energy investment per offspring. (3) Little to no parental care. (4) High juvenile mortality — most offspring die before reproducing. (5) Rapid development and early maturation. (6) Short lifespan. (7) Adapted to unstable/unpredictable environments where rapid population growth (high intrinsic rate of increase, r) is advantageous. K-selected species: (1) Low fecundity — few offspring (whales have one calf every 2-3 years). (2) Large offspring with extensive energy investment. (3) Extended parental care. (4) Low juvenile mortality. (5) Slow development and delayed maturity. (6) Long lifespan. (7) Adapted to stable environments near carrying capacity (K). Most organisms fall somewhere on the continuum rather than at the extremes. Modern life history theory has largely replaced strict r/K classification with more nuanced frameworks.",
@@ -569,9 +569,9 @@
       "type": "DATA_INTERPRETATION",
       "question": "A researcher studies the effect of follicle size on oocyte developmental competence in cattle IVF:\n\nFollicle diameter (mm) | Oocytes collected | Cleavage rate (%) | Blastocyst rate (%) | Pregnancy rate after transfer (%)\n2-4 | 50 | 70 | 10 | 15\n4-6 | 50 | 75 | 25 | 30\n6-8 | 50 | 80 | 35 | 40\n>8 | 50 | 85 | 50 | 55\n\nWhat conclusion is best supported?",
       "options": [
-        "Follicle size has no effect on oocyte quality",
-        "Oocytes from larger follicles have progressively greater developmental competence, likely because larger follicles provide more cytoplasmic factors, mRNA stores, and organelle reserves needed for early embryonic development before embryonic genome activation",
         "Smaller follicle oocytes are superior because they have undergone less aging",
+        "Oocytes from larger follicles have progressively greater developmental competence, likely because larger follicles provide more cytoplasmic factors, mRNA stores, and organelle reserves needed for early embryonic development before embryonic genome activation",
+        "Follicle size has no effect on oocyte quality",
         "Only cleavage rate matters; blastocyst and pregnancy rates are irrelevant"
       ],
       "correctAnswer": "B",
@@ -589,12 +589,12 @@
       "type": "MCQ",
       "question": "Sexual selection often leads to sexual dimorphism. Which of the following correctly distinguishes intrasexual and intersexual selection?",
       "options": [
-        "Intrasexual selection involves competition within one sex (usually males) for access to mates, leading to weapons and large body size; intersexual selection involves mate choice (usually by females) based on ornaments, displays, or other traits indicating genetic quality",
-        "Intrasexual selection is the same as natural selection; intersexual selection is artificial selection",
+        "Intrasexual selection occurs between species while intersexual selection occurs within species",
         "Both terms refer to female choice exclusively",
-        "Intrasexual selection occurs between species while intersexual selection occurs within species"
+        "Intrasexual selection is the same as natural selection; intersexual selection is artificial selection",
+        "Intrasexual selection involves competition within one sex (usually males) for access to mates, leading to weapons and large body size; intersexual selection involves mate choice (usually by females) based on ornaments, displays, or other traits indicating genetic quality"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": "Sexual selection, described by Darwin, operates through two mechanisms: (1) Intrasexual selection (same-sex competition): Members of one sex (typically males) compete directly for mating opportunities. This favors traits that increase competitive ability: antlers in deer (used in male-male combat), large body size in elephant seals (males fight for harem access), horns in beetles, and territorial aggression. The sex with higher variance in reproductive success (usually males) experiences stronger intrasexual selection. (2) Intersexual selection (mate choice): Members of one sex (typically females) choose mates based on specific traits. This favors ornaments and displays: peacock tail feathers, bird-of-paradise dances, frog calls, bowerbird bower construction. Female choice may be based on: (a) direct benefits (territory quality, nuptial gifts, parental care ability), (b) indirect genetic benefits (good genes — the handicap principle proposed by Zahavi, where costly ornaments honestly signal genetic quality), or (c) Fisher's runaway selection (arbitrary preference genes become linked to preferred trait genes). Both mechanisms can operate simultaneously and sometimes conflict.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -609,12 +609,12 @@
       "type": "MCQ",
       "question": "Maternal immunological tolerance of the semi-allogeneic fetus (which expresses paternal MHC antigens) is essential for successful pregnancy. Which mechanism contributes to this tolerance?",
       "options": [
+        "Paternal antigens are not expressed on fetal cells until after birth",
         "The fetus is completely hidden from the maternal immune system with no immune interaction",
-        "Trophoblast cells express non-classical MHC class I (HLA-G and HLA-E) instead of classical HLA-A and HLA-B, inhibiting NK cell cytotoxicity; decidual regulatory T cells (Tregs) suppress anti-fetal immune responses; and the local cytokine milieu is shifted toward Th2/anti-inflammatory",
         "The mother's immune system is completely suppressed during pregnancy",
-        "Paternal antigens are not expressed on fetal cells until after birth"
+        "Trophoblast cells express non-classical MHC class I (HLA-G and HLA-E) instead of classical HLA-A and HLA-B, inhibiting NK cell cytotoxicity; decidual regulatory T cells (Tregs) suppress anti-fetal immune responses; and the local cytokine milieu is shifted toward Th2/anti-inflammatory"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Fetal-maternal immunological tolerance is an active, multi-layered process: (1) Non-classical MHC expression: The syncytiotrophoblast (in direct contact with maternal blood) expresses NO MHC class I or II molecules. The extravillous trophoblast expresses non-classical HLA-G and HLA-E, which bind inhibitory receptors (KIR2DL4, CD94/NKG2A) on decidual NK cells, preventing cytotoxicity. Classical HLA-A and HLA-B are specifically ABSENT from trophoblast. (2) Regulatory T cells: Decidual Tregs (CD4+CD25+FOXP3+) are expanded during pregnancy and actively suppress anti-fetal immune responses. They are induced by paternal antigens and seminal fluid factors. Treg depletion causes miscarriage in mice. (3) Cytokine shift: The decidual microenvironment favors Th2-type cytokines (IL-4, IL-10, TGF-β) over Th1-type (IFN-γ, TNF-α), though the situation is more nuanced than a simple Th1/Th2 shift. (4) IDO expression: Trophoblast cells express indoleamine 2,3-dioxygenase (IDO), which depletes tryptophan, inhibiting T cell proliferation. (5) PD-L1 expression on trophoblast engages PD-1 on T cells. The maternal immune system is NOT globally suppressed — systemic immunity is maintained.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -629,10 +629,10 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher wants to test whether exposure to endocrine-disrupting chemicals (EDCs) during fetal gonadal development causes transgenerational epigenetic effects on male fertility (effects inherited by unexposed F3 generation). Which experimental design is required?",
       "options": [
-        "Expose adult male rats to the EDC and test their fertility",
-        "Expose pregnant F0 dams during the critical window of fetal gonadal development (E8-E14 in rats), then assess spermatogenesis and fertility in F1 males (directly exposed in utero), F2 males (derived from exposed F1 germline), AND F3 males (first truly unexposed generation) — true transgenerational effects require persistence to F3",
         "Expose F0 females and test only F1 offspring",
-        "Feed the EDC to both parents before mating and test F1 offspring"
+        "Expose pregnant F0 dams during the critical window of fetal gonadal development (E8-E14 in rats), then assess spermatogenesis and fertility in F1 males (directly exposed in utero), F2 males (derived from exposed F1 germline), AND F3 males (first truly unexposed generation) — true transgenerational effects require persistence to F3",
+        "Feed the EDC to both parents before mating and test F1 offspring",
+        "Expose adult male rats to the EDC and test their fertility"
       ],
       "correctAnswer": "B",
       "explanation": "True transgenerational epigenetic inheritance (as distinguished from direct exposure effects) requires assessment through the F3 generation because: (1) F0: The exposed mother. (2) F1: The fetus, which is directly exposed in utero to the EDC. Any effects on F1 could be due to DIRECT exposure of the developing fetus, not epigenetic inheritance. (3) F2: The germline (primordial germ cells) of the F1 fetus is also present during the F0 exposure period. Therefore, F2 offspring derive from exposed germ cells — still potentially a direct exposure effect. (4) F3: The first generation whose germline was NEVER directly exposed to the EDC. Effects persisting in F3 must be transmitted through epigenetic modifications (DNA methylation, histone modifications, ncRNAs) in the germline that survive reprogramming. The critical exposure window (E8-E14 in rats) targets the period of gonadal sex determination and epigenetic reprogramming. Studies by Skinner's group reported transgenerational effects of vinclozolin (an anti-androgen fungicide) on rat fertility through F3, though some results remain controversial.",
@@ -649,12 +649,12 @@
       "type": "MCQ",
       "question": "In Drosophila, sex is determined by the X:autosome (X:A) ratio rather than the presence of a Y chromosome. What is the key molecular effector?",
       "options": [
-        "SRY gene on the Y chromosome, as in mammals",
-        "The X:A ratio regulates the Sex-lethal (Sxl) gene — an X:A ratio of 1.0 (XX) activates Sxl, which initiates a female-specific RNA splicing cascade (Sxl → transformer → doublesex female isoform), while an X:A ratio of 0.5 (XY) leaves Sxl inactive, producing the default male splicing pattern (doublesex male isoform)",
+        "Temperature during larval development determines sex in Drosophila",
         "Dosage compensation through X-inactivation, identical to mammalian Barr body formation",
-        "Temperature during larval development determines sex in Drosophila"
+        "The X:A ratio regulates the Sex-lethal (Sxl) gene — an X:A ratio of 1.0 (XX) activates Sxl, which initiates a female-specific RNA splicing cascade (Sxl → transformer → doublesex female isoform), while an X:A ratio of 0.5 (XY) leaves Sxl inactive, producing the default male splicing pattern (doublesex male isoform)",
+        "SRY gene on the Y chromosome, as in mammals"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Drosophila sex determination is fundamentally different from mammals: (1) The Y chromosome is NOT sex-determining (XXY flies are female, XO flies are male but infertile). Instead, the ratio of X chromosomes to autosome sets determines sex. (2) X:A = 1.0 (XX:AA, normal female): X-linked numerator elements (SisA, SisB/Scute) exceed the autosomal denominator threshold, activating Sex-lethal (Sxl) transcription from the early (Pe) promoter. Sxl protein is an RNA-binding protein that auto-regulates its own splicing (maintaining female-specific Sxl expression) and regulates downstream genes. (3) Splicing cascade: Active Sxl → splices transformer (tra) pre-mRNA in female-specific mode → active Tra protein (with Tra2) → splices doublesex (dsx) pre-mRNA in female-specific mode → DsxF activates female differentiation genes. (4) X:A = 0.5 (XY:AA, normal male): Sxl is NOT activated → default (male) splicing of tra → non-functional Tra → default male splicing of dsx → DsxM activates male differentiation genes. (5) Drosophila dosage compensation is OPPOSITE to mammals: the male X is HYPERACTIVATED (2× expression) rather than one female X being inactivated.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -669,12 +669,12 @@
       "type": "MCQ",
       "question": "Relaxin is a hormone produced during pregnancy. What are its primary functions?",
       "options": [
-        "Relaxin causes uterine contractions to initiate labor",
         "Relaxin softens the cervix and pubic symphysis by remodeling collagen, inhibits uterine contractions during most of pregnancy, and promotes growth of mammary glands; it is produced by the corpus luteum, decidua, and placenta",
         "Relaxin is produced by the fetus and signals the mother to begin lactation",
-        "Relaxin has no role in pregnancy and is only produced in males"
+        "Relaxin has no role in pregnancy and is only produced in males",
+        "Relaxin causes uterine contractions to initiate labor"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Relaxin is a peptide hormone (insulin superfamily) with diverse reproductive functions: (1) Cervical ripening: Relaxin remodels the extracellular matrix of the cervix by activating MMPs, inhibiting TIMPs, and altering collagen cross-linking, making the cervix softer and more distensible in preparation for delivery. (2) Pelvic ligament relaxation: It loosens the pubic symphysis and sacroiliac joints, allowing pelvic expansion during birth (most prominent in guinea pigs and rodents). (3) Myometrial quiescence: During most of pregnancy, relaxin inhibits uterine smooth muscle contractions by promoting NO synthesis and opposing oxytocin. Near term, its effect is overcome by the rising oxytocin/prostaglandin levels. (4) Mammary gland development: Synergizes with prolactin and other hormones. (5) Sources: Corpus luteum (primary source in first trimester), decidualized endometrium, placenta. (6) Additional effects: Increases renal blood flow and GFR during pregnancy, promotes angiogenesis. In males, relaxin is produced by the prostate and may affect sperm motility. The relaxin receptor (RXFP1) is a leucine-rich repeat GPCR.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
@@ -709,12 +709,12 @@
       "type": "MCQ",
       "question": "During spermiogenesis (the differentiation of round spermatids into elongated spermatozoa), which structural transformation is responsible for the extreme compaction of the sperm nucleus?",
       "options": [
-        "Replacement of histones with protamines, which are small arginine-rich proteins that neutralize DNA charge and allow tight packaging into a volume 1/6th that of a somatic nucleus",
-        "Removal of all DNA from the spermatid nucleus",
         "Addition of extra histones to compress the chromatin",
-        "Nuclear membrane dissolution and DNA degradation"
+        "Nuclear membrane dissolution and DNA degradation",
+        "Replacement of histones with protamines, which are small arginine-rich proteins that neutralize DNA charge and allow tight packaging into a volume 1/6th that of a somatic nucleus",
+        "Removal of all DNA from the spermatid nucleus"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": "Nuclear compaction during spermiogenesis is one of the most dramatic chromatin remodeling events in biology: (1) Histone-to-protamine transition: In round spermatids, chromatin is organized with somatic histones (H2A, H2B, H3, H4). During spermiogenesis, histones are first replaced by transition proteins (TP1, TP2), then by protamines (P1 and P2 in humans). Protamines are small (~50 amino acids), highly basic proteins (~70% arginine residues) that neutralize the negative charge of DNA phosphate backbone. (2) Toroidal packaging: Protamine-DNA complexes form toroidal (doughnut-shaped) structures containing ~50 kb of DNA each, linked by protamine-free linker regions. This compacts the chromatin to approximately 1/6th the volume of a somatic cell nucleus. (3) Disulfide cross-linking: Inter- and intra-molecular disulfide bonds between protamine cysteine residues further stabilize the compact structure. (4) Residual histones: About 5-15% of the sperm genome retains histones (at specific developmental gene loci), which may be important for epigenetic reprogramming after fertilization. Disruption of the histone-protamine transition causes male infertility.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -729,12 +729,12 @@
       "type": "MCQ",
       "question": "In the hypothalamic-pituitary-gonadal (HPG) axis, GnRH is released in a pulsatile pattern. What is the physiological consequence of administering continuous (non-pulsatile) GnRH agonists?",
       "options": [
+        "Conversion of GnRH into inhibin at the hypothalamic level",
         "Sustained stimulation of FSH and LH secretion leading to hypergonadism",
-        "Initial stimulation followed by downregulation of pituitary GnRH receptors, ultimately suppressing LH and FSH release",
         "Direct stimulation of the gonads bypassing the pituitary",
-        "Conversion of GnRH into inhibin at the hypothalamic level"
+        "Initial stimulation followed by downregulation of pituitary GnRH receptors, ultimately suppressing LH and FSH release"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "GnRH pulsatility is critical for normal reproductive function, and the response to continuous versus pulsatile GnRH fundamentally differs: (1) Normal physiology: The hypothalamus releases GnRH in discrete pulses (every 60-120 minutes in males, variable frequency across the female cycle). This pulsatile pattern is essential because it allows GnRH receptor recycling on pituitary gonadotropes between pulses. (2) Continuous GnRH effect: When GnRH agonists are administered continuously (e.g., leuprolide, goserelin), there is an initial 'flare' of LH and FSH release (days 1-7). However, prolonged receptor occupancy triggers receptor internalization and desensitization — a process called receptor downregulation. Within 2-3 weeks, gonadotropin secretion drops to castrate levels. (3) Clinical applications: This paradoxical suppression is exploited therapeutically in prostate cancer (reducing testosterone), endometriosis, precocious puberty, and IVF protocols (preventing premature LH surge). (4) Molecular mechanism: Continuous stimulation activates the MAPK pathway and beta-arrestin-mediated internalization, preventing receptor recycling to the cell surface.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -749,8 +749,8 @@
       "type": "MCQ",
       "question": "Ovarian follicular atresia is a prominent feature of mammalian reproduction. What percentage of oocytes present at birth are estimated to undergo atresia rather than ovulation in humans?",
       "options": [
-        "Approximately 25%, with most oocytes ovulating during the reproductive lifespan",
         "Approximately 50%, with the remainder stored indefinitely in the ovarian cortex",
+        "Approximately 25%, with most oocytes ovulating during the reproductive lifespan",
         "Greater than 99%, since only about 400-500 oocytes ovulate from an initial pool of approximately 1-2 million at birth",
         "Approximately 75%, with the remaining 25% degenerating after menopause"
       ],
@@ -789,12 +789,12 @@
       "type": "MCQ",
       "question": "Cryptorchidism (undescended testes) results in impaired spermatogenesis. What is the primary mechanism by which elevated abdominal temperature disrupts sperm production?",
       "options": [
-        "Heat directly kills all Sertoli cells in the seminiferous tubules",
-        "Elevated temperature impairs the function of temperature-sensitive enzymes required for meiosis and induces germ cell apoptosis, as spermatogenesis requires temperatures 2-4°C below core body temperature",
+        "Heat converts the seminiferous epithelium into an endocrine-only tissue",
         "Abdominal temperature causes testosterone to denature irreversibly",
-        "Heat converts the seminiferous epithelium into an endocrine-only tissue"
+        "Heat directly kills all Sertoli cells in the seminiferous tubules",
+        "Elevated temperature impairs the function of temperature-sensitive enzymes required for meiosis and induces germ cell apoptosis, as spermatogenesis requires temperatures 2-4°C below core body temperature"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The scrotal location of testes in most mammals is essential for maintaining a temperature 2-4°C below core body temperature (~35°C vs 37°C), which is required for normal spermatogenesis: (1) Temperature sensitivity: Several key processes are temperature-sensitive, including DNA synthesis during premeiotic S phase, meiotic recombination, and post-meiotic spermatid differentiation. Specific heat-sensitive enzymes include those involved in DNA repair and chromatin remodeling. (2) Germ cell apoptosis: At core body temperature, increased reactive oxygen species (ROS) production and activation of the intrinsic apoptotic pathway (via p53, BAX) trigger massive germ cell death, particularly of pachytene spermatocytes and round spermatids. (3) Heat shock response: Elevated temperature induces heat shock proteins (HSP70, HSP90) which, while protective at moderate levels, signal cellular stress. (4) Thermoregulation: The pampiniform venous plexus (countercurrent heat exchange), cremaster muscle (raising/lowering testes), and dartos muscle (scrotal skin wrinkling) all contribute to testicular temperature regulation. (5) Clinical significance: Cryptorchidism affects 1-3% of full-term male newborns, and if uncorrected by age 1-2 years, leads to progressive loss of germ cells and increased testicular cancer risk.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -809,12 +809,12 @@
       "type": "DATA_INTERPRETATION",
       "question": "A researcher measures sperm motility parameters under different conditions:\n\nCondition | Progressive motility (%) | Hyperactivation (%) | Capacitation status\nFreshly ejaculated | 65 | 2 | Non-capacitated\nIncubated 3h in capacitation medium | 58 | 35 | Capacitated\nCapacitated + progesterone (1 μM) | 52 | 68 | Hyperactivated\nCapacitated + ZP3 glycoprotein | 12 | 8 | Acrosome-reacted\n\nWhich conclusion is best supported by these data?",
       "options": [
-        "Capacitation medium inhibits sperm motility and causes immediate cell death",
-        "Capacitation enables hyperactivated motility, progesterone further enhances it via CatSper channel activation, and ZP3 triggers the acrosome reaction which reduces progressive motility as sperm bind to the zona",
         "Progesterone is toxic to capacitated sperm as shown by the decrease in progressive motility",
-        "ZP3 promotes hyperactivation while progesterone causes the acrosome reaction"
+        "ZP3 promotes hyperactivation while progesterone causes the acrosome reaction",
+        "Capacitation medium inhibits sperm motility and causes immediate cell death",
+        "Capacitation enables hyperactivated motility, progesterone further enhances it via CatSper channel activation, and ZP3 triggers the acrosome reaction which reduces progressive motility as sperm bind to the zona"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The data illustrate the sequential functional changes sperm undergo en route to fertilization: (1) Capacitation: After 3 hours in capacitation medium, progressive motility slightly decreases (65→58%), but hyperactivation dramatically increases (2→35%). Capacitation involves cholesterol efflux from the sperm membrane, increase in intracellular calcium, and cAMP-dependent protein kinase A activation. This primes sperm for the acrosome reaction and enables hyperactivated motility (vigorous asymmetric flagellar beating needed to penetrate the zona). (2) Progesterone effect: Cumulus cells surrounding the oocyte secrete progesterone, which acts on the CatSper channel (a sperm-specific calcium channel) to further increase intracellular Ca2+ and enhance hyperactivation (35→68%). The slight decrease in progressive motility (58→52%) reflects the shift from linear swimming to the vigorous whiplash pattern of hyperactivation. (3) ZP3 effect: ZP3 glycoprotein triggers the acrosome reaction — exocytosis of the acrosomal vesicle contents. Post-acrosome-reacted sperm show dramatically reduced progressive motility (12%) and hyperactivation (8%) because they are no longer freely swimming but rather interacting with the zona pellucida. These data demonstrate the physiological cascade: capacitation → hyperactivation → acrosome reaction.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -829,12 +829,12 @@
       "type": "MCQ",
       "question": "Parthenogenesis occurs naturally in some vertebrate species. Which of the following correctly describes the mechanism by which the whiptail lizard (Aspidoscelis uniparens) achieves diploid offspring without fertilization?",
       "options": [
-        "Meiosis is completely suppressed and oocytes are produced by mitosis only",
         "The second polar body fuses with the egg nucleus after meiosis, or premeiotic endoreduplication doubles the chromosome number before a modified meiosis restores diploidy",
+        "Haploid embryos develop normally via compensatory gene dosage mechanisms",
         "Males exist at a very low frequency and fertilize eggs seasonally",
-        "Haploid embryos develop normally via compensatory gene dosage mechanisms"
+        "Meiosis is completely suppressed and oocytes are produced by mitosis only"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Parthenogenesis in whiptail lizards (genus Aspidoscelis, formerly Cnemidophorus) is a well-studied example of obligate parthenogenesis in vertebrates: (1) Origin: These all-female species arose from hybridization events between sexual species. A. uniparens is a diploid hybrid-origin species. (2) Mechanism: Diploidy is maintained through premeiotic endoreduplication — the genome is doubled before meiosis begins, so that after meiosis the oocyte retains a diploid chromosome complement. In some parthenogenetic species, an alternative mechanism involves fusion of the second polar body with the egg pronucleus to restore diploidy. (3) Pseudocopulation: Despite being all-female, individuals exhibit mating behavior — one female mounts another, simulating copulation. This behavior stimulates ovulation and is correlated with hormonal cycles (females alternate between estrogen-dominant and progesterone-dominant phases). (4) Genetic consequence: Offspring are clones of the mother (barring rare mitotic recombination events), reducing genetic diversity. However, these species persist due to the 'twofold cost of sex' advantage — all individuals produce offspring. (5) Heterozygosity: Premeiotic endoreduplication followed by meiosis can maintain heterozygosity at loci distal to crossover points.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -850,11 +850,11 @@
       "question": "The corpus luteum undergoes luteolysis at the end of the luteal phase if pregnancy does not occur. Which signaling molecule is primarily responsible for corpus luteum regression in non-primate mammals?",
       "options": [
         "Oxytocin released from the posterior pituitary",
-        "Prostaglandin F2α (PGF2α) released from the uterine endometrium",
         "Estradiol produced by the dominant follicle of the next cycle",
-        "Prolactin from the anterior pituitary"
+        "Prolactin from the anterior pituitary",
+        "Prostaglandin F2α (PGF2α) released from the uterine endometrium"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Luteolysis (regression of the corpus luteum) is a critical event in the estrous/menstrual cycle and its mechanism differs between species: (1) Non-primate mammals: PGF2α is the primary luteolytic factor. It is synthesized by the uterine endometrium and reaches the ovary via a local countercurrent transfer mechanism — PGF2α diffuses from the uterine vein into the closely apposed ovarian artery (utero-ovarian vascular plexus). PGF2α binds to FP receptors on luteal cells, activating protein kinase C, reducing StAR protein expression, and triggering apoptosis of luteal cells. (2) Proof: Hysterectomy in non-primate mammals prevents luteolysis, extending the corpus luteum's lifespan — demonstrating the uterine origin of the luteolytic signal. (3) Pregnancy rescue: In ruminants, the conceptus secretes interferon-tau (IFN-τ), which suppresses endometrial PGF2α production and prevents luteolysis ('maternal recognition of pregnancy'). In pigs, embryonic estrogen redirects PGF2α secretion from endocrine (into blood) to exocrine (into uterine lumen). (4) Primates: The mechanism differs — primate corpus luteum regression appears to be largely an intrinsic process, though local prostaglandins play a role. hCG from the implanting embryo rescues the corpus luteum in pregnancy.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -869,12 +869,12 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher wants to test whether the CatSper calcium channel on sperm is required for fertilization in vivo. Which experimental design would most rigorously test this hypothesis?",
       "options": [
-        "Treat sperm with a general calcium chelator (BAPTA-AM) and attempt IVF",
-        "Generate CatSper knockout male mice, mate them with wild-type females, and compare fertility rates and litter sizes to wild-type × wild-type matings, then confirm with in vitro fertilization assays and calcium imaging of knockout vs wild-type sperm",
         "Add progesterone to sperm in culture and measure calcium levels",
-        "Observe sperm motility under a microscope in buffer without calcium"
+        "Treat sperm with a general calcium chelator (BAPTA-AM) and attempt IVF",
+        "Observe sperm motility under a microscope in buffer without calcium",
+        "Generate CatSper knockout male mice, mate them with wild-type females, and compare fertility rates and litter sizes to wild-type × wild-type matings, then confirm with in vitro fertilization assays and calcium imaging of knockout vs wild-type sperm"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The CatSper channel is a sperm-specific, pH-sensitive, voltage-gated calcium channel essential for hyperactivated motility and fertilization. The most rigorous experimental approach combines genetic, physiological, and functional evidence: (1) Genetic approach: CatSper knockout mice provide the gold standard — they eliminate CatSper function specifically without off-target effects of pharmacological inhibitors. This was actually done by Ren et al. (2001) who showed CatSper1 knockout males are completely infertile despite producing morphologically normal sperm with normal initial motility. (2) In vivo mating: Comparing knockout × wild-type to wild-type × wild-type mating outcomes (pregnancy rate, litter size) directly tests the in vivo requirement. (3) In vitro verification: IVF assays allow controlled conditions to distinguish whether failure occurs at capacitation, hyperactivation, zona penetration, or sperm-egg fusion. (4) Calcium imaging: Measuring intracellular calcium in CatSper knockout vs wild-type sperm (using Fluo-4 or similar indicators) confirms the molecular mechanism. Option A uses a non-specific chelator affecting all calcium-dependent processes. Options C and D are correlative, not causal.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -889,12 +889,12 @@
       "type": "MCQ",
       "question": "Viviparity has evolved independently multiple times across vertebrate lineages. Which of the following correctly identifies a key physiological challenge that must be solved for viviparity to evolve from oviparity?",
       "options": [
-        "The need to increase egg yolk content for longer internal development",
         "The requirement to evolve mechanisms for maternal-fetal gas exchange, nutrient transfer, and immunological tolerance of the genetically distinct embryo",
+        "The need to increase egg yolk content for longer internal development",
         "The necessity of developing external incubation behaviors",
         "The requirement to reduce clutch size to exactly one offspring"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Viviparity (live birth with maternal nourishment beyond yolk) has evolved independently more than 150 times in vertebrates, including in fish, amphibians, reptiles, and mammals. The transition from oviparity requires solving several major physiological challenges: (1) Gas exchange: The developing embryo requires oxygen delivery and carbon dioxide removal. Solutions include highly vascularized uterine walls (squamate reptiles), placentae (mammals, some sharks, some lizards), and branchial structures in live-bearing fish. (2) Nutrient transfer: Beyond yolk reserves, viviparous species must evolve mechanisms for maternal nutrient provision — ranging from histotrophy (uterine secretions, as in some sharks and the marsupial-like condition) to hemochorial placentation (direct maternal blood contact in humans). (3) Immunological tolerance: The embryo expresses paternal antigens that should trigger maternal immune rejection. Solutions include HLA-G expression by trophoblasts, regulatory T cells, progesterone-mediated immune suppression, and decidual NK cell modulation. (4) Waste removal: Embryonic metabolic waste must be transferred to the maternal circulation. (5) Yolk actually decreases in many viviparous lineages as matrotrophy evolves (contradicting option A).",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -909,10 +909,10 @@
       "type": "MCQ",
       "question": "In the hypothalamic control of reproduction, kisspeptin neurons play a pivotal role. What is the primary function of kisspeptin in the HPG axis?",
       "options": [
-        "Kisspeptin directly stimulates the gonads to produce sex steroids",
-        "Kisspeptin neurons in the arcuate nucleus and AVPV/POA stimulate GnRH release and mediate both negative and positive feedback of sex steroids on GnRH secretion",
         "Kisspeptin inhibits GnRH release to prevent precocious puberty",
-        "Kisspeptin acts exclusively on the posterior pituitary to regulate oxytocin release"
+        "Kisspeptin neurons in the arcuate nucleus and AVPV/POA stimulate GnRH release and mediate both negative and positive feedback of sex steroids on GnRH secretion",
+        "Kisspeptin acts exclusively on the posterior pituitary to regulate oxytocin release",
+        "Kisspeptin directly stimulates the gonads to produce sex steroids"
       ],
       "correctAnswer": "B",
       "explanation": "Kisspeptin (encoded by the KISS1 gene) is arguably the most important upstream regulator of GnRH neurons and its discovery revolutionized reproductive neuroendocrinology: (1) Discovery: Loss-of-function mutations in the kisspeptin receptor (KISS1R, formerly GPR54) were found to cause hypogonadotropic hypogonadism (absent puberty) in humans, establishing kisspeptin as essential for reproductive function. (2) Two populations: Kisspeptin neurons exist in two hypothalamic nuclei with distinct functions. In the arcuate nucleus (ARC/infundibular nucleus), kisspeptin neurons co-express neurokinin B and dynorphin (forming 'KNDy' neurons) and mediate the GnRH pulse generator. They also mediate negative feedback — estrogen and testosterone suppress kisspeptin expression here, reducing GnRH pulse frequency. (3) Positive feedback: In the AVPV (anteroventral periventricular nucleus) in rodents (or equivalent in humans), kisspeptin neurons mediate the positive feedback effect of estrogen — high estrogen during the late follicular phase stimulates kisspeptin release from AVPV neurons, driving the preovulatory GnRH/LH surge. (4) Puberty: The onset of puberty is triggered by increased kisspeptin signaling, possibly regulated by epigenetic mechanisms. (5) Clinical applications: Kisspeptin analogs are being developed to treat infertility and as diagnostic tools.",
@@ -949,10 +949,10 @@
       "type": "MCQ",
       "question": "Seminal plasma contains fructose as the primary energy substrate for sperm. Which accessory gland is the primary source of fructose in the human ejaculate?",
       "options": [
-        "The prostate gland, which also contributes proteolytic enzymes",
+        "The epididymis, which stores mature sperm",
         "The seminal vesicles (seminal glands), which contribute approximately 60-70% of ejaculate volume including fructose, prostaglandins, and semenogelin",
         "The bulbourethral (Cowper's) glands, which produce pre-ejaculatory fluid",
-        "The epididymis, which stores mature sperm"
+        "The prostate gland, which also contributes proteolytic enzymes"
       ],
       "correctAnswer": "B",
       "explanation": "The accessory glands of the male reproductive system contribute distinct components to seminal plasma: (1) Seminal vesicles (seminal glands): These paired glands contribute 60-70% of ejaculate volume. Their alkaline, viscous secretion contains: fructose (the primary energy substrate for sperm glycolysis, at ~2-5 mg/mL), prostaglandins (PGE1, PGE2 — which stimulate female tract smooth muscle contractions to facilitate sperm transport), semenogelin I and II (proteins that form the initial coagulum after ejaculation), ascorbic acid, and fibronectin. Absence of fructose in semen (azoospermia with absent fructose) suggests congenital bilateral absence of seminal vesicles (often associated with CFTR mutations). (2) Prostate gland: Contributes 15-30% of volume with an acidic secretion containing citric acid, acid phosphatase, prostate-specific antigen (PSA, a serine protease that liquefies the coagulum), zinc (which stabilizes chromatin and has antibacterial properties), and spermine. (3) Bulbourethral glands: Produce a small volume of mucus-rich pre-ejaculatory fluid that lubricates the urethra and neutralizes residual urinary acidity. (4) Epididymis: Contributes sperm and a small volume of fluid but is not classified as an accessory gland.",
@@ -969,12 +969,12 @@
       "type": "DATA_INTERPRETATION",
       "question": "A comparative study measures reproductive parameters in four mammalian species:\n\nSpecies | Gestation (days) | Litter size | Neonate mass (g) | Brain mass at birth (% adult) | Eyes at birth\nMouse | 19-21 | 6-12 | 1.5 | 10% | Closed\nRabbit | 30-33 | 4-12 | 50 | 15% | Closed\nGuinea pig | 59-72 | 1-6 | 100 | 45% | Open\nHorse | 335-345 | 1 | 50,000 | 80% | Open\n\nWhich describes the pattern observed in these data?",
       "options": [
-        "Longer gestation always correlates with larger litter sizes",
         "Species with longer gestation periods produce more precocial (mature) neonates with higher brain development and functional sensory organs at birth, while shorter gestations produce more altricial (immature) neonates in larger litters",
+        "All mammals produce neonates with identical developmental maturity",
         "Brain development at birth is entirely determined by litter size",
-        "All mammals produce neonates with identical developmental maturity"
+        "Longer gestation always correlates with larger litter sizes"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The data illustrate the altricial-precocial spectrum in mammalian reproduction: (1) Altricial species (mouse, rabbit): Short gestation (19-33 days), large litter sizes (4-12), small neonates with immature nervous systems (brain 10-15% of adult mass), closed eyes, limited thermoregulation, and high dependence on parental care. Altricial young are essentially 'external embryos' that complete development postnatally. (2) Precocial species (guinea pig, horse): Longer gestation (59-345 days), smaller litter sizes (1-6), larger neonates with well-developed nervous systems (brain 45-80% of adult mass), open eyes, functional thermoregulation, and the ability to locomote shortly after birth. Precocial young can often stand and follow their mother within hours. (3) Trade-offs: The altricial-precocial continuum reflects a fundamental reproductive trade-off between offspring number and offspring quality (degree of development at birth). Altricial species invest less per offspring but produce more; precocial species invest more per offspring but produce fewer. (4) Ecological correlates: Precocial development is common in prey species that must flee predators (horses, wildebeest, guinea pigs), while altricial development is common in species with protected nests or burrows (mice, rabbits). (5) Brain development: The proportion of brain growth occurring prenatally versus postnatally varies dramatically along this spectrum, with implications for critical periods of neural plasticity.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -989,10 +989,10 @@
       "type": "MCQ",
       "question": "Hermaphroditism can be sequential or simultaneous. In the blue-headed wrasse (Thalassoma bifasciatum), what type of sequential hermaphroditism occurs, and what triggers the sex change?",
       "options": [
-        "Protandry (male-to-female), triggered by increasing population density",
+        "Protandry triggered by seasonal temperature changes",
         "Protogyny (female-to-male), triggered by the removal of the dominant male from the social group, which relieves social inhibition of sex change in the largest remaining female",
-        "Simultaneous hermaphroditism with self-fertilization",
-        "Protandry triggered by seasonal temperature changes"
+        "Protandry (male-to-female), triggered by increasing population density",
+        "Simultaneous hermaphroditism with self-fertilization"
       ],
       "correctAnswer": "B",
       "explanation": "The blue-headed wrasse is a classic example of socially controlled protogynous hermaphroditism: (1) Protogyny: Individuals begin life as females and can later transform into 'terminal phase' males. This is the opposite of protandry (male-to-female change seen in clownfish). (2) Social control: The dominant terminal-phase male maintains a harem. His presence actively suppresses sex change in females through behavioral intimidation and possibly pheromonal signals. When the dominant male is removed (death, predation, or experimental removal), the largest female begins sex change within hours — behavioral changes (increased aggression, courtship displays) occur within minutes to hours, and full gonadal transformation (ovary to testis) completes within 8-14 days. (3) Mechanism: The sex change involves dramatic gonadal restructuring — oocytes undergo apoptosis, Leydig-like cells proliferate, and spermatogenesis begins. This is accompanied by changes in aromatase expression (decreased) and androgen production (increased). Brain monoamine systems (serotonin, arginine vasotocin) also change. (4) Evolutionary advantage: This follows the size-advantage model proposed by Ghiselin and Warner — since male reproductive success is highly size-dependent (large males control territories and harems), it is advantageous to reproduce as female when small and as male when large.",
@@ -1009,12 +1009,12 @@
       "type": "MCQ",
       "question": "The contraceptive intrauterine device (IUD) is one of the most effective reversible contraceptives. What is the primary mechanism of action of the copper IUD (Cu-IUD)?",
       "options": [
+        "It releases progesterone to suppress ovulation like oral contraceptives",
         "It physically blocks the cervical os preventing sperm entry",
         "Copper ions released into the uterine cavity are cytotoxic to sperm, impairing sperm motility and viability, and also create a sterile inflammatory reaction in the endometrium that is hostile to implantation",
-        "It releases progesterone to suppress ovulation like oral contraceptives",
         "It causes permanent scarring of the fallopian tubes"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The copper IUD (e.g., Paragard) is a highly effective, non-hormonal, long-acting reversible contraceptive (LARC) with multiple mechanisms of action: (1) Spermicidal effect: Cu2+ ions released from the copper wire are directly toxic to sperm. Copper impairs sperm motility, viability, and acrosome reaction capacity. In vitro studies show that concentrations of copper found in uterine fluid of Cu-IUD users significantly reduce sperm progressive motility and ability to penetrate cervical mucus. (2) Inflammatory reaction: The IUD as a foreign body induces a sterile inflammatory response in the endometrium, characterized by increased leukocytes (macrophages, neutrophils, lymphocytes), cytokines, and prostaglandins. This creates an environment hostile to both sperm survival and embryo implantation. (3) Pre-fertilization effect: The primary mechanism is pre-fertilization — preventing sperm from reaching and fertilizing the egg. Studies of tubal flushing in Cu-IUD users rarely find fertilized eggs, confirming that fertilization is prevented rather than implantation being the main mechanism. (4) Tubal effects: Copper ions also affect the fallopian tube environment, further reducing the likelihood of fertilization. (5) Emergency contraception: The Cu-IUD can be used as emergency contraception up to 5 days after unprotected intercourse, with >99% effectiveness. (6) Duration: Effective for 10-12 years, with fertility returning immediately upon removal.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -1031,8 +1031,8 @@
       "options": [
         "Compare pregnancy rates in women with and without ovulation",
         "Using a microfluidic chemotaxis chamber, place sperm at one end and follicular fluid at the other, then quantify the proportion of sperm that swim toward the follicular fluid compared to a control medium gradient, repeating with heat-inactivated follicular fluid to determine if the factor is a protein",
-        "Measure the total number of sperm in the ejaculate",
-        "Inject follicular fluid into the peritoneal cavity and observe if pregnancy rates increase"
+        "Inject follicular fluid into the peritoneal cavity and observe if pregnancy rates increase",
+        "Measure the total number of sperm in the ejaculate"
       ],
       "correctAnswer": "B",
       "explanation": "Sperm chemotaxis toward the oocyte is a well-established phenomenon, and the proposed experimental design addresses the hypothesis rigorously: (1) Microfluidic chemotaxis assay: This is the gold standard for studying chemotaxis. A gradient of the test substance (follicular fluid) is established in a microchannel, and individual sperm trajectories are tracked using video microscopy. The directionality of sperm movement is quantified by comparing the proportion of sperm swimming toward the follicular fluid versus a buffer control. (2) Controls: Using culture medium alone as a negative control establishes baseline random swimming. Heat-inactivated follicular fluid (e.g., 56°C for 30 minutes) tests whether the chemoattractant is a heat-labile protein — if heat treatment abolishes chemotaxis, the factor is likely proteinaceous. Additional controls include: follicular fluid from different-sized follicles (preovulatory vs small antral), dose-response curves, and protease-treated follicular fluid. (3) Known chemoattractants: Research has identified progesterone and bourgeonal (a synthetic odorant that activates the sperm receptor hOR17-4/OR1D2) as sperm chemoattractants. Follicular fluid contains progesterone which acts via the CatSper channel. (4) Specificity: Only capacitated sperm show chemotaxis, as non-capacitated sperm lack the signaling machinery. This is a critical variable to control. Option A is correlative, C is irrelevant, and D lacks appropriate controls and specificity.",
@@ -1050,11 +1050,11 @@
       "question": "In birds, sex is determined by the ZW system, where males are ZZ and females are ZW. What is the identity of the key sex-determining gene on the Z chromosome in chickens?",
       "options": [
         "SRY, the same gene used in mammalian sex determination",
-        "DMRT1, a Z-linked gene where dosage (two copies in ZZ males vs one in ZW females) determines male development",
+        "SOX9, which is autosomal and equally expressed in both sexes",
         "DAX1, which is W-linked and promotes female development",
-        "SOX9, which is autosomal and equally expressed in both sexes"
+        "DMRT1, a Z-linked gene where dosage (two copies in ZZ males vs one in ZW females) determines male development"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Avian sex determination uses a fundamentally different genetic mechanism than mammals: (1) ZW system: In birds, males are homogametic (ZZ) and females are heterogametic (ZW). This is the reverse of the mammalian XX/XY system. The W chromosome is largely heterochromatic and gene-poor (analogous to the Y chromosome but not homologous). (2) DMRT1 dosage: The key sex-determining gene is DMRT1 (Doublesex and Mab-3 Related Transcription Factor 1) located on the Z chromosome. Males (ZZ) have two copies and females (ZW) have one copy. This dosage difference, rather than a single dominant gene like SRY, drives sex determination. Knockdown of DMRT1 in ZZ embryos using RNA interference leads to feminization of the gonad (ovary-like development), while overexpression of DMRT1 in ZW embryos partially masculinizes the gonad. (3) No SRY equivalent: Birds lack SRY entirely. The W chromosome does not carry a single dominant female-determining gene equivalent to SRY; instead, the absence of the second DMRT1 copy leads to female development. (4) Conservation: DMRT1/Dmrt1 homologs play roles in sex determination across diverse taxa including fish, reptiles, and invertebrates, suggesting it is an ancient sex-determining gene that predates the evolution of SRY in mammals. (5) SOX9: While SOX9 is important in both mammalian and avian gonadal development, it acts downstream of the primary sex determination signal.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1070,11 +1070,11 @@
       "question": "Lactation is regulated by a hormonal interplay between prolactin and oxytocin. Which accurately describes the distinct roles of these two hormones?",
       "options": [
         "Both hormones stimulate milk production in the mammary gland alveolar cells equally",
-        "Prolactin stimulates milk synthesis (lactogenesis) in mammary alveolar epithelial cells, while oxytocin stimulates milk ejection (let-down) by contracting myoepithelial cells surrounding the alveoli",
+        "Prolactin is released from the posterior pituitary and oxytocin from the anterior pituitary",
         "Oxytocin promotes milk synthesis while prolactin causes alveolar contraction",
-        "Prolactin is released from the posterior pituitary and oxytocin from the anterior pituitary"
+        "Prolactin stimulates milk synthesis (lactogenesis) in mammary alveolar epithelial cells, while oxytocin stimulates milk ejection (let-down) by contracting myoepithelial cells surrounding the alveoli"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Lactation requires two distinct hormonal processes that are often confused: (1) Prolactin — milk production: Prolactin is released from lactotroph cells of the anterior pituitary. It acts on prolactin receptors (JAK-STAT signaling) on mammary alveolar epithelial cells to stimulate transcription of milk protein genes (casein, lactalbumin, whey proteins) and enzymes for lactose synthesis. Prolactin secretion is tonically inhibited by hypothalamic dopamine; during suckling, this inhibition is transiently released, causing prolactin surges. (2) Oxytocin — milk ejection: Oxytocin is synthesized in the hypothalamus (paraventricular and supraoptic nuclei) and released from the posterior pituitary. It acts on oxytocin receptors on myoepithelial cells — contractile cells that surround the alveoli like a basket. Contraction of myoepithelial cells squeezes milk from alveoli into the duct system and toward the nipple. (3) Neuroendocrine reflex: Suckling stimulates mechanoreceptors in the nipple, sending afferent signals via the spinal cord to the hypothalamus. This triggers both oxytocin release (rapid, pulsatile) and prolactin release (slower, sustained). (4) Conditioning: Oxytocin release can become conditioned — hearing a baby cry can trigger milk let-down before suckling begins. (5) Amenorrhea: Elevated prolactin during lactation suppresses GnRH pulsatility, contributing to lactational amenorrhea (a natural contraceptive effect).",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -1089,12 +1089,12 @@
       "type": "MCQ",
       "question": "Müllerian inhibiting substance (MIS, also called anti-Müllerian hormone or AMH) plays a critical role in male sexual differentiation. Which cells produce AMH and what is its developmental function?",
       "options": [
-        "Leydig cells produce AMH to stimulate Wolffian duct development",
         "Sertoli cells of the fetal testis produce AMH, which causes regression of the Müllerian (paramesonephric) ducts that would otherwise develop into the uterus, oviducts, and upper vagina",
         "Theca cells produce AMH to maintain the ovarian follicular pool",
-        "Germ cells produce AMH to direct their own migration to the gonadal ridge"
+        "Germ cells produce AMH to direct their own migration to the gonadal ridge",
+        "Leydig cells produce AMH to stimulate Wolffian duct development"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "AMH/MIS is a glycoprotein member of the TGF-beta superfamily with critical roles in sexual differentiation and adult reproductive function: (1) Source: Sertoli cells of the fetal testis begin producing AMH at approximately week 8 of human gestation, under the control of SOX9 and SF1 transcription factors. AMH production is one of the earliest functions of Sertoli cells, occurring before testosterone production by Leydig cells. (2) Function in male development: AMH binds to AMH type II receptors (AMHR2) on Müllerian duct mesenchyme, triggering a signaling cascade that causes apoptosis and regression of the Müllerian ducts. In the absence of AMH (as in females, or in males with persistent Müllerian duct syndrome due to AMH or AMHR2 mutations), the Müllerian ducts persist and develop into the uterus, fallopian tubes, and upper vagina. (3) Two-signal model: Male sexual differentiation requires both AMH (Müllerian duct regression) AND testosterone (Wolffian duct development and virilization). These are produced by different cell types (Sertoli vs Leydig) and act on different structures. (4) Adult function: In adult women, AMH is produced by granulosa cells of small antral follicles and inhibits primordial follicle recruitment, serving as a clinical biomarker of ovarian reserve. In adult males, AMH levels decline after puberty as testosterone suppresses Sertoli cell AMH expression.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -1109,12 +1109,12 @@
       "type": "MCQ",
       "question": "Ectopic pregnancy occurs when an embryo implants outside the uterine cavity. What is the most common site of ectopic implantation, and what makes this location particularly dangerous?",
       "options": [
-        "The cervix, because it allows the embryo to grow undetected until birth",
         "The ampulla of the fallopian tube, because the tube cannot expand sufficiently to accommodate the growing embryo, leading to rupture and potentially life-threatening intraperitoneal hemorrhage",
         "The ovarian surface, because the embryo disrupts all future ovulation",
+        "The cervix, because it allows the embryo to grow undetected until birth",
         "The peritoneal cavity, because this is where most fertilization occurs"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Ectopic pregnancy occurs in approximately 1-2% of all pregnancies and is a leading cause of first-trimester maternal mortality: (1) Location: Approximately 95% of ectopic pregnancies occur in the fallopian tube, with the ampulla (the distal, widened portion where fertilization normally occurs) being the most common site (~70% of tubal ectopics). Other tubal sites include the isthmus (~12%) and fimbria (~11%). Non-tubal ectopic sites (ovarian, cervical, abdominal, caesarean scar) are rarer. (2) Pathophysiology: The fallopian tube lacks the thick, distensible myometrium and specialized decidual response of the uterus. As the trophoblast invades the thin tubal wall, it erodes blood vessels, causing hemorrhage. The tube can rupture at 6-8 weeks gestation, causing massive intraperitoneal hemorrhage and hypovolemic shock. (3) Risk factors: Prior tubal damage (PID, salpingitis especially from Chlamydia trachomatis), previous ectopic pregnancy, tubal surgery, endometriosis, smoking (impairs tubal motility and ciliary function), and IVF. (4) Diagnosis: Transvaginal ultrasound showing absence of intrauterine gestational sac combined with elevated beta-hCG levels (discriminatory zone: >1500-2000 mIU/mL without visible IUP). (5) Treatment: Medical management with methotrexate (for stable, small ectopics) or surgical management (salpingostomy or salpingectomy).",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -1149,10 +1149,10 @@
       "type": "MCQ",
       "question": "Sperm undergo a process called capacitation in the female reproductive tract. Which molecular event is central to capacitation?",
       "options": [
-        "Addition of a glycoprotein coat to the sperm surface",
+        "Complete replacement of the sperm mitochondrial DNA",
         "Cholesterol efflux from the sperm plasma membrane, increasing membrane fluidity, which enables protein redistribution and exposes signal transduction pathways necessary for hyperactivation and the acrosome reaction",
-        "Fusion of the inner and outer acrosomal membranes to release hydrolytic enzymes",
-        "Complete replacement of the sperm mitochondrial DNA"
+        "Addition of a glycoprotein coat to the sperm surface",
+        "Fusion of the inner and outer acrosomal membranes to release hydrolytic enzymes"
       ],
       "correctAnswer": "B",
       "explanation": "Capacitation is a complex series of molecular changes that sperm must undergo in the female tract before they can fertilize an oocyte: (1) Cholesterol efflux: The sperm plasma membrane has a high cholesterol-to-phospholipid ratio that stabilizes the membrane. Albumin and HDL in uterine/oviductal fluid act as cholesterol acceptors, removing cholesterol and increasing membrane fluidity. This is the initial and critical step of capacitation. (2) Downstream signaling: Cholesterol removal exposes membrane proteins and activates signaling pathways: (a) Activation of bicarbonate-sensitive soluble adenylyl cyclase (sAC/ADCY10), increasing cAMP; (b) PKA activation, leading to tyrosine phosphorylation of target proteins; (c) Hyperpolarization of the membrane potential via potassium channels; (d) Increase in intracellular pH via NHE (Na+/H+ exchanger). (3) Functional changes: These molecular events enable hyperactivated motility (vigorous asymmetric flagellar beating mediated by CatSper channel activation) and prime the sperm for the acrosome reaction upon contact with the zona pellucida. (4) Decapacitation factors: Seminal plasma contains decapacitation factors that prevent premature capacitation. These are removed or diluted as sperm ascend the female tract. (5) Time course: Capacitation takes 5-7 hours in humans. This delay ensures that most sperm reaching the oocyte are freshly capacitated and functionally competent.",
@@ -1170,11 +1170,11 @@
       "question": "A researcher compares reproductive output in two populations of a species with temperature-dependent sex determination (TSD):\n\nNest temp (°C) | Pop A sex ratio (% female) | Pop B sex ratio (% female) | Hatchling survival (%)\n24 | 100 | 95 | 72\n26 | 85 | 78 | 85\n28 | 50 | 48 | 93\n30 | 15 | 20 | 88\n32 | 5 | 8 | 65\n\nWhat pattern and concern do these data reveal?",
       "options": [
         "There is no relationship between temperature and sex ratio in either population",
-        "Both populations show female-to-male pattern (TSD type Ia: females at cool temperatures, males at warm temperatures), with the pivotal temperature around 28°C; global warming could shift sex ratios dangerously toward males, threatening population viability",
         "Population B shows the opposite pattern from Population A",
+        "Both populations show female-to-male pattern (TSD type Ia: females at cool temperatures, males at warm temperatures), with the pivotal temperature around 28°C; global warming could shift sex ratios dangerously toward males, threatening population viability",
         "Higher temperatures always produce more females in all TSD species"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The data illustrate temperature-dependent sex determination (TSD) pattern Ia and highlight climate change concerns: (1) TSD Pattern Ia (FM pattern): Both populations show the same pattern — 100% female at 24°C declining to 5-8% female at 32°C. This is the FM pattern (females at low temperatures, males at high temperatures), found in some turtles, lizards, and the tuatara. The pivotal temperature (producing ~50:50 sex ratio) is approximately 28°C for both populations. (2) TSD patterns: There are three main TSD patterns: Type Ia (FM) as shown here, Type Ib (MF, the opposite), and Type II (FMF, with females at both extremes). (3) Climate change concern: If global temperatures rise, nest temperatures will increase, shifting sex ratios dramatically toward males. At 30°C, only 15-20% are female; at 32°C, only 5-8%. This could create severe sex ratio imbalance, reducing effective population size and potentially leading to population collapse due to insufficient females for reproduction. (4) Thermal tolerance: Hatchling survival peaks at 28°C (93%) and declines at extremes, suggesting that optimal development temperature coincidentally produces balanced sex ratios. At 32°C, survival drops to 65%, compounding the sex ratio problem. (5) Adaptation potential: Whether TSD species can adapt to rapid climate change through shifts in pivotal temperature or nesting behavior is an active research question. Behavioral thermoregulation (nest site selection, nesting phenology shifts) may partially buffer against climate effects.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -1189,12 +1189,12 @@
       "type": "MCQ",
       "question": "Clownfish (Amphiprion) exhibit protandrous hermaphroditism. What triggers the sex change from male to female in these species?",
       "options": [
-        "Age-dependent hormonal changes that are genetically programmed",
-        "Removal or death of the dominant female from the social group, whereupon the largest male transitions to female, and the next largest juvenile becomes the breeding male",
         "Temperature changes in the ocean water",
-        "Mating with a female from a different anemone"
+        "Mating with a female from a different anemone",
+        "Removal or death of the dominant female from the social group, whereupon the largest male transitions to female, and the next largest juvenile becomes the breeding male",
+        "Age-dependent hormonal changes that are genetically programmed"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Clownfish are the classic example of protandrous (male-to-female) sequential hermaphroditism, contrasting with the protogynous (female-to-male) wrasses: (1) Social structure: Clownfish live in strict dominance hierarchies on sea anemones. Each anemone hosts a single breeding pair: one large dominant female and one smaller breeding male, plus several non-breeding juveniles ranked by size. (2) Sex change trigger: When the dominant female dies or is removed, the breeding male undergoes sex change to become female. This involves gonadal transformation — the testicular tissue regresses and ovarian tissue (which was suppressed but present) develops. Simultaneously, the largest juvenile becomes the new breeding male. (3) Mechanism: Social suppression by the dominant female maintains male status. The female's aggressive behavior and possibly pheromonal signals inhibit the HPG axis changes that would trigger sex reversal. Her removal releases this inhibition. Aromatase (CYP19) expression increases during the male-to-female transition, converting androgens to estrogens and promoting ovarian development. Brain and gonadal aromatase changes occur concurrently. (4) Size advantage model: Protandry is favored when female fecundity increases disproportionately with body size (larger females produce exponentially more eggs), while male reproductive success is less size-dependent. Thus, being female when large and male when small maximizes lifetime reproductive fitness. (5) Bidirectional potential: While protandry is the norm, some studies suggest limited plasticity — clownfish sex change is generally considered unidirectional (male-to-female only).",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1209,12 +1209,12 @@
       "type": "MCQ",
       "question": "Endometriosis is a condition where endometrial-like tissue grows outside the uterine cavity. Which theory best explains the pathogenesis of endometriosis, and what is a key molecular mechanism supporting it?",
       "options": [
-        "Endometriosis is caused by bacterial infection of the peritoneal cavity",
         "Retrograde menstruation (Sampson's theory) causes reflux of endometrial fragments through the fallopian tubes into the peritoneal cavity, where they implant due to immune surveillance defects and express aromatase for local estrogen production that sustains ectopic growth",
         "Endometriosis arises from excess prolactin secretion",
-        "Endometriosis is caused by direct metastasis of uterine cancer cells"
+        "Endometriosis is caused by direct metastasis of uterine cancer cells",
+        "Endometriosis is caused by bacterial infection of the peritoneal cavity"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Endometriosis affects approximately 10% of reproductive-age women and its pathogenesis is multifactorial: (1) Sampson's theory (retrograde menstruation): The most widely accepted theory proposes that during menstruation, viable endometrial fragments reflux through the fallopian tubes into the peritoneal cavity. Evidence: retrograde menstruation occurs in 90% of women (shown by laparoscopy during menses), but only 10% develop endometriosis, suggesting additional factors are required. (2) Immune dysfunction: Normal peritoneal immune surveillance (macrophages, NK cells) should clear ectopic endometrial cells. In women with endometriosis, there is evidence of impaired NK cell cytotoxicity, altered macrophage function (increased inflammatory cytokine production but decreased phagocytosis), and increased levels of anti-apoptotic factors that allow ectopic cells to survive. (3) Aromatase expression: A key molecular mechanism — ectopic endometrial lesions aberrantly express aromatase (CYP19A1), which is normally absent from eutopic endometrium. This allows local conversion of androgens to estrogens, creating an autocrine loop that sustains lesion growth independent of ovarian estrogen. Additionally, lesions have decreased 17beta-hydroxysteroid dehydrogenase type 2, reducing estrogen inactivation. (4) Other theories: Coelomic metaplasia (peritoneal cells transform into endometrial cells), lymphatic/vascular dissemination (explains rare distant endometriosis in lungs), and stem/progenitor cell theory. (5) Molecular biology: Progesterone resistance, altered HOX gene expression, and epigenetic changes contribute to lesion establishment and persistence.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -1229,12 +1229,12 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher hypothesizes that oxytocin release during parturition operates through a positive feedback mechanism (Ferguson reflex). Which experimental design would best demonstrate this positive feedback loop?",
       "options": [
+        "Measure progesterone levels throughout pregnancy",
         "Administer synthetic oxytocin and observe if contractions begin",
-        "Measure plasma oxytocin levels at intervals during labor, demonstrating progressively increasing oxytocin levels that correlate with increasing contraction intensity and cervical dilation, then confirm by showing that manual cervical stretch in anesthetized animals increases oxytocin release from the posterior pituitary",
         "Remove the pituitary and observe if labor still occurs normally",
-        "Measure progesterone levels throughout pregnancy"
+        "Measure plasma oxytocin levels at intervals during labor, demonstrating progressively increasing oxytocin levels that correlate with increasing contraction intensity and cervical dilation, then confirm by showing that manual cervical stretch in anesthetized animals increases oxytocin release from the posterior pituitary"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The Ferguson reflex is one of the best-known examples of positive feedback in physiology, and demonstrating it requires multiple lines of evidence: (1) Correlational evidence: Measuring plasma oxytocin during labor should show progressively increasing levels as contractions intensify and cervical dilation progresses. This was demonstrated by studies showing oxytocin pulses increase in frequency and amplitude as labor advances. Unlike negative feedback (which returns a variable to a set point), positive feedback amplifies the response — stretching of the cervix stimulates more oxytocin release, which causes stronger contractions, which pushes the fetus further into the cervix, causing more stretch, and so on. (2) Causal evidence: Manual cervical stretch in anesthetized animals (eliminating voluntary responses) should trigger oxytocin release, demonstrating that cervical mechanoreceptors directly activate the neuroendocrine reflex arc (sensory neurons → spinal cord → hypothalamus → posterior pituitary → oxytocin release). This was classically demonstrated by Ferguson in 1941 using rabbits. (3) Afferent pathway: The reflex arc involves sensory neurons from the cervix traveling via pelvic nerves to the spinal cord, then ascending to the paraventricular and supraoptic nuclei of the hypothalamus. (4) Termination: The positive feedback loop terminates with delivery of the fetus and placenta, removing the cervical stretch stimulus. (5) Option A demonstrates oxytocin's effect but not the feedback mechanism. Option C would show compensatory mechanisms but not the feedback loop itself.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1269,12 +1269,12 @@
       "type": "MCQ",
       "question": "What is the role of inhibin B in the male reproductive system, and how does it participate in the feedback regulation of spermatogenesis?",
       "options": [
-        "Inhibin B is produced by Leydig cells and stimulates GnRH release",
-        "Inhibin B is produced by Sertoli cells in proportion to spermatogenic activity and selectively suppresses FSH secretion from the anterior pituitary, forming a negative feedback loop that regulates the rate of spermatogenesis",
         "Inhibin B is produced by sperm themselves to signal maturation completion",
-        "Inhibin B stimulates both LH and FSH equally to accelerate sperm production"
+        "Inhibin B stimulates both LH and FSH equally to accelerate sperm production",
+        "Inhibin B is produced by Sertoli cells in proportion to spermatogenic activity and selectively suppresses FSH secretion from the anterior pituitary, forming a negative feedback loop that regulates the rate of spermatogenesis",
+        "Inhibin B is produced by Leydig cells and stimulates GnRH release"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Inhibin B is a key regulatory hormone in the HPG axis feedback system: (1) Source: Inhibin B is a heterodimeric glycoprotein (alpha-betaB subunit) produced by Sertoli cells of the seminiferous tubules. Its production is stimulated by FSH and correlates with Sertoli cell number and spermatogenic activity. (2) Target: Inhibin B acts specifically on gonadotropes of the anterior pituitary to selectively suppress FSH secretion without significantly affecting LH secretion. This selectivity is because inhibin antagonizes the stimulatory effect of activin (a related TGF-beta family member) on FSH beta-subunit gene transcription. (3) Feedback loop: When spermatogenesis is active and healthy, Sertoli cells produce high levels of inhibin B, which suppresses FSH — a classic negative feedback loop. When spermatogenesis is impaired (e.g., in germ cell aplasia, after chemotherapy), inhibin B levels fall, FSH rises (released from negative feedback), stimulating remaining Sertoli cells to support whatever germ cells remain. (4) Clinical utility: Serum inhibin B is used as a clinical marker of spermatogenic function. Low inhibin B with elevated FSH suggests primary spermatogenic failure. (5) Activin: The counterpart of inhibin — activin (betaB-betaB homodimer) stimulates FSH secretion. Follistatin, produced locally, binds and neutralizes activin. The inhibin-activin-follistatin system provides fine-tuned control of FSH levels. (6) In females: Inhibin B is produced by granulosa cells of growing follicles (early follicular phase) while inhibin A predominates in the luteal phase.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -1309,9 +1309,9 @@
       "type": "MCQ",
       "question": "In the context of reproductive immunology, what is the role of HLA-G expressed by extravillous trophoblast cells at the maternal-fetal interface?",
       "options": [
-        "HLA-G presents paternal antigens to maternal T cells to trigger immune rejection",
-        "HLA-G is a non-classical MHC class I molecule that inhibits maternal NK cell cytotoxicity and T cell responses by engaging inhibitory receptors (ILT-2, ILT-4, KIR2DL4), thereby protecting the fetus from immune rejection",
         "HLA-G activates the maternal complement cascade to destroy invading pathogens",
+        "HLA-G is a non-classical MHC class I molecule that inhibits maternal NK cell cytotoxicity and T cell responses by engaging inhibitory receptors (ILT-2, ILT-4, KIR2DL4), thereby protecting the fetus from immune rejection",
+        "HLA-G presents paternal antigens to maternal T cells to trigger immune rejection",
         "HLA-G is identical to classical HLA-A and HLA-B and has no special immunomodulatory function"
       ],
       "correctAnswer": "B",
@@ -1329,12 +1329,12 @@
       "type": "DATA_INTERPRETATION",
       "question": "A study monitors hormonal changes during an assisted reproduction cycle where ovulation is triggered:\n\nTime point | Estradiol (pg/mL) | LH (mIU/mL) | Progesterone (ng/mL) | Endometrial thickness (mm)\nCycle day 3 (baseline) | 45 | 6.2 | 0.4 | 3\nCycle day 8 | 320 | 5.8 | 0.5 | 7\nCycle day 12 | 850 | 4.9 | 0.8 | 10\nCycle day 14 (trigger) | 1200 | 58.0 | 1.2 | 11\nCycle day 16 | 280 | 12.0 | 15.0 | 12\nCycle day 21 | 180 | 4.5 | 22.0 | 13\n\nWhich interpretation is best supported by these data?",
       "options": [
+        "Progesterone drives follicular growth during the follicular phase",
         "The patient failed to ovulate because estradiol levels dropped",
         "Rising estradiol from follicular growth triggers the LH surge at day 14 (positive feedback), followed by ovulation, corpus luteum formation (sharply rising progesterone), and conversion of the endometrium from proliferative to secretory phase",
-        "Progesterone drives follicular growth during the follicular phase",
         "The LH surge at day 14 is caused by declining estradiol levels"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The data illustrate the classical hormonal cascade of the ovarian-uterine cycle during assisted reproduction: (1) Follicular phase (days 3-14): Estradiol rises progressively (45→1200 pg/mL) as the dominant follicle grows and its granulosa cells produce increasing amounts of estradiol via aromatization of thecal androgens. LH remains relatively stable (5-6 mIU/mL) during this phase due to negative feedback of estradiol at moderate levels. Endometrial thickness increases (3→11 mm) due to estrogen-driven proliferation (proliferative phase). (2) Positive feedback trigger: When estradiol exceeds a threshold (~200 pg/mL sustained for >36-48 hours), it switches from negative to positive feedback on the hypothalamus/pituitary, triggering the LH surge (58 mIU/mL on day 14). This surge triggers the final stages of oocyte maturation (resumption of meiosis I), follicular rupture (ovulation ~36 hours post-surge), and luteinization. (3) Luteal phase (days 16-21): After ovulation, the collapsed follicle transforms into the corpus luteum, which produces high levels of progesterone (0.8→22 ng/mL). Estradiol drops sharply (1200→180 pg/mL) then is maintained at moderate levels by the corpus luteum. Progesterone transforms the estrogen-primed endometrium from proliferative to secretory phase (glycogen accumulation, spiral arteriole development, decidualization) — preparing for potential implantation. (4) Endometrium: The continued thickening (11→13 mm) during the luteal phase reflects secretory transformation rather than proliferation.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -1350,11 +1350,11 @@
       "question": "Polycystic ovary syndrome (PCOS) is the most common endocrine disorder in women of reproductive age. Which hormonal profile best characterizes PCOS?",
       "options": [
         "Low LH, high FSH, low androgens, regular ovulation",
-        "Elevated LH-to-FSH ratio, hyperandrogenemia (elevated free testosterone), insulin resistance, and anovulation resulting from arrested follicular development at the small antral stage",
+        "Low estrogen and progesterone with normal androgen levels",
         "Elevated prolactin with normal gonadotropins",
-        "Low estrogen and progesterone with normal androgen levels"
+        "Elevated LH-to-FSH ratio, hyperandrogenemia (elevated free testosterone), insulin resistance, and anovulation resulting from arrested follicular development at the small antral stage"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "PCOS affects 6-12% of reproductive-age women and is diagnosed using the Rotterdam criteria (2 of 3: oligo/anovulation, clinical/biochemical hyperandrogenism, polycystic ovarian morphology on ultrasound): (1) Elevated LH:FSH ratio: The GnRH pulse generator has increased frequency in PCOS, which preferentially stimulates LH secretion over FSH (fast GnRH pulses favor LH-beta subunit transcription). This creates an LH:FSH ratio typically >2:1. (2) Hyperandrogenism: Elevated LH hyperstimulates theca cells, causing excessive androgen production (testosterone, androstenedione, DHEA-S). The relatively low FSH means granulosa cell aromatase activity is insufficient to convert all thecal androgens to estrogens. Clinical manifestations include hirsutism, acne, and androgenic alopecia. (3) Arrested folliculogenesis: Multiple small antral follicles (2-9 mm) accumulate but no dominant follicle emerges. This is because the low FSH environment cannot support selection and maturation of a single dominant follicle. The 'polycystic' ovarian morphology on ultrasound (>12 follicles per ovary, each 2-9 mm) reflects this arrested development. (4) Insulin resistance: 50-70% of women with PCOS have insulin resistance, independent of BMI. Hyperinsulinemia directly stimulates thecal androgen production (via insulin receptors on theca cells) and reduces hepatic SHBG synthesis, increasing free testosterone. (5) Anovulation: The combination of elevated androgens, disturbed gonadotropin ratio, and arrested follicular development leads to chronic anovulation, which is the primary cause of PCOS-related infertility.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -1369,12 +1369,12 @@
       "type": "MCQ",
       "question": "In the male reproductive system, what is the function of the rete testis and efferent ductules in sperm transport?",
       "options": [
+        "Both structures are vestigial remnants with no functional role",
         "The rete testis produces testosterone and the efferent ductules secrete seminal fluid",
-        "The rete testis is a network of channels that collects sperm from the seminiferous tubules, and the efferent ductules connect the rete testis to the epididymis while reabsorbing approximately 90% of the testicular fluid to concentrate sperm",
         "The rete testis stores mature sperm for ejaculation while the efferent ductules produce fructose",
-        "Both structures are vestigial remnants with no functional role"
+        "The rete testis is a network of channels that collects sperm from the seminiferous tubules, and the efferent ductules connect the rete testis to the epididymis while reabsorbing approximately 90% of the testicular fluid to concentrate sperm"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The rete testis and efferent ductules are critical components of the intratesticular excurrent duct system: (1) Rete testis: This is an anastomosing network of channels located in the mediastinum testis (the connective tissue core of the testis). Sperm released from the seminiferous tubules by spermiation enter the tubuli recti (straight tubules) and then the rete testis. The rete testis collects sperm from all seminiferous tubules and channels them toward the efferent ductules. Its simple cuboidal epithelium produces a small amount of fluid. (2) Efferent ductules: 12-20 efferent ductules (ductuli efferentes) connect the rete testis to the head of the epididymis (caput epididymidis). Their most important function is massive fluid reabsorption — approximately 90% of the testicular fluid is reabsorbed by the efferent ductule epithelium. This concentrates sperm from approximately 10 million/mL in rete testis fluid to approximately 100 million/mL entering the epididymis. (3) Mechanism: Fluid reabsorption is driven by estrogen-regulated aquaporins and ion transporters. Estrogen receptor alpha (ESR1) is highly expressed in efferent ductules, and ESR1 knockout mice develop efferent ductule dilation, fluid accumulation, and infertility due to back-pressure damage to the testis. (4) Ciliated cells: The efferent ductule epithelium alternates between ciliated cells (which create fluid currents to move sperm) and non-ciliated absorptive cells. (5) Clinical: Obstruction of efferent ductules (e.g., by infection) causes obstructive azoospermia.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -1389,12 +1389,12 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher wants to determine whether a specific seminal plasma protein (Protein Z) has immunosuppressive effects that facilitate tolerance to paternal antigens in the female reproductive tract. Which experimental approach would be most appropriate?",
       "options": [
-        "Measure Protein Z concentration in the ejaculate of fertile vs infertile men",
         "Expose female murine uterine dendritic cells and T cells in vitro to Protein Z, measuring changes in cytokine profiles (IL-10, TGF-beta vs IFN-gamma, TNF-alpha) and regulatory T cell induction, then confirm in vivo by comparing immune cell populations in the uterus of wild-type females mated with Protein Z knockout vs wild-type males",
-        "Inject Protein Z intravenously into male mice and measure testicular weight",
-        "Compare pregnancy rates in women with and without exposure to seminal plasma"
+        "Measure Protein Z concentration in the ejaculate of fertile vs infertile men",
+        "Compare pregnancy rates in women with and without exposure to seminal plasma",
+        "Inject Protein Z intravenously into male mice and measure testicular weight"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Seminal plasma is increasingly recognized as an immunomodulatory fluid that primes the female immune system for tolerance of paternal antigens: (1) In vitro immune cell assays: Exposing uterine dendritic cells and T cells to Protein Z tests its direct immunomodulatory effects. Key readouts: (a) Cytokine profile shift — immunosuppressive proteins should increase anti-inflammatory cytokines (IL-10, TGF-beta) and decrease pro-inflammatory cytokines (IFN-gamma, TNF-alpha, IL-17); (b) Regulatory T cell induction — measure CD4+CD25+FoxP3+ Treg cell percentages; (c) Dendritic cell maturation — tolerogenic DCs should show reduced co-stimulatory molecules (CD80, CD86) and increased inhibitory molecules (PD-L1). (2) In vivo genetic approach: Comparing uterine immune cell populations after mating with Protein Z knockout vs wild-type males provides physiological relevance. If Protein Z is immunosuppressive, knockout matings should show: increased inflammatory infiltrate, reduced Tregs, and potentially impaired implantation or increased fetal resorption. (3) Known precedent: Seminal plasma TGF-beta is known to promote Treg expansion and tolerance. PGE2 in seminal plasma induces tolerogenic DCs. Seminal plasma exposure before embryo transfer in IVF improves implantation rates in some studies. (4) Controls: Dose-response curves, heat-inactivated Protein Z, and protease-treated controls establish specificity. (5) Options A and D are correlative, and C tests the wrong tissue/sex.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1409,10 +1409,10 @@
       "type": "MCQ",
       "question": "In Caenorhabditis elegans, programmed cell death of germ cells in the gonad is a normal part of oogenesis. What fraction of potential oocytes undergo apoptosis, and what purpose does this serve?",
       "options": [
-        "No germ cells die; all become mature oocytes",
+        "Approximately 10% of germ cells die due to DNA damage exclusively",
         "Approximately 50% of germ cells undergo apoptosis, which functions as a nurse cell-like mechanism — the dying cells donate their cytoplasmic contents (ribosomes, mitochondria, mRNA) to surviving oocytes, increasing their size and developmental competence",
         "All germ cells die except one, similar to polar body formation",
-        "Approximately 10% of germ cells die due to DNA damage exclusively"
+        "No germ cells die; all become mature oocytes"
       ],
       "correctAnswer": "B",
       "explanation": "Germ cell apoptosis in C. elegans is a fascinating example of physiological cell death serving a constructive purpose: (1) Frequency: Approximately 50% of female germ cells in the C. elegans gonad undergo apoptosis. This is not pathological but rather a developmentally programmed process regulated by the core apoptotic machinery (CED-9/BCL-2, CED-4/Apaf-1, CED-3/caspase). (2) Nurse cell function: The dying germ cells act as nurse cells — they are connected to surviving oocytes through cytoplasmic bridges (ring canals). Before and during apoptosis, cytoplasmic contents including ribosomes, mitochondria, endoplasmic reticulum, mRNAs, and proteins are transported into the developing oocyte through these bridges. This 'cytoplasmic dumping' dramatically increases oocyte volume and provisions it with maternally provided developmental determinants. (3) Parallel in Drosophila: This mirrors the nurse cell system in Drosophila, where 15 nurse cells (which share a common origin with the oocyte through 4 rounds of mitosis with incomplete cytokinesis) dump their cytoplasmic contents into the oocyte before undergoing apoptosis. (4) Quality control: In addition to the nurse cell function, germ cell apoptosis in C. elegans also serves a quality control role — oocytes with DNA damage are preferentially eliminated through a p53/CEP-1-dependent checkpoint. (5) Evolutionary conservation: Germ cell apoptosis occurs across metazoans (including mammalian follicular atresia), suggesting it is an ancient and conserved mechanism.",
@@ -1429,12 +1429,12 @@
       "type": "MCQ",
       "question": "The anti-Müllerian hormone (AMH) level in blood is used clinically as a marker of ovarian reserve. Why does AMH level reflect the size of the remaining follicle pool?",
       "options": [
+        "AMH is released from the corpus luteum during each ovulatory cycle",
         "AMH is produced by primary oocytes themselves and released into the bloodstream",
-        "AMH is produced by granulosa cells of preantral and small antral follicles, and its circulating level correlates with the number of these growing follicles, which in turn reflects the size of the primordial follicle pool from which they are recruited",
         "AMH is secreted by the hypothalamus in proportion to ovarian size",
-        "AMH is released from the corpus luteum during each ovulatory cycle"
+        "AMH is produced by granulosa cells of preantral and small antral follicles, and its circulating level correlates with the number of these growing follicles, which in turn reflects the size of the primordial follicle pool from which they are recruited"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "AMH as an ovarian reserve marker is one of the most important clinical applications in reproductive medicine: (1) Source in adult females: AMH is produced by granulosa cells of preantral (primary and secondary) and small antral follicles (up to ~6 mm diameter). It is NOT produced by primordial follicles (which have flat pre-granulosa cells that do not express AMH) or by large antral/preovulatory follicles (AMH expression declines as follicles grow beyond ~8 mm and become FSH-dependent). (2) Correlation with follicle pool: The number of preantral and small antral follicles at any given time reflects the rate of primordial follicle recruitment, which is proportional to the total remaining primordial follicle reserve. As the primordial pool diminishes with age, fewer follicles are recruited, fewer small antral follicles are present, and serum AMH levels decline. (3) Clinical advantages: AMH is relatively cycle-independent (unlike FSH, which varies significantly with the menstrual cycle), has minimal inter-cycle variability, and provides a continuous gradient rather than a threshold value. Normal values decline with age from ~3-4 ng/mL at age 25 to <1 ng/mL approaching menopause. (4) Function of AMH in the ovary: AMH inhibits primordial follicle recruitment (slowing the rate of pool depletion) and reduces follicular sensitivity to FSH (preventing too many follicles from being selected in each cycle). (5) Clinical uses: Predicting IVF response (low AMH predicts poor response), diagnosing diminished ovarian reserve, and predicting timing of menopause.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -1450,11 +1450,11 @@
       "question": "Sperm capacitation involves removal of cholesterol from the sperm membrane. Which class of molecules in the female reproductive tract serves as the primary cholesterol acceptor during this process?",
       "options": [
         "Mucins secreted by the cervical glands",
-        "Albumin and high-density lipoproteins (HDL) present in the oviductal and uterine fluid",
         "Prostaglandins released from the endometrium",
-        "Calcium ions from cervical mucus"
+        "Calcium ions from cervical mucus",
+        "Albumin and high-density lipoproteins (HDL) present in the oviductal and uterine fluid"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Cholesterol efflux is the initiating event of sperm capacitation, and specific molecules in the female tract drive this process: (1) Cholesterol acceptors: Albumin is the primary cholesterol acceptor in reproductive tract fluid. It binds cholesterol through hydrophobic pockets, removing it from the sperm plasma membrane. HDL particles also serve as efficient cholesterol acceptors through ABCA1 and ABCG1 transporters (ATP-binding cassette transporters that are expressed on the sperm surface). (2) Membrane consequences: The sperm membrane has a high cholesterol-to-phospholipid ratio (contributed by epididymal cholesterol loading and seminal plasma cholesterol) that stabilizes the bilayer. Removal of cholesterol increases membrane fluidity, enables lateral redistribution of membrane proteins (including receptors for ZP3), and activates membrane-associated signaling molecules. (3) Signaling cascade: Cholesterol removal activates a bicarbonate (HCO3-)-responsive soluble adenylyl cyclase (sAC/ADCY10), which produces cAMP. This activates PKA, leading to tyrosine phosphorylation of numerous proteins — the molecular hallmark of capacitation. (4) In vitro capacitation: This understanding enables IVF laboratories to capacitate sperm in vitro using media supplemented with BSA (bovine serum albumin) and bicarbonate. (5) Decapacitation: Seminal plasma contains decapacitation factors (including cholesterol-binding proteins) that inhibit premature capacitation. These are removed as sperm ascend the female tract.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -1489,12 +1489,12 @@
       "type": "MCQ",
       "question": "Reproductive senescence (menopause) in human females occurs around age 50. Which distinguishes human reproductive aging from that of most other mammals?",
       "options": [
-        "Human females are unique in that they never experience follicular depletion",
         "Human females experience a prolonged post-reproductive lifespan lasting decades, a feature rare among mammals and potentially explained by the 'grandmother hypothesis' — where post-reproductive females increase inclusive fitness by investing in grandchildren",
-        "All mammals undergo menopause at exactly the same age",
-        "Human females can regenerate new oocytes from stem cells after menopause"
+        "Human females can regenerate new oocytes from stem cells after menopause",
+        "Human females are unique in that they never experience follicular depletion",
+        "All mammals undergo menopause at exactly the same age"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Human menopause and its extended post-reproductive lifespan is an evolutionary puzzle: (1) The puzzle: Most mammals remain fertile until near the end of their lifespan. Human females are unusual in having a post-reproductive lifespan that can exceed 30+ years — representing a substantial portion of total lifespan. Only a few other species (some toothed whales — orcas, short-finned pilot whales, belugas, narwhals) show comparable post-reproductive lifespans. (2) Grandmother hypothesis: Proposed by Kristen Hawkes and others, this hypothesis suggests that post-menopausal women increase their inclusive fitness (gene transmission) by providing food, childcare, and knowledge to their daughters' offspring. Grandmothering may increase grandchild survival rates sufficiently to offset the fitness cost of ceasing reproduction. Data from historical human populations (Finland, Gambia) show that the presence of a maternal grandmother improves grandchild survival. (3) Mother hypothesis: An alternative/complementary explanation — the increasing risk of maternal mortality and chromosomal abnormalities with advanced maternal age means that ceasing reproduction allows mothers to invest in existing offspring rather than risking death during a late pregnancy. (4) Reproductive conflict hypothesis: In species with female philopatry, older females face increasing genetic relatedness asymmetry with offspring of younger group members, making helping (grandmothering) more fitness-beneficial than competing reproductively. (5) Mechanism: Menopause is caused by exhaustion of the ovarian follicle pool (fixed at birth, declining through atresia). The rate of follicle depletion accelerates after age ~37-38 when the pool drops below approximately 25,000.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -1509,12 +1509,12 @@
       "type": "MCQ",
       "question": "Traumatic insemination is a reproductive strategy found in certain insects, notably the bed bug (Cimex lectularius). What characterizes this strategy?",
       "options": [
+        "Males transfer sperm via elaborate courtship displays without physical contact",
         "Males deposit sperm packets (spermatophores) on the female's body surface for external absorption",
-        "Males pierce the female's abdominal wall with a specialized intromittent organ (paramere), injecting sperm directly into the hemocoel, from where sperm migrate through the hemolymph to reach the ovaries",
         "Females actively engulf sperm from the environment through specialized pores",
-        "Males transfer sperm via elaborate courtship displays without physical contact"
+        "Males pierce the female's abdominal wall with a specialized intromittent organ (paramere), injecting sperm directly into the hemocoel, from where sperm migrate through the hemolymph to reach the ovaries"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Traumatic insemination is one of the most extreme reproductive strategies in the animal kingdom: (1) Mechanism: The male bed bug possesses a sclerotized, sickle-shaped intromittent organ (paramere) that pierces the female's abdominal integument at a specialized region called the spermalege (ectospermalege on the external surface, mesospermalege internally). Sperm are injected directly into the hemocoel (body cavity filled with hemolymph). (2) Sperm migration: Ejaculated sperm swim through the hemolymph, eventually reaching the ovaries where they penetrate the ovarian wall and fertilize developing oocytes. In some species, sperm first accumulate in a specialized organ (mesospermalege/sperm conceptacle) before migrating to the reproductive tract. (3) Female counter-adaptation: The spermalege represents a female counter-adaptation — it contains immune cells (hemocytes) and has a thickened cuticle that reduces wound damage and infection risk. The mesospermalege may filter and digest excess sperm, reducing the fitness costs of mating. (4) Sexual conflict: Traumatic insemination is a prime example of sexually antagonistic coevolution. Males benefit from bypassing female control of mating (cryptic female choice). Females suffer fitness costs from wound damage, infection risk, and loss of reproductive control. (5) Multiple species: Besides bed bugs, traumatic insemination occurs in some other hemipterans (Nabidae, Anthocoridae), strepsipterans, and even some nematodes and mollusks.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1529,10 +1529,10 @@
       "type": "DATA_INTERPRETATION",
       "question": "A researcher studying epigenetic reprogramming during reproduction measures DNA methylation levels at different developmental stages:\n\nStage | Global DNA methylation (% CpG methylated) | Imprinted gene methylation | Transposon methylation\nMature sperm | 80-85% | Maintained | High\nMature oocyte | 40-50% | Maintained | High\nZygote (12h post-fertilization) | Paternal 30%, Maternal 45% | Maintained | Partially reduced\nBlastocyst (inner cell mass) | 20-25% | Maintained | Re-established\nPrimordial germ cells (E13.5) | 5-10% | Erased | Partially reduced\nMature gamete (next generation) | Sperm 80-85%, Oocyte 40-50% | Re-established | High\n\nWhat pattern of epigenetic reprogramming is demonstrated?",
       "options": [
-        "DNA methylation is constant throughout development and shows no reprogramming",
-        "Two waves of genome-wide demethylation occur: (1) post-fertilization demethylation of both parental genomes in the preimplantation embryo with asymmetric kinetics, and (2) demethylation in primordial germ cells that uniquely erases genomic imprints, while imprinted genes are specifically protected during the first wave and transposon silencing is re-established after each wave",
         "Only maternal DNA undergoes demethylation; paternal DNA is never reprogrammed",
-        "Imprinted genes are always erased in every cell division"
+        "Two waves of genome-wide demethylation occur: (1) post-fertilization demethylation of both parental genomes in the preimplantation embryo with asymmetric kinetics, and (2) demethylation in primordial germ cells that uniquely erases genomic imprints, while imprinted genes are specifically protected during the first wave and transposon silencing is re-established after each wave",
+        "Imprinted genes are always erased in every cell division",
+        "DNA methylation is constant throughout development and shows no reprogramming"
       ],
       "correctAnswer": "B",
       "explanation": "The data illustrate the two major waves of epigenetic reprogramming during mammalian reproduction, one of the most remarkable features of developmental biology: (1) First wave — post-fertilization: After fertilization, both parental genomes undergo dramatic demethylation, but with different kinetics. The paternal genome is rapidly and actively demethylated (80-85% to 30% by 12 hours) through TET3-mediated oxidation of 5-methylcytosine to 5-hydroxymethylcytosine, followed by base excision repair. The maternal genome is passively demethylated (40-50% to 45% to 20-25% at blastocyst) through dilution during DNA replication without maintenance methylation (DNMT1 is excluded from the nucleus). (2) Imprint protection: Critically, imprinted genes (which carry parent-of-origin-specific methylation marks) are protected from this first wave of demethylation. This protection is mediated by DPPA3/Stella (binds H3K9me2 to protect maternal genome marks) and ZFP57/TRIM28 complex (recognizes and maintains methylation at imprint control regions). (3) Second wave — primordial germ cells: When primordial germ cells (PGCs) migrate to the genital ridges (E11.5-13.5 in mouse), they undergo a second, more thorough wave of demethylation that uniquely erases even the protected genomic imprints (5-10% global methylation). This ensures that new sex-specific imprints can be established during gametogenesis. (4) Imprint re-establishment: New imprints are established during gametogenesis — paternal imprints during spermatogenesis (by DNMT3A with cofactor DNMT3L) and maternal imprints during oocyte growth (also DNMT3A/DNMT3L). (5) Transposon control: Transposon methylation is partially reduced during both waves but is rapidly re-established, primarily through the piRNA pathway in germ cells, to prevent transposon mobilization.",
@@ -1549,12 +1549,12 @@
       "type": "MCQ",
       "question": "The contraceptive mechanism of emergency contraception (the 'morning-after pill' containing levonorgestrel) is often debated. What is the primary established mechanism of action?",
       "options": [
-        "It causes abortion of an already-implanted embryo",
-        "When taken before ovulation, levonorgestrel delays or inhibits the LH surge and ovulation, preventing fertilization; it does not prevent implantation of an already-fertilized embryo",
+        "It causes thickening of the endometrium that blocks implantation",
         "It immediately destroys all sperm in the female reproductive tract",
-        "It causes thickening of the endometrium that blocks implantation"
+        "When taken before ovulation, levonorgestrel delays or inhibits the LH surge and ovulation, preventing fertilization; it does not prevent implantation of an already-fertilized embryo",
+        "It causes abortion of an already-implanted embryo"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The mechanism of levonorgestrel (LNG) emergency contraception has been extensively studied and clarified: (1) Primary mechanism — ovulation inhibition: When taken before the LH surge, LNG at high doses (1.5 mg) disrupts the LH surge, delaying or preventing ovulation. This is its primary and best-supported mechanism. Studies show that LNG is highly effective when taken before ovulation (preventing 80-90% of expected pregnancies) but ineffective when taken after ovulation has occurred (effectiveness drops to near zero). (2) Evidence against post-fertilization effects: Multiple studies have demonstrated that LNG does NOT prevent implantation of a fertilized embryo. In vitro studies show LNG does not impair embryo development or attachment to endometrial cells. In vivo studies in monkeys and rats show LNG given after fertilization does not reduce pregnancy rates. Endometrial biopsies from LNG-treated women show no histological changes incompatible with implantation. (3) Secondary mechanism: LNG may alter cervical mucus viscosity, impeding sperm transport, though this is less well-documented. (4) Timing dependence: Effectiveness decreases with time after unprotected intercourse — 95% within 24 hours, 85% at 24-48 hours, 58% at 48-72 hours — consistent with the ovulation inhibition mechanism (the closer to ovulation, the harder to suppress the LH surge). (5) Distinction from mifepristone: The anti-progestin mifepristone (RU-486) has a different mechanism and is used for medical abortion, not to be confused with LNG emergency contraception.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -1570,11 +1570,11 @@
       "question": "Monotremes (platypus and echidnas) have a unique reproductive system among mammals. Which correctly describes their reproductive biology?",
       "options": [
         "Monotremes are viviparous like all other mammals and give birth to live young",
+        "Monotremes have a placenta that provides all nutrition during development",
         "Monotremes are oviparous — they lay leathery-shelled eggs (like reptiles) but nurse their hatched young with milk secreted from modified sweat glands (mammary glands without nipples) via areolar patches on the skin",
-        "Monotremes reproduce asexually through budding",
-        "Monotremes have a placenta that provides all nutrition during development"
+        "Monotremes reproduce asexually through budding"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Monotremes represent the most basal extant mammalian lineage and retain ancestral reptilian reproductive features while possessing the defining mammalian trait of lactation: (1) Oviparity: Monotremes are the only extant egg-laying mammals. The platypus (Ornithorhynchus anatinus) lays 1-3 small (15-17 mm), leathery-shelled eggs. Echidnas (Tachyglossus, Zaglossus) lay a single egg into a temporary pouch (incubatorium). Eggs contain yolk (meroblastic cleavage, like reptiles) and are incubated for approximately 10 days (platypus) or 10 days (echidna). (2) Unique lactation: Monotremes lack true nipples. Instead, milk is secreted from modified apocrine sweat glands (mammary glands) onto specialized skin patches (areolae or milk patches). The hatchling laps milk directly from the mother's fur/skin. Monotreme milk composition changes during lactation to meet the hatchling's developmental needs. (3) Reproductive tract: Females have two ovaries (only the left is functional in the platypus) and separate uteri that open into a urogenital sinus (no separate vaginal opening). Males have testes that remain intra-abdominal and a bifurcated penis. (4) Sex determination: Remarkably, the platypus has 10 sex chromosomes (5X and 5Y in males, 10X in females), with the sex-determining chain resembling both mammalian (X homology) and avian (DMRT1-containing chromosome) systems. (5) Evolutionary significance: Monotremes diverged from therian mammals approximately 166-220 million years ago, retaining reptilian oviparity while independently evolving lactation, endothermy, and fur.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1589,12 +1589,12 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher hypothesizes that maternal stress hormones (glucocorticoids) during pregnancy impair fetal testicular development, leading to reduced fertility in male offspring. Which experimental approach would best test this hypothesis?",
       "options": [
-        "Survey human fathers about their mothers' stress levels during pregnancy",
         "Administer physiological doses of corticosterone to pregnant mice during the critical window of fetal testicular development, then compare male offspring for testis weight, germ cell counts, testosterone levels, sperm parameters, and fertility rates versus offspring of vehicle-treated controls, with mechanistic follow-up examining glucocorticoid receptor expression and apoptosis markers in fetal testes",
-        "Measure cortisol levels in adult men and correlate with sperm counts",
-        "Remove the adrenal glands from pregnant mice and observe offspring development"
+        "Remove the adrenal glands from pregnant mice and observe offspring development",
+        "Survey human fathers about their mothers' stress levels during pregnancy",
+        "Measure cortisol levels in adult men and correlate with sperm counts"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Testing the developmental origins of male reproductive health requires a carefully designed in vivo model: (1) Experimental treatment: Administering physiological (not supraphysiological) doses of corticosterone (the primary murine glucocorticoid) during the critical window of fetal testicular development (E12.5-E17.5 in mice, when Leydig cells are differentiating and germ cells are proliferating) mimics maternal stress exposure. Using physiological doses ensures clinical relevance. (2) Offspring endpoints: Comprehensive assessment at multiple levels: (a) Morphological — testis weight, histology, seminiferous tubule diameter; (b) Cellular — germ cell counts (using PLZF/VASA markers), Sertoli cell number, Leydig cell number; (c) Hormonal — serum testosterone, LH, FSH, inhibin B; (d) Functional — sperm count, motility, morphology, and in vivo fertility (mating trials with untreated females). (3) Mechanistic studies: Examining fetal testes at critical timepoints for glucocorticoid receptor (GR/NR3C1) expression, apoptosis markers (TUNEL staining, cleaved caspase-3), proliferation markers (Ki67, BrdU incorporation), and steroidogenic enzyme expression (StAR, CYP11A1, HSD3B). (4) Controls: Vehicle-treated pregnant mice, pair-fed controls (to control for stress-induced anorexia), and potentially GR conditional knockout in fetal gonads (to confirm direct glucocorticoid action). (5) Epigenetic analysis: DNA methylation and histone modifications at reproductive gene loci in offspring testes to assess transgenerational epigenetic programming.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1629,12 +1629,12 @@
       "type": "MCQ",
       "question": "In eutherian mammals, what prevents the maternal immune system from rejecting the fetus during pregnancy, despite the fetus expressing paternal MHC antigens?",
       "options": [
-        "The fetus has no MHC molecules and is immunologically invisible",
         "Multiple mechanisms work together including: trophoblast expression of non-classical HLA-G (instead of classical HLA-A/B), expansion of decidual regulatory T cells (Tregs), progesterone-mediated immune suppression, indoleamine 2,3-dioxygenase (IDO)-dependent tryptophan depletion at the maternal-fetal interface, and complement regulatory proteins on trophoblasts",
+        "The fetus has no MHC molecules and is immunologically invisible",
         "The maternal immune system is completely suppressed during pregnancy",
         "Paternal antigens are eliminated from the fetus before implantation"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Maternal-fetal tolerance involves multiple redundant immunological mechanisms, none of which individually is sufficient: (1) HLA-G expression: Trophoblast cells express non-classical HLA-G (and HLA-E, HLA-C) instead of classical HLA-A/HLA-B. HLA-G binds inhibitory receptors (ILT-2, ILT-4, KIR2DL4) on NK cells, T cells, and macrophages, actively suppressing cytotoxicity. (2) Regulatory T cells: Decidual Tregs (CD4+CD25+FoxP3+) expand during pregnancy, particularly at the maternal-fetal interface. They suppress effector T cell responses to paternal antigens. Depletion of Tregs in mice causes fetal resorption. Seminal plasma exposure before conception primes Treg expansion. (3) Progesterone: This is produced in large amounts during pregnancy and has broad immunosuppressive effects — it shifts the maternal immune response from Th1 (pro-inflammatory) toward Th2 (anti-inflammatory), inhibits NK cell cytotoxicity, promotes Treg development, and induces progesterone-induced blocking factor (PIBF). (4) IDO: Trophoblast and decidual cells express indoleamine 2,3-dioxygenase, which catabolizes tryptophan. Local tryptophan depletion suppresses T cell proliferation (T cells are particularly sensitive to tryptophan deficiency). IDO inhibition in pregnant mice causes T cell-mediated fetal rejection. (5) Complement regulation: Trophoblasts express complement regulatory proteins (DAF/CD55, MCP/CD46, CD59) that prevent complement-mediated attack. (6) Fas/FasL: Trophoblasts express FasL (Fas ligand), which can induce apoptosis of activated Fas-expressing maternal T cells that infiltrate the decidua.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1650,11 +1650,11 @@
       "question": "A clinical study analyzes the relationship between maternal age and reproductive outcomes:\n\nMaternal age | Oocytes retrieved (IVF) | Aneuploidy rate (%) | Live birth rate per cycle (%) | Miscarriage rate (%)\n25-29 | 15.2 | 22 | 45 | 10\n30-34 | 12.8 | 30 | 38 | 15\n35-37 | 10.1 | 42 | 28 | 20\n38-40 | 7.3 | 58 | 18 | 30\n41-42 | 4.8 | 72 | 9 | 40\n43+ | 3.1 | 85 | 3 | 50\n\nWhich conclusion is best supported?",
       "options": [
         "Maternal age has no significant effect on reproductive outcomes",
+        "The decline in live birth rates is solely due to reduced oocyte number, not quality",
         "With advancing maternal age, oocyte quantity and quality decline simultaneously: fewer oocytes are retrieved, aneuploidy rates increase dramatically (due to deteriorating meiotic spindle and cohesin function), live birth rates decline, and miscarriage rates rise, reflecting the biological clock of the finite ovarian reserve",
-        "Aneuploidy rates decrease with age because older oocytes have more time to repair DNA damage",
-        "The decline in live birth rates is solely due to reduced oocyte number, not quality"
+        "Aneuploidy rates decrease with age because older oocytes have more time to repair DNA damage"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The data illustrate the profound impact of maternal age on reproductive outcomes, one of the most important concepts in reproductive medicine: (1) Quantitative decline: Oocytes retrieved decrease from 15.2 at age 25-29 to 3.1 at 43+, reflecting the progressive depletion of the finite ovarian follicle pool. The rate of follicle loss accelerates after age 37-38 when the pool drops below approximately 25,000. (2) Qualitative decline — aneuploidy: Aneuploidy rates increase dramatically from 22% at 25-29 to 85% at 43+. The primary mechanism is age-related deterioration of the cohesin protein complex that holds sister chromatids and homologous chromosome pairs together during the decades-long meiotic arrest. As cohesin degrades, chromosomes are more likely to mis-segregate during meiosis I (non-disjunction). Additionally, meiotic spindle assembly becomes less reliable, and the spindle assembly checkpoint becomes less stringent. (3) Live birth rate: Declines from 45% to 3%, reflecting both fewer oocytes and higher aneuploidy. Most aneuploid embryos either fail to implant or miscarry. (4) Miscarriage: Increases from 10% to 50%, largely due to chromosomal abnormalities in the conceptus. Trisomy 21 (Down syndrome) is the most common viable aneuploidy, with risk increasing from 1/1,500 at age 25 to 1/30 at age 45. (5) Clinical implications: These data underpin recommendations for earlier fertility preservation (egg freezing), preimplantation genetic testing (PGT-A) in older IVF patients, and the use of donor oocytes for women over 43.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -1669,10 +1669,10 @@
       "type": "MCQ",
       "question": "Which molecular mechanism underlies the fast block to polyspermy in sea urchin eggs?",
       "options": [
-        "Release of cortical granule enzymes that modify the vitelline layer",
-        "A rapid depolarization of the egg plasma membrane from approximately -70 mV to +20 mV within 1-3 seconds of sperm fusion, mediated by a sodium influx that prevents additional sperm from fusing with the depolarized membrane",
         "Physical hardening of the egg shell through calcium carbonate deposition",
-        "Enzymatic destruction of all remaining sperm by egg-secreted proteases"
+        "A rapid depolarization of the egg plasma membrane from approximately -70 mV to +20 mV within 1-3 seconds of sperm fusion, mediated by a sodium influx that prevents additional sperm from fusing with the depolarized membrane",
+        "Enzymatic destruction of all remaining sperm by egg-secreted proteases",
+        "Release of cortical granule enzymes that modify the vitelline layer"
       ],
       "correctAnswer": "B",
       "explanation": "The fast block to polyspermy is the first line of defense against fertilization by multiple sperm: (1) Mechanism: Within 1-3 seconds of the first sperm fusing with the egg membrane, the egg plasma membrane depolarizes rapidly from its resting potential of approximately -70 mV to approximately +20 mV. This depolarization is caused by an influx of sodium ions through channels that open upon sperm-egg fusion. (2) Why it works: Sperm can only fuse with membranes at a negative resting potential. The positive membrane potential of the depolarized egg repels or prevents fusion of additional sperm. This was elegantly demonstrated by voltage clamp experiments: artificially maintaining the egg at negative potential allowed polyspermy, while maintaining positive potential blocked all fertilization. (3) Speed: This electrical change is the fastest known block to polyspermy — it occurs within seconds, far faster than the slow block (cortical reaction, which takes 30-60 seconds to begin). (4) Duration: The fast block is transient — the membrane potential returns to normal (re-polarizes) within minutes. By this time, the slow block (cortical reaction modifying the vitelline layer into the fertilization envelope) has been established. (5) Taxonomic distribution: The fast electrical block is well-characterized in sea urchins and some amphibians but appears to be absent or less important in mammals, where the slow block (zona reaction) is the primary polyspermy defense. (6) The cortical reaction (option A) is the slow block, not the fast block.",
@@ -1689,12 +1689,12 @@
       "type": "MCQ",
       "question": "Spermatogonial stem cells (SSCs) in the testis maintain lifelong spermatogenesis through self-renewal. Which growth factor signaling pathway is essential for SSC self-renewal?",
       "options": [
-        "Estrogen receptor signaling from circulating estradiol",
         "GDNF (glial cell line-derived neurotrophic factor) signaling through its receptor GFRalpha1/RET on spermatogonial stem cells, stimulated by FSH-activated Sertoli cells",
+        "Wnt signaling from peritubular myoid cells only",
         "Insulin-like growth factor 2 (IGF-2) from Leydig cells exclusively",
-        "Wnt signaling from peritubular myoid cells only"
+        "Estrogen receptor signaling from circulating estradiol"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "GDNF is the critical survival and self-renewal factor for spermatogonial stem cells: (1) GDNF-GFRalpha1/RET signaling: GDNF is secreted by Sertoli cells (stimulated by FSH) and binds to a receptor complex on SSCs consisting of GFRalpha1 (the GDNF family receptor alpha 1, a GPI-anchored co-receptor) and RET (a receptor tyrosine kinase). This activates intracellular signaling cascades including PI3K/AKT, SRC family kinases, and RAS/ERK pathways that promote SSC self-renewal and prevent differentiation. (2) Genetic evidence: GDNF heterozygous knockout mice show progressive depletion of SSCs leading to Sertoli cell-only syndrome. GDNF overexpression (transgenic) causes accumulation of undifferentiated spermatogonia (clusters of SSCs that fail to differentiate), eventually leading to germ cell tumors. GFRalpha1 knockout is neonatal lethal, but conditional studies confirm SSC loss. (3) Niche concept: SSCs reside in a specialized niche at the basement membrane of seminiferous tubules, preferentially near blood vessels and interstitial tissue. The niche provides GDNF (from Sertoli cells), FGF2 (from Sertoli and peritubular cells), and CXCL12 (from Sertoli cells), which together maintain the stem cell pool. (4) Balance: The ratio of GDNF (self-renewal) to other factors like retinoic acid (differentiation) determines whether SSCs self-renew or differentiate into committed progenitors. (5) Clinical relevance: Understanding SSC biology enables spermatogonial stem cell transplantation — a technique where SSCs from a donor are transplanted into a recipient testis to restore fertility, with applications in cancer patients whose SSCs are damaged by chemotherapy.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1730,11 +1730,11 @@
       "question": "In some species of teleost fish, such as the seahorse (Hippocampus), the male carries the developing embryos. What specific adaptation enables male pregnancy in seahorses?",
       "options": [
         "Males produce eggs internally and self-fertilize them",
+        "Males swallow fertilized eggs and incubate them in their stomachs",
         "The male possesses a specialized brood pouch with a vascularized inner lining that provides gas exchange, osmoregulation, and nutrient transfer to developing embryos — functionally analogous to a uterus",
-        "Males simply carry externally attached eggs on their bodies with no physiological investment",
-        "Males swallow fertilized eggs and incubate them in their stomachs"
+        "Males simply carry externally attached eggs on their bodies with no physiological investment"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Male pregnancy in seahorses (family Syngnathidae, which includes seahorses, pipefish, and sea dragons) is one of the most remarkable reproductive adaptations in vertebrates: (1) Brood pouch: The male seahorse has a specialized brood pouch (marsupium) on the ventral surface of the trunk/tail. The female deposits eggs into the male's pouch through an ovipositor during an elaborate courtship dance. The male then fertilizes the eggs within the pouch. (2) Physiological support: The brood pouch is not merely a passive container. Its inner epithelium is highly vascularized and provides: (a) Gas exchange — oxygen delivery and CO2 removal via dense capillary networks; (b) Osmoregulation — the pouch fluid transitions from seawater-like to body fluid-like composition, creating a controlled environment; (c) Nutrient transfer — lipids, calcium, and other nutrients are transferred from the male to developing embryos through the pouch epithelium; (d) Waste removal — metabolic waste products are cleared through the vascular supply. (3) Hormonal control: Male pregnancy involves hormonal changes including elevated prolactin (promoting pouch function, similar to its role in mammalian lactation) and progesterone-like steroids. Brood pouch development is testosterone-dependent. (4) Parturition: Males undergo labor contractions (muscular contractions of the pouch wall) to expel fully developed miniature seahorses. Brooding duration varies by species (2-4 weeks). (5) Evolutionary context: Male pregnancy evolved once in the Syngnathidae family. It represents an extreme form of paternal investment, with the male providing both protection and physiological support comparable to mammalian gestation.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1749,12 +1749,12 @@
       "type": "MCQ",
       "question": "The penile bone (os penis or baculum) is present in many mammalian species but absent in humans. Which best describes its distribution and proposed function?",
       "options": [
-        "The baculum is found only in primates and functions to increase ejaculation volume",
         "The baculum is found in most mammalian orders (including carnivores, rodents, bats, and some primates) and is thought to function in maintaining penile rigidity during prolonged intromission in species with extended copulation times, potentially reducing reliance on vascular erection alone",
+        "The baculum functions exclusively as a display structure for female mate choice",
         "The baculum is present in all mammals without exception",
-        "The baculum functions exclusively as a display structure for female mate choice"
+        "The baculum is found only in primates and functions to increase ejaculation volume"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The baculum (os penis) is one of the most variable bones in the mammalian skeleton and has attracted considerable evolutionary interest: (1) Distribution: The baculum is present in most mammalian orders including Carnivora (walrus has the largest, up to 60 cm), Rodentia, Chiroptera (bats), Insectivora, and some Primates (not in humans, spider monkeys, or marmosets). Its size, shape, and complexity vary enormously between species. (2) Prolonged intromission hypothesis: The most widely supported hypothesis proposes that the baculum provides mechanical support for penile rigidity during copulation, particularly important in species with prolonged intromission. Without a baculum, sustained erection depends entirely on vascular hydraulics (blood pressure in the corpus cavernosum). The baculum supplements this, allowing extended copulation in species where prolonged intromission is important for reproductive success. (3) Induced ovulation: Many bacula-bearing species are induced ovulators (e.g., cats, ferrets), where vaginal stimulation during copulation triggers ovulation. Prolonged intromission facilitated by the baculum may enhance the ovulatory stimulus. (4) Sperm competition: Baculum size correlates with mating system across primates — species with high sperm competition (multi-male mating) tend to have larger bacula. The baculum may help displace rival males' sperm or ensure effective sperm deposition. (5) Loss in humans: The loss of the baculum in humans correlates with the evolution of short intromission time relative to many other mammals, monogamous/pair-bonding tendency (reducing sperm competition pressure), and reliance on vascular erection alone. (6) Evolutionary dynamics: Baculum morphology evolves rapidly, likely driven by sexual selection, making it useful for species identification in some mammalian groups.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -1769,10 +1769,10 @@
       "type": "MCQ",
       "question": "What is the molecular identity of the 'slow block' to polyspermy in mammals, and how does it differ from the sea urchin slow block?",
       "options": [
-        "Mammals use an identical fertilization envelope mechanism as sea urchins",
+        "The mammalian slow block involves calcification of the zona pellucida",
         "In mammals, the cortical reaction releases ovastacin (a zinc-dependent metalloprotease) from cortical granules, which cleaves ZP2 protein, converting the zona pellucida from a sperm-binding to non-binding state — unlike sea urchins, which form a physical fertilization envelope by cross-linking the vitelline layer",
-        "Mammals have no slow block and rely entirely on the fast electrical block",
-        "The mammalian slow block involves calcification of the zona pellucida"
+        "Mammals use an identical fertilization envelope mechanism as sea urchins",
+        "Mammals have no slow block and rely entirely on the fast electrical block"
       ],
       "correctAnswer": "B",
       "explanation": "The mammalian slow block (zona reaction) differs fundamentally from the sea urchin slow block in molecular mechanism: (1) Mammalian mechanism: Upon sperm-egg fusion, a calcium wave propagates through the oocyte cytoplasm. Calcium oscillations (triggered by sperm-delivered PLCzeta) activate cortical granule exocytosis. Cortical granules release their contents into the perivitelline space, including ovastacin (also called astacin-like metalloendopeptidase, encoded by ASTL gene). Ovastacin specifically cleaves ZP2 at a single site (Leu168-Ala169 in mouse), converting it from a sperm-binding form to a cleaved, non-binding form. This 'zona hardening' prevents additional sperm from binding and penetrating. (2) Evidence: ZP2 cleavage-resistant mutant mice (ZP2Mut) show polyspermy, directly demonstrating that ZP2 cleavage is the essential molecular event. Ovastacin knockout mice also show delayed zona hardening. (3) Sea urchin mechanism: In contrast, sea urchins use a fundamentally different slow block. Cortical granules release: (a) a protease that separates the vitelline layer from the egg surface; (b) mucopolysaccharides that create osmotic pressure, drawing water into the perivitelline space and lifting the vitelline layer; (c) peroxidase that cross-links tyrosine residues in the vitelline layer, hardening it into the rigid fertilization envelope. This physical elevation and hardening creates an impenetrable barrier. (4) Key difference: Mammals modify the molecular recognition between sperm and zona (biochemical change to ZP2), while sea urchins create a new physical barrier (fertilization envelope). (5) No fast block in mammals: Unlike sea urchins, mammals lack the fast electrical block. The zona reaction is therefore the primary polyspermy defense in mammals.",
@@ -1783,6 +1783,106 @@
       "sourceTextbook": "Campbell-12e",
       "conceptualDepth": "advanced",
       "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that the sperm-delivered oocyte-activating factor PLCzeta (phospholipase C zeta) is necessary and sufficient for triggering egg activation after fertilization. Which set of experiments would most rigorously test this?",
+      "options": [
+        "Add PLCzeta to culture medium containing oocytes and observe surface changes",
+        "Compare PLCzeta levels in fertile vs infertile men's serum",
+        "Inject recombinant PLCzeta protein into unfertilized oocytes and demonstrate calcium oscillations, pronuclear formation, and embryo development to blastocyst; then show that PLCzeta-deficient sperm (from knockout males) fail to trigger calcium oscillations and egg activation, but co-injection of recombinant PLCzeta with PLCzeta-null sperm rescues activation",
+        "Inject PLCzeta mRNA into unfertilized oocytes and observe whether cell division occurs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "PLCzeta is now recognized as the long-sought sperm-borne oocyte activation factor, and rigorous proof requires both sufficiency and necessity: (1) Sufficiency (gain-of-function): Microinjection of recombinant PLCzeta protein into unfertilized oocytes should trigger the same calcium oscillation pattern seen during normal fertilization (repetitive calcium transients lasting several hours). If PLCzeta is sufficient, injected oocytes should undergo: (a) calcium oscillations, (b) cortical granule exocytosis, (c) meiosis II completion and second polar body extrusion, (d) pronuclear formation, and (e) development to blastocyst stage (parthenogenetic activation). This was demonstrated by Saunders et al. (2002) — PLCzeta injection caused calcium oscillations indistinguishable from fertilization. (2) Necessity (loss-of-function): PLCzeta knockout sperm should fail to trigger calcium oscillations and egg activation upon injection. This was confirmed by Nozawa et al. (2018) — PLCzeta-null males produced sperm that were motile and could fuse with oocytes but failed to initiate calcium oscillations, resulting in complete infertility. (3) Rescue: The definitive test — injecting recombinant PLCzeta along with PLCzeta-null sperm should restore egg activation, proving that PLCzeta is the critical missing factor. (4) Mechanism: PLCzeta hydrolyzes PIP2 to generate IP3, which triggers calcium release from ER stores. Its high sensitivity to basal calcium levels enables self-sustaining oscillations. (5) Clinical relevance: Deficiency of PLCzeta in human sperm is a cause of failed ICSI fertilization; injection of human PLCzeta cRNA is being developed as a clinical treatment.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sexual conflict over mating rate is common in many species. In Drosophila melanogaster, what is the molecular basis of the 'cost of mating' to females?",
+      "options": [
+        "Males withhold nutritional nuptial gifts, causing female starvation",
+        "Sperm directly damage the female's ovaries after fertilization",
+        "Physical damage to the female reproductive tract from the male genitalia",
+        "The seminal fluid protein Acp70A (sex peptide) transferred from the male binds to a receptor on female reproductive tract neurons, increasing egg-laying rate and reducing receptivity to remating, but also decreasing female lifespan through metabolic costs and potentially toxic accessory gland proteins"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The molecular basis of sexual conflict in Drosophila is one of the best-understood examples of sexually antagonistic coevolution: (1) Sex peptide (Acp70A/SP): This 36-amino-acid peptide is the most well-characterized accessory gland protein. After transfer in the ejaculate, SP binds to the sex peptide receptor (SPR, a G-protein coupled receptor) on sensory neurons innervating the female reproductive tract and is also released into the hemolymph. SP effects include: (a) dramatically increased egg production and oviposition rate, (b) reduced female receptivity to remating (mating reflex), (c) increased feeding (to fuel egg production), (d) altered sleep patterns, and (e) enhanced immune gene expression. (2) Cost to females: While increased egg-laying benefits males genetically, it comes at a cost to females: accelerated resource depletion, reduced lifespan, and immune system modulation. Females mated with males lacking SP live longer than those mated with wild-type males. (3) Other Acps: Over 130 accessory gland proteins are transferred to females. Some are cytotoxic — Acp62F has structural similarity to neurotoxins and contributes to reduced female lifespan. (4) Arms race: This creates an evolutionary arms race — males are selected for seminal proteins that maximize their paternity (through increased egg production and reduced remating), while females are selected for resistance to these manipulations. (5) SPR binding: SP is initially bound to sperm tails for gradual release, maintaining its effects for over a week from a single mating.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the Wolffian duct, and what role does testosterone play in its differentiation during male embryonic development?",
+      "options": [
+        "The Wolffian duct develops into the kidneys in both sexes",
+        "The Wolffian (mesonephric) duct is an embryonic structure that, under the influence of testosterone from fetal Leydig cells, differentiates into the epididymis, vas deferens, and seminal vesicles in males",
+        "The Wolffian duct requires AMH (not testosterone) for differentiation into male structures",
+        "The Wolffian duct develops into the female reproductive tract structures under estrogen influence"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Wolffian (mesonephric) duct is a critical structure in the bipotential embryonic reproductive system: (1) Bipotential stage: Early embryos of both sexes possess two sets of ducts: the Wolffian (mesonephric) duct and the Mullerian (paramesonephric) duct. Sexual differentiation involves selective stabilization of one duct system and regression of the other. (2) Male development: In XY embryos, the SRY gene on the Y chromosome initiates testis differentiation from the bipotential gonad (around week 7 in humans). Fetal Leydig cells begin producing testosterone (stimulated by placental hCG initially, then fetal LH). Testosterone acts locally (paracrine action) on Wolffian duct mesenchyme via androgen receptors to stabilize the duct and promote its differentiation into: (a) the epididymis (from the proximal duct, adjacent to the testis), (b) the vas deferens (ductus deferens, from the middle portion), and (c) the seminal vesicles (from outgrowths of the distal duct near the urogenital sinus). (3) DHT requirement: While testosterone suffices for Wolffian duct differentiation, its more potent metabolite dihydrotestosterone (DHT, produced by 5-alpha-reductase) is required for development of the external genitalia (penis, scrotum) and prostate. (4) Female development: In the absence of testosterone (XX embryos), the Wolffian duct degenerates, leaving only vestigial remnants (epoophoron, paroophoron, Gartner's duct). (5) Two-signal model: Complete male development requires both testosterone (Wolffian duct differentiation) and AMH (Mullerian duct regression). Deficiency of either produces specific intersex conditions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cooperative breeding occurs in some bird species where non-breeding individuals (helpers) assist in raising offspring that are not their own. What is the primary evolutionary explanation for this apparently altruistic behavior?",
+      "options": [
+        "Helpers have no reproductive potential and would die without social contact",
+        "Cooperative breeding is caused by parasite-induced behavioral manipulation",
+        "Kin selection (Hamilton's rule) explains most cooperative breeding: helpers are typically closely related to the breeding pair (often offspring from previous years), so by increasing the survival of relatives' offspring, helpers gain indirect fitness benefits proportional to their genetic relatedness to the helped offspring",
+        "Helpers are confused about which nest is their own"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Cooperative breeding is a major topic in behavioral ecology and is primarily explained through kin selection theory: (1) Hamilton's rule: Altruistic behavior evolves when the indirect fitness benefit (rB) exceeds the direct fitness cost (C): rB > C, where r is genetic relatedness between helper and offspring, B is the benefit to the offspring, and C is the cost to the helper. In many cooperative breeders, helpers are previous offspring of the breeding pair (r = 0.5 to full siblings), making the inclusive fitness benefit substantial. (2) Ecological constraints: Helpers often assist because independent breeding territories are saturated or unavailable (ecological constraints hypothesis). By staying as helpers, they gain: (a) indirect fitness via kin selection, (b) territory inheritance when breeders die, (c) breeding experience, and (d) survival benefits from group living. (3) Examples: In the Florida scrub-jay (Aphelocoma coerulescens), helpers are primarily offspring from previous years who assist their parents. Helped nests produce significantly more fledglings than unhelped nests. In meerkats (Suricata suricatta), non-breeding subordinates provide babysitting, sentinel duty, and prey feeding to dominant pair's pups. (4) Direct benefits: Beyond kin selection, helpers may gain direct fitness benefits — 'pay-to-stay' (helping as rent for group membership), augmenting group size for territorial defense, and gaining social status that leads to future breeding opportunities. (5) Reproductive conflict: In some species, helpers occasionally reproduce through extra-pair copulations, gaining direct fitness alongside indirect benefits.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher studies the effect of different contraceptive methods on hormone levels:\n\nMethod | Serum estradiol (pg/mL) | Serum progesterone (ng/mL) | LH (mIU/mL) | FSH (mIU/mL) | Ovulation\nNo contraception (mid-cycle) | 300-500 | 0.5-1.0 | 40-80 | 8-12 | Yes\nCombined OCP | 30-50 | <0.5 | 2-4 | 1-3 | No\nProgesterone-only pill | 100-250 | 1-3 | 5-15 | 3-8 | Variable\nLevonorgestrel IUD | 150-400 | Variable | 10-30 | 5-10 | Usually yes\nCopper IUD | 300-500 | Normal cycle | 40-80 | 8-12 | Yes\n\nWhich conclusion about contraceptive mechanisms is supported?",
+      "options": [
+        "Levonorgestrel IUDs eliminate ovulation in all users",
+        "All contraceptive methods work by preventing ovulation",
+        "Combined OCPs suppress the HPG axis most completely (lowest gonadotropins, no ovulation), progesterone-only pills partially suppress it, hormonal IUDs primarily act locally with minimal systemic suppression, and the copper IUD has no hormonal effect — demonstrating that different contraceptives have fundamentally different mechanisms of action",
+        "The copper IUD suppresses hormones more effectively than combined OCPs"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The data reveal the diverse mechanisms of different contraceptive methods through their hormonal profiles: (1) Combined OCPs: Synthetic estrogen (ethinyl estradiol) and progestin suppress the HPG axis through continuous negative feedback. Very low gonadotropins (LH 2-4, FSH 1-3) indicate complete suppression of the GnRH pulse generator. No LH surge occurs, preventing ovulation. Endogenous estradiol is low (30-50 pg/mL) because follicular development is suppressed. This is the most complete hormonal suppression. (2) Progesterone-only pills (mini-pills): Partial HPG suppression — gonadotropins are reduced but not eliminated. Ovulation is inconsistent (prevented in ~50% of cycles at standard doses). Primary mechanisms are cervical mucus thickening and endometrial thinning. (3) Levonorgestrel IUD (Mirena): Acts primarily locally in the uterus. Systemic hormone levels are minimally affected — estradiol and gonadotropins remain near normal ranges, and ovulation usually occurs. The contraceptive effect is through local progestin action: cervical mucus thickening, endometrial decidualization and atrophy, and inflammatory changes hostile to implantation. Some systemic absorption occurs but insufficient for reliable ovulation suppression. (4) Copper IUD: No hormonal component — all hormone levels are identical to natural cycles. Normal ovulation occurs. Contraceptive mechanism is entirely through copper ion toxicity to sperm, inflammatory endometrial response, and prevention of fertilization. (5) Clinical significance: This spectrum allows patient-specific contraceptive selection — those who want to preserve natural hormone cycling can choose non-hormonal methods, while those seeking cycle control may prefer combined OCPs.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
       "topic": "Animal Reproduction"
     }
   ]
