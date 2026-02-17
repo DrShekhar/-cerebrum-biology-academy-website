@@ -1,16 +1,9 @@
 {
   "batch": {
-    "id": "olympiad-campbell-ch31-fungi",
-    "title": "Campbell Biology Ch 31 \u2014 Fungi (Olympiad)",
-    "subject": "Biology",
-    "chapter": "Fungi",
-    "class": "Olympiad",
-    "description": "Olympiad-grade questions on fungal biology from Campbell Biology Chapter 31. Covers fungal nutrition, diversity, reproduction, ecological roles, mycorrhizal symbioses, lichens, pathogenesis, decomposition, and biotechnology applications.",
-    "totalQuestions": 67,
-    "campbellChapter": 31,
-    "campbellUnit": 5,
-    "isOlympiad": true,
-    "questionCount": 71
+    "name": "Campbell Ch31 Fungi — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 71
   },
   "questions": [
     {
@@ -35,7 +28,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "An experiment measures plant growth with different mycorrhizal treatments in phosphorus-poor soil: No mycorrhizae \u2014 biomass 2.1 g; AM fungi \u2014 biomass 8.4 g; ECM fungi \u2014 biomass 7.2 g; AM + phosphorus supplement \u2014 biomass 8.8 g; No mycorrhizae + phosphorus supplement \u2014 biomass 7.9 g. What conclusion is best supported?",
+      "question": "An experiment measures plant growth with different mycorrhizal treatments in phosphorus-poor soil: No mycorrhizae — biomass 2.1 g; AM fungi — biomass 8.4 g; ECM fungi — biomass 7.2 g; AM + phosphorus supplement — biomass 8.8 g; No mycorrhizae + phosphorus supplement — biomass 7.9 g. What conclusion is best supported?",
       "options": [
         "Mycorrhizae primarily enhance growth by improving phosphorus uptake, as phosphorus supplementation nearly equalizes growth without mycorrhizae",
         "Mycorrhizae provide benefits that cannot be replicated by phosphorus addition",
@@ -43,7 +36,7 @@
         "Phosphorus supplementation completely eliminates the need for mycorrhizal associations"
       ],
       "correctAnswer": "A",
-      "explanation": "The data shows that both AM and ECM fungi dramatically enhance plant growth in phosphorus-poor soil (2.1 g to 8.4/7.2 g, a 3-4x increase). Critically, phosphorus supplementation without mycorrhizae (7.9 g) nearly matches the mycorrhizal treatments (8.4/7.2 g), strongly suggesting that the primary benefit of mycorrhizal fungi is enhanced phosphorus uptake rather than other mechanisms. The AM + phosphorus treatment (8.8 g) shows only a marginal additional benefit over AM alone (8.4 g), indicating that mycorrhizae and phosphorus supplementation are largely substitutable. However, 'nearly' is key\u2014the small differences (8.4 vs 7.9 g) suggest mycorrhizae may provide minor additional benefits beyond phosphorus uptake, such as improved water relations, enhanced nitrogen uptake, or disease protection. This experiment demonstrates why mycorrhizal associations are especially important in phosphorus-limited environments.",
+      "explanation": "The data shows that both AM and ECM fungi dramatically enhance plant growth in phosphorus-poor soil (2.1 g to 8.4/7.2 g, a 3-4x increase). Critically, phosphorus supplementation without mycorrhizae (7.9 g) nearly matches the mycorrhizal treatments (8.4/7.2 g), strongly suggesting that the primary benefit of mycorrhizal fungi is enhanced phosphorus uptake rather than other mechanisms. The AM + phosphorus treatment (8.8 g) shows only a marginal additional benefit over AM alone (8.4 g), indicating that mycorrhizae and phosphorus supplementation are largely substitutable. However, 'nearly' is key—the small differences (8.4 vs 7.9 g) suggest mycorrhizae may provide minor additional benefits beyond phosphorus uptake, such as improved water relations, enhanced nitrogen uptake, or disease protection. This experiment demonstrates why mycorrhizal associations are especially important in phosphorus-limited environments.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -83,7 +76,7 @@
         "the outward radial growth of a basidiomycete mycelium, with mushrooms appearing at the actively growing periphery"
       ],
       "correctAnswer": "D",
-      "explanation": "Fairy rings are caused by the centrifugal growth of a basidiomycete mycelium through soil. A fungal colony typically begins from a single spore or hyphal fragment and grows outward in all directions at a relatively constant rate. As the central portion of the mycelium ages and depletes local nutrients, it dies, leaving an expanding ring of active growth at the periphery. Mushrooms (basidiocarps) appear at this actively growing front, forming the visible ring. The soil chemistry at the ring margin is altered by fungal activity: enzyme secretion releases nitrogen from organic matter, often producing a ring of lush, dark green grass just ahead of the mushroom zone. Some fairy rings are ancient\u2014growth rates of 10-30 cm per year mean that large rings (over 10 meters in diameter) may be decades old, and some rings in European grasslands are estimated to be over 700 years old.",
+      "explanation": "Fairy rings are caused by the centrifugal growth of a basidiomycete mycelium through soil. A fungal colony typically begins from a single spore or hyphal fragment and grows outward in all directions at a relatively constant rate. As the central portion of the mycelium ages and depletes local nutrients, it dies, leaving an expanding ring of active growth at the periphery. Mushrooms (basidiocarps) appear at this actively growing front, forming the visible ring. The soil chemistry at the ring margin is altered by fungal activity: enzyme secretion releases nitrogen from organic matter, often producing a ring of lush, dark green grass just ahead of the mushroom zone. Some fairy rings are ancient—growth rates of 10-30 cm per year mean that large rings (over 10 meters in diameter) may be decades old, and some rings in European grasslands are estimated to be over 700 years old.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -97,10 +90,10 @@
       "type": "MTF",
       "question": "About lichen biology:\n(I) The fungal partner (mycobiont) provides structure and protection while the photobiont provides carbohydrates\n(II) Lichens can colonize bare rock surfaces and contribute to soil formation through chemical weathering\n(III) Lichens grow rapidly, averaging 10 cm per year in most environments\n(IV) Lichens are sensitive to air pollution, particularly sulfur dioxide, making them useful bioindicators\nWhich are TRUE?",
       "options": [
-        "TTFT \u2014 I, II, and IV are true",
-        "TFTF \u2014 I and III are true",
-        "TTTF \u2014 I, II, and III are true",
-        "TFFT \u2014 I and IV are true"
+        "TTFT — I, II, and IV are true",
+        "TFTF — I and III are true",
+        "TTTF — I, II, and III are true",
+        "TFFT — I and IV are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: In the lichen symbiosis, the mycobiont (usually an ascomycete) forms the structural framework of the thallus, protecting the photobiont from desiccation and UV radiation. The photobiont (green alga or cyanobacterium) provides photosynthetically produced carbohydrates. Statement II is TRUE: Lichens are pioneer colonizers of bare rock surfaces. They produce organic acids (particularly oxalic acid and carbonic acid) that chemically weather rock, and their physical penetration (rhizine attachment) mechanically fractures surfaces. Over time, this creates mineral particles that mix with dead lichen organic matter to form primitive soil. Statement III is FALSE: Lichens are extremely slow-growing organisms, typically growing only 0.1-10 mm per year depending on species and conditions. Some crustose lichens in extreme environments grow less than 0.1 mm per year. Statement IV is TRUE: Many lichen species are highly sensitive to air pollutants, particularly SO2, making lichen community composition a reliable bioindicator of air quality.",
@@ -123,7 +116,7 @@
         "fixing atmospheric nitrogen using nitrogenase enzymes"
       ],
       "correctAnswer": "C",
-      "explanation": "Fungi are absorptive heterotrophs\u2014they obtain carbon and energy from organic molecules in their environment. Unlike animals, which ingest food and digest it internally, fungi secrete a battery of hydrolytic enzymes (cellulases, proteases, lipases, amylases, lignin peroxidases) into their surroundings, breaking down complex organic molecules extracellularly. The resulting small molecules (sugars, amino acids, fatty acids) are then absorbed through the fungal cell membrane. This absorptive nutrition strategy is facilitated by the enormous surface-area-to-volume ratio of the hyphal growth form. Hyphae penetrate substrates and secrete enzymes at their tips, creating a highly efficient nutrient extraction system. Fungi can decompose virtually all organic materials, including cellulose, lignin, chitin, and keratin, making them the primary decomposers in most terrestrial ecosystems.",
+      "explanation": "Fungi are absorptive heterotrophs—they obtain carbon and energy from organic molecules in their environment. Unlike animals, which ingest food and digest it internally, fungi secrete a battery of hydrolytic enzymes (cellulases, proteases, lipases, amylases, lignin peroxidases) into their surroundings, breaking down complex organic molecules extracellularly. The resulting small molecules (sugars, amino acids, fatty acids) are then absorbed through the fungal cell membrane. This absorptive nutrition strategy is facilitated by the enormous surface-area-to-volume ratio of the hyphal growth form. Hyphae penetrate substrates and secrete enzymes at their tips, creating a highly efficient nutrient extraction system. Fungi can decompose virtually all organic materials, including cellulose, lignin, chitin, and keratin, making them the primary decomposers in most terrestrial ecosystems.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -143,7 +136,7 @@
         "a protective net of spider silk around vulnerable root tips"
       ],
       "correctAnswer": "B",
-      "explanation": "The Hartig net is the defining anatomical feature of ectomycorrhizal (ECM) associations. It consists of fungal hyphae that penetrate between the epidermal and cortical cells of the root, creating a labyrinthine interface between fungal and plant cell surfaces. The Hartig net dramatically increases the contact area between the two symbionts, facilitating bidirectional nutrient exchange: phosphorus and nitrogen move from fungus to plant, while photosynthetic carbon (sugars) moves from plant to fungus. The Hartig net hyphae do not penetrate plant cell walls\u2014exchange occurs across the apoplastic interface. In angiosperms, the Hartig net is typically restricted to the epidermal cell layer, while in gymnosperms it may extend one or two cells deeper into the cortex. The ECM mantle and extramatrical mycelium extend from the Hartig net outward, exploring the soil for nutrients.",
+      "explanation": "The Hartig net is the defining anatomical feature of ectomycorrhizal (ECM) associations. It consists of fungal hyphae that penetrate between the epidermal and cortical cells of the root, creating a labyrinthine interface between fungal and plant cell surfaces. The Hartig net dramatically increases the contact area between the two symbionts, facilitating bidirectional nutrient exchange: phosphorus and nitrogen move from fungus to plant, while photosynthetic carbon (sugars) moves from plant to fungus. The Hartig net hyphae do not penetrate plant cell walls—exchange occurs across the apoplastic interface. In angiosperms, the Hartig net is typically restricted to the epidermal cell layer, while in gymnosperms it may extend one or two cells deeper into the cortex. The ECM mantle and extramatrical mycelium extend from the Hartig net outward, exploring the soil for nutrients.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -163,7 +156,7 @@
         "fungal prions cause spongiform encephalopathies identical to mad cow disease"
       ],
       "correctAnswer": "B",
-      "explanation": "Fungal prions, particularly [PSI+] and [URE3] in Saccharomyces cerevisiae, were among the first prion-like elements discovered outside of mammals. These are self-propagating protein conformations that act as heritable genetic elements independent of DNA sequence changes. The [PSI+] prion is an altered conformation of the translation termination factor Sup35, which when in its prion form causes read-through of stop codons, effectively altering the proteome. [PSI+] is inherited through cytoplasmic transmission and can be 'cured' by certain treatments. Yeast prions have provided crucial insights into protein misfolding diseases and demonstrated that protein-based inheritance is a broader biological phenomenon than initially recognized. Some researchers propose that yeast prions may function as adaptive mechanisms, creating phenotypic diversity in clonal populations that could be beneficial in fluctuating environments\u2014a form of 'bet-hedging' at the molecular level.",
+      "explanation": "Fungal prions, particularly [PSI+] and [URE3] in Saccharomyces cerevisiae, were among the first prion-like elements discovered outside of mammals. These are self-propagating protein conformations that act as heritable genetic elements independent of DNA sequence changes. The [PSI+] prion is an altered conformation of the translation termination factor Sup35, which when in its prion form causes read-through of stop codons, effectively altering the proteome. [PSI+] is inherited through cytoplasmic transmission and can be 'cured' by certain treatments. Yeast prions have provided crucial insights into protein misfolding diseases and demonstrated that protein-based inheritance is a broader biological phenomenon than initially recognized. Some researchers propose that yeast prions may function as adaptive mechanisms, creating phenotypic diversity in clonal populations that could be beneficial in fluctuating environments—a form of 'bet-hedging' at the molecular level.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -178,12 +171,12 @@
       "question": "Lichens represent a mutualistic symbiosis between fungi and photosynthetic partners. Recent research has challenged the traditional view of lichens as two-partner symbioses. What was the surprising discovery?",
       "options": [
         "Lichens are not actually symbioses at all",
-        "Many lichens harbor a third symbiotic partner\u2014basidiomycete yeasts embedded in the cortex\u2014in addition to the ascomycete mycobiont and photobiont, and the lichen microbiome includes diverse bacterial communities that contribute to nutrient cycling, protection, and secondary metabolite production",
+        "Many lichens harbor a third symbiotic partner—basidiomycete yeasts embedded in the cortex—in addition to the ascomycete mycobiont and photobiont, and the lichen microbiome includes diverse bacterial communities that contribute to nutrient cycling, protection, and secondary metabolite production",
         "The photosynthetic partner is always a flowering plant",
         "Fungi in lichens are always parasites of the algae"
       ],
       "correctAnswer": "B",
-      "explanation": "Lichen biology is more complex than traditionally understood: (1) Classic model: Two-partner symbiosis\u2014mycobiont (usually ascomycete, rarely basidiomycete) + photobiont (green algae like Trebouxia, or cyanobacteria like Nostoc, or both in tripartite lichens). (2) Third partner: Spribille et al. (2016) discovered that many lichens contain basidiomycete yeasts (Cyphobasidiales) in the cortex, correlating with phenotypic differences between lichen species. (3) Lichen microbiome: Diverse bacterial communities (Alphaproteobacteria, Actinobacteria) are consistently associated with lichens. These bacteria may contribute to: nitrogen fixation (in cyanolichens), phosphate solubilization, production of vitamins and hormones, and protection against pathogens through antibiotic production. (4) Nature of the relationship: The mycobiont-photobiont relationship ranges from mutualism to controlled parasitism. Some mycobionts parasitize photobionts (haustoria penetrating algal cells). (5) Ecological significance: Lichens colonize ~8% of terrestrial surfaces, fix significant nitrogen in boreal forests, and serve as bioindicators of air quality. Their complex microbiome likely contributes to their remarkable environmental tolerance (surviving space exposure, extreme desiccation).",
+      "explanation": "Lichen biology is more complex than traditionally understood: (1) Classic model: Two-partner symbiosis—mycobiont (usually ascomycete, rarely basidiomycete) + photobiont (green algae like Trebouxia, or cyanobacteria like Nostoc, or both in tripartite lichens). (2) Third partner: Spribille et al. (2016) discovered that many lichens contain basidiomycete yeasts (Cyphobasidiales) in the cortex, correlating with phenotypic differences between lichen species. (3) Lichen microbiome: Diverse bacterial communities (Alphaproteobacteria, Actinobacteria) are consistently associated with lichens. These bacteria may contribute to: nitrogen fixation (in cyanolichens), phosphate solubilization, production of vitamins and hormones, and protection against pathogens through antibiotic production. (4) Nature of the relationship: The mycobiont-photobiont relationship ranges from mutualism to controlled parasitism. Some mycobionts parasitize photobionts (haustoria penetrating algal cells). (5) Ecological significance: Lichens colonize ~8% of terrestrial surfaces, fix significant nitrogen in boreal forests, and serve as bioindicators of air quality. Their complex microbiome likely contributes to their remarkable environmental tolerance (surviving space exposure, extreme desiccation).",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -223,7 +216,7 @@
         "evolved from plant roots through a process of dedifferentiation"
       ],
       "correctAnswer": "B",
-      "explanation": "Fossil evidence suggests fungi were among the earliest organisms to colonize land. Ordovician fossils (~460 MYA) of terrestrial fungal hyphae and spores predate the earliest definitive macrofossils of land plants. The large Devonian fossil Prototaxites (~400 MYA), once enigmatic, is now interpreted by many researchers as a massive fungal structure up to 8 meters tall\u2014it would have been the tallest organism on land during its time. Molecular clock estimates suggest fungi diverged from their animal sister group approximately 1 billion years ago and may have been present on land long before plants. The early colonization of land by fungi would have been facilitated by their absorptive nutrition (not requiring photosynthesis), their ability to decompose organic matter, and their partnership with cyanobacteria (forming proto-lichens) that could provide photosynthetic carbon. The mycorrhizal partnership may have been essential for early plant land colonization.",
+      "explanation": "Fossil evidence suggests fungi were among the earliest organisms to colonize land. Ordovician fossils (~460 MYA) of terrestrial fungal hyphae and spores predate the earliest definitive macrofossils of land plants. The large Devonian fossil Prototaxites (~400 MYA), once enigmatic, is now interpreted by many researchers as a massive fungal structure up to 8 meters tall—it would have been the tallest organism on land during its time. Molecular clock estimates suggest fungi diverged from their animal sister group approximately 1 billion years ago and may have been present on land long before plants. The early colonization of land by fungi would have been facilitated by their absorptive nutrition (not requiring photosynthesis), their ability to decompose organic matter, and their partnership with cyanobacteria (forming proto-lichens) that could provide photosynthetic carbon. The mycorrhizal partnership may have been essential for early plant land colonization.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -257,10 +250,10 @@
       "type": "MTF",
       "question": "About fungal bioluminescence:\n(I) Approximately 80 fungal species are known to produce bioluminescence\n(II) Fungal bioluminescence uses a luciferin-luciferase system similar to but distinct from firefly bioluminescence\n(III) Bioluminescence in fungi may attract insects that disperse fungal spores\n(IV) All basidiomycete mushrooms are bioluminescent\nWhich are TRUE?",
       "options": [
-        "TTTF \u2014 I, II, and III are true",
-        "TTFT \u2014 I, II, and IV are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TTTT \u2014 All are true"
+        "TTTF — I, II, and III are true",
+        "TTFT — I, II, and IV are true",
+        "TFTT — I, III, and IV are true",
+        "TTTT — All are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: Approximately 80 species of bioluminescent fungi have been documented, all belonging to the Basidiomycota, particularly in the genera Mycena, Omphalotus, Armillaria, and Panellus. Statement II is TRUE: Fungal bioluminescence uses a distinct luciferin-luciferase enzymatic system. The fungal luciferin (3-hydroxyhispidin) is oxidized by a luciferase enzyme in the presence of oxygen to produce light (typically green, ~520 nm wavelength). This system evolved independently from bioluminescence in fireflies, bacteria, and marine organisms. Statement III is TRUE: Evidence suggests bioluminescence may attract nocturnal arthropods (beetles, flies, and other insects) that serve as spore dispersers, particularly for species fruiting in dark forest understory environments. Experimental studies have shown increased arthropod visitation to luminescent versus non-luminescent mushroom models. Statement IV is FALSE: The vast majority of basidiomycete mushrooms are not bioluminescent.",
@@ -283,7 +276,7 @@
         "fixing atmospheric CO2 using a non-photosynthetic enzyme system"
       ],
       "correctAnswer": "C",
-      "explanation": "Mycoheterotrophic plants like Monotropa uniflora (Indian pipe) lack chlorophyll and cannot photosynthesize. Instead, they parasitize mycorrhizal fungi\u2014specifically ectomycorrhizal fungi connected to the roots of nearby photosynthetic trees. Carbon flows from the autotrophic tree to the mycorrhizal fungus (as in normal mycorrhizal symbiosis) and then from the fungus to the mycoheterotroph. Isotopic studies using 13C and 14C have confirmed this carbon transfer pathway. Monotropa forms highly specialized associations with specific Russulaceae fungi that simultaneously form ectomycorrhizal connections with surrounding trees. This represents an epiparasitic relationship where the mycoheterotroph exploits an existing mutualism. Mycoheterotrophy has evolved independently over 50 times across plant lineages and provides unique evidence for bidirectional carbon flow in mycorrhizal networks.",
+      "explanation": "Mycoheterotrophic plants like Monotropa uniflora (Indian pipe) lack chlorophyll and cannot photosynthesize. Instead, they parasitize mycorrhizal fungi—specifically ectomycorrhizal fungi connected to the roots of nearby photosynthetic trees. Carbon flows from the autotrophic tree to the mycorrhizal fungus (as in normal mycorrhizal symbiosis) and then from the fungus to the mycoheterotroph. Isotopic studies using 13C and 14C have confirmed this carbon transfer pathway. Monotropa forms highly specialized associations with specific Russulaceae fungi that simultaneously form ectomycorrhizal connections with surrounding trees. This represents an epiparasitic relationship where the mycoheterotroph exploits an existing mutualism. Mycoheterotrophy has evolved independently over 50 times across plant lineages and provides unique evidence for bidirectional carbon flow in mycorrhizal networks.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -297,10 +290,10 @@
       "type": "MTF",
       "question": "Evaluate statements about fungal pathogenesis in humans:\n(I) Candida albicans can switch between yeast and hyphal growth forms, enhancing pathogenicity\n(II) Aspergillus fumigatus causes invasive aspergillosis primarily in immunocompromised patients\n(III) Dermatophytes infect keratinized tissues (skin, hair, nails) using keratinase enzymes\n(IV) All fungal infections are easily treated with a single dose of antibacterial antibiotics\nWhich are TRUE?",
       "options": [
-        "TTTF \u2014 I, II, and III are true",
-        "TTFT \u2014 I, II, and IV are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TTTT \u2014 All are true"
+        "TTTF — I, II, and III are true",
+        "TTFT — I, II, and IV are true",
+        "TFTT — I, III, and IV are true",
+        "TTTT — All are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: Candida albicans is a polymorphic fungus that can switch between yeast (budding) and hyphal (filamentous) growth forms. The hyphal form is more invasive, penetrating tissues and evading immune cells. This morphological switching is a key virulence factor and is regulated by environmental signals including temperature, pH, and serum. Statement II is TRUE: Aspergillus fumigatus is the most common cause of invasive aspergillosis, primarily affecting immunocompromised patients (organ transplant recipients, chemotherapy patients, AIDS patients). Inhaled conidia can germinate in the lungs and invade blood vessels. Statement III is TRUE: Dermatophytes (Trichophyton, Microsporum, Epidermophyton) produce keratinases that digest keratin, the structural protein of skin, hair, and nails. Statement IV is FALSE: Antibacterial antibiotics do not work against fungi. Fungal infections require antifungal drugs (azoles, polyenes, echinocandins) which target fungal-specific structures.",
@@ -403,7 +396,7 @@
         "photosynthetic tissue in the cap and absorptive tissue in the stalk"
       ],
       "correctAnswer": "C",
-      "explanation": "The basidiocarp is a complex reproductive structure composed of interwoven dikaryotic hyphae organized into distinct tissues. The stipe (stalk) provides structural support, composed of longitudinally oriented hyphae. The pileus (cap) provides protection for the reproductive surface. The gills (lamellae) are thin plates hanging from the underside of the cap, bearing the basidia\u2014club-shaped cells where karyogamy and meiosis occur. Each basidium typically produces four basidiospores on horn-like projections called sterigmata. The entire basidiocarp can develop rapidly (overnight in some species) through water absorption and expansion of pre-formed hyphal cells rather than new cell division\u2014a process called cell inflation. Some mushrooms can generate sufficient turgor pressure to push through asphalt. The basidiocarp represents only a tiny fraction of the fungal organism; the vast majority of the fungal body is the underground mycelium.",
+      "explanation": "The basidiocarp is a complex reproductive structure composed of interwoven dikaryotic hyphae organized into distinct tissues. The stipe (stalk) provides structural support, composed of longitudinally oriented hyphae. The pileus (cap) provides protection for the reproductive surface. The gills (lamellae) are thin plates hanging from the underside of the cap, bearing the basidia—club-shaped cells where karyogamy and meiosis occur. Each basidium typically produces four basidiospores on horn-like projections called sterigmata. The entire basidiocarp can develop rapidly (overnight in some species) through water absorption and expansion of pre-formed hyphal cells rather than new cell division—a process called cell inflation. Some mushrooms can generate sufficient turgor pressure to push through asphalt. The basidiocarp represents only a tiny fraction of the fungal organism; the vast majority of the fungal body is the underground mycelium.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -415,7 +408,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Species richness data for endophytic fungi isolated from tropical versus temperate tree leaves: Tropical trees \u2014 average 45 species per tree species; Temperate trees \u2014 average 12 species per tree species. Additionally, overlap between endophyte communities of different host species: Tropical \u2014 15% shared species; Temperate \u2014 42% shared species. These patterns suggest:",
+      "question": "Species richness data for endophytic fungi isolated from tropical versus temperate tree leaves: Tropical trees — average 45 species per tree species; Temperate trees — average 12 species per tree species. Additionally, overlap between endophyte communities of different host species: Tropical — 15% shared species; Temperate — 42% shared species. These patterns suggest:",
       "options": [
         "Temperate endophytes are more diverse but less host-specific",
         "Tropical endophyte communities show higher alpha diversity and greater host specificity than temperate communities",
@@ -435,7 +428,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Measurements of CO2 flux from forest soil with and without fungal activity: Control (with fungi) \u2014 4.2 \u03bcmol CO2/m2/s; Fungicide-treated \u2014 1.8 \u03bcmol CO2/m2/s; Sterile soil \u2014 0.3 \u03bcmol CO2/m2/s. These data indicate that fungi contribute approximately what percentage of total soil respiration?",
+      "question": "Measurements of CO2 flux from forest soil with and without fungal activity: Control (with fungi) — 4.2 μmol CO2/m2/s; Fungicide-treated — 1.8 μmol CO2/m2/s; Sterile soil — 0.3 μmol CO2/m2/s. These data indicate that fungi contribute approximately what percentage of total soil respiration?",
       "options": [
         "About 10% of soil respiration",
         "About 40-60% of soil respiration",
@@ -443,7 +436,7 @@
         "Fungi do not contribute measurably to soil respiration"
       ],
       "correctAnswer": "B",
-      "explanation": "The data allows estimation of fungal contribution to soil respiration. Total biological soil respiration = 4.2 - 0.3 = 3.9 \u03bcmol/m2/s (subtracting abiotic CO2 release from sterile soil). Fungicide-treated soil respiration = 1.8 - 0.3 = 1.5 \u03bcmol/m2/s (bacterial/root respiration only). Therefore, fungal respiration = 3.9 - 1.5 = 2.4 \u03bcmol/m2/s, representing approximately 62% of biological soil respiration (2.4/3.9). This is consistent with published estimates that fungi contribute 40-60% of total heterotrophic soil respiration in forest ecosystems. Fungi dominate soil carbon cycling because: (1) they are the primary decomposers of plant litter and woody debris, (2) mycorrhizal fungi receive substantial carbon from plant hosts, and (3) fungal biomass in forest soils typically exceeds bacterial biomass. This finding has important implications for understanding global carbon cycling and predicting soil carbon responses to climate change.",
+      "explanation": "The data allows estimation of fungal contribution to soil respiration. Total biological soil respiration = 4.2 - 0.3 = 3.9 μmol/m2/s (subtracting abiotic CO2 release from sterile soil). Fungicide-treated soil respiration = 1.8 - 0.3 = 1.5 μmol/m2/s (bacterial/root respiration only). Therefore, fungal respiration = 3.9 - 1.5 = 2.4 μmol/m2/s, representing approximately 62% of biological soil respiration (2.4/3.9). This is consistent with published estimates that fungi contribute 40-60% of total heterotrophic soil respiration in forest ecosystems. Fungi dominate soil carbon cycling because: (1) they are the primary decomposers of plant litter and woody debris, (2) mycorrhizal fungi receive substantial carbon from plant hosts, and (3) fungal biomass in forest soils typically exceeds bacterial biomass. This finding has important implications for understanding global carbon cycling and predicting soil carbon responses to climate change.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -483,7 +476,7 @@
         "producing floating sporangia that travel along water films"
       ],
       "correctAnswer": "C",
-      "explanation": "Pilobolus (Mucorales) has evolved one of the most remarkable dispersal mechanisms in nature. This coprophilous (dung-inhabiting) fungus grows on herbivore dung and needs to project its sporangia away from the dung to reach vegetation that herbivores will eat. The sporangiophore is positively phototropic, bending toward light to aim the sporangium. Beneath the black sporangium, a subsporangial vesicle accumulates osmotically active solutes, generating tremendous turgor pressure. When the vesicle ruptures, the sporangium is launched at initial accelerations exceeding 20,000g\u2014one of the highest accelerations in any biological system. The projectile can travel up to 2.5 meters. The sticky sporangium adheres to grass blades, where it is consumed by herbivores, passes through the digestive tract, and germinates on fresh dung. This completes a lifecycle optimized around herbivore ecology.",
+      "explanation": "Pilobolus (Mucorales) has evolved one of the most remarkable dispersal mechanisms in nature. This coprophilous (dung-inhabiting) fungus grows on herbivore dung and needs to project its sporangia away from the dung to reach vegetation that herbivores will eat. The sporangiophore is positively phototropic, bending toward light to aim the sporangium. Beneath the black sporangium, a subsporangial vesicle accumulates osmotically active solutes, generating tremendous turgor pressure. When the vesicle ruptures, the sporangium is launched at initial accelerations exceeding 20,000g—one of the highest accelerations in any biological system. The projectile can travel up to 2.5 meters. The sticky sporangium adheres to grass blades, where it is consumed by herbivores, passes through the digestive tract, and germinates on fresh dung. This completes a lifecycle optimized around herbivore ecology.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -495,7 +488,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A study measures decomposition rates of different substrates by various fungi: Cellulose by brown rot fungi \u2014 85% in 6 months; Cellulose by white rot fungi \u2014 90% in 6 months; Lignin by brown rot fungi \u2014 5% in 6 months; Lignin by white rot fungi \u2014 75% in 6 months. This data demonstrates:",
+      "question": "A study measures decomposition rates of different substrates by various fungi: Cellulose by brown rot fungi — 85% in 6 months; Cellulose by white rot fungi — 90% in 6 months; Lignin by brown rot fungi — 5% in 6 months; Lignin by white rot fungi — 75% in 6 months. This data demonstrates:",
       "options": [
         "White rot fungi are distinguished by their ability to decompose lignin, while brown rot fungi primarily attack cellulose",
         "Both fungal types decompose all substrates equally",
@@ -523,7 +516,7 @@
         "measuring soil pH to determine optimal growth conditions"
       ],
       "correctAnswer": "A",
-      "explanation": "Quorum sensing (QS) in fungi is a cell-density-dependent communication system that coordinates multicellular behaviors. The best-characterized fungal QS system is in Candida albicans, which uses farnesol and tyrosol as signaling molecules. At high cell densities, farnesol accumulates and inhibits the yeast-to-hypha transition, while tyrosol promotes it at low densities. This regulation affects biofilm formation\u2014structured communities of cells attached to surfaces and embedded in an extracellular matrix. Candida biofilms on medical devices are clinically significant because they are highly resistant to antifungal drugs and immune clearance. Other fungi also show QS-like behaviors: the phytopathogen Ophiostoma produces dimorphism-regulating factors, and Cryptococcus neoformans uses peptide signals. Fungal QS parallels bacterial QS systems but uses different signal molecules, representing convergent evolution of social coordination mechanisms.",
+      "explanation": "Quorum sensing (QS) in fungi is a cell-density-dependent communication system that coordinates multicellular behaviors. The best-characterized fungal QS system is in Candida albicans, which uses farnesol and tyrosol as signaling molecules. At high cell densities, farnesol accumulates and inhibits the yeast-to-hypha transition, while tyrosol promotes it at low densities. This regulation affects biofilm formation—structured communities of cells attached to surfaces and embedded in an extracellular matrix. Candida biofilms on medical devices are clinically significant because they are highly resistant to antifungal drugs and immune clearance. Other fungi also show QS-like behaviors: the phytopathogen Ophiostoma produces dimorphism-regulating factors, and Cryptococcus neoformans uses peptide signals. Fungal QS parallels bacterial QS systems but uses different signal molecules, representing convergent evolution of social coordination mechanisms.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -563,7 +556,7 @@
         "AM fungi (Glomeromycota) penetrate root cortical cell walls and form branched structures (arbuscules) inside cells for nutrient exchange, while ECM fungi (mainly Basidiomycota and Ascomycota) form a dense hyphal sheath around roots and a Hartig net between cortical cells but do not penetrate cell walls"
       ],
       "correctAnswer": "D",
-      "explanation": "AM and ECM represent distinct symbiotic architectures: (1) Arbuscular mycorrhizae (AM): Formed by Glomeromycota (obligate symbionts). Hyphae penetrate root cortical cell walls (but not plasma membrane) to form highly branched arbuscules (tree-like structures)\u2014the primary site of nutrient exchange. Also form vesicles (lipid storage). No visible external structures (no sheath or fruiting bodies). Colonize ~80% of plant species. (2) Ectomycorrhizae (ECM): Formed mainly by Basidiomycota and Ascomycota. Hyphae form a mantle (sheath) around root tips and grow between cortical cells forming the Hartig net\u2014but never penetrate cell walls. Produce visible fruiting bodies (mushrooms, truffles). Associate primarily with temperate/boreal tree families (Pinaceae, Fagaceae, Betulaceae). (3) Functional differences: AM fungi primarily provide phosphorus; ECM fungi provide both phosphorus and nitrogen (some can access organic N directly via protease secretion). (4) Ecological pattern: AM dominates in tropical forests and grasslands; ECM dominates in boreal and temperate forests. The ECM-AM boundary affects nutrient cycling, decomposition rates, and soil carbon storage.",
+      "explanation": "AM and ECM represent distinct symbiotic architectures: (1) Arbuscular mycorrhizae (AM): Formed by Glomeromycota (obligate symbionts). Hyphae penetrate root cortical cell walls (but not plasma membrane) to form highly branched arbuscules (tree-like structures)—the primary site of nutrient exchange. Also form vesicles (lipid storage). No visible external structures (no sheath or fruiting bodies). Colonize ~80% of plant species. (2) Ectomycorrhizae (ECM): Formed mainly by Basidiomycota and Ascomycota. Hyphae form a mantle (sheath) around root tips and grow between cortical cells forming the Hartig net—but never penetrate cell walls. Produce visible fruiting bodies (mushrooms, truffles). Associate primarily with temperate/boreal tree families (Pinaceae, Fagaceae, Betulaceae). (3) Functional differences: AM fungi primarily provide phosphorus; ECM fungi provide both phosphorus and nitrogen (some can access organic N directly via protease secretion). (4) Ecological pattern: AM dominates in tropical forests and grasslands; ECM dominates in boreal and temperate forests. The ECM-AM boundary affects nutrient cycling, decomposition rates, and soil carbon storage.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -583,7 +576,7 @@
         "karyogamy, meiosis, and typically one post-meiotic mitosis, producing eight ascospores"
       ],
       "correctAnswer": "D",
-      "explanation": "The ascus is the defining structure of Ascomycota. It is a sac-shaped cell in which the final stages of sexual reproduction occur. Within the ascus: (1) karyogamy\u2014fusion of the two haploid nuclei from the dikaryotic state to form a transient diploid nucleus; (2) meiosis\u2014the diploid nucleus undergoes meiosis to produce four haploid nuclei; (3) post-meiotic mitosis\u2014typically one mitotic division produces eight haploid nuclei, each incorporated into an ascospore. The eight ascospores are arranged linearly within the ascus in an order that directly reflects the meiotic divisions, making the ascus valuable for tetrad analysis in genetics. Asci may be borne in various types of fruiting bodies: apothecia (cup-shaped), perithecia (flask-shaped), or cleistothecia (closed spheres). The turgor-based active discharge of ascospores is a hallmark of many ascomycetes.",
+      "explanation": "The ascus is the defining structure of Ascomycota. It is a sac-shaped cell in which the final stages of sexual reproduction occur. Within the ascus: (1) karyogamy—fusion of the two haploid nuclei from the dikaryotic state to form a transient diploid nucleus; (2) meiosis—the diploid nucleus undergoes meiosis to produce four haploid nuclei; (3) post-meiotic mitosis—typically one mitotic division produces eight haploid nuclei, each incorporated into an ascospore. The eight ascospores are arranged linearly within the ascus in an order that directly reflects the meiotic divisions, making the ascus valuable for tetrad analysis in genetics. Asci may be borne in various types of fruiting bodies: apothecia (cup-shaped), perithecia (flask-shaped), or cleistothecia (closed spheres). The turgor-based active discharge of ascospores is a hallmark of many ascomycetes.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -615,7 +608,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Antifungal susceptibility testing results for a clinical Candida isolate: Fluconazole MIC \u2014 64 \u03bcg/mL (resistant); Amphotericin B MIC \u2014 0.5 \u03bcg/mL (susceptible); Caspofungin MIC \u2014 0.25 \u03bcg/mL (susceptible); Flucytosine MIC \u2014 16 \u03bcg/mL (intermediate). Which treatment strategy is most appropriate?",
+      "question": "Antifungal susceptibility testing results for a clinical Candida isolate: Fluconazole MIC — 64 μg/mL (resistant); Amphotericin B MIC — 0.5 μg/mL (susceptible); Caspofungin MIC — 0.25 μg/mL (susceptible); Flucytosine MIC — 16 μg/mL (intermediate). Which treatment strategy is most appropriate?",
       "options": [
         "Use fluconazole at a higher dose since the organism is resistant at standard doses",
         "Use amphotericin B or caspofungin, which show susceptibility, and avoid fluconazole",
@@ -623,7 +616,7 @@
         "Do not treat, as some resistance indicates the infection is untreatable"
       ],
       "correctAnswer": "B",
-      "explanation": "Antifungal susceptibility testing (AST) guides treatment decisions by identifying which drugs can achieve sufficient concentrations at the site of infection to inhibit or kill the pathogen. The minimum inhibitory concentration (MIC) is compared to established breakpoints. For this Candida isolate: Fluconazole MIC of 64 \u03bcg/mL indicates resistance\u2014the drug cannot achieve sufficient tissue concentrations to be effective, so it should be avoided. Amphotericin B (MIC 0.5 \u03bcg/mL) and caspofungin (MIC 0.25 \u03bcg/mL) show clear susceptibility and are appropriate choices. Amphotericin B targets ergosterol in fungal membranes, while caspofungin inhibits beta-1,3-glucan synthase in fungal cell walls\u2014these distinct mechanisms explain how an organism can be resistant to one antifungal class while susceptible to others. Flucytosine at intermediate susceptibility could be used in combination therapy but should not be used alone due to rapid resistance development.",
+      "explanation": "Antifungal susceptibility testing (AST) guides treatment decisions by identifying which drugs can achieve sufficient concentrations at the site of infection to inhibit or kill the pathogen. The minimum inhibitory concentration (MIC) is compared to established breakpoints. For this Candida isolate: Fluconazole MIC of 64 μg/mL indicates resistance—the drug cannot achieve sufficient tissue concentrations to be effective, so it should be avoided. Amphotericin B (MIC 0.5 μg/mL) and caspofungin (MIC 0.25 μg/mL) show clear susceptibility and are appropriate choices. Amphotericin B targets ergosterol in fungal membranes, while caspofungin inhibits beta-1,3-glucan synthase in fungal cell walls—these distinct mechanisms explain how an organism can be resistant to one antifungal class while susceptible to others. Flucytosine at intermediate susceptibility could be used in combination therapy but should not be used alone due to rapid resistance development.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -635,7 +628,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Carbon-14 dating and growth ring analysis of a large Armillaria colony reveals: Colony diameter \u2014 600 m; Average annual radial growth \u2014 0.75 m; Estimated minimum age \u2014 400 years; Number of tree hosts killed \u2014 approximately 250 over the colony's lifetime. The killing rate of about 0.6 trees per year suggests:",
+      "question": "Carbon-14 dating and growth ring analysis of a large Armillaria colony reveals: Colony diameter — 600 m; Average annual radial growth — 0.75 m; Estimated minimum age — 400 years; Number of tree hosts killed — approximately 250 over the colony's lifetime. The killing rate of about 0.6 trees per year suggests:",
       "options": [
         "The fungus is an aggressive pathogen that rapidly decimates all trees in its path",
         "The colony will die within the next decade due to lack of hosts",
@@ -643,7 +636,7 @@
         "The fungus acts as a slow, chronic pathogen that gradually kills weakened trees over extended periods, functioning partly as a selective agent in forest dynamics"
       ],
       "correctAnswer": "D",
-      "explanation": "A killing rate of approximately 0.6 trees per year over 400 years for a colony covering 28 hectares indicates that Armillaria acts as a chronic, slow pathogen rather than an acute epidemic disease. At this rate, the fungus selectively removes approximately one tree every 1.7 years from its territory\u2014primarily targeting stressed, suppressed, or weakened individuals. This pattern positions Armillaria as an ecological equivalent of a slow-acting predator that culls the weakest members of the population. By selectively killing stressed trees, Armillaria contributes to forest gap dynamics: tree death creates canopy openings that allow regeneration, increase light availability for understory plants, and create standing dead wood (snags) and downed wood that provides habitat for many organisms.",
+      "explanation": "A killing rate of approximately 0.6 trees per year over 400 years for a colony covering 28 hectares indicates that Armillaria acts as a chronic, slow pathogen rather than an acute epidemic disease. At this rate, the fungus selectively removes approximately one tree every 1.7 years from its territory—primarily targeting stressed, suppressed, or weakened individuals. This pattern positions Armillaria as an ecological equivalent of a slow-acting predator that culls the weakest members of the population. By selectively killing stressed trees, Armillaria contributes to forest gap dynamics: tree death creates canopy openings that allow regeneration, increase light availability for understory plants, and create standing dead wood (snags) and downed wood that provides habitat for many organisms.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -663,7 +656,7 @@
         "interconnected mycorrhizal fungal networks in forest soil that facilitate nutrient and signal exchange between trees"
       ],
       "correctAnswer": "D",
-      "explanation": "The 'wood wide web' is a popular term for common mycorrhizal networks (CMNs)\u2014underground fungal networks that connect the roots of multiple trees and plants in a forest. Ectomycorrhizal fungi, in particular, form extensive hyphal networks that can link trees of the same or different species. Research has demonstrated that these networks can transfer carbon from 'donor' trees (often large, well-lit trees) to 'receiver' trees (often shaded seedlings), potentially subsidizing the growth of understory plants. The networks may also transfer nitrogen, phosphorus, water, and even defense signaling molecules. Some researchers argue that old-growth 'mother trees' serve as network hubs that support regeneration. However, the extent and significance of CMN resource transfer in natural forests remains actively debated.",
+      "explanation": "The 'wood wide web' is a popular term for common mycorrhizal networks (CMNs)—underground fungal networks that connect the roots of multiple trees and plants in a forest. Ectomycorrhizal fungi, in particular, form extensive hyphal networks that can link trees of the same or different species. Research has demonstrated that these networks can transfer carbon from 'donor' trees (often large, well-lit trees) to 'receiver' trees (often shaded seedlings), potentially subsidizing the growth of understory plants. The networks may also transfer nitrogen, phosphorus, water, and even defense signaling molecules. Some researchers argue that old-growth 'mother trees' serve as network hubs that support regeneration. However, the extent and significance of CMN resource transfer in natural forests remains actively debated.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -683,7 +676,7 @@
         "Ascomycota and Basidiomycota"
       ],
       "correctAnswer": "D",
-      "explanation": "The Dikarya is a well-supported monophyletic clade comprising the Ascomycota (sac fungi) and Basidiomycota (club fungi). The name refers to the dikaryotic phase that is prominent in the life cycles of both phyla\u2014a stage where cells contain two genetically distinct haploid nuclei (n+n) that divide synchronously. Together, Ascomycota (~64,000 species) and Basidiomycota (~32,000 species) constitute the vast majority of described fungal species. They share additional synapomorphies including: septate hyphae with regular cross-walls containing central pores, similar enzyme systems for wood decomposition, and molecular phylogenetic markers. The Dikarya is consistently recovered as monophyletic in molecular analyses, and the group represents the most diverse and ecologically important fungal radiation, including most decomposers, mycorrhizal fungi, plant pathogens, lichens, and edible mushrooms.",
+      "explanation": "The Dikarya is a well-supported monophyletic clade comprising the Ascomycota (sac fungi) and Basidiomycota (club fungi). The name refers to the dikaryotic phase that is prominent in the life cycles of both phyla—a stage where cells contain two genetically distinct haploid nuclei (n+n) that divide synchronously. Together, Ascomycota (~64,000 species) and Basidiomycota (~32,000 species) constitute the vast majority of described fungal species. They share additional synapomorphies including: septate hyphae with regular cross-walls containing central pores, similar enzyme systems for wood decomposition, and molecular phylogenetic markers. The Dikarya is consistently recovered as monophyletic in molecular analyses, and the group represents the most diverse and ecologically important fungal radiation, including most decomposers, mycorrhizal fungi, plant pathogens, lichens, and edible mushrooms.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -703,7 +696,7 @@
         "are potent carcinogens that intercalate into DNA and cause liver cancer at chronic low-dose exposure"
       ],
       "correctAnswer": "D",
-      "explanation": "Aflatoxins produced by Aspergillus flavus and A. parasiticus are among the most potent naturally occurring carcinogens known. Aflatoxin B1, the most toxic, is metabolized by liver cytochrome P450 enzymes into a reactive epoxide that covalently binds to DNA, causing a characteristic G-to-T transversion mutation in the p53 tumor suppressor gene (at codon 249). Chronic exposure to low levels of aflatoxins in contaminated grains, peanuts, and tree nuts is a major cause of hepatocellular carcinoma (liver cancer), particularly in tropical developing countries where food storage conditions favor Aspergillus growth. Aflatoxin exposure synergizes with hepatitis B virus infection to dramatically increase liver cancer risk. The economic impact is enormous\u2014billions of dollars of crops are lost annually to aflatoxin contamination. Regulatory limits for aflatoxins in food are set at parts-per-billion levels due to their extreme toxicity.",
+      "explanation": "Aflatoxins produced by Aspergillus flavus and A. parasiticus are among the most potent naturally occurring carcinogens known. Aflatoxin B1, the most toxic, is metabolized by liver cytochrome P450 enzymes into a reactive epoxide that covalently binds to DNA, causing a characteristic G-to-T transversion mutation in the p53 tumor suppressor gene (at codon 249). Chronic exposure to low levels of aflatoxins in contaminated grains, peanuts, and tree nuts is a major cause of hepatocellular carcinoma (liver cancer), particularly in tropical developing countries where food storage conditions favor Aspergillus growth. Aflatoxin exposure synergizes with hepatitis B virus infection to dramatically increase liver cancer risk. The economic impact is enormous—billions of dollars of crops are lost annually to aflatoxin contamination. Regulatory limits for aflatoxins in food are set at parts-per-billion levels due to their extreme toxicity.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -723,7 +716,7 @@
         "the duplication of the entire genome within a single nucleus"
       ],
       "correctAnswer": "B",
-      "explanation": "Heterokaryosis\u2014the coexistence of genetically different nuclei within the same cytoplasm\u2014is a distinctive feature of fungal biology made possible by the syncytial (coenocytic or septate-with-pores) nature of fungal hyphae. Heterokaryosis can arise through: (1) hyphal anastomosis (fusion) between genetically different mycelia of the same species, (2) mutation in one nucleus but not others, or (3) the dikaryotic condition in Dikarya. Heterokaryosis provides a form of genetic flexibility analogous to diploidy: different nuclear genotypes can complement each other's deficiencies, allowing the mycelium to adapt to heterogeneous environments. Nuclear ratios can shift in response to environmental conditions, providing rapid phenotypic adaptation without genetic change. This 'somatic hybridization' through hyphal fusion is unique to fungi and contributes to their remarkable ecological versatility.",
+      "explanation": "Heterokaryosis—the coexistence of genetically different nuclei within the same cytoplasm—is a distinctive feature of fungal biology made possible by the syncytial (coenocytic or septate-with-pores) nature of fungal hyphae. Heterokaryosis can arise through: (1) hyphal anastomosis (fusion) between genetically different mycelia of the same species, (2) mutation in one nucleus but not others, or (3) the dikaryotic condition in Dikarya. Heterokaryosis provides a form of genetic flexibility analogous to diploidy: different nuclear genotypes can complement each other's deficiencies, allowing the mycelium to adapt to heterogeneous environments. Nuclear ratios can shift in response to environmental conditions, providing rapid phenotypic adaptation without genetic change. This 'somatic hybridization' through hyphal fusion is unique to fungi and contributes to their remarkable ecological versatility.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -743,7 +736,7 @@
         "the only organisms capable of fully decomposing lignin, recycling carbon and nutrients locked in woody plant material"
       ],
       "correctAnswer": "D",
-      "explanation": "Saprotrophic fungi are the primary decomposers of dead organic matter in terrestrial ecosystems, and white-rot basidiomycetes are the only organisms known to fully decompose lignin, the complex phenolic polymer that gives wood its rigidity and resistance to decay. Lignin is the second most abundant organic polymer on Earth (after cellulose) and contains approximately 30% of the carbon in terrestrial plant biomass. Without fungal lignin decomposition, dead woody material would accumulate indefinitely, locking up carbon and nutrients. The enzyme systems responsible\u2014lignin peroxidases, manganese peroxidases, and laccases\u2014generate highly reactive free radicals that break lignin's irregular, non-hydrolyzable bonds. The evolution of lignin-degrading enzymes in white-rot fungi during the Permian period may have contributed to the end of the Carboniferous coal-forming period.",
+      "explanation": "Saprotrophic fungi are the primary decomposers of dead organic matter in terrestrial ecosystems, and white-rot basidiomycetes are the only organisms known to fully decompose lignin, the complex phenolic polymer that gives wood its rigidity and resistance to decay. Lignin is the second most abundant organic polymer on Earth (after cellulose) and contains approximately 30% of the carbon in terrestrial plant biomass. Without fungal lignin decomposition, dead woody material would accumulate indefinitely, locking up carbon and nutrients. The enzyme systems responsible—lignin peroxidases, manganese peroxidases, and laccases—generate highly reactive free radicals that break lignin's irregular, non-hydrolyzable bonds. The evolution of lignin-degrading enzymes in white-rot fungi during the Permian period may have contributed to the end of the Carboniferous coal-forming period.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -763,7 +756,7 @@
         "Chytridiomycota"
       ],
       "correctAnswer": "C",
-      "explanation": "Penicillium is a member of the Ascomycota, the largest fungal phylum (~64,000 known species). The genus name refers to the brush-like arrangement (penicillus = 'little brush') of its conidiophores\u2014specialized hyphae that bear chains of asexual spores (conidia). Alexander Fleming's 1928 discovery that Penicillium notatum (now P. rubens) inhibited bacterial growth led to the development of penicillin, one of the most important medical discoveries in history. Penicillin works by inhibiting bacterial cell wall synthesis (specifically the cross-linking of peptidoglycan by transpeptidase enzymes), and it does not affect fungi because fungal cell walls contain chitin rather than peptidoglycan. Other important Ascomycota include Saccharomyces (baker's/brewer's yeast), Aspergillus, Neurospora (bread mold, important model organism), and truffles.",
+      "explanation": "Penicillium is a member of the Ascomycota, the largest fungal phylum (~64,000 known species). The genus name refers to the brush-like arrangement (penicillus = 'little brush') of its conidiophores—specialized hyphae that bear chains of asexual spores (conidia). Alexander Fleming's 1928 discovery that Penicillium notatum (now P. rubens) inhibited bacterial growth led to the development of penicillin, one of the most important medical discoveries in history. Penicillin works by inhibiting bacterial cell wall synthesis (specifically the cross-linking of peptidoglycan by transpeptidase enzymes), and it does not affect fungi because fungal cell walls contain chitin rather than peptidoglycan. Other important Ascomycota include Saccharomyces (baker's/brewer's yeast), Aspergillus, Neurospora (bread mold, important model organism), and truffles.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -783,7 +776,7 @@
         "attract beneficial insects that pollinate crop plants"
       ],
       "correctAnswer": "C",
-      "explanation": "Trichoderma species are widely used as biocontrol agents against plant-pathogenic fungi. Their mechanisms of action include: (1) Mycoparasitism\u2014Trichoderma hyphae actively seek, coil around, and penetrate pathogenic fungal hyphae, secreting cell-wall-degrading enzymes (chitinases, glucanases, proteases) that lyse the pathogen. (2) Competition for nutrients and space, preventing pathogen establishment. (3) Antibiosis\u2014production of volatile and non-volatile antibiotics (trichodermin, gliovirin, peptaibols) that inhibit pathogen growth. (4) Induction of systemic resistance in the host plant, priming plant defense responses against subsequent pathogen attack. (5) Enhancement of plant growth through production of auxin-like compounds and improved nutrient uptake. Trichoderma-based biocontrol products are among the most commercially successful biological fungicides, used against pathogens including Rhizoctonia, Pythium, Fusarium, and Sclerotinia.",
+      "explanation": "Trichoderma species are widely used as biocontrol agents against plant-pathogenic fungi. Their mechanisms of action include: (1) Mycoparasitism—Trichoderma hyphae actively seek, coil around, and penetrate pathogenic fungal hyphae, secreting cell-wall-degrading enzymes (chitinases, glucanases, proteases) that lyse the pathogen. (2) Competition for nutrients and space, preventing pathogen establishment. (3) Antibiosis—production of volatile and non-volatile antibiotics (trichodermin, gliovirin, peptaibols) that inhibit pathogen growth. (4) Induction of systemic resistance in the host plant, priming plant defense responses against subsequent pathogen attack. (5) Enhancement of plant growth through production of auxin-like compounds and improved nutrient uptake. Trichoderma-based biocontrol products are among the most commercially successful biological fungicides, used against pathogens including Rhizoctonia, Pythium, Fusarium, and Sclerotinia.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -795,7 +788,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A study compares ergosterol content (a proxy for fungal biomass) in decomposing oak leaf litter over 24 months: Month 0 \u2014 0 mg/g; Month 3 \u2014 2.5 mg/g; Month 6 \u2014 5.8 mg/g; Month 12 \u2014 8.1 mg/g; Month 18 \u2014 4.3 mg/g; Month 24 \u2014 2.1 mg/g. The peak at 12 months followed by decline most likely reflects:",
+      "question": "A study compares ergosterol content (a proxy for fungal biomass) in decomposing oak leaf litter over 24 months: Month 0 — 0 mg/g; Month 3 — 2.5 mg/g; Month 6 — 5.8 mg/g; Month 12 — 8.1 mg/g; Month 18 — 4.3 mg/g; Month 24 — 2.1 mg/g. The peak at 12 months followed by decline most likely reflects:",
       "options": [
         "seasonal variation in temperature with no biological significance",
         "contamination of samples at the 12-month collection point",
@@ -823,7 +816,7 @@
         "parasitic spores injected directly into nematode eggs"
       ],
       "correctAnswer": "C",
-      "explanation": "Predatory (nematophagous) fungi have evolved sophisticated trapping devices to capture and consume soil nematodes. Arthrobotrys species produce several types of traps: (1) Adhesive networks\u2014three-dimensional hyphal loops coated with adhesive that entangle passing nematodes. (2) Constricting rings\u2014three-celled ring structures that inflate rapidly (in 0.1 seconds) when a nematode enters, gripping the worm tightly. (3) Adhesive knobs\u2014sticky hyphal branches that adhere to nematode cuticle. Once captured, the fungus penetrates the nematode cuticle with specialized hyphae and digests the internal tissues. These trapping structures are typically induced by the presence of nematodes or their chemical signals, representing a remarkable example of phenotypic plasticity. Nematode-trapping fungi supplement their nitrogen nutrition through predation, particularly in nitrogen-poor environments.",
+      "explanation": "Predatory (nematophagous) fungi have evolved sophisticated trapping devices to capture and consume soil nematodes. Arthrobotrys species produce several types of traps: (1) Adhesive networks—three-dimensional hyphal loops coated with adhesive that entangle passing nematodes. (2) Constricting rings—three-celled ring structures that inflate rapidly (in 0.1 seconds) when a nematode enters, gripping the worm tightly. (3) Adhesive knobs—sticky hyphal branches that adhere to nematode cuticle. Once captured, the fungus penetrates the nematode cuticle with specialized hyphae and digests the internal tissues. These trapping structures are typically induced by the presence of nematodes or their chemical signals, representing a remarkable example of phenotypic plasticity. Nematode-trapping fungi supplement their nitrogen nutrition through predation, particularly in nitrogen-poor environments.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -863,7 +856,7 @@
         "producing compounds that alter the ant's neurotransmitter levels, compelling it to climb to an elevated position, bite a leaf vein, and die in a position optimal for spore dispersal"
       ],
       "correctAnswer": "D",
-      "explanation": "Ophiocordyceps unilateralis is a remarkable example of parasite-induced behavioral manipulation. The fungus infects carpenter ants through spore attachment and penetration of the cuticle. As the infection progresses, fungal cells proliferate throughout the ant's body, including surrounding (but notably not destroying) the brain. The fungus produces a cocktail of bioactive compounds that alter the ant's behavior: the infected ant leaves its colony, climbs to an elevated position (typically 20-30 cm above the forest floor), and bites down on a leaf vein or twig with a 'death grip' before dying. This elevated, humid microhabitat is optimal for the fungus to produce its fruiting body (stroma), which erupts from the ant's head and releases spores onto ants passing below. Recent research has shown the fungal cells form networks around the ant's muscle fibers, directly controlling the mandibles, while the brain remains relatively uninfected\u2014the fungus manipulates behavior peripherally rather than centrally.",
+      "explanation": "Ophiocordyceps unilateralis is a remarkable example of parasite-induced behavioral manipulation. The fungus infects carpenter ants through spore attachment and penetration of the cuticle. As the infection progresses, fungal cells proliferate throughout the ant's body, including surrounding (but notably not destroying) the brain. The fungus produces a cocktail of bioactive compounds that alter the ant's behavior: the infected ant leaves its colony, climbs to an elevated position (typically 20-30 cm above the forest floor), and bites down on a leaf vein or twig with a 'death grip' before dying. This elevated, humid microhabitat is optimal for the fungus to produce its fruiting body (stroma), which erupts from the ant's head and releases spores onto ants passing below. Recent research has shown the fungal cells form networks around the ant's muscle fibers, directly controlling the mandibles, while the brain remains relatively uninfected—the fungus manipulates behavior peripherally rather than centrally.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -877,10 +870,10 @@
       "type": "MTF",
       "question": "Consider statements about fungal genetics and genomics:\n(I) The yeast Saccharomyces cerevisiae was the first eukaryote to have its complete genome sequenced\n(II) Fungi typically have small, compact genomes compared to plants and animals\n(III) Horizontal gene transfer has been documented between fungi and their plant hosts\n(IV) All fungi are strictly haploid throughout their entire life cycle\nWhich are TRUE?",
       "options": [
-        "TTTF \u2014 I, II, and III are true",
-        "TTFT \u2014 I, II, and IV are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TFTF \u2014 I and III are true"
+        "TTTF — I, II, and III are true",
+        "TTFT — I, II, and IV are true",
+        "TFTT — I, III, and IV are true",
+        "TFTF — I and III are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: The complete genome of S. cerevisiae was published in 1996, making it the first eukaryotic organism to have its genome fully sequenced. The genome is ~12 Mb with approximately 6,000 protein-coding genes across 16 chromosomes. Statement II is TRUE: Fungal genomes are generally compact, ranging from ~2.5 Mb (Encephalitozoon) to ~180 Mb (some Puccinia species), with most falling in the 25-50 Mb range. This is much smaller than typical plant (~500 Mb-150 Gb) or animal (~500 Mb-3 Gb) genomes, reflecting less repetitive DNA and fewer introns. Statement III is TRUE: Horizontal gene transfer (HGT) between fungi and plants has been documented in several cases, including transfer of biosynthetic gene clusters and transposable elements. Statement IV is FALSE: Fungi are not strictly haploid. Most fungi have a haploid vegetative phase, but the dikaryotic phase (n+n) in Dikarya and the brief diploid phase during sexual reproduction represent non-haploid states.",
@@ -917,10 +910,10 @@
       "type": "MTF",
       "question": "About the Microsporidia:\n(I) Microsporidia are now classified as highly reduced fungi based on molecular phylogenetic evidence\n(II) They are obligate intracellular parasites with extremely reduced genomes\n(III) Microsporidia possess large mitochondria with active oxidative phosphorylation\n(IV) They infect a wide range of hosts including insects, fish, and immunocompromised humans\nWhich are TRUE?",
       "options": [
-        "TTFT \u2014 I, II, and IV are true",
-        "TTTF \u2014 I, II, and III are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TTTT \u2014 All are true"
+        "TTFT — I, II, and IV are true",
+        "TTTF — I, II, and III are true",
+        "TFTT — I, III, and IV are true",
+        "TTTT — All are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: Molecular phylogenetics has placed Microsporidia within the fungal kingdom, likely as an early-diverging lineage or sister to the Dikarya. They were previously classified as protists but ribosomal RNA, tubulin, and other molecular markers confirm their fungal affiliation. Statement II is TRUE: Microsporidia are obligate intracellular parasites with among the smallest eukaryotic genomes known (~2.3 Mb in Encephalitozoon intestinalis), reflecting massive gene loss associated with their parasitic lifestyle. Statement III is FALSE: Microsporidia have lost mitochondria entirely, possessing only vestigial organelles called mitosomes that no longer perform oxidative phosphorylation. They rely entirely on host ATP through nucleotide transporters stolen via HGT from bacteria. Statement IV is TRUE: Microsporidia infect diverse animal hosts including insects (important in silkworm diseases), fish, and immunocompromised humans (especially AIDS patients, causing microsporidiosis).",
@@ -943,7 +936,7 @@
         "multiple polyploid nuclei from repeated endomitosis"
       ],
       "correctAnswer": "C",
-      "explanation": "The dikaryotic condition (n+n) is a distinctive feature of the Dikarya (Ascomycota and Basidiomycota). Following plasmogamy (fusion of cytoplasm from two compatible mating types), the two haploid nuclei coexist in each cell without immediately fusing. These paired nuclei divide synchronously during hyphal growth, maintained by specialized structures: clamp connections in Basidiomycota and crozier formation in Ascomycota. The dikaryotic phase can persist for extended periods\u2014in some Basidiomycota, the dikaryotic mycelium is the dominant vegetative stage, lasting years before forming fruiting bodies. Karyogamy (nuclear fusion to form a transient diploid) occurs only in specialized reproductive structures (basidia or asci). This separation of plasmogamy and karyogamy in time is unique among eukaryotes and may provide some advantages of diploidy (complementation of deleterious alleles) while maintaining the flexibility of haploidy.",
+      "explanation": "The dikaryotic condition (n+n) is a distinctive feature of the Dikarya (Ascomycota and Basidiomycota). Following plasmogamy (fusion of cytoplasm from two compatible mating types), the two haploid nuclei coexist in each cell without immediately fusing. These paired nuclei divide synchronously during hyphal growth, maintained by specialized structures: clamp connections in Basidiomycota and crozier formation in Ascomycota. The dikaryotic phase can persist for extended periods—in some Basidiomycota, the dikaryotic mycelium is the dominant vegetative stage, lasting years before forming fruiting bodies. Karyogamy (nuclear fusion to form a transient diploid) occurs only in specialized reproductive structures (basidia or asci). This separation of plasmogamy and karyogamy in time is unique among eukaryotes and may provide some advantages of diploidy (complementation of deleterious alleles) while maintaining the flexibility of haploidy.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -963,7 +956,7 @@
         "producing toxic alkaloids that deter herbivores and enhance plant drought tolerance"
       ],
       "correctAnswer": "D",
-      "explanation": "Endophytic fungi live within plant tissues (particularly leaves and stems) without causing visible disease symptoms. Many endophytes form mutualistic relationships with their host plants, providing several benefits: (1) Production of toxic alkaloids (ergot alkaloids, lolines, peramine) that deter herbivorous insects and grazing mammals\u2014this is well-documented in grass endophytes (Epichloe/Neotyphodium species in fescue and ryegrass). (2) Enhanced drought tolerance through osmotic adjustment and improved root function. (3) Increased resistance to pathogens through competition, antibiotic production, and induction of host defense responses. (4) Enhanced nutrient acquisition. In return, the endophyte receives photosynthetic carbon and a protected habitat. The ecological and agricultural importance of endophytes is increasingly recognized, with endophyte-enhanced grass cultivars used in turfgrass and forage production for improved pest resistance.",
+      "explanation": "Endophytic fungi live within plant tissues (particularly leaves and stems) without causing visible disease symptoms. Many endophytes form mutualistic relationships with their host plants, providing several benefits: (1) Production of toxic alkaloids (ergot alkaloids, lolines, peramine) that deter herbivorous insects and grazing mammals—this is well-documented in grass endophytes (Epichloe/Neotyphodium species in fescue and ryegrass). (2) Enhanced drought tolerance through osmotic adjustment and improved root function. (3) Increased resistance to pathogens through competition, antibiotic production, and induction of host defense responses. (4) Enhanced nutrient acquisition. In return, the endophyte receives photosynthetic carbon and a protected habitat. The ecological and agricultural importance of endophytes is increasingly recognized, with endophyte-enhanced grass cultivars used in turfgrass and forage production for improved pest resistance.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -977,13 +970,13 @@
       "type": "MTF",
       "question": "About mycorrhizal symbioses:\n(I) Ectomycorrhizal fungi form a mantle around the root and a Hartig net between cortical cells, but do not penetrate cell walls\n(II) Arbuscular mycorrhizal fungi penetrate root cortical cell walls but not the plasma membrane\n(III) Mycorrhizal networks can transfer nutrients between connected plants ('wood wide web')\n(IV) Mycorrhizal associations always benefit the plant and never the fungus\nWhich are TRUE?",
       "options": [
-        "TTTF \u2014 I, II, and III are true",
-        "TTFT \u2014 I, II, and IV are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TTTT \u2014 All are true"
+        "TTTF — I, II, and III are true",
+        "TTFT — I, II, and IV are true",
+        "TFTT — I, III, and IV are true",
+        "TTTT — All are true"
       ],
       "correctAnswer": "A",
-      "explanation": "Statement I is TRUE: Ectomycorrhizal (ECM) fungi form a dense hyphal sheath (mantle) around root tips and extend hyphae between cortical cells forming the Hartig net\u2014a network of intercellular hyphae that increases the surface area for nutrient exchange. ECM fungi do not penetrate root cell walls. Statement II is TRUE: Arbuscular mycorrhizal (AM) fungi penetrate the cell wall of root cortical cells (but not the plasma membrane) to form arbuscules\u2014highly branched structures enclosed within an invagination of the host cell membrane, creating an enormous surface area for nutrient exchange. Statement III is TRUE: Common mycorrhizal networks (CMNs) can connect multiple plants of the same or different species, allowing transfer of carbon, nutrients, and even defense signals between plants\u2014a phenomenon sometimes called the 'wood wide web.' Statement IV is FALSE: Mycorrhizal associations are mutualistic\u2014both partners benefit. The fungus receives carbon (sugars, lipids) from the plant.",
+      "explanation": "Statement I is TRUE: Ectomycorrhizal (ECM) fungi form a dense hyphal sheath (mantle) around root tips and extend hyphae between cortical cells forming the Hartig net—a network of intercellular hyphae that increases the surface area for nutrient exchange. ECM fungi do not penetrate root cell walls. Statement II is TRUE: Arbuscular mycorrhizal (AM) fungi penetrate the cell wall of root cortical cells (but not the plasma membrane) to form arbuscules—highly branched structures enclosed within an invagination of the host cell membrane, creating an enormous surface area for nutrient exchange. Statement III is TRUE: Common mycorrhizal networks (CMNs) can connect multiple plants of the same or different species, allowing transfer of carbon, nutrients, and even defense signals between plants—a phenomenon sometimes called the 'wood wide web.' Statement IV is FALSE: Mycorrhizal associations are mutualistic—both partners benefit. The fungus receives carbon (sugars, lipids) from the plant.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1075,7 +1068,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Growth rate measurements for Armillaria ostoyae (honey fungus) in forest soil: Annual radial expansion \u2014 0.5-1.0 m/year; Current colony extent \u2014 965 hectares; Estimated age \u2014 2,400 years; Estimated biomass \u2014 6,000 tonnes. These data support Armillaria as:",
+      "question": "Growth rate measurements for Armillaria ostoyae (honey fungus) in forest soil: Annual radial expansion — 0.5-1.0 m/year; Current colony extent — 965 hectares; Estimated age — 2,400 years; Estimated biomass — 6,000 tonnes. These data support Armillaria as:",
       "options": [
         "the fastest-growing organism on Earth",
         "evidence that fungi are immortal and cannot die of natural causes",
@@ -1103,7 +1096,7 @@
         "Compare root phosphorus concentrations in species that form ECM versus AM associations"
       ],
       "correctAnswer": "A",
-      "explanation": "Using radioactive 33P as a tracer provides direct, quantitative evidence of phosphorus transfer through common mycorrhizal networks. The experimental design: (1) Inject 33P-labeled phosphate into the root zone of a dying tree (donor). (2) After a defined period, harvest root and leaf tissue from neighboring trees and measure 33P incorporation using scintillation counting. (3) Critical controls include: trees with CMN connections severed by trenching and root barriers (to distinguish CMN transfer from soil diffusion), trees at distances beyond CMN reach, and trees of non-mycorrhizal species. (4) Additional controls should include trees separated by mesh that allows hyphae but not roots to pass (25 \u03bcm mesh) versus mesh that blocks both (0.5 \u03bcm mesh). Detection of 33P in receiver trees connected by intact CMN but not in severed-CMN controls would provide strong evidence for network-mediated phosphorus transfer.",
+      "explanation": "Using radioactive 33P as a tracer provides direct, quantitative evidence of phosphorus transfer through common mycorrhizal networks. The experimental design: (1) Inject 33P-labeled phosphate into the root zone of a dying tree (donor). (2) After a defined period, harvest root and leaf tissue from neighboring trees and measure 33P incorporation using scintillation counting. (3) Critical controls include: trees with CMN connections severed by trenching and root barriers (to distinguish CMN transfer from soil diffusion), trees at distances beyond CMN reach, and trees of non-mycorrhizal species. (4) Additional controls should include trees separated by mesh that allows hyphae but not roots to pass (25 μm mesh) versus mesh that blocks both (0.5 μm mesh). Detection of 33P in receiver trees connected by intact CMN but not in severed-CMN controls would provide strong evidence for network-mediated phosphorus transfer.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1118,12 +1111,12 @@
       "question": "Fungi obtain nutrition through absorptive heterotrophy. What specific enzymatic strategy allows saprotrophic fungi to decompose lignin, the most recalcitrant structural polymer in wood?",
       "options": [
         "Fungi use cellulase to decompose lignin directly",
-        "White-rot basidiomycetes secrete extracellular lignin peroxidases and manganese peroxidases that generate highly reactive free radicals, which non-specifically oxidize and cleave the complex aromatic polymer of lignin\u2014a process no other organisms perform as effectively",
+        "White-rot basidiomycetes secrete extracellular lignin peroxidases and manganese peroxidases that generate highly reactive free radicals, which non-specifically oxidize and cleave the complex aromatic polymer of lignin—a process no other organisms perform as effectively",
         "Fungi only decompose simple sugars, not structural polymers",
         "Lignin decomposes spontaneously without enzymatic action"
       ],
       "correctAnswer": "B",
-      "explanation": "Lignin decomposition by fungi is ecologically critical: (1) Lignin structure: A complex, irregular aromatic polymer of phenylpropanoid units (coniferyl, sinapyl, p-coumaryl alcohols) cross-linked by diverse C-C and C-O-C bonds. Its irregularity and hydrophobicity make it extremely resistant to enzymatic attack. (2) White-rot fungi (primarily basidiomycetes: Phanerochaete chrysosporium, Trametes versicolor): Produce lignin peroxidase (LiP), manganese peroxidase (MnP), and laccase. These enzymes generate free radicals that attack lignin non-specifically\u2014the irregularity of lignin requires a non-specific oxidative mechanism. (3) Brown-rot fungi: Degrade cellulose but modify lignin only partially (demethylation), leaving a brown residue. (4) Evolutionary importance: The evolution of lignin peroxidases in Agaricomycetes (~290 Mya) may have ended the Carboniferous period\u2014before these enzymes evolved, dead wood accumulated without decomposition, forming vast coal deposits. The appearance of effective lignin decomposition reduced carbon burial rates. (5) Biotechnology: Lignin-degrading enzymes are used in biofuel production, paper pulping, and bioremediation of persistent organic pollutants.",
+      "explanation": "Lignin decomposition by fungi is ecologically critical: (1) Lignin structure: A complex, irregular aromatic polymer of phenylpropanoid units (coniferyl, sinapyl, p-coumaryl alcohols) cross-linked by diverse C-C and C-O-C bonds. Its irregularity and hydrophobicity make it extremely resistant to enzymatic attack. (2) White-rot fungi (primarily basidiomycetes: Phanerochaete chrysosporium, Trametes versicolor): Produce lignin peroxidase (LiP), manganese peroxidase (MnP), and laccase. These enzymes generate free radicals that attack lignin non-specifically—the irregularity of lignin requires a non-specific oxidative mechanism. (3) Brown-rot fungi: Degrade cellulose but modify lignin only partially (demethylation), leaving a brown residue. (4) Evolutionary importance: The evolution of lignin peroxidases in Agaricomycetes (~290 Mya) may have ended the Carboniferous period—before these enzymes evolved, dead wood accumulated without decomposition, forming vast coal deposits. The appearance of effective lignin decomposition reduced carbon burial rates. (5) Biotechnology: Lignin-degrading enzymes are used in biofuel production, paper pulping, and bioremediation of persistent organic pollutants.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1135,7 +1128,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Genome comparisons reveal that plant-parasitic fungi have expanded gene families encoding: secreted proteases \u2014 3x more than saprophytes; cell-wall-degrading enzymes targeting plant pectin \u2014 5x more; small secreted proteins (effectors) \u2014 10x more; but have reduced: genes for lignin degradation \u2014 0.2x that of saprophytes. This pattern reflects:",
+      "question": "Genome comparisons reveal that plant-parasitic fungi have expanded gene families encoding: secreted proteases — 3x more than saprophytes; cell-wall-degrading enzymes targeting plant pectin — 5x more; small secreted proteins (effectors) — 10x more; but have reduced: genes for lignin degradation — 0.2x that of saprophytes. This pattern reflects:",
       "options": [
         "random gene duplication with no functional significance",
         "a sequencing error producing artifactual gene count differences",
@@ -1143,7 +1136,7 @@
         "convergent evolution with animal parasites in all gene categories"
       ],
       "correctAnswer": "C",
-      "explanation": "The genomic patterns reveal clear signatures of adaptive evolution for plant parasitism. Expansion of secreted proteases aids in degrading plant defense proteins and cell wall structural proteins. Massive expansion of pectin-degrading enzymes reflects the importance of degrading the pectin-rich middle lamella to penetrate between plant cells. The 10-fold expansion of small secreted proteins (effectors) is particularly significant\u2014these are molecules injected into plant cells to suppress immune responses, manipulate host metabolism, and create a favorable environment for fungal growth. Conversely, the reduction in lignin-degrading enzyme genes makes biological sense: plant parasites primarily attack living tissue where lignin is less accessible than in dead wood. This trade-off between pathogenic and saprophytic capacity reflects evolutionary specialization for the parasitic niche.",
+      "explanation": "The genomic patterns reveal clear signatures of adaptive evolution for plant parasitism. Expansion of secreted proteases aids in degrading plant defense proteins and cell wall structural proteins. Massive expansion of pectin-degrading enzymes reflects the importance of degrading the pectin-rich middle lamella to penetrate between plant cells. The 10-fold expansion of small secreted proteins (effectors) is particularly significant—these are molecules injected into plant cells to suppress immune responses, manipulate host metabolism, and create a favorable environment for fungal growth. Conversely, the reduction in lignin-degrading enzyme genes makes biological sense: plant parasites primarily attack living tissue where lignin is less accessible than in dead wood. This trade-off between pathogenic and saprophytic capacity reflects evolutionary specialization for the parasitic niche.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1183,7 +1176,7 @@
         "Measure total fungal biomass in soil between the two plants"
       ],
       "correctAnswer": "A",
-      "explanation": "Testing whether CMNs transfer defense signals requires carefully designed controls to distinguish CMN-mediated signaling from other pathways (volatile organic compounds, root exudates in shared soil water). The experimental design should include: (1) CMN-connected pairs where only the donor is damaged\u2014if the receiver shows defense gene upregulation, signaling has occurred. (2) Physical barriers that block hyphal connections but allow shared soil solution, to distinguish CMN transfer from chemical diffusion through soil. (3) Completely separated pairs to control for volatile signaling (which can be addressed by activated carbon filters between plants). (4) Sham-damaged controls. Measuring defense gene expression (e.g., PR proteins, jasmonic acid pathway genes) in receiver plants at multiple time points after donor damage allows detection of signal transfer timing and magnitude.",
+      "explanation": "Testing whether CMNs transfer defense signals requires carefully designed controls to distinguish CMN-mediated signaling from other pathways (volatile organic compounds, root exudates in shared soil water). The experimental design should include: (1) CMN-connected pairs where only the donor is damaged—if the receiver shows defense gene upregulation, signaling has occurred. (2) Physical barriers that block hyphal connections but allow shared soil solution, to distinguish CMN transfer from chemical diffusion through soil. (3) Completely separated pairs to control for volatile signaling (which can be addressed by activated carbon filters between plants). (4) Sham-damaged controls. Measuring defense gene expression (e.g., PR proteins, jasmonic acid pathway genes) in receiver plants at multiple time points after donor damage allows detection of signal transfer timing and magnitude.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1203,7 +1196,7 @@
         "photosynthetic energy to propel spores through air using light-driven motors"
       ],
       "correctAnswer": "D",
-      "explanation": "Fungi have evolved diverse and sophisticated spore dispersal mechanisms. Active ascospore discharge in Ascomycota involves building turgor pressure within the ascus until it forcibly ejects spores\u2014some species can launch spores at initial velocities exceeding 25 m/s over distances of several centimeters. Basidiospore discharge from basidia involves the Buller's drop mechanism, where surface tension energy from a small water droplet catapults spores off the sterigma. Pilobolus (the 'hat thrower') is a zygomycete that launches its entire sporangium using hydrostatic pressure, aiming toward light (phototropism) to project sporangia onto illuminated grass blades where they will be ingested by herbivores. However, no fungus uses photosynthetic energy or light-driven motors for spore propulsion.",
+      "explanation": "Fungi have evolved diverse and sophisticated spore dispersal mechanisms. Active ascospore discharge in Ascomycota involves building turgor pressure within the ascus until it forcibly ejects spores—some species can launch spores at initial velocities exceeding 25 m/s over distances of several centimeters. Basidiospore discharge from basidia involves the Buller's drop mechanism, where surface tension energy from a small water droplet catapults spores off the sterigma. Pilobolus (the 'hat thrower') is a zygomycete that launches its entire sporangium using hydrostatic pressure, aiming toward light (phototropism) to project sporangia onto illuminated grass blades where they will be ingested by herbivores. However, no fungus uses photosynthetic energy or light-driven motors for spore propulsion.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -1297,10 +1290,10 @@
       "type": "MTF",
       "question": "Consider the following statements about fungal reproduction:\n(I) Fungi can reproduce both sexually and asexually\n(II) Asexual reproduction in fungi often involves production of conidia or sporangiospores\n(III) Sexual reproduction in all fungi involves a prolonged diploid phase\n(IV) Mating type is determined by specific genetic loci rather than by sex chromosomes\nWhich are TRUE?",
       "options": [
-        "TTFT \u2014 I, II, and IV are true",
-        "TTTF \u2014 I, II, and III are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TTTT \u2014 All are true"
+        "TTFT — I, II, and IV are true",
+        "TTTF — I, II, and III are true",
+        "TFTT — I, III, and IV are true",
+        "TTTT — All are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: Most fungi can reproduce both sexually and asexually, and many spend most of their life cycle in the asexual (anamorphic) phase. Statement II is TRUE: Asexual spore production is the primary means of rapid propagation. Conidia are produced externally on conidiophores (Ascomycota, some others), while sporangiospores are produced internally within sporangia (Zygomycota). Statement III is FALSE: The diploid phase in most fungi is extremely brief. In Dikarya, cells spend extended periods in the dikaryotic (n+n) state, and the true diploid (2n) state exists only transiently in the ascus or basidium, immediately followed by meiosis. Even in other fungal groups, the diploid phase is typically short. Statement IV is TRUE: Fungal mating compatibility is determined by genetic loci (MAT loci) rather than sex chromosomes. Many fungi have two mating types, but some basidiomycetes have thousands of mating types determined by multiallelic MAT loci.",
@@ -1323,7 +1316,7 @@
         "the upper atmosphere at altitudes above 10 km"
       ],
       "correctAnswer": "B",
-      "explanation": "Neocallimastigomycota are obligately anaerobic fungi found in the rumen and hindgut of herbivorous mammals (cattle, sheep, horses, elephants). They are the only known obligately anaerobic fungi and lack mitochondria, instead possessing hydrogenosomes that produce hydrogen gas as a metabolic byproduct. These fungi are exceptionally efficient at degrading plant cell wall polysaccharides (cellulose, hemicellulose) using a multi-enzyme complex called the cellulosome\u2014a feature convergent with anaerobic bacteria. They produce rhizoidal growth that physically penetrates plant tissue, increasing the surface area available for enzymatic attack. Neocallimastigomycetes contribute significantly to fiber digestion in ruminants (estimated 5-10% of total fiber degradation) and are of biotechnological interest as sources of thermostable cellulases for biofuel production. Like chytrids, they produce flagellated zoospores.",
+      "explanation": "Neocallimastigomycota are obligately anaerobic fungi found in the rumen and hindgut of herbivorous mammals (cattle, sheep, horses, elephants). They are the only known obligately anaerobic fungi and lack mitochondria, instead possessing hydrogenosomes that produce hydrogen gas as a metabolic byproduct. These fungi are exceptionally efficient at degrading plant cell wall polysaccharides (cellulose, hemicellulose) using a multi-enzyme complex called the cellulosome—a feature convergent with anaerobic bacteria. They produce rhizoidal growth that physically penetrates plant tissue, increasing the surface area available for enzymatic attack. Neocallimastigomycetes contribute significantly to fiber digestion in ruminants (estimated 5-10% of total fiber degradation) and are of biotechnological interest as sources of thermostable cellulases for biofuel production. Like chytrids, they produce flagellated zoospores.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -1339,7 +1332,7 @@
       "options": [
         "Sequence the entire genome and compare all genes simultaneously",
         "Measure hyphal diameter under a microscope",
-        "Sequence the internal transcribed spacer (ITS) region of ribosomal DNA, which is the universal barcode for fungi\u2014ITS provides sufficient variation to distinguish most species while being conserved enough for PCR amplification across all fungal lineages, and an extensive reference database exists for comparison",
+        "Sequence the internal transcribed spacer (ITS) region of ribosomal DNA, which is the universal barcode for fungi—ITS provides sufficient variation to distinguish most species while being conserved enough for PCR amplification across all fungal lineages, and an extensive reference database exists for comparison",
         "Analyze cell wall biochemistry exclusively"
       ],
       "correctAnswer": "C",
@@ -1363,7 +1356,7 @@
         "cell walls made of cellulose instead of chitin"
       ],
       "correctAnswer": "A",
-      "explanation": "Chytridiomycota are the only major fungal group that retains flagellated cells. Their zoospores (and in some species, gametes) each possess a single posterior whiplash flagellum\u2014the ancestral condition for the Opisthokonta. This flagellum enables active swimming through water, reflecting the aquatic origin of fungi. Most other fungal lineages have lost flagella entirely, an adaptation to terrestrial existence where spore dispersal occurs through air currents, animal vectors, or water splashing. Chytrids are predominantly aquatic or soil-dwelling organisms, often parasitizing algae, other fungi, plant pollen, or amphibians. The chytrid Batrachochytrium dendrobatidis has devastated amphibian populations worldwide, causing the disease chytridiomycosis. Molecular phylogenetics places chytrids as an early-diverging fungal lineage, consistent with the ancestral nature of their flagellated zoospores.",
+      "explanation": "Chytridiomycota are the only major fungal group that retains flagellated cells. Their zoospores (and in some species, gametes) each possess a single posterior whiplash flagellum—the ancestral condition for the Opisthokonta. This flagellum enables active swimming through water, reflecting the aquatic origin of fungi. Most other fungal lineages have lost flagella entirely, an adaptation to terrestrial existence where spore dispersal occurs through air currents, animal vectors, or water splashing. Chytrids are predominantly aquatic or soil-dwelling organisms, often parasitizing algae, other fungi, plant pollen, or amphibians. The chytrid Batrachochytrium dendrobatidis has devastated amphibian populations worldwide, causing the disease chytridiomycosis. Molecular phylogenetics places chytrids as an early-diverging fungal lineage, consistent with the ancestral nature of their flagellated zoospores.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -1383,7 +1376,7 @@
         "transfer of photosynthesis genes from lichens to butterfly wings"
       ],
       "correctAnswer": "A",
-      "explanation": "One of the most striking documented cases of horizontal gene transfer (HGT) between fungi and animals involves carotenoid biosynthesis genes transferred from fungi to pea aphids (Acyrthosiphon pisum). Aphids are the only known animals that can synthesize carotenoid pigments de novo, using genes of clear fungal origin integrated into their genome. These genes encode carotenoid desaturase and carotenoid cyclase/synthase enzymes. Different allelic variants of the carotenoid desaturase gene determine whether aphids produce red or green pigmentation\u2014a trait with ecological significance as color morphs differ in predation vulnerability and parasitoid susceptibility. Phylogenetic analysis confirms these genes cluster with fungal, not animal, sequences, and they are flanked by insect transposable elements suggesting the mechanism of integration. This represents one of the most well-documented cases of functional HGT between kingdoms.",
+      "explanation": "One of the most striking documented cases of horizontal gene transfer (HGT) between fungi and animals involves carotenoid biosynthesis genes transferred from fungi to pea aphids (Acyrthosiphon pisum). Aphids are the only known animals that can synthesize carotenoid pigments de novo, using genes of clear fungal origin integrated into their genome. These genes encode carotenoid desaturase and carotenoid cyclase/synthase enzymes. Different allelic variants of the carotenoid desaturase gene determine whether aphids produce red or green pigmentation—a trait with ecological significance as color morphs differ in predation vulnerability and parasitoid susceptibility. Phylogenetic analysis confirms these genes cluster with fungal, not animal, sequences, and they are flanked by insect transposable elements suggesting the mechanism of integration. This represents one of the most well-documented cases of functional HGT between kingdoms.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -1415,7 +1408,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A study compares carbon allocation in ectomycorrhizal symbiosis: Plant carbon invested in ECM fungi \u2014 15-25% of total photosynthate; Phosphorus uptake enhancement \u2014 300-500% increase; Nitrogen uptake enhancement \u2014 200-300% increase; Drought survival improvement \u2014 40-60% increase. The cost-benefit analysis suggests:",
+      "question": "A study compares carbon allocation in ectomycorrhizal symbiosis: Plant carbon invested in ECM fungi — 15-25% of total photosynthate; Phosphorus uptake enhancement — 300-500% increase; Nitrogen uptake enhancement — 200-300% increase; Drought survival improvement — 40-60% increase. The cost-benefit analysis suggests:",
       "options": [
         "The plant loses more than it gains from the mycorrhizal association",
         "The significant carbon cost (15-25%) is offset by much larger gains in mineral nutrition and stress tolerance, representing a net fitness benefit",
@@ -1423,7 +1416,7 @@
         "Carbon investment in mycorrhizae reduces plant growth in all conditions"
       ],
       "correctAnswer": "B",
-      "explanation": "The data presents a clear cost-benefit picture of ectomycorrhizal symbiosis. The plant invests 15-25% of its photosynthate\u2014a substantial carbon cost\u2014to maintain the fungal partner. In return, phosphorus uptake increases 300-500% and nitrogen uptake increases 200-300%, along with a 40-60% improvement in drought survival. In nutrient-poor soils (where most ECM plants grow), the return on investment is highly favorable: a 25% carbon cost to achieve a 300-500% increase in the most limiting nutrient (phosphorus) represents an excellent trade. The enhanced drought tolerance provides additional insurance value. This explains why the mycorrhizal symbiosis has been maintained for over 400 million years of evolution. However, the net benefit is context-dependent\u2014in nutrient-rich soils, the carbon cost may exceed the nutritional benefit.",
+      "explanation": "The data presents a clear cost-benefit picture of ectomycorrhizal symbiosis. The plant invests 15-25% of its photosynthate—a substantial carbon cost—to maintain the fungal partner. In return, phosphorus uptake increases 300-500% and nitrogen uptake increases 200-300%, along with a 40-60% improvement in drought survival. In nutrient-poor soils (where most ECM plants grow), the return on investment is highly favorable: a 25% carbon cost to achieve a 300-500% increase in the most limiting nutrient (phosphorus) represents an excellent trade. The enhanced drought tolerance provides additional insurance value. This explains why the mycorrhizal symbiosis has been maintained for over 400 million years of evolution. However, the net benefit is context-dependent—in nutrient-rich soils, the carbon cost may exceed the nutritional benefit.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,

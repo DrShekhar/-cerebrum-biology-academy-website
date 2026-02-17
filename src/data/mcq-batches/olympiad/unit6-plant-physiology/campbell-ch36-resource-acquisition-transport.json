@@ -1,8 +1,10 @@
 {
-  "batchName": "Campbell Ch36 Resource Acquisition and Transport - Olympiad",
-  "subject": "Biology",
-  "chapter": "Resource Acquisition and Transport in Vascular Plants",
-  "class": "Olympiad",
+  "batch": {
+    "name": "Campbell Ch36 Resource Acquisition and Transport — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 93
+  },
   "questions": [
     {
       "type": "MCQ",

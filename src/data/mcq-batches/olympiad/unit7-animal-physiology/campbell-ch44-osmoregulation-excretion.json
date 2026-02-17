@@ -1,10 +1,10 @@
 {
-  "batchId": "olympiad-campbell-ch44-osmoregulation-excretion",
-  "subject": "Biology",
-  "chapter": "Osmoregulation and Excretion",
-  "campbellChapter": 44,
-  "campbellUnit": 7,
-  "totalQuestions": 102,
+  "batch": {
+    "name": "Campbell Ch44 Osmoregulation and Excretion — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 102
+  },
   "questions": [
     {
       "type": "MCQ",

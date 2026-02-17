@@ -1,9 +1,10 @@
 {
-  "batchId": "olympiad-campbell-ch46-animal-reproduction",
-  "subject": "Biology",
-  "topic": "Animal Reproduction",
-  "difficulty": "EXPERT",
-  "totalQuestions": 94,
+  "batch": {
+    "name": "Campbell Ch46 Animal Reproduction — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 94
+  },
   "questions": [
     {
       "type": "MCQ",

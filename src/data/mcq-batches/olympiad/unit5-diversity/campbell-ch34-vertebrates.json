@@ -1,9 +1,8 @@
 {
   "batch": {
-    "name": "Campbell Ch 34: Vertebrates",
-    "subject": "Biology",
-    "chapter": "Vertebrates",
-    "class": "Olympiad",
+    "name": "Campbell Ch34 The Origin and Evolution of Vertebrates — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
     "totalQuestions": 97
   },
   "questions": [
@@ -65,7 +64,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Conodonts \u2014 Vertebrate Affinity"
+      "topic": "Conodonts — Vertebrate Affinity"
     },
     {
       "type": "MTF",
@@ -77,7 +76,7 @@
         "FTTF"
       ],
       "correctAnswer": "A",
-      "explanation": "(I) FALSE \u2014 Adult tunicates undergo dramatic metamorphosis and lose the notochord, tail, and most neural structures. (II) TRUE \u2014 The free-swimming larva has a tail with a notochord, demonstrating chordate characteristics. (III) TRUE \u2014 Molecular phylogenetic analyses consistently place tunicates (not cephalochordates like lancelets) as the sister group to vertebrates, forming the clade Olfactores. (IV) TRUE \u2014 The tunic is a unique structure composed partly of tunicin, a cellulose-like polysaccharide, which is remarkable since cellulose production is extremely rare in animals.",
+      "explanation": "(I) FALSE — Adult tunicates undergo dramatic metamorphosis and lose the notochord, tail, and most neural structures. (II) TRUE — The free-swimming larva has a tail with a notochord, demonstrating chordate characteristics. (III) TRUE — Molecular phylogenetic analyses consistently place tunicates (not cephalochordates like lancelets) as the sister group to vertebrates, forming the clade Olfactores. (IV) TRUE — The tunic is a unique structure composed partly of tunicin, a cellulose-like polysaccharide, which is remarkable since cellulose production is extremely rare in animals.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -125,7 +124,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Jaw Evolution \u2014 Gill Arch Origin"
+      "topic": "Jaw Evolution — Gill Arch Origin"
     },
     {
       "type": "DATA_INTERPRETATION",
@@ -145,7 +144,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Comparative Bite Force \u2014 Skeletal Materials"
+      "topic": "Comparative Bite Force — Skeletal Materials"
     },
     {
       "type": "MCQ",
@@ -185,7 +184,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
-      "topic": "Lateral Line System \u2014 Neuromasts"
+      "topic": "Lateral Line System — Neuromasts"
     },
     {
       "type": "EXPERIMENTAL_DESIGN",
@@ -205,7 +204,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Electroreception \u2014 Experimental Design"
+      "topic": "Electroreception — Experimental Design"
     },
     {
       "type": "MCQ",
@@ -225,7 +224,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
-      "topic": "Swim Bladder \u2014 Gas Secretion"
+      "topic": "Swim Bladder — Gas Secretion"
     },
     {
       "type": "MCQ",
@@ -245,7 +244,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
-      "topic": "Coelacanths \u2014 Tetrapod Transition"
+      "topic": "Coelacanths — Tetrapod Transition"
     },
     {
       "type": "DATA_INTERPRETATION",
@@ -265,7 +264,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Tiktaalik \u2014 Transitional Fossil"
+      "topic": "Tiktaalik — Transitional Fossil"
     },
     {
       "type": "MCQ",
@@ -305,7 +304,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Chytrid Fungus \u2014 Amphibian Decline"
+      "topic": "Chytrid Fungus — Amphibian Decline"
     },
     {
       "type": "MTF",
@@ -317,7 +316,7 @@
         "TFFT"
       ],
       "correctAnswer": "A",
-      "explanation": "(I) TRUE \u2014 Thyroid hormones, particularly T3 (triiodothyronine), are the master regulators of amphibian metamorphosis, triggering virtually all metamorphic changes. (II) FALSE \u2014 Tail resorption occurs through programmed cell death (apoptosis), not bacterial necrosis. Thyroid hormones activate matrix metalloproteinases and apoptotic pathways in tail tissues. (III) TRUE \u2014 The lateral line system, which detects water movements, is lost during metamorphosis in species that transition to terrestrial life, as it is non-functional in air. (IV) TRUE \u2014 Tadpole hemoglobin has different oxygen-binding properties (higher affinity) than adult hemoglobin, and a hemoglobin switch occurs during metamorphosis, analogous to the fetal-to-adult hemoglobin switch in mammals.",
+      "explanation": "(I) TRUE — Thyroid hormones, particularly T3 (triiodothyronine), are the master regulators of amphibian metamorphosis, triggering virtually all metamorphic changes. (II) FALSE — Tail resorption occurs through programmed cell death (apoptosis), not bacterial necrosis. Thyroid hormones activate matrix metalloproteinases and apoptotic pathways in tail tissues. (III) TRUE — The lateral line system, which detects water movements, is lost during metamorphosis in species that transition to terrestrial life, as it is non-functional in air. (IV) TRUE — Tadpole hemoglobin has different oxygen-binding properties (higher affinity) than adult hemoglobin, and a hemoglobin switch occurs during metamorphosis, analogous to the fetal-to-adult hemoglobin switch in mammals.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -337,7 +336,7 @@
         "Lack of a copulatory organ (hemipenes), with reproduction occurring via cloacal apposition"
       ],
       "correctAnswer": "A",
-      "explanation": "Tuataras possess a unique dentition in which a single row of teeth on the lower jaw fits between two rows on the upper jaw. Critically, these teeth are acrodont (fused to the jawbone) and are not replaced \u2014 they gradually wear down over the animal's long lifespan (up to 100+ years), eventually reducing to the bone itself. No lizard has this exact dental arrangement. While tuataras do have a well-developed parietal eye, some lizards also possess this structure. The diapsid skull with complete temporal arches distinguishes them from many squamates but is a plesiomorphic retention. Tuataras do lack hemipenes, but this alone is less diagnostic than the dental pattern.",
+      "explanation": "Tuataras possess a unique dentition in which a single row of teeth on the lower jaw fits between two rows on the upper jaw. Critically, these teeth are acrodont (fused to the jawbone) and are not replaced — they gradually wear down over the animal's long lifespan (up to 100+ years), eventually reducing to the bone itself. No lizard has this exact dental arrangement. While tuataras do have a well-developed parietal eye, some lizards also possess this structure. The diapsid skull with complete temporal arches distinguishes them from many squamates but is a plesiomorphic retention. Tuataras do lack hemipenes, but this alone is less diagnostic than the dental pattern.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -345,7 +344,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Tuatara \u2014 Unique Features"
+      "topic": "Tuatara — Unique Features"
     },
     {
       "type": "MCQ",
@@ -385,7 +384,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "TSD \u2014 Aromatase Hypothesis"
+      "topic": "TSD — Aromatase Hypothesis"
     },
     {
       "type": "MCQ",
@@ -397,7 +396,7 @@
         "The forked tongue collects chemical particles and transfers them to the paired vomeronasal openings in the palate"
       ],
       "correctAnswer": "D",
-      "explanation": "In squamates, particularly snakes and monitor lizards, the forked tongue is the primary chemical sampling organ. The tongue flicks out, collecting chemical particles from the environment (both airborne and substrate-bound). When retracted, each fork delivers molecules to a corresponding paired opening of the vomeronasal organ located in the roof of the mouth. The bifurcation of the tongue may allow tropotaxis \u2014 comparing chemical concentrations on each side to determine the direction of a scent trail. The vomeronasal organ is distinct from the main olfactory system and sends signals via the accessory olfactory bulb rather than the main olfactory bulb.",
+      "explanation": "In squamates, particularly snakes and monitor lizards, the forked tongue is the primary chemical sampling organ. The tongue flicks out, collecting chemical particles from the environment (both airborne and substrate-bound). When retracted, each fork delivers molecules to a corresponding paired opening of the vomeronasal organ located in the roof of the mouth. The bifurcation of the tongue may allow tropotaxis — comparing chemical concentrations on each side to determine the direction of a scent trail. The vomeronasal organ is distinct from the main olfactory system and sends signals via the accessory olfactory bulb rather than the main olfactory bulb.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -429,7 +428,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A study compared wing loading (body mass/wing area) and aspect ratio (wingspan\u00b2/wing area) across four bird species:\n- Albatross: wing loading 120 N/m\u00b2, aspect ratio 15\n- Sparrow: wing loading 30 N/m\u00b2, aspect ratio 5\n- Falcon: wing loading 85 N/m\u00b2, aspect ratio 8\n- Vulture: wing loading 65 N/m\u00b2, aspect ratio 7\nWhich bird is BEST adapted for sustained soaring over open ocean with minimal flapping?",
+      "question": "A study compared wing loading (body mass/wing area) and aspect ratio (wingspan²/wing area) across four bird species:\n- Albatross: wing loading 120 N/m², aspect ratio 15\n- Sparrow: wing loading 30 N/m², aspect ratio 5\n- Falcon: wing loading 85 N/m², aspect ratio 8\n- Vulture: wing loading 65 N/m², aspect ratio 7\nWhich bird is BEST adapted for sustained soaring over open ocean with minimal flapping?",
       "options": [
         "Sparrow, due to lowest wing loading enabling slow flight",
         "Vulture, due to moderate wing loading and aspect ratio for thermal soaring",
@@ -437,7 +436,7 @@
         "Falcon, due to moderate values enabling versatile flight in all conditions"
       ],
       "correctAnswer": "C",
-      "explanation": "The albatross's extremely high aspect ratio (15) indicates long, narrow wings that produce high lift-to-drag ratios, ideal for dynamic soaring over open ocean where consistent winds provide energy. Dynamic soaring exploits wind speed gradients above ocean waves, requiring long wings with minimal induced drag. While the albatross has high wing loading (requiring higher airspeeds), this is advantageous for dynamic soaring as it enables energy extraction from wind gradients. Vultures use thermal soaring with broad wings (lower aspect ratio) suited for circling in rising air columns \u2014 a different soaring strategy. The sparrow's low wing loading suits burst flight in cluttered environments.",
+      "explanation": "The albatross's extremely high aspect ratio (15) indicates long, narrow wings that produce high lift-to-drag ratios, ideal for dynamic soaring over open ocean where consistent winds provide energy. Dynamic soaring exploits wind speed gradients above ocean waves, requiring long wings with minimal induced drag. While the albatross has high wing loading (requiring higher airspeeds), this is advantageous for dynamic soaring as it enables energy extraction from wind gradients. Vultures use thermal soaring with broad wings (lower aspect ratio) suited for circling in rising air columns — a different soaring strategy. The sparrow's low wing loading suits burst flight in cluttered environments.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -485,7 +484,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Avian Magnetoreception \u2014 Radical Pair"
+      "topic": "Avian Magnetoreception — Radical Pair"
     },
     {
       "type": "MCQ",
@@ -497,7 +496,7 @@
         "Hair covering the body for insulation"
       ],
       "correctAnswer": "A",
-      "explanation": "Viviparity with extended internal gestation is a feature of therian mammals (marsupials and placentals) that is absent in monotremes, which are oviparous (egg-laying). Monotremes lay leathery-shelled eggs and incubate them externally. All three groups (monotremes, marsupials, placentals) share mammary glands (though monotremes lack nipples), hair, and three middle ear ossicles \u2014 these are synapomorphies of Mammalia as a whole. The key distinction is the reproductive mode: monotremes retain the ancestral amniote condition of oviparity, while therians evolved viviparity.",
+      "explanation": "Viviparity with extended internal gestation is a feature of therian mammals (marsupials and placentals) that is absent in monotremes, which are oviparous (egg-laying). Monotremes lay leathery-shelled eggs and incubate them externally. All three groups (monotremes, marsupials, placentals) share mammary glands (though monotremes lack nipples), hair, and three middle ear ossicles — these are synapomorphies of Mammalia as a whole. The key distinction is the reproductive mode: monotremes retain the ancestral amniote condition of oviparity, while therians evolved viviparity.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -517,7 +516,7 @@
         "Molecular phylogenetics demonstrating that genes for middle ear ossicles are homologous to jaw joint genes in reptiles"
       ],
       "correctAnswer": "A",
-      "explanation": "Several synapsid (mammal-like reptile) fossils, particularly cynodonts like Morganucodon and Diarthrognathus, preserve a remarkable transitional condition: a double jaw joint where both the ancestral articular-quadrate joint and the derived dentary-squamosal joint are present simultaneously. This directly demonstrates the gradual transfer of the articular and quadrate bones from jaw function to auditory function. While embryological evidence (C) is also compelling \u2014 the malleus and incus do develop from the same neural crest-derived pharyngeal arch cartilages as the articular and quadrate \u2014 the fossil evidence of the double jaw joint provides the most direct, observable demonstration of this evolutionary transition.",
+      "explanation": "Several synapsid (mammal-like reptile) fossils, particularly cynodonts like Morganucodon and Diarthrognathus, preserve a remarkable transitional condition: a double jaw joint where both the ancestral articular-quadrate joint and the derived dentary-squamosal joint are present simultaneously. This directly demonstrates the gradual transfer of the articular and quadrate bones from jaw function to auditory function. While embryological evidence (C) is also compelling — the malleus and incus do develop from the same neural crest-derived pharyngeal arch cartilages as the articular and quadrate — the fossil evidence of the double jaw joint provides the most direct, observable demonstration of this evolutionary transition.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -537,7 +536,7 @@
         "Australia's isolation by continental drift after Gondwanan breakup prevented placental colonization until recent human introduction"
       ],
       "correctAnswer": "D",
-      "explanation": "Australia's marsupial-dominated fauna is primarily explained by continental drift and isolation. Australia separated from Antarctica approximately 45-30 million years ago, breaking the last Gondwanan connection. By this time, marsupials had colonized Australia (likely via South America and Antarctica when these continents were connected), but most placental lineages had not yet arrived. Australia's subsequent isolation prevented the invasion of diverse placental groups that came to dominate other continents. In this isolation, marsupials underwent adaptive radiation, evolving to fill ecological niches parallel to those occupied by placentals elsewhere \u2014 resulting in the striking convergent evolution between marsupial and placental forms.",
+      "explanation": "Australia's marsupial-dominated fauna is primarily explained by continental drift and isolation. Australia separated from Antarctica approximately 45-30 million years ago, breaking the last Gondwanan connection. By this time, marsupials had colonized Australia (likely via South America and Antarctica when these continents were connected), but most placental lineages had not yet arrived. Australia's subsequent isolation prevented the invasion of diverse placental groups that came to dominate other continents. In this isolation, marsupials underwent adaptive radiation, evolving to fill ecological niches parallel to those occupied by placentals elsewhere — resulting in the striking convergent evolution between marsupial and placental forms.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -585,7 +584,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Placental Evolution \u2014 Viral Contribution"
+      "topic": "Placental Evolution — Viral Contribution"
     },
     {
       "type": "MTF",
@@ -597,7 +596,7 @@
         "TTTF"
       ],
       "correctAnswer": "A",
-      "explanation": "(I) TRUE \u2014 Humans and chimpanzees share approximately 98.8% DNA sequence identity (sometimes rounded to 99%), making chimpanzees our closest living relatives. (II) TRUE \u2014 Fossil evidence clearly shows that bipedalism evolved in early hominins (e.g., Ardipithecus, Australopithecus) 4-6 million years ago, well before significant brain enlargement, which occurred primarily in the genus Homo starting around 2 million years ago. (III) FALSE \u2014 Neanderthals are not direct ancestors of modern humans but rather a sister species. While there was limited interbreeding (1-4% of non-African modern human DNA is Neanderthal-derived), Neanderthals represent a separate lineage that went extinct. (IV) TRUE \u2014 The earliest Homo fossils (H. habilis) date to approximately 2.5-2.8 million years ago in East Africa.",
+      "explanation": "(I) TRUE — Humans and chimpanzees share approximately 98.8% DNA sequence identity (sometimes rounded to 99%), making chimpanzees our closest living relatives. (II) TRUE — Fossil evidence clearly shows that bipedalism evolved in early hominins (e.g., Ardipithecus, Australopithecus) 4-6 million years ago, well before significant brain enlargement, which occurred primarily in the genus Homo starting around 2 million years ago. (III) FALSE — Neanderthals are not direct ancestors of modern humans but rather a sister species. While there was limited interbreeding (1-4% of non-African modern human DNA is Neanderthal-derived), Neanderthals represent a separate lineage that went extinct. (IV) TRUE — The earliest Homo fossils (H. habilis) date to approximately 2.5-2.8 million years ago in East Africa.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -625,7 +624,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
-      "topic": "Amniotic Egg \u2014 Terrestrial Adaptation"
+      "topic": "Amniotic Egg — Terrestrial Adaptation"
     },
     {
       "type": "EXPERIMENTAL_DESIGN",
@@ -665,7 +664,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
-      "topic": "Archosauria \u2014 Shared Features"
+      "topic": "Archosauria — Shared Features"
     },
     {
       "type": "MCQ",
@@ -677,7 +676,7 @@
         "An operculum that creates a one-way pumping mechanism over the gills"
       ],
       "correctAnswer": "D",
-      "explanation": "Most sharks lack an operculum, the bony gill cover found in osteichthyans that acts as a pump to draw water over the gills. Bony fishes use coordinated movements of the buccal cavity and operculum to create a nearly continuous, unidirectional water flow over the gills even while stationary. Without an operculum, most sharks must rely on ram ventilation (swimming with mouth open) to force water over their gills. Some species can use buccal pumping (muscular pumping of the buccal cavity), but this is less efficient than the opercular pump. Sharks do possess countercurrent exchange and hemoglobin \u2014 these are not the limiting factors.",
+      "explanation": "Most sharks lack an operculum, the bony gill cover found in osteichthyans that acts as a pump to draw water over the gills. Bony fishes use coordinated movements of the buccal cavity and operculum to create a nearly continuous, unidirectional water flow over the gills even while stationary. Without an operculum, most sharks must rely on ram ventilation (swimming with mouth open) to force water over their gills. Some species can use buccal pumping (muscular pumping of the buccal cavity), but this is less efficient than the opercular pump. Sharks do possess countercurrent exchange and hemoglobin — these are not the limiting factors.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -729,7 +728,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A population study of poison dart frogs (Dendrobates) measured toxin alkaloid concentrations in wild-caught versus captive-raised individuals from the same population. Wild frogs contained 150-200 \u03bcg/g alkaloids, while captive-raised frogs on a fruit fly diet contained <5 \u03bcg/g. When captive frogs were fed ants and mites from their native habitat, alkaloid levels rose to 120-160 \u03bcg/g within 8 weeks. What does this demonstrate about the source of their toxicity?",
+      "question": "A population study of poison dart frogs (Dendrobates) measured toxin alkaloid concentrations in wild-caught versus captive-raised individuals from the same population. Wild frogs contained 150-200 μg/g alkaloids, while captive-raised frogs on a fruit fly diet contained <5 μg/g. When captive frogs were fed ants and mites from their native habitat, alkaloid levels rose to 120-160 μg/g within 8 weeks. What does this demonstrate about the source of their toxicity?",
       "options": [
         "Poison dart frogs synthesize alkaloids de novo but require environmental triggers to activate the biosynthetic pathway",
         "The toxins are sequestered from dietary arthropod prey rather than biosynthesized by the frogs",
@@ -737,7 +736,7 @@
         "Alkaloid production is genetically determined but epigenetically silenced in captivity due to stress"
       ],
       "correctAnswer": "B",
-      "explanation": "The experiment demonstrates dietary sequestration of alkaloids. The near-absence of alkaloids in captive frogs fed fruit flies, combined with the rapid recovery of alkaloid levels when fed wild arthropod prey, clearly shows that the frogs obtain their toxins from their diet rather than synthesizing them. Dendrobatid frogs sequester alkaloids from ants, mites, and beetles they consume in the wild. They possess specialized alkaloid-binding proteins and membrane transporters that concentrate these dietary toxins in skin glands. The incomplete recovery (120-160 vs. 150-200 \u03bcg/g) likely reflects incomplete dietary matching. This dietary sequestration model explains why captive-bred poison dart frogs are non-toxic.",
+      "explanation": "The experiment demonstrates dietary sequestration of alkaloids. The near-absence of alkaloids in captive frogs fed fruit flies, combined with the rapid recovery of alkaloid levels when fed wild arthropod prey, clearly shows that the frogs obtain their toxins from their diet rather than synthesizing them. Dendrobatid frogs sequester alkaloids from ants, mites, and beetles they consume in the wild. They possess specialized alkaloid-binding proteins and membrane transporters that concentrate these dietary toxins in skin glands. The incomplete recovery (120-160 vs. 150-200 μg/g) likely reflects incomplete dietary matching. This dietary sequestration model explains why captive-bred poison dart frogs are non-toxic.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -752,12 +751,12 @@
       "question": "Some frog species in the genus Atelopus have experienced >90% population declines due to chytrid fungus, while sympatric species in the genus Eleutherodactylus are relatively unaffected. Which factor MOST likely explains this differential susceptibility?",
       "options": [
         "Eleutherodactylus species have thicker keratinized skin layers that resist fungal penetration",
-        "Atelopus species inhabit cooler, high-elevation stream habitats where Bd growth is optimal (17-25\u00b0C)",
+        "Atelopus species inhabit cooler, high-elevation stream habitats where Bd growth is optimal (17-25°C)",
         "Eleutherodactylus species are nocturnal and avoid UV radiation that activates Bd zoospores",
         "Atelopus species have smaller population sizes, making them more vulnerable to stochastic extinction"
       ],
       "correctAnswer": "B",
-      "explanation": "Batrachochytrium dendrobatidis (Bd) grows optimally at 17-25\u00b0C, which corresponds to the cool, humid conditions of high-elevation cloud forest streams where many Atelopus species are found. These stream-associated frogs are constantly in contact with water where Bd zoospores thrive. In contrast, many Eleutherodactylus species are terrestrial, direct-developing frogs that inhabit warmer lowland or mid-elevation habitats where temperatures may exceed the Bd growth optimum. The combination of thermal environment, microhabitat (aquatic vs. terrestrial), and host skin physiology explains the dramatic differential susceptibility between these genera.",
+      "explanation": "Batrachochytrium dendrobatidis (Bd) grows optimally at 17-25°C, which corresponds to the cool, humid conditions of high-elevation cloud forest streams where many Atelopus species are found. These stream-associated frogs are constantly in contact with water where Bd zoospores thrive. In contrast, many Eleutherodactylus species are terrestrial, direct-developing frogs that inhabit warmer lowland or mid-elevation habitats where temperatures may exceed the Bd growth optimum. The combination of thermal environment, microhabitat (aquatic vs. terrestrial), and host skin physiology explains the dramatic differential susceptibility between these genera.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -777,7 +776,7 @@
         "Feathers of any type, since feathers are unique to birds and not found in non-avian dinosaurs"
       ],
       "correctAnswer": "B",
-      "explanation": "Archaeopteryx is classified as a transitional form primarily due to its mosaic of features. The asymmetric flight feathers (indicating aerodynamic function) and reversed hallux (suggesting perching ability) are avian features, while the teeth, clawed fingers, and long bony tail are dinosaurian retentions. Importantly, hollow bones and furculae are NOT unique to birds \u2014 they are found in many theropod dinosaurs. Similarly, feathers are now known from numerous non-avian dinosaur lineages. Archaeopteryx lacked a keeled sternum, suggesting limited powered flight capability. The diagnostic combination is specifically the asymmetric feather vanes (for lift) plus the reversed hallux, alongside ancestral theropod features.",
+      "explanation": "Archaeopteryx is classified as a transitional form primarily due to its mosaic of features. The asymmetric flight feathers (indicating aerodynamic function) and reversed hallux (suggesting perching ability) are avian features, while the teeth, clawed fingers, and long bony tail are dinosaurian retentions. Importantly, hollow bones and furculae are NOT unique to birds — they are found in many theropod dinosaurs. Similarly, feathers are now known from numerous non-avian dinosaur lineages. Archaeopteryx lacked a keeled sternum, suggesting limited powered flight capability. The diagnostic combination is specifically the asymmetric feather vanes (for lift) plus the reversed hallux, alongside ancestral theropod features.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -805,7 +804,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
-      "topic": "K-Pg Mass Extinction \u2014 Survivors"
+      "topic": "K-Pg Mass Extinction — Survivors"
     },
     {
       "type": "MCQ",
@@ -854,10 +853,10 @@
         "Extremely rapid jaw closure speeds exceeding those of all other lizards",
         "A protrusible lower jaw that extends the gape width beyond the skull diameter",
         "Venomous saliva secreted from modified labial glands that paralyzes insect prey",
-        "Ballistic tongue projection using a catapult mechanism that achieves accelerations over 400 m/s\u00b2, powered by stored elastic energy"
+        "Ballistic tongue projection using a catapult mechanism that achieves accelerations over 400 m/s², powered by stored elastic energy"
       ],
       "correctAnswer": "D",
-      "explanation": "Chameleon tongue projection is one of the most remarkable examples of elastic energy storage in vertebrates. The tongue accelerator muscle loads elastic energy into collagen sheaths surrounding the entoglossal bone, then releases it in a catapult-like mechanism that achieves accelerations exceeding 400 m/s\u00b2 \u2014 far beyond what muscle contraction alone could produce. The tongue can extend up to twice the body length in under 0.07 seconds. This ballistic mechanism operates independently of muscle shortening speed, allowing even small, cold chameleons to capture prey effectively (thermal independence is especially advantageous for ectotherms). The sticky, club-shaped tongue tip adheres to prey through wet adhesion and suction.",
+      "explanation": "Chameleon tongue projection is one of the most remarkable examples of elastic energy storage in vertebrates. The tongue accelerator muscle loads elastic energy into collagen sheaths surrounding the entoglossal bone, then releases it in a catapult-like mechanism that achieves accelerations exceeding 400 m/s² — far beyond what muscle contraction alone could produce. The tongue can extend up to twice the body length in under 0.07 seconds. This ballistic mechanism operates independently of muscle shortening speed, allowing even small, cold chameleons to capture prey effectively (thermal independence is especially advantageous for ectotherms). The sticky, club-shaped tongue tip adheres to prey through wet adhesion and suction.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -945,7 +944,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Diving Physiology \u2014 Allometric Scaling"
+      "topic": "Diving Physiology — Allometric Scaling"
     },
     {
       "type": "MCQ",
@@ -977,7 +976,7 @@
         "TFFT"
       ],
       "correctAnswer": "A",
-      "explanation": "(I) TRUE \u2014 Marsupials have much shorter gestation periods than equivalent-sized placentals. For example, a kangaroo joey is born after ~33 days and continues development in the pouch. (II) TRUE \u2014 Embryonic diapause is well-documented in kangaroos. A female can have a dormant blastocyst in the uterus, a joey in the pouch, and an older juvenile at foot simultaneously. (III) FALSE \u2014 Monotreme eggs are small (about 1-2 cm), have a leathery shell (not hard calcareous like birds), and contain moderate yolk. They are more similar to reptilian eggs. (IV) TRUE \u2014 The eutherian placenta is formed from fetal extraembryonic membranes (chorion) that interface with the maternal uterine endometrium, making it a composite of fetal and maternal tissues.",
+      "explanation": "(I) TRUE — Marsupials have much shorter gestation periods than equivalent-sized placentals. For example, a kangaroo joey is born after ~33 days and continues development in the pouch. (II) TRUE — Embryonic diapause is well-documented in kangaroos. A female can have a dormant blastocyst in the uterus, a joey in the pouch, and an older juvenile at foot simultaneously. (III) FALSE — Monotreme eggs are small (about 1-2 cm), have a leathery shell (not hard calcareous like birds), and contain moderate yolk. They are more similar to reptilian eggs. (IV) TRUE — The eutherian placenta is formed from fetal extraembryonic membranes (chorion) that interface with the maternal uterine endometrium, making it a composite of fetal and maternal tissues.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -1045,7 +1044,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Limb Patterning \u2014 Shh Signaling"
+      "topic": "Limb Patterning — Shh Signaling"
     },
     {
       "type": "MCQ",
@@ -1057,7 +1056,7 @@
         "Thermoregulation (insulation) in small-bodied endothermic or near-endothermic dinosaurs"
       ],
       "correctAnswer": "D",
-      "explanation": "The earliest feathers, found in small coelurosaur theropods, were simple filamentous structures without the complex branching needed for aerodynamic function. Their most probable original function was thermoregulation \u2014 providing insulation for small-bodied theropods that may have been endothermic or approaching endothermy. Small body size creates high surface-area-to-volume ratios, making insulation advantageous for retaining metabolic heat. This hypothesis is supported by the distribution of early feathers across the body (not restricted to wings) and their simple morphology. Display and signaling may have been concurrent functions, but thermal insulation best explains the initial selective advantage of simple filamentous feather precursors.",
+      "explanation": "The earliest feathers, found in small coelurosaur theropods, were simple filamentous structures without the complex branching needed for aerodynamic function. Their most probable original function was thermoregulation — providing insulation for small-bodied theropods that may have been endothermic or approaching endothermy. Small body size creates high surface-area-to-volume ratios, making insulation advantageous for retaining metabolic heat. This hypothesis is supported by the distribution of early feathers across the body (not restricted to wings) and their simple morphology. Display and signaling may have been concurrent functions, but thermal insulation best explains the initial selective advantage of simple filamentous feather precursors.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1097,7 +1096,7 @@
         "Mammals, as part of the evolution of endothermy and high metabolic rates"
       ],
       "correctAnswer": "D",
-      "explanation": "While all amniotes possess a metanephric kidney, only mammals (and some birds to a lesser extent) have evolved loops of Henle capable of producing hyperosmotic urine. Reptiles have metanephric kidneys but lack loops of Henle and cannot concentrate urine above plasma osmolarity \u2014 they conserve water primarily by excreting uric acid. The loop of Henle, with its countercurrent multiplication system, evolved in mammals in concert with endothermy. High metabolic rates require high water turnover, making the ability to concentrate urine essential. Birds have some looped nephrons, but these are less extensive than mammalian loops of Henle.",
+      "explanation": "While all amniotes possess a metanephric kidney, only mammals (and some birds to a lesser extent) have evolved loops of Henle capable of producing hyperosmotic urine. Reptiles have metanephric kidneys but lack loops of Henle and cannot concentrate urine above plasma osmolarity — they conserve water primarily by excreting uric acid. The loop of Henle, with its countercurrent multiplication system, evolved in mammals in concert with endothermy. High metabolic rates require high water turnover, making the ability to concentrate urine essential. Birds have some looped nephrons, but these are less extensive than mammalian loops of Henle.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -1125,7 +1124,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
-      "topic": "Vertebrate Color Vision \u2014 Behavioral Test"
+      "topic": "Vertebrate Color Vision — Behavioral Test"
     },
     {
       "type": "MCQ",
@@ -1137,7 +1136,7 @@
         "Two completely separate hearts, one for pulmonary and one for systemic circulation"
       ],
       "correctAnswer": "C",
-      "explanation": "Lungfish have a partially divided atrium (with a septum separating pulmonary venous return from systemic venous return) and a spiral valve in the conus arteriosus (or bulbus cordis) that helps direct deoxygenated blood toward the pulmonary artery (6th aortic arch) and oxygenated blood toward the systemic aortic arches. This represents a functional, though not complete, separation of pulmonary and systemic circuits \u2014 an important intermediate state in the evolution of the fully divided circulation seen in tetrapods. The ventricle has internal ridges but not a complete septum.",
+      "explanation": "Lungfish have a partially divided atrium (with a septum separating pulmonary venous return from systemic venous return) and a spiral valve in the conus arteriosus (or bulbus cordis) that helps direct deoxygenated blood toward the pulmonary artery (6th aortic arch) and oxygenated blood toward the systemic aortic arches. This represents a functional, though not complete, separation of pulmonary and systemic circuits — an important intermediate state in the evolution of the fully divided circulation seen in tetrapods. The ventricle has internal ridges but not a complete septum.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1165,7 +1164,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
-      "topic": "Electric Eel \u2014 Electrocytes"
+      "topic": "Electric Eel — Electrocytes"
     },
     {
       "type": "MCQ",
@@ -1237,7 +1236,7 @@
         "Pterosaur wings consisted of a membrane supported primarily by a single enormously elongated fourth finger"
       ],
       "correctAnswer": "D",
-      "explanation": "Pterosaur wings were fundamentally different from both bird and bat wings. The wing membrane (patagium) was supported primarily by the enormously elongated fourth digit, with the other fingers remaining small and free (used for climbing or walking). In contrast, bat wings have the membrane stretched between four elongated fingers (digits 2-5). Bird wings use feathers rather than membranes for the flight surface. The pterosaur's single-finger support represents a unique solution to the engineering problem of creating an airfoil, different from the multi-finger support of bats and the feather-based system of birds. This is a spectacular example of convergent evolution \u2014 three different vertebrate lineages independently evolved powered flight using three distinct wing architectures.",
+      "explanation": "Pterosaur wings were fundamentally different from both bird and bat wings. The wing membrane (patagium) was supported primarily by the enormously elongated fourth digit, with the other fingers remaining small and free (used for climbing or walking). In contrast, bat wings have the membrane stretched between four elongated fingers (digits 2-5). Bird wings use feathers rather than membranes for the flight surface. The pterosaur's single-finger support represents a unique solution to the engineering problem of creating an airfoil, different from the multi-finger support of bats and the feather-based system of birds. This is a spectacular example of convergent evolution — three different vertebrate lineages independently evolved powered flight using three distinct wing architectures.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -1285,7 +1284,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Cooperative Breeding \u2014 Kin Selection Test"
+      "topic": "Cooperative Breeding — Kin Selection Test"
     },
     {
       "type": "MCQ",
@@ -1297,7 +1296,7 @@
         "It serves no function in adults and is an entirely vestigial embryonic structure"
       ],
       "correctAnswer": "B",
-      "explanation": "The parietal (third) eye in tuataras and many lizards primarily functions in photoperiod detection \u2014 sensing day length and light intensity to regulate circadian and seasonal rhythms. Despite being covered by skin in adults, it remains photosensitive and signals to the pineal gland, which produces melatonin. Melatonin production is modulated by light input from the parietal eye, influencing seasonal patterns of reproduction, activity, and thermoregulatory behavior. While juvenile tuataras have a partially transparent scale over the parietal eye, even the adult structure with opaque skin covering can detect changes in light intensity sufficient for photoperiodic timing.",
+      "explanation": "The parietal (third) eye in tuataras and many lizards primarily functions in photoperiod detection — sensing day length and light intensity to regulate circadian and seasonal rhythms. Despite being covered by skin in adults, it remains photosensitive and signals to the pineal gland, which produces melatonin. Melatonin production is modulated by light input from the parietal eye, influencing seasonal patterns of reproduction, activity, and thermoregulatory behavior. While juvenile tuataras have a partially transparent scale over the parietal eye, even the adult structure with opaque skin covering can detect changes in light intensity sufficient for photoperiodic timing.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1337,7 +1336,7 @@
         "Antimicrobial peptides from the innate immune system that were repurposed for prey subjugation"
       ],
       "correctAnswer": "C",
-      "explanation": "The majority of snake venom toxins evolved from ordinary physiological proteins, particularly digestive enzymes, through a process of gene duplication followed by neofunctionalization in the venom gland. For example, phospholipase A2 (a digestive enzyme) was recruited to venom, where accelerated positive selection produced neurotoxic and myotoxic variants. Serine proteases from the coagulation cascade became venom thrombin-like enzymes. Three-finger toxins evolved from a family of receptor-binding proteins. This evolutionary mechanism \u2014 co-option of existing proteins followed by rapid evolution under strong positive selection \u2014 explains the diversity of venom compositions across snake lineages.",
+      "explanation": "The majority of snake venom toxins evolved from ordinary physiological proteins, particularly digestive enzymes, through a process of gene duplication followed by neofunctionalization in the venom gland. For example, phospholipase A2 (a digestive enzyme) was recruited to venom, where accelerated positive selection produced neurotoxic and myotoxic variants. Serine proteases from the coagulation cascade became venom thrombin-like enzymes. Three-finger toxins evolved from a family of receptor-binding proteins. This evolutionary mechanism — co-option of existing proteins followed by rapid evolution under strong positive selection — explains the diversity of venom compositions across snake lineages.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -1385,7 +1384,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
-      "topic": "Afrotheria \u2014 Convergent Evolution"
+      "topic": "Afrotheria — Convergent Evolution"
     },
     {
       "type": "MCQ",
@@ -1417,7 +1416,7 @@
         "TFTT"
       ],
       "correctAnswer": "B",
-      "explanation": "(I) TRUE \u2014 Deep-diving cetaceans allow their lungs to collapse at depth, pushing air into the rigid, non-absorptive airways (trachea, bronchi). This prevents nitrogen from dissolving into the blood at high pressure, avoiding nitrogen narcosis and decompression sickness. (II) TRUE \u2014 Pinnipeds have approximately 50% more blood volume per unit body mass than terrestrial mammals, and their blood has higher hemoglobin concentrations. This provides a larger oxygen reservoir for diving. (III) TRUE \u2014 Blubber serves multiple functions: thermal insulation, energy storage (lipid reserves), hydrodynamic streamlining, and buoyancy. (IV) FALSE \u2014 Dolphins and other toothed whales (odontocetes) produce echolocation clicks NOT with the larynx but with specialized phonic lips (monkey lips/dorsal bursae complex, MLDB) in the nasal passages. Sound is focused by the melon (a fatty acoustic lens in the forehead).",
+      "explanation": "(I) TRUE — Deep-diving cetaceans allow their lungs to collapse at depth, pushing air into the rigid, non-absorptive airways (trachea, bronchi). This prevents nitrogen from dissolving into the blood at high pressure, avoiding nitrogen narcosis and decompression sickness. (II) TRUE — Pinnipeds have approximately 50% more blood volume per unit body mass than terrestrial mammals, and their blood has higher hemoglobin concentrations. This provides a larger oxygen reservoir for diving. (III) TRUE — Blubber serves multiple functions: thermal insulation, energy storage (lipid reserves), hydrodynamic streamlining, and buoyancy. (IV) FALSE — Dolphins and other toothed whales (odontocetes) produce echolocation clicks NOT with the larynx but with specialized phonic lips (monkey lips/dorsal bursae complex, MLDB) in the nasal passages. Sound is focused by the melon (a fatty acoustic lens in the forehead).",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1517,7 +1516,7 @@
         "The male dies shortly after fusion, and only its gonads remain functional, nourished by the female's blood"
       ],
       "correctAnswer": "C",
-      "explanation": "In permanently parasitic male ceratioid anglerfishes, the male bites onto the female and a tissue fusion occurs where the two circulatory systems become connected. The male becomes essentially a parasitic gonad, receiving all nutrition from the female's bloodstream. Remarkably, the male's immune system degenerates \u2014 these species have lost key adaptive immune genes (MHC class II, T cell receptor genes), which prevents immunological rejection of the fused tissue. This is the only known vertebrate example of natural chimerism maintained by immune system loss. The male remains alive as an attached parasite, providing sperm when the female is ready to spawn.",
+      "explanation": "In permanently parasitic male ceratioid anglerfishes, the male bites onto the female and a tissue fusion occurs where the two circulatory systems become connected. The male becomes essentially a parasitic gonad, receiving all nutrition from the female's bloodstream. Remarkably, the male's immune system degenerates — these species have lost key adaptive immune genes (MHC class II, T cell receptor genes), which prevents immunological rejection of the fused tissue. This is the only known vertebrate example of natural chimerism maintained by immune system loss. The male remains alive as an attached parasite, providing sperm when the female is ready to spawn.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1537,7 +1536,7 @@
         "Active muscular sphincters at bronchial branch points open and close to direct airflow"
       ],
       "correctAnswer": "C",
-      "explanation": "Recent research has demonstrated that crocodilians achieve unidirectional airflow through aerodynamic valving \u2014 the branching geometry and angles of the bronchial tree create flow patterns where air moves in one direction during both inspiration and expiration without requiring any physical valve structures. This is achieved purely through the fluid dynamics of air moving through asymmetrically branched tubes. CT imaging and airflow modeling have confirmed this unidirectional pattern. The hepatic piston mechanism (unique to crocodilians, where the liver is pulled posteriorly to expand the lungs) provides the ventilatory pump, but it is the bronchial geometry that creates the one-way airflow. This discovery suggests unidirectional lung airflow may be an ancestral archosaurian trait.",
+      "explanation": "Recent research has demonstrated that crocodilians achieve unidirectional airflow through aerodynamic valving — the branching geometry and angles of the bronchial tree create flow patterns where air moves in one direction during both inspiration and expiration without requiring any physical valve structures. This is achieved purely through the fluid dynamics of air moving through asymmetrically branched tubes. CT imaging and airflow modeling have confirmed this unidirectional pattern. The hepatic piston mechanism (unique to crocodilians, where the liver is pulled posteriorly to expand the lungs) provides the ventilatory pump, but it is the bronchial geometry that creates the one-way airflow. This discovery suggests unidirectional lung airflow may be an ancestral archosaurian trait.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1557,7 +1556,7 @@
         "There is no relationship between brain size measures and cognitive ability in vertebrates"
       ],
       "correctAnswer": "C",
-      "explanation": "The data show that high EQ correlates with complex cognition (apes, dolphins, corvids all have high EQ and complex behaviors), but EQ alone cannot explain cognitive ability. Corvid birds have smaller absolute brain sizes than primates but achieve comparable cognitive feats, suggesting that neuron density (birds pack more neurons per gram of brain tissue than mammals) and neural circuit organization are also critical. The pallial (cortex-equivalent) organization differs between birds and mammals, yet both achieve complex cognition through different neural architectures. This demonstrates that EQ is a useful but incomplete predictor \u2014 the internal organization, neuron count, and connectivity patterns of the brain are equally important determinants of cognitive capacity.",
+      "explanation": "The data show that high EQ correlates with complex cognition (apes, dolphins, corvids all have high EQ and complex behaviors), but EQ alone cannot explain cognitive ability. Corvid birds have smaller absolute brain sizes than primates but achieve comparable cognitive feats, suggesting that neuron density (birds pack more neurons per gram of brain tissue than mammals) and neural circuit organization are also critical. The pallial (cortex-equivalent) organization differs between birds and mammals, yet both achieve complex cognition through different neural architectures. This demonstrates that EQ is a useful but incomplete predictor — the internal organization, neuron count, and connectivity patterns of the brain are equally important determinants of cognitive capacity.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -1597,7 +1596,7 @@
         "The spinal cord sends out new neural progenitors that organize the remaining limb tissues through inductive signaling"
       ],
       "correctAnswer": "C",
-      "explanation": "Axolotl limb regeneration proceeds through formation of a blastema \u2014 a mass of proliferative progenitor cells that forms at the amputation site. Critically, blastema cells arise primarily through dedifferentiation of mature cells at the wound site: muscle fibers fragment and dedifferentiate, fibroblasts revert to a more progenitor-like state, and Schwann cells dedifferentiate and proliferate. These dedifferentiated cells retain memory of their tissue of origin and largely redifferentiate into the same tissue type (muscle cells regenerate muscle, cartilage cells regenerate cartilage). While some resident stem cells contribute, the predominant mechanism is dedifferentiation. Nerve supply is essential for maintaining the blastema (denervated limbs fail to regenerate), but the neural role is trophic rather than cell-supply based.",
+      "explanation": "Axolotl limb regeneration proceeds through formation of a blastema — a mass of proliferative progenitor cells that forms at the amputation site. Critically, blastema cells arise primarily through dedifferentiation of mature cells at the wound site: muscle fibers fragment and dedifferentiate, fibroblasts revert to a more progenitor-like state, and Schwann cells dedifferentiate and proliferate. These dedifferentiated cells retain memory of their tissue of origin and largely redifferentiate into the same tissue type (muscle cells regenerate muscle, cartilage cells regenerate cartilage). While some resident stem cells contribute, the predominant mechanism is dedifferentiation. Nerve supply is essential for maintaining the blastema (denervated limbs fail to regenerate), but the neural role is trophic rather than cell-supply based.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1625,7 +1624,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
-      "topic": "Bar-headed Goose \u2014 Altitude Adaptation"
+      "topic": "Bar-headed Goose — Altitude Adaptation"
     },
     {
       "type": "EXPERIMENTAL_DESIGN",
@@ -1697,7 +1696,7 @@
         "Camera-type eyes evolved independently in cephalopods and vertebrates through convergent evolution, with different developmental pathways producing different retinal orientations"
       ],
       "correctAnswer": "D",
-      "explanation": "The different retinal orientations in vertebrate and cephalopod eyes provide compelling evidence that camera-type eyes evolved independently (convergent evolution) rather than from a common ancestor with this eye type. The vertebrate inverted retina results from the eye developing as an outpocketing of the brain (diencephalon), which inherently positions photoreceptors facing away from light. The cephalopod direct retina develops from an invagination of the body surface epithelium, naturally positioning photoreceptors toward light. Despite this fundamental difference in retinal orientation and developmental origin, both achieve the same optical function \u2014 demonstrating how convergent evolution can produce functionally equivalent but mechanistically different solutions.",
+      "explanation": "The different retinal orientations in vertebrate and cephalopod eyes provide compelling evidence that camera-type eyes evolved independently (convergent evolution) rather than from a common ancestor with this eye type. The vertebrate inverted retina results from the eye developing as an outpocketing of the brain (diencephalon), which inherently positions photoreceptors facing away from light. The cephalopod direct retina develops from an invagination of the body surface epithelium, naturally positioning photoreceptors toward light. Despite this fundamental difference in retinal orientation and developmental origin, both achieve the same optical function — demonstrating how convergent evolution can produce functionally equivalent but mechanistically different solutions.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1712,12 +1711,12 @@
       "question": "Hummingbirds have the highest mass-specific metabolic rate of any vertebrate. To sustain this, they must feed almost continuously during the day. What physiological state do they enter at night to survive the long period without feeding?",
       "options": [
         "Hibernation, with body temperature dropping to near ambient and metabolic rate decreasing by 99%",
-        "Torpor, with body temperature dropping from ~40\u00b0C to 12-20\u00b0C and metabolic rate decreasing by 50-95%",
+        "Torpor, with body temperature dropping from ~40°C to 12-20°C and metabolic rate decreasing by 50-95%",
         "Normal sleep with unchanged body temperature and metabolic rate, relying on fat reserves",
         "Estivation, a state of dormancy triggered by darkness rather than temperature"
       ],
       "correctAnswer": "B",
-      "explanation": "Hummingbirds enter nightly torpor, a controlled reduction in body temperature and metabolic rate that conserves energy during the night when they cannot feed. Body temperature drops from the normal ~40\u00b0C to 12-20\u00b0C (depending on species and ambient temperature), and metabolic rate decreases by 50-95%. This is distinct from true hibernation, which lasts for extended periods (weeks to months). Hummingbird torpor is a daily (diel) phenomenon lasting only through the night, with the birds arousing at dawn through shivering thermogenesis. This energy-saving strategy is critical for survival given their extremely high daytime metabolic demands (resting heart rates of 250+ beats per minute, feeding heart rates exceeding 1,200 bpm).",
+      "explanation": "Hummingbirds enter nightly torpor, a controlled reduction in body temperature and metabolic rate that conserves energy during the night when they cannot feed. Body temperature drops from the normal ~40°C to 12-20°C (depending on species and ambient temperature), and metabolic rate decreases by 50-95%. This is distinct from true hibernation, which lasts for extended periods (weeks to months). Hummingbird torpor is a daily (diel) phenomenon lasting only through the night, with the birds arousing at dawn through shivering thermogenesis. This energy-saving strategy is critical for survival given their extremely high daytime metabolic demands (resting heart rates of 250+ beats per minute, feeding heart rates exceeding 1,200 bpm).",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -1737,7 +1736,7 @@
         "An ancestral tetrapod possessed batrachotoxin production genes that were retained in both lineages"
       ],
       "correctAnswer": "B",
-      "explanation": "Both poison frogs and pitohui birds acquire batrachotoxin through dietary sequestration rather than de novo synthesis. Poison frogs obtain alkaloids from their arthropod prey (primarily mites and ants), while pitohui birds are thought to acquire batrachotoxins from Choresine beetles in their diet. In both cases, the animals have independently evolved the ability to tolerate, accumulate, and store these potent neurotoxins in their skin. Both groups likely possess amino acid substitutions in their sodium channels that confer resistance to their own toxins. This parallel solution \u2014 dietary acquisition combined with self-resistance \u2014 demonstrates convergent evolution of chemical defense through sequestration in distantly related vertebrate lineages.",
+      "explanation": "Both poison frogs and pitohui birds acquire batrachotoxin through dietary sequestration rather than de novo synthesis. Poison frogs obtain alkaloids from their arthropod prey (primarily mites and ants), while pitohui birds are thought to acquire batrachotoxins from Choresine beetles in their diet. In both cases, the animals have independently evolved the ability to tolerate, accumulate, and store these potent neurotoxins in their skin. Both groups likely possess amino acid substitutions in their sodium channels that confer resistance to their own toxins. This parallel solution — dietary acquisition combined with self-resistance — demonstrates convergent evolution of chemical defense through sequestration in distantly related vertebrate lineages.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1757,7 +1756,7 @@
         "Their embryos are transparent throughout development, allowing continuous imaging of internal organs"
       ],
       "correctAnswer": "C",
-      "explanation": "Xenopus laevis has been a premier model for vertebrate developmental biology due to several features of its eggs and embryos. The eggs are large (1.2 mm diameter), yolk-rich, and develop externally in a simple salt solution. Their large size makes them easily manipulable \u2014 researchers can microinject mRNA, antisense morpholinos, or proteins into specific blastomeres to study gene function. Embryos from different stages can be obtained year-round by hormone-induced ovulation. While Xenopus embryos are not fully transparent (zebrafish are preferred for that), their large size and external development compensate by enabling surgical manipulations like transplantation experiments (e.g., Spemann organizer grafts).",
+      "explanation": "Xenopus laevis has been a premier model for vertebrate developmental biology due to several features of its eggs and embryos. The eggs are large (1.2 mm diameter), yolk-rich, and develop externally in a simple salt solution. Their large size makes them easily manipulable — researchers can microinject mRNA, antisense morpholinos, or proteins into specific blastomeres to study gene function. Embryos from different stages can be obtained year-round by hormone-induced ovulation. While Xenopus embryos are not fully transparent (zebrafish are preferred for that), their large size and external development compensate by enabling surgical manipulations like transplantation experiments (e.g., Spemann organizer grafts).",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -1777,7 +1776,7 @@
         "Ectotherms accumulate more lactate because they rely more heavily on anaerobic glycolysis during burst activity due to lower aerobic capacity"
       ],
       "correctAnswer": "D",
-      "explanation": "Ectotherms (lizards and frogs) accumulate more lactate during maximal exercise because they have lower aerobic (oxidative) metabolic capacity and must rely more heavily on anaerobic glycolysis for burst activity. Their cardiovascular and respiratory systems cannot deliver oxygen fast enough to sustain high-intensity exercise aerobically. In contrast, endotherms (mouse, pigeon) have much higher aerobic capacity due to their elevated basal metabolic rates, more efficient cardiovascular systems, and greater mitochondrial density in muscles. Birds (pigeons) have the lowest lactate because their unidirectional lung system and highly vascularized flight muscles provide exceptional aerobic capacity. This explains why lizards can sprint rapidly but fatigue quickly \u2014 they incur a large 'oxygen debt'.",
+      "explanation": "Ectotherms (lizards and frogs) accumulate more lactate during maximal exercise because they have lower aerobic (oxidative) metabolic capacity and must rely more heavily on anaerobic glycolysis for burst activity. Their cardiovascular and respiratory systems cannot deliver oxygen fast enough to sustain high-intensity exercise aerobically. In contrast, endotherms (mouse, pigeon) have much higher aerobic capacity due to their elevated basal metabolic rates, more efficient cardiovascular systems, and greater mitochondrial density in muscles. Birds (pigeons) have the lowest lactate because their unidirectional lung system and highly vascularized flight muscles provide exceptional aerobic capacity. This explains why lizards can sprint rapidly but fatigue quickly — they incur a large 'oxygen debt'.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -1797,7 +1796,7 @@
         "Mammals lack the dental lamina entirely and form teeth from a completely different embryonic tissue than sharks"
       ],
       "correctAnswer": "C",
-      "explanation": "Mammals are diphyodont \u2014 they develop exactly two sets of teeth: deciduous (milk/baby) teeth and permanent (adult) teeth. The molecular machinery for continuous tooth replacement (present in sharks as polyphyodonty) has been modified in mammals so that the dental lamina, the tissue that generates tooth germs, undergoes programmed regression after initiating the second dentition. Recent research has shown that genes controlling the Wnt and BMP signaling pathways regulate this limited replacement program. Sharks maintain an active dental lamina throughout life that continuously generates new tooth rows. Some mammals, like manatees and elephants, have evolved a modified polyphyodonty (horizontal tooth replacement), but the typical mammalian condition is diphyodonty.",
+      "explanation": "Mammals are diphyodont — they develop exactly two sets of teeth: deciduous (milk/baby) teeth and permanent (adult) teeth. The molecular machinery for continuous tooth replacement (present in sharks as polyphyodonty) has been modified in mammals so that the dental lamina, the tissue that generates tooth germs, undergoes programmed regression after initiating the second dentition. Recent research has shown that genes controlling the Wnt and BMP signaling pathways regulate this limited replacement program. Sharks maintain an active dental lamina throughout life that continuously generates new tooth rows. Some mammals, like manatees and elephants, have evolved a modified polyphyodonty (horizontal tooth replacement), but the typical mammalian condition is diphyodonty.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1817,7 +1816,7 @@
         "It generates low-frequency sounds used in territorial displays and courtship communication"
       ],
       "correctAnswer": "B",
-      "explanation": "The Weberian apparatus is a series of modified vertebral bones (the Weberian ossicles \u2014 derived from parts of the first four vertebrae) that connect the swim bladder to the inner ear. The swim bladder acts as a resonance chamber that amplifies sound vibrations in the water. These vibrations are transmitted through the chain of ossicles to the fluid-filled inner ear (sinus impar and then to the sacculus), dramatically increasing hearing sensitivity, particularly at higher frequencies. This is functionally analogous to the role of the middle ear ossicles in terrestrial vertebrates, which transmit vibrations from the tympanic membrane to the inner ear. Otophysans with an intact Weberian apparatus can detect sounds across a much wider frequency range than fish lacking this structure.",
+      "explanation": "The Weberian apparatus is a series of modified vertebral bones (the Weberian ossicles — derived from parts of the first four vertebrae) that connect the swim bladder to the inner ear. The swim bladder acts as a resonance chamber that amplifies sound vibrations in the water. These vibrations are transmitted through the chain of ossicles to the fluid-filled inner ear (sinus impar and then to the sacculus), dramatically increasing hearing sensitivity, particularly at higher frequencies. This is functionally analogous to the role of the middle ear ossicles in terrestrial vertebrates, which transmit vibrations from the tympanic membrane to the inner ear. Otophysans with an intact Weberian apparatus can detect sounds across a much wider frequency range than fish lacking this structure.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -1857,7 +1856,7 @@
         "Cryptic species recently evolved to resemble ancient fossils"
       ],
       "correctAnswer": "A",
-      "explanation": "Latimeria is a classic example of a 'living fossil' \u2014 a species that has persisted with relatively little morphological change over an extraordinarily long evolutionary period. The term 'evolutionary stasis' describes this pattern of minimal phenotypic change despite the passage of tens of millions of years. While no organism is truly static (Latimeria has accumulated molecular changes), the overall body plan, fin arrangement, and general morphology closely resemble Cretaceous-era coelacanth fossils. Evolutionary stasis may result from stabilizing selection in a consistent deep-sea environment, developmental constraints, or a combination of factors. Latimeria is not transitional (it is a specialized lineage) nor is it vestigial or recently evolved.",
+      "explanation": "Latimeria is a classic example of a 'living fossil' — a species that has persisted with relatively little morphological change over an extraordinarily long evolutionary period. The term 'evolutionary stasis' describes this pattern of minimal phenotypic change despite the passage of tens of millions of years. While no organism is truly static (Latimeria has accumulated molecular changes), the overall body plan, fin arrangement, and general morphology closely resemble Cretaceous-era coelacanth fossils. Evolutionary stasis may result from stabilizing selection in a consistent deep-sea environment, developmental constraints, or a combination of factors. Latimeria is not transitional (it is a specialized lineage) nor is it vestigial or recently evolved.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1865,7 +1864,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "intermediate",
       "difficulty": "HARD",
-      "topic": "Coelacanth \u2014 Living Fossil"
+      "topic": "Coelacanth — Living Fossil"
     },
     {
       "type": "MTF",
@@ -1877,7 +1876,7 @@
         "TFFT"
       ],
       "correctAnswer": "C",
-      "explanation": "(I) TRUE \u2014 The proximal elements of the tetrapod limb (stylopod: humerus/femur; zeugopod: radius+ulna/tibia+fibula) have clear homologs in the endoskeletal elements of sarcopterygian fish fins. Tiktaalik and Panderichthys show intermediate morphologies. (II) FALSE \u2014 Digits are a tetrapod novelty with no direct homolog in fish fin rays. The distal radials of fish fins are not homologous to digits; rather, digits evolved as a new structure through expansion of Hox gene expression domains. (III) TRUE \u2014 Hox gene expression patterns (particularly HoxA and HoxD clusters) that specify proximal-distal and anterior-posterior limb identity are remarkably conserved between fish fin buds and tetrapod limb buds, demonstrating deep homology. (IV) FALSE \u2014 An AER or AER-equivalent (apical ectodermal fold) is present in both fish fin buds and tetrapod limb buds, driving outgrowth through FGF signaling.",
+      "explanation": "(I) TRUE — The proximal elements of the tetrapod limb (stylopod: humerus/femur; zeugopod: radius+ulna/tibia+fibula) have clear homologs in the endoskeletal elements of sarcopterygian fish fins. Tiktaalik and Panderichthys show intermediate morphologies. (II) FALSE — Digits are a tetrapod novelty with no direct homolog in fish fin rays. The distal radials of fish fins are not homologous to digits; rather, digits evolved as a new structure through expansion of Hox gene expression domains. (III) TRUE — Hox gene expression patterns (particularly HoxA and HoxD clusters) that specify proximal-distal and anterior-posterior limb identity are remarkably conserved between fish fin buds and tetrapod limb buds, demonstrating deep homology. (IV) FALSE — An AER or AER-equivalent (apical ectodermal fold) is present in both fish fin buds and tetrapod limb buds, driving outgrowth through FGF signaling.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1917,7 +1916,7 @@
         "Cetaceans and artiodactyls both have hooves"
       ],
       "correctAnswer": "B",
-      "explanation": "The strongest evidence for cetacean-artiodactyl relationship comes from two converging lines: (1) Molecular data from multiple gene sequences (including SINEs \u2014 short interspersed nuclear elements, casein genes, and mitochondrial DNA) consistently nest Cetacea within Artiodactyla, making Hippopotamus the closest living relative of whales. (2) A remarkable fossil series from Pakistan and India documents the transition: Pakicetus (land-dwelling, with cetacean-like ear bones), Ambulocetus (amphibious, with powerful hindlimbs), Rodhocetus (more aquatic, with reduced pelvis), Basilosaurus (fully aquatic, with vestigial hindlimbs). Option A describes a trait shared by all mammals, not specifically linking these groups. Option C describes general mammalian traits. Option D is incorrect \u2014 cetaceans have lost their hooves entirely through adaptation to aquatic life.",
+      "explanation": "The strongest evidence for cetacean-artiodactyl relationship comes from two converging lines: (1) Molecular data from multiple gene sequences (including SINEs — short interspersed nuclear elements, casein genes, and mitochondrial DNA) consistently nest Cetacea within Artiodactyla, making Hippopotamus the closest living relative of whales. (2) A remarkable fossil series from Pakistan and India documents the transition: Pakicetus (land-dwelling, with cetacean-like ear bones), Ambulocetus (amphibious, with powerful hindlimbs), Rodhocetus (more aquatic, with reduced pelvis), Basilosaurus (fully aquatic, with vestigial hindlimbs). Option A describes a trait shared by all mammals, not specifically linking these groups. Option C describes general mammalian traits. Option D is incorrect — cetaceans have lost their hooves entirely through adaptation to aquatic life.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1929,15 +1928,15 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A phylogenetic analysis of vertebrate hemoglobin genes reveals that jawless fish (lampreys) possess a single-domain hemoglobin, while jawed vertebrates have tetrameric hemoglobin (\u03b12\u03b22). Gene duplication events produced the \u03b1 and \u03b2 globin gene families on separate chromosomes. This pattern indicates that:",
+      "question": "A phylogenetic analysis of vertebrate hemoglobin genes reveals that jawless fish (lampreys) possess a single-domain hemoglobin, while jawed vertebrates have tetrameric hemoglobin (α2β2). Gene duplication events produced the α and β globin gene families on separate chromosomes. This pattern indicates that:",
       "options": [
         "Gene duplication occurred after the divergence of jawless and jawed vertebrates, enabling cooperative oxygen binding in the tetramer",
         "Lampreys lost their additional globin genes through gene deletion",
         "All vertebrate hemoglobins function identically regardless of quaternary structure",
-        "The \u03b1 and \u03b2 genes evolved independently from unrelated precursors"
+        "The α and β genes evolved independently from unrelated precursors"
       ],
       "correctAnswer": "A",
-      "explanation": "The phylogenetic distribution of hemoglobin structure provides clear evidence for the timing and functional consequences of gene duplication. Jawless vertebrates (lampreys, hagfish) diverged before the whole-genome duplication events that occurred at the base of jawed vertebrates. Their monomeric/dimeric hemoglobins lack cooperative oxygen binding. After gene duplication in the jawed vertebrate lineage, the duplicated globin genes diverged to produce \u03b1 and \u03b2 chains, which assemble into \u03b12\u03b22 tetramers capable of cooperative binding (sigmoidal oxygen dissociation curve, Bohr effect, 2,3-BPG regulation). This is a classic example of subfunctionalization following gene duplication leading to enhanced physiological capability. Option B is less parsimonious than the duplication scenario. Option C is incorrect \u2014 monomeric and tetrameric hemoglobins differ significantly in oxygen binding properties. Option D is wrong \u2014 \u03b1 and \u03b2 genes share a common ancestral globin gene.",
+      "explanation": "The phylogenetic distribution of hemoglobin structure provides clear evidence for the timing and functional consequences of gene duplication. Jawless vertebrates (lampreys, hagfish) diverged before the whole-genome duplication events that occurred at the base of jawed vertebrates. Their monomeric/dimeric hemoglobins lack cooperative oxygen binding. After gene duplication in the jawed vertebrate lineage, the duplicated globin genes diverged to produce α and β chains, which assemble into α2β2 tetramers capable of cooperative binding (sigmoidal oxygen dissociation curve, Bohr effect, 2,3-BPG regulation). This is a classic example of subfunctionalization following gene duplication leading to enhanced physiological capability. Option B is less parsimonious than the duplication scenario. Option C is incorrect — monomeric and tetrameric hemoglobins differ significantly in oxygen binding properties. Option D is wrong — α and β genes share a common ancestral globin gene.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,

@@ -1,16 +1,9 @@
 {
   "batch": {
-    "id": "olympiad-campbell-ch29-plant-diversity-i",
-    "title": "Campbell Biology Ch 29 \u2014 Plant Diversity I: How Plants Colonized Land (Olympiad)",
-    "subject": "Biology",
-    "chapter": "Plant Diversity I: How Plants Colonized Land",
-    "class": "Olympiad",
-    "description": "Olympiad-grade questions on land plant evolution, bryophytes, and seedless vascular plants from Campbell Biology Chapter 29. Covers adaptations for terrestrial life, alternation of generations, charophyte origins, bryophyte diversity, lycophytes, monilophytes, and the evolutionary significance of key plant innovations.",
-    "totalQuestions": 73,
-    "campbellChapter": 29,
-    "campbellUnit": 5,
-    "isOlympiad": true,
-    "questionCount": 75
+    "name": "Campbell Ch29 Plant Diversity I — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 75
   },
   "questions": [
     {
@@ -23,7 +16,7 @@
         "protonema, producing gametophore buds"
       ],
       "correctAnswer": "C",
-      "explanation": "In all land plants, meiosis occurs within the sporangium of the sporophyte generation, producing haploid spores. In mosses, the sporangium is the capsule at the top of the seta. Spore mother cells (sporocytes) within the capsule undergo meiosis to produce haploid spores, which are then released for dispersal. The archegonium produces eggs and the antheridium produces sperm, both through mitosis of already-haploid gametophyte tissue. The protonema develops from a germinating haploid spore through mitosis. This universal pattern\u2014meiosis in the sporangium, gamete production by mitosis in gametangia\u2014is fundamental to the alternation of generations in all land plants and distinguishes it from the animal pattern where meiosis directly produces gametes.",
+      "explanation": "In all land plants, meiosis occurs within the sporangium of the sporophyte generation, producing haploid spores. In mosses, the sporangium is the capsule at the top of the seta. Spore mother cells (sporocytes) within the capsule undergo meiosis to produce haploid spores, which are then released for dispersal. The archegonium produces eggs and the antheridium produces sperm, both through mitosis of already-haploid gametophyte tissue. The protonema develops from a germinating haploid spore through mitosis. This universal pattern—meiosis in the sporangium, gamete production by mitosis in gametangia—is fundamental to the alternation of generations in all land plants and distinguishes it from the animal pattern where meiosis directly produces gametes.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -55,7 +48,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A study measures photosynthetic rates in mosses at different water contents: 50% water content = 2.1 \u03bcmol CO2/m\u00b2/s; 100% = 4.8; 200% = 5.2; 300% = 4.1; 500% = 2.3; 800% = 0.8. Which explanation best accounts for the decrease at very high water content?",
+      "question": "A study measures photosynthetic rates in mosses at different water contents: 50% water content = 2.1 μmol CO2/m²/s; 100% = 4.8; 200% = 5.2; 300% = 4.1; 500% = 2.3; 800% = 0.8. Which explanation best accounts for the decrease at very high water content?",
       "options": [
         "Excess water causes chloroplast damage through osmotic shock",
         "Water films on leaf surfaces impede CO2 diffusion to chloroplasts",
@@ -103,7 +96,7 @@
         "Ability to photosynthesize through bark tissue after defoliation"
       ],
       "correctAnswer": "C",
-      "explanation": "Equisetum species possess extensive underground rhizome systems that penetrate deep into the soil, well below the zone affected by surface fires or grazing. These rhizomes store substantial carbohydrate reserves and bear adventitious buds that can rapidly produce new aerial shoots after the above-ground portions are destroyed. The rhizome system can extend several meters below the surface and spread laterally, making Equisetum extremely difficult to eradicate. This underground persistence strategy is remarkably effective\u2014some Equisetum species are considered invasive weeds in disturbed habitats precisely because of the vigor and resilience of their rhizome network. Equisetum does not produce seeds (it is a spore-bearing plant) and does not have true bark, as it lacks secondary growth.",
+      "explanation": "Equisetum species possess extensive underground rhizome systems that penetrate deep into the soil, well below the zone affected by surface fires or grazing. These rhizomes store substantial carbohydrate reserves and bear adventitious buds that can rapidly produce new aerial shoots after the above-ground portions are destroyed. The rhizome system can extend several meters below the surface and spread laterally, making Equisetum extremely difficult to eradicate. This underground persistence strategy is remarkably effective—some Equisetum species are considered invasive weeds in disturbed habitats precisely because of the vigor and resilience of their rhizome network. Equisetum does not produce seeds (it is a spore-bearing plant) and does not have true bark, as it lacks secondary growth.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -123,7 +116,7 @@
         "homosporous reproduction exclusively"
       ],
       "correctAnswer": "C",
-      "explanation": "Lycophytes (club mosses, spike mosses, and quillworts) are distinguished from all other vascular plants (euphyllophytes) by possessing microphylls\u2014small leaves with a single, unbranched vascular trace that does not leave a gap in the stem's vascular cylinder (stele) where it departs. In contrast, euphyllophytes (ferns, horsetails, and seed plants) have megaphylls with complex, branching venation and leaf traces that leave a gap in the stele. This fundamental difference in leaf morphology reflects independent origins of leaves: microphylls likely evolved as simple enations of the stem surface, while megaphylls evolved from entire branch systems that became flattened and webbed. Sporophylls occur in various plant groups, and some lycophytes are heterosporous.",
+      "explanation": "Lycophytes (club mosses, spike mosses, and quillworts) are distinguished from all other vascular plants (euphyllophytes) by possessing microphylls—small leaves with a single, unbranched vascular trace that does not leave a gap in the stem's vascular cylinder (stele) where it departs. In contrast, euphyllophytes (ferns, horsetails, and seed plants) have megaphylls with complex, branching venation and leaf traces that leave a gap in the stele. This fundamental difference in leaf morphology reflects independent origins of leaves: microphylls likely evolved as simple enations of the stem surface, while megaphylls evolved from entire branch systems that became flattened and webbed. Sporophylls occur in various plant groups, and some lycophytes are heterosporous.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -183,7 +176,7 @@
         "All three bryophyte lineages form a monophyletic group equally distant from vascular plants"
       ],
       "correctAnswer": "A",
-      "explanation": "Recent molecular phylogenetic analyses strongly support that bryophytes are paraphyletic with respect to vascular plants, arranged in a grade: liverworts (Marchantiophyta) diverged first as the most basal land plant lineage, followed by mosses (Bryophyta), with hornworts (Anthocerotophyta) as the sister group to vascular plants (tracheophytes). This arrangement is supported by multiple lines of molecular evidence and is consistent with some morphological characters\u2014for example, hornworts share stomata and a columella in their sporangia with vascular plants, and some hornwort sporophytes have indeterminate growth from a basal meristem, paralleling vascular plant growth patterns. However, some recent phylogenomic studies have suggested alternative topologies, including monophyletic bryophytes, making this an active area of research.",
+      "explanation": "Recent molecular phylogenetic analyses strongly support that bryophytes are paraphyletic with respect to vascular plants, arranged in a grade: liverworts (Marchantiophyta) diverged first as the most basal land plant lineage, followed by mosses (Bryophyta), with hornworts (Anthocerotophyta) as the sister group to vascular plants (tracheophytes). This arrangement is supported by multiple lines of molecular evidence and is consistent with some morphological characters—for example, hornworts share stomata and a columella in their sporangia with vascular plants, and some hornwort sporophytes have indeterminate growth from a basal meristem, paralleling vascular plant growth patterns. However, some recent phylogenomic studies have suggested alternative topologies, including monophyletic bryophytes, making this an active area of research.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -203,7 +196,7 @@
         "Synthesis of phytohormones related to plant growth regulators"
       ],
       "correctAnswer": "C",
-      "explanation": "Lignified cell walls are NOT found in charophyte algae\u2014lignin synthesis is an innovation unique to land plants (specifically vascular plants). Lignin requires molecular oxygen for its biosynthesis and provides structural support for growth against gravity, functions relevant only in terrestrial environments. In contrast, all three other features are found in charophytes and were likely preadaptations for land colonization. The phragmoplast (option A) facilitates cell plate formation during cytokinesis, shared by charophytes and land plants. Sporopollenin (option B) in charophyte zygote walls preadapted for the protective spore walls of land plants. Phytohormone-related compounds (option D), including auxin, cytokinin, and ethylene-related molecules, have been detected in charophyte algae, suggesting the hormonal signaling systems of land plants have ancient origins within the charophyte lineage.",
+      "explanation": "Lignified cell walls are NOT found in charophyte algae—lignin synthesis is an innovation unique to land plants (specifically vascular plants). Lignin requires molecular oxygen for its biosynthesis and provides structural support for growth against gravity, functions relevant only in terrestrial environments. In contrast, all three other features are found in charophytes and were likely preadaptations for land colonization. The phragmoplast (option A) facilitates cell plate formation during cytokinesis, shared by charophytes and land plants. Sporopollenin (option B) in charophyte zygote walls preadapted for the protective spore walls of land plants. Phytohormone-related compounds (option D), including auxin, cytokinin, and ethylene-related molecules, have been detected in charophyte algae, suggesting the hormonal signaling systems of land plants have ancient origins within the charophyte lineage.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -283,7 +276,7 @@
         "Observe liverwort populations in the field at sites with naturally varying fungal abundance"
       ],
       "correctAnswer": "C",
-      "explanation": "The factorial design is the most rigorous approach because it can distinguish between the effects of mycorrhizal colonization and the primary benefit mycorrhizae provide\u2014enhanced phosphorus uptake. By crossing mycorrhizal inoculum (present/absent) with phosphorus supplementation (present/absent), the design creates four treatment groups: (1) no fungi, no P supplement; (2) fungi, no P supplement; (3) no fungi, with P supplement; (4) fungi, with P supplement. If mycorrhizae are essential primarily for phosphorus acquisition, then treatment 3 should rescue growth to levels similar to treatment 2 or 4. If mycorrhizae provide benefits beyond phosphorus, treatment 2 should outperform treatment 3. Option A lacks the phosphorus control. Option B cannot separate mycorrhizal effects from other soil biota effects. Option D is observational with no experimental control.",
+      "explanation": "The factorial design is the most rigorous approach because it can distinguish between the effects of mycorrhizal colonization and the primary benefit mycorrhizae provide—enhanced phosphorus uptake. By crossing mycorrhizal inoculum (present/absent) with phosphorus supplementation (present/absent), the design creates four treatment groups: (1) no fungi, no P supplement; (2) fungi, no P supplement; (3) no fungi, with P supplement; (4) fungi, with P supplement. If mycorrhizae are essential primarily for phosphorus acquisition, then treatment 3 should rescue growth to levels similar to treatment 2 or 4. If mycorrhizae provide benefits beyond phosphorus, treatment 2 should outperform treatment 3. Option A lacks the phosphorus control. Option B cannot separate mycorrhizal effects from other soil biota effects. Option D is observational with no experimental control.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -297,10 +290,10 @@
       "type": "MTF",
       "question": "Consider the following statements about bryophyte reproduction:\n(I) Antheridia produce biflagellate sperm that require water to reach the archegonium\n(II) The calyptra is a protective cap derived from the enlarged archegonial wall\n(III) Bryophyte sporophytes are always heterosporous\n(IV) The protonema stage in mosses develops directly from the fertilized egg\nWhich statements are TRUE?",
       "options": [
-        "TTFF \u2014 Only I and II are true",
-        "TFFT \u2014 Only I and IV are true",
-        "TFTF \u2014 Only I and III are true",
-        "FTFT \u2014 Only II and IV are true"
+        "TTFF — Only I and II are true",
+        "TFFT — Only I and IV are true",
+        "TFTF — Only I and III are true",
+        "FTFT — Only II and IV are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: Bryophyte sperm are biflagellate and require a film of water to swim to the archegonium for fertilization. Statement II is TRUE: The calyptra develops from the venter (enlarged base) of the archegonium after fertilization and covers the developing sporophyte capsule, protecting it during maturation. Statement III is FALSE: All bryophytes are homosporous, producing only one type of spore. Heterospory evolved independently in several vascular plant lineages. Statement IV is FALSE: The protonema develops from a germinating haploid spore, not from the fertilized egg. The fertilized egg (zygote) develops into the diploid sporophyte (foot, seta, and capsule).",
@@ -323,7 +316,7 @@
         "a unique form of determinate primary growth with extensive bark-like periderm"
       ],
       "correctAnswer": "D",
-      "explanation": "Lepidodendron and related arborescent lycophytes achieved remarkable heights through an unusual growth strategy fundamentally different from modern trees. Rather than relying on extensive secondary xylem (wood) from a vascular cambium, these trees produced most of their structural support from a thick cylinder of bark-like periderm tissue. The actual wood (secondary xylem) formed only a thin central cylinder, while the outer cortex and periderm provided the bulk of mechanical support. Their growth was determinate\u2014they grew to full height relatively quickly, produced a crown of branches and strobili, and then died. This contrasts with the indeterminate growth of modern trees. The collapse of these swamp forest ecosystems at the end of the Carboniferous contributed to major changes in terrestrial ecosystem structure.",
+      "explanation": "Lepidodendron and related arborescent lycophytes achieved remarkable heights through an unusual growth strategy fundamentally different from modern trees. Rather than relying on extensive secondary xylem (wood) from a vascular cambium, these trees produced most of their structural support from a thick cylinder of bark-like periderm tissue. The actual wood (secondary xylem) formed only a thin central cylinder, while the outer cortex and periderm provided the bulk of mechanical support. Their growth was determinate—they grew to full height relatively quickly, produced a crown of branches and strobili, and then died. This contrasts with the indeterminate growth of modern trees. The collapse of these swamp forest ecosystems at the end of the Carboniferous contributed to major changes in terrestrial ecosystem structure.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -403,7 +396,7 @@
         "Grow Sphagnum and vascular plant competitors together in pots with and without nitrogen addition"
       ],
       "correctAnswer": "B",
-      "explanation": "A long-term nitrogen addition experiment in replicated field plots is the most rigorous approach because it directly manipulates the suspected causal variable (nitrogen deposition) in the natural system. The design should include replicated plots receiving different nitrogen addition rates (including unfertilized controls) and monitor changes in plant community composition over multiple years. This approach can demonstrate causation rather than mere correlation. Option A is observational and cannot control for the many other ways peatlands near industrial areas might differ from remote ones. Option C is correlational and cannot establish causation. Option D (pot experiment) is useful for understanding mechanisms but lacks ecological realism\u2014peatland community dynamics involve complex interactions among Sphagnum, water table, pH, and multiple plant species that cannot be replicated in pots.",
+      "explanation": "A long-term nitrogen addition experiment in replicated field plots is the most rigorous approach because it directly manipulates the suspected causal variable (nitrogen deposition) in the natural system. The design should include replicated plots receiving different nitrogen addition rates (including unfertilized controls) and monitor changes in plant community composition over multiple years. This approach can demonstrate causation rather than mere correlation. Option A is observational and cannot control for the many other ways peatlands near industrial areas might differ from remote ones. Option C is correlational and cannot establish causation. Option D (pot experiment) is useful for understanding mechanisms but lacks ecological realism—peatland community dynamics involve complex interactions among Sphagnum, water table, pH, and multiple plant species that cannot be replicated in pots.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -440,10 +433,10 @@
         "Heterospory produces spores of identical size; homospory produces two sizes",
         "Heterospory only occurs in flowering plants",
         "Heterospory and homospory are identical reproductive strategies",
-        "Heterosporous plants produce two types of spores\u2014large megaspores (developing into female gametophytes) and small microspores (developing into male gametophytes)\u2014which allowed the retention of megaspores (and later seeds) on the parent plant, reducing dependence on water for reproduction"
+        "Heterosporous plants produce two types of spores—large megaspores (developing into female gametophytes) and small microspores (developing into male gametophytes)—which allowed the retention of megaspores (and later seeds) on the parent plant, reducing dependence on water for reproduction"
       ],
       "correctAnswer": "D",
-      "explanation": "Heterospory was a pivotal evolutionary innovation: (1) Homospory (ancestral): One type of spore produces a bisexual gametophyte. Found in most ferns, horsetails, and lycophytes (e.g., Lycopodium). (2) Heterospory (derived): Two spore types\u2014megaspores (in megasporangia) develop into female gametophytes; microspores (in microsporangia) develop into male gametophytes. Found in Selaginella, Isoetes, some extinct lycophytes, and all seed plants. (3) Evolutionary significance: Heterospory set the stage for seed evolution by allowing: megaspore retention within the megasporangium (endospory), reduction of the female gametophyte to a few cells, and development of the integument (forming the ovule). (4) Selective advantage: Retaining the megaspore on the sporophyte provided nutrition and protection to the developing embryo, reducing dependence on external water. (5) Heterospory evolved independently multiple times (at least 11 times in vascular plant evolution), suggesting strong selective pressure favoring this strategy in terrestrial environments.",
+      "explanation": "Heterospory was a pivotal evolutionary innovation: (1) Homospory (ancestral): One type of spore produces a bisexual gametophyte. Found in most ferns, horsetails, and lycophytes (e.g., Lycopodium). (2) Heterospory (derived): Two spore types—megaspores (in megasporangia) develop into female gametophytes; microspores (in microsporangia) develop into male gametophytes. Found in Selaginella, Isoetes, some extinct lycophytes, and all seed plants. (3) Evolutionary significance: Heterospory set the stage for seed evolution by allowing: megaspore retention within the megasporangium (endospory), reduction of the female gametophyte to a few cells, and development of the integument (forming the ovule). (4) Selective advantage: Retaining the megaspore on the sporophyte provided nutrition and protection to the developing embryo, reducing dependence on external water. (5) Heterospory evolved independently multiple times (at least 11 times in vascular plant evolution), suggesting strong selective pressure favoring this strategy in terrestrial environments.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -483,7 +476,7 @@
         "vessel elements are found only in bryophytes while tracheids are found in all vascular plants"
       ],
       "correctAnswer": "A",
-      "explanation": "Both tracheids and vessel elements are dead at functional maturity and conduct water through their lignified cell walls. The key distinction is in their end walls: vessel elements have perforated end walls (perforation plates) that allow essentially unimpeded water flow between stacked cells, forming continuous tubes called vessels. Tracheids have intact end walls and water must pass through pit pairs\u2014thin areas in the wall where secondary wall is absent and water flows through the primary wall and middle lamella. This makes water transport through vessels significantly more efficient than through tracheids. Tracheids are the ancestral condition, found in all vascular plants, while vessel elements evolved independently in several lineages, including angiosperms, Gnetales, and some ferns. Early vascular plants possessed only tracheids, and the evolution of vessels represented a major advancement in water transport efficiency.",
+      "explanation": "Both tracheids and vessel elements are dead at functional maturity and conduct water through their lignified cell walls. The key distinction is in their end walls: vessel elements have perforated end walls (perforation plates) that allow essentially unimpeded water flow between stacked cells, forming continuous tubes called vessels. Tracheids have intact end walls and water must pass through pit pairs—thin areas in the wall where secondary wall is absent and water flows through the primary wall and middle lamella. This makes water transport through vessels significantly more efficient than through tracheids. Tracheids are the ancestral condition, found in all vascular plants, while vessel elements evolved independently in several lineages, including angiosperms, Gnetales, and some ferns. Early vascular plants possessed only tracheids, and the evolution of vessels represented a major advancement in water transport efficiency.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -557,10 +550,10 @@
       "type": "MTF",
       "question": "Evaluate the following statements about the evolutionary significance of plant-fungal symbioses:\n(I) Arbuscular mycorrhizal fungi penetrate root cortical cells and form tree-like arbuscules for nutrient exchange\n(II) Fossil evidence of mycorrhizal associations dates back to the Ordovician period\n(III) Modern liverworts and hornworts can form mycorrhizal-like associations despite lacking true roots\n(IV) Mycorrhizal fungi primarily benefit plants by enhancing water absorption rather than mineral nutrient uptake\nWhich combination is correct?",
       "options": [
-        "TTFF \u2014 Only I and II are true",
-        "TTTF \u2014 I, II, and III are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TTFT \u2014 I, II, and IV are true"
+        "TTFF — Only I and II are true",
+        "TTTF — I, II, and III are true",
+        "TFTT — I, III, and IV are true",
+        "TTFT — I, II, and IV are true"
       ],
       "correctAnswer": "B",
       "explanation": "Statement I is TRUE: Arbuscular mycorrhizal (AM) fungi of the phylum Glomeromycota penetrate the cell walls of root cortical cells (but not the plasma membrane) and form highly branched arbuscules that greatly increase the surface area for nutrient exchange. Statement II is TRUE: Fossil evidence from the Rhynie Chert (~410 MYA, Devonian) and molecular clock analyses suggest mycorrhizal associations originated in the Ordovician when plants first colonized land. Statement III is TRUE: Many liverworts and hornworts form symbiotic associations with AM fungi in their rhizoids and thallus tissue, suggesting these associations predate the evolution of true roots. Statement IV is FALSE: While mycorrhizae do enhance water absorption somewhat, their primary benefit is dramatically enhanced uptake of mineral nutrients, particularly phosphorus.",
@@ -583,7 +576,7 @@
         "independent evolution of both generations from scratch"
       ],
       "correctAnswer": "A",
-      "explanation": "The evolution of heteromorphic alternation of generations\u2014where sporophyte and gametophyte are dramatically different in size, morphology, and ecology\u2014is thought to have progressed from an ancestral isomorphic condition (where both generations were similar, as seen in some modern algae). In this model, differential selection pressures on the two generations drove morphological divergence: the sporophyte was favored for traits enhancing spore dispersal (height, structural complexity) while the gametophyte retained features for fertilization (small size, moisture-dependent). This resulted in the progressive elaboration of one generation and reduction of the other. In bryophytes, the gametophyte became dominant; in vascular plants, the sporophyte became dominant. The homologous developmental toolkit (shared transcription factors and signaling pathways) in both generations supports a common origin with subsequent divergence rather than independent evolution.",
+      "explanation": "The evolution of heteromorphic alternation of generations—where sporophyte and gametophyte are dramatically different in size, morphology, and ecology—is thought to have progressed from an ancestral isomorphic condition (where both generations were similar, as seen in some modern algae). In this model, differential selection pressures on the two generations drove morphological divergence: the sporophyte was favored for traits enhancing spore dispersal (height, structural complexity) while the gametophyte retained features for fertilization (small size, moisture-dependent). This resulted in the progressive elaboration of one generation and reduction of the other. In bryophytes, the gametophyte became dominant; in vascular plants, the sporophyte became dominant. The homologous developmental toolkit (shared transcription factors and signaling pathways) in both generations supports a common origin with subsequent divergence rather than independent evolution.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -623,7 +616,7 @@
         "provides protection and nutrients during early sporophyte development"
       ],
       "correctAnswer": "D",
-      "explanation": "The retention of the embryo (young sporophyte) within the archegonium of the parent gametophyte is the defining characteristic of embryophytes (land plants). This matrotrophy\u2014nutritional dependence of the embryo on the maternal gametophyte\u2014provides critical advantages for terrestrial life. The developing embryo receives protection from desiccation, physical damage, and UV radiation within the archegonial tissue, along with a steady supply of nutrients during its most vulnerable developmental stages. This contrasts with charophyte algae, where the zygote is released and develops independently. The placental transfer tissue at the junction between gametophyte and sporophyte facilitates nutrient transport, representing an important innovation for successful terrestrial reproduction.",
+      "explanation": "The retention of the embryo (young sporophyte) within the archegonium of the parent gametophyte is the defining characteristic of embryophytes (land plants). This matrotrophy—nutritional dependence of the embryo on the maternal gametophyte—provides critical advantages for terrestrial life. The developing embryo receives protection from desiccation, physical damage, and UV radiation within the archegonial tissue, along with a steady supply of nutrients during its most vulnerable developmental stages. This contrasts with charophyte algae, where the zygote is released and develops independently. The placental transfer tissue at the junction between gametophyte and sporophyte facilitates nutrient transport, representing an important innovation for successful terrestrial reproduction.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -637,10 +630,10 @@
       "type": "MTF",
       "question": "Consider the following about plant cuticle and gas exchange:\n(I) The cuticle is composed primarily of cutin and associated waxes\n(II) Stomata are found in all land plant groups including liverworts\n(III) Guard cell turgor changes drive stomatal opening through differential wall thickening\n(IV) The evolution of internal air spaces was necessary for efficient CO2 diffusion to mesophyll cells\nWhich statements are TRUE?",
       "options": [
-        "TFTF \u2014 I and III are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TTTT \u2014 All are true",
-        "TFFT \u2014 I and IV are true"
+        "TFTF — I and III are true",
+        "TFTT — I, III, and IV are true",
+        "TTTT — All are true",
+        "TFFT — I and IV are true"
       ],
       "correctAnswer": "B",
       "explanation": "Statement I is TRUE: The plant cuticle is a hydrophobic layer composed of the polyester polymer cutin embedded with and covered by epicuticular waxes (long-chain fatty acids, alkanes, alcohols, and esters). Statement II is FALSE: Stomata are found in mosses, hornworts, and all vascular plants, but most liverworts lack stomata entirely. Some liverwort groups have pores, but these are structurally different from true stomata and lack guard cells. Statement III is TRUE: Guard cells have radially oriented cellulose microfibrils that cause them to bow apart when turgid, creating the stomatal pore. The inner wall (facing the pore) is thicker than the outer wall, creating differential expansion. Statement IV is TRUE: The evolution of intercellular air spaces (aerenchyma-like tissue) was essential for creating a continuous gas-phase pathway for CO2 to diffuse from stomata to photosynthetic cells deep within the plant body.",
@@ -663,7 +656,7 @@
         "true flowers with both male and female reproductive structures"
       ],
       "correctAnswer": "A",
-      "explanation": "Isoetes (quillworts) is a remarkable genus of heterosporous lycophytes with several unique features. Most notably, Isoetes possesses a vascular cambium that produces secondary vascular tissue\u2014a feature otherwise found only in seed plants among living plant groups. This cambium is unusual in that it produces mostly secondary cortex (bark) externally and only a small amount of secondary xylem internally, similar to the growth pattern inferred for Carboniferous arborescent lycophytes like Lepidodendron and Stigmaria. Isoetes also has other unusual features including CAM photosynthesis (rare in non-seed plants), a specialized rooting structure (rhizomorph) homologous to the stigmarian rootstock of Carboniferous lycophytes, and aquatic or semi-aquatic habitats. The presence of a vascular cambium in Isoetes provides a living example of secondary growth in a non-seed plant lineage.",
+      "explanation": "Isoetes (quillworts) is a remarkable genus of heterosporous lycophytes with several unique features. Most notably, Isoetes possesses a vascular cambium that produces secondary vascular tissue—a feature otherwise found only in seed plants among living plant groups. This cambium is unusual in that it produces mostly secondary cortex (bark) externally and only a small amount of secondary xylem internally, similar to the growth pattern inferred for Carboniferous arborescent lycophytes like Lepidodendron and Stigmaria. Isoetes also has other unusual features including CAM photosynthesis (rare in non-seed plants), a specialized rooting structure (rhizomorph) homologous to the stigmarian rootstock of Carboniferous lycophytes, and aquatic or semi-aquatic habitats. The presence of a vascular cambium in Isoetes provides a living example of secondary growth in a non-seed plant lineage.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -683,7 +676,7 @@
         "Measure chlorophyll content of fronds as an indicator of reproductive investment under different humidity levels"
       ],
       "correctAnswer": "A",
-      "explanation": "The annulus mechanism of fern sporangia operates through differential water loss from specialized thick-walled cells. To test whether this mechanism works better under dry conditions, the most direct approach is to manipulate humidity in controlled chambers and directly measure the outcome variable\u2014spore dispersal distance. Placing fronds with mature sori in chambers at different relative humidity levels (e.g., 30%, 50%, 70%, 90%) and measuring how far spores travel allows quantification of the annulus catapult efficiency under each condition. Option B measures spore production, not dispersal effectiveness. Option C is observational and correlative. Option D measures an unrelated variable. The prediction based on annulus biology is that lower humidity should cause faster water loss from annulus cells, generating greater tension and more vigorous catapult action, resulting in longer dispersal distances.",
+      "explanation": "The annulus mechanism of fern sporangia operates through differential water loss from specialized thick-walled cells. To test whether this mechanism works better under dry conditions, the most direct approach is to manipulate humidity in controlled chambers and directly measure the outcome variable—spore dispersal distance. Placing fronds with mature sori in chambers at different relative humidity levels (e.g., 30%, 50%, 70%, 90%) and measuring how far spores travel allows quantification of the annulus catapult efficiency under each condition. Option B measures spore production, not dispersal effectiveness. Option C is observational and correlative. Option D measures an unrelated variable. The prediction based on annulus biology is that lower humidity should cause faster water loss from annulus cells, generating greater tension and more vigorous catapult action, resulting in longer dispersal distances.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -783,7 +776,7 @@
         "Land plant fossils are always found in proximity to ancient coastlines"
       ],
       "correctAnswer": "A",
-      "explanation": "The freshwater origin of land plants is supported by several lines of evidence, with the most direct being that all modern charophyte algae\u2014the closest living relatives of land plants\u2014are found in freshwater habitats (ponds, lakes, streams), not in marine environments. This suggests that the ancestor of land plants was already adapted to freshwater conditions before the transition to land. Freshwater-adapted organisms already possess some preadaptations for terrestrial life, including tolerance of variable osmotic conditions and the ability to withstand periodic desiccation at pond margins. Additionally, the earliest land plant fossils are associated with freshwater sedimentary environments, not marine deposits. The transition from freshwater to land would have been physiologically less challenging than a direct marine-to-land transition, as freshwater organisms already experience dilute external media.",
+      "explanation": "The freshwater origin of land plants is supported by several lines of evidence, with the most direct being that all modern charophyte algae—the closest living relatives of land plants—are found in freshwater habitats (ponds, lakes, streams), not in marine environments. This suggests that the ancestor of land plants was already adapted to freshwater conditions before the transition to land. Freshwater-adapted organisms already possess some preadaptations for terrestrial life, including tolerance of variable osmotic conditions and the ability to withstand periodic desiccation at pond margins. Additionally, the earliest land plant fossils are associated with freshwater sedimentary environments, not marine deposits. The transition from freshwater to land would have been physiologically less challenging than a direct marine-to-land transition, as freshwater organisms already experience dilute external media.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -815,7 +808,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A comparative study measures the following in three plant groups: Bryophytes \u2014 height: 1-10 cm, xylem: absent, lignin: absent; Seedless vascular plants \u2014 height: 1-300 cm (living), xylem: present, lignin: present; Seed plants \u2014 height: 1-11,500 cm, xylem: present, lignin: present. The correlation between these variables suggests:",
+      "question": "A comparative study measures the following in three plant groups: Bryophytes — height: 1-10 cm, xylem: absent, lignin: absent; Seedless vascular plants — height: 1-300 cm (living), xylem: present, lignin: present; Seed plants — height: 1-11,500 cm, xylem: present, lignin: present. The correlation between these variables suggests:",
       "options": [
         "Xylem without lignin can support heights up to 300 cm",
         "Lignified xylem is both necessary and sufficient for achieving maximum plant height",
@@ -823,7 +816,7 @@
         "Plant height is determined solely by the amount of xylem present"
       ],
       "correctAnswer": "C",
-      "explanation": "The data reveals a clear correlation between the presence of lignified xylem and maximum achievable plant height. Bryophytes, which lack both xylem and lignin, are limited to heights of 1-10 cm. The introduction of lignified xylem in vascular plants enabled heights of 1-300 cm in living seedless vascular plants (and much taller in Carboniferous forms), while seed plants with additional innovations (secondary growth, efficient water transport) reach heights of up to 115 meters. Lignified xylem provides two critical functions: structural support (lignin makes cell walls rigid, allowing the plant to resist gravitational compression) and efficient long-distance water transport (lignified tracheids and vessels maintain open conduits under negative pressure). The data supports the interpretation that lignified vascular tissue was a prerequisite\u2014but not the sole determinant\u2014for achieving significant height.",
+      "explanation": "The data reveals a clear correlation between the presence of lignified xylem and maximum achievable plant height. Bryophytes, which lack both xylem and lignin, are limited to heights of 1-10 cm. The introduction of lignified xylem in vascular plants enabled heights of 1-300 cm in living seedless vascular plants (and much taller in Carboniferous forms), while seed plants with additional innovations (secondary growth, efficient water transport) reach heights of up to 115 meters. Lignified xylem provides two critical functions: structural support (lignin makes cell walls rigid, allowing the plant to resist gravitational compression) and efficient long-distance water transport (lignified tracheids and vessels maintain open conduits under negative pressure). The data supports the interpretation that lignified vascular tissue was a prerequisite—but not the sole determinant—for achieving significant height.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -835,7 +828,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Fossil spore analysis from a stratigraphic column shows: Layer 1 (oldest) \u2014 trilete spores only; Layer 2 \u2014 trilete spores + monolete spores; Layer 3 \u2014 trilete, monolete, and prepollen grains; Layer 4 (youngest) \u2014 all previous types plus true pollen grains. This sequence best illustrates:",
+      "question": "Fossil spore analysis from a stratigraphic column shows: Layer 1 (oldest) — trilete spores only; Layer 2 — trilete spores + monolete spores; Layer 3 — trilete, monolete, and prepollen grains; Layer 4 (youngest) — all previous types plus true pollen grains. This sequence best illustrates:",
       "options": [
         "The evolution of pollination from wind to animal vectors",
         "Progressive evolution of spore and pollen morphology reflecting plant diversification",
@@ -843,7 +836,7 @@
         "The replacement of spore reproduction by seed reproduction"
       ],
       "correctAnswer": "B",
-      "explanation": "The stratigraphic sequence of spore and pollen types reflects the progressive diversification of land plants through geological time. Trilete spores (with a three-rayed scar from meiotic tetrad formation) are characteristic of early land plants and seedless vascular plants. Monolete spores (with a single scar) evolved later in some fern lineages. Prepollen represents an intermediate stage in the evolution of pollen, found in early seed plants (seed ferns and progymnosperms) with characteristics between spores and true pollen. True pollen grains, with their distinctive apertures and wall structure, characterize more derived seed plants. The progressive appearance of these types illustrates increasing plant diversity over time, not replacement\u2014older types persist alongside newer innovations.",
+      "explanation": "The stratigraphic sequence of spore and pollen types reflects the progressive diversification of land plants through geological time. Trilete spores (with a three-rayed scar from meiotic tetrad formation) are characteristic of early land plants and seedless vascular plants. Monolete spores (with a single scar) evolved later in some fern lineages. Prepollen represents an intermediate stage in the evolution of pollen, found in early seed plants (seed ferns and progymnosperms) with characteristics between spores and true pollen. True pollen grains, with their distinctive apertures and wall structure, characterize more derived seed plants. The progressive appearance of these types illustrates increasing plant diversity over time, not replacement—older types persist alongside newer innovations.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -883,7 +876,7 @@
         "indeterminate growth and development of complex three-dimensional body plans"
       ],
       "correctAnswer": "D",
-      "explanation": "Apical meristems are localized regions of cell division found at the tips of shoots and roots in land plants. Their evolution was crucial for the development of complex three-dimensional body plans because they enable indeterminate growth\u2014the continuous production of new cells, tissues, and organs throughout the plant's life. In charophyte algae, growth occurs by diffuse cell division without localized meristematic regions, limiting morphological complexity. Apical meristems produce the organized tissue systems (dermal, ground, vascular) that characterize land plants and allow the elaboration of complex structures such as leaves, stems, and roots. This innovation was fundamental to the adaptive radiation of plants on land.",
+      "explanation": "Apical meristems are localized regions of cell division found at the tips of shoots and roots in land plants. Their evolution was crucial for the development of complex three-dimensional body plans because they enable indeterminate growth—the continuous production of new cells, tissues, and organs throughout the plant's life. In charophyte algae, growth occurs by diffuse cell division without localized meristematic regions, limiting morphological complexity. Apical meristems produce the organized tissue systems (dermal, ground, vascular) that characterize land plants and allow the elaboration of complex structures such as leaves, stems, and roots. This innovation was fundamental to the adaptive radiation of plants on land.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -903,7 +896,7 @@
         "The first occurrence of alternation of generations in plants"
       ],
       "correctAnswer": "C",
-      "explanation": "Rhynia and related fossils from the Rhynie Chert (about 410 million years ago) are among the best-preserved early vascular plant fossils. Rhynia had simple, dichotomously branching stems with terminal sporangia but lacked true leaves and roots. It possessed a simple vascular strand (protostele) with tracheids, confirming it was a vascular plant. These fossils demonstrate that the basic vascular plant body plan\u2014upright sporophyte with vascular tissue\u2014evolved before the elaboration of organs like leaves and roots. Roots likely evolved from modified stem tissue, and leaves evolved independently in different lineages (microphylls in lycophytes, megaphylls in ferns and seed plants) through different developmental pathways.",
+      "explanation": "Rhynia and related fossils from the Rhynie Chert (about 410 million years ago) are among the best-preserved early vascular plant fossils. Rhynia had simple, dichotomously branching stems with terminal sporangia but lacked true leaves and roots. It possessed a simple vascular strand (protostele) with tracheids, confirming it was a vascular plant. These fossils demonstrate that the basic vascular plant body plan—upright sporophyte with vascular tissue—evolved before the elaboration of organs like leaves and roots. Roots likely evolved from modified stem tissue, and leaves evolved independently in different lineages (microphylls in lycophytes, megaphylls in ferns and seed plants) through different developmental pathways.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -923,7 +916,7 @@
         "mycorrhizal hyphae that bridge the two generations"
       ],
       "correctAnswer": "B",
-      "explanation": "Transfer cells are specialized cells found at the junction between the moss sporophyte foot and the surrounding gametophyte tissue. They are characterized by elaborate cell wall ingrowths (wall labyrinths) that dramatically increase the surface area of the plasma membrane, facilitating enhanced transport of nutrients from the maternal gametophyte to the developing sporophyte. There are no plasmodesmata crossing the generational boundary\u2014the sporophyte and gametophyte are genetically different individuals (one diploid, one haploid), and transport occurs via apoplastic loading followed by membrane transport proteins in the transfer cells. This is analogous to the interface between mother and embryo in animals, where nutrients must cross a cellular barrier between genetically distinct organisms. Transfer cells are found widely in plants at sites of intensive short-distance transport.",
+      "explanation": "Transfer cells are specialized cells found at the junction between the moss sporophyte foot and the surrounding gametophyte tissue. They are characterized by elaborate cell wall ingrowths (wall labyrinths) that dramatically increase the surface area of the plasma membrane, facilitating enhanced transport of nutrients from the maternal gametophyte to the developing sporophyte. There are no plasmodesmata crossing the generational boundary—the sporophyte and gametophyte are genetically different individuals (one diploid, one haploid), and transport occurs via apoplastic loading followed by membrane transport proteins in the transfer cells. This is analogous to the interface between mother and embryo in animals, where nutrients must cross a cellular barrier between genetically distinct organisms. Transfer cells are found widely in plants at sites of intensive short-distance transport.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -935,7 +928,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A study compares the diversity (species per genus ratio) of plant groups across geological periods: Silurian lycophytes \u2014 1.2; Devonian lycophytes \u2014 3.8; Carboniferous lycophytes \u2014 5.1; Permian lycophytes \u2014 1.4; modern lycophytes \u2014 1.1. This pattern represents:",
+      "question": "A study compares the diversity (species per genus ratio) of plant groups across geological periods: Silurian lycophytes — 1.2; Devonian lycophytes — 3.8; Carboniferous lycophytes — 5.1; Permian lycophytes — 1.4; modern lycophytes — 1.1. This pattern represents:",
       "options": [
         "continuous evolutionary radiation of lycophytes through time",
         "artificial bias from incomplete fossil sampling in older periods",
@@ -958,12 +951,12 @@
       "question": "Bryophytes (mosses, liverworts, hornworts) are the earliest-diverging land plant lineages. What feature of their life cycle fundamentally limits their size and ecological dominance compared to vascular plants?",
       "options": [
         "They lack chlorophyll and cannot photosynthesize",
-        "The dominant generation is the haploid gametophyte, which lacks true vascular tissue (lignified xylem) for water transport and structural support, and requires water for sperm to swim to eggs\u2014restricting bryophytes to moist habitats and small stature",
+        "The dominant generation is the haploid gametophyte, which lacks true vascular tissue (lignified xylem) for water transport and structural support, and requires water for sperm to swim to eggs—restricting bryophytes to moist habitats and small stature",
         "They can only reproduce by vegetative fragmentation",
         "Their sporophytes are larger than their gametophytes"
       ],
       "correctAnswer": "B",
-      "explanation": "Bryophyte biology reflects early land plant constraints: (1) Gametophyte dominance: The photosynthetic, ecologically functional plant body is the haploid gametophyte. The diploid sporophyte is small and nutritionally dependent on the gametophyte (attached to it). This contrasts with vascular plants where the sporophyte is dominant. (2) No true vascular tissue: Bryophytes lack lignified xylem tracheids/vessel elements. Water and nutrient transport relies on external capillary action, internal hydroids (water-conducting cells without lignin in some mosses), and cell-to-cell diffusion. This limits height to ~50 cm maximum (most are <10 cm). (3) Water-dependent fertilization: Biflagellated sperm must swim through a film of water to reach the archegonium containing the egg. This limits sexual reproduction to moist conditions. (4) Ecological significance despite constraints: Bryophytes are ecologically important\u2014Sphagnum moss alone stores more carbon than any other plant genus, covering ~1% of Earth's surface in peatlands. (5) Despite limitations, bryophytes are incredibly successful: ~20,000 species found from tropical to polar regions.",
+      "explanation": "Bryophyte biology reflects early land plant constraints: (1) Gametophyte dominance: The photosynthetic, ecologically functional plant body is the haploid gametophyte. The diploid sporophyte is small and nutritionally dependent on the gametophyte (attached to it). This contrasts with vascular plants where the sporophyte is dominant. (2) No true vascular tissue: Bryophytes lack lignified xylem tracheids/vessel elements. Water and nutrient transport relies on external capillary action, internal hydroids (water-conducting cells without lignin in some mosses), and cell-to-cell diffusion. This limits height to ~50 cm maximum (most are <10 cm). (3) Water-dependent fertilization: Biflagellated sperm must swim through a film of water to reach the archegonium containing the egg. This limits sexual reproduction to moist conditions. (4) Ecological significance despite constraints: Bryophytes are ecologically important—Sphagnum moss alone stores more carbon than any other plant genus, covering ~1% of Earth's surface in peatlands. (5) Despite limitations, bryophytes are incredibly successful: ~20,000 species found from tropical to polar regions.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -977,10 +970,10 @@
       "type": "MTF",
       "question": "Evaluate the following statements about the transition from water to land in plant evolution:\n(I) UV-absorbing compounds such as flavonoids evolved as protection against increased UV radiation on land\n(II) The first land plants likely had a dominant sporophyte generation like modern vascular plants\n(III) Auxin transport mechanisms found in land plants are also present in some charophyte algae\n(IV) The evolution of roots preceded the evolution of leaves in land plant phylogeny\nWhich statements are TRUE?",
       "options": [
-        "TFTT \u2014 I, III, and IV are true",
-        "TFTF \u2014 I and III are true",
-        "TTFF \u2014 Only I and II are true",
-        "FTFT \u2014 Only II and IV are true"
+        "TFTT — I, III, and IV are true",
+        "TFTF — I and III are true",
+        "TTFF — Only I and II are true",
+        "FTFT — Only II and IV are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: Flavonoids and related UV-absorbing compounds are found in all land plants and many charophyte algae, and their biosynthetic pathway was likely elaborated during the transition to land as protection against damaging UV radiation in the terrestrial environment. Statement II is FALSE: The earliest land plants almost certainly had gametophyte-dominant life cycles, like modern bryophytes. Sporophyte dominance evolved later with vascular plants. Statement III is TRUE: Polar auxin transport, mediated by PIN-like proteins, has been demonstrated in some charophyte algae, suggesting this key regulatory mechanism predates land colonization. Statement IV is TRUE: Fossil evidence shows that early vascular plants (like Cooksonia) had root-like structures (rhizoids or primitive roots) before megaphylls evolved. True roots appeared in the Devonian, while megaphylls evolved later in both fern and seed plant lineages.",
@@ -1003,7 +996,7 @@
         "Thalloid liverworts lack chloroplasts while leafy liverworts are photosynthetic"
       ],
       "correctAnswer": "A",
-      "explanation": "Liverworts (Marchantiophyta) exhibit two main body plans: thalloid and leafy. Thalloid liverworts like Marchantia have a flattened, ribbon-like body (thallus) that is not differentiated into distinct stem and leaf structures. The thallus may be simple (as in Metzgeria) or complex (as in Marchantia, with internal air chambers and pores). Leafy liverworts, which comprise the majority of liverwort species, have a stem-like axis bearing two or three rows of leaf-like structures (phyllids) that lack a midrib\u2014distinguishing them from moss leaves, which typically have a midrib (costa). Both forms are photosynthetic, can reproduce sexually and asexually, and are found in terrestrial habitats. Leafy liverworts are often found in tropical cloud forests and are important epiphytes in these ecosystems.",
+      "explanation": "Liverworts (Marchantiophyta) exhibit two main body plans: thalloid and leafy. Thalloid liverworts like Marchantia have a flattened, ribbon-like body (thallus) that is not differentiated into distinct stem and leaf structures. The thallus may be simple (as in Metzgeria) or complex (as in Marchantia, with internal air chambers and pores). Leafy liverworts, which comprise the majority of liverwort species, have a stem-like axis bearing two or three rows of leaf-like structures (phyllids) that lack a midrib—distinguishing them from moss leaves, which typically have a midrib (costa). Both forms are photosynthetic, can reproduce sexually and asexually, and are found in terrestrial habitats. Leafy liverworts are often found in tropical cloud forests and are important epiphytes in these ecosystems.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -1015,7 +1008,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A researcher measures water absorption capacity (as % of dry weight) in different plant structures: Sphagnum hyaline cells \u2014 2,200%; Sphagnum photosynthetic cells \u2014 350%; Typical moss leafy tissue \u2014 600%; Fern frond tissue \u2014 150%; Liverwort thallus \u2014 450%. The exceptional capacity of Sphagnum hyaline cells is best attributed to:",
+      "question": "A researcher measures water absorption capacity (as % of dry weight) in different plant structures: Sphagnum hyaline cells — 2,200%; Sphagnum photosynthetic cells — 350%; Typical moss leafy tissue — 600%; Fern frond tissue — 150%; Liverwort thallus — 450%. The exceptional capacity of Sphagnum hyaline cells is best attributed to:",
       "options": [
         "higher concentration of aquaporin water channel proteins in their membranes",
         "symbiotic bacteria within hyaline cells that produce hygroscopic exopolysaccharides",
@@ -1023,7 +1016,7 @@
         "larger cell size with walls containing reinforcing bars and large pores, and absence of cell contents"
       ],
       "correctAnswer": "D",
-      "explanation": "Sphagnum hyaline cells are remarkable structures specialized for water storage. They are large, dead cells (lacking any protoplast at maturity) with cell walls reinforced by spiral or annular thickenings (bars) that maintain cell shape even when empty, and large pores that allow rapid water uptake. The combination of large cell volume, absence of cell contents, and wall pores creates an enormous capacity for capillary water storage\u2014up to 20-25 times the dry weight. This far exceeds the capacity of living cells, which must maintain cellular contents and intact membranes. The hyaline cells alternate with narrow, living photosynthetic cells in the Sphagnum leaf, creating a unique two-cell-type leaf anatomy. This structural adaptation, not biochemical specialization, is responsible for Sphagnum's extraordinary water-holding capacity that underlies its ecological role in creating waterlogged peatland conditions.",
+      "explanation": "Sphagnum hyaline cells are remarkable structures specialized for water storage. They are large, dead cells (lacking any protoplast at maturity) with cell walls reinforced by spiral or annular thickenings (bars) that maintain cell shape even when empty, and large pores that allow rapid water uptake. The combination of large cell volume, absence of cell contents, and wall pores creates an enormous capacity for capillary water storage—up to 20-25 times the dry weight. This far exceeds the capacity of living cells, which must maintain cellular contents and intact membranes. The hyaline cells alternate with narrow, living photosynthetic cells in the Sphagnum leaf, creating a unique two-cell-type leaf anatomy. This structural adaptation, not biochemical specialization, is responsible for Sphagnum's extraordinary water-holding capacity that underlies its ecological role in creating waterlogged peatland conditions.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1083,7 +1076,7 @@
         "horizontal gene transfer of leaf development genes between lineages"
       ],
       "correctAnswer": "C",
-      "explanation": "Megaphylls (leaves with branching venation and leaf gaps in the stele) evolved independently in at least two major plant lineages: ferns (monilophytes) and seed plants (spermatophytes). This is inferred from the fossil record, which shows that early members of both lineages lacked megaphylls, and from phylogenetic analyses showing that microphyll-bearing lycophytes diverged before the fern-seed plant split. The independent evolution of megaphylls in these lineages represents convergent evolution driven by similar selective pressures\u2014primarily the advantage of expanded, flattened photosynthetic surfaces for efficient light capture. The overtopping model proposes that megaphylls evolved from three-dimensional branch systems that became planated (flattened into one plane) and webbed (connected by laminar tissue). While the developmental genetics may involve some shared ancestral toolkit genes, the independent assembly of the megaphyll developmental program in each lineage constitutes convergence.",
+      "explanation": "Megaphylls (leaves with branching venation and leaf gaps in the stele) evolved independently in at least two major plant lineages: ferns (monilophytes) and seed plants (spermatophytes). This is inferred from the fossil record, which shows that early members of both lineages lacked megaphylls, and from phylogenetic analyses showing that microphyll-bearing lycophytes diverged before the fern-seed plant split. The independent evolution of megaphylls in these lineages represents convergent evolution driven by similar selective pressures—primarily the advantage of expanded, flattened photosynthetic surfaces for efficient light capture. The overtopping model proposes that megaphylls evolved from three-dimensional branch systems that became planated (flattened into one plane) and webbed (connected by laminar tissue). While the developmental genetics may involve some shared ancestral toolkit genes, the independent assembly of the megaphyll developmental program in each lineage constitutes convergence.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1103,7 +1096,7 @@
         "production of adventitious roots only from terminal nodes"
       ],
       "correctAnswer": "C",
-      "explanation": "Equisetum species have a highly distinctive morphology with jointed (articulated), ribbed stems bearing whorls of small, scale-like leaves fused into sheaths at each node. The stems are the primary photosynthetic organs and contain silica deposits in their epidermal cells, giving them an abrasive texture (historically used as scouring rushes). Branches, when present, also emerge in whorls from the nodes. The stems have a hollow pith surrounded by a ring of small canals (carinal canals) associated with vascular bundles and larger vallecular canals in the cortex. Equisetum reproduces via strobili (cones) that produce spores with unique elaters\u2014hygroscopic bands that aid in spore dispersal. Despite being the sole surviving genus, sphenophytes were diverse and abundant in Paleozoic forests.",
+      "explanation": "Equisetum species have a highly distinctive morphology with jointed (articulated), ribbed stems bearing whorls of small, scale-like leaves fused into sheaths at each node. The stems are the primary photosynthetic organs and contain silica deposits in their epidermal cells, giving them an abrasive texture (historically used as scouring rushes). Branches, when present, also emerge in whorls from the nodes. The stems have a hollow pith surrounded by a ring of small canals (carinal canals) associated with vascular bundles and larger vallecular canals in the cortex. Equisetum reproduces via strobili (cones) that produce spores with unique elaters—hygroscopic bands that aid in spore dispersal. Despite being the sole surviving genus, sphenophytes were diverse and abundant in Paleozoic forests.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1155,7 +1148,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A researcher counts sporophyte-to-gametophyte biomass ratios across plant groups: Mosses \u2014 1:50; Ferns \u2014 100:1; Conifers \u2014 100,000:1. This trend is best explained by:",
+      "question": "A researcher counts sporophyte-to-gametophyte biomass ratios across plant groups: Mosses — 1:50; Ferns — 100:1; Conifers — 100,000:1. This trend is best explained by:",
       "options": [
         "increasing rates of photosynthesis in sporophyte tissue across plant evolution",
         "the inability of gametophytes to produce chlorophyll in seed plants",
@@ -1163,7 +1156,7 @@
         "the progressive evolutionary shift toward sporophyte dominance and gametophyte reduction"
       ],
       "correctAnswer": "D",
-      "explanation": "The biomass ratios clearly illustrate one of the most important trends in land plant evolution: the progressive shift from gametophyte dominance to sporophyte dominance. In mosses (1:50 sporophyte:gametophyte), the gametophyte is the dominant, long-lived generation while the sporophyte is small and dependent. In ferns (100:1), the relationship is reversed\u2014the sporophyte is the dominant, conspicuous plant while the gametophyte is reduced to a tiny prothallus. In conifers (100,000:1), sporophyte dominance is extreme\u2014the gametophyte is reduced to just a few cells within the pollen grain (male) or ovule (female). This trend reflects the selective advantages of the diploid sporophyte in terrestrial environments, including genetic buffering against harmful mutations and the ability to grow larger for better light competition.",
+      "explanation": "The biomass ratios clearly illustrate one of the most important trends in land plant evolution: the progressive shift from gametophyte dominance to sporophyte dominance. In mosses (1:50 sporophyte:gametophyte), the gametophyte is the dominant, long-lived generation while the sporophyte is small and dependent. In ferns (100:1), the relationship is reversed—the sporophyte is the dominant, conspicuous plant while the gametophyte is reduced to a tiny prothallus. In conifers (100,000:1), sporophyte dominance is extreme—the gametophyte is reduced to just a few cells within the pollen grain (male) or ovule (female). This trend reflects the selective advantages of the diploid sporophyte in terrestrial environments, including genetic buffering against harmful mutations and the ability to grow larger for better light competition.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -1195,7 +1188,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A researcher measures the proportion of land surface covered by different plant groups over geological time. The data shows: Silurian \u2014 bryophytes 80%, early vascular plants 20%; Devonian \u2014 bryophytes 30%, seedless vascular plants 60%, seed plants 10%; Carboniferous \u2014 bryophytes 10%, seedless vascular plants 70%, seed plants 20%. Which interpretation is best supported?",
+      "question": "A researcher measures the proportion of land surface covered by different plant groups over geological time. The data shows: Silurian — bryophytes 80%, early vascular plants 20%; Devonian — bryophytes 30%, seedless vascular plants 60%, seed plants 10%; Carboniferous — bryophytes 10%, seedless vascular plants 70%, seed plants 20%. Which interpretation is best supported?",
       "options": [
         "Bryophytes went extinct and were replaced by vascular plants",
         "Seedless vascular plants progressively displaced bryophytes as dominant land flora",
@@ -1203,7 +1196,7 @@
         "The data suggests competitive exclusion between all three groups"
       ],
       "correctAnswer": "B",
-      "explanation": "The data clearly shows a progressive shift in terrestrial plant dominance from bryophyte-dominated communities in the Silurian to seedless vascular plant-dominated communities by the Devonian and Carboniferous. Bryophyte coverage decreased from 80% to 10%, while seedless vascular plants increased from 20% to 70%. This pattern reflects the evolutionary advantages of vascular tissue (lignified xylem and phloem) for terrestrial life: greater height for light competition, more efficient water and nutrient transport, and stronger structural support. Bryophytes were not eliminated (they persist to this day) but were relegated to niches where their small stature and water requirements are not disadvantageous. Seed plants were increasing but had not yet achieved dominance\u2014that would come in the Permian and Mesozoic.",
+      "explanation": "The data clearly shows a progressive shift in terrestrial plant dominance from bryophyte-dominated communities in the Silurian to seedless vascular plant-dominated communities by the Devonian and Carboniferous. Bryophyte coverage decreased from 80% to 10%, while seedless vascular plants increased from 20% to 70%. This pattern reflects the evolutionary advantages of vascular tissue (lignified xylem and phloem) for terrestrial life: greater height for light competition, more efficient water and nutrient transport, and stronger structural support. Bryophytes were not eliminated (they persist to this day) but were relegated to niches where their small stature and water requirements are not disadvantageous. Seed plants were increasing but had not yet achieved dominance—that would come in the Permian and Mesozoic.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1217,10 +1210,10 @@
       "type": "MTF",
       "question": "Consider the following about fern (monilophyte) biology:\n(I) Fern sporangia are typically clustered in sori on the abaxial leaf surface\n(II) The annulus is a row of thick-walled cells that aids in spore dispersal via a catapult mechanism\n(III) All ferns are homosporous\n(IV) Fern gametophytes produce both antheridia and archegonia and are thus bisexual\nWhich are TRUE?",
       "options": [
-        "TTFT \u2014 I, II, and IV are true",
-        "TTFF \u2014 Only I and II are true",
-        "TTTF \u2014 I, II, and III are true",
-        "TFTT \u2014 I, III, and IV are true"
+        "TTFT — I, II, and IV are true",
+        "TTFF — Only I and II are true",
+        "TTTF — I, II, and III are true",
+        "TFTT — I, III, and IV are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: Most ferns bear sporangia grouped into clusters called sori on the underside (abaxial surface) of their fronds, often protected by a flap of tissue called an indusium. Statement II is TRUE: The annulus is a row of specialized cells with asymmetrically thickened walls that encircles the sporangium. Differential water loss from these cells creates tension that causes the annulus to straighten, then snap back, catapulting spores into the air. Statement III is FALSE: While most ferns are homosporous, heterospory occurs in aquatic ferns of the families Salviniaceae and Marsileaceae. Statement IV is TRUE: Most homosporous fern gametophytes (prothalli) are bisexual, producing both antheridia and archegonia, though timing of maturation and antheridiogen hormones promote cross-fertilization.",
@@ -1243,7 +1236,7 @@
         "the ability to lose nearly all cellular water, enter metabolic quiescence, and resume activity upon rehydration"
       ],
       "correctAnswer": "D",
-      "explanation": "Many bryophytes are poikilohydric organisms\u2014they cannot regulate their internal water content and instead equilibrate with the environment. Remarkably, many species have evolved desiccation tolerance (also called anhydrobiosis), the ability to survive the loss of virtually all cellular water (down to 5-10% of dry weight). During desiccation, these plants undergo orderly metabolic shutdown, accumulating protective sugars (trehalose, sucrose) and LEA (Late Embryogenesis Abundant) proteins that stabilize membranes and proteins in the dried state. Upon rehydration, they can resume full metabolic activity within minutes to hours. This is fundamentally different from drought avoidance strategies used by most vascular plants, which maintain hydration through stomatal regulation and extensive root systems. Desiccation tolerance was likely important for early land plant survival in unpredictable terrestrial environments.",
+      "explanation": "Many bryophytes are poikilohydric organisms—they cannot regulate their internal water content and instead equilibrate with the environment. Remarkably, many species have evolved desiccation tolerance (also called anhydrobiosis), the ability to survive the loss of virtually all cellular water (down to 5-10% of dry weight). During desiccation, these plants undergo orderly metabolic shutdown, accumulating protective sugars (trehalose, sucrose) and LEA (Late Embryogenesis Abundant) proteins that stabilize membranes and proteins in the dried state. Upon rehydration, they can resume full metabolic activity within minutes to hours. This is fundamentally different from drought avoidance strategies used by most vascular plants, which maintain hydration through stomatal regulation and extensive root systems. Desiccation tolerance was likely important for early land plant survival in unpredictable terrestrial environments.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1263,7 +1256,7 @@
         "a gametophyte that transforms directly into a sporophyte without any cell division"
       ],
       "correctAnswer": "A",
-      "explanation": "Apogamy is the development of a sporophyte directly from gametophyte vegetative tissue without the fusion of gametes (fertilization). Since the gametophyte is haploid (n), the resulting sporophyte is also haploid (n) rather than the normal diploid (2n). This haploid sporophyte presents a problem for meiosis\u2014meiosis requires pairing of homologous chromosomes, which cannot occur normally with only one set of chromosomes. Apogamous ferns have evolved various cytological mechanisms to deal with this, including premeiotic endomitosis (chromosome doubling before meiosis) to restore diploidy, or bypassing meiosis entirely through apospory (production of gametophytes from sporophyte tissue without meiosis). Apogamy and apospory together can create an asexual life cycle that is relatively common in ferns, occurring in approximately 10% of fern species.",
+      "explanation": "Apogamy is the development of a sporophyte directly from gametophyte vegetative tissue without the fusion of gametes (fertilization). Since the gametophyte is haploid (n), the resulting sporophyte is also haploid (n) rather than the normal diploid (2n). This haploid sporophyte presents a problem for meiosis—meiosis requires pairing of homologous chromosomes, which cannot occur normally with only one set of chromosomes. Apogamous ferns have evolved various cytological mechanisms to deal with this, including premeiotic endomitosis (chromosome doubling before meiosis) to restore diploidy, or bypassing meiosis entirely through apospory (production of gametophytes from sporophyte tissue without meiosis). Apogamy and apospory together can create an asexual life cycle that is relatively common in ferns, occurring in approximately 10% of fern species.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -1303,7 +1296,7 @@
         "the transition from aquatic charophyte algae to terrestrial embryophytes"
       ],
       "correctAnswer": "B",
-      "explanation": "The Rhynie Chert in Aberdeenshire, Scotland, is an exceptionally preserved early Devonian fossil deposit (~410 million years old) where silica-rich water from hot springs rapidly permineralized an entire ecosystem, preserving organisms at the cellular level. This extraordinary preservation reveals the internal anatomy of early vascular plants (including Rhynia, Aglaophyton, Asteroxylon) in exquisite detail\u2014individual cells, xylem tracheids, sporangia with spores, and even the arbuscules of mycorrhizal fungi within plant tissues are clearly visible in thin sections. The deposit also preserves associated organisms including fungi, arthropods, nematodes, and freshwater crustaceans, providing a remarkably complete picture of an early terrestrial ecosystem. No other deposit provides comparable cellular-level preservation of early land plants and their ecological interactions.",
+      "explanation": "The Rhynie Chert in Aberdeenshire, Scotland, is an exceptionally preserved early Devonian fossil deposit (~410 million years old) where silica-rich water from hot springs rapidly permineralized an entire ecosystem, preserving organisms at the cellular level. This extraordinary preservation reveals the internal anatomy of early vascular plants (including Rhynia, Aglaophyton, Asteroxylon) in exquisite detail—individual cells, xylem tracheids, sporangia with spores, and even the arbuscules of mycorrhizal fungi within plant tissues are clearly visible in thin sections. The deposit also preserves associated organisms including fungi, arthropods, nematodes, and freshwater crustaceans, providing a remarkably complete picture of an early terrestrial ecosystem. No other deposit provides comparable cellular-level preservation of early land plants and their ecological interactions.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1377,10 +1370,10 @@
       "type": "MTF",
       "question": "Evaluate statements about early land plant evolution:\n(I) The first land plants appeared in the Ordovician period based on fossil spore evidence\n(II) Cooksonia is the earliest known vascular plant with confirmed tracheids\n(III) The Devonian period saw the first forests and the first seed plants\n(IV) Bryophytes evolved from vascular plant ancestors through reduction\nWhich are TRUE?",
       "options": [
-        "TFTF \u2014 I and III are true",
-        "TTFF \u2014 Only I and II are true",
-        "TTTF \u2014 I, II, and III are true",
-        "FTFT \u2014 II and IV are true"
+        "TFTF — I and III are true",
+        "TTFF — Only I and II are true",
+        "TTTF — I, II, and III are true",
+        "FTFT — II and IV are true"
       ],
       "correctAnswer": "C",
       "explanation": "Statement I is TRUE: Fossil spores with sporopollenin walls and characteristics of land plants (such as trilete marks indicating meiotic origin) have been found in Ordovician rocks dating to ~470 MYA, predating the earliest macrofossils of land plants. Statement II is TRUE: Cooksonia, from the late Silurian (~425 MYA), is among the earliest known fossils with confirmed tracheids (water-conducting cells with lignified walls), establishing it as a vascular plant. Statement III is TRUE: The Devonian period (~419-359 MYA) witnessed the diversification of vascular plants into the first forests (including arborescent lycopods and progymnosperms like Archaeopteris) and the appearance of the first seed plants (seed ferns). Statement IV is FALSE: Bryophytes are not derived from vascular plant ancestors; they represent early-diverging land plant lineages that never evolved vascular tissue.",
@@ -1417,13 +1410,13 @@
       "type": "MTF",
       "question": "About Sphagnum moss and peatlands:\n(I) Sphagnum acidifies its environment by exchanging H+ ions for mineral cations\n(II) Peat bogs are carbon sinks because decomposition exceeds production\n(III) Dead Sphagnum cells (hyaline cells) can hold 20-25 times their dry weight in water\n(IV) Peatland drainage for agriculture releases stored carbon as CO2\nWhich are TRUE?",
       "options": [
-        "TTFT \u2014 I, II, and IV are true",
-        "TFTF \u2014 I and III are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TTTT \u2014 All are true"
+        "TTFT — I, II, and IV are true",
+        "TFTF — I and III are true",
+        "TFTT — I, III, and IV are true",
+        "TTTT — All are true"
       ],
       "correctAnswer": "C",
-      "explanation": "Statement I is TRUE: Sphagnum actively acidifies its environment by releasing hydrogen ions from uronic acid residues in its cell walls in exchange for mineral cations. This creates the characteristically low pH (3.5-4.5) of peat bogs. Statement II is FALSE: Peat bogs are carbon sinks precisely because production exceeds decomposition\u2014the acidic, waterlogged, anoxic conditions strongly inhibit microbial decomposition, allowing organic matter to accumulate. Statement III is TRUE: The large, dead hyaline cells in Sphagnum leaves have reinforcing thickenings and pores that allow them to absorb and retain enormous quantities of water. Statement IV is TRUE: When peatlands are drained for agriculture or other purposes, the water table drops, exposing previously anoxic peat to oxygen, which dramatically accelerates microbial decomposition and releases stored carbon as CO2 and methane.",
+      "explanation": "Statement I is TRUE: Sphagnum actively acidifies its environment by releasing hydrogen ions from uronic acid residues in its cell walls in exchange for mineral cations. This creates the characteristically low pH (3.5-4.5) of peat bogs. Statement II is FALSE: Peat bogs are carbon sinks precisely because production exceeds decomposition—the acidic, waterlogged, anoxic conditions strongly inhibit microbial decomposition, allowing organic matter to accumulate. Statement III is TRUE: The large, dead hyaline cells in Sphagnum leaves have reinforcing thickenings and pores that allow them to absorb and retain enormous quantities of water. Statement IV is TRUE: When peatlands are drained for agriculture or other purposes, the water table drops, exposing previously anoxic peat to oxygen, which dramatically accelerates microbial decomposition and releases stored carbon as CO2 and methane.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -1463,7 +1456,7 @@
         "All three bryophyte groups contribute equally to peat formation"
       ],
       "correctAnswer": "C",
-      "explanation": "Mosses (phylum Bryophyta) are the most species-rich bryophyte group with over 12,000 described species. Among these, Sphagnum (peat moss) is ecologically paramount, dominating vast peatland ecosystems in boreal and subarctic regions. Sphagnum has unique properties: its leaves contain large dead hyaline cells that can absorb 20-25 times their dry weight in water, creating waterlogged acidic conditions that inhibit decomposition. The slow accumulation of partially decomposed Sphagnum creates peat deposits that store enormous quantities of carbon\u2014estimated at 400 billion tonnes globally, roughly equal to 50 years of current fossil fuel emissions. Peatlands thus play a critical role in the global carbon cycle and climate regulation.",
+      "explanation": "Mosses (phylum Bryophyta) are the most species-rich bryophyte group with over 12,000 described species. Among these, Sphagnum (peat moss) is ecologically paramount, dominating vast peatland ecosystems in boreal and subarctic regions. Sphagnum has unique properties: its leaves contain large dead hyaline cells that can absorb 20-25 times their dry weight in water, creating waterlogged acidic conditions that inhibit decomposition. The slow accumulation of partially decomposed Sphagnum creates peat deposits that store enormous quantities of carbon—estimated at 400 billion tonnes globally, roughly equal to 50 years of current fossil fuel emissions. Peatlands thus play a critical role in the global carbon cycle and climate regulation.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,

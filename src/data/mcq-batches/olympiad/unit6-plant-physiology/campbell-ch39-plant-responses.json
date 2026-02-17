@@ -1,8 +1,10 @@
 {
-  "batchId": "olympiad-campbell-ch39-plant-responses",
-  "subject": "Biology",
-  "category": "Olympiad",
-  "description": "Campbell Biology Chapter 39 – Plant Responses to Internal and External Signals: plant hormones (auxin, gibberellin, cytokinin, ethylene, abscisic acid, brassinosteroids, strigolactones, jasmonic acid, salicylic acid), signal transduction, phototropism, gravitropism, photoperiodism, phytochrome, circadian rhythms, defense responses (IBO/USABO/NSEB level)",
+  "batch": {
+    "name": "Campbell Ch39 Plant Responses to Internal and External Signals — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 95
+  },
   "questions": [
     {
       "type": "MCQ",

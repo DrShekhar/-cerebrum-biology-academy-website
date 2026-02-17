@@ -1,9 +1,10 @@
 {
-  "batchId": "olympiad-campbell-ch45-hormones-endocrine",
-  "subject": "Biology",
-  "topic": "Hormones and the Endocrine System",
-  "difficulty": "EXPERT",
-  "totalQuestions": 105,
+  "batch": {
+    "name": "Campbell Ch45 Hormones and the Endocrine System — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 105
+  },
   "questions": [
     {
       "type": "MCQ",

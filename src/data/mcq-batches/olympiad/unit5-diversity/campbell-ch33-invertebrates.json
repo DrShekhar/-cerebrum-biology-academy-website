@@ -1,16 +1,9 @@
 {
   "batch": {
-    "id": "olympiad-campbell-ch33-invertebrates",
-    "title": "Campbell Biology Ch 33 \u2014 An Introduction to Invertebrates (Olympiad)",
-    "subject": "Biology",
-    "chapter": "An Introduction to Invertebrates",
-    "class": "Olympiad",
-    "description": "Olympiad-grade questions on invertebrate diversity from Campbell Biology Chapter 33. Covers cnidarians, molluscs, annelids, nematodes, arthropods, echinoderms, flatworms, and key invertebrate innovations.",
-    "totalQuestions": 63,
-    "campbellChapter": 33,
-    "campbellUnit": 5,
-    "isOlympiad": true,
-    "questionCount": 71
+    "name": "Campbell Ch33 An Introduction to Invertebrates — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 71
   },
   "questions": [
     {
@@ -43,7 +36,7 @@
         "fangs or pincers for grasping and processing prey, often associated with venom delivery"
       ],
       "correctAnswer": "D",
-      "explanation": "Chelicerae are the defining appendages of the subphylum Chelicerata (spiders, scorpions, ticks, horseshoe crabs). They are the first pair of appendages, located in front of the mouth. In spiders, chelicerae are fang-like structures connected to venom glands\u2014the fangs inject venom to paralyze prey. In scorpions, chelicerae are small pincers used for tearing prey. In ticks and mites, they are modified for piercing skin and feeding on blood or tissue. In horseshoe crabs, they are small pincers for handling food. Chelicerates lack antennae (a key distinction from mandibulates\u2014insects, crustaceans), and chelicerae serve some of the sensory functions that antennae perform in other arthropods. The pedipalps (second pair of appendages) in arachnids may also be modified for various functions: prey capture (scorpion pincers), sensory (spider pedipalps), or sperm transfer (male spider pedipalps).",
+      "explanation": "Chelicerae are the defining appendages of the subphylum Chelicerata (spiders, scorpions, ticks, horseshoe crabs). They are the first pair of appendages, located in front of the mouth. In spiders, chelicerae are fang-like structures connected to venom glands—the fangs inject venom to paralyze prey. In scorpions, chelicerae are small pincers used for tearing prey. In ticks and mites, they are modified for piercing skin and feeding on blood or tissue. In horseshoe crabs, they are small pincers for handling food. Chelicerates lack antennae (a key distinction from mandibulates—insects, crustaceans), and chelicerae serve some of the sensory functions that antennae perform in other arthropods. The pedipalps (second pair of appendages) in arachnids may also be modified for various functions: prey capture (scorpion pincers), sensory (spider pedipalps), or sperm transfer (male spider pedipalps).",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -63,7 +56,7 @@
         "it was the first vertebrate ever discovered"
       ],
       "correctAnswer": "C",
-      "explanation": "Anomalocaris ('unusual shrimp') is one of the most iconic Cambrian fossils. At up to 1 meter in length, it was by far the largest animal of its time\u2014a top predator in Cambrian seas when most organisms were centimeters long. It had a pair of large, articulated frontal appendages for grasping prey, a circular mouth with tooth-like plates, large compound eyes with over 16,000 lenses (among the most acute visual systems of the Cambrian), and lateral swimming lobes. Anomalocaris is classified within the stem-group arthropods (Radiodonta), representing an early branch of arthropod evolution before the full arthropod body plan (with jointed legs and hardened exoskeleton) was established. Its discovery revealed that the Cambrian ecosystem included large, active predators, supporting the hypothesis that predation was a major driver of the Cambrian explosion.",
+      "explanation": "Anomalocaris ('unusual shrimp') is one of the most iconic Cambrian fossils. At up to 1 meter in length, it was by far the largest animal of its time—a top predator in Cambrian seas when most organisms were centimeters long. It had a pair of large, articulated frontal appendages for grasping prey, a circular mouth with tooth-like plates, large compound eyes with over 16,000 lenses (among the most acute visual systems of the Cambrian), and lateral swimming lobes. Anomalocaris is classified within the stem-group arthropods (Radiodonta), representing an early branch of arthropod evolution before the full arthropod body plan (with jointed legs and hardened exoskeleton) was established. Its discovery revealed that the Cambrian ecosystem included large, active predators, supporting the hypothesis that predation was a major driver of the Cambrian explosion.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -83,7 +76,7 @@
         "comparing the color of segmented body regions"
       ],
       "correctAnswer": "A",
-      "explanation": "Determining whether segmentation is homologous or convergent across annelids, arthropods, and chordates requires comparing the molecular developmental mechanisms. If homologous, all three groups should use the same core genetic toolkit. Evidence: (1) Notch-Delta signaling is involved in segmentation in all three groups. (2) Hairy/Hes transcription factors show oscillatory expression (segmentation clock) in both arthropods and vertebrates. (3) However, the spatial and temporal dynamics differ substantially. The conservation of some molecular components suggests possible deep homology\u2014a shared ancestral regulatory module that has been independently co-opted for segmentation in different lineages, rather than direct inheritance of segmentation from a common segmented ancestor. This 'deep homology' interpretation is intermediate between strict homology and pure convergence.",
+      "explanation": "Determining whether segmentation is homologous or convergent across annelids, arthropods, and chordates requires comparing the molecular developmental mechanisms. If homologous, all three groups should use the same core genetic toolkit. Evidence: (1) Notch-Delta signaling is involved in segmentation in all three groups. (2) Hairy/Hes transcription factors show oscillatory expression (segmentation clock) in both arthropods and vertebrates. (3) However, the spatial and temporal dynamics differ substantially. The conservation of some molecular components suggests possible deep homology—a shared ancestral regulatory module that has been independently co-opted for segmentation in different lineages, rather than direct inheritance of segmentation from a common segmented ancestor. This 'deep homology' interpretation is intermediate between strict homology and pure convergence.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -95,7 +88,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Comparison of eye complexity across invertebrates: Planarian eyecup \u2014 ~100 photoreceptors, direction detection only; Nautilus pinhole eye \u2014 ~4 million photoreceptors, crude image formation; Jumping spider \u2014 ~600,000 photoreceptors in principal eyes, high-resolution image with UV detection; Mantis shrimp \u2014 ~10,000 ommatidia with 16 photoreceptor types, widest color spectrum of any animal. This diversity illustrates:",
+      "question": "Comparison of eye complexity across invertebrates: Planarian eyecup — ~100 photoreceptors, direction detection only; Nautilus pinhole eye — ~4 million photoreceptors, crude image formation; Jumping spider — ~600,000 photoreceptors in principal eyes, high-resolution image with UV detection; Mantis shrimp — ~10,000 ommatidia with 16 photoreceptor types, widest color spectrum of any animal. This diversity illustrates:",
       "options": [
         "all invertebrates have identical visual systems",
         "convergent evolution has produced diverse visual solutions optimized for different ecological niches and behavioral requirements",
@@ -115,7 +108,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Growth rate data for different invertebrate body plans in response to oxygen availability: Flatworm (diffusion-based) \u2014 doubles at 15% O2, plateaus at 20%; Annelid (closed circulation) \u2014 steady increase from 5% to 30% O2; Insect (tracheal system) \u2014 dramatic increase from 10% to 35% O2. These data suggest that:",
+      "question": "Growth rate data for different invertebrate body plans in response to oxygen availability: Flatworm (diffusion-based) — doubles at 15% O2, plateaus at 20%; Annelid (closed circulation) — steady increase from 5% to 30% O2; Insect (tracheal system) — dramatic increase from 10% to 35% O2. These data suggest that:",
       "options": [
         "all invertebrates respond identically to oxygen",
         "body plan architecture determines the oxygen sensitivity of growth, with gas delivery mechanism constraining maximum achievable size and metabolic rate",
@@ -123,7 +116,7 @@
         "only vertebrates are affected by oxygen levels"
       ],
       "correctAnswer": "B",
-      "explanation": "The data demonstrates how different respiratory architectures create different oxygen sensitivity profiles. Flatworms, relying on diffusion, quickly reach maximum growth at moderate oxygen levels because their body plan constrains the diffusion distance\u2014higher oxygen cannot overcome the surface-area-to-volume limitation. Annelids with closed circulatory systems show steady improvement across a broader oxygen range because their blood-based oxygen delivery can scale with oxygen availability. Insects with tracheal systems show the most dramatic response to high oxygen because the tracheal system's efficiency scales directly with atmospheric oxygen partial pressure\u2014explaining why Carboniferous insects grew to enormous sizes when atmospheric oxygen reached ~35%. These findings support the oxygen constraint hypothesis for body size evolution.",
+      "explanation": "The data demonstrates how different respiratory architectures create different oxygen sensitivity profiles. Flatworms, relying on diffusion, quickly reach maximum growth at moderate oxygen levels because their body plan constrains the diffusion distance—higher oxygen cannot overcome the surface-area-to-volume limitation. Annelids with closed circulatory systems show steady improvement across a broader oxygen range because their blood-based oxygen delivery can scale with oxygen availability. Insects with tracheal systems show the most dramatic response to high oxygen because the tracheal system's efficiency scales directly with atmospheric oxygen partial pressure—explaining why Carboniferous insects grew to enormous sizes when atmospheric oxygen reached ~35%. These findings support the oxygen constraint hypothesis for body size evolution.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -143,7 +136,7 @@
         "their ability to photosynthesize"
       ],
       "correctAnswer": "C",
-      "explanation": "Arthropod species dominance reflects multiple synergistic innovations: (1) Segmented, modular body plan with tagmatization enables functional specialization. (2) Jointed appendages allow diverse locomotion modes (walking, swimming, flying, digging). (3) Exoskeleton provides protection and water conservation for terrestrial life. (4) Complete metamorphosis in holometabolous insects reduces intraspecific competition between life stages. (5) Flight (evolved once in insects but unique among invertebrates) opened the aerial niche and enhanced dispersal. (6) Small body size enables fine-grained habitat partitioning and large population sizes. (7) Coevolution with angiosperms drove pollinator diversification. The enormously underestimated nematode diversity might eventually rival arthropods\u2014molecular surveys suggest millions of undescribed nematode species in soil.",
+      "explanation": "Arthropod species dominance reflects multiple synergistic innovations: (1) Segmented, modular body plan with tagmatization enables functional specialization. (2) Jointed appendages allow diverse locomotion modes (walking, swimming, flying, digging). (3) Exoskeleton provides protection and water conservation for terrestrial life. (4) Complete metamorphosis in holometabolous insects reduces intraspecific competition between life stages. (5) Flight (evolved once in insects but unique among invertebrates) opened the aerial niche and enhanced dispersal. (6) Small body size enables fine-grained habitat partitioning and large population sizes. (7) Coevolution with angiosperms drove pollinator diversification. The enormously underestimated nematode diversity might eventually rival arthropods—molecular surveys suggest millions of undescribed nematode species in soil.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -163,7 +156,7 @@
         "TTTT -- All are true"
       ],
       "correctAnswer": "A",
-      "explanation": "Statement I is TRUE: The octopus vertical lobe system is critical for learning and memory, particularly one-trial learning. Lesion of the vertical lobe impairs visual discrimination learning. The octopus brain has approximately 500 million neurons organized into specialized lobes. Statement II is TRUE: Insect mushroom bodies (corpora pedunculata) are paired neuropils that process olfactory information and are critical for associative learning and memory. Their size correlates with behavioral complexity\u2014social hymenoptera have enlarged mushroom bodies. Statement III is TRUE: The giant axon of the squid Loligo (up to 1 mm diameter, 100x larger than typical axons) was used by Hodgkin and Huxley in their Nobel Prize-winning work on action potential ionic mechanisms. Statement IV is FALSE: Invertebrates from C. elegans to octopuses demonstrate various forms of learning including habituation, sensitization, classical conditioning, and spatial learning.",
+      "explanation": "Statement I is TRUE: The octopus vertical lobe system is critical for learning and memory, particularly one-trial learning. Lesion of the vertical lobe impairs visual discrimination learning. The octopus brain has approximately 500 million neurons organized into specialized lobes. Statement II is TRUE: Insect mushroom bodies (corpora pedunculata) are paired neuropils that process olfactory information and are critical for associative learning and memory. Their size correlates with behavioral complexity—social hymenoptera have enlarged mushroom bodies. Statement III is TRUE: The giant axon of the squid Loligo (up to 1 mm diameter, 100x larger than typical axons) was used by Hodgkin and Huxley in their Nobel Prize-winning work on action potential ionic mechanisms. Statement IV is FALSE: Invertebrates from C. elegans to octopuses demonstrate various forms of learning including habituation, sensitization, classical conditioning, and spatial learning.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -183,7 +176,7 @@
         "The observation must be an error in identification"
       ],
       "correctAnswer": "B",
-      "explanation": "The asymmetry in marine vs. terrestrial phylum diversity reflects evolutionary history and physical constraints: (1) Marine origin: Nearly all animal phyla originated in the ocean during the Cambrian. The marine environment supported the initial diversification of body plans. (2) Colonization barriers: Moving to land requires overcoming: desiccation (waterproofing, internal gas exchange), gravity (structural support previously provided by water buoyancy), reproduction without water (internal fertilization, terrestrial eggs or viviparity), osmoregulation, and UV radiation exposure. These represent multiple independent, major evolutionary innovations. (3) Limited terrestrial colonization: Only ~12 of ~35 animal phyla have terrestrial representatives, and most of these are dominated by a single terrestrial-adapted lineage (e.g., only insects among hexapods successfully diversified on land extensively). (4) Coral reef diversity: Reefs provide three-dimensional structural complexity supporting diverse microhabitats (crevices, surfaces, water column), analogous to tropical forest canopy structure but in the ancestral aquatic medium where all phyla can exist. (5) Species vs. phylum diversity: While marine environments have more phyla, terrestrial environments (especially tropical forests) may have comparable or higher species-level diversity, dominated by insects\u2014illustrating that species diversification within a body plan can be extraordinary.",
+      "explanation": "The asymmetry in marine vs. terrestrial phylum diversity reflects evolutionary history and physical constraints: (1) Marine origin: Nearly all animal phyla originated in the ocean during the Cambrian. The marine environment supported the initial diversification of body plans. (2) Colonization barriers: Moving to land requires overcoming: desiccation (waterproofing, internal gas exchange), gravity (structural support previously provided by water buoyancy), reproduction without water (internal fertilization, terrestrial eggs or viviparity), osmoregulation, and UV radiation exposure. These represent multiple independent, major evolutionary innovations. (3) Limited terrestrial colonization: Only ~12 of ~35 animal phyla have terrestrial representatives, and most of these are dominated by a single terrestrial-adapted lineage (e.g., only insects among hexapods successfully diversified on land extensively). (4) Coral reef diversity: Reefs provide three-dimensional structural complexity supporting diverse microhabitats (crevices, surfaces, water column), analogous to tropical forest canopy structure but in the ancestral aquatic medium where all phyla can exist. (5) Species vs. phylum diversity: While marine environments have more phyla, terrestrial environments (especially tropical forests) may have comparable or higher species-level diversity, dominated by insects—illustrating that species diversification within a body plan can be extraordinary.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -203,7 +196,7 @@
         "compare the speed of swimming versus flying"
       ],
       "correctAnswer": "A",
-      "explanation": "Comparing intelligence across taxa as different as cephalopods and birds requires carefully designed tests that control for differences in sensory capabilities, motor abilities, and ecological context. The approach: (1) Use tasks that test equivalent cognitive abilities (spatial memory, causal reasoning, tool use, social learning) but are adapted to each species' sensory-motor system\u2014visual discrimination for both, but manipulated by tentacles versus beak/feet. (2) Control for motivational differences by using species-appropriate rewards. (3) Use graded difficulty levels to assess cognitive limits. (4) Compare learning rates across tasks of similar difficulty. (5) Test for convergent cognitive abilities (understanding causality, planning, deception) that might reflect independent evolution of complex cognition. Studies have shown that octopuses can solve puzzles, use coconut shells as shelters (tool use), and exhibit individual personality differences\u2014achievements comparable to those demonstrated by corvids.",
+      "explanation": "Comparing intelligence across taxa as different as cephalopods and birds requires carefully designed tests that control for differences in sensory capabilities, motor abilities, and ecological context. The approach: (1) Use tasks that test equivalent cognitive abilities (spatial memory, causal reasoning, tool use, social learning) but are adapted to each species' sensory-motor system—visual discrimination for both, but manipulated by tentacles versus beak/feet. (2) Control for motivational differences by using species-appropriate rewards. (3) Use graded difficulty levels to assess cognitive limits. (4) Compare learning rates across tasks of similar difficulty. (5) Test for convergent cognitive abilities (understanding causality, planning, deception) that might reflect independent evolution of complex cognition. Studies have shown that octopuses can solve puzzles, use coconut shells as shelters (tool use), and exhibit individual personality differences—achievements comparable to those demonstrated by corvids.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -223,7 +216,7 @@
         "Cubozoa (box jellyfish), whose medusae have complex lens-bearing eyes"
       ],
       "correctAnswer": "D",
-      "explanation": "Cubozoa (box jellyfish) possess the most complex sensory structures among cnidarians. Each of the four sides of the bell has a cluster of six eyes (rhopalium), including two with true lenses, retinas, and corneas capable of forming images. Cubozoan eyes have been shown to detect color and form images, guiding active swimming behavior and obstacle avoidance. This level of visual complexity is remarkable for an animal without a centralized brain\u2014the visual information is processed by ring nerves around the bell. Box jellyfish also have the most potent venoms among cnidarians (Chironex fleckeri can kill a human in minutes) and display complex behaviors including directed swimming and courtship. While Anthozoa build the largest biogenic structures (coral reefs), Cubozoa represent the peak of cnidarian organizational complexity.",
+      "explanation": "Cubozoa (box jellyfish) possess the most complex sensory structures among cnidarians. Each of the four sides of the bell has a cluster of six eyes (rhopalium), including two with true lenses, retinas, and corneas capable of forming images. Cubozoan eyes have been shown to detect color and form images, guiding active swimming behavior and obstacle avoidance. This level of visual complexity is remarkable for an animal without a centralized brain—the visual information is processed by ring nerves around the bell. Box jellyfish also have the most potent venoms among cnidarians (Chironex fleckeri can kill a human in minutes) and display complex behaviors including directed swimming and courtship. While Anthozoa build the largest biogenic structures (coral reefs), Cubozoa represent the peak of cnidarian organizational complexity.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -251,7 +244,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
-      "topic": "Tardigrada \u2014 Cryptobiosis"
+      "topic": "Tardigrada — Cryptobiosis"
     },
     {
       "type": "MCQ",
@@ -271,7 +264,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Ctenophora \u2014 Phylogenomics"
+      "topic": "Ctenophora — Phylogenomics"
     },
     {
       "type": "MCQ",
@@ -283,7 +276,7 @@
         "using bioluminescence for intraspecific communication only"
       ],
       "correctAnswer": "B",
-      "explanation": "Counter-illumination is a sophisticated camouflage strategy used by many mesopelagic (midwater) squid and other organisms. Animals swimming in the dim twilight zone are vulnerable to predators below because their bodies appear as dark silhouettes against the faintly lit surface waters above. To eliminate this silhouette, many squid possess ventral photophores (light-producing organs) that emit bioluminescent light matching the intensity, wavelength, and angular distribution of downwelling surface light. Some species can dynamically adjust their light output in response to changing ambient conditions. This represents an extraordinary convergent solution to predator avoidance\u2014similar counter-illumination systems evolved independently in fish, squid, crustaceans, and other organisms. The match between emitted and ambient light must be precise; even small mismatches are detectable by predators adapted to the deep-sea visual environment.",
+      "explanation": "Counter-illumination is a sophisticated camouflage strategy used by many mesopelagic (midwater) squid and other organisms. Animals swimming in the dim twilight zone are vulnerable to predators below because their bodies appear as dark silhouettes against the faintly lit surface waters above. To eliminate this silhouette, many squid possess ventral photophores (light-producing organs) that emit bioluminescent light matching the intensity, wavelength, and angular distribution of downwelling surface light. Some species can dynamically adjust their light output in response to changing ambient conditions. This represents an extraordinary convergent solution to predator avoidance—similar counter-illumination systems evolved independently in fish, squid, crustaceans, and other organisms. The match between emitted and ambient light must be precise; even small mismatches are detectable by predators adapted to the deep-sea visual environment.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -295,7 +288,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Metabolic rate data for molluscs: Bivalve (sessile) \u2014 0.03 mL O2/g/hr; Gastropod (crawling) \u2014 0.08; Cephalopod (swimming) \u2014 0.45. This 15-fold range within a single phylum demonstrates that:",
+      "question": "Metabolic rate data for molluscs: Bivalve (sessile) — 0.03 mL O2/g/hr; Gastropod (crawling) — 0.08; Cephalopod (swimming) — 0.45. This 15-fold range within a single phylum demonstrates that:",
       "options": [
         "all molluscs have identical metabolic requirements",
         "metabolic rate strongly correlates with activity level and locomotor mode, with active predatory cephalopods requiring much higher oxygen delivery",
@@ -363,7 +356,7 @@
         "they are photosynthetic organisms"
       ],
       "correctAnswer": "C",
-      "explanation": "Parasitoids represent an intermediate strategy between predation and parasitism. The adult female wasp lays eggs on or in a host insect (caterpillar, beetle larva, etc.). The parasitoid larvae develop inside the living host, feeding on non-essential tissues first to keep the host alive as long as possible, then consuming vital organs before pupating. The host invariably dies as a result. This differs from true parasites, which typically do not kill their hosts (a dead host = no more meals), and from predators, which kill prey immediately. Parasitoid wasps are ecologically enormously important\u2014they are among the most species-rich insect groups and are widely used in biological control of agricultural pests. Some parasitoids have remarkable adaptations including polydnaviruses (DNA viruses integrated into the wasp genome) that suppress the host's immune response, allowing parasitoid eggs to develop without being encapsulated.",
+      "explanation": "Parasitoids represent an intermediate strategy between predation and parasitism. The adult female wasp lays eggs on or in a host insect (caterpillar, beetle larva, etc.). The parasitoid larvae develop inside the living host, feeding on non-essential tissues first to keep the host alive as long as possible, then consuming vital organs before pupating. The host invariably dies as a result. This differs from true parasites, which typically do not kill their hosts (a dead host = no more meals), and from predators, which kill prey immediately. Parasitoid wasps are ecologically enormously important—they are among the most species-rich insect groups and are widely used in biological control of agricultural pests. Some parasitoids have remarkable adaptations including polydnaviruses (DNA viruses integrated into the wasp genome) that suppress the host's immune response, allowing parasitoid eggs to develop without being encapsulated.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -383,7 +376,7 @@
         "these data are measurement errors"
       ],
       "correctAnswer": "C",
-      "explanation": "The data shows that parasitism is remarkably prevalent in both Nematoda (40% of species) and Platyhelminthes (65% of species), demonstrating that the parasitic lifestyle has been extremely successful evolutionarily. Parasitism has evolved independently hundreds of times across animal phyla. Its success is attributed to: (1) The reliability of the host as a nutrient source\u2014parasites live in the most nutrient-rich environments on Earth (inside other organisms). (2) The diversity of potential hosts provides enormous niche space. (3) Co-speciation with hosts drives parasite diversification. (4) Complex life cycles with multiple hosts increase speciation opportunities. The high species richness of parasites is actually underestimated because many parasites are host-specific and each host species may harbor multiple parasite species. Some estimates suggest that parasites may outnumber free-living species globally.",
+      "explanation": "The data shows that parasitism is remarkably prevalent in both Nematoda (40% of species) and Platyhelminthes (65% of species), demonstrating that the parasitic lifestyle has been extremely successful evolutionarily. Parasitism has evolved independently hundreds of times across animal phyla. Its success is attributed to: (1) The reliability of the host as a nutrient source—parasites live in the most nutrient-rich environments on Earth (inside other organisms). (2) The diversity of potential hosts provides enormous niche space. (3) Co-speciation with hosts drives parasite diversification. (4) Complex life cycles with multiple hosts increase speciation opportunities. The high species richness of parasites is actually underestimated because many parasites are host-specific and each host species may harbor multiple parasite species. Some estimates suggest that parasites may outnumber free-living species globally.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -423,7 +416,7 @@
         "are entirely non-functional vestigial stages"
       ],
       "correctAnswer": "B",
-      "explanation": "Planktonic larvae (trochophore, veliger, nauplius, pluteus, etc.) serve critical ecological functions for sedentary or sessile marine invertebrates: (1) Dispersal\u2014larvae carried by ocean currents can travel hundreds of kilometers, colonizing new habitats and maintaining connectivity between distant populations. (2) Genetic mixing\u2014larval dispersal promotes gene flow between populations, maintaining genetic diversity and reducing inbreeding. (3) Colonization\u2014larvae can settle on newly available substrates (after disturbance, volcanic eruption, etc.). (4) Habitat selection\u2014many larvae have sensory capabilities to assess substrate quality before settlement, choosing optimal microhabitats. The trade-off is high larval mortality (>99% in many species), which is compensated by high fecundity. Some species have evolved direct development (no planktonic larva), particularly in polar and deep-sea environments where conditions for planktonic survival are harsh.",
+      "explanation": "Planktonic larvae (trochophore, veliger, nauplius, pluteus, etc.) serve critical ecological functions for sedentary or sessile marine invertebrates: (1) Dispersal—larvae carried by ocean currents can travel hundreds of kilometers, colonizing new habitats and maintaining connectivity between distant populations. (2) Genetic mixing—larval dispersal promotes gene flow between populations, maintaining genetic diversity and reducing inbreeding. (3) Colonization—larvae can settle on newly available substrates (after disturbance, volcanic eruption, etc.). (4) Habitat selection—many larvae have sensory capabilities to assess substrate quality before settlement, choosing optimal microhabitats. The trade-off is high larval mortality (>99% in many species), which is compensated by high fecundity. Some species have evolved direct development (no planktonic larva), particularly in polar and deep-sea environments where conditions for planktonic survival are harsh.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -443,7 +436,7 @@
         "using ciliated flame cells to draw fluid from the interstitial spaces into collecting tubules, where selective reabsorption occurs"
       ],
       "correctAnswer": "D",
-      "explanation": "Protonephridia are the excretory organs of flatworms and some other invertebrates. Each protonephridium consists of a network of tubules ending in flame cells (or bulb cells)\u2014specialized cells with a tuft of cilia that beat in a flickering pattern resembling a flame. The beating cilia create negative pressure that draws interstitial fluid into the tubule system. As the fluid passes through the tubules, selective reabsorption of useful solutes occurs, and the remaining waste fluid exits through nephridiopores at the body surface. Protonephridia primarily function in osmoregulation (maintaining water balance) and secondarily in excretion of nitrogenous waste. They are particularly important in freshwater flatworms, which face constant osmotic influx of water and need to excrete excess water while retaining solutes. Marine flatworms have reduced protonephridial systems because osmotic stress is lower.",
+      "explanation": "Protonephridia are the excretory organs of flatworms and some other invertebrates. Each protonephridium consists of a network of tubules ending in flame cells (or bulb cells)—specialized cells with a tuft of cilia that beat in a flickering pattern resembling a flame. The beating cilia create negative pressure that draws interstitial fluid into the tubule system. As the fluid passes through the tubules, selective reabsorption of useful solutes occurs, and the remaining waste fluid exits through nephridiopores at the body surface. Protonephridia primarily function in osmoregulation (maintaining water balance) and secondarily in excretion of nitrogenous waste. They are particularly important in freshwater flatworms, which face constant osmotic influx of water and need to excrete excess water while retaining solutes. Marine flatworms have reduced protonephridial systems because osmotic stress is lower.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -463,7 +456,7 @@
         "function only in complete darkness"
       ],
       "correctAnswer": "A",
-      "explanation": "Arthropod compound eyes consist of hundreds to thousands of individual optical units called ommatidia, each with its own lens, crystalline cone, and photoreceptor cells. Each ommatidium samples a small portion of the visual field, and the brain assembles these inputs into a mosaic image. Compound eyes excel at motion detection because even small movements cause different ommatidia to be stimulated, creating a strong neural signal. Dragonflies have up to 30,000 ommatidia and can detect movements of less than 1 degree of arc. However, compound eyes generally have lower spatial resolution than camera eyes because resolution depends on ommatidial density and the physical limits of ommatidial diameter. The temporal resolution of some insect compound eyes is extraordinary\u2014houseflies can resolve up to 300 flashes per second (versus ~60 for humans), contributing to their remarkable escape responses.",
+      "explanation": "Arthropod compound eyes consist of hundreds to thousands of individual optical units called ommatidia, each with its own lens, crystalline cone, and photoreceptor cells. Each ommatidium samples a small portion of the visual field, and the brain assembles these inputs into a mosaic image. Compound eyes excel at motion detection because even small movements cause different ommatidia to be stimulated, creating a strong neural signal. Dragonflies have up to 30,000 ommatidia and can detect movements of less than 1 degree of arc. However, compound eyes generally have lower spatial resolution than camera eyes because resolution depends on ommatidial density and the physical limits of ommatidial diameter. The temporal resolution of some insect compound eyes is extraordinary—houseflies can resolve up to 300 flashes per second (versus ~60 for humans), contributing to their remarkable escape responses.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -483,7 +476,7 @@
         "males performing all colony maintenance tasks"
       ],
       "correctAnswer": "B",
-      "explanation": "Eusociality is the most complex form of social organization in animals, characterized by three features: (1) Reproductive division of labor\u2014usually one queen (or a few) monopolizes reproduction while most individuals are sterile workers. (2) Cooperative brood care\u2014workers care for offspring that are not their own. (3) Overlapping generations\u2014multiple generations coexist in the colony. This system has evolved independently multiple times: in Hymenoptera (ants, bees, wasps), termites (Isoptera/Blattodea), some shrimp, and naked mole-rats. Hamilton's inclusive fitness theory explains the evolution of worker sterility through kin selection\u2014by helping their mother (the queen) produce sisters, workers pass on shared genes. In Hymenoptera, haplodiploidy creates asymmetric relatedness (sisters share 75% of genes), which may have predisposed this group to eusociality, though this is debated.",
+      "explanation": "Eusociality is the most complex form of social organization in animals, characterized by three features: (1) Reproductive division of labor—usually one queen (or a few) monopolizes reproduction while most individuals are sterile workers. (2) Cooperative brood care—workers care for offspring that are not their own. (3) Overlapping generations—multiple generations coexist in the colony. This system has evolved independently multiple times: in Hymenoptera (ants, bees, wasps), termites (Isoptera/Blattodea), some shrimp, and naked mole-rats. Hamilton's inclusive fitness theory explains the evolution of worker sterility through kin selection—by helping their mother (the queen) produce sisters, workers pass on shared genes. In Hymenoptera, haplodiploidy creates asymmetric relatedness (sisters share 75% of genes), which may have predisposed this group to eusociality, though this is debated.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -503,7 +496,7 @@
         "the parasite will evolve faster than the host due to shorter generation time and larger population size, creating an evolutionary arms race that favors the parasite"
       ],
       "correctAnswer": "D",
-      "explanation": "The data reveals a fundamental asymmetry in host-parasite coevolution that favors parasites. With generation times 10x shorter, parasites go through 10 evolutionary generations for every one host generation. With 100x larger population sizes, parasites have more total mutations per generation. Together, these factors mean parasites can evolve adaptive responses much faster than their hosts\u2014the 'Red Queen' hypothesis predicts that hosts must continually evolve just to maintain the same level of resistance. This is why sexual reproduction (which generates genetic diversity) may be maintained despite its costs\u2014it helps hosts keep pace with rapidly evolving parasites. This asymmetry also explains why emerging infectious diseases are a persistent threat: parasites can rapidly evolve to exploit new hosts or overcome pharmaceutical interventions.",
+      "explanation": "The data reveals a fundamental asymmetry in host-parasite coevolution that favors parasites. With generation times 10x shorter, parasites go through 10 evolutionary generations for every one host generation. With 100x larger population sizes, parasites have more total mutations per generation. Together, these factors mean parasites can evolve adaptive responses much faster than their hosts—the 'Red Queen' hypothesis predicts that hosts must continually evolve just to maintain the same level of resistance. This is why sexual reproduction (which generates genetic diversity) may be maintained despite its costs—it helps hosts keep pace with rapidly evolving parasites. This asymmetry also explains why emerging infectious diseases are a persistent threat: parasites can rapidly evolve to exploit new hosts or overcome pharmaceutical interventions.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -543,7 +536,7 @@
         "annelid segments are all fused into a single body region"
       ],
       "correctAnswer": "C",
-      "explanation": "Annelid segmentation is typically homonomous\u2014segments are relatively similar in structure, each containing repeated copies of organ systems (nephridia, ganglia, setae, coelomic compartments). While some specialization exists (the prostomium and pygidium are distinct), most trunk segments are similar. In contrast, arthropod segmentation is heteronomous\u2014segments are extensively modified and fused into distinct tagmata (head, thorax, abdomen in insects) with dramatically different appendage types. This difference reflects divergent evolutionary trajectories: annelids retain the flexibility of similar segments for burrowing locomotion, while arthropods exploited tagmatization for functional specialization of body regions, driven by differential Hox gene expression.",
+      "explanation": "Annelid segmentation is typically homonomous—segments are relatively similar in structure, each containing repeated copies of organ systems (nephridia, ganglia, setae, coelomic compartments). While some specialization exists (the prostomium and pygidium are distinct), most trunk segments are similar. In contrast, arthropod segmentation is heteronomous—segments are extensively modified and fused into distinct tagmata (head, thorax, abdomen in insects) with dramatically different appendage types. This difference reflects divergent evolutionary trajectories: annelids retain the flexibility of similar segments for burrowing locomotion, while arthropods exploited tagmatization for functional specialization of body regions, driven by differential Hox gene expression.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -583,7 +576,7 @@
         "algae overgrow and smother coral colonies"
       ],
       "correctAnswer": "A",
-      "explanation": "Coral bleaching is the loss of symbiotic zooxanthellae (primarily dinoflagellates of the genus Symbiodinium/Cladocopium) from coral tissue, or the loss of photosynthetic pigments within the algae. The primary trigger is elevated sea surface temperature\u2014even 1-2 degrees C above normal summer maximum for several weeks can initiate bleaching. Heat stress damages the algal photosynthetic apparatus, producing reactive oxygen species that damage both algal and coral cells. The coral host expels the stressed algae as a protective response, but this removes the coral's primary source of nutrition (zooxanthellae provide up to 90% of the coral's energy through photosynthesis). If normal conditions return quickly, corals can reacquire algae and recover. Prolonged bleaching leads to coral starvation and death. Climate change-driven ocean warming has caused increasingly frequent and severe mass bleaching events globally.",
+      "explanation": "Coral bleaching is the loss of symbiotic zooxanthellae (primarily dinoflagellates of the genus Symbiodinium/Cladocopium) from coral tissue, or the loss of photosynthetic pigments within the algae. The primary trigger is elevated sea surface temperature—even 1-2 degrees C above normal summer maximum for several weeks can initiate bleaching. Heat stress damages the algal photosynthetic apparatus, producing reactive oxygen species that damage both algal and coral cells. The coral host expels the stressed algae as a protective response, but this removes the coral's primary source of nutrition (zooxanthellae provide up to 90% of the coral's energy through photosynthesis). If normal conditions return quickly, corals can reacquire algae and recover. Prolonged bleaching leads to coral starvation and death. Climate change-driven ocean warming has caused increasingly frequent and severe mass bleaching events globally.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -595,7 +588,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Comparison of nervous system complexity in invertebrates: Cnidarian nerve net \u2014 ~5,000 neurons; C. elegans (nematode) \u2014 exactly 302 neurons; Drosophila brain \u2014 ~135,000 neurons; Octopus brain \u2014 ~500,000,000 neurons. The 100,000-fold range demonstrates:",
+      "question": "Comparison of nervous system complexity in invertebrates: Cnidarian nerve net — ~5,000 neurons; C. elegans (nematode) — exactly 302 neurons; Drosophila brain — ~135,000 neurons; Octopus brain — ~500,000,000 neurons. The 100,000-fold range demonstrates:",
       "options": [
         "all invertebrates have equally simple nervous systems",
         "enormous variation in neural complexity across invertebrate phyla, with cephalopod nervous systems rivaling those of some vertebrates",
@@ -603,7 +596,7 @@
         "only vertebrates have complex brains"
       ],
       "correctAnswer": "B",
-      "explanation": "The data reveals extraordinary variation in invertebrate neural complexity. C. elegans has exactly 302 neurons (one of the few organisms with a fully mapped connectome), yet displays surprisingly complex behaviors. Drosophila, with 100,000+ neurons, shows learning, memory, and complex sensory processing. The octopus, with ~500 million neurons (comparable to a dog), displays tool use, problem-solving, individual recognition, and play behavior. This demonstrates that complex cognition evolved independently in cephalopods and vertebrates\u2014a remarkable case of convergent evolution in neural organization. Notably, octopus neurons are distributed differently from vertebrates: about two-thirds are in the arms, which have considerable autonomous processing capability, while the central brain coordinates whole-animal behavior.",
+      "explanation": "The data reveals extraordinary variation in invertebrate neural complexity. C. elegans has exactly 302 neurons (one of the few organisms with a fully mapped connectome), yet displays surprisingly complex behaviors. Drosophila, with 100,000+ neurons, shows learning, memory, and complex sensory processing. The octopus, with ~500 million neurons (comparable to a dog), displays tool use, problem-solving, individual recognition, and play behavior. This demonstrates that complex cognition evolved independently in cephalopods and vertebrates—a remarkable case of convergent evolution in neural organization. Notably, octopus neurons are distributed differently from vertebrates: about two-thirds are in the arms, which have considerable autonomous processing capability, while the central brain coordinates whole-animal behavior.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -643,7 +636,7 @@
         "use cilia organized into eight rows of comb plates (ctenes) for locomotion rather than muscular pulsation"
       ],
       "correctAnswer": "D",
-      "explanation": "Ctenophores are transparent, gelatinous marine animals that superficially resemble jellyfish but differ in fundamental ways: (1) Locomotion: ctenophores swim using eight rows of cilia fused into comb plates (ctenes) that beat in coordinated metachronal waves, creating iridescent light displays. Cnidarians use muscular contraction for swimming. (2) Prey capture: ctenophores use sticky colloblasts (unique adhesive cells) on their tentacles, not cnidocytes. (3) Digestive system: ctenophores have an anal pore (functionally complete gut), while cnidarians have only one opening. (4) Ctenophores are typically biradially symmetric. (5) Many ctenophores are voracious predators of zooplankton and can impact marine ecosystems\u2014the invasive Mnemiopsis leidyi devastated Black Sea fisheries in the 1990s.",
+      "explanation": "Ctenophores are transparent, gelatinous marine animals that superficially resemble jellyfish but differ in fundamental ways: (1) Locomotion: ctenophores swim using eight rows of cilia fused into comb plates (ctenes) that beat in coordinated metachronal waves, creating iridescent light displays. Cnidarians use muscular contraction for swimming. (2) Prey capture: ctenophores use sticky colloblasts (unique adhesive cells) on their tentacles, not cnidocytes. (3) Digestive system: ctenophores have an anal pore (functionally complete gut), while cnidarians have only one opening. (4) Ctenophores are typically biradially symmetric. (5) Many ctenophores are voracious predators of zooplankton and can impact marine ecosystems—the invasive Mnemiopsis leidyi devastated Black Sea fisheries in the 1990s.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -663,7 +656,7 @@
         "electrostatic attraction between the nematocyst and prey"
       ],
       "correctAnswer": "A",
-      "explanation": "Nematocyst discharge is one of the fastest known biological events. The coiled tubule within the nematocyst capsule is maintained under enormous osmotic pressure (~150 atmospheres, or ~2,200 psi). When triggered by combined chemical and mechanical stimuli acting on the cnidocil (a modified cilium serving as a mechanoreceptor), the operculum (lid) opens and the tubule everts in approximately 700 nanoseconds\u2014faster than a bullet leaving a gun barrel. The acceleration exceeds 5 million g, generating sufficient force to penetrate crustacean exoskeletons and even thin wetsuits. The tubule may be barbed, and toxins stored in the capsule are injected through the hollow tubule into the prey. Each cnidocyte fires only once and must be replaced from interstitial stem cells. A single tentacle may contain millions of cnidocytes, ensuring effective prey capture.",
+      "explanation": "Nematocyst discharge is one of the fastest known biological events. The coiled tubule within the nematocyst capsule is maintained under enormous osmotic pressure (~150 atmospheres, or ~2,200 psi). When triggered by combined chemical and mechanical stimuli acting on the cnidocil (a modified cilium serving as a mechanoreceptor), the operculum (lid) opens and the tubule everts in approximately 700 nanoseconds—faster than a bullet leaving a gun barrel. The acceleration exceeds 5 million g, generating sufficient force to penetrate crustacean exoskeletons and even thin wetsuits. The tubule may be barbed, and toxins stored in the capsule are injected through the hollow tubule into the prey. Each cnidocyte fires only once and must be replaced from interstitial stem cells. A single tentacle may contain millions of cnidocytes, ensuring effective prey capture.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -723,7 +716,7 @@
         "store nutrients for periods of food scarcity"
       ],
       "correctAnswer": "C",
-      "explanation": "Sponge spicules are structural elements that provide support for the sponge body and defense against predators. They are classified by composition: (1) Calcareous spicules (calcium carbonate) in class Calcarea; (2) Siliceous spicules (silicon dioxide/glass) in classes Demospongiae and Hexactinellida (glass sponges); (3) Spongin fibers (a collagen-like protein) in some Demospongiae (including bath sponges). Spicule morphology is highly diverse and species-specific, making it the primary basis for sponge taxonomy. Glass sponge spicules can form spectacular lattice-like skeletal structures (e.g., Venus's flower basket, Euplectella). Some deep-sea glass sponges produce fiber optic-like spicules that conduct light, and their structural engineering has inspired biomimetic materials research. Sponge spicules also deter predators\u2014most fish avoid sponges due to their spicule content.",
+      "explanation": "Sponge spicules are structural elements that provide support for the sponge body and defense against predators. They are classified by composition: (1) Calcareous spicules (calcium carbonate) in class Calcarea; (2) Siliceous spicules (silicon dioxide/glass) in classes Demospongiae and Hexactinellida (glass sponges); (3) Spongin fibers (a collagen-like protein) in some Demospongiae (including bath sponges). Spicule morphology is highly diverse and species-specific, making it the primary basis for sponge taxonomy. Glass sponge spicules can form spectacular lattice-like skeletal structures (e.g., Venus's flower basket, Euplectella). Some deep-sea glass sponges produce fiber optic-like spicules that conduct light, and their structural engineering has inspired biomimetic materials research. Sponge spicules also deter predators—most fish avoid sponges due to their spicule content.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -791,7 +784,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
-      "topic": "Echinodermata \u2014 Water Vascular System"
+      "topic": "Echinodermata — Water Vascular System"
     },
     {
       "type": "MCQ",
@@ -803,7 +796,7 @@
         "chemical signals that attract predators to non-kin colonies"
       ],
       "correctAnswer": "B",
-      "explanation": "Colonial tunicates like Botryllus schlosseri have sophisticated allorecognition systems that determine whether adjacent colonies will fuse or reject each other. This is controlled by a single, highly polymorphic gene locus (FuHC\u2014Fusion/Histocompatibility) analogous to the vertebrate MHC system. Colonies sharing at least one FuHC allele will fuse, forming chimeric colonies. Colonies with no shared alleles develop an inflammatory rejection response. This system prevents parasitic genotypes from invading colonies while allowing fusion between relatives (which share alleles). The Botryllus system is one of the most well-studied examples of invertebrate allorecognition and has provided insights into the evolution of immune systems, suggesting that self/non-self discrimination is an ancient capability predating the vertebrate adaptive immune system.",
+      "explanation": "Colonial tunicates like Botryllus schlosseri have sophisticated allorecognition systems that determine whether adjacent colonies will fuse or reject each other. This is controlled by a single, highly polymorphic gene locus (FuHC—Fusion/Histocompatibility) analogous to the vertebrate MHC system. Colonies sharing at least one FuHC allele will fuse, forming chimeric colonies. Colonies with no shared alleles develop an inflammatory rejection response. This system prevents parasitic genotypes from invading colonies while allowing fusion between relatives (which share alleles). The Botryllus system is one of the most well-studied examples of invertebrate allorecognition and has provided insights into the evolution of immune systems, suggesting that self/non-self discrimination is an ancient capability predating the vertebrate adaptive immune system.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -823,7 +816,7 @@
         "digesting food in the gastrovascular cavity"
       ],
       "correctAnswer": "C",
-      "explanation": "The mantle is a sheet of tissue that covers the visceral mass of molluscs and performs several critical functions: (1) Shell secretion\u2014specialized cells in the mantle epithelium secrete the shell (in shelled species), including the outer organic periostracum, the middle prismatic layer of calcium carbonate crystals, and the inner nacreous layer (mother of pearl). (2) The mantle forms the mantle cavity, a space between the mantle and the visceral mass that houses the gills (ctenidia) in aquatic species or functions as a lung in terrestrial gastropods. (3) The mantle cavity serves as the site of gas exchange, receiving water flow that passes over the gills. (4) In cephalopods, the muscular mantle provides the force for jet propulsion. (5) In some species, the mantle edge has sensory tentacles or eyes (scallops have rows of mirror-based eyes along the mantle edge).",
+      "explanation": "The mantle is a sheet of tissue that covers the visceral mass of molluscs and performs several critical functions: (1) Shell secretion—specialized cells in the mantle epithelium secrete the shell (in shelled species), including the outer organic periostracum, the middle prismatic layer of calcium carbonate crystals, and the inner nacreous layer (mother of pearl). (2) The mantle forms the mantle cavity, a space between the mantle and the visceral mass that houses the gills (ctenidia) in aquatic species or functions as a lung in terrestrial gastropods. (3) The mantle cavity serves as the site of gas exchange, receiving water flow that passes over the gills. (4) In cephalopods, the muscular mantle provides the force for jet propulsion. (5) In some species, the mantle edge has sensory tentacles or eyes (scallops have rows of mirror-based eyes along the mantle edge).",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -843,7 +836,7 @@
         "distinct larval, pupal, and adult stages, where the pupa undergoes radical tissue reorganization"
       ],
       "correctAnswer": "D",
-      "explanation": "Holometabolous (complete) metamorphosis is one of the key innovations underlying the extraordinary species diversity of insects. It involves four distinct life stages: egg, larva (caterpillar, maggot, grub), pupa (chrysalis, cocoon), and adult (imago). The larval stage is specialized for feeding and growth, with a body plan often radically different from the adult. During the pupal stage, most larval tissues are broken down by apoptosis and histolysis, and adult structures are built from groups of undifferentiated cells called imaginal discs that were set aside during embryonic development. This radical reorganization allows larva and adult to exploit entirely different ecological niches\u2014the larva is a specialized feeding machine while the adult is a specialized dispersal and reproductive machine. This niche partitioning reduces intraspecific competition and may have contributed to the diversification of holometabolous insect orders (Coleoptera, Lepidoptera, Hymenoptera, Diptera).",
+      "explanation": "Holometabolous (complete) metamorphosis is one of the key innovations underlying the extraordinary species diversity of insects. It involves four distinct life stages: egg, larva (caterpillar, maggot, grub), pupa (chrysalis, cocoon), and adult (imago). The larval stage is specialized for feeding and growth, with a body plan often radically different from the adult. During the pupal stage, most larval tissues are broken down by apoptosis and histolysis, and adult structures are built from groups of undifferentiated cells called imaginal discs that were set aside during embryonic development. This radical reorganization allows larva and adult to exploit entirely different ecological niches—the larva is a specialized feeding machine while the adult is a specialized dispersal and reproductive machine. This niche partitioning reduces intraspecific competition and may have contributed to the diversification of holometabolous insect orders (Coleoptera, Lepidoptera, Hymenoptera, Diptera).",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -855,7 +848,7 @@
     },
     {
       "type": "MTF",
-      "question": "Consider the following about echinoderm biology:\n(I) All echinoderms are exclusively marine\u2014no freshwater or terrestrial species exist\n(II) Echinoderms have remarkable regenerative abilities, with some sea stars able to regrow entire arms\n(III) The echinoderm endoskeleton is composed of calcium carbonate ossicles\n(IV) Echinoderms have a highly centralized brain that controls their water vascular system\nWhich are TRUE?",
+      "question": "Consider the following about echinoderm biology:\n(I) All echinoderms are exclusively marine—no freshwater or terrestrial species exist\n(II) Echinoderms have remarkable regenerative abilities, with some sea stars able to regrow entire arms\n(III) The echinoderm endoskeleton is composed of calcium carbonate ossicles\n(IV) Echinoderms have a highly centralized brain that controls their water vascular system\nWhich are TRUE?",
       "options": [
         "TTTF -- I, II, and III are true",
         "TTFT -- I, II, and IV are true",
@@ -863,7 +856,7 @@
         "TTTT -- All are true"
       ],
       "correctAnswer": "A",
-      "explanation": "Statement I is TRUE: Echinoderms are exclusively marine\u2014no species has ever successfully colonized freshwater or terrestrial environments. This may be related to their water vascular system's dependence on seawater and their lack of specialized osmoregulatory organs. Statement II is TRUE: Echinoderms have extraordinary regenerative abilities. Sea stars can regrow lost arms, and some species (like Linckia) can regenerate an entire body from a single arm if a portion of the central disc is attached. Statement III is TRUE: The echinoderm endoskeleton consists of calcium carbonate (calcite) ossicles embedded in the dermis. These ossicles may be fused into rigid plates (sea urchin test) or articulated for flexibility (sea star arms). Statement IV is FALSE: Echinoderms lack a centralized brain. Their nervous system consists of a circumoral nerve ring and radial nerves extending into each arm, forming a decentralized neural network without any brain-like concentration.",
+      "explanation": "Statement I is TRUE: Echinoderms are exclusively marine—no species has ever successfully colonized freshwater or terrestrial environments. This may be related to their water vascular system's dependence on seawater and their lack of specialized osmoregulatory organs. Statement II is TRUE: Echinoderms have extraordinary regenerative abilities. Sea stars can regrow lost arms, and some species (like Linckia) can regenerate an entire body from a single arm if a portion of the central disc is attached. Statement III is TRUE: The echinoderm endoskeleton consists of calcium carbonate (calcite) ossicles embedded in the dermis. These ossicles may be fused into rigid plates (sea urchin test) or articulated for flexibility (sea star arms). Statement IV is FALSE: Echinoderms lack a centralized brain. Their nervous system consists of a circumoral nerve ring and radial nerves extending into each arm, forming a decentralized neural network without any brain-like concentration.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -883,7 +876,7 @@
         "absorbing oxygen from food rather than from the environment"
       ],
       "correctAnswer": "A",
-      "explanation": "Flatworms solve the problem of gas exchange through their body plan: they are dorsoventrally flattened (thin in the dorsoventral axis) and relatively small, ensuring that all cells are close enough to the body surface for efficient gas exchange by diffusion. The maximum effective diffusion distance for oxygen in animal tissue is approximately 1 mm, and flatworms maintain a body thickness within this constraint. Many flatworms have a highly branched gastrovascular cavity that further reduces the diffusion distance between the gut and body surface. This diffusion-based gas exchange is adequate for their relatively low metabolic rate but constrains body size and shape\u2014flatworms cannot be thick or spherical. The absence of a circulatory system means they rely entirely on diffusion for internal transport of gases and nutrients.",
+      "explanation": "Flatworms solve the problem of gas exchange through their body plan: they are dorsoventrally flattened (thin in the dorsoventral axis) and relatively small, ensuring that all cells are close enough to the body surface for efficient gas exchange by diffusion. The maximum effective diffusion distance for oxygen in animal tissue is approximately 1 mm, and flatworms maintain a body thickness within this constraint. Many flatworms have a highly branched gastrovascular cavity that further reduces the diffusion distance between the gut and body surface. This diffusion-based gas exchange is adequate for their relatively low metabolic rate but constrains body size and shape—flatworms cannot be thick or spherical. The absence of a circulatory system means they rely entirely on diffusion for internal transport of gases and nutrients.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -903,7 +896,7 @@
         "TTTT -- All are true"
       ],
       "correctAnswer": "A",
-      "explanation": "Statement I is TRUE: Nematodes are extraordinarily abundant\u2014a single square meter of topsoil can contain millions of individuals. They occupy virtually every habitat on Earth, from deep-sea sediments to hot springs. Statement II is TRUE: C. elegans was the first multicellular organism to have its complete genome sequenced (1998) and its entire cell lineage mapped\u2014every cell division from zygote to the adult's 959 somatic cells has been documented. Statement III is FALSE: While many nematodes are parasites (including human pathogens like Ascaris, hookworms, and filarial worms), the majority of nematode species are free-living in soil and aquatic environments, playing crucial roles in decomposition and nutrient cycling. Statement IV is TRUE: Nematodes have a collagenous cuticle that is periodically molted during growth (four larval molts in C. elegans), a shared character with other ecdysozoans (arthropods, tardigrades).",
+      "explanation": "Statement I is TRUE: Nematodes are extraordinarily abundant—a single square meter of topsoil can contain millions of individuals. They occupy virtually every habitat on Earth, from deep-sea sediments to hot springs. Statement II is TRUE: C. elegans was the first multicellular organism to have its complete genome sequenced (1998) and its entire cell lineage mapped—every cell division from zygote to the adult's 959 somatic cells has been documented. Statement III is FALSE: While many nematodes are parasites (including human pathogens like Ascaris, hookworms, and filarial worms), the majority of nematode species are free-living in soil and aquatic environments, playing crucial roles in decomposition and nutrient cycling. Statement IV is TRUE: Nematodes have a collagenous cuticle that is periodically molted during growth (four larval molts in C. elegans), a shared character with other ecdysozoans (arthropods, tardigrades).",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -923,7 +916,7 @@
         "are exclusively freshwater organisms"
       ],
       "correctAnswer": "C",
-      "explanation": "Bryozoans (moss animals) are colonial lophotrochozoans often mistaken for corals or hydroids. Key differences: bryozoans are protostomes (lophotrochozoans) while corals are cnidarians; each bryozoan zooid has a lophophore (U-shaped ring of ciliated tentacles) for filter feeding, a complete digestive tract, and a coelom. Individual zooids are typically less than 1 mm but colonies can cover large areas. Many bryozoan colonies show polymorphism\u2014different zooid types specialized for feeding (autozooids), defense (avicularia that snap shut like bird beaks), reproduction, or structural support. With approximately 6,000 living species and an excellent fossil record extending to the Ordovician, bryozoans are important reef builders and provide habitat for other organisms.",
+      "explanation": "Bryozoans (moss animals) are colonial lophotrochozoans often mistaken for corals or hydroids. Key differences: bryozoans are protostomes (lophotrochozoans) while corals are cnidarians; each bryozoan zooid has a lophophore (U-shaped ring of ciliated tentacles) for filter feeding, a complete digestive tract, and a coelom. Individual zooids are typically less than 1 mm but colonies can cover large areas. Many bryozoan colonies show polymorphism—different zooid types specialized for feeding (autozooids), defense (avicularia that snap shut like bird beaks), reproduction, or structural support. With approximately 6,000 living species and an excellent fossil record extending to the Ordovician, bryozoans are important reef builders and provide habitat for other organisms.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -943,7 +936,7 @@
         "it lives exclusively in freshwater"
       ],
       "correctAnswer": "B",
-      "explanation": "Physalia physalis is not a single organism but a colony of highly specialized polyps (zooids) that function as an integrated unit resembling a single organism. This represents one of the most extreme examples of division of labor in the animal kingdom. The pneumatophore is a gas-filled float that keeps the colony at the surface. Dactylozooids are long tentacles (up to 30 meters) bearing nematocysts for prey capture and defense. Gastrozooids are feeding polyps that digest prey. Gonozooids produce gametes for reproduction. Each zooid type develops from the same genotype but is morphologically and functionally specialized. Siphonophores challenge our concept of individuality\u2014they are sometimes called 'superorganisms' because the integrated colony functions like a single organism with specialized organs.",
+      "explanation": "Physalia physalis is not a single organism but a colony of highly specialized polyps (zooids) that function as an integrated unit resembling a single organism. This represents one of the most extreme examples of division of labor in the animal kingdom. The pneumatophore is a gas-filled float that keeps the colony at the surface. Dactylozooids are long tentacles (up to 30 meters) bearing nematocysts for prey capture and defense. Gastrozooids are feeding polyps that digest prey. Gonozooids produce gametes for reproduction. Each zooid type develops from the same genotype but is morphologically and functionally specialized. Siphonophores challenge our concept of individuality—they are sometimes called 'superorganisms' because the integrated colony functions like a single organism with specialized organs.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -963,7 +956,7 @@
         "locomotion and creating water currents that sweep food particles toward the mouth"
       ],
       "correctAnswer": "D",
-      "explanation": "Rotifers are microscopic (50-2,000 micrometers) pseudocoelomate lophotrochozoans with a distinctive ciliated structure called the corona at the anterior end. The corona's beating cilia serve dual functions: (1) locomotion\u2014the ciliary currents propel the tiny rotifer through water, and (2) feeding\u2014the currents sweep food particles (bacteria, algae, organic detritus) toward the mouth. The name 'Rotifera' means 'wheel-bearer,' referring to the wheel-like appearance of the beating cilia. Despite their small size and simplicity (typically ~1,000 cells), rotifers have a complete digestive tract with a distinctive jaw-like structure called the mastax, a simple nervous system with a cerebral ganglion, and protonephridia for osmoregulation. Some rotifer species reproduce through cyclical parthenogenesis, alternating between asexual and sexual reproduction depending on environmental conditions.",
+      "explanation": "Rotifers are microscopic (50-2,000 micrometers) pseudocoelomate lophotrochozoans with a distinctive ciliated structure called the corona at the anterior end. The corona's beating cilia serve dual functions: (1) locomotion—the ciliary currents propel the tiny rotifer through water, and (2) feeding—the currents sweep food particles (bacteria, algae, organic detritus) toward the mouth. The name 'Rotifera' means 'wheel-bearer,' referring to the wheel-like appearance of the beating cilia. Despite their small size and simplicity (typically ~1,000 cells), rotifers have a complete digestive tract with a distinctive jaw-like structure called the mastax, a simple nervous system with a cerebral ganglion, and protonephridia for osmoregulation. Some rotifer species reproduce through cyclical parthenogenesis, alternating between asexual and sexual reproduction depending on environmental conditions.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -983,7 +976,7 @@
         "a jet propulsion organ"
       ],
       "correctAnswer": "B",
-      "explanation": "The hectocotylus is one or more specialized arms in male cephalopods modified for sperm transfer. In octopuses, one arm (typically the third right arm) has a groove and specialized tip (the ligula) used to transfer spermatophores (packets of sperm) to the female's mantle cavity. In some species, the hectocotylus is dramatically modified and may even detach during mating and autonomously crawl into the female's mantle cavity. When first discovered as detached arms inside female paper nautiluses (Argonauta), the hectocotylus was mistakenly described as a parasitic worm\u2014hence the name, meaning 'hundred cups,' referring to its sucker-like structures. The hectocotylus represents one of many remarkable reproductive adaptations in cephalopods, a group that also shows complex courtship displays, mate guarding, and in some species, sneaker male mating tactics.",
+      "explanation": "The hectocotylus is one or more specialized arms in male cephalopods modified for sperm transfer. In octopuses, one arm (typically the third right arm) has a groove and specialized tip (the ligula) used to transfer spermatophores (packets of sperm) to the female's mantle cavity. In some species, the hectocotylus is dramatically modified and may even detach during mating and autonomously crawl into the female's mantle cavity. When first discovered as detached arms inside female paper nautiluses (Argonauta), the hectocotylus was mistakenly described as a parasitic worm—hence the name, meaning 'hundred cups,' referring to its sucker-like structures. The hectocotylus represents one of many remarkable reproductive adaptations in cephalopods, a group that also shows complex courtship displays, mate guarding, and in some species, sneaker male mating tactics.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1023,7 +1016,7 @@
         "regeneration depends solely on fragment size"
       ],
       "correctAnswer": "C",
-      "explanation": "The differential regeneration rates reveal that head and tail specification involve different morphogenetic signals operating at different rates. The Wnt/beta-catenin signaling pathway plays a central role: high Wnt activity promotes tail (posterior) identity, while Wnt inhibition promotes head (anterior) identity. When a head fragment must regenerate a tail, the existing anterior signal needs to be overcome by posterior Wnt signaling at the wound site\u2014this specification occurs relatively quickly. When a tail fragment regenerates a head, Wnt signaling must be inhibited at the wound site, a process that takes longer due to the need to overcome existing posterior identity. Middle fragments must establish both polarities simultaneously. Planarian stem cells (neoblasts) are pluripotent and continuously divide, providing the cellular raw material for regeneration, but the patterning information that directs these cells comes from the existing tissue morphogen gradients.",
+      "explanation": "The differential regeneration rates reveal that head and tail specification involve different morphogenetic signals operating at different rates. The Wnt/beta-catenin signaling pathway plays a central role: high Wnt activity promotes tail (posterior) identity, while Wnt inhibition promotes head (anterior) identity. When a head fragment must regenerate a tail, the existing anterior signal needs to be overcome by posterior Wnt signaling at the wound site—this specification occurs relatively quickly. When a tail fragment regenerates a head, Wnt signaling must be inhibited at the wound site, a process that takes longer due to the need to overcome existing posterior identity. Middle fragments must establish both polarities simultaneously. Planarian stem cells (neoblasts) are pluripotent and continuously divide, providing the cellular raw material for regeneration, but the patterning information that directs these cells comes from the existing tissue morphogen gradients.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1063,7 +1056,7 @@
         "photograph deep-sea organisms from the surface"
       ],
       "correctAnswer": "A",
-      "explanation": "Testing bioluminescence function in the deep sea requires in situ observations and experiments because laboratory conditions cannot replicate the deep-sea environment. The approach: (1) Use ROVs with red light cameras (invisible to most deep-sea organisms) to observe natural bioluminescent displays without disturbance. (2) Deploy artificial bioluminescent lures mimicking species-specific light patterns and record the responses of different organisms\u2014predators attracted to the light (prey attraction function), prey fleeing from it (predator warning), or conspecifics approaching (communication). (3) Record the context of natural bioluminescent displays (feeding, escaping, mating) to correlate function with behavior. (4) Compare light emission spectra with the visual sensitivities of potential receivers. Different species likely use bioluminescence for different functions, and some may serve multiple purposes.",
+      "explanation": "Testing bioluminescence function in the deep sea requires in situ observations and experiments because laboratory conditions cannot replicate the deep-sea environment. The approach: (1) Use ROVs with red light cameras (invisible to most deep-sea organisms) to observe natural bioluminescent displays without disturbance. (2) Deploy artificial bioluminescent lures mimicking species-specific light patterns and record the responses of different organisms—predators attracted to the light (prey attraction function), prey fleeing from it (predator warning), or conspecifics approaching (communication). (3) Record the context of natural bioluminescent displays (feeding, escaping, mating) to correlate function with behavior. (4) Compare light emission spectra with the visual sensitivities of potential receivers. Different species likely use bioluminescence for different functions, and some may serve multiple purposes.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -1078,12 +1071,12 @@
       "question": "Mollusks display extraordinary morphological diversity despite sharing a common body plan. What are the three main components of the basic molluscan body plan?",
       "options": [
         "Head, thorax, and abdomen like insects",
-        "A muscular foot (for locomotion), a visceral mass (containing internal organs), and a mantle (that secretes the shell and encloses the mantle cavity housing gills)\u2014these three components are variously modified across the eight molluscan classes",
+        "A muscular foot (for locomotion), a visceral mass (containing internal organs), and a mantle (that secretes the shell and encloses the mantle cavity housing gills)—these three components are variously modified across the eight molluscan classes",
         "Exoskeleton, segments, and jointed appendages",
         "Notochord, dorsal nerve cord, and pharyngeal slits"
       ],
       "correctAnswer": "B",
-      "explanation": "The molluscan body plan consists of three fundamental components: (1) Muscular foot: Variously modified for locomotion. In gastropods (snails), a broad, flat, creeping sole. In bivalves, a blade-like digging foot. In cephalopods, modified into arms and tentacles (the foot has moved to the head region\u2014\"cephalo-pod\" = head-foot). (2) Visceral mass: Contains the digestive, excretory, and reproductive organs. In gastropods, coiled within the shell. In cephalopods, streamlined for swimming. Houses the distinctive radula (chitinous feeding structure with rows of teeth) in most classes except bivalves. (3) Mantle: A tissue layer covering the visceral mass that secretes the shell (when present, composed of calcium carbonate in layers: periostracum, prismatic, nacreous). The mantle cavity houses ctenidia (gills) for gas exchange and, in aquatic species, functions in filter feeding (especially bivalves). In cephalopods, the mantle cavity serves as a jet propulsion system. (4) Modifications: Bivalves\u2014enlarged mantle for filter feeding, reduced head; cephalopods\u2014internalized or lost shell, complex nervous system, camera-type eyes; gastropods\u2014torsion (180-degree rotation of visceral mass). (5) The remarkable diversity of 85,000+ species from a single body plan demonstrates evolutionary versatility through modification of these three components.",
+      "explanation": "The molluscan body plan consists of three fundamental components: (1) Muscular foot: Variously modified for locomotion. In gastropods (snails), a broad, flat, creeping sole. In bivalves, a blade-like digging foot. In cephalopods, modified into arms and tentacles (the foot has moved to the head region—\"cephalo-pod\" = head-foot). (2) Visceral mass: Contains the digestive, excretory, and reproductive organs. In gastropods, coiled within the shell. In cephalopods, streamlined for swimming. Houses the distinctive radula (chitinous feeding structure with rows of teeth) in most classes except bivalves. (3) Mantle: A tissue layer covering the visceral mass that secretes the shell (when present, composed of calcium carbonate in layers: periostracum, prismatic, nacreous). The mantle cavity houses ctenidia (gills) for gas exchange and, in aquatic species, functions in filter feeding (especially bivalves). In cephalopods, the mantle cavity serves as a jet propulsion system. (4) Modifications: Bivalves—enlarged mantle for filter feeding, reduced head; cephalopods—internalized or lost shell, complex nervous system, camera-type eyes; gastropods—torsion (180-degree rotation of visceral mass). (5) The remarkable diversity of 85,000+ species from a single body plan demonstrates evolutionary versatility through modification of these three components.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1100,10 +1093,10 @@
         "Echinoderm larvae are also pentaradially symmetrical",
         "All deuterostomes display pentaradial symmetry",
         "Echinoderms are not actually related to chordates",
-        "Echinoderm larvae (such as the bipinnaria of sea stars and pluteus of sea urchins) are bilaterally symmetrical, and metamorphosis from bilateral larva to pentaradial adult involves dramatic reorganization\u2014confirming that pentaradial symmetry is secondarily derived from a bilateral ancestor"
+        "Echinoderm larvae (such as the bipinnaria of sea stars and pluteus of sea urchins) are bilaterally symmetrical, and metamorphosis from bilateral larva to pentaradial adult involves dramatic reorganization—confirming that pentaradial symmetry is secondarily derived from a bilateral ancestor"
       ],
       "correctAnswer": "D",
-      "explanation": "Echinoderm development reveals their bilateral origins: (1) Bilateral larvae: All echinoderm classes produce bilaterally symmetrical, free-swimming larvae\u2014bipinnaria/brachiolaria (asteroids), pluteus (ophiuroids, echinoids), auricularia (holothuroids), doliolaria (crinoids). These larvae have clear left-right symmetry with a complete gut. (2) Metamorphosis: The transition from bilateral larva to pentaradial adult is one of the most dramatic metamorphoses in the animal kingdom. In sea stars, the left side of the larva develops the adult body (the hydrocoel/water vascular system forms from the left side), while much of the right side is resorbed. (3) Molecular evidence: Echinoderm genomes contain conserved bilaterian axis-patterning genes (Hox clusters, BMP/Chordin). During metamorphosis, these genes are re-deployed to pattern the pentaradial adult body. (4) Fossil evidence: The earliest echinoderms (Cambrian, ~520 Mya) include forms with bilateral or asymmetric body plans (helicoplacoids, homalozoans/carpoids), supporting bilateral ancestry. (5) Pentaradial symmetry likely evolved as an adaptation to sessile or slow-moving benthic life, where radial symmetry allows interaction with the environment from all directions.",
+      "explanation": "Echinoderm development reveals their bilateral origins: (1) Bilateral larvae: All echinoderm classes produce bilaterally symmetrical, free-swimming larvae—bipinnaria/brachiolaria (asteroids), pluteus (ophiuroids, echinoids), auricularia (holothuroids), doliolaria (crinoids). These larvae have clear left-right symmetry with a complete gut. (2) Metamorphosis: The transition from bilateral larva to pentaradial adult is one of the most dramatic metamorphoses in the animal kingdom. In sea stars, the left side of the larva develops the adult body (the hydrocoel/water vascular system forms from the left side), while much of the right side is resorbed. (3) Molecular evidence: Echinoderm genomes contain conserved bilaterian axis-patterning genes (Hox clusters, BMP/Chordin). During metamorphosis, these genes are re-deployed to pattern the pentaradial adult body. (4) Fossil evidence: The earliest echinoderms (Cambrian, ~520 Mya) include forms with bilateral or asymmetric body plans (helicoplacoids, homalozoans/carpoids), supporting bilateral ancestry. (5) Pentaradial symmetry likely evolved as an adaptation to sessile or slow-moving benthic life, where radial symmetry allows interaction with the environment from all directions.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -1131,7 +1124,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "advanced",
       "difficulty": "HARD",
-      "topic": "Platyhelminthes \u2014 Regeneration Polarity"
+      "topic": "Platyhelminthes — Regeneration Polarity"
     },
     {
       "type": "DATA_INTERPRETATION",
@@ -1143,7 +1136,7 @@
         "beetles having the most efficient respiratory systems"
       ],
       "correctAnswer": "C",
-      "explanation": "The extraordinary diversity of beetles (the basis for J.B.S. Haldane's famous quip about the Creator having 'an inordinate fondness for beetles') reflects multiple factors: (1) Elytra (hardened forewings) protect the membranous hindwings and body, enabling beetles to exploit habitats that would damage exposed wings (under bark, in soil, in stored products). (2) Complete metamorphosis allows larvae and adults to exploit different niches. (3) Small body size enables fine-grained habitat partitioning. (4) Beetles diversified extensively on angiosperms\u2014many beetle families are herbivores with host-specific relationships. (5) Beetles colonized nearly every terrestrial and freshwater habitat. The four largest insect orders (Coleoptera, Lepidoptera, Hymenoptera, Diptera) are all holometabolous, suggesting that complete metamorphosis is a key innovation driving insect diversification.",
+      "explanation": "The extraordinary diversity of beetles (the basis for J.B.S. Haldane's famous quip about the Creator having 'an inordinate fondness for beetles') reflects multiple factors: (1) Elytra (hardened forewings) protect the membranous hindwings and body, enabling beetles to exploit habitats that would damage exposed wings (under bark, in soil, in stored products). (2) Complete metamorphosis allows larvae and adults to exploit different niches. (3) Small body size enables fine-grained habitat partitioning. (4) Beetles diversified extensively on angiosperms—many beetle families are herbivores with host-specific relationships. (5) Beetles colonized nearly every terrestrial and freshwater habitat. The four largest insect orders (Coleoptera, Lepidoptera, Hymenoptera, Diptera) are all holometabolous, suggesting that complete metamorphosis is a key innovation driving insect diversification.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -1203,7 +1196,7 @@
         "compare the genome size of the squid with other cephalopods"
       ],
       "correctAnswer": "B",
-      "explanation": "The Euprymna-Vibrio symbiosis is one of the best-studied animal-microbe associations. To test host selectivity: (1) Raise squid from eggs in filtered seawater (squid hatch aposymbiotic\u2014without bacteria). (2) Expose hatchlings to seawater containing known mixtures of bacterial species including V. fischeri and closely related non-symbiotic Vibrio species. (3) After colonization, use 16S rRNA sequencing and species-specific probes to determine which bacteria successfully colonized the light organ. (4) Controls: sterile-water squid (no colonization), and water lacking V. fischeri (test whether other species can substitute). Research using this approach has shown that the squid has sophisticated selection mechanisms: the light organ produces mucus that selectively enriches V. fischeri, epithelial cells produce antimicrobial peptides that eliminate most bacteria, and the internal environment selectively supports V. fischeri growth.",
+      "explanation": "The Euprymna-Vibrio symbiosis is one of the best-studied animal-microbe associations. To test host selectivity: (1) Raise squid from eggs in filtered seawater (squid hatch aposymbiotic—without bacteria). (2) Expose hatchlings to seawater containing known mixtures of bacterial species including V. fischeri and closely related non-symbiotic Vibrio species. (3) After colonization, use 16S rRNA sequencing and species-specific probes to determine which bacteria successfully colonized the light organ. (4) Controls: sterile-water squid (no colonization), and water lacking V. fischeri (test whether other species can substitute). Research using this approach has shown that the squid has sophisticated selection mechanisms: the light organ produces mucus that selectively enriches V. fischeri, epithelial cells produce antimicrobial peptides that eliminate most bacteria, and the internal environment selectively supports V. fischeri growth.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1223,7 +1216,7 @@
         "is a reproductive structure for depositing eggs"
       ],
       "correctAnswer": "A",
-      "explanation": "Nemerteans (ribbon worms) have a unique eversible proboscis housed in a fluid-filled cavity called the rhynchocoel. The proboscis can be rapidly shot out by hydrostatic pressure to capture prey. In hoplonemerteans, the proboscis bears a calcareous stylet that can pierce prey and inject toxins. In paleonemerteans, the proboscis wraps around prey. The proboscis is not connected to the digestive system\u2014it has its own separate cavity. Nemerteans are notable for having a complete digestive tract (one of the first phyla to evolve this), a closed circulatory system, and remarkable regenerative abilities. Some species can be very long\u2014Lineus longissimus can reach 30 meters, making it one of the longest animals on Earth.",
+      "explanation": "Nemerteans (ribbon worms) have a unique eversible proboscis housed in a fluid-filled cavity called the rhynchocoel. The proboscis can be rapidly shot out by hydrostatic pressure to capture prey. In hoplonemerteans, the proboscis bears a calcareous stylet that can pierce prey and inject toxins. In paleonemerteans, the proboscis wraps around prey. The proboscis is not connected to the digestive system—it has its own separate cavity. Nemerteans are notable for having a complete digestive tract (one of the first phyla to evolve this), a closed circulatory system, and remarkable regenerative abilities. Some species can be very long—Lineus longissimus can reach 30 meters, making it one of the longest animals on Earth.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -1263,7 +1256,7 @@
         "walking on the sea floor using tentacles"
       ],
       "correctAnswer": "A",
-      "explanation": "Cephalopod jet propulsion is achieved through rapid muscular contraction of the mantle cavity. Water is first drawn into the mantle cavity through openings around the head. The mantle then contracts forcefully, sealing these openings and forcing water out through a narrow, directional siphon (funnel). The siphon can be aimed in different directions, providing excellent maneuverability\u2014the animal is propelled in the direction opposite to the water jet. Squids can achieve speeds exceeding 40 km/h in short bursts, and some species (Dosidicus gigas) can even launch themselves out of the water. The efficiency of jet propulsion decreases with body size (due to the physics of momentum transfer), which is why the largest cephalopods (giant squid) rely more on fin locomotion. Nautilus uses a less efficient version with its coiled shell, while octopuses combine jet propulsion with arm-powered crawling.",
+      "explanation": "Cephalopod jet propulsion is achieved through rapid muscular contraction of the mantle cavity. Water is first drawn into the mantle cavity through openings around the head. The mantle then contracts forcefully, sealing these openings and forcing water out through a narrow, directional siphon (funnel). The siphon can be aimed in different directions, providing excellent maneuverability—the animal is propelled in the direction opposite to the water jet. Squids can achieve speeds exceeding 40 km/h in short bursts, and some species (Dosidicus gigas) can even launch themselves out of the water. The efficiency of jet propulsion decreases with body size (due to the physics of momentum transfer), which is why the largest cephalopods (giant squid) rely more on fin locomotion. Nautilus uses a less efficient version with its coiled shell, while octopuses combine jet propulsion with arm-powered crawling.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1283,7 +1276,7 @@
         "cannot survive outside of tropical environments"
       ],
       "correctAnswer": "C",
-      "explanation": "Tardigrades are microscopic ecdysozoans (~0.1-1.5 mm) famous for their extraordinary ability to survive environmental extremes through cryptobiosis\u2014a state of almost complete metabolic suspension. In the desiccated 'tun' state, tardigrades have survived: temperatures from near absolute zero (-272C) to 150C, pressures from near-vacuum to 6,000 atmospheres (six times the pressure of the deepest ocean trenches), ionizing radiation doses 1,000 times the lethal dose for humans, and exposure to the vacuum and radiation of outer space (confirmed by the TARDIS experiment on the International Space Station). Their survival mechanisms include production of trehalose (a protective sugar), intrinsically disordered proteins (TDPs) that form protective glass-like matrices, DNA repair enzymes, and antioxidant systems. Tardigrades have even been found to have acquired genes from other organisms (horizontal gene transfer) that may contribute to their stress tolerance.",
+      "explanation": "Tardigrades are microscopic ecdysozoans (~0.1-1.5 mm) famous for their extraordinary ability to survive environmental extremes through cryptobiosis—a state of almost complete metabolic suspension. In the desiccated 'tun' state, tardigrades have survived: temperatures from near absolute zero (-272C) to 150C, pressures from near-vacuum to 6,000 atmospheres (six times the pressure of the deepest ocean trenches), ionizing radiation doses 1,000 times the lethal dose for humans, and exposure to the vacuum and radiation of outer space (confirmed by the TARDIS experiment on the International Space Station). Their survival mechanisms include production of trehalose (a protective sugar), intrinsically disordered proteins (TDPs) that form protective glass-like matrices, DNA repair enzymes, and antioxidant systems. Tardigrades have even been found to have acquired genes from other organisms (horizontal gene transfer) that may contribute to their stress tolerance.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1323,7 +1316,7 @@
         "a parasitic organism living inside larger animals"
       ],
       "correctAnswer": "C",
-      "explanation": "Hallucigenia sparsa from the Burgess Shale was originally reconstructed with its spines as legs and its actual legs as tentacles\u2014literally upside down. Subsequent discoveries of better-preserved specimens and related fossils revealed its true anatomy: a worm-like lobopodian with pairs of unjointed legs (lobopods) for walking, paired dorsal spines for protection against predators, and a distinct head with simple eyes. Hallucigenia is now classified as a stem-group onychophoran, providing evidence for the evolutionary transition from soft-bodied lobopodians to modern velvet worms. Its misinterpretation is a famous cautionary tale in paleontology about the challenges of interpreting unusual fossil forms and the importance of additional specimens and comparative anatomy.",
+      "explanation": "Hallucigenia sparsa from the Burgess Shale was originally reconstructed with its spines as legs and its actual legs as tentacles—literally upside down. Subsequent discoveries of better-preserved specimens and related fossils revealed its true anatomy: a worm-like lobopodian with pairs of unjointed legs (lobopods) for walking, paired dorsal spines for protection against predators, and a distinct head with simple eyes. Hallucigenia is now classified as a stem-group onychophoran, providing evidence for the evolutionary transition from soft-bodied lobopodians to modern velvet worms. Its misinterpretation is a famous cautionary tale in paleontology about the challenges of interpreting unusual fossil forms and the importance of additional specimens and comparative anatomy.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -1378,7 +1371,7 @@
       "question": "Arthropods are the most species-rich animal phylum, with over 1 million described species. What key innovation of the arthropod body plan contributed most to their extraordinary diversification?",
       "options": [
         "Arthropods have soft, flexible bodies with no external support",
-        "The modular body plan with serially homologous segments and jointed appendages that can be independently modified by Hox genes\u2014allowing different segments to specialize for different functions (feeding, locomotion, sensory, reproduction) without constraining other body regions",
+        "The modular body plan with serially homologous segments and jointed appendages that can be independently modified by Hox genes—allowing different segments to specialize for different functions (feeding, locomotion, sensory, reproduction) without constraining other body regions",
         "All arthropods are aquatic and diversified in the ocean",
         "Arthropods have only one body segment with no specialization"
       ],
@@ -1403,7 +1396,7 @@
         "TFTT -- I, III, and IV are true"
       ],
       "correctAnswer": "A",
-      "explanation": "Statement I is TRUE: Gastropoda is the largest molluscan class with ~60,000-80,000 described species. Statement II is TRUE: Bivalvia (~20,000 species) have two hinged shell valves and most are filter feeders using modified gills (ctenidia) to extract food particles from water. Statement III is TRUE: Cephalopods have the most complex nervous systems of any invertebrate, with large brains (the brain-to-body ratio of octopuses approaches that of some vertebrates), excellent learning abilities, and complex behaviors. Octopuses can solve mazes, open jars, and use tools. Statement IV is FALSE: Many molluscs lack external shells\u2014octopuses have no shell (or only a vestigial internal gladius), slugs (terrestrial gastropods) have lost their shells, and nudibranchs (sea slugs) are shell-less. Shell loss has evolved multiple times independently across molluscan lineages.",
+      "explanation": "Statement I is TRUE: Gastropoda is the largest molluscan class with ~60,000-80,000 described species. Statement II is TRUE: Bivalvia (~20,000 species) have two hinged shell valves and most are filter feeders using modified gills (ctenidia) to extract food particles from water. Statement III is TRUE: Cephalopods have the most complex nervous systems of any invertebrate, with large brains (the brain-to-body ratio of octopuses approaches that of some vertebrates), excellent learning abilities, and complex behaviors. Octopuses can solve mazes, open jars, and use tools. Statement IV is FALSE: Many molluscs lack external shells—octopuses have no shell (or only a vestigial internal gladius), slugs (terrestrial gastropods) have lost their shells, and nudibranchs (sea slugs) are shell-less. Shell loss has evolved multiple times independently across molluscan lineages.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,

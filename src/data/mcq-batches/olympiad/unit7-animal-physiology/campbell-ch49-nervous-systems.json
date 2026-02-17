@@ -1,9 +1,10 @@
 {
-  "batchId": "olympiad-campbell-ch49-nervous-systems",
-  "subject": "biology",
-  "topic": "Nervous Systems",
-  "gradeLevel": "olympiad",
-  "isOlympiad": true,
+  "batch": {
+    "name": "Campbell Ch49 Nervous Systems — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 126
+  },
   "questions": [
     {
       "type": "MCQ",
@@ -2525,6 +2526,5 @@
       "difficulty": "HARD",
       "topic": "Nervous Systems"
     }
-  ],
-  "totalQuestions": 126
+  ]
 }

@@ -1,8 +1,10 @@
 {
-  "batchId": "olympiad-campbell-ch38-angiosperm-reproduction",
-  "subject": "Biology",
-  "category": "Olympiad",
-  "description": "Campbell Biology Chapter 38 – Angiosperm Reproduction and Biotechnology: flower structure, gametophyte development, pollination, double fertilization, seed development, fruit development, and plant biotechnology (IBO/USABO/NSEB level)",
+  "batch": {
+    "name": "Campbell Ch38 Angiosperm Reproduction and Biotechnology — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 96
+  },
   "questions": [
     {
       "type": "MCQ",

@@ -1,8 +1,10 @@
 {
-  "batchName": "Campbell Ch 25 – History of Life on Earth (Olympiad)",
-  "subject": "Biology",
-  "chapter": "History of Life on Earth",
-  "class": "Olympiad",
+  "batch": {
+    "name": "Campbell Ch25 History of Life on Earth — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 86
+  },
   "questions": [
     {
       "type": "MCQ",

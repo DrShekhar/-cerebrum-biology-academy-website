@@ -1,28 +1,9 @@
 {
   "batch": {
-    "id": "campbell-ch55-ecosystems",
-    "name": "Campbell Ch 55: Ecosystems and Restoration Ecology (Olympiad)",
-    "description": "Olympiad-level questions on ecosystems ecology, energy flow, biogeochemical cycles, nutrient dynamics, decomposition, and restoration ecology from Campbell Biology Chapter 55",
-    "subject": "Biology",
-    "topic": "Ecosystems and Restoration Ecology",
-    "subtopics": [
-      "Energy Flow and Trophic Efficiency",
-      "Biogeochemical Cycles",
-      "Nutrient Cycling",
-      "Decomposition",
-      "Primary Productivity",
-      "Ecosystem Services",
-      "Restoration Ecology",
-      "Climate Feedbacks"
-    ],
-    "difficulty": "EXPERT",
-    "totalQuestions": 78,
-    "olympiadLevel": "IBO",
-    "isOlympiad": true,
-    "campbellUnit": 8,
-    "campbellChapter": 55,
-    "sourceTextbook": "Campbell Biology 12th Edition",
-    "questionCount": 89
+    "name": "Campbell Ch55 Ecosystems and Restoration Ecology — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 89
   },
   "questions": [
     {
@@ -35,7 +16,7 @@
         "Aluminum"
       ],
       "correctAnswer": "D",
-      "explanation": "Acid rain (pH < 5.6) mobilizes aluminum ions (Al\u00b3\u207a) from soil minerals through cation exchange. Aluminum is normally bound in aluminosilicate minerals at neutral pH but becomes soluble under acidic conditions. Dissolved aluminum is highly toxic to fish and other aquatic organisms, damaging gill epithelium and disrupting ion regulation. While mercury, lead, and cadmium are also environmental contaminants, aluminum mobilization is the most direct and quantitatively significant toxic effect of acid rain on freshwater ecosystems.",
+      "explanation": "Acid rain (pH < 5.6) mobilizes aluminum ions (Al³⁺) from soil minerals through cation exchange. Aluminum is normally bound in aluminosilicate minerals at neutral pH but becomes soluble under acidic conditions. Dissolved aluminum is highly toxic to fish and other aquatic organisms, damaging gill epithelium and disrupting ion regulation. While mercury, lead, and cadmium are also environmental contaminants, aluminum mobilization is the most direct and quantitatively significant toxic effect of acid rain on freshwater ecosystems.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -55,7 +36,7 @@
         "Mycoremediation"
       ],
       "correctAnswer": "B",
-      "explanation": "Phytoremediation, specifically phytoextraction, uses hyperaccumulator plants that can tolerate and concentrate heavy metals (e.g., zinc, cadmium, nickel, lead) in their above-ground tissues at levels 100-1000\u00d7 higher than normal plants. After the plants accumulate metals, the biomass is harvested and disposed of (phytomining). Examples include Thlaspi caerulescens (zinc/cadmium hyperaccumulator) and Pteris vittata (arsenic hyperaccumulator fern). Bioaugmentation adds microorganisms, biostimulation adds nutrients to enhance existing microbial degradation, and mycoremediation uses fungi. Only phytoremediation/phytoextraction specifically uses plants for metal removal.",
+      "explanation": "Phytoremediation, specifically phytoextraction, uses hyperaccumulator plants that can tolerate and concentrate heavy metals (e.g., zinc, cadmium, nickel, lead) in their above-ground tissues at levels 100-1000× higher than normal plants. After the plants accumulate metals, the biomass is harvested and disposed of (phytomining). Examples include Thlaspi caerulescens (zinc/cadmium hyperaccumulator) and Pteris vittata (arsenic hyperaccumulator fern). Bioaugmentation adds microorganisms, biostimulation adds nutrients to enhance existing microbial degradation, and mycoremediation uses fungi. Only phytoremediation/phytoextraction specifically uses plants for metal removal.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -89,13 +70,13 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "To test whether top-down or bottom-up forces primarily control ecosystem productivity in a lake, a researcher designs a factorial experiment. Which experimental design would be most appropriate?",
       "options": [
-        "Use a 2\u00d72 factorial design manipulating both nutrient addition (+/-) and fish presence (+/-) in replicated mesocosms",
+        "Use a 2×2 factorial design manipulating both nutrient addition (+/-) and fish presence (+/-) in replicated mesocosms",
         "Manipulate only fish density across multiple lakes and measure phytoplankton biomass",
         "Compare phytoplankton biomass between oligotrophic and eutrophic lakes",
         "Add nutrients to the entire lake and track changes in the food web over time"
       ],
       "correctAnswer": "A",
-      "explanation": "A 2\u00d72 factorial design manipulating both nutrients (bottom-up) and predators (top-down) simultaneously allows the researcher to distinguish the independent and interactive effects of these forces. This design includes: (1) control (no nutrients, no fish), (2) nutrients only, (3) fish only, and (4) both nutrients and fish. Comparing across treatments reveals whether productivity is controlled primarily by nutrient availability, predation pressure, or their interaction. Single-factor manipulations and observational comparisons cannot distinguish these mechanisms.",
+      "explanation": "A 2×2 factorial design manipulating both nutrients (bottom-up) and predators (top-down) simultaneously allows the researcher to distinguish the independent and interactive effects of these forces. This design includes: (1) control (no nutrients, no fish), (2) nutrients only, (3) fish only, and (4) both nutrients and fish. Comparing across treatments reveals whether productivity is controlled primarily by nutrient availability, predation pressure, or their interaction. Single-factor manipulations and observational comparisons cannot distinguish these mechanisms.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -107,7 +88,7 @@
     },
     {
       "type": "MCQ",
-      "question": "Denitrification, the reduction of nitrate (NO\u2083\u207b) to N\u2082 gas, occurs primarily under which environmental conditions?",
+      "question": "Denitrification, the reduction of nitrate (NO₃⁻) to N₂ gas, occurs primarily under which environmental conditions?",
       "options": [
         "Aerobic, high-pH soils with abundant organic matter",
         "Anaerobic or low-oxygen conditions with available nitrate and organic carbon",
@@ -115,7 +96,7 @@
         "Highly acidic soils with high aluminum concentrations"
       ],
       "correctAnswer": "B",
-      "explanation": "Denitrification is performed by facultative anaerobic bacteria (e.g., Pseudomonas, Bacillus) that use NO\u2083\u207b as a terminal electron acceptor when O\u2082 is unavailable or limited. The process requires: (1) anaerobic or hypoxic conditions (denitrifiers switch from O\u2082 to NO\u2083\u207b), (2) available nitrate as electron acceptor, and (3) organic carbon as electron donor and energy source. These conditions are common in waterlogged soils, wetland sediments, and the anoxic zones of stratified water bodies. Denitrification is the primary mechanism by which fixed nitrogen is returned to the atmosphere as N\u2082 gas.",
+      "explanation": "Denitrification is performed by facultative anaerobic bacteria (e.g., Pseudomonas, Bacillus) that use NO₃⁻ as a terminal electron acceptor when O₂ is unavailable or limited. The process requires: (1) anaerobic or hypoxic conditions (denitrifiers switch from O₂ to NO₃⁻), (2) available nitrate as electron acceptor, and (3) organic carbon as electron donor and energy source. These conditions are common in waterlogged soils, wetland sediments, and the anoxic zones of stratified water bodies. Denitrification is the primary mechanism by which fixed nitrogen is returned to the atmosphere as N₂ gas.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -135,7 +116,7 @@
         "Estuaries"
       ],
       "correctAnswer": "C",
-      "explanation": "Swamps and marshes have the highest NPP per unit area (~2,500 g C/m\u00b2/yr on average), slightly exceeding tropical rainforests (~2,200 g C/m\u00b2/yr). This is because wetlands combine high water availability, nutrient-rich sediments, and intense solar radiation with highly productive emergent vegetation. Tropical rainforests have the highest total global NPP due to their vast area, but per unit area, wetlands are more productive. Coral reefs and estuaries are also highly productive but typically slightly lower than wetlands.",
+      "explanation": "Swamps and marshes have the highest NPP per unit area (~2,500 g C/m²/yr on average), slightly exceeding tropical rainforests (~2,200 g C/m²/yr). This is because wetlands combine high water availability, nutrient-rich sediments, and intense solar radiation with highly productive emergent vegetation. Tropical rainforests have the highest total global NPP due to their vast area, but per unit area, wetlands are more productive. Coral reefs and estuaries are also highly productive but typically slightly lower than wetlands.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -147,7 +128,7 @@
     },
     {
       "type": "MCQ",
-      "question": "Methanogens in wetland soils produce methane (CH\u2084), a greenhouse gas ~28 times more potent than CO\u2082 over a 100-year time horizon. Which factor most strongly controls methane emissions from wetlands?",
+      "question": "Methanogens in wetland soils produce methane (CH₄), a greenhouse gas ~28 times more potent than CO₂ over a 100-year time horizon. Which factor most strongly controls methane emissions from wetlands?",
       "options": [
         "Soil pH and calcium content",
         "Wind speed above the wetland surface",
@@ -155,7 +136,7 @@
         "Plant species diversity in the wetland"
       ],
       "correctAnswer": "C",
-      "explanation": "The water table position is the primary control on wetland methane emissions because it determines the boundary between aerobic and anaerobic zones. Methanogens are strict anaerobes that produce CH\u2084 only below the water table where O\u2082 is absent. When the water table is high, more soil is anaerobic, more methanogenesis occurs, and CH\u2084 emissions increase. When the water table drops, the aerobic zone expands, and methanotrophic bacteria oxidize CH\u2084 to CO\u2082 before it reaches the atmosphere. This is why wetland CH\u2084 emissions respond strongly to hydrology and why climate-driven changes in wetland hydrology represent a major feedback on global CH\u2084 concentrations.",
+      "explanation": "The water table position is the primary control on wetland methane emissions because it determines the boundary between aerobic and anaerobic zones. Methanogens are strict anaerobes that produce CH₄ only below the water table where O₂ is absent. When the water table is high, more soil is anaerobic, more methanogenesis occurs, and CH₄ emissions increase. When the water table drops, the aerobic zone expands, and methanotrophic bacteria oxidize CH₄ to CO₂ before it reaches the atmosphere. This is why wetland CH₄ emissions respond strongly to hydrology and why climate-driven changes in wetland hydrology represent a major feedback on global CH₄ concentrations.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -175,7 +156,7 @@
         "Primary food production for urban populations"
       ],
       "correctAnswer": "A",
-      "explanation": "Green roofs provide multiple ecosystem services, but their most direct and significant benefits are stormwater management (retaining 40-80% of rainfall, reducing peak runoff) and mitigation of the urban heat island effect (through evapotranspiration and insulation, reducing rooftop temperatures by 20-40\u00b0C compared to conventional roofs). While green roofs do sequester some carbon and provide habitat for insects and birds, the amounts are modest compared to natural ecosystems. They are not significant food production sites (that's urban agriculture) and cannot support large wildlife.",
+      "explanation": "Green roofs provide multiple ecosystem services, but their most direct and significant benefits are stormwater management (retaining 40-80% of rainfall, reducing peak runoff) and mitigation of the urban heat island effect (through evapotranspiration and insulation, reducing rooftop temperatures by 20-40°C compared to conventional roofs). While green roofs do sequester some carbon and provide habitat for insects and birds, the amounts are modest compared to natural ecosystems. They are not significant food production sites (that's urban agriculture) and cannot support large wildlife.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -190,12 +171,12 @@
       "question": "Keystone species removal experiments demonstrate that some species have disproportionate effects on ecosystem function relative to their biomass. Paine's original experiment with the sea star Pisaster ochraceus in intertidal communities showed that:",
       "options": [
         "Removing the top predator had no effect on community structure",
-        "Removal of Pisaster allowed competitive dominance by mussels (Mytilus californianus), which overgrew other species and reduced species diversity from ~15 to ~8 species\u2014demonstrating that predation by the keystone predator maintains diversity by preventing competitive exclusion",
+        "Removal of Pisaster allowed competitive dominance by mussels (Mytilus californianus), which overgrew other species and reduced species diversity from ~15 to ~8 species—demonstrating that predation by the keystone predator maintains diversity by preventing competitive exclusion",
         "The intertidal community became more diverse without predation",
         "Sea stars are ecologically redundant with other predators"
       ],
       "correctAnswer": "B",
-      "explanation": "Paine's (1966, 1969) experiment was foundational for ecology: (1) Natural community: Rocky intertidal pools at Mukkaw Bay, Washington. Pisaster ochraceus (ochre sea star) feeds preferentially on Mytilus californianus (California mussel). (2) Experimental removal: Paine manually removed all Pisaster from experimental plots for years while maintaining control plots. (3) Result: Without Pisaster predation, Mytilus (the competitive dominant for space) expanded, overgrowing barnacles, algae, chitons, limpets, and other species. Species richness dropped from ~15 to ~8. (4) Mechanism: Predation by Pisaster preferentially targets the competitive dominant, preventing competitive exclusion and maintaining space availability for other species. This is \"predator-mediated coexistence.\" (5) The keystone species concept: A species whose removal causes disproportionate changes to ecosystem structure relative to its own abundance or biomass. (6) Modern relevance: Pisaster populations were devastated by sea star wasting disease (2013-2015), providing an unintended natural experiment that confirmed Paine's results at landscape scale\u2014mussel beds expanded in affected areas.",
+      "explanation": "Paine's (1966, 1969) experiment was foundational for ecology: (1) Natural community: Rocky intertidal pools at Mukkaw Bay, Washington. Pisaster ochraceus (ochre sea star) feeds preferentially on Mytilus californianus (California mussel). (2) Experimental removal: Paine manually removed all Pisaster from experimental plots for years while maintaining control plots. (3) Result: Without Pisaster predation, Mytilus (the competitive dominant for space) expanded, overgrowing barnacles, algae, chitons, limpets, and other species. Species richness dropped from ~15 to ~8. (4) Mechanism: Predation by Pisaster preferentially targets the competitive dominant, preventing competitive exclusion and maintaining space availability for other species. This is \"predator-mediated coexistence.\" (5) The keystone species concept: A species whose removal causes disproportionate changes to ecosystem structure relative to its own abundance or biomass. (6) Modern relevance: Pisaster populations were devastated by sea star wasting disease (2013-2015), providing an unintended natural experiment that confirmed Paine's results at landscape scale—mussel beds expanded in affected areas.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -209,13 +190,13 @@
       "type": "MCQ",
       "question": "Eutrophication of a lake leads to algal blooms followed by hypoxic conditions. Which sequence correctly describes the causal chain from nutrient input to fish kills?",
       "options": [
-        "Nutrient input \u2192 algal bloom \u2192 increased photosynthesis \u2192 O\u2082 supersaturation \u2192 fish kills from gas bubble disease",
-        "Nutrient input \u2192 algal bloom \u2192 algal death \u2192 bacterial decomposition \u2192 oxygen depletion \u2192 fish kills",
-        "Nutrient input \u2192 algal bloom \u2192 zooplankton population crash \u2192 fish starvation \u2192 fish kills",
-        "Nutrient input \u2192 algal bloom \u2192 toxin production \u2192 direct poisoning of fish"
+        "Nutrient input → algal bloom → increased photosynthesis → O₂ supersaturation → fish kills from gas bubble disease",
+        "Nutrient input → algal bloom → algal death → bacterial decomposition → oxygen depletion → fish kills",
+        "Nutrient input → algal bloom → zooplankton population crash → fish starvation → fish kills",
+        "Nutrient input → algal bloom → toxin production → direct poisoning of fish"
       ],
       "correctAnswer": "B",
-      "explanation": "The classic eutrophication cascade: excess nutrients (especially P and N) stimulate massive algal growth (bloom). When the bloom collapses, dead algal biomass sinks and is decomposed by aerobic bacteria. Bacterial decomposition consumes dissolved oxygen faster than it can be replenished through atmospheric diffusion and photosynthesis, creating hypoxic (< 2 mg O\u2082/L) or anoxic conditions. Fish and other aerobic organisms suffocate. While some algal blooms do produce toxins (harmful algal blooms), the hypoxia pathway is the most common mechanism for eutrophication-driven fish kills.",
+      "explanation": "The classic eutrophication cascade: excess nutrients (especially P and N) stimulate massive algal growth (bloom). When the bloom collapses, dead algal biomass sinks and is decomposed by aerobic bacteria. Bacterial decomposition consumes dissolved oxygen faster than it can be replenished through atmospheric diffusion and photosynthesis, creating hypoxic (< 2 mg O₂/L) or anoxic conditions. Fish and other aerobic organisms suffocate. While some algal blooms do produce toxins (harmful algal blooms), the hypoxia pathway is the most common mechanism for eutrophication-driven fish kills.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -255,7 +236,7 @@
         "TFTT"
       ],
       "correctAnswer": "A",
-      "explanation": "All four statements are true. I. TRUE: Transpiration accounts for ~60-80% of water vapor returned from land to atmosphere, exceeding direct evaporation. II. TRUE: The average residence time of water in the atmosphere is ~9 days. III. TRUE: Amazon forests generate ~50% of their own rainfall through transpiration\u2014the 'flying rivers' concept. Deforestation disrupts this recycling, potentially reducing rainfall and triggering savannification. IV. TRUE: Groundwater (~10.6 million km\u00b3 of fresh groundwater) is the largest reservoir of liquid freshwater, far exceeding surface freshwater (lakes, rivers ~93,000 km\u00b3). Ice sheets are larger but are solid.",
+      "explanation": "All four statements are true. I. TRUE: Transpiration accounts for ~60-80% of water vapor returned from land to atmosphere, exceeding direct evaporation. II. TRUE: The average residence time of water in the atmosphere is ~9 days. III. TRUE: Amazon forests generate ~50% of their own rainfall through transpiration—the 'flying rivers' concept. Deforestation disrupts this recycling, potentially reducing rainfall and triggering savannification. IV. TRUE: Groundwater (~10.6 million km³ of fresh groundwater) is the largest reservoir of liquid freshwater, far exceeding surface freshwater (lakes, rivers ~93,000 km³). Ice sheets are larger but are solid.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -275,7 +256,7 @@
         "Industrial release of phosphorus-containing detergents"
       ],
       "correctAnswer": "B",
-      "explanation": "Mining of phosphate rock for agricultural fertilizers has roughly tripled the global flux of phosphorus from geological to biological pools. Approximately 20 million tonnes of phosphorus are mined annually, with ~80% used for fertilizer. This has led to widespread eutrophication of freshwater and coastal ecosystems as excess phosphorus runs off agricultural land. Unlike nitrogen, phosphorus cannot be produced industrially from atmospheric sources\u2014it must be mined from finite geological deposits, making it a non-renewable resource critical for food security.",
+      "explanation": "Mining of phosphate rock for agricultural fertilizers has roughly tripled the global flux of phosphorus from geological to biological pools. Approximately 20 million tonnes of phosphorus are mined annually, with ~80% used for fertilizer. This has led to widespread eutrophication of freshwater and coastal ecosystems as excess phosphorus runs off agricultural land. Unlike nitrogen, phosphorus cannot be produced industrially from atmospheric sources—it must be mined from finite geological deposits, making it a non-renewable resource critical for food security.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -295,7 +276,7 @@
         "Measure nutrient concentrations and compare to published threshold values"
       ],
       "correctAnswer": "C",
-      "explanation": "A factorial experiment using nutrient diffusing substrata (NDS) at multiple depths (light levels) allows simultaneous testing of nutrient and light limitation. At shallow depths (high light), nutrient addition should stimulate growth if nutrients are limiting. At deeper depths (low light), nutrient addition will have less effect because light is the proximate constraint. Cross-comparing responses across the nutrient \u00d7 light gradient reveals which factor is primary and whether they interact (co-limitation). This approach is superior to whole-lake additions (unreplicated) or simple observational approaches.",
+      "explanation": "A factorial experiment using nutrient diffusing substrata (NDS) at multiple depths (light levels) allows simultaneous testing of nutrient and light limitation. At shallow depths (high light), nutrient addition should stimulate growth if nutrients are limiting. At deeper depths (low light), nutrient addition will have less effect because light is the proximate constraint. Cross-comparing responses across the nutrient × light gradient reveals which factor is primary and whether they interact (co-limitation). This approach is superior to whole-lake additions (unreplicated) or simple observational approaches.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -327,7 +308,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "An ecosystem ecologist measures the following energy budget for a grasshopper population (in kJ/m\u00b2/yr): Ingestion = 500, Feces = 250, Respiration = 200, Production (growth + reproduction) = 50. Calculate the assimilation efficiency and production efficiency.",
+      "question": "An ecosystem ecologist measures the following energy budget for a grasshopper population (in kJ/m²/yr): Ingestion = 500, Feces = 250, Respiration = 200, Production (growth + reproduction) = 50. Calculate the assimilation efficiency and production efficiency.",
       "options": [
         "Assimilation efficiency = 50%, Production efficiency = 20%",
         "Assimilation efficiency = 50%, Production efficiency = 10%",
@@ -335,7 +316,7 @@
         "Assimilation efficiency = 90%, Production efficiency = 20%"
       ],
       "correctAnswer": "A",
-      "explanation": "Assimilation (A) = Ingestion - Feces = 500 - 250 = 250 kJ/m\u00b2/yr. Assimilation efficiency = A/I = 250/500 = 50%. Note: A = R + P, so 250 = 200 + 50 \u2713. Production efficiency = P/A = 50/250 = 20%. This 50% assimilation efficiency is typical for herbivorous insects (plant material is partially indigestible). The 20% production efficiency is characteristic of ectotherms, which allocate less energy to thermoregulation than endotherms. For comparison, an endotherm might have production efficiency of only 1-3% because most assimilated energy goes to maintaining body temperature.",
+      "explanation": "Assimilation (A) = Ingestion - Feces = 500 - 250 = 250 kJ/m²/yr. Assimilation efficiency = A/I = 250/500 = 50%. Note: A = R + P, so 250 = 200 + 50 ✓. Production efficiency = P/A = 50/250 = 20%. This 50% assimilation efficiency is typical for herbivorous insects (plant material is partially indigestible). The 20% production efficiency is characteristic of ectotherms, which allocate less energy to thermoregulation than endotherms. For comparison, an endotherm might have production efficiency of only 1-3% because most assimilated energy goes to maintaining body temperature.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -387,7 +368,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A researcher measures ecosystem respiration (ER) and gross primary production (GPP) across a gradient of lakes. Lake A: GPP=800, ER=600. Lake B: GPP=200, ER=500. Lake C: GPP=500, ER=500. (All values in mg C/m\u00b2/day.) Which lakes are net autotrophic and which are net heterotrophic?",
+      "question": "A researcher measures ecosystem respiration (ER) and gross primary production (GPP) across a gradient of lakes. Lake A: GPP=800, ER=600. Lake B: GPP=200, ER=500. Lake C: GPP=500, ER=500. (All values in mg C/m²/day.) Which lakes are net autotrophic and which are net heterotrophic?",
       "options": [
         "A: autotrophic, B: heterotrophic, C: balanced (neither)",
         "All three are net autotrophic",
@@ -415,7 +396,7 @@
         "When winter ice cover prevents atmospheric oxygen exchange"
       ],
       "correctAnswer": "A",
-      "explanation": "Under oxic conditions, phosphorus in lake sediments is bound to iron (Fe\u00b3\u207a) oxyhydroxides, keeping it sequestered. When the hypolimnion becomes anoxic (which occurs during eutrophication due to decomposition consuming O\u2082), iron is reduced to Fe\u00b2\u207a, which is soluble, releasing the bound phosphorus back into the water column. This creates a positive feedback loop: eutrophication \u2192 anoxia \u2192 P release \u2192 more eutrophication. This mechanism explains why many eutrophic lakes are slow to recover after external nutrient loading is reduced\u2014internal loading from legacy phosphorus in sediments can sustain high P concentrations for decades.",
+      "explanation": "Under oxic conditions, phosphorus in lake sediments is bound to iron (Fe³⁺) oxyhydroxides, keeping it sequestered. When the hypolimnion becomes anoxic (which occurs during eutrophication due to decomposition consuming O₂), iron is reduced to Fe²⁺, which is soluble, releasing the bound phosphorus back into the water column. This creates a positive feedback loop: eutrophication → anoxia → P release → more eutrophication. This mechanism explains why many eutrophic lakes are slow to recover after external nutrient loading is reduced—internal loading from legacy phosphorus in sediments can sustain high P concentrations for decades.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -455,7 +436,7 @@
         "Fire kills the above-ground biomass of saplings, keeping them in a 'fire trap' where they cannot grow tall enough to escape fire"
       ],
       "correctAnswer": "D",
-      "explanation": "In savannas, frequent fires create a 'fire trap' for woody plant saplings. Grasses burn readily, generating intense fires that kill the above-ground portions of small trees and shrubs. While many savanna trees resprout from underground organs, they are repeatedly top-killed before growing tall enough for their canopy to escape the flame zone (~3-4 meters). This maintains the open grass-dominated state. If fire is excluded, woody plants eventually grow past the fire trap threshold and shade out grasses, converting savanna to closed woodland\u2014a phenomenon called bush encroachment.",
+      "explanation": "In savannas, frequent fires create a 'fire trap' for woody plant saplings. Grasses burn readily, generating intense fires that kill the above-ground portions of small trees and shrubs. While many savanna trees resprout from underground organs, they are repeatedly top-killed before growing tall enough for their canopy to escape the flame zone (~3-4 meters). This maintains the open grass-dominated state. If fire is excluded, woody plants eventually grow past the fire trap threshold and shade out grasses, converting savanna to closed woodland—a phenomenon called bush encroachment.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -495,7 +476,7 @@
         "Woodpeckers creating nesting cavities in trees"
       ],
       "correctAnswer": "C",
-      "explanation": "Physical ecosystem engineers can both increase and decrease habitat heterogeneity. Overgrazing by cattle compacts soil, reduces vegetation structure, eliminates microhabitats (tussocks, litter layers, soil macropores), and creates a more homogeneous, degraded landscape. This decreases habitat for diverse soil and surface organisms. Beavers and woodpeckers increase heterogeneity by creating new habitat types. Sea otters are a trophic cascade example (keystone predator), not an ecosystem engineer\u2014they modify habitats indirectly through trophic interactions rather than through physical modification of the environment.",
+      "explanation": "Physical ecosystem engineers can both increase and decrease habitat heterogeneity. Overgrazing by cattle compacts soil, reduces vegetation structure, eliminates microhabitats (tussocks, litter layers, soil macropores), and creates a more homogeneous, degraded landscape. This decreases habitat for diverse soil and surface organisms. Beavers and woodpeckers increase heterogeneity by creating new habitat types. Sea otters are a trophic cascade example (keystone predator), not an ecosystem engineer—they modify habitats indirectly through trophic interactions rather than through physical modification of the environment.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -515,7 +496,7 @@
         "Dark bottles are unnecessary; only light bottles are needed to measure GPP"
       ],
       "correctAnswer": "B",
-      "explanation": "The light-dark bottle method: Initial O\u2082 concentration is measured. Light bottles (transparent) allow both photosynthesis and respiration; dark bottles (opaque, wrapped in foil) allow only respiration. After incubation: O\u2082 change in dark bottle = community respiration (R) [O\u2082 decreases]. O\u2082 change in light bottle = net primary production (NPP) [photosynthesis minus respiration]. GPP = NPP + R = (light bottle change) - (dark bottle change). The dark bottle is essential because it quantifies respiration, which must be added back to NPP to calculate total (gross) photosynthetic oxygen production.",
+      "explanation": "The light-dark bottle method: Initial O₂ concentration is measured. Light bottles (transparent) allow both photosynthesis and respiration; dark bottles (opaque, wrapped in foil) allow only respiration. After incubation: O₂ change in dark bottle = community respiration (R) [O₂ decreases]. O₂ change in light bottle = net primary production (NPP) [photosynthesis minus respiration]. GPP = NPP + R = (light bottle change) - (dark bottle change). The dark bottle is essential because it quantifies respiration, which must be added back to NPP to calculate total (gross) photosynthetic oxygen production.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -530,12 +511,12 @@
       "question": "To determine whether elevated CO2 increases or decreases net ecosystem productivity (NEP) in a temperate forest, researchers use Free-Air CO2 Enrichment (FACE) experiments. What makes FACE experiments superior to growth chamber studies for this question?",
       "options": [
         "FACE experiments are cheaper and simpler to run",
-        "FACE experiments expose intact forest ecosystems to elevated CO2 under natural conditions\u2014preserving realistic soil processes, root systems, mycorrhizal networks, herbivory, weather variation, and species interactions that chamber studies cannot replicate, providing ecologically valid predictions of ecosystem-level responses",
+        "FACE experiments expose intact forest ecosystems to elevated CO2 under natural conditions—preserving realistic soil processes, root systems, mycorrhizal networks, herbivory, weather variation, and species interactions that chamber studies cannot replicate, providing ecologically valid predictions of ecosystem-level responses",
         "Growth chambers can accommodate full-sized trees",
         "FACE experiments only last one growing season"
       ],
       "correctAnswer": "B",
-      "explanation": "FACE experiments provide the most ecologically realistic assessment of CO2 effects: (1) Design: Towers or pipes release CO2-enriched air across plots (typically 25-30m diameter) in intact ecosystems, maintaining target CO2 concentrations (~550-600 ppm) using wind direction and speed sensors for real-time adjustment. (2) Advantages over chambers: No microclimate artifacts (chambers alter temperature, humidity, light); intact below-ground processes (root systems, mycorrhizae, soil fauna); natural herbivory and pathogen pressure; realistic species interactions; multi-year duration captures long-term responses. (3) Key findings: Initial productivity increases often diminish over time due to progressive nitrogen limitation (PNL hypothesis\u2014increased growth depletes soil N, which becomes limiting). Duke FACE showed sustained growth enhancement in pine; Aspen FACE showed variable responses across genotypes and species. (4) Limitations: Expensive (~$1-4 million/year per site), spatial replication limited, and CO2 is applied as a step-change rather than gradual increase. (5) FACE results have been critical for parameterizing Earth system models predicting carbon cycle responses to climate change.",
+      "explanation": "FACE experiments provide the most ecologically realistic assessment of CO2 effects: (1) Design: Towers or pipes release CO2-enriched air across plots (typically 25-30m diameter) in intact ecosystems, maintaining target CO2 concentrations (~550-600 ppm) using wind direction and speed sensors for real-time adjustment. (2) Advantages over chambers: No microclimate artifacts (chambers alter temperature, humidity, light); intact below-ground processes (root systems, mycorrhizae, soil fauna); natural herbivory and pathogen pressure; realistic species interactions; multi-year duration captures long-term responses. (3) Key findings: Initial productivity increases often diminish over time due to progressive nitrogen limitation (PNL hypothesis—increased growth depletes soil N, which becomes limiting). Duke FACE showed sustained growth enhancement in pine; Aspen FACE showed variable responses across genotypes and species. (4) Limitations: Expensive (~$1-4 million/year per site), spatial replication limited, and CO2 is applied as a step-change rather than gradual increase. (5) FACE results have been critical for parameterizing Earth system models predicting carbon cycle responses to climate change.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -555,7 +536,7 @@
         "By running the experiment for only one year to prevent competitive exclusion"
       ],
       "correctAnswer": "C",
-      "explanation": "Loreau and Hector (2001) developed the additive partitioning method that mathematically separates biodiversity effects into: (1) complementarity effect\u2014the average deviation of species' yields in mixture from their expected yields based on monoculture performance (positive when species facilitate each other or use different niches), and (2) selection effect\u2014the covariance between monoculture yield and relative yield in mixture (positive when high-yielding species dominate mixtures). If net biodiversity effect = complementarity + selection, and complementarity is significant, it indicates true niche partitioning or facilitation beyond simple sampling. This method transformed the biodiversity-ecosystem function debate.",
+      "explanation": "Loreau and Hector (2001) developed the additive partitioning method that mathematically separates biodiversity effects into: (1) complementarity effect—the average deviation of species' yields in mixture from their expected yields based on monoculture performance (positive when species facilitate each other or use different niches), and (2) selection effect—the covariance between monoculture yield and relative yield in mixture (positive when high-yielding species dominate mixtures). If net biodiversity effect = complementarity + selection, and complementarity is significant, it indicates true niche partitioning or facilitation beyond simple sampling. This method transformed the biodiversity-ecosystem function debate.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -587,7 +568,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A long-term ecological research (LTER) site measures annual litterfall and litter standing crop in two forests. Forest X: litterfall = 800 g/m\u00b2/yr, standing crop = 400 g. Forest Y: litterfall = 800 g/m\u00b2/yr, standing crop = 4,000 g. Calculate the decomposition constant (k) for each forest and identify the likely biome for Forest Y.",
+      "question": "A long-term ecological research (LTER) site measures annual litterfall and litter standing crop in two forests. Forest X: litterfall = 800 g/m²/yr, standing crop = 400 g. Forest Y: litterfall = 800 g/m²/yr, standing crop = 4,000 g. Calculate the decomposition constant (k) for each forest and identify the likely biome for Forest Y.",
       "options": [
         "Forest X: k=2.0/yr, Forest Y: k=0.2/yr; Forest Y is likely boreal/taiga",
         "Forest X: k=0.5/yr, Forest Y: k=5.0/yr; Forest Y is likely tropical",
@@ -595,7 +576,7 @@
         "Forest X: k=0.5/yr, Forest Y: k=0.2/yr; Forest Y is likely temperate"
       ],
       "correctAnswer": "A",
-      "explanation": "At steady state, the decomposition constant k = litterfall / standing crop (Olson's model). Forest X: k = 800/400 = 2.0/yr (fast decomposition, low accumulation = tropical forest). Forest Y: k = 800/4000 = 0.2/yr (slow decomposition, high accumulation = boreal forest). Despite identical litterfall inputs, Forest Y accumulates 10\u00d7 more litter on the forest floor because cold temperatures dramatically slow decomposition. Boreal forests (taiga) typically have k values of 0.1-0.3/yr, while tropical forests have k values of 1.0-4.0/yr.",
+      "explanation": "At steady state, the decomposition constant k = litterfall / standing crop (Olson's model). Forest X: k = 800/400 = 2.0/yr (fast decomposition, low accumulation = tropical forest). Forest Y: k = 800/4000 = 0.2/yr (slow decomposition, high accumulation = boreal forest). Despite identical litterfall inputs, Forest Y accumulates 10× more litter on the forest floor because cold temperatures dramatically slow decomposition. Boreal forests (taiga) typically have k values of 0.1-0.3/yr, while tropical forests have k values of 1.0-4.0/yr.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -609,13 +590,13 @@
       "type": "MCQ",
       "question": "Anammox (anaerobic ammonium oxidation) is a relatively recently discovered process in the nitrogen cycle. Which statement about anammox is correct?",
       "options": [
-        "It converts NH\u2084\u207a and NO\u2082\u207b directly to N\u2082 gas under anaerobic conditions",
+        "It converts NH₄⁺ and NO₂⁻ directly to N₂ gas under anaerobic conditions",
         "It is performed by aerobic bacteria in well-oxygenated soils",
-        "It converts N\u2082 gas directly to NH\u2084\u207a without the nitrogenase enzyme",
+        "It converts N₂ gas directly to NH₄⁺ without the nitrogenase enzyme",
         "It oxidizes ammonium using oxygen as the terminal electron acceptor"
       ],
       "correctAnswer": "A",
-      "explanation": "Anammox bacteria (phylum Planctomycetes) perform the anaerobic oxidation of ammonium using nitrite as the electron acceptor: NH\u2084\u207a + NO\u2082\u207b \u2192 N\u2082 + 2H\u2082O. This process was discovered in the 1990s in wastewater treatment plants and has since been found to be globally important in marine oxygen minimum zones, accounting for up to 50% of N\u2082 production in some ocean regions. Anammox is strictly anaerobic and occurs in a unique organelle called the anammoxosome, which contains ladderane lipids in its membrane. The discovery of anammox fundamentally changed our understanding of the marine nitrogen cycle.",
+      "explanation": "Anammox bacteria (phylum Planctomycetes) perform the anaerobic oxidation of ammonium using nitrite as the electron acceptor: NH₄⁺ + NO₂⁻ → N₂ + 2H₂O. This process was discovered in the 1990s in wastewater treatment plants and has since been found to be globally important in marine oxygen minimum zones, accounting for up to 50% of N₂ production in some ocean regions. Anammox is strictly anaerobic and occurs in a unique organelle called the anammoxosome, which contains ladderane lipids in its membrane. The discovery of anammox fundamentally changed our understanding of the marine nitrogen cycle.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -635,7 +616,7 @@
         "Bioaccumulation and biomagnification are synonymous terms describing the same process"
       ],
       "correctAnswer": "A",
-      "explanation": "Bioaccumulation is the process by which an individual organism accumulates a substance (e.g., mercury, PCBs, DDT) in its tissues over its lifetime, reaching concentrations higher than in the surrounding environment. Biomagnification is the progressive increase in concentration at successively higher trophic levels\u2014predators accumulate higher concentrations than their prey because they consume many prey organisms over time, each containing bioaccumulated pollutants. The classic example is DDT biomagnification: water (0.000003 ppm) \u2192 zooplankton (0.04 ppm) \u2192 fish (0.5 ppm) \u2192 osprey (25 ppm).",
+      "explanation": "Bioaccumulation is the process by which an individual organism accumulates a substance (e.g., mercury, PCBs, DDT) in its tissues over its lifetime, reaching concentrations higher than in the surrounding environment. Biomagnification is the progressive increase in concentration at successively higher trophic levels—predators accumulate higher concentrations than their prey because they consume many prey organisms over time, each containing bioaccumulated pollutants. The classic example is DDT biomagnification: water (0.000003 ppm) → zooplankton (0.04 ppm) → fish (0.5 ppm) → osprey (25 ppm).",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -647,7 +628,7 @@
     },
     {
       "type": "MCQ",
-      "question": "The half-life of a radioisotope tracer in an ecosystem compartment can be used to calculate nutrient turnover rates. If \u00b3\u00b2P added to a lake has a biological half-life of 14 days in phytoplankton biomass (ignoring physical decay), what is the turnover rate constant (k)?",
+      "question": "The half-life of a radioisotope tracer in an ecosystem compartment can be used to calculate nutrient turnover rates. If ³²P added to a lake has a biological half-life of 14 days in phytoplankton biomass (ignoring physical decay), what is the turnover rate constant (k)?",
       "options": [
         "k = 0.050/day",
         "k = 0.071/day",
@@ -655,7 +636,7 @@
         "k = 14 days"
       ],
       "correctAnswer": "A",
-      "explanation": "The turnover rate constant k is related to half-life (t\u2081/\u2082) by the equation: k = ln(2)/t\u2081/\u2082 = 0.693/14 = 0.0495 \u2248 0.050/day. This means approximately 5% of the phosphorus in phytoplankton is turned over (taken up or released) each day. The residence time (turnover time) = 1/k = 20 days, meaning the average phosphorus atom spends 20 days in the phytoplankton compartment before being recycled. This radioisotope tracer approach is fundamental for quantifying nutrient cycling rates in ecosystems.",
+      "explanation": "The turnover rate constant k is related to half-life (t₁/₂) by the equation: k = ln(2)/t₁/₂ = 0.693/14 = 0.0495 ≈ 0.050/day. This means approximately 5% of the phosphorus in phytoplankton is turned over (taken up or released) each day. The residence time (turnover time) = 1/k = 20 days, meaning the average phosphorus atom spends 20 days in the phytoplankton compartment before being recycled. This radioisotope tracer approach is fundamental for quantifying nutrient cycling rates in ecosystems.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -687,7 +668,7 @@
     },
     {
       "type": "MCQ",
-      "question": "The iron hypothesis proposes that iron fertilization of high-nutrient, low-chlorophyll (HNLC) ocean regions could stimulate phytoplankton blooms and sequester atmospheric CO\u2082. Which finding from ocean iron fertilization experiments has most challenged this hypothesis as a climate mitigation strategy?",
+      "question": "The iron hypothesis proposes that iron fertilization of high-nutrient, low-chlorophyll (HNLC) ocean regions could stimulate phytoplankton blooms and sequester atmospheric CO₂. Which finding from ocean iron fertilization experiments has most challenged this hypothesis as a climate mitigation strategy?",
       "options": [
         "Iron addition had no effect on phytoplankton growth",
         "Iron addition depleted dissolved oxygen throughout the water column",
@@ -695,7 +676,7 @@
         "Much of the carbon fixed during iron-stimulated blooms was rapidly recycled in surface waters rather than sinking to the deep ocean"
       ],
       "correctAnswer": "D",
-      "explanation": "Multiple open-ocean iron fertilization experiments (IronEx, SOIREE, SOFeX, LOHAFEX) confirmed that iron addition does stimulate phytoplankton growth in HNLC regions. However, only a small fraction (typically 1-10%) of the additional carbon fixed during these blooms actually sank to the deep ocean. Most of the carbon was rapidly remineralized (respired) by bacteria and zooplankton in the upper water column, returning CO\u2082 to surface waters. This means the actual carbon sequestration efficiency is much lower than initially hoped, challenging iron fertilization as a viable large-scale climate mitigation strategy.",
+      "explanation": "Multiple open-ocean iron fertilization experiments (IronEx, SOIREE, SOFeX, LOHAFEX) confirmed that iron addition does stimulate phytoplankton growth in HNLC regions. However, only a small fraction (typically 1-10%) of the additional carbon fixed during these blooms actually sank to the deep ocean. Most of the carbon was rapidly remineralized (respired) by bacteria and zooplankton in the upper water column, returning CO₂ to surface waters. This means the actual carbon sequestration efficiency is much lower than initially hoped, challenging iron fertilization as a viable large-scale climate mitigation strategy.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -715,7 +696,7 @@
         "Direct toxic effects of phosphorus on fish gills"
       ],
       "correctAnswer": "B",
-      "explanation": "Eutrophication follows a well-characterized cascade: (1) Nutrient loading: Excess nitrogen and phosphorus (from agriculture, sewage, urban runoff) enter the lake. Phosphorus is typically the limiting nutrient in freshwater (Schindler's whole-lake experiments, ELA). (2) Algal bloom: Nutrients stimulate massive phytoplankton growth, particularly cyanobacteria (blue-green algae) that may produce toxins (microcystin, cylindrospermopsin). (3) Light attenuation: Dense algal biomass reduces light penetration, shading out submerged aquatic vegetation. (4) Organic loading: When algal cells die, they sink to the bottom. (5) Decomposition oxygen demand: Aerobic bacteria decomposing the organic matter consume dissolved oxygen (biochemical oxygen demand\u2014BOD). In stratified lakes, the hypolimnion is isolated from atmospheric oxygen exchange. (6) Hypoxia/anoxia: When DO drops below 2 mg/L (hypoxia) or 0 mg/L (anoxia), aerobic organisms (fish, invertebrates) die or flee. (7) Positive feedback: Anoxic sediments release stored phosphorus (internal loading), perpetuating eutrophication even after external nutrient inputs are reduced.",
+      "explanation": "Eutrophication follows a well-characterized cascade: (1) Nutrient loading: Excess nitrogen and phosphorus (from agriculture, sewage, urban runoff) enter the lake. Phosphorus is typically the limiting nutrient in freshwater (Schindler's whole-lake experiments, ELA). (2) Algal bloom: Nutrients stimulate massive phytoplankton growth, particularly cyanobacteria (blue-green algae) that may produce toxins (microcystin, cylindrospermopsin). (3) Light attenuation: Dense algal biomass reduces light penetration, shading out submerged aquatic vegetation. (4) Organic loading: When algal cells die, they sink to the bottom. (5) Decomposition oxygen demand: Aerobic bacteria decomposing the organic matter consume dissolved oxygen (biochemical oxygen demand—BOD). In stratified lakes, the hypolimnion is isolated from atmospheric oxygen exchange. (6) Hypoxia/anoxia: When DO drops below 2 mg/L (hypoxia) or 0 mg/L (anoxia), aerobic organisms (fish, invertebrates) die or flee. (7) Positive feedback: Anoxic sediments release stored phosphorus (internal loading), perpetuating eutrophication even after external nutrient inputs are reduced.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -735,7 +716,7 @@
         "The Haber-Bosch process has not changed nitrogen cycling"
       ],
       "correctAnswer": "C",
-      "explanation": "The Haber-Bosch process has fundamentally altered the nitrogen cycle: (1) Natural terrestrial biological N fixation: ~100-140 Tg N/year (by symbiotic Rhizobium, free-living Azotobacter, cyanobacteria). (2) Anthropogenic reactive N creation: ~210 Tg N/year, comprising: Haber-Bosch industrial fixation (~120 Tg N/year, primarily for fertilizer), biological N fixation by cultivated legumes (~40 Tg N/year), and fossil fuel combustion (~30 Tg N/year producing NOx). (3) Consequences of doubled N inputs: eutrophication of freshwater and coastal waters (Gulf of Mexico dead zone), acid rain, N2O emissions (potent greenhouse gas, 298x CO2), biodiversity loss in nitrogen-sensitive ecosystems, and groundwater nitrate contamination. (4) Planetary boundary: Rockstrom et al. (2009) identified nitrogen cycling as exceeding safe planetary boundaries by ~3-4 fold. (5) Only about 20% of fertilizer N is actually consumed by humans in food; the rest is lost to air and water. (6) Despite environmental costs, the Haber-Bosch process supports approximately half of global food production\u2014~4 billion people depend on it.",
+      "explanation": "The Haber-Bosch process has fundamentally altered the nitrogen cycle: (1) Natural terrestrial biological N fixation: ~100-140 Tg N/year (by symbiotic Rhizobium, free-living Azotobacter, cyanobacteria). (2) Anthropogenic reactive N creation: ~210 Tg N/year, comprising: Haber-Bosch industrial fixation (~120 Tg N/year, primarily for fertilizer), biological N fixation by cultivated legumes (~40 Tg N/year), and fossil fuel combustion (~30 Tg N/year producing NOx). (3) Consequences of doubled N inputs: eutrophication of freshwater and coastal waters (Gulf of Mexico dead zone), acid rain, N2O emissions (potent greenhouse gas, 298x CO2), biodiversity loss in nitrogen-sensitive ecosystems, and groundwater nitrate contamination. (4) Planetary boundary: Rockstrom et al. (2009) identified nitrogen cycling as exceeding safe planetary boundaries by ~3-4 fold. (5) Only about 20% of fertilizer N is actually consumed by humans in food; the rest is lost to air and water. (6) Despite environmental costs, the Haber-Bosch process supports approximately half of global food production—~4 billion people depend on it.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -747,15 +728,15 @@
     },
     {
       "type": "MCQ",
-      "question": "Which process is responsible for the long-term regulation of atmospheric CO\u2082 on geological timescales (millions of years)?",
+      "question": "Which process is responsible for the long-term regulation of atmospheric CO₂ on geological timescales (millions of years)?",
       "options": [
         "Photosynthesis-respiration balance in terrestrial ecosystems",
         "Methane oxidation in the troposphere",
         "Silicate rock weathering coupled with carbonate precipitation in the ocean",
-        "Volcanic CO\u2082 emissions balanced by forest carbon uptake"
+        "Volcanic CO₂ emissions balanced by forest carbon uptake"
       ],
       "correctAnswer": "C",
-      "explanation": "On geological timescales, the carbonate-silicate cycle is the primary thermostat regulating atmospheric CO\u2082. CO\u2082 dissolves in rainwater to form carbonic acid, which weathers silicate rocks (e.g., CaSiO\u2083 + CO\u2082 \u2192 CaCO\u2083 + SiO\u2082). The dissolved calcium and bicarbonate are transported to the ocean, where organisms precipitate CaCO\u2083 (carbonate), effectively sequestering the CO\u2082. This acts as a negative feedback: higher temperatures \u2192 more weathering \u2192 more CO\u2082 removal \u2192 cooling. Over millions of years, volcanic emissions add CO\u2082 while weathering removes it. This is the BLAG (Berner-Lasaga-Garrels) model of long-term climate regulation.",
+      "explanation": "On geological timescales, the carbonate-silicate cycle is the primary thermostat regulating atmospheric CO₂. CO₂ dissolves in rainwater to form carbonic acid, which weathers silicate rocks (e.g., CaSiO₃ + CO₂ → CaCO₃ + SiO₂). The dissolved calcium and bicarbonate are transported to the ocean, where organisms precipitate CaCO₃ (carbonate), effectively sequestering the CO₂. This acts as a negative feedback: higher temperatures → more weathering → more CO₂ removal → cooling. Over millions of years, volcanic emissions add CO₂ while weathering removes it. This is the BLAG (Berner-Lasaga-Garrels) model of long-term climate regulation.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -787,15 +768,15 @@
     },
     {
       "type": "MCQ",
-      "question": "In a temperate deciduous forest, gross primary productivity (GPP) is measured at 2,500 g C/m\u00b2/yr. If autotrophic respiration consumes 1,500 g C/m\u00b2/yr and heterotrophic respiration consumes 600 g C/m\u00b2/yr, what is the net ecosystem production (NEP)?",
+      "question": "In a temperate deciduous forest, gross primary productivity (GPP) is measured at 2,500 g C/m²/yr. If autotrophic respiration consumes 1,500 g C/m²/yr and heterotrophic respiration consumes 600 g C/m²/yr, what is the net ecosystem production (NEP)?",
       "options": [
-        "400 g C/m\u00b2/yr",
-        "1,000 g C/m\u00b2/yr",
-        "600 g C/m\u00b2/yr",
-        "2,500 g C/m\u00b2/yr"
+        "400 g C/m²/yr",
+        "1,000 g C/m²/yr",
+        "600 g C/m²/yr",
+        "2,500 g C/m²/yr"
       ],
       "correctAnswer": "A",
-      "explanation": "NEP = GPP - total ecosystem respiration = GPP - (Ra + Rh) = 2,500 - (1,500 + 600) = 400 g C/m\u00b2/yr. NEP represents the net carbon accumulation in the ecosystem. NPP = GPP - Ra = 1,000 g C/m\u00b2/yr, but NEP further subtracts heterotrophic respiration from NPP.",
+      "explanation": "NEP = GPP - total ecosystem respiration = GPP - (Ra + Rh) = 2,500 - (1,500 + 600) = 400 g C/m²/yr. NEP represents the net carbon accumulation in the ecosystem. NPP = GPP - Ra = 1,000 g C/m²/yr, but NEP further subtracts heterotrophic respiration from NPP.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -891,11 +872,11 @@
       "options": [
         "Increased soil pH and calcium availability",
         "Reduction in atmospheric ozone formation",
-        "Decreased atmospheric CO\u2082 concentrations",
+        "Decreased atmospheric CO₂ concentrations",
         "Nitrogen saturation leading to nitrate leaching into waterways"
       ],
       "correctAnswer": "D",
-      "explanation": "When nitrogen inputs exceed ecosystem capacity for uptake and retention (nitrogen saturation), excess nitrate (NO\u2083\u207b) leaches from soils into groundwater and surface waters. This is the most direct first consequence because once biological demand is met, the highly mobile nitrate ion moves with water. Downstream effects include eutrophication, acidification of soils and water bodies, and contribution to coastal hypoxic zones. Nitrogen deposition actually tends to decrease soil pH (acidification), not increase it.",
+      "explanation": "When nitrogen inputs exceed ecosystem capacity for uptake and retention (nitrogen saturation), excess nitrate (NO₃⁻) leaches from soils into groundwater and surface waters. This is the most direct first consequence because once biological demand is met, the highly mobile nitrate ion moves with water. Downstream effects include eutrophication, acidification of soils and water bodies, and contribution to coastal hypoxic zones. Nitrogen deposition actually tends to decrease soil pH (acidification), not increase it.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -915,7 +896,7 @@
         "Iron"
       ],
       "correctAnswer": "D",
-      "explanation": "Iron (Fe) is the most redox-sensitive major element in biogeochemical cycling. Under oxic conditions, iron exists as Fe\u00b3\u207a (ferric, insoluble, forming iron oxyhydroxides that bind phosphorus). Under anoxic conditions, iron is reduced to Fe\u00b2\u207a (ferrous, soluble), releasing bound phosphorus and becoming bioavailable. This redox cycling of iron is central to sediment-water phosphorus dynamics, ocean iron limitation, and banded iron formations in the geological record. Calcium, potassium, and magnesium do not undergo significant redox cycling under environmental conditions.",
+      "explanation": "Iron (Fe) is the most redox-sensitive major element in biogeochemical cycling. Under oxic conditions, iron exists as Fe³⁺ (ferric, insoluble, forming iron oxyhydroxides that bind phosphorus). Under anoxic conditions, iron is reduced to Fe²⁺ (ferrous, soluble), releasing bound phosphorus and becoming bioavailable. This redox cycling of iron is central to sediment-water phosphorus dynamics, ocean iron limitation, and banded iron formations in the geological record. Calcium, potassium, and magnesium do not undergo significant redox cycling under environmental conditions.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -929,7 +910,7 @@
       "type": "MCQ",
       "question": "Mycorrhizal networks (common mycorrhizal networks, or CMNs) can transfer carbon and nutrients between connected plants. What ecological implications do CMNs have for ecosystem function?",
       "options": [
-        "CMNs can redistribute carbon from photosynthetically active \"source\" trees to shaded \"sink\" seedlings, transfer warning signals between plants attacked by herbivores, and maintain nutrient cycling efficiency\u2014potentially facilitating forest regeneration and altering competitive dynamics",
+        "CMNs can redistribute carbon from photosynthetically active \"source\" trees to shaded \"sink\" seedlings, transfer warning signals between plants attacked by herbivores, and maintain nutrient cycling efficiency—potentially facilitating forest regeneration and altering competitive dynamics",
         "Mycorrhizal networks only benefit individual plants without ecosystem-level effects",
         "Mycorrhizal networks only exist in agricultural soils",
         "CMNs prevent nutrient cycling by sequestering all nutrients underground"
@@ -1010,12 +991,12 @@
       "question": "In the global sulfur cycle, dimethyl sulfide (DMS) produced by marine phytoplankton plays a role in climate regulation. How does DMS potentially influence climate?",
       "options": [
         "DMS is a potent greenhouse gas that traps infrared radiation",
-        "DMS reacts with CO\u2082 to form sulfate minerals that sequester carbon",
+        "DMS reacts with CO₂ to form sulfate minerals that sequester carbon",
         "DMS absorbs UV radiation in the stratosphere, reducing surface temperatures",
         "DMS oxidation products serve as cloud condensation nuclei, increasing cloud cover and albedo"
       ],
       "correctAnswer": "D",
-      "explanation": "DMS released by phytoplankton is oxidized in the atmosphere to form sulfate aerosol particles that serve as cloud condensation nuclei (CCN). Increased CCN leads to more, smaller cloud droplets, increasing cloud albedo and potentially cooling the Earth's surface. This is the basis of the CLAW hypothesis (Charlson, Lovelock, Andreae, Warren), which proposed a negative feedback loop: warming \u2192 more phytoplankton \u2192 more DMS \u2192 more clouds \u2192 cooling. While the feedback mechanism is now considered weaker than originally proposed, DMS remains the largest biogenic source of atmospheric sulfur.",
+      "explanation": "DMS released by phytoplankton is oxidized in the atmosphere to form sulfate aerosol particles that serve as cloud condensation nuclei (CCN). Increased CCN leads to more, smaller cloud droplets, increasing cloud albedo and potentially cooling the Earth's surface. This is the basis of the CLAW hypothesis (Charlson, Lovelock, Andreae, Warren), which proposed a negative feedback loop: warming → more phytoplankton → more DMS → more clouds → cooling. While the feedback mechanism is now considered weaker than originally proposed, DMS remains the largest biogenic source of atmospheric sulfur.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -1035,7 +1016,7 @@
         "The microbial loop only operates in deep-sea hydrothermal vent communities"
       ],
       "correctAnswer": "A",
-      "explanation": "The microbial loop (Azam et al. 1983) describes a pathway by which dissolved organic matter (DOM)\u2014released from phytoplankton exudation, viral lysis, sloppy feeding by zooplankton, and other processes\u2014is consumed by heterotrophic bacteria. These bacteria are then grazed by small protists (heterotrophic nanoflagellates), which are consumed by ciliates and larger microzooplankton, eventually channeling carbon and energy back into the classical planktonic food web. The microbial loop does not replace photosynthesis\u2014it recovers DOM that would otherwise be lost from the food web. It can process 10-50% of total primary production in marine systems.",
+      "explanation": "The microbial loop (Azam et al. 1983) describes a pathway by which dissolved organic matter (DOM)—released from phytoplankton exudation, viral lysis, sloppy feeding by zooplankton, and other processes—is consumed by heterotrophic bacteria. These bacteria are then grazed by small protists (heterotrophic nanoflagellates), which are consumed by ciliates and larger microzooplankton, eventually channeling carbon and energy back into the classical planktonic food web. The microbial loop does not replace photosynthesis—it recovers DOM that would otherwise be lost from the food web. It can process 10-50% of total primary production in marine systems.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -1052,7 +1033,7 @@
         "Direct leaching from plant leaves by rainfall (throughfall)",
         "Leaching from soil organic matter and root exudates transported by soil water",
         "Photolysis of particulate organic matter in the stream channel",
-        "Atmospheric CO\u2082 dissolved directly in stream water"
+        "Atmospheric CO₂ dissolved directly in stream water"
       ],
       "correctAnswer": "B",
       "explanation": "The primary source of DOC in forest streams is leaching from soil organic matter (humus) and root exudates as water percolates through soil horizons. Soil water dissolves humic and fulvic acids from decomposing organic matter and carries them to streams via subsurface flow paths. This allochthonous DOC is typically brown-colored (humic) and represents a major energy subsidy to stream food webs. While throughfall leaching from leaves does contribute DOC (especially labile sugars), soil-derived DOC dominates in most forest streams due to the massive reservoir of soil organic matter.",
@@ -1075,7 +1056,7 @@
         "The average DO concentration over 24 hours minus atmospheric equilibrium"
       ],
       "correctAnswer": "B",
-      "explanation": "Community respiration (CR) is estimated from the nighttime rate of dissolved oxygen decline. At night, photosynthesis is zero, so all DO changes reflect respiration (plus reaeration from the atmosphere). The nighttime DO decline rate is measured and extrapolated to 24 hours to estimate total community respiration. Gross primary production is then calculated as the daytime DO increase plus the daytime respiration component. This single-station diel O\u2082 method is a standard approach in stream ecology, though reaeration corrections are necessary for accurate estimates.",
+      "explanation": "Community respiration (CR) is estimated from the nighttime rate of dissolved oxygen decline. At night, photosynthesis is zero, so all DO changes reflect respiration (plus reaeration from the atmosphere). The nighttime DO decline rate is measured and extrapolated to 24 hours to estimate total community respiration. Gross primary production is then calculated as the daytime DO increase plus the daytime respiration component. This single-station diel O₂ method is a standard approach in stream ecology, though reaeration corrections are necessary for accurate estimates.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -1090,12 +1071,12 @@
       "question": "Researchers measure decomposition rates of leaf litter across a latitudinal gradient and find k-values (decomposition rate constants) of 2.8/year in tropical forest, 0.9/year in temperate forest, and 0.1/year in boreal forest. What factor best explains this gradient?",
       "options": [
         "Leaf litter quality is identical across all latitudes",
-        "Temperature and moisture drive microbial and detritivore activity\u2014warm, moist tropical conditions support year-round decomposition with diverse decomposer communities, while cold boreal conditions limit microbial metabolism, resulting in organic matter accumulation as thick humus layers and peat",
+        "Temperature and moisture drive microbial and detritivore activity—warm, moist tropical conditions support year-round decomposition with diverse decomposer communities, while cold boreal conditions limit microbial metabolism, resulting in organic matter accumulation as thick humus layers and peat",
         "Boreal forests produce less leaf litter than tropical forests",
         "Tropical forests have fewer decomposer organisms"
       ],
       "correctAnswer": "B",
-      "explanation": "The decomposition rate gradient is driven by multiple interacting factors: (1) Temperature: Microbial enzyme activity approximately doubles with each 10C increase (Q10 \u2248 2-3). Tropical forests (25-28C mean) support continuous decomposition; boreal forests (0-5C mean) have severely limited microbial activity, especially during frozen winters. (2) Moisture: Tropical forests receive ample rainfall supporting decomposer activity. Arid conditions inhibit decomposition regardless of temperature. (3) Decomposer community: Tropical forests harbor diverse detritivores (termites, millipedes, earthworms, fungi) active year-round. Boreal forests have fewer detritivore species with seasonal activity. (4) Litter quality: Tropical litter is often higher quality (lower C:N ratios, less lignin), though this varies. Conifer needles (boreal) are high in lignin and defensive compounds, slowing decomposition. (5) Consequences: Boreal forests accumulate thick organic (O) horizons; tropical forests have thin litter layers. Boreal/tundra soils store vast amounts of carbon (>1,700 Gt in permafrost and peatlands). (6) Climate change implications: Warming could accelerate boreal/permafrost decomposition, releasing stored carbon and creating a positive feedback loop amplifying climate change.",
+      "explanation": "The decomposition rate gradient is driven by multiple interacting factors: (1) Temperature: Microbial enzyme activity approximately doubles with each 10C increase (Q10 ≈ 2-3). Tropical forests (25-28C mean) support continuous decomposition; boreal forests (0-5C mean) have severely limited microbial activity, especially during frozen winters. (2) Moisture: Tropical forests receive ample rainfall supporting decomposer activity. Arid conditions inhibit decomposition regardless of temperature. (3) Decomposer community: Tropical forests harbor diverse detritivores (termites, millipedes, earthworms, fungi) active year-round. Boreal forests have fewer detritivore species with seasonal activity. (4) Litter quality: Tropical litter is often higher quality (lower C:N ratios, less lignin), though this varies. Conifer needles (boreal) are high in lignin and defensive compounds, slowing decomposition. (5) Consequences: Boreal forests accumulate thick organic (O) horizons; tropical forests have thin litter layers. Boreal/tundra soils store vast amounts of carbon (>1,700 Gt in permafrost and peatlands). (6) Climate change implications: Warming could accelerate boreal/permafrost decomposition, releasing stored carbon and creating a positive feedback loop amplifying climate change.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -1112,10 +1093,10 @@
         "Total photosynthesis minus plant respiration only",
         "Net primary production divided by gross primary production",
         "The total biomass of all organisms in the ecosystem",
-        "Gross primary production (GPP) minus total ecosystem respiration (Re, including both autotrophic and heterotrophic respiration)\u2014a positive NEP indicates the ecosystem is a net carbon sink, while negative NEP indicates a net carbon source"
+        "Gross primary production (GPP) minus total ecosystem respiration (Re, including both autotrophic and heterotrophic respiration)—a positive NEP indicates the ecosystem is a net carbon sink, while negative NEP indicates a net carbon source"
       ],
       "correctAnswer": "D",
-      "explanation": "NEP integrates all carbon fluxes in an ecosystem: (1) GPP (Gross Primary Production): Total carbon fixed by photosynthesis. (2) Ra (Autotrophic respiration): Carbon respired by plants for maintenance, growth, and reproduction. (3) NPP = GPP - Ra: Net carbon assimilated into plant biomass. (4) Rh (Heterotrophic respiration): Carbon respired by decomposers, herbivores, and other consumers. (5) NEP = GPP - Re = GPP - (Ra + Rh) = NPP - Rh: Net carbon balance of the ecosystem. (6) If NEP > 0: ecosystem accumulates carbon (net sink). If NEP < 0: ecosystem loses carbon (net source). (7) Mature forests are often near NEP \u2248 0 (steady state), while young/recovering forests typically have positive NEP (growing carbon stocks). (8) Disturbances (fire, logging, drought) temporarily make ecosystems carbon sources (negative NEP) as decomposition of dead material exceeds reduced photosynthesis. (9) Net Ecosystem Exchange (NEE), measured by eddy covariance towers, approximates NEP from atmospheric CO2 flux measurements.",
+      "explanation": "NEP integrates all carbon fluxes in an ecosystem: (1) GPP (Gross Primary Production): Total carbon fixed by photosynthesis. (2) Ra (Autotrophic respiration): Carbon respired by plants for maintenance, growth, and reproduction. (3) NPP = GPP - Ra: Net carbon assimilated into plant biomass. (4) Rh (Heterotrophic respiration): Carbon respired by decomposers, herbivores, and other consumers. (5) NEP = GPP - Re = GPP - (Ra + Rh) = NPP - Rh: Net carbon balance of the ecosystem. (6) If NEP > 0: ecosystem accumulates carbon (net sink). If NEP < 0: ecosystem loses carbon (net source). (7) Mature forests are often near NEP ≈ 0 (steady state), while young/recovering forests typically have positive NEP (growing carbon stocks). (8) Disturbances (fire, logging, drought) temporarily make ecosystems carbon sources (negative NEP) as decomposition of dead material exceeds reduced photosynthesis. (9) Net Ecosystem Exchange (NEE), measured by eddy covariance towers, approximates NEP from atmospheric CO2 flux measurements.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -1155,7 +1136,7 @@
         "The measurements contain errors because respiration cannot exceed production"
       ],
       "correctAnswer": "B",
-      "explanation": "The P/R ratio reveals fundamental ecosystem metabolic balance: (1) P/R < 1 (heterotrophic): Respiration exceeds local production, meaning the ecosystem imports and consumes organic carbon from external sources. This is typical of: headwater streams (shaded by riparian canopy, receiving leaf litter\u2014P/R often 0.1-0.5), deep lakes (below the compensation depth), and soil ecosystems. (2) P/R > 1 (autotrophic): Production exceeds respiration, meaning the ecosystem exports organic carbon. Typical of: open-canopy rivers, shallow lakes, and productive estuaries. (3) P/R \u2248 1 (metabolic equilibrium): Production approximately balances respiration. (4) River Continuum Concept (Vannote et al., 1980): Headwaters are heterotrophic (shaded, allochthonous inputs dominant) \u2192 mid-reaches become autotrophic (open canopy, wider channel) \u2192 large rivers return to heterotrophic (deep, turbid). (5) This ecosystem (P/R = 0.37) is strongly heterotrophic\u2014likely a forested headwater stream heavily subsidized by terrestrial organic matter.",
+      "explanation": "The P/R ratio reveals fundamental ecosystem metabolic balance: (1) P/R < 1 (heterotrophic): Respiration exceeds local production, meaning the ecosystem imports and consumes organic carbon from external sources. This is typical of: headwater streams (shaded by riparian canopy, receiving leaf litter—P/R often 0.1-0.5), deep lakes (below the compensation depth), and soil ecosystems. (2) P/R > 1 (autotrophic): Production exceeds respiration, meaning the ecosystem exports organic carbon. Typical of: open-canopy rivers, shallow lakes, and productive estuaries. (3) P/R ≈ 1 (metabolic equilibrium): Production approximately balances respiration. (4) River Continuum Concept (Vannote et al., 1980): Headwaters are heterotrophic (shaded, allochthonous inputs dominant) → mid-reaches become autotrophic (open canopy, wider channel) → large rivers return to heterotrophic (deep, turbid). (5) This ecosystem (P/R = 0.37) is strongly heterotrophic—likely a forested headwater stream heavily subsidized by terrestrial organic matter.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -1175,7 +1156,7 @@
         "Shift their body C:P ratio to match their food source"
       ],
       "correctAnswer": "A",
-      "explanation": "This is a key principle of ecological stoichiometry (Sterner & Elser 2002). When consumers with low C:P body ratios (high P demand) eat food with high C:P ratios (P-poor), they must process excess carbon while retaining scarce phosphorus. The excess carbon is respired as CO\u2082 or excreted as DOC, while phosphorus is retained for growth. This process, called 'consumer-driven nutrient recycling,' means that the stoichiometric mismatch between consumers and food determines nutrient recycling ratios. Daphnia, with their P-rich ribosomal RNA for rapid growth, exemplify this pattern and effectively concentrate P while releasing C.",
+      "explanation": "This is a key principle of ecological stoichiometry (Sterner & Elser 2002). When consumers with low C:P body ratios (high P demand) eat food with high C:P ratios (P-poor), they must process excess carbon while retaining scarce phosphorus. The excess carbon is respired as CO₂ or excreted as DOC, while phosphorus is retained for growth. This process, called 'consumer-driven nutrient recycling,' means that the stoichiometric mismatch between consumers and food determines nutrient recycling ratios. Daphnia, with their P-rich ribosomal RNA for rapid growth, exemplify this pattern and effectively concentrate P while releasing C.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -1187,15 +1168,15 @@
     },
     {
       "type": "MCQ",
-      "question": "The residence time of carbon in the deep ocean is approximately 1,000 years. If the ocean's biological pump suddenly ceased, what would be the expected long-term consequence for atmospheric CO\u2082?",
+      "question": "The residence time of carbon in the deep ocean is approximately 1,000 years. If the ocean's biological pump suddenly ceased, what would be the expected long-term consequence for atmospheric CO₂?",
       "options": [
-        "No change, since the ocean does not significantly affect atmospheric CO\u2082",
-        "Atmospheric CO\u2082 would increase immediately by 50%",
-        "Atmospheric CO\u2082 would decrease as phytoplankton populations recovered",
-        "Atmospheric CO\u2082 would increase substantially as the ocean gradually released its dissolved inorganic carbon"
+        "No change, since the ocean does not significantly affect atmospheric CO₂",
+        "Atmospheric CO₂ would increase immediately by 50%",
+        "Atmospheric CO₂ would decrease as phytoplankton populations recovered",
+        "Atmospheric CO₂ would increase substantially as the ocean gradually released its dissolved inorganic carbon"
       ],
       "correctAnswer": "D",
-      "explanation": "The biological pump maintains a gradient of dissolved inorganic carbon (DIC) between surface and deep ocean by continuously transporting organic carbon to depth. If the pump ceased, over ~1,000 years (deep ocean residence time), vertical mixing would redistribute DIC uniformly, eliminating the surface-deep gradient. This would increase surface water pCO\u2082 and consequently atmospheric CO\u2082 by an estimated 150-200 ppm. The process would be gradual (not immediate) because deep ocean mixing occurs on millennial timescales. This thought experiment illustrates the critical role of the biological pump in regulating Earth's carbon cycle and climate.",
+      "explanation": "The biological pump maintains a gradient of dissolved inorganic carbon (DIC) between surface and deep ocean by continuously transporting organic carbon to depth. If the pump ceased, over ~1,000 years (deep ocean residence time), vertical mixing would redistribute DIC uniformly, eliminating the surface-deep gradient. This would increase surface water pCO₂ and consequently atmospheric CO₂ by an estimated 150-200 ppm. The process would be gradual (not immediate) because deep ocean mixing occurs on millennial timescales. This thought experiment illustrates the critical role of the biological pump in regulating Earth's carbon cycle and climate.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -1210,12 +1191,12 @@
       "question": "In the phosphorus cycle, unlike the carbon and nitrogen cycles, there is no significant atmospheric phase. Why does this fundamentally affect phosphorus availability in ecosystems?",
       "options": [
         "Phosphorus is not important for organisms",
-        "Without atmospheric transport, phosphorus inputs to ecosystems depend primarily on slow rock weathering\u2014once phosphorus is lost to ocean sediments, it is effectively removed from the biologically available pool for millions of years until tectonic uplift re-exposes phosphorus-bearing rocks",
+        "Without atmospheric transport, phosphorus inputs to ecosystems depend primarily on slow rock weathering—once phosphorus is lost to ocean sediments, it is effectively removed from the biologically available pool for millions of years until tectonic uplift re-exposes phosphorus-bearing rocks",
         "Phosphorus moves through the atmosphere as a gas faster than nitrogen",
         "Organisms do not recycle phosphorus through decomposition"
       ],
       "correctAnswer": "B",
-      "explanation": "The phosphorus cycle's lack of a gaseous phase has profound ecological consequences: (1) No atmospheric shortcut: Unlike N2 (fixed from atmosphere by bacteria) and CO2 (fixed by photosynthesis), phosphorus enters ecosystems only through mechanical and chemical weathering of apatite (Ca5(PO4)3(OH,F,Cl)) in rocks. Weathering rates are slow (hundreds to thousands of years). (2) Unidirectional loss: Dissolved phosphate (H2PO4-, HPO4 2-) moves through groundwater to streams, rivers, and ultimately the ocean where it settles into deep sediments. Return to land requires tectonic uplift over millions of years. (3) Biological retention: Ecosystems minimize phosphorus loss through tight biological cycling\u2014rapid uptake by roots and mycorrhizae, internal redistribution before leaf senescence, and efficient decomposition and mineralization. (4) Limiting nutrient: Phosphorus limitation is widespread, especially in highly weathered tropical soils (oxisols, ultisols) where millions of years of weathering have depleted mineral phosphorus. This contrasts with young soils (volcanic, glacial) where nitrogen is more limiting. (5) Walker and Syers (1976) model: Soil phosphorus availability peaks early in soil development then declines over geologic time as P is lost to occlusion (bound to Fe/Al oxides) and organic forms.",
+      "explanation": "The phosphorus cycle's lack of a gaseous phase has profound ecological consequences: (1) No atmospheric shortcut: Unlike N2 (fixed from atmosphere by bacteria) and CO2 (fixed by photosynthesis), phosphorus enters ecosystems only through mechanical and chemical weathering of apatite (Ca5(PO4)3(OH,F,Cl)) in rocks. Weathering rates are slow (hundreds to thousands of years). (2) Unidirectional loss: Dissolved phosphate (H2PO4-, HPO4 2-) moves through groundwater to streams, rivers, and ultimately the ocean where it settles into deep sediments. Return to land requires tectonic uplift over millions of years. (3) Biological retention: Ecosystems minimize phosphorus loss through tight biological cycling—rapid uptake by roots and mycorrhizae, internal redistribution before leaf senescence, and efficient decomposition and mineralization. (4) Limiting nutrient: Phosphorus limitation is widespread, especially in highly weathered tropical soils (oxisols, ultisols) where millions of years of weathering have depleted mineral phosphorus. This contrasts with young soils (volcanic, glacial) where nitrogen is more limiting. (5) Walker and Syers (1976) model: Soil phosphorus availability peaks early in soil development then declines over geologic time as P is lost to occlusion (bound to Fe/Al oxides) and organic forms.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -1235,7 +1216,7 @@
         "TTTF"
       ],
       "correctAnswer": "B",
-      "explanation": "I. TRUE: Ectotherms use less energy for respiration (no thermoregulation), so more assimilated energy goes to growth (production efficiency ~10-40% vs ~1-3% for endotherms). II. TRUE: In most terrestrial ecosystems, the majority of primary production enters the detrital food web rather than being consumed by herbivores. III. FALSE: NPP equals GPP minus autotrophic respiration, representing organic matter accumulated by plants. However, not all NPP is available to consumers\u2014some is stored in wood, some is chemically defended, etc. IV. TRUE: Carnivores assimilate ~80% of ingested food vs ~20-60% for herbivores because animal tissue is more digestible than plant tissue (less cellulose, lignin).",
+      "explanation": "I. TRUE: Ectotherms use less energy for respiration (no thermoregulation), so more assimilated energy goes to growth (production efficiency ~10-40% vs ~1-3% for endotherms). II. TRUE: In most terrestrial ecosystems, the majority of primary production enters the detrital food web rather than being consumed by herbivores. III. FALSE: NPP equals GPP minus autotrophic respiration, representing organic matter accumulated by plants. However, not all NPP is available to consumers—some is stored in wood, some is chemically defended, etc. IV. TRUE: Carnivores assimilate ~80% of ingested food vs ~20-60% for herbivores because animal tissue is more digestible than plant tissue (less cellulose, lignin).",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -1247,15 +1228,15 @@
     },
     {
       "type": "MCQ",
-      "question": "Nitrogen fixation by free-living and symbiotic organisms converts atmospheric N\u2082 to NH\u2083/NH\u2084\u207a. Which statement about the biochemistry of nitrogen fixation is correct?",
+      "question": "Nitrogen fixation by free-living and symbiotic organisms converts atmospheric N₂ to NH₃/NH₄⁺. Which statement about the biochemistry of nitrogen fixation is correct?",
       "options": [
         "Nitrogenase functions optimally in aerobic conditions due to its high oxygen requirement",
-        "The reaction requires 16 ATP per molecule of N\u2082 fixed",
-        "Nitrogenase can also reduce acetylene (C\u2082H\u2082) to ethylene (C\u2082H\u2084), which serves as an assay",
+        "The reaction requires 16 ATP per molecule of N₂ fixed",
+        "Nitrogenase can also reduce acetylene (C₂H₂) to ethylene (C₂H₄), which serves as an assay",
         "Nitrogen fixation is an exergonic process that releases energy"
       ],
       "correctAnswer": "C",
-      "explanation": "The acetylene reduction assay is a classic method for measuring nitrogen fixation. Nitrogenase reduces C\u2082H\u2082 to C\u2082H\u2084, which can be detected by gas chromatography. Nitrogenase is extremely oxygen-sensitive (irreversibly inhibited by O\u2082). The reaction requires 16 ATP and 8 electrons per N\u2082 molecule (N\u2082 + 8H\u207a + 8e\u207b + 16ATP \u2192 2NH\u2083 + H\u2082 + 16ADP + 16Pi), making it highly endergonic.",
+      "explanation": "The acetylene reduction assay is a classic method for measuring nitrogen fixation. Nitrogenase reduces C₂H₂ to C₂H₄, which can be detected by gas chromatography. Nitrogenase is extremely oxygen-sensitive (irreversibly inhibited by O₂). The reaction requires 16 ATP and 8 electrons per N₂ molecule (N₂ + 8H⁺ + 8e⁻ + 16ATP → 2NH₃ + H₂ + 16ADP + 16Pi), making it highly endergonic.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -1295,7 +1276,7 @@
         "TFTT"
       ],
       "correctAnswer": "A",
-      "explanation": "I. TRUE: Liebig's Law states that the nutrient present in the lowest amount relative to demand (the most limiting) determines growth rate. II. TRUE: Meta-analyses show that co-limitation (simultaneous limitation by N + P, or other combinations) is common and may be the norm rather than the exception in natural ecosystems. III. TRUE: This is a well-established generalization\u2014marine systems are typically N-limited, freshwater systems P-limited\u2014though exceptions exist. IV. FALSE: Nutrient addition does not always increase productivity proportionally. Above certain thresholds, other factors (light, water, other nutrients, temperature) may become limiting. Also, nutrient additions can cause shifts in species composition, toxicity, or other non-linear responses.",
+      "explanation": "I. TRUE: Liebig's Law states that the nutrient present in the lowest amount relative to demand (the most limiting) determines growth rate. II. TRUE: Meta-analyses show that co-limitation (simultaneous limitation by N + P, or other combinations) is common and may be the norm rather than the exception in natural ecosystems. III. TRUE: This is a well-established generalization—marine systems are typically N-limited, freshwater systems P-limited—though exceptions exist. IV. FALSE: Nutrient addition does not always increase productivity proportionally. Above certain thresholds, other factors (light, water, other nutrients, temperature) may become limiting. Also, nutrient additions can cause shifts in species composition, toxicity, or other non-linear responses.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -1355,7 +1336,7 @@
         "Elephants that topple trees and create grassland patches"
       ],
       "correctAnswer": "A",
-      "explanation": "Autogenic ecosystem engineers modify the environment through their own physical structures (their bodies or products). Coral polyps secrete calcium carbonate skeletons that form reef structures, creating habitat for thousands of other species through their own growth. Beavers, woodpeckers, and elephants are allogenic ecosystem engineers\u2014they modify the environment by transforming living or non-living materials through mechanical or other means, rather than through their own physical structure.",
+      "explanation": "Autogenic ecosystem engineers modify the environment through their own physical structures (their bodies or products). Coral polyps secrete calcium carbonate skeletons that form reef structures, creating habitat for thousands of other species through their own growth. Beavers, woodpeckers, and elephants are allogenic ecosystem engineers—they modify the environment by transforming living or non-living materials through mechanical or other means, rather than through their own physical structure.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -1369,13 +1350,13 @@
       "type": "MCQ",
       "question": "Which of the following represents a positive feedback loop in the global carbon cycle that could accelerate climate warming?",
       "options": [
-        "Increased CO\u2082 \u2192 enhanced photosynthesis \u2192 more carbon sequestration",
-        "Increased weathering of silicate rocks \u2192 CO\u2082 consumption \u2192 cooling",
-        "Ocean warming \u2192 increased phytoplankton productivity \u2192 greater CO\u2082 uptake",
-        "Permafrost thawing \u2192 release of methane and CO\u2082 \u2192 further warming \u2192 more permafrost thawing"
+        "Increased CO₂ → enhanced photosynthesis → more carbon sequestration",
+        "Increased weathering of silicate rocks → CO₂ consumption → cooling",
+        "Ocean warming → increased phytoplankton productivity → greater CO₂ uptake",
+        "Permafrost thawing → release of methane and CO₂ → further warming → more permafrost thawing"
       ],
       "correctAnswer": "D",
-      "explanation": "Permafrost thawing is a critical positive feedback loop. As global temperatures rise, permafrost (permanently frozen soil) thaws, exposing vast stores of organic carbon to microbial decomposition. This releases CO\u2082 and methane (CH\u2084, a potent greenhouse gas) into the atmosphere, causing further warming, which in turn thaws more permafrost. An estimated 1,400-1,600 Gt of carbon is stored in permafrost\u2014roughly twice the current atmospheric carbon pool. Options A, C, and D describe negative feedback loops that tend to counteract warming.",
+      "explanation": "Permafrost thawing is a critical positive feedback loop. As global temperatures rise, permafrost (permanently frozen soil) thaws, exposing vast stores of organic carbon to microbial decomposition. This releases CO₂ and methane (CH₄, a potent greenhouse gas) into the atmosphere, causing further warming, which in turn thaws more permafrost. An estimated 1,400-1,600 Gt of carbon is stored in permafrost—roughly twice the current atmospheric carbon pool. Options A, C, and D describe negative feedback loops that tend to counteract warming.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -1387,7 +1368,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A whole-lake experiment adds \u00b3\u00b2P (radioactive phosphorus) tracer to the epilimnion. After 30 days, the following distribution is measured: dissolved in water 5%, phytoplankton 15%, zooplankton 8%, fish 3%, sediments 69%. What does this distribution primarily indicate?",
+      "question": "A whole-lake experiment adds ³²P (radioactive phosphorus) tracer to the epilimnion. After 30 days, the following distribution is measured: dissolved in water 5%, phytoplankton 15%, zooplankton 8%, fish 3%, sediments 69%. What does this distribution primarily indicate?",
       "options": [
         "Phosphorus cycles rapidly but sediments serve as the dominant long-term sink",
         "The food web is inefficient at retaining phosphorus",
@@ -1395,7 +1376,7 @@
         "Fish are phosphorus-limited in this lake"
       ],
       "correctAnswer": "A",
-      "explanation": "The rapid movement of \u00b3\u00b2P from dissolved form into biota (within 30 days, only 5% remains dissolved) demonstrates fast biological cycling. However, 69% ending up in sediments shows that sediment burial is the dominant fate of phosphorus in lake ecosystems. This illustrates why phosphorus often limits lake productivity\u2014once it sinks to sediments, it is largely unavailable until internal loading events (e.g., anoxic conditions at the sediment-water interface) release it back into the water column.",
+      "explanation": "The rapid movement of ³²P from dissolved form into biota (within 30 days, only 5% remains dissolved) demonstrates fast biological cycling. However, 69% ending up in sediments shows that sediment burial is the dominant fate of phosphorus in lake ecosystems. This illustrates why phosphorus often limits lake productivity—once it sinks to sediments, it is largely unavailable until internal loading events (e.g., anoxic conditions at the sediment-water interface) release it back into the water column.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -1415,7 +1396,7 @@
         "All of the above, but molybdenum is most commonly limiting for nitrogenase"
       ],
       "correctAnswer": "D",
-      "explanation": "Nitrogenase, the enzyme responsible for biological nitrogen fixation, requires molybdenum (Mo) as a cofactor in its most common form (Mo-nitrogenase). Iron is also essential for the iron-sulfur clusters in nitrogenase, and phosphorus is required for the large ATP demands of nitrogen fixation (16 ATP per N\u2082). All three can limit nitrogen fixation, but molybdenum is considered the most specifically limiting because it is required in the active site of the most widespread nitrogenase isoform, and its bioavailability is often very low in acidic soils.",
+      "explanation": "Nitrogenase, the enzyme responsible for biological nitrogen fixation, requires molybdenum (Mo) as a cofactor in its most common form (Mo-nitrogenase). Iron is also essential for the iron-sulfur clusters in nitrogenase, and phosphorus is required for the large ATP demands of nitrogen fixation (16 ATP per N₂). All three can limit nitrogen fixation, but molybdenum is considered the most specifically limiting because it is required in the active site of the most widespread nitrogenase isoform, and its bioavailability is often very low in acidic soils.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -1435,7 +1416,7 @@
         "Labile carbon attracts soil fauna that physically break down recalcitrant organic matter"
       ],
       "correctAnswer": "A",
-      "explanation": "The priming effect occurs because labile carbon inputs stimulate microbial growth and activity, providing the energy (ATP) needed for microbes to synthesize energetically expensive extracellular enzymes (such as lignin peroxidases, manganese peroxidases, and laccases) that can degrade recalcitrant organic matter. Without the energy subsidy from labile carbon, microbes cannot afford the metabolic cost of producing these enzymes. This co-metabolic mechanism has important implications for soil carbon storage\u2014additions of fresh organic matter can actually accelerate loss of old, stable soil carbon.",
+      "explanation": "The priming effect occurs because labile carbon inputs stimulate microbial growth and activity, providing the energy (ATP) needed for microbes to synthesize energetically expensive extracellular enzymes (such as lignin peroxidases, manganese peroxidases, and laccases) that can degrade recalcitrant organic matter. Without the energy subsidy from labile carbon, microbes cannot afford the metabolic cost of producing these enzymes. This co-metabolic mechanism has important implications for soil carbon storage—additions of fresh organic matter can actually accelerate loss of old, stable soil carbon.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -1455,7 +1436,7 @@
         "Chlorophyll accumulation in soils gives the landscape its green appearance"
       ],
       "correctAnswer": "B",
-      "explanation": "The HSS (Hairston, Smith, Slobodkin 1960) hypothesis asks: 'Why is the world green?' If herbivores are limited only by food supply, they should consume all vegetation. The hypothesis proposes that predators regulate herbivore populations below the level that would defoliate plants, keeping the world green. This top-down control argument (predators \u2192 fewer herbivores \u2192 more vegetation) was foundational in ecology and predated the modern concept of trophic cascades. Alternative hypotheses include bottom-up limitation (plant defenses make much vegetation inedible) and physical factors limiting herbivore populations.",
+      "explanation": "The HSS (Hairston, Smith, Slobodkin 1960) hypothesis asks: 'Why is the world green?' If herbivores are limited only by food supply, they should consume all vegetation. The hypothesis proposes that predators regulate herbivore populations below the level that would defoliate plants, keeping the world green. This top-down control argument (predators → fewer herbivores → more vegetation) was foundational in ecology and predated the modern concept of trophic cascades. Alternative hypotheses include bottom-up limitation (plant defenses make much vegetation inedible) and physical factors limiting herbivore populations.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -1475,7 +1456,7 @@
         "Sulfur cycle"
       ],
       "correctAnswer": "C",
-      "explanation": "The oxygen cycle is most directly coupled to the carbon cycle through oxygenic photosynthesis (6CO\u2082 + 6H\u2082O \u2192 C\u2086H\u2081\u2082O\u2086 + 6O\u2082) and aerobic respiration (the reverse). For every mole of carbon fixed by photosynthesis, one mole of O\u2082 is produced. Similarly, for every mole of organic carbon respired, one mole of O\u2082 is consumed. This tight coupling means that the atmospheric concentrations of CO\u2082 and O\u2082 are inversely correlated on seasonal and geological timescales. The current atmospheric O\u2082 concentration (21%) is maintained by the balance between photosynthetic O\u2082 production and respiratory/combustion O\u2082 consumption.",
+      "explanation": "The oxygen cycle is most directly coupled to the carbon cycle through oxygenic photosynthesis (6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂) and aerobic respiration (the reverse). For every mole of carbon fixed by photosynthesis, one mole of O₂ is produced. Similarly, for every mole of organic carbon respired, one mole of O₂ is consumed. This tight coupling means that the atmospheric concentrations of CO₂ and O₂ are inversely correlated on seasonal and geological timescales. The current atmospheric O₂ concentration (21%) is maintained by the balance between photosynthetic O₂ production and respiratory/combustion O₂ consumption.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -1507,15 +1488,15 @@
     },
     {
       "type": "EXPERIMENTAL_DESIGN",
-      "question": "To quantify the contribution of mycorrhizal fungi to plant phosphorus uptake, a researcher uses mesh-core ingrowth bags with different mesh sizes. Bags with 1 \u03bcm mesh allow only hyphal ingrowth, while 40 \u03bcm mesh allows both hyphae and fine roots. What additional control is needed, and what would a significant difference between treatments indicate?",
+      "question": "To quantify the contribution of mycorrhizal fungi to plant phosphorus uptake, a researcher uses mesh-core ingrowth bags with different mesh sizes. Bags with 1 μm mesh allow only hyphal ingrowth, while 40 μm mesh allows both hyphae and fine roots. What additional control is needed, and what would a significant difference between treatments indicate?",
       "options": [
         "No-mesh control; difference indicates total below-ground uptake capacity",
-        "Solid barrier (0 \u03bcm) control; difference between 1 \u03bcm and solid barrier indicates hyphal P contribution",
+        "Solid barrier (0 μm) control; difference between 1 μm and solid barrier indicates hyphal P contribution",
         "Sterilized soil control; difference indicates biotic vs. abiotic P uptake",
         "Bags filled with P-free sand; difference indicates soil P availability"
       ],
       "correctAnswer": "B",
-      "explanation": "The critical control is a solid barrier (0 \u03bcm mesh) that excludes all biological ingrowth. Comparing \u00b3\u00b2P uptake in: (1) solid barrier bags = baseline (diffusion only), (2) 1 \u03bcm mesh bags = diffusion + hyphal uptake, and (3) 40 \u03bcm mesh bags = diffusion + hyphal + root uptake allows partitioning of P acquisition. The difference between 1 \u03bcm mesh and solid barrier specifically quantifies the mycorrhizal hyphal contribution to P uptake. This mesh-core technique is widely used in mycorrhizal ecology research.",
+      "explanation": "The critical control is a solid barrier (0 μm mesh) that excludes all biological ingrowth. Comparing ³²P uptake in: (1) solid barrier bags = baseline (diffusion only), (2) 1 μm mesh bags = diffusion + hyphal uptake, and (3) 40 μm mesh bags = diffusion + hyphal + root uptake allows partitioning of P acquisition. The difference between 1 μm mesh and solid barrier specifically quantifies the mycorrhizal hyphal contribution to P uptake. This mesh-core technique is widely used in mycorrhizal ecology research.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -1535,7 +1516,7 @@
         "Volatilization of ammonia gas at high pH"
       ],
       "correctAnswer": "B",
-      "explanation": "Constructed wetlands remove nitrogen primarily through coupled nitrification-denitrification. In aerobic zones (near plant roots and the water surface), ammonium is oxidized to nitrate by nitrifying bacteria (nitrification: NH\u2084\u207a \u2192 NO\u2082\u207b \u2192 NO\u2083\u207b). The nitrate then diffuses to adjacent anaerobic zones (deeper sediments), where denitrifying bacteria convert it to N\u2082 gas (denitrification: NO\u2083\u207b \u2192 N\u2082O \u2192 N\u2082), permanently removing nitrogen from the system. Plant uptake is quantitatively less important unless biomass is harvested and removed, and adsorption/volatilization are minor pathways.",
+      "explanation": "Constructed wetlands remove nitrogen primarily through coupled nitrification-denitrification. In aerobic zones (near plant roots and the water surface), ammonium is oxidized to nitrate by nitrifying bacteria (nitrification: NH₄⁺ → NO₂⁻ → NO₃⁻). The nitrate then diffuses to adjacent anaerobic zones (deeper sediments), where denitrifying bacteria convert it to N₂ gas (denitrification: NO₃⁻ → N₂O → N₂), permanently removing nitrogen from the system. Plant uptake is quantitatively less important unless biomass is harvested and removed, and adsorption/volatilization are minor pathways.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -1555,7 +1536,7 @@
         "Regulating services"
       ],
       "correctAnswer": "D",
-      "explanation": "The Millennium Ecosystem Assessment categorizes ecosystem services into four types: (1) Provisioning services\u2014products obtained from ecosystems (food, water, timber, fiber). (2) Regulating services\u2014benefits from regulation of ecosystem processes (pollination, water purification, flood control, climate regulation, disease regulation). (3) Cultural services\u2014nonmaterial benefits (recreation, aesthetic values, spiritual values). (4) Supporting services\u2014services necessary for all other services (nutrient cycling, soil formation, primary production). Pollination, water purification, and flood control all involve the regulation of natural processes.",
+      "explanation": "The Millennium Ecosystem Assessment categorizes ecosystem services into four types: (1) Provisioning services—products obtained from ecosystems (food, water, timber, fiber). (2) Regulating services—benefits from regulation of ecosystem processes (pollination, water purification, flood control, climate regulation, disease regulation). (3) Cultural services—nonmaterial benefits (recreation, aesthetic values, spiritual values). (4) Supporting services—services necessary for all other services (nutrient cycling, soil formation, primary production). Pollination, water purification, and flood control all involve the regulation of natural processes.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 8,
@@ -1575,7 +1556,7 @@
         "3.5 Earths"
       ],
       "correctAnswer": "C",
-      "explanation": "According to the Global Footprint Network, humanity currently uses approximately 1.7 Earth's worth of biocapacity annually, meaning we use ecological resources 1.7 times faster than Earth can regenerate them. This ecological overshoot has been occurring since approximately the early 1970s. It is sustained by depleting natural capital (forests, fisheries, groundwater) and accumulating waste (CO\u2082 in the atmosphere). Earth Overshoot Day\u2014the date when humanity has used all the biocapacity Earth can regenerate in a year\u2014has been moving earlier each decade.",
+      "explanation": "According to the Global Footprint Network, humanity currently uses approximately 1.7 Earth's worth of biocapacity annually, meaning we use ecological resources 1.7 times faster than Earth can regenerate them. This ecological overshoot has been occurring since approximately the early 1970s. It is sustained by depleting natural capital (forests, fisheries, groundwater) and accumulating waste (CO₂ in the atmosphere). Earth Overshoot Day—the date when humanity has used all the biocapacity Earth can regenerate in a year—has been moving earlier each decade.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -1595,7 +1576,7 @@
         "Low resistance but high resilience"
       ],
       "correctAnswer": "D",
-      "explanation": "Resistance is the ability to withstand disturbance without changing state, while resilience is the ability to recover after disturbance. A coral reef that bleaches (loses coral cover) during a heat wave has low resistance because it was significantly altered by the disturbance. However, recovery within 5 years indicates high resilience\u2014the ecosystem can return to its pre-disturbance state relatively quickly. Some ecosystems have high resistance but low resilience (old-growth forests), while others have low resistance but high resilience (grasslands after fire).",
+      "explanation": "Resistance is the ability to withstand disturbance without changing state, while resilience is the ability to recover after disturbance. A coral reef that bleaches (loses coral cover) during a heat wave has low resistance because it was significantly altered by the disturbance. However, recovery within 5 years indicates high resilience—the ecosystem can return to its pre-disturbance state relatively quickly. Some ecosystems have high resistance but low resilience (old-growth forests), while others have low resistance but high resilience (grasslands after fire).",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -1635,7 +1616,7 @@
         "Chlorofluorocarbons (CFCs) and halons"
       ],
       "correctAnswer": "D",
-      "explanation": "Chlorofluorocarbons (CFCs, e.g., CFC-11, CFC-12) and halons are the primary anthropogenic ozone-depleting substances. These chemically stable compounds rise to the stratosphere where UV radiation breaks them down, releasing chlorine and bromine atoms. These atoms catalytically destroy ozone (O\u2083) molecules\u2014a single chlorine atom can destroy ~100,000 ozone molecules before being deactivated. The Montreal Protocol (1987) phased out CFCs and halons, and the ozone layer is slowly recovering. This is considered one of the most successful international environmental agreements.",
+      "explanation": "Chlorofluorocarbons (CFCs, e.g., CFC-11, CFC-12) and halons are the primary anthropogenic ozone-depleting substances. These chemically stable compounds rise to the stratosphere where UV radiation breaks them down, releasing chlorine and bromine atoms. These atoms catalytically destroy ozone (O₃) molecules—a single chlorine atom can destroy ~100,000 ozone molecules before being deactivated. The Montreal Protocol (1987) phased out CFCs and halons, and the ozone layer is slowly recovering. This is considered one of the most successful international environmental agreements.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -1655,7 +1636,7 @@
         "Plants synthesize sulfur de novo from other elements"
       ],
       "correctAnswer": "B",
-      "explanation": "The sulfur cycle involves atmospheric, terrestrial, and marine reservoirs: (1) Natural sources: Volcanic emissions (~10-20 Tg S/year as SO2 and H2S), marine biogenic DMS (dimethyl sulfide from phytoplankton, ~15-25 Tg S/year\u2014oxidized to SO4 2- aerosols that serve as cloud condensation nuclei, the CLAW hypothesis), sea spray, and rock weathering. (2) Anthropogenic perturbation: Fossil fuel combustion (coal, oil) releases ~60-70 Tg S/year as SO2\u2014approximately doubling total atmospheric sulfur flux. Metal smelting is also significant. (3) Acid deposition: SO2 is oxidized to sulfuric acid (H2SO4) in the atmosphere, returning as acid rain (pH <5.6). Effects include: forest decline (nutrient leaching, aluminum mobilization), freshwater acidification (killing fish and invertebrates), and building/monument damage. (4) Success story: Clean Air Act regulations (1970s-2000s) reduced US SO2 emissions by >90%, and many acidified ecosystems are slowly recovering. This is one of the most successful examples of environmental regulation. (5) However, acid rain damage persists in soils where decades of acid deposition depleted base cations (Ca2+, Mg2+).",
+      "explanation": "The sulfur cycle involves atmospheric, terrestrial, and marine reservoirs: (1) Natural sources: Volcanic emissions (~10-20 Tg S/year as SO2 and H2S), marine biogenic DMS (dimethyl sulfide from phytoplankton, ~15-25 Tg S/year—oxidized to SO4 2- aerosols that serve as cloud condensation nuclei, the CLAW hypothesis), sea spray, and rock weathering. (2) Anthropogenic perturbation: Fossil fuel combustion (coal, oil) releases ~60-70 Tg S/year as SO2—approximately doubling total atmospheric sulfur flux. Metal smelting is also significant. (3) Acid deposition: SO2 is oxidized to sulfuric acid (H2SO4) in the atmosphere, returning as acid rain (pH <5.6). Effects include: forest decline (nutrient leaching, aluminum mobilization), freshwater acidification (killing fish and invertebrates), and building/monument damage. (4) Success story: Clean Air Act regulations (1970s-2000s) reduced US SO2 emissions by >90%, and many acidified ecosystems are slowly recovering. This is one of the most successful examples of environmental regulation. (5) However, acid rain damage persists in soils where decades of acid deposition depleted base cations (Ca2+, Mg2+).",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -1675,7 +1656,7 @@
         "Carbon cycle"
       ],
       "correctAnswer": "C",
-      "explanation": "The phosphorus cycle is unique among major biogeochemical cycles because phosphorus has no significant gaseous phase. It cycles through rock weathering \u2192 soil \u2192 organisms \u2192 sediments on geological timescales. This makes phosphorus the most likely nutrient to limit primary productivity in freshwater ecosystems and means that human additions (from mining phosphate rock for fertilizer) cannot be removed from ecosystems through atmospheric processes, leading to persistent eutrophication problems.",
+      "explanation": "The phosphorus cycle is unique among major biogeochemical cycles because phosphorus has no significant gaseous phase. It cycles through rock weathering → soil → organisms → sediments on geological timescales. This makes phosphorus the most likely nutrient to limit primary productivity in freshwater ecosystems and means that human additions (from mining phosphate rock for fertilizer) cannot be removed from ecosystems through atmospheric processes, leading to persistent eutrophication problems.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 8,
@@ -1690,9 +1671,9 @@
       "question": "In the global carbon cycle, which process has the LARGEST annual flux of carbon between reservoirs?",
       "options": [
         "Fossil fuel combustion and cement production",
-        "Oceanic uptake of atmospheric CO\u2082",
+        "Oceanic uptake of atmospheric CO₂",
         "Photosynthesis and respiration exchange between atmosphere and terrestrial biosphere",
-        "Volcanic outgassing of CO\u2082"
+        "Volcanic outgassing of CO₂"
       ],
       "correctAnswer": "C",
       "explanation": "The largest annual carbon fluxes are between the atmosphere and terrestrial biosphere through photosynthesis (~120 Gt C/yr uptake) and respiration (~120 Gt C/yr release). Ocean-atmosphere exchange is also large (~90 Gt C/yr each way). Fossil fuel emissions (~10 Gt C/yr) and volcanic outgassing (~0.1 Gt C/yr) are much smaller by comparison.",
@@ -1707,7 +1688,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "A researcher uses eddy covariance towers to measure net ecosystem exchange (NEE) of CO\u2082 at a temperate deciduous forest. Monthly NEE values (negative = net uptake): Jan: +2.1, Apr: -0.5, Jul: -8.3, Oct: +0.8 (g C/m\u00b2/day). What explains the seasonal pattern?",
+      "question": "A researcher uses eddy covariance towers to measure net ecosystem exchange (NEE) of CO₂ at a temperate deciduous forest. Monthly NEE values (negative = net uptake): Jan: +2.1, Apr: -0.5, Jul: -8.3, Oct: +0.8 (g C/m²/day). What explains the seasonal pattern?",
       "options": [
         "Peak carbon uptake in July reflects maximum leaf area and photosynthesis exceeding respiration; winter values are positive because respiration continues without photosynthesis",
         "The forest is a net carbon source year-round, with highest emissions in July",
@@ -1715,7 +1696,7 @@
         "The pattern is inconsistent and suggests instrument malfunction"
       ],
       "correctAnswer": "A",
-      "explanation": "The seasonal NEE pattern is characteristic of temperate deciduous forests. In winter (Jan: +2.1), the forest is leafless, so no photosynthesis occurs but soil and stem respiration continue, making the forest a CO\u2082 source. In spring (Apr: -0.5), leaf-out begins and photosynthesis starts to exceed respiration. Peak carbon uptake occurs in midsummer (Jul: -8.3) when full canopy leaf area maximizes photosynthesis. In fall (Oct: +0.8), leaf senescence reduces photosynthesis below respiration. The convention of negative NEE = net uptake is standard in atmospheric science (flux is measured from the ecosystem's perspective as carbon exchange with the atmosphere).",
+      "explanation": "The seasonal NEE pattern is characteristic of temperate deciduous forests. In winter (Jan: +2.1), the forest is leafless, so no photosynthesis occurs but soil and stem respiration continue, making the forest a CO₂ source. In spring (Apr: -0.5), leaf-out begins and photosynthesis starts to exceed respiration. Peak carbon uptake occurs in midsummer (Jul: -8.3) when full canopy leaf area maximizes photosynthesis. In fall (Oct: +0.8), leaf senescence reduces photosynthesis below respiration. The convention of negative NEE = net uptake is standard in atmospheric science (flux is measured from the ecosystem's perspective as carbon exchange with the atmosphere).",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 8,
@@ -1727,15 +1708,15 @@
     },
     {
       "type": "EXPERIMENTAL_DESIGN",
-      "question": "A researcher wants to determine whether elevated CO\u2082 increases or decreases soil carbon storage in a grassland. They use Free-Air CO\u2082 Enrichment (FACE) technology. After 10 years, they find that elevated CO\u2082 increased plant biomass by 20% but did not increase soil carbon stocks. Which mechanism best explains this paradox?",
+      "question": "A researcher wants to determine whether elevated CO₂ increases or decreases soil carbon storage in a grassland. They use Free-Air CO₂ Enrichment (FACE) technology. After 10 years, they find that elevated CO₂ increased plant biomass by 20% but did not increase soil carbon stocks. Which mechanism best explains this paradox?",
       "options": [
-        "Elevated CO\u2082 reduced root exudate production, limiting carbon input to soil",
-        "Elevated CO\u2082 caused all extra carbon to be allocated to above-ground wood that was harvested",
-        "Soil carbon was converted to inorganic carbonates under elevated CO\u2082",
-        "Increased plant biomass under elevated CO\u2082 stimulated microbial priming, accelerating decomposition of existing soil organic matter"
+        "Elevated CO₂ reduced root exudate production, limiting carbon input to soil",
+        "Elevated CO₂ caused all extra carbon to be allocated to above-ground wood that was harvested",
+        "Soil carbon was converted to inorganic carbonates under elevated CO₂",
+        "Increased plant biomass under elevated CO₂ stimulated microbial priming, accelerating decomposition of existing soil organic matter"
       ],
       "correctAnswer": "D",
-      "explanation": "This is a real finding from several FACE experiments. Elevated CO\u2082 increases plant productivity and carbon input to soil. However, the additional labile carbon from root exudates and fine root turnover stimulates microbial activity (priming effect), which accelerates decomposition of older, more stable soil organic matter. This 'priming' can offset or even exceed the additional carbon inputs, resulting in no net change (or even a decrease) in soil carbon stocks. This demonstrates that increased plant growth does not automatically translate to increased carbon sequestration in soil\u2014the response of soil microbial communities is critical.",
+      "explanation": "This is a real finding from several FACE experiments. Elevated CO₂ increases plant productivity and carbon input to soil. However, the additional labile carbon from root exudates and fine root turnover stimulates microbial activity (priming effect), which accelerates decomposition of older, more stable soil organic matter. This 'priming' can offset or even exceed the additional carbon inputs, resulting in no net change (or even a decrease) in soil carbon stocks. This demonstrates that increased plant growth does not automatically translate to increased carbon sequestration in soil—the response of soil microbial communities is critical.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,
@@ -1743,7 +1724,7 @@
       "sourceTextbook": "Campbell Biology 12th Edition",
       "conceptualDepth": "EXPERIMENTAL",
       "difficulty": "EXPERT",
-      "topic": "CO\u2082 Enrichment and Soil Carbon"
+      "topic": "CO₂ Enrichment and Soil Carbon"
     },
     {
       "type": "MCQ",
@@ -1795,7 +1776,7 @@
         "Daily photosynthesis rates responding to cloud cover"
       ],
       "correctAnswer": "C",
-      "explanation": "Legacy effects occur when past events or conditions continue to influence ecosystem structure and function long after the original cause has ceased. Roman-era deforestation and agriculture permanently altered Mediterranean soil properties\u2014removing topsoil, changing soil chemistry, and depleting organic matter stocks. These changes persist 2,000+ years later, affecting vegetation recovery and ecosystem productivity. Other examples include soil contamination from historical mining, effects of past glaciation on soil development and species distributions, and persistent effects of historical land use on forest composition. Current-year weather effects and daily responses are not legacy effects because they are contemporary.",
+      "explanation": "Legacy effects occur when past events or conditions continue to influence ecosystem structure and function long after the original cause has ceased. Roman-era deforestation and agriculture permanently altered Mediterranean soil properties—removing topsoil, changing soil chemistry, and depleting organic matter stocks. These changes persist 2,000+ years later, affecting vegetation recovery and ecosystem productivity. Other examples include soil contamination from historical mining, effects of past glaciation on soil development and species distributions, and persistent effects of historical land use on forest composition. Current-year weather effects and daily responses are not legacy effects because they are contemporary.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 8,

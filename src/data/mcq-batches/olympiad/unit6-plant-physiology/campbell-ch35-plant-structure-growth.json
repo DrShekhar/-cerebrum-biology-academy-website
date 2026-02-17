@@ -1,8 +1,10 @@
 {
-  "batchName": "Campbell Ch 35 – Plant Structure, Growth, and Development (Olympiad)",
-  "subject": "Biology",
-  "chapter": "Plant Structure, Growth, and Development",
-  "class": "Olympiad",
+  "batch": {
+    "name": "Campbell Ch35 Plant Structure, Growth, and Development — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 110
+  },
   "questions": [
     {
       "type": "MCQ",

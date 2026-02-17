@@ -1,16 +1,9 @@
 {
   "batch": {
-    "id": "olympiad-campbell-ch32-animal-diversity",
-    "title": "Campbell Biology Ch 32 \u2014 An Introduction to Animal Diversity (Olympiad)",
-    "subject": "Biology",
-    "chapter": "An Introduction to Animal Diversity",
-    "class": "Olympiad",
-    "description": "Olympiad-grade questions on animal diversity from Campbell Biology Chapter 32. Covers animal characteristics, body plans, phylogeny, Cambrian explosion, body symmetry, germ layers, coelom types, protostome-deuterostome divergence, Hox genes, and major animal phyla overview.",
-    "totalQuestions": 72,
-    "campbellChapter": 32,
-    "campbellUnit": 5,
-    "isOlympiad": true,
-    "questionCount": 75
+    "name": "Campbell Ch32 An Overview of Animal Diversity — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 75
   },
   "questions": [
     {
@@ -319,11 +312,11 @@
       "options": [
         "the presence of a lophophore feeding structure",
         "possession of a trochophore larval stage",
-        "the process of ecdysis\u2014periodic molting of an external cuticle",
+        "the process of ecdysis—periodic molting of an external cuticle",
         "internal fertilization and direct development"
       ],
       "correctAnswer": "B",
-      "explanation": "The Ecdysozoa (from Greek ecdysis = 'stripping off') is a major protostome clade defined by the shared character of ecdysis\u2014the periodic molting of an external cuticle. This clade was proposed based on molecular phylogenetic evidence (primarily 18S rRNA sequences) and includes arthropods, nematodes, tardigrades, onychophorans, priapulids, and several smaller phyla. All ecdysozoans have an external cuticle composed of various materials (chitin in arthropods, collagen in nematodes) that must be periodically shed to allow growth. The molting process is hormonally regulated (by ecdysteroids in arthropods). This grouping was initially controversial because it united the incredibly diverse arthropods with the morphologically simple nematodes, but it has been consistently supported by subsequent molecular analyses and some morphological characters (including trilaminate cuticle structure).",
+      "explanation": "The Ecdysozoa (from Greek ecdysis = 'stripping off') is a major protostome clade defined by the shared character of ecdysis—the periodic molting of an external cuticle. This clade was proposed based on molecular phylogenetic evidence (primarily 18S rRNA sequences) and includes arthropods, nematodes, tardigrades, onychophorans, priapulids, and several smaller phyla. All ecdysozoans have an external cuticle composed of various materials (chitin in arthropods, collagen in nematodes) that must be periodically shed to allow growth. The molting process is hormonally regulated (by ecdysteroids in arthropods). This grouping was initially controversial because it united the incredibly diverse arthropods with the morphologically simple nematodes, but it has been consistently supported by subsequent molecular analyses and some morphological characters (including trilaminate cuticle structure).",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -375,7 +368,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Comparative data on animal nervous systems: Cnidaria \u2014 diffuse nerve net, no brain; Platyhelminthes \u2014 cerebral ganglia with longitudinal nerve cords; Annelida \u2014 cerebral ganglia, ventral nerve cord with segmental ganglia; Arthropoda \u2014 brain with specialized regions, ventral nerve cord; Chordata \u2014 dorsal hollow nerve cord, brain with multiple regions. This progression illustrates:",
+      "question": "Comparative data on animal nervous systems: Cnidaria — diffuse nerve net, no brain; Platyhelminthes — cerebral ganglia with longitudinal nerve cords; Annelida — cerebral ganglia, ventral nerve cord with segmental ganglia; Arthropoda — brain with specialized regions, ventral nerve cord; Chordata — dorsal hollow nerve cord, brain with multiple regions. This progression illustrates:",
       "options": [
         "a single linear evolutionary trajectory from simple to complex",
         "independent evolution of centralized nervous systems in multiple lineages, with a general trend toward cephalization and brain complexity in active, bilaterally symmetric animals",
@@ -383,7 +376,7 @@
         "that nervous system complexity decreases over evolutionary time"
       ],
       "correctAnswer": "B",
-      "explanation": "The comparative data illustrates the independent evolution of increasingly centralized nervous systems in multiple animal lineages, associated with the evolution of bilateral symmetry and active lifestyles. The cnidarian nerve net represents the ancestral condition\u2014a distributed network without centralization. Independently, multiple bilaterian lineages have evolved increasing centralization: concentration of neurons into ganglia, development of longitudinal nerve cords, and elaboration of anterior ganglia into brains. However, this is not a single linear progression\u2014the ventral nerve cord of protostomes (annelids, arthropods) and the dorsal hollow nerve cord of chordates evolved independently (though they may share deep homology in genetic specification). Within each lineage, brain complexity correlates with behavioral complexity, sensory elaboration, and ecological demands.",
+      "explanation": "The comparative data illustrates the independent evolution of increasingly centralized nervous systems in multiple animal lineages, associated with the evolution of bilateral symmetry and active lifestyles. The cnidarian nerve net represents the ancestral condition—a distributed network without centralization. Independently, multiple bilaterian lineages have evolved increasing centralization: concentration of neurons into ganglia, development of longitudinal nerve cords, and elaboration of anterior ganglia into brains. However, this is not a single linear progression—the ventral nerve cord of protostomes (annelids, arthropods) and the dorsal hollow nerve cord of chordates evolved independently (though they may share deep homology in genetic specification). Within each lineage, brain complexity correlates with behavioral complexity, sensory elaboration, and ecological demands.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -437,10 +430,10 @@
       "type": "MTF",
       "question": "Consider statements about gastrulation:\n(I) Gastrulation converts the blastula into a gastrula with distinct germ layers\n(II) The archenteron formed during gastrulation becomes the lumen of the digestive tract\n(III) The blastopore becomes the mouth in all animals\n(IV) Gastrulation typically involves cell movements including invagination, involution, and ingression\nWhich are TRUE?",
       "options": [
-        "TTFT \u2014 I, II, and IV are true",
-        "TTTF \u2014 I, II, and III are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TTTT \u2014 All are true"
+        "TTFT — I, II, and IV are true",
+        "TTTF — I, II, and III are true",
+        "TFTT — I, III, and IV are true",
+        "TTTT — All are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: Gastrulation is the process that reorganizes the single-layered blastula into a multi-layered gastrula with endoderm, ectoderm, and (in triploblastic animals) mesoderm. Statement II is TRUE: The archenteron (primitive gut) forms during gastrulation and gives rise to the lumen of the digestive tract. Statement III is FALSE: The fate of the blastopore differs between protostomes and deuterostomes. In protostomes, the blastopore typically becomes the mouth; in deuterostomes, it typically becomes the anus, with the mouth forming secondarily. However, there are exceptions in both groups. Statement IV is TRUE: Gastrulation involves complex cell movements including invagination (infolding of a cell sheet), involution (inward movement of an expanding sheet over a lip), ingression (migration of individual cells), epiboly (spreading of a cell sheet), and delamination (splitting of a cell layer).",
@@ -463,7 +456,7 @@
         "filter feeding: choanocytes create water currents, and food particles are captured and phagocytosed"
       ],
       "correctAnswer": "D",
-      "explanation": "Sponges are filter feeders that use the coordinated beating of flagellated choanocytes to draw water through the body wall. Water enters through numerous small pores (ostia), passes through chambers lined with choanocytes, and exits through a large opening (osculum). Choanocytes have a collar of microvilli surrounding a flagellum; the flagellum creates water current, and the collar traps food particles (bacteria, unicellular algae, organic particles) which are then phagocytosed. Food is digested intracellularly\u2014sponges lack a digestive cavity. Some sponges do harbor photosynthetic endosymbionts (cyanobacteria, dinoflagellates) that supplement their nutrition, but this is not the primary feeding mechanism. Remarkably, some deep-sea sponges (family Cladorhizidae) have secondarily evolved carnivorous feeding, using hook-like spicules to capture small crustaceans.",
+      "explanation": "Sponges are filter feeders that use the coordinated beating of flagellated choanocytes to draw water through the body wall. Water enters through numerous small pores (ostia), passes through chambers lined with choanocytes, and exits through a large opening (osculum). Choanocytes have a collar of microvilli surrounding a flagellum; the flagellum creates water current, and the collar traps food particles (bacteria, unicellular algae, organic particles) which are then phagocytosed. Food is digested intracellularly—sponges lack a digestive cavity. Some sponges do harbor photosynthetic endosymbionts (cyanobacteria, dinoflagellates) that supplement their nutrition, but this is not the primary feeding mechanism. Remarkably, some deep-sea sponges (family Cladorhizidae) have secondarily evolved carnivorous feeding, using hook-like spicules to capture small crustaceans.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -479,11 +472,11 @@
       "options": [
         "an exclusively sessile lifestyle attached to substrate",
         "radial arrangement of body parts around a central axis",
-        "cephalization\u2014concentration of sensory organs and nervous tissue at the anterior end",
+        "cephalization—concentration of sensory organs and nervous tissue at the anterior end",
         "absence of a digestive system"
       ],
       "correctAnswer": "C",
-      "explanation": "Bilateral symmetry (having distinct left-right, dorsal-ventral, and anterior-posterior axes) is strongly correlated with cephalization\u2014the concentration of sensory organs, nervous tissue, and feeding structures at the anterior (head) end. This association makes functional sense: a bilaterally symmetric animal typically moves in one direction (anterior-first), so concentrating sensory organs at the leading edge allows detection of food, predators, and environmental stimuli in the direction of travel. This was a key evolutionary innovation that facilitated active, directional locomotion and predation. Cephalization ranges from minimal (flatworms with simple eyespots and cerebral ganglia) to extreme (vertebrates with complex brains and elaborate sensory organs). Radial symmetry, in contrast, is associated with sessile or planktonic lifestyles where stimuli may arrive from any direction.",
+      "explanation": "Bilateral symmetry (having distinct left-right, dorsal-ventral, and anterior-posterior axes) is strongly correlated with cephalization—the concentration of sensory organs, nervous tissue, and feeding structures at the anterior (head) end. This association makes functional sense: a bilaterally symmetric animal typically moves in one direction (anterior-first), so concentrating sensory organs at the leading edge allows detection of food, predators, and environmental stimuli in the direction of travel. This was a key evolutionary innovation that facilitated active, directional locomotion and predation. Cephalization ranges from minimal (flatworms with simple eyespots and cerebral ganglia) to extreme (vertebrates with complex brains and elaborate sensory organs). Radial symmetry, in contrast, is associated with sessile or planktonic lifestyles where stimuli may arrive from any direction.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -523,7 +516,7 @@
         "true tissues with cells organized into functional layers"
       ],
       "correctAnswer": "D",
-      "explanation": "Sponges (Parazoa) are the most basal surviving animal lineage and lack true tissues\u2014organized layers of cells acting in a coordinated fashion with specialized junctions and shared functions. While sponges have distinct cell types (choanocytes, pinacocytes, amoebocytes, archaeocytes), these cells are not organized into the epithelial layers characteristic of eumetazoan tissues. Sponges lack nerves, muscles, and a digestive cavity. Eumetazoa (all other animals) possess true tissues, including at least two germ layers (ectoderm and endoderm) in diploblastic animals (cnidarians, ctenophores) and three germ layers (adding mesoderm) in triploblastic bilaterians. However, sponges do possess cell-cell communication through signaling molecules and gap junctions, do reproduce sexually, and have nucleated cells with mitochondria.",
+      "explanation": "Sponges (Parazoa) are the most basal surviving animal lineage and lack true tissues—organized layers of cells acting in a coordinated fashion with specialized junctions and shared functions. While sponges have distinct cell types (choanocytes, pinacocytes, amoebocytes, archaeocytes), these cells are not organized into the epithelial layers characteristic of eumetazoan tissues. Sponges lack nerves, muscles, and a digestive cavity. Eumetazoa (all other animals) possess true tissues, including at least two germ layers (ectoderm and endoderm) in diploblastic animals (cnidarians, ctenophores) and three germ layers (adding mesoderm) in triploblastic bilaterians. However, sponges do possess cell-cell communication through signaling molecules and gap junctions, do reproduce sexually, and have nucleated cells with mitochondria.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -603,7 +596,7 @@
         "allowing sequential processing of food through specialized regions, enabling simultaneous ingestion and defecation"
       ],
       "correctAnswer": "D",
-      "explanation": "The complete digestive tract (alimentary canal) with a separate mouth and anus represents a major evolutionary advancement over the blind-ended gastrovascular cavity. Key advantages include: (1) One-way (unidirectional) food flow enables sequential processing through specialized regions (mechanical breakdown, enzymatic digestion, absorption, feces compaction) without mixing processed and unprocessed material. (2) Continuous feeding is possible\u2014new food can enter while previous meals are being digested and waste is being expelled. (3) Specialization of different regions for different functions (crop, gizzard, stomach, intestine) increases digestive efficiency. (4) Longer retention time is possible for difficult-to-digest foods. This innovation evolved independently in several animal lineages and was a prerequisite for the evolution of complex feeding strategies and larger body sizes.",
+      "explanation": "The complete digestive tract (alimentary canal) with a separate mouth and anus represents a major evolutionary advancement over the blind-ended gastrovascular cavity. Key advantages include: (1) One-way (unidirectional) food flow enables sequential processing through specialized regions (mechanical breakdown, enzymatic digestion, absorption, feces compaction) without mixing processed and unprocessed material. (2) Continuous feeding is possible—new food can enter while previous meals are being digested and waste is being expelled. (3) Specialization of different regions for different functions (crop, gizzard, stomach, intestine) increases digestive efficiency. (4) Longer retention time is possible for difficult-to-digest foods. This innovation evolved independently in several animal lineages and was a prerequisite for the evolution of complex feeding strategies and larger body sizes.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -615,7 +608,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Body size data across animal phyla reveals: Arthropoda \u2014 0.1mm to 3.8m (Japanese spider crab); Mollusca \u2014 0.5mm to 18m (giant squid); Chordata \u2014 8mm to 30m (blue whale); Cnidaria \u2014 1mm to 36m (lion's mane jellyfish tentacle length); Nematoda \u2014 0.1mm to 8m (whale intestinal parasites). Which factor best explains the enormous size range within each phylum?",
+      "question": "Body size data across animal phyla reveals: Arthropoda — 0.1mm to 3.8m (Japanese spider crab); Mollusca — 0.5mm to 18m (giant squid); Chordata — 8mm to 30m (blue whale); Cnidaria — 1mm to 36m (lion's mane jellyfish tentacle length); Nematoda — 0.1mm to 8m (whale intestinal parasites). Which factor best explains the enormous size range within each phylum?",
       "options": [
         "Adaptation to diverse ecological niches, with body size constrained by phylogenetic-specific factors such as respiratory mechanism, skeletal type, and circulatory system",
         "Genetic drift randomly determining body size with no adaptive significance",
@@ -635,7 +628,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Oxygen consumption measurements (mL O2/g/hr) across animal groups at 20C: Jellyfish \u2014 0.02; Snail \u2014 0.08; Earthworm \u2014 0.15; Insect (flying) \u2014 2.5; Mouse \u2014 1.7; Lizard (resting) \u2014 0.15. What primary factor explains the variation in metabolic rate?",
+      "question": "Oxygen consumption measurements (mL O2/g/hr) across animal groups at 20C: Jellyfish — 0.02; Snail — 0.08; Earthworm — 0.15; Insect (flying) — 2.5; Mouse — 1.7; Lizard (resting) — 0.15. What primary factor explains the variation in metabolic rate?",
       "options": [
         "Body color determining heat absorption",
         "Diet composition determining caloric intake",
@@ -643,7 +636,7 @@
         "Activity level, thermoregulatory strategy, and body plan complexity, with endotherms and active flyers having the highest metabolic rates"
       ],
       "correctAnswer": "D",
-      "explanation": "The variation in oxygen consumption reflects fundamental differences in animal physiology: (1) Activity level and locomotion mode: flying insects have extremely high metabolic rates during flight due to the energetic demands of flight muscles. (2) Thermoregulatory strategy: endotherms (mouse) maintain constant body temperature through metabolic heat generation, requiring high baseline metabolic rates. Ectotherms (lizard, invertebrates) rely on environmental heat and have lower resting metabolic rates. (3) Body plan complexity and activity: cnidarians (jellyfish) have simple body plans with low tissue maintenance costs, while active bilaterians with complex organ systems require more energy. The data shows: jellyfish << snail < earthworm \u2248 resting lizard < mouse < flying insect. The highest rates are in flying insects and endothermic mammals, reflecting the energetic demands of sustained flight and thermoregulation.",
+      "explanation": "The variation in oxygen consumption reflects fundamental differences in animal physiology: (1) Activity level and locomotion mode: flying insects have extremely high metabolic rates during flight due to the energetic demands of flight muscles. (2) Thermoregulatory strategy: endotherms (mouse) maintain constant body temperature through metabolic heat generation, requiring high baseline metabolic rates. Ectotherms (lizard, invertebrates) rely on environmental heat and have lower resting metabolic rates. (3) Body plan complexity and activity: cnidarians (jellyfish) have simple body plans with low tissue maintenance costs, while active bilaterians with complex organ systems require more energy. The data shows: jellyfish << snail < earthworm ≈ resting lizard < mouse < flying insect. The highest rates are in flying insects and endothermic mammals, reflecting the energetic demands of sustained flight and thermoregulation.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -663,7 +656,7 @@
         "embryonic development patterns: cleavage, coelom formation, and fate of the blastopore"
       ],
       "correctAnswer": "D",
-      "explanation": "The protostome-deuterostome division represents a fundamental split in bilaterian animal evolution, based on key embryological differences: (1) Blastopore fate\u2014in protostomes ('first mouth'), the blastopore typically becomes the mouth; in deuterostomes ('second mouth'), it becomes the anus. (2) Cleavage pattern\u2014protostomes generally show spiral, determinate cleavage; deuterostomes show radial, indeterminate cleavage. (3) Coelom formation\u2014protostomes form the coelom by schizocoely (splitting of mesodermal masses); deuterostomes form it by enterocoely (outpocketing of the archenteron). However, these classical distinctions have many exceptions among living taxa, and molecular phylogenetics has revealed that the protostome-deuterostome split is not always cleanly defined by these developmental characters. Nonetheless, the distinction is strongly supported by molecular data as reflecting genuine evolutionary divergence.",
+      "explanation": "The protostome-deuterostome division represents a fundamental split in bilaterian animal evolution, based on key embryological differences: (1) Blastopore fate—in protostomes ('first mouth'), the blastopore typically becomes the mouth; in deuterostomes ('second mouth'), it becomes the anus. (2) Cleavage pattern—protostomes generally show spiral, determinate cleavage; deuterostomes show radial, indeterminate cleavage. (3) Coelom formation—protostomes form the coelom by schizocoely (splitting of mesodermal masses); deuterostomes form it by enterocoely (outpocketing of the archenteron). However, these classical distinctions have many exceptions among living taxa, and molecular phylogenetics has revealed that the protostome-deuterostome split is not always cleanly defined by these developmental characters. Nonetheless, the distinction is strongly supported by molecular data as reflecting genuine evolutionary divergence.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -717,13 +710,13 @@
       "type": "MTF",
       "question": "Consider the following about animal body symmetry:\n(I) Radial symmetry is ancestral and found in the most basal animal lineages\n(II) Bilateral symmetry is associated with cephalization and active locomotion\n(III) Some bilaterally symmetric animals secondarily evolved radial symmetry (e.g., echinoderms)\n(IV) All adult cnidarians show perfect bilateral symmetry\nWhich are TRUE?",
       "options": [
-        "TTTF \u2014 I, II, and III are true",
-        "TTFT \u2014 I, II, and IV are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TTTT \u2014 All are true"
+        "TTTF — I, II, and III are true",
+        "TTFT — I, II, and IV are true",
+        "TFTT — I, III, and IV are true",
+        "TTTT — All are true"
       ],
       "correctAnswer": "A",
-      "explanation": "Statement I is TRUE: Sponges are asymmetric or have vague radial symmetry, and cnidarians/ctenophores are radially symmetric\u2014these are the most basal animal lineages, suggesting radial symmetry (or lack of symmetry) is ancestral. Statement II is TRUE: Bilateral symmetry correlates with cephalization and directed locomotion across Bilateria. Statement III is TRUE: Echinoderms (deuterostomes) have bilaterally symmetric larvae that metamorphose into adults with pentaradial (five-fold) symmetry\u2014this is secondary radial symmetry derived from a bilaterally symmetric ancestor. Statement IV is FALSE: While cnidarians are traditionally described as radially symmetric, many have elements of bilateral or biradial symmetry. Sea anemones have a directive axis creating bilateral elements, and cnidarian larvae (planulae) often show bilateral symmetry. The expression of Hox-like genes in some cnidarians suggests deeper bilateral organization.",
+      "explanation": "Statement I is TRUE: Sponges are asymmetric or have vague radial symmetry, and cnidarians/ctenophores are radially symmetric—these are the most basal animal lineages, suggesting radial symmetry (or lack of symmetry) is ancestral. Statement II is TRUE: Bilateral symmetry correlates with cephalization and directed locomotion across Bilateria. Statement III is TRUE: Echinoderms (deuterostomes) have bilaterally symmetric larvae that metamorphose into adults with pentaradial (five-fold) symmetry—this is secondary radial symmetry derived from a bilaterally symmetric ancestor. Statement IV is FALSE: While cnidarians are traditionally described as radially symmetric, many have elements of bilateral or biradial symmetry. Sea anemones have a directive axis creating bilateral elements, and cnidarian larvae (planulae) often show bilateral symmetry. The expression of Hox-like genes in some cnidarians suggests deeper bilateral organization.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -763,7 +756,7 @@
         "as a specialized gas exchange surface with no digestive function"
       ],
       "correctAnswer": "C",
-      "explanation": "The gastrovascular cavity (coelenteron) of cnidarians is a multifunctional body compartment that serves as both the digestive system and a simple circulatory system. Food enters through the single opening (which serves as both mouth and anus), is partially digested extracellularly by enzymes secreted by gastrodermal cells, and then intracellular digestion is completed within food vacuoles. Nutrients diffuse throughout the cavity to reach all body cells\u2014the thin body wall ensures that most cells are close to either the external water or the gastrovascular cavity. The cavity also functions as a hydrostatic skeleton: when the opening is closed and muscles contract the body wall, the incompressible fluid in the cavity provides support for shape changes and movement. In medusae, rhythmic contractions of the bell against the fluid-filled cavity provide jet propulsion for swimming.",
+      "explanation": "The gastrovascular cavity (coelenteron) of cnidarians is a multifunctional body compartment that serves as both the digestive system and a simple circulatory system. Food enters through the single opening (which serves as both mouth and anus), is partially digested extracellularly by enzymes secreted by gastrodermal cells, and then intracellular digestion is completed within food vacuoles. Nutrients diffuse throughout the cavity to reach all body cells—the thin body wall ensures that most cells are close to either the external water or the gastrovascular cavity. The cavity also functions as a hydrostatic skeleton: when the opening is closed and muscles contract the body wall, the incompressible fluid in the cavity provides support for shape changes and movement. In medusae, rhythmic contractions of the bell against the fluid-filled cavity provide jet propulsion for swimming.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -843,7 +836,7 @@
         "The eyes of vertebrates and the camera eyes of cephalopod molluscs"
       ],
       "correctAnswer": "D",
-      "explanation": "The camera eyes of vertebrates and cephalopod molluscs (octopuses, squids) are one of the most striking examples of convergent evolution. Both independently evolved remarkably similar structures\u2014a lens that focuses light onto a retina of photoreceptor cells\u2014from completely different ancestral conditions. They differ in key details: the vertebrate retina is 'inverted' (photoreceptors point away from light), while the cephalopod retina is 'everted' (photoreceptors point toward light); the vertebrate eye has a blind spot (where the optic nerve exits) but the cephalopod eye does not. Bat wings and human arms are homologous (modified from the same ancestral tetrapod forelimb), not convergent. Horse legs and dog legs are also homologous. Fish and mammal vertebral columns are homologous. Convergent evolution produces analogous structures with similar function but different evolutionary origins.",
+      "explanation": "The camera eyes of vertebrates and cephalopod molluscs (octopuses, squids) are one of the most striking examples of convergent evolution. Both independently evolved remarkably similar structures—a lens that focuses light onto a retina of photoreceptor cells—from completely different ancestral conditions. They differ in key details: the vertebrate retina is 'inverted' (photoreceptors point away from light), while the cephalopod retina is 'everted' (photoreceptors point toward light); the vertebrate eye has a blind spot (where the optic nerve exits) but the cephalopod eye does not. Bat wings and human arms are homologous (modified from the same ancestral tetrapod forelimb), not convergent. Horse legs and dog legs are also homologous. Fish and mammal vertebral columns are homologous. Convergent evolution produces analogous structures with similar function but different evolutionary origins.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
       "campbellUnit": 5,
@@ -863,7 +856,7 @@
         "In protostomes, the blastopore typically becomes the mouth (\"proto-stome\" = first mouth), cleavage is often spiral and determinate; in deuterostomes, the blastopore becomes the anus (mouth forms secondarily), cleavage is radial and indeterminate, and the coelom forms by enterocoely (outpocketing of the archenteron)"
       ],
       "correctAnswer": "D",
-      "explanation": "Protostome-deuterostome divergence involves multiple developmental differences: (1) Blastopore fate: Protostomes\u2014blastopore becomes (or is near) the mouth; deuterostomes\u2014blastopore becomes the anus, mouth forms secondarily from a second opening. (2) Cleavage pattern: Protostomes\u2014spiral cleavage (cells at oblique angles) and often determinate (cell fates fixed early). Deuterostomes\u2014radial cleavage (cells directly above each other) and indeterminate (cells retain totipotency longer; separated blastomeres can form complete embryos\u2014basis for identical twinning). (3) Coelom formation: Protostomes\u2014schizocoely (coelom forms by splitting of mesoderm). Deuterostomes\u2014enterocoely (coelom forms from outpocketing of archenteron/gut). (4) Caveats: These are generalizations with exceptions. Some protostomes show radial cleavage; some show modified spiral cleavage. Nematodes (protostomes) have no coelom formation by either method. (5) Molecular phylogenetics: Protostomes are divided into Lophotrochozoa (mollusks, annelids) and Ecdysozoa (arthropods, nematodes). Deuterostomes include echinoderms, hemichordates, and chordates.",
+      "explanation": "Protostome-deuterostome divergence involves multiple developmental differences: (1) Blastopore fate: Protostomes—blastopore becomes (or is near) the mouth; deuterostomes—blastopore becomes the anus, mouth forms secondarily from a second opening. (2) Cleavage pattern: Protostomes—spiral cleavage (cells at oblique angles) and often determinate (cell fates fixed early). Deuterostomes—radial cleavage (cells directly above each other) and indeterminate (cells retain totipotency longer; separated blastomeres can form complete embryos—basis for identical twinning). (3) Coelom formation: Protostomes—schizocoely (coelom forms by splitting of mesoderm). Deuterostomes—enterocoely (coelom forms from outpocketing of archenteron/gut). (4) Caveats: These are generalizations with exceptions. Some protostomes show radial cleavage; some show modified spiral cleavage. Nematodes (protostomes) have no coelom formation by either method. (5) Molecular phylogenetics: Protostomes are divided into Lophotrochozoa (mollusks, annelids) and Ecdysozoa (arthropods, nematodes). Deuterostomes include echinoderms, hemichordates, and chordates.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -883,7 +876,7 @@
         "the range of different body plans (morphological diversity) rather than species diversity"
       ],
       "correctAnswer": "D",
-      "explanation": "Disparity measures the range of morphological variation (body plan diversity) within a group, distinct from diversity which measures the number of species. Stephen Jay Gould argued that morphological disparity was actually higher in the Cambrian than today, with many unique body plans represented by Burgess Shale organisms that have no modern descendants. While this extreme view has been debated, it remains true that most animal phyla appeared during the Cambrian explosion, with subsequent evolution primarily increasing species diversity within established body plans rather than generating fundamentally new body plan architectures. The concept of disparity versus diversity helps explain why the Cambrian explosion was so remarkable\u2014it was primarily an explosion of body plan disparity rather than just species numbers.",
+      "explanation": "Disparity measures the range of morphological variation (body plan diversity) within a group, distinct from diversity which measures the number of species. Stephen Jay Gould argued that morphological disparity was actually higher in the Cambrian than today, with many unique body plans represented by Burgess Shale organisms that have no modern descendants. While this extreme view has been debated, it remains true that most animal phyla appeared during the Cambrian explosion, with subsequent evolution primarily increasing species diversity within established body plans rather than generating fundamentally new body plan architectures. The concept of disparity versus diversity helps explain why the Cambrian explosion was so remarkable—it was primarily an explosion of body plan disparity rather than just species numbers.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -897,10 +890,10 @@
       "type": "MTF",
       "question": "About animal phylogenetic relationships:\n(I) Molecular evidence supports monophyly of Ecdysozoa (arthropods + nematodes + related phyla)\n(II) Chordates are more closely related to echinoderms than to any protostome phylum\n(III) Platyhelminthes (flatworms) are now placed within Lophotrochozoa based on molecular data\n(IV) Arthropods and annelids are sister groups that together form the Articulata\nWhich are TRUE?",
       "options": [
-        "TTTF \u2014 I, II, and III are true",
-        "TTFT \u2014 I, II, and IV are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TTTT \u2014 All are true"
+        "TTTF — I, II, and III are true",
+        "TTFT — I, II, and IV are true",
+        "TFTT — I, III, and IV are true",
+        "TTTT — All are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: Ecdysozoa is consistently supported by molecular phylogenetics as a monophyletic clade. Statement II is TRUE: Both chordates and echinoderms are deuterostomes, making them more closely related to each other than either is to any protostome. This is sometimes surprising to students because of the morphological differences. Statement III is TRUE: Flatworms, once considered primitive acoelomates, are now firmly placed within Lophotrochozoa by molecular analyses. Their lack of coelom and circulatory system is interpreted as secondary loss rather than primitive absence. Statement IV is FALSE: The 'Articulata' hypothesis (arthropod-annelid sister group relationship based on segmentation) has been rejected by molecular phylogenetics. Arthropods are placed in Ecdysozoa while annelids are in Lophotrochozoa. Their similar segmentation is interpreted as convergent evolution or deep homology.",
@@ -943,7 +936,7 @@
         "Mollusca > Chordata > Arthropoda > Nematoda"
       ],
       "correctAnswer": "A",
-      "explanation": "Arthropoda is by far the most species-rich animal phylum with over 1.2 million described species (most are insects). Mollusca is second with approximately 85,000 described species. Chordata includes approximately 65,000 described species (most are fish). Nematoda has approximately 25,000 described species, though the actual number may be vastly higher\u2014estimates suggest millions of undescribed nematode species in soil and marine habitats. The extreme species richness of arthropods is attributed to their segmented, modular body plan allowing specialization of appendages, the exoskeleton enabling exploitation of terrestrial environments, complete metamorphosis allowing larval and adult stages to exploit different niches, small body size enabling fine-grained habitat partitioning, and coevolutionary relationships with flowering plants (in the case of insects).",
+      "explanation": "Arthropoda is by far the most species-rich animal phylum with over 1.2 million described species (most are insects). Mollusca is second with approximately 85,000 described species. Chordata includes approximately 65,000 described species (most are fish). Nematoda has approximately 25,000 described species, though the actual number may be vastly higher—estimates suggest millions of undescribed nematode species in soil and marine habitats. The extreme species richness of arthropods is attributed to their segmented, modular body plan allowing specialization of appendages, the exoskeleton enabling exploitation of terrestrial environments, complete metamorphosis allowing larval and adult stages to exploit different niches, small body size enabling fine-grained habitat partitioning, and coevolutionary relationships with flowering plants (in the case of insects).",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
       "campbellUnit": 5,
@@ -963,7 +956,7 @@
         "a butterfly wing and a bird wing"
       ],
       "correctAnswer": "B",
-      "explanation": "Serial homology refers to the repetition of similar structures within a single organism, derived from the same developmental program but modified in different body regions. Crustacean appendages perfectly illustrate this: antennae, mandibles, maxillae, maxillipeds, walking legs, swimmerets, and uropods are all modifications of the basic arthropod biramous appendage, specified by differential Hox gene expression along the anterior-posterior axis. Each appendage type is serially homologous to the others\u2014they share the same basic developmental origin but have been modified for different functions. This contrasts with between-organism homology (bat wing and human arm, derived from the same ancestral structure in different species) and analogy/convergence (butterfly wing and bird wing, similar function but different origins).",
+      "explanation": "Serial homology refers to the repetition of similar structures within a single organism, derived from the same developmental program but modified in different body regions. Crustacean appendages perfectly illustrate this: antennae, mandibles, maxillae, maxillipeds, walking legs, swimmerets, and uropods are all modifications of the basic arthropod biramous appendage, specified by differential Hox gene expression along the anterior-posterior axis. Each appendage type is serially homologous to the others—they share the same basic developmental origin but have been modified for different functions. This contrasts with between-organism homology (bat wing and human arm, derived from the same ancestral structure in different species) and analogy/convergence (butterfly wing and bird wing, similar function but different origins).",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -977,10 +970,10 @@
       "type": "MTF",
       "question": "About the Cambrian explosion:\n(I) Nearly all major animal body plans (phyla) appear in the fossil record within a geologically brief period\n(II) The Cambrian explosion was likely driven partly by an increase in atmospheric oxygen levels\n(III) The evolution of predation and hard shells was an important driver of diversification\n(IV) No animal fossils exist before the Cambrian period\nWhich are TRUE?",
       "options": [
-        "TTTF \u2014 I, II, and III are true",
-        "TTFT \u2014 I, II, and IV are true",
-        "TTTT \u2014 All are true",
-        "TFTT \u2014 I, III, and IV are true"
+        "TTTF — I, II, and III are true",
+        "TTFT — I, II, and IV are true",
+        "TTTT — All are true",
+        "TFTT — I, III, and IV are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: The vast majority of extant animal phyla appear in the fossil record during a ~20-25 million year interval in the early to middle Cambrian. Statement II is TRUE: Rising oxygen levels during the late Ediacaran-early Cambrian likely enabled the evolution of larger body sizes, active predation, and complex tissues requiring high metabolic rates. Statement III is TRUE: The evolution of predation is considered a key driver, creating arms races that selected for defensive innovations (shells, spines, burrowing) and sensory/locomotory improvements. The coincident appearance of biomineralized skeletons and trace fossils indicating complex burrowing behavior supports this. Statement IV is FALSE: Ediacaran biota (~575-541 MYA) include large, complex organisms, some of which are likely animals (e.g., Dickinsonia, Kimberella). Molecular clock estimates place animal origins well before the Cambrian.",
@@ -1003,7 +996,7 @@
         "Observe embryonic development in a single vertebrate species"
       ],
       "correctAnswer": "A",
-      "explanation": "Testing whether Hox gene duplication contributed to vertebrate complexity requires comparing paralogous Hox genes (duplicates within vertebrates) with their single ortholog in invertebrate chordates like amphioxus (Branchiostoma). The approach: (1) Compare expression domains of paralogous vertebrate Hox genes with the single amphioxus ortholog\u2014if paralogs have diverged in expression, this suggests subfunctionalization or neofunctionalization. (2) Perform functional studies (knockdowns, misexpression) to test whether duplicated genes have acquired distinct developmental roles. (3) Analyze regulatory elements of duplicated genes for evidence of divergent regulation. Evidence that duplicated Hox genes have partitioned ancestral functions (subfunctionalization) or acquired new functions (neofunctionalization) would support the hypothesis that genome duplication provided raw material for evolving vertebrate morphological complexity.",
+      "explanation": "Testing whether Hox gene duplication contributed to vertebrate complexity requires comparing paralogous Hox genes (duplicates within vertebrates) with their single ortholog in invertebrate chordates like amphioxus (Branchiostoma). The approach: (1) Compare expression domains of paralogous vertebrate Hox genes with the single amphioxus ortholog—if paralogs have diverged in expression, this suggests subfunctionalization or neofunctionalization. (2) Perform functional studies (knockdowns, misexpression) to test whether duplicated genes have acquired distinct developmental roles. (3) Analyze regulatory elements of duplicated genes for evidence of divergent regulation. Evidence that duplicated Hox genes have partitioned ancestral functions (subfunctionalization) or acquired new functions (neofunctionalization) would support the hypothesis that genome duplication provided raw material for evolving vertebrate morphological complexity.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1083,7 +1076,7 @@
         "sponges and cnidarians"
       ],
       "correctAnswer": "A",
-      "explanation": "Segmentation\u2014the serial repetition of body units along the anterior-posterior axis\u2014evolved independently at least three times in animal evolution: in annelids (segmented worms), arthropods (insects, crustaceans), and chordates (vertebrae, somites). Despite these independent origins, some of the same developmental genetic toolkit is used: Notch-Delta signaling and cycling gene expression (hairy/hes genes) are involved in segmentation in all three groups, suggesting possible deep homology of the underlying genetic mechanisms even if the developmental contexts differ. In annelids, segments (metameres) are added sequentially from a posterior growth zone. In arthropods, segmentation is established simultaneously through pair-rule and segment polarity genes. In vertebrates, somites form sequentially through a molecular oscillator (the segmentation clock). This convergence suggests that segmentation confers significant evolutionary advantages: modular body plans allow independent modification of individual segments for specialized functions.",
+      "explanation": "Segmentation—the serial repetition of body units along the anterior-posterior axis—evolved independently at least three times in animal evolution: in annelids (segmented worms), arthropods (insects, crustaceans), and chordates (vertebrae, somites). Despite these independent origins, some of the same developmental genetic toolkit is used: Notch-Delta signaling and cycling gene expression (hairy/hes genes) are involved in segmentation in all three groups, suggesting possible deep homology of the underlying genetic mechanisms even if the developmental contexts differ. In annelids, segments (metameres) are added sequentially from a posterior growth zone. In arthropods, segmentation is established simultaneously through pair-rule and segment polarity genes. In vertebrates, somites form sequentially through a molecular oscillator (the segmentation clock). This convergence suggests that segmentation confers significant evolutionary advantages: modular body plans allow independent modification of individual segments for specialized functions.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1177,10 +1170,10 @@
       "type": "MTF",
       "question": "Evaluate statements about germ layers:\n(I) Diploblastic animals (cnidarians) have ectoderm and endoderm but lack mesoderm\n(II) Triploblastic animals have three germ layers: ectoderm, mesoderm, and endoderm\n(III) The nervous system derives from mesoderm in all animals\n(IV) Mesoderm gives rise to muscles, the circulatory system, and the skeletal system\nWhich are TRUE?",
       "options": [
-        "TTFT \u2014 I, II, and IV are true",
-        "TTTF \u2014 I, II, and III are true",
-        "TFTT \u2014 I, III, and IV are true",
-        "TTTT \u2014 All are true"
+        "TTFT — I, II, and IV are true",
+        "TTTF — I, II, and III are true",
+        "TFTT — I, III, and IV are true",
+        "TTTT — All are true"
       ],
       "correctAnswer": "A",
       "explanation": "Statement I is TRUE: Cnidarians (and ctenophores, in the traditional classification) are diploblastic, possessing ectoderm and endoderm separated by a gelatinous mesoglea. While cnidarians have some mesoderm-like cells, they lack a true mesodermal germ layer. Statement II is TRUE: All bilaterians are triploblastic, with ectoderm (outer layer), mesoderm (middle layer), and endoderm (inner layer) specified during gastrulation. Statement III is FALSE: The nervous system derives from ectoderm, not mesoderm. Neural ectoderm is specified during gastrulation and forms the neural plate, which folds into the neural tube in chordates or forms ventral nerve cords in many protostomes. Statement IV is TRUE: Mesoderm gives rise to muscular, circulatory, and skeletal systems, as well as the excretory system, reproductive system (gonads), and the lining of the coelom.",
@@ -1263,7 +1256,7 @@
         "secreting mucus that traps small organisms"
       ],
       "correctAnswer": "A",
-      "explanation": "Cnidocytes are unique to cnidarians and contain organelles called cnidae, the most common being nematocysts. Each nematocyst consists of a capsule containing a coiled, barbed or pointed tubule under extreme osmotic pressure (~150 atmospheres). When triggered by chemical and mechanical stimuli acting on the cnidocil (a modified cilium), the nematocyst discharges in one of the fastest known biological processes\u2014the tubule everts in approximately 700 nanoseconds with accelerations exceeding 5 million g, generating enough force to penetrate crustacean carapaces. Different nematocyst types serve different functions: penetrating types inject toxins (neurotoxins, hemolysins, cytotoxins); glutinant types produce sticky threads for prey capture; volvent types wrap around prey appendages. A single tentacle may contain millions of cnidocytes. This system is so effective that many non-cnidarian predators (e.g., nudibranchs, ctenophores) have evolved the ability to steal and reuse undischarged nematocysts (kleptocnidae).",
+      "explanation": "Cnidocytes are unique to cnidarians and contain organelles called cnidae, the most common being nematocysts. Each nematocyst consists of a capsule containing a coiled, barbed or pointed tubule under extreme osmotic pressure (~150 atmospheres). When triggered by chemical and mechanical stimuli acting on the cnidocil (a modified cilium), the nematocyst discharges in one of the fastest known biological processes—the tubule everts in approximately 700 nanoseconds with accelerations exceeding 5 million g, generating enough force to penetrate crustacean carapaces. Different nematocyst types serve different functions: penetrating types inject toxins (neurotoxins, hemolysins, cytotoxins); glutinant types produce sticky threads for prey capture; volvent types wrap around prey appendages. A single tentacle may contain millions of cnidocytes. This system is so effective that many non-cnidarian predators (e.g., nudibranchs, ctenophores) have evolved the ability to steal and reuse undischarged nematocysts (kleptocnidae).",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 5,
@@ -1295,7 +1288,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Fossil occurrence data from a Cambrian locality shows: Trilobites \u2014 35% of fossils; Brachiopods \u2014 20%; Anomalocaridids \u2014 5%; Priapulid worms \u2014 8%; Sponges \u2014 12%; Other \u2014 20%. If preservation bias strongly favors organisms with hard parts, the actual living community proportions were most likely:",
+      "question": "Fossil occurrence data from a Cambrian locality shows: Trilobites — 35% of fossils; Brachiopods — 20%; Anomalocaridids — 5%; Priapulid worms — 8%; Sponges — 12%; Other — 20%. If preservation bias strongly favors organisms with hard parts, the actual living community proportions were most likely:",
       "options": [
         "identical to the fossil proportions",
         "even more dominated by trilobites than the fossil record suggests",
@@ -1303,7 +1296,7 @@
         "composed entirely of organisms not represented in the fossil record"
       ],
       "correctAnswer": "C",
-      "explanation": "Preservation bias (taphonomic bias) strongly distorts the fossil record in favor of organisms with hard, mineralized parts (shells, exoskeletons, bones) and against soft-bodied organisms. In the Cambrian community represented by these fossils, trilobites and brachiopods (which have mineralized exoskeletons and shells) are likely overrepresented relative to their actual abundance. Soft-bodied organisms like priapulid worms, other worms, cnidarians, and ctenophores were almost certainly much more abundant in the living community than their 8% + portions of the fossil assemblage suggest. Exceptional Lagerst\u00e4tten (sites with extraordinary soft-tissue preservation, like the Burgess Shale) reveal that soft-bodied organisms typically constituted the majority of Cambrian marine communities. Studies of modern marine communities show that organisms with hard parts typically represent only 15-30% of total species diversity and biomass.",
+      "explanation": "Preservation bias (taphonomic bias) strongly distorts the fossil record in favor of organisms with hard, mineralized parts (shells, exoskeletons, bones) and against soft-bodied organisms. In the Cambrian community represented by these fossils, trilobites and brachiopods (which have mineralized exoskeletons and shells) are likely overrepresented relative to their actual abundance. Soft-bodied organisms like priapulid worms, other worms, cnidarians, and ctenophores were almost certainly much more abundant in the living community than their 8% + portions of the fossil assemblage suggest. Exceptional Lagerstätten (sites with extraordinary soft-tissue preservation, like the Burgess Shale) reveal that soft-bodied organisms typically constituted the majority of Cambrian marine communities. Studies of modern marine communities show that organisms with hard parts typically represent only 15-30% of total species diversity and biomass.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,
@@ -1455,7 +1448,7 @@
     },
     {
       "type": "DATA_INTERPRETATION",
-      "question": "Species discovery rates for major animal groups over the past 250 years show: Vertebrates \u2014 approaching plateau (few new species per year); Insects \u2014 still increasing rapidly (thousands per year); Marine invertebrates \u2014 increasing steadily; Nematodes \u2014 accelerating rapidly with molecular methods. These trends suggest:",
+      "question": "Species discovery rates for major animal groups over the past 250 years show: Vertebrates — approaching plateau (few new species per year); Insects — still increasing rapidly (thousands per year); Marine invertebrates — increasing steadily; Nematodes — accelerating rapidly with molecular methods. These trends suggest:",
       "options": [
         "Vertebrate diversity is well-characterized while vast invertebrate diversity remains undescribed, particularly in soil and deep-sea habitats",
         "All animal species have already been discovered and catalogued",
@@ -1463,7 +1456,7 @@
         "Molecular methods have not improved species discovery rates for any group"
       ],
       "correctAnswer": "A",
-      "explanation": "The differential species discovery rates across animal groups reveal how unevenly our knowledge of biodiversity is distributed. Vertebrate species, being relatively large and conspicuous, have been intensively studied for centuries, and the discovery curve is approaching an asymptote\u2014most extant species are likely known, though new species (particularly amphibians, fish, and small mammals) continue to be described from under-explored regions. In contrast, insects, marine invertebrates, and nematodes have enormous undescribed diversity. Molecular methods (DNA barcoding, environmental DNA) have dramatically accelerated discovery rates for these groups by revealing cryptic species invisible to morphological taxonomy. Current estimates suggest 80-95% of animal species remain undescribed, with the overwhelming majority being arthropods and nematodes in tropical forests, deep oceans, and soil ecosystems.",
+      "explanation": "The differential species discovery rates across animal groups reveal how unevenly our knowledge of biodiversity is distributed. Vertebrate species, being relatively large and conspicuous, have been intensively studied for centuries, and the discovery curve is approaching an asymptote—most extant species are likely known, though new species (particularly amphibians, fish, and small mammals) continue to be described from under-explored regions. In contrast, insects, marine invertebrates, and nematodes have enormous undescribed diversity. Molecular methods (DNA barcoding, environmental DNA) have dramatically accelerated discovery rates for these groups by revealing cryptic species invisible to morphological taxonomy. Current estimates suggest 80-95% of animal species remain undescribed, with the overwhelming majority being arthropods and nematodes in tropical forests, deep oceans, and soil ecosystems.",
       "isOlympiad": true,
       "olympiadLevel": "BBO",
       "campbellUnit": 5,
@@ -1503,7 +1496,7 @@
         "exclusively parasitic lifestyles"
       ],
       "correctAnswer": "C",
-      "explanation": "Lophotrochozoa is a major protostome clade named for two morphological features found in some of its members: the lophophore (a horseshoe-shaped or circular ring of ciliated tentacles used for suspension feeding, found in brachiopods, bryozoans, and phoronids) and the trochophore larva (a distinctive ciliated larval form found in molluscs, annelids, and other groups). Not all lophotrochozoans possess both features\u2014many lack either or both\u2014and the clade is primarily defined by molecular phylogenetic evidence. Major phyla include Mollusca, Annelida, Platyhelminthes (flatworms), Rotifera, Brachiopoda, Bryozoa, and Nemertea (ribbon worms). The molecular basis for this grouping is strong, though the morphological synapomorphies are less clear than for Ecdysozoa. Some lophotrochozoans have spiral cleavage, another traditional character linking annelids and molluscs.",
+      "explanation": "Lophotrochozoa is a major protostome clade named for two morphological features found in some of its members: the lophophore (a horseshoe-shaped or circular ring of ciliated tentacles used for suspension feeding, found in brachiopods, bryozoans, and phoronids) and the trochophore larva (a distinctive ciliated larval form found in molluscs, annelids, and other groups). Not all lophotrochozoans possess both features—many lack either or both—and the clade is primarily defined by molecular phylogenetic evidence. Major phyla include Mollusca, Annelida, Platyhelminthes (flatworms), Rotifera, Brachiopoda, Bryozoa, and Nemertea (ribbon worms). The molecular basis for this grouping is strong, though the morphological synapomorphies are less clear than for Ecdysozoa. Some lophotrochozoans have spiral cleavage, another traditional character linking annelids and molluscs.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
       "campbellUnit": 5,

@@ -1,9 +1,10 @@
 {
-  "batchId": "olympiad-campbell-ch47-animal-development",
-  "subject": "Biology",
-  "topic": "Animal Development",
-  "difficulty": "EXPERT",
-  "totalQuestions": 95,
+  "batch": {
+    "name": "Campbell Ch47 Animal Development — Olympiad Expansion",
+    "version": 1,
+    "source": "olympiad-expansion",
+    "totalQuestions": 95
+  },
   "questions": [
     {
       "type": "MCQ",
