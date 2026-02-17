@@ -504,6 +504,346 @@
       "conceptualDepth": "COMPETITION",
       "difficulty": "EXPERT",
       "topic": "V1 columnar organization"
+    },
+    {
+      "type": "MCQ",
+      "question": "The blood-brain barrier (BBB) prevents most circulating molecules from entering the CNS. What is the structural basis of the BBB?",
+      "options": [
+        "A physical membrane surrounding the entire brain",
+        "Specialized endothelial cells of brain capillaries connected by tight junctions (claudins, occludin, ZO proteins), surrounded by astrocyte end-feet and pericytes, which together restrict paracellular diffusion and require specific transporters (GLUT1 for glucose, LAT1 for amino acids) for essential nutrients to cross from blood to brain",
+        "A layer of bone surrounding the capillaries",
+        "GABA receptors on capillary walls that block molecule entry"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The blood-brain barrier is a neurovascular unit with multiple components: (1) Endothelial cells: Brain capillary endothelial cells have continuous tight junctions (claudin-5, claudin-3, occludin, ZO-1/2/3) that eliminate paracellular gaps. They lack fenestrations and have minimal pinocytosis. (2) Astrocyte end-feet: Cover >99% of capillary abluminal surface. Astrocytes secrete factors (Shh, angiopoietin-1, Wnt) that maintain tight junctions. AQP4 water channels concentrate in end-feet. (3) Pericytes: Regulate BBB permeability, capillary diameter, and immune surveillance. (4) Selective transport: Small lipophilic molecules (O2, CO2, ethanol) diffuse freely. Hydrophilic molecules require transporters: GLUT1 (glucose), LAT1 (amino acids), receptor-mediated transcytosis (insulin, transferrin). >98% of small-molecule drugs and virtually all large molecules are excluded. (5) Circumventricular organs (area postrema, median eminence, OVLT, SFO) lack the BBB, allowing direct blood-brain communication for detecting circulating hormones and toxins. BBB breakdown occurs in MS, Alzheimer's, stroke, and brain tumors.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the organization of the cerebral cortex:\n(I) The neocortex is organized into six layers (I-VI), each with distinct cell types and connectivity — layer IV receives thalamocortical input, layers II/III project to other cortical areas, layer V projects subcortically, and layer VI provides feedback to the thalamus.\n(II) Brodmann mapped 52 distinct cytoarchitectonic areas based on cellular organization, many corresponding to functional areas (e.g., area 4 = motor cortex, area 17 = V1).\n(III) Cortical asymmetry (lateralization) is demonstrated by language localization — Broca's area (speech production) and Wernicke's area (speech comprehension) are predominantly in the left hemisphere.\n(IV) All cortical areas have identical cytoarchitecture with no regional variation.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TFTT",
+        "TTFT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statement I is TRUE: The six-layered neocortex has a canonical circuit. Layer I (molecular) — sparse neurons, dendrites. Layer II/III — small/medium pyramidal neurons, cortico-cortical projections. Layer IV — stellate cells, receives thalamocortical input (thick in sensory cortices). Layer V — large pyramidal neurons (Betz cells in motor cortex), projects to brainstem/spinal cord. Layer VI — corticothalamic feedback. Statement II is TRUE: Korbinian Brodmann (1909) mapped cortical areas based on cytoarchitecture. Area 4 (precentral gyrus) is primary motor cortex with giant layer V Betz cells. Area 17 (calcarine sulcus) is V1 with thick layer IV (stria of Gennari). Areas 3,1,2 (postcentral gyrus) are primary somatosensory cortex. Areas 44/45 are Broca's area. Statement III is TRUE: Language lateralization to the left hemisphere occurs in >95% of right-handed and ~70% of left-handed individuals. Broca's area damage causes non-fluent/expressive aphasia. Wernicke's area damage causes fluent/receptive aphasia. The arcuate fasciculus connects these areas. Split-brain studies (Sperry, Nobel Prize 1981) demonstrated hemispheric specialization: left hemisphere — language, analytical; right hemisphere — spatial, emotional prosody. Statement IV is FALSE: Cytoarchitectural variation is dramatic. V1 has a unique layer IV with sublayers (4Cα, 4Cβ). Motor cortex is agranular (thin layer IV, thick layer V). This variation is the basis of Brodmann's mapping and reflects different computational demands.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers studying brain evolution measured the following across mammalian species:\n\nSpecies | Body mass (kg) | Brain mass (g) | EQ | Neocortex ratio | Social group size\nMouse | 0.03 | 0.4 | 0.5 | 0.40 | 5-10\nCat | 3.5 | 30 | 1.0 | 0.62 | Solitary\nDolphin | 200 | 1500 | 5.3 | 0.80 | 10-100\nHuman | 70 | 1400 | 7.4 | 0.80 | ~150 (Dunbar)\nElephant | 5000 | 5000 | 1.9 | 0.72 | 8-100\n\nWhich conclusion about brain evolution is best supported?",
+      "options": [
+        "Absolute brain size is the sole predictor of intelligence",
+        "Encephalization quotient (brain size relative to body size expectations) and neocortex ratio better predict cognitive complexity than absolute brain size — humans have the highest EQ (7.4) despite elephants having larger brains, and high neocortex ratios in humans and dolphins correlate with large social group sizes, supporting the social brain hypothesis that complex social behavior drove cortical expansion",
+        "All mammals have identical brain-to-body ratios",
+        "Brain mass decreases with increasing body mass across all species"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Brain evolution analysis requires relative measures accounting for body size: (1) EQ = actual brain mass / expected brain mass for body size (allometric scaling E = 0.12 × body^0.67). Humans (EQ 7.4) have brains 7.4× expected — the highest among mammals. Elephants, despite 5000g brains, have EQ of only 1.9 because their body demands proportionally more brain. (2) Neocortex ratio: The proportion of brain occupied by neocortex correlates with social complexity (Dunbar's social brain hypothesis). Humans and dolphins share the highest ratio (0.80). Dunbar predicted human social group size (~150) from neocortex ratio. (3) Social brain hypothesis: The demands of navigating complex social relationships (alliances, deception, cooperation, theory of mind) drove neocortex expansion, particularly prefrontal association areas. This is supported by the correlation between group size and neocortex ratio across primates. (4) Caveats: Corvid birds achieve impressive cognition with small brains through high neuron packing density. Circuit architecture and connectivity may matter more than raw volume.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A neuroscientist wants to determine whether a specific brain region (dmPFC) is necessary for social decision-making in mice. Which approach best establishes causality?",
+      "options": [
+        "Correlate dmPFC activity with social behavior using fMRI",
+        "Combine recording (miniscope calcium imaging during social tasks) with reversible optogenetic silencing (NpHR expressed under CaMKII promoter) specifically during the decision phase — include controls with light to a control region and opsin-negative animals; if social decisions are selectively impaired during dmPFC silencing but not controls, this establishes both correlation and causation",
+        "Permanently lesion the entire prefrontal cortex",
+        "Administer systemic pharmacological agents affecting all brain regions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Establishing causality requires converging evidence from correlation (recording) and manipulation (inactivation): (1) Recording: Miniature microscopes (miniscopes) with GCaMP6f expressed in dmPFC neurons allow monitoring of neural activity in freely behaving mice during social tasks, revealing whether specific populations encode social variables. (2) Optogenetic silencing: NpHR3.0 or GtACR1 under CaMKII promoter provides temporal precision (seconds), spatial specificity (only dmPFC), cell-type specificity (excitatory neurons), and reversibility. Light delivered only during decision epochs controls for nonspecific effects. (3) Essential controls: (a) Light-only (no opsin) — rules out heating artifacts. (b) Opsin in control region — rules out nonspecific arousal. (c) Non-social tasks unaffected — rules out motor/motivational confounds. (4) Permanent lesions are inferior: destroy all cell types, cause inflammation, allow compensation, cannot target specific behavioral epochs. DREADD chemogenetics provide cell-type specificity but lower temporal resolution. Advanced approaches include projection-specific silencing and simultaneous recording from downstream targets.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "MCQ",
+      "question": "The hippocampus is essential for forming new declarative memories. What distinct types of spatial cells have been discovered in the hippocampal formation?",
+      "options": [
+        "The hippocampus only processes auditory information",
+        "Place cells in CA1/CA3 fire at specific locations, grid cells in medial entorhinal cortex fire in hexagonal patterns tiling the environment, head direction cells signal facing direction, and border cells fire near environmental edges — together forming a cognitive map (O'Keefe and Nadel), recognized by the 2014 Nobel Prize to O'Keefe and the Mosers",
+        "Only grid cells exist in the hippocampal formation",
+        "The hippocampus encodes only time, not space"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The hippocampal spatial navigation system includes multiple cell types: (1) Place cells (O'Keefe, 1971): CA1/CA3 pyramidal neurons with location-specific firing (place fields). The ensemble creates a complete spatial map that remaps across environments. (2) Grid cells (Moser & Moser, 2005): MEC neurons firing at regular hexagonal grid vertices. Different grid spacings, orientations, and phases provide a metric coordinate system. (3) Head direction cells: Tuned to specific head orientations regardless of position. Found in presubiculum, anterior thalamus. Updated by vestibular and visual landmark input. (4) Border/boundary cells: Fire near environmental edges at specific distances. Anchor spatial maps to geometry. (5) Speed cells: Encode running velocity for path integration. (6) Time cells: Fire at specific moments during temporal gaps. Nobel Prize 2014: O'Keefe (place cells) and May-Britt/Edvard Moser (grid cells) for discovering the brain's positioning system.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the basal ganglia:\n(I) The basal ganglia consist of the striatum (caudate + putamen), globus pallidus (GPe, GPi), subthalamic nucleus (STN), and substantia nigra (SNc, SNr).\n(II) The direct pathway (D1-MSNs → GPi/SNr) disinhibits thalamocortical circuits to facilitate movement.\n(III) The indirect pathway (D2-MSNs → GPe → STN → GPi/SNr) increases thalamic inhibition to suppress unwanted movements.\n(IV) Parkinson's disease results from excessive dopamine in the substantia nigra.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TFTT",
+        "TTFT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements I-III are TRUE: The direct pathway facilitates movement: cortex activates D1-MSNs (Gs-coupled D1 receptors excited by dopamine) → inhibit GPi/SNr → release thalamus from inhibition → thalamus excites motor cortex. The indirect pathway suppresses movement: cortex activates D2-MSNs (Gi-coupled D2 receptors inhibited by dopamine) → inhibit GPe → disinhibit STN → STN excites GPi/SNr → increased thalamic inhibition. Statement IV is FALSE: Parkinson's disease is caused by degeneration and LOSS of dopaminergic neurons in SNc, not excess. Loss of dopamine tips the D1/D2 balance: weakened direct pathway (less facilitation) + strengthened indirect pathway (more suppression) = bradykinesia, rigidity, tremor. Treatment: L-DOPA, dopamine agonists, MAO-B inhibitors, deep brain stimulation of STN.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "MCQ",
+      "question": "The cerebellum constitutes only ~10% of brain volume but contains >50% of all brain neurons. What is the basic circuit architecture of the cerebellar cortex?",
+      "options": [
+        "The cerebellum has random neuronal arrangement",
+        "The cerebellar cortex has a three-layer circuit: molecular layer (parallel fibers + Purkinje dendrites), Purkinje cell layer (sole output — GABAergic to deep cerebellar nuclei), and granular layer (granule cells receiving mossy fiber input) — climbing fibers from the inferior olive provide a powerful teaching signal directly to Purkinje cells for motor learning through LTD at parallel fiber synapses",
+        "The cerebellum contains only interneurons with no output cells",
+        "All cerebellar neurons are excitatory"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The cerebellar cortex has a highly stereotyped circuit: (1) Granular layer: Densely packed granule cells (~50 billion, most numerous neuron) receive mossy fiber input from pontine nuclei, vestibular nuclei, and spinal cord. Granule cell axons ascend and bifurcate into parallel fibers. Golgi cells provide feedback inhibition. (2) Purkinje cell layer: Single row of Purkinje cells — the sole output of cerebellar cortex. GABAergic projections to deep cerebellar nuclei (DCN: dentate, interposed, fastigial). (3) Molecular layer: Parallel fibers run perpendicular to Purkinje dendrites, each contacting ~400 Purkinje cells. Each Purkinje cell receives ~200,000 parallel fiber synapses. Stellate and basket cells provide feedforward inhibition. (4) Climbing fibers: Each Purkinje cell receives one climbing fiber from the inferior olive, forming ~300 synapses. Climbing fiber activation = complex spike. Coincident parallel fiber and climbing fiber activation induces LTD at parallel fiber synapses (PKC-dependent AMPA receptor endocytosis) — the cellular basis of motor learning.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "MCQ",
+      "question": "The amygdala is the brain's fear center. What circuit mediates Pavlovian fear conditioning?",
+      "options": [
+        "The cerebellum processes fear through Purkinje cells",
+        "Convergent CS (tone via auditory thalamus/cortex) and US (shock via somatosensory pathways) inputs onto lateral amygdala neurons induce NMDA-dependent LTP at the CS synapse, so the CS alone subsequently activates central amygdala outputs to PAG (freezing), hypothalamus (autonomic responses), and brainstem (startle enhancement)",
+        "The hippocampus alone mediates all fear responses",
+        "Fear is processed in the spinal cord without brain involvement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The amygdala fear circuit: (1) CS pathway: Auditory input reaches lateral amygdala (LA) via fast thalamic route (auditory thalamus → LA) and slower cortical route (auditory cortex → LA). (2) US pathway: Pain/somatosensory → posterior thalamus/insular cortex → LA. (3) Convergence and LTP: CS+US pairing at LA neurons induces NMDA-dependent LTP at CS synapses (Hebbian strengthening). After conditioning, CS alone activates LA. (4) Output: LA → BLA → CeA. CeA projects to: PAG (freezing), lateral hypothalamus (sympathetic activation), PVN (HPA axis/cortisol), parabrachial nucleus (respiratory changes). (5) Extinction: Repeated CS without US reduces fear via new inhibitory learning involving infralimbic PFC → intercalated cells → CeA inhibition. Original memory persists (can return via spontaneous recovery, renewal, reinstatement). (6) Clinical: Amygdala dysfunction underlies PTSD, phobias, anxiety disorders.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers studying sleep architecture recorded the following data:\n\nStage | EEG | Frequency | Amplitude | EMG | Duration/cycle\nWake (alert) | Beta | 13-30 Hz | Low | Active | N/A\nNREM 1 | Theta | 4-7 Hz | Low-moderate | Reduced | 5-10 min\nNREM 2 | Spindles + K-complexes | 12-14 Hz bursts | Variable | Low | 10-25 min\nNREM 3 (SWS) | Delta | 0.5-4 Hz | High | Very low | 20-40 min\nREM | Mixed theta/beta-like | Variable | Low | Atonia | 10-60 min\n\nWhich interpretation is best supported?",
+      "options": [
+        "All sleep stages have identical EEG patterns",
+        "Sleep stages show progressively slower, higher-amplitude EEG waves during NREM (reflecting increasing cortical synchronization), while REM paradoxically shows wake-like desynchronized activity with muscle atonia — the complete NREM-REM cycle repeats every ~90 minutes, with SWS dominating early night (memory consolidation via hippocampal replay during slow oscillations) and REM dominating late night",
+        "Sleep is simply brain inactivity with no organized stages",
+        "REM sleep has the slowest brain waves and deepest unconsciousness"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sleep architecture reveals highly organized cyclical stages: (1) NREM progression: Stage 1 (theta, light sleep) → Stage 2 (sleep spindles from thalamic reticular nucleus, K-complexes) → Stage 3/SWS (delta waves, maximum cortical synchronization — neurons alternate between UP and DOWN states at 0.5-1 Hz). (2) SWS function: Slow oscillations coordinate hippocampal sharp-wave ripples (~200 Hz) with thalamocortical spindles, facilitating systems consolidation (hippocampus → neocortex memory transfer). Growth hormone secretion. Glymphatic waste clearance (amyloid-beta). (3) REM: Paradoxically active brain (desynchronized EEG) despite behavioral sleep. Cholinergic PPN/LDT neurons activate thalamocortex. Muscle atonia from pontine inhibition of spinal motor neurons (REM behavior disorder = atonia failure → act out dreams). Associated with dreaming, emotional memory processing. (4) Two-process model (Borbely): Process S (homeostatic sleep pressure, adenosine accumulation) + Process C (circadian rhythm, SCN-driven). Sleep cycles every ~90 min. Early night: more SWS. Late night: more REM.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Researchers want to test whether individual SCN neurons contain cell-autonomous circadian clocks. Which experiment best tests this?",
+      "options": [
+        "Record EEG from intact animals",
+        "Dissociate SCN into single neurons, culture individually with a PER2::LUC bioluminescent reporter — if isolated neurons show self-sustained ~24h bioluminescence oscillations (with variable periods between cells), the clock is cell-autonomous; compare with intact SCN explants where intercellular coupling synchronizes neurons to a uniform period",
+        "Remove the SCN and observe if the animal still sleeps",
+        "Measure melatonin at two time points"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The PER2::LUC single-cell assay definitively tests cell autonomy: (1) Molecular clock: CLOCK/BMAL1 activate PER/CRY transcription. PER/CRY proteins inhibit CLOCK/BMAL1, creating a ~24h feedback loop. CK1epsilon/delta phosphorylate PER for degradation, resetting the cycle. (2) PER2::LUC reporter: PER2-luciferase fusion reports PER2 protein oscillations in real time via bioluminescence. (3) Single-cell result: Individual SCN neurons sustain oscillations for multiple cycles but with variable periods (~22-26h), demonstrating cell-autonomous clock function with stochastic period variation. (4) Tissue coupling: Intact SCN explants show synchronized, precise ~24h oscillations because VIP/VPAC2 signaling and gap junctions couple cells to a common period. (5) Peripheral cells: Fibroblasts/liver cells also oscillate but dampen after a few cycles — SCN neurons are unique in sustaining autonomous oscillations due to intrinsic membrane properties and neuropeptide signaling.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "MCQ",
+      "question": "The thalamus serves as the gateway to the cerebral cortex. Which thalamic nucleus breaks the standard relay pattern?",
+      "options": [
+        "The LGN relays visual information to V1",
+        "The thalamic reticular nucleus (TRN) does not project to cortex — instead, this shell of GABAergic neurons receives collateral input from passing thalamocortical and corticothalamic axons and projects back to thalamic relay nuclei, providing inhibitory gating, generating sleep spindles via T-type Ca2+ channel bursting, and modulating attentional selection of sensory information",
+        "The MGN relays auditory information to A1",
+        "The VPL relays somatosensory information to S1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "All standard thalamic relay nuclei project to specific cortical areas: LGN → V1, MGN → A1, VPL/VPM → S1, VL/VA → motor cortex, mediodorsal → PFC, pulvinar → visual association cortex. The TRN is unique: (1) No cortical projection — only projects to other thalamic nuclei (inhibitory). (2) Receives collaterals from thalamocortical axons (detecting what relay nuclei are sending) and corticothalamic axons (cortical feedback). (3) Generates sleep spindles (12-14 Hz, NREM Stage 2): TRN neurons have T-type Ca2+ channels → low-threshold Ca2+ spikes → rhythmic bursting → entrains relay neurons. (4) Attentional gating: Selective TRN inhibition of specific relay nuclei filters which sensory information reaches cortex. Francis Crick proposed TRN as the attentional searchlight. (5) Clinical: TRN dysfunction may contribute to absence seizures (spike-wave discharges from thalamocortical oscillation abnormalities).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about invertebrate nervous system organization:\n(I) Cnidarians have a nerve net — diffuse, non-centralized neurons allowing radially symmetric responses.\n(II) Planarians show the earliest cephalization — anterior cerebral ganglion with ventral nerve cords.\n(III) Arthropods have segmental ventral ganglia that function semi-independently plus a cerebral ganglion with mushroom bodies (learning) and central complex (navigation).\n(IV) All invertebrate nervous systems are structurally identical to the vertebrate brain.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TFTT",
+        "TTFT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Statements I-III show the evolutionary progression toward centralization: (1) Cnidaria: Simplest nervous system. Bidirectional nerve net without centralization. Some species (box jellyfish) have concentrated neural tissue (rhopalia) with simple eyes. (2) Planaria: First cephalization. Bilobed cerebral ganglion + two ventral nerve cords with transverse commissures (ladder-like). Anterior sensory organs (eyespots, chemoreceptors). (3) Arthropoda: Sophisticated ventral chain ganglia. Brain = protocerebrum (mushroom bodies — olfactory learning analogous to hippocampus), deutocerebrum (antennal/olfactory processing with glomerular organization like vertebrate olfactory bulb), tritocerebrum. Segmental ganglia can control local reflexes independently. (4) Statement IV is FALSE: Fundamental differences include ventral vs dorsal nerve cord, neuron numbers (Drosophila ~100K vs human ~86 billion), absence of myelination in most invertebrates, and different developmental programs. However, molecular conservation is extensive (Hox genes, neurotransmitter systems, Shh/BMP axis).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "MCQ",
+      "question": "The hypothalamus integrates neural and endocrine function. How does it control the autonomic nervous system?",
+      "options": [
+        "The hypothalamus has no autonomic connections",
+        "The anterior/medial hypothalamus activates parasympathetic responses while the posterior/lateral hypothalamus activates sympathetic responses, coordinating autonomic, endocrine, and behavioral outputs for thermoregulation (preoptic area), feeding (arcuate nucleus NPY/AgRP and POMC circuits integrating leptin/ghrelin), water balance (SON/PVN vasopressin neurons), and circadian rhythms (SCN master clock receiving retinal input via melanopsin-containing ipRGCs)",
+        "The hypothalamus only controls voluntary skeletal muscle",
+        "Autonomic responses are controlled by the spinal cord alone"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The hypothalamus is the master autonomic/endocrine integrator: (1) Autonomic: Projects to brainstem (dorsal motor nucleus of vagus for parasympathetic) and spinal cord (IML for sympathetic). Anterior/medial → parasympathetic; posterior/lateral → sympathetic. (2) Thermoregulation: Preoptic area (POA) warm-sensitive neurons → heat dissipation. Cold detection → sympathetic activation. Fever: PGE2 acts on EP3 receptors in POA. (3) Feeding: Arcuate nucleus (ARC): NPY/AgRP neurons (hunger, inhibited by leptin) and POMC/CART neurons (satiety, activated by leptin). Lateral hypothalamus: orexin neurons (wakefulness + hunger). VMH: satiety. (4) Water balance: SON/PVN magnocellular neurons produce vasopressin (ADH) and oxytocin. OVLT osmoreceptors regulate vasopressin release. (5) Circadian: SCN receives light via retinohypothalamic tract from melanopsin-containing ipRGCs. Molecular clock: CLOCK/BMAL1 → PER/CRY feedback loop. (6) Endocrine: PVN parvocellular neurons secrete releasing hormones into hypothalamic-hypophyseal portal system.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Clinical data from neurodegenerative diseases:\n\nDisease | Neurons affected | Pathology | NT deficit | Key genes\nAlzheimer's | Hippocampal/cortical | Aβ plaques + tau tangles | ACh | APP, PSEN1/2, APOE ε4\nParkinson's | SNc dopaminergic | α-synuclein Lewy bodies | Dopamine | SNCA, LRRK2, Parkin, PINK1\nHuntington's | Striatal MSNs | Huntingtin aggregates (polyQ) | GABA | HTT (CAG expansion)\nALS | Upper/lower motor neurons | TDP-43/FUS aggregates | Glutamate (excitotoxicity) | SOD1, C9orf72\n\nWhich interpretation is best supported?",
+      "options": [
+        "All diseases involve the same misfolded protein",
+        "Each disease involves a different misfolded protein forming toxic aggregates in selectively vulnerable neurons — Aβ/tau in hippocampus (memory loss), α-synuclein in SNc (motor symptoms), expanded huntingtin in striatum (chorea), TDP-43 in motor neurons (paralysis) — with shared themes of protein quality control failure, prion-like propagation, mitochondrial dysfunction, and neuroinflammation",
+        "These diseases are entirely environmental with no genetic basis",
+        "Protein aggregates are protective"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Protein misfolding is the unifying theme: (1) Alzheimer's: β-secretase + γ-secretase cleave APP → Aβ42 aggregates (oligomers most toxic). Tau hyperphosphorylation → NFTs spreading through Braak stages. APOE ε4 impairs Aβ clearance. (2) Parkinson's: α-synuclein misfolding → Lewy bodies. SNc neuron loss → striatal dopamine depletion → motor symptoms. LRRK2 (kinase), Parkin/PINK1 (mitochondrial QC). (3) Huntington's: >36 CAG repeats in HTT → polyQ-expanded huntingtin aggregates. Autosomal dominant, fully penetrant. Striatal D2-MSNs most vulnerable. Anticipation in successive generations. (4) ALS: TDP-43 mislocalizes from nucleus to cytoplasmic aggregates in 97% of cases. C9orf72 GGGGCC repeat expansion → toxic dipeptide repeats + RNA foci. (5) Shared mechanisms: proteasome/autophagy overload, prion-like seeding and spreading through neural circuits, mitochondrial dysfunction, microglial neuroinflammation, excitotoxicity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neuroplasticity allows the brain to reorganize throughout life. What is the critical period in visual cortex development, and what molecular mechanisms open and close it?",
+      "options": [
+        "The visual cortex cannot change after birth",
+        "The critical period is a developmental window (approximately postnatal weeks 3-5 in mice, first few years in humans) when visual experience shapes ocular dominance columns — it is opened by maturation of parvalbumin-positive (PV+) GABAergic interneurons that establish inhibitory/excitatory balance, and closed by the accumulation of perineuronal nets (PNNs, chondroitin sulfate proteoglycan-rich ECM structures) around PV+ neurons and myelin-associated inhibitors (Nogo, MAG, OMgp) that restrict structural plasticity",
+        "Critical periods last throughout the entire lifespan",
+        "Only excitatory neurons determine critical period timing"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The critical period for ocular dominance plasticity is a paradigm for understanding experience-dependent brain development: (1) Discovery: Hubel and Wiesel showed that monocular deprivation during a critical period causes permanent shift of ocular dominance — deprived-eye cortical responses weaken, open-eye responses strengthen, causing amblyopia. After the critical period, the same deprivation has no effect. (2) Opening: Maturation of PV+ fast-spiking basket cells creates the inhibitory tone necessary for competitive interactions between eye-specific inputs. GABA circuit maturation is triggered by BDNF (brain-derived neurotrophic factor). Benzodiazepine treatment (enhancing GABA_A receptors) can precociously open the critical period. GAD65 knockout mice (reduced GABA) fail to open the critical period until GABA is rescued pharmacologically. (3) Closing — molecular brakes: (a) Perineuronal nets (PNNs): Specialized ECM structures (aggrecan, brevican, neurocan, versican) that form a meshwork around PV+ neurons. PNNs physically restrict synaptic remodeling and protect mature circuits from further modification. Enzymatic removal of PNNs (chondroitinase ABC) reopens plasticity in adult cortex. (b) Myelin-associated inhibitors: Nogo receptor ligands (Nogo-A, MAG, OMgp) signal through NgR1/p75NTR/LINGO-1 receptor complex to activate RhoA, collapsing growth cones and preventing axonal sprouting. (c) Lynx1: An endogenous inhibitor of nicotinic ACh receptors; Lynx1 knockout mice show extended plasticity. (4) Reopening adult plasticity: Besides chondroitinase and genetic manipulations, environmental enrichment, fluoxetine (SSRI), and dark rearing can partially reopen plasticity — potential therapeutic approaches for amblyopia treatment beyond the critical period.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to test the memory engram hypothesis — whether memories are stored as changes in specific neuronal ensembles. Which approach best tests whether reactivation of labeled engram cells is sufficient for memory recall?",
+      "options": [
+        "Lesion large brain regions and observe memory loss",
+        "Use activity-dependent labeling (c-Fos-tTA system) to mark neurons active during fear conditioning with channelrhodopsin, then test whether optogenetic reactivation of those labeled neurons in a neutral context triggers freezing (false memory) — if so, the specific ensemble is sufficient for memory storage",
+        "Record from a single neuron to find the complete memory",
+        "Measure total brain weight changes after learning"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The engram labeling approach (Tonegawa lab, MIT): (1) Activity-dependent labeling: c-Fos (immediate early gene) promoter drives tTA, which activates TRE-ChR2 in a doxycycline-controlled temporal window. During fear conditioning (off-dox), active hippocampal neurons express ChR2. (2) Reactivation: In neutral context (on-dox, window closed), blue light reactivates only the labeled neurons. Result: mice freeze in the neutral context = false memory, demonstrating sufficiency. (3) Silencing: Labeling with inhibitory opsins and silencing during recall prevents memory retrieval = necessity. (4) Key findings: (a) Engram cells are sparse, distributed ensembles with enhanced connectivity. (b) Silent engrams persist even when natural retrieval fails (amnesia models) — optogenetic reactivation restores memories. (c) False memories can be created by co-activating engrams with new experiences. (d) Systems consolidation shifts engram from hippocampus to cortex over weeks.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Nervous Systems"
+    },
+    {
+      "type": "MCQ",
+      "question": "The somatic versus autonomic nervous system divisions differ fundamentally. Which feature best distinguishes the autonomic nervous system's organization?",
+      "options": [
+        "The ANS controls only skeletal muscles",
+        "The ANS uses a two-neuron chain (preganglionic → ganglionic synapse → postganglionic → effector) with sympathetic (thoracolumbar, NE postganglionic) and parasympathetic (craniosacral, ACh postganglionic) divisions that often have opposing effects on target organs, plus an enteric division (~500 million neurons) capable of autonomous gut function",
+        "The ANS has direct single-neuron pathways from CNS to effectors",
+        "The ANS uses only acetylcholine as neurotransmitter"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The ANS two-neuron chain differs from the somatic single-neuron pathway: (1) Sympathetic: T1-L2 preganglionic (short, ACh on nicotinic receptors) → paravertebral/prevertebral ganglia → long postganglionic (NE on adrenergic receptors, except sweat glands = ACh). Adrenal medulla: modified postganglionic cells release epinephrine into blood. Fight-or-flight responses. (2) Parasympathetic: CN III, VII, IX, X + S2-S4 preganglionic (long, ACh/nicotinic) → ganglia near/within target organs → short postganglionic (ACh on muscarinic receptors). Vagus = 75% of parasympathetic fibers. Rest-and-digest. (3) Dual innervation: Most organs receive both sympathetic and parasympathetic input with opposing effects (heart: sympathetic ↑ HR, parasympathetic ↓ HR). (4) Enteric: ~500 million neurons in myenteric (motility) and submucosal (secretion) plexuses. Functions independently if extrinsic nerves severed. 95% of body serotonin in gut. Hirschsprung's disease: absent enteric ganglia from failed neural crest migration.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 49,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Nervous Systems"
     }
   ]
 }
