@@ -53,7 +53,7 @@ export function RealStudentTestimonials({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{title}</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">{subtitle}</p>
         </div>
 
         <div className="relative">
@@ -118,7 +118,7 @@ export function RealStudentTestimonials({
 
                   <div className="relative">
                     <Quote className="absolute -top-2 -left-2 w-6 h-6 text-gray-300" />
-                    <blockquote className="text-gray-700 italic pl-6 pr-2 text-sm leading-relaxed">
+                    <blockquote className="text-gray-800 italic pl-6 pr-2 text-sm leading-relaxed">
                       {testimonial.quote}
                     </blockquote>
                   </div>
@@ -232,7 +232,7 @@ export function RealStudentTestimonials({
 
               <div className="relative bg-white rounded-2xl p-4">
                 <Quote className="absolute -top-2 -left-2 w-6 h-6 text-gray-300" />
-                <blockquote className="text-gray-700 italic pl-6 pr-2">
+                <blockquote className="text-gray-800 italic pl-6 pr-2">
                   {selectedVideo.quote}
                 </blockquote>
               </div>

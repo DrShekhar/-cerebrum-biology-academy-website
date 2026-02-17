@@ -115,7 +115,7 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
                   {course.badge}
                 </span>
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{course.title}</h3>
-                <p className="text-gray-600">{course.subtitle}</p>
+                <p className="text-gray-700">{course.subtitle}</p>
               </div>
 
               <div className="card-body p-6 pt-0">
@@ -152,7 +152,7 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
                       <h3 className="text-2xl font-bold text-gray-900 mb-4">
                         {course.title} Program Details
                       </h3>
-                      <p className="text-gray-600 mb-6">{course.details.description}</p>
+                      <p className="text-gray-700 mb-6">{course.details.description}</p>
 
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-3">Program Features:</h4>
@@ -180,7 +180,7 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
                         </div>
 
                         <div className="border-t pt-4">
-                          <div className="text-sm text-gray-600 mb-2">Duration</div>
+                          <div className="text-sm text-gray-700 mb-2">Duration</div>
                           <div className="text-lg font-semibold text-gray-900 mb-4">
                             {course.details.duration}
                           </div>

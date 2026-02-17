@@ -445,7 +445,7 @@ export function SecondChanceNEETLanding({
                       </div>
                     </div>
 
-                    <blockquote className="text-lg text-gray-700 italic">
+                    <blockquote className="text-lg text-gray-800 italic">
                       "{successStories[currentTestimonial].quote}"
                     </blockquote>
                   </div>

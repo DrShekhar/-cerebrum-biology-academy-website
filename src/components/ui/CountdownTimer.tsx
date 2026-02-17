@@ -82,13 +82,13 @@ export function CountdownTimer({
   ]
 
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex items-center gap-3 ${className}`} suppressHydrationWarning>
       {showIcon && <Clock className="w-6 h-6 text-red-600 animate-pulse" />}
       <div className="flex items-center gap-2">
         {timeUnits.map((unit, index) => (
           <div key={unit.label} className="flex items-center">
-            <div className="bg-red-900 text-white rounded-lg px-3 py-2 min-w-[60px] text-center">
-              <div className="text-2xl font-bold tabular-nums">
+            <div className="bg-red-900 text-white rounded-lg px-3 py-2 min-w-[60px] text-center" suppressHydrationWarning>
+              <div className="text-2xl font-bold tabular-nums" suppressHydrationWarning>
                 {String(unit.value).padStart(2, '0')}
               </div>
               <div className="text-xs uppercase tracking-wide opacity-90">{unit.label}</div>

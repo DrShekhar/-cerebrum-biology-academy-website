@@ -172,7 +172,7 @@ export function VideoTestimonial({
           </div>
 
           {/* Quote */}
-          <blockquote className="text-gray-700 italic mb-4">&ldquo;{quote}&rdquo;</blockquote>
+          <blockquote className="text-gray-800 italic mb-4">&ldquo;{quote}&rdquo;</blockquote>
 
           {/* Rating */}
           <div className="flex items-center">

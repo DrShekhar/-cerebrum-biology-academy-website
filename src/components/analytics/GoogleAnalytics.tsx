@@ -10,15 +10,31 @@ export default function GoogleAnalytics() {
   const [shouldLoad, setShouldLoad] = useState(false)
 
   useEffect(() => {
-    // PERFORMANCE: Defer GA loading until browser is idle (after LCP)
-    // This removes 166KB from the critical render path
-    if ('requestIdleCallback' in window) {
-      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 2000 })
-      return () => cancelIdleCallback(idleId)
-    } else {
-      const timerId = setTimeout(() => setShouldLoad(true), 3000)
+    // PERFORMANCE: Defer GA loading until after page load + browser idle
+    // This removes 166KB from the critical render path and avoids main thread blocking
+    const loadGA = () => {
+      if ('requestIdleCallback' in window) {
+        const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 5000 })
+        return () => cancelIdleCallback(idleId)
+      } else {
+        const timerId = setTimeout(() => setShouldLoad(true), 3000)
+        return () => clearTimeout(timerId)
+      }
+    }
+
+    if (document.readyState === 'complete') {
+      const timerId = setTimeout(loadGA, 3000)
       return () => clearTimeout(timerId)
     }
+
+    const handleLoad = () => {
+      const timerId = setTimeout(loadGA, 3000)
+      window.removeEventListener('load', handleLoad)
+      return () => clearTimeout(timerId)
+    }
+
+    window.addEventListener('load', handleLoad)
+    return () => window.removeEventListener('load', handleLoad)
   }, [])
 
   if (!GA_MEASUREMENT_ID || !shouldLoad) {
