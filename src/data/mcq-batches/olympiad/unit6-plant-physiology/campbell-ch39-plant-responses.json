@@ -929,11 +929,11 @@
       "question": "PAMP-triggered immunity (PTI) is the first layer of plant innate immunity. How do plant PRR (Pattern Recognition Receptor) proteins differ from the adaptive immune receptors of animals?",
       "options": [
         "Plant PRRs are identical to animal Toll-like receptors in structure and function, differing only in cellular location",
-        "Plant PRRs are cell-surface receptor-like kinases (RLKs) or receptor-like proteins (RLPs) that recognize conserved microbial patterns (flagellin by FLS2, EF-Tu by EFR, chitin by CERK1) and activate defense through a MAPK cascade; unlike animal adaptive immunity, plants lack somatic recombination and clonal selection of receptors",
         "Plant PRRs are exclusively intracellular NLR proteins that detect pathogen effectors inside the cell",
+        "Plant PRRs are cell-surface receptor-like kinases (RLKs) or receptor-like proteins (RLPs) that recognize conserved microbial patterns (flagellin by FLS2, EF-Tu by EFR, chitin by CERK1) and activate defense through a MAPK cascade; unlike animal adaptive immunity, plants lack somatic recombination and clonal selection of receptors",
         "Plants have no PRRs and rely entirely on physical barriers (cuticle, cell wall) for pathogen defense"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Plant innate immunity has two tiers: PTI (PAMP-Triggered Immunity) and ETI (Effector-Triggered Immunity). PTI involves cell-surface PRRs that detect conserved microbial/pathogen-associated molecular patterns (MAMPs/PAMPs). The best-characterized PRRs are: FLS2 (FLAGELLIN SENSING 2), an LRR-RLK that recognizes the flg22 epitope of bacterial flagellin; EFR (EF-TU RECEPTOR), an LRR-RLK that detects the elf18 epitope of bacterial EF-Tu (this PRR is restricted to Brassicaceae); CERK1/LYK5 for fungal chitin (an LysM-RLK); and LORE for medium-chain 3-hydroxylated fatty acids. Upon ligand binding, PRRs heterodimerize with co-receptors (BAK1/SERK3 for FLS2 and EFR), undergo transphosphorylation, and activate downstream signaling: BIK1 (receptor-like cytoplasmic kinase), RBOHD (NADPH oxidase for ROS burst), MAPK cascades (MEKK1-MKK4/5-MPK3/6 and MEKK1-MKK1/2-MPK4), calcium influx, callose deposition, and defense gene expression through WRKY transcription factors. Unlike animals, plants lack an adaptive immune system with somatic recombination (V(D)J), antibodies, T-cell receptors, or clonal selection. Instead, plant immune receptors are germline-encoded and evolve through gene duplication and diversifying selection. Intracellular NLR proteins (option C) mediate ETI, the second tier of plant immunity.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -989,11 +989,11 @@
       "question": "Wound signaling in plants involves rapid systemic transmission of defense information. What is the nature of the long-distance wound signal that activates jasmonate biosynthesis in distal leaves?",
       "options": [
         "Jasmonic acid itself is the mobile signal, traveling through the phloem from the wound site to distal leaves",
-        "Wound-induced glutamate release activates GLR (Glutamate Receptor-Like) calcium channels, triggering a propagating calcium and electrical wave through the vasculature at speeds of ~1 cm/s, which activates JA biosynthesis in systemic leaves",
         "Wound-released volatile ethylene activates JA biosynthesis in neighboring leaves through gaseous diffusion",
+        "Wound-induced glutamate release activates GLR (Glutamate Receptor-Like) calcium channels, triggering a propagating calcium and electrical wave through the vasculature at speeds of ~1 cm/s, which activates JA biosynthesis in systemic leaves",
         "The mobile signal is a wound-specific miRNA that travels through plasmodesmata to activate defense gene silencing"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Recent breakthrough research has revealed that long-distance wound signaling involves rapid calcium waves propagating through the vasculature. When a leaf is wounded (e.g., by herbivore feeding), damaged cells release glutamate and other amino acids into the apoplast. Glutamate is perceived by GLR (GLUTAMATE RECEPTOR-LIKE) channels, particularly GLR3.3 and GLR3.6, which are calcium-permeable channels localized in phloem-associated cells. Glutamate binding opens these channels, causing calcium influx. The calcium signal propagates as a wave through the vasculature at approximately 1 cm/second (demonstrated using GCaMP calcium reporters by Masatsugu Toyota et al., 2018, Science). The calcium wave travels through phloem companion cells and possibly through plasmodesmata connecting companion cells. In systemic leaves reached by the calcium wave, the elevated calcium activates calcium-dependent phospholipases that release linolenic acid from membrane lipids, initiating the jasmonate biosynthesis pathway (LOX-AOS-AOC-OPR3). The resulting JA-Ile activates defense gene expression through the COI1-JAZ-MYC2 signaling module. Electrical signals (action potentials and variation potentials) propagate alongside and may contribute to the calcium wave. This system provides rapid (within minutes) systemic defense activation far faster than phloem transport of chemical signals would allow.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1029,11 +1029,11 @@
       "question": "Salt stress triggers both osmotic and ionic stress in plants. How does the SOS (Salt Overly Sensitive) pathway protect Arabidopsis from Na+ toxicity?",
       "options": [
         "SOS proteins form a physical Na+-impermeable barrier in the endodermis Casparian strip, preventing Na+ from reaching the stele",
-        "Salt stress triggers calcium signaling detected by SOS3 (calcium sensor/CBL4), which activates SOS2 (protein kinase/CIPK24), which phosphorylates and activates SOS1 (plasma membrane Na+/H+ antiporter) to export Na+ from the cell, maintaining cytosolic ion homeostasis",
         "SOS proteins sequester Na+ into amyloplasts where it is incorporated into starch granules for permanent storage",
+        "Salt stress triggers calcium signaling detected by SOS3 (calcium sensor/CBL4), which activates SOS2 (protein kinase/CIPK24), which phosphorylates and activates SOS1 (plasma membrane Na+/H+ antiporter) to export Na+ from the cell, maintaining cytosolic ion homeostasis",
         "The SOS pathway degrades all Na+ channel proteins through the proteasome, preventing any Na+ entry into the cell"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The SOS (Salt Overly Sensitive) pathway is the primary mechanism for Na+ exclusion and ion homeostasis under salt stress in Arabidopsis and other plants. The pathway was identified through genetic screens for salt-hypersensitive mutants. (1) Salt stress causes a cytosolic Ca2+ increase (through SCA1 and other calcium channels). (2) The calcium sensor SOS3 (also known as CBL4, Calcineurin B-Like protein 4) binds Ca2+ through its EF-hand domains, undergoing a conformational change. SOS3 is myristoylated, anchoring it to the plasma membrane. (3) Ca2+-bound SOS3 interacts with and activates SOS2 (also known as CIPK24, CBL-Interacting Protein Kinase 24), a serine/threonine protein kinase. SOS3 binding relieves SOS2 autoinhibition and recruits it to the plasma membrane. (4) Activated SOS2 phosphorylates SOS1 (a plasma membrane Na+/H+ antiporter, NHX7), dramatically increasing its Na+ efflux activity. SOS1 uses the proton gradient generated by the H+-ATPase to export Na+ from the cytoplasm to the apoplast. (5) SOS2 also activates NHX1/NHX2 vacuolar Na+/H+ antiporters (using the tonoplast H+-PPase/V-ATPase-generated proton gradient) for Na+ sequestration in the vacuole. Additionally, SOS2 regulates HKT1;1 expression (a Na+ transporter involved in retrieving Na+ from the xylem stream) and various K+ transporters to maintain a favorable K+/Na+ ratio in the cytoplasm.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1049,11 +1049,11 @@
       "question": "RNA interference (RNAi) is an important plant defense mechanism against viruses. How does post-transcriptional gene silencing (PTGS) protect plants from viral infection?",
       "options": [
         "Plants produce antibodies against viral coat proteins that neutralize viral particles before cell entry",
-        "Double-stranded RNA (dsRNA) produced during viral replication is cleaved by DICER-LIKE (DCL) enzymes into small interfering RNAs (siRNAs), which are loaded into ARGONAUTE (AGO) proteins to form RISC complexes that target and degrade complementary viral RNA",
+        "Viral infection triggers the plant cell to synthesize interferon-like proteins that block translation of all mRNAs, halting viral replication along with host processes",
         "Plants methylate all cytosines in their genome during viral infection, preventing the virus from integrating into host DNA",
-        "Viral infection triggers the plant cell to synthesize interferon-like proteins that block translation of all mRNAs, halting viral replication along with host processes"
+        "Double-stranded RNA (dsRNA) produced during viral replication is cleaved by DICER-LIKE (DCL) enzymes into small interfering RNAs (siRNAs), which are loaded into ARGONAUTE (AGO) proteins to form RISC complexes that target and degrade complementary viral RNA"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "RNA silencing is the primary antiviral defense mechanism in plants (analogous to the adaptive immune system of animals in its specificity). The pathway operates as follows: (1) During viral replication, RNA-dependent RNA polymerases (RdRPs) produce double-stranded RNA (dsRNA) replication intermediates. DNA viruses can produce dsRNA through convergent transcription. (2) DICER-LIKE (DCL) RNase III enzymes recognize and cleave the dsRNA into 21-24 nucleotide small interfering RNA (siRNA) duplexes. DCL4 produces 21-nt siRNAs (primary antiviral defense), DCL2 produces 22-nt siRNAs (secondary defense), and DCL3 produces 24-nt siRNAs (for transcriptional silencing). (3) siRNA duplexes are methylated at their 3' ends by HEN1 (HUA ENHANCER 1) for stability. (4) One strand of the siRNA is loaded into an ARGONAUTE (AGO) protein (primarily AGO1 for 21-nt, AGO2 as backup) to form the RNA-Induced Silencing Complex (RISC). (5) RISC uses the siRNA guide strand to identify and cleave complementary viral RNA through AGO's slicer activity. (6) Host RDR6 (RNA-DEPENDENT RNA POLYMERASE 6) amplifies the signal by synthesizing dsRNA from cleaved viral RNA fragments, generating secondary siRNAs. (7) Silencing signals (likely 21-22 nt siRNAs) move systemically through plasmodesmata and phloem. To counter this defense, many plant viruses encode viral suppressors of RNA silencing (VSRs), such as p19 (Tombusviruses), HC-Pro (Potyviruses), and 2b (Cucumoviruses).",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1069,11 +1069,11 @@
       "question": "Phytohormone crosstalk is essential for integrating multiple environmental signals. How do salicylic acid (SA) and jasmonic acid (JA) pathways interact, and what is the ecological significance of this crosstalk?",
       "options": [
         "SA and JA pathways are completely independent with no interaction, allowing plants to simultaneously mount both defense programs at maximum strength",
-        "SA and JA signaling are mutually antagonistic: SA suppresses JA signaling (partly through NPR1-mediated GRX480 induction and TGA factor inhibition of ORA59) and JA suppresses SA accumulation; this allows plants to prioritize defense against biotrophic pathogens (SA) or necrotrophic pathogens/herbivores (JA) depending on the primary threat",
+        "SA-JA crosstalk is an artifact of laboratory conditions and does not occur in natural ecosystems",
         "SA and JA are always synergistic, amplifying each other's effects to create a maximal defense response against all attackers simultaneously",
-        "SA-JA crosstalk is an artifact of laboratory conditions and does not occur in natural ecosystems"
+        "SA and JA signaling are mutually antagonistic: SA suppresses JA signaling (partly through NPR1-mediated GRX480 induction and TGA factor inhibition of ORA59) and JA suppresses SA accumulation; this allows plants to prioritize defense against biotrophic pathogens (SA) or necrotrophic pathogens/herbivores (JA) depending on the primary threat"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "SA-JA antagonism is one of the best-characterized examples of phytohormone crosstalk and has profound ecological implications. The molecular mechanisms of antagonism are complex and operate at multiple levels: (1) SA inhibits JA signaling: SA-activated NPR1 promotes expression of GRX480 (a glutaredoxin that interacts with TGA transcription factors), WRKY70, and other factors that suppress JA-responsive gene expression. NPR1 in the cytoplasm (not nuclear) is important for SA-JA crosstalk. (2) SA suppresses JA biosynthesis by inhibiting LOX, AOS, and other JA pathway enzymes. (3) JA can suppress SA accumulation through unknown mechanisms. (4) The transcription factor ORA59 (JA pathway) and TGA factors (SA pathway) compete for the same promoter elements. The ecological significance is critical: biotrophic pathogens (which feed on living cells) are best countered by the SA/HR response, while necrotrophic pathogens (which kill cells and feed on dead tissue) and herbivorous insects are best countered by JA/ET-mediated defenses. Since these defense strategies are incompatible (cell death helps necrotrophs but hinders biotrophs), the antagonism allows plants to prioritize the appropriate defense. Many pathogens exploit this: Pseudomonas syringae produces coronatine (a JA-Ile mimic) to activate JA signaling and suppress SA-mediated defense.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -1089,11 +1089,11 @@
       "question": "Researchers grew Arabidopsis seedlings on agar plates tilted at 90 degrees and measured root growth angles. Wild-type roots grew vertically downward (gravitropism). A mutant line showed roots growing at a 45-degree angle to gravity instead of straight down. Further analysis showed the mutant had normal starch-filled amyloplasts in columella cells but disrupted auxin distribution (no lateral auxin asymmetry upon gravistimulation). The mutated gene encodes a protein involved in vesicle trafficking. What is the most likely identity of the mutated gene?",
       "options": [
         "AUX1 (auxin influx carrier), because without auxin uptake, cells cannot respond to lateral auxin gradients",
-        "GNOM (an ARF-GEF involved in recycling of PIN proteins to the basal plasma membrane), because disrupted PIN trafficking would prevent the establishment of lateral auxin asymmetry in response to gravity",
+        "TIR1 (auxin receptor), because without auxin perception, cells cannot grow in response to auxin gradients",
         "PGM1 (phosphoglucomutase), because starch-free plastids cannot function as statoliths",
-        "TIR1 (auxin receptor), because without auxin perception, cells cannot grow in response to auxin gradients"
+        "GNOM (an ARF-GEF involved in recycling of PIN proteins to the basal plasma membrane), because disrupted PIN trafficking would prevent the establishment of lateral auxin asymmetry in response to gravity"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "GNOM is a guanine nucleotide exchange factor for ARF GTPases (ARF-GEF) that is essential for the vesicular trafficking of PIN auxin efflux carriers. GNOM specifically mediates the recycling of PIN proteins from endosomal compartments back to the basal plasma membrane, which is crucial for maintaining polar PIN localization and therefore polar auxin transport. The phenotype described—normal amyloplasts but disrupted auxin redistribution—points specifically to a defect in the signal transduction between gravity sensing and auxin redistribution. When columella cells detect gravity (via amyloplast sedimentation), they respond by relocalizing PIN3 and PIN7 to the lower side of the cell. This relocalization requires GNOM-dependent vesicle trafficking. In gnom mutants, PIN proteins are not properly recycled to the polar domain, remaining trapped in endosomes or distributed uniformly. Without polar PIN localization, lateral auxin redistribution cannot occur despite normal gravity sensing. The 45-degree angle rather than completely random growth reflects partial (not complete) loss of GNOM function in a weak allele. AUX1 mutant (option A) would show agravitropic root growth but the defect would be in auxin uptake by elongation zone cells, not in the redistribution step. PGM1 (option C) is excluded because amyloplasts are described as normal. TIR1 (option D) would affect auxin response in all tissues, not specifically auxin redistribution.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -1129,11 +1129,11 @@
       "question": "Gibberellin 2-oxidase (GA2ox) is a key enzyme in gibberellin catabolism. What role does GA2ox play in maintaining GA homeostasis, and how is its expression regulated?",
       "options": [
         "GA2ox converts inactive GA precursors to active gibberellins, and its expression is suppressed by high GA levels",
-        "GA2ox deactivates bioactive GAs (GA1, GA4) and their immediate precursors (GA20, GA9) by 2-beta-hydroxylation, and its expression is upregulated by high GA signaling through a negative feedback mechanism mediated by GA-responsive elements in GA2ox promoters",
+        "GA2ox is a receptor that sequesters excess GA in the vacuole, functioning as a ligand sink rather than a catabolic enzyme",
         "GA2ox adds a glucose moiety to active GAs for storage, and is expressed constitutively regardless of GA levels",
-        "GA2ox is a receptor that sequesters excess GA in the vacuole, functioning as a ligand sink rather than a catabolic enzyme"
+        "GA2ox deactivates bioactive GAs (GA1, GA4) and their immediate precursors (GA20, GA9) by 2-beta-hydroxylation, and its expression is upregulated by high GA signaling through a negative feedback mechanism mediated by GA-responsive elements in GA2ox promoters"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "GA2-oxidases (GA2ox) are 2-oxoglutarate-dependent dioxygenases that catalyze 2-beta-hydroxylation of active gibberellins (GA1, GA4) and their immediate biosynthetic precursors (GA20, GA9), converting them to inactive forms (GA8, GA34, GA29, GA51 respectively). This is the primary mechanism for GA deactivation and plays a crucial role in maintaining GA homeostasis. GA2ox expression is regulated by a negative feedback mechanism: when GA signaling is high (DELLA proteins are degraded), GA biosynthetic genes (GA20ox, GA3ox) are downregulated while GA2ox catabolic genes are upregulated. This feedback involves GA-responsive elements in the GA2ox promoters that are activated when DELLA-free transcription factors become available. When GA levels are low (DELLAs accumulate), the opposite occurs: biosynthetic genes are upregulated and catabolic genes are downregulated. This bidirectional feedback maintains GA levels within a functional range. GA2ox overexpression produces severe dwarf phenotypes (mimicking GA deficiency), confirming its importance. In Arabidopsis, there are multiple GA2ox genes (GA2ox1-8) with different substrate specificities (C19-GA2ox for active GAs and C20-GA2ox for precursors) and expression patterns, providing spatiotemporal control of GA levels in different tissues.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -1149,11 +1149,11 @@
       "question": "Reactive oxygen species (ROS) serve dual roles in plants as both signaling molecules and damaging agents. What is the RBOH-mediated ROS wave, and what is its function in systemic signaling?",
       "options": [
         "ROS produced by mitochondrial electron transport during normal respiration diffuse passively through the plant to trigger defense responses",
-        "RBOH (Respiratory Burst Oxidase Homolog/NADPH oxidase) proteins at the plasma membrane produce superoxide (converted to H2O2) that activates RBOH in adjacent cells through calcium signaling, creating a self-propagating ROS wave that transmits stress information systemically at ~8.4 cm/min",
+        "The ROS wave is limited to the epidermis and functions exclusively in UV-B protection through melanin-like pigment induction",
         "RBOH produces nitric oxide rather than ROS, and this NO wave controls flowering time in response to stress",
-        "The ROS wave is limited to the epidermis and functions exclusively in UV-B protection through melanin-like pigment induction"
+        "RBOH (Respiratory Burst Oxidase Homolog/NADPH oxidase) proteins at the plasma membrane produce superoxide (converted to H2O2) that activates RBOH in adjacent cells through calcium signaling, creating a self-propagating ROS wave that transmits stress information systemically at ~8.4 cm/min"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The RBOH-mediated ROS wave is a remarkable systemic signaling mechanism discovered by Ron Mittler and colleagues. RBOHD (Respiratory Burst Oxidase Homolog D) is a plasma membrane-localized NADPH oxidase that produces superoxide (O2-) in the apoplast, which is rapidly converted to hydrogen peroxide (H2O2) by superoxide dismutase. The ROS wave propagates through a cell-to-cell relay mechanism: (1) Local stress triggers RBOHD activation through calcium binding to its EF-hand domains and phosphorylation by CPKs (calcium-dependent protein kinases) and BIK1. (2) RBOHD produces apoplastic ROS. (3) H2O2 enters neighboring cells through aquaporins (particularly PIP2;1). (4) Intracellular H2O2 activates calcium channels, causing Ca2+ influx. (5) Elevated calcium activates RBOHD in the neighboring cell, producing more ROS. (6) This creates a self-propagating wave. The ROS wave travels at approximately 8.4 cm/minute through the vasculature-associated cells, much faster than phloem transport but slower than electrical signals. The wave is coupled with calcium waves and electrical signals, forming an integrated rapid systemic signaling network. RBOHD is required for systemic acquired acclimation to heat, light, cold, and salt stress. rbohD mutants fail to mount systemic responses. The ROS wave was visualized using luciferase reporters and H2O2-specific fluorescent probes.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1169,11 +1169,11 @@
       "question": "Gravitropism in shoots (stems) differs from root gravitropism in the direction of bending. What explains why high auxin concentration promotes elongation in shoots but inhibits elongation in roots?",
       "options": [
         "Shoot cells and root cells have identical auxin sensitivity but opposite growth responses due to different cell wall composition",
-        "Shoots and roots have different optimal auxin concentrations for elongation: shoot cells have a higher optimal auxin concentration and are stimulated by the levels found on the lower side, while root cells have a much lower optimal concentration and are inhibited by the same levels—this differential sensitivity explains opposite growth responses to the same auxin redistribution",
+        "The direction of bending is determined by ethylene production on the upper side of both organs, with no role for auxin asymmetry",
         "Auxin is not actually involved in shoot gravitropism; only gibberellin mediates the response in stems",
-        "The direction of bending is determined by ethylene production on the upper side of both organs, with no role for auxin asymmetry"
+        "Shoots and roots have different optimal auxin concentrations for elongation: shoot cells have a higher optimal auxin concentration and are stimulated by the levels found on the lower side, while root cells have a much lower optimal concentration and are inhibited by the same levels—this differential sensitivity explains opposite growth responses to the same auxin redistribution"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The Cholodny-Went model explains gravitropism through lateral auxin redistribution, but the key to understanding opposite bending in shoots versus roots lies in their dramatically different auxin dose-response curves. When a plant is placed horizontally, amyloplast sedimentation in gravity-sensing cells (columella in roots, endodermis/starch sheath in shoots) triggers PIN-mediated auxin redistribution to the lower side of both organs. However: In stems, the endogenous auxin concentration is typically below the optimal for elongation. The higher auxin on the lower side stimulates greater elongation there, causing the stem to bend upward (negative gravitropism). In roots, the endogenous auxin concentration is already near or at the optimal level. Additional auxin on the lower side pushes the concentration above the optimum into the supraoptimal/inhibitory range, inhibiting elongation on the lower side while the upper side (with less auxin, near optimal) elongates normally, causing the root to bend downward (positive gravitropism). This differential sensitivity is quantitative: root cells are inhibited by auxin concentrations 100-1000 fold lower than those required to inhibit shoot cells. The molecular basis involves different complements of Aux/IAA and ARF proteins in root and shoot elongation zone cells, leading to different transcriptional outputs at the same auxin concentration.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -1188,12 +1188,12 @@
       "type": "MCQ",
       "question": "Allelopathy involves the release of chemicals by one plant that inhibit the growth of neighboring plants. Which of the following is the best-documented example of allelopathy and its mechanism?",
       "options": [
-        "Black walnut (Juglans nigra) roots and hulls release juglone (5-hydroxy-1,4-naphthoquinone), which inhibits electron transport in mitochondria and chloroplasts of susceptible plants, causing wilting, chlorosis, and death in sensitive species growing within the root zone",
-        "All grasses release cyanide from their roots, killing any broadleaf plants that germinate nearby",
         "Oak trees suppress understory growth exclusively through light competition, with no chemical involvement",
+        "All grasses release cyanide from their roots, killing any broadleaf plants that germinate nearby",
+        "Black walnut (Juglans nigra) roots and hulls release juglone (5-hydroxy-1,4-naphthoquinone), which inhibits electron transport in mitochondria and chloroplasts of susceptible plants, causing wilting, chlorosis, and death in sensitive species growing within the root zone",
         "Corn (Zea mays) secretes auxin from its roots, which at high concentration is toxic to weeds growing between rows"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": "Black walnut allelopathy is one of the most well-studied and unambiguous examples of allelopathy in the plant kingdom. Juglans nigra produces hydrojuglone (1,4,5-trihydroxynaphthalene) in roots, leaves, bark, and fruit hulls. Hydrojuglone is relatively non-toxic but is oxidized to juglone (5-hydroxy-1,4-naphthoquinone) upon exposure to air and soil microorganisms. Juglone is a potent naphthoquinone that functions as an electron acceptor/donor, disrupting normal electron transport in mitochondria (inhibiting complex III) and chloroplasts. It also inhibits specific enzymes and generates reactive oxygen species through redox cycling. The effects on susceptible plants include respiratory inhibition, photosynthesis disruption, membrane damage, and ultimately wilting, chlorosis, and death. Juglone persists in soil within the root zone and can affect plants up to 15-20 meters from the trunk (matching the root spread). Notably, different plant species vary enormously in juglone sensitivity: tomatoes, peppers, and many ornamentals are highly sensitive, while many grasses, some trees, and certain resistant species tolerate juglone. Other well-documented allelopathic systems include sorgoleone from Sorghum bicolor, DIMBOA/DIBOA benzoxazinoids from wheat and rye, and artemisinin from Artemisia annua.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -1209,11 +1209,11 @@
       "question": "A researcher wants to determine whether the mobile flowering signal (florigen) is a protein or a small RNA. She grafts a leaf from a flowering-induced Arabidopsis plant onto a non-induced vegetative recipient. She also uses a mutant sieve element-specific promoter to express a translational fusion of FT-GFP exclusively in the induced leaf's companion cells. What observation would confirm that FT protein is the mobile signal?",
       "options": [
         "Detection of GFP fluorescence exclusively in the grafted leaf with no signal at the shoot apex, proving that the signal is a small RNA that does not require FT protein movement",
-        "Detection of FT-GFP protein at the shoot apical meristem of the recipient plant, demonstrating that FT protein moves from the companion cells through the phloem to the meristem and induces flowering",
+        "The recipient plant flowers regardless of grafting, indicating that no mobile signal exists and flowering is cell-autonomous",
         "Detection of FT mRNA (by RT-PCR) at the shoot apex but no FT-GFP protein, proving that mRNA is the mobile signal",
-        "The recipient plant flowers regardless of grafting, indicating that no mobile signal exists and flowering is cell-autonomous"
+        "Detection of FT-GFP protein at the shoot apical meristem of the recipient plant, demonstrating that FT protein moves from the companion cells through the phloem to the meristem and induces flowering"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "This experimental design tests the florigen identity through phloem-mobile protein tracking. The key prediction of the FT-protein-as-florigen model is that FT protein produced in leaf companion cells must physically move through sieve elements to reach the shoot apical meristem. Using a sieve-element companion cell-specific promoter (such as SUC2 promoter) to drive FT-GFP expression restricts FT-GFP production to the companion cells of the induced leaf. If FT protein is the mobile signal, GFP fluorescence should be detectable at the shoot apical meristem of the recipient, demonstrating long-distance transport through the phloem. This was essentially the approach taken in the landmark experiments by Aki et al. (2008, Science) in rice (using Hd3a-GFP) and Corbesier et al. (2007, Science) in Arabidopsis, which demonstrated that FT/Hd3a protein moves through the phloem. Additional evidence came from heterografting experiments between species (demonstrating florigen universality) and mass spectrometry detection of FT protein in phloem exudates. The movement occurs through sieve plates (the pore diameter allows passage of proteins up to ~67 kDa) and does not require active transport of mRNA—FT mRNA is not detected in phloem exudates or at the meristem.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1229,12 +1229,672 @@
       "question": "Stomatal regulation integrates multiple environmental signals. What is the molecular mechanism by which blue light triggers stomatal opening, independent of photosynthesis?",
       "options": [
         "Blue light photolysis of water molecules inside guard cells generates oxygen and protons, directly causing acidification and opening",
+        "Cryptochrome-mediated blue light signaling inhibits ABA biosynthesis in guard cells, relieving tonic ABA-mediated closure",
         "Blue light activates phototropins (PHOT1/PHOT2) in guard cells, which through BLUS1 kinase and inhibition of PP1 phosphatase, phosphorylate the C-terminal autoinhibitory domain of plasma membrane H+-ATPase; 14-3-3 proteins bind the phosphorylated domain, activating the pump; proton extrusion hyperpolarizes the membrane, opening KAT1 inward K+ channels for potassium uptake, driving water influx and stomatal opening",
-        "Blue light directly isomerizes specialized lipids in the guard cell membrane, creating pores for K+ influx without any protein receptor involvement",
-        "Cryptochrome-mediated blue light signaling inhibits ABA biosynthesis in guard cells, relieving tonic ABA-mediated closure"
+        "Blue light directly isomerizes specialized lipids in the guard cell membrane, creating pores for K+ influx without any protein receptor involvement"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Blue light-induced stomatal opening is mediated by phototropins independently of photosynthetic activity (demonstrated using DCMU to block photosynthesis while retaining blue light opening). The signaling cascade: (1) Blue light is absorbed by PHOT1 and PHOT2 LOV domains in guard cells, triggering autophosphorylation and activation. (2) Activated phototropins phosphorylate and activate BLUS1 (BLUE LIGHT SIGNALING 1), a Ser/Thr kinase specific to guard cells. (3) BLUS1 inhibits type 1 protein phosphatase (PP1/PRSL1), which normally dephosphorylates the H+-ATPase. (4) With PP1 inhibited, the phosphorylation of the penultimate threonine in the C-terminal autoinhibitory domain of the plasma membrane H+-ATPase (AHA1/AHA2) is maintained by a constitutively active kinase. (5) 14-3-3 regulatory proteins bind to the phosphorylated Thr residue, displacing the autoinhibitory domain and fully activating the pump. (6) Active H+-ATPases pump protons out of the guard cell, hyperpolarizing the membrane from ~-120 mV to ~-200 mV. (7) The hyperpolarization opens voltage-gated inward-rectifying K+ channels (KAT1, KAT2, AKT1). (8) K+ influx (along with Cl- and malate2- as counterions) increases osmotic potential. (9) Water follows osmotically through aquaporins, guard cells swell, and the stoma opens. This mechanism works synergistically with photosynthesis-driven CO2 depletion in the substomatal cavity, which also promotes opening through a CO2-sensing mechanism involving carbonic anhydrase and SLAC1.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "The LAZY1 gene family plays a critical role in gravitropism by controlling the direction of auxin redistribution. What phenotype results from loss-of-function mutations in LAZY1?",
+      "options": [
+        "LAZY1 mutants show no gravitropic response at all, growing in random directions",
+        "LAZY1 mutants exhibit reversed gravitropism: shoots grow downward (positive gravitropism) and roots grow upward (negative gravitropism), because lateral auxin redistribution occurs toward the upper side instead of the lower side after gravistimulation",
+        "LAZY1 mutants grow normally but cannot respond to light, showing abolition of phototropism instead of gravitropism",
+        "LAZY1 mutants have constitutively closed stomata due to disruption of ion channel regulation in guard cells"
       ],
       "correctAnswer": "B",
-      "explanation": "Blue light-induced stomatal opening is mediated by phototropins independently of photosynthetic activity (demonstrated using DCMU to block photosynthesis while retaining blue light opening). The signaling cascade: (1) Blue light is absorbed by PHOT1 and PHOT2 LOV domains in guard cells, triggering autophosphorylation and activation. (2) Activated phototropins phosphorylate and activate BLUS1 (BLUE LIGHT SIGNALING 1), a Ser/Thr kinase specific to guard cells. (3) BLUS1 inhibits type 1 protein phosphatase (PP1/PRSL1), which normally dephosphorylates the H+-ATPase. (4) With PP1 inhibited, the phosphorylation of the penultimate threonine in the C-terminal autoinhibitory domain of the plasma membrane H+-ATPase (AHA1/AHA2) is maintained by a constitutively active kinase. (5) 14-3-3 regulatory proteins bind to the phosphorylated Thr residue, displacing the autoinhibitory domain and fully activating the pump. (6) Active H+-ATPases pump protons out of the guard cell, hyperpolarizing the membrane from ~-120 mV to ~-200 mV. (7) The hyperpolarization opens voltage-gated inward-rectifying K+ channels (KAT1, KAT2, AKT1). (8) K+ influx (along with Cl- and malate2- as counterions) increases osmotic potential. (9) Water follows osmotically through aquaporins, guard cells swell, and the stoma opens. This mechanism works synergistically with photosynthesis-driven CO2 depletion in the substomatal cavity, which also promotes opening through a CO2-sensing mechanism involving carbonic anhydrase and SLAC1.",
+      "explanation": "LAZY1 (also called LAZY in rice, DRO1/LAZY4 for root architecture) is a membrane-associated protein required for the correct direction of lateral auxin redistribution during gravitropism. In wild-type plants, gravistimulation causes amyloplast sedimentation in gravity-sensing cells, leading to PIN protein relocalization to the lower cell membrane and auxin redistribution to the lower side. LAZY1 acts between gravity sensing and PIN relocalization. In lazy1 mutants, auxin is paradoxically redistributed toward the UPPER side of the organ instead of the lower side after gravistimulation. This means: in shoots, more auxin accumulates on the upper side, promoting greater elongation there and causing the shoot to bend downward instead of upward (positive instead of negative gravitropism). In roots, more auxin goes to the upper side, inhibiting elongation there and causing the root to bend upward instead of downward. The mechanism involves LAZY1 interaction with RCC1-like domain (RLD) proteins that control vesicular trafficking of PIN proteins. LAZY proteins are localized to the plasma membrane on the lower side of gravity-sensing cells and may guide the directional redistribution of PIN-containing vesicles. The LAZY family includes multiple members with roles in lateral root/branch angle determination. TAC1 (Tiller Angle Control 1) antagonizes LAZY to control shoot branch angle.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Phytochrome-mediated seed germination involves the very low fluence response (VLFR) and the low fluence response (LFR). How do these two response modes differ in their phytochrome dependency and light requirements?",
+      "options": [
+        "VLFR requires phyA activation by extremely low quantities of any wavelength of light and is not red/far-red reversible; LFR requires phyB activation by red light and is classically red/far-red reversible following the Pfr/Ptotal ratio",
+        "Both VLFR and LFR require phyB and are fully red/far-red reversible",
+        "VLFR operates only in dry seeds while LFR operates only in fully imbibed seeds, with the same photoreceptor mediating both",
+        "VLFR requires continuous illumination while LFR requires only a brief pulse, and both are mediated by cryptochrome"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Phytochrome-mediated germination operates through two distinct response modes with different photoreceptor dependencies and photobiological properties. The Very Low Fluence Response (VLFR) is mediated by phytochrome A (phyA) and requires extremely small amounts of light (as low as 0.1 nmol photons/m2). The VLFR is activated by any wavelength that can photoconvert even a tiny fraction of the total phytochrome pool to Pfr (including far-red light, which converts a small equilibrium fraction to Pfr). Critically, the VLFR is NOT red/far-red reversible—once triggered by any light, it cannot be cancelled by a subsequent far-red pulse. This makes biological sense: under soil, seeds receive highly attenuated light of any wavelength, and the VLFR allows germination in response to the slightest indication of proximity to the surface. The Low Fluence Response (LFR) is mediated primarily by phytochrome B (phyB) and requires higher light quantities. It shows the classical red/far-red reversibility (R promotes germination, followed by FR cancels it) because it depends on a threshold Pfr/Ptotal ratio. The LFR allows seeds to distinguish between canopy shade (low R:FR, unfavorable for germination) and open habitats (high R:FR, favorable). A third mode, the High Irradiance Response (HIR), requires prolonged light exposure and is mediated by phyA (FR-HIR) or phyB (R-HIR).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cytokinins are transported in the xylem from roots to shoots. What is the predominant form of cytokinin in the xylem sap, and how is it activated in shoot tissues?",
+      "options": [
+        "Free base cytokinins (trans-zeatin) are transported in xylem and require no further activation in shoots",
+        "Cytokinin ribosides (trans-zeatin riboside, iPR) are the predominant transport forms in xylem; in target shoot tissues, LOG (LONELY GUY) phosphoribohydrolases convert ribosides to bioactive free-base cytokinins in a single step",
+        "Cytokinin glucosides are transported in xylem and are activated by beta-glucosidases in shoot mesophyll cells",
+        "Adenine (the cytokinin precursor) is transported in xylem and converted to active cytokinins de novo in each shoot cell independently"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Cytokinin biosynthesis begins with the addition of an isoprenoid side chain to adenosine 5'-phosphate (AMP, ADP, or ATP) by IPT (isopentenyl transferase) enzymes, producing cytokinin nucleotides. These are partially processed through conventional purine metabolic enzymes to yield cytokinin ribosides and ribotides. The predominant forms in the xylem sap are trans-zeatin riboside (tZR) and isopentenyladenosine (iPR), along with their corresponding nucleotides. These riboside/nucleotide forms are relatively inactive biologically and serve as transport forms. In target tissues, the final activation step is catalyzed by LOG (LONELY GUY) enzymes, which are cytokinin-activating phosphoribohydrolases discovered in rice (Kurakawa et al., 2007, Nature). LOG directly converts cytokinin nucleotides (iPRMP, tZRMP) to the bioactive free-base forms (iP, tZ) by cleaving the ribose 5'-monophosphate in a single step. This contrasts with the previously assumed two-step activation through nucleosidase then nucleotidase. LOG enzymes (9 members in Arabidopsis, LOG1-LOG9) show specific expression patterns, providing spatial control over cytokinin activation. The discovery of LOG revealed that local activation, not just long-distance transport, is critical for cytokinin function in shoot meristem maintenance and other developmental processes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "During phototropism, the Cholodny-Went hypothesis predicts lateral auxin movement from the illuminated to the shaded side. What evidence supports this hypothesis at the molecular level?",
+      "options": [
+        "Radiolabeled IAA experiments showed no difference in auxin concentration between lit and shaded sides, disproving the Cholodny-Went hypothesis entirely",
+        "Blue light triggers PIN3 relocalization from the inner face of endodermal cells to the lateral (outer) face toward the shaded side, and DR5 reporter constructs show higher auxin-responsive gene expression on the shaded side of phototropically stimulated hypocotyls",
+        "Auxin is synthesized de novo exclusively on the shaded side, with no lateral transport involved",
+        "The Cholodny-Went hypothesis has been replaced by the BL-induced growth inhibition model that requires no auxin asymmetry"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Modern molecular evidence has largely validated the Cholodny-Went hypothesis for phototropism, though with important refinements. Key supporting evidence includes: (1) DR5 reporter (auxin-responsive promoter driving GFP/GUS): Unilateral blue light induces stronger DR5 expression on the shaded side of Arabidopsis hypocotyls, directly visualizing the predicted auxin asymmetry. (2) PIN3 relocalization: Blue light perceived by phototropin1 triggers the relocalization of PIN3 (auxin efflux carrier) in hypocotyl endodermal cells from the inner (adaxial) face to the lateral (outer, abaxial) face, directed toward the shaded side. This provides a molecular mechanism for lateral auxin transport. (3) Radiolabeled IAA: While early radiolabeled experiments in Zea coleoptiles showed ~60:40 distribution (lit:shaded), more sensitive measurements confirmed significant lateral auxin redistribution. (4) phot1 and pin3 mutants: phot1 mutants lack phototropism entirely; pin3 mutants show reduced phototropism. (5) ABCB19 auxin transporter: Phosphorylation of ABCB19 by phot1 reduces its efflux activity, potentially contributing to auxin redistribution. The Cholodny-Went model has been updated to include both auxin redistribution and local growth modulation, but lateral auxin asymmetry remains the central mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Mimosa pudica (sensitive plant) rapid leaf folding upon touch is a well-known example of thigmonasty. What is the mechanism of this rapid movement?",
+      "options": [
+        "Rapid turgor loss in pulvinar motor cells on the adaxial side is caused by massive K+, Cl-, and organic anion efflux triggered by mechanically-induced action potentials that propagate through the plant; water exits these cells through aquaporins, and differential turgor between flexor and extensor cells causes leaflet folding within seconds",
+        "Touch triggers rapid auxin degradation in the pulvinus, causing permanent growth inhibition on one side",
+        "Elastic protein fibers in the petiole contract like muscle sarcomeres upon mechanical stimulation",
+        "Touch stimulates explosive stomatal closure across the entire leaf surface, and the resulting water loss causes leaflet drooping"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Mimosa pudica seismonasty involves electrical and hydraulic signaling. When a leaflet is touched: (1) Mechanosensitive ion channels at the stimulus site generate an action potential (AP) through Cl- efflux and Ca2+ influx. (2) The AP propagates through the plant via phloem-associated cells at ~2-3 cm/s, spreading from the stimulated leaflet to adjacent leaflets and through the petiole to the pulvinus. (3) At the pulvinus (the motor organ at the petiole base), the AP triggers massive ion efflux from the motor cells on the adaxial (upper, extensor) side. Specifically: K+ exits through outward K+ channels (SKOR-type), Cl- exits through anion channels, and organic anions (malate, tartrate) are released. Tannin-containing vacuoles also release their contents. (4) The osmotic potential change drives rapid water efflux from these cells through aquaporins (PIP family), causing them to lose turgor and shrink dramatically. (5) Simultaneously, the abaxial (lower, flexor) cells maintain their turgor or gain water. (6) The differential turgor causes the pulvinus to bend, folding the leaflets and dropping the petiole. The entire response takes 1-3 seconds. Recovery takes 15-30 minutes as the cells actively re-accumulate ions and water. The AP also triggers tannin release from specialized tannin-containing cells, which may have a defensive function (making the plant look damaged/wilted to deter herbivores).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Auxin influx into cells involves the AUX1/LAX family of permease-like proteins. Why is auxin influx not purely passive, given that protonated IAA (IAAH) can diffuse across membranes?",
+      "options": [
+        "Auxin influx is indeed entirely passive; AUX1/LAX proteins have no transport function and serve only as structural components of the cell membrane",
+        "At apoplastic pH (~5.5), only ~17% of IAA is protonated (IAAH) and can diffuse passively; the majority is anionic (IAA-) and requires AUX1/LAX proton symporters for uptake, making carrier-mediated influx quantitatively dominant and essential for efficient auxin accumulation in cells",
+        "AUX1/LAX proteins are actually auxin receptors, not transporters, and their role in gravitropism is through signaling rather than transport",
+        "IAAH diffusion is blocked by the cell wall matrix, so all auxin entry requires active transport regardless of pH"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Auxin (IAA) is a weak acid with a pKa of approximately 4.75. In the apoplast (pH ~5.5), the Henderson-Hasselbalch equation predicts that about 83% of IAA exists in the deprotonated, anionic form (IAA-) and only ~17% in the protonated, membrane-permeable form (IAAH). While IAAH can diffuse passively across the lipid bilayer, the anionic IAA- cannot cross the hydrophobic membrane interior due to its negative charge. Therefore, passive diffusion alone is insufficient for rapid and efficient auxin uptake. AUX1/LAX proteins are members of the amino acid permease-like family that function as IAA-/H+ symporters, using the proton motive force (the inward proton gradient generated by H+-ATPases) to actively co-transport IAA- into the cell. This carrier-mediated influx is quantitatively dominant: aux1 mutants show severely reduced auxin uptake (demonstrated with radiolabeled IAA), reduced gravitropic response in roots (agravitropic root phenotype), and altered phyllotaxis. Inside the cell (pH ~7.2), virtually all IAA is in the anionic form (IAA-, >99%) and is trapped—it cannot diffuse back out. This acid-trapping mechanism, combined with AUX1-mediated influx and PIN-mediated polar efflux, drives the directional cell-to-cell auxin transport that underlies all auxin-dependent developmental patterning.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Plant defense against herbivorous insects involves proteinase inhibitors (PIs). How does wounding by caterpillar feeding induce systemic PI production in tomato?",
+      "options": [
+        "Crushed leaf cells release DNA fragments that are recognized by neighboring cells as damage signals, triggering PI production locally without any systemic signal",
+        "Caterpillar oral secretions directly activate PI gene promoters by acting as transcription factors after entering plant cells",
+        "Wounding triggers local JA biosynthesis; the JA precursor OPDA and/or JA-Ile are transported systemically via the phloem; in distal leaves, JA-Ile activates COI1-mediated degradation of JAZ repressors, releasing MYC2 to activate PIN2 (proteinase inhibitor II) gene expression",
+        "Caterpillar saliva contains a proteinase inhibitor that the plant absorbs and redistributes systemically through the xylem"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Systemic PI induction in tomato was one of the first-discovered examples of plant systemic defense signaling, studied extensively by Clarence Ryan and colleagues. The current understanding involves multiple interconnected signals: (1) Local response: Caterpillar feeding damages cells, releasing cell wall fragments (oligogalacturonides as DAMPs) and exposing membrane lipids to lipoxygenases. Caterpillar oral secretions (containing FACs—fatty acid-amino acid conjugates like volicitin) further amplify the wound response. The lipase DAD1 and phospholipase A release linolenic acid from membranes, initiating the octadecanoid pathway: LOX (lipoxygenase) produces 13-HPOT, which is converted by AOS (allene oxide synthase) and AOC (allene oxide cyclase) to 12-OPDA (12-oxo-phytodienoic acid). OPDA is reduced by OPR3 in peroxisomes and conjugated to isoleucine by JAR1 to form JA-Ile. (2) Systemic signal: The wound signal spreads rapidly through the vasculature via the calcium/electrical wave mechanism (GLR channels). Additionally, OPDA and/or JA-Ile themselves travel via the phloem to distal leaves. The peptide hormone systemin (18-amino acid peptide in Solanaceae) also contributes to systemic amplification. (3) In distal leaves: JA-Ile binds to COI1 F-box protein, promoting JAZ repressor degradation and releasing MYC2 to activate PI genes. PIN2 (proteinase inhibitor II) accumulates and inhibits herbivore digestive proteases.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Karrikins are smoke-derived compounds that promote seed germination in fire-following plant species. How are karrikins perceived, and what signaling pathway do they share with strigolactones?",
+      "options": [
+        "Karrikins and strigolactones share the same receptor D14 and signal through identical pathways",
+        "Karrikins are perceived by KAI2 (KARRIKIN INSENSITIVE 2), an alpha/beta hydrolase related to the strigolactone receptor D14; both KAI2 and D14 signal through the shared F-box protein MAX2/D3 but target different SMXL proteins for degradation (KAI2 targets SMAX1/SMXL2 while D14 targets D53/SMXL6,7,8)",
+        "Karrikins are perceived by phytochrome A through a heat-activated conformational change, not through any strigolactone-related pathway",
+        "Karrikins bypass all receptor-mediated signaling and directly activate gibberellin biosynthesis enzymes through allosteric binding"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Karrikins (KARs) are butenolide compounds found in smoke that stimulate germination of many fire-adapted species. The karrikin receptor KAI2 (KARRIKIN INSENSITIVE 2, also called HTL—HYPOSENSITIVE TO LIGHT) is an alpha/beta hydrolase structurally related to the strigolactone receptor D14 (DWARF14). Both KAI2 and D14 belong to the alpha/beta hydrolase superfamily and share a catalytic triad (Ser, His, Asp) that can hydrolyze their respective ligands. Upon ligand binding and hydrolysis, both receptors undergo conformational changes that enable interaction with the shared F-box protein MAX2 (MORE AXILLARY GROWTH 2) / D3. This represents a remarkable example of signaling pathway co-option through receptor paralog diversification. The critical distinction lies in downstream targets: KAI2-MAX2 targets SMAX1 (SUPPRESSOR OF MAX2 1) and SMXL2 for ubiquitination and degradation, controlling seed germination, seedling photomorphogenesis, and root hair development. D14-MAX2 targets D53/SMXL6/SMXL7/SMXL8, controlling shoot branching and mycorrhization. The endogenous ligand for KAI2 (called KAI2 ligand or KL) has not been definitively identified but is hypothesized to be an endogenous butenolide. Karrikins are thought to mimic this endogenous KL signal, with smoke providing a reliable cue for post-fire germination in fire-prone ecosystems.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures ethylene production in tomato fruit at different stages: mature green (MG), breaker (BR), turning (TU), pink (PK), and red ripe (RR). Results: MG = 2 nL/g/h, BR = 8 nL/g/h, TU = 45 nL/g/h, PK = 28 nL/g/h, RR = 12 nL/g/h. She also treats MG fruit with the ethylene perception inhibitor 1-MCP (1-methylcyclopropene). MCP-treated fruit remain green for weeks. What can be concluded?",
+      "options": [
+        "The data show a climacteric ethylene burst peaking at the turning stage; 1-MCP inhibition proves that ethylene perception (not just production) is required for ripening, confirming the autocatalytic System 2 ethylene model where ethylene signaling drives its own production and coordinates ripening",
+        "Ethylene is a byproduct of ripening metabolism and has no regulatory role, since 1-MCP might block ripening through off-target effects on other receptors",
+        "The increasing then decreasing ethylene pattern indicates that ethylene inhibits ripening at high concentrations, explaining why fruit stop producing it after the turning stage",
+        "The data are inconsistent with climacteric ripening because a true climacteric should show continuously increasing ethylene through the red ripe stage"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The data perfectly illustrate the climacteric ethylene burst characteristic of tomato (a classic climacteric fruit). The ethylene production pattern shows: low basal production at mature green (System 1, auto-inhibitory), a sharp rise at breaker and peak at turning stage (System 2, autocatalytic), followed by a decline at pink and red ripe stages as the fruit completes ripening and enters senescence. The peak at turning (not continuously increasing) is expected because System 2 ethylene production is self-limiting—once ripening genes are fully activated and the transcriptional program is complete, ethylene production subsides. The 1-MCP experiment is particularly informative. 1-MCP (1-methylcyclopropene) binds irreversibly to ethylene receptors (ETR1, NR, etc.) in the copper-containing binding site, permanently blocking ethylene perception. The fact that 1-MCP-treated mature green fruit fail to ripen demonstrates that ethylene perception (not just production) is essential for the onset and progression of ripening. This is consistent with the autocatalytic model: System 2 requires ethylene signaling to activate its own biosynthetic genes (ACS2, ACS4, ACO1). Without perception, the positive feedback loop cannot be initiated, no ethylene burst occurs, and ripening is blocked. This is the basis for commercial use of 1-MCP (marketed as SmartFresh) to extend fruit storage life.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Autonomous flowering pathway ensures that plants eventually flower regardless of environmental conditions. What gene network underlies the autonomous pathway in Arabidopsis?",
+      "options": [
+        "The autonomous pathway promotes flowering by activating FT (florigen) expression independently of photoperiod through the circadian clock",
+        "The autonomous pathway represses FLC (FLOWERING LOCUS C) through chromatin modification and RNA processing mechanisms involving FCA, FPA, FLD, FVE, and LD, ensuring gradual FLC silencing and eventual flowering even without vernalization or long-day induction",
+        "The autonomous pathway bypasses all transcription factors and directly activates floral organ identity genes (AP1, AP3, PI, AG) through chromatin loop formation",
+        "The autonomous pathway is simply age-dependent cell division counting, with no gene regulation involved"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The autonomous pathway is one of several genetic pathways controlling flowering time in Arabidopsis. It ensures that plants eventually flower even in non-inductive conditions by constitutively repressing the potent floral repressor FLC (FLOWERING LOCUS C). The autonomous pathway genes include: FCA and FPA (RNA-binding proteins with RRM domains) that affect FLC pre-mRNA processing, promoting polyadenylation at a proximal site in antisense transcripts (COOLAIR) and reducing functional FLC mRNA levels. FLD (FLOWERING LOCUS D), a histone demethylase homologous to human LSD1 (lysine-specific demethylase 1), removes activating histone marks (H3K4me2) from the FLC locus. FVE (a homolog of the retinoblastoma-associated protein MSI4) promotes histone deacetylation at FLC. LD (LUMINIDEPENDENS) is a glutamine-rich nuclear protein that represses FLC through unknown mechanisms. FLOWERING LOCUS K (FLK) is another RNA-binding protein. These proteins collectively reduce FLC expression through RNA processing and chromatin modification. In autonomous pathway mutants (fca, fpa, fld, fve, ld), FLC is constitutively high, causing extremely late flowering. These mutants are highly responsive to vernalization, which silences FLC through a parallel epigenetic mechanism (VIN3/PRC2-mediated H3K27me3). The autonomous pathway provides a baseline FLC repression that allows flowering after a sufficient vegetative period.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Calcium signaling in plants involves specific calcium signatures for different stimuli. What is meant by a calcium signature, and how is specificity achieved?",
+      "options": [
+        "Calcium signatures are fixed concentrations unique to each cell type, with no temporal variation; specificity comes from cell identity alone",
+        "Different stimuli elicit distinct patterns of cytosolic Ca2+ changes (signatures) that vary in amplitude, frequency, duration, and subcellular localization; specificity is decoded by calcium sensor proteins (calmodulin, CDPKs/CPKs, CBLs) with different Ca2+ binding affinities and expression patterns that activate distinct downstream responses",
+        "All stimuli produce identical calcium signals, and specificity comes entirely from the stimulus receptor, not from calcium dynamics",
+        "Calcium signatures refer to the specific calcium channel gene that is activated, with one channel per stimulus type"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Calcium signaling in plants operates through a sophisticated encoding-decoding system. The encoding (calcium signature) involves stimulus-specific patterns of cytosolic Ca2+ elevation that differ in: (1) Amplitude—the peak Ca2+ concentration reached. (2) Duration—how long the elevation lasts. (3) Frequency—for oscillatory signals, the number of spikes per time. (4) Spatial distribution—nucleus, cytoplasm, chloroplast, or mitochondria. (5) Number of transients—single spike vs. sustained elevation vs. oscillation. For example, symbiotic signals from Nod factors produce nuclear calcium oscillations with a specific period (~60 seconds), while cold stress produces a single cytoplasmic spike, and salt stress produces a sustained elevation. The decoding involves multiple families of calcium sensor proteins: Calmodulins (CaMs) and calmodulin-like proteins (CMLs)—have different numbers of EF-hand domains with different Ca2+ binding affinities; CDPKs/CPKs (Calcium-Dependent Protein Kinases, unique to plants)—combine calcium sensing and kinase activity in one protein; CBLs (Calcineurin B-Like proteins)—interact with and activate CIPKs (CBL-Interacting Protein Kinases). Different sensors are activated by different Ca2+ concentration ranges, providing threshold-based decoding. Combined with tissue-specific and stimulus-responsive expression of these sensors, the system generates extraordinary signaling specificity despite using a single second messenger ion.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Phytoalexins are antimicrobial compounds synthesized de novo by plants in response to pathogen attack. Which of the following correctly describes the role of camalexin in Arabidopsis defense?",
+      "options": [
+        "Camalexin is constitutively produced in all Arabidopsis tissues and serves as a preformed physical barrier in the cuticle",
+        "Camalexin is a flavonoid phytoalexin derived from the phenylpropanoid pathway and functions by inhibiting pathogen DNA replication",
+        "Camalexin is an indole-derived phytoalexin synthesized from tryptophan via CYP71A13 and CYP71B15 (PAD3); it is induced by both PAMPs and pathogen effectors, accumulates at infection sites, and disrupts pathogen membranes through its amphipathic indole-thiazole structure",
+        "Camalexin is a volatile terpenoid that repels insect herbivores but has no antimicrobial activity against fungi or bacteria"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Camalexin (3-thiazol-2'-yl-indole) is the major phytoalexin of Arabidopsis thaliana. It is synthesized de novo upon pathogen attack through a well-characterized biosynthetic pathway from tryptophan: (1) Tryptophan is converted to indole-3-acetaldoxime (IAOx) by CYP79B2/CYP79B3. (2) IAOx is converted to indole-3-acetonitrile (IAN) and then to the intermediate dihydrocamalexic acid via CYP71A13 and a glutathione conjugation step (by GSTF6). (3) The final step, converting dihydrocamalexic acid to camalexin, is catalyzed by CYP71B15 (encoded by PAD3—PHYTOALEXIN DEFICIENT 3). Camalexin production is strongly induced by both bacterial pathogens (Pseudomonas syringae) and fungal pathogens (Botrytis cinerea, Alternaria brassicicola). The induction requires MAPK cascade activation (MPK3/MPK6 phosphorylate and activate WRKY33 transcription factor, which directly binds PAD3 and CYP71A13 promoters). Camalexin functions by disrupting pathogen membrane integrity through its amphipathic nature—the hydrophobic indole ring inserts into lipid bilayers while the thiazole ring interacts with the aqueous interface. pad3 mutants are significantly more susceptible to multiple pathogens, confirming its defensive role. Camalexin concentrations can reach millimolar levels at infection sites.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Circadian gating modulates the sensitivity of plant responses to environmental signals depending on the time of day. What is an example of circadian gating in plant hormone signaling?",
+      "options": [
+        "Auxin transport is completely shut down at night by clock-regulated PIN protein degradation, preventing any growth during darkness",
+        "The circadian clock gates ethylene sensitivity such that the triple response can only occur during subjective day",
+        "ABA-induced stomatal closure is more effective during the subjective day because the clock gates expression of SLAC1 anion channels and other ABA signaling components to peak during daytime, coordinating drought response with the period of highest transpiration demand",
+        "Gibberellin signaling is gated to occur only at midnight, explaining why stem elongation occurs exclusively during the dark period"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Circadian gating is the phenomenon whereby the circadian clock modulates the sensitivity of a biological response to an environmental stimulus, making the response stronger or weaker depending on the time of day. A well-documented example is the circadian gating of ABA-induced stomatal closure. Stomata are most responsive to ABA during the subjective day, when transpiration demand is highest and regulation is most needed. The molecular basis involves clock-regulated expression of ABA signaling components: SLAC1 (slow anion channel, required for ABA-induced stomatal closure) transcript levels peak during the day under clock control. Similarly, the expression of ABA receptors (PYR/PYL/RCAR family), SnRK2 kinases, and other signaling intermediates shows circadian oscillation. The transcription factor TOC1/PRR1 directly binds to ABAR/CHLH (a putative ABA receptor) promoter. ABA itself can also provide input to the clock through modulation of PRR5, PRR7, and TOC1 expression. Other examples of circadian gating include: clock-gated cold acclimation (CBF gene induction is stronger when cold occurs at subjective dawn), clock-gated pathogen defense (resistance to Pseudomonas peaks at subjective dawn), and clock-gated growth (hypocotyl elongation is gated to occur during subjective evening/night through PIF4/PIF5 clock regulation).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Gibberellin-mediated stem elongation involves both cell division and cell elongation in the subapical meristem and elongation zone. What is the specific cellular mechanism by which GA promotes cell elongation?",
+      "options": [
+        "GA directly activates expansin proteins by binding to them as an allosteric cofactor",
+        "GA increases turgor pressure by stimulating potassium channel expression, and the increased turgor alone is sufficient for elongation without wall loosening",
+        "GA promotes cell elongation through DELLA degradation, which releases growth-promoting PIF transcription factors that activate genes for cell wall-loosening enzymes (expansins, XTHs), stimulate auxin biosynthesis (YUC genes), and promote cortical microtubule reorientation from longitudinal to transverse, enabling anisotropic cell expansion",
+        "GA triggers endoreduplication (DNA synthesis without cell division), and the increased nuclear size physically expands cells"
+      ],
+      "correctAnswer": "C",
+      "explanation": "GA-promoted stem elongation involves multiple coordinated cellular processes that are largely DELLA-dependent. In the absence of GA, DELLA proteins (RGA, GAI, RGL1-3 in Arabidopsis) sequester growth-promoting transcription factors, particularly PIFs (PIF3, PIF4) and other bHLH proteins. When GA triggers DELLA degradation via the GID1-SCF(SLY1) pathway, these transcription factors are released. The released PIFs and other factors then: (1) Activate expression of cell wall-loosening enzymes including expansins (EXPA1, EXPA8) that disrupt hydrogen bonds between cellulose and hemicellulose, and xyloglucan endotransglucosylase/hydrolases (XTHs) that cleave and relink xyloglucan chains. (2) Promote auxin biosynthesis by upregulating YUC8 and other YUCCA genes, which further contributes to cell elongation through the acid growth mechanism. (3) Promote reorientation of cortical microtubules from longitudinal to transverse orientation. Since cellulose synthase complexes (CESA) track along cortical microtubules, transverse microtubules direct cellulose microfibril deposition in transverse hoops, restricting radial expansion and channeling turgor-driven growth into longitudinal (axial) cell elongation. (4) Activate aquaporin expression for enhanced water uptake. (5) Promote cell cycle progression in subapical meristems through D-type cyclin activation. The integration of wall loosening, turgor, and cytoskeletal reorientation provides the full mechanism for GA-stimulated stem elongation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Mycorrhiza-induced resistance (MIR) is a form of plant immune priming triggered by mycorrhizal symbiosis. How does MIR differ from classical SAR and ISR?",
+      "options": [
+        "MIR is identical to SAR in all molecular aspects, requiring SA and PR gene expression",
+        "MIR does not involve any known defense signaling pathway and instead relies exclusively on physical strengthening of the root cell wall by fungal chitin deposits",
+        "MIR involves priming of JA-dependent defense responses by arbuscular mycorrhizal fungi, similar to ISR but with additional contributions from the mycorrhiza-specific signaling pathway involving strigolactones and the common symbiosis signaling pathway (CSSP/DMI genes)",
+        "MIR suppresses all plant immunity to allow the mycorrhizal fungus to colonize without resistance, increasing pathogen susceptibility"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Mycorrhiza-induced resistance (MIR) is a distinct form of induced resistance that shares features with ISR but has unique components related to the mycorrhizal symbiosis. Like ISR (induced by PGPR), MIR primarily primes JA/ET-dependent defense pathways rather than SA-dependent PR gene expression. Plants colonized by arbuscular mycorrhizal fungi (AMF) show enhanced resistance to root and shoot pathogens and even some herbivores, without constitutive activation of defense genes. Instead, defense responses are primed—they are activated faster and stronger upon subsequent pathogen challenge. The unique aspects of MIR include: (1) The Common Symbiosis Signaling Pathway (CSSP), shared with rhizobial nodulation, involves DMI1 (calcium channel), DMI2 (receptor kinase), and CCaMK/DMI3 (calcium-calmodulin-dependent kinase) that decode the nuclear calcium oscillations triggered by mycorrhizal Myc factors. (2) Strigolactone exudation from roots, which promotes AMF hyphal branching and colonization, also modulates defense priming. (3) Mycorrhizal colonization triggers moderate JA accumulation and changes in the JA/SA balance. (4) Callose deposition and cell wall reinforcement at arbuscular interfaces may contribute to physical defense enhancement. (5) Mycorrhizal networks can transmit defense signals between connected plants (common mycorrhizal networks). MIR does not suppress immunity—rather, the plant carefully regulates its immune responses to tolerate the beneficial fungus while maintaining pathogen resistance.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Epinasty (downward leaf curling) is a classic ethylene-mediated response observed in waterlogged plants. What causes ethylene accumulation during flooding, and how does it lead to adaptive aerenchyma formation?",
+      "options": [
+        "Flooding suppresses ethylene production, and aerenchyma forms through cell division rather than cell death",
+        "Ethylene is absorbed from the atmosphere into floodwater and passively enters roots; aerenchyma forms by mechanical rupture of cortical cells under water pressure",
+        "Flooding increases ethylene biosynthesis in roots (ACC synthase is induced by hypoxia), but the slow diffusion of ethylene through water prevents its escape, causing accumulation; accumulated ethylene then triggers programmed cell death in cortical cells through lysigenous aerenchyma formation mediated by ROS production via RBOH NADPH oxidase, creating gas channels for oxygen transport to submerged roots",
+        "Ethylene has no role in aerenchyma formation; the process is controlled entirely by ABA signaling during drought stress"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Flooding triggers ethylene accumulation through two complementary mechanisms: (1) Increased biosynthesis: Hypoxia (low O2) in waterlogged roots stabilizes Group VII ERF transcription factors (via the N-degron pathway), which induce ACC synthase (ACS) gene expression. Additionally, anaerobic conditions promote ACS activity. (2) Physical entrapment: Ethylene is a gaseous hormone that normally diffuses rapidly from plant tissues into the atmosphere. However, its diffusion rate through water is ~10,000 times slower than through air, so ethylene produced by submerged roots accumulates to high concentrations within the tissue. The accumulated ethylene triggers several adaptive responses: Epinasty occurs because ethylene causes differential growth of the petiole (greater cell elongation on the upper/adaxial side), curling the leaf downward. In roots, ethylene triggers lysigenous aerenchyma formation: ethylene activates RBOHD (NADPH oxidase) in specific cortical cells, producing reactive oxygen species (superoxide and H2O2). These ROS, combined with ethylene-induced metacaspase and nuclease activity, trigger programmed cell death (PCD) specifically in cortical cells in a spatially precise pattern. The dead cells are lysed, creating gas-filled lacunae (aerenchyma) that form continuous channels from the shoot (where oxygen is available) to the root tips, providing an internal aeration pathway. This is the primary adaptation of rice and other flood-tolerant species. Ethylene also promotes adventitious root formation and shoot elongation in deep-water rice (via internode GA/DELLA signaling activated by SNORKEL ERF genes).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "UV-B perception in plants is mediated by UVR8 (UV RESISTANCE LOCUS 8). What is unique about UVR8 as a photoreceptor compared to other plant photoreceptors?",
+      "options": [
+        "UVR8 is a kinase that autophosphorylates upon UV-B exposure, identical in mechanism to phototropins",
+        "UVR8 uses retinal as its chromophore, similar to animal rhodopsins",
+        "UVR8 uses intrinsic tryptophan residues as the UV-B-absorbing chromophore instead of an extrinsic prosthetic group; UV-B absorption disrupts salt bridges between tryptophan residues at the homodimer interface, causing monomerization that enables interaction with COP1 to activate UV-B-responsive gene expression",
+        "UVR8 is a membrane-bound receptor that triggers calcium influx as its primary signaling mechanism"
+      ],
+      "correctAnswer": "C",
+      "explanation": "UVR8 is unique among known photoreceptors because it uses intrinsic amino acid residues rather than an extrinsic chromophore (prosthetic group) for light absorption. While phytochromes use phytochromobilin, phototropins use FMN, and cryptochromes use FAD, UVR8 uses specific tryptophan residues (particularly Trp-233 and Trp-285) arranged at its homodimer interface. In the dark, UVR8 exists as a homodimer stabilized by electrostatic interactions (salt bridges) between charged residues (Arg, Asp) at the dimer interface, with tryptophan indole rings forming cation-pi interactions. UV-B photons (280-315 nm) are absorbed primarily by these interfacial tryptophan residues. The absorption causes excited-state electron transfer from Trp to neighboring Arg residues, neutralizing the salt bridges and disrupting the cation-pi interactions. This triggers rapid monomerization (within seconds of UV-B exposure). Monomeric UVR8 exposes surfaces that interact with COP1 WD40 domain. Remarkably, while COP1 normally functions as a negative regulator of photomorphogenesis (degrading HY5), the UVR8-COP1 interaction converts COP1 into a positive regulator: the complex stabilizes HY5 and activates UV-B-responsive genes, including flavonoid biosynthesis (CHS, CHI), phenylpropanoid pathway, and DNA repair (photolyase) genes. Re-dimerization of UVR8 (mediated by RUP1/RUP2 proteins) terminates signaling. The tryptophan-based perception mechanism makes UVR8 one of the most ancient photoreceptor types.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of hormonal homeostasis includes both biosynthesis and deactivation pathways. For auxin (IAA), what are the major routes of deactivation?",
+      "options": [
+        "IAA is exclusively deactivated by oxidative catabolism through peroxidases, producing indole-3-aldehyde as the sole end product",
+        "IAA cannot be deactivated and instead accumulates indefinitely, with plants relying solely on reducing biosynthesis to lower auxin levels",
+        "IAA is deactivated through conjugation to amino acids (IAA-Asp, IAA-Glu are irreversible; IAA-Ala, IAA-Leu are reversible storage forms) by GH3 acyl acid amido synthetases, and through oxidation to 2-oxindole-3-acetic acid (oxIAA) by DIOXYGENASE FOR AUXIN OXIDATION (DAO) enzymes; these pathways work together to maintain IAA homeostasis",
+        "IAA is transported out of the plant entirely through root exudation as the only mechanism of removal"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Auxin homeostasis requires precise balance between biosynthesis, transport, and multiple deactivation mechanisms. The major deactivation pathways are: (1) Amino acid conjugation by GH3 family proteins: GH3 acyl acid amido synthetases catalyze the ATP-dependent conjugation of IAA to amino acids. This produces two types of conjugates: irreversible conjugates (IAA-Asp, IAA-Glu)—these mark IAA for catabolism and are the primary route for permanent IAA removal. Reversible conjugates (IAA-Ala, IAA-Leu, IAA-Phe)—these serve as storage forms that can be hydrolyzed back to free IAA by IAA-amino acid hydrolases (ILR1/ILL family) when needed, providing a buffering mechanism. (2) Oxidative catabolism by DAO (DIOXYGENASE FOR AUXIN OXIDATION) enzymes: DAO1 and DAO2 are 2-oxoglutarate-dependent dioxygenases that directly oxidize free IAA to 2-oxindole-3-acetic acid (oxIAA), which can be further conjugated to oxIAA-Glc by UDP-glucosyltransferases. The dao1 mutant accumulates excess IAA and shows auxin-overproduction phenotypes. (3) Glucosylation: IAA can be conjugated to glucose by UGT84B1 and other glucosyltransferases, forming IAA-glucose ester conjugates (reversible storage). (4) Methyl esterification: IAMT1 converts IAA to methyl-IAA (MeIAA), a volatile and membrane-permeable transport form. These multiple deactivation mechanisms provide fine-grained spatial and temporal control of active IAA levels.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Systemic wound signaling in plants involves multiple mobile signals acting at different speeds. What is the correct order of signal propagation speed from fastest to slowest?",
+      "options": [
+        "Phloem-mobile peptides > electrical signals > volatile compounds > hydraulic signals",
+        "All wound signals travel at the same speed through the vascular system",
+        "Electrical signals/calcium waves (~1-10 cm/s) > ROS wave (~0.14 cm/s) > hydraulic pressure wave (~variable) > phloem-mobile JA/JA-Ile (~0.01-0.03 cm/s) > volatile organic compounds (distance-dependent diffusion)",
+        "Volatile compounds > electrical signals > hydraulic signals > chemical signals in all cases"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Systemic wound signaling involves a hierarchy of mobile signals with different propagation speeds, ranges, and functions: (1) Electrical signals and calcium waves are the fastest, propagating at approximately 1-10 cm/s through the vasculature. Action potentials (APs) and variation potentials (VPs) travel through phloem-associated cells, with calcium waves propagating through GLR3.3/GLR3.6 channel-mediated relay. These provide the earliest warning to distal tissues (within seconds to minutes). (2) The ROS (RBOHD-mediated) wave travels at approximately 8.4 cm/min (~0.14 cm/s), propagating through apoplastic H2O2 and cell-to-cell RBOHD activation relay. This is coupled with the calcium wave and provides sustained signaling. (3) Hydraulic pressure waves can travel rapidly but are variable depending on tissue hydraulic conductivity. These involve pressure changes in the xylem caused by wound-induced water release. (4) Phloem-mobile chemical signals (JA, JA-Ile, OPDA, systemin peptide in Solanaceae, Pip/NHP for SAR) travel at phloem translocation speeds (~0.01-0.03 cm/s in Arabidopsis), arriving at distal leaves within 30-120 minutes. (5) Volatile organic compounds (MeJA, MeSA, GLVs) depend on gaseous diffusion and air movement, with effectiveness declining rapidly with distance. The integration of these multiple signal types ensures both rapid initial alerting and sustained, specific defense activation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Heavy metal tolerance in plants involves phytochelatins. What is the biosynthesis and function of phytochelatins in heavy metal detoxification?",
+      "options": [
+        "Phytochelatins are small proteins encoded by specific PC genes that are transcriptionally induced by heavy metals",
+        "Phytochelatins are RNA aptamers that bind heavy metal ions in the cytoplasm and target them for excretion through the root epidermis",
+        "Phytochelatins are lipid-based chelators that bind heavy metals in the plasma membrane, preventing their entry into the cell",
+        "Phytochelatins are enzymatically synthesized peptides with the general structure (gamma-Glu-Cys)n-Gly, produced from glutathione by phytochelatin synthase (PCS); they bind heavy metal ions (especially Cd2+, As3+, Hg2+) through their thiol groups and transport the complexes into the vacuole via ABC transporters for sequestration"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Phytochelatins (PCs) are a family of thiol-rich peptides that are the primary mechanism for heavy metal detoxification in plants, fungi, and some animals. They have the general structure (gamma-Glu-Cys)n-Gly where n = 2-11 (most commonly 2-5). Unlike proteins, PCs are not ribosomally synthesized; they are produced enzymatically by phytochelatin synthase (PCS, encoded by PCS1 and PCS2 in Arabidopsis). PCS is a gamma-glutamylcysteine dipeptidyl transpeptidase that uses glutathione (gamma-Glu-Cys-Gly) as substrate, catalyzing the transfer of gamma-Glu-Cys units onto glutathione or existing PCs to build longer chains. PCS is constitutively expressed but is post-translationally activated by heavy metal ions (the metal ion binds to a regulatory domain, activating the enzyme). The multiple cysteine thiol groups in PCs form high-affinity coordination complexes with soft heavy metal ions, especially Cd2+, As3+, Pb2+, Hg2+, and Cu+. The PC-metal complexes (low-molecular-weight complexes, LMW) are transported into the vacuole by ABCC1/ABCC2 (ABC-type) transporters. In the vacuole, additional sulfide ions (from sulfide pathway) are incorporated to form high-molecular-weight (HMW) complexes that are more stable. Vacuolar sequestration effectively removes toxic metals from the cytoplasm. PCS knockout mutants (pcs1/cad1) are hypersensitive to cadmium and arsenic, confirming the essential role of PCs in metal tolerance.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MTF",
+      "question": "Match each mutant phenotype with the affected hormone signaling component:\n1. Constitutive triple response in the dark (short thick hypocotyl, exaggerated hook)\n2. Extremely tall stems, pale green leaves (resembles GA-treated plants)\n3. Bushy plant with excessive axillary branch outgrowth\n4. Viviparous germination (seeds germinate on the parent ear)\n\nA. Loss of DELLA proteins (GA signaling repressors)\nB. ctr1 loss-of-function (constitutive ethylene signaling)\nC. max3/max4 (strigolactone biosynthesis) loss-of-function\nD. vp1/abi3 (ABA signaling) loss-of-function",
+      "options": [
+        "1-B, 2-A, 3-C, 4-D",
+        "1-A, 2-B, 3-D, 4-C",
+        "1-C, 2-D, 3-A, 4-B",
+        "1-D, 2-C, 3-B, 4-A"
+      ],
+      "correctAnswer": "1-B, 2-A, 3-C, 4-D",
+      "explanation": "Each mutant phenotype is diagnostic for disruption of a specific hormone signaling pathway: (1) Constitutive triple response: The triple response (short hypocotyl, radial swelling, exaggerated hook) normally occurs only in the presence of ethylene. CTR1 is a Raf-like kinase that NEGATIVELY regulates ethylene signaling. In ctr1 loss-of-function mutants, ethylene signaling is constitutively active regardless of ethylene presence, producing the triple response even in darkness without ethylene. (2) Tall stems, pale leaves: This resembles plants treated with excess gibberellin. DELLA proteins are growth repressors that are normally degraded by GA signaling. Loss of DELLA function (e.g., quadruple della mutant in Arabidopsis, or slender rice1) mimics constitutive GA signaling, producing tall, slender plants with elongated internodes and reduced chlorophyll. The GA-insensitive wheat varieties of the Green Revolution carry gain-of-function DELLA mutations (Rht). (3) Excessive branching: Strigolactones inhibit axillary bud outgrowth. max3 (CCD7) and max4 (CCD8) encode carotenoid cleavage dioxygenases required for strigolactone biosynthesis. Loss of these genes eliminates strigolactone production, releasing all axillary buds from dormancy and producing extremely bushy plants. (4) Viviparous germination (vivipary): ABA maintains seed dormancy and prevents premature germination. VP1/ABI3 (VIVIPAROUS1/ABA INSENSITIVE 3) is a B3-domain transcription factor essential for ABA signaling during seed maturation. vp1 (maize) and abi3 (Arabidopsis) mutants fail to establish dormancy, and seeds germinate precociously on the parent plant (viviparous phenotype).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Thermomorphogenesis is the adjustment of plant growth in response to warm (non-stressful) temperature. How does warm temperature promote hypocotyl elongation in Arabidopsis?",
+      "options": [
+        "Warm temperature directly activates gibberellin biosynthesis genes independently of any thermosensor, and GA alone drives elongation",
+        "Thermomorphogenesis is entirely cryptochrome-dependent, with blue light sensitivity increasing at warm temperatures",
+        "Warm temperature triggers membrane depolarization that opens stretch-activated channels, and the resulting turgor increase alone drives hypocotyl elongation",
+        "Warm temperature (27-28 C) promotes PIF4 accumulation and activity through multiple mechanisms: phyB thermal reversion (Pfr to Pr) releases PIF4 from degradation, ELF3 (Evening Complex component) phase-separates and loses activity at warm temperatures, and PIF4 directly activates auxin biosynthesis (YUC8) and brassinosteroid signaling genes to drive elongation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Thermomorphogenesis in Arabidopsis involves the integration of multiple thermosensory inputs converging on PIF4 (PHYTOCHROME INTERACTING FACTOR 4) as a central hub. The mechanisms include: (1) Phytochrome B thermal reversion: phyB Pfr (active form) undergoes faster thermal reversion to Pr (inactive form) at warm temperatures. At 27-28 C, Pfr reverts ~2x faster than at 22 C, reducing nuclear Pfr levels and allowing PIF4 to escape degradation and accumulate. This makes phyB a molecular thermosensor. (2) Evening Complex inactivation: The Evening Complex (EC: ELF3-ELF4-LUX) normally represses PIF4 transcription at night. At warm temperatures, the prion-like domain of ELF3 undergoes liquid-liquid phase separation (LLPS), forming condensates that sequester ELF3 away from target promoters. This temperature-dependent phase separation effectively inactivates the EC, de-repressing PIF4 transcription. (3) H2A.Z histone variant eviction: Warm temperature causes eviction of the H2A.Z histone variant from nucleosomes at PIF4 target gene promoters, making chromatin more accessible for transcription. (4) Accumulated PIF4 directly activates YUC8 (auxin biosynthesis), TAA1, and genes in the brassinosteroid signaling pathway, promoting cell elongation. The resulting auxin increase acts through the standard TIR1/AFB-Aux/IAA-ARF pathway to drive acid growth-mediated cell wall loosening. phyB, ELF3, and H2A.Z thus function as independent thermosensors that all converge on PIF4 regulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Abscisic acid biosynthesis occurs through the indirect (carotenoid) pathway. What is the rate-limiting step in ABA biosynthesis, and how is it regulated by drought stress?",
+      "options": [
+        "The rate-limiting step is zeaxanthin epoxidase (ZEP), which is constitutively expressed and unresponsive to stress",
+        "ABA biosynthesis has no rate-limiting step; all enzymes increase equally under drought",
+        "The rate-limiting step is abscisic aldehyde oxidase (AAO3) in the cytoplasm, which is activated by phosphorylation under drought",
+        "The rate-limiting step is 9-cis-epoxycarotenoid dioxygenase (NCED), which cleaves 9-cis-violaxanthin/9-cis-neoxanthin to xanthoxin in plastids; NCED gene expression is rapidly and strongly induced by drought, osmotic stress, and dehydration, providing a transcriptional on-switch for ABA accumulation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "ABA biosynthesis via the indirect (C40 carotenoid) pathway occurs in two cellular compartments. In plastids: zeaxanthin is epoxidized to violaxanthin by ZEP (zeaxanthin epoxidase, also called ABA1), then isomerized to 9-cis-violaxanthin or converted to 9-cis-neoxanthin. The rate-limiting step is the cleavage of these 9-cis-xanthophylls by NCED (9-cis-epoxycarotenoid dioxygenase) to produce xanthoxin (C15) and a C25 apocarotenoid. In Arabidopsis, NCED3 is the major drought-responsive isoform (NCED2, NCED5, NCED6, NCED9 have roles in seeds and other tissues). NCED3 gene expression is rapidly induced (within 15-30 minutes) by drought, salt stress, and exogenous ABA treatment, increasing transcript levels 10-100 fold. This transcriptional regulation is mediated by drought-responsive transcription factors including ANAC055, ANAC072 (RD26), and AREB/ABF factors. NCED3 protein is also regulated post-translationally by subcellular relocalization (from stroma to thylakoid membrane under stress). In the cytoplasm: xanthoxin is converted to abscisic aldehyde by ABA2 (short-chain dehydrogenase/reductase), then to ABA by AAO3 (abscisic aldehyde oxidase, requiring a molybdenum cofactor supplied by ABA3/MCSU). These cytoplasmic steps are not rate-limiting under most conditions. The strong transcriptional regulation of NCED3 makes it the primary control point for stress-induced ABA accumulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Photoprotection in plants involves non-photochemical quenching (NPQ) of excess light energy. What is the xanthophyll cycle, and how does it contribute to photoprotection?",
+      "options": [
+        "The xanthophyll cycle converts chlorophyll a to chlorophyll b under excess light, reducing photon absorption",
+        "Xanthophyll cycling is a light-harvesting enhancement mechanism that increases photosynthetic efficiency under limiting light conditions",
+        "The xanthophyll cycle produces carotenoid antioxidants that directly quench all reactive oxygen species in the stroma",
+        "Under excess light, the thylakoid lumen becomes acidic; low pH activates violaxanthin de-epoxidase (VDE), converting violaxanthin to zeaxanthin via antheraxanthin; zeaxanthin associates with LHCII antenna proteins and PsbS to dissipate excess excitation energy as heat (qE component of NPQ), preventing photodamage to PSII reaction centers"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The xanthophyll cycle is a central component of the rapidly reversible, energy-dependent quenching (qE) component of NPQ. The cycle involves three carotenoid interconversions: Under excess light: (1) Excessive electron flow through the thylakoid electron transport chain leads to accumulation of protons in the thylakoid lumen, lowering lumen pH to ~5-5.5. (2) Low pH activates violaxanthin de-epoxidase (VDE), a lumenal enzyme that sequentially removes epoxide groups from violaxanthin (double-epoxide) to produce antheraxanthin (mono-epoxide) and then zeaxanthin (no epoxide). VDE requires ascorbate as reductant. (3) Zeaxanthin, in concert with the PsbS protein (a PSII subunit that acts as a lumen pH sensor via protonatable glutamate residues), reorganizes LHCII antenna complexes to create energy-dissipating states. Zeaxanthin's lower excited-state energy level (compared to violaxanthin) enables it to accept excess excitation energy from chlorophyll and dissipate it harmlessly as heat through molecular vibrations. Under low light: Zeaxanthin epoxidase (ZEP) converts zeaxanthin back to violaxanthin, restoring efficient light harvesting. The npq1 mutant (lacking VDE) and npq4 mutant (lacking PsbS) are both deficient in qE and show increased photoinhibition under fluctuating light. This photoprotective mechanism is critical for plant survival under natural light conditions, which fluctuate dramatically (sunflecks, cloud cover).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to prove that the CONSTANS (CO) protein functions as a mobile signal from leaves to the shoot apical meristem to induce flowering. She expresses CO under a phloem companion cell-specific promoter (SUC2:CO) in a co mutant background. What result would disprove the hypothesis that CO protein is the mobile flowering signal?",
+      "options": [
+        "The SUC2:CO plants flower at the same time as wild-type, proving CO acts in phloem companion cells",
+        "CO protein is detected in the phloem sap, proving it is the mobile signal",
+        "The SUC2:CO plants never flower, proving CO cannot function in phloem companion cells",
+        "The SUC2:CO plants flower normally, but FT mRNA is detected only in leaves (not at the meristem), while FT protein is detected at the meristem—indicating that CO activates FT transcription in leaves, and it is FT protein (not CO protein) that moves to the meristem as florigen"
+      ],
+      "correctAnswer": "D",
+      "explanation": "This experiment distinguishes between two hypotheses: (1) CO protein is the mobile flowering signal (florigen), or (2) CO functions locally in leaf companion cells to activate a downstream mobile signal (FT). The critical observation that disproves CO mobility as the mechanism: if SUC2:CO rescues flowering in the co mutant (the plant flowers normally), this confirms CO functions in phloem companion cells. However, if CO protein is NOT detected at the shoot apical meristem (by immunolocalization or CO-GFP fusion), while FT protein IS detected there, this proves that CO is not the mobile signal—it acts locally to induce FT expression. The detection of FT mRNA only in leaves (not at the meristem) but FT protein at the meristem confirms that FT mRNA is transcribed in leaf companion cells and FT protein (not mRNA) is the mobile signal. This is essentially what was demonstrated experimentally: CO expression in companion cells (where it activates FT transcription) is both necessary and sufficient for photoperiodic flowering. CO protein does not move long-distance; rather, it is the FT protein (activated by CO) that travels through the phloem to the shoot apical meristem to trigger flowering. This established FT/Hd3a as the molecular identity of florigen.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Callose deposition at plasmodesmata is a rapid defense response that restricts pathogen movement between cells. What enzyme synthesizes callose, and how is its activity regulated during defense?",
+      "options": [
+        "Callose is synthesized by cellulose synthase (CESA) using the same mechanism as cellulose but with different substrate geometry",
+        "Callose is produced by mitochondrial beta-glucan synthases and secreted via exocytosis to the cell surface",
+        "Callose is imported from the apoplast through ABC transporters and deposited at plasmodesmata without any enzymatic synthesis in the cell",
+        "Callose (beta-1,3-glucan) is synthesized by callose synthase/glucan synthase-like (GSL/CalS) enzymes at the plasma membrane; their activity is rapidly induced by pathogen detection through PAMP-triggered calcium influx, MAPK cascade activation, and SA signaling, depositing callose plugs at plasmodesmata and cell wall appositions (papillae) to physically block pathogen spread"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Callose is a beta-1,3-glucan polymer synthesized by plasma membrane-localized callose synthase enzymes (GSL/CalS family; 12 members in Arabidopsis, with CalS1/GSL6 and CalS12/GSL5/PMR4 being most important for defense). Callose synthases use UDP-glucose as substrate and extrude the beta-1,3-glucan chain directly through the plasma membrane into the cell wall/plasmodesmatal space. During pathogen defense: (1) PAMP perception by PRRs (FLS2, CERK1, etc.) triggers rapid calcium influx through CNGC channels. (2) The calcium signal directly activates callose synthases (CalS proteins have calcium-binding domains). (3) MAPK cascade activation (MPK3/MPK6) and CDPK activation further stimulate callose deposition through transcriptional and post-translational regulation. (4) Callose is deposited at two critical locations: plasmodesmata (plugging the symplastic connections to prevent pathogen movement between cells) and cell wall appositions (papillae, formed at attempted penetration sites by powdery mildew and other pathogens). Papillae also contain hydrogen peroxide, phenolics, and antimicrobial proteins. The PMR4/CalS12 mutant (powdery mildew resistant 4) paradoxically shows ENHANCED resistance because loss of callose deposition triggers compensatory SA-dependent defense activation. SA also regulates callose synthase expression. Callose deposition is also regulated during development (sieve plate formation, pollen tube wall, cell plate formation) by different CalS family members.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Autonomous root cap shedding (border cell release) is a feature of root growth. What signals control border cell production, and what defensive functions do border cells serve?",
+      "options": [
+        "Border cells are living cells released from the root cap periphery through pectin-degrading enzyme activity; they remain viable, secrete mucilage and antimicrobial compounds (including extracellular DNA traps analogous to animal neutrophil NETs), attract beneficial microbes, and create a protective biological barrier against root pathogens",
+        "Border cells are fungal hyphae that attach to the root surface and are mistakenly identified as plant cells",
+        "Border cells are produced only under waterlogged conditions as a buoyancy mechanism",
+        "Border cells are dead cells sloughed off passively by physical abrasion as roots grow through soil"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Root border cells are a fascinating and underappreciated aspect of root biology. They are living, metabolically active cells that separate from the root cap periphery through the action of cell wall-modifying enzymes, particularly pectin methylesterases and pectate lyases that dissolve the middle lamella. In many species, border cells are released as individual cells; in some (Arabidopsis), they remain attached as sheets (called border-like cells). Border cells serve multiple defensive functions: (1) Mucilage secretion: Border cells secrete copious amounts of high-molecular-weight mucilage (polysaccharides, glycoproteins) that lubricates root passage through soil, maintains hydration, and traps soil particles. (2) Antimicrobial defense: Border cells secrete antimicrobial compounds including defensins, chitinases, and phytoalexins. Remarkably, border cells also release extracellular DNA (exDNA) that forms web-like structures in the mucilage, functioning as extracellular traps (ETs) analogous to neutrophil extracellular traps (NETs) in animal innate immunity. These DNA traps immobilize and kill bacterial and fungal pathogens. DNase treatment eliminates this defense. (3) Pathogen decoy: Border cells can attract and trap root-parasitic nematodes, diverting them from the root tip. (4) Beneficial microbe recruitment: Border cell exudates selectively attract PGPR and mycorrhizal fungi. Border cell production is regulated by auxin (promotes production), NO, and environmental signals. The root cap maintains border cell production throughout root growth.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Green Revolution semi-dwarf wheat and rice varieties have altered gibberellin signaling. What specific mutations confer the semi-dwarf phenotype in Green Revolution varieties?",
+      "options": [
+        "Semi-dwarf wheat (Rht-B1b, Rht-D1b) carries gain-of-function mutations in DELLA proteins (making them GA-insensitive and constitutive growth repressors), while semi-dwarf rice (sd1) carries a loss-of-function mutation in GA20ox (reducing GA biosynthesis); both result in reduced stem elongation but through different molecular mechanisms",
+        "Semi-dwarf phenotypes result from mutations in phototropin genes that reduce the phototropic elongation response",
+        "Green Revolution varieties have mutations in cellulose synthase genes that reduce cell wall extensibility",
+        "Green Revolution varieties have mutations that increase GA biosynthesis, causing negative feedback that ultimately reduces growth"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Green Revolution semi-dwarf varieties that dramatically increased global food production involve two different molecular mechanisms in GA signaling: (1) Semi-dwarf wheat: The Rht (Reduced height) genes, identified by Norman Borlaug's breeding program, encode DELLA proteins (orthologs of Arabidopsis GAI/RGA). The semi-dwarfing alleles Rht-B1b and Rht-D1b carry mutations in the DELLA domain (N-terminal regulatory domain) that prevent GID1-mediated recognition and ubiquitination. These mutant DELLA proteins cannot be degraded even when GA is present, making them constitutive growth repressors. The plants are therefore GA-insensitive (not GA-deficient)—applying exogenous GA does not rescue the dwarf phenotype. The shortened stems resist lodging (falling over) under heavy grain loads and wind, increasing harvest index. (2) Semi-dwarf rice: The sd1 (semi-dwarf 1) gene encodes GA20-oxidase (GA20ox-2), a key enzyme in bioactive GA biosynthesis. The sd1 allele in IR8 rice (the 'Miracle Rice') carries a loss-of-function deletion that reduces GA20ox activity, lowering bioactive GA levels. Unlike wheat, sd1 rice is GA-deficient, not GA-insensitive—applying exogenous GA rescues the normal height. Both mechanisms reduce stem elongation while maintaining or improving grain yield, since the saved energy from reduced vegetative growth is redirected to grain filling (higher harvest index).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Peptide hormones are increasingly recognized as important plant signaling molecules. What role does the CLE (CLAVATA3/EMBRYO SURROUNDING REGION) peptide family play in shoot and root meristem regulation?",
+      "options": [
+        "CLV3 (CLAVATA3) peptide is secreted from stem cells in the shoot apical meristem, perceived by CLV1/CLV2/CRN receptor kinase complexes in the organizing center below, which repress WUS (WUSCHEL) transcription factor expression; WUS in turn promotes CLV3 expression, creating a negative feedback loop (CLV3-WUS) that maintains a stable stem cell population",
+        "CLE peptides are produced exclusively in roots and have no function in the shoot apical meristem",
+        "CLE peptides function as structural components of the cell wall and have no signaling role",
+        "CLE peptides promote unlimited meristem growth by activating stem cell divisions without any negative feedback"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The CLV3-WUS negative feedback loop is one of the most elegant regulatory circuits in plant development. In the shoot apical meristem (SAM): (1) WUS (WUSCHEL), a WOX-family homeodomain transcription factor, is expressed in the organizing center (OC, a small group of cells beneath the central zone). WUS protein moves through plasmodesmata to the central zone stem cells. (2) In stem cells, WUS activates transcription of CLV3 (CLAVATA3), a 12-amino acid CLE peptide that is secreted into the apoplast after processing from a 96-amino acid precursor. CLV3 is arabinosylated (tri-arabinosylation of a hydroxyproline residue is required for full activity). (3) Secreted CLV3 peptide is perceived by multiple receptor complexes in the OC and surrounding cells: CLV1 (an LRR-RLK), CLV2-CRN/SOL2 (an LRR-RLP and pseudokinase heterodimer), and RPK2/TOAD2. (4) CLV3 perception activates these receptors, which signal through MAPK cascades and the POL/PLL phosphatase to REPRESS WUS transcription in the OC. (5) Reduced WUS leads to reduced CLV3, relieving WUS repression—this negative feedback maintains homeostasis. If stem cells are lost, CLV3 decreases, WUS increases, and new stem cells are specified. If excess stem cells form, CLV3 increases, WUS decreases, and excess cells differentiate. CLV3 mutants have enlarged meristems (fasciated stems) due to unrestrained WUS activity. In root meristems, CLE40 peptide plays an analogous role through ACR4/CLV1 receptors regulating WOX5 expression.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nitric oxide (NO) is a gaseous signaling molecule in plants with roles in defense, development, and stress responses. How is NO produced in plants, and what are its major signaling mechanisms?",
+      "options": [
+        "NO is produced through multiple routes: nitrate reductase (NIA1/NIA2) reduces nitrite to NO under certain conditions, and non-enzymatic reduction of nitrite occurs at low pH; NO signals by S-nitrosylation of cysteine residues on target proteins (including NPR1, TIR1, RBOHD, and PYR/PYL ABA receptors), modulating their activity in defense, hormone signaling, and stress responses",
+        "Plants do not produce NO; all NO in plant tissues comes from soil bacteria in the rhizosphere",
+        "NO is produced only by mitochondrial cytochrome c oxidase as a byproduct of respiration and has no intentional signaling function",
+        "NO in plants is produced exclusively by a canonical nitric oxide synthase (NOS) identical to animal iNOS"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Nitric oxide (NO) is an important gaseous signaling molecule in plants, though its biosynthesis is less clearly defined than in animals (which have dedicated NOS enzymes). In plants, NO is produced through multiple routes: (1) Nitrate reductase (NR/NIA)-dependent: NIA1 and NIA2 (cytoplasmic nitrate reductases that normally reduce NO3- to NO2-) can also reduce nitrite (NO2-) to NO under conditions of high nitrite, low oxygen, or specific post-translational regulation. This is a major source of NO in plants. (2) Polyamine/hydroxylamine oxidation: Oxidation of polyamines and hydroxylamines by amine oxidases. (3) Non-enzymatic: At acidic pH (e.g., in the apoplast or aleurone acidified compartments), nitrite can be non-enzymatically reduced to NO, particularly in the presence of ascorbic acid. (4) A plant NOS-like activity has been detected but no canonical NOS gene has been identified in plant genomes. NO signals primarily through: S-nitrosylation—the covalent modification of cysteine thiol groups to form S-nitrosothiols (SNOs). Key targets include NPR1 (S-nitrosylation promotes oligomerization, keeping NPR1 inactive in the absence of pathogen attack), TIR1 (S-nitrosylation enhances auxin receptor binding), RBOHD (S-nitrosylation at Cys890 inhibits its activity, providing negative feedback on the ROS burst), and PYR1/PYL ABA receptors (S-nitrosylation reduces ABA binding). GSNO reductase (GSNOR1) regulates overall S-nitrosylation levels by metabolizing GSNO (S-nitrosoglutathione), the major NO reservoir. gsnor1 mutants have elevated SNO levels and compromised defense responses.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "The SCFTIR1/AFB auxin signaling pathway is mechanistically similar to which other plant hormone signaling pathways in its use of F-box proteins to degrade transcriptional repressors?",
+      "options": [
+        "SCF(COI1) in jasmonate signaling (degrades JAZ repressors) and SCF(SLY1/GID2) in gibberellin signaling (degrades DELLA repressors) both use the same core logic: hormone acts as molecular glue promoting F-box protein-repressor interaction, leading to ubiquitination and proteasomal degradation of the repressor to activate transcription",
+        "Only the ethylene pathway shares this mechanism, with EIN2 acting as the F-box protein",
+        "No other plant hormone pathway uses F-box-mediated repressor degradation; auxin signaling is unique in this regard",
+        "The brassinosteroid pathway through BRI1 kinase uses the same F-box mechanism to degrade BES1"
+      ],
+      "correctAnswer": "A",
+      "explanation": "A remarkable convergent feature of plant hormone signaling is the repeated use of the SCF (Skp1-Cullin-F-box) E3 ubiquitin ligase pathway to control hormone-dependent gene expression through degradation of transcriptional repressors. Three major pathways share this logic: (1) Auxin: SCF(TIR1/AFB) + IAA as molecular glue -> degrades Aux/IAA repressors -> releases ARF transcription factors. TIR1 is the F-box protein. (2) Jasmonate: SCF(COI1) + JA-Ile as molecular glue -> degrades JAZ repressors -> releases MYC2 and other TFs. COI1 is the F-box protein. (3) Gibberellin: SCF(SLY1/GID2) + GA-GID1 as molecular glue -> degrades DELLA repressors -> releases PIFs and other TFs. SLY1 is the F-box protein. In each case, the hormone serves as a molecular adhesive that stabilizes the interaction between the F-box protein and its target repressor, promoting polyubiquitination and 26S proteasomal degradation. The strigolactone pathway also uses this mechanism: D14 (receptor) + SL -> interaction with MAX2 (F-box) -> degrades D53/SMXL repressors. This convergent evolution of the derepression model (hormone removes repressor to activate signaling) is a hallmark of plant hormone biology, contrasting with animal steroid signaling where hormones typically directly activate their receptors as transcription factors.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Tropism versus nastic movement: what is the fundamental distinction between these two categories of plant movement, and how does this relate to the directionality of the stimulus?",
+      "options": [
+        "Tropisms are always growth-mediated while nastic movements are always turgor-mediated; the direction of the stimulus is irrelevant to the classification",
+        "Tropisms are directional responses where the direction of movement is determined by the direction of the stimulus (e.g., toward or away from light), while nastic movements are non-directional responses where the stimulus triggers a predetermined movement regardless of the direction from which the stimulus comes",
+        "Tropisms only occur in stems while nastic movements only occur in leaves",
+        "There is no fundamental distinction; tropism and nastic movement are interchangeable terms for the same phenomena"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The fundamental distinction between tropisms and nastic movements lies in the relationship between the direction of the stimulus and the direction of the response. Tropisms are directional growth responses where the direction of plant growth is determined by the direction of the environmental stimulus. Examples: phototropism (bending toward light), gravitropism (bending relative to gravity vector), thigmotropism (directional growth response to touch, as in tendril coiling around a support). If the light source is moved, the direction of bending changes accordingly. Nastic movements are non-directional responses where the stimulus triggers a stereotyped movement pattern regardless of the direction from which the stimulus comes. The direction of movement is determined by the anatomy of the responding organ (e.g., asymmetric motor cells in the pulvinus), not by the stimulus direction. Examples: thigmonasty (Mimosa folding upon touch from any direction), nyctinasty (sleep movements driven by circadian clock), thermonasty (tulip petal opening in warmth). Nastic movements can be growth-mediated (epinasty involves differential growth) or turgor-mediated (Mimosa pulvinar movements), so the growth/turgor distinction does not define the category. Similarly, some tropisms involve turgor changes (hydrotropism in roots involves turgor-mediated bending). The key criterion is purely whether the response direction depends on the stimulus direction.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 39,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Plant Responses to Signals"
+    },
+    {
+      "type": "MCQ",
+      "question": "Auxin maximum formation at sites of lateral organ initiation requires both polar auxin transport and local auxin biosynthesis. How does PIN1-mediated auxin convergence at the shoot apical meristem (SAM) determine phyllotaxis (leaf arrangement)?",
+      "options": [
+        "Leaves form at random positions on the SAM, and phyllotactic patterns are an illusion of uniform growth rates",
+        "PIN1 proteins in the L1 layer of the SAM orient their polarity toward sites of high auxin concentration (up-the-gradient model), creating convergence points where auxin accumulates; each new auxin maximum specifies a new leaf primordium, while existing primordia deplete auxin from their surroundings, creating inhibitory fields that position the next maximum at the farthest point from existing primordia",
+        "Phyllotaxis is determined exclusively by mechanical stresses in the meristem dome, with no involvement of auxin",
+        "Gibberellin, not auxin, determines leaf placement through DELLA-mediated regulation of cell division planes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Phyllotaxis (the regular geometric arrangement of leaves around the stem) is determined by auxin-mediated self-organization at the shoot apical meristem. The mechanism involves: (1) PIN1 polarity dynamics in the L1 (outermost) layer of the SAM: PIN1 proteins in L1 cells orient toward neighboring cells with the highest auxin concentration (the 'up-the-gradient' or 'with-the-flux' model). This creates convergence points where auxin accumulates from surrounding cells. (2) Auxin maximum formation: At convergence points, auxin concentration exceeds a threshold that triggers the auxin-mediated signaling cascade (TIR1-Aux/IAA-MP/ARF5), activating genes for organ initiation. MP/MONOPTEROS (ARF5) is essential—mp mutants fail to initiate lateral organs. (3) Auxin depletion: As a primordium develops, it becomes an auxin sink that drains auxin from surrounding tissue through PIN1-mediated inward transport. This creates an auxin-depleted zone (inhibitory field) around each existing primordium. (4) New primordium positioning: The next auxin maximum forms at the point farthest from all existing depletion zones, which in a circular meristem generates the golden angle (~137.5 degrees) characteristic of spiral phyllotaxis. This is predicted by computational models combining PIN1 dynamics with auxin diffusion and transport. (5) Local auxin biosynthesis (YUCCA genes) at incipient primordia further sharpens the auxin maximum. The robustness of phyllotactic patterns across species reflects the self-organizing mathematical properties of this auxin transport system.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
       "campbellUnit": 6,
