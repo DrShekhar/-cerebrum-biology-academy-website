@@ -984,6 +984,1386 @@
       "conceptualDepth": "COMPETITION",
       "difficulty": "HARD",
       "topic": "Axon diameter and conduction velocity"
+    },
+    {
+      "type": "MCQ",
+      "question": "The postsynaptic density (PSD) is a dense protein matrix at excitatory synapses. Which scaffolding protein is the most abundant component of the PSD and links NMDA receptors to intracellular signaling cascades?",
+      "options": [
+        "Gephyrin",
+        "PSD-95, which binds NMDA receptor GluN2 subunits via its PDZ domains and recruits CaMKII, SynGAP, and other signaling molecules",
+        "Homer",
+        "GRIP1"
+      ],
+      "correctAnswer": "B",
+      "explanation": "PSD-95 (postsynaptic density protein-95) is the most abundant scaffolding protein at excitatory glutamatergic synapses. It is a member of the MAGUK (membrane-associated guanylate kinase) family and contains three PDZ domains, one SH3 domain, and one GUK domain. The first two PDZ domains bind the C-terminal tail of NMDA receptor GluN2 subunits (and also the auxiliary AMPA receptor subunit Stargazin/TARP gamma-2, indirectly anchoring AMPA receptors). PSD-95 recruits a dense network of signaling molecules including nNOS, SynGAP (Ras-GAP), SPAR, Shank, and others, creating a signaling microdomain at the synapse. Increasing PSD-95 expression enhances synaptic AMPA receptor number and strengthens synapses. Gephyrin is the equivalent scaffold at inhibitory (glycinergic/GABAergic) synapses. Homer links mGluRs to intracellular signaling. GRIP anchors AMPA receptors at some synapses.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "PSD-95 scaffold"
+    },
+    {
+      "type": "MCQ",
+      "question": "Local anesthetics like lidocaine block pain sensation by inhibiting voltage-gated Na+ channels. What is the mechanism of use-dependent (frequency-dependent) block?",
+      "options": [
+        "Lidocaine only binds to Na+ channels that are actively being used (repeated firing), because the drug accesses its binding site within the inner pore preferentially when the channel is open or inactivated, and accumulates block with repeated stimulation",
+        "Lidocaine binds permanently to all Na+ channels regardless of their state",
+        "Lidocaine blocks K+ channels during high-frequency firing",
+        "Lidocaine increases the threshold for action potential initiation without blocking channels"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Local anesthetics (LAs) like lidocaine exhibit use-dependent (state-dependent) block, meaning they block Na+ channels more effectively during repetitive firing. This occurs because: (1) LAs access their binding site (the inner vestibule of the pore, near the S6 segments of domains III and IV) preferentially when the channel is in the open or inactivated state \u2014 the activation gate must open for the charged, protonated form of the drug to enter the pore from the intracellular side (the 'guarded receptor' hypothesis). (2) LAs bind with higher affinity to inactivated channels and stabilize them in the inactivated state. (3) During repetitive firing, more channels cycle through open/inactivated states, allowing more drug binding and progressive accumulation of block. This is clinically advantageous because rapidly firing nociceptive (pain) neurons are blocked preferentially while slowly firing motor neurons are relatively spared, producing selective pain relief at appropriate doses.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Local anesthetic mechanism"
+    },
+    {
+      "type": "MCQ",
+      "question": "Short-term synaptic plasticity includes paired-pulse facilitation (PPF) and synaptic depression. What mechanism underlies paired-pulse facilitation?",
+      "options": [
+        "Increased postsynaptic receptor sensitivity after the first pulse",
+        "Residual Ca2+ remaining in the presynaptic terminal from the first action potential augments the Ca2+ transient from the second pulse, increasing neurotransmitter release probability",
+        "The second action potential has a larger amplitude than the first",
+        "More vesicles are synthesized between the two pulses"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Paired-pulse facilitation (PPF) is a presynaptic phenomenon that occurs when two action potentials arrive in quick succession (10-200 ms interval). After the first action potential, Ca2+ enters through voltage-gated Ca2+ channels and triggers vesicle fusion. Ca2+ is then removed by the plasma membrane Ca2+ ATPase (PMCA), Na+/Ca2+ exchanger (NCX), and mitochondrial uptake, but this clearance takes tens of milliseconds. If a second action potential arrives before Ca2+ has fully returned to baseline, the new Ca2+ influx adds to the residual Ca2+, producing a larger peak Ca2+ concentration. Because neurotransmitter release has a highly cooperative relationship with Ca2+ (approximately fourth-power dependence), even a modest increase in peak Ca2+ substantially increases release probability. PPF is most prominent at synapses with initially low release probability (Pr). Synaptic depression, conversely, occurs at high-Pr synapses due to depletion of the readily releasable vesicle pool.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Paired-pulse facilitation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Channelopathies are diseases caused by mutations in ion channel genes. Which condition results from gain-of-function mutations in voltage-gated Na+ channels (Nav1.7, SCN9A)?",
+      "options": [
+        "Congenital insensitivity to pain",
+        "Erythromelalgia (burning pain disorder) characterized by episodes of intense burning pain in the extremities due to neuronal hyperexcitability",
+        "Myotonia congenita",
+        "Long QT syndrome"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Nav1.7 (encoded by SCN9A) is a voltage-gated Na+ channel preferentially expressed in nociceptive (pain-sensing) neurons of dorsal root ganglia and sympathetic neurons. Gain-of-function mutations that shift the activation threshold to more negative potentials or slow inactivation cause neuronal hyperexcitability in pain pathways. Inherited erythromelalgia (IEM) results from such mutations \u2014 the channels open more easily and stay open longer, causing nociceptors to fire spontaneously or with minimal stimulation, producing episodes of intense burning pain typically in the hands and feet, triggered by warmth or exercise. Conversely, loss-of-function mutations in SCN9A cause congenital insensitivity to pain (CIP) \u2014 affected individuals cannot feel any pain despite having normal touch sensation. Myotonia congenita results from mutations in skeletal muscle Cl- channels (ClC-1/CLCN1). Long QT syndrome involves cardiac K+ or Na+ channel mutations.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Na+ channelopathies"
+    },
+    {
+      "type": "MCQ",
+      "question": "The vesicle priming step in the synaptic vesicle cycle converts docked vesicles into fusion-competent vesicles. Which protein is essential for priming and catalyzes the opening of syntaxin-1 from its closed to open conformation?",
+      "options": [
+        "Synapsin I",
+        "Munc13 (UNC-13), which opens syntaxin-1 and bridges vesicle and plasma membranes to promote SNARE complex assembly",
+        "Complexin",
+        "NSF (N-ethylmaleimide sensitive factor)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Munc13 (mammalian Unc-13) is an essential priming factor without which synaptic vesicles dock at the active zone but cannot undergo fusion even when Ca2+ is present. Syntaxin-1 exists in a 'closed' conformation where its Habc domain folds back and blocks SNARE motif accessibility. Munc18-1 binds and stabilizes closed syntaxin. Munc13 catalyzes the transition of the Munc18-1/syntaxin-1 complex from the closed to open state, exposing syntaxin-1's SNARE motif for assembly with SNAP-25 and synaptobrevin into the trans-SNARE complex. Munc13 has multiple functional domains: C1 (DAG-binding, allowing modulation by diacylglycerol), C2A (Ca2+-binding), MUN domain (the core catalytic domain for syntaxin opening), and C2B and C2C domains. Munc13 also bridges vesicle and plasma membranes. NSF is an AAA-ATPase that disassembles cis-SNARE complexes after fusion for recycling. Complexin is a fusion clamp.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Vesicle priming by Munc13"
+    },
+    {
+      "type": "MCQ",
+      "question": "Glutamate is cleared from the synaptic cleft primarily by excitatory amino acid transporters (EAATs) on astrocytes. What drives the thermodynamically unfavorable concentrative uptake of glutamate?",
+      "options": [
+        "ATP hydrolysis directly by EAAT proteins",
+        "Cotransport of 3 Na+ and 1 H+ with each glutamate molecule, coupled to counter-transport of 1 K+, using the steep Na+ electrochemical gradient as the energy source",
+        "Simple diffusion down the glutamate concentration gradient",
+        "Clathrin-mediated endocytosis of glutamate-receptor complexes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "EAATs (EAAT1/GLAST and EAAT2/GLT-1 on astrocytes; EAAT3/EAAC1 on neurons) are secondary active transporters that use the Na+ electrochemical gradient to drive concentrative glutamate uptake. The stoichiometry per transport cycle is: 1 glutamate- + 3 Na+ + 1 H+ cotransported inward, coupled to 1 K+ counter-transported outward. This gives a net charge movement of +2 per cycle (electrogenic). The Na+ gradient (maintained by the Na+/K+ ATPase) provides the energy to concentrate glutamate >10,000-fold (extracellular ~1 uM vs intracellular ~10 mM). EAAT2/GLT-1 is responsible for ~90% of glutamate uptake in the forebrain. Loss of EAAT function leads to excitotoxicity \u2014 mutations in EAAT2 are associated with amyotrophic lateral sclerosis (ALS). Riluzole (an ALS drug) enhances glutamate uptake. The uncoupled Cl- conductance through EAATs may also have signaling functions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Glutamate transporter mechanism"
+    },
+    {
+      "type": "MCQ",
+      "question": "Axonal transport is essential for delivering proteins and organelles from the cell body to distant nerve terminals. What molecular motor drives fast anterograde axonal transport of synaptic vesicle precursors?",
+      "options": [
+        "Cytoplasmic dynein",
+        "Kinesin-1 (conventional kinesin/KIF5), a plus-end directed motor that walks along microtubules toward the axon terminal",
+        "Myosin V",
+        "Actin-based treadmilling"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Fast anterograde axonal transport (200-400 mm/day) delivers membrane-bound organelles (synaptic vesicle precursors, mitochondria, endoplasmic reticulum) from the cell body toward axon terminals. This is driven by kinesin superfamily motors, primarily kinesin-1 (KIF5A/B/C), which moves processively toward microtubule plus-ends (oriented toward the axon terminal in axons). Kinesin-1 is a homodimer with two motor heads that walk hand-over-hand along microtubules in 8 nm steps, hydrolyzing one ATP per step, achieving velocities of ~0.5-1 um/s. Cargo specificity is determined by adaptor proteins (KLC, TRAK, Milton, JIP). Retrograde transport (from terminal to cell body) is driven by cytoplasmic dynein (a minus-end directed motor), which returns degradation products, signaling endosomes, and autophagosomes. Myosin V operates on actin filaments for short-range transport, particularly in presynaptic terminals and dendritic spines.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Axonal transport"
+    },
+    {
+      "type": "MCQ",
+      "question": "During development, the neurotransmitter GABA switches from excitatory to inhibitory in maturing neurons. What molecular change underlies this developmental switch?",
+      "options": [
+        "GABA_A receptors change their ion selectivity from Na+ to Cl-",
+        "The developmental upregulation of KCC2 (K+-Cl- cotransporter) lowers intracellular Cl-, shifting ECl negative so that GABA_A receptor activation changes from depolarizing to hyperpolarizing",
+        "GABA_B receptors replace GABA_A receptors during maturation",
+        "The amount of GABA released decreases with development"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In immature neurons, the Na+-K+-2Cl- cotransporter NKCC1 (which imports Cl-) is highly expressed while KCC2 (K+-Cl- cotransporter, which exports Cl-) is low. This results in high intracellular Cl- concentration (~25-40 mM), making ECl relatively positive (approximately -40 mV). When GABA_A channels open in immature neurons, Cl- flows outward (down its electrochemical gradient), depolarizing the membrane. This depolarization can activate voltage-gated Ca2+ channels, providing Ca2+ signals important for neuronal migration, synapse formation, and circuit maturation. During postnatal development, KCC2 expression is strongly upregulated (driven by BDNF signaling and neuronal activity), lowering intracellular Cl- to ~5 mM and shifting ECl to approximately -80 mV. Now GABA_A activation drives Cl- inward, hyperpolarizing the membrane (conventional inhibition). Disruption of this switch (delayed KCC2 upregulation) is implicated in epilepsy, autism, and neuropathic pain.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "GABA excitatory-inhibitory switch"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which type of voltage-gated Ca2+ channel is responsible for triggering neurotransmitter release at most fast central synapses?",
+      "options": [
+        "L-type (Cav1.2, dihydropyridine-sensitive)",
+        "P/Q-type (Cav2.1, omega-agatoxin IVA-sensitive)",
+        "T-type (Cav3.1, low-voltage activated)",
+        "R-type (Cav2.3, residual current)"
+      ],
+      "correctAnswer": "B",
+      "explanation": "P/Q-type Ca2+ channels (Cav2.1) are the primary trigger for neurotransmitter release at most fast central synapses. They are concentrated at presynaptic active zones, tethered by RIM-BP scaffold proteins, and positioned in nanometer proximity to the SNARE/synaptotagmin release machinery. Cav2.1 has favorable biophysical properties for coupling to release: high single-channel conductance, fast activation upon depolarization, and expression of both P-type (in cerebellar Purkinje cells, blocked by omega-agatoxin IVA) and Q-type (broader CNS distribution) splice variants. N-type Ca2+ channels (Cav2.2, blocked by omega-conotoxin GVIA) also contribute at some synapses, particularly in the PNS and some central synapses. Mutations in CACNA1A (Cav2.1 gene) cause familial hemiplegic migraine, episodic ataxia type 2, and spinocerebellar ataxia type 6. L-type channels are important for gene expression and muscle contraction. T-type channels contribute to rhythmic firing in thalamus.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Presynaptic Ca2+ channels"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of the 'reversal potential' is fundamental to understanding synaptic currents. What determines the reversal potential of a synaptic current?",
+      "options": [
+        "The threshold for action potential generation",
+        "The weighted average of equilibrium potentials for all ions conducted by the receptor channel, according to their relative permeabilities",
+        "The resting membrane potential of the postsynaptic cell",
+        "The concentration of neurotransmitter in the synaptic cleft"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The reversal potential (Erev) of a synaptic current is the membrane potential at which the net current through the receptor channel is zero \u2014 it reverses direction at this voltage. It is determined by the relative permeabilities of the channel for different ions, calculated using the Goldman equation. For AMPA receptors (permeable to Na+ and K+ approximately equally), Erev is approximately 0 mV (the average of ENa and EK). For GABA_A/glycine receptors (Cl--selective), Erev equals ECl (approximately -80 mV). For NMDA receptors (permeable to Ca2+, Na+, K+), Erev is approximately +10 mV. For nAChRs, Erev is approximately -5 to 0 mV. Knowing Erev allows prediction of whether a synaptic input will be excitatory (Erev above threshold) or inhibitory (Erev below threshold), and the direction and magnitude of synaptic currents at any holding potential (I = g \u00d7 (Vm - Erev)).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Reversal potential"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the action potential:\nS1: The threshold for action potential initiation is typically about -55 mV, and once threshold is reached, the all-or-none response occurs regardless of stimulus intensity.\nS2: The overshoot phase (positive membrane potential) occurs because the membrane potential approaches ENa (+55 mV) when Na+ permeability dominates.\nS3: The undershoot (afterhyperpolarization) following repolarization occurs because delayed rectifier K+ channels remain open transiently, driving Vm below resting potential toward EK.\nS4: The amplitude of the action potential decreases as it propagates along the axon due to current leakage.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Action potentials follow the all-or-none principle. If a depolarizing stimulus reaches threshold (typically -55 mV, where the regenerative Na+ positive feedback is triggered), a full action potential occurs. If below threshold, only passive spread occurs and no AP is generated. The amplitude and shape of the AP are independent of stimulus strength \u2014 information is encoded in firing frequency, not AP amplitude. S2 is TRUE: At the peak of the action potential, PNa >> PK, so Vm approaches ENa (+55 mV). The overshoot typically reaches +30 to +40 mV (not quite ENa because PK is not zero and Na+ channels begin inactivating). S3 is TRUE: Delayed rectifier K+ channels (Kv2.1, Kv3.x) have slow deactivation kinetics, so they remain open after the membrane has repolarized to rest, driving Vm toward EK (-90 mV) and producing the afterhyperpolarization (AHP). S4 is FALSE: Action potentials propagate without decrement because the regenerative Na+ positive feedback fully regenerates the signal at each point along the axon.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Action potential properties"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about AMPA receptors:\nS1: AMPA receptors are tetrameric ionotropic glutamate receptors composed of GluA1-4 subunits that mediate fast excitatory transmission.\nS2: Most AMPA receptors in the adult brain contain the GluA2 subunit, which undergoes RNA editing (Q/R site) that renders the channel impermeable to Ca2+.\nS3: AMPA receptors lacking GluA2 are Ca2+-permeable and are important for certain forms of synaptic plasticity.\nS4: AMPA receptors have slower kinetics than NMDA receptors and mediate the late component of the EPSC.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: AMPA receptors are tetramers assembled from GluA1-4 (also called GluR1-4 or GluRA-D) subunits, and they mediate the majority of fast excitatory synaptic transmission in the CNS. They have rapid activation (sub-millisecond) and deactivation kinetics. S2 is TRUE: ~99% of GluA2 mRNA undergoes adenosine-to-inosine RNA editing by ADAR2 at the Q/R site in the channel pore, converting a glutamine to a positively charged arginine. This arginine introduces electrostatic repulsion that blocks Ca2+ permeation and makes the channel linearly conducting (ohmic). Most adult AMPA receptors contain GluA2 and are Ca2+-impermeable. S3 is TRUE: A subset of AMPA receptors lacks GluA2 (e.g., GluA1 homomers), making them Ca2+-permeable (CP-AMPARs). These are important in some forms of plasticity, particularly in interneurons and during early LTP. S4 is FALSE: AMPA receptors have FASTER kinetics than NMDA receptors. AMPA receptors mediate the fast component of the EPSC (rise time <1 ms, decay <5 ms), while NMDA receptors mediate the slow component (decay 50-200 ms).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "AMPA receptor biology"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "In an experiment measuring compound action potentials (CAPs) from a peripheral nerve, two distinct peaks are observed: Peak A arrives first with higher amplitude, and Peak B arrives later with lower amplitude. When the nerve is cooled, the latency of both peaks increases, but Peak B is more affected. When a low concentration of lidocaine is applied, Peak B disappears first while Peak A persists. What explains these two peaks?",
+      "options": [
+        "Peak A and B represent EPSPs and IPSPs respectively",
+        "Peak A represents fast-conducting large-diameter myelinated axons (A-alpha fibers), while Peak B represents slower, small-diameter thinly myelinated or unmyelinated axons (C fibers); smaller fibers are more sensitive to local anesthetics and temperature",
+        "Peak A is a measurement artifact and Peak B is the real signal",
+        "Peak A represents sensory axons and Peak B represents motor axons"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Peripheral nerves contain axons of different diameters and myelination status, each with different conduction velocities. A compound action potential (CAP) represents the summed extracellular signal from all activated axons. Peak A represents the fastest-conducting fibers \u2014 large-diameter, heavily myelinated A-alpha fibers (12-20 um diameter, 70-120 m/s), which include proprioceptive and motor axons. Peak B represents slower fibers \u2014 small-diameter, thinly myelinated A-delta fibers (1-5 um, 5-30 m/s) or unmyelinated C fibers (0.2-1.5 um, 0.5-2 m/s). Cooling reduces conduction velocity proportionally more in smaller fibers because they have less safety factor (fewer Na+ channels per node). Lidocaine blocks smaller fibers first because: (1) their higher surface-to-volume ratio allows faster drug penetration; (2) they have fewer nodes so blocking a few nodes causes complete block; (3) they fire at higher frequencies (more use-dependent block).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Compound action potential"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A voltage-clamp experiment measures Na+ currents at different test potentials. At -20 mV, a small inward current is observed. At 0 mV, the current is larger. At +20 mV, the current is smaller again. At +55 mV, no current flows. At +80 mV, an outward current is observed through Na+ channels. What explains this non-monotonic current-voltage relationship?",
+      "options": [
+        "Different Na+ channel subtypes activate at different voltages",
+        "The Na+ current depends on both the number of open channels (which increases with depolarization) and the driving force (Vm - ENa, which decreases and then reverses as Vm approaches and exceeds ENa), producing a peak current near -20 to 0 mV",
+        "Na+ channels become K+-selective at positive potentials",
+        "The inward rectification property of Na+ channels prevents outward current"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Na+ current through voltage-gated channels is determined by: INa = gNa \u00d7 (Vm - ENa), where gNa = gNa_max \u00d7 m\u00b3h (the voltage-dependent conductance). Two opposing factors create the non-monotonic I-V curve: (1) As Vm becomes more positive, more Na+ channels activate (m increases), increasing gNa. (2) As Vm approaches ENa (+55 mV), the driving force (Vm - ENa) decreases, reducing the current per open channel. At ENa, the driving force is zero and no net current flows despite maximum channel opening. Above ENa (e.g., +80 mV), the driving force reverses (Vm > ENa), so Na+ flows outward through any remaining open channels. The peak inward current typically occurs around -20 to 0 mV, representing the optimal balance between channel activation and driving force. This I-V relationship was first characterized by Hodgkin and Huxley and is fundamental to understanding excitable membranes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Na+ current I-V relationship"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine whether a specific gene expressed in neurons is required for learning and memory, a researcher needs to knock it out specifically in hippocampal excitatory neurons of adult mice (to avoid developmental effects). Which genetic strategy would achieve this?",
+      "options": [
+        "Constitutive global knockout of the gene from birth",
+        "A tamoxifen-inducible, Cre-lox conditional knockout system using CaMKII-CreERT2 (expressed in excitatory neurons) crossed with floxed allele mice, with tamoxifen administered in adulthood",
+        "CRISPR injection into the zygote to create a global knockout",
+        "Antisense oligonucleotide injection into the ventricles"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The tamoxifen-inducible conditional knockout provides temporal (adult-specific) and spatial (excitatory neuron-specific) control. The system requires: (1) Mice carrying the target gene flanked by loxP sites (floxed allele) \u2014 generated by homologous recombination in ES cells or CRISPR. (2) A CaMKII-CreERT2 transgenic line expressing Cre recombinase fused to a modified estrogen receptor (ERT2) under the CaMKII-alpha promoter (active in forebrain excitatory neurons). CreERT2 is sequestered in the cytoplasm until tamoxifen administration causes nuclear translocation, where Cre excises the floxed gene. (3) Tamoxifen is administered in adulthood, allowing normal development before gene deletion. After a suitable washout period, mice undergo behavioral testing (Morris water maze, contextual fear conditioning) to assess learning/memory. Controls include floxed-only mice (no Cre) and oil-injected CreERT2 mice. Global knockouts may be embryonic lethal or cause developmental compensation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Conditional knockout for behavior"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher has a fluorescent Ca2+ indicator (GCaMP) expressed in neurons and wants to determine whether observed Ca2+ transients in dendritic spines during synaptic stimulation are mediated by NMDA receptors, voltage-gated Ca2+ channels, or internal Ca2+ stores. Which pharmacological experiment would distinguish these three sources?",
+      "options": [
+        "Block all synaptic transmission with TTX and observe if Ca2+ transients disappear",
+        "Sequentially apply: (1) APV (NMDA blocker) to test NMDA contribution, (2) cadmium or specific VGCC blockers to test voltage-gated Ca2+ channel contribution, (3) thapsigargin (SERCA pump inhibitor) to deplete ER stores, measuring the reduction in Ca2+ signal at each step",
+        "Apply a high concentration of EGTA to chelate all Ca2+",
+        "Replace extracellular Ca2+ with Ba2+ and repeat the stimulation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sequential pharmacological dissection allows quantification of each Ca2+ source. (1) APV (D-2-amino-5-phosphonovalerate), a specific NMDA receptor antagonist, blocks Ca2+ influx through NMDA receptors. The fraction of the Ca2+ transient eliminated by APV represents the NMDA receptor contribution. (2) Adding voltage-gated Ca2+ channel blockers (Cd2+ for non-selective block, or specific blockers: nimodipine for L-type, omega-agatoxin for P/Q-type, omega-conotoxin for N-type) in the presence of APV reveals the VGCC contribution. (3) Thapsigargin irreversibly inhibits SERCA (sarco/endoplasmic reticulum Ca2+-ATPase), depleting ER Ca2+ stores over time. Any remaining Ca2+ signal sensitive to thapsigargin represents Ca2+-induced Ca2+ release (CICR) from internal stores. Alternatively, ryanodine receptor blockers (ryanodine) or IP3 receptor blockers (xestospongin C) can be used. TTX blocks all action potentials and is too nonspecific for this question.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Ca2+ source dissection"
+    },
+    {
+      "type": "MCQ",
+      "question": "Tetanus toxin and botulinum toxin both target SNARE proteins but produce opposite clinical symptoms. What accounts for this difference?",
+      "options": [
+        "They cleave different SNARE proteins",
+        "Tetanus toxin is transported retrogradely from NMJs to inhibitory interneurons in the spinal cord where it cleaves VAMP2, blocking inhibitory neurotransmitter release (causing spastic paralysis), while botulinum toxin acts locally at the NMJ to block excitatory transmission (causing flaccid paralysis)",
+        "Tetanus toxin enhances neurotransmitter release while botulinum toxin inhibits it",
+        "Tetanus toxin only affects sensory neurons while botulinum toxin affects motor neurons"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Both toxins are zinc-dependent proteases produced by Clostridium species and both cleave SNARE proteins to block vesicle fusion. However, their different clinical effects arise from different sites of action: Botulinum toxin (BoNT) acts locally at the neuromuscular junction, blocking ACh release from motor neuron terminals, causing flaccid paralysis (no muscle contraction). Tetanus toxin (TeNT) enters motor neuron terminals at the NMJ but is then transported retrogradely (via dynein) to the cell body in the spinal cord. From there, it undergoes transcytosis into inhibitory (glycinergic and GABAergic) interneuron terminals, where it cleaves VAMP2 (synaptobrevin-2). This blocks inhibitory neurotransmitter release, removing inhibition from motor neurons and causing uncontrolled, sustained muscle contraction (spastic paralysis, tetanic spasms). Both toxins actually cleave synaptobrevin, but their trafficking determines the clinical phenotype.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Tetanus vs botulinum toxin"
+    },
+    {
+      "type": "MCQ",
+      "question": "Dendritic spines are the primary sites of excitatory synaptic input in the mammalian brain. What is the functional significance of the spine neck geometry?",
+      "options": [
+        "Spine necks increase the speed of synaptic transmission",
+        "The narrow spine neck creates a diffusional barrier and electrical compartment that biochemically and electrically isolates individual synapses, allowing synapse-specific plasticity",
+        "Spine necks facilitate direct electrical coupling between dendrites",
+        "Spine necks store neurotransmitter vesicles for retrograde release"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Dendritic spines (0.5-2 um in length) have a bulbous head connected to the dendritic shaft by a thin neck (50-200 nm diameter). The narrow neck serves critical compartmentalization functions: (1) Biochemical compartmentalization \u2014 the neck restricts diffusion of signaling molecules (Ca2+, activated CaMKII, Ras, cAMP) generated at the synapse, confining them to the individual spine head. This enables synapse-specific plasticity: one spine can undergo LTP while adjacent spines are unaffected. (2) Electrical compartmentalization \u2014 the high resistance of the narrow neck creates a voltage compartment, meaning EPSPs generated at the spine head are attenuated (filtered) as they spread to the dendrite. This may allow local voltage-dependent processes (NMDA receptor unblock) at individual spines. Spine morphology is dynamic: LTP causes spine enlargement (mushroom spines), while LTD causes spine shrinkage. Spine loss and dysmorphology are hallmarks of neurodegenerative diseases and intellectual disability syndromes.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Dendritic spine function"
+    },
+    {
+      "type": "MCQ",
+      "question": "The tripartite synapse model includes the astrocyte as an active participant in synaptic signaling. How do astrocytes modulate synaptic transmission?",
+      "options": [
+        "Astrocytes replace neurons as the primary signal transmitters",
+        "Astrocytes detect neuronal activity via Ca2+ elevations, release gliotransmitters (glutamate, D-serine, ATP) that modulate pre- and postsynaptic function, and regulate extracellular K+ and glutamate concentrations",
+        "Astrocytes only provide structural support and have no signaling function",
+        "Astrocytes generate action potentials that propagate to neurons"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The tripartite synapse model (proposed by Bhatt, Bhatt, and Bhatt, and developed by many groups) recognizes astrocytic perisynaptic processes as active modulatory elements. Astrocytes detect synaptic activity through metabotropic receptors (mGluRs, purinergic receptors, endocannabinoid receptors) that trigger intracellular Ca2+ elevations via IP3-dependent ER release. Ca2+ elevations trigger release of gliotransmitters: (1) D-serine, an NMDA receptor co-agonist that modulates LTP; (2) glutamate, which can activate presynaptic mGluRs and extrasynaptic NMDA receptors; (3) ATP/adenosine, which modulates presynaptic release via P2Y and A1 receptors. Astrocytes also provide essential homeostatic functions: glutamate uptake (EAAT1/2), K+ buffering (Kir4.1 channels), and regulation of extracellular volume. Astrocytes communicate with each other via gap junctions (Cx43/Cx30) forming a syncytium. They do not generate action potentials but exhibit Ca2+ waves.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Tripartite synapse"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nodes of Ranvier have a specific molecular organization essential for saltatory conduction. Which proteins are enriched at the node versus the paranode and juxtaparanode?",
+      "options": [
+        "All types of ion channels are uniformly distributed along the axon",
+        "Nav1.6 channels and ankyrin-G/betaIV-spectrin at nodes; Caspr/contactin and paranodal junction proteins at paranodes; Kv1.1/Kv1.2 channels at juxtaparanodes",
+        "K+ channels at nodes and Na+ channels at paranodes",
+        "Only neurofascin is found at nodes with no other specific organization"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Nodes of Ranvier have a highly organized molecular architecture divided into distinct domains: (1) Nodes: High density of Nav1.6 channels (~1,000/um\u00b2), organized by the scaffold protein ankyrin-G (AnkG), which also recruits betaIV-spectrin, the cell adhesion molecule neurofascin-186 (NF186), and NrCAM. KCNQ2/3 (Kv7.2/7.3) channels also cluster at nodes. (2) Paranodes: Septate-like junctions formed by the interaction of axonal Caspr (contactin-associated protein)/contactin with glial neurofascin-155 (NF155). These junctions form a diffusion barrier preventing lateral migration of nodal channels. (3) Juxtaparanodes: Kv1.1 and Kv1.2 channels are clustered beneath the myelin, organized by Caspr2 and TAG-1. These Kv channels prevent re-excitation and regulate axonal excitability. Disruption of paranodal junctions (e.g., in demyelinating diseases) allows Kv1 channels to redistribute into the nodal region, causing conduction failure.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Node of Ranvier molecular architecture"
+    },
+    {
+      "type": "MCQ",
+      "question": "Homeostatic synaptic plasticity (synaptic scaling) maintains neural circuit stability. When chronic activity is reduced (e.g., by TTX application for 48 hours), what compensatory change occurs at excitatory synapses?",
+      "options": [
+        "Synaptic AMPA receptors are removed to further reduce activity",
+        "All AMPA receptor currents are multiplicatively scaled up (increased surface AMPA receptor expression), while GABA receptor expression is scaled down, restoring the neuron's firing rate toward its set point",
+        "The neuron permanently ceases to fire",
+        "Only NMDA receptors are upregulated while AMPA receptors remain unchanged"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Homeostatic synaptic scaling is a form of negative feedback that stabilizes neural circuit activity. When chronic activity is reduced (TTX block, sensory deprivation), neurons upregulate postsynaptic AMPA receptor expression at all excitatory synapses multiplicatively \u2014 each synapse's strength is scaled up by a common factor, preserving the relative differences between synapses (unlike Hebbian plasticity which changes specific synapses). The mechanisms involve: (1) increased GluA1/GluA2 surface expression through TNF-alpha signaling and Arc/Arg3.1 downregulation; (2) increased mEPSC (miniature EPSC) amplitude; (3) decreased GABA_A receptor surface expression (scaling down inhibition). Conversely, chronically elevated activity triggers scaling down (reduced AMPA receptors, increased inhibition). This bidirectional scaling maintains firing rates within a functional range. The set point is thought to involve Ca2+-dependent sensors and transcription factors (CREB, MeCP2). Disrupted homeostatic plasticity may contribute to epilepsy and autism.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Homeostatic synaptic scaling"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which property of the NMDA receptor makes it a 'coincidence detector' critical for Hebbian learning ('neurons that fire together wire together')?",
+      "options": [
+        "NMDA receptors are activated by dopamine rather than glutamate",
+        "NMDA receptors require simultaneous presynaptic glutamate release AND postsynaptic depolarization (to relieve Mg2+ block), detecting the temporal coincidence of pre- and postsynaptic activity",
+        "NMDA receptors only open during sleep",
+        "NMDA receptors detect mechanical vibrations at the synapse"
+      ],
+      "correctAnswer": "B",
+      "explanation": "NMDA receptors are molecular coincidence detectors because they require two simultaneous conditions for activation: (1) Presynaptic activity \u2014 glutamate must be released and bind to the NMDA receptor (along with the co-agonist glycine/D-serine). (2) Postsynaptic depolarization \u2014 the postsynaptic membrane must be sufficiently depolarized to expel the Mg2+ ion that blocks the channel pore at resting potential. This typically requires concurrent AMPA receptor activation at the same or nearby synapses. Only when both conditions are met does Ca2+ flow through the NMDA receptor, triggering LTP. This implements Hebb's rule: synapses where the presynaptic neuron contributes to firing the postsynaptic neuron are selectively strengthened. Synapses where presynaptic activity occurs without sufficient postsynaptic depolarization do not activate NMDA receptors and are not potentiated. This associative property is fundamental to learning, memory formation, and activity-dependent circuit refinement during development.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "NMDA coincidence detection"
+    },
+    {
+      "type": "MCQ",
+      "question": "Benzodiazepines (e.g., diazepam/Valium) are anxiolytic and sedative drugs that act on GABA_A receptors. What is their specific mechanism of action?",
+      "options": [
+        "They directly open GABA_A channels without GABA being present",
+        "They bind to a specific allosteric site (between alpha and gamma subunits) and increase the frequency of GABA-mediated channel openings without changing single-channel conductance or open duration",
+        "They block GABA reuptake transporters to increase GABA levels",
+        "They inhibit GABA transaminase to prevent GABA degradation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Benzodiazepines are positive allosteric modulators (PAMs) of GABA_A receptors. They bind to a specific site located at the interface between alpha (alpha1, 2, 3, or 5, NOT alpha4 or alpha6) and gamma2 subunits \u2014 distinct from the GABA binding site (between alpha and beta subunits). Benzodiazepine binding enhances GABA's ability to open the channel by increasing the frequency of channel opening events (without affecting single-channel conductance or mean open time). Critically, benzodiazepines have no effect in the absence of GABA \u2014 they are pure modulators, not direct agonists, which limits their maximum effect and provides a safety margin compared to barbiturates (which increase open duration and CAN directly open channels at high doses). Different alpha subunit combinations confer different pharmacological effects: alpha1 (sedation/amnesia), alpha2/3 (anxiolysis), alpha5 (memory). This explains why newer drugs (zolpidem/Ambien) targeting alpha1-containing receptors are sedative-selective.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Benzodiazepine mechanism"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ephaptic coupling is a form of neural communication that does not require chemical synapses or gap junctions. What is the mechanism?",
+      "options": [
+        "Direct electrical field effects from one neuron's activity influencing neighboring neurons through extracellular current flow, without any physical connection",
+        "Communication through blood-borne hormones",
+        "Mechanical transmission of vibrations through the extracellular matrix",
+        "Communication via astrocyte-mediated metabolite transfer"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Ephaptic coupling occurs when the extracellular currents generated by one neuron's electrical activity (action potentials or synaptic potentials) influence the excitability of nearby neurons without any direct synaptic or gap junction connection. When an action potential propagates, it generates ionic currents in the extracellular space. If neurons are packed tightly (as in cortical columns, hippocampus, or peripheral nerve bundles), these extracellular fields can be large enough to depolarize or hyperpolarize adjacent neurons by a few millivolts \u2014 sufficient to modulate firing probability. Ephaptic effects are particularly significant in: (1) myelinated nerve bundles where paranodal currents from one fiber can affect neighbors; (2) densely packed cortical/hippocampal pyramidal cell layers; (3) the cerebellum (Purkinje-basket cell interactions). Local field potentials (LFPs) and EEG signals represent these summed extracellular currents. Ephaptic coupling may contribute to neural synchronization, seizure propagation, and cross-talk in nerves.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Ephaptic coupling"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neurotransmitter receptors can be desensitized following prolonged or repeated agonist exposure. What is the molecular mechanism of AMPA receptor desensitization?",
+      "options": [
+        "AMPA receptors are proteolytically cleaved and degraded",
+        "Upon sustained glutamate binding, AMPA receptor subunits undergo a conformational change where the ligand-binding domain (LBD) dimer interface rearranges, causing the ion channel pore to close despite glutamate remaining bound",
+        "Desensitization requires phosphorylation by all known kinases",
+        "AMPA receptors are immediately internalized by endocytosis upon glutamate binding"
+      ],
+      "correctAnswer": "B",
+      "explanation": "AMPA receptor desensitization is an intrinsic conformational transition of the receptor protein. Each GluA subunit has a bilobed ligand-binding domain (LBD) that clamps shut upon glutamate binding. In the resting state, the LBD dimer interface (between adjacent subunits) is stable. Upon glutamate binding and channel opening, strain accumulates at the dimer interface. Within milliseconds, the dimer interface ruptures, allowing the LBDs to rotate and rearrange, which decouples ligand binding from channel gating \u2014 the pore closes even though glutamate is still bound. This is desensitization (distinct from deactivation, which occurs when glutamate unbinds). The rate of desensitization is extremely fast for AMPA receptors (~1-10 ms), which is important for shaping the time course of synaptic currents. Cyclothiazide (a positive allosteric modulator) blocks desensitization by stabilizing the LBD dimer interface. The drug perampanel is a negative allosteric modulator used to treat epilepsy. Receptor internalization is a slower process (minutes) mediating LTD.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "AMPA receptor desensitization"
+    },
+    {
+      "type": "MCQ",
+      "question": "The neurotransmitter acetylcholine acts through two fundamentally different receptor classes. What distinguishes nicotinic from muscarinic ACh receptors?",
+      "options": [
+        "Nicotinic receptors are ionotropic (pentameric ligand-gated cation channels) producing fast EPSPs, while muscarinic receptors are metabotropic (GPCRs) producing slow modulatory effects through G-protein signaling cascades",
+        "Both are ionotropic channels but conduct different ions",
+        "Nicotinic receptors are inhibitory and muscarinic are excitatory",
+        "Both are GPCRs but couple to different G-proteins"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Nicotinic ACh receptors (nAChRs) are ligand-gated ion channels (ionotropic) \u2014 pentameric assemblies of homologous subunits forming a central cation-permeable pore. Upon ACh binding, the channel opens within microseconds, conducting Na+ and K+ (and some Ca2+), producing a fast EPSP. There are muscle-type (alpha1-beta-epsilon-delta) and neuronal (alpha2-10, beta2-4) nAChRs. Muscarinic ACh receptors (M1-M5) are seven-transmembrane GPCRs that signal through heterotrimeric G-proteins over seconds to minutes. M1, M3, M5 couple to Gq (activating PLC-IP3/DAG-Ca2+), while M2, M4 couple to Gi/o (inhibiting adenylyl cyclase, activating GIRK channels). Muscarinic effects are slower but longer-lasting and can be either excitatory (M1, closing M-type K+ channels) or inhibitory (M2, opening GIRK channels in heart). Named after their respective agonists: nicotine selectively activates nAChRs; muscarine (mushroom alkaloid) selectively activates mAChRs.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Nicotinic vs muscarinic receptors"
+    },
+    {
+      "type": "MCQ",
+      "question": "During high-frequency synaptic transmission, the readily releasable pool (RRP) of synaptic vesicles can become depleted. What replenishes the RRP?",
+      "options": [
+        "New vesicles are synthesized de novo in the nerve terminal",
+        "Vesicles from the reserve pool are mobilized to the RRP through synapsin phosphorylation (by CaMKII) releasing them from the actin cytoskeleton, and recycled vesicles from endocytosis re-enter the RRP",
+        "The RRP is not replenished and synaptic transmission ceases permanently",
+        "Vesicles are directly transferred from neighboring synapses"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The RRP (readily releasable pool, ~5-20 vesicles per active zone) is replenished from two sources: (1) Reserve pool mobilization: The majority of synaptic vesicles (~80-90%) are tethered to the actin cytoskeleton by synapsin proteins, forming the reserve pool. During sustained activity, elevated Ca2+ activates CaMKII and CaMKIV, which phosphorylate synapsin at multiple sites (Ser566, Ser603), reducing its affinity for both vesicles and actin. This releases reserve vesicles, which then dock and prime at active zones to refill the RRP. CDK5 also phosphorylates synapsin. (2) Vesicle recycling: After exocytosis, vesicle membrane is retrieved by clathrin-mediated endocytosis, and recycled vesicles are re-acidified and refilled with neurotransmitter by the V-ATPase and vesicular transporters before re-entering the RRP. The balance between RRP depletion (exocytosis rate) and replenishment (recycling + mobilization rate) determines whether a synapse shows depression or facilitation during trains of stimuli.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Vesicle pool dynamics"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the ionic basis of the end-plate potential (EPP) at the neuromuscular junction, and why does the EPP always depolarize the muscle fiber?",
+      "options": [
+        "The EPP is caused by Cl- influx through nAChRs",
+        "nAChRs are non-selective cation channels permeable to both Na+ and K+, with a reversal potential near 0 mV; since 0 mV is far above the muscle resting potential (-90 mV), the net current is always inward (depolarizing)",
+        "The EPP is caused by Ca2+ influx through L-type channels",
+        "The EPP is caused by Na+/K+ ATPase inhibition at the end-plate"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Nicotinic ACh receptors at the NMJ are non-selective cation channels approximately equally permeable to Na+ and K+ (PNa/PK approximately 1.1). The reversal potential (Erev) for the EPP is approximately -5 to 0 mV (approximately midway between ENa of +55 mV and EK of -90 mV). Since the muscle fiber resting potential is approximately -90 mV, which is far below Erev, there is always a large inward driving force when nAChRs open. Na+ influx dominates (because of the larger electrochemical gradient for Na+ at -90 mV), producing a robust depolarization (EPP typically 40-70 mV, well above the ~-50 mV threshold for muscle action potential). The EPP has a large safety factor \u2014 even if 70% of receptors are blocked (as in mild myasthenia gravis), the remaining EPP still reaches threshold. Only when receptor loss exceeds 70-80% does neuromuscular transmission fail.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "End-plate potential"
+    },
+    {
+      "type": "MCQ",
+      "question": "Alpha-latrotoxin, from black widow spider venom, causes massive neurotransmitter release at the neuromuscular junction. What is its mechanism?",
+      "options": [
+        "It blocks K+ channels causing prolonged depolarization",
+        "Alpha-latrotoxin forms Ca2+-permeable pores in the presynaptic membrane (via neurexin/latrophilin receptors) and stimulates massive vesicle exocytosis both through Ca2+ influx and by a Ca2+-independent mechanism involving direct interaction with the release machinery",
+        "It activates postsynaptic receptors directly to mimic neurotransmitter action",
+        "It inhibits acetylcholinesterase to prolong ACh action"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Alpha-latrotoxin (alpha-LTX) from Latrodectus spiders binds to presynaptic receptors (neurexin and latrophilin/CIRL) and inserts into the presynaptic membrane, forming Ca2+-permeable pores (tetrameric channels). This has two consequences: (1) Ca2+-dependent mechanism: Ca2+ influx through the alpha-LTX pores triggers massive vesicle exocytosis through the normal synaptotagmin-SNARE machinery. (2) Ca2+-independent mechanism: Alpha-LTX can stimulate release even in Ca2+-free conditions, likely through direct interaction with the SNARE/Munc18/Munc13 machinery and by mechanical membrane deformation. The result is explosive, uncontrolled neurotransmitter release that depletes all vesicle pools, initially causing intense muscle contraction (from ACh flood at NMJs) followed by paralysis (from vesicle depletion). Clinically, black widow spider bites cause intense pain, muscle spasms, and autonomic dysfunction. Alpha-LTX has been invaluable as a research tool for studying vesicle release mechanisms.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Alpha-latrotoxin mechanism"
+    },
+    {
+      "type": "MCQ",
+      "question": "Selective serotonin reuptake inhibitors (SSRIs) like fluoxetine (Prozac) are the most prescribed antidepressants. What is their molecular target and mechanism?",
+      "options": [
+        "SSRIs block serotonin synthesis by inhibiting tryptophan hydroxylase",
+        "SSRIs selectively block the serotonin transporter (SERT/5-HTT), preventing serotonin reuptake from the synaptic cleft, increasing extracellular serotonin levels at serotonergic synapses",
+        "SSRIs activate serotonin receptors as direct agonists",
+        "SSRIs inhibit monoamine oxidase to prevent serotonin degradation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "SSRIs selectively block the serotonin transporter (SERT, SLC6A4), a Na+/Cl--dependent plasma membrane transporter that normally terminates serotonergic signaling by reuptaking 5-HT back into the presynaptic terminal. By blocking SERT, SSRIs increase the concentration and duration of serotonin in the synaptic cleft, enhancing serotonergic transmission. SSRIs show high selectivity for SERT over other monoamine transporters (DAT, NET), unlike older tricyclic antidepressants that block multiple transporters. However, there is a therapeutic delay of 2-4 weeks before clinical improvement, suggesting that the acute increase in 5-HT levels triggers downstream adaptive changes: initially, increased 5-HT activates inhibitory 5-HT1A autoreceptors on raphe neurons, reducing firing. Over weeks, autoreceptors desensitize, firing increases, and downstream receptor adaptations (BDNF upregulation, neurogenesis, receptor sensitization changes) produce the antidepressant effect. MAOIs are a different class that prevent intracellular 5-HT degradation.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "SSRI mechanism"
+    },
+    {
+      "type": "MCQ",
+      "question": "Sensory receptor potentials are graded potentials that encode stimulus intensity. In mechanoreceptors like Pacinian corpuscles, what ion channel type transduces mechanical stimuli into electrical signals?",
+      "options": [
+        "Voltage-gated Na+ channels",
+        "Mechanically gated cation channels (Piezo2 and possibly DEG/ENaC family) that open in response to membrane stretch or deformation",
+        "Ligand-gated glutamate receptors",
+        "ATP-gated P2X channels"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Mechanosensory transduction in Pacinian corpuscles and other mechanoreceptors involves specialized ion channels that open in response to mechanical forces \u2014 membrane stretch, pressure, or deformation. The Piezo family (Piezo1 and Piezo2, discovered by Ardem Patapoutian, Nobel Prize 2021) are key mechanotransduction channels. Piezo2 is essential for light touch sensation and proprioception. These are large trimeric channels with unique propeller-like structure (~38 transmembrane segments per subunit) that respond to membrane tension by conformational change, opening a central non-selective cation pore permeable to Na+, K+, and Ca2+. The resulting depolarizing receptor potential (generator potential) is graded \u2014 proportional to stimulus intensity. If the receptor potential reaches threshold at the first node of Ranvier, it triggers action potentials. The Pacinian corpuscle's layered onion-like capsule provides rapid adaptation by filtering sustained pressure into onset/offset transients. DEG/ENaC channels contribute to mechanosensation in some contexts (e.g., nematode touch neurons).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Mechanotransduction channels"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about neurotransmitter removal from the synaptic cleft:\nS1: Acetylcholine is terminated by enzymatic degradation via acetylcholinesterase in the cleft.\nS2: Glutamate is removed primarily by astrocytic EAAT transporters (EAAT1/EAAT2).\nS3: Monoamines (dopamine, norepinephrine, serotonin) are removed primarily by reuptake via specific Na+-dependent plasma membrane transporters (DAT, NET, SERT).\nS4: Neuropeptides are removed by rapid reuptake through specific peptide transporters.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: ACh is unique among neurotransmitters in that its primary termination mechanism is enzymatic degradation in the synaptic cleft by AChE (acetylcholinesterase), which hydrolyzes ACh to choline and acetate. Choline is then recycled by the presynaptic high-affinity choline transporter. S2 is TRUE: Glutamate is removed primarily by EAAT2/GLT-1 on astrocytes (~90% of clearance in forebrain) and EAAT1/GLAST, with smaller contributions from neuronal EAAT3. These are secondary active transporters driven by Na+/H+/K+ gradients. S3 is TRUE: Monoamines are cleared primarily by reuptake through specific SLC6 family transporters: DAT (SLC6A3) for dopamine, NET (SLC6A2) for norepinephrine, SERT (SLC6A4) for serotonin. These are the targets of many psychoactive drugs (cocaine blocks DAT; SSRIs block SERT). S4 is FALSE: Neuropeptides have NO specific reuptake transporters. They are terminated by extracellular peptidases (enkephalinases, aminopeptidases, neprilysin) and by diffusion away from the release site.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Neurotransmitter termination"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about neuronal ion gradients:\nS1: The Na+ concentration gradient (high outside, low inside) is maintained by the Na+/K+ ATPase.\nS2: The K+ concentration gradient (high inside, low outside) provides the primary driving force for the resting membrane potential.\nS3: The Ca2+ concentration gradient is the steepest of all ions in neurons, with extracellular [Ca2+] approximately 10,000 times higher than resting intracellular [Ca2+].\nS4: During a single action potential, approximately 10% of the intracellular Na+ is exchanged, significantly changing the concentration gradient.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: The Na+/K+ ATPase (3 Na+ out, 2 K+ in per ATP) maintains the transmembrane Na+ gradient ([Na+]out ~145 mM, [Na+]in ~15 mM) and K+ gradient ([K+]in ~140 mM, [K+]out ~5 mM). S2 is TRUE: The K+ gradient, combined with the high resting K+ permeability through K2P and Kir leak channels, is the primary determinant of the resting membrane potential. The GHK equation shows Vm sits closest to EK because PK >> PNa at rest. S3 is TRUE: Resting intracellular [Ca2+] is approximately 50-100 nM (0.0001 mM), while extracellular [Ca2+] is approximately 1.5-2 mM \u2014 a gradient of approximately 20,000-fold. This enormous gradient is maintained by PMCA, NCX, SERCA, and mitochondrial uptake. Even modest Ca2+ channel opening produces significant relative Ca2+ increases. S4 is FALSE: A single action potential moves only about 1 picomole of Na+ per cm\u00b2 of membrane, changing intracellular [Na+] by less than 0.001%. The Na+/K+ ATPase can easily restore this. The gradients are essentially unchanged by individual or even hundreds of action potentials.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Neuronal ion gradients"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about synaptic vesicle pools:\nS1: The readily releasable pool (RRP) consists of docked and primed vesicles at the active zone, comprising about 1-2% of total vesicles.\nS2: The recycling pool is replenished by clathrin-mediated endocytosis and provides vesicles for sustained moderate-frequency transmission.\nS3: The reserve pool, comprising the majority of vesicles (~80-90%), is tethered to the actin cytoskeleton by synapsin and is mobilized during intense stimulation.\nS4: All three vesicle pools contain identical neurotransmitter concentrations and vesicle proteins.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: The RRP (~5-20 vesicles per active zone, ~1-2% of total) consists of vesicles that are morphologically docked at the presynaptic membrane and molecularly primed (SNARE complex assembled, ready for Ca2+-triggered fusion). The RRP can be released by a brief train of action potentials or by hypertonic sucrose application (which triggers fusion independent of Ca2+). S2 is TRUE: The recycling pool (~10-20% of total) is replenished by endocytosis of fused vesicle membrane and supports transmission during moderate activity. These vesicles preferentially recycle through a rapid local pathway. S3 is TRUE: The reserve pool (~80-90% of total) is a large depot of vesicles cross-linked to each other and to the actin cytoskeleton by synapsin proteins. CaMKII-dependent synapsin phosphorylation releases vesicles for mobilization during intense or prolonged stimulation. S4 is FALSE: While neurotransmitter content per vesicle (quantal size) is relatively uniform, there is evidence that recycled vesicles may have slightly different protein compositions (e.g., different VGLUT isoforms or transporter numbers affecting filling). More importantly, newly endocytosed vesicles may have different surface protein compositions until properly sorted.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Synaptic vesicle pools"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about presynaptic modulation:\nS1: Presynaptic autoreceptors (e.g., mGluR2/3 at glutamatergic terminals, D2 at dopaminergic terminals) provide negative feedback to reduce neurotransmitter release.\nS2: Presynaptic inhibition via GABA_B receptors on excitatory terminals reduces glutamate release by inhibiting presynaptic Ca2+ channels.\nS3: Adenosine, generated from ATP breakdown in the synaptic cleft, acts on presynaptic A1 receptors to reduce neurotransmitter release.\nS4: Presynaptic modulation can only decrease neurotransmitter release; no mechanisms exist for presynaptic facilitation.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Autoreceptors are G-protein coupled receptors on presynaptic terminals that detect the neuron's own transmitter and provide negative feedback. mGluR2/3 (Gi-coupled) on glutamatergic terminals reduce glutamate release when extracellular glutamate is high. D2 autoreceptors on dopaminergic terminals similarly reduce dopamine synthesis and release. 5-HT1B/1D autoreceptors function similarly at serotonergic terminals. S2 is TRUE: GABA_B receptors (Gi/o-coupled) on excitatory (or inhibitory) presynaptic terminals reduce neurotransmitter release through two mechanisms: (1) Gbetagamma-mediated inhibition of P/Q-type and N-type Ca2+ channels, reducing Ca2+ influx; (2) Gbetagamma activation of GIRK channels (at the soma) and direct modulation of the release machinery. Baclofen is a GABA_B agonist. S3 is TRUE: Adenosine acts as a homeostatic modulator via A1 receptors (Gi-coupled), reducing release probability. Caffeine blocks A1 receptors, enhancing synaptic transmission. S4 is FALSE: Presynaptic facilitation exists \u2014 examples include serotonin-mediated facilitation in Aplysia, and various Gs-coupled receptor pathways that increase cAMP and enhance release.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Presynaptic modulation"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A current-clamp recording from a hippocampal pyramidal neuron shows that injecting 100 pA of depolarizing current produces 5 action potentials per second, while 200 pA produces 15 APs/s, and 300 pA produces 25 APs/s. This linear relationship between input current and firing rate is called the f-I (frequency-current) curve. However, when a constant depolarizing current of 200 pA is maintained for 30 seconds, the firing rate gradually decreases from 15 to 5 APs/s. What explains this firing rate adaptation?",
+      "options": [
+        "The Na+/K+ ATPase completely fails during prolonged stimulation",
+        "Spike-frequency adaptation is caused by activation of slow afterhyperpolarization (AHP) currents, primarily through Ca2+-activated K+ channels (SK and BK channels) and M-type K+ channels (Kv7/KCNQ), which accumulate and progressively hyperpolarize the neuron",
+        "The neuron enters a permanent refractory state",
+        "Glutamate depletion in the recording electrode causes reduced stimulation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Spike-frequency adaptation is a fundamental property of most neurons that prevents excessive firing during sustained stimulation. The mechanism involves slow K+ currents that build up during repetitive firing: (1) Ca2+-activated K+ channels (SK channels, activated by Ca2+/calmodulin; BK channels, activated by Ca2+ and voltage) open as intracellular Ca2+ accumulates from repeated action potentials. These channels generate the slow afterhyperpolarization (sAHP) and medium AHP (mAHP) that follow each spike, and their cumulative effect progressively raises the inter-spike interval. (2) M-type K+ channels (Kv7.2/Kv7.3, KCNQ2/3), slow voltage-gated K+ channels that activate near threshold and generate a persistent outward current (M-current) that opposes depolarization. (3) Na+ channel slow inactivation also contributes over seconds, reducing the available Na+ channel pool. The balance of these mechanisms varies by neuron type \u2014 fast-spiking interneurons show minimal adaptation (due to Kv3 channels enabling fast recovery), while pyramidal neurons show prominent adaptation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Spike-frequency adaptation"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Researchers use paired recordings (simultaneously recording from a presynaptic and postsynaptic neuron) to study synaptic properties. When the presynaptic neuron fires 100 action potentials, EPSPs are observed in the postsynaptic neuron only 30 times (30% success rate). The amplitude of successful EPSPs varies between 0.5-2.0 mV, but clusters around multiples of approximately 0.4 mV (0.4, 0.8, 1.2, 1.6 mV). What do these observations reveal about synaptic transmission?",
+      "options": [
+        "The synapse is malfunctioning and needs more neurotransmitter",
+        "The 30% success rate reflects a low release probability (Pr = 0.3), and the amplitude clustering at multiples of ~0.4 mV reflects quantal release \u2014 each quantum (~0.4 mV, equivalent to one vesicle) is released with probability p, and multiple quanta can be released simultaneously, producing the observed amplitude distribution",
+        "The varying amplitudes indicate different types of postsynaptic receptors",
+        "The 70% failure rate indicates postsynaptic receptor desensitization"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This experiment demonstrates the quantal nature of synaptic transmission at a central synapse. The key observations: (1) Probabilistic release: The 30% success rate (70% failures) reflects the stochastic nature of vesicle fusion. Each release site has a probability p of releasing a vesicle for each action potential. At central synapses, p (release probability) is typically 0.1-0.5 per release site. (2) Quantal amplitude: The clustering of EPSP amplitudes at multiples of ~0.4 mV indicates that each released vesicle (quantum) contributes approximately 0.4 mV to the EPSP. When 1 vesicle fuses: 0.4 mV; 2 vesicles: 0.8 mV; 3 vesicles: 1.2 mV; etc. The amplitude histogram shows peaks at these quantal multiples (Poisson distribution). This is described by the binomial model: the synapse has n release sites, each with probability p, giving mean quantal content m = np. With m = np \u2248 0.3-0.5, most events are single quantal releases with occasional multi-quantal events. This quantal analysis, pioneered by del Castillo and Katz at the NMJ, is fundamental to understanding synaptic function.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Quantal release at central synapses"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures action potential conduction velocity in a peripheral nerve fiber under different conditions. Normal velocity: 50 m/s. After partial demyelination of a 2 mm segment: velocity drops to 5 m/s through that segment. After complete demyelination of the same segment: conduction block (no propagation). After treatment with 4-aminopyridine (a K+ channel blocker): partial restoration of conduction through the demyelinated segment. Why does 4-AP restore conduction in partially demyelinated nerves?",
+      "options": [
+        "4-AP increases Na+ channel density at nodes",
+        "By blocking Kv1 channels that become exposed (redistributed from juxtaparanodes to demyelinated regions), 4-AP prevents K+ efflux that opposes depolarization, allowing the weakened action potential to reach threshold at the next node",
+        "4-AP enhances remyelination by oligodendrocytes",
+        "4-AP increases axon diameter to improve current flow"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In normally myelinated axons, Kv1.1/Kv1.2 channels are sequestered under the myelin at juxtaparanodes, where they regulate excitability but don't directly oppose action potential propagation. When myelin is lost, paranodal junctions are disrupted, and Kv1 channels redistribute laterally into the now-exposed internodal membrane. These exposed Kv1 channels activate during the action potential, conducting K+ outward and opposing the depolarizing Na+ current. In partially demyelinated nerves, the reduced membrane resistance already weakens passive current spread; the additional K+ shunt from exposed Kv1 channels further reduces the safety factor below 1, causing conduction block. 4-aminopyridine blocks Kv1 channels, removing this opposing K+ current and partially restoring the safety factor, allowing (slowed) action potential propagation. 4-AP (dalfampridine/Ampyra) is FDA-approved for improving walking in multiple sclerosis patients. It cannot restore normal velocity but can convert conduction block to slow conduction.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "4-AP in demyelination"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To create a complete connectome (wiring diagram) of a small neural circuit, a researcher needs to identify all synaptic connections between neurons. Which technique provides the most comprehensive structural connectivity data?",
+      "options": [
+        "Functional MRI (fMRI) to detect correlated neural activity",
+        "Serial-section electron microscopy (ssEM) or focused ion beam scanning electron microscopy (FIB-SEM) to reconstruct all neurons and synapses at nanometer resolution in a volume of tissue",
+        "EEG recording to detect electrical correlations",
+        "Calcium imaging to detect functional connections"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Serial-section electron microscopy (ssEM) and focused ion beam SEM (FIB-SEM) are the gold standard for structural connectomics because they provide the resolution (~4 nm in x-y, ~30-50 nm in z for ssEM; ~8 nm isotropic for FIB-SEM) needed to visualize and reconstruct every neuronal process and identify every chemical synapse (characterized by presynaptic vesicle clusters, synaptic cleft, and postsynaptic density) and electrical synapse (gap junctions) in a tissue volume. The complete C. elegans connectome (302 neurons) was mapped by John White using ssEM in 1986. Modern efforts have mapped large portions of the Drosophila brain and mouse cortical columns using automated serial sectioning and machine learning-assisted segmentation. fMRI and EEG detect correlated activity but cannot resolve individual synapses or determine wiring. Calcium imaging reveals functional connections but misses subthreshold connections and cannot determine synapse type or number. Light microscopy lacks the resolution to identify individual synapses.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Connectomics methods"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A pharmaceutical company wants to develop a new analgesic (pain-relieving drug) that targets the voltage-gated Na+ channel Nav1.7, which is specifically expressed in nociceptors and essential for pain sensation. What is the main challenge in developing Nav1.7-selective blockers?",
+      "options": [
+        "Nav1.7 is not a real drug target because it has no role in pain",
+        "Nav1.7 shares >70% sequence identity with other Nav subtypes (Nav1.1-Nav1.6, Nav1.8-Nav1.9) expressed in brain, heart, and skeletal muscle; achieving selectivity to avoid cardiac arrhythmias (Nav1.5), seizures (Nav1.1/Nav1.2), and motor impairment (Nav1.4) requires exploiting subtle structural differences in the voltage-sensing domain or pore module between subtypes",
+        "Nav1.7 is only expressed during embryonic development, not in adults",
+        "Pain cannot be treated by blocking a single ion channel subtype"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The nine mammalian voltage-gated Na+ channel subtypes (Nav1.1-Nav1.9) share a highly conserved pore structure (the target of current Na+ channel blockers like lidocaine, which lack subtype selectivity). Developing Nav1.7-selective inhibitors is challenging because: (1) High sequence homology: The pore and local anesthetic binding site are >85% conserved across subtypes. (2) Safety concerns: Non-selective block of Nav1.5 (cardiac) causes fatal arrhythmias; Nav1.1 block causes seizures (Dravet syndrome); Nav1.4 block causes paralysis. (3) Structural differences are subtle: Nav subtypes differ primarily in the voltage-sensing domains (S1-S4), the extracellular loops, and kinetic properties. Strategies include targeting subtype-specific residues in the voltage sensor (VSD4), using spider/scorpion toxin scaffolds that naturally show subtype selectivity, or designing state-dependent blockers that preferentially bind Nav1.7's unique inactivated-state conformation. Several Nav1.7-selective compounds are in clinical trials.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Nav1.7 drug selectivity challenge"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine the reversal potential of a synaptic current and thereby identify which ions carry the current, a researcher performs voltage-clamp recordings while stimulating the presynaptic neuron. The postsynaptic cell is held at different potentials. At what holding potential is the reversal potential measured?",
+      "options": [
+        "The potential where the synaptic current is maximum",
+        "The holding potential where the evoked synaptic current reverses direction (changes from inward to outward or vice versa), indicating zero net current flow through the receptor channels",
+        "The resting membrane potential of the cell",
+        "The potential where the cell fires an action potential"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The reversal potential (Erev) is determined by systematically varying the holding potential in voltage-clamp mode while repeatedly evoking synaptic currents. At potentials below Erev, the synaptic current flows in one direction (typically inward for excitatory currents). At potentials above Erev, the current reverses direction (becomes outward). At exactly Erev, the net synaptic current is zero because there is no net driving force on the permeant ions. Plotting peak synaptic current amplitude vs. holding potential (the I-V curve) gives a line or curve that crosses zero at Erev. The measured Erev reveals the ion selectivity: Erev near 0 mV indicates a non-selective cation channel (excitatory, like AMPA/NMDA/nAChR); Erev near ECl (-80 mV) indicates a Cl- channel (inhibitory, like GABA_A/GlyR); Erev near EK (-90 mV) indicates a K+-selective conductance. Pharmacological isolation (blocking other conductances) ensures clean measurement.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Reversal potential measurement"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "In a paired-pulse experiment at a synapse, the researcher delivers two stimuli separated by 50 ms and measures the EPSC amplitudes. At one synapse (type X), the second EPSC is 200% of the first (PPR = 2.0). At another synapse (type Y), the second EPSC is 60% of the first (PPR = 0.6). What can be inferred about the initial release probability at each synapse?",
+      "options": [
+        "Both synapses have identical release probabilities",
+        "Type X has a low initial release probability (showing facilitation due to residual Ca2+), while type Y has a high initial release probability (showing depression due to partial RRP depletion)",
+        "Type X is excitatory and type Y is inhibitory",
+        "The PPR differences reflect postsynaptic receptor desensitization"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The paired-pulse ratio (PPR) is a reliable indicator of initial release probability (Pr). At low-Pr synapses (type X): Few vesicles fuse on the first pulse, leaving the readily releasable pool (RRP) largely intact. Residual Ca2+ from the first pulse adds to Ca2+ from the second pulse, increasing Pr for the second stimulus. The second EPSC is larger (PPR > 1 = facilitation). At high-Pr synapses (type Y): Many vesicles fuse on the first pulse, significantly depleting the RRP. Even though residual Ca2+ may increase Pr slightly, the reduced number of available vesicles dominates, producing a smaller second EPSC (PPR < 1 = depression). This presynaptic mechanism is confirmed if PPR changes inversely correlate with changes in first EPSC amplitude (e.g., reducing external Ca2+ increases PPR and decreases first EPSC). Postsynaptic mechanisms (receptor desensitization, saturation) can also contribute but are typically ruled out pharmacologically. PPR analysis is widely used to determine whether experimental manipulations act pre- or postsynaptically.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Paired-pulse ratio and release probability"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the molecular mechanism of the action potential:\nS1: The rising phase of the action potential is due to regenerative positive feedback: Na+ influx depolarizes the membrane, which opens more Na+ channels, causing more Na+ influx.\nS2: The falling phase (repolarization) requires both Na+ channel inactivation and delayed rectifier K+ channel opening.\nS3: After the action potential, the Na+/K+ ATPase must restore ion gradients before another action potential can be generated.\nS4: The positive feedback loop in the rising phase is an example of ultrasensitive, switch-like behavior with a defined threshold.",
+      "options": [
+        "TTFT",
+        "TTTT",
+        "TTTF",
+        "TFTT"
+      ],
+      "correctAnswer": "TTFT",
+      "explanation": "S1 is TRUE: The Hodgkin cycle describes the positive feedback: depolarization \u2192 Na+ channel activation \u2192 Na+ influx \u2192 further depolarization \u2192 more Na+ channels activated. This regenerative cycle is responsible for the explosive rising phase once threshold is reached, and is the basis of the all-or-none property. S2 is TRUE: Repolarization requires two concurrent events: (1) Na+ channels undergo fast inactivation (h-gate closure), terminating Na+ influx; (2) delayed rectifier K+ channels (Kv2, Kv3) open (slower kinetics than Na+ activation), driving K+ outward and repolarizing the membrane. S3 is FALSE: The Na+/K+ ATPase is NOT required for immediate recovery. Ion gradients barely change during a single AP (only ~1 picomole Na+/cm\u00b2 crosses). The refractory period depends on Na+ channel recovery from inactivation and K+ channel deactivation, not on gradient restoration. The pump maintains gradients over the long term. S4 is TRUE: The Na+ positive feedback creates a threshold behavior \u2014 below threshold, the system returns to rest (negative feedback from K+ leak dominates); above threshold, regenerative Na+ entry dominates. This is a biological example of a bistable/switch-like system.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Action potential molecular mechanism"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about long-term depression (LTD):\nS1: LTD at CA3-CA1 hippocampal synapses requires NMDA receptor activation at modest Ca2+ levels.\nS2: The Ca2+-dependent phosphatase calcineurin (PP2B) is preferentially activated during LTD due to its higher Ca2+ affinity compared to CaMKII.\nS3: LTD involves AMPA receptor dephosphorylation and clathrin-mediated endocytosis, reducing the number of surface AMPA receptors.\nS4: LTD and LTP use completely independent signaling pathways with no shared molecular components.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: NMDA receptor-dependent LTD at CA1 synapses is induced by prolonged low-frequency stimulation (LFS, 1-5 Hz for 10-15 minutes), which produces modest, sustained Ca2+ elevation through NMDA receptors. This contrasts with LTP induction, which requires brief, large Ca2+ transients from high-frequency stimulation. S2 is TRUE: Calcineurin (protein phosphatase 2B) has a higher affinity for Ca2+/calmodulin (Kd ~0.1 nM) than CaMKII (Kd ~10-50 nM). Therefore, modest Ca2+ elevations preferentially activate calcineurin, while large Ca2+ elevations additionally activate CaMKII. This Ca2+ amplitude-dependent selectivity determines the plasticity outcome. S3 is TRUE: Calcineurin dephosphorylates inhibitor-1, releasing PP1. PP1 dephosphorylates GluA1 at Ser845 (PKA site) and Ser831 (CaMKII site). Dephosphorylated AMPA receptors are internalized by clathrin-AP2-mediated endocytosis, reducing surface receptor number and weakening the synapse. S4 is FALSE: LTP and LTD share NMDA receptors as the initial Ca2+ source \u2014 the DIRECTION of plasticity depends on Ca2+ magnitude and temporal pattern, activating different downstream effectors (CaMKII for LTP, calcineurin for LTD).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Long-term depression"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A neuroscientist records from a neuron and observes spontaneous miniature excitatory postsynaptic currents (mEPSCs) in the presence of TTX (which blocks action potentials). The mean mEPSC amplitude is 15 pA and frequency is 2 Hz. After treating the culture with BDNF for 24 hours, the mean mEPSC amplitude increases to 25 pA but frequency remains 2 Hz. What does this indicate?",
+      "options": [
+        "BDNF increases presynaptic release probability",
+        "BDNF enhances postsynaptic responsiveness, likely by increasing AMPA receptor number or conductance at each synapse, without affecting presynaptic vesicle release rate",
+        "BDNF increases the number of synapses",
+        "BDNF increases vesicle size and neurotransmitter content"
+      ],
+      "correctAnswer": "B",
+      "explanation": "mEPSCs represent the postsynaptic response to spontaneous release of single synaptic vesicles (quanta). Their amplitude reflects postsynaptic factors (receptor number, receptor conductance, spine geometry), while their frequency reflects presynaptic factors (number of release sites and spontaneous vesicle fusion rate). In this experiment: (1) mEPSC amplitude increased from 15 to 25 pA \u2014 this indicates enhanced postsynaptic responsiveness, most likely increased AMPA receptor density at individual synapses or increased single-channel conductance (consistent with BDNF's known effects on GluA1 surface expression and phosphorylation). (2) mEPSC frequency remained unchanged at 2 Hz \u2014 this indicates no change in the rate of spontaneous vesicle fusion events, suggesting no change in release probability or synapse number. Together, this demonstrates a purely postsynaptic effect of BDNF. If the frequency had also increased, this would suggest additional presynaptic effects or synaptogenesis.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "mEPSC analysis"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher calculates the equilibrium potential for Na+ using the Nernst equation at 37\u00b0C: [Na+]out = 145 mM, [Na+]in = 12 mM. The calculated ENa = +66 mV. During the peak of the action potential, the membrane potential only reaches +35 mV. Given that ENa is +66 mV, why does the peak not reach ENa?",
+      "options": [
+        "The Nernst equation is incorrect for Na+",
+        "At the peak, the membrane is not exclusively permeable to Na+; residual K+ permeability and the beginning of K+ channel opening prevent the membrane from reaching ENa, as predicted by the GHK equation",
+        "Na+ channels are completely blocked at +35 mV",
+        "The Na+ gradient has been significantly depleted by the action potential"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Nernst equation predicts the equilibrium potential for a single ion species when the membrane is exclusively permeable to that ion. However, during the peak of the action potential, the membrane is not exclusively permeable to Na+: (1) K+ leak channels remain open throughout, maintaining some K+ permeability (PK > 0). (2) Delayed rectifier K+ channels begin activating during the rising phase (they have slow kinetics but start opening near the peak). (3) The GHK equation, which accounts for multiple permeable ions, predicts: Vm = (RT/F) \u00d7 ln[(PNa[Na]o + PK[K]o)/(PNa[Na]i + PK[K]i)]. Even when PNa >> PK, the non-zero PK pulls the membrane potential away from ENa toward EK. At the peak, PNa/PK \u2248 20:1 (not infinity), so Vm reaches approximately +35 mV rather than +66 mV. Additionally, Na+ channel inactivation begins reducing gNa even at the peak. The Na+ gradient depletion during a single AP is negligible (<0.001% change).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Action potential peak and GHK"
+    },
+    {
+      "type": "MCQ",
+      "question": "Dopamine signaling in the mesolimbic pathway is implicated in reward processing and addiction. Dopamine acts through D1-like (D1, D5) and D2-like (D2, D3, D4) receptor families. What is the fundamental difference between these two families?",
+      "options": [
+        "D1-like receptors are ionotropic and D2-like are metabotropic",
+        "D1-like receptors couple to Gs proteins (stimulating adenylyl cyclase and increasing cAMP), while D2-like receptors couple to Gi/Go proteins (inhibiting adenylyl cyclase and decreasing cAMP)",
+        "D1-like receptors are excitatory and D2-like have no physiological function",
+        "Both families are identical in their signaling cascades"
+      ],
+      "correctAnswer": "B",
+      "explanation": "All dopamine receptors are GPCRs (7-transmembrane), but they diverge into two families with opposite effects on the cAMP pathway: D1-like family (D1, D5) couples to Gs/Golf, activating adenylyl cyclase, increasing cAMP, and activating PKA. This leads to phosphorylation of DARPP-32, which amplifies kinase signaling and modulates ion channel function and gene expression (via CREB). D2-like family (D2, D3, D4) couples to Gi/Go, inhibiting adenylyl cyclase, decreasing cAMP, and reducing PKA activity. D2 receptors also activate GIRK channels (via Gbetagamma) and inhibit voltage-gated Ca2+ channels. D2 autoreceptors on dopaminergic neuron terminals and soma/dendrites reduce dopamine release and firing. Antipsychotic drugs (haloperidol, risperidone) primarily block D2 receptors. L-DOPA (converted to dopamine) activates both families to treat Parkinson's disease. The D1-D2 balance in striatal medium spiny neurons (direct vs. indirect pathway) is critical for movement control.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Dopamine receptor families"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the molecular mechanism by which organophosphate nerve agents (sarin, VX) cause death?",
+      "options": [
+        "They block voltage-gated Na+ channels, preventing all neural signaling",
+        "They irreversibly phosphorylate the active-site serine of acetylcholinesterase, causing ACh accumulation at all cholinergic synapses, leading to sustained depolarization at NMJs (paralysis), bronchospasm, excessive secretions, and seizures",
+        "They block GABA_A receptors, causing seizures",
+        "They activate NMDA receptors directly, causing excitotoxicity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Organophosphate nerve agents (sarin, tabun, soman, VX) are potent irreversible inhibitors of acetylcholinesterase (AChE). They covalently phosphorylate the catalytic serine residue (Ser203 in human AChE) in the enzyme's active site, permanently inactivating it. Without AChE to degrade ACh, ACh accumulates at all cholinergic synapses: (1) NMJ: Sustained depolarization block \u2192 skeletal muscle paralysis, including respiratory muscles; (2) Parasympathetic effectors: Excessive glandular secretions (salivation, lacrimation, urination, defecation = SLUDGE), bronchospasm, bradycardia; (3) CNS: Seizures, unconsciousness. Death typically results from respiratory failure (diaphragm paralysis + bronchospasm + excessive secretions). Treatment includes: atropine (competitive muscarinic antagonist to block parasympathetic effects), pralidoxime/2-PAM (nucleophilic oxime that can reactivate phosphorylated AChE if given before 'aging'), and diazepam (for seizures). After 'aging' (loss of alkyl group from phosphorylated serine), the enzyme is permanently inactivated.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Organophosphate nerve agents"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'safety factor' in neuromuscular transmission refers to the excess of EPP amplitude over the threshold needed to trigger a muscle action potential. The normal safety factor is approximately 3-4x. What molecular mechanisms maintain this high safety factor?",
+      "options": [
+        "Only a few ACh receptors are present at the NMJ",
+        "High quantal content (m \u2248 50-300 vesicles per impulse), high nAChR density at junctional folds (~10,000/um\u00b2), and high AChE activity ensuring rapid ACh clearance all contribute to a reliable, reproducible suprathreshold EPP",
+        "The safety factor depends solely on the diameter of the motor neuron axon",
+        "Muscle fibers have extremely low action potential thresholds"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The neuromuscular junction is designed for reliable, fail-safe transmission through multiple redundant mechanisms: (1) High quantal content: Each nerve impulse releases 50-300 synaptic vesicles (quanta) simultaneously from hundreds of active zones, producing a large EPP (typically 40-70 mV). (2) High receptor density: nAChRs are concentrated at ~10,000 receptors/um\u00b2 on the crests of junctional folds (maintained by agrin-MuSK-rapsyn signaling), ensuring maximum responsiveness to released ACh. (3) Junctional folds: The postsynaptic membrane is folded, with nAChRs on the crests and voltage-gated Na+ channels (Nav1.4) concentrated in the troughs, positioning them to be activated by the EPP. (4) High AChE activity: Rapid ACh degradation prevents receptor desensitization from prolonged ACh exposure. The safety factor (~3-4x) means the EPP exceeds threshold by 3-4 fold. Myasthenia gravis reduces the safety factor below 1, causing transmission failure.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "NMJ safety factor"
+    },
+    {
+      "type": "MCQ",
+      "question": "The HCN (hyperpolarization-activated cyclic nucleotide-gated) channels carry the Ih current. What unusual property distinguishes HCN channels from other voltage-gated channels?",
+      "options": [
+        "HCN channels are activated by membrane hyperpolarization rather than depolarization, conducting a mixed Na+/K+ inward current that depolarizes the cell back toward threshold",
+        "HCN channels are selectively permeable to Cl-",
+        "HCN channels are activated by very strong depolarization beyond +50 mV",
+        "HCN channels are only found in cardiac cells, not neurons"
+      ],
+      "correctAnswer": "A",
+      "explanation": "HCN channels (HCN1-4) are unique among the voltage-gated channel superfamily because they are activated by membrane HYPERPOLARIZATION rather than depolarization \u2014 the opposite of most voltage-gated channels. They activate slowly at potentials below -50 to -60 mV and conduct a mixed Na+/K+ current (Erev approximately -30 mV). Because Erev is above resting potential, Ih activation during hyperpolarization produces an inward depolarizing current that opposes and limits the hyperpolarization. This gives HCN channels a critical role in: (1) Pacemaking: In cardiac sinoatrial node cells and thalamic relay neurons, Ih produces the slow depolarization between beats/bursts; (2) Setting resting potential: Ih depolarizes neurons from EK toward firing threshold; (3) Dendritic integration: Ih in dendrites normalizes the temporal summation of distal EPSPs. cAMP binding to the cyclic nucleotide-binding domain (CNBD) shifts the activation curve positive, linking neuromodulation (via Gs-coupled receptors \u2192 cAMP) to pacemaker frequency. HCN channels are found in both heart and brain.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "HCN channels and Ih current"
+    },
+    {
+      "type": "MCQ",
+      "question": "Kainate receptors are the third class of ionotropic glutamate receptors. How do they differ functionally from AMPA and NMDA receptors at synapses?",
+      "options": [
+        "Kainate receptors have identical properties to AMPA receptors",
+        "Kainate receptors can function both as conventional ionotropic channels (fast cation current) and through a non-canonical metabotropic signaling pathway involving G-proteins, and they play important roles in presynaptic modulation of both excitatory and inhibitory transmission",
+        "Kainate receptors are exclusively inhibitory Cl- channels",
+        "Kainate receptors are only found in invertebrates"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Kainate receptors (assembled from GluK1-5 subunits) have unique dual signaling capabilities. As ionotropic channels, they conduct Na+ and K+ (and Ca2+ for some subunit combinations), but with slower kinetics and smaller currents than AMPA receptors. Uniquely, kainate receptors also signal through a non-canonical metabotropic pathway involving Gi/Go proteins, which can modulate transmitter release and membrane excitability. Key roles include: (1) Presynaptic modulation at both excitatory (reducing glutamate release at high agonist concentrations) and inhibitory (reducing GABA release at hippocampal interneuron synapses) terminals; (2) Contribution to slow EPSCs at mossy fiber-CA3 synapses; (3) Regulation of neuronal excitability by inhibiting the slow afterhyperpolarization. Kainate receptor dysfunction is implicated in epilepsy (GluK2 variants), and kainic acid injection causes seizures by overstimulating these receptors. CNQX blocks both AMPA and kainate receptors, while GYKI compounds selectively block AMPA receptors.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Kainate receptors"
+    },
+    {
+      "type": "MCQ",
+      "question": "What is the structural basis for the voltage-dependent Mg2+ block of the NMDA receptor channel?",
+      "options": [
+        "Mg2+ binds to the extracellular surface of the receptor and prevents glutamate binding",
+        "Mg2+ enters the channel pore from the extracellular side and is trapped at a binding site formed by asparagine residues (N+1 site) in the M2 re-entrant pore loop of GluN2 subunits, where the electrical field keeps it bound at negative potentials",
+        "Mg2+ blocks the channel from the intracellular side",
+        "Mg2+ prevents NMDA receptor assembly in the ER"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The voltage-dependent Mg2+ block is mediated by a specific binding site within the NMDA receptor channel pore. Mg2+ ions (~1 mM extracellular) enter the pore from the outside and bind at the 'N+1 site' \u2014 a narrow constriction formed by asparagine residues in the M2 re-entrant pore loop of each GluN2 subunit (and corresponding sites on GluN1 subunits). At resting potentials (-70 mV), the strong inward electrical field drives Mg2+ deep into the pore but it cannot pass through the narrow selectivity region, becoming trapped and blocking the channel. As the membrane depolarizes, the electrical driving force on Mg2+ decreases, and at potentials above -40 to -20 mV, Mg2+ is expelled from the pore (primarily outward into the cytoplasm), relieving the block. This voltage-dependent relief of block creates the characteristic region of negative slope conductance in the NMDA receptor I-V curve. GluN2A subunits show stronger Mg2+ block than GluN2C/2D, contributing to subunit-dependent differences in NMDA receptor function.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "NMDA Mg2+ block mechanism"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neuronal chloride homeostasis is critical for determining the polarity of GABAergic signaling. Which two transporters are the primary regulators of intracellular Cl- concentration in neurons?",
+      "options": [
+        "CFTR and ClC-2 chloride channels",
+        "NKCC1 (Na-K-2Cl cotransporter, imports Cl-) and KCC2 (K-Cl cotransporter, exports Cl-), with their relative expression levels determining intracellular Cl- and thus GABA polarity",
+        "Cl-/HCO3- exchanger and the Na+/K+ ATPase",
+        "GABA transporters GAT-1 and GAT-3"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Neuronal intracellular Cl- concentration is set by the balance of two cation-chloride cotransporters: (1) NKCC1 (SLC12A2): Uses the Na+ gradient to import Na+, K+, and 2Cl- into the cell, raising intracellular Cl-. Highly expressed in immature neurons. (2) KCC2 (SLC12A5): Uses the K+ gradient to export K+ and Cl-, lowering intracellular Cl-. Upregulated during postnatal development. In immature neurons: NKCC1 >> KCC2, so intracellular Cl- is high (~25-40 mM), ECl is positive (approximately -40 mV), and GABA is depolarizing/excitatory. In mature neurons: KCC2 >> NKCC1, so intracellular Cl- is low (~5 mM), ECl is negative (approximately -80 mV), and GABA is hyperpolarizing/inhibitory. Dysregulation of this balance is implicated in epilepsy (reduced KCC2), neuropathic pain (BDNF-mediated KCC2 downregulation in spinal cord), and neurodevelopmental disorders. Bumetanide (NKCC1 inhibitor) is being investigated as an adjunctive antiepileptic therapy.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Chloride homeostasis"
+    },
+    {
+      "type": "MCQ",
+      "question": "Autapses are synapses that a neuron makes onto itself. What potential function do autapses serve in neural circuits?",
+      "options": [
+        "Autapses have no function and are developmental errors",
+        "Autapses provide self-feedback that can either reinforce (excitatory autapses) or dampen (inhibitory autapses) a neuron's own firing, contributing to precise spike timing and circuit dynamics",
+        "Autapses only exist in invertebrate nervous systems",
+        "Autapses transmit signals to glial cells"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Autapses are functional self-synapses where a neuron's axon forms synaptic contacts back onto its own dendrites or soma. Once considered rare curiosities, autapses are now recognized as relatively common, particularly in cortical and hippocampal fast-spiking interneurons. Excitatory autapses (on principal neurons) provide positive feedback that can reinforce and prolong firing. Inhibitory autapses (on GABAergic interneurons, which are the most well-studied) provide negative feedback that sharpens spike timing and contributes to gamma oscillations (30-80 Hz). In fast-spiking basket cells, inhibitory autapses through GABA_A receptors limit the number of spikes in a burst and help regulate the precise timing of inhibitory output to the circuit. Computational models suggest autapses can stabilize network dynamics and prevent epileptiform activity. Autapses have been found in both vertebrate and invertebrate nervous systems (including the C. elegans connectome).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Autapses"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Nernst equation uses the ratio of extracellular to intracellular ion concentrations. For a divalent cation like Ca2+ ([Ca2+]out = 2 mM, [Ca2+]in = 100 nM), what is the approximate equilibrium potential ECa at 37\u00b0C?",
+      "options": [
+        "+65 mV",
+        "+128 mV",
+        "+200 mV",
+        "+30 mV"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The Nernst equation for Ca2+ (z = +2) is: ECa = (RT/zF) \u00d7 ln([Ca2+]out/[Ca2+]in) = (26.7/2) \u00d7 ln(2 mM / 0.0001 mM) = 13.35 \u00d7 ln(20,000) = 13.35 \u00d7 9.90 = +132 mV, approximately +128 mV. The key points: (1) Because Ca2+ is divalent (z = 2), the prefactor is halved compared to monovalent ions (26.7/2 = 13.35 mV instead of 26.7 mV). (2) The enormous concentration gradient (20,000:1 ratio, compared to ~30:1 for Na+) produces a very positive equilibrium potential. This means the electrochemical driving force on Ca2+ is very large at all physiological membrane potentials \u2014 both the concentration gradient and electrical gradient drive Ca2+ inward. This is why even brief opening of Ca2+ channels produces significant Ca2+ influx, and why intracellular Ca2+ is such an effective signaling molecule (small absolute changes represent large relative changes from the 100 nM baseline).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Ca2+ Nernst equilibrium potential"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neuromodulators like acetylcholine, norepinephrine, serotonin, and dopamine differ from classical fast neurotransmitters in their mode of action. What is the concept of 'volume transmission'?",
+      "options": [
+        "Neurotransmitters are released in exact amounts proportional to the volume of the synaptic cleft",
+        "Neuromodulators diffuse from release sites through the extracellular space to act on receptors over a wide area (hundreds of micrometers), affecting many cells simultaneously, in contrast to point-to-point 'wired transmission' at classical synapses",
+        "Volume transmission refers to the total amount of neurotransmitter released per second",
+        "Volume transmission is synonymous with electrical transmission through gap junctions"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Volume transmission (also called extrasynaptic or paracrine transmission) describes a mode of intercellular communication where neurotransmitters or neuromodulators diffuse through the extracellular space to reach receptors distant from the release site, rather than acting only at the confined synaptic cleft. Monoamines (dopamine, norepinephrine, serotonin) are prime examples: they are often released from varicosities (non-junctional release sites along axons) and can diffuse >100 um to act on extrasynaptic receptors on multiple cell types (neurons, astrocytes, blood vessels). Volume transmission produces slower, longer-lasting, and more diffuse effects compared to 'wired transmission' (classical point-to-point synaptic transmission with <50 nm cleft width). The balance between release rate, diffusion distance, uptake (by transporters), and receptor affinity determines the spatial and temporal extent of volume transmission. Nitric oxide and endocannabinoids are extreme examples of volume transmitters due to their membrane permeability.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Volume transmission"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which structural and functional properties allow invertebrate giant axons (such as the squid giant axon, ~1 mm diameter) to achieve rapid action potential conduction without myelination?",
+      "options": [
+        "Giant axons have a fundamentally different Na+ channel with faster kinetics",
+        "The large diameter dramatically reduces axoplasmic resistance (Ri \u221d 1/r\u00b2), increasing the length constant and allowing faster passive current spread, achieving conduction velocities of ~25 m/s \u2014 though still slower than vertebrate myelinated axons of much smaller diameter",
+        "Giant axons use Ca2+ instead of Na+ for action potentials",
+        "Giant axons conduct signals passively without action potentials"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The squid giant axon (~500-1000 um diameter) was an evolutionary solution to the need for fast conduction to power the jet-propelled escape response, achieved without myelination. The biophysical advantage of large diameter lies in reducing axoplasmic resistance: Ri is proportional to 1/cross-sectional area (= 1/pi*r\u00b2), so a 500 um axon has ~10,000 times lower Ri than a 5 um axon. The length constant (lambda = sqrt(Rm/Ri)) increases dramatically, allowing passive current from one active region to spread farther and faster, regenerating the action potential at more distant points. The squid giant axon achieves ~25 m/s \u2014 adequate for an escape response. However, this is inefficient in terms of space and metabolic cost. Vertebrate myelination achieves even faster speeds (~100 m/s) with axons only 10-20 um diameter, by increasing Rm and decreasing Cm at internodes. The squid giant axon's accessibility (visible to the naked eye) made it ideal for Hodgkin and Huxley's Nobel Prize-winning experiments.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Giant axon conduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Metabotropic glutamate receptors (mGluRs) are classified into three groups. Which group includes mGluR1 and mGluR5, and what is their signaling mechanism?",
+      "options": [
+        "Group I mGluRs (mGluR1, mGluR5) couple to Gq proteins, activating PLC-beta to produce IP3 (releasing Ca2+ from ER stores) and DAG (activating PKC)",
+        "Group I mGluRs are ionotropic channels that conduct Ca2+",
+        "Group I mGluRs couple to Gs and stimulate cAMP production",
+        "Group I mGluRs are nuclear receptors that directly regulate gene transcription"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Metabotropic glutamate receptors are grouped by sequence homology, pharmacology, and G-protein coupling: Group I (mGluR1, mGluR5): Couple to Gq/G11 \u2192 activate PLC-beta \u2192 produce IP3 + DAG. IP3 releases Ca2+ from ER stores via IP3 receptors; DAG activates PKC. Group I mGluRs are predominantly postsynaptic and generally excitatory \u2014 they enhance neuronal excitability by closing K+ channels, potentiating NMDA receptor currents, and mobilizing endocannabinoid synthesis. mGluR5 is essential for some forms of LTD (mGluR-LTD). Group II (mGluR2, mGluR3) and Group III (mGluR4, mGluR6, mGluR7, mGluR8): Couple to Gi/Go \u2192 inhibit adenylyl cyclase, reduce cAMP. These are predominantly presynaptic autoreceptors that reduce glutamate release and are potential drug targets for anxiety and schizophrenia. mGluR6 in ON-bipolar cells of the retina is unusual \u2014 it uses a Gao pathway to close TRPM1 cation channels in the dark.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Metabotropic glutamate receptors"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neurons can encode information through different firing patterns. What is 'burst firing' and which ion channels enable it?",
+      "options": [
+        "Burst firing is simply high-frequency regular firing above 100 Hz",
+        "Burst firing consists of clusters of action potentials riding on a depolarizing plateau, enabled by T-type (low-voltage activated) Ca2+ channels that generate low-threshold spikes upon deinactivation from hyperpolarized potentials",
+        "Burst firing requires gap junction coupling between neurons",
+        "Burst firing only occurs during seizures and has no physiological role"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Burst firing is a distinct firing mode where neurons produce clusters (bursts) of 2-7 action potentials at high frequency (~200-400 Hz within burst), separated by silent intervals. The key channel enabling burst firing is the T-type (transient, low-threshold) Ca2+ channel (Cav3.1/3.2/3.3). T-type channels have unique biophysics: they activate at relatively negative potentials (-65 to -40 mV, hence 'low-voltage activated'), rapidly inactivate, and recover from inactivation (deinactivate) only during hyperpolarization below -70 mV. When a neuron is hyperpolarized (e.g., by GABA inhibition), T-type channels deinactivate. Upon return toward threshold, T-type channels open, generating a broad low-threshold Ca2+ spike that carries a burst of Na+ action potentials on its crest. This is critical for: thalamic relay neurons (burst mode during sleep, tonic mode during wakefulness), rhythmic oscillations (delta, spindle waves), and hippocampal burst firing that enhances synaptic plasticity. The transition between tonic and burst modes is controlled by membrane potential (and neuromodulators that shift the potential).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Burst firing and T-type channels"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about synaptic vesicle cycle steps:\nS1: Docking \u2014 vesicles are tethered at the active zone by Rab3/27-RIM interactions.\nS2: Priming \u2014 Munc13 opens syntaxin-1, allowing SNARE complex assembly with SNAP-25 and synaptobrevin.\nS3: Fusion \u2014 Ca2+ binding to synaptotagmin-1 triggers fast synchronous release by promoting membrane merger.\nS4: Recovery \u2014 after fusion, SNARE complexes are disassembled by ATP-independent spontaneous dissociation.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: Vesicle docking involves the interaction between vesicle-associated Rab3 and Rab27 GTPases with the active zone protein RIM (Rab3-Interacting Molecule). This tethers vesicles at the release site in proximity to Ca2+ channels. Additional docking factors include Munc18-1 (bound to syntaxin) and ELKS/CAST scaffold proteins. S2 is TRUE: Priming converts docked vesicles to a fusion-competent state. Munc13 is essential for this \u2014 its MUN domain catalyzes the opening of syntaxin-1 from its closed Munc18-bound conformation, allowing it to assemble with SNAP-25 and synaptobrevin into the trans-SNARE complex. Complexin then clamps the assembled SNARE complex to prevent spontaneous fusion. S3 is TRUE: Ca2+ influx through Cav2.1/2.2 channels binds synaptotagmin-1's C2 domains, which insert into the membrane and displace complexin, triggering SNARE-mediated fusion within <1 ms. S4 is FALSE: After fusion, cis-SNARE complexes (now all on the same membrane) are disassembled by the AAA-ATPase NSF together with alpha-SNAP, which requires ATP hydrolysis. Without NSF/SNAP, SNARE complexes cannot be recycled.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Vesicle cycle steps"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about neurotoxins as pharmacological tools:\nS1: TTX (tetrodotoxin) specifically blocks voltage-gated Na+ channels and is used to isolate synaptic currents from action potential-dependent transmission.\nS2: TEA (tetraethylammonium) blocks voltage-gated K+ channels, broadening action potentials and increasing neurotransmitter release.\nS3: Omega-conotoxin GVIA specifically blocks N-type Ca2+ channels (Cav2.2) at presynaptic terminals.\nS4: Curare (d-tubocurarine) blocks muscarinic acetylcholine receptors to cause muscle paralysis.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: TTX (from puffer fish) blocks voltage-gated Na+ channels by binding to the extracellular pore. In electrophysiology, TTX is used to block action potentials, allowing recording of miniature postsynaptic currents (mEPSCs/mIPSCs) that reflect spontaneous, AP-independent vesicle fusion. S2 is TRUE: TEA blocks Kv channels (particularly from the extracellular side by entering the pore). Blocking K+ channels prevents repolarization, prolonging the action potential duration. Longer action potentials allow more Ca2+ influx through voltage-gated Ca2+ channels, increasing neurotransmitter release. S3 is TRUE: Omega-conotoxin GVIA (from cone snails) irreversibly blocks N-type Ca2+ channels (Cav2.2). It is used to identify the contribution of N-type channels to synaptic transmission. The synthetic derivative ziconotide (Prialt) is FDA-approved for intrathecal pain management. S4 is FALSE: Curare (d-tubocurarine) blocks NICOTINIC (not muscarinic) acetylcholine receptors at the neuromuscular junction. It is a competitive antagonist at the nAChR ACh binding site, causing flaccid paralysis. Atropine is the classic muscarinic antagonist.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Neurotoxin pharmacology"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about invertebrate nervous system features:\nS1: Many invertebrate neurons use glutamate as an excitatory transmitter at neuromuscular junctions rather than acetylcholine.\nS2: Invertebrate nervous systems can contain giant axons formed by fusion of multiple neuronal cell bodies.\nS3: The nematode C. elegans has exactly 302 neurons with a completely mapped connectome.\nS4: All invertebrate neurons are unmyelinated; myelin exists only in vertebrates.",
+      "options": [
+        "TTTF",
+        "TTTT",
+        "TTFT",
+        "TFTT"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "S1 is TRUE: In arthropods (insects, crustaceans), the excitatory transmitter at neuromuscular junctions is glutamate, not ACh. GABA also acts directly on arthropod muscles as an inhibitory transmitter. ACh is used at the NMJ in vertebrates and some mollusks, while glutamate is the primary excitatory NMJ transmitter in invertebrates. S2 is TRUE: Some invertebrate giant axons are formed by cell fusion (syncytium). For example, the squid giant axon is formed by fusion of hundreds of neuronal cell bodies, creating a single giant fiber. Earthworm giant fibers are also syncytial. Other giant axons (like the crayfish lateral giant) are electrically coupled chains of individual neurons. S3 is TRUE: C. elegans (hermaphrodite) has exactly 302 neurons, and its complete connectome was mapped by John White's lab (1986, using serial-section EM). This includes ~7,000 chemical synapses and ~600 gap junctions. S4 is FALSE: While vertebrates are the primary group with myelination (oligodendrocytes in CNS, Schwann cells in PNS), some invertebrates DO have myelin-like wrappings. Copepods and some annelids have glial cell wrappings around axons that increase conduction velocity, though structurally simpler than vertebrate myelin.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Invertebrate neural features"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "An experiment using optogenetics activates channelrhodopsin (ChR2) in a specific population of hippocampal neurons with different light intensities. At low light intensity (1 mW/mm\u00b2), small photocurrents (~50 pA) are generated but no action potentials are fired. At moderate intensity (5 mW/mm\u00b2), photocurrents of ~200 pA are generated and the neuron fires action potentials. At high intensity (20 mW/mm\u00b2), photocurrents of ~500 pA generate high-frequency firing. What does this demonstrate about neural coding?",
+      "options": [
+        "Light intensity directly determines neurotransmitter type",
+        "The graded photocurrent from ChR2 activation mimics physiological synaptic input: subthreshold currents produce graded depolarizations, while suprathreshold currents produce action potentials whose frequency increases with stimulus intensity, demonstrating the conversion of analog (graded potential) to digital (frequency-coded) information at the axon hillock",
+        "Higher light intensity changes the channel selectivity of ChR2",
+        "Action potentials at different light intensities have different amplitudes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This optogenetics experiment elegantly demonstrates the fundamental principle of neural coding at the single-neuron level: the conversion from analog to digital (frequency) coding. ChR2 generates graded photocurrents proportional to light intensity (more photons \u2192 more channels open \u2192 larger current). At the soma/axon hillock, these graded depolarizations interact with the threshold mechanism: Below threshold: The depolarization spreads passively and decays without generating an AP. Above threshold: Each time the membrane reaches threshold, an AP is generated (all-or-none, constant amplitude). Higher stimulus intensity produces larger depolarization, which reaches threshold more quickly after each AP (shorter interspike interval), resulting in higher firing frequency. This rate coding is the primary way neurons encode stimulus intensity \u2014 stronger stimuli produce higher firing rates, not larger APs. The f-I (frequency-current) relationship is approximately linear over a neuron's dynamic range. This principle, demonstrated here with optogenetics, applies equally to physiological sensory coding and synaptic integration.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Neural coding and optogenetics"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher records excitatory postsynaptic currents (EPSCs) at a hippocampal synapse using voltage clamp at -70 mV. The EPSC has two distinct kinetic components: a fast component (rise time 0.5 ms, decay time 3 ms) and a slow component (rise time 5 ms, decay time 100 ms). Adding 50 uM APV (NMDA receptor antagonist) completely eliminates the slow component but leaves the fast component unchanged. Adding 10 uM CNQX (AMPA/kainate receptor antagonist) to the APV eliminates the remaining fast component. What do these results reveal?",
+      "options": [
+        "The synapse only uses one receptor type",
+        "The fast EPSC component is mediated by AMPA receptors (CNQX-sensitive) and the slow component by NMDA receptors (APV-sensitive); both receptor types coexist at the same synapse and are activated simultaneously by glutamate release, contributing to distinct temporal phases of the postsynaptic response",
+        "Both components are mediated by the same receptor with different states",
+        "The slow component represents postsynaptic calcium spikes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This pharmacological dissection demonstrates the dual component nature of glutamatergic EPSCs. Most excitatory synapses in the hippocampus contain both AMPA and NMDA receptors that are activated simultaneously by glutamate release from the same presynaptic terminal. However, they produce temporally distinct current components: (1) AMPA component (fast): Rapidly activated, produces peak current within ~1 ms, and decays quickly (~3-5 ms). Mediates the bulk of fast synaptic transmission and determines whether the postsynaptic cell reaches threshold. Blocked by CNQX/NBQX. (2) NMDA component (slow): Activates more slowly (partially due to slower channel kinetics and voltage-dependent Mg2+ block relief), produces a smaller peak but sustained current lasting ~100-200 ms. At -70 mV holding potential, the Mg2+ block is largely relieved by the voltage clamp, revealing the full NMDA current. Blocked by APV/MK-801. The NMDA component provides the Ca2+ signal for synaptic plasticity (LTP/LTD). This dual receptor system allows the same synapse to mediate both fast transmission and long-term plasticity.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Dual component EPSC"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A neuroscientist records intracellular potentials from a postsynaptic neuron while stimulating presynaptic excitatory and inhibitory inputs. Stimulating the excitatory input alone produces a 10 mV EPSP. Stimulating the inhibitory input alone produces no visible change in membrane potential (the cell stays at -70 mV, and ECl = -70 mV). However, when both inputs are stimulated simultaneously, the EPSP amplitude is reduced to only 5 mV. How does the inhibitory input reduce the EPSP without producing a visible IPSP?",
+      "options": [
+        "The inhibitory input causes presynaptic inhibition of the excitatory terminal",
+        "This is shunting inhibition: the inhibitory input opens Cl- channels at ECl = Vm, producing no voltage change alone but increasing membrane conductance (reducing input resistance), which shunts (short-circuits) the excitatory current, reducing the amplitude of the EPSP",
+        "The inhibitory input releases an excitotoxin that damages postsynaptic receptors",
+        "The EPSP reduction is an artifact of the recording method"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This demonstrates shunting inhibition (also called 'divisive inhibition' or 'silent inhibition'), a powerful form of synaptic inhibition that operates without producing a visible IPSP. When ECl equals the resting potential (ECl = Vm = -70 mV), opening GABA_A (or glycine) Cl- channels produces no net Cl- flux and no voltage change. However, the opened Cl- channels dramatically increase the membrane conductance (reduce input resistance, Rm). According to Ohm's law, V = I \u00d7 R: the same excitatory synaptic current (I) now produces a smaller voltage change (V) because R is reduced. The Cl- conductance provides a low-resistance 'shunt' pathway that diverts excitatory current, clamping the membrane near ECl and opposing depolarization. Shunting inhibition is particularly effective when the inhibitory synapse is located between the excitatory synapse and the axon hillock, creating an electrical 'roadblock.' This form of inhibition is especially important in cortical circuits where it provides divisive normalization of neural responses.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Shunting inhibition"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher observes that a mutation in a synaptic protein reduces evoked EPSC amplitude by 50% but does not change mEPSC amplitude or frequency. The paired-pulse ratio (PPR) is unchanged. What type of molecular defect would produce this phenotype?",
+      "options": [
+        "Reduced postsynaptic receptor number",
+        "A defect in stimulus-secretion coupling (e.g., reduced Ca2+ channel-vesicle coupling distance) that decreases evoked release probability without affecting spontaneous release or vesicle pool size, since the unchanged mEPSC amplitude indicates normal postsynaptic function and unchanged PPR suggests the probability change affects all release sites equally",
+        "Complete loss of all synaptic vesicles",
+        "Destruction of the postsynaptic density"
+      ],
+      "correctAnswer": "B",
+      "explanation": "This phenotype analysis uses the logic of quantal analysis: (1) Normal mEPSC amplitude: Each quantum (single vesicle) produces a normal postsynaptic response \u2192 postsynaptic receptors are normal (ruling out reduced receptor number). (2) Normal mEPSC frequency: Spontaneous release rate is normal \u2192 number of functional release sites and spontaneous fusion machinery are intact. (3) Reduced evoked EPSC: Fewer vesicles released per action potential \u2192 reduced evoked release probability (Pr). (4) Unchanged PPR: PPR typically changes inversely with Pr. If the mutation reduces Pr at all synapses equally (e.g., by affecting Ca2+ channel distance from the release site at all active zones), the relative change in Pr between the first and second pulse remains the same, so PPR is preserved. This pattern is consistent with a defect in Ca2+ channel-vesicle coupling \u2014 for example, a mutation in RIM-BP that increases the distance between Cav2.1 and the release machinery, requiring more global Ca2+ for fusion.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Synaptic phenotype analysis"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To test whether a specific synapse undergoes LTP, a researcher needs to demonstrate persistent strengthening of synaptic transmission. What is the standard experimental protocol for inducing and measuring LTP at hippocampal CA1 synapses?",
+      "options": [
+        "Apply glutamate to the bath and measure action potential frequency",
+        "Record baseline evoked field EPSPs (fEPSPs) in stratum radiatum for 15-20 minutes by stimulating Schaffer collaterals, then deliver a high-frequency stimulation protocol (e.g., 100 Hz for 1 second or theta-burst stimulation), and monitor fEPSP slope for 30-60 minutes post-tetanus to confirm persistent potentiation",
+        "Measure spontaneous firing rates before and after a 1 Hz stimulus",
+        "Apply NMDA directly to the slice and measure the response"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The standard LTP protocol at hippocampal CA3-CA1 synapses: (1) Preparation: Acute hippocampal slices (~400 um) from young adult rats/mice, maintained in oxygenated ACSF. Place stimulating electrode in Schaffer collateral/commissural pathway (stratum radiatum of CA1) and recording electrode for extracellular field EPSP (fEPSP) in CA1 stratum radiatum. (2) Baseline: Deliver test stimuli (0.05-0.1 Hz, at ~50% maximum response intensity) for 15-20 minutes, confirming stable fEPSP slope (baseline). (3) Induction: Deliver high-frequency stimulation (HFS: 100 Hz \u00d7 1 second, or theta-burst stimulation: 5 pulses at 100 Hz, repeated at 5 Hz \u00d7 3 trains). (4) Post-induction: Resume test stimuli and monitor fEPSP slope for 30-60+ minutes. Successful LTP shows persistent increase (>20%) in fEPSP slope above baseline. Controls: confirm NMDA-dependence (APV blocks LTP induction), input specificity (unstimulated pathways not potentiated), and persistence (maintains for recording duration).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "LTP experimental protocol"
+    },
+    {
+      "type": "MCQ",
+      "question": "Epilepsy involves abnormal hypersynchronous neural activity. What is the primary mechanism by which many anti-epileptic drugs (e.g., phenytoin, carbamazepine, lamotrigine) reduce seizure frequency?",
+      "options": [
+        "They enhance NMDA receptor function to increase excitatory transmission",
+        "They stabilize the inactivated state of voltage-gated Na+ channels through use-dependent block, preferentially reducing rapid repetitive firing during seizures while minimally affecting normal low-frequency activity",
+        "They block all neural transmission by paralyzing neurons",
+        "They directly destroy epileptic neurons"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Phenytoin, carbamazepine, and lamotrigine share a common mechanism: use-dependent (frequency-dependent) block of voltage-gated Na+ channels. These drugs bind preferentially to Na+ channels in the inactivated state (which accumulates during rapid firing) and slow recovery from inactivation. This means: (1) During normal, low-frequency neuronal activity: Most channels are in the resting state, drug binding is minimal, and neural function is largely preserved. (2) During high-frequency seizure activity: Channels rapidly cycle through open\u2192inactivated states, accumulating drug binding. Progressive channel block reduces the ability to sustain rapid repetitive firing, dampening seizure propagation. This use-dependent selectivity provides an excellent therapeutic window \u2014 seizure activity is suppressed while normal brain function continues. Other AED mechanisms include: GABA enhancement (benzodiazepines, barbiturates, valproate), glutamate reduction (perampanel), Ca2+ channel block (ethosuximide for T-type), and SV2A binding (levetiracetam).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "HARD",
+      "topic": "Anti-epileptic drug mechanism"
+    },
+    {
+      "type": "MCQ",
+      "question": "Neurexins and neuroligins are transsynaptic cell adhesion molecules that bridge the synaptic cleft. What is their primary function?",
+      "options": [
+        "They conduct ions across the synaptic cleft like ion channels",
+        "Presynaptic neurexins bind postsynaptic neuroligins to form a transsynaptic adhesion complex that organizes synapse formation, aligns pre- and postsynaptic machinery, and specifies excitatory versus inhibitory synapse identity",
+        "They degrade neurotransmitters in the synaptic cleft",
+        "They are exclusively structural with no signaling function"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The neurexin-neuroligin transsynaptic complex is a central organizer of synapse assembly and function. Neurexins (NRXNs) are presynaptic transmembrane proteins (NRXN1-3, each with alpha and beta isoforms plus extensive alternative splicing generating >3,000 variants). Neuroligins (NLGNs) are postsynaptic transmembrane proteins (NLGN1-4). They bind each other across the synaptic cleft via their extracellular domains, forming a 'molecular bridge' that: (1) Initiates synaptogenesis by recruiting pre- and postsynaptic protein complexes; (2) Aligns the presynaptic release machinery with postsynaptic receptors; (3) Determines synapse type: NLGN1 localizes to excitatory synapses (binding PSD-95), NLGN2 to inhibitory synapses (binding gephyrin); (4) Modulates synapse strength through alternative splicing. Mutations in NRXN1 and NLGN3/4 are associated with autism spectrum disorder and intellectual disability, suggesting that synapse organization defects contribute to neurodevelopmental conditions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 48,
+      "sourceTextbook": "Campbell Biology",
+      "conceptualDepth": "COMPETITION",
+      "difficulty": "EXPERT",
+      "topic": "Neurexin-neuroligin complex"
     }
   ]
 }
