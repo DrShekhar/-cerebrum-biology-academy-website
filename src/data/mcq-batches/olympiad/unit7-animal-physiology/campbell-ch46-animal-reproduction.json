@@ -724,6 +724,386 @@
       "conceptualDepth": "advanced",
       "difficulty": "EXPERT",
       "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the hypothalamic-pituitary-gonadal (HPG) axis, GnRH is released in a pulsatile pattern. What is the physiological consequence of administering continuous (non-pulsatile) GnRH agonists?",
+      "options": [
+        "Sustained stimulation of FSH and LH secretion leading to hypergonadism",
+        "Initial stimulation followed by downregulation of pituitary GnRH receptors, ultimately suppressing LH and FSH release",
+        "Direct stimulation of the gonads bypassing the pituitary",
+        "Conversion of GnRH into inhibin at the hypothalamic level"
+      ],
+      "correctAnswer": "B",
+      "explanation": "GnRH pulsatility is critical for normal reproductive function, and the response to continuous versus pulsatile GnRH fundamentally differs: (1) Normal physiology: The hypothalamus releases GnRH in discrete pulses (every 60-120 minutes in males, variable frequency across the female cycle). This pulsatile pattern is essential because it allows GnRH receptor recycling on pituitary gonadotropes between pulses. (2) Continuous GnRH effect: When GnRH agonists are administered continuously (e.g., leuprolide, goserelin), there is an initial 'flare' of LH and FSH release (days 1-7). However, prolonged receptor occupancy triggers receptor internalization and desensitization — a process called receptor downregulation. Within 2-3 weeks, gonadotropin secretion drops to castrate levels. (3) Clinical applications: This paradoxical suppression is exploited therapeutically in prostate cancer (reducing testosterone), endometriosis, precocious puberty, and IVF protocols (preventing premature LH surge). (4) Molecular mechanism: Continuous stimulation activates the MAPK pathway and beta-arrestin-mediated internalization, preventing receptor recycling to the cell surface.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ovarian follicular atresia is a prominent feature of mammalian reproduction. What percentage of oocytes present at birth are estimated to undergo atresia rather than ovulation in humans?",
+      "options": [
+        "Approximately 25%, with most oocytes ovulating during the reproductive lifespan",
+        "Approximately 50%, with the remainder stored indefinitely in the ovarian cortex",
+        "Greater than 99%, since only about 400-500 oocytes ovulate from an initial pool of approximately 1-2 million at birth",
+        "Approximately 75%, with the remaining 25% degenerating after menopause"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Follicular atresia is the dominant fate of ovarian follicles and represents a massive developmental selection process: (1) Numbers: At approximately 20 weeks of fetal development, the human ovary contains a peak of 6-7 million oogonia/oocytes. By birth, this drops to 1-2 million primary oocytes (arrested in prophase I of meiosis). By puberty, only about 300,000-400,000 remain. During the ~35 years of reproductive life, only 400-500 will be ovulated (~1 per cycle). Thus, greater than 99.9% of oocytes are lost through atresia. (2) Mechanism: Atresia involves apoptosis of granulosa cells and oocyte death, mediated by pro-apoptotic BCL-2 family members (BAX, BAD) when survival signals (FSH, growth factors like Kit ligand) are insufficient. (3) Selection: During each cycle, a cohort of follicles begins to grow, but only the dominant follicle (with highest FSH sensitivity and aromatase activity) survives the drop in FSH caused by rising inhibin B and estradiol. The rest undergo atresia. (4) Clinical relevance: Anti-Mullerian hormone (AMH) levels reflect the remaining primordial follicle pool and serve as a biomarker of ovarian reserve.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the zona pellucida (ZP) in mammalian reproduction:\n(I) The zona pellucida is composed of four glycoproteins (ZP1-ZP4 in humans) that form a cross-linked extracellular matrix around the oocyte.\n(II) ZP3 acts as the primary sperm receptor, binding to species-specific receptors on the sperm head and triggering the acrosome reaction.\n(III) The cortical reaction after fertilization modifies ZP proteins through cleavage by cortical granule proteases, establishing the zona block to polyspermy.\n(IV) The zona pellucida is synthesized entirely by the surrounding cumulus granulosa cells with no oocyte contribution.",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "Analysis of each statement: (I) TRUE — The human zona pellucida consists of four glycoproteins: ZP1 (serves as cross-linker connecting ZP2-ZP3 filaments), ZP2 (secondary receptor after acrosome reaction), ZP3 (primary receptor for acrosome-intact sperm), and ZP4 (structural role). In mice, only ZP1-3 are present. These form heterodimeric filaments (ZP2-ZP3) cross-linked by ZP1 homodimers. (II) TRUE — ZP3 is the primary sperm receptor. The O-linked oligosaccharides on ZP3 mediate initial species-specific sperm binding. This binding triggers the acrosome reaction via a G-protein coupled signaling cascade involving calcium influx. After the acrosome reaction, acrosome-reacted sperm bind ZP2 for secondary binding and zona penetration. (III) TRUE — The cortical reaction releases cortical granule contents (including ovastacin, a metalloendoprotease) that cleave ZP2 and modify ZP3 glycans. Ovastacin specifically cleaves ZP2, converting it from a sperm-binding form to a non-binding form. This 'zona hardening' prevents additional sperm penetration. (IV) FALSE — The zona pellucida is primarily synthesized by the oocyte itself, not by granulosa cells. While granulosa cells may contribute some ZP components in certain species, the oocyte is the major source of all four ZP proteins. This has been confirmed by oocyte-specific knockout studies.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Cryptorchidism (undescended testes) results in impaired spermatogenesis. What is the primary mechanism by which elevated abdominal temperature disrupts sperm production?",
+      "options": [
+        "Heat directly kills all Sertoli cells in the seminiferous tubules",
+        "Elevated temperature impairs the function of temperature-sensitive enzymes required for meiosis and induces germ cell apoptosis, as spermatogenesis requires temperatures 2-4°C below core body temperature",
+        "Abdominal temperature causes testosterone to denature irreversibly",
+        "Heat converts the seminiferous epithelium into an endocrine-only tissue"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The scrotal location of testes in most mammals is essential for maintaining a temperature 2-4°C below core body temperature (~35°C vs 37°C), which is required for normal spermatogenesis: (1) Temperature sensitivity: Several key processes are temperature-sensitive, including DNA synthesis during premeiotic S phase, meiotic recombination, and post-meiotic spermatid differentiation. Specific heat-sensitive enzymes include those involved in DNA repair and chromatin remodeling. (2) Germ cell apoptosis: At core body temperature, increased reactive oxygen species (ROS) production and activation of the intrinsic apoptotic pathway (via p53, BAX) trigger massive germ cell death, particularly of pachytene spermatocytes and round spermatids. (3) Heat shock response: Elevated temperature induces heat shock proteins (HSP70, HSP90) which, while protective at moderate levels, signal cellular stress. (4) Thermoregulation: The pampiniform venous plexus (countercurrent heat exchange), cremaster muscle (raising/lowering testes), and dartos muscle (scrotal skin wrinkling) all contribute to testicular temperature regulation. (5) Clinical significance: Cryptorchidism affects 1-3% of full-term male newborns, and if uncorrected by age 1-2 years, leads to progressive loss of germ cells and increased testicular cancer risk.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A researcher measures sperm motility parameters under different conditions:\n\nCondition | Progressive motility (%) | Hyperactivation (%) | Capacitation status\nFreshly ejaculated | 65 | 2 | Non-capacitated\nIncubated 3h in capacitation medium | 58 | 35 | Capacitated\nCapacitated + progesterone (1 μM) | 52 | 68 | Hyperactivated\nCapacitated + ZP3 glycoprotein | 12 | 8 | Acrosome-reacted\n\nWhich conclusion is best supported by these data?",
+      "options": [
+        "Capacitation medium inhibits sperm motility and causes immediate cell death",
+        "Capacitation enables hyperactivated motility, progesterone further enhances it via CatSper channel activation, and ZP3 triggers the acrosome reaction which reduces progressive motility as sperm bind to the zona",
+        "Progesterone is toxic to capacitated sperm as shown by the decrease in progressive motility",
+        "ZP3 promotes hyperactivation while progesterone causes the acrosome reaction"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data illustrate the sequential functional changes sperm undergo en route to fertilization: (1) Capacitation: After 3 hours in capacitation medium, progressive motility slightly decreases (65→58%), but hyperactivation dramatically increases (2→35%). Capacitation involves cholesterol efflux from the sperm membrane, increase in intracellular calcium, and cAMP-dependent protein kinase A activation. This primes sperm for the acrosome reaction and enables hyperactivated motility (vigorous asymmetric flagellar beating needed to penetrate the zona). (2) Progesterone effect: Cumulus cells surrounding the oocyte secrete progesterone, which acts on the CatSper channel (a sperm-specific calcium channel) to further increase intracellular Ca2+ and enhance hyperactivation (35→68%). The slight decrease in progressive motility (58→52%) reflects the shift from linear swimming to the vigorous whiplash pattern of hyperactivation. (3) ZP3 effect: ZP3 glycoprotein triggers the acrosome reaction — exocytosis of the acrosomal vesicle contents. Post-acrosome-reacted sperm show dramatically reduced progressive motility (12%) and hyperactivation (8%) because they are no longer freely swimming but rather interacting with the zona pellucida. These data demonstrate the physiological cascade: capacitation → hyperactivation → acrosome reaction.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Parthenogenesis occurs naturally in some vertebrate species. Which of the following correctly describes the mechanism by which the whiptail lizard (Aspidoscelis uniparens) achieves diploid offspring without fertilization?",
+      "options": [
+        "Meiosis is completely suppressed and oocytes are produced by mitosis only",
+        "The second polar body fuses with the egg nucleus after meiosis, or premeiotic endoreduplication doubles the chromosome number before a modified meiosis restores diploidy",
+        "Males exist at a very low frequency and fertilize eggs seasonally",
+        "Haploid embryos develop normally via compensatory gene dosage mechanisms"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Parthenogenesis in whiptail lizards (genus Aspidoscelis, formerly Cnemidophorus) is a well-studied example of obligate parthenogenesis in vertebrates: (1) Origin: These all-female species arose from hybridization events between sexual species. A. uniparens is a diploid hybrid-origin species. (2) Mechanism: Diploidy is maintained through premeiotic endoreduplication — the genome is doubled before meiosis begins, so that after meiosis the oocyte retains a diploid chromosome complement. In some parthenogenetic species, an alternative mechanism involves fusion of the second polar body with the egg pronucleus to restore diploidy. (3) Pseudocopulation: Despite being all-female, individuals exhibit mating behavior — one female mounts another, simulating copulation. This behavior stimulates ovulation and is correlated with hormonal cycles (females alternate between estrogen-dominant and progesterone-dominant phases). (4) Genetic consequence: Offspring are clones of the mother (barring rare mitotic recombination events), reducing genetic diversity. However, these species persist due to the 'twofold cost of sex' advantage — all individuals produce offspring. (5) Heterozygosity: Premeiotic endoreduplication followed by meiosis can maintain heterozygosity at loci distal to crossover points.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The corpus luteum undergoes luteolysis at the end of the luteal phase if pregnancy does not occur. Which signaling molecule is primarily responsible for corpus luteum regression in non-primate mammals?",
+      "options": [
+        "Oxytocin released from the posterior pituitary",
+        "Prostaglandin F2α (PGF2α) released from the uterine endometrium",
+        "Estradiol produced by the dominant follicle of the next cycle",
+        "Prolactin from the anterior pituitary"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Luteolysis (regression of the corpus luteum) is a critical event in the estrous/menstrual cycle and its mechanism differs between species: (1) Non-primate mammals: PGF2α is the primary luteolytic factor. It is synthesized by the uterine endometrium and reaches the ovary via a local countercurrent transfer mechanism — PGF2α diffuses from the uterine vein into the closely apposed ovarian artery (utero-ovarian vascular plexus). PGF2α binds to FP receptors on luteal cells, activating protein kinase C, reducing StAR protein expression, and triggering apoptosis of luteal cells. (2) Proof: Hysterectomy in non-primate mammals prevents luteolysis, extending the corpus luteum's lifespan — demonstrating the uterine origin of the luteolytic signal. (3) Pregnancy rescue: In ruminants, the conceptus secretes interferon-tau (IFN-τ), which suppresses endometrial PGF2α production and prevents luteolysis ('maternal recognition of pregnancy'). In pigs, embryonic estrogen redirects PGF2α secretion from endocrine (into blood) to exocrine (into uterine lumen). (4) Primates: The mechanism differs — primate corpus luteum regression appears to be largely an intrinsic process, though local prostaglandins play a role. hCG from the implanting embryo rescues the corpus luteum in pregnancy.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to test whether the CatSper calcium channel on sperm is required for fertilization in vivo. Which experimental design would most rigorously test this hypothesis?",
+      "options": [
+        "Treat sperm with a general calcium chelator (BAPTA-AM) and attempt IVF",
+        "Generate CatSper knockout male mice, mate them with wild-type females, and compare fertility rates and litter sizes to wild-type × wild-type matings, then confirm with in vitro fertilization assays and calcium imaging of knockout vs wild-type sperm",
+        "Add progesterone to sperm in culture and measure calcium levels",
+        "Observe sperm motility under a microscope in buffer without calcium"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The CatSper channel is a sperm-specific, pH-sensitive, voltage-gated calcium channel essential for hyperactivated motility and fertilization. The most rigorous experimental approach combines genetic, physiological, and functional evidence: (1) Genetic approach: CatSper knockout mice provide the gold standard — they eliminate CatSper function specifically without off-target effects of pharmacological inhibitors. This was actually done by Ren et al. (2001) who showed CatSper1 knockout males are completely infertile despite producing morphologically normal sperm with normal initial motility. (2) In vivo mating: Comparing knockout × wild-type to wild-type × wild-type mating outcomes (pregnancy rate, litter size) directly tests the in vivo requirement. (3) In vitro verification: IVF assays allow controlled conditions to distinguish whether failure occurs at capacitation, hyperactivation, zona penetration, or sperm-egg fusion. (4) Calcium imaging: Measuring intracellular calcium in CatSper knockout vs wild-type sperm (using Fluo-4 or similar indicators) confirms the molecular mechanism. Option A uses a non-specific chelator affecting all calcium-dependent processes. Options C and D are correlative, not causal.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Viviparity has evolved independently multiple times across vertebrate lineages. Which of the following correctly identifies a key physiological challenge that must be solved for viviparity to evolve from oviparity?",
+      "options": [
+        "The need to increase egg yolk content for longer internal development",
+        "The requirement to evolve mechanisms for maternal-fetal gas exchange, nutrient transfer, and immunological tolerance of the genetically distinct embryo",
+        "The necessity of developing external incubation behaviors",
+        "The requirement to reduce clutch size to exactly one offspring"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Viviparity (live birth with maternal nourishment beyond yolk) has evolved independently more than 150 times in vertebrates, including in fish, amphibians, reptiles, and mammals. The transition from oviparity requires solving several major physiological challenges: (1) Gas exchange: The developing embryo requires oxygen delivery and carbon dioxide removal. Solutions include highly vascularized uterine walls (squamate reptiles), placentae (mammals, some sharks, some lizards), and branchial structures in live-bearing fish. (2) Nutrient transfer: Beyond yolk reserves, viviparous species must evolve mechanisms for maternal nutrient provision — ranging from histotrophy (uterine secretions, as in some sharks and the marsupial-like condition) to hemochorial placentation (direct maternal blood contact in humans). (3) Immunological tolerance: The embryo expresses paternal antigens that should trigger maternal immune rejection. Solutions include HLA-G expression by trophoblasts, regulatory T cells, progesterone-mediated immune suppression, and decidual NK cell modulation. (4) Waste removal: Embryonic metabolic waste must be transferred to the maternal circulation. (5) Yolk actually decreases in many viviparous lineages as matrotrophy evolves (contradicting option A).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "In the hypothalamic control of reproduction, kisspeptin neurons play a pivotal role. What is the primary function of kisspeptin in the HPG axis?",
+      "options": [
+        "Kisspeptin directly stimulates the gonads to produce sex steroids",
+        "Kisspeptin neurons in the arcuate nucleus and AVPV/POA stimulate GnRH release and mediate both negative and positive feedback of sex steroids on GnRH secretion",
+        "Kisspeptin inhibits GnRH release to prevent precocious puberty",
+        "Kisspeptin acts exclusively on the posterior pituitary to regulate oxytocin release"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Kisspeptin (encoded by the KISS1 gene) is arguably the most important upstream regulator of GnRH neurons and its discovery revolutionized reproductive neuroendocrinology: (1) Discovery: Loss-of-function mutations in the kisspeptin receptor (KISS1R, formerly GPR54) were found to cause hypogonadotropic hypogonadism (absent puberty) in humans, establishing kisspeptin as essential for reproductive function. (2) Two populations: Kisspeptin neurons exist in two hypothalamic nuclei with distinct functions. In the arcuate nucleus (ARC/infundibular nucleus), kisspeptin neurons co-express neurokinin B and dynorphin (forming 'KNDy' neurons) and mediate the GnRH pulse generator. They also mediate negative feedback — estrogen and testosterone suppress kisspeptin expression here, reducing GnRH pulse frequency. (3) Positive feedback: In the AVPV (anteroventral periventricular nucleus) in rodents (or equivalent in humans), kisspeptin neurons mediate the positive feedback effect of estrogen — high estrogen during the late follicular phase stimulates kisspeptin release from AVPV neurons, driving the preovulatory GnRH/LH surge. (4) Puberty: The onset of puberty is triggered by increased kisspeptin signaling, possibly regulated by epigenetic mechanisms. (5) Clinical applications: Kisspeptin analogs are being developed to treat infertility and as diagnostic tools.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate the following statements about the epididymis and sperm maturation:\n(I) Sperm leaving the testis via the efferent ductules are immotile and incapable of fertilization; they acquire motility and fertilizing capacity during transit through the epididymis.\n(II) The epididymis is divided into three regions (caput, corpus, cauda), with sperm maturation occurring primarily in the caput and corpus while the cauda serves as a storage site.\n(III) Epididymal maturation involves changes in the sperm plasma membrane, including addition of decapacitation factors and modification of surface glycoproteins.\n(IV) Sperm can be stored in the cauda epididymidis for several weeks while maintaining full viability.",
+      "options": [
+        "True",
+        "True",
+        "True",
+        "False"
+      ],
+      "correctAnswer": "TTTF",
+      "explanation": "Analysis of each statement: (I) TRUE — Sperm released from the seminiferous tubules via spermiation are morphologically mature but functionally immature. They are immotile and cannot recognize or fertilize an egg. During epididymal transit (which takes 2-12 days in humans), sperm acquire progressive motility and the ability to undergo capacitation and the acrosome reaction. (II) TRUE — The epididymis has three anatomical regions: the caput (head) receives sperm from the efferent ductules and begins maturation; the corpus (body) continues maturation processes; and the cauda (tail) serves primarily as a storage reservoir where mature sperm accumulate and can be held for extended periods. (III) TRUE — Epididymal maturation involves extensive remodeling of the sperm surface. This includes: addition of decapacitation factors (proteins that stabilize the membrane and prevent premature capacitation), modification of surface glycoproteins, changes in membrane lipid composition (increased cholesterol/phospholipid ratio), and addition of epididymal secretory proteins (e.g., CRISP1, CD52). These changes are essential for later capacitation in the female tract. (IV) FALSE — While the cauda does serve as a storage site, sperm viability during storage is limited. Stored sperm undergo gradual senescence, with DNA fragmentation increasing over time. In humans, prolonged abstinence (more than 5-7 days) leads to decreased sperm quality. The cauda provides a specialized environment (low pH, high potassium, low oxygen) that slows sperm metabolism, but storage capacity and duration are limited.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Seminal plasma contains fructose as the primary energy substrate for sperm. Which accessory gland is the primary source of fructose in the human ejaculate?",
+      "options": [
+        "The prostate gland, which also contributes proteolytic enzymes",
+        "The seminal vesicles (seminal glands), which contribute approximately 60-70% of ejaculate volume including fructose, prostaglandins, and semenogelin",
+        "The bulbourethral (Cowper's) glands, which produce pre-ejaculatory fluid",
+        "The epididymis, which stores mature sperm"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The accessory glands of the male reproductive system contribute distinct components to seminal plasma: (1) Seminal vesicles (seminal glands): These paired glands contribute 60-70% of ejaculate volume. Their alkaline, viscous secretion contains: fructose (the primary energy substrate for sperm glycolysis, at ~2-5 mg/mL), prostaglandins (PGE1, PGE2 — which stimulate female tract smooth muscle contractions to facilitate sperm transport), semenogelin I and II (proteins that form the initial coagulum after ejaculation), ascorbic acid, and fibronectin. Absence of fructose in semen (azoospermia with absent fructose) suggests congenital bilateral absence of seminal vesicles (often associated with CFTR mutations). (2) Prostate gland: Contributes 15-30% of volume with an acidic secretion containing citric acid, acid phosphatase, prostate-specific antigen (PSA, a serine protease that liquefies the coagulum), zinc (which stabilizes chromatin and has antibacterial properties), and spermine. (3) Bulbourethral glands: Produce a small volume of mucus-rich pre-ejaculatory fluid that lubricates the urethra and neutralizes residual urinary acidity. (4) Epididymis: Contributes sperm and a small volume of fluid but is not classified as an accessory gland.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A comparative study measures reproductive parameters in four mammalian species:\n\nSpecies | Gestation (days) | Litter size | Neonate mass (g) | Brain mass at birth (% adult) | Eyes at birth\nMouse | 19-21 | 6-12 | 1.5 | 10% | Closed\nRabbit | 30-33 | 4-12 | 50 | 15% | Closed\nGuinea pig | 59-72 | 1-6 | 100 | 45% | Open\nHorse | 335-345 | 1 | 50,000 | 80% | Open\n\nWhich describes the pattern observed in these data?",
+      "options": [
+        "Longer gestation always correlates with larger litter sizes",
+        "Species with longer gestation periods produce more precocial (mature) neonates with higher brain development and functional sensory organs at birth, while shorter gestations produce more altricial (immature) neonates in larger litters",
+        "Brain development at birth is entirely determined by litter size",
+        "All mammals produce neonates with identical developmental maturity"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The data illustrate the altricial-precocial spectrum in mammalian reproduction: (1) Altricial species (mouse, rabbit): Short gestation (19-33 days), large litter sizes (4-12), small neonates with immature nervous systems (brain 10-15% of adult mass), closed eyes, limited thermoregulation, and high dependence on parental care. Altricial young are essentially 'external embryos' that complete development postnatally. (2) Precocial species (guinea pig, horse): Longer gestation (59-345 days), smaller litter sizes (1-6), larger neonates with well-developed nervous systems (brain 45-80% of adult mass), open eyes, functional thermoregulation, and the ability to locomote shortly after birth. Precocial young can often stand and follow their mother within hours. (3) Trade-offs: The altricial-precocial continuum reflects a fundamental reproductive trade-off between offspring number and offspring quality (degree of development at birth). Altricial species invest less per offspring but produce more; precocial species invest more per offspring but produce fewer. (4) Ecological correlates: Precocial development is common in prey species that must flee predators (horses, wildebeest, guinea pigs), while altricial development is common in species with protected nests or burrows (mice, rabbits). (5) Brain development: The proportion of brain growth occurring prenatally versus postnatally varies dramatically along this spectrum, with implications for critical periods of neural plasticity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Hermaphroditism can be sequential or simultaneous. In the blue-headed wrasse (Thalassoma bifasciatum), what type of sequential hermaphroditism occurs, and what triggers the sex change?",
+      "options": [
+        "Protandry (male-to-female), triggered by increasing population density",
+        "Protogyny (female-to-male), triggered by the removal of the dominant male from the social group, which relieves social inhibition of sex change in the largest remaining female",
+        "Simultaneous hermaphroditism with self-fertilization",
+        "Protandry triggered by seasonal temperature changes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The blue-headed wrasse is a classic example of socially controlled protogynous hermaphroditism: (1) Protogyny: Individuals begin life as females and can later transform into 'terminal phase' males. This is the opposite of protandry (male-to-female change seen in clownfish). (2) Social control: The dominant terminal-phase male maintains a harem. His presence actively suppresses sex change in females through behavioral intimidation and possibly pheromonal signals. When the dominant male is removed (death, predation, or experimental removal), the largest female begins sex change within hours — behavioral changes (increased aggression, courtship displays) occur within minutes to hours, and full gonadal transformation (ovary to testis) completes within 8-14 days. (3) Mechanism: The sex change involves dramatic gonadal restructuring — oocytes undergo apoptosis, Leydig-like cells proliferate, and spermatogenesis begins. This is accompanied by changes in aromatase expression (decreased) and androgen production (increased). Brain monoamine systems (serotonin, arginine vasotocin) also change. (4) Evolutionary advantage: This follows the size-advantage model proposed by Ghiselin and Warner — since male reproductive success is highly size-dependent (large males control territories and harems), it is advantageous to reproduce as female when small and as male when large.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The contraceptive intrauterine device (IUD) is one of the most effective reversible contraceptives. What is the primary mechanism of action of the copper IUD (Cu-IUD)?",
+      "options": [
+        "It physically blocks the cervical os preventing sperm entry",
+        "Copper ions released into the uterine cavity are cytotoxic to sperm, impairing sperm motility and viability, and also create a sterile inflammatory reaction in the endometrium that is hostile to implantation",
+        "It releases progesterone to suppress ovulation like oral contraceptives",
+        "It causes permanent scarring of the fallopian tubes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The copper IUD (e.g., Paragard) is a highly effective, non-hormonal, long-acting reversible contraceptive (LARC) with multiple mechanisms of action: (1) Spermicidal effect: Cu2+ ions released from the copper wire are directly toxic to sperm. Copper impairs sperm motility, viability, and acrosome reaction capacity. In vitro studies show that concentrations of copper found in uterine fluid of Cu-IUD users significantly reduce sperm progressive motility and ability to penetrate cervical mucus. (2) Inflammatory reaction: The IUD as a foreign body induces a sterile inflammatory response in the endometrium, characterized by increased leukocytes (macrophages, neutrophils, lymphocytes), cytokines, and prostaglandins. This creates an environment hostile to both sperm survival and embryo implantation. (3) Pre-fertilization effect: The primary mechanism is pre-fertilization — preventing sperm from reaching and fertilizing the egg. Studies of tubal flushing in Cu-IUD users rarely find fertilized eggs, confirming that fertilization is prevented rather than implantation being the main mechanism. (4) Tubal effects: Copper ions also affect the fallopian tube environment, further reducing the likelihood of fertilization. (5) Emergency contraception: The Cu-IUD can be used as emergency contraception up to 5 days after unprotected intercourse, with >99% effectiveness. (6) Duration: Effective for 10-12 years, with fertility returning immediately upon removal.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher hypothesizes that follicular fluid from preovulatory follicles contains a chemoattractant that guides sperm toward the oocyte in the fallopian tube. Which experimental approach would best test this hypothesis?",
+      "options": [
+        "Compare pregnancy rates in women with and without ovulation",
+        "Using a microfluidic chemotaxis chamber, place sperm at one end and follicular fluid at the other, then quantify the proportion of sperm that swim toward the follicular fluid compared to a control medium gradient, repeating with heat-inactivated follicular fluid to determine if the factor is a protein",
+        "Measure the total number of sperm in the ejaculate",
+        "Inject follicular fluid into the peritoneal cavity and observe if pregnancy rates increase"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Sperm chemotaxis toward the oocyte is a well-established phenomenon, and the proposed experimental design addresses the hypothesis rigorously: (1) Microfluidic chemotaxis assay: This is the gold standard for studying chemotaxis. A gradient of the test substance (follicular fluid) is established in a microchannel, and individual sperm trajectories are tracked using video microscopy. The directionality of sperm movement is quantified by comparing the proportion of sperm swimming toward the follicular fluid versus a buffer control. (2) Controls: Using culture medium alone as a negative control establishes baseline random swimming. Heat-inactivated follicular fluid (e.g., 56°C for 30 minutes) tests whether the chemoattractant is a heat-labile protein — if heat treatment abolishes chemotaxis, the factor is likely proteinaceous. Additional controls include: follicular fluid from different-sized follicles (preovulatory vs small antral), dose-response curves, and protease-treated follicular fluid. (3) Known chemoattractants: Research has identified progesterone and bourgeonal (a synthetic odorant that activates the sperm receptor hOR17-4/OR1D2) as sperm chemoattractants. Follicular fluid contains progesterone which acts via the CatSper channel. (4) Specificity: Only capacitated sperm show chemotaxis, as non-capacitated sperm lack the signaling machinery. This is a critical variable to control. Option A is correlative, C is irrelevant, and D lacks appropriate controls and specificity.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "In birds, sex is determined by the ZW system, where males are ZZ and females are ZW. What is the identity of the key sex-determining gene on the Z chromosome in chickens?",
+      "options": [
+        "SRY, the same gene used in mammalian sex determination",
+        "DMRT1, a Z-linked gene where dosage (two copies in ZZ males vs one in ZW females) determines male development",
+        "DAX1, which is W-linked and promotes female development",
+        "SOX9, which is autosomal and equally expressed in both sexes"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Avian sex determination uses a fundamentally different genetic mechanism than mammals: (1) ZW system: In birds, males are homogametic (ZZ) and females are heterogametic (ZW). This is the reverse of the mammalian XX/XY system. The W chromosome is largely heterochromatic and gene-poor (analogous to the Y chromosome but not homologous). (2) DMRT1 dosage: The key sex-determining gene is DMRT1 (Doublesex and Mab-3 Related Transcription Factor 1) located on the Z chromosome. Males (ZZ) have two copies and females (ZW) have one copy. This dosage difference, rather than a single dominant gene like SRY, drives sex determination. Knockdown of DMRT1 in ZZ embryos using RNA interference leads to feminization of the gonad (ovary-like development), while overexpression of DMRT1 in ZW embryos partially masculinizes the gonad. (3) No SRY equivalent: Birds lack SRY entirely. The W chromosome does not carry a single dominant female-determining gene equivalent to SRY; instead, the absence of the second DMRT1 copy leads to female development. (4) Conservation: DMRT1/Dmrt1 homologs play roles in sex determination across diverse taxa including fish, reptiles, and invertebrates, suggesting it is an ancient sex-determining gene that predates the evolution of SRY in mammals. (5) SOX9: While SOX9 is important in both mammalian and avian gonadal development, it acts downstream of the primary sex determination signal.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Lactation is regulated by a hormonal interplay between prolactin and oxytocin. Which accurately describes the distinct roles of these two hormones?",
+      "options": [
+        "Both hormones stimulate milk production in the mammary gland alveolar cells equally",
+        "Prolactin stimulates milk synthesis (lactogenesis) in mammary alveolar epithelial cells, while oxytocin stimulates milk ejection (let-down) by contracting myoepithelial cells surrounding the alveoli",
+        "Oxytocin promotes milk synthesis while prolactin causes alveolar contraction",
+        "Prolactin is released from the posterior pituitary and oxytocin from the anterior pituitary"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Lactation requires two distinct hormonal processes that are often confused: (1) Prolactin — milk production: Prolactin is released from lactotroph cells of the anterior pituitary. It acts on prolactin receptors (JAK-STAT signaling) on mammary alveolar epithelial cells to stimulate transcription of milk protein genes (casein, lactalbumin, whey proteins) and enzymes for lactose synthesis. Prolactin secretion is tonically inhibited by hypothalamic dopamine; during suckling, this inhibition is transiently released, causing prolactin surges. (2) Oxytocin — milk ejection: Oxytocin is synthesized in the hypothalamus (paraventricular and supraoptic nuclei) and released from the posterior pituitary. It acts on oxytocin receptors on myoepithelial cells — contractile cells that surround the alveoli like a basket. Contraction of myoepithelial cells squeezes milk from alveoli into the duct system and toward the nipple. (3) Neuroendocrine reflex: Suckling stimulates mechanoreceptors in the nipple, sending afferent signals via the spinal cord to the hypothalamus. This triggers both oxytocin release (rapid, pulsatile) and prolactin release (slower, sustained). (4) Conditioning: Oxytocin release can become conditioned — hearing a baby cry can trigger milk let-down before suckling begins. (5) Amenorrhea: Elevated prolactin during lactation suppresses GnRH pulsatility, contributing to lactational amenorrhea (a natural contraceptive effect).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "HARD",
+      "topic": "Animal Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Müllerian inhibiting substance (MIS, also called anti-Müllerian hormone or AMH) plays a critical role in male sexual differentiation. Which cells produce AMH and what is its developmental function?",
+      "options": [
+        "Leydig cells produce AMH to stimulate Wolffian duct development",
+        "Sertoli cells of the fetal testis produce AMH, which causes regression of the Müllerian (paramesonephric) ducts that would otherwise develop into the uterus, oviducts, and upper vagina",
+        "Theca cells produce AMH to maintain the ovarian follicular pool",
+        "Germ cells produce AMH to direct their own migration to the gonadal ridge"
+      ],
+      "correctAnswer": "B",
+      "explanation": "AMH/MIS is a glycoprotein member of the TGF-beta superfamily with critical roles in sexual differentiation and adult reproductive function: (1) Source: Sertoli cells of the fetal testis begin producing AMH at approximately week 8 of human gestation, under the control of SOX9 and SF1 transcription factors. AMH production is one of the earliest functions of Sertoli cells, occurring before testosterone production by Leydig cells. (2) Function in male development: AMH binds to AMH type II receptors (AMHR2) on Müllerian duct mesenchyme, triggering a signaling cascade that causes apoptosis and regression of the Müllerian ducts. In the absence of AMH (as in females, or in males with persistent Müllerian duct syndrome due to AMH or AMHR2 mutations), the Müllerian ducts persist and develop into the uterus, fallopian tubes, and upper vagina. (3) Two-signal model: Male sexual differentiation requires both AMH (Müllerian duct regression) AND testosterone (Wolffian duct development and virilization). These are produced by different cell types (Sertoli vs Leydig) and act on different structures. (4) Adult function: In adult women, AMH is produced by granulosa cells of small antral follicles and inhibits primordial follicle recruitment, serving as a clinical biomarker of ovarian reserve. In adult males, AMH levels decline after puberty as testosterone suppresses Sertoli cell AMH expression.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 7,
+      "campbellChapter": 46,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "advanced",
+      "difficulty": "EXPERT",
+      "topic": "Animal Reproduction"
     }
   ]
 }
