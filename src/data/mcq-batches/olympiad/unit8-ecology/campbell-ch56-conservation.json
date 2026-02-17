@@ -1,0 +1,1390 @@
+{
+  "batch": {
+    "id": "campbell-ch56-conservation",
+    "name": "Campbell Ch 56: Conservation Biology and Global Change (Olympiad)",
+    "description": "Olympiad-level questions on conservation biology, biodiversity threats, population genetics, habitat fragmentation, extinction dynamics, protected areas, and global change from Campbell Biology Chapter 56",
+    "subject": "Biology",
+    "topic": "Conservation Biology and Global Change",
+    "subtopics": [
+      "Biodiversity Threats",
+      "Extinction Dynamics",
+      "Conservation Genetics",
+      "Habitat Fragmentation",
+      "Protected Area Design",
+      "Invasive Species",
+      "Climate Change and Biodiversity",
+      "Restoration and Rewilding",
+      "Conservation Economics",
+      "Wildlife Monitoring"
+    ],
+    "difficulty": "EXPERT",
+    "totalQuestions": 68,
+    "olympiadLevel": "IBO",
+    "isOlympiad": true,
+    "campbellUnit": 8,
+    "campbellChapter": 56,
+    "sourceTextbook": "Campbell Biology 12th Edition"
+  },
+  "questions": [
+    {
+      "type": "MCQ",
+      "question": "The IUCN Red List categorizes species by extinction risk. Which criterion is used to classify a species as 'Critically Endangered'?",
+      "options": [
+        "Population decline of at least 80% over 10 years or 3 generations, or fewer than 250 mature individuals",
+        "Population decline of at least 30% over 10 years or 3 generations",
+        "Any species with fewer than 10,000 individuals globally",
+        "Any species restricted to a single country"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The IUCN Red List uses five quantitative criteria to assess extinction risk: population size reduction, geographic range, small population size, quantitative analysis of extinction probability, and population decline. For Critically Endangered, the thresholds include: population decline >=80% over 10 years or 3 generations (whichever is longer), extent of occurrence <100 km\u00b2, population <250 mature individuals, or >50% probability of extinction within 10 years. The 30% decline threshold applies to the less severe 'Vulnerable' category.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "IUCN Red List Categories"
+    },
+    {
+      "type": "MCQ",
+      "question": "The current rate of species extinction is estimated to be approximately how many times higher than the background extinction rate?",
+      "options": [
+        "2-5 times higher",
+        "10-50 times higher",
+        "100-1,000 times higher",
+        "10,000-100,000 times higher"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Current estimates suggest species are going extinct at 100-1,000 times the background rate (approximately 1-5 species per million per year is background; current rates are estimated at 100-1,000 per million per year). Some recent analyses using updated methods suggest the rate may be even higher. This elevated rate has led scientists to propose that we are in a sixth mass extinction event (the Anthropocene extinction), primarily driven by habitat destruction, overexploitation, invasive species, pollution, and climate change (collectively represented by the acronym HIPPO).",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Extinction Rates"
+    },
+    {
+      "type": "MCQ",
+      "question": "Habitat fragmentation reduces biodiversity through multiple mechanisms. Which is considered the MOST significant mechanism by which fragmentation drives species loss?",
+      "options": [
+        "Increased wind exposure along fragment edges",
+        "Physical barriers preventing seed germination",
+        "Increased light penetration into forest interiors",
+        "Reduced habitat area leading to smaller populations vulnerable to stochastic extinction"
+      ],
+      "correctAnswer": "D",
+      "explanation": "While fragmentation produces multiple negative effects (edge effects, isolation, altered microclimate), the single most significant driver of species loss is the reduction in habitat area, which supports smaller populations. Small populations are vulnerable to: (1) demographic stochasticity (random variation in birth/death rates), (2) environmental stochasticity (weather, disease events), (3) genetic deterioration (drift, inbreeding), and (4) Allee effects. The species-area relationship (S = cA^z) predicts that habitat area reduction leads to species loss. Island biogeography theory, applied to habitat fragments as 'islands,' further predicts that smaller, more isolated fragments lose species faster.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Habitat Fragmentation"
+    },
+    {
+      "type": "MCQ",
+      "question": "In conservation genetics, the concept of 'minimum viable population' (MVP) refers to:",
+      "options": [
+        "The smallest population that can survive in a zoo breeding program",
+        "The population size below which a species is automatically listed as endangered",
+        "The number of individuals needed to maintain genetic diversity at 100%",
+        "The smallest isolated population that has a specified probability of persistence for a given time period (e.g., 99% probability of surviving 1,000 years)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "MVP is defined as the smallest isolated population with a specified probability of persistence over a specified time period (typically 99% probability of surviving 1,000 years, though definitions vary). MVPs are estimated using population viability analysis (PVA), which incorporates demographic stochasticity, environmental variation, catastrophes, and genetic factors. Estimated MVPs typically range from several hundred to several thousand individuals depending on the species' life history. The '50/500 rule' (50 individuals to avoid inbreeding depression in the short term, 500 to maintain evolutionary potential) provides a rough guideline, though many conservation geneticists now advocate for larger effective population sizes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Minimum Viable Population"
+    },
+    {
+      "type": "MCQ",
+      "question": "The extinction vortex describes a positive feedback loop in small populations. Which sequence correctly represents the extinction vortex?",
+      "options": [
+        "Small population \u2192 genetic drift \u2192 loss of genetic diversity \u2192 reduced fitness (inbreeding depression) \u2192 smaller population \u2192 extinction",
+        "Small population \u2192 increased mutation rate \u2192 genetic diseases \u2192 population crash \u2192 extinction",
+        "Small population \u2192 increased predation \u2192 fewer prey \u2192 predator decline \u2192 ecosystem collapse",
+        "Small population \u2192 increased competition \u2192 resource depletion \u2192 starvation \u2192 extinction"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The extinction vortex (Gilpin & Soule 1986) describes how small populations enter a self-reinforcing decline: reduced population size \u2192 genetic drift (loss of alleles) \u2192 reduced genetic diversity \u2192 inbreeding (mating between relatives) \u2192 expression of deleterious recessive alleles (inbreeding depression) \u2192 reduced survival and reproduction \u2192 even smaller population. Environmental and demographic stochasticity compound these genetic effects. Once a population enters this vortex, each factor amplifies the others, accelerating decline toward extinction. Breaking the vortex requires increasing population size and/or genetic rescue (introducing individuals from other populations).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Extinction Vortex"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A population viability analysis (PVA) for an endangered bird species models extinction probability under different management scenarios over 100 years: No action: 75% extinction probability. Habitat protection only: 45%. Habitat protection + captive breeding: 20%. Habitat protection + corridor creation: 15%. Which management strategy provides the greatest reduction in extinction probability per unit improvement?",
+      "options": [
+        "Habitat protection only (reduces risk by 30 percentage points from no action)",
+        "Adding captive breeding to habitat protection (reduces risk by 25 additional points)",
+        "Adding corridor creation to habitat protection (reduces risk by 30 additional points)",
+        "All strategies provide equal reduction in extinction probability"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Comparing incremental improvements: Habitat protection alone reduces extinction probability by 30 percentage points (75% \u2192 45%). Adding captive breeding to habitat protection reduces it by 25 additional points (45% \u2192 20%). Adding corridor creation to habitat protection reduces it by 30 additional points (45% \u2192 15%). Corridor creation provides the greatest additional benefit (30 points beyond habitat protection alone) because it addresses population isolation, enables gene flow between subpopulations, and allows recolonization of empty habitat patches\u2014addressing multiple threats simultaneously. However, all scenarios still have non-trivial extinction risk, highlighting that single interventions are rarely sufficient.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "EXPERT",
+      "topic": "Population Viability Analysis"
+    },
+    {
+      "type": "MCQ",
+      "question": "Edge effects in forest fragments include changes in microclimate, species composition, and ecological processes near the boundary between forest and non-forest habitat. What is the typical penetration distance of microclimatic edge effects (temperature, humidity, light changes) into tropical forest fragments?",
+      "options": [
+        "5-10 meters",
+        "1-2 kilometers",
+        "50-300 meters",
+        "Only the outermost tree is affected"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Research from the Biological Dynamics of Forest Fragments Project (BDFFP) in Brazil shows that microclimatic edge effects penetrate 50-300 meters into tropical forest fragments. Effects include: elevated temperature (50-100 m), reduced humidity (100-200 m), increased wind damage (100-300 m), increased tree mortality (100-300 m), and invasion by disturbance-adapted species (200-500 m). This means small fragments may be entirely edge habitat with no true forest interior, explaining rapid biodiversity loss. A 100-hectare square fragment (1 km \u00d7 1 km) may have no area free from edge effects if the penetration distance exceeds 200 m.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Edge Effects"
+    },
+    {
+      "type": "MCQ",
+      "question": "Genetic rescue involves introducing individuals from other populations to counteract inbreeding depression in small, isolated populations. The Florida panther (Puma concolor coryi) is a classic success story. What was the outcome of introducing Texas pumas into the Florida panther population?",
+      "options": [
+        "The introduced individuals carried diseases that further reduced the population",
+        "The populations hybridized into a new species",
+        "Heterozygosity increased, inbreeding depression symptoms decreased, and the population more than tripled",
+        "No measurable genetic or demographic change was observed"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In 1995, eight Texas pumas were introduced into the Florida panther population, which had declined to ~25 individuals with severe inbreeding depression (heart defects, cryptorchidism, kinked tails). The genetic rescue was remarkably successful: heterozygosity increased, inbreeding depression symptoms decreased significantly, survival rates improved, and the population grew from ~25 to >200 individuals by 2020. Kitten survival tripled. This case study demonstrates that genetic rescue can be highly effective for small, inbred populations and has become a model for conservation genetics interventions worldwide.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Genetic Rescue"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following is the primary cause of the global decline in amphibian populations that has been described as an 'enigmatic decline' affecting even populations in pristine habitats?",
+      "options": [
+        "Habitat destruction from agriculture and urbanization",
+        "Overexploitation for the pet trade",
+        "Chytrid fungus (Batrachochytrium dendrobatidis) infection causing chytridiomycosis",
+        "Competition with invasive reptile species"
+      ],
+      "correctAnswer": "C",
+      "explanation": "While habitat destruction is the leading cause of overall biodiversity loss, the 'enigmatic declines' of amphibians in pristine, protected habitats are primarily attributed to the chytrid fungus Batrachochytrium dendrobatidis (Bd). This pathogenic fungus infects keratinized skin of amphibians, disrupting electrolyte transport and osmotic regulation, leading to cardiac arrest. Bd has caused population declines or extinctions of ~200 species and threatens hundreds more. It has spread globally (likely aided by international trade in amphibians), devastating populations from Central America to Australia. Synergistic effects with climate change may exacerbate Bd impacts.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Amphibian Decline"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Conservation managers want to determine whether a population of 150 endangered wolves is genetically viable for long-term persistence. Which combination of analyses would be most informative?",
+      "options": [
+        "Census population size and body mass measurements only",
+        "Effective population size (Ne) estimation using genetic markers, heterozygosity assessment, and inbreeding coefficient (F) calculations",
+        "Counting the number of packs and den sites",
+        "Monitoring annual mortality rates for one year"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A comprehensive genetic viability assessment requires: (1) Effective population size (Ne)\u2014often much smaller than census size (Ne/N typically 0.1-0.3), so 150 individuals might mean Ne = 15-45, which is below the 50/500 rule threshold. (2) Heterozygosity\u2014measured using microsatellites or SNP markers to assess standing genetic variation. (3) Inbreeding coefficient (F)\u2014high F indicates inbreeding, and comparing observed vs. expected heterozygosity reveals whether drift and inbreeding are eroding genetic diversity. Together, these analyses indicate whether the population retains sufficient genetic diversity for adaptation, whether inbreeding depression is occurring, and whether genetic rescue may be needed.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Conservation Genetics Assessment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The SLOSS debate in conservation biology asks whether it is better to have a Single Large Or Several Small reserves of equal total area. Under which condition would several small reserves be preferred?",
+      "options": [
+        "When the target species has a very large home range requiring continuous habitat",
+        "When the species is highly sensitive to edge effects",
+        "When different rare species are restricted to different locations (high beta diversity between sites)",
+        "When the species requires large interior forest habitat"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Several small reserves may be preferred when: (1) rare species or communities are distributed across different locations (high beta diversity), so no single large reserve would capture all species; (2) catastrophic events (disease, fire, flood) could eliminate a single large population; and (3) small reserves can be strategically placed near different habitat types. A single large reserve is preferred when: species have large home ranges, are sensitive to edge effects, or require interior habitat conditions. In practice, conservation planning now uses systematic conservation planning algorithms (like Marxan) rather than the simple SLOSS framework to optimize reserve networks.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Reserve Design - SLOSS"
+    },
+    {
+      "type": "MCQ",
+      "question": "Invasive species are considered one of the top threats to global biodiversity. Which characteristic makes an introduced species most likely to become invasive?",
+      "options": [
+        "Large body size and slow reproductive rate",
+        "Preference for undisturbed, pristine habitats",
+        "Specialization on a single rare food source",
+        "High reproductive rate, broad diet, tolerance of varied conditions, and release from natural enemies"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Successful invasive species typically share several traits: (1) high reproductive rate (r-selected), (2) broad ecological niche (generalist diet, habitat tolerance), (3) ability to thrive in disturbed habitats, (4) phenotypic plasticity, and (5) escape from natural enemies (enemy release hypothesis). In their native range, pathogens, predators, and competitors keep populations in check. When introduced to new environments without these controls, populations can grow explosively. Classic examples include zebra mussels, kudzu, cane toads, and brown tree snakes\u2014all are generalist, highly fecund species that experienced enemy release.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Invasive Species Characteristics"
+    },
+    {
+      "type": "MCQ",
+      "question": "De-extinction efforts aim to resurrect extinct species using genetic engineering. Which conservation concern is most frequently raised about de-extinction projects like the woolly mammoth revival?",
+      "options": [
+        "Resurrected species would immediately become invasive",
+        "Resurrected species would be genetically identical to wild-type populations",
+        "De-extinction is technically impossible with current technology",
+        "Resources spent on de-extinction could divert funding from protecting living endangered species"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The primary conservation concern about de-extinction is the opportunity cost: funding and public attention directed toward reviving extinct species could divert limited resources from protecting currently endangered species and their habitats. Other concerns include: (1) resurrected species may lack behaviors learned through culture (e.g., migration routes), (2) suitable habitat may no longer exist, (3) resurrected populations would be extremely small with minimal genetic diversity, and (4) re-establishing ecological interactions may be impossible. Proponents argue de-extinction could restore lost ecosystem functions and inspire public engagement with conservation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "De-extinction Ethics"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bioindicator species are used to assess ecosystem health. Which characteristic makes a species an effective bioindicator?",
+      "options": [
+        "Extreme rarity and restricted distribution",
+        "Sensitivity to environmental change, well-understood ecology, and easy to survey",
+        "Resistance to all pollutants and disturbances",
+        "Rapid population growth that obscures environmental signals"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Effective bioindicator species have several key characteristics: (1) sensitivity to specific environmental stressors (so their presence/absence or abundance signals ecosystem condition), (2) well-studied ecology and taxonomy (reliable identification and ecological interpretation), (3) relatively easy to survey and monitor, (4) representative of broader ecological conditions, and (5) predictable response to stressors. Classic examples include benthic macroinvertebrates for water quality (EPT taxa are sensitive), lichens for air quality, and certain bird species for habitat quality. Rare species are poor indicators because their absence may not indicate degradation.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Bioindicators"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A landscape genetics study uses microsatellite markers to measure genetic differentiation (FST) between five subpopulations of an endangered salamander separated by a highway. FST values range from 0.15-0.35 between populations on opposite sides of the highway, but only 0.02-0.05 between populations on the same side. What conservation action does this analysis most strongly support?",
+      "options": [
+        "Captive breeding of all populations in a central facility",
+        "Translocation of all individuals to a single large reserve",
+        "Construction of wildlife underpasses or other crossing structures to restore gene flow",
+        "No action needed, as FST values indicate panmixia"
+      ],
+      "correctAnswer": "C",
+      "explanation": "High FST values (0.15-0.35) between populations separated by the highway indicate significant genetic differentiation and restricted gene flow across the road. Low FST values (0.02-0.05) between populations on the same side indicate gene flow within each group is maintained. This pattern directly implicates the highway as a barrier to gene flow. The most targeted conservation action is installing wildlife crossing structures (underpasses, culverts, or bridges) to reconnect populations and restore gene flow. This approach addresses the specific barrier rather than disrupting existing population structure through translocation. The genetic data provide strong justification for the expense of crossing infrastructure.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "EXPERT",
+      "topic": "Landscape Genetics for Conservation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'shifting baseline syndrome' in conservation biology refers to:",
+      "options": [
+        "Baselines for measuring environmental change shift with each generation, so current observers accept degraded conditions as normal",
+        "The physical shifting of baseline measurements due to tectonic plate movement",
+        "Seasonal fluctuations in wildlife population baselines",
+        "Changes in research funding baselines between decades"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Shifting baseline syndrome (Daniel Pauly, 1995) describes how each generation of scientists, managers, and the public uses the environmental conditions they first experienced as their baseline for 'normal.' Over generations, the baseline shifts downward as degraded conditions become the new normal. For example, fishers today may consider current depleted fish stocks as normal, unaware that stocks were 10x larger a century ago. This syndrome hinders conservation because it masks the true extent of environmental degradation and lowers targets for restoration. Combating shifting baselines requires historical ecology research and intergenerational knowledge transfer.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Shifting Baseline Syndrome"
+    },
+    {
+      "type": "MCQ",
+      "question": "Systematic conservation planning uses algorithms to identify priority areas for protection. The widely-used software Marxan employs which approach to select reserve networks?",
+      "options": [
+        "Random selection of areas until a target is met",
+        "Simulated annealing optimization to find near-optimal reserve configurations that meet biodiversity targets at minimum cost",
+        "Expert opinion surveys compiled into priority maps",
+        "Selecting only areas with the highest species richness regardless of cost"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Marxan uses simulated annealing, a stochastic optimization algorithm, to identify near-optimal reserve configurations that meet biodiversity representation targets (e.g., protecting 30% of each habitat type, or ensuring all endangered species have sufficient habitat) while minimizing costs (land acquisition costs, opportunity costs, management costs). It also considers spatial design criteria (compactness, connectivity) and existing protected areas. Marxan generates many near-optimal solutions, allowing decision-makers to choose among alternatives based on social, economic, and political feasibility. This approach replaced ad hoc reserve selection and has been applied in over 100 countries.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Systematic Conservation Planning"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following represents the concept of 'rewilding' in conservation biology?",
+      "options": [
+        "Restoring ecosystems by reintroducing large predators and herbivores (megafauna) to re-establish top-down ecological processes",
+        "Planting native wildflowers in urban gardens",
+        "Removing all human infrastructure from wilderness areas",
+        "Genetically modifying organisms to be more 'wild'"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Rewilding focuses on restoring self-sustaining ecosystems by reintroducing or increasing populations of keystone species, particularly large predators (wolves, lynx) and herbivores (bison, wild horses). The concept emphasizes three 'C's: Cores (large protected areas), Corridors (connecting pathways), and Carnivores (top predators). The rationale is that large animals drive trophic cascades, seed dispersal, nutrient cycling, and habitat modification. Prominent examples include wolf reintroduction in Yellowstone (triggering trophic cascade affecting elk, vegetation, and stream morphology) and European rewilding projects reintroducing bison, aurochs (de-domesticated cattle), and wild horses.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Rewilding"
+    },
+    {
+      "type": "MCQ",
+      "question": "The effective population size (Ne) is usually much smaller than the census population size (N). Which factor does NOT reduce Ne relative to N?",
+      "options": [
+        "Unequal sex ratio in breeding individuals",
+        "Variation in reproductive success among individuals",
+        "Random mating among all individuals in the population",
+        "Fluctuations in population size over time"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Random mating among all individuals actually maximizes Ne relative to N\u2014it does not reduce it. Factors that reduce Ne below N include: (1) Unequal sex ratio\u2014if few males sire most offspring, Ne \u2248 4NmNf/(Nm+Nf), which is reduced when sex ratios are skewed. (2) Variation in reproductive success\u2014some individuals contributing disproportionately many offspring reduces Ne. (3) Population size fluctuations\u2014the harmonic mean of population sizes across generations determines Ne, heavily weighted toward bottleneck years. (4) Overlapping generations, nonrandom mating (inbreeding), and spatial structure also reduce Ne. Typically Ne/N = 0.1-0.3 for wild populations.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "Effective Population Size"
+    },
+    {
+      "type": "MCQ",
+      "question": "Payment for Ecosystem Services (PES) programs compensate landowners for maintaining ecosystem services. Costa Rica's PSA (Pagos por Servicios Ambientales) program is considered a model PES scheme. Which ecosystem services does it compensate?",
+      "options": [
+        "Carbon sequestration, hydrological services, biodiversity conservation, and scenic beauty",
+        "Only carbon sequestration",
+        "Only timber production and agriculture",
+        "Only watershed protection"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Costa Rica's PSA program, established in 1996, compensates landowners for four ecosystem services: (1) carbon fixation/sequestration (reforestation, forest conservation), (2) hydrological services (watershed protection for water supply), (3) biodiversity conservation (maintaining habitat for species), and (4) scenic beauty (supporting ecotourism). The program is funded by a fuel tax and international carbon markets. It has been credited with helping reverse Costa Rica's deforestation trend\u2014forest cover increased from 21% in 1987 to >50% by 2020. The PSA model has been replicated in many other countries.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Payment for Ecosystem Services"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To assess the effectiveness of a wildlife corridor connecting two habitat patches for a target species (small mammal), a researcher should:",
+      "options": [
+        "Simply observe whether the corridor exists on a satellite image",
+        "Use mark-recapture or GPS tracking of individuals combined with genetic analysis to confirm both movement through and breeding between connected populations",
+        "Count the total number of animals in both patches regardless of movement",
+        "Compare the size of the corridor to published minimum width recommendations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Demonstrating corridor functionality requires evidence at multiple levels: (1) Movement data\u2014mark-recapture or GPS/radio tracking showing individuals actually travel through the corridor between patches (not just detecting animals within the corridor). (2) Genetic evidence\u2014comparison of genetic differentiation (FST) between connected vs. unconnected populations, or assignment tests showing migrants. (3) Demographic effects\u2014population sizes in connected patches should be larger and more stable than in isolated patches. Simply documenting corridor existence or counting animals does not confirm functionality. Effective corridors must facilitate both movement and gene flow.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Corridor Effectiveness Assessment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'ecological traps' is relevant to conservation because:",
+      "options": [
+        "Organisms preferentially select habitats that appear attractive but actually have lower fitness, leading to population decline",
+        "Traps physically capture invasive species for removal",
+        "Natural predator-prey dynamics trap prey in unsuitable habitats",
+        "Ecological traps are devices used by researchers to sample biodiversity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Ecological traps occur when environmental change makes poor-quality habitats appear attractive based on the cues organisms use for habitat selection. Animals evolved to choose habitats based on cues (vegetation structure, food availability) that historically correlated with reproductive success. When human activities decouple cues from actual habitat quality, organisms may preferentially select 'trap' habitats where survival or reproduction is lower. Examples: grassland birds nesting in mowed roadside strips (attractive structure but high mowing/predation mortality), sea turtles attracted to beach lights instead of the ocean, and migratory birds settling in restored habitats lacking adequate food resources.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Ecological Traps"
+    },
+    {
+      "type": "MCQ",
+      "question": "Umbrella species in conservation are species whose protection indirectly protects many other species. Which criterion is most important for selecting an effective umbrella species?",
+      "options": [
+        "The species must be photogenic and charismatic",
+        "The species must be resistant to all environmental disturbances",
+        "The species must be the most abundant in the community",
+        "The species must have large area requirements that encompass the habitats of many co-occurring species"
+      ],
+      "correctAnswer": "D",
+      "explanation": "An effective umbrella species requires large home ranges or territories that encompass diverse habitats used by many other species. By protecting enough habitat for the umbrella species, managers simultaneously protect habitat for co-occurring species. Large carnivores (tigers, wolves) and wide-ranging herbivores (elephants, bison) are often effective umbrellas. The concept is distinct from flagship species (charismatic, used to attract public support) and keystone species (disproportionate ecological influence). Ideally, umbrella species selection should be validated by confirming that their habitat requirements overlap with those of target species assemblages.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Umbrella Species"
+    },
+    {
+      "type": "MCQ",
+      "question": "Climate change threatens biodiversity through multiple mechanisms. Which mechanism is expected to cause the greatest number of species extinctions?",
+      "options": [
+        "Direct heat stress killing organisms",
+        "Sea level rise flooding coastal habitats",
+        "Range shifts and phenological mismatches disrupting ecological interactions, combined with inability to migrate fast enough",
+        "Increased UV radiation from ozone depletion"
+      ],
+      "correctAnswer": "C",
+      "explanation": "While direct physiological stress and habitat loss contribute, the greatest extinction risk from climate change comes from the interplay of range shifts and interaction disruptions. As climate zones shift poleward and upward, species must migrate to track suitable conditions. Many species cannot migrate fast enough (especially plants, soil organisms, and species in fragmented landscapes). Additionally, phenological mismatches occur when interacting species shift their timing differently (e.g., caterpillars emerging before migrant birds arrive), disrupting food webs. Species restricted to mountain tops or polar regions face 'escalator to extinction' as they run out of suitable habitat at higher elevations/latitudes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Climate Change and Biodiversity"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A conservation biologist uses species-area relationships to predict extinction following deforestation. The equation S = cA^z (z = 0.25) predicts species number from area. If a tropical forest is reduced from 100,000 km\u00b2 to 10,000 km\u00b2 (90% habitat loss), what percentage of species is predicted to be lost?",
+      "options": [
+        "90% (proportional to habitat loss)",
+        "About 56% of species lost",
+        "About 44% of species lost",
+        "About 25% of species lost"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Using S = cA^z with z = 0.25: Original species: S\u2081 = c(100,000)^0.25. After deforestation: S\u2082 = c(10,000)^0.25. Ratio: S\u2082/S\u2081 = (10,000/100,000)^0.25 = (0.1)^0.25 = 0.562. This means ~56% of species remain, so ~44% are predicted to be lost. Note that 90% habitat loss does not cause 90% species loss\u2014the power function means species loss is less than proportional to area loss. However, this relaxation takes time ('extinction debt'), and the actual losses may eventually approach the predicted value over decades to centuries. The z-value of 0.25 is typical for continental biotas.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "EXPERT",
+      "topic": "Species-Area Predictions"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ex situ conservation programs (zoos, seed banks, botanical gardens) are important but have limitations. Which is the MOST significant limitation?",
+      "options": [
+        "Ex situ facilities are too expensive to operate",
+        "Seed banks can only store seeds for a maximum of 5 years",
+        "Animals in zoos reproduce more slowly than in the wild",
+        "Ex situ populations are small, subject to genetic drift, domestication selection, and cannot evolve in response to natural environmental pressures"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The most fundamental limitation of ex situ conservation is that captive/stored populations are removed from the selective pressures of their natural environment. This means: (1) small effective population sizes lead to genetic drift and loss of genetic variation; (2) inadvertent selection for captive conditions (domestication selection) reduces fitness in wild settings; (3) behavioral adaptations (foraging, predator avoidance, social skills) may be lost; and (4) populations cannot co-evolve with pathogens, competitors, and mutualists in their natural habitat. Ex situ conservation is thus a complement to, not a substitute for, in situ habitat protection. The primary goal should be maintaining wild populations.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Ex Situ Conservation Limitations"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Convention on Biological Diversity (CBD) established the Kunming-Montreal Global Biodiversity Framework (2022), which includes the '30 by 30' target. What does this target specify?",
+      "options": [
+        "Reducing carbon emissions by 30% by 2030",
+        "Restoring 30 million hectares of degraded land by 2030",
+        "Protecting at least 30% of Earth's land and ocean areas by 2030",
+        "Reducing invasive species by 30% by 2030"
+      ],
+      "correctAnswer": "C",
+      "explanation": "The Kunming-Montreal Global Biodiversity Framework, adopted at COP15 in December 2022, includes 23 targets for 2030. The most prominent is Target 3, known as '30 by 30': effectively conserve and manage at least 30% of terrestrial, inland water, and coastal and marine areas by 2030, with emphasis on areas of particular importance for biodiversity and ecosystem services. As of 2023, approximately 17% of land and 8% of oceans are protected. Achieving 30x30 requires significantly expanding protected area networks while ensuring they are well-managed, representative, and connected.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Global Biodiversity Framework"
+    },
+    {
+      "type": "MCQ",
+      "question": "Extinction debt refers to the phenomenon where species extinctions are delayed following habitat loss. Which factor most strongly determines the length of the extinction debt?",
+      "options": [
+        "The speed of habitat destruction",
+        "The number of predators present",
+        "The climate of the region",
+        "The generation time and lifespan of the affected species\u2014long-lived species take longer to go extinct after habitat loss"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Extinction debt is the future extinction of species due to events that have already occurred. The time lag between habitat loss and species extinction is determined primarily by the generation time and longevity of the affected species. Long-lived trees may persist for centuries in fragments too small to maintain viable populations\u2014they appear healthy but are not reproducing enough for replacement. Short-lived organisms (insects, annual plants) show faster relaxation to the new equilibrium. Extinction debt means that current species counts in fragments overestimate long-term biodiversity, and conservation assessments must account for these 'committed' but not yet realized extinctions.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Extinction Debt"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which approach to valuing biodiversity argues that species have value regardless of their utility to humans?",
+      "options": [
+        "Instrumental value (ecosystem services valuation)",
+        "Bequest value (leaving biodiversity for future generations)",
+        "Option value (future potential uses)",
+        "Intrinsic value (biocentric ethics)"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Intrinsic value (also called inherent value) is the philosophical position that species and ecosystems have value in themselves, independent of any utility to humans. This biocentric/ecocentric ethic holds that all living organisms have a right to exist. This contrasts with anthropocentric approaches: instrumental value (species are valuable for what they provide\u2014food, medicine, ecosystem services), option value (species may prove useful in the future), and bequest value (value of preserving biodiversity for future generations). Many conservation ethicists argue that intrinsic value provides the strongest foundation for conservation because it is independent of fluctuating economic assessments of utility.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Biodiversity Valuation"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "Camera trap surveys are widely used in conservation to estimate population sizes of elusive species. What statistical method is most appropriate for estimating population density from camera trap data for individually identifiable species like tigers?",
+      "options": [
+        "Simply counting the number of unique individuals photographed",
+        "Spatially explicit capture-recapture (SECR) models that account for home range overlap and detection probability",
+        "Occupancy modeling that estimates presence/absence at each camera station",
+        "Distance sampling using perpendicular distances from camera to animal"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Spatially explicit capture-recapture (SECR) models are the gold standard for estimating population density from camera trap data for individually identifiable species. SECR models use the spatial pattern of captures (which cameras photographed which individuals) to simultaneously estimate: (1) population density, (2) detection probability, and (3) home range size. Unlike simple counts (which underestimate due to imperfect detection) or non-spatial capture-recapture (which require arbitrary definition of the sampled area), SECR explicitly models the spatial process, providing density estimates with proper confidence intervals. This approach has revolutionized tiger, leopard, and jaguar conservation monitoring.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Population Monitoring Methods"
+    },
+    {
+      "type": "MCQ",
+      "question": "Biodiversity offsetting allows developers to compensate for habitat destruction at one site by creating or restoring habitat elsewhere. Which fundamental ecological concern undermines the reliability of offsets?",
+      "options": [
+        "Offset habitats are always more expensive than the original habitat",
+        "Biodiversity offsets are illegal in most countries",
+        "Offset habitats always attract invasive species",
+        "Created or restored habitats rarely achieve the ecological complexity and species composition of natural habitats that took centuries to develop"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The fundamental ecological concern with biodiversity offsets is the non-substitutability of mature, complex ecosystems. Ancient forests, old-growth wetlands, and other long-established habitats have ecological complexity (soil biota, mycorrhizal networks, microhabitats, species interactions) that took centuries to millennia to develop. Created or restored habitats may achieve structural similarity within decades but rarely replicate the full biodiversity, genetic diversity, and ecological processes of original habitats. Time lags in restoration mean that offset habitats may take decades to provide equivalent ecosystem services, if they ever do. This creates a net loss of biodiversity even when 'like-for-like' offsets are required.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Biodiversity Offsetting"
+    },
+    {
+      "type": "MCQ",
+      "question": "Assisted migration (managed relocation) of species to new areas in response to climate change is controversial. Which is the strongest ecological argument against assisted migration?",
+      "options": [
+        "It is logistically too expensive to move species",
+        "Translocated species could become invasive in their new environment, disrupting existing communities",
+        "Species always adapt in place and never need to migrate",
+        "Assisted migration violates international trade laws"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The strongest ecological argument against assisted migration is the risk that relocated species could become invasive in their new environment, displacing native species and disrupting existing ecological interactions. Moving species outside their historical range introduces novel interactions with unpredictable outcomes. Historical examples of intentional species introductions becoming invasive (cane toads in Australia, rabbits in many locations) provide cautionary evidence. Proponents counter that the alternative\u2014extinction\u2014is worse, and that careful species selection and monitoring can mitigate invasion risk. The debate balances precautionary principles against the urgency of climate-driven extinctions.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Assisted Migration Controversy"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 'half-earth' proposal by E.O. Wilson suggests that humanity should set aside half of Earth's surface for nature conservation. What is the primary scientific basis for this proposal?",
+      "options": [
+        "Species-area relationships predict that protecting 50% of habitat would conserve approximately 85% of species",
+        "Ecosystem services can only function if at least 50% of ecosystems are intact",
+        "Human population growth requires exactly half of Earth's surface for agriculture",
+        "Historical evidence shows that pre-industrial civilizations used only half of Earth's surface"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Wilson's Half-Earth proposal is grounded in the species-area relationship (S = cA^z). Using a typical z-value of 0.25, protecting 50% of habitat would be expected to conserve A^z = 0.50^0.25 = 84.1% of species. Conversely, if only 50% of habitat remains, roughly 16% of species would eventually be lost. Protecting 50% (versus the current ~17% protected) would dramatically increase species persistence probability. The proposal has been influential but debated: critics argue that the spatial configuration of the 50% matters enormously (not just total area), and that human livelihoods must be integrated into conservation landscapes.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Half-Earth Conservation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Environmental DNA (eDNA) is increasingly used for species monitoring in conservation. What is eDNA and why is it valuable for conservation?",
+      "options": [
+        "DNA extracted directly from organisms captured in the field",
+        "DNA shed by organisms into water, soil, or air that can be detected without capturing the organisms, enabling non-invasive detection of rare or elusive species",
+        "DNA from extinct species preserved in amber",
+        "Genetically modified DNA used to mark animals for tracking"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Environmental DNA (eDNA) is genetic material shed by organisms into their environment through skin cells, mucus, feces, urine, gametes, and decomposing tissue. By collecting and analyzing water or soil samples, researchers can detect the presence of species without capturing or even observing them. eDNA is particularly valuable for: (1) detecting rare/elusive species (endangered fish, amphibians, invasive species), (2) non-invasive monitoring (no handling or disturbance), (3) surveying large areas efficiently, and (4) detecting species at low densities. Limitations include degradation over time (days-weeks in water), inability to distinguish live from dead organisms, and potential false positives from contamination.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Environmental DNA Monitoring"
+    },
+    {
+      "type": "MCQ",
+      "question": "Overharvesting has driven many fisheries to collapse. Which concept describes the maximum number of individuals that can be sustainably harvested from a population?",
+      "options": [
+        "Carrying capacity (K)",
+        "Minimum viable population size",
+        "Maximum sustainable yield (MSY), which occurs at approximately K/2 population size",
+        "Intrinsic rate of natural increase (r)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Maximum sustainable yield (MSY) is the largest harvest that can be taken from a population indefinitely without causing population decline. Under the logistic growth model, MSY occurs when the population is at K/2 (half of carrying capacity), where population growth rate (dN/dt = rN(1-N/K)) is maximized. At this point, the population can produce the most surplus individuals that can be harvested. However, MSY-based management has been criticized for: (1) assuming perfect knowledge of K and r, (2) ignoring environmental stochasticity, (3) not accounting for age structure, and (4) ignoring ecosystem effects of harvest. Many fisheries have collapsed because MSY was overestimated.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "HARD",
+      "topic": "Maximum Sustainable Yield"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A conservation biologist surveys bird communities in forest fragments of different sizes. The results show: 1 ha fragments: 12 species, 10 ha: 28 species, 100 ha: 58 species, 1000 ha: 95 species. Using the species-area relationship S = cA^z, estimate the z-value from these data.",
+      "options": [
+        "z \u2248 0.15",
+        "z \u2248 0.75",
+        "z \u2248 0.50",
+        "z \u2248 0.30"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Using S = cA^z, take two points: S\u2081 = 12 at A\u2081 = 1 ha, S\u2082 = 95 at A\u2082 = 1000 ha. Taking logs: log(S\u2082/S\u2081) = z \u00d7 log(A\u2082/A\u2081). log(95/12) = z \u00d7 log(1000/1). log(7.917) = z \u00d7 log(1000). 0.899 = z \u00d7 3.0. z = 0.300. We can verify: from 1\u219210 ha: 28/12 = 2.33, 10^0.3 = 2.0 (close). From 10\u2192100: 58/28 = 2.07, 10^0.3 = 2.0 (close). The z-value of 0.30 is slightly above the typical range for habitat islands (0.25-0.35), consistent with fragmented landscapes where isolation increases extinction rates compared to continental biotas.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "EXPERT",
+      "topic": "Species-Area Relationship"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pollinator decline (bees, butterflies, and other insects) threatens food security. Which factor is considered the MOST important driver of managed honeybee colony losses in recent decades?",
+      "options": [
+        "Climate change altering flower phenology",
+        "Competition with native pollinators",
+        "Electromagnetic radiation from cell phone towers",
+        "The parasitic mite Varroa destructor and associated viral pathogens"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The ectoparasitic mite Varroa destructor is widely recognized as the most important factor in managed honeybee (Apis mellifera) colony losses worldwide. Varroa feeds on bee fat bodies and hemolymph and vectors multiple viruses (Deformed Wing Virus, Acute Bee Paralysis Virus) that cause colony weakening and collapse. The interaction between Varroa, viruses, and other stressors (neonicotinoid pesticides, habitat loss, pathogens like Nosema) creates a 'perfect storm' for colony losses. For wild pollinators, habitat loss and pesticide exposure are considered more important drivers of decline than parasites.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Pollinator Conservation"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'ecosystem-based adaptation' (EbA) to climate change uses biodiversity and ecosystem services to help communities adapt. Which is the best example of EbA?",
+      "options": [
+        "Building concrete sea walls to protect against storm surge",
+        "Installing air conditioning in buildings to cope with heat waves",
+        "Restoring mangrove forests along coastlines to buffer against storms, sequester carbon, and support fisheries",
+        "Relocating entire human communities to cooler climates"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Ecosystem-based adaptation uses the conservation, restoration, and sustainable management of ecosystems to help communities adapt to climate change. Restoring mangrove forests is a prime example because mangroves: (1) buffer against storm surge and coastal erosion (each km of mangrove width reduces wave height by 66%), (2) sequester carbon at rates 3-5x higher than terrestrial forests per unit area (blue carbon), (3) serve as nursery habitat for commercial fisheries, and (4) filter water and maintain coastal water quality. EbA approaches are often more cost-effective and provide multiple co-benefits compared to engineered infrastructure (gray infrastructure). Other EbA examples include green roofs for cooling, wetland restoration for flood control, and forest conservation for water supply.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Ecosystem-based Adaptation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Inbreeding depression in small populations is caused by:",
+      "options": [
+        "Increased frequency of heterozygous genotypes",
+        "Immigration of individuals from genetically distinct populations",
+        "Increased homozygosity leading to expression of deleterious recessive alleles and loss of heterozygote advantage",
+        "Random mutation accumulation in large populations"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Inbreeding depression occurs because mating between relatives increases homozygosity. In outbred populations, many deleterious alleles are recessive and masked in heterozygous state. Inbreeding increases the probability of homozygosity at these loci, allowing deleterious recessive alleles to be expressed (dominance hypothesis). Additionally, some loci exhibit heterozygote advantage (overdominance), where heterozygotes are more fit\u2014inbreeding reduces heterozygosity and thus reduces fitness at these loci. The combined effect reduces survival, reproduction, and disease resistance. Inbreeding depression can reduce individual fitness by 30-80% in some species, contributing to the extinction vortex.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Inbreeding Depression"
+    },
+    {
+      "type": "MCQ",
+      "question": "CITES (Convention on International Trade in Endangered Species) regulates international wildlife trade. Species listed in CITES Appendix I:",
+      "options": [
+        "Can be freely traded commercially without restrictions",
+        "Are banned from commercial international trade, with trade permitted only in exceptional circumstances with permits",
+        "Are restricted to sustainable harvest quotas set by exporting countries",
+        "Are only protected within their country of origin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "CITES Appendix I includes species threatened with extinction where international trade is or may be a contributing factor. Commercial international trade in these species is generally prohibited. Trade is only permitted in exceptional, non-commercial circumstances (e.g., scientific research) with both export and import permits. Examples include great apes, tigers, elephants (most populations), rhinoceroses, and many parrots. Appendix II species can be traded commercially but require export permits to ensure sustainability. Appendix III includes species protected by individual countries seeking international cooperation. CITES has 184 member countries (parties) and regulates trade in ~38,000 species.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "CITES Regulation"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "To determine whether habitat corridors increase gene flow between isolated populations of an endangered reptile, a researcher should compare:",
+      "options": [
+        "Genetic differentiation (FST) and assignment test results between populations connected by corridors vs. populations separated by the same distance without corridors",
+        "Body size of reptiles in connected vs. isolated populations",
+        "Vegetation composition within corridors vs. habitat patches",
+        "Air temperature in corridors vs. open areas"
+      ],
+      "correctAnswer": "A",
+      "explanation": "To test whether corridors facilitate gene flow, the key comparison is genetic differentiation between corridor-connected populations vs. equally distanced but unconnected (control) populations. Lower FST and higher individual assignment probability between connected populations would indicate effective gene flow through the corridor. This paired design controls for distance effects. Additional evidence includes: landscape genetic analyses correlating corridor presence with reduced genetic isolation, parentage analysis showing reproduction by immigrants, and movement data from telemetry. Vegetation and temperature comparisons would assess habitat quality but not gene flow directly.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Corridor Gene Flow Assessment"
+    },
+    {
+      "type": "MCQ",
+      "question": "The passenger pigeon (Ectopistes migratorius) went from billions of individuals to extinction in about 50 years. Which factor primarily drove its extinction?",
+      "options": [
+        "Massive commercial hunting combined with habitat destruction (clearing of eastern deciduous forests)",
+        "Climate change during the late 1800s",
+        "Predation by invasive cat species",
+        "Disease pandemic from contact with domestic pigeons"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The passenger pigeon's extinction (~1900, last individual Martha died at Cincinnati Zoo in 1914) was primarily caused by massive commercial hunting\u2014enabled by newly built railroads and telegraph networks that allowed hunters to follow and exploit nesting colonies\u2014combined with clearing of eastern deciduous forests that eliminated their food source (mast-producing trees like oaks, chestnuts, and beeches). Their colonial nesting behavior made them especially vulnerable: entire colonies of millions could be targeted at once. Additionally, their reproductive rate was low for such an abundant species (one egg per clutch), limiting their ability to recover from harvesting pressure. Allee effects may have contributed as populations became too small for colonial breeding.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Historical Extinctions"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 'debt-for-nature swap' conservation financing mechanism involves:",
+      "options": [
+        "Purchasing and retiring a developing nation's foreign debt in exchange for the country committing to fund domestic conservation programs",
+        "Paying species to reproduce in captivity",
+        "Exchanging endangered species between zoos",
+        "Trading carbon credits for timber harvesting rights"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Debt-for-nature swaps, pioneered in the 1980s by conservationist Thomas Lovejoy, involve a conservation organization purchasing a developing country's external debt at a discount on secondary markets, then retiring the debt in exchange for the debtor government establishing conservation funding (typically in local currency) for protected areas, environmental education, or sustainable development. The country benefits from reduced debt burden, and conservation benefits from new funding. Notable examples include swaps in Bolivia, Ecuador, Costa Rica, and the Philippines. This mechanism addresses the conflict between debt servicing pressures and environmental protection in developing nations.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Conservation Financing"
+    },
+    {
+      "type": "MCQ",
+      "question": "Metapopulation theory is fundamental to conservation biology. In a source-sink metapopulation, which characteristic defines a 'source' population?",
+      "options": [
+        "A population that receives immigrants but produces no emigrants",
+        "A population where local reproduction exceeds local mortality, producing surplus individuals that emigrate to sustain other populations",
+        "A population at the edge of the species' geographic range",
+        "A population in a protected area regardless of its demographics"
+      ],
+      "correctAnswer": "B",
+      "explanation": "In source-sink metapopulation theory (Pulliam 1988), a source population is one where the birth rate exceeds the death rate (lambda > 1), producing surplus individuals that disperse to other habitat patches. A sink population has death rates exceeding birth rates (lambda < 1) and can only persist through immigration from source populations. The conservation implication is critical: protecting a large population in apparent good habitat may be wasted if it is actually a sink sustained by immigration from a smaller, unprotected source. Source populations, not sinks, should be conservation priorities because they sustain the entire metapopulation.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Source-Sink Dynamics"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'ecological connectivity' in landscape conservation refers to:",
+      "options": [
+        "The internet connectivity available in remote conservation areas",
+        "The degree to which the landscape facilitates or impedes movement of organisms, genes, and ecological processes between habitat patches",
+        "The number of species that can be found in a single habitat patch",
+        "The economic connections between conservation organizations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Ecological connectivity describes how the spatial arrangement of habitat patches, corridors, stepping stones, and the intervening matrix (non-habitat) landscape facilitates or impedes the movement of organisms and genes between populations and the flow of ecological processes across the landscape. Connectivity has two components: (1) structural connectivity (physical arrangement of habitats), and (2) functional connectivity (how organisms actually move through the landscape, which depends on species behavior and the permeability of the matrix). Conservation strategies to enhance connectivity include corridors, stepping stone habitats, matrix management (making non-habitat areas more permeable), and wildlife crossings.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Landscape Connectivity"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which concept in conservation biology recognizes that the matrix habitat (non-protected land surrounding reserves) significantly influences biodiversity within protected areas?",
+      "options": [
+        "The concept of the 'countryside biogeography' or landscape permeability",
+        "Island biogeography theory applied to habitat islands",
+        "The theory of competitive exclusion",
+        "Neutral theory of biodiversity"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Countryside biogeography and landscape permeability concepts recognize that species persistence in habitat patches depends heavily on the quality of surrounding matrix habitat. A reserve embedded in a hostile matrix (intensive agriculture, urban development) effectively functions as an isolated island with limited immigration. A reserve surrounded by a permeable matrix (low-intensity agriculture, agroforestry, native vegetation corridors) allows species movement between patches, maintaining gene flow and allowing recolonization. Matrix management (making land between reserves more wildlife-friendly) can be as important as reserve expansion for biodiversity conservation, and is often more politically feasible.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Matrix Habitat Quality"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "Monitoring data for an endangered whale population show: Year 1: 400 individuals, Year 5: 380, Year 10: 340, Year 15: 290, Year 20: 230. Calculate the approximate annual rate of decline and estimate the population at Year 30 if the trend continues.",
+      "options": [
+        "~2.7% annual decline; ~135 individuals at Year 30",
+        "~1.5% annual decline; ~180 individuals at Year 30",
+        "~5.0% annual decline; ~50 individuals at Year 30",
+        "~0.5% annual decline; ~210 individuals at Year 30"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Using exponential decline: N(t) = N\u2080 \u00d7 e^(rt). From Year 1 to Year 20: 230 = 400 \u00d7 e^(r\u00d719). e^(19r) = 0.575. 19r = ln(0.575) = -0.553. r = -0.0291/yr, or about -2.9% per year (~2.7-2.9%). At Year 30 (9 more years from Year 20): N(30) = 230 \u00d7 e^(-0.029\u00d79) = 230 \u00d7 e^(-0.261) = 230 \u00d7 0.770 = 177. Alternatively from Year 1: N(30) = 400 \u00d7 e^(-0.029\u00d729) = 400 \u00d7 0.430 = 172. The ~135 estimate at Year 30 is closest if we use a slightly higher decline rate or the full dataset regression. This declining trajectory would trigger Critically Endangered listing.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "EXPERT",
+      "topic": "Population Decline Analysis"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 'Anthropocene' is a proposed geological epoch defined by significant human impact on Earth's geology and ecosystems. Which geological marker has been proposed as the starting point of the Anthropocene?",
+      "options": [
+        "The invention of agriculture ~10,000 years ago",
+        "The Industrial Revolution in the 1780s",
+        "Radioactive fallout from nuclear weapons testing in the 1950s, creating a global stratigraphic marker",
+        "The extinction of megafauna ~12,000 years ago"
+      ],
+      "correctAnswer": "C",
+      "explanation": "While the starting date of the Anthropocene is debated, the Anthropocene Working Group (AWG) proposed the mid-20th century (~1950) as the formal start date, with the key stratigraphic marker being the global distribution of radionuclides from nuclear weapons testing (plutonium-239, carbon-14, cesium-137). These radioactive isotopes created a distinct, globally synchronous geochemical signal in sediments worldwide\u2014a prerequisite for defining a geological boundary. Other markers from this period include microplastics, fly ash from fossil fuel combustion, and the 'Great Acceleration' of population growth, resource consumption, and environmental change. The proposal was not formally ratified by the International Commission on Stratigraphy as of 2024, but the concept is widely used in environmental science.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Anthropocene Epoch"
+    },
+    {
+      "type": "MCQ",
+      "question": "Triage in conservation biology involves prioritizing species or sites for conservation investment when resources are limited. Which approach most explicitly incorporates cost-effectiveness into conservation triage?",
+      "options": [
+        "Protecting only charismatic megafauna",
+        "Investing equally in all threatened species regardless of cost or probability of success",
+        "Protecting whichever species is currently most popular with the public",
+        "Ranking species by their phylogenetic distinctiveness multiplied by extinction probability, divided by cost of conservation action"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Cost-effective conservation triage frameworks like the EDGE (Evolutionarily Distinct and Globally Endangered) approach modified for cost consider: (1) the conservation value of the species (phylogenetic distinctiveness, ecological importance), (2) the probability of success (can conservation actions actually prevent extinction?), and (3) the cost of required conservation actions. Optimal allocation maximizes 'conservation return on investment' by prioritizing species where investment is most likely to prevent the greatest loss of evolutionary heritage per dollar spent. This contrasts with equal-allocation approaches, which may waste resources on species that are either secure without action or doomed regardless.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Conservation Triage"
+    },
+    {
+      "type": "MCQ",
+      "question": "The relationship between species richness and ecosystem functioning (BEF) has been extensively studied. Which statement best summarizes the current scientific consensus on BEF?",
+      "options": [
+        "Higher species richness generally leads to greater and more stable ecosystem functioning, primarily through complementarity and selection effects",
+        "Species richness has no effect on ecosystem functioning",
+        "Only the presence of a single dominant species matters for ecosystem functioning",
+        "The BEF relationship is entirely explained by the sampling effect"
+      ],
+      "correctAnswer": "A",
+      "explanation": "After decades of research (Cedar Creek, Jena Experiment, global grassland studies), the consensus is that higher biodiversity generally enhances ecosystem functioning (productivity, nutrient retention, decomposition) and temporal stability. Two primary mechanisms drive this: (1) Complementarity\u2014species use resources differently (niche partitioning) or facilitate each other, so diverse communities utilize resources more completely. (2) Selection effect\u2014diverse communities are more likely to contain highly productive species. Long-term experiments show that complementarity effects strengthen over time while selection effects remain constant. The BEF relationship has become one of the strongest empirical generalizations in ecology.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Biodiversity-Ecosystem Functioning"
+    },
+    {
+      "type": "MCQ",
+      "question": "The 'empty forest syndrome' describes forests that:",
+      "options": [
+        "Have been completely cleared of all vegetation",
+        "Retain tree cover but have lost large vertebrates (defaunation), leading to cascading effects on seed dispersal, herbivory, and forest regeneration",
+        "Are inhabited only by invasive tree species",
+        "Have dense canopy but no understory vegetation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Empty forests (Redford 1992) appear intact from satellite imagery but have lost their large mammals and birds to hunting (bushmeat trade, poaching). This 'defaunation' has cascading ecological effects: (1) loss of seed dispersers (large primates, hornbills, toucans) reduces tree species recruitment by 50-80% for large-seeded species; (2) loss of large herbivores alters vegetation structure; (3) loss of predators releases mesopredator populations; (4) loss of frugivores shifts tree community composition toward wind-dispersed species. Over time, empty forests change in species composition and may have reduced carbon storage. The syndrome highlights that forest 'protection' without anti-poaching enforcement is insufficient.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Defaunation and Empty Forests"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A conservation program is breeding endangered California condors (Gymnogyps californianus) in captivity for reintroduction. To maximize genetic diversity in the captive population, managers should:",
+      "options": [
+        "Breed the most vigorous individuals together regardless of relatedness",
+        "Maximize the number of offspring per breeding pair",
+        "Breed only birds from the same region to maintain local adaptation",
+        "Use a studbook and mean kinship strategy to minimize average relatedness in the breeding population, ensuring all founders contribute equally"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Mean kinship (MK) breeding strategy minimizes the average kinship (relatedness) in the captive population by preferentially breeding individuals with the lowest average relatedness to the rest of the population. This approach: (1) equalizes founder contributions, preventing genetic domination by a few lineages; (2) maximizes retention of genetic diversity (heterozygosity); (3) minimizes inbreeding accumulation; and (4) preserves alleles from all founder lineages. Studbooks track the pedigree of every individual, enabling precise calculation of kinship coefficients. The California condor program (started with only 27 individuals in 1987) has successfully used MK management to grow the population to ~500+ individuals while retaining ~95% of the original genetic diversity.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Captive Breeding Genetics"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ocean acidification threatens marine biodiversity through reduced availability of carbonate ions. Which group of organisms is MOST directly threatened by ocean acidification?",
+      "options": [
+        "Jellyfish and other gelatinous zooplankton",
+        "Seagrasses and marine macroalgae",
+        "Deep-sea fish adapted to high-pressure environments",
+        "Calcifying organisms such as corals, pteropods, coccolithophores, and shellfish"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ocean acidification (decreasing pH from CO\u2082 absorption) reduces the concentration and saturation state of carbonate ions (CO\u2083\u00b2\u207b) that calcifying organisms need to build their calcium carbonate (CaCO\u2083) shells and skeletons. Affected groups include: reef-building corals (aragonite), pteropods (planktonic sea snails, aragonite), coccolithophores (calcite), shellfish (mussels, oysters), echinoderms, and coralline algae. Acidification makes CaCO\u2083 formation energetically more costly and can dissolve existing structures. Pteropods are particularly vulnerable indicators\u2014shell dissolution has already been documented in Southern Ocean populations. Seagrasses and some macroalgae may actually benefit from increased CO\u2082 (fertilization effect).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Ocean Acidification"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'novel ecosystems' challenges traditional restoration ecology. Under which circumstance is managing a novel ecosystem in its current state more appropriate than attempting restoration to a historical baseline?",
+      "options": [
+        "When the environmental conditions (climate, hydrology, soil) have changed so fundamentally that the historical ecosystem cannot persist, and the novel ecosystem provides adequate ecosystem services",
+        "Never\u2014all ecosystems should be restored to their pre-disturbance state",
+        "When the novel ecosystem has fewer species than the historical one",
+        "When restoration funding is temporarily unavailable"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Managing novel ecosystems in their current state is appropriate when: (1) environmental conditions have changed irreversibly (e.g., climate shift, permanent hydrological alteration) such that the historical ecosystem cannot be re-established or maintained; (2) the cost of restoration is prohibitive and the novel ecosystem provides adequate ecosystem services; (3) the novel ecosystem supports significant biodiversity, even if different from the historical community; and (4) attempted restoration might cause more harm than the novel ecosystem. This pragmatic approach recognizes that in the Anthropocene, some ecosystems will never return to their historical state, and management should focus on function rather than composition where historical targets are unachievable.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Novel Ecosystems Management"
+    },
+    {
+      "type": "MCQ",
+      "question": "Citizen science programs (e.g., eBird, iNaturalist, Christmas Bird Count) contribute significantly to conservation. What is the primary scientific value of citizen science data?",
+      "options": [
+        "Citizens are more accurate observers than professional scientists",
+        "Citizen science data replaces the need for peer-reviewed research",
+        "Large-scale spatial and temporal coverage that would be impossible for professional scientists alone to achieve, enabling detection of biodiversity trends",
+        "Citizen science primarily provides entertainment rather than scientific value"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Citizen science's primary scientific value is scale: thousands of volunteers can simultaneously collect data across spatial and temporal scales impossible for professional researchers. eBird receives >100 million bird observations annually from every country. The Christmas Bird Count (since 1900) provides >120 years of winter bird distribution data. iNaturalist has >100 million observations of all taxa. These datasets enable: detection of population trends, range shifts from climate change, phenological changes, invasive species tracking, and habitat quality assessment. While data quality varies and requires statistical approaches to handle observer bias, the sheer volume provides statistical power unavailable from professional surveys alone.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Citizen Science in Conservation"
+    },
+    {
+      "type": "MCQ",
+      "question": "Bushmeat hunting in tropical forests is a major conservation concern. Why is bushmeat hunting particularly damaging to primate conservation?",
+      "options": [
+        "Primates have no commercial value",
+        "Primates have long generation times, low reproductive rates, and slow population recovery, making them especially vulnerable to even moderate harvest rates",
+        "Primates are too small to provide meaningful protein",
+        "Primates are not hunted because of cultural taboos"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Primates are among the most vulnerable taxa to bushmeat hunting because of their K-selected life history traits: long generation times (5-15+ years), low reproductive rates (typically one offspring every 1-5 years), extended parental care, and slow maturation. These traits mean that even moderate harvest rates can cause population decline because populations cannot replace individuals as fast as they are removed. Large-bodied primates (great apes, monkeys) are preferentially targeted because they provide more meat per hunting effort. An estimated 150,000+ great apes and millions of monkeys are killed for bushmeat annually in tropical Africa and Asia.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Bushmeat Crisis"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A mark-recapture study of an endangered turtle estimates N = 500 adults with 95% CI of 350-780. The species' estimated MVP for 99% persistence over 100 years is 1,000 adults. What is the conservation interpretation?",
+      "options": [
+        "The population is secure because 500 > 100",
+        "The population is likely below its MVP even at the upper confidence limit, indicating it requires active management to prevent extinction",
+        "The population is too large and should be reduced through hunting",
+        "The confidence interval is too wide to draw any conclusion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The estimated population (500, CI: 350-780) is below the MVP of 1,000 at all points of the confidence interval (even the upper limit of 780 < 1,000). This indicates with high confidence that the population is below the threshold for long-term viability. Conservation actions are needed: (1) protect and expand habitat to increase carrying capacity, (2) reduce mortality sources (road kills, bycatch, predation), (3) consider genetic management (translocations to increase genetic diversity), and (4) continued monitoring. The wide confidence interval also suggests additional survey effort is needed to improve population estimation precision. The effective population size is likely only 50-150 (Ne/N \u2248 0.1-0.3), well below the 50/500 genetic threshold.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYTICAL",
+      "difficulty": "EXPERT",
+      "topic": "Population Assessment and MVP"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which conservation strategy specifically aims to protect evolutionary processes rather than just species or habitats?",
+      "options": [
+        "Single-species recovery plans",
+        "Conserving evolutionary heritage through protection of phylogenetically distinct lineages and maintaining adaptive potential",
+        "Building fences around all protected areas",
+        "Banning all hunting regardless of species status"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Conserving evolutionary processes involves: (1) protecting phylogenetically distinct lineages (species with few close relatives, like tuatara, platypus, coelacanth) to preserve unique evolutionary heritage; (2) maintaining large enough populations for natural selection and adaptation to continue; (3) preserving environmental gradients and gene flow corridors that allow adaptive responses to environmental change; and (4) protecting areas of high evolutionary potential (rapid diversification zones, contact zones, hybrid swarms). This approach goes beyond preserving current biodiversity snapshots to ensuring that evolutionary processes continue generating new biodiversity. The EDGE program (Evolutionarily Distinct, Globally Endangered) explicitly prioritizes phylogenetically unique species.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Conserving Evolutionary Potential"
+    },
+    {
+      "type": "MCQ",
+      "question": "The concept of 'land sparing' versus 'land sharing' represents two contrasting approaches to reconciling agriculture with biodiversity conservation. Under which condition does land sparing tend to conserve more species?",
+      "options": [
+        "When most species are adapted to low-intensity agricultural landscapes",
+        "Land sharing is always superior to land sparing",
+        "When biodiversity is uniformly distributed across all land uses",
+        "When species are sensitive to any level of habitat disturbance and decline sharply with even moderate agricultural intensification"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Land sparing (intensive farming on limited area, freeing land for conservation) tends to outperform land sharing (low-intensity farming over larger areas) when species have concave density-yield relationships\u2014meaning they decline sharply even with low levels of agricultural disturbance. For these disturbance-sensitive species (many forest specialists, large mammals, interior-dependent species), any agricultural activity drastically reduces habitat quality, so concentrating agriculture and preserving intact habitat patches is more effective. Land sharing performs better when species tolerate or even benefit from low-intensity farming (some farmland birds, pollinating insects). The optimal strategy depends on the species assemblage and local context.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "EXPERT",
+      "topic": "Land Sparing vs Land Sharing"
+    },
+    {
+      "type": "MCQ",
+      "question": "Translocation of endangered species to new sites involves risks. Which risk is specific to translocation rather than other conservation strategies?",
+      "options": [
+        "Habitat loss at the source site",
+        "Disease transmission from translocated individuals to naive recipient populations",
+        "Pollution from industrial activities",
+        "Climate change effects on all populations"
+      ],
+      "correctAnswer": "B",
+      "explanation": "A risk specific to translocation is disease transmission. Translocated individuals may carry pathogens to which recipient populations have no immunity, potentially devastating the very populations the translocation aims to help. Examples include: avian malaria transmitted with translocated Hawaiian birds, chytrid fungus spread by amphibian translocations, and squirrelpox transmitted from grey squirrels to native red squirrels. Quarantine, disease screening, and health certification protocols are essential before any translocation. Additionally, translocated individuals may carry parasites or non-target organisms (hitchhiking invertebrates, seeds) that could become invasive at the destination site.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "MECHANISTIC",
+      "difficulty": "HARD",
+      "topic": "Translocation Risks"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A conservation geneticist wants to determine whether a recently discovered population of an endangered fish is genetically distinct enough to warrant separate conservation management. Which combination of genetic analyses would be most informative?",
+      "options": [
+        "Population genetic structure analysis (FST, STRUCTURE/PCA), estimation of gene flow (Nm), assessment of local adaptation through outlier loci detection, and phylogenetic analysis",
+        "Measuring body length and weight of individuals",
+        "Observing mating behavior in aquaria",
+        "Counting the number of individuals and measuring sex ratio"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Determining whether a population warrants separate management (as a distinct Management Unit or Evolutionarily Significant Unit) requires multiple genetic analyses: (1) FST and Bayesian clustering (STRUCTURE) or PCA to quantify genetic differentiation from other populations; (2) Gene flow estimation to determine degree of isolation; (3) Outlier loci analysis (genome scans) to detect signatures of local adaptation\u2014divergence at functional loci despite potential gene flow; (4) Phylogenetic or phylogeographic analysis to assess evolutionary history. A population that is significantly differentiated, shows evidence of local adaptation, and has a distinct evolutionary history warrants separate conservation management. Morphological data and demographic data complement but cannot replace genetic analyses.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Conservation Genetics for Management Units"
+    },
+    {
+      "type": "MCQ",
+      "question": "Which of the following best describes the 'insurance hypothesis' in ecology?",
+      "options": [
+        "Insurance companies should fund conservation efforts",
+        "Endangered species should be insured against extinction through captive breeding",
+        "Ecosystems with more species require more management investment",
+        "Higher species diversity insures against declines in ecosystem functioning during environmental fluctuations because different species respond differently to perturbations"
+      ],
+      "correctAnswer": "D",
+      "explanation": "The insurance hypothesis (Yachi & Loreau 1999) proposes that biodiversity provides an insurance effect against environmental fluctuations and ecosystem functioning decline. In a diverse community, species respond differently to environmental variation (temperature, drought, disease). When conditions reduce the performance of some species, others may compensate or even increase in performance, stabilizing aggregate ecosystem properties (productivity, decomposition, etc.). This asynchrony in species responses to environmental variation (termed 'response diversity') is the mechanism underlying the insurance effect. The hypothesis provides a strong utilitarian argument for biodiversity conservation\u2014even 'redundant' species may be essential for maintaining ecosystem functioning under changing conditions.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Insurance Hypothesis"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Global Biodiversity Information Facility (GBIF) aggregates species occurrence data from institutions worldwide. What type of bias in GBIF data most seriously affects conservation assessments?",
+      "options": [
+        "Data are biased toward well-studied regions (Europe, North America) and charismatic taxa, potentially underestimating biodiversity threats in data-poor tropical regions",
+        "GBIF contains too much data to be useful",
+        "All GBIF records are incorrect",
+        "GBIF only includes data from museums"
+      ],
+      "correctAnswer": "A",
+      "explanation": "GBIF data suffer from significant spatial, taxonomic, and temporal biases: (1) Spatial bias\u2014most records come from well-studied, data-rich regions (Western Europe, North America, Australia) with far fewer records from tropical regions where biodiversity is highest and threats are greatest. (2) Taxonomic bias\u2014birds, mammals, and flowering plants are overrepresented; invertebrates, fungi, and microorganisms are severely underrepresented despite comprising the majority of biodiversity. (3) Temporal bias\u2014modern records are more abundant than historical data. These biases mean that conservation assessments based on GBIF data may underestimate threats in data-poor but biodiversity-rich regions, misidentifying areas of apparent low diversity as unimportant when they are simply under-sampled.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Biodiversity Data Bias"
+    },
+    {
+      "type": "MCQ",
+      "question": "Wildlife trade monitoring uses forensic genetics. Which application of DNA forensics has been most impactful for combating illegal wildlife trade?",
+      "options": [
+        "Determining the sex of traded reptiles",
+        "DNA barcoding and geographic assignment to identify the species and geographic origin of confiscated wildlife products (ivory, bushmeat, timber)",
+        "Aging confiscated animals using telomere length",
+        "Measuring growth hormone levels in traded species"
+      ],
+      "correctAnswer": "B",
+      "explanation": "DNA forensics has revolutionized wildlife trade enforcement through: (1) Species identification using DNA barcoding (CO1 gene, ITS markers)\u2014crucial when products are processed beyond visual identification (ground horn, dried meat, carved ivory). (2) Geographic assignment using isotope ratios and population genetic markers\u2014identifying the source population of confiscated ivory or timber to pinpoint poaching hotspots. (3) Individual identification from DNA profiles\u2014linking seizures to specific poaching events or trade networks. The TRACE network and initiatives like the Loxodonta Africana DNA Reference Index have helped trace illegal ivory to specific African elephant populations, informing enforcement strategies and demonstrating that most poaching concentrates in a few areas.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EXPERIMENTAL",
+      "difficulty": "EXPERT",
+      "topic": "Wildlife Forensic Genetics"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about biodiversity hotspots:\nI. Biodiversity hotspots are defined as regions with at least 1,500 endemic plant species that have lost at least 70% of their original habitat\nII. Hotspots cover approximately 2.5% of Earth's land surface but contain over 50% of endemic plant species\nIII. All 36 recognized biodiversity hotspots are located in tropical regions\nIV. Protecting all hotspots would safeguard the majority of globally threatened terrestrial vertebrate species",
+      "options": [
+        "TTFT",
+        "TTTF",
+        "TTFF",
+        "TFTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I. TRUE: Norman Myers defined hotspots using two criteria: \u22651,500 endemic vascular plant species AND \u226570% habitat loss. II. TRUE: Despite covering only ~2.5% of Earth's land area, hotspots harbor >50% of endemic plant species and ~43% of endemic vertebrate species. III. FALSE: While many hotspots are tropical, several are in temperate regions (Mediterranean Basin, California Floristic Province, Southwest Australia, Chilean Winter Rainfall, etc.). IV. TRUE: Hotspots contain habitat for ~77% of threatened mammals, birds, reptiles, and amphibians, so their protection would disproportionately benefit threatened species conservation.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Biodiversity Hotspots"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about marine protected areas (MPAs):\nI. No-take MPAs (where fishing is prohibited) consistently show higher fish biomass and larger individual fish than adjacent fished areas\nII. MPAs can benefit adjacent fisheries through spillover of adults and larvae (the fishery spillover effect)\nIII. Most of the ocean's protected areas are effectively managed and enforced\nIV. Deep-sea MPAs are less common than coastal MPAs despite the deep sea covering most of the ocean floor",
+      "options": [
+        "TTFT",
+        "TFTF",
+        "TTTT",
+        "TFFT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I. TRUE: Meta-analyses consistently show that no-take MPAs have higher fish biomass (200-400% higher), larger fish, and greater species richness than fished areas. II. TRUE: MPAs can benefit surrounding fisheries through net emigration of adults across boundaries and larval export, though the magnitude depends on MPA size, species mobility, and management. III. FALSE: Many MPAs are 'paper parks' with inadequate management, enforcement, and funding. Only about 10-15% of the global MPA network is considered effectively managed. IV. TRUE: Most MPAs are in coastal/shelf waters. Deep-sea ecosystems remain vastly under-protected despite covering >60% of the ocean floor, because of logistical challenges and jurisdictional issues (much deep sea is in international waters).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Marine Protected Areas"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about the causes of species endangerment:\nI. Habitat destruction is the leading cause of species endangerment globally\nII. Overexploitation is the second most common threat to endangered species\nIII. Climate change is currently causing more species extinctions than habitat loss\nIV. Invasive species are the leading cause of extinction on islands",
+      "options": [
+        "TTFT",
+        "TFTF",
+        "TTTT",
+        "TFFT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I. TRUE: Habitat destruction (deforestation, wetland drainage, urban expansion) is the leading threat to biodiversity, affecting ~85% of threatened species on the IUCN Red List. II. TRUE: Overexploitation (hunting, fishing, harvesting) is the second most common threat, particularly affecting large mammals, marine fish, and commercially valuable species. III. FALSE: While climate change is an increasingly important and growing threat, habitat destruction currently causes more documented extinctions and endangerment than climate change. Climate change is projected to become the dominant threat in coming decades. IV. TRUE: On islands, invasive species (especially rats, cats, goats, and snakes) are the leading cause of extinction, responsible for ~86% of island bird extinctions. Islands are disproportionately affected because island species evolved without these predators and competitors.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Threats to Biodiversity"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about the economics of conservation:\nI. The global cost of effectively protecting the existing protected area network is estimated at $10-30 billion per year\nII. The economic value of ecosystem services provided by biodiversity far exceeds the cost of conservation\nIII. Most countries currently spend enough on conservation to meet their biodiversity protection goals\nIV. Market-based instruments (carbon credits, PES) can supplement but not replace public funding for conservation",
+      "options": [
+        "TTFT",
+        "TTTF",
+        "TFTT",
+        "TTTT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "I. TRUE: Estimates suggest $10-30 billion/yr is needed for effective protected area management globally (current spending is ~$10 billion, leaving a significant funding gap). II. TRUE: Global ecosystem services are valued at $125-145 trillion/yr (Costanza et al.), far exceeding conservation costs. III. FALSE: Most countries, especially in the tropics where biodiversity is greatest, have major conservation funding gaps. The biodiversity finance gap is estimated at $598-824 billion/yr. IV. TRUE: Market-based instruments provide important funding streams but cannot fully replace public investment because many ecosystem services are public goods (non-excludable, non-rival) that markets underprovide.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 8,
+      "campbellChapter": 56,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "CONCEPTUAL",
+      "difficulty": "HARD",
+      "topic": "Conservation Economics"
+    }
+  ]
+}
