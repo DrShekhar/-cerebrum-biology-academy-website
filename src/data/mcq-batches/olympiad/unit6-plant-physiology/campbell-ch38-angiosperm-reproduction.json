@@ -1383,6 +1383,326 @@
       "conceptualDepth": "expert",
       "difficulty": "EXPERT",
       "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The Arabidopsis flower has four whorls of organs. What is the correct arrangement from outermost to innermost whorl?",
+      "options": [
+        "Sepals (4), petals (4), stamens (6: 4 long + 2 short tetradynamous), carpels (2 fused into a single gynoecium with superior ovary)",
+        "Petals (4), sepals (4), carpels (2), stamens (6)",
+        "Sepals (5), petals (5), stamens (10), carpels (5)",
+        "Bracts (4), tepals (4), stamens (4), pistil (1)"
+      ],
+      "correctAnswer": "A",
+      "explanation": "The Arabidopsis thaliana flower is a typical member of the Brassicaceae (mustard/crucifer family) with the floral formula characteristic of this family. From outside to inside: Whorl 1 (calyx): 4 sepals arranged in two pairs. Whorl 2 (corolla): 4 petals arranged in a cross pattern (hence 'Cruciferae'). Whorl 3 (androecium): 6 stamens in a tetradynamous arrangement—4 long medial stamens and 2 short lateral stamens. The 4 long stamens arise from the inner stamen whorl and the 2 short from the outer whorl. Whorl 4 (gynoecium): 2 fused carpels forming a single pistil with a superior ovary divided by a false septum (replum), producing a fruit type called a silique. This arrangement makes Arabidopsis an excellent model for studying floral organ identity (ABC model), as it has all four organ types in a simple, reproducible pattern. Option C describes a typical Rosaceae arrangement (5-merous). The Brassicaceae floral pattern is 4-merous for sepals and petals, unusual for eudicots.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Prezygotic reproductive barriers include temporal isolation. In which plant reproductive context does temporal isolation operate?",
+      "options": [
+        "Two sympatric species flower at different times of year, preventing pollen exchange between them despite sharing pollinators",
+        "Seeds of two species germinate in different seasons, causing spatial separation",
+        "Two species produce pollen that is viable for different durations, creating a temporal mismatch",
+        "Two species require different vernalization periods, making them physiologically incompatible"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Temporal (phenological) isolation is a prezygotic reproductive barrier that operates when closely related sympatric species flower at different times, preventing interspecific pollen transfer even when they share the same pollinators and habitat. For example, early-blooming and late-blooming species of Silene, Mimulus, or Iris may be completely reproductively isolated simply because their flowering windows do not overlap. This is an effective barrier because fertilization requires that viable pollen from one species reaches receptive stigmas of the other species—if they flower weeks or months apart, this cannot occur. Temporal isolation is one of the most common prezygotic barriers in sympatric plant speciation. It can evolve through natural selection if hybrids have reduced fitness (reinforcement) or as a byproduct of adaptation to different environments. Climate change is disrupting temporal isolation in some plant communities by shifting flowering phenology, potentially increasing hybridization between previously isolated species. Vernalization differences and seed germination timing are separate phenomena that may contribute to ecological separation but are not direct reproductive isolation mechanisms.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Doubled haploid (DH) technology accelerates plant breeding by producing completely homozygous lines in one generation. What is the basic method for producing doubled haploid plants?",
+      "options": [
+        "Self-pollinating heterozygous plants for 20+ generations until homozygosity is achieved naturally",
+        "Inducing haploid embryos through anther culture or wide crosses with a haploid inducer line, followed by chromosome doubling with colchicine to restore diploidy",
+        "Using CRISPR to delete one set of chromosomes from each cell of a heterozygous plant",
+        "Crossing two inbred lines and selecting only the homozygous offspring from the F2 generation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Doubled haploid (DH) production involves two steps: Step 1—Haploid induction: Producing haploid (n) plants through one of several methods: (a) Anther culture/microspore culture: immature pollen grains are cultured on nutrient medium where they develop into haploid embryos instead of pollen grains (androgenesis); (b) Wide hybridization: crossing with a haploid inducer line (e.g., in maize, the Stock 6-derived ig1 haploid inducer causes selective elimination of the inducer genome after fertilization); (c) Ovule culture after interspecific crosses where one parental genome is eliminated. Step 2—Chromosome doubling: The haploid plant's genome is doubled using colchicine (which inhibits microtubule polymerization, preventing cell division while allowing DNA replication) to produce a completely homozygous diploid plant. The resulting doubled haploid is homozygous at every locus—equivalent to what would require 6-8 generations of selfing in conventional breeding. DH technology reduces breeding cycle time from 7-10 years to 2-3 years for developing pure lines. The correct answer is B.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ovule development involves integuments that grow to enclose the nucellus. In a bitegmic ovule (common in dicots), what are the inner and outer integuments, and what structure do they form?",
+      "options": [
+        "The two integuments grow upward and enclose the nucellus, leaving a small opening called the micropyle through which the pollen tube enters; after fertilization, integuments develop into the seed coat (testa)",
+        "The inner integument produces nutritive tissue while the outer integument forms a waterproof barrier",
+        "Both integuments fuse completely with no opening, and pollen tubes enter through the chalaza",
+        "The inner integument degenerates during development while the outer integument alone forms the seed coat"
+      ],
+      "correctAnswer": "A",
+      "explanation": "In bitegmic ovules (having two integuments, characteristic of most eudicots), both inner and outer integuments grow as ring-shaped primordia from the base of the nucellus, extending upward to enclose the nucellus tissue and the developing megagametophyte within. They do not completely close; instead, they leave a small pore at the apex called the micropyle, which serves as the entry point for the pollen tube during fertilization. The inner integument typically grows faster and extends beyond the outer integument at the micropyle. After fertilization, both integuments differentiate into the seed coat (testa): the outer integument typically forms the outer testa layers (which may become hard, pigmented, or mucilaginous depending on species), while the inner integument forms the inner testa layers (tegmen). In Arabidopsis, the outer integument has 2 cell layers and the inner integument has 3 cell layers, each differentiating into distinct cell types during seed maturation. Unitegmic ovules (having one integument) are characteristic of most monocots and some eudicot families.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Marker-assisted selection (MAS) uses DNA markers linked to desirable traits for indirect selection in plant breeding. What advantage does MAS have over conventional phenotypic selection?",
+      "options": [
+        "MAS allows selection at the seedling stage for traits that are only expressed in mature plants, enabling faster breeding cycles and selection for traits difficult to score phenotypically (disease resistance in absence of pathogen, grain quality, root architecture)",
+        "MAS eliminates the need for any field trials in plant breeding programs",
+        "MAS directly modifies the genome to introduce new traits from unrelated organisms",
+        "MAS works only for simple monogenic traits and has no application for complex quantitative traits"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Marker-assisted selection (MAS) uses molecular DNA markers (SNPs, SSRs, or other polymorphisms) that are tightly linked to genes controlling traits of interest. The key advantages over conventional phenotypic selection include: (1) Early-generation selection—seedlings can be screened with DNA markers at the 2-3 leaf stage, allowing early elimination of undesirable genotypes without growing plants to maturity. This is especially valuable for traits expressed late in development (grain quality, fruit characteristics, seed composition); (2) Selection for traits difficult to score phenotypically—disease resistance genes can be tracked by markers without exposing plants to pathogens; root architecture can be selected without destructive harvesting; (3) Pyramiding multiple resistance genes—MAS can track multiple resistance genes simultaneously in the same background, which is nearly impossible phenotypically when genes confer resistance to the same pathogen; (4) Background selection—recovering the recurrent parent genome more rapidly during backcross breeding. MAS does not modify the genome (that is genetic engineering). MAS can be used for both simple and complex traits (through QTL-linked markers). Field trials remain necessary for variety release.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "What distinguishes a drupe from a berry in botanical fruit classification?",
+      "options": [
+        "A drupe has a fleshy mesocarp surrounding a hard, stony endocarp enclosing a single seed (e.g., peach, cherry, olive), while a berry has a fleshy pericarp with seeds embedded throughout and no stony endocarp (e.g., tomato, grape, blueberry)",
+        "A drupe is always larger than a berry",
+        "A drupe develops from an inferior ovary while a berry develops from a superior ovary",
+        "A drupe contains multiple seeds while a berry contains only one seed"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Drupes and berries are both simple, fleshy fruit types but differ in their pericarp (fruit wall) structure: Drupe: The pericarp has three distinct layers—a thin outer exocarp (skin), a fleshy mesocarp (the edible part in most drupes), and a hard, stony, lignified endocarp (the 'pit' or 'stone') that encloses typically a single seed. Examples include peach, cherry, plum, olive, coconut (the 'shell' is the endocarp), and mango. Berry: The entire pericarp is fleshy, with no stony layer. Seeds are embedded within the fleshy tissue. Examples include tomato (the entire fruit wall is fleshy), grape, blueberry, banana, avocado (has a single large seed but the endocarp is not stony), and citrus (a specialized berry called a hesperidium). Importantly, many common 'berries' are not botanical berries: strawberry is an aggregate accessory fruit, raspberry is an aggregate of drupelets, and blackberry is an aggregate drupe. Conversely, bananas, tomatoes, and grapes ARE botanical berries. Size does not distinguish these types.",
+      "isOlympiad": true,
+      "olympiadLevel": "NSEB",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "The aleurone layer of cereal grains plays a vital role during germination. What cellular features distinguish aleurone cells from starchy endosperm cells?",
+      "options": [
+        "Aleurone cells are dead at maturity like starchy endosperm cells but contain different storage compounds",
+        "Aleurone cells remain alive at seed maturity, contain protein bodies and lipid bodies (not starch), and are competent to respond to gibberellin signaling by synthesizing and secreting hydrolytic enzymes",
+        "Aleurone cells are photosynthetic, containing chloroplasts that produce sugars during early germination",
+        "Aleurone cells are identical to starchy endosperm cells but are positioned differently in the grain"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Aleurone cells are a specialized endosperm tissue with several distinctive features: (1) They remain alive at seed maturity, unlike the starchy endosperm cells which undergo programmed cell death during grain filling and are dead in the mature seed. This is critical because living cells are required to respond to hormonal signals; (2) They contain protein bodies (aleurone grains containing storage proteins, phytate, and mineral deposits) and lipid bodies (oleosomes), but little or no starch; (3) They have thick cell walls and maintain cellular integrity throughout grain development and storage; (4) They are competent to perceive and respond to gibberellin (GA) signaling during germination. When GA from the embryo reaches aleurone cells, it activates GA signaling through GID1/DELLA pathway, leading to GAMYB transcription factor activation and expression of hydrolytic enzyme genes (alpha-amylase, proteases, cell wall-degrading enzymes). These enzymes are synthesized in the ER, packaged in secretory vesicles, and secreted into the starchy endosperm to mobilize the stored reserves. The correct answer is B.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Angiosperm life cycles involve alternation of generations, but the gametophyte generation is greatly reduced. How many cells constitute the mature male gametophyte (pollen grain at the 3-celled stage)?",
+      "options": [
+        "One cell—the vegetative cell that contains the entire male genetic material",
+        "Three cells—one vegetative cell and two sperm cells enclosed within it",
+        "Seven cells—mirroring the seven-celled female gametophyte",
+        "Hundreds of cells—forming a multicellular tissue analogous to the moss gametophyte"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The mature male gametophyte of angiosperms is extremely reduced compared to lower plants—it consists of only three cells at maturity (in 3-celled pollen, which is released at the trinucleate stage). These three cells are: (1) The vegetative cell—the largest cell, which contains the tube cell nucleus and will generate the pollen tube upon germination. The vegetative cell contains most of the cytoplasm, organelles, and mRNAs needed for rapid tube growth; (2) Two sperm cells—small cells enclosed within the cytoplasm of the vegetative cell. Sperm cells are formed by pollen mitosis II (the division of the generative cell). They are connected to each other and to the vegetative nucleus by cytoplasmic extensions, forming the male germ unit (MGU). In some species (e.g., grasses, Brassicaceae), pollen is shed at the 3-celled stage. In others (e.g., Solanaceae, Liliaceae), pollen is shed at the 2-celled stage (vegetative cell + generative cell), and the generative cell divides to form two sperm cells during pollen tube growth. This extreme reduction of the male gametophyte from the multicellular structures of bryophytes and ferns to just 3 cells is a hallmark of angiosperm evolution.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether flower scent production follows a circadian rhythm. Which experimental design would provide the most conclusive evidence?",
+      "options": [
+        "Collect flower scent emissions at multiple time points over 24 hours under normal light/dark cycles, then repeat the experiment under constant conditions (continuous light or dark) to distinguish true circadian regulation from light-driven responses",
+        "Observe insect visitation patterns and infer scent production from pollinator behavior",
+        "Measure petal color changes throughout the day as a proxy for scent production",
+        "Grow flowers under continuous light and assume any changes in scent are circadian"
+      ],
+      "correctAnswer": "A",
+      "explanation": "To demonstrate true circadian regulation of flower scent production (as opposed to simple light/dark-driven responses), the experimental design must include: (1) First experiment—measure volatile organic compound (VOC) emissions from flowers at regular intervals (every 2-4 hours) over at least 24 hours under normal photoperiod conditions (e.g., 16:8 L:D) using headspace collection and gas chromatography-mass spectrometry (GC-MS). This establishes whether emission patterns show diel rhythmicity. (2) Second experiment (critical)—repeat the measurements under constant conditions (continuous light or continuous darkness at constant temperature). If scent emission continues to oscillate with an approximately 24-hour period under constant conditions, this demonstrates circadian clock regulation (free-running rhythm). If emission becomes constant under continuous conditions, the rhythm was driven by external light/dark cues, not an endogenous clock. (3) Additional support—measure expression of scent biosynthesis genes (e.g., BSMT, BAMT for methyl benzoate, LIS for linalool) to determine whether rhythmic emission correlates with rhythmic gene expression. Many flowers (Petunia, Nicotiana, Antirrhinum) show circadian scent emission, with emission peaking at times matching pollinator activity.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Nectar composition varies among plant species and influences pollinator preference. What is the typical sugar composition of bee-pollinated flower nectar?",
+      "options": [
+        "Predominantly fructose with trace amounts of glucose and no sucrose",
+        "Equal proportions of sucrose, glucose, and fructose, with total sugar concentration of 20-40% (w/w), matching the energetic preferences of bee metabolism",
+        "Predominantly galactose and mannose with no sucrose",
+        "Pure water with dissolved amino acids but no sugars"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Bee-pollinated flowers typically produce nectar with a balanced sugar composition. The three main sugars in floral nectar are sucrose, glucose, and fructose. Bee-pollinated flowers generally produce nectar with roughly equal proportions of sucrose, glucose, and fructose (a 'balanced' sugar ratio), with total sugar concentrations typically in the range of 20-40% (w/w). This composition matches bee preferences—behavioral experiments show that bees prefer balanced or sucrose-dominant nectars over hexose-dominant nectars. In contrast: hummingbird-pollinated flowers tend to have sucrose-dominant nectar (high sucrose:hexose ratio) at higher concentrations (20-25%); bat-pollinated flowers produce dilute, hexose-rich nectar (10-20%); butterfly-pollinated flowers produce concentrated nectar (25-35%) with variable sugar ratios. Nectar also contains amino acids (0.002-5 mM), lipids, vitamins, and secondary metabolites (alkaloids, phenolics) that may influence pollinator behavior, defense against nectar robbers, or antimicrobial protection. The correct answer is B.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Grafting is a vegetative propagation technique widely used in horticulture. What is the biological basis for graft compatibility between rootstock and scion?",
+      "options": [
+        "Graft compatibility requires genetic identity between rootstock and scion—only clones can be grafted",
+        "Graft compatibility depends on the formation of a functional vascular connection at the graft junction, which requires successful callus proliferation, differentiation of new vascular cambium, and xylem/phloem connection between the closely related rootstock and scion",
+        "Grafting works because the rootstock and scion exchange chloroplasts, creating a genetic chimera",
+        "Graft compatibility depends solely on matching bark thickness between rootstock and scion"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Graft compatibility is determined by the ability of rootstock and scion tissues to form a functional vascular union. The process of graft healing involves: (1) Initial wound response—damaged cells at the cut surfaces of both rootstock and scion die, forming a necrotic layer; (2) Callus formation—parenchyma cells from both partners proliferate to form callus tissue that fills the gap between them; (3) Callus interdigitation—callus cells from rootstock and scion intermingle and make cell-to-cell contact, establishing plasmodesmatal connections; (4) Vascular differentiation—new vascular cambium differentiates within the callus, connecting the cambia of rootstock and scion; (5) Vascular connection—new xylem and phloem elements differentiate from the new cambium, establishing continuous vascular transport between rootstock and scion. Compatibility generally correlates with taxonomic relatedness: grafting within the same species or genus is usually successful (apple on apple rootstock, Citrus on Citrus), while grafting between different families almost always fails. Compatibility is not limited to clones—different cultivars, species, and sometimes genera within the same family can be grafted successfully.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Photoperiodic control of flowering in short-day plants (SDPs) like chrysanthemum and rice involves measuring the length of the dark period. What happens if a brief flash of red light is given during the middle of a long dark period?",
+      "options": [
+        "Flowering is promoted because the red light is perceived as dawn by phytochrome A",
+        "Flowering is inhibited because the red light night-break converts Pfr to Pr, resetting the dark period timer and preventing the critical night length from being achieved",
+        "Flowering is inhibited because the night-break converts phytochrome to its active Pfr form, which destabilizes CONSTANS protein and prevents florigen (FT) production in short-day plants",
+        "The red light flash has no effect because plants measure daylength, not night length"
+      ],
+      "correctAnswer": "C",
+      "explanation": "In short-day plants (SDPs), flowering requires an uninterrupted dark period exceeding a critical minimum length. A brief flash of red light during the middle of a long dark period (night-break) inhibits flowering because: (1) Red light is absorbed by the Pr form of phytochrome, converting it to the active Pfr form; (2) In SDPs, Pfr accumulation during what should be the continuous dark period disrupts the signaling pathway required for florigen (FT) production. The molecular mechanism involves the interaction between the circadian clock, phytochrome signaling, and CONSTANS (CO) protein regulation. In SDPs like rice, the CO ortholog Hd1 promotes FT (Hd3a) expression only during long nights—Pfr generated by a night-break interferes with this pathway, preventing FT accumulation. The effect can be reversed by immediately following the red flash with far-red light (which converts Pfr back to Pr), confirming the involvement of the phytochrome red/far-red photoreversible system. This night-break response demonstrates that SDPs measure the duration of continuous darkness, not the length of the light period.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Embryo sac polarity is established before fertilization. What determines the micropylar-chalazal polarity of the embryo sac?",
+      "options": [
+        "Gravity determines polarity, with the micropylar end always oriented downward",
+        "The position of the surviving megaspore after meiosis establishes polarity—the functional megaspore at the chalazal end undergoes mitosis, and the resulting nuclei migrate to establish the micropylar (egg apparatus) and chalazal (antipodal) domains",
+        "Random distribution of nuclei after mitosis determines which end becomes micropylar",
+        "The pollen tube entry direction determines polarity by releasing a polarizing signal"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Embryo sac polarity in the Polygonum type is established through the positional identity of the surviving megaspore and subsequent nuclear migration: (1) After meiosis of the megaspore mother cell, four megaspores are arranged in a linear tetrad. Three chalazal megaspores degenerate, and the chalazal-most megaspore survives. (2) The surviving functional megaspore undergoes three rounds of mitosis, producing 8 nuclei in a coenocytic cell. (3) Nuclear migration establishes polarity: 4 nuclei migrate to the micropylar end and 4 to the chalazal end. (4) Cellularization creates the 7-celled structure: at the micropylar end, the egg cell and two synergids (the egg apparatus); at the chalazal end, three antipodal cells; and in the center, the large central cell with two polar nuclei (one from each group of 4). The micropylar-chalazal axis is thus determined by the original position of the functional megaspore within the ovule and is maintained through subsequent development by auxin gradients and position-dependent gene expression. This polarity is established well before the pollen tube arrives.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Ethylene plays a crucial role in fruit ripening of climacteric fruits. What distinguishes climacteric from non-climacteric fruit ripening?",
+      "options": [
+        "Climacteric fruits show an autocatalytic burst of ethylene production and a respiratory climacteric (spike in CO2 production) during ripening, while non-climacteric fruits show gradual, ethylene-independent ripening without a respiratory burst",
+        "Climacteric fruits ripen only on the plant, while non-climacteric fruits ripen only after harvest",
+        "Climacteric fruits are always fleshy while non-climacteric fruits are always dry",
+        "Climacteric fruits contain seeds while non-climacteric fruits are seedless"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Climacteric and non-climacteric fruits represent two fundamentally different ripening programs: Climacteric fruits (tomato, banana, apple, avocado, mango, peach): show a dramatic increase in respiration rate (the respiratory climacteric, measured as a CO2 production spike) and an autocatalytic burst of ethylene production during the onset of ripening. The ethylene burst is autocatalytic because ethylene stimulates its own biosynthesis (System 2 ethylene production). Once initiated, the process is irreversible and proceeds rapidly. These fruits can ripen after harvest (off the plant) and can be artificially ripened by ethylene application. Non-climacteric fruits (grape, strawberry, cherry, citrus, pineapple): ripen gradually without a respiratory burst or autocatalytic ethylene production. They produce low, basal levels of ethylene. Ripening changes (color, sugar accumulation, acid reduction) occur progressively and are primarily regulated by ABA rather than ethylene. These fruits do not ripen after harvest and must be harvested ripe. Both types can be fleshy or have seeds. The climacteric/non-climacteric distinction has major implications for post-harvest handling and storage technology.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Interspecific hybridization in plants often faces post-zygotic barriers. What is the triploid block, and how does it prevent interspecific hybridization?",
+      "options": [
+        "The triploid block prevents formation of triploid embryos by rejecting haploid pollen on diploid stigmas",
+        "The triploid block causes endosperm failure in crosses between species of different ploidy levels due to disruption of the 2:1 maternal:paternal genome ratio in endosperm, leading to seed abortion even when the hybrid embryo is viable",
+        "The triploid block prevents meiosis in triploid plants, making them completely sterile",
+        "The triploid block is a physical barrier in the style that prevents pollen tube growth"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The triploid block (also called the endosperm balance number system) is a post-zygotic barrier that prevents successful interploidy crosses between plant species. The mechanism centers on the requirement for a specific maternal:paternal genome ratio (typically 2m:1p) in the endosperm for normal development. When plants of different ploidy levels are crossed: For example, a tetraploid (4x) mother crossed with a diploid (2x) father produces endosperm with a 4m:1p ratio (excess maternal contribution), which causes precocious cellularization and small, aborted endosperm. Conversely, a diploid mother crossed with a tetraploid father produces endosperm with a 2m:2p ratio (excess paternal contribution), causing delayed cellularization and endosperm overproliferation. In both cases, the abnormal endosperm development leads to seed abortion, even though the hybrid embryo itself may be viable (this is why embryo rescue can recover such hybrids). The triploid block is mediated by genomic imprinting—dosage-sensitive imprinted genes in the endosperm cannot tolerate deviations from the 2:1 ratio. This barrier is distinct from prezygotic incompatibility and from triploid sterility.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "EXPERT",
+      "topic": "Angiosperm Reproduction"
+    },
+    {
+      "type": "MCQ",
+      "question": "Pollen competition (certation) can influence offspring fitness. What evidence supports the idea that pollen competition improves offspring quality?",
+      "options": [
+        "Faster-growing pollen tubes tend to carry alleles for higher overall plant vigor, so offspring sired by competitively superior pollen show enhanced growth and seed production compared to offspring from non-competitive pollination",
+        "Pollen competition eliminates all recessive lethal alleles from the pollen population",
+        "Pollen competition ensures that only pollen from the same species can fertilize ovules",
+        "Pollen competition selects for larger pollen grains, which produce larger embryos"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Pollen competition (certation) occurs when multiple pollen grains germinate on a stigma and their tubes race through the style to reach ovules. Since typically many more pollen grains are deposited than there are ovules to fertilize, only the fastest-growing pollen tubes successfully fertilize ovules. The hypothesis that pollen competition improves offspring quality is supported by several lines of evidence: (1) Pollen tube growth rate is influenced by the pollen's haploid genome—faster tubes tend to carry alleles for higher metabolic activity, more efficient protein synthesis, and better cellular organization; (2) These same alleles, when expressed in the resulting sporophyte, contribute to higher plant vigor. Studies have shown that offspring from stigmas receiving large pollen loads (high competition) have higher seed weight, faster germination, greater seedling vigor, and higher seed production compared to offspring from stigmas receiving small pollen loads (low competition). This mechanism may function as a form of 'sexual selection' in plants—analogous to sperm competition in animals—that provides a non-random filter favoring genetically superior gametophytes and, consequently, more vigorous sporophyte offspring.",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 6,
+      "campbellChapter": 38,
+      "sourceTextbook": "Campbell-12e",
+      "conceptualDepth": "expert",
+      "difficulty": "HARD",
+      "topic": "Angiosperm Reproduction"
     }
   ]
 }
