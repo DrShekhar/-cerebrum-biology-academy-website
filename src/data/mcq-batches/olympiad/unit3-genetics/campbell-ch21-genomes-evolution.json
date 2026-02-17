@@ -17,7 +17,7 @@
       "Phylogenomics"
     ],
     "difficulty": "EXPERT",
-    "totalQuestions": 78,
+    "totalQuestions": 89,
     "olympiadLevel": "IBO",
     "isOlympiad": true,
     "campbellUnit": 3,
@@ -30,11 +30,11 @@
       "question": "The human genome contains approximately 3.2 billion base pairs but only about 1.5% encodes proteins. What comprises the largest fraction of the non-coding human genome?",
       "options": [
         "Introns within protein-coding genes",
+        "Intergenic repetitive DNA, including transposable elements and their remnants",
         "Telomeric and centromeric sequences",
-        "Pseudogenes",
-        "Intergenic repetitive DNA, including transposable elements and their remnants"
+        "Pseudogenes"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "B",
       "explanation": "Approximately 45% of the human genome consists of transposable elements and their derived sequences (SINEs like Alu elements ~13%, LINEs like L1 ~20%, DNA transposons ~3%, LTR retrotransposons ~8%). This far exceeds the fraction in introns (~25% of the genome), pseudogenes (~1%), or protein-coding exons (~1.5%). Transposable elements have accumulated over evolutionary time and, although most are now inactive, their remnants constitute the largest identifiable component of non-coding DNA. Other repetitive sequences include tandem repeats (satellite DNA, micro/minisatellites) comprising about 3% of the genome.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -49,12 +49,12 @@
       "type": "MCQ",
       "question": "Gene duplication is a major mechanism for genome evolution. After a gene is duplicated, what is the most common evolutionary fate of the duplicate copy?",
       "options": [
-        "The duplicate becomes a pseudogene through accumulation of mutations (nonfunctionalization)",
-        "Both copies always retain their original function",
+        "Gene duplications are always lethal",
         "The duplicate always acquires a completely new function immediately",
-        "Gene duplications are always lethal"
+        "The duplicate becomes a pseudogene through accumulation of mutations (nonfunctionalization)",
+        "Both copies always retain their original function"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": "After gene duplication, the most common fate is pseudogenization (nonfunctionalization)\u2014one copy accumulates mutations (nonsense mutations, frameshifts, regulatory mutations) that render it non-functional, becoming a pseudogene. This occurs because redundancy relaxes selective constraint on the duplicate. Less commonly: (1) neofunctionalization\u2014one copy acquires mutations that confer a new function while the other retains the original function; (2) subfunctionalization\u2014the two copies partition the ancestral function between them (e.g., each retaining expression in different tissues), a process described by the DDC (duplication-degeneration-complementation) model. Gene duplication is not lethal; in fact, it is a primary source of genetic novelty.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -69,12 +69,12 @@
       "type": "MCQ",
       "question": "Whole-genome duplication (polyploidy) has occurred multiple times during vertebrate evolution. The 2R hypothesis proposes that:",
       "options": [
+        "Genome duplication reduces the total number of genes",
         "Two rounds of whole-genome duplication occurred early in vertebrate evolution, creating four copies of ancestral genes",
         "Vertebrate genomes duplicated twice in the last million years",
-        "Only invertebrates have undergone whole-genome duplication",
-        "Genome duplication reduces the total number of genes"
+        "Only invertebrates have undergone whole-genome duplication"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "The 2R (two rounds) hypothesis proposes that two successive whole-genome duplication (WGD) events occurred in the stem lineage of vertebrates, approximately 500-600 million years ago. This would explain why vertebrates often have four copies of genes found as single copies in invertebrate outgroups (e.g., four HOX gene clusters in vertebrates vs. one in amphioxus). Evidence supporting 2R includes: (1) many vertebrate gene families have 4 members, (2) conserved synteny blocks appear in groups of four, and (3) phylogenetic analyses of gene families are consistent with two WGD events. Additional lineage-specific WGDs occurred in teleost fish (3R) and in many plant lineages.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -109,12 +109,12 @@
       "type": "MCQ",
       "question": "The globin gene family in humans includes genes encoding alpha-globin, beta-globin, fetal hemoglobin, and embryonic hemoglobins. This gene family arose through:",
       "options": [
-        "Successive gene duplications of an ancestral globin gene followed by divergence",
         "Lateral gene transfer from bacteria",
+        "Successive gene duplications of an ancestral globin gene followed by divergence",
         "Independent origins of each globin gene",
         "Reverse transcription of globin mRNA"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "The globin gene superfamily evolved through a series of gene duplication events: (1) An ancestral globin gene duplicated ~500 million years ago to produce the alpha-globin and beta-globin ancestor genes. (2) Each of these duplicated again to produce the modern clusters: the alpha cluster (chromosome 16: zeta, alpha2, alpha1) and beta cluster (chromosome 11: epsilon, gamma-G, gamma-A, delta, beta). (3) Differential expression during development (embryonic, fetal, adult) resulted from divergence of regulatory elements after duplication. This is a textbook example of gene family evolution through duplication and divergence. The myoglobin gene, an even older member of the globin superfamily, diverged approximately 800 million years ago.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -150,11 +150,11 @@
       "question": "Transposable elements (TEs) can influence gene expression and genome evolution. Which mechanism describes how a TE insertion can create a new regulatory element for a nearby gene?",
       "options": [
         "TEs always destroy genes by inserting into their coding sequences",
-        "TE sequences can carry or create enhancers, promoters, or insulator elements that are co-opted to regulate adjacent host genes (exaptation/domestication)",
         "TEs encode proteins that directly activate all genes in the genome",
-        "TEs have no effect on gene regulation"
+        "TEs have no effect on gene regulation",
+        "TE sequences can carry or create enhancers, promoters, or insulator elements that are co-opted to regulate adjacent host genes (exaptation/domestication)"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Transposable element exaptation (co-option or domestication) occurs when TE-derived sequences acquire beneficial regulatory or coding functions for the host genome. Examples include: (1) TE-derived enhancers\u2014many mammalian enhancers originated from TE insertions (e.g., MER41 elements provided interferon-responsive enhancers in immunity genes). (2) TE-derived promoters\u2014some genes use TE-derived sequences as alternative promoters. (3) TE-derived insulators\u2014CTCF binding sites have been distributed throughout mammalian genomes by SINE elements. (4) TE-derived coding sequences\u2014syncytin genes (essential for placenta formation in mammals) were derived from retroviral envelope genes. These examples illustrate that TEs are not merely 'selfish DNA' but have been major drivers of regulatory innovation in genome evolution.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -190,8 +190,8 @@
       "question": "The ENCODE (Encyclopedia of DNA Elements) project concluded that approximately 80% of the human genome has some biochemical function. Why has this conclusion been controversial?",
       "options": [
         "The ENCODE data were of poor quality",
-        "ENCODE only studied one cell type",
         "80% is too low; 100% of the genome is functional",
+        "ENCODE only studied one cell type",
         "Critics argue that ENCODE conflated biochemical activity (transcription, histone modification) with biological function\u2014much of the genome may be transcribed but without adaptive significance"
       ],
       "correctAnswer": "D",
@@ -209,12 +209,12 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher discovers a novel gene in organism A and wants to determine if it has orthologs in other species. What is the best computational approach?",
       "options": [
-        "Search for identical DNA sequences in other organisms",
-        "Check if the gene has the same name in other organism databases",
         "Perform reciprocal best BLAST hits between organism A and other genomes, combined with phylogenetic analysis to distinguish orthologs from paralogs",
-        "Compare protein structures predicted by AlphaFold"
+        "Compare protein structures predicted by AlphaFold",
+        "Check if the gene has the same name in other organism databases",
+        "Search for identical DNA sequences in other organisms"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "A",
       "explanation": "Identifying true orthologs (genes in different species derived from a common ancestral gene by speciation) requires distinguishing them from paralogs (genes related by duplication). The gold-standard approach: (1) Reciprocal best BLAST hit (RBH)\u2014if gene X in species A finds gene Y as best hit in species B, and gene Y finds gene X as best hit in species A, they are likely orthologs. (2) Phylogenetic analysis\u2014build a gene tree including all homologs from multiple species; orthologs cluster by speciation events, paralogs cluster by duplication events. (3) Synteny analysis\u2014orthologs often retain conserved genomic neighborhood. Tools like OrthoFinder, OMA, and InParanoid integrate these approaches. Simple sequence similarity searches alone cannot reliably distinguish orthologs from paralogs.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -229,12 +229,12 @@
       "type": "MCQ",
       "question": "The concept of 'junk DNA' has been largely reconsidered since the Human Genome Project. Which of the following sequences, once considered junk, has been shown to have important regulatory functions?",
       "options": [
-        "Protein-coding exons",
-        "Ribosomal RNA genes",
+        "tRNA genes",
         "Ultraconserved noncoding elements (UCEs) that show near-perfect conservation across vertebrate species",
-        "tRNA genes"
+        "Ribosomal RNA genes",
+        "Protein-coding exons"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "B",
       "explanation": "Ultraconserved elements (UCEs) are genomic sequences of 200+ bp that are perfectly or nearly perfectly conserved between distantly related vertebrate species (e.g., human, mouse, chicken, fish). Their extreme conservation implies very strong purifying selection, yet most are non-coding. Many UCEs function as long-range enhancers regulating developmental genes\u2014particularly transcription factors involved in brain development and limb patterning. Deletion of some UCEs in mice causes developmental abnormalities. The conservation of UCEs far exceeds that of most protein-coding sequences, suggesting they play critical roles that are intolerant of even minor sequence changes. They were among the strongest evidence against the 'junk DNA' concept.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -249,12 +249,12 @@
       "type": "MCQ",
       "question": "Alu elements are the most abundant transposable elements in the human genome, with over one million copies. To which class of transposable elements do Alu elements belong?",
       "options": [
+        "Short interspersed nuclear elements (SINEs) that transpose via an RNA intermediate",
         "DNA transposons (Class II)",
         "Long interspersed nuclear elements (LINEs)",
-        "Short interspersed nuclear elements (SINEs) that transpose via an RNA intermediate",
         "Long terminal repeat (LTR) retrotransposons"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "A",
       "explanation": "Alu elements are SINEs (Short Interspersed Nuclear Elements), approximately 300 bp in length, that transpose via a copy-and-paste mechanism using an RNA intermediate. Alu elements are transcribed by RNA polymerase III, and their insertion requires the reverse transcriptase encoded by LINE-1 (L1) elements\u2014thus they are non-autonomous retrotransposons. Alu elements comprise ~13% of the human genome (~1.1 million copies). They are primate-specific SINEs (derived from 7SL RNA). Despite being largely inactive today, Alu insertions continue to cause genetic disease (~0.1% of human genetic disorders) and contribute to genome evolution through exonization, alternative splicing regulation, and as sources of new regulatory elements.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -269,12 +269,12 @@
       "type": "MCQ",
       "question": "Orthologous genes are genes in different species that evolved from a common ancestral gene by speciation. Paralogous genes evolved from a common ancestor by gene duplication. Which pair of genes are orthologs?",
       "options": [
-        "Human insulin and mouse insulin",
-        "Human alpha-globin and human beta-globin",
         "Human alpha-globin and human myoglobin",
-        "Human hemoglobin alpha-1 and human hemoglobin alpha-2"
+        "Human hemoglobin alpha-1 and human hemoglobin alpha-2",
+        "Human insulin and mouse insulin",
+        "Human alpha-globin and human beta-globin"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": "Human insulin and mouse insulin are orthologs\u2014they descended from the same insulin gene in the human-mouse common ancestor and diverged through speciation. Human alpha-globin and beta-globin are paralogs\u2014they arose from an ancient gene duplication and subsequently diverged while remaining in the same organism. Human alpha-globin and myoglobin are also paralogs (from an even more ancient duplication). Human hemoglobin alpha-1 and alpha-2 are paralogs from a more recent tandem duplication. The key distinction: orthologs separated by speciation (vertical descent), paralogs separated by duplication (within a lineage).",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -310,11 +310,11 @@
       "question": "Pseudogenes are nonfunctional copies of genes. What is the difference between processed pseudogenes and unprocessed (duplicated) pseudogenes?",
       "options": [
         "Processed pseudogenes have introns; unprocessed pseudogenes lack introns",
+        "Processed pseudogenes are functional; unprocessed are not",
         "Processed pseudogenes lack introns (derived from reverse-transcribed mRNA) and have poly-A tails; unprocessed pseudogenes retain intron-exon structure from gene duplication",
-        "There is no difference between the two types",
-        "Processed pseudogenes are functional; unprocessed are not"
+        "There is no difference between the two types"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Processed pseudogenes arise from reverse transcription of mRNA followed by integration into the genome (retrotransposition). They characteristically: (1) lack introns (since they derive from processed mRNA), (2) have poly-A tails, (3) lack a promoter (and thus are usually not transcribed), and (4) accumulate mutations freely. Unprocessed (duplicated) pseudogenes arise from DNA-level gene duplication. They retain intron-exon structure but have accumulated disabling mutations (stop codons, frameshifts, splice site mutations). The human genome contains ~13,000 pseudogenes. Some pseudogenes have been shown to have regulatory functions (e.g., producing antisense or siRNA that regulates the parent gene).",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -329,12 +329,12 @@
       "type": "MCQ",
       "question": "The minimum number of genes tends to increase with increasing complexity of organisms. What is the approximate gene count for the bacterium E. coli?",
       "options": [
-        "About 4,300 genes",
         "About 500 genes",
+        "About 100,000 genes",
         "About 20,000 genes",
-        "About 100,000 genes"
+        "About 4,300 genes"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": "E. coli K-12 has approximately 4,300 protein-coding genes in its 4.6 Mb genome. For comparison: Mycoplasma genitalium (smallest known free-living organism) has ~475 genes; the yeast Saccharomyces cerevisiae has ~6,000; the nematode C. elegans ~20,000; the fruit fly Drosophila ~14,000; Arabidopsis thaliana ~27,000; and humans ~20,000. The relatively modest difference in gene count between simple and complex organisms (compared to the enormous difference in organismal complexity) is partly explained by: (1) alternative splicing increasing proteomic diversity, (2) more complex gene regulation, (3) expanded regulatory DNA, and (4) protein-protein interaction network complexity.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -349,9 +349,9 @@
       "type": "MCQ",
       "question": "Comparative genomics has revealed that humans and chimpanzees share approximately 98.8% sequence identity. Despite this high similarity, the species differ in many traits. Which genomic difference is thought to contribute MOST to human-chimpanzee phenotypic differences?",
       "options": [
-        "Differences in protein-coding gene sequences",
-        "Differences in gene regulation, including cis-regulatory elements, transcription factor binding sites, and non-coding RNAs",
         "Humans have twice as many genes as chimpanzees",
+        "Differences in gene regulation, including cis-regulatory elements, transcription factor binding sites, and non-coding RNAs",
+        "Differences in protein-coding gene sequences",
         "Differences in mitochondrial DNA only"
       ],
       "correctAnswer": "B",
@@ -369,12 +369,12 @@
       "type": "MCQ",
       "question": "Long non-coding RNAs (lncRNAs) are transcripts >200 nucleotides that do not encode proteins. What is a well-characterized function of the lncRNA XIST?",
       "options": [
-        "Encoding the X chromosome's centromere protein",
-        "Encoding the SRY sex-determining factor",
         "Activating all genes on both X chromosomes",
-        "Coating one X chromosome in female mammals to initiate X-chromosome inactivation (dosage compensation)"
+        "Encoding the SRY sex-determining factor",
+        "Coating one X chromosome in female mammals to initiate X-chromosome inactivation (dosage compensation)",
+        "Encoding the X chromosome's centromere protein"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "C",
       "explanation": "XIST (X-inactive specific transcript) is a 17 kb lncRNA transcribed from the X-inactivation center (XIC) on the X chromosome destined for inactivation. XIST RNA coats the entire X chromosome in cis, recruiting chromatin-modifying complexes (PRC2, which deposits H3K27me3; SPEN/SHARP) that establish and maintain transcriptional silencing. This process, X-chromosome inactivation (XCI), ensures dosage compensation between XX females and XY males. XIST is one of the best-characterized lncRNAs and demonstrates that non-coding RNAs can have major regulatory functions. The XIST gene is expressed only from the inactive X and is essential for initiating and maintaining XCI.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -389,12 +389,12 @@
       "type": "MCQ",
       "question": "Multigene families can be classified as highly homogeneous (e.g., rRNA genes) or diversified (e.g., immunoglobulin genes). What mechanism maintains sequence homogeneity among the hundreds of rRNA gene copies?",
       "options": [
+        "Only one rRNA gene is functional; the rest are pseudogenes",
         "Concerted evolution through unequal crossing over and gene conversion homogenizes sequences across gene copies",
-        "Each rRNA gene copy is independently selected for the same sequence",
         "rRNA genes do not mutate",
-        "Only one rRNA gene is functional; the rest are pseudogenes"
+        "Each rRNA gene copy is independently selected for the same sequence"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "Concerted evolution maintains sequence homogeneity among members of multigene families through two mechanisms: (1) Unequal crossing over\u2014misalignment during meiotic recombination between tandemly repeated genes leads to expansion/contraction of the array and sequence homogenization over time, as gene copies are gained and lost. (2) Gene conversion\u2014non-reciprocal recombination events where one gene copy converts another to its sequence. Together, these mechanisms cause mutations in one gene copy to either spread to all copies or be eliminated, keeping the family uniform. Humans have ~200 copies of rRNA genes on 5 different chromosomes (13, 14, 15, 21, 22), yet they are >99% identical due to concerted evolution.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -409,12 +409,12 @@
       "type": "DATA_INTERPRETATION",
       "question": "A researcher compares the genomes of several organisms and finds the following: E. coli (4.6 Mb, 87% coding), yeast (12 Mb, 70% coding), Drosophila (180 Mb, 13% coding), human (3,200 Mb, 1.5% coding). What general trend does this data reveal?",
       "options": [
-        "Larger genomes always have more genes",
-        "As genome size increases, the proportion of coding DNA decreases dramatically, with non-coding sequences accounting for most of the size expansion",
         "All organisms have the same percentage of coding DNA",
-        "Coding DNA percentage increases with genome size"
+        "Coding DNA percentage increases with genome size",
+        "As genome size increases, the proportion of coding DNA decreases dramatically, with non-coding sequences accounting for most of the size expansion",
+        "Larger genomes always have more genes"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "The data clearly shows an inverse relationship between genome size and the fraction of coding DNA. E. coli has a compact genome where 87% encodes proteins, with minimal non-coding sequence. As genome size increases through eukaryotes, the coding fraction drops dramatically (to just 1.5% in humans). The genome size expansion is primarily due to: (1) accumulation of transposable elements and repetitive sequences, (2) expansion of introns, (3) expansion of intergenic regions, and (4) gene duplication events (including whole-genome duplications). Gene number increases much more modestly than genome size, confirming that the C-value paradox is largely explained by non-coding DNA accumulation.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -429,12 +429,12 @@
       "type": "MCQ",
       "question": "Domain shuffling (exon shuffling) contributes to protein evolution by creating novel combinations of functional domains. Which structural feature of eukaryotic genes facilitates domain shuffling?",
       "options": [
-        "The absence of introns in eukaryotic genes",
         "The presence of introns between exons that encode distinct protein domains, facilitating recombination that creates new domain combinations",
+        "The presence of operons that group related genes",
         "The circular structure of eukaryotic chromosomes",
-        "The presence of operons that group related genes"
+        "The absence of introns in eukaryotic genes"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Introns between protein domain-encoding exons facilitate exon/domain shuffling because: (1) Recombination within introns (which are large targets) can join exons from different genes without disrupting coding sequences. (2) Retrotransposition can move exons to new genomic locations. (3) The modular correspondence between exons and protein domains (the 'exon theory of genes') means that exon recombination creates proteins with novel domain combinations that may have new functions. Examples include tissue plasminogen activator (tPA), which contains domains found in different proteins: a fibronectin finger domain, an EGF domain, and kringle domains. Many extracellular matrix proteins show evidence of domain shuffling.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -449,12 +449,12 @@
       "type": "MCQ",
       "question": "The Ka/Ks ratio (also called dN/dS or omega) compares the rates of nonsynonymous (amino acid-changing) and synonymous (silent) substitutions. A Ka/Ks ratio significantly less than 1 indicates:",
       "options": [
-        "Positive selection (adaptive evolution) is acting on the gene",
         "The gene is evolving neutrally",
         "Purifying (negative) selection is acting to conserve the protein sequence",
-        "The gene has been horizontally transferred"
+        "The gene has been horizontally transferred",
+        "Positive selection (adaptive evolution) is acting on the gene"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "B",
       "explanation": "The Ka/Ks (dN/dS, omega) ratio is a key metric for inferring the mode of selection acting on protein-coding genes: Ka/Ks < 1: Purifying (negative) selection\u2014nonsynonymous mutations are deleterious and removed by selection, so Ka < Ks. Most genes show Ka/Ks << 1, indicating strong functional constraint. Ka/Ks \u2248 1: Neutral evolution\u2014nonsynonymous and synonymous mutations accumulate at similar rates, suggesting the protein is not under selective constraint. Ka/Ks > 1: Positive (adaptive/diversifying) selection\u2014nonsynonymous mutations are advantageous and fixed at higher rates than expected. This is rare and typically observed at specific codons rather than across entire genes (e.g., in immune system genes, sperm competition proteins).",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -469,8 +469,8 @@
       "type": "MCQ",
       "question": "Retrotransposons move through a 'copy-and-paste' mechanism. Which enzyme is essential for retrotransposition?",
       "options": [
-        "DNA helicase",
         "RNA polymerase III only",
+        "DNA helicase",
         "DNA ligase",
         "Reverse transcriptase, which synthesizes DNA from the RNA intermediate"
       ],
@@ -490,9 +490,9 @@
       "question": "A researcher wants to identify all transcription factor binding sites in the human genome for a specific transcription factor. Which genome-wide experimental approach is most appropriate?",
       "options": [
         "ChIP-seq (chromatin immunoprecipitation followed by sequencing) using an antibody against the transcription factor",
-        "Gene expression microarray",
+        "Protein mass spectrometry",
         "Whole-genome sequencing of the patient",
-        "Protein mass spectrometry"
+        "Gene expression microarray"
       ],
       "correctAnswer": "A",
       "explanation": "ChIP-seq is the gold-standard method for mapping genome-wide transcription factor binding sites: (1) Cross-link proteins to DNA in vivo (formaldehyde). (2) Fragment chromatin by sonication to 200-600 bp. (3) Immunoprecipitate protein-DNA complexes using an antibody specific to the transcription factor of interest. (4) Reverse cross-links and purify DNA. (5) Sequence the enriched DNA by NGS. (6) Map reads to the genome\u2014peaks of enrichment indicate binding sites. Newer alternatives include CUT&RUN and CUT&Tag (which require fewer cells and produce lower background), but ChIP-seq remains widely used. Gene expression microarrays identify which genes are expressed but not where transcription factors bind.",
@@ -509,9 +509,9 @@
       "type": "MCQ",
       "question": "Segmental duplication in the human genome refers to blocks of DNA (>1 kb with >90% sequence identity) that are duplicated at two or more locations. What is the clinical significance of segmental duplications?",
       "options": [
-        "They have no clinical significance",
-        "They are only found in cancer cells",
         "They protect genes from mutation",
+        "They are only found in cancer cells",
+        "They have no clinical significance",
         "They predispose to recurrent chromosomal rearrangements (microdeletions, microduplications) through non-allelic homologous recombination (NAHR), causing genomic disorders"
       ],
       "correctAnswer": "D",
@@ -529,12 +529,12 @@
       "type": "MCQ",
       "question": "Mobile genetic elements in bacteria include insertion sequences (IS elements) and transposons. What distinguishes a composite transposon from a simple insertion sequence?",
       "options": [
-        "Composite transposons lack inverted repeats",
-        "Composite transposons cannot move within the genome",
         "Simple IS elements are larger than composite transposons",
-        "Composite transposons contain additional genes (e.g., antibiotic resistance) flanked by two insertion sequences, while IS elements contain only the transposase gene"
+        "Composite transposons contain additional genes (e.g., antibiotic resistance) flanked by two insertion sequences, while IS elements contain only the transposase gene",
+        "Composite transposons cannot move within the genome",
+        "Composite transposons lack inverted repeats"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "B",
       "explanation": "Simple insertion sequences (IS elements, 700-2,500 bp) contain: inverted terminal repeats (ITRs) at each end and a transposase gene\u2014the minimum requirement for transposition. Composite transposons (e.g., Tn10, Tn5) consist of a central region containing additional genes (commonly antibiotic resistance genes\u2014tetracycline resistance in Tn10, kanamycin resistance in Tn5) flanked by two IS elements (which may be in direct or inverted orientation). The flanking IS elements provide the transposase and inverted repeats necessary for transposition of the entire composite element. Non-composite transposons (e.g., Tn3) have their own inverted repeats and transposase gene without IS elements.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -549,12 +549,12 @@
       "type": "MCQ",
       "question": "The neutral theory of molecular evolution, proposed by Motoo Kimura, argues that:",
       "options": [
-        "Most molecular evolution is driven by random genetic drift of selectively neutral or nearly neutral mutations, rather than by natural selection",
         "All mutations are beneficial and drive adaptive evolution",
         "Natural selection is the only force driving evolution at the molecular level",
+        "Most molecular evolution is driven by random genetic drift of selectively neutral or nearly neutral mutations, rather than by natural selection",
         "Genetic drift only affects small populations"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": "Kimura's neutral theory (1968) proposes that the majority of evolutionary changes at the molecular level are caused by random fixation (genetic drift) of selectively neutral or nearly neutral mutations, rather than by positive natural selection. Key predictions: (1) The rate of neutral molecular evolution equals the neutral mutation rate, independent of population size. (2) Synonymous substitutions (which don't change amino acids) should accumulate faster than nonsynonymous substitutions, because they are more likely to be neutral. (3) A molecular clock exists for neutral changes. The neutral theory does not deny the importance of natural selection for phenotypic evolution\u2014rather, it argues that most observed molecular variation and substitution is selectively irrelevant.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -569,12 +569,12 @@
       "type": "MCQ",
       "question": "Comparative genomics of bacteria reveals that the 'pan-genome' (total gene repertoire of a species) is typically much larger than any individual genome. The set of genes shared by all strains of a species is called the:",
       "options": [
-        "Pan-genome",
         "Core genome",
         "Accessory genome",
-        "Metagenome"
+        "Metagenome",
+        "Pan-genome"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "In bacterial pan-genomics: (1) The core genome consists of genes present in all strains\u2014these encode essential housekeeping functions (DNA replication, transcription, translation, central metabolism). (2) The accessory (dispensable) genome includes genes present in some but not all strains\u2014these often encode niche-specific adaptations (antibiotic resistance, virulence factors, metabolic specializations). (3) The pan-genome is the total union of all genes across all strains. For some species (e.g., E. coli), the pan-genome is 'open'\u2014new genes are discovered with each new genome sequenced. The E. coli core genome is ~2,000 genes, while its pan-genome exceeds 16,000 genes, reflecting extensive HGT and genomic plasticity.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -589,12 +589,12 @@
       "type": "MCQ",
       "question": "Codon usage bias refers to the non-random use of synonymous codons. In highly expressed genes, which codons tend to be preferentially used?",
       "options": [
-        "All codons are used equally in all genes",
-        "Only start and stop codons matter",
+        "Codons recognized by the most abundant tRNAs, optimizing translational speed and accuracy",
         "The rarest codons, to slow down translation",
-        "Codons recognized by the most abundant tRNAs, optimizing translational speed and accuracy"
+        "Only start and stop codons matter",
+        "All codons are used equally in all genes"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "A",
       "explanation": "Codon usage bias is the preferential use of certain synonymous codons over others. In highly expressed genes, there is strong selection for 'optimal' codons\u2014those recognized by the most abundant tRNA species. Using these codons maximizes translational speed and accuracy because: (1) ribosomes spend less time waiting for cognate tRNAs, (2) correctly charged tRNAs are more efficiently selected over near-cognate tRNAs, reducing misincorporation. This bias is strongest in unicellular organisms with large effective population sizes (bacteria, yeast) where selection against suboptimal codons is effective. The codon adaptation index (CAI) quantifies how closely a gene's codon usage matches the optimal codons for that organism.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -609,12 +609,12 @@
       "type": "MCQ",
       "question": "Epigenomic variation between genetically identical cells (such as different cell types in one organism) is primarily encoded by:",
       "options": [
-        "Differences in DNA sequence",
-        "Differences in the number of chromosomes",
         "DNA methylation patterns, histone modifications, and chromatin accessibility that regulate gene expression without changing DNA sequence",
+        "Differences in the number of chromosomes",
+        "Differences in DNA sequence",
         "Differences in mitochondrial DNA"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "A",
       "explanation": "Genetically identical cells in a multicellular organism differentiate into distinct cell types through epigenomic differences: (1) DNA methylation\u2014CpG methylation patterns differ between cell types, typically silencing tissue-inappropriate genes. (2) Histone modifications\u2014combinatorial patterns of histone marks (H3K4me3 at active promoters, H3K27me3 at repressed genes, H3K27ac at active enhancers) define cell-type-specific chromatin states. (3) Chromatin accessibility\u2014open/closed chromatin regions (mapped by ATAC-seq, DNase-seq) determine which regulatory elements are accessible to transcription factors. These epigenomic marks are established during development, maintained through cell division, and create the ~200 distinct cell types from identical genomes.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -629,12 +629,12 @@
       "type": "MCQ",
       "question": "Ancient whole-genome duplication events can be detected in modern genomes by identifying:",
       "options": [
-        "Higher numbers of mitochondria",
         "Extensive regions of paralogous genes showing similar ages of divergence (syntenic paralogous blocks or 'ohnologs')",
         "Increased mutation rates in specific genes",
-        "More introns per gene"
+        "More introns per gene",
+        "Higher numbers of mitochondria"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Ancient whole-genome duplications (WGD) leave characteristic signatures: (1) Paralogous blocks\u2014pairs of chromosomal regions containing paralogous genes in conserved order (collinear blocks), resulting from the duplication of entire chromosomes. Genes arising from WGD are called 'ohnologs' (after Susumu Ohno). (2) Ks distribution peaks\u2014plotting synonymous substitution rates (Ks) between all paralogous gene pairs produces peaks at Ks values corresponding to the timing of the WGD (all duplicate pairs from the same event show similar divergence). (3) Phylogenetic analysis\u2014gene trees showing simultaneous duplication across many gene families. These signatures have confirmed WGD events in teleost fish, early vertebrates, angiosperms, and yeast.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -649,12 +649,12 @@
       "type": "MCQ",
       "question": "The human genome project used two main strategies: hierarchical shotgun sequencing (clone-by-clone) and whole-genome shotgun sequencing. What is the key difference between these approaches?",
       "options": [
-        "They are identical approaches with different names",
-        "Whole-genome shotgun only works for bacterial genomes",
+        "Hierarchical shotgun does not use computers for assembly",
         "Hierarchical shotgun first maps the genome into ordered BAC clones which are individually sequenced; whole-genome shotgun fragments and sequences the entire genome at once, then assembles computationally",
-        "Hierarchical shotgun does not use computers for assembly"
+        "Whole-genome shotgun only works for bacterial genomes",
+        "They are identical approaches with different names"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "B",
       "explanation": "Hierarchical shotgun sequencing (used by the public Human Genome Project): (1) Construct a physical map of overlapping BAC clones. (2) Select a minimal tiling path of BACs. (3) Shotgun sequence each BAC individually. (4) Assemble within BACs, then order BACs using the physical map. This approach produces highly accurate assemblies but is labor-intensive. Whole-genome shotgun (WGS, used by Celera Genomics): (1) Fragment the entire genome. (2) Sequence random fragments. (3) Use computational algorithms to assemble all fragments simultaneously based on sequence overlaps. WGS is faster and cheaper but faces challenges with repetitive sequences. Modern genome projects typically use WGS with long-read sequencing.",
       "isOlympiad": true,
       "olympiadLevel": "NSEB",
@@ -670,11 +670,11 @@
       "question": "Gene ontology (GO) annotations classify gene functions into three categories. Which are the three GO categories?",
       "options": [
         "Promoter, enhancer, silencer",
-        "Primary structure, secondary structure, tertiary structure",
         "Transcription, translation, replication",
-        "Biological process, molecular function, cellular component"
+        "Biological process, molecular function, cellular component",
+        "Primary structure, secondary structure, tertiary structure"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "C",
       "explanation": "Gene Ontology provides a standardized vocabulary for describing gene/protein function across all organisms, organized into three independent ontologies: (1) Biological Process\u2014the larger biological objective (e.g., signal transduction, cell division, immune response). (2) Molecular Function\u2014the biochemical activity at the molecular level (e.g., kinase activity, DNA binding, transporter activity). (3) Cellular Component\u2014the location within the cell where the gene product functions (e.g., nucleus, mitochondrial membrane, cytoplasm). GO terms are hierarchically organized (directed acyclic graphs), with terms becoming more specific as you descend. GO enrichment analysis is widely used to identify overrepresented functional categories in gene lists from transcriptomic or proteomic experiments.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -689,12 +689,12 @@
       "type": "DATA_INTERPRETATION",
       "question": "A researcher performs a dN/dS analysis on two genes: Gene A has dN/dS = 0.05, Gene B has dN/dS = 2.5. What can be concluded about the selective pressures on these genes?",
       "options": [
-        "Both genes are under neutral evolution",
         "Gene A is under positive selection; Gene B is under purifying selection",
-        "Gene A is under strong purifying selection (highly conserved protein); Gene B shows evidence of positive selection (adaptive evolution at some sites)",
-        "The dN/dS ratio provides no information about selection"
+        "Both genes are under neutral evolution",
+        "The dN/dS ratio provides no information about selection",
+        "Gene A is under strong purifying selection (highly conserved protein); Gene B shows evidence of positive selection (adaptive evolution at some sites)"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "Gene A (dN/dS = 0.05): Strong purifying selection\u2014nonsynonymous substitutions are strongly selected against (only 5% of the neutral rate), indicating that changes to the protein sequence are mostly deleterious. This gene encodes a highly conserved, functionally constrained protein (e.g., histones, ribosomal proteins). Gene B (dN/dS = 2.5): Positive selection\u2014nonsynonymous substitutions occur 2.5\u00d7 faster than synonymous substitutions, indicating that amino acid changes are advantageous and being driven to fixation by natural selection. This pattern is seen in genes involved in host-pathogen coevolution (e.g., MHC genes, primate APOBEC3 genes), reproductive proteins, and immune system genes.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -709,12 +709,12 @@
       "type": "MCQ",
       "question": "The concept of 'minimal genome' research aims to determine the smallest set of genes needed for life. Experiments with Mycoplasma genitalium showed that approximately how many genes are essential for growth under laboratory conditions?",
       "options": [
-        "About 50 genes",
-        "About 5,000 genes",
+        "About 20,000 genes",
         "About 382 genes (in the synthetic organism JCVI-syn3.0)",
-        "About 20,000 genes"
+        "About 5,000 genes",
+        "About 50 genes"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "B",
       "explanation": "The J. Craig Venter Institute created JCVI-syn3.0, a synthetic minimal cell with 473 genes (the smallest genome of any self-replicating organism). Further analysis identified 382 genes as essential under standard laboratory conditions. Of these, about 149 genes (~39%) have unknown function\u2014revealing how much we still don't understand about basic cellular life. The essential gene set includes: DNA replication and repair (~35 genes), transcription (~10 genes), translation (~105 genes), metabolism (~90 genes), membrane transport (~30 genes), and cell division (~15 genes). In natural organisms, additional genes are needed for environmental challenges, competition, and non-laboratory conditions.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -729,12 +729,12 @@
       "type": "MCQ",
       "question": "Copy number variants (CNVs) are structural variations involving duplications or deletions of genomic segments (>1 kb). How do CNVs contribute to human phenotypic variation?",
       "options": [
-        "CNVs have no effect on phenotype",
         "CNVs can alter gene dosage, disrupt genes, expose recessive alleles, or create novel gene fusions, contributing to disease susceptibility and normal phenotypic variation",
-        "CNVs only occur in non-coding regions",
-        "CNVs are always inherited and never arise de novo"
+        "CNVs have no effect on phenotype",
+        "CNVs are always inherited and never arise de novo",
+        "CNVs only occur in non-coding regions"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "CNVs affect phenotype through multiple mechanisms: (1) Gene dosage\u2014duplications increase copy number (potentially increasing protein expression); deletions decrease it. The AMY1 gene CNV (salivary amylase) correlates with dietary starch consumption in human populations. (2) Gene disruption\u2014CNV breakpoints within genes can truncate or alter proteins. (3) Exposure of recessive alleles\u2014deletions can unmask recessive disease alleles on the homologous chromosome. (4) Gene fusion\u2014CNV junctions can create chimeric genes. CNVs contribute to ~17.7% of human genetic variation (comparing any two individuals), affect more base pairs than SNPs, and are associated with autism, schizophrenia, intellectual disability, and cancer predisposition.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -749,12 +749,12 @@
       "type": "MCQ",
       "question": "Genome evolution in obligate intracellular parasites and endosymbionts (like Mycoplasma, Rickettsia, and organellar genomes) typically shows:",
       "options": [
-        "Massive genome reduction, loss of biosynthetic genes, increased A+T content, and accelerated sequence evolution due to Muller's ratchet",
-        "Genome expansion due to gene duplication",
         "No change in genome size over evolutionary time",
-        "Acquisition of thousands of new genes by horizontal transfer"
+        "Acquisition of thousands of new genes by horizontal transfer",
+        "Genome expansion due to gene duplication",
+        "Massive genome reduction, loss of biosynthetic genes, increased A+T content, and accelerated sequence evolution due to Muller's ratchet"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "D",
       "explanation": "Obligate intracellular parasites and endosymbionts undergo reductive genome evolution characterized by: (1) Massive gene loss\u2014genes for biosynthesis of amino acids, nucleotides, and other metabolites become dispensable because they can import these from the host. (2) Increased A+T content\u2014mutational bias toward A+T combined with weakened purifying selection (small effective population sizes) leads to A+T enrichment. (3) Accelerated sequence evolution\u2014reduced effective population size increases genetic drift, allowing slightly deleterious mutations to fix (Muller's ratchet). (4) Loss of DNA repair genes\u2014further accelerating mutation accumulation. The ultimate example is mitochondrial genomes, which have lost >1,000 genes to the nucleus over ~1.5 billion years of endosymbiosis.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -769,12 +769,12 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher wants to compare the transcriptomes of two different tissues (brain vs. liver) to identify tissue-specific gene expression. Which is the most appropriate modern approach?",
       "options": [
-        "Southern blot hybridization of genomic DNA from each tissue",
-        "GWAS comparing brain and liver DNA",
         "RNA-seq: extract RNA from each tissue, convert to cDNA, sequence by NGS, and compare read counts per gene between tissues",
-        "Sanger sequencing of five randomly selected genes"
+        "Southern blot hybridization of genomic DNA from each tissue",
+        "Sanger sequencing of five randomly selected genes",
+        "GWAS comparing brain and liver DNA"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "A",
       "explanation": "RNA-seq (RNA sequencing) is the current gold-standard method for transcriptome comparison: (1) Extract total RNA from each tissue. (2) Enrich mRNA (poly-A selection) or deplete rRNA. (3) Fragment and convert to cDNA. (4) Add sequencing adapters and sequence by NGS (Illumina). (5) Map reads to the reference genome and count reads per gene (FPKM, TPM, or raw counts). (6) Use statistical methods (DESeq2, edgeR) to identify differentially expressed genes. RNA-seq advantages over microarrays: no probe design needed, wider dynamic range, detection of novel transcripts and splice variants, and absolute quantification. A comprehensive comparison requires biological replicates (typically 3+) from each tissue.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -789,12 +789,12 @@
       "type": "MCQ",
       "question": "The 'molecular clock' hypothesis proposes that DNA and protein sequences accumulate substitutions at a roughly constant rate over time. Which observation supports the molecular clock?",
       "options": [
-        "All genes evolve at exactly the same rate",
         "For a given protein, the number of amino acid substitutions between species correlates with the estimated time since their divergence from a common ancestor",
+        "All genes evolve at exactly the same rate",
         "Mutation rates are identical in all organisms",
         "Natural selection accelerates all substitutions equally"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The molecular clock hypothesis (Zuckerkandl & Pauling, 1962) is supported by the observation that for many proteins, the number of amino acid differences between orthologous sequences is roughly proportional to the time since divergence estimated from the fossil record. For example, cytochrome c shows approximately linear accumulation of substitutions when plotted against divergence time across vertebrates. The clock is most reliable for: (1) synonymous substitutions (least affected by selection), (2) comparisons over intermediate time scales, and (3) averages across many genes. Limitations include: rate variation among lineages (generation time effect), among genes (functional constraint), and episodic bursts of positive selection. Relaxed molecular clock models that allow rate variation among branches are now standard.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -809,12 +809,12 @@
       "type": "MCQ",
       "question": "Proteomics aims to study the entire complement of proteins in a cell or organism. Why is the proteome more complex than predicted from the genome alone?",
       "options": [
+        "Each gene encodes exactly one protein",
         "Post-translational modifications, alternative splicing, proteolytic processing, and protein-protein interactions create a proteome far more diverse than the ~20,000 genes would suggest",
         "Proteins are simpler than genes",
-        "Each gene encodes exactly one protein",
         "Proteomics technology is less accurate than genomics"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "The human proteome is far more complex than the ~20,000 protein-coding genes would suggest because: (1) Alternative splicing generates multiple mRNA variants from single genes (>95% of multi-exon genes are alternatively spliced). (2) Post-translational modifications (PTMs)\u2014phosphorylation, glycosylation, ubiquitination, acetylation, methylation\u2014modify protein properties without changing sequence (>400 types of PTMs, with >100,000 modification sites in the human proteome). (3) Proteolytic processing\u2014inactive precursors (zymogens, prohormones) are cleaved to produce active forms. (4) Protein-protein interactions\u2014>650,000 estimated interactions create functional complexes with emergent properties. These amplification mechanisms mean the functional proteome may exceed 1 million distinct molecular species.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -829,12 +829,12 @@
       "type": "MCQ",
       "question": "Satellite DNA consists of short sequences (5-200 bp) repeated millions of times in tandem, primarily at centromeres and telomeres. Why does satellite DNA evolve rapidly despite being present in large quantities?",
       "options": [
-        "Satellite DNA is under strong purifying selection that prevents change",
-        "Satellite DNA evolves slowly due to its importance in chromosome structure",
         "Satellite DNA has a higher mutation rate due to exposure to UV light",
-        "Satellite DNA repeats undergo rapid turnover through unequal crossing over and replication slippage, and most changes are selectively neutral because the DNA is largely non-coding"
+        "Satellite DNA evolves slowly due to its importance in chromosome structure",
+        "Satellite DNA repeats undergo rapid turnover through unequal crossing over and replication slippage, and most changes are selectively neutral because the DNA is largely non-coding",
+        "Satellite DNA is under strong purifying selection that prevents change"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "C",
       "explanation": "Satellite DNA evolves rapidly through several mechanisms: (1) Unequal crossing over between tandem repeats causes expansion and contraction of repeat arrays, changing copy number within and between generations. (2) Replication slippage (polymerase slippage during replication) adds or removes repeat units. (3) Gene conversion between repeats can homogenize sequences within arrays. (4) Most satellite DNA is non-coding and non-functional (though some plays roles in centromere function), so mutations accumulate with reduced selective constraint. The combination of high mutational turnover and relaxed selection means satellite DNA sequences can differ substantially even between closely related species (molecular drive), making them useful as species-specific markers but challenging for phylogenetic analysis.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -849,12 +849,12 @@
       "type": "MCQ",
       "question": "Synteny breakpoints\u2014locations where gene order conservation between species is disrupted\u2014often correlate with which genomic feature?",
       "options": [
+        "Repetitive DNA elements (segmental duplications, transposable elements) that facilitate chromosomal rearrangements",
         "Protein-coding exons",
-        "Origins of replication",
         "tRNA genes",
-        "Repetitive DNA elements (segmental duplications, transposable elements) that facilitate chromosomal rearrangements"
+        "Origins of replication"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "A",
       "explanation": "Synteny breakpoints frequently co-localize with repetitive elements, particularly segmental duplications and clusters of transposable elements. These repetitive sequences can mediate chromosomal rearrangements through: (1) Non-allelic homologous recombination (NAHR) between duplicated segments on different chromosomes, causing translocations. (2) TE-mediated rearrangements\u2014ectopic recombination between dispersed TE copies. (3) Repeat-mediated deletions, inversions, and duplications. Analysis of mammalian genome alignments shows that synteny breakpoint regions are enriched in segmental duplications, SINEs, and LINEs. This association suggests that repetitive elements create fragile genomic sites that are prone to rearrangement during evolution.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -869,12 +869,12 @@
       "type": "MCQ",
       "question": "The endosymbiotic origin of mitochondria is strongly supported by genomic evidence. Which genomic feature of mitochondria supports their alpha-proteobacterial origin?",
       "options": [
-        "Mitochondrial genomes are linear, like eukaryotic chromosomes",
+        "Mitochondrial genomes are as large as bacterial genomes",
         "Mitochondrial genomes encode all proteins needed for oxidative phosphorylation",
-        "Mitochondrial ribosomes and rRNA sequences are more similar to bacterial ribosomes than to eukaryotic cytoplasmic ribosomes",
-        "Mitochondrial genomes are as large as bacterial genomes"
+        "Mitochondrial genomes are linear, like eukaryotic chromosomes",
+        "Mitochondrial ribosomes and rRNA sequences are more similar to bacterial ribosomes than to eukaryotic cytoplasmic ribosomes"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "Multiple genomic features support the alpha-proteobacterial origin of mitochondria: (1) Mitochondrial rRNA and ribosome structures are similar to bacterial (70S, with 30S and 50S subunits) rather than eukaryotic cytoplasmic ribosomes (80S). (2) Phylogenetic analysis of mitochondrial rRNA genes places them within the alpha-proteobacteria, closest to Rickettsia and related intracellular parasites. (3) Mitochondrial genomes are typically circular (like most bacteria). (4) Mitochondrial genes lack introns in most organisms. However, mitochondrial genomes are much smaller than bacterial genomes (16.6 kb in humans vs. ~4.6 Mb in E. coli) due to massive gene transfer to the host nucleus over ~1.5 billion years of endosymbiosis.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -889,12 +889,12 @@
       "type": "MCQ",
       "question": "Isochores are large (>300 kb) regions of relatively homogeneous GC content in mammalian genomes. What is the functional significance of isochore structure?",
       "options": [
-        "Isochores have no functional significance",
         "GC-poor isochores contain more genes than GC-rich isochores",
         "All isochores have identical GC content",
-        "Gene density correlates with GC content\u2014GC-rich isochores are gene-dense, replicate early in S phase, and correspond to euchromatic chromosome bands"
+        "Gene density correlates with GC content\u2014GC-rich isochores are gene-dense, replicate early in S phase, and correspond to euchromatic chromosome bands",
+        "Isochores have no functional significance"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "C",
       "explanation": "The human genome is organized into isochores of varying GC content (from ~30% to ~65% GC). GC-rich isochores correlate with: (1) higher gene density, (2) earlier replication timing, (3) higher recombination rates, (4) R-band (light) staining on G-banded chromosomes, (5) higher transcriptional activity, and (6) more open chromatin. GC-poor isochores are gene-poor, late-replicating, correspond to G-bands (dark staining), and are enriched in LINEs. The origin of isochore structure is debated\u2014hypotheses include: biased gene conversion favoring GC in regions of high recombination (BGC), mutation bias, and natural selection. Isochore structure is a fundamental organizing principle of mammalian genomes.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -909,12 +909,12 @@
       "type": "MCQ",
       "question": "Orphan genes (taxonomically restricted genes, TRGs) are genes found in only one species or a narrow taxonomic group with no detectable homologs in other lineages. What is the evolutionary significance of orphan genes?",
       "options": [
-        "They are sequencing artifacts with no real existence",
         "All organisms have the same set of genes",
         "They may represent rapidly evolving genes, genes arising de novo from non-coding DNA, or genes whose homologs have diverged beyond recognition, contributing to species-specific adaptations",
+        "They are sequencing artifacts with no real existence",
         "Orphan genes are always pseudogenes"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "B",
       "explanation": "Orphan genes (TRGs) typically represent 10-30% of genes in any genome and are of great evolutionary interest. Their origins include: (1) De novo gene birth from previously non-coding sequences\u2014enabled by accumulation of open reading frames and regulatory elements in non-coding DNA. This represents a genuine source of genetic novelty. (2) Rapid sequence divergence making homology undetectable by standard BLAST searches. (3) Horizontal gene transfer from organisms whose genomes are not yet sequenced. (4) Gene duplication followed by extreme divergence. Orphan genes often play roles in species-specific adaptations\u2014for example, antifreeze proteins in Arctic fish, nematocyst proteins in cnidarians, and taxon-specific immune system components.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -929,12 +929,12 @@
       "type": "DATA_INTERPRETATION",
       "question": "A researcher analyzes the distribution of transposable element insertions across the human genome. They find that LINE-1 elements are preferentially located in AT-rich, gene-poor regions, while Alu (SINE) elements are enriched in GC-rich, gene-dense regions. What evolutionary mechanisms might explain these opposite distributions?",
       "options": [
-        "Both distributions are random and require no explanation",
-        "Alu elements avoid gene-rich regions due to negative selection",
         "LINE-1 elements are only found on the X chromosome",
-        "LINE-1 inserts into AT-rich regions due to its target site preference (consensus TTAAAA), while Alu elements may be selectively retained near genes because their presence benefits gene regulation"
+        "LINE-1 inserts into AT-rich regions due to its target site preference (consensus TTAAAA), while Alu elements may be selectively retained near genes because their presence benefits gene regulation",
+        "Both distributions are random and require no explanation",
+        "Alu elements avoid gene-rich regions due to negative selection"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "B",
       "explanation": "The opposite distributions of L1 and Alu elements reflect different evolutionary dynamics: LINE-1 (L1): (1) Target-primed reverse transcription uses L1 endonuclease that preferentially nicks at AT-rich consensus sites (5'-TTAAAA-3'), producing insertion bias into AT-rich regions. (2) L1 insertions in gene-rich regions are more likely to be deleterious and purified by negative selection, reinforcing the AT-rich bias. Alu (SINE): (1) Alu elements initially insert semi-randomly (using L1 machinery). (2) However, Alu insertions in GC-rich, gene-dense regions may be selectively retained because: they can provide regulatory elements (alternative splice sites, enhancers), they may be less deleterious in GC-rich intergenic regions, and gene conversion may homogenize their sequences. The opposite distributions are thus shaped by both insertion preference and post-insertion selection.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -949,12 +949,12 @@
       "type": "MCQ",
       "question": "The concept of 'gene birth and death' describes the dynamic turnover of genes within genomes. Which multigene family best exemplifies the birth-and-death model?",
       "options": [
-        "Immunoglobulin (antibody) and olfactory receptor gene families, where gene duplication creates new members while others become pseudogenes",
-        "rRNA genes (maintained by concerted evolution)",
         "Histone genes (maintained by concerted evolution)",
-        "tRNA genes (highly conserved across all organisms)"
+        "Immunoglobulin (antibody) and olfactory receptor gene families, where gene duplication creates new members while others become pseudogenes",
+        "tRNA genes (highly conserved across all organisms)",
+        "rRNA genes (maintained by concerted evolution)"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "The birth-and-death model (Nei & Rooney, 2005) applies to gene families where: (1) New genes are 'born' by duplication, (2) Some duplicates are maintained by selection (gaining new or modified functions), and (3) Others 'die' by accumulating mutations to become pseudogenes. This contrasts with concerted evolution (rRNA, histone genes) where family members are homogenized. Classic examples: (1) Immunoglobulin genes\u2014V region gene segments have duplicated extensively, with many becoming pseudogenes. (2) Olfactory receptor (OR) genes\u2014the largest mammalian gene family (~800 in humans, ~50% are pseudogenes; in mice, ~1,000 with only ~20% pseudogenes). (3) MHC genes\u2014diverse through birth-and-death with balancing selection maintaining variation.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -969,9 +969,9 @@
       "type": "MCQ",
       "question": "The human genome contains approximately 13,000 pseudogenes. What proportion of these are processed pseudogenes (retropseudogenes)?",
       "options": [
-        "Less than 5%",
-        "Approximately 60-70% are processed pseudogenes",
         "100% are processed pseudogenes",
+        "Approximately 60-70% are processed pseudogenes",
+        "Less than 5%",
         "Pseudogenes are not found in the human genome"
       ],
       "correctAnswer": "B",
@@ -990,11 +990,11 @@
       "question": "Genome-wide association studies have identified thousands of disease-associated loci, but most associated variants have small effect sizes (odds ratios 1.05-1.5). This observation is consistent with which genetic architecture model?",
       "options": [
         "Mendelian inheritance by single genes with large effects",
+        "Environmental factors play no role in disease",
         "The polygenic/omnigenic model, where many variants of small effect across the genome collectively influence complex traits",
-        "All diseases are caused by a single gene",
-        "Environmental factors play no role in disease"
+        "All diseases are caused by a single gene"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "GWAS findings are consistent with the polygenic (infinitesimal) and omnigenic models of complex trait architecture: (1) Polygenic model\u2014thousands of variants each contribute small effects that additively determine disease risk and quantitative traits. (2) Omnigenic model (Boyle et al., 2017)\u2014nearly all genes expressed in relevant tissues contribute to complex traits because gene regulatory networks are so interconnected that perturbation of any expressed gene indirectly affects 'core' disease genes. This explains the 'missing heritability' problem\u2014GWAS-identified variants typically explain only 5-30% of trait heritability because individual effect sizes are too small to reach genome-wide significance. The remaining heritability is distributed across thousands of sub-threshold variants.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1011,8 +1011,8 @@
       "options": [
         "In vivo cross-linking of proteins to DNA using formaldehyde to preserve protein-DNA interactions",
         "Protein extraction and purification",
-        "PCR amplification of the entire genome",
-        "Restriction enzyme digestion of the genome"
+        "Restriction enzyme digestion of the genome",
+        "PCR amplification of the entire genome"
       ],
       "correctAnswer": "A",
       "explanation": "Formaldehyde cross-linking is the critical first step because it: (1) Creates covalent bonds between proteins and nearby DNA (and protein-protein cross-links), preserving in vivo interactions that would otherwise be disrupted during cell lysis and subsequent biochemical manipulation. (2) Is reversible by heating (65\u00b0C overnight), allowing recovery of purified DNA after immunoprecipitation. (3) Cross-links within a range of ~2 Angstroms, capturing only proteins in direct or very close contact with DNA. Without cross-linking, most transcription factor-DNA interactions (which are dynamic and often low-affinity) would be lost during chromatin isolation and immunoprecipitation steps. The cross-linking time must be carefully optimized\u2014too little results in poor capture, too much causes over-cross-linking and chromatin that is difficult to fragment.",
@@ -1029,12 +1029,12 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher discovers a human gene that appears to lack orthologs in any other sequenced genome. To determine whether this is truly a de novo gene (born from non-coding DNA), which evidence would be most convincing?",
       "options": [
-        "Finding the gene is expressed in human tissues",
-        "Demonstrating that the syntenic region in closely related primates contains non-coding sequence with no open reading frame, and that the ORF arose through species-specific mutations that created a start codon and reading frame",
+        "Performing a BLAST search against one other genome",
         "Showing the gene encodes a protein",
-        "Performing a BLAST search against one other genome"
+        "Demonstrating that the syntenic region in closely related primates contains non-coding sequence with no open reading frame, and that the ORF arose through species-specific mutations that created a start codon and reading frame",
+        "Finding the gene is expressed in human tissues"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "C",
       "explanation": "Convincing evidence for de novo gene birth requires demonstrating that: (1) The syntenic region in outgroup species (closely related primates for human genes) is non-coding\u2014no ORF, no protein-coding potential. (2) Species-specific mutations (point mutations creating start codons, eliminating stop codons, creating splice sites) converted the non-coding sequence into a protein-coding gene. (3) The gene is expressed (RNA-seq evidence) and translated (ribosome profiling/mass spectrometry). (4) The protein has a function (experimental validation). (5) Population genetic signatures show positive selection acting on the new gene. Multi-species genome alignments, synteny analysis, and phylostratigraphic approaches are essential tools. De novo gene birth is now recognized as a significant source of genetic novelty.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1049,12 +1049,12 @@
       "type": "MCQ",
       "question": "Microsatellites (simple sequence repeats, SSRs) are tandem repeats of 1-6 bp motifs. Why are microsatellites highly polymorphic and useful as genetic markers?",
       "options": [
-        "They have higher point mutation rates than other DNA",
-        "They are located only within protein-coding genes",
+        "They are unstable and frequently deleted from the genome",
         "They undergo frequent length changes due to DNA polymerase slippage during replication, creating alleles that differ in repeat number",
-        "They are unstable and frequently deleted from the genome"
+        "They have higher point mutation rates than other DNA",
+        "They are located only within protein-coding genes"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "B",
       "explanation": "Microsatellites are among the most polymorphic genetic markers due to a high rate of length mutation caused by replication slippage (strand slippage model): (1) During DNA replication, the nascent strand temporarily dissociates from the template. (2) When it re-anneals, it may mispair by one or more repeat units (slippage). (3) If the nascent strand loops out, an extra repeat is added; if the template loops out, a repeat is deleted. Mutation rates are 10\u207b\u00b3-10\u207b\u2074 per locus per generation\u20141,000-10,000x higher than point mutation rates. This generates high allelic diversity (often 5-20+ alleles per locus), making microsatellites extremely informative for: parentage analysis, forensic identification (STR profiling), population genetics, and genetic mapping.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -1089,8 +1089,8 @@
       "type": "MCQ",
       "question": "The 'onion test' (proposed by T. Ryan Gregory) challenges claims about functional roles for non-coding DNA. What does the onion test argue?",
       "options": [
-        "The onion genome proves that all eukaryotic DNA is functional",
         "Onions are the most genetically complex organisms",
+        "The onion genome proves that all eukaryotic DNA is functional",
         "If a claim about the function of non-coding DNA is correct, it must explain why onions need 5x more non-coding DNA than humans, given that onions are not 5x more complex",
         "The onion test validates the ENCODE project's conclusions"
       ],
@@ -1109,10 +1109,10 @@
       "type": "MCQ",
       "question": "Gene regulatory networks (GRNs) describe the interactions between transcription factors and their target genes. How have changes in GRNs contributed to morphological evolution?",
       "options": [
-        "GRN changes have no role in evolution",
+        "GRNs are identical in all organisms",
         "Changes in the regulatory connections (rewiring) of GRNs, particularly in developmental gene networks, can alter body plans and morphologies without changing protein-coding sequences",
-        "Only protein-coding changes drive morphological evolution",
-        "GRNs are identical in all organisms"
+        "GRN changes have no role in evolution",
+        "Only protein-coding changes drive morphological evolution"
       ],
       "correctAnswer": "B",
       "explanation": "GRN evolution is a major driver of morphological change. Changes in regulatory connections (network rewiring) can alter: (1) When genes are expressed during development (heterochrony\u2014changes in timing). (2) Where genes are expressed (heterotopy\u2014changes in spatial expression). (3) How much gene product is made (changes in expression level). (4) Which downstream targets a transcription factor activates. Famous examples: evolution of limb number differences through changes in Hox gene regulation, loss of pelvic spines in stickleback fish through regulatory changes in Pitx1, and wing pattern diversity in butterflies through rewiring of the optix gene regulatory circuit. GRN changes can produce dramatic morphological shifts while preserving the protein-coding genes themselves.",
@@ -1129,12 +1129,12 @@
       "type": "MCQ",
       "question": "The GC content of bacterial genomes varies widely, from ~25% to ~75%. What factor is most strongly correlated with bacterial GC content?",
       "options": [
-        "Organism size",
-        "Phylogenetic position\u2014closely related species tend to have similar GC content, suggesting a strong phylogenetic signal and possible role of mutational bias",
         "Temperature of the organism's environment",
-        "Number of genes in the genome"
+        "Organism size",
+        "Number of genes in the genome",
+        "Phylogenetic position\u2014closely related species tend to have similar GC content, suggesting a strong phylogenetic signal and possible role of mutational bias"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "Bacterial GC content varies from ~25% (Mycoplasma) to ~75% (Streptomyces) and is most strongly correlated with phylogenetic position\u2014closely related species tend to have similar GC content. This suggests that mutational bias (directional mutation pressure) is the primary determinant, with different lineages having different balances between GC\u2192AT and AT\u2192GC mutation rates. While some studies found correlations with environmental temperature (thermophiles tend toward higher GC), this is confounded by phylogeny. Selection on codon usage, DNA structural properties, and repair pathway efficiency may also contribute. GC content affects amino acid composition, codon usage, and genomic features, and is an important parameter in comparative genomics.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -1149,10 +1149,10 @@
       "type": "MCQ",
       "question": "The human mitochondrial genome (16,569 bp) encodes 37 genes. How does the mitochondrial genome differ from the nuclear genome in terms of inheritance?",
       "options": [
+        "Mitochondrial DNA is not inherited at all\u2014it is synthesized de novo in each generation",
         "Mitochondrial DNA is inherited equally from both parents, like nuclear DNA",
-        "Mitochondrial DNA is inherited only from the father",
         "Mitochondrial DNA is inherited exclusively (or nearly exclusively) from the mother through the egg cytoplasm (maternal inheritance)",
-        "Mitochondrial DNA is not inherited at all\u2014it is synthesized de novo in each generation"
+        "Mitochondrial DNA is inherited only from the father"
       ],
       "correctAnswer": "C",
       "explanation": "Mitochondrial DNA (mtDNA) shows strict or near-strict maternal inheritance because: (1) The egg cell contributes ~100,000 mitochondria (and their mtDNA) to the zygote, while sperm mitochondria are typically eliminated after fertilization through ubiquitination and autophagy. (2) Even if rare paternal mtDNA molecules enter the zygote, they are vastly outnumbered by maternal mtDNA. Maternal inheritance means: (1) mtDNA does not undergo recombination (or extremely rarely). (2) mtDNA can trace maternal lineages (mitochondrial Eve analysis). (3) mtDNA accumulates mutations at ~10x the nuclear rate (no recombination for repair, limited repair mechanisms, proximity to ROS from oxidative phosphorylation). (4) mtDNA diseases show maternal transmission patterns.",
@@ -1189,12 +1189,12 @@
       "type": "MCQ",
       "question": "Genomic imprinting is an epigenetic phenomenon where certain genes are expressed from only one parental allele. From a comparative genomics perspective, imprinted genes are found predominantly in which group?",
       "options": [
-        "All prokaryotes",
         "Only in insects",
-        "All multicellular organisms equally",
-        "Eutherian (placental) mammals, with a few examples in marsupials and flowering plants"
+        "All prokaryotes",
+        "Eutherian (placental) mammals, with a few examples in marsupials and flowering plants",
+        "All multicellular organisms equally"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "C",
       "explanation": "Genomic imprinting is predominantly a mammalian phenomenon, with ~150-200 imprinted genes identified in humans and mice. Imprinting is most extensively characterized in eutherian (placental) mammals, with some imprinted genes also found in marsupials (but fewer). A few examples exist in flowering plants (endosperm imprinting). The parental conflict hypothesis (Haig) explains imprinting's evolution: in species with internal development and maternal resource allocation, paternal alleles are selected to promote resource extraction from the mother (growth-promoting), while maternal alleles counter this to distribute resources among all offspring. This conflict drives monoallelic expression of genes involved in growth and resource allocation, explaining why imprinting is associated with placental development.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1209,9 +1209,9 @@
       "type": "MCQ",
       "question": "Tandem gene duplication can occur through unequal crossing over during meiosis. After such an event, what is the structure of the resulting chromosomes?",
       "options": [
-        "Both chromosomes lose the duplicated region",
-        "The duplicated genes move to different chromosomes",
         "Both chromosomes gain extra copies",
+        "The duplicated genes move to different chromosomes",
+        "Both chromosomes lose the duplicated region",
         "One chromosome gains an extra copy of the gene (duplication), while the homologous chromosome loses a copy (deletion)"
       ],
       "correctAnswer": "D",
@@ -1229,12 +1229,12 @@
       "type": "MCQ",
       "question": "Comparative genomics of the HOX gene cluster reveals that the ancestral bilaterian had a single HOX cluster. How many HOX clusters do mammals have, and what mechanism created them?",
       "options": [
-        "One cluster, maintained from the ancestral bilaterian",
+        "Four clusters (HOXA, HOXB, HOXC, HOXD), created by the two rounds of whole-genome duplication (2R) early in vertebrate evolution",
         "Mammals lack HOX genes entirely",
-        "Eight clusters, from four rounds of whole-genome duplication",
-        "Four clusters (HOXA, HOXB, HOXC, HOXD), created by the two rounds of whole-genome duplication (2R) early in vertebrate evolution"
+        "One cluster, maintained from the ancestral bilaterian",
+        "Eight clusters, from four rounds of whole-genome duplication"
       ],
-      "correctAnswer": "D",
+      "correctAnswer": "A",
       "explanation": "Mammals have four HOX gene clusters (HOXA on chromosome 7, HOXB on chromosome 17, HOXC on chromosome 12, HOXD on chromosome 2 in humans), each containing 9-11 genes. The four clusters arose from two rounds of whole-genome duplication (2R hypothesis) early in vertebrate evolution. This is supported by: (1) four paralogous groups of HOX genes with conserved relative positions (e.g., HOX1 paralogs: HOXA1, HOXB1, HOXD1). (2) Invertebrate chordates like amphioxus have a single HOX cluster with 15 genes. (3) Teleost fish underwent an additional WGD (3R) and have 7 HOX clusters (having lost one). After duplication, individual genes were lost differentially from each cluster, explaining why no mammalian cluster retains all 13 paralog groups.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1249,12 +1249,12 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher sequences 100 complete genomes of E. coli isolated from different environments (gut, soil, water, clinical). They find that the core genome contains 2,000 genes while the pan-genome exceeds 16,000 genes. What analysis should they perform to understand the functional significance of the accessory genome?",
       "options": [
-        "Delete all accessory genes from one strain and see if it survives",
         "Gene ontology enrichment analysis of accessory genes, combined with correlation of gene content with ecological niche (habitat, pathogenicity) to identify genes associated with specific adaptations",
         "Ignore the accessory genome as it is likely non-functional",
+        "Delete all accessory genes from one strain and see if it survives",
         "Only analyze the core genome since it is shared by all strains"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Comprehensive pan-genome analysis should include: (1) GO enrichment analysis of accessory genes\u2014identifying overrepresented functional categories (e.g., transport, secondary metabolism, virulence) in the flexible genome. (2) Niche association analysis\u2014correlating the presence/absence of specific genes with ecological metadata (habitat type, host species, antibiotic resistance profile) using statistical methods like Fisher's exact test or machine learning. (3) Phylogenomic analysis\u2014determining whether accessory genes were acquired by HGT or differential gene loss. (4) Genomic island detection\u2014identifying clusters of accessory genes that may have been transferred as units. (5) Selection analysis (dN/dS) on accessory vs. core genes. This integrated approach reveals how genomic flexibility enables E. coli to colonize diverse ecological niches.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1269,12 +1269,12 @@
       "type": "MCQ",
       "question": "Chromatin remodeling complexes alter nucleosome positioning and histone-DNA interactions. Which complex uses ATP hydrolysis to slide, eject, or restructure nucleosomes?",
       "options": [
-        "Proteasome",
+        "Spliceosome",
         "Ribosome",
-        "SWI/SNF chromatin remodeling complex",
-        "Spliceosome"
+        "Proteasome",
+        "SWI/SNF chromatin remodeling complex"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "SWI/SNF (SWItch/Sucrose Non-Fermentable) is a multi-subunit ATP-dependent chromatin remodeling complex that uses the energy from ATP hydrolysis to: (1) slide nucleosomes along DNA (repositioning), exposing or occluding regulatory sequences; (2) eject nucleosome octamers or individual histones from DNA; (3) exchange histone variants (e.g., replacing H2A with H2A.Z). Other ATP-dependent remodeling complexes include ISWI, CHD/NuRD, and INO80, each with distinct activities and roles. SWI/SNF is particularly important for gene activation, as it makes promoter and enhancer regions accessible to transcription factors. Mutations in SWI/SNF subunits (SMARCB1, SMARCA4, ARID1A) are found in ~20% of human cancers, making it one of the most frequently mutated complexes in cancer.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -1289,12 +1289,12 @@
       "type": "MCQ",
       "question": "The Three Rs of comparative genomics (resolution, representation, and redundancy) help guide genome sequencing priorities. Which principle argues that sequencing phylogenetically diverse organisms provides more evolutionary information than sequencing closely related species?",
       "options": [
-        "Resolution",
         "Representation (phylogenetic coverage)",
-        "Redundancy",
-        "Reproducibility"
+        "Resolution",
+        "Reproducibility",
+        "Redundancy"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "The representation principle argues that sequencing organisms across a broad phylogenetic range maximizes evolutionary information. By sampling diverse lineages (a coelacanth, a platypus, a sea urchin, a lancelet), we can: (1) identify deeply conserved elements (functional sequences preserved across hundreds of millions of years), (2) understand the evolution of major biological innovations (limbs, eyes, immune systems), and (3) infer ancestral genomic states at key nodes in the tree of life. This contrasts with redundancy (sequencing multiple closely related species to improve resolution of recent evolutionary events) and resolution (sequencing at sufficient depth for accurate assembly). The Genome 10K project and Earth BioGenome Project aim to represent all major lineages.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -1310,11 +1310,11 @@
       "question": "What is the estimated effective population size (Ne) of humans based on genomic diversity analyses, and how does this compare to census population size?",
       "options": [
         "Ne \u2248 8 billion, equal to census size",
-        "Ne \u2248 10,000-15,000, much smaller than census size, reflecting historical population bottlenecks",
         "Ne \u2248 1 billion, slightly less than census size",
-        "Ne cannot be estimated from genomic data"
+        "Ne cannot be estimated from genomic data",
+        "Ne \u2248 10,000-15,000, much smaller than census size, reflecting historical population bottlenecks"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "D",
       "explanation": "The effective population size of humans estimated from genomic diversity (nucleotide diversity, heterozygosity, coalescence times) is approximately 10,000-15,000\u2014strikingly small compared to the current census size of ~8 billion. This low Ne reflects: (1) historical population bottlenecks during out-of-Africa migration (~50,000-70,000 years ago), (2) founder effects during colonization of new continents, (3) generally small ancestral population sizes during most of human evolution, and (4) the harmonic mean effect (Ne is heavily influenced by periods of small population size). Ne determines the level of genetic diversity and the effectiveness of natural selection in a population. Humans have remarkably low genetic diversity compared to most other primates\u2014chimpanzees have ~2-3x higher nucleotide diversity despite a smaller census population.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1330,9 +1330,9 @@
       "question": "Genome editing has raised the possibility of 'gene drives'\u2014genetic engineering systems that can spread modified alleles through wild populations. How does a CRISPR-based gene drive work?",
       "options": [
         "The gene drive encodes Cas9 and a guide RNA that cuts the wild-type allele on the homologous chromosome, forcing the cell to repair using the gene drive allele as template, converting heterozygotes to homozygotes",
+        "Gene drives work by infecting organisms with viruses carrying the modified gene",
         "The modified gene simply outcompetes wild-type alleles through natural selection",
-        "Gene drives use radiation to mutate all copies of a gene simultaneously",
-        "Gene drives work by infecting organisms with viruses carrying the modified gene"
+        "Gene drives use radiation to mutate all copies of a gene simultaneously"
       ],
       "correctAnswer": "A",
       "explanation": "CRISPR-based gene drives exploit homology-directed repair (HDR) to spread engineered alleles through populations at rates exceeding Mendelian inheritance: (1) The gene drive cassette contains Cas9 and a guide RNA targeting the corresponding wild-type allele. (2) In heterozygous individuals (one drive allele, one wild-type), Cas9 cuts the wild-type allele. (3) The cell repairs the double-strand break using the drive-containing chromosome as a template (HDR), copying the entire drive cassette to the repaired chromosome. (4) The organism becomes homozygous for the drive allele. (5) All offspring inherit the drive. This can spread the engineered allele to >99% of a population within a few generations. Applications include suppressing malaria mosquitoes, but ecological risks of releasing gene drives are a major concern.",
@@ -1349,9 +1349,9 @@
       "type": "MCQ",
       "question": "Paleogenomics\u2014the sequencing of ancient DNA\u2014has revolutionized our understanding of human evolution. What is the primary technical challenge in ancient DNA (aDNA) work?",
       "options": [
-        "Ancient DNA is too stable and does not degrade",
-        "DNA degradation produces short, damaged fragments (typically <100 bp), often contaminated with modern DNA and microbial DNA, requiring specialized extraction and library preparation",
         "Ancient DNA is identical to modern DNA and provides no new information",
+        "DNA degradation produces short, damaged fragments (typically <100 bp), often contaminated with modern DNA and microbial DNA, requiring specialized extraction and library preparation",
+        "Ancient DNA is too stable and does not degrade",
         "Ancient organisms had different nucleotide bases than modern organisms"
       ],
       "correctAnswer": "B",
@@ -1369,12 +1369,12 @@
       "type": "MCQ",
       "question": "Genome annotation involves identifying all functional elements in a genome sequence. What is the difference between structural annotation and functional annotation?",
       "options": [
+        "Structural annotation is only used for bacterial genomes",
         "They are identical processes",
         "Structural annotation determines protein structure; functional annotation determines DNA structure",
-        "Structural annotation identifies gene locations (exons, introns, regulatory elements); functional annotation assigns biological roles to identified genes",
-        "Structural annotation is only used for bacterial genomes"
+        "Structural annotation identifies gene locations (exons, introns, regulatory elements); functional annotation assigns biological roles to identified genes"
       ],
-      "correctAnswer": "C",
+      "correctAnswer": "D",
       "explanation": "Genome annotation occurs in two stages: (1) Structural annotation identifies the genomic positions of genes and other functional elements\u2014locating exons, introns, UTRs, splice sites, promoters, and non-coding RNA genes. Methods include: ab initio gene prediction (algorithms like Augustus, GENSCAN), homology-based prediction (comparing to known genes), and experimental evidence (RNA-seq, EST alignments). (2) Functional annotation assigns biological roles to identified genes\u2014predicting protein function based on: homology to characterized genes (BLAST), protein domain analysis (Pfam, InterPro), gene ontology assignment, pathway mapping (KEGG), and experimental validation. Functional annotation is more challenging, as ~20-40% of genes in most genomes have unknown function.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_OPEN",
@@ -1390,9 +1390,9 @@
       "question": "The selfish DNA theory proposes that transposable elements persist because they replicate faster than they can be eliminated by selection. This theory views TEs primarily as:",
       "options": [
         "Genomic parasites that spread within genomes due to their ability to self-replicate, with most insertions being neutral or slightly deleterious",
-        "Essential structural components of chromosomes",
+        "Immune defense elements against viral infection",
         "The primary source of all genetic innovation",
-        "Immune defense elements against viral infection"
+        "Essential structural components of chromosomes"
       ],
       "correctAnswer": "A",
       "explanation": "The selfish DNA theory (Orgel & Crick, 1980; Doolittle & Sapienza, 1980) proposes that TEs persist simply because they replicate within genomes faster than host selection can eliminate them\u2014they are genomic parasites. Key arguments: (1) TE copy-and-paste mechanisms increase their copy number with each transposition event. (2) Most TE insertions are in non-functional DNA (by chance) and are effectively neutral. (3) The few insertions that are deleterious are removed by purifying selection, but this doesn't eliminate TEs that have already replicated. (4) The equilibrium between TE replication and host defense (piRNA, DNA methylation) determines TE content. However, this view has been moderated by evidence that some TEs have been exapted for host functions.",
@@ -1409,12 +1409,12 @@
       "type": "DATA_INTERPRETATION",
       "question": "A researcher compares the genomes of two bacterial species: Species A has 5.0 Mb genome with 4,500 genes, while Species B has 1.5 Mb genome with 1,300 genes. Species B is an obligate intracellular pathogen. Predict which functional gene categories are most likely to be reduced or absent in Species B.",
       "options": [
-        "Genes for amino acid biosynthesis, de novo nucleotide synthesis, and energy metabolism, since these can be obtained from the host cell",
         "Genes for DNA replication and translation",
+        "Genes for amino acid biosynthesis, de novo nucleotide synthesis, and energy metabolism, since these can be obtained from the host cell",
         "Genes for protein folding",
         "No gene categories should differ between the two species"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "B",
       "explanation": "Obligate intracellular pathogens undergo predictable patterns of genome reduction: genes for biosynthesis of nutrients available from the host are the first to be lost. Species B would most likely lack or have reduced: (1) Amino acid biosynthesis pathways\u2014all or most amino acids can be imported from the host cytoplasm. (2) De novo nucleotide synthesis\u2014nucleotides can be obtained from host pools. (3) Fatty acid synthesis\u2014membrane lipids can be derived from the host. (4) Energy metabolism may be reduced\u2014some intracellular parasites (e.g., Chlamydia, Rickettsia) use host ATP via ATP/ADP translocases. Genes for core information processing (replication, transcription, translation), host-cell interaction, and membrane transport are typically retained. This pattern is consistently observed across independent lineages of intracellular pathogens.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -1429,12 +1429,12 @@
       "type": "MCQ",
       "question": "Phylogenomic analysis uses genome-scale data (hundreds to thousands of genes) for phylogenetic reconstruction. What advantage does phylogenomics provide over single-gene phylogenies?",
       "options": [
-        "Phylogenomics always produces perfectly resolved trees",
         "Genome-scale data averaging across many genes reduces the stochastic error inherent in single-gene trees, and can detect conflicting signals from horizontal gene transfer or incomplete lineage sorting",
-        "Single-gene phylogenies are always more accurate",
-        "Phylogenomics only works for bacterial genomes"
+        "Phylogenomics always produces perfectly resolved trees",
+        "Phylogenomics only works for bacterial genomes",
+        "Single-gene phylogenies are always more accurate"
       ],
-      "correctAnswer": "B",
+      "correctAnswer": "A",
       "explanation": "Phylogenomics provides several advantages: (1) Statistical power\u2014concatenating or summarizing hundreds of gene alignments reduces stochastic error (noise) that affects individual gene trees, improving phylogenetic resolution. (2) Conflict detection\u2014comparing individual gene trees reveals conflicts caused by incomplete lineage sorting (ILS), horizontal gene transfer, gene duplication/loss, or introgression. (3) Methods like species-tree estimation (ASTRAL, SVDquartets) explicitly model gene tree-species tree discordance. (4) Genome-wide data can resolve rapid radiations and deep divergences that single genes cannot. However, phylogenomics also faces challenges: systematic errors can be amplified with more data, and model misspecification affects all genes. Taxon sampling, data quality, and appropriate models remain critical.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1449,12 +1449,12 @@
       "type": "EXPERIMENTAL_DESIGN",
       "question": "A researcher hypothesizes that a specific long non-coding RNA (lncRNA) is essential for maintaining stem cell pluripotency. What experimental approach would most directly test this hypothesis?",
       "options": [
-        "Use CRISPRi (dCas9-KRAB) to knock down the lncRNA and assess whether stem cells lose pluripotency markers (Oct4, Sox2, Nanog) and spontaneously differentiate",
         "Overexpress the lncRNA and measure stem cell growth rate",
         "Sequence the lncRNA to determine its complete sequence",
+        "Use CRISPRi (dCas9-KRAB) to knock down the lncRNA and assess whether stem cells lose pluripotency markers (Oct4, Sox2, Nanog) and spontaneously differentiate",
         "Compare lncRNA expression between different tissues"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": "CRISPRi (CRISPR interference using catalytically dead dCas9 fused to the KRAB repressor domain) is ideal for lncRNA knockdown because: (1) It represses transcription at the lncRNA's genomic locus, avoiding artifacts from post-transcriptional knockdown (RNAi may not effectively target nuclear-localized lncRNAs). (2) Unlike CRISPR knockout, CRISPRi doesn't delete DNA sequences that might have independent regulatory functions (the genomic locus itself might serve as an enhancer). (3) Knockdown is reversible. The researcher should then assess: pluripotency markers (Oct4, Sox2, Nanog) by qPCR/immunofluorescence, differentiation markers, colony morphology, and functional pluripotency (teratoma formation, chimera contribution). Rescue experiments (restoring the lncRNA from an exogenous promoter) would confirm specificity.",
       "isOlympiad": true,
       "olympiadLevel": "IBO",
@@ -1469,12 +1469,12 @@
       "type": "MCQ",
       "question": "Biased gene conversion (BGC) is a molecular process during meiotic recombination that favors the repair of heteroduplex DNA mismatches toward GC base pairs. What evolutionary consequence does BGC have on genome composition?",
       "options": [
-        "BGC drives local GC enrichment in regions of high recombination, mimicking the signature of positive selection",
-        "BGC decreases GC content over time",
         "BGC has no effect on genome evolution",
-        "BGC only affects mitochondrial genomes"
+        "BGC only affects mitochondrial genomes",
+        "BGC drives local GC enrichment in regions of high recombination, mimicking the signature of positive selection",
+        "BGC decreases GC content over time"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "C",
       "explanation": "Biased gene conversion (BGC) occurs during meiotic recombination when heteroduplex DNA (formed between maternal and paternal chromosomes at recombination sites) contains mismatches. The mismatch repair system preferentially converts A:T base pairs to G:C pairs, introducing a transmission bias favoring GC alleles. Evolutionary consequences: (1) Regions of high recombination accumulate higher GC content over time (contributing to isochore structure in mammalian genomes). (2) BGC can drive fixation of GC alleles even if they are slightly deleterious, mimicking positive selection signatures (elevated dN/dS). (3) BGC may confound molecular evolution analyses that assume mutations are selectively neutral. BGC is now recognized as a significant non-adaptive evolutionary force shaping genome composition, particularly in regions of high recombination.",
       "isOlympiad": true,
       "olympiadLevel": "USABO_SEMI",
@@ -1584,6 +1584,226 @@
       "conceptualDepth": "CONCEPTUAL",
       "difficulty": "EXPERT",
       "topic": "Non-coding RNA Evolution"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A Ks (synonymous substitution rate) analysis of 5,000 paralogous gene pairs in a plant genome produces a histogram with: a large peak at Ks = 0.01-0.05, a prominent peak at Ks = 0.3-0.4, and a smaller peak at Ks = 0.8-1.0. What evolutionary history does this distribution indicate?",
+      "options": [
+        "A single WGD followed by gene conversion that homogenized some pairs but not others",
+        "Two waves of tandem gene duplication caused by transposable element activity bursts at specific times",
+        "The peaks are artifacts of molecular clock inaccuracy in plant genomes with no biological significance",
+        "Two ancient whole-genome duplication events \u2014 the peak at Ks 0.3-0.4 represents a more recent WGD and the peak at 0.8-1.0 represents an older WGD, as WGDs produce many simultaneously duplicated pairs that accumulate synonymous substitutions at similar rates creating characteristic peaks"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Ks distribution analysis is the primary method for detecting ancient WGDs in plant genomes. After WGD, all genes are simultaneously duplicated. As pairs diverge, their Ks values cluster around a single value corresponding to 2\u03bct. Multiple WGDs at different times create multiple peaks. Using typical plant synonymous rate (~6.5 \u00d7 10^-9/site/year): Ks 0.35 \u2192 ~27 MYA; Ks 0.9 \u2192 ~69 MYA. The low-Ks peak (0.01-0.05) represents continuous small-scale tandem duplications. Real examples: Arabidopsis shows three WGD peaks (alpha ~47 MYA, beta ~60 MYA, gamma ~130 MYA). Most angiosperms have undergone at least one WGD. Caveats include Ks saturation at high values, rate variation among genes, and gene conversion creating artificially low Ks.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "ANALYSIS",
+      "difficulty": "EXPERT",
+      "topic": "Ks Distribution Analysis for Paleopolyploidy Detection"
+    },
+    {
+      "type": "MCQ",
+      "question": "The ENCODE project reported that approximately 80% of the human genome has biochemical function. Why was this finding controversial among evolutionary biologists?",
+      "options": [
+        "Evolutionary biologists accepted the 80% figure unanimously with no controversy",
+        "The controversy was about ENCODE's sequencing technology being inaccurate",
+        "Evolutionary biologists argued that biochemical activity (TF binding, histone modification, transcription) does not necessarily imply biological function \u2014 only ~5-10% of the genome shows evolutionary constraint across mammals, and the genetic load argument makes 80% functionality incompatible with observed mutation rates and population sizes",
+        "ENCODE actually found only 2% of the genome is functional, and biologists objected because this was already known"
+      ],
+      "correctAnswer": "C",
+      "explanation": "ENCODE (2012) claimed ~80.4% of the genome participates in at least one biochemical event (transcription, TF binding, histone modification, chromatin accessibility). Critics (Graur et al. 2013, Doolittle 2013) argued ENCODE conflated biochemical activity with biological function. Key counterarguments: (1) Low-affinity TF binding occurs genome-wide by mass action without functional significance. (2) Pervasive transcription may be noise. (3) Only ~5-10% shows evolutionary constraint (purifying selection). (4) Genetic load: if 80% is functional, ~80 of 100 de novo mutations/generation would be deleterious, incompatible with viable populations. The dispute is largely semantic \u2014 'selected effect' definition gives ~5-15%, 'causal role' definition gives ~80%. Most biologists agree the truth is between 5% and 80%.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EVALUATION",
+      "difficulty": "HARD",
+      "topic": "ENCODE Controversy and Genome Functionality Debate"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to definitively test whether a conserved non-coding sequence functions as a limb-specific enhancer. Which experimental approach provides the most rigorous evidence?",
+      "options": [
+        "Combine multiple approaches: (1) transgenic reporter assay (clone sequence upstream of minimal promoter-lacZ and test in mouse embryos); (2) CRISPR-Cas9 deletion from the endogenous locus to assess limb phenotypes; (3) ChIP-seq for H3K27ac to confirm active enhancer marks in limb tissue; and (4) chromosome conformation capture to verify physical contact with the target gene promoter",
+        "Transfect the sequence into fibroblasts with a luciferase reporter and test for enhanced activity",
+        "Perform bioinformatic analysis showing conservation across vertebrates and presence of predicted TF binding motifs",
+        "Measure mRNA levels of the nearby gene in limb tissue and assume the element is an enhancer if the gene is expressed"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Definitive enhancer identification requires multiple complementary lines of evidence. Transgenic reporter assay is the gold standard in vivo test \u2014 if the sequence drives reporter expression in limb buds, it has enhancer activity (used in the VISTA Enhancer Browser project with >3,000 tested candidates). CRISPR deletion tests necessity in the endogenous context \u2014 e.g., ZRS enhancer deletion causes limb truncation. ChIP-seq for H3K27ac confirms active enhancer chromatin state (H3K4me1+/H3K27ac+ = active enhancer). Chromosome conformation capture (4C-seq/Capture-C) verifies physical enhancer-promoter contact, essential since enhancers can act over 1 Mb distances. Bioinformatics alone suggests but doesn't prove function. Wrong cell type (fibroblasts) misses tissue-specific cofactors.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "SYNTHESIS",
+      "difficulty": "EXPERT",
+      "topic": "Functional Enhancer Validation Methods"
+    },
+    {
+      "type": "MCQ",
+      "question": "Gene conversion in the MHC (major histocompatibility complex) plays a diversifying role opposite to its homogenizing function in rRNA genes. How does gene conversion contribute to MHC polymorphism?",
+      "options": [
+        "Gene conversion at MHC loci converts functional genes into pseudogenes, reducing the effective gene pool",
+        "MHC polymorphism arises exclusively from point mutations with no contribution from gene conversion",
+        "Gene conversion only homogenizes MHC sequences, reducing diversity to a single allele per locus",
+        "Short sequence segments (50-200 bp) are copied between different MHC alleles during recombination, creating mosaic alleles with shuffled polymorphic segments \u2014 combined with point mutation and balancing selection, this generates extraordinary allelic diversity with thousands of alleles at HLA loci"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Gene conversion serves a diversifying role in MHC evolution. The MHC/HLA system is the most polymorphic genetic system known (HLA-B alone has >6,000 alleles), maintained by balancing selection for pathogen resistance. Gene conversion transfers short segments between different HLA alleles or between HLA genes during meiotic recombination, creating mosaic alleles with recombined polymorphic segments. Evidence: many HLA alleles appear as mosaics of segments from other alleles with breakpoints at recombination hotspots. Also seen in chicken immunoglobulin diversification (gene conversion from pseudo-V segments in the bursa) and Trypanosoma VSG switching for antigenic variation. This contrasts with the homogenizing role in rRNA genes and histones.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "APPLICATION",
+      "difficulty": "EXPERT",
+      "topic": "Gene Conversion Diversifying Role in MHC Evolution"
+    },
+    {
+      "type": "MCQ",
+      "question": "Genomic imprinting results in monoallelic, parent-of-origin-specific gene expression. What molecular mechanism establishes imprinting marks?",
+      "options": [
+        "Imprinting marks are established after birth in response to dietary signals and change throughout life",
+        "Imprinting is identical to X-inactivation and uses the same XIST-based mechanism on autosomes",
+        "Imprinting is determined by DNA sequence differences between maternal and paternal alleles, not epigenetic marks",
+        "Differential DNA methylation at imprinting control regions established during gametogenesis by DNMT3A/DNMT3L in a sex-specific manner \u2014 these marks resist the genome-wide demethylation of early embryogenesis, maintained by DNMT1 and protected by ZFP57/KAP1, resulting in lifelong parent-specific expression"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Genomic imprinting uses sex-specific DNA methylation at imprinting control regions (ICRs). Process: (1) Erasure in primordial germ cells (~E11.5 in mice) by TET-mediated active demethylation. (2) Re-establishment: DNMT3A with cofactor DNMT3L methylates specific ICRs during oogenesis (~20 maternal ICRs) or spermatogenesis (~3-4 paternal ICRs). DNMT3L recognizes unmethylated H3K4. (3) Maintenance: imprinting marks survive genome-wide demethylation in preimplantation embryos through DNMT1/UHRF1 activity and protection by ZFP57/KAP1 complex. Imprinted methylation controls gene expression by blocking CTCF binding (H19-IGF2 locus), silencing promoters, or regulating lncRNAs (Airn, Kcnq1ot1). ~150 imprinted genes known, many involved in growth regulation (consistent with parental conflict theory).",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "APPLICATION",
+      "difficulty": "EXPERT",
+      "topic": "Genomic Imprinting Molecular Mechanism"
+    },
+    {
+      "type": "DATA_INTERPRETATION",
+      "question": "A GWAS for height identifies 150 associated SNPs. Only 12 (8%) fall in exons, 85 (57%) are intergenic, and 53 (35%) are intronic. All 150 explain only 20% of estimated heritability. What is the most complete interpretation?",
+      "options": [
+        "The intergenic SNPs are false positives because variants outside genes cannot affect phenotype",
+        "The results prove height is primarily environmental since only 20% heritability is explained by genetics",
+        "All 150 SNPs must be in linkage disequilibrium with nearby protein-coding mutations that are the true causal variants",
+        "Most trait-associated variants affect gene regulation rather than protein structure, with GWAS hits in intergenic and intronic regions likely overlapping enhancers or other cis-regulatory elements \u2014 the missing heritability (80%) may involve rare variants, epistasis, structural variants, and many common variants of very small effect below detection threshold"
+      ],
+      "correctAnswer": "D",
+      "explanation": "GWAS consistently shows >90% of trait-associated variants fall outside protein-coding regions across all complex traits. Many overlap enhancer marks (H3K4me1, H3K27ac), DNase hypersensitive sites, and TF binding sites identified by ENCODE. Non-coding variants can alter TF binding affinity, disrupt chromatin looping, affect lncRNA/miRNA activity, or change splicing. Missing heritability explanations: rare variants (MAF <1%) with larger effects, epistasis, gene-environment interactions, structural variants (CNVs), and the omnigenic model (Boyle et al. 2017) suggesting essentially all genes in relevant cell types contribute. For height, >3,000 loci now identified in GWAS of >700,000 individuals, explaining ~40% heritability. Option C confuses GWAS-explained variance with total heritability.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "EVALUATION",
+      "difficulty": "EXPERT",
+      "topic": "GWAS Interpretation and Regulatory Variant Predominance"
+    },
+    {
+      "type": "MCQ",
+      "question": "The piRNA (Piwi-interacting RNA) pathway is a major defense mechanism against transposable elements in animal germlines. How does this pathway silence transposons?",
+      "options": [
+        "piRNAs directly edit transposon DNA sequences through base modification, permanently inactivating mobile elements by mutating their coding regions",
+        "piRNAs (24-31 nt) associate with PIWI-clade Argonaute proteins to silence transposons both post-transcriptionally (by cleaving TE mRNAs via the ping-pong amplification cycle) and transcriptionally (by directing DNA methylation and heterochromatin formation at TE loci), ensuring genome integrity across generations",
+        "piRNAs function exclusively in somatic cells and have no role in protecting germline genomes from transposition",
+        "The piRNA pathway is identical to the siRNA pathway and uses Dicer to process transposon-derived dsRNA"
+      ],
+      "correctAnswer": "B",
+      "explanation": "The piRNA pathway is the primary transposon defense in animal germlines. piRNAs are 24-31 nt (longer than miRNAs/siRNAs), generated from piRNA clusters (genomic loci containing TE fragments). They associate with PIWI-clade proteins (MIWI, MILI, MIWI2 in mice; Piwi, Aubergine, AGO3 in Drosophila). Post-transcriptional silencing: the ping-pong cycle amplifies piRNAs \u2014 sense piRNAs (from TE mRNAs) guide cleavage of antisense transcripts and vice versa, creating a self-reinforcing loop. Transcriptional silencing: MIWI2-piRNA complexes direct de novo DNA methylation (via DNMT3L/DNMT3A) and H3K9me3 deposition at TE genomic loci. This epigenetic silencing is heritable. piRNAs are Dicer-independent (unlike miRNAs/siRNAs). Loss of piRNA pathway components leads to transposon derepression, DNA damage, and male sterility in mice.",
+      "isOlympiad": true,
+      "olympiadLevel": "IBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "APPLICATION",
+      "difficulty": "EXPERT",
+      "topic": "piRNA Pathway and Transposon Defense in Germlines"
+    },
+    {
+      "type": "MCQ",
+      "question": "Chromothripsis is a recently discovered phenomenon in cancer genomics. What does it involve?",
+      "options": [
+        "The gradual fragmentation of chromosomes over many cell divisions due to progressive telomere shortening",
+        "A normal process during meiotic recombination where chromosomes exchange segments at hundreds of points simultaneously",
+        "A single catastrophic event where one or a few chromosomes shatter into tens to hundreds of fragments that are then randomly reassembled by error-prone DNA repair mechanisms \u2014 resulting in massive chromosomal rearrangements, gene fusions, copy number changes, and chromatin restructuring in a single cell division rather than through gradual accumulation",
+        "The organized dismantling of chromosomes during programmed cell death (apoptosis)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Chromothripsis (Greek: chromos = chromosome, thripsis = shattering) was discovered by Stephens et al. (2011). A chromosome or chromosomal region undergoes catastrophic shattering (possibly during mitosis when chromosomes are trapped in micronuclei, or through replication stress) producing tens to hundreds of fragments. These are reassembled by non-homologous end joining (NHEJ) or microhomology-mediated break-induced replication (MMBIR), resulting in massively rearranged chromosomes with random fragment order and orientation. Some fragments are lost, causing deletions. Found in 2-3% of all cancers and up to 25% of bone cancers. Can simultaneously inactivate multiple tumor suppressors and activate oncogenes through gene fusions. Also described in germline (constitutional chromothripsis in congenital disorders). Related: chromoplexy (multiple inter-chromosomal translocations in a single event).",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_SEMI",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "APPLICATION",
+      "difficulty": "HARD",
+      "topic": "Chromothripsis and Catastrophic Genome Rearrangement"
+    },
+    {
+      "type": "EXPERIMENTAL_DESIGN",
+      "question": "A researcher wants to determine whether two distantly related bacterial species acquired the same antibiotic resistance gene through horizontal gene transfer from a common source or through convergent evolution. Which evidence would most strongly support HGT?",
+      "options": [
+        "The two species inhabit similar ecological niches, suggesting parallel selection pressure",
+        "The resistance gene in both species has nearly identical nucleotide sequence (>95%) despite the species having only ~60% genome-wide sequence identity, and the gene has different GC content from the surrounding chromosomal DNA in both species, flanked by integrase genes and IS elements",
+        "Both species have the same number of total genes, suggesting similar evolutionary pressures",
+        "Both species are resistant to the same antibiotic, regardless of the mechanism involved"
+      ],
+      "correctAnswer": "B",
+      "explanation": "HGT detection relies on multiple lines of evidence: (1) Sequence identity disparity: if a gene is >95% identical between species that are only ~60% similar genome-wide, the gene was likely acquired recently from a common source rather than vertically inherited (which would predict ~60% identity). (2) Compositional bias: different GC content from surrounding DNA suggests the gene originated from an organism with different base composition and hasn't yet undergone 'amelioration' (convergence to host GC content). (3) Flanking mobile elements: presence of integrase genes, insertion sequences (IS elements), direct repeats, or association with genomic islands, integrative conjugative elements (ICEs), or plasmids provides the mechanism of transfer. (4) Phylogenetic incongruence: gene tree differing from species tree (the gene clusters the two bacteria together rather than with their closest relatives). Antibiotic resistance alone doesn't prove HGT \u2014 could be convergent mutation. Niche similarity suggests selection pressure but not mechanism.",
+      "isOlympiad": true,
+      "olympiadLevel": "USABO_OPEN",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "SYNTHESIS",
+      "difficulty": "HARD",
+      "topic": "Detecting Horizontal Gene Transfer Evidence"
+    },
+    {
+      "type": "MCQ",
+      "question": "Metagenomics has revealed that unculturable microorganisms vastly outnumber culturable ones. What fundamental insight about genome diversity has environmental metagenomics provided?",
+      "options": [
+        "Metagenomics showed that all environmental microorganisms have identical genomes adapted to the same ecological niche",
+        "Environmental metagenomics demonstrated that only bacteria live in extreme environments, with no archaea or viruses present",
+        "Metagenomic sequencing of environmental samples has revealed that over 99% of microbial species have never been cultured in the laboratory, and their genomes contain vast numbers of novel gene families with no homologs in existing databases \u2014 this microbial dark matter dramatically expands the known protein fold space and metabolic pathway diversity",
+        "Metagenomic studies proved that horizontal gene transfer never occurs in natural environments"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Environmental metagenomics (culture-independent sequencing of DNA from environmental samples) has revolutionized our understanding of microbial diversity. Key findings: >99% of environmental microorganisms resist cultivation by standard methods (the 'great plate count anomaly'). Tara Oceans project sequenced global ocean microbiomes, discovering ~40 million genes, most with no database homologs. Human Gut Metagenome: >10 million non-redundant genes identified, many encoding novel functions. 'Microbial dark matter': entire phyla (e.g., candidate phyla radiation, CPR \u2014 Patescibacteria) were discovered only through metagenomics, with no cultured representatives. These organisms have extremely small genomes (0.5-1.0 Mb) and reduced metabolic capabilities, suggesting obligate symbiotic/parasitic lifestyles. Novel enzymes discovered through metagenomics (cellulases, lipases, antibiotics) have biotechnology applications. Viral metagenomics revealed that viruses are the most abundant biological entities on Earth (~10^31 total).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "APPLICATION",
+      "difficulty": "HARD",
+      "topic": "Metagenomics and Microbial Genome Dark Matter"
+    },
+    {
+      "type": "MTF",
+      "question": "Evaluate these statements about comparative model organism genomics:\n\nS1: Saccharomyces cerevisiae (12 Mb, ~6,000 genes) was the first eukaryotic genome sequenced (1996) and approximately 30% of its genes have identifiable homologs in the human genome.\nS2: Drosophila melanogaster has approximately the same number of protein-coding genes (~14,000) as C. elegans (~20,000).\nS3: The mouse genome shares approximately 99% nucleotide identity with human coding sequences, making it the closest model organism to humans.\nS4: Arabidopsis thaliana (135 Mb, ~27,000 genes) contains more protein-coding genes than the human genome, partly due to ancient whole-genome duplication events.",
+      "options": [
+        "TFFT",
+        "TTTT",
+        "TTFT",
+        "TFTF"
+      ],
+      "correctAnswer": "A",
+      "explanation": "S1 TRUE: S. cerevisiae was sequenced in 1996 (Goffeau et al.), 12.1 Mb across 16 chromosomes, ~6,275 genes. ~30% have human homologs, enabling yeast as a model for cell cycle, DNA repair, and metabolism. S2 FALSE: Drosophila has ~14,000 genes but C. elegans has ~20,000 \u2014 these are NOT approximately the same. Drosophila actually has fewer genes despite arguably greater morphological complexity, which itself is an interesting paradox. S3 FALSE: Mouse-human coding sequence identity is ~85%, not ~99%. The ~99% figure applies to human-chimpanzee comparison. Mouse and human diverged ~90 MYA vs human-chimp ~6-7 MYA. Mouse shares ~80% of genes as 1:1 orthologs with humans. S4 TRUE: Arabidopsis was sequenced in 2000, has ~27,000 protein-coding genes \u2014 more than human (~20,000-25,000). This is due to ancient WGD events (at least three: alpha, beta, gamma) plus extensive tandem duplications (~17% of genes in tandem arrays).",
+      "isOlympiad": true,
+      "olympiadLevel": "BBO",
+      "campbellUnit": 3,
+      "campbellChapter": 21,
+      "sourceTextbook": "Campbell Biology 12th Edition",
+      "conceptualDepth": "APPLICATION",
+      "difficulty": "HARD",
+      "topic": "Comparative Model Organism Genomics"
     }
   ]
 }
