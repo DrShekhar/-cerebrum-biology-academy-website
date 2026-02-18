@@ -16,7 +16,7 @@ import { ProtectedContent } from '@/components/mcq/ProtectedContent'
 import { SessionSummary } from '@/components/mcq/SessionSummary'
 import { ReportErrorModal } from '@/components/mcq/ReportErrorModal'
 import { TimedModeTimer } from '@/components/mcq/TimedModeTimer'
-import type { MCQQuestion, AnswerResult, UserStats } from '@/lib/mcq/types'
+import type { MCQQuestion, AnswerResult, UserStats, QuestionType } from '@/lib/mcq/types'
 import { CAMPBELL_UNIT_NUMBERS, type CampbellUnit } from '@/lib/mcq/types'
 import type { WrongAnswer } from '@/components/mcq/WrongAnswersReview'
 import type { DifficultyLevel } from '@/generated/prisma'
@@ -52,6 +52,7 @@ export default function NEETBiologyMCQPage() {
   const [selectedDifficulty, setSelectedDifficulty] = useState<DifficultyLevel | null>(null)
   const [selectedPYQYear, setSelectedPYQYear] = useState<number | null>(null)
   const [questionCount, setQuestionCount] = useState(20)
+  const [selectedQuestionType, setSelectedQuestionType] = useState<QuestionType | null>(null)
 
   // Content Source State (new tab-based UI)
   const [contentSource, setContentSource] = useState<ContentSource>('all')
@@ -385,6 +386,7 @@ export default function NEETBiologyMCQPage() {
           if (unitNum) params.append('campbellUnit', unitNum.toString())
         }
         if (selectedChapter) params.append('campbellChapter', selectedChapter)
+        if (selectedQuestionType) params.append('questionType', selectedQuestionType)
       } else {
         if (selectedTopic) params.append('topic', selectedTopic)
         if (selectedChapter) params.append('chapter', selectedChapter)
@@ -443,6 +445,7 @@ export default function NEETBiologyMCQPage() {
     selectedChapter,
     selectedDifficulty,
     contentSource,
+    selectedQuestionType,
     selectedPYQYear,
     selectedNcertClass,
     selectedNeetWeightage,
@@ -875,6 +878,7 @@ export default function NEETBiologyMCQPage() {
                       setContentSource(source)
                       setSelectedTopic(null)
                       setSelectedChapter(null)
+                      setSelectedQuestionType(null)
                     }}
                     selectedPYQYear={selectedPYQYear}
                     onPYQYearChange={setSelectedPYQYear}
@@ -897,10 +901,12 @@ export default function NEETBiologyMCQPage() {
                     selectedDifficulty={selectedDifficulty}
                     questionCount={questionCount}
                     contentSource={contentSource}
+                    selectedQuestionType={selectedQuestionType}
                     onTopicChange={setSelectedTopic}
                     onChapterChange={setSelectedChapter}
                     onDifficultyChange={setSelectedDifficulty}
                     onQuestionCountChange={setQuestionCount}
+                    onQuestionTypeChange={setSelectedQuestionType}
                   />
 
                   {/* NCERT Options - Only when NCERT tab active */}

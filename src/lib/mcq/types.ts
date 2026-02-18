@@ -33,6 +33,15 @@ export type QuestionType =
 
 export type OlympiadLevel = 'NSEB' | 'USABO_OPEN' | 'USABO_SEMI' | 'INBO' | 'BBO' | 'IBO'
 
+export const OLYMPIAD_QUESTION_TYPES = [
+  { value: 'MCQ' as const, label: 'MCQ' },
+  { value: 'DATA_INTERPRETATION' as const, label: 'Data Interpretation' },
+  { value: 'MTF' as const, label: 'Match the Following' },
+  { value: 'EXPERIMENTAL_DESIGN' as const, label: 'Experimental Design' },
+  { value: 'ASSERTION_REASON' as const, label: 'Assertion-Reason' },
+  { value: 'STATEMENT_BASED' as const, label: 'Statement Based' },
+]
+
 export interface MCQQuestion {
   id: string
   type?: QuestionType

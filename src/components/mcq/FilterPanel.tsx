@@ -6,8 +6,10 @@ import {
   BIOLOGY_CHAPTERS,
   CAMPBELL_UNITS,
   CAMPBELL_CHAPTERS,
+  OLYMPIAD_QUESTION_TYPES,
   type BiologyTopic,
   type CampbellUnit,
+  type QuestionType,
 } from '@/lib/mcq/types'
 import type { ContentSource } from '@/components/mcq/ContentSourceTabs'
 import type { DifficultyLevel } from '@/generated/prisma'
@@ -20,10 +22,12 @@ interface FilterPanelProps {
   selectedDifficulty: DifficultyLevel | null
   questionCount: number
   contentSource?: ContentSource
+  selectedQuestionType?: QuestionType | null
   onTopicChange: (topic: string | null) => void
   onChapterChange: (chapter: string | null) => void
   onDifficultyChange: (difficulty: DifficultyLevel | null) => void
   onQuestionCountChange: (count: number) => void
+  onQuestionTypeChange?: (type: QuestionType | null) => void
 }
 
 const difficulties: {
@@ -54,6 +58,13 @@ const difficulties: {
     dotColor: 'bg-red-500',
     activeColor: 'bg-red-100 border-red-500 text-red-800',
   },
+  {
+    value: 'EXPERT',
+    label: 'Expert',
+    color: 'border-purple-300 hover:border-purple-400 hover:bg-purple-50',
+    dotColor: 'bg-purple-600',
+    activeColor: 'bg-purple-100 border-purple-600 text-purple-800',
+  },
 ]
 
 export function FilterPanel({
@@ -62,10 +73,12 @@ export function FilterPanel({
   selectedDifficulty,
   questionCount,
   contentSource = 'all',
+  selectedQuestionType = null,
   onTopicChange,
   onChapterChange,
   onDifficultyChange,
   onQuestionCountChange,
+  onQuestionTypeChange,
 }: FilterPanelProps) {
   const isOlympiad = contentSource === 'olympiad'
 
@@ -82,7 +95,7 @@ export function FilterPanel({
   const availableChapters = isOlympiad ? campbellChapters : ncertChapters
   const topics = isOlympiad ? CAMPBELL_UNITS : BIOLOGY_TOPICS
 
-  const activeFiltersCount = [selectedTopic, selectedChapter, selectedDifficulty].filter(
+  const activeFiltersCount = [selectedTopic, selectedChapter, selectedDifficulty, selectedQuestionType].filter(
     Boolean
   ).length
 
@@ -90,6 +103,7 @@ export function FilterPanel({
     onTopicChange(null)
     onChapterChange(null)
     onDifficultyChange(null)
+    onQuestionTypeChange?.(null)
   }
 
   const handleTopicChange = (topic: string | null) => {
@@ -287,6 +301,53 @@ export function FilterPanel({
             ))}
           </div>
         </div>
+
+        {/* Question Type Selection (Olympiad only) */}
+        {isOlympiad && onQuestionTypeChange && (
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xs font-semibold uppercase tracking-wider text-stone-600">
+                Question Type
+              </span>
+              <div className="h-px flex-1 bg-stone-200 border-dashed" />
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => onQuestionTypeChange(null)}
+                className={`
+                  inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border-2
+                  transition-all duration-200
+                  ${
+                    !selectedQuestionType
+                      ? 'bg-sage-100 border-sage-500 text-sage-800'
+                      : 'bg-white border-stone-200 text-stone-600 hover:border-sage-300 hover:bg-sage-50'
+                  }
+                `}
+              >
+                {!selectedQuestionType && <Check className="w-3.5 h-3.5" />}
+                All Types
+              </button>
+              {OLYMPIAD_QUESTION_TYPES.map((qt) => (
+                <button
+                  key={qt.value}
+                  onClick={() => onQuestionTypeChange(qt.value)}
+                  className={`
+                    inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border-2
+                    transition-all duration-200
+                    ${
+                      selectedQuestionType === qt.value
+                        ? 'bg-sage-100 border-sage-500 text-sage-800'
+                        : 'bg-white border-stone-200 text-stone-600 hover:border-sage-300 hover:bg-sage-50'
+                    }
+                  `}
+                >
+                  {selectedQuestionType === qt.value && <Check className="w-3.5 h-3.5" />}
+                  {qt.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Number of Questions Selection */}
         <div>

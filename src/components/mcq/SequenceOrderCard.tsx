@@ -154,9 +154,11 @@ export function SequenceOrderCard({
             className={`px-2 py-0.5 rounded-full text-xs font-medium flex items-center gap-1 ${
               question.difficulty === 'EASY'
                 ? 'bg-green-100 text-green-700'
-                : question.difficulty === 'HARD'
-                  ? 'bg-red-100 text-red-700'
-                  : 'bg-amber-100 text-yellow-700'
+                : question.difficulty === 'EXPERT'
+                  ? 'bg-purple-100 text-purple-700'
+                  : question.difficulty === 'HARD'
+                    ? 'bg-red-100 text-red-700'
+                    : 'bg-amber-100 text-yellow-700'
             }`}
           >
             {question.difficulty}

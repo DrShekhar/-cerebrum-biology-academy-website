@@ -74,6 +74,7 @@ export async function GET(request: NextRequest) {
       campbellChapter?: number
       campbellUnit?: number
       conceptualDepth?: string
+      questionType?: string
     } = {
       topic: searchParams.get('topic') || undefined,
       chapter: searchParams.get('chapter') || undefined,
@@ -103,6 +104,7 @@ export async function GET(request: NextRequest) {
         ? parseInt(searchParams.get('campbellUnit')!)
         : undefined,
       conceptualDepth: searchParams.get('conceptualDepth') || undefined,
+      questionType: searchParams.get('questionType') || undefined,
     }
 
     const excludeIdsParam = searchParams.get('excludeIds')
@@ -168,6 +170,9 @@ export async function GET(request: NextRequest) {
     }
     if (filters.conceptualDepth) {
       officialWhere.conceptualDepth = filters.conceptualDepth
+    }
+    if (filters.questionType) {
+      officialWhere.type = filters.questionType
     }
 
     // Build where clause for community questions

@@ -170,18 +170,22 @@ export function QuestionCard({
             className={`px-2 py-0.5 rounded-full text-xs font-medium flex items-center gap-1 ${
               question.difficulty === 'EASY'
                 ? 'bg-green-100 text-green-700'
-                : question.difficulty === 'HARD'
-                  ? 'bg-red-100 text-red-700'
-                  : 'bg-amber-100 text-yellow-700'
+                : question.difficulty === 'EXPERT'
+                  ? 'bg-purple-100 text-purple-700'
+                  : question.difficulty === 'HARD'
+                    ? 'bg-red-100 text-red-700'
+                    : 'bg-amber-100 text-yellow-700'
             }`}
           >
             <span
               className={`w-1.5 h-1.5 rounded-full ${
                 question.difficulty === 'EASY'
                   ? 'bg-green-600'
-                  : question.difficulty === 'HARD'
-                    ? 'bg-red-500'
-                    : 'bg-amber-500'
+                  : question.difficulty === 'EXPERT'
+                    ? 'bg-purple-600'
+                    : question.difficulty === 'HARD'
+                      ? 'bg-red-500'
+                      : 'bg-amber-500'
               }`}
             />
             {question.difficulty}
@@ -228,6 +232,21 @@ export function QuestionCard({
               {question.ncertChapter && `Ch.${question.ncertChapter}`}
               {question.ncertPage && ` • Pg.${question.ncertPage}`}
             </span>
+          </span>
+        )}
+        {question.isOlympiad && (question.campbellUnit || question.campbellChapter) && (
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-gradient-to-r from-purple-50/80 to-stone-50 border border-purple-200/50 text-purple-700 text-xs font-medium">
+            <span>🧬</span>
+            <span>
+              {question.campbellUnit && `Unit ${question.campbellUnit}`}
+              {question.campbellUnit && question.campbellChapter && ' · '}
+              {question.campbellChapter && `Ch.${question.campbellChapter}`}
+            </span>
+          </span>
+        )}
+        {question.isOlympiad && question.olympiadLevel && (
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-medium">
+            🏅 {question.olympiadLevel}
           </span>
         )}
         {question.isNeetImportant && (

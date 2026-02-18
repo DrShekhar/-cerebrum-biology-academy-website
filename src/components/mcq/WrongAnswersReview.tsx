@@ -116,9 +116,11 @@ export function WrongAnswersReview({ wrongAnswers, onClose }: WrongAnswersReview
                       className={`px-2 py-0.5 rounded text-xs font-medium ${
                         item.question.difficulty === 'EASY'
                           ? 'bg-green-100 text-green-700'
-                          : item.question.difficulty === 'HARD'
-                            ? 'bg-red-100 text-red-700'
-                            : 'bg-yellow-100 text-yellow-700'
+                          : item.question.difficulty === 'EXPERT'
+                            ? 'bg-purple-100 text-purple-700'
+                            : item.question.difficulty === 'HARD'
+                              ? 'bg-red-100 text-red-700'
+                              : 'bg-yellow-100 text-yellow-700'
                       }`}
                     >
                       {item.question.difficulty}

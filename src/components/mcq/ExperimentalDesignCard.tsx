@@ -205,6 +205,21 @@ export function ExperimentalDesignCard({
             📘 {question.sourceTextbook}
           </span>
         )}
+        {question.isOlympiad && (question.campbellUnit || question.campbellChapter) && (
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-gradient-to-r from-purple-50/80 to-stone-50 border border-purple-200/50 text-purple-700 text-xs font-medium">
+            <span>🧬</span>
+            <span>
+              {question.campbellUnit && `Unit ${question.campbellUnit}`}
+              {question.campbellUnit && question.campbellChapter && ' · '}
+              {question.campbellChapter && `Ch.${question.campbellChapter}`}
+            </span>
+          </span>
+        )}
+        {question.isOlympiad && question.olympiadLevel && (
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 text-xs font-medium">
+            🏅 {question.olympiadLevel}
+          </span>
+        )}
       </div>
 
       {question.experimentContext && (

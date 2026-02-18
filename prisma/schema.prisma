@@ -2256,6 +2256,7 @@ model questions {
   @@index([topic, difficulty])
   @@index([isOlympiad, olympiadLevel])
   @@index([campbellChapter])
+  @@index([campbellUnit, campbellChapter])
 }
 
 model quiz_message_reactions {
