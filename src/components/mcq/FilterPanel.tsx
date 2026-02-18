@@ -1,10 +1,17 @@
 'use client'
 
 import { Check } from 'lucide-react'
-import { BIOLOGY_TOPICS, BIOLOGY_CHAPTERS, type BiologyTopic } from '@/lib/mcq/types'
+import {
+  BIOLOGY_TOPICS,
+  BIOLOGY_CHAPTERS,
+  CAMPBELL_UNITS,
+  CAMPBELL_CHAPTERS,
+  type BiologyTopic,
+  type CampbellUnit,
+} from '@/lib/mcq/types'
+import type { ContentSource } from '@/components/mcq/ContentSourceTabs'
 import type { DifficultyLevel } from '@/generated/prisma'
 
-// Question count options
 const QUESTION_COUNTS = [10, 20, 30, 50, 100] as const
 
 interface FilterPanelProps {
@@ -12,6 +19,7 @@ interface FilterPanelProps {
   selectedChapter: string | null
   selectedDifficulty: DifficultyLevel | null
   questionCount: number
+  contentSource?: ContentSource
   onTopicChange: (topic: string | null) => void
   onChapterChange: (chapter: string | null) => void
   onDifficultyChange: (difficulty: DifficultyLevel | null) => void
@@ -53,15 +61,26 @@ export function FilterPanel({
   selectedChapter,
   selectedDifficulty,
   questionCount,
+  contentSource = 'all',
   onTopicChange,
   onChapterChange,
   onDifficultyChange,
   onQuestionCountChange,
 }: FilterPanelProps) {
-  // Get chapters for selected topic
-  const availableChapters = selectedTopic
+  const isOlympiad = contentSource === 'olympiad'
+
+  // NCERT mode: topics → chapters
+  const ncertChapters = selectedTopic
     ? BIOLOGY_CHAPTERS[selectedTopic as BiologyTopic] || []
     : []
+
+  // Olympiad mode: units → chapters
+  const campbellChapters = selectedTopic
+    ? CAMPBELL_CHAPTERS[selectedTopic as CampbellUnit] || []
+    : []
+
+  const availableChapters = isOlympiad ? campbellChapters : ncertChapters
+  const topics = isOlympiad ? CAMPBELL_UNITS : BIOLOGY_TOPICS
 
   const activeFiltersCount = [selectedTopic, selectedChapter, selectedDifficulty].filter(
     Boolean
@@ -73,7 +92,6 @@ export function FilterPanel({
     onDifficultyChange(null)
   }
 
-  // Reset chapter when topic changes
   const handleTopicChange = (topic: string | null) => {
     onTopicChange(topic)
     onChapterChange(null)
@@ -85,8 +103,10 @@ export function FilterPanel({
       <div className="px-5 py-4 border-b border-dashed border-stone-200 bg-stone-50/50">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-lg">🔬</span>
-            <span className="font-semibold text-ink tracking-tight">Filter Questions</span>
+            <span className="text-lg">{isOlympiad ? '🏅' : '🔬'}</span>
+            <span className="font-semibold text-ink tracking-tight">
+              {isOlympiad ? 'Campbell Biology Filters' : 'Filter Questions'}
+            </span>
             {activeFiltersCount > 0 && (
               <span className="px-2 py-0.5 rounded-full bg-sage-100 text-sage-700 text-xs font-medium font-mono">
                 {activeFiltersCount} active
@@ -105,11 +125,11 @@ export function FilterPanel({
       </div>
 
       <div className="p-5 space-y-6">
-        {/* Topic Selection */}
+        {/* Topic / Unit Selection */}
         <div>
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xs font-semibold uppercase tracking-wider text-stone-600">
-              Topic
+              {isOlympiad ? 'Unit' : 'Topic'}
             </span>
             <div className="h-px flex-1 bg-stone-200 border-dashed" />
           </div>
@@ -127,9 +147,9 @@ export function FilterPanel({
               `}
             >
               {!selectedTopic && <Check className="w-3.5 h-3.5" />}
-              All Topics
+              {isOlympiad ? 'All Units' : 'All Topics'}
             </button>
-            {BIOLOGY_TOPICS.map((topic) => (
+            {topics.map((topic) => (
               <button
                 key={topic}
                 onClick={() => handleTopicChange(topic)}
@@ -150,55 +170,78 @@ export function FilterPanel({
           </div>
         </div>
 
-        {/* Chapter Selection (only shown when topic is selected) */}
-{selectedTopic && availableChapters.length > 0 && (
-            <div
-              className="overflow-hidden animate-fadeInUp"
-            >
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-xs font-semibold uppercase tracking-wider text-stone-600">
-                  Chapter
-                </span>
-                <div className="h-px flex-1 bg-stone-200 border-dashed" />
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <button
-                  onClick={() => onChapterChange(null)}
-                  className={`
-                    inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border-2
-                    transition-all duration-200
-                    ${
-                      !selectedChapter
-                        ? 'bg-specimen-100 border-specimen-500 text-specimen-800'
-                        : 'bg-white border-stone-200 text-stone-600 hover:border-specimen-300 hover:bg-specimen-50'
-                    }
-                  `}
-                >
-                  {!selectedChapter && <Check className="w-3.5 h-3.5" />}
-                  All Chapters
-                </button>
-                {availableChapters.map((chapter) => (
-                  <button
-                    key={chapter}
-                    onClick={() => onChapterChange(chapter)}
-                    className={`
-                      inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border-2
-                      transition-all duration-200
-                      ${
-                        selectedChapter === chapter
-                          ? 'bg-specimen-100 border-specimen-500 text-specimen-800'
-                          : 'bg-white border-stone-200 text-stone-600 hover:border-specimen-300 hover:bg-specimen-50'
-                      }
-                    `}
-                  >
-                    {selectedChapter === chapter && <Check className="w-3.5 h-3.5" />}
-                    {chapter}
-                  </button>
-                ))}
-              </div>
+        {/* Chapter Selection */}
+        {selectedTopic && availableChapters.length > 0 && (
+          <div className="overflow-hidden animate-fadeInUp">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xs font-semibold uppercase tracking-wider text-stone-600">
+                Chapter
+              </span>
+              <div className="h-px flex-1 bg-stone-200 border-dashed" />
             </div>
-          )}
-{/* Difficulty Selection */}
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => onChapterChange(null)}
+                className={`
+                  inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border-2
+                  transition-all duration-200
+                  ${
+                    !selectedChapter
+                      ? 'bg-specimen-100 border-specimen-500 text-specimen-800'
+                      : 'bg-white border-stone-200 text-stone-600 hover:border-specimen-300 hover:bg-specimen-50'
+                  }
+                `}
+              >
+                {!selectedChapter && <Check className="w-3.5 h-3.5" />}
+                All Chapters
+              </button>
+              {isOlympiad
+                ? (availableChapters as { ch: number; name: string }[]).map((chapter) => (
+                    <button
+                      key={chapter.ch}
+                      onClick={() => onChapterChange(String(chapter.ch))}
+                      className={`
+                        inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border-2
+                        transition-all duration-200
+                        ${
+                          selectedChapter === String(chapter.ch)
+                            ? 'bg-specimen-100 border-specimen-500 text-specimen-800'
+                            : 'bg-white border-stone-200 text-stone-600 hover:border-specimen-300 hover:bg-specimen-50'
+                        }
+                      `}
+                    >
+                      {selectedChapter === String(chapter.ch) && (
+                        <Check className="w-3.5 h-3.5" />
+                      )}
+                      <span className="font-mono text-xs text-stone-400 mr-0.5">
+                        Ch {chapter.ch}
+                      </span>
+                      {chapter.name}
+                    </button>
+                  ))
+                : (availableChapters as string[]).map((chapter) => (
+                    <button
+                      key={chapter}
+                      onClick={() => onChapterChange(chapter)}
+                      className={`
+                        inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium border-2
+                        transition-all duration-200
+                        ${
+                          selectedChapter === chapter
+                            ? 'bg-specimen-100 border-specimen-500 text-specimen-800'
+                            : 'bg-white border-stone-200 text-stone-600 hover:border-specimen-300 hover:bg-specimen-50'
+                        }
+                      `}
+                    >
+                      {selectedChapter === chapter && <Check className="w-3.5 h-3.5" />}
+                      {chapter}
+                    </button>
+                  ))}
+            </div>
+          </div>
+        )}
+
+        {/* Difficulty Selection */}
         <div>
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xs font-semibold uppercase tracking-wider text-stone-600">

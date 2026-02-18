@@ -580,6 +580,108 @@ export const BIOLOGY_CHAPTERS: Record<BiologyTopic, string[]> = {
   ],
 }
 
+// Campbell Biology Units (for Olympiad filtering)
+export const CAMPBELL_UNITS = [
+  'Unit 1: Chemistry of Life',
+  'Unit 2: The Cell',
+  'Unit 3: Genetics',
+  'Unit 4: Evolution',
+  'Unit 5: Diversity of Life',
+  'Unit 6: Plant Form & Function',
+  'Unit 7: Animal Form & Function',
+  'Unit 8: Ecology',
+] as const
+
+export type CampbellUnit = (typeof CAMPBELL_UNITS)[number]
+
+// Map unit label → campbellUnit number for API calls
+export const CAMPBELL_UNIT_NUMBERS: Record<CampbellUnit, number> = {
+  'Unit 1: Chemistry of Life': 1,
+  'Unit 2: The Cell': 2,
+  'Unit 3: Genetics': 3,
+  'Unit 4: Evolution': 4,
+  'Unit 5: Diversity of Life': 5,
+  'Unit 6: Plant Form & Function': 6,
+  'Unit 7: Animal Form & Function': 7,
+  'Unit 8: Ecology': 8,
+}
+
+// Chapters within each Campbell unit
+export const CAMPBELL_CHAPTERS: Record<CampbellUnit, { ch: number; name: string }[]> = {
+  'Unit 1: Chemistry of Life': [
+    { ch: 1, name: 'Themes of Biology' },
+    { ch: 2, name: 'The Chemical Context of Life' },
+    { ch: 3, name: 'Water and Life' },
+    { ch: 4, name: 'Carbon and Molecular Diversity' },
+    { ch: 5, name: 'Large Biological Molecules' },
+  ],
+  'Unit 2: The Cell': [
+    { ch: 6, name: 'A Tour of the Cell' },
+    { ch: 7, name: 'Membrane Structure & Function' },
+    { ch: 8, name: 'Introduction to Metabolism' },
+    { ch: 9, name: 'Cellular Respiration' },
+    { ch: 10, name: 'Photosynthesis' },
+    { ch: 11, name: 'Cell Communication' },
+    { ch: 12, name: 'The Cell Cycle' },
+  ],
+  'Unit 3: Genetics': [
+    { ch: 13, name: 'Meiosis & Sexual Life Cycles' },
+    { ch: 14, name: 'Mendel & the Gene Idea' },
+    { ch: 15, name: 'Chromosomal Basis of Inheritance' },
+    { ch: 16, name: 'Molecular Basis of Inheritance' },
+    { ch: 17, name: 'Gene Expression' },
+    { ch: 18, name: 'Regulation of Gene Expression' },
+    { ch: 19, name: 'Viruses' },
+    { ch: 20, name: 'DNA Tools & Biotechnology' },
+    { ch: 21, name: 'Genomes & Their Evolution' },
+  ],
+  'Unit 4: Evolution': [
+    { ch: 22, name: 'Descent with Modification' },
+    { ch: 23, name: 'Evolution of Populations' },
+    { ch: 24, name: 'The Origin of Species' },
+    { ch: 25, name: 'History of Life on Earth' },
+    { ch: 26, name: 'Phylogeny & Tree of Life' },
+  ],
+  'Unit 5: Diversity of Life': [
+    { ch: 27, name: 'Bacteria & Archaea' },
+    { ch: 28, name: 'Protists' },
+    { ch: 29, name: 'Plant Diversity I' },
+    { ch: 30, name: 'Plant Diversity II: Seed Plants' },
+    { ch: 31, name: 'Fungi' },
+    { ch: 32, name: 'Animal Diversity Overview' },
+    { ch: 33, name: 'Introduction to Invertebrates' },
+    { ch: 34, name: 'Origin of Vertebrates' },
+  ],
+  'Unit 6: Plant Form & Function': [
+    { ch: 35, name: 'Plant Structure & Growth' },
+    { ch: 36, name: 'Resource Acquisition & Transport' },
+    { ch: 37, name: 'Soil & Plant Nutrition' },
+    { ch: 38, name: 'Angiosperm Reproduction' },
+    { ch: 39, name: 'Plant Responses to Signals' },
+  ],
+  'Unit 7: Animal Form & Function': [
+    { ch: 40, name: 'Animal Form & Function' },
+    { ch: 41, name: 'Animal Nutrition' },
+    { ch: 42, name: 'Circulation & Gas Exchange' },
+    { ch: 43, name: 'The Immune System' },
+    { ch: 44, name: 'Osmoregulation & Excretion' },
+    { ch: 45, name: 'Hormones & Endocrine System' },
+    { ch: 46, name: 'Animal Reproduction' },
+    { ch: 47, name: 'Animal Development' },
+    { ch: 48, name: 'Neurons, Synapses & Signaling' },
+    { ch: 49, name: 'Nervous Systems' },
+    { ch: 50, name: 'Sensory & Motor Mechanisms' },
+    { ch: 51, name: 'Animal Behavior' },
+  ],
+  'Unit 8: Ecology': [
+    { ch: 52, name: 'Ecology & the Biosphere' },
+    { ch: 53, name: 'Population Ecology' },
+    { ch: 54, name: 'Community Ecology' },
+    { ch: 55, name: 'Ecosystems & Restoration Ecology' },
+    { ch: 56, name: 'Conservation Biology' },
+  ],
+}
+
 // PYQ Years
 export const PYQ_YEARS = [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015] as const
 

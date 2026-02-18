@@ -17,6 +17,7 @@ import { SessionSummary } from '@/components/mcq/SessionSummary'
 import { ReportErrorModal } from '@/components/mcq/ReportErrorModal'
 import { TimedModeTimer } from '@/components/mcq/TimedModeTimer'
 import type { MCQQuestion, AnswerResult, UserStats } from '@/lib/mcq/types'
+import { CAMPBELL_UNIT_NUMBERS, type CampbellUnit } from '@/lib/mcq/types'
 import type { WrongAnswer } from '@/components/mcq/WrongAnswersReview'
 import type { DifficultyLevel } from '@/generated/prisma'
 import { LEAD_CAPTURE_CONFIG } from '@/lib/mcq/types'
@@ -374,21 +375,28 @@ export default function NEETBiologyMCQPage() {
 
       // Practice or Timed mode - fetch from regular questions API
       const params = new URLSearchParams()
-      if (selectedTopic) params.append('topic', selectedTopic)
-      if (selectedChapter) params.append('chapter', selectedChapter)
       if (selectedDifficulty) params.append('difficulty', selectedDifficulty)
 
       // Content source filtering (from tabs)
-      if (contentSource === 'pyq') {
-        params.append('isPYQOnly', 'true')
-        if (selectedPYQYear) params.append('pyqYear', selectedPYQYear.toString())
-      } else if (contentSource === 'ncert') {
-        params.append('isNcertBased', 'true')
-        if (selectedNcertClass) params.append('ncertClass', selectedNcertClass.toString())
-        if (selectedNeetWeightage) params.append('neetWeightage', selectedNeetWeightage)
-        if (hasDiagramOnly) params.append('hasDiagram', 'true')
-      } else if (contentSource === 'olympiad') {
+      if (contentSource === 'olympiad') {
         params.append('isOlympiad', 'true')
+        if (selectedTopic) {
+          const unitNum = CAMPBELL_UNIT_NUMBERS[selectedTopic as CampbellUnit]
+          if (unitNum) params.append('campbellUnit', unitNum.toString())
+        }
+        if (selectedChapter) params.append('campbellChapter', selectedChapter)
+      } else {
+        if (selectedTopic) params.append('topic', selectedTopic)
+        if (selectedChapter) params.append('chapter', selectedChapter)
+        if (contentSource === 'pyq') {
+          params.append('isPYQOnly', 'true')
+          if (selectedPYQYear) params.append('pyqYear', selectedPYQYear.toString())
+        } else if (contentSource === 'ncert') {
+          params.append('isNcertBased', 'true')
+          if (selectedNcertClass) params.append('ncertClass', selectedNcertClass.toString())
+          if (selectedNeetWeightage) params.append('neetWeightage', selectedNeetWeightage)
+          if (hasDiagramOnly) params.append('hasDiagram', 'true')
+        }
       }
       // 'all' content source uses no additional filters
 
@@ -863,7 +871,11 @@ export default function NEETBiologyMCQPage() {
                   {/* Content Source Tabs */}
                   <ContentSourceTabs
                     activeSource={contentSource}
-                    onSourceChange={setContentSource}
+                    onSourceChange={(source) => {
+                      setContentSource(source)
+                      setSelectedTopic(null)
+                      setSelectedChapter(null)
+                    }}
                     selectedPYQYear={selectedPYQYear}
                     onPYQYearChange={setSelectedPYQYear}
                     {...(questionCounts ? { questionCounts } : {})}
@@ -884,6 +896,7 @@ export default function NEETBiologyMCQPage() {
                     selectedChapter={selectedChapter}
                     selectedDifficulty={selectedDifficulty}
                     questionCount={questionCount}
+                    contentSource={contentSource}
                     onTopicChange={setSelectedTopic}
                     onChapterChange={setSelectedChapter}
                     onDifficultyChange={setSelectedDifficulty}
