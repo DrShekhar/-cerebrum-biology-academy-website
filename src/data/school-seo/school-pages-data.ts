@@ -814,7 +814,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         title: 'Experiential Learning',
         description:
-          'Our teaching methodology complements Heritage School\'s experiential learning philosophy with hands-on biology practicals.',
+          "Our teaching methodology complements Heritage School's experiential learning philosophy with hands-on biology practicals.",
       },
       {
         title: 'Free NEET Tools',
@@ -852,7 +852,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       {
         question: 'How does experiential learning work for NEET preparation?',
         answer:
-          'Similar to Heritage School\'s pedagogy, we use hands-on biology practicals, 3D models, virtual dissections, and real-world case studies. This experiential approach helps students understand concepts deeply rather than just memorizing.',
+          "Similar to Heritage School's pedagogy, we use hands-on biology practicals, 3D models, virtual dissections, and real-world case studies. This experiential approach helps students understand concepts deeply rather than just memorizing.",
       },
       {
         question: 'What free NEET tools do you provide?',
@@ -879,7 +879,7 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     },
   },
 
-'neet-coaching-gd-goenka-rohini-students': {
+  'neet-coaching-gd-goenka-rohini-students': {
     slug: 'neet-coaching-gd-goenka-rohini-students',
     schoolName: 'GD Goenka Public School Rohini',
     locality: 'Sector 22, Rohini',
@@ -971,6 +971,951 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     centerDetails: {
       name: 'Rohini Center',
       address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      timing: '8 AM - 8 PM',
+      phone: '+91-88264-44334',
+    },
+  },
+
+  'neet-coaching-dps-faridabad-students': {
+    slug: 'neet-coaching-dps-faridabad-students',
+    schoolName: 'DPS Faridabad',
+    locality: 'Sector 19, Faridabad',
+    nearestCenter: 'Faridabad Center',
+    distance: '2 km',
+    metaTitle: 'NEET Coaching for DPS Faridabad Students | Cerebrum Biology Academy',
+    metaDescription:
+      'Best NEET coaching for DPS Faridabad students. Sector 17 center just 2 km away. After-school batches, AIIMS faculty. Join 60+ DPS Faridabad students preparing for NEET.',
+    heroTitle: 'NEET Coaching for DPS Faridabad Students',
+    heroSubtitle:
+      'Join 60+ DPS Faridabad students preparing for NEET at our Sector 17 center. After-school batches designed around your DPS schedule.',
+    schoolHighlights: [
+      '60+ DPS Faridabad students enrolled',
+      'Just 2 km from DPS Sector 19 campus',
+      'After-school batches from 3:30 PM',
+      'DPS academic calendar synchronized',
+      '20+ DPS Faridabad alumni in top medical colleges',
+    ],
+    whyStudentsChoose: [
+      {
+        title: 'Close to Campus',
+        description:
+          'Our Sector 17 center is just 2 km from DPS Faridabad - reach in under 10 minutes after school.',
+      },
+      {
+        title: 'DPS-Friendly Schedule',
+        description:
+          'Batches starting at 3:30 PM and 4:30 PM are designed around DPS Faridabad timings.',
+      },
+      {
+        title: 'Strong DPS Peer Group',
+        description:
+          '60+ DPS Faridabad students creates a familiar and competitive learning environment.',
+      },
+      {
+        title: 'Proven Results',
+        description:
+          '20+ DPS Faridabad alumni selected to AIIMS, MAMC, and other top medical colleges.',
+      },
+    ],
+    successStories: [
+      {
+        name: 'Aarav Khanna',
+        batch: 'DPS Faridabad, Class of 2024',
+        result: 'NEET Score: 682',
+        quote:
+          'Cerebrum is so close to DPS Faridabad that I could reach in 10 minutes. The after-school batch timing was perfect for my schedule.',
+      },
+      {
+        name: 'Nandini Yadav',
+        batch: 'DPS Faridabad, Class of 2023',
+        result: 'AIIMS Delhi - MBBS',
+        quote:
+          'Having 60+ DPS Faridabad friends at Cerebrum made preparation enjoyable. We formed study groups and pushed each other to do better.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How far is Cerebrum from DPS Faridabad?',
+        answer:
+          'Our Faridabad center at Sector 17 is just 2 km from DPS Faridabad Sector 19 campus. Most students reach in under 10 minutes by auto or car after school.',
+      },
+      {
+        question: 'What batch timings suit DPS Faridabad students?',
+        answer:
+          'Our 3:30 PM and 4:30 PM batches are most popular among DPS Faridabad students. Weekend batches are also available for intensive preparation.',
+      },
+      {
+        question: 'How many DPS Faridabad students are enrolled at Cerebrum?',
+        answer:
+          'We currently have 60+ students from DPS Faridabad across various batches. This strong peer group creates healthy competition and mutual support.',
+      },
+      {
+        question: 'Do you adjust schedules around DPS Faridabad exams?',
+        answer:
+          'Yes, we follow the DPS Faridabad academic calendar closely. During school exams, coaching tests are postponed or made optional so students can focus on their school performance.',
+      },
+      {
+        question: 'What results have DPS Faridabad students achieved at Cerebrum?',
+        answer:
+          '20+ DPS Faridabad alumni have been selected to top medical colleges including AIIMS Delhi, MAMC, and UCMS. Many students consistently score 650+ in NEET.',
+      },
+    ],
+    relatedSchools: [
+      { name: 'MVN Faridabad', url: '/neet-coaching-mvn-faridabad-students' },
+      { name: 'Apeejay Faridabad', url: '/neet-coaching-apeejay-faridabad-students' },
+      { name: 'DAV Faridabad', url: '/neet-coaching-dav-faridabad-students' },
+      { name: 'Greenfields Faridabad', url: '/neet-coaching-greenfields-faridabad-students' },
+    ],
+    centerDetails: {
+      name: 'Faridabad Center',
+      address: 'Sector 17, Faridabad 121002',
+      timing: '8 AM - 8 PM',
+      phone: '+91-88264-44334',
+    },
+  },
+
+  'neet-coaching-mvn-faridabad-students': {
+    slug: 'neet-coaching-mvn-faridabad-students',
+    schoolName: 'MVN (Modern Vidya Niketan)',
+    locality: 'Sector 17, Faridabad',
+    nearestCenter: 'Faridabad Center',
+    distance: '0.5 km',
+    metaTitle: 'NEET Coaching for MVN Faridabad Students | Cerebrum Biology Academy',
+    metaDescription:
+      'Top NEET coaching for MVN (Modern Vidya Niketan) Faridabad students. Sector 17 center just 0.5 km away - walking distance! After-school batches, AIIMS faculty.',
+    heroTitle: 'NEET Coaching for MVN Faridabad Students',
+    heroSubtitle:
+      'Our Sector 17 center is walking distance from MVN campus. Join 45+ MVN students preparing for NEET with after-school and weekend batches.',
+    schoolHighlights: [
+      '45+ MVN Faridabad students enrolled',
+      'Walking distance - just 0.5 km from MVN campus',
+      'After-school batches from 2:30 PM',
+      'MVN curriculum synchronized schedule',
+      '15+ MVN alumni in top medical colleges',
+    ],
+    whyStudentsChoose: [
+      {
+        title: 'Walking Distance',
+        description:
+          'Our Sector 17 center is just 0.5 km from MVN - students walk directly from school in 5 minutes.',
+      },
+      {
+        title: 'Early Afternoon Batches',
+        description:
+          'MVN ends early, so our 2:30 PM batch is designed specifically for MVN students.',
+      },
+      {
+        title: 'Strong MVN Community',
+        description: '45+ MVN students means you study with familiar faces from your own school.',
+      },
+      {
+        title: 'AIIMS-Quality Teaching',
+        description:
+          'Learn from AIIMS alumni faculty who deliver medical-college-level conceptual teaching.',
+      },
+    ],
+    successStories: [
+      {
+        name: 'Ritika Aggarwal',
+        batch: 'MVN Faridabad, Class of 2024',
+        result: 'NEET Score: 668',
+        quote:
+          'I used to walk from MVN to Cerebrum daily. Being so close meant I never missed a class. The convenience was unbeatable.',
+      },
+      {
+        name: 'Harsh Taneja',
+        batch: 'MVN Faridabad, Class of 2023',
+        result: 'MAMC Delhi - MBBS',
+        quote:
+          'Cerebrum understood the MVN schedule perfectly. The 2:30 PM batch gave me time to have lunch and still start coaching on time.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How close is Cerebrum to MVN Faridabad?',
+        answer:
+          'Our Faridabad center at Sector 17 is just 0.5 km from MVN campus - literally walking distance. Students walk from school to our center in about 5 minutes.',
+      },
+      {
+        question: 'What is the best batch timing for MVN students?',
+        answer:
+          'Our 2:30 PM batch is the most popular among MVN students since school ends early. We also have 4 PM and weekend batches for flexibility.',
+      },
+      {
+        question: 'How many MVN students currently study at Cerebrum?',
+        answer:
+          'We have 45+ MVN students enrolled across various batches. This creates a strong peer group where students motivate each other.',
+      },
+      {
+        question: 'Do you coordinate with MVN exam schedule?',
+        answer:
+          'Absolutely. We follow the MVN academic calendar and adjust test schedules during school exams. Students can focus on school exams without coaching pressure.',
+      },
+    ],
+    relatedSchools: [
+      { name: 'DPS Faridabad', url: '/neet-coaching-dps-faridabad-students' },
+      { name: 'Modern School Faridabad', url: '/neet-coaching-modern-school-faridabad-students' },
+      { name: 'Apeejay Faridabad', url: '/neet-coaching-apeejay-faridabad-students' },
+      { name: 'Aggarwal Public School', url: '/neet-coaching-aggarwal-faridabad-students' },
+    ],
+    centerDetails: {
+      name: 'Faridabad Center',
+      address: 'Sector 17, Faridabad 121002',
+      timing: '8 AM - 8 PM',
+      phone: '+91-88264-44334',
+    },
+  },
+
+  'neet-coaching-apeejay-faridabad-students': {
+    slug: 'neet-coaching-apeejay-faridabad-students',
+    schoolName: 'Apeejay School Faridabad',
+    locality: 'Sector 15, Faridabad',
+    nearestCenter: 'Faridabad Center',
+    distance: '2 km',
+    metaTitle: 'NEET Coaching for Apeejay Faridabad Students | Cerebrum Biology Academy',
+    metaDescription:
+      'Expert NEET coaching for Apeejay School Faridabad students. Sector 17 center just 2 km from campus. After-school batches, experienced AIIMS faculty. Book free demo!',
+    heroTitle: 'NEET Coaching for Apeejay Faridabad Students',
+    heroSubtitle:
+      'Specialized NEET preparation for Apeejay School students at our convenient Sector 17 center. Join 35+ Apeejay students already enrolled.',
+    schoolHighlights: [
+      '35+ Apeejay Faridabad students enrolled',
+      'Just 2 km from Apeejay Sector 15 campus',
+      'After-school batches from 3:30 PM',
+      'Apeejay CBSE curriculum aligned teaching',
+      '12+ Apeejay alumni in top medical colleges',
+    ],
+    whyStudentsChoose: [
+      {
+        title: 'Convenient Location',
+        description:
+          'Our Sector 17 center is just 2 km from Apeejay School - a quick 10-minute commute after school.',
+      },
+      {
+        title: 'Apeejay-Friendly Timing',
+        description:
+          'After-school batches at 3:30 PM and 4:30 PM designed around Apeejay dismissal times.',
+      },
+      {
+        title: 'Familiar Peer Group',
+        description:
+          '35+ Apeejay students means you study alongside classmates who understand your school workload.',
+      },
+      {
+        title: 'Conceptual Teaching',
+        description:
+          'AIIMS alumni faculty focus on deep conceptual understanding - not rote memorization.',
+      },
+    ],
+    successStories: [
+      {
+        name: 'Sneha Malik',
+        batch: 'Apeejay Faridabad, Class of 2024',
+        result: 'NEET Score: 658',
+        quote:
+          'The Sector 17 center was so convenient from Apeejay. My parents loved that I could reach quickly and safely after school.',
+      },
+      {
+        name: 'Aryan Bhardwaj',
+        batch: 'Apeejay Faridabad, Class of 2023',
+        result: 'UCMS Delhi - MBBS',
+        quote:
+          'Cerebrum teachers helped me understand biology concepts at a much deeper level than what school alone could offer. That made the difference in NEET.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How far is Cerebrum from Apeejay School Faridabad?',
+        answer:
+          'Our Faridabad center at Sector 17 is approximately 2 km from Apeejay School Sector 15. Students typically reach in 10 minutes by auto or car.',
+      },
+      {
+        question: 'What batch options are available for Apeejay students?',
+        answer:
+          'We offer 3:30 PM and 4:30 PM after-school batches on weekdays, plus Saturday-Sunday intensive batches. Choose based on your preference and school schedule.',
+      },
+      {
+        question: 'How many Apeejay students are at Cerebrum currently?',
+        answer:
+          'We have 35+ Apeejay School students enrolled across different batches. This creates a supportive learning environment with familiar faces.',
+      },
+      {
+        question: 'Is the coaching syllabus aligned with Apeejay CBSE curriculum?',
+        answer:
+          'Yes, our NEET preparation is fully aligned with the CBSE curriculum that Apeejay follows. We cover the same NCERT chapters and add NEET-specific depth and practice.',
+      },
+    ],
+    relatedSchools: [
+      { name: 'DPS Faridabad', url: '/neet-coaching-dps-faridabad-students' },
+      { name: 'DAV Faridabad', url: '/neet-coaching-dav-faridabad-students' },
+      { name: 'MVN Faridabad', url: '/neet-coaching-mvn-faridabad-students' },
+      { name: 'MRIS Faridabad', url: '/neet-coaching-mris-faridabad-students' },
+    ],
+    centerDetails: {
+      name: 'Faridabad Center',
+      address: 'Sector 17, Faridabad 121002',
+      timing: '8 AM - 8 PM',
+      phone: '+91-88264-44334',
+    },
+  },
+
+  'neet-coaching-dav-faridabad-students': {
+    slug: 'neet-coaching-dav-faridabad-students',
+    schoolName: 'DAV Public School Faridabad',
+    locality: 'Sector 14, Faridabad',
+    nearestCenter: 'Faridabad Center',
+    distance: '3 km',
+    metaTitle: 'NEET Coaching for DAV Faridabad Students | Cerebrum Biology Academy',
+    metaDescription:
+      'Specialized NEET coaching for DAV Public School Faridabad students. Sector 17 center, 3 km from campus. After-school batches, AIIMS faculty. Proven results.',
+    heroTitle: 'NEET Coaching for DAV Faridabad Students',
+    heroSubtitle:
+      'Join 40+ DAV Faridabad students at our Sector 17 center. Convenient after-school batches with AIIMS-quality teaching designed for DAV students.',
+    schoolHighlights: [
+      '40+ DAV Faridabad students enrolled',
+      '3 km from DAV Sector 14 campus',
+      'After-school batches from 3:30 PM',
+      'DAV CBSE curriculum aligned preparation',
+      '15+ DAV alumni in medical colleges',
+    ],
+    whyStudentsChoose: [
+      {
+        title: 'Nearby Center',
+        description:
+          'Our Sector 17 center is just 3 km from DAV Public School - about 12 minutes by auto.',
+      },
+      {
+        title: 'DAV Schedule Compatible',
+        description: 'After-school batches at 3:30 PM and 4:30 PM work perfectly with DAV timings.',
+      },
+      {
+        title: 'DAV Peer Group',
+        description:
+          '40+ DAV students at Cerebrum creates a familiar and competitive study atmosphere.',
+      },
+      {
+        title: 'Experienced Faculty',
+        description:
+          'AIIMS alumni faculty who have mentored hundreds of DAV students to NEET success.',
+      },
+    ],
+    successStories: [
+      {
+        name: 'Prateek Chaudhary',
+        batch: 'DAV Faridabad, Class of 2024',
+        result: 'NEET Score: 672',
+        quote:
+          'The DAV batch at Cerebrum was like an extended school. My DAV friends and I studied together and kept each other motivated throughout the preparation.',
+      },
+      {
+        name: 'Anushka Srivastava',
+        batch: 'DAV Faridabad, Class of 2023',
+        result: 'AIIMS Delhi - MBBS',
+        quote:
+          'Cerebrum faculty understood the DAV academic pressure. They helped me balance school boards and NEET without burning out.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How far is Cerebrum from DAV Public School Faridabad?',
+        answer:
+          'Our Faridabad center at Sector 17 is approximately 3 km from DAV Public School Sector 14. The commute takes about 12-15 minutes by auto or car.',
+      },
+      {
+        question: 'What batch timings work best for DAV students?',
+        answer:
+          'Our 3:30 PM and 4:30 PM after-school batches are most popular with DAV students. Weekend intensive batches are also available for those who prefer concentrated weekend study.',
+      },
+      {
+        question: 'How many DAV Faridabad students study at Cerebrum?',
+        answer:
+          'We currently have 40+ DAV Public School students across various batches. This creates a strong peer group that supports and motivates each other.',
+      },
+      {
+        question: 'Do you help DAV students balance boards and NEET?',
+        answer:
+          'Yes, our curriculum covers both CBSE board syllabus and NEET-specific topics simultaneously. During board exam season, we adjust schedules and focus on board-relevant topics.',
+      },
+    ],
+    relatedSchools: [
+      { name: 'DPS Faridabad', url: '/neet-coaching-dps-faridabad-students' },
+      { name: 'Apeejay Faridabad', url: '/neet-coaching-apeejay-faridabad-students' },
+      { name: 'MRIS Faridabad', url: '/neet-coaching-mris-faridabad-students' },
+      { name: 'Greenfields Faridabad', url: '/neet-coaching-greenfields-faridabad-students' },
+    ],
+    centerDetails: {
+      name: 'Faridabad Center',
+      address: 'Sector 17, Faridabad 121002',
+      timing: '8 AM - 8 PM',
+      phone: '+91-88264-44334',
+    },
+  },
+
+  'neet-coaching-manav-rachna-faridabad-students': {
+    slug: 'neet-coaching-manav-rachna-faridabad-students',
+    schoolName: 'Manav Rachna International School',
+    locality: 'Sector 46, Faridabad',
+    nearestCenter: 'Faridabad Center',
+    distance: '8 km',
+    metaTitle: 'NEET Coaching for Manav Rachna Students | Cerebrum Biology Academy',
+    metaDescription:
+      'Best NEET coaching for Manav Rachna International School Faridabad students. Expert AIIMS faculty, flexible batches. Online and offline options available.',
+    heroTitle: 'NEET Coaching for Manav Rachna International School Students',
+    heroSubtitle:
+      'Elite NEET preparation for Manav Rachna students. Our Sector 17 center offers weekend and online batches to suit the commute from Sector 46.',
+    schoolHighlights: [
+      '30+ Manav Rachna students enrolled',
+      'Weekend and online batch options',
+      'AIIMS-quality conceptual teaching',
+      'Flexible scheduling for Sector 46 commute',
+      '10+ Manav Rachna alumni in medical colleges',
+    ],
+    whyStudentsChoose: [
+      {
+        title: 'Hybrid Learning Options',
+        description:
+          'Combine weekend offline classes at Sector 17 with weekday online sessions to manage the 8 km commute.',
+      },
+      {
+        title: 'Weekend Intensive Batches',
+        description:
+          'Saturday-Sunday intensive batches are popular with Manav Rachna students for focused preparation.',
+      },
+      {
+        title: 'Elite Academic Standards',
+        description:
+          'Teaching rigor that matches the high academic standards Manav Rachna is known for.',
+      },
+      {
+        title: 'Personalized Attention',
+        description:
+          'Small batch sizes ensure every Manav Rachna student gets individual doubt resolution.',
+      },
+    ],
+    successStories: [
+      {
+        name: 'Ishita Sharma',
+        batch: 'Manav Rachna, Class of 2024',
+        result: 'NEET Score: 690',
+        quote:
+          'The weekend batches at Cerebrum were perfect for me. I covered intensive biology on Saturdays and Sundays without missing any school activities during the week.',
+      },
+      {
+        name: 'Rohan Goel',
+        batch: 'Manav Rachna, Class of 2023',
+        result: 'AIIMS Delhi - MBBS',
+        quote:
+          'Even though Manav Rachna is 8 km away, the online option made it seamless. I attended live classes from home on weekdays and visited the center on weekends.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do Manav Rachna students commute to Cerebrum?',
+        answer:
+          'Our Sector 17 center is about 8 km from Manav Rachna Sector 46. Most students use weekend batches and online classes during weekdays. Parents often drop students on Saturdays and Sundays.',
+      },
+      {
+        question: 'Are online classes available for Manav Rachna students?',
+        answer:
+          'Yes, we offer live online classes on weekdays so Manav Rachna students can attend from home. Weekend offline sessions at our Sector 17 center complement the online learning.',
+      },
+      {
+        question: 'What are the weekend batch timings?',
+        answer:
+          'Saturday and Sunday batches run from 10 AM to 1 PM and 2 PM to 5 PM. Manav Rachna students typically prefer the morning batch for intensive weekend preparation.',
+      },
+      {
+        question: 'How many Manav Rachna students are enrolled?',
+        answer:
+          'We have 30+ Manav Rachna International School students. Despite the distance, students value our AIIMS-quality teaching and choose us over closer but less effective coaching options.',
+      },
+    ],
+    relatedSchools: [
+      { name: 'MRIS Faridabad', url: '/neet-coaching-mris-faridabad-students' },
+      { name: 'GD Goenka Faridabad', url: '/neet-coaching-gd-goenka-faridabad-students' },
+      { name: 'DPS Faridabad', url: '/neet-coaching-dps-faridabad-students' },
+      { name: 'MVN Faridabad', url: '/neet-coaching-mvn-faridabad-students' },
+    ],
+    centerDetails: {
+      name: 'Faridabad Center',
+      address: 'Sector 17, Faridabad 121002',
+      timing: '8 AM - 8 PM',
+      phone: '+91-88264-44334',
+    },
+  },
+
+  'neet-coaching-mris-faridabad-students': {
+    slug: 'neet-coaching-mris-faridabad-students',
+    schoolName: 'MRIS (Manav Rachna International School)',
+    locality: 'Sector 14, Faridabad',
+    nearestCenter: 'Faridabad Center',
+    distance: '3 km',
+    metaTitle: 'NEET Coaching for MRIS Faridabad Students | Cerebrum Biology Academy',
+    metaDescription:
+      'Specialized NEET coaching for MRIS Sector 14 Faridabad students. Sector 17 center just 3 km away. After-school batches, AIIMS faculty. Proven NEET results.',
+    heroTitle: 'NEET Coaching for MRIS Faridabad Students',
+    heroSubtitle:
+      'Our Sector 17 center is just 3 km from MRIS Sector 14. Join 35+ MRIS students preparing for NEET with convenient after-school batches.',
+    schoolHighlights: [
+      '35+ MRIS Faridabad students enrolled',
+      'Just 3 km from MRIS Sector 14 campus',
+      'After-school batches from 3:30 PM',
+      'CBSE curriculum aligned NEET preparation',
+      '12+ MRIS alumni in top medical colleges',
+    ],
+    whyStudentsChoose: [
+      {
+        title: 'Close to MRIS Campus',
+        description:
+          'Our Sector 17 center is just 3 km from MRIS Sector 14 - about 10-12 minutes by auto.',
+      },
+      {
+        title: 'MRIS-Friendly Timing',
+        description: 'After-school batches at 3:30 PM are timed perfectly for MRIS students.',
+      },
+      {
+        title: 'MRIS Peer Group',
+        description:
+          '35+ MRIS students at Cerebrum means a familiar and motivating study environment.',
+      },
+      {
+        title: 'Proven Track Record',
+        description:
+          '12+ MRIS alumni have made it to top medical colleges including AIIMS and MAMC.',
+      },
+    ],
+    successStories: [
+      {
+        name: 'Tanvi Gupta',
+        batch: 'MRIS Faridabad, Class of 2024',
+        result: 'NEET Score: 664',
+        quote:
+          'The short commute from MRIS to Cerebrum meant I could attend coaching daily without exhaustion. The teachers were brilliant at explaining complex biology topics.',
+      },
+      {
+        name: 'Karan Singh',
+        batch: 'MRIS Faridabad, Class of 2023',
+        result: 'MAMC Delhi - MBBS',
+        quote:
+          'Cerebrum was the best decision for my NEET preparation. The proximity to MRIS and the quality of teaching gave me the edge I needed.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How far is Cerebrum from MRIS Sector 14?',
+        answer:
+          'Our Faridabad center at Sector 17 is just 3 km from MRIS Sector 14 campus. The commute takes approximately 10-12 minutes by auto or car.',
+      },
+      {
+        question: 'What batch timings suit MRIS students?',
+        answer:
+          'Our 3:30 PM after-school batch is the most popular among MRIS students. We also offer 4:30 PM evening and weekend batches.',
+      },
+      {
+        question: 'How many MRIS students are currently enrolled?',
+        answer:
+          'We have 35+ MRIS students across various batches. The MRIS community at Cerebrum is one of our strongest school groups in Faridabad.',
+      },
+      {
+        question: 'Is there any overlap with Manav Rachna International School Sector 46 students?',
+        answer:
+          'Yes, we have students from both MRIS Sector 14 and Manav Rachna Sector 46. Combined, they form one of the largest school communities at our center, often studying together.',
+      },
+      {
+        question: 'Do you provide study material aligned with MRIS curriculum?',
+        answer:
+          'Our study material is aligned with CBSE curriculum that MRIS follows, plus additional NEET-specific depth. We provide comprehensive notes, practice papers, and previous year solutions.',
+      },
+    ],
+    relatedSchools: [
+      { name: 'Manav Rachna Faridabad', url: '/neet-coaching-manav-rachna-faridabad-students' },
+      { name: 'DAV Faridabad', url: '/neet-coaching-dav-faridabad-students' },
+      { name: 'DPS Faridabad', url: '/neet-coaching-dps-faridabad-students' },
+      { name: 'Aggarwal Public School', url: '/neet-coaching-aggarwal-faridabad-students' },
+    ],
+    centerDetails: {
+      name: 'Faridabad Center',
+      address: 'Sector 17, Faridabad 121002',
+      timing: '8 AM - 8 PM',
+      phone: '+91-88264-44334',
+    },
+  },
+
+  'neet-coaching-greenfields-faridabad-students': {
+    slug: 'neet-coaching-greenfields-faridabad-students',
+    schoolName: 'Greenfields School Faridabad',
+    locality: 'Sector 19, Faridabad',
+    nearestCenter: 'Faridabad Center',
+    distance: '2 km',
+    metaTitle: 'NEET Coaching for Greenfields School Students | Cerebrum Biology Academy',
+    metaDescription:
+      'Best NEET coaching for Greenfields School Faridabad students. Sector 17 center just 2 km from campus. After-school batches, AIIMS faculty, proven results.',
+    heroTitle: 'NEET Coaching for Greenfields School Faridabad Students',
+    heroSubtitle:
+      'Our Sector 17 center is just 2 km from Greenfields School. Join 25+ Greenfields students preparing for NEET with personalized coaching.',
+    schoolHighlights: [
+      '25+ Greenfields School students enrolled',
+      'Just 2 km from Greenfields Sector 19 campus',
+      'After-school batches from 3:30 PM',
+      'CBSE aligned NEET preparation',
+      '8+ Greenfields alumni in medical colleges',
+    ],
+    whyStudentsChoose: [
+      {
+        title: 'Close Proximity',
+        description:
+          'Our Sector 17 center is just 2 km from Greenfields School - a quick 10-minute ride after school.',
+      },
+      {
+        title: 'After-School Batches',
+        description:
+          '3:30 PM and 4:30 PM batches designed to fit Greenfields School dismissal timings.',
+      },
+      {
+        title: 'Personalized Coaching',
+        description:
+          'Small batch sizes mean Greenfields students get individual attention and doubt clearing.',
+      },
+      {
+        title: 'Comprehensive Preparation',
+        description:
+          'Full NEET syllabus coverage with NCERT-based teaching and extensive practice tests.',
+      },
+    ],
+    successStories: [
+      {
+        name: 'Megha Verma',
+        batch: 'Greenfields School, Class of 2024',
+        result: 'NEET Score: 652',
+        quote:
+          'Cerebrum was just a short ride from Greenfields. The personalized attention helped me improve my biology score from 280 to 340 in just 6 months.',
+      },
+      {
+        name: 'Aditya Bansal',
+        batch: 'Greenfields School, Class of 2023',
+        result: 'UCMS Delhi - MBBS',
+        quote:
+          'The faculty at Cerebrum went beyond regular coaching. They understood my weak areas and created a custom study plan that worked perfectly for NEET.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How close is Cerebrum to Greenfields School?',
+        answer:
+          'Our Faridabad center at Sector 17 is just 2 km from Greenfields School Sector 19 campus. Most students reach in about 10 minutes by auto or car.',
+      },
+      {
+        question: 'What batch timings are available for Greenfields students?',
+        answer:
+          'We offer 3:30 PM and 4:30 PM after-school batches on weekdays. Saturday-Sunday intensive batches are also available for comprehensive weekend preparation.',
+      },
+      {
+        question: 'How many Greenfields students study at Cerebrum?',
+        answer:
+          'Currently 25+ Greenfields School students are enrolled across various batches. They form an active study group and often prepare together after classes.',
+      },
+      {
+        question: 'What makes Cerebrum different from other coaching centers near Greenfields?',
+        answer:
+          'Our AIIMS alumni faculty, small batch sizes, and proven track record with 8+ Greenfields alumni in medical colleges set us apart. We focus on conceptual understanding, not just rote memorization.',
+      },
+    ],
+    relatedSchools: [
+      { name: 'DPS Faridabad', url: '/neet-coaching-dps-faridabad-students' },
+      { name: 'MVN Faridabad', url: '/neet-coaching-mvn-faridabad-students' },
+      { name: 'DAV Faridabad', url: '/neet-coaching-dav-faridabad-students' },
+      { name: 'Aggarwal Public School', url: '/neet-coaching-aggarwal-faridabad-students' },
+    ],
+    centerDetails: {
+      name: 'Faridabad Center',
+      address: 'Sector 17, Faridabad 121002',
+      timing: '8 AM - 8 PM',
+      phone: '+91-88264-44334',
+    },
+  },
+
+  'neet-coaching-aggarwal-faridabad-students': {
+    slug: 'neet-coaching-aggarwal-faridabad-students',
+    schoolName: 'Aggarwal Public School Faridabad',
+    locality: 'NIT-3, Faridabad',
+    nearestCenter: 'Faridabad Center',
+    distance: '4 km',
+    metaTitle: 'NEET Coaching for Aggarwal Public School Students | Cerebrum Biology Academy',
+    metaDescription:
+      'Expert NEET coaching for Aggarwal Public School NIT Faridabad students. Sector 17 center, convenient batches. AIIMS faculty, affordable fees. Book free demo!',
+    heroTitle: 'NEET Coaching for Aggarwal Public School Faridabad Students',
+    heroSubtitle:
+      'Join 30+ Aggarwal Public School students at our Sector 17 center. After-school and weekend batches with AIIMS-quality teaching at affordable fees.',
+    schoolHighlights: [
+      '30+ Aggarwal Public School students enrolled',
+      '4 km from APS NIT-3 campus',
+      'After-school batches from 4 PM',
+      'Affordable NEET coaching with AIIMS faculty',
+      '10+ APS alumni in medical colleges',
+    ],
+    whyStudentsChoose: [
+      {
+        title: 'Accessible Location',
+        description:
+          'Our Sector 17 center is 4 km from APS NIT-3 - about 15 minutes by auto or bus.',
+      },
+      {
+        title: 'Affordable Excellence',
+        description:
+          'AIIMS-quality teaching at fees that are reasonable for Aggarwal Public School families.',
+      },
+      {
+        title: 'APS Peer Group',
+        description: '30+ APS students means you prepare alongside friends from your own school.',
+      },
+      {
+        title: 'Result-Oriented Teaching',
+        description:
+          '10+ APS alumni in medical colleges proves our coaching delivers real results.',
+      },
+    ],
+    successStories: [
+      {
+        name: 'Ravi Kumar',
+        batch: 'Aggarwal Public School, Class of 2024',
+        result: 'NEET Score: 648',
+        quote:
+          'Coming from NIT-3, I was worried about the commute but it was just 15 minutes. The quality of teaching at Cerebrum was far better than anything available near my school.',
+      },
+      {
+        name: 'Pooja Sharma',
+        batch: 'Aggarwal Public School, Class of 2023',
+        result: 'MAMC Delhi - MBBS',
+        quote:
+          'Cerebrum believed in me when I doubted myself. The teachers gave extra attention and practice that helped me crack NEET with a great score.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How far is Cerebrum from Aggarwal Public School NIT-3?',
+        answer:
+          'Our Faridabad center at Sector 17 is approximately 4 km from Aggarwal Public School NIT-3. The commute takes about 15 minutes by auto, bus, or car.',
+      },
+      {
+        question: 'What batch timings work for APS students?',
+        answer:
+          'Our 4 PM and 5 PM after-school batches are popular with APS students. Weekend batches running Saturday-Sunday are also available for intensive preparation.',
+      },
+      {
+        question: 'How many APS students are enrolled at Cerebrum?',
+        answer:
+          'We currently have 30+ Aggarwal Public School students across different batches. They form a tight-knit study group and support each other throughout preparation.',
+      },
+      {
+        question: 'Is the fee structure affordable for APS families?',
+        answer:
+          'We offer competitive fees with flexible payment options including EMI. Our focus is on making quality NEET coaching accessible. Contact us for current fee details.',
+      },
+      {
+        question: 'Are there any transport arrangements from NIT-3 to Sector 17?',
+        answer:
+          'While we do not provide transport directly, many APS students coordinate shared autos or car pools. We can connect you with other APS students through our WhatsApp group.',
+      },
+    ],
+    relatedSchools: [
+      { name: 'MVN Faridabad', url: '/neet-coaching-mvn-faridabad-students' },
+      { name: 'Modern School Faridabad', url: '/neet-coaching-modern-school-faridabad-students' },
+      { name: 'DAV Faridabad', url: '/neet-coaching-dav-faridabad-students' },
+      { name: 'Greenfields Faridabad', url: '/neet-coaching-greenfields-faridabad-students' },
+    ],
+    centerDetails: {
+      name: 'Faridabad Center',
+      address: 'Sector 17, Faridabad 121002',
+      timing: '8 AM - 8 PM',
+      phone: '+91-88264-44334',
+    },
+  },
+
+  'neet-coaching-modern-school-faridabad-students': {
+    slug: 'neet-coaching-modern-school-faridabad-students',
+    schoolName: 'Modern School Faridabad',
+    locality: 'Sector 17, Faridabad',
+    nearestCenter: 'Faridabad Center',
+    distance: '0.5 km',
+    metaTitle: 'NEET Coaching for Modern School Faridabad Students | Cerebrum Biology Academy',
+    metaDescription:
+      'Top NEET coaching for Modern School Faridabad students. Sector 17 center walking distance - just 0.5 km! After-school batches, AIIMS faculty. Book free demo!',
+    heroTitle: 'NEET Coaching for Modern School Faridabad Students',
+    heroSubtitle:
+      'Walking distance from Modern School! Our Sector 17 center is just 0.5 km away. Join 40+ Modern School students preparing for NEET.',
+    schoolHighlights: [
+      '40+ Modern School Faridabad students enrolled',
+      'Walking distance - just 0.5 km from campus',
+      'After-school batches from 2:30 PM',
+      'Modern School curriculum aligned teaching',
+      '14+ Modern School alumni in medical colleges',
+    ],
+    whyStudentsChoose: [
+      {
+        title: 'Walking Distance',
+        description:
+          'Our Sector 17 center is just 0.5 km from Modern School - walk from school to coaching in 5 minutes.',
+      },
+      {
+        title: 'Earliest Batches',
+        description:
+          'Our 2:30 PM batch is designed for Modern School students who finish school early.',
+      },
+      {
+        title: 'Strong Modern School Community',
+        description:
+          '40+ Modern School students means a strong peer group for motivation and group study.',
+      },
+      {
+        title: 'Maximum Study Time',
+        description: 'Zero commute time means more hours for actual study and practice.',
+      },
+    ],
+    successStories: [
+      {
+        name: 'Simran Kaur',
+        batch: 'Modern School Faridabad, Class of 2024',
+        result: 'NEET Score: 676',
+        quote:
+          'I literally walked to Cerebrum from Modern School every day. The 5-minute walk saved so much time that I used for extra practice questions.',
+      },
+      {
+        name: 'Vivek Joshi',
+        batch: 'Modern School Faridabad, Class of 2023',
+        result: 'AIIMS Delhi - MBBS',
+        quote:
+          'Being steps away from coaching meant I attended every single class without fail. That consistency made all the difference in my NEET score.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How close is Cerebrum to Modern School Faridabad?',
+        answer:
+          'Our Faridabad center at Sector 17 is just 0.5 km from Modern School campus - literally walking distance. Students walk over in about 5 minutes after school.',
+      },
+      {
+        question: 'What is the earliest batch for Modern School students?',
+        answer:
+          'Our 2:30 PM batch is the earliest and most popular among Modern School students. Since school ends early, students can have a quick lunch and walk to coaching.',
+      },
+      {
+        question: 'How many Modern School Faridabad students are enrolled?',
+        answer:
+          'We have 40+ Modern School Faridabad students across our batches. This is one of our largest school groups at the Faridabad center.',
+      },
+      {
+        question: 'Can parents wait at the center during coaching?',
+        answer:
+          'Yes, we have a waiting area for parents. However, given the walking distance, most Modern School parents prefer to have their children walk home after coaching.',
+      },
+    ],
+    relatedSchools: [
+      { name: 'MVN Faridabad', url: '/neet-coaching-mvn-faridabad-students' },
+      { name: 'DPS Faridabad', url: '/neet-coaching-dps-faridabad-students' },
+      { name: 'Aggarwal Public School', url: '/neet-coaching-aggarwal-faridabad-students' },
+      { name: 'Apeejay Faridabad', url: '/neet-coaching-apeejay-faridabad-students' },
+    ],
+    centerDetails: {
+      name: 'Faridabad Center',
+      address: 'Sector 17, Faridabad 121002',
+      timing: '8 AM - 8 PM',
+      phone: '+91-88264-44334',
+    },
+  },
+
+  'neet-coaching-gd-goenka-faridabad-students': {
+    slug: 'neet-coaching-gd-goenka-faridabad-students',
+    schoolName: 'GD Goenka Public School Faridabad',
+    locality: 'Sector 48, Faridabad',
+    nearestCenter: 'Faridabad Center',
+    distance: '9 km',
+    metaTitle: 'NEET Coaching for GD Goenka Faridabad Students | Cerebrum Biology Academy',
+    metaDescription:
+      'Best NEET coaching for GD Goenka Public School Sector 48 Faridabad students. Expert AIIMS faculty, weekend and online batches. Proven NEET results.',
+    heroTitle: 'NEET Coaching for GD Goenka Faridabad Students',
+    heroSubtitle:
+      'Elite NEET preparation for GD Goenka students. Our Sector 17 center offers weekend intensive and online batch options for students from Sector 48.',
+    schoolHighlights: [
+      '20+ GD Goenka Faridabad students enrolled',
+      'Weekend and online batch options available',
+      'AIIMS-quality conceptual teaching',
+      'Flexible scheduling for Sector 48 students',
+      '8+ GD Goenka alumni in medical colleges',
+    ],
+    whyStudentsChoose: [
+      {
+        title: 'Flexible Learning Modes',
+        description:
+          'Combine weekend offline classes at Sector 17 with weekday online sessions for maximum convenience from Sector 48.',
+      },
+      {
+        title: 'Weekend Intensive Batches',
+        description:
+          'Saturday-Sunday intensive sessions are ideal for GD Goenka students who prefer focused weekend preparation.',
+      },
+      {
+        title: 'Premium Academic Standards',
+        description:
+          'Teaching quality that matches the high standards GD Goenka students are accustomed to.',
+      },
+      {
+        title: 'Individual Mentoring',
+        description:
+          'Small batch sizes ensure personalized guidance and regular progress tracking for each student.',
+      },
+    ],
+    successStories: [
+      {
+        name: 'Ananya Mittal',
+        batch: 'GD Goenka Faridabad, Class of 2024',
+        result: 'NEET Score: 696',
+        quote:
+          'The weekend batches at Cerebrum were intense and productive. I covered more in two weekend sessions than most students cover in a week of evening classes.',
+      },
+      {
+        name: 'Siddharth Agarwal',
+        batch: 'GD Goenka Faridabad, Class of 2023',
+        result: 'AIIMS Delhi - MBBS',
+        quote:
+          'Despite being 9 km away, I chose Cerebrum for the quality. The online classes on weekdays and offline on weekends was the perfect combination.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do GD Goenka students manage the 9 km commute?',
+        answer:
+          'Most GD Goenka students use our weekend batches (Saturday-Sunday at Sector 17) and attend live online classes during weekdays. Parents typically drop students for weekend sessions.',
+      },
+      {
+        question: 'Are online classes as effective as offline?',
+        answer:
+          'Our live online classes use the same faculty and curriculum as offline batches. Students can interact, ask doubts, and participate in real-time. Many GD Goenka students prefer this hybrid approach.',
+      },
+      {
+        question: 'What are the weekend batch timings?',
+        answer:
+          'Weekend batches run from 10 AM to 1 PM and 2 PM to 5 PM on both Saturday and Sunday. GD Goenka students typically choose the morning batch for intensive preparation.',
+      },
+      {
+        question: 'How many GD Goenka students are enrolled at Cerebrum?',
+        answer:
+          'We have 20+ GD Goenka Public School students. Despite being the farthest school, they choose us for AIIMS-quality teaching and proven track record.',
+      },
+      {
+        question: 'Is there a trial class available for GD Goenka students?',
+        answer:
+          'Yes, we offer a free demo class so you can experience our teaching quality before enrolling. Contact us on WhatsApp or call to schedule your free demo.',
+      },
+    ],
+    relatedSchools: [
+      { name: 'Manav Rachna Faridabad', url: '/neet-coaching-manav-rachna-faridabad-students' },
+      { name: 'DPS Faridabad', url: '/neet-coaching-dps-faridabad-students' },
+      { name: 'MRIS Faridabad', url: '/neet-coaching-mris-faridabad-students' },
+      { name: 'Apeejay Faridabad', url: '/neet-coaching-apeejay-faridabad-students' },
+    ],
+    centerDetails: {
+      name: 'Faridabad Center',
+      address: 'Sector 17, Faridabad 121002',
       timing: '8 AM - 8 PM',
       phone: '+91-88264-44334',
     },
