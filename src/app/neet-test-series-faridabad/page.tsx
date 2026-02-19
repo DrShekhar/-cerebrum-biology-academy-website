@@ -1,0 +1,156 @@
+import { Metadata } from 'next'
+import NEETTestSeriesContent from './NEETTestSeriesContent'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+
+const faridabadLocation = CONTACT_INFO.location.faridabad
+
+export const metadata: Metadata = {
+  title: 'NEET Test Series in Faridabad | 50+ Mock Tests with Analysis',
+  description:
+    'Join our comprehensive NEET Biology test series in Faridabad. 50+ full-length mock tests, detailed analysis, rank prediction. Online and offline options. Starting ₹8,000.',
+  keywords: [
+    'neet test series faridabad',
+    'neet mock test faridabad',
+    'neet biology test series',
+    'neet practice tests',
+    'neet mock exam',
+    'neet test series online',
+    'neet rank predictor',
+    'best neet test series',
+  ],
+  openGraph: {
+    title: 'NEET Test Series in Faridabad | 50+ Mock Tests',
+    description:
+      'Comprehensive NEET test series with detailed analysis, rank prediction, and performance tracking.',
+    url: 'https://cerebrumbiologyacademy.com/neet-test-series-faridabad',
+  },
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/neet-test-series-faridabad',
+  },
+}
+
+const faqs = [
+  {
+    question: 'How many tests are included in the test series?',
+    answer:
+      '50+ full-length mock tests following the latest NTA NEET pattern. Includes 20 chapter-wise tests, 15 subject tests (Biology only), and 15 full syllabus tests.',
+  },
+  {
+    question: 'Is the test series available online?',
+    answer:
+      'Yes, all tests are available both online and offline. Online tests can be taken from home with the same interface as the actual NEET exam. Offline tests are conducted at our Sector 17 center.',
+  },
+  {
+    question: 'What analysis do I get after each test?',
+    answer:
+      'Detailed analysis includes: subject-wise score breakdown, chapter-wise accuracy, time management insights, comparison with toppers, weak area identification, and personalized improvement suggestions.',
+  },
+  {
+    question: 'Can I join just the test series without coaching?',
+    answer:
+      'Yes! Our test series is available as a standalone product. Many students from Allen, Aakash, Velocity Institute, and other institutes join our test series for additional practice and analysis.',
+  },
+  {
+    question: 'What is the fee for the test series?',
+    answer:
+      'Test series fee starts from ₹8,000 for the Basic package (30 tests) and goes up to ₹15,000 for the Premium package (50+ tests with mentorship). Online-only package is ₹6,000.',
+  },
+  {
+    question: 'When are tests conducted?',
+    answer:
+      'Offline tests are conducted every Sunday (9 AM - 12 PM). Online tests can be taken anytime within a 48-hour window after release. New tests are released every week.',
+  },
+  {
+    question: 'Do you provide rank prediction?',
+    answer:
+      'Yes, we provide All India Rank prediction based on your test scores compared to our database of 1,50,000+ students. Accuracy rate of 90% within ±5000 rank range.',
+  },
+]
+
+export default function NEETTestSeriesFaridabadPage() {
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'NEET Biology Test Series - Faridabad',
+    description:
+      'Comprehensive NEET Biology mock test series with 50+ tests, detailed analysis, and rank prediction',
+    provider: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: faridabadLocation.streetAddress,
+        addressLocality: faridabadLocation.addressLocality,
+        addressRegion: faridabadLocation.addressRegion,
+        postalCode: faridabadLocation.postalCode,
+        addressCountry: 'IN',
+      },
+    },
+    educationalLevel: 'Class 11-12 / Dropper',
+    teaches: ['NEET Mock Tests', 'Test Taking Strategy', 'Time Management', 'Performance Analysis'],
+    offers: {
+      '@type': 'Offer',
+      price: '8000',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'Blended',
+      courseWorkload: 'Weekly tests for 6 months',
+    },
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Faridabad',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Test Series',
+        item: 'https://cerebrumbiologyacademy.com/neet-test-series-faridabad',
+      },
+    ],
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <NEETTestSeriesContent faqs={faqs} />
+    </>
+  )
+}
